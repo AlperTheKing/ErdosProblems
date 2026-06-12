@@ -1,0 +1,121 @@
+Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Is it true that for every $1\leq i<j\leq n/2$ there exists some prime $p\geq i$ such that\[p\mid \textrm{gcd}\left(\binom{n}{i}, \binom{n}{j}\right)?\] 
+ #699 : [ErSz78] 
+ number theory | 
+ binomial coefficients 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Erdős and Szekeres. A theorem of Sylvester and Schur says that for any $1\leq i\leq n/2$ there exists some prime $p>i$ which divides $\binom{n}{i}$. Erdős and Szekeres further conjectured that $p\geq i$ can be improved to $p>i$ except in a few special cases. In particular this fails when $i=2$ and $n$ being some particular powers of $2$. They also found some counterexamples when $i=3$, but only one counterexample when $i\geq 4$:\[\textrm{gcd}\left(\binom{28}{5},\binom{28}{14}\right)=2^3\cdot 3^3\cdot 5.\]This is mentioned in problem B31 of Guy's collection [Gu04] .
+ View the LaTeX source 
+ This page was last edited 30 September 2025. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ Yes 
+ 6 comments on this problem
+ Likes this problem 
+ conglu , 
+ Dogmachine 
+ Interested in collaborating 
+ conglu 
+ Currently working on this problem 
+ conglu 
+ This problem looks difficult 
+ Dogmachine 
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #699, https://www.erdosproblems.com/699, accessed 2026-06-09 
+Order by
+ oldest first or
+ newest first . (The most recent comments are highlighted in a red border.)
+ This conjecture is resolved in "An Effective Proof of the Erdős Prime Divisibility Conjecture for Binomial Coefficients" (Parthasarathy, 2026), currently under review at the Journal of Experimental Mathematics. For all 1 ≤ i < j ≤ n/2 with n ≥ 2j, there exists a prime p ≥ i with p | gcd(C(n,i), C(n,j)). The proof introduces four new tools: a Prime Power Bridge Lemma, a Cofactor Escape Lemma, an FO Characterisation (showing every prime > i in a fully obstructed product must divide C(j,i)), and a Carry Lemma that algebraically resolves all fully obstructed triples with M = 1 via Kummer's theorem. The case i = 1 is proved purely algebraically for all n, j. For i ≥ 2, Baker–Wüstholz effective finiteness bounds the residual to a computable range; exhaustive verification covers 110,109,924 triples (n ≤ 4400, i ≤ 23) with zero counterexamples. 8 fully obstructed triples found, all with i prime, all witnessed by p = i. Noting Cong's computational extension to n = 10^7: the 9th FO triple (1594324, 3, 797162) fits the predicted structure — n - 1 = 3^13, so M = 1, and the Carry Lemma resolves it algebraically. Lean 4 + Mathlib formalization: 27 verified theorems, zero sorry, zero custom axioms. https://github.com/srinikethpsarathy-oss/Erdos-verification-suite 
+ Sriniketh 
+ — 07:42 on 30 Apr 2026 
+ 👍 
+ 0 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ In Case B: when $i<q<j$, it may be that $\binom n j$ and $\binom {n-i}{j-i}$ are not multiples of $q$, while $\binom ji$ and $\binom ni$ are. E.g., assume $q=j-k_j$ and $q|n-k_n$ where $k_j<k_n<i$ and $v_q(n-k_n)=1$. 
+ StijnC 
+ — 07:29 on 01 May 2026 
+ 👍 
+ 0 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ After reviewing this proof, it is invalid (and the Lean code is not formalising anything like the statement here). 
+ Thomas Bloom 
+ — 05:14 on 11 May 2026 
+ 👍 
+ 1 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ I ran a Rust implementation to test the official statement (“for every 1 ≤ i < j ≤ n/2 there is a prime p ≥ i dividing both binomials”) up to n = 10^7; no counterexamples found. Targeted extensions: all n = 2^k for k ≤ 27 (n ≈ 1.34×10^8) and all n = 3^m + 1 for m ≤ 17 (n ≈ 1.29×10^8). In these ranges the official statement holds. The stronger claim “some prime p > i divides both” fails only at the pairs below; in each case the shared prime ≥ i is exactly p = i. n (i,j) gcd of binomials 10 (3,5) 2^2 · 3 16 (2,6) 2^3 28 (3,14) 2^2 · 3^2 28 (5,14) 2^3 · 3^3 · 5 244 (3,122) 2^2 · 3^4 512 (2,147) 2^8 2048 (2,713) 2^10 2188 (3,1094) 2^2 · 3^6 1594324 (3,797162) 2^2 · 3^12 Observed structure: - i = 2: occurs at powers of two (seen at 2^4, 2^9, 2^11); gcd is a pure power of 2. - i = 3: occurs at n = 3^m + 1 with j = n/2 for m = 2, 3, 5, 7, 13; none beyond that up to m = 17. - For i ≥ 4, only (n, i, j) = (28, 5, 14) in all searched ranges. 
+ Cong 
+ — 01:45 on 06 Jan 2026 
+ 👍 
+ 3 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ May be a good practice in the community going forward to share code for numerical experiments. Especially in the age of LLMs, code can be modified and built upon easily. Before, for example, if I don't know Rust or don't have Rust toolchains installed, it may be difficult for me to build off this code. But at present I can easily ask for translation to Python or any common language, etc.! 
+ Nat Sothanaphan 
+ — 07:41 on 06 Jan 2026 
+ 👍 
+ 0 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ Great suggestion, I have open-sourced it all here https://github.com/conglu1997/erdos_699_rust. One reason for Rust is it was far easier for me to optimize, I tried Python a little bit and got something like N up to 30K overnight and concluded it would be an uphill battle to get it fast enough. 
+ Cong 
+ — 10:53 on 06 Jan 2026 
+ 👍 
+ 2 
+ 📝 
+ 0 
+ 🤖 
+ 0 
+ All comments are the responsibility of the user. Comments appearing on this page are not verified for correctness. Please keep posts mathematical and on topic. 
+ Log in to add a comment. 
+ Back to the forum

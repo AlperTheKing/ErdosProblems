@@ -1,0 +1,53 @@
+diff --git a/FormalConjectures/Wikipedia/Hadamard.lean b/FormalConjectures/Wikipedia/Hadamard.lean
+index 47bd86b..a3b97cc 100644
+--- a/FormalConjectures/Wikipedia/Hadamard.lean
++++ b/FormalConjectures/Wikipedia/Hadamard.lean
+@@ -108,12 +108,47 @@ def H12 : Matrix (Fin 12) (Fin 12) ℝ :=
+      1,  1, -1,  -1,  1,  1,  -1, -1,  1,  -1,  1, -1;
+      1,  1, -1,   1, -1,  1,   1, -1, -1,  -1, -1,  1;
+      1,  1, -1,   1,  1, -1,  -1,  1, -1,   1, -1, -1 ]
++
++private lemma isHadamard_of_isHadamard'_certificate {n : ℕ}
++    {M : Matrix (Fin n) (Fin n) ℝ} (hM : IsHadamard' M) : IsHadamard M := by
++  rcases hM with ⟨hentries, horth⟩
++  refine ⟨hentries, ?_⟩
++  have h_det : (M.transpose * M).det = n ^ ((n : ℝ)) := by
++    have : Matrix.diagonal (fun _ : Fin n => (n : ℝ)) =
++        (n : Matrix (Fin n) (Fin n) ℝ) := by
++      rfl
++    rw [horth, ← this]
++    norm_num
++  simp only [Matrix.det_mul, Matrix.det_transpose] at h_det
++  rw [← Real.sqrt_mul_self_eq_abs M.det, h_det]
++  have : √(↑n ^ (n : ℝ)) = (↑n ^ (n : ℝ)) ^ ((1 : ℝ) / 2) := by
++    rw [Real.rpow_div_two_eq_sqrt]
++    · simp only [Real.rpow_natCast, Real.rpow_one]
++    · simp only [Real.rpow_natCast, Nat.cast_nonneg, pow_nonneg]
++  rw [this]
++  simp
++  refine ((fun {x y z} hx hy hz ↦ (Real.eq_rpow_inv hx hy hz).mpr) ?_ ?_ ?_ ?_).symm
++  · exact Real.rpow_nonneg (Nat.cast_nonneg' n) _
++  · simp only [Nat.cast_nonneg, pow_nonneg]
++  · norm_num
++  · rw [← Real.rpow_mul <| Nat.cast_nonneg' n]
++    norm_num
++
++set_option maxHeartbeats 1000000 in
++private lemma H12_isHadamard' : IsHadamard' H12 := by
++  constructor
++  · intro i j
++    fin_cases i <;> fin_cases j <;> norm_num [H12]
++  · ext i j
++    fin_cases i <;> fin_cases j <;>
++      simp [H12, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.ofNat_apply] <;> norm_num
++
+ /--
+ which satisifies the condition.
+ -/
+ @[category test, AMS 15]
+ theorem isHadamard_H12 : IsHadamard H12 := by
+-  sorry
++  exact isHadamard_of_isHadamard'_certificate H12_isHadamard'
+ 
+ /--
+ For all $k ≤ 166$, it is known there that there is a Hadamard matrix of size $4 * k$.

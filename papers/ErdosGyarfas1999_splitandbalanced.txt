@@ -1,0 +1,385 @@
+                                                 DISCRETE
+                                                 MATHEMATICS
+
+ELSEVIER  Discrete Mathematics 200 (1999) 79-86
+
+          Split and balanced colorings of complete graphs
+
+                      Paul Erd6sa, AndrOs Gy~rffisb'*'l
+
+                aInstitute of Mathematics, Hungarian Academy of Sciences, Hungary
+          b Computer and Automation Institute, Hungarian Academy of Sciences, Hungary
+
+              Received 16 February 1996; revised 10 January 1997; accepted 7 April 1998
+
+Abstract
+
+   An (r, n)-split coloring of a complete graph is an edge coloring with r colors under which the
+vertex set is partitionable into r parts so that for each i, part i does not contain K, in color i. This
+generalizes the notion of split graphs which correspond to (2, 2)-split colorings. The smallest N
+for which the complete graph Ks has a coloring which is not (r,n)-split is denoted by f,.(n).
+Balanced (r,n)-colorings are defined as edge r-colorings of Ks such that every subset of IN/r]
+vertices contains a monochromatic K~ in all colors. Then yr(n) is defined as the smallest N
+such that Ks has a balanced (r, n)-coloring. The definitions imply that fi(n)<~gr(n). The paper
+gives estimates and exact values of these functions for various choices of parameters. (~) 1999
+Elsevier Science B.V. All rights reserved
+
+Keywords: Balanced coloring; Split graphs; Vertex set
+
+I. Introduction
+
+   A graph whose vertex set can be partitioned into a complete graph and an inde-
+pendent set is called a split graph. Split graphs form a self-complementary subfamily
+of perfect graphs (see for example [3]). A characterization of split graphs in terms of
+forbidden induced subgraphs has been given by Frldes and Hammer ([1], the same
+result also proved independently in [5]). Split graphs can be also defined in terms
+of edge colorings of complete graphs as follows. An edge coloring of a complete
+graph with two colors (red and blue) is a split coloring if the vertex set can be cov-
+ered by the vertices of a monochromatic red and a monochromatic blue subgraph.
+Clearly, a graph G is a split graph if and only if G and its complement defines a split
+coloring.
+
+* Correspondence address:MTA, SZTAKI, P.O. Box 63, Kende u. 13-17, 1518 Budapest, Hungary. E-maih
+gyarfas@luna.aszi.sztaki.hu.
+I Supported by OTKA grant 16414 and EC grant CIPA-CT93-0113.
+
+0012-365X/99/$-see front matter (~) 1999 Elsevier Science B.V. All rights reserved
+PII: S00 12-365X(98)00323-9
+80  P. Erdds, A. Gyfirffis/Discrete Mathematics 200 (1999) 7986
+
+   This paper generalizes split colorings as follows. An edge coloring of a complete
+
+graph K with r colors is called an (r,n)-split colorin9 if the vertices of K can be
+
+partitioned into r sets S1..... Sr so that Si has no monochromatic K,, in color i for each
+i (1 ~<i ~<r). Usual split graphs correspond to (2, 2)-split colorings. For small complete
+graphs every coloring is a split coloring, we are interested in the limit where non-
+
+split colorings emerge. More precisely, let fr(n) be the smallest integer m such that
+there exists an r-coloring of Km which is not (r, n)-split. Equivalently, f r ( n ) - 1 is the
+largest m for which every r-coloring of the edges of Km is (r, n)-split. It is easy to see
+
+that f 2 ( 2 ) = 4 , the 2-coloring of K4 in which one color class is a four cycle is not a
+(2, 2)-split coloring.
+
+   Colorings which are not split colorings can be interpreted in Ramsey theory as
+follows. If a complete graph K is given with an r-coloring which is not (r, n )-split,
+
+then for all vertex r-colorings of K we can find a strongly monochromatic Kn in
+
+K, i.e. K, whose edges and vertices are all colored with the same color. Clearly,
+non-split colorings are equivalent with edge colorings where every vertex coloring
+
+ensures strongly monochromatic complete subgraphs and fr(n) is the minimum order
+
+of a complete graph for which such a coloring exists. Further connections of non-split
+colorings and Ramsey numbers are explored in Section 2. Then we shall prove that
+
+f z ( n ) = n 2 (Theorem 2) and (2) ~<f~(2) ~<r2 + r + 1 (Theorems 4, 5).
+
+   The non-split property can be enforced by requiring a balanced distribution of colors,
+
+defined as follows. An edge r-coloring of Kx is called balanced (r, n)-colorin 9 if every
+A C_V(KN) such that [A[= rN/rl contains a monochromatic K,, in all colors. We define
+or(n) as the minimum N such that KN has a balanced (r,n)-coloring. Observe that a
+balanced (r,n) coloring is not an (r,n)-split coloring, therefore
+
+       f~(n)<~gr(n).
+
+   The above inequality is probably strict for all values of r and n but our estimates
+are not strong enough to separate them in general (if r = 2 then Theorems 2, 3 imply
+this).
+
+   It would be interesting to find the asymptotics of fr(2) and 92(n). As mentioned
+
+before, f2(n)=n 2 and we shall prove that r 2 + l~<gr(2)~<r2 + r + 1, where the
+
+upper bound construction works if a projective plane of order r + 1 (not r!) exists
+(Theorem 5). The special cases r = 3, 4 suggest that the upper bound is the truth
+(92(2) = 5 seems to be exceptional). This would follow from the following conjecture:
+
+Conjecture 1. If the edges of Kr2+l are colored with r colors then there exist r + 1
+vertices with at least one missing color among them (r~>3).
+
+   The proof of this conjecture for r = 3,4 is in the last section. From affine planes of
+order r one can easily construct r-colorings of Kr2 in which every set of r + 1 vertices
+spans all colors. In fact, r - 1 color classes can be defined by parallel classes of lines,
+and one by the union of two parallel classes. This flexibility might suggest that the
+conjecture is not true.
+P. Erdds, A. Gy&rfdts/DiscreteMathematics200 (1999) 79~6                      81
+
+2. Split critical colorings and Ramsey colorings
+
+   We call an edge coloring of a complete graph K (r,n)-split critical if it is not
+(r, n)-split but it is (r, n)-split on all proper subgraphs of K. The smallest N for which
+KN has an (r, n)-split critical coloring is clearly f~(n). Another interesting split critical
+coloring is given in Theorem 1. Let R~(t) denote the classical Ramsey number, i.e. the
+smallest s for which every r-coloring of the edges of K~ ensures a monochromatic Kt.
+An (r,t)-Ramsey coloring is an r-coloring of the edges of a complete graph of order
+R ~ ( t ) - 1 under which there is no monochromatic Kt.
+
+Theorem 1. Any (r,n + 1)-Ramsey coloring & an (r,n)-split critical coloring.
+
+Proof. Take an (r, n + 1)-Ramsey coloring C on KN, where N = Rr(n + 1) - 1. If C is
+an (r,n)-split coloring on Kiv then there is a partition of V(KN) into Ai, 1 <~i<<.r,such
+that Ai has no monochromatic Kn in color i. Adding a new vertex y and coloring all
+edges from y to Ai with color i an edge r-coloring of KN+a is obtained which does not
+contain monochromatic K,+t. Since N + 1 = R~(n + 1), this contradicts to the definition
+of the Ramsey number. On the other hand, for each vertex x of KN, one can partition
+V(KN) - x naturally by the colors of the edges incident to x. Since under C there are
+
+no monochromatic Kn+I, this partition defines an (r,n)-split coloring. []
+
+   Next we give some remarks about (r,n)-split critical colorings. As mentioned before,
+it is easy to check that f2(2, = 4) and (apart from color switches) there is only one
+(2, 2)-split critical coloring on K4. The (2, 3)-Ramsey coloring (the pentagon) provides
+another (2,2)-split critical coloring on/£5 (as a special case of Theorem 1). It follows
+from the split graph characterization theorem [1,5] that there are no other (2,2)-split
+critical colorings.
+
+   On 9 vertices there are more than one (probably many) (2,3)-split critical color-
+ings, the simplest one is three vertex disjoint triangle in one color, all other edges
+colored with the other color. (Theorem 2 will show that f2(3)= 9 so this example is
+of minimum order.) Theorem 1 provides a (2,3)-split critical coloring on Kl7 from
+the well known (2,4)-Ramsey coloring Of Kl7 ([2,4]). It is tempting to conjecture that
+this is the largest (2,3)-split critical coloring (in fact this was stated as a theorem in
+an earlier version of this paper until a referee pointed to the error in the proof). Now
+a (2, 3)-split critical coloring is found on Kl8 and the junior author proved that there
+are only finitely many (2, n)-split critical colorings for every fixed n. (The proof gives
+huge upper bound for the largest N with a (2, 3)-split critical coloring on KN.)
+
+3. On split and balanced (2, n)-colorings
+Theorem 2. f 2 ( n ) = n 2.
+82  P. Erdb's, A. Gyhrffis/Discrete Mathematics 200 (1999) 79~6
+
+Proof. A non-split (2,n)-coloring of Kn-" is to take n vertex disjoint copies of a red
+K, and color all other edges blue. Then a red-blue vertex coloring either colors at
+least one vertex blue in all copies or colors each vertex of a copy red. In both cases
+a strongly monochromatic K,, is obtained.
+
+   To see that every coloring is (2,n)-split on Km if m < n2, consider an arbitrary red-
+blue edge coloring of Kin. Select the maximum number of vertex disjoint monochro-
+matic red K, subgraphs and color with blue each vertex they cover and color all other
+vertices red. It is immediate that there is no strongly monochromatic K, in this coloring.
+
+                                                                                                                 []
+
+Theorem 3. 2n(n - 1) < 02(n)<~(2n - 1) 2.
+
+Proof. For the lower bound, we have to show that Km has no balanced (2,n)-coloring
+if m<~2n(n- 1). Let C be an edge coloring of Kin with red and blue. Select as many
+vertex disjoint (say t) monochromatic red K,-s as possible. If their vertices cover at
+least m/2 vertices then select the minimum k such that k of them cover at least m/2
+vertices. Clearly, k<~n- 1 therefore the union of the k red K, do not contain a blue
+Kn so C is not balanced. On the other hand, if the t red Kn do not cover m/2 vertices
+of Km then the uncovered part is more than half of the vertices and it does not contain
+a monochromatic red K,, so C is not a balanced coloring.
+
+   The upper bound follows from considering 2n - 1 vertex disjoint copies of a red
+K2~-l and coloring all other edges blue. This is a (2,n)-balanced coloring of K~2,_l)2.
+One can clearly improve the upper bound slightly. []
+
+4. On split and balanced (r, 2)-colorings
+
+Theorem 4. (~) < fr(2).
+
+Proof. The following claim will be applied repeatedly: if the edges of K(~) are
+r-colored then some color class defines a graph with at least r- 1 independent vertices.
+The proof of this claim for r ~<4 is trivial by inspection. For general r, one can show
+that the minority color class has not enough edges to destroy all independent sets, i.e. it
+has less edges than the Tur/m number which is the sum of (2') where/Iti is the number
+of elements in the ith class of a balanced partition of (~) into r - 2 parts. Assuming
+that r ~>5, one can easily determine these numbers ni for 1 ~<i ~<r - 2 as follows. For
+even r, ( r / 2 ) - 2 of the ni-s are equal to r/2 and the other r/2 are equal to ( r / 2 ) + 1.
+For odd r, all but one t/i are equal to (r + 1)/2 (and one equals to (r + 3)/2). Thus
+the claim follows by checking that for r >/5, the number
+
+                ~r m
+           P. Erd6s, A. Gy&fds/Discrete Mathematics 200 (1999) 79~86  83
+
+satisfies
+
+~"< 2                        22
+
+and also
+
+           r+l               r+3
+
+~,. < (r - 3 ) ( - ~ - ) + ( - ~ - )
+
+and it is straightforward to check both easily.
+   The proof of the theorem now follows by induction. Set N = (2)' We have to show
+
+that an arbitrary r-coloring of the edges of KN is an (r,2)-split coloring. Consider
+an arbitrary coloring, the claim allows to select a color, say color 1, such that A l is
+an independent set in color 1 and ]All= r - 1. Delete the set a l from V(KN) and a
+complete graph is left on ('71) vertices. Change color 1 to color 2 on this complete
+graph. By induction, this is an ( r - 1 , 2 ) - s p l i t coloring, i.e. its vertices can be partitioned
+into sets Ai, 2~i<<,r so that Ai has no edge of color i. Adding Al, we have the required
+partition for KN. []
+
+Theorem 5. f.(2)<~y,.(2)<~r 2 + r + 1 if a finite projective plane of order r + 1 exists.
+
+Proof. Let Gr be the graph which is the union of r vertex disjoint copies of Kr and
+one copy ofgr+l (vertex disjoint from the other components). Our aim is to show that
+Kr2+r+l can accomodate r edge disjoint copies of G~. To this end, consider a finite
+projective plane P of order r + 1 with two distinguished lines Lt and L2 and let x be
+a point of L2 not on L1. Select r points of LI\L2, say Yl ..... Yr. Let S be defined by
+adding x to the set of points in P which are not on the distinguished lines. Note that
+[S] = r 2 + r + 1. For i = 1. . . . . r, the graph Hi is defined as follows. The vertex set of
+Hi is S. The r + 1 lines in P which are going through yi and distinct from Lx partition
+S into r sets of r elements and one set of r + 1 elements (the latter is defined by the
+line of P through Yi and x). Then Hi is the union of complete graphs defined by this
+partition. Clearly, each Hi is isomorphic to Gr and they are edge disjoint. Coloring
+the edges of Hi with color i (and coloring uncolored pairs of S arbitrarily) a balanced
+(r, 2)-coloring is obtained because all subsets of S which have r(r2 + r + 1)/r1 = r + 2
+elements, must contain two elements from a block of the r + 1-partition defined by/-/i.
+
+                                                                                                              []
+
+   Next comes the lower bound on 9,-(2) which is about twice as good as the lower
+bound of fr(2).
+
+Theorem 6. r 2 ÷ 1 ~<0~(2).
+
+Proofl The proof is to apply Turfin's theorem for the graph spanned by the minority
+color class. More precisely, let C be an arbitrary r-coloring of the edges of Kr2 and
+assume that the number of red edges is not larger than the number of edges in any
+84     P. Erdas, A. Gy&rfdtslDiscreteMathematics200 (1999) 79~86
+
+other color class. We are going to show that the number of red edges is smaller than
+T(r), the minimum number of edges needed to destroy all r-element independent sets
+of a graph on r 2 vertices. Then we conclude that there exist r vertices spanning no
+red edges, therefore C can not be a balanced (r,2)-coloring. By Tur~in's theorem, T(r)
+
+is the number of edges in the graph obtained by partitioning r 2 vertices into r - 1
+
+complete graphs of nearly equal sizes. This means r - 2 complete graphs of size r + 1
+and one complete graph of size r + 2. Thus the following inequality is needed:
+
+    (~) <(r_2)(r+l)(r+2)
+
+    7  2+ 2
+
+which is true. This proves that there is no balanced (r,2)-coloring of Kr2. One needs
+a bit more careful calculation to see that there are no balanced (r,2)-colorings of Km
+for m < r2 but this is omitted. []
+
+5. Small numbers
+
+Proposition 1. f3(2) = 8.
+
+Proof. A 3-coloring of Ks which is not (3,2)-split is defined as follows. Let A be a
+red cycle with four vertices with two blue diagonals. Take two vertex disjoint copies
+of A and color all edges joining the copies with green.
+
+   It is shown next that any 3-coloring of/£7 is a (3,2)-split coloring. Fix an edge
+coloring with colors 1, 2, 3. I f there is a monochromatic K4, say in color 1 then color
+its vertices by 2 and it is easy to color the other three vertices by 1 and 3 and avoid
+strongly monochromatic/£2. Otherwise, if there is a monochromatic triangle T in color
+1, select two disjoint edges el, e2 within the other four vertices so that not both of
+them are colored with 1, assume el is of color 2. Then the vertices of T are colored
+with 2 and the vertices of el, e2 can be colored with l, 3 or 3, 1.
+
+   Assume that there are no monochromatic triangles. Select a triangle T with color
+pattern aab. If the set S of the remaining four vertices have two disjoint edges such
+that one of them has color c or one of them is a and the other is b then it is easy to
+color the vertices using this partition. Otherwise S can be colored with c and T can
+be colored with a, b easily. []
+
+Proposition 2. 93(2)= 13.
+
+Proof. Since 10~<g3(2)~< 13 follows from Theorems 5 and 6 it is enough to show that
+Kl0 has no balanced (3,2)-coloring, this is the next lemma. []
+
+Lemma 1. I f Klo is colored with three colors then there exist four vertices spannin9
+a K4 with at least one missing color.
+P. Erd6s. A. Gy{trf(ts/DiscreteMathematics200 (1999) 79~6  85
+
+Proof. The minority color determines a graph G1 with at most 15 edges so Gl is either
+3-regular or has a vertex x~ of degree at most 2. In the former case Brooks theorem
+implies that either G1 is 3-colorable or contains a K4, both prove the theorem. Assume
+the latter case, delete Xl and its neighbors in G1, to have a set X such that IxI ~>7
+and Gl[X] has no three independent vertices. Therefore GI[X] has a triangle Y. If
+Z = X \ Y has two vertices nonadjacent in GI then G1[X] must contain K4-e otherwise
+G1 [Z] is a complete graph. In both cases we have four vertices with a missing color.
+
+                                                                                                                 []
+
+Proposition 3. 94(2) = 21.
+
+Proof. Like Proposition 2, but it is more difficult to prove the corresponding lemma
+(Lemma 2 below). []
+
+Lemma 2. If KIT /S colored by four colors then there exist five vertices spannin9 a
+1£5 with at least one missin9 color.
+
+Proof. Assume that GI is the subgraph with the edges of the minority color. This im-
+plies that IE(GI)I ~<34 therefore either 6(G1)~<3 or G1 is 4-regular. In the second case
+Brooks theorem shows that Gi is either 4-colorable or contains/(5, both possibilities
+give the required five element vertex set. Thus we may assume that xl is a vertex of
+degree at most 3 in Gl. Let M denote the set of neighbors of xl in Gj. An easy count
+shows that the subgraph of Gl spanned by A = V\(xl U M ) has a vertex x2 of degree
+at most 4, let N denote the neighbors of x2 in GI[A] and set X = V\(xl Ux2 U M UN).
+From the construction, IX[ >_-8. We may assume that GI[X] has no three independent
+vertices, otherwise (together with xl, x2) we have five independent vertices in G~ and
+the theorem is proved. We may also assume the following property (,): G~ has no
+subgraph on five vertices with eight edges.
+
+   Case 1: GI[X] has a K 4 = Y. Set Z = X \ Y . We can assume by (*) that each z E Z
+sends at most one edge to Y in color one. This immediately implies that Gi [Z] is com-
+
+plete. This proves the theorem, except when IXI--8, and Gt[Y], GI[Z] are complete
+
+graphs. Notice that in this case IMI--3, INI--4 must hold. By (.) we may select
+u, y E N nonadjacent in GI. By ( , ) again, both u and v send at most one edge in color
+1 to both Y and Z which allows to select two vertices yl, Y2 in Y and two vertices
+zl, z2 in Z such that none of these four vertices are adjacent in color 1 to u or to v.
+Using ( , ) again, there is a pair Yi, zi nonadjacent in color 1. This shows that the five
+vertices x~, u, v, Yi, zj are independent in GI.
+
+   Case 2: Gl[X] has no K4. Since R ( 3 , 4 ) = 9 and the extremal graph not violating
+is unique, GI [X] is an eight cycle with its short chords. As in Case 1, M = 3, N = 4.
+By (,), select u, v 6 N nonadjacent in color 1. The structure of Gl[X] show that at
+least five vertices of X are needed to block all independent sets of cardinality two in
+Gi [X]. Therefore at least five edges of Gl run from u, v to X. Our plan is to find
+at least seven edges of G1 in [M,M], [N,N], [M,N], [M,X] which together with the
+86  P. Erd6s, A. Gyfirfdts/Discrete Mathematics 200 (1999) 79~86
+
+16 edges of [X, X], 5 edges of IN, X], and the 7 edges incident to xl, x2 gives 35
+
+edges contradicting the definition of G1. To achieve this, notice that the degrees of M
+
+are at least three and the degrees of N are at least four in Gl otherwise xl or x2 can
+
+be changed to give a better pair. This means that M and N\{u, v} have a total of 12
+incidences in V(G1)\{xl, x2}. It is easy to check that the only way to satisfy that with
+six edges of Gl is to have a K3,3 between M and Nk{u, v}. However, in this case u, v
+
+must send six edges to X (instead of the assumed five). This finishes Case 2 and the
+
+proof of Lemma 2. []
+
+Proposition 4. 12~<f4(2)~< 16, 13 ~<92(3)~< 17.
+
+Acknowledgements
+
+   We are grateful to the unknown referee who found the error in the proof of the
+(false) claim (stated in an earlier version of this paper) that the Ramsey colorings are
+the largest split critical colorings. We also thank both referees for pointing out that the
+parity of r has to be considered in the proof of Theorem 4.
+
+References
+
+[1] F. F61des, P.L. Hammer, Split graphs, in: F. Hoffman et al. (Eds.), Proc. 8th Southeastern Conf. on
+    Combinatorics, Graph Theory and Computing, 1977, pp. 311-315.
+
+[2] A.M. Gleason, R.E. Greenwood, Combinatorial relations and chromatic graphs, Can. J. Math. 7 (1955)
+    1-7.
+
+[3] M.C. Golumbic, Algorithmic Graph Theory and Perfect Graphs, Academic Press, New York, 1980.
+[4] R.L. Graham, B.L. Rothschild, J.H. Spencer, Ramsey Theory, Wiley, New York, 1980.
+[5] A. Gy~irffis, J. Lehel, A Helly Type problem in Trees, Coll. Math. Soc. J. Bolyai, 4. Combin. Theory
+
+    and its Appl. (1969) 571-584.
+

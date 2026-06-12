@@ -1,0 +1,50 @@
+# Clean-room verification clones
+cleanroom/
+cleanroom-*/
+
+# Search/exploration output directories
+search*/
+
+# Nested clones/worktrees; keep their own remotes independent.
+apn-gpt55-workbench/
+erdos_db/
+erdosproblems-db/
+formal-conjectures/
+teorth_claude_944/
+teorth_erdosproblems/
+teorth_erdosproblems_944/
+sms-win/
+fc-pr-4168/
+fc-erdos23-a25/
+problems/1212/publish/erdos-1212-partial/
+
+# Local editor, agent, dependency, and tool state
+.claude/
+.deps/
+.vscode/
+elan-dist/
+tools/
+
+# Scratch/runtime output
+scratch/
+workers/
+tmp.*
+*_tmp.*
+UNSTAGED_*.patch
+RESCUE_*.patch
+RESCUE_*.txt
+/E*ProjectsErdosProblems_audit_txg.py
+*.out
+*.err
+*.log
+*.aux
+*.flag
+*.prev_*
+*.lock
+
+# Generated binaries and cached scrape pages
+*.exe
+*.zip
+problems/**/check_stream_mt
+/*.html
+/*.htm

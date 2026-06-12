@@ -1,0 +1,28 @@
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 05f04a2..34c85ae 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -162,7 +162,22 @@ theorem K4_avg_dist : averageDistance K4 = 1 := by
+ 
+ @[category test, AMS 5]
+ theorem K4_diameter : maxEccentricity K4 = 1 := by
+-  sorry
++  have hecc : ∀ u : Fin 4, (⊤ : SimpleGraph (Fin 4)).eccentricity u = 1 := by
++    intro u
++    rw [show (⊤ : SimpleGraph (Fin 4)).eccentricity u =
++        (⊤ : SimpleGraph (Fin 4)).eccent u by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    simp
++  have hrange : Set.range ((⊤ : SimpleGraph (Fin 4)).eccentricity) = ({1} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [hecc u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [K4, maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem K4_radius : minEccentricity K4 = 1 := by

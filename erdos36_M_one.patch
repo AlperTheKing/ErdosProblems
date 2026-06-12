@@ -1,0 +1,76 @@
+diff --git a/FormalConjectures/ErdosProblems/36.lean b/FormalConjectures/ErdosProblems/36.lean
+index 578a1e5..89e4fe8 100644
+--- a/FormalConjectures/ErdosProblems/36.lean
++++ b/FormalConjectures/ErdosProblems/36.lean
+@@ -60,7 +60,70 @@ Thus, $M 1 = 1$.
+ -/
+ @[category test, AMS 5 11]
+ theorem M_one : M 1 = 1 := by
+-  sorry
++  unfold M
++  have hone :
++      1 ∈ {MaxOverlap A B | (A : Finset ℤ) (B : Finset ℤ)
++        (_disjoint : Disjoint A B)
++        (_union : A ∪ B = Finset.Icc (1 : ℤ) (2 * ((1 : ℕ) : ℤ)))
++        (_same_card : A.card = B.card)} := by
++    refine ⟨({1} : Finset ℤ), ({2} : Finset ℤ), ?_, ?_, ?_, ?_⟩
++    · norm_num
++    · ext x
++      norm_num
++      omega
++    · simp
++    · unfold MaxOverlap Overlap
++      apply le_antisymm
++      · apply ciSup_le
++        intro k
++        rw [Finset.card_le_one]
++        intro p hp q hq
++        simp at hp hq
++        ext <;> simp [hp.1, hq.1]
++      · have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((({1} : Finset ℤ).product ({2} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨1, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          rw [Finset.card_le_one]
++          intro p hp q hq
++          simp at hp hq
++          ext <;> simp [hp.1, hq.1]
++        exact le_trans
++          (show 1 ≤ ((({1} : Finset ℤ).product ({2} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = (-1 : ℤ)).card by
++            rw [Finset.one_le_card]
++            exact ⟨(1, 2), by simp⟩)
++          (le_ciSup hbdd (-1))
++  apply le_antisymm
++  · exact Nat.sInf_le hone
++  · have hmem := Nat.sInf_mem ⟨1, hone⟩
++    rcases hmem with ⟨A, B, hdisj, hunion, hcard, hmax⟩
++    rw [← hmax]
++    have hcard_union : (A ∪ B).card = 2 := by
++      rw [hunion]
++      decide
++    have hsum : A.card + B.card = 2 := by
++      rw [← Finset.card_union_of_disjoint hdisj]
++      exact hcard_union
++    have hAcard : A.card = 1 := by omega
++    have hBcard : B.card = 1 := by omega
++    obtain ⟨a, ha⟩ := Finset.card_pos.mp (by omega : 0 < A.card)
++    obtain ⟨b, hb⟩ := Finset.card_pos.mp (by omega : 0 < B.card)
++    unfold MaxOverlap Overlap
++    exact le_trans
++      (show 1 ≤ ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = a - b).card by
++        rw [Finset.one_le_card]
++        exact ⟨(a, b), by simp [ha, hb]⟩)
++      (by
++        have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨(A.product B).card, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          exact Finset.card_filter_le _ _
++        exact le_ciSup hbdd (a - b))
+ 
+ @[category test, AMS 5 11]
+ theorem M_two : M 2 = 1 := by

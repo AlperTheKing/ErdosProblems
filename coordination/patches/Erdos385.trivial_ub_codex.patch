@@ -1,0 +1,36 @@
+diff --git a/FormalConjectures/ErdosProblems/385.lean b/FormalConjectures/ErdosProblems/385.lean
+index 26b90e9..3762c7c 100644
+--- a/FormalConjectures/ErdosProblems/385.lean
++++ b/FormalConjectures/ErdosProblems/385.lean
+@@ -33,7 +33,30 @@ noncomputable def F (n : ℕ) : ℕ := sSup {m + m.minFac | (m < n) (_ : m.Compo
+ /-- Note that trivially $F(n) \leq n + \sqrt{n}$. -/
+ @[category test, AMS 11]
+ theorem trivial_ub (n : ℕ) : F n ≤ n + √n := by
+-  sorry
++  classical
++  rw [F]
++  let S : Set ℕ := {x | ∃ m < n, ∃ (_ : m.Composite), m + m.minFac = x}
++  change ((sSup S : ℕ) : ℝ) ≤ (n : ℝ) + √(n : ℝ)
++  have hBound : ∀ b ∈ S, b ≤ n + Nat.sqrt n := by
++    intro b hb
++    rcases hb with ⟨m, hm_lt, hm_comp, rfl⟩
++    have hm_le_n : m ≤ n := Nat.le_of_lt hm_lt
++    have hm_pos : 0 < m := lt_trans zero_lt_one hm_comp.1
++    have hmin_sqrt : m.minFac ≤ Nat.sqrt m := by
++      rw [Nat.le_sqrt']
++      exact Nat.minFac_sq_le_self hm_pos hm_comp.2
++    have hsqrt_le : Nat.sqrt m ≤ Nat.sqrt n := Nat.sqrt_le_sqrt hm_le_n
++    omega
++  have hBdd : ∃ N, ∀ b ∈ S, b ≤ N := ⟨n + Nat.sqrt n, hBound⟩
++  have hNat : sSup S ≤ n + Nat.sqrt n := by
++    rw [Nat.sSup_def hBdd]
++    exact Nat.find_min' hBdd hBound
++  calc
++    ((sSup S : ℕ) : ℝ) ≤ ((n + Nat.sqrt n : ℕ) : ℝ) := by exact_mod_cast hNat
++    _ = (n : ℝ) + (Nat.sqrt n : ℝ) := by norm_num
++    _ ≤ (n : ℝ) + √(n : ℝ) := by
++      gcongr
++      exact Real.nat_sqrt_le_real_sqrt
+ 
+ /-- Let $F(n) := \max\{m + p(m) \mid  \textrm{$m < n$ composite}\}\}$ where $p(m)$ is the least
+ prime divisor of $m$. Is it true that $F(n)>n$ for all sufficiently large $n$? -/

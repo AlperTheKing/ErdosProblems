@@ -1,0 +1,10 @@
+CERT H?~vf^m fate=twins ncol=12
+CERT H?~vf^] fate=twins ncol=6
+CERT HCr~vrf fate=twins ncol=6
+CERT HCZ~vrf fate=twins ncol=6
+CERT HErvf^m fate=twins ncol=6
+CERT HEhf~z{ fate=twins ncol=6
+CERT HEzftz{ fate=kill:v0 b0 ncol=6
+CERT HEzf]z{ fate=twins ncol=6
+CERT HEzf\z{ fate=twins ncol=6
+total=729 badDeficiency=0 not3col=711 badBoundaryVec=9 comparableNonNbr=8 localKill=1 SURVIVORS=0

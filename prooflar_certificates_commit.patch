@@ -1,0 +1,2759 @@
+From 6f30f2cc7978f16c8fda2325a5cd95f373c22e1c Mon Sep 17 00:00:00 2001
+From: AlperTheKing <alper@mercurycodelab.com>
+Date: Sat, 30 May 2026 10:06:43 +0300
+Subject: [PATCH] Prove additional finite certificates
+
+---
+ FormalConjectures/ErdosProblems/1054.lean     |  178 ++-
+ FormalConjectures/ErdosProblems/1063.lean     |  121 +-
+ FormalConjectures/ErdosProblems/138.lean      |  146 ++-
+ FormalConjectures/ErdosProblems/18.lean       |  229 +++-
+ FormalConjectures/ErdosProblems/36.lean       |  415 ++++++-
+ FormalConjectures/ErdosProblems/385.lean      |   24 +-
+ FormalConjectures/ErdosProblems/494.lean      |  121 +-
+ FormalConjectures/ErdosProblems/686.lean      |    4 +-
+ FormalConjectures/ErdosProblems/885.lean      |   69 +-
+ FormalConjectures/OEIS/34693.lean             |   18 +-
+ FormalConjectures/Wikipedia/MovingSofa.lean   |   46 +-
+ .../WrittenOnTheWallII/Test.lean              | 1082 ++++++++++++++++-
+ 12 files changed, 2416 insertions(+), 37 deletions(-)
+
+diff --git a/FormalConjectures/ErdosProblems/1054.lean b/FormalConjectures/ErdosProblems/1054.lean
+index c5c94dd..6626175 100644
+--- a/FormalConjectures/ErdosProblems/1054.lean
++++ b/FormalConjectures/ErdosProblems/1054.lean
+@@ -57,12 +57,186 @@ theorem erdos_1054.parts.iii : answer(sorry) ↔ ∃ (A : Set ℕ), A.HasDensity
+ of $m$ for some $k\geq 1$. Show that $f$ is undefined at $n=2$, i.e. we get the junk value $0$. -/
+ @[category textbook, AMS 11]
+ theorem f_undefined_at_2 : f 2 = 0 := by
+-  sorry
++  simp [f]
++  intro m k hk hsum
++  let p : ℕ → Prop := fun d => d ∣ m ∧ ¬m = 0
++  by_cases hm : m = 0
++  · subst m
++    simp at hsum
++  · have hp0 : ¬p 0 := by
++      intro h
++      exact hm (by simpa using h.1)
++    have hsum_p : 2 = ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++      simpa [p] using hsum
++    have hfirst : Nat.nth p 0 = 1 := by
++      rw [Nat.nth_zero]
++      apply le_antisymm
++      · apply Nat.sInf_le
++        exact ⟨one_dvd m, hm⟩
++      · apply le_csInf
++        · exact ⟨1, one_dvd m, hm⟩
++        · intro b hb
++          rcases hb with ⟨hbdvd, _⟩
++          exact Nat.pos_of_dvd_of_pos hbdvd (Nat.pos_of_ne_zero hm)
++    by_cases h1zero : Nat.nth p 1 = 0
++    · have htail : ∀ i, i ≠ 0 → Nat.nth p i = 0 := by
++        intro i hi
++        have hi1 : 1 ≤ i := Nat.succ_le_of_lt (Nat.pos_of_ne_zero hi)
++        exact Nat.nth_eq_zero_mono (p := p) hp0 hi1 h1zero
++      have hsum_eq_one : (∑ i ∈ Finset.Iio k, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio k, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; exact htail b hbne)
++              (by intro hnot; exact False.elim (hnot (by simpa using hk)))
++          _ = 1 := hfirst
++      omega
++    · have hsecond : 1 < Nat.nth p 1 := by
++        have hmono : Nat.nth p 0 < Nat.nth p 1 :=
++          Nat.nth_lt_nth' (p := p) (m := 0) (n := 1) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h1zero hf)
++        simpa [hfirst] using hmono
++      have hk2 : 2 ≤ k := by
++        by_contra hlt
++        have hk1 : k = 1 := by omega
++        subst k
++        have hsum_eq_one : (∑ i ∈ Finset.Iio 1, Nat.nth p i) = 1 := by
++          calc
++            (∑ i ∈ Finset.Iio 1, Nat.nth p i) = Nat.nth p 0 :=
++              Finset.sum_eq_single (0 : ℕ)
++                (by intro b hb hbne; simp at hb; omega)
++                (by intro hnot; exact False.elim (hnot (by simp)))
++            _ = 1 := hfirst
++        omega
++      have hsubset : ({0, 1} : Finset ℕ) ⊆ Finset.Iio k := by
++        intro i hi
++        simp at hi ⊢
++        omega
++      have hle :
++          (∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i) ≤
++            ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++        exact Finset.sum_le_sum_of_subset_of_nonneg hsubset
++          (by intro x hx hxnot; exact Nat.zero_le _)
++      have hsmall : 3 ≤ ∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i := by
++        simp [hfirst]
++        omega
++      omega
+ 
+ /-- Let $f(n)$ be the minimal integer $m$ such that $n$ is the sum of the $k$ smallest divisors
+ of $m$ for some $k\geq 1$. Show that $f$ is undefined at $n=5$, i.e. we get the junk value $0$. -/
+ @[category textbook, AMS 11]
+ theorem f_undefined_at_3 : f 5 = 0 := by
+-  sorry
++  simp [f]
++  intro m k hk hsum
++  let p : ℕ → Prop := fun d => d ∣ m ∧ ¬m = 0
++  by_cases hm : m = 0
++  · subst m
++    simp at hsum
++  · have hp0 : ¬p 0 := by
++      intro h
++      exact hm (by simpa using h.1)
++    have hsum_p : 5 = ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++      simpa [p] using hsum
++    have hfirst : Nat.nth p 0 = 1 := by
++      rw [Nat.nth_zero]
++      apply le_antisymm
++      · apply Nat.sInf_le
++        exact ⟨one_dvd m, hm⟩
++      · apply le_csInf
++        · exact ⟨1, one_dvd m, hm⟩
++        · intro b hb
++          rcases hb with ⟨hbdvd, _⟩
++          exact Nat.pos_of_dvd_of_pos hbdvd (Nat.pos_of_ne_zero hm)
++    have no_second_four (hfour : Nat.nth p 1 = 4) : False := by
++      have h1ne : Nat.nth p 1 ≠ 0 := by omega
++      have hfour_mem : p 4 := by
++        simpa [hfour] using (Nat.nth_mem_of_ne_zero (p := p) h1ne)
++      have htwo_mem : p 2 := by
++        exact ⟨dvd_trans (by norm_num : 2 ∣ 4) hfour_mem.1, hm⟩
++      have hlt : 2 < Nat.nth p (0 + 1) := by
++        simp [hfour]
++      have hle := Nat.le_nth_of_lt_nth_succ (p := p) (k := 0) hlt htwo_mem
++      omega
++    by_cases hk1 : k = 1
++    · subst k
++      have hsum_eq_one : (∑ i ∈ Finset.Iio 1, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio 1, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; simp at hb; omega)
++              (by intro hnot; exact False.elim (hnot (by simp)))
++          _ = 1 := hfirst
++      omega
++    by_cases hk2 : k = 2
++    · subst k
++      have hIio2 : Finset.Iio 2 = ({0, 1} : Finset ℕ) := by
++        ext i
++        simp
++        omega
++      have hsum_pair : (∑ i ∈ Finset.Iio 2, Nat.nth p i) = 1 + Nat.nth p 1 := by
++        rw [hIio2]
++        simp [hfirst]
++      have hfour : Nat.nth p 1 = 4 := by omega
++      exact no_second_four hfour
++    have hk3 : 3 ≤ k := by omega
++    by_cases h1zero : Nat.nth p 1 = 0
++    · have htail : ∀ i, i ≠ 0 → Nat.nth p i = 0 := by
++        intro i hi
++        have hi1 : 1 ≤ i := Nat.succ_le_of_lt (Nat.pos_of_ne_zero hi)
++        exact Nat.nth_eq_zero_mono (p := p) hp0 hi1 h1zero
++      have hsum_eq_one : (∑ i ∈ Finset.Iio k, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio k, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; exact htail b hbne)
++              (by
++                intro hnot
++                have hz : 0 ∈ Finset.Iio k := by
++                  simp
++                  omega
++                exact False.elim (hnot hz))
++          _ = 1 := hfirst
++      omega
++    · have hsecond : 1 < Nat.nth p 1 := by
++        have hmono : Nat.nth p 0 < Nat.nth p 1 :=
++          Nat.nth_lt_nth' (p := p) (m := 0) (n := 1) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h1zero hf)
++        simpa [hfirst] using hmono
++      by_cases h2zero : Nat.nth p 2 = 0
++      · have htail : ∀ i, 2 ≤ i → Nat.nth p i = 0 := by
++          intro i hi
++          exact Nat.nth_eq_zero_mono (p := p) hp0 hi h2zero
++        have hsubset : ({0, 1} : Finset ℕ) ⊆ Finset.Iio k := by
++          intro i hi
++          simp at hi ⊢
++          omega
++        have hsum_pair : (∑ i ∈ Finset.Iio k, Nat.nth p i) =
++            ∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i := by
++          exact (Finset.sum_subset hsubset
++            (by
++              intro x hx hxnot
++              apply htail x
++              simp at hx hxnot
++              omega)).symm
++        have hpair_eval : (∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i) = 1 + Nat.nth p 1 := by
++          simp [hfirst]
++        have hfour : Nat.nth p 1 = 4 := by omega
++        exact no_second_four hfour
++      · have hthird : Nat.nth p 1 < Nat.nth p 2 :=
++          Nat.nth_lt_nth' (p := p) (m := 1) (n := 2) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h2zero hf)
++        have hsubset : ({0, 1, 2} : Finset ℕ) ⊆ Finset.Iio k := by
++          intro i hi
++          simp at hi ⊢
++          omega
++        have hle :
++            (∑ i ∈ ({0, 1, 2} : Finset ℕ), Nat.nth p i) ≤
++              ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++          exact Finset.sum_le_sum_of_subset_of_nonneg hsubset
++            (by intro x hx hxnot; exact Nat.zero_le _)
++        have hsmall : 6 ≤ ∑ i ∈ ({0, 1, 2} : Finset ℕ), Nat.nth p i := by
++          simp [hfirst]
++          omega
++        omega
+ 
+ end Erdos1054
+diff --git a/FormalConjectures/ErdosProblems/1063.lean b/FormalConjectures/ErdosProblems/1063.lean
+index 3f8e08b..f07c839 100644
+--- a/FormalConjectures/ErdosProblems/1063.lean
++++ b/FormalConjectures/ErdosProblems/1063.lean
+@@ -39,6 +39,23 @@ noncomputable def n (k : ℕ) : ℕ :=
+   sInf {m | 2 * k ≤ m ∧ ∃ i0 < k, ¬ (m - i0) ∣ m.choose k ∧
+     ∀ i < k, i ≠ i0 → (m - i) ∣ m.choose k}
+ 
++lemma n_eq_of_cert (k m : ℕ)
++    (hmem : 2 * k ≤ m ∧ ∃ i0 < k, ¬ (m - i0) ∣ m.choose k ∧
++      ∀ i < k, i ≠ i0 → (m - i) ∣ m.choose k)
++    (hmin : ∀ t < m, ¬ (2 * k ≤ t ∧ ∃ i0 < k, ¬ (t - i0) ∣ t.choose k ∧
++      ∀ i < k, i ≠ i0 → (t - i) ∣ t.choose k)) :
++    n k = m := by
++  unfold n
++  let S : Set ℕ := {q | 2 * k ≤ q ∧ ∃ i0 < k, ¬ (q - i0) ∣ q.choose k ∧
++    ∀ i < k, i ≠ i0 → (q - i) ∣ q.choose k}
++  change sInf S = m
++  have hmS : m ∈ S := hmem
++  apply le_antisymm
++  · exact Nat.sInf_le hmS
++  · by_contra hle
++    have hlt : sInf S < m := Nat.lt_of_not_ge hle
++    exact (hmin (sInf S) hlt) (Nat.sInf_mem ⟨m, hmS⟩)
++
+ /--
+ Estimate $n_k$ by finding a better upper bound.
+ -/
+@@ -63,7 +80,109 @@ theorem erdos_1063.variants.exists_exception {n k : ℕ} (hk : 2 ≤ k) (h : 2 *
+ @[category research solved, AMS 11]
+ theorem erdos_1063.variants.small_values :
+     n 2 = 4 ∧ n 3 = 6 ∧ n 4 = 9 ∧ n 5 = 12 := by
+-  sorry
++  refine ⟨?_, ?_, ?_, ?_⟩
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨0, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · contradiction
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      interval_cases t <;> norm_num [Nat.choose] at hS
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨0, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      interval_cases t <;> norm_num [Nat.choose] at hS
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨1, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · norm_num [Nat.choose]
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      rcases hS with ⟨htlower, hS⟩
++      interval_cases t; norm_num at htlower
++      rcases hS with ⟨i0, hi0, hfail, hall⟩
++      interval_cases i0
++      · have hdiv := hall 2 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨2, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      rcases hS with ⟨htlower, hS⟩
++      interval_cases t <;> norm_num at htlower
++      · rcases hS with ⟨i0, hi0, hfail, hall⟩
++        interval_cases i0
++        · have hdiv := hall 2 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++      · rcases hS with ⟨i0, hi0, hfail, hall⟩
++        interval_cases i0
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 2 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
+ 
+ /-- Monier observed that $n_k \le k!$ for $k \ge 3$ ([Mo85]).
+ TODO: Find reference
+diff --git a/FormalConjectures/ErdosProblems/138.lean b/FormalConjectures/ErdosProblems/138.lean
+index e7f8363..1ff448e 100644
+--- a/FormalConjectures/ErdosProblems/138.lean
++++ b/FormalConjectures/ErdosProblems/138.lean
+@@ -69,12 +69,154 @@ noncomputable abbrev W : ℕ → ℕ := monoAPNumber 2
+ @[category test, AMS 11,
+ formal_proof using formal_conjectures at "https://github.com/XC0R/formal-conjectures/blob/6c7a16e8998d1c597fa2a5c6329bc9301fcc56e2/FormalConjectures/ErdosProblems/138.lean#L79"]
+ theorem monoAPNumber_two_one : W 1 = 1 := by
+-  sorry
++  unfold W monoAPNumber
++  let S := monoAP_guarantee_set 2 1
++  change sInf S = 1
++  have hmem : 1 ∈ S := by
++    intro coloring
++    let x : (Finset.Icc 1 1 : Set ℕ) := ⟨1, by simp⟩
++    refine ⟨coloring x, {x}, ?_, ?_⟩
++    · simp [Set.IsAPOfLength]
++    · intro m hm
++      simp at hm
++      subst hm
++      rfl
++  refine le_antisymm (Nat.sInf_le hmem) ?_
++  apply le_csInf ⟨1, hmem⟩
++  intro N hN
++  by_contra hlt
++  have hN0 : N = 0 := by omega
++  subst N
++  let coloring : (Finset.Icc 1 0 : Set ℕ) → Fin 2 := fun x => by
++    have hx : (x : ℕ) ∈ (Finset.Icc 1 0 : Set ℕ) := x.2
++    simp at hx
++  rcases hN coloring with ⟨c, ap, hap, hcolor⟩
++  have hempty : ((fun x : (Finset.Icc 1 0 : Set ℕ) => x.1) '' ap) = (∅ : Set ℕ) := by
++    ext y
++    constructor
++    · rintro ⟨x, hx, rfl⟩
++      have hxm : (x : ℕ) ∈ (Finset.Icc 1 0 : Set ℕ) := x.2
++      simp at hxm
++    · intro hy
++      simp at hy
++  rw [hempty] at hap
++  simpa using hap.card
+ 
+ @[category test, AMS 11,
+ formal_proof using formal_conjectures at "https://github.com/XC0R/formal-conjectures/blob/6c7a16e8998d1c597fa2a5c6329bc9301fcc56e2/FormalConjectures/ErdosProblems/138.lean#L142"]
+ theorem monoAPNumber_two_two : W 2 = 3 := by
+-  sorry
++  unfold W monoAPNumber
++  let S := monoAP_guarantee_set 2 2
++  change sInf S = 3
++  have containsPair {N : ℕ} (coloring : (Finset.Icc 1 N : Set ℕ) → Fin 2)
++      (x y : (Finset.Icc 1 N : Set ℕ)) (hxy : (x : ℕ) < y)
++      (hcol : coloring x = coloring y) :
++      ContainsMonoAPofLength coloring 2 := by
++    refine ⟨coloring x, {x, y}, ?_, ?_⟩
++    · convert Nat.isAPOfLength_pair hxy using 1
++      ext n
++      simp only [Set.mem_image, Set.mem_insert_iff, Set.mem_singleton_iff]
++      constructor
++      · rintro ⟨z, hz, rfl⟩
++        rcases hz with rfl | rfl <;> simp
++      · rintro (rfl | rfl)
++        · exact ⟨x, by simp, rfl⟩
++        · exact ⟨y, by simp, rfl⟩
++    · intro m hm
++      simp at hm
++      rcases hm with rfl | rfl
++      · rfl
++      · exact hcol.symm
++  have hmem : 3 ∈ S := by
++    intro coloring
++    let x1 : (Finset.Icc 1 3 : Set ℕ) := ⟨1, by simp⟩
++    let x2 : (Finset.Icc 1 3 : Set ℕ) := ⟨2, by simp⟩
++    let x3 : (Finset.Icc 1 3 : Set ℕ) := ⟨3, by simp⟩
++    by_cases h12 : coloring x1 = coloring x2
++    · exact containsPair coloring x1 x2 (by norm_num) h12
++    · by_cases h13 : coloring x1 = coloring x3
++      · exact containsPair coloring x1 x3 (by norm_num) h13
++      · have h23 : coloring x2 = coloring x3 := by
++          have hfin (c : Fin 2) : c = 0 ∨ c = 1 := by
++            rcases c with ⟨v, hv⟩
++            interval_cases v
++            · left
++              rfl
++            · right
++              rfl
++          rcases hfin (coloring x1) with h1 | h1 <;>
++            rcases hfin (coloring x2) with h2 | h2 <;>
++            rcases hfin (coloring x3) with h3 | h3 <;> simp_all
++        exact containsPair coloring x2 x3 (by norm_num) h23
++  have notMemLtTwo {N : ℕ} (hNlt : N < 2) :
++      N ∉ monoAP_guarantee_set 2 2 := by
++    intro hN
++    let coloring : (Finset.Icc 1 N : Set ℕ) → Fin 2 := fun _ => 0
++    rcases hN coloring with ⟨c, ap, hap, hcolor⟩
++    simp [Set.IsAPOfLength, Set.IsAPOfLengthWith] at hap
++    have hsub : Finset.image (fun x : (Finset.Icc 1 N : Set ℕ) => x.1) ap.toFinset ⊆
++        Finset.Icc 1 N := by
++      intro y hy
++      rcases Finset.mem_image.mp hy with ⟨x, hx, rfl⟩
++      exact x.2
++    have hcard :
++        (Finset.image (fun x : (Finset.Icc 1 N : Set ℕ) => x.1) ap.toFinset).card = 2 := by
++      exact_mod_cast hap.1
++    have hle := Finset.card_le_card hsub
++    rw [hcard] at hle
++    interval_cases N <;> norm_num at hle
++  have notMemTwo : 2 ∉ monoAP_guarantee_set 2 2 := by
++    intro hN
++    let coloring : (Finset.Icc 1 2 : Set ℕ) → Fin 2 := fun x =>
++      if (x : ℕ) = 1 then 0 else 1
++    rcases hN coloring with ⟨c, ap, hap, hcolor⟩
++    simp [Set.IsAPOfLength, Set.IsAPOfLengthWith] at hap
++    have hsub : Finset.image (fun x : (Finset.Icc 1 2 : Set ℕ) => x.1) ap.toFinset ⊆
++        ({1, 2} : Finset ℕ) := by
++      intro y hy
++      rcases Finset.mem_image.mp hy with ⟨x, hx, rfl⟩
++      have hxIcc : (x : ℕ) ∈ (Finset.Icc 1 2 : Set ℕ) := x.2
++      simp at hxIcc
++      have hxlo : 1 ≤ (x : ℕ) := hxIcc.1
++      have hxhi : (x : ℕ) ≤ 2 := hxIcc.2
++      interval_cases (x : ℕ) <;> simp
++    have himage :
++        Finset.image (fun x : (Finset.Icc 1 2 : Set ℕ) => x.1) ap.toFinset =
++          ({1, 2} : Finset ℕ) := by
++      have hcard :
++          (Finset.image (fun x : (Finset.Icc 1 2 : Set ℕ) => x.1) ap.toFinset).card = 2 := by
++        exact_mod_cast hap.1
++      exact Finset.eq_of_subset_of_card_le hsub (by rw [hcard]; norm_num)
++    have h1mem : 1 ∈ Finset.image (fun x : (Finset.Icc 1 2 : Set ℕ) => x.1) ap.toFinset := by
++      rw [himage]
++      simp
++    have h2mem : 2 ∈ Finset.image (fun x : (Finset.Icc 1 2 : Set ℕ) => x.1) ap.toFinset := by
++      rw [himage]
++      simp
++    rcases Finset.mem_image.mp h1mem with ⟨x, hx, hxval⟩
++    rcases Finset.mem_image.mp h2mem with ⟨y, hy, hyval⟩
++    have hxap : x ∈ ap := by simpa using hx
++    have hyap : y ∈ ap := by simpa using hy
++    have hcx := hcolor x hxap
++    have hcy := hcolor y hyap
++    have hxcolor : coloring x = 0 := by
++      simp [coloring, hxval]
++    have hycolor : coloring y = 1 := by
++      simp [coloring, hyval]
++    have : (0 : Fin 2) = 1 := by
++      have h0c : (0 : Fin 2) = c := hxcolor.symm.trans hcx
++      have h1c : (1 : Fin 2) = c := hycolor.symm.trans hcy
++      exact h0c.trans h1c.symm
++    norm_num at this
++  refine le_antisymm (Nat.sInf_le hmem) ?_
++  apply le_csInf ⟨3, hmem⟩
++  intro N hN
++  by_contra hlt
++  have hNlt : N < 3 := Nat.lt_of_not_ge hlt
++  interval_cases N
++  · exact notMemLtTwo (by norm_num) hN
++  · exact notMemLtTwo (by norm_num) hN
++  · exact notMemTwo hN
+ 
+ /--
+ In [Er80] Erdős asks whether
+diff --git a/FormalConjectures/ErdosProblems/18.lean b/FormalConjectures/ErdosProblems/18.lean
+index b6958cc..22446d0 100644
+--- a/FormalConjectures/ErdosProblems/18.lean
++++ b/FormalConjectures/ErdosProblems/18.lean
+@@ -64,13 +64,238 @@ theorem practicalH_two : practicalH 2 = 1 := by
+ m=4 or m=5, each requiring 2 divisors: 4=1+3, 5=2+3. -/
+ @[category test, AMS 11]
+ theorem practicalH_six : practicalH 6 = 2 := by
+-  sorry
++  simp only [practicalH, (by decide : Finset.Icc 1 6 = ({1, 2, 3, 4, 5, 6} : Finset ℕ)),
++    (by decide : Nat.divisors 6 = ({1, 2, 3, 6} : Finset ℕ)), Finset.sup_insert,
++    Finset.sup_singleton]
++  have one_le_of_subset_sum_singleton_bound {m k : ℕ}
++      (hm0 : m ≠ 0)
++      (hk : ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧ m ∈ subsetSums D) :
++      1 ≤ k := by
++    rcases hk with ⟨D, _hDsub, hDcard, B, hBsub, hsum⟩
++    subst k
++    exact Finset.one_le_card.mpr
++      ((Finset.nonempty_iff_ne_empty.mpr fun hB => by
++        simp [hB] at hsum
++        exact hm0 hsum).mono hBsub)
++  have two_le_of_not_single {m k : ℕ}
++      (hm : m ≠ 0) (hm1 : m ≠ 1) (hm2 : m ≠ 2) (hm3 : m ≠ 3) (hm6 : m ≠ 6)
++      (hk : ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧ m ∈ subsetSums D) :
++      2 ≤ k := by
++    have hkpos : 1 ≤ k := one_le_of_subset_sum_singleton_bound hm hk
++    by_contra hnot
++    have hk_le_one : k ≤ 1 := by omega
++    have hk_eq : k = 1 := by omega
++    rcases hk with ⟨D, hDsub, hDcard, B, hBsub, hsum⟩
++    subst k
++    obtain ⟨d, hD_eq⟩ := Finset.card_eq_one.mp hDcard
++    subst D
++    have hd_cases : d = 1 ∨ d = 2 ∨ d = 3 ∨ d = 6 := by simpa using hDsub (by simp)
++    by_cases hdB : d ∈ B
++    · have hB_eq : B = {d} := by
++        apply Finset.Subset.antisymm hBsub
++        intro x hx
++        rw [Finset.mem_singleton.mp hx]
++        exact hdB
++      rw [hB_eq] at hsum
++      simp at hsum
++      rcases hd_cases with rfl | rfl | rfl | rfl <;> omega
++    · have hB_eq : B = ∅ := by
++        apply Finset.eq_empty_iff_forall_notMem.mpr
++        intro x hx
++        have hx' := hBsub hx
++        have hx_eq : x = d := by simpa using hx'
++        subst x
++        exact hdB hx
++      rw [hB_eq] at hsum
++      simp at hsum
++      exact hm hsum
++  have h1 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      1 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1}, by simp, rfl, {1}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {1}, by simp, rfl, {1}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_singleton_bound (by norm_num) hk))
++  have h2 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      2 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{2}, by simp, rfl, {2}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {2}, by simp, rfl, {2}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_singleton_bound (by norm_num) hk))
++  have h3 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      3 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{3}, by simp, rfl, {3}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {3}, by simp, rfl, {3}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_singleton_bound (by norm_num) hk))
++  have h4 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      4 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1, 3}, by simp, rfl, {1, 3}, rfl.subset, by simp⟩)
++      (le_csInf ⟨2, {1, 3}, by simp, rfl, {1, 3}, rfl.subset, by simp⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) hk))
++  have h5 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      5 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{2, 3}, by decide, rfl, {2, 3}, rfl.subset, by norm_num⟩)
++      (le_csInf ⟨2, {2, 3}, by decide, rfl, {2, 3}, rfl.subset, by norm_num⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) hk))
++  have h6 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 6} ∧ D.card = k ∧
++      6 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{6}, by simp, rfl, {6}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {6}, by simp, rfl, {6}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_singleton_bound (by norm_num) hk))
++  simp [h1, h2, h3, h4, h5, h6]
+ 
+ /-- $h(12) = 3$: divisors are {1, 2, 3, 4, 6, 12}. The hardest m is
+ m=11, requiring 3 divisors: 11=1+4+6. -/
+ @[category test, AMS 11]
+ theorem practicalH_twelve : practicalH 12 = 3 := by
+-  sorry
++  simp only [practicalH,
++    (by decide : Finset.Icc 1 12 =
++      ({1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} : Finset ℕ)),
++    (by decide : Nat.divisors 12 = ({1, 2, 3, 4, 6, 12} : Finset ℕ)),
++    Finset.sup_insert, Finset.sup_singleton]
++  have one_le_of_subset_sum_nonzero {m k : ℕ}
++      (hm0 : m ≠ 0)
++      (hk : ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧ m ∈ subsetSums D) :
++      1 ≤ k := by
++    rcases hk with ⟨D, _hDsub, hDcard, B, hBsub, hsum⟩
++    subst k
++    exact Finset.one_le_card.mpr
++      ((Finset.nonempty_iff_ne_empty.mpr fun hB => by
++        simp [hB] at hsum
++        exact hm0 hsum).mono hBsub)
++  have two_le_of_not_single {m k : ℕ}
++      (hm0 : m ≠ 0) (hm1 : m ≠ 1) (hm2 : m ≠ 2) (hm3 : m ≠ 3)
++      (hm4 : m ≠ 4) (hm6 : m ≠ 6) (hm12 : m ≠ 12)
++      (hk : ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++        m ∈ subsetSums D) :
++      2 ≤ k := by
++    have hkpos : 1 ≤ k := one_le_of_subset_sum_nonzero hm0 hk
++    by_contra hnot
++    have hk_eq : k = 1 := by omega
++    rcases hk with ⟨D, hDsub, hDcard, B, hBsub, hsum⟩
++    subst k
++    obtain ⟨d, hD_eq⟩ := Finset.card_eq_one.mp hDcard
++    subst D
++    have hd_cases : d = 1 ∨ d = 2 ∨ d = 3 ∨ d = 4 ∨ d = 6 ∨ d = 12 := by
++      simpa using hDsub (by simp)
++    by_cases hdB : d ∈ B
++    · have hB_eq : B = {d} := by
++        apply Finset.Subset.antisymm hBsub
++        intro x hx
++        rw [Finset.mem_singleton.mp hx]
++        exact hdB
++      rw [hB_eq] at hsum
++      simp at hsum
++      rcases hd_cases with rfl | rfl | rfl | rfl | rfl | rfl <;> omega
++    · have hB_eq : B = ∅ := by
++        apply Finset.eq_empty_iff_forall_notMem.mpr
++        intro x hx
++        have hx' := hBsub hx
++        have hx_eq : x = d := by simpa using hx'
++        subst x
++        exact hdB hx
++      rw [hB_eq] at hsum
++      simp at hsum
++      exact hm0 hsum
++  have three_le_for_eleven {k : ℕ}
++      (hk : ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++        11 ∈ subsetSums D) :
++      3 ≤ k := by
++    have hkpos : 1 ≤ k := one_le_of_subset_sum_nonzero (by norm_num) hk
++    by_contra hnot
++    have hk_le_two : k ≤ 2 := by omega
++    rcases hk with ⟨D, hDsub, hDcard, B, hBsub, hsum⟩
++    subst k
++    have hBsub_all : B ⊆ ({1, 2, 3, 4, 6, 12} : Finset ℕ) := hBsub.trans hDsub
++    have hBcard_le : B.card ≤ 2 := by
++      exact (Finset.card_le_card hBsub).trans hk_le_two
++    have hBmem : B ∈ (({1, 2, 3, 4, 6, 12} : Finset ℕ).powerset.filter
++        (fun S => S.card ≤ 2)) := by
++      simp [hBsub_all, hBcard_le]
++    fin_cases hBmem <;> norm_num at hsum
++  have h1 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      1 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1}, by simp, rfl, {1}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {1}, by simp, rfl, {1}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  have h2 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      2 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{2}, by simp, rfl, {2}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {2}, by simp, rfl, {2}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  have h3 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      3 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{3}, by simp, rfl, {3}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {3}, by simp, rfl, {3}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  have h4 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      4 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{4}, by simp, rfl, {4}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {4}, by simp, rfl, {4}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  have h5 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      5 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1, 4}, by simp, rfl, {1, 4}, rfl.subset, by simp⟩)
++      (le_csInf ⟨2, {1, 4}, by simp, rfl, {1, 4}, rfl.subset, by simp⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) (by norm_num) (by norm_num) hk))
++  have h6 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      6 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{6}, by simp, rfl, {6}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {6}, by simp, rfl, {6}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  have h7 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      7 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1, 6}, by simp, rfl, {1, 6}, rfl.subset, by simp⟩)
++      (le_csInf ⟨2, {1, 6}, by simp, rfl, {1, 6}, rfl.subset, by simp⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) (by norm_num) (by norm_num) hk))
++  have h8 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      8 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{2, 6}, by decide, rfl, {2, 6}, rfl.subset, by norm_num⟩)
++      (le_csInf ⟨2, {2, 6}, by decide, rfl, {2, 6}, rfl.subset, by norm_num⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) (by norm_num) (by norm_num) hk))
++  have h9 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      9 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{3, 6}, by decide, rfl, {3, 6}, rfl.subset, by norm_num⟩)
++      (le_csInf ⟨2, {3, 6}, by decide, rfl, {3, 6}, rfl.subset, by norm_num⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) (by norm_num) (by norm_num) hk))
++  have h10 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      10 ∈ subsetSums D} = 2 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{4, 6}, by decide, rfl, {4, 6}, rfl.subset, by norm_num⟩)
++      (le_csInf ⟨2, {4, 6}, by decide, rfl, {4, 6}, rfl.subset, by norm_num⟩
++          (fun k hk => two_le_of_not_single (by norm_num) (by norm_num) (by norm_num)
++            (by norm_num) (by norm_num) (by norm_num) (by norm_num) hk))
++  have h11 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      11 ∈ subsetSums D} = 3 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{1, 4, 6}, by decide, rfl, {1, 4, 6}, rfl.subset, by norm_num⟩)
++      (le_csInf ⟨3, {1, 4, 6}, by decide, rfl, {1, 4, 6}, rfl.subset, by norm_num⟩
++          (fun k hk => three_le_for_eleven hk))
++  have h12 : sInf {k | ∃ D : Finset ℕ, D ⊆ {1, 2, 3, 4, 6, 12} ∧ D.card = k ∧
++      12 ∈ subsetSums D} = 1 := by
++    exact le_antisymm
++      (Nat.sInf_le ⟨{12}, by simp, rfl, {12}, rfl.subset, by simp⟩)
++      (le_csInf ⟨1, {12}, by simp, rfl, {12}, rfl.subset, by simp⟩
++          (fun k hk => one_le_of_subset_sum_nonzero (by norm_num) hk))
++  simp [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12]
+ 
+ /-- For any practical number $n$, $h(n) ≤ number of divisors of $n$. -/
+ @[category test, AMS 11]
+diff --git a/FormalConjectures/ErdosProblems/36.lean b/FormalConjectures/ErdosProblems/36.lean
+index 578a1e5..487efb0 100644
+--- a/FormalConjectures/ErdosProblems/36.lean
++++ b/FormalConjectures/ErdosProblems/36.lean
+@@ -60,23 +60,428 @@ Thus, $M 1 = 1$.
+ -/
+ @[category test, AMS 5 11]
+ theorem M_one : M 1 = 1 := by
+-  sorry
++  unfold M
++  have hone :
++      1 ∈ {MaxOverlap A B | (A : Finset ℤ) (B : Finset ℤ)
++        (_disjoint : Disjoint A B)
++        (_union : A ∪ B = Finset.Icc (1 : ℤ) (2 * ((1 : ℕ) : ℤ)))
++        (_same_card : A.card = B.card)} := by
++    refine ⟨({1} : Finset ℤ), ({2} : Finset ℤ), ?_, ?_, ?_, ?_⟩
++    · norm_num
++    · ext x
++      norm_num
++      omega
++    · simp
++    · unfold MaxOverlap Overlap
++      apply le_antisymm
++      · apply ciSup_le
++        intro k
++        rw [Finset.card_le_one]
++        intro p hp q hq
++        simp at hp hq
++        ext <;> simp [hp.1, hq.1]
++      · have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((({1} : Finset ℤ).product ({2} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨1, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          rw [Finset.card_le_one]
++          intro p hp q hq
++          simp at hp hq
++          ext <;> simp [hp.1, hq.1]
++        exact le_trans
++          (show 1 ≤ ((({1} : Finset ℤ).product ({2} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = (-1 : ℤ)).card by
++            rw [Finset.one_le_card]
++            exact ⟨(1, 2), by simp⟩)
++          (le_ciSup hbdd (-1))
++  apply le_antisymm
++  · exact Nat.sInf_le hone
++  · have hmem := Nat.sInf_mem ⟨1, hone⟩
++    rcases hmem with ⟨A, B, hdisj, hunion, hcard, hmax⟩
++    rw [← hmax]
++    have hcard_union : (A ∪ B).card = 2 := by
++      rw [hunion]
++      decide
++    have hsum : A.card + B.card = 2 := by
++      rw [← Finset.card_union_of_disjoint hdisj]
++      exact hcard_union
++    have hAcard : A.card = 1 := by omega
++    have hBcard : B.card = 1 := by omega
++    obtain ⟨a, ha⟩ := Finset.card_pos.mp (by omega : 0 < A.card)
++    obtain ⟨b, hb⟩ := Finset.card_pos.mp (by omega : 0 < B.card)
++    unfold MaxOverlap Overlap
++    exact le_trans
++      (show 1 ≤ ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = a - b).card by
++        rw [Finset.one_le_card]
++        exact ⟨(a, b), by simp [ha, hb]⟩)
++      (by
++        have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨(A.product B).card, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          exact Finset.card_filter_le _ _
++        exact le_ciSup hbdd (a - b))
+ 
+ @[category test, AMS 5 11]
+ theorem M_two : M 2 = 1 := by
+-  sorry
++  unfold M
++  have hone :
++      1 ∈ {MaxOverlap A B | (A : Finset ℤ) (B : Finset ℤ)
++        (_disjoint : Disjoint A B)
++        (_union : A ∪ B = Finset.Icc (1 : ℤ) (2 * ((2 : ℕ) : ℤ)))
++        (_same_card : A.card = B.card)} := by
++    refine ⟨({1, 4} : Finset ℤ), ({2, 3} : Finset ℤ), ?_, ?_, ?_, ?_⟩
++    · simp
++    · ext x
++      norm_num
++      omega
++    · simp
++    · unfold MaxOverlap Overlap
++      apply le_antisymm
++      · apply ciSup_le
++        intro k
++        rw [Finset.card_le_one]
++        intro p hp q hq
++        simp at hp hq
++        ext <;> omega
++      · have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((({1, 4} : Finset ℤ).product ({2, 3} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨1, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          rw [Finset.card_le_one]
++          intro p hp q hq
++          simp at hp hq
++          ext <;> omega
++        exact le_trans
++          (show 1 ≤ ((({1, 4} : Finset ℤ).product ({2, 3} : Finset ℤ)).filter
++                fun p : ℤ × ℤ => p.1 - p.2 = (-1 : ℤ)).card by
++            rw [Finset.one_le_card]
++            exact ⟨(1, 2), by simp⟩)
++          (le_ciSup hbdd (-1))
++  apply le_antisymm
++  · exact Nat.sInf_le hone
++  · have hmem := Nat.sInf_mem ⟨1, hone⟩
++    rcases hmem with ⟨A, B, hdisj, hunion, hcard, hmax⟩
++    rw [← hmax]
++    have hcard_union : (A ∪ B).card = 4 := by
++      rw [hunion]
++      decide
++    have hsum : A.card + B.card = 4 := by
++      rw [← Finset.card_union_of_disjoint hdisj]
++      exact hcard_union
++    have hApos : 0 < A.card := by omega
++    have hBpos : 0 < B.card := by omega
++    obtain ⟨a, ha⟩ := Finset.card_pos.mp hApos
++    obtain ⟨b, hb⟩ := Finset.card_pos.mp hBpos
++    unfold MaxOverlap Overlap
++    exact le_trans
++      (show 1 ≤ ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = a - b).card by
++        rw [Finset.one_le_card]
++        exact ⟨(a, b), by simp [ha, hb]⟩)
++      (by
++        have hbdd : BddAbove (Set.range
++            (fun k : ℤ =>
++              ((A.product B).filter fun p : ℤ × ℤ => p.1 - p.2 = k).card)) := by
++          refine ⟨(A.product B).card, ?_⟩
++          rintro _ ⟨k, rfl⟩
++          exact Finset.card_filter_le _ _
++        exact le_ciSup hbdd (a - b))
++
++private lemma overlap_le (A B : Finset ℤ) (k : ℤ) : Overlap A B k ≤ (A.product B).card :=
++  Finset.card_filter_le _ _
++
++private lemma bddAbove_overlap (A B : Finset ℤ) : BddAbove (Set.range (Overlap A B)) :=
++  ⟨(A.product B).card, by rintro x ⟨k, rfl⟩; exact overlap_le A B k⟩
++
++private lemma two_le_maxOverlap {A B : Finset ℤ} {a1 b1 a2 b2 : ℤ}
++    (h1A : a1 ∈ A) (h1B : b1 ∈ B) (h2A : a2 ∈ A) (h2B : b2 ∈ B)
++    (hne : (a1, b1) ≠ (a2, b2)) (hd : a1 - b1 = a2 - b2) :
++    2 ≤ MaxOverlap A B := by
++  have h2le : 2 ≤ Overlap A B (a1 - b1) := by
++    rw [Overlap]
++    have hsub : {(a1, b1), (a2, b2)} ⊆
++        (A.product B).filter (fun p => p.1 - p.2 = a1 - b1) := by
++      intro p hp
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hp
++      rcases hp with rfl | rfl <;>
++        simp [Finset.mem_filter, Finset.mem_product, h1A, h1B, h2A, h2B, hd]
++    calc
++      2 = ({(a1, b1), (a2, b2)} : Finset (ℤ × ℤ)).card := by
++        rw [Finset.card_pair hne]
++      _ ≤ _ := Finset.card_le_card hsub
++  exact le_trans h2le (le_ciSup (bddAbove_overlap A B) (a1 - b1))
++
++private def P3 : Finset (ℤ × ℤ) :=
++  {(1, 3), (1, 5), (1, 6), (2, 3), (2, 5), (2, 6), (4, 3), (4, 5), (4, 6)}
++
++private lemma A3_product_B3 : ({1, 2, 4} : Finset ℤ).product {3, 5, 6} = P3 := by
++  decide
++
++private lemma P3_no_three : ∀ p ∈ P3, ∀ q ∈ P3, ∀ r ∈ P3,
++    p.1 - p.2 = q.1 - q.2 → q.1 - q.2 = r.1 - r.2 → p = q ∨ p = r ∨ q = r := by
++  decide
++
++private lemma P3_fiber (k : ℤ) :
++    ((P3.filter <| fun (a, b) => a - b = k).card ≤ 2) := by
++  by_contra hc
++  push_neg at hc
++  obtain ⟨p, hp, q, hq, r, hr, hpq, hpr, hqr⟩ := Finset.two_lt_card.mp hc
++  rw [Finset.mem_filter] at hp hq hr
++  rcases P3_no_three p hp.1 q hq.1 r hr.1 (by rw [hp.2, hq.2])
++      (by rw [hq.2, hr.2]) with h | h | h
++  · exact hpq h
++  · exact hpr h
++  · exact hqr h
++
++private lemma maxOverlap_A3_B3_le_two : MaxOverlap ({1, 2, 4} : Finset ℤ) {3, 5, 6} ≤ 2 := by
++  apply ciSup_le
++  intro k
++  rw [Overlap, A3_product_B3]
++  exact P3_fiber k
++
++private def P4 : Finset (ℤ × ℤ) :=
++  {(1, 3), (1, 5), (1, 6), (1, 7), (2, 3), (2, 5), (2, 6), (2, 7),
++   (4, 3), (4, 5), (4, 6), (4, 7), (8, 3), (8, 5), (8, 6), (8, 7)}
++
++private lemma A4_product_B4 : ({1, 2, 4, 8} : Finset ℤ).product {3, 5, 6, 7} = P4 := by
++  decide
++
++private lemma P4_no_three : ∀ p ∈ P4, ∀ q ∈ P4, ∀ r ∈ P4,
++    p.1 - p.2 = q.1 - q.2 → q.1 - q.2 = r.1 - r.2 → p = q ∨ p = r ∨ q = r := by
++  decide
++
++private lemma P4_fiber (k : ℤ) :
++    ((P4.filter <| fun (a, b) => a - b = k).card ≤ 2) := by
++  by_contra hc
++  push_neg at hc
++  obtain ⟨p, hp, q, hq, r, hr, hpq, hpr, hqr⟩ := Finset.two_lt_card.mp hc
++  rw [Finset.mem_filter] at hp hq hr
++  rcases P4_no_three p hp.1 q hq.1 r hr.1 (by rw [hp.2, hq.2])
++      (by rw [hq.2, hr.2]) with h | h | h
++  · exact hpq h
++  · exact hpr h
++  · exact hqr h
++
++private lemma maxOverlap_A4_B4_le_two :
++    MaxOverlap ({1, 2, 4, 8} : Finset ℤ) {3, 5, 6, 7} ≤ 2 := by
++  apply ciSup_le
++  intro k
++  rw [Overlap, A4_product_B4]
++  exact P4_fiber k
++
++private def P5 : Finset (ℤ × ℤ) :=
++  {(1, 5), (1, 6), (1, 8), (1, 9), (1, 10),
++   (2, 5), (2, 6), (2, 8), (2, 9), (2, 10),
++   (3, 5), (3, 6), (3, 8), (3, 9), (3, 10),
++   (4, 5), (4, 6), (4, 8), (4, 9), (4, 10),
++   (7, 5), (7, 6), (7, 8), (7, 9), (7, 10)}
++
++private lemma A5_product_B5 :
++    ({1, 2, 3, 4, 7} : Finset ℤ).product {5, 6, 8, 9, 10} = P5 := by
++  decide
++
++private lemma P5_fiber_img :
++    ∀ k ∈ P5.image (fun p => p.1 - p.2),
++      ((P5.filter <| fun (a, b) => a - b = k).card ≤ 3) := by
++  decide
++
++private lemma P5_fiber (k : ℤ) :
++    ((P5.filter <| fun (a, b) => a - b = k).card ≤ 3) := by
++  by_cases hk : k ∈ P5.image (fun p => p.1 - p.2)
++  · exact P5_fiber_img k hk
++  · have h0 : (P5.filter <| fun (a, b) => a - b = k).card = 0 := by
++      rw [Finset.card_eq_zero, Finset.filter_eq_empty_iff]
++      rintro ⟨a, b⟩ hp hd
++      exact hk (Finset.mem_image.mpr ⟨(a, b), hp, hd⟩)
++    rw [h0]
++    norm_num
++
++private lemma maxOverlap_A5_B5_le_three :
++    MaxOverlap ({1, 2, 3, 4, 7} : Finset ℤ) {5, 6, 8, 9, 10} ≤ 3 := by
++  apply ciSup_le
++  intro k
++  rw [Overlap, A5_product_B5]
++  exact P5_fiber k
++
++set_option maxRecDepth 100000 in
++private lemma M_five_lower_cert : ∀ A ∈ (Finset.Icc (1 : ℤ) 10).powersetCard 5,
++    ∃ k ∈ Finset.Icc (-9 : ℤ) 9,
++      3 ≤ ((A.product (Finset.Icc 1 10 \ A)).filter (fun (a, b) => a - b = k)).card := by
++  decide
++
++private lemma mem_B {A B : Finset ℤ} (hunion : A ∪ B = Finset.Icc 1 6) {b : ℤ}
++    (hb6 : b ∈ Finset.Icc (1 : ℤ) 6) (hbA : b ∉ A) : b ∈ B := by
++  have hbu : b ∈ A ∪ B := by
++    rw [hunion]
++    exact hb6
++  rcases Finset.mem_union.mp hbu with h | h
++  · exact absurd h hbA
++  · exact h
+ 
+ @[category test, AMS 5 11]
+ theorem M_three : M 3 = 2 := by
+-  sorry
++  rw [M]
++  apply le_antisymm
++  · apply Nat.sInf_le
++    refine ⟨{1, 2, 4}, {3, 5, 6}, by decide, by decide, by decide, ?_⟩
++    exact le_antisymm maxOverlap_A3_B3_le_two
++      (two_le_maxOverlap (a1 := 1) (b1 := 5) (a2 := 2) (b2 := 6)
++        (by decide) (by decide) (by decide) (by decide) (by decide) (by decide))
++  · apply le_csInf
++    · exact ⟨_, {1, 2, 4}, {3, 5, 6}, by decide, by decide, by decide, rfl⟩
++    · rintro x ⟨A, B, hdisj, hunion0, hcard, rfl⟩
++      have hunion : A ∪ B = Finset.Icc (1 : ℤ) 6 := by
++        rw [hunion0]
++        norm_num
++      have hu6 : (A ∪ B).card = 6 := by
++        rw [hunion]
++        decide
++      rw [Finset.card_union_of_disjoint hdisj] at hu6
++      have hcardA : A.card = 3 := by omega
++      have hAsub : A ⊆ Finset.Icc (1 : ℤ) 6 := by
++        rw [← hunion]
++        exact Finset.subset_union_left
++      have hA3 : A ∈ (Finset.Icc (1 : ℤ) 6).powersetCard 3 :=
++        Finset.mem_powersetCard.mpr ⟨hAsub, hcardA⟩
++      fin_cases hA3 <;>
++      first
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 4) (a2 := 2) (b2 := 5)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 3) (a2 := 4) (b2 := 6)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 3) (a2 := 2) (b2 := 4)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 2) (a2 := 4) (b2 := 5)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 2) (a2 := 3) (b2 := 4)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 1) (b1 := 2) (a2 := 5) (b2 := 6)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 5) (b1 := 2) (a2 := 6) (b2 := 3)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 2) (b1 := 5) (a2 := 3) (b2 := 6)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 2) (b1 := 1) (a2 := 5) (b2 := 4)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 2) (b1 := 1) (a2 := 6) (b2 := 5)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 2) (b1 := 1) (a2 := 4) (b2 := 3)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 3) (b1 := 1) (a2 := 4) (b2 := 2)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 3) (b1 := 1) (a2 := 6) (b2 := 4)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
++        | exact two_le_maxOverlap (a1 := 4) (b1 := 1) (a2 := 5) (b2 := 2)
++            (by decide) (mem_B hunion (by decide) (by decide)) (by decide)
++            (mem_B hunion (by decide) (by decide)) (by decide) (by decide)
+ 
+ @[category test, AMS 5 11]
+ theorem M_four : M 4 = 2 := by
+-  sorry
++  rw [M]
++  apply le_antisymm
++  · apply Nat.sInf_le
++    refine ⟨{1, 2, 4, 8}, {3, 5, 6, 7}, by decide, by decide, by decide, ?_⟩
++    exact le_antisymm maxOverlap_A4_B4_le_two
++      (two_le_maxOverlap (a1 := 1) (b1 := 3) (a2 := 4) (b2 := 6)
++        (by decide) (by decide) (by decide) (by decide) (by decide) (by decide))
++  · apply le_csInf
++    · exact ⟨_, {1, 2, 4, 8}, {3, 5, 6, 7}, by decide, by decide, by decide, rfl⟩
++    · rintro x ⟨A, B, hdisj, hunion0, hcard, rfl⟩
++      have hunion : A ∪ B = Finset.Icc (1 : ℤ) 8 := by
++        rw [hunion0]
++        norm_num
++      have hu8 : (A ∪ B).card = 8 := by
++        rw [hunion]
++        decide
++      rw [Finset.card_union_of_disjoint hdisj] at hu8
++      have hA4 : A.card = 4 := by omega
++      have hB4 : B.card = 4 := by omega
++      have hAsub : A ⊆ Finset.Icc (1 : ℤ) 8 := by
++        rw [← hunion]
++        exact Finset.subset_union_left
++      have hBsub : B ⊆ Finset.Icc (1 : ℤ) 8 := by
++        rw [← hunion]
++        exact Finset.subset_union_right
++      have hmaps :
++          ∀ p ∈ A ×ˢ B, (fun p : ℤ × ℤ => p.1 - p.2) p ∈ Finset.Icc (-7 : ℤ) 7 := by
++        rintro ⟨a, b⟩ hab
++        simp only [Finset.mem_product] at hab
++        have ha := Finset.mem_Icc.mp (hAsub hab.1)
++        have hb := Finset.mem_Icc.mp (hBsub hab.2)
++        simp only [Finset.mem_Icc]
++        omega
++      have ht : (Finset.Icc (-7 : ℤ) 7).card = 15 := by
++        decide
++      have hc : (Finset.Icc (-7 : ℤ) 7).card < (A ×ˢ B).card := by
++        rw [ht, Finset.card_product, hA4, hB4]
++        decide
++      obtain ⟨p, hp, q, hq, hpq, hfeq⟩ :=
++        Finset.exists_ne_map_eq_of_card_lt_of_maps_to hc hmaps
++      obtain ⟨a1, b1⟩ := p
++      obtain ⟨a2, b2⟩ := q
++      simp only [Finset.mem_product] at hp hq
++      exact two_le_maxOverlap hp.1 hp.2 hq.1 hq.2 hpq hfeq
+ 
+ @[category test, AMS 5 11]
+ theorem M_five : M 5 = 3 := by
+-  sorry
++  rw [M]
++  apply le_antisymm
++  · apply Nat.sInf_le
++    refine ⟨{1, 2, 3, 4, 7}, {5, 6, 8, 9, 10}, by decide, by decide, by decide, ?_⟩
++    apply le_antisymm maxOverlap_A5_B5_le_three
++    exact le_trans
++      (by decide : 3 ≤ Overlap ({1, 2, 3, 4, 7} : Finset ℤ) {5, 6, 8, 9, 10} (-7))
++      (le_ciSup (bddAbove_overlap _ _) (-7))
++  · apply le_csInf
++    · exact ⟨_, {1, 2, 3, 4, 7}, {5, 6, 8, 9, 10}, by decide, by decide, by decide, rfl⟩
++    · rintro x ⟨A, B, hdisj, hunion0, hcard, rfl⟩
++      have hunion : A ∪ B = Finset.Icc (1 : ℤ) 10 := by
++        rw [hunion0]
++        norm_num
++      have hu10 : (A ∪ B).card = 10 := by
++        rw [hunion]
++        decide
++      rw [Finset.card_union_of_disjoint hdisj] at hu10
++      have hAcard : A.card = 5 := by omega
++      have hAsub : A ⊆ Finset.Icc (1 : ℤ) 10 := by
++        rw [← hunion]
++        exact Finset.subset_union_left
++      have hApow : A ∈ (Finset.Icc (1 : ℤ) 10).powersetCard 5 :=
++        Finset.mem_powersetCard.mpr ⟨hAsub, hAcard⟩
++      have hB : Finset.Icc (1 : ℤ) 10 \ A = B := by
++        rw [← hunion]
++        ext y
++        simp only [Finset.mem_sdiff, Finset.mem_union]
++        constructor
++        · rintro ⟨h | h, hnA⟩
++          · exact absurd h hnA
++          · exact h
++        · intro hyB
++          exact ⟨Or.inr hyB, fun hyA => Finset.disjoint_left.mp hdisj hyA hyB⟩
++      obtain ⟨k, _, hk⟩ := M_five_lower_cert A hApow
++      rw [hB] at hk
++      have h3 : 3 ≤ Overlap A B k := by
++        rw [Overlap]
++        exact hk
++      exact le_trans h3 (le_ciSup (bddAbove_overlap A B) k)
+ 
+ /--
+ The quotient of the minimum maximum overlap $M(N)$ by $N$. The central question of the
+diff --git a/FormalConjectures/ErdosProblems/385.lean b/FormalConjectures/ErdosProblems/385.lean
+index 26b90e9..b46e3e2 100644
+--- a/FormalConjectures/ErdosProblems/385.lean
++++ b/FormalConjectures/ErdosProblems/385.lean
+@@ -33,7 +33,29 @@ noncomputable def F (n : ℕ) : ℕ := sSup {m + m.minFac | (m < n) (_ : m.Compo
+ /-- Note that trivially $F(n) \leq n + \sqrt{n}$. -/
+ @[category test, AMS 11]
+ theorem trivial_ub (n : ℕ) : F n ≤ n + √n := by
+-  sorry
++  have hnat : F n ≤ n + Nat.sqrt n := by
++    unfold F
++    let S : Set ℕ := {x | ∃ m < n, ∃ (_ : m.Composite), m + m.minFac = x}
++    change sSup S ≤ n + Nat.sqrt n
++    by_cases hS : S.Nonempty
++    · apply csSup_le hS
++      rintro x ⟨m, hmn, hmcomp, rfl⟩
++      have hmpos : 0 < m := by omega
++      have hmin : m.minFac ≤ Nat.sqrt m := by
++        rw [Nat.le_sqrt]
++        simpa [pow_two] using Nat.minFac_sq_le_self hmpos hmcomp.2
++      have hsqrt : Nat.sqrt m ≤ Nat.sqrt n := Nat.sqrt_le_sqrt (Nat.le_of_lt hmn)
++      omega
++    · have hSempty : S = ∅ := Set.not_nonempty_iff_eq_empty.mp hS
++      simp [hSempty]
++  have hsqrt_cast : (Nat.sqrt n : ℝ) ≤ √(n : ℝ) := by
++    rw [Real.le_sqrt]
++    · exact_mod_cast Nat.sqrt_le' n
++    · positivity
++    · positivity
++  have hcast : (F n : ℝ) ≤ (n : ℝ) + (Nat.sqrt n : ℝ) := by
++    exact_mod_cast hnat
++  linarith
+ 
+ /-- Let $F(n) := \max\{m + p(m) \mid  \textrm{$m < n$ composite}\}\}$ where $p(m)$ is the least
+ prime divisor of $m$. Is it true that $F(n)>n$ for all sufficiently large $n$? -/
+diff --git a/FormalConjectures/ErdosProblems/494.lean b/FormalConjectures/ErdosProblems/494.lean
+index 3e7d3c3..bb4db98 100644
+--- a/FormalConjectures/ErdosProblems/494.lean
++++ b/FormalConjectures/ErdosProblems/494.lean
+@@ -126,11 +126,130 @@ $A = \{1, \zeta_6, \zeta_6^2, \zeta_6^4\}$ and $B = \{1, \zeta_6^2, \zeta_6^3, \
+ noncomputable def prodMultiset (A : Finset ℂ) (k : ℕ) : Multiset ℂ :=
+   ((A.powersetCard k).val.map (fun s => s.prod id))
+ 
++lemma finset_ne_of_mem_of_not_mem {α : Type*} {s t : Finset α} {x : α}
++    (hs : x ∈ s) (ht : x ∉ t) : s ≠ t := by
++  intro h
++  exact ht (h ▸ hs)
++
+ /-- A counterexample to the product version of the conjecture (by Steinerberger). -/
+ @[category research solved, AMS 5]
+ theorem erdos_494.variants.product :
+     ∃ (A B : Finset ℂ), A.card = B.card ∧ prodMultiset A 3 = prodMultiset B 3 ∧
+       A ≠ B := by
+-  sorry
++  classical
++  let PA : Finset (Finset ℂ) :=
++    ⟨({(0 : ℂ), 1, 2} : Finset ℂ) ::ₘ ({(0 : ℂ), 1, 6} : Finset ℂ) ::ₘ
++        ({(0 : ℂ), 2, 6} : Finset ℂ) ::ₘ ({(1 : ℂ), 2, 6} : Finset ℂ) ::ₘ 0,
++      by
++        have h12 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(0 : ℂ), 1, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (2 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (2 : ℂ) ∉ ({(0 : ℂ), 1, 6} : Finset ℂ))
++        have h13 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(0 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 2, 6} : Finset ℂ))
++        have h14 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        have h23 : ({(0 : ℂ), 1, 6} : Finset ℂ) ≠ ({(0 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 6} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 2, 6} : Finset ℂ))
++        have h24 : ({(0 : ℂ), 1, 6} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 6} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        have h34 : ({(0 : ℂ), 2, 6} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 2, 6} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        simp only [Multiset.nodup_cons, Multiset.mem_cons, not_or]
++        exact ⟨⟨h12, h13, h14, by simp⟩, ⟨h23, h24, by simp⟩, ⟨h34, by simp⟩,
++          by simp, by simp⟩⟩
++  let PB : Finset (Finset ℂ) :=
++    ⟨({(0 : ℂ), 1, 3} : Finset ℂ) ::ₘ ({(0 : ℂ), 1, 4} : Finset ℂ) ::ₘ
++        ({(0 : ℂ), 3, 4} : Finset ℂ) ::ₘ ({(1 : ℂ), 3, 4} : Finset ℂ) ::ₘ 0,
++      by
++        have h12 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(0 : ℂ), 1, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (3 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (3 : ℂ) ∉ ({(0 : ℂ), 1, 4} : Finset ℂ))
++        have h13 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(0 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 3, 4} : Finset ℂ))
++        have h14 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        have h23 : ({(0 : ℂ), 1, 4} : Finset ℂ) ≠ ({(0 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 4} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 3, 4} : Finset ℂ))
++        have h24 : ({(0 : ℂ), 1, 4} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 4} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        have h34 : ({(0 : ℂ), 3, 4} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 3, 4} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        simp only [Multiset.nodup_cons, Multiset.mem_cons, not_or]
++        exact ⟨⟨h12, h13, h14, by simp⟩, ⟨h23, h24, by simp⟩, ⟨h34, by simp⟩,
++          by simp, by simp⟩⟩
++  have hA :
++      ({(0 : ℂ), 1, 2, 6} : Finset ℂ).powersetCard 3 = PA := by
++    ext s
++    simp [Finset.mem_powersetCard, PA]
++    constructor
++    · intro h
++      rcases Finset.card_eq_three.mp h.2 with ⟨x, y, z, hxy, hxz, hyz, rfl⟩
++      have hx := h.1 (by simp : x ∈ ({x, y, z} : Finset ℂ))
++      have hy := h.1 (by simp : y ∈ ({x, y, z} : Finset ℂ))
++      have hz := h.1 (by simp : z ∈ ({x, y, z} : Finset ℂ))
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hx hy hz
++      rcases hx with rfl | rfl | rfl | rfl <;>
++        rcases hy with rfl | rfl | rfl | rfl <;>
++        rcases hz with rfl | rfl | rfl | rfl <;>
++        solve
++        | contradiction
++        | left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; right; ext w; simp [or_assoc, or_left_comm, or_comm]
++    · intro h
++      rcases h with rfl | rfl | rfl | rfl <;> simp
++  have hB :
++      ({(0 : ℂ), 1, 3, 4} : Finset ℂ).powersetCard 3 = PB := by
++    ext s
++    simp [Finset.mem_powersetCard, PB]
++    constructor
++    · intro h
++      rcases Finset.card_eq_three.mp h.2 with ⟨x, y, z, hxy, hxz, hyz, rfl⟩
++      have hx := h.1 (by simp : x ∈ ({x, y, z} : Finset ℂ))
++      have hy := h.1 (by simp : y ∈ ({x, y, z} : Finset ℂ))
++      have hz := h.1 (by simp : z ∈ ({x, y, z} : Finset ℂ))
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hx hy hz
++      rcases hx with rfl | rfl | rfl | rfl <;>
++        rcases hy with rfl | rfl | rfl | rfl <;>
++        rcases hz with rfl | rfl | rfl | rfl <;>
++        solve
++        | contradiction
++        | left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; right; ext w; simp [or_assoc, or_left_comm, or_comm]
++    · intro h
++      rcases h with rfl | rfl | rfl | rfl <;> simp
++  refine ⟨{(0 : ℂ), 1, 2, 6}, {(0 : ℂ), 1, 3, 4}, ?_, ?_, ?_⟩
++  · norm_num
++  · unfold prodMultiset
++    rw [hA, hB]
++    norm_num [PA, PB]
++  · exact finset_ne_of_mem_of_not_mem
++      (by simp : (2 : ℂ) ∈ ({(0 : ℂ), 1, 2, 6} : Finset ℂ))
++      (by norm_num : (2 : ℂ) ∉ ({(0 : ℂ), 1, 3, 4} : Finset ℂ))
+ 
+ end Erdos494
+diff --git a/FormalConjectures/ErdosProblems/686.lean b/FormalConjectures/ErdosProblems/686.lean
+index a2af5aa..9a9c640 100644
+--- a/FormalConjectures/ErdosProblems/686.lean
++++ b/FormalConjectures/ErdosProblems/686.lean
+@@ -97,7 +97,9 @@ for some $k≥2$ and $m≥n+k$?
+ theorem erdos_686.variants.nine :
+     answer(True) ↔ ∃ᵉ (k ≥ 2) (n : ℕ) (m ≥ n + k),
+       (9 : ℚ) = (∏ i ∈ Finset.Icc 1 k, (m + i)) / (∏ i ∈ Finset.Icc 1 k, (n + i)) := by
+-  sorry
++  refine ⟨fun _ => ?_, fun _ => trivial⟩
++  exact ⟨3, by norm_num, 11, 25, by norm_num, by
++    norm_num [Finset.prod_Icc_succ_top]⟩
+ 
+ /--
+ Can $25$ be written as
+diff --git a/FormalConjectures/ErdosProblems/885.lean b/FormalConjectures/ErdosProblems/885.lean
+index 995dd83..dc55afc 100644
+--- a/FormalConjectures/ErdosProblems/885.lean
++++ b/FormalConjectures/ErdosProblems/885.lean
+@@ -37,6 +37,20 @@ $D(n) = \{|a-b| : n=ab\}$.
+ def factorDifferenceSet (n : ℕ) : Set ℕ :=
+   {d | ∃ a b : ℕ, n = a * b ∧ (d : ℤ) = |(a : ℤ) - b|}
+ 
++lemma factorDifferenceSet_finite_of_pos {n : ℕ} (hn : 0 < n) :
++    (factorDifferenceSet n).Finite := by
++  refine (Set.finite_Icc 0 n).subset ?_
++  intro d hd
++  rcases hd with ⟨a, b, hnab, hdiff⟩
++  have ha_le : a ≤ n := Nat.le_of_dvd hn ⟨b, hnab⟩
++  have hb_le : b ≤ n := Nat.le_of_dvd hn ⟨a, by rw [Nat.mul_comm]; exact hnab⟩
++  have h_abs : |(a : ℤ) - b| ≤ (n : ℤ) := by
++    rw [abs_le]
++    omega
++  exact ⟨Nat.zero_le d, by
++    have : (d : ℤ) ≤ (n : ℤ) := by simpa [hdiff] using h_abs
++    exact_mod_cast this⟩
++
+ /--
+ Is it true that, for every $k \geq 1$, there exist integers $N_1 < \dots < N_k$ such that
+ $|\cap_i D(N_i)| \geq k$?
+@@ -58,7 +72,29 @@ theorem erdos_885.variants.k_eq_2 :
+       (∀ n ∈ Ns, 1 ≤ n) ∧
+       Ns.card = 2 ∧
+       (⋂ n ∈ Ns, factorDifferenceSet n).ncard ≥ 2 := by
+-  sorry
++  refine ⟨{8, 120}, ?_, by norm_num, ?_⟩
++  · intro n hn
++    simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++    rcases hn with rfl | rfl <;> norm_num
++  · have hsub : ({2, 7} : Set ℕ) ⊆
++        ⋂ n ∈ ({8, 120} : Finset ℕ), factorDifferenceSet n := by
++      intro d hd
++      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hd
++      simp only [Set.mem_iInter]
++      intro n hn
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++      rcases hn with rfl | rfl <;> rcases hd with rfl | rfl
++      · exact ⟨2, 4, by norm_num, by norm_num⟩
++      · exact ⟨1, 8, by norm_num, by norm_num⟩
++      · exact ⟨10, 12, by norm_num, by norm_num⟩
++      · exact ⟨8, 15, by norm_num, by norm_num⟩
++    have hfin : (⋂ n ∈ ({8, 120} : Finset ℕ), factorDifferenceSet n).Finite :=
++      (factorDifferenceSet_finite_of_pos (by norm_num : 0 < 8)).subset (by
++        intro d hd
++        simp only [Set.mem_iInter] at hd
++        exact hd 8 (by simp))
++    simpa [Set.ncard_pair (by norm_num : (2 : ℕ) ≠ 7)] using
++      Set.ncard_le_ncard hsub hfin
+ 
+ /--
+ Jiménez-Urroz [Ji99] proved this for $k=3$.
+@@ -69,7 +105,36 @@ theorem erdos_885.variants.k_eq_3 :
+       (∀ n ∈ Ns, 1 ≤ n) ∧
+       Ns.card = 3 ∧
+       (⋂ n ∈ Ns, factorDifferenceSet n).ncard ≥ 3 := by
+-  sorry
++  refine ⟨{120, 528, 4488}, ?_, by norm_num, ?_⟩
++  · intro n hn
++    simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++    rcases hn with rfl | rfl | rfl <;> norm_num
++  · have hsub : ({2, 37, 58} : Set ℕ) ⊆
++        ⋂ n ∈ ({120, 528, 4488} : Finset ℕ), factorDifferenceSet n := by
++      intro d hd
++      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hd
++      simp only [Set.mem_iInter]
++      intro n hn
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++      rcases hn with rfl | rfl | rfl <;> rcases hd with rfl | rfl | rfl
++      · exact ⟨10, 12, by norm_num, by norm_num⟩
++      · exact ⟨3, 40, by norm_num, by norm_num⟩
++      · exact ⟨2, 60, by norm_num, by norm_num⟩
++      · exact ⟨22, 24, by norm_num, by norm_num⟩
++      · exact ⟨11, 48, by norm_num, by norm_num⟩
++      · exact ⟨8, 66, by norm_num, by norm_num⟩
++      · exact ⟨66, 68, by norm_num, by norm_num⟩
++      · exact ⟨51, 88, by norm_num, by norm_num⟩
++      · exact ⟨44, 102, by norm_num, by norm_num⟩
++    have hfin : (⋂ n ∈ ({120, 528, 4488} : Finset ℕ), factorDifferenceSet n).Finite :=
++      (factorDifferenceSet_finite_of_pos (by norm_num : 0 < 120)).subset (by
++        intro d hd
++        simp only [Set.mem_iInter] at hd
++        exact hd 120 (by simp))
++    have hcard : ({2, 37, 58} : Set ℕ).ncard = 3 := by
++      rw [Set.ncard_insert_of_notMem (by simp : (2 : ℕ) ∉ ({37, 58} : Set ℕ))]
++      rw [Set.ncard_pair (by norm_num : (37 : ℕ) ≠ 58)]
++    simpa [hcard] using Set.ncard_le_ncard hsub hfin
+ 
+ /--
+ Bremner [Br19] proved this for $k=4$.
+diff --git a/FormalConjectures/OEIS/34693.lean b/FormalConjectures/OEIS/34693.lean
+index d9776ca..460f478 100644
+--- a/FormalConjectures/OEIS/34693.lean
++++ b/FormalConjectures/OEIS/34693.lean
+@@ -69,7 +69,23 @@ theorem exists_k_stronger {n : ℕ} (hn : 0 < n) : ∃ k : ℕ,
+ @[category research solved, AMS 11]
+ theorem exists_k_best_possible : ∃ n > (0 : ℕ), ∀ (k : ℕ),
+     k < 1 + (Real.nthRoot 100 n) ^ 74 → ¬(n * k + 1).Prime := by
+-  sorry
++  refine ⟨19, by norm_num, ?_⟩
++  intro k hk
++  have hroot_lt : (Real.nthRoot 100 (19 : ℝ)) ^ 74 < 9 := by
++    apply lt_of_pow_lt_pow_left₀ 100 (by norm_num : (0 : ℝ) ≤ 9)
++    calc
++      ((Real.nthRoot 100 (19 : ℝ)) ^ 74) ^ 100
++          = ((Real.nthRoot 100 (19 : ℝ)) ^ 100) ^ 74 := by ring
++      _ = (19 : ℝ) ^ 74 := by
++        rw [Real.pow_nthRoot]
++        exact Or.inl ⟨by norm_num, by norm_num⟩
++      _ < 9 ^ 100 := by norm_num
++  have hk10 : k < 10 := by
++    have hbound : (1 : ℝ) + (Real.nthRoot 100 (19 : ℝ)) ^ 74 < 10 := by
++      linarith
++    have hk_real : (k : ℝ) < 10 := lt_trans hk hbound
++    exact_mod_cast hk_real
++  interval_cases k <;> norm_num
+ 
+ /-- Conjecture: $a(n) = O(\log(n)\log(\log(n)))$. -/
+ @[category research open, AMS 11]
+diff --git a/FormalConjectures/Wikipedia/MovingSofa.lean b/FormalConjectures/Wikipedia/MovingSofa.lean
+index 438290a..ee5e6cb 100644
+--- a/FormalConjectures/Wikipedia/MovingSofa.lean
++++ b/FormalConjectures/Wikipedia/MovingSofa.lean
+@@ -72,7 +72,51 @@ This is a sanity check that the `IsMovingSofa` definition is not vacuous.
+ -/
+ @[category test, AMS 49]
+ theorem isMovingSofa_unitSquare : ∃ m, IsMovingSofa unitSquare m := by
+-  sorry
++  let m : I → E(2) := fun _ => AffineIsometryEquiv.refl ℝ ℝ²
++  have hnonempty : unitSquare.Nonempty := by
++    refine ⟨0, ?_⟩
++    rw [unitSquare, mem_parallelepiped_iff]
++    refine ⟨(0 : Fin 2 → ℝ), ?_, ?_⟩
++    · constructor <;> intro i <;> simp
++    · simp
++  have hhorizontal : unitSquare ⊆ horizontalHallway := by
++    intro p hp
++    rw [unitSquare, mem_parallelepiped_iff] at hp
++    rcases hp with ⟨t, ht, hp⟩
++    refine ⟨t 0, t 1, ?_, ?_⟩
++    · exact ⟨ht.2 0, ht.1 1, ht.2 1⟩
++    · rw [hp]
++      ext i
++      fin_cases i <;> simp
++  have hvertical : unitSquare ⊆ verticalHallway := by
++    intro p hp
++    rw [unitSquare, mem_parallelepiped_iff] at hp
++    rcases hp with ⟨t, ht, hp⟩
++    refine ⟨t 0, t 1, ?_, ?_⟩
++    · exact ⟨ht.1 0, ht.2 0, ht.2 1⟩
++    · rw [hp]
++      ext i
++      fin_cases i <;> simp
++  refine ⟨m, ?_⟩
++  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
++  · exact (convex_parallelepiped _).isConnected hnonempty
++  · have hcompact : IsCompact unitSquare := by
++      change IsCompact
++        (((EuclideanSpace.basisFun (Fin 2) ℝ).toBasis.parallelepiped :
++          TopologicalSpace.PositiveCompacts ℝ²) : Set ℝ²)
++      exact (EuclideanSpace.basisFun (Fin 2) ℝ).toBasis.parallelepiped.isCompact
++    exact hcompact.isClosed
++  · dsimp [m]
++    continuity
++  · rfl
++  · exact hhorizontal
++  · intro t p hp
++    rcases hp with ⟨q, hq, rfl⟩
++    left
++    simpa [m] using hhorizontal hq
++  · intro p hp
++    rcases hp with ⟨q, hq, rfl⟩
++    simpa [m] using hvertical hq
+ 
+ /--
+ The rigid motion that translates by $p$ and then rotates counterclockwise by $\alpha$.
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 05f04a2..1c8a724 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -91,15 +91,161 @@ theorem house_avg_dist : averageDistance HouseGraph = 7/5 := by
+ 
+ @[category test, AMS 5]
+ theorem house_diameter : maxEccentricity HouseGraph = 2 := by
+-  sorry
++  have adj_le {a b : Fin 5} (h : HouseGraph.Adj a b) : HouseGraph.edist a b ≤ 2 := by
++    have hed : HouseGraph.edist a b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    rw [hed]
++    norm_num
++  have via (c : Fin 5) {a b : Fin 5} (hac : HouseGraph.Adj a c) (hcb : HouseGraph.Adj c b) :
++      HouseGraph.edist a b ≤ 2 := by
++    have hed1 : HouseGraph.edist a c = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    have hed2 : HouseGraph.edist c b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    calc
++      HouseGraph.edist a b ≤ HouseGraph.edist a c + HouseGraph.edist c b :=
++        SimpleGraph.edist_triangle (G := HouseGraph)
++      _ = 2 := by
++        rw [hed1, hed2]
++        norm_num
++  have hdist_le : ∀ a b : Fin 5, HouseGraph.edist a b ≤ 2 := by
++    intro a b
++    fin_cases a <;> fin_cases b <;>
++      first
++      | exact adj_le (by decide +kernel)
++      | exact via (0 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (1 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (2 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (3 : Fin 5) (by decide +kernel) (by decide +kernel)
++  have two_le_dist {a b : Fin 5} (hnot : ¬ HouseGraph.edist a b ≤ 1) :
++      (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    have hlt : (1 : ℕ∞) < HouseGraph.edist a b := lt_of_not_ge hnot
++    simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++      (n := HouseGraph.edist a b) (ENat.coe_ne_top 1)).2 hlt
++  have hdist_ge : ∀ a : Fin 5, ∃ b : Fin 5, (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    intro a
++    fin_cases a
++    · refine ⟨2, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨3, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨1, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++  have hecc : ∀ a : Fin 5, HouseGraph.eccentricity a = 2 := by
++    intro a
++    rw [show HouseGraph.eccentricity a = HouseGraph.eccent a by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro b
++      exact hdist_le a b
++    · rcases hdist_ge a with ⟨b, hb⟩
++      exact hb.trans (SimpleGraph.edist_le_eccent (G := HouseGraph) (u := a) (v := b))
++  have hrange : Set.range (HouseGraph.eccentricity) = ({2} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨a, rfl⟩
++      simp [hecc a]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem house_radius : minEccentricity HouseGraph = 2 := by
+-  sorry
++  have adj_le {a b : Fin 5} (h : HouseGraph.Adj a b) : HouseGraph.edist a b ≤ 2 := by
++    have hed : HouseGraph.edist a b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    rw [hed]
++    norm_num
++  have via (c : Fin 5) {a b : Fin 5} (hac : HouseGraph.Adj a c) (hcb : HouseGraph.Adj c b) :
++      HouseGraph.edist a b ≤ 2 := by
++    have hed1 : HouseGraph.edist a c = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    have hed2 : HouseGraph.edist c b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    calc
++      HouseGraph.edist a b ≤ HouseGraph.edist a c + HouseGraph.edist c b :=
++        SimpleGraph.edist_triangle (G := HouseGraph)
++      _ = 2 := by
++        rw [hed1, hed2]
++        norm_num
++  have hdist_le : ∀ a b : Fin 5, HouseGraph.edist a b ≤ 2 := by
++    intro a b
++    fin_cases a <;> fin_cases b <;>
++      first
++      | exact adj_le (by decide +kernel)
++      | exact via (0 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (1 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (2 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (3 : Fin 5) (by decide +kernel) (by decide +kernel)
++  have two_le_dist {a b : Fin 5} (hnot : ¬ HouseGraph.edist a b ≤ 1) :
++      (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    have hlt : (1 : ℕ∞) < HouseGraph.edist a b := lt_of_not_ge hnot
++    simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++      (n := HouseGraph.edist a b) (ENat.coe_ne_top 1)).2 hlt
++  have hdist_ge : ∀ a : Fin 5, ∃ b : Fin 5, (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    intro a
++    fin_cases a
++    · refine ⟨2, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨3, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨1, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++  have hecc : ∀ a : Fin 5, HouseGraph.eccentricity a = 2 := by
++    intro a
++    rw [show HouseGraph.eccentricity a = HouseGraph.eccent a by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro b
++      exact hdist_le a b
++    · rcases hdist_ge a with ⟨b, hb⟩
++      exact hb.trans (SimpleGraph.edist_le_eccent (G := HouseGraph) (u := a) (v := b))
++  have hrange : Set.range (HouseGraph.eccentricity) = ({2} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨a, rfl⟩
++      simp [hecc a]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [minEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem house_girth : HouseGraph.girth = 3 := by
+-  sorry
++  have hclique : ∃ s : Finset (Fin 5), HouseGraph.IsNClique 3 s := by
++    refine ⟨{2, 3, 4}, ?_⟩
++    rw [SimpleGraph.is3Clique_triple_iff]
++    simp [HouseGraph]
++  obtain ⟨u, w, hwcycle, hwlen⟩ :=
++    (SimpleGraph.is3Clique_iff_exists_cycle_length_three (G := HouseGraph)).mp hclique
++  apply le_antisymm
++  · simpa [hwlen] using HouseGraph.girth_le_length hwcycle
++  · apply SimpleGraph.three_le_girth
++    intro hacyclic
++    exact hacyclic w hwcycle
+ 
+ @[category test, AMS 5]
+ theorem house_order : n HouseGraph = 5 := by simp [n]
+@@ -128,9 +274,91 @@ theorem house_max_deg : HouseGraph.maxDegree = 3 := by
+ theorem house_avg_deg : averageDegree HouseGraph = 12/5 := by
+   unfold averageDegree; simp [Fintype.card_fin]; decide +native
+ 
++@[category test, AMS 5]
++private lemma house_matching_edge_ncard_le_two (M : Subgraph HouseGraph) (hM : M.IsMatching) :
++    M.edgeSet.ncard ≤ 2 := by
++  classical
++  have hdeg : ∀ v : Fin 5, M.degree v ≤ 1 := by
++    intro v
++    by_cases hv : v ∈ M.verts
++    · have hvdeg : M.degree v = 1 := by
++        rw [Subgraph.degree_eq_one_iff_existsUnique_adj]
++        exact hM hv
++      omega
++    · have hvdeg : M.degree v = 0 := Subgraph.degree_of_notMem_verts hv
++      omega
++  have hsum_le : (∑ v : Fin 5, M.degree v) ≤ 5 := by
++    calc
++      (∑ v : Fin 5, M.degree v) ≤ ∑ _v : Fin 5, 1 := by
++        exact Finset.sum_le_sum (by intro v _; exact hdeg v)
++      _ = 5 := by norm_num
++  have hsum :
++      ∑ v : Fin 5, M.degree v = 2 * M.edgeSet.ncard := by
++    simpa [Subgraph.degree_spanningCoe, SimpleGraph.edgeFinset, Set.ncard_eq_toFinset_card']
++      using (M.spanningCoe.sum_degrees_eq_twice_card_edges)
++  have htwice : 2 * M.edgeSet.ncard ≤ 5 := by
++    rw [← hsum]
++    exact hsum_le
++  have hcard_lt : M.edgeSet.ncard < 3 := by
++    by_contra hlt
++    have hge : 3 ≤ M.edgeSet.ncard := Nat.le_of_not_gt hlt
++    omega
++  exact Nat.le_of_lt_succ hcard_lt
++
+ @[category test, AMS 5]
+ theorem house_matching : m HouseGraph = 2 := by
+-  sorry
++  unfold m
++  apply le_antisymm
++  · apply csSup_le
++    · refine ⟨0, ?_⟩
++      refine ⟨⊥, ?_, ?_⟩
++      · intro v hv
++        simp at hv
++      · simp
++    · intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 5)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 5))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 2
++      rw [hcard]
++      exact house_matching_edge_ncard_le_two M hM
++  · apply le_csSup
++    · refine ⟨2, ?_⟩
++      intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 5)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 5))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 2
++      rw [hcard]
++      exact house_matching_edge_ncard_le_two M hM
++    · let h01 : HouseGraph.Adj (0 : Fin 5) (1 : Fin 5) := by simp [HouseGraph]
++      let h24 : HouseGraph.Adj (2 : Fin 5) (4 : Fin 5) := by simp [HouseGraph]
++      refine ⟨HouseGraph.subgraphOfAdj h01 ⊔ HouseGraph.subgraphOfAdj h24, ?_, ?_⟩
++      · apply Subgraph.IsMatching.sup
++        · exact Subgraph.IsMatching.subgraphOfAdj h01
++        · exact Subgraph.IsMatching.subgraphOfAdj h24
++        · rw [support_subgraphOfAdj h01, support_subgraphOfAdj h24]
++          rw [Set.disjoint_left]
++          intro x hx hx'
++          fin_cases x <;> simp at hx hx'
++      · dsimp
++        rw [Subgraph.edgeSet_sup, edgeSet_subgraphOfAdj, edgeSet_subgraphOfAdj]
++        norm_num
++        have hne : s((2 : Fin 5), (4 : Fin 5)) ≠ s((0 : Fin 5), (1 : Fin 5)) := by
++          decide +kernel
++        simp [hne]
+ 
+ @[category test, AMS 5]
+ theorem house_residue : residue HouseGraph = 0 := by
+@@ -162,15 +390,55 @@ theorem K4_avg_dist : averageDistance K4 = 1 := by
+ 
+ @[category test, AMS 5]
+ theorem K4_diameter : maxEccentricity K4 = 1 := by
+-  sorry
++  have hecc : ∀ u : Fin 4, (⊤ : SimpleGraph (Fin 4)).eccentricity u = 1 := by
++    intro u
++    rw [show (⊤ : SimpleGraph (Fin 4)).eccentricity u =
++        (⊤ : SimpleGraph (Fin 4)).eccent u by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    simp
++  have hrange : Set.range ((⊤ : SimpleGraph (Fin 4)).eccentricity) = ({1} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [hecc u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [K4, maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem K4_radius : minEccentricity K4 = 1 := by
+-  sorry
++  have hecc : ∀ u : Fin 4, (⊤ : SimpleGraph (Fin 4)).eccentricity u = 1 := by
++    intro u
++    rw [show (⊤ : SimpleGraph (Fin 4)).eccentricity u =
++        (⊤ : SimpleGraph (Fin 4)).eccent u by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    simp
++  have hrange : Set.range ((⊤ : SimpleGraph (Fin 4)).eccentricity) = ({1} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [hecc u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [K4, minEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem K4_girth : K4.girth = 3 := by
+-  sorry
++  have hclique : ∃ s : Finset (Fin 4), K4.IsNClique 3 s := by
++    refine ⟨{0, 1, 2}, ?_⟩
++    rw [SimpleGraph.is3Clique_triple_iff]
++    simp [K4]
++  obtain ⟨u, w, hwcycle, hwlen⟩ :=
++    (SimpleGraph.is3Clique_iff_exists_cycle_length_three (G := K4)).mp hclique
++  apply le_antisymm
++  · simpa [hwlen] using K4.girth_le_length hwcycle
++  · apply SimpleGraph.three_le_girth
++    intro hacyclic
++    exact hacyclic w hwcycle
+ 
+ @[category test, AMS 5]
+ theorem K4_order : n K4 = 4 := by simp [n]
+@@ -199,9 +467,91 @@ theorem K4_max_deg : K4.maxDegree = 3 := by
+ theorem K4_avg_deg : averageDegree K4 = 3 := by
+   unfold averageDegree; simp [Fintype.card_fin]
+ 
++@[category test, AMS 5]
++private lemma K4_matching_edge_ncard_le_two (M : Subgraph K4) (hM : M.IsMatching) :
++    M.edgeSet.ncard ≤ 2 := by
++  classical
++  have hdeg : ∀ v : Fin 4, M.degree v ≤ 1 := by
++    intro v
++    by_cases hv : v ∈ M.verts
++    · have hvdeg : M.degree v = 1 := by
++        rw [Subgraph.degree_eq_one_iff_existsUnique_adj]
++        exact hM hv
++      omega
++    · have hvdeg : M.degree v = 0 := Subgraph.degree_of_notMem_verts hv
++      omega
++  have hsum_le : (∑ v : Fin 4, M.degree v) ≤ 4 := by
++    calc
++      (∑ v : Fin 4, M.degree v) ≤ ∑ _v : Fin 4, 1 := by
++        exact Finset.sum_le_sum (by intro v _; exact hdeg v)
++      _ = 4 := by norm_num
++  have hsum :
++      ∑ v : Fin 4, M.degree v = 2 * M.edgeSet.ncard := by
++    simpa [Subgraph.degree_spanningCoe, SimpleGraph.edgeFinset, Set.ncard_eq_toFinset_card']
++      using (M.spanningCoe.sum_degrees_eq_twice_card_edges)
++  have htwice : 2 * M.edgeSet.ncard ≤ 4 := by
++    rw [← hsum]
++    exact hsum_le
++  have hcard_lt : M.edgeSet.ncard < 3 := by
++    by_contra hlt
++    have hge : 3 ≤ M.edgeSet.ncard := Nat.le_of_not_gt hlt
++    omega
++  exact Nat.le_of_lt_succ hcard_lt
++
+ @[category test, AMS 5]
+ theorem K4_matching : m K4 = 2 := by
+-  sorry
++  unfold m
++  apply le_antisymm
++  · apply csSup_le
++    · refine ⟨0, ?_⟩
++      refine ⟨⊥, ?_, ?_⟩
++      · intro v hv
++        simp at hv
++      · simp
++    · intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 4)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 4))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 2
++      rw [hcard]
++      exact K4_matching_edge_ncard_le_two M hM
++  · apply le_csSup
++    · refine ⟨2, ?_⟩
++      intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 4)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 4))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 2
++      rw [hcard]
++      exact K4_matching_edge_ncard_le_two M hM
++    · let h01 : K4.Adj (0 : Fin 4) (1 : Fin 4) := by simp [K4]
++      let h23 : K4.Adj (2 : Fin 4) (3 : Fin 4) := by simp [K4]
++      refine ⟨K4.subgraphOfAdj h01 ⊔ K4.subgraphOfAdj h23, ?_, ?_⟩
++      · apply Subgraph.IsMatching.sup
++        · exact Subgraph.IsMatching.subgraphOfAdj h01
++        · exact Subgraph.IsMatching.subgraphOfAdj h23
++        · rw [support_subgraphOfAdj h01, support_subgraphOfAdj h23]
++          rw [Set.disjoint_left]
++          intro x hx hx'
++          fin_cases x <;> simp at hx hx'
++      · dsimp
++        rw [Subgraph.edgeSet_sup, edgeSet_subgraphOfAdj, edgeSet_subgraphOfAdj]
++        norm_num
++        have hne : s((2 : Fin 4), (3 : Fin 4)) ≠ s((0 : Fin 4), (1 : Fin 4)) := by
++          decide +kernel
++        simp [hne]
+ 
+ @[category test, AMS 5]
+ theorem K4_residue : residue K4 = 0 := by
+@@ -231,13 +581,121 @@ theorem petersen_avg_dist : averageDistance PetersenGraph = 5/3 := by
+   rw [avg_dist_eq_computable, show computable_avg_dist PetersenGraph = (5 / 3 : ℚ) from by decide +native]
+   norm_num
+ 
++@[category test, AMS 5]
++private lemma petersen_edist_le_two (a b : Fin 10) : PetersenGraph.edist a b ≤ 2 := by
++  have adj_le {u v : Fin 10} (h : PetersenGraph.Adj u v) :
++      PetersenGraph.edist u v ≤ 2 := by
++    have hed : PetersenGraph.edist u v = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    rw [hed]
++    norm_num
++  have via (c : Fin 10) {u v : Fin 10}
++      (huc : PetersenGraph.Adj u c) (hcv : PetersenGraph.Adj c v) :
++      PetersenGraph.edist u v ≤ 2 := by
++    have hed1 : PetersenGraph.edist u c = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    have hed2 : PetersenGraph.edist c v = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    calc
++      PetersenGraph.edist u v ≤ PetersenGraph.edist u c + PetersenGraph.edist c v :=
++        SimpleGraph.edist_triangle (G := PetersenGraph)
++      _ = 2 := by
++        rw [hed1, hed2]
++        norm_num
++  fin_cases a <;> fin_cases b <;>
++    first
++    | exact adj_le (by decide +kernel)
++    | exact via (0 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (1 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (2 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (3 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (4 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (5 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (6 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (7 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (8 : Fin 10) (by decide +kernel) (by decide +kernel)
++    | exact via (9 : Fin 10) (by decide +kernel) (by decide +kernel)
++
++@[category test, AMS 5]
++private lemma petersen_two_le_dist {a b : Fin 10}
++    (hnot : ¬ PetersenGraph.edist a b ≤ 1) :
++    (2 : ℕ∞) ≤ PetersenGraph.edist a b := by
++  have hlt : (1 : ℕ∞) < PetersenGraph.edist a b := lt_of_not_ge hnot
++  simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++    (n := PetersenGraph.edist a b) (ENat.coe_ne_top 1)).2 hlt
++
++@[category test, AMS 5]
++private lemma petersen_has_dist_two (a : Fin 10) :
++    ∃ b : Fin 10, (2 : ℕ∞) ≤ PetersenGraph.edist a b := by
++  fin_cases a
++  · refine ⟨2, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨3, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨4, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨0, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨1, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨6, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨7, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨8, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨9, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++  · refine ⟨5, petersen_two_le_dist ?_⟩
++    rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++    simp [PetersenGraph]
++
++@[category test, AMS 5]
++private lemma petersen_eccentricity_eq_two (a : Fin 10) :
++    PetersenGraph.eccentricity a = 2 := by
++  rw [show PetersenGraph.eccentricity a = PetersenGraph.eccent a by
++    simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++  apply le_antisymm
++  · rw [SimpleGraph.eccent_le_iff]
++    intro b
++    exact petersen_edist_le_two a b
++  · rcases petersen_has_dist_two a with ⟨b, hb⟩
++    exact hb.trans (SimpleGraph.edist_le_eccent (G := PetersenGraph) (u := a) (v := b))
++
+ @[category test, AMS 5]
+ theorem petersen_diameter : maxEccentricity PetersenGraph = 2 := by
+-  sorry
++  have hrange : Set.range (PetersenGraph.eccentricity) = ({2} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨a, rfl⟩
++      simp [petersen_eccentricity_eq_two a]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [petersen_eccentricity_eq_two 0] using hx.symm
++  rw [maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem petersen_radius : minEccentricity PetersenGraph = 2 := by
+-  sorry
++  have hrange : Set.range (PetersenGraph.eccentricity) = ({2} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨a, rfl⟩
++      simp [petersen_eccentricity_eq_two a]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [petersen_eccentricity_eq_two 0] using hx.symm
++  rw [minEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem petersen_girth : PetersenGraph.girth = 5 := by
+@@ -270,9 +728,161 @@ theorem petersen_max_deg : PetersenGraph.maxDegree = 3 := by
+ theorem petersen_avg_deg : averageDegree PetersenGraph = 3 := by
+   unfold averageDegree; simp [Fintype.card_fin]; decide +native
+ 
++@[category test, AMS 5]
++private def petersenOuter (i : Fin 5) : Fin 10 := ⟨i.val, by omega⟩
++
++@[category test, AMS 5]
++private def petersenInner (i : Fin 5) : Fin 10 := ⟨i.val + 5, by omega⟩
++
++@[category test, AMS 5]
++private lemma petersen_spoke_adj (i : Fin 5) :
++    PetersenGraph.Adj (petersenOuter i) (petersenInner i) := by
++  fin_cases i <;> decide +kernel
++
++@[category test, AMS 5]
++private def petersenSpoke (i : Fin 5) : Subgraph PetersenGraph :=
++  PetersenGraph.subgraphOfAdj (petersen_spoke_adj i)
++
++@[category test, AMS 5]
++private lemma petersen_matching_edge_ncard_le_five (M : Subgraph PetersenGraph) (hM : M.IsMatching) :
++    M.edgeSet.ncard ≤ 5 := by
++  classical
++  have hdeg : ∀ v : Fin 10, M.degree v ≤ 1 := by
++    intro v
++    by_cases hv : v ∈ M.verts
++    · have hvdeg : M.degree v = 1 := by
++        rw [Subgraph.degree_eq_one_iff_existsUnique_adj]
++        exact hM hv
++      omega
++    · have hvdeg : M.degree v = 0 := Subgraph.degree_of_notMem_verts hv
++      omega
++  have hsum_le : (∑ v : Fin 10, M.degree v) ≤ 10 := by
++    calc
++      (∑ v : Fin 10, M.degree v) ≤ ∑ _v : Fin 10, 1 := by
++        exact Finset.sum_le_sum (by intro v _; exact hdeg v)
++      _ = 10 := by norm_num
++  have hsum :
++      ∑ v : Fin 10, M.degree v = 2 * M.edgeSet.ncard := by
++    simpa [Subgraph.degree_spanningCoe, SimpleGraph.edgeFinset, Set.ncard_eq_toFinset_card']
++      using (M.spanningCoe.sum_degrees_eq_twice_card_edges)
++  have htwice : 2 * M.edgeSet.ncard ≤ 10 := by
++    rw [← hsum]
++    exact hsum_le
++  have hcard_lt : M.edgeSet.ncard < 6 := by
++    by_contra hlt
++    have hge : 6 ≤ M.edgeSet.ncard := Nat.le_of_not_gt hlt
++    omega
++  exact Nat.le_of_lt_succ hcard_lt
++
+ @[category test, AMS 5]
+ theorem petersen_matching : m PetersenGraph = 5 := by
+-  sorry
++  unfold m
++  apply le_antisymm
++  · apply csSup_le
++    · refine ⟨0, ?_⟩
++      refine ⟨⊥, ?_, ?_⟩
++      · intro v hv
++        simp at hv
++      · simp
++    · intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 10)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 10))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 5
++      rw [hcard]
++      exact petersen_matching_edge_ncard_le_five M hM
++  · apply le_csSup
++    · refine ⟨5, ?_⟩
++      intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 10)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 10))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 5
++      rw [hcard]
++      exact petersen_matching_edge_ncard_le_five M hM
++    · let M : Subgraph PetersenGraph := ⨆ i : Fin 5, petersenSpoke i
++      have hM : M.IsMatching := by
++        dsimp [M]
++        apply Subgraph.IsMatching.iSup
++        · intro i
++          exact Subgraph.IsMatching.subgraphOfAdj (petersen_spoke_adj i)
++        · intro i j hij
++          dsimp [petersenSpoke]
++          rw [support_subgraphOfAdj (petersen_spoke_adj i),
++            support_subgraphOfAdj (petersen_spoke_adj j)]
++          rw [Set.disjoint_left]
++          intro x hx hx'
++          fin_cases i <;> fin_cases j <;> fin_cases x <;>
++            simp [petersenOuter, petersenInner] at hij hx hx'
++      have hverts : M.verts = Set.univ := by
++        dsimp [M]
++        rw [Subgraph.verts_iSup]
++        ext v
++        constructor
++        · intro hv
++          simp
++        · intro _hv
++          fin_cases v
++          · rw [Set.mem_iUnion]
++            refine ⟨(0 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(1 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(2 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(3 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(4 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(0 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(1 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(2 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(3 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++          · rw [Set.mem_iUnion]
++            refine ⟨(4 : Fin 5), ?_⟩
++            simp [petersenSpoke, petersenOuter, petersenInner]
++      have hedge : M.edgeSet.ncard = 5 := by
++        classical
++        have hdeg : ∀ v : Fin 10, M.degree v = 1 := by
++          intro v
++          have hv : v ∈ M.verts := by simp [hverts]
++          rw [Subgraph.degree_eq_one_iff_existsUnique_adj]
++          exact hM hv
++        have hsum_left : (∑ v : Fin 10, M.degree v) = 10 := by
++          simp [hdeg]
++        have hsum :
++            ∑ v : Fin 10, M.degree v = 2 * M.edgeSet.ncard := by
++          simpa [Subgraph.degree_spanningCoe, SimpleGraph.edgeFinset, Set.ncard_eq_toFinset_card']
++            using (M.spanningCoe.sum_degrees_eq_twice_card_edges)
++        omega
++      refine ⟨M, hM, ?_⟩
++      dsimp
++      rw [← Set.ncard_eq_toFinset_card', hedge]
++      norm_num
+ 
+ @[category test, AMS 5]
+ theorem petersen_residue : residue PetersenGraph = 0 := by
+@@ -302,13 +912,91 @@ theorem C6_avg_dist : averageDistance C6 = 9/5 := by
+   rw [avg_dist_eq_computable, show computable_avg_dist C6 = (9 / 5 : ℚ) from by decide +native]
+   norm_num
+ 
++@[category test, AMS 5]
++private lemma C6_connected : C6.Connected := by
++  simpa [C6] using (cycleGraph_connected (n := 5))
++
++@[category test, AMS 5]
++private lemma C6_edist_eq_dist (u v : Fin 6) : C6.edist u v = C6.dist u v := by
++  exact (C6_connected u v).coe_dist_eq_edist.symm
++
++@[category test, AMS 5]
++private lemma C6_dist_le_three (u v : Fin 6) : C6.dist u v ≤ 3 := by
++  rw [dist_eq_computable]
++  fin_cases u <;> fin_cases v <;> decide +kernel
++
++@[category test, AMS 5]
++private lemma C6_has_dist_three (u : Fin 6) : ∃ v : Fin 6, (3 : ℕ∞) ≤ C6.edist u v := by
++  fin_cases u
++  · refine ⟨3, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++  · refine ⟨4, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++  · refine ⟨5, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++  · refine ⟨0, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++  · refine ⟨1, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++  · refine ⟨2, ?_⟩
++    rw [C6_edist_eq_dist]
++    norm_num
++    rw [dist_eq_computable]
++    decide +kernel
++
++@[category test, AMS 5]
++private lemma C6_eccentricity_eq_three (u : Fin 6) :
++    C6.eccentricity u = 3 := by
++  rw [show C6.eccentricity u = C6.eccent u by
++    simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++  apply le_antisymm
++  · rw [SimpleGraph.eccent_le_iff]
++    intro v
++    rw [C6_edist_eq_dist]
++    exact_mod_cast C6_dist_le_three u v
++  · rcases C6_has_dist_three u with ⟨v, hv⟩
++    exact hv.trans (SimpleGraph.edist_le_eccent (G := C6) (u := u) (v := v))
++
+ @[category test, AMS 5]
+ theorem C6_diameter : maxEccentricity C6 = 3 := by
+-  sorry
++  have hrange : Set.range (C6.eccentricity) = ({3} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [C6_eccentricity_eq_three u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [C6_eccentricity_eq_three 0] using hx.symm
++  rw [maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem C6_radius : minEccentricity C6 = 3 := by
+-  sorry
++  have hrange : Set.range (C6.eccentricity) = ({3} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [C6_eccentricity_eq_three u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [C6_eccentricity_eq_three 0] using hx.symm
++  rw [minEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem C6_girth : C6.girth = 6 := by
+@@ -341,9 +1029,120 @@ theorem C6_max_deg : C6.maxDegree = 2 := by
+ theorem C6_avg_deg : averageDegree C6 = 2 := by
+   unfold averageDegree; simp [Fintype.card_fin]; decide +native
+ 
++@[category test, AMS 5]
++private lemma C6_matching_edge_ncard_le_three (M : Subgraph C6) (hM : M.IsMatching) :
++    M.edgeSet.ncard ≤ 3 := by
++  classical
++  have hdeg : ∀ v : Fin 6, M.degree v ≤ 1 := by
++    intro v
++    by_cases hv : v ∈ M.verts
++    · have hvdeg : M.degree v = 1 := by
++        rw [Subgraph.degree_eq_one_iff_existsUnique_adj]
++        exact hM hv
++      omega
++    · have hvdeg : M.degree v = 0 := Subgraph.degree_of_notMem_verts hv
++      omega
++  have hsum_le : (∑ v : Fin 6, M.degree v) ≤ 6 := by
++    calc
++      (∑ v : Fin 6, M.degree v) ≤ ∑ _v : Fin 6, 1 := by
++        exact Finset.sum_le_sum (by intro v _; exact hdeg v)
++      _ = 6 := by norm_num
++  have hsum :
++      ∑ v : Fin 6, M.degree v = 2 * M.edgeSet.ncard := by
++    simpa [Subgraph.degree_spanningCoe, SimpleGraph.edgeFinset, Set.ncard_eq_toFinset_card']
++      using (M.spanningCoe.sum_degrees_eq_twice_card_edges)
++  have htwice : 2 * M.edgeSet.ncard ≤ 6 := by
++    rw [← hsum]
++    exact hsum_le
++  have hcard_lt : M.edgeSet.ncard < 4 := by
++    by_contra hlt
++    have hge : 4 ≤ M.edgeSet.ncard := Nat.le_of_not_gt hlt
++    omega
++  exact Nat.le_of_lt_succ hcard_lt
++
+ @[category test, AMS 5]
+ theorem C6_matching : m C6 = 3 := by
+-  sorry
++  unfold m
++  apply le_antisymm
++  · apply csSup_le
++    · refine ⟨0, ?_⟩
++      refine ⟨⊥, ?_, ?_⟩
++      · intro v hv
++        simp at hv
++      · simp
++    · intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 6)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 6))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 3
++      rw [hcard]
++      exact C6_matching_edge_ncard_le_three M hM
++  · apply le_csSup
++    · refine ⟨3, ?_⟩
++      intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      classical
++      let F : Finset (Sym2 (Fin 6)) := Finset.filter (fun e => e ∈ M.edgeSet) Finset.univ
++      have hcard : F.card = M.edgeSet.ncard := by
++        have hcoe : (F : Set (Sym2 (Fin 6))) = M.edgeSet := by
++          ext e
++          simp [F]
++        rw [← Set.ncard_coe_finset, hcoe]
++      change F.card ≤ 3
++      rw [hcard]
++      exact C6_matching_edge_ncard_le_three M hM
++    · let h01 : C6.Adj (0 : Fin 6) (1 : Fin 6) := by decide +kernel
++      let h23 : C6.Adj (2 : Fin 6) (3 : Fin 6) := by decide +kernel
++      let h45 : C6.Adj (4 : Fin 6) (5 : Fin 6) := by decide +kernel
++      let M01 := C6.subgraphOfAdj h01
++      let M23 := C6.subgraphOfAdj h23
++      let M45 := C6.subgraphOfAdj h45
++      refine ⟨(M01 ⊔ M23) ⊔ M45, ?_, ?_⟩
++      · apply Subgraph.IsMatching.sup
++        · apply Subgraph.IsMatching.sup
++          · exact Subgraph.IsMatching.subgraphOfAdj h01
++          · exact Subgraph.IsMatching.subgraphOfAdj h23
++          · dsimp [M01, M23]
++            rw [support_subgraphOfAdj h01, support_subgraphOfAdj h23]
++            rw [Set.disjoint_left]
++            intro x hx hx'
++            fin_cases x <;> simp at hx hx'
++        · exact Subgraph.IsMatching.subgraphOfAdj h45
++        · dsimp [M01, M23, M45]
++          rw [Set.disjoint_left]
++          intro x hx hx'
++          rw [Subgraph.mem_support] at hx
++          rcases hx with ⟨y, hy⟩
++          rw [Subgraph.sup_adj] at hy
++          rcases hy with hy | hy
++          · have hx01 : x ∈ (C6.subgraphOfAdj h01).support := by
++              exact ⟨y, hy⟩
++            rw [support_subgraphOfAdj h01] at hx01
++            rw [support_subgraphOfAdj h45] at hx'
++            fin_cases x <;> simp at hx01 hx'
++          · have hx23 : x ∈ (C6.subgraphOfAdj h23).support := by
++              exact ⟨y, hy⟩
++            rw [support_subgraphOfAdj h23] at hx23
++            rw [support_subgraphOfAdj h45] at hx'
++            fin_cases x <;> simp at hx23 hx'
++      · dsimp [M01, M23, M45]
++        rw [Subgraph.edgeSet_sup, Subgraph.edgeSet_sup,
++          edgeSet_subgraphOfAdj, edgeSet_subgraphOfAdj, edgeSet_subgraphOfAdj]
++        norm_num
++        have hne₁ : s((4 : Fin 6), (5 : Fin 6)) ≠ s((2 : Fin 6), (3 : Fin 6)) := by
++          decide +kernel
++        have hne₂ : s((4 : Fin 6), (5 : Fin 6)) ≠ s((0 : Fin 6), (1 : Fin 6)) := by
++          decide +kernel
++        have hne₃ : s((2 : Fin 6), (3 : Fin 6)) ≠ s((0 : Fin 6), (1 : Fin 6)) := by
++          decide +kernel
++        simp [hne₁, hne₂, hne₃]
+ 
+ @[category test, AMS 5]
+ theorem C6_residue : residue C6 = 0 := by
+@@ -374,15 +1173,174 @@ theorem Star5_avg_dist : averageDistance Star5 = 5/3 := by
+ 
+ @[category test, AMS 5]
+ theorem Star5_diameter : maxEccentricity Star5 = 2 := by
+-  sorry
++  have hleaf : Star5.eccentricity (Sum.inr (0 : Fin 5)) = 2 := by
++    rw [show Star5.eccentricity (Sum.inr (0 : Fin 5)) =
++        Star5.eccent (Sum.inr (0 : Fin 5)) by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro v
++      cases v with
++      | inl a =>
++          have h : Star5.Adj (Sum.inr (0 : Fin 5)) (Sum.inl a) := by
++            simp [Star5]
++          have hed : Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl a) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          rw [hed]
++          norm_num
++      | inr b =>
++          have h1 : Star5.Adj (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) := by
++            simp [Star5]
++          have h2 : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr b) := by
++            simp [Star5]
++          have hed1 : Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          have hed2 : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr b) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          calc
++            Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr b)
++                ≤ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) +
++                  Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr b) :=
++              SimpleGraph.edist_triangle (G := Star5)
++            _ = 2 := by
++              rw [hed1, hed2]
++              norm_num
++    · have hnot : ¬ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) ≤ 1 := by
++        rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++        simp [Star5]
++      have hlt : (1 : ℕ∞) < Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) :=
++        lt_of_not_ge hnot
++      have hle : (2 : ℕ∞) ≤ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) := by
++        simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++          (n := Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)))
++          (ENat.coe_ne_top 1)).2 hlt
++      exact hle.trans (SimpleGraph.edist_le_eccent (G := Star5)
++        (u := Sum.inr (0 : Fin 5)) (v := Sum.inr (1 : Fin 5)))
++  have hle_ecc : ∀ v, Star5.eccentricity v ≤ 2 := by
++    intro v
++    rw [show Star5.eccentricity v = Star5.eccent v by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    rw [SimpleGraph.eccent_le_iff]
++    intro w
++    cases v with
++    | inl a =>
++        cases w with
++        | inl b =>
++            fin_cases a
++            fin_cases b
++            simp
++        | inr c =>
++            have h : Star5.Adj (Sum.inl a) (Sum.inr c) := by
++              simp [Star5]
++            have hed : Star5.edist (Sum.inl a) (Sum.inr c) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            rw [hed]
++            norm_num
++    | inr b =>
++        cases w with
++        | inl a =>
++            have h : Star5.Adj (Sum.inr b) (Sum.inl a) := by
++              simp [Star5]
++            have hed : Star5.edist (Sum.inr b) (Sum.inl a) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            rw [hed]
++            norm_num
++        | inr c =>
++            have h1 : Star5.Adj (Sum.inr b) (Sum.inl (0 : Fin 1)) := by
++              simp [Star5]
++            have h2 : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr c) := by
++              simp [Star5]
++            have hed1 : Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            have hed2 : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr c) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            calc
++              Star5.edist (Sum.inr b) (Sum.inr c)
++                  ≤ Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) +
++                    Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr c) :=
++                SimpleGraph.edist_triangle (G := Star5)
++              _ = 2 := by
++                rw [hed1, hed2]
++                norm_num
++  apply le_antisymm
++  · rw [maxEccentricity]
++    exact sSup_le (by
++      rintro x ⟨v, rfl⟩
++      exact hle_ecc v)
++  · rw [maxEccentricity]
++    exact le_sSup ⟨Sum.inr (0 : Fin 5), hleaf⟩
+ 
+ @[category test, AMS 5]
+ theorem Star5_radius : minEccentricity Star5 = 1 := by
+-  sorry
++  have hcenter : Star5.eccentricity (Sum.inl (0 : Fin 1)) = 1 := by
++    rw [show Star5.eccentricity (Sum.inl (0 : Fin 1)) =
++        Star5.eccent (Sum.inl (0 : Fin 1)) by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro v
++      cases v with
++      | inl a =>
++          fin_cases a
++          simp
++      | inr b =>
++          have h : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr b) := by
++            simp [Star5]
++          rw [← SimpleGraph.edist_eq_one_iff_adj] at h
++          simp [h]
++    · have h : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr (0 : Fin 5)) := by
++        simp [Star5]
++      have hed : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr (0 : Fin 5)) = 1 := by
++        rwa [SimpleGraph.edist_eq_one_iff_adj]
++      simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++        (u := Sum.inl (0 : Fin 1)) (v := Sum.inr (0 : Fin 5)))
++  have hge : ∀ v, (1 : ℕ∞) ≤ Star5.eccentricity v := by
++    intro v
++    rw [show Star5.eccentricity v = Star5.eccent v by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    cases v with
++    | inl a =>
++        have h : Star5.Adj (Sum.inl a) (Sum.inr (0 : Fin 5)) := by
++          simp [Star5]
++        have hed : Star5.edist (Sum.inl a) (Sum.inr (0 : Fin 5)) = 1 := by
++          rwa [SimpleGraph.edist_eq_one_iff_adj]
++        simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++          (u := Sum.inl a) (v := Sum.inr (0 : Fin 5)))
++    | inr b =>
++        have h : Star5.Adj (Sum.inr b) (Sum.inl (0 : Fin 1)) := by
++          simp [Star5]
++        have hed : Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) = 1 := by
++          rwa [SimpleGraph.edist_eq_one_iff_adj]
++        simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++          (u := Sum.inr b) (v := Sum.inl (0 : Fin 1)))
++  apply le_antisymm
++  · rw [minEccentricity]
++    exact sInf_le ⟨Sum.inl (0 : Fin 1), hcenter⟩
++  · rw [minEccentricity]
++    exact le_sInf (by
++      rintro x ⟨v, rfl⟩
++      exact hge v)
+ 
+ @[category test, AMS 5]
+ theorem Star5_girth : Star5.egirth = ⊤ := by
+-  sorry
++  have hconn : Star5.Connected := by
++    rw [SimpleGraph.connected_iff_exists_forall_reachable]
++    refine ⟨Sum.inl (0 : Fin 1), ?_⟩
++    intro w
++    cases w with
++    | inl a =>
++        fin_cases a
++        exact Reachable.rfl
++    | inr b =>
++        exact (show Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr b) by simp [Star5]).reachable
++  have hcard : Nat.card Star5.edgeSet + 1 = Nat.card (Fin 1 ⊕ Fin 5) := by
++    rw [Nat.card_eq_fintype_card, ← SimpleGraph.edgeFinset_card]
++    norm_num [Star5, Fintype.card_sum]
++    decide +kernel
++  have htree : Star5.IsTree := by
++    rw [SimpleGraph.isTree_iff_connected_and_card]
++    exact ⟨hconn, hcard⟩
++  exact htree.IsAcyclic.egirth_eq_top
+ 
+ @[category test, AMS 5]
+ theorem Star5_order : n Star5 = 6 := by simp [n, Fintype.card_sum]
+@@ -413,9 +1371,97 @@ theorem Star5_avg_deg : averageDegree Star5 = 5/3 := by
+   simp [Star5, Fintype.card_sum]
+   decide +kernel
+ 
++@[category test, AMS 5]
++private lemma star5_adj_incident_center {x y : Fin 1 ⊕ Fin 5}
++    (h : Star5.Adj x y) : x = Sum.inl (0 : Fin 1) ∨ y = Sum.inl (0 : Fin 1) := by
++  cases x with
++  | inl a =>
++      left
++      fin_cases a
++      rfl
++  | inr _ =>
++      cases y with
++      | inl b =>
++          right
++          fin_cases b
++          rfl
++      | inr _ =>
++          simp [Star5] at h
++
++@[category test, AMS 5]
++private lemma star5_matching_edge_card_le_one (M : Subgraph Star5) (hM : M.IsMatching) :
++    M.edgeSet.toFinset.card ≤ 1 := by
++  rw [Finset.card_le_one]
++  intro e he f hf
++  induction e using Sym2.ind with
++  | h a b =>
++      induction f using Sym2.ind with
++      | h d e =>
++          rw [Set.mem_toFinset, Subgraph.mem_edgeSet] at he hf
++          rcases star5_adj_incident_center he.adj_sub with ha | hb
++          · subst ha
++            rcases star5_adj_incident_center hf.adj_sub with hd | hec
++            · subst hd
++              obtain ⟨w, _hw, huniq⟩ := hM (M.edge_vert he)
++              have hbw : b = w := huniq b he
++              have hew : e = w := huniq e hf
++              subst hbw
++              subst hew
++              rfl
++            · subst hec
++              obtain ⟨w, _hw, huniq⟩ := hM (M.edge_vert he)
++              have hbw : b = w := huniq b he
++              have hdw : d = w := huniq d hf.symm
++              subst hbw
++              subst hdw
++              exact Sym2.eq_swap
++          · subst hb
++            rcases star5_adj_incident_center hf.adj_sub with hd | hec
++            · subst hd
++              obtain ⟨w, _hw, huniq⟩ := hM (M.edge_vert he.symm)
++              have haw : a = w := huniq a he.symm
++              have hew : e = w := huniq e hf
++              subst haw
++              subst hew
++              exact Sym2.eq_swap
++            · subst hec
++              obtain ⟨w, _hw, huniq⟩ := hM (M.edge_vert he.symm)
++              have haw : a = w := huniq a he.symm
++              have hdw : d = w := huniq d hf.symm
++              subst haw
++              subst hdw
++              rfl
++
+ @[category test, AMS 5]
+ theorem Star5_matching : m Star5 = 1 := by
+-  sorry
++  unfold m
++  let S : Set ℝ :=
++    Set.image (fun M : Subgraph Star5 => (M.edgeSet.toFinset.card : ℝ))
++      {M : Subgraph Star5 | M.IsMatching}
++  change sSup S = 1
++  apply le_antisymm
++  · apply csSup_le
++    · refine ⟨0, ?_⟩
++      refine ⟨⊥, ?_, ?_⟩
++      · intro v hv
++        simp at hv
++      · simp
++    · intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      simpa [Set.toFinset] using star5_matching_edge_card_le_one M hM
++  · apply le_csSup
++    · refine ⟨1, ?_⟩
++      intro x hx
++      rcases hx with ⟨M, hM, rfl⟩
++      norm_num
++      simpa [Set.toFinset] using star5_matching_edge_card_le_one M hM
++    · let h : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr (0 : Fin 5)) := by simp [Star5]
++      refine ⟨Star5.subgraphOfAdj h, ?_, ?_⟩
++      · exact Subgraph.IsMatching.subgraphOfAdj h
++      · change (((Star5.subgraphOfAdj h).edgeSet.toFinset.card : ℝ) = 1)
++        rw [SimpleGraph.edgeSet_subgraphOfAdj]
++        simp
+ 
+ @[category test, AMS 5]
+ theorem Star5_residue : residue Star5 = 5 := by
+-- 
+2.46.0.windows.1
+

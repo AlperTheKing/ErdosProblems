@@ -1,0 +1,60 @@
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 1c8a724..750d868 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -697,9 +697,54 @@ theorem petersen_radius : minEccentricity PetersenGraph = 2 := by
+   rw [minEccentricity, hrange]
+   simp
+ 
++section PetersenGirthAux
++
++local instance instDecEqNilP {u : Fin 10} (p : PetersenGraph.Walk u u) : Decidable (p = Walk.nil) :=
++  decidable_of_iff p.Nil Walk.nil_iff_eq_nil
++local instance instDecIsTrailP {u v : Fin 10} (p : PetersenGraph.Walk u v) : Decidable p.IsTrail :=
++  decidable_of_iff _ (Walk.isTrail_def p).symm
++local instance instDecIsCycleP {u : Fin 10} (p : PetersenGraph.Walk u u) : Decidable p.IsCycle :=
++  decidable_of_iff _ (Walk.isCycle_def p).symm
++
++set_option maxHeartbeats 10000000 in
++/-- No walk in the Petersen graph of length `< 5` is a cycle: the girth lower bound, checked
++by `decide` over the finite set of short walks. -/
++@[category test, AMS 5]
++private lemma petersen_no_short_cycle :
++    ∀ a : Fin 10, ∀ w ∈ PetersenGraph.finsetWalkLengthLT 5 a a, ¬ w.IsCycle := by
++  decide
++
++/-- The outer `5`-cycle `0-1-2-3-4-0` witnessing the Petersen girth upper bound. -/
++@[category test, AMS 5]
++private lemma petersen_exists_5cycle :
++    ∃ w : PetersenGraph.Walk 0 0, w.IsCycle ∧ w.length = 5 := by
++  refine ⟨.cons (show PetersenGraph.Adj 0 1 by decide)
++        (.cons (show PetersenGraph.Adj 1 2 by decide)
++        (.cons (show PetersenGraph.Adj 2 3 by decide)
++        (.cons (show PetersenGraph.Adj 3 4 by decide)
++        (.cons (show PetersenGraph.Adj 4 0 by decide) .nil)))), ?_, ?_⟩
++  · decide
++  · decide
++
++end PetersenGirthAux
++
+ @[category test, AMS 5]
+ theorem petersen_girth : PetersenGraph.girth = 5 := by
+-  sorry
++  have heg : PetersenGraph.egirth = 5 := by
++    apply le_antisymm
++    · obtain ⟨c, hc, hlen⟩ := petersen_exists_5cycle
++      have hle := egirth_le_length hc
++      rw [hlen] at hle
++      exact_mod_cast hle
++    · rw [le_egirth]
++      intro a w hw
++      have hge : 5 ≤ w.length := by
++        by_contra hlt
++        push_neg at hlt
++        exact petersen_no_short_cycle a w (mem_finsetWalkLengthLT_iff.mpr hlt) hw
++      exact_mod_cast hge
++  rw [show PetersenGraph.girth = PetersenGraph.egirth.toNat from rfl, heg]
++  rfl
+ 
+ @[category test, AMS 5]
+ theorem petersen_order : n PetersenGraph = 10 := by simp [n]

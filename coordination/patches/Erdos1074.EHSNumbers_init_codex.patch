@@ -1,0 +1,268 @@
+diff --git a/FormalConjectures/ErdosProblems/1074.lean b/FormalConjectures/ErdosProblems/1074.lean
+index ebe4cc6..dce104e 100644
+--- a/FormalConjectures/ErdosProblems/1074.lean
++++ b/FormalConjectures/ErdosProblems/1074.lean
+@@ -108,11 +108,262 @@ theorem erdos_1074.variants.EHSNumbers_infinite : EHSNumbers.Infinite := by
+ theorem erdos_1074.variants.PillaiPrimes_infinite : PillaiPrimes.Infinite := by
+   sorry
+ 
++private abbrev EHSInitPred : ℕ → Prop := fun m => m ∈ EHSNumbers
++
++private lemma ehs_mem_8 : EHSInitPred 8 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 61
++  norm_num
++
++private lemma ehs_mem_9 : EHSInitPred 9 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 71
++  norm_num
++
++private lemma ehs_mem_13 : EHSInitPred 13 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 83
++  norm_num
++
++private lemma ehs_mem_14 : EHSInitPred 14 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 23
++  norm_num
++
++private lemma ehs_mem_15 : EHSInitPred 15 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 59
++  norm_num
++
++private lemma ehs_mem_16 : EHSInitPred 16 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 61
++  norm_num
++
++private lemma ehs_mem_17 : EHSInitPred 17 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  use 661
++  norm_num
++
++private lemma ehs_not_mem_0 : ¬ EHSInitPred 0 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++
++private lemma ehs_not_mem_1 : ¬ EHSInitPred 1 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  exact hmod Nat.modEq_one
++
++private lemma prime_dvd_prime_mul_prime {p a b : ℕ} (hp : p.Prime) (ha : a.Prime)
++    (hb : b.Prime) (h : p ∣ a * b) : p = a ∨ p = b := by
++  rcases hp.dvd_mul.mp h with hpa | hpb
++  · exact Or.inl ((Nat.prime_dvd_prime_iff_eq hp ha).mp hpa)
++  · exact Or.inr ((Nat.prime_dvd_prime_iff_eq hp hb).mp hpb)
++
++private lemma ehs_not_mem_2 : ¬ EHSInitPred 2 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 3 := by simpa using hdvd
++  have hpeq : p = 3 := (Nat.prime_dvd_prime_iff_eq hp (by norm_num)).mp h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_3 : ¬ EHSInitPred 3 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 7 := by simpa using hdvd
++  have hpeq : p = 7 := (Nat.prime_dvd_prime_iff_eq hp (by norm_num)).mp h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_4 : ¬ EHSInitPred 4 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 5 ^ 2 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hpeq : p = 5 := Nat.prime_eq_prime_of_dvd_pow hp (by norm_num) h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_5 : ¬ EHSInitPred 5 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 11 ^ 2 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hpeq : p = 11 := Nat.prime_eq_prime_of_dvd_pow hp (by norm_num) h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_6 : ¬ EHSInitPred 6 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have hpdiv : p ∣ 7 * 103 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hcases : p = 7 ∨ p = 103 :=
++    prime_dvd_prime_mul_prime hp (by norm_num) (by norm_num) hpdiv
++  rcases hcases with rfl | rfl <;> norm_num at hmod
++
++private lemma ehs_not_mem_7 : ¬ EHSInitPred 7 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 71 ^ 2 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hpeq : p = 71 := Nat.prime_eq_prime_of_dvd_pow hp (by norm_num) h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_10 : ¬ EHSInitPred 10 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have hpdiv : p ∣ 11 * 329891 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hcases : p = 11 ∨ p = 329891 :=
++    prime_dvd_prime_mul_prime hp (by norm_num) (by norm_num) hpdiv
++  rcases hcases with rfl | rfl <;> norm_num at hmod
++
++private lemma ehs_not_mem_11 : ¬ EHSInitPred 11 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have h : p ∣ 39916801 := by simpa using hdvd
++  have hpeq : p = 39916801 := (Nat.prime_dvd_prime_iff_eq hp (by norm_num)).mp h
++  subst p
++  norm_num at hmod
++
++private lemma ehs_not_mem_12 : ¬ EHSInitPred 12 := by
++  dsimp [EHSInitPred]
++  norm_num [EHSNumbers]
++  intro p hp hmod hdvd
++  have hpdiv : p ∣ 13 ^ 2 * 2834329 := by
++    norm_num at hdvd ⊢
++    simpa using hdvd
++  have hcases : p = 13 ∨ p = 2834329 := by
++    rcases hp.dvd_mul.mp hpdiv with h | h
++    · exact Or.inl (Nat.prime_eq_prime_of_dvd_pow hp (by norm_num) h)
++    · exact Or.inr ((Nat.prime_dvd_prime_iff_eq hp (by norm_num)).mp h)
++  rcases hcases with rfl | rfl <;> norm_num at hmod
++
++private lemma ehs_count_8 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 8 = 0 := by
++  rw [@Nat.count_iff_forall_not EHSInitPred (Classical.decPred EHSInitPred)]
++  intro m hm
++  interval_cases m
++  · exact ehs_not_mem_0
++  · exact ehs_not_mem_1
++  · exact ehs_not_mem_2
++  · exact ehs_not_mem_3
++  · exact ehs_not_mem_4
++  · exact ehs_not_mem_5
++  · exact ehs_not_mem_6
++  · exact ehs_not_mem_7
++
++private lemma ehs_count_9 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 9 = 1 := by
++  rw [show 9 = 8 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 8,
++    ehs_count_8, if_pos ehs_mem_8]
++
++private lemma ehs_count_13 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 13 = 2 := by
++  rw [show 13 = 12 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 12,
++    if_neg ehs_not_mem_12]
++  rw [show 12 = 11 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 11,
++    if_neg ehs_not_mem_11]
++  rw [show 11 = 10 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 10,
++    if_neg ehs_not_mem_10]
++  rw [show 10 = 9 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 9,
++    if_pos ehs_mem_9, ehs_count_9]
++
++private lemma ehs_count_14 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 14 = 3 := by
++  rw [show 14 = 13 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 13,
++    if_pos ehs_mem_13, ehs_count_13]
++
++private lemma ehs_count_15 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 15 = 4 := by
++  rw [show 15 = 14 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 14,
++    if_pos ehs_mem_14, ehs_count_14]
++
++private lemma ehs_count_16 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 16 = 5 := by
++  rw [show 16 = 15 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 15,
++    if_pos ehs_mem_15, ehs_count_15]
++
++private lemma ehs_count_17 : @Nat.count EHSInitPred (Classical.decPred EHSInitPred) 17 = 6 := by
++  rw [show 17 = 16 + 1 by norm_num,
++    @Nat.count_succ EHSInitPred (Classical.decPred EHSInitPred) 16,
++    if_pos ehs_mem_16, ehs_count_16]
++
++private lemma ehs_nth_0 : nth EHSInitPred 0 = 8 := by
++  rw [← ehs_count_8]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 8 ehs_mem_8
++
++private lemma ehs_nth_1 : nth EHSInitPred 1 = 9 := by
++  rw [← ehs_count_9]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 9 ehs_mem_9
++
++private lemma ehs_nth_2 : nth EHSInitPred 2 = 13 := by
++  rw [← ehs_count_13]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 13 ehs_mem_13
++
++private lemma ehs_nth_3 : nth EHSInitPred 3 = 14 := by
++  rw [← ehs_count_14]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 14 ehs_mem_14
++
++private lemma ehs_nth_4 : nth EHSInitPred 4 = 15 := by
++  rw [← ehs_count_15]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 15 ehs_mem_15
++
++private lemma ehs_nth_5 : nth EHSInitPred 5 = 16 := by
++  rw [← ehs_count_16]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 16 ehs_mem_16
++
++private lemma ehs_nth_6 : nth EHSInitPred 6 = 17 := by
++  rw [← ehs_count_17]
++  exact @Nat.nth_count EHSInitPred (Classical.decPred EHSInitPred) 17 ehs_mem_17
++
+ /-- The sequence $S$ begins $8, 9, 13, 14, 15, 16, 17, ...$ -/
+ @[category test, AMS 11]
+ theorem erdos_1074.variants.EHSNumbers_init :
+     nth EHSNumbers '' (Set.Icc 0 6) = {8, 9, 13, 14, 15, 16, 17} := by
+-  sorry
++  change nth EHSInitPred '' Set.Icc 0 6 = ({8, 9, 13, 14, 15, 16, 17} : Set ℕ)
++  ext x
++  constructor
++  · rintro ⟨i, hi, rfl⟩
++    simp at hi
++    interval_cases i <;> simp [ehs_nth_0, ehs_nth_1, ehs_nth_2, ehs_nth_3, ehs_nth_4,
++      ehs_nth_5, ehs_nth_6]
++  · intro hx
++    simp at hx
++    rcases hx with rfl | rfl | rfl | rfl | rfl | rfl | rfl
++    · exact ⟨0, by norm_num, by simp [ehs_nth_0]⟩
++    · exact ⟨1, by norm_num, by simp [ehs_nth_1]⟩
++    · exact ⟨2, by norm_num, by simp [ehs_nth_2]⟩
++    · exact ⟨3, by norm_num, by simp [ehs_nth_3]⟩
++    · exact ⟨4, by norm_num, by simp [ehs_nth_4]⟩
++    · exact ⟨5, by norm_num, by simp [ehs_nth_5]⟩
++    · exact ⟨6, by norm_num, by simp [ehs_nth_6]⟩
+ 
+ /-- The sequence $P$ begins $23, 29, 59, 61, 67, 71, ...$ -/
+ @[category test, AMS 11]

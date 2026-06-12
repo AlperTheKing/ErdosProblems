@@ -1,0 +1,57 @@
+diff --git a/FormalConjectures/Wikipedia/MovingSofa.lean b/FormalConjectures/Wikipedia/MovingSofa.lean
+index 438290a..ee5e6cb 100644
+--- a/FormalConjectures/Wikipedia/MovingSofa.lean
++++ b/FormalConjectures/Wikipedia/MovingSofa.lean
+@@ -72,7 +72,51 @@ This is a sanity check that the `IsMovingSofa` definition is not vacuous.
+ -/
+ @[category test, AMS 49]
+ theorem isMovingSofa_unitSquare : ∃ m, IsMovingSofa unitSquare m := by
+-  sorry
++  let m : I → E(2) := fun _ => AffineIsometryEquiv.refl ℝ ℝ²
++  have hnonempty : unitSquare.Nonempty := by
++    refine ⟨0, ?_⟩
++    rw [unitSquare, mem_parallelepiped_iff]
++    refine ⟨(0 : Fin 2 → ℝ), ?_, ?_⟩
++    · constructor <;> intro i <;> simp
++    · simp
++  have hhorizontal : unitSquare ⊆ horizontalHallway := by
++    intro p hp
++    rw [unitSquare, mem_parallelepiped_iff] at hp
++    rcases hp with ⟨t, ht, hp⟩
++    refine ⟨t 0, t 1, ?_, ?_⟩
++    · exact ⟨ht.2 0, ht.1 1, ht.2 1⟩
++    · rw [hp]
++      ext i
++      fin_cases i <;> simp
++  have hvertical : unitSquare ⊆ verticalHallway := by
++    intro p hp
++    rw [unitSquare, mem_parallelepiped_iff] at hp
++    rcases hp with ⟨t, ht, hp⟩
++    refine ⟨t 0, t 1, ?_, ?_⟩
++    · exact ⟨ht.1 0, ht.2 0, ht.2 1⟩
++    · rw [hp]
++      ext i
++      fin_cases i <;> simp
++  refine ⟨m, ?_⟩
++  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
++  · exact (convex_parallelepiped _).isConnected hnonempty
++  · have hcompact : IsCompact unitSquare := by
++      change IsCompact
++        (((EuclideanSpace.basisFun (Fin 2) ℝ).toBasis.parallelepiped :
++          TopologicalSpace.PositiveCompacts ℝ²) : Set ℝ²)
++      exact (EuclideanSpace.basisFun (Fin 2) ℝ).toBasis.parallelepiped.isCompact
++    exact hcompact.isClosed
++  · dsimp [m]
++    continuity
++  · rfl
++  · exact hhorizontal
++  · intro t p hp
++    rcases hp with ⟨q, hq, rfl⟩
++    left
++    simpa [m] using hhorizontal hq
++  · intro p hp
++    rcases hp with ⟨q, hq, rfl⟩
++    simpa [m] using hvertical hq
+ 
+ /--
+ The rigid motion that translates by $p$ and then rotates counterclockwise by $\alpha$.

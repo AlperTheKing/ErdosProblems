@@ -1,0 +1,44 @@
+diff --git a/FormalConjectures/ErdosProblems/138.lean b/FormalConjectures/ErdosProblems/138.lean
+index e7f8363..c955071 100644
+--- a/FormalConjectures/ErdosProblems/138.lean
++++ b/FormalConjectures/ErdosProblems/138.lean
+@@ -69,7 +69,38 @@ noncomputable abbrev W : ℕ → ℕ := monoAPNumber 2
+ @[category test, AMS 11,
+ formal_proof using formal_conjectures at "https://github.com/XC0R/formal-conjectures/blob/6c7a16e8998d1c597fa2a5c6329bc9301fcc56e2/FormalConjectures/ErdosProblems/138.lean#L79"]
+ theorem monoAPNumber_two_one : W 1 = 1 := by
+-  sorry
++  unfold W monoAPNumber
++  let S := monoAP_guarantee_set 2 1
++  change sInf S = 1
++  have hmem : 1 ∈ S := by
++    intro coloring
++    let x : (Finset.Icc 1 1 : Set ℕ) := ⟨1, by simp⟩
++    refine ⟨coloring x, {x}, ?_, ?_⟩
++    · simp [Set.IsAPOfLength]
++    · intro m hm
++      simp at hm
++      subst hm
++      rfl
++  refine le_antisymm (Nat.sInf_le hmem) ?_
++  apply le_csInf ⟨1, hmem⟩
++  intro N hN
++  by_contra hlt
++  have hN0 : N = 0 := by omega
++  subst N
++  let coloring : (Finset.Icc 1 0 : Set ℕ) → Fin 2 := fun x => by
++    have hx : (x : ℕ) ∈ (Finset.Icc 1 0 : Set ℕ) := x.2
++    simp at hx
++  rcases hN coloring with ⟨c, ap, hap, hcolor⟩
++  have hempty : ((fun x : (Finset.Icc 1 0 : Set ℕ) => x.1) '' ap) = (∅ : Set ℕ) := by
++    ext y
++    constructor
++    · rintro ⟨x, hx, rfl⟩
++      have hxm : (x : ℕ) ∈ (Finset.Icc 1 0 : Set ℕ) := x.2
++      simp at hxm
++    · intro hy
++      simp at hy
++  rw [hempty] at hap
++  simpa using hap.card
+ 
+ @[category test, AMS 11,
+ formal_proof using formal_conjectures at "https://github.com/XC0R/formal-conjectures/blob/6c7a16e8998d1c597fa2a5c6329bc9301fcc56e2/FormalConjectures/ErdosProblems/138.lean#L142"]

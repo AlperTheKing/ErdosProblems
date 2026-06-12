@@ -1,0 +1,29 @@
+diff --git a/FormalConjectures/OEIS/34693.lean b/FormalConjectures/OEIS/34693.lean
+index d9776ca..460f478 100644
+--- a/FormalConjectures/OEIS/34693.lean
++++ b/FormalConjectures/OEIS/34693.lean
+@@ -69,7 +69,23 @@ theorem exists_k_stronger {n : ℕ} (hn : 0 < n) : ∃ k : ℕ,
+ @[category research solved, AMS 11]
+ theorem exists_k_best_possible : ∃ n > (0 : ℕ), ∀ (k : ℕ),
+     k < 1 + (Real.nthRoot 100 n) ^ 74 → ¬(n * k + 1).Prime := by
+-  sorry
++  refine ⟨19, by norm_num, ?_⟩
++  intro k hk
++  have hroot_lt : (Real.nthRoot 100 (19 : ℝ)) ^ 74 < 9 := by
++    apply lt_of_pow_lt_pow_left₀ 100 (by norm_num : (0 : ℝ) ≤ 9)
++    calc
++      ((Real.nthRoot 100 (19 : ℝ)) ^ 74) ^ 100
++          = ((Real.nthRoot 100 (19 : ℝ)) ^ 100) ^ 74 := by ring
++      _ = (19 : ℝ) ^ 74 := by
++        rw [Real.pow_nthRoot]
++        exact Or.inl ⟨by norm_num, by norm_num⟩
++      _ < 9 ^ 100 := by norm_num
++  have hk10 : k < 10 := by
++    have hbound : (1 : ℝ) + (Real.nthRoot 100 (19 : ℝ)) ^ 74 < 10 := by
++      linarith
++    have hk_real : (k : ℝ) < 10 := lt_trans hk hbound
++    exact_mod_cast hk_real
++  interval_cases k <;> norm_num
+ 
+ /-- Conjecture: $a(n) = O(\log(n)\log(\log(n)))$. -/
+ @[category research open, AMS 11]

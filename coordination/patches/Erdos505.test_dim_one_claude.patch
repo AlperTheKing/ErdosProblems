@@ -1,0 +1,92 @@
+diff --git a/FormalConjectures/ErdosProblems/505.lean b/FormalConjectures/ErdosProblems/505.lean
+index 45de987..90423c1 100644
+--- a/FormalConjectures/ErdosProblems/505.lean
++++ b/FormalConjectures/ErdosProblems/505.lean
+@@ -50,13 +50,86 @@ open Metric Set Classical
+ 
+ namespace Erdos505
+ 
++/-- The single coordinate of a point of the one-dimensional Euclidean line. -/
++private def coord (x : EuclideanSpace ℝ (Fin 1)) : ℝ := x 0
++
++/-- In `EuclideanSpace ℝ (Fin 1)` the distance is the absolute difference of coordinates. -/
++private lemma dist_coord (x y : EuclideanSpace ℝ (Fin 1)) :
++    dist x y = |coord x - coord y| := by
++  simp only [coord]
++  rw [EuclideanSpace.dist_eq, Fin.sum_univ_one, Real.dist_eq, sq_abs, Real.sqrt_sq_eq_abs]
++
++/-- Given two points `p, q ∈ S` with `coord p < coord q`, the threshold
++`c = (coord p + coord q) / 2` splits `S` into a left and a right piece, each of
++diameter at most `diam S - δ < diam S`, where `δ = (coord q - coord p) / 2 > 0`. -/
++private lemma cover_of_pair (S : Set (EuclideanSpace ℝ (Fin 1)))
++    (hS : Bornology.IsBounded S)
++    (p q : EuclideanSpace ℝ (Fin 1)) (hp : p ∈ S) (hq : q ∈ S)
++    (hpq : coord p < coord q) :
++    ∃ F : Fin 2 → Set (EuclideanSpace ℝ (Fin 1)),
++      S ⊆ ⋃ i, F i ∧ ∀ i, diam (F i) < diam S := by
++  set c : ℝ := (coord p + coord q) / 2 with hc
++  set δ : ℝ := (coord q - coord p) / 2 with hδ
++  have hδpos : 0 < δ := by rw [hδ]; linarith
++  have hpqdist : dist p q ≤ diam S := dist_le_diam_of_mem hS hp hq
++  rw [dist_coord, abs_of_neg (by linarith : coord p - coord q < 0)] at hpqdist
++  refine ⟨![S ∩ {x | coord x ≤ c}, S ∩ {x | c ≤ coord x}], ?_, ?_⟩
++  · intro x hx
++    rw [Set.mem_iUnion]
++    rcases le_total (coord x) c with hle | hge
++    · exact ⟨0, hx, hle⟩
++    · exact ⟨1, hx, hge⟩
++  · intro i
++    have hCnonneg : 0 ≤ diam S - δ := by linarith
++    have hClt : diam S - δ < diam S := by linarith
++    fin_cases i
++    · show diam (S ∩ {x | coord x ≤ c}) < diam S
++      refine lt_of_le_of_lt (diam_le_of_forall_dist_le hCnonneg ?_) hClt
++      intro x hx y hy
++      simp only [Set.mem_inter_iff, Set.mem_setOf_eq] at hx hy
++      obtain ⟨hxS, hxc⟩ := hx
++      obtain ⟨hyS, hyc⟩ := hy
++      have hxq := dist_le_diam_of_mem hS hxS hq
++      rw [dist_coord, abs_le] at hxq
++      have hyq := dist_le_diam_of_mem hS hyS hq
++      rw [dist_coord, abs_le] at hyq
++      rw [dist_coord, abs_le]
++      constructor
++      · linarith [hxq.1, hyc]
++      · linarith [hyq.1, hxc]
++    · show diam (S ∩ {x | c ≤ coord x}) < diam S
++      refine lt_of_le_of_lt (diam_le_of_forall_dist_le hCnonneg ?_) hClt
++      intro x hx y hy
++      simp only [Set.mem_inter_iff, Set.mem_setOf_eq] at hx hy
++      obtain ⟨hxS, hxc⟩ := hx
++      obtain ⟨hyS, hyc⟩ := hy
++      have hxp := dist_le_diam_of_mem hS hxS hp
++      rw [dist_coord, abs_le] at hxp
++      have hyp := dist_le_diam_of_mem hS hyS hp
++      rw [dist_coord, abs_le] at hyp
++      rw [dist_coord, abs_le]
++      constructor
++      · linarith [hyp.2, hxc]
++      · linarith [hxp.2, hyc]
++
+ @[category test, AMS 52]
+ theorem erdos_505.test_dim_one
+     (S : Set (EuclideanSpace ℝ (Fin 1)))
+     (hS : Bornology.IsBounded S) (hd : 0 < diam S) :
+     ∃ (F : Fin 2 → Set (EuclideanSpace ℝ (Fin 1))),
+       S ⊆ ⋃ i, F i ∧ ∀ i, diam (F i) < diam S := by
+-  sorry
++  have hns : S.Nontrivial := by
++    rcases S.subsingleton_or_nontrivial with hsub | hnt
++    · rw [Metric.diam_subsingleton hsub] at hd; exact absurd hd (lt_irrefl 0)
++    · exact hnt
++  obtain ⟨p, hp, q, hq, hpq⟩ := hns
++  have hdpq : 0 < dist p q := dist_pos.mpr hpq
++  rw [dist_coord] at hdpq
++  have hcoord_ne : coord p ≠ coord q := by
++    intro h; rw [h, sub_self, abs_zero] at hdpq; exact lt_irrefl 0 hdpq
++  rcases lt_or_gt_of_ne hcoord_ne with hlt | hlt
++  · exact cover_of_pair S hS p q hp hq hlt
++  · exact cover_of_pair S hS q p hq hp hlt
+ 
+ /-- **Erdős Problem 505** (disproved). Borsuk's conjecture is false for
+ sufficiently large $n$: there exists a dimension $n$ and a bounded set

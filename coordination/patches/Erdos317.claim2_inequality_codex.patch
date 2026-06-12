@@ -1,0 +1,104 @@
+diff --git a/FormalConjectures/ErdosProblems/317.lean b/FormalConjectures/ErdosProblems/317.lean
+index af66d31..9f90648 100644
+--- a/FormalConjectures/ErdosProblems/317.lean
++++ b/FormalConjectures/ErdosProblems/317.lean
+@@ -50,6 +50,90 @@ theorem erdos_317.variants.claim2 : answer(sorry) ↔
+     lhs ≠ 0 → lhs > 1 / (Icc 1 n).lcm id := by
+   sorry
+ 
++set_option maxHeartbeats 0 in
++private lemma rat_abs_ge_inv_den (q : ℚ) (hq : |q| ≠ 0) :
++    |q| ≥ (1 : ℚ) / q.den := by
++  rw [Rat.abs_def]
++  have hnum_ne : q.num.natAbs ≠ 0 := by
++    intro h
++    apply hq
++    rw [Rat.abs_def, h]
++    norm_num
++  have hnum : (1 : ℚ) ≤ (q.num.natAbs : ℚ) := by
++    exact_mod_cast Nat.succ_le_iff.mpr (Nat.pos_of_ne_zero hnum_ne)
++  have hden_pos : (0 : ℚ) < q.den := by
++    exact_mod_cast q.pos
++  calc
++    (1 : ℚ) / q.den ≤ (q.num.natAbs : ℚ) / q.den := by
++      exact div_le_div_of_nonneg_right hnum hden_pos.le
++    _ = Rat.divInt q.num.natAbs q.den := by
++      rw [Rat.natCast_div_eq_divInt]
++
++private lemma rat_sum_den_dvd {α : Type*} [DecidableEq α] (s : Finset α) (f : α → ℚ)
++    (L : ℕ) (h : ∀ a ∈ s, (f a).den ∣ L) :
++    (∑ a ∈ s, f a).den ∣ L := by
++  classical
++  induction s using Finset.induction_on with
++  | empty =>
++      simp
++  | insert a s ha ih =>
++      rw [Finset.sum_insert ha]
++      exact (Rat.add_den_dvd_lcm (f a) (∑ x ∈ s, f x)).trans
++        (Nat.lcm_dvd (h a (by simp)) (ih (fun x hx => h x (by simp [hx]))))
++
++set_option maxHeartbeats 0 in
++private lemma claim2_inequality_point (n : ℕ) (δ : (Fin n) → ℚ)
++    (hδ : δ '' Set.univ ⊆ ({-1, 0, 1} : Set ℚ)) :
++    letI lhs := |∑ k, ((δ k : ℚ) / (k + 1))|
++    lhs ≠ 0 → lhs ≥ 1 / (Icc 1 n).lcm id := by
++  intro hne
++  let L : ℕ := (Icc 1 n).lcm id
++  let q : ℚ := ∑ k, ((δ k : ℚ) / (k + 1))
++  have hL_pos : 0 < L := by
++    apply Nat.pos_of_ne_zero
++    rw [Finset.lcm_ne_zero_iff]
++    intro x hx
++    exact Nat.ne_of_gt (by simpa using (Finset.mem_Icc.mp hx).1)
++  have hterm : ∀ k : Fin n, (((δ k : ℚ) / (k + 1)).den ∣ L) := by
++    intro k
++    have hkL : (k.1 + 1) ∣ L := by
++      exact Finset.dvd_lcm (show k.1 + 1 ∈ Icc 1 n by
++        simp [Finset.mem_Icc, k.2])
++    have hkδ : δ k = -1 ∨ δ k = 0 ∨ δ k = 1 := by
++      have : δ k ∈ ({-1, 0, 1} : Set ℚ) := hδ (Set.mem_image_of_mem δ (Set.mem_univ k))
++      simp at this
++      exact this
++    rcases hkδ with hneg | hzero | hone
++    · rw [hneg]
++      have hden : ((-(1 : ℚ)) / (k.1 + 1)).den ∣ k.1 + 1 := by
++        have heq : (-(1 : ℚ)) / (k.1 + 1) = Rat.divInt (-1 : ℤ) (k.1 + 1 : ℤ) := by
++          rw [Rat.divInt_eq_div]
++          norm_num
++        rw [heq]
++        exact_mod_cast Rat.den_dvd (-1 : ℤ) (k.1 + 1 : ℤ)
++      exact hden.trans hkL
++    · rw [hzero]
++      simp
++    · rw [hone]
++      have hden : ((1 : ℚ) / (k.1 + 1)).den ∣ k.1 + 1 := by
++        have heq : (1 : ℚ) / (k.1 + 1) = Rat.divInt (1 : ℤ) (k.1 + 1 : ℤ) := by
++          rw [Rat.divInt_eq_div]
++          norm_num
++        rw [heq]
++        exact_mod_cast Rat.den_dvd (1 : ℤ) (k.1 + 1 : ℤ)
++      exact hden.trans hkL
++  have hqden : q.den ∣ L := by
++    dsimp [q]
++    simpa using rat_sum_den_dvd (Finset.univ : Finset (Fin n))
++      (fun k => ((δ k : ℚ) / (k + 1))) L (by
++        intro k _
++        exact hterm k)
++  have hden_le : q.den ≤ L := Nat.le_of_dvd hL_pos hqden
++  have h_abs_ge : |q| ≥ (1 : ℚ) / q.den := rat_abs_ge_inv_den q (by simpa [q] using hne)
++  have h_inv : (1 : ℚ) / L ≤ (1 : ℚ) / q.den := by
++    exact one_div_le_one_div_of_le (by exact_mod_cast q.pos) (by exact_mod_cast hden_le)
++  exact h_inv.trans h_abs_ge
++
+ /--
+ Inequality in `erdos_317.variants.claim2` is obvious, the problem is strict inequality.
+ -/
+@@ -58,7 +142,7 @@ lemma claim2_inequality : ∀ᶠ n in atTop,
+     ∀ δ : (Fin n) → ℚ, δ '' Set.univ ⊆ {-1,0,1} →
+     letI lhs := |∑ k, ((δ k : ℚ) / (k + 1))|
+     lhs ≠ 0 → lhs ≥ 1 / (Icc 1 n).lcm id := by
+-  sorry
++  exact Filter.Eventually.of_forall fun n δ hδ => claim2_inequality_point n δ hδ
+ 
+ /--
+ `erdos_317.variants.claim2` fails for small $n$, for example

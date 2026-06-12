@@ -1,0 +1,136 @@
+diff --git a/FormalConjectures/ErdosProblems/494.lean b/FormalConjectures/ErdosProblems/494.lean
+index 3e7d3c3..bb4db98 100644
+--- a/FormalConjectures/ErdosProblems/494.lean
++++ b/FormalConjectures/ErdosProblems/494.lean
+@@ -126,11 +126,130 @@ $A = \{1, \zeta_6, \zeta_6^2, \zeta_6^4\}$ and $B = \{1, \zeta_6^2, \zeta_6^3, \
+ noncomputable def prodMultiset (A : Finset ℂ) (k : ℕ) : Multiset ℂ :=
+   ((A.powersetCard k).val.map (fun s => s.prod id))
+ 
++lemma finset_ne_of_mem_of_not_mem {α : Type*} {s t : Finset α} {x : α}
++    (hs : x ∈ s) (ht : x ∉ t) : s ≠ t := by
++  intro h
++  exact ht (h ▸ hs)
++
+ /-- A counterexample to the product version of the conjecture (by Steinerberger). -/
+ @[category research solved, AMS 5]
+ theorem erdos_494.variants.product :
+     ∃ (A B : Finset ℂ), A.card = B.card ∧ prodMultiset A 3 = prodMultiset B 3 ∧
+       A ≠ B := by
+-  sorry
++  classical
++  let PA : Finset (Finset ℂ) :=
++    ⟨({(0 : ℂ), 1, 2} : Finset ℂ) ::ₘ ({(0 : ℂ), 1, 6} : Finset ℂ) ::ₘ
++        ({(0 : ℂ), 2, 6} : Finset ℂ) ::ₘ ({(1 : ℂ), 2, 6} : Finset ℂ) ::ₘ 0,
++      by
++        have h12 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(0 : ℂ), 1, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (2 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (2 : ℂ) ∉ ({(0 : ℂ), 1, 6} : Finset ℂ))
++        have h13 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(0 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 2, 6} : Finset ℂ))
++        have h14 : ({(0 : ℂ), 1, 2} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 2} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        have h23 : ({(0 : ℂ), 1, 6} : Finset ℂ) ≠ ({(0 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 6} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 2, 6} : Finset ℂ))
++        have h24 : ({(0 : ℂ), 1, 6} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 6} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        have h34 : ({(0 : ℂ), 2, 6} : Finset ℂ) ≠ ({(1 : ℂ), 2, 6} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 2, 6} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 2, 6} : Finset ℂ))
++        simp only [Multiset.nodup_cons, Multiset.mem_cons, not_or]
++        exact ⟨⟨h12, h13, h14, by simp⟩, ⟨h23, h24, by simp⟩, ⟨h34, by simp⟩,
++          by simp, by simp⟩⟩
++  let PB : Finset (Finset ℂ) :=
++    ⟨({(0 : ℂ), 1, 3} : Finset ℂ) ::ₘ ({(0 : ℂ), 1, 4} : Finset ℂ) ::ₘ
++        ({(0 : ℂ), 3, 4} : Finset ℂ) ::ₘ ({(1 : ℂ), 3, 4} : Finset ℂ) ::ₘ 0,
++      by
++        have h12 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(0 : ℂ), 1, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (3 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (3 : ℂ) ∉ ({(0 : ℂ), 1, 4} : Finset ℂ))
++        have h13 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(0 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 3, 4} : Finset ℂ))
++        have h14 : ({(0 : ℂ), 1, 3} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 3} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        have h23 : ({(0 : ℂ), 1, 4} : Finset ℂ) ≠ ({(0 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (1 : ℂ) ∈ ({(0 : ℂ), 1, 4} : Finset ℂ))
++            (by norm_num : (1 : ℂ) ∉ ({(0 : ℂ), 3, 4} : Finset ℂ))
++        have h24 : ({(0 : ℂ), 1, 4} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 1, 4} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        have h34 : ({(0 : ℂ), 3, 4} : Finset ℂ) ≠ ({(1 : ℂ), 3, 4} : Finset ℂ) :=
++          finset_ne_of_mem_of_not_mem
++            (by simp : (0 : ℂ) ∈ ({(0 : ℂ), 3, 4} : Finset ℂ))
++            (by norm_num : (0 : ℂ) ∉ ({(1 : ℂ), 3, 4} : Finset ℂ))
++        simp only [Multiset.nodup_cons, Multiset.mem_cons, not_or]
++        exact ⟨⟨h12, h13, h14, by simp⟩, ⟨h23, h24, by simp⟩, ⟨h34, by simp⟩,
++          by simp, by simp⟩⟩
++  have hA :
++      ({(0 : ℂ), 1, 2, 6} : Finset ℂ).powersetCard 3 = PA := by
++    ext s
++    simp [Finset.mem_powersetCard, PA]
++    constructor
++    · intro h
++      rcases Finset.card_eq_three.mp h.2 with ⟨x, y, z, hxy, hxz, hyz, rfl⟩
++      have hx := h.1 (by simp : x ∈ ({x, y, z} : Finset ℂ))
++      have hy := h.1 (by simp : y ∈ ({x, y, z} : Finset ℂ))
++      have hz := h.1 (by simp : z ∈ ({x, y, z} : Finset ℂ))
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hx hy hz
++      rcases hx with rfl | rfl | rfl | rfl <;>
++        rcases hy with rfl | rfl | rfl | rfl <;>
++        rcases hz with rfl | rfl | rfl | rfl <;>
++        solve
++        | contradiction
++        | left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; right; ext w; simp [or_assoc, or_left_comm, or_comm]
++    · intro h
++      rcases h with rfl | rfl | rfl | rfl <;> simp
++  have hB :
++      ({(0 : ℂ), 1, 3, 4} : Finset ℂ).powersetCard 3 = PB := by
++    ext s
++    simp [Finset.mem_powersetCard, PB]
++    constructor
++    · intro h
++      rcases Finset.card_eq_three.mp h.2 with ⟨x, y, z, hxy, hxz, hyz, rfl⟩
++      have hx := h.1 (by simp : x ∈ ({x, y, z} : Finset ℂ))
++      have hy := h.1 (by simp : y ∈ ({x, y, z} : Finset ℂ))
++      have hz := h.1 (by simp : z ∈ ({x, y, z} : Finset ℂ))
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hx hy hz
++      rcases hx with rfl | rfl | rfl | rfl <;>
++        rcases hy with rfl | rfl | rfl | rfl <;>
++        rcases hz with rfl | rfl | rfl | rfl <;>
++        solve
++        | contradiction
++        | left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; left; ext w; simp [or_assoc, or_left_comm, or_comm]
++        | right; right; right; ext w; simp [or_assoc, or_left_comm, or_comm]
++    · intro h
++      rcases h with rfl | rfl | rfl | rfl <;> simp
++  refine ⟨{(0 : ℂ), 1, 2, 6}, {(0 : ℂ), 1, 3, 4}, ?_, ?_, ?_⟩
++  · norm_num
++  · unfold prodMultiset
++    rw [hA, hB]
++    norm_num [PA, PB]
++  · exact finset_ne_of_mem_of_not_mem
++      (by simp : (2 : ℂ) ∈ ({(0 : ℂ), 1, 2, 6} : Finset ℂ))
++      (by norm_num : (2 : ℂ) ∉ ({(0 : ℂ), 1, 3, 4} : Finset ℂ))
+ 
+ end Erdos494

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-31T10:25:25+03:00",
+  "mode": "OPEN_ERDOS_PROOF_TARGET",
+  "ledger_path": "coordination/ledger.jsonl",
+  "next_open_path": "coordination/NEXT_OPEN_APN.md",
+  "codex_prompt_path": "coordination/NEXT_CODEX.md",
+  "claude_prompt_path": "coordination/NEXT_CLAUDE.md",
+  "active_target": "Erdos26.erdos_26.variants.tenenbaum",
+  "source_file": "FormalConjectures/ErdosProblems/26.lean",
+  "apn_output_path": "apn-gpt55-workbench/alphaproof-nexus-results/APNOutputs/ErdosProblems/erdos_26.variants.tenenbaum.lean",
+  "natural_language_proof_path": "apn-gpt55-workbench/alphaproof-nexus-results/NaturalLanguageProofs/ErdosProblems/erdos26.pdf",
+  "phase_policy": "Phase A independent reconstruction; Phase B APN natural-language proof only; Phase C APN Lean reference/port only if still blocked",
+  "locked_targets": [
+    "Erdos26.erdos_26.variants.tenenbaum"
+  ],
+  "inactive_targets": [
+    "auxiliary/test/certificate theorem counting",
+    "random finite certificates",
+    "Erdos307 witness search",
+    "Erdos686 witness search"
+  ]
+}

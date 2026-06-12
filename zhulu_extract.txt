@@ -1,0 +1,1071 @@
+5
+1
+0
+2
+
+l
+u
+J
+
+1
+2
+
+]
+
+O
+C
+.
+h
+t
+a
+m
+
+[
+
+1
+v
+4
+5
+7
+5
+0
+.
+7
+0
+5
+1
+:
+v
+i
+X
+r
+a
+
+Unimodality of the independence polynomials of some
+composite graphs ∗
+
+Bao-Xuan Zhu1†, Qinglin Lu1
+
+1. School of Mathematics and Statistics, Jiangsu Normal University, Xuzhou 221116, PR China
+
+Abstract
+
+Let I(G; x) denote the independence polynomial of a graph G. In this paper we study the unimodality
+
+properties of I(G; x) for some composite graphs G.
+
+i≥0 aixi and I(G2; x) =
+− ai−1ai+1)b2
+P
+1
+
+Given two graphs G1 and G2, let G1[G2] denote the lexicographic product of G1 and G2. Assume
+I(G1; x) =
+i≥0 bixi, where I(G2; x) is log-concave. Then we prove (i) if I(G1; x)
+is log-concave and (a2
+P
+≥ aiai−1b2 for all 1 ≤ i ≤ α(G1), then I(G1[G2]; x) is log-concave; (ii)
+i
+if ai−1 ≤ b1ai for 1 ≤ i ≤ α(G1), then I(G1[G2]; x) is unimodal. In particular, if ai is increasing in i, then
+I(G1[G2]; x) is unimodal. We also give two suﬃcient conditions when the independence polynomial of
+a complete multipartite graph is unimodal or log-concave. Finally, for every odd positive integer α > 3,
+we ﬁnd a connected graph G not a tree, such that α(G) = α, and I(G; x) is symmetric and has only real
+zeros. This answers a problem of Mandrescu and Miric˘a.
+
+Keywords: unimodality; log-concavity; independence polynomials; complete multipartite graphs;
+
+rooted product of graphs
+
+MSC: 05A20; 05A15; 05C31
+
+1 Introduction
+
+A graph polynomial is an algebraic object associated with a graph that is usually invariant at least under
+
+graph isomorphism. As such, it encodes information about the graph, and enables algebraic methods
+
+for extracting this information. Graph polynomials are widely studied, e.g., Tutte polynomial, chromatic
+
+polynomial, matching polynomial, independence polynomial, and so on, which have been found many
+
+applications in chemistry and physics.
+
+Let G = (V(G), E(G)) be a ﬁnite and simple graph. An independent set in a graph G is a set of pairwise
+non-adjacent vertices. A maximum independent set in G is a largest independent set and its size is denoted
+by α(G). Let ik(G) denote the number of independent sets of cardinality k in G. Then its generating
+
+∗Supported partially by the National Natural Science Foundation of China (Nos. 11201191, 11171150, 11171288).
+Email address: bxzhu@jsnu.edu.cn (B.-X. Zhu), qllu@jsnu.edu.cn (Q.-L. Lu)
+
+†Corresponding author.
+
+1
+
+ 
+ 
+ 
+ 
+ 
+ 
+function
+
+I(G; x) =
+
+α(G)
+
+Xk=0
+
+ik(G)xk,
+
+i0(G) = 1
+
+is called the independence polynomial of G (Gutman and Harary [12]). It is clear that i1(G) = |V(G)| and
+− |E(G)|. For v ∈ V(G), let N(v) = {w : vw ∈ E(G)} and N[v] = N(v) ∪ {v}. The following is
+i2(G) =
+(cid:1)
+fundamental:
+
+|V(G)|
+2
+
+(cid:0)
+
+I(G; x) = I(G − v; x) + xI(G − N[v]; x)
+
+for arbitrary v ∈ V(G), see [12].
+
+A polynomial
+
+n
+
+k=0 akxk with nonnegative coeﬃcients is called unimodal if there is some m, such that
+
+P
+
+a0 ≤ a1 ≤ · · · ≤ am−1 ≤ am ≥ am+1 ≥ · · · ≥ an;
+
+it is called symmetric if ak = an−k for 0 ≤ k ≤ ⌊n/2⌋; it is called log-concave if a2
+≥ ak−1ak+1 for all 1 ≤ k ≤ n − 1;
+k
+it is strictly log-concave if a2
+> ak−1ak+1 for all 1 ≤ k ≤ n − 1. It is known that a log-concave polynomial
+k
+with positive coeﬃcients is unimodal. A basic approach to unimodality problems is to use Newton’s
+inequalities: Let a0, a1, . . . , an be a sequence of nonnegative numbers. Suppose that the polynomial
+
+n
+k=0 akxk has only real zeros. Then
+
+P
+
+a2
+k
+
+≥ ak−1ak+1
+
+1 + 1
+(cid:18)
+
+k (cid:19) (cid:18)
+
+1 + 1
+
+n − k (cid:19)
+
+,
+
+k = 1, 2, . . . , n − 1,
+
+and the sequence is therefore log-concave and unimodal (see Hardy, Littlewood and P ´olya [14, p. 104]).
+
+Unimodality problems arise naturally in many branches of mathematics and have been extensively
+
+investigated. See Stanley’s survey [30] and Brenti’s supplement [5] for known results and open problems
+
+on log-concavity and unimodality arising in algebra, combinatorics and geometry.
+
+Unimodality problems of independence polynomials have attracted researchers’ great interest, see
+
+[1, 7, 8, 10, 20, 21, 32, 33] for instance. Alavi, Malde, Schwenk, Erd˝os [1] found that independence
+
+polynomials are not unimodal in general and conjectured the following.
+
+Conjecture 1.1. The independence polynomial of any tree or forest is unimodal.
+
+This conjecture is still open. In general, the independence polynomial of a graph may be neither
+log-concave nor unimodal, as evidenced by the graph G = 3K4 + K37 with I(G; x) = 1 + 49x + 48x2 + 64x3.
+But the independence polynomials for certain special classes of graphs are unimodal and even have only
+
+real zeros. For instance, the independence polynomial of a line graph has only real zeros [16]. More
+
+generally, the independence polynomial of a claw-free graph has only real zeros [10]. Thus, a natural
+
+problem arises.
+
+Problem 1.1. Which special class of graphs have unimodal independence polynomials ?
+
+Recently, by researching the operations on graphs, there has been some partial results for Problem 1.1,
+
+see Bahls [2], Bahls and Salazar [3], Levit and Mandrescu [19], Mandrescu [26], Wang and Zhu [32] and
+
+Zhu [33] for instance. Motivated by Problem 1.1, we will give some products of graphs having unimodal
+
+independence polynomials, including the rooted product of graphs and lexicographic product of graphs.
+
+On the other hand, note that the complete multipartite graphs are important and familiar. However,
+
+there are fewer known results for the unimodality of their independence polynomials. Therefore, we
+
+also study the unimodality of independence polynomials of the complete multipartite graphs.
+
+2
+
+Recently, Mandrescu and Miric˘a [27] found for every integer 2 ≤ α , 3 there is a forest F consisting
+of at most two non-trivial trees, whose α(F) = α, and I(F; x) is symmetric and has only real zeros. They
+further proposed the following problem.
+
+Problem 1.2. For every odd positive integer α > 3, ﬁnd a connected graph G diﬀerent from a tree, such that
+α(G) = α, and I(G; x) is symmetric and has only real zeros.
+
+In this paper, we also answer this problem by ﬁnding a connected bipartite graph.
+
+2 Lexicographic product of graphs
+
+To simplify our proof, we need the next result, which is very useful in solving unimodality problems for
+
+polynomials.
+
+Lemma 2.1. [30] Let f (x) and g(x) be polynomials with positive coeﬃcients.
+
+(i) If both f (x) and g(x) are log-concave, then so is their product f (x)g(x).
+
+(ii) If f (x) is log-concave and g(x) is unimodal, then their product f (x)g(x) is unimodal.
+
+(iii) If both f (x) and g(x) have only real zeros, then so does their product f (x)g(x).
+
+Recall the deﬁnition of lexicographic product of graphs. For two graphs G1 and G2, let G1[G2] be the
+graph with vertex set V(G1) × V(G2) and such that a vertex (a, x) is adjacent to a vertex (b, y) if and only if
+a is adjacent to b (in G1) or a = b and x is adjacent to y (in G2). The graph G1[G2] is called the lexicographic
+product (or composition) of G1 and G2, and can be thought of as the graph arising from G1 and G2 by
+substituting a copy of G2 for every vertex of G1. In [7], it was proved that
+
+I(G1[G2]; x) = I(G1; I(G2; x) − 1).
+
+(2.1)
+
+Motivated by (2.1), we prove the following general result, which can be well applied to the independence
+
+polynomial of the lexicographic product of graphs. We refer readers to [9, 24, 31] for some similar results.
+
+Theorem 2.1. Let polynomials f (x) =
+
+n
+
+i=0 aixi and g(x) =
+
+m
+i=1 bixi with positive coeﬃcients be given.
+
+(i) Assume that both f (x) and g(x) are log-concave. If (a2
+i
+
+is log-concave;
+
+P
+
+P
+− ai−1ai+1)b2
+1
+
+≥ aiai−1b2 for all 1 ≤ i ≤ n, then f (g(x))
+
+(ii) Assume that g(x) is log-concave. If ai−1 ≤ b1ai for 1 ≤ i ≤ n, then f (g(x)) is unimodal. In particular, if the
+
+sequence an is increasing in n and b1 ≥ 1, then f (g(x)) is unimodal.
+
+Proof. Let f (g(x)) =
+
+mn
+i=0 cixi.
+
+(i) Note that it is trivial for n = 0. In the following, we will prove (i) by induction on n. If n = 1, then
+
+P
+
+f (g(x)) = a0 + a1b1x + a1b2x2 + . . . + a1bmxm.
+
+By the hypothesis, its log-concavity follows from a2
+
+1b2
+
+1
+
+≥ a1a0b2. So we proceed to the inductive step.
+
+3
+
+Let F(x) =
+
+n−1
+i=0 ai+1xi. Then f (g(x)) = a0 + g(x)F(g(x)). By the induction hypothesis, F(g(x)) is log-
+concave. So g(x)F(g(x)) is log-concave by Lemma 2.1 (i). Thus c1, c2, . . . , cmn is log-concave. To show the
+log-concavity of f (g(x)), it suﬃces to check c2
+≥ c0c2, which follows from the hypothesis since c0 = a0,
+1
+c1 = a1b1 and c2 = a1b2 + a2b2
+1.
+
+P
+
+(ii) Similarly, we will prove (ii) by induction on n. If n = 1, then
+
+f (g(x)) = a0 + a1b1x + a1b2x2 + . . . + a1bmxm.
+
+Since g(x) is log-concave, we have b1, b2, . . . , bm is unimodal. Thus, it follows from a1b1 ≥ a0 that f (g(x))
+is unimodal. So we proceed to the inductive step.
+
+Let F(x) =
+
+n−1
+i=0 ai+1xi. Then f (g(x)) = a0 + g(x)F(g(x)). By the induction hypothesis, F(g(x)) is
+unimodal. So g(x)F(g(x)) is unimodal by Lemma 2.1 (ii). Thus c1, c2, . . . , cmn is unimodal. To show the
+unimodality of f (g(x)), it suﬃces to check c1 ≥ c0, which follows from the hypothesis since c0 = a0 and
+c1 = a1b1.
+
+P
+
+This completes the proof.
+
+(cid:3)
+
+By Theorem 2.1 and (2.1), we have the next result for the independence polynomial of graphs.
+
+Theorem 2.2. For two vertex disjoint graphs G1 and G2, let I(G1; x) =
+
+α(G1)
+i=0
+
+aixi and I(G2; x) =
+
+α(G2)
+i=0 bixi.
+
+(i) Assume that I(G1; x) and I(G2; x) are log-concave. If (a2
+i
+
+I(G1[G2]; x) is log-concave;
+
+P
+− ai−1ai+1)b2
+1
+
+≥ aiai−1b2 for all 1 ≤ i ≤ α(G1), then
+
+P
+
+(ii) Assume that I(G2; x) is log-concave. If ai−1 ≤ b1ai for 1 ≤ i ≤ α(G1), then I(G1[G2]; x) is unimodal. In
+
+particular, if ai is increasing in i, then I(G1[G2]; x) is unimodal.
+
+Remark 2.1. Let |V(G2)| = p and |E(G2)| = q. Then we know that b1 = p and b2 =
+p
+2
+(cid:1)
+(cid:0)
+− ai−1ai+1)b2
+enough large and I(G1; x) is strictly log-concave, then we can obtain (a2
+≥ aiai−1b2 for all
+1
+i
+1 ≤ i ≤ α(G1). Thus, I(G1[G2]; x) is log-concave when I(G2; x) is log-concave. On the other hand, if p is
+suﬃciently large, then we can obtain ai−1 ≤ b1ai for 1 ≤ i ≤ α(G1). Thus, I(G1[G2]; x) is unimodal when
+I(G2; x) is log-concave.
+
+− q. If
+
+is
+
+p2
+(p
+2)−q
+
+Remark 2.2. Let G1 = G[Kp]. If p is suﬃciently large, then I(G1; x) is nondecreasing. Thus, I(G1[G2]; x) is
+unimodal when I(G2; x) is log-concave and |V(G2)| is suﬃciently large.
+
+Remark 2.3. In the above results, the condition of the log-concavity can be easily obtained if its inde-
+
+pendence polynomial has only real zeros (for instance, for any claw-free graph).
+
+A graph is called well-covered if all its maximal independent sets are of the same cardinality [18]. If
+
+graphs G1 and G2 are well covered, then so is G1[G2], see [7]. Note that it was proved for a well-covered
+graph that
+
+for 1 ≤ k ≤ α(G) [6]. Thus, by Theorem 2.2 (ii), we deduce the following.
+
+ik−1(G) ≤ kik(G)
+
+Proposition 2.1. Let G1 and G2 be two well-covered graphs. If I(G2; x) is log-concave and |V(G2)| ≥ α(G1), then
+I(G1[G2]; x) is unimodal. In particular, if I(G2; x) is log-concave, then I(G2[G2]; x) is unimodal.
+
+4
+
+Remark 2.4. Noting that for any graph G, the rooted product G◦P2 of G and P2 (denote the path with
+two vertices) is a well covered graph with α(G◦P2) = |V(G)|. So if G is claw-free, I(G◦P2; x) has only real
+zeros since I(G; x) has only real zeros, see Levit and Mandrescu [23]. Thus, let G′ = G◦P2, and by the
+above Proposition 2.1 we get that I(G′[G′]; x) is unimodal. Similarly, we can obtain more results.
+
+For the unimodality of independence polynomials of well-covered graphs, we refer readers to [6, 21,
+
+22, 23, 28] for details.
+
+3 Complete Multipartite Graphs
+
+Denote the complete k-partite graph by Kn1,n2,...,nk. Then its independence polynomial is
+
+I(Kn1,n2,...,nk ; x) =
+
+k
+
+Xi=1
+
+(1 + x)ni − (k − 1).
+
+So if Kn1,n2,...,nk has ai classes of size i for each 1 ≤ i ≤ n, then
+
+I(Kn1,n2,...,nk ; x) =
+
+n
+
+Xi=1
+
+ai(1 + x)i − (k − 1).
+
+(3.1)
+
+i=1 ai(1 + x)i implies that of I(Kn1,n2,...,nk ; x). If k = 2 and n1 ≥ n2,
+Note that unimodality or log-concavity of
+then it is easy to obtain that (1 + x)n1[(1 + x)n2−n1 + 1] is log-concave by Lemma 2.1 (i). It follows that
+I(Kn1,n2; x) is log-concave. In general, we have the following result.
+
+P
+
+n
+
+Theorem 3.1. Assume that G is a complete k-partite graph of order n and k ≥ 3 and its independence polynomial
+satisﬁes (3.1).
+
+(i) If the sequence {ai} is positive and log-concave, then I(G; x) is log-concave;
+
+(ii) If the subsequence {ai : ai , 0} is increasing, then I(G; x) is unimodal.
+
+Proof. (i) directly follows from the result that if a positive sequence {di}n
+i=0 di(1 + x)i [17]. (ii) follows from the next fact.
+polynomial
+
+n
+
+i=0 is log-concave then so is the
+
+P
+
+Fact 3.1. Given a nonnegative sequence {di}n
+polynomial
+
+i=0 di(1 + x)i is unimodal.
+
+n
+
+i=0, if the subsequence {di : di , 0} is increasing, then the
+
+P
+
+The proof of Fact 3.1: Let fn(x) =
+
+i=0 cixi. Since the subsequence {di : di , 0} is
+increasing, we can assume dn , 0. We will show this fact by induction on n. If n = 1, then it is trivial
+since f1(x) = d0 + d1(x + 1) = d1x + (d0 + d1). So we proceed to the inductive steps (n ≥ 2).
+
+i=0 di(1 + x)i =
+
+P
+
+P
+
+n
+
+n
+
+Let F(x) =
+
+n−1
+i=0 di+1xi. Then
+
+P
+
+fn(x) = d0 + (1 + x)F(1 + x).
+
+(3.2)
+
+By the induction hypothesis, F(1 + x) is unimodal. So (1 + x)F(1 + x) is unimodal by Lemma 2.1 (ii). Thus
+c1, c2, . . . , cn is unimodal. On the other hand, note that
+
+n
+
+n
+
+c0 =
+
+di <
+
+idi = c1
+
+Xi=0
+
+Xi=1
+
+5
+
+since the subsequence {di : di , 0} is increasing. It follows that c0, c1, c2, . . . , cn is still unimodal, i.e., fn(x)
+(cid:3)
+is unimodal. This completes the proof.
+
+Remark 3.1. In fact, our Fact 3.1 generalizes the following result of Boros and Moll [4]: If P(x) is a
+polynomial with positive nondecreasing coeﬃcients, then P(x + 1) is unimodal.
+
+Remark 3.2. If the subsequence {ai : ai , 0} is not increasing, then I(G; x) may not be unimodal. For
+instance:
+
+I(K1, . . . , 1
+
+,8; x) = 26(x + 1) + (x + 1)8 − 26 = 1 + 34x + 28x2 + 56x3 + 70x4 + 56x5 + 28x6 + 8x7 + x8
+
+26
+{z
+
+|
+is not unimodal.
+
+}
+
+4 Rooted Product of Graphs
+
+Let V(G) = {vi}n
+i=1 and H be a rooted graph with the root u. The rooted product G◦H of the graphs G
+and H with respect to the “root” u is deﬁned as follows: take n copies of H, and for every vertex vi of G,
+identify vi with the root u of the ith copy of H, see Godsil and MacKay [11] for instance.
+
+v
+✉
+
+✉
+
+P2
+
+v
+✉
+(cid:0)
+❅
+
+(cid:0)✉
+
+❅
+
+✉
+
+P3
+
+Figure 1.
+
+Let P2 and P3 with the root v, respectively, see Figure 1. For a graph G, if I(G; x) has only real zeros,
+then so do I(G◦P2; x) and I(G◦P3; x), see Levit and Mandrescu [23] and Mandrescu [26], respectively.
+More generally, let H be a claw-free graph with the root v. If I(G; x) has only real zeros, then so does
+I(G◦H; x), see Zhu [33, Proposition 3.3]. Thus, naturally, it should be considered the graphs with claws.
+If H has claws, then we give the following special result.
+
+✉
+1
+
+✉
+3
+✉
+
+✉
+4
+
+✉
+2
+
+T
+
+Figure 2.
+
+✉
+1
+
+✉
+
+✉
+
+✉
+2
+
+✉
+3
+
+✉
+4
+
+T1
+
+Proposition 4.1. Let the graphs T and T1 be in Figure 2 with the root v. If I(G; x) has only real zeros, then we
+have the following.
+
+6
+
+  
+  
+(i) I(G◦T; x) has only real zeros for v ∈ {1, 2, 3} and I(G◦T; x) is log-concave for v = 4;
+
+(ii) I(G◦T1; x) is log-concave for v ∈ {1, 2, 3, 4}.
+
+Proof. Since the proofs are similar, for brevity we only prove (i) for the root being 1 or 4. Recall the
+
+formula for independence polynomials of the rooted product of graphs, see [13, 29] for instance: If G is
+
+a graph of order n and H is a graph with the root v, then
+
+I(G◦H; x) = In(H − v; x)I
+
+G;
+
+xI(H − N[v]; x)
+I(H − v; x)
+
+.
+
+!
+
+Since I(G; x has only real zeroes, we can assume that
+
+I(G; x) =
+
+α(G)
+
+Yi=1
+
+(1 + aix) ,
+
+where ai > 0 for 1 ≤ i ≤ α(G). Thus
+
+I(G◦T; x) = In(T − v; x)I
+
+G;
+
+xI(T − N[v]; x)
+I(T − v; x)
+
+!
+
+= In−α(G)(T − v; x)
+
+α(G)
+
+Yi=1
+
+[I(T − v; x) + aixI(T − N[v]; x)] ,
+
+(4.1)
+
+If the root v = 1, then I(T − v; x) = (1 + x)(1 + 3x) and I(T − N[v]; x) = (1 + x)(1 + 2x). Thus, by (4.1), we
+
+have
+
+I(G◦T; x) = (1 + x)n(1 + 3x)n
+
+α(G)
+
+Yi=1
+
+1 + aix(1 + 2x)
+1 + 3x
+
+!
+
+= (1 + x)n(1 + 3x)n−α(G)
+
+[1 + 3x + aix(1 + 2x)]
+
+α(G)
+
+Yi=1
+α(G)
+
+= (1 + x)n(1 + 3x)n−α(G)
+
+1 + (3 + 2ai)x + 2aix2
+
+.
+
+Yi=1 h
+
+i
+
+(4.2)
+
+It is also easy to conﬁrm that 1 + (3 + 2ai)x + 2aix2 has only real zeros for ai > 0. Hence I(G◦T; x) has only
+real zeros by (4.2) and Lemma 2.1 (iii).
+
+If the root v = 4, then I(T − v; x) = (1 + x)3 + x and I(T − N[v]; x) = (1 + x)2 + x. Then
+
+I(G◦T; x) = [(1 + x)3 + x]n
+
+α(G)
+
+Yi=1
+
+1 + aix[(1 + x)2 + x]
+(1 + x)3 + x
+
+!
+
+α(G)
+
+= [(1 + x)3 + x]n−α(G)
+
+(ai + 1)x3 + 3(1 + ai)x2 + (3 + ai)x + 1
+
+.
+
+(4.3)
+
+Yi=1 h
+
+i
+
+So, it is easy to obtain the log-concavity of (1 + x)3 + x and we claim that for any positive r,
+
+is log-concave. Actually, it suﬃces to prove the inequalities
+
+(r + 1)x3 + 3(1 + r)x2 + (3 + r)x + 1
+
+9(1 + r)2 − (r + 1)(3 + r) = (r + 1)(8r + 6) > 0
+
+7
+
+ 
+ 
+ 
+ 
+and
+
+(3 + r)2 − 3(1 + r) = r2 + 3r + 6 > 0.
+
+Thus it follows from (4.3) and Lemma 2.1 (i) that I(G◦T; x) is log-concave. This completes the proof. (cid:3)
+
+Remark 4.1. If we take a tree G with independence polynomial having only real zeros, then we can
+
+repeatedly use Propositions 4.1 to generate inﬁnite trees with unimodal independence polynomials. In
+
+addition, all of our constructions further support Conjecture 1.1.
+
+Remark 4.2. Let (I(H − v; x), I(H − N[v]; x)) = f (x)(g(x), h(x)), where (g(x), h(x)) = 1. Assume that
+f (x), g(x), h(x) have only real zeros. From the proof, we can see that if g(x) + rxh(x) has only real ze-
+ros for any positive r, then we can obtain that I(G◦H; x) has only real zeros by Lemma 2.1 (iii). Generally
+speaking, two useful approaches are to guarantee that the zeros of g(x) and h(x) interlace or the polynomi-
+
+als g(x) and h(x) are compatible, see Liu and Wang [25] and Chudnovsky and Seymour [10], respectively.
+
+On the other hand, our results can be generalized to another operation of graphs called the clique cover
+
+product, see Zhu [33].
+
+5 An Aﬃrmative Answer to Problem 1.2
+
+In this section, we answer the Problem 1.2 by ﬁnding a bipartite graph. Deﬁne Hn and Gn be the graphs
+in Figure 1, where H0 = ∅, H1 = K2, G0 = K1 and G1 = K1,2.
+✉
+r r r
+r
+
+r r r
+
+✉
+
+✉
+
+✉
+
+✉
+
+✉
+
+✉
+
+✉
+
+✉
+
+✉
+
+r
+
+✉
+u
+
+✉
+1
+
+✉
+2
+
+✉ r r r r
+3
+
+✉
+n − 1
+
+✉
+n
+
+✉
+1
+
+✉
+2
+
+r
+
+✉ r r r
+3
+
+✉
+n − 1
+
+✉
+n
+
+Hn
+
+Gn
+
+Figure 3
+
+The following result is a special case of Corollary 2.4 in Liu and Wang [25].
+
+Lemma 5.1. Let {Qn(x)}n≥0 be a sequence of polynomials with nonnegative coeﬃcients such that
+
+(i) Qn(x) = an(x)Qn−1(x) + cn(x)Qn−2(x) for n ≥ 2.
+
+(ii) Q0(x) is a constant and deg Qn−1 ≤ deg Qn ≤ deg Qn−1 + 1.
+
+If cn(x) ≤ 0 whenever x ≤ 0, then {Qn(x)} has only real zeros. Furthermore, the zeros of Qn(x) are separated by the
+zeros of Qn−1(x).
+
+The next result gives an answer to Problem 1.2.
+
+Theorem 5.1. Let Gn be the graph in Figure 3. Then I(Gn; x) is symmetric and has only real zeros.
+
+8
+
+Proof. Let Hn be the graph in Figure 3. Then
+
+I(Gn; x) = I(Gn − u; x) + xI(Gn − N[u]; x)
+= I(Hn; x) + xI(Gn−1; x)
+= I(Gn−1; x) + xI(Gn−2; x) + xI(Gn−1; x)
+= (x + 1)I(Gn−1; x) + xI(Gn−2; x)
+
+(5.1)
+
+for n ≥ 2. Note that I(G0; x) = 1 + x and I(G1; x) = 1 + 3x + x2. In fact, we can set I(G−1; x) = 1, which is
+well-deﬁned extension by (5.1). Thus, by Lemma 5.1, I(Gn; x) has only real zeros. It is not hard to ﬁnd
+that the degree of I(Gn; x) is n + 1, i.e., α(Gn) = n + 1.
+
+In the following, we will show that I(Gn; x) is symmetric by induction n. It is obvious for n = 0, 1.
+
+Assume that I(Gk; x) is symmetric for k ≤ n − 1.
+
+To prove the symmetry of I(Gn; x), it suﬃces to show xn+1I(Gn; 1/x) = I(Gn; x). By (4.1) and the
+
+induction hypothesis, it follows that
+
+xn+1I(Gn; 1/x) = xn+1 [(1/x + 1)I(Gn−1; 1/x) + (1/x)I(Gn−2; 1/x)]
+= (x + 1)I(Gn−1; x) + xI(Gn−2; x)
+= I(Gn; x).
+
+Thus I(Gn; x) is symmetric. This completes the proof.
+
+(cid:3)
+
+Remark 5.1. Using the method in [32] to solve the linear recurrence relation (5.1), we can also obtain that
+
+I(Gn; x) =
+
+n+2
+
+λ1
+
+n+2 − λ2
+λ1 − λ2
+
+= (1 + x)δn
+
+= (1 + x)δn
+
+⌈n/2⌉
+
+Ys=1 (cid:20)
+⌈n/2⌉
+
+Ys=1 (cid:20)
+
+(1 + x)2 + 4x cos2
+
+sπ
+n + 2 (cid:21)
+
+x2 + 2x cos
+
+2sπ
+n + 2
+
++ 1
+
+,
+
+(cid:21)
+
+(5.2)
+
+where δn = 1 for even n and 0 otherwise, λ1 and λ2 are the roots of quadric equation λ2 − (x + 1)λ − x = 0.
+Noting that reality of zeros and symmetry of polynomials is closed under the product of polynomials,
+
+respectively, it clearly follows from (5.2) that I(Gn; x) is symmetric and has only real zeros.
+
+References
+
+[1] Y. Alavi, P.J. Malde, A.J. Schwenk, P. Erd˝os, The vertex independence sequence of a graph is not
+
+constrained, Congr. Numer. 58 (1987) 15–23.
+
+[2] P. Bahls, On the independece polynomils of path-like graphs, Australas. J. Combin, 53 (2012) 3–18.
+
+[3] P. Bahls, N. Salazar, Symmetry and unimodality of independence polynomials of path-like graphs,
+
+Australas. J. Combin. 47 (2010) 165–176.
+
+[4] G. Boros and V.H. Moll. A criterion for unimodality, Electron. J. Combin. 6 (1999), #R10.
+
+9
+
+[5] F. Brenti, Log-concave and unimodal sequences in algebra, combinatorics, and geometry: An
+
+update, Contemp. Math. 178 (1994) 417–441.
+
+[6] J.I. Brown, K. Dilcher, and R.J. Nowakowski, Roots of independence polynomials of well covered
+
+graphs, J. Algebraic Combin. 11 (2000) 197–210.
+
+[7] J.I. Brown, C.A. Hickman, R.J. Nowakowski, On the location of roots of independence polynomials,
+
+J. Algebraic Combin. 19 (2004) 273–282.
+
+[8] J.I. Brown, R.J. Nowakowski, Average independence polynomials, J. Combin. Theory Ser. B 93
+
+(2005) 313–318.
+
+[9] W.Y.C. Chen, A.L.B. Yang, E.L.F. Zhou, Ratio Monotonicity of Polynomials Derived from Nonde-
+
+creasing Sequences, Electron. J. Combin. 17 (2010), #N37.
+
+[10] M. Chudnovsky, P. Seymour, The roots of the independence polynomial of a clawfree graph, J.
+
+Combin. Theory Ser. B 97 (2007) 350–357.
+
+[11] C.D. Godsil, B.D. McKay, A new graph product and its spectrum, Bull. Austral. Math. Soc. 18 (1)
+
+(1978) 21–28.
+
+[12] I. Gutman, F. Harary, Generalizations of the matching polynomial, Utilitas Math. 24 (1983) 97–106.
+
+[13] I. Gutman, Independent vertex sets in some compound graphs, Publ. Inst. Math. (Beograd) (N.S.)
+
+52(66) (1992) 5–9.
+
+[14] G.H. Hardy, J.E. Littlewood, G. P ´olya, Inequalities, Cambridge University Press, Cambridge, 1952.
+
+[15] Y.O. Hamidoune, On the number of independent k-sets in a claw-free graph, J. Combin. Theory Ser.
+
+50 (1990) 241–244.
+
+[16] O.J. Heilmann, E.H. Lieb, Theory of monomer-dimer systems, Comm. Math. Phys. 25 (1972) 190–232.
+
+[17] S.G. Hoggar, Chromatic Polynomials and Logarithmic Concavity, J. Combin. Theory Ser. B 16 (1974)
+
+248–254.
+
+[18] M.D. Plummer, Some covering concepts in graphs, Journal of Combinatorial Theory 8 (1970) 91-98
+
+[19] V.E. Levit, E. Mandrescu, Graph products with log-concave independence polynomials, WSEAS
+
+Trans. Math. 3 (2004) 487–492.
+
+[20] V.E. Levit, E. Mandrescu, The independence polynomial of a graph — a survey, Proceedings of
+
+the 1st International Conference on Algebraic Informatics, 233–254, Aristotle Univ. Thessaloniki,
+
+Thessaloniki, 2005.
+
+[21] V.E. Levit, E. Mandrescu, Independence polynomials of well-covered graphs: generic counterex-
+
+amples for the unimodality conjecture, European J. Combin. 27 (2006) 931–939.
+
+[22] V.E. Levit, E. Mandrescu, Independence polynomials and the unimodality conjecture for very well-
+
+covered, quasi-regularizable, and perfect graphs, Graph theory in Paris, 243–254, Trends Math.,
+
+Birkh¨auser, Basel, 2007.
+
+10
+
+[23] V.E. Levit, E. Mandrescu, On the roots of independence polynomials of almost all very well-covered
+
+graphs, Discrete Applied Mathematics 156(4) (2008) 478–491.
+
+[24] A. Llamas, J. Mart´ınez-Bernal, Nested log-concavity, Commun. Algebra 38 (2010) 1968–1981.
+
+[25] L.L. Liu, Y. Wang, A uniﬁed approach to polynomia sequences with only real zeros, Adv. in. Appl.
+
+Math. 35 (2007) 542–560.
+
+[26] E. Mandrescu, Building graphs whose independence polynomials have only real roots, Graphs
+
+Combin. 25 (2009) 545–556.
+
+[27] E. Mandrescu, I. Miric˘a, Forests whose independence polynomials are palindromic and have only
+
+real roots, J. Adv. Math. Stud. 4 (2011) 41–52.
+
+[28] T.S. Michael, W.N. Traves, Independence sequences of well-covered graphs: non-unimodality and
+
+the roller coaster conjecture, Graphs and Combinatorics 19 (2003) 403–411.
+
+[29] V.R. Rosenfeld, The independence polynomial of rooted products of graphs, Discrete Appl. Math.
+
+158 (2010) 551–558.
+
+[30] R.P. Stanley, Log-concave and unimodal sequences in algebra, combinatorics and geometry, Ann.
+
+New York Acad. Sci. 576 (1989) 500–534.
+
+[31] Y. Wang and Y.-N. Yeh, Proof of a conjecture on unimodality, European J. Combin. 26 (2005) 617–627.
+
+[32] Y. Wang and B.-X. Zhu, On the unimodality of independence polynomials of some graphs, European
+
+J. of Combin. 32 (2011) 10–20.
+
+[33] B.-X. Zhu, Operations on graphs and unimodality of independence polynomials, arXiv:1309.7673.
+
+11
+
+

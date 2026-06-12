@@ -1,0 +1,193 @@
+===== #106 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Draw $n$ squares inside the unit square with no common interior point. Let $f(n)$ be the maximum possible sum of the side-lengths of the squares. Is $f(k^2+1)=k$? 
+ #106 : [ErGr75b] [Er94b] [Er95] 
+ geometry 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ In [Er94b] Erdős dates this conjecture to 'more than 60 years ago'. Erdős proved that $f(2)=1$ in an early mathematical paper for high school students in Hungary. Newman proved (in personal communication to Erdős) that $f(5)=2$. It is trivial from the Cauchy-Schwarz inequality that $f(k^2)=k$. Erdős also asks for which $n$ is it true that $f(n+1)=f(n)$. It is easy to see that $f(k^2+1)\geq k$, by first dividing the unit square into $k^2$ smaller squares of side-length $1/k$, and then replacing one square by two smaller squares of side-length $1/2k$. Halász [Ha84] gives a construction that shows $f(k^2+2)\geq k+\frac{1}{k+1}$, and in general, for any $c\geq 1$,\[f(k^2+2c+1)\geq k+\frac{c}{k}\]and\[f(k^2+2c)\geq k+\frac{c}{k+1}.\]Halász also considers the variants where we replace a square by a parallelogram or triangle. Erdős and Soifer [ErSo95] and Campbell and Staton [CaSt05] have conjectured that, in general, for any integer $-k<c<k$, $f(k^2+2c+1)=k+\frac{c}{k}$, and proved the corresponding lower bound. Praton [Pr08] has proved that this general conjecture is equivalent to $f(k^2+1)=k$. Baek, Koizumi, and Ueoro [BKU24] have proved $g(k^2+1)=k$, where $g(\cdot)$ is defined identically to $f(\cdot)$ with the additional assumption that all squares have sides parallel to the sides of the unit square. More generally, they prove that $g(k^2+2c+1)=k+c/k$ for any $-k<c<k$, which determines all values of $g(\cdot)$. Raj Singh [Ra26] has noted that $f(k^2+1)=k$ being true for all $k$ is equivalent to it being true for infinitely many $k$, which in turn is equivalent to the convergence of\[\sum_{k\geq 1}(f(k^2+1)-k).\]Both equivalences follow from the fact that\[k(f(k^2+1)-k)\]is a non-decreasing function of $k$. 
+ 
+
+===== #167 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ If $G$ is a graph with at most $k$ edge disjoint triangles then can $G$ be made triangle-free after removing at most $2k$ edges? 
+ #167 : [Er88] 
+ graph theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Tuza. It is trivial that $G$ can be made triangle-free after removing at most $3k$ edges. The examples of $K_4$ and $K_5$ show that $2k$ would be best possible. The trivial bound of $\leq 3k$ was improved to $\leq (3-\frac{3}{23}+o(1))k$ by Haxell [Ha99] . Kahn and Park [KaPa22] have proved this is true for random graphs.
+ 
+
+===== #548 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ - $100 
+ Let $n\geq k+1$. Every graph on $n$ vertices with at least $\frac{k-1}{2}n+1$ edges contains every tree on $k+1$ vertices. 
+ #548 : [Er64c] [Er74c,p.78] [Er78,p.30] [Er93,p.345] [Va99,3.55] 
+ graph theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Erdős and Sós, who also conjectured that every graph with at least\[\max\left( \binom{2k-1}{2}+1, (k-1)n-(k-1)^2+\binom{k-1}{2}+1\right)\]many edges contains every forest with $k$ edges. (Erdős and Gallai [ErGa59] proved that this is the threshold which guarantees containing $k$ independent edges.) In [Er78] Erdős says this is trivial for a star, and he and Gallai had proved it for a path. It can be easily proved by induction that every graph on $n$ vertices with at least $n(k-1)+1$ edges contains every tree on $k+1$ vertices. Brandt and Dobson [BrDo96] have proved this for graphs of girth at least $5$. Wang, Li, and Liu [WLL00] have proved this for graphs whose complements have girth at least $5$. Saclé and Woznik [SaWo97] have proved this for graphs which contain no cycles of length $4$. Yi and Li [YiLi04] have proved this for graphs whose complements contain no cycles of length $4$. Implies [547] and [557] . See also the entry in the graphs problem collection .
+ 
+
+===== #583 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Every connected graph on $n$ vertices can be partitioned into at most $\lceil n/2\rceil$ edge-disjoint paths. 
+ #583 : [Er71,p.101] 
+ graph theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Erdős and Gallai. If we drop the edge-disjoint condition then this conjecture was proved by Fan [Fa02] . There are many partial results towards this conjecture. We list some highlights below; $G$ is an arbitrary connected graph on $n$ vertices. 
+ Lovász [Lo68] proved that $G$ can be partitioned into at most $\lfloor n/2\rfloor$ edge-disjoint paths and cycles, and hence into at most $n-1$ paths. This also implies the original conjecture if $G$ has at most one vertex of even degree. 
+ Chung [Ch78] proved that $G$ can be partitioned into at most $\lceil n/2\rceil$ edge-disjoint trees. 
+ Pyber [Py96] proved that $G$ can be covered by at most $n/2+O(n^{3/4})$ paths (that may not be edge-disjoint). 
+ Pyber [Py96] also proved the original conjecture if the subgraph induced by vertices of even degree is a forest. 
+ Bonamy and Perrett [BoPe19] proved the conjecture if $G$ has maximum degree $\leq 5$. 
+ Blanché, Bonamy, and Bonichon [BBB21] proved this conjecture if $G$ is planar. 
+ Anto and Basavaraju [AnBa23] proved the conjecture if $G$ is $2$-degenerate (every subgraph has a vertex of degree $\leq 2$). 
+ Chu, Fan, and Zhou [CFZ26] proved the conjecture if the subgraph induced by vertices of even degree is $K_m$ for some $m\leq 15$ and $n$ is odd. 
+ Dean and Kouider [DeKo00] prove that $\lceil \frac{2}{3}n\rceil$ edge-disjoint paths always suffice, even for disconnected graphs (for which this bound is optimal). The same bound was independently obtained by Yan in their 1998 PhD thesis . 
+ Hajós [Lo68] has conjectured that if $G$ has all degrees even then $G$ can be partitioned into at most $\lfloor n/2\rfloor$ edge-disjoint cycles. See also [184] for an analogous problem decomposing into edges and cycles and [1017] for decomposing into complete graphs. See also the entry in the graphs problem collection .
+ 
+
+===== #628 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Let $G$ be a graph with chromatic number $k$ containing no $K_k$. If $a,b\geq 2$ and $a+b=k+1$ then must there exist two disjoint subgraphs of $G$ with chromatic numbers $\geq a$ and $\geq b$ respectively? 
+ #628 : [Er68b] 
+ graph theory | 
+ chromatic number 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ This property is sometimes called being $(a,b)$-splittable. A question of Erdős and Lovász (often called the Erdős-Lovász Tihany conjecture). Erdős [Er68b] originally asked about $a=b=3$ which was proved by Brown and Jung [BrJu69] (who in fact prove that $G$ must contain two vertex disjoint odd cycles). Balogh, Kostochka, Prince, and Stiebitz [BKPS09] have proved the full conjecture for quasi-line graphs and graphs with independence number $2$. For more partial results in this direction see the comprehensive survey of this problem by Song [So22] . See also the entry in the graphs problem collection .
+ 
+
+===== #723 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ If there is a finite projective plane of order $n$ then must $n$ be a prime power? A finite projective plane of order $n$ is a collection of subsets of $\{1,\ldots,n^2+n+1\}$ of size $n+1$ such that every pair of elements is contained in exactly one set. 
+ #723 : [Er81] 
+ combinatorics 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ These always exist if $n$ is a prime power. This conjecture has been proved for $n\leq 11$, but it is open whether there exists a projective plane of order $12$. Bruck and Ryser [BrRy49] have proved that if $n\equiv 1\pmod{4}$ or $n\equiv 2\pmod{4}$ then $n$ must be the sum of two squares. For example, this rules out $n=6$ or $n=14$. The case $n=10$ was ruled out by computer search [La97] .
+ 
+
+===== #743 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Let $T_2,\ldots,T_n$ be a collection of trees such that $T_k$ has $k$ vertices. Can we always write $K_n$ as the edge disjoint union of the $T_k$? 
+ #743 : [Er81] 
+ graph theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A conjecture of Gyárfás, known as the tree packing conjecture. Gyárfás and Lehel [GyLe78] proved that this holds if all but at most $2$ of the trees are stars, or if all the trees are stars or paths. Fishburn [Fi83] proved this for $n\leq 9$. Bollobás [Bo83] proved that the smallest $\lfloor n/\sqrt{2}\rfloor$ many trees can always be packed greedily into $K_n$. Joos, Kim, Kühn, and Osthus [JKKO19] proved that this conjecture holds when the trees have bounded maximum degree. Allen, Böttcher, Clemens, Hladky, Piguet, and Taraz [ABCHPT21] proved that this conjecture holds when all the trees have maximum degree $\leq c\frac{n}{\log n}$ for some constant $c>0$. Janzer and Montgomery [JaMo24] have proved that there exists some $c>0$ such that the largest $cn$ trees can be packed into $K_n$.
+ 
+
+===== #1020 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Let $f(n;r,k)$ be the maximal number of edges in an $r$-uniform hypergraph which contains no set of $k$ many independent edges. For all $r\geq 3$,\[f(n;r,k)=\max\left(\binom{rk-1}{r}, \binom{n}{r}-\binom{n-k+1}{r}\right).\] 
+ #1020 : [Er65d] [Er71,p.103] 
+ graph theory | 
+ hypergraphs 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ Erdős and Gallai [ErGa59] proved this is true when $r=2$ (when $r=2$ this also follows from the Erdős-Ko-Rado theorem ). The conjectured form of $f(n;r,k)$ is the best possible, as witnessed by two examples: all $r$-edges on a set of $rk-1$ many vertices, and all edges on a set of $n$ vertices which contain at least one element of a fixed set of $k-1$ vertices. Frankl [Fr87] proved $f(n;r,k) \leq (k-1)\binom{n-1}{r-1}$. This is sometimes known as the Erdős matching conjecture. Note that the second term in the maximum dominates when $n\geq (r+1)k$. There are many partial results towards this, establishing the conjecture in different ranges. These can be separated into two regimes. For small $n$: 
+ The conjecture is trivially true if $n<kr$. 
+ Kleitman [Kl68] when $n=kr$. 
+ Frankl [Fr17] when\[kr \leq n\leq k\left(r+\frac{1}{2r^{2r+1}}\right).\] 
+ Kolupaev and Kupavskii [KoKu23] when $r\geq 5$, $k>101r^3$, and\[kr \leq n < k\left(r+\frac{1}{100r}\right).\] 
+ For large $n$: 
+ Erdős [Er65d] when $n>kc_r$ (where $c_r$ depends on $r$ in some unspecified fashion). 
+ Frankl and Füredi [Fr87] when $n>100 k^2r$. 
+ Bollobás, Daykin, and Erdős [BDE76] when $n\geq 2kr^3$. 
+ Frankl, Rödl, and Ruciński [FRR12] when $r=3$ and $n\geq 4k$. 
+ Huang, Loh, and Sudakov [HLS12] when $n\geq 3kr^2$. 
+ Frankl, Luczak, and Mieczkowska [FLM12] when $n> 2k\frac{r^2}{\log r}$. 
+ Luczak and Mieczkowska [LuMi14] when $r=3$ (for all $k$). 
+ 
+
+===== #1041 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Let $f(z)=\prod_{i=1}^n(z-z_i)\in \mathbb{C}[z]$ with $\lvert z_i\rvert < 1$ for all $i$. Must there always exist a path of length less than $2$ in\[\{z: \lvert f(z)\rvert < 1\}\]which connects two of the roots of $f$? 
+ #1041 : [EHP58,p.139] 
+ analysis | 
+ polynomials 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Erdős, Herzog, and Piranian [EHP58] , who proved that this set always has a connected component containing at least two of the roots.
+ 
+
+===== #982 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ If $n$ distinct points in $\mathbb{R}^2$ form a convex polygon then some vertex has at least $\lfloor \frac{n}{2}\rfloor$ different distances to other vertices. 
+ #982 : [Er46b] [Er75f,p.100] [Er87b,p.175] [ErFi94] 
+ geometry | 
+ convex | 
+ distances 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ The regular polygon shows that $\lfloor n/2\rfloor$ is the best possible here. This would be implied if there was a vertex such that no three vertices of the polygon are equally distant to it, which was originally also conjectured by Erdős [Er46b] , but this is false (see [97] ). Let $f(n)$ be the maximal number of such distances that are guaranteed. Moser [Mo52] proved that\[f(n) \geq \left\lceil\frac{n}{3}\right\rceil.\]This was improved by Erdős and Fishburn [ErFi94] to\[f(n) \geq \left\lfloor \frac{n}{3}+1\right\rfloor,\]then\[f(n) \geq \left\lceil \frac{13n-6}{36}\right\rceil\]by Dumitrescu [Du06b] , and most recently\[f(n) \geq \left(\frac{13}{36}+\frac{1}{22701}\right)n-O(1)\]by Nivasch, Pach, Pinchasi, and Zerbib [NPPZ13] . In [Er46b] Erdős makes the even stronger conjecture that on every convex curve there exists a point $p$ such that every circle with centre $p$ intersects the curve in at most $2$ points. Bárány and Roldán-Pensado [BaRo13] noted that the boundary of any acute triangle is a counterexample. Bárány and Roldán-Pensado prove that, for any planar convex body, there is a point $p$ on the boundary such that every circle with centre $p$ intersects the boundary in at most $O(1)$ (where the implied constant depends on the convex body). They conjecture that there this can be bounded by an absolute constant - that is, Erdős's conjecture is true if we replace $2$ by some larger constant $C$. See also [93] .
+ 
+
+===== #1082 =====
+FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Let $A\subset \mathbb{R}^2$ be a set of $n$ points with no three on a line. Does $A$ determine at least $\lfloor n/2\rfloor$ distinct distances? In fact, must there exist a single point from which there are at least $\lfloor n/2\rfloor$ distinct distances? 
+ #1082 : [Er75f,p.101] [Er87b] [Er97e] 
+ geometry | 
+ distances 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A conjecture of Szemerédi, who proved this with $n/2$ replaced by $n/3$. More generally, Szemerédi gave a simple proof that if there are no $k$ points on a line then some point determines $\gg n/k$ distinct distances (a weak inverse result to the distinct distance problem [89] ). This is a stronger form of [93] . The second question is a stronger form of [982] . Szemerédi's proof is unpublished, but given in [Er75f] . In [Er75f] Erdős asks whether, given $n$ points in $\mathbb{R}^3$ with no three on a line, do they determine $\gg n$ distances? Altman proved the answer is yes if the points form the vertices of a convex polyhedron (see [660] for a stronger form of this), and Szemerédi proved the answer is yes if there are no four points on a plane. The second stronger question has a negative answer: there is a construction of $8$ points such that each point has exactly three distinct distances to the others. This first appeared in the literature in a paper of Erdős and Fishburn [ErFi97b] , where they credit the construction to Harborth. This configuration is studied in detail by Fishburn [Fi02] . (This construction was later found by DeepMind. An earlier construction was also given by Xichuan in the comments, who gave a set of $42$ points in $\mathbb{R}^2$, with no three on a line, such that each point determines only $20$ distinct distances.)
+ 

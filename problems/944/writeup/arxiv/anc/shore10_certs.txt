@@ -1,0 +1,114 @@
+CERT I?B~vr{{o fate=twins ncol=12
+CERT I?b~vrw\o fate=twins ncol=12
+CERT I?rfnr{{o fate=twins ncol=6
+CERT I?o~vju}O fate=kill:v0 b1 ncol=6
+CERT I?rvfZyz_ fate=twins ncol=6
+CERT I?rvvrwNo fate=twins ncol=6
+CERT I?rvvrwMw fate=twins ncol=6
+CERT I?rvnrwxW fate=twins ncol=6
+CERT I?rvnrwlW fate=twins ncol=6
+CERT I?rnVru|_ fate=twins ncol=6
+CERT I?rnnrw}_ fate=twins ncol=6
+CERT I?q~fjy]o fate=kill:v0 b1 ncol=6
+CERT I?qzvru|_ fate=twins ncol=6
+CERT I?q~vrs}G fate=kill:v0 b0 ncol=6
+CERT I?zed|}z_ fate=twins ncol=6
+CERT I?zed|}v_ fate=twins ncol=6
+CERT I?zed|}n_ fate=twins ncol=6
+CERT I?zffru|O fate=twins ncol=6
+CERT I?zffru{o fate=twins ncol=6
+CERT I?zffZyz_ fate=twins ncol=6
+CERT I?zffZm~? fate=twins ncol=6
+CERT I?zffZ]~? fate=twins ncol=6
+CERT I?zfez{v_ fate=twins ncol=6
+CERT I?zfezm~? fate=twins ncol=6
+CERT I?zffV{z_ fate=twins ncol=6
+CERT I?zfVj{~? fate=twins ncol=12
+CERT I?zfvrs|_ fate=twins ncol=6
+CERT I?zfvrsww fate=twins ncol=12
+CERT I?zfvrssw fate=twins ncol=6
+CERT I?zfvrsFw fate=twins ncol=6
+CERT I?zTb~mv_ fate=kill:v0 b1 ncol=6
+CERT I?zTb|}^_ fate=twins ncol=12
+CERT I?zVfru|O fate=twins ncol=6
+CERT I?zVfrmv_ fate=twins ncol=6
+CERT I?zVfZ{z_ fate=twins ncol=6
+CERT I?zVdx}~? fate=kill:v0 b1 ncol=6
+CERT I?zVdx}}_ fate=kill:v0 b1 ncol=6
+CERT I?zVe^{~? fate=twins ncol=6
+CERT I?zVe^{}_ fate=twins ncol=6
+CERT I?zVVj{~? fate=twins ncol=6
+CERT I?zTvru\o fate=kill:v0 b1 ncol=6
+CERT I?zVvrs|_ fate=twins ncol=6
+CERT I?zVvrsww fate=twins ncol=6
+CERT I?zVvrssw fate=twins ncol=6
+CERT I?zV^jw~? fate=twins ncol=6
+CERT I?zT~rs~? fate=kill:v0 b0 ncol=6
+CERT I?zvfburo fate=twins ncol=6
+CERT I?zvfb]xo fate=twins ncol=6
+CERT I?zvfbfxo fate=twins ncol=24
+CERT I?znfrq|_ fate=twins ncol=6
+CERT I?znfrq|O fate=twins ncol=12
+CERT I?znfrq{o fate=twins ncol=6
+CERT I?z^fby|O fate=twins ncol=6
+CERT I?z^frq|_ fate=twins ncol=6
+CERT I?z^frq|O fate=twins ncol=12
+CERT I?z^frq{o fate=twins ncol=6
+CERT ICOf~z{~? fate=twins ncol=24
+CERT ICRvvrwjo fate=twins ncol=6
+CERT ICRvvrwiw fate=twins ncol=6
+CERT ICR^vrwxo fate=twins ncol=6
+CERT ICR^vrwww fate=twins ncol=6
+CERT ICpf]z{~? fate=twins ncol=6
+CERT ICpvfZmz_ fate=twins ncol=6
+CERT ICrvbxy^_ fate=kill:v0 b2 ncol=6
+CERT ICrvbxybw fate=kill:v0 b1 ncol=6
+CERT ICXfZz{~? fate=twins ncol=12
+CERT ICZffr{~? fate=twins ncol=6
+CERT ICZfVr{~? fate=twins ncol=6
+CERT ICZfVZ{~? fate=twins ncol=6
+CERT ICZfnrw~? fate=twins ncol=6
+CERT ICZfnrwww fate=twins ncol=6
+CERT ICZfnjwww fate=twins ncol=6
+CERT ICZfnjwFw fate=twins ncol=6
+CERT ICZf^jw~? fate=twins ncol=6
+CERT ICZf^jwww fate=twins ncol=6
+CERT ICZf^jwFw fate=kill:v0 b1 ncol=6
+CERT ICZVfZmz_ fate=twins ncol=6
+CERT ICZvfbNNo fate=twins ncol=6
+CERT ICZvf`nZo fate=twins ncol=12
+CERT ICZvfRfxo fate=twins ncol=6
+CERT ICZnfRfxo fate=twins ncol=6
+CERT ICzffXmz_ fate=twins ncol=6
+CERT ICzffXm{W fate=twins ncol=6
+CERT ICzfex{~? fate=twins ncol=6
+CERT ICzfex{ww fate=kill:v0 b0 ncol=6
+CERT ICzfex{Fw fate=twins ncol=6
+CERT ICzfbx{~? fate=twins ncol=6
+CERT ICzbri^fo fate=twins ncol=6
+CERT ICvbrzq{o fate=kill:v0 b1 ncol=6
+CERT ICvbrzq^G fate=kill:v0 b2 ncol=6
+CERT ICvbrzqbw fate=kill:v0 b1 ncol=6
+CERT IEhffZ{~? fate=twins ncol=6
+CERT IEhfvrw~? fate=kill:v0 b0 ncol=6
+CERT IEhfvrwFw fate=twins ncol=12
+CERT IEhfvjk~? fate=kill:v0 b0 ncol=6
+CERT IEhfvjkww fate=kill:v0 b0 ncol=6
+CERT IEjfaz{~? fate=twins ncol=6
+CERT IEjf`z{~? fate=twins ncol=6
+CERT IEjerj{~? fate=twins ncol=6
+CERT IEjerZ{~? fate=twins ncol=6
+CERT IEjbvj[~? fate=kill:v0 b0 ncol=6
+CERT IEjejr{~? fate=twins ncol=6
+CERT IEjenp{~? fate=kill:v0 b0 ncol=6
+CERT IEjenp{ww fate=kill:v0 b0 ncol=6
+CERT IEjdjr{~? fate=twins ncol=6
+CERT IEjdnp{~? fate=kill:v0 b0 ncol=6
+CERT IEhvEvy}_ fate=twins ncol=6
+CERT IEhvDvy}_ fate=twins ncol=6
+CERT IEhuvrexo fate=kill:v0 b0 ncol=6
+CERT IEhuvreFw fate=kill:v0 b1 ncol=6
+CERT IEhrvNw}O fate=kill:v0 b1 ncol=6
+CERT IEhrvNwxg fate=kill:v0 b1 ncol=6
+CERT IEhrvNwFw fate=kill:v0 b2 ncol=6
+total=18655 badDeficiency=0 not3col=18345 badBoundaryVec=197 comparableNonNbr=86 localKill=27 SURVIVORS=0

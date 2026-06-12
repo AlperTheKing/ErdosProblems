@@ -1,0 +1,59 @@
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 1c8a724..427c251 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -998,9 +998,53 @@ theorem C6_radius : minEccentricity C6 = 3 := by
+   rw [minEccentricity, hrange]
+   simp
+ 
++section C6GirthAux
++
++local instance instDecEqNil (a : Fin 6) (p : C6.Walk a a) : Decidable (p = Walk.nil) :=
++  decidable_of_iff p.Nil Walk.nil_iff_eq_nil
++local instance instDecIsTrail (a b : Fin 6) (p : C6.Walk a b) : Decidable p.IsTrail :=
++  decidable_of_iff _ (Walk.isTrail_def p).symm
++local instance instDecIsCycle (a : Fin 6) (p : C6.Walk a a) : Decidable p.IsCycle :=
++  decidable_of_iff _ (Walk.isCycle_def p).symm
++
++/-- No walk in `C6` of length `< 6` is a cycle: the girth lower bound, checked by `decide`
++over the finite set of short walks. -/
++@[category test, AMS 5]
++private lemma C6_no_short_cycle :
++    ∀ a : Fin 6, ∀ w ∈ C6.finsetWalkLengthLT 6 a a, ¬ w.IsCycle := by
++  decide
++
++/-- The explicit Hamiltonian `6`-cycle `0-1-2-3-4-5-0` witnessing the girth upper bound. -/
++@[category test, AMS 5]
++private lemma C6_exists_6cycle : ∃ w : C6.Walk 0 0, w.IsCycle ∧ w.length = 6 := by
++  refine ⟨.cons (show C6.Adj 0 1 by decide)
++        (.cons (show C6.Adj 1 2 by decide)
++        (.cons (show C6.Adj 2 3 by decide)
++        (.cons (show C6.Adj 3 4 by decide)
++        (.cons (show C6.Adj 4 5 by decide)
++        (.cons (show C6.Adj 5 0 by decide) .nil))))), ?_, ?_⟩
++  · decide
++  · decide
++
++end C6GirthAux
++
+ @[category test, AMS 5]
+ theorem C6_girth : C6.girth = 6 := by
+-  sorry
++  have heg : C6.egirth = 6 := by
++    apply le_antisymm
++    · obtain ⟨c, hc, hlen⟩ := C6_exists_6cycle
++      have hle := egirth_le_length hc
++      rw [hlen] at hle
++      exact_mod_cast hle
++    · rw [le_egirth]
++      intro a w hw
++      have hge : 6 ≤ w.length := by
++        by_contra hlt
++        push_neg at hlt
++        exact C6_no_short_cycle a w (mem_finsetWalkLengthLT_iff.mpr hlt) hw
++      exact_mod_cast hge
++  rw [show C6.girth = C6.egirth.toNat from rfl, heg]
++  rfl
+ 
+ @[category test, AMS 5]
+ theorem C6_order : n C6 = 6 := by simp [n]

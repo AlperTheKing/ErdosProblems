@@ -1,0 +1,94 @@
+diff --git a/FormalConjectures/ErdosProblems/885.lean b/FormalConjectures/ErdosProblems/885.lean
+index 995dd83..dc55afc 100644
+--- a/FormalConjectures/ErdosProblems/885.lean
++++ b/FormalConjectures/ErdosProblems/885.lean
+@@ -37,6 +37,20 @@ $D(n) = \{|a-b| : n=ab\}$.
+ def factorDifferenceSet (n : ℕ) : Set ℕ :=
+   {d | ∃ a b : ℕ, n = a * b ∧ (d : ℤ) = |(a : ℤ) - b|}
+ 
++lemma factorDifferenceSet_finite_of_pos {n : ℕ} (hn : 0 < n) :
++    (factorDifferenceSet n).Finite := by
++  refine (Set.finite_Icc 0 n).subset ?_
++  intro d hd
++  rcases hd with ⟨a, b, hnab, hdiff⟩
++  have ha_le : a ≤ n := Nat.le_of_dvd hn ⟨b, hnab⟩
++  have hb_le : b ≤ n := Nat.le_of_dvd hn ⟨a, by rw [Nat.mul_comm]; exact hnab⟩
++  have h_abs : |(a : ℤ) - b| ≤ (n : ℤ) := by
++    rw [abs_le]
++    omega
++  exact ⟨Nat.zero_le d, by
++    have : (d : ℤ) ≤ (n : ℤ) := by simpa [hdiff] using h_abs
++    exact_mod_cast this⟩
++
+ /--
+ Is it true that, for every $k \geq 1$, there exist integers $N_1 < \dots < N_k$ such that
+ $|\cap_i D(N_i)| \geq k$?
+@@ -58,7 +72,29 @@ theorem erdos_885.variants.k_eq_2 :
+       (∀ n ∈ Ns, 1 ≤ n) ∧
+       Ns.card = 2 ∧
+       (⋂ n ∈ Ns, factorDifferenceSet n).ncard ≥ 2 := by
+-  sorry
++  refine ⟨{8, 120}, ?_, by norm_num, ?_⟩
++  · intro n hn
++    simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++    rcases hn with rfl | rfl <;> norm_num
++  · have hsub : ({2, 7} : Set ℕ) ⊆
++        ⋂ n ∈ ({8, 120} : Finset ℕ), factorDifferenceSet n := by
++      intro d hd
++      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hd
++      simp only [Set.mem_iInter]
++      intro n hn
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++      rcases hn with rfl | rfl <;> rcases hd with rfl | rfl
++      · exact ⟨2, 4, by norm_num, by norm_num⟩
++      · exact ⟨1, 8, by norm_num, by norm_num⟩
++      · exact ⟨10, 12, by norm_num, by norm_num⟩
++      · exact ⟨8, 15, by norm_num, by norm_num⟩
++    have hfin : (⋂ n ∈ ({8, 120} : Finset ℕ), factorDifferenceSet n).Finite :=
++      (factorDifferenceSet_finite_of_pos (by norm_num : 0 < 8)).subset (by
++        intro d hd
++        simp only [Set.mem_iInter] at hd
++        exact hd 8 (by simp))
++    simpa [Set.ncard_pair (by norm_num : (2 : ℕ) ≠ 7)] using
++      Set.ncard_le_ncard hsub hfin
+ 
+ /--
+ Jiménez-Urroz [Ji99] proved this for $k=3$.
+@@ -69,7 +105,36 @@ theorem erdos_885.variants.k_eq_3 :
+       (∀ n ∈ Ns, 1 ≤ n) ∧
+       Ns.card = 3 ∧
+       (⋂ n ∈ Ns, factorDifferenceSet n).ncard ≥ 3 := by
+-  sorry
++  refine ⟨{120, 528, 4488}, ?_, by norm_num, ?_⟩
++  · intro n hn
++    simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++    rcases hn with rfl | rfl | rfl <;> norm_num
++  · have hsub : ({2, 37, 58} : Set ℕ) ⊆
++        ⋂ n ∈ ({120, 528, 4488} : Finset ℕ), factorDifferenceSet n := by
++      intro d hd
++      simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hd
++      simp only [Set.mem_iInter]
++      intro n hn
++      simp only [Finset.mem_insert, Finset.mem_singleton] at hn
++      rcases hn with rfl | rfl | rfl <;> rcases hd with rfl | rfl | rfl
++      · exact ⟨10, 12, by norm_num, by norm_num⟩
++      · exact ⟨3, 40, by norm_num, by norm_num⟩
++      · exact ⟨2, 60, by norm_num, by norm_num⟩
++      · exact ⟨22, 24, by norm_num, by norm_num⟩
++      · exact ⟨11, 48, by norm_num, by norm_num⟩
++      · exact ⟨8, 66, by norm_num, by norm_num⟩
++      · exact ⟨66, 68, by norm_num, by norm_num⟩
++      · exact ⟨51, 88, by norm_num, by norm_num⟩
++      · exact ⟨44, 102, by norm_num, by norm_num⟩
++    have hfin : (⋂ n ∈ ({120, 528, 4488} : Finset ℕ), factorDifferenceSet n).Finite :=
++      (factorDifferenceSet_finite_of_pos (by norm_num : 0 < 120)).subset (by
++        intro d hd
++        simp only [Set.mem_iInter] at hd
++        exact hd 120 (by simp))
++    have hcard : ({2, 37, 58} : Set ℕ).ncard = 3 := by
++      rw [Set.ncard_insert_of_notMem (by simp : (2 : ℕ) ∉ ({37, 58} : Set ℕ))]
++      rw [Set.ncard_pair (by norm_num : (37 : ℕ) ≠ 58)]
++    simpa [hcard] using Set.ncard_le_ncard hsub hfin
+ 
+ /--
+ Bremner [Br19] proved this for $k=4$.

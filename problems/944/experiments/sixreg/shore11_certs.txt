@@ -1,0 +1,2819 @@
+CERT J?Bevr{v`}? fate=kill:v0 b1 ncol=6
+CERT J?Bevq}~Bm? fate=kill:v0 b1 ncol=6
+CERT J?Bevq}~A}? fate=kill:v0 b1 ncol=6
+CERT J?Bevq}~@}? fate=kill:v0 b1 ncol=6
+CERT J?Bfnrw~Fb? fate=twins ncol=18
+CERT J?Bfnrw~?~? fate=twins ncol=6
+CERT J?Bfnrw}Vh? fate=twins ncol=12
+CERT J?BfnrwzVp? fate=twins ncol=12
+CERT J?Be~rw~Er? fate=twins ncol=12
+CERT J?Be}zw~@v? fate=twins ncol=6
+CERT J?Be|zw~Av? fate=kill:v0 b1 ncol=6
+CERT J?BvfR]}P}? fate=twins ncol=6
+CERT J?BvfR\}`}? fate=kill:v0 b1 ncol=6
+CERT J?Bvfrwz_~? fate=twins ncol=6
+CERT J?Bvfjw}fd? fate=twins ncol=12
+CERT J?Bvfjw}Nk? fate=twins ncol=12
+CERT J?BvUr{{p}? fate=kill:v0 b1 ncol=6
+CERT J?BvUr{yp}? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}}Rm? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}}Q}? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}}P}? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}^Ve? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}^VU? fate=kill:v0 b1 ncol=6
+CERT J?BvUq}^Tu? fate=kill:v0 b1 ncol=6
+CERT J?BvVrw|_~? fate=twins ncol=6
+CERT J?BvVrwv`n? fate=twins ncol=6
+CERT J?BvVjw}fd? fate=twins ncol=12
+CERT J?BvVjw}fT? fate=twins ncol=12
+CERT J?BvVjw}et? fate=twins ncol=12
+CERT J?BvVZw}fd? fate=twins ncol=12
+CERT J?BvVZw}fT? fate=twins ncol=12
+CERT J?BvVZw}NU? fate=twins ncol=12
+CERT J?`ffr{~Fs? fate=twins ncol=6
+CERT J?`ffr{~Fe? fate=twins ncol=6
+CERT J?`ffj{~Fe? fate=twins ncol=6
+CERT J?`ffZm~F[? fate=twins ncol=6
+CERT J?`fVZ{~Fw? fate=twins ncol=24
+CERT J?`fvrw~Fe? fate=twins ncol=6
+CERT J?`fnrw~Fe? fate=twins ncol=6
+CERT J?`fnrw~Fb? fate=twins ncol=6
+CERT J?`fnrw~?~? fate=twins ncol=6
+CERT J?`fnrw|Vh? fate=twins ncol=6
+CERT J?`fnjw~Fe? fate=twins ncol=6
+CERT J?`fnjw~Fd? fate=twins ncol=6
+CERT J?`fnjw~?~? fate=twins ncol=6
+CERT J?`fnjs~Fe? fate=twins ncol=6
+CERT J?`fnZw~FF? fate=twins ncol=12
+CERT J?`fnZw~?~? fate=kill:v0 b1 ncol=6
+CERT J?`fjzw~Bf? fate=twins ncol=12
+CERT J?`f^rw~FF? fate=twins ncol=12
+CERT J?`f^Zw~Fw? fate=twins ncol=24
+CERT J?bffb{ZvM? fate=twins ncol=6
+CERT J?bffrw~Bf? fate=twins ncol=6
+CERT J?bffrw^bN? fate=twins ncol=6
+CERT J?bffrw^_~? fate=twins ncol=6
+CERT J?bffrs~Bf? fate=twins ncol=6
+CERT J?bffp{zfk? fate=twins ncol=6
+CERT J?bffp{^b]? fate=twins ncol=6
+CERT J?bffX{}fw? fate=twins ncol=6
+CERT J?bfezw^fk? fate=kill:v0 b0 ncol=6
+CERT J?bfex{}fw? fate=kill:v0 b0 ncol=6
+CERT J?bfbx{}fw? fate=twins ncol=6
+CERT J?bffd{~E{? fate=kill:v0 b0 ncol=6
+CERT J?bffVk^fb? fate=twins ncol=6
+CERT J?bfbvw~E{? fate=kill:v0 b0 ncol=6
+CERT J?bfbvs~F[? fate=twins ncol=6
+CERT J?bfbvk~Fk? fate=twins ncol=6
+CERT J?bfbvkzfb? fate=twins ncol=6
+CERT J?bfbt{~Fs? fate=twins ncol=6
+CERT J?bfbnw~F[? fate=twins ncol=6
+CERT J?bfbnw~B{? fate=twins ncol=6
+CERT J?bfb^wzfb? fate=twins ncol=6
+CERT J?bfa~w~Fk? fate=kill:v0 b0 ncol=6
+CERT J?bfa~w}P|? fate=kill:v0 b1 ncol=6
+CERT J?bfRr{~Fe? fate=twins ncol=6
+CERT J?bfVrw^bN? fate=twins ncol=6
+CERT J?bfVrs\vp? fate=twins ncol=6
+CERT J?bfVp{~Fe? fate=twins ncol=6
+CERT J?bfVp{~Fd? fate=twins ncol=6
+CERT J?bfVp{~Fb? fate=twins ncol=6
+CERT J?bfVp{^b]? fate=twins ncol=6
+CERT J?bfVp{^a}? fate=kill:v0 b2 ncol=6
+CERT J?bevrw^`n? fate=twins ncol=6
+CERT J?bevp{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?bevp{~Fb? fate=kill:v0 b0 ncol=6
+CERT J?bevp{~?~? fate=kill:v0 b1 ncol=6
+CERT J?bevp{^b]? fate=kill:v0 b2 ncol=6
+CERT J?bevp{^a}? fate=kill:v0 b2 ncol=6
+CERT J?bevp{^`}? fate=kill:v0 b2 ncol=6
+CERT J?bevd{~Fq? fate=kill:v0 b0 ncol=6
+CERT J?bep~w}Rl? fate=kill:v0 b1 ncol=6
+CERT J?bbvrw}bZ? fate=twins ncol=6
+CERT J?bbvrw|fM? fate=twins ncol=6
+CERT J?bbvrw|em? fate=kill:v0 b0 ncol=6
+CERT J?bbvrw|fJ? fate=twins ncol=6
+CERT J?bbvrw|ej? fate=twins ncol=6
+CERT J?bbvrw|fF? fate=twins ncol=6
+CERT J?bbvrw^b]? fate=twins ncol=6
+CERT J?bbvrw^bZ? fate=twins ncol=6
+CERT J?bbvrw^bV? fate=twins ncol=6
+CERT J?bbvrw^R\? fate=twins ncol=6
+CERT J?bbvjw|fk? fate=twins ncol=6
+CERT J?bbvjw|fh? fate=twins ncol=6
+CERT J?bbvjw|fd? fate=twins ncol=6
+CERT J?bbvZw~Fe? fate=twins ncol=6
+CERT J?bbvZw~Fd? fate=twins ncol=6
+CERT J?bbvZw~Fb? fate=twins ncol=6
+CERT J?bbuzw~?~? fate=kill:v0 b1 ncol=6
+CERT J?bbrzw~Fe? fate=twins ncol=6
+CERT J?bbrzw~Fb? fate=twins ncol=6
+CERT J?bbrzw~?~? fate=kill:v1 b1 ncol=6
+CERT J?bbrzw}bx? fate=twins ncol=6
+CERT J?bbrzw^bx? fate=twins ncol=6
+CERT J?bbrzw^Ju? fate=twins ncol=6
+CERT J?bbrx{}bu? fate=twins ncol=6
+CERT J?bbrx{}br? fate=twins ncol=6
+CERT J?bfJzw{nw? fate=twins ncol=6
+CERT J?bb^P|}by? fate=twins ncol=6
+CERT J?bb^rw~Fe? fate=twins ncol=6
+CERT J?bb^rw~Fb? fate=twins ncol=6
+CERT J?ba~rw~Fb? fate=twins ncol=6
+CERT J?ba~rw~?~? fate=twins ncol=6
+CERT J?bfvrw^Bm? fate=twins ncol=6
+CERT J?bfvrw^B]? fate=twins ncol=6
+CERT J?bfvrw^A}? fate=twins ncol=6
+CERT J?bfvrw^BV? fate=twins ncol=6
+CERT J?bfvrw^Av? fate=twins ncol=6
+CERT J?bfvrw^Cf_ fate=twins ncol=6
+CERT J?bfvrw^?n_ fate=twins ncol=6
+CERT J?bfnrw^Cf_ fate=twins ncol=6
+CERT J?bfnrw^?v_ fate=twins ncol=6
+CERT J?bfnrw^?n_ fate=twins ncol=6
+CERT J?bb}zw}Fe? fate=kill:v0 b0 ncol=6
+CERT J?bb}zw}Fd? fate=kill:v0 b0 ncol=6
+CERT J?bb}zw}Fb? fate=kill:v0 b0 ncol=6
+CERT J?bb}zw}?~? fate=kill:v0 b1 ncol=6
+CERT J?bb}zw}F`_ fate=twins ncol=6
+CERT J?bb}zw}?|_ fate=twins ncol=6
+CERT J?bb}zw}?z_ fate=twins ncol=6
+CERT J?bbzzw}Bx? fate=twins ncol=6
+CERT J?bbzzw}Fd? fate=twins ncol=6
+CERT J?bbzzw}?~? fate=twins ncol=6
+CERT J?bbzzw}F`_ fate=twins ncol=6
+CERT J?bbzzw}Bp_ fate=twins ncol=6
+CERT J?bbzzw}?|_ fate=twins ncol=6
+CERT J?`vFry~Fw? fate=twins ncol=6
+CERT J?`vFry}fw? fate=twins ncol=6
+CERT J?`vFry|fw? fate=twins ncol=6
+CERT J?`vFfu~Fk? fate=twins ncol=6
+CERT J?`vFVm~F[? fate=twins ncol=6
+CERT J?`rfr{~Fs? fate=twins ncol=12
+CERT J?`re^{}d{? fate=kill:v0 b1 ncol=12
+CERT J?`vfb{|fq? fate=twins ncol=6
+CERT J?`vfby~Fq? fate=twins ncol=6
+CERT J?`vfbr~Fe? fate=twins ncol=12
+CERT J?`vfR{|f[? fate=twins ncol=6
+CERT J?`vfrw~FF? fate=twins ncol=6
+CERT J?`vfrw}fb? fate=twins ncol=12
+CERT J?`vfrw|fe? fate=twins ncol=6
+CERT J?`vfrw|fb? fate=twins ncol=12
+CERT J?`vfrw^bj? fate=twins ncol=6
+CERT J?`vfrw^bf? fate=twins ncol=6
+CERT J?`vfrw^bV? fate=twins ncol=6
+CERT J?`vfjw~Bt? fate=twins ncol=6
+CERT J?`vfjw~Br? fate=twins ncol=6
+CERT J?`vfjw~FF? fate=twins ncol=6
+CERT J?`vfjw}fq? fate=twins ncol=6
+CERT J?`vfjw}fb? fate=twins ncol=6
+CERT J?`vfjw|fq? fate=twins ncol=6
+CERT J?`vfjw|fb? fate=twins ncol=6
+CERT J?`vfjw^b{? fate=twins ncol=6
+CERT J?`vfjs}fR? fate=twins ncol=6
+CERT J?`vfjs}br? fate=twins ncol=6
+CERT J?`vfjs}fF? fate=twins ncol=6
+CERT J?`vfjs}bf? fate=twins ncol=6
+CERT J?`vfjs}Rt? fate=twins ncol=6
+CERT J?`vfjs{rt? fate=twins ncol=6
+CERT J?`vfh{}b{? fate=twins ncol=6
+CERT J?`vfZw~Bu? fate=twins ncol=6
+CERT J?`vfZw~Br? fate=twins ncol=6
+CERT J?`vfZw|f[? fate=twins ncol=6
+CERT J?`vfZw|e{? fate=kill:v0 b0 ncol=6
+CERT J?`vfZwzfw? fate=twins ncol=6
+CERT J?`vfZk}fw? fate=twins ncol=6
+CERT J?`vfZk}fk? fate=twins ncol=6
+CERT J?`vfZ[}fw? fate=kill:v0 b0 ncol=6
+CERT J?`vfX{}fw? fate=twins ncol=6
+CERT J?`vbzw^fk? fate=twins ncol=6
+CERT J?`vbzw^bx? fate=twins ncol=6
+CERT J?`vbzw^bt? fate=twins ncol=6
+CERT J?`vbx{}fk? fate=twins ncol=6
+CERT J?`vffw~Fd? fate=twins ncol=6
+CERT J?`vffw}fb? fate=twins ncol=12
+CERT J?`vffw|fb? fate=twins ncol=6
+CERT J?`vffw|Ns? fate=twins ncol=6
+CERT J?`vffs~Fd? fate=twins ncol=6
+CERT J?`vffk~F[? fate=twins ncol=6
+CERT J?`vfd{~B{? fate=twins ncol=6
+CERT J?`vfVs~F[? fate=twins ncol=6
+CERT J?`vfVk~Fw? fate=twins ncol=6
+CERT J?`vfVk~Fs? fate=twins ncol=6
+CERT J?`vfVk~Fk? fate=twins ncol=6
+CERT J?`vfT{~Fs? fate=twins ncol=6
+CERT J?`vbvw~B{? fate=twins ncol=6
+CERT J?`vbvs~B{? fate=twins ncol=6
+CERT J?`vbvs~By? fate=twins ncol=6
+CERT J?`vVrw~Fw? fate=twins ncol=12
+CERT J?`vVrw|em? fate=kill:v0 b0 ncol=6
+CERT J?`vVrw|fJ? fate=twins ncol=6
+CERT J?`vVrw|fF? fate=twins ncol=6
+CERT J?`vVrw|ef? fate=twins ncol=6
+CERT J?`vVrw|bf? fate=twins ncol=6
+CERT J?`vVjw~Bu? fate=twins ncol=6
+CERT J?`vVjw~Br? fate=twins ncol=6
+CERT J?`vVjw|fk? fate=twins ncol=6
+CERT J?`vVjw|fh? fate=twins ncol=6
+CERT J?`vVjw|fd? fate=twins ncol=6
+CERT J?`vVjw}VL? fate=twins ncol=6
+CERT J?`vVZw~Fe? fate=twins ncol=6
+CERT J?`vVZw~Fb? fate=twins ncol=6
+CERT J?`vUzw~Fe? fate=kill:v0 b0 ncol=6
+CERT J?`vNR{{vw? fate=twins ncol=6
+CERT J?`vNfw~FY? fate=twins ncol=6
+CERT J?`vNfw~Ey? fate=kill:v0 b0 ncol=6
+CERT J?`rnjw~Br? fate=twins ncol=6
+CERT J?`rnjw}fU? fate=twins ncol=6
+CERT J?`rnjw}bu? fate=twins ncol=6
+CERT J?`u^rw~Fb? fate=twins ncol=6
+CERT J?`u^jw~@v? fate=kill:v0 b1 ncol=6
+CERT J?`u^fw~Fi? fate=kill:v0 b0 ncol=6
+CERT J?`vvrw}Bm? fate=twins ncol=12
+CERT J?`vvrw}Bf? fate=twins ncol=24
+CERT J?`vvrw|Fk? fate=twins ncol=6
+CERT J?`vvrw|FE_ fate=twins ncol=6
+CERT J?`vnZw}Bu? fate=twins ncol=6
+CERT J?`vnZw}Bt? fate=twins ncol=6
+CERT J?`vnZw}Br? fate=twins ncol=6
+CERT J?`vnZw}Bp_ fate=twins ncol=6
+CERT J?`vnZw}EF_ fate=twins ncol=6
+CERT J?`vnZw}Cf_ fate=twins ncol=6
+CERT J?`vnZw}CN_ fate=twins ncol=6
+CERT J?`vjzw}Fw? fate=twins ncol=12
+CERT J?`vjzw}EF_ fate=twins ncol=6
+CERT J?`vjzw}BF_ fate=twins ncol=12
+CERT J?`v^rw}Fw? fate=twins ncol=12
+CERT J?`v^rw}EF_ fate=twins ncol=6
+CERT J?`v^rw}BF_ fate=twins ncol=12
+CERT J?`v^rw}Cf_ fate=twins ncol=6
+CERT J?`v^rw}Af_ fate=twins ncol=12
+CERT J?`v]zw}Fe? fate=kill:v0 b0 ncol=6
+CERT J?`v]zw}Fd? fate=kill:v0 b0 ncol=6
+CERT J?`v]zw}F`_ fate=twins ncol=6
+CERT J?`v]zw}CN_ fate=twins ncol=6
+CERT J?bNfrw^`n? fate=twins ncol=6
+CERT J?bNfp{^b]? fate=kill:v0 b2 ncol=6
+CERT J?bNfp{^`}? fate=kill:v0 b2 ncol=6
+CERT J?bvfbw^bN? fate=twins ncol=6
+CERT J?bvfbw\vM? fate=twins ncol=12
+CERT J?bvfbw\rm? fate=twins ncol=18
+CERT J?bvfbw\vL? fate=twins ncol=6
+CERT J?bvfbs]v[? fate=twins ncol=6
+CERT J?bvfbs]r{? fate=twins ncol=6
+CERT J?bvfbs]ru? fate=twins ncol=12
+CERT J?bvfbs]vM? fate=twins ncol=6
+CERT J?bvfbs]rm? fate=twins ncol=6
+CERT J?bvf`{}fY? fate=twins ncol=6
+CERT J?bvf`{{r{? fate=twins ncol=6
+CERT J?bvf`{{ru? fate=twins ncol=6
+CERT J?bvf`{{vM? fate=twins ncol=6
+CERT J?bvf`{{rm? fate=twins ncol=6
+CERT J?bvf`{yvw? fate=twins ncol=6
+CERT J?bvf`{yve? fate=twins ncol=6
+CERT J?bvf`{]vk? fate=twins ncol=6
+CERT J?bvbrw~Fs? fate=twins ncol=6
+CERT J?bvbrw~Fe? fate=twins ncol=6
+CERT J?bvbrw|fk? fate=twins ncol=12
+CERT J?bvbrw|fh? fate=twins ncol=6
+CERT J?bvbrw^fb? fate=twins ncol=6
+CERT J?bvbrw}Rl? fate=twins ncol=6
+CERT J?bvbrw^Rj? fate=twins ncol=6
+CERT J?bvbrwxsn? fate=twins ncol=6
+CERT J?bvbrwxo~? fate=twins ncol=6
+CERT J?bvbrs}fw? fate=twins ncol=6
+CERT J?bvbrs{vw? fate=twins ncol=6
+CERT J?bvbp{}fb? fate=twins ncol=6
+CERT J?bvbxy}Bw_ fate=twins ncol=6
+CERT J?bvV`{}Vd? fate=twins ncol=6
+CERT J?bvV`{]r]? fate=twins ncol=6
+CERT J?bvVbq^Vi? fate=twins ncol=6
+CERT J?bvVbq^Vp? fate=twins ncol=6
+CERT J?bvVbq^Vh? fate=twins ncol=6
+CERT J?bvV`y^R]? fate=twins ncol=6
+CERT J?bvVrw^Bm? fate=twins ncol=6
+CERT J?bvVrw^B]? fate=twins ncol=6
+CERT J?bvVrw^A}? fate=kill:v0 b1 ncol=6
+CERT J?bvVrw^Bj? fate=twins ncol=6
+CERT J?bvVrw^BZ? fate=twins ncol=6
+CERT J?bvVrw^Bf? fate=twins ncol=12
+CERT J?bvVrw]bm? fate=twins ncol=6
+CERT J?bvVrw]b]? fate=twins ncol=6
+CERT J?bvVrw]a}? fate=kill:v0 b1 ncol=6
+CERT J?bvVrw]bj? fate=twins ncol=6
+CERT J?bvVrw]bZ? fate=twins ncol=6
+CERT J?bvVrw]bV? fate=twins ncol=6
+CERT J?bvVfw^Fd? fate=twins ncol=6
+CERT J?bvVfw^Fc_ fate=twins ncol=6
+CERT J?bvVfw^F`_ fate=twins ncol=6
+CERT J?brvRw|fL? fate=twins ncol=6
+CERT J?brvRw|el? fate=kill:v0 b0 ncol=6
+CERT J?brvRw|fF? fate=twins ncol=6
+CERT J?brvRw|VL? fate=twins ncol=6
+CERT J?brvRw|VJ? fate=twins ncol=6
+CERT J?brvRw|VF? fate=twins ncol=6
+CERT J?brvRw^R\? fate=twins ncol=6
+CERT J?brvRw^Qv? fate=kill:v0 b2 ncol=6
+CERT J?brvRwxvk? fate=twins ncol=6
+CERT J?brvRwxve? fate=twins ncol=6
+CERT J?brvRwxvh? fate=twins ncol=6
+CERT J?brvRwxvd? fate=twins ncol=6
+CERT J?brvRwxvb? fate=twins ncol=6
+CERT J?brvRwxo~? fate=kill:v0 b1 ncol=6
+CERT J?brvRwtve? fate=kill:v0 b0 ncol=6
+CERT J?brvRwtvb? fate=kill:v0 b0 ncol=6
+CERT J?brvRw\vk? fate=twins ncol=6
+CERT J?brvRw\ry? fate=twins ncol=6
+CERT J?brvRs{vk? fate=twins ncol=6
+CERT J?brvRs{vi? fate=twins ncol=6
+CERT J?brvRs{ve? fate=twins ncol=12
+CERT J?brvRp|fi? fate=twins ncol=6
+CERT J?brvRp|fe? fate=twins ncol=6
+CERT J?bnV`{]r]? fate=twins ncol=6
+CERT J?bnV`{]q}? fate=kill:v0 b2 ncol=6
+CERT J?bnV`x|fL? fate=twins ncol=6
+CERT J?bnV`x|el? fate=twins ncol=6
+CERT J?bmv`{]r]? fate=kill:v0 b2 ncol=6
+CERT J?bmv`{]q}? fate=kill:v0 b2 ncol=6
+CERT J?bmv`{]p}? fate=kill:v0 b2 ncol=6
+CERT J?bmv`x|fL? fate=kill:v0 b0 ncol=6
+CERT J?bmv`x|dl? fate=kill:v0 b0 ncol=6
+CERT J?rFdW~~@}? fate=twins ncol=6
+CERT J?rFdzw^fs? fate=kill:v0 b0 ncol=6
+CERT J?rFdzk^fb? fate=kill:v0 b0 ncol=6
+CERT J?rFdy{^fb? fate=twins ncol=6
+CERT J?rFdx{~Fe? fate=kill:v0 b0 ncol=6
+CERT J?rFdx{~@z? fate=twins ncol=6
+CERT J?rFdx{zfb? fate=kill:v0 b0 ncol=6
+CERT J?rFdx{nfb? fate=kill:v0 b0 ncol=6
+CERT J?rFfU{^fb? fate=kill:v0 b0 ncol=6
+CERT J?rFdvk^fb? fate=kill:v0 b0 ncol=6
+CERT J?rFdt{~Fs? fate=kill:v0 b0 ncol=6
+CERT J?rFdt{~Fk? fate=kill:v0 b0 ncol=6
+CERT J?rFd^w^fb? fate=kill:v0 b0 ncol=6
+CERT J?rFd\{~Fb? fate=kill:v0 b0 ncol=6
+CERT J?rF`~w~Fs? fate=twins ncol=6
+CERT J?rF`~w~Fk? fate=twins ncol=6
+CERT J?rF`~w~@|? fate=kill:v0 b1 ncol=6
+CERT J?rF`~k~@|? fate=twins ncol=6
+CERT J?rFTg~~@}? fate=twins ncol=6
+CERT J?rDvh{~@}? fate=kill:v0 b1 ncol=6
+CERT J?rDvh{~Fb? fate=kill:v0 b0 ncol=6
+CERT J?rFvi{^Fe? fate=kill:v0 b0 ncol=6
+CERT J?rFvi{^@}? fate=kill:v2 b1 ncol=6
+CERT J?rFvi{^Fd? fate=kill:v0 b0 ncol=6
+CERT J?qfBz{^f[? fate=kill:v0 b1 ncol=12
+CERT J?qbfru~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qbfZ{~Fe? fate=twins ncol=6
+CERT J?qbfZyzf[? fate=twins ncol=6
+CERT J?qbfZynf[? fate=kill:v0 b0 ncol=6
+CERT J?qbfZmzfw? fate=twins ncol=6
+CERT J?qbfZ]vfk? fate=twins ncol=6
+CERT J?qbezuze{? fate=kill:v0 b0 ncol=6
+CERT J?qbezuve{? fate=twins ncol=6
+CERT J?qbfVm~F[? fate=twins ncol=6
+CERT J?qbdv{nd{? fate=twins ncol=6
+CERT J?qbdvm~D{? fate=kill:v0 b0 ncol=6
+CERT J?qbb^{^fw? fate=twins ncol=6
+CERT J?qbb^m~Fw? fate=twins ncol=6
+CERT J?qfbZr~Fw? fate=twins ncol=6
+CERT J?qffrw^f[? fate=kill:v0 b0 ncol=6
+CERT J?qffrs~Bf? fate=kill:v0 b0 ncol=6
+CERT J?qffrk^fs? fate=kill:v0 b0 ncol=6
+CERT J?qffp{~F[? fate=kill:v0 b0 ncol=6
+CERT J?qffp{}b{? fate=kill:v0 b1 ncol=6
+CERT J?qffp{^fw? fate=kill:v0 b1 ncol=6
+CERT J?qffZk^fb? fate=twins ncol=6
+CERT J?qffX{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qffX{}fw? fate=kill:v0 b0 ncol=6
+CERT J?qffX{}fs? fate=twins ncol=6
+CERT J?qffX{zfb? fate=kill:v0 b0 ncol=6
+CERT J?qffX{vfb? fate=kill:v0 b0 ncol=6
+CERT J?qffX{^fb? fate=kill:v0 b1 ncol=6
+CERT J?qfezs^fk? fate=kill:v0 b0 ncol=6
+CERT J?qfezk^fb? fate=kill:v0 b0 ncol=6
+CERT J?qfez[^fb? fate=twins ncol=6
+CERT J?qfey{^fb? fate=kill:v0 b0 ncol=6
+CERT J?qfex{~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qfex{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qfex{zfb? fate=kill:v0 b0 ncol=6
+CERT J?qfex{vfb? fate=kill:v0 b0 ncol=6
+CERT J?qfex{nfb? fate=kill:v0 b0 ncol=6
+CERT J?qfbx{}fw? fate=kill:v0 b1 ncol=6
+CERT J?qfbx{zfb? fate=twins ncol=6
+CERT J?qffd{~F[? fate=kill:v0 b0 ncol=6
+CERT J?qffVk^fb? fate=kill:v0 b0 ncol=6
+CERT J?qffT{~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qffT{~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qfbvw~F[? fate=kill:v0 b0 ncol=6
+CERT J?qfbvw~D{? fate=kill:v0 b0 ncol=6
+CERT J?qfbvw~B{? fate=kill:v0 b1 ncol=6
+CERT J?qfbvs~E{? fate=kill:v0 b0 ncol=6
+CERT J?qfbvs~D{? fate=kill:v0 b0 ncol=6
+CERT J?qfbvs}fp? fate=kill:v0 b0 ncol=6
+CERT J?qfbvk~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qfbvkzfb? fate=kill:v0 b0 ncol=6
+CERT J?qfbu{~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qfbt{~Fw? fate=twins ncol=6
+CERT J?qfbt{~Fs? fate=kill:v0 b1 ncol=6
+CERT J?qfb^w~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qfb^wzfb? fate=kill:v0 b0 ncol=6
+CERT J?qfb^k~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qfb^[~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qfb\{~Fb? fate=kill:v0 b1 ncol=6
+CERT J?qfRzs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qfRzs~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qerzs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qerzs~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qevd{~Fq? fate=kill:v0 b0 ncol=6
+CERT J?qevd{~Fi? fate=kill:v0 b0 ncol=6
+CERT J?qdrzw~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qdrzs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qdrzs~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qdrzs~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qdry{~Df? fate=kill:v0 b0 ncol=6
+CERT J?qbvrw|fe? fate=kill:v0 b0 ncol=6
+CERT J?qbvrw|fb? fate=twins ncol=6
+CERT J?qbvrs|fp? fate=kill:v0 b0 ncol=6
+CERT J?qbvrk~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qbvjs|fR? fate=twins ncol=6
+CERT J?qbvjs|er? fate=twins ncol=6
+CERT J?qbvjs}Vp? fate=kill:v0 b0 ncol=6
+CERT J?qbvZs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qbvZs~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qbvZs~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qbrzs~Fe? fate=kill:v0 b1 ncol=6
+CERT J?qe^d{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qb^Rr~Fe? fate=twins ncol=6
+CERT J?qb^rs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qb^rs~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qc~d{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qa~jw~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qa~jw~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qa~jw~?~? fate=kill:v0 b1 ncol=6
+CERT J?qa~fk~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qa~f[~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qa~e{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qfvrs^Cf_ fate=twins ncol=6
+CERT J?qfvrs^?v_ fate=twins ncol=6
+CERT J?qfvrs^?n_ fate=twins ncol=6
+CERT J?qezzs}Fe? fate=kill:v0 b0 ncol=6
+CERT J?qezzs}Fd? fate=kill:v0 b0 ncol=6
+CERT J?qezzs}Fb? fate=kill:v0 b0 ncol=6
+CERT J?qezzs}?~? fate=kill:v0 b1 ncol=6
+CERT J?qezzs}Fc_ fate=kill:v0 b0 ncol=6
+CERT J?qezzs}Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qezzs}?}_ fate=kill:v0 b1 ncol=6
+CERT J?qezzs}F`_ fate=kill:v0 b0 ncol=6
+CERT J?qezzs}?|_ fate=kill:v0 b1 ncol=6
+CERT J?qezzs}?z_ fate=kill:v0 b1 ncol=6
+CERT J?qbzzw|Fe? fate=twins ncol=6
+CERT J?qbzzw|Fd? fate=kill:v0 b1 ncol=6
+CERT J?qbzzw|?~? fate=twins ncol=6
+CERT J?qbzzw|F`_ fate=kill:v0 b1 ncol=6
+CERT J?qbzzw|?|_ fate=kill:v1 b1 ncol=6
+CERT J?ovFru~Fw? fate=twins ncol=6
+CERT J?ovFru}fw? fate=twins ncol=6
+CERT J?ovFru|fw? fate=twins ncol=6
+CERT J?ovFj{}fw? fate=twins ncol=6
+CERT J?ovFj{}fk? fate=twins ncol=6
+CERT J?ovFjy}fw? fate=twins ncol=6
+CERT J?ovFZmzfw? fate=twins ncol=6
+CERT J?ovDz{zf[? fate=twins ncol=6
+CERT J?ovFf{~Fk? fate=twins ncol=6
+CERT J?ovFVm~F[? fate=twins ncol=6
+CERT J?ovFNm~F[? fate=twins ncol=6
+CERT J?ovEnm~E{? fate=twins ncol=6
+CERT J?ovEn]~E{? fate=twins ncol=6
+CERT J?ovfb{}fq? fate=twins ncol=6
+CERT J?ovfb{}fi? fate=twins ncol=6
+CERT J?ovfb{{ve? fate=twins ncol=12
+CERT J?ovfR{}f[? fate=twins ncol=6
+CERT J?ovdr{}d{? fate=twins ncol=6
+CERT J?ovdq}~Fw? fate=twins ncol=6
+CERT J?oveZu~Fw? fate=twins ncol=6
+CERT J?ovfrw~FF? fate=twins ncol=6
+CERT J?ovfrw~Df? fate=twins ncol=6
+CERT J?ovfrw|dN? fate=twins ncol=6
+CERT J?ovfrw|`n? fate=twins ncol=6
+CERT J?ovfrwzf[? fate=twins ncol=6
+CERT J?ovfrwnd{? fate=twins ncol=6
+CERT J?ovfrs~FF? fate=twins ncol=6
+CERT J?ovfrs~@v? fate=twins ncol=6
+CERT J?ovfrs}dt? fate=twins ncol=6
+CERT J?ovfrs}fb? fate=twins ncol=6
+CERT J?ovfrk~EN? fate=twins ncol=6
+CERT J?ovfrk}f[? fate=twins ncol=6
+CERT J?ovfrkvfs? fate=twins ncol=6
+CERT J?ovfrknfw? fate=kill:v0 b0 ncol=6
+CERT J?ovfrknfs? fate=kill:v0 b0 ncol=6
+CERT J?ovfq{~D{? fate=twins ncol=6
+CERT J?ovfq{~B{? fate=twins ncol=6
+CERT J?ovfZk~Fk? fate=twins ncol=6
+CERT J?ovfZk~Fe? fate=twins ncol=6
+CERT J?ovfZk}fs? fate=twins ncol=6
+CERT J?ovfZkzfb? fate=twins ncol=12
+CERT J?ovfZkz_~? fate=twins ncol=6
+CERT J?ovfZkvfb? fate=twins ncol=6
+CERT J?ovfZknfb? fate=twins ncol=6
+CERT J?ovfZ[~Fk? fate=twins ncol=6
+CERT J?ovfZ[~Fe? fate=twins ncol=6
+CERT J?ovfZ[zfb? fate=twins ncol=6
+CERT J?ovfY{}fw? fate=kill:v0 b0 ncol=6
+CERT J?ovfY{zfb? fate=kill:v0 b0 ncol=6
+CERT J?ovffw~Fd? fate=twins ncol=6
+CERT J?ovffw|fb? fate=twins ncol=6
+CERT J?ovfVw~F[? fate=twins ncol=6
+CERT J?ovfVw~E{? fate=twins ncol=6
+CERT J?ovfVw~D{? fate=kill:v0 b0 ncol=6
+CERT J?ovfVk~Fw? fate=twins ncol=6
+CERT J?ovfVk~Fs? fate=twins ncol=6
+CERT J?ovfVk~Fk? fate=twins ncol=6
+CERT J?ovfV[~Fs? fate=twins ncol=6
+CERT J?ovfU{~Fs? fate=kill:v0 b0 ncol=6
+CERT J?ovdvw~F[? fate=kill:v0 b0 ncol=6
+CERT J?ovdvw~D{? fate=twins ncol=6
+CERT J?ovdvw~B{? fate=twins ncol=6
+CERT J?ovdvs~D{? fate=twins ncol=6
+CERT J?ovdvk~Fw? fate=twins ncol=6
+CERT J?ovdvk~Fs? fate=kill:v0 b0 ncol=6
+CERT J?ovdu{~Fw? fate=twins ncol=6
+CERT J?ovdu{~Fs? fate=twins ncol=6
+CERT J?ovdt{~Fw? fate=twins ncol=6
+CERT J?ovdt{~Fs? fate=twins ncol=6
+CERT J?ove^w~Fs? fate=twins ncol=6
+CERT J?ove^w~Fk? fate=twins ncol=6
+CERT J?ove^s~Fw? fate=twins ncol=6
+CERT J?ove^s~Fk? fate=twins ncol=6
+CERT J?ove^k~Fb? fate=twins ncol=6
+CERT J?ovd^k~Fb? fate=kill:v0 b0 ncol=6
+CERT J?ovVR{{vw? fate=twins ncol=6
+CERT J?ovVrw|fe? fate=twins ncol=6
+CERT J?ovVrw|fb? fate=twins ncol=6
+CERT J?ovVrs~Fw? fate=twins ncol=12
+CERT J?ovVrs~EN? fate=twins ncol=6
+CERT J?ovVrs|fp? fate=twins ncol=6
+CERT J?ovVrs|Vp? fate=twins ncol=6
+CERT J?ovVjs|fR? fate=twins ncol=6
+CERT J?ovVZs~Fe? fate=twins ncol=6
+CERT J?ovVZs~Fb? fate=twins ncol=6
+CERT J?ovUzs~Fe? fate=twins ncol=6
+CERT J?ovTzs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?ovTzs~EN? fate=kill:v0 b0 ncol=6
+CERT J?ovUnkzUl? fate=twins ncol=6
+CERT J?ottr{{vw? fate=twins ncol=6
+CERT J?otrr{{vw? fate=twins ncol=6
+CERT J?otvrw|fi? fate=twins ncol=6
+CERT J?otvrw|fb? fate=twins ncol=6
+CERT J?otvrs}Ne? fate=twins ncol=6
+CERT J?otvZs~Fe? fate=kill:v0 b0 ncol=6
+CERT J?ottzs~Fd? fate=twins ncol=6
+CERT J?ottzs~Fb? fate=twins ncol=6
+CERT J?ottx{~Df? fate=twins ncol=6
+CERT J?otrzs~Fe? fate=twins ncol=6
+CERT J?otrzs~Fd? fate=twins ncol=6
+CERT J?otrx{~Df? fate=twins ncol=6
+CERT J?otrx{~Bf? fate=twins ncol=6
+CERT J?ou^jw~Fd? fate=twins ncol=6
+CERT J?ou^jw~Fb? fate=twins ncol=6
+CERT J?ot^rs~@v? fate=kill:v0 b1 ncol=6
+CERT J?ovvrs}Fp? fate=twins ncol=6
+CERT J?ovvrs}FF? fate=twins ncol=6
+CERT J?ovvrs}Df? fate=twins ncol=6
+CERT J?ovvrs}DM_ fate=twins ncol=6
+CERT J?ovvrs}@m_ fate=twins ncol=6
+CERT J?ovvrs|FM? fate=twins ncol=6
+CERT J?ovvrs|Dm? fate=twins ncol=6
+CERT J?ovvrs|FF? fate=twins ncol=6
+CERT J?ovvrs|Df? fate=twins ncol=6
+CERT J?ovvZw|Fw? fate=twins ncol=12
+CERT J?ovvZw|@v? fate=twins ncol=6
+CERT J?ovvZw|EN? fate=twins ncol=6
+CERT J?ovvZw|@u_ fate=kill:v0 b1 ncol=6
+CERT J?ovvZw|EM_ fate=twins ncol=6
+CERT J?ovvZw|@t_ fate=twins ncol=6
+CERT J?ovvZw|EL_ fate=twins ncol=6
+CERT J?ovvZw|DF_ fate=twins ncol=6
+CERT J?ovtzw|EF_ fate=twins ncol=12
+CERT J?ovtzw|DF_ fate=twins ncol=6
+CERT J?ovtzw|AN_ fate=twins ncol=6
+CERT J?ov]zs}Fe? fate=twins ncol=6
+CERT J?ov]zs}Fd? fate=twins ncol=6
+CERT J?ov]zs}Fc_ fate=twins ncol=6
+CERT J?ov]zs}F`_ fate=twins ncol=6
+CERT J?ov]zs}@V_ fate=kill:v0 b1 ncol=6
+CERT J?ov]zs}?^_ fate=kill:v0 b1 ncol=6
+CERT J?ov\zw|Fe? fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|Fd? fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|Fb? fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|@v? fate=kill:v0 b1 ncol=6
+CERT J?ov\zw|EN? fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|F`_ fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|@t_ fate=kill:v0 b1 ncol=6
+CERT J?ov\zw|EL_ fate=kill:v0 b0 ncol=6
+CERT J?ov\zw|?^_ fate=kill:v0 b1 ncol=6
+CERT J?rfFqu^_~? fate=twins ncol=6
+CERT J?rfFqu\vp? fate=kill:v0 b0 ncol=6
+CERT J?rfFqm^fb? fate=kill:v0 b0 ncol=6
+CERT J?rfFqm^_~? fate=twins ncol=6
+CERT J?rfFq]^fb? fate=kill:v0 b0 ncol=6
+CERT J?rfFo}|_~? fate=twins ncol=6
+CERT J?rfFo}zfb? fate=twins ncol=6
+CERT J?rfFYy^fb? fate=kill:v0 b0 ncol=6
+CERT J?rfFYy^_~? fate=kill:v0 b1 ncol=6
+CERT J?rfEyy^fb? fate=kill:v0 b0 ncol=6
+CERT J?rfDzq^_~? fate=kill:v0 b1 ncol=6
+CERT J?rfDxy|_~? fate=kill:v0 b1 ncol=6
+CERT J?rfDxyzfb? fate=kill:v0 b0 ncol=6
+CERT J?refq{~Bf? fate=kill:v0 b0 ncol=6
+CERT J?refqu^fk? fate=kill:v0 b0 ncol=6
+CERT J?refqu\vp? fate=kill:v0 b0 ncol=6
+CERT J?refqm^fb? fate=kill:v0 b0 ncol=6
+CERT J?refiy^fk? fate=kill:v0 b0 ncol=6
+CERT J?refYy^fb? fate=kill:v0 b0 ncol=6
+CERT J?reeyy^fb? fate=kill:v0 b0 ncol=6
+CERT J?redxyzfb? fate=kill:v0 b0 ncol=6
+CERT J?redxm}fb? fate=kill:v0 b0 ncol=6
+CERT J?redl{}fw? fate=kill:v0 b0 ncol=6
+CERT J?redl{}fk? fate=kill:v0 b0 ncol=6
+CERT J?red\y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?re`~w~Fw? fate=twins ncol=6
+CERT J?re`~wzfb? fate=twins ncol=6
+CERT J?re`~s}fk? fate=twins ncol=6
+CERT J?re`~k}fb? fate=twins ncol=6
+CERT J?re`~[}fb? fate=twins ncol=6
+CERT J?rffa{^fq? fate=kill:v0 b0 ncol=6
+CERT J?rffa{^fb? fate=kill:v0 b0 ncol=6
+CERT J?rffa{]vw? fate=kill:v0 b0 ncol=6
+CERT J?rffa{]ve? fate=twins ncol=6
+CERT J?rffa{\vk? fate=kill:v0 b0 ncol=6
+CERT J?rffa{\ve? fate=twins ncol=6
+CERT J?rffa{Zu]? fate=twins ncol=6
+CERT J?rffa{Zs}? fate=twins ncol=6
+CERT J?rffa{Vu]? fate=twins ncol=6
+CERT J?rffa{Vt]? fate=twins ncol=6
+CERT J?rffa{Vs}? fate=twins ncol=6
+CERT J?rffa{Vp}? fate=twins ncol=6
+CERT J?rffa{Nu]? fate=twins ncol=6
+CERT J?rffa{Nq^? fate=twins ncol=6
+CERT J?rffau^Ve? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw{rN? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw{qn? fate=kill:v0 b0 ncol=6
+CERT J?rfdrwtrj? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw\um? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw\vJ? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw\uj? fate=kill:v0 b0 ncol=6
+CERT J?rfdrw\vF? fate=kill:v0 b0 ncol=6
+CERT J?rfdrs^fb? fate=kill:v0 b0 ncol=6
+CERT J?rfdrs\vk? fate=kill:v0 b0 ncol=6
+CERT J?rfdrk^f[? fate=kill:v0 b0 ncol=6
+CERT J?rfdrk^e{? fate=kill:v0 b0 ncol=6
+CERT J?rfdrk^d{? fate=kill:v0 b0 ncol=6
+CERT J?rfdrk^b{? fate=twins ncol=6
+CERT J?rfdp{~Ef? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{~Df? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{~Bf? fate=kill:v0 b1 ncol=6
+CERT J?rfdp{}fb? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{|fb? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{zf[? fate=twins ncol=6
+CERT J?rfdp{zd{? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{zb{? fate=kill:v0 b1 ncol=6
+CERT J?rfdp{vf[? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{nd{? fate=twins ncol=6
+CERT J?rfdp{^b{? fate=twins ncol=6
+CERT J?rfdp{{vd? fate=kill:v0 b0 ncol=6
+CERT J?rfdp{{vb? fate=kill:v0 b0 ncol=6
+CERT J?rfdpy~Fb? fate=kill:v0 b0 ncol=6
+CERT J?rfdpy|Vs? fate=kill:v0 b0 ncol=6
+CERT J?rfdpu~Fb? fate=kill:v0 b0 ncol=6
+CERT J?rfdpu|Vk? fate=kill:v0 b0 ncol=6
+CERT J?rfdpu|Vi? fate=twins ncol=6
+CERT J?rfdpu|Ve? fate=kill:v0 b0 ncol=6
+CERT J?rfdqm~B{? fate=kill:v0 b0 ncol=6
+CERT J?rfdpm~F[? fate=kill:v0 b0 ncol=6
+CERT J?rfdpm~D{? fate=kill:v0 b0 ncol=6
+CERT J?rfdpm~B{? fate=kill:v0 b1 ncol=6
+CERT J?rfdrp^fw? fate=kill:v0 b0 ncol=6
+CERT J?rfdrp^fp? fate=kill:v0 b0 ncol=6
+CERT J?rffrwNfb? fate=twins ncol=6
+CERT J?rffrwNfa_ fate=twins ncol=6
+CERT J?rffrsNfb? fate=twins ncol=6
+CERT J?rffrsNfa_ fate=twins ncol=6
+CERT J?rffrsNf`_ fate=twins ncol=6
+CERT J?rffq{^Ef? fate=kill:v0 b0 ncol=6
+CERT J?rffq{^Df? fate=kill:v0 b0 ncol=6
+CERT J?rffq{^Bf? fate=kill:v0 b1 ncol=6
+CERT J?rffq{^Ed_ fate=kill:v0 b0 ncol=6
+CERT J?rffe{^Fd? fate=kill:v0 b0 ncol=6
+CERT J?rffe{^F`_ fate=kill:v0 b0 ncol=12
+CERT J?rfVa{^VY? fate=kill:v0 b0 ncol=6
+CERT J?rfVa{^Uy? fate=kill:v0 b0 ncol=6
+CERT J?rfVa{^Ty? fate=kill:v0 b0 ncol=6
+CERT J?rfVa{^Ry? fate=twins ncol=6
+CERT J?rdvRs\vM? fate=kill:v0 b0 ncol=6
+CERT J?rdvRs\um? fate=kill:v0 b0 ncol=6
+CERT J?rdvP{{vF? fate=kill:v0 b0 ncol=6
+CERT J?rdvP{{uf? fate=kill:v0 b0 ncol=6
+CERT J?rdvPt|fM? fate=kill:v0 b0 ncol=6
+CERT J?rdvPt|em? fate=kill:v0 b0 ncol=6
+CERT J?rdupt|fM? fate=kill:v0 b0 ncol=6
+CERT J?rdupt|em? fate=kill:v0 b0 ncol=6
+CERT J?rdupt|bm? fate=kill:v0 b1 ncol=6
+CERT J?rdtpu|VM? fate=kill:v0 b0 ncol=6
+CERT J?rdrrs~Ef? fate=kill:v0 b0 ncol=6
+CERT J?rdrrs~Df? fate=kill:v0 b0 ncol=6
+CERT J?rdrrs|fp? fate=kill:v0 b0 ncol=6
+CERT J?rdrrs{vp? fate=kill:v0 b0 ncol=6
+CERT J?rdrrs{vd? fate=kill:v0 b0 ncol=6
+CERT J?rdrrsxvM? fate=twins ncol=6
+CERT J?rdrrstvM? fate=kill:v0 b0 ncol=6
+CERT J?rdrrstum? fate=twins ncol=6
+CERT J?rdrrsttm? fate=kill:v0 b0 ncol=6
+CERT J?rdrqu|VM? fate=kill:v0 b0 ncol=6
+CERT J?rdrqu|Um? fate=kill:v0 b0 ncol=6
+CERT J?rdvrw\fM? fate=kill:v0 b0 ncol=6
+CERT J?rdvrw\em? fate=kill:v0 b0 ncol=6
+CERT J?rdvrw\dm? fate=kill:v0 b0 ncol=6
+CERT J?rdvrw\bm? fate=kill:v0 b1 ncol=6
+CERT J?rdvrw\fJ? fate=twins ncol=6
+CERT J?rdvrw\ej? fate=twins ncol=6
+CERT J?rdvrw\dj? fate=twins ncol=6
+CERT J?rdvrw\bj? fate=twins ncol=6
+CERT J?rdvrw\fF? fate=twins ncol=6
+CERT J?rdvrw\ef? fate=twins ncol=6
+CERT J?rdvrw\df? fate=twins ncol=6
+CERT J?rdvrw\bf? fate=twins ncol=6
+CERT J?rdrzw|Ef? fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Df? fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Bf? fate=kill:v0 b1 ncol=6
+CERT J?rdrzw|Ee_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|De_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Be_ fate=kill:v0 b1 ncol=6
+CERT J?rdrzw|Ed_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Dd_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Bd_ fate=kill:v0 b1 ncol=6
+CERT J?rdrzw|Eb_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Db_ fate=kill:v0 b0 ncol=6
+CERT J?rdrzw|Bb_ fate=kill:v0 b1 ncol=6
+CERT J?rdry{{fF? fate=kill:v0 b0 ncol=6
+CERT J?rdry{{ef? fate=kill:v0 b0 ncol=6
+CERT J?rdry{{df? fate=kill:v0 b0 ncol=6
+CERT J?rdry{{fW_ fate=kill:v0 b0 ncol=6
+CERT J?rdry{{dw_ fate=kill:v0 b0 ncol=6
+CERT J?rdry{{bw_ fate=kill:v0 b1 ncol=6
+CERT J?rdry{{_^_ fate=kill:v0 b1 ncol=6
+CERT J?rdvfw^Fd? fate=kill:v0 b0 ncol=6
+CERT J?rdvfw^Fc_ fate=kill:v0 b0 ncol=6
+CERT J?rdvfw^F`_ fate=kill:v0 b0 ncol=6
+CERT J?rdvfs^Fd? fate=kill:v0 b0 ncol=6
+CERT J?rdvfs^Fc_ fate=kill:v0 b0 ncol=6
+CERT J?rdvfs^F`_ fate=kill:v0 b0 ncol=6
+CERT J?rfLp{{vF? fate=kill:v0 b0 ncol=6
+CERT J?rfLp{{uf? fate=kill:v0 b0 ncol=6
+CERT J?relr[{rf? fate=kill:v0 b0 ncol=6
+CERT J?relp{{vF? fate=kill:v0 b0 ncol=6
+CERT J?relp{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qvFb{VvM? fate=kill:v0 b0 ncol=6
+CERT J?qvFbuZvM? fate=kill:v0 b0 ncol=6
+CERT J?qvFb]^VM? fate=kill:v0 b0 ncol=6
+CERT J?qvFb]\vY? fate=kill:v0 b0 ncol=6
+CERT J?qvFb]Zvi? fate=kill:v0 b0 ncol=6
+CERT J?qvF`}xvM? fate=twins ncol=6
+CERT J?qvFbt^e]? fate=kill:v0 b0 ncol=6
+CERT J?qvFbl^fY? fate=twins ncol=6
+CERT J?qvFbl^fM? fate=kill:v0 b0 ncol=6
+CERT J?qvFbl^em? fate=kill:v0 b0 ncol=6
+CERT J?qvFb\^fY? fate=kill:v0 b0 ncol=6
+CERT J?qvFb\^fM? fate=kill:v0 b0 ncol=6
+CERT J?qvFR{^fw? fate=twins ncol=6
+CERT J?qvFRu\vM? fate=kill:v0 b0 ncol=6
+CERT J?qvBr{zfw? fate=twins ncol=6
+CERT J?qvBrt}fi? fate=twins ncol=6
+CERT J?qvBrf|fM? fate=twins ncol=6
+CERT J?qvFJy^fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBZ{}fw? fate=twins ncol=6
+CERT J?qvBZu}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvFrw|bN? fate=twins ncol=6
+CERT J?qvFrk^fw? fate=kill:v0 b0 ncol=6
+CERT J?qvFq{^fw? fate=kill:v0 b0 ncol=6
+CERT J?qvFri}bj? fate=kill:v0 b0 ncol=6
+CERT J?qvFpy~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvFpy}f[? fate=kill:v0 b0 ncol=6
+CERT J?qvFpy}ej? fate=kill:v0 b0 ncol=6
+CERT J?qvFpy}dj? fate=kill:v0 b0 ncol=6
+CERT J?qvFpyvfs? fate=kill:v0 b0 ncol=6
+CERT J?qvFpy^fw? fate=kill:v0 b1 ncol=6
+CERT J?qvFre^fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFqu^fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFrM^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvFq]^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvFji^fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFhy~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvFhy}fh? fate=kill:v0 b0 ncol=6
+CERT J?qvFhy|b{? fate=kill:v0 b1 ncol=6
+CERT J?qvFhyvfk? fate=kill:v0 b0 ncol=6
+CERT J?qvFhy}Vh? fate=kill:v0 b0 ncol=6
+CERT J?qvFZq^fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFZi^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvFXy~Fw? fate=twins ncol=6
+CERT J?qvFXy~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFXy}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvFXy}fs? fate=twins ncol=6
+CERT J?qvFXyzfb? fate=kill:v0 b0 ncol=6
+CERT J?qvFXyvfb? fate=kill:v0 b0 ncol=6
+CERT J?qvFX]}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvEzw^fw? fate=kill:v0 b0 ncol=6
+CERT J?qvEzi^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvEzY^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvEyy^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvExy~Fw? fate=twins ncol=6
+CERT J?qvExy~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvExy}fs? fate=twins ncol=6
+CERT J?qvExyzfb? fate=kill:v0 b0 ncol=6
+CERT J?qvExyvfb? fate=kill:v0 b0 ncol=6
+CERT J?qvExynfb? fate=kill:v0 b0 ncol=6
+CERT J?qvDxy~Fw? fate=twins ncol=6
+CERT J?qvBzw~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw~FF? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw~Ef? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw~Df? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw}f[? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw|e{? fate=kill:v0 b0 ncol=6
+CERT J?qvBzw^fw? fate=kill:v0 b1 ncol=6
+CERT J?qvBzs~FF? fate=kill:v0 b0 ncol=6
+CERT J?qvBzs}f[? fate=kill:v0 b0 ncol=6
+CERT J?qvBzs}e{? fate=kill:v0 b0 ncol=6
+CERT J?qvBzs}b{? fate=kill:v0 b1 ncol=6
+CERT J?qvBzk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBzk}fs? fate=twins ncol=6
+CERT J?qvBzk}fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBz[}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBz[}fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBy{}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBx{}fw? fate=kill:v0 b1 ncol=6
+CERT J?qvBzi~Fw? fate=twins ncol=6
+CERT J?qvBzi}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBzi}fs? fate=twins ncol=6
+CERT J?qvBzi|fk? fate=twins ncol=6
+CERT J?qvBzizfb? fate=kill:v0 b0 ncol=6
+CERT J?qvBzivfb? fate=kill:v0 b0 ncol=6
+CERT J?qvBxy~Fw? fate=twins ncol=6
+CERT J?qvBxy}fw? fate=kill:v0 b1 ncol=6
+CERT J?qvBxy}fs? fate=twins ncol=6
+CERT J?qvBze}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBze}fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBzM}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvFd{~E{? fate=kill:v0 b0 ncol=6
+CERT J?qvFd{~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qvFd{zfk? fate=kill:v0 b0 ncol=6
+CERT J?qvFd{vfk? fate=kill:v0 b0 ncol=6
+CERT J?qvFd{^fw? fate=kill:v0 b1 ncol=6
+CERT J?qvFd{^fk? fate=kill:v0 b1 ncol=6
+CERT J?qvFfq^Vh? fate=kill:v0 b0 ncol=6
+CERT J?qvFdy~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvFdy~B{? fate=kill:v0 b1 ncol=6
+CERT J?qvFdy|Vh? fate=kill:v0 b0 ncol=6
+CERT J?qvFdm~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvFc}~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qvEvk^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvEu{^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvEt{~Fw? fate=twins ncol=6
+CERT J?qvEt{zfb? fate=kill:v0 b0 ncol=6
+CERT J?qvEt{vfb? fate=kill:v0 b0 ncol=6
+CERT J?qvEt{nfb? fate=kill:v0 b0 ncol=6
+CERT J?qvDt{~Fw? fate=twins ncol=6
+CERT J?qvDt{}fs? fate=twins ncol=6
+CERT J?qvDt{vfb? fate=kill:v0 b0 ncol=6
+CERT J?qvBvi~Fw? fate=twins ncol=6
+CERT J?qvBvi~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qvBvi~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBvY~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBuu~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qvBuu~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBvM~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvFLy~Fw? fate=twins ncol=6
+CERT J?qvFLy~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvDl{}fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBnw~E{? fate=kill:v0 b0 ncol=6
+CERT J?qvBnw|b{? fate=kill:v0 b1 ncol=6
+CERT J?qvBnw|fh? fate=kill:v0 b0 ncol=6
+CERT J?qvBnw|fd? fate=kill:v0 b0 ncol=6
+CERT J?qvBnwzfk? fate=kill:v0 b0 ncol=6
+CERT J?qvBnwvfk? fate=kill:v0 b0 ncol=6
+CERT J?qvBnwnfk? fate=kill:v0 b0 ncol=6
+CERT J?qvBns}b{? fate=kill:v0 b1 ncol=6
+CERT J?qvBnk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBn[}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBn[vfb? fate=kill:v0 b0 ncol=6
+CERT J?qvBm{}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvBl{}fk? fate=kill:v0 b1 ncol=6
+CERT J?qvBnq~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvBnq~E{? fate=kill:v0 b0 ncol=6
+CERT J?qvBnq~B{? fate=kill:v0 b1 ncol=6
+CERT J?qvBni~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qvBnY~Fw? fate=twins ncol=6
+CERT J?qvBly~Fs? fate=kill:v0 b1 ncol=6
+CERT J?qvBly~Fk? fate=kill:v0 b1 ncol=6
+CERT J?qvB^w~Fw? fate=twins ncol=6
+CERT J?qvB^w}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvB^w}fs? fate=twins ncol=6
+CERT J?qvB^wzfb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^wvfb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^s}fw? fate=kill:v0 b0 ncol=6
+CERT J?qvB^szfb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^k}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^[~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^[}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^i~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^Y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvB^U~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~w~Fw? fate=twins ncol=6
+CERT J?qvA~w}fs? fate=twins ncol=6
+CERT J?qvA~w|fk? fate=twins ncol=6
+CERT J?qvA~wzfb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~wvfb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~wnfb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~[}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~i~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvA~Y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvA}y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qv@~w~Fw? fate=twins ncol=6
+CERT J?qv@~wvfb? fate=kill:v0 b0 ncol=6
+CERT J?qv@~s}fw? fate=kill:v0 b0 ncol=6
+CERT J?qv@~[}fb? fate=kill:v0 b0 ncol=6
+CERT J?qv@~Y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qtf`}ltm? fate=twins ncol=6
+CERT J?qtdr{^fs? fate=twins ncol=6
+CERT J?qt`z{}fw? fate=twins ncol=6
+CERT J?qt`zy}fw? fate=twins ncol=6
+CERT J?qtfrw^d{? fate=twins ncol=6
+CERT J?qtfrw^b{? fate=twins ncol=6
+CERT J?qtfq{^fw? fate=twins ncol=6
+CERT J?qtfq{^fs? fate=twins ncol=6
+CERT J?qtfp{~FF? fate=kill:v0 b0 ncol=6
+CERT J?qtfp{~Df? fate=twins ncol=6
+CERT J?qtfp{}d{? fate=twins ncol=6
+CERT J?qtfp{}b{? fate=twins ncol=6
+CERT J?qtfp{^fw? fate=twins ncol=6
+CERT J?qtfre^fk? fate=twins ncol=6
+CERT J?qtfqu^fk? fate=twins ncol=6
+CERT J?qtfo}~Fs? fate=twins ncol=6
+CERT J?qtfo}|fk? fate=twins ncol=6
+CERT J?qtfo}nfb? fate=twins ncol=6
+CERT J?qtfjs]vp? fate=twins ncol=6
+CERT J?qtfjs]vd? fate=twins ncol=6
+CERT J?qtfh{}d{? fate=twins ncol=6
+CERT J?qtfjq^d{? fate=twins ncol=6
+CERT J?qtfiy^fk? fate=twins ncol=6
+CERT J?qtfhy}fh? fate=twins ncol=6
+CERT J?qtfhy|d{? fate=twins ncol=6
+CERT J?qtfhy|b{? fate=twins ncol=6
+CERT J?qtfg}}fw? fate=twins ncol=6
+CERT J?qtfg}}fk? fate=twins ncol=6
+CERT J?qtfZw^fw? fate=kill:v0 b0 ncol=6
+CERT J?qtfZY^fb? fate=kill:v0 b0 ncol=6
+CERT J?qtfXy~Fw? fate=twins ncol=6
+CERT J?qtfXy}fw? fate=kill:v0 b0 ncol=6
+CERT J?qtfXy}fs? fate=twins ncol=6
+CERT J?qtfXy|fk? fate=twins ncol=6
+CERT J?qtfXyvfb? fate=kill:v0 b0 ncol=6
+CERT J?qtdyy^fb? fate=twins ncol=6
+CERT J?qtdxy~Fw? fate=twins ncol=6
+CERT J?qtdxy}fw? fate=twins ncol=6
+CERT J?qtdxy|fk? fate=twins ncol=6
+CERT J?qtdxynfb? fate=twins ncol=6
+CERT J?qtbzk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qtby{}fw? fate=twins ncol=6
+CERT J?qtby{}fs? fate=twins ncol=6
+CERT J?qtby{}fk? fate=twins ncol=6
+CERT J?qtbx{}fw? fate=twins ncol=6
+CERT J?qtbx{}fs? fate=twins ncol=6
+CERT J?qtbxy~Fw? fate=twins ncol=6
+CERT J?qtbxy~Fs? fate=twins ncol=6
+CERT J?qtbyu}fw? fate=twins ncol=6
+CERT J?qtbyu}fk? fate=twins ncol=6
+CERT J?qtbzM}fb? fate=kill:v0 b0 ncol=6
+CERT J?qtfL{}fk? fate=kill:v0 b0 ncol=6
+CERT J?qtbnw|d{? fate=twins ncol=6
+CERT J?qtbnwzfk? fate=twins ncol=6
+CERT J?qtbnwlnq? fate=twins ncol=6
+CERT J?qtbns}d{? fate=twins ncol=6
+CERT J?qtbnk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qtbm{}fw? fate=twins ncol=6
+CERT J?qtbm{}fk? fate=twins ncol=6
+CERT J?qtbl{}fw? fate=twins ncol=6
+CERT J?qtbl{}fk? fate=twins ncol=6
+CERT J?qte^w^fb? fate=kill:v0 b0 ncol=6
+CERT J?qtb^w~Fw? fate=twins ncol=6
+CERT J?qtb^w~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qtb^w|fk? fate=twins ncol=6
+CERT J?qtb^[}fb? fate=kill:v0 b0 ncol=6
+CERT J?qt`}{}fb? fate=twins ncol=6
+CERT J?qrfbmzfM? fate=twins ncol=12
+CERT J?qrfbx~Fw? fate=twins ncol=12
+CERT J?qrfbx~Fs? fate=twins ncol=6
+CERT J?qrfbx~Fk? fate=twins ncol=6
+CERT J?qrfbt}fw? fate=twins ncol=6
+CERT J?qrfbt}fs? fate=twins ncol=12
+CERT J?qrfbt}fk? fate=twins ncol=6
+CERT J?qrfbfzfM? fate=twins ncol=12
+CERT J?qrfavndm? fate=twins ncol=12
+CERT J?qrfbN|fM? fate=kill:v0 b0 ncol=6
+CERT J?qrfbNzfk? fate=kill:v0 b0 ncol=6
+CERT J?qrfR{zfw? fate=twins ncol=6
+CERT J?qrfRu|f[? fate=twins ncol=6
+CERT J?qrfRuvfk? fate=twins ncol=6
+CERT J?qrfRf|fM? fate=twins ncol=6
+CERT J?qrdr{}b{? fate=twins ncol=6
+CERT J?qrdr{nfs? fate=twins ncol=6
+CERT J?qrdrynfs? fate=twins ncol=6
+CERT J?qrdqv|dm? fate=twins ncol=6
+CERT J?qrfJy|f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfJ]}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfJx|fk? fate=twins ncol=6
+CERT J?qrbh}}fw? fate=twins ncol=6
+CERT J?qrdZy}fs? fate=twins ncol=6
+CERT J?qr`z{}fs? fate=twins ncol=6
+CERT J?qrfrw~Fb? fate=twins ncol=12
+CERT J?qrfrw|eN? fate=twins ncol=6
+CERT J?qrfrw|dN? fate=twins ncol=6
+CERT J?qrfrw|`n? fate=twins ncol=6
+CERT J?qrfrwnd{? fate=twins ncol=6
+CERT J?qrfrwnb{? fate=twins ncol=6
+CERT J?qrfrs~Fb? fate=twins ncol=12
+CERT J?qrfrs}fp? fate=twins ncol=6
+CERT J?qrfrs}fd? fate=twins ncol=6
+CERT J?qrfrs}fb? fate=twins ncol=6
+CERT J?qrfrs|fM? fate=kill:v0 b0 ncol=6
+CERT J?qrfrs|dm? fate=twins ncol=6
+CERT J?qrfrs|bm? fate=twins ncol=6
+CERT J?qrfrs|fb? fate=twins ncol=6
+CERT J?qrfrszf[? fate=twins ncol=6
+CERT J?qrfrs^b{? fate=twins ncol=6
+CERT J?qrfrk~F[? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~E{? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~D{? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~Ef? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~Df? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk~Bf? fate=kill:v0 b1 ncol=6
+CERT J?qrfrknfs? fate=kill:v0 b0 ncol=6
+CERT J?qrfrk^fw? fate=kill:v0 b1 ncol=6
+CERT J?qrfq{~F[? fate=kill:v0 b0 ncol=6
+CERT J?qrfq{~D{? fate=twins ncol=6
+CERT J?qrfq{~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrfq{~Df? fate=twins ncol=6
+CERT J?qrfq{~Bf? fate=twins ncol=6
+CERT J?qrfq{}d{? fate=twins ncol=6
+CERT J?qrfq{}b{? fate=twins ncol=6
+CERT J?qrfq{^fw? fate=twins ncol=6
+CERT J?qrfp{~F[? fate=kill:v0 b1 ncol=6
+CERT J?qrfp{~FF? fate=kill:v0 b1 ncol=6
+CERT J?qrfp{~Df? fate=twins ncol=6
+CERT J?qrfp{~Bf? fate=twins ncol=6
+CERT J?qrfp{}d{? fate=twins ncol=6
+CERT J?qrfp{^fw? fate=twins ncol=6
+CERT J?qrfp{^fs? fate=twins ncol=6
+CERT J?qrfp{^fk? fate=twins ncol=6
+CERT J?qrfre~F[? fate=kill:v0 b0 ncol=6
+CERT J?qrfre|f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfre|e{? fate=kill:v0 b0 ncol=6
+CERT J?qrfre|fi? fate=kill:v0 b0 ncol=6
+CERT J?qrfqu|f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfqu|d{? fate=twins ncol=6
+CERT J?qrfqu|fi? fate=twins ncol=6
+CERT J?qrfqu|fe? fate=twins ncol=6
+CERT J?qrfqunfs? fate=twins ncol=6
+CERT J?qrfrM~Fw? fate=twins ncol=6
+CERT J?qrfrM~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfrM|fk? fate=twins ncol=6
+CERT J?qrfrMzfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfqm~Fw? fate=twins ncol=6
+CERT J?qrfqm~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qrfqm}fs? fate=twins ncol=6
+CERT J?qrfqmzfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfqmnfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfo}~Fw? fate=twins ncol=6
+CERT J?qrfo}~Fs? fate=twins ncol=6
+CERT J?qrfo}|fk? fate=twins ncol=6
+CERT J?qrfo}nfb? fate=twins ncol=6
+CERT J?qrfjs}du? fate=twins ncol=6
+CERT J?qrfjs}fR? fate=twins ncol=6
+CERT J?qrfjs}dr? fate=twins ncol=6
+CERT J?qrfjs}br? fate=twins ncol=6
+CERT J?qrfjs}fF? fate=twins ncol=6
+CERT J?qrfjs}df? fate=twins ncol=6
+CERT J?qrfjs}bf? fate=twins ncol=6
+CERT J?qrfjs}Tt? fate=twins ncol=6
+CERT J?qrfjs{tt? fate=twins ncol=6
+CERT J?qrfjs{rt? fate=twins ncol=6
+CERT J?qrfjk~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrfjk}f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfi{}f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfh{}f[? fate=kill:v0 b1 ncol=6
+CERT J?qrfh{}b{? fate=twins ncol=6
+CERT J?qrfjq~Fp? fate=twins ncol=6
+CERT J?qrfjq~Fh? fate=twins ncol=6
+CERT J?qrfjq~Fb? fate=twins ncol=6
+CERT J?qrfjqzf[? fate=twins ncol=6
+CERT J?qrfjqze{? fate=kill:v0 b0 ncol=6
+CERT J?qrfhu}f[? fate=kill:v0 b1 ncol=6
+CERT J?qrfhu}d{? fate=twins ncol=6
+CERT J?qrfhu}b{? fate=twins ncol=6
+CERT J?qrfjM}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfjM}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfim}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfhm}fw? fate=kill:v0 b1 ncol=6
+CERT J?qrfg}}fw? fate=twins ncol=6
+CERT J?qrfg}}fk? fate=twins ncol=6
+CERT J?qrfZk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfZk}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfZ[}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfZ[}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfX{}fw? fate=kill:v0 b1 ncol=6
+CERT J?qrfZq~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qrfZqzfk? fate=kill:v0 b0 ncol=6
+CERT J?qrfZqvfk? fate=kill:v0 b0 ncol=6
+CERT J?qrfZi~Fw? fate=twins ncol=6
+CERT J?qrfZi~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qrfZi|fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfZi|fk? fate=twins ncol=6
+CERT J?qrfZizfb? fate=kill:v0 b0 ncol=12
+CERT J?qrfZiz_~? fate=kill:v0 b1 ncol=6
+CERT J?qrfZivfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfZinfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfZY~Fw? fate=twins ncol=6
+CERT J?qrfZY|fk? fate=twins ncol=6
+CERT J?qrfZYzfb? fate=kill:v0 b0 ncol=6
+CERT J?qrfXm}fb? fate=kill:v0 b1 ncol=6
+CERT J?qrdzk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrdzk}fs? fate=twins ncol=6
+CERT J?qrdzk}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrdy{}fw? fate=twins ncol=6
+CERT J?qrdy{}fs? fate=twins ncol=6
+CERT J?qrdx{}fw? fate=twins ncol=6
+CERT J?qrdx{}fs? fate=twins ncol=6
+CERT J?qrdzq~Fe? fate=twins ncol=6
+CERT J?qrdzq|f[? fate=kill:v0 b0 ncol=6
+CERT J?qrdzqnfs? fate=twins ncol=6
+CERT J?qrdzqnfk? fate=twins ncol=6
+CERT J?qrdzq^fk? fate=twins ncol=6
+CERT J?qrdzi~Fw? fate=twins ncol=6
+CERT J?qrdzi~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qrdzi}fs? fate=twins ncol=6
+CERT J?qrdzizfb? fate=kill:v0 b0 ncol=6
+CERT J?qrdzinfb? fate=kill:v0 b0 ncol=6
+CERT J?qrdxy~Fw? fate=twins ncol=6
+CERT J?qrdxy~Fs? fate=twins ncol=6
+CERT J?qrdxynfb? fate=twins ncol=6
+CERT J?qrdxu}fw? fate=twins ncol=6
+CERT J?qrdxu}fk? fate=twins ncol=6
+CERT J?qrdw}}fb? fate=twins ncol=6
+CERT J?qrbx{}fw? fate=twins ncol=6
+CERT J?qrbx{}fs? fate=twins ncol=6
+CERT J?qrbx{}fk? fate=twins ncol=6
+CERT J?qrbx{^fb? fate=twins ncol=12
+CERT J?qrbzq|f[? fate=kill:v0 b1 ncol=6
+CERT J?qrbzqnfk? fate=twins ncol=6
+CERT J?qrbzq^fw? fate=twins ncol=6
+CERT J?qrbzq^fk? fate=twins ncol=6
+CERT J?qrbzi~Fw? fate=twins ncol=6
+CERT J?qrbzi}fw? fate=kill:v0 b1 ncol=6
+CERT J?qrbzi}fs? fate=twins ncol=6
+CERT J?qrbzizfb? fate=kill:v0 b1 ncol=6
+CERT J?qrbzi^fb? fate=kill:v0 b2 ncol=6
+CERT J?qrbyy~Fw? fate=twins ncol=6
+CERT J?qrbyy~Fs? fate=twins ncol=6
+CERT J?qrbyynfb? fate=twins ncol=6
+CERT J?qrbxy~Fw? fate=twins ncol=6
+CERT J?qrbxy~Fs? fate=twins ncol=6
+CERT J?qrbxy}fs? fate=twins ncol=6
+CERT J?qrbxy|fk? fate=twins ncol=6
+CERT J?qrbxyzfb? fate=kill:v0 b2 ncol=6
+CERT J?qrbxynfb? fate=twins ncol=6
+CERT J?qrbxy^fb? fate=twins ncol=12
+CERT J?qrbxy^c^? fate=kill:v1 b1 ncol=6
+CERT J?qrfNs}f[? fate=kill:v0 b0 ncol=6
+CERT J?qrfNs}e{? fate=kill:v0 b0 ncol=6
+CERT J?qrfNs}d{? fate=kill:v0 b0 ncol=6
+CERT J?qrfNs}b{? fate=kill:v0 b1 ncol=6
+CERT J?qrfNk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfNk}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfNkzfb? fate=kill:v0 b0 ncol=12
+CERT J?qrfN[}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfN[}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfM{}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrfM{}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrfL{}fw? fate=kill:v0 b1 ncol=6
+CERT J?qrfL{}fk? fate=kill:v0 b1 ncol=6
+CERT J?qrdns}f[? fate=kill:v0 b0 ncol=6
+CERT J?qrdns}d{? fate=twins ncol=6
+CERT J?qrdns}b{? fate=twins ncol=6
+CERT J?qrdnk}fw? fate=kill:v0 b0 ncol=6
+CERT J?qrdnk}fk? fate=kill:v0 b0 ncol=6
+CERT J?qrdm{}fw? fate=twins ncol=6
+CERT J?qrdm{}fs? fate=twins ncol=6
+CERT J?qrdm{}fk? fate=twins ncol=6
+CERT J?qrdl{}fw? fate=twins ncol=6
+CERT J?qrdl{}fk? fate=twins ncol=6
+CERT J?qrdni~Fs? fate=kill:v0 b0 ncol=6
+CERT J?qrdni~Fk? fate=kill:v0 b0 ncol=6
+CERT J?qrdmy~Fs? fate=twins ncol=6
+CERT J?qrdmy~Fk? fate=twins ncol=6
+CERT J?qrdmynfb? fate=twins ncol=12
+CERT J?qre^k}fb? fate=kill:v0 b0 ncol=6
+CERT J?qrd^k}fb? fate=kill:v0 b0 ncol=6
+CERT J?qrd]{}fb? fate=kill:v0 b0 ncol=6
+CERT J?qrd]y~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qr`|{}fb? fate=twins ncol=6
+CERT J?qvfbw^fY? fate=kill:v0 b0 ncol=6
+CERT J?qvfbw^dy? fate=twins ncol=6
+CERT J?qvfbw^by? fate=twins ncol=6
+CERT J?qvfbw{rf? fate=twins ncol=12
+CERT J?qvfbw]tu? fate=twins ncol=12
+CERT J?qvfbw]ru? fate=twins ncol=12
+CERT J?qvfbw\ru? fate=twins ncol=6
+CERT J?qvfbwZvw? fate=kill:v0 b0 ncol=6
+CERT J?qvfbwZve? fate=twins ncol=6
+CERT J?qvfbwNvw? fate=twins ncol=6
+CERT J?qvfbs^fY? fate=kill:v0 b0 ncol=6
+CERT J?qvfbs^by? fate=twins ncol=6
+CERT J?qvfbs^fM? fate=kill:v0 b0 ncol=6
+CERT J?qvfbs^dm? fate=twins ncol=6
+CERT J?qvfbs]rm? fate=twins ncol=6
+CERT J?qvfbs]tV? fate=twins ncol=6
+CERT J?qvfbs]pv? fate=twins ncol=6
+CERT J?qvfbs\v[? fate=kill:v0 b0 ncol=6
+CERT J?qvfbs\t{? fate=twins ncol=6
+CERT J?qvfbs\r{? fate=twins ncol=6
+CERT J?qvfbs\vp? fate=twins ncol=6
+CERT J?qvfbsNve? fate=twins ncol=6
+CERT J?qvfbk^fq? fate=kill:v0 b0 ncol=6
+CERT J?qvfbk]vw? fate=kill:v0 b0 ncol=6
+CERT J?qvfbk]ve? fate=twins ncol=6
+CERT J?qvfbk\vw? fate=kill:v0 b0 ncol=6
+CERT J?qvfbk\vk? fate=kill:v0 b0 ncol=6
+CERT J?qvfbkZu]? fate=twins ncol=12
+CERT J?qvfbkZt]? fate=twins ncol=12
+CERT J?qvfbkZs}? fate=twins ncol=6
+CERT J?qvfbkZq}? fate=twins ncol=6
+CERT J?qvfbkVu]? fate=twins ncol=6
+CERT J?qvfbkVs}? fate=twins ncol=6
+CERT J?qvfbkVq}? fate=twins ncol=6
+CERT J?qvfbkNu]? fate=twins ncol=6
+CERT J?qvfbkNs}? fate=twins ncol=6
+CERT J?qvfbkNq}? fate=twins ncol=6
+CERT J?qvfa{^fq? fate=twins ncol=6
+CERT J?qvfa{]vw? fate=twins ncol=6
+CERT J?qvfa{\vk? fate=twins ncol=6
+CERT J?qvfa{\ve? fate=twins ncol=6
+CERT J?qvfa{Zu]? fate=twins ncol=6
+CERT J?qvfa{Zs}? fate=twins ncol=6
+CERT J?qvfa{Zq}? fate=twins ncol=6
+CERT J?qvfa{Nu]? fate=twins ncol=6
+CERT J?qvf`{~FU? fate=kill:v0 b0 ncol=6
+CERT J?qvf`{~Du? fate=twins ncol=6
+CERT J?qvf`{~FM? fate=kill:v0 b0 ncol=6
+CERT J?qvf`{~Bm? fate=twins ncol=6
+CERT J?qvf`{}dy? fate=twins ncol=6
+CERT J?qvf`{}by? fate=twins ncol=6
+CERT J?qvf`{|fY? fate=kill:v0 b0 ncol=6
+CERT J?qvf`{zfq? fate=kill:v0 b0 ncol=6
+CERT J?qvf`{zfb? fate=kill:v0 b0 ncol=6
+CERT J?qvf`{nfb? fate=twins ncol=6
+CERT J?qvf`{^fi? fate=twins ncol=6
+CERT J?qvf`{{tu? fate=twins ncol=6
+CERT J?qvf`{{vM? fate=twins ncol=6
+CERT J?qvf`{yve? fate=twins ncol=6
+CERT J?qvf`{]vw? fate=twins ncol=6
+CERT J?qvf`{]ve? fate=twins ncol=6
+CERT J?qvf`{lve? fate=twins ncol=6
+CERT J?qvf`{\ve? fate=twins ncol=6
+CERT J?qvf`{rr]? fate=twins ncol=6
+CERT J?qvf`{rp}? fate=twins ncol=6
+CERT J?qvf`{Zs}? fate=twins ncol=6
+CERT J?qvf`{Zs^? fate=twins ncol=6
+CERT J?qvf`{Ns^? fate=twins ncol=6
+CERT J?qvfbq^V[? fate=kill:v0 b0 ncol=6
+CERT J?qvfbq^T{? fate=twins ncol=6
+CERT J?qvfbq^R{? fate=twins ncol=6
+CERT J?qvfbq^VU? fate=kill:v0 b0 ncol=6
+CERT J?qvfbq^Tu? fate=twins ncol=6
+CERT J?qvfbq^Ru? fate=twins ncol=6
+CERT J?qvfbq^VM? fate=kill:v0 b0 ncol=6
+CERT J?qvfbq^Tm? fate=twins ncol=6
+CERT J?qvfbq^Rm? fate=twins ncol=6
+CERT J?qvf_}~Fb? fate=twins ncol=6
+CERT J?qvf_}}Vw? fate=twins ncol=6
+CERT J?qvf_}|Vk? fate=twins ncol=6
+CERT J?qvf_}|Ve? fate=twins ncol=6
+CERT J?qvf_}zT]? fate=kill:v0 b0 ncol=6
+CERT J?qvf_}zQ}? fate=kill:v0 b1 ncol=6
+CERT J?qvf_}nT]? fate=kill:v0 b0 ncol=12
+CERT J?qvf_}^U]? fate=kill:v0 b1 ncol=6
+CERT J?qvf_}^S^? fate=kill:v0 b1 ncol=6
+CERT J?qvfRw^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfRw\vL? fate=kill:v0 b0 ncol=6
+CERT J?qvfRw\vJ? fate=kill:v0 b0 ncol=6
+CERT J?qvfRw\uj? fate=kill:v0 b0 ncol=6
+CERT J?qvfRw\vF? fate=kill:v0 b0 ncol=6
+CERT J?qvfRs^fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfRs\ve? fate=kill:v0 b0 ncol=6
+CERT J?qvfRk^f[? fate=kill:v0 b0 ncol=6
+CERT J?qvfRk^e{? fate=kill:v0 b0 ncol=6
+CERT J?qvfRk^d{? fate=kill:v0 b0 ncol=6
+CERT J?qvfRk^b{? fate=twins ncol=6
+CERT J?qvfP{~FF? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{~Ef? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{~Df? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{}fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{|fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{zf[? fate=twins ncol=6
+CERT J?qvfP{vf[? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{ve{? fate=twins ncol=6
+CERT J?qvfP{nf[? fate=kill:v0 b0 ncol=6
+CERT J?qvfP{nd{? fate=twins ncol=6
+CERT J?qvfP{^f[? fate=kill:v0 b1 ncol=6
+CERT J?qvfP{^b{? fate=twins ncol=6
+CERT J?qvfPy~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfPy|Vs? fate=kill:v0 b0 ncol=6
+CERT J?qvfPu~Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfPu|Vk? fate=kill:v0 b0 ncol=6
+CERT J?qvfPu|Vi? fate=twins ncol=6
+CERT J?qvfPu|Ve? fate=kill:v0 b0 ncol=6
+CERT J?qvfPm~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvfPm~B{? fate=kill:v0 b1 ncol=6
+CERT J?qvfRp^fw? fate=kill:v0 b0 ncol=6
+CERT J?qvfRp^fd? fate=kill:v0 b0 ncol=6
+CERT J?qvdrw^fb? fate=twins ncol=6
+CERT J?qvdrw\vF? fate=kill:v0 b0 ncol=6
+CERT J?qvdrw\tf? fate=twins ncol=6
+CERT J?qvdrw\rf? fate=twins ncol=6
+CERT J?qvdrwNp^? fate=kill:v0 b1 ncol=6
+CERT J?qvdp{~FF? fate=kill:v0 b0 ncol=6
+CERT J?qvdp{~Df? fate=twins ncol=6
+CERT J?qvdp{~Bf? fate=twins ncol=6
+CERT J?qvdp{}fb? fate=twins ncol=6
+CERT J?qvdp{|fb? fate=twins ncol=6
+CERT J?qvdp{zf[? fate=twins ncol=6
+CERT J?qvdp{zd{? fate=kill:v0 b0 ncol=6
+CERT J?qvdp{nd{? fate=twins ncol=6
+CERT J?qvdp{^d{? fate=twins ncol=6
+CERT J?qvdp{^b{? fate=twins ncol=6
+CERT J?qvdp{{vd? fate=twins ncol=6
+CERT J?qvdrp^fw? fate=twins ncol=6
+CERT J?qvbrw~Fs? fate=twins ncol=6
+CERT J?qvbrw~Fk? fate=twins ncol=6
+CERT J?qvbrw~Fe? fate=twins ncol=6
+CERT J?qvbrw}fs? fate=twins ncol=12
+CERT J?qvbrw^fb? fate=twins ncol=6
+CERT J?qvbrw|UN? fate=kill:v0 b0 ncol=6
+CERT J?qvbrw|RN? fate=kill:v0 b1 ncol=6
+CERT J?qvbrw{rN? fate=kill:v0 b1 ncol=6
+CERT J?qvbrwxuj? fate=kill:v0 b0 ncol=6
+CERT J?qvbrwxtj? fate=kill:v0 b0 ncol=6
+CERT J?qvbrwxuf? fate=kill:v0 b0 ncol=6
+CERT J?qvbrwlvJ? fate=kill:v0 b0 ncol=6
+CERT J?qvbrwltj? fate=twins ncol=6
+CERT J?qvbrwltf? fate=twins ncol=6
+CERT J?qvbrw\vF? fate=kill:v0 b1 ncol=6
+CERT J?qvbrw\tf? fate=twins ncol=6
+CERT J?qvbrw\rf? fate=twins ncol=6
+CERT J?qvbrwNp^? fate=kill:v0 b2 ncol=6
+CERT J?qvbrs}fw? fate=twins ncol=6
+CERT J?qvbrs}dt? fate=twins ncol=6
+CERT J?qvbrs}bt? fate=twins ncol=6
+CERT J?qvbrs|fw? fate=twins ncol=6
+CERT J?qvbrs|dm? fate=twins ncol=6
+CERT J?qvbrsnfb? fate=twins ncol=6
+CERT J?qvbrs|VM? fate=kill:v0 b0 ncol=6
+CERT J?qvbrs{vw? fate=twins ncol=6
+CERT J?qvbrs{rm? fate=twins ncol=6
+CERT J?qvbrsxve? fate=kill:v0 b0 ncol=6
+CERT J?qvbrslve? fate=twins ncol=6
+CERT J?qvbrkzf[? fate=twins ncol=6
+CERT J?qvbrkzb{? fate=kill:v0 b1 ncol=6
+CERT J?qvbrkvf[? fate=kill:v0 b0 ncol=6
+CERT J?qvbrkve{? fate=twins ncol=6
+CERT J?qvbrknf[? fate=kill:v0 b0 ncol=6
+CERT J?qvbrk^b{? fate=twins ncol=6
+CERT J?qvbrk{vd? fate=kill:v0 b0 ncol=6
+CERT J?qvbrk{vb? fate=kill:v0 b0 ncol=6
+CERT J?qvbq{zf[? fate=twins ncol=6
+CERT J?qvbq{zd{? fate=kill:v0 b0 ncol=6
+CERT J?qvbq{nd{? fate=twins ncol=6
+CERT J?qvbq{^d{? fate=twins ncol=6
+CERT J?qvbq{^b{? fate=twins ncol=6
+CERT J?qvbq{{ve? fate=twins ncol=6
+CERT J?qvbq{{vd? fate=twins ncol=6
+CERT J?qvbq{{vb? fate=twins ncol=6
+CERT J?qvbp{~Df? fate=twins ncol=6
+CERT J?qvbp{~Bf? fate=twins ncol=6
+CERT J?qvbp{}fb? fate=twins ncol=6
+CERT J?qvbp{|fb? fate=twins ncol=6
+CERT J?qvbp{zf[? fate=twins ncol=6
+CERT J?qvbp{nd{? fate=twins ncol=6
+CERT J?qvbp{^f[? fate=kill:v0 b2 ncol=6
+CERT J?qvbp{^d{? fate=twins ncol=6
+CERT J?qvbp{^b{? fate=twins ncol=12
+CERT J?qvbp{^c^? fate=kill:v0 b2 ncol=6
+CERT J?qvbrq~Fw? fate=twins ncol=12
+CERT J?qvbrq~Fs? fate=twins ncol=6
+CERT J?qvbrq~Fk? fate=twins ncol=6
+CERT J?qvbrq|VM? fate=kill:v0 b0 ncol=6
+CERT J?qvbrq|Tm? fate=twins ncol=6
+CERT J?qvbrq|Rm? fate=twins ncol=6
+CERT J?qvbri|Vs? fate=kill:v0 b0 ncol=6
+CERT J?qvbqy~Fb? fate=twins ncol=6
+CERT J?qvbqy|Vs? fate=twins ncol=6
+CERT J?qvbpy~Fb? fate=twins ncol=6
+CERT J?qvbre|Vk? fate=kill:v0 b0 ncol=6
+CERT J?qvbre|Vi? fate=twins ncol=6
+CERT J?qvbre|Ve? fate=kill:v0 b0 ncol=6
+CERT J?qvbqu~Fb? fate=twins ncol=6
+CERT J?qvbqu|Vk? fate=twins ncol=6
+CERT J?qvbqu|Vi? fate=twins ncol=6
+CERT J?qvbqu|Ve? fate=twins ncol=6
+CERT J?qvbpu|Vk? fate=twins ncol=6
+CERT J?qvbpu|Vi? fate=twins ncol=6
+CERT J?qvbpu|Ve? fate=twins ncol=6
+CERT J?qvbrM~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvbrM~B{? fate=kill:v0 b1 ncol=6
+CERT J?qvbqm~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvbqm~D{? fate=kill:v0 b0 ncol=6
+CERT J?qvbqm~B{? fate=kill:v0 b1 ncol=6
+CERT J?qvbpm~F[? fate=kill:v0 b1 ncol=6
+CERT J?qvbpm~B{? fate=kill:v0 b2 ncol=6
+CERT J?qvbo}~D{? fate=twins ncol=6
+CERT J?qvbo}~B{? fate=twins ncol=6
+CERT J?qvbrp~F[? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp~B{? fate=twins ncol=6
+CERT J?qvbrp~FT? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp~FL? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp~Bl? fate=twins ncol=6
+CERT J?qvbrp}fX? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp}dx? fate=twins ncol=6
+CERT J?qvbrp}bt? fate=twins ncol=12
+CERT J?qvbrp|fM? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp|dm? fate=twins ncol=6
+CERT J?qvbrp|bm? fate=twins ncol=6
+CERT J?qvbrp|fX? fate=kill:v0 b0 ncol=6
+CERT J?qvbrp|dx? fate=twins ncol=6
+CERT J?qvbrp|bt? fate=twins ncol=6
+CERT J?qvbrpzfp? fate=kill:v0 b0 ncol=6
+CERT J?qvbrpzfh? fate=kill:v0 b0 ncol=6
+CERT J?qvbrpnfw? fate=twins ncol=6
+CERT J?qvbrpnfp? fate=twins ncol=6
+CERT J?qvbrp^fh? fate=twins ncol=6
+CERT J?qvbrp^fd? fate=twins ncol=6
+CERT J?qvbrd}fi? fate=kill:v0 b0 ncol=6
+CERT J?qvbrd|fi? fate=kill:v0 b0 ncol=6
+CERT J?qvbqt}fi? fate=twins ncol=6
+CERT J?qvbpt|fi? fate=twins ncol=6
+CERT J?qvbpt|fe? fate=twins ncol=6
+CERT J?qvfrwZfb? fate=twins ncol=6
+CERT J?qvfrwZfa_ fate=kill:v0 b0 ncol=6
+CERT J?qvfrwNfb? fate=twins ncol=6
+CERT J?qvfrwN`^? fate=twins ncol=6
+CERT J?qvfi{]fb? fate=twins ncol=6
+CERT J?qvfi{]fa_ fate=twins ncol=6
+CERT J?qvfi{]f`_ fate=twins ncol=6
+CERT J?qvfZs]fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfZs]fa_ fate=kill:v0 b0 ncol=6
+CERT J?qvfZs]f`_ fate=kill:v0 b0 ncol=6
+CERT J?qvdzw]fb? fate=twins ncol=6
+CERT J?qvdzw]fa_ fate=twins ncol=6
+CERT J?qvdzw]f`_ fate=twins ncol=6
+CERT J?qvbzs{fw? fate=twins ncol=12
+CERT J?qvbzs{fs? fate=twins ncol=6
+CERT J?qvbzs{fk? fate=twins ncol=6
+CERT J?qvbx{]f[? fate=kill:v0 b2 ncol=6
+CERT J?qvbx{]d{? fate=twins ncol=6
+CERT J?qvbx{]b{? fate=twins ncol=12
+CERT J?qvbx{]bb_ fate=twins ncol=12
+CERT J?qvffk^Fd? fate=kill:v0 b0 ncol=6
+CERT J?qvffk^Fc_ fate=kill:v0 b0 ncol=6
+CERT J?qvffk^F`_ fate=kill:v0 b0 ncol=12
+CERT J?qvfe{^Fd? fate=twins ncol=6
+CERT J?qvfe{^Fc_ fate=twins ncol=6
+CERT J?qvfe{^F`_ fate=twins ncol=12
+CERT J?qvfVw^Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfVw^Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qvfVw^F`_ fate=kill:v0 b0 ncol=6
+CERT J?qvfVs^Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvfVs^Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qvfVs^F`_ fate=kill:v0 b0 ncol=6
+CERT J?qvdvw^Fb? fate=twins ncol=6
+CERT J?qvdvw^Fa_ fate=twins ncol=6
+CERT J?qvdvw^F`_ fate=twins ncol=6
+CERT J?qvdvs^Fb? fate=twins ncol=6
+CERT J?qvdvs^Fa_ fate=twins ncol=6
+CERT J?qvdvs^F`_ fate=twins ncol=6
+CERT J?qvbvwzFb? fate=kill:v0 b0 ncol=6
+CERT J?qvbvwzFa_ fate=kill:v0 b0 ncol=6
+CERT J?qvbvwzF`_ fate=kill:v0 b0 ncol=6
+CERT J?qvdnw^Fb? fate=twins ncol=6
+CERT J?qvdnw^Fa_ fate=twins ncol=6
+CERT J?qvdnw^F`_ fate=twins ncol=6
+CERT J?qvb^s}Fb? fate=kill:v0 b0 ncol=6
+CERT J?qvb^s}Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qvb^s}F`_ fate=kill:v0 b0 ncol=6
+CERT J?qv`~s}Fb? fate=twins ncol=6
+CERT J?qv`~s}Fa_ fate=twins ncol=6
+CERT J?qv`~s}F`_ fate=twins ncol=6
+CERT J?qvVPu|VM? fate=kill:v0 b0 ncol=6
+CERT J?qvVPu|Um? fate=kill:v0 b0 ncol=6
+CERT J?qvUpu|VM? fate=kill:v0 b0 ncol=6
+CERT J?qvUpu|Um? fate=kill:v0 b0 ncol=6
+CERT J?qvUpu|Rm? fate=kill:v0 b1 ncol=6
+CERT J?qvTpu|VM? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs~Df? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs|fp? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs|Vp? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs{vp? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs{vd? fate=kill:v0 b0 ncol=6
+CERT J?qvRrs{vb? fate=kill:v0 b0 ncol=6
+CERT J?qvRrsxvM? fate=twins ncol=6
+CERT J?qvRrstvM? fate=kill:v0 b0 ncol=6
+CERT J?qvRrstum? fate=twins ncol=6
+CERT J?qvRrsttm? fate=kill:v0 b0 ncol=6
+CERT J?qvRrstrm? fate=kill:v0 b1 ncol=6
+CERT J?qvRrslvM? fate=kill:v0 b0 ncol=6
+CERT J?qvRpu|VM? fate=kill:v0 b1 ncol=6
+CERT J?qvRpu|Um? fate=kill:v0 b1 ncol=6
+CERT J?qvRpu|Rm? fate=kill:v1 b0 ncol=6
+CERT J?qvVrw\fM? fate=kill:v0 b0 ncol=6
+CERT J?qvVrw\em? fate=kill:v0 b0 ncol=6
+CERT J?qvVrw\dm? fate=kill:v0 b0 ncol=6
+CERT J?qvVrw\bm? fate=kill:v0 b1 ncol=6
+CERT J?qvVrw\fJ? fate=twins ncol=6
+CERT J?qvVrw\ej? fate=twins ncol=6
+CERT J?qvVrw\dj? fate=twins ncol=6
+CERT J?qvVrw\bj? fate=twins ncol=6
+CERT J?qvVrw\fF? fate=twins ncol=6
+CERT J?qvVrw\ef? fate=twins ncol=6
+CERT J?qvVrw\df? fate=twins ncol=6
+CERT J?qvVrw\bf? fate=twins ncol=6
+CERT J?qttrs\tm? fate=twins ncol=12
+CERT J?qttp{{vF? fate=twins ncol=6
+CERT J?qttp{{tf? fate=twins ncol=6
+CERT J?qttp{{rf? fate=twins ncol=6
+CERT J?qtvrw\fM? fate=kill:v0 b0 ncol=6
+CERT J?qtvrw\dm? fate=twins ncol=6
+CERT J?qtvrw\bm? fate=twins ncol=6
+CERT J?qtvrw\fJ? fate=twins ncol=6
+CERT J?qtvrw\dj? fate=twins ncol=6
+CERT J?qtvrw\bj? fate=twins ncol=6
+CERT J?qtvrw\fF? fate=twins ncol=6
+CERT J?qtvrw\df? fate=twins ncol=6
+CERT J?qtvrw\bf? fate=twins ncol=6
+CERT J?qrtrs~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrtrs~Bf? fate=twins ncol=6
+CERT J?qrtrs{vd? fate=twins ncol=6
+CERT J?qrtrs{vb? fate=twins ncol=6
+CERT J?qrtrsltm? fate=twins ncol=6
+CERT J?qrtrs\tm? fate=twins ncol=6
+CERT J?qrtrs\rm? fate=twins ncol=6
+CERT J?qrtrk{uf? fate=kill:v0 b0 ncol=6
+CERT J?qrtrk{tf? fate=kill:v0 b0 ncol=6
+CERT J?qrtq{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qrtq{{tf? fate=twins ncol=6
+CERT J?qrtp{{tf? fate=twins ncol=6
+CERT J?qrtrq~Fe? fate=twins ncol=6
+CERT J?qrtpt|dm? fate=twins ncol=6
+CERT J?qrtpt|bm? fate=twins ncol=6
+CERT J?qrrrs~Df? fate=twins ncol=6
+CERT J?qrrrs~Bf? fate=twins ncol=6
+CERT J?qrrrsltm? fate=twins ncol=6
+CERT J?qrrrslrm? fate=twins ncol=6
+CERT J?qrrrs\rm? fate=twins ncol=6
+CERT J?qrrq{{tf? fate=twins ncol=6
+CERT J?qrvrw{fw? fate=twins ncol=6
+CERT J?qrvrw{eN? fate=twins ncol=6
+CERT J?qrvrw{dN? fate=twins ncol=6
+CERT J?qrvrw{bN? fate=twins ncol=6
+CERT J?qrvrw{`n? fate=twins ncol=6
+CERT J?qrvrw{fo_ fate=twins ncol=12
+CERT J?qrvrwlfM? fate=kill:v0 b0 ncol=6
+CERT J?qrvrwldm? fate=twins ncol=6
+CERT J?qrvrwlbm? fate=twins ncol=6
+CERT J?qrvrwldj? fate=twins ncol=6
+CERT J?qrvrwlbj? fate=twins ncol=6
+CERT J?qrvrwldf? fate=twins ncol=6
+CERT J?qrvrw\fM? fate=kill:v0 b1 ncol=6
+CERT J?qrvrw\dm? fate=twins ncol=6
+CERT J?qrvrw\bm? fate=twins ncol=6
+CERT J?qrvrw\dj? fate=twins ncol=6
+CERT J?qrvrw\bj? fate=twins ncol=6
+CERT J?qrvrw\bf? fate=twins ncol=6
+CERT J?qrvp{{fe? fate=twins ncol=6
+CERT J?qrvp{{fd? fate=twins ncol=6
+CERT J?qrvp{{fb? fate=twins ncol=6
+CERT J?qrvjs{fw? fate=twins ncol=6
+CERT J?qrvjs{fk? fate=twins ncol=6
+CERT J?qrvjs{fg_ fate=twins ncol=6
+CERT J?qrvjs{eR_ fate=twins ncol=6
+CERT J?qrvjs{dR_ fate=twins ncol=6
+CERT J?qrvjs{bR_ fate=twins ncol=6
+CERT J?qrvjs{`r_ fate=twins ncol=6
+CERT J?qrvX{{fF? fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{ef? fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{df? fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{bf? fate=kill:v0 b2 ncol=6
+CERT J?qrvX{{fW_ fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{ew_ fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{dw_ fate=kill:v0 b1 ncol=6
+CERT J?qrvX{{bw_ fate=kill:v0 b2 ncol=6
+CERT J?qrvX{{_^_ fate=kill:v0 b2 ncol=6
+CERT J?qrtx{{fF? fate=kill:v0 b1 ncol=6
+CERT J?qrtx{{df? fate=twins ncol=6
+CERT J?qrtx{{bf? fate=twins ncol=6
+CERT J?qrtx{{fW_ fate=kill:v0 b1 ncol=6
+CERT J?qrtx{{dw_ fate=twins ncol=6
+CERT J?qrtx{{bw_ fate=twins ncol=6
+CERT J?qrtx{{_^_ fate=kill:v0 b2 ncol=6
+CERT J?qvN`{}Vd? fate=kill:v0 b0 ncol=6
+CERT J?qvN`{{vb? fate=kill:v0 b0 ncol=6
+CERT J?qvN`{{ni? fate=kill:v0 b0 ncol=6
+CERT J?qvN`{w~w? fate=kill:v0 b0 ncol=6
+CERT J?qvNbq^Vi? fate=kill:v0 b0 ncol=6
+CERT J?qvNbq^Vh? fate=kill:v0 b0 ncol=6
+CERT J?qvN`x~Fd? fate=kill:v0 b0 ncol=6
+CERT J?qvN`x}fh? fate=kill:v0 b0 ncol=6
+CERT J?qvNP{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qvNP{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qvNPy|VJ? fate=kill:v0 b0 ncol=6
+CERT J?qvNPy|Uj? fate=kill:v0 b0 ncol=6
+CERT J?qvMp{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qvMp{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qvMp{{tf? fate=kill:v0 b0 ncol=6
+CERT J?qvMpy|VJ? fate=kill:v0 b0 ncol=6
+CERT J?qvMpy|Uj? fate=kill:v0 b0 ncol=6
+CERT J?qvLp{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qvLp{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qvLp{{tf? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw~FF? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw~Ef? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw~Df? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw}dj? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw|Vi? fate=twins ncol=6
+CERT J?qvJrw|Vh? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw|Vb? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw{ve? fate=twins ncol=6
+CERT J?qvJrw{vd? fate=kill:v0 b0 ncol=6
+CERT J?qvJrw{vb? fate=kill:v0 b0 ncol=6
+CERT J?qvJri|VJ? fate=kill:v0 b0 ncol=6
+CERT J?qvJri|Uj? fate=kill:v0 b0 ncol=6
+CERT J?qvJrY|VJ? fate=kill:v0 b0 ncol=6
+CERT J?qvJrY|Uj? fate=kill:v0 b0 ncol=6
+CERT J?qvNjw]fh? fate=kill:v0 b0 ncol=6
+CERT J?qvNjw]fg_ fate=kill:v0 b0 ncol=6
+CERT J?qvNjw]f`_ fate=kill:v0 b0 ncol=6
+CERT J?qvJzq}Fe? fate=kill:v0 b0 ncol=6
+CERT J?qvJzq}Fc_ fate=kill:v0 b0 ncol=6
+CERT J?qvJzq}Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qvJvw}Ej? fate=kill:v0 b0 ncol=6
+CERT J?qvJvw}Dj? fate=kill:v0 b0 ncol=6
+CERT J?qvJvw}Bj? fate=kill:v0 b1 ncol=6
+CERT J?qvJvw}Eh_ fate=twins ncol=6
+CERT J?qvJvw}Dh_ fate=twins ncol=6
+CERT J?qvJvw}Bh_ fate=twins ncol=6
+CERT J?qvJvw}Eb_ fate=twins ncol=6
+CERT J?qvJvw}Db_ fate=twins ncol=6
+CERT J?qvJvw}Bb_ fate=twins ncol=6
+CERT J?qtnbs]vb? fate=twins ncol=6
+CERT J?qtn`x~Fd? fate=twins ncol=6
+CERT J?qtnP{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qtnP{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qtnP{{tf? fate=kill:v0 b0 ncol=6
+CERT J?qtlp{{tf? fate=twins ncol=6
+CERT J?qtjrw|Vi? fate=twins ncol=6
+CERT J?qtjrw|Vh? fate=twins ncol=6
+CERT J?qtjrw|Vb? fate=twins ncol=6
+CERT J?qtjrk{uf? fate=kill:v0 b0 ncol=6
+CERT J?qtjrk{tf? fate=kill:v0 b0 ncol=6
+CERT J?qtjq{{tf? fate=twins ncol=6
+CERT J?qtjp{{tf? fate=twins ncol=6
+CERT J?qrnbw}Vw? fate=twins ncol=6
+CERT J?qrnbw|Vw? fate=twins ncol=6
+CERT J?qrnbw|Vs? fate=twins ncol=6
+CERT J?qrnbwzVd? fate=kill:v0 b0 ncol=6
+CERT J?qrnbs}du? fate=twins ncol=6
+CERT J?qrnbs}dr? fate=twins ncol=6
+CERT J?qrnbs}br? fate=twins ncol=6
+CERT J?qrnbs}fF? fate=kill:v0 b0 ncol=6
+CERT J?qrnbs}df? fate=twins ncol=6
+CERT J?qrnbs}Vw? fate=twins ncol=6
+CERT J?qrnbs}Vi? fate=twins ncol=6
+CERT J?qrnbs}VT? fate=kill:v0 b0 ncol=6
+CERT J?qrnbs}Rt? fate=twins ncol=6
+CERT J?qrnbs}Tf? fate=twins ncol=6
+CERT J?qrnbs{vw? fate=twins ncol=6
+CERT J?qrnbs{vT? fate=kill:v0 b0 ncol=6
+CERT J?qrnbs{tt? fate=twins ncol=6
+CERT J?qrnbsyvd? fate=kill:v0 b0 ncol=6
+CERT J?qrnbsmve? fate=twins ncol=6
+CERT J?qrnbsmvp? fate=twins ncol=6
+CERT J?qrnbsmvd? fate=twins ncol=6
+CERT J?qrnbsmvb? fate=twins ncol=6
+CERT J?qrnbs]vp? fate=twins ncol=6
+CERT J?qrnbk{ve? fate=twins ncol=6
+CERT J?qrnbk{vd? fate=kill:v0 b0 ncol=6
+CERT J?qrnbk{vb? fate=kill:v0 b0 ncol=6
+CERT J?qrn`{}Vd? fate=twins ncol=6
+CERT J?qrnbp~Fw? fate=twins ncol=12
+CERT J?qrnbp~Fq? fate=twins ncol=6
+CERT J?qrnbp~Fi? fate=twins ncol=6
+CERT J?qrnRw~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrnRw~Ef? fate=kill:v0 b0 ncol=6
+CERT J?qrnRw|Vi? fate=twins ncol=6
+CERT J?qrnRw|Vh? fate=kill:v0 b0 ncol=6
+CERT J?qrnRw|Vb? fate=kill:v0 b0 ncol=6
+CERT J?qrnQ{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qrnQ{{uf? fate=kill:v0 b0 ncol=6
+CERT J?qrnQ{{tf? fate=kill:v0 b0 ncol=6
+CERT J?qrnRp~Fe? fate=kill:v0 b0 ncol=6
+CERT J?qrlrw~FF? fate=kill:v0 b0 ncol=6
+CERT J?qrlrw|Vh? fate=twins ncol=6
+CERT J?qrlrw|Vb? fate=twins ncol=6
+CERT J?qrlrw{ve? fate=twins ncol=6
+CERT J?qrlrw{vd? fate=twins ncol=6
+CERT J?qrlrw{vb? fate=twins ncol=6
+CERT J?qrlq{{vF? fate=kill:v0 b0 ncol=6
+CERT J?qrlq{{tf? fate=twins ncol=6
+CERT J?qrlq{{rf? fate=twins ncol=6
+CERT J?qrlrq~Fe? fate=twins ncol=6
+CERT J?qrlrq|Vh? fate=twins ncol=6
+CERT J?qrlrq|Vb? fate=twins ncol=6
+CERT J?qrlqy|Tj? fate=twins ncol=12
+CERT J?qrlqy^Rx? fate=twins ncol=6
+CERT J?qrlqy^Rr? fate=twins ncol=6
+CERT J?qrlqy^Pz? fate=twins ncol=6
+CERT J?qrlpy|Tj? fate=twins ncol=6
+CERT J?qrlpy|Rj? fate=twins ncol=6
+CERT J?qrnjw{fw? fate=twins ncol=6
+CERT J?qrnjw{fq? fate=twins ncol=6
+CERT J?qrnZq}Fe? fate=kill:v0 b0 ncol=6
+CERT J?qrnZq}Fc_ fate=kill:v0 b0 ncol=6
+CERT J?qrnZq}Fa_ fate=kill:v0 b0 ncol=6
+CERT J?qrlzq}Fe? fate=twins ncol=6
+CERT J?qrlzq}Fc_ fate=twins ncol=6
+CERT J?qrlzq}Fa_ fate=twins ncol=6
+CERT J?qrjzq}Fe? fate=twins ncol=6
+CERT J?qrjzq}Fc_ fate=twins ncol=6
+CERT J?qrjzq}Fa_ fate=twins ncol=6
+CERT J?qu^`{}VY? fate=kill:v0 b0 ncol=6
+CERT J?qu^`{}Ry? fate=kill:v0 b1 ncol=6
+CERT J?qu^bq^UZ? fate=kill:v0 b0 ncol=6
+CERT J?qu^bq^Pz? fate=kill:v0 b1 ncol=6
+CERT J?quZrs{vF? fate=kill:v0 b0 ncol=6
+CERT J?quZrs{tf? fate=kill:v0 b0 ncol=6
+CERT J?quZzw{fF? fate=kill:v0 b0 ncol=6
+CERT J?quZzw{df? fate=kill:v0 b0 ncol=6
+CERT J?quZzw{bf? fate=kill:v0 b1 ncol=6
+CERT J?quZzw{_^_ fate=kill:v0 b1 ncol=6
+CERT J?rLbvs}fT? fate=kill:v0 b0 ncol=6
+CERT J?rLbvs}bt? fate=kill:v0 b1 ncol=6
+CERT J?rLbvi|Vs? fate=kill:v0 b0 ncol=6
+CERT J?qnFpu|fM? fate=kill:v0 b0 ncol=6
+CERT J?qnFpu|em? fate=kill:v0 b0 ncol=6
+CERT J?qnDvs}bt? fate=kill:v0 b0 ncol=6
+CERT J?qmfpu|fM? fate=kill:v0 b0 ncol=6
+CERT J?qmfpu|em? fate=kill:v0 b0 ncol=6
+CERT J?qmfpu|bm? fate=kill:v0 b1 ncol=6
+CERT J?qjfbj}fU? fate=twins ncol=6
+CERT J?qjfrw|fk? fate=twins ncol=6
+CERT J?qjfrw|fb? fate=twins ncol=6
+CERT J?qjfrw{vd? fate=kill:v0 b0 ncol=6
+CERT J?qjfrs}fi? fate=kill:v0 b0 ncol=6
+CERT J?qjfre|fM? fate=kill:v0 b0 ncol=6
+CERT J?qjfre|em? fate=kill:v0 b0 ncol=6
+CERT J?qjffw}fJ? fate=kill:v0 b0 ncol=6
+CERT J?qjffw}ej? fate=kill:v0 b0 ncol=6
+CERT J?qjffw}bj? fate=kill:v0 b1 ncol=6
+CERT J?qjffw|fq? fate=kill:v0 b0 ncol=6
+CERT J?qjffw|Nq? fate=kill:v0 b0 ncol=6
+CERT J?qjffq}fJ? fate=twins ncol=6
+CERT J?qjevs}dt? fate=kill:v0 b0 ncol=6
+CERT J?qjdvs}fT? fate=kill:v0 b0 ncol=6
+CERT J?qjdvs}dt? fate=kill:v0 b0 ncol=6
+CERT J?qjbvs}dt? fate=kill:v0 b1 ncol=6
+CERT J?qjbvs}bt? fate=kill:v1 b0 ncol=6
+CERT J?qnf`y}Vs? fate=kill:v0 b0 ncol=6
+CERT J?qnf`y}Vq? fate=twins ncol=6
+CERT J?qnf`y}Ve? fate=kill:v0 b0 ncol=6
+CERT J?qnf`y|Vs? fate=kill:v0 b0 ncol=6
+CERT J?qnfrw\fM? fate=kill:v0 b0 ncol=6
+CERT J?qnfrw\em? fate=kill:v0 b0 ncol=6
+CERT J?qnfrw\dm? fate=kill:v0 b0 ncol=6
+CERT J?qnfrw\bm? fate=kill:v0 b1 ncol=6
+CERT J?qnfrw\fJ? fate=twins ncol=6
+CERT J?qnfrw\ej? fate=twins ncol=6
+CERT J?qnfrw\dj? fate=twins ncol=6
+CERT J?qnfrw\bj? fate=twins ncol=6
+CERT J?qnfrw\fF? fate=twins ncol=6
+CERT J?qnfrw\ef? fate=twins ncol=6
+CERT J?qnfrw\df? fate=twins ncol=6
+CERT J?qnfrw\bf? fate=twins ncol=6
+CERT J?qnVbs\vM? fate=kill:v0 b0 ncol=6
+CERT J?qnVbs\um? fate=kill:v0 b0 ncol=6
+CERT J?qnV`u}VR? fate=kill:v0 b0 ncol=6
+CERT J?qnV`u}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qnV`u|VM? fate=kill:v0 b0 ncol=6
+CERT J?qnV`u|Um? fate=kill:v0 b0 ncol=6
+CERT J?qnV`u|Rm? fate=kill:v0 b1 ncol=6
+CERT J?qnV`t|fM? fate=kill:v0 b0 ncol=6
+CERT J?qnV`t|em? fate=kill:v0 b0 ncol=6
+CERT J?qnV`t|bm? fate=kill:v0 b1 ncol=6
+CERT J?qnRjq}VR? fate=kill:v0 b0 ncol=6
+CERT J?qnRjq}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qmvbw\tN? fate=kill:v0 b0 ncol=6
+CERT J?qmvbw\pn? fate=kill:v0 b1 ncol=6
+CERT J?qmv`u}VR? fate=kill:v0 b0 ncol=6
+CERT J?qmv`u}Ur? fate=kill:v0 b0 ncol=6
+CERT J?qmv`u}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qmv`u|VM? fate=kill:v0 b0 ncol=6
+CERT J?qmv`u|Um? fate=kill:v0 b0 ncol=6
+CERT J?qmv`u|Rm? fate=kill:v0 b1 ncol=6
+CERT J?qmv`t|fM? fate=kill:v0 b0 ncol=6
+CERT J?qmv`t|em? fate=kill:v0 b0 ncol=6
+CERT J?qmv`t|bm? fate=kill:v0 b1 ncol=6
+CERT J?qmrjs}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qmrjq}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qmrns}FR? fate=kill:v0 b0 ncol=6
+CERT J?qmrns}Er? fate=kill:v0 b0 ncol=6
+CERT J?qmrns}Dr? fate=kill:v0 b0 ncol=6
+CERT J?qmrns}FK_ fate=kill:v0 b0 ncol=6
+CERT J?qmrns}Ek_ fate=kill:v0 b0 ncol=6
+CERT J?qmrns}Dk_ fate=kill:v0 b0 ncol=6
+CERT J?qmrns}Bk_ fate=kill:v0 b1 ncol=6
+CERT J?qmrns}?^_ fate=kill:v0 b1 ncol=6
+CERT J?qlvbe}Rr? fate=kill:v0 b0 ncol=6
+CERT J?qlv`u}VR? fate=kill:v0 b0 ncol=6
+CERT J?qlv`u}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qlrjw|fL? fate=kill:v0 b0 ncol=6
+CERT J?qlrjq}VR? fate=kill:v0 b0 ncol=6
+CERT J?qlrjq}Tr? fate=kill:v0 b0 ncol=6
+CERT J?qlrjp|fL? fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|FL? fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|El? fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|Dl? fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|Bl? fate=kill:v0 b1 ncol=6
+CERT J?qlrnw|FQ_ fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|Eq_ fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|Dq_ fate=kill:v0 b0 ncol=6
+CERT J?qlrnw|Bq_ fate=kill:v0 b1 ncol=6
+CERT J?qlrnw|?^_ fate=kill:v0 b1 ncol=6
+CERT J?qjvbw|fq? fate=kill:v0 b0 ncol=6
+CERT J?qjvbw|Vk? fate=kill:v0 b0 ncol=6
+CERT J?qjvbw|Vb? fate=kill:v0 b0 ncol=6
+CERT J?qjvbw{ve? fate=twins ncol=6
+CERT J?qjvbw{vd? fate=kill:v0 b0 ncol=6
+CERT J?qjvbwttN? fate=kill:v0 b0 ncol=6
+CERT J?qjvbwtpn? fate=kill:v0 b1 ncol=6
+CERT J?qjvbwtp^? fate=kill:v0 b1 ncol=6
+CERT J?qjvbwluN? fate=kill:v0 b0 ncol=6
+CERT J?qjvbwlqn? fate=kill:v0 b1 ncol=6
+CERT J?qjvbw\sn? fate=kill:v0 b1 ncol=6
+CERT J?qjvbs|fR? fate=kill:v0 b0 ncol=6
+CERT J?qjvbs|dr? fate=kill:v0 b0 ncol=6
+CERT J?qjvbs}Vp? fate=kill:v0 b0 ncol=6
+CERT J?qjvbs|Vp? fate=kill:v0 b0 ncol=6
+CERT J?qjvbs{vp? fate=kill:v0 b0 ncol=6
+CERT J?qjvbsxvM? fate=twins ncol=6
+CERT J?qjvbstvM? fate=kill:v0 b0 ncol=6
+CERT J?qjvbstum? fate=twins ncol=6
+CERT J?qjvbsttm? fate=kill:v0 b0 ncol=6
+CERT J?qjvbstrm? fate=kill:v0 b1 ncol=6
+CERT J?qjvbslvM? fate=kill:v0 b0 ncol=6
+CERT J?qjv`u}VR? fate=kill:v0 b1 ncol=6
+CERT J?qjv`u}Tr? fate=kill:v0 b1 ncol=6
+CERT J?qjv`u}Rr? fate=kill:v1 b0 ncol=6
+CERT J?qjvbp|fq? fate=kill:v0 b0 ncol=6
+CERT J?qjrjw|el? fate=kill:v0 b1 ncol=6
+CERT J?qjrjw|bl? fate=kill:v1 b0 ncol=6
+CERT J?qjrjq}VR? fate=kill:v0 b1 ncol=6
+CERT J?qjrjq}Tr? fate=kill:v0 b1 ncol=6
+CERT J?qjrjq}Rr? fate=kill:v1 b0 ncol=6
+CERT J?qjrnw|FL? fate=kill:v0 b1 ncol=6
+CERT J?qjrnw|El? fate=kill:v0 b1 ncol=6
+CERT J?qjrnw|Bl? fate=kill:v1 b0 ncol=6
+CERT J?qjrnw|?^_ fate=kill:v1 b1 ncol=6
+CERT J?o~Fbj}fU? fate=twins ncol=6
+CERT J?o~Frw|fk? fate=twins ncol=6
+CERT J?o~Frw|fb? fate=twins ncol=6
+CERT J?o~Frq}dj? fate=kill:v0 b0 ncol=6
+CERT J?o~Frq|fp? fate=twins ncol=6
+CERT J?o~Fjw}fh? fate=twins ncol=6
+CERT J?o~Fjw|fq? fate=twins ncol=6
+CERT J?o~Fjs}fs? fate=twins ncol=6
+CERT J?o~Fjs}fe? fate=twins ncol=6
+CERT J?o~Fjs}fb? fate=twins ncol=6
+CERT J?o~Fjs}Vp? fate=twins ncol=12
+CERT J?o~Fjs{vp? fate=twins ncol=6
+CERT J?o~Fjq|fR? fate=twins ncol=6
+CERT J?o~Fjq|er? fate=twins ncol=6
+CERT J?o~Fjq}Vp? fate=twins ncol=6
+CERT J?o~Fji}fU? fate=twins ncol=6
+CERT J?o~Ffq}Vp? fate=twins ncol=6
+CERT J?o~Evs}fT? fate=twins ncol=6
+CERT J?o~Evs}et? fate=twins ncol=6
+CERT J?o~FNw|fL? fate=twins ncol=6
+CERT J?o~FNw|el? fate=twins ncol=6
+CERT J?o~Enw|fL? fate=twins ncol=6
+CERT J?o~Enw|el? fate=twins ncol=6
+CERT J?o~Dnw|fL? fate=kill:v0 b0 ncol=6
+CERT J?o~Dnw|el? fate=kill:v0 b0 ncol=6
+CERT J?o~fbw}fU? fate=twins ncol=6
+CERT J?o~fbw}du? fate=twins ncol=6
+CERT J?o~fbwyve? fate=twins ncol=6
+CERT J?o~fbwmve? fate=twins ncol=6
+CERT J?o~fbwxum? fate=twins ncol=6
+CERT J?o~fbwxuf? fate=twins ncol=6
+CERT J?o~fbwltf? fate=twins ncol=6
+CERT J?o~fbwNpn? fate=twins ncol=6
+CERT J?o~fbwNp^? fate=twins ncol=6
+CERT J?o~fbq}Tu? fate=twins ncol=6
+CERT J?o~fbi}Vs? fate=twins ncol=6
+CERT J?o~fbi|Vs? fate=twins ncol=6
+CERT J?o~fay}Vs? fate=twins ncol=6
+CERT J?o~ffw}Fs? fate=twins ncol=6
+CERT J?o~ffw}EL_ fate=twins ncol=6
+CERT J?o~ffw}DL_ fate=twins ncol=6
+CERT J?o~ffw}@l_ fate=twins ncol=6
+CERT J?o~Vbs}Vq? fate=twins ncol=6
+CERT J?o~Vbs}Vp? fate=twins ncol=6
+CERT J?o~Vbs}Vb? fate=twins ncol=6
+CERT J?o~Vbs|Vp? fate=twins ncol=6
+CERT J?o~Vbs{vp? fate=twins ncol=6
+CERT J?o~VbsxvM? fate=twins ncol=6
+CERT J?o~VbstvM? fate=twins ncol=6
+CERT J?o~Vbstum? fate=twins ncol=6
+CERT J?o~Vbsttm? fate=kill:v0 b0 ncol=6
+CERT J?o~VbslvM? fate=kill:v0 b0 ncol=6
+CERT J?o~Vbe}VR? fate=twins ncol=6
+CERT J?o~Vbe}Tr? fate=kill:v0 b0 ncol=6
+CERT J?o~Vbe|VM? fate=twins ncol=6
+CERT J?o~Vbe|Um? fate=twins ncol=6
+CERT J?o~VbU}VR? fate=twins ncol=6
+CERT J?o~VbU|VM? fate=twins ncol=6
+CERT J?o~VbU|Um? fate=twins ncol=6
+CERT J?o~Vau}VR? fate=kill:v0 b0 ncol=6
+CERT J?o~Vau}Tr? fate=kill:v0 b0 ncol=6
+CERT J?o~Vau}Rr? fate=kill:v0 b1 ncol=6
+CERT J?o~Vbp|fq? fate=twins ncol=6
+CERT J?o~VJw|fL? fate=twins ncol=6
+CERT J?o~VJw|el? fate=twins ncol=6
+CERT J?o~VJs}VR? fate=twins ncol=6
+CERT J?o~VJs}Tr? fate=kill:v0 b0 ncol=6
+CERT J?o~VJq}VR? fate=twins ncol=6
+CERT J?o~VJq}Tr? fate=kill:v0 b0 ncol=6
+CERT J?o~VJp|fL? fate=twins ncol=6
+CERT J?o~VJp|el? fate=twins ncol=6
+CERT J?o~Ujs}VR? fate=twins ncol=6
+CERT J?o~Ujq}VR? fate=twins ncol=6
+CERT J?o~Ujp|fL? fate=twins ncol=6
+CERT J?o~Ujp|el? fate=twins ncol=6
+CERT J?o~Tjw|fL? fate=kill:v0 b0 ncol=6
+CERT J?o~Tjw|el? fate=kill:v0 b0 ncol=6
+CERT J?o~Tjq}VR? fate=kill:v0 b0 ncol=6
+CERT J?o~Tjq}Tr? fate=kill:v0 b0 ncol=6
+CERT J?o~Tjq}Rr? fate=kill:v0 b1 ncol=6
+CERT J?o~Uns}FR? fate=twins ncol=6
+CERT J?o~Uns}Er? fate=twins ncol=6
+CERT J?o~Uns}Dr? fate=kill:v0 b0 ncol=6
+CERT J?o~Uns}FK_ fate=twins ncol=6
+CERT J?o~Uns}Ek_ fate=twins ncol=6
+CERT J?o~Uns}Dk_ fate=kill:v0 b0 ncol=6
+CERT J?o~Uns}?^_ fate=kill:v0 b1 ncol=6
+CERT J?o~Tnw|FL? fate=kill:v0 b0 ncol=6
+CERT J?o~Tnw|El? fate=kill:v0 b0 ncol=6
+CERT J?o~Tnw|Dl? fate=kill:v0 b0 ncol=6
+CERT J?o~Tnw|?^_ fate=kill:v0 b1 ncol=6
+CERT J?o|vbs|br? fate=twins ncol=6
+CERT J?o|vbs}Vp? fate=twins ncol=6
+CERT J?o|vbsltm? fate=twins ncol=6
+CERT J?o|vbs\tm? fate=twins ncol=6
+CERT J?o|vbs\rm? fate=twins ncol=6
+CERT J?o|vNw|FL? fate=kill:v0 b0 ncol=6
+CERT J?o|vNw|El? fate=kill:v0 b0 ncol=6
+CERT J?o|vNw|Dl? fate=kill:v0 b0 ncol=6
+CERT J?o|vNw|?^_ fate=kill:v0 b1 ncol=6
+CERT J?rvfa{Mv[? fate=kill:v0 b0 ncol=6
+CERT J?rvfa{Mr{? fate=twins ncol=6
+CERT J?rvfa{MvU? fate=twins ncol=6
+CERT J?rvfa{Mru? fate=twins ncol=6
+CERT J?rvfa{MvM? fate=twins ncol=6
+CERT J?rvfa{Mrm? fate=twins ncol=6
+CERT J?q|vbp\fk? fate=twins ncol=12
+CERT J?q|vbp\fi? fate=twins ncol=6
+CERT J?zefq{\fb? fate=kill:v0 b0 ncol=6
+CERT J?zefq{\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zefq{\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zefqy\fb? fate=kill:v0 b0 ncol=6
+CERT J?zefqy\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zefqy\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zedyy\f[? fate=kill:v0 b0 ncol=6
+CERT J?zedyy\d{? fate=kill:v0 b0 ncol=6
+CERT J?zedyy\b{? fate=kill:v0 b1 ncol=6
+CERT J?zedyy\_^_ fate=kill:v0 b1 ncol=6
+CERT J?zefey^Fb? fate=kill:v0 b0 ncol=6
+CERT J?zefey^Fa_ fate=kill:v0 b0 ncol=6
+CERT J?zefey^F`_ fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^F[? fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^E{? fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^D{? fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^B{? fate=kill:v0 b1 ncol=6
+CERT J?zeeuu^FB_ fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^Eb_ fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^Db_ fate=kill:v0 b0 ncol=6
+CERT J?zeeuu^Bb_ fate=kill:v0 b1 ncol=6
+CERT J?zeeuu^?^_ fate=kill:v0 b1 ncol=6
+CERT J?zedv[\f[? fate=kill:v0 b0 ncol=6
+CERT J?zedv[\e{? fate=kill:v0 b0 ncol=6
+CERT J?zedv[\d{? fate=kill:v0 b0 ncol=6
+CERT J?zedv[\fB_ fate=kill:v0 b0 ncol=6
+CERT J?zedv[\eb_ fate=kill:v0 b0 ncol=6
+CERT J?zedv[\db_ fate=kill:v0 b0 ncol=6
+CERT J?zedv[\_^_ fate=kill:v0 b1 ncol=6
+CERT J?zeduu^F[? fate=kill:v0 b0 ncol=6
+CERT J?zeduu^D{? fate=kill:v0 b0 ncol=6
+CERT J?zeduu^B{? fate=kill:v0 b1 ncol=6
+CERT J?zeduu^?^_ fate=kill:v0 b1 ncol=6
+CERT J?zec|{{f[? fate=twins ncol=6
+CERT J?zec|{{e{? fate=twins ncol=6
+CERT J?zec|{{d{? fate=twins ncol=6
+CERT J?zec|{{b{? fate=twins ncol=6
+CERT J?zec|{{fB_ fate=kill:v0 b0 ncol=6
+CERT J?zec|{{eb_ fate=kill:v0 b0 ncol=6
+CERT J?zec|{{db_ fate=kill:v0 b0 ncol=6
+CERT J?zec|{{bb_ fate=kill:v0 b1 ncol=6
+CERT J?zec|{{_^_ fate=twins ncol=6
+CERT J?ze`~[{f[? fate=twins ncol=6
+CERT J?ze`~[{e{? fate=twins ncol=6
+CERT J?ze`~[{d{? fate=twins ncol=6
+CERT J?ze`~[{fB_ fate=twins ncol=6
+CERT J?ze`~[{eb_ fate=twins ncol=6
+CERT J?ze`~[{db_ fate=kill:v0 b0 ncol=6
+CERT J?ze`~[{_^_ fate=twins ncol=6
+CERT J?ze`}{{f[? fate=twins ncol=6
+CERT J?ze`}{{d{? fate=twins ncol=6
+CERT J?ze`}{{b{? fate=twins ncol=6
+CERT J?ze`}{{fB_ fate=kill:v0 b0 ncol=6
+CERT J?ze`}{{eb_ fate=kill:v0 b0 ncol=6
+CERT J?ze`}{{db_ fate=kill:v0 b0 ncol=6
+CERT J?ze`}{{_^_ fate=twins ncol=6
+CERT J?zTbb{~Fw? fate=twins ncol=24
+CERT J?zTbb{}fk? fate=kill:v0 b0 ncol=12
+CERT J?zTbb{{vs? fate=kill:v0 b0 ncol=6
+CERT J?zTbb{Nt{? fate=kill:v0 b1 ncol=6
+CERT J?zTbb{Nr{? fate=kill:v0 b2 ncol=6
+CERT J?zTbbmzf[? fate=twins ncol=18
+CERT J?zTbbmzb{? fate=twins ncol=12
+CERT J?zTbbm\v[? fate=twins ncol=6
+CERT J?zTbbm\r{? fate=kill:v0 b2 ncol=6
+CERT J?zTb`}zb{? fate=twins ncol=12
+CERT J?zTb`}^b{? fate=twins ncol=24
+CERT J?zTb`}nT{? fate=kill:v0 b1 ncol=6
+CERT J?zTb`}nR{? fate=twins ncol=6
+CERT J?zTfbw^ey? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^dy? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^by? fate=kill:v0 b1 ncol=6
+CERT J?zTfbw^fM? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^em? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^U{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^T{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^VY? fate=kill:v0 b0 ncol=12
+CERT J?zTfbw^Uy? fate=kill:v0 b0 ncol=12
+CERT J?zTfbw^Ty? fate=kill:v0 b0 ncol=12
+CERT J?zTfbw^Ry? fate=twins ncol=12
+CERT J?zTfbw^VU? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^Uu? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^Tu? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw^Ru? fate=kill:v0 b1 ncol=6
+CERT J?zTfbw\v[? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw\u{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbw\r{? fate=kill:v0 b1 ncol=6
+CERT J?zTfbw\rN? fate=kill:v0 b1 ncol=6
+CERT J?zTfbwZvk? fate=kill:v0 b0 ncol=6
+CERT J?zTfbwVvk? fate=kill:v0 b0 ncol=6
+CERT J?zTfbk^fe? fate=kill:v0 b0 ncol=6
+CERT J?zTfbk^Vq? fate=kill:v0 b0 ncol=12
+CERT J?zTfbk^Vi? fate=kill:v0 b0 ncol=12
+CERT J?zTfbk]vk? fate=kill:v0 b0 ncol=6
+CERT J?zTfbk]vq? fate=kill:v0 b0 ncol=6
+CERT J?zTfbk\vw? fate=kill:v0 b0 ncol=6
+CERT J?zTfbk\vs? fate=kill:v0 b0 ncol=6
+CERT J?zTfbkZu]? fate=kill:v0 b0 ncol=12
+CERT J?zTfbkZt]? fate=kill:v0 b0 ncol=12
+CERT J?zTfbkZr]? fate=twins ncol=12
+CERT J?zTfbkVu]? fate=kill:v0 b0 ncol=6
+CERT J?zTfbkVp}? fate=kill:v0 b1 ncol=6
+CERT J?zTfbkNt]? fate=kill:v0 b0 ncol=6
+CERT J?zTfa{^fq? fate=kill:v0 b0 ncol=6
+CERT J?zTfa{^fe? fate=kill:v0 b0 ncol=6
+CERT J?zTfa{^Vw? fate=kill:v0 b0 ncol=12
+CERT J?zTfa{^Vq? fate=kill:v0 b0 ncol=12
+CERT J?zTfa{]vk? fate=kill:v0 b0 ncol=6
+CERT J?zTfa{Zt]? fate=kill:v0 b0 ncol=6
+CERT J?zTfa{Zq}? fate=kill:v0 b1 ncol=6
+CERT J?zTfa{Nt]? fate=kill:v0 b0 ncol=12
+CERT J?zTfa{Np}? fate=twins ncol=12
+CERT J?zTf`{~Dy? fate=kill:v0 b0 ncol=12
+CERT J?zTf`{~By? fate=kill:v0 b1 ncol=12
+CERT J?zTf`{~Eu? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{~Bu? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{}ey? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{}eu? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{}bu? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{}em? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{}bm? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{zfe? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{zfb? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{nfb? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{^fq? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{}U{? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{}T{? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{}VY? fate=kill:v0 b0 ncol=12
+CERT J?zTf`{}Ty? fate=kill:v0 b0 ncol=12
+CERT J?zTf`{^Vs? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{{t{? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{{r{? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{{vF? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{{tf? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{{rf? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{uvk? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{mvk? fate=kill:v0 b0 ncol=6
+CERT J?zTf`{rp}? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{jt]? fate=twins ncol=6
+CERT J?zTf`{jq}? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{Zs^? fate=kill:v0 b1 ncol=6
+CERT J?zTf`{Ns^? fate=kill:v0 b1 ncol=6
+CERT J?zTfbM^e]? fate=kill:v0 b0 ncol=6
+CERT J?zTfbM^d]? fate=kill:v0 b0 ncol=6
+CERT J?zTfbM^T]? fate=kill:v0 b0 ncol=6
+CERT J?zTfbM]u]? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMZv[? fate=kill:v0 b0 ncol=12
+CERT J?zTfbMZu{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMZt{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMZr{? fate=kill:v0 b1 ncol=6
+CERT J?zTfbMZvY? fate=kill:v0 b0 ncol=12
+CERT J?zTfbMZty? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMZvU? fate=kill:v0 b0 ncol=12
+CERT J?zTfbMZuu? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMZvM? fate=kill:v0 b0 ncol=12
+CERT J?zTfbMZum? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMNt{? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMNr{? fate=kill:v0 b1 ncol=6
+CERT J?zTfbMNvY? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMNty? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMNry? fate=kill:v0 b1 ncol=6
+CERT J?zTfbMNvU? fate=kill:v0 b0 ncol=6
+CERT J?zTfbMNru? fate=kill:v0 b1 ncol=6
+CERT J?zTfbMNp^? fate=kill:v0 b1 ncol=6
+CERT J?zTfbp^f[? fate=kill:v0 b0 ncol=12
+CERT J?zTfbp^b{? fate=twins ncol=12
+CERT J?zTfbp^fY? fate=kill:v0 b0 ncol=6
+CERT J?zTfbp^dy? fate=kill:v0 b0 ncol=6
+CERT J?zTfbp^by? fate=kill:v0 b1 ncol=6
+CERT J?zTfbh^fk? fate=kill:v0 b0 ncol=6
+CERT J?zTfbX~Bu? fate=kill:v0 b0 ncol=6
+CERT J?zTfbX^fk? fate=kill:v0 b0 ncol=6
+CERT J?zTfbX^fq? fate=kill:v0 b0 ncol=6
+CERT J?zTfbX^Vw? fate=kill:v0 b0 ncol=12
+CERT J?zTfbX^Vs? fate=kill:v0 b0 ncol=6
+CERT J?zTfbX]vs? fate=kill:v0 b0 ncol=12
+CERT J?zTbrs~Fw? fate=twins ncol=12
+CERT J?zTbrs}fw? fate=kill:v0 b0 ncol=6
+CERT J?zTbrs}fT? fate=kill:v0 b0 ncol=6
+CERT J?zTbrs}et? fate=kill:v0 b0 ncol=6
+CERT J?zTbrs}dt? fate=kill:v0 b0 ncol=6
+CERT J?zTbrs}bt? fate=kill:v0 b1 ncol=6
+CERT J?zTbrs|fw? fate=kill:v0 b0 ncol=6
+CERT J?zTbrs|fs? fate=kill:v0 b0 ncol=6
+CERT J?zTbrsvfb? fate=kill:v0 b0 ncol=6
+CERT J?zTbrsnfb? fate=kill:v0 b0 ncol=6
+CERT J?zTbr[{vw? fate=kill:v0 b0 ncol=6
+CERT J?zTbq{|fb? fate=kill:v0 b0 ncol=6
+CERT J?zTbq{{vw? fate=kill:v0 b0 ncol=6
+CERT J?zTbp{|fb? fate=kill:v0 b1 ncol=6
+CERT J?zTbp{{vw? fate=kill:v0 b1 ncol=6
+CERT J?zTbrezf[? fate=twins ncol=6
+CERT J?zTbrezb{? fate=kill:v0 b1 ncol=6
+CERT J?zTbrevf[? fate=kill:v0 b0 ncol=6
+CERT J?zTbre^b{? fate=twins ncol=6
+CERT J?zTbrexvM? fate=twins ncol=12
+CERT J?zTbrexum? fate=kill:v0 b0 ncol=6
+CERT J?zTbrexrm? fate=kill:v0 b1 ncol=6
+CERT J?zTbrexo~? fate=kill:v0 b1 ncol=6
+CERT J?zTbretum? fate=twins ncol=6
+CERT J?zTbre\rm? fate=twins ncol=6
+CERT J?zTbrU~Fb? fate=kill:v0 b0 ncol=6
+CERT J?zTbrU}fb? fate=kill:v0 b0 ncol=6
+CERT J?zTbrU|fp? fate=kill:v0 b0 ncol=6
+CERT J?zTbrUzf[? fate=twins ncol=6
+CERT J?zTbrUze{? fate=kill:v0 b0 ncol=6
+CERT J?zTbrUve{? fate=twins ncol=6
+CERT J?zTbrUvb{? fate=kill:v0 b1 ncol=6
+CERT J?zTbrUne{? fate=kill:v0 b0 ncol=6
+CERT J?zTbrU^b{? fate=twins ncol=6
+CERT J?zTbrM|f[? fate=kill:v0 b0 ncol=6
+CERT J?zTbrM|e{? fate=kill:v0 b0 ncol=6
+CERT J?zTbrM|b{? fate=kill:v0 b1 ncol=6
+CERT J?zTbpm|f[? fate=kill:v0 b1 ncol=6
+CERT J?zTbpm|b{? fate=kill:v0 b2 ncol=6
+CERT J?zTbq]|e{? fate=kill:v0 b0 ncol=6
+CERT J?zTbq]|b{? fate=kill:v0 b1 ncol=6
+CERT J?zTbp]|e{? fate=kill:v0 b1 ncol=6
+CERT J?zTbp]|b{? fate=kill:v0 b2 ncol=6
+CERT J?zTfrsNfb? fate=kill:v0 b0 ncol=6
+CERT J?zTfrsNfa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfrk\fb? fate=kill:v0 b0 ncol=6
+CERT J?zTfrk\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfrk\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTfr[\fb? fate=kill:v0 b0 ncol=6
+CERT J?zTfr[\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfr[\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTfq{\fb? fate=kill:v0 b0 ncol=6
+CERT J?zTfq{\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfq{\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTfZq]fb? fate=kill:v0 b0 ncol=6
+CERT J?zTfZq]fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfZq]f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTfZq\fb? fate=kill:v0 b0 ncol=6
+CERT J?zTfZq\fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTfZq\f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTfZY\f[? fate=kill:v0 b0 ncol=6
+CERT J?zTfZY\e{? fate=kill:v0 b0 ncol=6
+CERT J?zTfZY\d{? fate=kill:v0 b0 ncol=6
+CERT J?zTfZY\b{? fate=kill:v0 b1 ncol=6
+CERT J?zTfZY\_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTfYy\f[? fate=kill:v0 b0 ncol=6
+CERT J?zTfYy\e{? fate=kill:v0 b0 ncol=6
+CERT J?zTfYy\d{? fate=kill:v0 b0 ncol=6
+CERT J?zTfYy\b{? fate=kill:v0 b1 ncol=6
+CERT J?zTfYy\_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTfYu]f[? fate=kill:v0 b0 ncol=6
+CERT J?zTfYu]e{? fate=kill:v0 b0 ncol=6
+CERT J?zTfYu]b{? fate=kill:v0 b1 ncol=6
+CERT J?zTfYu]_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTdzq]fb? fate=kill:v0 b0 ncol=6
+CERT J?zTdzq]fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTdzq]f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTdzY\f[? fate=kill:v0 b0 ncol=6
+CERT J?zTdzY\e{? fate=kill:v0 b0 ncol=6
+CERT J?zTdzY\b{? fate=kill:v0 b1 ncol=6
+CERT J?zTdzY\_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTbzw|Fw? fate=kill:v0 b0 ncol=12
+CERT J?zTbzw|Fs? fate=kill:v0 b0 ncol=6
+CERT J?zTbzw|EF_ fate=kill:v0 b0 ncol=6
+CERT J?zTbzw|DF_ fate=kill:v0 b0 ncol=6
+CERT J?zTbzw|BF_ fate=kill:v0 b1 ncol=6
+CERT J?zTbzw|@f_ fate=kill:v0 b1 ncol=6
+CERT J?zTbzk{fo_ fate=kill:v0 b0 ncol=6
+CERT J?zTbzk{fg_ fate=kill:v0 b0 ncol=6
+CERT J?zTby{{fo_ fate=kill:v0 b0 ncol=6
+CERT J?zTby{{fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTby{{f`_ fate=kill:v0 b0 ncol=6
+CERT J?zTbx{{fo_ fate=kill:v0 b1 ncol=6
+CERT J?zTbx{{fa_ fate=kill:v0 b1 ncol=6
+CERT J?zTbxy\f[? fate=kill:v0 b2 ncol=6
+CERT J?zTbxy\b{? fate=kill:v0 b3 ncol=12
+CERT J?zTbxy\bb_ fate=kill:v0 b3 ncol=12
+CERT J?zTe\{{f[? fate=kill:v0 b0 ncol=6
+CERT J?zTe\{{d{? fate=kill:v0 b0 ncol=6
+CERT J?zTe\{{b{? fate=kill:v0 b1 ncol=6
+CERT J?zTe\{{fB_ fate=kill:v0 b0 ncol=6
+CERT J?zTe\{{db_ fate=kill:v0 b0 ncol=6
+CERT J?zTe\{{bb_ fate=kill:v0 b1 ncol=6
+CERT J?zTe\{{_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTe\y|F[? fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|E{? fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|D{? fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|B{? fate=kill:v0 b1 ncol=6
+CERT J?zTe\y|FB_ fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|Eb_ fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|Db_ fate=kill:v0 b0 ncol=6
+CERT J?zTe\y|Bb_ fate=kill:v0 b1 ncol=6
+CERT J?zTe\y|?^_ fate=kill:v0 b1 ncol=6
+CERT J?zTb^s}Fb? fate=kill:v0 b0 ncol=6
+CERT J?zTb^s}Fa_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^s}F`_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{f[? fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{e{? fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{b{? fate=kill:v0 b1 ncol=6
+CERT J?zTb^[{fB_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{eb_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{db_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^[{_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTb]{{f[? fate=kill:v0 b0 ncol=6
+CERT J?zTb]{{d{? fate=kill:v0 b0 ncol=6
+CERT J?zTb]{{b{? fate=kill:v0 b1 ncol=6
+CERT J?zTb]{{fB_ fate=kill:v0 b0 ncol=6
+CERT J?zTb]{{eb_ fate=kill:v0 b0 ncol=6
+CERT J?zTb]{{db_ fate=kill:v0 b0 ncol=6
+CERT J?zTb]{{bb_ fate=kill:v0 b1 ncol=6
+CERT J?zTb]{{_^_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{f[? fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{e{? fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{d{? fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{b{? fate=kill:v0 b2 ncol=6
+CERT J?zTb\{{fB_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{eb_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{db_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\{{bb_ fate=kill:v0 b2 ncol=6
+CERT J?zTb\{{_^_ fate=kill:v0 b2 ncol=6
+CERT J?zTb^U}F[? fate=kill:v0 b0 ncol=6
+CERT J?zTb^U}E{? fate=kill:v0 b0 ncol=6
+CERT J?zTb^U}B{? fate=kill:v0 b1 ncol=6
+CERT J?zTb^U}FB_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^U}Eb_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^U}Db_ fate=kill:v0 b0 ncol=6
+CERT J?zTb^U}Bb_ fate=kill:v0 b1 ncol=6
+CERT J?zTb^U}?^_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\u}F[? fate=kill:v0 b1 ncol=6
+CERT J?zTb\u}E{? fate=kill:v0 b1 ncol=6
+CERT J?zTb\u}B{? fate=kill:v0 b2 ncol=6
+CERT J?zTb\u}FB_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\u}Eb_ fate=kill:v0 b1 ncol=6
+CERT J?zTb\u}Bb_ fate=kill:v0 b2 ncol=6
+CERT J?zTb\u}?^_ fate=kill:v0 b2 ncol=6
+CERT J?zVf_{~@}? fate=kill:v0 b1 ncol=6
+CERT J?zVf_{}d]? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{}c}? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{zey? fate=twins ncol=6
+CERT J?zVf_{zdu? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{zdm? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{nby? fate=kill:v0 b1 ncol=6
+CERT J?zVf_{neu? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{{u]? fate=twins ncol=6
+CERT J?zVf_{{p}? fate=twins ncol=6
+CERT J?zVf_{{tf? fate=twins ncol=6
+CERT J?zVf_{yt{? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{yvU? fate=twins ncol=6
+CERT J?zVf_{yum? fate=twins ncol=6
+CERT J?zVf_{uuu? fate=twins ncol=6
+CERT J?zVf_{uvM? fate=twins ncol=6
+CERT J?zVf_{{nF? fate=twins ncol=6
+CERT J?zVf_{{lf? fate=kill:v0 b0 ncol=6
+CERT J?zVf_{w~e? fate=twins ncol=6
+CERT J?zUvat\fk? fate=kill:v0 b0 ncol=6
+CERT J?zUvat\fi? fate=kill:v0 b0 ncol=6
+CERT J?zUvat\fe? fate=kill:v0 b0 ncol=6
+CERT J?zTv`s~Dy? fate=kill:v0 b0 ncol=6
+CERT J?zTv`s}VY? fate=kill:v0 b0 ncol=6
+CERT J?zTv`s}Ty? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTvM? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTum? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTtm? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTrm? fate=kill:v0 b1 ncol=6
+CERT J?zTvbwTul? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTtl? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTrl? fate=kill:v0 b1 ncol=6
+CERT J?zTvbwTuj? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTtj? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwTuf? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLvM? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLum? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLtm? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLrm? fate=kill:v0 b1 ncol=6
+CERT J?zTvbwLul? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLtl? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLrl? fate=kill:v0 b1 ncol=6
+CERT J?zTvbwLuj? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLtj? fate=kill:v0 b0 ncol=6
+CERT J?zTvbwLtf? fate=kill:v0 b0 ncol=6
+CERT JCOfvrw~Fw? fate=twins ncol=24
+CERT JCOfvrw~FF? fate=twins ncol=6
+CERT JCOfvrw~EN? fate=twins ncol=6
+CERT JCOfvrs~FF? fate=twins ncol=6
+CERT JCOfvjk~FF? fate=kill:v0 b0 ncol=6
+CERT JCOfvjk~?~? fate=kill:v0 b1 ncol=6
+CERT JCQeRz{~Fw? fate=twins ncol=12
+CERT JCQffp{~DV? fate=kill:v0 b0 ncol=6
+CERT JCQffp{~An? fate=kill:v0 b1 ncol=6
+CERT JCQffX{~DV? fate=kill:v0 b0 ncol=6
+CERT JCQffX{~An? fate=kill:v0 b1 ncol=6
+CERT JCQfex{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQfdx{~Fw? fate=twins ncol=12
+CERT JCQfdx{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQfdx{~DV? fate=kill:v0 b0 ncol=6
+CERT JCQfQz{~Fw? fate=twins ncol=12
+CERT JCQfVh{~DV? fate=kill:v0 b0 ncol=6
+CERT JCQfUx{~Fw? fate=twins ncol=12
+CERT JCQfRx{~Fw? fate=twins ncol=12
+CERT JCQerZ{~Fw? fate=twins ncol=12
+CERT JCQevp{~Fw? fate=twins ncol=12
+CERT JCQevp{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQevp{~An? fate=kill:v0 b1 ncol=6
+CERT JCQevh{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQevh{~?~? fate=kill:v0 b1 ncol=6
+CERT JCQevX{~Fw? fate=twins ncol=12
+CERT JCQevX{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQern[vRl? fate=kill:v0 b1 ncol=6
+CERT JCQbrr{~Fw? fate=twins ncol=12
+CERT JCQbuZ{~Fw? fate=twins ncol=12
+CERT JCQbvrs~DV? fate=kill:v0 b0 ncol=6
+CERT JCQbvrs~An? fate=kill:v0 b1 ncol=6
+CERT JCQbvr[~Fw? fate=twins ncol=12
+CERT JCQbvr[~An? fate=kill:v0 b1 ncol=6
+CERT JCQbvp{~Fw? fate=twins ncol=12
+CERT JCQbvp{~FF? fate=kill:v1 b0 ncol=6
+CERT JCQbvi{~Fw? fate=twins ncol=12
+CERT JCQbvi{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQbvZs~DV? fate=kill:v0 b0 ncol=6
+CERT JCQbvZ[~Fw? fate=twins ncol=12
+CERT JCQfNp{~DV? fate=kill:v0 b0 ncol=6
+CERT JCQfNp{~An? fate=kill:v0 b1 ncol=6
+CERT JCQdnp{~FF? fate=kill:v0 b0 ncol=6
+CERT JCQe^p{~Fw? fate=twins ncol=12
+CERT JCQfvrk^Af_ fate=twins ncol=6
+CERT JCQfvrk^AN_ fate=twins ncol=6
+CERT JCQfvrk^?n_ fate=twins ncol=12
+CERT JCQfvp{}Af_ fate=twins ncol=6
+CERT JCQfvp{}AN_ fate=twins ncol=6
+CERT JCQfvp{^Fw? fate=kill:v0 b1 ncol=12
+CERT JCQfvp{^FF? fate=twins ncol=6
+CERT JCQfvp{^An? fate=twins ncol=6
+CERT JCQfvjw^DV? fate=twins ncol=6
+CERT JCQfvjw^An? fate=twins ncol=6
+CERT JCQfvjw^DU_ fate=kill:v0 b0 ncol=6
+CERT JCQfvjw^Am_ fate=kill:v0 b1 ncol=6
+CERT JCQfvjw^DT_ fate=twins ncol=6
+CERT JCQfvjw^Al_ fate=twins ncol=6
+CERT JCQfvjw^?v_ fate=twins ncol=6
+CERT JCQfvjw^?^_ fate=twins ncol=6
+CERT JCQfvjk^DV? fate=kill:v0 b0 ncol=6
+CERT JCQfvjk^An? fate=kill:v0 b1 ncol=6
+CERT JCQfvjk^DU_ fate=kill:v0 b0 ncol=6
+CERT JCQfvjk^Am_ fate=kill:v0 b1 ncol=6
+CERT JCQfvjk^DT_ fate=kill:v0 b0 ncol=6
+CERT JCQfvjk^Al_ fate=kill:v0 b1 ncol=6
+CERT JCQfvjk^DR_ fate=kill:v0 b0 ncol=6
+CERT JCQfvjk^Aj_ fate=kill:v0 b1 ncol=6
+CERT JCQfvjk^?v_ fate=kill:v0 b1 ncol=6
+CERT JCQfvjk^?^_ fate=kill:v0 b1 ncol=6
+CERT JCQfuzw^Fw? fate=kill:v0 b0 ncol=12
+CERT JCQfuzw^FF? fate=twins ncol=6
+CERT JCQfuzw^An? fate=twins ncol=6
+CERT JCQfuzw^FE_ fate=kill:v0 b0 ncol=6
+CERT JCQfuzw^Am_ fate=kill:v0 b1 ncol=6
+CERT JCQfuzw^FD_ fate=twins ncol=6
+CERT JCQfuzw^Al_ fate=twins ncol=6
+CERT JCQfuzk^Fw? fate=kill:v0 b0 ncol=12
+CERT JCQfuzk^FF? fate=kill:v0 b0 ncol=6
+CERT JCQfuzk^An? fate=kill:v0 b1 ncol=6
+CERT JCQfuzk^FE_ fate=kill:v0 b0 ncol=6
+CERT JCQfuzk^Am_ fate=kill:v0 b1 ncol=6
+CERT JCQflzw^Fw? fate=kill:v0 b0 ncol=12
+CERT JCQflzw^FF? fate=kill:v0 b0 ncol=6
+CERT JCQflzw^An? fate=kill:v0 b1 ncol=6
+CERT JCQflzw^FD_ fate=kill:v0 b0 ncol=6
+CERT JCQflzw^DT_ fate=kill:v0 b0 ncol=6
+CERT JCRbd^izfb? fate=kill:v0 b0 ncol=6
+CERT JCR`ur]ve{? fate=twins ncol=6
+CERT JCR`uzYve{? fate=twins ncol=6
+CERT JCR`uzYv`z? fate=kill:v0 b1 ncol=6
+CERT JCRetrw\s^? fate=kill:v0 b0 ncol=6
+CERT JCRetrwNuN? fate=kill:v0 b0 ncol=6
+CERT JCRevrwNeN? fate=twins ncol=6
+CERT JCRevrwNcN_ fate=twins ncol=6
+CERT JCRdvRw\s^? fate=kill:v0 b0 ncol=6
+CERT JCRdvRwNuN? fate=kill:v0 b0 ncol=6
+CERT JCRdtrw\s^? fate=twins ncol=6
+CERT JCRdtrwNpn? fate=twins ncol=6
+CERT JCRdtq{Vq}? fate=twins ncol=6
+CERT JCRdtq{Vq|? fate=kill:v0 b1 ncol=6
+CERT JCRdtq{Vo~? fate=twins ncol=6
+CERT JCRdrrwxuN? fate=kill:v0 b0 ncol=6
+CERT JCRdrrwxtN? fate=kill:v0 b0 ncol=6
+CERT JCRdrrw\rN? fate=kill:v0 b2 ncol=6
+CERT JCRdrrw\pn? fate=kill:v0 b2 ncol=6
+CERT JCRdrrwNpn? fate=kill:v0 b2 ncol=6
+CERT JCRVRrwjqn? fate=kill:v0 b1 ncol=6
+CERT JCRVVrwNeN? fate=twins ncol=6
+CERT JCRVVrwNcN_ fate=twins ncol=6
+CERT JCRVVrwNaN_ fate=twins ncol=6
+CERT JCQvB^kzfb? fate=kill:v0 b0 ncol=6
+CERT JCQvVRw\s^? fate=twins ncol=6
+CERT JCQvUrw\s^? fate=kill:v0 b0 ncol=6
+CERT JCQvRrwxtN? fate=kill:v0 b0 ncol=6
+CERT JCQvRrwxrN? fate=kill:v0 b1 ncol=6
+CERT JCQr^bqzVY? fate=twins ncol=6
+CERT JCQr^bqzVX? fate=kill:v0 b0 ncol=6
+CERT JCQr^bqzVR? fate=kill:v0 b0 ncol=6
+CERT JCQr^bqzVJ? fate=kill:v0 b0 ncol=6
+CERT JCpdbZmzf[? fate=twins ncol=6
+CERT JCpdfjs]rt? fate=kill:v0 b1 ncol=6
+CERT JCpdfYmz_~? fate=kill:v0 b0 ncol=6
+CERT JCpdfXmzf[? fate=twins ncol=6
+CERT JCpdfXmzfb? fate=kill:v0 b0 ncol=6
+CERT JCpdfLmzfb? fate=kill:v0 b0 ncol=6
+CERT JCpbdju|fk? fate=twins ncol=6
+CERT JCpb`x}^b{? fate=twins ncol=6
+CERT JCpbfje|c^? fate=kill:v0 b0 ncol=6
+CERT JCpbfjU|c^? fate=kill:v0 b0 ncol=6
+CERT JCpbfiu|fk? fate=twins ncol=6
+CERT JCpbfiu|br? fate=kill:v0 b1 ncol=6
+CERT JCpbfiu|c^? fate=kill:v0 b0 ncol=6
+CERT JCpbbw}^b{? fate=twins ncol=6
+CERT JCpbbw}^fb? fate=kill:v1 b0 ncol=6
+CERT JCpf`zw}Vq? fate=twins ncol=6
+CERT JCpf`zw}P|? fate=kill:v0 b1 ncol=6
+CERT JCpf`zw}UN? fate=kill:v0 b0 ncol=6
+CERT JCpf`w}}Rr? fate=kill:v1 b1 ncol=6
+CERT JCpf`w}{]]? fate=kill:v0 b1 ncol=6
+CERT JCpfbx{Nb{? fate=kill:v1 b0 ncol=6
+CERT JCpfbx{Nfb? fate=twins ncol=6
+CERT JCpfbx{Nc^? fate=twins ncol=6
+CERT JCpfbx{Nfa_ fate=kill:v0 b2 ncol=6
+CERT JCpfbx{Nc]_ fate=kill:v1 b1 ncol=6
+CERT JCpfbx{Nbb_ fate=twins ncol=6
+CERT JCpfbx{N_^_ fate=twins ncol=6
+CERT JCpbvjslfk? fate=kill:v0 b0 ncol=6
+CERT JCpbvjslbr? fate=twins ncol=6
+CERT JCpbvjslc^? fate=twins ncol=6
+CERT JCpbvjslbq_ fate=kill:v0 b1 ncol=6
+CERT JCpbvjslc]_ fate=kill:v0 b0 ncol=6
+CERT JCpbvjslbb_ fate=twins ncol=6
+CERT JCpbvjslcN_ fate=twins ncol=6
+CERT JCpdlq{]ru? fate=twins ncol=6
+CERT JCpdlq{]rt? fate=kill:v0 b1 ncol=6
+CERT JCpdlq{]pv? fate=kill:v0 b1 ncol=6
+CERT JCpdlq{Vq}? fate=twins ncol=6
+CERT JCpdlq{Vq|? fate=kill:v0 b1 ncol=6
+CERT JCpdlq{Vqz? fate=kill:v0 b1 ncol=6
+CERT JCpdlq{Vo~? fate=kill:v0 b1 ncol=6
+CERT JCpdjrs|Vi? fate=twins ncol=6
+CERT JCpdjrs|Rt? fate=kill:v0 b1 ncol=6
+CERT JCpdjrs|S^? fate=kill:v0 b0 ncol=6
+CERT JCpdjpy|Vb? fate=kill:v0 b1 ncol=6
+CERT JCpdjpy|Rj? fate=kill:v0 b2 ncol=6
+CERT JCrb`r{~Fw? fate=twins ncol=6
+CERT JCrbdrwNpz? fate=kill:v0 b1 ncol=6
+CERT JCrbdrwNpv? fate=kill:v0 b1 ncol=6
+CERT JCrbdp{~Fw? fate=twins ncol=6
+CERT JCrbdp{~FF? fate=kill:v0 b0 ncol=6
+CERT JCrbdp{~?~? fate=kill:v0 b1 ncol=6
+CERT JCrbbrwNpz? fate=kill:v1 b1 ncol=6
+CERT JCrbbq{~Fw? fate=twins ncol=6
+CERT JCrbbq{~FF? fate=kill:v0 b0 ncol=6
+CERT JCrbbq{~?~? fate=kill:v0 b1 ncol=6
+CERT JCrbbp{fsz? fate=kill:v0 b1 ncol=6
+CERT JCrbbp{fo~? fate=kill:v0 b2 ncol=6
+CERT JCrbbo}^b{? fate=twins ncol=6
+CERT JCrbbo}^fb? fate=kill:v0 b2 ncol=6
+CERT JCrbbo}^c^? fate=kill:v1 b1 ncol=6
+CERT JCrbby{}Fw? fate=kill:v0 b0 ncol=6
+CERT JCrbby{}FF? fate=kill:v0 b0 ncol=6
+CERT JCrbby{}?~? fate=kill:v0 b1 ncol=6
+CERT JCrbby{}FE_ fate=kill:v0 b0 ncol=6
+CERT JCrbby{}?}_ fate=kill:v0 b1 ncol=6
+CERT JCrbby{}FD_ fate=kill:v0 b0 ncol=6
+CERT JCrbby{}?|_ fate=kill:v0 b1 ncol=6
+CERT JCrbby{}FB_ fate=kill:v0 b0 ncol=6
+CERT JCrbby{}?z_ fate=kill:v0 b1 ncol=6
+CERT JCrfbo{~Fw? fate=twins ncol=6
+CERT JCrfbo{~FF? fate=kill:v0 b0 ncol=6
+CERT JCrbrrwLpn? fate=twins ncol=6
+CERT JCrbrrwLp^? fate=twins ncol=6
+CERT JCrbrrwLo~? fate=twins ncol=6
+CERT JCpvV_{Np}? fate=twins ncol=6
+CERT JCpvV_{NuN? fate=kill:v0 b1 ncol=6
+CERT JCpvV_{}H}? fate=kill:v0 b1 ncol=6
+CERT JCpvV_{}Np? fate=twins ncol=6
+CERT JCXedZmzf[? fate=twins ncol=6
+CERT JCXed^kzf[? fate=twins ncol=6
+CERT JCXed^kzfb? fate=kill:v0 b0 ncol=6
+CERT JCXed^kz_~? fate=twins ncol=6
+CERT JCXed]mvUx? fate=twins ncol=6
+CERT JCXfeZMNpz? fate=twins ncol=6
+CERT JCXetrwxvM? fate=twins ncol=6
+CERT JCXetrwxvL? fate=kill:v0 b0 ncol=6
+CERT JCXetrwxvF? fate=kill:v0 b0 ncol=6
+CERT JCZbeq{~Fw? fate=twins ncol=6
+CERT JCZbeq{~FF? fate=kill:v0 b0 ncol=6
+CERT JCZbeq{~?~? fate=kill:v0 b1 ncol=6
+CERT JCZbeqN}fT? fate=kill:v0 b0 ncol=6
+CERT JCZbeqN}et? fate=kill:v0 b0 ncol=6
+CERT JCZbey{}Fw? fate=kill:v0 b0 ncol=6
+CERT JCZbey{}FF? fate=kill:v0 b0 ncol=6
+CERT JCZbey{}?~? fate=kill:v0 b1 ncol=6
+CERT JCZbey{}FE_ fate=kill:v0 b0 ncol=6
+CERT JCZbey{}?}_ fate=kill:v0 b1 ncol=6
+CERT JCZbey{}FB_ fate=kill:v0 b0 ncol=6
+CERT JCZbey{}?z_ fate=kill:v0 b1 ncol=6
+CERT JCZbmqw~Fw? fate=twins ncol=6
+CERT JCZbmqw~FF? fate=kill:v0 b0 ncol=6
+CERT JCZbmqw~?~? fate=kill:v0 b1 ncol=6
+CERT JCZbmqw\Zj? fate=twins ncol=6
+CERT JCZVBt{Nb{? fate=kill:v1 b0 ncol=6
+CERT JCZVBt{Nfb? fate=kill:v0 b2 ncol=6
+CERT JCZVBt{Nc^? fate=kill:v1 b1 ncol=6
+CERT JCZVBt{Nfa_ fate=kill:v0 b2 ncol=6
+CERT JCZVBt{Nc]_ fate=kill:v1 b1 ncol=6
+CERT JCZVBt{Nf`_ fate=kill:v0 b2 ncol=6
+CERT JCZVBt{Nc\_ fate=kill:v1 b1 ncol=6
+CERT JCZVBt{Nbb_ fate=kill:v1 b0 ncol=6
+CERT JCZVBt{N_^_ fate=kill:v1 b1 ncol=6
+CERT JCZTfbkZv[? fate=kill:v0 b0 ncol=6
+CERT JCZTfbkZvY? fate=kill:v0 b0 ncol=6
+CERT JCZTfbkZvM? fate=kill:v0 b0 ncol=6
+CERT JCZTfbeZv[? fate=kill:v0 b0 ncol=6
+CERT JCZTfbeZvM? fate=kill:v0 b0 ncol=6
+CERT JCZTf`mzf[? fate=twins ncol=6
+CERT JCZTf`mzVY? fate=twins ncol=6
+CERT JCZTf`mzVM? fate=kill:v0 b0 ncol=6
+CERT JCZTf`mxv[? fate=kill:v0 b0 ncol=6
+CERT JCZTf`mxvM? fate=twins ncol=6
+CERT JCZTf`mro~? fate=kill:v0 b1 ncol=6
+CERT JCZTf`mZs^? fate=kill:v0 b1 ncol=6
+CERT JCZTfRw\rm? fate=twins ncol=6
+CERT JCZTfRw\rl? fate=kill:v0 b1 ncol=6
+CERT JCZTfRw\rj? fate=kill:v0 b1 ncol=6
+CERT JCZTfPu\rm? fate=twins ncol=6
+CERT JCZTfPu\s^? fate=kill:v0 b1 ncol=6
+CERT JCZTeZiz_~? fate=kill:v0 b0 ncol=6
+CERT JCZTdXZVt\? fate=kill:v0 b1 ncol=6
+CERT JCZTfZiZf[? fate=kill:v0 b0 ncol=6
+CERT JCZTfZiZfb? fate=kill:v0 b0 ncol=6
+CERT JCZTfZiZ_~? fate=kill:v0 b1 ncol=6
+CERT JCZTfZiZfa_ fate=kill:v0 b0 ncol=6
+CERT JCZTfZiZ_}_ fate=kill:v0 b1 ncol=6
+CERT JCZTfZiZfB_ fate=kill:v0 b0 ncol=6
+CERT JCZTfZiZ_^_ fate=kill:v1 b1 ncol=6
+CERT JCZLbbx}Vq? fate=twins ncol=6
+CERT JCZLba|nTy? fate=twins ncol=6
+CERT JCZLfbw\rj? fate=kill:v0 b1 ncol=6
+CERT JCZLfbsNpz? fate=kill:v0 b1 ncol=6
+CERT JCZLfbsNpn? fate=kill:v0 b1 ncol=6
+CERT JCZLf`u\rm? fate=twins ncol=6
+CERT JCZLf`u\vp? fate=kill:v0 b1 ncol=6
+CERT JCZLf`u\s^? fate=kill:v0 b1 ncol=6
+CERT JCZLf_}Np}? fate=twins ncol=6
+CERT JCZLf_}Nvh? fate=kill:v0 b1 ncol=6
+CERT JCZLf_}NuV? fate=kill:v0 b1 ncol=6
+CERT JCZJfbsNp}? fate=twins ncol=6
+CERT JCZJfbsNp|? fate=kill:v1 b1 ncol=6
+CERT JCZJfbsNpz? fate=kill:v1 b1 ncol=6
+CERT JCZJfbsNpn? fate=kill:v1 b1 ncol=6
+CERT JCZJfay}fs? fate=twins ncol=6
+CERT JCZJfay}bj? fate=kill:v0 b1 ncol=6
+CERT JCZJdrwxvJ? fate=kill:v0 b0 ncol=6
+CERT JCZJdrwxvF? fate=kill:v0 b0 ncol=6
+CERT JCZJdrw\rj? fate=kill:v0 b2 ncol=6
+CERT JCZJdrw\rf? fate=kill:v0 b2 ncol=6
+CERT JCZJdrq}fs? fate=twins ncol=6
+CERT JCZJdrq}bj? fate=kill:v0 b1 ncol=6
+CERT JCZJdrq}c^? fate=kill:v0 b0 ncol=6
+CERT JCZJdrexvM? fate=twins ncol=6
+CERT JCZJdrexvp? fate=kill:v0 b0 ncol=6
+CERT JCZJdrexo~? fate=kill:v0 b1 ncol=6
+CERT JCZJfG}NuV? fate=kill:v0 b2 ncol=6
+CERT JCZJdjsyvR? fate=kill:v0 b0 ncol=6
+CERT JCZJdjsyvF? fate=kill:v0 b0 ncol=6
+CERT JCZJdjiyvU? fate=twins ncol=6
+CERT JCZJdjiyvh? fate=kill:v0 b0 ncol=6
+CERT JCZJdjiyo~? fate=kill:v0 b1 ncol=6
+CERT JCZJdiynd{? fate=twins ncol=6
+CERT JCZJdiynbj? fate=kill:v0 b1 ncol=6
+CERT JCZJdjJnd{? fate=twins ncol=6
+CERT JCZJdjJndt? fate=kill:v0 b0 ncol=6
+CERT JCZJdjJnd\? fate=kill:v0 b0 ncol=6
+CERT JCZJdjJnc|? fate=kill:v0 b0 ncol=6
+CERT JCZJbjqmve? fate=kill:v0 b1 ncol=6
+CERT JCZJbiy}fs? fate=twins ncol=6
+CERT JCZJbiynd{? fate=twins ncol=6
+CERT JCZJbiy}Vq? fate=twins ncol=6
+CERT JCZJbiynP}? fate=kill:v1 b2 ncol=6
+CERT JCZJbiy{ru? fate=kill:v0 b2 ncol=6
+CERT JCZJbiyys^? fate=kill:v0 b1 ncol=6
+CERT JCZJbiyus^? fate=kill:v0 b1 ncol=6
+CERT JCZJbiymuV? fate=kill:v0 b1 ncol=6
+CERT JCZJbiyms^? fate=kill:v0 b1 ncol=6
+CERT JCZJbiy]vs? fate=kill:v0 b2 ncol=6
+CERT JCZJbiy]vq? fate=kill:v0 b2 ncol=6
+CERT JCZJbiy]ru? fate=twins ncol=6
+CERT JCZJbiyltm? fate=twins ncol=6
+CERT JCZJbiylp}? fate=kill:v1 b2 ncol=6
+CERT JCZJbiyjuV? fate=kill:v0 b1 ncol=6
+CERT JCZJbiyfuV? fate=kill:v0 b1 ncol=6
+CERT JCZJbiyNt{? fate=kill:v1 b2 ncol=6
+CERT JCZJbiyNp}? fate=twins ncol=6
+CERT JCZJbhymvs? fate=kill:v0 b2 ncol=6
+CERT JCZJbhymvq? fate=kill:v0 b2 ncol=6
+CERT JCZJbhymru? fate=kill:v1 b0 ncol=6
+CERT JCZJbiumt{? fate=kill:v0 b1 ncol=6
+CERT JCZJbiumtm? fate=kill:v0 b1 ncol=6
+CERT JCZJbiump}? fate=kill:v1 b2 ncol=6
+CERT JCZJbimut]? fate=kill:v0 b1 ncol=6
+CERT JCZJbiZneV? fate=kill:v0 b1 ncol=6
+CERT JCZJdfw}fs? fate=twins ncol=6
+CERT JCZJdfw}bj? fate=kill:v0 b1 ncol=6
+CERT JCZJdfw}c^? fate=kill:v0 b0 ncol=6
+CERT JCZJde{nd{? fate=twins ncol=6
+CERT JCZJde{nbj? fate=kill:v0 b1 ncol=6
+CERT JCZJde{neV? fate=kill:v0 b0 ncol=6
+CERT JCZJddt}fd? fate=kill:v0 b1 ncol=6
+CERT JCZJddt}bt? fate=kill:v0 b2 ncol=6
+CERT JCZJddtndl? fate=kill:v0 b1 ncol=6
+CERT JCZJddtn`|? fate=kill:v1 b2 ncol=6
+CERT JCZJdvq}Fs? fate=kill:v0 b0 ncol=6
+CERT JCZJdvq}Bj? fate=kill:v0 b1 ncol=6
+CERT JCZJdvq}C^? fate=kill:v0 b0 ncol=6
+CERT JCZJdvq}Bi_ fate=kill:v0 b1 ncol=6
+CERT JCZJdvq}C]_ fate=kill:v0 b0 ncol=6
+CERT JCZJdvq}Bh_ fate=kill:v0 b1 ncol=6
+CERT JCZJdvq}C\_ fate=kill:v0 b0 ncol=6
+CERT JCZJdvq}Bb_ fate=kill:v0 b1 ncol=6
+CERT JCZJdvq}CV_ fate=kill:v0 b0 ncol=6
+CERT JCZJduunD{? fate=kill:v0 b0 ncol=6
+CERT JCZJduunBj? fate=kill:v0 b1 ncol=6
+CERT JCZJduunEV? fate=kill:v0 b0 ncol=6
+CERT JCZJduunBi_ fate=kill:v0 b1 ncol=6
+CERT JCZJduunEU_ fate=kill:v0 b0 ncol=6
+CERT JCZJduunBh_ fate=kill:v0 b1 ncol=6
+CERT JCZJduunET_ fate=kill:v0 b0 ncol=6
+CERT JCZJduun@j_ fate=kill:v0 b1 ncol=6
+CERT JCZJduunCV_ fate=kill:v0 b0 ncol=6
+CERT JCXmdbjyvU? fate=twins ncol=6
+CERT JCXmdrwxvJ? fate=kill:v0 b0 ncol=6
+CERT JCXmdrwxvF? fate=kill:v0 b0 ncol=6
+CERT JCXmdrexvM? fate=twins ncol=6
+CERT JCXmdrexvp? fate=kill:v0 b0 ncol=6
+CERT JCXmdrexo~? fate=kill:v0 b1 ncol=6
+CERT JCY^Bby}fs? fate=twins ncol=6
+CERT JCY^Fbw\rj? fate=twins ncol=6
+CERT JCY^F`y}fs? fate=twins ncol=6
+CERT JCY^F`y}fJ? fate=twins ncol=6
+CERT JCY^F`u\rm? fate=twins ncol=6
+CERT JCY^F`u\vp? fate=twins ncol=6
+CERT JCY^F`u\s^? fate=kill:v0 b1 ncol=6
+CERT JCY^F_^}fs? fate=twins ncol=6
+CERT JCY^F_^}et? fate=kill:v0 b0 ncol=6
+CERT JCY^F_^}bt? fate=kill:v0 b1 ncol=6
+CERT JCY^BrwxvJ? fate=twins ncol=6
+CERT JCY^BrwxvF? fate=twins ncol=6
+CERT JCY^Brw\rj? fate=twins ncol=6
+CERT JCY^Brw\rf? fate=twins ncol=6
+CERT JCY^Brq}fs? fate=twins ncol=6
+CERT JCY^Brq}fJ? fate=twins ncol=6
+CERT JCY^Brq}_~? fate=kill:v0 b1 ncol=6
+CERT JCY^Bpu^b{? fate=twins ncol=6
+CERT JCY^Bpu^fJ? fate=twins ncol=6
+CERT JCY^Bpu^cv? fate=kill:v1 b1 ncol=6
+CERT JCY^FH{]ry? fate=twins ncol=6
+CERT JCY^FJi]vs? fate=twins ncol=6
+CERT JCY^FJi]vq? fate=twins ncol=6
+CERT JCY^FJi]vU? fate=twins ncol=6
+CERT JCY^FJYmo~? fate=kill:v0 b0 ncol=6
+CERT JCY^FJY]o~? fate=kill:v0 b1 ncol=6
+CERT JCY^FJYNuu? fate=kill:v0 b0 ncol=6
+CERT JCY^FHy}fs? fate=twins ncol=6
+CERT JCY^FHy}Vq? fate=twins ncol=6
+CERT JCY^FHy^R]? fate=twins ncol=6
+CERT JCY^FHyyvs? fate=twins ncol=6
+CERT JCY^FHyyvq? fate=twins ncol=6
+CERT JCY^FHyyvU? fate=twins ncol=6
+CERT JCY^FHyuo~? fate=kill:v0 b1 ncol=6
+CERT JCY^FHy]sv? fate=kill:v0 b1 ncol=6
+CERT JCY^Bt{\b{? fate=twins ncol=6
+CERT JCY^Bt{\fJ? fate=twins ncol=6
+CERT JCY^Bt{\cv? fate=kill:v1 b1 ncol=6
+CERT JCY^Bt{\fI_ fate=twins ncol=6
+CERT JCY^Bt{\cu_ fate=kill:v1 b1 ncol=6
+CERT JCY^Bt{\fH_ fate=twins ncol=6
+CERT JCY^Bt{\ct_ fate=kill:v1 b1 ncol=6
+CERT JCY^Bt{\bJ_ fate=twins ncol=6
+CERT JCY^Bt{\_v_ fate=kill:v1 b1 ncol=6
+CERT JCY^N`w}fs? fate=twins ncol=6
+CERT JCY^N`w}fJ? fate=twins ncol=6
+CERT JCY^N`wF~s? fate=kill:v0 b1 ncol=6
+CERT JCY^N`wFw~? fate=twins ncol=6
+CERT JCdffZkZf[? fate=twins ncol=6
+CERT JCdffZkZfb? fate=twins ncol=6
+CERT JCdffZkZ_~? fate=twins ncol=6
+CERT JCdffZkZfa_ fate=twins ncol=6
+CERT JCdffZkZ_}_ fate=kill:v0 b1 ncol=6
+CERT JCdffZkZfB_ fate=twins ncol=6
+CERT JCdffZkZ_^_ fate=twins ncol=6
+CERT JCdfNbs]rt? fate=twins ncol=6
+CERT JCdfNbs]rf? fate=twins ncol=6
+CERT JCdfJrs|Vi? fate=twins ncol=6
+CERT JCdfJrs|Rt? fate=twins ncol=6
+CERT JCdfJrs|S^? fate=kill:v0 b0 ncol=6
+CERT JCdfJpy|Vb? fate=twins ncol=6
+CERT JCdfJjsyvU? fate=twins ncol=6
+CERT JCdfJjsyvT? fate=twins ncol=6
+CERT JCdfJjsyvR? fate=twins ncol=6
+CERT JCdfJjsyvF? fate=twins ncol=6
+CERT JEhfcxk~Fw? fate=twins ncol=6
+CERT JEhfcxkw~w? fate=kill:v0 b0 ncol=6
+CERT JEhfcxkw~F? fate=twins ncol=6
+CERT JEhfcxkww~? fate=kill:v0 b1 ncol=6
+CERT JEhethk~Fw? fate=twins ncol=6
+CERT JEhethk~FF? fate=kill:v0 b0 ncol=6
+CERT JEherik~Fw? fate=twins ncol=6
+CERT JEherik~FF? fate=kill:v0 b0 ncol=6
+CERT JEhbtjK~Fw? fate=twins ncol=6
+CERT JEhbtjK~FF? fate=kill:v0 b0 ncol=6
+total=696208 badDeficiency=0 not3col=687377 badBoundaryVec=6013 comparableNonNbr=1300 localKill=1518 SURVIVORS=0

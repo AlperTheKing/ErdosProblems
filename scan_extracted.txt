@@ -1,0 +1,705 @@
+===== #19 =====
+19 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ - $500 
+ If $G$ is an edge-disjoint union of $n$ copies of $K_n$ then is $\chi(G)=n$? 
+ #19 : [Er76b,p.171] [Er76c,p.9] [Er78,p.29] [Er81] [Er90] [Er92b] [Er93,p.341] [Er95] [Er97c] [Er97d] [Er97f] [Va99,3.57] 
+ graph theory | 
+ chromatic number 
+ Conjectured by Erdős, Faber, and Lovász (apparently 'at a party in Boulder, Colarado in September 1972' [Er81] ). Kahn [Ka92] proved that $\chi(G)\leq (1+o(1))n$ (for which Erdős gave him a 'consolation prize' of \$100). Hindman [Hi81] proved the conjecture for $n<10$. Various special cases have been established by Romero and Sáchez-Arroyo [RoSa07] , Araujo-Pardo and Vázquez-Ávila [ArVa16] , and Alesandroi [Al21] . Kang, Kelly, Kühn, Methuku, and Osthus [KKKMO21] have proved the answer is yes for all sufficiently large $n$. In [Er97d] Erdős asks how large $\chi(G)$ can be if instead of asking for the copies of $K_n$ to be edge disjoint we only ask for their intersections to be triangle free, or to contain at most one edge. In [Er93] Erdős and Füredi conjecture the generalisation that if $G$ is the union of $n$ copies of $K_n$, which pairwise intersect in at most $k$ vertices, then $\chi(G)\leq kn$. This has been proved for all sufficiently large $n$ (not depending on $k$) by Kang, Kelly, Kühn, Methuku, and Osthus [KKKMO24] . Furthermore, Horák and Tuza [HoTu90] proved that if $\chi(G) \leq n^{3/2}$ if $G$ is the union of $n$ copies of $K_n$, and hence this conjecture also holds whenever $k\geq\sqrt{n}$. In [Er78] Erdős asks for the smallest $m_k$ such that there exists an edge-disjoint union of $m_k$ copies of $K_n$ which has chromatic number at least $n+k$ (so that the original question is whether $m_1>n$). He writes 'at the moment I do not even have a plausible conjecture, but perhaps this will not be hard to find'. 
+ View the LaTeX source 
+ This page was last edited 07 March 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 8 comments on this problem
+ Likes this problem 
+ holyterror 
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Sarosh Adenwalla, Alfaiz, and dykang 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #19, https://www.erdosproblems.com/19, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #475 =====
+475 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Let $p$ be a prime. Given any finite set $A\subseteq \mathbb{F}_p\backslash \{0\}$, is there always a rearrangement $A=\{a_1,\ldots,a_t\}$ such that all partial sums $\sum_{1\leq k\leq m}a_{k}$ are distinct, for all $1\leq m\leq t$? 
+ #475 : [Er73] [ErGr80] 
+ number theory | 
+ additive combinatorics 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Graham, who proved it when $t=p-1$. A similar conjecture was made for arbitrary abelian groups by Alspach. Such an ordering is often called a valid ordering. This has been proved for $t\leq 12$ (see Costa and Pellegrini [CoPe20] and the references therein) and for $p-3\leq t\leq p-1$ (see Hicks, Ollis, and Schmitt [HOS19] and the references therein). This has been proved for all sufficiently large primes; this is a consequence of four different types of result, each of which handles (using different methods) a different range of size of $A$. 
+ The small $A$ case: Kravitz [Kr24] proved this for\[t \leq \frac{\log p}{\log\log p}.\](This was independently earlier observed by Will Sawin in a MathOverflow post .)
+Bedert and Kravitz [BeKr24] improved this to the range\[t \leq e^{c(\log p)^{1/4}}\]for some constant $c>0$, and Costa and Della Fiore [CoDe26] have further improved this to\[t \leq e^{c(\log p)^{1/3}}.\] 
+ The medium $A$ case: Pham and Sauermann [PhSa26] proved this, for any $0<\alpha<1$, for all\[ 1 \ll_\alpha t\leq p^{1-\alpha}.\] 
+ The large $A$ case: Bedert, Bucić, Kravitz, Montgomery, and Müyesser [BBKMM25] proved this for all\[p^{1-c}\leq t\leq (1-o(1))p\]for some small constant $c>0$. 
+ The very large $A$ case: Müyesser and Pokrovskiy [MuPo25] proved this for all\[t\geq (1-o(1))p.\] 
+ View the LaTeX source 
+ This page was last edited 05 March 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 3 comments on this problem
+ Likes this problem 
+ Alfaiz 
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Alfaiz, Zachary Chase, Noah Kravitz, and Alp Muyesser 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #475, https://www.erdosproblems.com/475, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #506 =====
+506 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ What is the minimum number of circles determined by any $n$ points in $\mathbb{R}^2$, not all on a circle? 
+ #506 : [Er61,p.245] 
+ geometry 
+ There is clearly some non-degeneracy condition intended here - probably either that not all the points are on a line, or the stronger condition that no three points are on a line. This was resolved by Elliott [El67] , who claimed that (assuming not all points are on a circle or a line), provided $n>393$, the points determine at least $\binom{n-1}{2}$ distinct circles. There was an error, observed by Purdy and Smith [PuSm] , who noted that Elliott's proof actually gives a lower bound of\[\binom{n-1}{2}+1-\left\lfloor\frac{n-1}{2}\right\rfloor,\]again for all $n>393$. This is best possible, as witnessed by a circle with $n-1$ points and a single point off the circle. This corrected lower bound was also reported by Bálint and Bálintová [BaBa94] , although without any explanation. The problem appears to remain open for small $n$. Segre observed that projecting a cube onto a plane shows that the lower bound $\binom{n-1}{2}$ is false for $n=8$. See also [104] and [831] .
+ View the LaTeX source 
+ This page was last edited 01 February 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ Related OEIS sequences: 
+ Possible
+ 1 comment on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Gaia Carenini, Lewys, and Desmond Weisenberg 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #506, https://www.erdosproblems.com/506, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #547 =====
+547 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ If $T$ is a tree on $n$ vertices then\[R(T) \leq 2n-2.\] 
+ #547 : [BuEr76] 
+ graph theory | 
+ ramsey theory 
+ This follows directly from the conjecture of Erdős and Sós in [548] , and is therefore proved for all large $n$ assuming the announced proof of [548] by Ajtai, Komlós, Simonovits, and Szemerédi, although this proof has not been published. Zhao [Zh11] has proved $R(T)\leq 2n-2$ for all large $n$ via an alternative method. If $T$ has a partition into two sets of vertices of sizes $t_1\geq t_2$ then Burr [Bu74] showed\[R(T)\geq \max(t_1+2t_2,2t_1)-1,\]and conjectured this is sharp whenever $t_1\geq t_2\geq 2$. This strong conjecture was disproved by Grossman, Harary, and Klawe [GHK79] . Some results on Ramsey numbers of trees: 
+ When $T$ is a path on $n$ vertices Gerencsér and Gyárfás [GeGy67] proved $R(T)=\lfloor \frac{3}{2}n\rfloor-1$. 
+ When $T$ is the star $K_{1,n-1}$ Harary [Ha72] proved $R(T)=2n-2$ if $n$ is even and $2n-3$ if $n$ is odd. 
+ When $T$ is the double star $S_{t_1,t_2}$, formed by joining the centres of two stars of sizes $t_1$ and $t_2$ by an edge, then when $t_1\geq 3t_2-2$ Grossman, Harary, and Klawe [GHK79] proved $R(T)=2t_1$ (disproving Burr's conjecture). 
+ Norin, Sun, and Zhao [NSZ16] proved that if $T$ is the double star $S_{2t,t}$ then $R(T)\geq (4.2-o(1))t$. 
+ Zhao [Zh11] proved $R(T)\leq 2n-2$ for all large even $n$. 
+ Montgomery, Pavez-Signé, and Yan [MPY25] proved Burr's conjecture, that $R(T)=\max(2t_1,t_1+2t_2)-1$, if $T$ has maximum degree at most $cn$ for some constant $c>0$. 
+ This problem is #14 in Ramsey Theory in the graphs problem collection. See also [549] .
+ View the LaTeX source 
+ This page was last edited 18 January 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 3 comments on this problem
+ Likes this problem 
+ ferraripower 
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ ferraripower 
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #547, https://www.erdosproblems.com/547, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #551 =====
+551 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Prove that\[R(C_k,K_n)=(k-1)(n-1)+1\]for $k\geq n\geq 3$ (except when $n=k=3$). 
+ #551 : [EFRS78] 
+ graph theory | 
+ ramsey theory 
+ Asked by Erdős, Faudree, Rousseau, and Schelp, who also ask for the smallest value of $k$ such that this identity holds (for fixed $n$). They also ask, for fixed $n$, what is the minimum value of $R(C_k,K_n)$? This identity was proved for $k>n^2-2$ by Bondy and Erdős [BoEr73] . Nikiforov [Ni05] extended this to $k\geq 4n+2$. Keevash, Long, and Skokan [KLS21] have proved this identity when $k\geq C\frac{\log n}{\log\log n}$ for some constant $C$, thus establishing the conjecture for sufficiently large $n$. This problem is #18 in Ramsey Theory in the graphs problem collection.
+ View the LaTeX source 
+ View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 1 comment on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #551, https://www.erdosproblems.com/551, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #556 =====
+556 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Let $R_3(G)$ denote the minimal $m$ such that if the edges of $K_m$ are $3$-coloured then there must be a monochromatic copy of $G$. Show that\[R_3(C_n) \leq 4n-3.\] 
+ #556 : [Er81] [Er81c] 
+ graph theory | 
+ ramsey theory 
+ A problem of Bondy and Erdős. This inequality is best possible for odd $n$. Luczak [Lu99] has shown that $R_3(C_n)\leq (4+o(1))n$ for all $n$, and in fact $R_3(C_n)\leq 3n+o(n)$ for even $n$. Kohayakawa, Simonovits, and Skokan [KSS05] proved this conjecture when $n$ is sufficiently large and odd. Benevides and Skokan [BeSk09] proved that if $n$ is sufficiently large and even then $R_3(C_n)=2n$. This problem is #25 in Ramsey Theory in the graphs problem collection.
+ View the LaTeX source 
+ This page was last edited 08 February 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ Related OEIS sequences: 
+ A389335 
+ 1 comment on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #556, https://www.erdosproblems.com/556, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #580 =====
+580 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Let $G$ be a graph on $n$ vertices such that at least $n/2$ vertices have degree at least $n/2$. Must $G$ contain every tree on at most $n/2$ vertices? 
+ #580 : [EFLS95] 
+ graph theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A conjecture of Erdős, Füredi, Loebl, and Sós. Ajtai, Komlós, and Szemerédi [AKS95] proved an asymptotic version, where at least $(1+\epsilon)n/2$ vertices have degree at least $(1+\epsilon)n/2$ (and $n$ is sufficiently large depending on $\epsilon$). Zhao [Zh11] has proved this conjecture holds for all sufficiently large $n$. Komlós and Sós conjectured the generalisation that if at least $n/2$ vertices have degree at least $k$ then $G$ contains any tree with $k$ vertices. See also the entry in the graphs problem collection .
+ View the LaTeX source 
+ This page was last edited 24 October 2025. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 1 comment on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Quanyu Tang 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #580, https://www.erdosproblems.com/580, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #742 =====
+742 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Let $G$ be a graph on $n$ vertices with diameter $2$, such that deleting any edge increases the diameter of $G$. Is it true that $G$ has at most $n^2/4$ edges? 
+ #742 : [Er81] 
+ graph theory 
+ A conjecture of Murty and Plesnik (see [CaHa79] ) (although Füredi credits this conjecture to Murty and Simon, and further mentions that Erdős told him that the conjecture goes back to Ore in the 1960s). The complete bipartite graph shows that this would be best possible. This is true (for sufficiently large $n$) and was proved by Füredi [Fu92] .
+ View the LaTeX source 
+ View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ No ( Create a formalisation here ) 
+ 1 comment on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Noga Alon 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #742, https://www.erdosproblems.com/742, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #848 =====
+848 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ DECIDABLE
+ Resolved up to a finite check.
+ Is the maximum size of a set $A\subseteq \{1,\ldots,N\}$ such that $ab+1$ is never squarefree (for all $a,b\in A$) achieved by taking those $n\equiv 7\pmod{25}$? 
+ #848 : [Er92b,p.239] 
+ number theory 
+ A problem of Erdős and Sárközy. van Doorn has sent the following argument which shows\[\lvert A\rvert \leq (0.108\cdots+o(1))N.\]The condition implies, in particular, that $a^2+1$ is divisible by $p^2$ for some prime $p$ for all $a\in A$. Furthermore, $a^2+1\equiv 0\pmod{p^2}$ has either $2$ or $0$ solutions, according to whether $p\equiv 1\pmod{4}$ or $p\equiv 3\pmod{4}$. It follows that every $a\in A$ belongs to one of $2$ residue classes for some prime $p\equiv 1\pmod{4}$, and hence, as $N\to \infty$,\[\frac{\lvert A\rvert}{N}\leq 2\sum_{p\equiv 1\pmod{4}}\frac{1}{p^2}\approx 0.108.\]Weisenberg has noted that this proof in fact gives the slightly better constant of $\approx 0.105$ (see the comments section). This was solved for all sufficiently large $N$ by Sawhney in this note . In fact, Sawhney proves something slightly stronger, that there exists some constant $c>0$ such that if $\lvert A\rvert \geq (\frac{1}{25}-c)N$ and $N$ is large then $A$ is contained in either $\{ n\equiv 7\pmod{25}\}$ or $\{n\equiv 18\pmod{25}\}$. See also [844] . 
+ View the LaTeX source 
+ This page was last edited 06 December 2025. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ Yes 
+ 48 comments on this problem
+ Likes this problem 
+ None
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ TerenceTao , 
+ BorisAlexeev 
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Boris Alexeev, Wouter van Doorn, and Desmond Weisenberg 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #848, https://www.erdosproblems.com/848, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #364 =====
+364 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ VERIFIABLE
+ Open, but could be proved with a finite example.
+ Are there any triples of consecutive positive integers all of which are powerful (i.e. if $p\mid n$ then $p^2\mid n$)? 
+ #364 : [Er76d] [ErGr80,p.68] 
+ number theory | 
+ powerful 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ Erdős originally asked Mahler whether there are infinitely many pairs of consecutive powerful numbers, but Mahler immediately observed that the answer is yes from the infinitely many solutions to the Pell equation $x^2=8y^2+1$. This conjecture was also made by Mollin and Walsh [MoWa86] . Erdős [Er76d] believed the answer to this question is no, and in fact if $n_k$ is the $k$th powerful number then\[n_{k+2}-n_k > n_k^c\]for some constant $c>0$. The abc conjecture implies there are only finitely many such triples. It is trivial that there are no quadruples of consecutive powerful numbers since one must be $2\pmod{4}$. Chan [Ch25] has shown there are no triples $n-1,n,n+1$ of powerful numbers with $n$ a cube and $n-1,n+1$ both of the shape $p^3x^2$ for some prime $p$ and integer $x$. She [Sh25] has proved there are no triples with $n$ a cube and both $n-1,n+1$ of the shape $p^2x^3$ with $p$ a prime. By OEIS A076445 there are no such $n$ for $n<7.38\times 10^{28}$. See also [137] , [365] , and [938] .
+ View the LaTeX source 
+ This page was last edited 13 April 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ Yes 
+ Related OEIS sequences: 
+ A060355 
+ A076445 
+ 4 comments on this problem
+ Likes this problem 
+ thomas 
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Alfaiz, Stijn Cambie, Zachary Chase, Yuchen Li, and Desmond Weisenberg 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #364, https://www.erdosproblems.com/364, accessed 2026-06-09 
+ Previous 
+ Next
+
+===== #672 =====
+672 | Erdős Problems 
+ Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ VERIFIABLE
+ Open, but could be proved with a finite example.
+ Can the product of an arithmetic progression of positive integers $n,n+d,\ldots,n+(k-1)d$ of length $k\geq 4$ (with $(n,d)=1$) be a perfect power? 
+ #672 : [Er97c] [Va99,1.32] 
+ number theory 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ Erdős believed not. Erdős and Selfridge [ErSe75] proved that the product of consecutive integers is never a perfect power. The theory of Pell equations implies that there are infinitely many pairs $n,d$ with $(n,d)=1$ such that $n(n+d)(n+2d)$ is a square. Considering the question of whether the product of an arithmetic progression of length $k$ can be equal to an $\ell$th power: 
+ Euler proved this is impossible when $k=4$ and $\ell=2$, 
+ Obláth [Ob51] proved this is impossible when $(k,l)=(5,2),(3,3),(3,4),(3,5)$. 
+ Marszalek [Ma85] proved that this is only possible for $k\ll_d 1$, where $d$ is the common difference of the arithmetic progression. 
+ Györy, Hajdu, and Saradha [GHS04] proved this is impossible for $4\leq k\leq 5$.
+ Bennett, Bruin, Györy, and Hajdu [BBGH06] proved this is impossible for $4\leq k\leq 11$, and also impossible for $k$ sufficiently large depending only on the number of prime divisors of $d$. 
+ Györy, Hajdu, and Pintér [GHP09] have proved this is impossible for $4\leq k\leq 34$. 
+ Bennett and Siksek [BeSi20] have proved that this is impossible for all $k$ sufficiently large and $\ell > e^{10^k}$ prime. 
+ Jakob Führer has observed this is possible for integers in general, for example $(-6)\cdot(-1)\cdot 4\cdot 9=6^3$.
+ View the LaTeX source 
+ This page was last edited 01 February 2026. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ Yes 
+ 4 comments on this problem
+ Likes this problem 
+ Dogmachine , 
+ KylePratt 
+ Interested in collaborating 
+ None
+ Currently working on this problem 
+ None
+ This problem looks difficult 
+ None
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+ Additional thanks to : Kevin Barreto, Dogmachine, Jakob Fuhrer, Toshiki Matsusaka, and Kyle Pratt 
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #672, https://www.erdosproblems.com/672, accessed 2026-06-09 
+ Previous 
+ Next

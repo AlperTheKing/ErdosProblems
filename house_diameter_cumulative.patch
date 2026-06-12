@@ -1,0 +1,315 @@
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 05f04a2..2728088 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -91,7 +91,75 @@ theorem house_avg_dist : averageDistance HouseGraph = 7/5 := by
+ 
+ @[category test, AMS 5]
+ theorem house_diameter : maxEccentricity HouseGraph = 2 := by
+-  sorry
++  have adj_le {a b : Fin 5} (h : HouseGraph.Adj a b) : HouseGraph.edist a b ≤ 2 := by
++    have hed : HouseGraph.edist a b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    rw [hed]
++    norm_num
++  have via (c : Fin 5) {a b : Fin 5} (hac : HouseGraph.Adj a c) (hcb : HouseGraph.Adj c b) :
++      HouseGraph.edist a b ≤ 2 := by
++    have hed1 : HouseGraph.edist a c = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    have hed2 : HouseGraph.edist c b = 1 := by
++      rwa [SimpleGraph.edist_eq_one_iff_adj]
++    calc
++      HouseGraph.edist a b ≤ HouseGraph.edist a c + HouseGraph.edist c b :=
++        SimpleGraph.edist_triangle (G := HouseGraph)
++      _ = 2 := by
++        rw [hed1, hed2]
++        norm_num
++  have hdist_le : ∀ a b : Fin 5, HouseGraph.edist a b ≤ 2 := by
++    intro a b
++    fin_cases a <;> fin_cases b <;>
++      first
++      | exact adj_le (by decide +kernel)
++      | exact via (0 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (1 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (2 : Fin 5) (by decide +kernel) (by decide +kernel)
++      | exact via (3 : Fin 5) (by decide +kernel) (by decide +kernel)
++  have two_le_dist {a b : Fin 5} (hnot : ¬ HouseGraph.edist a b ≤ 1) :
++      (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    have hlt : (1 : ℕ∞) < HouseGraph.edist a b := lt_of_not_ge hnot
++    simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++      (n := HouseGraph.edist a b) (ENat.coe_ne_top 1)).2 hlt
++  have hdist_ge : ∀ a : Fin 5, ∃ b : Fin 5, (2 : ℕ∞) ≤ HouseGraph.edist a b := by
++    intro a
++    fin_cases a
++    · refine ⟨2, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨3, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨1, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++    · refine ⟨0, two_le_dist ?_⟩
++      rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++      simp [HouseGraph]
++  have hecc : ∀ a : Fin 5, HouseGraph.eccentricity a = 2 := by
++    intro a
++    rw [show HouseGraph.eccentricity a = HouseGraph.eccent a by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro b
++      exact hdist_le a b
++    · rcases hdist_ge a with ⟨b, hb⟩
++      exact hb.trans (SimpleGraph.edist_le_eccent (G := HouseGraph) (u := a) (v := b))
++  have hrange : Set.range (HouseGraph.eccentricity) = ({2} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨a, rfl⟩
++      simp [hecc a]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem house_radius : minEccentricity HouseGraph = 2 := by
+@@ -99,7 +167,17 @@ theorem house_radius : minEccentricity HouseGraph = 2 := by
+ 
+ @[category test, AMS 5]
+ theorem house_girth : HouseGraph.girth = 3 := by
+-  sorry
++  have hclique : ∃ s : Finset (Fin 5), HouseGraph.IsNClique 3 s := by
++    refine ⟨{2, 3, 4}, ?_⟩
++    rw [SimpleGraph.is3Clique_triple_iff]
++    simp [HouseGraph]
++  obtain ⟨u, w, hwcycle, hwlen⟩ :=
++    (SimpleGraph.is3Clique_iff_exists_cycle_length_three (G := HouseGraph)).mp hclique
++  apply le_antisymm
++  · simpa [hwlen] using HouseGraph.girth_le_length hwcycle
++  · apply SimpleGraph.three_le_girth
++    intro hacyclic
++    exact hacyclic w hwcycle
+ 
+ @[category test, AMS 5]
+ theorem house_order : n HouseGraph = 5 := by simp [n]
+@@ -162,15 +240,55 @@ theorem K4_avg_dist : averageDistance K4 = 1 := by
+ 
+ @[category test, AMS 5]
+ theorem K4_diameter : maxEccentricity K4 = 1 := by
+-  sorry
++  have hecc : ∀ u : Fin 4, (⊤ : SimpleGraph (Fin 4)).eccentricity u = 1 := by
++    intro u
++    rw [show (⊤ : SimpleGraph (Fin 4)).eccentricity u =
++        (⊤ : SimpleGraph (Fin 4)).eccent u by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    simp
++  have hrange : Set.range ((⊤ : SimpleGraph (Fin 4)).eccentricity) = ({1} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [hecc u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [K4, maxEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem K4_radius : minEccentricity K4 = 1 := by
+-  sorry
++  have hecc : ∀ u : Fin 4, (⊤ : SimpleGraph (Fin 4)).eccentricity u = 1 := by
++    intro u
++    rw [show (⊤ : SimpleGraph (Fin 4)).eccentricity u =
++        (⊤ : SimpleGraph (Fin 4)).eccent u by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    simp
++  have hrange : Set.range ((⊤ : SimpleGraph (Fin 4)).eccentricity) = ({1} : Set ℕ∞) := by
++    ext x
++    constructor
++    · rintro ⟨u, rfl⟩
++      simp [hecc u]
++    · intro hx
++      refine ⟨0, ?_⟩
++      simpa [hecc 0] using hx.symm
++  rw [K4, minEccentricity, hrange]
++  simp
+ 
+ @[category test, AMS 5]
+ theorem K4_girth : K4.girth = 3 := by
+-  sorry
++  have hclique : ∃ s : Finset (Fin 4), K4.IsNClique 3 s := by
++    refine ⟨{0, 1, 2}, ?_⟩
++    rw [SimpleGraph.is3Clique_triple_iff]
++    simp [K4]
++  obtain ⟨u, w, hwcycle, hwlen⟩ :=
++    (SimpleGraph.is3Clique_iff_exists_cycle_length_three (G := K4)).mp hclique
++  apply le_antisymm
++  · simpa [hwlen] using K4.girth_le_length hwcycle
++  · apply SimpleGraph.three_le_girth
++    intro hacyclic
++    exact hacyclic w hwcycle
+ 
+ @[category test, AMS 5]
+ theorem K4_order : n K4 = 4 := by simp [n]
+@@ -374,11 +492,153 @@ theorem Star5_avg_dist : averageDistance Star5 = 5/3 := by
+ 
+ @[category test, AMS 5]
+ theorem Star5_diameter : maxEccentricity Star5 = 2 := by
+-  sorry
++  have hleaf : Star5.eccentricity (Sum.inr (0 : Fin 5)) = 2 := by
++    rw [show Star5.eccentricity (Sum.inr (0 : Fin 5)) =
++        Star5.eccent (Sum.inr (0 : Fin 5)) by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro v
++      cases v with
++      | inl a =>
++          have h : Star5.Adj (Sum.inr (0 : Fin 5)) (Sum.inl a) := by
++            simp [Star5]
++          have hed : Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl a) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          rw [hed]
++          norm_num
++      | inr b =>
++          have h1 : Star5.Adj (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) := by
++            simp [Star5]
++          have h2 : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr b) := by
++            simp [Star5]
++          have hed1 : Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          have hed2 : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr b) = 1 := by
++            rwa [SimpleGraph.edist_eq_one_iff_adj]
++          calc
++            Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr b)
++                ≤ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inl (0 : Fin 1)) +
++                  Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr b) :=
++              SimpleGraph.edist_triangle (G := Star5)
++            _ = 2 := by
++              rw [hed1, hed2]
++              norm_num
++    · have hnot : ¬ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) ≤ 1 := by
++        rw [SimpleGraph.edist_le_one_iff_adj_or_eq]
++        simp [Star5]
++      have hlt : (1 : ℕ∞) < Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) :=
++        lt_of_not_ge hnot
++      have hle : (2 : ℕ∞) ≤ Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)) := by
++        simpa using (ENat.add_one_le_iff (m := (1 : ℕ∞))
++          (n := Star5.edist (Sum.inr (0 : Fin 5)) (Sum.inr (1 : Fin 5)))
++          (ENat.coe_ne_top 1)).2 hlt
++      exact hle.trans (SimpleGraph.edist_le_eccent (G := Star5)
++        (u := Sum.inr (0 : Fin 5)) (v := Sum.inr (1 : Fin 5)))
++  have hle_ecc : ∀ v, Star5.eccentricity v ≤ 2 := by
++    intro v
++    rw [show Star5.eccentricity v = Star5.eccent v by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    rw [SimpleGraph.eccent_le_iff]
++    intro w
++    cases v with
++    | inl a =>
++        cases w with
++        | inl b =>
++            fin_cases a
++            fin_cases b
++            simp
++        | inr c =>
++            have h : Star5.Adj (Sum.inl a) (Sum.inr c) := by
++              simp [Star5]
++            have hed : Star5.edist (Sum.inl a) (Sum.inr c) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            rw [hed]
++            norm_num
++    | inr b =>
++        cases w with
++        | inl a =>
++            have h : Star5.Adj (Sum.inr b) (Sum.inl a) := by
++              simp [Star5]
++            have hed : Star5.edist (Sum.inr b) (Sum.inl a) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            rw [hed]
++            norm_num
++        | inr c =>
++            have h1 : Star5.Adj (Sum.inr b) (Sum.inl (0 : Fin 1)) := by
++              simp [Star5]
++            have h2 : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr c) := by
++              simp [Star5]
++            have hed1 : Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            have hed2 : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr c) = 1 := by
++              rwa [SimpleGraph.edist_eq_one_iff_adj]
++            calc
++              Star5.edist (Sum.inr b) (Sum.inr c)
++                  ≤ Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) +
++                    Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr c) :=
++                SimpleGraph.edist_triangle (G := Star5)
++              _ = 2 := by
++                rw [hed1, hed2]
++                norm_num
++  apply le_antisymm
++  · rw [maxEccentricity]
++    exact sSup_le (by
++      rintro x ⟨v, rfl⟩
++      exact hle_ecc v)
++  · rw [maxEccentricity]
++    exact le_sSup ⟨Sum.inr (0 : Fin 5), hleaf⟩
+ 
+ @[category test, AMS 5]
+ theorem Star5_radius : minEccentricity Star5 = 1 := by
+-  sorry
++  have hcenter : Star5.eccentricity (Sum.inl (0 : Fin 1)) = 1 := by
++    rw [show Star5.eccentricity (Sum.inl (0 : Fin 1)) =
++        Star5.eccent (Sum.inl (0 : Fin 1)) by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    apply le_antisymm
++    · rw [SimpleGraph.eccent_le_iff]
++      intro v
++      cases v with
++      | inl a =>
++          fin_cases a
++          simp
++      | inr b =>
++          have h : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr b) := by
++            simp [Star5]
++          rw [← SimpleGraph.edist_eq_one_iff_adj] at h
++          simp [h]
++    · have h : Star5.Adj (Sum.inl (0 : Fin 1)) (Sum.inr (0 : Fin 5)) := by
++        simp [Star5]
++      have hed : Star5.edist (Sum.inl (0 : Fin 1)) (Sum.inr (0 : Fin 5)) = 1 := by
++        rwa [SimpleGraph.edist_eq_one_iff_adj]
++      simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++        (u := Sum.inl (0 : Fin 1)) (v := Sum.inr (0 : Fin 5)))
++  have hge : ∀ v, (1 : ℕ∞) ≤ Star5.eccentricity v := by
++    intro v
++    rw [show Star5.eccentricity v = Star5.eccent v by
++      simp [SimpleGraph.eccentricity, SimpleGraph.eccent, sSup_range]]
++    cases v with
++    | inl a =>
++        have h : Star5.Adj (Sum.inl a) (Sum.inr (0 : Fin 5)) := by
++          simp [Star5]
++        have hed : Star5.edist (Sum.inl a) (Sum.inr (0 : Fin 5)) = 1 := by
++          rwa [SimpleGraph.edist_eq_one_iff_adj]
++        simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++          (u := Sum.inl a) (v := Sum.inr (0 : Fin 5)))
++    | inr b =>
++        have h : Star5.Adj (Sum.inr b) (Sum.inl (0 : Fin 1)) := by
++          simp [Star5]
++        have hed : Star5.edist (Sum.inr b) (Sum.inl (0 : Fin 1)) = 1 := by
++          rwa [SimpleGraph.edist_eq_one_iff_adj]
++        simpa [hed] using (SimpleGraph.edist_le_eccent (G := Star5)
++          (u := Sum.inr b) (v := Sum.inl (0 : Fin 1)))
++  apply le_antisymm
++  · rw [minEccentricity]
++    exact sInf_le ⟨Sum.inl (0 : Fin 1), hcenter⟩
++  · rw [minEccentricity]
++    exact le_sInf (by
++      rintro x ⟨v, rfl⟩
++      exact hge v)
+ 
+ @[category test, AMS 5]
+ theorem Star5_girth : Star5.egirth = ⊤ := by

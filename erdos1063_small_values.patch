@@ -1,0 +1,139 @@
+diff --git a/FormalConjectures/ErdosProblems/1063.lean b/FormalConjectures/ErdosProblems/1063.lean
+index 3f8e08b..f07c839 100644
+--- a/FormalConjectures/ErdosProblems/1063.lean
++++ b/FormalConjectures/ErdosProblems/1063.lean
+@@ -39,6 +39,23 @@ noncomputable def n (k : ℕ) : ℕ :=
+   sInf {m | 2 * k ≤ m ∧ ∃ i0 < k, ¬ (m - i0) ∣ m.choose k ∧
+     ∀ i < k, i ≠ i0 → (m - i) ∣ m.choose k}
+ 
++lemma n_eq_of_cert (k m : ℕ)
++    (hmem : 2 * k ≤ m ∧ ∃ i0 < k, ¬ (m - i0) ∣ m.choose k ∧
++      ∀ i < k, i ≠ i0 → (m - i) ∣ m.choose k)
++    (hmin : ∀ t < m, ¬ (2 * k ≤ t ∧ ∃ i0 < k, ¬ (t - i0) ∣ t.choose k ∧
++      ∀ i < k, i ≠ i0 → (t - i) ∣ t.choose k)) :
++    n k = m := by
++  unfold n
++  let S : Set ℕ := {q | 2 * k ≤ q ∧ ∃ i0 < k, ¬ (q - i0) ∣ q.choose k ∧
++    ∀ i < k, i ≠ i0 → (q - i) ∣ q.choose k}
++  change sInf S = m
++  have hmS : m ∈ S := hmem
++  apply le_antisymm
++  · exact Nat.sInf_le hmS
++  · by_contra hle
++    have hlt : sInf S < m := Nat.lt_of_not_ge hle
++    exact (hmin (sInf S) hlt) (Nat.sInf_mem ⟨m, hmS⟩)
++
+ /--
+ Estimate $n_k$ by finding a better upper bound.
+ -/
+@@ -63,7 +80,109 @@ theorem erdos_1063.variants.exists_exception {n k : ℕ} (hk : 2 ≤ k) (h : 2 *
+ @[category research solved, AMS 11]
+ theorem erdos_1063.variants.small_values :
+     n 2 = 4 ∧ n 3 = 6 ∧ n 4 = 9 ∧ n 5 = 12 := by
+-  sorry
++  refine ⟨?_, ?_, ?_, ?_⟩
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨0, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · contradiction
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      interval_cases t <;> norm_num [Nat.choose] at hS
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨0, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      interval_cases t <;> norm_num [Nat.choose] at hS
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨1, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · norm_num [Nat.choose]
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      rcases hS with ⟨htlower, hS⟩
++      interval_cases t; norm_num at htlower
++      rcases hS with ⟨i0, hi0, hfail, hall⟩
++      interval_cases i0
++      · have hdiv := hall 2 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++      · have hdiv := hall 0 (by norm_num) (by norm_num)
++        norm_num [Nat.choose] at hdiv
++  · apply n_eq_of_cert
++    · constructor
++      · norm_num
++      · refine ⟨2, ?_⟩
++        constructor
++        · norm_num
++        · constructor
++          · norm_num [Nat.choose]
++          · exact by
++              intro i hi hne
++              interval_cases i
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++              · contradiction
++              · norm_num [Nat.choose]
++              · norm_num [Nat.choose]
++    · intro t ht hS
++      rcases hS with ⟨htlower, hS⟩
++      interval_cases t <;> norm_num at htlower
++      · rcases hS with ⟨i0, hi0, hfail, hall⟩
++        interval_cases i0
++        · have hdiv := hall 2 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 0 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++      · rcases hS with ⟨i0, hi0, hfail, hall⟩
++        interval_cases i0
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 2 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
++        · have hdiv := hall 1 (by norm_num) (by norm_num)
++          norm_num [Nat.choose] at hdiv
+ 
+ /-- Monier observed that $n_k \le k!$ for $k \ge 3$ ([Mo85]).
+ TODO: Find reference

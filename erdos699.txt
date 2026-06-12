@@ -1,0 +1,63 @@
+Forum 
+ Inbox 
+ Favourites 
+ Tags 
+ More 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Forum 
+ Menu 
+ Inbox 
+ Favourites 
+ Tags 
+ FAQ 
+ Prizes 
+ Problem Lists 
+ Definitions 
+ Links 
+ Go 
+ Go 
+ Dual View 
+ Random Solved 
+ Random Open 
+ FALSIFIABLE
+ Open, but could be disproved with a finite counterexample.
+ Is it true that for every $1\leq i<j\leq n/2$ there exists some prime $p\geq i$ such that\[p\mid \textrm{gcd}\left(\binom{n}{i}, \binom{n}{j}\right)?\] 
+ #699 : [ErSz78] 
+ number theory | 
+ binomial coefficients 
+The open status of this problem reflects the current belief of the owner of this website. There may be literature on this problem that I am unaware of, which may partially or completely solve the stated problem. Please do your own literature search before expending significant effort on solving this problem. If you find any relevant literature not mentioned here, please add this in a comment.
+ Comment activity that has not yet been incorporated into the remarks 
+ None 
+ Partial 
+ Solution 
+ There are no solutions, partial or complete, claimed in the comments.
+ A problem of Erdős and Szekeres. A theorem of Sylvester and Schur says that for any $1\leq i\leq n/2$ there exists some prime $p>i$ which divides $\binom{n}{i}$. Erdős and Szekeres further conjectured that $p\geq i$ can be improved to $p>i$ except in a few special cases. In particular this fails when $i=2$ and $n$ being some particular powers of $2$. They also found some counterexamples when $i=3$, but only one counterexample when $i\geq 4$:\[\textrm{gcd}\left(\binom{28}{5},\binom{28}{14}\right)=2^3\cdot 3^3\cdot 5.\]This is mentioned in problem B31 of Guy's collection [Gu04] .
+ View the LaTeX source 
+ This page was last edited 30 September 2025. View history 
+ External data from the database - you can help update this 
+ Formalised statement? 
+ Yes 
+ 6 comments on this problem
+ Likes this problem 
+ conglu , 
+ Dogmachine 
+ Interested in collaborating 
+ conglu 
+ Currently working on this problem 
+ conglu 
+ This problem looks difficult 
+ Dogmachine 
+ This problem looks tractable 
+ None
+ The results on this problem could be formalisable 
+ None
+ I am working on formalising the results on this problem 
+ None
+When referring to this problem, please use the original sources of Erdős. If you wish to acknowledge this website, the recommended citation format is:
+T. F. Bloom, Erdős Problem #699, https://www.erdosproblems.com/699, accessed 2026-06-09 
+ Previous 
+ Next

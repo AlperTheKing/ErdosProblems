@@ -1,0 +1,193 @@
+diff --git a/FormalConjectures/ErdosProblems/1054.lean b/FormalConjectures/ErdosProblems/1054.lean
+index c5c94dd..6626175 100644
+--- a/FormalConjectures/ErdosProblems/1054.lean
++++ b/FormalConjectures/ErdosProblems/1054.lean
+@@ -57,12 +57,186 @@ theorem erdos_1054.parts.iii : answer(sorry) ↔ ∃ (A : Set ℕ), A.HasDensity
+ of $m$ for some $k\geq 1$. Show that $f$ is undefined at $n=2$, i.e. we get the junk value $0$. -/
+ @[category textbook, AMS 11]
+ theorem f_undefined_at_2 : f 2 = 0 := by
+-  sorry
++  simp [f]
++  intro m k hk hsum
++  let p : ℕ → Prop := fun d => d ∣ m ∧ ¬m = 0
++  by_cases hm : m = 0
++  · subst m
++    simp at hsum
++  · have hp0 : ¬p 0 := by
++      intro h
++      exact hm (by simpa using h.1)
++    have hsum_p : 2 = ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++      simpa [p] using hsum
++    have hfirst : Nat.nth p 0 = 1 := by
++      rw [Nat.nth_zero]
++      apply le_antisymm
++      · apply Nat.sInf_le
++        exact ⟨one_dvd m, hm⟩
++      · apply le_csInf
++        · exact ⟨1, one_dvd m, hm⟩
++        · intro b hb
++          rcases hb with ⟨hbdvd, _⟩
++          exact Nat.pos_of_dvd_of_pos hbdvd (Nat.pos_of_ne_zero hm)
++    by_cases h1zero : Nat.nth p 1 = 0
++    · have htail : ∀ i, i ≠ 0 → Nat.nth p i = 0 := by
++        intro i hi
++        have hi1 : 1 ≤ i := Nat.succ_le_of_lt (Nat.pos_of_ne_zero hi)
++        exact Nat.nth_eq_zero_mono (p := p) hp0 hi1 h1zero
++      have hsum_eq_one : (∑ i ∈ Finset.Iio k, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio k, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; exact htail b hbne)
++              (by intro hnot; exact False.elim (hnot (by simpa using hk)))
++          _ = 1 := hfirst
++      omega
++    · have hsecond : 1 < Nat.nth p 1 := by
++        have hmono : Nat.nth p 0 < Nat.nth p 1 :=
++          Nat.nth_lt_nth' (p := p) (m := 0) (n := 1) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h1zero hf)
++        simpa [hfirst] using hmono
++      have hk2 : 2 ≤ k := by
++        by_contra hlt
++        have hk1 : k = 1 := by omega
++        subst k
++        have hsum_eq_one : (∑ i ∈ Finset.Iio 1, Nat.nth p i) = 1 := by
++          calc
++            (∑ i ∈ Finset.Iio 1, Nat.nth p i) = Nat.nth p 0 :=
++              Finset.sum_eq_single (0 : ℕ)
++                (by intro b hb hbne; simp at hb; omega)
++                (by intro hnot; exact False.elim (hnot (by simp)))
++            _ = 1 := hfirst
++        omega
++      have hsubset : ({0, 1} : Finset ℕ) ⊆ Finset.Iio k := by
++        intro i hi
++        simp at hi ⊢
++        omega
++      have hle :
++          (∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i) ≤
++            ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++        exact Finset.sum_le_sum_of_subset_of_nonneg hsubset
++          (by intro x hx hxnot; exact Nat.zero_le _)
++      have hsmall : 3 ≤ ∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i := by
++        simp [hfirst]
++        omega
++      omega
+ 
+ /-- Let $f(n)$ be the minimal integer $m$ such that $n$ is the sum of the $k$ smallest divisors
+ of $m$ for some $k\geq 1$. Show that $f$ is undefined at $n=5$, i.e. we get the junk value $0$. -/
+ @[category textbook, AMS 11]
+ theorem f_undefined_at_3 : f 5 = 0 := by
+-  sorry
++  simp [f]
++  intro m k hk hsum
++  let p : ℕ → Prop := fun d => d ∣ m ∧ ¬m = 0
++  by_cases hm : m = 0
++  · subst m
++    simp at hsum
++  · have hp0 : ¬p 0 := by
++      intro h
++      exact hm (by simpa using h.1)
++    have hsum_p : 5 = ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++      simpa [p] using hsum
++    have hfirst : Nat.nth p 0 = 1 := by
++      rw [Nat.nth_zero]
++      apply le_antisymm
++      · apply Nat.sInf_le
++        exact ⟨one_dvd m, hm⟩
++      · apply le_csInf
++        · exact ⟨1, one_dvd m, hm⟩
++        · intro b hb
++          rcases hb with ⟨hbdvd, _⟩
++          exact Nat.pos_of_dvd_of_pos hbdvd (Nat.pos_of_ne_zero hm)
++    have no_second_four (hfour : Nat.nth p 1 = 4) : False := by
++      have h1ne : Nat.nth p 1 ≠ 0 := by omega
++      have hfour_mem : p 4 := by
++        simpa [hfour] using (Nat.nth_mem_of_ne_zero (p := p) h1ne)
++      have htwo_mem : p 2 := by
++        exact ⟨dvd_trans (by norm_num : 2 ∣ 4) hfour_mem.1, hm⟩
++      have hlt : 2 < Nat.nth p (0 + 1) := by
++        simp [hfour]
++      have hle := Nat.le_nth_of_lt_nth_succ (p := p) (k := 0) hlt htwo_mem
++      omega
++    by_cases hk1 : k = 1
++    · subst k
++      have hsum_eq_one : (∑ i ∈ Finset.Iio 1, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio 1, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; simp at hb; omega)
++              (by intro hnot; exact False.elim (hnot (by simp)))
++          _ = 1 := hfirst
++      omega
++    by_cases hk2 : k = 2
++    · subst k
++      have hIio2 : Finset.Iio 2 = ({0, 1} : Finset ℕ) := by
++        ext i
++        simp
++        omega
++      have hsum_pair : (∑ i ∈ Finset.Iio 2, Nat.nth p i) = 1 + Nat.nth p 1 := by
++        rw [hIio2]
++        simp [hfirst]
++      have hfour : Nat.nth p 1 = 4 := by omega
++      exact no_second_four hfour
++    have hk3 : 3 ≤ k := by omega
++    by_cases h1zero : Nat.nth p 1 = 0
++    · have htail : ∀ i, i ≠ 0 → Nat.nth p i = 0 := by
++        intro i hi
++        have hi1 : 1 ≤ i := Nat.succ_le_of_lt (Nat.pos_of_ne_zero hi)
++        exact Nat.nth_eq_zero_mono (p := p) hp0 hi1 h1zero
++      have hsum_eq_one : (∑ i ∈ Finset.Iio k, Nat.nth p i) = 1 := by
++        calc
++          (∑ i ∈ Finset.Iio k, Nat.nth p i) = Nat.nth p 0 :=
++            Finset.sum_eq_single (0 : ℕ)
++              (by intro b hb hbne; exact htail b hbne)
++              (by
++                intro hnot
++                have hz : 0 ∈ Finset.Iio k := by
++                  simp
++                  omega
++                exact False.elim (hnot hz))
++          _ = 1 := hfirst
++      omega
++    · have hsecond : 1 < Nat.nth p 1 := by
++        have hmono : Nat.nth p 0 < Nat.nth p 1 :=
++          Nat.nth_lt_nth' (p := p) (m := 0) (n := 1) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h1zero hf)
++        simpa [hfirst] using hmono
++      by_cases h2zero : Nat.nth p 2 = 0
++      · have htail : ∀ i, 2 ≤ i → Nat.nth p i = 0 := by
++          intro i hi
++          exact Nat.nth_eq_zero_mono (p := p) hp0 hi h2zero
++        have hsubset : ({0, 1} : Finset ℕ) ⊆ Finset.Iio k := by
++          intro i hi
++          simp at hi ⊢
++          omega
++        have hsum_pair : (∑ i ∈ Finset.Iio k, Nat.nth p i) =
++            ∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i := by
++          exact (Finset.sum_subset hsubset
++            (by
++              intro x hx hxnot
++              apply htail x
++              simp at hx hxnot
++              omega)).symm
++        have hpair_eval : (∑ i ∈ ({0, 1} : Finset ℕ), Nat.nth p i) = 1 + Nat.nth p 1 := by
++          simp [hfirst]
++        have hfour : Nat.nth p 1 = 4 := by omega
++        exact no_second_four hfour
++      · have hthird : Nat.nth p 1 < Nat.nth p 2 :=
++          Nat.nth_lt_nth' (p := p) (m := 1) (n := 2) (by norm_num)
++            (fun hf => Nat.lt_card_toFinset_of_nth_ne_zero h2zero hf)
++        have hsubset : ({0, 1, 2} : Finset ℕ) ⊆ Finset.Iio k := by
++          intro i hi
++          simp at hi ⊢
++          omega
++        have hle :
++            (∑ i ∈ ({0, 1, 2} : Finset ℕ), Nat.nth p i) ≤
++              ∑ i ∈ Finset.Iio k, Nat.nth p i := by
++          exact Finset.sum_le_sum_of_subset_of_nonneg hsubset
++            (by intro x hx hxnot; exact Nat.zero_le _)
++        have hsmall : 6 ≤ ∑ i ∈ ({0, 1, 2} : Finset ℕ), Nat.nth p i := by
++          simp [hfirst]
++          omega
++        omega
+ 
+ end Erdos1054

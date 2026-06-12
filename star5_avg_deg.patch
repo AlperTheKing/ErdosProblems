@@ -1,0 +1,27 @@
+From 49ffdd7d93efcec8ecaab076fd460272bc17b0da Mon Sep 17 00:00:00 2001
+From: AlperTheKing <alper@mercurycodelab.com>
+Date: Fri, 29 May 2026 22:03:05 +0300
+Subject: [PATCH] Prove Star5 average degree certificate
+
+---
+ FormalConjectures/WrittenOnTheWallII/Test.lean | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/FormalConjectures/WrittenOnTheWallII/Test.lean b/FormalConjectures/WrittenOnTheWallII/Test.lean
+index 4e0613f..05f04a2 100644
+--- a/FormalConjectures/WrittenOnTheWallII/Test.lean
++++ b/FormalConjectures/WrittenOnTheWallII/Test.lean
+@@ -409,7 +409,9 @@ theorem Star5_max_deg : Star5.maxDegree = 5 := by
+ 
+ @[category test, AMS 5]
+ theorem Star5_avg_deg : averageDegree Star5 = 5/3 := by
+-  sorry
++  unfold averageDegree
++  simp [Star5, Fintype.card_sum]
++  decide +kernel
+ 
+ @[category test, AMS 5]
+ theorem Star5_matching : m Star5 = 1 := by
+-- 
+2.46.0.windows.1
+

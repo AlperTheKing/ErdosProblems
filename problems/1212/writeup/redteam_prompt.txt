@@ -1,0 +1,115 @@
+You are reviewing a manuscript cold, with no prior context. Find errors. Be maximally adversarial; do not be polite; do not give the benefit of the doubt. Check: every proof step (especially the two cases of Theorem 3.1 and the equivalence claims of Lemma 2.2 and Proposition 4.1), every quantifier, every edge case (small x, y; equality cases; natural-number subtraction), the reduction logic (does Lemma 2.1 really produce an infinite path? are the L-path endpoints consistent? does concatenation double-count or skip vertices? does 'path' vs 'walk' matter?), the literature claims (are the cited theorems correctly stated? is anything claimed 'not in the literature' actually in it?), and whether any claim is silently stronger than what was proven. List every defect, ranked by severity, with exact quotes. If after genuine effort you find nothing wrong, say so explicitly. End by listing the three weakest points even if not errors.
+
+MANUSCRIPT:
+
+# Composite-protected paths through visible lattice points: reductions, obstructions, and computations on Erdős problem #1212
+
+(Draft v1, 2026-06-10. Autonomous research artifact: orchestration/verification/computation by Claude
+(Anthropic), mathematical collaboration by GPT-5.5 Pro (OpenAI); human involvement non-significant.
+All "Theorem/Lemma" items below carry tier tags: T2 = Lean-verified core, T1 = complete human proof
+independently re-derived, T0 = machine-verified computation.)
+
+## 1. The problem
+
+Erdős [Er80, p.114] (= erdosproblems.com #1212, OPEN, no prior partial results): let G be the graph on
+visible lattice points {(x,y) ∈ Z²_{>0} : gcd(x,y) = 1}, with edges between points differing by 1 in
+exactly one coordinate. Does G contain an infinite path all of whose vertices satisfy
+
+  (i) min(x,y) > 1, and (ii) at least one of x, y composite?
+
+Stewart's prime-pair construction solves the weaker version (condition (i) only); condition (ii) bans its
+both-prime anchors. No literature exists on the strengthened question.
+
+## 2. Positive direction: the Composite-Anchor reduction
+
+**Lemma 2.1 (Composite-Anchor Lemma; T1, cores T2).** Suppose a₁ < a₂ < ⋯ are composite integers with
+  (V_n) gcd(a_n, s) = 1 for all s ∈ [a_{n+1}, a_{n+2}];
+  (H_n) gcd(s, a_{n+2}) = 1 for all s ∈ [a_n, a_{n+1}].
+Then the L-paths (a_n, a_{n+1}) → (a_n, a_{n+2}) → (a_{n+1}, a_{n+2}) concatenate into an infinite path
+witnessing YES for #1212. (Per-vertex validity: Lean theorems `vertical_leg_valid`,
+`horizontal_leg_valid` in erdos1212_cores.lean — compiled, 0 sorry, axioms ⊆ {propext, Classical.choice,
+Quot.sound}.)
+
+**Lemma 2.2 (clearance formula; T1).** Since a_n ≡ 0 mod each of its prime factors, condition (V_n) is
+equivalent to: a_{n+2} − a_n < P⁻(a_n) (smallest prime factor), provided a_{n+1} − a_n < P⁻(a_n).
+Hence the chain requires rough composite anchors whose least prime factor exceeds the next two gaps,
+plus the sparse condition (H_n) (no prime factor of a_{n+2} has a multiple in [a_n, a_{n+1}]).
+
+**Computation 2.3 (T0).** A greedy chain with 2000-rough composite anchors starting at 10⁷ runs for
+797,568 anchors (reaching 6.7×10⁷) with ZERO backtracking; every vertex of every L-path triple was
+machine-verified (797,566 triples, 0 violations). An alternative run reached 1.07×10⁸. Code + chain:
+problems/1212/experiments/anchor_tree/.
+
+## 3. Negative direction: no periodic certificate
+
+A natural route to discharge Lemma 2.1's infinitely many conditions is a periodic certificate
+(suggested by GPT-5.5 Pro): a finite path Γ closing up to translation by (gh, gv), with Δ_i = h·y_i −
+v·x_i ≠ 0, rad(Δ_i) | g, no prime of g dividing both coordinates, and a witness prime of g dividing
+exactly one coordinate at every vertex. Translates of Γ then concatenate to a YES-path (re-derived,
+T1). We prove this route is void:
+
+**Theorem 3.1 (No-Periodic-Certificate; T1, core T2).** For every g, h, v (gcd(h,v)=1) there is NO
+finite path satisfying the certificate conditions.
+
+*Proof sketch.* (Case g odd) rad(Δ)|g forces every Δ_i odd; steps change Δ by v or h, one of which is
+odd, so one step-direction is banned entirely, contradicting the required displacement in both
+coordinates. (Case 2|g) Let m = rad(g). Any vertex with x ≡ 0 (mod m) is isolated among protected
+vertices: its horizontal neighbours have both coordinates coprime to m and both odd — witness-free
+(Lean: `right_neighbor_witness_free`, `left_neighbor_witness_free`); its vertical neighbours are
+both-even (Lean: `vertical_neighbor_both_even`). A certificate's net x-advance is gh ≥ m, and a
+±1-step walk attains every intermediate x-value (Lean: `walk_intermediate_value`), in particular some
+x ≡ 0 (mod m) — at a vertex that is invalid or isolated. ∎
+
+**Corroboration (T0).** Exhaustive SCC searches of certificate state graphs — P ⊆ {2,3,5,7,11},
+all coprime (h,v) ≤ 10, |Δ| ≤ 20000, with backtracking — find every cycle has zero displacement.
+Completeness: every certificate-cycle edge needs a 3-term-AP window of P-smooth numbers (step ≤ 10);
+enumeration of all 120,895 11-smooth numbers ≤ 10¹⁵ shows all such windows have top ≤ 1000 (extremals
+d·{98,99,100}); hence the searches were cycle-complete: an independent exhaustion proof of Theorem 3.1
+for those parameter ranges.
+
+## 4. The precise obstruction, and a conditional resolution
+
+**Proposition 4.1 (supply target; T1 analysis).** The chain of Lemma 2.2 closes unconditionally if:
+(R1) there exist θ < δ < 1/2 with: every interval [x, x + x^θ] (x large) contains a composite b with
+P⁻(b) > x^δ. Two further sufficient variants: (R2) a non-clumping refinement of almost-all
+short-interval theorems; (R3) an explicit structured anchor family.
+
+**Status of R1–R3 (GPT-5.5 Pro literature survey + our checks).** R1 is not available in the current
+literature: every-interval P₂/E₂ theorems either lack least-prime-factor control or require interval
+exponents > 1/2. The closest published result is Matomäki [JLMS 2022, arXiv:2012.11565, Thm 1.1]
+(almost all x: (x − h log X, x] contains integers with Ω ≤ 2 and all prime factors > X^{1/8};
+exceptional measure O(X/h)) and Matomäki–Teräväinen [TAMS 2023, arXiv:2207.05038] (E₂ in almost all
+(x, x + log^{2.1} x]); both are almost-all statements whose exceptional sets are not known to avoid
+clumping into a full window (R2 open); no known explicit family survives the block transitions (R3).
+No choice of h closes the gap (spacing-vs-budget mismatch at every h).
+
+**Corollary 4.2 (conditional YES; T1).** Under a Maier–Pomerance-type max-gap hypothesis for rough
+composites — gaps between consecutive X^δ-rough composites below X are O(X^θ) for some θ < δ — Erdős
+#1212 has answer YES, via Lemmas 2.1–2.2 (the H-condition is dodgeable by a counting argument since
+anchor factors exceed X^δ while intervals have length O(X^θ)).
+
+## 5. Structural evidence for YES
+
+(T0) The both-prime-deleted graph is shattered at small scales (most vertices in micro-components;
+(3,4), (4,5), (5,6) are isolated) but giant components grow with scale: ≈21.5% of valid vertices in
+[2,3000]² lie in a single component pair. Combined with the unbounded verified chains of §2, the
+answer is almost certainly YES; §4 localizes exactly what remains for a proof.
+
+## 6. Summary
+
+For a problem with an empty published frontier we provide: a clean sufficient reduction (§2), an
+impossibility theorem closing the natural finite-certificate route (§3), the precise open analytic
+input equivalent to closing the reduction, a conditional resolution (§4), and large-scale verified
+computations (§2, §5). Lean-checked cores: problems/1212/lean/erdos1212_cores.lean.
+
+## References
+- [Er80] P. Erdős, Some notes on problems and results in number theory, 1980, p.114.
+- erdosproblems.com/1212 (T. F. Bloom's database).
+- K. Matomäki, Almost primes in almost all very short intervals, J. Lond. Math. Soc. (2022),
+  arXiv:2012.11565.
+- K. Matomäki, J. Teräväinen, Almost primes in almost all short intervals II, Trans. Amer. Math. Soc.
+  (2023), arXiv:2207.05038.
+- J. Teräväinen, Almost primes in almost all short intervals, Math. Proc. Camb. Phil. Soc. (2016),
+  arXiv:1510.06005.
+- H. Iwaniec, On the error term in the linear sieve, Acta Arith. (1971) (Jacobsthal-function bound).
+- C. L. Stewart (prime-pair construction for the weak version, as recounted in [Er80]).

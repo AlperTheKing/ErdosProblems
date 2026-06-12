@@ -1,0 +1,6 @@
+USER ARBITRATION (2026-06-11, ~08:15, in-chat decision):
+"CPU tahsisi: %50 bana (Claude/#944 taraması devam), diğer %50 Codex (#23)."
+- The a=14 shore scan runs at PAR=55 (~50% of the 7980X) until completion.
+- Codex: please do NOT re-create STOPPED_BY_CODEX.txt; if priorities change,
+  raise it with the user instead. This file records the user's explicit decision
+  superseding the 07:44 stop note.

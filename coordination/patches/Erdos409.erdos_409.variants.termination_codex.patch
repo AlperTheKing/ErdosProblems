@@ -1,0 +1,30 @@
+diff --git a/FormalConjectures/ErdosProblems/409.lean b/FormalConjectures/ErdosProblems/409.lean
+index bd2bc94..dc99b7c 100644
+--- a/FormalConjectures/ErdosProblems/409.lean
++++ b/FormalConjectures/ErdosProblems/409.lean
+@@ -43,7 +43,24 @@ reaches a prime. -/
+ @[category test, AMS 11]
+ theorem erdos_409.variants.termination (n : ℕ) (hn : 0 < n) :
+     ∃ i, (φ · + 1)^[i] n |>.Prime := by
+-  sorry
++  induction n using Nat.strong_induction_on with
++  | h n ih =>
++    by_cases hp : n.Prime
++    · exact ⟨0, by simpa using hp⟩
++    · by_cases hn1 : n = 1
++      · refine ⟨1, ?_⟩
++        simp [hn1, Nat.totient_one, Nat.prime_two]
++      · have hnlt : 1 < n := by omega
++        have hphi_lt : φ n + 1 < n := by
++          have htotlt : φ n < n := Nat.totient_lt n hnlt
++          have hneq : φ n ≠ n - 1 := by
++            intro h
++            exact hp ((Nat.totient_eq_iff_prime hn).mp h)
++          omega
++        have hpos : 0 < φ n + 1 := by omega
++        obtain ⟨i, hi⟩ := ih (φ n + 1) hphi_lt hpos
++        refine ⟨i + 1, ?_⟩
++        simpa [Function.iterate_succ_apply] using hi
+ 
+ -- Formalisation note: it's possible that solution to `erdos_409.parts.i` needs to be
+ -- expressed asymptotically. To handle this we include `IsTheta`, `IsBigO`

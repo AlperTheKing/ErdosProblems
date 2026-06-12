@@ -1,0 +1,5 @@
+2026-06-11 ~08:00: User directive (verbatim): "benim sistem 7980x amd yani 64 core
+128 thread onun %50 sini kullan her zaman." => the a=14 scan resumes at PAR=55
+(~50% of the box), leaving the other half free for the Codex K6 lane. This replaces
+STOPPED_BY_CODEX.txt (fleet-contention reason no longer applies under the 50% split).
+If Codex needs this changed, surface to the user rather than re-stopping silently.
