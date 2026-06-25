@@ -1,0 +1,28 @@
+This exact residual branch is P-free contradictory.
+
+Branch:
+- h4 misses 11, so N_D(h4)={8,9,12,13}.
+- D-column deltas (delta_8,...,delta_13)=(0,0,0,2,0,1), so c=(4,4,4,2,4,3).
+- The degree-3 non-tight zero rows are one {8,9,12} and two {11,12,13}.
+
+Lemma:
+The two {11,12,13} zeros force S_8 and S_9 to behave like singleton blocks. Since c_8=c_9=c_10=4 and touched-column equality gives c_d+m_d=6 for d=8,9,10, we have |S_8|=|S_9|=|S_10|=2.
+
+For t in T_9 and w in {w_1,w_2} with rows {9,10} and {11,12,13}, the nonedge (t,w) has no common C/root/zero/D neighbour. Its two common neighbours must be A/B vertices. Any common A/B neighbour must avoid D-columns {9,10,11,12,13}; by D-visibility it must have exact D-state {8}. Thus the two vertices in S_8 are common neighbours for every such pair and are adjacent to all of T_9 union {w_1,w_2}. They are triangle-forbidden from T_8, r, h4. Hence each S_8 vertex has exactly five R-neighbours.
+
+Symmetrically each S_9 vertex has exact D-state {9}, is adjacent to all of T_8 union {w_1,w_2}, and has exactly five R-neighbours.
+
+S_10 was already encoded: exact D-state {10}, adjacent to all four non-tight zeros, and triangle-forbidden from all tight zeros. Each S_10 vertex has exactly five R-neighbours.
+
+Therefore the six vertices in S_8 union S_9 union S_10 contribute 30 A/B-to-R incidences.
+
+Every remaining A/B vertex sees no 8,9,10 and must see a nonempty subset of {11,12,13}. It cannot be adjacent to w_1 or w_2. It may meet the four tight zeros, plus r only if it avoids 12, plus h4 only if its D-state is contained in {11}. Checking nonempty subsets of {11,12,13} gives at most 7 R-neighbours per remaining A/B vertex. The remaining six A/B vertices contribute at most 42 incidences.
+
+Thus M=e(A union B,R) <= 30+42=72, contradicting the cap74 row equality M=74.
+
+Smallest CP-SAT certificate for this exact branch:
+  add sum_v rdeg[v] <= 72
+where rdeg[v] is the number of R-neighbours of the A/B state v. Since the model also has sum_v rdeg[v]=sum_r m_r=74, the branch is infeasible.
+
+Weakest assumptions:
+exact zero rows, ZZ=0, full local nonedge-codegree lower bound 2, triangle-freeness, root-to-R D-visibility for every A/B vertex, touched-column equality for d=8,9,10, c_8=c_9=c_10=4, the saturated-column 10 cuts, and M=74. No fixed A/B template enumeration, no cap<74 or q<14 frontier closure.

@@ -1,0 +1,1478 @@
+The highest-leverage next move is not another fixed-P pass. Add a P-free but p-exact side-state certificate. It is stronger than the earlier “availability” check because in the t=2 rooted model an A-B pair is essentially determined by its R-state intersection.
+
+I would start p16/eR21 with the pure z=8 row, because it has no singleton core and only six category literals. But the main lemma below applies to all 17 remaining rows.
+
+1. New universal reduction: exact A/B-state intersection law
+
+For a∈A, b∈B, write
+
+X
+a
+	​
+
+=N
+R
+	​
+
+(a),Y
+b
+	​
+
+=N
+R
+	​
+
+(b).
+
+Each X
+a
+	​
+
+,Y
+b
+	​
+
+ is an independent set of R, because an R-edge inside X
+a
+	​
+
+ or Y
+b
+	​
+
+ would form a triangle through a or b.
+
+Now use the t=2 nonedge-codegree condition.
+
+In the q14/t2 rooted model:
+
+A is independent;
+
+B is independent;
+
+there are no A−C or B−C edges;
+
+an A-B pair has common neighbours only in R.
+
+Therefore, for an A-B pair:
+
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=0⟹ab∈E(A,B).
+
+Otherwise ab would be a nonedge with codegree 0<2.
+
+Also,
+
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=1
+
+is impossible: if ab is an edge, there is a triangle through the unique common R-neighbour; if ab is a nonedge, its codegree is 1<2.
+
+Finally,
+
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣≥2⟹ab∈
+/
+E(A,B),
+
+because an edge would form a triangle.
+
+Hence:
+
+ab∈E(A,B)⟺X
+a
+	​
+
+∩Y
+b
+	​
+
+=∅.
+	​
+
+
+And the exact p-free constraints are:
+
+#{(a,b):X
+a
+	​
+
+∩Y
+b
+	​
+
+=∅}=p,
+	​
+
+(AB0)
+#{(a,b):∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=1}=0.
+	​
+
+(AB1)
+
+This is the most important next cut. It avoids choosing a p-edge A-B template, but still uses p exactly.
+
+For p16, p15, p14 this gives respectively:
+
+#{X
+a
+	​
+
+∩Y
+b
+	​
+
+=∅}=16,15,14.
+
+So the remaining 36−p cross-pairs must all have intersection at least 2.
+
+2. P-free p-exact side-state verifier
+
+For a fixed R-skeleton H, let I(H) be the family of independent subsets of R.
+
+Use variables
+
+A
+I
+	​
+
+,B
+I
+	​
+
+∈Z
+≥0
+	​
+
+(I∈I(H)),
+
+where A
+I
+	​
+
+ counts A-vertices with R-state I, and B
+I
+	​
+
+ counts B-vertices with R-state I.
+
+Impose:
+
+I∈I(H)
+∑
+	​
+
+A
+I
+	​
+
+=6,
+I∈I(H)
+∑
+	​
+
+B
+I
+	​
+
+=6.
+(S0)
+
+For each r∈R,
+
+m
+r
+	​
+
+=
+I∋r
+∑
+	​
+
+(A
+I
+	​
+
++B
+I
+	​
+
+).
+(S1)
+
+Exact M=74:
+
+r∈R
+∑
+	​
+
+m
+r
+	​
+
+=74.
+(S2)
+
+If the universal m
+r
+	​
+
+≤8 bound has been audited for p16/p15/p14, add
+
+m
+r
+	​
+
+≤8.
+(S3)
+
+If not, do not use x
+r
+	​
+
+≥0. The side-state checker itself remains valid without m
+r
+	​
+
+≤8.
+
+For every forced C-tight vertex r,
+
+m
+r
+	​
+
+=8−∣L(r)∣−d
+R
+	​
+
+(r).
+(S4)
+
+For every R-nonedge uv,
+
+∣L(u)∩L(v)∣+∣N
+R
+	​
+
+(u)∩N
+R
+	​
+
+(v)∣+
+I⊇{u,v}
+∑
+	​
+
+(A
+I
+	​
+
++B
+I
+	​
+
+)≥2.
+(S5)
+
+Now add the new exact A/B-state constraints:
+
+I,J∈I(H)
+I∩J=∅
+	​
+
+∑
+	​
+
+A
+I
+	​
+
+B
+J
+	​
+
+=p,
+(S6)
+I,J∈I(H)
+∣I∩J∣=1
+	​
+
+∑
+	​
+
+A
+I
+	​
+
+B
+J
+	​
+
+=0.
+(S7)
+
+This is the smallest exact pre-template verifier I see. It uses no fixed A-B graph. It only checks whether twelve independent R-states can realize exact M=74, exact p, all forced C-tight degrees, and all R/R codegrees.
+
+Implementation note: the aggregate form has quadratic products A
+I
+	​
+
+B
+J
+	​
+
+. The cleanest C++/CP-SAT implementation is labelled:
+
+X
+1
+	​
+
+,…,X
+6
+	​
+
+∈I(H),Y
+1
+	​
+
+,…,Y
+6
+	​
+
+∈I(H),
+
+then impose:
+
+#{(i,j):X
+i
+	​
+
+∩Y
+j
+	​
+
+=∅}=p,
+∣X
+i
+	​
+
+∩Y
+j
+	​
+
+∣
+
+=1∀i,j.
+
+This is usually simpler than linearizing the aggregate product.
+
+3. Universal category equations for the remaining frontier
+
+Let
+
+w=ZZ,a=ZS1,b=ZS2,c=ZD,S=S12.
+
+Let
+
+λ=e
+R
+	​
+
+−16=21−p.
+
+Thus:
+
+λ=
+⎩
+⎨
+⎧
+	​
+
+5,
+6,
+7,
+	​
+
+p=16,e
+R
+	​
+
+=21,
+p=15,e
+R
+	​
+
+=22,
+p=14,e
+R
+	​
+
+=23.
+	​
+
+
+For z∈{2,3,4,5,6,8},
+
+s=s
+1
+	​
+
+=s
+2
+	​
+
+=8−z,d=z−2.
+
+The category equation is
+
+w+(a+b+c−2z)+(S−2s)=λ.
+	​
+
+(C0)
+
+Equivalently,
+
+w+a+b+c+S=e
+R
+	​
+
+.
+
+The zero-domination inequalities are:
+
+c+a≥2z,c+b≥2z.
+(C1)
+
+For a zero q, write
+
+δ
+q
+	​
+
+=d
+D
+	​
+
+(q),α
+q
+	​
+
+=d
+S1
+	​
+
+(q),β
+q
+	​
+
+=d
+S2
+	​
+
+(q),ζ
+q
+	​
+
+=d
+Z
+	​
+
+(q).
+
+Then
+
+δ
+q
+	​
+
++α
+q
+	​
+
+≥2,δ
+q
+	​
+
++β
+q
+	​
+
+≥2.
+(C2)
+
+If either equality holds, q is C-tight, hence
+
+m
+q
+	​
+
+=8−d
+R
+	​
+
+(q),
+
+or in x-language,
+
+x
+q
+	​
+
+=d
+R
+	​
+
+(q).
+
+For singleton vertices:
+
+s
+1
+	​
+
+∈S1, d
+S2
+	​
+
+(s
+1
+	​
+
+)=2⟹s
+1
+	​
+
+ is C-tight.
+
+Similarly for S2.
+
+Let
+
+η=S−2s.
+
+Then at least
+
+2max(0,s−η)
+
+singleton vertices are forced C-tight.
+
+For zeros, define zero-excesses
+
+A
+Z
+	​
+
+=c+a−2z,B
+Z
+	​
+
+=c+b−2z.
+
+Then at least
+
+z−min(A
+Z
+	​
+
+,B
+Z
+	​
+
+)
+
+zero vertices are forced C-tight, because a non-forced zero needs positive excess in both domination inequalities.
+
+4. p16/eR21: recommended row order
+
+For p16,
+
+λ=5.
+
+I would run the p16 rows in this order:
+
+z=8→z=6→z=3→z=5→z=4.
+
+The first two are structurally smallest.
+
+4.1 p16, z=8: smallest row-wide finite certificate
+
+Here
+
+z=8,s=0,d=6.
+
+There are only Z and D vertices. Therefore
+
+S=0,a=b=0,
+
+and
+
+w+c=e
+R
+	​
+
+=21.
+
+Zero-domination gives every zero at least two D-neighbours, so
+
+c≥16.
+
+Hence the only categories are:
+
+(w,c)=(0,21),(1,20),(2,19),(3,18),(4,17),(5,16).
+	​
+
+
+For a zero q,
+
+δ
+q
+	​
+
+=d
+D
+	​
+
+(q)≥2.
+
+If
+
+δ
+q
+	​
+
+=2,
+
+then q is C-tight.
+
+Since
+
+Z
+∑
+	​
+
+δ
+q
+	​
+
+=c=21−w,
+
+the D-degree excess over 2 is
+
+c−16=5−w.
+
+So at least
+
+8−(5−w)=3+w
+
+zero vertices have δ
+q
+	​
+
+=2, hence are forced C-tight.
+
+The p16 z8 finite verifier should be:
+
+Enumerate bipartite Z-D graphs with 8+6 vertices, c=21−w edges, and every zero D-degree at least 2.
+
+Add w zero-zero edges only between zero vertices with disjoint D-neighbourhoods.
+
+Require the Z-graph triangle-free.
+
+Mark every zero with δ=2 as C-tight.
+
+Run the P-free p-exact side-state verifier (S0)−(S7) with p=16.
+
+This is the smallest whole-row certificate left in p16. It has only six category literals and no singleton-core enumeration.
+
+Do not use fixed P here unless this P-free checker returns survivors.
+
+4.2 p16, z=6: fixed K
+2,2
+	​
+
+ singleton core
+
+Here
+
+z=6,s=2,d=4.
+
+Since every singleton needs at least two opposite-singleton neighbours and the opposite side has size 2,
+
+S12=4.
+	​
+
+
+So
+
+R[S1,S2]=K
+2,2
+	​
+
+.
+
+Therefore no zero can touch both singleton sides. If a zero touched s
+1
+	​
+
+∈S1 and s
+2
+	​
+
+∈S2, then s
+1
+	​
+
+s
+2
+	​
+
+∈E(R), producing a triangle.
+
+Thus every zero satisfies
+
+δ
+q
+	​
+
+≥2.
+
+So
+
+c=ZD≥12.
+
+The category equation is
+
+w+a+b+c+4=21,
+
+hence
+
+w+a+b+c=17,c≥12.
+	​
+
+
+Therefore
+
+w+a+b≤5.
+	​
+
+
+All four singleton vertices are C-tight. A zero with δ
+q
+	​
+
+=2 is also C-tight.
+
+Since
+
+c−12
+
+is the total D-degree excess above 2, at least
+
+6−(c−12)=18−c
+
+zeros are forced C-tight.
+
+The p16 z6 verifier is also very small:
+
+Fix S1S2=K
+2,2
+	​
+
+.
+
+Forbid mixed zeros.
+
+Enumerate zero types:
+
+(N
+D
+	​
+
+(q),N
+S1
+	​
+
+(q),N
+S2
+	​
+
+(q))
+
+with N
+S1
+	​
+
+(q)=∅ or N
+S2
+	​
+
+(q)=∅, and ∣N
+D
+	​
+
+(q)∣≥2.
+
+Add ZZ-edges only between zeros with disjoint nonzero neighbourhoods.
+
+Mark all singletons and all δ=2 zeros C-tight.
+
+Run the P-free p-exact side-state verifier with p=16.
+
+This should be run immediately after z8.
+
+4.3 p16, z=3: one-D row
+
+Here
+
+z=3,s=5,d=1.
+
+The category equation is
+
+w+a+b+c+S=21,
+
+with
+
+c≤3,
+c+a≥6,c+b≥6,
+S≥10.
+
+For p16, the scalar category list has only 15 literals. Also S∈{10,11,12}.
+
+Singleton forcing:
+
+S=10: all ten singletons are C-tight.
+
+S=11: at least eight singletons are C-tight.
+
+S=12: at least six singletons are C-tight.
+
+Zero structure is also small because there is only one D-vertex.
+
+For a zero q:
+
+if qD∈E(R), then q needs at least one S1-neighbour and one S2-neighbour;
+
+if qD∈
+/
+E(R), then q needs at least two S1-neighbours and two S2-neighbours.
+
+The zero-rectangle condition is:
+
+N
+S1
+	​
+
+(q)×N
+S2
+	​
+
+(q)⊆K
+5,5
+	​
+
+∖E(S1,S2).
+(Z3R)
+
+If two zeros are joined by a ZZ-edge, their nonzero R-neighbourhoods must be disjoint.
+
+So for p16 z3, do not run fixed P. The correct finite pass is:
+
+15 categories→S1S2-core orbits for S=10,11,12→zero−rectanglecatalogue→P-free p-exact side-state verifier.
+
+This is still much smaller than fixed-template enumeration.
+
+4.4 p16, z=5: matching row
+
+Here
+
+z=5,s=3,d=3.
+
+Let
+
+k=S12−6,0≤k≤3.
+
+The S1S2-core is a 3×3 bipartite graph of minimum degree 2. Its missing graph
+
+H=K
+3,3
+	​
+
+∖E(S1,S2)
+
+is a matching of size
+
+∣H∣=9−S12=3−k.
+
+For every zero q,
+
+N
+S1
+	​
+
+(q)×N
+S2
+	​
+
+(q)⊆H.
+(Z5R)
+
+Because H is a matching, every mixed zero has exactly
+
+α
+q
+	​
+
+=β
+q
+	​
+
+=1,
+
+and it uses one missing matching edge.
+
+Consequences:
+
+z5-M1: S12=9
+
+If S12=9, then H=∅. No zero can touch both singleton sides.
+
+Therefore each zero needs at least two D-neighbours:
+
+S12=9⟹ZD≥10.
+	​
+
+z5-M2: D-deficit must be paid by mixed zeros
+
+Let r be the number of mixed zeros. Then
+
+ZD≥10−r.
+
+Equivalently,
+
+r≥10−ZD.
+
+Since every mixed zero contributes one ZS1-edge and one ZS2-edge,
+
+10−ZD≤min(ZS1,ZS2)
+
+is necessary.
+
+If S12=9, then r=0.
+
+If two mixed zeros are joined by a ZZ-edge, then their chosen singleton pair and their chosen D-neighbour must be disjoint; otherwise the ZZ-edge creates a triangle through a shared nonzero neighbour.
+
+For p16, the category equation is
+
+w+a+b+c+S=21.
+
+So for each S=6,7,8,9:
+
+w+a+b+c=21−S.
+
+The S1S2-core has exactly one orbit for each S=6,7,8,9. Therefore z5 is a very small skeleton problem after the matching cut.
+
+Verifier:
+
+Fix the unique S1S2-core for S=6,7,8,9.
+
+Enumerate zero types using the matching rule.
+
+Enforce ZD≥10−r.
+
+Add ZZ-edges only between zero types with disjoint nonzero neighbourhoods.
+
+Mark C-tight zeros:
+
+mixed zero with δ=1 is C-tight;
+
+non-mixed zero with δ=2 is C-tight.
+
+Run P-free p-exact side-state verifier.
+
+4.5 p16, z=4: rectangle row
+
+Here
+
+z=4,s=4,d=2.
+
+Let
+
+k=S12−8,0≤k≤5.
+
+The category equation is
+
+w+a+b+c+S=21.
+
+Equivalently,
+
+w+(a+b+c−8)+k=5.
+
+It is useful to parametrize the zero-excesses.
+
+Let
+
+A
+Z
+	​
+
+=c+a−8,B
+Z
+	​
+
+=c+b−8.
+
+Write
+
+A
+Z
+	​
+
+=u,B
+Z
+	​
+
+=r−u.
+
+Then the exact category parametrization is:
+
+c=3+k+w+r,
+	​
+
+a=5−k−w−r+u,
+	​
+
+b=5−k−w−u,
+	​
+
+
+with
+
+0≤u≤r≤5−k−w.
+
+At least
+
+4−min(u,r−u)
+
+zeros are forced C-tight.
+
+If u=0 or u=r, then all four zeros are C-tight.
+
+Now use the zero-rectangle cut.
+
+Let
+
+F=K
+4,4
+	​
+
+∖E(S1,S2).
+
+For every zero q,
+
+N
+S1
+	​
+
+(q)×N
+S2
+	​
+
+(q)⊆F.
+	​
+
+(Z4R)
+
+Thus a mixed zero can only use a complete biclique of the missing singleton graph F.
+
+For p16 z4, the singleton-core orbit counts are small:
+
+S12
+# core orbits
+	​
+
+8
+2
+	​
+
+9
+3
+	​
+
+10
+7
+	​
+
+11
+6
+	​
+
+12
+7
+	​
+
+13
+3
+	​
+
+	​
+
+
+Total: only 28 S1S2-core orbits.
+
+The z4 finite verifier should be:
+
+Enumerate the 28 singleton-core orbits.
+
+For each zero, enumerate allowed rectangles in F:
+
+N
+S1
+	​
+
+(q)×N
+S2
+	​
+
+(q)⊆F,
+
+with
+
+∣N
+D
+	​
+
+(q)∣+∣N
+S1
+	​
+
+(q)∣≥2,∣N
+D
+	​
+
+(q)∣+∣N
+S2
+	​
+
+(q)∣≥2.
+
+Add ZZ-edges only between zero types with disjoint nonzero neighbourhoods.
+
+Mark forced C-tight zeros using equality in either zero-domination inequality.
+
+Mark singleton vertices with opposite degree 2 C-tight.
+
+Run the P-free p-exact side-state verifier.
+
+This is the right replacement for broad fixed-P enumeration.
+
+5. p15 and p14 rows
+
+Once the P-free p-exact side-state verifier is implemented, p15 and p14 require almost no new mathematics.
+
+Only two things change:
+
+p=15, e
+R
+	​
+
+=22, λ=6,
+
+or
+
+p=14, e
+R
+	​
+
+=23, λ=7.
+
+The exact A/B-state count changes to:
+
+#{X
+a
+	​
+
+∩Y
+b
+	​
+
+=∅}=15
+
+or
+
+#{X
+a
+	​
+
+∩Y
+b
+	​
+
+=∅}=14.
+
+The category equation remains:
+
+w+(a+b+c−2z)+(S−2s)=λ.
+
+The z4/z5/z6/z8 structural cuts remain valid verbatim.
+
+5.1 z2 rows for p15/p14
+
+The z2 rows exist only for p15 and p14.
+
+Here
+
+z=2,s=6,d=0.
+
+So c=ZD=0.
+
+Zero-domination gives
+
+a=ZS1≥4,b=ZS2≥4.
+
+Let
+
+S=12+k.
+
+The category equation is:
+
+w+(a+b−4)+k=λ.
+
+Equivalently,
+
+(a−4)+(b−4)+w+k=λ−4.
+
+Thus:
+
+For p15, λ=6:
+
+(a−4)+(b−4)+w+k=2.
+	​
+
+
+For p14, λ=7:
+
+(a−4)+(b−4)+w+k=3.
+	​
+
+
+This is a very small row.
+
+Each zero q has
+
+∣N
+S1
+	​
+
+(q)∣≥2,∣N
+S2
+	​
+
+(q)∣≥2,
+
+and the rectangle condition:
+
+N
+S1
+	​
+
+(q)×N
+S2
+	​
+
+(q)⊆K
+6,6
+	​
+
+∖E(S1,S2).
+(Z2R)
+
+If ZZ=1, then the two zeros must have disjoint singleton neighbourhoods, otherwise the ZZ-edge forms a triangle.
+
+So p15/p14 z2 should be handled by a tiny rectangle verifier, then the same P-free p-exact side-state certificate.
+
+6. Likely dead ends
+
+Do not spend time on these before adding the P-free p-exact state law.
+
+Dead end 1: pure category slack
+
+The slack is now
+
+λ=5,6,7,
+
+not 4. Interior zero-excess categories survive scalar slack. Category arithmetic alone will not close the frontier.
+
+Dead end 2: assuming a stronger m
+r
+	​
+
+ bound
+
+For p17 you used m
+r
+	​
+
+≤8. For special p13 rows you had m
+r
+	​
+
+≤6 from the P-degree sequence.
+
+For p16/p15/p14, do not use m
+r
+	​
+
+≤6, m
+r
+	​
+
+≤7, or any p-dependent state bound unless independently certified.
+
+If m
+r
+	​
+
+≤8 is globally audited, use it. Otherwise, run the side-state exact-M verifier without x
+r
+	​
+
+≥0.
+
+Dead end 3: monotonicity from p17 closure
+
+The p17 rows being closed does not automatically close p16/p15/p14. Lower p changes the exact A/B-state count and raises e
+R
+	​
+
+. The skeleton space is not a monotone subset.
+
+Dead end 4: fixed-P before side-state
+
+A fixed-P pass throws away the strongest p-free structure:
+
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=0⟺ab∈E(A,B),
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=1 impossible.
+
+Use this first.
+
+Weakest steps and C++ checklist
+
+Audit the exact A/B-state law in the q14/t2 rooted model:
+
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=0⟺ab∈E(A,B),
+∣X
+a
+	​
+
+∩Y
+b
+	​
+
+∣=1 impossible.
+
+This uses the global t=2 nonedge-codegree condition and the fact that A-B pairs have common neighbours only in R.
+
+Implement the P-free p-exact side-state verifier:
+
+∑A
+I
+	​
+
+=6,∑B
+I
+	​
+
+=6,∑m
+r
+	​
+
+=74,
+
+forced C-tight equalities,
+R/R nonedge-codegree,
+exact disjoint pair count =p,
+and no intersection-one A/B state pairs.
+
+First run p16 z8:
+
+(ZZ,ZD)=(w,21−w),0≤w≤5.
+
+This is the smallest remaining whole-row certificate.
+
+Then run p16 z6:
+
+S12=4,S1S2=K
+2,2
+	​
+
+,ZD≥12,ZZ+ZS1+ZS2≤5.
+
+Then p16 z3, using the one-D zero-rectangle catalogue.
+
+Then p16 z5, using the 3×3 matching cut.
+
+Then p16 z4, using the 4×4 rectangle catalogue over only 28 singleton-core orbits.
+
+After p16, reuse the same verifier for p15 and p14 with only:
+
+p=15,λ=6
+
+or
+
+p=14,λ=7.
+
+Only skeletons surviving this P-free p-exact verifier should be sent to fixed-P SAT.

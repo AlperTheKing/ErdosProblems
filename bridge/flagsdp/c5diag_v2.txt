@@ -1,0 +1,29 @@
+T_9 perfect-hash map built (1897 keys, no canonical)
+T_10=12172; building D, gamma...
+  J 0/12172  (0s)
+  J 1000/12172  (2s)
+  J 2000/12172  (4s)
+  J 3000/12172  (7s)
+  J 4000/12172  (9s)
+  J 5000/12172  (11s)
+  J 6000/12172  (13s)
+  J 7000/12172  (15s)
+  J 8000/12172  (17s)
+  J 9000/12172  (19s)
+  J 10000/12172  (22s)
+  J 11000/12172  (24s)
+  J 12000/12172  (26s)
+build done in 26s
+D shape=(1897, 12172) nnz=94703; gamma range [0.0000,0.1270], #gamma>0=181
+
+=== x* = baseline full-band  eta=+6.486230e-05 ===
+  c* = p_ind(C5,x*) = 1.939981e-02   (c*)^2 = 3.763527e-04
+  10-extension LP INFEASIBLE (min:2 max:2) => x* has NO valid 10-vertex extension
+  >>> x* KILLED by the order-10 marginal itself. Selective lift VALIDATED.
+
+=== x* = edge-pinned [0.29,0.31]  eta=+6.370824e-05 ===
+  c* = p_ind(C5,x*) = 1.976221e-02   (c*)^2 = 3.905451e-04
+  10-extension LP INFEASIBLE (min:2 max:2) => x* has NO valid 10-vertex extension
+  >>> x* KILLED by the order-10 marginal itself. Selective lift VALIDATED.
+
+DONE

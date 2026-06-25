@@ -1,0 +1,30 @@
+Residual type:
+- h4 row {8,9,12,13}.
+- two degree-3 zeros w1,w2 have row {11,12,13}.
+- remaining degree-3 zero r has row {8,12,13}.
+- deltas (0,1,0,2,0,0), so c=(4,3,4,2,4,4).
+Symmetric copy swaps 8 and 9.
+
+Conclusion:
+Both residual copies are P-free contradictory. The aggregate upper bound is M<=73, contradicting M=74.
+
+For first residual r={8,12,13}:
+- S_8 singleton-block cuts hold:
+  if v sees 8 then v has exact D-state {8}, is adjacent to all T_9 and w1,w2, and is triangle-forbidden from T_8, r, h4.
+- Saturated S_10 cuts are already encoded.
+- For every A/B vertex v, with rdeg[v]=|N_R(v)|:
+  rdeg[v] + 2*y[v,8] + y[v,9] + 2*y[v,10] <= 7.
+Summing over the 12 A/B vertices and using m_8=2, m_9=3, m_10=2 gives:
+  sum_v rdeg[v] + 2*2 + 3 + 2*2 <= 84
+so sum_v rdeg[v] <= 73, contradicting M=74.
+
+For the symmetric residual r={9,12,13}, swap 8 and 9:
+  rdeg[v] + y[v,8] + 2*y[v,9] + 2*y[v,10] <= 7.
+Again m_8=3, m_9=2, m_10=2 gives M<=73.
+
+Smallest CP-SAT certificate:
+  add sum_v rdeg[v] <= 73
+for either exact residual branch. The model already has sum_v rdeg[v]=sum_r m_r=74.
+
+Weakest assumptions:
+exact zero rows, ZZ=0, triangle-freeness, local nonedge-codegree lower bound 2, D-visibility for every A/B vertex, touched-column equality for columns 8,9,10, the stated column loads, saturated-column 10 cuts, M=74 and |A union B|=12. No fixed A/B-template enumeration and no lower-frontier closure.

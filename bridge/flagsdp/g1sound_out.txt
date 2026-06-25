@@ -1,0 +1,5 @@
+delta (cert maxPhi) = 6.069989e-05
+  deficit 60/75
+  moment 100/394
+  moment 150/394
+max_H LHS(H) = 6.069989e-05  (should == delta) match=True

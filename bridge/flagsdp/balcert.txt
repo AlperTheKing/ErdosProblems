@@ -1,0 +1,6 @@
+k=7: 107 types; precomputing...
+  [7s]
+sep it1: pool=167 cuts eta=+4.1042332e-06
+sep it2: pool=719 cuts eta=+4.7745030e-07
+sep it3: pool=1254 cuts eta=+3.1967913e-07
+sep it4: pool=1784 cuts eta=+2.2929171e-07

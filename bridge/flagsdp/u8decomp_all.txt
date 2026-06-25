@@ -1,0 +1,9 @@
+nJ=12172; all-pairs decomposition (memoized canon)...
+  J=0/12172 [0s] nR=1
+  J=2000/12172 [3s] nR=350
+  J=4000/12172 [6s] nR=402
+  J=6000/12172 [10s] nR=409
+  J=8000/12172 [15s] nR=410
+  J=10000/12172 [20s] nR=410
+  J=12000/12172 [28s] nR=410
+DONE: nR=410, canon=52122, contribs=1095480 (avg 90.0/state), [31s]

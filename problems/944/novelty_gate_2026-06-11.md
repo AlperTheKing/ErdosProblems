@@ -32,3 +32,19 @@ headless (arXiv + S2 + problem page swept); GPT-5.5 Pro literature cross-checks
 (2 cold threads, 2026-06-10/11) independently found no overlap.
 
 Re-run this gate immediately before PR/arXiv submission (the slice is AI-raced).
+
+## Novelty gate RE-RUN for Theorem C (2026-06-13, before PR consolidation)
+Statement gated: "In a 6-regular (4,1)-graph, no shore of a nontrivial 6-edge-cut
+induces a bipartite graph; a shore with deficiency concentrated on two vertices
+forces equal colours on them in every 3-colouring." Plus supporting Lemma E
+(pair-rigidity) and the cut_row_forcing matrix corollary.
+Searches: arXiv + web (surfaces Scholar/ScienceDirect/Springer/zbMATH-indexed).
+- Only papers on THIS exact problem: SkSt25 (arXiv:2508.08703, isolates Problem
+  5.2; delta>=6, lambda>=6; NO 6-edge-cut structure theorem) and MaSt25
+  (arXiv:2310.12891, large-k far-from-edge-criticality). Both already cited.
+- Disambiguation: "6-regular 4-CRITICAL graphs exist (r=6,8,10)" (Erdős 1989 conj;
+  researchgate 262256207) refers to EDGE-critical graphs (every edge critical) —
+  the OPPOSITE of (4,1)-graphs (no critical edge). No conflict; consistent with
+  our Theorem A (unique n=13 graph is itself edge-critical, Hamilton-cycle).
+- No theorem on bipartiteness / cut-matrix rigidity of shores in the (4,1) case.
+VERDICT: Theorem C, Lemma E, cut_row_forcing are NOVEL. Gate PASSED.

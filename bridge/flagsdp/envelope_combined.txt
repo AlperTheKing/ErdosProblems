@@ -1,0 +1,5 @@
+=== COMBINED k7+k8 per-root-MaxCut envelope LP ===
+ns=1897 nJ=12172 n7=107 nR=410; validity=329; x=Dq eliminated.
+seeded 701 cuts; solving...
+iter0: eta=+4.5435865e-03
+it1: +105k7 +118k8 (pool 924) eta=+3.0757722e-03 [105s]

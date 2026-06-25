@@ -1,0 +1,7 @@
+=== FULL order-10 envelope: moment-only + k7 + k8 U_8 + (8,9) Gram (GPT path A finish) ===
+ns=1897 nJ=12172 n7=107 nR=410; MOMENT-only=317; modes=4 gram_tol=1e-07
+seeded 701 cuts; solving...
+iter0: eta=+4.5275229e-03
+it1: +105k7 +126k8 +290proj (pool 1222) eta=+2.8450953e-03 n<=5 minLh=-5.00e-01 [90s]
+it2: +107k7 +199k8 +351proj (pool 1879) eta=+1.8111918e-03 n<=6 minLh=-5.00e-01 [185s]
+it3: +106k7 +252k8 +376proj (pool 2613) eta=+1.2104408e-03 n<=8 minLh=-5.00e-01 [731s]

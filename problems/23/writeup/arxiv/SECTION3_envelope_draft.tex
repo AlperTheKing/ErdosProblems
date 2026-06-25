@@ -1,0 +1,99 @@
+% ============================================================================
+% DRAFT replacement for old Section 3 ("The order-9 band certificate" / deficit atoms).
+% Built on the SOUND per-root-MaxCut envelope U_7 (Step-2, 2026-06-25). delta symbolic
+% until the exact rational value + the envelope_k7_cert.pkl re-audit land.
+% Macros assumed (from main file): \bip=\beta, \dmono=d_{mono}, \mc=mc.
+% ============================================================================
+
+\section{The per-root-MaxCut envelope}\label{sec:cert}
+
+The certificate bounds $\dmono$ not by a fixed cut but by an \emph{envelope} of
+per-root maximum cuts, which is what allows it to be tight at the extremal
+$C_5$-blow-up. We use Razborov's flag algebra for triangle-free graphs
+\cite{Raz07,BCL21} at order $9$.
+
+\paragraph{The envelope.} Let $\mathcal{T}_7$ be the set of the $107$ triangle-free
+graphs on a labelled $7$-set (the \emph{root types}); every $7$-tuple of vertices
+of a triangle-free graphon induces exactly one $\sigma\in\mathcal{T}_7$, so
+$\sum_{\sigma}p_\sigma(W)=1$, where $p_\sigma(W)$ is the density of $7$-tuples
+inducing $\sigma$. Fix $\sigma$ and a set of $7$ roots of type $\sigma$. Each other
+vertex $v$ has a \emph{profile} $\pi_\sigma(v)\in\{0,1\}^7$ (its adjacencies to the
+$7$ roots); a \emph{rule} $c\colon\{0,1\}^7\to\{0,1\}$ assigns a side to each
+profile, hence a $2$-colouring of the non-root vertices. Write
+$g_{\sigma,c}(W)=p_\sigma(W)\bigl(\mathbb{E}[C\mid\sigma,c]-\tfrac{2}{25}\bigr)$ for
+the (order-$\le 9$) flag density of the resulting monochromatic-pair deficit, where
+$\mathbb{E}[C\mid\sigma,c]$ is the conditional monochromatic-pair density of the
+colouring. Define the \emph{per-root-MaxCut envelope}
+\[
+  U_7(W)\;:=\;\sum_{\sigma\in\mathcal{T}_7}p_\sigma(W)\,\min_c\,\mathbb{E}[C\mid\sigma,c]
+        \;=\;\frac{2}{25}+\sum_{\sigma\in\mathcal{T}_7}\min_c\,g_{\sigma,c}(W),
+\]
+the last equality using $\sum_\sigma p_\sigma=1$ and $p_\sigma\ge 0$. For each
+$\sigma$, $\min_c\mathbb{E}[C\mid\sigma,c]$ is the minimum monochromatic density
+over rules, i.e.\ a \emph{maximum cut of the profile graph} of $\sigma$.
+
+\begin{lemma}[envelope soundness]\label{lem:env}
+For every triangle-free graphon $W$, $\ \dmono(W)\le U_7(W)$, with equality at the
+$C_5$-blow-up.
+\end{lemma}
+
+\begin{proof}
+Sample $7$ roots $R$ as i.i.d.\ points of $W$; condition on $R$ inducing
+$\sigma\in\mathcal{T}_7$ and let $c^\ast(\sigma)=\arg\min_c\mathbb{E}[C\mid\sigma,c]$.
+Colour every other vertex $v$ by $c^\ast(\sigma)\bigl(\pi_\sigma(v)\bigr)$. Since the
+roots are a null set, this is a genuine measurable $2$-colouring $\varphi_R$ of $W$,
+so its monochromatic-pair density is at least the minimum over all colourings,
+$\ \mathrm{mono}(\varphi_R)\ge \dmono(W)$. Taking the expectation over $R$,
+\[
+  \dmono(W)\;\le\;\mathbb{E}_R\bigl[\mathrm{mono}(\varphi_R)\bigr]
+        \;=\;\sum_{\sigma}p_\sigma(W)\,\mathbb{E}[C\mid\sigma,c^\ast(\sigma)]
+        \;=\;U_7(W).
+\]
+At $W=C_5[N/5]$ the rule that two-colours the five classes optimally is realised by
+some $c^\ast(\sigma)$ for the dominant root types, and $U_7=\dmono=2/25$ (verified in
+Section~\ref{sec:verification}).
+\end{proof}
+
+Lemma~\ref{lem:env} is the crucial structural gain over a fixed cut: a fixed
+profile cut cannot be simultaneously optimal across the band and at $C_5$, but the
+\emph{envelope} of per-root maxima is (it equals $\dmono$ at $C_5$ exactly). This is
+why the earlier fixed-cut relaxation could not be sound at the extremal density and
+the envelope can.
+
+\paragraph{Certification of $U_7\le\frac{2}{25}+\delta$ on the band.} By
+Lemma~\ref{lem:env} the conjecture-on-the-band reduces to bounding the envelope. Set
+\[
+  \eta\;:=\;\max_{W}\ \sum_{\sigma\in\mathcal{T}_7}\min_c g_{\sigma,c}(W),
+  \qquad W\ \text{triangle-free with}\ \mathrm{LO}\le d_{\mathrm{edge}}(W)\le\mathrm{HI},
+\]
+$\mathrm{LO}=\tfrac{1243}{5000}=0.2486$, $\mathrm{HI}=\tfrac{3197}{10000}=0.3197$;
+then $U_7(W)\le\tfrac{2}{25}+\eta$ on the band.
+
+\begin{theorem}\label{thm:band}
+$\eta=\delta$, where $\delta$ is the explicit nonnegative rational
+[VALUE PENDING the exact re-audit of \texttt{envelope\_k7\_cert.pkl}; float
+$\delta\approx 6.06\times10^{-4}$]. Consequently $\dmono(W)\le\tfrac{2}{25}+\delta$
+for every triangle-free graphon $W$ with edge density in $[0.2486,0.3197]$.
+\end{theorem}
+
+The value $\eta$ is computed as the optimum of a linear program over the order-$9$
+flag densities: variables $x\ge 0$ (the density vector over the $1897$ order-$9$
+triangle-free flags, $\sum x=1$) and free $u_\sigma$; maximise $\sum_\sigma u_\sigma$
+subject to the band inequalities, the per-type envelope constraints
+$u_\sigma\le g_{\sigma,c}(x)$ for every rule $c$ in $\sigma$'s pool (so
+$u_\sigma\le\min_c g_{\sigma,c}(x)$), and the moment positivity rows $m(x)\ge 0$.
+The moment rows are exactly the order-$9$ flag-product (SOS) functionals of
+Section~\ref{sec:verification}, whose graphon nonnegativity is the Gram
+factorization $M^\sigma(W)=\sum_c w_c q_c q_c^\top$ of Section~\ref{sec:verification}
+(ingredient (3)); they restrict $x$ to genuine band graphons. The per-type
+separation adds, for each $\sigma$, the rule $c^\ast=\arg\min_c g_{\sigma,c}(x)$
+(the profile-graph max cut), so the LP optimum is exactly the envelope maximum
+$\eta$. The certificate (the per-type cut pool, the moment rows, the optimal $x$,
+and $\eta$) is an ancillary file; its exact-rational re-verification is in
+Section~\ref{sec:verification}.
+
+% NOTE(integration): downstream sections use Theorem~\ref{thm:band} + Prop (integrality)
+% exactly as before; only delta + the achievable n (n<=11 => N<=55, or n<=10 => N<=50
+% if the exact delta exceeds 2/(25*121)=6.612e-4) change. Lemma~\ref{lem:env} replaces
+% the old per-flag "best profile cut" soundness paragraph entirely (that framing was the
+% G4-flagged defect; the envelope is a genuine GRAPHON upper bound, not a per-flag check).

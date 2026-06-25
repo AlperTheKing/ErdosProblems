@@ -1,0 +1,1 @@
+T_9 with (WL,walkcounts): 1897 distinct / 1897, collisions=0, INJECTIVE=True

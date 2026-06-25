@@ -1,0 +1,3810 @@
+Skip to content
+CONTEXT:
+We are attacking Erdős #23 / q14/t2 cap74, p=16,e_R=21, z=8 row:
+  z=8, s1=s2=0, d=6, p=16, e_R=21, cap=74.
+Focus category:
+  (ZZ,ZD)=(0,21).
+
+We implemented your P-free exact A/B-state verifier:
+- labelled A states X_i and B states Y_j, independent in R;
+- exact M=sum_R m_r=74;
+- m_r<=8;
+- root-colour visibility through D for every A/B state;
+- root-to-R side visibility a_z>=2,b_z>=2 for every zero z;
+- terminal equality for zeros with d_D(z)=2;
+- full R/R edge/nonedge codegrees;
+- A/R, B/R, A/A, B/B codegrees using induced A-B edges;
+- exact A/B law: |X_i cap Y_j|=0 count exactly p=16, |X_i cap Y_j|=1 forbidden;
+- checkerboard cuts CB1/CB2.
+
+We then added a C++ rooted-cut separator:
+- Build the induced 30-vertex graph from the state assignment.
+- Compute exact min monochromatic cut by enumerating root/C/R sides and optimizing A/B sides.
+- Every SAT assignment so far violates beta>=37, with MIN_MONO usually 22..28.
+
+Lazy loop results:
+- Initial checkerboard model SAT in ~10s.
+- Added rooted cut inequalities from separator.
+- Switched to multi-cut separator: up to 16, then extra 128 cuts for one assignment.
+- Reached 361 lazy rooted-cut inequalities for category (0,21).
+- Iterations 1..76 all found SAT assignments; every assignment was killed by separator (MIN_MONO<37).
+- Iteration 77 with 361 cuts, 100 workers, 1800s returned UNKNOWN, not UNSAT.
+
+QUESTION:
+What is the next smallest mathematically safe strengthening for this z8 p16 (ZZ,ZD)=(0,21) category?
+
+Please be adversarial. Options I need you to evaluate:
+1. Is the lazy rooted-cut loop missing a class of cut inequalities or using too weak a cut family?
+2. Is there a z8-specific hand/skeleton lemma for (ZZ=0,ZD=21) that should branch before CP-SAT?
+3. Should we classify the Z-D skeleton degrees? Here 8 zeros each d_D in [2,5], total ZD=21, so excess over 2 is 5. At least 3 zeros are d_D=2 C-tight.
+4. Can the beta-cut separator be compressed into stronger aggregate inequalities rather than adding one cut at a time?
+5. Is there a better finite certificate: branch by zero D-degree sequence, D-column degrees, or C-tight zero set, then run the P-free state verifier?
+
+Give concrete constraints or branch cases to add next. Avoid broad fixed-P enumeration. End by listing the weakest assumptions.
+Show less
+
+I’ll treat the verifier and separator as sound, then look for the smallest graph-implied strengthenings that cut whole Z–D skeleton families rather than sampled assignments.
+
+A small skeleton split seems preferable to broader A/B enumeration, since repeated low-cut witnesses suggest structural redundancy in the lazy cuts.
+
+Thought for 47m 14s
+
+The next smallest safe strengthening is not another batch of ordinary lazy cuts. It is a terminal-reroot closure lemma for every zero with d
+D
+	​
+
+(z)=2, then a very small tight-footprint skeleton branch.
+
+Recommendation
+
+Add this first:
+
+z∈Z, d
+D
+	​
+
+(z)=2, zd∈E
+R
+	​
+
+⟹c
+d
+	​
+
++m
+d
+	​
+
+=6,
+
+where
+
+c
+d
+	​
+
+:=∣N
+Z
+	​
+
+(d)∣,m
+d
+	​
+
+:=∣N
+A∪B
+	​
+
+(d)∣.
+
+Equivalently, every D-vertex touched by a C-tight zero has total external degree exactly 6, so its original degree is exactly 8:
+
+deg
+G
+	​
+
+(d)=2+c
+d
+	​
+
++m
+d
+	​
+
+=8.
+
+Then immediately add the derived skeleton consequence:
+
+zd∈E
+R
+	​
+
+ for some d
+D
+	​
+
+(z)=2⟹c
+d
+	​
+
+≤4,m
+d
+	​
+
+=6−c
+d
+	​
+
+≥2.
+
+That c
+d
+	​
+
+≤4 is very useful: if c
+d
+	​
+
+<8, then d has some zero non-neighbour z
+′
+, and the nonedge dz
+′
+ has common neighbours only in A∪B, so m
+d
+	​
+
+≥2. Since touched d has c
+d
+	​
+
++m
+d
+	​
+
+=6, touched columns satisfy c
+d
+	​
+
+≤4.
+
+This is the smallest strengthening I would add before changing the separator.
+
+1. The key reroot lemma
+
+Let z∈Z with d
+D
+	​
+
+(z)=2. Write
+
+S
+z
+	​
+
+=N
+D
+	​
+
+(z)={d
+1
+	​
+
+,d
+2
+	​
+
+}.
+
+For either c∈C, the pair (c,z) is another t=2 terminal pair, because
+
+N(c)∩N(z)=S
+z
+	​
+
+.
+
+Also c has degree 8, and your terminal equality gives
+
+deg(z)=8,m
+z
+	​
+
+=6.
+
+So (c,z) is a valid q14/t2 reroot.
+
+In this rerooting:
+
+C
+′
+={d
+1
+	​
+
+,d
+2
+	​
+
+},
+A
+′
+={x,y}∪(D∖S
+z
+	​
+
+),
+B
+′
+=N
+A∪B
+	​
+
+(z),
+R
+′
+={c
+other
+	​
+
+}∪(Z∖{z})∪((A∪B)∖N
+A∪B
+	​
+
+(z)).
+
+For d∈S
+z
+	​
+
+, its new root-colour visibility size is
+
+∣N
+R
+′
+	​
+
+(d)∣=c
+d
+	​
+
++m
+d
+	​
+
+.
+
+Every q14/t2 root has both root-colour sets of size at least 6, so
+
+c
+d
+1
+	​
+
+	​
+
++m
+d
+1
+	​
+
+	​
+
+≥6,c
+d
+2
+	​
+
+	​
+
++m
+d
+2
+	​
+
+	​
+
+≥6.
+
+But since all cap <74 q14/t2 rows are assumed closed, the rerooted pair must also lie on the cap74 equality layer. Therefore its new U
+′
+ must be exactly 12:
+
+U
+′
+=(c
+d
+1
+	​
+
+	​
+
++m
+d
+1
+	​
+
+	​
+
+)+(c
+d
+2
+	​
+
+	​
+
++m
+d
+2
+	​
+
+	​
+
+)=12.
+
+Since each summand is at least 6, both are exactly 6:
+
+c
+d
+1
+	​
+
+	​
+
++m
+d
+1
+	​
+
+	​
+
+=6,c
+d
+2
+	​
+
+	​
+
++m
+d
+2
+	​
+
+	​
+
+=6.
+
+That is the constraint to add.
+
+2. Immediate skeleton pruning
+
+Let
+
+T={z∈Z:d
+D
+	​
+
+(z)=2},t=∣T∣.
+
+The possible zero degree sequences are only:
+
+2
+6
+45,
+2
+5
+3
+2
+5,
+2
+5
+34
+2
+,
+2
+4
+3
+3
+4,
+2
+3
+3
+5
+.
+
+So
+
+t∈{6,5,5,4,3}.
+
+Define a D-column to be touched if it is adjacent to at least one z∈T. For every touched column d,
+
+c
+d
+	​
+
++m
+d
+	​
+
+=6,c
+d
+	​
+
+≤4,m
+d
+	​
+
+=6−c
+d
+	​
+
+.
+
+So a touched column can have only:
+
+(c
+d
+	​
+
+,m
+d
+	​
+
+)∈{(1,5),(2,4),(3,3),(4,2)}.
+
+In particular:
+
+c
+d
+	​
+
+=5,6,7,8
+
+is impossible for a touched D-column.
+
+This is a very cheap and strong branch constraint.
+
+3. Tight-footprint branch cases
+
+Instead of branching over all Z-D skeletons, branch first over the footprint of the degree-2 zeros.
+
+Let
+
+U
+T
+	​
+
+=
+z∈T
+⋃
+	​
+
+N
+D
+	​
+
+(z),u=∣U
+T
+	​
+
+∣,h=6−u.
+
+Here h is the number of D-columns untouched by all C-tight zeros.
+
+Because touched columns have capacity c
+d
+	​
+
+≤4, the 2t tight incidences must fit into u columns of capacity 4:
+
+2t≤4u.
+
+Also, as shown below, h≥1, and for t=6, in fact h≥2.
+
+So the allowed support sizes are:
+
+| zero degree sequence | t | allowed u=∣U
+T
+	​
+
+∣ | equivalent h=6−u |
+|---|---:|---:|---:|
+| 2
+6
+45 | 6 | 3,4 | 3,2 |
+| 2
+5
+3
+2
+5 | 5 | 3,4,5 | 3,2,1 |
+| 2
+5
+34
+2
+ | 5 | 3,4,5 | 3,2,1 |
+| 2
+4
+3
+3
+4 | 4 | 2,3,4,5 | 4,3,2,1 |
+| 2
+3
+3
+5
+ | 3 | 2,3,4,5 | 4,3,2,1 |
+
+So, for example:
+
+If t=3, the three tight-zero D-pairs cannot be disjoint. They may not cover all six D-columns.
+
+If t=6, the six tight-zero D-pairs must use only 3 or 4 D-columns.
+
+If t=6,u=3, then the tight incidence vector on the touched columns is forced to be (4,4,4), and every touched column has (c
+d
+	​
+
+,m
+d
+	​
+
+)=(4,2).
+
+That last branch is especially rigid.
+
+4. Add the D-excess balance explicitly
+
+This is another cheap strengthening.
+
+For zeros, define the zero excess
+
+ϵ
+z
+	​
+
+:=m
+z
+	​
+
+−(8−d
+D
+	​
+
+(z)).
+
+For z∈T, terminal equality gives ϵ
+z
+	​
+
+=0.
+
+For D-vertices, define
+
+q
+d
+	​
+
+:=c
+d
+	​
+
++m
+d
+	​
+
+,τ
+d
+	​
+
+:=q
+d
+	​
+
+−6.
+
+Then
+
+M=74
+
+and
+
+Z
+∑
+	​
+
+d
+D
+	​
+
+(z)=21
+
+give the exact identity
+
+z∈
+/
+T
+∑
+	​
+
+ϵ
+z
+	​
+
++
+d∈D
+∑
+	​
+
+τ
+d
+	​
+
+=16.
+
+But touched D-columns have τ
+d
+	​
+
+=0. Therefore all D-excess must live on untouched columns:
+
+z∈
+/
+T
+∑
+	​
+
+ϵ
+z
+	​
+
++
+d∈
+/
+U
+T
+	​
+
+∑
+	​
+
+τ
+d
+	​
+
+=16.
+
+Since m
+z
+	​
+
+≤8, each non-tight zero satisfies
+
+ϵ
+z
+	​
+
+≤d
+D
+	​
+
+(z).
+
+Thus
+
+z∈
+/
+T
+∑
+	​
+
+ϵ
+z
+	​
+
+≤21−2t.
+
+So the untouched D-columns must carry at least
+
+16−(21−2t)=2t−5
+
+units of D-excess:
+
+d∈
+/
+U
+T
+	​
+
+∑
+	​
+
+(q
+d
+	​
+
+−6)≥2t−5.
+	​
+
+
+Concrete lower bounds:
+
+t	required untouched D-excess
+3	≥1
+4	≥3
+5	≥5
+6	≥7
+
+This proves h≥1 always, and h≥2 when t=6.
+
+For t=5,h=1, the single untouched column must saturate:
+
+c
+d
+	​
+
+=3,m
+d
+	​
+
+=8,q
+d
+	​
+
+=11.
+
+Also all three non-tight zeros must satisfy
+
+m
+z
+	​
+
+=8.
+
+For t=6,h=2, let c
+U
+	​
+
+ be the number of non-tight zero incidences landing in the two untouched columns. Then
+
+c
+U
+	​
+
++4≥7,
+
+so
+
+c
+U
+	​
+
+≥3.
+
+If c
+U
+	​
+
+=3, the branch is saturated: both non-tight zeros have m
+z
+	​
+
+=8, and the untouched D-columns have m
+d
+	​
+
+=8.
+
+5. Full reroot scalar equality for each tight zero
+
+After adding the local touched-column rule, the next strengthening is the full scalar equality from the reroot (c,z).
+
+For each z∈T, let
+
+S
+z
+	​
+
+=N
+D
+	​
+
+(z),
+A
+z
+	​
+
+={i:z∈X
+i
+	​
+
+},B
+z
+	​
+
+={j:z∈Y
+j
+	​
+
+}.
+
+You already have
+
+∣A
+z
+	​
+
+∣+∣B
+z
+	​
+
+∣=m
+z
+	​
+
+=6,∣A
+z
+	​
+
+∣≥2,∣B
+z
+	​
+
+∣≥2.
+
+So branch the tight-zero state type:
+
+(∣A
+z
+	​
+
+∣,∣B
+z
+	​
+
+∣)∈{(2,4),(3,3),(4,2)}.
+
+By A/B-symmetry, (2,4) and (4,2) are equivalent globally unless other symmetry breaking has already fixed the sides.
+
+Now define the rerooted p-term:
+
+p
+z
+∗
+	​
+
+=∣A
+z
+	​
+
+∣+∣B
+z
+	​
+
+∣+
+d∈D∖S
+z
+	​
+
+∑
+	​
+
+(∣{i∈A
+z
+	​
+
+:d∈X
+i
+	​
+
+}∣+∣{j∈B
+z
+	​
+
+:d∈Y
+j
+	​
+
+}∣).
+
+Equivalently,
+
+p
+z
+∗
+	​
+
+=6+
+d∈D∖S
+z
+	​
+
+∑
+	​
+
+(
+i
+∑
+	​
+
+x
+iz
+	​
+
+x
+id
+	​
+
++
+j
+∑
+	​
+
+y
+jz
+	​
+
+y
+jd
+	​
+
+).
+
+This counts the edges between
+
+A
+′
+={x,y}∪(D∖S
+z
+	​
+
+)
+
+and
+
+B
+′
+=N
+A∪B
+	​
+
+(z).
+
+Now define the rerooted e
+R
+	​
+
+-term:
+
+e
+R,z
+∗
+	​
+
+=
+z
+′
+∈Z∖{z}
+∑
+	​
+
+(
+i
+∑
+	​
+
+(1−x
+iz
+	​
+
+)x
+iz
+′
+	​
+
++
+j
+∑
+	​
+
+(1−y
+jz
+	​
+
+)y
+jz
+′
+	​
+
+)+
+i,j
+∑
+	​
+
+(1−x
+iz
+	​
+
+)(1−y
+jz
+	​
+
+)e
+ij
+	​
+
+,
+
+where e
+ij
+	​
+
+=1 means A
+i
+	​
+
+B
+j
+	​
+
+∈E, i.e.
+
+∣X
+i
+	​
+
+∩Y
+j
+	​
+
+∣=0.
+
+Then add:
+
+p
+z
+∗
+	​
+
++e
+R,z
+∗
+	​
+
+=37.
+	​
+
+
+If you want the weakest version that does not rely on cap<74 closure, add only
+
+p
+z
+∗
+	​
+
++e
+R,z
+∗
+	​
+
+≥37.
+
+But under the current cap74 frontier assumption, equality is the correct strengthening.
+
+This is still P-free. It does not enumerate an A/B template. It only says that every C-tight zero must itself reroot to the same scalar equality layer.
+
+6. Cheap propagation clauses from tight columns
+
+For any touched D-column d with c
+d
+	​
+
+=4, we have
+
+m
+d
+	​
+
+=2.
+
+For every zero z with zd∈
+/
+E
+R
+	​
+
+, the nonedge zd needs codegree at least 2. Since the only possible common neighbours are in A∪B, and d has exactly two A/B-neighbours, those two neighbours must both be adjacent to z.
+
+So add the implication:
+
+(d touched)∧(c
+d
+	​
+
+=4)∧(zd∈
+/
+E
+R
+	​
+
+)⟹N
+A∪B
+	​
+
+(d)⊆N
+A∪B
+	​
+
+(z).
+
+In state variables:
+
+x
+id
+	​
+
+=1⟹x
+iz
+	​
+
+=1,
+y
+jd
+	​
+
+=1⟹y
+jz
+	​
+
+=1,
+
+under that condition.
+
+This is already logically implied by your R/R nonedge codegree constraint, but adding it explicitly will propagate much earlier.
+
+Also add the outside-pair visibility for tight zeros:
+
+x
+iz
+	​
+
+=1, S
+z
+	​
+
+=N
+D
+	​
+
+(z)⟹
+d∈D∖S
+z
+	​
+
+∑
+	​
+
+x
+id
+	​
+
+≥1,
+
+and similarly
+
+y
+jz
+	​
+
+=1⟹
+d∈D∖S
+z
+	​
+
+∑
+	​
+
+y
+jd
+	​
+
+≥1.
+
+This follows from root-colour visibility through D plus triangle-freeness, but again it helps propagation.
+
+7. About the lazy rooted-cut loop
+
+I would not interpret the 77-iteration UNKNOWN as evidence that the separator is missing a beta-cut class.
+
+If your separator really enumerates all sides of
+
+{x,y}∪C∪R
+
+and then optimizes over all A/B sides, then it is exact for the constructed 30-vertex graph. It is not missing a class of cuts.
+
+The weakness is different: each lazy inequality corresponds to one complete cut. For a fixed outer assignment on {x,y}∪C∪R, there are 2
+12
+=4096 A/B-completions. You are usually adding one or a few of them. That is a weak Benders cut.
+
+The stronger compression is:
+
+For each outer side pattern ρ on {x,y}∪C∪R, add the whole projected family
+
+K
+ρ
+	​
+
++
+i
+∑
+	​
+
+([α
+i
+	​
+
+=ρ
+x
+	​
+
+]+
+r∈R
+∑
+	​
+
+[α
+i
+	​
+
+=ρ
+r
+	​
+
+]x
+ir
+	​
+
+)+
+j
+∑
+	​
+
+([β
+j
+	​
+
+=ρ
+y
+	​
+
+]+
+r∈R
+∑
+	​
+
+[β
+j
+	​
+
+=ρ
+r
+	​
+
+]y
+jr
+	​
+
+)+
+i,j
+∑
+	​
+
+[α
+i
+	​
+
+=β
+j
+	​
+
+]e
+ij
+	​
+
+≥37
+
+for all
+
+α∈{0,1}
+6
+,β∈{0,1}
+6
+.
+
+Here K
+ρ
+	​
+
+ is the fixed mono contribution from edges whose endpoints are already in {x,y}∪C∪R.
+
+You can either add all 4096 inequalities for a violated outer pattern ρ, or encode the projection by a max-flow dual.
+
+The flow version is cleaner:
+
+Flip the B-variables by writing γ
+j
+	​
+
+=1−β
+j
+	​
+
+.
+
+The A
+i
+	​
+
+B
+j
+	​
+
+ mono penalty becomes a disagreement penalty
+
+e
+ij
+	​
+
+[α
+i
+	​
+
+
+=γ
+j
+	​
+
+],
+
+which is graph-cut representable.
+
+Build the 12-node s-t cut network for the unary costs and the A
+i
+	​
+
+B
+j
+	​
+
+ disagreement capacities.
+
+Require a feasible flow of value at least
+
+37−K
+ρ
+	​
+
+.
+
+That single aggregate constraint dominates all 4096 ordinary cuts for the same outer pattern.
+
+So the separator upgrade should be second priority, after the tight-reroot skeleton constraints.
+
+8. Suggested next finite certificate workflow
+
+Use this order:
+
+Branch by zero D-degree sequence among the five sequences above.
+
+Fix the tight zero set T by symmetry.
+
+Branch by the tight footprint U
+T
+	​
+
+⊆D, not by the full skeleton.
+
+Allowed support sizes:
+
+t=6: u=3,4,
+t=5: u=3,4,5,
+t=4: u=2,3,4,5,
+t=3: u=2,3,4,5.
+
+For every touched D-column, add
+
+c
+d
+	​
+
++m
+d
+	​
+
+=6,c
+d
+	​
+
+≤4,m
+d
+	​
+
+=6−c
+d
+	​
+
+.
+
+Add the excess identity
+
+z∈
+/
+T
+∑
+	​
+
+(m
+z
+	​
+
+−(8−d
+D
+	​
+
+(z)))+
+d∈
+/
+U
+T
+	​
+
+∑
+	​
+
+(c
+d
+	​
+
++m
+d
+	​
+
+−6)=16.
+
+Add the lower excess bound
+
+d∈
+/
+U
+T
+	​
+
+∑
+	​
+
+(c
+d
+	​
+
++m
+d
+	​
+
+−6)≥2t−5.
+
+Branch tight-zero state types
+
+(∣A
+z
+	​
+
+∣,∣B
+z
+	​
+
+∣)∈{(2,4),(3,3),(4,2)}.
+
+Add full reroot scalar closure
+
+p
+z
+∗
+	​
+
++e
+R,z
+∗
+	​
+
+=37
+
+for every z∈T.
+
+Then run the P-free exact A/B-state verifier.
+
+If still SAT/UNKNOWN, replace ordinary lazy cuts by the projected outer-pattern cut or flow encoding.
+
+Weakest assumptions used
+
+The new strengthening uses only these assumptions:
+
+The q14/t2 rooted reductions apply to any rerooted terminal nonedge pair with common-neighbour size 2.
+
+Lower-q reroot branches are already closed, so a C-tight zero with d
+D
+	​
+
+(z)=2 must have terminal degree 8, i.e.
+
+m
+z
+	​
+
+=6.
+
+All q14/t2 cap<74 rows are already closed. This is what upgrades the rerooted scalar inequalities to the equality layer
+
+U
+′
+=12,p
+′
++e
+R
+′
+	​
+
+=37.
+
+The current row has
+
+z=8,d=6,e
+R
+	​
+
+=21,ZZ=0,ZD=21,M=74.
+
+Full R/R nonedge codegree is valid, giving for any zero z and nonadjacent D-vertex d:
+
+∣N
+A∪B
+	​
+
+(z)∩N
+A∪B
+	​
+
+(d)∣≥2.
+
+Under those assumptions, the touched-column constraint
+
+d
+D
+	​
+
+(z)=2, zd∈E
+R
+	​
+
+⟹c
+d
+	​
+
++m
+d
+	​
+
+=6, c
+d
+	​
+
+≤4
+
+is mathematically safe and should be the next strengthening.
+
+CONTEXT:
+We are attacking Erdos #23 / a(30)=36, q14/t2/cap74 branch, currently p=16,e_R=21,z=8,d=6, category (ZZ,ZD)=(0,21).
+The verifier is P-free exact A/B-state CP-SAT:
+- 8 zeros Z, 6 doubletons D.
+- A_i states X_i subset R and B_j states Y_j subset R.
+- A/B edge iff X_i cap Y_j = empty; |X_i cap Y_j|=1 forbidden; total p=16.
+- full R/R, A/R, B/R, A/A, B/B codegrees; root-to-R zero side visibility a_z,b_z>=2.
+- checkerboard beta cuts + 489 ordinary rooted lazy cuts from previous SAT survivors.
+- max 100 workers.
+
+NEW CONSTRAINTS ADDED FROM YOUR LAST ANSWER:
+For every tight zero z with d_D(z)=2 and touched D-column d:
+  c_d + m_d = 6, c_d <= 4.
+Added footprint/excess cuts:
+  2t <= 4u, u<=5, if t=6 then u<=4,
+  sum untouched tau_d >= 2t-5.
+Also added full tight-zero reroot scalar equality:
+  p*_z + eR*_z = 37
+for every d_D(z)=2 zero, using the P-free formulas from your answer.
+
+RESULTS:
+Degree profile branches for zero D-degrees:
+1. (n2,n3,n4,n5)=(6,0,1,1), t=6:
+   u=3 INFEASIBLE in 9.4s.
+   u=4 INFEASIBLE in 35.1s.
+   So t=6 profile is closed.
+2. (5,2,0,1), t=5:
+   u=3 INFEASIBLE in 131s.
+   u=4 UNKNOWN in 306s; project8 still UNKNOWN in 634s.
+   u=5 INFEASIBLE in 80s.
+3. (5,1,2,0), t=5:
+   u=3 INFEASIBLE in 185s.
+   u=4 UNKNOWN in 307s.
+   u=5 INFEASIBLE in 91s.
+4. (4,3,1,0), t=4:
+   u=2 INFEASIBLE in 57s.
+   u=3 UNKNOWN in 307s.
+   u=4 UNKNOWN in 308s.
+   u=5 UNKNOWN in 307s.
+5. (3,5,0,0), t=3:
+   u=2,3,4,5 all UNKNOWN in 307s each.
+   Previously without new reroot constraints this profile produced SAT; separator found MIN_MONO=22 and added 128 rooted cuts. With reroot constraints and 489 cuts, no SAT found in 900s.
+
+I also tried branching t=5,u=4,(5,2,0,1) by tight-zero A-side counts n24,n33,n42 (21 branches, 60s each): all UNKNOWN, no SAT.
+
+QUESTION:
+What is the next smallest mathematically safe strengthening that should close or sharply reduce the remaining UNKNOWN branches?
+Please avoid broad fixed-P enumeration. Prefer a P-free row/skeleton/state lemma.
+Candidates I am considering:
+1. touched-column propagation c_d=4 => N_AB(d) subset N_AB(z) for every zero non-neighbour z;
+2. outside-pair visibility for tight zeros: x_iz=1 => some outside D in X_i, similarly Y;
+3. branch by exact tight footprint incidence vector on D columns;
+4. add projected outer-root cut families more aggressively;
+5. derive a new scalar contradiction for t=5,u=4 or t=3/u=2..5.
+
+Give one concrete next lemma/cut with exact CP-SAT constraints and a proof sketch. Also flag if any of the added reroot equalities look unsafe.
+Show more
+
+I’ll first audit whether the reroot equalities are unconditional, then look for one local P-free strengthening that should propagate before broader projected beta-cut machinery.
+
+The remaining UNKNOWNs look like a tight-footprint propagation gap, especially around zero–D nonedges and fully visible touched columns, rather than evidence for more ordinary lazy cuts.
+
+Thought for 12m 27s
+
+The next smallest non-redundant strengthening is:
+
+For every tight zero z, the rerooted profile at (c,z) cannot have d
+′
+=5.
+	​
+
+
+Equivalently, for the two D-neighbours S
+z
+	​
+
+={d
+a
+	​
+
+,d
+b
+	​
+
+} of a tight zero z, the number of vertices in the rerooted R
+′
+ adjacent to both d
+a
+	​
+
+,d
+b
+	​
+
+ must satisfy
+
+D
+z,a,b
+′
+	​
+
+∈{1,2,3,4,6};D
+z,a,b
+′
+	​
+
+
+=5.
+	​
+
+
+This is the smallest thing I would add before projected beta cuts or broader skeleton enumeration.
+
+Why this is the right next cut
+
+You already added, for every tight zero z and every d∈S
+z
+	​
+
+,
+
+c
+d
+	​
+
++m
+d
+	​
+
+=6.
+
+So when rerooting at (c,z), with new common pair
+
+C
+′
+={d
+a
+	​
+
+,d
+b
+	​
+
+}=S
+z
+	​
+
+,
+
+both new root-colour sets have size exactly 6. Therefore the rerooted label counts satisfy
+
+s
+1
+′
+	​
+
++d
+′
+=6,s
+2
+′
+	​
+
++d
+′
+=6.
+
+So
+
+s
+1
+′
+	​
+
+=s
+2
+′
+	​
+
+=6−d
+′
+.
+
+Since ∣R
+′
+∣=14, we also get
+
+z
+′
+=d
+′
++2.
+
+Thus the rerooted cap74 profile must be one of
+
+(d
+′
+,s
+1
+′
+	​
+
+,s
+2
+′
+	​
+
+,z
+′
+)=(1,5,5,3),
+(2,4,4,4),
+(3,3,3,5),
+(4,2,2,6),
+(5,1,1,7),
+(6,0,0,8).
+
+But the q14/t2 scalar side condition says:
+
+s
+1
+′
+	​
+
+>0⇒s
+2
+′
+	​
+
+≥2,s
+2
+′
+	​
+
+>0⇒s
+1
+′
+	​
+
+≥2.
+
+So the profile
+
+(d
+′
+,s
+1
+′
+	​
+
+,s
+2
+′
+	​
+
+,z
+′
+)=(5,1,1,7)
+
+is impossible.
+
+Therefore:
+
+d
+′
+
+=5.
+	​
+
+
+This is not fixed-P enumeration. It is a one-line local reroot profile exclusion.
+
+Exact CP-SAT constraint
+
+Let
+
+E
+z,d
+	​
+
+∈{0,1}
+
+be the Z-D skeleton edge variable, and let
+
+x
+i,r
+	​
+
+, y
+j,r
+	​
+
+
+be the A/B state variables.
+
+For each tight zero z, and each unordered pair a<b of D-columns, define
+
+P
+zab
+	​
+
+=1
+
+iff
+
+N
+D
+	​
+
+(z)={d
+a
+	​
+
+,d
+b
+	​
+
+}.
+
+Since z is tight, ∑
+d
+	​
+
+E
+z,d
+	​
+
+=2, so this is easy:
+
+P
+zab
+	​
+
+≤E
+z,a
+	​
+
+,
+P
+zab
+	​
+
+≤E
+z,b
+	​
+
+,
+P
+zab
+	​
+
+≥E
+z,a
+	​
+
++E
+z,b
+	​
+
+−1,
+a<b
+∑
+	​
+
+P
+zab
+	​
+
+=1.
+
+If your tight set is not fixed, guard these by T
+z
+	​
+
+, where T
+z
+	​
+
+⟺d
+D
+	​
+
+(z)=2:
+
+a<b
+∑
+	​
+
+P
+zab
+	​
+
+=T
+z
+	​
+
+.
+
+Now define the rerooted doubleton count
+
+D
+zab
+′
+	​
+
+=1+
+z
+′
+∈Z∖{z}
+∑
+	​
+
+E
+z
+′
+,a
+	​
+
+E
+z
+′
+,b
+	​
+
++
+i=1
+∑
+6
+	​
+
+(1−x
+i,z
+	​
+
+)x
+i,a
+	​
+
+x
+i,b
+	​
+
++
+j=1
+∑
+6
+	​
+
+(1−y
+j,z
+	​
+
+)y
+j,a
+	​
+
+y
+j,b
+	​
+
+.
+
+The initial 1 is the other old C-vertex. In the rerooted R
+′
+, that vertex is adjacent to both d
+a
+	​
+
+ and d
+b
+	​
+
+, so it is always a doubleton.
+
+Then add:
+
+P
+zab
+	​
+
+=1⟹D
+zab
+′
+	​
+
+∈{1,2,3,4,6}.
+	​
+
+
+Equivalently:
+
+P
+zab
+	​
+
+=1⟹D
+zab
+′
+	​
+
+
+=5.
+
+In OR-Tools style, the cleanest form is:
+
+Python
+Run
+model.AddLinearExpressionInDomain(
+    Dprime[z,a,b],
+    cp_model.Domain.FromValues([1, 2, 3, 4, 6])
+).OnlyEnforceIf(P[z,a,b])
+
+If you prefer a pure Boolean disjunction, introduce reroot_d6[z,a,b] and impose:
+
+Python
+Run
+# If reroot_d6 is false, D' <= 4.
+model.Add(Dprime[z,a,b] <= 4).OnlyEnforceIf([P[z,a,b], reroot_d6[z,a,b].Not()])
+
+# If reroot_d6 is true, D' = 6.
+model.Add(Dprime[z,a,b] == 6).OnlyEnforceIf([P[z,a,b], reroot_d6[z,a,b]])
+
+This encodes exactly:
+
+D
+′
+≤4orD
+′
+=6.
+Linearization details
+
+For the products, add auxiliary Boolean variables.
+
+For old zero terms:
+
+u
+z
+′
+,ab
+	​
+
+=E
+z
+′
+,a
+	​
+
+∧E
+z
+′
+,b
+	​
+
+.
+
+CP-SAT:
+
+Python
+Run
+model.AddBoolAnd([E[zp,a], E[zp,b]]).OnlyEnforceIf(u[zp,a,b])
+model.AddBoolOr([E[zp,a].Not(), E[zp,b].Not(), u[zp,a,b]])
+
+Or equivalently:
+
+u≤E
+z
+′
+,a
+	​
+
+,
+u≤E
+z
+′
+,b
+	​
+
+,
+u≥E
+z
+′
+,a
+	​
+
++E
+z
+′
+,b
+	​
+
+−1.
+
+For A-state terms:
+
+u
+i,zab
+A
+	​
+
+=(1−x
+i,z
+	​
+
+)∧x
+i,a
+	​
+
+∧x
+i,b
+	​
+
+.
+
+Linear form:
+
+u
+A
+≤1−x
+i,z
+	​
+
+,
+u
+A
+≤x
+i,a
+	​
+
+,
+u
+A
+≤x
+i,b
+	​
+
+,
+u
+A
+≥(1−x
+i,z
+	​
+
+)+x
+i,a
+	​
+
++x
+i,b
+	​
+
+−2.
+
+Similarly for B:
+
+u
+j,zab
+B
+	​
+
+=(1−y
+j,z
+	​
+
+)∧y
+j,a
+	​
+
+∧y
+j,b
+	​
+
+.
+
+Then
+
+D
+zab
+′
+	​
+
+=1+
+z
+′
+
+=z
+∑
+	​
+
+u
+z
+′
+,ab
+	​
+
++
+i
+∑
+	​
+
+u
+i,zab
+A
+	​
+
++
+j
+∑
+	​
+
+u
+j,zab
+B
+	​
+
+.
+Why this should reduce the UNKNOWN branches
+
+Your current reroot equalities force each tight pair {d
+a
+	​
+
+,d
+b
+	​
+
+} to be balanced in total visibility:
+
+∣N
+R
+′
+	​
+
+(d
+a
+	​
+
+)∣=∣N
+R
+′
+	​
+
+(d
+b
+	​
+
+)∣=6.
+
+But they do not yet exclude the bad equality-layer profile
+
+(z
+′
+,s
+1
+′
+	​
+
+,s
+2
+′
+	​
+
+,d
+′
+)=(7,1,1,5).
+
+That profile is locally impossible, but CP-SAT will not derive it from the original-root constraints unless you explicitly materialize the rerooted profile.
+
+The bad case d
+′
+=5 is exactly the dangerous one because it leaves only one singleton of each reroot colour. That creates many symmetric partial assignments and weak propagation. For your remaining branches, especially
+
+t=5,u=4
+
+and
+
+t=3,u=2,3,4,5,
+
+this is likely a major source of search blow-up.
+
+Add two redundant propagators with it
+
+These are not the main lemma, but they are cheap and safe.
+
+A. Outside-pair visibility for tight zeros
+
+If N
+D
+	​
+
+(z)={d
+a
+	​
+
+,d
+b
+	​
+
+} and x
+i,z
+	​
+
+=1, then A
+i
+	​
+
+'s required D-visibility cannot come from d
+a
+	​
+
+,d
+b
+	​
+
+, because X
+i
+	​
+
+ is independent in R and z is adjacent to both d
+a
+	​
+
+,d
+b
+	​
+
+. Therefore:
+
+P
+zab
+	​
+
+=1, x
+i,z
+	​
+
+=1⟹
+d∈
+/
+{a,b}
+∑
+	​
+
+x
+i,d
+	​
+
+≥1.
+
+Similarly:
+
+P
+zab
+	​
+
+=1, y
+j,z
+	​
+
+=1⟹
+d∈
+/
+{a,b}
+∑
+	​
+
+y
+j,d
+	​
+
+≥1.
+
+CP-SAT:
+
+Python
+Run
+model.Add(
+    sum(x[i,d] for d in D if d not in (a,b)) >= 1
+).OnlyEnforceIf([P[z,a,b], x[i,z]])
+
+model.Add(
+    sum(y[j,d] for d in D if d not in (a,b)) >= 1
+).OnlyEnforceIf([P[z,a,b], y[j,z]])
+
+This is logically implied by root-colour visibility plus state independence, but it propagates much earlier.
+
+B. Touched c
+d
+	​
+
+=4 inclusion
+
+For a touched column d, if
+
+c
+d
+	​
+
+=4,
+
+then
+
+m
+d
+	​
+
+=2.
+
+For every zero z with E
+z,d
+	​
+
+=0, the nonedge zd needs two common neighbours. The only possible common neighbours are in A∪B, and d has exactly two of them. Therefore:
+
+E
+z,d
+	​
+
+=0, d touched, c
+d
+	​
+
+=4, x
+i,d
+	​
+
+=1⟹x
+i,z
+	​
+
+=1,
+
+and similarly for Y:
+
+E
+z,d
+	​
+
+=0, d touched, c
+d
+	​
+
+=4, y
+j,d
+	​
+
+=1⟹y
+j,z
+	​
+
+=1.
+
+This is also implied by full R/R codegree, but it is a useful propagation cut.
+
+What I would not do yet
+
+Do not move first to projected outer-root beta cuts. Your current issue is not that SAT survivors are escaping the separator; after the reroot constraints, the solver is not even finding SAT assignments. That points to internal search symmetry and weak propagation, not missing beta inequalities.
+
+Do not branch full P or full A/B templates.
+
+If the reroot d
+′
+
+=5 cut still leaves UNKNOWN, the next branch should be only the tight-footprint column vector
+
+g
+d
+	​
+
+:=∣N
+T
+	​
+
+(d)∣.
+
+For example, in the important t=5,u=4 branches, the only sorted possibilities are:
+
+(4,4,1,1),
+(4,3,2,1),
+(4,2,2,2),
+(3,3,3,1),
+(3,3,2,2).
+
+That is still skeleton-only and P-free.
+
+Safety audit of your added reroot equalities
+
+The formulas for p
+z
+∗
+	​
+
+ and e
+R,z
+∗
+	​
+
+ look structurally correct.
+
+But the equality
+
+p
+z
+∗
+	​
+
++e
+R,z
+∗
+	​
+
+=37
+
+is safe only under the following scalar frontier assumption:
+
+every q14/t2 reroot satisfies U+p+e
+R
+	​
+
+≥49,
+
+equivalently
+
+cap≤74,
+
+and all cap <74 branches have already been closed.
+
+If you only know “cap <74 closed” but do not have a global cap ≤74 scalar lemma for the reroot, then the equality is too strong. In that weaker proof state, the safe form is only the reroot scalar lower system, not equality.
+
+So the safe chain is:
+
+∣N
+R
+′
+	​
+
+(d
+a
+	​
+
+)∣≥6,∣N
+R
+′
+	​
+
+(d
+b
+	​
+
+)∣≥6,
+p
+z
+′
+	​
+
++e
+R,z
+′
+	​
+
+≥37,
+U
+′
++p
+z
+′
+	​
+
++e
+R,z
+′
+	​
+
+≥49.
+
+To upgrade this to
+
+∣N
+R
+′
+	​
+
+(d
+a
+	​
+
+)∣=∣N
+R
+′
+	​
+
+(d
+b
+	​
+
+)∣=6,
+p
+z
+′
+	​
+
++e
+R,z
+′
+	​
+
+=37,
+
+you need the already-verified cap74 frontier theorem.
+
+Assuming that theorem is part of the certificate, your reroot equalities are safe, and the next cut should be:
+
+D
+zab
+′
+	​
+
+
+=5 for every tight zero reroot pair.
+	​
+
+Sources
+CONTEXT: Erdős #23 q14/t2 cap74, active row z=8,d=6,p=16,e_R=21,(ZZ,ZD)=(0,21). Z has 8 zero vertices, D has 6 doubleton vertices. We already impose full local codegrees, exact A/B state law, checkerboard beta cuts + 489 rooted lazy cuts, terminal reroot touched-column equalities, Dprime != 5 reroot profile cut, outside-D visibility, touched c=4 inclusion propagation, and full tight-zero reroot scalar p*_z+eR*_z=37.
+
+The current remaining branch is zero D-degree profile (n2,n3,n4,n5)=(5,2,0,1), touched footprint u=4. Tight zero count t=5, two untouched D-columns. We branched by tight-footprint column vector g_d=|N_T(d)|. Three vectors are INFEASIBLE quickly:
+- counts n0,n1,n2,n3,n4 = (2,2,0,0,2), i.e. sorted touched vector (4,4,1,1)
+- (2,1,1,1,1), i.e. (4,3,2,1)
+- (2,0,3,0,1), i.e. (4,2,2,2)
+Two vectors remain UNKNOWN:
+- (2,1,0,3,0), i.e. sorted touched vector (3,3,3,1). This stayed UNKNOWN after 600s with 100 CP-SAT workers.
+- (2,0,2,2,0), i.e. sorted touched vector (3,3,2,2). This stayed UNKNOWN after 180s.
+
+Known structural facts in this branch:
+- each touched D-column d satisfies c_d + m_d = 6 and c_d <= 4.
+- untouched D-columns carry all D-excess; for t=5 the lower excess is >=5.
+- one zero has D-degree 5; two zeros have D-degree 3; five zeros have D-degree 2.
+- tight zeros z (degree-2 to D) satisfy m_z=6 and p*_z+eR*_z=37 under reroot at (c,z).
+- for tight zero z with pair {a,b}=N_D(z), rerooted d' != 5, encoded as D' in {1,2,3,4,6}.
+
+QUESTION: Give the next mathematically safe P-free strengthening that targets specifically the residual tight-footprint vectors (3,3,3,1) and (3,3,2,2). Prefer a scalar/skeleton/reroot lemma or a small branch parameter, not fixed A/B-template enumeration. State exact constraints that can be encoded in CP-SAT. Also say if one of these two footprint vectors should be impossible by hand.
+
+REQUIREMENTS: Be rigorous. Only use the assumptions listed. Flag any step that relies on the cap<74/q<14 frontier closure. End with weakest steps.
+Show more
+
+I’ll treat the remaining cases as a small Z–D skeleton problem, focusing on how the non-tight zeros and two untouched D-columns absorb the forced excess.
+
+I’ll add the rerooted column-pair profile from the five tight zero pairs as the next skeleton-level object, keeping any A/B use limited to state cardinalities.
+
+Thought for 12m 3s
+
+The next strengthening I would add is the exact reroot singleton-balance identity for every tight zero reroot.
+
+You already compute
+
+D
+zab
+′
+	​
+
+
+for a tight zero z with
+
+N
+D
+	​
+
+(z)={a,b}.
+
+Right now you only use
+
+D
+zab
+′
+	​
+
+
+=5.
+
+Add the stronger reroot partition equations:
+
+D
+zab
+′
+	​
+
++L
+zab
+′
+	​
+
+=6,D
+zab
+′
+	​
+
++R
+zab
+′
+	​
+
+=6.
+	​
+
+
+Here L
+zab
+′
+	​
+
+ is the number of rerooted R
+′
+-vertices adjacent to a but not b, and R
+zab
+′
+	​
+
+ is the number adjacent to b but not a.
+
+This is still P-free, does not enumerate A/B templates, and targets exactly the two remaining tight-footprint vectors.
+
+Lemma: reroot singleton-balance
+
+Let z∈T be a tight zero, so
+
+d
+D
+	​
+
+(z)=2,N
+D
+	​
+
+(z)={a,b}.
+
+Reroot at (c,z), where c is one of the two old C-vertices. The new common-neighbour set is
+
+C
+′
+={a,b}.
+
+By the touched-column equality already added,
+
+c
+a
+	​
+
++m
+a
+	​
+
+=6,c
+b
+	​
+
++m
+b
+	​
+
+=6.
+
+In the rerooted instance, the R
+′
+-neighbours of a split into:
+
+vertices adjacent to both a and b, counted by D
+zab
+′
+	​
+
+;
+
+vertices adjacent to a but not b, counted by L
+zab
+′
+	​
+
+.
+
+Therefore
+
+D
+zab
+′
+	​
+
++L
+zab
+′
+	​
+
+=∣N
+R
+′
+	​
+
+(a)∣=6.
+
+Similarly,
+
+D
+zab
+′
+	​
+
++R
+zab
+′
+	​
+
+=∣N
+R
+′
+	​
+
+(b)∣=6.
+
+So the rerooted singletons are exactly balanced:
+
+L
+zab
+′
+	​
+
+=R
+zab
+′
+	​
+
+=6−D
+zab
+′
+	​
+
+.
+	​
+
+
+This is stronger than just saying D
+′
+
+=5. It also explicitly prevents D
+′
+=6 whenever the tight footprint already forces even one singleton on either side.
+
+Exact CP-SAT constraints
+
+For every tight zero z and every unordered D-pair a<b, let
+
+P
+zab
+	​
+
+=1⟺N
+D
+	​
+
+(z)={a,b}.
+
+You probably already have this from the D
+′
+
+=5 cut.
+
+Define the common count as before:
+
+D
+zab
+′
+	​
+
+=1+
+z
+′
+∈Z∖{z}
+∑
+	​
+
+E
+z
+′
+a
+	​
+
+E
+z
+′
+b
+	​
+
++
+i
+∑
+	​
+
+(1−x
+iz
+	​
+
+)x
+ia
+	​
+
+x
+ib
+	​
+
++
+j
+∑
+	​
+
+(1−y
+jz
+	​
+
+)y
+ja
+	​
+
+y
+jb
+	​
+
+.
+
+The initial 1 is the other old C-vertex, which is adjacent to both a and b in the reroot.
+
+Now define the left singleton count:
+
+L
+zab
+′
+	​
+
+=
+z
+′
+∈Z∖{z}
+∑
+	​
+
+E
+z
+′
+a
+	​
+
+(1−E
+z
+′
+b
+	​
+
+)+
+i
+∑
+	​
+
+(1−x
+iz
+	​
+
+)x
+ia
+	​
+
+(1−x
+ib
+	​
+
+)+
+j
+∑
+	​
+
+(1−y
+jz
+	​
+
+)y
+ja
+	​
+
+(1−y
+jb
+	​
+
+).
+
+Define the right singleton count:
+
+R
+zab
+′
+	​
+
+=
+z
+′
+∈Z∖{z}
+∑
+	​
+
+(1−E
+z
+′
+a
+	​
+
+)E
+z
+′
+b
+	​
+
++
+i
+∑
+	​
+
+(1−x
+iz
+	​
+
+)(1−x
+ia
+	​
+
+)x
+ib
+	​
+
++
+j
+∑
+	​
+
+(1−y
+jz
+	​
+
+)(1−y
+ja
+	​
+
+)y
+jb
+	​
+
+.
+
+Then add:
+
+P
+zab
+	​
+
+=1⇒D
+zab
+′
+	​
+
++L
+zab
+′
+	​
+
+=6,
+	​
+
+P
+zab
+	​
+
+=1⇒D
+zab
+′
+	​
+
++R
+zab
+′
+	​
+
+=6.
+	​
+
+
+In OR-Tools form:
+
+Python
+Run
+model.Add(Dprime[z,a,b] + Lprime[z,a,b] == 6).OnlyEnforceIf(P[z,a,b])
+model.Add(Dprime[z,a,b] + Rprime[z,a,b] == 6).OnlyEnforceIf(P[z,a,b])
+
+Linearize the products in the usual way.
+
+For example,
+
+u=(1−x
+iz
+	​
+
+)x
+ia
+	​
+
+(1−x
+ib
+	​
+
+)
+
+is encoded by
+
+u≤1−x
+iz
+	​
+
+,
+u≤x
+ia
+	​
+
+,
+u≤1−x
+ib
+	​
+
+,
+u≥(1−x
+iz
+	​
+
+)+x
+ia
+	​
+
++(1−x
+ib
+	​
+
+)−2.
+
+Same for the Y-terms and the zero-skeleton terms.
+
+Cheap corollary: forced tight-singleton cut
+
+You can also add the cheaper derived cut first.
+
+For a tight zero z with N
+D
+	​
+
+(z)={a,b}, define the number of tight-zero singletons forced by the footprint:
+
+L
+zab
+T
+	​
+
+=
+z
+′
+∈T∖{z}
+∑
+	​
+
+E
+z
+′
+a
+	​
+
+(1−E
+z
+′
+b
+	​
+
+),
+R
+zab
+T
+	​
+
+=
+z
+′
+∈T∖{z}
+∑
+	​
+
+(1−E
+z
+′
+a
+	​
+
+)E
+z
+′
+b
+	​
+
+.
+
+Since these are included inside L
+zab
+′
+	​
+
+ and R
+zab
+′
+	​
+
+, we get
+
+D
+zab
+′
+	​
+
++L
+zab
+T
+	​
+
+≤6,
+D
+zab
+′
+	​
+
++R
+zab
+T
+	​
+
+≤6.
+
+So add:
+
+P
+zab
+	​
+
+=1⇒D
+zab
+′
+	​
+
++L
+zab
+T
+	​
+
+≤6,
+	​
+
+P
+zab
+	​
+
+=1⇒D
+zab
+′
+	​
+
++R
+zab
+T
+	​
+
+≤6.
+	​
+
+
+Together with your existing
+
+D
+zab
+′
+	​
+
+∈{1,2,3,4,6},
+
+this gives:
+
+L
+zab
+T
+	​
+
++R
+zab
+T
+	​
+
+>0⟹D
+zab
+′
+	​
+
+≤4.
+
+This is the most compact version of the new cut.
+
+Effect on the two remaining footprint vectors
+Vector (3,3,3,1)
+
+This vector should not be declared impossible by hand from the listed assumptions alone.
+
+But it has a very strong consequence:
+
+Every tight-zero reroot has D
+′
+≤4.
+	​
+
+
+Reason: the tight footprint is a multigraph on four touched D-columns with five edges and degree sequence
+
+(3,3,3,1).
+
+Up to symmetry, its edge multiset is:
+
+hh, hh
+′
+, hh
+′′
+, h
+′
+h
+′′
+ twice, hℓ,
+
+equivalently: one low column of tight-degree 1, three high columns of tight-degree 3, one doubled high-high pair, and the low column attached once to the remaining high column.
+
+For every used tight pair {a,b}, there is at least one other tight zero adjacent to exactly one of a,b. Hence
+
+L
+zab
+T
+	​
+
++R
+zab
+T
+	​
+
+≥1.
+
+Therefore
+
+D
+zab
+′
+	​
+
+≤5.
+
+Since you already forbid D
+′
+=5, this gives
+
+D
+zab
+′
+	​
+
+≤4
+	​
+
+
+for every tight zero z.
+
+So for the (3,3,3,1) branch, add directly:
+
+Python
+Run
+model.Add(Dprime[z,a,b] <= 4).OnlyEnforceIf(P[z,a,b])
+
+for all tight z and all a<b.
+
+This is safe specifically in the (3,3,3,1) footprint branch.
+
+Vector (3,3,2,2)
+
+This vector is also not impossible by hand from the listed assumptions alone.
+
+Here there is one exceptional tight-pair pattern where D
+′
+=6 can still be skeleton-compatible.
+
+Let the degree-3 touched columns be h
+1
+	​
+
+,h
+2
+	​
+
+, and the degree-2 touched columns be ℓ
+1
+	​
+
+,ℓ
+2
+	​
+
+. Define tight-pair multiplicities
+
+K
+ab
+	​
+
+:=
+z∈T
+∑
+	​
+
+P
+zab
+	​
+
+.
+
+The exceptional split pattern is:
+
+K
+h
+1
+	​
+
+h
+2
+	​
+
+	​
+
+=3,
+K
+ℓ
+1
+	​
+
+ℓ
+2
+	​
+
+	​
+
+=2,
+K
+ab
+	​
+
+=0for all other touched pairs.
+
+In this split case, the pair h
+1
+	​
+
+h
+2
+	​
+
+ has no tight singleton, and the pair ℓ
+1
+	​
+
+ℓ
+2
+	​
+
+ has no tight singleton. So D
+′
+=6 is not excluded by the tight footprint alone.
+
+Outside this split pattern, every used tight pair has at least one forced tight singleton. Therefore:
+
+non-split (3,3,2,2)⇒D
+′
+≤4 for every tight-zero reroot.
+	​
+
+
+So branch (3,3,2,2) into only two cases:
+
+Case A: split
+K
+h
+1
+	​
+
+h
+2
+	​
+
+	​
+
+=3,K
+ℓ
+1
+	​
+
+ℓ
+2
+	​
+
+	​
+
+=2,
+
+all other K's zero.
+
+CP-SAT:
+
+Python
+Run
+model.Add(K[h1,h2] == 3)
+model.Add(K[l1,l2] == 2)
+for (a,b) in touched_pairs_except((h1,h2), (l1,l2)):
+    model.Add(K[a,b] == 0)
+Case B: non-split
+
+Add:
+
+D
+zab
+′
+	​
+
+≤4
+
+for every tight zero reroot.
+
+CP-SAT:
+
+Python
+Run
+model.Add(Dprime[z,a,b] <= 4).OnlyEnforceIf(P[z,a,b])
+
+for all tight z, a<b.
+
+This is a very small branch and is still only a tight-footprint skeleton branch, not P-enumeration.
+
+Why this is probably stronger than adding more ordinary rooted cuts
+
+The current UNKNOWNs happen before the separator finds SAT survivors. That suggests the bottleneck is internal propagation, not missing beta cuts.
+
+The new identity
+
+D
+′
++L
+′
+=D
+′
++R
+′
+=6
+
+forces the solver to account for the entire rerooted local profile, not just the doubleton count D
+′
+. It prevents the model from floating in fake D
+′
+=6 reroot profiles when the tight footprint already forces singleton vertices.
+
+For the residual vectors, this matters exactly because:
+
+(3,3,3,1)
+
+and most of
+
+(3,3,2,2)
+
+force tight singletons in every tight reroot.
+
+Should either residual vector be impossible by hand?
+
+Not from the listed assumptions alone.
+
+What is true:
+
+(3,3,3,1)
+
+forces
+
+D
+′
+≤4
+
+for every tight-zero reroot.
+
+And
+
+(3,3,2,2)
+
+forces
+
+D
+′
+≤4
+
+except in the split pattern
+
+3⋅h
+1
+	​
+
+h
+2
+	​
+
++2⋅ℓ
+1
+	​
+
+ℓ
+2
+	​
+
+.
+
+But neither footprint vector is a pure skeleton contradiction under only the assumptions listed. A full contradiction still appears to require the A/B-state law, reroot scalar equality, or beta cuts.
+
+Weakest assumptions used
+
+The new singleton-balance cut uses:
+
+z is tight:
+
+d
+D
+	​
+
+(z)=2,N
+D
+	​
+
+(z)={a,b}.
+
+The touched-column equality already added:
+
+c
+a
+	​
+
++m
+a
+	​
+
+=6,c
+b
+	​
+
++m
+b
+	​
+
+=6.
+
+This is the step that relies on the cap<74 / reroot frontier closure.
+
+A/B state independence in R: if za∈E
+R
+	​
+
+, then no A
+i
+	​
+
+ or B
+j
+	​
+
+ can be adjacent to both z and a.
+
+The existing reroot profile cut
+
+D
+′
+
+=5
+
+to turn “there is a forced singleton” into
+
+D
+′
+≤4.
+
+The exact identities
+
+D
+′
++L
+′
+=6,D
+′
++R
+′
+=6
+
+do not require fixed P, fixed A/B templates, or any new beta-cut assumption beyond the touched-column equality already being used.
+
+Sources
+
+Pro
+ChatGPT can make mistakes. Check important info.

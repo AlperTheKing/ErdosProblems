@@ -1153,6 +1153,31 @@ All times Europe/Istanbul unless otherwise stated.
   scalar/paired inequalities as reusable lazy constraints, or extract a compact
   dual/Hall certificate.
 
+## 2026-06-12 +03 — #23 q=15 scalar split obstruction isolated
+- Added scalar-window split worker:
+  `search23/sat_q15_ru_scalar_exhaust.cpp`.
+- Corrected execution protocol:
+  `AGENTS.md` now records the user clarification that this machine's 50% CPU
+  share means `64` logical workers out of `128` logical threads.
+- Scalar-only split found an actual scalar survivor:
+  `p=25`, `e_R=41`, `U=33`.
+  Therefore scalar inequalities alone do not eliminate q=15.
+- Tried a label-independent fixed-cut consequence of paired `Psi`.  It is
+  mathematically valid but computationally too slow in direct CNF form:
+  a 100-job smoke completed only `40/100` jobs after `1731s`.
+- Added hard-job diagnostic with per-job block limit.
+  First hard scalar branch:
+  `p=25`, `e_R=34`, `U=35`, `cap=29`.
+  Output:
+  `search23/q15_ru_first_hardjob_500/HARD_JOB.txt`.
+- The diagnostic blocked `100000` concrete assignments in that branch without
+  closing it.
+- Conclusion:
+  q=15 remains alive but narrowed to a structured high-`p`, medium/high-`e_R`,
+  `U≈35` obstruction.  Full-assignment blocking is not an acceptable proof
+  certificate; the next step must derive a compact paired-cut/type lemma for
+  this hard scalar region.
+
 ## 2026-06-11 ~10:00 — KULLANICI HAKEMLİĞİ: CPU %50/%50; #944 taraması devam
 - Çatışma: Codex 07:44'te STOPPED_BY_CODEX.txt'yi yeniden oluşturdu ("free CPU for
   active #23 work" — Codex #944'ü parkladı, #23'e geçti). Kullanıcıya soruldu.
@@ -1187,3 +1212,184 @@ All times Europe/Istanbul unless otherwise stated.
   temiz derlendi (7 sayfa), arxiv_submission.zip yenilendi. Endorsement (Steiner) bekleniyor.
 - n=15 6-regüler 4-VC AVI BAŞLADI: queue_runner15.ps1 (mod-2750, PAR=32, killer-dirençli
   zincir, check_g6_v2 komşuluk-bipartit ön-filtreli). TARGET çıkarsa Dirac k=4 ÇÖZÜLÜR.
+
+## 2026-06-12 ~06:30 — #944: n=15 KAPANDI (1,470,293,676 graf; 0 4-VC; 0 TARGET) => TEOREM A: n>=16
+- Kuyruk 2,723 sınıf temiz + 27 ağır kuyruk-sonu sınıfı İKİ-AŞAMALI rerun (dosyaya üretim
+  [>Z-doğrulu] + 8-parça paralel sınıflandırma; hepsi geng↔sum eşleşmeli). vcWithCritEdge=0:
+  n=15'te 4-vertex-critical 6-regüler graf HİÇ YOK (n=14 deseni) — n=13'ün tek grafı n<=15'in
+  tek 4-VC'si. SkSt25 Problem 5.2: herhangi bir 6-regüler (4,1)-graf için n >= 16.
+- YENİ TEKNİK NOT: pipe'lı kuyrukta tekrar-tekrar ölen sınıflar dosya-aracılı iki-aşamada
+  ilk denemede geçiyor — geng'in sessiz-ölümü pipe-bağlamına özgü görünüyor.
+- n=16 avı başlatılıyor (queue_runner16, mod-27500, ~1e11 graf tahmini, ETA ~12-15h).
+
+## 2026-06-12T18:43:20.8627157+03:00 — #23 q=15 branch closed by shadow-count lemma
+- GPT Pro supplied the local shadow-count idea; verified against the static q=15 model's local condition.
+- Added e_R >= 3*max(n1,n2) to q15 scalar generator/audit/shape lister.
+- Recompiled tools and audited: search23/q15_frontier_after_shadow/AUDIT.out reports active=0, JOBS.tsv size 0.
+- Status: q=15 closed relative to V14 minimum-codegree setup; full a(30)=36 still needs global branch coverage.
+
+## 2026-06-12T19:10:54.9659024+03:00 — #23 q=14/t=2 low-cap certificate
+- Added q14/t=2 fixed-label verifier with zero-label support, R-triangle clauses, and paired constants 53/49.
+- Added scalar W=D Mantel cut; regenerated frontier rows=48798.
+- Verified cap<=30 via exact batches: 117/117 for cap24..28 and 264/264 for cap29..30. q14/t=2 remains open.
+
+## 2026-06-12T19:38:09.1930669+03:00 — #23 q14/t2 cap<=34 and canary obstruction
+- GPT q14/t2 digest saved; checked scalar cuts reduce frontier to 39780 rows.
+- Verified q14/t2 cap<=34 by exact fixed-label batches: cap31..32 449/449, cap33..34 626/626 UNSAT.
+- Lazy exact rooted-cut canaries are hard/inconclusive at high cap; obstruction is A/B-R incidence, not scalar labels alone.
+
+## 2026-06-12T20:04:34.3959005+03:00 — #23 q14/t2 cap<=38 closed
+- Batch cap37..38 proved 1017/1025 UNSAT; the 8 hard rows were all z=8,d=6,s1=s2=0,cap=38.
+- Added combined A/B-R incidence bound cap >= 4z + max(2(s1+s2), d==0 ? 24 : 12).
+- Regenerated frontier rows=39660; cap<=38 closed; remaining q14/t2 frontier is cap39..74.
+
+## 2026-06-12T20:17:13.4019222+03:00 — #23 q14/t2 cap39 exact batch closed
+- q14_t2_cap39_39_batch: 577/577 exact fixed-label jobs UNSAT; no SAT/unknown; elapsedSec=511.
+- q14/t2 closed through cap<=39. Remaining scalar frontier: cap40..74.
+
+## 2026-06-12T20:31:26.5119234+03:00 — #23 q14/t2 cap40 exact batch closed
+- q14_t2_cap40_40_batch: 665/665 exact fixed-label jobs UNSAT; no SAT/unknown; elapsedSec=611.
+- q14/t2 closed through cap<=40. Current frontier: 39660 rows total, 4426 closed, 35234 remain at cap41..74.
+
+## 2026-06-12T20:52:37.5338028+03:00 — #23 q14/t2 cap41 exact batch closed
+- q14_t2_cap41_41_batch: 696/696 exact fixed-label jobs UNSAT; no SAT/unknown; elapsedSec=843.
+- q14/t2 closed through cap<=41. Current frontier: 39660 rows total, 5122 closed, 34538 remain at cap42..74.
+
+## 2026-06-12T21:16:40.7018694+03:00 — #23 q14/t2 cap42 exact batch closed and GPT high-cap answer saved
+- q14_t2_cap42_42_batch: 788/788 exact fixed-label jobs UNSAT; no SAT/unknown; elapsedSec=1196.
+- q14/t2 closed through cap<=42. Current frontier: 39660 rows total, 5910 closed, 33750 remain at cap43..74.
+- GPT Pro answer saved: problems/23/gpt_q14_highcap_answer_2026-06-12.md; candidate clean-shadow/C-tight dichotomy under verification.
+
+## 2026-06-12T21:39:10.3012808+03:00 — #23 q14/t2 clean-shadow/C-tight dichotomy checked
+- Saved GPT high-cap answer and verified clean-shadow counting lemma e_R >= 3max(s1,s2)+eta(d)z under no C-tight vertices.
+- Added clean_shadow mode to sat_q14_t2_shape_family.cpp; default unchanged.
+- Clean scalar cap74 collapses to six rows. Four are UNSAT; two z=8,d=6 rows are SAT without rooted CEGAR and hard/inconclusive with rooted CEGAR.
+- Remaining q14/t2 obstruction: clean zero/doubleton-heavy z=8,d=6 plus C-tight reroot side.
+
+## 2026-06-12T21:45:44.0797473+03:00 — #23 q14/t2 z8d6 witness rooted-cut analysis
+- Built search23/q14_witness_analyzer.cpp and ran it on z8d6_p13_e24_no_rooted.out.
+- The nonrooted clean witness violates 241 exact rooted cuts; worst is Phi=25 on D-only mask {8,12,13}.
+- This sharpens the remaining obstruction: exact rooted-cut forcing on clean z=8,d=6, plus C-tight reroot side.
+
+## 2026-06-12T22:16:01.9896734+03:00 — #23 q14/t2 cap43 closed and z8d6 target refined
+- q14_t2_cap43_43_batch: 821/821 exact fixed-label jobs UNSAT; no SAT/unknown; elapsedSec=1637.
+- q14/t2 closed through cap<=43. Current frontier: 39660 rows total, 6731 closed, 32929 remain at cap44..74.
+- GPT z8d6 follow-up saved; D-only cuts not enough. Next target is A/B rectangle two-cover rho(a,b)!=1 with exactly p uncovered cells.
+
+## 2026-06-12T22:41:23.1532623+03:00 — #23 q14/t2 static all-rooted cut attempt too heavy
+- Added optional static all-rooted cuts to sat_q14_t2_shape_family.cpp, default off.
+- z8d6 clean p=13,eR=24 static-rooted row exceeded 900s and reached ~39GB RAM before being stopped.
+- Conclusion: full static-rooted cuts are not the right local certificate; use targeted rectangle-cover encoder or continue low-cap exact batches.
+
+## 2026-06-13T00:27:17.2636392+03:00 — #23 q14/t2 z8d6 p13/e24 quotient obstruction
+- Added C++ R-graph quotient audit: p13/e24 clean z8d6 has 3888 canonical row-sum-3 R matrices; every one passes fixed paired cuts with margin 4.
+- Added fixed-R incidence SAT worker. Calibration: 200 cases at 20k conflicts -> 36 UNSAT, 164 UNKNOWN, no SAT; 50 cases at 200k -> 11 UNSAT, 39 UNKNOWN, no SAT.
+- Conclusion: remaining obstruction is not scalar paired cuts; need A/B rectangle-incidence + rooted-cut lemma or stronger symmetry-breaking.
+- Sent focused GPT Pro question; prompt saved at problems/23/gpt_q14_z8d6_p13_rect_prompt_2026-06-13.md.
+
+## 2026-06-13T00:35:30.8904584+03:00 — #23 q14/t2 clean z8d6 p13/e24 core closed
+- Added A-side lex symmetry break to fixed-R incidence solver; sound by A-vertex relabelling invariance.
+- Full p13/e24 clean z8d6 fixed-R run: search23/q14_t2_z8d6_fixedR/full_p13_e24_lex.err reports FINAL done=3888 unsat=3888 sat=0 unknown=0 cutsum=6.
+- Status: first clean cap74 z8d6 core row closed; remaining clean core row is p=12,e_R=25.
+
+
+## 2026-06-13T01:18:57.1316516+03:00 — #23 q14/t2 clean z8d6 p12/e25 no-ZZ branch closed
+- p12/e25 no-ZZ R quotient: canonical=15680, paired_ok=15680, margin=4.
+- Fixed-R incidence solver with A-side lex and rectangle cuts closed all no-ZZ cases at 1M conflicts: FINAL done=15680 unsat=15680 sat=0 unknown=0 cutsum=744.
+- Remaining clean p12/e25 z8d6 branch: one zero-zero R edge plus 24 zero-D edges.
+
+
+## 2026-06-13T01:23:42.8299329+03:00 — #23 q14/t2 clean z8d6 cap74 core exhausted
+- p12/e25 one-ZZ quotient generated_graphs=2972; full fixed-R run closed it: FINAL done=2972 unsat=2972 sat=0 unknown=0 cutsum=36.
+- Together with p13/e24 and p12/e25 no-ZZ, all clean z8d6 cap74 core rows are closed.
+- Next: add scalar frontier cuts and identify the new q14/t2 obstruction.
+
+## 2026-06-13T02:41:56.3393965+03:00 — #23 q14/t2 cap74 p12 category-band triage
+- Added optional R-edge category counts `ZZ,ZS1,ZS2,ZD,S1S2` to the q14 shape verifier and a category batch runner.
+- For `(z,s1,s2,d,p,e_R)=(3,5,5,1,12,25)`, 3500 category profiles were tried at 10k conflicts: 3376 UNSAT, 0 SAT, 124 UNKNOWN.
+- Re-running the 124 UNKNOWN profiles at 100k conflicts closed none; a no-limit representative timed out at 600s.
+- This is T0 triage only: simultaneous A/B lex in the general verifier needs audit or A-only/canonical rerun before promotion to certificate.
+- Frontier: prove a structural lemma eliminating the 124 high-`S1S2` category profiles; GPT Pro prompt saved at `problems/23/gpt_q14_p12_extremal_band_prompt_2026-06-13.md`.
+
+## 2026-06-13T02:48:00+03:00 — #23 q14/t2 p12 R-only category frontier isolated
+- Added `search23/sat_q14_t2_r_category.cpp`, encoding only R category counts, disjoint labels, triangle-freeness, and q14/t2 local domination.
+- R-only run over all 3500 category profiles: `FINAL total=3500 sat=124 unsat=3376 unknown=0`.
+- The 124 R-only SAT profiles match exactly the 124 full-shape UNKNOWN profiles from the 10k triage (`r_not_unknown=0`, `unknown_not_r=0`).
+- Conclusion: remaining p12 cap74 obstruction is not R-category feasibility; it is A/B incidence plus rooted-cut extension over the R-feasible category band.
+
+## 2026-06-13T02:55:00+03:00 — #23 q14/t2 fixed-R route validated on extreme category samples
+- Added bounded R-model output to `sat_q14_t2_r_category.cpp` and fixed-R edge-list input to `sat_q14_t2_shape_family.cpp`.
+- Extreme category `ZZ=0,ZS1=3,ZS2=3,ZD=3,S1S2=16`: emitted 20 labelled R models.
+- A-only fixed-R verifier closed all 20 at 200k conflicts: `unsat=20`, `sat=0`, `unknown=0`, elapsed 4s.
+- Conclusion: once R is fixed, A/B extension closes quickly; next exact route is R quotient enumeration plus fixed-R verification.
+
+## 2026-06-13T03:05:00+03:00 — #23 q14/t2 GPT p12 reduction and terminal R-only cut
+- GPT Pro answer saved at `problems/23/gpt_q14_p12_extremal_band_answer_2026-06-13.md`.
+- Verified useful lemma: `P=G[A,B]` is disconnected in the p12 cap74 row, so only `C8+C4`, `C6+C6`, and `3C4` A-B 2-factor templates remain.
+- Extreme category sample expanded to 500 labelled R models; A-only fixed-R verifier closed all 500 at 200k conflicts in 59s.
+- Added optional terminal cut `d_R(r,U_i)=2 -> d_R(r)<=4` to the R-only checker. Conditional on q<14 reroot closure, R-only categories shrink from 124 to 41.
+- Added `search23/q14_p12_state_table.cpp`; independent-set state counts are 329 for `C8+C4`, 324 for `C6+C6`, and 343 for `3C4`.
+
+
+---
+
+## 2026-06-12/13 — #944 SESSION: Theorem C (bipartite-shore exclusion) + frontier reduction
+
+**New results this session (all on the 6-regular (4,1)-graph case, Problem 5.2):**
+
+1. **Theorem A extended** to n<=15 (n=15 exhaustive: 1,470,293,676 graphs, 0 target,
+   neighbourhood-bipartite prefilter, generator-completeness guards; 43 pipe-failed
+   classes redone two-stage). => any 6-regular (4,1)-graph has >= 16 vertices.
+
+2. **PG(2,5) falsification (verified x2).** The incidence graph of PG(2,5)
+   (31+31, 6-regular bipartite, girth 6, n=62) is ALL-UNFROZEN: every vertex has a
+   3-colouring of G-v with N(v) counts (2,2,2). Kills the "frozen-kernel" route in
+   general (true exhaustively for n<=15, false at 62) and the broad form of the
+   reduced kernel "Lemma D". Census facts logged: n<=15 fullyUnfrozen=0, maxUnfrozen
+   grows 2(n<=13)->4(14)->5(15); 6-regular bipartite n=14/16/18/20 (1/7/157/62616
+   graphs) all maxUnfrozen<=2.
+
+3. **Lemma E (pair rigidity, proved).** A shore with deficiency concentrated 3+3 at
+   p,l is never pair-rich (pair-rich + chi=4 => partner rainbow-forcing => all other
+   A-vertices non-critical). With the S3-orbit dichotomy and the anti-diagonal kill
+   (from the 21-matrix (3,3,0)->111/111/000 uniqueness, verified), every 3+3 shore
+   must be DIAGONAL (phi(p)=phi(l) always; H+pl is 4-chromatic).
+
+4. **Theorem C (proved, all sizes).** No shore of a nontrivial 6-edge-cut in a
+   6-regular (4,1)-graph induces a bipartite graph. Proof: bipartite + [C] =>
+   deficiency 3+3 (subset-sum, round-4 Lemma 1); nonadjacent terminals => pair-rich
+   (killed by Lemma E); adjacent => anti-diagonal (killed by matrix uniqueness).
+   Written up as new section in writeup/arxiv/erdos944_note.tex (v4, 8pp, compiles).
+   Cross-checked: bipartite def-6 graphs only exist for n>=11; n=11/12 (1/4 graphs)
+   all fail [C] — consistent, no Lemma-1 violation.
+
+5. **Diagonal-case cascade (D1-D4, audited).** A diagonal => partner B always-balanced
+   (weighted vector (2,2,2) in every colouring) => B has no deficiency part >=3
+   (so both shores can't be 3+3) => every bicolour Kempe component of every
+   B-colouring is deficiency-balanced. The exact remaining obstruction is a FINITE
+   boundary-state system (S-A/B1/B2/K in PROOF_STATE 2026-06-13 ~05:05), all sizes
+   >= 15. (Note: my "always-balanced => incompatible with flexible triples" guess was
+   REFUTED — K_{3,3,3} minus a rainbow matching, the a=9 near-miss, satisfies both.)
+
+**Artifacts:** experiments/sixreg/{unfrozen_census,pg25_test,pg_repair_test,
+piece_enum,ff_scan,fk_sim_check,fk_sim2}.cpp + verify_*.py; gpt_fk_round{2,3,4,5,6}
+digests in PROOF_STATE.md; GPT thread c/6a29bd3c. PR #4237 (formal-conjectures)
+green, docstring at n<=15. arXiv note v4 zip rebuilt; endorsement drafts (Steiner
+sent; Martinsson + Goedgebeur queued for user to send).
+
+**Live frontier:** the diagonal 3+3 finite-state system (S-B2 unlock-on-deletion vs
+S-K Kempe-rigidity tension). Spread case: support pairs through balanced Kempe chains.
+
+## 2026-06-13 ~06:33 — #944 d_u=9 closed; n=14 single-merge descent table COMPLETE (P3=0, ~30e9 candidates)
+Final descent profile d_u=9 finished clean via a fork-safe driver (the overnight xargs-P64 run
+had fork-bombed Git-bash). 18,300/18,300 shards valid, P3pass=0, zero survivors. Combined with
+d_u=6,7,8,10 this closes the entire n=14 single-merge descent table. The interpretation (size-15
+hypo-rigid shore exclusion) is pending a descent-correspondence coverage audit; more enumeration is
+low-value because diagonal-partner shores satisfy |B|>=15 (Theorem B), above all feasible brute sizes.
+
+## 2026-06-13 ~07:56 — #944 triple-merge n=13 D'<=8 CLOSED (P3=0, ~72e9 candidates)
+The two-merge (triple-contraction) quotient family is now excluded for residual deficiency D'<=8
+(b=1 and b=2 stub triples), on top of the single-merge n=14 closure. Together ~100 billion descent-core
+candidates, all P3pass=0. The feasible structural finite hunts are substantially exhausted; the decisive
+remaining step is proof-only (bounding the forced-equal-class size / which cut-matrix types force a >=3
+colour class), staged for GPT-5.5 Pro. D'>8 interior-triple profiles form an infeasible enumeration blanket.

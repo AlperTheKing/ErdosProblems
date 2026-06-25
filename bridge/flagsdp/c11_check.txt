@@ -1,0 +1,6 @@
+graph         d_mono           U_8  U8>=dm   ratio
+C11         0.016529  2.599936e-02    True   1.573
+C9          0.024691  2.782277e-02    True   1.127
+C13         0.011834  2.576732e-02    True   2.177
+C11 expected: d_mono=2/121=0.016529, agent-1 cited 8/2025=0.003951
+DONE

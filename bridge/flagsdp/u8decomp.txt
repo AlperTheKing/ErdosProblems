@@ -1,0 +1,10 @@
+nJ=12172; building decomposition (memoized canon)...
+  J=0/12172 [0s] nR=0 ncanon=0
+  J=2000/12172 [1s] nR=198 ncanon=1379
+  J=4000/12172 [1s] nR=231 ncanon=3200
+  J=6000/12172 [2s] nR=339 ncanon=5477
+  J=8000/12172 [4s] nR=396 ncanon=7873
+  J=10000/12172 [5s] nR=407 ncanon=10691
+  J=12000/12172 [9s] nR=410 ncanon=15747
+DONE decomp: nR=410, total canon calls=16480, [10s]
+saved u8_decomp.pkl ; total edge-contribs=320476 (avg 26.3/state)

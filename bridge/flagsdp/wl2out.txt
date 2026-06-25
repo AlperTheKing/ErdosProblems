@@ -1,0 +1,1 @@
+T_9: 1897 states, 1881 distinct invariants, collisions=16, INJECTIVE=False

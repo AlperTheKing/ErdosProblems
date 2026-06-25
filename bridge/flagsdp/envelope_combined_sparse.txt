@@ -1,0 +1,3 @@
+=== COMBINED k7+k8 envelope (x explicit, sparse) ===
+ns=1897 nJ=12172 n7=107 nR=410; validity=329; x EXPLICIT.
+seeded 701 cuts; solving (method=highs)...

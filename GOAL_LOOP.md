@@ -7,11 +7,38 @@
 
 ---
 
-## GOAL (verbatim, /goal 2026-06-11 r2 — CLAIMS.md koordinasyonu eklendi)
+## ⭐ OVERRIDE (2026-06-17, kullanıcı direktifi: "you switch to codex rule too. all-or-nothing.")
+
+Bu blok aşağıdaki GOAL'ün ÇELİŞEN maddelerini (Mission'daki "strictly better bound / resolved
+special case" ve Success'teki çift-kanal) GEÇERSİZ kılar. Artık `GOAL_CODEX.md` ile aynı
+submission politikası geçerli:
+
+- ALL-OR-NOTHING: Hiçbir kısmî şey ASLA yayınlanmaz — statement-only PR yok, lemma çekirdeği yok,
+  witness yok, certificate yok, "yeni diye" özel durum yok. Yayınlanan TEK şey: resmî
+  formal-conjectures ifadesinin (ya da olumsuzlamasının) TAM, `sorry`/`admit`/`native_decide`/
+  gerekçesiz `axiom` içermeyen, `#print axioms` = {propext, Classical.choice, Quot.sound} olan,
+  pinned Mathlib altında derlenen Lean 4 kanıtı. Hipotez zayıflatması / sonucu trivialize eden
+  güçlendirme sayılmaz.
+- TEK BAŞARI KANALI: google-deepmind/formal-conjectures'a TEK PR. Bu turda arXiv notu ve
+  erdosproblems.com yorumu BAŞARI KOŞULUNUN PARÇASI DEĞİL (commit = yalnız user; Anthropic
+  co-author trailer YOK — Google CLA'yı bozar).
+- KORUNAN: yeni matematik şartı + novelty gate + dead-end protokolü + native_decide yasağı aynen.
+- Finite/computational kazanım (UNSAT-over-templates vb.) tek başına formalize edilebilir DEĞİL;
+  ya yapısal/insan-okunur Lean kanıtına ya da kernel-`decide` boyutuna damıtılmadıkça submission
+  gate'ini geçmez.
+- Kısmî iş yerelde kalır (`problems/<n>/`, `search<n>/`); o PR var olana dek hiçbir yerde
+  hiçbir şey yayınlanmaz. (Geçmiş PR #4192 / #4237 banked-partial mantığı artık geçerli DEĞİL.)
+
+---
+
+## GOAL (verbatim, 2026-06-12 r3 — başarı kanalı değişti: teorth PR çıkarıldı,
+## yerine formal-conjectures PR + arXiv yayını kondu; kullanıcı direktifi
+## "goal deki teorth pr kısmını değiştir ... formal-conjectures a pr ve arxiv da
+## yayın olarak değiştir")
 
 GOAL: New Mathematics on Open Erdős Problems (multi-problem, fail-fast, no time limit)
 
-Mission: Run an autonomous research program over OPEN problems from erdosproblems.com until you produce ONE genuinely NEW mathematical result — a proof, disproof, strictly better bound, or resolved special case verifiably ABSENT from the published literature. There is NO wall-clock or cycle budget: days of sustained work on one problem are acceptable while the line of attack is alive. The instant a track is judged dead (see Dead-end protocol), abandon and reselect immediately.
+Mission: Run an autonomous research program over OPEN problems from erdosproblems.com until you produce ONE genuinely NEW mathematical result — a proof, disproof, strictly better bound, or resolved special case verifiably ABSENT from the published literature. [2026-06-17 OVERRIDE: only a FULL proof or FULL disproof of the official conjecture can SHIP; a better bound / special case is valid local research but does NOT meet the all-or-nothing submission gate.] There is NO wall-clock or cycle budget: days of sustained work on one problem are acceptable while the line of attack is alive. The instant a track is judged dead (see Dead-end protocol), abandon and reselect immediately.
 
 Roles:
 - Claude (orchestrator): problem selection, prior-art research, decomposition, computation, verification (small cases, numerics, counterexample search, Lean 4 for key lemmas), adversarial refereeing, logs, PR. Single source of truth.
@@ -29,7 +56,7 @@ Forbidden (zero value — never do): formalizing known results in Lean (formaliz
 
 Rigor: a claim is "established" only via (a) a gap-free logged proof, (b) a cited literature result, or (c) a verified computation. Tag every component: conjecture / heuristic / sketch / rigorous-informal / Lean-verified.
 
-Success (the ONLY stopping condition): a complete, verified result passing the novelty gate, written up with a prior-art comparison, submitted as a PR to github.com/teorth/erdosproblems (data/problems.yaml per CONTRIBUTING.md; Lean-verified results may also go to google-deepmind/formal-conjectures). Until then, never terminate.
+Success (the ONLY stopping condition) [SUPERSEDED by the 2026-06-17 OVERRIDE block above — all-or-nothing, single channel = ONE formal-conjectures PR of a complete sorry-free proof; the BOTH-channels / arXiv / partial-core wording below is NO LONGER the success condition]: a complete, verified result passing the novelty gate, written up with a prior-art comparison, and published via BOTH (a) a PR to github.com/google-deepmind/formal-conjectures containing the Lean-verified statements/cores, and (b) an arXiv note (author: Alper Ferudun) — plus, optionally, a comment on the erdosproblems.com problem page. NO PRs to github.com/teorth/erdosproblems (maintainer declined partial-progress comments there, 2026-06-11). Until then, never terminate.
 
 Reporting: follow the Progress Reporting Protocol in CLAUDE.md.
 
@@ -55,14 +82,27 @@ Every step transition emits the before/after protocol lines per CLAUDE.md.
 
 - AKTİF TRACK: #944 (Dirac k=4, 6-regüler hat) — durum: memory `erdos944-shore-machine-state`
   + `problems/944/PROOF_STATE.md` + `RESEARCH_LOG.md` sonu + PROGRESS.md.
+  2026-06-13 DURUM: Teorem A n<=15; **TEOREM C KANITLANDI** (6-regüler (4,1)-grafta
+  hiçbir 6-kesit kıyısı iki-parçalı değil) — not v4'te (erdos944_note.tex, 8s) +
+  Lean çekirdeği `cut_row_forcing` PR #4237'de (commit 12c702b, [propext], derlendi).
+  PG(2,5) all-unfrozen ⟹ frozen-kernel genel rotası öldü. AÇIK CEPHE: 3+3 diagonal
+  kıyıların sonlu-durum sistemi (PROOF_STATE 2026-06-13 ~05:05 S-A/B1/B2/K) + spread
+  Kempe-rijitlik. GPT thread c/6a29bd3c (round 6'ya kadar denetlendi).
 - Bu kutuda Monitor araçları KULLANILMAZ (harici silent killer ~5-24 dk'da öldürüyor);
-  izleme = ScheduleWakeup tick'leri. Compute = native clang++ (asla WSL), worker tavanı 32.
+  izleme = ScheduleWakeup tick'leri. Compute = native clang++ (asla WSL).
+- CPU tavanı (2026-06-12 kullanıcı: "cpu kullanımı düşük — %50'sini kullanıyor musun?"):
+  %50 pay = 64 mantıksal thread (128'in yarısı); runner PAR=55 (2026-06-11 arbitrasyon
+  değeri). GOAL metnindeki "32 worker" ifadesi eski yorum — kullanıcı netleştirmesi geçerli.
 - geng çıktısı her sınıfta `>Z` terminatörüyle doğrulanmalı (sessiz kesinti tuzağı).
 - teorth/erdosproblems comments-field'a partial-progress PR'ı AÇMA (Tao kapattı, 2026-06-11);
   kanallar: erdosproblems.com sayfa yorumu / formal-conjectures / arXiv not.
 - Loop'u sürdürme mekaniği: her turda çalış + turu `ScheduleWakeup(prompt="/loop <LOOP metni>")`
   ile bitir; /goal Stop hook'u başarı koşulu sağlanana dek durmayı engeller.
 - KANAL KARARI (2026-06-11, kullanıcı): teorth comments-PR YOK ("Tao oraya yorum
-  istemiyor"); sonuçların gideceği kanallar = arXiv notu (yazar: Alper Ferudun) +
-  erdosproblems.com problem sayfası yorumu + (Lean) formal-conjectures. GOAL'deki
-  "PR to teorth" başarı adımı bu kanal setiyle İKAME edildi (kullanıcı sözlü onayı).
+  istemiyor"); kanallar = arXiv notu (yazar: Alper Ferudun) + erdosproblems.com
+  sayfa yorumu + (Lean) formal-conjectures. 2026-06-12 r3: bu karar GOAL'ün
+  Success maddesine resmen işlendi (kullanıcı: "teorth pr kısmını ...
+  formal-conjectures a pr ve arxiv da yayın olarak değiştir").
+- AKTİF /goal METNİ: oturum hook'undaki metin hâlâ r2 olabilir; kullanıcıya r3
+  metni verildi — /goal'e yapıştırınca hook da senkronlanır. Tek doğru kaynak
+  her zaman bu dosyadaki r3.

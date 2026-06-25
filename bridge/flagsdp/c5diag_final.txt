@@ -1,0 +1,12 @@
+T_9 WL buckets: 1865 singletons, 16 collision-buckets (canonical only for those)
+T_10=12172; building D, gamma...
+  J 0/12172  (0s)
+  J 1000/12172  (1s)
+  J 2000/12172  (1s)
+  J 3000/12172  (51s)
+  J 4000/12172  (170s)
+  J 5000/12172  (250s)
+  J 6000/12172  (280s)
+  J 7000/12172  (404s)
+  J 8000/12172  (559s)
+  J 9000/12172  (688s)

@@ -1,0 +1,7 @@
+order-9 baseline eta*=+6.5588824e-05, 403 cuts
+solving order-10 lifted LP (highs)...
+
+>>> ORDER-10 lifted eta = +6.0305991e-05   (order-9 was +6.5588824e-05; drop = +5.283e-06)
+    lift HELPS (eta dropped) but does not close; add C5-diagonal envelope / order-11.
+    lifted x edge-density mean=0.29808, support=293
+DONE

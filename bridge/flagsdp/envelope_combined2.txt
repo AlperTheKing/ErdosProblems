@@ -1,0 +1,8 @@
+=== COMBINED k7+k8 envelope + C5-diagonal tangent cuts (tightened) ===
+ns=1897 nJ=12172 n7=107 nR=410; validity=329; x=Dq eliminated.
+seeded 701 cuts; solving...
+iter0: eta=+4.4862708e-03
+it1: +106k7 +118k8 +0c5 (pool 925) eta=+3.1027955e-03 c=0.0112 [90s]
+it2: +105k7 +195k8 +0c5 (pool 1225) eta=+2.3839443e-03 c=0.0113 [100s]
+it3: +107k7 +254k8 +0c5 (pool 1586) eta=+1.8711263e-03 c=0.0111 [335s]
+it4: +107k7 +288k8 +1c5 (pool 1982) eta=+1.3809707e-03 c=0.0107 [556s]

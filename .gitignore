@@ -48,3 +48,21 @@ RESCUE_*.txt
 problems/**/check_stream_mt
 /*.html
 /*.htm
+
+# Large regenerable binaries (flag caches, certificates, build artifacts)
+*.pkl
+*.npz
+*.tar.gz
+
+# 944 6-regular scan: generated per-candidate output (regenerable; keep .cpp/.py/.g6/.json source)
+*.gerr
+*.pyc
+problems/944/experiments/sixreg/*.txt
+problems/944/experiments/sixreg/**/*.txt
+# transient browser-automation screenshots
+tmp_*.png
+
+# Regenerable graph-enumeration dumps and scan chunks (graph6 lists, ffscan chunks, big json)
+*.g6
+problems/944/experiments/sixreg/ffscan/
+problems/1212/experiments/anchor_tree/chain.json

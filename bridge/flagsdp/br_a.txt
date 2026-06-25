@@ -1,0 +1,4 @@
+solving order-10 + C5-diag on branch c in [0.0,0.015] (highs-ipm)...
+>>> eta on branch [0.0,0.015] = +5.8634782e-05  (E10 was +6.0306e-5, order-9 +6.559e-5)
+    at opt: c=pC5.x=1.50000e-02, z=gamma.q=2.25000e-04, c^2=2.25000e-04
+DONE

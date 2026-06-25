@@ -1,0 +1,13 @@
+k=7: 107 types; precomputing...
+  [7s]
+sep it1: pool=107 cuts (107 types) eta=+5.9469452e-07
+sep it2: pool=214 cuts (107 types) eta=+3.6933404e-07
+sep it3: pool=321 cuts (107 types) eta=+2.5399685e-07
+sep it4: pool=428 cuts (107 types) eta=+2.0218653e-07
+unbalanced primal eta=+2.0218653e-07, pool 428 cuts over 107 types
+
+>>> BALANCED full-coverage delta' = +7.0376502e-03
+    threshold for N<=36 (2/(25*36^2)) = 6.172840e-05
+    delta' < threshold ? False  => N<=180 NOT recovered at full coverage
+    alpha_k = {7: 1.0} (sum=1.0000)
+DONE

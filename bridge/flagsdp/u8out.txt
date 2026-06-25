@@ -1,0 +1,8 @@
+witness q support=104; building w_R(A,B)...
+total weight (should ~= t(K2,q)~0.297) = 0.29675; #distinct R = 184
+
+>>> U_8(q) = 4.827413e-04   (m* = 8.006020e-02, 2/25 = 8.000000e-02)
+    Delta_8 = m* - U_8 = +7.957746e-02
+    self-loop (always-mono) total = 4.827413e-04
+    >>> U_8 <= 2/25 : the 8-anchor cut KILLS the witness at threshold => candidate CLOSURE (needs exact rational + cut-validity audit).
+DONE

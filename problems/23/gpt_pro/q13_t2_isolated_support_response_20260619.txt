@@ -1,0 +1,1097 @@
+Recommended strengthening: isolated-column support separation
+
+This is safe, requires no additional frontier assumption, and does not use terminal degree equality or P-template enumeration.
+
+It is a projected consequence of the existing A/R and B/R nonedge-codegree constraints, but exposes a relation that the current formulation reaches only through several layers of A/B-edge variables.
+
+Lemma
+
+For r∈R, write
+
+A
+r
+	​
+
+=N
+A
+	​
+
+(r),B
+r
+	​
+
+=N
+B
+	​
+
+(r),
+
+so ∣A
+r
+	​
+
+∣=α
+r
+	​
+
+ and ∣B
+r
+	​
+
+∣=β
+r
+	​
+
+.
+
+Let t∈R be isolated in R. Then for every r∈R,
+
+B
+r
+	​
+
+∖B
+t
+	​
+
+
+=∅⟹∣A
+t
+	​
+
+∖A
+r
+	​
+
+∣≥2,
+(IS1)
+
+and
+
+A
+r
+	​
+
+∖A
+t
+	​
+
+
+=∅⟹∣B
+t
+	​
+
+∖B
+r
+	​
+
+∣≥2.
+(IS2)
+
+In the five-label support, every T={1,2,3} vertex is isolated because the only label disjoint from T is the empty label, and c
+0
+	​
+
+=0. Hence the lemma applies to every T-vertex.
+
+Proof of (IS1)
+
+Choose
+
+b∈B
+r
+	​
+
+∖B
+t
+	​
+
+.
+
+Thus b is adjacent to r, but b is not adjacent to t. Therefore (b,t) is a B/R nonedge and has at least two common neighbours.
+
+Because t is isolated in R, a common neighbour of b and t cannot lie in R. It also cannot lie among:
+
+the two roots, since vertices of R have no root adjacency;
+
+C, since B∪C is independent by triangle-freeness at the B-root;
+
+B, since B is independent.
+
+Consequently every common neighbour of b,t lies in A
+t
+	​
+
+ and is joined to b by an A/B edge.
+
+Now suppose such a common neighbour a also belongs to A
+r
+	​
+
+. Since
+
+a∈A
+r
+	​
+
+,b∈B
+r
+	​
+
+,
+
+the A-state of a and B-state of b both contain r. By the exact A/B law, ab is then a nonedge. This contradicts a being a common neighbour of b,t.
+
+Hence every common neighbour of b,t belongs to
+
+A
+t
+	​
+
+∖A
+r
+	​
+
+.
+
+There are at least two such common neighbours, proving
+
+∣A
+t
+	​
+
+∖A
+r
+	​
+
+∣≥2.
+
+The proof of (IS2) is symmetric: choose a∈A
+r
+	​
+
+∖A
+t
+	​
+
+, apply the A/R nonedge-codegree condition to (a,t), and observe that every common B-neighbour must lie in B
+t
+	​
+
+∖B
+r
+	​
+
+. ∎
+
+Strong T-to-T corollary
+
+If s,t are both isolated, then for each ordered pair (t,s),
+
+(∣A
+t
+	​
+
+∖A
+s
+	​
+
+∣, ∣B
+s
+	​
+
+∖B
+t
+	​
+
+∣)
+
+is either
+
+(0,0)
+
+or has both coordinates at least 2:
+
+∣A
+t
+	​
+
+∖A
+s
+	​
+
+∣≥2,∣B
+s
+	​
+
+∖B
+t
+	​
+
+∣≥2.
+(IS3)
+
+In particular:
+
+a one-element directional support difference is impossible;
+
+A
+t
+	​
+
+⊆A
+s
+	​
+
+ if and only if B
+s
+	​
+
+⊆B
+t
+	​
+
+;
+
+A
+t
+	​
+
+=A
+s
+	​
+
+ if and only if B
+t
+	​
+
+=B
+s
+	​
+
+;
+
+strict inclusion on one side forces reverse strict inclusion by at least two elements on the other side.
+
+This is the cheapest version to add when ∣T∣≥2.
+
+Exact CP-SAT constraints
+
+Let
+
+c
+tr
+A
+	​
+
+=∣A
+t
+	​
+
+∩A
+r
+	​
+
+∣,c
+tr
+B
+	​
+
+=∣B
+t
+	​
+
+∩B
+r
+	​
+
+∣.
+
+These should be exact overlap variables, not one-sided relaxations. Then
+
+∣A
+t
+	​
+
+∖A
+r
+	​
+
+∣=α
+t
+	​
+
+−c
+tr
+A
+	​
+
+,∣B
+r
+	​
+
+∖B
+t
+	​
+
+∣=β
+r
+	​
+
+−c
+tr
+B
+	​
+
+.
+
+For each isolated t and every r
+
+=t, add:
+
+C++
+const LinearExpr a_t_minus_r = alpha[t] - common_a[t][r];
+const LinearExpr b_r_minus_t = beta[r]  - common_b[t][r];
+
+BoolVar b_r_not_subset_b_t = cp_model.NewBoolVar();
+
+// b_r_not_subset_b_t <=> |B_r \ B_t| >= 1.
+cp_model.AddEquality(b_r_minus_t, 0)
+    .OnlyEnforceIf(~b_r_not_subset_b_t);
+
+cp_model.AddGreaterOrEqual(b_r_minus_t, 1)
+    .OnlyEnforceIf(b_r_not_subset_b_t);
+
+// IS1.
+cp_model.AddGreaterOrEqual(a_t_minus_r, 2)
+    .OnlyEnforceIf(b_r_not_subset_b_t);
+
+And symmetrically:
+
+C++
+const LinearExpr a_r_minus_t = alpha[r] - common_a[t][r];
+const LinearExpr b_t_minus_r = beta[t]  - common_b[t][r];
+
+BoolVar a_r_not_subset_a_t = cp_model.NewBoolVar();
+
+// a_r_not_subset_a_t <=> |A_r \ A_t| >= 1.
+cp_model.AddEquality(a_r_minus_t, 0)
+    .OnlyEnforceIf(~a_r_not_subset_a_t);
+
+cp_model.AddGreaterOrEqual(a_r_minus_t, 1)
+    .OnlyEnforceIf(a_r_not_subset_a_t);
+
+// IS2.
+cp_model.AddGreaterOrEqual(b_t_minus_r, 2)
+    .OnlyEnforceIf(a_r_not_subset_a_t);
+
+This needs at most two extra Booleans per ordered T-to-R pair. Current OR-Tools C++ examples support half-reified linear constraints with OnlyEnforceIf and negated Boolean literals in this form. 
+Google for Developers
++1
+
+Cheaper T-pair-only encoding
+
+For ordered distinct s,t∈T, define
+
+C++
+const LinearExpr a_diff = alpha[t] - common_a[t][s];
+const LinearExpr b_diff = beta[s]  - common_b[t][s];
+
+BoolVar directional_difference = cp_model.NewBoolVar();
+
+cp_model.AddEquality(a_diff, 0)
+    .OnlyEnforceIf(~directional_difference);
+cp_model.AddEquality(b_diff, 0)
+    .OnlyEnforceIf(~directional_difference);
+
+cp_model.AddGreaterOrEqual(a_diff, 2)
+    .OnlyEnforceIf(directional_difference);
+cp_model.AddGreaterOrEqual(b_diff, 2)
+    .OnlyEnforceIf(directional_difference);
+
+Add this for both ordered directions (t,s) and (s,t).
+
+I would implement the full T-to-R version as:
+
+--isolated-support-separation
+
+and always activate it on the five-label core. It also helps profiles with only one T-vertex.
+
+Exact certificate for the 6191 row
+
+Consider
+
+(∣X∣,∣Y∣,∣Z∣,∣H∣,∣T∣)=(3,2,3,2,3),
+
+where
+
+X=S2,Y=D12,Z=S3,H=D13,
+
+with
+
+e
+R
+	​
+
+=12,p=27,M∈{57,58}.
+
+This row is already closed computationally, but the following gives a compact symbolic certificate explaining the role of the rooted Φ-cuts.
+
+1. The R-skeleton is forced
+
+Every X-vertex has at least two neighbours in H, and ∣H∣=2. Hence
+
+R[X,H]=K
+3,2
+	​
+
+,e(X,H)=6.
+
+Every Z-vertex has at least two neighbours in Y, and ∣Y∣=2. Hence
+
+R[Y,Z]=K
+2,3
+	​
+
+,e(Y,Z)=6.
+
+These already account for all e
+R
+	​
+
+=12 edges, so
+
+e(X,Z)=0.
+
+Thus
+
+d
+R
+	​
+
+(X)=d
+R
+	​
+
+(Z)=2,d
+R
+	​
+
+(Y)=d
+R
+	​
+
+(H)=3,d
+R
+	​
+
+(T)=0.
+2. The local degree floor is M≥57
+
+For m
+r
+	​
+
+=α
+r
+	​
+
++β
+r
+	​
+
+, the degree condition gives
+
+m
+r
+	​
+
+≥8−d
+R
+	​
+
+(r)−∣L(r)∣.
+
+Therefore:
+
+m
+x
+	​
+
+≥5(x∈X∪Z),
+m
+y
+	​
+
+≥3(y∈Y∪H),
+m
+t
+	​
+
+≥5(t∈T).
+
+Summing,
+
+M≥6⋅5+4⋅3+3⋅5=57.
+(1)
+3. Two complementary Φ-cuts force M=58
+
+For W⊆R, put
+
+a(W)=
+r∈W
+∑
+	​
+
+α
+r
+	​
+
+,b(W)=
+r∈W
+∑
+	​
+
+β
+r
+	​
+
+,
+
+and
+
+μ(W)=
+i=1
+∑
+3
+	​
+
+min(∣U
+i
+	​
+
+∩W∣, ∣U
+i
+	​
+
+∖W∣).
+
+The opposite-root rooted cut is
+
+3+μ(W)+e
+R
+	​
+
+−∂
+R
+	​
+
+(W)+a(W)+b(R∖W)≥37.
+(Φ
+W
+	​
+
+)
+
+Take
+
+W
+0
+	​
+
+=X∪Y.
+
+All twelve R-edges cross this cut, so
+
+∂
+R
+	​
+
+(W
+0
+	​
+
+)=12.
+
+Here
+
+(∣U
+1
+	​
+
+∩W
+0
+	​
+
+∣,∣U
+2
+	​
+
+∩W
+0
+	​
+
+∣,∣U
+3
+	​
+
+∩W
+0
+	​
+
+∣)=(2,5,0),
+
+while
+
+(∣U
+1
+	​
+
+∣,∣U
+2
+	​
+
+∣,∣U
+3
+	​
+
+∣)=(7,8,8).
+
+Therefore
+
+μ(W
+0
+	​
+
+)=2+3+0=5.
+
+Hence
+
+a(W
+0
+	​
+
+)+b(
+W
+0
+	​
+
+	​
+
+)≥29.
+(2)
+
+The complement has the same boundary and μ=5, so
+
+a(
+W
+0
+	​
+
+	​
+
+)+b(W
+0
+	​
+
+)≥29.
+(3)
+
+Adding (2) and (3),
+
+M≥58.
+
+Since the row has M≤58,
+
+M=58,
+(4)
+
+and both (2) and (3) are equalities.
+
+4. The total T-support is balanced
+
+Take
+
+W
+1
+	​
+
+=W
+0
+	​
+
+∪T.
+
+Again ∂
+R
+	​
+
+(W
+1
+	​
+
+)=12, since T is isolated. Its U
+i
+	​
+
+-counts are
+
+(5,8,3),
+
+so
+
+μ(W
+1
+	​
+
+)=2+0+3=5.
+
+The Φ-cuts for W
+1
+	​
+
+ and its complement are again complementary lower bounds of 29, and by M=58 both are equalities.
+
+Subtracting the equality for W
+0
+	​
+
+ from the equality for W
+1
+	​
+
+ gives
+
+t∈T
+∑
+	​
+
+α
+t
+	​
+
+=
+t∈T
+∑
+	​
+
+β
+t
+	​
+
+.
+(5)
+
+Thus the total T-incidence is even.
+
+The non-T vertices contribute at least
+
+6⋅5+4⋅3=42.
+
+By M=58, the T-vertices contribute at most 16; by their local degree floors, they contribute at least 15. Combined with evenness,
+
+t∈T
+∑
+	​
+
+(α
+t
+	​
+
++β
+t
+	​
+
+)=16.
+(6)
+5. Individual Φ-cuts determine the three T-support sizes
+
+For an individual t∈T,
+
+μ(W
+0
+	​
+
+∪{t})=6,μ(W
+0
+	​
+
+∪(T∖{t}))=6.
+
+The corresponding Φ-cuts give
+
+29+α
+t
+	​
+
+−β
+t
+	​
+
+≥28,
+
+and
+
+29−α
+t
+	​
+
++β
+t
+	​
+
+≥28.
+
+Hence
+
+∣α
+t
+	​
+
+−β
+t
+	​
+
+∣≤1.
+(7)
+
+The three T-degrees sum to 16, with each at least 5, so their total incidences are
+
+6,5,5.
+
+For the incidence-6 vertex, parity and (7) force
+
+(α,β)=(3,3).
+
+For the two incidence-5 vertices, (5), parity, and (7) force
+
+(α,β)=(3,2)and(2,3).
+(8)
+6. p=27 forces a single 3×3 nonedge rectangle
+
+Let t
+0
+	​
+
+ be the T-vertex with support sizes (3,3), and write
+
+A
+0
+	​
+
+=A
+t
+0
+	​
+
+	​
+
+,B
+0
+	​
+
+=B
+t
+0
+	​
+
+	​
+
+.
+
+Every pair in
+
+A
+0
+	​
+
+×B
+0
+	​
+
+
+shares t
+0
+	​
+
+, so all nine pairs are A/B nonedges.
+
+There are 6⋅6=36 A/B pairs and p=27 edges. Hence there are exactly nine nonedges. Therefore
+
+E
+non
+	​
+
+(A,B)=A
+0
+	​
+
+×B
+0
+	​
+
+.
+(9)
+
+Let t
++
+	​
+
+ be the T-vertex with support sizes (3,2). Every pair in
+
+A
+t
++
+	​
+
+	​
+
+×B
+t
++
+	​
+
+	​
+
+
+is a nonedge. By (9),
+
+A
+t
++
+	​
+
+	​
+
+⊆A
+0
+	​
+
+,B
+t
++
+	​
+
+	​
+
+⊆B
+0
+	​
+
+.
+
+Since both A-supports have size 3,
+
+A
+t
++
+	​
+
+	​
+
+=A
+0
+	​
+
+,
+
+while
+
+∣B
+0
+	​
+
+∖B
+t
++
+	​
+
+	​
+
+∣=1.
+
+But the isolated-column corollary for the ordered pair (t
++
+	​
+
+,t
+0
+	​
+
+) says that
+
+(∣A
+t
++
+	​
+
+	​
+
+∖A
+t
+0
+	​
+
+	​
+
+∣,∣B
+t
+0
+	​
+
+	​
+
+∖B
+t
++
+	​
+
+	​
+
+∣)
+
+must be either (0,0) or have both entries at least 2. Here it is
+
+(0,1),
+
+a contradiction.
+
+Thus the 6191,e
+R
+	​
+
+=12,p=27,M≤58 row is infeasible.
+
+Scope and expected usefulness
+
+The support-separation cut applies:
+
+throughout this five-label core;
+
+to every T-vertex, because c
+0
+	​
+
+=0 makes it R-isolated;
+
+independently of H14 and independently of anti-tightness;
+
+without any fixed A/B template or P-enumeration.
+
+It is especially relevant to the leading profiles with ∣T∣=2 or 3. It converts the expensive chain
+
+A/R codegree→A/B edge variables→state intersections
+
+into a direct constraint on column-support overlaps.
+
+For the cheapest experiment, add only the ordered T-pair tuple cut. For the stronger experiment, add the full isolated-T-to-all-R implications.
+
+Weakest steps
+
+The 6191 certificate uses the code convention ∣A∣=∣B∣=6, so that p=27 means exactly nine A/B nonedges. It should not be transferred unchanged to a convention where one side has seven actual state vertices.
+
+common_a[t][r] and common_b[t][r] must equal the true support intersections. If they are merely lower bounds used inside another codegree expression, the proposed linearization is not safe.
+
+The strengthening is a projection of constraints already logically present in the verifier. It can improve propagation substantially, but it does not shrink the mathematical feasible set beyond the current exact A/R and B/R codegree model.
+
+The complete 6191 proof does not imply that the same four Φ-subsets close the other top profiles; its reusable part is the isolated-support-separation lemma.

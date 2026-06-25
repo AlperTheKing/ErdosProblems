@@ -1,0 +1,18 @@
+
+=== W=C5 graphon (d_edge=0.4000, in-band=False) sum p_W=1.000000 ===
+  m_avg (graphon order-9 avg MOMENT) = +5.026598e-05   >=0 ? True
+  sum_sigma ratio<Q,M>               = +5.026079e-05   (matches m_avg ? True)
+  g_avg (graphon avg sum lam g)      = +4.365824e-07   <=delta ? True
+  band_avg                            = +0.000000e+00
+  LHS_avg=g+m+band                    = +5.070256e-05   <=delta ? True
+  => d_mono(W) <= 2/25 + g_avg <= 2/25+delta : g_avg<=delta is True
+
+=== W=C7 graphon (d_edge=0.2857, in-band=True) sum p_W=1.000000 ===
+  m_avg (graphon order-9 avg MOMENT) = +2.192990e-05   >=0 ? True
+  sum_sigma ratio<Q,M>               = +2.193402e-05   (matches m_avg ? True)
+  g_avg (graphon avg sum lam g)      = -5.606940e-06   <=delta ? True
+  band_avg                            = +0.000000e+00
+  LHS_avg=g+m+band                    = +1.632296e-05   <=delta ? True
+  => d_mono(W) <= 2/25 + g_avg <= 2/25+delta : g_avg<=delta is True
+
+DONE

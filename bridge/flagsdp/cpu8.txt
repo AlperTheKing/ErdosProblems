@@ -1,0 +1,6 @@
+extracting sigma* from witness...
+sigma* over 184 canonical R; computing c_sigma*(J) for all 12172 states...
+L_sigma*(witness) = 4.827413e-04  (should ~= U_8=4.83e-4)
+E10 baseline eta = +6.0212360e-05
+>>> after 1 8-anchor cut: eta = +5.9991665e-05  (E10 was +6.03e-5)
+DONE

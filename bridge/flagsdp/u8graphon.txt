@@ -1,0 +1,5 @@
+
+C5 graphon: d_edge=0.4000, d_mono(~C5[2])=0.08889
+   U_8(blow-up law) = 8.000000e-02; total weight(~=e=0.4000)=0.40000
+   45*U_8 = 3.600000e+00   bound d_mono <= 45*U_8 ? True  (d_mono=0.08889)
+   witness U_8=4.83e-4 -> 45*U_8(witness)=0.02174; vs d_mono;  graphon U_8/witness ratio=165.63

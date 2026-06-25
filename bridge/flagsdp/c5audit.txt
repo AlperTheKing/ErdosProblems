@@ -1,0 +1,10 @@
+D shape=(1897, 12172) nnz=94703; D row min-sum=1.000 (zero rows => bad)
+
+(1) SANITY real graph C7[2]: 10-extension LP status=0 success=True  (1/optimal=feasible expected)
+    C7[2] L1-distance to marginal polytope = 0.000e+00 (status 0)  [should be ~0]
+
+(2) FOOLING x* (eta=+6.486e-05): 10-extension LP status=2 success=False
+    x* L1-distance to marginal polytope = 6.8176e-01 (status 0)
+    >>> x* is GENUINELY non-10-extendable (L1 dist 6.82e-01 >> 0). The order-10 marginal kills it.
+        Selective lift REAL: x* fails 10-consistency (not just the C5 diagonal). Next: add E10, re-solve eta.
+DONE

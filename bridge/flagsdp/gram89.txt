@@ -1,0 +1,8 @@
+loaded all-pairs decomp: nR=410
+=== WITNESS q (pseudo-state) ===
+  [witness] roots active=260  min_R lambdahat = -5.0000e-01 (rid 235)  N_8,9=3.1933e-01  #roots with lambda_min<-1e-12: 249
+=== validation: real-graph i.i.d. laws (must be PSD, min_R lambdahat ~ 0) ===
+  [C5] min_R lambdahat = -1.5576e-15  [1s]
+  [C7] min_R lambdahat = -1.3030e-15  [6s]
+  [Petersen] min_R lambdahat = -5.6828e-15  [49s]
+DONE

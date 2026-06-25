@@ -1,0 +1,12 @@
+delta (cert maxPhi) = 6.069989e-05
+max_H LHS(H) = 6.069989e-05  (should == delta) match=True
+  WL buckets: 1865 singletons, 16 collision-buckets (canonical only for those)
+  [computing C7[2], n=14...]
+
+=== G = C7[2] (14 vtx, d_edge=0.3077, in-band=True) ===
+  m_avg (order-9 averaged MOMENT term) = -4.389008e-05   >=0 ? False
+  g_avg (averaged deficit sum lam g)   = +1.324833e-05   <=delta ? True
+  band_avg                              = +0.000000e+00
+  LHS_avg = g+m+band                    = -3.064175e-05   <=delta ? True
+  d_mono(G)=4.081633e-02, 2/25+delta=8.006070e-02; d_mono-2/25 <= g_avg ? True; d_mono<=2/25+delta ? True
+  [computing C7[3], n=21...]

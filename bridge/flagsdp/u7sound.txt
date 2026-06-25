@@ -1,0 +1,15 @@
+=== d_mono <= U_7 (SEVEN-anchor, matches published cert) ===
+graph         d_mono          U_7  U7>=dm   ratio  t(s)
+C5          0.080000 8.000000e-02    True   1.000     0
+C7          0.040816 4.107930e-02    True   1.006     6
+C9          0.024691 2.944811e-02    True   1.193     4
+C11         0.016529 2.861991e-02    True   1.732     7
+C13         0.011834 2.867067e-02    True   2.423    17
+P5          0.000000 1.243546e-02    True     inf     0
+C5uC5       0.040000 4.125000e-02    True   1.031     4
+Petersen    0.060000 6.193752e-02    True   1.032     9
+  n=6 exhaustive: 38 tri-free graphs, 0 violations, 4 tight [18s]
+  n=7 exhaustive: 107 tri-free graphs, 0 violations, 4 tight [158s]
+
+WORST U_7 - d_mono = -1.388e-17  => d_mono<=U_7 holds for ALL ? True
+DONE

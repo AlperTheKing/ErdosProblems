@@ -1,0 +1,40 @@
+GPT Pro answer, 2026-06-17.
+
+Branch:
+q14/t2 cap74, p=16, z=8, (ZZ,ZD)=(0,21), t=4 profile
+n2,n3,n4,n5=(4,3,1,0), touched count u=3, tight-pair skeleton
+u3_332 with tight pairs (8,9), (8,10), (9,10)^2.
+
+Claim:
+In the u3_332 skeleton, the residual branch E(9,10)=0 is P-free
+contradictory. A zero-row projection capacity certificate gives
+M = e(A union B, R) <= 70, contradicting the cap74 equality M=74.
+
+Projection used:
+For each A/B vertex record only S(v)=N_D(v) and U(v)=N_Z(v). Allowed
+types satisfy S nonempty, {9,10} not subset S, and if z in U then
+S is disjoint from N_D(z). This forgets the fixed A/B template and is
+a relaxation of the real verifier.
+
+Projection constraints:
+- 12 A/B vertices.
+- Touched D-column counts m_8,m_9,m_10 from c_d + m_d = 6.
+- Untouched D columns have m_d <= 8.
+- Each tight zero has exactly 6 A/B neighbours.
+- Every zero has at most 8 A/B neighbours.
+- For every zero-zero nonedge z,z':
+  |N_D(z) cap N_D(z')| + #{v: z,z' in U(v)} >= 2.
+
+Certificate summary:
+Over lex-ordered non-tight row multisets, grouped by
+k = number of degree-3 non-tight zeros with row {11,12,13}:
+k=0 has no projection-feasible row multiset; k=1 max M=68;
+k=2 max M=68; k=3 max M=70.
+Therefore the whole E(9,10)=0 residual has M <= 70.
+
+Weakest assumptions:
+u3_332 skeleton; E(9,10)=0 split into no non-tight zero and no A/B
+vertex seeing both 9 and 10; triangle-freeness; A/B D-visibility;
+touched-column equality for 8,9,10; c_d <= 4; tight-zero equality;
+m_r <= 8; zero-zero nonedge codegree at least 2; M=74.
+No fixed A/B-template enumeration, no cap<74 or q<14 closure.

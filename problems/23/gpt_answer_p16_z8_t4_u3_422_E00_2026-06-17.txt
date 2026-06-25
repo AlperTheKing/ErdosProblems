@@ -1,0 +1,24 @@
+For the exact residue E_{8,10}=E_{9,10}=0 in the u3_422 skeleton, the next safe strengthening is a saturated-column visibility cut at column 10, followed by a degree-4 non-tight zero row cut.
+
+Key constraints to encode:
+
+1. Saturated column 10:
+   For every non-tight zero h and every A/B vertex v,
+   n[h,v] >= y[v,10].
+
+2. Exact D-state of S_10 vertices:
+   For every A/B vertex v and every d != 10,
+   y[v,10] + y[v,d] <= 1.
+
+3. Unique degree-4 non-tight zero h4 must see 8 and 9:
+   is_deg4[h] => x[h,8]=1, x[h,9]=1, x[h,10]=0,
+   and x[h,11]+x[h,12]+x[h,13]=2.
+
+4. Branch on which of 11,12,13 the degree-4 non-tight zero misses.
+
+5. In a missing-column branch r, for every tight zero t in T8 union T9 and every A/B vertex v:
+   n[h4,v] + n[t,v] <= 1 + y[v,r],
+   and at least one common A/B neighbor of h4 and t sees r.
+
+Dependence flags:
+Only local nonedge-codegree 2, c_10=4/m_10=2, E_{8,10}=E_{9,10}=0, D-column max c_d<=4 and sum delta_d=3, triangle-freeness, and root-to-R D-visibility. No cap<74 or q<14 frontier closure.

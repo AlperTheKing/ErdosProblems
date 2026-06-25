@@ -1,0 +1,6 @@
+=== FULL order-10 envelope: moment-only + k7 + k8 U_8 + (8,9) Gram (GPT path A finish) ===
+loaded k7 cert eta=5.991027e-04, 4452 STATIC k7 cuts
+ns=1897 nJ=12172 n7=107 nR=410; MOMENT-only=317; modes=4 gram_tol=1e-07
+building static k7 rows (D^T g pullbacks)...
+  4452 static k7 rows [5s]
+seeded 594 k8 cuts (+4452 static k7); solving...

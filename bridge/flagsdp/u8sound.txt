@@ -1,0 +1,10 @@
+graph       n triFree     d_mono          U_8 U_8>=d_mono    ratio
+C5          5    True   0.080000 8.000000e-02        True    1.000  [1s]
+C7          7    True   0.040816 4.089434e-02        True    1.002  [4s]
+C9          9    True   0.024691 2.782277e-02        True    1.127  [10s]
+P5          5    True   0.000000 9.356493e-03        True      inf  [1s]
+C5uC5      10    True   0.040000 4.062500e-02        True    1.016  [14s]
+Petersen   10    True   0.060000 6.079241e-02        True    1.013  [24s]
+
+WORST U_8 - d_mono = -1.388e-17  => d_mono<=U_8 holds for ALL tested ? True
+DONE

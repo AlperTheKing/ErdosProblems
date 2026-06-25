@@ -1,0 +1,8 @@
+=== order-10 per-R U_8 envelope (x-eliminated, fast) ===
+ns=1897 nJ=12172 nR=410; validity rows=329/404; x eliminated.
+seeded 594 cuts covering 410/410 R's; solving...
+iter0: eta=+1.2487507e-01 [0s]
+it1: +123 (pool 717) eta=+9.7341461e-02 [23s]
+it2: +171 (pool 888) eta=+8.3806381e-02 [32s]
+it3: +246 (pool 1134) eta=+7.2770241e-02 [57s]
+it4: +277 (pool 1411) eta=+6.3396291e-02 [69s]

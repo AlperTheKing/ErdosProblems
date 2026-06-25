@@ -1,0 +1,14 @@
+C5[3] balanced	n=15	tri_free=True	edges=45
+C5 unbal 1,2,3,4,5	n=15	tri_free=True	edges=45
+C5 unbal 2,2,3,4,4	n=15	tri_free=True	edges=46
+C5 unbal 1,3,3,4,4	n=15	tri_free=True	edges=44
+C5 unbal 2,3,3,3,4	n=15	tri_free=True	edges=44
+C15 cycle	n=15	tri_free=True	edges=15
+Mycielski(C5)=Grotzsch on11 + pad? 	n=11	tri_free=True	edges=20
+C5[4] balanced	n=20	tri_free=True	edges=80
+C5 unbal 2,4,4,5,5	n=20	tri_free=True	edges=79
+C5 unbal 3,3,4,5,5	n=20	tri_free=True	edges=81
+C5 unbal 1,4,5,5,5	n=20	tri_free=True	edges=79
+Petersen[2] blowup	n=20	tri_free=True	edges=60
+C20 cycle	n=20	tri_free=True	edges=20
+Dodecahedron(listing)	n=20	tri_free=True	edges=30

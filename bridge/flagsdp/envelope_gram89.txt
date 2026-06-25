@@ -1,0 +1,8 @@
+=== moment-only k8 U_8 + (8,9) Gram PSD envelope (GPT path A) ===
+ns=1897 nJ=12172 nR=410; MOMENT-only validity=317 (localizers DROPPED); x=Dq.
+seeded 594 k8 cuts; solving...
+iter0: eta=+1.2599170e-01
+it1: +106k8 +421gram (pool 1121) eta=+9.7138735e-02 [25s]
+it2: +166k8 +582gram (pool 1869) eta=+7.8175687e-02 [75s]
+it3: +219k8 +643gram (pool 2731) eta=+6.1838594e-02 [105s]
+it4: +287k8 +742gram (pool 3760) eta=+4.5733456e-02 [517s]

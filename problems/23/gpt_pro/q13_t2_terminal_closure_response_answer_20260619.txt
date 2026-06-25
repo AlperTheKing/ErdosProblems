@@ -1,0 +1,2554 @@
+CONTEXT:
+We are working on the low-codegree/rooted finite proof route for Erdős problem #23 / the target a(30)=36.  The active hard branch is the q=13, t=2 rooted branch with three root-colour common vertices C={c1,c2,c3}.  There are Q=13 vertices in R, labelled by subsets L(r) of {1,2,3}; U_i={r in R: i in L(r)}.  Edges inside R are allowed only between disjoint labels.
+
+The concrete branch currently stuck is:
+
+
+text
+q=13, k=3, r0=8, t=2, |A|=6, |B|=7.
+
+
+The exact verifier already enforces:
+
+
+text
+1. R is triangle-free, and R-edges only join disjoint labels.
+2. |U_i| >= r0-2 = 6 for each i.
+3. For r notin U_i, d_R(r,U_i) >= t = 2.
+4. For every r, alpha_r+|L(r)| >= 2 and beta_r+|L(r)| >= 2,
+   where alpha_r=|N_A(r)| and beta_r=|N_B(r)|.
+5. For every r, alpha_r+beta_r+d_R(r)+|L(r)| >= 8.
+6. A/B states are independent in R.
+7. R/R edge codegree is 0; R/R nonedge codegree is >=2.
+8. A/B edge iff |N_R(a) cap N_R(b)|=0; A/B nonedge has >=2 common R-neighbours.
+9. Same-side A/A and B/B codegrees, A/R and B/R codegrees.
+10. The rooted Phi/Psi cut inequalities for beta(G)>=37.
+11. Global edge cap: root_edges+U+p+e_R+M <= 139, where M=sum_r(alpha_r+beta_r).
+
+
+Recent verified computation:
+
+
+text
+q13/r0=8/t=3 closed completely:
+(A,B)=(5,7): 257/257 profiles INFEASIBLE
+(A,B)=(6,6): 256/256 profiles INFEASIBLE
+(A,B)=(7,5): 256/256 profiles INFEASIBLE
+
+
+For q13/r0=8/t=2,(A,B)=(6,7), a C++ scalar prefilter leaves 1427 profiles.  The first exact-state pass gives:
+
+
+text
+530 INFEASIBLE
+887 UNKNOWN
+10 not reached before process timeout
+0 SAT
+
+
+A hard rerun on the first 40 UNKNOWN profiles with 120s each, total 100 workers, gives:
+
+
+text
+40/40 UNKNOWN
+0 SAT
+
+
+Typical hard UNKNOWN label-count vectors c0..c7 include:
+
+
+text
+0,0,2,2,2,2,0,5
+0,0,2,2,3,3,0,3
+0,0,2,3,2,2,0,4
+0,0,2,4,2,4,0,1
+0,0,3,2,3,4,0,1
+
+
+Here mask 0 is label empty, mask 1 is {1}, mask 2 is {2}, ..., mask 7 is {1,2,3}.
+
+ADDENDUM AFTER A TERMINAL-CLOSURE TEST:
+I implemented the candidate terminal-closure as an experimental CP-SAT flag.  On 40 hard UNKNOWN profiles:
+
+
+text
+timeout=30s, total_workers=100, with terminal-closure:
+13 INFEASIBLE
+27 UNKNOWN
+0 SAT
+
+rerun the 27 with timeout=120s:
+27 UNKNOWN
+0 SAT
+
+
+The remaining 27 profiles have a very rigid common support:
+
+
+text
+c0=c1=c6=0
+
+
+So only labels
+
+
+text
+{2}, {1,2}, {3}, {1,3}, {1,2,3}
+
+
+occur.  Let
+
+
+text
+S2  = label {2}
+D12 = label {1,2}
+S3  = label {3}
+D13 = label {1,3}
+T   = label {1,2,3}.
+
+
+Then R-edges can only lie in the three bipartite blocks:
+
+
+text
+S2-D13, D12-S3, S2-S3.
+
+
+The triple-labelled T vertices are isolated in R.  Local domination forces:
+
+
+text
+every S2 vertex has at least 2 neighbours in D13;
+every D13 vertex has at least 2 neighbours in S2;
+every D12 vertex has at least 2 neighbours in S3;
+every S3 vertex has at least 2 neighbours in D12.
+
+
+The optional block is S2-S3.  Examples of the remaining 27 profiles are:
+
+
+text
+c2,c3,c4,c5,c7 =
+2,2,2,2,5
+2,2,2,3,4
+2,3,3,3,2
+2,4,4,3,0
+3,2,3,4,1
+
+
+If terminal-closure is valid but insufficient, please focus on this residual support pattern.  Is there a P-free capacity/degree/cut lemma for this five-label structure that forces M below the required value or otherwise contradicts the edge cap/cut constraints?
+
+QUESTION:
+Find the smallest mathematically safe structural strengthening for this q=13,t=2 branch, preferably P-free (not enumerating A/B templates), that can be added to the verifier and plausibly kills the UNKNOWN core.
+
+The candidate I want you to audit first is the following terminal-reroot closure:
+
+Let r in R be C-tight on colour i, meaning r notin U_i and
+
+
+text
+d_R(r,U_i)=2.
+
+
+Let P=N_R(r) cap U_i={s1,s2}.  Reroot at the nonedge (r,c_i), whose two common neighbours are s1,s2.  Is it valid in this q13/t2 frontier to impose:
+
+
+text
+alpha_r+beta_r+d_R(r)+|L(r)| = 8
+
+
+and also, for each terminal common neighbour s in P,
+
+
+text
+alpha_s+beta_s+d_R(s)+|L(s)| = 8 ?
+
+
+Equivalently, can every C-tight vertex and every terminal neighbour touched by a C-tight pair be forced degree-tight in the original graph?
+
+If yes:
+1. Give a rigorous proof, spelling out exactly what frontier/closure assumptions are needed.
+2. State the exact CP-SAT/C++ constraints to add.
+3. Explain whether this should apply globally to q13/t2 or only in specific profile rows.
+
+If no:
+1. Identify the precise gap or counter-scenario.
+2. Propose the next safest P-free cut instead.
+
+REQUIREMENTS:
+- Do not give a broad proof sketch.  I need one cut/lemma with a complete argument.
+- Use only assumptions that are actually present above, or explicitly flag any extra frontier closure assumption.
+- End with the weakest steps of your own answer.
+
+I’ll first test whether terminal-reroot tightness follows from the stated frontier closure, then extract only the weakest safe cut and verifier constraints.
+
+Initial check says the proposed closure is not safe as stated: rerooting only forces an unordered endpoint degree pair, not that the C-tight vertex specifically is 8-tight.
+
+Thought for 16m 30s
+
+The public formulation of Erdős Problem #23 is the triangle-free-to-bipartite edge-deletion problem; the argument below concerns only your finite 
+𝑛
+=
+30
+n=30 reduction.
+
+Verdict
+
+No. The proposed terminal-reroot closure is not mathematically justified from assumptions 1–11.
+
+Rerooting at 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) does not force
+
+𝑑
+𝐺
+(
+𝑟
+)
+=
+8
+d
+G
+	​
+
+(r)=8
+
+and it gives even less reason to force the two common neighbours 
+𝑠
+1
+,
+𝑠
+2
+s
+1
+	​
+
+,s
+2
+	​
+
+ to have degree 
+8
+8.
+
+Assuming your entire 
+𝑞
+=
+14
+,
+𝑡
+=
+2
+q=14,t=2 frontier is already closed, the smallest safe consequence actually points in the opposite direction:
+
+A 
+𝐶
+C-tight pair cannot have both reroot endpoints of degree 
+8
+8.
+
+This yields a very small, P-free inequality that should replace the experimental equalities.
+
+1. Exact reroot calculation
+
+Write
+
+𝐷
+𝑟
+:
+=
+𝛼
+𝑟
++
+𝛽
+𝑟
++
+𝑑
+𝑅
+(
+𝑟
+)
++
+∣
+𝐿
+(
+𝑟
+)
+∣
+=
+𝑑
+𝐺
+(
+𝑟
+)
+,
+D
+r
+	​
+
+:=α
+r
+	​
+
++β
+r
+	​
+
++d
+R
+	​
+
+(r)+∣L(r)∣=d
+G
+	​
+
+(r),
+
+and put
+
+𝑢
+𝑖
+:
+=
+∣
+𝑈
+𝑖
+∣
+,
+𝑑
+𝑖
+(
+𝑟
+)
+:
+=
+∣
+𝑁
+𝑅
+(
+𝑟
+)
+∩
+𝑈
+𝑖
+∣
+.
+u
+i
+	​
+
+:=∣U
+i
+	​
+
+∣,d
+i
+	​
+
+(r):=∣N
+R
+	​
+
+(r)∩U
+i
+	​
+
+∣.
+
+Because 
+𝑐
+𝑖
+c
+i
+	​
+
+ is adjacent to the two original roots, triangle-freeness prevents 
+𝑐
+𝑖
+c
+i
+	​
+
+ from having neighbours in the original 
+𝐴
+A, 
+𝐵
+B, or 
+𝐶
+∖
+{
+𝑐
+𝑖
+}
+C∖{c
+i
+	​
+
+}. Hence
+
+	
+𝑑
+𝐺
+(
+𝑐
+𝑖
+)
+=
+2
++
+𝑢
+𝑖
+.
+		
+(1)
+d
+G
+	​
+
+(c
+i
+	​
+
+)=2+u
+i
+	​
+
+.
+(1)
+
+For 
+𝑟
+∈
+𝑅
+∖
+𝑈
+𝑖
+r∈R∖U
+i
+	​
+
+, the pair 
+𝑟
+,
+𝑐
+𝑖
+r,c
+i
+	​
+
+ is a nonedge. Moreover,
+
+𝑁
+(
+𝑟
+)
+∩
+𝑁
+(
+𝑐
+𝑖
+)
+=
+𝑁
+𝑅
+(
+𝑟
+)
+∩
+𝑈
+𝑖
+.
+N(r)∩N(c
+i
+	​
+
+)=N
+R
+	​
+
+(r)∩U
+i
+	​
+
+.
+
+Indeed, 
+𝑁
+(
+𝑐
+𝑖
+)
+=
+{
+two original roots
+}
+∪
+𝑈
+𝑖
+N(c
+i
+	​
+
+)={two original roots}∪U
+i
+	​
+
+, while 
+𝑟
+∈
+𝑅
+r∈R is adjacent to neither original root.
+
+Therefore, if 
+𝑟
+r is 
+𝐶
+C-tight on 
+𝑖
+i,
+
+𝑑
+𝑖
+(
+𝑟
+)
+=
+2
+,
+d
+i
+	​
+
+(r)=2,
+
+then 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) is an exact-codegree-two nonedge.
+
+Let 
+𝑞
+𝑟
+,
+𝑖
+q
+r,i
+	​
+
+ denote the number of vertices outside the two reroot endpoints and their neighbourhood union. Since 
+𝑛
+=
+30
+n=30,
+
+	
+𝑞
+𝑟
+,
+𝑖
+	
+=
+30
+−
+2
+−
+∣
+𝑁
+(
+𝑟
+)
+∪
+𝑁
+(
+𝑐
+𝑖
+)
+∣
+
+
+	
+=
+30
+−
+2
+−
+(
+𝐷
+𝑟
++
+(
+2
++
+𝑢
+𝑖
+)
+−
+2
+)
+
+
+	
+=
+28
+−
+𝐷
+𝑟
+−
+𝑢
+𝑖
+.
+		
+(2)
+q
+r,i
+	​
+
+	​
+
+=30−2−∣N(r)∪N(c
+i
+	​
+
+)∣
+=30−2−(D
+r
+	​
+
++(2+u
+i
+	​
+
+)−2)
+=28−D
+r
+	​
+
+−u
+i
+	​
+
+.
+	​
+
+(2)
+
+The exclusive-neighbourhood sizes in this reroot are
+
+	
+∣
+𝐴
+′
+∣
+=
+𝐷
+𝑟
+−
+2
+,
+∣
+𝐵
+′
+∣
+=
+𝑢
+𝑖
+.
+		
+(3)
+∣A
+′
+∣=D
+r
+	​
+
+−2,∣B
+′
+∣=u
+i
+	​
+
+.
+(3)
+
+Since 
+𝐷
+𝑟
+≥
+8
+D
+r
+	​
+
+≥8 and 
+𝑢
+𝑖
+≥
+6
+u
+i
+	​
+
+≥6, the relevant possibilities start as follows:
+
+𝐷
+𝑟
+	
+𝑢
+𝑖
+	
+𝑞
+𝑟
+,
+𝑖
+	
+(
+∣
+𝐴
+′
+∣
+,
+∣
+𝐵
+′
+∣
+)
+
+
+8
+	
+6
+	
+14
+	
+(
+6
+,
+6
+)
+
+
+9
+	
+6
+	
+13
+	
+(
+7
+,
+6
+)
+
+
+8
+	
+7
+	
+13
+	
+(
+6
+,
+7
+)
+
+
+𝐷
+𝑟
++
+𝑢
+𝑖
+≥
+16
+	
+	
+≤
+12
+	
+D
+r
+	​
+
+8
+9
+8
+D
+r
+	​
+
++u
+i
+	​
+
+≥16
+	​
+
+u
+i
+	​
+
+6
+6
+7
+	​
+
+q
+r,i
+	​
+
+14
+13
+13
+≤12
+	​
+
+(∣A
+′
+∣,∣B
+′
+∣)
+(6,6)
+(7,6)
+(6,7)
+	​
+
+	​
+
+
+This table identifies the exact gap.
+
+Rerooting does not select between
+
+(
+𝐷
+𝑟
+,
+𝑢
+𝑖
+)
+=
+(
+9
+,
+6
+)
+and
+(
+𝐷
+𝑟
+,
+𝑢
+𝑖
+)
+=
+(
+8
+,
+7
+)
+.
+(D
+r
+	​
+
+,u
+i
+	​
+
+)=(9,6)and(D
+r
+	​
+
+,u
+i
+	​
+
+)=(8,7).
+
+Both give a 
+𝑞
+=
+13
+,
+𝑡
+=
+2
+q=13,t=2 reroot. Therefore 
+𝐷
+𝑟
+=
+8
+D
+r
+	​
+
+=8 cannot be imposed globally.
+
+In particular, when 
+𝑢
+𝑖
+=
+6
+u
+i
+	​
+
+=6, excluding the 
+𝑞
+=
+14
+q=14 reroot forces
+
+𝐷
+𝑟
+≥
+9
+,
+D
+r
+	​
+
+≥9,
+
+not 
+𝐷
+𝑟
+=
+8
+D
+r
+	​
+
+=8.
+
+2. Why terminal degree-tightness does not follow
+
+Let
+
+𝑃
+=
+𝑁
+(
+𝑟
+)
+∩
+𝑁
+(
+𝑐
+𝑖
+)
+=
+{
+𝑠
+1
+,
+𝑠
+2
+}
+.
+P=N(r)∩N(c
+i
+	​
+
+)={s
+1
+	​
+
+,s
+2
+	​
+
+}.
+
+In the rerooted decomposition, 
+𝑠
+1
+,
+𝑠
+2
+s
+1
+	​
+
+,s
+2
+	​
+
+ are the two common-neighbour terminals.
+
+Triangle-freeness implies that a common neighbour 
+𝑠
+𝑗
+s
+j
+	​
+
+ cannot be adjacent to:
+
+another common neighbour;
+a vertex of 
+𝑁
+(
+𝑟
+)
+∖
+𝑃
+N(r)∖P;
+a vertex of 
+𝑁
+(
+𝑐
+𝑖
+)
+∖
+𝑃
+N(c
+i
+	​
+
+)∖P.
+
+Consequently, apart from its two reroot edges to 
+𝑟
+,
+𝑐
+𝑖
+r,c
+i
+	​
+
+, every other edge incident with 
+𝑠
+𝑗
+s
+j
+	​
+
+ goes to the new residual set 
+𝑅
+′
+R
+′
+. Thus the rerooted terminal-incidence scalar is
+
+	
+𝑈
+′
+=
+(
+𝐷
+𝑠
+1
+−
+2
+)
++
+(
+𝐷
+𝑠
+2
+−
+2
+)
+=
+𝐷
+𝑠
+1
++
+𝐷
+𝑠
+2
+−
+4.
+		
+(4)
+U
+′
+=(D
+s
+1
+	​
+
+	​
+
+−2)+(D
+s
+2
+	​
+
+	​
+
+−2)=D
+s
+1
+	​
+
+	​
+
++D
+s
+2
+	​
+
+	​
+
+−4.
+(4)
+
+Minimum degree only gives
+
+𝑈
+′
+≥
+12.
+U
+′
+≥12.
+
+The equalities
+
+𝐷
+𝑠
+1
+=
+𝐷
+𝑠
+2
+=
+8
+D
+s
+1
+	​
+
+	​
+
+=D
+s
+2
+	​
+
+	​
+
+=8
+
+follow only if one has separately proved
+
+	
+𝑈
+′
+=
+12.
+		
+(5)
+U
+′
+=12.
+(5)
+
+Nothing in assumptions 1–11 proves (5). The value of 
+𝑞
+𝑟
+,
+𝑖
+q
+r,i
+	​
+
+ in (2) depends only on 
+𝐷
+𝑟
+D
+r
+	​
+
+ and 
+𝑢
+𝑖
+u
+i
+	​
+
+; it is completely independent of 
+𝐷
+𝑠
+1
+D
+s
+1
+	​
+
+	​
+
+ and 
+𝐷
+𝑠
+2
+D
+s
+2
+	​
+
+	​
+
+.
+
+For example,
+
+𝐷
+𝑠
+1
+=
+9
+,
+𝐷
+𝑠
+2
+=
+8
+D
+s
+1
+	​
+
+	​
+
+=9,D
+s
+2
+	​
+
+	​
+
+=8
+
+merely gives 
+𝑈
+′
+=
+13
+U
+′
+=13. It does not change the fact that 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) is a codegree-two reroot, nor does it change its 
+𝑞
+q-value.
+
+Therefore the terminal equality is safe only under the additional closure statement:
+
+Every surviving reroot row corresponding to 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) has 
+𝑈
+′
+=
+12
+U
+′
+=12, or all reroot rows with 
+𝑈
+′
+>
+12
+U
+′
+>12 have already been closed.
+
+That closure is not among the stated assumptions.
+
+3. Precise residual counter-scenario
+
+Consider the displayed residual profile
+
+(
+𝑥
+,
+𝑦
+,
+𝑧
+,
+𝑤
+,
+𝜏
+)
+=
+(
+∣
+𝑆
+2
+∣
+,
+∣
+𝐷
+12
+∣
+,
+∣
+𝑆
+3
+∣
+,
+∣
+𝐷
+13
+∣
+,
+∣
+𝑇
+∣
+)
+=
+(
+2
+,
+4
+,
+4
+,
+3
+,
+0
+)
+.
+(x,y,z,w,τ)=(∣S2∣,∣D12∣,∣S3∣,∣D13∣,∣T∣)=(2,4,4,3,0).
+
+Then
+
+𝑢
+2
+=
+𝑥
++
+𝑦
++
+𝜏
+=
+2
++
+4
+=
+6.
+u
+2
+	​
+
+=x+y+τ=2+4=6.
+
+Every 
+𝑤
+∈
+𝐷
+13
+w∈D13 lies outside 
+𝑈
+2
+U
+2
+	​
+
+. Its only possible 
+𝑅
+R-neighbours are in 
+𝑆
+2
+S2, and local domination requires at least two such neighbours. Since 
+∣
+𝑆
+2
+∣
+=
+2
+∣S2∣=2, necessarily
+
+𝑑
+2
+(
+𝑤
+)
+=
+𝑑
+𝑅
+(
+𝑤
+,
+𝑆
+2
+)
+=
+2.
+d
+2
+	​
+
+(w)=d
+R
+	​
+
+(w,S2)=2.
+
+Hence every 
+𝑤
+∈
+𝐷
+13
+w∈D13 is 
+𝐶
+C-tight on colour 
+2
+2.
+
+Now suppose
+
+𝐷
+𝑤
+=
+9.
+D
+w
+	​
+
+=9.
+
+Then rerooting at 
+(
+𝑤
+,
+𝑐
+2
+)
+(w,c
+2
+	​
+
+) gives
+
+𝑞
+𝑤
+,
+2
+=
+28
+−
+9
+−
+6
+=
+13
+,
+q
+w,2
+	​
+
+=28−9−6=13,
+
+with exclusive-neighbourhood sizes
+
+(
+7
+,
+6
+)
+.
+(7,6).
+
+This is not the closed 
+𝑞
+=
+14
+q=14 case. It is an ordinary 
+𝑞
+=
+13
+,
+𝑡
+=
+2
+q=13,t=2 reroot and is not excluded by the stated frontier information.
+
+The proposed equality 
+𝐷
+𝑤
+=
+8
+D
+w
+	​
+
+=8 would wrongly remove this scenario.
+
+Indeed, the correct closed-
+𝑞
+=
+14
+q=14 consequence says that 
+𝐷
+𝑤
+=
+8
+D
+w
+	​
+
+=8 is impossible here. Since
+
+𝑑
+𝑅
+(
+𝑤
+)
+=
+2
+,
+∣
+𝐿
+(
+𝑤
+)
+∣
+=
+2
+,
+d
+R
+	​
+
+(w)=2,∣L(w)∣=2,
+
+the correct requirement is
+
+𝛼
+𝑤
++
+𝛽
+𝑤
++
+2
++
+2
+≥
+9
+,
+α
+w
+	​
+
++β
+w
+	​
+
++2+2≥9,
+
+or
+
+	
+𝛼
+𝑤
++
+𝛽
+𝑤
+≥
+5.
+		
+(6)
+α
+w
+	​
+
++β
+w
+	​
+
+≥5.
+(6)
+
+The existing degree-
+8
+8 condition only requires 
+𝛼
+𝑤
++
+𝛽
+𝑤
+≥
+4
+α
+w
+	​
+
++β
+w
+	​
+
+≥4. Thus the safe reroot cut adds one unit to 
+𝑀
+M for every such 
+𝑤
+w. In this profile it raises the lower bound on 
+𝑀
+M by 
+3
+3.
+
+This is a frontier-level counter-scenario to the proposed inference; it is not claimed to be a complete SAT model.
+
+4. Safe replacement lemma
+Closed-
+𝑞
+=
+14
+q=14 anti-tightness lemma
+
+Assume the following extra frontier closure:
+
+H14. There is no admissible 
+30
+30-vertex counterexample containing an exact-codegree-two nonedge whose two endpoints both have degree 
+8
+8. Equivalently, the entire 
+𝑞
+=
+14
+,
+𝑡
+=
+2
+,
+(
+6
+,
+6
+)
+q=14,t=2,(6,6) rooted branch has been closed, including every scalar/profile row obtainable after rerooting.
+
+Then, for every 
+𝑖
+i and every 
+𝑟
+∈
+𝑅
+∖
+𝑈
+𝑖
+r∈R∖U
+i
+	​
+
+,
+
+	
+𝐷
+𝑟
++
+𝑢
+𝑖
++
+𝑑
+𝑖
+(
+𝑟
+)
+≥
+17.
+		
+(7)
+D
+r
+	​
+
++u
+i
+	​
+
++d
+i
+	​
+
+(r)≥17.
+	​
+
+(7)
+Proof
+
+By the existing constraints,
+
+𝐷
+𝑟
+≥
+8
+,
+𝑢
+𝑖
+≥
+6
+,
+𝑑
+𝑖
+(
+𝑟
+)
+≥
+2.
+D
+r
+	​
+
+≥8,u
+i
+	​
+
+≥6,d
+i
+	​
+
+(r)≥2.
+
+If 
+𝑑
+𝑖
+(
+𝑟
+)
+≥
+3
+d
+i
+	​
+
+(r)≥3, then immediately
+
+𝐷
+𝑟
++
+𝑢
+𝑖
++
+𝑑
+𝑖
+(
+𝑟
+)
+≥
+8
++
+6
++
+3
+=
+17.
+D
+r
+	​
+
++u
+i
+	​
+
++d
+i
+	​
+
+(r)≥8+6+3=17.
+
+It remains to consider 
+𝑑
+𝑖
+(
+𝑟
+)
+=
+2
+d
+i
+	​
+
+(r)=2.
+
+Then 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) is an exact-codegree-two nonedge. If
+
+𝐷
+𝑟
++
+𝑢
+𝑖
+≤
+14
+,
+D
+r
+	​
+
++u
+i
+	​
+
+≤14,
+
+the lower bounds 
+𝐷
+𝑟
+≥
+8
+D
+r
+	​
+
+≥8 and 
+𝑢
+𝑖
+≥
+6
+u
+i
+	​
+
+≥6 force
+
+𝐷
+𝑟
+=
+8
+,
+𝑢
+𝑖
+=
+6.
+D
+r
+	​
+
+=8,u
+i
+	​
+
+=6.
+
+Equation (1) then gives 
+𝑑
+𝐺
+(
+𝑐
+𝑖
+)
+=
+8
+d
+G
+	​
+
+(c
+i
+	​
+
+)=8. Thus 
+(
+𝑟
+,
+𝑐
+𝑖
+)
+(r,c
+i
+	​
+
+) has codegree 
+2
+2, both endpoints have degree 
+8
+8, and by (2) its residual size is 
+𝑞
+=
+14
+q=14. This contradicts H14.
+
+Therefore, when 
+𝑑
+𝑖
+(
+𝑟
+)
+=
+2
+d
+i
+	​
+
+(r)=2,
+
+𝐷
+𝑟
++
+𝑢
+𝑖
+≥
+15
+,
+D
+r
+	​
+
++u
+i
+	​
+
+≥15,
+
+and hence
+
+𝐷
+𝑟
++
+𝑢
+𝑖
++
+𝑑
+𝑖
+(
+𝑟
+)
+≥
+15
++
+2
+=
+17.
+D
+r
+	​
+
++u
+i
+	​
+
++d
+i
+	​
+
+(r)≥15+2=17.
+
+This proves (7). ∎
+
+The cut excludes exactly the previously permitted corner
+
+𝐷
+𝑟
+=
+8
+,
+𝑢
+𝑖
+=
+6
+,
+𝑑
+𝑖
+(
+𝑟
+)
+=
+2.
+D
+r
+	​
+
+=8,u
+i
+	​
+
+=6,d
+i
+	​
+
+(r)=2.
+
+It does not make any unsupported claim about terminal degrees.
+
+5. Exact CP-SAT constraint
+
+You already compute all three expressions:
+
+D[r]       = alpha[r] + beta[r] + degR[r] + label_size[r]
+Usize[i]   = |U_i|
+dUi[r][i]  = |N_R(r) ∩ U_i|
+
+For every 
+𝑟
+,
+𝑖
+r,i with 
+𝑖
+∉
+𝐿
+(
+𝑟
+)
+i∈
+/
+L(r), add simply:
+
+model.AddGreaterOrEqual(
+    D[r] + Usize[i] + dUi[r][i],
+    17
+);
+
+If label membership is itself variable:
+
+model.AddGreaterOrEqual(
+    D[r] + Usize[i] + dUi[r][i],
+    17
+).OnlyEnforceIf(not_in_U[r][i]);
+
+No new tightness Boolean is necessary.
+
+The equivalent trigger formulation is
+
+dUi[r][i] = 2  ==>  D[r] + Usize[i] >= 15.
+
+If you use that formulation, the tightness indicator must be an actual equivalence, not merely
+
+tight ==> dUi = 2.
+
+With the existing lower bound 
+𝑑
+𝑈
+𝑖
+≥
+2
+dUi≥2, exact reification can be written as:
+
+model.AddEquality(dUi[r][i], 2)
+    .OnlyEnforceIf(tight[r][i]);
+
+model.AddGreaterOrEqual(dUi[r][i], 3)
+    .OnlyEnforceIf({not_in_U[r][i], tight[r][i].Not()});
+
+model.AddEquality(tight[r][i], 0)
+    .OnlyEnforceIf(in_U[r][i]);
+
+model.AddGreaterOrEqual(D[r] + Usize[i], 15)
+    .OnlyEnforceIf(tight[r][i]);
+
+The single inequality (7) is preferable: fewer Boolean variables and stronger linear propagation.
+
+Do not add either of these:
+
+tight[r][i] ==> D[r] = 8
+touched[s]  ==> D[s] = 8
+6. Specialized five-label form
+
+Let
+
+𝑥
+=
+∣
+𝑆
+2
+∣
+,
+𝑦
+=
+∣
+𝐷
+12
+∣
+,
+𝑧
+=
+∣
+𝑆
+3
+∣
+,
+𝑤
+=
+∣
+𝐷
+13
+∣
+,
+𝜏
+=
+∣
+𝑇
+∣
+.
+x=∣S2∣,y=∣D12∣,z=∣S3∣,w=∣D13∣,τ=∣T∣.
+
+Then
+
+𝑢
+1
+=
+𝑦
++
+𝑤
++
+𝜏
+,
+𝑢
+2
+=
+𝑥
++
+𝑦
++
+𝜏
+,
+𝑢
+3
+=
+𝑧
++
+𝑤
++
+𝜏
+.
+u
+1
+	​
+
+=y+w+τ,u
+2
+	​
+
+=x+y+τ,u
+3
+	​
+
+=z+w+τ.
+
+The anti-tightness inequalities become:
+
+For 
+𝑟
+∈
+𝑆
+2
+r∈S2,
+
+𝐷
+𝑟
++
+𝑢
+1
++
+𝑑
+𝐷
+13
+(
+𝑟
+)
+≥
+17
+,
+D
+r
+	​
+
++u
+1
+	​
+
++d
+D13
+	​
+
+(r)≥17,
+𝐷
+𝑟
++
+𝑢
+3
++
+𝑑
+𝐷
+13
+(
+𝑟
+)
++
+𝑑
+𝑆
+3
+(
+𝑟
+)
+≥
+17.
+D
+r
+	​
+
++u
+3
+	​
+
++d
+D13
+	​
+
+(r)+d
+S3
+	​
+
+(r)≥17.
+
+For 
+𝑟
+∈
+𝐷
+12
+r∈D12,
+
+𝐷
+𝑟
++
+𝑢
+3
++
+𝑑
+𝑆
+3
+(
+𝑟
+)
+≥
+17.
+D
+r
+	​
+
++u
+3
+	​
+
++d
+S3
+	​
+
+(r)≥17.
+
+For 
+𝑟
+∈
+𝑆
+3
+r∈S3,
+
+𝐷
+𝑟
++
+𝑢
+1
++
+𝑑
+𝐷
+12
+(
+𝑟
+)
+≥
+17
+,
+D
+r
+	​
+
++u
+1
+	​
+
++d
+D12
+	​
+
+(r)≥17,
+𝐷
+𝑟
++
+𝑢
+2
++
+𝑑
+𝑆
+2
+(
+𝑟
+)
++
+𝑑
+𝐷
+12
+(
+𝑟
+)
+≥
+17.
+D
+r
+	​
+
++u
+2
+	​
+
++d
+S2
+	​
+
+(r)+d
+D12
+	​
+
+(r)≥17.
+
+For 
+𝑟
+∈
+𝐷
+13
+r∈D13,
+
+𝐷
+𝑟
++
+𝑢
+2
++
+𝑑
+𝑆
+2
+(
+𝑟
+)
+≥
+17.
+D
+r
+	​
+
++u
+2
+	​
+
++d
+S2
+	​
+
+(r)≥17.
+
+There is no such constraint for 
+𝑇
+T, because 
+𝑇
+⊆
+𝑈
+𝑖
+T⊆U
+i
+	​
+
+ for all three colours.
+
+The strongest automatic applications occur when 
+𝑢
+𝑖
+=
+6
+u
+i
+	​
+
+=6 and a mandatory opposite block has size 
+2
+2. Then every vertex on the other shore is 
+𝐶
+C-tight, and (7) forces degree at least 
+9
+9, increasing the required 
+𝑀
+M.
+
+7. Scope
+
+The replacement lemma may be applied globally across the entire 
+𝑞
+=
+13
+,
+𝑘
+=
+3
+,
+𝑡
+=
+2
+q=13,k=3,t=2 search, not only to the five-label residual, provided H14 is genuinely global.
+
+It is unsafe if your previous result only closed something narrower such as:
+
+q14/t2 + cap74 + U'=12
+
+unless you also have a root-invariant scalar reduction proving that every degree-
+(
+8
+,
+8
+)
+(8,8), codegree-two reroot necessarily enters that closed row. Using terminal tightness to reduce to 
+𝑈
+′
+=
+12
+U
+′
+=12, and then using that reduced closure to prove terminal tightness, would be circular.
+
+The 13 profiles marked infeasible solely after adding the experimental degree-equality closure should therefore not yet be counted as closed. They should be rerun with those equalities removed and inequality (7) added.
+
+Weakest steps
+The anti-tightness lemma depends on the extra hypothesis H14: the entire 
+𝑞
+=
+14
+,
+𝑡
+=
+2
+,
+(
+6
+,
+6
+)
+q=14,t=2,(6,6) reroot universe must be closed, not merely a terminal-tight or cap-specific subrow.
+I used the standard rooted identity 
+𝑑
+𝐺
+(
+𝑐
+𝑖
+)
+=
+2
++
+∣
+𝑈
+𝑖
+∣
+d
+G
+	​
+
+(c
+i
+	​
+
+)=2+∣U
+i
+	​
+
+∣. Your displayed parameters 
+𝑞
+=
+13
+,
+𝑘
+=
+3
+,
+∣
+𝐴
+∣
+=
+6
+,
+∣
+𝐵
+∣
+=
+7
+q=13,k=3,∣A∣=6,∣B∣=7 sum to 
+31
+31 under the usual disjoint root partition, so one of those symbols evidently follows a different convention or contains an off-by-one transcription. The proof does not use those displayed 
+𝐴
+,
+𝐵
+A,B counts, but the identity for 
+𝑑
+𝐺
+(
+𝑐
+𝑖
+)
+d
+G
+	​
+
+(c
+i
+	​
+
+) should be checked against the implementation.
+The profile 
+(
+2
+,
+4
+,
+4
+,
+3
+,
+0
+)
+(2,4,4,3,0) is a precise counter-scenario to the reroot inference, not a complete graph satisfying every exact-state constraint.
+Inequality (7) is valid under H14 and directly raises 
+𝑀
+M in several rigid rows, but whether it closes all 27 remaining UNKNOWN profiles is computational rather than proved here.
