@@ -62,3 +62,13 @@ arXiv submission submit/7754052, status "submitted" (in queue), title "The Erdos
 small multiples of five, via a per-root-MaxCut envelope and blow-up integrality", primary math.CO, license CC BY 4.0.
 Public arXiv id (arXiv:2606.xxxxx) assigned at announcement (~next business day). NOTE: 2606.18462 is the separate
 #944 paper. NEXT (after the paper is live): post the OEIS A389646 comment above with the live arXiv link.
+
+## CORRECTION 2026-06-25 (post-submit) — broken cross-reference, REPLACE NEEDED
+The submitted .tex had an undefined cross-reference: page 2 ("Method and honesty") rendered "Section ??" because
+`\ref{sec:cert}` (used on lines 124 and 200) had no matching `\label` — there is no certificate *section*; the order-9
+flag-algebra LP certificate is Theorem `thm:band` (in Sec. The per-root-MaxCut envelope). FIXED: both `\ref{sec:cert}`
+-> `\ref{thm:band}` (now reads "(Theorem 3.x, certified value delta...)"). Full audit done: all 16 refs and all 5
+citations (A389646, BCL21, Raz07, Bl23, EGS92) now resolve; no other `??`/placeholder anywhere.
+Tarball `erdos23_step1_arxiv.tar.gz` rebuilt (byte-identical to fixed disk source; anc/ + SHA256SUMS unchanged).
+TODO (user): the submission is still in queue (not announced) -> on arXiv, Unsubmit -> replace files with the rebuilt
+tarball (or just the fixed erdos23_step1.tex) -> reprocess -> confirm page 2 shows "Theorem ..." not "??" -> resubmit.

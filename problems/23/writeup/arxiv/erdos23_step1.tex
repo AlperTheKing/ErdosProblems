@@ -121,7 +121,7 @@ Erd\H{o}s, Gy\H{o}ri and Simonovits \cite{EGS92}.
 mechanism is to upper-bound the bipartization density of a triangle-free graphon by
 a \emph{per-root-MaxCut envelope} (Section~\ref{sec:env}) that is tight at the
 extremal $C_5$-blow-up, certify the envelope on the medium band with an order-$9$
-flag-algebra linear program (Section~\ref{sec:cert}, certified value
+flag-algebra linear program (Theorem~\ref{thm:band}, certified value
 $\delta\approx 5.991\times10^{-4}$), and convert this approximate graphon bound into
 an exact finite statement by integrality of $\bip$ under blow-up
 (Section~\ref{sec:reduction}); since $\tfrac{25}{2}n^2\delta<1$ only for $n\le 11$,
@@ -197,7 +197,7 @@ $N^2\delta/2=25n^2\delta/2$. The integrality rounding is immediate.
 \end{proof}
 
 With the certified value $\delta\approx 5.991\times10^{-4}$
-(Section~\ref{sec:cert}), the threshold $\tfrac{25}{2}n^2\delta<1$ holds for
+(Theorem~\ref{thm:band}), the threshold $\tfrac{25}{2}n^2\delta<1$ holds for
 $n\le 11$: $n=11$ requires $\delta<2/(25\cdot 121)=6.61\times10^{-4}$, which holds,
 while $n=12$ requires $\delta<5.56\times10^{-4}$, which fails. This is the source of
 the bound $n\le 11$ in Theorem~\ref{thm:main}.
