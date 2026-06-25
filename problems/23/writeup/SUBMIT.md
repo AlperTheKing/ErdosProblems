@@ -70,5 +70,5 @@ flag-algebra LP certificate is Theorem `thm:band` (in Sec. The per-root-MaxCut e
 -> `\ref{thm:band}` (now reads "(Theorem 3.x, certified value delta...)"). Full audit done: all 16 refs and all 5
 citations (A389646, BCL21, Raz07, Bl23, EGS92) now resolve; no other `??`/placeholder anywhere.
 Tarball `erdos23_step1_arxiv.tar.gz` rebuilt (byte-identical to fixed disk source; anc/ + SHA256SUMS unchanged).
-TODO (user): the submission is still in queue (not announced) -> on arXiv, Unsubmit -> replace files with the rebuilt
-tarball (or just the fixed erdos23_step1.tex) -> reprocess -> confirm page 2 shows "Theorem ..." not "??" -> resubmit.
+DONE 2026-06-25: user unsubmitted submit/7754052, replaced with the fixed erdos23_step1.tex, and resubmitted.
+Page-2 "Section ??" resolved. Now awaiting announcement (public arXiv:2606.xxxxx, ~next business day) -> then OEIS.
