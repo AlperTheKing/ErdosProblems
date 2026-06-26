@@ -123,17 +123,17 @@ mechanism is to upper-bound the bipartization density of a triangle-free graphon
 a \emph{per-root-MaxCut envelope} (Section~\ref{sec:env}) that is tight at the
 extremal $C_5$-blow-up, certify the envelope on the medium band with an order-$9$
 flag-algebra linear program (Theorem~\ref{thm:band}, certified value
-$\delta\approx 5.991\times10^{-4}$), and convert this approximate graphon bound into
+$\delta\approx 4.7568\times10^{-5}$), and convert this approximate graphon bound into
 an exact finite statement by integrality of $\bip$ under blow-up
-(Section~\ref{sec:reduction}); since $\tfrac{25}{2}n^2\delta<1$ only for $n\le 11$,
-the closure stops at $n=11$. The density tails are cited from \cite{BCL21}
+(Section~\ref{sec:reduction}); since $\tfrac{25}{2}n^2\delta<1$ only for $n\le 41$,
+the closure stops at $n=41$. The density tails are cited from \cite{BCL21}
 (Section~\ref{sec:tails}); the assembly is in Section~\ref{sec:closure}; the
 verification is in Section~\ref{sec:verification}.
 
 We separate known from new. The conjecture and its sharp example are Erd\H{o}s's;
 the tail bounds, the global $N^2/23.5$ bound, and the flag-algebra framework for
 this problem are due to \cite{BCL21,Raz07}. New here are: the per-root-MaxCut
-envelope and its order-$9$ certificate, the blow-up integrality reduction, and the
+envelope and its order-$10$ certificate, the blow-up integrality reduction, and the
 resulting finite-range Theorem~\ref{thm:main}. Theorem~\ref{thm:main} does
 \emph{not} resolve \eqref{eq:conj}: for $n\ge 12$ the certificate margin exceeds
 the integrality gap, and (Section~\ref{sec:open}) the envelope provably cannot be
@@ -197,11 +197,11 @@ Apply \eqref{eq:transfer} with $N=5n$: $N^2/25=25n^2/25=n^2$ and
 $N^2\delta/2=25n^2\delta/2$. The integrality rounding is immediate.
 \end{proof}
 
-With the certified value $\delta\approx 5.991\times10^{-4}$
+With the certified value $\delta\approx 4.7568\times10^{-5}$
 (Theorem~\ref{thm:band}), the threshold $\tfrac{25}{2}n^2\delta<1$ holds for
-$n\le 11$: $n=11$ requires $\delta<2/(25\cdot 121)=6.61\times10^{-4}$, which holds,
-while $n=12$ requires $\delta<5.56\times10^{-4}$, which fails. This is the source of
-the bound $n\le 11$ in Theorem~\ref{thm:main}.
+$n\le 41$: $n=41$ requires $\delta<2/(25\cdot 1681)=4.7591\times10^{-5}$, which holds
+(by a thin but exact margin), while $n=42$ requires $\delta<4.5351\times10^{-5}$,
+which fails. This is the source of the bound $n\le 41$ in Theorem~\ref{thm:main}.
 
 \section{The per-root-MaxCut envelope}\label{sec:env}
 
