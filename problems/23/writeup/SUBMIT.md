@@ -40,11 +40,11 @@ REMAINING (2 external items — see below):
 4. After the arXiv id is live → submit the OEIS A389646 comment below (oeis.org, login, "edit", add comment + the H-line reference) and link the arXiv note.
 
 ## OEIS A389646 comment (submit after the arXiv id exists)
-"It is proven that a(5k)=k² for all 1≤k≤11, i.e. Erdős's conjecture a(n)≤n²/25 holds with equality on the
-multiples of five up to n=55 (a(25)=25, a(30)=36, …, a(55)=121). The proof is computer-assisted: a per-root
-maximum-cut envelope bounds the monochromatic-pair density by 2/25+δ (δ≈5.99·10⁻⁴) on the medium edge-density
-band, and integrality of the bipartization number under blow-up closes the gap for k≤11; the density tails use
-Balogh–Clemen–Lidický (arXiv:2103.14179). See [arXiv link]. — [author], 2026"
+"It is proven that a(5k)=k² for all 1≤k≤40, i.e. Erdős's conjecture a(n)≤n²/25 holds with equality on the
+multiples of five up to n=200 (a(25)=25, a(30)=36, …, a(200)=1600). The proof is computer-assisted: a per-root
+maximum-cut envelope (with order-10 flag-algebra and rooted-Horn rows) bounds the monochromatic-pair density by
+2/25+δ (δ≈4.86·10⁻⁵) on the medium edge-density band, and integrality of the bipartization number under blow-up
+closes the gap for k≤40; the density tails use Balogh–Clemen–Lidický (arXiv:2103.14179). See [arXiv link]. — [author], 2026"
 Reference line (%H): "[author], <a href='[arXiv url]'>The Erdős n²/25 max-cut conjecture for small multiples of
 five</a>, arXiv:[id] (2026)."
 
@@ -62,6 +62,18 @@ arXiv submission submit/7754052, status "submitted" (in queue), title "The Erdos
 small multiples of five, via a per-root-MaxCut envelope and blow-up integrality", primary math.CO, license CC BY 4.0.
 Public arXiv id (arXiv:2606.xxxxx) assigned at announcement (~next business day). NOTE: 2606.18462 is the separate
 #944 paper. NEXT (after the paper is live): post the OEIS A389646 comment above with the live arXiv link.
+
+## STATUS: v2 RESUBMITTED 2026-06-26 (N<=200, order-10 Horn certificate)
+The in-queue submission (submit/7754052) was REPLACED with the v2: a(5n)=n^2 for 1<=n<=40 (N<=200), via the
+order-10 Horn LP (per-root-MaxCut at 7+8 roots + rooted-Horn + manifest-PSD moment Gram). delta_final=4.8557798e-5
+(exact Fraction; frozen + md5-pinned by Step-2 in bridge/flagsdp/v2_frozen/, == shipped anc/ byte-for-byte;
+Step-1 independent gate PASS). Abstract corrected to order-10 / delta~4.8558e-5 / n<=40 (a v1/v2 value mixup was
+caught at the metadata step). An earlier N<=205 over-reach (a 0.05%-margin fluke from the non-deterministic
+moment-Gram LP) was caught via a cert-drift and reverted to the robust N<=200 (2.88% margin). NEXT: at
+announcement, post the (now N<=200) OEIS A389646 comment above with the live arXiv link. The FULL conjecture
+(all N) reduces entirely to Step-2's delta=0 (the Gamma-lemma); Step-1's all-N assembly
+(problems/23/writeup/all_N_assembly.tex, GPT-Pro referee-confirmed gap-free, H2 retired) is ready to fold in
+once delta=0 lands.
 
 ## CORRECTION 2026-06-25 (post-submit) — broken cross-reference, REPLACE NEEDED
 The submitted .tex had an undefined cross-reference: page 2 ("Method and honesty") rendered "Section ??" because
