@@ -80,6 +80,25 @@ in a gap and the low-tail endpoint issue caused by the Balogh--Clemen--Lid\'ick\
   $\beta(G[t])\le (Nt)^2/25$, whence $\beta(G)\le N^2/25$.
 \end{itemize}
 
+\noindent\textbf{Remark (normalisation at the band edges).} BCL's density is the
+graph density $e/\binom{N}{2}=2e/(N(N-1))$, whereas our partition uses the graphon
+density $d=2e(G)/N^2$; the two differ by the factor $N/(N-1)\to1$. The blow-up transfer
+reconciles them \emph{exactly}: for $G[t]$ on $Nt$ vertices,
+\[
+  \frac{e(G[t])}{\binom{Nt}{2}}
+  =\frac{2\,t^2 e(G)}{Nt(Nt-1)}
+  =\frac{2e(G)}{N^2}\cdot\frac{Nt}{Nt-1}
+  \ \xrightarrow[t\to\infty]{}\ \frac{2e(G)}{N^2}=d,
+\]
+and for every finite $t$ this BCL density strictly exceeds $d$ (as $Nt-1<Nt$). Hence:
+if $d>0.3197$ then $e(G[t])/\binom{Nt}{2}>d>0.3197$ for \emph{all} $t$; if $d<0.2486$
+then $e(G[t])/\binom{Nt}{2}\downarrow d<0.2486$, so it is $<0.2486$ for all large $t$.
+Either way arbitrarily large $t$ (so $n=Nt$ is ``large enough'' for BCL) places $G[t]$
+strictly inside the asserted open BCL tail, giving $\beta(G[t])\le (Nt)^2/25$ and hence
+$\beta(G)\le N^2/25$. Because the \emph{closed} band $[0.2486,0.3197]$ owns both
+endpoints (handled by Step-2's bound, not BCL), no graph with $d$ exactly $0.2486$ or
+$0.3197$ relies on the tails, and no graph falls in a gap.
+
 \noindent\textbf{Remark (no rounding for $5\nmid N$).} When $5\nmid N$, $N^2/25$ is not
 an integer while $\beta(G)$ is; but the conclusion is the \emph{real} inequality
 $\beta(G)\le N^2/25$, which at once gives $\beta(G)\le\lfloor N^2/25\rfloor$. No
@@ -87,6 +106,13 @@ integrality argument is needed. The integrality rounding of the finite paper (th
 threshold $\tfrac{25}{2}N^2\delta<1$) was required \emph{only} for the approximate band
 bound $\delta>0$; at $\delta=0$ it is vacuous. In particular the H2 peeling lemma is
 \emph{not} used anywhere in Theorem~\ref{thm:allN}.
+
+\noindent\textbf{Remark (a genuine minimum; no ``$N$ large'').} The infimum defining
+$d_{\mathrm{mono}}(W_G)$ is attained: $f$ is continuous on the compact box $[0,1]^N$, so
+``$\inf$'' is a minimum (realised at the integer cut). No step invokes ``$N$ large
+enough'': Lemma~\ref{lem:transfer} is exact at every finite $N$, and the lone asymptotic
+input (BCL in the tails) is discharged by the blow-up $t\to\infty$ with $N$ \emph{fixed},
+not by enlarging $N$.
 
 \noindent\textbf{Verification.} The no-fractional-gap core of Lemma~\ref{lem:transfer}
 (that the continuous minimum of $f$ over $[0,1]^N$ equals the integer $\beta(G)$) is
