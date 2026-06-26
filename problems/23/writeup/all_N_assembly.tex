@@ -73,11 +73,13 @@ in a gap and the low-tail endpoint issue caused by the Balogh--Clemen--Lid\'ick\
 \begin{itemize}
 \item \emph{Band} $0.2486\le d\le 0.3197$: the exact band bound
   $d_{\mathrm{mono}}(W)\le 2/25$, the sole hard input, supplied by Step-2.
-\item \emph{Tails} $d<0.2486$ or $d>0.3197$: BCL Thm 1.3 (\texttt{arXiv:2103.14179}).
-  BCL is asymptotic (``$n$ large''); it is discharged at every finite $N$ by the
-  uniform blow-up transfer: $\beta(G[t])=t^2\beta(G)$ and
-  $d_{\mathrm{edge}}(W_{G[t]})=d_{\mathrm{edge}}(W_G)$, so for $t$ large BCL gives
-  $\beta(G[t])\le (Nt)^2/25$, whence $\beta(G)\le N^2/25$.
+\item \emph{Tails} $d<0.2486$ or $d>0.3197$ \emph{(strict)}: BCL Thm 1.3
+  (\texttt{arXiv:2103.14179}), discharged at fixed $N$ by the blow-up
+  $\beta(G[t])=t^2\beta(G)$. BCL's threshold is on its \emph{finite} density
+  $e(G[t])/\binom{Nt}{2}=d\cdot\frac{Nt}{Nt-1}\to d$ (Remark below) -- \emph{not} the
+  graphon density -- which for large $t$ lies strictly inside the same open tail as
+  $d$; with $Nt$ beyond BCL's $n_0$, BCL gives $\beta(G[t])\le (Nt)^2/25$, whence
+  $\beta(G)\le N^2/25$.
 \end{itemize}
 
 \noindent\textbf{Remark (normalisation at the band edges).} BCL's density is the

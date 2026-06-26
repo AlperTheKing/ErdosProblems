@@ -46,3 +46,17 @@ matches Step-1's independent derivation. This is a structural logical reduction 
 Fraction check applies. CAVEAT: H2 is removed from the critical path *conditional on Step-2 actually proving
 delta=0* (the hard, still-open piece). The conjecture's ENTIRE remaining difficulty is now delta=0 (the
 Connected-B Gamma-lemma), which is Step-2-owned / shared.
+
+## Follow-up: adversarial referee of the written all-N assembly (2026-06-26, same thread)
+Step-1 wrote problems/23/writeup/all_N_assembly.tex (Lemma transfer + Theorem all-N reduction) and sent it
+to GPT-Pro for an adversarial referee, probing 4 axes. GPT-Pro verdict (8525 chars): **"No fatal gap found."**
+Per-axis: (1) transfer/multilinearity SOUND (affine-in-x_i => vertex minimizer; for W_G the min is attained;
+arbitrary graphons may not attain the inf, but the all-graphon theorem uses only the inf's VALUE and finite
+transfer uses only W_G); (2) non-mult-5 SOUND (no rounding at delta=0); (3) endpoints SOUND -- the LOW endpoint
+d=0.2486 is subtle: blow-ups have BCL finite density 0.2486*(Nt)/(Nt-1) > 0.2486 for all t, so the low tail
+never discharges it, BUT the CLOSED band owns it; high endpoint safe both ways; (4) no "N large" dependence
+SOUND (blow-up t->inf, N fixed). GAP-TO-FILL (both already pre-empted by Step-1's hardening): (A) "density
+preserved" must use BCL's FINITE density e(G[t])/C(Nt,2)=d*(Nt)/(Nt-1)->d, not the graphon density -- Step-1
+tightened the Tails bullet + added the normalisation Remark; (B) the closed band must explicitly be
+[0.2486,0.3197] owning the endpoints -- already so. => the all-N assembly is REFEREE-CONFIRMED gap-free
+(conditional on Step-2's delta=0). Step-1's full-conjecture contribution (the assembly) is COMPLETE pending delta=0.
