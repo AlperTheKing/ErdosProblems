@@ -44,18 +44,19 @@ $a(5n)\le n^2$. Balogh, Clemen and Lid\'ick\'y proved it for large $N$ in the tw
 density tails (edge density at most $0.2486$ or at least $0.3197$) and proved the
 global bound $a(N)\le N^2/23.5$; the medium-density band remains open. We prove
 \[
-a(5n)=n^2\qquad\text{for every }1\le n\le 11,\quad\text{i.e. } N\in\{5,10,\dots,55\}.
+a(5n)=n^2\qquad\text{for every }1\le n\le 41,\quad\text{i.e. } N\in\{5,10,\dots,205\}.
 \]
 The proof is computer-assisted and combines three ingredients. (i) A
 \emph{per-root-MaxCut envelope}: for the $107$ triangle-free $7$-root types, the
 mean over types of the best per-type cut is an upper bound
-$\dmono(W)\le U_7(W)$ that is \emph{tight} at the $C_5$-blow-up. (ii) An order-$9$
-flag-algebra certificate bounds the envelope on the medium band,
-$U_7(W)\le \tfrac{2}{25}+\delta$ with an explicit rational $\delta\approx
-5.991\times10^{-4}$, for every triangle-free graphon $W$ of edge density in
-$[0.2486,0.3197]$. (iii) The blow-up identity $\bip(G[t])=t^2\bip(G)$ plus
+$\dmono(W)\le U_7(W)$ that is \emph{tight} at the $C_5$-blow-up. (ii) An order-$10$
+flag-algebra certificate---the per-root-MaxCut rows at $7$ and $8$ roots together
+with rooted-Horn cuts and a manifestly-PSD moment block---bounds the envelope on
+the medium band, $U_7(W)\le \tfrac{2}{25}+\delta$ with an explicit rational
+$\delta\approx 4.7568\times10^{-5}$, for every triangle-free graphon $W$ of edge
+density in $[0.2486,0.3197]$. (iii) The blow-up identity $\bip(G[t])=t^2\bip(G)$ plus
 integrality of $\bip$ turns this into $\bip(G)\le n^2+\tfrac{25}{2}n^2\delta$ for
-any $5n$-vertex band-density $G$, and $\tfrac{25}{2}n^2\delta<1$ for $n\le 11$;
+any $5n$-vertex band-density $G$, and $\tfrac{25}{2}n^2\delta<1$ for $n\le 41$;
 the two density tails are handled by the Balogh--Clemen--Lid\'ick\'y bounds,
 transferred to finite $N$ by the same blow-up. The envelope bound $\dmono\le U_7$
 is a genuine graphon upper bound (each per-root rule is one global $2$-colouring),
@@ -101,12 +102,12 @@ lies in the high tail.
 \paragraph{Result.} We resolve the conjecture on the first eleven multiples of five.
 
 \begin{theorem}\label{thm:main}
-$a(5n)=n^2$ for every integer $1\le n\le 11$; equivalently, every triangle-free
-graph on $N$ vertices with $N\in\{5,10,15,\dots,55\}$ can be made bipartite by
+$a(5n)=n^2$ for every integer $1\le n\le 41$; equivalently, every triangle-free
+graph on $N$ vertices with $N\in\{5,10,15,\dots,205\}$ can be made bipartite by
 deleting at most $N^2/25$ edges, and this is sharp.
 \end{theorem}
 
-In particular $a(25)=25$, $a(30)=36$, \dots, $a(55)=121$. The sequence $a(N)$ is
+In particular $a(25)=25$, $a(30)=36$, \dots, $a(205)=1681$. The sequence $a(N)$ is
 catalogued as OEIS A389646 \cite{A389646} and has been determined exactly only up
 to $N=23$ by direct enumeration. Every multiple of five in that known range agrees
 with Theorem~\ref{thm:main}: the catalogued values $a(5)=1$, $a(10)=4$, $a(15)=9$,
