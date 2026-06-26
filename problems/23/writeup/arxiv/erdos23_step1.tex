@@ -1,10 +1,11 @@
 % =====================================================================================
-% ENVELOPE VERSION (2026-06-25) -- SUBMIT-READY. Order-9 per-root-MaxCut envelope U_7.
-% Verification: architecture GPT-Pro-validated (no fatal error); cut rows EXACT (denom 25*(9)_7=4536000);
-% delta = rho - LO*mu_lo = 5.991e-4 < 2/3025 = 6.6116e-4 (n<=11, margin 9.4%, robust to ~1e-6); per-type
-% sum lambda = 1; moment positivity = G1 Gram-cert (exact); brute ground truth n<=12. Optional upgrade
-% (R1): per-flag moment rows are v^T P^σ v with v not stored here -> pure-exact rationalization ships in
-% the compact certificate (Step-2). Before posting: compile (Overleaf), fill author, attach anc/.
+% HORN VERSION (2026-06-26) -- order-10 Horn LP, N<=205. Supersedes the order-9 envelope v1 (N<=55).
+% delta_final = 4.7568004e-5 (exact Fraction) < 2/(25*1681)=4.7591e-5 (=> n<=41, thin but exact margin)
+% < 5e-5 < 1/450. 5 dual-feasibility conditions exact: a7+a8=1; per-type/per-root lambda sums; per-state
+% R_cbh >= <Q,P> over 12172 states; delta<5e-5. Moment block = MANIFEST Gram Q=sum w_c vv vv^T, w>=0 (LP,
+% no SDP/Cholesky). INDEPENDENTLY GATED by Step-1 (step1_v2_independent_gate.py: re-derived delta from the
+% raw dual, w>=0, a7+a8=1) + producer verifier complete_v2_cert.py = VALID. Bound also brute-true
+% (band d_mono<=0.0556<<0.0800). Before posting: compile (Overleaf), fill author, attach anc/.
 % =====================================================================================
 \documentclass[11pt]{article}
 \usepackage[margin=1.1in]{geometry}
@@ -113,7 +114,7 @@ to $N=23$ by direct enumeration. Every multiple of five in that known range agre
 with Theorem~\ref{thm:main}: the catalogued values $a(5)=1$, $a(10)=4$, $a(15)=9$,
 $a(20)=16$ are exactly $1^2,2^2,3^2,4^2$, an independent brute-force confirmation
 on each case where the truth is already known. Theorem~\ref{thm:main} adds the
-multiples of five from $25$ to $55$ ($a(25)=25$ through $a(55)=121$), all beyond
+multiples of five from $25$ to $205$ ($a(25)=25$ through $a(205)=1681$), all beyond
 the exhaustively determined range $N\le 23$ and hence new. The closely related
 extremal question --- how many edges \emph{must} be deleted --- was studied by
 Erd\H{o}s, Gy\H{o}ri and Simonovits \cite{EGS92}.
@@ -121,7 +122,7 @@ Erd\H{o}s, Gy\H{o}ri and Simonovits \cite{EGS92}.
 \paragraph{Method and honesty.} The proof is \emph{computer-assisted}. Its
 mechanism is to upper-bound the bipartization density of a triangle-free graphon by
 a \emph{per-root-MaxCut envelope} (Section~\ref{sec:env}) that is tight at the
-extremal $C_5$-blow-up, certify the envelope on the medium band with an order-$9$
+extremal $C_5$-blow-up, certify the envelope on the medium band with an order-$10$
 flag-algebra linear program (Theorem~\ref{thm:band}, certified value
 $\delta\approx 4.7568\times10^{-5}$), and convert this approximate graphon bound into
 an exact finite statement by integrality of $\bip$ under blow-up
@@ -269,43 +270,48 @@ that the earlier fixed-cut relaxation lacked.
 
 \begin{theorem}\label{thm:band}
 There is an explicit nonnegative rational $\delta$ \textup{(}numerically
-$\delta\approx 5.991\times10^{-4}$; the exact value is recovered by the certificate
-re-verification of Section~\ref{sec:verification}\textup{)} such that
+$\delta\approx 4.7568\times10^{-5}$; the exact value $\delta_{\mathrm{final}}$ is
+recovered by the certificate re-verification of Section~\ref{sec:verification}\textup{)}
+such that
 \[
-  \eta\;:=\;\sup_{W}\ \sum_{\sigma\in\mathcal{T}_7}\min_c g_{\sigma,c}(W)\;\le\;\delta,
+  \dmono(W)\;\le\;\tfrac{2}{25}+\delta
 \]
-the supremum over triangle-free graphons $W$ with
+for every triangle-free $\{0,1\}$ step graphon $W$ with
 $\mathrm{LO}\le d_{\mathrm{edge}}(W)\le\mathrm{HI}$,
 $\mathrm{LO}=\tfrac{1243}{5000}=0.2486$, $\mathrm{HI}=\tfrac{3197}{10000}=0.3197$.
-Here $\delta$ is the optimum of an order-$9$ flag-algebra relaxation, which
-\emph{upper-bounds} $\eta$ (we never claim equality: $\eta\le\eta_{\mathrm{LP}}\le
-\delta$, and only this upper bound is needed). Consequently, by the definition of
-$U_7$ and Lemma~\ref{lem:env}, $\dmono(W)\le U_7(W)\le\tfrac{2}{25}+\delta$ for
-every triangle-free $\{0,1\}$ step graphon $W$ with edge density in
-$[0.2486,0.3197]$.
+Here $\delta$ is the optimum of an order-$10$ flag-algebra relaxation that
+\emph{upper-bounds} the band maximum of $\dmono$ (we never claim equality; only this
+upper bound is needed). It refines the order-$9$ per-root-MaxCut envelope of
+Lemma~\ref{lem:env} \textup{(}$\dmono\le U_7$\textup{)}: besides the per-root rows at
+$7$ roots it adds the per-root-MaxCut rows at $8$ roots, rooted-Horn cuts, and a
+moment block, all of them valid for every triangle-free graphon.
 \end{theorem}
 
-The bound $\delta$ is the optimum of a linear program over the order-$9$ flag
-densities: variables $x\ge 0$ (a vector indexed by the $1897$ order-$9$
-triangle-free flags, $\sum x=1$) and free $u_\sigma$; maximise $\sum_\sigma u_\sigma$
-subject to the band inequalities, the per-type envelope constraints
-$u_\sigma\le g_{\sigma,c}(x)$ for every rule $c$ in $\sigma$'s pool (so
-$u_\sigma\le\min_c g_{\sigma,c}(x)$), and the moment positivity rows $m(x)\ge 0$.
-Every genuine band graphon induces a feasible $x$ (its order-$9$ flag-density
-vector), so the LP optimum $\delta$ \emph{upper-bounds} the envelope maximum $\eta$;
-the converse can fail --- a feasible $x$ need not come from any graphon --- which is
-why the LP is a relaxation and we only assert $\eta\le\delta$. The moment rows are
-the order-$9$ flag-product (SOS) functionals of Section~\ref{sec:verification},
-whose graphon nonnegativity is the exact Gram factorization there. By
-linear-programming duality, $\delta$ is certified by nonnegative multipliers: for
-each type $\sigma$ a probability distribution $\lambda_{\sigma,c}\ge 0$,
-$\sum_c\lambda_{\sigma,c}=1$ (each $c$ a fixed Boolean rule $\{0,1\}^7\to\{0,1\}$,
-not re-optimised per flag), together with band multipliers $\mu_{\mathrm{lo}},
-\mu_{\mathrm{hi}}\ge0$ and moment multipliers $\nu_j\ge0$ such that
-$\sum_{\sigma,c}\lambda_{\sigma,c}g_{\sigma,c}(H)+(\mu_{\mathrm{lo}}-\mu_{\mathrm{hi}})
-d(H)+\sum_j\nu_j m_j(H)\le\rho$ for every order-$9$ flag $H$, with
-$\delta=\rho+\mathrm{HI}\,\mu_{\mathrm{hi}}-\mathrm{LO}\,\mu_{\mathrm{lo}}$. This is
-the object re-verified exactly in Section~\ref{sec:verification}.
+The bound $\delta$ is the optimum of a linear program over the order-$10$
+($C_5$-lifted order-$9$) flag densities: a state vector $x\ge0$ over the $12{,}172$
+triangle-free band states, $\sum x=1$, with envelope variables $u_\sigma$. Its rows
+are (a) the band inequalities $\mathrm{LO}\le d_{\mathrm{edge}}(x)\le\mathrm{HI}$;
+(b) the per-root-MaxCut envelope rows at $7$ roots ($107$ types) and at $8$ roots
+($410$ roots), each $u_\sigma\le g_{\sigma,c}(x)$ for a \emph{fixed} Boolean rule $c$
+(so $u_\sigma\le\min_c g_{\sigma,c}(x)$), tight at the $C_5$-blow-up; (c) rooted-Horn
+cuts, valid global $2$-colourings that vanish at every odd cycle; and (d) the
+moment-positivity rows $m(x)\ge0$. Every genuine band graphon induces a feasible $x$,
+so the LP optimum $\delta$ \emph{upper-bounds} the true band maximum of $\dmono$; the
+converse can fail --- a feasible $x$ need not come from any graphon --- which is why
+the LP is a relaxation. By linear-programming duality, $\delta$ is certified by
+nonnegative multipliers: per-root envelope distributions $\lambda_{\sigma,c}\ge0$
+with $a_7+a_8=1$, where $a_7=\min_\sigma\sum_c\lambda_{\sigma,c}$ over the $7$-root
+types and $a_8$ is the analogue over the $8$-root roots; band multipliers
+$\mu_{\mathrm{lo}},\mu_{\mathrm{hi}}\ge0$; and Horn and moment multipliers. These
+assemble into a single per-state dual-feasibility inequality
+$R_{\mathrm{cbh}}(s)\ge\langle Q,P(s)\rangle$ over all $12{,}172$ states, where the
+moment term is governed by a \emph{manifestly} positive-semidefinite Gram matrix
+$Q=\sum_c w_c\,vv_c\,vv_c^\top$ with $w_c\ge0$ --- so no semidefinite solve or
+Cholesky rounding is needed --- and
+$\delta_{\mathrm{final}}=\rho+\mathrm{HI}\,\mu_{\mathrm{hi}}-\mathrm{LO}\,\mu_{\mathrm{lo}}
+-\tfrac{2}{25}a_8+\varepsilon$, the slack $\varepsilon$ absorbing an exact
+$O(10^{-8})$ per-state residual. This is the object re-verified exactly in
+Section~\ref{sec:verification}.
 
 \section{The density tails}\label{sec:tails}
 
@@ -336,7 +342,7 @@ all densities with no gap.
 
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:closure}
 
-Let $G$ be triangle-free on $N=5n$ vertices, $1\le n\le 11$, with monochromatic-pair
+Let $G$ be triangle-free on $N=5n$ vertices, $1\le n\le 41$, with monochromatic-pair
 density $d:=2e(G)/N^2$. We bound $\bip(G)$ by $n^2$ in all three density regimes;
 sharpness then follows from $\bip(C_5[n])=n^2$.
 
@@ -347,19 +353,19 @@ $\bip(G)\le N^2/25=n^2$.
 Theorem~\ref{thm:band} (whose band is closed) the limiting graphon $W_G$ satisfies
 $\dmono(W_G)\le\tfrac2{25}+\delta$, and $\dmono(W_G)=2\bip(G)/N^2$ by
 Section~\ref{sec:reduction}. Proposition~\ref{prop:integrality} gives
-$\bip(G)\le n^2+\tfrac{25}{2}n^2\delta<n^2+1$ (as $n\le 11$), so the integer
+$\bip(G)\le n^2+\tfrac{25}{2}n^2\delta<n^2+1$ (as $n\le 41$), so the integer
 $\bip(G)$ is at most $n^2$.
 
 \smallskip\noindent\emph{High tail ($d\ge 0.3197$).} By
 Corollary~\ref{cor:tails}, $\bip(G)\le n^2$.
 
-\smallskip Every triangle-free $G$ on $5n$ vertices, $n\le 11$, therefore has
+\smallskip Every triangle-free $G$ on $5n$ vertices, $n\le 41$, therefore has
 $\bip(G)\le n^2$, and $C_5[n]$ attains it. Hence $a(5n)=n^2$. \qed
 
 \section{Verification, certificates, and ground truth}\label{sec:verification}
 
 The result rests on (a) the envelope soundness $\dmono\le U_7$
-(Lemma~\ref{lem:env}) and (b) the validity of the order-$9$ certificate of
+(Lemma~\ref{lem:env}) and (b) the validity of the order-$10$ certificate of
 Theorem~\ref{thm:band}. We guard both on independent levels; all numeric checks are
 in exact rational arithmetic (Python \texttt{fractions}), and the scripts are
 ancillary files.
@@ -377,20 +383,22 @@ $C_5\cup C_5$ ($1.016$). The envelope also survives the adversarial in-band
 weighted $C_{11}$-blow-up on which a fixed-cut relaxation fails: there
 $\dmono=8/2025\approx 0.0040$ while $U_7\approx 0.0108$.
 
-\paragraph{(2) Certificate re-verification.} The stored envelope certificate
-(per-type cut pool, moment rows, optimal $x$, and $\eta$) is re-loaded and the LP
-re-solved; the dual multipliers $\lambda_{\sigma,c}\ge 0$ satisfy
-$\sum_c\lambda_{\sigma,c}=1$ for each active type $\sigma$, the band
-($\mu_{\mathrm{hi}}=0$) and moment multipliers are nonnegative, and the dual
-objective is $\delta=\rho-\mathrm{LO}\,\mu_{\mathrm{lo}}$. The $353$ active cut rows
-$g_{\sigma,c}$ are \emph{exact} rationals --- each value has denominator
-$25\cdot(9)_7=4{,}536{,}000$ --- and are recovered and re-summed in exact arithmetic;
-with the rational dual this gives $\delta=5.991\times10^{-4}<2/(25\cdot 121)
-=6.6116\times10^{-4}$, so $n\le 11$, with a $9.4\%$ margin robust to perturbations of
-order $10^{-6}$ (far larger than any rounding). The $264$ active moment rows
-$m_j=v_j^\top P^\sigma v_j$ enter the per-flag dual-feasibility inequality; their
-exact rationalization (the vectors $v_j$) accompanies the compact certificate, and
-their positivity on band graphons is the Gram certificate of ingredient (3).
+\paragraph{(2) Certificate re-verification (two independent passes).} The order-$10$
+Horn certificate --- the dual multipliers $(\rho,\mu_{\mathrm{lo}},\mu_{\mathrm{hi}},
+\lambda_{\sigma,c})$ and the Gram weights $w_c$ --- is checked twice in exact
+\texttt{fractions}. First, the producer's verifier re-derives all five
+dual-feasibility conditions: $a_7+a_8=1$; $\sum_c\lambda_{\sigma,c}\ge a_7$ for each
+of the $107$ seven-root types; $\sum_c\lambda_{\sigma,c}\ge a_8$ for each of the $410$
+eight-root roots; the per-state inequality $R_{\mathrm{cbh}}(s)\ge\langle Q,P(s)\rangle$
+for all $12{,}172$ states (a worst-case residual $-1.02\times10^{-8}$ is absorbed by
+the exact slack $\varepsilon$); and $\delta_{\mathrm{final}}<5\times10^{-5}$. Second,
+an \emph{independent} gate re-derives
+$\delta_{\mathrm{final}}=4.7568004\times10^{-5}$ \emph{directly from the raw dual},
+matching the producer's exact \texttt{Fraction} bit for bit, and confirms both
+$a_7+a_8=1$ and $w_c\ge0$ for every Gram atom. Since
+$\delta_{\mathrm{final}}<2/(25\cdot 1681)=4.7591\times10^{-5}$ this gives $n\le 41$;
+the margin is thin ($\approx0.05\%$) because $N\le 205$ is the flag-LP finite ceiling,
+but it is \emph{exact} (rational, not floating-point) and so carries no rounding risk.
 
 \paragraph{(3) Moment positivity (graphon-level, exactly certified).} The moment
 rows enter as a sum-of-squares term with nonnegative multipliers; per flag the
@@ -405,15 +413,20 @@ profiles in use and for representative band graphons (the extremal $C_5$, in-ban
 $C_7$, the Petersen graph, $C_9$, a weighted $C_5$): each is symmetric, matches an
 independent double-sum recomputation to exact-zero discrepancy, and gives the
 inner product against the certificate's positive-semidefinite matrix
-$\ge 0$ exactly. The averaging is taken on the blow-up graphon (the same $W_G$ as
-in Section~\ref{sec:reduction}); finite distinct-subset densities carry an $O(1/n)$
-disjointness defect that does not affect the graphon bound.
+$\ge 0$ exactly. The certificate's own moment term is governed by a second,
+manifestly positive-semidefinite Gram $Q=\sum_c w_c\,vv_c\,vv_c^\top$ with $w_c\ge0$:
+these weights are found by a plain linear program over $394$ exact atoms ($77$ in the
+support), so $Q\succeq0$ holds by construction --- no eigenvector recovery,
+semidefinite solve, or Cholesky rounding enters. The averaging is taken on the
+blow-up graphon (the same $W_G$ as in Section~\ref{sec:reduction}); finite
+distinct-subset densities carry an $O(1/n)$ disjointness defect that does not affect
+the graphon bound.
 
 \paragraph{(4) Brute-force ground truth.} Independently of all flag machinery, we
 enumerated every triangle-free graph of order $9,10,11,12$, computed $\bip$ by
 exact maximum cut, and recorded $\dmono$ for those in the band. The in-band maxima
 observed were $0.0494$, $0.0400$, $0.0496$, $0.0556$ respectively, all far below
-the certified $\tfrac2{25}+\delta\approx 0.0806$; no graph approaches, let alone
+the certified $\tfrac2{25}+\delta\approx 0.0800$; no graph approaches, let alone
 violates, the bound. The max-cut routine was validated on known values
 ($C_5\!:4$, Petersen$:12$).
 
@@ -427,15 +440,14 @@ Theorem~\ref{thm:bcl} is cited from \cite{BCL21}.
 
 \section{The obstruction to all $n$}\label{sec:open}
 
-Theorem~\ref{thm:main} stops at $n=11$ because Proposition~\ref{prop:integrality}
-needs $\tfrac{25}{2}n^2\delta<1$, and the certified $\delta\approx 5.991\times10^{-4}$
-gives exactly $n\le 11$. A larger range needs a smaller $\delta$. We found that the
-per-root-MaxCut envelope cannot supply it within reach: certifying $U_7$ at order
-$9$ plateaus at $\delta\approx 6.1\times10^{-4}$, and the order-$10$ envelope $U_8$
-(eight roots) plateaus near $3\text{--}6\times10^{-4}$ --- both far above the
-$6.17\times10^{-5}$ that the next decade ($n\le 36$, $N\le 180$) would require, and
-order $11$ is computationally out of reach. The sharp asymptotic conjecture needs
-$\delta=0$ exactly, which no order of this envelope delivers.
+Theorem~\ref{thm:main} stops at $n=41$ because Proposition~\ref{prop:integrality}
+needs $\tfrac{25}{2}n^2\delta<1$, and the certified $\delta\approx 4.7568\times10^{-5}$
+gives exactly $n\le 41$. A larger range needs a still smaller $\delta$. The order-$10$
+certificate is essentially at the flag-LP finite ceiling: the per-root-MaxCut envelope
+at $7$ and $8$ roots, even augmented with rooted-Horn rows and the moment block,
+plateaus at $\delta\approx 4.76\times10^{-5}$ (the margin at $n=41$ is already only
+$\approx0.05\%$), and order $11$ is computationally out of reach. The sharp asymptotic
+conjecture needs $\delta=0$ exactly, which no finite order of this relaxation delivers.
 
 The natural route to all $n$ is the asymptotic inequality $\dmono(W)\le 2/25$
 itself. It reduces (after fixing a maximum cut, with $M$ the monochromatic edges
@@ -449,21 +461,25 @@ endpoints of a bad edge are joined by $B$-paths of different even lengths, and i
 self-tight: every flag-algebra, signature, or quadratic-cut certificate we tried
 equals $\Gamma$ at the $C_5[q]$ extremal, hence only re-proves $\Gamma\le\Gamma$.
 We regard isolating the conjecture to this single estimate, and establishing it
-computationally for the multiples of five up to $N=55$, as the contribution of this
+computationally for the multiples of five up to $N=205$, as the contribution of this
 note.
 
 \section*{Ancillary files}
 
-\texttt{envelope\_k7.py} (the order-$9$ per-root-MaxCut envelope LP) and
-\texttt{envelope\_k7\_cert.pkl} (the converged per-type cut pool, moment rows, and
-optimum); \texttt{regen\_verify\_u7.py} (rebuilds the LP from the certificate,
-re-solves $\eta$, and runs the exact-rational dual-feasibility check);
-\texttt{validate\_dmono\_le\_u8.py} (the exact $\dmono\le U_7$ envelope-soundness
-check); \texttt{brute\_dmono.py} with \texttt{flag\_engine.py} (a self-contained
-independent brute-force max-cut ground-truth checker, requiring no certificate);
-the moment-PSD Gram-certificate scripts \texttt{g1\_exact\_psd.py},
-\texttt{g1\_graphon\_density.py}; a \texttt{README} giving the order parameter, the
-band endpoints, and the exact rational $\delta$; and a \texttt{SHA256SUMS} manifest.
+\texttt{step1\_v2\_independent\_gate.py} (the independent exact-\texttt{Fraction}
+verification: re-derives $\delta_{\mathrm{final}}$ from the raw dual, and checks
+$a_7+a_8=1$ and the manifest-PSD weights $w_c\ge0$) and \texttt{complete\_v2\_cert.py}
+(the producer's one-command verifier of all five dual-feasibility conditions);
+\texttt{moment\_gram\_lp.py} and \texttt{moment\_gram\_exact\_verify.py} (the manifest
+Gram block $Q=\sum_c w_c\,vv_c vv_c^\top$); \texttt{brute\_dmono.py} with
+\texttt{flag\_engine.py} (a self-contained independent brute-force max-cut
+ground-truth checker, requiring no certificate); the moment-PSD Gram-certificate
+scripts \texttt{g1\_exact\_psd.py}, \texttt{g1\_graphon\_density.py}; the compact dual
+(\texttt{horn\_dual.pkl}, \texttt{moment\_gram\_w.pkl}, \texttt{v2\_cert\_complete.pkl});
+a \texttt{README} giving the order parameter, the band endpoints, and the exact
+rational $\delta_{\mathrm{final}}$; and a \texttt{SHA256SUMS} manifest. The full
+order-$10$ LP cache and lifted-state tables exceed arXiv ancillary limits and are
+regenerable from the scripts.
 
 \begin{thebibliography}{9}
 
