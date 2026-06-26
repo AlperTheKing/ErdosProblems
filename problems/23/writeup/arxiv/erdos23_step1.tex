@@ -1,7 +1,8 @@
 % =====================================================================================
-% HORN VERSION (2026-06-26) -- order-10 Horn LP, N<=205. Supersedes the order-9 envelope v1 (N<=55).
-% delta_final = 4.7568004e-5 (exact Fraction) < 2/(25*1681)=4.7591e-5 (=> n<=41, thin but exact margin)
-% < 5e-5 < 1/450. 5 dual-feasibility conditions exact: a7+a8=1; per-type/per-root lambda sums; per-state
+% HORN VERSION (2026-06-26) -- order-10 Horn LP, N<=200. Supersedes the order-9 envelope v1 (N<=55).
+% delta_final = 4.8557798e-5 (exact Fraction) < 2/(25*1600)=5.0e-5 (=> n<=40, robust 2.88% margin) < 1/450.
+% NOTE: moment LP is non-deterministic (delta drifts ~4.75-4.86e-5); this is the FROZEN anc/ snapshot.
+% 5 dual-feasibility conditions exact: a7+a8=1; per-type/per-root lambda sums; per-state
 % R_cbh >= <Q,P> over 12172 states; delta<5e-5. Moment block = MANIFEST Gram Q=sum w_c vv vv^T, w>=0 (LP,
 % no SDP/Cholesky). INDEPENDENTLY GATED by Step-1 (step1_v2_independent_gate.py: re-derived delta from the
 % raw dual, w>=0, a7+a8=1) + producer verifier complete_v2_cert.py = VALID. Bound also brute-true
@@ -45,7 +46,7 @@ $a(5n)\le n^2$. Balogh, Clemen and Lid\'ick\'y proved it for large $N$ in the tw
 density tails (edge density at most $0.2486$ or at least $0.3197$) and proved the
 global bound $a(N)\le N^2/23.5$; the medium-density band remains open. We prove
 \[
-a(5n)=n^2\qquad\text{for every }1\le n\le 41,\quad\text{i.e. } N\in\{5,10,\dots,205\}.
+a(5n)=n^2\qquad\text{for every }1\le n\le 40,\quad\text{i.e. } N\in\{5,10,\dots,200\}.
 \]
 The proof is computer-assisted and combines three ingredients. (i) A
 \emph{per-root-MaxCut envelope}: for the $107$ triangle-free $7$-root types, the
@@ -54,10 +55,10 @@ $\dmono(W)\le U_7(W)$ that is \emph{tight} at the $C_5$-blow-up. (ii) An order-$
 flag-algebra certificate---the per-root-MaxCut rows at $7$ and $8$ roots together
 with rooted-Horn cuts and a manifestly-PSD moment block---bounds the envelope on
 the medium band, $U_7(W)\le \tfrac{2}{25}+\delta$ with an explicit rational
-$\delta\approx 4.7568\times10^{-5}$, for every triangle-free graphon $W$ of edge
+$\delta\approx 4.8558\times10^{-5}$, for every triangle-free graphon $W$ of edge
 density in $[0.2486,0.3197]$. (iii) The blow-up identity $\bip(G[t])=t^2\bip(G)$ plus
 integrality of $\bip$ turns this into $\bip(G)\le n^2+\tfrac{25}{2}n^2\delta$ for
-any $5n$-vertex band-density $G$, and $\tfrac{25}{2}n^2\delta<1$ for $n\le 41$;
+any $5n$-vertex band-density $G$, and $\tfrac{25}{2}n^2\delta<1$ for $n\le 40$;
 the two density tails are handled by the Balogh--Clemen--Lid\'ick\'y bounds,
 transferred to finite $N$ by the same blow-up. The envelope bound $\dmono\le U_7$
 is a genuine graphon upper bound (each per-root rule is one global $2$-colouring),
@@ -103,18 +104,18 @@ lies in the high tail.
 \paragraph{Result.} We resolve the conjecture on the first eleven multiples of five.
 
 \begin{theorem}\label{thm:main}
-$a(5n)=n^2$ for every integer $1\le n\le 41$; equivalently, every triangle-free
-graph on $N$ vertices with $N\in\{5,10,15,\dots,205\}$ can be made bipartite by
+$a(5n)=n^2$ for every integer $1\le n\le 40$; equivalently, every triangle-free
+graph on $N$ vertices with $N\in\{5,10,15,\dots,200\}$ can be made bipartite by
 deleting at most $N^2/25$ edges, and this is sharp.
 \end{theorem}
 
-In particular $a(25)=25$, $a(30)=36$, \dots, $a(205)=1681$. The sequence $a(N)$ is
+In particular $a(25)=25$, $a(30)=36$, \dots, $a(200)=1600$. The sequence $a(N)$ is
 catalogued as OEIS A389646 \cite{A389646} and has been determined exactly only up
 to $N=23$ by direct enumeration. Every multiple of five in that known range agrees
 with Theorem~\ref{thm:main}: the catalogued values $a(5)=1$, $a(10)=4$, $a(15)=9$,
 $a(20)=16$ are exactly $1^2,2^2,3^2,4^2$, an independent brute-force confirmation
 on each case where the truth is already known. Theorem~\ref{thm:main} adds the
-multiples of five from $25$ to $205$ ($a(25)=25$ through $a(205)=1681$), all beyond
+multiples of five from $25$ to $200$ ($a(25)=25$ through $a(200)=1600$), all beyond
 the exhaustively determined range $N\le 23$ and hence new. The closely related
 extremal question --- how many edges \emph{must} be deleted --- was studied by
 Erd\H{o}s, Gy\H{o}ri and Simonovits \cite{EGS92}.
@@ -124,10 +125,10 @@ mechanism is to upper-bound the bipartization density of a triangle-free graphon
 a \emph{per-root-MaxCut envelope} (Section~\ref{sec:env}) that is tight at the
 extremal $C_5$-blow-up, certify the envelope on the medium band with an order-$10$
 flag-algebra linear program (Theorem~\ref{thm:band}, certified value
-$\delta\approx 4.7568\times10^{-5}$), and convert this approximate graphon bound into
+$\delta\approx 4.8558\times10^{-5}$), and convert this approximate graphon bound into
 an exact finite statement by integrality of $\bip$ under blow-up
-(Section~\ref{sec:reduction}); since $\tfrac{25}{2}n^2\delta<1$ only for $n\le 41$,
-the closure stops at $n=41$. The density tails are cited from \cite{BCL21}
+(Section~\ref{sec:reduction}); since $\tfrac{25}{2}n^2\delta<1$ only for $n\le 40$,
+the closure stops at $n=40$. The density tails are cited from \cite{BCL21}
 (Section~\ref{sec:tails}); the assembly is in Section~\ref{sec:closure}; the
 verification is in Section~\ref{sec:verification}.
 
@@ -198,11 +199,11 @@ Apply \eqref{eq:transfer} with $N=5n$: $N^2/25=25n^2/25=n^2$ and
 $N^2\delta/2=25n^2\delta/2$. The integrality rounding is immediate.
 \end{proof}
 
-With the certified value $\delta\approx 4.7568\times10^{-5}$
+With the certified value $\delta\approx 4.8558\times10^{-5}$
 (Theorem~\ref{thm:band}), the threshold $\tfrac{25}{2}n^2\delta<1$ holds for
-$n\le 41$: $n=41$ requires $\delta<2/(25\cdot 1681)=4.7591\times10^{-5}$, which holds
-(by a thin but exact margin), while $n=42$ requires $\delta<4.5351\times10^{-5}$,
-which fails. This is the source of the bound $n\le 41$ in Theorem~\ref{thm:main}.
+$n\le 40$: $n=40$ requires $\delta<2/(25\cdot 1600)=5.0000\times10^{-5}$, which holds
+with a $2.88\%$ margin, while $n=41$ requires $\delta<4.7591\times10^{-5}$, which
+fails. This is the source of the bound $n\le 40$ in Theorem~\ref{thm:main}.
 
 \section{The per-root-MaxCut envelope}\label{sec:env}
 
@@ -270,7 +271,7 @@ that the earlier fixed-cut relaxation lacked.
 
 \begin{theorem}\label{thm:band}
 There is an explicit nonnegative rational $\delta$ \textup{(}numerically
-$\delta\approx 4.7568\times10^{-5}$; the exact value $\delta_{\mathrm{final}}$ is
+$\delta\approx 4.8558\times10^{-5}$; the exact value $\delta_{\mathrm{final}}$ is
 recovered by the certificate re-verification of Section~\ref{sec:verification}\textup{)}
 such that
 \[
@@ -342,7 +343,7 @@ all densities with no gap.
 
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:closure}
 
-Let $G$ be triangle-free on $N=5n$ vertices, $1\le n\le 41$, with monochromatic-pair
+Let $G$ be triangle-free on $N=5n$ vertices, $1\le n\le 40$, with monochromatic-pair
 density $d:=2e(G)/N^2$. We bound $\bip(G)$ by $n^2$ in all three density regimes;
 sharpness then follows from $\bip(C_5[n])=n^2$.
 
@@ -353,13 +354,13 @@ $\bip(G)\le N^2/25=n^2$.
 Theorem~\ref{thm:band} (whose band is closed) the limiting graphon $W_G$ satisfies
 $\dmono(W_G)\le\tfrac2{25}+\delta$, and $\dmono(W_G)=2\bip(G)/N^2$ by
 Section~\ref{sec:reduction}. Proposition~\ref{prop:integrality} gives
-$\bip(G)\le n^2+\tfrac{25}{2}n^2\delta<n^2+1$ (as $n\le 41$), so the integer
+$\bip(G)\le n^2+\tfrac{25}{2}n^2\delta<n^2+1$ (as $n\le 40$), so the integer
 $\bip(G)$ is at most $n^2$.
 
 \smallskip\noindent\emph{High tail ($d\ge 0.3197$).} By
 Corollary~\ref{cor:tails}, $\bip(G)\le n^2$.
 
-\smallskip Every triangle-free $G$ on $5n$ vertices, $n\le 41$, therefore has
+\smallskip Every triangle-free $G$ on $5n$ vertices, $n\le 40$, therefore has
 $\bip(G)\le n^2$, and $C_5[n]$ attains it. Hence $a(5n)=n^2$. \qed
 
 \section{Verification, certificates, and ground truth}\label{sec:verification}
@@ -393,12 +394,14 @@ eight-root roots; the per-state inequality $R_{\mathrm{cbh}}(s)\ge\langle Q,P(s)
 for all $12{,}172$ states (a worst-case residual $-1.02\times10^{-8}$ is absorbed by
 the exact slack $\varepsilon$); and $\delta_{\mathrm{final}}<5\times10^{-5}$. Second,
 an \emph{independent} gate re-derives
-$\delta_{\mathrm{final}}=4.7568004\times10^{-5}$ \emph{directly from the raw dual},
+$\delta_{\mathrm{final}}=4.8557798\times10^{-5}$ \emph{directly from the raw dual},
 matching the producer's exact \texttt{Fraction} bit for bit, and confirms both
 $a_7+a_8=1$ and $w_c\ge0$ for every Gram atom. Since
-$\delta_{\mathrm{final}}<2/(25\cdot 1681)=4.7591\times10^{-5}$ this gives $n\le 41$;
-the margin is thin ($\approx0.05\%$) because $N\le 205$ is the flag-LP finite ceiling,
-but it is \emph{exact} (rational, not floating-point) and so carries no rounding risk.
+$\delta_{\mathrm{final}}<2/(25\cdot 1600)=5.0\times10^{-5}$ this gives $n\le 40$ with a
+$2.88\%$ margin; the bound is \emph{exact} (rational, not floating-point) and so
+carries no rounding risk. We do not claim $n=41$: that needs
+$\delta<4.7591\times10^{-5}$, which the non-deterministic moment LP does not robustly
+attain.
 
 \paragraph{(3) Moment positivity (graphon-level, exactly certified).} The moment
 rows enter as a sum-of-squares term with nonnegative multipliers; per flag the
@@ -440,14 +443,15 @@ Theorem~\ref{thm:bcl} is cited from \cite{BCL21}.
 
 \section{The obstruction to all $n$}\label{sec:open}
 
-Theorem~\ref{thm:main} stops at $n=41$ because Proposition~\ref{prop:integrality}
-needs $\tfrac{25}{2}n^2\delta<1$, and the certified $\delta\approx 4.7568\times10^{-5}$
-gives exactly $n\le 41$. A larger range needs a still smaller $\delta$. The order-$10$
+Theorem~\ref{thm:main} stops at $n=40$ because Proposition~\ref{prop:integrality}
+needs $\tfrac{25}{2}n^2\delta<1$, and the certified $\delta\approx 4.8558\times10^{-5}$
+gives exactly $n\le 40$. A larger range needs a still smaller $\delta$. The order-$10$
 certificate is essentially at the flag-LP finite ceiling: the per-root-MaxCut envelope
 at $7$ and $8$ roots, even augmented with rooted-Horn rows and the moment block,
-plateaus at $\delta\approx 4.76\times10^{-5}$ (the margin at $n=41$ is already only
-$\approx0.05\%$), and order $11$ is computationally out of reach. The sharp asymptotic
-conjecture needs $\delta=0$ exactly, which no finite order of this relaxation delivers.
+plateaus near $\delta\approx 4.85\times10^{-5}$ (and its non-deterministic moment LP
+does not robustly reach the $4.76\times10^{-5}$ that $n=41$ would need), and order $11$
+is computationally out of reach. The sharp asymptotic conjecture needs $\delta=0$
+exactly, which no finite order of this relaxation delivers.
 
 The natural route to all $n$ is the asymptotic inequality $\dmono(W)\le 2/25$
 itself. It reduces (after fixing a maximum cut, with $M$ the monochromatic edges
@@ -461,7 +465,7 @@ endpoints of a bad edge are joined by $B$-paths of different even lengths, and i
 self-tight: every flag-algebra, signature, or quadratic-cut certificate we tried
 equals $\Gamma$ at the $C_5[q]$ extremal, hence only re-proves $\Gamma\le\Gamma$.
 We regard isolating the conjecture to this single estimate, and establishing it
-computationally for the multiples of five up to $N=205$, as the contribution of this
+computationally for the multiples of five up to $N=200$, as the contribution of this
 note.
 
 \section*{Ancillary files}

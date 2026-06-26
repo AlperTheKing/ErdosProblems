@@ -1,38 +1,42 @@
-# Ancillary files — "The Erdős n²/25 max-cut conjecture for small multiples of five"
+# Ancillary files — "The Erdős n²/25 max-cut conjecture for small multiples of five" (order-10 Horn certificate)
 
-Computer-assisted proof that **a(5n) = n² for all 1 ≤ n ≤ 11** (N ≤ 55), where a(N) is the maximum,
-over triangle-free graphs G on N vertices, of the minimum number of edges whose deletion makes G
-bipartite (β(G) = e(G) − maxcut(G)).
+Computer-assisted proof that **a(5n) = n² for all 1 ≤ n ≤ 40** (N ≤ 200), where a(N) is the maximum,
+over triangle-free graphs G on N vertices, of the bipartization number β(G) = e(G) − maxcut(G).
 
-## Method
-1. **Per-root-MaxCut envelope** (Lemma 3.1): for the 107 triangle-free 7-root types,
-   `d_mono(W) ≤ U₇(W) = 2/25 + Σ_σ min_c g_{σ,c}(W)`, tight at the C₅-blow-up.
-2. **Order-9 flag-algebra LP** certifies `U₇ ≤ 2/25 + δ` on the band `[0.2486, 0.3197]`, with
-   `δ ≈ 5.991×10⁻⁴` (exact rational in the certificate). η ≤ δ (the LP is a relaxation).
-3. **Blow-up integrality**: `β(G[t]) = t²β(G)` ⟹ `β(G) ≤ n² + (25/2)n²δ`; `(25/2)n²δ < 1` for n ≤ 11
-   (threshold `2/(25·121) = 6.6116×10⁻⁴`; margin 9.4%). Tails by Balogh–Clemen–Lidický (arXiv:2103.14179).
+## Method (order-10 Horn certificate)
+The bipartization density d_mono(W) on the medium band [0.2486, 0.3197] is bounded by 2/25 + δ via an
+order-10 (C5-lifted order-9) flag-algebra linear program combining: the per-root-MaxCut envelope at 7 roots
+(107 types) and at 8 roots (410 roots), rooted-Horn cuts, the band rows, and a moment block — all over the
+12172 band states. The dual is made exact (Python `fractions`). δ_final = 4.8557798×10⁻⁵ <
+2/(25·1600) = 5.0×10⁻⁵, so (25/2) n² δ < 1 for n ≤ 40 (2.88% margin), i.e. β(G) ≤ n² for N ≤ 200 via blow-up
+integrality (β(G[t]) = t² β(G)). The two density tails use Balogh–Clemen–Lidický (arXiv:2103.14179),
+transferred to finite N by the same blow-up.
 
-## Files (scripts; 144 KB)
-- `brute_dmono.py` + `flag_engine.py` — **self-contained independent brute-force max-cut ground truth**
-  (needs no certificate). `python brute_dmono.py 9 12` → in-band max d_mono ≤ 0.0556 ≪ 0.0806.
-- `validate_dmono_le_u8.py`, `c11_check.py` — exact verification of the envelope soundness `d_mono ≤ U`
-  (incl. the C₁₁ adversarial test; tight at C₅).
-- `envelope_k7.py` (+ `run_k7b.py`, `flag_cutgen.py`, `flag_localizer.py`, `compute_U8.py`) — the order-9
-  per-root-MaxCut envelope LP generator.
-- `regen_verify_u7.py` — rebuilds the LP from the certificate, re-solves η, extracts the dual
-  (per-type Σ_c λ_{σ,c}=1, band μ, moment ν), and runs the exact-rational cut+band feasibility check.
-- `g1_exact_psd.py`, `g1_graphon_density.py`, `g1_soundness_check.py` — the moment-positivity Gram
-  certificate `M^σ(W) = Σ_c w_c q_c q_cᵀ` (manifestly PSD; Razborov's theorem, exact rational form).
+The moment block is a **manifestly positive-semidefinite Gram** Q = Σ_c w_c vv_c vv_cᵀ with w_c ≥ 0, found by
+a plain LP (no SDP solve, no Cholesky rounding); soundness needs only w ≥ 0 together with M^σ(W) ⪰ 0
+(Razborov's positivity theorem, the exact G1 Gram certificate).
 
-## Certificate and cache (not shipped here — size)
-The converged envelope certificate (`envelope_k7_cert.pkl`, ~108 MB: 107 types, 4452 cuts, 1874 moment
-rows) and the order-9 flag cache (`cache_n9.pkl`, ~278 MB) exceed arXiv ancillary limits. A **compact exact
-certificate** (the dual + the ~617 active rows, as exact rationals) accompanies the final version; both the
-cache and the full pool are regenerable from `envelope_k7.py` (which runs the flag engine). The
-self-contained `brute_dmono.py` already gives independent confirmation without either.
+## Files
+- `step1_v2_independent_gate.py` — **independent exact verification** (run `python step1_v2_independent_gate.py`
+  from this directory): re-derives δ_final directly from the raw dual, and checks a₇+a₈=1 and w_c ≥ 0
+  (manifest PSD). Prints PASS and the closed range.
+- `complete_v2_cert.py` — the producer's one-command verifier of all five dual-feasibility conditions
+  (needs the full order-10 caches, which are regenerable).
+- `moment_gram_lp.py`, `moment_gram_exact_verify.py` — the manifest-Gram moment block.
+- `brute_dmono.py` with `flag_engine.py` — a self-contained brute-force max-cut ground-truth checker
+  (no certificate needed): the in-band maximum of d_mono is ≤ 0.0556 ≪ 0.0800.
+- `g1_exact_psd.py`, `g1_graphon_density.py` — the graphon-level moment-PSD Gram certificate.
+- `horn_dual.pkl`, `moment_gram_w.pkl`, `v2_cert_complete.pkl`, `mom_term_exact.pkl` — the compact dual,
+  the Gram weights, the verdict, and the cached moment term.
+- `SHA256SUMS`.
+
+## Note on the certificate
+The moment-Gram LP is non-deterministic; δ_final drifts within roughly [4.75, 4.86]×10⁻⁵ across runs, all of
+which give N ≤ 200 robustly (only an occasional lucky run squeaks n = 41 at a 0.05% margin, which we do not
+claim). This package is one **frozen** run, δ_final = 4.8557798×10⁻⁵. The full order-10 LP cache and
+lifted-state tables exceed arXiv ancillary limits and are regenerable from the scripts.
 
 ## Verification status
-The envelope architecture is sound (independent adversarial review: no fatal error). Verified exactly:
-the cut rows (denom 25·(9)₇ = 4536000), per-type Σλ=1, `δ = ρ − LO·μ_lo < 2/3025` (margin 9.4%), the
-moment positivity Gram certificate, and brute-force ground truth (n ≤ 12). The per-flag moment rows are
-`vᵀP^σv`; their exact rationalization (the `v` vectors) is included in the compact certificate.
+Independently gated (`step1_v2_independent_gate.py` → PASS, N ≤ 200) and confirmed by the producer's verifier
+(`complete_v2_cert.py` → VALID), with the headline bound additionally brute-true on the band — no
+false-closure risk.
