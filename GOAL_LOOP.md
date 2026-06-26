@@ -40,7 +40,8 @@ NEAR-TERM DELIVERABLE (do this FIRST — it is a real, in-hand publishable win):
   Arithmetic: (25/2) n^2 delta < 1  ==>  delta=4.756e-5 closes n<=40 (N<=200);
   n=40 threshold = 2/(25*1600)=5.0e-5, n=41 = 4.76e-5. N<=200 is the flag-LP
   finite ceiling (the order-9/10 self-tight wall plateaus eta above 0) — do NOT
-  push Step-2 to squeeze delta further. Lock v2, then co-develop H2 / Gamma.
+  push Step-2 to squeeze delta further. Lock v2, then co-develop delta=0 (the
+  Gamma-lemma) with Step-2.
 
 METHOD (standing, user directive 2026-06-26): FINISH Step-1 in active collaboration
   with GPT-Pro. At every decision point or stuck point, DRIVE THE BROWSER TOOL
@@ -57,8 +58,8 @@ VERIFIABLE SUCCESS CRITERIA
         reproduce the moment rows AND M^sigma = sum_c w_c q_c q_c^T >= 0 exactly],
         (c) BCL band tiling [<=0.2486, [0.2486,0.3197], >=0.3197 tile [0,0.5] with
         shared endpoints, no gap]; and delta_exact < 5.0e-5.  THEN publish v2.
-  full: H2 proven gap-free; the all-N/all-residue assembly closes; with Step-2's
-        delta=0 (Gamma-lemma) ==> beta <= N^2/25 for all N.
+  full: Step-2's delta=0 (the Gamma-lemma) proven + Step-1's clean all-N assembly
+        closes ==> beta <= N^2/25 for all N. (H2 is RETIRED — not needed; see GOAL.)
 
 ================================================================================
 STATE (2026-06-26, reconciled with Step-2)
@@ -106,8 +107,8 @@ LOOP (run every iteration)
 3. Pick the active sub-task:
      - if Step-2's v2 cert has arrived but is not yet exact-verified -> verify it
        (regen_verify_u7 + Gram check + BCL tiling); on pass, prep + ship arXiv v2;
-     - if v2 is shipped (or the cert hasn't arrived) -> work H2 / the Gamma-lemma
-       assembly, co-developing the cut-geometry ingredient with Step-2.
+     - if v2 is shipped (or the cert hasn't arrived) -> co-develop delta=0 (the
+       Gamma-lemma) with Step-2 and/or draft the all-N assembly (H2 is RETIRED).
 4. At ANY decision point or when stuck -> consult GPT Pro VIA THE BROWSER TOOL
    (drive Chrome: send the self-contained question, wait, read the answer via
    main.innerText), audit it line-by-line + exact-Fraction-check, then proceed on
