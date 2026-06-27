@@ -1,0 +1,10 @@
+N=5: tri-free=14; TIGHT connected-B (Gamma=N^2)=1; with SAFE peel=0; OBSTRUCTIONS=1
+   !!! OBSTRUCTION N=5 m=1 Gamma=25 A=[12, 24, 17, 3, 6]
+N=6: tri-free=38; TIGHT connected-B (Gamma=N^2)=0; with SAFE peel=0; OBSTRUCTIONS=0
+N=7: tri-free=107; TIGHT connected-B (Gamma=N^2)=1; with SAFE peel=0; OBSTRUCTIONS=1
+   !!! OBSTRUCTION N=7 m=1 Gamma=49 A=[24, 48, 96, 65, 3, 6, 12]
+N=8: tri-free=410; TIGHT connected-B (Gamma=N^2)=0; with SAFE peel=0; OBSTRUCTIONS=0
+N=9: tri-free=1897; TIGHT connected-B (Gamma=N^2)=1; with SAFE peel=0; OBSTRUCTIONS=1
+   !!! OBSTRUCTION N=9 m=1 Gamma=81 A=[48, 96, 192, 384, 257, 3, 6, 12, 24]
+N=10: tri-free=12172; TIGHT connected-B (Gamma=N^2)=1; with SAFE peel=1; OBSTRUCTIONS=0
+DONE

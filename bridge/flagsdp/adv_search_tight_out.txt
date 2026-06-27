@@ -1,0 +1,9 @@
+=== (B) figure-eight: two C5[q] sharing one part ===
+=== (D) exhaustive small unbalanced C5 part-sizes (sum<=26), look for tight/near-tight no-peel ===
+    tight-ok C5(1, 1, 1, 1, 1): N=5 m=1 ratio=1.0000 sp=None
+    tight-ok C5(2, 2, 2, 2, 2): N=10 m=4 ratio=1.0000 sp=True
+    tight-ok C5(3, 3, 3, 3, 3): N=15 m=9 ratio=1.0000 sp=True
+    tight-ok C5(4, 4, 4, 4, 4): N=20 m=16 ratio=1.0000 sp=True
+    tight-ok C5(5, 5, 5, 5, 5): N=25 m=25 ratio=1.0000 sp=True
+  checked 665 unbalanced C5 part-size multisets
+=== (C) random triangle-free near C5-density, keep tight ===

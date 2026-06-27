@@ -1,0 +1,28 @@
+=== canonical tight C5[q] sanity ===
+C5[2]: N=10 m=4 gamma=100 n2=100 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (6, 8) |C|=5 Gamma'=25 L=75<=bound75
+C5[3]: N=15 m=9 gamma=225 n2=225 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (9, 12) |C|=5 Gamma'=100 L=125<=bound125
+C5[4]: N=20 m=16 gamma=400 n2=400 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (12, 16) |C|=5 Gamma'=225 L=175<=bound175
+C5[5]: N=25 m=25 gamma=625 n2=625 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (15, 20) |C|=5 Gamma'=400 L=225<=bound225
+=== UNBALANCED C5 blow-ups (perturb part sizes; near-tight) ===
+C5(3, 3, 3, 3, 2): N=14 m=6 gamma=150 n2=196 ratio=0.7653061224489796 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (9, 12) |C|=5 Gamma'=50 L=100<=bound115
+C5(4, 4, 4, 4, 3): N=19 m=12 gamma=300 n2=361 ratio=0.8310249307479224 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (12, 16) |C|=5 Gamma'=150 L=150<=bound165
+C5(4, 4, 4, 3, 3): N=18 m=9 gamma=225 n2=324 ratio=0.6944444444444444 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (12, 16) |C|=5 Gamma'=100 L=125<=bound155
+C5(5, 5, 5, 4, 4): N=23 m=16 gamma=400 n2=529 ratio=0.7561436672967864 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (15, 19) |C|=5 Gamma'=225 L=175<=bound205
+C5(5, 5, 4, 4, 4): N=22 m=16 gamma=400 n2=484 ratio=0.8264462809917356 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (14, 18) |C|=5 Gamma'=225 L=175<=bound195
+C5(4, 3, 4, 3, 4): N=18 m=12 gamma=300 n2=324 ratio=0.9259259259259259 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (11, 14) |C|=5 Gamma'=150 L=150<=bound155  [NEAR-TIGHT 0.9259 sp=True]
+C5(5, 4, 5, 4, 4): N=22 m=16 gamma=400 n2=484 ratio=0.8264462809917356 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (14, 18) |C|=5 Gamma'=225 L=175<=bound195
+C5(3, 2, 3, 2, 3): N=13 m=6 gamma=150 n2=169 ratio=0.8875739644970414 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (8, 10) |C|=5 Gamma'=50 L=100<=bound105  [NEAR-TIGHT 0.8876 sp=True]
+C5(4, 4, 3, 3, 2): N=16 m=6 gamma=150 n2=256 ratio=0.5859375 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (11, 14) |C|=5 Gamma'=50 L=100<=bound135
+C5(5, 5, 5, 5, 3): N=23 m=15 gamma=375 n2=529 ratio=0.7088846880907372 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (15, 20) |C|=5 Gamma'=200 L=175<=bound205
+=== C7 blow-ups (odd cycle, less tight) ===
+C7[2]: N=14 m=4 gamma=196 n2=196 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (10, 12) |C|=7 Gamma'=49 L=147<=bound147
+C7[3]: N=21 m=9 gamma=441 n2=441 ratio=1.0 tight=True sp=True Bconn=True tf=True | SAFE peel via bad-edge (15, 18) |C|=7 Gamma'=196 L=245<=bound245
+=== vertex-path 2xC5 BLOW-UPS ===
+vpath2_blow2: N=18 m=8 gamma=200 n2=324 ratio=0.6172839506172839 tight=False sp=False Bconn=True tf=True | NO safe peel for any bad edge
+vpath2_blow3: SKIP N=27>26 (brute maxcut/CD too big)
+vpath2_mixA: N=17 m=4 gamma=100 n2=289 ratio=0.3460207612456747 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (6, 8) |C|=5 Gamma'=0 L=100<=bound145
+vpath2_mixB: N=26 m=12 gamma=300 n2=676 ratio=0.4437869822485207 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (9, 12) |C|=5 Gamma'=125 L=175<=bound235
+vpath2_mixC: N=21 m=4 gamma=100 n2=441 ratio=0.22675736961451248 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (8, 10) |C|=5 Gamma'=0 L=100<=bound185
+=== edge-path 3xC5 BLOW-UPS ===
+  (base epath_C5_3 N=11)
+epath3_blow2: N=22 m=8 gamma=200 n2=484 ratio=0.4132231404958678 tight=False sp=True Bconn=True tf=True | SAFE peel via bad-edge (18, 20) |C|=5 Gamma'=75 L=125<=bound195

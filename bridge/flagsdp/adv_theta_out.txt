@@ -1,0 +1,18 @@
+=== theta graphs (two odd cycles sharing a path) ===
+theta(2,3,3): N=7 m=1 g=25 n2=49 ratio=0.5102 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(2,3,5): N=9 m=1 g=25 n2=81 ratio=0.3086 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(3,4,4): N=10 m=1 g=49 n2=100 ratio=0.4900 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(2,5,5): N=11 m=1 g=49 n2=121 ratio=0.4050 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(3,3,4): N=9 m=1 g=49 n2=81 ratio=0.6049 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(2,3,7): N=11 m=1 g=25 n2=121 ratio=0.2066 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(4,5,5): N=13 m=1 g=81 n2=169 ratio=0.4793 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(3,4,6): N=12 m=1 g=49 n2=144 ratio=0.3403 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(2,5,7): N=13 m=1 g=49 n2=169 ratio=0.2899 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+theta(3,5,6): N=13 m=1 g=81 n2=169 ratio=0.4793 tight=False sp=None Bconn=True | base case m=1 (odd cycle); lemma excludes m<2
+=== theta BLOW-UPS (small) ===
+theta(2,3,3)[2]: N=14 m=4 g=100 n2=196 ratio=0.5102 tight=False sp=True Bconn=True | SAFE peel via bad-edge (0, 4) |C|=5 Gamma'=25 L=75<=bound115
+theta(2,3,5)[2]: N=18 m=4 g=100 n2=324 ratio=0.3086 tight=False sp=True Bconn=True | SAFE peel via bad-edge (0, 4) |C|=5 Gamma'=25 L=75<=bound155
+theta(3,4,4)[2]: N=20 m=4 g=196 n2=400 ratio=0.4900 tight=False sp=True Bconn=True | SAFE peel via bad-edge (4, 6) |C|=7 Gamma'=49 L=147<=bound231
+=== C5[q] with one extra bare C5 chained (necklace: dense blob + sparse cycle) ===
+C5[2]+bareC5: N=14 m=5 g=125 n2=196 ratio=0.6378 tight=False sp=False Bconn=True | NO safe peel for any bad edge
+C5[3]+bareC5: N=19 m=10 g=250 n2=361 ratio=0.6925 tight=False sp=False Bconn=True | NO safe peel for any bad edge

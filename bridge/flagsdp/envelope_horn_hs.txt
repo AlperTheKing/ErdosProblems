@@ -1,0 +1,10 @@
+=== HORN envelope, WARM-STARTED dual simplex (highspy) ===
+ns=1897 nJ=12172 n7=107 nR=410 MOMENT=317; WARM-START dual simplex; keep=2
+RESUMED 2400 env cuts (it22 eta=+8.0365e-04)
+resume-solve(warm): eta=+8.0365074e-04 pool=2400
+it11: +107k7 +1k8 +794horn (pool 3302) eta=+5.9996349e-04 n<=11 minLh=-5.00e-01 [286s]
+it12: +107k7 +373k8 +816horn (pool 4598) eta=+5.0103207e-04 n<=12 minLh=-5.00e-01 [816s]
+it13: +107k7 +377k8 +816horn (pool 5898) eta=+4.3759291e-04 n<=13 minLh=-3.53e-01 [2639s]
+OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
+To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
+or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower

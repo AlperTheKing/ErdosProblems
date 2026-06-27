@@ -1,0 +1,12 @@
+=== FULL order-10 envelope: moment-only + k7 + k8 U_8 + (8,9) Gram (GPT path A finish) ===
+ns=1897 nJ=12172 n7=107 nR=410; MOMENT-only=317; modes=4 gram_tol=1e-07
+seeded 701 cuts; solving...
+iter0: eta=+4.5645845e-03
+OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
+To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
+or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower
+it1: +105k7 +118k8 +283proj -0prune (pool 1207) eta=+2.6979144e-03 n<=5 minLh=-5.00e-01 [23s]
+it2: +107k7 +203k8 +365proj -381prune (pool 1501) eta=+1.7925374e-03 n<=6 minLh=-5.00e-01 [33s]
+it3: +107k7 +260k8 +391proj -255prune (pool 2004) eta=+1.2760610e-03 n<=7 minLh=-5.00e-01 [43s]
+it4: +107k7 +304k8 +394proj -274prune (pool 2535) eta=+9.6183348e-04 n<=9 minLh=-5.00e-01 [81s]
+it5: +107k7 +340k8 +404proj -220prune (pool 3166) eta=+7.7843591e-04 n<=10 minLh=-5.00e-01 [1976s]

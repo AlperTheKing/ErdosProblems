@@ -1,0 +1,7 @@
+float duals: rho=1.923035e-03 mu_hi=3.438e-13 mu_lo=4.480e-13 a7=0.9766 a8=0.0234
+env classes: {'k7': 1731, 'k8': 1912, 'horn': 2716}; k7 denoms: {45: 1722, 1814400: 9}
+EXACT cut+band+Horn (NO moments) per-state residual: min=-1.183422e-01 at state 8637  [8s]
+  >=0 everywhere? False  (moment Gram must cover the deficit)
+delta (exact) = 484483859/10187422313325 = 4.755706e-05; < 1/450=2.222222e-03? True  margin x46.7
+saved horn_exact_resid.pkl
+DONE

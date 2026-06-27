@@ -1,0 +1,20 @@
+
+Explicit tight constructions (expect master slack EXACTLY 0):
+----------------------------------------------------------------------
+C5  : {'gamma': 25, 'dstar': 0, 'master_slack': 0, 'worst_local_slack': 0}
+C7  : {'gamma': 49, 'dstar': 0, 'master_slack': 0, 'worst_local_slack': 0}
+C9  : {'gamma': 81, 'dstar': 0, 'master_slack': 0, 'worst_local_slack': 0}
+C11 : {'gamma': 121, 'dstar': 0, 'master_slack': 0, 'worst_local_slack': 0}
+C5[2]: {'gamma': 100, 'dstar': 0, 'master_slack': 0, 'worst_local_slack': 0}
+ALL FIVE master slack == 0 : True
+
+Erdos #23 R2 MASTER INEQUALITY -- REFERENCE clean-room checker
+======================================================================
+n= 5: configs=      1  master_viol=0  local_viol=0  min_master_slack=0
+n= 6: configs=      2  master_viol=0  local_viol=0  min_master_slack=11
+n= 7: configs=     15  master_viol=0  local_viol=0  min_master_slack=0
+n= 8: configs=     85  master_viol=0  local_viol=0  min_master_slack=14
+n= 9: configs=    650  master_viol=0  local_viol=0  min_master_slack=0
+n=10: configs=   5800  master_viol=0  local_viol=0  min_master_slack=0
+n=11: configs=  65244  master_viol=0  local_viol=0  min_master_slack=0
+No violations found in the swept range.

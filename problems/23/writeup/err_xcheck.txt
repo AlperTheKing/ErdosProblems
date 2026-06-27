@@ -1,0 +1,2 @@
+>A E:/Projects/ErdosProblems/tools/nauty2_8_9/geng.exe -ctd1D11 n=12 e=11-36
+>Z 1144061 graphs generated in 408.59 sec

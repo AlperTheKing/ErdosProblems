@@ -1,0 +1,21 @@
+Adversarial finder #1: weighted C5 blow-ups vs R2 MASTER inequality
+==========================================================================
+n=10: blowup_classes(distinct)=  16  connectedB_configs=  16  master_viol=0  local_viol=0  min_master_slack=0
+n=11: blowup_classes(distinct)=  26  connectedB_configs=  26  master_viol=0  local_viol=0  min_master_slack=21
+n=12: blowup_classes(distinct)=  38  connectedB_configs=  38  master_viol=0  local_viol=0  min_master_slack=44
+n=13: blowup_classes(distinct)=  57  connectedB_configs=  57  master_viol=0  local_viol=0  min_master_slack=19
+n=14: blowup_classes(distinct)=  79  connectedB_configs=  79  master_viol=0  local_viol=0  min_master_slack=46
+n=15: blowup_classes(distinct)= 111  connectedB_configs= 111  master_viol=0  local_viol=0  min_master_slack=0
+n=16: blowup_classes(distinct)= 147  connectedB_configs= 147  master_viol=0  local_viol=0  min_master_slack=31
+--------------------------------------------------------------------------
+TOTAL blow-up graphs tested : 474
+TOTAL connected-B configs   : 474
+MASTER violations (slack<0) : 0
+LOCAL  violations (slack<0) : 0
+GLOBAL min master slack     : 0
+
+TIGHT master-slack==0 blow-ups (first few per n):
+  n=10: count=1  e.g. (2, 2, 2, 2, 2)->slack0(gamma=100)
+  n=15: count=1  e.g. (3, 3, 3, 3, 3)->slack0(gamma=225)
+
+No MASTER violations among C5 blow-ups in n=10..16.

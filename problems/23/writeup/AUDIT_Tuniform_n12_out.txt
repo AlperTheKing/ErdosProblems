@@ -1,0 +1,53 @@
+=== U-claim census N=12 (geng -tc) LIMIT=None ===
+>A E:/Projects/ErdosProblems/tools/nauty2_8_9/geng.exe -ctd1D11 n=12 e=11-36
+  ...checked=20000 skipped=22149 viols=0 min_slack=44 (44.0000) t=81s
+  ...checked=40000 skipped=30681 viols=0 min_slack=44 (44.0000) t=82s
+  ...checked=60000 skipped=35268 viols=0 min_slack=44 (44.0000) t=84s
+  ...checked=80000 skipped=45361 viols=0 min_slack=44 (44.0000) t=86s
+  ...checked=100000 skipped=55742 viols=0 min_slack=44 (44.0000) t=87s
+  ...checked=120000 skipped=66437 viols=0 min_slack=41 (41.0000) t=89s
+  ...checked=140000 skipped=81073 viols=0 min_slack=41 (41.0000) t=91s
+  ...checked=160000 skipped=94835 viols=0 min_slack=41 (41.0000) t=94s
+  ...checked=180000 skipped=110548 viols=0 min_slack=41 (41.0000) t=96s
+  ...checked=200000 skipped=112054 viols=0 min_slack=41 (41.0000) t=97s
+  ...checked=220000 skipped=116493 viols=0 min_slack=159/4 (39.7500) t=98s
+  ...checked=240000 skipped=118646 viols=0 min_slack=159/4 (39.7500) t=100s
+  ...checked=260000 skipped=121320 viols=0 min_slack=24 (24.0000) t=101s
+  ...checked=280000 skipped=123126 viols=0 min_slack=24 (24.0000) t=103s
+  ...checked=300000 skipped=125718 viols=0 min_slack=24 (24.0000) t=104s
+  ...checked=320000 skipped=127406 viols=0 min_slack=24 (24.0000) t=106s
+  ...checked=340000 skipped=129302 viols=0 min_slack=24 (24.0000) t=107s
+  ...checked=360000 skipped=132926 viols=0 min_slack=24 (24.0000) t=109s
+  ...checked=380000 skipped=134683 viols=0 min_slack=24 (24.0000) t=110s
+  ...checked=400000 skipped=138807 viols=0 min_slack=24 (24.0000) t=111s
+  ...checked=420000 skipped=141350 viols=0 min_slack=24 (24.0000) t=113s
+  ...checked=440000 skipped=146260 viols=0 min_slack=24 (24.0000) t=114s
+  ...checked=460000 skipped=147267 viols=0 min_slack=24 (24.0000) t=116s
+  ...checked=480000 skipped=148097 viols=0 min_slack=24 (24.0000) t=117s
+  ...checked=500000 skipped=149929 viols=0 min_slack=24 (24.0000) t=119s
+  ...checked=520000 skipped=151527 viols=0 min_slack=24 (24.0000) t=120s
+  ...checked=540000 skipped=155817 viols=0 min_slack=24 (24.0000) t=122s
+  ...checked=560000 skipped=161142 viols=0 min_slack=24 (24.0000) t=123s
+  ...checked=580000 skipped=165836 viols=0 min_slack=24 (24.0000) t=125s
+  ...checked=600000 skipped=170471 viols=0 min_slack=24 (24.0000) t=127s
+  ...checked=620000 skipped=174899 viols=0 min_slack=24 (24.0000) t=128s
+  ...checked=640000 skipped=177270 viols=0 min_slack=24 (24.0000) t=130s
+  ...checked=660000 skipped=187424 viols=0 min_slack=24 (24.0000) t=132s
+  ...checked=680000 skipped=195196 viols=0 min_slack=24 (24.0000) t=134s
+  ...checked=700000 skipped=197070 viols=0 min_slack=24 (24.0000) t=135s
+  ...checked=720000 skipped=198732 viols=0 min_slack=24 (24.0000) t=136s
+  ...checked=740000 skipped=199901 viols=0 min_slack=24 (24.0000) t=138s
+  ...checked=760000 skipped=201754 viols=0 min_slack=24 (24.0000) t=139s
+  ...checked=780000 skipped=202640 viols=0 min_slack=24 (24.0000) t=141s
+  ...checked=800000 skipped=204964 viols=0 min_slack=24 (24.0000) t=142s
+  ...checked=820000 skipped=205686 viols=0 min_slack=24 (24.0000) t=143s
+  ...checked=840000 skipped=206894 viols=0 min_slack=24 (24.0000) t=145s
+  ...checked=860000 skipped=207593 viols=0 min_slack=24 (24.0000) t=146s
+  ...checked=880000 skipped=209225 viols=0 min_slack=18 (18.0000) t=148s
+  ...checked=900000 skipped=210460 viols=0 min_slack=18 (18.0000) t=149s
+>Z 1144061 graphs generated in 148.70 sec
+  ...checked=920000 skipped=211979 viols=0 min_slack=18 (18.0000) t=151s
+--- DONE N=12: checked=931281 skipped=212780 badgeo=0 viols=0 ---
+min_slack(K-maxT)=18 (18.000000) at ('K?ABBBwerwBw', 12, 125, 31, Fraction(13, 1))
+elapsed=161.7s
+ZERO VIOLATIONS.

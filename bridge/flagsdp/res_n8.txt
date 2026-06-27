@@ -1,0 +1,8 @@
+n=8 tri-free graphs: 410  (NJ=16)
+
+worst 6 (H_R, item, n, d_edge): [(0.0, 0, 8, 0.0), (0.0, 1, 8, 0.036), (0.0, 2, 8, 0.071), (0.0, 3, 8, 0.107), (0.0, 4, 8, 0.143), (0.0, 5, 8, 0.179)]
+GLOBAL min H_R (n8, all-pairs, EXHAUSTIVE) = +0.000000e+00 over 410 graphs
+  argmin = None
+  SOUND ? True  [1736s]
+DONE
+EXIT=0

@@ -1,0 +1,68 @@
+cp_cache: 317 moment rows over ns=1897 states
+  base ready: 34 deficit rows; entering loop
+  first solve done eta=+0.0250246
+  it1 >def
+  it1 >mom (def=0.2s)
+  it1 >loc (mom=0.1s)
+  it1 >lp (loc=0.0s)
+  it1: +11d+26m+1L eta=+0.0008790 cuts=72 meig=-1.3e-03 Leig=-8.5e-05 | def=0.2 mom=0.1 loc=0.0 lp=0.1s
+  it2 >def
+  it2 >mom (def=0.2s)
+  it2 >loc (mom=0.0s)
+  it2 >lp (loc=0.0s)
+  it2: +8d+27m+1L eta=+0.0003715 cuts=108 meig=-1.6e-03 Leig=-2.8e-04 | def=0.2 mom=0.0 loc=0.0 lp=0.3s
+  it3 >def
+  it3 >mom (def=0.2s)
+  it3 >loc (mom=0.0s)
+  it3 >lp (loc=0.0s)
+  it3: +7d+27m+1L eta=+0.0002370 cuts=143 meig=-4.9e-04 Leig=-3.3e-05 | def=0.2 mom=0.0 loc=0.0 lp=0.3s
+  it4 >def
+  it4 >mom (def=0.2s)
+  it4 >loc (mom=0.0s)
+  it4 >lp (loc=0.0s)
+  it4: +4d+27m+1L eta=+0.0001581 cuts=175 meig=-2.5e-04 Leig=-1.5e-05 | def=0.2 mom=0.0 loc=0.0 lp=0.5s
+  it5 >def
+  it5 >mom (def=0.2s)
+  it5 >loc (mom=0.0s)
+  it5 >lp (loc=0.0s)
+  it5: +5d+26m+1L eta=+0.0001158 cuts=207 meig=-2.1e-04 Leig=-1.2e-05 | def=0.2 mom=0.0 loc=0.0 lp=0.6s
+  it6 >def
+  it6 >mom (def=0.2s)
+  it6 >loc (mom=0.0s)
+  it6 >lp (loc=0.0s)
+  it6: +3d+26m+1L eta=+0.0000984 cuts=237 meig=-1.6e-04 Leig=-1.0e-05 | def=0.2 mom=0.0 loc=0.0 lp=0.6s
+  it7 >def
+  it7 >mom (def=0.2s)
+  it7 >loc (mom=0.0s)
+  it7 >lp (loc=0.0s)
+  it7: +2d+26m+1L eta=+0.0000849 cuts=266 meig=-9.0e-05 Leig=-6.7e-06 | def=0.2 mom=0.0 loc=0.0 lp=0.7s
+  it8 >def
+  it8 >mom (def=0.2s)
+  it8 >loc (mom=0.0s)
+  it8 >lp (loc=0.0s)
+  it8: +0d+27m+1L eta=+0.0000792 cuts=294 meig=-6.1e-05 Leig=-8.4e-06 | def=0.2 mom=0.0 loc=0.0 lp=0.9s
+  it9 >def
+  it9 >mom (def=0.2s)
+  it9 >loc (mom=0.0s)
+  it9 >lp (loc=0.0s)
+  it9: +0d+26m+1L eta=+0.0000744 cuts=321 meig=-5.5e-05 Leig=-3.8e-06 | def=0.2 mom=0.0 loc=0.0 lp=1.1s
+  it10 >def
+  it10 >mom (def=0.2s)
+  it10 >loc (mom=0.0s)
+  it10 >lp (loc=0.0s)
+  it10: +0d+26m+1L eta=+0.0000710 cuts=348 meig=-5.0e-05 Leig=-4.5e-06 | def=0.2 mom=0.0 loc=0.0 lp=1.2s
+  it11 >def
+  it11 >mom (def=0.2s)
+  it11 >loc (mom=0.0s)
+  it11 >lp (loc=0.0s)
+  it11: +0d+27m+1L eta=+0.0000678 cuts=376 meig=-3.7e-05 Leig=-4.6e-06 | def=0.2 mom=0.0 loc=0.0 lp=1.3s
+  it12 >def
+  it12 >mom (def=0.2s)
+  it12 >loc (mom=0.0s)
+  it12 >lp (loc=0.0s)
+  it12: +0d+26m+1L eta=+0.0000656 cuts=403 meig=-4.3e-05 Leig=-5.2e-06 | def=0.2 mom=0.0 loc=0.0 lp=1.4s
+re-ran cutting_plane [13s] eta=+6.558882e-05 ns2=1897
+regenerated 317 moment rows
+matched 317 cp rows to regenerated; worst L2 diff=2.241e-02; unique matches=249/317
+!! match imperfect -- cutting_plane not reproducing cp_cache rows; need the exact generation params
+DONE

@@ -1,7 +1,10 @@
 # GOAL_LOOP.md — STEP-1 AGENT standing task (READ FIRST on every compaction / new session)
 #
 # Resume flow: (1) read this file; (2) read the last ~30 lines of PROGRESS.md = where you left off;
-# (3) resume the GOAL + LOOP below.
+# (3) read coordination/STEP2_TO_STEP1.md for any new messages from Step-2 (the DIRECT agent channel,
+#     set up 2026-06-26; protocol in coordination/CHANNEL.md; you write coordination/STEP1_TO_STEP2.md,
+#     you read coordination/STEP2_TO_STEP1.md; no more human relay -- check it EVERY loop iteration);
+# (4) resume the GOAL + LOOP below.
 #
 # Prior tracks are superseded but recoverable: the #944 Dirac-k=4 work is PUBLISHED (arXiv:2606.18462)
 # and archived in memory (erdos944-shore-machine-state); the earlier multi-problem "New Mathematics on

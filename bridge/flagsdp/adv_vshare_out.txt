@@ -1,0 +1,7 @@
+[3, 3, 3, 3, 2, 3, 3, 3, 3] N= 26 m= 12 g= 300 n2= 676 ratio=0.4438 tight= False sp= True
+[2, 2, 2, 2, 2, 2, 2, 2, 2] N= 18 m= 8 g= 200 n2= 324 ratio=0.6173 tight= False sp= False
+[3, 3, 3, 3, 1, 3, 3, 3, 3] N= 25 m= 6 g= 150 n2= 625 ratio=0.2400 tight= False sp= True
+[2, 3, 2, 3, 1, 2, 3, 2, 3] N= 21 m= 4 g= 100 n2= 441 ratio=0.2268 tight= False sp= True
+[2, 2, 2, 2, 1, 2, 2, 2, 2] N= 17 m= 4 g= 100 n2= 289 ratio=0.3460 tight= False sp= True
+skip [3, 3, 3, 3, 3, 3, 3, 3, 3] 27
+DONE

@@ -1,0 +1,9 @@
+g0: buildW=7.16s roots=1 maxprof=1 root_min=0.00s minH=+0.00e+00
+g1: buildW=7.38s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g2: buildW=7.45s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g3: buildW=7.61s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g4: buildW=7.76s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g5: buildW=7.93s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g6: buildW=8.15s roots=17 maxprof=16 root_min=0.00s minH=+0.00e+00
+g7: buildW=8.22s roots=5 maxprof=2 root_min=0.00s minH=+0.00e+00
+PROBEDONE

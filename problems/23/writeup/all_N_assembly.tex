@@ -73,14 +73,29 @@ in a gap and the low-tail endpoint issue caused by the Balogh--Clemen--Lid\'ick\
 \begin{itemize}
 \item \emph{Band} $0.2486\le d\le 0.3197$: the exact band bound
   $d_{\mathrm{mono}}(W)\le 2/25$, the sole hard input, supplied by Step-2.
-\item \emph{Tails} $d<0.2486$ or $d>0.3197$ \emph{(strict)}: BCL Thm 1.3
-  (\texttt{arXiv:2103.14179}), discharged at fixed $N$ by the blow-up
-  $\beta(G[t])=t^2\beta(G)$. BCL's threshold is on its \emph{finite} density
+\item \emph{Tails} $d<0.2486$ or $d>0.3197$ \emph{(strict)}: the Balogh--Clemen--Lid\'ick\'y
+  theorem (\texttt{arXiv:2103.14179}, Thm.\ on triangle-free bipartisation), whose parts
+  \textbf{(b)} $\beta(G)\le n^2/25$ when $e(G)\ge 0.3197\binom n2$ and \textbf{(c)}
+  $\beta(G)\le n^2/25$ when $e(G)\le 0.2486\binom n2$ hold \emph{for $n$ large enough}
+  (here $\beta=D_2$, the bipartisation number). \emph{The two BCL thresholds
+  $0.2486,0.3197$ are exactly our band edges}; we discharge the tails at fixed $N$ by the
+  blow-up $\beta(G[t])=t^2\beta(G)$. BCL's hypothesis is on the \emph{finite} density
   $e(G[t])/\binom{Nt}{2}=d\cdot\frac{Nt}{Nt-1}\to d$ (Remark below) -- \emph{not} the
-  graphon density -- which for large $t$ lies strictly inside the same open tail as
-  $d$; with $Nt$ beyond BCL's $n_0$, BCL gives $\beta(G[t])\le (Nt)^2/25$, whence
-  $\beta(G)\le N^2/25$.
+  graphon density -- which for large $t$ lies strictly inside the same open tail as $d$.
+  Since BCL parts (b),(c) carry the \emph{exact} constant $n^2/25$ for $n\ge n_0$, a
+  \emph{single} $t$ with $Nt\ge n_0$ already gives $\beta(G[t])\le (Nt)^2/25$; dividing
+  by $t^2$ yields $\beta(G)\le N^2/25$ \emph{with no limit and no $o(1)$}. (Should one
+  prefer to read BCL only asymptotically as $(\tfrac1{25}+o(1))n^2$, the same conclusion
+  follows by letting $t\to\infty$ with $N$ fixed; the argument is robust to either reading.)
 \end{itemize}
+
+\noindent\emph{(What is assembled.)} The three cases together establish
+$d_{\mathrm{mono}}(W_G)\le 2/25$ for \emph{every} finite triangle-free $G$ -- precisely
+the instances of $(\delta{=}0)$ that Theorem~\ref{thm:allN} invokes (it applies the
+hypothesis only to step graphons $W_G$). The band input holds for arbitrary triangle-free
+graphons; the tails are discharged through the finite blow-up $\beta(G[t])=t^2\beta(G)$ and
+so for $W_G$. This $W_G$ form is all Theorem~\ref{thm:allN} uses, so no statement about
+non-step triangle-free graphons in the tails is needed.
 
 \noindent\textbf{Remark (normalisation at the band edges).} BCL's density is the
 graph density $e/\binom{N}{2}=2e/(N(N-1))$, whereas our partition uses the graphon
@@ -96,8 +111,10 @@ and for every finite $t$ this BCL density strictly exceeds $d$ (as $Nt-1<Nt$). H
 if $d>0.3197$ then $e(G[t])/\binom{Nt}{2}>d>0.3197$ for \emph{all} $t$; if $d<0.2486$
 then $e(G[t])/\binom{Nt}{2}\downarrow d<0.2486$, so it is $<0.2486$ for all large $t$.
 Either way arbitrarily large $t$ (so $n=Nt$ is ``large enough'' for BCL) places $G[t]$
-strictly inside the asserted open BCL tail, giving $\beta(G[t])\le (Nt)^2/25$ and hence
-$\beta(G)\le N^2/25$. Because the \emph{closed} band $[0.2486,0.3197]$ owns both
+strictly inside the asserted open BCL tail, giving
+$\beta(G[t])\le\bigl(\tfrac1{25}+o_t(1)\bigr)(Nt)^2$; dividing by $t^2$ and letting
+$t\to\infty$ yields $\beta(G)\le N^2/25$. (This makes the tail argument robust to whether
+BCL's bound carries the exact constant at finite $n$ or only asymptotically.) Because the \emph{closed} band $[0.2486,0.3197]$ owns both
 endpoints (handled by Step-2's bound, not BCL), no graph with $d$ exactly $0.2486$ or
 $0.3197$ relies on the tails, and no graph falls in a gap.
 

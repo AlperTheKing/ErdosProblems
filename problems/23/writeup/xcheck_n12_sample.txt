@@ -1,0 +1,3 @@
+SAMPLE(step=11): checked=84695 skipped=19310 viols=0
+min_slack=38 (38.0000) at ('K??EDaoRYZ^_', 12, 100, 56, Fraction(18, 1))
+LP-dual GPI on K?ABBBwerwBw: Gamma=125 tau*=12.500000 K=31  tau*<=K:True

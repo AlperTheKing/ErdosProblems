@@ -1,0 +1,35 @@
+=== EXHAUSTIVE dense N=13 e>=28 U-census ===
+>A E:/Projects/ErdosProblems/tools/nauty2_8_9/geng.exe -ctd1D12 n=13 e=28-42
+  ...checked=5000 skipped=12549 viols=0 min_slack=62 (62.000) t=49s
+  ...checked=10000 skipped=13219 viols=0 min_slack=62 (62.000) t=50s
+  ...checked=15000 skipped=14308 viols=0 min_slack=62 (62.000) t=51s
+  ...checked=20000 skipped=17505 viols=0 min_slack=62 (62.000) t=53s
+  ...checked=25000 skipped=23005 viols=0 min_slack=62 (62.000) t=55s
+  ...checked=30000 skipped=24853 viols=0 min_slack=62 (62.000) t=57s
+  ...checked=35000 skipped=24861 viols=0 min_slack=62 (62.000) t=58s
+  ...checked=40000 skipped=42052 viols=0 min_slack=62 (62.000) t=62s
+  ...checked=45000 skipped=64102 viols=0 min_slack=62 (62.000) t=68s
+  ...checked=50000 skipped=64248 viols=0 min_slack=17258/429 (40.228) t=69s
+  ...checked=55000 skipped=64343 viols=0 min_slack=17258/429 (40.228) t=71s
+  ...checked=60000 skipped=64539 viols=0 min_slack=508/13 (39.077) t=72s
+  ...checked=65000 skipped=64904 viols=0 min_slack=508/13 (39.077) t=73s
+  ...checked=70000 skipped=65203 viols=0 min_slack=496/13 (38.154) t=74s
+  ...checked=75000 skipped=65651 viols=0 min_slack=496/13 (38.154) t=75s
+  ...checked=80000 skipped=65660 viols=0 min_slack=496/13 (38.154) t=76s
+  ...checked=85000 skipped=66360 viols=0 min_slack=496/13 (38.154) t=78s
+  ...checked=90000 skipped=67089 viols=0 min_slack=496/13 (38.154) t=79s
+  ...checked=95000 skipped=67724 viols=0 min_slack=496/13 (38.154) t=80s
+  ...checked=100000 skipped=68743 viols=0 min_slack=17 (17.000) t=81s
+  ...checked=105000 skipped=70288 viols=0 min_slack=17 (17.000) t=83s
+  ...checked=110000 skipped=71922 viols=0 min_slack=17 (17.000) t=84s
+  ...checked=115000 skipped=75900 viols=0 min_slack=17 (17.000) t=86s
+  ...checked=120000 skipped=76976 viols=0 min_slack=17 (17.000) t=88s
+  ...checked=125000 skipped=77262 viols=0 min_slack=17 (17.000) t=89s
+  ...checked=130000 skipped=82080 viols=0 min_slack=17 (17.000) t=91s
+  ...checked=135000 skipped=82356 viols=0 min_slack=17 (17.000) t=92s
+>Z 223588 graphs generated in 92.17 sec
+  ...checked=140000 skipped=82980 viols=0 min_slack=17 (17.000) t=93s
+--- DONE dense N=13 e>=28: checked=140442 skipped=83146 badgeo=0 viols=0 (EXHAUSTIVE over e>=28) ---
+min_slack(K-maxT)=43775/2772 (15.7918) at ('L?`DAboU`w@{hS', 13, 150, 32, Fraction(44929, 2772))
+elapsed=103.5s
+ZERO VIOLATIONS.

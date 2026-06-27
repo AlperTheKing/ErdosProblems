@@ -1,0 +1,66 @@
+
+=== C5[4] EXTREMAL (GPT c5paths20, Gamma=400=N^2): N=20 m=16 Gamma=400 N^2=400 (tight=True) ells=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] ===
+  peel bad-edge(16,0) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(16,1) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(16,2) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(16,3) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(17,0) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(17,1) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(17,2) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(17,3) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(18,0) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(18,1) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(18,2) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(18,3) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(19,0) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(19,1) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(19,2) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(19,3) s=5: Gamma'=225 (N'=15, N'^2=225) L=175 <= 2sN-s^2=175? True | CD=True badspan=True => ACCEPT
+  >>> C5[4] EXTREMAL (GPT c5paths20, Gamma=400=N^2): safe peel EXISTS? True
+
+=== C5[3] EXTREMAL: N=15 m=9 Gamma=225 N^2=225 (tight=True) ells=[5, 5, 5, 5, 5, 5, 5, 5, 5] ===
+  peel bad-edge(12,0) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(12,1) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(12,2) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(13,0) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(13,1) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(13,2) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(14,0) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(14,1) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  peel bad-edge(14,2) s=5: Gamma'=100 (N'=10, N'^2=100) L=125 <= 2sN-s^2=125? True | CD=True badspan=True => ACCEPT
+  >>> C5[3] EXTREMAL: safe peel EXISTS? True
+
+=== C5[5] EXTREMAL: N=25 m=25 Gamma=625 N^2=625 (tight=True) ells=[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] ===
+  peel bad-edge(20,0) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(20,1) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(20,2) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(20,3) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(20,4) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(21,0) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(21,1) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(21,2) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(21,3) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(21,4) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(22,0) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(22,1) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(22,2) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(22,3) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(22,4) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(23,0) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(23,1) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(23,2) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(23,3) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(23,4) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(24,0) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(24,1) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(24,2) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(24,3) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  peel bad-edge(24,4) s=5: Gamma'=400 (N'=20, N'^2=400) L=225 <= 2sN-s^2=225? True | CD=None badspan=True => reject
+  >>> C5[5] EXTREMAL: safe peel EXISTS? False
+Traceback (most recent call last):
+  File "E:\Projects\ErdosProblems\bridge\flagsdp\peel_test.py", line 115, in <module>
+    peel_test("odd_cycle C7 (other tight family)", lambda: odd_cycle(7))
+  File "E:\Projects\ErdosProblems\bridge\flagsdp\peel_test.py", line 58, in peel_test
+    n, adj, side, M, *_ = builder()
+    ^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected at least 4, got 3)

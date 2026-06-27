@@ -1,0 +1,18 @@
+=== order-10 envelope + ROOTED HORN (C5) CP cuts (GPT: the cut beyond PSD) ===
+ns=1897 nJ=12172 n7=107 nR=410; MOMENT-only=317; HORN cuts hthr=0.001 keep=2
+seeded 701 cuts; solving...
+iter0: eta=+4.5511627e-03
+OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
+To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
+or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower
+it1: +105k7 +121k8 +566horn -0prune (pool 1493) eta=+2.6375036e-03 n<=5 minLh=-5.00e-01 [31s]
+it2: +106k7 +207k8 +702horn -901prune (pool 1607) eta=+1.7227834e-03 n<=6 minLh=-5.00e-01 [42s]
+it3: +107k7 +261k8 +762horn -845prune (pool 1892) eta=+1.2829793e-03 n<=7 minLh=-5.00e-01 [52s]
+it4: +107k7 +315k8 +792horn -905prune (pool 2201) eta=+9.3062184e-04 n<=9 minLh=-5.00e-01 [63s]
+it5: +107k7 +346k8 +810horn -975prune (pool 2489) eta=+7.8988409e-04 n<=10 minLh=-5.00e-01 [85s]
+it6: +107k7 +358k8 +814horn -958prune (pool 2810) eta=+6.7663098e-04 n<=10 minLh=-5.00e-01 [107s]
+it7: +107k7 +377k8 +816horn -1004prune (pool 3106) eta=+5.6979181e-04 n<=11 minLh=-5.00e-01 [124s]
+it8: +106k7 +369k8 +818horn -954prune (pool 3445) eta=+5.1049743e-04 n<=12 minLh=-5.00e-01 [167s]
+it9: +107k7 +378k8 +820horn -962prune (pool 3788) eta=+4.5911091e-04 n<=13 minLh=-5.00e-01 [167s]
+it10: +105k7 +379k8 +820horn -950prune (pool 4142) eta=+4.1040011e-04 n<=13 minLh=-5.00e-01 [532s]
+it11: +107k7 +376k8 +820horn -955prune (pool 4490) eta=+3.6591352e-04 n<=14 minLh=-4.14e-01 [767s]

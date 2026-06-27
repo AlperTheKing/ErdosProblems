@@ -48,3 +48,57 @@ and code-auditable on weighted blow-ups (Grotzsch/Petersen/Clebsch/Mycielski/C7/
 is the hard open core (as expected -- delta=0 is hard), but it is sharply targeted + FALSIFIABLE: compute P, C_W on
 Grotzsch/Mycielski blow-ups and check where P-1/5-2C_W fails (should fail GLOBALLY). RELAYED to Step-2 as a
 complementary line to their peel route (co-develop; do NOT duplicate their flag-SDP/live-run files).
+
+---
+
+## STEP 2 (2026-06-26, same thread c/6a3b8a74): whole-class ensemble fix + E-FLAT REFUTED
+
+Step-1 asked GPT-Pro to (a) confirm/repair the whole-class graphon optimal-cut ensemble (my
+finite-vs-graphon caveat: C5[2] gets class-splitting optimal cuts, maxdev 0.133) and (b) PROVE
+the E-flat sub-lemma (P=alpha constant on the whole edge support {W>0}). GPT answer (11640 chars)
+AUDITED + EXACT-VERIFIED (problems/23/writeup/verify_eflat_refutation.py).
+
+### (a) Whole-class ensemble — REPAIRED (rigorous, adopted)
+Use the graphon/quotient optimal-cut supergradient P = conv{K_chi : chi in C*(W)} (whole-atom
+optimal cuts), NOT the uniform measure on raw finite max-cuts of a blow-up. WHY class-splitting
+cuts add no new off-diagonal supergradient: round a fractional optimal graphon cut x in [0,1]^m
+by independent Bernoulli(x_i). Then E[M_W(chi)] = M_W(x) = d_mono(W), but every whole-atom cut has
+M_W(chi) >= d_mono(W); so every whole-atom cut with positive rounding probability is itself optimal
+=> the split cut's off-diagonal kernel is a convex combo of whole-atom optimal kernels. => my
+caveat is resolved: fractional class-splitting optimal cuts contribute nothing new off-diagonal.
+
+### (b) E-FLAT — NOT a consequence of KKT (honest refutation; sub-lemma killed)
+The box normal cone N_[0,1](W) gives, with C_ij=0 on edge support (triangle-free W*C_W=0):
+  0 < W_ij < 1, C_ij=0  =>  P_ij = alpha     (FRACTIONAL edges: equality)
+  W_ij = 1,    C_ij=0   =>  P_ij >= alpha     (SATURATED edges: ONE-SIDED only -> slack allowed)
+E-flat asserted P_ij=alpha on ALL of {W>0} incl. W=1 -- KKT proves it only on fractional edges.
+EXACT WITNESS (verified by Fractions): weighted C5-blowup w=(.54,.06,.20,.10,.10), edges between
+consecutive classes => d_edge=321/1250=0.2568 (IN BAND), unique min-product edge 3-4 (=1/100),
+maxcut leaves 3-4 monochromatic, d_mono=1/50 (band-slack). The optimal cut's same-side kernel P
+has P_{34}=1 on the SATURATED edge 3-4 while P=0 on the other 4 saturated cyclic edges -> P is
+NOT constant on edge support. So a saturated edge carries strict pressure slack (P>alpha) and
+E-flat is false from KKT alone. (Edge-relocation cannot fix it: see clone note below.)
+
+### Replacement (adopted) -- bang-bang / pressure-threshold lemma
+What KKT REALLY says: inside the zero-common-neighbor graph Z={(i,j):C_ij=0}, supp(W) is a
+THRESHOLD set for the pressure P:  P>alpha => W=1 ;  P<alpha => W=0 ;  P=alpha => 0<=W<=1.
+
+### The real remaining hard lemma -- "High-F no-slack"
+For a fixed-density maximizer with d_mono(W) >= 2/25: NO saturated edge has strict pressure slack,
+i.e. W_ij=1, C_ij=0 => P_ij=alpha. GPT: strictly stronger than KKT; NOT provable by edge-relocation
+or clone-refinement alone (splitting atoms can't desaturate a complete edge: averaging 1's stays 1).
+Must use one of: atom-WEIGHT variation (shift measure toward high-pressure endpoints at fixed
+density), clone-weight rebalancing, a global optimal-cut metric (hypermetric/pentagonal) inequality,
+or a classification of pressure-threshold triangle-free supports. The balanced C5 equalizes all
+edge pressures (=> the P=1/5 anchor); an UNbalanced weighted C5 does not -- so the no-slack lemma
+is exactly a fixed-density weight-extremality statement on weighted-C5-type supports.
+
+### Step-1 audit verdict
+SOUND + HONEST. The ensemble repair is rigorous (Bernoulli rounding) and resolves my caveat; the
+E-flat refutation is a correct subdifferential-calculus fact (one-sided normal cone at W=1), backed
+by an exact in-band witness; the bang-bang restatement is precisely the KKT content; the High-F
+no-slack lemma is the sharply-stated open core (delta=0 is hard -- expected). NET: killed a wrong
+sub-lemma BEFORE it could cause a false closure, and narrowed the route to one weight-extremality
+lemma. Convergence with Step-2: their "tight Gamma=N^2 => C5[q], obstructions only at Gamma<N^2"
+finite rigidity == this "no saturated-edge pressure slack at high F" graphon rigidity (PROGRESS
+2026-06-26T19:55). RELAYED to user for Step-2.

@@ -129,8 +129,16 @@ def run(maxit=60, tol=1e-9, gram_tol=1e-7, modes=4, method="highs-ipm"):  # IPM 
     eta,q,u7,u8=solve(); print(f"iter0: eta={eta:+.7e}",flush=True)
     if q is None: print("INFEASIBLE iter0"); return
     for it in range(1,maxit+1):
-        ts=time.time(); x=np.asarray(D@q).ravel()
-        a7=sep_k7(x,q,u7); a8=sep_k8(q,u8); ag,worst=sep_gram(q); added=a7+a8+ag
+        ts=time.time()
+        # IPM returns a DENSE interior q -> sparsify for fast separation (cuts are valid for ANY q; the cutting-plane
+        # is robust to which feasible point triggers them). Keep states carrying >=1-eps of the mass.
+        qs=q.copy()
+        if (q>1e-12).sum()>800:
+            order=np.argsort(q)[::-1]; cms=np.cumsum(q[order])
+            kkeep=int(np.searchsorted(cms, 1.0-1e-4))+1; thrq=q[order[min(kkeep,nJ-1)]]
+            qs=np.where(q>=thrq, q, 0.0); s=qs.sum(); qs=qs/s if s>0 else qs
+        x=np.asarray(D@qs).ravel()
+        a7=sep_k7(x,qs,u7); a8=sep_k8(qs,u8); ag,worst=sep_gram(qs); added=a7+a8+ag
         if added==0: print(f"CONVERGED it{it}: eta={eta:+.7e} min_lambdahat={worst:+.2e}",flush=True); break
         eta,q,u7,u8=solve()
         if eta is None: print(f"it{it}: INFEASIBLE -> CLOSED(float)",flush=True); break

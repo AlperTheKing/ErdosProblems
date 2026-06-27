@@ -1,0 +1,1 @@
+random sparse tri-free graphs n=9..14: 100  (NJ=16)

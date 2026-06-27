@@ -1,0 +1,13 @@
+e=16 roots=  5 maxprof= 2 C(m,5)=0 buildW=10.5s rootmin=0.0s minH=+0.00e+00
+e=15 roots=  5 maxprof= 2 C(m,5)=0 buildW=10.0s rootmin=0.0s minH=+0.00e+00
+e=15 roots= 36 maxprof=16 C(m,5)=4368 buildW=10.2s rootmin=0.0s minH=+0.00e+00
+e=14 roots= 36 maxprof=16 C(m,5)=4368 buildW=10.0s rootmin=0.0s minH=+0.00e+00
+e=14 roots= 36 maxprof=16 C(m,5)=4368 buildW=10.0s rootmin=0.0s minH=+0.00e+00
+e=14 roots= 71 maxprof=37 C(m,5)=435897 buildW=10.5s rootmin=0.5s minH=+0.00e+00
+e=13 roots= 36 maxprof=16 C(m,5)=4368 buildW=9.8s rootmin=0.0s minH=+0.00e+00
+e=13 roots= 36 maxprof=16 C(m,5)=4368 buildW=9.9s rootmin=0.0s minH=+0.00e+00
+e=13 roots= 71 maxprof=37 C(m,5)=435897 buildW=10.0s rootmin=0.5s minH=+0.00e+00
+e=13 roots= 41 maxprof=16 C(m,5)=4368 buildW=10.6s rootmin=0.0s minH=+0.00e+00
+e=13 roots= 67 maxprof=23 C(m,5)=33649 buildW=9.9s rootmin=0.1s minH=+0.00e+00
+e=13 roots= 41 maxprof=16 C(m,5)=4368 buildW=10.0s rootmin=0.0s minH=+0.00e+00
+DENSE8DONE

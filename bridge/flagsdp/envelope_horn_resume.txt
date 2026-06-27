@@ -1,0 +1,13 @@
+=== RESUME order-10 + HORN with hard pool cap ===
+RESUMED 4598 cuts from it12 eta=+5.0103207e-04; POOLCAP=700 keep=1
+resume-solve: eta=+5.0101701e-04
+it11: +107k7 +376k8 +408horn -1560cap (pool 3929) eta=+4.4680281e-04 n<=13 minLh=-3.57e-01 [614s]
+it12: +106k7 +374k8 +409horn -856cap (pool 3962) eta=+4.0324552e-04 n<=14 minLh=-5.00e-01 [1336s]
+it13: +104k7 +371k8 +410horn -715cap (pool 4132) eta=+3.6219311e-04 n<=14 minLh=-5.00e-01 [538s]
+it14: +105k7 +377k8 +409horn -716cap (pool 4307) eta=+3.1479788e-04 n<=15 minLh=-2.40e-01 [2231s]
+it15: +103k7 +366k8 +410horn -677cap (pool 4509) eta=+2.7846876e-04 n<=16 minLh=-5.00e-01 [289s]
+it16: +101k7 +370k8 +410horn -628cap (pool 4762) eta=+2.5041462e-04 n<=17 minLh=-5.00e-01 [2269s]
+OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
+To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
+or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower
+it17: +102k7 +379k8 +410horn -674cap (pool 4979) eta=+2.2192332e-04 n<=18 minLh=-2.06e-01 [7324s]

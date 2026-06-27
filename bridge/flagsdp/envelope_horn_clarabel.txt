@@ -1,0 +1,22 @@
+=== RESUME order-10 + HORN with hard pool cap ===
+RESUMED 4979 cuts from it17 eta=+2.2192332e-04; SOLVER=CLARABEL keep=1
+resume-solve: eta=+2.2220377e-04
+it11: +96k7 +373k8 +410horn -641cap (pool 5217) eta=+1.9387240e-04 n<=20 minLh=-3.09e-01 [484s]
+it12: +97k7 +369k8 +410horn -639cap (pool 5454) eta=+1.6463710e-04 n<=22 minLh=-1.94e-01 [479s]
+it13: +95k7 +369k8 +410horn -639cap (pool 5689) eta=+1.3737907e-04 n<=24 minLh=-1.94e-01 [515s]
+it14: +98k7 +369k8 +410horn -608cap (pool 5958) eta=+1.1364703e-04 n<=26 minLh=-3.63e-01 [536s]
+it15: +99k7 +373k8 +410horn -668cap (pool 6172) eta=+8.5516133e-05 n<=30 minLh=-2.92e-01 [601s]
+it16: +93k7 +376k8 +410horn -692cap (pool 6359) eta=+4.8373509e-05 n<=40 minLh=-1.31e-01 [643s]
+OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
+To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
+or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower
+  CLARABEL status=AlmostSolved
+it17: INFEASIBLE -> CLOSED(float)
+Traceback (most recent call last):
+  File "E:\Projects\ErdosProblems\bridge\flagsdp\envelope_horn_clarabel.py", line 192, in <module>
+    run(); print("DONE",flush=True)
+    ^^^^^
+  File "E:\Projects\ErdosProblems\bridge\flagsdp\envelope_horn_clarabel.py", line 183, in run
+    print(f"FINAL clarabel eta={eta:+.7e}  (closed iff <=0; N<=180 iff <6.17e-5; n<={thr(eta)})  [CLARABEL accurate to 1e-7]",flush=True)
+                               ^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__

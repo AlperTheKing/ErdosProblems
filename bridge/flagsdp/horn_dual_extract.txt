@@ -1,0 +1,8 @@
+LP 19370x12690; state it16 saved eta=+4.8373509e-05; solving for dual...
+solved 1532s status=AlmostSolved eta=+4.7557059e-05
+dual: rho=+1.923035e-03 mu_hi=3.438395e-13 mu_lo=4.479763e-13 | k7leg=0.9766 k8leg=0.0234
+  env cuts: 3643 k7, 0 k8, 2716 horn; sum dual k7=535.2387 k8=0.0000 horn=64.0729
+  delta_dual (HI*mu_hi - LO*mu_lo + rho - 2/25*zk8leg) = +4.7557059e-05  vs eta=+4.7557059e-05
+  min dual (should be >=0 for ineq rows): +3.438e-13
+saved horn_dual.pkl
+DONE

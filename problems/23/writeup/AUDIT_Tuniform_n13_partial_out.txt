@@ -1,0 +1,20 @@
+=== PARTIAL strided U-census N=13 STRIDE=19 MAXCHECK=300000 ===
+>A E:/Projects/ErdosProblems/tools/nauty2_8_9/geng.exe -ctd1D12 n=13 e=12-42
+  ...checked=20000 skipped=10430 viols=0 min_slack=67 (67.000) t=76s
+  ...checked=40000 skipped=27156 viols=0 min_slack=255/4 (63.750) t=83s
+  ...checked=60000 skipped=29877 viols=0 min_slack=50 (50.000) t=86s
+  ...checked=80000 skipped=32111 viols=0 min_slack=50 (50.000) t=91s
+  ...checked=100000 skipped=34601 viols=0 min_slack=50 (50.000) t=95s
+  ...checked=120000 skipped=37235 viols=0 min_slack=50 (50.000) t=99s
+  ...checked=140000 skipped=40880 viols=0 min_slack=50 (50.000) t=103s
+  ...checked=160000 skipped=42318 viols=0 min_slack=50 (50.000) t=107s
+  ...checked=180000 skipped=44188 viols=0 min_slack=50 (50.000) t=111s
+  ...checked=200000 skipped=47917 viols=0 min_slack=50 (50.000) t=116s
+  ...checked=220000 skipped=52216 viols=0 min_slack=50 (50.000) t=120s
+  ...checked=240000 skipped=55436 viols=0 min_slack=50 (50.000) t=125s
+  ...checked=260000 skipped=60145 viols=0 min_slack=50 (50.000) t=129s
+  ...checked=280000 skipped=62756 viols=0 min_slack=50 (50.000) t=133s
+--- PARTIAL DONE N=13: checked=300000 skipped=71924 badgeo=0 viols=0 (PARTIAL strided sample, NOT exhaustive; geng -tc 13 total=19425052) ---
+min_slack(K-maxT)=50 (50.0000) at ('L???CB?W@_B_Bo', 13, 121, 61, Fraction(11, 1))
+elapsed=149.0s
+ZERO VIOLATIONS.

@@ -5,3 +5,8 @@ iter0: eta=+4.5275117e-03
 OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for thread metadata.
 To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
 or set the environment variable OPENBLAS_NUM_THREADS to 24 or lower
+it1: +105k7 +119k8 +277proj -0prune (pool 1202) eta=+2.7616237e-03 n<=5 minLh=-5.00e-01 [23s]
+it2: +106k7 +208k8 +345proj -383prune (pool 1478) eta=+1.7950757e-03 n<=6 minLh=-5.00e-01 [32s]
+it3: +107k7 +266k8 +388proj -257prune (pool 1982) eta=+1.2022813e-03 n<=8 minLh=-5.00e-01 [51s]
+it4: +107k7 +315k8 +402proj -268prune (pool 2538) eta=+9.1968913e-04 n<=9 minLh=-5.00e-01 [62s]
+it5: +107k7 +337k8 +404proj -306prune (pool 3080) eta=+6.9752057e-04 n<=10 minLh=-5.00e-01 [86s]

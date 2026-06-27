@@ -7,3 +7,4 @@ it2: +106k7 +207k8 +352proj -368prune (pool 1512) eta=+1.8537309e-03 n<=6 minLh=
 it3: +107k7 +281k8 +391proj -281prune (pool 2010) eta=+1.2311807e-03 n<=8 minLh=-5.00e-01 [285s]
 it4: +107k7 +306k8 +401proj -278prune (pool 2546) eta=+8.6666055e-04 n<=9 minLh=-5.00e-01 [655s]
 it5: +107k7 +328k8 +404proj -261prune (pool 3124) eta=+6.8185277e-04 n<=10 minLh=-5.00e-01 [1877s]
+it6: +107k7 +335k8 +407proj -265prune (pool 3708) eta=+6.2523099e-04 n<=11 minLh=-5.00e-01 [4091s]

@@ -1,0 +1,4 @@
+test A: Gw(w)<=N*T(w) [ell-wtd avg ell <= N];  test B: T(w) <= 2N - Gw(w)/N
+N=8: tot=85 failA(Gw<=N*T)=0 failB(T<=2N-Gw/N)=3
+N=9: tot=650 failA(Gw<=N*T)=0 failB(T<=2N-Gw/N)=0
+N=10: tot=5800 failA(Gw<=N*T)=0 failB(T<=2N-Gw/N)=0

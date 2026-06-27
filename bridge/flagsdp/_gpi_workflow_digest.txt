@@ -1,0 +1,69 @@
+===== SYNTHESIS =====
+All four load-bearing numerics independently reproduce: primal uniform routing 71797 routings 0 violations tight only at C5 (maxT=K=5 at N=5,Γ=25); AMI total reduction min(U−2O)=0 with min U/O=4.5; AMI necessity 6975/200000 abstract violations (crux real); dichotomy worst gapped 0.2571<1/3, 0 violations. I have what I need for the synthesis.
+
+# ERDŐS #23 / GPI — SYNTHESIS AND COMPLETENESS ASSESSMENT
+
+All numerics below were independently re-run by me in `E:\Projects\ErdosProblems\bridge\flagsdp` and reproduce exactly.
+
+## (5) FALSE-CLOSURE CHECK — done first, per project discipline
+
+**No angle claims to have proved the GPI. There is no false closure.** Every verdict is `needs-work`, `dead`, or `live-lead`-with-explicit-open-step. I stress-tested the one genuine false-closure trap — the AMI "algebra sound" reduction, which *looks* like it closes the S=V case:
+
+- `witness_ami_logic.py` shows uniform-AMI + (ΣT=Γ) ⟹ Γ≤N² with 0 counterexamples over 500k random vectors. This is real but is **only the easy half** (the algebra is valid *given* AMI holds for the actual routing).
+- `ami_necessity.py` (I reran): **6975/200000** abstract load vectors satisfying the exact identities ΣT=Γ≤N² **VIOLATE** AMI (2O≤U). Example (N=24, Γ=573, spike=29.84, O=5.837, U=8.837).
+
+So AMI is **not** implied by the free identities; it requires the geodesic-routing flatness that comes from cut-domination — exactly the open content. The reduction is honest: it relocates the difficulty to "uniform-AMI," which is **conjecture-strength** (equivalent in strength to Γ≤N²), not a closure. Correctly labeled.
+
+## (1) LIVE LEADS
+
+**Only `primal-routing` rises to live-lead, and the label is justified but qualified.** What is *proved* vs *open*:
+
+- **PROVED (exact, census-wide):** The uniform routing x_{e,P}=1/|P_e| gives max_v T_unif(v) ≤ K = N+(N²−Γ) with **0 violations over 71797 routings N≤11** (I reran `test_uniform_routing.py`: worst gap 0.0, tight only at C5, maxT=K=5 at N=5,Γ=25), 0 violations over all max-cuts N≤10, and large margin on the N=21/23 witnesses (M(Petersen) gap −107, M(Grötzsch) −114.9). The extremal locus is the **full C_odd[q] family** (C5/C7/C9[q], C11[1] all tight), not just C5 — a genuine sharpening (`adv_hub_probe.py`, `test_blowup_h7.py` to N=21).
+- **OPEN (the crux):** This is an **L∞ / pointwise** bound on a *specific* routing's max betweenness load. There is **no transport from cut-domination (CD) to this pointwise bound** — the same local→global congestion bridge flagged in the prompt. The strategy's own probe `adv_overlap.py` *refutes* its "disjoint endpoint/interior vertex sets" claim (a C5[2] alt-max-cut has a vertex with E=5,I=5,(E+I)/K=1.0); only the **sum** bound E+I≤K survives, tight at Γ=N².
+- It is also **strictly stronger than GPI** (pointwise per-routing ⟹ GPI via LP weak duality, but not conversely), adding an untested-at-large-N failure mode.
+
+**Why the other six "needs-work" angles do NOT clear the live-lead bar:** every one is a clean *reformulation* whose tight locus is exactly Γ=N² (the conjecture's own extremal), and whose decisive step is provably **no easier than GPI**. Specifically:
+- `maxflow-hall`: KEY CLAIM (L_frac−L_01 ≤ N²−Γ) is numerically true **but provably does not entail GPI** (needs L_01≤N, which is false; Grötzsch L_frac=23.75>N=23). The cleaner surrogate L_frac ≤ max(N, L_01) (0 violations N≤10) implies GPI directly but is equally unproven — relocates, not closes.
+- `extreme-phi`: R_01≤K is **near-circular** with the conjecture; the dichotomy threshold 1/3 is dangerously close to the true census worst (I reran: **0.2571** at N=10,Γ=75, not the under-reported 0.127). Histogram empty between 0.257 and 1/3 — no margin to spare.
+- `energy-electrical`: the Chebyshev bridge SC⟹GPI is a *valid* universal inequality (verified), but the SC premise (Σ_v L² ≤ N·Γ) is itself a CD-derived max-load bound = no easier than GPI.
+- `counting-entropy`: Cauchy-Schwarz chain rigorous and non-circular, but off-diagonal overlap Σ_f h_f I(e,f)≤N is the open congestion content.
+- `prefix-aggregate` (AMI): total, clean reduction to uniform-AMI — but uniform-AMI is conjecture-strength, and its proposed dual-concentration bridge is **falsified by complementary slackness** (`phi_vs_sat.py`: dual toll lives on saturated/most-loaded set, not the underloaded spare-capacity set).
+- `cutmetric-pentagonal`: the offered lever (0.75 uniform slack invariant) is **refuted at N≥10**; bounding step uncontrolled.
+
+## (2) DEAD
+
+- **`graphon-import` — DEAD.** Killing facts: ρ_avg≥0 (intensive) and T−N≤0 (extensive) have opposite sign and ~28× scale mismatch off the extremal; cannot be affinely identified. 4034 graphs at N=10 have ρ_avg=0 with Γ<N² (ρ=0 does NOT characterize C5-blowups). Only 2 graphs in the entire N≤10 census have F≥2/25 (both Γ=N²) ⟹ rigidity premise is **vacuous/circular at finite N**. corr(ρ,φ*) ranges [−0.58,+0.80] incl. 0/nan. Honest kill.
+- **`induction-peel` — DEAD.** Killing fact: on Grötzsch (N=11,Γ=100,K=32) all 8 P0-valid peels have K−K′=**−10<0** and destroy all bad edges (Γ′=0), so the induction hypothesis cannot transfer. The implied BND⟹GPI is algebraically valid but BND **fails on Grötzsch** (violation +46.3). Deleting the peel C destroys the very routing structure GPI is a statement about. (Note: one script summary line in `_gpi_induct_obstruct.py` is mislabeled — "K decreased: 8" actually counts a different quantity; the per-peel data correctly shows K−K′=−10. Cosmetic, not load-bearing.)
+
+## (3) CROSS-ANGLE COMBINATIONS
+
+The promising combinations all **collapse to the same single open lemma**, so none is strictly stronger:
+
+- **primal-routing × energy/counting (best candidate):** primal-routing supplies the concrete object (uniform routing T_unif); energy/counting supply the L² aggregate identity ΣT=Γ and Σ T² ≥ Γ²/N. Combining: an L² bound Σ_v T_unif² ≤ N·Γ would, via the verified single-outlier Chebyshev bridge, give the pointwise GPI. **This is the cleanest fusion** — it replaces the unprovable L∞ pointwise claim with an L² claim that is *averaged* (hence closer to a CD-coarea argument). But the L² claim is still the open congestion content (off-diagonal overlap Σ_f h_f I(e,f)≤N per e), tight at C_odd[q].
+- **extreme-phi × maxflow-hall:** both reduce to a 0/1 bound (R_01≤K / L_01≤N) plus a fractional-defect term; the defect terms are unproven and the 0/1 cores are near-circular. No gain.
+- **graphon-import × cutmetric:** dead × needs-work = dead (the graphon rigidity premise is vacuous at finite N).
+
+The unifying diagnosis: **all seven non-dead angles are LP-duals or routings of one multicommodity-flow/congestion certificate.** They differ only in the norm used to express the open step (L∞ pointwise = primal; L² = energy/counting; L¹ = AMI; cut-ratio = cutmetric/extreme-phi). The genuine missing ingredient — common to every angle — is a **CD-driven congestion/coarea inequality** controlling the geodesic load off-diagonal overlap, which no angle provides.
+
+## (4) SINGLE MOST PROMISING NEXT STEP + probability
+
+**Next step (most promising, concrete, checkable):** Pursue the **primal-routing × energy L² fusion** by attacking the off-diagonal overlap directly. Concretely, prove or refute on extended census + C_odd[q]/Mycielskian witnesses the **per-edge overlap-decay sub-claim**:
+
+> for every bad edge e, Σ_{f∈M} h_f · I(e,f) ≤ N, where I(e,f) = ⟨a_e, a_f⟩ is the uniform geodesic-membership inner product (a_{e,v} = fraction of e's shortest geodesics through v).
+
+This is the L²-diagonalized form of uniform-AMI, it is **directly testable via the harness** (`counting-entropy` scripts already compute a_{e,v}), it is tight at exactly C_odd[q], and — unlike the L∞ pointwise claim or the dual-concentration idea (killed by complementary slackness) — it is an *averaged* quantity where a CD/triangle-free coarea bound on B-geodesic congestion has a real chance of biting. If it holds census-wide AND a CD-derived analytic bound on I(e,f) by d_B(e,f) decay can be proved, it closes the S=V case; if a witness with Σ_f h_f I(e,f) > N is found, it kills the uniform routing as a proof route (without killing GPI).
+
+**Honest probability that GPI is provable by these methods: ~10–15%.** Rationale: the numerics are bulletproof (0 violations on everything testable, through N=21/23 witnesses and h=7 families), and the reduction to a single CD→congestion lemma is clean and well-isolated — that is genuine progress and raises it above a cold open problem. But (a) every angle's tight locus is the conjecture's own extremal, so each is provably no-easier-than-GPI; (b) the prompt's literature note is decisive — Leighton–Rao gives only O(log n) flow-cut gaps, not the tight constant, and Okamura–Seymour needs planarity, so there is no known machine that produces the *exact* tight congestion constant for this routing; (c) two of the most natural bridges (level-set integration, dual-on-underloaded-set) are already rigorously dead. The remaining route requires a genuinely new CD-driven coarea/congestion inequality, which is research-grade and not implied by anything currently in hand.
+
+**Key files (all absolute, under E:\Projects\ErdosProblems\bridge\flagsdp):** `test_uniform_routing.py`, `ami_total.py`, `ami_necessity.py`, `witness_ami_logic.py`, `_verify_dichotomy_indep.py`, `run_keyclaim.py`, `lp_vload.py`, `mycielskian_check.py`, `adv_overlap.py`, `phi_vs_sat.py`, `_cheb_check.py`, plus the `counting-entropy` scripts (`_adv_entropy_*.py`) that compute a_{e,v} for the proposed overlap sub-claim.
+
+
+===== DEAD ANGLE KILLERS =====
+
+--- graphon-import: identify the Step-1 cut-pressure dual rho(v) with the GPI geodesic-routing
+  KILLER: No counterexample to the proof attempt found; the strategy is correctly diagnosed as dead. One minor over-statement in the attempt's argument (3): i.i.d. blow-up instability of the cut-pressure kernel is NOT universal. For the n8 base graph with Gamma=50 (alpha*=0) I found rho_avg=0.0625 stays EXACTLY stable t=1->t=2 (N=8->16, F=0.0625 fixed), contradicting the attempt's general 'rho_avg/alpha* drift with t'. So the no-stable-finite-invariant sub-argument is base-graph-dependent, not a clean universal. This does NOT rescue the angle: the fatal objection (1), sign/scale separation, is base-graph-independent and holds census-wide.
+  NOTES: Ran the harness census via flag_engine.enumerate_graphs(N,triangle_free=True) + gamma_min_cut + pressure_dual + gpi_dual (lp_vload-style LP) for N=5..10 on all connected-B max-cut graphs (11563 total). Results: rho_avg<0 violations = 0; Gamma-N^2>0 violations = 0; both-zero-but-nonextremal = 0. So the sign/scale separation is EXACT census-wide -> rho (intensive, sign>=0) and T-N (extensive, sign<=0) cannot be affinely identified off the extremal set. Claim 2 CONFIRMED: 4034 graphs at N=10 alone 
+
+--- induction-peel
+  KILLER: No counterexample to the OBSTRUCTION; the obstruction is even stronger than claimed. The attempt's headline crux ("K-K'<0 budget growth") is NOT the operative obstruction on most census graphs: in my full N<=9 census (86 sub-tight configs) the geodesic-peel reason D (budget grows) registered 0 times; the universal wall is reason A (peel annihilates the bad set, |M'|=0) = 434 peels, plus reason B (survivor geodesic lost) = 146. The single deeper gap left UNADDRESSED by the attempt: it only proves the *geodesic*-peel and *single-vertex*-peel moves fail; it does not rule out some other inductive object (smaller smartly-chosen subgraph). My single-vertex-peel salvage test shows that variant ALSO fails on Grotzsch (8 D_budgetGrows + 3 C_CDfail, 0 GOOD) and on 19/86 census configs, so the wall is not peel-shape-specific — but a fully general "no inductive reduction exists" claim is not established (nor claimed).
+  NOTES: VERIFIED EXACTLY (E:\Projects\ErdosProblems\bridge\flagsdp): (1) _gpi_induct_obstruct.py reproduced: Grotzsch N=11,beta=4,Gamma=100,K=32; 8 P0-valid peels each K-K'=-10, |M'|=0, Gamma'=0 -- numbers match the claim. NOTE: that script's summary line "K decreased (K-K'>0): 8" is MISLABELED (counts nP0-nP0_Kdrop); the per-peel data correctly shows K-K'=-10<0 for all 8. (2) Independent from-scratch re-derivation (not reusing the helpers): identical -- 8 P0 peels, 0 transfer-capable. (3) lp_vload.py: 
