@@ -1,0 +1,47 @@
+KKT-core dump: N=11 two-edge support failures (high-effort optimizer)
+
+==== J?`@C_W{Ck?  N=11  |M|=3  Gamma=75 ====
+  full maxL = 8.560988  (<=N: True)
+  best PAIR maxL = 8.137079  pair gap = +0.423909  @ ((5, 10), (6, 10))
+  best TRIPLE maxL = 8.560988  triple gap = +0.000000  @ ((4, 8), (5, 10), (6, 10))
+  supp(y*) = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]  (|supp|=10)
+  overloaded C={T>N} = [9, 10]  (T = [10.0, 5.0, 5.0, 10.0, 5.0, 5.0, 5.0, 1.667, 5.0, 11.667, 11.667])
+  min #edges whose interval-union covers supp(y*): k = 3  via edges [(4, 8), (5, 10), (6, 10)]
+  overloaded shortest-B-geodesic closure = [0, 3, 9, 10]
+  STRUCTURAL TARGET (4): supp(y*) subset of overloaded-geodesic-closure ? False
+  active-edge layer weights w[f,i] (under y*):
+    edge (4, 8) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[4], 1:[0], 2:[7, 9, 10], 3:[3], 4:[8] }
+      w[f,.]=[np.float64(0.0315), np.float64(0.1475), np.float64(0.1572), np.float64(0.1475), np.float64(0.0315)]  p_f on supp={ 0:1.0, 3:1.0, 4:1.0, 8:1.0, 9:0.333, 10:0.333 }
+    edge (5, 10) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[5], 1:[1], 2:[9], 3:[0, 3], 4:[10] }
+      w[f,.]=[np.float64(0.0427), np.float64(0.0427), np.float64(0.2357), np.float64(0.1475), np.float64(0.2357)]  p_f on supp={ 0:0.5, 1:1.0, 3:0.5, 5:1.0, 9:1.0, 10:1.0 }
+    edge (6, 10) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[6], 1:[2], 2:[9], 3:[0, 3], 4:[10] }
+      w[f,.]=[np.float64(0.0427), np.float64(0.0427), np.float64(0.2357), np.float64(0.1475), np.float64(0.2357)]  p_f on supp={ 0:0.5, 2:1.0, 3:0.5, 6:1.0, 9:1.0, 10:1.0 }
+  overlap O_fg = sum_v p_f p_g among active edges:
+    (4, 8): [4.333, 1.667, 1.667]
+    (5, 10): [1.667, 4.5, 2.5]
+    (6, 10): [1.667, 2.5, 4.5]
+
+==== J?AA@AW^?}?  N=11  |M|=3  Gamma=75 ====
+  full maxL = 8.091268  (<=N: True)
+  best PAIR maxL = 7.690843  pair gap = +0.400425  @ ((6, 10), (7, 10))
+  best TRIPLE maxL = 8.091268  triple gap = +0.000000  @ ((0, 8), (6, 10), (7, 10))
+  supp(y*) = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  (|supp|=11)
+  overloaded C={T>N} = [9, 10]  (T = [5.0, 5.0, 5.0, 5.833, 5.833, 8.333, 5.0, 5.0, 5.0, 12.5, 12.5])
+  min #edges whose interval-union covers supp(y*): k = 3  via edges [(0, 8), (6, 10), (7, 10)]
+  overloaded shortest-B-geodesic closure = [3, 4, 5, 9, 10]
+  STRUCTURAL TARGET (4): supp(y*) subset of overloaded-geodesic-closure ? False
+  active-edge layer weights w[f,i] (under y*):
+    edge (0, 8) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[0], 1:[5], 2:[9, 10], 3:[3, 4], 4:[8] }
+      w[f,.]=[np.float64(0.0319), np.float64(0.1448), np.float64(0.2678), np.float64(0.0362), np.float64(0.0319)]  p_f on supp={ 0:1.0, 3:0.5, 4:0.5, 5:1.0, 8:1.0, 9:0.5, 10:0.5 }
+    edge (6, 10) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[6], 1:[1], 2:[9], 3:[3, 4, 5], 4:[10] }
+      w[f,.]=[np.float64(0.0458), np.float64(0.0458), np.float64(0.2678), np.float64(0.0724), np.float64(0.2678)]  p_f on supp={ 1:1.0, 3:0.333, 4:0.333, 5:0.333, 6:1.0, 9:1.0, 10:1.0 }
+    edge (7, 10) ell=5: layers={i:sorted(lay[i]) for i}={ 0:[7], 1:[2], 2:[9], 3:[3, 4, 5], 4:[10] }
+      w[f,.]=[np.float64(0.0458), np.float64(0.0458), np.float64(0.2678), np.float64(0.0724), np.float64(0.2678)]  p_f on supp={ 2:1.0, 3:0.333, 4:0.333, 5:0.333, 7:1.0, 9:1.0, 10:1.0 }
+  overlap O_fg = sum_v p_f p_g among active edges:
+    (0, 8): [4.0, 1.667, 1.667]
+    (6, 10): [1.667, 4.333, 2.333]
+    (7, 10): [1.667, 2.333, 4.333]
+
+SUMMARY:
+  J?`@C_W{Ck?: pairgap=+0.4239 trigap=+0.0000 mink=3 supp_in_closure=False
+  J?AA@AW^?}?: pairgap=+0.4004 trigap=+0.0000 mink=3 supp_in_closure=False

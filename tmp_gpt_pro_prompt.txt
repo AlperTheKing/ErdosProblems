@@ -1,0 +1,17 @@
+You are GPT-Pro helping with a proof of Erdős Problem #23. Everything has been reduced to ONE inequality; please do not propose already-refuted routes.
+
+Setup. Fix a connected-B maximum cut of a triangle-free graph on N vertices. B=cut edges, M=bad edges. Each bad edge f=(a,b) has odd length L=ell(f)=d_B(a,b)+1>=5. Let p_f(v)=fraction of shortest a-b B-geodesics through v. Let S(v)=sum_g p_g(v). The target ROWSUM-O is, for every bad edge f,
+  sum_v p_f(v) S(v) <= N.
+Equivalent LPD/corridor-energy form: for all y>=0, define layers I_i(f) and w_{f,i}=sum_{v in I_i(f)} y_v p_f(v). Then
+  sum_f (sum_i sqrt(w_{f,i}))^2 <= N sum_v y_v.
+Equivalently,
+  sum_v (T(v)-N)y_v <= sum_f sum_{i<j}(sqrt(w_{f,i})-sqrt(w_{f,j}))^2,
+where T(v)=sum_f ell(f)p_f(v).
+
+Ruled out: scalar Hall/max-flow cuts are necessary not sufficient; fixed finite Neumann truncations fail; per-bad-edge SOS/telescoping is circular; integer and fractional band/SPLIT certificates are false; pointwise path cap is false. Exact counterexample to pointwise path cap: N=10 graph g6=I?BD@g]Qo, side=0001111000, bad edge f=(7,9), one shortest path P=(7,5,8,6,9) has sum_{v in P}S(v)=32/3>10, but the average over the 5 shortest f-geodesics is ROWSUM=689/75<10. So the proof must use geodesic-fan averaging.
+
+Sharp diagnostics:
+1. Uniform extremal N=10 g6=I?rFf_{N? has four length-5 bad edges, T(v)=N for all vertices, and CE is equality with E=0.
+2. The sharpest N=10 CE ratio core found by float scan is g6=I?BD@g]Qo, side=0100101110, bad edges M=((0,5),(4,8),(6,8)), loads on optimizer support (0,4,5,6,7,8,9) are (5,5,34/3,10,32/3,10,34/3), ratio <T-N,y>/E(y) about 0.889. It reduces by symmetry to four per-vertex variables x,y,z,u for classes {0,4},{5,9},{6,8},{7}. With a=sqrt(x), b=sqrt(y), c=sqrt(z), d=sqrt(u), the CE gap is an exact PSD quadratic form. This suggests a quotient-core PSD proof style, but layer-thinness is false in other witnesses: some active layers contain two active vertices.
+
+Question. Find one concrete proof route for the full CE/LPD inequality. I want a load-bearing lemma, not a survey. Ideally: a KKT-core exclusion, a fan-averaging inequality over shortest-path DAGs, or a quotient-core PSD decomposition that handles layers with multiple active vertices. It must be tight at uniform odd-cycle blow-up extremals, and it must not reduce to scalar Hall or pointwise path caps. State the lemma precisely enough that it can be exact-tested on census instances.
