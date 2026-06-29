@@ -42,7 +42,7 @@ def fmt(x):
 
 
 def graph_probe(args):
-    g6, coeff = args
+    g6, coeff, min_paths, max_paths = args
     n, edges = dec(g6)
     adj, cuts = gmins(n, edges)
     best_ratio = None
@@ -58,6 +58,11 @@ def graph_probe(args):
             continue
         pfs, S = pfs_for({"n": n, "M": M, "cyc": cyc})
         for f in M:
+            path_count = len(cyc[f])
+            if min_paths is not None and path_count < min_paths:
+                continue
+            if max_paths is not None and path_count > max_paths:
+                continue
             rows += 1
             pf = pfs[f]
             row = sum(x * S[v] for v, x in pf.items())
@@ -90,11 +95,13 @@ def main():
     ap.add_argument("--coeff", default="1")
     ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--chunksize", type=int, default=64)
+    ap.add_argument("--min-paths", type=int, default=None)
+    ap.add_argument("--max-paths", type=int, default=None)
     args = ap.parse_args()
     coeff = parse_fraction(args.coeff)
     graphs = subprocess.run([GENG, "-tc", str(args.n)], capture_output=True, text=True, check=True).stdout.split()
     acc = {"graphs": 0, "cuts": 0, "rows": 0, "ratio": None, "margin": None}
-    items = ((g, coeff) for g in graphs)
+    items = ((g, coeff, args.min_paths, args.max_paths) for g in graphs)
     if args.workers > 1:
         with ProcessPoolExecutor(max_workers=args.workers) as ex:
             iterator = ex.map(graph_probe, items, chunksize=args.chunksize)

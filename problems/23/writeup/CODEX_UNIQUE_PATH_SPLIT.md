@@ -1,0 +1,2505 @@
+# Unique-Path UPO / Interval-Hall Route For ROWSUM-O
+
+This note records the unique-path attack on ROWSUM-O.
+
+**Status correction, 2026-06-29.**  The later `UNIQUE-BASE`,
+`FAN-RESIDUAL`, `ULOAD-ONE`, pointwise `uload<=cover`, and
+base/surplus bucket-flow split were census-blind.  Claude found and Codex
+locally confirmed an N=26 GPT-Pro graph where all of those split lemmas fail
+on gamma-min cuts:
+
+```text
+N=26 gamma-min cuts=48
+unique-rows checked=192
+UPO violations=0
+ULOAD-ONE failures=192
+pointwise UNIQUE-BASE failures=104
+UNIQUE-BASE interval failures=87
+span-coverage failures=0
+```
+
+Thus the live target in this note is the direct interval-Hall/UPO bound
+
+```text
+demand(I) <= cap(I)
+```
+
+especially for the whole interval `I=P_f`.  The proven structural lemmas
+that survive are:
+
+```text
+contiguity,
+Q-follows-P on the overlap,
+span-capacity,
+span-coverage.
+```
+
+The dead split sections are retained below only as audit trail.
+
+Another tempting direct shortcut is also false:
+
+```text
+demand(I) <= |I| + surplus(I),
+surplus(I)=sum_active (|C|-(hi(C)-lo(C)+1)).
+```
+
+It fails already at N=11:
+
+```text
+g6 = J?AADAoZ?u?
+f = (6,10), P = [6,1,9,4,10]
+interval I = [2,2]
+demand = 7/6, |I| = 1, surplus = 0, margin = -1/6.
+```
+
+So interval Hall needs the full multiplicity of active component span lengths,
+not merely the covered interval length plus surplus.
+
+The N=26 GPT-Pro graph also shows the kind of gamma-minimality switch that is
+missing from the four structural lemmas.  In the non-gamma-min parity cut,
+
+```text
+M = (0,4), (4,8), (8,12), (0,12)
+ell = 5, 5, 5, 13
+Gamma = 244
+```
+
+The cut violates UPO for `f=(0,12)`, whose unique path is `0,1,...,12`.
+Flipping the singleton vertex `4` is cut-tight:
+
+```text
+d_B({4}) = d_M({4}) = 2.
+```
+
+It preserves max-cut size but changes the bad-edge lengths to
+
+```text
+ell = 7, 5, 5, 5
+Gamma = 124.
+```
+
+## Dead Tight-Cap Descent Gate
+
+The `2026-06-29` GPT-Pro tight-cap suggestion is a plausible way to use
+gamma-minimality locally: for a unique `L=5` row
+
+```text
+f = v0v4,  P = v0-v1-v2-v3-v4
+```
+
+it proposes testing the four caps
+
+```text
+{v0}, {v4}, {v0,v1}, {v3,v4}
+```
+
+and proving that at least one defect-lowering cap is cut-tight.
+
+This is not an accepted lemma.  There was also a notation issue:
+the pasted formula uses `A_i=S(v_i)` and the row gate `sum_i A_i <= N`.
+Using the repo's raw weighted `T` load from `struct_for_side`, the N=26
+parity prototype has unique `L=5` rows with
+
+```text
+(0,4):  sum_i T(v_i) = 95
+(4,8):  sum_i T(v_i) = 100
+(8,12): sum_i T(v_i) = 95
+```
+
+for `N=26`, so the pasted gate is not a raw-`T` statement.  I posted an
+exact-gate request to Claude asking for the correct `S(v)` convention and a
+full battery test of:
+
+```text
+D_f>0, sum_i A_i<=N
+  => exists W in {{v0},{v4},{v0,v1},{v3,v4}}
+     with lambda(W)=0 and D'_W<D_f,
+```
+
+including whether the switched cut remains connected-B and preserves or lowers
+`Gamma`.
+
+Claude replied at `2026-06-29T07:15:00Z`: **DEAD**.  The defect is exactly the
+old `L=5` shell/band-SPLIT defect, and that certificate class is already
+refuted:
+
+```text
+integer band: N=8 GDSKVG cut 01110110 f=(2,3)
+fractional/selected SPLIT: N=12 K??CE@A{?]Fc, all 11 gamma-min cuts SPLIT-bad
+```
+
+So proving tight-cap descent would repair a dead SPLIT certificate rather than
+prove ROWSUM-O.  Do not invest further in this route.
+
+## Interval-Failure Switch Descent
+
+The broader gamma-minimality bridge is:
+
+```text
+interval-Hall failure for a unique row
+  => a connected-B max-cut switch with strictly smaller Gamma.
+```
+
+I added the exploratory gate:
+
+```text
+problems/23/writeup/_codex_interval_descent_gate.py
+```
+
+For a connected-B max cut and a unique row `f`, it checks every interval-Hall
+failure
+
+```text
+sum_{i=a..b} (S(x_i)-1)
+  > sum_{C: span(C) intersects [a,b]} |C|
+```
+
+against the following switch family:
+
+```text
+singletons {x_i},
+contiguous path intervals,
+path intervals closed under off-path B-components with contained span.
+```
+
+A hit must preserve max-cut size, keep `B` connected, and strictly lower
+`Gamma`.
+
+Local exact results:
+
+```text
+N26 parity: interval-failures=3, no-descent=0
+census N=7..9 connected-B max cuts: interval-failures=0
+census N=10 connected-B max cuts: interval-failures=0
+```
+
+The N=26 stress was then broadened to every max cut reachable from the parity
+cut by balanced singleton flips:
+
+```text
+reachable max cuts = 1113
+connected-B bad cuts = 1113
+Gamma distribution = 124:48, 244:1, 300:1064
+interval-failures = 3
+no-descent = 0
+```
+
+The three failures are all in the parity cut; in each case the best reported
+switch is the path interval `W={1,2,3,4}`, giving `Gamma=124`.
+
+I posted this as a second exact-gate request to Claude.  If it survives his
+larger non-gamma max-cut battery, it is the clean bridge from interval Hall to
+gamma-minimality: a gamma-min connected-B max cut cannot contain an
+interval-Hall failure.
+
+Claude replied at `2026-06-29T07:40:00Z`: the bridge holds on his independent
+gate, and the switch family collapses to singletons.
+
+```text
+k-chord family:
+  k=3, N=26, failures=3
+  k=4, N=34, failures=6
+  k=5, N=42, failures=10
+census N=7..10 connected-B max cuts: failures=0
+total interval-Hall failures = 19
+no-descent = 0
+descent switch labels = singleton:19
+```
+
+So the sharpened proof target is:
+
+```text
+If a unique-row interval [a,b] violates interval Hall, then some vertex x_i
+has a cut-tight singleton flip, B remains connected after the flip, and Gamma
+strictly decreases.
+```
+
+This only requires singleton-Gamma-stability, which is weaker than global
+gamma-minimality.
+
+Claude then stress-tested the singleton bridge further at `2026-06-29T07:50Z`:
+
+```text
+larger k-chords: k=3,6,9,12
+chord-length variants: 5 and 7
+N up to 146
+total interval-Hall failures = 211
+no-descent = 0
+descent switch labels = singleton:211
+```
+
+So the singleton bridge is not just the N=26 artifact.  The live proof target
+is now the singleton version only.
+
+Claude then gated the structural form of the singleton descent:
+
+```text
+2026-06-29T08:05Z
+k-chord family k=3,5,7,9, chord lengths 5 and 7
+interval-Hall failures = 130
+incident-exchange failures = 0
+retained-shortcut failures = 0
+```
+
+Every singleton descent decomposes into:
+
+```text
+neutral incident exchange:
+  removed incident bad edges can be matched to added incident bad edges
+  with ell_new <= ell_old;
+
+strict retained shortcut:
+  retained bad edges have negative total square change, with at least one
+  retained bad edge strictly shortening.
+```
+
+Claude also gated the max-load selector:
+
+```text
+2026-06-29T08:20Z
+k-chord family k=3,6,9,12, chord lengths 5 and 7
+interval-Hall failures = 211
+no max-load vertex descends = 0
+some but not all max-load vertices descend = 0
+```
+
+So the current proof lemma is:
+
+```text
+Let I=[a,b] violate interval Hall for a unique row f.
+Let x_i be any vertex in I with maximal d_i=S(x_i)-1.
+Then flipping x_i is cut-tight, keeps B connected, and strictly lowers Gamma
+by neutral incident exchange plus a strict retained-edge shortcut.
+```
+
+## Singleton Flip Algebra
+
+For a singleton `x`, write
+
+```text
+B_x = old cut-neighbours of x,
+M_x = old bad-neighbours of x.
+```
+
+Flipping `x` preserves max-cut size exactly when
+
+```text
+|B_x| = |M_x|.
+```
+
+After the flip:
+
+```text
+old bad edges xh, h in M_x, become cut edges;
+old cut edges xa, a in B_x, become bad edges;
+bad edges not incident to x remain bad, but their B-distance may change.
+```
+
+Thus a proof of singleton Gamma descent can be organized as:
+
+```text
+1. incident exchange:
+   pair each new bad edge xa with a removed bad edge xh
+   so that ell_new(xa) <= ell_old(xh);
+
+2. shortcut:
+   at least one retained bad edge strictly shortens, and retained bad edges
+   do not increase in total square length.
+```
+
+The N=26 parity prototype has exactly this form.  Flipping `x=4` gives:
+
+```text
+removed bad: (0,4), (4,8), both length 5
+added bad:   (3,4), (4,5), both length 5
+retained:    (0,12) shortens 13 -> 7
+retained:    (8,12) remains 5
+Gamma:       244 -> 124
+```
+
+Flipping `x=8` is symmetric.  The next proof target is therefore:
+
+```text
+interval-Hall failure
+  => exists x in the failing corridor interval satisfying the incident
+     exchange plus retained-edge shortcut.
+```
+
+The generalized k-chord family has the same pattern.  For k=4 (`N=34`) and
+k=5 (`N=42`), every reported failure is for the long outer chord, and any
+internal chord endpoint such as `4,8,12,...` gives the same type of singleton
+descent: two incident C5 chords are exchanged for two C5 path-edge rows, while
+the retained long outer chord shortens.
+
+This suggests the proof decomposition:
+
+```text
+off-path components pay ordinary corridor mass;
+any remaining interval overrun is nested path-chord mass;
+nested path-chord overrun forces an internal chord endpoint with a neutral
+incident exchange and an outer-row shortcut.
+```
+
+## Noncontained Demand Decomposition
+
+For a unique row `f` with path `P`, call another bad edge `g` `P-contained`
+if at least one shortest `B`-geodesic for `g` is wholly contained in `P`.
+Define
+
+```text
+D_noncont(I)
+  = sum over g != f not P-contained of sum_{x_i in I} p_g(x_i).
+```
+
+Candidate geometric lemma:
+
+```text
+D_noncont(I) <= cap(I)
+```
+
+for every path interval `I`, where `cap(I)` is the usual sum of sizes of
+off-path `B`-components whose span intersects `I`.
+
+Local exact check:
+
+```text
+N26 parity: 136 intervals, 0 violations
+census N=7..10 gamma-min connected-B cuts: 68018 intervals, 0 violations
+```
+
+Claude replied at `2026-06-29T08:45Z`: **HOLDS**, 0 violations.
+
+```text
+k-chord non-gamma parity cuts, N up to 110: 0 violations
+census N=7..11 gamma-min:
+  intervals 556/1411/9173/56878/486494, violations=0
+C7|brg|Grotzsch N=18, C9|brg|C9 N=18: violations=0
+total intervals = 567108, violations = 0
+```
+
+Thus interval-Hall failure can only come from `P`-contained nested bad rows
+after the off-path component capacity is paid.  The remaining proof becomes a
+nested-chord/singleton-flip statement rather than a general flow statement.
+
+A pointwise strengthening is false:
+
+```text
+noncontained_load(i) <= #{components whose span covers i}
+```
+
+fails on the N=26 parity cut at 4 positions.  The correct constructive
+strength appears to be fractional flow:
+
+```text
+source -> path positions x_i       capacity noncontained_load(i)
+x_i -> component C                 if span(C) contains i
+component C -> sink                capacity |C|
+```
+
+Local exact Fraction check:
+
+```text
+N26 parity: rows with noncontained demand=3, flow violations=0
+gamma-min census N9: rows=105, flow violations=0
+gamma-min census N10: rows=1268, flow violations=0
+```
+
+I posted this flow strengthening to Claude for full gating.  I also ran the
+local exact gate:
+
+```text
+problems/23/writeup/_noncont_flow_gate.py
+
+k-chord parity rows: 36, infeasible=0
+census N=7..11 gamma-min rows: 17949, infeasible=0
+C9|brg|C9 N=18 rows: 0, infeasible=0
+TOTAL rows with noncontained demand: 17985, infeasible=0
+```
+
+Thus the constructive Part A target is:
+
+```text
+noncontained position demand fractionally routes to off-path component
+capacities through the span-containment bipartite graph.
+```
+
+This is stronger than `D_noncont(I)<=cap(I)` and is equivalent to its interval
+Hall conditions because every component neighborhood is an interval on `P`.
+
+Claude independently confirmed this flow object at `2026-06-29T09:10Z`:
+
+```text
+_noncont_flow_gate.py:
+  rows with noncontained demand = 17985
+  infeasible = 0
+```
+
+The same Claude block killed a tempting decoupled proof route.  GPT-Pro's
+endpoint-tax split wrote
+
+```text
+D(I)=G(I)+E(I),
+G(I) <= sum_C (|C|-1),
+E(I) <= #{active components}.
+```
+
+The first inequality and the identity held, but `E(I)<=c(I)` failed at N=11:
+
+```text
+graph J??CBAPz?}?, side 01101110100,
+f=(3,10), P=[3,8,0,6,10], I=[0,2],
+E=6/5 > c=1.
+```
+
+So Part A cannot split the component accounting into independent gap-load and
+endpoint-tax budgets.  The correct object is the coupled per-component Hall
+flow.
+
+One still more literal ownership strengthening is false.  I tested:
+
+```text
+each atom (g,Q,i) may route only through off-path components that Q itself
+uses and whose span contains i.
+```
+
+Script:
+
+```text
+problems/23/writeup/_noncont_actual_detour_flow_gate.py
+```
+
+Result:
+
+```text
+k-chord rows: 36, infeasible=0
+census N=9 rows: 105, infeasible=0
+census N=10 rows: 1268, infeasible=93
+first: graph I?AAD@wF_, side 0000011110, f=(3,9)
+```
+
+So Part A cannot be proved by assigning each geodesic to only the components
+it traverses.  The true proof must use interval/coarea Hall at the aggregate
+component-span level: a geodesic atom may be paid by a different component
+whose span covers the same path position.
+
+There is a possible stronger aggregate form:
+
+```text
+D_noncont(I) > 0  =>  D_noncont(I) + 1 <= cap(I).
+```
+
+The local equality scan suggested the stronger length-sensitive form:
+
+```text
+D_noncont(I) > 0  =>  D_noncont(I) + (|P_f|-4) <= cap(I),
+```
+
+where `|P_f|=ell(f)` is the number of vertices on the unique shortest
+`B`-geodesic for `f`.
+
+Local exact gate:
+
+```text
+problems/23/writeup/_noncont_spare_gate.py
+
+k-chord parity k=3,6,9 and chord lengths 4,6:
+  tested = 774, spare-unit violations = 0, length-sensitive violations = 0
+census N=7..11 gamma-min:
+  tested = 203635, spare-unit violations = 0, length-sensitive violations = 0
+C7|brg|Grotzsch and C9|brg|C9:
+  tested = 0, spare-unit violations = 0, length-sensitive violations = 0
+total intervals with nonzero noncontained demand = 204409
+spare-unit violations = 0
+length-sensitive violations = 0
+global min spare-unit slack = 1
+global min length-sensitive residual = 0
+first slack-one example:
+  graph I?AAD@wF_, side 0000011110, f=(3,9)
+```
+
+Claude confirmed the spare-unit form at `2026-06-29T09:20Z`:
+
+```text
+total intervals with D_noncont>0 = 204409
+spare violations = 0
+global min slack = 1
+```
+
+The standing-gate Mycielskian checks were vacuous for this lemma because they
+had `D_noncont=0`, so the meaningful evidence is the census plus k-chord
+battery.  Claude also confirmed the equality class at `2026-06-29T10:05Z`:
+
+```text
+slack=1 intervals = 783
+slack=1 with ell(f)!=5 = 0
+```
+
+Claude confirmed the length-sensitive form at `2026-06-29T11:00Z`:
+
+```text
+LEN-VIOL = 0 over 204409 intervals with D_noncont>0
+minimum residual cap-D_noncont-(|P_f|-4) = 0
+```
+
+So Part A has a validated stronger target:
+
+```text
+D_noncont(I)>0  =>  D_noncont(I)+(|P_f|-4) <= cap(I).
+```
+
+Local equality-class scan:
+
+```text
+census N=9:  slack-one cases = 0
+census N=10: slack-one cases = 207, all with |P_f|=5
+census N=11: slack-one cases = 576, all with |P_f|=5
+```
+
+Thus, locally, the spare unit is tight only on shortest odd cycles of length
+five.  Longer unique rows have strictly larger noncontained spare capacity.
+
+The same statement with component sizes replaced by span lengths is false.
+That is, the inequality
+
+```text
+D_noncont(I) + (|P_f|-4)
+  <= sum_{C active on I} (hi(C)-lo(C)+1)
+```
+
+fails already on the k-chord family:
+
+```text
+k=3, chord length 4, f=(0,4), |P_f|=5:
+  D_noncont=6, active span length=5.
+k=3, chord length 6, f=(6,12), |P_f|=7:
+  D_noncont=9, active span length=7.
+```
+
+So the proof must use actual off-path component sizes via span-capacity, not
+span coverage alone.
+
+### Part A Proof Draft
+
+The component-flow certificate is equivalent to a Hall condition for an
+interval bigraph.  Since each component span is an interval on `P`, it is
+enough to check interval sets of positions:
+
+```text
+for every interval J on P:
+  D_noncont(J) <= sum_{C: span(C) intersects J} |C|.
+```
+
+This is exactly the already gated `D_noncont <= cap` inequality.  Thus a
+constructive proof of Part A can proceed as:
+
+1. Prove the interval Hall condition directly from span-coverage and
+   span-capacity.
+2. Apply the interval-bigraph Hall theorem to route noncontained position
+   demand into component capacities.
+3. Conclude `D_noncont(I) <= cap(I)` for every interval `I`.
+
+The geometric core of step 1 should be:
+
+```text
+Every non-P-contained shortest geodesic Q that contributes to positions in J
+must leave P through off-path B-components whose spans intersect J.
+The total weighted mass it contributes on J is no larger than the total
+off-path component capacity made available by those detours.
+```
+
+Pointwise assignment is false, so the proof must use interval Hall/coarea
+rather than a local injection at each path vertex.
+
+## Proof Skeleton: Max-Load Singleton Descent
+
+The verified route is now a three-lemma stack.
+
+### Lemma A: Noncontained Component Charging
+
+For every unique row `f`, every interval `I` on `P_f`, and every other bad
+edge `g` with no shortest geodesic wholly contained in `P_f`, the contribution
+of all such `g` to `I` is at most `cap(I)`.
+
+This is now exact-gated.  It should be provable by charging each noncontained
+geodesic segment on `P_f` to the off-path component(s) it uses, using the
+already proven span-capacity and span-coverage geometry.
+
+### Lemma B: Nested Remainder Forces A Hub
+
+Assume interval Hall fails at `I=[a,b]`.  After Lemma A, the overrun is caused
+by `P_f`-contained bad rows.  Let `x_i` be a maximum of
+
+```text
+d_i = S(x_i)-1
+```
+
+on `I`.  The nested remainder should force `x_i` to be an endpoint of
+bracketing `P_f`-contained bad rows, so that the incident bad edges at `x_i`
+are exactly the rows used in the neutral exchange.
+
+This is the pending hub-type gate.
+
+Claude's `2026-06-29T08:45Z` synthesis reports the hub type already validated
+on the stress corpus:
+
+```text
+max-load hub internal,
+d_B=d_M=2,
+two bracketing P-contained bad rows,
+validated 1849/1849.
+```
+
+So the remaining task is no longer discovering the local type; it is proving
+that contained-overload forces this type and that the resulting retained
+outer row strictly shortcuts after the singleton flip.
+
+### Lemma C: Hub Flip Decreases Gamma
+
+For the max-load hub `x_i`:
+
+```text
+1. d_B(x_i)=d_M(x_i), so the singleton flip is cut-tight;
+2. B remains connected after the flip;
+3. incident exchange is neutral:
+   new incident bad lengths are matched to old incident bad lengths
+   with ell_new <= ell_old;
+4. some retained bad edge, typically the outer row crossing the overrun,
+   gets a strictly shorter B-geodesic after the flip.
+```
+
+Then `Gamma` strictly decreases.  This contradicts singleton-Gamma-stability,
+and therefore a gamma-min cut has no interval-Hall failure.
+
+Claude sharpened this at `2026-06-29T10:05Z` with
+`CLAUDE_PARTB_DESCENT_DECOMP.md`.  On every k-chord interval-Hall failure
+tested:
+
+```text
+1. the max-load singleton flip is cut-tight and keeps B connected;
+2. the incident exchange is ell-multiset-neutral, not merely square-neutral;
+3. among retained bad edges, exactly f changes length;
+4. f strictly shortens and no retained edge lengthens.
+```
+
+Therefore the exact identity in the tested family is:
+
+```text
+Gamma(s') - Gamma(s) = ell_{s'}(f)^2 - ell_s(f)^2 < 0.
+```
+
+The remaining Part B proof obligations are now:
+
+```text
+B-i   max-load hub has equal incident cut/bad degree;
+B-ii  the local incident exchange preserves the ell multiset;
+B-iii flipping the max-load hub strictly shortens f's own geodesic.
+```
+
+`B-iii` is the heart: turn interval-Hall overload into a concrete shorter
+alternating route for f after the hub flip.
+
+### Bracket Shortcut Lemma Target
+
+The deterministic part of `B-iii` should be:
+
+```text
+Let f have unique path P=(x_0,...,x_{L-1}).
+Let x_i be an internal hub.
+Suppose the two old bad edges incident to x_i are P-contained brackets
+  e_L = x_p x_i,    p < i,
+  e_R = x_i x_q,    i < q,
+whose contained geodesics are the subpaths P[p..i] and P[i..q].
+After flipping x_i, e_L and e_R become cut edges.
+Then f has a new cut-edge path
+  x_0,...,x_p, x_i, x_q,...,x_{L-1},
+of length
+  L' = L - (q-p-2).
+```
+
+Since each bracket bad row has odd length at least five, the bracket gap gives
+`q-p-2>0`, hence `L'<L`.  This proves the strict shortcut for `f` once the
+bracketing local type is known.  The adjacent path edges that become bad have
+the same `ell` values as `e_L,e_R` by the same cycle rotation:
+
+```text
+old bad e_L uses P[p..i];
+new bad path edge x_{i-1}x_i uses
+  x_{i-1},x_{i-2},...,x_p,x_i,
+with e_L now a cut edge.
+```
+
+and similarly on the right.  Thus the incident exchange is
+`ell`-multiset-neutral.
+
+The remaining non-deterministic part is to prove that interval-Hall overload
+forces such bracketing rows at a max-load hub.
+
+Claude confirmed the deterministic bracket shortcut at `2026-06-29T11:00Z`:
+
+```text
+bracket rows p<i<q with contained geodesics P[p..i], P[i..q]: 6/6
+shortcut sequence valid after flip: 6/6
+ell_{s'}(f) = L-(q-p-2) exactly: 6/6
+rotated incident paths have old bracket ell values: 6/6
+```
+
+Thus:
+
+```text
+bracket rows at hub
+  => Gamma(s')-Gamma(s)
+   = [L-(q-p-2)]^2 - L^2 < 0.
+```
+
+This is now deterministic.  The sole Part B gap is:
+
+```text
+(B*) interval-Hall overload at I
+     => the max-load hub has two incident P-contained bracket rows.
+```
+
+Claude's chord-variant probe found non-junction overload artifacts, but exact
+`maxcut_all` verification showed those parity cuts are not global maximum
+cuts.  So `(B*)` must use global max-cut pressure, not merely interval
+arithmetic or local path geometry.
+
+A purely interval-combinatorial statement is false.  If one only assumes a
+path of length `L` and P-contained intervals of odd vertex-length at least 5,
+then contained demand can exceed the `L-4` reserve without any bracketing hub.
+For example:
+
+```text
+L=9,
+contained interval [0,6],
+I=[0,5],
+demand on I = 6 > L-4 = 5,
+max-load set = {0,1,2,3,4,5},
+no point has one interval ending and another starting there.
+```
+
+So the proof of the bracketing hub must use additional max-cut geometry,
+probably singleton cut-tightness/degree pressure or the component-flow
+min-cut, not interval arithmetic alone.
+
+Local cut-pressure evidence:
+
+```text
+k-chord failures, k=3,4,6,9,12 and chord lengths 4,6:
+  interval-Hall failures = 223
+  max-load hub checks = 1885
+  every max-load hub has (d_B-d_M,d_B,d_M,d_i) = (0,2,2,2)
+```
+
+Ordinary non-hub path vertices in the same failures typically have
+`(d_B-d_M,d_B,d_M,d_i)=(2,2,0,1)`.  Thus the hub is exactly the place where
+singleton max-cut slack is exhausted.  This is the likely missing bridge:
+
+```text
+contained interval overload
+  => some max-load position exhausts singleton slack
+  => the two incident bad edges are the bracketing contained rows.
+```
+
+Dead route: path-interval and prefix cut gain.
+
+My local path+detour chord stress had suggested that every no-bracket overload
+admits a path-interval, even prefix, flip that improves cutsize.  Claude
+refuted this on the exact census at `2026-06-29T11:35Z`:
+
+```text
+_nonjunction_cutgain_gate.py:
+  total interval-Hall failures = 28158
+  bracket-hub = 4
+  no-hub = 28154
+  no-hub with path-interval cut gain = 23803
+  no-hub without path-interval cut gain = 4351
+
+first counterexample:
+  g6 = F?bbo
+  side = 0001110
+  f = (1,6)
+  P = [1,5,0,4,6]
+  I = (0,2)
+```
+
+For this witness, the cut has size `6` while the global maximum is `7`.
+There is no single-vertex flip and no path-interval flip improving the cut.
+The improving switch is the general subset `{1,2,5}`, which includes an
+off-path vertex.  Thus the prefix/path-interval witness is too narrow.
+
+The corrected max-cut half of `(B*)` is:
+
+```text
+no-bracket interval-Hall overload
+  => the cut is not a global maximum cut,
+     i.e. some vertex subset S has Delta_beta(S)<0.
+```
+
+Equivalently, in a connected-B global maximum cut:
+
+```text
+if interval Hall fails after non-contained demand is routed,
+then a P-contained bracket hub exists.
+```
+
+This statement survives the exact checks.  Claude reports all census
+no-bracket failures are non-maximum cuts, and the exact N=26 checks show:
+
+```text
+chain-k3-c4:             global max, IH-fail, bracket junction
+single long chord cases: global max, no IH-fail, no junction
+disjoint chord case:     global max, no IH-fail
+nested chord case:       not global max
+```
+
+So the live target is no longer a prefix-sweep lemma.  It is either:
+
+```text
+(a) construct a general improving subset S, possibly including off-path
+    component vertices, from every no-bracket overload; or
+(b) prove directly that global max + no bracket implies the contained
+    remainder satisfies the interval-Hall bound.
+```
+
+Option (b) looks cleaner: the off-path vertices that appear in the census
+counter-switch suggest that the correct proof object is the same
+component-aware Hall/min-cut structure as Part A, not a path-only sweep.
+
+I also tested the next natural repair, allowing switches that are either a
+path interval or a path interval closed under every off-path B-component whose
+span is contained in it.  This is still false:
+
+```text
+path-or-closed-interval family:
+  no-bracket failures = 84540
+  no gain in this family = 942
+
+first obstruction:
+  generated pend=8, chords=(0,6),(1,7)
+  f=(1,7), P=[1,2,3,4,5,6,7], I=(0,5)
+  demand=12, cap=11
+  best improving subset = {0,1}
+```
+
+Here the improving switch uses only part of the off-path component.  So the
+right max-cut witness is not a path interval, nor a whole-component closure.
+It is a general subset/min-cut witness in the auxiliary corridor network.
+
+Claude's `2026-06-29T11:55Z` message gives a cleaner formulation of this
+max-cut half:
+
+```text
+(M) In a global maximum connected-B cut, P-contained bad chords cannot
+    interior-overlap.  Their intervals on P_f are pairwise disjoint or touch
+    only at a common endpoint.
+```
+
+Exact validation reported by Claude:
+
+```text
+_chord_overlap_maxness.py over census N<=9 all connected-B cuts:
+  interior-overlaps total = 3434
+  all interior-overlaps occur on non-maximum cuts
+  global-maximum interior-overlaps = 0
+```
+
+And in the N=26 exact chord checks, nested chords make the parity cut
+non-maximum, while single/disjoint chords have no interval-Hall overload and
+chaining gives the endpoint-sharing bracket junction.
+
+This reduces `(B*)` to a local switching proof of `(M)`.  Once `(M)` is known,
+contained overload forces load at least two at some path position.  The two
+P-contained rows covering that position cannot interior-overlap, so they must
+meet at the position as a shared endpoint: one row ends there from the left
+and one starts there to the right.  This is exactly the bracket hub needed for
+the deterministic Gamma descent.
+
+Codex candidate switch for `(M)`:
+
+```text
+Let P_f=x_0,...,x_{L-1}.  Suppose two P-contained bad chords have intervals
+[p_1,q_1] and [p_2,q_2] with p_1 <= p_2 and p_2 < min(q_1,q_2), i.e. they
+interior-overlap.  Put r=min(q_1,q_2).  Then one of the two tail switches
+
+  S_L = {x_0,...,x_{p_2}},
+  S_R = {x_r,...,x_{L-1}}
+
+has Delta_beta(S)<0.
+```
+
+Exact local gate:
+
+```text
+problems/23/writeup/_overlap_tail_switch_gate.py
+
+census N=6: overlaps=0 caught=0 miss=0
+census N=7: overlaps=9 caught=9 miss=0
+census N=8: overlaps=152 caught=152 miss=0
+census N=9: overlaps=3273 caught=3273 miss=0
+TOTAL: overlaps=3434 caught=3434 miss=0
+```
+
+This is stronger and cleaner than the previous general-subset formulation.
+It should be attacked by summing or comparing the two tail cut inequalities:
+the bad edge `f` and the two overlapping P-contained bad chords cross both
+tails in a rigid way, while the only possible compensating cut edges would
+create forbidden shorter B-routes or component capacity that prevents the
+interior-overlap configuration.
+
+A stronger measured form is:
+
+```text
+gain(S_L) + gain(S_R) >= 2
+```
+
+for all 3434 census witnesses.  Equivalently,
+
+```text
+Delta_beta(S_L) + Delta_beta(S_R) <= -2.
+```
+
+The full-battery gate validates this inequality in the tested reduced
+families.  However the naive algebraic sublemma below is **not** a theorem of
+bare triangle-freeness plus connected `B`: simple cut-leaf attachments to a
+tail falsify it.  Therefore the proof of `(M)` must either use an additional
+max-cut/reducedness hypothesis that excludes such dangling cut branches, or
+replace the naked path tail by a closed/absorbing tail switch.
+
+Extra-edge census classification on the original census witnesses supports
+the bound:
+
+```text
+over 3434 interior-overlap witnesses:
+  max positive extra contribution = 2
+  max net extra contribution      = 2
+```
+
+Here "extra" means edges other than the path edges of `P_f` and the three bad
+edges `f,g,h`.  Positive extra contribution comes from cut edges crossing one
+or both tails; bad extra edges only make the sum more negative.
+
+But the following standalone positive-extra statement is false:
+
+```text
+Positive-extra bound.
+For the two tails S_L,S_R associated to an interior-overlap pair, the total
+number of non-path cut-edge crossings of S_L and S_R, counted with
+multiplicity over the two tails, is at most 2.
+```
+
+Counterexample script:
+
+```text
+problems/23/writeup/_tail_positive_extra_counterexample.py
+
+base:                gain_sum= 2, positive_extra=2
+one left cut leaf:   gain_sum= 1, positive_extra=3
+six tail cut leaves: gain_sum=-4, positive_extra=8
+```
+
+The construction starts from the `N=26` nested path/detour witness and attaches
+cut leaves to tail vertices.  The graph remains triangle-free, `B` remains
+connected, and the same P-contained interior-overlap remains visible.  Thus
+the raw tail switches need not improve the cut outside the reduced/max-local
+setting.
+
+The corrected target is one of the following:
+
+```text
+Closed-tail switch.
+Replace S_L,S_R by the corresponding tails together with all forced cut
+branches that would otherwise be pendant positive-extra losses, while keeping
+the principal path boundary exposed.
+```
+
+Concrete local definition now under test:
+
+```text
+For a raw tail S on P_f, delete the path vertices from the cut graph B and
+look at every off-path B-component C.  Let A(C) be the set of path vertices
+with B-edges into C.  Absorb C into S iff A(C) is nonempty and A(C) subset S.
+```
+
+This absorbs pendant cut branches and other off-path branches attached only to
+the tail, while not absorbing detours attached to both sides of the path.
+Local gate:
+
+```text
+problems/23/writeup/_closed_tail_switch_gate.py
+
+census N=6: overlaps=0 caught=0 miss=0
+census N=7: overlaps=9 caught=9 miss=0
+census N=8: overlaps=152 caught=152 miss=0
+census N=9: overlaps=3273 caught=3273 miss=0
+TOTAL: overlaps=3434 caught=3434 miss=0 min_gain_sum=3
+```
+
+This closure is still not a theorem of bare local hypotheses.  The same
+counterexample script adds two internally disjoint length-5 cut detours from
+the left tail to the middle and two symmetric detours from the right tail to
+the middle.  The graph remains triangle-free, has connected `B`, and the same
+unique P-contained overlap remains, but:
+
+```text
+two symmetric long detours per tail:
+  raw gain_sum    = -2
+  closed_gain_sum = -2
+```
+
+Thus a proof of `(M)` cannot rely on a predetermined raw tail or this simple
+closed-tail switch under only local hypotheses.  It needs either an optimized
+switch/min-cut over the off-path detour components, or an explicit reduced
+global-maximum hypothesis ruling out this ballast.
+
+The next repair is a **closed-overlap sweep**.  Instead of fixing the boundary
+at the two endpoints `p_2` and `r`, allow it to slide through the common
+interior overlap.  For every `k` with `p_2 <= k < r`, test the closed prefix
+
+```text
+cl({x_0,...,x_k})
+```
+
+and the closed suffix
+
+```text
+cl({x_{k+1},...,x_{L-1}}),
+```
+
+where `cl` absorbs off-path `B`-components whose path attachments are all
+inside the switched path segment.  This handles the symmetric long-detour
+ballast: the improving switch moves its boundary from `p_2` to the first
+detour endpoint in the overlap, then absorbs the detour components.
+
+Local gate:
+
+```text
+problems/23/writeup/_closed_overlap_sweep_gate.py
+
+census N=6: overlaps=0 caught=0 miss=0
+census N=7: overlaps=9 caught=9 miss=0
+census N=8: overlaps=152 caught=152 miss=0
+census N=9: overlaps=3273 caught=3273 miss=0
+TOTAL: overlaps=3434 caught=3434 miss=0 min_best_gain=2
+
+synthetic symmetric long-detour ballast m=0..5:
+  all caught; min_best_gain=1
+```
+
+Current proof target for `(M)`:
+
+```text
+Closed-overlap sweep lemma.
+If two P-contained bad chords interior-overlap on the unique geodesic P_f,
+then some closed prefix or closed suffix with boundary inside the overlap
+strictly increases the cut.
+```
+
+Claude Step-2 response at `2026-06-29T13:15:00Z`:
+
+```text
+closed-tail full battery:
+  TOTAL interior-overlaps=6767, CAUGHT=6767, MISS=0,
+  B-disconnect-after-switch=0, MIN closed gain sum=2.
+
+two-sided-detour synthetic obstruction:
+  parity cutsize=46, hill-climb cutsize=47.
+  It is locally max for single-vertex flips, but not global max.
+```
+
+So the synthetic ballast does not refute `(M)`.  It shows that a fixed local
+tail may fail to be the nonmaximality certificate, while a more global
+off-path switch still exists.
+
+Unified switch target:
+
+```text
+Optimized-switch primitive.
+Given a path/core switch pattern, let the attached off-path pieces choose
+sides so as to optimize the relevant objective:
+  - for (M): strictly increase cut size when a P-contained interior-overlap
+    exists;
+  - for bracket descent: preserve cut size while absorbing off-path
+    neighbours of the hub, then lower Gamma.
+```
+
+This is the same mechanism as GPT-Pro's neutral-hub-switch gap: the active
+path/hub switch must be closed by parity/min-cut pieces of the off-path
+structure rather than flipping only the naked path vertices.
+
+But there is a stronger obstruction to the broad statement `(M)`:
+
+```text
+problems/23/writeup/_M_full_detour_counterexample.py
+```
+
+Construction: start from the `N=26` nested path/detour witness and add one
+extra all-cut length-14 detour from `0` to `12`, the endpoints of
+`f=(0,12)`.
+
+Exact CP-SAT output:
+
+```text
+n=39 edges=43 triangle_free=True
+base_cut=40 maxcut=40
+base_Bconn=True
+base bad edges: (0,8),(0,12),(2,6)
+ell: 9,13,5
+Gamma=275
+f=(0,12), unique P=[0,1,...,12]
+P-contained intervals (0,8) and (2,6) interior-overlap
+optimal cuts with x0 fixed = 801
+gamma_hist = [(275,1), (475,784), (611,16)]
+```
+
+Thus `(M)` is false as stated for arbitrary triangle-free connected-`B`
+global maximum cuts, even with Gamma-minimization among the enumerated optimal
+cuts.  The extra long full detour is a redundant cut-only ballast parallel to
+the principal `B`-geodesic.  Any proof route using `(M)` must add a genuine
+reducedness hypothesis excluding such redundant full-detour ballast, or avoid
+`(M)` and use the validated NET endpoint-tax route instead.
+
+NET survives exactly this obstruction:
+
+```text
+For f=(0,12):
+  P-contained atoms: (0,8) and (2,6), total E_P=2
+  off-path B-component spans meeting the same intervals: two full detours,
+  so c_I=2.
+  NET is tight, not violated.
+```
+
+This is evidence that NET, not `(M)`, is the more invariant unique-path
+mechanism in the presence of redundant cut-only ballast.
+
+### NET as containment flow
+
+A stronger exact-testable version of NET is:
+
+```text
+Containment-flow NET.
+For every P-contained atom Q of another bad edge g, let J(Q) be its interval
+on P_f with weight 1/|cyc(g)|.  Let the off-path B-components have attachment
+spans C.  Fractionally route every atom J(Q) to components with C containing
+J(Q), capacity 1 per component.
+```
+
+This implies NET because every interval meeting `J(Q)` also meets any
+component span containing `J(Q)`.
+
+Local script:
+
+```text
+problems/23/writeup/_net_containment_flow_gate.py
+```
+
+Evidence:
+
+```text
+N39 full-detour obstruction:
+  containment flow succeeds.
+
+gamma-min census N5..N10:
+  no failures; no stressed P-contained rows in this range.
+
+manual chord layouts:
+  nested/crossing fail containment but are nonmax;
+  chain fails containment but has bracket hubs at 4 and 8;
+  N39 no-bracket max passes containment.
+```
+
+Thus the sharpened unique-path target is:
+
+```text
+Gamma-min/global-max + no bracket hub
+  => containment-flow NET
+  => endpoint-tax bound
+  => no contained overload.
+```
+
+This avoids the false broad `(M)` statement while keeping the validated
+bracket-descent route for the cases where containment fails by endpoint
+chaining.
+
+### NET/global-max split after the full-detour obstruction
+
+The `N=39` full-detour obstruction killed the broad statement
+
+```text
+global max + gamma-min => no P-contained interior-overlap.
+```
+
+The first attempted replacement was:
+
+```text
+global max + no bracket hub => scalar NET.
+```
+
+Here scalar NET is the endpoint-tax inequality
+
+```text
+E_P(I) <= #{off-path B-components whose span meets I}
+```
+
+where `E_P(I)` counts only P-contained atoms whose interval meets `I`,
+with atom weight `1/|cyc(g)|`.
+
+Local exact probe:
+
+```text
+problems/23/writeup/_codex_net_globalmax_probe.py
+
+nested N=26:
+  scalar NET fail demand=2 cap=1, cut=26, maxcut=27.
+
+crossing N=26:
+  scalar NET fail demand=2 cap=1, cut=26, maxcut=27.
+
+two-sided-detour m=1..3:
+  scalar NET fail, cut<maxcut.
+
+chain N=26:
+  scalar NET fail, cut=maxcut=26, but bracket hub exists.
+
+full-detour N=39:
+  cut=maxcut=40, no scalar NET failure.
+```
+
+Thus the local regression family now has exactly the desired trichotomy:
+
+```text
+no-bracket NET failure     => non-maximum cut,
+bracket NET failure        => Gamma-descent route,
+no-bracket global maximum  => NET survives.
+```
+
+This scalar component-count version is also false without an additional
+capacity term.  A sharper `N=39` variant starts from the full-detour
+obstruction and adds one cut edge joining the two full-detour components,
+for instance `(13,27)`.  This keeps the parity cut global-max and
+Gamma-minimal among the enumerated optimal cuts:
+
+```text
+n=39, edges=44, cut=maxcut=41, triangle-free, B connected.
+bad edges: (0,8), (0,12), (2,6).
+Gamma histogram over x0-fixed optimum cuts:
+  275:1, 475:632, 611:16.
+```
+
+For `f=(0,12)`, the contained atoms are still `[0,8]` and `[2,6]`
+with no bracket hub, but the two full spans are now one off-path component:
+
+```text
+scalar NET fails: I=(0,2), E_P=2, c=1.
+pointwise cover fails: at i=2, depth=2, cover=1.
+position-flow with capacity |C| passes: span [0,12], |C|=26.
+```
+
+Therefore the live object is not scalar endpoint-count NET and not pointwise
+component cover.  It is the `|C|`-capacity position-flow:
+
+```text
+source -> position i capacity contained_load(i),
+position i -> component C if i lies in span(C),
+component C -> sink capacity |C|.
+```
+
+This is exactly the form robust under merged redundant corridors.
+
+The still stronger atom-to-containing-span matching is not a safe abstract theorem.
+Even with scalar NET and no bracket, the interval model
+
+```text
+L=6,
+atom=(0,4),
+spans=(0,0),(1,4)
+```
+
+has no span containing the atom.  The live containment version, if used at
+all, is the position-flow version with capacities `|C|`, not atom containment.
+
+or
+
+```text
+Reduced/max-local positive-extra bound.
+Under the exact reduced hypotheses of a global maximum connected-B cut
+appearing in the ROWSUM-O proof, dangling cut branches cannot contribute more
+than the +2 allowed by the census bound.
+```
+
+Either corrected form would restore the calculation
+
+```text
+Delta_beta(S_L)+Delta_beta(S_R)
+  <= (+2 path boundary) + (+2 positive extras) - (2+2+2 bad crossings)
+  = -2.
+```
+
+The likely proof of the positive-extra bound is by shortest-geodesic
+rigidity: three such compensating cut crossings would give either a triangle
+or a second/shorter B-route for one of the three bad edges whose geodesic lies
+on `P_f`.
+
+P-contained interval crossings did not occur in the current stress:
+
+```text
+census N=11 gamma-min: P-contained intervals = 0
+k-chord parity clen 4/6: P-contained intervals form a noncrossing chain
+```
+
+General overlap intervals can cross at N=11, but the first crossing witness
+uses non-contained geodesics, not P-contained rows.
+
+The remaining hard proof content is Lemma C(4): construct the shorter retained
+geodesic from the bracketing contained rows forced by Lemma B.
+
+Similarly for vertex `8`.  Thus the non-gamma cut is excluded by an explicit
+Gamma-decreasing switch.  The likely live proof target is:
+
+```text
+if interval Hall fails, construct a cut-tight switch that strictly lowers
+Gamma while preserving connected-B max-cut status.
+```
+
+This is stronger than the span-coverage max-cut switch: it must use
+gamma-minimality, not only cut-size optimality.
+
+## Sublemma UPO
+
+For a bad edge `f` with exactly one shortest `B`-geodesic `P_f`, ROWSUM-O is
+equivalent to the path overlap bound
+
+```text
+sum_{g in M} (1/|cyc(g)|) * sum_{Q in cyc(g)} |V(P_f) cap V(Q)| <= N.
+```
+
+This is simply `sum_{v in P_f} S(v) <= N`, since `p_f=1_{P_f}`.
+
+## Exact Evidence
+
+Script:
+
+```text
+problems/23/writeup/_codex_unique_path_bound_scan.py
+```
+
+Full census results:
+
+```text
+N=7  checked 31 unique rows,  worst margin 0
+N=8  checked 88 unique rows,  worst margin 1
+N=9  checked 558 unique rows, worst margin 0
+N=10 checked 3643 unique rows, worst margin 1
+N=11 checked 31521 unique rows, worst margin 0
+N=12 checked 362839 unique rows, worst margin 0
+```
+
+The N=12 equality witness is the nested row:
+
+```text
+g6   = K??CB@OBDOAp
+side = 111111000000
+f    = (6,11)
+P_f  = [6,0,10,4,9,5,11]
+M    = {(6,11),(10,11)}
+```
+
+The shorter bad edge `(10,11)` has unique path
+`[10,4,9,5,11]` nested inside `P_f`, and the overlap total is
+`7 + 5 = 12 = N`.
+
+Direct equality scan:
+
+```text
+problems/23/writeup/_codex_upo_equality_stats.py
+
+N=10 equal_rows=0
+N=11 equal_rows=11, all Hamilton rows with path_len=11 and no contributors
+N=12 equal_rows=18, all path_len=7 with exactly one nested contributor
+```
+
+Thus any proof of the direct unique-path bound must be tight in at least two
+ways: a Hamilton unique path with no off-path capacity, and a nested row where
+one shorter bad-edge geodesic lies wholly inside `P_f` and is paid by exactly
+one outside component.
+
+## First Structural Lemma
+
+If `P_f` is the unique shortest `B`-geodesic for `f`, then every shortest
+bad-edge geodesic `Q` intersects `P_f` in a contiguous interval on `P_f`.
+
+Reason: if `Q` leaves `P_f` and later returns, then the off-`P_f` segment
+between the two return vertices is a shortest path between those vertices
+(as a subpath of a shortest geodesic).  The corresponding `P_f` segment is
+also shortest.  If the two segments differ, replacing the `P_f` segment gives
+a second shortest geodesic for `f`, contradicting uniqueness.
+
+This has now been exact-checked through the full N=12 census with:
+
+```text
+problems/23/writeup/_codex_unique_path_contiguity_scan.py
+```
+
+Results:
+
+```text
+N=7  unique_rows=31      comparisons=31       fail=None
+N=8  unique_rows=88      comparisons=88       fail=None
+N=9  unique_rows=558     comparisons=744      fail=None
+N=10 unique_rows=3643    comparisons=6700     fail=None
+N=11 unique_rows=31521   comparisons=81817    fail=None
+N=12 unique_rows=362839  comparisons=1401481  fail=None
+```
+
+## Remaining Packing Problem
+
+Under the interval property, UPO becomes a weighted interval-packing
+statement on `P_f`: the intervals are `Q cap P_f`, with weight
+`1/|cyc(g)|` for every shortest geodesic `Q` of every bad edge `g`.
+
+The target is:
+
+```text
+weighted total interval length <= |V(G)|.
+```
+
+The equality examples show why this packing is not just "one interval per
+outside vertex":
+
+1. Hamilton unique row: `P_f` uses all vertices, no other intervals.
+2. Nested N=12 row: one length-5 interval lies inside a length-7 interval,
+   and the five vertices outside `P_f` pay for the nested interval.
+
+The proof still needs the max-cut/CD condition to force enough outside
+capacity for nested intervals.
+
+## Rejected Detour Capacity
+
+The tempting strengthening "every deposited interval of length at least two
+has an outside B-detour with at least that many internal outside vertices" is
+false.
+
+Script:
+
+```text
+problems/23/writeup/_codex_unique_path_detour_scan.py
+```
+
+Failures:
+
+```text
+N=9, g6=H?`DA_{:
+  interval length 1 has no outside detour.
+
+N=9, g6=H?`DB_{:
+  with --min-interval 2, interval [2,8] of length 2 has detour distance 1.
+```
+
+So the N=12 nested equality is explained by an outside detour, but arbitrary
+short deposited intervals can be paid locally; UPO needs a mixed local/outside
+interval-packing argument.
+
+## UPO Position-Flow Certificate
+
+A better exact-testable certificate survived the full N=12 census.
+
+For a unique shortest path
+
+```text
+P_f = (x_0,...,x_{ell-1})
+```
+
+let `S(v)=sum_g p_g(v)`.  The self-row contribution is one unit on each
+position of `P_f`; define the extra demand
+
+```text
+d_i = S(x_i) - 1.
+```
+
+Delete the path vertices from the cut graph `B`.  For each connected
+component `C` of `B - V(P_f)`, let `A(C)` be the set of positions `i` such
+that some vertex of `C` has a `B`-edge to `x_i`.  If `A(C)` is nonempty,
+write
+
+```text
+span(C) = [min A(C), max A(C)]
+capacity(C) = |C|.
+```
+
+Candidate certificate: the extra demands can be fractionally routed to outside
+components:
+
+```text
+source -> position i       capacity d_i
+position i -> component C  allowed iff i in span(C)
+component C -> sink        capacity |C|
+```
+
+If this flow exists, then
+
+```text
+sum_i S(x_i) = |P_f| + sum_i d_i <= |P_f| + |V \\ P_f| = N,
+```
+
+which is exactly UPO.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_position_flow_scan.py
+```
+
+Exact census results:
+
+```text
+N=9  checked=558     fail=None
+N=10 checked=3643    fail=None
+N=11 checked=31521   fail=None
+N=12 checked=362839  fail=None
+```
+
+Claude Step-2 independently reimplemented and gated the same certificate:
+
+```text
+2026-06-28T23:05:00Z
+census N=7..11 unique rows 31/88/558/3643/31521, HALL-FAIL=0
+K??CB@OBDOAp: 54 unique rows, HALL-FAIL=0
+K??CE@A{?]Fc: 19 unique rows, HALL-FAIL=0
+GDSKVG: 0 unique rows
+glued C7|brg|Grotzsch and C9|brg|C9: HALL-FAIL=0
+```
+
+This is now the main proof target for the unique-path case.  The needed
+mathematical lemma is a Hall statement: for every set of path positions `I`,
+the extra load on `I` is at most the number of outside vertices in components
+whose attachment span meets/covers the relevant positions.
+
+The overstrong equality `min_all_slack = min_interval_slack` is false when
+the minimum slack is positive.  The scanner
+
+```text
+problems/23/writeup/_codex_upo_hall_interval_scan.py
+```
+
+finds at N=11:
+
+```text
+g6=J??E@_ibE`?, f=(6,8), path=[6,0,9,4,8]
+min arbitrary Hall slack = 3
+min interval Hall slack  = 7/2
+```
+
+The useful corrected statement is conditional interval uncrossing:
+
+```text
+if h(I) <= 0, then some interval J has h(J) <= h(I).
+```
+
+Thus interval Hall implies full Hall.  This is the current reduction target,
+not the false positive-slack equality above.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_conditional_interval_uncross_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   checked_subsets=25270   fail=None
+N=11 rows=31521  checked_subsets=176302  fail=None
+N=12 rows=362839 checked_subsets=1223936 fail=None
+```
+
+Claude independently confirmed the same conditional statement on the full
+acceptance battery at `2026-06-28T23:55:00Z`.
+
+Do not assume that each deposited geodesic pays with its own off-path
+vertices.  In the tight nested witness `K??CB@OBDOAp`, the shorter bad-edge
+path `[10,4,9,5,11]` is wholly contained in the unique path
+`[6,0,10,4,9,5,11]`, so it has no off-path vertices; it is paid by the
+parallel outside component with span `[2,6]`.
+
+Also rejected: direct derivations of Hall from a single max-cut switch slack.
+
+```text
+_codex_upo_hall_switch_scan.py:
+  Hall(I) >= lambda(I union span-hit components) is false.
+  N=9 witness H?`DA_{ has Hall=3, lambda=4.
+
+_codex_upo_hall_switch_closed_scan.py:
+  adding all zero-demand positions is still false.
+  N=9 witness H?`DE_{ has margin -1/2.
+
+_codex_upo_hall_spanclosed_switch_scan.py:
+  closing I under all touched component spans is still false.
+  N=9 witness H?`DE_{ has margin -1.
+```
+
+Therefore the proof of the position-flow Hall statement needs a more
+delicate fractional/corridor argument than ordinary max-cut switch slack.
+
+Also rejected:
+
+```text
+_codex_upo_offpath_component_audit.py:
+  A shortest geodesic Q meeting P_f can have off-P_f vertices in more than
+  one component of B - V(P_f).
+  N=9 witness H?`DA_{, f=(5,8), Q for g=(0,6) has offpath roots [0,2].
+
+_codex_upo_interval_sandwich_scan.py:
+  Full Hall cannot be reduced to a forward interval inequality plus a
+  reverse "gap capacity" inequality.
+  Unrestricted reverse fails at N=10 on I???CB?^o.
+  Positive-demand internal reverse still fails at N=10 on I?AAD@ON_ with
+  interval demand 1 and contained-span capacity 5.
+  Even restricting to gaps with positive demand on both sides fails at N=10
+  on I?AEBBWL_ with interval demand 2/3 and contained-span capacity 1.
+```
+
+## Conditional Interval Reduction
+
+Claude's binding scan showed that every zero-slack Hall constraint in the
+tested battery is attained by a contiguous interval of path positions.  The
+right proof formulation is conditional:
+
+```text
+If a position set I has Hall slack h(I) <= 0, then there is a contiguous
+interval J with h(J) <= h(I).
+```
+
+Here
+
+```text
+h(I) = sum_{C : span(C) intersects I} |C| - sum_{i in I}(S(x_i)-1).
+```
+
+This statement would make interval Hall sufficient: any negative Hall
+violation would uncross to a negative interval violation, and a zero tight set
+would have an interval witness.
+
+The unconditional statement `min_all h = min_interval h` is false at positive
+slack.  The scanner
+
+```text
+problems/23/writeup/_codex_upo_hall_interval_scan.py
+```
+
+finds at N=11:
+
+```text
+g6=J??E@_ibE`?, f=(6,8), path=[6,0,9,4,8]
+demands=[0,1/2,1/2,1/2,1]
+components=[(0,4,5),(2,2,1)]
+min_all=3, min_interval=7/2.
+```
+
+This does not threaten Hall, but it means interval-Hall needs the conditional
+nonpositive uncrossing lemma above, not a literal min-equality theorem.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_conditional_interval_uncross_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   checked_subsets=25270    fail=None
+N=11 rows=31521  checked_subsets=176302   fail=None
+N=12 rows=362839 checked_subsets=1223936  fail=None
+```
+
+Thus the UPO proof can be split into:
+
+1. Conditional interval uncrossing: every nonpositive Hall set has an interval
+   no larger in slack.
+2. Corridor capacity for intervals:
+
+```text
+sum_{i=a}^b (S(x_i)-1)
+<=
+sum_{C : span(C) intersects [a,b]} |C|
+```
+
+for all path intervals `[a,b]`.
+
+## Single-Geodesic Overlap Capacity
+
+A more local necessary ingredient survived the N=12 census.  For any shortest
+geodesic `Q` of any `g != f`, let `[r,s]` be the contiguous interval
+`Q cap P_f`.  Then:
+
+```text
+|Q cap P_f|
+<=
+sum_{C : span(C) intersects [r,s]} |C|.
+```
+
+In fact the stronger subinterval version survived: for every subinterval
+`[a,b] subseteq [r,s]`,
+
+```text
+b-a+1
+<=
+sum_{C : span(C) intersects [a,b]} |C|.
+```
+
+This is not enough by itself, because many geodesics can pile onto the same
+outside components, but it is exactly the per-geodesic corridor-capacity fact
+suggested by uniqueness of `P_f`.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_overlap_span_cover_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   overlaps=2786    fail=None
+N=11 rows=31521  overlaps=46381   fail=None
+N=12 rows=362839 overlaps=927268  fail=None
+```
+
+Subinterval script:
+
+```text
+problems/23/writeup/_codex_upo_overlap_subinterval_capacity_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   checks=9105     fail=None
+N=11 rows=31521  checks=149095   fail=None
+N=12 rows=362839 checks=2882705  fail=None
+```
+
+A stronger one-component version is false:
+
+```text
+N=10 witness I?AEBAoN_, f=(1,7), Q=[0,6,9,2,8]
+overlap interval [1,3] is covered by a chain of spans [(1,2),(2,3)],
+not by one span.
+```
+
+## Geodesic-Interval Packing Flow
+
+The superposition issue also has a concrete flow certificate.
+
+For a fixed unique row `f`, create one demand node for every pair `(g,Q)` with
+`g != f`, `Q in cyc(g)`, and `Q cap P_f != empty`.  If
+`Q cap P_f` is the interval `[r,s]`, this node has demand
+
+```text
+|Q cap P_f| / |cyc(g)|.
+```
+
+It may route to exactly those outside components `C` whose `span(C)`
+intersects `[r,s]`; component `C` has capacity `|C|`.
+
+This global flow is proof-shaped, but it does not by itself immediately imply
+every target interval Hall inequality: flow for an interval outside `[a,b]`
+could use capacity from a component that also intersects `[a,b]`.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_geodesic_interval_flow_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   intervals_total=2786    fail=None
+N=11 rows=31521  intervals_total=46381   fail=None
+N=12 rows=362839 intervals_total=927268  fail=None
+```
+
+This is now the sharpest unique-path proof target: prove this flow from
+triangle-free shortest-path geometry and uniqueness of `P_f`.
+
+The max-flow/Hall dual is also tight only in the nested equality family, at
+least in the exact N<=12 census.  Exhausting all demand-node subsets for rows
+with at most 16 demand intervals gives:
+
+```text
+problems/23/writeup/_codex_upo_global_flow_hall_stats.py
+
+N=10 exhausted_rows=1268,   has_tight_subset=True 0
+N=11 exhausted_rows=16570,  has_tight_subset=True 0
+N=12 exhausted_rows=246684, has_tight_subset=True 18
+```
+
+The 18 tight demand-subsets at N=12 are exactly the nested direct-equality
+rows: one demand interval of weight 5 touches one outside component of
+capacity 5.  All other exhausted rows have strictly positive Hall slack.
+
+Claude Step-2 independently gated the same dual-tightness statement on the
+full acceptance battery at `2026-06-29T02:25:00Z`:
+
+```text
+census N=7..11: zero-slack demand subsets = 0
+K??CB@OBDOAp: 3 zero-slack subsets, all single-nested
+K??CE@A{?]Fc, C7|brg|Grotzsch, C9|brg|C9: 0
+```
+
+Four rows with more than 18 demand nodes were skipped for subset exhaustion;
+their packing-flow feasibility is still covered by the exact max-flow gate.
+Thus the tightness boundary of the flow certificate is pinned to the
+single-nested pattern wherever subset exhaustion is feasible.
+
+## Component Span Capacity
+
+A clean geometric lemma survived the N<=12 census:
+
+```text
+If C is a component of B - V(P_f) with attachment span [lo,hi],
+then |C| >= hi-lo+1.
+```
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_component_span_capacity_scan.py
+
+N=10 rows=3643   comps=7125   fail=None
+N=11 rows=31521  comps=60597  fail=None
+N=12 rows=362839 comps=656733 fail=None
+```
+
+The proof should be direct.  If a connected component of size `c` attaches to
+`x_lo` and `x_hi`, then it contains an `x_lo`-to-`x_hi` detour of length at
+most `c+1` edges: enter the component, traverse a simple internal path, and
+exit.  The `P_f` segment has length `hi-lo` edges.  If `c<=hi-lo`, then the
+detour has length at most `hi-lo+1`; since `B` is bipartite, every
+`x_lo`-to-`x_hi` path has the same parity as the `P_f` segment, so this detour
+has length at most `hi-lo`.  It is then a shorter path or a second shortest
+replacement segment, contradicting uniqueness of `P_f`.  Hence
+`c>=hi-lo+1`.
+
+However, the tempting corollary
+
+```text
+sum_i (S(x_i)-1) <= sum_C (hi(C)-lo(C)+1)
+```
+
+is false.  First N=11 witness:
+
+```text
+repr(g6) = 'J??CBAPz?}?'
+side     = [0,1,1,0,1,1,1,0,1,0,0]
+f        = (3,10)
+P_f      = [3,8,0,6,10]
+extra    = 41/10
+span_sum = 4
+component span [1,4], cap=6
+```
+
+So the final direct UPO proof must use the surplus vertices
+`|C|-(hi-lo+1)` as well as the bare span length.
+
+The resulting decomposition is:
+
+```text
+extra = sum_i(S(x_i)-1)
+span_sum = sum_C (hi(C)-lo(C)+1)
+surplus = sum_C (|C|-(hi(C)-lo(C)+1)).
+```
+
+Direct UPO is `extra <= span_sum + surplus`.  The positive overrun beyond
+`span_sum` is substantially smaller than the available surplus in the census:
+
+```text
+problems/23/writeup/_codex_upo_surplus_ratio_scan.py
+
+N=10 positive_overrun=0
+N=11 positive_overrun=158,  worst (extra-span_sum)/surplus = 2/7
+N=12 positive_overrun=6555, worst (extra-span_sum)/surplus = 7/10
+```
+
+Claude Step-2 also gated the interval version on the full battery at
+`2026-06-29T03:25:00Z`:
+
+```text
+census N=7..10 positive-overrun=0
+N=11 positive-overrun=492, violations=0
+K??CB@OBDOAp positive-overrun=0
+K??CE@A{?]Fc positive-overrun=63, violations=0
+C7|brg|Grotzsch and C9|brg|C9 positive-overrun=0
+worst ratio (demand-base)/surplus = 3/5 at K??CE@A{?]Fc
+```
+
+The same gate shows that the surplus proof cannot be reduced to a single
+active component: the full-battery worst case has two active components whose
+surpluses jointly pay the overrun.
+
+This suggests a two-part direct proof:
+
+1. the interval spans pay the topological/nested overlap;
+2. the surplus vertices pay the fractional fan/branching overrun.
+
+## Unique/Fan Split Of Interval Hall
+
+A sharper split separates the source of interval demand.  For a fixed unique
+row `f`, target interval `I=[a,b]`, and active off-path components whose spans
+meet `I`, write:
+
+```text
+base(I)    = sum_active (hi(C)-lo(C)+1)
+surplus(I) = sum_active (|C|-(hi(C)-lo(C)+1)).
+```
+
+Split the demand on `I` into:
+
+```text
+U(I) = contribution from bad edges g != f with len(cyc[g]) = 1,
+F(I) = contribution from bad edges g != f with len(cyc[g]) > 1.
+```
+
+The candidate proof decomposition is:
+
+```text
+UNIQUE-BASE:   U(I) <= base(I)
+FAN-RESIDUAL:  F(I) <= (base(I)-U(I)) + surplus(I)
+```
+
+Together they give interval Hall:
+
+```text
+U(I)+F(I) <= base(I)+surplus(I) = sum_active |C|.
+```
+
+Exact local scan:
+
+```text
+problems/23/writeup/_codex_upo_unique_fan_split_scan.py
+
+N=10 rows=3643   intervals=13942    fail=None
+N=11 rows=31521  intervals=188666   fail=None
+N=12 rows=362839 intervals=2913471  fail=None
+```
+
+The unique-base inequality is tight in small rows.  The fan-residual
+inequality is tight at the nested equality row `K??CB@OBDOAp`; in that row
+there is no fan mass, no residual base, and no surplus.  The positive-overrun
+witness `K??CE@A{?]Fc` has:
+
+```text
+f=(2,11), P=[2,9,1,8,11], I=[0,4]
+base=5, surplus=2
+U=4 from the unique contributor (3,11)
+F=11/5 from the five-geodesic fan (6,8)
+F <= (base-U)+surplus = 3
+```
+
+Claude Step-2 gated this split on the full battery at
+`2026-06-29T04:25:00Z`:
+
+```text
+census N=7..11 plus K??CB@OBDOAp, K??CE@A{?]Fc,
+C7|brg|Grotzsch N=18, C9|brg|C9 N=18:
+UNIQUE-BASE violations = 0
+FAN-RESIDUAL violations = 0
+total intervals = 564228
+```
+
+The current proof lead for `UNIQUE-BASE` is pointwise.  For each position
+`i` of `P_f`, define
+
+```text
+cover(i) = #{off-path components C : lo(C) <= i <= hi(C)}
+uload(i) = #{unique-geodesic contributors g != f whose path contains x_i}.
+```
+
+Candidate pointwise lemma:
+
+```text
+uload(i) <= cover(i)  for every i.
+```
+
+This implies `UNIQUE-BASE` because for any interval `I`,
+
+```text
+U(I) = sum_{i in I} uload(i)
+     <= sum_{i in I} cover(i)
+     <= sum_{C: span(C) meets I} (hi(C)-lo(C)+1)
+     = base(I).
+```
+
+Exact local scan:
+
+```text
+problems/23/writeup/_codex_upo_unique_pointwise_scan.py
+
+N=10 rows=3643   positions=18553    fail=None
+N=11 rows=31521  positions=159651   fail=None
+N=12 rows=362839 positions=1825629  fail=None
+```
+
+This pointwise lemma has been posted to Claude for the full battery gate.
+
+Sharper subclaim:
+
+```text
+uload(i) <= 1  for every i.
+```
+
+Together with span-coverage, this implies the pointwise lemma above: if
+`uload(i)=1`, then the contributing unique geodesic meets `P_f` at `x_i`,
+so span-coverage gives at least one off-path component whose span contains
+`i`; hence `cover(i)>=1`.
+
+Exact local stats:
+
+```text
+problems/23/writeup/_codex_upo_pointwise_stats.py
+
+N=10 rows=3643   positions=18553    hist [(0,17957),(1,596)]
+N=11 rows=31521  positions=159651   hist [(0,153617),(1,6034)]
+N=12 rows=362839 positions=1825629  hist [(0,1749677),(1,75952)]
+```
+
+So the largest observed `uload(i)` is `1` throughout the N<=12 census.
+The same check gives `max_uload=1` on `K??CB@OBDOAp` and
+`K??CE@A{?]Fc`.  This sharper subclaim has been posted to Claude as
+`ULOAD-ONE`.
+
+Diagnostic: the same `ULOAD-ONE` claim also survives all connected-B maximum
+cuts, not just gamma-min cuts, in the small census:
+
+```text
+N=10 connected-B max cuts checked = 20206, no uload>1
+N=11 connected-B max cuts checked = 199191, no uload>1
+```
+
+However this is not a general max-cut theorem.  A 13-vertex triangle-free
+tree-plus-three-bad-edges example has a connected-B gamma-min max cut with
+`uload=2` at one corridor vertex:
+
+```text
+B-edges:
+0-1-2-3-4,
+2-5-6-7-8,
+2-9-10-11-12
+
+M-edges:
+(0,4), (2,8), (2,12)
+```
+
+For `f=(0,4)`, `P=[0,1,2,3,4]`, both unique geodesics
+`[2,5,6,7,8]` and `[2,9,10,11,12]` pass through vertex `2`.
+The displayed cut is max-cut and gamma-min, but the graph has small beta and
+is outside the current hard frontier.  Thus a proof of `ULOAD-ONE` must use
+the frontier/minimal-counterexample hypotheses, not merely max-cut
+optimality plus geodesic uniqueness.
+
+The broader pointwise lemma survives this toy example: at vertex `2` the two
+contributing unique geodesics are paid by the two off-path components whose
+spans contain `2`, so `uload(2)=cover(2)=2`.  It also survives all
+connected-B maximum cuts in the small census:
+
+```text
+N=10 connected-B max cuts checked = 20206, pointwise uload<=cover
+N=11 connected-B max cuts checked = 199191, pointwise uload<=cover
+```
+
+This points back to the original pointwise lemma as the likely max-cut-native
+statement; `ULOAD-ONE` is a hard-frontier sharpening, not the right universal
+geometric lemma.
+
+Two naive injection proofs are ruled out:
+
+1. Mapping a contributor to an off-path component it actually uses is false:
+   nested/parallel cases can be paid by a component disjoint from the
+   contributor's own geodesic.
+2. Mapping a contributor to one component whose span contains its whole
+   overlap interval is false.  First N=11 witness:
+
+```text
+g6 = J??CBAWV@L?
+f = (3,9), P = [3,8,10,5,9]
+contributor (4,9) has Q = [4,8,10,5,9], overlap interval [1,4]
+component spans are [1,2], [2,4], [1,1]
+```
+
+Thus the pointwise/base proof must allow chains of covering components, not a
+single paying component for each contributor interval.
+
+Claude Step-2 gated `ULOAD-ONE` on the full current battery at
+`2026-06-29T05:50:00Z`:
+
+```text
+census N=7..11 positions 169/454/2908/18553/159651, VIOL=0
+K??CB@OBDOAp positions=324, VIOL=0
+K??CE@A{?]Fc positions=95, VIOL=0
+C7|brg|Grotzsch N=18 positions=245, VIOL=0
+C9|brg|C9 N=18 positions=1458, VIOL=0
+C5|brg|M(C7) N=20 positions=175, VIOL=0
+C7|brg|C7 N=14 positions=686, VIOL=0
+TOTAL positions=184718, VIOL=0
+```
+
+Claude also verified the reduction:
+
+```text
+ULOAD-ONE + SPAN-COVERAGE => pointwise UNIQUE-BASE => UNIQUE-BASE.
+```
+
+## Base/Surplus Bucket Flow
+
+The constructive strengthening is a single flow for the whole unique row.
+For every off-path component `C`, split its capacity into two buckets:
+
+```text
+base_C    = hi(C)-lo(C)+1
+surplus_C = |C|-base_C.
+```
+
+For every demand node `(g,Q)` with `g != f` and `Q cap P_f` nonempty, set
+
+```text
+demand(g,Q) = |Q cap P_f| / |cyc(g)|.
+```
+
+Edges use interval intersection:
+
+```text
+(g,Q) can use C if span(C) intersects interval(Q cap P_f).
+```
+
+But with one extra rule:
+
+```text
+if len(cyc(g)) = 1, then (g,Q) can use only base buckets;
+if len(cyc(g)) > 1, then (g,Q) can use base or surplus buckets.
+```
+
+Feasibility implies direct UPO because total bucket capacity is
+`sum_C |C| = |V\\P_f|`, and total demand is exactly
+`sum_i(S(x_i)-1)`.
+
+Exact local scan:
+
+```text
+problems/23/writeup/_codex_upo_bucket_flow_scan.py
+
+N=10 rows=3643   nodes=2786    fail=None
+N=11 rows=31521  nodes=46381   fail=None
+N=12 rows=362839 nodes=927268  fail=None
+```
+
+Claude Step-2 gated this on the full battery at `2026-06-29T05:00:00Z`:
+
+```text
+census N=7..11 unique-rows-with-demand 0/0/105/1268/16576
+K??CB@OBDOAp rows=54
+K??CE@A{?]Fc rows=19
+INFEASIBLE=0
+```
+
+It is stronger than the previous geodesic-interval packing flow because
+unique-geodesic contributors are forbidden from using surplus.
+
+## Candidate Span-Coverage Lemma
+
+The successful subinterval corridor gate appears to reduce to two geometric
+facts:
+
+1. span coverage;
+2. span capacity.
+
+The span-capacity lemma is now proved: if an off-path component `C` of
+`B - V(P_f)` has attachment span `[lo,hi]`, then
+
+```text
+|C| >= hi-lo+1.
+```
+
+In fact Claude's proof gives the parity sharpened detour
+`cap(C) >= hi-lo+1`.
+
+The missing coverage statement is:
+
+```text
+For g != f and Q in cyc(g), if Q cap P_f is the interval [r,s],
+then every position i in [r,s] lies in the span of some off-path component.
+```
+
+Exact scan:
+
+```text
+problems/23/writeup/_codex_upo_span_coverage_scan.py
+
+N=10 rows=3643   checks=2786    fail=None
+N=11 rows=31521  checks=46381   fail=None
+N=12 rows=362839 checks=927268  fail=None
+```
+
+Claude Step-2 gated this on the full battery at `2026-06-29T03:55:00Z`:
+
+```text
+census N=7..11 coverage checks 0/0/186/2786/46381, GAP=0
+K??CB@OBDOAp checks=54, GAP=0
+K??CE@A{?]Fc checks=114, GAP=0
+TOTAL checks=49521, GAP=0
+```
+
+Claude also verified the mechanical implication:
+
+```text
+SPAN-COVERAGE + SPAN-CAPACITY => subinterval corridor capacity.
+```
+
+An additional metric fact is proof-ready.  If `Q cap P_f=[r,s]`, then the
+subpath of `Q` from `x_r` to `x_s` is exactly
+
+```text
+x_r,x_{r+1},...,x_s.
+```
+
+Indeed, the `Q` subpath is shortest, `P_f` gives distance `s-r`, and it
+contains all `s-r+1` specified vertices.  A path through those specified
+vertices has at least `s-r` edges, with equality only when it is exactly the
+`P_f` segment.
+
+Proof attempt.  Let `Q` be a shortest geodesic for `g`, and suppose
+`Q cap P_f=[r,s]`.  By the metric fact above, `Q` follows the actual
+`P_f` segment from `x_r` to `x_s`.
+
+Assume a position `i in [r,s]` is uncovered.  Then no off-path component
+attaches to `x_i`, and no off-path component has attachments on both sides of
+`i`.
+
+First consider the singleton case `r=s=i`.  Since `Q` is a nontrivial
+`B`-geodesic for the bad edge `g`, either `x_i` is an endpoint of `Q` and the
+next `B`-edge of `Q` leaves `P_f`, or `Q` enters and leaves `x_i` through
+vertices outside `P_f`.  In either case some off-path component of
+`B-V(P_f)` is adjacent to `x_i`, so its span contains `i`, contradicting that
+`i` is uncovered.
+
+It remains to handle `r<s`.  If `i<s`, let `W` consist of `x_0,...,x_i`
+together with every off-path component whose span has `hi<=i`.  If `i=s`,
+use the complementary suffix version, equivalently separate across the path
+edge `x_{i-1}x_i`.  Because `i` is uncovered, the `B`-boundary of `W` is
+exactly one path edge: `x_i x_{i+1}` in the prefix case, or `x_{i-1}x_i` in
+the suffix case.  No off-path component contributes another `B`-boundary
+edge: such an edge would be an attachment at `i` or a component span crossing
+`i`.  Equivalently, this path edge is a `B`-bridge for the cut `W`.
+
+Both bad edges cross this cap:
+
+* `f=x_0x_{L-1}` crosses because the cap separates the two ends of `P_f`;
+* `g` crosses because `Q` follows the `P_f` segment from `x_r` to `x_s` and
+  therefore uses the unique `B`-boundary edge of the cut `W`.  A path using a
+  bridge cut has its endpoints on opposite sides of the cut.
+
+Thus
+
+```text
+delta_B(W) = 1,   delta_M(W) >= 2,
+```
+
+contradicting max-cut optimality.  Hence no position in `[r,s]` is uncovered.
+
+Therefore every position in `[r,s]` is covered.
+
+Consequently, for any subinterval `[a,b] subseteq [r,s]`, the active component
+spans meeting `[a,b]` cover `[a,b]`.  Since each active component has
+`cap(C) >= span_length(C)`, their total capacity is at least `b-a+1`.  This
+is exactly the subinterval corridor-capacity inequality:
+
+```text
+b-a+1 <= sum_{C: span(C) cap [a,b] != empty} |C|.
+```
+
+## Restricted Interval Flow
+
+The directly usable interval-Hall certificate is the restricted version.  Fix
+a target path interval `[a,b]`.  For every `g != f` and `Q in cyc(g)`, create a
+demand node of size
+
+```text
+|Q cap {x_a,...,x_b}| / |cyc(g)|
+```
+
+if this quantity is nonzero.  Every such demand node may route to any outside
+component whose span intersects `[a,b]`; these components retain capacity
+`|C|`.
+
+Feasibility for every `[a,b]` is exactly the interval corridor inequality in
+flow form.  For a fixed target interval all demand nodes see the same
+component set, namely the components whose spans meet `[a,b]`; therefore this
+is not an additional superposition theorem, but a precise way to gate the
+interval Hall inequality itself.  Together with conditional interval
+uncrossing, interval Hall proves full UPO Hall.
+
+Script:
+
+```text
+problems/23/writeup/_codex_upo_interval_restricted_flow_scan.py
+```
+
+Exact census results:
+
+```text
+N=10 rows=3643   targets=56878    fail=None
+N=11 rows=31521  targets=486494   fail=None
+N=12 rows=362839 targets=5518038  fail=None
+```
+
+This is currently the cleanest unique-path target: prove the target corridor
+inequality for every interval `[a,b]`.
+
+Claude independently gated direct interval Hall on the full acceptance battery
+at `2026-06-29T00:50:00Z`, with no violations.  Positive-demand zero-slack
+intervals are rare in the N<=12 census:
+
+```text
+problems/23/writeup/_codex_upo_tight_interval_stats.py
+
+N=10 tight_positive=0
+N=11 tight_positive=0
+N=12 tight_positive=60, all with gcount=1, qcount=1, laminar=True
+```
+
+The N=12 positive tight cases are all the nested witness `K??CB@OBDOAp`, where
+one nested geodesic and one outside component saturate the interval corridor.
+
+## Complementary Fan Case
+
+Rows with multiple shortest geodesics need a separate fan-averaging lemma.
+The pointwise path bound is false:
+
+```text
+I?BD@g]Qo, f=(7,9), path [7,5,8,6,9]:
+path overlap = 32/3 > 10.
+```
+
+But the fan average is below `N`:
+
+```text
+ROWSUM(7,9)=689/75 < 10.
+```
+
+Full census nonunique-row scan:
+
+```text
+N=10 checked 19263 rows, worst margin 0 at all-tie blowup
+N=11 checked 246880 rows, worst margin 1/2
+N=12 checked 4151421 rows, worst margin 7/10
+```
+
+So the empirical split is:
+
+```text
+unique rows: can be tight via Hamilton/nested path packing;
+nonunique rows: only all-tie blowup tight so far, otherwise fan averaging gives slack.
+```
+
+## Nonunique Variance Strengthening
+
+The global variance correction
+
+```text
+ROWSUM(f) + Var_{p_f}(S)/N <= N
+```
+
+is false because of the nested unique-path equality row in `K??CB@OBDOAp`.
+However, after filtering to rows with at least two shortest geodesics, the
+same strengthening survived the full N<=12 census.
+
+Script:
+
+```text
+problems/23/writeup/_codex_row_loadvar_scan.py --min-paths 2
+```
+
+Results:
+
+```text
+N=10 nonunique rows=19263, worst margin 0
+  equality: all-tie blowup I?rFf_{N? with Var=0
+
+N=11 nonunique rows=246880, worst margin 146/495
+  worst ratio (N-ROWSUM)/Var = 15/92 at J???E?pNu\?
+
+N=12 nonunique rows=4151421, worst margin 238/405
+  worst ratio = 135/668 at K???E?pw?}xs
+```
+
+Worst N=12 nonunique case:
+
+```text
+g6   = K???E?pw?}xs
+side = 110000001010
+M    = {(2,9),(4,11),(5,11),(6,11)}
+
+For f=(4,11),(5,11),(6,11):
+  ell = 5
+  |cyc(f)| = 6
+  ROWSUM = 11
+  gap = 1
+  Var = 668/135
+  gap - Var/12 = 238/405
+```
+
+The high rows are symmetric fans through the overloaded pair `10,11`:
+
+```text
+S(10)=S(11)=10/3,
+S(7)=S(8)=S(9)=2,
+S(0)=S(1)=4/3,
+S(3)=2/3.
+```
+
+Thus a two-case proof target is:
+
+1. If `|cyc(f)|=1`, prove UNIQUE-PATH OVERLAP.
+2. If `|cyc(f)|>=2`, prove
+
+```text
+N*(N-ROWSUM(f)) >= Var_{p_f}(S).
+```
+
+Either case implies ROWSUM-O.  The second case is naturally a fan-averaging
+statement: pathwise overlap can exceed `N`, but nonzero variance across the
+fan must create enough row slack.
+
+## Claude Full-Battery Gate
+
+Claude Step-2 independently exact-gated both halves on the full current
+acceptance battery.
+
+Unique-path overlap:
+
+```text
+2026-06-28T22:20:00Z
+N=7..11 unique rows 31/88/558/3643/31521, fail=0
+K??CB@OBDOAp: 54 unique rows, fail=0, equality at f=(6,11)
+K??CE@A{?]Fc: 19 unique rows, fail=0
+glued islands and Mycielskians: fail=0; Mycielskians have no unique rows
+```
+
+Nonunique fan-variance:
+
+```text
+2026-06-28T22:40:00Z
+N=7..11 nonunique rows 22/249/1863/19263/246880, fail=0
+Mycielskians M(C7), M(C9), M(C11), M(Grotzsch) N=23: fail=0
+glued islands and unbalanced blowups: fail=0
+```
+
+Claude also confirmed the contiguity lemma beyond the census:
+
+```text
+2026-06-28T22:50:00Z
+K??CB@OBDOAp, K??CE@A{?]Fc, C7|brg|Grotzsch, C9|brg|C9: fail=0
+```
+
+The contiguity proof is now considered rigorous: if a shortest geodesic `Q`
+meets the unique `P_f` in two separated runs, then replacing the corresponding
+segment of `P_f` by the `Q` segment creates a second shortest geodesic for `f`.

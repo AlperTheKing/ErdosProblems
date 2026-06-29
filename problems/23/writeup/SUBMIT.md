@@ -39,14 +39,27 @@ REMAINING (2 external items — see below):
 3. Abstract = the paper abstract. License: arXiv default or CC-BY.
 4. After the arXiv id is live → submit the OEIS A389646 comment below (oeis.org, login, "edit", add comment + the H-line reference) and link the arXiv note.
 
-## OEIS A389646 comment (submit after the arXiv id exists)
-"It is proven that a(5k)=k² for all 1≤k≤40, i.e. Erdős's conjecture a(n)≤n²/25 holds with equality on the
-multiples of five up to n=200 (a(25)=25, a(30)=36, …, a(200)=1600). The proof is computer-assisted: a per-root
-maximum-cut envelope (with order-10 flag-algebra and rooted-Horn rows) bounds the monochromatic-pair density by
-2/25+δ (δ≈4.86·10⁻⁵) on the medium edge-density band, and integrality of the bipartization number under blow-up
-closes the gap for k≤40; the density tails use Balogh–Clemen–Lidický (arXiv:2103.14179). See [arXiv link]. — [author], 2026"
-Reference line (%H): "[author], <a href='[arXiv url]'>The Erdős n²/25 max-cut conjecture for small multiples of
-five</a>, arXiv:[id] (2026)."
+## OEIS A389646 — SUBMITTED 2026-06-29 (draft in editor review queue). EXACT AS-POSTED strings:
+COMMENT (%C, added at end of Comments):
+"It is proven that a(5k) = k^2 for all 1 <= k <= 40 (the conjectured bound n^2/25 is attained for n = 25, 30,
+..., 200): a per-root maximum-cut envelope with an order-10 flag-algebra certificate bounds the monochromatic-pair
+density by 2/25 + delta (delta ~ 4.86*10^-5) on the medium edge-density band, and integrality of the bipartization
+number under blow-up closes the gap for k <= 40; the two density tails follow from the Balogh-Clemen-Lidicky
+bounds. - _Alper Ferudun_, Jun 29 2026"
+LINK (%H, added at end of Links):
+"Alper Ferudun, <a href="https://arxiv.org/abs/2606.28041">The Erdos n^2/25 max-cut conjecture for small multiples
+of five, via a per-root-MaxCut envelope and blow-up integrality</a>, arXiv:2606.28041 [math.CO], 2026."
+DISCUSSION NOTE (to editors, not part of published entry):
+"Added a comment and arXiv link for a computer-assisted proof that a(5k) = k^2 for 1 <= k <= 40, i.e. the Erdos
+n^2/25 bound is attained on the multiples of 5 up to n = 200. The result determines only the multiples of 5, so no
+new contiguous data terms are added (a(24) etc. remain open). Paper: arXiv:2606.28041, ancillary files include an
+exact-arithmetic verifier."
+NOTE: only Comments + Links touched; NAME/DATA/OFFSET/AUTHOR untouched (only multiples of 5 proven, so no new
+contiguous terms). Author name rendered as an OEIS user link (account matched). Awaiting OEIS editor approval.
+
+## ARXIV ID LIVE 2026-06-29: arXiv:2606.28041  (https://arxiv.org/abs/2606.28041)
+Page verified live via WebFetch (title/author Alper Ferudun/math.CO/abstract all match). v2 (a(5n)=n^2, N<=200)
+PUBLICLY PUBLISHED. OEIS A389646 edit SUBMITTED (above). Paper password (arXiv co-author claim only, NOT OEIS): mfauk.
 
 ## arXiv form metadata (form-ready, for the drive-through after login)
 - Primary category: math.CO   (cross-list optional: none)
