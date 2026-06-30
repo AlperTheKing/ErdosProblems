@@ -1,0 +1,10 @@
+census N=5 done tot=40 viol=8
+census N=6 done tot=48 viol=8
+census N=7 done tot=101 viol=8
+census N=8 done tot=381 viol=35
+census N=9 done tot=2297 viol=35
+census N=10 done tot=18313 viol=171
+census N=11 done tot=189495 viol=1677
+
+MAX-T GATE:  max_v T(v) <= N + N^2/25 - m ?  tot=189495 viol=1677  ('fan[3, 9, 1, 9, 3]', 25, 9, '45', '41', '-4')
+  min margin (A-maxT) = -4 = -4.0000 @ fan[3, 9, 1, 9, 3] N=25 m=9  maxT=45 A=41

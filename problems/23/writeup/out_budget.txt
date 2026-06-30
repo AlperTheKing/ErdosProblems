@@ -1,0 +1,34 @@
+L=8 N=27 edges=62 tri-free=True Bconn=True parity-cut=58 CP-SAT-max=58 bound=58 global-max=True
+  bad=[(0, 6), (0, 8), (2, 6), (2, 8)] ell=[7, 9, 5, 7] Gamma=204 N^2=729 Gamma<=N^2:True
+  O rowsums=['24', '28', '20', '24']  MAX rowsum=28  N=27  ROWSUM-O FAILS
+  rho(O)=24.3578  N=27  rho/N=0.9021  rho(O)<=N HOLDS
+  === rho(O)<=N here (route survives at this L) ===
+L=12 N=39 edges=90 tri-free=True Bconn=True parity-cut=86 CP-SAT-max=86 bound=86 global-max=True
+  bad=[(0, 10), (0, 12), (2, 10), (2, 12)] ell=[11, 13, 9, 11] Gamma=492 N^2=1521 Gamma<=N^2:True
+  O rowsums=['40', '44', '36', '40']  MAX rowsum=44  N=39  ROWSUM-O FAILS
+  rho(O)=40.2094  N=39  rho/N=1.0310  rho(O)<=N FAILS
+  === ROUTE DEAD: gamma-min connB GLOBAL-max, Gamma<=N^2, but rho(O)>N ===
+=== BUDGET crux test ===
+  two-lane L=8: N=27 m=4 G=204 U+=140 J=336 slack=128316/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  two-lane L=12: N=39 m=4 G=492 U+=1980 J=4400 slack=699132/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  two-lane L=20: N=63 m=4 G=1452 U+=16796 J=35568 slack=5617788/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  two-lane L=30: N=93 m=4 G=3372 U+=72036 J=149408 slack=28827228/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  Grotzsch N=11: N=11 m=4 G=100 U+=99430/3969 J=397720/3969 slack=84 iso=True U+match=True budget(J<=slack)=False LRS=True  <<< BUDGET VIOLATION
+  C5[1]: N=5 m=1 G=25 U+=0 J=0 slack=0 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C5[2]: N=10 m=4 G=100 U+=0 J=0 slack=0 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C5[3]: N=15 m=9 G=225 U+=0 J=0 slack=0 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C7[1]: N=7 m=1 G=49 U+=0 J=0 slack=1176/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C7[2]: N=14 m=4 G=196 U+=0 J=0 slack=18816/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C9[1]: N=9 m=1 G=81 U+=0 J=0 slack=4536/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+  C9[2]: N=18 m=4 G=324 U+=0 J=0 slack=72576/25 iso=True U+match=True budget(J<=slack)=True LRS=True
+--- census N=5..10: BUDGET + iso violation hunt (loads cut) ---
+  N=5: structs=1 iso_viol=0 BUDGET_viol=0 LRS_viol=0  min(slack-J)=0 at DUW
+  N=6: structs=2 iso_viol=0 BUDGET_viol=0 LRS_viol=0  min(slack-J)=11 at ECpo
+  N=7: structs=15 iso_viol=0 BUDGET_viol=0 LRS_viol=0  min(slack-J)=24 at F?bBo
+  N=8: structs=85 iso_viol=0 BUDGET_viol=3 LRS_viol=0  min(slack-J)=-92 at G?`F`w
+     first BUDGET viol: ('G?`F`w', Fraction(120, 1), Fraction(28, 1))
+  N=9: structs=650 iso_viol=0 BUDGET_viol=12 LRS_viol=0  min(slack-J)=-18 at H?AAFo}
+     first BUDGET viol: ('H?AAF_}', Fraction(70, 1), Fraction(62, 1))
+  N=10: structs=5800 iso_viol=0 BUDGET_viol=10 LRS_viol=0  min(slack-J)=-1325/9 at I?ABCc]}?
+     first BUDGET viol: ('I?ABCc]}?', Fraction(2000, 9), Fraction(75, 1))
+=== done ===

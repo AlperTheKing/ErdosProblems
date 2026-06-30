@@ -1,0 +1,14 @@
+  census N=5 done worstratio=1.0000
+  census N=6 done worstratio=1.0000
+  census N=7 done worstratio=1.0000
+  census N=8 done worstratio=1.2500
+  census N=9 done worstratio=1.2500
+  census N=10 done worstratio=1.3333
+  small+blowups done worstratio=1.3333
+  MycC7_15 done worstratio=1.6667
+  Myc2C5_23 done worstratio=1.6667
+
+=== WORST Tmax/N over gate ===
+  ratio=1.666667 = 5/3  at MycC7_15 v=14 N=15 T=25.0 inc=40.0 D=10.0 dc=5 dm=2
+  per-edge mu(e)<=N: max(mu-N)=1.0000 FALSE {'val': Fraction(1, 1), 'where': 'cH?AFBo]', 'e': (6, 8), 'muval': 10.0, 'N': 9}
+  max-cut local opt dc>=dm: HOLDS everywhere

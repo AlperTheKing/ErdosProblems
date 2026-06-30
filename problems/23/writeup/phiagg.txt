@@ -1,0 +1,12 @@
+census N=5 done tot=33 sumfail=0 peredge_fail_inst=0 easier=0
+census N=6 done tot=41 sumfail=0 peredge_fail_inst=0 easier=0
+census N=7 done tot=94 sumfail=0 peredge_fail_inst=0 easier=0
+census N=8 done tot=374 sumfail=0 peredge_fail_inst=0 easier=0
+census N=9 done tot=2290 sumfail=0 peredge_fail_inst=0 easier=0
+census N=10 done tot=18306 sumfail=0 peredge_fail_inst=0 easier=0
+census N=11 done tot=189488 sumfail=0 peredge_fail_inst=0 easier=0
+
+SUM-SBC total instances=189488  SUM-SBC failures=0  
+per-edge PATH-LRS(avg) failing instances=0 ; of those aggregate STILL holds (easier!)=0
+  easier witness: None
+  min SUM-SBC slack (RHS-S) = 0 = 0.000 @ C5[1] N=5 m=1

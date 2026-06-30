@@ -1,0 +1,24 @@
+L=8 N=27 edges=62 tri-free=True Bconn=True parity-cut=58 CP-SAT-max=58 bound=58 global-max=True
+  bad=[(0, 6), (0, 8), (2, 6), (2, 8)] ell=[7, 9, 5, 7] Gamma=204 N^2=729 Gamma<=N^2:True
+  O rowsums=['24', '28', '20', '24']  MAX rowsum=28  N=27  ROWSUM-O FAILS
+  rho(O)=24.3578  N=27  rho/N=0.9021  rho(O)<=N HOLDS
+  === rho(O)<=N here (route survives at this L) ===
+L=12 N=39 edges=90 tri-free=True Bconn=True parity-cut=86 CP-SAT-max=86 bound=86 global-max=True
+  bad=[(0, 10), (0, 12), (2, 10), (2, 12)] ell=[11, 13, 9, 11] Gamma=492 N^2=1521 Gamma<=N^2:True
+  O rowsums=['40', '44', '36', '40']  MAX rowsum=44  N=39  ROWSUM-O FAILS
+  rho(O)=40.2094  N=39  rho/N=1.0310  rho(O)<=N FAILS
+  === ROUTE DEAD: gamma-min connB GLOBAL-max, Gamma<=N^2, but rho(O)>N ===
+=== coarea + CD/iso on explicit-side constructions ===
+  two-lane L=8: N=27 beta=4 handshake=True coarea=OK LRS=OK Tmax=28.000 |over|=5
+  two-lane L=12: N=39 beta=4 handshake=True coarea=OK LRS=OK Tmax=44.000 |over|=9
+  two-lane L=20: N=63 beta=4 handshake=True coarea=OK LRS=OK Tmax=76.000 |over|=17
+  two-lane L=30: N=93 beta=4 handshake=True coarea=OK LRS=OK Tmax=116.000 |over|=27
+--- Mycielskians (loads brute for N<=11) ---
+  Myc(C5)=Grotzsch N=11: N=11 beta=4 handshake=True coarea=OK LRS=OK Tmax=12.937 |over|=1
+--- census N=5..9 gamma-min: CD/iso violation hunt ---
+  N=5: structs=1 handshake_fail=0 coarea_fail=0 LRS_fail=0 CD_viol=0 iso_viol=0
+  N=6: structs=2 handshake_fail=0 coarea_fail=0 LRS_fail=0 CD_viol=0 iso_viol=0
+  N=7: structs=15 handshake_fail=0 coarea_fail=0 LRS_fail=0 CD_viol=0 iso_viol=0
+  N=8: structs=85 handshake_fail=0 coarea_fail=0 LRS_fail=0 CD_viol=0 iso_viol=0
+  N=9: structs=650 handshake_fail=0 coarea_fail=0 LRS_fail=0 CD_viol=0 iso_viol=0
+=== done ===

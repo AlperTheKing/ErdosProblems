@@ -1,0 +1,15 @@
+  census N=5 done sup=1.0000
+  census N=6 done sup=1.0000
+  census N=7 done sup=1.0000
+  census N=8 done sup=1.2500
+  census N=9 done sup=1.2500
+  census N=10 done sup=1.3333
+  MycC7_15 (N=15) done sup=1.6667
+  MycC9_19 (N=19) done sup=1.6667
+  MycC11_23 (N=23) done sup=1.6667
+  Myc2C5_23 (N=23) done sup=1.6667
+
+=== GLOBAL bounds ===
+  sup T/N over gate = 1.666667=5/3  @ MycC7_15 v=14 N=15 T=25.000 dc=5 Dall=25 nbad=5
+  G1 T<=Dall: max-resid=+0.0000 HOLDS @ cDUW (T=5.00 Dall=5)
+  G2 Dall<=2N: max-resid=+40.0000 FALSE @ C5[4] v=0 N=20 Dall=80 nbad=16 dc=8

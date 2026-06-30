@@ -1,0 +1,30 @@
+L=8 N=27 edges=62 tri-free=True Bconn=True parity-cut=58 CP-SAT-max=58 bound=58 global-max=True
+  bad=[(0, 6), (0, 8), (2, 6), (2, 8)] ell=[7, 9, 5, 7] Gamma=204 N^2=729 Gamma<=N^2:True
+  O rowsums=['24', '28', '20', '24']  MAX rowsum=28  N=27  ROWSUM-O FAILS
+  rho(O)=24.3578  N=27  rho/N=0.9021  rho(O)<=N HOLDS
+  === rho(O)<=N here (route survives at this L) ===
+L=12 N=39 edges=90 tri-free=True Bconn=True parity-cut=86 CP-SAT-max=86 bound=86 global-max=True
+  bad=[(0, 10), (0, 12), (2, 10), (2, 12)] ell=[11, 13, 9, 11] Gamma=492 N^2=1521 Gamma<=N^2:True
+  O rowsums=['40', '44', '36', '40']  MAX rowsum=44  N=39  ROWSUM-O FAILS
+  rho(O)=40.2094  N=39  rho/N=1.0310  rho(O)<=N FAILS
+  === ROUTE DEAD: gamma-min connB GLOBAL-max, Gamma<=N^2, but rho(O)>N ===
+=== CD-TV / Laplacian / handshake quantities ===
+  two-lane L=8: N=27 G=204 ST2=4944
+     CD-TV(T): tvM=24 tvB=432 ok=True
+     Laplacian: LM=Σ_M(ΔT)²=288 LB=Σ_B(ΔT)²=10176 LM<=LB:True
+     handshake ok=True ΣT·D=1184 Σ_Bμ(Tx+Ty)=8704 2ST2-ΣTD=8704
+     STAR: 25ST2=123600 <= G(N2+25N-G)=244800 ? True
+     LB/ST2=2.058  (N²+25N-G)-25ST2/G=594.118
+  two-lane L=12: N=39 G=492 ST2=19728
+     CD-TV(T): tvM=40 tvB=1024 ok=True
+     Laplacian: LM=Σ_M(ΔT)²=800 LB=Σ_B(ΔT)²=40256 LM<=LB:True
+     handshake ok=True ΣT·D=2912 Σ_Bμ(Tx+Ty)=36544 2ST2-ΣTD=36544
+     STAR: 25ST2=493200 <= G(N2+25N-G)=985968 ? True
+     LB/ST2=2.041  (N²+25N-G)-25ST2/G=1001.561
+  Grotzsch N=11: N=11 G=100 ST2=8620525/9072
+     CD-TV(T): tvM=3085/252 tvB=1385/28 ok=True
+     Laplacian: LM=Σ_M(ΔT)²=7012225/127008 LB=Σ_B(ΔT)²=26802425/127008 LM<=LB:True
+     handshake ok=True ΣT·D=31775/84 Σ_Bμ(Tx+Ty)=6904675/4536 2ST2-ΣTD=6904675/4536
+     STAR: 25ST2=215513125/9072 <= G(N2+25N-G)=29600 ? True
+     LB/ST2=0.222  (N²+25N-G)-25ST2/G=58.441
+=== done ===

@@ -1,0 +1,11 @@
+=== (A) FAITHFULNESS: STAR on graphs WITH triangles (max cut via loads brute, ALL graphs) ===
+  N=5: triangle-graphs=15 STAR-violating=2
+     first triangle STAR-viol: g6=D^{ minell=3 margin=-391.5
+  N=6: triangle-graphs=93 STAR-violating=7
+     first triangle STAR-viol: g6=EU~w minell=3 margin=-337.5
+  N=7: triangle-graphs=794 STAR-violating=28
+     first triangle STAR-viol: g6=FEr~w minell=3 margin=-270.0
+=== (B) N=23 iterated-Mycielskian gate (CP-SAT max cut) ===
+  Grotzsch N=11: maxcut opt=16 bound=16.0 (optimal=True) Gamma=100 minell=5 STAR=True margin=5844.144
+  Myc^2(C5) N=23: maxcut opt=55 bound=55.0 (optimal=True) Gamma=400 minell=5 STAR=True margin=81277.593
+=== done ===

@@ -18,6 +18,7 @@ L_{C(f,Q)} uses only the ℓ cycle edges), so the per-cycle bound holds regardle
 - ω(e) := Σ_{f∈M} ā_{ℓ(f)} τ_f(e);   L_ω = weighted Laplacian on B∪M.
 
 **(LC) Local comparison — ELEMENTARY (PROVEN mechanism + exact-validated per edge).**
+  Standalone proof note: LOCAL_CIRCULANT_PSD.md.
   K + L_ω ⪯ diag(T),  i.e.  M − K ⪰ 0  where M := diag(T) − L_ω.
 Proof: circulant fact J_ℓ + a*_ℓ L_{C_ℓ} ⪯ ℓ·I_ℓ holds per cycle, EXACTLY at the sharp coeff
 a*_ℓ=ℓ/(2+2cos(π/ℓ)): J_ℓ and L_{C_ℓ} are co-diagonalized by the Fourier basis; eigenvalues of
@@ -101,3 +102,4 @@ since C_eff(o<->ground) >= LB1 (Rayleigh, proven) and (CAP)|_{|O|=1} <=> C_eff >
 0 fails / 6233 cuts (min ratio 1.05, tight witness Myc(C7) N=15 o=14). |O|=2 => 2-port det condition.
 Next: prove the |O|=1 star inequality (per-bad-edge charging) / GPT-Pro. Files: _opencap.py, _clcb_audit.py,
 _selfcap.py, _cap.py, _cond1_audit.py.
+

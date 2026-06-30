@@ -1,0 +1,11 @@
+  twolane8: N=27 m=4 rho(K)=24.3578 A=52.160 rho<=A:True | sumT2/Gamma=24.2353 (Rayleigh@1) <=A:True
+  twolane12: N=39 m=4 rho(K)=40.2094 A=95.840 rho<=A:True | sumT2/Gamma=40.0976 (Rayleigh@1) <=A:True
+  twolane16: N=51 m=4 rho(K)=56.1477 A=151.040 rho<=A:True | sumT2/Gamma=56.0529 (Rayleigh@1) <=A:True
+  twolane20: N=63 m=4 rho(K)=72.1141 A=217.760 rho<=A:True | sumT2/Gamma=72.0331 (Rayleigh@1) <=A:True
+  C5[1]: N=5 m=1 rho(K)=5.0000 A=5.000 rho<=A:True | sumT2/Gamma=5.0000 (Rayleigh@1) <=A:True
+  C5[2]: N=10 m=4 rho(K)=10.0000 A=10.000 rho<=A:True | sumT2/Gamma=10.0000 (Rayleigh@1) <=A:True
+  C5[3]: N=15 m=9 rho(K)=15.0000 A=15.000 rho<=A:True | sumT2/Gamma=15.0000 (Rayleigh@1) <=A:True
+  C5[4]: N=20 m=16 rho(K)=20.0000 A=20.000 rho<=A:True | sumT2/Gamma=20.0000 (Rayleigh@1) <=A:True
+  fan[3, 9, 1, 9, 3]: N=25 m=9 rho(K)=17.0000 A=41.000 rho<=A:True | sumT2/Gamma=17.0000 (Rayleigh@1) <=A:True
+  fan[1, 9, 3, 9, 1]: N=23 m=1 rho(K)=2.5556 A=43.160 rho<=A:True | sumT2/Gamma=2.5556 (Rayleigh@1) <=A:True
+  fan[2, 1, 2, 1, 2]: N=8 m=2 rho(K)=7.0000 A=8.560 rho<=A:True | sumT2/Gamma=7.0000 (Rayleigh@1) <=A:True

@@ -28,3 +28,4 @@
 [2026-06-28T18:06:24Z] > ATTACK | NEXT: test fixed L5 central-boost prices c=(3,3,4,3,3)/16 on N<=11
 [2026-06-28T18:13:57Z] OK VERIFY | DID: ran tight-cap local check on no-good witness | RESULT: cuts0-1 have unique row with tight_lower_count=0 | D: raw tight-cap false
 [2026-06-28T18:14:13Z] FAIL VERIFY | DID: tested lex-min tight-cap switches on K??CE@A{?]Fc | RESULT: switches keep defect vector (1/5,1/5) | D: tight-cap descent false
+[2026-06-29T04:29:55Z] > COMPUTE | NEXT: run extremal LRS-family adversarial gate

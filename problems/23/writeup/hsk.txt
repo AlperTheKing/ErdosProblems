@@ -1,0 +1,16 @@
+=== traffic-load handshake: sum_{e at v in B} mu(e) == 2 T(v) - D(v) ===
+   J?AADBWeay? SAT v=0: T=11=N, D(v)=0, sum mu=22.0 over 4 edges; zero-mu incident=[]
+  J?AADBWeay?: handshake mismatches=0
+   J?ABBBWVCu? SAT v=1: T=11=N, D(v)=0, sum mu=22.0 over 4 edges; zero-mu incident=[]
+  J?ABBBWVCu?: handshake mismatches=0
+   J?`D@_w{EB? SAT v=0: T=11=N, D(v)=0, sum mu=22.0 over 4 edges; zero-mu incident=[]
+  J?`D@_w{EB?: handshake mismatches=0
+  G?bF`w: handshake mismatches=0
+   I?BD@g]Qo SAT v=7: T=10=N, D(v)=10, sum mu=10.0 over 2 edges; zero-mu incident=[]
+   I?BD@g]Qo SAT v=9: T=10=N, D(v)=10, sum mu=10.0 over 2 edges; zero-mu incident=[]
+  I?BD@g]Qo: handshake mismatches=0
+   I?ABCc]}? SAT v=6: T=10=N, D(v)=10, sum mu=10.0 over 2 edges; zero-mu incident=[]
+   I?ABCc]}? SAT v=8: T=10=N, D(v)=10, sum mu=10.0 over 2 edges; zero-mu incident=[]
+  I?ABCc]}?: handshake mismatches=0
+  J??CE?{{?]?: handshake mismatches=0
+TOTAL handshake mismatches: 0 (0 => identity holds)

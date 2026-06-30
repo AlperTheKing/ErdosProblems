@@ -1,0 +1,25 @@
+L=8 N=27 edges=62 tri-free=True Bconn=True parity-cut=58 CP-SAT-max=58 bound=58 global-max=True
+  bad=[(0, 6), (0, 8), (2, 6), (2, 8)] ell=[7, 9, 5, 7] Gamma=204 N^2=729 Gamma<=N^2:True
+  O rowsums=['24', '28', '20', '24']  MAX rowsum=28  N=27  ROWSUM-O FAILS
+  rho(O)=24.3578  N=27  rho/N=0.9021  rho(O)<=N HOLDS
+  === rho(O)<=N here (route survives at this L) ===
+L=12 N=39 edges=90 tri-free=True Bconn=True parity-cut=86 CP-SAT-max=86 bound=86 global-max=True
+  bad=[(0, 10), (0, 12), (2, 10), (2, 12)] ell=[11, 13, 9, 11] Gamma=492 N^2=1521 Gamma<=N^2:True
+  O rowsums=['40', '44', '36', '40']  MAX rowsum=44  N=39  ROWSUM-O FAILS
+  rho(O)=40.2094  N=39  rho/N=1.0310  rho(O)<=N FAILS
+  === ROUTE DEAD: gamma-min connB GLOBAL-max, Gamma<=N^2, but rho(O)>N ===
+=== U+<=slack (stronger clean target) + L-lemma probe ===
+  two-lane L=8: N=27 m=4 U+=140(140.00) slack=5132.64 U+<=slack=True LRS=True
+  two-lane L=12: N=39 m=4 U+=1980(1980.00) slack=27965.28 U+<=slack=True LRS=True
+  two-lane L=20: N=63 m=4 U+=16796(16796.00) slack=224711.52 U+<=slack=True LRS=True
+  two-lane L=30: N=93 m=4 U+=72036(72036.00) slack=1153089.12 U+<=slack=True LRS=True
+  Grotzsch N=11: N=11 m=4 U+=99430/3969(25.05) slack=84.00 U+<=slack=True LRS=True
+--- census N=5..10: U+>slack and L-lemma violations ---
+  N=5: structs=1 U+>slack=0 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=0.000 at DUW
+  N=6: structs=2 U+>slack=0 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=11.000 at ECpo
+  N=7: structs=15 U+>slack=0 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=24.000 at F?bBo
+  N=8: structs=85 U+>slack=3 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=-12.000 at G?`F`w
+     first U+>slack: ('G?`F`w', 40.0, 28.0)
+  N=9: structs=650 U+>slack=0 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=32.000 at H?AFBo]
+  N=10: structs=5800 U+>slack=0 L_lemma_viol=0 LRS_viol=0 min(slack-U+)=0.000 at I?rFf_{N?
+=== done ===

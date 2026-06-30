@@ -1,0 +1,19 @@
+  census N=5 done
+  census N=6 done
+  census N=7 done
+  census N=8 done
+  census N=9 done
+  census N=10 done
+  MycC7_15 done
+  Myc2C5_23 done
+
+=== candidate bounds (residual<=0 => HOLDS on gate) ===
+  C_A T<=dc*N              max-resid=+0.0000  HOLDS  @ cDUW v=2 N=5 T=5.00 dc=1 dm=1 D=5.00 g=1 ellmax=5 nbad=1
+  C_B T<=N+D               max-resid=+11.0263  *** FALSE ***  @ Myc2C5_23 v=10 N=23 T=34.03 dc=10 dm=0 D=0.00 g=10 ellmax=5 nbad=16
+  C_C 2T<=dc*ellmax+D      max-resid=+19.2063  *** FALSE ***  @ Myc2C5_23 v=22 N=23 T=37.10 dc=10 dm=1 D=5.00 g=10 ellmax=5 nbad=16
+  C_D 2T<=ellmax*dc        max-resid=+25.0000  *** FALSE ***  @ MycC7_15 v=14 N=15 T=25.00 dc=5 dm=2 D=10.00 g=5 ellmax=5 nbad=5
+  C_G inc<=dc*ellmax       max-resid=+19.2063  *** FALSE ***  @ Myc2C5_23 v=22 N=23 T=37.10 dc=10 dm=1 D=5.00 g=10 ellmax=5 nbad=16
+  C_I T<=g*ellmax/2        max-resid=+25.0000  *** FALSE ***  @ MycC7_15 v=14 N=15 T=25.00 dc=5 dm=2 D=10.00 g=5 ellmax=5 nbad=5
+  C_J 2T<=g*ellmax         max-resid=+25.0000  *** FALSE ***  @ MycC7_15 v=14 N=15 T=25.00 dc=5 dm=2 D=10.00 g=5 ellmax=5 nbad=5
+  C_K T<=(ellmax/2)*dc + N - ? max-resid=+25.0000  *** FALSE ***  @ MycC7_15 v=14 N=15 T=25.00 dc=5 dm=2 D=10.00 g=5 ellmax=5 nbad=5
+  C_L 2T<=dc*N/... B2      max-resid=-5.0000  HOLDS  @ cDUW v=0 N=5 T=5.00 dc=2 dm=0 D=0.00 g=2 ellmax=5 nbad=1

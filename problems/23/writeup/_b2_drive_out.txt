@@ -1,0 +1,6 @@
+  census N=5 done B2res=-5.000
+  census N=6 done B2res=-5.000
+  census N=7 done B2res=-5.000
+  census N=8 done B2res=-5.000
+  census N=9 done B2res=-5.000
+  census N=10 done B2res=-5.000

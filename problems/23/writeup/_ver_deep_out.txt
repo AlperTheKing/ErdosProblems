@@ -1,0 +1,48 @@
+L=8 N=27 edges=62 tri-free=True Bconn=True parity-cut=58 CP-SAT-max=58 bound=58 global-max=True
+  bad=[(0, 6), (0, 8), (2, 6), (2, 8)] ell=[7, 9, 5, 7] Gamma=204 N^2=729 Gamma<=N^2:True
+  O rowsums=['24', '28', '20', '24']  MAX rowsum=28  N=27  ROWSUM-O FAILS
+  rho(O)=24.3578  N=27  rho/N=0.9021  rho(O)<=N HOLDS
+  === rho(O)<=N here (route survives at this L) ===
+L=12 N=39 edges=90 tri-free=True Bconn=True parity-cut=86 CP-SAT-max=86 bound=86 global-max=True
+  bad=[(0, 10), (0, 12), (2, 10), (2, 12)] ell=[11, 13, 9, 11] Gamma=492 N^2=1521 Gamma<=N^2:True
+  O rowsums=['40', '44', '36', '40']  MAX rowsum=44  N=39  ROWSUM-O FAILS
+  rho(O)=40.2094  N=39  rho/N=1.0310  rho(O)<=N FAILS
+  === ROUTE DEAD: gamma-min connB GLOBAL-max, Gamma<=N^2, but rho(O)>N ===
+======================================================================
+L=12 k=4 gap=6 N=65 edges=271
+  triangle-free=True  Bconn=True
+  parity-cut=256  CP-SAT opt=256  bound=256  OPTIMAL=True  -> GLOBALMAX=True
+  #max-cuts (gauge-fixed x0=0, capped 40)=1  parity-cut-is-among-them=True
+  |M|=15  N^2/25=169  |M|/(N^2/25)=0.0888
+  EXACT maxT=133 = 133.0000 ;  2N=130 ;  maxT/2N=1.0231
+  B2 (maxT<=2N): FAILS   [133 vs 130]
+  PATH-LRS: HOLDS  min exact slack=683/7 = 97.5714
+  ROW-LRS : HOLDS  min exact slack=683/7 = 97.5714
+  LRS     : HOLDS  lhs=131183 rhs=269589 slack=138406
+  side=[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+  bad(monochromatic)=[(0, 6), (0, 8), (0, 10), (0, 12), (1, 7), (1, 9), (1, 11), (2, 8), (2, 10), (2, 12), (3, 9), (3, 11), (4, 10), (4, 12), (5, 11)]
+======================================================================
+L=14 k=4 gap=8 N=75 edges=314
+  triangle-free=True  Bconn=True
+  parity-cut=298  CP-SAT opt=298  bound=298  OPTIMAL=True  -> GLOBALMAX=True
+  #max-cuts (gauge-fixed x0=0, capped 40)=1  parity-cut-is-among-them=True
+  |M|=16  N^2/25=225  |M|/(N^2/25)=0.0711
+  EXACT maxT=172 = 172.0000 ;  2N=150 ;  maxT/2N=1.1467
+  B2 (maxT<=2N): FAILS   [172 vs 150]
+  PATH-LRS: HOLDS  min exact slack=1138/9 = 126.4444
+  ROW-LRS : HOLDS  min exact slack=1138/9 = 126.4444
+  LRS     : HOLDS  lhs=268956 rhs=540736 slack=271780
+  side=[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+  bad(monochromatic)=[(0, 8), (0, 10), (0, 12), (0, 14), (1, 9), (1, 11), (1, 13), (2, 10), (2, 12), (2, 14), (3, 11), (3, 13), (4, 12), (4, 14), (5, 13), (6, 14)]
+N=12 sampled=8000 viol(+0) running_min_margin=115.33197278911565
+N=13 sampled=8000 viol(+0) running_min_margin=115.33197278911565
+N=14 sampled=6000 viol(+0) running_min_margin=115.33197278911565
+N=15 sampled=4000 viol(+0) running_min_margin=115.33197278911565
+after heavy blow-ups: configs=50796 viol=0 min_margin=0.0
+
+==== DEEP RESULTS ====
+configs=50796 viol=0
+MIN margin=0 float=0 at nu[1, 1, 1, 1, 1] N=5 beta=1 Gamma=25 V2=0 TVcut=0 TVbad=0
+MAX ratio=55/4 float=13.75 at cenN???????C?N_W{o{Fp? N=15 beta=1  (151/16=151/16 -> EXCEEDS)
+handshake_fail=0 identity_fail=0 form_mismatch=0
+FIRST VIOL: None

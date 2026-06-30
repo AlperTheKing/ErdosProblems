@@ -1,0 +1,14 @@
+--- two-lane ---
+  twolane8: N=27 m=4 Gamma=204 | S=-564=-564.0 RHS=5132.6 OK:True | over=140.0 under=704.0 S=over-under:True
+  twolane12: N=39 m=4 Gamma=492 | S=540=540.0 RHS=27965.3 OK:True | over=1980.0 under=1440.0 S=over-under:True
+  twolane16: N=51 m=4 Gamma=908 | S=4588=4588.0 RHS=90836.3 OK:True | over=7020.0 under=2432.0 S=over-under:True
+  twolane20: N=63 m=4 Gamma=1452 | S=13116=13116.0 RHS=224711.5 OK:True | over=16796.0 under=3680.0 S=over-under:True
+--- C5[t] extremal (must be S=0=RHS) ---
+  C5[1]: N=5 m=1 Gamma=25 | S=0=0.0 RHS=0.0 OK:True | over=0.0 under=0.0 S=over-under:True
+  C5[2]: N=10 m=4 Gamma=100 | S=0=0.0 RHS=0.0 OK:True | over=0.0 under=0.0 S=over-under:True
+  C5[3]: N=15 m=9 Gamma=225 | S=0=0.0 RHS=0.0 OK:True | over=0.0 under=0.0 S=over-under:True
+  C5[4]: N=20 m=16 Gamma=400 | S=0=0.0 RHS=0.0 OK:True | over=0.0 under=0.0 S=over-under:True
+--- nonuniform fans ---
+  fan[3, 9, 1, 9, 3]: N=25 m=9 Gamma=225 | S=-1800=-1800.0 RHS=3600.0 OK:True | over=900.0 under=2700.0 S=over-under:True
+  fan[2, 10, 1, 10, 2]: N=25 m=4 Gamma=100 | S=-1620=-1620.0 RHS=2100.0 OK:True | over=0.0 under=1620.0 S=over-under:True
+  fan[1, 9, 3, 9, 1]: N=23 m=1 Gamma=25 | S=-4600/9=-511.1 RHS=504.0 OK:True | over=0.0 under=511.1 S=over-under:True
