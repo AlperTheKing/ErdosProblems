@@ -66,3 +66,7 @@ tmp_*.png
 *.g6
 problems/944/experiments/sixreg/ffscan/
 problems/1212/experiments/anchor_tree/chain.json
+
+# Concurrent-Python temp pyc files (interrupted pyc writes leave .pyc.<number>) + all bytecode caches
+__pycache__/
+*.pyc.*

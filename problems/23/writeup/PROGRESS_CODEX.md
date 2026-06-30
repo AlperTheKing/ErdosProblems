@@ -29,3 +29,31 @@
 [2026-06-28T18:13:57Z] OK VERIFY | DID: ran tight-cap local check on no-good witness | RESULT: cuts0-1 have unique row with tight_lower_count=0 | D: raw tight-cap false
 [2026-06-28T18:14:13Z] FAIL VERIFY | DID: tested lex-min tight-cap switches on K??CE@A{?]Fc | RESULT: switches keep defect vector (1/5,1/5) | D: tight-cap descent false
 [2026-06-29T04:29:55Z] > COMPUTE | NEXT: run extremal LRS-family adversarial gate
+[2026-06-30T12:05:44+03:00] OK ATTACK | DID: Ran K2T switch probe on census N=10. | RESULT: bad_cuts=0 neg_vertices=0 covered=0 no_switch=0. | D: none
+[2026-06-30T12:05:44+03:00] > ATTACK | NEXT: Inspect H?AFBo] switch effects before proposing structural lemma.
+[2026-06-30T12:06:57+03:00] OK ATTACK | DID: Decomposed H?AFBo] K2T residual by bad edge. | RESULT: ell7 edge contributes Over=-1 per row; ell5 edge contributes Over=3 per row; violations are cross-edge cancellation. | D: direct overloaded-row switch proof rejected
+[2026-06-30T12:06:57+03:00] > ATTACK | NEXT: Test whether K2T follows from singleton-Gamma-stability or needs larger switch stability.
+[2026-06-30T12:09:32+03:00] > ATTACK | NEXT: Test closed shortest-geodesic prefix/suffix switches against all N<=9 K2T-negative vertices.
+[2026-06-30T12:10:00+03:00] OK ATTACK | DID: Tested closed geodesic prefix/suffix switches on N<=9 negatives. | RESULT: total=21 covered=21 no_switch=0 sizehist={1:2,2:6,3:6,4:6,5:1}. | D: switch family narrowed
+[2026-06-30T12:10:00+03:00] > ATTACK | NEXT: Stress closed-prefix switch bridge on random triangle-free N=11/12 max cuts.
+[2026-06-30T12:14:27+03:00] > ATTACK | NEXT: Compute closed prefix/suffix switch costs along H?AFBo] geodesics to infer prefix-sum inequalities.
+[2026-06-30T12:16:44+03:00] > VERIFY | NEXT: Stress half-switch theorem on all max cuts of Grotzsch and Myc(C7).
+[2026-06-30T12:17:19+03:00] OK VERIFY | DID: Stressed half-switch theorem on all max cuts of Grotzsch and Myc(C7). | RESULT: bad_cuts=0 neg_vertices=0 fail=0. | D: none
+[2026-06-30T12:17:19+03:00] > ATTACK | NEXT: Test lens-pair condition on known H?AFBo] negative residual vertices.
+[2026-06-30T12:17:45+03:00] OK ATTACK | DID: Tested lens-pair condition on H?AFBo] negative vertices. | RESULT: every negative vertex lies in strict subpath lens ell5 inside ell7. | D: lens route opened
+[2026-06-30T12:17:45+03:00] > ATTACK | NEXT: Check whether strict bad-geodesic lenses imply half-switch Gamma descent in census N<=10.
+[2026-06-30T12:19:48+03:00] > ATTACK | NEXT: Test direct outside-tail switches for strict lenses in census N<=10.
+[2026-06-30T12:20:25+03:00] > ATTACK | NEXT: Inspect direct-tail lens failure I?AEF@wF_ for closure pattern.
+[2026-06-30T12:21:03+03:00] > VERIFY | NEXT: Gate lens-free max cuts imply K2T on census N<=10.
+[2026-06-30T12:24:47+03:00] OK ATTACK | DID: Extracted GPT-Pro terminal-shadow certificate. | RESULT: proposed old-cut Psi(S)=sum crossing ell^2 - sum boundary lambda^2; Psi>0 certifies Gamma drop under prefix/safety gates. | D: new gate target
+[2026-06-30T12:24:47+03:00] > VERIFY | NEXT: Gate terminal-shadow Psi certificate on N<=10 K2T-negative vertices.
+[2026-06-30T12:29:06+03:00] > ATTACK | NEXT: Test whether strict-lens-free cuts have rowwise Over(Q)<=0 on census N<=10.
+[2026-06-30T12:29:33+03:00] OK ATTACK | DID: Tested rowwise Over<=0 on strict-lens-free cuts N<=10. | RESULT: lensfree=18373 positive_rows=36 maxover=10/3 first=I?BD@g]Qo. | D: rowwise lens-free lemma rejected
+[2026-06-30T12:29:33+03:00] > ATTACK | NEXT: Inspect lens-free positive-row cancellation example I?BD@g]Qo.
+[2026-06-30T12:30:03+03:00] > VERIFY | NEXT: Gate per-bad-edge K2T contribution under strict-lens-free hypothesis on census N<=10.
+[2026-06-30T12:30:50+03:00] > VERIFY | NEXT: Gate C_f(v)>0 implies strict lens through v on census N<=10.
+[2026-06-30T12:31:26+03:00] FAIL VERIFY | DID: Tested C_f(v)>0 implies f contains shorter subpath lens. | RESULT: pos=21 covered=0 fail=21; positive edge is shorter lens member. | D: lens implication direction corrected
+[2026-06-30T12:31:26+03:00] > VERIFY | NEXT: Gate C_g(v)>0 implies g is shorter member of strict lens through v.
+[2026-06-30T12:32:02+03:00] OK VERIFY | DID: Tested C_g(v)>0 implies g is shorter member of strict lens through v. | RESULT: pos=21 covered=21 fail=0 maxc=3. | D: per-edge lens lemma identified
+[2026-06-30T12:32:02+03:00] > VERIFY | NEXT: Stress per-edge lens implication on Grotzsch, MycC7, and random N=11/12 max cuts.
+[2026-06-30T12:33:27+03:00] > ATTACK | NEXT: Sample C_g(v)=0 equality cases without shorter-lens membership to infer layered-DAG structure.
