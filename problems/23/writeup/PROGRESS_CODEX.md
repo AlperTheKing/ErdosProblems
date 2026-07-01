@@ -60,3 +60,11 @@
 [2026-07-01T01:51:43.9128436+03:00] FAIL ATTACK | DID: Ran _codex_rm_persistence_gate.py --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1. | RESULT: FAIL H2-allmax r=(10,16) a=(7,14) b=(6,17) g=(10,17) | D: broad RM predicate too broad or disk cert incomplete
 2026-07-01T05:46:01Z > VERIFY | NEXT: test stronger uniform four-port routing for cycle-neighbor atoms on small census and C5 guardrail.
 2026-07-01T05:47:04Z > VERIFY | NEXT: compute worst nonempty proper Hall margins for cycle-neighbor atom on census and guardrails.
+2026-07-01T05:48:17Z > VERIFY | NEXT: rerun Hall margin probe only on n<=18 cases.
+2026-07-01T05:51:44Z > VERIFY | NEXT: test graph-neighbor atom variant on H?AFBo] falsifier and small census.
+2026-07-01T05:52:27Z FAIL VERIFY | DID: tested graph-neighbor atom variant initial guardrails | RESULT: H?AFBo] and C5non k=2,3,5 pass; census script crashed on loads=None | D: rerun_skip_none
+2026-07-01T05:52:55Z FAIL VERIFY | DID: tested graph-neighbor atom without center on selected census | RESULT: fails I?AAD@wF_ n=10 f=(3,9), Y=[1,6,8,9], lhs=5 rhs=4 | D: test_graph_neighbor_plus_center
+2026-07-01T05:53:17Z FAIL VERIFY | DID: tested graph-neighbor-plus-center atom variant | RESULT: fails I?AAD@wF_ n=10 f=(3,9), Y=[1,2,3,4,5,6,8,9], lhs=9 rhs=8 | D: inspect_second_falsifier
+2026-07-01T05:53:51Z > VERIFY | NEXT: test radius-2 graph-neighborhood atom variant on falsifiers, small census, and C5 guardrails.
+2026-07-01T08:26:15Z > VERIFY | NEXT: test vertex-local pressure payment as a stricter diagnostic
+2026-07-01T08:27:42Z > VERIFY | NEXT: run exact max(T-L) diagnostic on LOAD-PSC battery

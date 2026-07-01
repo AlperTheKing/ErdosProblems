@@ -2,7 +2,44 @@
 
 Date: 2026-07-01.
 
-## Statement To Gate
+## Verdict
+
+False as stated. The atom is a useful diagnostic, but it is too local to prove
+ROWSUM-O.
+
+Exact falsifier:
+
+```text
+graph6 = H?AFBo]
+selected gamma-min side = 000111100
+bad edges = (1,7), (2,7), both length 5
+f = (1,7)
+Y = {1,2,3,4,6,7,8}
+Hall demand into Y = 8
+|Y| = 7
+ROWSUM-O value for f = 8 < N = 9
+```
+
+Both subset enumeration and exact Fraction flow report the same deficit:
+
+```text
+python problems\23\writeup\_gpt_cycle_neighbor_cage_gate.py --g6 'H?AFBo]' --method enum
+python problems\23\writeup\_gpt_cycle_neighbor_cage_gate.py --g6 'H?AFBo]' --method flow
+
+=> {'fail': True, 'label': 'H?AFBo][1]', 'n': 9, 'f': (1, 7),
+    'atoms': 32, 'rowsum': Fraction(8, 1), 'viol': Fraction(1, 1),
+    'Y': [1, 2, 3, 4, 6, 7, 8], 'lhs': Fraction(8, 1), 'rhs': 7}
+```
+
+The original CLI failed to stop on this because failure dictionaries omitted a
+`fail=True` key; that reporter bug is now fixed.
+
+The obstruction is informative: every trapped atom center `x` is already in
+`Y`, so allowing the atom to route to `x` in addition to its closed-cycle
+neighbors would not repair this Hall set. The missing capacity must come from
+outside the local four-neighbor port set.
+
+## Original Statement
 
 Fix a bad edge `f`. For every bad edge `g`, every shortest `f`-row `P`,
 every shortest `g`-row `Q`, and every shared vertex `x in P cap Q`, form one
@@ -71,7 +108,10 @@ flow: exact Fraction max-flow on compressed neighbor masks.
 The flow mode also extracts a concrete Hall set `Y` from the residual min-cut
 if a deficit is found.
 
-## Gates Run
+## Gates Previously Run
+
+These gates are superseded by the falsifier above. Earlier broad runs reported
+false passes because the CLI did not recognize failure dictionaries.
 
 Named hard case:
 
@@ -126,13 +166,10 @@ k=10 N=53  stopped as too slow in raw quotient row enumeration
 This includes the `N=28` and `N=33` nonuniform C5 blowups that refuted the
 fixed-coefficient harvest/quantitative Schur subtree.
 
-## Proof Burden
+## Lesson
 
-The desired proof should show that every Hall-deficient set `Y` would induce a
-neutral connected terminal-shadow switch with negative square-length
-variation, contradicting gamma-minimality. The promising geometric point is
-that each atom carries two closed odd-cycle neighbor pairs, so a deficient set
-has to trap both local cycle exits around every overlap point.
-
-This is not yet a proof. It is a concrete, exact-testable Hall formulation of
-ROWSUM-O that has survived the current coefficient-free guardrails.
+The total atom mass is still exactly `(O1)_f`, so this was a legitimate
+sufficient certificate. The failure shows that a valid ROWSUM proof cannot
+force all overlap mass through only the two closed-cycle neighbor pairs of the
+two participating rows. Any Hall/CAGE replacement needs additional nonlocal
+corridor exits or a different capacity object.

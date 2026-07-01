@@ -1,5 +1,33 @@
 # K2T Terminal-Shadow Proof Target
 
+## RETRACTED 2026-07-01
+
+This route is not valid as a proof of Erdős #23.  Claude independently
+confirmed the two-lane `L=12` unique gamma-min maximum cut has
+
+```text
+rho(K)=rho(K2)=rho(O)=40.2094 > N=39,
+R[v]=N*T[v]-(K2*T)[v] < 0 on nine vertices,
+```
+
+and no neutral connected `Gamma` descent of size `<=3`.  Thus
+
+```text
+gamma-min => K2*T <= N*T
+```
+
+is false, and the Collatz-Wielandt/spectral route is another form of the
+pruned ROWSUM/SPEC strengthening.  The live target is first-moment:
+
+```text
+Gamma <= N^2
+```
+
+via UNIF-LOAD / COUPLE / LOAD-PSC, with two-lane as a mandatory negative
+control for any spectral or second-moment claim.
+
+The notes below are retained only as dead-end diagnostics.
+
 Current live theorem:
 
 ```text
@@ -11,6 +39,33 @@ where `K2[v,w] = sum_f Pr_{Q in cyc[f]}[v,w in Q]` and
 
 By Collatz-Wielandt, `K2*T <= N*T` implies `rho(K2)<=N`.
 Together with Jensen `K <= K2`, this gives `Gamma<=N^2`.
+
+## 2026-07-01 CW Zero-Support Audit
+
+There is no reducibility hole in the Collatz-Wielandt step.  Since
+
+```text
+T = K2 * 1
+```
+
+and `K2` is entrywise nonnegative, any vertex with `T[v]=0` has zero row sum in
+`K2`, hence the entire `v`-row is zero.  By symmetry its column is also zero.
+Thus the zero-load vertices split off as zero spectral blocks.
+
+On the active support
+
+```text
+S = { v : T[v] > 0 },
+```
+
+the vector `T_S` is strictly positive and the componentwise inequality
+
+```text
+K2[S,S] * T_S <= N * T_S
+```
+
+implies `rho(K2[S,S])<=N` by the standard Collatz-Wielandt theorem.  Therefore
+the full matrix also satisfies `rho(K2)<=N`.
 
 ## Residual
 
@@ -140,3 +195,54 @@ R[v] < 0
 => exists a closed half-switch S containing v
    satisfying the terminal-geodesic gates and Psi(S)>0.
 ```
+
+## 2026-07-01 Lmax Selector Target
+
+The current sharp selector is the longest length bundle through the negative
+residual vertex.
+
+For a vertex `v` with `R[v]<0`, define
+
+```text
+Lset(v) = { ell(f) : exists Q in cyc[f] with v in Q },
+Lmax(v) = max Lset(v).
+```
+
+For every row of length `Lmax(v)` containing `v`, take the closed prefix union
+or suffix union through `v`, in either orientation.  This gives four candidate
+`Lmax` half-switches.
+
+Exact gate:
+
+```text
+python problems/23/writeup/_mech_selector_char.py
+R[v]<0 sites total: 56
+Q1 strictly MIXED (Lmax>Lmin): 56; not mixed: 0
+Q2 witness-at-Lmax: 56; witness-NOT-at-Lmax: 0
+Q3 BEST(max-drop) witness length histogram: {'=Lmax': 56}
+Q4 rule [L=Lmax, both orientations] covers: 56 / 56
+```
+
+Square-surplus gate:
+
+```text
+python problems/23/writeup/_lmax_psi_mechanism.py
+R[v]<0 sites: 56; no L_max winner: 0
+Psi computable: 56; Psi=None: 0
+descent identity drop==Psi: 56
+Psi > 0: 56
+Psi range: 24 .. 216
+```
+
+So the proof target can be sharpened to:
+
+```text
+L_MAX DESCENT THEOREM.
+If R[v]<0, then some Lmax(v) prefix/suffix half-switch S through v is neutral,
+B-connected after flipping, terminal-shadow safe, and has Psi(S)>0.
+```
+
+The terminal-shadow identity then gives a neutral connected
+`Gamma`-decreasing switch, contradicting gamma-minimality.  This theorem is
+weaker and more concrete than broad ROWSUM/SPEC descent and avoids the
+two-lane guardrail.

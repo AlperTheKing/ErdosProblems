@@ -1,152 +1,119 @@
-# GOAL_LOOP.md — STEP-1 AGENT standing task (READ FIRST on every compaction / new session)
+# GOAL_LOOP.md — Erdős #23 proof agent, standing task (READ FIRST on every compaction / new session)
 #
 # Resume flow: (1) read this file; (2) read the last ~30 lines of PROGRESS.md = where you left off;
-# (3) read coordination/STEP2_TO_STEP1.md for any new messages from Step-2 (the DIRECT agent channel,
-#     set up 2026-06-26; protocol in coordination/CHANNEL.md; you write coordination/STEP1_TO_STEP2.md,
-#     you read coordination/STEP2_TO_STEP1.md; no more human relay -- check it EVERY loop iteration);
-# (4) resume the GOAL + LOOP below.
+# (3) read MEMORY.md (the ACTIVE #23 block); (4) read the newest CODEX -> CLAUDE blocks in
+#     coordination/CODEX_TO_CLAUDE.md (you reply in coordination/CLAUDE_TO_CODEX.md); (5) resume GOAL+LOOP.
 #
-# Prior tracks are superseded but recoverable: the #944 Dirac-k=4 work is PUBLISHED (arXiv:2606.18462)
-# and archived in memory (erdos944-shore-machine-state); the earlier multi-problem "New Mathematics on
-# Open Erdős Problems" mission + its all-or-nothing/Lean-only override (this file before 2026-06-26)
-# applied to the formal-conjectures track and are preserved in git history. Active track = Erdős #23,
-# Step-1. Current policy = publish SOUND computer-assisted results via arXiv (user decision, this
-# session; #23 v1 = submit/7754052).
+# WHO: you are the EXACT-verification + proof-driver for #23 δ=0. Codex is the parallel proof-driver
+# (coordination/CODEX_TO_CLAUDE.md ↔ CLAUDE_TO_CODEX.md). GPT-Pro ("Kapsamlı Pro") is consulted at
+# decision/stuck points via the Chrome MCP (your own chat); Codex consults its OWN separate GPT-Pro chat.
+# Last updated 2026-07-01 (end of the two-lane-refutation / LOAD-PSC / GERSH session).
 
 ================================================================================
 GOAL
 ================================================================================
-PRIMARY (the real prize, all-or-nothing): prove #23 for ALL triangle-free G on ALL N:
-  beta(G) = e(G) - maxcut(G) <= N^2/25.
-  ** H2 PEELING IS RETIRED (GPT-Pro audited, 2026-06-26, thread c/6a3b8a74). ** The
-  exact transfer identity d_mono(W_G) = 2 beta(G)/N^2 (blow-up multilinearity: the
-  monochromatic integral is multilinear in x_i = N*mu(S cap I_i), so its infimum sits
-  at an integer vertex x_i in {0,1} = beta(G); NO o(1)/O(1/N)/rounding) means Step-2's
-  exact band bound delta=0 gives beta(G) <= N^2/25 DIRECTLY for every finite N, incl.
-  non-multiples of 5 (the real inequality auto-implies the floor; no peeling, no
-  induction, no separate finite argument). The integrality trick was only ever needed
-  for delta>0. So the WHOLE conjecture reduces to:
-   (i)  the exact band graphon bound d_mono(W) <= 2/25 on [0.2486,0.3197] (delta=0)
-        -- the SOLE hard piece; co-develop the Gamma-lemma (Gamma=sum ell^2<=N^2)
-        with Step-2 (do NOT duplicate their flag-SDP / live-run files);
-   (ii) the BCL tails + blow-up integrality, already in the paper.
-  STEP-1's residual job for the full proof = the clean all-N ASSEMBLY: partition by
-  d = d_edge(W_G) = 2e(G)/N^2 into {d<0.2486, 0.2486<=d<=0.3197, d>0.3197}; the CLOSED
-  band owns BOTH endpoints (avoids BCL's finite-density-normalization e/C(N,2) endpoint
-  issue); strict tails discharged by blow-up (beta(G[t])=t^2 beta). SUCCESS = a gap-free
-  proof of #23 for all N in ONE paper (gated on Step-2's delta=0).
+PRIMARY (the whole remaining prize): prove #23 for ALL triangle-free G on ALL N:
+  beta(G) = e(G) - maxcut(G) <= N^2/25   (extremal = balanced C5[N/5]).
 
-NEAR-TERM DELIVERABLE (do this FIRST — it is a real, in-hand publishable win):
-  Independently EXACT-verify Step-2's sound-atom certificate (delta = 4.756e-5)
-  and, on pass, ship arXiv v2 extending a(5n)=n^2 from N<=55 (v1, delta=5.991e-4)
-  to N<=200. You OWN the single arXiv paper and the verification gate.
-  Arithmetic: (25/2) n^2 delta < 1  ==>  delta=4.756e-5 closes n<=40 (N<=200);
-  n=40 threshold = 2/(25*1600)=5.0e-5, n=41 = 4.76e-5. N<=200 is the flag-LP
-  finite ceiling (the order-9/10 self-tight wall plateaus eta above 0) — do NOT
-  push Step-2 to squeeze delta further. Lock v2, then co-develop delta=0 (the
-  Gamma-lemma) with Step-2.
+DONE / PUBLISHED (do NOT reopen): the FINITE-N certificates. v1 (N<=55) and the EXACT order-10 v2
+  cert (delta=4.757e-5 < 5e-5 => a(5n)=n^2 for N<=200) are verified + PUBLISHED (memory
+  erdos23-v2-cert-valid-n200). N<=200 is the flag-LP finite ceiling. The blow-up integrality identity
+  d_mono(W_G)=2 beta/N^2 is EXACT (no rounding), so the SOLE remaining piece is:
 
-METHOD (standing, user directive 2026-06-26): FINISH Step-1 in active collaboration
-  with GPT-Pro. At every decision point or stuck point, DRIVE THE BROWSER TOOL
-  (Chrome MCP) to SEND a self-contained question to GPT-Pro and READ BACK its answer
-  (main.innerText after the last "thought"/"düşündüm" marker; chunk <=700 chars).
-  Audit every GPT answer line-by-line + exact-Fraction-check before adopting; then
-  proceed on the path GPT picks. This browser round-trip is PART of the loop, not
-  optional, and not user-relayed unless the browser is unavailable.
+  ** delta=0 (the graphon band bound d_mono(W)<=2/25 on the medium density band) = the WHOLE remaining
+     conjecture. ** Equivalently the Gamma-lemma:  Gamma(G) = sum_{f in M} ell(f)^2 <= N^2  on every
+     B-connected gamma-minimal maximum cut (M = monochromatic/bad edges; ell(f) = length of the shortest
+     odd cycle through f). Gamma = sum_v T(v), and Gamma<=N^2 => beta<=N^2/25.
 
-VERIFIABLE SUCCESS CRITERIA
-  v2  : Step-2's cert passes (a) regen_verify_u7.py exact-Fraction dual feasibility
-        [per-type sum_c lambda_{sigma,c}=1; cut+band+moment per-state residual >= 0
-        in Fractions], (b) the moment-PSD Gram check [Step-2's rationalized v
-        reproduce the moment rows AND M^sigma = sum_c w_c q_c q_c^T >= 0 exactly],
-        (c) BCL band tiling [<=0.2486, [0.2486,0.3197], >=0.3197 tile [0,0.5] with
-        shared endpoints, no gap]; and delta_exact < 5.0e-5.  THEN publish v2.
-  full: Step-2's delta=0 (the Gamma-lemma) proven + Step-1's clean all-N assembly
-        closes ==> beta <= N^2/25 for all N. (H2 is RETIRED — not needed; see GOAL.)
+CURRENT REDUCTION (this is the live map — verified exact unless marked OPEN):
+  beta<=N^2/25  <==  Gamma<=N^2  <==  LRS: sum_v T(v)^2 <= L*Gamma   (L = N + N^2/25 - m, m=|M|)
+                                <==  CV (component-local): for each geodesic K-component C,
+                                         sum_{v in C} T^2 <= L * sum_{v in C} T
+                                <==  GERSH:  ROWSUM(f) = sum_{g in M} <p_f,p_g> <= A = L = N+N^2/25-m,
+  where p_f(v) = (#shortest geodesics of f through v)/|cyc[f]|, T(v)=sum_f ell(f) p_f(v).
+  VALID reduction (Claude-verified linear algebra): rowsum_f(O_C)=ROWSUM(f) (cross-component overlaps
+  vanish); Gershgorin => GERSH => rho(O_C)<=A => A*I-O_C PSD => CV (= ell_C^T(A*I-O_C)ell_C>=0 at ell_C=(ell(f))).
+
+  ** THE SOLE OPEN LEMMA = GERSH = "corrected ROWSUM-O": ROWSUM(f) <= N + N^2/25 - m. **
+  This is the OLD ROWSUM-O with the CORRECTED ceiling L instead of N. It is exact-verified 0-fail on the
+  full battery (census N<=11, two-lane L<=100, Myc-Grotzsch N23, glued islands, C5 blow-ups), tight only
+  at balanced C5[t] (where A=N). UNPROVEN. Cleanest sub-form = ROWWISE-GERSH (per geodesic corridor Q):
+  sum_{v in Q}(sum_{g in M_C} p_g(v)) <= A, tight at EVERY C5[t] corridor. Attack = deficit-capacity
+  CAGE/Hall transport: route ROWSUM mass onto N vertices + a budget of size N^2/25-m from the uncut deficit.
+
+C5-COLORABLE subcase is PROVEN (cyclic-min-product 25*min_i n_i n_{i+1} <= N^2, 1/25=(1/5)^2, eq iff
+  balanced C5[N/5]). The OPEN CORE = non-C5-colorable triangle-free graphs (Grotzsch/Mycielskian/odd-girth).
+  RISK (unresolved, BREAKTHROUGH_VERDICT.md 2026-06-29): GERSH/CV may be hardness-equivalent to the conjecture.
+
+METHOD (standing user directive): FINISH in active collaboration with Codex + GPT-Pro. At every decision
+  or stuck point, consult GPT-Pro via the Chrome MCP (drive your Kapsamlı Pro chat: send a self-contained
+  question, read the answer, chunk main.innerText). Audit every GPT-Pro / Codex claim line-by-line and
+  EXACT-Fraction-check on the full battery BEFORE adopting. The browser round-trip is PART of the loop.
+
+VERIFIABLE SUCCESS = a sorry-free proof of GERSH (=> Gamma<=N^2 => beta<=N^2/25 for all N), exact-gated,
+  then formalized (all-or-nothing: nothing ships until sorry-free Lean -> ONE formal-conjectures PR).
 
 ================================================================================
-STATE (2026-06-26, reconciled with Step-2)
+STATE (2026-07-01)
 ================================================================================
-- Published v1 = envelope_k7_cert.pkl (per-root-MaxCut U_7, delta=5.991e-4, N<=55,
-  multiples of 5). arXiv submit/7754052 (in queue, "Section ??" cross-ref fixed).
-- v2 PENDING: Step-2 is emitting the exact delta=4.756e-5 cert. Open item on their
-  side = R1 (the 317 moment-row eigenvectors v were discarded by cp_cache and are
-  trajectory-unrecoverable; Step-2 is re-deriving the moment block as a fresh
-  rational PSD Gram cert, GPT-Pro consult in flight). You receive: exact delta
-  (Fraction), full dual (per-type lambda sum=1, band mu_lo/mu_hi, k8-leg a8,
-  moment nu_j — all Fractions), the rationalized v / Gram cert, and a one-command
-  verifier. Run YOUR independent check before v2 ships.
-- Deficit cert dual_cert_n9.pkl is REFUTED + REMOVED (fixed profile-cut can't be
-  tight at C5; C11 counterexample; t_ind type-density factor; balanced LP gave
-  delta'=7.04e-3). Do NOT reintroduce deficit atoms anywhere.
-- The 387-instance enumeration route to a(30)<=36 (H1) is ~15-25% done and is
-  BYPASSED by the integrality shortcut (a(30)=a(5*6)=6^2=36 is a mult-of-5, closed
-  by any delta<1/450). Do NOT invest more there. KNOWN BUG if any of those certs
-  ever feed the writeup: search23/state_count_6195_cpsat.py L401-412 anti-tightness
-  cut is ">=17", should be ">=16" (over-cuts => masks witnesses, soundness-safe
-  direction, but un-trustworthy until re-run --disable-anti-tightness).
-- H2 (peeling) + non-multiples-of-5 belong to the FULL induction, NOT v1/v2.
-- H2 LEDGER REALITY (bridge/CLAIM_LEDGER.md, read 2026-06-26): H2 is TRUE+TIGHT on
-  C5[n] (min 5-set drop = 2n-1). ALL local-certificate routes to its CF reformulation
-  are REFUTED with explicit in-band tau_K=0 witnesses (Grotzsch[t], Grotzsch[5]+iso,
-  K_{16,64}); "CF is irreducibly GLOBAL <=> the band conjecture". Live frontier =
-  the 2-colored max-cut SWITCHING flag-SDP (bridge/flagsdp, Step-2's machine) + the
-  Lambda_5 LAMBDA-BOUND sub-conjecture (Lambda_5(F)<=2r/5, eq iff C5-blowup; verified
-  all tri-free bases r<=10, 0 violations). So H2 and Step-2's delta=0 have effectively
-  MERGED at the flag-SDP; there is no separate tractable local Step-1 grind.
-- RESOLVED 2026-06-26 (GPT-Pro, "Erdos Problem 23 Closure" thread c/6a3b8a74, audited):
-  Step-2's delta=0 RETIRES H2. d_mono(W_G)=2 beta(G)/N^2 is EXACT (multilinear cut min
-  at an integer vertex; no o(1)/rounding); delta=0 => beta(G)<=N^2/25 for ALL finite N
-  incl. non-mult-of-5; the integrality trick was only ever needed for delta>0. So do
-  NOT invest in proving H2 (the CLAIM_LEDGER "open core" is off the critical path).
-  Step-1's full-conjecture job = the all-N assembly (above) + co-developing delta=0
-  (the Gamma-lemma) with Step-2. The conjecture's ENTIRE remaining difficulty = delta=0.
+- SPECTRAL / 2nd-moment program is DEAD. rho(O)<=N, rho(K)<=N, rho(K2)<=N (CSM-SPEC / cycle-Hardy (H)),
+  ROWSUM-O<=N, and the K2T "descent lemma" (gamma-min => K2*T<=N*T) are ALL FALSE. Killer = the two-lane
+  family build_two_lane(L) (_verify_two_lane.py): L=12, N=39, UNIQUE gamma-min global-max cut, yet
+  rho(K2)=rho(K)=rho(O)=40.21 > 39, R[v]=-60 on 9 verts, no Gamma-descent, while Gamma=492<<N^2=1521.
+  K=PP^T, O=P^T P => rho(K)=rho(O), so ANY rho(.)<=N or ||T||^2<=N*Gamma route is arbitrarily false.
+  The old 18690-cut _hardy_gate / _csmspec battery MISSED two-lane (census-pass != proof).
+  (Claude re-derived this dead spectral chain early in the 07-01 session and the two-lane gate caught it.)
+- LIVE first-moment target = LOAD-PSC-5 capacitary TV inequality
+    5*sum_v a_tau(L-a_tau) >= N*(TV_B(a_tau)-TV_M(a_tau)),  a_tau=min(T,tau), L=N+N^2/25-m, all tau.
+  Proven pieces: coarea identity LOAD-PSC-5 <=> Phi(tau)=25 sum a(L-a) - 5N(TV_B-TV_M) >= 0;
+  sigma_s = delta_B(H_s)-delta_M(H_s) >= 0 UNCONDITIONALLY (any set-flip lowers the max cut); LOW-HARD-P5
+  (2b<=N & Gamma>Nh => sigma<=5h). Per-level route is DEAD (exact cex to sigma<=5|H|, LOW-D, theta-split,
+  per-vertex charge) => proof is irreducibly global/transport => reduces to component-local CV = GERSH (above).
+- GERSH / CV / component PRESSURE-SURPLUS / ROWWISE-GERSH: all 0-fail on the full battery incl two-lane +
+  Myc N23; GERSH reduction to CV is VALID linear algebra (Gershgorin). Sole open lemma = prove GERSH.
+- Files (problems/23/writeup/ + scratchpad): LOAD_PSC_COMPONENT_CRUX.md (consolidated writeup),
+  _loadpsc_gate.py, _cv_component_gate.py, _component_spectral_check.py, _codex_gersh_rowwise_gate.py,
+  _lowhardp5_gate.py, _lowhardexcess_gate.py, _rowwise_tightness.py, _verify_two_lane.py, _twolane_k2_check.py.
+- STALE / do-not-pursue: CODEX_GOAL.md, ROWSUM_O_reduction.md (ROWSUM<=N version), all spectral GLOBAL
+  routes, all per-level shortcuts, no-two-hole/AtMostOneMiss (false on hard-H3), RFC/NL, GPT-Pro C5-collapse
+  slogan (PASS_VACUOUS — antecedent empty on finite instances).
+- Chrome MCP dropped mid-session (07-01) then reconnected; when down, route GPT-Pro consults via Codex.
 
 ================================================================================
 LOOP (run every iteration)
 ================================================================================
-1. Read this file + the tail of PROGRESS.md.
-2. PROGRESS ► line: "[ISO-8601] ► <PHASE> | NEXT: <one concrete action + objective>".
-3. Pick the active sub-task:
-     - if Step-2's v2 cert has arrived but is not yet exact-verified -> verify it
-       (regen_verify_u7 + Gram check + BCL tiling); on pass, prep + ship arXiv v2;
-     - if v2 is shipped (or the cert hasn't arrived) -> co-develop delta=0 (the
-       Gamma-lemma) with Step-2 and/or draft the all-N assembly (H2 is RETIRED).
-4. At ANY decision point or when stuck -> consult GPT Pro VIA THE BROWSER TOOL
-   (drive Chrome: send the self-contained question, wait, read the answer via
-   main.innerText), audit it line-by-line + exact-Fraction-check, then proceed on
-   the path GPT picks (do not deliberate in prose; execute the chosen path).
-5. Do the work. ANY closure/bound claim MUST pass an EXACT Fraction check BEFORE
-   you assert it. Numeric "eta<0 / promising / almost" is NOT a result.
-6. PROGRESS ✔ line: "[ISO-8601] ✔/✘ <PHASE> | DID: <executed> | RESULT: <file/lemma/
-   number/error — independently verifiable> | Δ: <status change or 'none'>".
-7. Loop.
+1. ORIENT: read this file + PROGRESS.md tail + MEMORY.md ACTIVE block + new CODEX -> CLAUDE blocks.
+   PROGRESS ► line: "[ISO-8601] ► <PHASE> | NEXT: <one concrete action + objective>".
+2. PROCESS CODEX: for each new ASK, exact-gate it (Python Fraction) on the FULL battery -- census N<=11,
+   two-lane L>=12 (the mandatory spectral-killer control), Myc-Grotzsch N23, glued islands, C5 blow-ups,
+   ALWAYS on gmins cuts (never the natural C5 cut). Reply RESULT in CLAUDE_TO_CODEX.md. Exact-verify any
+   GPT-Pro answer Codex relays before trusting.
+3. ADVANCE THE PROOF: prove GERSH = ROWSUM(f) <= N+N^2/25-m (deficit-capacity CAGE/Hall; or the
+   per-corridor ROWWISE-GERSH). Test building blocks exactly; a battery pass is NOT a proof.
+4. WHEN STUCK: consult GPT-Pro via the Chrome MCP (drive your Kapsamlı Pro chat: send ONE self-contained
+   question, read the answer). Audit + exact-Fraction-check before adopting; then execute the path it picks.
+   (If Chrome is down, ask Codex to relay to its GPT-Pro.)
+5. EXACT gate everything. Numeric "eta<0 / promising / almost" is NOT a result. Update PROGRESS ✔, MEMORY,
+   and the writeup. Loop.
 
 ================================================================================
-GUARDRAILS (never violate — these have caught 3 false closures)
+GUARDRAILS (never violate — these have caught every false closure)
 ================================================================================
-- SOUND ATOMS ONLY: moment rows (G1 Gram-PSD), per-root-MaxCut U7/U8 envelope
-  (per-type min_c, tight at C5), rooted-Horn (tight=0 at every odd cycle). All
-  audited sound (7-agent adversarial pass, worst >= -1e-17). DEFICIT / fixed-
-  profile-cut atoms are FORBIDDEN.
-- Evaluate at the GRAPHON level via i.i.d. blow-up / count-vector density. NEVER
-  finite distinct-subset (O(1/n) artifact: -6.7e-3 where true density is +1e-16).
-- The EXACT rational Fraction certificate is the ONLY acceptance gate. No native_decide.
-- BCL Thm 1.3 (arXiv:2103.14179) is the ONE imported dependency (density tails);
-  cite it, do not re-derive its flag-SDP. The asymptotic-at-finite-n worry is
-  RESOLVED via the uniform t-blow-up transfer (beta(G[t])=t^2 beta, density->m/450),
-  NOT a finite-n BCL inequality — keep it that way.
-- Commit as the user ALONE — NO "Co-Authored-By: ... anthropic/claude" trailer
-  (breaks the Google CLA). Compute <= 64-100 workers (never 128), native clang++
-  MT, never WSL. Never edit Step-2's flagsdp/* live-run files mid-solve.
+- EXACT rational Fraction is the ONLY acceptance gate. No floats for pass/fail. No native_decide.
+- BEFORE trusting ANY load-matrix spectral / second-moment bound, gate the TWO-LANE family
+  build_two_lane(L>=12) FIRST. It kills rho(O)/rho(K)/rho(K2)/||T||^2<=N*Gamma. Also read BREAKTHROUGH_VERDICT.md.
+- gamma-min = B-connected MAX cut minimizing Gamma=sum ell^2 (use gmins). NEVER the natural C5 part-parity
+  cut -- it is NOT the max cut on unbalanced blow-ups (=> false GERSH/ROWSUM failures; wrong-cut artifact).
+- ALL-OR-NOTHING: nothing ships until a sorry-free Lean proof -> ONE formal-conjectures PR.
+- Commit as the USER ALONE -- NO "Co-Authored-By: ...anthropic/claude" trailer (breaks the Google CLA).
+- Compute <= 64-100 workers (never 128); native clang++ via MSYS2, never WSL.
+- Surface to the user ONLY for: a VERIFIED proof/closure, a one-line verdict, or a real decision.
 
 ================================================================================
-COORDINATION (with Step-2)
+COORDINATION
 ================================================================================
-- You OWN the single arXiv paper + the independent exact verification. Step-2 owns
-  the flag-LP cert (delta) and the Gamma-lemma (delta=0 / full conjecture).
-- Do NOT publish a Step-2 number until YOUR independent exact Fraction check passes
-  (regen_verify_u7 + Gram-PSD + BCL tiling). Three false closures here were caught
-  ONLY by the exact check; the earlier N<=180 deficit-reweight was unsound.
-- H2 / Gamma-lemma is shared frontier — co-develop, don't duplicate. Relay through
-  the user, in English.
+- Codex + you jointly own the δ=0 / GERSH proof. Channel: coordination/CODEX_TO_CLAUDE.md (read) +
+  CLAUDE_TO_CODEX.md (write). Codex proposes lemmas/sublemmas; you exact-gate + hunt counterexamples.
+- The finite-N arXiv paper (v1+v2, N<=200) is PUBLISHED; the all-N assembly is gated on the δ=0 proof.
+- A plausible-looking proof from Codex or GPT-Pro is NOT a proof until it passes your exact gate on the
+  full battery INCLUDING the two-lane control.

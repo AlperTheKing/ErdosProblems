@@ -1,7 +1,23 @@
 # Cycle-neighbor CAGE atom
 
-Status: coefficient-free ROWSUM candidate, exact-gated only on small and
-selected guardrail instances.  This is not a theorem yet.
+Status: false as a ROWSUM certificate.  Kept as a diagnostic of why the
+purely local closed-cycle-neighbor routing is too narrow.
+
+Exact falsifier:
+
+```text
+graph6 = H?AFBo]
+side = 000111100
+f = (1,7)
+Y = {1,2,3,4,6,7,8}
+Hall demand = 8
+|Y| = 7
+ROWSUM-O value for f = 8 < N = 9
+```
+
+Thus the atom can fail even when ROWSUM has slack.  The failure is not repaired
+by also allowing the atom to route to the overlap vertex `x`, since all trapped
+atom centers already lie in `Y`.
 
 ## Atom
 
@@ -63,7 +79,11 @@ problems/23/writeup/_gpt_cycle_neighbor_cage_gate.py
 The gate compresses atoms by their allowed-neighbor masks and checks Hall either
 by subset enumeration or exact `Fraction` max-flow.
 
-## Current checks
+## Current checks and correction
+
+The early positive checks below are superseded.  The checker originally failed
+to mark failure dictionaries with `fail=True`, so census mode ignored a
+deficit.  The reporter is now fixed in `_gpt_cycle_neighbor_cage_gate.py`.
 
 Small exact checks from the progress log:
 
@@ -95,11 +115,9 @@ k=5, N=28, checked=30, fail=None
 The `k=8, N=43` direct uncompressed flow run was stopped after about 120s with
 no output; this is a performance limit, not a mathematical failure.
 
-## Things to prove or falsify
+## Lesson
 
-1. Exact-gate the atom on the full acceptance battery, using quotient or
-   symmetry compression for large blow-ups.
-2. If it survives, prove the Hall condition.  For a fixed `Y`, define
+For a fixed `Y`, define
 
 ```text
 a_f^Y(x) =
@@ -123,11 +141,7 @@ for every f and Y subset V,
   sum_x a_f^Y(x) S^Y(x) <= |Y|.
 ```
 
-This may be the right proof interface.  A deficient `Y` is not merely a set
-with high load; it traps both local cycle-neighbor ports on both rows.  The
-likely proof shape is a switch/minimality contradiction for such a deficient
-`Y`: atoms trapped in `Y` have all four cycle-neighbor escape ports in `Y`, so
-a completed neutral switch across the corresponding corridor shadow should
-lower `Gamma` or violate max-cut.
-3. Keep the known hard-H3 / AtMostOneMiss falsifier in scope.  This atom is not
-   a no-two-hole statement; it permits fan averaging through both cycles.
+The falsifier shows that this masked family is stronger than ROWSUM-O.  A
+future CAGE/Hall replacement needs capacity outside the four local cycle
+neighbors, or a proof object that is not a direct vertex-capacity matching for
+these atoms.

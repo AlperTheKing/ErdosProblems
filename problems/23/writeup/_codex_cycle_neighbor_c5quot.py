@@ -37,6 +37,7 @@ def demand(parts: list[int], y: list[int], a_in: int, b_in: int) -> F:
 
 def worst(parts: list[int]):
     best = None
+    best_nonempty = None
     n0, n1, n2, n3, n4 = parts
     for y0 in range(n0 + 1):
         for y1 in range(n1 + 1):
@@ -56,7 +57,11 @@ def worst(parts: list[int]):
                                 rec = (margin, lhs, rhs, tuple(y), A, B)
                                 if best is None or rec > best:
                                     best = rec
-    return best
+                                if rhs > 0 and (
+                                    best_nonempty is None or rec > best_nonempty
+                                ):
+                                    best_nonempty = rec
+    return best, best_nonempty
 
 
 def main():
@@ -68,13 +73,25 @@ def main():
     ks = [args.k] if args.k else range(1, args.max_k + 1)
     for k in ks:
         parts = [k + 1, k, k + 1, k, k + 1]
-        margin, lhs, rhs, y, A, B = worst(parts)
+        (margin, lhs, rhs, y, A, B), nonempty = worst(parts)
+        if nonempty is None:
+            nem = "nonempty=none"
+            nem_ok = True
+        else:
+            nmargin, nlhs, nrhs, ny, nA, nB = nonempty
+            nem = (
+                f"nonempty_margin={nmargin} nonempty_lhs={nlhs} "
+                f"nonempty_rhs={nrhs} nonempty_y={ny} nonempty_A={nA} "
+                f"nonempty_B={nB}"
+            )
+            nem_ok = nmargin <= 0
         print(
             f"k={k} N={sum(parts)} margin={margin} lhs={lhs} rhs={rhs} "
-            f"y={y} A={A} B={B} ok={margin <= 0}",
+            f"y={y} A={A} B={B} ok={margin <= 0} {nem} "
+            f"nonempty_ok={nem_ok}",
             flush=True,
         )
-        if margin > 0:
+        if margin > 0 or not nem_ok:
             raise SystemExit(1)
 
 

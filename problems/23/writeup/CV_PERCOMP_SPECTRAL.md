@@ -52,3 +52,233 @@ Gershgorin row-max against `A = N + eta`, NOT against `N`.  On two-lane L=12: ma
   `Tw(v) = sum_{g in c} p_g(v)/|cyc_g|` (unit-weighted load).  GERSH = "the average Tw-length of f's
   shortest alternating geodesics is <= N+eta" — an odd-girth>=5 anti-concentration on the unit-weighted load.
 ```
+
+## 2026-07-01 Codex strengthening: rowwise GERSH
+
+The average in GERSH appears unnecessary.  For each K-component `C`, define
+the unit component load
+
+```text
+Tw_C(v) = sum_{g in M_C} #{Q in cyc[g] : v in Q} / |cyc[g]|.
+```
+
+The stronger exact-test target is:
+
+```text
+ROWWISE-GERSH:
+for every bad edge f in M_C and every shortest row Q in cyc[f],
+    sum_{v in Q} Tw_C(v) <= A = N + N^2/25 - |M|.
+```
+
+This implies GERSH by averaging over `Q in cyc[f]`, then the existing exact
+algebra gives:
+
+```text
+ROWWISE-GERSH => GERSH => (N+eta)D-O_c PSD => CV.
+```
+
+Local exact gate:
+
+```text
+python problems/23/writeup/_codex_gersh_rowwise_gate.py \
+  --fast --stop-first --min-n 7 --max-n 10 --two-lane-max 20 \
+  --blowup-t 4 --blowup-nmax 26
+```
+
+Result:
+
+```text
+individual rows checked = 89469
+rowwise violations = 0
+min row margin = 0 at C5[1]
+```
+
+Census-11 pass:
+
+```text
+python problems/23/writeup/_codex_gersh_rowwise_gate.py \
+  --fast --min-n 11 --max-n 11 --two-lane-max 0 --blowup-t 0 --blowup-nmax 0
+```
+
+Result:
+
+```text
+individual rows checked = 1059380
+edge averages checked = 278504
+rowwise violations = 0
+min row margin = 21/25
+```
+
+Two-lane / named stress:
+
+```text
+python problems/23/writeup/_codex_gersh_rowwise_gate.py \
+  --fast --min-n 7 --max-n 6 --two-lane-max 100 --blowup-t 5 --blowup-nmax 26
+```
+
+Result:
+
+```text
+individual rows checked = 15507
+edge averages checked = 439
+rowwise violations = 0
+min row margin = 0 at C5[1]
+```
+
+Proof interpretation: every individual shortest corridor has unit K-load at
+most the global first-moment capacity `A`, not merely its average over the
+bad-edge geodesic bundle.  This is currently the cleanest corridor-capacity
+form of the component CV route.
+
+Length-split diagnostic from the fast battery:
+
+```text
+length 5:  min margin 0       at C5[1]
+length 7:  min margin 24/25   at C7[1]
+length 9:  min margin 56/25   at C9[1]
+length 11: min margin 914/25  at two-lane-L10
+length 13: min margin 1296/25 at two-lane-L12
+...
+```
+
+For pure odd cycles `C_L[1]`, the row value is `L`, `|M|=1`, and
+
+```text
+A-row = (L + L^2/25 - 1) - L = L^2/25 - 1.
+```
+
+So only length `5` can be equality-tight in the pure-cycle family.  The
+nontrivial near-extremal proof should therefore concentrate on length-5
+pentagonal row caps; longer rows carry a built-in odd-cycle surplus.
+
+## 2026-07-01 Codex split: NON5-HALF plus pentagonal PMS
+
+The rowwise target can be split by row length.
+
+Let
+
+```text
+eta = N^2/25 - |M|,
+A = N + eta.
+```
+
+Exact diagnostics show that the only rows using more than half of the deficit
+budget are length-5 pentagonal rows.  The stronger long-row split is:
+
+```text
+LONG-SURPLUS:
+if |Q| > 5, then
+    sum_{v in Q} Tw_C(v) <= N + eta/2 - (|Q|^2-25)/50.
+```
+
+For length-5 rows, the older OC-PMS target gives exactly the complementary
+coefficient:
+
+```text
+PMS-5:
+if |Q| = 5, then
+    sum_{v in Q} Tw_C(v) - N <= (2/3) eta.
+```
+
+Since both `1/2` and `2/3` are at most `1`, these two lemmas imply
+ROWWISE-GERSH.
+
+Exact gate:
+
+```text
+python problems/23/writeup/_codex_rowcap_non5_half_gate.py \
+  --fast --min-n 7 --max-n 11 --two-lane-max 30 \
+  --blowup-t 4 --blowup-nmax 26
+```
+
+Result:
+
+```text
+L>5 rows checked = 19832
+NON5-HALF violations = 0
+LONG-SURPLUS violations = 0
+min margin = 12/25 at C7[1]
+min LONG-SURPLUS margin = 0 at C7[1]
+```
+
+The by-length minima begin:
+
+```text
+length 7:  12/25 at C7[1]
+length 9:  28/25 at C9[1]
+length 11: 48/25 at an N=11 single C11 row
+```
+
+This matches the pure odd-cycle surplus
+
+```text
+N + eta/2 - rowvalue = L^2/50 - 1/2
+```
+
+when `C` is a single odd cycle of length `L`.
+
+Equivalently, `LONG-SURPLUS` is tight on pure odd cycles:
+
+```text
+N + eta/2 - rowvalue - (L^2-25)/50 = 0.
+```
+
+Direct stress on explicit known-cut families, avoiding expensive `gmins` calls:
+
+```text
+python problems/23/writeup/_codex_rowcap_non5_half_direct_stress.py
+```
+
+Result:
+
+```text
+L>5 rows checked = 127540
+NON5-HALF violations = 0
+LONG-SURPLUS violations = 0
+min NON5-HALF margin = 12/25 at direct-C7[1]
+min LONG-SURPLUS margin = 0 at direct-C7[1]
+LONG-SURPLUS equality at pure C7[1], C9[1], C11[1], C13[1]
+two-lane checked through L=100
+```
+
+Two related diagnostics:
+
+```text
+python problems/23/writeup/_codex_rowcap_overload_classify.py \
+  --fast --min-n 7 --max-n 11 --two-lane-max 30 \
+  --blowup-t 4 --blowup-nmax 26
+```
+
+Result:
+
+```text
+rows checked = 1148058
+rows with rowvalue > N = 131
+max (rowvalue-N)/eta = 2/3 at the N=10 PMS equality atom I?BD@g]Qo
+census N=11 adds 0 over-N rows
+```
+
+The crude scalar domination
+
+```text
+sum_{g in C} min(|Q|, ell(g)) <= A
+```
+
+is false away from length 5:
+
+```text
+python problems/23/writeup/_codex_rowcap_coarse_budget_gate.py \
+  --fast --min-n 7 --max-n 10 --two-lane-max 30 \
+  --blowup-t 4 --blowup-nmax 26
+```
+
+Result:
+
+```text
+non-5 violations = 5654
+first violation = C7[2]
+minimum margin = -834/25 at C7[3]
+```
+
+Thus non-5 rows still need geodesic anti-concentration; the proof cannot use
+only the trivial overlap bound `|Q cap P| <= min(|Q|,|P|)`.

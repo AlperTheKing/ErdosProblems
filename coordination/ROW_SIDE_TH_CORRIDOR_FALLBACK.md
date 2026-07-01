@@ -84,3 +84,18 @@ two-hole corridor.  Broader H-blowup allmax / inherited runs were stopped after
 90-120s with no output.  Use Claude's broader residual-Hall ledger before
 reviving this route, and keep the known hard-H3 / AtMostOneMiss failure in
 scope.
+
+2026-07-01 fresh Codex rerun:
+
+```text
+python problems/23/writeup/_codex_th_corridor_gate.py --min-n 5 --max-n 10
+tested: 21 no_switch: 0 bad_terminal: 0
+status: {'ok': 21}
+stats: {('row_miss', 0): 21}
+VERDICT: PASS
+```
+
+Interpretation unchanged: the attachment's TH-Corridor split is a plausible
+row-side proof atom, but the quick gate is vacuous for the two-hole mechanism.
+The primary route remains the K2T descent theorem unless a hard two-hole
+corridor instance is produced.
