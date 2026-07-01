@@ -592,3 +592,136 @@ with equality at the all-ones core. More usefully, the deficit numerators become
 ```
 
 All coefficients are nonnegative and constants are zero. Thus any core nonuniformity creates an explicit positive reservoir by lowering at least one dangerous endpoint coefficient from its extremal all-ones value. The crude universal-cap PMS bound is false, but the actual margin is exactly that crude bound plus these positive coefficient-deficit payments multiplied by the corresponding endpoint products.
+
+### Codex route audit: descent and coefficient LP are dead
+
+Fresh gates on 2026-06-30 after the seven-cut target was isolated:
+
+```text
+python problems/23/writeup/_codex_ocpms_sevencut_gate.py --mode exhaustive --max-weight 4
+  PASS: total=1048576 selected=202898 min_numer=0 at all-ones.
+
+python problems/23/writeup/_codex_ocpms_sevencut_gate.py --mode random --samples 1000000 --max-weight 100 --workers 60 --seed 300630
+  PASS: selected=124323 min_numer=2436309905601600, first_fail=None.
+
+python problems/23/writeup/_codex_ocpms_descent_gate.py
+  FAIL as proof route: w=(1,1,1,1,1,1,2,2,2,1) is feasible, margin=3589/28, no one-coordinate feasible margin-nonincreasing decrement.
+
+python problems/23/writeup/_codex_ocpms_subset_descent_gate.py
+  FAIL as proof route: w=(3,1,1,1,1,2,2,2,1,2) is feasible, margin=1952/21, no subset-decrement feasible margin-nonincreasing move in the exact box.
+
+python problems/23/writeup/_codex_ocpms_lp_certificate.py
+python problems/23/writeup/_codex_ocpms_lp_certificate_deg.py --deg 1..6
+  all infeasible. A nonnegative-coefficient Handelman/constraint-multiplier certificate of this simple form is not the proof.
+```
+
+The seven-cut PMS implication remains exact-supported, but the current viable proof shape is narrowed to a fixed-core endpoint minimization/KKT argument or a more structured core-reservoir inequality, not lattice descent and not low-degree coefficientwise LP.
+
+### 2026-06-30 Scale Guardrail And KKT-Leaf Route
+
+The seven-cut implication is false for arbitrary positive real weights unless
+the natural class-size normalization is imposed:
+
+```text
+w_i >= 1
+```
+
+or, equivalently for the intended graph model, the `w_i` are positive integer
+class sizes.  On the all-equal ray `w_i=t`, the cut inequalities hold, but
+
+```text
+m = 3t^2,        N = 10t,
+I = (32/3)t,
+```
+
+so the PMS target becomes
+
+```text
+50t <= 50t^2,
+```
+
+which fails for every `0<t<1` and is tight at `t=1`.  All real-weight
+statements below must therefore be read with `w_i>=1`.
+
+For the fixed-core endpoint proof, rename
+
+```text
+a=w0, b=w3, c=w4, p=w5, q=w6, r=w8,
+x=w1, y=w2, u=w7, v=w9.
+```
+
+Let
+
+```text
+C = a+b+c+p+q+r,       s = x+y+u+v,
+D27 = ap+br+pr,        D19 = aq+cr+qr,
+D0  = aq+br+pr,
+D79 = apq+bcr+bqr+cpr+pqr.
+```
+
+With
+
+```text
+alpha = A27/(q D27),
+beta  = A19/(p D19),
+gamma = A79/D79,
+rho   = 50+75 alpha,
+sigma = 50+75 beta,
+tau   = 50+75 gamma,
+```
+
+the PMS margin is equivalent to minimizing
+
+```text
+F = 2(C+s)^2 + 75C - rho*y*u - sigma*x*v - tau*u*v
+```
+
+over
+
+```text
+x,y,u,v >= 1,
+u <= q,       v <= p,
+x+u <= c+q,  y+v <= b+p,
+m=xv+yu+uv <= D0, D27, D19.
+```
+
+The endpoint feasible region is the product of two quadrilaterals,
+
+```text
+P_L={(x,u): x>=1, u>=1, u<=q, x+u<=c+q},
+P_R={(y,v): y>=1, v>=1, v<=p, y+v<=b+p}.
+```
+
+Thus a continuous minimum lies on one of `9 x 9` endpoint face pairs, with
+either no active quadratic cap or one active cap among `D0,D27,D19`.  On each
+leaf the KKT equations are:
+
+```text
+T^T grad(F)=0
+```
+
+or, on an active cap branch,
+
+```text
+T^T(grad(F)+theta grad(m))=0,   m=Dj.
+```
+
+Dropping the sign condition `theta>=0` only enlarges the algebraic candidate
+set, so the proof can close leafwise by denominator-clearing and shifted
+positivity.  The first hard leaf to test is
+
+```text
+x=y=1,       u+v+uv = Dj,
+```
+
+with tangent condition
+
+```text
+(H-rho-tau*v)(1+u) = (H-sigma-tau*u)(1+v),
+H = 4(C+2+u+v).
+```
+
+This KKT-leaf route replaces the failed coordinate/subset descent and the
+failed low-degree coefficientwise LP route.  The coefficient reservoirs
+`Delta27`, `Delta19`, and `Delta79` remain the intended positive shifted
+terms that pay for core nonuniformity after substituting the leaf equations.

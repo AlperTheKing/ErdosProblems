@@ -1,4 +1,4 @@
-"""EXACT gate for Codex's SHARP Schur structure (block 10:03): the overload Schur complement S of H reduces
+r"""EXACT gate for Codex's SHARP Schur structure (block 10:03): the overload Schur complement S of H reduces
 S>=0 to a SINGLE one-terminal scalar.
 
   H=diag(N-T)+Lstar (rational beta').  O={T_v>N}, U=V\O.  S = H_OO - H_OU H_UU^{-1} H_UO.

@@ -1272,3 +1272,651 @@ not side-invariant.  Therefore the peak terminal-overload lemma is false as
 written.  Peak overload may still identify the correct seed scale, but the
 valid descent statement must include the already-tested seed+moat completion
 step.
+
+## 2026-06-30 Rare-Exit Two-Star Proof Package
+
+The current sharp SDR proof target can be separated into one elementary Hall
+proposition and one geometric residual theorem.
+
+### Rare-exit stage0
+
+For a completed seed+moat switch `S`, let
+
+```text
+F = delta_M(S),
+E = delta_B(S),
+Wit(e) = { f in F : f witnesses e },
+lambda(e) = min_{f in Wit(e)} ell(f).
+```
+
+Let
+
+```text
+L0 = min_{f in F} ell(f),
+F0 = { f in F : ell(f)=L0 },
+F1 = F \ F0,
+E0 = { e in E : lambda(e)=L0 }.
+```
+
+The rare-exit stage0 matching is a matching of `F0` into `E0` that minimizes
+lexicographically the multiset of longer-tier degrees of the consumed exits,
+where
+
+```text
+deg1(e) = |Wit(e) cap F1|.
+```
+
+Equivalently, it consumes the exits that are least useful to the longer tier
+first.  The implementation is `min_cost_stage0` in
+`_codex_balanced_stage0_gate.py`.
+
+### Residual two-star theorem (geometric target)
+
+After the rare-exit stage0 matching, delete the used exits and restrict the
+witness graph to `F1` and the remaining exits.  Then every connected residual
+component is balanced.  Moreover, in every such balanced component, the
+complement of the witness graph is a disjoint union of at most two stars whose
+centers are exit vertices.
+
+Equivalently, in a residual component with longer bad-edge side `A` and exit
+side `B`:
+
+```text
+(1) |A|=|B|;
+(2) every non-universal exit class has multiplicity one;
+(3) there are at most two non-universal exit classes;
+(4) their missing subsets of A are pairwise disjoint.
+```
+
+This theorem is exact-gated by
+
+```text
+python problems/23/writeup/_codex_two_star_complement_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+```
+
+with
+
+```text
+tested=182
+status={'ok': 182}
+VERDICT: PASS
+```
+
+The only non-complete residual matrices seen are:
+
+```text
+3 x 3, 8 edges:
+  111
+  111
+  11.
+
+4 x 4, 14 edges:
+  1.11
+  .111
+  1111
+  1111
+
+4 x 4, 12 edges:
+  111.
+  11.1
+  111.
+  11.1
+```
+
+These are exactly the nonempty cases of the two-star complement theorem in the
+current battery.
+
+### Elementary Hall consequence
+
+Assume a balanced component satisfies the two-star complement theorem.  Then it
+has a matching saturating the exit side.
+
+Proof.  Let `Y` be a nonempty proper subset of exits.
+
+If `Y` contains a universal exit, then every longer bad edge is adjacent to
+that exit, so `N(Y)=A` and `|N(Y)|=|A|>|Y|`.
+
+If `Y` contains no universal exit, then `Y` consists of one or two singleton
+non-universal exits.  A singleton non-universal exit misses at most `|A|-2`
+bad edges, so it has at least two neighbors unless the component is `K_{1,1}`.
+For two non-universal exits, their missing sets are disjoint; hence the union
+of their neighborhoods is all of `A`, so `|N(Y)|=|A|>=|Y|`, and it is strict
+unless `Y=B`.  Therefore every nonempty proper `Y` satisfies Hall with positive
+slack, and the full set has equality by balance.  Hall's theorem gives the
+matching.
+
+Thus the remaining non-computational work is precisely the geometric proof of
+the residual two-star theorem: after consuming rare exits, a longer crossing
+bad edge can miss at most one residual side-exit, and the two possible side
+exit defects lie on opposite terminal sides with disjoint missed longer-edge
+sets.  This is weaker than the refuted broad no-reentry statements because it
+is applied only after the canonical rare-exit stage0 and only inside the
+completed seed+moat switch selected from `R[v]<0`.
+
+### Guardrail: leftover shortest exits need not be universal
+
+A tempting first proof step is false:
+
+```text
+after rare stage0, every unmatched minimum-lambda exit is universal to F1.
+```
+
+The diagnostic
+
+```text
+python problems/23/writeup/_codex_rare_stage0_universal_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+```
+
+returns
+
+```text
+tested=182
+status={'ok': 163, 'rem_e0_not_universal': 19}
+VERDICT: FAIL
+```
+
+First failure:
+
+```text
+graph H2-allmax
+side 001111111111000000
+v=2
+S=(2,12,13)
+F0={(12,16),(12,17),(13,16),(13,17)}
+F1={(0,12),(0,13),(1,12),(1,13)}
+used stage0 exits={(3,12),(3,13),(4,12),(4,13)}
+unmatched short exits (5,12),(5,13) have deg_F1=2<4
+```
+
+This is still a valid two-star residual component: `(5,12)` misses exactly the
+two longer rows with terminal `13`, while `(5,13)` misses exactly the two longer
+rows with terminal `12`.  The proof therefore must allow a surviving paired
+short side-door; it cannot argue that all residual non-universal exits have
+longer lambda.
+
+### Stronger gated invariant: residual defects are terminal-class defects
+
+Although leftover shortest exits need not be universal, the residual defects
+are not arbitrary.  For a completed switch `S`, define the `S`-terminal of a
+crossing bad edge `f` to be the endpoint of `f` inside `S`.  Similarly define
+the inner endpoint of a boundary exit `e`.
+
+The diagnostic
+
+```text
+python problems/23/writeup/_codex_residual_terminal_class_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+```
+
+returns
+
+```text
+tested=182
+status={'ok': 182}
+VERDICT: PASS
+```
+
+It verifies the following sharper structure in every residual component:
+
+```text
+for every non-universal residual exit e,
+all longer bad edges missed by e have the same S-terminal;
+
+the number of distinct missed S-terminals in a residual component is at most 2.
+```
+
+Thus a non-universal exit is a terminal-class defect, not a mixed arbitrary
+subset of longer rows.  The sparse examples become:
+
+```text
+3x3/8:  one exit misses one terminal class of size 1;
+4x4/14: two exits miss two singleton terminal classes;
+4x4/12: two exits miss two opposite terminal classes of size 2.
+```
+
+This is a more proof-shaped version of the two-star theorem.  A geometric proof
+can target:
+
+1. a shortest-geodesic/no-crossing lemma forbidding a residual exit from missing
+   rows based at two different S-terminals;
+2. a rare-exit exchange lemma forbidding three distinct missed S-terminal
+   classes after the stage0 matching;
+3. disjointness of the missed terminal classes, which then follows from the
+   same no-crossing/terminal-side argument.
+
+### Strongest current finite statement: terminal-block theorem
+
+The terminal-class statement can be made directly Hall-ready.  The diagnostic
+
+```text
+python problems/23/writeup/_codex_residual_terminal_block_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+```
+
+returns
+
+```text
+tested=182
+status={'ok': 182}
+VERDICT: PASS
+```
+
+It verifies:
+
+```text
+After rare stage0, in every residual component, the non-universal exits
+e_1,...,e_s (s<=2) have pairwise disjoint missing sets M(e_i).
+Each M(e_i) is contained in a single S-terminal class of longer crossing
+bad edges.
+```
+
+This is the strongest exact-tested form currently isolated.  It implies the
+two-star complement theorem immediately:
+
+* because the missing sets are pairwise disjoint;
+* because there are at most two non-universal exits;
+* because each non-universal exit has at least two neighbors unless the whole
+  component is the trivial `K_{1,1}` atom.
+
+So the geometric proof can target this terminal-block theorem directly:
+
+```text
+Rare stage0 + terminal-shadow shortestness + triangle-free
+=> at most two disjoint terminal-block defects in each residual component.
+```
+
+This avoids proving any false stronger claim about leftover short exits being
+universal, and avoids arbitrary-subdiagram leakage inequalities.
+
+### Terminal-block lemma tree
+
+The terminal-block theorem should be proved by three local claims.
+
+#### TB1: no mixed-terminal defect
+
+Let `e` be a residual exit after rare stage0, and let `f,g in F1` be longer
+crossing bad edges with distinct `S`-terminals `a_f != a_g`.  If `e` is not a
+witness for both `f` and `g`, while `e` lies in the same residual component as
+both, then the terminal rows witnessing the component connectivity force a
+crossing pair of shortest geodesic corridors.  The desired local conclusion is:
+
+```text
+e cannot miss longer rows based at two distinct S-terminals.
+```
+
+This should be a pure shortestness/triangle-free statement: two missed terminal
+classes would give two row families that both route around the same boundary
+exit, producing either a shorter B-geodesic for one crossing bad edge or a
+theta subgraph with an odd shortcut.
+
+#### TB2: no overlapping terminal blocks
+
+Let `e` and `e'` be two residual non-universal exits.  Suppose
+
+```text
+h in M(e) cap M(e')
+```
+
+for a longer crossing bad edge `h`, where `M(e)` is the set of longer rows missed
+by `e`.  By TB1, both `e` and `e'` are defects for the same `S`-terminal of
+`h` unless there are already two terminal classes.  The desired conclusion is:
+
+```text
+M(e) cap M(e') = empty.
+```
+
+Geometrically, one longer row based at a fixed terminal cannot avoid two
+residual side exits in the same completed switch.  Otherwise the two avoided
+exits are two disjoint side doors around the same terminal prefix; sliding the
+row to the nearer door either makes it witness one of them or creates a shorter
+odd cycle.
+
+#### TB3: rare stage0 excludes a third terminal block
+
+After TB1 and TB2, every residual non-universal exit owns a disjoint terminal
+block of missed longer rows.  The remaining finite possibility to exclude is
+three such blocks.
+
+Rare stage0 should be used only here.  If three disjoint residual terminal
+blocks survive, then there are at least three unmatched exits whose longer-tier
+degrees are smaller than the corresponding universal exits on the same
+minimum-lambda tier.  Since stage0 is a minimum-cost matching of `F0` into `E0`
+with cost `deg_F1(exit)`, an alternating exchange should replace one used exit
+by one of the surviving more-rare exits, contradicting minimality.
+
+The exact exchange statement to prove is:
+
+```text
+If a residual component after stage0 has three disjoint terminal-block defects,
+then there is an alternating path in the F0-E0 witness graph starting at a
+surviving defect exit and ending at a used exit of weakly larger deg_F1, with
+strictly smaller total rare cost after toggling.
+```
+
+This is the only place where the canonical rare-exit matching is used.  TB1 and
+TB2 should be independent of the cost rule and follow from terminal-shadow
+shortestness.
+
+Together TB1, TB2, and TB3 imply the terminal-block theorem, hence the two-star
+component Hall theorem, hence the SDR for the descent switch.
+
+## 2026-06-30 Terminal-Class Residual Proof Target
+
+The guard-lemma/petal route was exact-gated and failed under the natural
+vertex-petal interpretation.  The current surviving rare-exit target is the
+terminal-class residual theorem below.
+
+For a selected completed seed+moat switch `S` from `R[v]<0`, let
+
+```text
+C = delta_M(S),
+E = delta_B(S),
+Wit(e) = {f in C : f witnesses e},
+lambda(e) = min_{f in Wit(e)} ell(f),
+L0 = min_{f in C} ell(f),
+F0 = {f in C : ell(f)=L0},
+F1 = C \ F0,
+E0 = {e in E : lambda(e)=L0}.
+```
+
+Run the canonical rare-exit stage0 matching
+
+```text
+min_cost_stage0(F0, E0, Wit, deg_F1),
+where deg_F1(e)=|Wit(e) cap F1|,
+```
+
+which consumes low-`deg_F1` exits first.  Delete the used exits and restrict
+`Wit` to `F1` and the remaining exits.
+
+### False strengthening
+
+The tempting statement
+
+```text
+every unmatched E0-exit is universal to F1
+```
+
+is false:
+
+```text
+python problems/23/writeup/_codex_rare_stage0_universal_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+
+status: {'ok': 163, 'rem_e0_not_universal': 19}
+```
+
+So the proof must not use this strengthening.
+
+### Surviving theorem candidate
+
+For every connected residual component `(A,B)` of the restricted witness graph:
+
+1. If an exit `e in B` is non-universal, then
+
+   ```text
+   Miss(e) = {f in A : f notin Wit(e)}
+   ```
+
+   consists only of longer bad edges whose `S`-inside endpoint is one fixed
+   terminal vertex `tau(e)`.
+
+2. At most two distinct missed terminal vertices occur in one residual
+   component.
+
+3. After quotienting duplicate exit classes, the complement of the residual
+   witness graph is a disjoint union of at most two exit-centered stars, with
+   disjoint missed bad-edge sets.  Equivalently, the residual component has a
+   matching saturating the remaining exits by the elementary two-star Hall
+   argument.
+
+Exact gates:
+
+```text
+python problems/23/writeup/_codex_residual_terminal_class_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+
+tested: 182
+status: {'ok': 182}
+VERDICT: PASS
+```
+
+```text
+python problems/23/writeup/_codex_two_star_complement_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+
+tested: 182
+status: {'ok': 182}
+VERDICT: PASS
+```
+
+Endpoint diagnostics show the local geometry.  Example:
+
+```text
+python problems/23/writeup/_codex_rare_exit_endpoint_diag.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 3 --max-add 1 --limit 6
+```
+
+In `H2-allmax`, side `111111111110000000`, `S=(0,1,11,12)`, the residual
+exits `(0,13)` and `(1,13)` miss respectively only longer bad edges with
+inside endpoints `1` and `0`; the other residual exits are universal.
+
+### Geometric proof target
+
+Prove from terminal-shadow shortest-geodesic geometry:
+
+* A longer bad edge can fail to witness a residual exit only because all its
+  terminal prefixes are trapped on the opposite terminal side of that exit.
+* If one residual exit missed longer bad edges from two different inside
+  terminals, the two terminal-prefix systems plus a common witnessed exit form
+  a theta/lens that gives either a shorter odd cycle for one bad edge or a
+  triangle.
+* If three missed terminal classes occur in one residual component, two of the
+  corresponding prefix systems must cross in the same way, again giving a
+  shorter-geodesic or triangle contradiction.
+
+This theorem is weaker than the refuted hereditary-leakage and guard-petal
+routes, but strong enough with the two-star Hall consequence to finish the
+selected K2T Hall/SDR step.
+
+### Two-terminal strengthening
+
+The terminal-class theorem strengthens further to a two-terminal swap form.
+For each residual component, every non-universal exit `e` gives a pair
+
+```text
+(inside(e), tau(e)),
+```
+
+where `tau(e)` is the common `S`-inside endpoint of all longer bad edges missed
+by `e`.  The exact gate confirms:
+
+```text
+inside(e) != tau(e),
+```
+
+and all such pairs in one component use at most two terminal vertices.  Thus a
+non-complete residual component is controlled by a two-terminal pair `{a,b}`;
+defects are oriented only from `a` to `b` and/or from `b` to `a`.
+
+Gate:
+
+```text
+python problems/23/writeup/_codex_residual_two_terminal_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+
+tested: 182
+status: {'ok': 182}
+VERDICT: PASS
+```
+
+This is now the cleanest proof target: prove that rare-exit stage0 leaves only
+a two-terminal swap residual.  The two-star Hall matching then follows from the
+previous elementary argument.
+
+### Stage0 tie-break guardrail
+
+The two-terminal residual does not appear to depend on the deterministic
+rank tie-break inside `min_cost_stage0`, at least on the core finite/H2
+battery.  The diagnostic
+
+```text
+python problems/23/writeup/_codex_stage0_all_min_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --max-add 1 --cap 200000
+```
+
+enumerates every matching of `F0` into `E0` with minimum total `deg_F1` cost
+and checks the two-terminal theorem for each resulting residual.  It returns:
+
+```text
+tested=119
+status={'ok': 119}
+VERDICT: PASS
+```
+
+Some switches have many tied minimum matchings, e.g. `F0=4,E0=8,count=1680`,
+and all still satisfy the two-terminal residual theorem.  This suggests the
+proof should use only the minimum-degree stage0 property, not the arbitrary
+exit-id rank tie-break.  The inherited blow-up cases were not exhaustively
+enumerated by this gate because the number of tied matchings can explode.
+
+### Component-local single-miss strengthening
+
+The residual Hall theorem has an even smaller sufficient form.  After rare
+stage0, in every connected residual component `(A,B)` of the `F1`-to-remaining
+exit witness graph:
+
+```text
+|A|=|B|,
+and every f in A misses at most one e in B.
+```
+
+Together with the already-gated column condition
+
+```text
+every non-universal e in B is witnessed by at least two f in A
+```
+
+this gives Hall directly:
+
+* if `B\Y` has size at least `2`, then every `f` sees some exit outside `Y`,
+  so no `f` is trapped in `Y`;
+* if `B\Y={e}`, then trapped rows are exactly the rows missing `e`; the column
+  condition gives at most `|A|-2=|Y|-1` such rows.
+
+Exact gates:
+
+```text
+python problems/23/writeup/_codex_rare_exit_complement_gate.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1
+
+tested=182
+status={'ok': 182}
+VERDICT: PASS
+```
+
+The diagnostic
+
+```text
+python problems/23/writeup/_codex_row_miss_diag.py \
+  --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1 --examples 10
+```
+
+confirms that the single-miss property is component-local, not global:
+
+```text
+global row_miss_count={0:923,1:72,3:18,8:48}
+component_row_miss_count={0:989,1:72}
+component_tier_sig: 40 long-lambda singleton misses, 32 min-lambda singleton misses
+```
+
+So the next proof target can be split into two local mechanisms:
+
+1. **long-lambda singleton miss:** a row can miss at most one long-lambda exit
+   in its residual component by noncrossing terminal-prefix geometry;
+2. **min-lambda singleton miss:** rare stage0 consumes all but at most one
+   minimum-lambda exit from any side block that a longer row fails to witness.
+
+This is weaker than the two-terminal theorem but sufficient for the SDR.
+
+### Scope check: terminal-shadow alone may suffice
+
+The component-local single-miss condition was also checked on **all** neutral
+terminal-shadow switches in the small census, not only on selected R<0
+seed+moat switches:
+
+```text
+python problems/23/writeup/_codex_all_terminal_singlemiss_gate.py \
+  --min-n 5 --max-n 9
+
+switches=16048
+status={'skip_no_F1': 16000, 'ok': 48}
+VERDICT: PASS
+```
+
+and
+
+```text
+python problems/23/writeup/_codex_all_terminal_singlemiss_gate.py \
+  --min-n 10 --max-n 10
+
+switches=113504
+status={'skip_no_F1': 111072, 'ok': 2432}
+VERDICT: PASS
+```
+
+So the single-miss theorem is not obviously a special artifact of the selected
+seed+moat switch.  The likely core is a pure terminal-shadow/no-crossing fact:
+
+```text
+In a neutral terminal-shadow switch, after removing one minimum-lambda matching
+layer, a longer terminal row cannot have two missed exits in the same residual
+component.
+```
+
+The proof should still keep the rare stage0 layer, but the small-census scope
+check says the geometry may not need the full R<0 or neutral-minimality
+machinery.
+
+### Laminarity guardrail
+
+Do not claim full missed-exit laminarity for arbitrary neutral terminal-shadow
+switches.  The broad laminar scope gate
+
+```text
+python problems/23/writeup/_codex_all_terminal_laminar_gate.py \
+  --min-n 5 --max-n 9
+
+switches=16048
+status={'ok': 16048}
+leaf_hist={0:12960,1:780,2:2308}
+VERDICT: PASS
+```
+
+but at `N=10` it has a harmless failure:
+
+```text
+graph I?ABCc]}?, side 1001101000, S=(1,2,5)
+cross=((1,9),(2,9),(5,8)), bdy=((0,5),(1,6),(2,6))
+misses={two exits per row in a 3-cycle pattern}
+```
+
+Inspection gives
+
+```text
+ell(1,9)=ell(2,9)=ell(5,8)=5,
+lambda(e)=5 for all boundary exits,
+F1=empty,
+Psi=0.
+```
+
+So arbitrary terminal-shadow laminarity is false, but the counterexample is
+outside the tiered residual problem.  The correct statement must keep the
+minimum-length tier removal:
+
+```text
+after stage0 removes F0 through E0, every mixed-tier residual component has
+component-local single-miss.
+```

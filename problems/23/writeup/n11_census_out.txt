@@ -1,0 +1,4 @@
+tested: 11 no_switch: 0 bad_terminal: 0
+status: {'ok': 11}
+stats: {'matchings': 42}
+VERDICT: PASS

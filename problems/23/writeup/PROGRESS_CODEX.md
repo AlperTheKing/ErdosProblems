@@ -57,3 +57,6 @@
 [2026-06-30T12:32:02+03:00] OK VERIFY | DID: Tested C_g(v)>0 implies g is shorter member of strict lens through v. | RESULT: pos=21 covered=21 fail=0 maxc=3. | D: per-edge lens lemma identified
 [2026-06-30T12:32:02+03:00] > VERIFY | NEXT: Stress per-edge lens implication on Grotzsch, MycC7, and random N=11/12 max cuts.
 [2026-06-30T12:33:27+03:00] > ATTACK | NEXT: Sample C_g(v)=0 equality cases without shorter-lens membership to infer layered-DAG structure.
+[2026-07-01T01:51:43.9128436+03:00] FAIL ATTACK | DID: Ran _codex_rm_persistence_gate.py --min-n 5 --max-n 10 --h2-allmax --h-inherited 4 --max-add 1. | RESULT: FAIL H2-allmax r=(10,16) a=(7,14) b=(6,17) g=(10,17) | D: broad RM predicate too broad or disk cert incomplete
+2026-07-01T05:46:01Z > VERIFY | NEXT: test stronger uniform four-port routing for cycle-neighbor atoms on small census and C5 guardrail.
+2026-07-01T05:47:04Z > VERIFY | NEXT: compute worst nonempty proper Hall margins for cycle-neighbor atom on census and guardrails.

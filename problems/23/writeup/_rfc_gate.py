@@ -1,4 +1,4 @@
-"""EXACT gate for the user's RFC (reduced fan-core) / Extra-Hall route to the cutoff Hall lemma.
+r"""EXACT gate for the user's RFC (reduced fan-core) / Extra-Hall route to the cutoff Hall lemma.
 
 Blue-closed extra graph (per the user's construction):
   S = completed seed+moat descent switch (R[v]<0).  C=delta_M(S) crossing bad edges; for f in C, Wit_S(f)=exits it
@@ -103,7 +103,7 @@ def rfc_falsifier(Bplus, Mplus, door):
         for e in ds:
             if e in Ne:
                 Ne[e].add(g)
-    for r in range(2, len(Bplus) + 1):   # deficient reduced needs |Z|>=2
+    for r in range(1, len(Bplus) + 1):
         for combo in itertools.combinations(Bplus, r):
             Z = set(combo)
             NZ = set()
@@ -118,7 +118,7 @@ def rfc_falsifier(Bplus, Mplus, door):
     return None
 
 
-def test_switch(name, n, adj, side, st, Sset, acc):
+def test_switch(name, n, adj, side, st, Sset, acc, max_cross=9):
     res = witness_structure(n, adj, side, st, Sset)
     if res is None:
         return
@@ -133,7 +133,7 @@ def test_switch(name, n, adj, side, st, Sset, acc):
         WitS[f].add(e); PrefS[(f, e)] = pref
     acc['switches'] += 1
     Cl = list(crossM)
-    if len(Cl) > 9:
+    if len(Cl) > max_cross:
         acc['toobig'] += 1
         return
     for rX in range(1, len(Cl) + 1):
@@ -163,7 +163,7 @@ def test_switch(name, n, adj, side, st, Sset, acc):
                 return
 
 
-def process(name, n, E, acc, allmax=True):
+def process(name, n, E, acc, allmax=True, max_cross=9):
     adj = [set() for _ in range(n)]
     for x, y in E:
         adj[x].add(y); adj[y].add(x)
@@ -187,20 +187,44 @@ def process(name, n, E, acc, allmax=True):
             if sm is None:
                 continue
             A, moat, drop = sm
-            test_switch(name, n, adj, side, st, set(A) | set(moat), acc)
+            test_switch(name, n, adj, side, st, set(A) | set(moat), acc, max_cross=max_cross)
+
+
+def process_h3_hard(acc, max_cross):
+    from _codex_length_tier_matching_gate import h_blowup
+    from _codex_k2t_switch_probe import adj_from_edges
+
+    n, edges, _side = h_blowup(3)
+    adj = adj_from_edges(n, edges)
+    side = [int(c) for c in "111111111111111100000000000"]
+    st = struct_for_side(n, adj, side)
+    Sset = {
+        3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+        13, 14, 15, 18, 21, 22, 23, 24, 25, 26,
+    }
+    test_switch("H3-hard", n, adj, side, st, Sset, acc, max_cross=max_cross)
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--max-cross", type=int, default=9)
+    parser.add_argument("--h3-hard", action="store_true")
+    args = parser.parse_args()
+
     acc = dict(switches=0, XU=0, rfc_fail=0, toobig=0, XU_toobig=0, ex=None)
     for nn in range(5, 11):
         for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
-            n, E = dec(g6); process("cen%d" % nn, n, E, acc)
+            n, E = dec(g6); process("cen%d" % nn, n, E, acc, max_cross=args.max_cross)
         print("census N=%d: switches=%d X,U-instances=%d rfc_fail=%d toobig=%d" % (nn, acc['switches'], acc['XU'], acc['rfc_fail'], acc['toobig']), flush=True)
     hN, hE = dec("H?AFBo]")
     for t in (2,):
         nn, EE = vertex_blowup(hN, hE, t)
-        process("Hblow%d" % t, nn, EE, acc)
+        process("Hblow%d" % t, nn, EE, acc, max_cross=args.max_cross)
         print("after Hblow%d N%d: switches=%d X,U=%d rfc_fail=%d toobig=%d %s" % (t, nn, acc['switches'], acc['XU'], acc['rfc_fail'], acc['toobig'], acc['ex'] or ''), flush=True)
+    if args.h3_hard:
+        process_h3_hard(acc, args.max_cross)
+        print("after H3-hard: switches=%d X,U=%d rfc_fail=%d toobig=%d %s" % (acc['switches'], acc['XU'], acc['rfc_fail'], acc['toobig'], acc['ex'] or ''), flush=True)
     print("=" * 55)
     print("switches:", acc['switches'], " (X,U) instances:", acc['XU'], " too-big switches:", acc['toobig'], " too-big-Z:", acc['XU_toobig'])
     print("RFC FALSIFIERS (reduced deficient Z):", acc['rfc_fail'], acc['ex'] or '')
