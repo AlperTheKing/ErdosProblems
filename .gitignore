@@ -70,3 +70,6 @@ problems/1212/experiments/anchor_tree/chain.json
 # Concurrent-Python temp pyc files (interrupted pyc writes leave .pyc.<number>) + all bytecode caches
 __pycache__/
 *.pyc.*
+
+# Timestamped parallel-run scratch output dirs (shard_*.json etc.) -- regeneratable, not versioned
+_tmp_*/
