@@ -73,3 +73,6 @@ __pycache__/
 
 # Timestamped parallel-run scratch output dirs (shard_*.json etc.) -- regeneratable, not versioned
 _tmp_*/
+
+# Codex scratch/probe dir -- transient work files, not versioned
+.codex_tmp/
