@@ -145,3 +145,116 @@ rank 9: 11,624
 ```
 
 The dominant obstruction is therefore rank `7/8` positive-dimensional (`51,528` states), with a substantial but secondary rank-9 isolated-system residue (`11,624` states). This supports prioritizing structural descent/family exclusion on the hard charts (`s3,s6`, `s3,s7`, and `xq` capacity charts), not only isolated Groebner cleanup.
+
+## S3 Capacity Pair Structure
+
+`problems/23/writeup/_codex_sib_s7_y1_s3_pair_structure.py` verifies exact paired capacity identities on the hard `s3=0` branch. With `R=c-e` and `H=b+c-d-e`:
+
+```text
+s4-s5 = s6-s7 = aR
+s4-s6 = s5-s7 = fH
+s4-s7 = aR+fH
+s5-s6 = -aR+fH
+```
+
+Consequently, on the `s6=0` active face, feasibility of `s7>=0` forces `c<=e`; on the `s7=0` active face, feasibility of `s6>=0` forces `c>=e`. This gives the same kind of signed half-face split used earlier in the `x=q` pair-structure reductions and is the current structural target for the `s3,s6/s7` hard charts.
+
+## S3 Ridge-Descent Stress
+
+`problems/23/writeup/_codex_sib_s7_y1_s3_ridge_descent_stress.py` records an exact rational stress test for the ridge direction suggested by the `s3` pair structure. On `s3=0,s7=0`, with `R=c-e`, all deterministic feasible rational samples have `dPhi/dR>0`, supporting descent toward the `c=e` ridge. On the mirror `s3=0,s6=0` face, with `R=e-c`, the script gives an exact feasible rational witness with `dPhi/dR<0`. Thus the hard `s3,s6` chart cannot be closed by the naive mirror ridge descent; it needs another direction or a different structural argument.
+
+## S3 Active-Face Normal Forms
+
+`problems/23/writeup/_codex_sib_s7_y1_s3_active_faces.py` verifies exact two-gap parametrizations on the hard `y=1, s3=0` active capacity faces.
+
+On `s7=0`, write `c=e+R` and `H=b+c-d-e`. Then `s6=aR`, `s5=fH`, and `s4=aR+fH`; feasibility reduces the remaining capacity slacks to `R>=0` and `H>=0`.
+
+On `s6=0`, write `e=c+R` and keep `H=b+c-d-e`. Then `s7=aR`, `s4=fH`, and `s5=aR+fH`; again the remaining capacity slacks reduce to `R>=0` and `H>=0`.
+
+This strengthens the earlier s3 sign split: the hard `s3,s6/s7` charts are now explicit two-gap ridge problems. The stress artifact still says only the `s3,s7` direct ridge is supported; `s3,s6` needs a different descent direction.
+
+## S3S7 Split Coordinates
+
+`problems/23/writeup/_codex_sib_s7_y1_s3_s7_split_coordinates.py` records a nonnegative split parametrization for the `s3=0,s7=0` hard face.
+
+Write `d=1+D1+D2`, `b=1+D1+P`, `R=c-e=D2+Q`. Then `H=b+c-d-e=P+Q`, and the remaining capacity slacks are `s6=aR`, `s5=fH`, `s4=aR+fH`.
+
+This removes the signed constraint `d-1 <= (b-1)+R` from the `s3,s7` feasibility region by replacing it with nonnegative split variables. Full derivative expansion in these variables was too large in the current session, but this is now the preferred coordinate system for the next `H`/`b`-descent certificate attempt.
+
+## U1 Terminal Pruning Artifacts
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_terminal_shape_profile.py` profiles the `u1` branch of the monomial-hit terminal support universe. It records `20,152` unique still-unobserved `u1` terminal supports, with rank histogram:
+
+```text
+rank 2: 4
+rank 3: 56
+rank 4: 360
+rank 5: 1,396
+rank 6: 3,512
+rank 7: 6,166
+rank 8: 6,255
+rank 9: 2,403
+```
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_implied_slack_closure.py` adds any inactive slack label forced identically zero by the currently fixed lower-bound labels. This closes `208` terminal supports to observed bases and compresses the unresolved unique `u1` terminal supports to `16,572`.
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_inactive_ineq_closure.py` additionally uses deterministic inactive-slack inequality forcing: if an inactive slack, shifted by lower bounds, has all coefficients nonpositive and zero constant, then every linear negative term must vanish. This closes `2,712` of the `20,152` `u1` terminal supports to observed bases and compresses the unresolved unique count to `11,995`.
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_s4_e_ray.py` certifies one newly exposed boundary ray from that pruning:
+
+```text
+y=1, u=1, s4=0,
+a=b=c=d=f=x=v=1, e>=1.
+```
+
+After setting `e=1+E`, the cleared numerator of `Phi` is
+
+```text
+6E^4 + 361E^3 + 1530E^2 + 1450E + 125,
+```
+
+so the ray is strictly positive. This is a local family certificate, not a full `u1` coverage theorem.
+
+## U1 ABDF Capacity Family
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_abdf_cap_family.py` certifies the broad lower-bound family
+
+```text
+y=1, u=1, a=b=d=f=1,
+cap in {s4,s5,s6,s7}.
+```
+
+On this family, `s5=s6`, `s4-s5=c-e`, and `s7-s5=e-c`. Thus feasible `s5=0` or `s6=0` forces `c=e` and reduces to the common ridge. The full-dimensional faces are:
+
+```text
+s4=0: e>=c>=v>=1,
+s7=0: c>=e>=v>=1.
+```
+
+Both are coefficientwise positive after nonnegative parametrization; the cleared numerator has `130` terms, no negative coefficients, and minimum coefficient `8` in each case.
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_family_closure_count.py` counts this custom family against the post-inactive `u1` terminals. It closes `282` terminal instances (`69,65,65,83` across `s4,s5,s6,s7`) and reduces the unresolved unique `u1` terminal support count from `11,995` to `11,730` after observed-family and custom-family closure.
+
+## U1 ABD S4 Family
+
+`problems/23/writeup/_codex_sib_s7_y1_u1_s4_abd_family.py` certifies the broader family
+
+```text
+y=1, u=1, s4=0, a=b=d=1.
+```
+
+With `s4=0`, solve
+
+```text
+c = (x(1+v)+v-f)/(1+f).
+```
+
+Feasibility gives `v>=f` and `e>=max(c,v)`. Since
+
+```text
+c-v = (1+v)(x-f)/(1+f),
+```
+
+the proof splits into two chambers: `x>=f` with `e=c+E`, and `f>=x` with `e=v+E`. In the `x>=f` chamber the cleared numerator has `1213` positive coefficients; in the `f>=x` chamber it has `1133` positive coefficients. The minimum coefficient is `2` in both chambers.
+
+After adding this to `problems/23/writeup/_codex_sib_s7_y1_u1_family_closure_count.py`, custom closures become `487` terminal instances: `U1_ABDF_CAP=282` and `U1_ABD_S4=205`. The unresolved unique `u1` support count is now `11,617`.

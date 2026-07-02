@@ -46,7 +46,9 @@ Equivalent form (§5 of reply): the completed fan is a legal nonnegative-σ flip
 - Absorbed shared leaf: contributes to neither δ_M(F) nor k(F); its UNIT-FLAT5 precharge moves
   to the protected-cell/cactus bank, NOT the fan boundary inequality.
 
-## §A LEDGER INTERFACE — the remaining Branch-B assembly obligation (Claude audit note)
+## §A LEDGER INTERFACE — RESOLVED 2026-07-02 by LEDGER_INTERFACE_GPTPRO.md (union-flip
+## confirmed; 2-ledger split; doors free via maximality; (6.2) = Branch-B target form).
+## Original obligation kept below for the record. Remaining: (6.1) peel-side confirmation.
 The lemma is sound but nearly tautological on F; the genuine content moved to the discharge
 ledger:
 (i)  Every selected bad leaf is either crossing its completed fan (charged to side doors by

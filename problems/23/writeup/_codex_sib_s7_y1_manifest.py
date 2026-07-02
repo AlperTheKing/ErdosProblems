@@ -33,6 +33,8 @@ SCRIPTS = [
     "_codex_sib_s7_y1_xq_s1_observed.py",
     "_codex_sib_s7_y1_xq_s1_pair_structure.py",
     "_codex_sib_s7_y1_s3_pair_structure.py",
+    "_codex_sib_s7_y1_s3_active_faces.py",
+    "_codex_sib_s7_y1_s3_s7_split_coordinates.py",
     "_codex_sib_s7_y1_xq_s1_quadrant_parametrizations.py",
     "_codex_sib_s7_y1_xq_s1_ridge_structure.py",
     "_codex_sib_s7_y1_xq_s2s3_observed.py",
