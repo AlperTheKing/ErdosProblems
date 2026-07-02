@@ -6,7 +6,8 @@ On the face y=1,s_j=0:
     m = x*q + v = M_j,      q = (M_j-v)/x.
 
 For fixed core variables a,b,c,d,e,f and fixed v, the non-quadratic terms in
-Phi are constant along the fiber.  The only x-dependence is through
+Phi are constant along the fiber because x*q = M_j-v.  The only x-dependence
+is through
 
     N = S + 1 + x + (M_j-v)/x.
 
@@ -14,7 +15,9 @@ Thus a negative point on any y=1 capacity face reduces to one of:
 
     x=1, s2=0, s3=0, u=1, or the interior balanced fiber x=q.
 
-This script checks the exact identities for all four capacity faces.
+This script checks the exact identities for all four capacity faces.  It keeps
+Phi in the reduced fiber form; expanding/factoring the unreduced rational Phi
+is much slower and is unnecessary for the identity.
 """
 
 from __future__ import annotations
@@ -44,17 +47,20 @@ def main() -> None:
         u = q - v
         m = x * q + v
         N = S + y + x + q
-        Phi = sp.factor(2 * (N * N - 25 * m) - 75 * (x * q * A / Z + y * v * B / (e * Y) - S))
+
+        # Reduced fiber expression: x*q is R and m is Mj on s_j=0.
+        Phi_fiber = 2 * (N * N - 25 * Mj) - 75 * (R * A / Z + y * v * B / (e * Y) - S)
 
         assert sp.factor(m - Mj) == 0, name
         assert sp.factor(x * q - R) == 0, name
 
-        dPhi_dx = sp.factor(sp.diff(Phi, x))
-        assert sp.factor(dPhi_dx - 4 * N * (1 - R / (x * x))) == 0, name
+        dPhi_dx = sp.diff(Phi_fiber, x)
+        expected = 4 * N * (1 - R / (x * x))
+        assert sp.factor(dPhi_dx - expected) == 0, name
 
         num, den = sp.together(dPhi_dx).as_numer_denom()
         assert sp.factor(num - 4 * ((S + 1 + x) * x + R) * (x * x - R)) == 0, name
-        assert den == x ** 3, name
+        assert den == x**3, name
 
         s2 = d + e - q
         s3 = b + c - 1 - x

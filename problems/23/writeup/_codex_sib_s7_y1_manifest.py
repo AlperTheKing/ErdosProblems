@@ -31,9 +31,19 @@ SCRIPTS = [
     "_codex_sib_s7_y1_xq_v1_survivor.py",
     "_codex_sib_s7_y1_xq_u1v1_endpoint.py",
     "_codex_sib_s7_y1_xq_s1_observed.py",
+    "_codex_sib_s7_y1_xq_s1_pair_structure.py",
+    "_codex_sib_s7_y1_xq_s1_quadrant_parametrizations.py",
+    "_codex_sib_s7_y1_xq_s1_ridge_structure.py",
     "_codex_sib_s7_y1_xq_s2s3_observed.py",
     "_codex_sib_s7_y1_xq_s2_impossible_caps.py",
+    "_codex_sib_s7_y1_xq_s2_pair_structure.py",
+    "_codex_sib_s7_y1_xq_s2_monotone_v.py",
+    "_codex_sib_s7_y1_xq_s2_s6_descent.py",
+    "_codex_sib_s7_y1_xq_s2_s7_descent.py",
+    "_codex_sib_s7_y1_xq_s2_s7_b1_descent.py",
+    "_codex_sib_s7_y1_xq_s2_endpoint_reduction.py",
     "_codex_sib_s7_y1_xq_endpoint_inventory.py",
+    "_codex_sib_s7_y1_xq_endpoint_reductions.py",
     "_codex_sib_s7_y1_u1_s4_critical_to_seventight.py",
     "_codex_sib_s7_y1_u1_s6s7_survivor.py",
     "_codex_sib_s7_y1_u1_s1_s6_endpoint.py",
@@ -41,8 +51,14 @@ SCRIPTS = [
     "_codex_sib_s7_y1_s2_survivors.py",
     "_codex_sib_s7_y1_s3_survivor.py",
     "_codex_sib_s7_y1_u1_high_boundary.py",
+    "_codex_sib_s7_y1_u1_high_critical_strip.py",
+    "_codex_sib_s7_y1_u1_critical_inventory.py",
     "_codex_sib_s7_y1_more_high_boundaries.py",
     "_codex_sib_s7_y1_support_reductions.py",
+    "_codex_sib_s7_y1_observed_supports_closed.py",
+    "_codex_sib_s7_y1_symbolic_rank_certificates.py",
+    "_codex_sib_s7_y1_tangent_root_inventory.py",
+    "_codex_sib_s7_y1_xqa_bivariate_candidate_inventory.py",
     "_codex_sib_s7_y1_fj_support_inventory.py",
     "_codex_sib_s7_y1_support_neighborhoods.py",
     "_codex_sib_s7_y1_support_neighbor_reductions.py",
@@ -64,7 +80,7 @@ SCRIPTS = [
 
 OPEN_OBLIGATIONS = [
     "Full y=1 capacity critical-leaf exclusion beyond observed survivor families.",
-    "Full x=q endpoint coverage theorem beyond the observed exact-positive/infeasible inventory.",
+    "Full x=q endpoint coverage theorem after reductions to v1/u1/s1/s3 blockers; s2 is routed and s1 has paired-sign structure.",
     "A proof that the restricted active-set survivor inventory covers every y=1 capacity branch.",
     "The other refined endpoint faces outside y=1 after S7 y=1 is closed.",
 ]
@@ -82,7 +98,7 @@ def main() -> None:
             check=True,
             text=True,
             capture_output=True,
-            timeout=60,
+            timeout=180,
         )
         lines = [line for line in proc.stdout.splitlines() if line.strip()]
         if not lines or not lines[-1].startswith("PASS"):
@@ -96,5 +112,9 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
 
 
