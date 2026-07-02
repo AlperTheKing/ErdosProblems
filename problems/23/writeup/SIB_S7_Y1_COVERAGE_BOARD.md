@@ -110,3 +110,38 @@ The deterministic regression scan `_codex_sib_s7_y1_observed_coverage.py` curren
 `problems/23/writeup/_codex_sib_s7_y1_far_support_profile.py` records that the `182,589` unobserved-far supports are mostly size `5..7`, with size histogram `0:16, 1:228, 2:1494, 3:6162, 4:17167, 5:35849, 6:55300, 7:66373`. There is no small-size-only corner to close.
 
 `problems/23/writeup/_codex_sib_s7_y1_far_support_linear_filter.py` applies exact deterministic propagation from active lower-bound labels and shifted one-sign/linear active equations. It eliminates or routes part of the far universe: `28,360` supports are contradictory, `3,577` deterministically close to an observed basis, and `150,652` remain still unobserved. The remaining theorem burden is therefore an algebraic/KKT exclusion for those `150,652` supports or a stronger structural replacement.
+
+## Exact Monomial-Hit Branching Filter
+
+`problems/23/writeup/_codex_sib_s7_y1_far_support_monomial_hit_filter.py` extends the lower-bound propagation filter by using one-sign shifted active equations with zero constant term. Each nonconstant monomial must vanish, so the script branches on the corresponding forced lower-bound labels and propagates recursively.
+
+On the `150,652` post-linear still-unobserved starts, this closes `1,144` starts and leaves `149,508` starts with unobserved terminals. The terminal closures compress to `84,087` unique still-unobserved support states, with no branch explosions. This is not a closure theorem, but it gives a smaller normalized target for the next algebraic/KKT exclusion.
+
+## Terminal Rank-Shape Samples
+
+`problems/23/writeup/_codex_sib_s7_y1_terminal_rank_profile.py` profiles monomial-hit terminal states by exact generic active-equation rank. Full all-chart profiling is too slow without persisted terminal states, so the current evidence is chart-scoped.
+
+For the completely unobserved charts:
+
+- `xq,s7`: `6,924` unique terminal supports, rank histogram `2:1, 3:14, 4:92, 5:374, 6:1033, 7:1959, 8:2343, 9:1108`.
+- `s3,s6`: `4,269` unique terminal supports, rank histogram `2:1, 3:13, 4:79, 5:294, 6:734, 7:1242, 8:1291, 9:615`.
+- `s3,s7`: `4,221` unique terminal supports, rank histogram `2:1, 3:13, 4:79, 5:294, 6:732, 7:1232, 8:1271, 9:599`.
+
+Thus a nontrivial isolated-system component exists, but the larger remaining mass is rank `7` and `8`; the next exclusion step needs positive-dimensional family/descent structure as well as Groebner handling of rank-9 terminals.
+
+## Full Terminal Rank Distribution
+
+Using chart-scoped runs of `problems/23/writeup/_codex_sib_s7_y1_terminal_rank_profile.py`, the `84,087` monomial-hit unique still-unobserved terminal states have aggregate exact generic active-equation rank histogram:
+
+```text
+rank 2:     16
+rank 3:    220
+rank 4:  1,386
+rank 5:  5,431
+rank 6: 13,882
+rank 7: 24,804
+rank 8: 26,724
+rank 9: 11,624
+```
+
+The dominant obstruction is therefore rank `7/8` positive-dimensional (`51,528` states), with a substantial but secondary rank-9 isolated-system residue (`11,624` states). This supports prioritizing structural descent/family exclusion on the hard charts (`s3,s6`, `s3,s7`, and `xq` capacity charts), not only isolated Groebner cleanup.

@@ -32,6 +32,7 @@ SCRIPTS = [
     "_codex_sib_s7_y1_xq_u1v1_endpoint.py",
     "_codex_sib_s7_y1_xq_s1_observed.py",
     "_codex_sib_s7_y1_xq_s1_pair_structure.py",
+    "_codex_sib_s7_y1_s3_pair_structure.py",
     "_codex_sib_s7_y1_xq_s1_quadrant_parametrizations.py",
     "_codex_sib_s7_y1_xq_s1_ridge_structure.py",
     "_codex_sib_s7_y1_xq_s2s3_observed.py",
@@ -66,6 +67,7 @@ SCRIPTS = [
     "_codex_sib_s7_y1_basis_pruning_census.py",
     "_codex_sib_s7_y1_far_support_profile.py",
     "_codex_sib_s7_y1_far_support_linear_filter.py",
+    "_codex_sib_s7_y1_far_support_monomial_hit_filter.py",
     "_codex_sib_s7_y1_support_neighborhoods.py",
     "_codex_sib_s7_y1_support_neighbor_reductions.py",
     "_codex_sib_s7_y1_alltight_drop_faces.py",
@@ -118,6 +120,8 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
 
 
 

@@ -45,5 +45,9 @@ cactus families (k=1..8 gluings, n=19 single-vertex contact).
 
 ## Remaining Branch-B checklist
 1. Peel invariant §H (recursion scoping) — Codex.
-2. Fan lemma b(C) ≥ k(C) (else σ<0 contradicts max-cut) — unowned; GPT-Pro next when free.
-3. Claude: exact gate of §1-§3 on generated cactus families.
+2. ~~Fan lemma~~ DONE 2026-07-02 (FAN_LEMMA_GPTPRO.md — boundary form on completed fan closure);
+   successor obligation = LEDGER INTERFACE (§A there) — GPT-Pro consulted.
+3. ~~Claude: exact gate of §1-§3~~ DONE 2026-07-02: _claude_cactus_family_gate.py PASS on 11
+   instances (disjoint k=1..8, contact-pair n=19, triple-chain n=28, mixed n=29); all exact,
+   true max cut certified per instance via per-copy decomposition bound + 2^10 atom enumeration;
+   u≥9k+c TIGHT on every tree gluing; k≤η/2 tight at k=1 exactly as (k−1)(81k−1)=0 predicts.

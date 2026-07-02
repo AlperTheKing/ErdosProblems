@@ -23353,3 +23353,34 @@
 [2026-07-02T17:37:51Z] > VERIFY | NEXT: Run optimized far-support linear filter over all unobserved-far supports.
 [2026-07-02T17:38:10Z] OK VERIFY | DID: Ran optimized far-support linear filter. | RESULT: contradictions=28360 closes_to_observed=3577 still_unobserved=150652; PASS. | D: add board/manifest note
 [2026-07-02T17:38:54Z] OK VERIFY | DID: Ran new far-support manifest entries and checked manifest list. | RESULT: profile PASS; linear filter PASS; manifest includes both after pruning census. | D: post audit
+[2026-07-02T17:39:12Z] OK ATTACK | DID: Posted far-support profile/filter ASK to Claude. | RESULT: CODEX_TO_CLAUDE.md records 182589->150652 exact-propagation reduction. | D: final mailbox check
+[2026-07-02T17:39:17Z] > CHECK | NEXT: Check Claude mailbox after posting far-support filter audit request.
+[2026-07-02T17:39:28Z] OK CHECK | DID: Checked Claude mailbox after far-support filter ASK. | RESULT: no new Claude response; latest inbox remains 17:10 cactus relay/XQ_A audit. | D: report current state
+[2026-07-02T17:40:05Z] > CHECK | NEXT: Read Claude mailbox before stronger S7 far-support feasibility work.
+[2026-07-02T17:40:19Z] OK CHECK | DID: Read Claude mailbox and y=1 script list. | RESULT: no new Claude response; existing fj_stationarity_diagnostic.py found. | D: inspect stationarity script
+[2026-07-02T17:40:50Z] OK ATTACK | DID: Inspected FJ stationarity/low-active/xq survivor scripts. | RESULT: diagnostics cover observed families only; no reusable global multiplier enumerator. | D: build monomial-hit filter
+[2026-07-02T17:41:16Z] > ATTACK | NEXT: Add exact monomial-hit branching filter for one-sign shifted active equations.
+[2026-07-02T17:42:02Z] OK ATTACK | DID: Wrote far-support monomial-hit branching filter. | RESULT: script created at problems/23/writeup/_codex_sib_s7_y1_far_support_monomial_hit_filter.py. | D: run filter
+[2026-07-02T17:43:46Z] OK VERIFY | DID: Ran far-support monomial-hit branching filter. | RESULT: all_closed=1144 still_start=149508 unique_still=84087; PASS. | D: add evidence and continue rank profiling
+[2026-07-02T17:46:14Z] OK VERIFY | DID: Re-ran monomial-hit filter after manifest insertion. | RESULT: all_closed=1144 unique_still=84087; PASS. | D: build terminal rank profile
+[2026-07-02T17:46:32Z] > ATTACK | NEXT: Add rank-shape profile for unique monomial-hit terminal support states.
+[2026-07-02T17:47:08Z] OK ATTACK | DID: Wrote terminal rank profile script. | RESULT: problems/23/writeup/_codex_sib_s7_y1_terminal_rank_profile.py created. | D: run rank profile
+[2026-07-02T17:49:53Z] FAIL VERIFY | DID: Ran terminal rank profile naive exact ranks. | RESULT: no output after 138s CPU; stopped high-CPU python process 51492. | D: optimize rank profile
+[2026-07-02T17:50:54Z] OK ATTACK | DID: Rewrote terminal rank profile with cached exact Fraction rank. | RESULT: script updated. | D: rerun rank profile
+[2026-07-02T17:54:23Z] FAIL VERIFY | DID: Ran optimized terminal rank profile across all charts. | RESULT: no output after 161s CPU; stopped python process 22912. | D: make chart-scoped profile
+[2026-07-02T17:55:31Z] FAIL ATTACK | DID: Tried quick chart-scope edit for terminal rank profile. | RESULT: literal backtick-rn inserted and function bodies unchanged. | D: rewrite cleanly
+[2026-07-02T17:56:41Z] OK ATTACK | DID: Rewrote terminal rank profile with chart filters. | RESULT: script accepts --branch/--cap. | D: run xq,s7 profile
+[2026-07-02T17:57:48Z] OK VERIFY | DID: Ran terminal rank profile for chart xq,s7. | RESULT: unique=6924; rank hist 2:1 3:14 4:92 5:374 6:1033 7:1959 8:2343 9:1108; PASS. | D: profile other empty charts
+[2026-07-02T17:58:43Z] OK VERIFY | DID: Ran terminal rank profiles for s3,s6 and s3,s7. | RESULT: s3s6 unique=4269 rank9=615; s3s7 unique=4221 rank9=599; both PASS. | D: update board/FYI
+[2026-07-02T17:59:12Z] OK ATTACK | DID: Appended terminal rank-shape samples to board and Claude FYI. | RESULT: board/CODEX_TO_CLAUDE record xq,s7 and s3 empty-chart rank hists. | D: report status
+[2026-07-02T17:59:43Z] > CHECK | NEXT: Read Claude mailbox before full terminal-rank profiling work.
+[2026-07-02T18:00:03Z] OK CHECK | DID: Read new Claude mailbox messages. | RESULT: Claude audited six support-census gates exact; Branch-B cactus gate PASS; S7 hard core flagged s3/s6,s3/s7. | D: continue S7 rank profiling
+[2026-07-02T18:00:18Z] > VERIFY | NEXT: Run terminal rank profiles for remaining branch/cap charts in batches.
+[2026-07-02T18:01:14Z] OK VERIFY | DID: Ran terminal rank profiles for all s2 charts. | RESULT: s2 ranks unique/r9: s4 4767/569, s5 4983/642, s6 5001/637, s7 4869/577; all PASS. | D: profile u1 charts
+[2026-07-02T18:02:12Z] OK VERIFY | DID: Ran terminal rank profiles for all u1 charts. | RESULT: u1 unique/r9: s4 4952/566, s5 5055/624, s6 5095/630, s7 5050/583; all PASS. | D: profile xq remaining
+[2026-07-02T18:03:20Z] OK VERIFY | DID: Ran terminal rank profiles for xq s4/s5/s6. | RESULT: xq unique/r9: s4 6841/1103, s5 6920/1118, s6 6932/1135; all PASS. | D: profile remaining s3 charts
+[2026-07-02T18:04:01Z] OK VERIFY | DID: Ran terminal rank profiles for remaining s3 charts. | RESULT: s3 unique/r9: s4 4140/572, s5 4068/546, s6 4269/615, s7 4221/599; all PASS. | D: aggregate rank map
+[2026-07-02T18:04:59Z] OK VERIFY | DID: Aggregated all chart terminal rank profiles. | RESULT: total=84087 ranks r2=16 r3=220 r4=1386 r5=5431 r6=13882 r7=24804 r8=26724 r9=11624. | D: update board/Claude
+[2026-07-02T18:05:28Z] OK ATTACK | DID: Posted full terminal rank distribution to board and Claude. | RESULT: aggregate rank hist recorded; rank7/8=51528 rank9=11624. | D: probe s3 hard-chart identities
+[2026-07-02T18:05:35Z] > ATTACK | NEXT: Probe symbolic capacity identities on hard s3=0 charts s6/s7.
+[2026-07-02T18:06:39Z] OK ATTACK | DID: Added exact s3 capacity pair-structure artifact. | RESULT: script PASS; identities split s6/s7 by sign of c-e. | D: add manifest/board
