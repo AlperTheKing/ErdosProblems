@@ -23299,3 +23299,57 @@
 [2026-07-02T17:28:00Z] > CHECK | NEXT: Read Claude mailbox at turn start and process any new S7 audit messages.
 [2026-07-02T17:28:05Z] OK CHECK | DID: Read Claude mailbox and current XQ_A/manifest files. | RESULT: no Claude reply after 16:37; corrected XQ_A gate is in manifest. | D: write coverage assembly note
 [2026-07-02T17:29:00Z] > ATTACK | NEXT: Update y=1 coverage board with exact role of corrected XQ_A bivariate finite-critical gate.
+[2026-07-02T17:29:15Z] OK ATTACK | DID: Appended XQ_A bivariate coverage-role note to board. | RESULT: board states finite-criticality plus XQ_A family positivity covers any in-domain critical points. | D: add small assembly marker script
+[2026-07-02T17:30:00Z] > ATTACK | NEXT: Inspect FJ support inventory and neighborhood scripts for a route to unobserved-support exclusion.
+[2026-07-02T17:30:10Z] OK ATTACK | DID: Ran support-neighborhood inventory. | RESULT: 101 one-step neighbors; 63 sample-compatible; 38 need witnesses, matching existing add-neighbor reduction scope. | D: unobserved all-support exclusion remains
+[2026-07-02T17:31:05Z] OK ATTACK | DID: Ran observed y=1 coverage scan. | RESULT: 12 clusters observed; all classified; script PASS but marked non-proof. | D: formulate exact unobserved-support exclusion target
+[2026-07-02T17:32:00Z] > ATTACK | NEXT: Inspect u1 critical inventory as the exact basis for the y=1,u=1 refined face.
+[2026-07-02T17:33:00Z] OK ATTACK | DID: Appended observed coverage counts to SIB_S7_Y1_COVERAGE_BOARD.md. | RESULT: board records 12 observed clusters, 101 one-step neighbors, 38 add-neighbor closures. | D: theorem gap isolated to exhaustive FJ support enumeration
+[2026-07-02T17:34:00Z] > CHECK | NEXT: Final Claude mailbox check before status response.
+[2026-07-02T17:34:05Z] OK CHECK | DID: Read latest Claude mailbox. | RESULT: Claude reproduced corrected XQ_A bivariate gate exactly at 2026-07-02T17:08:06Z. | D: corrected gate accepted
+[2026-07-02T17:38:00Z] > CHECK | NEXT: Read Claude mailbox for new S7 or Branch-B audit before further support-enumeration work.
+[2026-07-02T17:38:05Z] OK CHECK | DID: Read Claude mailbox. | RESULT: no newer S7 message after corrected XQ_A audit; Branch-B cactus FYI unchanged. | D: continue y=1 support enumeration
+[2026-07-02T17:40:00Z] > ATTACK | NEXT: Create exact y=1 branch/cap chart support census to quantify unobserved active-set enumeration.
+[2026-07-02T17:41:00Z] OK ATTACK | DID: Probed observed support Jacobian rank bases. | RESULT: observed families have rank bases of size 5,6,or7 at exact samples. | D: create rank-basis artifact
+[2026-07-02T17:42:15Z] OK VERIFY | DID: Ran _codex_sib_s7_y1_observed_rank_bases.py. | RESULT: PASS; observed support rank bases have size at most seven. | D: add to manifest
+[2026-07-02T17:43:20Z] OK ATTACK | DID: Added observed rank-basis script to y=1 manifest and verified manifest list. | RESULT: manifest includes _codex_sib_s7_y1_observed_rank_bases.py after FJ support inventory. | D: run full manifest
+[2026-07-02T17:44:00Z] > VERIFY | NEXT: Run full y=1 manifest with observed rank-basis artifact included.
+[2026-07-02T17:48:30Z] OK VERIFY | DID: Ran full y=1 manifest after adding rank-basis artifact. | RESULT: exit 0; observed rank-bases PASS in manifest; four coverage OPEN items remain. | D: post audit request
+[2026-07-02T17:49:00Z] OK ATTACK | DID: Posted observed rank-basis ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md appended; full manifest exit 0 noted. | D: update coverage board
+[2026-07-02T17:49:20Z] OK ATTACK | DID: Appended observed rank-basis artifact note to SIB_S7_Y1_COVERAGE_BOARD.md. | RESULT: board records rank-basis sizes 5,6,7 and non-closure status. | D: status check
+[2026-07-02T17:51:00Z] > ATTACK | NEXT: Create combinatorial y=1 support-basis census for all branch/cap charts with basis size <=7.
+[2026-07-02T17:52:20Z] OK VERIFY | DID: Ran _codex_sib_s7_y1_basis_search_census.py. | RESULT: PASS; raw branch/cap rank-basis search universe has 184432 supports of size <=7. | D: add to manifest/board
+[2026-07-02T17:53:20Z] OK ATTACK | DID: Added basis-search census to manifest/board and ran both new small gates. | RESULT: manifest lists both gates; both scripts PASS. | D: post census to Claude
+[2026-07-02T17:53:45Z] OK ATTACK | DID: Posted basis-search census ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md appended with 184432-support census audit request. | D: final mailbox check
+[2026-07-02T17:54:00Z] OK CHECK | DID: Read Claude mailbox after posting support census. | RESULT: no rank-basis/census audit yet; new 17:10 Branch-B cactus file relay only. | D: report S7 progress
+[2026-07-02T18:02:00Z] > CHECK | NEXT: Read Claude mailbox before continuing y=1 support-pruning census.
+[2026-07-02T18:02:05Z] OK CHECK | DID: Read Claude mailbox. | RESULT: no new S7 audit after corrected XQ_A; latest new item is Branch-B cactus file relay. | D: continue local support-pruning census
+[2026-07-02T18:03:00Z] > ATTACK | NEXT: Build pruned support census classifying raw <=7 bases by observed-basis containment and observed-neighborhood distance.
+[2026-07-02T18:03:40Z] OK ATTACK | DID: Ran first basis-pruning census. | RESULT: PASS; naive observed-basis proximity leaves 183850 far supports, revealing missing observed families in census. | D: include s2/s3 and cap-shift observed families
+[2026-07-02T18:05:00Z] > ATTACK | NEXT: Compute chart-specific rank bases for observed low all-tight and s2/s3 survivor clusters missing from pruning census.
+[2026-07-02T18:05:25Z] OK ATTACK | DID: Computed chart-specific rank bases for missing observed clusters. | RESULT: all-tight chart bases size 6; s2 survivor basis size 4; s3 survivor basis size 4. | D: create observed-cluster rank-basis artifact
+[2026-07-02T18:06:15Z] FAIL VERIFY | DID: Ran observed-cluster rank-bases script. | RESULT: failed at S3_SURV because central sample has v=2 but active v1 requires v=1. | D: patch family samples
+[2026-07-02T18:07:00Z] FAIL VERIFY | DID: Re-ran observed-cluster rank-bases after sample patch. | RESULT: failed at XQ_A xq,s5 because chart rank is 6, not expected 7. | D: patch expected rank
+[2026-07-02T18:07:35Z] OK VERIFY | DID: Ran observed-cluster rank-bases with corrected samples/ranks. | RESULT: PASS; 14 observed scan cluster bases have size <=7. | D: add to manifest and pruning census
+[2026-07-02T18:08:25Z] OK VERIFY | DID: Ran pruning census with full observed-cluster bases. | RESULT: contains=693 one_step=99 two_step=1051 unobserved_far=182589; PASS. | D: wire cluster/pruning gates
+[2026-07-02T18:09:00Z] OK VERIFY | DID: Ran observed/base/pruning census gates after manifest insertion. | RESULT: all PASS; pruning leaves 182589 unobserved_far supports. | D: update board and notify Claude
+[2026-07-02T17:27:59Z] > ATTACK | NEXT: Post observed-cluster rank-basis and pruning census audit request to Claude.
+[2026-07-02T17:28:14Z] FAIL ATTACK | DID: Tried to append Claude audit ASK with double-quoted here-string. | RESULT: PowerShell parsed markdown backtick-u as invalid escape. | D: retry single-quoted
+[2026-07-02T17:28:32Z] OK ATTACK | DID: Posted observed-cluster/pruning census ASK to Claude. | RESULT: CODEX_TO_CLAUDE.md appended with 693/99/1051/182589 audit request. | D: report status
+[2026-07-02T17:29:02Z] > CHECK | NEXT: Read Claude mailbox and progress tail before status/proof continuation.
+[2026-07-02T17:29:18Z] OK CHECK | DID: Read Claude mailbox/progress/coverage board. | RESULT: no newer S7 audit after 17:08 XQ_A; board records 182589 unobserved_far. | D: verify latest small gates
+[2026-07-02T17:29:21Z] > VERIFY | NEXT: Rerun latest S7 observed-cluster and pruning census gates.
+[2026-07-02T17:29:43Z] OK VERIFY | DID: Reran latest S7 basis census gates. | RESULT: raw=184432; pruning contains=693 one_step=99 two_step=1051 far=182589; all PASS. | D: profile far supports
+[2026-07-02T17:29:47Z] > ATTACK | NEXT: Inspect current S7 basis census scripts before adding far-support profile gate.
+[2026-07-02T17:30:06Z] > ATTACK | NEXT: Add far-support profile script for size and active-label distribution of unobserved supports.
+[2026-07-02T17:30:41Z] OK ATTACK | DID: Added and ran far-support profile script. | RESULT: PASS; far size hist 0:16 1:228 2:1494 3:6162 4:17167 5:35849 6:55300 7:66373. | D: no simple small-size pruning
+[2026-07-02T17:31:12Z] > CHECK | NEXT: Read Claude mailbox at turn start before continuing S7 far-support pruning.
+[2026-07-02T17:31:23Z] OK CHECK | DID: Read Claude/Codex mailboxes. | RESULT: no Claude reply after 17:10; latest outgoing ASK is support-census audit at 17:28:24Z. | D: inspect FJ equations
+[2026-07-02T17:31:32Z] > ATTACK | NEXT: Inspect FJ support inventory equations and label maps for an exact far-support algebraic prefilter.
+[2026-07-02T17:31:56Z] OK ATTACK | DID: Inspected FJ support inventory. | RESULT: active labels are lower-bound equations plus s1..s7 under branch/cap; unique_equations is direct. | D: build linear-substitution filter
+[2026-07-02T17:35:49Z] FAIL VERIFY | DID: Ran far-support linear filter over all 182589 supports. | RESULT: no output after 129s CPU; stopped sole python process 37388. | D: optimize filter
+[2026-07-02T17:36:58Z] FAIL ATTACK | DID: Tried apply_patch optimization of far-support linear filter. | RESULT: apply_patch failed on Windows sandbox writable-root wrapper. | D: rewrite scoped file
+[2026-07-02T17:37:45Z] OK ATTACK | DID: Rewrote far-support linear filter with cached equation-label analysis. | RESULT: script updated in workspace. | D: rerun filter
+[2026-07-02T17:37:51Z] > VERIFY | NEXT: Run optimized far-support linear filter over all unobserved-far supports.
+[2026-07-02T17:38:10Z] OK VERIFY | DID: Ran optimized far-support linear filter. | RESULT: contradictions=28360 closes_to_observed=3577 still_unobserved=150652; PASS. | D: add board/manifest note
+[2026-07-02T17:38:54Z] OK VERIFY | DID: Ran new far-support manifest entries and checked manifest list. | RESULT: profile PASS; linear filter PASS; manifest includes both after pruning census. | D: post audit

@@ -60,6 +60,12 @@ SCRIPTS = [
     "_codex_sib_s7_y1_tangent_root_inventory.py",
     "_codex_sib_s7_y1_xqa_bivariate_candidate_inventory.py",
     "_codex_sib_s7_y1_fj_support_inventory.py",
+    "_codex_sib_s7_y1_observed_rank_bases.py",
+    "_codex_sib_s7_y1_observed_cluster_rank_bases.py",
+    "_codex_sib_s7_y1_basis_search_census.py",
+    "_codex_sib_s7_y1_basis_pruning_census.py",
+    "_codex_sib_s7_y1_far_support_profile.py",
+    "_codex_sib_s7_y1_far_support_linear_filter.py",
     "_codex_sib_s7_y1_support_neighborhoods.py",
     "_codex_sib_s7_y1_support_neighbor_reductions.py",
     "_codex_sib_s7_y1_alltight_drop_faces.py",
@@ -112,6 +118,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
