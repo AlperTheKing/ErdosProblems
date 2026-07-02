@@ -538,3 +538,204 @@ The exact next gate should test this peel ordering directly: build all
 protected cells for selected UNIT atoms in a cut, construct their intersection
 graph, and verify that every nontrivial intersection component is either a
 single protected cell or a previously detected multi-leaf fan component.
+
+## Endpoint Fan-Cut Gate
+
+I added:
+
+```text
+problems/23/writeup/_codex_slack_cage_unit_fan_cut_gate.py
+```
+
+This gate groups selected UNIT atoms by their common four-row core, forms the
+endpoint fan-side cut, and measures its maxcut slack `sigma`.
+
+It detects the intended theta obstruction exactly:
+
+```text
+intended theta:
+  t=2: sigma=0
+  t=3: sigma=-1
+  t=4: sigma=-2
+  t=5: sigma=-3
+  t=6: sigma=-4
+```
+
+Thus the multi-leaf intended theta family is forbidden by maxcut as soon as
+there are three selected leaves sharing the same two-door fan.
+
+True cuts pass:
+
+```text
+theta gmins through t=8:
+  atoms only at t=2
+  fan_records=6
+  negative=0
+  sigma_hist={0:6}
+
+shared-path fan intended t=2:
+  fan_records=1
+  sigma_hist={0:1}
+```
+
+The shared-path fan guardrail again shows that fan-side sigma alone is not
+enough; its two-leaf atom is maxcut-tight but has no outside protector.
+
+Full census:
+
+```text
+N=10:
+  atoms=6
+  fan_records=10
+  negative=0
+  sigma_hist={0:10}
+
+N=11:
+  atoms=20
+  fan_records=33
+  negative=0
+  sigma_hist={0:33}
+```
+
+So every census fan-side record is maxcut-tight, while the intended
+multi-leaf theta failures expose strictly negative slack.
+
+## Protected-Cell Peel Gate
+
+I added:
+
+```text
+problems/23/writeup/_codex_slack_cage_unit_peel_gate.py
+```
+
+For each selected UNIT atom, it constructs the protected cell
+
+```text
+C = U union outside_B_path
+```
+
+and checks:
+
+```text
+|C| >= 10,
+e_M(C) = 2,
+delta_M(C) = 0,
+```
+
+then builds the protected-cell intersection components.  The current gate
+accepts only singleton components unless the component has already been killed
+by the fan-collapse branch.
+
+Exact results:
+
+```text
+intended theta:
+  t=2: atom_count_hist={1:1}, local cell passes
+  t=3..6: missing_cell=3,6,10,15 respectively, FAIL
+
+theta gmins through t=12:
+  atom_count_hist={0:150,1:4}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+  VERDICT=PASS_PROTECTED_CELL_PEEL
+
+N=10 full census:
+  graphs=9832
+  cuts=15497
+  atom_count_hist={0:15491,1:6}
+  cell_comp_hist={(1,):6}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+  VERDICT=PASS_PROTECTED_CELL_PEEL
+
+N=11 full census:
+  graphs=90842
+  cuts=164986
+  atom_count_hist={0:164966,1:20}
+  cell_comp_hist={(1,):20}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+  VERDICT=PASS_PROTECTED_CELL_PEEL
+```
+
+This leaves a precise structural obligation:
+
+```text
+canonical selected UNIT atoms either form a maxcut-forbidden multi-leaf fan,
+or admit a peel ordering by protected cells with |C|>=10, e_M(C)=2,
+delta_M(C)=0.
+```
+
+## Glued Multi-Cell Stress
+
+I added:
+
+```text
+problems/23/writeup/_codex_slack_cage_multi_protected_cell_stress.py
+```
+
+It glues `k` copies of the known `N=10` protected atom `I?AAD@wF_` by blue
+cut bridges.  This creates a connected-B cut with several independent local
+UNIT atoms, testing the peel bookkeeping not exercised by the `N<=11`
+census.
+
+The generic collector is already clean for two copies:
+
+```text
+python -u problems/23/writeup/_codex_slack_cage_multi_protected_cell_stress.py --max-k 2
+
+k=1: atom_hist={1:1}, cell_comp_hist={(1,):1}
+k=2: atom_hist={2:1}, cell_comp_hist={(1,1):1}
+VERDICT=PASS_GLUED_PROTECTED_CELL_STRESS
+```
+
+For larger `k`, a targeted shifted-atom collector avoids brute-force row-union
+mixing across copies:
+
+```text
+python -u problems/23/writeup/_codex_slack_cage_multi_protected_cell_stress.py \
+  --targeted --max-k 8
+
+k=1..8:
+  targeted_atoms=k
+  cell_comp_hist={(1,...,1):1}
+  missing=0
+  bad_cell=0
+VERDICT=PASS_GLUED_PROTECTED_CELL_STRESS
+```
+
+So the protected-cell peel abstraction handles multiple disjoint cells when
+they are present.  The remaining untested/proof-critical case is not
+disjoint gluing; it is overlapping protected cells or a multi-leaf fan core.
+
+The same script now has a first overlapping-cell guardrail:
+
+```text
+python -u problems/23/writeup/_codex_slack_cage_multi_protected_cell_stress.py \
+  --nested-overlap
+```
+
+This tries to reuse the base protector path as a second UNIT core.  It does
+not produce an admissible protected-cell overlap:
+
+```text
+atom_count_hist={1:1}
+bad_cell=1
+first_bad_cell has:
+  cell_size=10
+  cell_bad_inside=3
+  cell_bad_boundary=1
+
+bad_intended=4
+max_bad=2
+intended_conn_max=False
+min_sigma=-2
+VERDICT=PASS_NESTED_OVERLAP_GUARDRAIL
+```
+
+So the most direct overlap attempt is already killed by maxcut, and before
+that it fails the protected-cell condition because an extra bad edge crosses
+or enters the would-be cell.

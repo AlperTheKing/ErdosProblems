@@ -678,6 +678,275 @@ VERDICT PASS
 Thus the boundary-lift conjecture has no exact integer counterexample in this
 large reduced box, and the closest strict interior point is stable.
 
+### Rational step-monotonicity scout for boundary lift
+
+The integral boundary-lift scan is somewhat sparse because
+
+```text
+r(a)=(x*p+y*q+q*p-a*p)/(y+p)
+```
+
+is rarely integral for two adjacent values of `a`.  I added a rational scout:
+
+```text
+python problems/23/writeup/_codex_ocpms_mask47_a_step_scan.py --max-weight 20
+```
+
+It allows rational `r` while keeping the other variables integral and checks
+adjacent feasible pairs:
+
+```text
+F(a,x,y,p,q,r(a)) >= F(a-1,x,y,p,q,r(a-1)).
+```
+
+Exact output:
+
+```text
+B 20 compared 790773 lower 0
+best_diff 235017313/29978025
+w    (6,1,1,1,1,4,5,5,1,4)
+prev (5,1,1,1,1,4,5,5,9/5,4)
+VERDICT PASS
+```
+
+This strengthens the boundary-lift target: instead of proving only
+`F(a)>=F(1)`, it may be possible to prove monotonicity along the `D0=m`
+line in the hard mask-47 complement.  The previous raw shifted-coefficient
+tests for `dF/da` and `(F(a)-F(1))/(a-1)` remain false, so the monotonicity
+proof must still use the remaining feasibility inequalities or a bounded
+Bernstein parameterization in `a`.
+
+I then ported the rational scan to C++ with exact `cpp_int` rational
+arithmetic:
+
+```text
+g++ -O2 -std=c++17 problems/23/writeup/_codex_ocpms_mask47_a_step_scan_rat.cpp \
+  -o problems/23/writeup/_codex_ocpms_mask47_a_step_scan_rat.exe
+
+problems\23\writeup\_codex_ocpms_mask47_a_step_scan_rat.exe 60 64
+```
+
+The C++ scanner allows rational `r`, checks the full seven-cut feasibility
+for both adjacent points, and records bucket minima.  Exact output:
+
+```text
+B 60 workers 64 compared 205817531 lower 0
+best_diff 235017313/29978025
+w    6 1 1 1 1 4 5 5 1 4
+prev 5 1 1 1 1 4 5 5 9/5 4
+
+bucket y<x best_diff 198683919818/7601984775
+w    12 2 1 1 2 4 9 9 1 4
+prev 11 2 1 1 2 4 9 9 9/5 4
+
+bucket y>=x,d<=s best_diff 235017313/29978025
+w    6 1 1 1 1 4 5 5 1 4
+prev 5 1 1 1 1 4 5 5 9/5 4
+
+bucket y>=x,d>s best_diff 279165298779/5581761568
+w    9 1 3 3 1 5 6 6 1 5
+prev 8 1 3 3 1 5 6 6 13/8 5
+
+VERDICT PASS
+```
+
+The bucket minima are already stable from `B=20` to `B=60`, suggesting that
+the monotonicity proof should split by the same three `a=1` boundary buckets.
+The hardest bucket is `y>=x,d<=s`, with `x=y=1`, `q=p+1`, and the interior
+point at the lower `r=1` boundary.
+
+On that apparent hardest ray, set
+
+```text
+x=y=1,\qquad q=p+1,\qquad a:p+1\to p+2.
+```
+
+Then
+
+```text
+r(p+1)=2-1/(p+1),\qquad r(p+2)=1.
+```
+
+The exact step difference factors as
+
+```text
+F(p+2,1)-F(p+1,2-1/(p+1))
+= P(p) /
+  ((p+1)^2(p+2)^2(p^2+3p+1)
+   (p^3+4p^2+6p+2)(p^3+5p^2+8p+3)),
+```
+
+where
+
+```text
+P(p)=20p^12+226p^11+1035p^10+3133p^9+11770p^8
+     +48266p^7+137008p^6+241874p^5+262796p^4
+     +172168p^3+64306p^2+12082p+816.
+```
+
+After shifting `p=1+P0`, every coefficient is positive:
+
+```text
+20P0^12+466P0^11+4841P0^10+30313P0^9+133732P0^8
++469834P0^7+1407844P0^6+3512458P0^5+6737084P0^4
++9159744P0^3+8147705P0^2+4213095P0+955500.
+```
+
+Thus the stable nearest ray itself is not an obstruction; the remaining proof
+should express the general `y>=x,d<=s` step difference as this positive ray
+plus nonnegative deviation terms in `h`, `d`, `e`, and `q-p-1`.
+
+### Current-r boundary split
+
+I patched the exact rational scanner to split each bucket by the current value
+of the moving variable:
+
+```text
+current r=1
+current r>1
+```
+
+The command
+
+```text
+problems/23/writeup/_codex_ocpms_mask47_a_step_scan_rat.exe 40 32
+```
+
+prints:
+
+```text
+B 40 workers 32 compared 26652408 lower 0
+best_diff 235017313/29978025 w 6 1 1 1 1 4 5 5 1 4 prev 5 1 1 1 1 4 5 5 9/5 4
+bucket y<x r=1 best_diff 198683919818/7601984775 w 12 2 1 1 2 4 9 9 1 4 prev 11 2 1 1 2 4 9 9 9/5 4
+bucket y<x r>1 best_diff 1042914330122/39126747825 w 11 2 1 1 2 4 9 9 9/5 4 prev 10 2 1 1 2 4 9 9 13/5 4
+bucket y>=x,d<=s r=1 best_diff 235017313/29978025 w 6 1 1 1 1 4 5 5 1 4 prev 5 1 1 1 1 4 5 5 9/5 4
+bucket y>=x,d<=s r>1 best_diff 260371100555/29524241983 w 6 1 1 1 1 5 6 6 11/6 5 prev 5 1 1 1 1 5 6 6 8/3 5
+bucket y>=x,d>s r=1 best_diff 279165298779/5581761568 w 9 1 3 3 1 5 6 6 1 5 prev 8 1 3 3 1 5 6 6 13/8 5
+bucket y>=x,d>s r>1 best_diff 543947347/10806488 w 8 1 3 3 1 5 6 6 13/8 5 prev 7 1 3 3 1 5 6 6 9/4 5
+VERDICT PASS
+```
+
+So in all three bucket splits the observed minimum lies on the `current r=1`
+boundary.  The next symbolic reduction should prove the `r=1` boundary first,
+then prove that increasing the current `r` only increases the step difference.
+
+### Sparse-polynomial `r=1` boundary certificates
+
+Direct SymPy expansion of the full `r=1`, `y>=x,d<=s` step difference is too
+large.  I added a small exact sparse-polynomial engine:
+
+```text
+problems/23/writeup/_codex_ocpms_mask47_step_r1_sparsepoly.py
+```
+
+It constructs the rational PMS step difference and clears denominators by the
+product of the displayed positive denominators, avoiding symbolic
+simplification.  Verified faces:
+
+```text
+python problems/23/writeup/_codex_ocpms_mask47_step_r1_sparsepoly.py --face xy1
+terms 805 negative 0 min_coeff 12
+VERDICT PASS
+```
+
+This is the face
+
+```text
+x=y=1,\qquad q=p+e,\qquad e>=1.
+```
+
+The full `x=1` face needed the domain split because the raw unshifted face
+has negative coefficients at the excluded corner `d=e=0`.
+
+```text
+python problems/23/writeup/_codex_ocpms_mask47_step_r1_sparsepoly.py --face x1_epos
+terms 20601 negative 0 min_coeff 4
+VERDICT PASS
+
+python problems/23/writeup/_codex_ocpms_mask47_step_r1_sparsepoly.py --face x1_e0_dpos
+terms 1868 negative 0 min_coeff 4
+VERDICT PASS
+```
+
+So the entire `x=1` slice of the `r=1`, `d<=s` bucket is closed:
+
+```text
+x=1,\quad y=1+d,\quad q=p+d+e,\quad (e>=1\ \text{or}\ e=0,d>=1).
+```
+
+The symmetric-looking slice
+
+```text
+d=0,\quad x=y=1+h,\quad q=p+e,\quad e>=1
+```
+
+also closes:
+
+```text
+python problems/23/writeup/_codex_ocpms_mask47_step_r1_sparsepoly.py --face d0
+terms 18692 negative 0 min_coeff 4
+VERDICT PASS
+```
+
+A direct full sparse certificate is still too large: the `full` face has
+denominator polynomials with up to `1454` terms and did not start assembly in
+one minute.  The remaining `r=1` interior should therefore be attacked as
+`h>0,d>0` via deviation/monotonicity from the now-closed `x=1` and `d=0`
+boundary slices.
+
+I also added a finite exact Fraction monotonicity scanner:
+
+```text
+problems/23/writeup/_codex_ocpms_mask47_step_r1_mono_scan.py
+```
+
+It checks adjacent increases in the three deviation variables:
+
+```text
+h -> h+1,
+d -> d+1,
+e -> e+1.
+```
+
+For `B=20` it prints:
+
+```text
+B 20 compared {'h': 184800, 'd': 184800, 'e': 184800} lower {'h': 0, 'd': 0, 'e': 0}
+VERDICT PASS
+```
+
+So finite evidence says the `r=1` step difference is nondecreasing in all
+three deviation directions.  If this can be proved symbolically, then the
+closed `x=1` face alone lifts to the full `r=1,d<=s` bucket.  A direct sparse
+common-denominator proof of `h`-monotonicity was still too large: even the
+`e=0,d>=1` split has sixteen denominator factors with up to `589` terms and
+did not start assembly in one minute.
+
+I ported this monotonicity scan to exact C++ rational arithmetic:
+
+```text
+g++ -O2 -std=c++17 problems/23/writeup/_codex_ocpms_mask47_step_r1_mono_scan_rat.cpp \
+  -o problems/23/writeup/_codex_ocpms_mask47_step_r1_mono_scan_rat.exe
+
+problems\23\writeup\_codex_ocpms_mask47_step_r1_mono_scan_rat.exe 60 64
+```
+
+Output:
+
+```text
+B 60 workers 64
+axis h compared 13615200 lower 0 best_delta 31031911863644543938/2238940288507524525 from (8,0,1,0) to (8,0,1,1) base 25956204904/2650684419 next 179804837518/7601984775
+axis d compared 13615200 lower 0 best_delta 3754287124000312828683205719337979839/183621963338921088977443364973838320 from (60,1,0,0) to (60,2,0,0) base 1565062461812001233/41234780697921008 next 203109236383055692986413/3477859004957138320365
+axis e compared 13615200 lower 0 best_delta 26706403118733070170184636715962304702291123/128492101077933692839103363595703290564864945 from (60,0,60,0) to (60,0,61,0) base 747105533487311912925074500084/23851407077169444160042910115 next 4424460367554389010683/140320180941464314021
+VERDICT PASS
+```
+
+Thus the deviation-monotonicity direction is stable over `13,615,200`
+adjacent exact comparisons per axis.  The smallest `h` increment remains the
+same small point already seen at `B=20`; the smallest `d` and `e` increments
+drift to the edge of the tested box, suggesting their symbolic proof may need
+asymptotic boundary normalization.
+
 ### Real strip on `a=1`, `y>=x`, `y-x>q-p`
 
 Claude observed that the previous infeasibility argument for this bucket was

@@ -73,16 +73,31 @@ The next proof obligations are:
 
    contradicting positive debt.  Hence some cage has `sigma(S)=0`.
 
-3. Flat-cell separation:
-   For a zero-slack cage, either the terminal replacement has strict square
-   gain and gives `DeltaGamma(S)<0`, or the cage is a balanced Flat5 cell with
-   zero local debt.  The balanced case must be paid by the eta bank and cannot
-   be the source of a positive-debt minimal pair.
+3. Flat-cell / Xi2 separation:
+   The informal implication
+
+   ```text
+   zero-slack non-balanced cage => DeltaGamma(S)<0
+   ```
+
+   is false.  `C7` with an alternating maximum cut has zero-slack terminal
+   prefix rotations with `DeltaGamma(S)=0`; they just move the unique bad edge
+   around the odd cycle.  The strict condition must instead be residual and
+   square-surplus based:
+
+   ```text
+   zero-slack + rho_Q(S)>0 + not banked Flat5 => Xi2(S)>0.
+   ```
+
+   Then a witness SDR from blue exits to crossing bad edges gives
+   `DeltaGamma(S)<0`.  Flat5 cages with `Xi2(S)=0` are bank cases, and odd-cycle
+   rotations with `Xi2(S)=0` have no residual positive debt.
 
 4. Connectivity preservation:
    The cage extraction must either build `B^S` connected by construction or
    include the blue-closed/moat closure needed to make the switch connected.
 
-This leaves the proof attack focused on the abstract decomposition and
-Flat5-bank exclusion, rather than on further small-census counterexample
-search.
+This leaves the proof attack focused on the abstract decomposition,
+positive-part Flat5 bank packing, and the `STRICT-RESIDUAL` implication
+`rho_Q(S)>0 => Xi2(S)>0` for zero-slack non-bank cages, rather than on the
+false non-balanced shortcut.

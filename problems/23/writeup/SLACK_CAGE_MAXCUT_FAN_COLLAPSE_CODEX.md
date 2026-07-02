@@ -254,3 +254,112 @@ three selected leaves sharing the same first-door side
   => at least three bad boundary edges but only two blue side doors
   => sigma<0.
 ```
+
+## Endpoint Fan-Cut Gate
+
+I added:
+
+```text
+problems/23/writeup/_codex_slack_cage_unit_fan_cut_gate.py
+```
+
+This gate builds the endpoint fan-side cut associated to each selected
+common-four core and computes its actual `sigma`.
+
+Generated guardrails:
+
+```text
+intended theta:
+  t=2: sigma=0
+  t=3: sigma=-1
+  t=4: sigma=-2
+  t=5: sigma=-3
+  t=6: sigma=-4
+
+theta gmins through t=8:
+  atoms only at t=2
+  fan_records=6
+  negative=0
+  sigma_hist={0:6}
+
+shared-path fan intended t=2:
+  fan_records=1
+  negative=0
+  sigma_hist={0:1}
+```
+
+Full census:
+
+```text
+N=10:
+  atoms=6
+  fan_records=10
+  negative=0
+  sigma_hist={0:10}
+
+N=11:
+  atoms=20
+  fan_records=33
+  negative=0
+  sigma_hist={0:33}
+```
+
+So the intended theta obstruction is exactly a negative-slack fan-side cut
+when `t>=3`, while every selected census fan-side record is maxcut-tight.
+The shared-path fan still requires the protector-path gate, because its
+two-leaf cut is tight but unprotected.
+
+## Protected-Cell Peel Gate
+
+The stronger protected-cell gate is:
+
+```text
+problems/23/writeup/_codex_slack_cage_unit_peel_gate.py
+```
+
+For each selected UNIT atom, it constructs
+
+```text
+C = U union outside_B_path
+```
+
+and verifies:
+
+```text
+|C| >= 10,
+e_M(C) = 2,
+delta_M(C) = 0.
+```
+
+Then it checks the intersection graph of protected cells.  Current exact
+results:
+
+```text
+theta intended:
+  t=2: atom_count_hist={1:1}, local cell passes
+  t=3..6: missing_cell=3,6,10,15 respectively, FAIL
+
+theta gmins through t=12:
+  atom_count_hist={0:150,1:4}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+
+N=10 full census:
+  atom_count_hist={0:15491,1:6}
+  cell_comp_hist={(1,):6}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+
+N=11 full census:
+  atom_count_hist={0:164966,1:20}
+  cell_comp_hist={(1,):20}
+  missing_cell=0
+  bad_cell=0
+  overlap_fail=0
+```
+
+This converts the local fan-collapse target into the current global packing
+target: prove that canonical selected UNIT atoms either enter a negative-slack
+multi-leaf fan or can be peeled by bad-boundary-free protected cells.

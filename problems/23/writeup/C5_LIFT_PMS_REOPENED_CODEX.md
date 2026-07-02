@@ -504,6 +504,50 @@ Thus the current active-size decomposition has survived the equality and
 sibling quotient seeds through max weight `3` in all three branches:
 active `<=3`, active `=4`, and active `=5`.
 
+### Active-all-five `{1,2,3,4}` quotient orbit gates
+
+After the OHDX refinement, the only full-row C5 quotient burden is the
+active-all-five overfull branch.  I reran the active-5 gate with weight orbits
+and weights in `{1,2,3,4}`:
+
+```text
+python problems/23/writeup/_codex_parallel_active_gate.py --graph eq --max-weight 4 --coeff 2/3 --active-min 5 --active-max 5 --workers 56 --shards 56 --weight-orbits
+
+weights=1048576
+orbit_skips=941664
+qmax_cuts=213213
+rows_checked=207739
+fails=0
+worst_margin=0
+worst all-ones equality atom:
+  N=10, m=3, eta=1,
+  Q=(7,5,8,6,9),
+  row_sum=32/3,
+  debt=2/3.
+
+python problems/23/writeup/_codex_parallel_active_gate.py --graph sib --max-weight 4 --coeff 2/3 --active-min 5 --active-max 5 --workers 56 --shards 56 --weight-orbits
+
+weights=1048576
+orbit_skips=522240
+qmax_cuts=926894
+rows_checked=754765
+fails=0
+worst_margin=1/3
+worst all-ones sibling atom:
+  N=10, m=3, eta=1,
+  Q=(1,6,8,4,9),
+  row_sum=31/3,
+  debt=1/3.
+max_ratio_by_active_mask worst ratio:
+  1028/2261 at weights [2,1,2,1,2,1,2,1,1,2],
+  margin 2876/6783.
+```
+
+This is evidence only for the active-all-five full-row stability branch
+`row_sum <= N + (2/3)eta`.  It does not revive the later fixed-mask or
+active-size split with small proper-mask coefficients; that split is killed by
+the exact Myc(Grotzsch) guardrail below.
+
 ### Fixed-mask-size strengthening
 
 The active-size split can be strengthened to fixed row masks.  For every
