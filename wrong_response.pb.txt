@@ -1,0 +1,12 @@
+status: OPTIMAL
+solution: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+objective_value: 59
+best_objective_bound: 59
+num_booleans: 89
+wall_time: 0.0461658
+user_time: 0.0461659
+deterministic_time: 0.0072545811906648758
+solution_info: "lb_tree_search"
+gap_integral: 0.0094823374460483462
+inner_objective_lower_bound: -59
+num_integers: 62

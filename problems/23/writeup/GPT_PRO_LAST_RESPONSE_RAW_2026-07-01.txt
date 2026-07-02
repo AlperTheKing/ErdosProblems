@@ -1,0 +1,1067 @@
+The literal step “non-balanced zero-slack cage ⇒ ΔΓ<0” is false. The smallest obstruction is C
+7
+	​
+
+: take the alternating max cut, so B is a path and the single bad edge closes the 7-cycle. Any terminal prefix S has ∣δ
+B
+	​
+
+(S)∣=∣δ
+M
+	​
+
+(S)∣=1, B
+S
+ connected, and flipping only moves the bad edge around the cycle. Thus ΔΓ=7
+2
+−7
+2
+=0. It has no positive row-debt, so the repaired strict lemma must say:
+
+zero-slack + residual-positive + not banked C5-flat⟹ΔΓ<0.
+
+Here is the concrete lemma tree I would gate/prove.
+
+1. Canonical terminal-cage decomposition
+
+For the fixed failed pair (Q,U), define the counted weighted row family
+
+R={r=(g,P):g∈M, P∈cyc[g], V(P)⊂U, V(P)∩V(Q)
+
+=∅},α
+r
+	​
+
+=
+∣cyc[g]∣
+1
+	​
+
+.
+
+Define the row-overlap measure
+
+μ(X)=
+r=(g,P)∈R
+∑
+	​
+
+α
+r
+	​
+
+∣V(P)∩V(Q)∩X∣.
+
+So
+
+μ(U)=D
+Q
+	​
+
+(U).
+
+For an oriented row P=(p
+0
+	​
+
+,…,p
+ℓ−1
+	​
+
+), call a subset S row-terminal for P if S∩V(P) is one of
+
+∅,V(P),{p
+0
+	​
+
+,…,p
+i
+	​
+
+},{p
+i
+	​
+
+,…,p
+ℓ−1
+	​
+
+}.
+
+Define the terminal closure tc(X)⊆U by the following deterministic saturation.
+
+Start with X
+0
+	​
+
+=X. Given X
+t
+	​
+
+, repeatedly apply:
+
+Row-terminal saturation.
+If some counted row P=(p
+0
+	​
+
+,…,p
+ℓ−1
+	​
+
+) has X
+t
+	​
+
+∩V(P) nonterminal, replace X
+t
+	​
+
+∩V(P) by the smallest terminal superset if exactly one endpoint of P is already in X
+t
+	​
+
+. If neither endpoint or both endpoints are in X
+t
+	​
+
+, add all of V(P).
+
+Blue side-door closure.
+If e=xy∈B has x∈X
+t
+	​
+
+, y∈U∖X
+t
+	​
+
+, and no counted row has e as its first exit from X
+t
+	​
+
+, add y.
+
+Boundary abort.
+If the same unwitnessed blue edge has y∈
+/
+U, mark this seed as non-cage-generating.
+
+The process terminates because vertices are only added. A non-aborted fixed point S=tc(X) satisfies:
+
+∀r∈R,S∩V(P
+r
+	​
+
+) is terminal or full,
+
+and every blue boundary edge of S is witnessed by a counted row as a first exit.
+
+A canonical cage is an inclusion-minimal nonempty fixed point S=tc(S) such that B
+S
+ is connected and
+
+ρ
+Q
+	​
+
+(S)>0,
+
+where the residual surplus is
+
+ρ
+Q
+	​
+
+(S)=μ(S)−∣S∣−σ(S)−β
+5
+	​
+
+(S).
+
+Here β
+5
+	​
+
+(S) is the banked length-5 flat-cell term defined below.
+
+The decomposition statement to prove/gate is:
+
+Lemma CTD — canonical terminal-cage decomposition
+
+If
+
+D
+Q
+	​
+
+(U)−∣U∣−σ(U)−η>0,
+
+then after applying the terminal-closure peeling to the positive part of the signed measure
+
+μ(X)−∣X∣−σ(X)−β
+5
+	​
+
+(X),
+
+there is a canonical cage S⊆U with
+
+ρ
+Q
+	​
+
+(S)>0.
+
+Moreover, the chosen S may be taken inclusion-minimal among all positive residual fixed points.
+
+Exact gate. For every minimal failed (Q,U), compute R, μ, all terminal-closed S⊆U, and verify:
+
+S=tc(S), B
+S
+ connected
+max
+	​
+
+(μ(S)−∣S∣−σ(S)−β
+5
+	​
+
+(S))>0.
+
+This is the cleanest gate because it avoids arbitrary prefix-Hall: the side-door closure is built into tc.
+
+2. Balanced C5-cell bank
+
+A flat length-5 cell Z is a maximal five-class structure
+
+Z=(Z
+0
+	​
+
+,Z
+1
+	​
+
+,Z
+2
+	​
+
+,Z
+3
+	​
+
+,Z
+4
+	​
+
+)
+
+such that, after cyclic indexing,
+
+Z
+i
+	​
+
+Z
+i+1
+	​
+
+⊆B(i=0,1,2,3),Z
+4
+	​
+
+Z
+0
+	​
+
+⊆M,
+
+and every shortest row for every bad edge in Z
+4
+	​
+
+Z
+0
+	​
+
+ is exactly
+
+z
+0
+	​
+
+z
+1
+	​
+
+z
+2
+	​
+
+z
+3
+	​
+
+z
+4
+	​
+
+,z
+i
+	​
+
+∈Z
+i
+	​
+
+.
+
+Triangle-freeness forces no additional edges inside the induced five-class cell: any chord Z
+i
+	​
+
+Z
+j
+	​
+
+ with j
+
+≡i±1(mod5) creates either a triangle or a shorter B-geodesic.
+
+Let n
+i
+	​
+
+=∣Z
+i
+	​
+
+∣, n=∑
+i
+	​
+
+n
+i
+	​
+
+, and assume the bad pair Z
+4
+	​
+
+Z
+0
+	​
+
+ is the minimum adjacent product:
+
+n
+0
+	​
+
+n
+4
+	​
+
+≤n
+i
+	​
+
+n
+i+1
+	​
+
+∀i(mod5).
+
+For fixed Q, define a
+i
+	​
+
+=1 if Q uses a vertex of Z
+i
+	​
+
+, and a
+i
+	​
+
+=0 otherwise. The cell contribution to D
+Q
+	​
+
+ is
+
+μ
+Q
+	​
+
+(Z)=a
+0
+	​
+
+n
+4
+	​
+
++a
+4
+	​
+
+n
+0
+	​
+
++n
+0
+	​
+
+n
+4
+	​
+
+(
+n
+1
+	​
+
+a
+1
+	​
+
+	​
+
++
+n
+2
+	​
+
+a
+2
+	​
+
+	​
+
++
+n
+3
+	​
+
+a
+3
+	​
+
+	​
+
+).
+
+Define the local bank demand
+
+β
+Q
+	​
+
+(Z)=[μ
+Q
+	​
+
+(Z)−n]
++
+	​
+
+.
+
+The algebraic cell inequality is:
+
+Lemma BANK5-local
+
+For every flat length-5 cell,
+
+β
+Q
+	​
+
+(Z)≤
+25
+n
+2
+	​
+
+−n
+0
+	​
+
+n
+4
+	​
+
+.
+
+Proof. Since μ
+Q
+	​
+
+(Z) is maximized when a
+0
+	​
+
+=⋯=a
+4
+	​
+
+=1, it is enough to prove
+
+n
+0
+	​
+
++n
+4
+	​
+
++n
+0
+	​
+
+n
+4
+	​
+
+(
+n
+1
+	​
+
+1
+	​
+
++
+n
+2
+	​
+
+1
+	​
+
++
+n
+3
+	​
+
+1
+	​
+
+)−n≤
+25
+n
+2
+	​
+
+−n
+0
+	​
+
+n
+4
+	​
+
+.
+
+Set a=n
+0
+	​
+
+, b=n
+4
+	​
+
+, x=n
+1
+	​
+
+, y=n
+2
+	​
+
+, z=n
+3
+	​
+
+, and p=ab. The minimum-adjacent-product condition gives
+
+x≥b,z≥a,xy≥p,yz≥p.
+
+The left side is maximized by taking x=b, z=a, and y=max(a,b), because p/t−t is strictly decreasing in t>0. Assume a≥b. Then the inequality reduces to
+
+ab+b−a≤
+25
+(3a+2b)
+2
+	​
+
+.
+
+Equivalently,
+
+0≤9a
+2
+−13ab+4b
+2
++25a−25b=(a−b)(9a−4b+25),
+
+which is true for a≥b. The case b≥a is symmetric. ∎
+
+The global bank statement needed is:
+
+Lemma BANK5-global
+
+For the banked flat C5 cells selected by the canonical decomposition,
+
+Z
+∑
+	​
+
+β
+Q
+	​
+
+(Z)≤η.
+
+This is not automatic from BANK5-local unless the selected cells satisfy the global packing inequality
+
+Z
+∑
+	​
+
+(
+25
+n(Z)
+2
+	​
+
+−m(Z))≤
+25
+N
+2
+	​
+
+−m.
+(BANK-PACK)
+
+So the exact-testable bank gate should be exactly BANK-PACK, not an informal “C5 cells are paid by η” claim.
+
+Gate. For every minimal positive-debt pair, build the maximal banked flat C5 cells selected by the closure peeling and test
+
+Z
+∑
+	​
+
+β
+Q
+	​
+
+(Z)≤η.
+
+If this fails, the proof route fails at the bank, not at Gamma descent.
+
+3. Residual cage surplus forces zero slack
+
+For a canonical cage S, write
+
+C(S)=δ
+M
+	​
+
+(S),E(S)=δ
+B
+	​
+
+(S).
+
+Also write
+
+C
+cnt
+	​
+
+(S)={g∈C(S):∃r=(g,P)∈R crossing S}.
+
+Every e∈E(S) is witnessed by at least one counted crossing row by terminal closure. Define the witness graph
+
+W
+S
+	​
+
+⊆C
+cnt
+	​
+
+(S)×E(S),
+
+where g∼e if some counted shortest row of g first exits S through e.
+
+The residual surplus identity should be stated in the following non-circular form.
+
+Lemma ZERO-SLACK
+
+Let S be an inclusion-minimal canonical cage with
+
+ρ
+Q
+	​
+
+(S)>0.
+
+Then
+
+σ(S)=0.
+
+Equivalently,
+
+∣δ
+B
+	​
+
+(S)∣=∣δ
+M
+	​
+
+(S)∣.
+
+The proof target is the inequality
+
+μ(S)−∣S∣−β
+5
+	​
+
+(S)≤σ(S)
+(ZS)
+
+for every canonical cage with σ(S)>0.
+
+Proof mechanism. For σ(S)>0, choose a blue boundary edge e∈E(S) whose removal from the exit multiset preserves all first-exit witnesses except those rows whose terminal prefix is forced by e. Because S is inclusion-minimal and blue-side-door closed, deleting the terminal block behind such an e lowers μ(S)−∣S∣−β
+5
+	​
+
+(S) by at most one and lowers σ(S) by exactly one. Iterating gives (ZS). The only equality obstruction is a flat length-5 cell, and that exact amount has already been removed into β
+5
+	​
+
+.
+
+This is the correct local gate:
+
+Gate ZS. Enumerate all canonical cages S. For every one with σ(S)>0, verify
+
+μ(S)−∣S∣−β
+5
+	​
+
+(S)≤σ(S).
+
+Then any positive residual cage has σ(S)=0.
+
+This gate is much sharper than scalar Hall: it only tests terminal-closed, side-door-corrected cages.
+
+4. Square-length comparison and strict Gamma drop
+
+For a zero-slack canonical cage S, define
+
+C=C(S),E=E(S),∣C∣=∣E∣.
+
+For e∈E, define
+
+λ
+S
+	​
+
+(e)=min{ℓ(g):g∈C
+cnt
+	​
+
+(S), g∼e}.
+
+Define the square-surplus matching number
+
+Ξ
+2
+	​
+
+(S)=
+g∈C
+∑
+	​
+
+ℓ(g)
+2
+−
+ν:E↪C, ν(e)∼e
+min
+	​
+
+e∈E
+∑
+	​
+
+ℓ(ν(e))
+2
+.
+
+If no such witness bijection exists, set Ξ
+2
+	​
+
+(S)=−∞.
+
+The necessary Hall statement is:
+
+Lemma SDR-SQ
+
+Every zero-slack canonical residual cage admits a witness bijection
+
+ν:E→C
+
+with ν(e)∼e.
+
+This is the only Hall input needed, and it is not the dead scalar Hall route because the input family has already been terminal-closed and blue-side-door-corrected.
+
+Now the strict Gamma comparison is clean.
+
+Lemma SQ-DROP
+
+Assume S is a safe zero-slack canonical cage, SDR-SQ holds, and
+
+Ξ
+2
+	​
+
+(S)>0.
+
+Then
+
+ΔΓ(S)<0.
+
+Proof. For each e∈E, let ν(e)=g, and choose a shortest B-row P∈cyc[g] witnessing e. Suppose g=xy, with x∈S, y∈
+/
+S, and
+
+P=x=p
+0
+	​
+
+,p
+1
+	​
+
+,…,p
+i
+	​
+
+,p
+i+1
+	​
+
+,…,p
+ℓ−1
+	​
+
+=y,
+
+where
+
+e=p
+i
+	​
+
+p
+i+1
+	​
+
+.
+
+After flipping S, the old bad edge g=xy becomes blue, and e becomes bad. The path
+
+p
+i
+	​
+
+,p
+i−1
+	​
+
+,…,p
+0
+	​
+
+=x, y=p
+ℓ−1
+	​
+
+,p
+ℓ−2
+	​
+
+,…,p
+i+1
+	​
+
+
+is a B
+S
+-path between the endpoints of e of length ℓ(g)−1. Hence
+
+ℓ
+B
+S
+	​
+
+(e)≤ℓ(g).
+
+Therefore
+
+e∈E
+∑
+	​
+
+ℓ
+B
+S
+	​
+
+(e)
+2
+≤
+e∈E
+∑
+	​
+
+ℓ(ν(e))
+2
+.
+
+The old crossing bad edges C disappear from M. By safety, every old noncrossing bad edge has new shortest length no larger than before. Hence
+
+ΔΓ(S)≤
+e∈E
+∑
+	​
+
+ℓ(ν(e))
+2
+−
+g∈C
+∑
+	​
+
+ℓ(g)
+2
+=−Ξ
+2
+	​
+
+(S)<0.
+
+∎
+
+The remaining strictness lemma should be stated as:
+
+Lemma STRICT-RESIDUAL
+
+Let S be a zero-slack canonical cage with
+
+ρ
+Q
+	​
+
+(S)>0.
+
+If S is not a banked flat C5 cell, then
+
+Ξ
+2
+	​
+
+(S)>0.
+
+The literal replacement “not balanced ⇒ Ξ
+2
+	​
+
+>0” is false because of the C
+7
+	​
+
+ prefix obstruction. The correct obstruction class is:
+
+Ξ
+2
+	​
+
+(S)=0,ρ
+Q
+	​
+
+(S)=0,
+
+i.e. flat odd-cycle rotations. They are harmless because they carry no residual debt.
+
+So the exact gate should be:
+
+Gate STRICT. For every zero-slack canonical cage S,
+
+ρ
+Q
+	​
+
+(S)>0,S∈
+/
+B
+5
+	​
+
+⟹Ξ
+2
+	​
+
+(S)>0.
+
+This is the precise falsifiable version of the square-length step.
+
+Final implication
+
+With the four gates/lemmas above:
+
+CTD gives a canonical cage S⊆U with ρ
+Q
+	​
+
+(S)>0.
+
+BANK5-global gives total bank ≤η, so the positive debt cannot be entirely banked.
+
+ZERO-SLACK gives σ(S)=0.
+
+STRICT-RESIDUAL gives Ξ
+2
+	​
+
+(S)>0 unless S is a banked flat C5 cell.
+
+SQ-DROP gives ΔΓ(S)<0.
+
+Since σ(S)=0, flipping S preserves maximum-cut size. Since B
+S
+ is connected by the cage definition, the flip is an admissible connected maximum cut. But ΔΓ(S)<0, contradicting Gamma-minimality.
+
+Thus no minimal positive-debt pair exists, proving SC.
+
+The main correction is that step 4 must use the square surplus Ξ
+2
+	​
+
+(S), not the informal condition “non-balanced.” The exact smallest obstruction to the informal version is C
+7
+	​
+
+, where σ=0, B
+S
+ is connected, the cage is terminal, but ΔΓ=0.

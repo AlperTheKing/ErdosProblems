@@ -68,3 +68,5 @@
 2026-07-01T05:53:51Z > VERIFY | NEXT: test radius-2 graph-neighborhood atom variant on falsifiers, small census, and C5 guardrails.
 2026-07-01T08:26:15Z > VERIFY | NEXT: test vertex-local pressure payment as a stricter diagnostic
 2026-07-01T08:27:42Z > VERIFY | NEXT: run exact max(T-L) diagnostic on LOAD-PSC battery
+2026-07-01T14:51:05.1390422Z FAIL ATTACK | DID: ran filtered weighted sibling monotonicity --max-weight 3 | RESULT: fail weights=[3,1,3,3,1,3,3,3,3,3] qmax overloaded gap=-3/7 | D: sibling supergraph monotonicity dead
+2026-07-01T20:38:48Z > VERIFY | NEXT: Exact-check whether gluing an unrelated C5 refutes global m=2 in UNIT-FLAT5 atom.

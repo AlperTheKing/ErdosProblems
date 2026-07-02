@@ -1,0 +1,67 @@
+{
+  "active_counts": {
+    "4": 4668
+  },
+  "active_max": 4,
+  "active_min": 4,
+  "automorphisms": 2,
+  "coeff": "1/2",
+  "fails": 0,
+  "first_fail": null,
+  "graph": "sib",
+  "orbit_skips": 460,
+  "qmax_cuts": 1032,
+  "rows_checked": 4668,
+  "shard_count": 64,
+  "shard_index": 15,
+  "verdict": "PASS",
+  "weights": 923,
+  "worst": {
+    "N": 13,
+    "Q": [
+      1,
+      6,
+      8,
+      3,
+      9
+    ],
+    "active": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "debt": "-42/65",
+    "eta": "44/25",
+    "f": [
+      1,
+      9
+    ],
+    "graph": "sib",
+    "inactive_deficit": "54/65",
+    "m": 5,
+    "margin": "496/325",
+    "row_sum": "749/65",
+    "s": [
+      "3",
+      "28/13",
+      "213/65",
+      "71/65",
+      "2"
+    ],
+    "side": "0001111000",
+    "tau": "25/13",
+    "weights": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2
+    ]
+  }
+}

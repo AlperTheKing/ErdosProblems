@@ -336,3 +336,197 @@ python problems/23/writeup/_codex_row_union_hall_gate.py \
 fails first at `two-lane-L8` with margin `-29/10`; its min-cut witness is now
 printed by the gate.  Thus the blue-neighbourhood enlargement is doing real
 work, not merely restating the row-only false transport.
+
+### Banked UPO Position-Flow Sublemma
+
+For unique-geodesic long rows, the closed-neighbourhood Hall candidate has a
+smaller position-flow shadow.
+
+Let `Q=(x_0,...,x_{L-1})` be a unique row in component `C`, and define
+
+```text
+d_i := Tw_C(x_i)-1.
+```
+
+Let the blue components of `V\Q` have attachment spans on `Q`; a component
+with span meeting a position set `I` contributes capacity equal to its vertex
+count.  The old UPO Hall condition was
+
+```text
+sum_{i in I} d_i <= cap(I),
+```
+
+which would imply the false ceiling `R_Q<=N`.  The corrected banked condition is
+
+```text
+sum_{i in I} d_i <= cap(I) + eta/2 - (L^2-25)/50.
+```
+
+For `I={0,...,L-1}` this is exactly `LONG-SURPLUS` for a unique row.
+
+Exact gate:
+
+```text
+python problems/23/writeup/_codex_banked_upo_gate.py \
+  --direct-only --two-lane-max 100 --stop-first
+```
+
+Result, interval position sets:
+
+```text
+rows=284, violations=0, min_margin=0 at C7[1].
+```
+
+Bounded all-subsets sanity:
+
+```text
+python problems/23/writeup/_codex_banked_upo_gate.py \
+  --direct-only --two-lane-max 14 --all-subsets \
+  --max-row-len 15 --stop-first
+```
+
+Result:
+
+```text
+rows=100, violations=0, min_margin=0 at C7[1].
+```
+
+This is a cleaner proof target for unique long rows than full row-atom Hall:
+prove a banked span-capacity Hall statement for off-row blue components.
+
+Additional exact gates:
+
+```text
+python problems/23/writeup/_codex_banked_upo_gate.py \
+  --min-n 7 --max-n 10 --max-cuts 4 --stop-first
+```
+
+Result, interval position sets on census plus the direct families already
+included in the gate:
+
+```text
+census N=7: rows=152, viol+=0
+census N=8: rows=156, viol+=0
+census N=9: rows=184, viol+=0
+census N=10: rows=280, viol+=0
+violations=0, min_margin=0 at C7[1]
+```
+
+Named/direct interval stress:
+
+```text
+python problems/23/writeup/_codex_banked_upo_gate.py \
+  --skip-census --two-lane-max 30 --max-cuts 3 --stop-first
+```
+
+Result:
+
+```text
+rows=147, violations=0, min_margin=0 at C7[1]
+```
+
+All-subsets census sanity for rows of length at most `15`:
+
+```text
+python problems/23/writeup/_codex_banked_upo_gate.py \
+  --min-n 7 --max-n 10 --max-cuts 4 --all-subsets \
+  --max-row-len 15 --stop-first
+```
+
+Result:
+
+```text
+census N=7: rows=112, viol+=0
+census N=8: rows=116, viol+=0
+census N=9: rows=144, viol+=0
+census N=10: rows=240, viol+=0
+violations=0, min_margin=0 at C7[1]
+```
+
+Proof obligation in its smallest form:
+
+```text
+For every unique long row Q and every position interval I,
+    demand(I)-cap(I) <= eta/2 - (L^2-25)/50.
+```
+
+Equivalently, any interval whose overload exceeds off-row component capacity
+forces enough global bad-edge deficit to pay the excess and the odd-length
+surplus `(L^2-25)/50`.  The previous unbanked UPO descent proves the same
+statement with zero right-hand side only in regimes where the corrected ceiling
+does not need the deficit bank; sparse lane examples show the bank is essential.
+
+A diagnostic over direct two-lane/k-lane/odd-cycle rows, named cases, and
+census `N<=9` with two gamma-min cuts per graph found:
+
+```text
+bad edges checked = 1836
+unique-geodesic edges = 560
+multi-geodesic edges = 1276
+negative bank(Q) cases = 0
+old-ceiling ROWSUM>N cases = 270
+multi-geodesic old-ceiling ROWSUM>N cases = 0
+first old-ceiling violation = two-lane-L8, unique row length 9,
+    ROWSUM=28 > N=27, corrected A=1304/25.
+```
+
+Thus the corrected bank is not cosmetic for unique rows: the old `ROWSUM<=N`
+fails already on unique long rows, while the multi-geodesic rows in this
+battery did not create old-ceiling violations.
+
+### Banked-UPO Contradiction Template
+
+Assume a unique row `Q=(x_0,...,x_{L-1})` has a banked interval failure:
+
+```text
+E(I):=sum_{i in I} d_i - cap(I) > bank(Q)
+```
+
+for some interval `I`, with
+
+```text
+bank(Q)=eta/2-(L^2-25)/50.
+```
+
+The old unbanked interval-Hall descent only needs `E(I)>0`, but it can be
+blocked in a gamma-min cut precisely by the global deficit bank.  The corrected
+proof target is therefore:
+
+```text
+Any interval failure with excess E(I) forces
+    eta/2 >= E(I) + (L^2-25)/50.
+```
+
+Equivalently, if the excess is larger than the bank, the same singleton/interval
+descent mechanism used in the old UPO proof must strictly lower Gamma.  The
+odd-row surplus `(L^2-25)/50` is the irreducible cost of having a long unique
+row instead of a pentagonal row; the remaining `eta/2` is the global bad-edge
+deficit available to absorb sparse-lane overload.
+
+Bank-usage profiling on direct lanes/odd cycles plus connected-B max-cut census
+through `N=10`:
+
+```text
+intervals checked = 353051
+max excess = 348 at klane-L20k6, full interval
+max bank ratio = 194/201 at klane-L14k4, full interval
+min margin = 0 at C7[1]
+```
+
+So the hard sparse examples nearly use the whole bank, but the worst set is
+the full interval `I=[0,L-1]`; the small-interval geometry is not the apparent
+obstruction there.  This suggests a proof split:
+
+```text
+near-extremal eta small:
+    old unbanked UPO / singleton-descent geometry should force excess <= 0
+    or very small;
+
+sparse eta large:
+    global deficit bank eta/2 pays the full-interval pileup, with the
+    odd-length correction (L^2-25)/50 accounting for pure odd-cycle equality.
+```
+
+The sparse half cannot be proved by local span capacity alone: the `klane`
+examples use almost all of the global bank.  Any successful proof must include
+a scalar deficit-pileup inequality in addition to the interval/span geometry.
