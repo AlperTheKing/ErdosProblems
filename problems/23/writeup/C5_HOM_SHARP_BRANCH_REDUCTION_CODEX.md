@@ -960,3 +960,47 @@ x=theta and (u=theta or v=e or s_j=0 for j=4,5,6,7).
 ```
 
 Together with the original interior/kink endpoint faces, the S7 theta-positive search now has no one-equation broad faces: all remaining branches have at least two active endpoint/capacity equations.  This is still only a reduction, not a closure of the remaining branches.
+
+## Codex Y1-6 Endpoint Face Reduction
+
+`_codex_sib_s7_y1_sixface.py` verifies GPT-Pro's exact reduction of the old-variable endpoint face `y=1` to six smaller branches.
+
+On `y=1`, set `q=u+v` and `S=a+b+c+d+e+f`. Then
+
+```text
+m = xq+v,
+N = S+1+x+q,
+Phi = 2N^2 + 75S - (50+75A/Z)xq - (50+75B/(eY))v.
+```
+
+With `Pi=eYZ*Phi`, the script verifies
+
+```text
+Rx = Z*dPhi/dx = 4ZN - q(50Z+75A),
+Rq = Z*dPhi/dq = 4ZN - x(50Z+75A),
+Pi = eY*x*Rx + Z*Lx,
+Pi = eY*q*Rq + Z*Lq.
+```
+
+It also verifies the elementary lower-bound proof that feasible `y=1` points with `Rx>=0` or `Rq>=0` must have `Phi>0`. Therefore a negative point has `Rx<0` and `Rq<0`.
+
+The descent is:
+
+```text
+1. Increase x at fixed q,v until s3=0 or one of s4,s5,s6,s7 is tight.
+2. Increase q at fixed x,v until s2=0 or one of s4,s5,s6,s7 is tight.
+3. Increase v at fixed q until u=1, s1=0, or one of s4,s5,s6,s7 is tight.
+```
+
+The exact derivative/blocker checks are in the script. Hence any negative point on `y=1` moves without increasing `Phi` to one of six branches:
+
+```text
+y=1, s4=0;
+y=1, s5=0;
+y=1, s6=0;
+y=1, s7=0;
+y=1, s1=s2=s3=0;
+y=1, u=1, s2=s3=0.
+```
+
+This is still a reduction, not a closure of the six branches.
