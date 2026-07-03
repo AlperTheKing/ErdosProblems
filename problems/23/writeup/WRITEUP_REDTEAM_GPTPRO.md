@@ -239,3 +239,144 @@ MY NOTE: template-cut step (19) is 5-line sound given a global hom-label (verifi
 reasoning: T_i uncuts exactly e_i, maximality of B gives m <= e_i). Hardness now
 concentrated in: closure/minimality machinery, CROSS capacity map, noncrossing
 voltage lemma — all reusing the existing T=1/T=2 corridor stack.
+
+# ===== RECONCILED CANONICAL BANK0 PLAN (main thread referee + merge, 2026-07-03) =====
+REFEREE VERDICTS on sibling skeleton:
+ (a) DEAD-TAIL PEEL: NOT SOUND AS STATED (deleting a vertex can break max-cutness,
+     gamma-minimality, l=5, B-conn). SAFE REPLACEMENT = BLUE-PENDANT PEEL LEMMA:
+     Y = connected blue-only appendage attached through a SINGLE vertex t
+     (N_G(Y minus t) inside Y, Y cap U = {t}), no bad edge in Y minus t, on no rows:
+     delete Y minus t: bad edges + length-5 witnesses survive, B-conn survives
+     (pendant), m same, N smaller, so 25m > N^2 persists: smaller counterexample.
+     Valid ONLY for blue-pendant tails, not arbitrary row-invisible support.
+ (b) C2 ROW-FAMILY CLOSURE: needs definition before use. Safe def: same bad-edge
+     door / oriented terminal door class + terminal prefix/suffix in same
+     orientation + same first blue exit, relative to current packet U.
+ (c) CORRIDOR ADDITIVITY: FIX — must include a partition (each shared vertex
+     assigned to exactly ONE corridor) or explicit fractional weights
+     omega_{C,v} >= 0 summing to 1 per vertex; then nu0(U) = sum_C nu0(C) exact.
+     CERT-NEEDED (bookkeeping once specified).
+ (d) CROSSCAP nu0(C) - N sigma(S) >= 0: nontrivial, NOT derived in the skeleton;
+     needs a terminal-shadow coarea certificate (row-load mass to dM(S), vertex
+     capacity to dB(S), completion residuals). CERT-NEEDED.
+ (e) Frames: global min-counterexample skeleton = primary for pure all-l5 Bank0
+     (any L>5 row gives eta >= (L^2-25)/25 via Bank-L); bank-block = the local
+     certificate form / mixed-cut-friendly extraction.
+RECONCILED LEMMAS 1-8 with tags:
+ L1 mass+pressure identities (sum s = 5m; Pi(V) = 25m - N^2) — PROVEN.
+ L2 minimal closed positive packet (C1-C4 closure; C2 per (b)) — GATE-NEEDED.
+ L3 corridor partition additivity (per (c)) — CERT-NEEDED.
+ L4 CROSS gives max-cut contradiction via CrossCap (per (d)) — CERT-NEEDED.
+ L5 noncrossing gives coherent voltage — CERT-NEEDED, SHARED WITH NCH-HALL.
+ L6 extension U = V (C4 absorb / C3 absorb / blue-pendant peel) — GATE-NEEDED.
+ L7 global label, template cuts m <= e_i, AM-GM, Bank0 — PROVEN (my gate).
+ L8 bank-block algebra + cover extraction — algebra PROVEN, cover GATE-NEEDED.
+ASSEMBLY: minimal counterexample, L2, L3, negative corridor, then L4 (cross) or
+L5+L6 (label, U=V), then L7/L8, so 25m <= N^2 — contradiction. QED conditional on
+the CERT/GATE items. Final tags: mass PROVEN; pressure PROVEN; bank-block algebra
+PROVEN; theta PROVEN; dead-tail peel FALSE, blue-pendant repair; C2 FIX given;
+corridor additivity CERT; CrossCap CERT; voltage LABEL CERT (shared NCH);
+bank-block cover GATE.
+
+# ===== SIBLING LEMMAS A + B (thread 6a45e152, 2026-07-03) =====
+LEMMA A — ROW MONOTONICITY: PROVEN, UNCONDITIONAL. For ANY C5-hom lambda and any
+length-5 row P with bad closing edge p4p0: the five steps eps_i in {+1,-1} around
+the closed 5-cycle sum to 0 mod 5; integer sums of five signs lie in
+{-5,-3,-1,1,3,5}; only -5 and +5 are 0 mod 5, so ALL FIVE SIGNS ARE EQUAL, i.e.
+lambda(p_j) = lambda(p_0) + sigma j with one sign sigma. NO shortestness needed.
+MY CHECK: exhaustive 32-pattern enumeration, 0 violations. Lean-trivial (decide).
+LEMMA B — NONCROSSING gives VOLTAGE CONSISTENCY: reduced to PRIMITIVE-LENS finite
+case system. Voltage graph strands: row intervals (alpha = j-i), terminal shadows,
+D-cert detours (explicit internal labels), bad closures (alpha = 1; row path
+voltage 4 = -1 mod 5, consistent: full row cycle = 5 = 0), completed corridor
+segments. Primitive-lens reduction: a minimal nonzero closed walk contains a
+primitive nonzero lens (two internally disjoint chains x to y, no proper sublens).
+CASES with finite gates and named outcomes:
+ RR (row vs row): same endpoint order and unequal voltage gives SHORTER_ROW (blue
+   replacement contradicts shortestness); opposite order gives TYPE_II crossing.
+   Gate over 0<=i<j<=4, 0<=k<4, j-i not k mod 5: SHORTER_ROW, THETA_CROSS,
+   TRIANGLE — identical to T=1/T=2 first-split/last-rejoin row-theta analysis.
+ RB (row vs bad closure): ROW_CYCLE_ZERO base; alternatives give
+   SHORTER_BAD_GEODESIC or THETA_CROSS.
+ RD/TD/DD (detours): D-cert must certify same endpoint voltage as the replaced row
+   segment (theta witness detour 6-0-5-8 emitted as D-cert pulls 0,5 in);
+   DD reduces via first-split/last-rejoin to RD or CROSS.
+ TT same-root: NESTED_ZERO, DISJOINT, or TYPE_I_CROSS.
+ TT opposite-root: SAME_TRANSFER_ZERO, TYPE_I/II_CROSS, or OSC_HEAD_ON (shared
+   edge in opposite directions forces 2 = 0 mod 5 — impossible as a label case,
+   MUST route to OSC).
+ TR: same-row-direction additivity zero, else row-theta crossing.
+ OSC types: OSC0 same-direction shared edge (merge, zero); OSC1 opposite-direction
+   shared first-exit edge (TRUE residual — completed switch with negative slack or
+   local impossibility); OSC2 vertex touch nonalternating (split into two smaller
+   zero loops by minimality); OSC3 vertex touch alternating (= crossing); OSC4
+   triple (laminar split, cross, or head-on). Only OSC1 and OSC4_HEAD_ON are true
+   residuals; the rest are deterministic reductions.
+PROOF OF LEMMA B: minimal nonzero walk, primitive lens, case classification; every
+outcome contradicts minimality or a noncrossing/non-OSC assumption; hence no
+nonzero cycle; spanning-tree potential defines lambda. Reuses the T=1/T=2 engine.
+
+
+# ===== L4 CROSSCAP DESIGN (main thread, 2026-07-03) =====
+CrossCap = CAPACITY IDENTITY, certified as an INTEGER FLOW (not a scalar estimate):
+    5 s(C) + N dB(S)  <=  N|C| + N dM(S)          (CrossCap, == nu0(C) - N sigma(S) >= 0)
+Completed switch S = LensComp(C; Pa, Pb) — EXACTLY the T=2 CROSS corridor completion
+(lens = two shortest rows + terminal entrances + first split/last rejoin + exit doors;
+if completion needs outside vertices, corridor enlarges by the closure rule first).
+Lens classified into the same 7 primitive types + OSC0-4 subtypes as Lemma B.
+INTEGER FORM: clear row denominators by D = lcm |cyc(g)|; row-load atoms (g, P, v, d)
+carry demand; capacities DN per corridor vertex + DN per bad boundary edge; summing
+demands vs capacities gives D-scaled CrossCap. Exact residual:
+    D(nu0(C) - N sigma(S)) = R_flow + R_OSC + R_prot + R_twin + R_term + R_nc >= 0 (5.1)
+each residual nonnegative; R_OSC nonzero only in OSC1/OSC4-head-on. Flow provenance:
+noncrossing row-load atoms route to vertex slots (closure C1-C3 guarantee presence);
+blue cancellation units route to witnessed slots (terminal-witnessed, detour-witnessed,
+noncrossing-closed, protected-cell-routed).
+ENGINE REUSE: same lens classifier as T=2; CrossCap = SECOND CERTIFICATE MODE of the
+T=2 CROSS emitter (output pressure functional nu0(C) - N sigma(S) instead of the
+terminal Hall functional U - D_T(U)). No new geometric cases. Hard gates = 7 lens
+types x {OSC1, OSC4-head-on}; other OSC cases reduce (OSC0 flow, OSC2 noncrossing
+residual, OSC3 terminal residual, other OSC4 LABEL/NONNEG).
+FALLBACK accepted by checker: a_C sigma(S) <= nu0(C) with any a_C > 0 (same
+contradiction sigma(S) < 0).
+CHECKER FIELDS: corridor set C; switch S (and enlarged C' if closure grew); lens type;
+OSC subtype; completion trace (terminal/noncrossing/detour/twin/protected); D;
+integer atom list (g,P,v,d); dB(S) list; dM(S) list; residual decomposition values.
+
+# ===== L6 REPAIRED + L3 PARTITION SPEC (sibling thread, 2026-07-03) =====
+REPAIRED LEMMA 6 (extension): in an N-minimal Bank0 counterexample with closed packet
+U, Pi(U) > 0, LABEL corridor certificate (voltage-consistent lambda on U), and all
+BLUE-HANDLE residual gates discharged: U = V. Proof structure:
+ 1 Outside component Y of B[V-U] with a row-visible vertex: row-family/terminal-shadow
+   closure absorbs (or CROSS/OSC applies) — contradiction with closure.
+ 2 Y row-invisible, single-attached: BLUE-PENDANT PEEL (no bad edge deleted, all
+   length-5 witnesses survive, m unchanged, N drops, B-conn survives through t,
+   25m > N^2 persists) — contradicts N-minimality.
+ 3 Y row-invisible, MULTI-ATTACHED: shortest attachment-to-attachment blue path
+   through Y = blue detour between U-vertices a, b. Label-compatible: C3 absorbs —
+   contradiction with closure. NOT label-compatible: finite BLUE-HANDLE gates:
+   BH2 (a-y-b, s(y)=0, lambda(b)-lambda(a) = +-1 — unreachable by two +-1 steps):
+     outcomes BH2_CROSS (completed switch N sigma <= nu0 < 0) | BH2_OSC | BH2_FORBID
+     (local impossibility from triangle-free + row/door structure).
+     HONEST NOTE: triangle-free + max-cut ALONE do NOT forbid BH2 (sigma({y}) =
+     degB(y) >= 0 harmless; tri-free only makes a,b nonadjacent). Genuine gate.
+   BH3 (length-3 analog).
+ 4 Assembly: no outside Y exists; B connected: U = V.
+L3 CORRIDOR PARTITION SPEC: geometric corridor supports hat-C_c (may overlap at
+articulation vertices) vs OWNED CORES V_c: pairwise disjoint, partition U, canonical
+assignment of shared vertices (shared types SH0-SH4). nu0 accounting on owned cores:
+nu0(c) = N|V_c| - 5 s(V_c) (row-atom form available), exact additivity
+nu0(U) = sum_c nu0(c) BY PARTITION even when geometric supports overlap.
+CROSS/LABEL/OSC certificates run on geometric support, deficits computed on owned
+core. VERIFIER OBLIGATIONS: OWN_IN_GEOM (V_c inside hat-C_c); OWN_PARTITION;
+LOAD_ACCOUNT (nu0 additivity); CLAIM_NONEMPTY (every v in U claimed geometrically);
+SHARED_TYPE (every multiply-claimed vertex has SH0-SH4 type).
+
+# ===== BANK0 DESIGN PHASE CLOSED (my assessment, 2026-07-03) =====
+All L1-L8 items now PROVEN or reduced to finite machine certificates on the EXISTING
+T=1/T=2 corridor engine + census gates: L1 PROVEN; L2 closure trace gate (B0-5);
+L3 partition cert (spec above, B0-6); L4 CrossCap integer-flow cert (T=2 second mode);
+L5 voltage LABEL cert (primitive-lens gates, B0-4); L6 PROVEN modulo BH2/BH3 gates
+(B0-7); L7 PROVEN + FORMALIZED (Bank0Algebra.lean); L8 algebra PROVEN + FORMALIZED,
+cover extraction gate. No unreduced mathematical gaps remain in Bank0.
+
