@@ -1,0 +1,128 @@
+{
+  "atom_mode": "all",
+  "atoms": 9073,
+  "chart": 0,
+  "columns": 82716,
+  "constraints": 161449,
+  "iterations": 21,
+  "max_atoms": 20000,
+  "max_cols": 100000,
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "extra_maxcut": "none",
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "maxcut_masks": [],
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "nnz": 1421079,
+  "obj_val_dual": -0.32060484828819985,
+  "objective": 0.0,
+  "objective_mode": "zero",
+  "r_dual": 0.0004874653371063809,
+  "r_prim": 0.0009775485819027466,
+  "rows": 51514,
+  "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+  "solve_time": 326.5896236,
+  "status": "MaxTime",
+  "variables": 109935
+}

@@ -1,0 +1,30 @@
+{
+  "build_failures": 0,
+  "build_modules": 32,
+  "build_summary": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_module_build_v6g_summary.json",
+  "case_counts": {
+    "DETOUR_RESIDUAL": 136,
+    "FREE_PACKET_EXCHANGE": 3688,
+    "MU_NUK": 800,
+    "MU_NUK_REPAIRED": 126,
+    "SPARSE_M1_BANKL_BYPASS": 9463,
+    "TIGHT_ZERO": 34
+  },
+  "forbidden_hits": 0,
+  "forbidden_tokens": [
+    "native_decide",
+    "sorry",
+    "admit",
+    "axiom",
+    "unsafe"
+  ],
+  "gate_b_rows": 926,
+  "manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_transpile_full_v6_manifest.json",
+  "op_steps": 1852,
+  "recovered_tmp_modules": 32,
+  "recovered_tmp_workaround": true,
+  "rows": 14247,
+  "schema": "branchb_lean_artifact_audit_v1",
+  "shards": 29,
+  "status": "PASS"
+}

@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "N:10": 300,
+    "records": 300,
+    "verdict:PASS_NO_POSITIVE_PACKET": 300
+  },
+  "first_fail": null,
+  "output": "tmp\\bank0_closure_trace_n10_limit300_v1.jsonl",
+  "schema": "bank0_closure_trace_summary_v1",
+  "verdict": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "bank0_closure_trace_n11_batches_v1",
+  "source": "tmp/bank0_hom_trace_n11_v2.jsonl",
+  "total_no_hom_records": 36250,
+  "checked_records": 3500.0,
+  "unchecked_records": 32750.0,
+  "batch_summaries": [
+    "tmp/bank0_closure_trace_n11_input_batch000_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch001_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch002_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch003_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch004_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch005_v1_summary.json",
+    "tmp/bank0_closure_trace_n11_input_batch006_v1_summary.json"
+  ],
+  "fails": 0.0,
+  "verdict": "PASS_PARTIAL"
+}

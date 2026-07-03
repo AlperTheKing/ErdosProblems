@@ -1,0 +1,335 @@
+{
+  "counts": {
+    "hom_trace": 50,
+    "pure_no_hom_or_no_mono_hom": 12
+  },
+  "first_hom_trace_fail": null,
+  "first_no_hom_or_no_mono": {
+    "kind": "pure_no_hom_or_no_mono_hom",
+    "m": 4,
+    "n": 11,
+    "name": "Grotzsch",
+    "rows": 31,
+    "side": "10010111100"
+  },
+  "jobs_scanned": 62,
+  "jsonl_output": "../../../tmp/bank0_hom_trace_named_v3.jsonl",
+  "traces": [
+    {
+      "bank0_margin": 0,
+      "class_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "m": 4,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 10,
+      "name": "C5[2]",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 32,
+      "side": "1100110000",
+      "template_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 0,
+      "class_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "m": 4,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 10,
+      "name": "C5[2]",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 32,
+      "side": "1100111000",
+      "template_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 0,
+      "class_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "m": 4,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 10,
+      "name": "C5[2]",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 32,
+      "side": "1100110100",
+      "template_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 0,
+      "class_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "m": 4,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 10,
+      "name": "C5[2]",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 32,
+      "side": "1100001100",
+      "template_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 0,
+      "class_sizes": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "m": 4,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 10,
+      "name": "C5[2]",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 32,
+      "side": "1110001100",
+      "template_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "verdict": "PASS",
+  "worst_bank0_margin": [
+    0,
+    "C5[2]",
+    "0011001100"
+  ],
+  "worst_template_margin": [
+    0,
+    "C5[2]",
+    "0011001100"
+  ]
+}

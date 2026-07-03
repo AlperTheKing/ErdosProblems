@@ -1,0 +1,284 @@
+{
+  "atom_mode": "all",
+  "atoms": 9073,
+  "chart": 0,
+  "coeff_slack_min": -43.1395294824415,
+  "coeff_slack_neg_count_1e-7": 3702,
+  "columns": 82716,
+  "constraints": 161449,
+  "generator_slack_min": -0.0003813249151346724,
+  "iterations": 12,
+  "max_atoms": 20000,
+  "max_cols": 100000,
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "extra_maxcut": "none",
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "maxcut_masks": [],
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "nnz": 1421079,
+  "obj_val_dual": -2.9955231085675043,
+  "objective": 0.0,
+  "objective_mode": "zero",
+  "r_dual": 0.004233327636032307,
+  "r_prim": 0.009168793847277742,
+  "rows": 51514,
+  "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+  "soc_margin_min": 0.7686623138138333,
+  "solve_time": 199.062585,
+  "status": "MaxTime",
+  "top_negative_coeff_rows": [
+    {
+      "row": [
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "slack": -43.1395294824415
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "slack": -41.538908233244
+    },
+    {
+      "row": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "slack": -38.60904395414036
+    },
+    {
+      "row": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "slack": -37.938816723271884
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        2
+      ],
+      "slack": -37.81472315112774
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "slack": -37.80090334975375
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3,
+        2
+      ],
+      "slack": -37.65781879032397
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        3,
+        1
+      ],
+      "slack": -37.309260786030336
+    },
+    {
+      "row": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        3,
+        1
+      ],
+      "slack": -37.14347822863192
+    },
+    {
+      "row": [
+        2,
+        0,
+        1,
+        1,
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "slack": -37.103045081432356
+    }
+  ],
+  "variables": 109935
+}

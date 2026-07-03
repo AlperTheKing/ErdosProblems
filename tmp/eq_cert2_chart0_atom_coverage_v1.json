@@ -1,0 +1,637 @@
+{
+  "all_split_atoms": 119882,
+  "chart": 0,
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "extra_maxcut": "none",
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "maxcut_masks": [],
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "missing_split_atoms": 110809,
+  "negative_rows": 8275,
+  "rows_fully_selected": 362,
+  "rows_partially_selected": 1919,
+  "rows_with_no_selected_atom": 5770,
+  "schema": "eq_cert2_chart_atom_coverage_v1",
+  "selected_atoms": 9073,
+  "selected_per_row_hist": {
+    "0": 5770,
+    "1": 367,
+    "2": 868,
+    "3": 62,
+    "4": 756,
+    "5": 36,
+    "6": 72,
+    "7": 18,
+    "8": 219,
+    "9": 10,
+    "10": 44,
+    "12": 24,
+    "13": 2,
+    "14": 12,
+    "16": 9,
+    "18": 4,
+    "21": 2
+  },
+  "shape_hist_top20": [
+    [
+      "first8_last4_odds4_zeros4",
+      362
+    ],
+    [
+      "first7_last5_odds4_zeros4",
+      320
+    ],
+    [
+      "first6_last6_odds4_zeros4",
+      296
+    ],
+    [
+      "first6_last6_odds4_zeros3",
+      235
+    ],
+    [
+      "first9_last3_odds4_zeros4",
+      224
+    ],
+    [
+      "first7_last5_odds4_zeros3",
+      212
+    ],
+    [
+      "first5_last7_odds4_zeros4",
+      205
+    ],
+    [
+      "first8_last4_odds4_zeros5",
+      205
+    ],
+    [
+      "first7_last5_odds6_zeros3",
+      204
+    ],
+    [
+      "first5_last7_odds4_zeros3",
+      196
+    ],
+    [
+      "first6_last6_odds6_zeros3",
+      180
+    ],
+    [
+      "first8_last4_odds6_zeros3",
+      169
+    ],
+    [
+      "first9_last3_odds4_zeros5",
+      166
+    ],
+    [
+      "first10_last2_odds4_zeros5",
+      160
+    ],
+    [
+      "first8_last4_odds4_zeros3",
+      157
+    ],
+    [
+      "first7_last5_odds2_zeros5",
+      156
+    ],
+    [
+      "first4_last8_odds4_zeros3",
+      153
+    ],
+    [
+      "first5_last7_odds6_zeros3",
+      150
+    ],
+    [
+      "first7_last5_odds4_zeros5",
+      144
+    ],
+    [
+      "first9_last3_odds2_zeros5",
+      136
+    ]
+  ],
+  "split_hist": {
+    "1": 72,
+    "2": 1793,
+    "8": 4228,
+    "32": 2051,
+    "128": 131
+  },
+  "zero_selected_examples": [
+    {
+      "coeff": "-44",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        1,
+        3,
+        2
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        1,
+        4,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-44",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        2,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        3,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-88",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        2
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-76",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        4,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-88",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        2,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-114",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        3,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 32
+    },
+    {
+      "coeff": "-76",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        2,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-44",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        1,
+        1,
+        3,
+        2
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        1,
+        1,
+        4,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-44",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-114",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        2,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        1,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-38",
+      "row": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 32
+    },
+    {
+      "coeff": "-88",
+      "row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        3,
+        1,
+        3,
+        2
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-76",
+      "row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        3,
+        1,
+        4,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-88",
+      "row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    },
+    {
+      "coeff": "-76",
+      "row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        4,
+        1,
+        3,
+        1
+      ],
+      "split_pairs": 8
+    }
+  ],
+  "zero_selected_shape_hist_top20": [
+    [
+      "first8_last4_odds4_zeros4",
+      242
+    ],
+    [
+      "first7_last5_odds4_zeros4",
+      195
+    ],
+    [
+      "first9_last3_odds4_zeros4",
+      186
+    ],
+    [
+      "first6_last6_odds4_zeros3",
+      154
+    ],
+    [
+      "first5_last7_odds4_zeros3",
+      152
+    ],
+    [
+      "first6_last6_odds4_zeros4",
+      147
+    ],
+    [
+      "first8_last4_odds4_zeros5",
+      143
+    ],
+    [
+      "first7_last5_odds4_zeros3",
+      138
+    ],
+    [
+      "first7_last5_odds6_zeros3",
+      136
+    ],
+    [
+      "first8_last4_odds6_zeros3",
+      136
+    ],
+    [
+      "first10_last2_odds4_zeros5",
+      134
+    ],
+    [
+      "first9_last3_odds4_zeros5",
+      130
+    ],
+    [
+      "first4_last8_odds4_zeros3",
+      123
+    ],
+    [
+      "first6_last6_odds6_zeros3",
+      112
+    ],
+    [
+      "first5_last7_odds4_zeros4",
+      112
+    ],
+    [
+      "first10_last2_odds4_zeros4",
+      109
+    ],
+    [
+      "first9_last3_odds6_zeros3",
+      108
+    ],
+    [
+      "first6_last6_odds6_zeros2",
+      102
+    ],
+    [
+      "first9_last3_odds2_zeros5",
+      102
+    ],
+    [
+      "first8_last4_odds4_zeros3",
+      100
+    ]
+  ],
+  "zero_selected_split_hist": {
+    "1": 48,
+    "2": 1124,
+    "8": 2921,
+    "32": 1563,
+    "128": 114
+  }
+}

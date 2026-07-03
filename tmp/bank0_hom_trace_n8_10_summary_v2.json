@@ -1,0 +1,1210 @@
+{
+  "counts": {
+    "hom_trace": 15138,
+    "pure_no_hom_or_no_mono_hom": 2451
+  },
+  "first_hom_trace_fail": null,
+  "first_no_hom_or_no_mono": {
+    "kind": "pure_no_hom_or_no_mono_hom",
+    "m": 2,
+    "n": 8,
+    "name": "cen:G?q`qg",
+    "rows": 4,
+    "side": "11110000"
+  },
+  "jobs_scanned": 17589,
+  "jsonl_output": "../../../tmp/bank0_hom_trace_n8_10_v2.jsonl",
+  "traces": [
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AEBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "11111000",
+      "template_margins": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AEBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "01111100",
+      "template_margins": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AEBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "11111100",
+      "template_margins": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AEBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "00111110",
+      "template_margins": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AEBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "01111110",
+      "template_margins": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFAw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "11111000",
+      "template_margins": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFAw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "01111100",
+      "template_margins": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFAw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "11111100",
+      "template_margins": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFAw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "00011110",
+      "template_margins": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFAw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 1,
+      "side": "01011110",
+      "template_margins": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "11111000",
+      "template_margins": [
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "01111100",
+      "template_margins": [
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFBw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "11111100",
+      "template_margins": [
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        2
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbW",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "11111000",
+      "template_margins": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        2
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbW",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "01111100",
+      "template_margins": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        2
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbW",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 2,
+      "side": "11111100",
+      "template_margins": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 3,
+      "side": "11111000",
+      "template_margins": [
+        3,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 3,
+      "side": "01111100",
+      "template_margins": [
+        3,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        3,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        0
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFbw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 3,
+      "side": "11111100",
+      "template_margins": [
+        3,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bank0_margin": 39,
+      "class_sizes": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "edge_label_failures": [],
+      "edge_pair_counts": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "kind": "hom_trace",
+      "labels": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        2
+      ],
+      "m": 1,
+      "min_product_margin": 0,
+      "min_template_margin": 0,
+      "n": 8,
+      "name": "cen:G?AFrw",
+      "ok": true,
+      "product_bounds": [
+        4,
+        4,
+        1,
+        1,
+        1
+      ],
+      "product_margins": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_failures": [],
+      "rows": 4,
+      "side": "11111000",
+      "template_margins": [
+        3,
+        3,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "verdict": "PASS",
+  "worst_bank0_margin": [
+    0,
+    "cen:I?rFf_{N?",
+    "0000111100"
+  ],
+  "worst_template_margin": [
+    0,
+    "cen:G?AEBw",
+    "00111110"
+  ]
+}

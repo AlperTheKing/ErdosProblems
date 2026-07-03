@@ -24721,3 +24721,301 @@
 [2026-07-03T17:41:11Z] FAIL VERIFY | DID: direct 2x2 SOS tiny smoke. | RESULT: PrimalInfeasible cols=200 atoms=50 | D: mid direct smoke
 [2026-07-03T17:42:04Z] FAIL VERIFY | DID: direct 2x2 SOS mid smoke. | RESULT: PrimalInfeasible cols=3000 atoms=1000 | D: direct all-split
 [2026-07-03T17:43:51Z] FAIL VERIFY | DID: direct 2x2 SOS all-split smoke. | RESULT: PrimalInfeasible cols=20000 atoms=9073 | D: direct full-base
+[2026-07-03T17:55:38Z] FAIL VERIFY | DID: direct 2x2 SOS full-base all-atom model. | RESULT: MaxTime vars=109935 cons=161449 nnz=1421079 | D: tune direct Clarabel
+[2026-07-03T17:57:49Z] > SELECT | NEXT: Refresh Claude mailbox and inspect direct Clarabel ChartSOS path.
+[2026-07-03T17:58:08Z] OK SELECT | DID: Read Claude mailbox through 2026-07-04T15:20Z. | RESULT: ChartSOS remains live; G8/S7 accepted | D: inspect solver
+[2026-07-03T17:58:28Z] > ATTACK | NEXT: Patch direct Clarabel solver with objective and tolerance controls.
+[2026-07-03T17:59:51Z] OK ATTACK | DID: Added direct Clarabel objective/tolerance knobs. | RESULT: --help EXIT 0 | D: zero-objective smoke
+[2026-07-03T18:00:03Z] > VERIFY | NEXT: Run direct Clarabel zero-objective all-split restricted smoke.
+[2026-07-03T18:01:29Z] FAIL VERIFY | DID: direct Clarabel zero-objective all-split restricted smoke. | RESULT: PrimalInfeasible cols=20000 atoms=9073 | D: full-base zero run
+[2026-07-03T18:01:34Z] > VERIFY | NEXT: Run direct Clarabel full-base all-atom zero-objective model with 64 threads.
+[2026-07-03T18:13:10Z] FAIL VERIFY | DID: direct Clarabel full-base zero-objective all-atom model. | RESULT: MaxTime vars=109935 cons=161449 nnz=1421079 | D: add diagnostics
+[2026-07-03T18:14:18Z] OK ATTACK | DID: Added direct Clarabel diagnostic fields. | RESULT: --help EXIT 0 | D: diagnostic smoke
+[2026-07-03T18:14:24Z] > VERIFY | NEXT: Run direct Clarabel diagnostic zero-objective smoke.
+[2026-07-03T18:15:13Z] FAIL VERIFY | DID: direct Clarabel diagnostic mid zero-objective smoke. | RESULT: PrimalInfeasible iter=5 rprim=0.9539189796 | D: full diagnostic
+[2026-07-03T18:15:18Z] > VERIFY | NEXT: Run full-scale direct Clarabel diagnostic with 180s cap.
+[2026-07-03T18:19:55Z] FAIL VERIFY | DID: full-scale direct Clarabel diagnostic 180s cap. | RESULT: MaxTime iter=12 rprim=9.17e-3 rdual=4.23e-3 | D: coarse tolerance probe
+[2026-07-03T18:20:00Z] > VERIFY | NEXT: Run full-scale direct Clarabel coarse-tolerance feasibility probe.
+[2026-07-03T18:26:41Z] FAIL VERIFY | DID: full-scale direct Clarabel coarse-tolerance probe. | RESULT: MaxTime iter=21 rprim=9.78e-4 rdual=4.87e-4 | D: monolithic cone inconclusive
+[2026-07-03T18:27:12Z] OK CHECK | DID: Assessed direct Clarabel ChartSOS probes. | RESULT: restricted atoms infeasible; full monolith MaxTime near 1e-3 residual | D: block/chordal SOS next
+[2026-07-03T18:27:54Z] > SELECT | NEXT: Refresh Claude mailbox and start ChartSOS sparsity/block analysis.
+[2026-07-03T18:28:11Z] OK SELECT | DID: Read Claude mailbox through 2026-07-04T15:20Z. | RESULT: no newer blocks | D: inspect ChartSOS helpers
+[2026-07-03T18:28:18Z] > ATTACK | NEXT: Add ChartSOS Gram sparsity analyzer for chart0.
+[2026-07-03T18:29:21Z] OK ATTACK | DID: Added ChartSOS sparsity analyzer. | RESULT: --help EXIT 0 | D: run sparse analysis
+[2026-07-03T18:29:37Z] > VERIFY | NEXT: Analyze ChartSOS sparse Gram graph for target-negative rows.
+[2026-07-03T18:30:51Z] OK VERIFY | DID: Analyzed target-negative sparse Gram graph. | RESULT: 5 components sizes=2260,1848,1177,897,105 crossrows=0 | D: frontier graph
+[2026-07-03T18:31:08Z] > VERIFY | NEXT: Analyze ChartSOS sparse Gram graph for qmax52 frontier rows.
+[2026-07-03T18:32:42Z] OK VERIFY | DID: Analyzed qmax52 frontier sparse Gram graph. | RESULT: 4 components sizes=2811,2724,1709,273 crossrows=0 | D: chordal width estimate
+[2026-07-03T18:33:09Z] > ATTACK | NEXT: Add ChartSOS Gram width estimator using NetworkX.
+[2026-07-03T18:34:00Z] OK ATTACK | DID: Added ChartSOS Gram width estimator. | RESULT: --help EXIT 0 | D: run width estimate
+[2026-07-03T18:34:07Z] > VERIFY | NEXT: Estimate chordal width for target-negative sparse Gram graph.
+[2026-07-03T18:35:19Z] OK VERIFY | DID: Estimated target-negative Gram chordal width. | RESULT: max_bags=698,282,756,76,11 | D: qmax52 width
+[2026-07-03T18:35:25Z] > VERIFY | NEXT: Estimate chordal width for qmax52 frontier sparse Gram graph.
+[2026-07-03T18:37:09Z] OK VERIFY | DID: Estimated qmax52 frontier Gram chordal width. | RESULT: max_bags=1485,411,107,16 | D: mine MaxTime residuals
+[2026-07-03T18:37:26Z] > ATTACK | NEXT: Patch direct Clarabel solver to emit residual slack diagnostics.
+[2026-07-03T18:38:42Z] OK ATTACK | DID: Added Clarabel slack residual diagnostics. | RESULT: --help EXIT 0 | D: residual smoke
+[2026-07-03T18:38:53Z] > VERIFY | NEXT: Run residual-mining smoke on mid-size 2x2 cone.
+[2026-07-03T18:39:38Z] FAIL VERIFY | DID: residual-mining mid-size 2x2 cone smoke. | RESULT: PrimalInfeasible top row recorded | D: full residual mining
+[2026-07-03T18:39:46Z] > VERIFY | NEXT: Run full-scale residual-mining direct Clarabel probe.
+[2026-07-03T18:44:22Z] FAIL VERIFY | DID: full-scale residual-mining direct Clarabel probe. | RESULT: MaxTime coeff_min=-43.14 neg_rows=3702 soc_margin=0.768 | D: classify residual rows
+[2026-07-03T18:44:52Z] > VERIFY | NEXT: Classify full residual-mining top coefficient rows.
+[2026-07-03T18:47:17Z] OK VERIFY | DID: Classified full residual rows. | RESULT: top10 are negative target rows with selected_2x2_atoms=0 | D: count all-cross atoms
+[2026-07-03T18:48:09Z] OK CHECK | DID: Counted all-cross split atoms for negative target rows. | RESULT: 119882 atoms hist={1:72,2:1793,8:4228,32:2051,128:131} | D: targeted extra atoms
+[2026-07-03T18:48:46Z] OK ATTACK | DID: Added targeted extra-atom-row option. | RESULT: --help EXIT 0 | D: targeted atom smoke
+[2026-07-03T18:48:52Z] > VERIFY | NEXT: Run targeted extra-atom restricted Clarabel smoke.
+[2026-07-03T18:50:09Z] FAIL VERIFY | DID: targeted extra-atom restricted smoke. | RESULT: PrimalInfeasible rows dominated by old 20k-column obstruction | D: full targeted atoms
+[2026-07-03T18:50:18Z] > VERIFY | NEXT: Run full-base Clarabel probe with top10 targeted extra atoms.
+[2026-07-03T18:55:33Z] > SELECT | NEXT: Refresh Claude mailbox and systematize ChartSOS residual atom coverage.
+[2026-07-03T18:55:59Z] OK SELECT | DID: Processed Claude retask bottom blocks. | RESULT: ChartSOS remains priority; empty-mask PMTS cancelled | D: atom coverage
+[2026-07-03T18:56:07Z] FAIL VERIFY | DID: full-base Clarabel probe with top10 targeted extra atoms. | RESULT: MaxTime coeff_min=-431.69 rprim=8.49e-2 | D: global atom coverage
+[2026-07-03T18:56:33Z] > ATTACK | NEXT: Add global 2x2 atom coverage analyzer for ChartSOS rows.
+[2026-07-03T18:57:19Z] OK ATTACK | DID: Added global atom coverage analyzer. | RESULT: --help EXIT 0 | D: run coverage
+[2026-07-03T18:57:34Z] > VERIFY | NEXT: Run exact combinatorial atom coverage report for chart0.
+[2026-07-03T18:59:07Z] OK VERIFY | DID: Ran exact chart0 atom coverage report. | RESULT: no_atom_rows=5770 missing_split_atoms=110809 of 119882 | D: low-split atom policy
+[2026-07-03T18:59:24Z] > ATTACK | NEXT: Add low-split extra atom policy to direct Clarabel solver.
+[2026-07-03T19:00:00Z] OK ATTACK | DID: Added low-split extra atom policy. | RESULT: --help EXIT 0 | D: low-split smoke
+[2026-07-03T19:00:11Z] > VERIFY | NEXT: Run restricted Clarabel smoke with all split<=2 atoms.
+[2026-07-03T19:02:02Z] FAIL VERIFY | DID: restricted Clarabel smoke with split<=2 atoms. | RESULT: PrimalInfeasible atoms=12482 rprim=0.00428 | D: full split<=2 probe
+[2026-07-03T19:02:11Z] > VERIFY | NEXT: Run full-base Clarabel probe with split<=2 extra atoms.
+[2026-07-03T19:08:17Z] FAIL VERIFY | DID: full-base Clarabel probe with split<=2 extra atoms. | RESULT: MaxTime coeff_min=-1030.32 rprim=0.194 | D: avoid atom brute force
+[2026-07-03T19:08:32Z] > CHECK | NEXT: Post ChartSOS 2x2 atom obstruction evidence to Claude.
+[2026-07-03T19:09:04Z] OK CHECK | DID: Posted ChartSOS 2x2 atom obstruction ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:09:49Z] > SELECT | NEXT: Read Claude mailbox and continue ChartSOS controlled PSD-block experiment.
+[2026-07-03T19:12:18Z] OK SELECT | DID: Inferred Clarabel PSDTriangle vectorization. | RESULT: column-wise scaled offdiag convention | D: implement PSD-block probe
+[2026-07-03T19:12:26Z] > ATTACK | NEXT: Add direct Clarabel PSD-block ChartSOS probe.
+[2026-07-03T19:13:53Z] OK ATTACK | DID: Added direct Clarabel PSD-block probe. | RESULT: --help EXIT 0 | D: small block smoke
+[2026-07-03T19:14:00Z] > VERIFY | NEXT: Run chart0 PSD-block smoke for component size <=120.
+[2026-07-03T19:18:10Z] FAIL VERIFY | DID: chart0 PSD-block smoke for component size<=120. | RESULT: MaxTime block=105 rprim=0.786 coeff_min=-29556.57 | D: PSD small-block not promising
+[2026-07-03T19:18:34Z] OK CHECK | DID: Posted PSD-block probe FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:19:06Z] > SELECT | NEXT: Read Claude mailbox, then start BANK0 bench if ChartSOS has no reply.
+[2026-07-03T19:19:35Z] OK SELECT | DID: Found existing Bank0 scripts. | RESULT: _claude_bank0_component_gate.py and switchcover/witness scripts present | D: inspect Bank0 gate
+[2026-07-03T19:21:23Z] OK SELECT | DID: Refreshed mailbox/status for user report. | RESULT: no new Claude reply; no python process | D: none
+[2026-07-03T19:21:52Z] > SELECT | NEXT: Refresh Claude mailbox and inspect BANK0 gate scripts.
+[2026-07-03T19:22:15Z] OK SELECT | DID: Inspected BANK0 component gate CLI. | RESULT: args min/max-n max-cuts skip-census skip-named | D: run smoke
+[2026-07-03T19:22:20Z] > VERIFY | NEXT: Run BANK0 named-only exact smoke gate.
+[2026-07-03T19:22:31Z] FAIL VERIFY | DID: BANK0 named-only smoke. | RESULT: wrong relative script path | D: rerun basename
+[2026-07-03T19:22:53Z] OK VERIFY | DID: BANK0 named-only smoke. | RESULT: PASS cuts=47 pure_l5=12 min_global_margin=21 | D: census slice
+[2026-07-03T19:22:58Z] > VERIFY | NEXT: Run BANK0 census exact slice N=8.
+[2026-07-03T19:23:15Z] OK VERIFY | DID: BANK0 census N=8 exact slice. | RESULT: PASS cuts=280 pure_l5=268 min_global=14 min_local=0 | D: census N=9
+[2026-07-03T19:23:20Z] > VERIFY | NEXT: Run BANK0 census exact slice N=9.
+[2026-07-03T19:23:45Z] FAIL VERIFY | DID: BANK0 census N=9 exact slice. | RESULT: global_fails=0 local_fails=8 first=H?AFBo] mC=2 supp=7 | D: local component bound false
+[2026-07-03T19:24:01Z] > VERIFY | NEXT: Dump H?AFBo] local-bank witness and run Bank0 switch-cover LP.
+[2026-07-03T19:24:23Z] OK VERIFY | DID: Bank0 witness/switchcover tests. | RESULT: H?AFBo] local fail; switchcover exact YES on theta,C5[2],N10 | D: census N=10
+[2026-07-03T19:24:28Z] > VERIFY | NEXT: Run BANK0 census exact slice N=10.
+[2026-07-03T19:24:57Z] FAIL VERIFY | DID: BANK0 census N=10 exact slice. | RESULT: global_fails=0 local_fails=119 min_global=0 first_global=None | D: write bench note
+[2026-07-03T19:25:03Z] > CHECK | NEXT: Add BANK0 bench note with exact census and switchcover outcomes.
+[2026-07-03T19:25:50Z] OK CHECK | DID: Added BANK0 bench note. | RESULT: problems/23/writeup/CODEX_BANK0_BENCH_20260703.md | D: post Claude FYI
+[2026-07-03T19:25:56Z] > CHECK | NEXT: Post BANK0 exact bench results to Claude.
+[2026-07-03T19:26:25Z] OK CHECK | DID: Posted BANK0 bench FYI/ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:27:06Z] > SELECT | NEXT: Refresh Claude mailbox before BANK0 switch-cover certificate work.
+[2026-07-03T19:27:30Z] OK SELECT | DID: Processed Claude BANK0 04:05Z instructions. | RESULT: B0-3 row-monotonicity hunt selected | D: inspect label gate
+[2026-07-03T19:27:37Z] > SELECT | NEXT: Locate BANK0 label-chain gate and hom tools for row-monotonicity probe.
+[2026-07-03T19:27:53Z] OK SELECT | DID: Located BANK0 label-chain gate and skeleton notes. | RESULT: _claude_bank0_label_chain_gate.py present | D: inspect interface
+[2026-07-03T19:27:59Z] > SELECT | NEXT: Inspect BANK0 label-chain gate interface and definitions.
+[2026-07-03T19:28:23Z] OK SELECT | DID: Inspected label-chain gate. | RESULT: existing gate checks one hom, not existence of row-monotone hom | D: implement strong probe
+[2026-07-03T19:28:29Z] > ATTACK | NEXT: Add strong row-monotone C5-hom existence probe.
+[2026-07-03T19:29:26Z] OK ATTACK | DID: Added strong row-monotone hom probe. | RESULT: _codex_bank0_row_monotone_hom_probe.py | D: smoke
+[2026-07-03T19:29:31Z] > VERIFY | NEXT: Run row-monotone hom probe named-only smoke.
+[2026-07-03T19:29:48Z] OK VERIFY | DID: Row-monotone hom named-only smoke. | RESULT: PASS pure=62 hom_mono=50 no_hom=12 counterexample=0 | D: census N8-10
+[2026-07-03T19:29:53Z] > VERIFY | NEXT: Run row-monotone hom probe census N=8..10 with 8 workers.
+[2026-07-03T19:30:19Z] FAIL VERIFY | DID: Row-monotone hom census N8-10 with 8 workers. | RESULT: WinError5 multiprocessing pipe denied | D: rerun single
+[2026-07-03T19:30:24Z] > VERIFY | NEXT: Run row-monotone hom probe census N=8..10 single worker.
+[2026-07-03T19:30:53Z] OK VERIFY | DID: Row-monotone hom census N8-10 single worker. | RESULT: PASS pure=17589 hom_mono=15138 no_hom=2451 counterexample=0 | D: census N11
+[2026-07-03T19:30:58Z] > VERIFY | NEXT: Run row-monotone hom probe census N=11 single worker.
+[2026-07-03T19:34:03Z] OK VERIFY | DID: Row-monotone hom census N=11 single worker. | RESULT: PASS pure=167043 hom_mono=130793 no_hom=36250 counterexample=0 | D: post result
+[2026-07-03T19:34:14Z] > CHECK | NEXT: Append row-monotone hom N<=11 results to BANK0 bench note.
+[2026-07-03T19:34:51Z] OK CHECK | DID: Appended row-monotone results to BANK0 bench note. | RESULT: CODEX_BANK0_BENCH_20260703.md | D: post Claude
+[2026-07-03T19:35:11Z] OK CHECK | DID: Posted B0-3 row-monotonicity RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:35:58Z] > SELECT | NEXT: Refresh Claude mailbox before hom-branch Bank0 trace emitter work.
+[2026-07-03T19:36:23Z] > ATTACK | NEXT: Implement hom-branch Bank0 block trace emitter/verifier.
+[2026-07-03T19:37:19Z] OK ATTACK | DID: Implemented hom-branch Bank0 block trace emitter. | RESULT: _codex_bank0_hom_block_trace.py | D: named smoke
+[2026-07-03T19:37:31Z] > VERIFY | NEXT: Run hom-branch Bank0 block trace named-only smoke.
+[2026-07-03T19:37:58Z] OK VERIFY | DID: Hom-branch trace named-only smoke. | RESULT: PASS hom_trace=50 no_hom=12 worst_margin=0 at C5[2] | D: census N8-10
+[2026-07-03T19:38:05Z] > VERIFY | NEXT: Run hom-branch Bank0 block trace census N=8..10.
+[2026-07-03T19:38:32Z] OK VERIFY | DID: Hom-branch trace census N8-10. | RESULT: PASS hom_trace=15138 no_hom=2451 fail=0 worst_bank0=0 | D: census N11
+[2026-07-03T19:38:38Z] > VERIFY | NEXT: Run hom-branch Bank0 block trace census N=11.
+[2026-07-03T19:41:24Z] OK VERIFY | DID: Hom-branch trace census N11. | RESULT: PASS hom_trace=130793 no_hom=36250 fail=0 worst_template=0 worst_bank0=21 | D: update bench
+[2026-07-03T19:41:31Z] > CHECK | NEXT: Append hom-branch trace results to BANK0 bench note.
+[2026-07-03T19:41:54Z] OK CHECK | DID: Appended hom-branch trace results to BANK0 bench note. | RESULT: CODEX_BANK0_BENCH_20260703.md | D: post Claude
+[2026-07-03T19:42:17Z] OK CHECK | DID: Posted hom-branch trace RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:43:17Z] > SELECT | NEXT: Refresh Claude mailbox before full BANK0 hom-trace artifact work.
+[2026-07-03T19:43:43Z] OK SELECT | DID: Refreshed Claude mailbox. | RESULT: no newer message after B0-3 retask block | D: JSONL emitter
+[2026-07-03T19:43:50Z] > ATTACK | NEXT: Add full JSONL output support to hom-branch trace emitter.
+[2026-07-03T19:45:20Z] OK ATTACK | DID: Added JSONL option to hom-block trace emitter. | RESULT: --help EXIT 0 | D: verifier
+[2026-07-03T19:45:29Z] > ATTACK | NEXT: Add independent verifier for BANK0 hom-trace JSONL records.
+[2026-07-03T19:46:20Z] OK ATTACK | DID: Added hom-trace JSONL verifier. | RESULT: _codex_bank0_hom_trace_verify.py | D: named JSONL smoke
+[2026-07-03T19:47:04Z] > VERIFY | NEXT: Emit and verify named BANK0 hom-trace JSONL smoke.
+[2026-07-03T19:47:25Z] FAIL VERIFY | DID: JSONL verifier smoke. | RESULT: pointed at summary JSON not JSONL | D: rerun correct JSONL
+[2026-07-03T19:48:07Z] OK ATTACK | DID: Fixed hom-trace JSONL newline emission. | RESULT: jsonl.write uses newline escape | D: named verify
+[2026-07-03T19:48:43Z] OK VERIFY | DID: Named hom-trace JSONL emit+verify. | RESULT: PASS verified_hom_trace=50 routing=12 | D: census N8-10 JSONL
+[2026-07-03T19:48:51Z] > VERIFY | NEXT: Emit full BANK0 hom-trace JSONL for census N=8..10.
+[2026-07-03T19:49:27Z] OK VERIFY | DID: Emitted hom-trace JSONL census N8-10. | RESULT: hom_trace=15138 routing=2451 summary=tmp/bank0_hom_trace_n8_10_summary_v2.json | D: verify JSONL
+[2026-07-03T19:49:35Z] > VERIFY | NEXT: Verify full BANK0 hom-trace JSONL for census N=8..10.
+[2026-07-03T19:49:55Z] OK VERIFY | DID: Verified hom-trace JSONL census N8-10. | RESULT: PASS verified=15138 routing=2451 | D: census N11 JSONL
+[2026-07-03T19:50:00Z] > VERIFY | NEXT: Emit full BANK0 hom-trace JSONL for census N=11.
+[2026-07-03T19:52:45Z] OK VERIFY | DID: Emitted hom-trace JSONL census N11. | RESULT: hom_trace=130793 routing=36250 summary=tmp/bank0_hom_trace_n11_summary_v2.json | D: verify JSONL
+[2026-07-03T19:52:54Z] > VERIFY | NEXT: Verify full BANK0 hom-trace JSONL for census N=11.
+[2026-07-03T19:53:29Z] OK VERIFY | DID: Verified hom-trace JSONL census N11. | RESULT: PASS verified=130793 routing=36250 | D: update bench
+[2026-07-03T19:53:56Z] OK CHECK | DID: Appended full JSONL verifier results to BANK0 bench note. | RESULT: CODEX_BANK0_BENCH_20260703.md | D: post Claude
+[2026-07-03T19:54:22Z] OK CHECK | DID: Posted full hom-trace JSONL RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T19:55:07Z] > SELECT | NEXT: Refresh Claude mailbox and inspect no-hom BANK0 closure utilities.
+[2026-07-03T19:55:43Z] OK SELECT | DID: Refreshed mailbox/status. | RESULT: no new Claude response; no python process | D: closure prototype
+[2026-07-03T19:55:50Z] > SELECT | NEXT: Inspect Bank-L completion helpers for closure-rule reuse.
+[2026-07-03T19:57:23Z] > SYNC | NEXT: Read Claude mailbox for new messages before status reply.
+[2026-07-03T19:57:29Z] OK SYNC | DID: Read Claude mailbox tail for status request. | RESULT: newest known block 2026-07-03T04:05Z | D: none
+[2026-07-03T19:58:08Z] > SYNC | NEXT: Read Claude mailbox and progress tail before Branch-B Lean work.
+[2026-07-03T19:58:16Z] OK SYNC | DID: Read Claude mailbox/progress tail. | RESULT: no newer Claude block after 2026-07-03T04:05Z | D: inspect Lean pipeline
+[2026-07-03T19:58:47Z] > SYNC | NEXT: Extract latest Claude timestamp blocks after mailbox/tail mismatch.
+[2026-07-03T19:59:06Z] OK SYNC | DID: Extracted recent Claude blocks by timestamp. | RESULT: BranchB v5.1 accepted; G8/Sturm accepted; ChartSOS live | D: verify BranchB build
+[2026-07-03T19:59:47Z] OK CHECK | DID: Audited generated Branch-B Lean data for forbidden terms. | RESULT: rg native_decide/sorry/admit/axiom/unsafe found 0 | D: CERT2 ChartSOS
+[2026-07-03T20:00:44Z] > ATTACK | NEXT: Add Branch-B Lean artifact audit script for reproducible acceptance evidence.
+[2026-07-03T20:01:26Z] OK ATTACK | DID: Added Branch-B Lean artifact audit script. | RESULT: _codex_branchb_lean_artifact_audit.py | D: run audit
+[2026-07-03T20:01:46Z] OK VERIFY | DID: Ran Branch-B Lean artifact audit. | RESULT: PASS rows=14247 shards=29 forbidden=0 build_failures=0 | D: CERT2 Clarabel smoke
+[2026-07-03T20:01:46Z] > VERIFY | NEXT: Run bounded CERT-2 chart-0 rowgen smoke with Clarabel 64 threads.
+[2026-07-03T20:04:00Z] FAIL VERIFY | DID: CERT-2 chart0 rowgen Clarabel smoke threads=64 time=60. | RESULT: LP_FAIL iter1 MaxTime rows=14878 cols=70514 | D: none
+[2026-07-03T20:04:52Z] > SYNC | NEXT: Refresh Claude mailbox by timestamp before CERT-2 work.
+[2026-07-03T20:05:13Z] OK SYNC | DID: Read appended Claude 2026-07-03T05:30Z block. | RESULT: CERT2 paused; B0-3 closed; B0-4/5 next | D: Bank0 closure
+[2026-07-03T20:05:13Z] > SELECT | NEXT: Select Bank0 B0-5 closure emitter as tractable concrete artifact after CERT2 pause.
+[2026-07-03T20:06:33Z] > ATTACK | NEXT: Implement Bank0 B0-5 closure trace emitter prototype with exact Pi(U).
+[2026-07-03T20:08:24Z] OK ATTACK | DID: Implemented Bank0 closure trace emitter prototype. | RESULT: _codex_bank0_closure_trace_emit.py | D: named smoke
+[2026-07-03T20:08:24Z] > VERIFY | NEXT: Run Bank0 closure trace named-only smoke.
+[2026-07-03T20:10:39Z] FAIL VERIFY | DID: Stopped overbroad Bank0 closure named smoke. | RESULT: exceeded 90s on named blowups | D: bounded census smoke
+[2026-07-03T20:10:49Z] > VERIFY | NEXT: Run bounded Bank0 closure trace census smoke N=8 limit 5.
+[2026-07-03T20:11:03Z] OK VERIFY | DID: Bank0 closure trace N=8 limit5 smoke. | RESULT: PASS records=5 positive_packets=0 | D: full N8 smoke
+[2026-07-03T20:11:03Z] > VERIFY | NEXT: Run Bank0 closure trace census N=8 full.
+[2026-07-03T20:11:21Z] OK VERIFY | DID: Bank0 closure trace census N=8 full. | RESULT: PASS records=30 positive_packets=0 | D: N9 smoke
+[2026-07-03T20:11:21Z] > VERIFY | NEXT: Run Bank0 closure trace census N=9 full.
+[2026-07-03T20:12:17Z] FAIL VERIFY | DID: Bank0 closure trace census N=9 full. | RESULT: FAIL records=162 positive_packet_fails=10 first=cen:H?bB@qQ {8} Pi=1 | D: diagnose closure
+[2026-07-03T20:12:44Z] > ATTACK | NEXT: Tighten Bank0 C4 to complete nonterminal row intersections to terminal shadows.
+[2026-07-03T20:13:12Z] OK ATTACK | DID: Tightened Bank0 C4 row-terminal-shadow completion. | RESULT: _codex_bank0_closure_trace_emit.py | D: rerun N9
+[2026-07-03T20:13:20Z] > VERIFY | NEXT: Rerun Bank0 closure trace N=9 after C4 terminal-shadow repair.
+[2026-07-03T20:13:52Z] OK VERIFY | DID: Bank0 closure trace N=9 after C4 repair. | RESULT: PASS records=162 positive_packets=0 | D: N10 limited
+[2026-07-03T20:13:52Z] > VERIFY | NEXT: Run Bank0 closure trace N=10 limited 300 records.
+[2026-07-03T20:15:27Z] OK VERIFY | DID: Bank0 closure trace N=10 limit300. | RESULT: PASS records=300 positive_packets=0 | D: N10 full
+[2026-07-03T20:15:27Z] > VERIFY | NEXT: Run Bank0 closure trace N=10 full.
+[2026-07-03T20:26:54Z] OK VERIFY | DID: Bank0 closure trace census N=10 full. | RESULT: PASS records=2259 positive_packets=0 | D: post Claude
+[2026-07-03T20:27:18Z] OK CHECK | DID: Appended B0-5 closure trace results to Bank0 bench note. | RESULT: CODEX_BANK0_BENCH_20260703.md | D: post Claude
+[2026-07-03T20:27:40Z] OK CHECK | DID: Posted B0-5 closure trace RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T20:28:31Z] > SYNC | NEXT: Refresh Claude mailbox before scaling B0-5 closure gate to N=11.
+[2026-07-03T20:28:42Z] OK SYNC | DID: Refreshed Claude mailbox timestamp list. | RESULT: no newer block after 2026-07-03T05:30Z | D: B0-5 N11 batching
+[2026-07-03T20:29:27Z] OK ATTACK | DID: Added skip/progress batching args to Bank0 closure emitter. | RESULT: _codex_bank0_closure_trace_emit.py | D: smoke test
+[2026-07-03T20:30:06Z] > VERIFY | NEXT: Smoke-test Bank0 closure batching args on N=8 skip=5 limit=5.
+[2026-07-03T20:30:22Z] OK VERIFY | DID: Smoke-tested Bank0 batching args N8 skip5 limit5. | RESULT: PASS records=5 matched=10 skipped=5 | D: N11 batch0
+[2026-07-03T20:30:22Z] > VERIFY | NEXT: Run Bank0 closure trace N=11 batch skip0 limit100.
+[2026-07-03T20:32:00Z] OK VERIFY | DID: Bank0 closure trace N=11 batch0. | RESULT: PASS records=100 positive_packets=0 | D: JSONL input optimization
+[2026-07-03T20:32:29Z] OK ATTACK | DID: Added --input-jsonl routing-record mode to Bank0 closure emitter. | RESULT: _codex_bank0_closure_trace_emit.py | D: input smoke
+[2026-07-03T20:32:47Z] OK ATTACK | DID: Skipped redundant C5-hom search in input-jsonl mode. | RESULT: _codex_bank0_closure_trace_emit.py | D: N11 input smoke
+[2026-07-03T20:32:57Z] > VERIFY | NEXT: Run Bank0 closure trace N=11 input-jsonl batch skip0 limit500.
+[2026-07-03T20:36:57Z] OK VERIFY | DID: Bank0 closure trace N=11 input-jsonl batch0. | RESULT: PASS records=500 positive_packets=0 | D: batch1
+[2026-07-03T20:36:57Z] > VERIFY | NEXT: Run Bank0 closure trace N=11 input-jsonl batch skip500 limit500.
+[2026-07-03T20:42:13Z] OK VERIFY | DID: Bank0 closure trace N=11 input-jsonl batch1. | RESULT: PASS records=500 cumulative_checked=1000 positive_packets=0 | D: batch2
+[2026-07-03T20:42:13Z] > VERIFY | NEXT: Run Bank0 closure trace N=11 input-jsonl batch skip1000 limit500.
+[2026-07-03T20:48:07Z] OK VERIFY | DID: Bank0 closure trace N=11 input-jsonl batch2. | RESULT: PASS records=500 cumulative_checked=1500 positive_packets=0 | D: summarize
+[2026-07-03T20:48:21Z] OK CHECK | DID: Appended N11 batched closure trace status to Bank0 bench note. | RESULT: 1500/36250 checked fail=0 | D: post Claude
+[2026-07-03T20:48:36Z] OK CHECK | DID: Posted N11 batched B0-5 closure RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await response
+[2026-07-03T20:49:25Z] > SYNC | NEXT: Refresh Claude mailbox before continuing B0-5 N11 shards.
+[2026-07-03T20:50:50Z] > SYNC | NEXT: Refresh Claude mailbox and current Bank0 artifacts for user status.
+[2026-07-03T20:51:05Z] OK SYNC | DID: Read Claude 2026-07-03T06:30Z and B0-5 summaries. | RESULT: priority B0-4>B0-5>B0-7>B0-8>B0-6; N11 checked 1500/36250. | D: B0-6 unlocked
+[2026-07-03T20:51:38Z] > SYNC | NEXT: Refresh Claude mailbox and inspect B0-4/B0-5 state before next Bank0 action.
+[2026-07-03T20:52:02Z] OK SYNC | DID: Read latest Claude mailbox tail. | RESULT: 2026-07-03T06:30Z priority B0-4>B0-5>B0-7>B0-8>B0-6. | D: none
+[2026-07-03T20:52:02Z] > PLAN | NEXT: Inspect WRITEUP_REDTEAM_GPTPRO Bank0 design sections for B0-4/B0-5 implementation target.
+[2026-07-03T20:52:31Z] OK PLAN | DID: Inspected WRITEUP_REDTEAM_GPTPRO L4/L6/L3 and closure emitter. | RESULT: B0-4 needs corridor classifier; B0-5 emitter runnable. | D: next B0-5 N11 shards
+[2026-07-03T20:52:31Z] > ATTACK | NEXT: Run four exact B0-5 N11 shards, records 1500-3499, to expand census coverage.
+[2026-07-03T20:59:45Z] OK ATTACK | DID: Ran B0-5 N11 shards batch003-batch006. | RESULT: 2000 records, 0 fails, all PASS_NO_POSITIVE_PACKET. | D: N11 checked 3500/36250
+[2026-07-03T21:00:09Z] OK VERIFY | DID: Aggregated B0-5 N11 batches 000-006 and appended bench note. | RESULT: tmp/bank0_closure_trace_n11_batches_000_006_summary.json PASS_PARTIAL 3500/36250. | D: none
+[2026-07-03T21:00:20Z] > ATTACK | NEXT: Run four more exact B0-5 N11 shards, records 3500-5499.
+[2026-07-03T21:08:50Z] OK ATTACK | DID: Ran B0-5 N11 shards batch007-batch010. | RESULT: 2000 records, 0 fails, all PASS_NO_POSITIVE_PACKET. | D: N11 checked 5500/36250
+[2026-07-03T21:09:11Z] OK VERIFY | DID: Aggregated B0-5 N11 batches 000-010 and appended bench note. | RESULT: tmp/bank0_closure_trace_n11_batches_000_010_summary.json PASS_PARTIAL 5500/36250. | D: none
+[2026-07-03T21:09:11Z] > PLAN | NEXT: Inspect existing corridor gate scripts to identify B0-4 implementation entry point.
+[2026-07-03T21:09:35Z] OK PLAN | DID: Inspected corridor scripts for B0-4 entry point. | RESULT: existing scripts cover no-two-hole/rare-exit scaffolds, not final primitive-lens classifier. | D: new B0-4 harness needed
+[2026-07-03T21:10:34Z] > SYNC | NEXT: Refresh Claude mailbox and local Bank0 state before continuing B0-4/B0-5 work.
+[2026-07-03T21:11:02Z] OK SYNC | DID: Read Claude mailbox tail and B0-5 summary. | RESULT: no newer block beyond 2026-07-03T06:30Z; B0-5 N11 5500/36250. | D: none
+[2026-07-03T21:11:02Z] > ATTACK | NEXT: Inspect N11 routing JSONL schema and reusable B0-4 corridor code.
+[2026-07-03T21:11:48Z] OK ATTACK | DID: Inspected N11 routing schema and B0-5 input reconstruction. | RESULT: pure_no_hom records contain name/side; B0-5 reconstructs via dec(name[4:]). | D: none
+[2026-07-03T21:11:48Z] > ATTACK | NEXT: Add reusable B0-5 N11 batch-summary aggregator for exact coverage evidence.
+[2026-07-03T21:12:29Z] OK ATTACK | DID: Added B0-5 batch aggregator and ran it on current summaries. | RESULT: tmp/bank0_closure_trace_n11_batches_all_current_v2_summary.json PASS_PARTIAL 5500/36250. | D: aggregator added
+[2026-07-03T21:12:29Z] > ATTACK | NEXT: Run eight B0-5 N11 shards, batches 011-018, records 5500-9499.
+[2026-07-03T21:23:14Z] OK ATTACK | DID: Ran B0-5 N11 shards batch011-batch018. | RESULT: 4000 records, 0 fails, all PASS_NO_POSITIVE_PACKET. | D: N11 checked 9500/36250
+[2026-07-03T21:23:14Z] OK VERIFY | DID: Aggregated all B0-5 N11 shard summaries with new script. | RESULT: tmp/bank0_closure_trace_n11_batches_all_current_v2_summary.json PASS_PARTIAL 9500/36250. | D: none
+[2026-07-03T21:23:27Z] OK SYNC | DID: Posted B0-5 N11 9500/36250 exact coverage FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: none
+[2026-07-03T21:24:19Z] > SYNC | NEXT: Refresh Claude mailbox before B0-4 primitive-lens harness work.
+[2026-07-03T21:24:55Z] OK SYNC | DID: Read Claude mailbox tail including 2026-07-04T00:55Z. | RESULT: ChartSOS retired; EQ-ODL1 shifted-cone LP is new top bench item. | D: pivot to EQ-ODL1
+[2026-07-03T21:24:55Z] > PLAN | NEXT: Inspect EQ_HEIGHT_LEMMA_GPTPRO and existing EQ-CERT scripts for EQ-ODL1 implementation.
+[2026-07-03T21:25:32Z] OK PLAN | DID: Inspected EQ_HEIGHT_LEMMA_GPTPRO tail and available EQ cert scripts. | RESULT: EQ-ODL1 target P_EQ1=D_EQ*(eta25-25*(I_EQ-N)); old c=2/3 scripts reusable. | D: none
+[2026-07-03T21:25:32Z] > ATTACK | NEXT: Inspect old EQ-CERT2 LP implementation for adaptation to EQ-ODL1.
+[2026-07-03T21:27:15Z] OK ATTACK | DID: Added EQ-ODL1 exact chart falsifier and ran bound2+random smoke. | RESULT: tmp/eq_odl1_chart_falsifier_bound2_rand2k_v1.json PASS no hit. | D: EQ-ODL1 scout added
+[2026-07-03T21:27:15Z] > ATTACK | NEXT: Run stronger EQ-ODL1 exact chart falsifier bound3 plus random stress.
+[2026-07-03T21:46:44Z] FAIL ATTACK | DID: Ran EQ-ODL1 shifted LP negative-support objective=sum with 60s solver limit. | RESULT: tmp/eq_odl1_shifted_lp_negative_t60_v1.json status=1 time_limit vars=37882 constraints=47655. | D: need feasibility/partitioned LP
+[2026-07-03T21:46:44Z] > ATTACK | NEXT: Retry EQ-ODL1 negative-support shifted LP as zero-objective feasibility with 60s solver limit.
+[2026-07-03T21:51:07Z] FAIL ATTACK | DID: Ran EQ-ODL1 shifted LP negative-support objective=zero with 60s solver limit. | RESULT: tmp/eq_odl1_shifted_lp_negative_zero_t60_v1.json status=1 time_limit vars=37882 constraints=47655. | D: LP needs split/tuning
+[2026-07-03T21:51:07Z] > VERIFY | NEXT: Run exact EQ-ODL1 chart falsifier bound4 over all charts.
+[2026-07-03T21:54:17Z] OK VERIFY | DID: Ran EQ-ODL1 exact chart falsifier bound4. | RESULT: tmp/eq_odl1_chart_falsifier_bound4_v1.json PASS no hit, 19531250 points. | D: none
+[2026-07-03T21:54:17Z] OK VERIFY | DID: Wrote EQ-ODL1 bench note. | RESULT: problems/23/writeup/CODEX_EQ_ODL1_BENCH_20260704.md. | D: none
+2026-07-03T21:55:44Z > SYNC | NEXT: Read Claude mailbox and latest EQ bench to answer current status.
+2026-07-03T21:56:01Z OK SYNC | DID: Read Claude mailbox and EQ bench artifacts. | RESULT: latest Claude block 2026-07-04T00:55Z EQ-ODL1 top bench; bound4 falsifier PASS. | D: none
+2026-07-03T21:56:30Z OK REPORT | DID: Posted EQ-ODL1 bench FYI to Claude mailbox. | RESULT: coordination/CODEX_TO_CLAUDE.md updated with bound4 PASS and LP timeout artifacts. | D: none
+2026-07-03T21:57:06Z > SYNC | NEXT: Read Claude mailbox and repo state to choose next exact artifact.
+2026-07-03T21:57:57Z > ATTACK | NEXT: Add EQ-ODL1 support diagnostic for negative-row coverage and greedy LP support reduction.
+2026-07-03T22:01:09Z FAIL ATTACK | DID: Stopped first EQ-ODL1 support diagnostic after exact column expansion ran >90s. | RESULT: process 10632 stopped; no summary file. | D: replace with combinatorial coverage
+2026-07-03T22:02:52Z OK ATTACK | DID: Ran fast EQ-ODL1 support diagnostic. | RESULT: tmp/eq_odl1_support_diagnose_v1.json greedy 669 columns cover 4169/4169 negative terms. | D: reduced LP support candidate
+2026-07-03T22:20:14Z OK ATTACK | DID: Added EQ-ODL1 reduced greedy-support LP runner. | RESULT: problems/23/writeup/_codex_eq_odl1_reduced_lp.py. | D: run reduced LP
+2026-07-03T22:20:20Z > VERIFY | NEXT: Run EQ-ODL1 reduced 669-column greedy-support LP with 120s time limit.
+2026-07-03T22:21:20Z FAIL VERIFY | DID: Ran EQ-ODL1 reduced greedy 669-column LP. | RESULT: tmp/eq_odl1_reduced_lp_greedy669_zero_t120_v1.json infeasible vars=669 constraints=17579. | D: try structured generator supports
+2026-07-03T22:22:47Z OK ATTACK | DID: Added generator-filter mode to EQ-ODL1 reduced LP runner. | RESULT: python -B _codex_eq_odl1_reduced_lp.py --help passed. | D: run F5 support
+2026-07-03T22:22:55Z > VERIFY | NEXT: Run EQ-ODL1 F5-only reduced LP with 120s limit.
+2026-07-03T22:23:49Z FAIL VERIFY | DID: Ran EQ-ODL1 F5-only reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_F5_zero_t120_v1.json infeasible vars=3257 constraints=24633. | D: try F5+B0
+2026-07-03T22:23:55Z > VERIFY | NEXT: Run EQ-ODL1 F5+B0 reduced LP with 120s limit.
+2026-07-03T22:25:39Z FAIL VERIFY | DID: Ran EQ-ODL1 F5+B0 reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_F5_B0_zero_t120_v1.json infeasible vars=6514 constraints=47655. | D: try F5-F7 block
+2026-07-03T22:25:47Z > VERIFY | NEXT: Run EQ-ODL1 F5-F7 quadratic-cut reduced LP with 120s limit.
+2026-07-03T22:27:16Z FAIL VERIFY | DID: Ran EQ-ODL1 F5-F7 reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_F5_F6_F7_zero_t120_v1.json infeasible vars=9771 constraints=24905. | D: try CERT-1 block
+2026-07-03T22:27:23Z > VERIFY | NEXT: Run EQ-ODL1 CERT-1 block reduced LP with 120s limit.
+2026-07-03T22:30:19Z FAIL VERIFY | DID: Ran EQ-ODL1 CERT-1 block reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_CERT1block_zero_t120_v1.json infeasible vars=20211 constraints=47655. | D: try CERT1+F5
+2026-07-03T22:30:25Z > VERIFY | NEXT: Run EQ-ODL1 CERT-1 block plus F5 reduced LP with 120s limit.
+2026-07-03T22:33:34Z FAIL VERIFY | DID: Ran EQ-ODL1 CERT-1 block plus F5 reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_CERT1block_F5_zero_t120_v1.json infeasible vars=23468 constraints=47655. | D: try CERT1+F5-F7
+2026-07-03T22:33:47Z > VERIFY | NEXT: Run EQ-ODL1 CERT-1 block plus F5-F7 reduced LP with 180s limit.
+2026-07-03T22:39:46Z FAIL VERIFY | DID: Stopped EQ-ODL1 CERT-1 plus F5-F7 reduced LP after no verdict. | RESULT: process 78988 stopped after reporting vars=29982 constraints=47655. | D: support split inconclusive
+2026-07-03T22:40:21Z OK REPORT | DID: Appended EQ-ODL1 support-reduction diagnostics to bench note. | RESULT: CODEX_EQ_ODL1_BENCH_20260704.md updated with greedy support and reduced LP outcomes. | D: post Claude
+2026-07-03T22:40:47Z OK REPORT | DID: Posted EQ-ODL1 support-reduction FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated with reduced LP outcomes. | D: await response
+2026-07-03T22:41:49Z > SYNC | NEXT: Read Claude mailbox before continuing EQ-ODL1 mixed-support LP work.
+2026-07-03T22:42:28Z OK SYNC | DID: Read Claude mailbox new 2026-07-04T03:35Z block. | RESULT: EQ guidance linear F1-F4+B0 support reduction; SIB-CERT1 SB-1 after B0-5. | D: run linear+B0
+2026-07-03T22:42:37Z > VERIFY | NEXT: Run EQ-ODL1 linear F1-F4 plus B0 reduced LP with 180s limit.
+2026-07-03T22:44:15Z FAIL VERIFY | DID: Ran EQ-ODL1 linear F1-F4 plus B0 reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_F1_F2_F3_F4_B0_zero_t180_v1.json infeasible vars=11157 constraints=47655. | D: check Clarabel
+2026-07-03T22:45:48Z OK ATTACK | DID: Added Clarabel EQ-ODL1 LP runner. | RESULT: problems/23/writeup/_codex_eq_odl1_clarabel_lp.py --help passed. | D: Clarabel smoke
+2026-07-03T22:45:54Z > VERIFY | NEXT: Smoke-test Clarabel on EQ-ODL1 F1-F4+B0 support.
+2026-07-03T22:48:33Z FAIL VERIFY | DID: Smoke-tested Clarabel on EQ-ODL1 F1-F4+B0 support. | RESULT: tmp/eq_odl1_clarabel_F1_F2_F3_F4_B0_sum_t120_v1.json PrimalInfeasible iterations=14. | D: run full Clarabel
+2026-07-03T22:48:39Z > VERIFY | NEXT: Run full EQ-ODL1 negative-support Clarabel LP with 600s limit and 64 threads.
+2026-07-03T23:02:34Z FAIL VERIFY | DID: Ran full EQ-ODL1 negative-support Clarabel LP. | RESULT: tmp/eq_odl1_clarabel_negative_sum_t600_v1.json MaxTime iterations=36 vars=37882 constraints=47655. | D: no certificate
+2026-07-03T23:02:42Z > VERIFY | NEXT: Run EQ-ODL1 linear F1-F4 plus full CERT-1 block reduced LP with 180s limit.
+2026-07-03T23:08:01Z FAIL VERIFY | DID: Stopped EQ-ODL1 linear plus CERT-1 block reduced LP after no verdict. | RESULT: process 54072 stopped after vars=28111 constraints=47655. | D: no certificate
+2026-07-03T23:09:19Z OK REPORT | DID: Posted EQ-ODL1 Clarabel and linear+B0 follow-up to Claude. | RESULT: CODEX_TO_CLAUDE.md and CODEX_EQ_ODL1_BENCH_20260704.md updated. | D: none
+2026-07-03T23:10:09Z > SYNC | NEXT: Read Claude mailbox and current EQ artifacts before next certificate experiment.
+2026-07-03T23:10:46Z OK SYNC | DID: Read Claude mailbox and EQ bench tail. | RESULT: no newer block beyond 2026-07-04T03:35Z; no Python workers. | D: run F1-F7+B0 split
+2026-07-03T23:10:53Z > VERIFY | NEXT: Run EQ-ODL1 all-seven-cuts plus B0 reduced LP with 180s HiGHS limit.
+2026-07-03T23:16:07Z FAIL VERIFY | DID: Ran EQ-ODL1 F1-F7+B0 HiGHS reduced LP. | RESULT: tmp/eq_odl1_reduced_lp_F1_F2_F3_F4_F5_F6_F7_B0_zero_t180_v1.json time_limit vars=20928 constraints=47655. | D: try Clarabel same support
+2026-07-03T23:16:16Z > VERIFY | NEXT: Run EQ-ODL1 F1-F7+B0 Clarabel LP with 300s limit.
+2026-07-03T23:23:41Z FAIL VERIFY | DID: Ran EQ-ODL1 F1-F7+B0 Clarabel LP. | RESULT: tmp/eq_odl1_clarabel_F1_F2_F3_F4_F5_F6_F7_B0_sum_t300_v1.json MaxTime iterations=35 vars=20928 constraints=47655. | D: no certificate
+2026-07-03T23:24:28Z OK REPORT | DID: Posted EQ-ODL1 F1-F7+B0 split FYI to Claude and bench. | RESULT: CODEX_TO_CLAUDE.md and CODEX_EQ_ODL1_BENCH_20260704.md updated. | D: none
+2026-07-03T23:25:10Z > SYNC | NEXT: Read Claude mailbox before targeted EQ-ODL1 mixed-support experiment.
+2026-07-03T23:26:01Z OK SYNC | DID: Read Claude mailbox before mixed-support EQ-ODL1 work. | RESULT: no newer block beyond 2026-07-04T03:35Z; no Python workers. | D: support selector
+2026-07-03T23:26:07Z > ATTACK | NEXT: Add EQ-ODL1 mixed support selector for top-k generator columns.
+2026-07-03T23:26:49Z OK ATTACK | DID: Added EQ-ODL1 top-k support selector. | RESULT: problems/23/writeup/_codex_eq_odl1_select_support.py --help passed. | D: generate top200 support
+2026-07-03T23:27:27Z OK ATTACK | DID: Generated EQ-ODL1 top200-per-generator support. | RESULT: tmp/eq_odl1_support_top200_allgens_v1.json selected_columns=2800. | D: run LP
+2026-07-03T23:27:34Z > VERIFY | NEXT: Run EQ-ODL1 top200-per-generator mixed-support LP with 180s HiGHS limit.
+2026-07-03T23:28:29Z FAIL VERIFY | DID: Ran EQ-ODL1 top200-per-generator mixed-support LP. | RESULT: tmp/eq_odl1_reduced_lp_top200_allgens_zero_t180_v1.json infeasible vars=2800 constraints=18065. | D: try top500 support
+2026-07-03T23:29:05Z OK ATTACK | DID: Generated EQ-ODL1 top500-per-generator support. | RESULT: tmp/eq_odl1_support_top500_allgens_v1.json selected_columns=7000. | D: run LP
+2026-07-03T23:29:11Z > VERIFY | NEXT: Run EQ-ODL1 top500-per-generator mixed-support LP with 180s HiGHS limit.
+2026-07-03T23:30:17Z FAIL VERIFY | DID: Ran EQ-ODL1 top500-per-generator mixed-support LP. | RESULT: tmp/eq_odl1_reduced_lp_top500_allgens_zero_t180_v1.json infeasible vars=7000 constraints=19273. | D: try top1000 support
+2026-07-03T23:30:55Z OK ATTACK | DID: Generated EQ-ODL1 top1000-per-generator support. | RESULT: tmp/eq_odl1_support_top1000_allgens_v1.json selected_columns=13669. | D: run LP
+2026-07-03T23:31:03Z > VERIFY | NEXT: Run EQ-ODL1 top1000-per-generator mixed-support LP with 240s HiGHS limit.
+2026-07-03T23:32:32Z FAIL VERIFY | DID: Ran EQ-ODL1 top1000-per-generator mixed-support LP. | RESULT: tmp/eq_odl1_reduced_lp_top1000_allgens_zero_t240_v1.json infeasible vars=13669 constraints=22546. | D: top-score support line exhausted
+2026-07-03T23:33:11Z OK REPORT | DID: Posted EQ-ODL1 top-k mixed-support results to Claude and bench. | RESULT: CODEX_TO_CLAUDE.md and CODEX_EQ_ODL1_BENCH_20260704.md updated. | D: none
+2026-07-03T23:33:49Z > SYNC | NEXT: Read Claude mailbox and current B0/EQ state before next exact artifact.
+2026-07-03T23:34:28Z OK SYNC | DID: Read Claude mailbox new 2026-07-04T05:30Z block. | RESULT: approved EQ move full Clarabel 3600s plus selected quadratic support; Rung-2 wait for spec. | D: run full Clarabel
+2026-07-03T23:34:37Z > VERIFY | NEXT: Run full EQ-ODL1 negative-support Clarabel feasibility LP with 3600s limit and 64 threads.
+2026-07-03T23:44:53Z FAIL VERIFY | DID: Ran full EQ-ODL1 negative-support Clarabel feasibility LP. | RESULT: tmp/eq_odl1_clarabel_negative_zero_t3600_v1.json PrimalInfeasible iterations=26 solve_time=405.1274344s. | D: needs exact Farkas or Rung-2
+2026-07-03T23:45:45Z OK REPORT | DID: Posted EQ-ODL1 long-run PrimalInfeasible ASK to Claude. | RESULT: CODEX_TO_CLAUDE.md asks Farkas replay vs Rung-2; bench note updated. | D: await response
+2026-07-03T23:46:53Z > SYNC | NEXT: Read Claude mailbox for EQ-ODL1 Farkas-vs-Rung2 decision.
+2026-07-03T23:47:28Z OK SYNC | DID: Read Claude mailbox for EQ-ODL1 Farkas response. | RESULT: no newer block beyond 2026-07-04T05:30Z; no Python workers. | D: inspect Clarabel ray
+2026-07-03T23:48:10Z OK ATTACK | DID: Probed Clarabel infeasibility ray convention on tiny LP. | RESULT: tmp/clarabel_ray_probe.py status=PrimalInfeasible, z=[1,1], A^Tz=0, b^Tz=-1. | D: add EQ ray checker
+2026-07-03T23:49:43Z OK ATTACK | DID: Added Clarabel dual-ray exact replay scaffold. | RESULT: _codex_eq_odl1_clarabel_lp.py supports dual_float_stats and dual_exact_check. | D: validate on F1-F4+B0
+2026-07-03T23:49:49Z > VERIFY | NEXT: Validate Clarabel dual-ray checker on F1-F4+B0 infeasible support.

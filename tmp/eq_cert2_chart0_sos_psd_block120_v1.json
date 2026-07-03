@@ -1,0 +1,294 @@
+{
+  "all_component_sizes": [
+    2260,
+    1848,
+    1177,
+    897,
+    105
+  ],
+  "chart": 0,
+  "coeff_slack_min": -29556.574485729263,
+  "coeff_slack_neg_count_1e-7": 19294,
+  "columns": 82716,
+  "constraints": 142069,
+  "generator_slack_min": -6.737039080879588,
+  "iterations": 4,
+  "max_block_size": 120,
+  "max_blocks": 0,
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "extra_maxcut": "none",
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "maxcut_masks": [],
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "nnz": 1359625,
+  "obj_val_dual": -2060.126739501457,
+  "objective": 0.0,
+  "objective_mode": "zero",
+  "psd_block_dims": [
+    105
+  ],
+  "psd_blocks": 1,
+  "psd_entries": 5565,
+  "r_dual": 0.7916939185793509,
+  "r_prim": 0.7858687108099595,
+  "rows": 53788,
+  "schema": "eq_cert2_chart_sos_psd_blocks_v1",
+  "seed_rows": null,
+  "solve_time": 175.3105512,
+  "status": "MaxTime",
+  "top_negative_coeff_rows": [
+    {
+      "row": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        3,
+        0
+      ],
+      "slack": -29556.574485729263
+    },
+    {
+      "row": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "slack": -29248.78985871148
+    },
+    {
+      "row": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slack": -28317.837963518938
+    },
+    {
+      "row": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slack": -27611.8058178152
+    },
+    {
+      "row": [
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "slack": -26253.330627577343
+    },
+    {
+      "row": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "slack": -25715.646295707367
+    },
+    {
+      "row": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slack": -25378.83586209562
+    },
+    {
+      "row": [
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slack": -25361.95940117595
+    },
+    {
+      "row": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "slack": -24550.06248939412
+    },
+    {
+      "row": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "slack": -24186.20128518871
+    }
+  ],
+  "variables": 88281
+}
