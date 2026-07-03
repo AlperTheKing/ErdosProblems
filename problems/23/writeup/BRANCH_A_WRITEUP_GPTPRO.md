@@ -39,3 +39,18 @@ EQ-CERT2 -> chart Bernstein/SOS -> BernsteinCert/SOS checker; EQ-AM -> cube M-ce
 SIB-S7 -> Sturm + cone/emptiness; SIB-AM -> cube M-certs. 'No graph enumeration remains
 in the theorem statement — census/stress gates are validation only.'
 **BRANCH-A WRITEUP COMPLETE (Parts I-IV). Both consolidated writeups DONE.**
+
+## PART IV AUTHORITATIVE ADDITIONS (user-relayed full text)
+- 2.3 REC-cert status refined: 'CERTIFICATE-PROVEN for tested families; FORMAL ARTIFACT
+  PENDING' — Codex must EMIT per-door REC-cert decompositions (alpha/beta/R), not just
+  zeta verdicts.
+- 3.x T=2 certs in Hall form: NONNEG |U|-D_T(U) = R >= 0; CROSS = alpha sigma + beta
+  nu_K + R; LABEL; OSC records {odd-shortcut exclusion, separated crossing-row residual,
+  noncrossing slack, endpoint-overlap slack}.
+- 4.3 repair-if-(*): local ODL cert OR s_H <= |H|-|T| + c_H with c_H paid by
+  seed-specific PMTS/A1 residual — 'local extension, not collapse'.
+- 5: TEN NAMED ASSUMPTIONS A1-A10 (A1 six-cone, A2 four-mask, A3 NCH/G1', A4 q<3',
+  A5 Seed3', A6 EQ-CERT2, A7 EQ-AM, A8 SIB-S7, A9 SIB-AM, A10 door saturation —
+  A10 PROVEN conditional on A3/A4/A5 + 5mask).
+- 6: conditional theorem 7-step proof cites the FORMALIZED netDW_assembly for step 7.
+- 7: complete pending ledger 7.1-7.9 with consumers + failure modes.

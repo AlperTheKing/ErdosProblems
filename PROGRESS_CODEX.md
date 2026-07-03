@@ -24646,3 +24646,78 @@
 [2026-07-03T14:45:57Z] > VERIFY | NEXT: Check local Clarabel availability for CERT-2 LP oracle.
 [2026-07-03T14:47:45Z] OK ATTACK | DID: Added Clarabel backend to rowgen. | RESULT: --oracle clarabel help EXIT 0 | D: smoke run
 [2026-07-03T14:48:17Z] OK VERIFY | DID: Clarabel cap200 smoke. | RESULT: PrimalInfeasible as expected | D: full clarabel rowgen
+[2026-07-03T15:06:53Z] FAIL VERIFY | DID: chart0 Clarabel full rowgen. | RESULT: no exact cert; final worst=-207.78 exact min=-194549/55 | D: tune oracle
+[2026-07-03T15:07:28Z] > GATE | NEXT: Refresh Claude mailbox before CERT-2 dynamic column work.
+[2026-07-03T15:07:39Z] OK GATE | DID: Read Claude mailbox. | RESULT: latest 2026-07-04T07:32Z hunt ACK + CDCore formal | D: CERT-2 dynamic cols
+[2026-07-03T15:08:01Z] > ATTACK | NEXT: Add dynamic active-row column generation to CERT-2 rowgen.
+[2026-07-03T15:09:11Z] OK ATTACK | DID: Added --dynamic-columns rowgen mode. | RESULT: CLI help EXIT 0 | D: smoke dynamic
+[2026-07-03T15:09:48Z] FAIL VERIFY | DID: dynamic cap200 smoke. | RESULT: infeasible as expected | D: uncapped dynamic
+[2026-07-03T15:13:04Z] FAIL VERIFY | DID: dynamic uncapped HiGHS rowgen. | RESULT: iter3 time limit at rows=7472 cols=42837 | D: clarabel dynamic
+[2026-07-03T15:17:13Z] FAIL VERIFY | DID: dynamic Clarabel zero-objective rowgen. | RESULT: iter1 MaxTime rows=14878 cols=70514 | D: dynamic sum
+[2026-07-03T15:19:41Z] FAIL VERIFY | DID: dynamic sum HiGHS rowgen. | RESULT: infeasible at iter3 rows=8468 cols=40828 | D: dump active rows
+[2026-07-03T15:20:09Z] OK ATTACK | DID: Added rowgen seed/dump row hooks. | RESULT: --seed-rows --dump-rows help EXIT 0 | D: rerun dump
+[2026-07-03T15:22:17Z] FAIL VERIFY | DID: dynamic sum HiGHS dump rerun. | RESULT: infeasible rows=8468 cols=40828 active_rows dumped | D: replay clarabel
+[2026-07-03T15:26:00Z] FAIL VERIFY | DID: replay iter3 rows with Clarabel. | RESULT: MaxTime rows=8468 cols=40828 | D: replay highs-ipm
+[2026-07-03T15:28:29Z] FAIL VERIFY | DID: replay iter3 rows with highs-ipm. | RESULT: time limit rows=8468 cols=40828 | D: replay highs-ds
+[2026-07-03T15:31:20Z] FAIL VERIFY | DID: replay iter3 rows with highs-ds. | RESULT: time limit rows=8468 cols=40828 | D: check highspy
+[2026-07-03T15:32:38Z] OK ATTACK | DID: Added native highspy backend. | RESULT: --oracle highspy help EXIT 0 | D: highspy smoke
+[2026-07-03T15:33:05Z] OK VERIFY | DID: highspy cap200 smoke. | RESULT: Infeasible as expected | D: highspy replay
+[2026-07-03T15:33:44Z] FAIL VERIFY | DID: replay iter3 rows with native highspy. | RESULT: Infeasible rows=8468 cols=40828 | D: IIS/dual diagnostic
+[2026-07-03T15:40:22Z] FAIL VERIFY | DID: highspy dual-ray diagnostic. | RESULT: no return before manual stop | D: summarize CERT-2 state
+[2026-07-03T15:40:48Z] > CHECK | NEXT: Post CERT-2 chart0 oracle obstruction to Claude for route decision.
+[2026-07-03T15:40:48Z] OK CHECK | DID: Posted CERT-2 chart0 ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await/continue
+[2026-07-03T15:42:32Z] OK ATTACK | DID: Added optional qmax flip facets. | RESULT: --extra-maxcut help EXIT 0 | D: tight facet test
+[2026-07-03T15:42:59Z] > VERIFY | NEXT: Run chart0 dynamic rowgen with 19 tight qmax facets.
+[2026-07-03T15:43:33Z] FAIL VERIFY | DID: qmax-tight highspy dynamic rowgen. | RESULT: spurious infeasible at iter0 likely; cols=44748 | D: scipy replay
+[2026-07-03T15:44:37Z] FAIL VERIFY | DID: qmax-tight scipy smoke 2 iter. | RESULT: no exact cert; iter1 rows=6350 cols=72014 violated=1709 | D: all-facet size check
+[2026-07-03T15:47:12Z] OK ATTACK | DID: Added selected qmax mask mode. | RESULT: --maxcut-masks help EXIT 0 | D: selected qmax run
+[2026-07-03T15:54:39Z] FAIL VERIFY | DID: qmax16 dynamic rowgen chart0. | RESULT: no exact cert; iter4 worst=-450 rows=9482 cols=116763 | D: expand facets
+[2026-07-03T15:55:22Z] > ATTACK | NEXT: Patch CERT-2 rowgen to dump active rows on NO_EXACT_CERT exits.
+[2026-07-03T15:56:12Z] OK ATTACK | DID: Patched rowgen final active-row dump. | RESULT: active_rows emitted on NO_EXACT_CERT | D: syntax check
+[2026-07-03T15:57:25Z] > VERIFY | NEXT: Run chart0 qmax32 dynamic rowgen with active-row dump.
+[2026-07-03T16:07:33Z] FAIL VERIFY | DID: qmax32 dynamic rowgen chart0. | RESULT: LP timeout iter4 rows=9967 cols=194053 | D: inspect dump
+[2026-07-03T16:07:53Z] > ATTACK | NEXT: Patch rowgen seed loader to accept active_rows summaries.
+[2026-07-03T16:08:14Z] OK ATTACK | DID: Patched seed loader for active_rows. | RESULT: rowgen --help EXIT 0 | D: qmax32 replay
+[2026-07-03T16:08:14Z] > VERIFY | NEXT: Replay qmax32 active rows with 600s LP limit.
+[2026-07-03T16:18:47Z] FAIL VERIFY | DID: qmax32 replay from active rows. | RESULT: infeasible iter1 rows=10529 cols=207434 | D: expand qmax facets
+[2026-07-03T16:19:06Z] > VERIFY | NEXT: Replay qmax48 from qmax32 frontier to test facet-strength obstruction.
+[2026-07-03T16:23:45Z] FAIL VERIFY | DID: qmax48 replay from qmax32 frontier. | RESULT: infeasible rows=10529 cols=276302 | D: rerank facets
+[2026-07-03T16:24:47Z] OK ATTACK | DID: Reranked qmax facets on 10529-row frontier. | RESULT: top shifted to QMAX_921 family | D: qmax52 replay
+[2026-07-03T16:24:53Z] > VERIFY | NEXT: Replay qmax52 frontier with reranked masks.
+[2026-07-03T16:29:43Z] FAIL VERIFY | DID: qmax52 reranked frontier replay. | RESULT: infeasible rows=10529 cols=295358 | D: size all-qmax
+[2026-07-03T16:31:45Z] OK ATTACK | DID: Sized all-qmax frontier. | RESULT: rows=10529 cols=1338738 term_nnz=19274713 | D: all-qmax replay
+[2026-07-03T16:31:51Z] > VERIFY | NEXT: Replay all-qmax frontier LP for feasibility.
+[2026-07-03T16:53:56Z] FAIL VERIFY | DID: all-qmax frontier LP. | RESULT: timeout rows=10529 cols=1338738 matrix_nnz=12381574 | D: separation needed
+[2026-07-03T16:54:25Z] OK CHECK | DID: Posted CERT-2 qmax obstruction ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: switch hunt
+[2026-07-03T16:55:08Z] > VERIFY | NEXT: Run MycC7 B=3 weighted hunt cut0 all terminals.
+[2026-07-03T16:58:50Z] FAIL VERIFY | DID: MycC7 B=3 cut0 single-process hunt. | RESULT: stopped no output after >2min | D: needs parallel runner
+[2026-07-03T16:59:08Z] > ATTACK | NEXT: Add parallel weighted Mycielskian blowup hunt driver.
+[2026-07-03T16:59:59Z] OK ATTACK | DID: Added parallel weighted hunt driver. | RESULT: --help EXIT 0 | D: B2 regression
+[2026-07-03T17:00:21Z] FAIL VERIFY | DID: Parallel hunt B2 regression. | RESULT: WinError 5 multiprocessing Pipe access denied | D: external sharding/C++
+[2026-07-03T17:00:39Z] > VERIFY | NEXT: Run MycC7 B=3 cut0 apex-only exact hunt.
+[2026-07-03T17:03:27Z] FAIL VERIFY | DID: MycC7 B=3 cut0 apex-only Python hunt. | RESULT: stopped no output after 120s | D: needs C++/shard runner
+[2026-07-03T17:04:34Z] > ATTACK | NEXT: Audit CERT-2 generator homogenization, especially eta25-25.
+[2026-07-03T17:04:54Z] > VERIFY | NEXT: Exact audit G8_eta25_25 chart homogenization includes -25*s^2.
+[2026-07-03T17:06:25Z] OK VERIFY | DID: Audited G8 chart0 homogenization. | RESULT: G8 == eta25_hat - 25*s^2, seed coeff cancels | D: ChartSOS
+[2026-07-03T17:07:19Z] > ATTACK | NEXT: Add ChartSOS degree-12 size/prototype script for chart0.
+[2026-07-03T17:08:03Z] OK ATTACK | DID: Added ChartSOS size helper. | RESULT: --help EXIT 0 | D: size runs
+[2026-07-03T17:11:29Z] OK VERIFY | DID: Sized ChartSOS chart0. | RESULT: dense Gram 5004 basis/12522510 entries; frontier sparse basis 4859 | D: sparse atoms
+[2026-07-03T17:12:54Z] OK ATTACK | DID: Counted chart0 SOS splits. | RESULT: 9073 posdiag splits cover 2505/8275 neg rows | D: conic smoke
+[2026-07-03T17:13:40Z] OK ATTACK | DID: Added 2x2 SOS smoke script. | RESULT: --help EXIT 0 | D: smoke run
+[2026-07-03T17:14:18Z] FAIL VERIFY | DID: 2x2 SOS tiny smoke. | RESULT: CVXPY item assignment TypeError | D: sparse assembly patch
+[2026-07-03T17:15:18Z] FAIL VERIFY | DID: 2x2 SOS tiny smoke. | RESULT: infeasible cols=200 atoms=50 rows=22514 | D: larger smoke
+[2026-07-03T17:16:13Z] FAIL VERIFY | DID: 2x2 SOS mid smoke. | RESULT: infeasible cols=3000 atoms=1000 rows=22515 | D: full atom smoke
+[2026-07-03T17:17:33Z] FAIL VERIFY | DID: 2x2 SOS full-atom smoke. | RESULT: infeasible cols=20000 atoms=2505 rows=24428 | D: all-split atoms
+[2026-07-03T17:20:16Z] FAIL VERIFY | DID: 2x2 SOS all-split smoke. | RESULT: infeasible cols=20000 atoms=9073 rows=24428 | D: count full cols
+[2026-07-03T17:20:52Z] OK ATTACK | DID: Counted degree12 repair columns. | RESULT: base cols=82716 | D: full 2x2 smoke
+[2026-07-03T17:35:07Z] FAIL VERIFY | DID: 2x2 SOS full-base all-atom CVXPY smoke. | RESULT: stopped no output after >10min | D: direct Clarabel needed
+[2026-07-03T17:36:05Z] OK CHECK | DID: Posted G8 homogenization audit to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: S7 Sturm
+[2026-07-03T17:36:21Z] > ATTACK | NEXT: Locate S7 central all-seven-tight curve formula and t-range.
+[2026-07-03T17:37:00Z] > ATTACK | NEXT: Emit S7 central curve Sturm JSON and exact verifier.
+[2026-07-03T17:38:16Z] OK VERIFY | DID: Emitted S7 central Sturm cert. | RESULT: verifier PASS roots=0 P0(1)=375 | D: notify Claude
+[2026-07-03T17:38:31Z] OK CHECK | DID: Posted S7 central Sturm artifact to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: continue CERT-2
+[2026-07-03T17:39:33Z] > ATTACK | NEXT: Add direct Clarabel 2x2 SOS solver for chart0.
+[2026-07-03T17:40:26Z] OK ATTACK | DID: Added direct Clarabel 2x2 SOS solver. | RESULT: --help EXIT 0 | D: tiny direct smoke
+[2026-07-03T17:41:11Z] FAIL VERIFY | DID: direct 2x2 SOS tiny smoke. | RESULT: PrimalInfeasible cols=200 atoms=50 | D: mid direct smoke
+[2026-07-03T17:42:04Z] FAIL VERIFY | DID: direct 2x2 SOS mid smoke. | RESULT: PrimalInfeasible cols=3000 atoms=1000 | D: direct all-split
+[2026-07-03T17:43:51Z] FAIL VERIFY | DID: direct 2x2 SOS all-split smoke. | RESULT: PrimalInfeasible cols=20000 atoms=9073 | D: direct full-base

@@ -1,0 +1,220 @@
+{
+  "active_rows": null,
+  "chart": 0,
+  "final": "LP_FAIL",
+  "history": [
+    {
+      "columns": 44748,
+      "dynamic_columns": true,
+      "iteration": 0,
+      "lp_message": "Infeasible",
+      "lp_status": 2,
+      "nonzeros": 210584,
+      "oracle": "highspy",
+      "rows": 2140,
+      "success": false
+    }
+  ],
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "extra_maxcut": "tight",
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_163",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_171",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_427",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_443",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_491",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_495",
+        "terms": 10
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_507",
+        "terms": 10
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_511",
+        "terms": 8
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_581",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_597",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_853",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_861",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_885",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_887",
+        "terms": 10
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_893",
+        "terms": 10
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_895",
+        "terms": 8
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_1017",
+        "terms": 8
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_1019",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "QMAX_1021",
+        "terms": 4
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "schema": "eq_cert2_chart_rowgen_v1"
+}
