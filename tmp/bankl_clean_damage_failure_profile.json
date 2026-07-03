@@ -1,0 +1,2225 @@
+{
+  "records": [
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              6
+            ],
+            "hit_vertices": [
+              7
+            ],
+            "v": 1
+          },
+          {
+            "hit_positions": [
+              1,
+              3
+            ],
+            "hit_vertices": [
+              9,
+              10
+            ],
+            "v": 3
+          },
+          {
+            "hit_positions": [
+              3,
+              5
+            ],
+            "hit_vertices": [
+              10,
+              0
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              0
+            ],
+            "hit_vertices": [
+              2
+            ],
+            "v": 8
+          }
+        ],
+        "row_boundary_degrees": [
+          1,
+          1,
+          0,
+          2,
+          0,
+          1,
+          1
+        ]
+      },
+      "bad_edges": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "1-8": 5,
+        "2-7": 7
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "5",
+        "detour_terms_count": 3,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('singleton', 2)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              2
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "16/3",
+          "deficit": "11/3",
+          "size": 9,
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1/3",
+          "deficit": "2/3",
+          "size": 1,
+          "vertices": [
+            4
+          ]
+        },
+        {
+          "TQ": "1/3",
+          "deficit": "2/3",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "f": [
+        2,
+        7
+      ],
+      "n": 11,
+      "name": "cenJ?AEF@oM?{?",
+      "offrow_bad_edges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "offrow_vertices": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "1": 1,
+              "3": 1,
+              "6": 0,
+              "8": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                6,
+                10
+              ]
+            ],
+            "mask": 3
+          },
+          {
+            "colors": {
+              "1": 0,
+              "3": 0,
+              "6": 1,
+              "8": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                2,
+                8
+              ],
+              [
+                3,
+                9
+              ],
+              [
+                3,
+                10
+              ]
+            ],
+            "mask": 12
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        2,
+        9,
+        4,
+        10,
+        5,
+        0,
+        7
+      ],
+      "row_sides": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "side": "00111111000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              2,
+              4
+            ],
+            "hit_vertices": [
+              8,
+              10
+            ],
+            "v": 1
+          },
+          {
+            "hit_positions": [
+              4,
+              6
+            ],
+            "hit_vertices": [
+              10,
+              9
+            ],
+            "v": 4
+          },
+          {
+            "hit_positions": [
+              5
+            ],
+            "hit_vertices": [
+              2
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              3
+            ],
+            "hit_vertices": [
+              3
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "bad_edges": [
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "5-9": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('singleton', 9)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              9
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        5,
+        9
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        1,
+        4,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "1": 0,
+              "4": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                8
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                2,
+                6
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "1": 1,
+              "4": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                7
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                4,
+                10
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        5,
+        0,
+        8,
+        3,
+        10,
+        2,
+        9
+      ],
+      "row_sides": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "side": "11111000000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              4,
+              6
+            ],
+            "hit_vertices": [
+              10,
+              9
+            ],
+            "v": 2
+          },
+          {
+            "hit_positions": [
+              2,
+              4
+            ],
+            "hit_vertices": [
+              8,
+              10
+            ],
+            "v": 3
+          },
+          {
+            "hit_positions": [
+              3
+            ],
+            "hit_vertices": [
+              1
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              5
+            ],
+            "hit_vertices": [
+              4
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "bad_edges": [
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "5-9": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('singleton', 9)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              9
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        5,
+        9
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "2": 0,
+              "3": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                6
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                2,
+                10
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "2": 1,
+              "3": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                8
+              ],
+              [
+                3,
+                10
+              ],
+              [
+                4,
+                7
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        5,
+        0,
+        8,
+        1,
+        10,
+        4,
+        9
+      ],
+      "row_sides": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "side": "11111000000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              2,
+              4
+            ],
+            "hit_vertices": [
+              9,
+              10
+            ],
+            "v": 2
+          },
+          {
+            "hit_positions": [
+              4,
+              6
+            ],
+            "hit_vertices": [
+              10,
+              8
+            ],
+            "v": 3
+          },
+          {
+            "hit_positions": [
+              5
+            ],
+            "hit_vertices": [
+              1
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              3
+            ],
+            "hit_vertices": [
+              4
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "bad_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "0-8": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('singleton', 8)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              8
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        0,
+        8
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "2": 0,
+              "3": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                6
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                2,
+                10
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "2": 1,
+              "3": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                8
+              ],
+              [
+                3,
+                10
+              ],
+              [
+                4,
+                7
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        0,
+        5,
+        9,
+        4,
+        10,
+        1,
+        8
+      ],
+      "row_sides": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "side": "01111100000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              4,
+              6
+            ],
+            "hit_vertices": [
+              10,
+              8
+            ],
+            "v": 1
+          },
+          {
+            "hit_positions": [
+              2,
+              4
+            ],
+            "hit_vertices": [
+              9,
+              10
+            ],
+            "v": 4
+          },
+          {
+            "hit_positions": [
+              3
+            ],
+            "hit_vertices": [
+              2
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              5
+            ],
+            "hit_vertices": [
+              3
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "bad_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "0-8": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('singleton', 8)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              8
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        0,
+        8
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        1,
+        4,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "1": 0,
+              "4": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                8
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                2,
+                6
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "1": 1,
+              "4": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                7
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                4,
+                10
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        0,
+        5,
+        9,
+        2,
+        10,
+        3,
+        8
+      ],
+      "row_sides": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "side": "01111100000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              1,
+              3
+            ],
+            "hit_vertices": [
+              8,
+              10
+            ],
+            "v": 1
+          },
+          {
+            "hit_positions": [
+              3,
+              5
+            ],
+            "hit_vertices": [
+              10,
+              9
+            ],
+            "v": 4
+          },
+          {
+            "hit_positions": [
+              4
+            ],
+            "hit_vertices": [
+              2
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              2
+            ],
+            "hit_vertices": [
+              3
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "bad_edges": [
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "0-5": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('path_interval', 0, 1)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              0,
+              8
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        0,
+        5
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        1,
+        4,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "1": 0,
+              "4": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                8
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                2,
+                6
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "1": 1,
+              "4": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                7
+              ],
+              [
+                4,
+                9
+              ],
+              [
+                4,
+                10
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        0,
+        8,
+        3,
+        10,
+        2,
+        9,
+        5
+      ],
+      "row_sides": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "side": "11111100000"
+    },
+    {
+      "attachments": {
+        "outer": [
+          {
+            "hit_positions": [
+              3,
+              5
+            ],
+            "hit_vertices": [
+              10,
+              9
+            ],
+            "v": 2
+          },
+          {
+            "hit_positions": [
+              1,
+              3
+            ],
+            "hit_vertices": [
+              8,
+              10
+            ],
+            "v": 3
+          },
+          {
+            "hit_positions": [
+              2
+            ],
+            "hit_vertices": [
+              1
+            ],
+            "v": 6
+          },
+          {
+            "hit_positions": [
+              4
+            ],
+            "hit_vertices": [
+              4
+            ],
+            "v": 7
+          }
+        ],
+        "row_boundary_degrees": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "bad_edges": [
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "bad_lengths": {
+        "0-5": 7,
+        "6-7": 5
+      },
+      "certificate": {
+        "completed_positive_lcb_terms": 6,
+        "connected_positive_lcb_terms": 8,
+        "detour_sum": "10/3",
+        "detour_terms_count": 1,
+        "kind": "nuK",
+        "target": "47",
+        "terms": [
+          {
+            "coeff": "47/98",
+            "contribution": "47",
+            "kind": "nuK",
+            "label": "('path_interval', 0, 1)",
+            "terminal": true,
+            "value": "98",
+            "verts": [
+              0,
+              8
+            ]
+          }
+        ]
+      },
+      "components_minus_row": [
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            0
+          ]
+        },
+        {
+          "TQ": "17/3",
+          "deficit": "10/3",
+          "size": 9,
+          "vertices": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "TQ": "1",
+          "deficit": "0",
+          "size": 1,
+          "vertices": [
+            5
+          ]
+        }
+      ],
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "f": [
+        0,
+        5
+      ],
+      "n": 11,
+      "name": "cenJ?AB?vOJBo?",
+      "offrow_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "offrow_blue_components": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_blue_edges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "offrow_vertices": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "opt_recoloring": {
+        "best_colorings": [
+          {
+            "colors": {
+              "2": 0,
+              "3": 1,
+              "6": 1,
+              "7": 0
+            },
+            "damaged_boundary_edges": [
+              [
+                1,
+                6
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                2,
+                10
+              ]
+            ],
+            "mask": 6
+          },
+          {
+            "colors": {
+              "2": 1,
+              "3": 0,
+              "6": 0,
+              "7": 1
+            },
+            "damaged_boundary_edges": [
+              [
+                3,
+                8
+              ],
+              [
+                3,
+                10
+              ],
+              [
+                4,
+                7
+              ]
+            ],
+            "mask": 9
+          }
+        ],
+        "beta_R": 0,
+        "min_damage": 3
+      },
+      "other_bad_edges": [
+        [
+          6,
+          7
+        ]
+      ],
+      "packet": {
+        "B_packet": "1/5",
+        "P_Q": "19",
+        "d": 6,
+        "h": 0,
+        "p": 1,
+        "r": 4,
+        "rho_Q": "66"
+      },
+      "row": [
+        0,
+        8,
+        1,
+        10,
+        4,
+        9,
+        5
+      ],
+      "row_sides": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "side": "11111100000"
+    }
+  ],
+  "summary": {
+    "certificate_kinds": {
+      "nuK": 7
+    },
+    "failure_inputs": 7,
+    "matched_records": 7,
+    "offrow_blue_component_patterns": {
+      "((1, 6), (3, 8))": 1,
+      "((1, 6), (4, 7))": 3,
+      "((2, 6), (3, 7))": 3
+    },
+    "other_bad_edges": {
+      "((1, 8),)": 1,
+      "((6, 7),)": 6
+    },
+    "row_boundary_degree_patterns": {
+      "(0, 0, 1, 1, 2, 1, 1)": 4,
+      "(0, 1, 1, 2, 1, 1, 0)": 2,
+      "(1, 1, 0, 2, 0, 1, 1)": 1
+    }
+  }
+}

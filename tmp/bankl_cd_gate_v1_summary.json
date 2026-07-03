@@ -1,0 +1,389 @@
+{
+  "by_L": {
+    "7": 10311,
+    "9": 214
+  },
+  "by_p_h": {
+    "1:0": 9738,
+    "1:1": 713,
+    "2:0": 74
+  },
+  "fail": 10510,
+  "first_fail": {
+    "L": 7,
+    "P_Q": "11",
+    "cd_margin": "-152",
+    "d": 2,
+    "f": [
+      4,
+      7
+    ],
+    "h": 0,
+    "intervals": [
+      {
+        "cd_margin": "0",
+        "i": 0,
+        "nuK": "0",
+        "raw_vertices": [
+          4,
+          0,
+          5
+        ],
+        "sigma0": 0,
+        "term": {
+          "K_S": 49,
+          "connected_after": true,
+          "dB": 1,
+          "dM": 1,
+          "i": 0,
+          "nu": "0",
+          "nuK": "0",
+          "sigma": 0,
+          "status": "ok",
+          "terminal_shadow_valid": true,
+          "variant": "singleton_0",
+          "verts": [
+            4
+          ]
+        },
+        "twentyfive_sigma0": 0,
+        "valid_completed": true
+      },
+      {
+        "cd_margin": "-50",
+        "i": 1,
+        "nuK": "0",
+        "raw_vertices": [
+          0,
+          5,
+          1
+        ],
+        "sigma0": 2,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 1,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_1",
+          "verts": [
+            0
+          ]
+        },
+        "twentyfive_sigma0": 50,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "-75",
+        "i": 2,
+        "nuK": "0",
+        "raw_vertices": [
+          5,
+          1,
+          6
+        ],
+        "sigma0": 3,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 2,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_2",
+          "verts": [
+            5
+          ]
+        },
+        "twentyfive_sigma0": 75,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "-75",
+        "i": 3,
+        "nuK": "0",
+        "raw_vertices": [
+          1,
+          6,
+          2
+        ],
+        "sigma0": 3,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 3,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_3",
+          "verts": [
+            1
+          ]
+        },
+        "twentyfive_sigma0": 75,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "48",
+        "i": 4,
+        "nuK": "98",
+        "raw_vertices": [
+          6,
+          2,
+          7
+        ],
+        "sigma0": 2,
+        "term": {
+          "K_S": 49,
+          "connected_after": true,
+          "dB": 2,
+          "dM": 1,
+          "i": 4,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "status": "ok",
+          "terminal_shadow_valid": true,
+          "variant": "singleton_6",
+          "verts": [
+            7
+          ]
+        },
+        "twentyfive_sigma0": 50,
+        "valid_completed": true
+      }
+    ],
+    "kappa": "11/4",
+    "m": 1,
+    "mu_coeff": "11/100",
+    "mu_margin_no_residual": "-11/50",
+    "n": 8,
+    "name": "cenG?bB`o",
+    "p": 1,
+    "per_interval_deficit_total": "200",
+    "per_interval_fail_count": 3,
+    "r": 1,
+    "raw_coarea_margin": "33/2",
+    "rho_Q": "26",
+    "row": [
+      4,
+      0,
+      5,
+      1,
+      6,
+      2,
+      7
+    ],
+    "schema": "bankl_cd_gate_v1",
+    "side": "11110000",
+    "status": "INVALID_COMPLETION",
+    "sum_25sigma0": 250,
+    "sum_nuK": "98",
+    "sum_sigma0": 10
+  },
+  "first_per_interval_fail": {
+    "L": 7,
+    "P_Q": "11",
+    "cd_margin": "-152",
+    "d": 2,
+    "f": [
+      4,
+      7
+    ],
+    "h": 0,
+    "intervals": [
+      {
+        "cd_margin": "0",
+        "i": 0,
+        "nuK": "0",
+        "raw_vertices": [
+          4,
+          0,
+          5
+        ],
+        "sigma0": 0,
+        "term": {
+          "K_S": 49,
+          "connected_after": true,
+          "dB": 1,
+          "dM": 1,
+          "i": 0,
+          "nu": "0",
+          "nuK": "0",
+          "sigma": 0,
+          "status": "ok",
+          "terminal_shadow_valid": true,
+          "variant": "singleton_0",
+          "verts": [
+            4
+          ]
+        },
+        "twentyfive_sigma0": 0,
+        "valid_completed": true
+      },
+      {
+        "cd_margin": "-50",
+        "i": 1,
+        "nuK": "0",
+        "raw_vertices": [
+          0,
+          5,
+          1
+        ],
+        "sigma0": 2,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 1,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_1",
+          "verts": [
+            0
+          ]
+        },
+        "twentyfive_sigma0": 50,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "-75",
+        "i": 2,
+        "nuK": "0",
+        "raw_vertices": [
+          5,
+          1,
+          6
+        ],
+        "sigma0": 3,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 2,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_2",
+          "verts": [
+            5
+          ]
+        },
+        "twentyfive_sigma0": 75,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "-75",
+        "i": 3,
+        "nuK": "0",
+        "raw_vertices": [
+          1,
+          6,
+          2
+        ],
+        "sigma0": 3,
+        "term": {
+          "K_S": 0,
+          "connected_after": false,
+          "dB": 2,
+          "dM": 0,
+          "i": 3,
+          "nu": null,
+          "nuK": null,
+          "sigma": 2,
+          "status": "ok",
+          "terminal_shadow_valid": false,
+          "variant": "singleton_3",
+          "verts": [
+            1
+          ]
+        },
+        "twentyfive_sigma0": 75,
+        "valid_completed": false
+      },
+      {
+        "cd_margin": "48",
+        "i": 4,
+        "nuK": "98",
+        "raw_vertices": [
+          6,
+          2,
+          7
+        ],
+        "sigma0": 2,
+        "term": {
+          "K_S": 49,
+          "connected_after": true,
+          "dB": 2,
+          "dM": 1,
+          "i": 4,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "status": "ok",
+          "terminal_shadow_valid": true,
+          "variant": "singleton_6",
+          "verts": [
+            7
+          ]
+        },
+        "twentyfive_sigma0": 50,
+        "valid_completed": true
+      }
+    ],
+    "kappa": "11/4",
+    "m": 1,
+    "mu_coeff": "11/100",
+    "mu_margin_no_residual": "-11/50",
+    "n": 8,
+    "name": "cenG?bB`o",
+    "p": 1,
+    "per_interval_deficit_total": "200",
+    "per_interval_fail_count": 3,
+    "r": 1,
+    "raw_coarea_margin": "33/2",
+    "rho_Q": "26",
+    "row": [
+      4,
+      0,
+      5,
+      1,
+      6,
+      2,
+      7
+    ],
+    "schema": "bankl_cd_gate_v1",
+    "side": "11110000",
+    "status": "INVALID_COMPLETION",
+    "sum_25sigma0": 250,
+    "sum_nuK": "98",
+    "sum_sigma0": 10
+  },
+  "output": "tmp\\bankl_cd_gate_v1.jsonl",
+  "per_interval_fail_rows": 10520,
+  "rows": 10525,
+  "statuses": {
+    "INVALID_COMPLETION": 10510,
+    "SAT": 15
+  }
+}

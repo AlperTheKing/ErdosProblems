@@ -24145,3 +24145,92 @@
 [2026-07-03T04:27:40Z] > COORD | NEXT: Read Claude mailbox after pressure residue and attachment-profile posts.
 [2026-07-03T04:28:24Z] > VERIFY | NEXT: Build exact off-row orientation-damage gate for clean P_Q>0 rows.
 [2026-07-03T04:32:54Z] FAIL VERIFY | DID: Tested clean-row optimal recoloring damage <= floor(2Lr/25) | RESULT: 7 failures, all n=11 L=7 r=4 d=6 m=2 beta_R=0 damage=3 allow=2 | D: reject naive damage lemma
+[2026-07-03T04:34:38Z] > PLAN | NEXT: Draft updated Goal text reflecting Bank-L/PC live frontier and rejected naive damage lemma.
+[2026-07-03T04:34:46Z] OK PLAN | DID: Drafted updated Goal text for user paste-in | RESULT: Bank-L/PC frontier with clean-damage gate failure included | D: none
+[2026-07-03T04:35:16Z] > COORD | NEXT: Read Claude mailbox for new Bank-L/PC replies before continuing failure analysis.
+[2026-07-03T04:35:35Z] OK COORD | DID: Read Claude mailbox | RESULT: no new Claude block beyond 2026-07-03T16:51:00Z in tail; pending Codex 17:16/17:28 posts | D: post damage-gate failure
+[2026-07-03T04:36:08Z] FAIL COORD | DID: Tried apply_patch append to CODEX_TO_CLAUDE.md | RESULT: Windows sandbox wrapper refused apply_patch | D: use append-only PowerShell
+[2026-07-03T04:36:08Z] OK COORD | DID: Posted clean-damage gate failure to Claude | RESULT: CODEX_TO_CLAUDE.md stamp 2026-07-03T17:40:00Z; fail=7 | D: profile failure structure
+[2026-07-03T04:36:17Z] > VERIFY | NEXT: Inspect Bank-L helper scripts to reuse exact graph decoding for the 7 damage failures.
+[2026-07-03T04:36:50Z] OK VERIFY | DID: Inspected Bank-L helper scripts for failure profiling | RESULT: reuse skel.struct_for_side, gmins, compute_row_packet, and v2 JSONL join | D: add diagnostic script
+[2026-07-03T04:38:02Z] > VERIFY | NEXT: Create exact diagnostic for the seven clean-damage failures and dump structural fingerprints.
+[2026-07-03T04:38:02Z] OK VERIFY | DID: Created clean-damage failure diagnostic script | RESULT: problems/23/writeup/_codex_bankl_clean_damage_failure_profile.py | D: run diagnostic
+[2026-07-03T04:38:08Z] > VERIFY | NEXT: Run clean-damage failure diagnostic and write structural JSON profile.
+[2026-07-03T04:38:24Z] OK VERIFY | DID: Ran clean-damage failure diagnostic | RESULT: 7 matched; all nuK; other_bad_edges=(6,7)x6 or (1,8)x1; offrow blue graph=two disjoint edges | D: summarize nuK structure
+[2026-07-03T04:39:02Z] > COORD | NEXT: Post structural profile of the seven damage failures and refined PC branch candidate to Claude.
+[2026-07-03T04:39:02Z] OK COORD | DID: Posted damage-failure structural profile to Claude | RESULT: stamp 2026-07-03T17:55:00Z; 7 nuK escape rows | D: define next pressure-cover gate
+[2026-07-03T04:39:28Z] > VERIFY | NEXT: Build refined pressure-cover taxonomy artifact from v2 JSONL and damage-failure profile.
+[2026-07-03T04:40:20Z] OK VERIFY | DID: Built refined PC taxonomy artifact | RESULT: tmp/bankl_pc_refined_taxonomy_v1.json counts clean_damage=9731 clean_nuK=7 residue_detour=112 residue_nuK=675 | D: write refined target note
+[2026-07-03T04:40:20Z] > PLAN | NEXT: Write concise refined Pressure-Cover target note for proof/Claude/GPT-Pro alignment.
+[2026-07-03T04:40:20Z] OK PLAN | DID: Wrote refined Pressure-Cover target note | RESULT: problems/23/writeup/BANKL_PRESSURE_COVER_REFINED_TARGET_CODEX.md | D: post taxonomy to Claude
+[2026-07-03T04:40:36Z] > COORD | NEXT: Post refined PC taxonomy artifact and target note to Claude.
+[2026-07-03T04:40:36Z] OK COORD | DID: Posted refined PC taxonomy and target note to Claude | RESULT: stamp 2026-07-03T18:05:00Z; taxonomy counts recorded | D: await audit while continuing proof work
+[2026-07-03T04:41:06Z] > COORD | NEXT: Read Claude mailbox for replies after refined pressure-cover taxonomy posts.
+[2026-07-03T04:41:34Z] OK COORD | DID: Read Claude mailbox | RESULT: new stamp 2026-07-03T17:41:00Z; directive=lane-coarea emitter over S_i=Comp([i,i+2]) | D: implement lane-coarea gate
+[2026-07-03T04:41:34Z] > VERIFY | NEXT: Inspect switch completion helpers and archived lane-coarea note if present.
+[2026-07-03T04:43:26Z] OK VERIFY | DID: Read lane-coarea archive and switch helpers | RESULT: BANKL_LOW_LENGTH_LANE_COAREA_GPTPRO.md requires S_i=Comp([i,i+2]) for L=7/9/11 | D: implement strict interval-nuK emitter
+[2026-07-03T04:43:26Z] > VERIFY | NEXT: Create lane-coarea interval nuK emitter over hard clean P_Q>0 rows.
+[2026-07-03T04:43:26Z] OK VERIFY | DID: Created strict lane-coarea interval emitter | RESULT: problems/23/writeup/_codex_bankl_lane_coarea_emit.py | D: run smoke gate
+[2026-07-03T04:43:32Z] > VERIFY | NEXT: Smoke-test strict lane-coarea emitter on first 20 hard rows with interval terms.
+[2026-07-03T04:44:06Z] FAIL VERIFY | DID: Smoke-tested strict lane interval emitter | RESULT: first 20 rows SAT=12 UNSAT=8; first UNSAT G?bB row has interval nuK=0 but v2 singleton nuK cert | D: profile v2 hard-row labels
+[2026-07-03T04:44:06Z] > VERIFY | NEXT: Profile existing v2 certificate labels for clean positive rows to infer interval completion normal forms.
+[2026-07-03T04:45:01Z] OK VERIFY | DID: Profiled v2 labels on clean hard rows | RESULT: singleton=5686 path_interval=3011 closed_interval=817 detour=24 for L7; L9 singleton=80 path=120 closed=14 | D: implement extracted interval variants
+[2026-07-03T04:45:01Z] > VERIFY | NEXT: Create lane-coarea v2 wrapper with extracted interval variants per S_i.
+[2026-07-03T04:45:01Z] OK VERIFY | DID: Created lane-coarea v2 extracted-variant emitter | RESULT: problems/23/writeup/_codex_bankl_lane_coarea_emit_v2.py | D: smoke test v2
+[2026-07-03T04:45:07Z] > VERIFY | NEXT: Smoke-test v2 lane-coarea emitter on first 20 hard rows.
+[2026-07-03T04:45:46Z] FAIL VERIFY | DID: Smoke-tested v2 lane extractor | RESULT: first 20 rows SAT=18 UNSAT=2; first UNSAT v2-paid by path_interval(0,4) value=98 | D: profile interval lengths
+[2026-07-03T04:45:46Z] > VERIFY | NEXT: Profile v2 certificate interval spans among P_Q>0 clean rows.
+[2026-07-03T04:46:55Z] OK VERIFY | DID: Profiled v2 interval normal forms | RESULT: all interval certs are prefixes 0..k; singleton positions are endpoints only | D: implement prefix-coarea emitter
+[2026-07-03T04:46:55Z] > VERIFY | NEXT: Create prefix-coarea emitter using prefix/suffix cumulative atoms and endpoint singletons.
+[2026-07-03T04:46:55Z] OK VERIFY | DID: Created prefix-coarea emitter | RESULT: problems/23/writeup/_codex_bankl_lane_prefix_coarea_emit.py | D: smoke test prefix emitter
+[2026-07-03T04:47:03Z] > VERIFY | NEXT: Smoke-test prefix-coarea emitter on first 20 hard rows.
+[2026-07-03T04:47:17Z] OK VERIFY | DID: Smoke-tested prefix-coarea emitter | RESULT: first20 hard rows SAT=20 UNSAT=0 | D: run full lane prefix battery
+[2026-07-03T04:47:17Z] > VERIFY | NEXT: Run full prefix-coarea emitter over direct families plus census N<=11.
+[2026-07-03T04:47:52Z] > VERIFY | NEXT: Poll full prefix-coarea emitter session for N=11 completion.
+[2026-07-03T04:50:16Z] FAIL VERIFY | DID: Ran full prefix-coarea emitter over clean hard rows | RESULT: rows=9738 SAT=9699 UNSAT=39; first UNSAT cenJ??CA?{{?]? L7 m2 d6 | D: join UNSAT with v2 certs
+[2026-07-03T04:50:16Z] > VERIFY | NEXT: Join 39 prefix-coarea UNSAT rows against v2 certificate labels and detour data.
+[2026-07-03T04:51:20Z] OK VERIFY | DID: Joined 39 prefix UNSAT rows to v2 artifact | RESULT: 24 detour-covered, 15 connected nonterminal nuK-covered; no unexplained row | D: emit PC target certificates
+[2026-07-03T04:51:21Z] > VERIFY | NEXT: Create pressure-cover certificate transformer targeting P_Q using prefix terminal terms when available.
+[2026-07-03T04:51:21Z] OK VERIFY | DID: Created pressure-cover certificate transformer | RESULT: problems/23/writeup/_codex_bankl_pc_cover_emit.py | D: run transformer
+[2026-07-03T04:51:27Z] > VERIFY | NEXT: Run pressure-cover certificate transformer and verify exact target identities.
+[2026-07-03T04:51:54Z] OK VERIFY | DID: Ran pressure-cover certificate transformer | RESULT: rows=14247 fail=0 kinds lane_prefix_nuK=9853 connected_nuK=121 nuK=415 detour=136 packet_free=3688 tight=34 | D: post artifact to Claude
+[2026-07-03T04:51:54Z] > COORD | NEXT: Post lane-prefix and pressure-cover certificate artifact summary to Claude.
+[2026-07-03T04:51:54Z] OK COORD | DID: Posted lane-prefix and PC cover artifact summary to Claude | RESULT: stamp 2026-07-03T18:35:00Z; pc_cover rows=14247 fail=0 | D: checkpoint
+[2026-07-03T04:52:12Z] > VERIFY | NEXT: Independently audit tmp/bankl_pc_cover_certs_v1.jsonl exact contribution sums.
+[2026-07-03T04:52:21Z] OK VERIFY | DID: Independently audited pressure-cover JSONL contribution sums | RESULT: rows=14247 bad=0 max_terms=1 | D: checkpoint
+[2026-07-03T04:52:21Z] > COORD | NEXT: Check Claude mailbox once after posting PC cover artifact.
+[2026-07-03T04:53:02Z] > COORD | NEXT: Read Claude mailbox for any audit after PC-cover artifact post.
+2026-07-03T04:54:30Z > CHECK | NEXT: Read Claude mailbox and prepare updated goal text.
+2026-07-03T04:54:49Z OK CHECK | DID: Read Claude/Codex mailboxes and found no Claude block newer than 2026-07-03T17:41:00Z. | RESULT: latest Codex post 18:35Z pc artifact | D: none
+2026-07-03T04:55:20Z > CHECK | NEXT: Read Claude mailbox and inspect current pressure-cover artifact availability.
+2026-07-03T04:55:39Z OK CHECK | DID: Read mailbox and artifact listings. | RESULT: no Claude block newer than 2026-07-03T17:41:00Z; tmp/bankl_pc_cover_certs_v1.jsonl exists | D: none
+2026-07-03T04:56:20Z > EDIT | NEXT: Add exact signature profiler and row-neighbor spacing verifier scripts.
+2026-07-03T04:57:47Z OK EDIT | DID: Added _codex_bankl_pc_signature_profile.py and _codex_bankl_spacing_verify.py. | RESULT: files created | D: none
+2026-07-03T04:57:51Z > COMPUTE | NEXT: Run pressure-cover signature profiler and row-neighbor spacing verifier on current scope.
+2026-07-03T05:00:32Z OK COMPUTE | DID: Ran pc signature profiler and spacing verifier. | RESULT: signatures hard=10525 exact=157 coarse=38; spacing clean_fail=0 nonclean_positive=787 | D: scope mismatch noted
+2026-07-03T05:00:52Z FAIL EDIT | DID: Tried apply_patch on _codex_bankl_spacing_verify.py. | RESULT: windows sandbox wrapper refused apply_patch | D: use PowerShell literal replace
+2026-07-03T05:01:08Z OK EDIT | DID: Patched spacing verifier reporting to separate clean-row failures from nonclean residue count. | RESULT: problems/23/writeup/_codex_bankl_spacing_verify.py | D: none
+2026-07-03T05:04:03Z OK COMPUTE | DID: Re-ran spacing verifier full scope. | RESULT: clean_positive=9738 fail=0 positive_nonclean=787; label patch applied after run | D: clean spacing gate passed
+2026-07-03T05:04:39Z OK REPORT | DID: Posted signature and spacing audit block to Claude mailbox. | RESULT: coordination/CODEX_TO_CLAUDE.md latest block | D: awaiting scope reconciliation
+2026-07-03T05:05:21Z > CHECK | NEXT: Read Claude mailbox for response to pressure-cover scope mismatch.
+2026-07-03T05:05:30Z OK CHECK | DID: Read Claude mailbox. | RESULT: no block newer than 2026-07-03T17:41:00Z | D: continue local audit
+2026-07-03T05:05:35Z > EDIT | NEXT: Add standalone exact verifier for pressure-cover certificate JSONL.
+2026-07-03T05:06:21Z OK EDIT | DID: Added standalone pressure-cover artifact verifier. | RESULT: problems/23/writeup/_codex_bankl_pc_verify.py | D: none
+2026-07-03T05:06:25Z > COMPUTE | NEXT: Run standalone exact pressure-cover artifact verifier.
+2026-07-03T05:06:35Z OK COMPUTE | DID: Ran _codex_bankl_pc_verify.py on pc_cover_certs_v1. | RESULT: rows=14247 bad=0 duplicate_row_ids=450 | D: verifier pass
+2026-07-03T05:07:04Z > EDIT | NEXT: Add pressure-cover residue profile script for nonclean hard rows.
+2026-07-03T05:07:38Z OK EDIT | DID: Added pressure-cover residue profile script. | RESULT: problems/23/writeup/_codex_bankl_pc_residue_profile.py | D: none
+2026-07-03T05:07:48Z OK COMPUTE | DID: Ran pressure-cover residue profile. | RESULT: positive=10525 clean=9738 nonclean=787 by_ph=(1,1):713,(2,0):74 | D: residue branch pinned
+2026-07-03T05:08:15Z OK REPORT | DID: Posted verifier and residue profile results to Claude mailbox. | RESULT: coordination/CODEX_TO_CLAUDE.md latest block | D: awaiting scope decision
+2026-07-03T05:08:51Z > CHECK | NEXT: Read Claude mailbox before continuing signature reconciliation.
+2026-07-03T05:09:10Z OK CHECK | DID: Read Claude mailbox. | RESULT: new 2026-07-03T18:31:00Z CD gate directive | D: switch to CD gate
+2026-07-03T05:09:44Z > EDIT | NEXT: Add CD gate script for raw interval slack versus completed interval nu_K.
+2026-07-03T05:11:03Z OK EDIT | DID: Added CD gate script for raw sigma versus completed interval nu_K. | RESULT: problems/23/writeup/_codex_bankl_cd_gate.py | D: none
+2026-07-03T05:11:09Z > COMPUTE | NEXT: Smoke-test CD gate on first 40 positive-pressure rows.
+2026-07-03T05:11:28Z FAIL COMPUTE | DID: Smoke-tested CD gate on 40 rows. | RESULT: rows=40 INVALID_COMPLETION=40 per_interval_fail_rows=40 | D: inspect completion failures
+2026-07-03T05:12:23Z FAIL COMPUTE | DID: CD smoke under literal raw-triple sigma. | RESULT: first row cd_margin=-152, invalid middle completions; posted to Claude | D: full failure profile next
+2026-07-03T05:12:27Z > COMPUTE | NEXT: Run full CD gate failure profile on current N<=11/direct scope.
+2026-07-03T05:15:41Z FAIL COMPUTE | DID: Ran full literal CD gate. | RESULT: rows=10525 SAT=15 INVALID_COMPLETION=10510 per_interval_fail_rows=10520 | D: literal CD rejected
+2026-07-03T05:16:50Z > CHECK | NEXT: Read Claude mailbox before reporting full CD failure profile.
+2026-07-03T05:17:37Z FAIL REPORT | DID: Posted full literal-CD gate failure profile to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md latest CD block | D: await residual definition
+2026-07-03T05:18:16Z OK COMPUTE | DID: Checked raw coarea margins in CD output. | RESULT: clean rows raw_bad=0 min_margin=33/2; nonclean raw_bad=45 | D: raw coarea scoped clean
