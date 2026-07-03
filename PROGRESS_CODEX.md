@@ -24234,3 +24234,68 @@
 2026-07-03T05:16:50Z > CHECK | NEXT: Read Claude mailbox before reporting full CD failure profile.
 2026-07-03T05:17:37Z FAIL REPORT | DID: Posted full literal-CD gate failure profile to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md latest CD block | D: await residual definition
 2026-07-03T05:18:16Z OK COMPUTE | DID: Checked raw coarea margins in CD output. | RESULT: clean rows raw_bad=0 min_margin=33/2; nonclean raw_bad=45 | D: raw coarea scoped clean
+2026-07-03T05:19:00Z > CHECK | NEXT: Read Claude mailbox for CD residual response.
+2026-07-03T05:19:23Z > COMPUTE | NEXT: Classify CD interval deficits into valid-completion and invalid-completion parts.
+2026-07-03T05:20:02Z FAIL COMPUTE | DID: Classified CD deficits by valid/invalid selected completions. | RESULT: valid_bad=3210 invalid_bad=33664; selected variant too weak | D: switch CD to max valid variant
+2026-07-03T05:20:28Z FAIL EDIT | DID: Tried apply_patch for CD max-variant selection. | RESULT: windows sandbox wrapper refused apply_patch | D: use PowerShell replace
+2026-07-03T05:20:46Z OK EDIT | DID: Updated CD gate to select max valid nuK variant per interval. | RESULT: problems/23/writeup/_codex_bankl_cd_gate.py | D: rerun smoke
+2026-07-03T05:21:35Z FAIL COMPUTE | DID: Smoke-tested CD with max valid variant per interval. | RESULT: rows=40 INVALID_COMPLETION=40 valid_bad=2 invalid_bad=120 | D: width-2 completion still insufficient
+2026-07-03T05:22:06Z > COMPUTE | NEXT: Gate mu_L coefficient form on current pressure-cover artifact.
+2026-07-03T05:22:38Z OK COMPUTE | DID: Gated mu_L form on pc artifact. | RESULT: non_detour_positive=10389 bad=0 min_margin=9857/22; detour_bad=136 | D: split mu/detour certificate
+2026-07-03T05:23:24Z OK COMPUTE | DID: Ran mu_L non-detour verifier. | RESULT: positive_non_detour=10389 bad=0 min_margin=9857/22; detour_rows=136 | D: fallback split certified
+2026-07-03T05:24:10Z > CHECK | NEXT: Read Claude mailbox before Lean-facing PC artifact normalization.
+2026-07-03T05:25:42Z > REPORT | NEXT: Read Claude mailbox and draft updated active goal text for user handoff.
+2026-07-03T05:25:54Z OK REPORT | DID: Read coordination/CLAUDE_TO_CODEX.md tail and found no newer directive beyond 2026-07-03T18:31:00Z CD gate in visible mailbox. | RESULT: coordination/CLAUDE_TO_CODEX.md | D: none
+2026-07-03T05:26:40Z > SELECT | NEXT: Continue Branch-B Bank-L pressure-cover work by normalizing current exact row certificates into a Lean-facing artifact.
+2026-07-03T05:26:55Z OK SELECT | DID: Refreshed Claude mailbox and listed Bank-L scripts/artifacts. | RESULT: latest visible directive 2026-07-03T18:31:00Z; tmp/bankl_pc_cover_certs_v1.jsonl exists | D: proceed to normalized emitter
+2026-07-03T05:27:01Z > PLAN | NEXT: Inspect existing pressure-cover JSON schema and verifier assumptions before writing the Lean-facing normalizer.
+2026-07-03T05:27:35Z OK PLAN | DID: Inspected pressure-cover emitter/verifier and representative JSON records. | RESULT: kinds lane_prefix_nuK=9853, packet_free=3688, nuK=415, detour=136, connected_nuK=121, tight=34 | D: create Lean-facing normalizer
+2026-07-03T05:27:45Z > ATTACK | NEXT: Add a namespaced Lean-facing Bank-L pressure-cover normalizer/verifier script over the existing exact JSONL artifact.
+2026-07-03T05:28:55Z OK ATTACK | DID: Added problems/23/writeup/_codex_bankl_lean_cert_emit.py. | RESULT: script emits bankl_pressure_cover_lean_v1 with FREE/TIGHT/MU_NUK/DETOUR cases | D: run exact verification
+2026-07-03T05:28:59Z > VERIFY | NEXT: Run exact normalizer over tmp/bankl_pc_cover_certs_v1.jsonl and inspect proof-case counts and margins.
+2026-07-03T05:29:28Z OK VERIFY | DID: Ran _codex_bankl_lean_cert_emit.py and independent JSONL readback check. | RESULT: rows=14247; bad=0; cases TIGHT=34 FREE=3688 MU_NUK=10389 DETOUR=136; min_mu=9857/22 | D: artifact ready for Claude audit
+2026-07-03T05:29:38Z > REPORT | NEXT: Append a self-contained RESULT block to coordination/CODEX_TO_CLAUDE.md with the Lean-facing artifact counts and paths.
+2026-07-03T05:29:55Z OK REPORT | DID: Posted Lean-facing Bank-L artifact RESULT to coordination/CODEX_TO_CLAUDE.md. | RESULT: tmp/bankl_pressure_cover_lean_v1.jsonl rows=14247 bad=0 | D: awaiting Claude audit; CD bridge still open
+2026-07-03T05:30:07Z > ATTACK | NEXT: Inspect CD gate outputs and extract a minimal exact witness for the completed-interval bridge mismatch.
+2026-07-03T05:31:45Z OK ATTACK | DID: Added and ran _codex_bankl_cd_witness_extract.py. | RESULT: tmp/bankl_cd_mismatch_witness_v1.json; n=8 name=cenG?bBo row=[0,4,7,2,6,1,5] cd_margin=-104 | D: CD mismatch isolated
+2026-07-03T05:31:51Z > REPORT | NEXT: Append CD mismatch witness path and exact numbers to Claude mailbox.
+2026-07-03T05:32:26Z OK REPORT | DID: Posted CD mismatch witness and corrected escaped graph label in coordination/CODEX_TO_CLAUDE.md. | RESULT: witness path tmp/bankl_cd_mismatch_witness_v1.json; exact name cenG?bB`o | D: none
+2026-07-03T05:33:05Z > SELECT | NEXT: Continue Branch-B CD bridge work by checking Claude mailbox and testing whether completed interval support is underspecified.
+2026-07-03T05:33:22Z OK SELECT | DID: Read Claude mailbox tail. | RESULT: no newer visible block after 2026-07-03T18:31:00Z CD directive | D: inspect interval completion code
+2026-07-03T05:33:48Z > ATTACK | NEXT: Brute-force all supersets of each raw 3-vertex interval on the n=8 CD witness to test whether valid completed switches exist beyond v2 variants.
+2026-07-03T05:34:46Z OK ATTACK | DID: Probed all interval supersets on CD witness. | RESULT: aggregate can be rescued by max supersets; per-interval fails at i=2 with max_nuK=0 < 100 | D: test all-superset aggregate gate
+2026-07-03T05:36:13Z OK ATTACK | DID: Added all-superset aggregate CD gate and ran smoke limit 100. | RESULT: tmp/bankl_cd_superset_gate_smoke_summary.json rows=100 fail=0 | D: run full non-SAT CD set
+2026-07-03T05:36:18Z > VERIFY | NEXT: Run full all-superset aggregate CD gate on tmp/bankl_cd_gate_v1.jsonl non-SAT rows.
+2026-07-03T05:38:23Z FAIL VERIFY | DID: Ran full all-superset aggregate CD gate on non-SAT rows. | RESULT: tmp/bankl_cd_superset_gate_v1_summary.json rows=10510 fail=1625 SAT=8885 | D: inspect first fail
+2026-07-03T05:38:48Z FAIL VERIFY | DID: Inspected all-superset aggregate CD gate summary. | RESULT: failures=1625 all L=7; L=9 failures=0; first fail cenI??CE@oN_ margin=-58 | D: package sharper CD counterexample
+2026-07-03T05:40:02Z OK ATTACK | DID: Extracted all-superset CD failure witness. | RESULT: tmp/bankl_cd_superset_fail_witness_v1.json; n=10 row=[6,0,8,4,9,2,7] sum_25sigma0=500 sum_best_nuK=490 margin=-10 | D: post stronger witness
+2026-07-03T05:40:29Z OK REPORT | DID: Posted all-superset CD failure summary to coordination/CODEX_TO_CLAUDE.md. | RESULT: rows=10510 fail=1625; witness tmp/bankl_cd_superset_fail_witness_v1.json | D: analyze residual shape
+2026-07-03T05:42:46Z OK REPORT | DID: Posted all-superset CD failure profile to Claude mailbox. | RESULT: tmp/bankl_cd_superset_fail_profile_v1.json; fail split (10,1)=107 (11,1)=1257 (11,2)=261 | D: literal CD bridge falsified without residual
+2026-07-03T05:43:26Z > SELECT | NEXT: Continue Branch-B after literal CD falsification by checking Claude mailbox and profiling the surviving MU_NUK pressure-cover artifact.
+2026-07-03T05:43:45Z OK SELECT | DID: Read Claude mailbox and processed new 19:21Z/19:52Z directives. | RESULT: implement op1-op5 full completion; start with op2 prefix mechanism check | D: pivot from literal CD falsification to completion-engine reconciliation
+2026-07-03T05:46:17Z OK ATTACK | DID: Cross-profiled all-superset CD failures against Lean-facing artifact. | RESULT: tmp/bankl_cd_failure_cover_profile_v1.json; missing=0; lane_prefix=1397 nuK=92 detour=136 | D: post reconciliation profile
+2026-07-03T05:47:26Z OK ATTACK | DID: Profiled normal forms of all positive pressure-cover rows. | RESULT: tmp/bankl_cover_normal_form_profile_v1.json; endpoint=5843 prefix=1838 suffix=414 row_subset=1131 offrow=1099 singleton=64 detour=136 | D: post profile
+2026-07-03T05:48:03Z OK REPORT | DID: Posted pressure-cover normal-form profile to Claude mailbox. | RESULT: tmp/bankl_cover_normal_form_profile_v1.json; positive_rows=10525 | D: waiting for audit/full completion spec details
+2026-07-03T05:48:47Z > SELECT | NEXT: Continue Gate A by verifying current MU_NUK terms as actual connected terminal-shadow switches with recomputed nu_K.
+2026-07-03T05:50:12Z > REPORT | NEXT: Draft updated Branch-B goal text reflecting Claude 19:52Z Gate A/Gate B directives.
+2026-07-03T05:50:45Z OK REPORT | DID: Read latest Claude mailbox and drafted updated Branch-B Gate A/Gate B goal text. | RESULT: goal text ready for user paste | D: none
+2026-07-03T05:51:13Z > SELECT | NEXT: Re-sync Claude mailbox and inspect current Branch-B pressure-cover artifacts before implementing the next verifier.
+2026-07-03T05:51:31Z OK SELECT | DID: Read Claude mailbox and current bankl artifacts. | RESULT: latest directive remains Gate A full completion and Gate B dictionary inclusion; artifacts include tmp/bankl_pressure_cover_lean_v1.jsonl | D: inspect schema
+2026-07-03T05:51:39Z > ATTACK | NEXT: Inspect pressure-cover and source JSONL schemas to map rows to graph side, row path, and certificate terms.
+2026-07-03T05:53:18Z > ATTACK | NEXT: Add exact verifier for pressure-cover MU_NUK/detour terms by recomputing switch and detour values from graph+side data.
+2026-07-03T05:54:39Z OK ATTACK | DID: Added _codex_bankl_pressure_term_verify.py. | RESULT: verifier script created | D: run exact recomputation
+2026-07-03T05:54:44Z > VERIFY | NEXT: Run pressure term recomputation verifier on tmp/bankl_pressure_cover_lean_v1.jsonl.
+2026-07-03T05:54:59Z FAIL VERIFY | DID: Ran pressure term recomputation verifier. | RESULT: KeyError sigma on compact nuK term without sigma metadata | D: patch optional metadata handling
+2026-07-03T05:55:37Z OK ATTACK | DID: Patched pressure verifier to treat sigma/nu/K_S metadata as optional on compact nuK terms. | RESULT: script updated | D: rerun verifier
+2026-07-03T05:55:54Z FAIL VERIFY | DID: Ran pressure term recomputation verifier on v1 Lean artifact. | RESULT: tmp/bankl_pressure_term_verify_v1_summary.json PASS=10268 FAIL=257 SKIP=3722 | D: inspect failures
+2026-07-03T05:56:40Z OK ATTACK | DID: Corrected detour recomputation to use the row bad-edge K-component and K∩row load. | RESULT: script updated | D: rerun verifier
+2026-07-03T05:57:22Z OK VERIFY | DID: Profiled pressure term recomputation failures. | RESULT: tmp/bankl_pressure_term_verify_v1_profile.json; numeric_match_nonterminal=102 invalid_switched_length=19 | D: post to Claude
+2026-07-03T05:57:46Z OK REPORT | DID: Posted pressure term recomputation audit to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md block 2026-07-03T05:57:46Z | D: inspect failing rows
+2026-07-03T05:58:51Z OK ATTACK | DID: Created detailed pressure term failure witness JSON. | RESULT: tmp/bankl_pressure_term_failure_witness_v1.json | D: inspect failure reasons
+2026-07-03T06:00:00Z OK ATTACK | DID: Searched representative failure modes for valid completed supersets/all-subset switches. | RESULT: superset witness output tmp/bankl_pressure_term_failure_supersets_v1.json; invalid all-switch output tmp/bankl_pressure_invalid_all_valid_switches_v1.json | D: run all 121 repair search
+2026-07-03T06:00:32Z FAIL VERIFY | DID: Ran all-subset terminal-shadow repair search on 121 pressure term failures. | RESULT: tmp/bankl_pressure_term_repairs_v1.json repair_count=106 fail_count=15 | D: inspect residual 15
+2026-07-03T06:01:09Z OK REPORT | DID: Posted 106/15 pressure-term repair split to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md ASK 2026-07-03T06:01:09Z | D: await classification of 15 residual rows
+2026-07-03T06:02:00Z > SELECT | NEXT: Re-sync Claude mailbox after the 15-row pressure-term residual ASK.
+2026-07-03T06:02:27Z OK SELECT | DID: Checked Claude mailbox after 15-row ASK. | RESULT: no newer Claude block after 2026-07-03T19:52:00Z | D: classify residual rows locally
+2026-07-03T06:02:53Z > ATTACK | NEXT: Extract structural profile for the 15 unrepaired m=1 pressure-cover residual rows.
+2026-07-03T06:03:32Z FAIL ATTACK | DID: Ran structural profile for 15 rows. | RESULT: attachment endpoint swap bug caused KeyError 8 | D: rerun corrected classifier

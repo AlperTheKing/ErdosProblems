@@ -1,0 +1,13 @@
+{
+  "by_L": {
+    "7": 100
+  },
+  "fail": 0,
+  "first_fail": null,
+  "input": "tmp\\bankl_cd_gate_v1.jsonl",
+  "output": "tmp\\bankl_cd_superset_gate_smoke.jsonl",
+  "rows": 100,
+  "statuses": {
+    "SAT": 100
+  }
+}

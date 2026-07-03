@@ -108,9 +108,21 @@ def cd_record(name: str, n: int, edges: list[tuple[int, int]], side: list[int], 
     terms = lane_v2.interval_terms(n, edges, side, row, st)
     by_i: dict[int, dict] = {}
     for t in terms:
-        i = t.get("i")
-        if isinstance(i, int) and 0 <= i < L - 2 and i not in by_i:
-            by_i[i] = t
+        candidates = [t] + list(t.get("variants", []))
+        for cand in candidates:
+            i = cand.get("i")
+            if not (isinstance(i, int) and 0 <= i < L - 2):
+                continue
+            nuK = cand.get("nuK")
+            valid = bool(cand.get("connected_after") and cand.get("terminal_shadow_valid") and nuK is not None)
+            if not valid:
+                by_i.setdefault(i, cand)
+                continue
+            old = by_i.get(i)
+            old_nuK = None if old is None else old.get("nuK")
+            old_valid = bool(old and old.get("connected_after") and old.get("terminal_shadow_valid") and old_nuK is not None)
+            if (not old_valid) or F(nuK) > F(old_nuK):
+                by_i[i] = cand
 
     intervals = []
     invalid = False

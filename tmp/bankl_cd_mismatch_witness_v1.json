@@ -1,0 +1,350 @@
+{
+  "bad_edges": [
+    [
+      0,
+      5
+    ]
+  ],
+  "blue_edges": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "edges": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "intervals": [
+    {
+      "cd_margin": "73",
+      "i": 0,
+      "nuK": "98",
+      "raw_delta_B": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "raw_delta_M": [
+        [
+          0,
+          5
+        ]
+      ],
+      "raw_vertices": [
+        0,
+        4,
+        7
+      ],
+      "sigma0": 1,
+      "term": {
+        "K_S": 49,
+        "connected_after": true,
+        "dB": 2,
+        "dM": 1,
+        "i": 0,
+        "nu": "49",
+        "nuK": "98",
+        "sigma": 1,
+        "status": "ok",
+        "terminal_shadow_valid": true,
+        "variant": "path_interval",
+        "verts": [
+          0,
+          4,
+          7
+        ]
+      },
+      "twentyfive_sigma0": 25,
+      "valid_completed": true
+    },
+    {
+      "cd_margin": "-75",
+      "i": 1,
+      "nuK": "0",
+      "raw_delta_B": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "raw_delta_M": [],
+      "raw_vertices": [
+        4,
+        7,
+        2
+      ],
+      "sigma0": 3,
+      "term": {
+        "K_S": 0,
+        "connected_after": false,
+        "dB": 2,
+        "dM": 0,
+        "i": 1,
+        "nu": null,
+        "nuK": null,
+        "sigma": 2,
+        "status": "ok",
+        "terminal_shadow_valid": false,
+        "variant": "singleton_1",
+        "verts": [
+          4
+        ]
+      },
+      "twentyfive_sigma0": 75,
+      "valid_completed": false
+    },
+    {
+      "cd_margin": "-100",
+      "i": 2,
+      "nuK": "0",
+      "raw_delta_B": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "raw_delta_M": [],
+      "raw_vertices": [
+        7,
+        2,
+        6
+      ],
+      "sigma0": 4,
+      "term": {
+        "K_S": 0,
+        "connected_after": false,
+        "dB": 3,
+        "dM": 0,
+        "i": 2,
+        "nu": null,
+        "nuK": null,
+        "sigma": 3,
+        "status": "ok",
+        "terminal_shadow_valid": false,
+        "variant": "singleton_2",
+        "verts": [
+          7
+        ]
+      },
+      "twentyfive_sigma0": 100,
+      "valid_completed": false
+    },
+    {
+      "cd_margin": "-75",
+      "i": 3,
+      "nuK": "0",
+      "raw_delta_B": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "raw_delta_M": [],
+      "raw_vertices": [
+        2,
+        6,
+        1
+      ],
+      "sigma0": 3,
+      "term": {
+        "K_S": 0,
+        "connected_after": false,
+        "dB": 2,
+        "dM": 0,
+        "i": 3,
+        "nu": null,
+        "nuK": null,
+        "sigma": 2,
+        "status": "ok",
+        "terminal_shadow_valid": false,
+        "variant": "singleton_3",
+        "verts": [
+          2
+        ]
+      },
+      "twentyfive_sigma0": 75,
+      "valid_completed": false
+    },
+    {
+      "cd_margin": "73",
+      "i": 4,
+      "nuK": "98",
+      "raw_delta_B": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "raw_delta_M": [
+        [
+          0,
+          5
+        ]
+      ],
+      "raw_vertices": [
+        6,
+        1,
+        5
+      ],
+      "sigma0": 1,
+      "term": {
+        "K_S": 49,
+        "connected_after": true,
+        "dB": 2,
+        "dM": 1,
+        "i": 4,
+        "nu": "49",
+        "nuK": "98",
+        "sigma": 1,
+        "status": "ok",
+        "terminal_shadow_valid": true,
+        "variant": "path_interval",
+        "verts": [
+          1,
+          5,
+          6
+        ]
+      },
+      "twentyfive_sigma0": 25,
+      "valid_completed": true
+    }
+  ],
+  "n": 8,
+  "name": "cenG?bB`o",
+  "row_data": {
+    "L": 7,
+    "P_Q": "11",
+    "cd_margin": "-104",
+    "d": 2,
+    "f": [
+      0,
+      5
+    ],
+    "h": 0,
+    "kappa": "11/4",
+    "m": 1,
+    "mu_margin_no_residual": "264/25",
+    "p": 1,
+    "per_interval_deficit_total": "250",
+    "per_interval_fail_count": 3,
+    "r": 1,
+    "raw_coarea_margin": "22",
+    "rho_Q": "26",
+    "row": [
+      0,
+      4,
+      7,
+      2,
+      6,
+      1,
+      5
+    ],
+    "status": "INVALID_COMPLETION",
+    "sum_25sigma0": 300,
+    "sum_nuK": "196",
+    "sum_sigma0": 12
+  },
+  "schema": "bankl_cd_mismatch_witness_v1",
+  "selection": "lexicographically smallest non-SAT record by (n,L,P_Q,name,row)",
+  "side": "01111000"
+}

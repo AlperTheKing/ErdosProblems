@@ -1,0 +1,68 @@
+{
+  "results": {
+    "invalid_switched_length": {
+      "minimal_valid_supersets": [],
+      "seed": [
+        1,
+        2,
+        3,
+        7,
+        9
+      ]
+    },
+    "numeric_match_nonterminal": {
+      "minimal_valid_supersets": [
+        {
+          "K_S": 74,
+          "added": [
+            1,
+            2,
+            7,
+            8,
+            9
+          ],
+          "dB": 3,
+          "dM": 2,
+          "nu": "1",
+          "nuK": "75",
+          "sigma": 1,
+          "verts": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "K_S": 74,
+          "added": [
+            3,
+            4,
+            5,
+            9,
+            10
+          ],
+          "dB": 3,
+          "dM": 2,
+          "nu": "49",
+          "nuK": "123",
+          "sigma": 1,
+          "verts": [
+            0,
+            3,
+            4,
+            5,
+            9,
+            10
+          ]
+        }
+      ],
+      "seed": [
+        0
+      ]
+    }
+  },
+  "schema": "bankl_pressure_term_failure_supersets_v1"
+}

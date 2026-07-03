@@ -1,0 +1,295 @@
+{
+  "bad_edges": [
+    [
+      6,
+      7
+    ]
+  ],
+  "blue_edges": [
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ]
+  ],
+  "edges": [
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "n": 10,
+  "name": "cenI??E@fKN?",
+  "record": {
+    "L": 7,
+    "P_Q": "33",
+    "f": [
+      6,
+      7
+    ],
+    "intervals": [
+      {
+        "best": {
+          "K_S": 49,
+          "dB": 2,
+          "dM": 1,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "size": 4,
+          "verts": [
+            0,
+            1,
+            6,
+            8
+          ]
+        },
+        "checked": 127,
+        "connected_count": 8,
+        "i": 0,
+        "raw_sigma0": 3,
+        "seed": [
+          0,
+          6,
+          8
+        ],
+        "target_25sigma0": 75,
+        "terminal_count": 8,
+        "valid_count": 8
+      },
+      {
+        "best": {
+          "K_S": 49,
+          "dB": 2,
+          "dM": 1,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "size": 5,
+          "verts": [
+            0,
+            1,
+            4,
+            6,
+            8
+          ]
+        },
+        "checked": 127,
+        "connected_count": 8,
+        "i": 1,
+        "raw_sigma0": 4,
+        "seed": [
+          0,
+          4,
+          8
+        ],
+        "target_25sigma0": 100,
+        "terminal_count": 8,
+        "valid_count": 8
+      },
+      {
+        "best": {
+          "K_S": 49,
+          "dB": 2,
+          "dM": 1,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "size": 7,
+          "verts": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        "checked": 127,
+        "connected_count": 8,
+        "i": 2,
+        "raw_sigma0": 6,
+        "seed": [
+          4,
+          8,
+          9
+        ],
+        "target_25sigma0": 150,
+        "terminal_count": 8,
+        "valid_count": 8
+      },
+      {
+        "best": {
+          "K_S": 49,
+          "dB": 2,
+          "dM": 1,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "size": 5,
+          "verts": [
+            2,
+            3,
+            4,
+            7,
+            9
+          ]
+        },
+        "checked": 127,
+        "connected_count": 8,
+        "i": 3,
+        "raw_sigma0": 4,
+        "seed": [
+          2,
+          4,
+          9
+        ],
+        "target_25sigma0": 100,
+        "terminal_count": 8,
+        "valid_count": 8
+      },
+      {
+        "best": {
+          "K_S": 49,
+          "dB": 2,
+          "dM": 1,
+          "nu": "49",
+          "nuK": "98",
+          "sigma": 1,
+          "size": 4,
+          "verts": [
+            2,
+            3,
+            7,
+            9
+          ]
+        },
+        "checked": 127,
+        "connected_count": 8,
+        "i": 4,
+        "raw_sigma0": 3,
+        "seed": [
+          2,
+          7,
+          9
+        ],
+        "target_25sigma0": 75,
+        "terminal_count": 8,
+        "valid_count": 8
+      }
+    ],
+    "margin": -10,
+    "n": 10,
+    "name": "cenI??E@fKN?",
+    "rho_Q": "84",
+    "row": [
+      6,
+      0,
+      8,
+      4,
+      9,
+      2,
+      7
+    ],
+    "schema": "bankl_cd_superset_gate_v1",
+    "side": "1111110000",
+    "status": "FAIL",
+    "sum_25sigma0": 500,
+    "sum_best_nuK": 490
+  },
+  "schema": "bankl_cd_superset_fail_witness_v1",
+  "selection": "lexicographically smallest FAIL by (n,L,P_Q,margin,name,row)",
+  "side": "1111110000"
+}

@@ -52,3 +52,45 @@ FINAL FORM (4.1): P_Q <= mu_L * Sigma_i nu_K(S_i) + R with **mu_7=100/11, mu_9=1
 mu_11=100/3**; one-switch constants C_L = mu_L*(L-2): C_7=500/11, C_9=700/7=100, C_11=300.
 ASSEMBLY COMPLETE MODULO (CD): raw coarea (proven) x (CD) ⟹ (4.1) ⟹ Bank-L case 3.
 Battery facts consistent: hard set L=7:10311, L=9:214, L=11:0; max P_Q/rho_Q = 69/116.
+
+## ADDENDUM 2 (2026-07-03, reply 3): (CD) PROOF DELIVERED
+(1.1) PROVEN: nu_K(S) >= 25*sigma(S) for EVERY valid completed switch (neutral: gamma-min;
+sigma>=1: new bad lengths >= 5 by tri-free ⟹ nu >= 25|dB| - K_S ⟹ nu_K >= 25|dB| +
+K_S(sigma-1) >= 25 sigma). COMPLETION LOSS TELESCOPE (2.1-2.4): per-op slack-loss residuals
+tau_a >= 0 summed: 25 sigma^0(I_i) <= 25 sigma(S_i) + Sigma tau_a <= nu_K(S_i) + R_i.
+Section 3 identifies each op residual with an allowed ledger (op1 segment absorption, op2
+terminal prefix/suffix closure — THIS produces the cumulative prefixes Codex observes! —
+op3 co-B closure, op4 twin, op5 FLAT5 → cell ledger). Tail: 'this completes the Bank-L
+proof route and therefore the Branch-B Banked-UPO assembly.'
+RECONCILIATION with Codex 18:35Z finding: width-2 raw gate UNSAT=39 is EXPECTED — the
+completion of Comp([i,i+2]) ABSORBS the row prefix when f crosses (op2 on f's own row),
+yielding path_interval(0,k)/endpoint-singleton forms = exactly the battery certificates.
+Codex must implement op1-op5 EXACTLY and re-gate; remaining UNSATs after full completion
+(if any) → relay. MY AUDIT PENDING: op2/op5 residual details (reply slices C5-C9) before
+final acceptance; then FULL BRANCH-B ASSEMBLY RE-AUDIT.
+
+## ADDENDUM 3 (2026-07-03): COMPLETE (CD) PROOF — user-relayed full text (authoritative)
+(1.1) nu_K(S) >= 25 sigma(S) PROVEN (neutral: gamma-min; sigma>=1: nu >= 25 dB - K_S ⟹
+nu_K >= 25 dB + K_S(sigma-1) >= 25 dB >= 25 sigma). (2.2) rho_a = 25[sigma-drop]_+ per op;
+telescope (2.4) ⟹ (CD-i) with R_i = Sigma rho_a. OP DETAILS: op1 seg absorption (3.2);
+op2 TERMINAL CLOSURE with witness argument — new bad edge p_t p_{t+1} has odd-cycle witness
+via the closed walk p_t..p_0, g, p_{l-1}..p_{t+1} so lambda <= ell(g), and >= 5 by tri-free;
+SHORTESTNESS used (shorter witness would contradict P shortest); op3 NONCROSSING + CO-B
+CLOSURE — kills 'unwitnessed lane doors' (every shortest row meets the switch in empty /
+one interval / terminal prefix / terminal suffix; complement B-connected via exterior
+anchor absorption); op4 twin closure (quotient-invariant); op5 FLAT5 extraction handoff
+(3.10): 25 sigma(before) <= 25 sigma(after) + 25 pi(A) + rho_cell(A), cell surplus
+|C_A|^2/25 - 3 >= 0 + archived fan/cactus global ledger (Pi_fan <= |dB(F_u)|,
+Pi_cell <= eta/2). §4 VALIDITY: switch + complement B-connected, all new bad edges
+witnessed, nu/K/nu_K well-defined. §6: IF the residual dictionary is restricted, the ONLY
+remaining machine obligation = DICTIONARY INCLUSION (6.1): each rho_a lies in
+cone(tri-free, terminal-prefix, noncrossing, twin, protected-cell residuals) — finite
+LP/Farkas per op. §7: lane certificate lambda_7=11/100, lambda_9=7/100, lambda_11=3/100;
+with L>=13 + P_Q<=0 + sparse + detour + cell ledger: **Bank-L route COMPLETE ⟹ Branch-B
+Banked-UPO assembly COMPLETE** (modulo (6.1) gating + full-completion re-gate + my audit).
+CODEX TAXONOMY MESH (its 17:55/18:05 posts): free 3688 / tight 34 / clean-damage 9731 /
+clean-nuK-escape 7 (dense m=2 mini-pattern, terminal switch nu_K=98 pays 47) / residue 787
+— its 'damage-or-terminal-nuK' two-branch = exactly the raw-exchange side + completed-
+switch side of (CD); the 7 escapes and 787 residue rows are covered by terminal completed
+switches per op2/op3 (its own v2 certificates confirm: singleton/path_interval(0,1)
+terminal switches).
