@@ -1,0 +1,224 @@
+{
+  "results": [
+    {
+      "all_l5_cuts": 5,
+      "cuts": [
+        {
+          "all_l5": true,
+          "bad_edges": 4,
+          "checked_terminals": 66,
+          "ell_values": [
+            5
+          ],
+          "gamma": 100,
+          "side": "01010110110"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 4,
+          "checked_terminals": 66,
+          "ell_values": [
+            5
+          ],
+          "gamma": 100,
+          "side": "01001011110"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 4,
+          "checked_terminals": 66,
+          "ell_values": [
+            5
+          ],
+          "gamma": 100,
+          "side": "00101111010"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 4,
+          "checked_terminals": 66,
+          "ell_values": [
+            5
+          ],
+          "gamma": 100,
+          "side": "01101000011"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 4,
+          "checked_terminals": 66,
+          "ell_values": [
+            5
+          ],
+          "gamma": 100,
+          "side": "01011010001"
+        }
+      ],
+      "edges": 20,
+      "gamma_min_connected_cuts": 5,
+      "max_sH_case": {
+        "T": [
+          1,
+          10
+        ],
+        "bound": "9",
+        "margin": "541/126",
+        "sH": "593/126",
+        "side": "01010110110"
+      },
+      "max_sH_minus_bound": {
+        "den": 126,
+        "num": -541
+      },
+      "maxcut": 16,
+      "n": 11,
+      "name": "Grotzsch_MycC5",
+      "sH_violations": [],
+      "terminal_hall_checked": 330,
+      "terminal_hall_skipped": 0,
+      "terminal_set_checks": 330,
+      "th_violations": []
+    },
+    {
+      "all_l5_cuts": 7,
+      "cuts": [
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "010101011010110"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "010100101011110"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "001010111101010"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "010010101111010"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "010110101000011"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "011010100001011"
+        },
+        {
+          "all_l5": true,
+          "bad_edges": 5,
+          "checked_terminals": 120,
+          "ell_values": [
+            5
+          ],
+          "gamma": 125,
+          "side": "010101101010001"
+        }
+      ],
+      "edges": 28,
+      "gamma_min_connected_cuts": 7,
+      "max_sH_case": {
+        "T": [
+          7,
+          14
+        ],
+        "bound": "13",
+        "margin": "49/8",
+        "sH": "55/8",
+        "side": "010101011010110"
+      },
+      "max_sH_minus_bound": {
+        "den": 8,
+        "num": -49
+      },
+      "maxcut": 23,
+      "n": 15,
+      "name": "MycC7",
+      "sH_violations": [],
+      "terminal_hall_checked": 840,
+      "terminal_hall_skipped": 0,
+      "terminal_set_checks": 840,
+      "th_violations": []
+    },
+    {
+      "all_l5_cuts": 1,
+      "cuts": [
+        {
+          "all_l5": true,
+          "bad_edges": 16,
+          "checked_terminals": 276,
+          "ell_values": [
+            5
+          ],
+          "gamma": 400,
+          "side": "00000111110111111111100"
+        }
+      ],
+      "edges": 71,
+      "gamma_min_connected_cuts": 1,
+      "max_sH_case": {
+        "T": [
+          10,
+          22
+        ],
+        "bound": "21",
+        "margin": "5548/819",
+        "sH": "11651/819",
+        "side": "00000111110111111111100"
+      },
+      "max_sH_minus_bound": {
+        "den": 819,
+        "num": -5548
+      },
+      "maxcut": 55,
+      "n": 23,
+      "name": "MycGrotzsch",
+      "sH_violations": [],
+      "terminal_hall_checked": 0,
+      "terminal_hall_skipped": 276,
+      "terminal_set_checks": 276,
+      "th_violations": []
+    }
+  ],
+  "total_TH_violation_records": 0,
+  "total_sH_violation_records": 0,
+  "verdict": "PASS"
+}

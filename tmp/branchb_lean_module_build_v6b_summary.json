@@ -1,0 +1,30 @@
+{
+  "schema": "branchb_lean_module_build_v1",
+  "src_root": "E:\\Projects\\ErdosProblems\\problems\\23\\lean",
+  "build_root": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_o_v6b",
+  "workers": 8,
+  "count": 1,
+  "shard_count": 29,
+  "failures": [
+    {
+      "module": "Erdos23Delta0.Cert.BranchBSupport",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBSupport.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_o_v6b\\Erdos23Delta0\\Cert\\BranchBSupport.olean",
+      "returncode": 1,
+      "seconds": 1.566,
+      "stdout": "",
+      "stderr": "no such file or directory (error code: 2)\n  file: =E:\\Projects\\ErdosProblems\\problems\\23\\lean\n"
+    }
+  ],
+  "results": [
+    {
+      "module": "Erdos23Delta0.Cert.BranchBSupport",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBSupport.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_o_v6b\\Erdos23Delta0\\Cert\\BranchBSupport.olean",
+      "returncode": 1,
+      "seconds": 1.566,
+      "stdout": "",
+      "stderr": "no such file or directory (error code: 2)\n  file: =E:\\Projects\\ErdosProblems\\problems\\23\\lean\n"
+    }
+  ]
+}

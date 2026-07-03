@@ -105,6 +105,35 @@ theorem ell_ge_five : 5 ≤ R.n + 1 := by
   have := R.hn
   omega
 
+/-- Segment walk `q i → q (i+k)` along the row. -/
+def walkFrom (i : ℕ) : ∀ (k : ℕ) (hk : i + k ≤ R.n),
+    (blueGraph G c).Walk (R.q ⟨i, by omega⟩) (R.q ⟨i + k, by omega⟩)
+  | 0, _ => SimpleGraph.Walk.nil
+  | (k + 1), hk =>
+      (walkFrom i k (by omega)).concat
+        (by
+          have h := R.blue_step ⟨i + k, by omega⟩
+          have h1 : (⟨i + k, by omega⟩ : Fin R.n).castSucc =
+              (⟨i + k, by omega⟩ : Fin (R.n + 1)) := rfl
+          have h2 : (⟨i + k, by omega⟩ : Fin R.n).succ =
+              (⟨i + k + 1, by omega⟩ : Fin (R.n + 1)) := rfl
+          rw [h1, h2] at h
+          exact h)
+
+theorem walkFrom_length (i : ℕ) : ∀ (k : ℕ) (hk : i + k ≤ R.n),
+    (R.walkFrom i k hk).length = k
+  | 0, _ => rfl
+  | (k + 1), hk => by
+      unfold walkFrom
+      rw [SimpleGraph.Walk.length_concat, walkFrom_length i k (by omega)]
+
+/-- Along-row distance bound: blue distance between row vertices is at most
+    their index gap (the surgery workhorse for the spacing lemma). -/
+theorem dist_segment_le (i k : ℕ) (hk : i + k ≤ R.n) :
+    (blueGraph G c).dist (R.q ⟨i, by omega⟩) (R.q ⟨i + k, by omega⟩) ≤ k := by
+  have := SimpleGraph.dist_le (R.walkFrom i k hk)
+  rwa [R.walkFrom_length i k hk] at this
+
 end Row
 
 end Rows

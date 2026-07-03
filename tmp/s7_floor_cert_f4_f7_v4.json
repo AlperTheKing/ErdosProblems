@@ -1,0 +1,63 @@
+{
+  "F4A_full_and_F5_same_floor": true,
+  "F4A_high_P_ge_e_plus_1_Bernstein_U": {
+    "B0": {
+      "degree": 5,
+      "first_negative": [],
+      "min_coeff": "2",
+      "negative_coeffs": 0,
+      "terms": 183
+    },
+    "B2": {
+      "degree": 5,
+      "first_negative": [],
+      "min_coeff": "8",
+      "negative_coeffs": 0,
+      "terms": 213
+    },
+    "two_B1": {
+      "degree": 5,
+      "first_negative": [],
+      "min_coeff": "4",
+      "negative_coeffs": 0,
+      "terms": 214
+    }
+  },
+  "F4A_low_P_le_e_plus_1": {
+    "degree": 5,
+    "first_negative": [],
+    "min_coeff": "2",
+    "negative_coeffs": 0,
+    "terms": 353
+  },
+  "F4B_full": {
+    "degree": 5,
+    "first_negative": [],
+    "min_coeff": "2",
+    "negative_coeffs": 0,
+    "terms": 334
+  },
+  "F6_gap_simplex_Bernstein": {
+    "controls": 16,
+    "first_bad_control": null,
+    "max_degree": 7,
+    "max_terms": 715,
+    "min_coeff": "2/9",
+    "negative_controls": 0,
+    "verdict": "PASS",
+    "w_bound": "C + E + L + U + d",
+    "x_degree_controls": 4
+  },
+  "F7_gap_simplex_Bernstein": {
+    "controls": 16,
+    "first_bad_control": null,
+    "max_degree": 7,
+    "max_terms": 386,
+    "min_coeff": "2/9",
+    "negative_controls": 0,
+    "verdict": "PASS",
+    "w_bound": "E + L + U + d",
+    "x_degree_controls": 4
+  },
+  "verdict": "PASS"
+}

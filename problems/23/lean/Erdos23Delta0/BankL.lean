@@ -70,5 +70,17 @@ theorem hard_set_L_le_12 (d L r : ℚ) (hr : 0 < r) (hd : d ≤ 2*r)
   unfold pressure at hP
   nlinarith
 
+/-- Bank-L floors η: from 25m ≤ N² − L² + 25, η ≥ (L² − 25)/25. -/
+theorem bankL_eta_floor (N L m : ℚ) (h : 0 ≤ negDelta N L m) :
+    (L^2 - 25)/25 ≤ (N^2 - 25*m)/25 := by
+  unfold negDelta at h
+  linarith
+
+/-- Banked-UPO ⟹ GERSH: for L ≥ 5 rows with η ≥ 0,
+    R ≤ N + η/2 − (L² − 25)/50 implies the GERSH row bound R ≤ N + η. -/
+theorem bankedUPO_implies_gersh (R N eta L : ℚ) (hL : 5 ≤ L) (heta : 0 ≤ eta)
+    (h : R ≤ N + eta/2 - (L^2 - 25)/50) : R ≤ N + eta := by
+  nlinarith
+
 end BankL
 end Erdos23Delta0

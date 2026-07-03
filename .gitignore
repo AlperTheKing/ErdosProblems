@@ -76,3 +76,7 @@ _tmp_*/
 
 # Codex scratch/probe dir -- transient work files, not versioned
 .codex_tmp/
+
+# Lean 4 build artifacts (lake build output)
+.lake/
+*.olean

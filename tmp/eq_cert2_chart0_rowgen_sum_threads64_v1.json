@@ -1,0 +1,147 @@
+{
+  "chart": 0,
+  "final": "LP_FAIL",
+  "history": [
+    {
+      "added_rows": 4210,
+      "columns": 18432,
+      "float_nonzero": 727,
+      "iteration": 0,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 99742,
+      "rows": 2140,
+      "success": true,
+      "violated": 4210,
+      "worst_residual": -46422.27372489017
+    },
+    {
+      "added_rows": 1164,
+      "columns": 18432,
+      "float_nonzero": 3000,
+      "iteration": 1,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 185425,
+      "rows": 6350,
+      "success": true,
+      "violated": 1165,
+      "worst_residual": -51223.122554631555
+    },
+    {
+      "columns": 18432,
+      "iteration": 2,
+      "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "lp_status": 2,
+      "nonzeros": 199934,
+      "rows": 7514,
+      "success": false
+    }
+  ],
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "schema": "eq_cert2_chart_rowgen_v1"
+}

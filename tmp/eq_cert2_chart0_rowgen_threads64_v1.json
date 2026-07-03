@@ -1,0 +1,173 @@
+{
+  "chart": 0,
+  "final": "LP_FAIL",
+  "history": [
+    {
+      "added_rows": 771,
+      "columns": 18432,
+      "float_nonzero": 1928,
+      "iteration": 0,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 99742,
+      "rows": 2140,
+      "success": true,
+      "violated": 771,
+      "worst_residual": -115780.0
+    },
+    {
+      "added_rows": 1405,
+      "columns": 18432,
+      "float_nonzero": 1477,
+      "iteration": 1,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 130575,
+      "rows": 2911,
+      "success": true,
+      "violated": 1405,
+      "worst_residual": -76314.9231587982
+    },
+    {
+      "added_rows": 2361,
+      "columns": 18432,
+      "float_nonzero": 2931,
+      "iteration": 2,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 156159,
+      "rows": 4316,
+      "success": true,
+      "violated": 2361,
+      "worst_residual": -33698.33977915413
+    },
+    {
+      "added_rows": 908,
+      "columns": 18432,
+      "float_nonzero": 3749,
+      "iteration": 3,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "nonzeros": 184710,
+      "rows": 6677,
+      "success": true,
+      "violated": 908,
+      "worst_residual": -4641.0077877448475
+    },
+    {
+      "columns": 18432,
+      "iteration": 4,
+      "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "lp_status": 1,
+      "nonzeros": 199621,
+      "rows": 7585,
+      "success": false
+    }
+  ],
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "schema": "eq_cert2_chart_rowgen_v1"
+}

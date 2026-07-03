@@ -24572,3 +24572,77 @@
 [2026-07-03T13:31:00Z] OK VERIFY | DID: Smoke-ran CERT-2 chart falsifier. | RESULT: tmp/eq_cert2_chart_falsifier_smoke_v1.json PASS bound=1. | D: wider search
 [2026-07-03T13:31:00Z] > ATTACK | NEXT: Run exact CERT-2 chart falsifier bound=2 plus 2000 random samples per chart.
 [2026-07-03T13:34:17Z] FAIL ATTACK | DID: Stopped opaque CERT-2 bound=2 run after no output. | RESULT: Python PID 14276 killed; evaluator too slow. | D: optimize evaluator
+[2026-07-03T13:36:53Z] OK EDIT | DID: Rewrote CERT-2 chart falsifier with direct exact row-overlap evaluator. | RESULT: _codex_eq_cert2_chart_falsifier.py v2. | D: smoke rerun
+[2026-07-03T13:37:00Z] > VERIFY | NEXT: Smoke-run optimized CERT-2 chart falsifier bound=1.
+[2026-07-03T13:37:09Z] OK VERIFY | DID: Smoke-ran optimized CERT-2 chart falsifier. | RESULT: tmp/eq_cert2_chart_falsifier_smoke_v2.json PASS; bound=1 all charts. | D: wider search
+[2026-07-03T13:37:09Z] > ATTACK | NEXT: Run optimized exact CERT-2 chart falsifier bound=2 plus 2000 random samples/chart.
+[2026-07-03T13:37:20Z] OK ATTACK | DID: Ran CERT-2 exact chart falsifier bound=2 plus 2000 random/chart. | RESULT: tmp/eq_cert2_chart_falsifier_bound2_rand2k_v2.json PASS; no hit. | D: bound3
+[2026-07-03T13:37:20Z] > ATTACK | NEXT: Run optimized exact CERT-2 chart falsifier bound=3 plus 5000 random samples/chart.
+[2026-07-03T13:37:56Z] OK ATTACK | DID: Ran CERT-2 exact chart falsifier bound=3 plus 5000 random/chart. | RESULT: tmp/eq_cert2_chart_falsifier_bound3_rand5k_v2.json PASS; no hit. | D: parallel bound4
+[2026-07-03T13:37:56Z] > ATTACK | NEXT: Run CERT-2 exact chart falsifier bound=4 in five parallel chart groups.
+[2026-07-03T13:39:10Z] OK ATTACK | DID: Ran CERT-2 exact chart falsifier bound=4 in five parallel chart groups. | RESULT: tmp/eq_cert2_chart_falsifier_bound4_charts*.json PASS; no hit. | D: aggregate
+[2026-07-03T13:39:29Z] FAIL VERIFY | DID: Tried Python one-line aggregate for CERT-2 bound4. | RESULT: SyntaxError from PowerShell newline quoting. | D: aggregate PowerShell
+[2026-07-03T13:39:41Z] OK VERIFY | DID: Aggregated CERT-2 bound4 chart falsifier results. | RESULT: tmp/eq_cert2_chart_falsifier_bound4_all_v2.json; checked=19531250 feasible=3434182 hit=null. | D: high-range random
+[2026-07-03T13:39:41Z] > ATTACK | NEXT: Run high-range exact random CERT-2 chart falsifier 100000 samples/chart.
+[2026-07-03T13:40:20Z] OK ATTACK | DID: Ran high-range exact random CERT-2 chart falsifier. | RESULT: tmp/eq_cert2_chart_falsifier_rand100k_b200_v2.json; random_checked=1000000 feasible=137025 hit=null. | D: report Claude
+[2026-07-03T13:40:20Z] OK REPORT | DID: Posted CERT-2 falsifier search RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: next gate
+[2026-07-03T13:40:32Z] > INSPECT | NEXT: Locate NCH weighted-blowup scripts and audit text for Mycielskian hunt.
+[2026-07-03T13:42:05Z] OK INSPECT | DID: Read NCH T=1 hunt text and existing Mycielski row scripts. | RESULT: weighted blowup task uses s_H(t)-(|H|-1), B=2..4; convention requires fixed terminal clone. | D: implement weighted hunt
+[2026-07-03T13:42:05Z] > EDIT | NEXT: Add exact weighted Mycielskian NCH T=1 blowup hunt script.
+[2026-07-03T13:42:43Z] OK EDIT | DID: Added exact NCH T=1 weighted Mycielskian blowup hunt script. | RESULT: problems/23/writeup/_codex_nch_weighted_blowup_hunt.py | D: smoke B2
+[2026-07-03T13:42:51Z] > VERIFY | NEXT: Smoke-run NCH weighted Mycielskian blowup hunt on Grotzsch B=2.
+[2026-07-03T13:43:02Z] OK VERIFY | DID: Ran NCH weighted Grotzsch blowup hunt B=2. | RESULT: tmp/nch_weighted_grotzsch_b2_v1.json PASS; best_gap=-467/63. | D: B3
+[2026-07-03T13:43:02Z] > ATTACK | NEXT: Run NCH weighted Grotzsch blowup hunt B=3.
+[2026-07-03T13:44:56Z] OK ATTACK | DID: Ran NCH weighted Grotzsch blowup hunt B=3. | RESULT: tmp/nch_weighted_grotzsch_b3_v1.json PASS; best_gap=-1045/161. | D: MycC7 B2
+[2026-07-03T13:44:56Z] > ATTACK | NEXT: Run NCH weighted MycC7 blowup hunt B=2.
+[2026-07-03T13:45:38Z] OK ATTACK | DID: Ran NCH weighted MycC7 blowup hunt B=2. | RESULT: tmp/nch_weighted_mycc7_b2_v1.json PASS; best_gap=-6. | D: optimize/parallel B4 later
+[2026-07-03T13:46:51Z] OK SYNC | DID: Read Claude mailbox. | RESULT: latest 03:50Z; Branch-B v5 shards fail non-module-root import; self-contained v5.1 requested. | D: Branch-B v5.1
+[2026-07-03T13:46:51Z] > EDIT | NEXT: Inspect Branch-B emitter and add self-contained shard mode.
+[2026-07-03T13:49:12Z] OK EDIT | DID: Added Branch-B self-contained emission mode. | RESULT: _codex_branchb_jsonl_to_lean.py modified. | D: regenerate v5.1
+[2026-07-03T13:49:36Z] FAIL VERIFY | DID: Tried py_compile on Branch-B emitter. | RESULT: WinError 5 pycache rename; source inspection shows self-contained option present. | D: run emitter
+[2026-07-03T13:49:36Z] > VERIFY | NEXT: Regenerate Branch-B v5.1 self-contained pilot and full shards.
+[2026-07-03T13:51:04Z] OK VERIFY | DID: Compiled Branch-B v5.1 self-contained Pilot, Shard000, Shard028. | RESULT: lake env lean EXIT 0 for all three. | D: all-shard sweep
+[2026-07-03T13:51:04Z] > VERIFY | NEXT: Compile all Branch-B v5.1 self-contained shards with 8 workers.
+[2026-07-03T13:51:29Z] FAIL VERIFY | DID: Ran all-shard sweep helper. | RESULT: helper path bug before Lean invocation. | D: rerun sweep
+[2026-07-03T13:55:35Z] OK VERIFY | DID: Ran Branch-B v5.1 all-shard Lean sweep. | RESULT: tmp/branchb_v51_selfcontained_all_shards_summary.json PASS; shards=29 failures=0. | D: audit/report
+[2026-07-03T13:55:35Z] OK VERIFY | DID: Audited generated Branch-B self-contained data for native_decide/import Erdos23Delta0. | RESULT: rg NO_MATCH in BranchBData dir. | D: report Claude
+[2026-07-03T13:55:35Z] OK REPORT | DID: Posted Branch-B v5.1 self-contained RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: resume NCH/CERT-2
+[2026-07-03T13:55:58Z] > EDIT | NEXT: Optimize NCH weighted blowup hunt for specified terminal list before B=4.
+[2026-07-03T13:56:20Z] OK EDIT | DID: Optimized NCH weighted hunt for explicit terminal lists. | RESULT: _codex_nch_weighted_blowup_hunt.py modified. | D: regression
+[2026-07-03T13:56:52Z] OK EDIT | DID: Added cut-index selector to NCH weighted hunt. | RESULT: _codex_nch_weighted_blowup_hunt.py modified. | D: B4 parallel
+[2026-07-03T13:57:00Z] OK VERIFY | DID: Regression-tested optimized NCH weighted hunt. | RESULT: B2 all-term and terminal10 match best_gap=-467/63. | D: B4 apex
+[2026-07-03T13:57:00Z] > ATTACK | NEXT: Run weighted Groetzsch B=4 terminal10 exhaustive hunt in 5 parallel cut jobs.
+[2026-07-03T13:59:29Z] OK ATTACK | DID: Ran weighted Groetzsch B=4 terminal10 over all 5 gamma-min cuts. | RESULT: tmp/nch_weighted_grotzsch_b4_t10_cut*_v2.json PASS; best_gap=-36020/19227. | D: B4 all terminals
+[2026-07-03T13:59:29Z] > ATTACK | NEXT: Run weighted Groetzsch B=4 all-terminal exhaustive hunt in 5 parallel cut jobs.
+[2026-07-03T14:07:47Z] OK ATTACK | DID: Ran weighted Groetzsch B=4 all-terminal exhaustive hunt over all 5 cuts. | RESULT: tmp/nch_weighted_grotzsch_b4_all_v2.json PASS; checked=20971520 best_gap=-36020/19227. | D: report Claude
+[2026-07-03T14:08:07Z] OK REPORT | DID: Posted weighted Groetzsch/MycC7 NCH hunt RESULT to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: continue weighted Myc
+[2026-07-03T14:11:14Z] > GATE | NEXT: Refresh Claude mailbox and inspect CERT-2 chart route.
+[2026-07-03T14:11:19Z] OK GATE | DID: Read Claude mailbox tail. | RESULT: latest 2026-07-04T06:50Z CERT-2+Groetzsch lead | D: CERT-2 inspect
+[2026-07-03T14:11:32Z] > PLAN | NEXT: Inspect CERT-2 spec and existing LP/falsifier code.
+[2026-07-03T14:12:49Z] OK PLAN | DID: Inspected CERT-2 ADD.3b, falsifier, old LP, Bernstein helpers. | RESULT: ChartCert target identified | D: prototype
+[2026-07-03T14:12:59Z] > ATTACK | NEXT: Create CERT-2 chart Bernstein-Handelman LP prototype.
+[2026-07-03T14:14:31Z] OK ATTACK | DID: Added CERT-2 ChartCert LP prototype. | RESULT: _codex_eq_cert2_chart_lp.py py_compile OK | D: run chart0
+[2026-07-03T14:14:47Z] FAIL VERIFY | DID: py_compile ChartCert script. | RESULT: WinError5 pycache rename | D: use python -B
+[2026-07-03T14:14:58Z] > VERIFY | NEXT: Run chart0 repair-support ChartCert LP oracle.
+[2026-07-03T14:20:51Z] FAIL VERIFY | DID: chart0 repair LP oracle. | RESULT: interrupted after >4min no HiGHS result | D: add time limit
+[2026-07-03T14:21:39Z] OK ATTACK | DID: Added HiGHS time_limit option to ChartCert LP. | RESULT: --help EXIT 0 | D: bounded run
+[2026-07-03T14:21:39Z] > VERIFY | NEXT: Run chart0 repair LP with 60s HiGHS cap.
+[2026-07-03T14:23:11Z] FAIL VERIFY | DID: chart0 repair LP with 60s cap. | RESULT: HiGHS time limit; 18432 cols 20643 rows | D: diagnose supports
+[2026-07-03T14:23:20Z] > VERIFY | NEXT: Run capped chart0 repair LP diagnostic.
+[2026-07-03T14:23:46Z] FAIL VERIFY | DID: chart0 cap200 repair LP. | RESULT: infeasible; 2800 cols 10396 rows | D: increase support
+[2026-07-03T14:24:13Z] FAIL VERIFY | DID: chart0 cap500 repair LP. | RESULT: infeasible; 6824 cols 13103 rows | D: increase support
+[2026-07-03T14:27:02Z] OK ATTACK | DID: Added LP method switch and trimmed metadata bug. | RESULT: --method help EXIT 0 | D: ipm test
+[2026-07-03T14:27:02Z] > VERIFY | NEXT: Run chart0 cap1000 repair LP with highs-ipm.
+[2026-07-03T14:28:38Z] FAIL VERIFY | DID: chart0 cap1000 highs-ipm LP. | RESULT: HiGHS time limit | D: add row scaling
+[2026-07-03T14:28:58Z] OK ATTACK | DID: Added LP row scaling. | RESULT: --help EXIT 0 | D: scaled test
+[2026-07-03T14:33:15Z] FAIL VERIFY | DID: chart0 cap1000 scaled LP. | RESULT: HiGHS time limit | D: coefficient diagnostics
+[2026-07-03T14:34:13Z] OK VERIFY | DID: chart0 coefficient diagnostic. | RESULT: 2140 negative target terms, 18432 repair cols, uncovered=0 | D: spillover test
+[2026-07-03T14:35:03Z] OK VERIFY | DID: chart0 negative-row-only LP. | RESULT: feasible; 2140 rows 18432 cols nonzero=1928 | D: spillover rows
+[2026-07-03T14:36:51Z] > VERIFY | NEXT: Run chart0 row-generation LP oracle.
+[2026-07-03T14:39:36Z] FAIL VERIFY | DID: chart0 rowgen 5 iter 60s. | RESULT: iter4 HiGHS time limit after rows=7585; worst prev=-4641 | D: longer threaded
+[2026-07-03T14:39:54Z] OK ATTACK | DID: Added rowgen --threads option. | RESULT: --help EXIT 0 | D: 64-thread run
+[2026-07-03T14:44:39Z] FAIL VERIFY | DID: chart0 rowgen 64-thread 180s. | RESULT: iter4 time limit at 7585 rows | D: sum-objective run
+[2026-07-03T14:45:43Z] FAIL VERIFY | DID: chart0 rowgen sum-objective. | RESULT: infeasible at iter2 rows=7514 with static cols | D: dynamic columns
+[2026-07-03T14:45:57Z] > VERIFY | NEXT: Check local Clarabel availability for CERT-2 LP oracle.
+[2026-07-03T14:47:45Z] OK ATTACK | DID: Added Clarabel backend to rowgen. | RESULT: --oracle clarabel help EXIT 0 | D: smoke run
+[2026-07-03T14:48:17Z] OK VERIFY | DID: Clarabel cap200 smoke. | RESULT: PrimalInfeasible as expected | D: full clarabel rowgen

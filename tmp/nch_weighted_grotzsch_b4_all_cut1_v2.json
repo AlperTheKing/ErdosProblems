@@ -1,0 +1,44 @@
+{
+  "cuts": [
+    {
+      "bad_edges": 4,
+      "best": {
+        "bound": "25",
+        "gap": "-36020/19227",
+        "gap_den": 19227,
+        "gap_num": -36020,
+        "sH": "444655/19227",
+        "terminal": 10,
+        "weights": [
+          1,
+          1,
+          4,
+          4,
+          4,
+          1,
+          1,
+          4,
+          4,
+          1,
+          1
+        ]
+      },
+      "checked_weight_vectors": 4194304,
+      "cut_index": 1,
+      "ell_values": [
+        5
+      ],
+      "gamma": 100,
+      "max_weight": 4,
+      "n": 11,
+      "name": "Grotzsch_MycC5",
+      "side": "01001011110",
+      "violations": []
+    }
+  ],
+  "max_weight": 4,
+  "only": "Grotzsch_MycC5",
+  "schema": "nch_t1_weighted_myc_blowup_hunt_v1",
+  "terminal_convention": "fixed clone; bound=sum(weights)-1",
+  "verdict": "PASS"
+}

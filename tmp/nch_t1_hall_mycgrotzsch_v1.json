@@ -1,0 +1,189 @@
+{
+  "graphs": [
+    {
+      "cuts": [
+        {
+          "bad_edges": 16,
+          "ell_values": [
+            5
+          ],
+          "gamma": 400,
+          "side": "00000111110111111111100",
+          "terminals": [
+            {
+              "terminal": 0,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 1,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 2,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 3,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 4,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 5,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 6,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 7,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 8,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 9,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 10,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 11,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 12,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 13,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 14,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 15,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 16,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 17,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 18,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 19,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 20,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 21,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            },
+            {
+              "terminal": 22,
+              "violation": false,
+              "worst_U_size": 0,
+              "worst_margin": "0",
+              "worst_margin_num": 0
+            }
+          ],
+          "worst_U_size": 0,
+          "worst_margin": "0",
+          "worst_margin_num": 0,
+          "worst_terminal": 0
+        }
+      ],
+      "gamma_min_connected_cuts": 1,
+      "maxcut": 55,
+      "n": 23,
+      "name": "MycGrotzsch",
+      "violations": []
+    }
+  ],
+  "verdict": "PASS"
+}

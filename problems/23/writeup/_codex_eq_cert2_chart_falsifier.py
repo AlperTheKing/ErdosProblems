@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Exact falsifier search for EQ CERT-2 ADDENDUM 3b charts.
 
-This is deliberately a falsifier gate, not a certificate prover.  It searches
+This is deliberately a falsifier gate, not a certificate prover. It searches
 integer points in the ten min-coordinate charts
 
     w_k = 1,  w_i >= 1
 
-equivalently x_k = 0, x_i >= 0 for w_i = 1 + x_i.  Any reported hit is
-checked with exact integer polynomial arithmetic:
+equivalently x_k = 0, x_i >= 0 for w_i = 1 + x_i. Any reported hit is
+checked with exact integer/Fraction arithmetic:
 
     F1..F7 >= 0, G1..G8 >= 0, and P_EQ < 0.
 
@@ -17,73 +17,36 @@ No floating point result is used as evidence.
 from __future__ import annotations
 
 import argparse
-import itertools
+import contextlib
+import io
 import json
 import random
+from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 from typing import Iterable
 
-import sympy as sp
-
 import _codex_eq_cert2_odl_lp as old_lp
 
-
-xs = old_lp.xs
-ws = old_lp.ws
-w0, w1, w2, w3, w4, w5, w6, w7, w8, w9 = ws
-
-m = old_lp.m
-N = old_lp.N
-eta25 = old_lp.eta25
-F = old_lp.F
-
-U = w0 + w8
-V = w4 + w6
-X = w1 + w7
-Y = w2 + w9
-Z = w3 + w5
-T = m + 1
-A = U + V + Z
-B = X + Y
-
-G = [
-    U * V - T,
-    U * Z - T,
-    V * Z - T,
-    X * Y - T,
-    V * Z - X * Y,
-    A * A - 9 * T,
-    B * B - 4 * T,
-    eta25 - 25,
-]
-
-
-def make_int_func(expr: sp.Expr):
-    """Return a Python-int evaluator for an integer polynomial."""
-    poly = sp.Poly(sp.expand(expr), *xs, domain=sp.ZZ)
-    terms = [(tuple(mon), int(coeff)) for mon, coeff in poly.terms()]
-
-    def eval_at(point: tuple[int, ...]) -> int:
-        total = 0
-        for mon, coeff in terms:
-            val = coeff
-            for idx, power in enumerate(mon):
-                if power:
-                    val *= point[idx] ** power
-            total += val
-        return total
-
-    return eval_at
+with contextlib.redirect_stdout(io.StringIO()):
+    from _codex_c5lift_weighted_quotient_gate import EQ, b_edges, edges_of, m_edges, shortest_paths
 
 
 def chart_points(chart: int, bound: int) -> Iterable[tuple[int, ...]]:
     """Enumerate x-points with x_chart=0 and other x_i in [0,bound]."""
     others = [i for i in range(10) if i != chart]
-    for vals in itertools.product(range(bound + 1), repeat=9):
-        point = [0] * 10
-        for i, value in zip(others, vals):
+
+    def rec(pos: int, point: list[int]):
+        if pos == len(others):
+            yield tuple(point)
+            return
+        i = others[pos]
+        for value in range(bound + 1):
             point[i] = value
-        yield tuple(point)
+            yield from rec(pos + 1, point)
+        point[i] = 0
+
+    yield from rec(0, [0] * 10)
 
 
 def random_chart_points(chart: int, bound: int, samples: int, seed: int) -> Iterable[tuple[int, ...]]:
@@ -104,8 +67,102 @@ def point_weights(point: tuple[int, ...]) -> list[int]:
     return [1 + x for x in point]
 
 
-def search(points: Iterable[tuple[int, ...]], evals, best: dict[str, object] | None = None):
-    p_eval, f_evals, g_evals = evals
+@lru_cache(maxsize=1)
+def eq_paths_by_bad():
+    n, edges = edges_of(EQ)
+    side = tuple(int(c) for c in old_lp.SIDE)
+    bset = b_edges(edges, side)
+    bad = sorted(m_edges(edges, side))
+    if n != 10 or bad != [(1, 9), (2, 7), (7, 9)]:
+        raise RuntimeError(f"unexpected EQ data: n={n} bad={bad}")
+    return {edge: shortest_paths(n, bset, edge[0], edge[1]) for edge in bad}
+
+
+def numeric_d_eq(w: list[int]) -> int:
+    a = w[0] * w[6] + w[4] * w[8] + w[6] * w[8]
+    b = w[0] * w[5] + w[3] * w[8] + w[5] * w[8]
+    c = (
+        w[0] * w[5] * w[6]
+        + w[3] * w[4] * w[8]
+        + w[3] * w[6] * w[8]
+        + w[4] * w[5] * w[8]
+        + w[5] * w[6] * w[8]
+    )
+    return w[5] * w[6] * a * b * c
+
+
+def numeric_row_overlap(w: list[int]) -> Fraction:
+    row_set = set(old_lp.ACTIVE_ROW)
+    total = Fraction(0)
+    paths_by_bad = eq_paths_by_bad()
+    for a, b in sorted(paths_by_bad):
+        paths = paths_by_bad[(a, b)]
+        denom = 0
+        inner = Fraction(0)
+        for path in paths:
+            wp = 1
+            for v in path[1:-1]:
+                wp *= w[v]
+            denom += wp
+            for v in path[1:-1]:
+                if v in row_set:
+                    inner += Fraction(wp, w[v])
+        endpoint = 0
+        if a in row_set:
+            endpoint += w[b]
+        if b in row_set:
+            endpoint += w[a]
+        total += endpoint + Fraction(w[a] * w[b], denom) * inner
+    return total
+
+
+def p_eq_numeric(point: tuple[int, ...]) -> int:
+    w = point_weights(point)
+    n_val = sum(w)
+    m_val = w[1] * w[9] + w[2] * w[7] + w[7] * w[9]
+    eta25_val = n_val * n_val - 25 * m_val
+    value = numeric_d_eq(w) * (2 * eta25_val - 75 * (numeric_row_overlap(w) - n_val))
+    if value.denominator != 1:
+        raise ArithmeticError(f"uncleared P_EQ denominator at {point}: {value}")
+    return value.numerator
+
+
+def fg_numeric(point: tuple[int, ...]) -> tuple[list[int], list[int]]:
+    w = point_weights(point)
+    m_val = w[1] * w[9] + w[2] * w[7] + w[7] * w[9]
+    n_val = sum(w)
+    eta25_val = n_val * n_val - 25 * m_val
+    u_val = w[0] + w[8]
+    v_val = w[4] + w[6]
+    x_val = w[1] + w[7]
+    y_val = w[2] + w[9]
+    z_val = w[3] + w[5]
+    t_val = m_val + 1
+    a_val = u_val + v_val + z_val
+    b_val = x_val + y_val
+    f_vals = [
+        w[5] - w[9],
+        w[6] - w[7],
+        w[3] + w[5] - w[2] - w[9],
+        w[4] + w[6] - w[1] - w[7],
+        w[0] * w[6] + w[3] * w[8] + w[5] * w[8] - m_val,
+        w[0] * w[5] + w[3] * w[8] + w[5] * w[8] - m_val,
+        w[0] * w[6] + w[4] * w[8] + w[6] * w[8] - m_val,
+    ]
+    g_vals = [
+        u_val * v_val - t_val,
+        u_val * z_val - t_val,
+        v_val * z_val - t_val,
+        x_val * y_val - t_val,
+        v_val * z_val - x_val * y_val,
+        a_val * a_val - 9 * t_val,
+        b_val * b_val - 4 * t_val,
+        eta25_val - 25,
+    ]
+    return f_vals, g_vals
+
+
+def search(points: Iterable[tuple[int, ...]], best: dict[str, object] | None = None):
     checked = 0
     feasible = 0
     best_val = None if best is None else int(best["P_EQ"])
@@ -114,14 +171,13 @@ def search(points: Iterable[tuple[int, ...]], evals, best: dict[str, object] | N
 
     for point in points:
         checked += 1
-        f_vals = [fn(point) for fn in f_evals]
+        f_vals, g_vals = fg_numeric(point)
         if min(f_vals) < 0:
             continue
-        g_vals = [fn(point) for fn in g_evals]
         if min(g_vals) < 0:
             continue
         feasible += 1
-        p_val = p_eval(point)
+        p_val = p_eq_numeric(point)
         if best_val is None or p_val < best_val:
             best_val = p_val
             best_point = point
@@ -156,41 +212,48 @@ def main() -> None:
     ap.add_argument("--random-samples", type=int, default=0, help="random samples per chart")
     ap.add_argument("--seed", type=int, default=1729)
     ap.add_argument("--charts", default="0,1,2,3,4,5,6,7,8,9")
-    ap.add_argument("--summary", default="tmp/eq_cert2_chart_falsifier_v1.json")
+    ap.add_argument("--summary", default="tmp/eq_cert2_chart_falsifier_v2.json")
     args = ap.parse_args()
-
-    target, meta = old_lp.build_target()
-    evals = (
-        make_int_func(target),
-        [make_int_func(f) for f in F],
-        [make_int_func(g) for g in G],
-    )
 
     charts = [int(x) for x in args.charts.split(",") if x.strip()]
     out = {
-        "schema": "eq_cert2_add3b_chart_falsifier_v1",
-        "mode": "integer_points_exact",
+        "schema": "eq_cert2_add3b_chart_falsifier_v2",
+        "mode": "integer_points_exact_direct_row_overlap",
         "bound": args.bound,
         "random_bound": args.random_bound,
         "random_samples_per_chart": args.random_samples,
         "seed": args.seed,
-        "target_meta": meta,
+        "target_meta": {
+            "graph": EQ,
+            "side": old_lp.SIDE,
+            "active_row": list(old_lp.ACTIVE_ROW),
+            "bad_edges": [list(e) for e in sorted(eq_paths_by_bad())],
+            "eval": "direct exact Fraction row-overlap, cleared by D_EQ",
+        },
         "generators": {
-            "F": [str(f) for f in F],
-            "G": [str(g) for g in G],
+            "F": [str(f) for f in old_lp.F],
+            "G_order": [
+                "UV-T",
+                "UZ-T",
+                "VZ-T",
+                "XY-T",
+                "VZ-XY",
+                "A^2-9T",
+                "B^2-4T",
+                "eta25-25",
+            ],
         },
         "charts": [],
         "hit": None,
     }
 
     for chart in charts:
-        exhaustive = search(chart_points(chart, args.bound), evals)
+        exhaustive = search(chart_points(chart, args.bound))
         combined_best = exhaustive["best"]
         random_result = None
         if exhaustive["hit"] is None and args.random_samples > 0:
             random_result = search(
                 random_chart_points(chart, args.random_bound, args.random_samples, args.seed),
-                evals,
                 combined_best,
             )
         hit = exhaustive["hit"] or (random_result or {}).get("hit")
@@ -201,6 +264,17 @@ def main() -> None:
             "hit": hit,
         }
         out["charts"].append(chart_out)
+        print(
+            "chart",
+            chart,
+            "checked",
+            exhaustive["checked"],
+            "feasible",
+            exhaustive["feasible"],
+            "hit",
+            bool(hit),
+            flush=True,
+        )
         if hit is not None:
             out["hit"] = {"chart": chart, **hit}
             break

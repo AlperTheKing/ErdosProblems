@@ -1,0 +1,118 @@
+{
+  "chart": 0,
+  "columns": 13176,
+  "constraints": 17487,
+  "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+  "lp_status": 1,
+  "meta": {
+    "active_row": [
+      7,
+      5,
+      8,
+      6,
+      9
+    ],
+    "bad_edges": [
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "chart": 0,
+    "generators": [
+      {
+        "degree": 1,
+        "name": "F1",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F2",
+        "terms": 2
+      },
+      {
+        "degree": 1,
+        "name": "F3",
+        "terms": 4
+      },
+      {
+        "degree": 1,
+        "name": "F4",
+        "terms": 4
+      },
+      {
+        "degree": 2,
+        "name": "F5",
+        "terms": 13
+      },
+      {
+        "degree": 2,
+        "name": "F6",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "F7",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G1_UV_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G2_UZ_T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G3_VZ_T",
+        "terms": 15
+      },
+      {
+        "degree": 2,
+        "name": "G4_XY_T",
+        "terms": 3
+      },
+      {
+        "degree": 2,
+        "name": "G5_VZ_XY",
+        "terms": 16
+      },
+      {
+        "degree": 2,
+        "name": "G6_A2_9T",
+        "terms": 27
+      },
+      {
+        "degree": 2,
+        "name": "G7_B2_4T",
+        "terms": 12
+      },
+      {
+        "degree": 2,
+        "name": "G8_eta25_25",
+        "terms": 54
+      }
+    ],
+    "graph": "I?BD@g]Qo",
+    "side": "0001111000",
+    "target_degree": 11,
+    "target_terms_chart": 7767
+  },
+  "method": "highs",
+  "mode": "P_hat_minus_sum_G_B_has_nonnegative_B0_coefficients",
+  "nonzeros": 188444,
+  "schema": "eq_cert2_chart_bernstein_lp_v1",
+  "success": false,
+  "support": "repair"
+}
