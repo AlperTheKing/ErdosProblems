@@ -155,5 +155,138 @@ theorem sigma_nonneg_of_maxcut (G : GraphData) (c : CutData)
   unfold sigma
   omega
 
+/-! ### L2: rows and the all-ℓ=5 row database (blueprint §L2). -/
+
+/-- A length-five row: the bad-edge id and its five vertices in order. -/
+structure Row5 where
+  badId : Nat
+  verts : List Nat
+deriving Repr
+
+/-- Row well-formedness against the graph, cut, and its bad edge (u,v):
+    five in-range distinct vertices from u to v, four blue steps, bad closing. -/
+def checkRow5 (G : GraphData) (c : CutData) (u v : Nat) (r : Row5) : Bool :=
+  decide (r.verts.length = 5) &&
+  r.verts.all (fun w => decide (w < G.n)) &&
+  decide r.verts.Nodup &&
+  decide (r.verts.head? = some u) &&
+  decide (r.verts.getLast? = some v) &&
+  (List.zip r.verts r.verts.tail).all (fun p => blueb G c p.1 p.2) &&
+  badb G c u v
+
+/-- A bad edge with its full shortest-row list (|cyc| = rows.length). -/
+structure BadEdgeData where
+  u : Nat
+  v : Nat
+  rows : List Row5
+deriving Repr
+
+def checkBadEdge (G : GraphData) (c : CutData) (b : BadEdgeData) : Bool :=
+  badb G c b.u b.v &&
+  decide (b.rows ≠ []) &&
+  b.rows.all (checkRow5 G c b.u b.v)
+
+/-- Distance certificate: no blue connection of length ≤ 3 between the bad
+    endpoints (with the length-4 row displayed, this pins dist = 4, ℓ = 5).
+    Path-freeness is certified as literal exclusion lists checked elsewhere;
+    here the record carries the checked flags. -/
+structure Dist4Cert where
+  noBlueLen1 : Bool
+  noBlueLen2 : Bool
+  noBlueLen3 : Bool
+deriving Repr
+
+def Dist4Cert.ok (d : Dist4Cert) : Bool :=
+  d.noBlueLen1 && d.noBlueLen2 && d.noBlueLen3
+
+/-! ### L3: row atoms and integer pressure arithmetic (blueprint §L3).
+All loads are cleared by a global denominator D: an atom (weight, vertex)
+contributes weight = D / |cyc(badId)| for each row occurrence, so that
+sNum U = D·s(U). -/
+
+/-- One cleared row-load atom. -/
+structure AtomData where
+  weight : Nat
+  vertex : Nat
+  badId : Nat
+  rowId : Nat
+deriving Repr
+
+/-- Atom consistency: weight · rowCount(badId) = D and the vertex lies on the
+    referenced row. rowCounts is the per-bad-edge row count list. -/
+def checkAtom (D : Nat) (rowCounts : List Nat) (bads : List BadEdgeData)
+    (a : AtomData) : Bool :=
+  match rowCounts.get? a.badId, bads.get? a.badId with
+  | some rc, some b =>
+      decide (a.weight * rc = D) &&
+      (match b.rows.get? a.rowId with
+       | some r => decide (a.vertex ∈ r.verts)
+       | none => false)
+  | _, _ => false
+
+def checkAtoms (D : Nat) (rowCounts : List Nat) (bads : List BadEdgeData)
+    (atoms : List AtomData) : Bool :=
+  decide (0 < D) && atoms.all (checkAtom D rowCounts bads)
+
+/-- Cleared load numerator sNum(U) = D·s(U). -/
+def sNum (atoms : List AtomData) (U : List Nat) : Nat :=
+  ((atoms.filter (fun a => decide (a.vertex ∈ U))).map AtomData.weight).sum
+
+/-- Cleared pressure Π_D(U) = 5·sNum(U) − D·N·|U|. -/
+def pressureNum (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (U : List Nat) : Int :=
+  (5 * sNum atoms U : Int) - (D * G.n * U.length : Int)
+
+/-- Cleared Hall slack ν₀,D(C) = D·N·|C| − 5·sNum(C) = −Π_D(C). -/
+def nu0Num (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (C : List Nat) : Int :=
+  (D * G.n * C.length : Int) - (5 * sNum atoms C : Int)
+
+theorem nu0_eq_neg_pressure (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (C : List Nat) : nu0Num G atoms D C = -pressureNum G atoms D C := by
+  unfold nu0Num pressureNum
+  ring
+
+/-- Corridor-partition additivity core (blueprint L3/O1): sNum is additive over
+    a list-level split of U (the disjoint owned cores concatenate to U). -/
+theorem sNum_append : ∀ (atoms : List AtomData) (U₁ U₂ : List Nat),
+    (∀ a ∈ atoms, ¬(a.vertex ∈ U₁ ∧ a.vertex ∈ U₂)) →
+    sNum atoms (U₁ ++ U₂) = sNum atoms U₁ + sNum atoms U₂
+  | [], _, _, _ => by simp [sNum]
+  | a :: as, U₁, U₂, hdisj => by
+      have hd := hdisj a (List.mem_cons_self ..)
+      have ih := sNum_append as U₁ U₂
+        (fun x hx => hdisj x (List.mem_cons_of_mem _ hx))
+      unfold sNum at *
+      by_cases h1 : a.vertex ∈ U₁
+      · have h2 : a.vertex ∉ U₂ := fun h => hd ⟨h1, h⟩
+        have hm : a.vertex ∈ U₁ ++ U₂ := List.mem_append.mpr (Or.inl h1)
+        simp only [List.filter_cons, hm, h1, h2, decide_true, decide_false,
+          if_true, if_false, List.map_cons, List.sum_cons]
+        omega
+      · by_cases h2 : a.vertex ∈ U₂
+        · have hm : a.vertex ∈ U₁ ++ U₂ := List.mem_append.mpr (Or.inr h2)
+          simp only [List.filter_cons, hm, h1, h2, decide_true, decide_false,
+            if_true, if_false, List.map_cons, List.sum_cons]
+          omega
+        · have hm : a.vertex ∉ U₁ ++ U₂ := by
+            rw [List.mem_append]
+            rintro (h | h)
+            · exact h1 h
+            · exact h2 h
+          simp only [List.filter_cons, hm, h1, h2, decide_false, if_false]
+          omega
+
+/-- Pressure additivity over a disjoint split (the LOAD_ACCOUNT obligation in
+    integer form): ν₀ of the concatenation is the sum of the parts. -/
+theorem nu0_append (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (U₁ U₂ : List Nat)
+    (hdisj : ∀ a ∈ atoms, ¬(a.vertex ∈ U₁ ∧ a.vertex ∈ U₂)) :
+    nu0Num G atoms D (U₁ ++ U₂) = nu0Num G atoms D U₁ + nu0Num G atoms D U₂ := by
+  unfold nu0Num
+  rw [sNum_append atoms U₁ U₂ hdisj, List.length_append]
+  push_cast
+  ring
+
 end CertGraph
 end Erdos23Delta0

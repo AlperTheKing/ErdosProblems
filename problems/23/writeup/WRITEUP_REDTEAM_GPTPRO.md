@@ -417,3 +417,44 @@ rerun; non-C5-hom/NCH-def or new seed branch (hunt).
 machine certificates: closure-trace gate, partition cert, CrossCap mode, voltage
 lens gates, BH2/BH3, bank-block cover extraction, NCH branch (own program).
 
+
+# ===== NCH RECONCILIATION + DEFINITIVE BANK0 LEDGER B0-B10 (main, 2026-07-04) =====
+VERDICT: **NCH-def REMOVED from the Bank0 dependency ledger.** For Bank0,
+non-C5-hom closures route ENTIRELY through the corridor engine: CROSS / OSC /
+FORBID / LABEL. Label conflicts are caught by OSC/BH gates, never surviving to a
+separate NCH branch. NCH-def (s_H(Q cap T) <= |H| - |T|) remains ONLY an ODL-side
+obligation (G1-prime pruning); it is a row-load inequality and cannot bound bad
+edges, so it was never a scalar-bank primitive.
+ACCOUNTING-LEAK ANSWER (pruned pieces): a Bank0-valid NCH-style certificate must
+supply one of: NCH0 (e_M(H minus T) = 0 — bad-free tail; removed vertices stay in
+ambient N, only help), NCHB (bad edges of H assigned to disjoint bank blocks
+inside H with product bounds), or NCHX (max-cut / Gamma-min contradiction:
+CrossCap, OSC/FORBID, negative neutral Gamma-switch). Global accounting:
+M = (union core M_alpha) u (union pruned M_beta) u M_zero, 25m = 25 sum |M_alpha|
++ 25 sum |M_beta| <= sum |B_alpha|^2 + sum |B_beta|^2 <= (sum |B|)^2 <= N^2 by
+convexity — pruned vertices still contribute to N. A pruned piece must be
+bad-free, banked, or impossible.
+DEFINITIVE BANK0 CERTIFICATE LEDGER:
+ B0  mass identity + pressure (sum s = 5m; Pi(V) = 25m - N^2)      PROVEN
+ B1  closure trace (C1-C4 replay, closedness, exact pressure sign)  CERT-PENDING
+ B2  owned corridor partition (nu0 additivity)                      CERT-PENDING
+ B3  CrossCap integer flow (D(nu0 - N sigma) >= 0)                  CERT-PENDING
+ B4  BH/OSC/FORBID primitive-lens gates (outcomes CROSS->B3,
+     FORBID = triangle/shorter-odd-cycle/invalid-row, OSC residual,
+     LABEL -> B5)                                                   CERT-PENDING
+ B5  LABEL / global C5-labelling (blue adjacent, bad 4-0, then
+     template cuts m <= e_i <= n_i n_{i+1})                         CERT-PENDING
+ B6  bank-block cover (products or edge-count form; AM-GM sums to
+     25m <= N^2)                            CERT-PENDING (algebra PROVEN in Lean)
+ B7  seed scalar banks: EQ-CERT1, SIB-CERT1, passive monotone       PROVEN
+ B8  q<=2 / NO_OVERFULL / FOUR_DOOR -> B6                           ROUTED
+ B9  NEG_SWITCH impossible; NOT_SATURATED rerun                     ROUTED
+ B10 safe blue-pendant peel (no bad edge, no row interior, single
+     blue articulation, restricted cut max+Gamma-min by extension;
+     strong induction on N)                                         CERT-PENDING
+FINAL THEOREM SHAPE: graph-side hypotheses (tri-free, B-conn, max, Gamma-min,
+all-l5, complete row db) + one successful bundle of B1-B10 => N^2 - 25m >= 0.
+Proof: BankBlock -> B6; global LABEL -> B5; CROSS/FORBID/OSC -> contradiction;
+peel -> induction; EQ/SIB -> B7; all Seed3 outputs routed by B7-B9.
+This is the definitive scalar-bank architecture for Codex emission and Lean.
+
