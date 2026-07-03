@@ -69,3 +69,39 @@ P_EQ = P0 + Sigma_j F_j*P_j, all shifted-coefficient-nonneg; deg P0 <= 11, deg P
 (F1..F4 deg 1), deg P5..7 <= 9 (F5..F7 deg 2); SEED-EQUALITY: constant coeff of P0 = 0
 (F_j(0)=0 handles the rest). (LP-2) fallback quadratic module: + Sigma F_i*F_j*P_ij with
 deg-compatible bounds. Finite rational LP; clear denominators on solution.
+
+## ADDENDUM 3 (2026-07-03): CERT-2 INFEASIBILITY DIAGNOSIS + CHARTED BERNSTEIN-HANDELMAN PLAN
+Codex ground truth: LP-1 shifted-coeff infeasible deg<=5-6; LP-2 small products infeasible.
+GPT-Pro diagnosis: (a) shifted-coefficient nonnegativity on the x-orthant is MUCH stronger
+than cone positivity — wrong basis for a deg-11 17578-term target with seed equality.
+(e) CHART REDUCTION (uses height lemma H(hw)=hH, eta(hw)=h^2 eta + CERT-1 eta>=1): any
+cone counterexample normalizes to one of TEN charts w_k = 1, w_i >= 1 (min-coordinate
+chart; F_j homogeneous). So FIRST: per-chart semialgebraic falsifier search for
+{F_1..F_7 >= 0, P_EQ < 0}; do NOT keep running global LPs.
+(b) TARGETED CHARTED LP (the one run to do): per chart k, generators = homogenized
+F_1,k..F_7,k PLUS the CERT-1 grouped generators (all cone-valid by CERT-1's proof):
+G1 = UV-T, G2 = UZ-T, G3 = XY-T, G4 = VZ-XY, G5 = VZ-T, G6 = A^2-9T, G7 = B^2-4T,
+G8 = eta25-25 (U=w0+w8, V=w4+w6, X=w1+w7, Y=w2+w9, Z=w3+w5, T=m+1, A=U+V+Z, B=X+Y);
+multipliers = total-degree BERNSTEIN basis on the chart, deg B_0 <= 11,
+deg B_G <= 11 - deg G; seed-vanishing B_0(seed chart pt) = 0.
+(c) Row-template split WRONG for CERT-2 (11 templates belong to M-certs); optional
+per-door preconditioner I_EQ = I_19 + I_27 + I_79 only.
+(d) ESCALATION if a chart counterexample appears: seven cuts -> FULL quotient max-cut
+flip facets F_S(w) = delta_B^w(S) - delta_M^w(S) >= 0 (subsets mod complement/autom) ->
+ONLY THEN gamma-switch facets nu_K(S) >= 0 (completed terminal shadows). A max-cut-
+satisfying, gamma-min-satisfying counterexample would mean EQ branch redesign (not
+expected per seed/blowup evidence).
+VERDICT INTERPRETATION: all-chart certificate success = CERT-2 PROVEN.
+
+## ADDENDUM 3b (authoritative fuller CERT-2 text, user-relayed): compactification + outcomes
+Chart compactification: S = 1 + Sigma x_i, s = 1/S, z_i = x_i/S; simplex Delta_k
+{s>=0, z>=0, s+Sigma z=1}; P-hat_k = s^11 P^(k)(z/s); F-hat_{j,k} = s^{d_j} F_j(z/s);
+BankGen B-hat_k = eta25-hat - 25 s^2. Generator list (union of both reply versions):
+F1..F7 + {UV-T, UZ-T, VZ-T, XY-T, VZ-XY, A^2-9T, B^2-4T, eta25-25} homogenized.
+Seed-vanishing = Bernstein vertex coefficient c_{0,(11,0,..,0)} = 0.
+ChartSOS fallback: + Z^T Q Z, Q PSD rational Gram/LDL, monomials deg<=5, SOS vanishing
+at seed; if degree parity awkward multiply by (s+Sigma z=1) to formal degree 12 / SOS 6.
+OUTCOMES: all-chart ChartCert success => CERT-2 PROVEN (heights via EQ height lemma);
+ChartSOS success fine (Lean needs rational Gram backend); optimizer cex => escalate
+(first version: full maxcut flip facets F_S(w) FIRST, then gamma-switch; second version
+notes gamma-switch is the LIKELY missing one — test maxcut facets first anyway).

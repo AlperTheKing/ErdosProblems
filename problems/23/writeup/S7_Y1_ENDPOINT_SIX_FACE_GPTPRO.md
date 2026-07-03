@@ -108,3 +108,109 @@ S7 TOTAL now: theta=0 + central Sturm + y=1 six + x=1 six + 12 STAT + 12 COR = 3
 all <= 7 effective variables after projection/elimination. Codex: derive the quadratic-min
 formulas in-script (do NOT transcribe from prose), verify fiber-invariance claims
 symbolically as preflight, then run emptiness.
+
+## REPLY 5 ADDENDUM (user-relayed authoritative text, 2026-07-03): FORMULAS VERIFIED
+_claude_s7_residual_fiber_gate.py ALL-PASS (14 checks): the verbatim formulas are now
+EXACT-VERIFIED for all j=4..7 — Codex may transcribe directly:
+  (1.4) phi(y) = 2(N0 + lam y)^2 + 75S - C_A M_j + v(C_A - C_B) y,
+        N0 = S + q + M_j/q, lam = u/q = 1 - v/q > 0
+  (1.5) phi' = 4 lam (N0 + lam y) + v(C_A - C_B)
+  (1.6) U_{j,E} = min( (M_j - q)/v ,  (R - M_j/q)/lam )   [x>=1 | s3>=0]
+  (2.1) y* = -(4 lam N0 + v(C_A - C_B)) / (4 lam^2)
+  (2.2) phi* = 2N0^2 + 75S - C_A M_j - (4 lam N0 + v(C_A-C_B))^2/(8 lam^2)
+  (2.3) 8 lam^2 phi* = 16 lam^2 N0^2 + 600 lam^2 S - 8 lam^2 C_A M_j
+        - (4 lam N0 + v(C_A-C_B))^2   [clear by powers of q,e,Y,Z > 0;
+        strict negativity: -num(8 lam^2 phi*) r^2 - 1 = 0]
+  (4.1) corner: x = (M_j - vR)/u, y = (qR - M_j)/u  [u = q-v]
+  (5.1) s1=0 (v=e, q=u+e, s2=d-u>=0): x = (M_j - eR)/u, y = ((u+e)R - M_j)/u
+  (6.1) u=1 (q=1+v; e-v>=0, d+e-1-v>=0): x = M_j - vR, y = (1+v)R - M_j
+  (7.1) v=1 (q=u+1; d+e-u-1>=0; s1 auto): x = (M_j - R)/u, y = ((u+1)R - M_j)/u
+Descent (§3): after STAT(j,E) closed, every negative point descends (2 lam^2 > 0 leading
+coeff) to y=1 / x=1 (both closed) / s3=0 corner => COR(j,E) is the only remaining gate.
+
+## REPLY 6 (2026-07-03): j=4/s1=0 STAT gate CLOSED ANALYTICALLY (modulo 2 poly floors)
+Scope (honest): ONLY STAT(4, s1=0); COR(4,s1=0) + all j=5,6,7 stay on the machine list
+(m=Y cancellation Y-ey=xq is lost for j/=4; STAT identity uses phi'=0 so no COR reuse).
+Projected constraints on s1=s4=0: v=e, m=Y; e>=c (s5-s4=a(e-c)), D>=R (s6-s4=f(D-R)),
+d>=u (s2); q=u+e<=D; P=x+y<=R; Y=xq+ey=eP+ux; B=Y+eT; A=Y+eT+d(R+f).
+MECHANISM: at phi'=0 the STAT identity (9) gives xqA/Z + yB/Y = Y/e + T - 4uNx/(75e);
+substituting into Phi (with S=T+D): (10) Phi = 2N^2 + 4uNx/e - 50Y - 75Y/e + 75D.
+N-floor (13): T >= R+1+(Y-C)/R with C=min(e,R-1) => N >= N_0 = D+P+q+R+1+(Y-C)/R;
+F(N)=RHS(10) strictly increasing in N.
+TWO SYMPY FLOORS (the remaining verification, per case):
+  4A (e <= R-1, C=e):   e R^2 F_4A >= 0 under {e,u,x,y>=1, P=x+y, q=u+e, Y=eP+ux,
+                         P<=R, q<=D, R<=D, e<=R-1}
+  4B (e >= R-1, C=R-1): e R^2 F_4B >= 0 same box with e>=R-1, N_0 using (Y-R+1)/R
+Claimed conclusion: F(N_0) >= 15 > 0 => STAT(4,s1=0) EMPTY (gate removable).
+STATUS: my probe gate pending; if floors verify, 24 -> 23 machine gates.
+
+## REPLY 6 NOTE (2026-07-03): identity chain (5)->(9)->(10) VERIFIED (user-relayed text)
+(5) at Delta_y=0: B/Y - eA/Z = 4uN/(75q). (6) xq A/Z + y B/Y = Y A/Z + y(B/Y - eA/Z)
+[xq = Y-ey]. (7) Y A/Z = (Y/e)(B/Y - 4uN/(75q)) = B/e - 4uNY/(75eq). (8) B/e = Y/e + T.
+Sum: -4uNY/(75eq) + 4uNy/(75q) = -(4uN/(75q))(Y-ey)/e = -4uNx/(75e) => (9). Then
+Phi = 2(N^2-25Y) - 75(... - S), S=T+D => (10) Phi = 2N^2 + 4uNx/e - 50Y - 75Y/e + 75D.
+ALL steps check exactly. STAT(4,s1=0) closure now rests ONLY on floors (16)/(18)
+(probed 0/6000 each, min F >= 15; Codex positivity certs pending).
+
+## REPLY 7 (2026-07-03): s1=0 STAT program for ALL j — floors for Codex
+Compact M-forms on s1=0 (v=e): M4 = Y = ac+fR, M5 = ae+fR, M6 = ac+fD, M7 = ae+fD;
+m = M_j = eP+ux (all faces). Capacity-order forced directions: j=5: c>=e, D>=R;
+j=6: e>=c, R>=D; j=7: c>=e, R>=D. Gaps: Y-M5 = a(c-e), Y-M6 = f(R-D),
+Y-M7 = a(c-e)+f(R-D) — ALL >= 0 for j=5,6,7, and the STAT split's mixed term is
++75T(Y-M_j)/Y >= 0 (GOOD sign): (6) Phi_STAT,j = 2N^2 + 4uNx/e - 50M - 75M/e + 75D
++ 75T(Y-M)/Y.
+- STAT(5,s1): drop the nonneg mixed term; SAME floor as j=4 case e<=R-1 with M=eP+ux:
+  target eR^2 F_5 >= 0, F_5 = 2N_5^2 + 4uN_5 x/e - 50M - 75M/e + 75D - 15;
+  box {e,u,x,y>=1, P=x+y, q=u+e, M=eP+ux, P<=R, q<=D, R<=D, e<=R-1}. => Phi >= 15.
+- STAT(6,s1): extra positive-gap floor (26) with L_6 = R-D >= 0, (Y-M)/Y >=
+  L_6/(M+L_6) (f>=1 monotone), T-floor T >= R+1+(M-c)/D (a=1+alpha, f=1+beta,
+  alpha+beta >= (M-c-D)/D via D>=c); constraint D >= u+e >= c+1; optional M <= c+D.
+  STAYS MACHINE until (26) certifies.
+- STAT(7,s1): extra-gap floor with L_7 = (c-e)+(R-D) >= 0, Y-M >= L_7 (a,f>=1),
+  (Y-M)/Y >= L_7/(M+L_7); T_7 = R+1+(M-e)/D, N_7 = T_7+D+P+q (D>=e via q<=D);
+  final target analogous. STAYS MACHINE until certified.
+COR gates (all j) remain machine. Scoreboard if floors certify: STAT(4,5,6,7 / s1) all
+analytic => 24 - 4 = 20 machine gates.
+
+## REPLY 8 (2026-07-03): y=1/x=1 IN-FACE fiber reductions (gates shrink, no new floors)
+y=1, s_j=0: CORRECT fiber = fix (a..f, q), move v with u = q-v (joint move; holding u
+would break the capacity equation): x(v) = (M_j - v)/q, N(v) = N_0 - v/q,
+phi(v) = 2(N_0 - v/q)^2 + 75S - C_A M_j + v(C_A - C_B)  (YQ), leading coeff 2/q^2 > 0.
+FROZEN along fiber: s_j, s_k = M_k - M_j, s_2 = D - q, m. VARYING: v>=1, u=q-v>=1,
+s1 = e-v, x>=1, s3 = R-1-x. STAT identity analogue (Y10):
+Phi_STAT = 2N^2 - 4Nx - 50M_j - 75M_j/e(?) + 75D + 75T(Y-M_j)/Y  [same capacity-order
+sign table; Y-M_j >= 0 for j=5,6,7] BUT the -4Nx negative term blocks an elementary
+floor — HONEST: YSTAT stays machine. Gates per j (replacing y=1 capacity gates G1-G4):
+  YSTAT_j: projected constraints + STAT eq 75q(eYA - BZ) - 4NeYZ = 0 +
+           Psi_j = eY(2N^2-4Nx-50M_j+75D) - 75M_j Y + 75eT(Y-M_j) < 0 — empty
+           (num(Psi) r^2 + 1 = 0; Psi = eY Phi cleared).
+  YCOR_j:  s3=0 corner: x = R-1, v = M_j - (R-1)q, u = Rq - M_j (7 structural vars;
+           N = S+R+q; constraints v>=1, u>=1, v<=e, q<=D, M_k>=M_j).
+  YXCOR_j: x=y=1 corner: Pi = eYZ[2(N^2-25M_j)] - 75(eYqA + ZvB - eYZ S) < 0 empty.
+Endpoint families (s_j=0 & v=1 / u=1 / s1=0) already in the residual list.
+x=1, s_j=0 transfers BETTER: fiber v(y) = (M_j - q)/y, C_A/C_B/M_j/q/S all FIXED along
+fiber; phi(y) = 2(S+1+q+y)^2 + 75S - C_A q - C_B(M_j - q) (XQ) — read truncated at its
+derivative; Codex re-derives in-script.
+NET: 24-gate list restructured to lower-dimensional projected systems (4x YSTAT + 4x
+YCOR + 4x YXCOR per endpoint face family + 12 residual STAT/COR + kink floors).
+
+## REPLY 8 AUTHORITATIVE CORRECTIONS (user-relayed full text; _claude_s7_y1_inface_gate.py ALL-PASS 27 checks)
+(Y9)  xq A/Z + v B/(eY) = M_j/e + M_j T/Y + 4Nx/75   [at STAT; B=Y+eT]  VERIFIED all j.
+(Y10) Phi_STAT = 2N^2 - 4Nx - 50M_j - 75M_j/e + 75D + 75T(Y-M_j)/Y      VERIFIED all j.
+(YI)  fiber interval: max(1, M_j - q(R-1)) <= v <= min(e, q-1, M_j - q).
+YSTAT_j vars (a..f,q,v); subs u=q-v, x=(M_j-v)/q, N=S+1+q+x; constraints a..f>=1, 1<v,
+q-v>1, v<e, 1<x<R-1, D-q>=0, M_k>=M_j; STAT eq 75q(eYA-BZ)-4NeYZ=0;
+Psi_j = eY(2N^2-4Nx-50M_j+75D) - 75M_j Y + 75eT(Y-M_j) < 0 empty. NO elementary floor
+(the -4Nx term); machine gate.
+YCOR_j (7 vars a..f,q): x=R-1, v=M_j-(R-1)q, u=Rq-M_j, N=S+R+q; VERIFIED;
+Pi^{YC} = 2eYZ(N^2-25M_j) - 75(eY(R-1)qA + ZvB - eYZS).
+YXCOR_j (7 vars a..f,v): x=y=1, m=q+v=u+2v=M_j so q=M_j-v, u=M_j-2v, N=S+2+M_j-v;
+constraints v>=1, M_j-2v>=1, v<=e, q<=D, R>=2, M_k>=M_j; VERIFIED;
+Pi^{YX} = 2eYZ(N^2-25M_j) - 75(eYqA + ZvB - eYZS).
+**x=1, s_j=0: NO STAT WINDOW** — phi^X(y) = 2(S+1+q+y)^2 + 75S - C_A q - C_B(M_j-q),
+(phi^X)' = 4(S+1+q+y) > 0 VERIFIED ⟹ strict descent in y down to y=1 / u=1 / s1=0:
+x=1 capacity gates need NO new gates (v=1 endpoint not needed — upper y-endpoint).
+FINAL S7 SCOREBOARD: y=1 capacity -> 4 YSTAT + 4 YCOR + 4 YXCOR; x=1 capacity -> none;
++ y=1/x=1 endpoint gates (s1s2s3 / u=1,s2s3 families); + 12 residual (8 STAT open after
+the four s1=0 closures + 12 COR, branch-aware domains); theta=0 + central + 4 kink STAT
+closed analytically.
