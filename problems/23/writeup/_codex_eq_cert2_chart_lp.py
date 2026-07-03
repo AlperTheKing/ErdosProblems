@@ -36,6 +36,7 @@ from scipy.optimize import linprog
 from scipy.sparse import coo_matrix
 
 import _codex_eq_cert2_odl_lp as old_lp
+from _codex_seed_qmax_constraints import constraint as qmax_constraint, value as qmax_value
 
 with contextlib.redirect_stdout(io.StringIO()):
     from _codex_c5lift_weighted_quotient_gate import EQ
@@ -147,7 +148,38 @@ def g_exprs() -> list[tuple[str, sp.Expr]]:
     ]
 
 
-def build_chart(chart: int) -> tuple[dict[tuple[int, ...], Fraction], list[Generator], dict[str, object]]:
+
+def maxcut_facet_exprs(mode: str, selected_masks=()) -> list[tuple[str, sp.Expr]]:
+    if mode == "none":
+        return []
+    if mode not in {"tight", "all", "selected"}:
+        raise ValueError(f"unknown maxcut facet mode {mode!r}")
+    selected_masks = {int(m) for m in selected_masks}
+    side = tuple(int(c) for c in old_lp.SIDE)
+    ones = (1,) * 10
+    out: list[tuple[str, sp.Expr]] = []
+    seen = set()
+    for mask in range(1, (1 << 10) - 1):
+        if not (mask & 1):
+            continue
+        c = qmax_constraint(EQ, side, mask)
+        if c is None:
+            continue
+        if mode == "tight" and qmax_value(c, ones) != 0:
+            continue
+        if mode == "selected" and mask not in selected_masks:
+            continue
+        key = tuple(sorted(c.items()))
+        if key in seen:
+            continue
+        seen.add(key)
+        expr = sp.Integer(0)
+        for (a, b), sign in c.items():
+            expr += sign * old_lp.ws[a] * old_lp.ws[b]
+        out.append((f"QMAX_{mask}", sp.expand(expr)))
+    return out
+
+def build_chart(chart: int, extra_maxcut: str = "none", maxcut_masks=()) -> tuple[dict[tuple[int, ...], Fraction], list[Generator], dict[str, object]]:
     target, target_meta = old_lp.build_target()
     target_map = coeff_map(target)
     target_hat = chart_homogenize(target_map, chart, TARGET_DEGREE)
@@ -155,6 +187,7 @@ def build_chart(chart: int) -> tuple[dict[tuple[int, ...], Fraction], list[Gener
     raw_generators: list[tuple[str, sp.Expr]] = []
     raw_generators.extend((f"F{i}", f) for i, f in enumerate(old_lp.F, start=1))
     raw_generators.extend(g_exprs())
+    raw_generators.extend(maxcut_facet_exprs(extra_maxcut, maxcut_masks))
 
     generators: list[Generator] = []
     for name, expr in raw_generators:
@@ -171,6 +204,8 @@ def build_chart(chart: int) -> tuple[dict[tuple[int, ...], Fraction], list[Gener
         "active_row": target_meta.get("active_row", list(old_lp.ACTIVE_ROW)),
         "bad_edges": target_meta.get("bad_edges", []),
         "chart": chart,
+        "extra_maxcut": extra_maxcut,
+        "maxcut_masks": [int(m) for m in maxcut_masks],
         "target_terms_chart": len(target_hat),
         "target_degree": TARGET_DEGREE,
         "generators": [
@@ -235,13 +270,15 @@ def column_terms(col: Column, gen: Generator) -> dict[tuple[int, ...], Fraction]
 def solve_chart(
     chart: int,
     support: str,
+    extra_maxcut: str,
+    maxcut_masks: list[int],
     max_columns_per_generator: int | None,
     max_denominators: list[int],
     objective: str,
     time_limit: float | None,
     method: str,
 ) -> dict[str, object]:
-    target_hat, generators, meta = build_chart(chart)
+    target_hat, generators, meta = build_chart(chart, extra_maxcut=extra_maxcut, maxcut_masks=maxcut_masks)
     columns = repair_columns(target_hat, generators, support, max_columns_per_generator)
     term_maps = [column_terms(col, generators[col.gen_index]) for col in columns]
     monomials = sorted(set(target_hat) | set().union(*(set(mp) for mp in term_maps)))
@@ -397,6 +434,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--chart", type=int, default=0)
     ap.add_argument("--support", choices=["repair", "all"], default="repair")
+    ap.add_argument("--extra-maxcut", choices=["none", "tight", "all", "selected"], default="none")
+    ap.add_argument("--maxcut-masks", default="")
     ap.add_argument("--max-columns-per-generator", type=int, default=0)
     ap.add_argument("--max-den", default="10,25,50,100,250,1000,5000,20000")
     ap.add_argument("--objective", choices=["zero", "sum"], default="sum")
@@ -409,6 +448,8 @@ def main() -> None:
     out = solve_chart(
         chart=args.chart,
         support=args.support,
+        extra_maxcut=args.extra_maxcut,
+        maxcut_masks=parse_ints(args.maxcut_masks) if args.maxcut_masks else [],
         max_columns_per_generator=limit,
         max_denominators=parse_ints(args.max_den),
         objective=args.objective,
