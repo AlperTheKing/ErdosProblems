@@ -46,3 +46,31 @@ family of passive attachments. Then for every shortest row Q of an original seed
   flip-inequality argument is a sketch needing exact form.
 - Empirical AM spot-gate (EQ 3-blowup): pure overload 2 → z(V2) 33/80 → bag2(V2) −202/187 →
   z(V3) 6/11, all monotone-OK; V1-attachment variant breaks max-cut (out-of-family). ✓
+
+## ADDENDUM (2026-07-04): AM-§5 ABSORPTION + C5-RS ASSEMBLY TREE (GPT-Pro)
+ATTACHMENT TAXONOMY: passive = interior class (V1/V2/V3) + all-blue incident + no bad door +
+one-layer signature (= AM-§1 scope, proven). TYPE A (new-bad-door attachment): absorb the
+door into the bad-door core (bookkeeping only — G, cut, s_i, m, N, eta unchanged);
+re-saturate; 3-door saturated core → EQ/SIB seed branch; >=4-door → AM-§5 A1-absorption
+theorem (X(A) mask inequality covers the extra doors; algebra ⟹ ODL). TYPE B (boundary
+class V0/V4 attachment): positive-flow boundary bag is necessarily an endpoint of a bad
+door ⟹ Type A. C5-RS ASSEMBLY (§8): P = {i: s_i > tau}; P proper ⟹ A1-soft branch
+(needs beta_P <= 1 or PMTS residual); P = Z5 ⟹ ODL branch: I(Q) <= N immediate, else
+overfull C5-hom → saturate doors → {3-door: seed certificates (EQ: height+CERT-1 proven+
+CERT-2 LP; SIB: S7 program) + AM-passive | >=4-door: A1 absorption}. CAVEAT (tail): the
+absorption threshold needs A1 pair-residual UNIFORMLY or a finite gate for N <= 50.
+STATUS TREE: A1 (PMTS-LP spec ready, battery queued) + ODL (seeds: EQ 2/3 done, SIB S7
+in progress; AM-§1 proven; AM-§5 = this addendum, absorption algebra stated) ⟹ C5-RS ⟹
+net-DW' ⟹ GERSH_{L=5}.
+
+## ADDENDUM 2 (2026-07-03): (A1-5mask) — PAIR RESIDUAL ELIMINATED, N<=50 GATE GONE
+My exact gate: N>=9 closes (5/4)(25/N+7/30) <= 1+25/N; saturated 4-door forces N>=10
+(cyclic prefix ineqs n_i n_{i+1} >= m_C (max-cut prefix flips, e(V_i,V_{i+1}) >= m_C) =>
+prod n_i >= m_C^{5/2}, AM-GM N >= 5 sqrt(m_C) >= 10; exhaustive small check 0 cex).
+THEOREM (uniform 4-door absorption): saturated C5-hom all-l5 core, >=4 effective doors =>
+X(Omega) = I(Q)-N+25\bar\eta/N; five 4-masks A_i = Z5\{i}; A1-4: X(A_i) <= (25/N+7/30)\bar\eta;
+sum = 4X(Omega) <= 5(25/N+7/30)\bar\eta => X(Omega) <= (1+25/N)\bar\eta = ODL-X => ODL.
+ELIMINATES: N<=50 finite gate, pair-separation residual lemma, complementary-pair route.
+REMAINING AM-5 CERT FAMILY: exactly the five 4-mask PMTS certificates per core shape,
+(25/N+7/30)\bar\eta - X(Z5\{i}) in PMTSCone(Z5\{i}), residuals >= 0. Codex battery scope
+SHRINKS to 4-masks with the uniform 7/30 coefficient.

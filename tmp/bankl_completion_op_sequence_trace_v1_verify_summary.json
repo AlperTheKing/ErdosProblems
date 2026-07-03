@@ -1,0 +1,25 @@
+{
+  "bad_count": 0,
+  "by_class": {
+    "empty": 918,
+    "noncrossing-coB-component-addition": 238,
+    "noncrossing-coB-extraction": 94,
+    "terminal-prefix-lane-addition": 9,
+    "terminal-prefix-raw-extraction": 593
+  },
+  "by_rho": {
+    "0": 1139,
+    "100": 24,
+    "150": 4,
+    "25": 253,
+    "50": 240,
+    "75": 192
+  },
+  "counts": {
+    "rows": 926,
+    "steps": 1852
+  },
+  "errors": [],
+  "input": "tmp\\bankl_completion_op_sequence_trace_v1.jsonl",
+  "schema": "bankl_completion_op_sequence_trace_v1_verify_summary"
+}

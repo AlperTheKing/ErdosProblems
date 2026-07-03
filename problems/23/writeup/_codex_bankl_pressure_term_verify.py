@@ -199,7 +199,7 @@ def verify_detour_term(ctx: dict[str, Any], term: dict[str, Any], f: tuple[int, 
 def verify_record(rec: dict[str, Any], side_idx: dict, graph_cache: dict) -> tuple[str, dict[str, Any]]:
     key = row_key_from_lean(rec)
     terms = rec.get("terms", [])
-    if rec["proof_case"] not in ("MU_NUK", "DETOUR_RESIDUAL"):
+    if rec["proof_case"] not in ("MU_NUK", "MU_NUK_REPAIRED", "DETOUR_RESIDUAL"):
         return "SKIP", {"reason": rec["proof_case"]}
     candidates = side_idx.get(key, [])
     if not candidates:

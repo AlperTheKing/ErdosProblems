@@ -36,3 +36,17 @@ signatures; plausible but unproven.
 Codex: implement the τ_0 verifier (11 identities, exact sympy/Fraction), then grind classes
 2..27 with the (M-cert) multiplier LP. Claude: exact-audit every identity. GPT-Pro: master
 cube uniformity after τ_0 lands.
+
+## ADDENDUM (2026-07-03): MASTER-CUBE VERDICT (GPT-Pro)
+VERTEX-CHECKING REFUTED: the monotonicity defect is RATIONAL in the signature parameters
+(attachment changes shortest-row denominators; explicit V2 forms D19' = D19_0 + z*w5*(e54*w4
++ e56*w6) etc.; second derivative of (C+zD)/(A+zB) terms has sign-changing 2D(BC-AD) factor)
+— neither affine nor concave; 'all vertices pass ⟹ cube passes' is INVALID.
+CORRECT UNIFORM OBJECT: per-layer PARAMETRIC BERNSTEIN shifted-coefficient master
+certificate over the pair-variable cube epsilon_ij = alpha_i*beta_j in [0,1]^4 (rank-one 0/1
+rectangles = the 9 valid signatures; full-cube certificate covers them automatically).
+LAYERS: V1 (L⊆{1,7}, R⊆{0,8}), V2 (L⊆{3,5}, R⊆{4,6}, contains tau_0), V3 (L⊆{0,8},
+R⊆{2,9}) — 9 signatures each, 27 total. STRUCTURE: 3 layer certificates (Bernstein in
+(x, y, epsilon) after denominator clearing) instead of 27 classes; V1↔V3 related by label
+exchange; fallback = 27-class schedule ordered by tiers (thread tail). Codex's Bernstein
+machinery (S3S6 engine) applies directly.

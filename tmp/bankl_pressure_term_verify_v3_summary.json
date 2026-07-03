@@ -1,0 +1,31 @@
+{
+  "by_case": {
+    "('DETOUR_RESIDUAL', 'PASS')": 136,
+    "('FREE_PACKET_EXCHANGE', 'SKIP')": 3688,
+    "('MU_NUK', 'PASS')": 800,
+    "('MU_NUK_REPAIRED', 'PASS')": 126,
+    "('SPARSE_M1_BANKL_BYPASS', 'SKIP')": 9463,
+    "('TIGHT_ZERO', 'SKIP')": 34
+  },
+  "by_kind": {
+    "('detour', 'PASS')": 136,
+    "('lane_prefix_nuK', 'PASS')": 405,
+    "('nuK', 'PASS')": 521,
+    "('sparse_m1_gap_square', 'SKIP')": 9463,
+    "('sparse_m1_length_gap', 'SKIP')": 9463
+  },
+  "counts": {
+    "status:PASS": 1062,
+    "status:SKIP": 13185
+  },
+  "first_fail": null,
+  "graph_contexts_built": 140,
+  "input": "tmp\\bankl_pressure_cover_lean_v3.jsonl",
+  "schema": "bankl_pressure_term_verify_v1",
+  "side_index_keys": 10084,
+  "side_sources": [
+    "tmp/bankl_cd_gate_v1.jsonl",
+    "tmp/bankl_cd_superset_gate_v1.jsonl",
+    "tmp/bankl_lane_prefix_coarea_n11.jsonl"
+  ]
+}

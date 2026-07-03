@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "case:DETOUR_RESIDUAL": 136,
+    "case:FREE_PACKET_EXCHANGE": 3688,
+    "case:MU_NUK": 800,
+    "case:MU_NUK_REPAIRED": 126,
+    "case:SPARSE_M1_BANKL_BYPASS": 9463,
+    "case:TIGHT_ZERO": 34,
+    "not_side_needed": 13185,
+    "side_witness_found": 1062
+  },
+  "first_bad": null,
+  "graph_contexts_built": 140,
+  "input": "tmp/bankl_pressure_cover_lean_v2.jsonl",
+  "output": "tmp/bankl_pressure_cover_lean_v3.jsonl",
+  "schema": "bankl_pressure_cover_lean_v3_summary",
+  "side_index_keys": 10084,
+  "side_sources": [
+    "tmp/bankl_cd_gate_v1.jsonl",
+    "tmp/bankl_cd_superset_gate_v1.jsonl",
+    "tmp/bankl_lane_prefix_coarea_n11.jsonl"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "bad_count": 0,
+  "counts": {
+    "detour_gate_b_rows": 136,
+    "gate_b_burden_rows": 1062,
+    "op_gate_b_rows": 926,
+    "op_sequence_attached": 926,
+    "op_sequence_surplus_rows": 4,
+    "op_steps_attached": 1852,
+    "rows": 14247
+  },
+  "duplicate_op_keys": 265,
+  "errors": [],
+  "manifest": "tmp\\bankl_branchb_final_node_cert_v1.jsonl",
+  "op_sequence": "tmp\\bankl_completion_op_sequence_trace_v1.jsonl",
+  "op_sequence_rows": 926,
+  "output": "tmp\\bankl_branchb_gateb_candidate_v1.jsonl",
+  "schema": "bankl_branchb_gateb_candidate_v1_summary",
+  "status_note": "Candidate attaches exact two-phase op-sequence decompositions for MU_NUK/MU_NUK_REPAIRED rows; Claude acceptance of the two-phase telescope is pending."
+}

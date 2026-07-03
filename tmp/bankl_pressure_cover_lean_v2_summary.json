@@ -1,0 +1,17 @@
+{
+  "bad_count": 0,
+  "counts": {
+    "case:DETOUR_RESIDUAL": 136,
+    "case:FREE_PACKET_EXCHANGE": 3688,
+    "case:MU_NUK": 800,
+    "case:MU_NUK_REPAIRED": 126,
+    "case:SPARSE_M1_BANKL_BYPASS": 9463,
+    "case:TIGHT_ZERO": 34,
+    "verified:True": 14247
+  },
+  "first_bad": null,
+  "input": "tmp/bankl_pressure_cover_lean_v1.jsonl",
+  "output": "tmp/bankl_pressure_cover_lean_v2.jsonl",
+  "repairs": "tmp/bankl_pressure_term_repairs_v1.json",
+  "schema": "bankl_pressure_cover_lean_v2_summary"
+}

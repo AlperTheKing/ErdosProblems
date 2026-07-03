@@ -1,0 +1,33 @@
+{
+  "bad_count": 0,
+  "by_dictionary_class": {
+    "B-connected-closed-prefix/noncrossing-coB": 152,
+    "noncrossing-coB-exterior-anchor": 8,
+    "terminal-prefix": 72,
+    "terminal-prefix-lane-interval": 405,
+    "terminal-prefix-path-interval": 78,
+    "terminal-prefix-singleton-extraction": 173,
+    "unclassified-origin": 38
+  },
+  "by_origin_family": {
+    "closed_interval": 143,
+    "closed_prefix": 96,
+    "component": 30,
+    "component_pair_attach": 32,
+    "component_vertex": 16,
+    "component_vertex_pair_attach": 8,
+    "component_vertex_pair_bridge": 8,
+    "path_pair": 182,
+    "singleton": 411
+  },
+  "closure_contexts_built": 661,
+  "counts": {
+    "hit": 926,
+    "terms": 926
+  },
+  "errors": [],
+  "graph_contexts_built": 116,
+  "input": "tmp\\bankl_pressure_cover_lean_v3.jsonl",
+  "output": "tmp\\bankl_completion_trace_v1.jsonl",
+  "schema": "bankl_completion_trace_v1_summary"
+}

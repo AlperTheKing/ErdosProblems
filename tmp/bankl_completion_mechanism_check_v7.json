@@ -1,0 +1,581 @@
+{
+  "counts": {
+    "hit": 822,
+    "miss": 104,
+    "shape:closed_interval:hit": 48,
+    "shape:closed_interval:miss": 96,
+    "shape:other:hit": 61,
+    "shape:other:miss": 8,
+    "shape:prefix_or_lane:hit": 286,
+    "shape:singleton:hit": 427,
+    "terms": 926
+  },
+  "examples": {},
+  "first_hit": {
+    "closures": [
+      {
+        "connected_after": true,
+        "i": 4,
+        "label": "singleton:4:6",
+        "op": "seed",
+        "terminal_shadow_valid": true,
+        "verts": [
+          9
+        ]
+      },
+      {
+        "connected_after": true,
+        "i": 4,
+        "label": "singleton:4:6",
+        "op": "terminal_prefix_closure",
+        "terminal_shadow_valid": true,
+        "verts": [
+          9
+        ]
+      }
+    ],
+    "row_id": {
+      "f": [
+        7,
+        9
+      ],
+      "m": 2,
+      "n": 11,
+      "name": "cenJ???CBoBz{?",
+      "row": [
+        7,
+        0,
+        8,
+        1,
+        10,
+        4,
+        9
+      ]
+    },
+    "term": {
+      "coeff": "23/25",
+      "contribution": "69",
+      "kind": "nuK",
+      "label": "('singleton', 9)",
+      "terminal": true,
+      "value": "75",
+      "verts": [
+        9
+      ]
+    }
+  },
+  "first_miss": {
+    "available_sample": [
+      {
+        "variants": [
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "raw_interval:0",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              4,
+              8
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "raw_interval:0",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              4,
+              8
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "closed_interval:0",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              4,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          2,
+          4,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "path_pair:0:0:1",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              8
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "path_pair:0:0:1",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          2,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "path_pair:0:1:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "path_pair:0:1:2",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "path_pair:1:1:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          4,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_only:0:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_only:0:2",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_vertex:0:2:5",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5
+            ]
+          }
+        ],
+        "verts": [
+          5
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_attach:0:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_attach:0:2",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_single_attach:0:2:1",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              5,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          5,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "component_pair_attach:0:2:0:1",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "component_pair_attach:0:2:0:1",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "component_vertex_pair_attach:0:2:5:0:1",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2,
+              5,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_pair_attach:0:2:1:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_pair_attach:0:2:1:2",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "component_vertex_pair_attach:0:2:5:1:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8
+            ]
+          }
+        ],
+        "verts": [
+          4,
+          5,
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "singleton:0:0",
+            "op": "seed",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2
+            ]
+          },
+          {
+            "connected_after": true,
+            "i": 0,
+            "label": "singleton:0:0",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": true,
+            "verts": [
+              2
+            ]
+          }
+        ],
+        "verts": [
+          2
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "singleton:0:1",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "singleton:0:1",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              8
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "singleton:1:1",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              8
+            ]
+          }
+        ],
+        "verts": [
+          8
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "singleton:0:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 0,
+            "label": "singleton:0:2",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "singleton:1:2",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4
+            ]
+          }
+        ],
+        "verts": [
+          4
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "raw_interval:1",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              8,
+              10
+            ]
+          }
+        ],
+        "verts": [
+          4,
+          8,
+          10
+        ]
+      },
+      {
+        "variants": [
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "raw_interval:1",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "closed_interval:1",
+            "op": "seed",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8,
+              10
+            ]
+          },
+          {
+            "connected_after": false,
+            "i": 1,
+            "label": "closed_interval:1",
+            "op": "terminal_prefix_closure",
+            "terminal_shadow_valid": false,
+            "verts": [
+              4,
+              5,
+              8,
+              10
+            ]
+          }
+        ],
+        "verts": [
+          4,
+          5,
+          8,
+          10
+        ]
+      }
+    ],
+    "proof_case": "MU_NUK",
+    "row": [
+      2,
+      8,
+      4,
+      10,
+      7,
+      0,
+      9
+    ],
+    "row_id": {
+      "f": [
+        2,
+        9
+      ],
+      "m": 2,
+      "n": 11,
+      "name": "cenJ??CE?{{?]?",
+      "row": [
+        2,
+        8,
+        4,
+        10,
+        7,
+        0,
+        9
+      ]
+    },
+    "side": "00101111010",
+    "term": {
+      "coeff": "44/147",
+      "contribution": "44",
+      "kind": "nuK",
+      "label": "('closed_interval', 0, 4)",
+      "terminal": true,
+      "value": "147",
+      "verts": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    "wanted_verts": [
+      2,
+      4,
+      5,
+      7,
+      8,
+      10
+    ]
+  },
+  "input": "tmp/bankl_pressure_cover_lean_v3.jsonl",
+  "schema": "bankl_completion_mechanism_check_v1"
+}

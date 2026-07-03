@@ -1,0 +1,1204 @@
+{
+  "by_dictionary_class_and_rho": {
+    "[\"B-connected-closed-prefix/noncrossing-coB\",\"25\"]": 48,
+    "[\"B-connected-closed-prefix/noncrossing-coB\",\"50\"]": 48,
+    "[\"noncrossing-coB-exterior-anchor\",\"25\"]": 8,
+    "[\"terminal-prefix\",\"100\"]": 6,
+    "[\"terminal-prefix\",\"25\"]": 16,
+    "[\"terminal-prefix\",\"50\"]": 4,
+    "[\"terminal-prefix\",\"75\"]": 13,
+    "[\"terminal-prefix-lane-interval\",\"125\"]": 24,
+    "[\"terminal-prefix-lane-interval\",\"25\"]": 115,
+    "[\"terminal-prefix-lane-interval\",\"50\"]": 104,
+    "[\"terminal-prefix-lane-interval\",\"75\"]": 89,
+    "[\"terminal-prefix-path-interval\",\"25\"]": 15,
+    "[\"terminal-prefix-singleton-extraction\",\"100\"]": 18,
+    "[\"terminal-prefix-singleton-extraction\",\"25\"]": 21,
+    "[\"terminal-prefix-singleton-extraction\",\"50\"]": 40,
+    "[\"terminal-prefix-singleton-extraction\",\"75\"]": 66,
+    "[\"terminal-prefix/noncrossing-coB-component-extraction\",\"125\"]": 10,
+    "[\"terminal-prefix/noncrossing-coB-component-extraction\",\"50\"]": 20
+  },
+  "input": "tmp\\bankl_completion_rhoa_trace_v2.jsonl",
+  "labelled_positive_signature_count": 47,
+  "output": "tmp\\bankl_completion_rhoa_signatures_v1.json",
+  "positive_rows": 665,
+  "rows": 926,
+  "schema": "bankl_completion_rhoa_signature_profile_v1_summary",
+  "shape_positive_signature_count": 33,
+  "top_labelled_positive_signatures": [
+    {
+      "count": 51,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:0:0",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_77beffea620d9704"
+    },
+    {
+      "count": 48,
+      "key": {
+        "L": 7,
+        "dictionary_class": "B-connected-closed-prefix/noncrossing-coB",
+        "final_sigma": 1,
+        "final_verts_len": 7,
+        "origin_family": "closed_prefix",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "closed_prefix:0:4",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_261d1c7f92d1f440"
+    },
+    {
+      "count": 48,
+      "key": {
+        "L": 7,
+        "dictionary_class": "B-connected-closed-prefix/noncrossing-coB",
+        "final_sigma": 1,
+        "final_verts_len": 4,
+        "origin_family": "closed_interval",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "closed_interval:0",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_262550a46a0f96a0"
+    },
+    {
+      "count": 44,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:4:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_6c4b87dc8b0cd34d"
+    },
+    {
+      "count": 39,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "singleton:0:0",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_940a21388a691fd5"
+    },
+    {
+      "count": 30,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:0:0:1",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_29ba03e92f087d85"
+    },
+    {
+      "count": 30,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 5,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:4:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_3885250491de2429"
+    },
+    {
+      "count": 28,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:4:5:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_488598d0d5551b8b"
+    },
+    {
+      "count": 22,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "singleton:4:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_55f218eafd0028fe"
+    },
+    {
+      "count": 22,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "singleton:0:0",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_602dbf7259eac4d9"
+    },
+    {
+      "count": 18,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 5,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "100",
+        "raw_to_final_sigma_drop": 4,
+        "selected_label": "singleton:4:6",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_ca608af9cb91428b"
+    },
+    {
+      "count": 16,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "singleton:0:0",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_1f100e0d8bd70a62"
+    },
+    {
+      "count": 15,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "component",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 6,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "125",
+        "raw_to_final_sigma_drop": 5,
+        "selected_label": "component_attach:4:3",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_2196e2dcca1f3203"
+    },
+    {
+      "count": 15,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-path-interval",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:0:0:1",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_5eedba70802f2374"
+    },
+    {
+      "count": 15,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:4:6",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_8d696b2fdccf6edb"
+    },
+    {
+      "count": 14,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "singleton:4:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_8be7cbb3e5412a37"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "singleton:4:6",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_36fab9be6570a09e"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:0:0:1",
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_4aafb04a77d9662d"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "singleton:0:0",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_a7fabcb02632cdbc"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:0:0:1",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_f913b83229482b06"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 3,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "component_pair_attach:4:3:5:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_537d8b72fe5a6dfa"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 4,
+        "origin_family": "closed_interval",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "closed_interval:0",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_830c04f8658c90d5"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 4,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:4:6",
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_a4db09bac3bf2c07"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "component",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 6,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "125",
+        "raw_to_final_sigma_drop": 5,
+        "selected_label": "component_attach:4:0",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_d51c0fb31285a8d4"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 3,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "component_pair_attach:0:0:0:1",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_e39d892aae1239fd"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "singleton:4:6",
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_eea68d9639d5bf5d"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "selected_label": "path_pair:4:5:6",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_f1ed07dd1aa5426a"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "selected_label": "singleton:0:0",
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_f901a0d986e2ee7f"
+    },
+    {
+      "count": 8,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix/noncrossing-coB-component-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 1,
+        "origin_family": "component_vertex",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "component_vertex:0:0:7",
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_275b3cb472bf94ef"
+    },
+    {
+      "count": 8,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix/noncrossing-coB-component-extraction",
+        "final_sigma": 1,
+        "final_verts_len": 3,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 3,
+        "raw_interval_verts_len": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "selected_label": "component_pair_attach:4:2:5:6",
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_2a52cb15aa7b8847"
+    }
+  ],
+  "top_shape_positive_signatures": [
+    {
+      "count": 61,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_9067c85f6e6a5bbe"
+    },
+    {
+      "count": 53,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_d563f5f8807136eb"
+    },
+    {
+      "count": 51,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_c892dd86cf2d20fe"
+    },
+    {
+      "count": 48,
+      "key": {
+        "L": 7,
+        "dictionary_class": "B-connected-closed-prefix/noncrossing-coB",
+        "final_sigma": 1,
+        "origin_family": "closed_prefix",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_3454a3e30643e526"
+    },
+    {
+      "count": 48,
+      "key": {
+        "L": 7,
+        "dictionary_class": "B-connected-closed-prefix/noncrossing-coB",
+        "final_sigma": 1,
+        "origin_family": "closed_interval",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_88d22fb0b35a8aa8"
+    },
+    {
+      "count": 40,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_14e947580c98f27e"
+    },
+    {
+      "count": 39,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_531543c82fa12f91"
+    },
+    {
+      "count": 34,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_23be5f4ed88e2f89"
+    },
+    {
+      "count": 30,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 5,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_eb51dd77f8a6edfa"
+    },
+    {
+      "count": 30,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_fdebc3901071e1b4"
+    },
+    {
+      "count": 24,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "component",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 6,
+        "raw_to_final_rho_a": "125",
+        "raw_to_final_sigma_drop": 5,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_d72b8e19e423ca81"
+    },
+    {
+      "count": 21,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_a3d1e2a1ef638229"
+    },
+    {
+      "count": 18,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 5,
+        "raw_to_final_rho_a": "100",
+        "raw_to_final_sigma_drop": 4,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_4588c7d8bfc9a8c0"
+    },
+    {
+      "count": 18,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_6131c57357383d3c"
+    },
+    {
+      "count": 15,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_053f3a9804695d4d"
+    },
+    {
+      "count": 15,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-path-interval",
+        "final_sigma": 1,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_14c18fcf67b60e8a"
+    },
+    {
+      "count": 14,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_a1995122ee212528"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "path_pair",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_25355e6cf997ca8f"
+    },
+    {
+      "count": 12,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix/noncrossing-coB-component-extraction",
+        "final_sigma": 1,
+        "origin_family": "component_vertex",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_df3817ac671e75bc"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_3f43682ea7edf4c4"
+    },
+    {
+      "count": 9,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "closed_interval",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_a27492358ff33d12"
+    },
+    {
+      "count": 8,
+      "key": {
+        "L": 7,
+        "dictionary_class": "noncrossing-coB-exterior-anchor",
+        "final_sigma": 1,
+        "origin_family": "component_vertex_pair_bridge",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 2,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_486aa67b5767a3b4"
+    },
+    {
+      "count": 8,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix/noncrossing-coB-component-extraction",
+        "final_sigma": 1,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "147"
+      },
+      "signature_id": "rhoa_83603d5c5d413a3e"
+    },
+    {
+      "count": 6,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 5,
+        "raw_to_final_rho_a": "100",
+        "raw_to_final_sigma_drop": 4,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_1b3c8500f5a421ad"
+    },
+    {
+      "count": 6,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 2,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "25",
+        "raw_to_final_sigma_drop": 1,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "196"
+      },
+      "signature_id": "rhoa_47e8027dbb679e79"
+    },
+    {
+      "count": 6,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-lane-interval",
+        "final_sigma": 1,
+        "origin_family": "component_pair_attach",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "lane_prefix_nuK",
+        "term_source_kind": "lane_interval_nuK",
+        "term_value": "123"
+      },
+      "signature_id": "rhoa_b6890ab5e50a0381"
+    },
+    {
+      "count": 6,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix/noncrossing-coB-component-extraction",
+        "final_sigma": 1,
+        "origin_family": "component",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 6,
+        "raw_to_final_rho_a": "125",
+        "raw_to_final_sigma_drop": 5,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "75"
+      },
+      "signature_id": "rhoa_bb9fa62f904463ab"
+    },
+    {
+      "count": 6,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix-singleton-extraction",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": null,
+        "term_value": "50"
+      },
+      "signature_id": "rhoa_ce913a922e7a847d"
+    },
+    {
+      "count": 4,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 3,
+        "raw_to_final_rho_a": "50",
+        "raw_to_final_sigma_drop": 2,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_310ea72a83a1b9e3"
+    },
+    {
+      "count": 4,
+      "key": {
+        "L": 7,
+        "dictionary_class": "terminal-prefix",
+        "final_sigma": 1,
+        "origin_family": "singleton",
+        "origin_op": "terminal_prefix_closure",
+        "proof_case": "MU_NUK_REPAIRED",
+        "raw_interval_sigma": 4,
+        "raw_to_final_rho_a": "75",
+        "raw_to_final_sigma_drop": 3,
+        "term_kind": "nuK",
+        "term_source_kind": "terminal_shadow_repair",
+        "term_value": "98"
+      },
+      "signature_id": "rhoa_a1866daee46d06a5"
+    }
+  ],
+  "zero_rows": 261
+}

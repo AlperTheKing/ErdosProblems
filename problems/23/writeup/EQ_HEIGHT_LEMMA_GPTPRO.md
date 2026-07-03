@@ -47,3 +47,25 @@ h=1 MACHINE OBLIGATIONS (Codex symbolic program targets, now UNBLOCKED):
   (EQ-bank) η(w) ≥ 0                      on the same cone
 ⟹ all heights h ≥ 1: I−N ≤ (2/3)η/h... more precisely H(W) ≤ (2/3)η(W)/h ≤ (2/3)η(W) < η(W)
 = ODL c=1 with room. EQ branch of A2 then rests on the two h=1 cone certificates + AM.
+
+## ADDENDUM (2026-07-03): CERT-1 (EQ-bank) PROVEN ANALYTICALLY
+eta25 = N^2 - 25m >= 25 on the seven-cut cone. PROOF (grouped variables): U=w0+w8, V=w4+w6,
+X=w1+w7, Y=w2+w9, Z=w3+w5; N=U+V+X+Y+Z; T=m+1. Cone product bounds: UV >= T (F7 + w0w4>=1),
+UZ >= T (F6 + w0w3>=1), XY >= T (w1w2>=1), VZ >= XY >= T (F3,F4). A=U+V+Z: A^2 >= 9T (QM +
+three product bounds: A^2 >= 3((UV)+(UZ)+(VZ)) >= 9T); B=X+Y: B^2 = (X-Y)^2 + 4XY >= 4T.
+A,B,T >= 0 ⟹ A >= 3 sqrt(T), B >= 2 sqrt(T) ⟹ N = A+B >= 5 sqrt(T) ⟹ N^2 >= 25T = 25(m+1)
+⟹ eta25 >= 25. EQUALITY: forces F3=F4=F6=F7=0, w0w3=w0w4=w1w2=1, U=V=Z, X=Y ⟹ the seed
+ray w0..w4=1, w5..w9=T0 exactly (matches Claude's ray computation: N=5(T0+1), m=T0^2+2T0,
+N^2-25m=25). Polynomial verifier: degree-4 Positivstellensatz via multiplying the conic
+implication by AB+6T (U_A = A^2-9T, U_B = B^2-4T auxiliary forms) — Codex to encode.
+CERT-2 (EQ-ODL c=2/3): LP formulation in thread tail (read pending) — 'closes the EQ side
+of ODL once Codex returns a rational solution to CERT-2's LP.'
+
+## ADDENDUM 2 (2026-07-03): CERT-2 LP FORMULATION (for Codex rational solve)
+I_EQ explicit via s5..s9 row-sum terms; positive denominator D_EQ = w5*w6*A*B*C (deg 9);
+cleared numerator **P_EQ = D_EQ * (2*eta25 - 75*(I_EQ - N))** (deg 11; equivalent to
+I_EQ-N <= (2/3)eta since eta25=25eta... note eta25 = N^2-25m = 25*eta). (LP-1) primary:
+P_EQ = P0 + Sigma_j F_j*P_j, all shifted-coefficient-nonneg; deg P0 <= 11, deg P1..4 <= 10
+(F1..F4 deg 1), deg P5..7 <= 9 (F5..F7 deg 2); SEED-EQUALITY: constant coeff of P0 = 0
+(F_j(0)=0 handles the rest). (LP-2) fallback quadratic module: + Sigma F_i*F_j*P_ij with
+deg-compatible bounds. Finite rational LP; clear denominators on solution.

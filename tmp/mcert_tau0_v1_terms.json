@@ -1,0 +1,219 @@
+{
+  "D0": "w5*w6*(w0*w5 + w3*w8 + w5*w8)*(w0*w6 + w4*w8 + w6*w8)*(w0*w5 + w3*w8 + w3*z + w5*w8 + w5*z)*(w0*w6 + w4*w8 + w4*z + w6*w8 + w6*z)*(w0*w5*w6 + w3*w4*w8 + w3*w6*w8 + w4*w5*w8 + w5*w6*w8)*(w0*w5*w6 + w3*w4*w8 + w3*w4*z + w3*w6*w8 + w3*w6*z + w4*w5*w8 + w4*w5*z + w5*w6*w8 + w5*w6*z)",
+  "active_row": [
+    7,
+    5,
+    8,
+    6,
+    9
+  ],
+  "all_coefficients_nonnegative": true,
+  "all_denominators_cleared": true,
+  "bad_edges": [
+    [
+      1,
+      9
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      7,
+      9
+    ]
+  ],
+  "graph": "I?BD@g]Qo",
+  "row_count": 11,
+  "rows": [
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 0,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        1,
+        5,
+        0,
+        6,
+        9
+      ],
+      "terms": 2077,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 1,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        1,
+        5,
+        8,
+        4,
+        9
+      ],
+      "terms": 2380,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 2,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        1,
+        5,
+        8,
+        6,
+        9
+      ],
+      "terms": 1810,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 3,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        5,
+        0,
+        6,
+        2
+      ],
+      "terms": 2077,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 4,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        5,
+        8,
+        6,
+        2
+      ],
+      "terms": 1810,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 5,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        3,
+        8,
+        6,
+        2
+      ],
+      "terms": 2380,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 6,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        5,
+        0,
+        6,
+        9
+      ],
+      "terms": 1710,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 7,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        5,
+        8,
+        4,
+        9
+      ],
+      "terms": 2013,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 8,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        5,
+        8,
+        6,
+        9
+      ],
+      "terms": 1443,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 9,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        3,
+        8,
+        4,
+        9
+      ],
+      "terms": 2583,
+      "total_degree": 17
+    },
+    {
+      "denominator": "1",
+      "denominator_cleared": true,
+      "index": 10,
+      "max_coeff": "225",
+      "min_coeff": "1",
+      "negative_coeffs": 0,
+      "row": [
+        7,
+        3,
+        8,
+        6,
+        9
+      ],
+      "terms": 2013,
+      "total_degree": 17
+    }
+  ],
+  "side": "0001111000",
+  "verdict": "PASS"
+}
