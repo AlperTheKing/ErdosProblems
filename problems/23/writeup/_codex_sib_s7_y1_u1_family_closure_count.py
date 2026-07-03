@@ -19,6 +19,28 @@ def custom_family(branch: str, cap: str, closure: frozenset[str]) -> str | None:
         return "U1_ABDF_CAP"
     if cap == "s4" and frozenset(("a1", "b1", "d1")) <= closure:
         return "U1_ABD_S4"
+    if cap == "s4" and frozenset(("a1", "b1", "f1")) <= closure:
+        return "U1_ABF_S4"
+    if cap == "s4" and frozenset(("a1", "b1")) <= closure:
+        return "U1_AB_S4"
+    if cap == "s4" and frozenset(("a1", "d1")) <= closure:
+        return "U1_AD_S4"
+    if cap == "s4" and frozenset(("a1", "d1", "f1")) <= closure:
+        return "U1_ADF_S4"
+    if cap == "s4" and frozenset(("a1", "c1")) <= closure:
+        return "U1_AC_S4"
+    if cap == "s4" and frozenset(("a1", "c1", "f1")) <= closure:
+        return "U1_ACF_S4"
+    if cap == "s4" and frozenset(("a1", "c1", "d1")) <= closure:
+        return "U1_ACD_S4"
+    if cap == "s4" and frozenset(("a1", "c1", "d1", "f1")) <= closure:
+        return "U1_ACDF_S4"
+    if cap == "s4" and frozenset(("a1", "f1")) <= closure:
+        return "U1_AF_S4"
+    if cap == "s4" and frozenset(("c1",)) <= closure:
+        return "U1_C_S4"
+    if cap == "s4" and frozenset(("a1",)) <= closure:
+        return "U1_A_S4"
     return None
 
 
@@ -61,4 +83,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
 

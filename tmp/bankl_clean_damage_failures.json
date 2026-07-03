@@ -1,0 +1,198 @@
+[
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      2,
+      7
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AEF@oM?{?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      2,
+      9,
+      4,
+      10,
+      5,
+      0,
+      7
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      5,
+      9
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      5,
+      0,
+      8,
+      3,
+      10,
+      2,
+      9
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      5,
+      9
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      5,
+      0,
+      8,
+      1,
+      10,
+      4,
+      9
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      0,
+      8
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      0,
+      5,
+      9,
+      4,
+      10,
+      1,
+      8
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      0,
+      8
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      0,
+      5,
+      9,
+      2,
+      10,
+      3,
+      8
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      0,
+      5
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      0,
+      8,
+      3,
+      10,
+      2,
+      9,
+      5
+    ]
+  },
+  {
+    "L": 7,
+    "P_Q": "19",
+    "allowance_floor": 2,
+    "beta_R": 0,
+    "d": 6,
+    "f": [
+      0,
+      5
+    ],
+    "h": 0,
+    "min_damage": 3,
+    "n": 11,
+    "name": "cenJ?AB?vOJBo?",
+    "optimal_colorings": 2,
+    "p": 1,
+    "r": 4,
+    "rho_Q": "66",
+    "row": [
+      0,
+      8,
+      1,
+      10,
+      4,
+      9,
+      5
+    ]
+  }
+]

@@ -48,7 +48,7 @@ def main() -> None:
         cap_slack_count[(cap, slack_pattern)] += 1
         examples.setdefault(slack_pattern, (cap, closure_tuple))
 
-    assert len(still_unique) == 11730
+    assert len(still_unique) == 9819
     print(f"U1-POST-CUSTOM-SHAPES unique_still={len(still_unique)}")
     print("U1-POST-CUSTOM-LABEL-FREQ " + " ".join(f"{label}:{label_freq[label]}" for label in (*LOWER_LABELS, *SLACK_LABELS)))
     print("U1-POST-CUSTOM-TOP-SLACK-PATTERNS")
@@ -66,4 +66,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
 

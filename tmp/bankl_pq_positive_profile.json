@@ -1,0 +1,672 @@
+{
+  "by_L": {
+    "7": 10311,
+    "9": 214
+  },
+  "by_kind": {
+    "detour": 151,
+    "nuK": 10374
+  },
+  "max_P_Q": "69",
+  "max_P_Q_over_rho_Q": "69/116",
+  "max_ratio_witness": {
+    "L": 7,
+    "P_Q": "69",
+    "certificate_kind": "nuK",
+    "d": 8,
+    "f": [
+      0,
+      8
+    ],
+    "h": 0,
+    "m": 2,
+    "n": 11,
+    "name": "cenJ??CEB_^?}?",
+    "p": 2,
+    "r": 4,
+    "rho_Q": "116",
+    "row": [
+      0,
+      7,
+      10,
+      5,
+      9,
+      1,
+      8
+    ]
+  },
+  "min_P_Q": "3/2",
+  "rows": 10525,
+  "top_L_r_d_h_p": [
+    {
+      "L": 7,
+      "count": 3058,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 2956,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 1811,
+      "d": 7,
+      "h": 0,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 695,
+      "d": 8,
+      "h": 0,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 366,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 3
+    },
+    {
+      "L": 7,
+      "count": 343,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 3
+    },
+    {
+      "L": 7,
+      "count": 244,
+      "d": 7,
+      "h": 1,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 206,
+      "d": 5,
+      "h": 1,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 173,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 3
+    },
+    {
+      "L": 7,
+      "count": 130,
+      "d": 6,
+      "h": 1,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 115,
+      "d": 4,
+      "h": 1,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 9,
+      "count": 111,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 2
+    },
+    {
+      "L": 9,
+      "count": 89,
+      "d": 3,
+      "h": 0,
+      "p": 1,
+      "r": 2
+    },
+    {
+      "L": 7,
+      "count": 59,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 2
+    },
+    {
+      "L": 7,
+      "count": 53,
+      "d": 3,
+      "h": 0,
+      "p": 1,
+      "r": 2
+    },
+    {
+      "L": 7,
+      "count": 30,
+      "d": 8,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 18,
+      "d": 8,
+      "h": 1,
+      "p": 1,
+      "r": 4
+    },
+    {
+      "L": 9,
+      "count": 14,
+      "d": 2,
+      "h": 0,
+      "p": 1,
+      "r": 1
+    },
+    {
+      "L": 7,
+      "count": 12,
+      "d": 7,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 10,
+      "d": 2,
+      "h": 0,
+      "p": 1,
+      "r": 1
+    },
+    {
+      "L": 7,
+      "count": 9,
+      "d": 6,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 8,
+      "d": 3,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 8,
+      "d": 4,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    },
+    {
+      "L": 7,
+      "count": 7,
+      "d": 5,
+      "h": 0,
+      "p": 2,
+      "r": 4
+    }
+  ],
+  "top_pressures": [
+    {
+      "P_Q": "19",
+      "count": 3272
+    },
+    {
+      "P_Q": "13/2",
+      "count": 3079
+    },
+    {
+      "P_Q": "63/2",
+      "count": 1948
+    },
+    {
+      "P_Q": "44",
+      "count": 948
+    },
+    {
+      "P_Q": "8",
+      "count": 366
+    },
+    {
+      "P_Q": "41/2",
+      "count": 343
+    },
+    {
+      "P_Q": "33",
+      "count": 173
+    },
+    {
+      "P_Q": "14",
+      "count": 111
+    },
+    {
+      "P_Q": "3/2",
+      "count": 89
+    },
+    {
+      "P_Q": "22",
+      "count": 59
+    },
+    {
+      "P_Q": "19/2",
+      "count": 53
+    },
+    {
+      "P_Q": "69",
+      "count": 30
+    },
+    {
+      "P_Q": "113/2",
+      "count": 30
+    },
+    {
+      "P_Q": "7",
+      "count": 14
+    },
+    {
+      "P_Q": "11",
+      "count": 10
+    }
+  ],
+  "top_signatures": [
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "nuK",
+      "count": 2952,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "91",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "13/2",
+      "certificate_kind": "nuK",
+      "count": 2801,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "157/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "63/2",
+      "certificate_kind": "nuK",
+      "count": 1786,
+      "d": 7,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "207/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "44",
+      "certificate_kind": "nuK",
+      "count": 691,
+      "d": 8,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "116",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "8",
+      "certificate_kind": "nuK",
+      "count": 366,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 3,
+      "rho_Q": "59",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "41/2",
+      "certificate_kind": "nuK",
+      "count": 343,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 3,
+      "rho_Q": "143/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "44",
+      "certificate_kind": "nuK",
+      "count": 244,
+      "d": 7,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "91",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "33",
+      "certificate_kind": "nuK",
+      "count": 173,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 3,
+      "rho_Q": "84",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "13/2",
+      "certificate_kind": "nuK",
+      "count": 140,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "107/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "63/2",
+      "certificate_kind": "nuK",
+      "count": 130,
+      "d": 6,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "157/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "13/2",
+      "certificate_kind": "nuK",
+      "count": 115,
+      "d": 4,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "107/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "detour",
+      "count": 112,
+      "d": 5,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "66",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 9,
+      "P_Q": "14",
+      "certificate_kind": "nuK",
+      "count": 111,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 2,
+      "rho_Q": "54",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "nuK",
+      "count": 94,
+      "d": 5,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "66",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 9,
+      "P_Q": "3/2",
+      "certificate_kind": "nuK",
+      "count": 89,
+      "d": 3,
+      "h": 0,
+      "p": 1,
+      "r": 2,
+      "rho_Q": "83/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "nuK",
+      "count": 82,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "66",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "22",
+      "certificate_kind": "nuK",
+      "count": 59,
+      "d": 4,
+      "h": 0,
+      "p": 1,
+      "r": 2,
+      "rho_Q": "54",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19/2",
+      "certificate_kind": "nuK",
+      "count": 53,
+      "d": 3,
+      "h": 0,
+      "p": 1,
+      "r": 2,
+      "rho_Q": "83/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "69",
+      "certificate_kind": "nuK",
+      "count": 30,
+      "d": 8,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "116",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "63/2",
+      "certificate_kind": "nuK",
+      "count": 25,
+      "d": 7,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "157/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "detour",
+      "count": 24,
+      "d": 6,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "66",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "113/2",
+      "certificate_kind": "nuK",
+      "count": 18,
+      "d": 8,
+      "h": 1,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "207/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "13/2",
+      "certificate_kind": "detour",
+      "count": 15,
+      "d": 5,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "157/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 9,
+      "P_Q": "7",
+      "certificate_kind": "nuK",
+      "count": 14,
+      "d": 2,
+      "h": 0,
+      "p": 1,
+      "r": 1,
+      "rho_Q": "26",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "113/2",
+      "certificate_kind": "nuK",
+      "count": 12,
+      "d": 7,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "207/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "11",
+      "certificate_kind": "nuK",
+      "count": 10,
+      "d": 2,
+      "h": 0,
+      "p": 1,
+      "r": 1,
+      "rho_Q": "26",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "44",
+      "certificate_kind": "nuK",
+      "count": 9,
+      "d": 6,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "91",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "13/2",
+      "certificate_kind": "nuK",
+      "count": 8,
+      "d": 3,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "107/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "19",
+      "certificate_kind": "nuK",
+      "count": 8,
+      "d": 4,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "66",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "63/2",
+      "certificate_kind": "nuK",
+      "count": 7,
+      "d": 5,
+      "h": 0,
+      "p": 2,
+      "r": 4,
+      "rho_Q": "157/2",
+      "row_scope": "underfull"
+    },
+    {
+      "L": 7,
+      "P_Q": "44",
+      "certificate_kind": "nuK",
+      "count": 4,
+      "d": 8,
+      "h": 0,
+      "p": 1,
+      "r": 4,
+      "rho_Q": "91",
+      "row_scope": "underfull"
+    }
+  ],
+  "unique_L_r_d_h_p": 24,
+  "unique_signatures": 31
+}
