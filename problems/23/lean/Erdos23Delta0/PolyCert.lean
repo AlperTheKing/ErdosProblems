@@ -288,5 +288,104 @@ theorem checkEq_sound (f g : NF) (h : checkEq f g = true) (env : Var → ℚ) :
   rw [collect_eval, NF.sub_eval] at h0
   linarith
 
+/-! ### PosCert: positivity via aux-substitution.
+
+Aux variables stand for shifted quantities (e.g. aux₀ = N − 5) defined by
+coefficient-nonnegative NFs over base/earlier variables; a polynomial that is
+coefficient-nonnegative over the extended variables is nonnegative whenever the
+base environment is. -/
+
+/-- Extend an environment by evaluating aux definitions in order (later
+    definitions may refer to earlier aux variables). -/
+def extendEnv (env : Var → ℚ) : List (Var × NF) → (Var → ℚ)
+  | [] => env
+  | (v, d) :: rest =>
+      extendEnv (fun w => if w = v then d.eval env else env w) rest
+
+theorem extendEnv_nonneg : ∀ (defs : List (Var × NF)) (env : Var → ℚ),
+    (∀ w, 0 ≤ env w) →
+    defs.all (fun p => p.2.allCoeffNonneg) = true →
+    ∀ w, 0 ≤ extendEnv env defs w
+  | [], env, henv, _, w => henv w
+  | (v, d) :: rest, env, henv, hdefs, w => by
+      simp only [List.all_cons, Bool.and_eq_true] at hdefs
+      have hd : 0 ≤ d.eval env := NF.eval_nonneg env d henv hdefs.1
+      have henv' : ∀ u, 0 ≤ (fun u => if u = v then d.eval env else env u) u := by
+        intro u
+        by_cases h : u = v <;> simp [h, hd, henv u]
+      exact extendEnv_nonneg rest _ henv' hdefs.2 w
+
+/-- Positivity certificate: an NF over extended variables, all coefficients
+    nonnegative, with coefficient-nonnegative aux definitions. -/
+structure PosCert where
+  nf : NF
+  auxDefs : List (Var × NF)
+  hcoeff : nf.allCoeffNonneg = true
+  hauxCoeff : auxDefs.all (fun p => p.2.allCoeffNonneg) = true
+
+/-- PosCert soundness: nonnegative base environment gives nonnegative value. -/
+theorem PosCert.sound (c : PosCert) (env : Var → ℚ) (henv : ∀ w, 0 ≤ env w) :
+    0 ≤ c.nf.eval (extendEnv env c.auxDefs) :=
+  NF.eval_nonneg _ c.nf (extendEnv_nonneg c.auxDefs env henv c.hauxCoeff) c.hcoeff
+
+/-! ### ConeCert: target = base + Σ multᵢ·slackᵢ as a checked polynomial
+identity, with coefficient-nonnegative base and multipliers; slack
+nonnegativity enters as graph-side hypotheses. -/
+
+/-- The combination polynomial base + Σ multᵢ·slackᵢ. -/
+def comboNF (base : NF) (mults slacks : List NF) : NF :=
+  base ++ (List.zipWith NF.mul mults slacks).flatten
+
+theorem zip_nfmul_flatten_eval (env : Var → ℚ) : ∀ ms ss : List NF,
+    NF.eval env (List.zipWith NF.mul ms ss).flatten
+      = (List.zipWith (fun f g => NF.eval env f * NF.eval env g) ms ss).sum
+  | [], _ => by simp [NF.eval]
+  | _ :: _, [] => by simp [NF.eval]
+  | f :: fs, g :: gs => by
+      simp only [List.zipWith_cons_cons, List.flatten_cons, List.sum_cons]
+      rw [NF.eval_append, NF.mul_eval, zip_nfmul_flatten_eval env fs gs]
+
+theorem zip_nfmul_sum_nonneg (env : Var → ℚ) (henv : ∀ v, 0 ≤ env v) :
+    ∀ ms ss : List NF,
+    ms.all NF.allCoeffNonneg = true →
+    (∀ s ∈ ss, 0 ≤ NF.eval env s) →
+    0 ≤ (List.zipWith (fun f g => NF.eval env f * NF.eval env g) ms ss).sum
+  | [], _, _, _ => by simp
+  | _ :: _, [], _, _ => by simp
+  | f :: fs, g :: gs, hm, hs => by
+      simp only [List.all_cons, Bool.and_eq_true] at hm
+      have hf : 0 ≤ NF.eval env f := NF.eval_nonneg env f henv hm.1
+      have hg : 0 ≤ NF.eval env g := hs g (List.mem_cons_self ..)
+      have hrest := zip_nfmul_sum_nonneg env henv fs gs hm.2
+        (fun s hsm => hs s (List.mem_cons_of_mem _ hsm))
+      simp only [List.zipWith_cons_cons, List.sum_cons]
+      have := mul_nonneg hf hg
+      linarith
+
+/-- Cone certificate: a checked identity target = base + Σ multᵢ·slackᵢ with
+    coefficient-nonnegative base and multipliers. -/
+structure ConeCert where
+  target : NF
+  base : NF
+  mults : List NF
+  slacks : List NF
+  hid : checkEq target (comboNF base mults slacks) = true
+  hbase : base.allCoeffNonneg = true
+  hmults : mults.all NF.allCoeffNonneg = true
+
+/-- CONECERT SOUNDNESS: nonnegative variables and nonnegative slack values give
+    a nonnegative target — the machine-certificate bridge for the A1 cones,
+    seed banks, and CrossCap capacity identities. -/
+theorem ConeCert.sound (c : ConeCert) (env : Var → ℚ)
+    (hvars : ∀ v, 0 ≤ env v)
+    (hslacks : ∀ s ∈ c.slacks, 0 ≤ NF.eval env s) :
+    0 ≤ NF.eval env c.target := by
+  rw [checkEq_sound _ _ c.hid env]
+  unfold comboNF
+  rw [NF.eval_append, zip_nfmul_flatten_eval]
+  have hbase := NF.eval_nonneg env c.base hvars c.hbase
+  have hzip := zip_nfmul_sum_nonneg env hvars c.mults c.slacks c.hmults hslacks
+  linarith
+
 end PolyCert
 end Erdos23Delta0

@@ -105,3 +105,39 @@ OUTCOMES: all-chart ChartCert success => CERT-2 PROVEN (heights via EQ height le
 ChartSOS success fine (Lean needs rational Gram backend); optimizer cex => escalate
 (first version: full maxcut flip facets F_S(w) FIRST, then gamma-switch; second version
 notes gamma-switch is the LIKELY missing one — test maxcut facets first anyway).
+
+# ===== CERT-2 VERDICT: RETIRED, replaced by EQ-ODL1 (main thread, 2026-07-04) =====
+STRATEGIC DECISION: retire the old c = 2/3 CERT-2 from the critical path. The 2/3
+inequality I_EQ <= N - (2/3)... is a sharp strengthening TIGHT AT THE SEED — that
+tightness is exactly what made every chart/SOS certificate hard (boundary
+certificate with the wrong basis: 2x2 atoms leave thousands of uncovered negative
+rows, split atoms worsen numerics, generic PSD too wide, no falsifier).
+BRANCH-A ONLY NEEDS c = 1:   EQ-ODL1:  I_EQ <= N + eta.
+HEIGHT PROPAGATION (verified my side): H(w) = I_EQ(w) - N(w) is 1-homogeneous,
+eta 2-homogeneous; CERT-1 gives eta25 >= 25 i.e. eta >= 1 > 0; so for h >= 1:
+H(hw) = h H(w) <= h eta(w) <= h^2 eta(w) = eta(hw). Passive AM extends to all
+passive EQ extensions (attachments add no bad doors). So c = 1 at height 1
+suffices for the whole EQ branch. The c = 1 target has POSITIVE SEED GAP
+(adds (1/3) D_EQ eta25 >= 25 D_EQ /3 vs the 2/3 form) — no seed-vanishing
+constraint, much easier certificate.
+NEW LEDGER ENTRY (replaces EQ-CERT2): EQ-ODL1 with certificate target
+    P_EQ^(1) = D_EQ [ eta25 - 25 (I_EQ - N) ] >= 0   (up to the fixed clearing)
+RUNG 1 (run before any further SOS): shifted cone LP
+    P_EQ^(1) = P_0 + sum_{j=1..7} F_j P_j + B_0 P_B + sum_l G_l P_l
+  generators: seven-cut inequalities F_j; CERT-1 bank generator B_0 = eta25 - 25;
+  CERT-1 grouped generators UVT, UZT, XYT, VZXY, VZT, U_A, U_B.
+  All multipliers shifted-coefficient-nonnegative in w_i = 1 + x_i, x_i >= 0.
+  Degree caps: P_EQ^(1) deg 11; P_0 deg 11; linear-F_j multipliers deg 10;
+  quadratic-F_j deg 9; B_0 multiplier deg 9; quadratic G_l deg 9.
+  NO seed-vanishing constraint.
+  ABORT rung 1 only if: LP infeasible with CERT-1 generators through the caps AND
+  a falsifier search on the c = 1 target stays clean.
+RUNG 2: (chart/KKT split of the c=1 target — details in thread if rung 1 aborts.)
+RUNG 3: targeted low-rank SOS ONLY for failed c=1 charts: P_k^(1) = B_{0,k} +
+  sum_G B_{G,k} + Z_k^T Q_k Z_k, keep constant monomial, no seed-zero constraint,
+  small Z_k from the negative-coefficient support (deg 4, then 5). Abort if fails
+  + falsifier clean + uncovered rows large => GENERATOR REDESIGN (full max-cut
+  facets F_S of the EQ quotient), NOT larger PSD.
+OLD 2/3 ChartSOS: keep as OPTIONAL strengthening, off critical path. All prior
+2x2/PSD artifacts remain as evidence of the sharp-boundary diagnosis.
+
