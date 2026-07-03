@@ -458,3 +458,64 @@ Proof: BankBlock -> B6; global LABEL -> B5; CROSS/FORBID/OSC -> contradiction;
 peel -> induction; EQ/SIB -> B7; all Seed3 outputs routed by B7-B9.
 This is the definitive scalar-bank architecture for Codex emission and Lean.
 
+
+# ===== ODL-SIDE MASTER LEDGER O0-O21 + TOP-LEVEL CHAIN (main, 2026-07-04) =====
+# (Full text in thread 6a450f06; this archive = ~90% verbatim extraction.)
+ O0  ODL full-mask statement I(Q) <= N + eta (== X(Z5) <= (1+25/N)eta)   ROUTED (assembly)
+ O1  non-overfull I(Q) <= N branch (needs Bank0 eta>=0)                  PROVEN cond. Bank0
+ O2  minimal closed overfull support (closure reduction)                 PROVEN as reduction
+     (shares B1 closure-trace infrastructure)
+ O3  AmbientPrune bridge E_G(W,Q) <= E_G(U,Q)                            PROVEN
+ O4  NCH-def / Terminal-Hall: TH => NCH-def PROVEN; NCH-def => pruning
+     PROVEN; T=1 theorem PROVEN (formal artifact pending); T=2 corridor
+     CERT-PENDING; general (*) hunt HUNT                                 CERT-PENDING overall
+ O5  T=1 REC capacity certificate (1-kappa_e = alpha sigma + beta nuK + R) CERT-PENDING
+     (shares switch/sigma/nuK/lens infra with Bank0; different functional)
+ O6  T=2 corridor certs NONNEG/CROSS/LABEL + OSC                         CERT-PENDING
+     (SAME primitive-lens case system as Bank0 B4; different LHS functional)
+ O7  NCH obstruction hunt (*): weighted-Grotzsch B<=4 CLEAN 21M+,
+     MycC7 B=2 CLEAN, MycC9/C11/MycGrotzsch |T|<=3 CLEAN                 HUNT
+ O8  G1-prime (NCH-def => minimal overfull core C5-hom)                  PROVEN cond. O4
+ O9  door saturation (bookkeeping-only absorption)                       PROVEN
+ O10 non-passive attachment routing (27 passive signatures)              PROVEN cond. G1'
+ O11 q<3-prime (q<=2 => I(Q)<=N), 2Door-ODL cone family D1/D2s/D2m      CERT-PENDING
+     (Bank0 routes q<=2 bank via B6; ODL needs these cones)
+ O12 door-count split q=3 or q>=4                                        PROVEN cond. O11
+ O13 Seed3-prime classifier (7 outputs; true-twin contract to EQ/SIB)    CERT-PENDING
+     (same classifier module as Bank0 routing)
+ O14 EQ-ODL1 (cleared P_EQ1 = D_EQ[eta25 - 25(I_EQ - N)] >= 0; gens
+     F1-F7 + B0 + grouped; rung-1 LP RUNNING)                            CERT-PENDING
+ O15 EQ height lemma (H 1-hom, eta 2-hom)                                PROVEN
+ O16 EQ passive AM (3 master cubes x 11 row templates, or 27x11
+     per-signature M-certs; tau0 V2-twin template verified)              CERT-PENDING
+ O17 SIB seed S7 (theta=0 PROVEN; kink floors CERTIFIED; x=1 VANISH;
+     YSTAT/YCOR/YXCOR VANISH; central Sturm verified needs formal
+     artifact; residual STAT/COR pending as needed)                      CERT-PENDING
+ O18 SIB passive AM (3 cubes x 13 templates or 27x13)                    CERT-PENDING
+ O19 q>=4 A1-5mask absorption (five 4-masks at 7/30, N>=10; use Bank0
+     explicitly after repair)                                            PROVEN cond. certs
+ O20 A1 proper masks (six PMTS ConeCerts at (75+2N); Bank0 lifts 2/3->1) CERT-PENDING
+ O21 Bank0 (B0-B10 ledger; architecture complete)                        CERT-PENDING suite
+TOP-LEVEL CHAIN:
+ T0 Branch B (L>5): Banked-UPO => GERSH_{L>5} — PROVEN conditional on the green
+    Branch-B certificates (Bank-L six cases, HBD, CD telescope, cell ledger,
+    combined peel bank repaired).
+ T1 Branch A (L=5): Bank0 + A1proper + ODLfull => C5-RS; uniform width w_i = N/5
+    => net-DW'; netDW_assembly => GERSH_{L=5}.
+ T2 GERSH all rows (L=5 via A, L>5 via B).
+ T3 GERSH => Gamma <= N^2 => beta <= N^2/25 (established global assembly).
+CRITICAL PATHS:
+ A  Bank0 checker suite B1-B6/B10 (blocks C5-RS empty case, A1 lift, q>=4 lift,
+    scalar bank) — shared infrastructure, complete EARLY.
+ B  A1 six cones (parallel to Bank0; final use needs Bank0).
+ C  ODL seed branch: O11, O13, O14, O16, O17, O18, O19 — mostly parallel after
+    Bank0/A1 infra.
+ D  NCH/G1-prime: O5 formal artifact, O6 T=2 certs, O7 hunt, O8 — structurally
+    risky, partly shared with Bank0 corridor infra.
+PARALLEL WORK: O14 LP, O16/O18 cubes, O17 residuals, O20/O19/O11 cones, O13
+ classifier, Bank0 B1-B6/B10 checkers, NCH T=2 + hunt.
+DEFINITION OF DONE: every pending node = PROVEN Lean lemma, or CERTIFIED finite
+ artifact checked by ConeCert / BernsteinCert / Sturm / CrossCap / BankBlock /
+ ClosureTrace / Corridor-BH checker, or ROUTED classifier output with certified
+ downstream source. No census validation remains as a proof ingredient.
+
