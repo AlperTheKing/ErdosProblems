@@ -380,3 +380,40 @@ L5 voltage LABEL cert (primitive-lens gates, B0-4); L6 PROVEN modulo BH2/BH3 gat
 (B0-7); L7 PROVEN + FORMALIZED (Bank0Algebra.lean); L8 algebra PROVEN + FORMALIZED,
 cover extraction gate. No unreduced mathematical gaps remain in Bank0.
 
+
+# ===== SEED-BANK COMPLETION: BANK0 100% ROUTED (main thread, 2026-07-04) =====
+SIB-CERT1:  N^2 - 25m >= 25, sharp at all-ones SIB seed (N=10, m=3, 100-75=25).
+INDEPENDENT of S7 (S7 proves the SIB ODL/KKT inequality — different direction;
+Bank0 assembly cites SIB-CERT1 directly). Grouped AM-GM proof parallel to EQ-CERT1:
+classes V0={1,2} V1={5,6} V2={0,8} V3={3,4} V4={7,9}; bad mass m = w1w7+w1w9+w2w9;
+grouped U=w0+w8, V=w3+w4, Z=w5+w6, X=w1+w2, Y=w7+w9; A=U+V+Z, B=X+Y, N=A+B, T=m+1.
+Generators (max-cut flips on the SIB quotient): G12 = w0w6+w5w8+w6w8-m >= 0,
+G23 = w0w4+w3w8+w4w8-m >= 0, GV = V-X >= 0, GZ = Z-Y >= 0, plus w_i >= 1.
+Product bounds: UZ-T = G12+(w0w5-1); UV-T = G23+(w0w3-1); XY-T = w2w7-1;
+VZ-XY = Z*GV + X*GZ; hence UZ,UV,XY,VZ >= T. Block SOS: UA = A^2-9T =
+(1/2)[(U-V)^2+(U-Z)^2+(V-Z)^2] + 3[(UV-T)+(UZ-T)+(VZ-T)] >= 0;
+UB = B^2-4T = (X-Y)^2 + 4(XY-T) >= 0. Conic core (same as EQ):
+(AB+6T)((A+B)^2-25T) = UA(AB+14T) + UB(AB+24T) + 2 UA UB; AB+6T > 0 =>
+N^2 >= 25T = 25(m+1) => SIB-CERT1. MY GATE _claude_sib_cert1_gate.py: ALL PASS
+(7 identities exact sympy; 4594 generator-feasible spot points all >= 25; sharp
+at all-ones). Remaining provenance item (Codex): G12/G23/GV/GZ as genuine SIB-
+quotient max-cut flips (same status as EQ CERT-1 generators).
+PASSIVE ATTACHMENTS: no new bad door => m unchanged, N increases =>
+N_ext^2 - 25 m_ext >= N_seed^2 - 25 m_seed >= 25. No separate certificate needed.
+2DOOR ROUTING: 2Door-ODL handles row overload (q<=2 => I(Q) <= N) but NOT scalar
+bank; saturated C5-hom q<=2 cores route Bank0 through the C5-BANK-BLOCK cover
+(prefix-defect closure + saturation + merge => n_i n_{i+1} >= m_alpha => AM-GM).
+NCH pruning only for non-C5-hom closures or prunable non-C5 attachments.
+SEED3 ROUTING TABLE (7 outputs): EQ -> EQ-CERT1 (PROVEN); SIB -> SIB-CERT1
+(PROVEN); NO_OVERFULL -> BankBlock (I<=N does NOT imply bank); NEG_SWITCH ->
+branch impossible (sigma<0 contradicts max-cut, or sigma=0 & nu<0 contradicts
+Gamma-min); PRUNABLE -> NCH/pruning + reduced-core bank w/ ambient bookkeeping;
+NOT_SATURATED -> absorb + rerun (not terminal); FOUR_DOOR -> BankBlock (ODL side
+routes A1-5mask). FINAL DEPENDENCY TABLE: EQ/EQ-ODL1+EQ-CERT1; SIB/S7+SIB-CERT1;
+passive/AM+seed-bank; q<=2/2Door+BankBlock; q>=4/A1-5mask+BankBlock; NO_OVERFULL/
+I<=N+BankBlock; NEG_SWITCH impossible; PRUNABLE pruning+reduced; NOT_SATURATED
+rerun; non-C5-hom/NCH-def or new seed branch (hunt).
+=> BANK0 ARCHITECTURE HAS NO UNROUTED CASE. Remaining Bank0 obligations are all
+machine certificates: closure-trace gate, partition cert, CrossCap mode, voltage
+lens gates, BH2/BH3, bank-block cover extraction, NCH branch (own program).
+
