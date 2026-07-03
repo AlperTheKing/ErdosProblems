@@ -99,5 +99,194 @@ theorem cone_value_nonneg (target base : ℚ) (mults slacks : List ℚ)
   have := zip_mul_sum_nonneg mults slacks hmults hslacks
   linarith
 
+/-! ### NF arithmetic (append / negate / multiply) with evaluation soundness.
+
+Products concatenate power lists and re-canonicalize them by variable-sorted
+insertion with exponent addition; evaluation is preserved (`pow_add`), so
+soundness never depends on the emitter's ordering. -/
+
+/-- Power-list product (the monomial body). -/
+def prodPows (env : Var → ℚ) (l : List (Var × Nat)) : ℚ :=
+  (l.map (fun p => env p.1 ^ p.2)).prod
+
+@[simp] theorem prodPows_nil (env : Var → ℚ) : prodPows env [] = 1 := rfl
+
+@[simp] theorem prodPows_cons (env : Var → ℚ) (p : Var × Nat) (l : List (Var × Nat)) :
+    prodPows env (p :: l) = env p.1 ^ p.2 * prodPows env l := by
+  unfold prodPows
+  simp
+
+theorem prodPows_append (env : Var → ℚ) (l₁ l₂ : List (Var × Nat)) :
+    prodPows env (l₁ ++ l₂) = prodPows env l₁ * prodPows env l₂ := by
+  unfold prodPows
+  simp
+
+theorem Mono.eval_eq_prodPows (env : Var → ℚ) (m : Mono) :
+    m.eval env = m.coeff * prodPows env m.pows := rfl
+
+/-- Insert one power into a variable-sorted power list, adding exponents on match. -/
+def insertPow (p : Var × Nat) : List (Var × Nat) → List (Var × Nat)
+  | [] => [p]
+  | q :: qs =>
+      if p.1 < q.1 then p :: q :: qs
+      else if p.1 = q.1 then (q.1, p.2 + q.2) :: qs
+      else q :: insertPow p qs
+
+theorem insertPow_prod (env : Var → ℚ) (p : Var × Nat) : ∀ l : List (Var × Nat),
+    prodPows env (insertPow p l) = env p.1 ^ p.2 * prodPows env l
+  | [] => by simp [insertPow]
+  | q :: qs => by
+      unfold insertPow
+      by_cases h1 : p.1 < q.1
+      · simp [h1]
+      · by_cases h2 : p.1 = q.1
+        · rw [if_neg h1, if_pos h2]
+          simp only [prodPows_cons]
+          rw [h2, pow_add]
+          ring
+        · rw [if_neg h1, if_neg h2]
+          simp only [prodPows_cons]
+          rw [insertPow_prod env p qs]
+          ring
+
+/-- Canonicalize a power list (variable-sorted, merged exponents). -/
+def canonPows : List (Var × Nat) → List (Var × Nat)
+  | [] => []
+  | p :: ps => insertPow p (canonPows ps)
+
+theorem canonPows_prod (env : Var → ℚ) : ∀ l : List (Var × Nat),
+    prodPows env (canonPows l) = prodPows env l
+  | [] => rfl
+  | p :: ps => by
+      unfold canonPows
+      rw [insertPow_prod, canonPows_prod env ps, prodPows_cons]
+
+/-- Monomial product (canonicalized powers). -/
+def Mono.mul (m₁ m₂ : Mono) : Mono :=
+  ⟨m₁.coeff * m₂.coeff, canonPows (m₁.pows ++ m₂.pows)⟩
+
+theorem Mono.mul_eval (env : Var → ℚ) (m₁ m₂ : Mono) :
+    (m₁.mul m₂).eval env = m₁.eval env * m₂.eval env := by
+  simp only [Mono.mul, Mono.eval_eq_prodPows, canonPows_prod, prodPows_append]
+  ring
+
+theorem NF.eval_append (env : Var → ℚ) (f g : NF) :
+    NF.eval env (f ++ g) = NF.eval env f + NF.eval env g := by
+  unfold NF.eval
+  simp
+
+/-- Monomial × NF. -/
+def NF.mulMono (m : Mono) (g : NF) : NF := g.map (Mono.mul m)
+
+theorem NF.mulMono_eval (env : Var → ℚ) (m : Mono) : ∀ g : NF,
+    NF.eval env (NF.mulMono m g) = m.eval env * NF.eval env g
+  | [] => by simp [NF.mulMono]
+  | n :: g => by
+      unfold NF.mulMono at *
+      simp only [List.map_cons, NF.eval_cons, Mono.mul_eval,
+        NF.mulMono_eval env m g]
+      ring
+
+/-- NF product. -/
+def NF.mul : NF → NF → NF
+  | [], _ => []
+  | m :: f, g => NF.mulMono m g ++ NF.mul f g
+
+theorem NF.mul_eval (env : Var → ℚ) : ∀ f g : NF,
+    NF.eval env (NF.mul f g) = NF.eval env f * NF.eval env g
+  | [], g => by simp [NF.mul]
+  | m :: f, g => by
+      unfold NF.mul
+      rw [NF.eval_append, NF.mulMono_eval, NF.eval_cons, NF.mul_eval env f g]
+      ring
+
+/-- NF negation. -/
+def NF.neg (f : NF) : NF := f.map (fun m => ⟨-m.coeff, m.pows⟩)
+
+theorem NF.neg_eval (env : Var → ℚ) : ∀ f : NF,
+    NF.eval env (NF.neg f) = -NF.eval env f
+  | [] => by simp [NF.neg]
+  | m :: f => by
+      unfold NF.neg at *
+      simp only [List.map_cons, NF.eval_cons, NF.neg_eval env f]
+      unfold Mono.eval
+      simp
+      ring
+
+/-- NF subtraction. -/
+def NF.sub (f g : NF) : NF := f ++ NF.neg g
+
+theorem NF.sub_eval (env : Var → ℚ) (f g : NF) :
+    NF.eval env (NF.sub f g) = NF.eval env f - NF.eval env g := by
+  unfold NF.sub
+  rw [NF.eval_append, NF.neg_eval]
+  ring
+
+/-! ### checkEq: grouping-based zero test.
+
+`collect` groups monomials by syntactically equal power lists (adding
+coefficients); `isZeroNF` then demands every collected coefficient be zero.
+Soundness needs no ordering; completeness is the emitter's canonicalization
+obligation (variable-sorted powers, no zero exponents). -/
+
+/-- Add a monomial into a collected NF: merge with the first syntactically equal
+    power list, else append at the end. -/
+def insertAdd (m : Mono) : NF → NF
+  | [] => [m]
+  | n :: g =>
+      if m.pows = n.pows then ⟨m.coeff + n.coeff, n.pows⟩ :: g
+      else n :: insertAdd m g
+
+theorem insertAdd_eval (env : Var → ℚ) (m : Mono) : ∀ g : NF,
+    NF.eval env (insertAdd m g) = m.eval env + NF.eval env g
+  | [] => by simp [insertAdd]
+  | n :: g => by
+      unfold insertAdd
+      by_cases h : m.pows = n.pows
+      · simp only [h, if_true, NF.eval_cons]
+        unfold Mono.eval
+        rw [h]
+        ring
+      · simp only [h, if_false, NF.eval_cons, insertAdd_eval env m g]
+        ring
+
+/-- Group all monomials by equal power lists. -/
+def collect : NF → NF
+  | [] => []
+  | m :: f => insertAdd m (collect f)
+
+theorem collect_eval (env : Var → ℚ) : ∀ f : NF,
+    NF.eval env (collect f) = NF.eval env f
+  | [] => rfl
+  | m :: f => by
+      unfold collect
+      rw [insertAdd_eval, NF.eval_cons, collect_eval env f]
+
+/-- All-zero coefficient test. -/
+def isZeroNF (f : NF) : Bool := f.all (fun m => decide (m.coeff = 0))
+
+theorem isZeroNF_eval (env : Var → ℚ) : ∀ f : NF,
+    isZeroNF f = true → NF.eval env f = 0
+  | [], _ => rfl
+  | m :: f, h => by
+      unfold isZeroNF at h
+      simp only [List.all_cons, Bool.and_eq_true, decide_eq_true_eq] at h
+      rw [NF.eval_cons, isZeroNF_eval env f (by unfold isZeroNF; exact h.2)]
+      unfold Mono.eval
+      rw [h.1]
+      ring
+
+/-- THE IDENTITY CHECKER: polynomial equality via collected difference. -/
+def checkEq (f g : NF) : Bool := isZeroNF (collect (NF.sub f g))
+
+/-- checkEq soundness: a passing check gives equal evaluations in every
+    environment — the ConeCert identity bridge. -/
+theorem checkEq_sound (f g : NF) (h : checkEq f g = true) (env : Var → ℚ) :
+    NF.eval env f = NF.eval env g := by
+  unfold checkEq at h
+  have h0 := isZeroNF_eval env _ h
+  rw [collect_eval, NF.sub_eval] at h0
+  linarith
+
 end PolyCert
 end Erdos23Delta0
