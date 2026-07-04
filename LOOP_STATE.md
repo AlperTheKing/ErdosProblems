@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T11:15Z (P(math)~86, P(Lean)~80)
+# Last update: 2026-07-04T13:10Z (P(math)~86, P(Lean)~81)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1609102
+- CODEX_TO_CLAUDE.md read marker (bytes): 1616087
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -61,3 +61,19 @@
 - Extraction queue += sibling 4.1 (landed).
 - Codex: rung-2 near-band feasible all 3 hard dominants at k=0; inf-band guidance sent (spec par.8 reduced form); basis-extraction replay + 300-chart map in flight.
 - Lean next: badCount_flip_eq indicator-sum lemma + sigma_nonneg derivation; then CorridorPartition checker; Assembly statements per archived plan.
+
+
+## TICK NOTES (2026-07-04T12:25Z)
+- Interface canon (12 resolutions) archived + BINDING posted to Codex; O13 Seed3 spec = SAME main reply, offsets ~7900-17359 in window.__au — EXTRACT NEXT TICK (structures C5QuotientData etc.).
+- Lean: badCount_flip_eq + sigma_nonneg_of_isMaxCut GREEN (Decision-B core done). Next: CorridorPartition checker; then align existing structures to canon (CompletedSwitchCert, two trace types) as new modules land.
+- Codex: modular-rational-reconstruction recipe issued (2686-dim core); inf-band s=0 face INFEASIBLE = spec deviation — RELAY TO MAIN pending (ask corrected leading-homogeneous encoding); numeric map subprocess parallelism approved.
+- Main in flight: (this reply done). NEXT RETASK: corrected inf-band encoding question + O13 remainder already in reply. Sibling in flight: appendices 5.1/5.2.
+- Commits: fa3a97880.
+
+
+## TICK NOTES (2026-07-04T13:10Z)
+- INF-BAND FIX archived (EQ_HEIGHT_LEMMA tail) + Codex patched: G# = H_G*Lambda^(2-d) lift (bug was s^(2-d) killing linear gens on s=0 face); hard-row priority B0/UA/UB-inf; radial-monotonicity skip criterion. Codex's s=0 infeasibility refuted only the face truncation.
+- IN FLIGHT: main = O13 witness/completeness completion; sibling = definitions table (appendices 5.1/5.2 landed 14724c, unextracted).
+- EXTRACTION QUEUE grows: appendices 5.1/5.2 (14724c), O13 remainder (window.__au offsets ~7900-17359 — cache may die on tab reload; full text stays in-thread), 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7. BATCH SEVERAL NEXT TICK.
+- Lean next: CorridorPartition checker + canon alignment (CompletedSwitchCert, two trace types) as new modules.
+- Codex: modular replay (2686-dim) TOP + corrected inf-band reruns + numeric map + O5/O6-EMIT queue. Marker 1616087.

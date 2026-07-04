@@ -186,3 +186,31 @@ TARGET: P_EQ1 = D_EQ [eta25 - 25(I_EQ - N)] >= 0.
 12 FALLBACK: generator redesign — add EQ quotient max-cut facets F_S (all proper
   subsets mod complement/automorphism) to the SAME chart machinery.
 
+
+# ===== RUNG-2 INFINITY-BAND CORRECTION (main thread, 2026-07-04) =====
+VERDICT: Codex's s ZZEQ 0-face infeasibility refuted ONLY a strict face-truncation,
+NOT the spec. The old degree-2 lift s^(2-d) H_G KILLS linear generators on the
+s = 0 face (d = 1 gives a factor s). CORRECT LIFT:
+    G# := H_G * Lambda^(2-d),   Lambda := s + sum z_i,
+where H_G = s^(deg G) G(z/s). On the simplex Lambda = 1 so G# = H_G as a FUNCTION,
+but the s = 0 face of G# retains the leading homogeneous part (Lambda(0,z) = 1 on
+the face). Dominance deltas: Delta#_{a,b} = G#_a - G#_b.
+CORRECT INF-BAND CERT: Phat_k = P0 + sum_G G# P_G + sum_b Delta# P_{a,b} +
+B_inf P_inf, B_inf = 1 - 2s, Bernstein-positive multipliers, caps 11/9/9/10.
+The s = 0 FaceCert is an OPTIONAL subcertificate (asymptotic boundary only); it
+certifies the band only when paired with a radial-monotonicity certificate.
+B_inf MUST carry its multiplier (only local inequality expressing distance from
+the near boundary); deg-10 as used.
+SKIP CRITERION (no unconditional skip): an infinity chart is covered iff a
+certified derivative condition holds on [0,1/2] x Delta for
+Ptilde(s,u) = Phat(s, (1-s)u):
+  (i) -d/ds Ptilde >= 0 AND the near-band cert covers s = 1/2; or
+  (ii) +d/ds Ptilde >= 0 AND the s = 0 FaceCert covers the face.
+HARD-ROW PRIORITY: (k, a, inf) with a in {B0, U_A, U_B} first (the observed hard
+k=0/B0/inf belongs here), then quadratic-cut dominance charts (F5-F7), then
+linear-cut charts, then near-band. Do not budget all 300 equally.
+CODEX PATCH STEPS: (1) replace s^(2-d) H_G by H_G Lambda^(2-d); (2) deltas from
+G#; (3) keep FULL G# forms (never s=0-face-only); (4) keep B_inf with deg <= 10
+multiplier; (5) run the corrected full InfCert per chart; optionally attempt the
+radial-monotonicity skip certificates where cheap.
+
