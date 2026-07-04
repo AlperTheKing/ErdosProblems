@@ -1470,5 +1470,59 @@ theorem nchBank_sound (G : GraphData) (c : CutData) (bads : List BadEdgeData)
   | toCover w => exact coverBound G c bads w h
   | toCross w => exact (bank0Cross_sound G c atoms D w h hmax).elim
 
+/-! ### BANK0 DISPATCH: the certificate inductive and its soundness.
+The five routes compose the closed payloads; the max-cut switch hypothesis is
+threaded through peel chains as an explicit Prop (`SigmaChain`) which the
+assembly provider discharges from IsMaxCut plus the P-MaxCut preservation
+lemma — nothing here is assumed silently. -/
+
+/-- σ-nonnegativity of all switches (what IsMaxCut supplies at the top). -/
+def sigmaNonneg (G : GraphData) (c : CutData) : Prop :=
+  ∀ S : List Nat, 0 ≤ sigma G c S
+
+/-- The Bank0 certificate: four terminal routes plus the peel recursion
+    (carrying the smaller instance's row/atom data). -/
+inductive Bank0Cert
+  | globalC5 (b : BankBlock)
+  | bankBlocks (w : BankBlockCoverCert)
+  | cross (w : Bank0CrossCert)
+  | nch (n : NCHBankCert)
+  | peel (p : PeelData) (smallBads : List BadEdgeData)
+      (smallAtoms : List AtomData) (rest : Bank0Cert)
+
+/-- Dispatch checker (structurally recursive on the certificate). -/
+def checkBank0Cert (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (atoms : List AtomData) (D : Nat) : Bank0Cert → Bool
+  | .globalC5 b => checkGlobalC5 G c b
+  | .bankBlocks w => checkBankBlockCover G c bads w
+  | .cross w => checkBank0Cross G c atoms D w
+  | .nch n => checkNCHBank G c bads atoms D n
+  | .peel p smallBads smallAtoms rest =>
+      checkPeel G c bads p &&
+      checkBank0Cert p.smallG p.smallCut smallBads smallAtoms D rest
+
+/-- The switch hypothesis at every level of the peel chain. -/
+def SigmaChain (G : GraphData) (c : CutData) : Bank0Cert → Prop
+  | .peel p _ _ rest => sigmaNonneg G c ∧ SigmaChain p.smallG p.smallCut rest
+  | _ => sigmaNonneg G c
+
+/-- BANK0 SOUNDNESS: every certified route yields 25·badCount ≤ n². -/
+theorem bank0Cert_sound :
+    ∀ (cert : Bank0Cert) (G : GraphData) (c : CutData)
+      (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat),
+    checkBank0Cert G c bads atoms D cert = true →
+    SigmaChain G c cert →
+    25 * badCount G c ≤ G.n ^ 2
+  | .globalC5 b, G, c, _, _, _, h, _ => globalC5_bound G c b h
+  | .bankBlocks w, G, c, bads, _, _, h, _ => coverBound G c bads w h
+  | .cross w, G, c, _, atoms, D, h, hs =>
+      (bank0Cross_sound G c atoms D w h hs).elim
+  | .nch n, G, c, bads, atoms, D, h, hs =>
+      nchBank_sound G c bads atoms D n h hs
+  | .peel p sB sA rest, G, c, bads, _, D, h, hs => by
+      simp only [checkBank0Cert, Bool.and_eq_true] at h
+      have hIH := bank0Cert_sound rest p.smallG p.smallCut sB sA D h.2 hs.2
+      exact peel_bank_transfer G c bads p h.1 hIH
+
 end CertGraph
 end Erdos23Delta0

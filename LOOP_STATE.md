@@ -439,3 +439,18 @@
 - Batch 14/108: k6/F3 (384-prime escalation) + HARD k5/G5 pair-repair — k5/G5 reverified by
   me (6th; all repaired rows covered). first_pending = k5/G7_B2_4T (hard). Marker 1676207.
 - Main = FAQ 51+ (in flight); sibling = regenerating post-stub section.
+
+
+## TICK NOTES (2026-07-05T13:15Z) — BANK0 DISPATCH GREEN: checker program complete
+- LEAN MILESTONE: Bank0Cert (globalC5/bankBlocks/cross/nch/peel-recursive) + checkBank0Cert
+  (structural on cert) + SigmaChain (per-level sigma hypothesis, honest carrier) +
+  bank0Cert_sound — GREEN FIRST TRY. CertGraph.lean now contains the ENTIRE Bank0 checker
+  program: L0-L3, B6+B6b cover, B2 partition, B3 CrossCap, B1 ClosureTrace, B5 GlobalC5,
+  B10 Peel, canon switch layer, flip calculus, AM-GM spine, dispatch + soundness.
+- REMAINING BANK0 LINKS (assembly-level): (1) SigmaChain provider — top level via
+  sigma_nonneg_of_isMaxCut (GREEN), peel levels via P-MaxCut preservation (parity extension
+  lemma — ask main for the Lean-shape or formalize per archived proof); (2) Branch-A
+  consumption edge (Bank0 -> etaNonneg -> C5RS trichotomy per top-level contract).
+- Batch 15/108 (hard k5/G7 one-increment repair; reverify in flight w/ dominant=14 — the
+  dominant=13 launch was MIS-INDEXED, discard claude_k5g7_recheck.json, use _v2). Marker
+  1677261. Main = FAQ 51+ still generating (check next tick); sibling = section regen.
