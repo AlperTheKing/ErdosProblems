@@ -244,3 +244,24 @@
 - LEAN NEXT TICK — HARD FIRST ACTION, NO MORE SLIDING: type ClosureTrace.lean from the
   archived C1-C4 contract (structures + replay foldM + checkClosed + pressureClaim +
   soundness), honest build. THEN Peel.lean skeleton per today s contract. Marker 1642734.
+
+
+## TICK NOTES (2026-07-05T01:50Z) — ClosureTrace module typed; batch at 4/108
+- Lean: B1 ClosureTrace layer WRITTEN into CertGraph.lean (RowRef/RowPrefixData/COrientation/
+  BankClosureStep C1-C4/basis items/PressureClaim/BankClosureTrace; getRow/orientedVerts/
+  absorbV/familyOf/activatedB/famPrefixVerts/checkWitnessRow; stepAdds + replayClosureStep =
+  map(absorbV); replayTrace foldlM; checkClosed (membership-only, _G _c); checkPressureClaim;
+  checkBankClosureTrace; replayStep_subset via stepAdds-map factoring; replayTrace_subset;
+  3 pressure extraction lemmas; bankClosureTrace_sound). First build red (match-iota traps)
+  -> restructured; SECOND BUILD IN FLIGHT (bg blot0sqwn). Fix-or-commit on wake.
+- Codex: olean recovery FIXED (fresh_rerun+mtime+stderr, verified); k6+k8 charts certified
+  (lex-large; lex-small honestly rejected k6); LEDGER v2: 4/108 certified, validator script.
+  Marker 1651672. SPOT-CHECK POLICY (set next post): I independently re-verify ~1 in 10 batch
+  rows + every repaired/hard row; full aggregate re-verify at assembly.
+- UNEXTRACTED (next tick FIRST after build green): main top-level assembly reply (13470c,
+  landed) -> archive + retask main; sibling section 3.6 status unknown -> check + retask.
+- EXTRACTION QUEUE unchanged + assembly reply. Commits through 2b7a0fc33.
+- BUILD ROUND 3 GREEN (02:20Z): ClosureTrace layer PROVEN zero-warning. CertGraph.lean now
+  carries L0-L3 + B6 + B2 + B3 CrossCap + flip + canon switch + B1 ClosureTrace, all verified.
+  LEAN NEXT: Peel checker layer (contract archived) OR LensGates; extraction of top-level
+  assembly reply (13470c, main thread) FIRST next tick, then retask main.

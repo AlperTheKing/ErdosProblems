@@ -707,5 +707,349 @@ theorem partition_crossCap_sound (G : GraphData) (c : CutData)
     simpa using this
   exact crossCap_sound G c atoms D w hcheck hneg hmax
 
+/-! ### B1: bank closure trace replay checker (C1-C4, archived contract).
+State = the packet vertex set only; every step is monotone and carries its own
+metadata, checked locally against the literal graph/cut/row database. Closedness
+is verified RELATIVE to a provided basis; basis completeness is an external
+certificate. v1 deviations (all checker-weakenings, hence sound): sortedness is
+not enforced (Nodup + range only); the C4 protected-cell payload is deferred to
+the protected-cell module; C2 family equality is exact-list (canonical emission
+order); C4 witness rows accept either orientation. -/
+
+/-- Row reference: bad-edge id + row index within that bad edge. -/
+structure RowRef where
+  badId : Nat
+  rowIdx : Nat
+deriving Repr, DecidableEq
+
+/-- A row prefix: which row, and how many leading vertices (1..4). -/
+structure RowPrefixData where
+  ref : RowRef
+  prefixLen : Nat
+deriving Repr, DecidableEq
+
+inductive COrientation
+  | forward
+  | reverse
+deriving Repr, DecidableEq
+
+/-- Closure step kinds (archived C1-C4 contract; C4 carries an explicit trigger). -/
+inductive BankClosureStep
+  | c1RowInterval (badId rowIdx a b : Nat)
+  | c2RowFamily (badId : Nat) (orient : COrientation) (terminal : Nat)
+      (firstExit : Nat × Nat) (fam : List RowPrefixData)
+  | c3BlueDetour (badId rowIdx edgePos : Nat) (path : List Nat)
+  | c4TerminalShadow (shadow trigger : List Nat) (firstExit : Nat × Nat)
+      (cell : List Nat) (witnessRows : List RowPrefixData)
+deriving Repr
+
+/-- Row-family basis item (terminal-shadow type + its complete family). -/
+structure RowFamilyItem where
+  badId : Nat
+  orient : COrientation
+  terminal : Nat
+  firstExit : Nat × Nat
+  fam : List RowPrefixData
+deriving Repr, DecidableEq
+
+structure DetourItem where
+  ref : RowRef
+  edgePos : Nat
+  path : List Nat
+deriving Repr, DecidableEq
+
+structure ShadowItem where
+  shadow : List Nat
+  trigger : List Nat
+  firstExit : Nat × Nat
+  cell : List Nat
+  witnessRows : List RowPrefixData
+deriving Repr, DecidableEq
+
+/-- Closedness basis: closure is checked relative to these lists. -/
+structure BankClosureBasis where
+  rowIntervalBasis : List RowRef
+  rowFamilyBasis : List RowFamilyItem
+  detourBasis : List DetourItem
+  shadowBasis : List ShadowItem
+deriving Repr
+
+/-- Pressure claim carried by a trace. -/
+inductive PressureClaim
+  | none
+  | positive
+  | nonpos
+  | negativeNu0
+deriving Repr, DecidableEq
+
+/-- The closure trace object. -/
+structure BankClosureTrace where
+  start : List Nat
+  steps : List BankClosureStep
+  final : List Nat
+  pressureClaim : PressureClaim
+deriving Repr
+
+/-- Row lookup by reference. -/
+def getRow (bads : List BadEdgeData) (r : RowRef) : Option Row5 :=
+  match bads[r.badId]? with
+  | some b => b.rows[r.rowIdx]?
+  | none => none
+
+/-- Orient a row so position 0 is the declared terminal end. -/
+def orientedVerts (row : Row5) (o : COrientation) : List Nat :=
+  match o with
+  | .forward => row.verts
+  | .reverse => row.verts.reverse
+
+/-- Monotone absorption: append then dedup. -/
+def absorbV (U adds : List Nat) : List Nat := (U ++ adds).dedup
+
+theorem mem_absorbV_left (U adds : List Nat) (v : Nat) (hv : v ∈ U) :
+    v ∈ absorbV U adds :=
+  List.mem_dedup.mpr (List.mem_append.mpr (Or.inl hv))
+
+/-- The complete row-prefix family of a terminal-shadow type, computed from
+    the row database (canonical order). -/
+def familyOf (bads : List BadEdgeData) (badId : Nat) (o : COrientation)
+    (terminal : Nat) (fe : Nat × Nat) : List RowPrefixData :=
+  match bads[badId]? with
+  | none => []
+  | some b =>
+      (List.range b.rows.length).flatMap (fun ri =>
+        match b.rows[ri]? with
+        | none => []
+        | some row =>
+            let R := orientedVerts row o
+            if R.getD 0 0 = terminal then
+              (List.range 4).filterMap (fun l0 =>
+                let l := l0 + 1
+                if normEdge (R.getD (l - 1) 0) (R.getD l 0) = normEdge fe.1 fe.2
+                then some ⟨⟨badId, ri⟩, l⟩ else none)
+            else [])
+
+/-- Activation of one row prefix by the current packet. -/
+def activatedB (bads : List BadEdgeData) (o : COrientation) (U : List Nat)
+    (p : RowPrefixData) : Bool :=
+  match getRow bads p.ref with
+  | none => false
+  | some row =>
+      let R := orientedVerts row o
+      decide (R.getD 0 0 ∈ U) && decide (R.getD (p.prefixLen - 1) 0 ∈ U)
+
+/-- All vertices absorbed by a row-prefix family. -/
+def famPrefixVerts (bads : List BadEdgeData) (o : COrientation)
+    (fam : List RowPrefixData) : List Nat :=
+  fam.flatMap (fun p =>
+    match getRow bads p.ref with
+    | some row => (orientedVerts row o).take p.prefixLen
+    | none => [])
+
+/-- Witness-row check for C4: some orientation puts the prefix inside the
+    shadow with the declared first exit. -/
+def checkWitnessRow (bads : List BadEdgeData) (shadow : List Nat)
+    (fe : Nat × Nat) (p : RowPrefixData) : Bool :=
+  match getRow bads p.ref with
+  | none => false
+  | some row =>
+      let tryO (o : COrientation) : Bool :=
+        let R := orientedVerts row o
+        decide (1 ≤ p.prefixLen) && decide (p.prefixLen ≤ 4) &&
+        ((R.take p.prefixLen).all (fun w => decide (w ∈ shadow))) &&
+        decide (normEdge (R.getD (p.prefixLen - 1) 0) (R.getD p.prefixLen 0)
+          = normEdge fe.1 fe.2)
+      tryO .forward || tryO .reverse
+
+/-- Single-step precondition check, returning the vertices to absorb. -/
+def stepAdds (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (basis : BankClosureBasis) (U : List Nat) :
+    BankClosureStep → Option (List Nat)
+  | .c1RowInterval badId rowIdx a b =>
+      match getRow bads ⟨badId, rowIdx⟩ with
+      | none => none
+      | some row =>
+          let vs := row.verts
+          let i := vs.findIdx (· == a)
+          let j := vs.findIdx (· == b)
+          let lo := min i j
+          let hi := max i j
+          let adds := (vs.drop lo).take (hi - lo + 1)
+          if decide (vs.length = 5) && decide (a ∈ vs) && decide (b ∈ vs) &&
+             decide (a ∈ U) && decide (b ∈ U) &&
+             adds.all (fun w => decide (w < G.n))
+          then some adds else none
+  | .c2RowFamily badId o terminal fe fam =>
+      let adds := famPrefixVerts bads o fam
+      if (match bads[badId]? with
+          | some bE => decide (terminal = bE.u) || decide (terminal = bE.v)
+          | none => false) &&
+         blueb G c fe.1 fe.2 &&
+         decide (fam = familyOf bads badId o terminal fe) &&
+         fam.any (activatedB bads o U) &&
+         adds.all (fun w => decide (w < G.n))
+      then some adds else none
+  | .c3BlueDetour badId rowIdx edgePos path =>
+      match getRow bads ⟨badId, rowIdx⟩ with
+      | none => none
+      | some row =>
+          let vs := row.verts
+          let u := vs.getD edgePos 0
+          let v := vs.getD (edgePos + 1) 0
+          if decide (edgePos < 4) && decide (vs.length = 5) &&
+             blueb G c u v && decide (u ∈ U) && decide (v ∈ U) &&
+             decide (path ≠ []) && decide path.Nodup &&
+             path.all (fun w => decide (w < G.n)) &&
+             ((decide (path.head? = some u) && decide (path.getLast? = some v)) ||
+              (decide (path.head? = some v) && decide (path.getLast? = some u))) &&
+             (path.zip path.tail).all (fun e =>
+               blueb G c e.1 e.2 && decide (normEdge e.1 e.2 ≠ normEdge u v))
+          then some path else none
+  | .c4TerminalShadow shadow trigger fe cell witnessRows =>
+      if shadow.all (fun w => decide (w ∈ cell)) &&
+         cell.all (fun w => decide (w < G.n)) &&
+         blueb G c fe.1 fe.2 &&
+         (decide (fe.1 ∈ shadow) != decide (fe.2 ∈ shadow)) &&
+         trigger.all (fun w => decide (w ∈ U)) &&
+         decide ((⟨shadow, trigger, fe, cell, witnessRows⟩ : ShadowItem)
+           ∈ basis.shadowBasis) &&
+         witnessRows.all (checkWitnessRow bads shadow fe)
+      then some cell else none
+
+/-- Single-step replay: verify preconditions, return the absorbed state. -/
+def replayClosureStep (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (basis : BankClosureBasis) (U : List Nat) (st : BankClosureStep) :
+    Option (List Nat) :=
+  (stepAdds G c bads basis U st).map (absorbV U)
+
+/-- Trace replay by explicit recursion over the step list. -/
+def replayTraceAux (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (basis : BankClosureBasis) : List Nat → List BankClosureStep →
+    Option (List Nat)
+  | U, [] => some U
+  | U, st :: rest =>
+      match replayClosureStep G c bads basis U st with
+      | none => none
+      | some U₁ => replayTraceAux G c bads basis U₁ rest
+
+def replayTrace (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (basis : BankClosureBasis) (tr : BankClosureTrace) : Option (List Nat) :=
+  replayTraceAux G c bads basis tr.start tr.steps
+
+/-- Relative closedness of a vertex set against the provided basis (graph and
+    cut kept in the signature for interface stability; membership-only checks). -/
+def checkClosed (_G : GraphData) (_c : CutData) (bads : List BadEdgeData)
+    (basis : BankClosureBasis) (U : List Nat) : Bool :=
+  basis.rowIntervalBasis.all (fun r =>
+    match getRow bads r with
+    | none => false
+    | some row =>
+        let vs := row.verts
+        (List.range 5).all (fun i => (List.range 5).all (fun j =>
+          !(decide (i < j) && decide (vs.getD i 0 ∈ U) &&
+            decide (vs.getD j 0 ∈ U)) ||
+          ((vs.drop i).take (j - i + 1)).all (fun w => decide (w ∈ U))))) &&
+  basis.rowFamilyBasis.all (fun f =>
+    !(f.fam.any (activatedB bads f.orient U)) ||
+    (famPrefixVerts bads f.orient f.fam).all (fun w => decide (w ∈ U))) &&
+  basis.detourBasis.all (fun d =>
+    match getRow bads d.ref with
+    | none => false
+    | some row =>
+        let u := row.verts.getD d.edgePos 0
+        let v := row.verts.getD (d.edgePos + 1) 0
+        !(decide (u ∈ U) && decide (v ∈ U)) ||
+        d.path.all (fun w => decide (w ∈ U))) &&
+  basis.shadowBasis.all (fun s =>
+    !(s.trigger.all (fun w => decide (w ∈ U))) ||
+    s.cell.all (fun w => decide (w ∈ U)))
+
+/-- Pressure-claim check on a final set. -/
+def checkPressureClaim (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (U : List Nat) : PressureClaim → Bool
+  | .none => true
+  | .positive => decide (0 < pressureNum G atoms D U)
+  | .nonpos => decide (pressureNum G atoms D U ≤ 0)
+  | .negativeNu0 => decide (nu0Num G atoms D U < 0)
+
+/-- Full trace checker (graph/cut checks assumed global per contract). -/
+def checkBankClosureTrace (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat)
+    (basis : BankClosureBasis) (tr : BankClosureTrace) : Bool :=
+  decide tr.start.Nodup && tr.start.all (fun v => decide (v < G.n)) &&
+  decide tr.final.Nodup && tr.final.all (fun v => decide (v < G.n)) &&
+  decide (replayTrace G c bads basis tr = some tr.final) &&
+  checkClosed G c bads basis tr.final &&
+  checkPressureClaim G atoms D tr.final tr.pressureClaim
+
+/-- Every successful step is monotone. -/
+theorem replayStep_subset (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (basis : BankClosureBasis) (U U' : List Nat)
+    (st : BankClosureStep)
+    (h : replayClosureStep G c bads basis U st = some U') :
+    ∀ v ∈ U, v ∈ U' := by
+  intro v hv
+  unfold replayClosureStep at h
+  rcases ho : stepAdds G c bads basis U st with _ | adds
+  · rw [ho] at h
+    simp at h
+  · rw [ho] at h
+    simp at h
+    subst h
+    exact mem_absorbV_left _ _ _ hv
+
+/-- Trace replay is monotone. -/
+theorem replayTraceAux_subset (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (basis : BankClosureBasis) :
+    ∀ (steps : List BankClosureStep) (U V : List Nat),
+    replayTraceAux G c bads basis U steps = some V →
+    ∀ v ∈ U, v ∈ V
+  | [], U, V, h => by
+      simp only [replayTraceAux, Option.some.injEq] at h
+      subst h
+      exact fun v hv => hv
+  | st :: rest, U, V, h => by
+      simp only [replayTraceAux] at h
+      rcases hstep : replayClosureStep G c bads basis U st with _ | U₁
+      · rw [hstep] at h
+        simp at h
+      · rw [hstep] at h
+        simp at h
+        intro v hv
+        exact replayTraceAux_subset G c bads basis rest U₁ V h v
+          (replayStep_subset G c bads basis U U₁ st hstep v hv)
+
+/-- Pressure fact extraction. -/
+theorem checkPressureClaim_positive (G : GraphData) (atoms : List AtomData)
+    (D : Nat) (U : List Nat)
+    (h : checkPressureClaim G atoms D U .positive = true) :
+    0 < pressureNum G atoms D U := by
+  simpa [checkPressureClaim] using h
+
+theorem checkPressureClaim_nonpos (G : GraphData) (atoms : List AtomData)
+    (D : Nat) (U : List Nat)
+    (h : checkPressureClaim G atoms D U .nonpos = true) :
+    pressureNum G atoms D U ≤ 0 := by
+  simpa [checkPressureClaim] using h
+
+theorem checkPressureClaim_negativeNu0 (G : GraphData) (atoms : List AtomData)
+    (D : Nat) (U : List Nat)
+    (h : checkPressureClaim G atoms D U .negativeNu0 = true) :
+    nu0Num G atoms D U < 0 := by
+  simpa [checkPressureClaim] using h
+
+/-- MAIN TRACE SOUNDNESS (consumer-facing): a passing trace yields containment,
+    relative closedness of the final set, and the pressure claim. -/
+theorem bankClosureTrace_sound (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat)
+    (basis : BankClosureBasis) (tr : BankClosureTrace)
+    (h : checkBankClosureTrace G c bads atoms D basis tr = true) :
+    (∀ v ∈ tr.start, v ∈ tr.final) ∧
+    checkClosed G c bads basis tr.final = true ∧
+    checkPressureClaim G atoms D tr.final tr.pressureClaim = true := by
+  unfold checkBankClosureTrace at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  exact ⟨replayTraceAux_subset G c bads basis tr.steps tr.start tr.final
+    (by simpa [replayTrace] using h.1.1.2), h.1.2, h.2⟩
+
 end CertGraph
 end Erdos23Delta0
