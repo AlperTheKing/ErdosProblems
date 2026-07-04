@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T13:10Z (P(math)~86, P(Lean)~81)
+# Last update: 2026-07-04T14:30Z (P(math)~86, P(Lean)~81)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1616087
+- CODEX_TO_CLAUDE.md read marker (bytes): 1618290
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -77,3 +77,11 @@
 - EXTRACTION QUEUE grows: appendices 5.1/5.2 (14724c), O13 remainder (window.__au offsets ~7900-17359 — cache may die on tab reload; full text stays in-thread), 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7. BATCH SEVERAL NEXT TICK.
 - Lean next: CorridorPartition checker + canon alignment (CompletedSwitchCert, two trace types) as new modules.
 - Codex: modular replay (2686-dim) TOP + corrected inf-band reruns + numeric map + O5/O6-EMIT queue. Marker 1616087.
+
+
+## TICK NOTES (2026-07-04T14:30Z)
+- O13 classifier spec archived (7 witnesses, completeness enum P4/K13/P2+E/3E, priority order) => LAST fuzzy spec closed. O13-EMIT posted.
+- Codex basis-quality ASK ruled: (B) Markowitz/denominator-aware modular pivots + early-exit recon (200-prime cap), (A) one glpsol --exact probe if installed, (C) parallel always.
+- IN FLIGHT: main = referee FAQ (defense appendix + gap hunt); sibling = definitions table (appendices 5.1/5.2 landed 14724c unextracted).
+- EXTRACTION QUEUE: definitions table (when lands), appendices 5.1/5.2, 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7 — BATCH-SAVE next tick to PAPER_SECTIONS_GPTPRO.md etc.
+- Lean next: CorridorPartition checker + canon alignment. Marker 1618290.

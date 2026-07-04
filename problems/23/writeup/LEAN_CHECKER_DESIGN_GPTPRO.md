@@ -383,3 +383,65 @@ identity labelling (all adjacent, 04 = 4-0 door). OK.
 12 TManySplitCert {terminals, packetCover, corridorOwners, subcerts : List (T1 + T2)} is a
    SEPARATE type; T2HallCert handles exactly two terminals.
 
+
+# ===== O13: SEED3-PRIME CLASSIFIER SPECIFICATION (main thread, 2026-07-04) =====
+PURPOSE: routing certificate for the ODL three-door branch. Input: pruned saturated
+C5-hom overfull quotient, exactly 3 effective bad doors. Output: one of seven typed
+routes. Classifier does NOT prove ODL/Bank0 — it routes.
+INPUT: C5QuotientData {numBags, classOf: Nat -> Fin 5, weightVar, blueEdges,
+badDoors, rowTemplates, activeRows, positiveBags, supportBags}; bags = true-twin
+classes. Validity: blue edges between consecutive classes; bad doors V4-V0;
+|badDoors| = 3; row templates = length-5 class-respecting paths from declared
+doors; every effective door has a row template; positive-flow bags on rows (unless
+NOT_SATURATED); PrunedSaturatedC5HomOverfullThreeDoor as Prop hypothesis
+(overfullness verified from formulas OR hypothesis).
+OUTPUT: Seed3Output = EQ(EQIsoCert) | SIB(SIBIsoCert) | NO_OVERFULL | NEG_SWITCH |
+PRUNABLE | NOT_SATURATED | FOUR_DOOR; Seed3ClassifierCert {qut, output};
+route type Seed3Route.
+EQ WITNESS (EQIsoCert): contractMap (bag -> EQ vertex 0-9), fiberOf, weightExpr
+(seed weight = sum of fiber weights), edge/row/twin proofs. Checker: totality on
+support; fiber partition; class compatibility; true-twin fiber compatibility (same
+class, cut side, open neighborhood mod fibers, row-incidence role); blue-edge
+image + fullness mod twins (weights aggregate to seed edges); the 3 doors map
+bijectively to {19,27,79}; rows map into the 11 EQ templates; template fullness;
+weight identification. Concludes: qut true-twin-contracts to EQ. Route: ODL ->
+EQ-ODL1 + EQ-AM; Bank0 -> EQ-CERT1.
+SIB WITNESS: same shape vs SIB data (doors {17,19,29}, 13 templates). Route:
+ODL -> SIB-S7 + SIB-AM; Bank0 -> SIB-CERT1.
+NO_OVERFULL: per-active-row RowNoOverfullCert {rowId, denom, target = D_R(N - I_R),
+coneCert}; checker: rows exactly once, D_R > 0 on domain, target correctly
+generated, ConeCert identity + nonneg. Route: ODL immediate; Bank0 -> BankBlock.
+NEG_SWITCH: NegSwitchCert {switch: CompletedSwitchCert, kind CutImprove |
+GammaDescent, strictCert}. CutImprove: ConeCert for -sigma(S) - 1 >= 0 (integer
+strictness). GammaDescent: sigma identically 0 + flipBConnected = true + ConeCert
+for -nu(S) - 1 >= 0 (nu = nuK when sigma = 0). Route: contradiction (branch
+impossible under max-cut / Gamma-min).
+PRUNABLE: PrunableCert {H, T, rest, noCrossExceptT, loadDenom, loadNum =
+D s_H(Q cap T), sizeNum = D(|H|-|T|), defectTarget = sizeNum - loadNum, coneCert}.
+Checker: T = H cap rest; no edge H-minus-T to rest-minus-T; load correctly
+computed; ConeCert sizeNum - loadNum >= 0. Concludes AmbientPrune applies. Route:
+ODL -> reduced core; Bank0 -> reduced-core bank / BankBlock / corridor.
+NOT_SATURATED: SaturationFailure = MissingDoor(door,rowWitness) | MissingBag(bag,
+rowWitness); checker verifies effectiveness. Not terminal: absorb + rerun; under
+saturated-input hypothesis it is contradictory.
+FOUR_DOOR: FourDoorCert {fourthDoor, rowWitness}: bad V4-V0 edge distinct from the
+3 declared, with valid effective row. Route: ODL -> q>=4 A1-5mask; Bank0 ->
+BankBlock; contradicts the 3-door input claim => reroute before Seed3.
+COMPLETENESS (Seed3Complete): relies on TrueTwinFiniteSeed3Contraction — under
+C5-hom + pruned + saturated + overfull + 3 doors + all-l5 + no NEG_SWITCH +
+no PRUNABLE + no NOT_SATURATED + no FOUR_DOOR, the true-twin contraction is one
+of the FINITE enumerated 3-door candidates (door-graph types P4, K_{1,3},
+P2 u E, 3E); survivors after saturation/pruning/switch/overfull filters = EQ and
+SIB exactly; all other candidates emit one of the five other outputs. Status:
+finite enumeration certificate.
+CHECKER ORDER: syntax -> C5-hom class rule -> three doors -> row validity ->
+overfull metadata -> output dispatch (7 branches) -> typed route.
+DETERMINISM: output not mathematically unique (e.g. NO_OVERFULL and PRUNABLE can
+coexist). EMISSION PRIORITY (convention, not soundness): NOT_SATURATED >
+FOUR_DOOR > NEG_SWITCH > PRUNABLE > NO_OVERFULL > EQ > SIB. Checker verifies the
+emitted route only. Soundness: Seed3Classifier.sound : check = true -> Seed3Route.
+Consumers: ODL (toEQ/toSIB/noOverfull/contradiction/prunable/notSaturated/
+fourDoor as routed) and Bank0 (per the archived routing table).
+=> O13 DESIGN DONE. All 7 witness families target canon structures
+(CompletedSwitchCert, ConeCert).
+
