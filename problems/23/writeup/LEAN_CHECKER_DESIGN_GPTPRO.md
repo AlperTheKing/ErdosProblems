@@ -505,3 +505,65 @@ EMISSION CONVENTIONS (Codex): sorted dup-free VSets; normalized edges; global Ro
 C2 families complete vs RowDB; C4 explicit trigger; C3 paths simple+blue; D-premultiplied
 integers; ProtectedCellCert emitted separately and referenced; NO dead-tail additions
 (C1-C4 only); redundant steps may be omitted (closure checked at end).
+
+
+# ===== B10 PEEL + BANK0 ASSEMBLY STATEMENT FILE (main thread, 2026-07-04) — FULL CONTRACT =====
+CANONICAL CORRECTION: Bank0 `nch` constructor = NCHBankCert (scalar-bank-safe WRAPPER routing
+to cross/forbid/label contradiction via corridor engine, bankBlocks, peel, or future non-C5-hom
+seed bank). It must NOT consume ODL-only NCH-def (s_H(Q cap T) <= |H|-|T| is row-load pruning
+for ODL, not a scalar-bank proof).
+
+PEELCERT (blue-pendant peels ONLY): removes R_rem attached through ONE root t; A = R_rem u {t}.
+Fields: removed(VSet), root, keepMap (sorted complement; small i <-> keepMap[i]), smallG,
+smallCut, smallRows, smallCert : Bank0Cert, parity : List Bool (side(v) xor side(root)),
+nSmallLt, edge/rowCheckData.
+CHECKS P0-P7 (all recomputed): P0 sets/ranges/complement/smallG.n = keepMap.length < G.n;
+P1 induced edges recomputed + compared to smallG.edges, smallCut = restriction;
+P2 PENDANT BOUNDARY: every removed-to-kept edge lands on root (excludes multi-attached);
+P3 BLUE-ONLY APPENDAGE: every edge touching removed is blue => badCount(G,c) =
+badCount(G_small,c_small) (checker recomputes BOTH);
+P4 BLUE-CONNECTED APPENDAGE: every removed vertex blue-connected to root inside
+removed u {root} (BFS) — needed to extend B-connectedness back;
+P5 PARITY: parity consistent across appendage edges — any small cut EXTENDS to G with all
+appendage edges blue: Ext(c*)(v) = c*(root*) xor parity(v);
+P6 ROW-INVISIBILITY: NO row in RowDB uses a removed vertex (preserves all-l5 structure);
+P7 small RowDB = image of big RowDB under keepMap inverse (bijective row transfer).
+PRESERVATION LEMMAS (proofs archived in-reply): P-MaxCut (extend better small cut => beat c);
+P-BConnected (P4); P-Distances (blue excursions through appendage repeat root => equal blue
+distances between kept vertices); P-AllLengthFive; P-GammaMinimal (Gamma equal on both sides).
+PeelCert.sound: check + big Props => PeelPreservesFacts {nSmallLt, badCount_eq, triSmall,
+maxSmall, gammaSmall, bconnSmall, rowsSmall}.
+BANK TRANSFER: IH 25*badCount_small <= smallN^2, badCount_eq, smallN <= N =>
+25*badCount(G,c) <= N^2 (Nat.le_trans + Nat.pow_le_pow_left).
+
+BANK0STATEMENT (exact induction predicate):
+Bank0Statement n := forall G c rows cert, G.n = n -> checkGraph -> checkCut ->
+checkBank0Cert G c rows cert = true -> TriangleFree G -> IsMaxCut G c ->
+GammaMinimalConnected G c rows -> BConnected G c -> RowDBFacts G c rows ->
+25 * badCount G c <= n^2.
+RowDBFacts (Prop structure): rowsSound, rowsComplete, allBadLengthFive, atomDBSound.
+
+BANK0CERT + DISPATCH: inductive Bank0Cert = globalC5(GlobalC5Cert) |
+bankBlocks(BankBlockCoverCert) | cross(Bank0CrossCert) | peel(PeelCert) | nch(NCHBankCert).
+checkBank0Cert: structural recursion ON THE CERT (peel case: checkPeelCert && recursive
+checkBank0Cert on smallCert) — Lean accepts as ordinary structural recursion; the THEOREM
+recursion is on graph size (separate).
+CONSTRUCTOR SOUNDNESS: GlobalC5Cert.sound (labelling + template cuts m <= e(Vi,Vi+1) <=
+|Vi||Vi+1| + AM-GM => 25m <= N^2; needs hMax); BankBlockCoverCert.sound (disjoint blocks +
+bad partition + products + per-block AM-GM + sum|B|^2 <= N^2); Bank0CrossCert.sound (corridor
+partition + negative corridor + CrossCap + completed switch => N*sigma <= nu0 < 0 => sigma < 0
+vs max-cut => FALSE; then False.elim); PeelConstructor.sound (PeelCert.sound => facts => IH at
+smallG.n => transfer); NCHBankCert.sound (route theorem dispatching to the above, takes IH).
+STRONG INDUCTION: bank0_all (n) (IH : forall n' < n, Bank0Statement n') : Bank0Statement n :=
+intro/subst/cases cert (5 branches as above). bank0_statement_all : forall n, Bank0Statement n
+:= Nat.strong_induction_on n bank0_all. bank0_of_cert: the consumer-facing wrapper.
+PITFALLS: (6.1) checker recursion structural on cert, proof recursion on N — keep separate;
+(6.2) checkPeelCert verifies STRUCTURE only — small Props (maxcut/gamma/bconn/rows) are
+DERIVED from big Props via preservation lemmas, never checker-claimed; (6.3) every nu_K use
+in Cross/NCH internals requires flipBConnected = true (canonical CompletedSwitchCert field);
+(6.4) target in Nat, pressure/sigma in Int — transfer lemmas end in Nat, cast carefully;
+(6.5) bad-count equality comes from BLUE-APPENDAGE (P3), never from edge-count equality.
+FILE SHAPE: Erdos23Delta0/Bank0/Assembly.lean imports GraphData/CutData/Rows/BankBlocks/
+CrossCap/ClosureTrace/Peel/GlobalC5/NCHBank; declares Bank0Statement, bank0_all,
+bank0_statement_all, bank0_of_cert. This is the Bank0 scalar theorem consumed by
+Branch-A C5-RS.

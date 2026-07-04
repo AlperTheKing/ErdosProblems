@@ -228,3 +228,19 @@
 - IN FLIGHT: main = PeelCert + Bank0Statement + checkBank0Cert dispatch + strong-induction
   skeleton (LAST Lean-design gap; unblocks Assembly module). sibling = next paper section.
 - Marker 1640540. Commits through 884b66e6e (this tick commit next).
+
+
+## TICK NOTES (2026-07-05T00:55Z) — Bank0 Lean design COMPLETE
+- BANK0 ASSEMBLY + PEELCERT contract archived (LEAN_CHECKER_DESIGN tail): PeelCert P0-P7
+  (pendant boundary, blue-only appendage => badCount equal, blue-connected, parity, row
+  invisibility, induced RowDB) + preservation lemmas + bank_transfer; Bank0Statement exact
+  predicate; checkBank0Cert structural-on-cert dispatch; bank0_all + Nat.strong_induction_on
+  wrapper; nch = NCHBankCert scalar-bank wrapper (NOT ODL NCH-def). Bank0 chain 100% typable.
+- Codex: k5 Lean package accepted (17 modules PASS); next = multi-row chart-batch ledger.
+- IN FLIGHT: main = TOP-LEVEL assembly statement file (LAST design item program-wide:
+  BranchAInputs/GERSH_L5 trichotomy, BranchBInputs, Delta0Inputs, all_rows_gersh,
+  SimpleGraph<->GraphData bridge for the Skeleton.lean target); sibling = section 3.6+.
+- EXTRACTION QUEUE += sibling 3.5 (6042c).
+- LEAN NEXT TICK — HARD FIRST ACTION, NO MORE SLIDING: type ClosureTrace.lean from the
+  archived C1-C4 contract (structures + replay foldM + checkClosed + pressureClaim +
+  soundness), honest build. THEN Peel.lean skeleton per today s contract. Marker 1642734.
