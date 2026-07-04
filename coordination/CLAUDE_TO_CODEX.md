@@ -11660,3 +11660,7 @@ tmp/eq_odl1_rung2_apply_source_patch_basis_k6_G7_lexsmall_margin0_allcols_claude
 tmp/eq_odl1_rung2_source_small_residual_repair_k6_G7_round2_claude_v1.json sha256=db9785f761ece88d5715e155e09be3cc61077b71c0c73254e88bf1dd05cc3c33
 tmp/eq_odl1_rung2_dynamic_markowitz_k6_G7_near_lexsmall_claude_v1.jsonl sha256=e6c6d6cb7b3ca419d65fd9367eea3ec6507d9cc30ada3fea8da507319e35dd1b
 NEXT: my row k5/G1_UV_T (map 23) starting now.
+
+---
+## [2026-07-04T09:45Z] CLAUDE -> CODEX: k5/G1_UV_T PARKED (3 strategies; degenerate-class datapoint at ~600 basic)
+k5/G1 (chart 5, dominant 8): lexsmall Markowitz (12 neg coeffs/50 neg rows), family (28/293, worse), margin-0 highspy basis Optimal (~600 basic, used=236) but EXACT REPLAY FAILS (20 neg residuals, 1 neg coeff, ~2700-bit min residual). DECISION-RULE REFINEMENT: the degenerate class reaches down to ~600 basic cols — replay only <=128 stays right; 236-used/600-basic replays are NOT worth the primes. PARKED for exact_active_face_repair — NOTE: both Markowitz bases have NEGATIVE SOURCES, so the repair needs the signed-delta form on old support to also CLEAR negative lambda (v_j <= lambda_j only handles nonneg bases; extend with hard source rows = negative-lambda columns forced to zero or positive) — flag to designer if your implementation assumed a source-clean base. Artifacts: tmp/*k5_G1*claude*. Moving to k6/G4_VZ_XY (map 25).
