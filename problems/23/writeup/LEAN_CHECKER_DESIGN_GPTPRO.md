@@ -710,3 +710,38 @@ same-(k,a) pointer); 42 LEFT skip carries explicit FaceCert for P(0,u) >= 0; 43 
 degrees (degreeX/Mu/Rho), checker verifies <= declared (no hardcoded EQ 15 / SIB 16);
 47 IsMaxCut = badCount-minimal structure {valid, min_bad} (8); 49 BConnected def guards n=0;
 50 gammaMinConnected_exists needs no triangle-free.
+
+
+# ===== SIGMACHAIN PROVIDER: P-MAXCUT PRESERVATION (main, 2026-07-05) — LAST BANK0 LINK =====
+GOAL: sigmaNonneg_small_of_peel (checkPeel + sigmaNonneg G c => sigmaNonneg smallG smallCut).
+Uses ONLY checked peel facts + the green flip calculus (no triangle-free/gamma-min/B-conn).
+CONSTRUCTION: idxOf? helper (+ some->lt, some->getD facts); extSide p d v = match idxOf?
+keepMap v with some i => sideb d i | none => (match idxOf? removed v with some r =>
+xor (sideb d rootSmallIdx) (parity.getD r false) | none => false [unreachable]);
+extendCut G p d = { side := (List.range G.n).map (extSide p d) } — length exactly G.n by
+construction (NEVER append manually). NOTE: my green PeelData lacks rootSmallIdx — ADD field
++ checker conjunct keepMap.getD rootSmallIdx 0 = root && rootSmallIdx < keepMap.length.
+KEY LEMMA 1 badCount_extendCut_eq: badCount G (extendCut p d) = badCount smallG d. Type A
+kept-kept edges: sides equal via keepMap restriction => bijective with smallG edges (induced).
+Type B removed-touching edges: root-v blue iff parity(v) = true (checker P5 verified from the
+ORIGINAL blue appendage); u-v both removed: side xor = parity(u) xor parity(v) — opposite
+parity checked => ALL appendage edges blue under EVERY extension (this is WHY P5 exists —
+original-cut blueness alone is insufficient, pitfall 7.4). => removed edges contribute 0.
+LEMMA 2 extend_smallCut_eq_bigCut_on_sides: Ext(smallCut) sides = c sides (kept: restriction;
+removed: c(root) xor parity(v) = c(v) since parity(v) = c(root) xor c(v)); corollary
+badCount_smallCut_eq_big: badCount smallG smallCut = badCount G c.
+EQUIVALENCE: BadCountMinimal G c := forall valid d, badCount c <= badCount d.
+symmDiffSupport G c d = (range n).filter (sideb c != sideb d); flip_symmDiff_eq_on_sides
+(Boolean cases); badCount_flip_symmDiff_eq (side extensionality of badCount);
+badCount_min_of_sigmaNonneg (flip identity + hSig at S = symmDiff);
+sigmaNonneg_of_badCount_min (flip valid + identity); sigmaNonneg_iff_badCount_min.
+TRANSFER: small_badCount_min_of_peel (big minimality + badCount_smallCut_eq_big +
+badCount_extendCut_eq squeeze); sigmaNonneg_small_of_peel (needs checkGraph/checkCut on
+smallG from checkPeel — P0/P1 conjuncts); SigmaChain_of_sigmaNonneg by structural recursion
+on cert (peel case: extract hPeel + hSmallCert from the && , apply transfer, recurse).
+PITFALLS: 7.1 range-map side list; 7.2 getD guarded by idxOf? bounds, none-branch unreachable
+via keepMap ∪ removed = range n; 7.3 removed side uses sideb d rootSmallIdx (the SMALL cut's
+current root side, NOT the original); 7.4 P5 = blue-under-every-extension; 7.5 multi-attach
+excluded by P2; 7.6 peel cases force n >= 2 (no degenerate handling needed).
+=> BANK0 IS FULLY SELF-CONTAINED once typed: bank0Cert_sound + SigmaChain_of_sigmaNonneg +
+sigma_nonneg_of_isMaxCut (green) = 25*badCount <= n^2 from IsMaxCut + checkBank0Cert alone.
