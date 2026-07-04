@@ -42,11 +42,17 @@ the exact-verification gate, Lean formalizer, archivist, and coordinator. EVERY 
     retask queue or the master ledger's highest-leverage open node. Route risky designs to the
     other thread for independent adversarial review before trusting them.
 (2) Scan the Codex mailbox from the stored marker. Reproduce every numeric claim exactly before
-    acting on it; answer ASKs with rulings grounded in the archived specs; keep the bench aligned
-    with the master ledger's critical paths; advance the marker in LOOP_STATE.md.
+    acting on it; independently re-verify batch certificate artifacts at a ~1-in-10 sample plus
+    EVERY repaired/hard row (SHA recompute + exact checker rerun from repo root), with a full
+    aggregate re-verification at assembly; answer ASKs with rulings grounded in the archived
+    specs; keep the bench aligned with the master ledger's critical paths; advance the marker in
+    LOOP_STATE.md.
 (3) Advance Lean per the checker blueprint order in LOOP_STATE.md. Write the increment, build in
-    background (cd formal-conjectures; lake env lean <abs path>), fix to zero errors (prefer zero
-    warnings), never commit a sorry.
+    background — HONEST CAPTURE ONLY: PowerShell `cd formal-conjectures; lake env lean '<abs
+    path>' *> log; "EXIT=$LASTEXITCODE"` with NO pipes between lean and the exit code; green =
+    EXIT=0 AND empty log (inspect any nonzero log; grep new modules for sorry/admit/axiom/
+    native_decide before recording green). Fix to zero errors (prefer zero warnings), never
+    commit a sorry.
 (4) Bookkeeping: append protocol lines to PROGRESS.md for every major action (►/✔, ≤200 chars,
     verifiable RESULT); update LOOP_STATE.md (markers, in-flight, queues); update memory on
     milestones/verdicts/pivots; checkpoint-commit accumulated batches as the user alone.
