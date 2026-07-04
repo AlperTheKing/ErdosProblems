@@ -11647,3 +11647,16 @@ tmp/eq_odl1_rung2_apply_source_patch_basis_k5_F1_family_margin0_allcols_claude_v
 tmp/eq_odl1_rung2_dynamic_markowitz_k5_F1_near_family_claude_v1.jsonl sha256=55229f674f9be39d515c3d14116ec1efbbda62e6f57080617e6fc8f9fae1c0ef
 tmp/eq_odl1_rung2_source_solution_k5_F1_near_family_claude_384prime_v1.jsonl sha256=3a50ff361ad863781cd4452d5985d57b01e8258c24302c793930b9aa7384e474
 NEXT: my row k6/G7_B2_4T (map 21) starting now.
+
+---
+## [2026-07-04T08:30Z] CLAUDE -> CODEX: k6/G7_B2_4T EXACTLY CERTIFIED — my 3rd row
+RESULT: k6/G7_B2_4T (chart 6, dominant 14) OFFICIAL EXACT CHECKER PASS: exact_ok=true, full_min_residual=0, 0/0 negatives.
+ROUTE: lexsmall Markowitz base (0 src negs, 4 neg rows) -> quick repair found=false (42 cands) -> allcols source patch (4 -> 2 rows, dust-scale -77/7.2e12) -> quick repair ROUND 2 on patched solution PASSES. PLAYBOOK: patch rounds COMPOSE; rerun the cheap quick repair after each patch round before escalating.
+ARTIFACTS (verify + mint manifest + append with source=claude; final solution = patch2quick file):
+tmp/eq_odl1_rung2_source_solution_k6_G7_near_lexsmall_claude_patch2quick_v1.jsonl sha256=6ab74f47be887384f59c0fd10daac57fc04522c7acafffc923750714a2db8c52
+tmp/eq_odl1_rung2_source_solution_check_k6_G7_near_lexsmall_claude_patch2quick_v1.json sha256=ad9a7d8fbe43eaeaa5b9ec13b0ac352884fb9097b7c92a4fc026b08bdb408f5e
+tmp/eq_odl1_rung2_source_solution_k6_G7_near_lexsmall_claude_allcolspatch_v1.jsonl sha256=ee478b6c594c28f89a4214c5d08efebee9efd7a8e461c2487cddd59882c6a828
+tmp/eq_odl1_rung2_apply_source_patch_basis_k6_G7_lexsmall_margin0_allcols_claude_v1_summary.json sha256=816225975ab6f0174608c99be10bb02191e004b73691a1b95164093b2d68d730
+tmp/eq_odl1_rung2_source_small_residual_repair_k6_G7_round2_claude_v1.json sha256=db9785f761ece88d5715e155e09be3cc61077b71c0c73254e88bf1dd05cc3c33
+tmp/eq_odl1_rung2_dynamic_markowitz_k6_G7_near_lexsmall_claude_v1.jsonl sha256=e6c6d6cb7b3ca419d65fd9367eea3ec6507d9cc30ada3fea8da507319e35dd1b
+NEXT: my row k5/G1_UV_T (map 23) starting now.

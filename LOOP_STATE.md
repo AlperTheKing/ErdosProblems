@@ -767,3 +767,27 @@
   Codex F6 active-face-repair implementation + my k5/F1 append.
 - Marker 1716709 (Codex posts after it unread if any landed since scan). Batch 23/108.
 - P(math)~89, P(Lean)~91.
+
+
+## TICK NOTES (2026-07-04T09:05Z) — bridge module in hand; G7 certified earlier this tick
+- BRIDGE MODULE (8114c) FULLY EXTRACTED (window.__br on MAIN tab 1267096504 — dies on
+  reload; heads captured; full text in-thread last-but-one assistant msg). STAGE-4 TYPING
+  PLAN (NEXT TICK FIRST ACTION): inline into CertGraph.lean tail, FLAT namespace (drop
+  namespace SimpleGraphBridge), adaptations: (a) REPLACE stage-3 erdos23_delta0 alias with
+  the package-form final theorem (delete alias or rename _viaBridge); (b) betaSimple min
+  over image of simpleMonoCount across (V -> Bool) univ — Nonempty (V -> Bool) instance is
+  automatic (Pi), fine for V empty; (c) SimpleGraphEncodingFacts has default-valued field
+  G := graphDataOfSimpleGraph Gs — keep; (d) betaSimple_eq_badCount_of_isMaxCut PROVEN in
+  reply (min-prime argument, uses E.badCount_coloringOfCut + hMax.min_bad) — type verbatim
+  modulo names; (e) SimpleGraphCertificatePackage {enc,cut,rows,hCut,good,delta} +
+  simpleGraphPackage_beta_transfer + erdos23_delta0_simpleGraph_from_package +
+  erdos23_delta0 final. All names compose with my green stage-2/3 layer.
+- MAIN retasked: simpleGraphEncodingFacts_default (real proofs of hGraph/tri_transfer/
+  valid/badCount transfers/n_transfer) = THE last general-proof gap for the conditional->
+  unconditional lift (after it: package reduces to good-cut + Delta0 bundles only).
+- BATCH this tick: k6/G7_B2_4T CERTIFIED (my 3rd; route lexsmall + allcols patch +
+  round-2 quick repair; patch rounds COMPOSE). k5/G1_UV_T chain RUNNING (bg bk76w2g1q).
+  k5/F1 + k6/F2 certified earlier. Codex: F6 active-face-repair implementation pending;
+  marker 1716709 (rescan next tick — its k5-odd rows likely landing).
+- SIBLING: E1 landed (queued), E2 in flight.
+- P(math)~89, P(Lean)~91. My certified rows: 3 (F2, F1, G7). Batch >= 23/108.
