@@ -1384,5 +1384,91 @@ theorem checkBankBlockCover_badCount (G : GraphData) (c : CutData)
   unfold badCount
   omega
 
+/-- Constant-multiple of a list sum. -/
+theorem sum_map_mul_const (k : Nat) : ∀ l : List Nat,
+    (l.map (fun x => k * x)).sum = k * l.sum
+  | [] => by simp
+  | a :: l => by
+      simp only [List.map_cons, List.sum_cons, sum_map_mul_const k l]
+      ring
+
+/-- BANK-BLOCK COVER BOUND: a passing cover check yields the Bank0 scalar
+    inequality — badCount splits over the blocks, each block pays via the
+    cyclic AM-GM, and the disjoint supports square-sum below n². -/
+theorem coverBound (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (w : BankBlockCoverCert)
+    (h : checkBankBlockCover G c bads w = true) :
+    25 * badCount G c ≤ G.n ^ 2 := by
+  have hbc := checkBankBlockCover_badCount G c bads w h
+  unfold checkBankBlockCover at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at h
+  have hall := h.1.1.1.1
+  have hlen := h.1.1.2
+  have hnodup := h.1.2
+  have hrange := h.2
+  have hblock : ∀ b ∈ w.blocks,
+      25 * b.badIds.length ≤ b.support.length ^ 2 := by
+    intro b hb
+    have hp := checkBankBlock_products G bads b (hall b hb)
+    rw [support_length b]
+    exact bank_amgm_nat _ _ _ _ _ _ (hp 0) (hp 1) (hp 2) (hp 3) (hp 4)
+  have e1 : (w.blocks.flatMap (fun b => b.badIds)).length
+      = (w.blocks.map (fun b => b.badIds.length)).sum := by
+    rw [List.length_flatMap]
+  have e2 : (w.blocks.flatMap BankBlock.support).length
+      = (w.blocks.map (fun b => b.support.length)).sum := by
+    rw [List.length_flatMap]
+  have hmm : (w.blocks.map (fun b => 25 * b.badIds.length)).sum
+      = 25 * (w.blocks.map (fun b => b.badIds.length)).sum := by
+    have := sum_map_mul_const 25 (w.blocks.map (fun b => b.badIds.length))
+    simpa [List.map_map, Function.comp] using this
+  have step1 : (w.blocks.map (fun b => 25 * b.badIds.length)).sum
+      ≤ (w.blocks.map (fun b => b.support.length ^ 2)).sum :=
+    List.sum_le_sum hblock
+  have step2 : (w.blocks.map (fun b => b.support.length ^ 2)).sum
+      ≤ ((w.blocks.map (fun b => b.support.length)).sum) ^ 2 := by
+    have := natSumSq_le_sqSum (w.blocks.map (fun b => b.support.length))
+    simpa [List.map_map, Function.comp] using this
+  have step3 : (w.blocks.map (fun b => b.support.length)).sum ≤ G.n := by
+    rw [← e2]
+    exact nodupLt_length_le _ _ hnodup (fun x hx => hrange x hx)
+  calc 25 * badCount G c
+      = 25 * (w.blocks.map (fun b => b.badIds.length)).sum := by
+        rw [hbc, ← hlen, e1]
+    _ = (w.blocks.map (fun b => 25 * b.badIds.length)).sum := hmm.symm
+    _ ≤ (w.blocks.map (fun b => b.support.length ^ 2)).sum := step1
+    _ ≤ ((w.blocks.map (fun b => b.support.length)).sum) ^ 2 := step2
+    _ ≤ G.n ^ 2 := Nat.pow_le_pow_left step3 2
+
+/-! ### NCHBank wrapper: scalar-bank-safe routing (audit canonical form).
+Routes a non-C5-hom seed situation to one of the closed scalar-bank payloads;
+never consumes ODL-only NCH-def. The peel route recurses at the Bank0Cert
+level, not here; the future non-C5-hom seed-bank constructor is added when
+its certificate family exists (accepting fewer certs is sound). -/
+
+inductive NCHBankCert
+  | toGlobalC5 (b : BankBlock)
+  | toCover (w : BankBlockCoverCert)
+  | toCross (w : Bank0CrossCert)
+deriving Repr
+
+def checkNCHBank (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (atoms : List AtomData) (D : Nat) : NCHBankCert → Bool
+  | .toGlobalC5 b => checkGlobalC5 G c b
+  | .toCover w => checkBankBlockCover G c bads w
+  | .toCross w => checkBank0Cross G c atoms D w
+
+/-- NCHBank soundness: every route yields the scalar bank inequality (the
+    cross route via refutation of max-cut). -/
+theorem nchBank_sound (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (atoms : List AtomData) (D : Nat) (cert : NCHBankCert)
+    (h : checkNCHBank G c bads atoms D cert = true)
+    (hmax : ∀ S : List Nat, 0 ≤ sigma G c S) :
+    25 * badCount G c ≤ G.n ^ 2 := by
+  cases cert with
+  | toGlobalC5 b => exact globalC5_bound G c b h
+  | toCover w => exact coverBound G c bads w h
+  | toCross w => exact (bank0Cross_sound G c atoms D w h hmax).elim
+
 end CertGraph
 end Erdos23Delta0

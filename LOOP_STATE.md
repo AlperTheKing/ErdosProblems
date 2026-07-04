@@ -422,3 +422,20 @@
   bank0_all (Nat.strong_induction_on).
 - Batch 12/108 (k5/B0 no-repair). Sibling dead-stub nudged (regenerating). Main = FAQ 51+.
   Marker 1672741.
+
+
+## TICK NOTES (2026-07-05T12:35Z) — ALL 5 Bank0 payloads proven; batch 14/108
+- LEAN: coverBound GREEN first try (cover payload UNCONDITIONAL 25m <= n^2) + NCHBank wrapper
+  GREEN (nchBank_sound: globalC5/cover routes unconditional, cross route via refutation).
+  PAYLOAD SCOREBOARD: globalC5 CLOSED, bankBlocks/cover CLOSED, cross CLOSED (hmax),
+  nch CLOSED (hmax), peel graph-side CLOSED + peel_bank_transfer. REMAINING BANK0 LEAN:
+  Bank0Cert inductive (peel carries smallBads/smallAtoms/rest) + checkBank0Cert dispatch
+  (structural on cert) + bank0_all strong induction — DESIGN DECISION for the peel case:
+  small-graph sigma-nonneg hypothesis must come from P-MaxCut preservation (parity extension
+  lemma, not yet formalized) OR carried as a per-level hypothesis via a quantified form
+  (hmax on every peel-descendant instance). Ask main next tick for the cleanest Lean form
+  (likely: state bank0_all with hypothesis on ALL descendant instances reachable through the
+  cert's peel chain — a recursive Prop — vs formalize extension+P-MaxCut now).
+- Batch 14/108: k6/F3 (384-prime escalation) + HARD k5/G5 pair-repair — k5/G5 reverified by
+  me (6th; all repaired rows covered). first_pending = k5/G7_B2_4T (hard). Marker 1676207.
+- Main = FAQ 51+ (in flight); sibling = regenerating post-stub section.
