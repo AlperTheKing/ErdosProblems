@@ -1524,5 +1524,111 @@ theorem bank0Cert_sound :
       have hIH := bank0Cert_sound rest p.smallG p.smallCut sB sA D h.2 hs.2
       exact peel_bank_transfer G c bads p h.1 hIH
 
+/-! ### SigmaChain provider, stage A: σ-nonnegativity ↔ badCount-minimality
+(archived P-MaxCut preservation contract §4; peel-independent half). -/
+
+/-- Bad counts agree for cuts with identical sides on all vertices. -/
+theorem badCount_congr (G : GraphData) (c1 c2 : CutData)
+    (hG : checkGraph G = true)
+    (hs : ∀ v < G.n, sideb c1 v = sideb c2 v) :
+    badCount G c1 = badCount G c2 := by
+  unfold badCount
+  congr 1
+  apply List.filter_congr
+  intro e he
+  have hedge : checkEdge G e = true := by
+    unfold checkGraph at hG
+    simp only [Bool.and_eq_true, List.all_eq_true] at hG
+    exact hG.1 e he
+  unfold checkEdge at hedge
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hedge
+  have h1 : e.1 < G.n := lt_trans hedge.1 hedge.2
+  have h2 : e.2 < G.n := hedge.2
+  unfold badb
+  rw [hs e.1 h1, hs e.2 h2]
+
+/-- Bad-count minimality over all valid cuts (what IsMaxCut means here). -/
+def BadCountMinimal (G : GraphData) (c : CutData) : Prop :=
+  ∀ d : CutData, checkCut G d = true → badCount G c ≤ badCount G d
+
+/-- Vertices whose side differs between two cuts. -/
+def symmDiffSupport (G : GraphData) (c d : CutData) : List Nat :=
+  (List.range G.n).filter (fun v => sideb c v != sideb d v)
+
+theorem flipCut_side_length (c : CutData) (S : List Nat) :
+    (flipCut c S).side.length = c.side.length := by
+  simp [flipCut]
+
+/-- Flipping the symmetric difference lands exactly on the other cut. -/
+theorem flip_symmDiff_sides (G : GraphData) (c d : CutData)
+    (hc : checkCut G c = true) (_hd : checkCut G d = true) :
+    ∀ v < G.n, sideb (flipCut c (symmDiffSupport G c d)) v = sideb d v := by
+  intro v hv
+  unfold checkCut at hc
+  simp only [decide_eq_true_eq] at hc
+  have hvlen : v < c.side.length := by omega
+  rw [sideb_flip c _ v hvlen]
+  by_cases hmem : v ∈ symmDiffSupport G c d
+  · have hne : sideb c v != sideb d v := by
+      unfold symmDiffSupport at hmem
+      simp only [List.mem_filter, List.mem_range] at hmem
+      exact hmem.2
+    rw [if_pos hmem]
+    revert hne
+    cases sideb c v <;> cases sideb d v <;> simp
+  · rw [if_neg hmem]
+    have heq : ¬(sideb c v != sideb d v) := by
+      intro hne
+      exact hmem (by
+        unfold symmDiffSupport
+        simp only [List.mem_filter, List.mem_range]
+        exact ⟨hv, hne⟩)
+    revert heq
+    cases sideb c v <;> cases sideb d v <;> simp
+
+theorem badCount_flip_symmDiff (G : GraphData) (c d : CutData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hd : checkCut G d = true) :
+    badCount G (flipCut c (symmDiffSupport G c d)) = badCount G d :=
+  badCount_congr G _ d hG (flip_symmDiff_sides G c d hc hd)
+
+/-- σ-nonnegativity gives global bad-count minimality (any valid cut is the
+    flip of c at their symmetric difference). -/
+theorem badCount_min_of_sigmaNonneg (G : GraphData) (c : CutData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hSig : sigmaNonneg G c) : BadCountMinimal G c := by
+  intro d hd
+  have hlen : c.side.length = G.n := by
+    unfold checkCut at hc
+    simpa using hc
+  have hflip := badCount_flip_eq G c (symmDiffSupport G c d) hlen hG
+  have hs := hSig (symmDiffSupport G c d)
+  have heq := badCount_flip_symmDiff G c d hG hc hd
+  unfold sigma at hs
+  omega
+
+/-- Bad-count minimality gives σ-nonnegativity (every flip is a valid cut). -/
+theorem sigmaNonneg_of_badCount_min (G : GraphData) (c : CutData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hMin : BadCountMinimal G c) : sigmaNonneg G c := by
+  intro S
+  have hlen : c.side.length = G.n := by
+    unfold checkCut at hc
+    simpa using hc
+  have hvalid : checkCut G (flipCut c S) = true := by
+    unfold checkCut at hc ⊢
+    rw [flipCut_side_length]
+    exact hc
+  have hmin := hMin (flipCut c S) hvalid
+  have hflip := badCount_flip_eq G c S hlen hG
+  unfold sigma
+  omega
+
+theorem sigmaNonneg_iff_badCount_min (G : GraphData) (c : CutData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true) :
+    sigmaNonneg G c ↔ BadCountMinimal G c :=
+  ⟨badCount_min_of_sigmaNonneg G c hG hc,
+   sigmaNonneg_of_badCount_min G c hG hc⟩
+
 end CertGraph
 end Erdos23Delta0

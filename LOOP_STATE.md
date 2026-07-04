@@ -479,3 +479,17 @@
   (etaNonneg edge) + Assembly.lean per top-level contract.
 - Main = Lean-architecture paper section (in flight). Sibling = post-stub regen (CHECK).
   Batch 17/108, marker 1681172. FAQ 51+ + q=3 section + sections 2.2-3.8 in extraction queue.
+
+
+## TICK NOTES (2026-07-05T16:10Z) — SigmaChain stage A green first try
+- LEAN: stage A PROVEN zero-warning: badCount_congr (filter congruence via checkEdge ranges),
+  BadCountMinimal, symmDiffSupport, flipCut_side_length, flip_symmDiff_sides (Bool case
+  bash), badCount_flip_symmDiff, badCount_min_of_sigmaNonneg (flip identity + omega),
+  sigmaNonneg_of_badCount_min (flip validity), sigmaNonneg_iff_badCount_min.
+- LEAN NEXT TICK (stage B, final Bank0 link): PeelData += rootSmallIdx field + checker
+  conjunct; idxOf? + facts; extSide/extendCut (range-map); checkCut_extendCut;
+  badCount_extendCut_eq (kept-kept bijection + always-blue appendage — THE hard one);
+  extend_smallCut sides agreement; badCount_smallCut_eq_big; small_badCount_min_of_peel;
+  sigmaNonneg_small_of_peel; SigmaChain_of_sigmaNonneg. Then BANK0 SELF-CONTAINED.
+- Main = Lean-architecture section (in flight); sibling = post-stub regen (CHECK NEXT TICK).
+  Batch 17/108, marker 1681172.
