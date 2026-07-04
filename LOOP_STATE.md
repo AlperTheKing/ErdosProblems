@@ -389,3 +389,20 @@
 - Sibling: 3.8 landed (5734c, queued) -> 3.9 tasked. Main: free after q=3 section —
   RETASK NEXT TICK (queue: FAQ 51+ for route-tree/enumeration; or O5/O6 audit when land).
 - EXTRACTION QUEUE += sibling 3.8 (5734c).
+
+
+## TICK NOTES (2026-07-05T10:15Z) — globalC5 SELF-CLOSING; AM-GM spine in CertGraph
+- LEAN: globalC5_bound GREEN (EXIT=0, 0 warnings): checkGlobalC5 => 25*badCount <= n^2,
+  fully self-contained (AM-GM spine copied into CertGraph: sqrtHalfAdd/bankAmgmReal/
+  bank_amgm_nat — Nat-level, reusable for BankBlockCover per-block finish).
+- Bank0 constructor status: globalC5 CLOSED (self-closing); cross CLOSED (needs hmax);
+  peel graph-side CLOSED (bank_transfer awaits IH wiring); bankBlocks payload green,
+  COVER composition remains (bads<->badCount linkage + blocks_to_global); nch wrapper
+  remains. THEN Bank0Cert inductive + dispatch + Bank0Statement + bank0_all — all inside
+  CertGraph.lean tail (single-file pattern held; bank_amgm_nat now local).
+- Codex: BranchB strict audit v10 w/ NEGATIVE GATE (v9 legacy rejected). Batch 11/108.
+  Marker 1671272.
+- NEXT TICK: BankBlockCoverCert (partition of recomputed bad edges into blocks + per-block
+  bank_amgm_nat + sum_sq: need Nat sum-of-squares<=square lemma — trivial via
+  Nat.add_mul_le... or copy sum_sq route) THEN nch wrapper THEN Assembly. Main retask due
+  (FAQ 51+ queue). Sibling 3.9 pending check.

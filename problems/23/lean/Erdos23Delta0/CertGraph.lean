@@ -1254,5 +1254,60 @@ theorem checkGlobalC5_products (G : GraphData) (c : CutData) (b : BankBlock)
   intro i
   exact (h.2 i (List.mem_finRange i)).2
 
+/-! ### GlobalC5 arithmetic finish (self-contained AM-GM spine, mirroring the
+proven Bank0Algebra route so the payload closes inside this file). -/
+
+private theorem sqrtHalfAdd (m a b : ℝ) (_hm : 0 ≤ m) (ha : 0 ≤ a) (hb : 0 ≤ b)
+    (h : m ≤ a * b) : Real.sqrt m ≤ (a + b) / 2 := by
+  have hsq : m ≤ ((a + b) / 2) ^ 2 := by nlinarith [sq_nonneg (a - b)]
+  have h1 : Real.sqrt m ≤ Real.sqrt (((a + b) / 2) ^ 2) := Real.sqrt_le_sqrt hsq
+  have h2 : Real.sqrt (((a + b) / 2) ^ 2) = (a + b) / 2 := by
+    rw [Real.sqrt_sq (by linarith)]
+  linarith [h1, h2.le, h2.ge]
+
+private theorem bankAmgmReal (m n0 n1 n2 n3 n4 : ℝ)
+    (hm : 0 ≤ m) (h0 : 0 ≤ n0) (h1 : 0 ≤ n1) (h2 : 0 ≤ n2) (h3 : 0 ≤ n3)
+    (h4 : 0 ≤ n4)
+    (p0 : m ≤ n0 * n1) (p1 : m ≤ n1 * n2) (p2 : m ≤ n2 * n3)
+    (p3 : m ≤ n3 * n4) (p4 : m ≤ n4 * n0) :
+    25 * m ≤ (n0 + n1 + n2 + n3 + n4) ^ 2 := by
+  have s0 := sqrtHalfAdd m n0 n1 hm h0 h1 p0
+  have s1 := sqrtHalfAdd m n1 n2 hm h1 h2 p1
+  have s2 := sqrtHalfAdd m n2 n3 hm h2 h3 p2
+  have s3 := sqrtHalfAdd m n3 n4 hm h3 h4 p3
+  have s4 := sqrtHalfAdd m n4 n0 hm h4 h0 p4
+  have hsum : 5 * Real.sqrt m ≤ n0 + n1 + n2 + n3 + n4 := by linarith
+  have hs : 0 ≤ Real.sqrt m := Real.sqrt_nonneg m
+  have hsq : (5 * Real.sqrt m) ^ 2 ≤ (n0 + n1 + n2 + n3 + n4) ^ 2 := by
+    have hns : 0 ≤ 5 * Real.sqrt m := by linarith
+    nlinarith [hsum, hns]
+  have hval : (5 * Real.sqrt m) ^ 2 = 25 * m := by
+    have := Real.sq_sqrt hm
+    nlinarith [this]
+  linarith [hsq, hval.le, hval.ge]
+
+/-- Nat-level cyclic bank AM-GM. -/
+theorem bank_amgm_nat (m n0 n1 n2 n3 n4 : Nat)
+    (p0 : m ≤ n0 * n1) (p1 : m ≤ n1 * n2) (p2 : m ≤ n2 * n3)
+    (p3 : m ≤ n3 * n4) (p4 : m ≤ n4 * n0) :
+    25 * m ≤ (n0 + n1 + n2 + n3 + n4) ^ 2 := by
+  have hr := bankAmgmReal (m : ℝ) n0 n1 n2 n3 n4
+    (by positivity) (by positivity) (by positivity) (by positivity)
+    (by positivity) (by positivity)
+    (by exact_mod_cast p0) (by exact_mod_cast p1) (by exact_mod_cast p2)
+    (by exact_mod_cast p3) (by exact_mod_cast p4)
+  exact_mod_cast hr
+
+/-- GLOBAL-C5 BANK BOUND: a passing global labelling check yields the Bank0
+    scalar inequality outright — the `globalC5` constructor is self-closing. -/
+theorem globalC5_bound (G : GraphData) (c : CutData) (b : BankBlock)
+    (h : checkGlobalC5 G c b = true) :
+    25 * badCount G c ≤ G.n ^ 2 := by
+  have hs := checkGlobalC5_sizes G c b h
+  have hp := checkGlobalC5_products G c b h
+  rw [← hs]
+  exact bank_amgm_nat (badCount G c) _ _ _ _ _
+    (hp 0) (hp 1) (hp 2) (hp 3) (hp 4)
+
 end CertGraph
 end Erdos23Delta0
