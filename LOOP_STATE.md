@@ -406,3 +406,19 @@
   bank_amgm_nat + sum_sq: need Nat sum-of-squares<=square lemma — trivial via
   Nat.add_mul_le... or copy sum_sq route) THEN nch wrapper THEN Assembly. Main retask due
   (FAQ 51+ queue). Sibling 3.9 pending check.
+
+
+## TICK NOTES (2026-07-05T11:25Z) — cover groundwork green; batch 12/108
+- LEAN: B6b GREEN (EXIT=0, 0 warnings): nodupLt_length_le (toFinset/card route),
+  natSumSq_le_sqSum (explicit square expansion — nlinarith failed on Nat, fixed with
+  ring + le_add_right), support_length (finRange 5 by decide), BankBlockCoverCert +
+  checkBankBlockCover (per-block + exact bad-list eq + id-count partition + joint support
+  nodup/range), checkBankBlockCover_badCount.
+- NEXT LEAN (single remaining pre-Assembly item list): (1) coverBound theorem: 25*badCount
+  <= n^2 from checkBankBlockCover (chain: badCount = bads.length = flatMap-badIds length =
+  sum m_alpha; per-block bank_amgm_nat via checkBankBlock_products + support_length;
+  List.sum_le_sum pointwise; natSumSq_le_sqSum; nodupLt_length_le + length_flatMap);
+  (2) NCHBankCert routing wrapper; (3) Bank0Cert inductive + dispatch + Bank0Statement +
+  bank0_all (Nat.strong_induction_on).
+- Batch 12/108 (k5/B0 no-repair). Sibling dead-stub nudged (regenerating). Main = FAQ 51+.
+  Marker 1672741.

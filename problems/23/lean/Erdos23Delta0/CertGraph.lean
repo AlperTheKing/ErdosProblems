@@ -1309,5 +1309,80 @@ theorem globalC5_bound (G : GraphData) (c : CutData) (b : BankBlock)
   exact bank_amgm_nat (badCount G c) _ _ _ _ _
     (hp 0) (hp 1) (hp 2) (hp 3) (hp 4)
 
+/-! ### B6b: bank-block cover groundwork (checker + counting helpers).
+The full 25·badCount ≤ n² composition over a block cover lands with the
+assembly dispatch; here: the cover checker (per-block checks, exact bad-edge
+list linkage, bad-id count partition, disjoint in-range supports) and the
+pure counting lemmas the composition consumes. -/
+
+/-- A duplicate-free list of naturals below n has length at most n. -/
+theorem nodupLt_length_le (l : List Nat) (n : Nat) (hnd : l.Nodup)
+    (hlt : ∀ x ∈ l, x < n) : l.length ≤ n := by
+  have h1 : l.toFinset ⊆ Finset.range n := by
+    intro x hx
+    rw [List.mem_toFinset] at hx
+    exact Finset.mem_range.mpr (hlt x hx)
+  have h2 := Finset.card_le_card h1
+  rw [Finset.card_range] at h2
+  rwa [List.toFinset_card_of_nodup hnd] at h2
+
+/-- Σ aᵢ² ≤ (Σ aᵢ)² over Nat lists. -/
+theorem natSumSq_le_sqSum : ∀ l : List Nat,
+    (l.map (· ^ 2)).sum ≤ l.sum ^ 2
+  | [] => by simp
+  | a :: l => by
+      have ih := natSumSq_le_sqSum l
+      simp only [List.map_cons, List.sum_cons]
+      calc a ^ 2 + (List.map (· ^ 2) l).sum
+          ≤ a ^ 2 + l.sum ^ 2 := Nat.add_le_add_left ih _
+        _ ≤ (a + l.sum) ^ 2 := by
+            have h : (a + l.sum) ^ 2 = a ^ 2 + l.sum ^ 2 + 2 * (a * l.sum) := by
+              ring
+            rw [h]
+            exact Nat.le_add_right _ _
+
+/-- Support length is the sum of the five class lengths. -/
+theorem support_length (b : BankBlock) :
+    b.support.length = (b.classes 0).length + (b.classes 1).length
+      + (b.classes 2).length + (b.classes 3).length
+      + (b.classes 4).length := by
+  have h5 : List.finRange 5 = [0, 1, 2, 3, 4] := by decide
+  unfold BankBlock.support
+  rw [h5]
+  simp only [List.flatMap_cons, List.flatMap_nil, List.length_append,
+    List.length_nil]
+  omega
+
+/-- Bank-block cover certificate: the blocks whose banks jointly pay
+    the whole bad mass. -/
+structure BankBlockCoverCert where
+  blocks : List BankBlock
+deriving Repr
+
+/-- Cover check: every block passes, the bad-edge data list is EXACTLY the
+    recomputed bad edges of the cut, the block bad-id counts partition it,
+    and the block supports are jointly duplicate-free and in range. -/
+def checkBankBlockCover (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (w : BankBlockCoverCert) : Bool :=
+  w.blocks.all (checkBankBlock G bads) &&
+  decide (bads.map (fun bd => normEdge bd.u bd.v)
+    = (G.edges.filter (fun e => badb G c e.1 e.2)).map
+        (fun e => normEdge e.1 e.2)) &&
+  decide ((w.blocks.flatMap (fun b => b.badIds)).length = bads.length) &&
+  decide (w.blocks.flatMap BankBlock.support).Nodup &&
+  (w.blocks.flatMap BankBlock.support).all (fun v => decide (v < G.n))
+
+/-- Fact extraction: the bad-edge data list counts the cut's bad edges. -/
+theorem checkBankBlockCover_badCount (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (w : BankBlockCoverCert)
+    (h : checkBankBlockCover G c bads w = true) :
+    badCount G c = bads.length := by
+  unfold checkBankBlockCover at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  have hm := congrArg List.length h.1.1.1.2
+  simp only [List.length_map] at hm
+  unfold badCount
+  omega
+
 end CertGraph
 end Erdos23Delta0
