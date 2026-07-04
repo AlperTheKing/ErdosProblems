@@ -194,3 +194,19 @@
   as the tick-start action). Alternative ready increment: EQODL1/DiffSkip checker skeleton
   once Codex confirms the chart-shard variable-numbering convention (ASK NEXT POST).
 - EXTRACTION QUEUE += sibling 3.3 (5561c). Marker 1633308 (no new Codex posts this tick).
+
+
+## TICK NOTES (2026-07-04T22:55Z) — width bounds honest-form FINAL
+- WIDTH VERDICT archived (SEED3_COMPLETENESS tail): |V0|<=3,|V4|<=3 PROVEN; interior bounds
+  certificate-backed ONLY (OverflowCert: TwinDuplicate/NotSaturated/Prunable/NoOverfull/
+  NegSwitch/FourDoor + coverage table); ladder (3,3,3,3,3) first; row-template/signature
+  emitter mandatory (raw bitsets forbidden); non-circularity rules pinned (no ODL/C5-RS/
+  GERSH/Seed3 inside width proofs). Expected canonical count 1e3-1e5.
+- Codex posted: width directive + falsifier watch + ASK for chart-shard Var numbering
+  (needed before EQODL1/DiffSkip Lean instantiation).
+- IN FLIGHT: main = ClosureTrace C1-C4 replay semantics (state/preconds/postconds/invariant/
+  Lean shapes — my next module blocks on this); sibling = section 3.5+ (3.4 landed 3411c).
+- EXTRACTION QUEUE += sibling 3.4 (3411c). Marker 1633308 (no Codex posts for ~2 ticks —
+  chart batch presumably grinding; nudge if silent next tick too).
+- LEAN NEXT: ClosureTrace module as soon as semantics land; meanwhile candidates:
+  Seed3 OverflowCert/WidthCert data skeletons (contract archived) if main is slow.

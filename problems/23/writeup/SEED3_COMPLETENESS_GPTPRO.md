@@ -104,3 +104,55 @@ core routes to EQ, SIB, or a certified non-survivor output; EQ/SIB feed the seed
 - WIDTH BOUNDS: concrete maxBags values + overflow argument = next design consult (main).
 - O13-UNIVERSE-EMIT: Codex artifact = width cert + canonical enumeration + lookup table +
   per-candidate output witnesses (directive posted 2026-07-04).
+
+
+# ===== WIDTH BOUNDS: HONEST FORM (main thread, 2026-07-04) =====
+
+BOTTOM LINE: unconditionally PROVEN only |V0| <= 3 and |V4| <= 3 (3 doors have <= 3 endpoints
+per side; in a pruned saturated positive-flow core every positive-flow bag in V0/V4 must be an
+effective-door endpoint — else it lies on no length-5 row => suppressed / NOT_SATURATED /
+PRUNABLE). Interior classes V1/V2/V3: NO sound hand bound exists from twin-contraction +
+saturation + C5-hom + 3-doors alone — the recursive profile inequalities do NOT close
+(|V1| <= 7(2^|V2|-1), |V2| <= (2^|V1|-1)(2^|V3|-1), ...). Any handwritten interior bound
+(e.g. 49) would be referee-rejected. Interior bounds must be CERTIFICATE-BACKED.
+
+Seed3WidthCert (final contract): { maxBags : Fin 5 -> Nat; endpoint0 : maxBags 0 = 3;
+endpoint4 : maxBags 4 = 3; overflowCerts : List OverflowCert; coverage :
+OverflowCoverageTable }. Checker: endpoints by door argument; every canonical code exceeding
+a declared bound maps via coverage to an OverflowCert; every OverflowCert verifies one
+non-survivor output. Sound theorem: checkSeed3WidthCert = true + Seed3CandidateHyp qut +
+(exists i, b_i < classSize qut i) -> NonSurvivorRoute qut.
+
+OverflowCert { classId, bound, pattern, reason, witness }; OverflowReason = TwinDuplicate |
+NoOverfull | NegSwitch | Prunable | NotSaturated | FourDoor.
+- TwinDuplicate (cleanest): two bags same class, identical open neighborhoods, same cut side,
+  same row-role + door-endpoint status => true twins => contradicts twin-contraction; reject
+  code before routing.
+- NotSaturated: missing bag/door forced by the overflow pattern, with effective row witness.
+- Prunable: terminal subclosure H via T with s_H(Q cap T) <= |H|-|T| (separation + ConeCert)
+  — typical for redundant row-family branches.
+- NoOverfull: per-row ConeCerts I_R <= N — expected when many alternative path bags dilute
+  row load and increase N.
+- NegSwitch: CompletedSwitchCert with sigma < 0, or sigma = 0 and nu < 0 — expected for
+  crossing/nonminimal extra bags creating terminal-shadow descent.
+- FourDoor: fourth effective door witness.
+
+ATTEMPT LADDER (interior bounds are ARTIFACT choices, not theorems): (3,3,3,3,3) first —
+raw size 84 * 2^45 ~ 3e15, canonical expected 1e3-1e5; fallback (3,4,4,4,3) — 84 * 2^65 ~
+3e21 raw, needs signature generation, expected 1e5-1e7 (below 1e5 if signature-based);
+last resort (3,7,7,7,3) — 84 * 2^149, signature-based ONLY. Raise ONLY the failing class.
+
+EMITTER STRATEGY (mandatory): NEVER raw-enumerate edge bitsets. Row-template generation:
+door type (P4/K13/P2uE/3E) -> enumerate length-5 row templates for the 3 doors -> only bags
+used by >= 1 row -> blue edges = union of row-adjacent pairs + optional edges ->
+immediately true-twin-contract -> saturation test -> overfull test -> emit output witness.
+
+NON-CIRCULARITY (binding): width/overflow proofs may use C5-hom, twin-contracted, saturated,
+pruned, overfull, exactly-3-doors, all-l5, max-cut + gamma-min (only through NEG_SWITCH
+soundness), NCH-def (only through PRUNABLE). May NOT use ODL, C5-RS, GERSH, or Seed3 itself.
+NO_OVERFULL witnesses are non-circular (they contradict the branch hypothesis directly).
+
+FINAL WARNING (verbatim sense): role-profile hand bounds are unsound unless proven equivalent
+to true-twin neighborhood data or every overflow profile carries a non-survivor certificate.
+The width theorem is certificate-backed — this is the last honest form of Seed3-prime
+completeness.
