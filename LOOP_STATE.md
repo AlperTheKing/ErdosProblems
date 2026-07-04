@@ -493,3 +493,16 @@
   sigmaNonneg_small_of_peel; SigmaChain_of_sigmaNonneg. Then BANK0 SELF-CONTAINED.
 - Main = Lean-architecture section (in flight); sibling = post-stub regen (CHECK NEXT TICK).
   Batch 17/108, marker 1681172.
+
+
+## TICK NOTES (2026-07-05T17:25Z) — stage B1 green; batch 18/108
+- LEAN: stage B1 PROVEN (construction layer). REMAINING for Bank0 self-containment (stage B2):
+  badCount_extendCut_eq (kept-kept bijection + always-blue appendage — needs: every big edge
+  classified via keepMap/removed membership; kept-edge sides through idxOf?_getD; appendage
+  edges blue via parity conjuncts — plan the proof as filter-congruence on a partition, reuse
+  length_filter_and_split style), extend_smallCut sides agreement, badCount_smallCut_eq_big,
+  small_badCount_min_of_peel, sigmaNonneg_small_of_peel, SigmaChain_of_sigmaNonneg.
+- Batch 18/108 (k6/G5 multirepair reverified — 9th). Lean-architecture section landed
+  (15553c, queued). Main retask due next tick (queue: adversarial review of my B2 proof
+  sketch if I want a second opinion, or idle-fill FAQ/paper). Sibling regen still unchecked.
+  Marker 1692179.

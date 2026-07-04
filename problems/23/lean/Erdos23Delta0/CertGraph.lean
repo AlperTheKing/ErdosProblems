@@ -1061,11 +1061,13 @@ wraps this with smallRows/smallCert and the preservation Props (P-MaxCut,
 P-GammaMinimal, ...), per the archived Bank0 assembly contract and audit
 item 5 (small-graph checkGraph/checkCut carried there). -/
 
-/-- Graph-side peel data. -/
+/-- Graph-side peel data (rootSmallIdx: the small index of the root, per the
+    SigmaChain provider contract). -/
 structure PeelData where
   removed : List Nat
   root : Nat
   keepMap : List Nat
+  rootSmallIdx : Nat
   smallG : GraphData
   smallCut : CutData
   parity : List Bool
@@ -1096,7 +1098,9 @@ def checkPeelSets (G : GraphData) (p : PeelData) : Bool :=
   decide (p.root < G.n) && decide (p.root ∉ p.removed) &&
   decide (p.keepMap
     = (List.range G.n).filter (fun v => decide (v ∉ p.removed))) &&
-  decide (p.smallG.n = p.keepMap.length)
+  decide (p.smallG.n = p.keepMap.length) &&
+  decide (p.rootSmallIdx < p.keepMap.length) &&
+  decide (p.keepMap.getD p.rootSmallIdx 0 = p.root)
 
 /-- P1: induced small graph and restricted small cut, recomputed. -/
 def checkPeelInduced (G : GraphData) (c : CutData) (p : PeelData) : Bool :=
@@ -1629,6 +1633,99 @@ theorem sigmaNonneg_iff_badCount_min (G : GraphData) (c : CutData)
     sigmaNonneg G c ↔ BadCountMinimal G c :=
   ⟨badCount_min_of_sigmaNonneg G c hG hc,
    sigmaNonneg_of_badCount_min G c hG hc⟩
+
+/-! ### SigmaChain provider, stage B1: the cut-extension construction
+(archived contract §1; the badCount bijection and transfer follow). -/
+
+/-- First index of a value in a list. -/
+def idxOf? : List Nat → Nat → Option Nat
+  | [], _ => none
+  | a :: l, v => if a = v then some 0 else (idxOf? l v).map (· + 1)
+
+theorem idxOf?_getD : ∀ (l : List Nat) (v i : Nat),
+    idxOf? l v = some i → l.getD i 0 = v
+  | [], _, _, h => by simp [idxOf?] at h
+  | a :: l, v, i, h => by
+      unfold idxOf? at h
+      by_cases hav : a = v
+      · rw [if_pos hav] at h
+        simp only [Option.some.injEq] at h
+        subst h
+        simpa using hav
+      · rw [if_neg hav] at h
+        rcases hm : idxOf? l v with _ | j
+        · rw [hm] at h
+          simp at h
+        · rw [hm] at h
+          simp only [Option.map_some, Option.some.injEq] at h
+          subst h
+          simpa using idxOf?_getD l v j hm
+
+theorem idxOf?_lt : ∀ (l : List Nat) (v i : Nat),
+    idxOf? l v = some i → i < l.length
+  | [], _, _, h => by simp [idxOf?] at h
+  | a :: l, v, i, h => by
+      unfold idxOf? at h
+      by_cases hav : a = v
+      · rw [if_pos hav] at h
+        simp only [Option.some.injEq] at h
+        subst h
+        simp
+      · rw [if_neg hav] at h
+        rcases hm : idxOf? l v with _ | j
+        · rw [hm] at h
+          simp at h
+        · rw [hm] at h
+          simp only [Option.map_some, Option.some.injEq] at h
+          subst h
+          have := idxOf?_lt l v j hm
+          simp
+          omega
+
+theorem idxOf?_isSome_of_mem : ∀ (l : List Nat) (v : Nat),
+    v ∈ l → (idxOf? l v).isSome
+  | [], _, h => by simp at h
+  | a :: l, v, h => by
+      unfold idxOf?
+      by_cases hav : a = v
+      · rw [if_pos hav]; rfl
+      · rw [if_neg hav]
+        rcases List.mem_cons.mp h with h' | h'
+        · exact absurd h'.symm hav
+        · have := idxOf?_isSome_of_mem l v h'
+          rcases hm : idxOf? l v with _ | j
+          · rw [hm] at this; simp at this
+          · rfl
+
+/-- Extended side assignment: kept vertices read the small cut through the
+    keep map; removed vertices take the small root's current side XOR their
+    parity record (contract §1.3; the none branch is unreachable under a
+    passing peel check). -/
+def extSide (p : PeelData) (d : CutData) (v : Nat) : Bool :=
+  match idxOf? p.keepMap v with
+  | some i => sideb d i
+  | none =>
+      match idxOf? p.removed v with
+      | some r => Bool.xor (sideb d p.rootSmallIdx) (p.parity.getD r false)
+      | none => false
+
+/-- The extended big cut. -/
+def extendCut (G : GraphData) (p : PeelData) (d : CutData) : CutData :=
+  ⟨(List.range G.n).map (fun v => extSide p d v)⟩
+
+/-- Extension validity: the side list has length exactly n. -/
+theorem checkCut_extendCut (G : GraphData) (p : PeelData) (d : CutData) :
+    checkCut G (extendCut G p d) = true := by
+  unfold checkCut extendCut
+  simp
+
+/-- Extended sides evaluate pointwise through extSide. -/
+theorem sideb_extendCut (G : GraphData) (p : PeelData) (d : CutData)
+    (v : Nat) (hv : v < G.n) :
+    sideb (extendCut G p d) v = extSide p d v := by
+  unfold sideb extendCut
+  rw [List.getD_eq_getElem?_getD, List.getElem?_map]
+  simp [List.getElem?_range hv]
 
 end CertGraph
 end Erdos23Delta0
