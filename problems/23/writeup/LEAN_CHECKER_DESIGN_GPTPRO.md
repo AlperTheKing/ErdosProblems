@@ -567,3 +567,51 @@ FILE SHAPE: Erdos23Delta0/Bank0/Assembly.lean imports GraphData/CutData/Rows/Ban
 CrossCap/ClosureTrace/Peel/GlobalC5/NCHBank; declares Bank0Statement, bank0_all,
 bank0_statement_all, bank0_of_cert. This is the Bank0 scalar theorem consumed by
 Branch-A C5-RS.
+
+
+# ===== TOP-LEVEL ASSEMBLY CONTRACT (main thread, 2026-07-05) — LAST DESIGN ITEM, FULL =====
+VERDICTS RE-AFFIRMED: RowDBFacts Prop-first (upgrade later via checkRowDB); IsMaxCut =
+checkCut c ∧ forall c* (checkCut => badCount c <= badCount c*); GammaMinimalConnected =
+forall c* (checkCut, badCount equal, BConnected c* => gammaOf c <= gammaOf c*); 3 layers.
+SHARED Q-QUANTITIES: nQ, mQ, etaQ = (N^2 - 25m)/25, rhoQ L = (L^2-25)/50, tauQ = 5m/N;
+RowGershBound Q := rowSum <= N + etaQ.
+BRANCH A (L=5): BranchAInputs {hLen, hNpos, bank0 : 25m <= N^2, a1Proper : forall A nonempty
+proper mask, XMask A <= (25/N + 2/3) etaQ, odlFull : rowSum <= N + etaQ}.
+eta_nonneg_of_bank0 (casts + nlinarith). C5RS := sum_i max(s_i - tau, 0) <= (1 + 25/N) etaQ;
+positiveMask; algebra lemmas posPart_sum_eq_XMask + fullMask_X_eq_odl_form (X(univ) form <=>
+rowSum form). c5RS_of_branchA_inputs: P=empty (bank0 => eta>=0 => RHS >= 0); P=univ (odlFull
++ fullMask iff); P proper nonempty (a1Proper + 2/3 <= 1 + eta >= 0). gersh_L5_of_branchA_inputs
+= c5RS + netDW_assembly (existing net-DW module). CONSUMER EDGE: Bank0 + A1proper + ODLfull
+=> GERSH_L5. ODLfull provider consumes: non-overfull, NCH/G1-prime, q<3 2Door-ODL,
+Seed3Classifier, EQODL1_of_cover + EQPassiveAM, SIBS7 + SIBPassiveAM, q>=4 A1-5mask.
+BRANCH B (L>5): BranchBInputs {hLen 5 < L, bankL : 2 rhoQ L <= etaQ, bankedUPO : rowSum <=
+N + etaQ/2 - rhoQ L}. gersh_Lgt5_of_branchB_inputs: 2rho <= eta + L>5 => eta >= 0 =>
+eta/2 - rho <= eta. Provider consumes Bank-L six-case, HBD packet, CD op1-5 telescope,
+fan/cactus/SH-prime cell ledger, combined peel eta/2 spend.
+DELTA0: Delta0Inputs {branchA : forall Q in rowList, len=5 -> BranchAInputs; branchB : ...
+5<len -> BranchBInputs}. all_rows_gersh: row soundness gives 5 <= len; by_cases len=5 /
+omega. GAMMA: gamma_bound_of_all_rows_gersh (IMPORT from existing Gamma/GERSH reduction —
+do NOT reprove in assembly); gamma_lower_bound : 25m <= Gamma (each bad edge length >= 5 =>
+l^2 >= 25; RowsSound); beta_eq_badCount_of_isMaxCut (betaGD = min over checked cuts);
+beta_bound_of_gamma: 25m <= Gamma <= N^2 => m <= N^2/25 => beta form. d_mono NOT needed
+(notation only if legacy text requires).
+TOP: GoodCutData {maxCut, gammaMin, bConnected, rowsFacts};
+erdos23_delta0_graphData_from_good_cut (SAFE FIRST TARGET) := all_rows_gersh ->
+gamma_bound -> beta_bound. exists_good_cut (∃ c rows, GoodCutData) = NONTRIVIAL imported
+reduction (B-connectedness) — DO NOT HIDE in the final theorem; two-stage discipline:
+certified theorem (cert bundle -> holds) THEN provider theorem (every valid graph has a
+bundle) => unconditional.
+SIMPLEGRAPH BRIDGE: prove over GraphData first; GraphData.ofSimpleGraph via e : V ≃ Fin card
+(edges i<j with Adj through e); lemmas betaGD_ofSimpleGraph_eq_beta, n_ofSimpleGraph,
+triangleFree transfer; then erdos23_delta0_simpleGraph.
+PITFALLS: cast isolation via the three dedicated lemmas; beta needs IsMaxCut (single-cut
+row bound does NOT bound beta); nu_K uses need flip B-connectedness INSIDE providers (top
+level must not know); GoodCut existence explicit.
+DECLARATION LIST (stable interface): etaQ rhoQ RowGershBound BranchAInputs
+eta_nonneg_of_bank0 c5RS_of_branchA_inputs gersh_L5_of_branchA_inputs BranchBInputs
+gersh_Lgt5_of_branchB_inputs Delta0Inputs all_rows_gersh gamma_lower_bound
+gamma_bound_of_all_rows_gersh beta_eq_badCount_of_isMaxCut beta_bound_of_gamma GoodCutData
+erdos23_delta0_graphData_from_good_cut GraphData.ofSimpleGraph betaGD_ofSimpleGraph_eq_beta
+erdos23_delta0_simpleGraph.
+=> PROGRAM-WIDE DESIGN PHASE CLOSED. Remaining: emissions (Codex), module typing (me),
+prose assembly (sibling), exists_good_cut reduction (next main consult).

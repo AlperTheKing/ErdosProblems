@@ -265,3 +265,19 @@
   carries L0-L3 + B6 + B2 + B3 CrossCap + flip + canon switch + B1 ClosureTrace, all verified.
   LEAN NEXT: Peel checker layer (contract archived) OR LensGates; extraction of top-level
   assembly reply (13470c, main thread) FIRST next tick, then retask main.
+
+
+## TICK NOTES (2026-07-05T03:10Z) — DESIGN PHASE CLOSED program-wide
+- TOP-LEVEL ASSEMBLY CONTRACT archived (LEAN_CHECKER_DESIGN tail): 19-declaration stable
+  interface from etaQ to erdos23_delta0_simpleGraph; C5RS trichotomy skeleton (P=empty via
+  bank0/eta>=0; P=univ via odlFull+fullMask iff; proper via a1Proper+2/3<=1); Branch-B via
+  green gersh_Lgt5; gamma squeeze (25m <= Gamma <= N^2); GoodCutData; two-stage certified/
+  provider discipline; SimpleGraph bridge via V ≃ Fin card. Safe first target =
+  erdos23_delta0_graphData_from_good_cut.
+- IN FLIGHT: main = exists_good_cut (LAST imported reduction: B-connected max-cut existence,
+  gamma-min in class, RowDBFacts supply, all-l5 provenance); sibling = 3.7+ (3.6 queued).
+- LEAN NEXT (order): (1) Peel checker layer in CertGraph (contract archived); (2) Assembly.lean
+  skeleton per the 19-declaration list — FIRST read BranchAInterface/Row/Gamma modules for
+  existing rowSum/XMask/netDW_assembly/gammaOf names; type against them, keep provider
+  theorems as hypotheses; (3) EQODL1/DiffSkip instantiation once Codex chart batch completes.
+- EXTRACTION QUEUE += sibling 3.6 (4582c). Marker 1651672 (no new Codex posts; batch grinding).
