@@ -182,9 +182,9 @@ theorem NF.mulMono_eval (env : Var → ℚ) (m : Mono) : ∀ g : NF,
     NF.eval env (NF.mulMono m g) = m.eval env * NF.eval env g
   | [] => by simp [NF.mulMono]
   | n :: g => by
-      unfold NF.mulMono at *
-      simp only [List.map_cons, NF.eval_cons, Mono.mul_eval,
-        NF.mulMono_eval env m g]
+      have ih := NF.mulMono_eval env m g
+      unfold NF.mulMono at ih ⊢
+      simp only [List.map_cons, NF.eval_cons, Mono.mul_eval, ih]
       ring
 
 /-- NF product. -/
@@ -207,10 +207,10 @@ theorem NF.neg_eval (env : Var → ℚ) : ∀ f : NF,
     NF.eval env (NF.neg f) = -NF.eval env f
   | [] => by simp [NF.neg]
   | m :: f => by
-      unfold NF.neg at *
-      simp only [List.map_cons, NF.eval_cons, NF.neg_eval env f]
+      have ih := NF.neg_eval env f
+      unfold NF.neg at ih ⊢
+      simp only [List.map_cons, NF.eval_cons, ih]
       unfold Mono.eval
-      simp
       ring
 
 /-- NF subtraction. -/

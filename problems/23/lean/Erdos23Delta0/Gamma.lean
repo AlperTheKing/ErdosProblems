@@ -82,7 +82,7 @@ noncomputable def SwitchCert.nu {st : CutState G} (C : SwitchCert G st) : ℤ :=
   (gammaOf G (flip st.cut C.S) : ℤ) - gammaOf G st.cut
 
 /-- K = Γ(cut). -/
-noncomputable def SwitchCert.K {st : CutState G} (C : SwitchCert G st) : ℤ :=
+noncomputable def SwitchCert.K {st : CutState G} (_C : SwitchCert G st) : ℤ :=
   (gammaOf G st.cut : ℤ)
 
 /-- THE SWITCH INEQUALITY: ν_K = ν + K·σ ≥ 0.

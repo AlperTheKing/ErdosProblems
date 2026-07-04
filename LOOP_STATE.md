@@ -1,21 +1,23 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T18:15Z (P(math)~87, P(Lean)~82)
+# Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1626385
+- CODEX_TO_CLAUDE.md read marker (bytes): 1629435
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
-- MAIN    (theorem design):   https://chatgpt.com/c/6a450f06-be68-83eb-b6f4-5b855434e550  [last tab 1267096304]
+- MAIN    (theorem design):   https://chatgpt.com/c/6a450f06-be68-83eb-b6f4-5b855434e550  [last tab 1267096329]
 - SIBLING (writeup + second): https://chatgpt.com/c/6a45e152-8de4-83eb-9aa3-87cb13427526  [last tab 1267096303]
 
 ## IN FLIGHT
-- MAIN: cross-spec consistency re-audit (T=1/T=2/cubes/Bank0-blueprint interface mismatches) + O13 Seed3 classifier checker format.
-- SIBLING: appendices 5.1 (certificate ledger table) + 5.2 (validation annotation).
-  AmbientPrune, hunt status + contingency).
-- CODEX: rung-2 chart sweep (300 charts, stats pending); then O5-EMIT (T=1 REC artifacts),
-  O16/O18-EMIT (master cubes, order EQ V2 -> V1 -> V3 -> SIB V2 -> V1 -> V3), B0-4 lens gates,
-  SB-1, A1 six cones.
+- MAIN: floor-buffer theta_max=0 diagnosis (full support? per-row buffers? caps? Markowitz-only k0
+  fallback?) + RadialHullCert concrete required form (Mode-B skip). DECISIVE for the chart batch.
+- SIBLING: paper section 2.2 per assembly plan ([CERT: id] tags for pending artifacts).
+- CODEX: floor-buffer redirect posted (full support + easy-chart k5-9 validation first, then k0
+  retry; Markowitz+repair = accepted hard-chart fallback); then feasible near-band batch w/
+  per-chart SHA ledger; region-emptiness probes (EmptyRegionCert route for non-feasible regions);
+  Mode-A per-chart dominance-free monotonicity sweep; corrected InfCerts; O5-EMIT, O6-EMIT,
+  O16/O18-EMIT, O13-EMIT, B0-4 lens gates, SB-1, A1 six cones.
 
 ## RETASK QUEUES
 - MAIN queue: T=2 corridor cert emission spec detail (O6) if gaps surface; O11 2Door / O13 Seed3
@@ -117,3 +119,47 @@
 - Lean: canon CompletedSwitchCert + checkCompletedSwitch + sigma/nuK fact extraction — BUILD IN FLIGHT (bg bvwl8s15n; fix if red next wake).
 - Sibling: definitions table landed (extract at assembly); retask queue: paper 2.2/3.2 or idle-fill review.
 - Marker 1626385.
+
+
+## TICK NOTES (2026-07-04T19:25Z)
+- O14 ASSEMBLY THEOREM archived (EQ_ODL1_O14_ASSEMBLY_GPTPRO.md): coverage HCover/ChartCover,
+  EQODL1CoverCert (300 regions + stratum), region certs direct|skip|empty, SKIP CORRECTION
+  (Mode A global-band dominance-free / Mode B radial-hull w/ RadialHullCert; bare dominance
+  skips REJECTED), pullback s^11, height-1 -> all heights via h/h^2 scaling + EQ-CERT1,
+  all-or-nothing accounting, full Lean statement shapes (9.1-9.10).
+- BLOCKER live: floor-buffer theta_max=0.0 on 3x k0 near targets (reduced negative-support
+  columns). Redirect posted (full support, easy-chart validation first); designer consult in
+  flight (per-row buffers / caps / Markowitz-only k0 fallback). k0/B0/near stays closed (Markowitz).
+- Codex also delivered: Branch-B dictionary-audit Lean v7 PASS (33 modules, 0 forbidden).
+- Lean: CrossCap layer (B3) written into CertGraph.lean — CrossCapCert (blueprint fields),
+  checkCrossCap (recompute boundaries + capacity ineq), checkCrossCap_ineq (DN*sigma <= nu0),
+  crossCap_sound (max-cut contradiction), partition_crossCap_sound (dichotomy consumer edge).
+  Build in flight. NEXT after green: ClosureTrace replay module (C1-C4), then LensGates.
+- EXTRACTION QUEUE unchanged (definitions table 27461c + appendices + sections in-thread).
+
+
+## TICK NOTES (2026-07-04T20:25Z) — CRITICAL PROCESS FIX + CrossCap green
+- FALSE-GREEN DISCOVERY: earlier Bash builds piped `lake env lean | tail` and echoed $? = tail's
+  exit code => several past "EXIT=0" Lean claims were FALSE (CertGraph had real errors: List.get?
+  removed, left-assoc && projections, simp drift). BUILD RULE from now on (BINDING): PowerShell,
+  `lake env lean <path> *> log; "EXIT=$LASTEXITCODE"` — no pipes, check log EMPTY for 0-warning.
+- CertGraph.lean NOW TRUE GREEN (EXIT=0, empty log): L0-L3 + B6 + B2 + flip + canon switch +
+  NEW B3 CrossCap (checkCrossCap recomputed-boundary + capacity ineq; checkCrossCap_ineq
+  DN*sigma <= nu0; crossCap_sound; partition_crossCap_sound consumer edge).
+- HONEST RE-AUDIT of the other 11 modules RUNNING (bg bcwb2cq8h -> scratchpad/module_audit.log):
+  Skeleton, Darts, Distances, Gamma, Row, BankL, BranchAInterface, PacketExchange, CDCore,
+  PolyCert, Bank0Algebra. READ RESULTS NEXT TICK; fix any red; P(Lean) recalibrate after.
+  Codex asked to confirm its own exit-capture method.
+- Floor-buffer Q1/Q2 ruling archived (O14 file tail) + relayed: active-set/full support,
+  boundary-feasible hybrid, k0 Markowitz default, Mode-B path-domain form unblocked.
+- IN FLIGHT: main = skip-soundness Lean bridge (M-polynomial exact-division route: P(s,u) -
+  P(1/2,u) = (1/2 - s)*M(s,u), cone-certify M => NO analysis needed — pending designer verdict)
+  + FAQ extension 33+. sibling = section 2.2 LANDED 14664c (extract next tick or at assembly).
+- NEXT TICK ORDER: (1) module_audit.log -> fix reds; (2) main reply (M-route verdict decides
+  RadialSkipCert Lean shape); (3) extract sibling 2.2 + retask sibling (3.2); (4) Codex scan;
+  (5) Lean next increment = ClosureTrace replay module (C1-C4) or EQODL1 skeleton per M-verdict.
+- AUDIT RESULT (20:40Z): 11/11 true green zero-warning (PolyCert fixed: ih-unfold pattern in
+  mulMono_eval/neg_eval; Gamma _C). Skeleton = statements-only (expected sorry on erdos23_delta0
+  top target + True-placeholder BranchB stubs — Assembly fills). BUILD RULE addendum: always
+  inspect LOGBYTES>0 logs; grep sorry in any new module before recording green.
+- Sibling retasked: section 3.2. Extraction queue += sibling 2.2 (14664c).

@@ -216,10 +216,10 @@ deriving Repr
     referenced row. rowCounts is the per-bad-edge row count list. -/
 def checkAtom (D : Nat) (rowCounts : List Nat) (bads : List BadEdgeData)
     (a : AtomData) : Bool :=
-  match rowCounts.get? a.badId, bads.get? a.badId with
+  match rowCounts[a.badId]?, bads[a.badId]? with
   | some rc, some b =>
       decide (a.weight * rc = D) &&
-      (match b.rows.get? a.rowId with
+      (match b.rows[a.rowId]? with
        | some r => decide (a.vertex ∈ r.verts)
        | none => false)
   | _, _ => false
@@ -261,20 +261,26 @@ theorem sNum_append : ∀ (atoms : List AtomData) (U₁ U₂ : List Nat),
       by_cases h1 : a.vertex ∈ U₁
       · have h2 : a.vertex ∉ U₂ := fun h => hd ⟨h1, h⟩
         have hm : a.vertex ∈ U₁ ++ U₂ := List.mem_append.mpr (Or.inl h1)
-        simp only [List.filter_cons, hm, h1, h2, decide_true, decide_false,
-          if_true, if_false, List.map_cons, List.sum_cons]
+        rw [List.filter_cons_of_pos (by simpa using hm),
+          List.filter_cons_of_pos (by simpa using h1),
+          List.filter_cons_of_neg (by simpa using h2)]
+        simp only [List.map_cons, List.sum_cons]
         omega
       · by_cases h2 : a.vertex ∈ U₂
         · have hm : a.vertex ∈ U₁ ++ U₂ := List.mem_append.mpr (Or.inr h2)
-          simp only [List.filter_cons, hm, h1, h2, decide_true, decide_false,
-            if_true, if_false, List.map_cons, List.sum_cons]
+          rw [List.filter_cons_of_pos (by simpa using hm),
+            List.filter_cons_of_neg (by simpa using h1),
+            List.filter_cons_of_pos (by simpa using h2)]
+          simp only [List.map_cons, List.sum_cons]
           omega
         · have hm : a.vertex ∉ U₁ ++ U₂ := by
             rw [List.mem_append]
             rintro (h | h)
             · exact h1 h
             · exact h2 h
-          simp only [List.filter_cons, hm, h1, h2, decide_false, if_false]
+          rw [List.filter_cons_of_neg (by simpa using hm),
+            List.filter_cons_of_neg (by simpa using h1),
+            List.filter_cons_of_neg (by simpa using h2)]
           omega
 
 /-- Pressure additivity over a disjoint split (the LOAD_ACCOUNT obligation in
@@ -323,7 +329,7 @@ def checkBankBlock (G : GraphData) (bads : List BadEdgeData)
   ((List.finRange 5).all (fun i => (List.finRange 5).all (fun j =>
     decide (i = j) || (b.classes i).all (fun v => decide (v ∉ b.classes j))))) &&
   b.badIds.all (fun gid =>
-    match bads.get? gid with
+    match bads[gid]? with
     | some g =>
         (decide (g.u ∈ b.classes 4) && decide (g.v ∈ b.classes 0)) ||
         (decide (g.u ∈ b.classes 0) && decide (g.v ∈ b.classes 4))
@@ -342,8 +348,7 @@ theorem checkBankBlock_products (G : GraphData) (bads : List BadEdgeData)
   intro i
   unfold checkBankBlock at h
   simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
-  have := h.2.2.2 i (List.mem_finRange i)
-  exact this.2
+  exact (h.2 i (List.mem_finRange i)).2
 
 /-- Fact extraction: pairwise class disjointness. -/
 theorem checkBankBlock_disjoint (G : GraphData) (bads : List BadEdgeData)
@@ -352,10 +357,11 @@ theorem checkBankBlock_disjoint (G : GraphData) (bads : List BadEdgeData)
   intro i j hij v hv
   unfold checkBankBlock at h
   simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
-  have := h.2.1 i (List.mem_finRange i) j (List.mem_finRange j)
-  rcases this with heq | hall
-  · exact absurd heq hij
-  · exact hall v hv
+  have hb := h.1.1.2 i (List.mem_finRange i) j (List.mem_finRange j)
+  rw [Bool.or_eq_true] at hb
+  rcases hb with heq | hall
+  · exact absurd (of_decide_eq_true heq) hij
+  · exact of_decide_eq_true (List.all_eq_true.mp hall v hv)
 
 /-! ### Flip-counting lemma (assembly review Decision B): flipping a vertex set
 swaps blue/bad exactly on the boundary, so
@@ -370,7 +376,7 @@ theorem length_filter_and_split {α : Type} : ∀ (l : List α) (p q : α → Bo
   | a :: l, p, q => by
       have ih := length_filter_and_split l p q
       cases hp : p a <;> cases hq : q a <;>
-        simp [List.filter_cons, hp, hq, ih] <;> omega
+        simp [hp, hq, ih] <;> omega
 
 /-- Pointwise side value after a flip (within range). -/
 theorem sideb_flip (c : CutData) (S : List Nat) (v : Nat)
@@ -383,7 +389,7 @@ theorem sideb_flip (c : CutData) (S : List Nat) (v : Nat)
     rw [List.getElem?_zipIdx]
     simp [List.getElem?_eq_getElem hv]
   rw [hz]
-  simp [List.getD_eq_getElem?_getD, List.getElem?_eq_getElem hv]
+  simp [List.getElem?_eq_getElem hv]
 
 /-- Pointwise edge status after a flip: crossing edges swap blue/bad,
     non-crossing edges keep their status. -/
@@ -433,18 +439,18 @@ theorem badCount_flip_eq (G : GraphData) (c : CutData) (S : List Nat)
       = G.edges.filter (fun e => blueb G c e.1 e.2 && crossesSet S e) := by
     apply List.filter_congr
     intro e _
-    cases hc : crossesSet S e <;> simp [hc]
+    cases hc : crossesSet S e <;> simp
   have e2 : G.edges.filter (fun e => !crossesSet S e &&
       (if crossesSet S e then blueb G c e.1 e.2 else badb G c e.1 e.2))
       = G.edges.filter (fun e => !crossesSet S e && badb G c e.1 e.2) := by
     apply List.filter_congr
     intro e _
-    cases hc : crossesSet S e <;> simp [hc]
+    cases hc : crossesSet S e <;> simp
   have e3 : G.edges.filter (fun e => crossesSet S e && badb G c e.1 e.2)
       = G.edges.filter (fun e => badb G c e.1 e.2 && crossesSet S e) := by
     apply List.filter_congr
     intro e _
-    cases hc : crossesSet S e <;> cases hb : badb G c e.1 e.2 <;> simp [hc, hb]
+    cases hc : crossesSet S e <;> cases hb : badb G c e.1 e.2 <;> simp
   rw [e1, e2] at h1
   rw [e3] at h2
   omega
@@ -453,7 +459,7 @@ theorem badCount_flip_eq (G : GraphData) (c : CutData) (S : List Nat)
     total-count split (blue + bad = all edges, for both cuts). -/
 theorem sigma_nonneg_of_isMaxCut (G : GraphData) (c : CutData) (S : List Nat)
     (hlen : c.side.length = G.n) (hG : checkGraph G = true)
-    (hflip_len : (flipCut c S).side.length = G.n)
+    (_hflip_len : (flipCut c S).side.length = G.n)
     (hmax : badCount G c ≤ badCount G (flipCut c S)) :
     0 ≤ sigma G c S := by
   have h := badCount_flip_eq G c S hlen hG
@@ -492,7 +498,7 @@ def checkCorridorPartition (G : GraphData) (atoms : List AtomData) (D : Nat)
     decide (co ≠ []) && decide co.Nodup &&
     co.all (fun v => decide (v < G.n))) &&
   pairwiseDisjB c.corridors &&
-  (match c.corridors.get? c.negIdx with
+  (match c.corridors[c.negIdx]? with
    | some co => decide (nu0Num G atoms D co < 0)
    | none => false)
 
@@ -524,9 +530,7 @@ theorem nu0_partition (G : GraphData) (atoms : List AtomData) (D : Nat) :
   | co :: rest, h => by
       have hd := pairwiseDisjB_head co rest h
       have ih := nu0_partition G atoms D rest (pairwiseDisjB_tail co rest h)
-      simp only [List.flatMap_cons, List.map_cons, List.sum_cons]
-      rw [show (List.flatMap id (co :: rest) : List Nat)
-            = co ++ rest.flatMap id from by simp [List.flatMap_cons]] at *
+      simp only [List.flatMap_cons, List.map_cons, List.sum_cons, id_eq]
       rw [nu0_append G atoms D co (rest.flatMap id)
         (fun a _ => fun ⟨h1, h2⟩ => hd a.vertex h1 h2), ih]
 
@@ -538,11 +542,12 @@ theorem negative_corridor_of_check (G : GraphData) (atoms : List AtomData)
     ∃ co ∈ c.corridors, nu0Num G atoms D co < 0 := by
   unfold checkCorridorPartition at h
   simp only [Bool.and_eq_true] at h
-  rcases hg : c.corridors.get? c.negIdx with _ | co
+  rcases hg : c.corridors[c.negIdx]? with _ | co
   · rw [hg] at h
     simp at h
   · rw [hg] at h
-    refine ⟨co, List.get?_mem hg, ?_⟩
+    rcases List.getElem?_eq_some_iff.mp hg with ⟨hlt, hco⟩
+    refine ⟨co, hco ▸ List.getElem_mem hlt, ?_⟩
     have := h.2
     simpa using this
 
@@ -604,7 +609,7 @@ theorem checkCompletedSwitch_sigma (G : GraphData) (c : CutData)
   unfold checkCompletedSwitch at h
   simp only [Bool.and_eq_true, decide_eq_true_eq] at h
   unfold sigma dB dM
-  rw [h.2.2.1, h.1, h.2.1]
+  rw [h.1.1.1.2, h.1.1.1.1.1, h.1.1.1.1.2]
 
 /-- Fact extraction: the ν_K ledger identity. -/
 theorem checkCompletedSwitch_nuK (G : GraphData) (c : CutData)
@@ -612,7 +617,95 @@ theorem checkCompletedSwitch_nuK (G : GraphData) (c : CutData)
     w.nuKVal = ((w.newLenSq : Int) - w.oldLenSq) + w.oldLenSq * w.sigmaVal := by
   unfold checkCompletedSwitch at h
   simp only [Bool.and_eq_true, decide_eq_true_eq] at h
-  rw [h.2.2.2.2.2, h.2.2.2.2.1, h.2.2.2.1]
+  rw [h.2, h.1.2, h.1.1.2]
+
+/-! ### B3: CrossCap capacity certificate (blueprint §CROSSCAP).
+The corridor engine's flow argument establishes the scalar capacity inequality
+5·sNum(C) + D·N·∂B(C) ≤ D·N·|C| + D·N·∂M(C). Any demand-conserving,
+capacity-respecting flow witnesses exactly this inequality (total demand ≤
+total capacity), so the checker consumes the inequality on RECOMPUTED
+boundary counts and load numerators; the demand/slot/flow lists are
+emitter-side payload kept for cross-validation. Soundness needs no
+Γ-minimality: a passing check on a ν₀-negative corridor forces
+σ(corridor) < 0, contradicting max-cut switch nonnegativity. -/
+
+/-- CrossCap certificate (blueprint field set; declared boundaries are
+    compared against recomputation, demand/slot/flow lists are payload). -/
+structure CrossCapCert where
+  corridor : List Nat
+  blueBoundary : List (Nat × Nat)
+  badBoundary : List (Nat × Nat)
+  rowDemands : List (Nat × Int)
+  blueDemands : List (Nat × Int)
+  vertexSlots : List (Nat × Int)
+  badSlots : List (Nat × Int)
+  flows : List (Nat × Nat × Int)
+  residuals : List Int
+deriving Repr
+
+/-- CrossCap check: corridor well-formed, declared boundaries match the
+    recomputed filters (canon: recompute, never trust), and the capacity
+    inequality holds on recomputed counts. -/
+def checkCrossCap (G : GraphData) (c : CutData) (atoms : List AtomData)
+    (D : Nat) (w : CrossCapCert) : Bool :=
+  decide (w.corridor ≠ []) && decide w.corridor.Nodup &&
+  w.corridor.all (fun v => decide (v < G.n)) &&
+  decide (w.blueBoundary = G.edges.filter
+    (fun e => blueb G c e.1 e.2 && crossesSet w.corridor e)) &&
+  decide (w.badBoundary = G.edges.filter
+    (fun e => badb G c e.1 e.2 && crossesSet w.corridor e)) &&
+  decide (5 * sNum atoms w.corridor + D * G.n * dB G c w.corridor
+    ≤ D * G.n * w.corridor.length + D * G.n * dM G c w.corridor)
+
+/-- Nat-to-Int rearrangement for the capacity inequality. -/
+private theorem crossCap_rearrange (a b c d : Nat) (h : a + b ≤ c + d) :
+    (b : Int) - (d : Int) ≤ (c : Int) - (a : Int) := by
+  omega
+
+/-- Fact extraction: the capacity inequality in ν₀/σ form,
+    D·N·σ(C) ≤ ν₀,D(C). -/
+theorem checkCrossCap_ineq (G : GraphData) (c : CutData)
+    (atoms : List AtomData) (D : Nat) (w : CrossCapCert)
+    (h : checkCrossCap G c atoms D w = true) :
+    ((D : Int) * G.n) * sigma G c w.corridor ≤ nu0Num G atoms D w.corridor := by
+  unfold checkCrossCap at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  have h2 := crossCap_rearrange _ _ _ _ h.2
+  unfold sigma nu0Num
+  push_cast at h2 ⊢
+  nlinarith [h2]
+
+/-- CROSSCAP SOUNDNESS: a passing capacity check on a ν₀-negative corridor
+    contradicts max-cut switch nonnegativity (no Γ-minimality needed):
+    D·N·σ ≤ ν₀ < 0 with σ ≥ 0 is impossible. -/
+theorem crossCap_sound (G : GraphData) (c : CutData) (atoms : List AtomData)
+    (D : Nat) (w : CrossCapCert)
+    (hcheck : checkCrossCap G c atoms D w = true)
+    (hneg : nu0Num G atoms D w.corridor < 0)
+    (hmax : ∀ S : List Nat, 0 ≤ sigma G c S) : False := by
+  have h1 := checkCrossCap_ineq G c atoms D w hcheck
+  have h3 : (0 : Int) ≤ ((D : Int) * G.n) * sigma G c w.corridor :=
+    mul_nonneg (by positivity) (hmax w.corridor)
+  exact absurd (le_trans h3 h1) (not_le.mpr hneg)
+
+/-- Dichotomy consumer edge: a passing corridor partition plus a CrossCap
+    certificate on its negative corridor refute max-cut — i.e. under max-cut
+    no such configuration exists. Stated on an explicit corridor so the
+    lens-gate layer can select which corridor carries the CrossCap. -/
+theorem partition_crossCap_sound (G : GraphData) (c : CutData)
+    (atoms : List AtomData) (D : Nat) (pc : CorridorPartitionCert)
+    (w : CrossCapCert)
+    (hpc : checkCorridorPartition G atoms D pc = true)
+    (hsel : pc.corridors[pc.negIdx]? = some w.corridor)
+    (hcheck : checkCrossCap G c atoms D w = true)
+    (hmax : ∀ S : List Nat, 0 ≤ sigma G c S) : False := by
+  have hneg : nu0Num G atoms D w.corridor < 0 := by
+    unfold checkCorridorPartition at hpc
+    simp only [Bool.and_eq_true] at hpc
+    have := hpc.2
+    rw [hsel] at this
+    simpa using this
+  exact crossCap_sound G c atoms D w hcheck hneg hmax
 
 end CertGraph
 end Erdos23Delta0
