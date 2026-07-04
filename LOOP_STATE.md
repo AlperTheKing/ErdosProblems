@@ -517,3 +517,17 @@
   build honestly, fix. Then the mechanical transfer chain closes Bank0 self-containment.
 - Batch 19/108 (k6/F4 reverified — 10th; every repaired row still personally verified).
   Sibling 4.1 queued; on 4.2+. Marker 1696415.
+
+
+## TICK NOTES (2026-07-05T21:35Z) — B2 proof kernel landed in-thread
+- MAIN delivered the badCount_extendCut_eq proof kernel (12518c Lean, LAST message on main
+  thread; window.__b2 cache dies with the tab — re-cache from the last assistant message).
+  ADAPTATION POINTS seen: (a) it assumes separate modules (imports Erdos23Delta0.CertGraph +
+  Bank0.PeelData; namespaces Bank0.Peel) — INLINE into CertGraph.lean instead, drop imports/
+  namespaces; (b) PeelProj.* projection names -> my checkPeel extraction lemmas (write tiny
+  adapters if needed); (c) reverse ZZEQZZ/ZZPLUSZZ transform carefully (it is CODE).
+  NEXT TICK FIRST ACTION: extract remaining slices (950-13243 of the transformed cache),
+  reassemble, review line-by-line vs green defs, paste before end-markers, honest build,
+  fix cycles. THEN: transfer chain (badCount_smallCut_eq_big, small_badCount_min_of_peel,
+  sigmaNonneg_small_of_peel, SigmaChain_of_sigmaNonneg) closes BANK0 SELF-CONTAINMENT.
+- Batch 19/108. Sibling on 4.2+. Marker 1696415.
