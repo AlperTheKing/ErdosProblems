@@ -1209,5 +1209,50 @@ theorem bank0Cross_sound (G : GraphData) (c : CutData)
   exact partition_crossCap_sound G c atoms D w.partition w.crossCap
     h.1.1 h.1.2 h.2 hmax
 
+/-! ### B5: global C5 labelling checker (the `globalC5` Bank0 payload).
+A single bank block whose five classes partition ALL vertices, with every
+bad edge (recomputed) in the V4-V0 layer and the five cyclic template bounds
+badCount ≤ e(Vᵢ,Vᵢ₊₁) ≤ |Vᵢ|·|Vᵢ₊₁| verified numerically. The AM-GM finish
+25·badCount ≤ N² is composed in the Assembly module via
+Bank0Algebra.bank_amgm_rat from the facts extracted here. -/
+
+/-- Global C5 check over a bank block whose classes cover the whole graph. -/
+def checkGlobalC5 (G : GraphData) (c : CutData) (b : BankBlock) : Bool :=
+  decide ((b.classes 0).length + (b.classes 1).length + (b.classes 2).length
+    + (b.classes 3).length + (b.classes 4).length = G.n) &&
+  (List.finRange 5).all (fun i =>
+    (b.classes i).all (fun v => decide (v < G.n)) &&
+    decide (b.classes i).Nodup) &&
+  (List.finRange 5).all (fun i => (List.finRange 5).all (fun j =>
+    decide (i = j) ||
+    (b.classes i).all (fun v => decide (v ∉ b.classes j)))) &&
+  (G.edges.filter (fun e => badb G c e.1 e.2)).all (fun e =>
+    (decide (e.1 ∈ b.classes 4) && decide (e.2 ∈ b.classes 0)) ||
+    (decide (e.1 ∈ b.classes 0) && decide (e.2 ∈ b.classes 4))) &&
+  (List.finRange 5).all (fun i =>
+    decide (badCount G c ≤ eBetween G (b.classes i) (b.classes (i + 1))) &&
+    decide (badCount G c
+      ≤ (b.classes i).length * (b.classes (i + 1)).length))
+
+/-- Fact extraction: the five class sizes sum to the vertex count. -/
+theorem checkGlobalC5_sizes (G : GraphData) (c : CutData) (b : BankBlock)
+    (h : checkGlobalC5 G c b = true) :
+    (b.classes 0).length + (b.classes 1).length + (b.classes 2).length
+      + (b.classes 3).length + (b.classes 4).length = G.n := by
+  unfold checkGlobalC5 at h
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
+  exact h.1.1.1.1
+
+/-- Fact extraction: the five cyclic class-size products dominate badCount —
+    exactly the hypotheses of Bank0Algebra.bank_amgm_rat. -/
+theorem checkGlobalC5_products (G : GraphData) (c : CutData) (b : BankBlock)
+    (h : checkGlobalC5 G c b = true) :
+    ∀ i : Fin 5, badCount G c
+      ≤ (b.classes i).length * (b.classes (i + 1)).length := by
+  unfold checkGlobalC5 at h
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
+  intro i
+  exact (h.2 i (List.mem_finRange i)).2
+
 end CertGraph
 end Erdos23Delta0

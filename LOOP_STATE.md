@@ -372,3 +372,20 @@
   (queue: BankBlockCoverCert bads<->badCount linkage detail if fiddly; else FAQ 51+ or
   O5/O6 artifact audit when they land). Sibling 3.8+ status: check next tick.
 - Marker 1668917. EXTRACTION QUEUE += main q=3 section (14978c).
+
+
+## TICK NOTES (2026-07-05T09:35Z) — GlobalC5 payload green; 4/5 payloads done
+- Batch 11/108; k5/F4 (repaired, 384-prime lex-large + highspy basis) reverified by me —
+  5th personal check, all repaired rows covered. Marker 1670692.
+- LEAN: B5 GlobalC5 GREEN first try (partition-size sum + hygiene + pairwise disjoint +
+  recomputed bad-edge placement V4-V0 + five cyclic template bounds; fact extractions
+  _sizes and _products feed Bank0Algebra.bank_amgm_rat in Assembly). CertGraph payloads:
+  bankBlocks GREEN, cross GREEN, peel GREEN, globalC5 GREEN. REMAINING: NCHBankCert
+  routing wrapper (inductive over the four green payloads + future non-C5-hom seed bank
+  constructor as data) THEN Assembly.lean (Bank0Cert + dispatch + Bank0Statement +
+  bank0_all; imports CertGraph + Bank0Algebra — check import path mechanics for the
+  standalone-build pattern: may need one merged file or lake package roots per Codex
+  harness --root approach).
+- Sibling: 3.8 landed (5734c, queued) -> 3.9 tasked. Main: free after q=3 section —
+  RETASK NEXT TICK (queue: FAQ 51+ for route-tree/enumeration; or O5/O6 audit when land).
+- EXTRACTION QUEUE += sibling 3.8 (5734c).
