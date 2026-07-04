@@ -454,3 +454,14 @@
 - Batch 15/108 (hard k5/G7 one-increment repair; reverify in flight w/ dominant=14 — the
   dominant=13 launch was MIS-INDEXED, discard claude_k5g7_recheck.json, use _v2). Marker
   1677261. Main = FAQ 51+ still generating (check next tick); sibling = section regen.
+
+
+## TICK NOTES (2026-07-05T14:15Z) — batch 17/108; SigmaChain provider consult in flight
+- Batch 17/108 (k8/F4 clean, k8/F3 repaired — reverified by me, 8th). first_pending k6/G5
+  (hard). Marker 1681172.
+- Main = SigmaChain provider contract (P-MaxCut preservation: Ext cut-extension data,
+  badCount_Ext, the badCount-min <-> sigmaNonneg equivalence via symmetric-difference flips,
+  small minimality transfer) — THE LAST BANK0 LINK. FAQ 51+ landed (extraction at assembly).
+- Sibling: regenerated section status unknown — CHECK NEXT TICK (was 3.9 regen after stub).
+- LEAN NEXT: on SigmaChain-provider landing, type Ext + badCount_Ext + the equivalence +
+  sigmaChain_of_isMaxCut_peel; then Bank0 is fully self-contained modulo Branch-A consumption.
