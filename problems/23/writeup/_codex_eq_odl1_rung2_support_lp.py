@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+from functools import lru_cache
 from dataclasses import dataclass
 from fractions import Fraction
 from pathlib import Path
@@ -71,6 +72,7 @@ def multinomial(total: int, exp: tuple[int, ...]) -> int:
     return charts.multinomial(total, exp)
 
 
+@lru_cache(maxsize=None)
 def bernstein_product_coeff(
     left_degree: int,
     left_exp: tuple[int, ...],
@@ -195,6 +197,11 @@ def selected_degree2_columns(
             family_cols.sort(key=score, reverse=True)
             family_cols = family_cols[:max_columns_per_family]
         columns.extend(family_cols)
+        print(
+            f"support LP family {kind}:{name} candidate_exps={len(candidate_exps)} "
+            f"kept_columns={len(family_cols)} total_columns={len(columns)}",
+            flush=True,
+        )
     return columns
 
 
@@ -245,6 +252,11 @@ def selected_band_columns(
 
         columns.sort(key=score, reverse=True)
         columns = columns[:max_columns]
+    print(
+        f"support LP band {band} candidate_exps={len(candidate_exps)} "
+        f"kept_columns={len(columns)}",
+        flush=True,
+    )
     return columns
 
 
@@ -494,6 +506,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
 
 
 

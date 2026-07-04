@@ -1,0 +1,17 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 0,
+  "columns": 43128,
+  "dominant": 7,
+  "dominant_name": "B0_eta25_25",
+  "nminus_nonzero_rows": 12443,
+  "nnz": 1545048,
+  "rows": 167960,
+  "schema": "eq_odl1_rung2_floor_buffer_v1",
+  "stage1": {
+    "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+    "status": 1,
+    "success": false
+  },
+  "support": "negative"
+}

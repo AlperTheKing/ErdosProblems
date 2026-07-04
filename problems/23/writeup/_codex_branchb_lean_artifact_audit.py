@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Audit the generated Branch-B Lean certificate-data artifact.
+"""Audit generated Branch-B Lean certificate-data artifacts.
 
-This is a lightweight reproducibility gate for the accepted Branch-B
-certificate-to-Lean layer.  It does not re-run Lean; it checks that the
-transpiler manifest, generated Lean files, and recorded module-build summary
-are mutually consistent and free of forbidden proof shortcuts.
+This reproducibility gate checks that the accepted Branch-B transpiler manifest,
+generated Lean files, optional compact dictionary audit, and recorded module-build
+summary are mutually consistent and free of forbidden proof shortcuts.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -27,6 +27,13 @@ def rel_to_abs(root: Path, value: str) -> Path:
     if not path.is_absolute():
         path = root / path
     return path
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 
 def scan_forbidden(paths: list[Path]) -> list[dict]:
@@ -61,6 +68,34 @@ def require(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
+def load_dictionary_audit(root: Path, path_arg: str) -> tuple[dict | None, Path | None, Path]:
+    manifest_path = rel_to_abs(root, path_arg)
+    if not manifest_path.exists():
+        return None, None, manifest_path
+    manifest = read_json(manifest_path)
+    schema = manifest.get("schema")
+    require(schema in {"branchb_dictionary_audit_lean_v1", "branchb_dictionary_audit_lean_v2"}, "unexpected dictionary audit schema")
+    require(manifest.get("row_signature_count") == 38, "unexpected row dictionary signature count")
+    require(manifest.get("op_signature_count") == 10, "unexpected op dictionary signature count")
+    require(manifest.get("row_term_occurrences") == 19988, "unexpected row dictionary occurrence total")
+    require(manifest.get("op_piece_occurrences") == 713, "unexpected op dictionary occurrence total")
+    checks = manifest.get("checks", {})
+    require(bool(checks), "missing dictionary audit checks")
+    require(all(checks.values()), "dictionary audit manifest contains false checks")
+    if schema == "branchb_dictionary_audit_lean_v2":
+        require(checks.get("lean_denominator_guard_emitted") is True, "missing dictionary denominator-guard check")
+    lean_out = rel_to_abs(root, manifest["lean_out"])
+    require(lean_out.exists(), f"missing dictionary audit Lean file: {lean_out}")
+    text = lean_out.read_text(encoding="utf-8")
+    require("def RatLit.valid" in text, "missing RatLit denominator-valid checker")
+    require("RatLit.valid a && RatLit.valid b && RatLit.valid c" in text, "RatLit.mulEq does not guard denominators")
+    require("branchBRowDictSignatures_check" in text, "missing row dictionary check theorem")
+    require("branchBOpDictSignatures_check" in text, "missing op dictionary check theorem")
+    require("branchBRowDictOccurrenceTotal" in text, "missing row occurrence theorem")
+    require("branchBOpDictOccurrenceTotal" in text, "missing op occurrence theorem")
+    return manifest, lean_out, manifest_path
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -70,6 +105,10 @@ def main() -> None:
     ap.add_argument(
         "--build-summary",
         default="tmp/branchb_lean_module_build_v6g_summary.json",
+    )
+    ap.add_argument(
+        "--dictionary-manifest",
+        default="tmp/branchb_dictionary_audit_lean_v1_manifest.json",
     )
     ap.add_argument(
         "--summary",
@@ -92,9 +131,18 @@ def main() -> None:
     require(support.exists(), f"missing support file: {support}")
     require(index.exists(), f"missing aggregate index file: {index}")
 
+    input_jsonl = rel_to_abs(root, manifest["input"])
+    signatures = rel_to_abs(root, manifest["signatures"])
+    require(input_jsonl.exists(), f"missing input JSONL: {input_jsonl}")
+    require(signatures.exists(), f"missing signature artifact: {signatures}")
+
+    dictionary_manifest, dictionary_lean, dictionary_manifest_path = load_dictionary_audit(root, args.dictionary_manifest)
+
     all_files = [support, *emitted]
     if index not in all_files:
         all_files.append(index)
+    if dictionary_lean is not None:
+        all_files.append(dictionary_lean)
     forbidden_hits = scan_forbidden(all_files)
     require(not forbidden_hits, f"forbidden Lean tokens found: {forbidden_hits[:3]}")
 
@@ -112,12 +160,30 @@ def main() -> None:
     require("branchBShardCount : branchBShardChecks.length = 29" in index_text, "missing shard-count theorem")
 
     require(build.get("failures") == [], "build summary contains failures")
-    require(build.get("count") == 32, "unexpected build module count")
+    build_modules = {r.get("module") for r in build.get("results", [])}
+    expected_build_count = 33 if dictionary_manifest is not None else 32
+    require(build.get("count") == expected_build_count, "unexpected build module count")
     require(build.get("shard_count") == 29, "unexpected build shard count")
+    if dictionary_manifest is not None:
+        require("Erdos23Delta0.Cert.BranchBDictionaryAudit" in manifest.get("extra_index_imports", []), "dictionary audit missing from transpile manifest imports")
+        require("import Erdos23Delta0.Cert.BranchBDictionaryAudit" in index_text, "dictionary audit missing from aggregate import")
+        require("Erdos23Delta0.Cert.BranchBDictionaryAudit" in build_modules, "dictionary audit missing from build summary")
 
     recovered = [r for r in build.get("results", []) if r.get("recovered_tmp")]
+    sha256 = {
+        "input_jsonl": sha256_file(input_jsonl),
+        "signatures": sha256_file(signatures),
+        "transpile_manifest": sha256_file(manifest_path),
+        "build_summary": sha256_file(build_path),
+        "support": sha256_file(support),
+        "index": sha256_file(index),
+        "dictionary_manifest": sha256_file(dictionary_manifest_path) if dictionary_manifest is not None else None,
+        "dictionary_lean": sha256_file(dictionary_lean) if dictionary_lean is not None else None,
+        "shards": [{"file": str(p), "sha256": sha256_file(p)} for p in shard_files],
+    }
+
     out = {
-        "schema": "branchb_lean_artifact_audit_v1",
+        "schema": "branchb_lean_artifact_audit_v2",
         "manifest": str(manifest_path),
         "build_summary": str(build_path),
         "rows": total_rows,
@@ -131,6 +197,16 @@ def main() -> None:
         "build_failures": 0,
         "recovered_tmp_modules": len(recovered),
         "recovered_tmp_workaround": len(recovered) > 0,
+        "sha256": sha256,
+        "dictionary_audit": {
+            "present": dictionary_manifest is not None,
+            "manifest": str(dictionary_manifest_path) if dictionary_manifest is not None else None,
+            "lean_out": str(dictionary_lean) if dictionary_lean is not None else None,
+            "row_signature_count": dictionary_manifest.get("row_signature_count") if dictionary_manifest else None,
+            "row_term_occurrences": dictionary_manifest.get("row_term_occurrences") if dictionary_manifest else None,
+            "op_signature_count": dictionary_manifest.get("op_signature_count") if dictionary_manifest else None,
+            "op_piece_occurrences": dictionary_manifest.get("op_piece_occurrences") if dictionary_manifest else None,
+        },
         "status": "PASS",
     }
     summary = rel_to_abs(root, args.summary)

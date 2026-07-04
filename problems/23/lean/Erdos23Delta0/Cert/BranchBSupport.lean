@@ -1,4 +1,4 @@
-/- Shared support for generated Branch-B certificate data. -/
+/- Generated Branch-B certificate support definitions. -/
 import Mathlib
 
 namespace Erdos23Delta0

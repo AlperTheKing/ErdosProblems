@@ -477,11 +477,13 @@ def module_name_from_path(path: Path) -> str:
     raise ValueError(f"cannot derive module name from {path}")
 
 
-def emit_index(out_path: Path, shard_paths: list[str], shard_lengths: list[int]) -> None:
+def emit_index(out_path: Path, shard_paths: list[str], shard_lengths: list[int], extra_imports: list[str]) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines: list[str] = []
     lines.append("/- Generated aggregate imports for Branch-B certificate shards. -/")
     lines.append("import Erdos23Delta0.Cert.BranchBSupport")
+    for module in extra_imports:
+        lines.append(f"import {module}")
     for shard in shard_paths:
         lines.append(f"import {module_name_from_path(Path(shard))}")
     lines.append("")
@@ -534,6 +536,7 @@ def main() -> None:
     ap.add_argument("--out-dir", default="problems/23/lean/Erdos23Delta0/Cert/BranchBData")
     ap.add_argument("--support-out", default="problems/23/lean/Erdos23Delta0/Cert/BranchBSupport.lean")
     ap.add_argument("--index-out", default="problems/23/lean/Erdos23Delta0/Cert/BranchBData.lean")
+    ap.add_argument("--extra-index-import", action="append", default=[])
     ap.add_argument("--shard-size", type=int, default=500)
     ap.add_argument("--self-contained", action="store_true", help="emit standalone files with local support defs")
     args = ap.parse_args()
@@ -569,7 +572,7 @@ def main() -> None:
             shard_lengths.append(len(chunk))
         shard_paths = emitted if args.self_contained else emitted[1:]
         if not args.self_contained:
-            emit_index(Path(args.index_out), shard_paths, shard_lengths)
+            emit_index(Path(args.index_out), shard_paths, shard_lengths, args.extra_index_import)
             emitted.append(args.index_out)
 
     case_counts = Counter(c["case"] for c in certs)
@@ -584,6 +587,7 @@ def main() -> None:
         "out_dir": args.out_dir if args.mode == "full" else None,
         "support_out": None if args.self_contained else args.support_out,
         "index_out": None if args.self_contained else (args.index_out if args.mode == "full" else None),
+        "extra_index_imports": args.extra_index_import if args.mode == "full" and not args.self_contained else [],
         "emitted": emitted,
         "selected": selection_meta,
         "counts": {

@@ -1,0 +1,277 @@
+#!/usr/bin/env python3
+"""Emit a compact Lean audit for Branch-B dictionary signatures.
+
+The full Branch-B RowPilot shards prove row arithmetic, but intentionally
+collapse dictionary terms to contributions.  This emitter preserves the
+dictionary layer in compressed form: one Lean record per distinct
+(dictionary_class, value, coeff, contribution) signature, with multiplicity.
+
+Lean then checks the exact rational product
+
+    value * coeff = contribution
+
+by integer cross multiplication, plus total occurrence counts.  This is a
+small, kernel-checkable bridge from the v2/dictionary JSONL semantics toward a
+shorter generic checker.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+from collections import Counter
+from dataclasses import dataclass
+from fractions import Fraction
+from pathlib import Path
+from typing import Any
+
+
+ROW_CLASS_TO_LEAN = {
+    "sparse_m1_direct_identity": "RowDictClass.sparseM1DirectIdentity",
+    "terminal-prefix": "RowDictClass.terminalPrefix",
+    "B-connected-segment/noncrossing-coB": "RowDictClass.bConnectedSegmentNoncrossingCoB",
+    "detour_component_deficit": "RowDictClass.detourComponentDeficit",
+    "terminal-prefix/noncrossing-coB": "RowDictClass.terminalPrefixNoncrossingCoB",
+}
+
+OP_CLASS_TO_LEAN = {
+    "terminal-prefix-raw-extraction": "OpDictClass.terminalPrefixRawExtraction",
+    "terminal-prefix-lane-addition": "OpDictClass.terminalPrefixLaneAddition",
+    "noncrossing-coB-extraction": "OpDictClass.noncrossingCoBExtraction",
+    "noncrossing-coB-component-addition": "OpDictClass.noncrossingCoBComponentAddition",
+}
+
+
+@dataclass(frozen=True, order=True)
+class Sig:
+    dictionary_class: str
+    value: Fraction
+    coeff: Fraction
+    contribution: Fraction
+
+    def check(self) -> bool:
+        return self.value >= 0 and self.coeff >= 0 and self.contribution >= 0 and self.value * self.coeff == self.contribution
+
+
+def frac(x: Any) -> Fraction:
+    if isinstance(x, int):
+        return Fraction(x, 1)
+    return Fraction(str(x))
+
+
+def lean_str(s: str) -> str:
+    return json.dumps(s)
+
+
+def rat_lit(q: Fraction) -> str:
+    return f"{{ num := {q.numerator}, den := {q.denominator} }}"
+
+
+def nat_list(values: list[int]) -> str:
+    return "[" + ", ".join(str(v) for v in values) + "]"
+
+
+def collect(path: Path) -> tuple[Counter[Sig], Counter[Sig], Counter[str], Counter[str], int]:
+    row_sigs: Counter[Sig] = Counter()
+    op_sigs: Counter[Sig] = Counter()
+    row_classes: Counter[str] = Counter()
+    op_classes: Counter[str] = Counter()
+    rows = 0
+    with path.open("r", encoding="utf-8") as fh:
+        for line in fh:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            rows += 1
+            for term in row.get("terms", []):
+                dclass = (term.get("dictionary") or {}).get("dictionary_class")
+                if dclass not in ROW_CLASS_TO_LEAN:
+                    raise ValueError(f"unknown row dictionary class: {dclass!r}")
+                sig = Sig(dclass, frac(term["value"]), frac(term["coeff"]), frac(term["contribution"]))
+                if not sig.check():
+                    raise ValueError(f"bad row dictionary product: {sig}")
+                row_sigs[sig] += 1
+                row_classes[dclass] += 1
+            gate_b = row.get("gate_b_dictionary") or {}
+            seq = (gate_b.get("candidate_v2") or gate_b.get("candidate_v1") or {}).get("op_sequence") or {}
+            for step in seq.get("op_steps") or []:
+                for piece in step.get("dictionary_decomposition") or []:
+                    dclass = piece.get("dictionary_class")
+                    if dclass not in OP_CLASS_TO_LEAN:
+                        raise ValueError(f"unknown op dictionary class: {dclass!r}")
+                    sig = Sig(dclass, frac(piece["value"]), frac(piece["coeff"]), frac(piece["contribution"]))
+                    if not sig.check():
+                        raise ValueError(f"bad op dictionary product: {sig}")
+                    op_sigs[sig] += 1
+                    op_classes[dclass] += 1
+    return row_sigs, op_sigs, row_classes, op_classes, rows
+
+
+def emit_signature(sig: Sig, mult: int, class_map: dict[str, str]) -> str:
+    return (
+        "{ "
+        f"dictionaryClass := {class_map[sig.dictionary_class]}, "
+        f"value := {rat_lit(sig.value)}, "
+        f"coeff := {rat_lit(sig.coeff)}, "
+        f"contribution := {rat_lit(sig.contribution)}, "
+        f"multiplicity := {mult} "
+        "}"
+    )
+
+
+def emit(out: Path, row_sigs: Counter[Sig], op_sigs: Counter[Sig]) -> None:
+    row_items = sorted(row_sigs.items(), key=lambda kv: (kv[0].dictionary_class, kv[0].value, kv[0].coeff, kv[0].contribution))
+    op_items = sorted(op_sigs.items(), key=lambda kv: (kv[0].dictionary_class, kv[0].value, kv[0].coeff, kv[0].contribution))
+    lines: list[str] = []
+    lines.append("/- Generated by _codex_branchb_dictionary_audit_to_lean.py.")
+    lines.append("   Compact dictionary-signature audit for Branch-B JSONL. -/")
+    lines.append("import Erdos23Delta0.Cert.BranchBSupport")
+    lines.append("")
+    lines.append("namespace Erdos23Delta0")
+    lines.append("namespace Cert")
+    lines.append("")
+    lines.append("structure RatLit where")
+    lines.append("  num : Int")
+    lines.append("  den : Nat")
+    lines.append("deriving Repr")
+    lines.append("")
+    lines.append("def RatLit.valid (a : RatLit) : Bool :=")
+    lines.append("  a.den != 0")
+    lines.append("")
+    lines.append("def RatLit.mulEq (a b c : RatLit) : Bool :=")
+    lines.append("  RatLit.valid a && RatLit.valid b && RatLit.valid c &&")
+    lines.append("    a.num * b.num * Int.ofNat c.den == c.num * Int.ofNat a.den * Int.ofNat b.den")
+    lines.append("")
+    lines.append("inductive RowDictClass where")
+    lines.append("  | sparseM1DirectIdentity")
+    lines.append("  | terminalPrefix")
+    lines.append("  | bConnectedSegmentNoncrossingCoB")
+    lines.append("  | detourComponentDeficit")
+    lines.append("  | terminalPrefixNoncrossingCoB")
+    lines.append("deriving Repr, DecidableEq")
+    lines.append("")
+    lines.append("inductive OpDictClass where")
+    lines.append("  | terminalPrefixRawExtraction")
+    lines.append("  | terminalPrefixLaneAddition")
+    lines.append("  | noncrossingCoBExtraction")
+    lines.append("  | noncrossingCoBComponentAddition")
+    lines.append("deriving Repr, DecidableEq")
+    lines.append("")
+    lines.append("structure RowDictSignature where")
+    lines.append("  dictionaryClass : RowDictClass")
+    lines.append("  value : RatLit")
+    lines.append("  coeff : RatLit")
+    lines.append("  contribution : RatLit")
+    lines.append("  multiplicity : Nat")
+    lines.append("deriving Repr")
+    lines.append("")
+    lines.append("structure OpDictSignature where")
+    lines.append("  dictionaryClass : OpDictClass")
+    lines.append("  value : RatLit")
+    lines.append("  coeff : RatLit")
+    lines.append("  contribution : RatLit")
+    lines.append("  multiplicity : Nat")
+    lines.append("deriving Repr")
+    lines.append("")
+    lines.append("def RowDictSignature.check (s : RowDictSignature) : Bool :=")
+    lines.append("  RatLit.mulEq s.value s.coeff s.contribution")
+    lines.append("")
+    lines.append("def OpDictSignature.check (s : OpDictSignature) : Bool :=")
+    lines.append("  RatLit.mulEq s.value s.coeff s.contribution")
+    lines.append("")
+    lines.append("def rowDictSignatureListCheck : List RowDictSignature -> Bool")
+    lines.append("  | [] => true")
+    lines.append("  | s :: ss => RowDictSignature.check s && rowDictSignatureListCheck ss")
+    lines.append("")
+    lines.append("def opDictSignatureListCheck : List OpDictSignature -> Bool")
+    lines.append("  | [] => true")
+    lines.append("  | s :: ss => OpDictSignature.check s && opDictSignatureListCheck ss")
+    lines.append("")
+    lines.append("def rowDictMultiplicitySum : List RowDictSignature -> Nat")
+    lines.append("  | [] => 0")
+    lines.append("  | s :: ss => s.multiplicity + rowDictMultiplicitySum ss")
+    lines.append("")
+    lines.append("def opDictMultiplicitySum : List OpDictSignature -> Nat")
+    lines.append("  | [] => 0")
+    lines.append("  | s :: ss => s.multiplicity + opDictMultiplicitySum ss")
+    lines.append("")
+    lines.append("def branchBRowDictSignatures : List RowDictSignature := [")
+    lines.append(",\n".join("  " + emit_signature(sig, mult, ROW_CLASS_TO_LEAN) for sig, mult in row_items))
+    lines.append("]")
+    lines.append("")
+    lines.append("def branchBOpDictSignatures : List OpDictSignature := [")
+    lines.append(",\n".join("  " + emit_signature(sig, mult, OP_CLASS_TO_LEAN) for sig, mult in op_items))
+    lines.append("]")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBRowDictSignatures_check :")
+    lines.append("    rowDictSignatureListCheck branchBRowDictSignatures = true := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBOpDictSignatures_check :")
+    lines.append("    opDictSignatureListCheck branchBOpDictSignatures = true := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("theorem branchBRowDictSignatureCount : branchBRowDictSignatures.length = " + str(len(row_items)) + " := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("theorem branchBOpDictSignatureCount : branchBOpDictSignatures.length = " + str(len(op_items)) + " := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBRowDictOccurrenceTotal :")
+    lines.append("    rowDictMultiplicitySum branchBRowDictSignatures = " + str(sum(row_sigs.values())) + " := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBOpDictOccurrenceTotal :")
+    lines.append("    opDictMultiplicitySum branchBOpDictSignatures = " + str(sum(op_sigs.values())) + " := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("end Cert")
+    lines.append("end Erdos23Delta0")
+    lines.append("")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--input", default="tmp/bankl_branchb_gateb_final_v1.jsonl")
+    ap.add_argument("--lean-out", default="problems/23/lean/Erdos23Delta0/Cert/BranchBDictionaryAudit.lean")
+    ap.add_argument("--manifest", default="tmp/branchb_dictionary_audit_lean_v2_manifest.json")
+    args = ap.parse_args()
+
+    row_sigs, op_sigs, row_classes, op_classes, rows = collect(Path(args.input))
+    emit(Path(args.lean_out), row_sigs, op_sigs)
+    manifest = {
+        "schema": "branchb_dictionary_audit_lean_v2",
+        "input": args.input,
+        "lean_out": args.lean_out,
+        "rows": rows,
+        "row_term_occurrences": sum(row_sigs.values()),
+        "row_signature_count": len(row_sigs),
+        "row_class_counts": dict(sorted(row_classes.items())),
+        "op_piece_occurrences": sum(op_sigs.values()),
+        "op_signature_count": len(op_sigs),
+        "op_class_counts": dict(sorted(op_classes.items())),
+        "checks": {
+            "all_row_products_exact": all(sig.check() for sig in row_sigs),
+            "all_op_products_exact": all(sig.check() for sig in op_sigs),
+            "row_occurrences_match_expected": sum(row_sigs.values()) == 19988,
+            "op_occurrences_match_expected": sum(op_sigs.values()) == 713,
+            "lean_denominator_guard_emitted": True,
+        },
+    }
+    Path(args.manifest).write_text(json.dumps(manifest, indent=2, sort_keys=True), encoding="utf-8")
+    print(
+        "PASS branchb dictionary lean audit emit "
+        f"row_signatures={len(row_sigs)} row_occurrences={sum(row_sigs.values())} "
+        f"op_signatures={len(op_sigs)} op_occurrences={sum(op_sigs.values())}"
+    )
+
+
+if __name__ == "__main__":
+    main()

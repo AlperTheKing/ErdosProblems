@@ -1,0 +1,18 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 5,
+  "columns": 1502358,
+  "dominant": 13,
+  "dominant_name": "G6_A2_9T",
+  "method": "highs-ds",
+  "nminus_nonzero_rows": 167959,
+  "nnz": 35298120,
+  "rows": 167960,
+  "schema": "eq_odl1_rung2_floor_buffer_v1",
+  "stage1": {
+    "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+    "status": 1,
+    "success": false
+  },
+  "support": "all"
+}

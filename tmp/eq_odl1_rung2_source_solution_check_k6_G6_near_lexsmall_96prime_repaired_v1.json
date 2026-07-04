@@ -1,0 +1,52 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": 29801,
+  "dominant": 13,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=1104/den_bits=1098",
+  "full_min_residual": "-num_bits=1151/den_bits=1170",
+  "full_negative_residual_count": 2,
+  "full_zero_residual_count": 161566,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        2,
+        0,
+        3,
+        0,
+        0,
+        2,
+        2,
+        0,
+        2,
+        0
+      ],
+      "residual": "-num_bits=1151/den_bits=1171",
+      "row": 38728
+    },
+    {
+      "beta": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        2,
+        0,
+        2,
+        0
+      ],
+      "residual": "-num_bits=1151/den_bits=1170",
+      "row": 40324
+    }
+  ],
+  "nonzero_source_columns": 1447,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k6_G6_near_lexsmall_96prime_repaired_v1.jsonl",
+  "solution_max": "num_bits=1089/den_bits=1079",
+  "solution_min": "-num_bits=1151/den_bits=1167",
+  "solution_negative_count": 1,
+  "support": "negative"
+}

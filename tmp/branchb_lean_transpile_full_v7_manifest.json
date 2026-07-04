@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "all_finite_margins_scaled": true,
+    "all_pressure_eq_scaled": true
+  },
+  "counts": {
+    "case_counts": {
+      "DETOUR_RESIDUAL": 136,
+      "FREE_PACKET_EXCHANGE": 3688,
+      "MU_NUK": 800,
+      "MU_NUK_REPAIRED": 126,
+      "SPARSE_M1_BANKL_BYPASS": 9463,
+      "TIGHT_ZERO": 34
+    },
+    "gate_b_rows": 926,
+    "input_rows": 14247,
+    "op_steps": 1852,
+    "rows": 14247
+  },
+  "emitted": [
+    "problems/23/lean/Erdos23Delta0/Cert/BranchBSupport.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard000.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard001.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard002.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard003.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard004.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard005.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard006.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard007.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard008.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard009.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard010.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard011.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard012.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard013.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard014.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard015.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard016.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard017.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard018.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard019.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard020.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard021.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard022.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard023.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard024.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard025.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard026.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard027.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard028.lean",
+    "problems/23/lean/Erdos23Delta0/Cert/BranchBData.lean"
+  ],
+  "extra_index_imports": [
+    "Erdos23Delta0.Cert.BranchBDictionaryAudit"
+  ],
+  "index_out": "problems/23/lean/Erdos23Delta0/Cert/BranchBData.lean",
+  "input": "tmp\\bankl_branchb_gateb_final_v1.jsonl",
+  "lean_out": null,
+  "mode": "full",
+  "out_dir": "problems/23/lean/Erdos23Delta0/Cert/BranchBData",
+  "schema": "branchb_lean_transpile_v1",
+  "selected": {
+    "mode": "full",
+    "selected_rows": 14247
+  },
+  "self_contained": false,
+  "signatures": "tmp/bankl_completion_op_sequence_core_signatures_v1.json",
+  "support_out": "problems/23/lean/Erdos23Delta0/Cert/BranchBSupport.lean"
+}

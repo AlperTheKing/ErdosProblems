@@ -1,5 +1,6 @@
 /- Generated aggregate imports for Branch-B certificate shards. -/
 import Erdos23Delta0.Cert.BranchBSupport
+import Erdos23Delta0.Cert.BranchBDictionaryAudit
 import Erdos23Delta0.Cert.BranchBData.Shard000
 import Erdos23Delta0.Cert.BranchBData.Shard001
 import Erdos23Delta0.Cert.BranchBData.Shard002

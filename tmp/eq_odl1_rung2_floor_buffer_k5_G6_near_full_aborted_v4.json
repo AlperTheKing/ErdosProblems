@@ -1,0 +1,17 @@
+{
+  "schema": "eq_odl1_rung2_floor_buffer_aborted_v1",
+  "chart": 5,
+  "dominant": 13,
+  "dominant_name": "G6_A2_9T",
+  "band": "near_2s_minus_1",
+  "support": "all",
+  "method": "highs-ipm",
+  "status": "aborted_by_codex_stage1_no_return",
+  "summary_written": false,
+  "selected_columns": 1502358,
+  "sparse_shape": "167960x1502358",
+  "sparse_nnz": 35298120,
+  "sparse_build_seconds": 62.431,
+  "last_stdout": "floor-buffer stage1 start",
+  "note": "Full-support column selection and sparse build completed; HiGHS IPM stage1 did not return near 180s cap."
+}

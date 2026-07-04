@@ -35,27 +35,72 @@ def run_lean(formal_root: Path, src_root: Path, build_root: Path, path: Path) ->
     cmd = ["lake", "env", "lean", f"--root={src_root}", f"--o={out}", str(path)]
     t0 = time.time()
     proc = subprocess.run(cmd, cwd=formal_root, env=env, text=True, capture_output=True)
-    recovered_tmp = None
     returncode = proc.returncode
+    stdout = proc.stdout
     stderr = proc.stderr
-    if returncode != 0 and "failed to write" in stderr and "Permission denied" in stderr:
-        tmps = sorted(out.parent.glob(out.name + ".tmp.*"), key=lambda p: p.stat().st_mtime)
-        if tmps:
-            recovered_tmp = tmps[-1]
-            if out.exists():
-                out.unlink()
-            shutil.copyfile(recovered_tmp, out)
-            returncode = 0
-            stderr = stderr + "\nRECOVERED_OLEAN_FROM=" + str(recovered_tmp) + "\n"
+    recovery_olean = None
+    recovery_method = None
+
+    def write_permission_only(err: str) -> bool:
+        lowered = err.lower()
+        return "failed to write" in lowered and "permission denied" in lowered and "error:" not in lowered
+
+    if returncode != 0 and write_permission_only(stderr):
+        retry_out = out.parent / f"{out.stem}.retry.{os.getpid()}.{time.time_ns()}{out.suffix}"
+        retry_cmd = ["lake", "env", "lean", f"--root={src_root}", f"--o={retry_out}", str(path)]
+        retry_start = time.time()
+        retry = subprocess.run(retry_cmd, cwd=formal_root, env=env, text=True, capture_output=True)
+        stdout = stdout + retry.stdout
+        stderr = stderr + "\nWRITE_PERMISSION_RETRY_OLEAN=" + str(retry_out) + "\n" + retry.stderr
+        if retry.returncode == 0:
+            try:
+                if out.exists():
+                    out.unlink()
+                shutil.copyfile(retry_out, out)
+                returncode = 0
+                recovery_olean = retry_out
+                recovery_method = "fresh_rerun"
+                stderr = stderr + "\nRECOVERED_OLEAN_FROM_FRESH_RERUN=" + str(retry_out) + "\n"
+            except OSError as exc:
+                returncode = 1
+                stderr = stderr + "\nRECOVERY_COPY_FAILED=" + repr(exc) + "\n"
+        elif write_permission_only(retry.stderr):
+            source_mtime = path.stat().st_mtime
+            fresh_tmps = [
+                p for p in retry_out.parent.glob(retry_out.name + ".tmp.*")
+                if p.stat().st_mtime >= source_mtime and p.stat().st_mtime >= retry_start
+            ]
+            fresh_tmps.sort(key=lambda p: p.stat().st_mtime)
+            if fresh_tmps:
+                retry_tmp = fresh_tmps[-1]
+                try:
+                    if out.exists():
+                        out.unlink()
+                    shutil.copyfile(retry_tmp, out)
+                    returncode = 0
+                    recovery_olean = retry_tmp
+                    recovery_method = "fresh_rerun_tmp_copy"
+                    stderr = stderr + "\nRECOVERED_OLEAN_FROM_FRESH_RERUN_TMP=" + str(retry_tmp) + "\n"
+                except OSError as exc:
+                    returncode = 1
+                    stderr = stderr + "\nRECOVERY_COPY_FAILED=" + repr(exc) + "\n"
+            else:
+                returncode = retry.returncode
+                stderr = stderr + "\nFRESH_RERUN_TMP_NOT_FOUND_OR_STALE\n"
+        else:
+            returncode = retry.returncode
+            stderr = stderr + "\nFRESH_RERUN_FAILED\n"
     return {
         "module": mod,
         "file": str(path),
         "olean": str(out),
         "returncode": returncode,
         "seconds": round(time.time() - t0, 3),
-        "stdout": proc.stdout[-2000:],
+        "stdout": stdout[-2000:],
         "stderr": stderr[-4000:],
-        "recovered_tmp": str(recovered_tmp) if recovered_tmp else None,
+        "recovered_tmp": None,
+        "recovery_olean": str(recovery_olean) if recovery_olean else None,
+        "recovery_method": recovery_method,
     }
 
 
@@ -75,12 +120,14 @@ def main() -> None:
     build_root.mkdir(parents=True, exist_ok=True)
 
     support = src_root / "Erdos23Delta0/Cert/BranchBSupport.lean"
+    dictionary = src_root / "Erdos23Delta0/Cert/BranchBDictionaryAudit.lean"
     pilot = src_root / "Erdos23Delta0/Cert/BranchBData/Pilot.lean"
     shards = sorted((src_root / "Erdos23Delta0/Cert/BranchBData").glob("Shard*.lean"))
     index = src_root / "Erdos23Delta0/Cert/BranchBData.lean"
 
     results: list[dict] = []
-    for path in [support, pilot]:
+    prelude = [support] + ([dictionary] if dictionary.exists() else []) + [pilot]
+    for path in prelude:
         res = run_lean(formal_root, src_root, build_root, path)
         results.append(res)
         print(f"{res['module']} rc={res['returncode']} sec={res['seconds']}", flush=True)

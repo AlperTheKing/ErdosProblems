@@ -1,0 +1,23 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_G6_near_lexlarge_v1.jsonl",
+  "core_min_residual": "0",
+  "core_nonzero_residuals": 0,
+  "dimension": 1455,
+  "dominant": 13,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=1056/den_bits=1050",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 161519,
+  "negative_rows_prefix": [],
+  "schema": "eq_odl1_rung2_full_residual_check_v1",
+  "selected_rows": 1455,
+  "solution": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_G6_near_lexlarge_96prime_solution_v1.jsonl",
+  "solution_max": "num_bits=1038/den_bits=1028",
+  "solution_min": "num_bits=1230/den_bits=1250",
+  "solution_negative_count": 0,
+  "source_columns": 1455,
+  "support": "negative"
+}

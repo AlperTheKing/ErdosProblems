@@ -1,0 +1,37 @@
+{
+  "build_failures": 0,
+  "build_modules": 17,
+  "build_summary": "tmp/eq_odl1_rung2_source_lean_build_k5_G6_near_lexsmall_96prime_v1_summary.json",
+  "file_sha256": {
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData.lean": "7e3ee8203ac63e345337bf6a72c9e3070d6a815726c1e38c632656e8081bddd1",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard000.lean": "4938f5abe305a7e0ec5b797be8403cff17a40d3f7239868d93f47c6fb2e030bb",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard001.lean": "996a867652822aafd8e5bbe94b82f94b41bf850d4d27ddd02c0d16064c64e114",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard002.lean": "a8e36a559ca8eb72e1ade2f164396a09952f8f873d71a65320627d92c4c5152c",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard003.lean": "83c8a2dd3a9c75aec495280c7f14a0392abc50bfdfd04ab9a9fa0eb80742653c",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard004.lean": "4811d75659f21644d426a25eaa25261b61b13f01a271090e12a040003c9d1c8f",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard005.lean": "ebf3ff342da3d67a8eea809477a10fed8ea40b2d26f4a8aa8da558fe84edf1aa",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard006.lean": "d03b40bc29bebe8a1acebb3f13f88fa923ea2c524a22ec940317b173a41257a7",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard007.lean": "f9b5dae7309537954d20d1fa3d20ac3a61f5b2e7c9f5a2c6dd1a6eed3d6c05ce",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard008.lean": "83b35a69e241a126531e83104856122cf0e5b0a009e871b890b8349e4619e834",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard009.lean": "07e0278f6aa25666a96726f16340e5d96b82c24e685db85b4bca809577ddd5dd",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard010.lean": "69446c9c852c115a53d29ba1b9c389c4e5f52c8e9862ae49044e6093f7326f1f",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard011.lean": "3bca4a9a3d3e5b07d0d27fbb6382050974a499ee5359e19cde4fe99e160139e7",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard012.lean": "9a819dcf48d9d4ac11d330a9eb268f9f66b4819c8f07ca4b7d3bcfbdb1bcf684",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard013.lean": "b0784e448fda29d9d42a6f59058311c6ec0b392045a64a0c67eff365066fdad7",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceData\\Shard014.lean": "99d4938d5656fcf149dc4b2bc7df21aaf7da6fc316a5fa403b62ba93b0008c9b",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2SourceSupport.lean": "10e16676fbb19ec5755be9a04a3453c82ceab8d2bb802a44a06413539ff18164"
+  },
+  "files": 17,
+  "forbidden_hits": [],
+  "forbidden_tokens": [
+    "native_decide",
+    "sorry",
+    "admit",
+    "axiom",
+    "unsafe"
+  ],
+  "manifest": "tmp/eq_odl1_rung2_source_certificate_manifest_k5_G6_near_lexsmall_96prime_v1.json",
+  "schema": "eq_odl1_rung2_source_lean_artifact_audit_v1",
+  "shards": 15,
+  "status": "PASS"
+}

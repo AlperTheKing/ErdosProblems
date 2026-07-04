@@ -1,0 +1,16 @@
+{
+  "schema": "eq_odl1_rung2_floor_buffer_aborted_v1",
+  "chart": 5,
+  "dominant": 13,
+  "dominant_name": "G6_A2_9T",
+  "band": "near_2s_minus_1",
+  "support": "all",
+  "method": "highs-ipm",
+  "status": "aborted_by_codex_after_full_column_selection_no_summary",
+  "observed_cpu_seconds": 812,
+  "observed_private_memory_bytes": 18383822848,
+  "summary_written": false,
+  "selected_columns": 1502358,
+  "last_stdout": "floor-buffer selected columns=1502358",
+  "note": "One-matrix harness reached full column selection; remaining no-return is after selection, before summary."
+}

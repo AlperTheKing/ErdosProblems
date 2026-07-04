@@ -1,0 +1,21 @@
+{
+  "abort": "nonpositive_theta0",
+  "band": "near_2s_minus_1",
+  "chart": 0,
+  "columns": 47152,
+  "dominant": 14,
+  "dominant_name": "G7_B2_4T",
+  "method": "highs-ipm",
+  "nminus_nonzero_rows": 24642,
+  "nnz": 1076456,
+  "rows": 167960,
+  "schema": "eq_odl1_rung2_floor_buffer_v1",
+  "stage1": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "objective": 0.0,
+    "status": 0,
+    "success": true,
+    "theta_max": 0.0
+  },
+  "support": "negative"
+}
