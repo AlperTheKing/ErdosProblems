@@ -26441,3 +26441,32 @@
 [2026-07-04T19:09:35Z] > VERIFY | NEXT: Apply exact k6/F6 patch to source solution and run full source-column checker.
 [2026-07-04T19:10:31Z] FAIL VERIFY | DID: Applied exact k6/F6 all-column patch and checked residuals. | RESULT: exact_ok=false; 15 residual negatives; source negatives=0. | D: iterate patch
 [2026-07-04T19:10:32Z] > ATTACK | NEXT: Run second all-column source patch from the updated k6/F6 source solution.
+[2026-07-04T19:11:23Z] OK ATTACK | DID: Ran second k6/F6 all-column source patch LP. | RESULT: Optimal; used=28, basis=50, float negatives=33. | D: exactify once
+[2026-07-04T19:11:23Z] > ATTACK | NEXT: Export and solve second k6/F6 source-patch basis exactly.
+[2026-07-04T19:12:36Z] > VERIFY | NEXT: Apply second exact k6/F6 source patch and inspect residuals.
+[2026-07-04T19:12:36Z] OK ATTACK | DID: Exported and solved second k6/F6 source-patch basis. | RESULT: dimension=50 terms=140 residual=0 increments nonnegative. | D: apply
+[2026-07-04T19:14:00Z] FAIL VERIFY | DID: Applied second exact k6/F6 source patch. | RESULT: exact_ok=false; 29 residual negatives; source negatives=0. | D: abandon iterate
+[2026-07-04T19:14:00Z] > ATTACK | NEXT: Probe stronger all-column patch from best k6/F6 target89 source with 1e-9 active-row margin.
+[2026-07-04T19:14:54Z] OK ATTACK | DID: Ran k6/F6 all-column source patch with 1e-9 active margin. | RESULT: Optimal; used=28, basis=75, float negatives=9. | D: exactify
+[2026-07-04T19:14:54Z] > ATTACK | NEXT: Export and solve exact 75x75 k6/F6 active-margin 1e-9 patch basis.
+[2026-07-04T19:15:55Z] FAIL ATTACK | DID: Exact-solved k6/F6 1e-9 source-patch basis. | RESULT: core residual=0 but increment_negative_count=2. | D: apply once
+[2026-07-04T19:15:55Z] > VERIFY | NEXT: Apply 1e-9 exact patch once to test final source/residual validity.
+[2026-07-04T19:17:01Z] FAIL VERIFY | DID: Applied 1e-9 exact k6/F6 patch. | RESULT: exact_ok=false; residual negatives=6; source negatives=0; increment negatives=2. | D: one more patch
+[2026-07-04T19:17:01Z] > ATTACK | NEXT: Probe third all-column k6/F6 patch from the 1e-9 combined source solution.
+[2026-07-04T19:17:57Z] > ATTACK | NEXT: Export and exact-solve third k6/F6 patch basis.
+[2026-07-04T19:17:57Z] OK ATTACK | DID: Ran third k6/F6 all-column patch probe. | RESULT: Optimal; basis=30, used=11, float negatives=5. | D: exactify
+[2026-07-04T19:18:50Z] OK ATTACK | DID: Solved third k6/F6 patch basis exactly. | RESULT: dimension=30 terms=68 residual=0 increments nonnegative. | D: apply
+[2026-07-04T19:18:50Z] > VERIFY | NEXT: Apply third exact k6/F6 patch and check full residuals.
+2026-07-04T19:18:58Z OK ATTACK | DID: completed targetrows97 384-prime modular solve | RESULT: core residual 0; solution_negative_count=2 | D: apply increment to source solution
+[2026-07-04T19:19:42Z] FAIL VERIFY | DID: Applied third exact k6/F6 patch. | RESULT: exact_ok=false; residual negatives=4; source negatives=0. | D: continue patch
+[2026-07-04T19:19:42Z] > ATTACK | NEXT: Probe fourth all-column k6/F6 patch from patch3 source solution.
+[2026-07-04T19:30:21Z] FAIL ATTACK | DID: Ran patch4 1e-9 probe from patch3 source. | RESULT: Optimal but float negatives=15. | D: try gentler margin
+[2026-07-04T19:30:21Z] > ATTACK | NEXT: Probe patch4 with 1e-10 active margin from patch3 source.
+[2026-07-04T19:31:17Z] FAIL ATTACK | DID: Ran patch4 1e-10 probe from patch3 source. | RESULT: Optimal but float negatives=20. | D: stop patch loop
+[2026-07-04T19:31:37Z] > ATTACK | NEXT: Run exact_source_residual_correction on k6/F6 patch3 four-row residual state.
+[2026-07-04T19:32:52Z] FAIL ATTACK | DID: Ran exact_source_residual_correction on k6/F6 patch3. | RESULT: exact_ok=false; used_count=0; residual negatives=4. | D: none
+2026-07-04T19:34:38Z > VERIFY | NEXT: read Claude mailbox and local loop state before status reply
+2026-07-04T19:34:58Z OK VERIFY | DID: read Claude mailbox and LOOP_STATE tail | RESULT: batch 19/108; Bank0 self-contained Lean noted | D: none
+2026-07-04T19:35:32Z > VERIFY | NEXT: read Claude mailbox and local state before selecting next certificate action
+2026-07-04T19:35:59Z OK VERIFY | DID: read mailbox/state/git/python | RESULT: active row k6/F6; no python process; dirty tmp artifacts | D: none
+2026-07-04T19:35:59Z > ATTACK | NEXT: launch k6/F6 targetrows93 Highs basis probe with old89 plus four exact failing rows

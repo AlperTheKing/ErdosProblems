@@ -1,0 +1,33 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k6_F6_near_target89_allcols_patch3_activemargin1e9_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2891/den_bits=2886",
+  "full_min_residual": "-367/220000000000000",
+  "full_negative_residual_count": 4,
+  "increment_count": 11,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_source_patch_basis_solution_k6_F6_near_target89_allcols_patch3_activemargin1e9_384prime_v1.jsonl",
+  "min_solution_value": "1/50000000000",
+  "negative_rows_prefix": [
+    {
+      "residual": "-1101/880000000000000",
+      "row": 21590
+    },
+    {
+      "residual": "-367/220000000000000",
+      "row": 21842
+    },
+    {
+      "residual": "-367/440000000000000",
+      "row": 22523
+    },
+    {
+      "residual": "-1101/880000000000000",
+      "row": 22569
+    }
+  ],
+  "negative_source_prefix": [],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_lexsmall_384prime_highspy_allrow_target89_allcols_patch3_v1.jsonl"
+}

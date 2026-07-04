@@ -1,0 +1,29 @@
+{
+  "active_margin": "1/10000000000",
+  "active_rows": [
+    4453,
+    4492,
+    6139,
+    10033,
+    10355,
+    10400,
+    10747,
+    10862,
+    11050,
+    11057,
+    11059,
+    20116,
+    34772,
+    41599,
+    63957
+  ],
+  "basis": "tmp\\probe_k6_f6_target89_source_patch2_highspy_basis_allcols_activemargin1e10_v1.json",
+  "dimension": 50,
+  "margin": "0",
+  "out_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k6_F6_near_target89_allcols_patch2_activemargin1e10_v1.jsonl",
+  "row_count": 167960,
+  "schema": "source_patch_basis_core_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_lexsmall_384prime_highspy_allrow_target89_allcols_patch_v1.jsonl",
+  "terms": 140,
+  "upper_rows_count": 50
+}

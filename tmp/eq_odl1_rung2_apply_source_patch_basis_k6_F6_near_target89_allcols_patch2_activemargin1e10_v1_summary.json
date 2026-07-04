@@ -1,0 +1,97 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k6_F6_near_target89_allcols_patch2_activemargin1e10_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2891/den_bits=2886",
+  "full_min_residual": "-49483/668250000000000",
+  "full_negative_residual_count": 29,
+  "increment_count": 28,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_source_patch_basis_solution_k6_F6_near_target89_allcols_patch2_activemargin1e10_384prime_v1.jsonl",
+  "min_solution_value": "num_bits=3240/den_bits=3275",
+  "negative_rows_prefix": [
+    {
+      "residual": "-7069/99000000000000",
+      "row": 2982
+    },
+    {
+      "residual": "-7069/99000000000000",
+      "row": 3004
+    },
+    {
+      "residual": "-49483/1020937500000000",
+      "row": 3250
+    },
+    {
+      "residual": "-49483/668250000000000",
+      "row": 4433
+    },
+    {
+      "residual": "-7069/4950000000000000",
+      "row": 5985
+    },
+    {
+      "residual": "-7069/2475000000000000",
+      "row": 7239
+    },
+    {
+      "residual": "-7069/5568750000000000",
+      "row": 7435
+    },
+    {
+      "residual": "-49483/10209375000000000",
+      "row": 7941
+    },
+    {
+      "residual": "-7069/1237500000000000",
+      "row": 9223
+    },
+    {
+      "residual": "-7069/1650000000000000",
+      "row": 9901
+    },
+    {
+      "residual": "-7069/303750000000000",
+      "row": 10076
+    },
+    {
+      "residual": "-7069/4950000000000000",
+      "row": 10512
+    },
+    {
+      "residual": "-49483/1531406250000000",
+      "row": 11327
+    },
+    {
+      "residual": "-49483/3403125000000000",
+      "row": 11351
+    },
+    {
+      "residual": "-7069/34020000000000000",
+      "row": 20348
+    },
+    {
+      "residual": "-261293/1663200000000000000",
+      "row": 21590
+    },
+    {
+      "residual": "-261293/1247400000000000000",
+      "row": 21842
+    },
+    {
+      "residual": "-7069/17010000000000000",
+      "row": 21911
+    },
+    {
+      "residual": "-7069/17010000000000000",
+      "row": 22061
+    },
+    {
+      "residual": "-501119/7484400000000000000",
+      "row": 22523
+    }
+  ],
+  "negative_source_prefix": [],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_lexsmall_384prime_highspy_allrow_target89_allcols_patch2_v1.jsonl"
+}

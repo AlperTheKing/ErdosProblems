@@ -2185,3 +2185,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T00:20Z] ► LEAN | NEXT: type B2 block (generic filter lemmas + 3 peel projections + badCount_extendCut_eq + transfer chain + sigmaChain provider + bank0_of_maxcut) into CertGraph.lean, honest build
 [2026-07-04T00:50Z] V LEAN | DID: B2 block typed+built (3 rounds) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0; badCount_extendCut_eq + 3 projections + transfer chain + sigmaChain_of_sigmaNonneg + bank0_of_maxcut all green | D: BANK0 SELF-CONTAINED (checkers + top-level sigma>=0 => 25m<=n^2)
 [2026-07-04T00:52Z] V THREADS | DID: sibling 4.2 landed (8159c, queued); sibling retasked 4.3+; main retasked Assembly.lean paste-ready draft vs green names | RESULT: both sends confirmed | D: none
+[2026-07-04T01:10Z] V USER | DID: reissued final GOAL+LOOP texts on request (post-Bank0-self-containment state) | RESULT: delivered in chat; goal = same 4 conjuncts, loop += explicit ENDGAME step | D: none
