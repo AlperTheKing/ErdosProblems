@@ -699,3 +699,19 @@
   incl. k5/G4); (3) sibling 4.6; (4) Lean idle increment if main slow: LensGates checker
   contract from WRITEUP_REDTEAM archive.
 - Marker 1711296. P(math)~89, P(Lean)~91. Batch 20/108 (+F6 parked-hard).
+
+
+## TICK NOTES (2026-07-04T05:50Z) — 22/108; even list in; k5/F1 running
+- Codex: k5/G4 + k5/F3 certified (no-repair 384p); k6/F2 manifest MINTED (schema
+  source_certificate_manifest_v1 + repair block {highspy_basis_exact...}) + APPENDED
+  (ledger v19 -> v20, 22/108, first_pending k6/F6 parked-designer). Marker 1716709.
+- MY EVEN LIST (44 rows) delivered + accepted: rank2 map19 k5/F1 d0; rank4 map21
+  k6/G7_B2_4T d14; rank6 map23 k5/G1_UV_T d8; rank8 map25 k6/G4_VZ_XY d11; rank10
+  map27 k6/G2_UZ_T d9; rank12 map29 k5/F6 d5; ... (full list in mailbox at ~1713k).
+  WORK ORDER: top-down. k5/F1 chain RUNNING (bg bom9hsxoo; on green: post SHAs, launch
+  next row k6/G7_B2_4T). SHA spot-checks on all 3 new Codex artifacts: True.
+- MAIN thread: n=19; msg17 looked like a 2-char stub and msg19 len=1 streaming — BOTH
+  consult-reply and addendum-reply pending render; CHECK FIRST next tick (offset-stitch).
+- Sibling 4.6 pending check. Lean next: bridge constructor / provider discharge design
+  (awaiting main), else LensGates checker.
+- P(math)~89, P(Lean)~91. Batch 22/108 + k5/F1 in flight.
