@@ -445,3 +445,63 @@ fourDoor as routed) and Bank0 (per the archived routing table).
 => O13 DESIGN DONE. All 7 witness families target canon structures
 (CompletedSwitchCert, ConeCert).
 
+
+
+# ===== BANKCLOSURETRACE C1-C4 REPLAY SEMANTICS (main thread, 2026-07-04) — FULL CONTRACT =====
+NAMING: BankClosureTrace (Bank0 packet closure, C1-C4) is DISTINCT from SwitchCompletionTrace
+(Op1-Op5). This spec = BankClosureTrace only.
+STATE: BankClosureState { U : VSet } ONLY — no deletion set / shadow log / cell ledger mutated;
+every step monotone U subset U-prime; all metadata carried by the step and checked locally.
+VSet = List Nat with isNormVSet = Sorted lt && Nodup && all < G.n; ops norm/unionVSet/
+subsetVSet/memVSet; soundness exposes Finsets, checker stays on lists.
+TRACE: BankClosureTrace { start, steps, final, pressureClaim : none | positive | nonpos |
+negativeNu0 }; Bank0 positive packets use positive (nu0 < 0 <=> pressure > 0).
+BASIS: BankClosureBasis { rowIntervalBasis, rowFamilyBasis, detourBasis, shadowBasis } —
+closedness is RELATIVE to the provided basis; basis COMPLETENESS is an external theorem/cert.
+Checker never invents basis items.
+STEPS (inductive BankClosureStep):
+- C1_rowInterval(rowId, a, b): row valid, a,b occur in row verts AND in U; absorb
+  interval_R(a,b) = positions min..max. U' = U ∪ interval.
+- C2_rowFamily(badId, orientation(fwd|rev), terminal, firstExit, rows : List RowPrefixData
+  {rowId, prefixLen 1..4}): terminal-shadow TYPE = the tuple (badId,orientation,terminal,
+  firstExit) — canonical "same type" definition. Checks: terminal is an endpoint of badId;
+  each row belongs to badId, oriented so r0 = terminal; first-exit edge = r_{l-1} r_l =
+  firstExit (normalized); ACTIVATION: some listed prefix has r0 in U and r_{l-1} in U;
+  FAMILY COMPLETENESS: supplied rows EXACTLY equal the RowDB family of that type (checker
+  recomputes and compares). U' = U ∪ (union of all prefixes {r0..r_{l-1}}).
+- C3_blueDetour(rowId, edgePos : Fin 4, path): row edge e = (q_edgePos, q_edgePos+1) blue,
+  BOTH endpoints in U; path nonempty simple normalized, endpoints = endpoints of e (either
+  order), every consecutive edge blue, no edge equals deleted e; internal-outside-U optional
+  (warn, never reject). U' = U ∪ path. This is the theta-witness stabilizer absorber
+  (canonical example: path [6,0,5,8] for row edge 6-8).
+- C4_terminalShadow(shadow, firstExit, cell, witnessRows, protected : Option
+  ProtectedCellCert) + RECOMMENDED explicit field trigger : VSet (ADOPTED — avoids
+  ambiguity; default trigger = terminal + inner endpoint of firstExit): shadow ⊆ cell;
+  exactly one endpoint of firstExit in shadow (inner), outer outside; witnessRows valid
+  (belong to bad edge, oriented from declared terminal, prefix ⊆ shadow, firstExit = first
+  exit edge); ACTIVATION trigger ⊆ U; BASIS MEMBERSHIP of the full tuple in shadowBasis;
+  if protected = some pc then checkProtectedCell pc = true and pc.cell ⊆ cell. U' = U ∪ cell.
+  C4 does NOT spend bank (cell ledger separate); switch soundness separate
+  (CompletedSwitchCert).
+REPLAY: replayClosureStep : ... -> Option VSet (verify isNormVSet U, preconds, compute,
+normalize, U ⊆ U'); replayTrace = steps.foldM replayClosureStep start; trace requires
+replayTrace = some final.
+CHECKCLOSED (relative closedness of final): C1: for every basis row, every pair a,b in
+U∩row => interval ⊆ U (enumerate 10 pairs of 5 positions); C2: family activated => all
+prefixes ⊆ U; C3: both edge endpoints in U => path ⊆ U; C4: trigger ⊆ U => cell ⊆ U.
+PRESSURE: sNum/pressureNum exactly as CertGraph L3 (D-premultiplied); checkPressureClaim
+per claim tag; negativeNu0 = positive pressure (nu0 = -pressure).
+FULL CHECKER: checkBankClosureTrace = checkGraph && checkCut && norm(start) && norm(final)
+&& replay = some final && checkClosed(final) && pressureClaim. (May omit graph/cut checks if
+global, but soundness assumes them.)
+SOUNDNESS: replayClosureStep_sound (norm ∧ ⊆ ∧ per-spec addition, by cases);
+replayTrace_sound (start ⊆ final ∧ steps valid); checkClosed_sound -> BankClosedRel
+{c1..c4_closed}; checkPressureClaim_sound -> PressureClaimProp; MAIN BankClosureTrace.sound:
+check = true -> start ⊆ final ∧ BankClosedRel(final) ∧ PressureClaimProp(final, claim).
+CONSUMER MAY USE ONLY: containment, relative closedness, pressure sign (+ step metadata by
+reference). Trace does NOT prove maximality / gamma-min / all-l5 / RowDB completeness /
+corridor additivity / Bank0 — separate modules.
+EMISSION CONVENTIONS (Codex): sorted dup-free VSets; normalized edges; global RowDB ids;
+C2 families complete vs RowDB; C4 explicit trigger; C3 paths simple+blue; D-premultiplied
+integers; ProtectedCellCert emitted separately and referenced; NO dead-tail additions
+(C1-C4 only); redundant steps may be omitted (closure checked at end).

@@ -210,3 +210,21 @@
   chart batch presumably grinding; nudge if silent next tick too).
 - LEAN NEXT: ClosureTrace module as soon as semantics land; meanwhile candidates:
   Seed3 OverflowCert/WidthCert data skeletons (contract archived) if main is slow.
+
+
+## TICK NOTES (2026-07-05T00:00Z) — 2nd chart certified + ClosureTrace contract in hand
+- K5/G6/NEAR EXACTLY CERTIFIED + independently reverified (SHA match + my exact-checker rerun:
+  0 neg residuals). 2/~108 near-band charts done; Markowitz+repair = BATCH DEFAULT (ruled C);
+  floor-buffer PARKED (full-support Stage-1 1.5M cols times out, theta 0.0). Codex next:
+  generic no-repair/multi-row manifest + Lean emitter, then batch in map order + SHA ledger.
+- Var convention BINDING: Var 200 = s/sigma, Var 201+r = active z/u coord r (skip chart k);
+  Var 0=N, 1+i=w_i, aux>=1000 unchanged.
+- Codex exit-capture confirmed (argv+returncode, no pipes) EXCEPT RECOVERED_OLEAN_FROM path —
+  tightening required (fresh re-run or mtime+stderr guard); await confirmation.
+- ClosureTrace C1-C4 FULL CONTRACT archived (LEAN_CHECKER_DESIGN tail): state=U only, C4 gets
+  explicit trigger field, checkClosed basis-relative, pressureClaim consumer facts.
+  LEAN NEXT TICK (FIRST ACTION): type ClosureTrace.lean per the archived contract (structures
+  + replay + checkClosed + pressure + soundness), build honestly, zero warnings.
+- IN FLIGHT: main = PeelCert + Bank0Statement + checkBank0Cert dispatch + strong-induction
+  skeleton (LAST Lean-design gap; unblocks Assembly module). sibling = next paper section.
+- Marker 1640540. Commits through 884b66e6e (this tick commit next).
