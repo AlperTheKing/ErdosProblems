@@ -615,3 +615,41 @@ erdos23_delta0_graphData_from_good_cut GraphData.ofSimpleGraph betaGD_ofSimpleGr
 erdos23_delta0_simpleGraph.
 => PROGRAM-WIDE DESIGN PHASE CLOSED. Remaining: emissions (Codex), module typing (me),
 prose assembly (sibling), exists_good_cut reduction (next main consult).
+
+
+# ===== EXISTS_GOOD_CUT CONTRACT + PROOF (main thread, 2026-07-05) =====
+CORRECTION 1: "every triangle-free graph has a B-connected max cut" is FALSE for disconnected
+graphs (two isolated vertices: blue graph empty). Correct API: CONNECTED version +
+component reduction (beta additive over components, sizes add, convexity sum Ni^2 <= N^2).
+CORRECTION 2: AllBadLengthFive is NOT part of exists_good_cut — a gamma-min B-connected max
+cut may have bad edges of length > 5 (Branch B exists for exactly that). At existence level
+the theorem is only l(g) >= 5. RowDBFactsGeneral {rowsSound, rowsComplete, length_ge_five,
+atomDBSound}; GoodCutData uses it. AllBadLengthFive = branch hypothesis for Bank0/Branch-A
+only (or derived by checking each row length = 5); if some l > 5, Bank-L gives eta > 0.
+CUT SPACE: use CutFn n := Fin n -> Bool (finite by construction) + CutData.ofFn; avoids
+finiteness of arbitrary side lists. maxcut_exists: minimize badCount over finite nonempty
+CutFn space (Finset.exists_min_image / argmin); every valid CutData corresponds to a CutFn.
+No triangle-freeness needed.
+BCONNECTED OF MAXCUT (connected G): blue component S proper nonempty => G connected gives a
+crossing graph edge; S = union of blue components => no blue crossing edge => all crossing
+edges bad, deltaB(S) = 0 < deltaM(S); flip identity => badCount(flip) < badCount —
+contradicts IsMaxCut. (Uses badCount_flip_eq + sigma_nonneg_of_maxcut — ALREADY GREEN in
+CertGraph.) No triangle-freeness.
+GAMMA-MIN EXISTENCE: C = {valid, maxcut, BConnected} nonempty (above) + finite => minimize
+gammaOf over C => GammaMinimalConnected. NOTE 13.5: state GammaMinimalConnected via
+gammaOf G c from graph distances, INDEPENDENT of row database (avoid gamma from incomplete
+rows) — top-level contract signature (G c, no rows) is the right one; Bank0-side mentions of
+GammaMinimalConnected G c rows should be read as the same Prop + rows only for row sums.
+ROWDB EXISTENCE: split off — rowDB_exists (hGraph hCut hB hTri) : exists rows,
+RowDBFactsGeneral (imported from row module first pass; later computable rowsOf =
+enumerate all shortest blue paths per bad edge, denominator = row count, Finset.filter over
+bounded lists, NO native_decide). LENGTH >= 5 (badEdge_length_ge_five): bad uv same side =>
+blue paths even length; d != 0 (u != v); d != 2 (u-x-v blue + bad uv = triangle); => d >= 4
+=> l = d+1 >= 5.
+FINAL API: exists_good_cut_core_connected (cut-only); rowDB_exists; exists_good_cut_connected
+(hGraph hConn hTri) : exists c rows, checkCut ∧ GoodCutData. Component reduction:
+graphData_bound_from_components (beta additivity + convexity). PITFALLS: n=0 handle in
+component reduction only (BConnected awkward); n=1 trivial (one-vertex blue graph connected,
+Gamma=0); m=0 immediate; final beta step MUST use beta_eq_badCount_of_isMaxCut (never an
+arbitrary cut).
+=> LAST imported reduction CONTRACTED. Nothing in the program remains design-open.

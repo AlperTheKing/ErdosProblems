@@ -281,3 +281,16 @@
   existing rowSum/XMask/netDW_assembly/gammaOf names; type against them, keep provider
   theorems as hypotheses; (3) EQODL1/DiffSkip instantiation once Codex chart batch completes.
 - EXTRACTION QUEUE += sibling 3.6 (4582c). Marker 1651672 (no new Codex posts; batch grinding).
+
+
+## TICK NOTES (2026-07-05T04:05Z) — exists_good_cut contracted; batch 6/108
+- EXISTS_GOOD_CUT archived (LEAN_CHECKER_DESIGN tail): connected-only + component convexity;
+  AllBadLengthFive demoted to branch hypothesis (RowDBFactsGeneral.length_ge_five at
+  existence); CutFn (Fin n -> Bool) selection; bconnected_of_maxcut uses badCount_flip_eq +
+  sigma_nonneg (ALREADY GREEN); rowDB_exists imported first pass, computable rowsOf later.
+  I flagged GammaMinimalConnected signature drift (G c rows vs G c) — audit in flight.
+- IN FLIGHT: main = cross-contract consistency audit (defect list before I type
+  Peel/Assembly — prevents red-cascade); sibling = 3.7+ (check next tick).
+- Codex: batch 6/108 (k8/G3 multi-repair exact increments, k5/G3 no-repair); ledger v4.
+  Marker 1654861.
+- LEAN NEXT TICK: Peel layer + GoodCut/Assembly skeletons WITH audit verdicts in hand.
