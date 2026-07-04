@@ -2205,3 +2205,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T05:10Z] V BATCH | DID: k6/F6 margin-0 exact chain done | RESULT: exact_ok=FALSE (89 neg residuals, 3 neg coeffs, ~3000-bit min residual) — degenerate face, recipe insufficient; parked for designer (strategy 6) | D: F6 = the hard row
 [2026-07-04T05:45Z] V CODEX | DID: scanned 3 posts (k5/G4 + k5/F3 certified by Codex; k6/F2 APPENDED ledger v19 w/ minted manifest; my even list 44 rows delivered) | RESULT: 22/108; marker 1716709; 3 SHA spot-checks True | D: batch accelerating
 [2026-07-04T05:47Z] V BATCH | DID: k5/F1 (my even row 1) pipeline-A chain launched (bom9hsxoo, lexsmall 384prime) | RESULT: running | D: none
+[2026-07-04T06:30Z] V THREADS | DID: F6 designer verdict extracted (8637c) + archived + implementation directive posted to Codex | RESULT: F6_ACTIVE_FACE_REPAIR_GPTPRO.md (active-face repair spec + face-split fallback + batch-wide thin/degenerate decision rule) | D: F6 unblock path defined

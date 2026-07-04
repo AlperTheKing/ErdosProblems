@@ -715,3 +715,24 @@
 - Sibling 4.6 pending check. Lean next: bridge constructor / provider discharge design
   (awaiting main), else LensGates checker.
 - P(math)~89, P(Lean)~91. Batch 22/108 + k5/F1 in flight.
+
+
+## TICK NOTES (2026-07-04T06:40Z) — F6 recipe archived+directed; k5/F1 strategy 2; bridge tasked
+- F6 DESIGNER VERDICT archived (F6_ACTIVE_FACE_REPAIR_GPTPRO.md): exact active-face repair
+  from patch3 base (correction LP, R0<=772 guards, J0 old+gain cols, two-stage exact LP,
+  rowgen x3) + F6#-face-split fallback + BATCH-WIDE decision rule (thin<=128 basic ->
+  margin-0 replay; degenerate >512 -> active-face repair; then face-split). Directive
+  posted to Codex (it implements exact_active_face_repair as reusable script).
+- k5/F1: lexsmall Markowitz exact = 209 neg coeffs/1218 neg residuals; margin-0 anchored
+  repair probe INFEASIBLE (anchored-LP infeasibility != empty row); STRATEGY 2 = family-
+  objective pipeline A + convert + check RUNNING (bg bpmr2twwy). PIPELINE NOTE LEARNED:
+  raw modular core solutions need tmp/convert_core_solution_to_source_solution.py before
+  the official checker (records col vs source_col) — template step Codex left implicit.
+- MAIN: msg3 = original consult reply (8390c, decision-rule Q1-Q3 — SKIMMED head only,
+  superseded by msg6 addendum verdict; raw in-thread if needed). msg5 = 178c Turkish
+  summary note. Main RETASKED: SimpleGraph bridge constructor (encoding via Fintype.equivFin,
+  checkGraph proof, tri_transfer, betaSimple + finite minimization + beta_transfer,
+  final unconditional-shape statement). Reply node mapping after reload: n=7, replies at
+  idx 3/5/6 — INDEXES SHIFT ON RELOAD, always rescan.
+- Sibling 4.6 pending check (queued last tick, not yet checked this tick — DO NEXT TICK).
+- Marker 1716709. Batch 22/108 + k5/F1 S2 in flight + F6 with Codex. P(math)~89, P(Lean)~91.
