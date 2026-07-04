@@ -141,3 +141,48 @@ RUNG 3: targeted low-rank SOS ONLY for failed c=1 charts: P_k^(1) = B_{0,k} +
 OLD 2/3 ChartSOS: keep as OPTIONAL strengthening, off critical path. All prior
 2x2/PSD artifacts remain as evidence of the sharp-boundary diagnosis.
 
+
+# ===== EQ-ODL1 RUNG-2 SPEC: height-normalized KKT/dominance chart split (main, 2026-07-04) =====
+DECISION: drop the monolithic shifted cone; use height normalization + CERT-1
+equality geometry + dominance charts + separate equality-stratum certificate.
+TARGET: P_EQ1 = D_EQ [eta25 - 25(I_EQ - N)] >= 0.
+1 HEIGHT CHARTS: min_i w_i = 1 (EQ height lemma) => 10 charts H_k (w_k = 1,
+  w_i = 1 + x_i, x_i >= 0); compactify S = 1 + sum x_i, s = 1/S, z_i = x_i/S:
+  s, z_i >= 0, s + sum z_i = 1; chart target P_k = s^11 P_EQ1^(k)(z/s) (deg 11).
+2 TRUE MINIMUM at the all-ones seed: eta25 = 25, I_EQ - N = 2/3, bracket = 25/3,
+  D_EQ = w5 w6 A B C = 45 => P_EQ1(seed) = 375. Active there: all x_i = 0, all
+  F_j = 0, B0 = 0, all grouped generators = 0. NO seed-vanishing condition.
+3 GENERATORS (15): F1..F7 + G1 = UV-T, G2 = UZ-T, G3 = XY-T, G4 = VZ-XY,
+  G5 = VZ-T, G6 = U_A = A^2-9T, G7 = U_B = B^2-4T, G8 = B0 = eta25-25, where
+  U = w0+w8, V = w4+w6, X = w1+w7, Y = w2+w9, Z = w3+w5, T = m+1, A = U+V+Z,
+  B = X+Y (EQ grouping). Homogenize all to degree 2 on the chart simplex (3.1).
+4 EQUALITY STRATUM = seed ray w0..w4 = 1, w5..w9 = t >= 1: eta25 = 25;
+  I_EQ - N = (t+1)(3t+2)/((t+2)(t^2+3t+1)); D_EQ = t^5 (t+2)^2 (t^2+3t+1);
+  P_EQ1(t) = 25 t^6 (t+2)(t^2+2t+2) >= 375, certified by t = 1+u coefficientwise
+  nonnegativity. MY GATE (sympy exact): chain identities TRUE; shifted coeffs
+  [25,325,1850,6050,12500,16900,14950,8350,2675,0] all >= 0. EQUALITY-STRATUM
+  CERTIFICATE PROVEN (Codex to digit-verify the I_EQ - N seed-ray input formula
+  against the EQ seed data).
+5 DOMINANCE CHARTS D_{k,a}: G_a-hom >= G_b-hom for all b (deltas Delta_{a,b,k} >= 0
+  as extra generators). COMPLETENESS: all generators zero => equality stratum;
+  else the max generator's chart applies.
+6 BAND SPLIT (recommended): B_near = 2s-1 >= 0, B_inf = 1-2s >= 0 (covers simplex).
+7 PER-CHART CERT (k, a, beta): P_k = P_0 + sum_G G-hom P_G + sum_b Delta P_{a,b}
+  + B_beta P_beta; multipliers Bernstein-positive on the simplex; caps: P_0 <= 11,
+  P_G <= 9, P_{a,b} <= 9, P_beta <= 10. No seed-vanishing.
+8 CHART COUNT: 10 x 15 x 2 = 300 + equality stratum. Expected: k in {5..9}
+  easier (seed ray only at t=1); infinity-band charts often close with P_0 +
+  leading homogeneous multipliers; hard charts = finite-band a in {G8, G6, G7};
+  linear-cut-dominated charts easy once deltas included.
+9 TRIVIALITY DETECTION (order): (i) Bernstein interval lower bound of P_k alone
+  (all coeffs >= 0 => closed); (ii) band-only certificate P_0 + B_beta P_beta;
+  (iii) full dominance LP (7.1).
+10 KKT reading: minimum on the CERT-1 equality stratum; dominance chart picks a
+  largest active generator; KKT surfaces = height/coordinate bounds, s = 0,
+  s = 1/2 band, generator-equality surfaces, equality stratum. No symbolic KKT.
+11 ABORT RUNG-2 only if ALL: 300 charts infeasible/timeout at caps; equality
+  stratum verified; per-chart falsifier clean; failed-chart dual rays point at
+  missing full max-cut facets.
+12 FALLBACK: generator redesign — add EQ quotient max-cut facets F_S (all proper
+  subsets mod complement/automorphism) to the SAME chart machinery.
+
