@@ -293,3 +293,55 @@ DECISION C: THREE ASSEMBLY LAYERS with provider theorems hiding cert internals:
  Codex emits/repairs certificates. eta := (N^2 - 25 badCount)/25 : Q;
  rho L := (L^2 - 25)/50 : Q; RowGershBound := rowSum <= N + eta.
 
+
+# ===== O6: T=2 CORRIDOR CERTIFICATE EMISSION FORMAT (main thread, 2026-07-04) =====
+PURPOSE: T2HallCert(H, t1, t2) => D_T(U) <= |U| forall U in H minus T =>
+s_H(Q cap T) <= |H| - 2 (NCH-def |T| = 2 input). SAME primitive lens/corridor
+engine as Bank0 CrossCap; geometry checker shared; certified FUNCTIONAL differs.
+DATA: T2Instance {G, cut, H, t1, t2, badEdges, rows, atoms, D}. Demand: a_T(P) =
+|V(P) cap {t1,t2}| in {0,1,2}; D_T(U) = sum_g (1/|cyc|) #{P : V(P) minus T in U}
+a_T(P); cleared D_T#(U) = D * D_T(U); HallSlack_T(U) = D|U| - D_T#(U) >= 0.
+TOP-LEVEL: T2HallCert {instance, closedPackets: List T2PacketCert, coverage}.
+Coverage modes: explicit closed-packet list (small instances) OR zeta-compressed
+tables (D_T#, |U|, HallSlack per subset/closure class; recurrence checked) —
+preferred for model families.
+PACKET: T2PacketCert {U, corridors: CorridorPartition, certs}. Owned-core
+partition (SAME infra as Bank0 B2, functional swapped to HallSlack):
+D_T#(U) = sum_C D_T#(C), D|U| = sum_C D|C| => HallSlack additive => per-corridor
+suffices.
+CORRIDOR CERTS (inductive): NONNEG {corridor, demandNum, slackNum, residual:
+ConeCert} — direct slack identity D|C| - D_T#(C) = R >= 0 (ConeCert form).
+CROSS {corridor, lens: PrimitiveLensCert, switch: SwitchCert, A, B, residual} —
+L(D|C| - D_T#(C)) = A sigma(S) + B nuK(S) + R, A,B >= 0 ints (L clears);
+sigma >= 0 max-cut, nuK >= 0 Gamma-min => slack >= 0. DIFFERENCE FROM BANK0
+CROSSCAP: same PrimitiveLensCert/SwitchCert/ClosureTrace/OSC modules; T2
+functional = D|C| - D_T#(C) vs Bank0 functional = D(nu0(C) - N sigma(S)) — a
+functional plug-in on one engine. LABEL {corridor, labels, edgeChecks, rowChecks,
+terminalChecks} — coherent C5-voltage; global label on non-C5-hom support =
+contradiction; proper labelled corridor returns to pruning/next decomposition.
+OSC {corridor, lens, oscType, residual, next: Option T2CorridorCert} — forbidden /
+direct residual / reduce / LABEL; only OSC1 + OSC4-head-on genuine residuals.
+PrimitiveLensCert {lensType RR|RB|RD|DD|TTsame|TTopposite|TR, oscType, rows,
+terminals, splitData, completionTrace} — SHARED module.
+CHECKER ORDER: C0 sanity (shared) | C1 terminal setup (T2) | C2 packet coverage
+(shared w/ T1/closure infra) | C3 corridor partition additivity (shared B2,
+functional-specific demand) | C4 corridor certs (shared geometry B3/B4) |
+C5 switch legality (shared CrossCap) | C6 nonneg from hypotheses (shared) |
+C7 packet Hall by summation (T2) | C8 universal conclusion via coverage (T2).
+ASSEMBLY (T2HallCert.sound): check = true + (forall S sigma >= 0) + (forall S
+nuK >= 0) + row db sound/complete (+ non-C5-hom if global LABEL) =>
+D_{t1,t2}(U) <= |U| forall U => s_H(Q cap T) <= |H| - 2.
+|T| >= 3 REDUCTION: NO automatic averaging from pairwise T=2. TManySplitCert =
+closed-packet cover + corridor partition + per-corridor OWNED TERMINAL subset
+T_C <= 2 + row-atom ownership D_T#(U) = sum_C D_{T_C}#(C) + capacity ownership
+=> apply T=1 / T=2 / zero certificate per corridor. If no such split exists, the
+unresolved packet IS a higher-terminal obstruction (*) -> hunt or new seed
+branch. Status CERT-PENDING/HUNT.
+MICRO-EXAMPLE (I VERIFIED EVERY FIELD EXACTLY): C5 path 0-1-2-3-4, bad 04, sides
+0:0 1:1 2:0 3:1 4:0; row P = (0,1,2,3,4), |cyc| = 1, D = 1; T = {0,4};
+U = {1,2,3}: a_T(P) = 2, interior = U => D_T#(U) = 2, capacity 3, slack 1;
+one corridor = U, NONNEG cert (demandNum 2, slackNum 1, ConeCert 1 = 1, no
+switch); coverage: 8 subsets, only full interior nontrivial; LABEL trace =
+identity labelling (all adjacent, 04 = 4-0 door). OK.
+=> WITH THIS, EVERY CERT-PENDING NODE IN BOTH LEDGERS HAS AN EMISSION-READY SPEC.
+

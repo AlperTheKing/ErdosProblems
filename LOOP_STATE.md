@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T08:50Z (P(math)~86, P(Lean)~79)
+# Last update: 2026-07-04T11:15Z (P(math)~86, P(Lean)~80)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1604720
+- CODEX_TO_CLAUDE.md read marker (bytes): 1609102
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -10,10 +10,8 @@
 - SIBLING (writeup + second): https://chatgpt.com/c/6a45e152-8de4-83eb-9aa3-87cb13427526  [last tab 1267096303]
 
 ## IN FLIGHT
-- MAIN: ASSEMBLY THEOREM REVIEW (my A/B/C decisions: RowsComplete Prop-vs-checker; IsMaxCut/
-  GammaMinimal Prop forms + the flip-counting lemma blueCount(flip) = blueCount - dB + dM proof
-  sketch; T0/T1 Lean statement shapes + final statement list to type).
-- SIBLING: paper section 4.1 (NCH/pruning: Bank0-vs-ODL roles, NCH-def, Terminal-Hall T=1/T=2,
+- MAIN: cross-spec consistency re-audit (T=1/T=2/cubes/Bank0-blueprint interface mismatches) + O13 Seed3 classifier checker format.
+- SIBLING: appendices 5.1 (certificate ledger table) + 5.2 (validation annotation).
   AmbientPrune, hunt status + contingency).
 - CODEX: rung-2 chart sweep (300 charts, stats pending); then O5-EMIT (T=1 REC artifacts),
   O16/O18-EMIT (master cubes, order EQ V2 -> V1 -> V3 -> SIB V2 -> V1 -> V3), B0-4 lens gates,
@@ -49,3 +47,17 @@
 - CERT-PENDING: B1-B6,B10,O4(O6),O5-EMIT,O11,O13,O14(rung-2 charts),O16-O21-EMIT.  HUNT: O7.
 - Certified negative datapoint: EQ-ODL1 restricted F1-F4+B0 Farkas cert exact.
 - Full rung-1 cone = 1,755,182 columns (not launched; rung-2 primary).
+
+
+## TICK NOTES (2026-07-04T10:00Z)
+- Assembly plan FINAL (verdicts archived in LEAN_CHECKER_DESIGN_GPTPRO.md tail): RowDBFacts Prop-first; GammaMinimal = BConnected-restricted; flip lemma via indicator sums; 3-layer assembly + providers.
+- Lean next: badCount_flip_eq (indicator sums) + sigma_nonneg_of_maxcut derivation in CertGraph.lean; then CorridorPartition checker; Assembly statements per archived plan.
+- Extraction queue += sibling 4.1 (~landed). Codex: rung-2 basis-extraction exact replay (B) + 300-chart numeric map (A) in flight; then O5-EMIT, O16/O18-EMIT.
+- gersh_Lgt5_of_bankL green (BankL.lean).
+
+
+## TICK NOTES (2026-07-04T11:15Z)
+- O6 T=2 format archived + micro-example hand-verified => EVERY cert-pending node in both ledgers has an emission-ready spec (design queue empty).
+- Extraction queue += sibling 4.1 (landed).
+- Codex: rung-2 near-band feasible all 3 hard dominants at k=0; inf-band guidance sent (spec par.8 reduced form); basis-extraction replay + 300-chart map in flight.
+- Lean next: badCount_flip_eq indicator-sum lemma + sigma_nonneg derivation; then CorridorPartition checker; Assembly statements per archived plan.
