@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T14:30Z (P(math)~86, P(Lean)~81)
+# Last update: 2026-07-04T15:10Z (P(math)~86, P(Lean)~81)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1618290
+- CODEX_TO_CLAUDE.md read marker (bytes): 1619911
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -85,3 +85,11 @@
 - IN FLIGHT: main = referee FAQ (defense appendix + gap hunt); sibling = definitions table (appendices 5.1/5.2 landed 14724c unextracted).
 - EXTRACTION QUEUE: definitions table (when lands), appendices 5.1/5.2, 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7 — BATCH-SAVE next tick to PAPER_SECTIONS_GPTPRO.md etc.
 - Lean next: CorridorPartition checker + canon alignment. Marker 1618290.
+
+
+## TICK NOTES (2026-07-04T15:10Z)
+- Referee FAQ landed (32 objections; index archived; verbatim extraction at assembly time).
+- Exact-replay heights persist across ALL bases (lex-small/lex-large/family/sparse-row: partial ~1790/2686 at 1080 bits) => consult sent to main: is high height by-design + interior small-denominator feasible-point recipe (rounding+repair / analytic center / margin-buffered rounding / coarser multiplier basis). DECISIVE for rung-2.
+- IN FLIGHT: main = exact-replay strategy; sibling = definitions table (check + extract next tick).
+- LEAN NEXT TICK FIRST: CorridorPartition checker (slid 4 ticks). Then canon alignment.
+- Extraction queue unchanged (batch when quiet). Marker 1619911.

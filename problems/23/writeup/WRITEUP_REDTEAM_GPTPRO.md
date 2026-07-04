@@ -519,3 +519,18 @@ DEFINITION OF DONE: every pending node = PROVEN Lean lemma, or CERTIFIED finite
  ClosureTrace / Corridor-BH checker, or ROUTED classifier output with certified
  downstream source. No census validation remains as a proof ingredient.
 
+
+# ===== REFEREE FAQ (main thread, 2026-07-04): 32 objections + answers =====
+# Full 22644-char text in thread 6a450f06 (extract verbatim at document assembly).
+# INDEX: 1 census-vs-proof; 2 per-instance universality; 3 corridor engine 3
+# functionals; 4 gamma-min via nu_K scope; 5 nu_K usage conditions; 6 emitted
+# closure bases vacuity; 7 omitted detour/shadow; 8 min-counterexample WF-trap;
+# 9 dead-tail peel soundness; 10 local K-component bound false; 11 EQ-ODL1 2/3->1;
+# 12 residual 2/3 uses; 13 full mask P=Z5; 14 WHERE eta>=0 IS PROVED; 15 NCH
+# circularity; 16 NCH removed from Bank0 kept in ODL; 17 corridor outputs;
+# 18 equality case behavior; 19 checker credibility w/o native_decide; 20 why not
+# brute enumeration; 21 no third seed; 22 twin contraction preserves row sums;
+# 23 passive coverage completeness; 24 cube proves more than 9 vertices;
+# 25 row-existence faces vs monomials; 26 Branch-B separation; 27 eta/2 double-
+# spend; 28 flip inequalities provenance; 29 restricted-cut maximality reliance;
+# 30 final dependency list; 31 pending-certificate failure contingency; 32 DoD.

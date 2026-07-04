@@ -2094,3 +2094,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T13:40Z] ✔ CODEX-ANSWER | DID: ruled basis-quality ASK — (B) Markowitz/denominator-aware modular pivot selection + early-exit reconstruction; (A) one glpsol --exact probe if installed; (C) parallel always | RESULT: bounded plan; 200-prime abort cap | Δ: none
 [2026-07-04T14:20Z] ✔ O13-SPEC | DID: extracted 15499c Seed3 classifier spec (7 witness families, completeness via P4/K13/P2+E/3E enumeration, priority order), archived + O13-EMIT posted | RESULT: LAST fuzzy spec closed — classifier fully specified | Δ: O13 design DONE
 [2026-07-04T14:30Z] ✔ RETASK+STATE | DID: main=referee FAQ; LOOP_STATE updated (marker 1618290) | RESULT: all engaged | Δ: none
+[2026-07-04T15:00Z] ✔ FAQ | DID: extracted referee-FAQ structure (32 objections; full text in-thread) + archived index | RESULT: defense appendix drafted; no NEW gap flagged beyond known pending items | Δ: none
+[2026-07-04T15:10Z] ✔ CONSULT | DID: exact-replay strategy consult sent to main (height by-design? + 4 candidate recipes incl margin-buffered rounding) | RESULT: decisive rung-2 question in flight | Δ: none
