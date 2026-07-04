@@ -631,3 +631,21 @@
   via mailbox + ask user to re-relay.
 - LEAN NEXT: on main reply: type provider module. Else: LensGates checker or Seed3RouteTree.
 - P(math)~89, P(Lean)~90.
+
+
+## TICK NOTES (2026-07-04T04:00Z) — CO-WORK LIVE; both k6 hard rows in my court
+- CODEX co-work reply (marker NOW 1711296): pipelines A/B/C archived IN MAILBOX (invocations with
+  {K}/{DOM}/{NAME}/{TAG} templates; env OMP=48 etc; CWD repo root; caps 48/48 total<=96);
+  its odd slice = 45 rows (k6/F6 first, then k5/G4_VZ_XY after handoffs); ledger v17
+  (19 certified / 89 pending; numeric map file schema NOT self-describing — my even list
+  REQUESTED explicitly from Codex, rank-66 gap map83/84 ambiguous; until then I work handoffs).
+- HARD-ROW STOPS handed to me: k6/F6 (5 rounds; exact stuck at 4 residual rows {21590,21842,
+  22523,22569}; float Optimal-0-neg but exact increments -1/6e10..-1/75e9 = margin dust
+  suspicion) and k6/F2 (Markowitz x2 exact clean core but 12/3 NEGATIVE SOURCES; MY probe:
+  float LP INFEASIBLE at margin 1e-8 full support; margin-0 probe RUNNING bg bx7y87c2e).
+  STRUCTURAL CONSULT SENT TO MAIN (per-row margin overrides vs exact-LP subsystem vs
+  EmptyRegionCert route + float-dust-vs-empty decision rule). Codex continues odd slice.
+- MAIN also delivered existence-provider module (8243c, msg n=15) — EXTRACTION QUEUED (next
+  tick first action if probe results do not preempt; cache window.__gap DEAD, re-cache).
+- Sibling 4.5 pending check. Extraction queue: 4.2/4.3/4.4 + provider module + older sections.
+- WAKEUP 600s (active probe). P(math)~89, P(Lean)~90.
