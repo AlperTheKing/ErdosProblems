@@ -736,3 +736,19 @@
   idx 3/5/6 — INDEXES SHIFT ON RELOAD, always rescan.
 - Sibling 4.6 pending check (queued last tick, not yet checked this tick — DO NEXT TICK).
 - Marker 1716709. Batch 22/108 + k5/F1 S2 in flight + F6 with Codex. P(math)~89, P(Lean)~91.
+
+
+## TICK NOTES (2026-07-04T07:10Z) — k5/F1 on source-patch; sibling into errata series
+- k5/F1 progression: lexsmall (209 negs) -> family (0 source negs, 11 neg rows
+  {22809,26943,30045,30115,30150,35985,36055,36090,36181,36216,36272}) -> quick repair
+  found=false -> SOURCE-PATCH chain RUNNING (bg bg0l729rf; margin 0, active-negative).
+  If patch fails: park for exact_active_face_repair (Codex implementing) — F1 base is
+  BETTER than F6 patch3 base was (11 rows vs 4 but no history of stall).
+- SIBLING: outline exhausted; remaining-work list (4913c) extracted ~3800c (tail =
+  dependency-pass checklist + submission gates; full text in-thread msg n=11-1). KEY:
+  every planned section DRAFTED; remaining = my assembly (reorg NCH to 2.8, defs table
+  to 1.4, appendices split) + artifact statuses + errata application. Sibling retasked:
+  errata rewrite series (E1 first: Gate-A demotion), one erratum per reply w/ anchors.
+- MAIN: bridge-constructor design generating. Codex: F6 active-face-repair implementation
+  (no reply yet; marker 1716709).
+- Extraction queue += sibling remaining-work list tail (in-thread). Batch 22/108 + F1 S3.
