@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "N:11": 500,
+    "records": 500,
+    "verdict:PASS_NO_POSITIVE_PACKET": 500
+  },
+  "first_fail": null,
+  "input_jsonl": "tmp/bank0_hom_trace_n11_v2.jsonl",
+  "limit_cuts_arg": 500,
+  "matched_records": 13000,
+  "output": "tmp\\bank0_closure_trace_n11_input_batch025_v1.jsonl",
+  "schema": "bank0_closure_trace_summary_v1",
+  "skip_records_arg": 12500,
+  "skipped_records": 12500,
+  "verdict": "PASS"
+}

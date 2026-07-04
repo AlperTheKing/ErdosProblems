@@ -57,6 +57,16 @@ def build_lp_matrix(target_expr, generators: list[eq.Generator], cols: list[eq.C
     return mat, b_ub, len(monoms)
 
 
+def fmt_fraction(q: Fraction) -> str:
+    if q == 0:
+        return "0"
+    num = q.numerator
+    den = q.denominator
+    if abs(num).bit_length() < 1024 and den.bit_length() < 1024:
+        return str(q)
+    sign = "-" if q < 0 else ""
+    return f"{sign}num_bits={abs(num).bit_length()}/den_bits={den.bit_length()}"
+
 def dual_float_stats(a, b, z_raw) -> dict[str, object]:
     z = np.array(z_raw, dtype=float)
     atz = a.T @ z
@@ -95,15 +105,15 @@ def exact_dual_check(target_expr, generators: list[eq.Generator], cols: list[eq.
                 acc += coeff * zq[row_index[exp]]
             if acc:
                 if len(nonzero) < 20:
-                    nonzero.append({"column": j, "value": str(acc)})
+                    nonzero.append({"column": j, "value": fmt_fraction(acc)})
                 if abs(acc) > max_abs:
                     max_abs = abs(acc)
         btz = sum(target.get(exp, Fraction(0)) * zq[i] for i, exp in enumerate(monoms))
         attempt = {
             "max_denominator": max_den,
-            "min_z": str(min_z),
-            "btz": str(btz),
-            "max_abs_ATz": str(max_abs),
+            "min_z": fmt_fraction(min_z),
+            "btz": fmt_fraction(btz),
+            "max_abs_ATz": fmt_fraction(max_abs),
             "nonzero_ATz_count": sum(1 for j, cmap in enumerate(col_maps) if (-zq[n_constraints + j] + sum(coeff * zq[row_index[exp]] for exp, coeff in cmap.items())) != 0),
             "nonzero_ATz_first": nonzero,
         }
@@ -112,11 +122,76 @@ def exact_dual_check(target_expr, generators: list[eq.Generator], cols: list[eq.
             return {
                 "exact_dual_ok": True,
                 "max_denominator": max_den,
-                "btz": str(btz),
-                "min_z": str(min_z),
+                "btz": fmt_fraction(btz),
+                "min_z": fmt_fraction(min_z),
                 "attempts": attempts,
             }
     return {"exact_dual_ok": False, "attempts": attempts}
+
+def exact_farkas_check(target_expr, generators: list[eq.Generator], cols: list[eq.Column], z_raw, max_denominators: list[int], clamp_negative: bool = True) -> dict[str, object]:
+    """Replay the LP Farkas certificate y >= 0, A^T y >= 0, b^T y < 0.
+
+    The Clarabel model represents x >= 0 by adding a second nonnegative cone.
+    For a proof of infeasibility of A x <= b, x >= 0, we only need the first
+    block of the dual ray: y for A x <= b. The second block is numerically
+    close to A^T y, but independently rounding it makes exact stationarity much
+    harder than the actual Farkas certificate.
+    """
+    target, col_maps, monoms, row_index = exact_maps(target_expr, generators, cols)
+    n_constraints = len(monoms)
+    if len(z_raw) < n_constraints:
+        return {
+            "exact_farkas_ok": False,
+            "error": f"dual length {len(z_raw)} < {n_constraints}",
+        }
+    attempts = []
+    for max_den in max_denominators:
+        yq = []
+        for val in z_raw[:n_constraints]:
+            x = float(val)
+            if clamp_negative and x < 0 and x > -1e-8:
+                x = 0.0
+            if clamp_negative:
+                x = max(0.0, x)
+            yq.append(Fraction(str(x)).limit_denominator(max_den))
+        min_y = min(yq) if yq else Fraction(0)
+        min_aty = None
+        negative = []
+        negative_count = 0
+        zero_cols = 0
+        for j, cmap in enumerate(col_maps):
+            acc = sum(coeff * yq[row_index[exp]] for exp, coeff in cmap.items())
+            if min_aty is None or acc < min_aty:
+                min_aty = acc
+            if acc < 0:
+                negative_count += 1
+                if len(negative) < 20:
+                    negative.append({"column": j, "value": fmt_fraction(acc)})
+            if acc == 0:
+                zero_cols += 1
+        bty = sum(target.get(exp, Fraction(0)) * yq[i] for i, exp in enumerate(monoms))
+        attempt = {
+            "max_denominator": max_den,
+            "min_y": fmt_fraction(min_y),
+            "bty": fmt_fraction(bty),
+            "min_ATy": fmt_fraction(min_aty if min_aty is not None else Fraction(0)),
+            "negative_ATy_count": negative_count,
+            "zero_ATy_count": zero_cols,
+            "negative_ATy_first": negative,
+        }
+        attempts.append(attempt)
+        if min_y >= 0 and negative_count == 0 and bty < 0:
+            return {
+                "exact_farkas_ok": True,
+                "max_denominator": max_den,
+                "bty": fmt_fraction(bty),
+                "min_y": fmt_fraction(min_y),
+                "min_ATy": attempt["min_ATy"],
+                "zero_ATy_count": zero_cols,
+                "certificate_y": [fmt_fraction(q) for q in yq],
+                "attempts": attempts,
+            }
+    return {"exact_farkas_ok": False, "attempts": attempts}
 
 
 def solve_clarabel(
@@ -164,6 +239,7 @@ def solve_clarabel(
         out["dual_float_stats"] = dual_float_stats(a, b, solution.z)
         if "PrimalInfeasible" in status:
             out["dual_exact_check"] = exact_dual_check(target_expr, generators, cols, solution.z, max_denominators)
+            out["farkas_exact_check"] = exact_farkas_check(target_expr, generators, cols, solution.z, max_denominators)
         if store_dual:
             out["dual_ray"] = [float(x) for x in solution.z]
     if "Solved" not in status:
@@ -215,3 +291,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+

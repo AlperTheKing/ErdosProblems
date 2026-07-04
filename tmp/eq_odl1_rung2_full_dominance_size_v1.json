@@ -1,0 +1,12 @@
+{
+  "band_multiplier_degree10": 1,
+  "chart_rows": 300,
+  "degree10_bernstein_count": 92378,
+  "degree9_bernstein_count": 48620,
+  "deltas_per_dominance_chart": 14,
+  "generators": 15,
+  "schema": "eq_odl1_rung2_full_dominance_size_v1",
+  "simplex_variables": 10,
+  "total_if_all_materialized": 450707400,
+  "variables_per_dominance_band_chart": 1502358
+}

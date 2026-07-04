@@ -1,0 +1,29 @@
+{
+  "columns_checked": 43128,
+  "emitted": [
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Support.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.lean",
+    "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data.lean"
+  ],
+  "index_out": "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data.lean",
+  "input_manifest": "tmp\\eq_odl1_rung2_repaired_certificate_manifest_v1.json",
+  "out_dir": "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data",
+  "rows": 2687,
+  "schema": "eq_odl1_rung2_lean_transpile_v1",
+  "shard_lengths": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    187
+  ],
+  "shards": 6,
+  "solution_sha256": "41c837dfd5306b2e8dbe7212c3c6d5b74085b1d52037407bb40ab65a272db939",
+  "support_out": "problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Support.lean"
+}

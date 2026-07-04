@@ -1,0 +1,26 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 0,
+  "constraints": 167960,
+  "dominant": 7,
+  "dominant_name": "B0_eta25_25",
+  "exact_subset_probe": {
+    "active_rows": 162614,
+    "attempted_exact_solve": false,
+    "positive_cols": 2687,
+    "square_core": false
+  },
+  "float_active_rows": 162614,
+  "float_min_residual": -1.4216115749429533e-08,
+  "float_nonzero": 2687,
+  "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "lp_status": 0,
+  "method": "highs",
+  "objective": 3727.7482899220886,
+  "row_tol": 1e-08,
+  "schema": "eq_odl1_rung2_scipy_core_probe_v1",
+  "success": true,
+  "support": "negative",
+  "variables": 43128,
+  "x_tol": 1e-09
+}

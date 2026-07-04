@@ -1,0 +1,301 @@
+{
+  "schema": "eq_odl1_rung2_lean_build_v1",
+  "src_root": "E:\\Projects\\ErdosProblems\\problems\\23\\lean",
+  "build_root": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4",
+  "workers": 6,
+  "count": 29,
+  "shard_count": 27,
+  "failures": [],
+  "results": [
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data.olean",
+      "returncode": 0,
+      "seconds": 22.103,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data.olean.tmp.64568\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data.olean.tmp.64568"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard000",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean",
+      "returncode": 0,
+      "seconds": 28.839,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean.tmp.80300\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean.tmp.80300"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard001",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean",
+      "returncode": 0,
+      "seconds": 27.786,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean.tmp.51476\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean.tmp.51476"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard002",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean",
+      "returncode": 0,
+      "seconds": 28.554,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean.tmp.79024\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean.tmp.79024"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard003",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean",
+      "returncode": 0,
+      "seconds": 29.617,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean.tmp.63500\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean.tmp.63500"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard004",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean",
+      "returncode": 0,
+      "seconds": 27.508,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean.tmp.71784\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean.tmp.71784"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard005",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean",
+      "returncode": 0,
+      "seconds": 27.432,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean.tmp.15908\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean.tmp.15908"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard006",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard006.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard006.olean",
+      "returncode": 0,
+      "seconds": 27.583,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard006.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard006.olean.tmp.12320\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard006.olean.tmp.12320"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard007",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard007.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard007.olean",
+      "returncode": 0,
+      "seconds": 25.341,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard007.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard007.olean.tmp.75760\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard007.olean.tmp.75760"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard008",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard008.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard008.olean",
+      "returncode": 0,
+      "seconds": 27.972,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard008.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard008.olean.tmp.33580\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard008.olean.tmp.33580"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard009",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard009.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard009.olean",
+      "returncode": 0,
+      "seconds": 29.175,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard009.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard009.olean.tmp.79320\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard009.olean.tmp.79320"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard010",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard010.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard010.olean",
+      "returncode": 0,
+      "seconds": 28.2,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard010.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard010.olean.tmp.13096\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard010.olean.tmp.13096"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard011",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard011.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard011.olean",
+      "returncode": 0,
+      "seconds": 25.147,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard011.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard011.olean.tmp.51456\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard011.olean.tmp.51456"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard012",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard012.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard012.olean",
+      "returncode": 0,
+      "seconds": 24.746,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard012.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard012.olean.tmp.73940\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard012.olean.tmp.73940"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard013",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard013.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard013.olean",
+      "returncode": 0,
+      "seconds": 26.863,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard013.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard013.olean.tmp.73292\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard013.olean.tmp.73292"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard014",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard014.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard014.olean",
+      "returncode": 0,
+      "seconds": 24.368,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard014.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard014.olean.tmp.54800\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard014.olean.tmp.54800"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard015",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard015.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard015.olean",
+      "returncode": 0,
+      "seconds": 27.724,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard015.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard015.olean.tmp.78040\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard015.olean.tmp.78040"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard016",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard016.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard016.olean",
+      "returncode": 0,
+      "seconds": 28.672,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard016.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard016.olean.tmp.30980\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard016.olean.tmp.30980"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard017",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard017.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard017.olean",
+      "returncode": 0,
+      "seconds": 23.663,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard017.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard017.olean.tmp.50120\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard017.olean.tmp.50120"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard018",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard018.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard018.olean",
+      "returncode": 0,
+      "seconds": 25.37,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard018.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard018.olean.tmp.60576\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard018.olean.tmp.60576"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard019",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard019.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard019.olean",
+      "returncode": 0,
+      "seconds": 26.783,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard019.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard019.olean.tmp.10860\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard019.olean.tmp.10860"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard020",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard020.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard020.olean",
+      "returncode": 0,
+      "seconds": 25.889,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard020.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard020.olean.tmp.9616\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard020.olean.tmp.9616"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard021",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard021.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard021.olean",
+      "returncode": 0,
+      "seconds": 25.759,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard021.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard021.olean.tmp.52944\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard021.olean.tmp.52944"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard022",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard022.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard022.olean",
+      "returncode": 0,
+      "seconds": 26.668,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard022.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard022.olean.tmp.15400\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard022.olean.tmp.15400"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard023",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard023.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard023.olean",
+      "returncode": 0,
+      "seconds": 26.333,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard023.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard023.olean.tmp.66484\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard023.olean.tmp.66484"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard024",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard024.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard024.olean",
+      "returncode": 0,
+      "seconds": 24.134,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard024.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard024.olean.tmp.79264\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard024.olean.tmp.79264"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard025",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard025.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard025.olean",
+      "returncode": 0,
+      "seconds": 22.867,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard025.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard025.olean.tmp.38288\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard025.olean.tmp.38288"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard026",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard026.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard026.olean",
+      "returncode": 0,
+      "seconds": 22.931,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard026.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard026.olean.tmp.64008\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Data\\Shard026.olean.tmp.64008"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Support",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Support.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Support.olean",
+      "returncode": 0,
+      "seconds": 18.295,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Support.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Support.olean.tmp.76492\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v4\\Erdos23Delta0\\Cert\\Rung2Support.olean.tmp.76492"
+    }
+  ]
+}

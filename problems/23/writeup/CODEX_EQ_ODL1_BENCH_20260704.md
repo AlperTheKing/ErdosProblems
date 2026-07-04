@@ -292,3 +292,138 @@ conic rows=85,537
 ```
 
 Interpretation: this is strong numerical evidence that the negative-repair support cone is infeasible, unlike the previous objective=sum run that hit MaxTime. It is not an exact certificate. To make this finite LP infeasibility audit-grade, the next step would be extracting/rationalizing a Farkas dual ray for the selected finite LP, or accepting this as the computational abort signal and moving to the Rung-2 chart/KKT split once specified.
+
+## 2026-07-04 EQ-ODL1 Farkas / full-cone gate update
+
+- Full unrestricted Rung-1 cone sizing probe: `tmp/eq_odl1_full_cone_size_v1.json`.
+  - All 15 generators with shifted monomials including constant terms at current caps.
+  - `variable_count = 1,755,182`, `target_terms = 17,575`, `target_negative_terms = 4,169`.
+  - This exceeds Claude's `~150k` threshold, so no full-cone Clarabel solve was launched.
+
+- Restricted support `F1,F2,F3,F4,B0_eta25_25` infeasibility now has exact rational Farkas replay.
+  - Certificate: `tmp/eq_odl1_clarabel_F1_F2_F3_F4_B0_sum_t180_farkas_cert_v1.json`.
+  - Checker: `problems/23/writeup/_codex_eq_odl1_farkas_cert_check.py`.
+  - Checker output: `tmp/eq_odl1_farkas_cert_check_F1_F2_F3_F4_B0_v1.json`.
+  - Verdict: `ok=true`, `variables=11157`, `constraints=47655`, `min_ATy=1663/83370000`, and exact `b^T y < 0`.
+
+- The strict conic-stationarity replay remains false after independent rounding of both Clarabel dual blocks. The exact artifact uses the correct finite-LP Farkas gate `y >= 0`, `A^T y >= 0`, `b^T y < 0`.
+
+## 2026-07-04 EQ-ODL1 Rung-2 chart stats
+
+- Seed-ray digit verifier: `problems/23/writeup/_codex_eq_odl1_seed_ray_verify.py`.
+  - Output: `tmp/eq_odl1_seed_ray_verify_v1.json`.
+  - Exact identities verified: `I_EQ-N`, `D_EQ`, `eta25=25`, `P_EQ1(t)`, and nonnegative shifted `t=1+u` coefficients.
+
+- Chart/triviality scaffold: `problems/23/writeup/_codex_eq_odl1_rung2_charts.py`.
+  - Output: `tmp/eq_odl1_rung2_chart_triviality_v1.json`.
+  - `300` dominance-band chart labels checked.
+  - `0/300` close by `P_k` Bernstein coefficients alone.
+
+- Band-only LP pass: `problems/23/writeup/_codex_eq_odl1_rung2_band_lp.py`.
+  - Output: `tmp/eq_odl1_rung2_band_lp_all_v1.json`.
+  - `20` height-chart/band cases, all HiGHS infeasible, no timeouts.
+  - Therefore `0/300` dominance-band labels close at band-only stage.
+
+- Full dominance LP size probe: `tmp/eq_odl1_rung2_full_dominance_size_v1.json`.
+  - Degree-9 Bernstein multiplier count on the 10-variable simplex: `48620`.
+  - Degree-10 band multiplier count: `92378`.
+  - Direct full dominance LP size per chart label: `1,502,358` variables.
+  - All 300 materialized directly: `450,707,400` variables.
+
+### Rung-2 reduced-support full dominance smoke (Codex)
+- Added `problems/23/writeup/_codex_eq_odl1_rung2_support_lp.py`.
+- Model: degree-2 homogenized generators/deltas, degree-9 generator and delta multipliers, degree-10 band multiplier, degree-11 Bernstein residual.
+- Support mode `negative`: inverse-select columns that directly repair negative degree-11 Bernstein target slots.
+- Smoke chart `(k=0, dominant=B0_eta25_25, band=near_2s_minus_1)`:
+  - target negative Bernstein slots: 2086
+  - variables: 43128
+  - constraints: 167960
+  - sparse nnz: 1545048
+  - HiGHS sum-objective status: feasible/optimal within 60s
+  - float nonzeros: 2687
+  - exact replay: not yet certified; high-denominator attempts still leave tiny negative residuals (`-8/562741619` at max_den=1e8; `-344/24197889639` at max_den=1e10)
+- Margin objective on same support timed out at 120s; zero objective timed out at 60s.
+- Artifact: `tmp/eq_odl1_rung2_support_lp_smoke_k0_B0_near_highden_v1.json`.
+
+### Rung-2 reduced-support cached k=0 hard-dominant sweep
+- Script now caches prepared chart data per height chart.
+- Command artifact: `tmp/eq_odl1_rung2_support_lp_k0_hard3_bands_v1.json`.
+- Scope: `k=0`, dominants `B0_eta25_25`, `G6_A2_9T`, `G7_B2_4T`, both bands, negative-support inverse-selected columns, sum objective, 60s per LP.
+- Result: 6 rows; 3 floating-feasible; 3 timeouts; 0 exact replays.
+- Near band rows feasible for all three dominants. Infinity band rows timed out for all three dominants at 60s.
+- Representative sizes: 42.6k-47.2k variables, 167,960 constraints, 1.07M-1.55M nonzeros.
+
+### Rung-2 infinity-band solver-method comparison
+- Row: `k=0`, dominant `B0_eta25_25`, band `inf_1_minus_2s`, negative-support selected columns.
+- Size: 42,631 variables; 167,960 constraints; 1,540,078 nonzeros.
+- `method=highs`, sum objective, 240s LP cap: timeout.
+- `method=highs-ds`, sum objective, 240s LP cap: timeout.
+- `method=highs-ipm`, sum objective, 240s LP cap: timeout.
+- Artifacts:
+  - `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_t240_v1.json`
+  - `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_highsds_t240_v1.json`
+  - `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_highsipm_t240_v1.json`
+
+### Rung-2 exact reconstruction attempt for first feasible chart
+- Added `problems/23/writeup/_codex_eq_odl1_rung2_basis_replay.py` for highspy basis extraction and exact-core probe.
+- Added `problems/23/writeup/_codex_eq_odl1_rung2_scipy_core_probe.py` for SciPy active-core diagnostics.
+- Target chart: `k=0`, dominant `B0_eta25_25`, band `near_2s_minus_1`, negative-support reduced LP.
+- Highspy direct solve/basis extraction attempts:
+  - simplex, presolve off: stopped after exceeding practical window before result.
+  - simplex, presolve on: stopped after exceeding practical window before result.
+  - ipm, presolve on, 64 threads: stopped after exceeding practical window before result.
+- SciPy core diagnostics on same row:
+  - LP success; objective `3727.7482899220886`; positive columns `2687`.
+  - tight rows at residual tolerance `1e-8`: `162614`, not square.
+  - nonzero inequality dual rows at `1e-9`: `3238`, not square against 2687 positive columns.
+  - Active-core exact replay was therefore not attempted; basis selection remains unresolved.
+- Artifacts:
+  - `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_v1.json`
+  - `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_dual_v1.json`
+
+### Rung-2 SciPy active-core QR diagnostics
+- Target chart: `k=0`, dominant `B0_eta25_25`, band `near_2s_minus_1`.
+- Dual-active rows at `dual_tol=1e-9`: 3,238.
+- QR row-selection on dual-active submatrix:
+  - `x_tol=1e-9`: positive cols 2,687; rank 2,676; no square independent core.
+  - `x_tol=1e-7`: positive cols 2,686; rank 2,675; no square independent core.
+  - `x_tol=1e-5`: positive cols 2,586; rank 2,576; no square independent core.
+- Conclusion: the SciPy feasible solution is structurally degenerate; simple positive-support/dual-row basis replay is not enough.
+- Artifacts:
+  - `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_qr_v1.json`
+  - `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_qr_xtol1e7_v1.json`
+  - `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_qr_xtol1e5_v1.json`
+
+### Rung-2 infinity-band reduced-form probes per Claude 10:30Z
+Target row: `k=0`, dominant `B0_eta25_25`, band `inf_1_minus_2s`.
+Implemented support flags in `_codex_eq_odl1_rung2_support_lp.py`:
+- `--no-deltas`: omit dominance delta families.
+- `--leading-s0-only`: keep only degree-2 Bernstein generator coefficients with simplex `s` exponent 0, used as the leading homogeneous face model.
+
+Results:
+- `--no-deltas --leading-s0-only`: 9,031 vars, 135,274 nnz, HiGHS infeasible (not timeout). Artifact `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_leads0_nodelta_v1.json`.
+- `--no-deltas` full generators: 20,455 vars, 390,094 nnz, 60s timeout. Artifact `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_nodelta_fullgen_v1.json`.
+- `--leading-s0-only` with deltas restored: 13,567 vars, 329,674 nnz, HiGHS infeasible (not timeout). Artifact `tmp/eq_odl1_rung2_support_lp_k0_B0_inf_leads0_withdelta_v1.json`.
+
+Interpretation: the strict s=0 Bernstein-face encoding of "leading homogeneous generator multipliers" is numerically infeasible on the test row, even with deltas. This may indicate a spec deviation or that the leading-homogeneous encoding should not be the raw Bernstein face-support filter.
+
+### Rung-2 numeric-map driver smoke
+- Added `problems/23/writeup/_codex_eq_odl1_rung2_support_map.py`.
+- Multiprocessing pool with `workers=2` is blocked by Windows sandbox (`WinError 5` creating multiprocessing Pipe).
+- Serial smoke command artifact: `tmp/eq_odl1_rung2_support_numeric_map_smoke_2charts_v2.json`.
+- Scope: charts `0,5`, dominants `B0_eta25_25,G6_A2_9T`, both bands, negative support, sum objective, 20s cap.
+- Result: 8 rows; feasible_numeric 3; timeouts 5; infeasible 0; other_failure 0.
+- This validates the map format; full parallel map needs subprocess-style parallelism or unsandboxed multiprocessing approval.
+
+### Rung-2 exact replay: perturbation objective opens square core
+- Added deterministic objective modes to `_codex_eq_odl1_rung2_scipy_core_probe.py`: `lex-small`, `lex-large`, `family`.
+- Target chart: `k=0`, dominant `B0_eta25_25`, band `near_2s_minus_1`.
+- `lex-small` result:
+  - LP success.
+  - positive columns: 2,686.
+  - dual-active rows: 3,239.
+  - QR row-selection from dual-active rows: rank 2,686.
+  - selected square core exists in floating arithmetic.
+  - artifact: `tmp/eq_odl1_rung2_scipy_core_probe_k0_B0_near_lexsmall_qrskip_v1.json`.
+- Exact solve attempt on the 2,686 x 2,686 selected rational core was launched and stopped after a bounded attempt; SymPy dense LU is too slow for this size.
+- Remaining blocker is efficient exact solve/export of the selected sparse rational core, not basis degeneracy.

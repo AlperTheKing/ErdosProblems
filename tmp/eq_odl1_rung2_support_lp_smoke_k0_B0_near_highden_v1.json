@@ -1,0 +1,80 @@
+{
+  "complete": true,
+  "exact_ok": 0,
+  "infeasible_or_failed": 0,
+  "items": [
+    {
+      "band": "near_2s_minus_1",
+      "constraints": 167960,
+      "dominant_index": 7,
+      "dominant_name": "B0_eta25_25",
+      "exact_check": {
+        "attempts": [
+          {
+            "max_denominator": 1000000,
+            "negative_residual_count": 1570,
+            "nonzero_multiplier_count": 2683,
+            "residual_min_coeff": "-3135832368311/24509182594221032400"
+          },
+          {
+            "max_denominator": 100000000,
+            "negative_residual_count": 1687,
+            "nonzero_multiplier_count": 2687,
+            "residual_min_coeff": "-8/562741619"
+          },
+          {
+            "max_denominator": 10000000000,
+            "negative_residual_count": 1895,
+            "nonzero_multiplier_count": 2687,
+            "residual_min_coeff": "-344/24197889639"
+          }
+        ]
+      },
+      "exact_ok": false,
+      "family_counts": {
+        "band:near_2s_minus_1": 2556,
+        "delta:B0_eta25_25-F1": 1584,
+        "delta:B0_eta25_25-F2": 1584,
+        "delta:B0_eta25_25-F3": 1584,
+        "delta:B0_eta25_25-F4": 1584,
+        "delta:B0_eta25_25-F5": 1584,
+        "delta:B0_eta25_25-F6": 1584,
+        "delta:B0_eta25_25-F7": 1584,
+        "delta:B0_eta25_25-G1_UV_T": 1584,
+        "delta:B0_eta25_25-G2_UZ_T": 1584,
+        "delta:B0_eta25_25-G3_XY_T": 1584,
+        "delta:B0_eta25_25-G4_VZ_XY": 1584,
+        "delta:B0_eta25_25-G5_VZ_T": 1584,
+        "delta:B0_eta25_25-G6_A2_9T": 1584,
+        "delta:B0_eta25_25-G7_B2_4T": 1584,
+        "gen:B0_eta25_25": 1584,
+        "gen:F1": 954,
+        "gen:F2": 954,
+        "gen:F3": 954,
+        "gen:F4": 954,
+        "gen:F5": 1584,
+        "gen:F6": 1584,
+        "gen:F7": 1584,
+        "gen:G1_UV_T": 1584,
+        "gen:G2_UZ_T": 1584,
+        "gen:G4_VZ_XY": 1584,
+        "gen:G5_VZ_T": 1584,
+        "gen:G6_A2_9T": 1584,
+        "gen:G7_B2_4T": 324
+      },
+      "float_nonzero": 2687,
+      "k": 0,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "schema": "eq_odl1_rung2_support_lp_item_v1",
+      "success": true,
+      "support": "negative",
+      "target_negative_coeffs": 2086,
+      "variables": 43128
+    }
+  ],
+  "rows": 1,
+  "schema": "eq_odl1_rung2_support_lp_v1",
+  "success": 1,
+  "timeouts": 0
+}

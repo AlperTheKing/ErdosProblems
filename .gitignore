@@ -80,3 +80,7 @@ _tmp_*/
 # Lean 4 build artifacts (lake build output)
 .lake/
 *.olean
+
+# Lean olean build-output dirs + interrupted .olean.tmp files
+*.olean.*
+tmp/rung2_lean_o_*/

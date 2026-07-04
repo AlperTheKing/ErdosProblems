@@ -1,0 +1,132 @@
+{
+  "schema": "eq_odl1_rung2_lean_build_v1",
+  "src_root": "E:\\Projects\\ErdosProblems\\problems\\23\\lean",
+  "build_root": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1",
+  "workers": 6,
+  "count": 7,
+  "shard_count": 6,
+  "failures": [
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard000",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean",
+      "returncode": 1,
+      "seconds": 31.772,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard001",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean",
+      "returncode": 1,
+      "seconds": 32.374,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard003",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean",
+      "returncode": 1,
+      "seconds": 32.473,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard002",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean",
+      "returncode": 1,
+      "seconds": 33.269,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard004",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean",
+      "returncode": 1,
+      "seconds": 33.626,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    }
+  ],
+  "results": [
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard000",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.olean",
+      "returncode": 1,
+      "seconds": 31.772,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard000.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard001",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.olean",
+      "returncode": 1,
+      "seconds": 32.374,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard001.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard002",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.olean",
+      "returncode": 1,
+      "seconds": 33.269,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard002.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard003",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.olean",
+      "returncode": 1,
+      "seconds": 32.473,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard003.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard004",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.olean",
+      "returncode": 1,
+      "seconds": 33.626,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard004.lean:511:2: error: maximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information\n",
+      "stderr": "",
+      "recovered_tmp": null
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Data.Shard005",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean",
+      "returncode": 0,
+      "seconds": 31.009,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean.tmp.59372\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Data\\Shard005.olean.tmp.59372"
+    },
+    {
+      "module": "Erdos23Delta0.Cert.Rung2Support",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\Rung2Support.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Support.olean",
+      "returncode": 0,
+      "seconds": 23.517,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Support.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM=E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Support.olean.tmp.77112\n",
+      "recovered_tmp": "E:\\Projects\\ErdosProblems\\tmp\\rung2_lean_o_v1\\Erdos23Delta0\\Cert\\Rung2Support.olean.tmp.77112"
+    }
+  ]
+}
