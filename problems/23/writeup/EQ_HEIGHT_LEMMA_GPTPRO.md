@@ -214,3 +214,33 @@ G#; (3) keep FULL G# forms (never s=0-face-only); (4) keep B_inf with deg <= 10
 multiplier; (5) run the corrected full InfCert per chart; optionally attempt the
 radial-monotonicity skip certificates where cheap.
 
+
+# ===== EXACT-REPLAY: FLOOR-BUFFER RATIONALIZATION (main thread, 2026-07-04) =====
+VERDICT: high-height LP vertices are EXPECTED (Bernstein/Handelman cone of a
+degree-11 target, many near-dependent columns, near the equality stratum: vertex
+denominators = determinants of large ill-conditioned subsystems). The CONE
+CERTIFICATE does not need huge coefficients — reconstructing vertices was the
+mistake. Use an INTERIOR point with margin, then floor-round.
+METHOD:
+ 1 Inequality form: certificate p = b + A lambda, lambda >= 0, b >= 0 (b = base).
+ 2 Row sensitivity n_i^- = sum_j max(0, -A_ij); n^- = 0 rows are safe under
+   downward rounding.
+ 3 BufferLP two-stage: Stage 1 maximize theta s.t. A lambda + theta n^- <= p,
+   lambda >= 0. Stage 2 (interior, NOT vertex): theta_0 = theta_max/2; minimize
+   sum c_j lambda_j s.t. A lambda + theta_0 n^- <= p, with c_j = 1 or
+   1 + log(1 + ||A_col_j||_1). NEVER lexicographic-to-vertex.
+ 4 Safe floor: Q integer with 1/Q < theta*/4 (practically: theta ~ 1e-3 =>
+   Q = 2^14 or 1e5 => 14-17 BIT denominators); lambda_j^(Q) =
+   floor(Q max(0, lambda_j^num - eps_sol))/Q, eps_sol ~ 1e-8/solver tolerance.
+   Guarantee: r_i^(Q) >= n_i^-(theta* - 1/Q) >= 0 buffered rows; safe rows only
+   improve.
+ 5 EXACT VERIFY: b = p - A lambda^(Q) in exact rationals; all b_i >= 0 => emit
+   ConeCert {target = p, base = b, mults = lambda^(Q), slacks = columns}; checkEq
+   contract UNCHANGED (slack absorbed into base).
+ 6 RepairLP fallback: violation set V = {i : b_i < 0} small => column-restricted
+   repair (columns with a negative entry on V): A_rep mu + theta n_rep^- <= b,
+   floor-round mu, lambda_final = lambda^(Q) + mu^(Q), re-verify. V large =>
+   insufficient true margin: rerun BufferLP w/ better objective/larger support.
+CONSEQUENCE: replaces ALL vertex/basis-extraction work across the 300 charts;
+expected certificate denominators ~15 bits, not thousands.
+

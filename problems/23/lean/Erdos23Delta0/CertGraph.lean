@@ -460,5 +460,91 @@ theorem sigma_nonneg_of_isMaxCut (G : GraphData) (c : CutData) (S : List Nat)
   unfold sigma
   omega
 
+/-! ### B2: owned-core corridor partition checker (blueprint §3 + canon).
+The packet is BY CONSTRUCTION the concatenation of the owned cores, so
+LOAD_ACCOUNT additivity is repeated `nu0_append` over the pairwise-disjoint
+pieces — no coverage pigeonhole. The consumer presents the packet in
+corridor-partitioned order (emission convention). -/
+
+/-- Partition certificate: owned cores (vertex lists) plus the index of the
+    claimed negative corridor. -/
+structure CorridorPartitionCert where
+  corridors : List (List Nat)
+  negIdx : Nat
+deriving Repr
+
+/-- The packet represented by the partition. -/
+def partPacket (c : CorridorPartitionCert) : List Nat :=
+  c.corridors.flatMap id
+
+/-- Boolean pairwise-disjointness of vertex lists. -/
+def pairwiseDisjB : List (List Nat) → Bool
+  | [] => true
+  | co :: rest =>
+      rest.all (fun co' => co.all (fun v => decide (v ∉ co'))) &&
+      pairwiseDisjB rest
+
+/-- Partition obligations: cores duplicate-free and nonempty, pairwise
+    disjoint, in graph range, and the claimed corridor has ν₀ < 0. -/
+def checkCorridorPartition (G : GraphData) (atoms : List AtomData) (D : Nat)
+    (c : CorridorPartitionCert) : Bool :=
+  c.corridors.all (fun co =>
+    decide (co ≠ []) && decide co.Nodup &&
+    co.all (fun v => decide (v < G.n))) &&
+  pairwiseDisjB c.corridors &&
+  (match c.corridors.get? c.negIdx with
+   | some co => decide (nu0Num G atoms D co < 0)
+   | none => false)
+
+/-- Head-vs-tail disjointness extracted from the boolean check. -/
+theorem pairwiseDisjB_head (co : List Nat) (rest : List (List Nat))
+    (h : pairwiseDisjB (co :: rest) = true) :
+    ∀ v ∈ co, v ∉ rest.flatMap id := by
+  unfold pairwiseDisjB at h
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
+  intro v hv hmem
+  rw [List.mem_flatMap] at hmem
+  obtain ⟨co', hco', hvco'⟩ := hmem
+  exact h.1 co' hco' v hv hvco'
+
+theorem pairwiseDisjB_tail (co : List Nat) (rest : List (List Nat))
+    (h : pairwiseDisjB (co :: rest) = true) :
+    pairwiseDisjB rest = true := by
+  unfold pairwiseDisjB at h
+  simp only [Bool.and_eq_true] at h
+  exact h.2
+
+/-- LOAD_ACCOUNT (B2 additivity): ν₀ of the packet is the sum of the
+    per-corridor ν₀ values, from pairwise disjointness alone. -/
+theorem nu0_partition (G : GraphData) (atoms : List AtomData) (D : Nat) :
+    ∀ (cos : List (List Nat)), pairwiseDisjB cos = true →
+    nu0Num G atoms D (cos.flatMap id)
+      = (cos.map (nu0Num G atoms D)).sum
+  | [], _ => by simp [nu0Num, sNum]
+  | co :: rest, h => by
+      have hd := pairwiseDisjB_head co rest h
+      have ih := nu0_partition G atoms D rest (pairwiseDisjB_tail co rest h)
+      simp only [List.flatMap_cons, List.map_cons, List.sum_cons]
+      rw [show (List.flatMap id (co :: rest) : List Nat)
+            = co ++ rest.flatMap id from by simp [List.flatMap_cons]] at *
+      rw [nu0_append G atoms D co (rest.flatMap id)
+        (fun a _ => fun ⟨h1, h2⟩ => hd a.vertex h1 h2), ih]
+
+/-- Negative-corridor extraction: a passing partition check yields a corridor
+    with strictly negative ν₀ (the corridor the dichotomy consumes). -/
+theorem negative_corridor_of_check (G : GraphData) (atoms : List AtomData)
+    (D : Nat) (c : CorridorPartitionCert)
+    (h : checkCorridorPartition G atoms D c = true) :
+    ∃ co ∈ c.corridors, nu0Num G atoms D co < 0 := by
+  unfold checkCorridorPartition at h
+  simp only [Bool.and_eq_true] at h
+  rcases hg : c.corridors.get? c.negIdx with _ | co
+  · rw [hg] at h
+    simp at h
+  · rw [hg] at h
+    refine ⟨co, List.get?_mem hg, ?_⟩
+    have := h.2
+    simpa using this
+
 end CertGraph
 end Erdos23Delta0

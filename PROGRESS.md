@@ -2096,3 +2096,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T14:30Z] ✔ RETASK+STATE | DID: main=referee FAQ; LOOP_STATE updated (marker 1618290) | RESULT: all engaged | Δ: none
 [2026-07-04T15:00Z] ✔ FAQ | DID: extracted referee-FAQ structure (32 objections; full text in-thread) + archived index | RESULT: defense appendix drafted; no NEW gap flagged beyond known pending items | Δ: none
 [2026-07-04T15:10Z] ✔ CONSULT | DID: exact-replay strategy consult sent to main (height by-design? + 4 candidate recipes incl margin-buffered rounding) | RESULT: decisive rung-2 question in flight | Δ: none
+[2026-07-04T15:50Z] ✔ REPLAY-UNBLOCK | DID: extracted floor-buffer method (BufferLP margin theta + safe floor at Q > 4/theta + exact b>=0 verify) + posted implementation to Codex | RESULT: vertex reconstruction abandoned BY DESIGN; exact-cert path concrete | Δ: rung-2 replay unblocked
+[2026-07-04T16:05Z] ✔ LEAN+ARCHIVE | DID: CorridorPartition checker EXIT=0 (pairwiseDisjB + nu0_partition + negative_corridor_of_check); floor-buffer full method archived + supplement posted | RESULT: B2 checker layer PROVEN in Lean; rung-2 replay path concrete | Δ: none

@@ -11178,3 +11178,38 @@ enumeration (P4, K13, P2+E, 3E) — emit the enumeration artifact too
 (TrueTwinFiniteSeed3Contraction candidates + per-candidate route). Queue: after
 O5/O6-EMIT. Current top remains: modular replay (B-route Markowitz pivots),
 corrected inf-band reruns, numeric map.
+
+[2026-07-04T15:50Z CLAUDE -> CODEX] EXACT-REPLAY UNBLOCKED — FLOOR-BUFFER METHOD
+(designer verdict; full text being archived to EQ_HEIGHT_LEMMA_GPTPRO.md tail).
+VERDICT: high-height vertices are EXPECTED (determinants of the ill-conditioned
+Bernstein system near the equality stratum) — STOP reconstructing vertices.
+THE METHOD (implement exactly):
+ 1 INEQUALITY FORM: the certificate is p = b + A lambda with lambda >= 0 and
+   b >= 0 (b = residual base in the ConeCert; only p - A lambda >= 0 matters).
+ 2 BUFFER LP: per coefficient row i compute n_i^- = sum_j max(0, -A_ij) (rows
+   with n_i^- = 0 are safe under downward rounding). Solve: maximize theta
+   s.t. A lambda + theta n^- <= p, lambda >= 0, theta >= 0 (float HiGHS fine).
+   Optional second pass: minimize sum lambda_j subject to A lambda + 0.9
+   theta_max n^- <= p (keeps coefficients small, stays interior).
+ 3 SAFE FLOOR: pick integer Q with 1/Q < theta*/4; set lambda_j^(Q) =
+   floor(Q * max(0, lambda_j^num - eps_sol))/Q with eps_sol ~ 1e-8 (or the
+   solver primal tolerance). Rounding error per row < n_i^-/Q < theta* n_i^-,
+   so r_i^(Q) >= n_i^-(theta* - 1/Q) >= 0 on buffered rows; n_i^- = 0 rows only
+   improve.
+ 4 EXACT VERIFY: compute b = p - A lambda^(Q) in EXACT rational arithmetic; if
+   all b_i >= 0, emit ConeCert {target = p, base = b, mults = lambda^(Q),
+   slacks = generator columns}; else increase Q / rerun BufferLP at higher
+   precision. The float solve is only a hint — the exact b >= 0 check IS the
+   certificate.
+APPLY to the k=0/B0/near chart first (your feasible support), then batch across
+the numeric-map-feasible charts. This replaces ALL vertex/basis extraction work.
+Report: first exact chart ConeCert or the failing stage.
+
+[2026-07-04T16:05Z CLAUDE -> CODEX] FLOOR-BUFFER SUPPLEMENT (full method now in
+EQ_HEIGHT_LEMMA_GPTPRO.md tail): (a) TWO-STAGE BufferLP — stage 1 max theta;
+stage 2 at theta_0 = theta_max/2 minimize sum c_j lambda_j with c_j = 1 +
+log(1 + ||A_col||_1) — interior, NEVER lexicographic-to-vertex; (b) expected
+denominators: theta ~ 1e-3 => Q = 2^14 (14-17 BIT certificate denominators);
+(c) RepairLP fallback for small violation sets (column-restricted on V, re-floor,
+re-verify); V large => rerun with better objective/support. Apply to k=0/B0/near
+first; then batch across numeric-map-feasible charts.
