@@ -288,5 +288,74 @@ theorem nu0_append (G : GraphData) (atoms : List AtomData) (D : Nat)
   push_cast
   ring
 
+/-! ### B6: bank-block checker (blueprint §6).
+A bank block carries five vertex classes and its assigned bad-edge ids; the
+checker verifies disjointness, range, the bad-edge layer condition, and the
+graph-side edge-count form e(Bᵢ, Bᵢ₊₁) ≥ mₐ, from which the class-size product
+bound follows and the Bank0Algebra AM-GM finishes. -/
+
+/-- One bank block: five classes (lists of vertices) and assigned bad ids. -/
+structure BankBlock where
+  classes : Fin 5 → List Nat
+  badIds : List Nat
+deriving Repr
+
+/-- Edges between two vertex lists (unordered normalized edges). -/
+def eBetween (G : GraphData) (A B : List Nat) : Nat :=
+  (G.edges.filter (fun e =>
+    (decide (e.1 ∈ A) && decide (e.2 ∈ B)) ||
+    (decide (e.1 ∈ B) && decide (e.2 ∈ A)))).length
+
+/-- All vertices of a block. -/
+def BankBlock.support (b : BankBlock) : List Nat :=
+  (List.finRange 5).flatMap (fun i => b.classes i)
+
+/-- Block obligations (per blueprint §6): classes in-range and duplicate-free,
+    pairwise disjoint, every assigned bad edge in the class-4/class-0 layer,
+    the graph-side edge-count bound e(Bᵢ, Bᵢ₊₁) ≥ |badIds|, and the class-size
+    product bound |Bᵢ|·|Bᵢ₊₁| ≥ |badIds| (checked directly — the form the
+    AM-GM algebra consumes). -/
+def checkBankBlock (G : GraphData) (bads : List BadEdgeData)
+    (b : BankBlock) : Bool :=
+  (List.finRange 5).all (fun i =>
+    (b.classes i).all (fun v => decide (v < G.n)) &&
+    decide (b.classes i).Nodup) &&
+  ((List.finRange 5).all (fun i => (List.finRange 5).all (fun j =>
+    decide (i = j) || (b.classes i).all (fun v => decide (v ∉ b.classes j))))) &&
+  b.badIds.all (fun gid =>
+    match bads.get? gid with
+    | some g =>
+        (decide (g.u ∈ b.classes 4) && decide (g.v ∈ b.classes 0)) ||
+        (decide (g.u ∈ b.classes 0) && decide (g.v ∈ b.classes 4))
+    | none => false) &&
+  (List.finRange 5).all (fun i =>
+    decide (b.badIds.length ≤ eBetween G (b.classes i) (b.classes (i + 1))) &&
+    decide (b.badIds.length ≤
+      (b.classes i).length * (b.classes (i + 1)).length))
+
+/-- Fact extraction: a passing block check yields the five cyclic class-size
+    product bounds — the exact hypotheses of Bank0Algebra.bank_amgm_rat. -/
+theorem checkBankBlock_products (G : GraphData) (bads : List BadEdgeData)
+    (b : BankBlock) (h : checkBankBlock G bads b = true) :
+    ∀ i : Fin 5, b.badIds.length ≤
+      (b.classes i).length * (b.classes (i + 1)).length := by
+  intro i
+  unfold checkBankBlock at h
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
+  have := h.2.2.2 i (List.mem_finRange i)
+  exact this.2
+
+/-- Fact extraction: pairwise class disjointness. -/
+theorem checkBankBlock_disjoint (G : GraphData) (bads : List BadEdgeData)
+    (b : BankBlock) (h : checkBankBlock G bads b = true) :
+    ∀ i j : Fin 5, i ≠ j → ∀ v ∈ b.classes i, v ∉ b.classes j := by
+  intro i j hij v hv
+  unfold checkBankBlock at h
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at h
+  have := h.2.1 i (List.mem_finRange i) j (List.mem_finRange j)
+  rcases this with heq | hall
+  · exact absurd heq hij
+  · exact hall v hv
+
 end CertGraph
 end Erdos23Delta0

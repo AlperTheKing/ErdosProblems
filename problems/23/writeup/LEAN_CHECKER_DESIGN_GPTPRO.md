@@ -200,3 +200,51 @@ FINAL CODEX CHECKLIST: header, terminal assignments, root-edge list, per-edge
 (packets/zeta, kappaNum, switch, sigma/nu/K/nuK, REC ConeCert), counting
 consistency cert, optional label trace, optional shadow-descent chain.
 
+
+# ===== O16/O18: PASSIVE-AM MASTER-CUBE EMISSION SPEC (main thread, 2026-07-04) =====
+TARGET per seed (EQ/SIB), layer l in {V1,V2,V3}, row instance R:
+  AM-defect  t + I_seed(Q*) - I_ext^l(R) >= 0   (N_ext = N_seed + t; passive = no new bad door).
+LAYERS: passive = positive-flow attachment in ONE interior class, blue edges to adjacent classes
+only, no new bad door, nonempty left+right neighbor sets. V0/V4 attachments are bad-door
+attachments -> saturation, NOT passive. Exactly 3 master layers per seed.
+CUBE VARS: per layer, prev class L_l = {a1,a2}, next R_l = {b1,b2}; pair vars mu_{ab} in [0,1]^4;
+valid 9 passive signatures = 0/1 rank-one rectangles (mu_ab = 1_{a in L} 1_{b in R}, L,R nonempty).
+Master cert proves the inequality on the WHOLE cube (or row-existence face).
+COMPACTIFICATION: rho = t/(1+t), t = rho/(1-rho), Bernstein in rho deg <= 4 (t=1 only is
+insufficient — established).
+ROW-LOAD GENERATOR: extended denominator D_g^l = sum_seed-rows prod w + sum_attach-rows
+eps(P) t prod w (eps(P) = mu_lr existence monomial); loads s_v = W_a W_b N/D form; endpoints
+s_a = W_b etc. ROW-EXISTENCE FACE: for attachment rows, certify on face mu_lr = 1 (avoids
+mu-degree 4); at signatures where the row is absent no certificate is required.
+CLEARED DEFECT: Theta_l,R = t + I_seed(Q*) - I_R^l; D_l = prod D_g^0 * prod D_g^l > 0
+(D_g^l >= D_g^0 > 0); P_l,R = D_l Theta_l,R; Phat = (1-rho)^4 P(w, rho/(1-rho), mu).
+DEGREES: mu <= 3 (three affine-in-mu denominators; faces avoid the eps factor); rho <= 4;
+x-degree emitter-computed, safe caps EQ <= 15, SIB <= 16 (use actual when smaller).
+CERT FORM (M): Phat = P0 + sum_j F_j P_j + E* P* — F_j = seed seven-cut inequalities; E* =
+denominator-cleared active overfull seed term (overfull branch only); P0/P_j/P* nonnegative in
+checker basis = shifted-coeff in x + tensor-Bernstein in mu (deg <= 3) + Bernstein in rho (<= 4).
+CHECKER OBJECT PassiveAMCubeCert {seedName, layer, rowId, rowKind SeedRow|AttachmentRow(pair),
+fixedMu, degreeMu = 3, degreeRho = 4, targetPoly, slacks, multipliers, identityProof (checkEq),
+nonnegProofs}. Checker: row valid; D_l > 0; compactification applied; identity by normalized
+checkEq; multipliers nonneg per basis; slacks nonneg under seed cone. Soundness: Phat >= 0 =>
+AM-defect >= 0.
+EQ DATA: classes V0={1,7} V1={3,5} V2={0,8} V3={4,6} V4={2,9}; doors M={19,27,79}; Q* =
+(7,5,8,6,9). Layers: V1 mu {10,18,70,78}; V2 mu {34,36,54,56} (universal vertex = tau0 true-twin
+of bag 8); V3 mu {02,09,82,89}. ELEVEN ROW TEMPLATES R0-R10 (fixed indexing):
+(1,5,0,6,9),(1,5,8,4,9),(1,5,8,6,9),(7,5,0,6,2),(7,5,8,6,2),(7,3,8,6,2),(7,5,0,6,9),
+(7,5,8,4,9),(7,5,8,6,9)=Q*,(7,3,8,4,9),(7,3,8,6,9).
+SIB DATA: classes V0={1,2} V1={5,6} V2={0,8} V3={3,4} V4={7,9}; doors M={17,19,29}; Q* =
+(1,6,8,4,9). Layers: V1 mu {10,18,20,28}; V2 mu {53,54,63,64} (universal = true twin of 8);
+V3 mu {07,09,87,89} — EXPECTED HARDEST (D_17/D_19 split on asymmetric 7/9 attachment).
+THIRTEEN ROW TEMPLATES R0-R12: (1,5,8,3,7),(1,5,8,4,7),(1,6,8,3,7),(1,6,8,4,7),(1,6,0,4,7),
+(1,5,8,3,9),(1,5,8,4,9),(1,6,8,3,9),(1,6,8,4,9)=Q*,(1,6,0,4,9),(2,6,8,3,9),(2,6,8,4,9),
+(2,6,0,4,9).
+FALLBACK: (14.1) per-signature specialization: 9 rank-one mu in {0,1} values; 1-D rho-Bernstein
++ shifted-x certs, no mu basis; (14.2) row filtering by mu_lr = 1; (14.3) rho interval split
+[0,1/2] u [1/2,1] affine-rescaled Bernstein.
+STATUS: VERIFIED — EQ tau0 V2-twin calibration (L={3,5},R={4,6}, twin of bag 8); all 11 EQ row
+identities verified with zero multipliers; formulation (3 layers, pair vars, rho map,
+vertex-only shortcut refuted). PENDING — EQ 3x11 + generated attachment charts; SIB 3x13 +
+attachment charts; SIB V2 twin easiest, SIB V3 one-path hardest.
+IMPLEMENTATION ORDER: EQ V2 first (tau0 calibration), then EQ V1, EQ V3, then SIB V2/V1/V3.
+
