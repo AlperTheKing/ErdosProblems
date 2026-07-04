@@ -531,3 +531,25 @@
   fix cycles. THEN: transfer chain (badCount_smallCut_eq_big, small_badCount_min_of_peel,
   sigmaNonneg_small_of_peel, SigmaChain_of_sigmaNonneg) closes BANK0 SELF-CONTAINMENT.
 - Batch 19/108. Sibling on 4.2+. Marker 1696415.
+
+
+## TICK NOTES (2026-07-04T00:55Z) — BANK0 SELF-CONTAINED IN LEAN (B2 closed)
+- LEAN MILESTONE: B2 stage TRUE GREEN zero-warning (EXIT=0, LOGBYTES=0, forbidden tokens 0):
+  edgeKept/smallEdgeToBig; length_filter_eq_filter_filter_of_false + length_filter_eq_of_map_perm
+  (generic kernel, GPT-Pro design, filter_filter orientation fixed p&&q); idxOf?_eq_none_of_not_mem
+  + idxOf?_nodup_getD; checkPeel extraction lemmas (sets_facts 6-tuple, smallG_edges, pendant,
+  blueApp, parity); keepMap mem_iff/nodup/pairwise_lt/getD_lt; extSide_kept/removed;
+  mem_inducedEdges + inducedEdges_nodup (nodup_flatMap + filterMap inj + disjoint-on);
+  THE 3 PROJECTIONS (appendage-not-bad via P2+P3+P5 Bool-decide case bash; small-edges-perm via
+  perm_of_nodup_nodup_toFinset_eq; badb compat via extSide_kept); badCount_extendCut_eq_core + eq;
+  checkGraph_smallG_of_peel + checkCut_smallCut_of_peel; small_badCount_min_of_peel;
+  sigmaNonneg_small_of_peel; sigmaChain_of_sigmaNonneg (structural recursion);
+  CAPSTONE bank0_of_maxcut: checkGraph+checkCut+checkBank0Cert+TOP-LEVEL sigmaNonneg => 25m<=n^2.
+  NO per-level hypotheses remain. B2 kernel archived fully in-thread (13243c cache extracted).
+- IN FLIGHT: main = Assembly.lean paste-ready draft vs my green names (sent w/ exact signatures;
+  last check showed len=3 streaming stub — VERIFY LANDED NEXT TICK, nudge if dead). sibling =
+  4.3+ (4.2 landed 8159c, queued for extraction).
+- LEAN NEXT: Assembly.lean skeleton on main reply landing (19-declaration contract + my
+  etaNonneg_of_bank0 discharge); meanwhile candidates: LensGates checker or Seed3RouteTree module.
+- Codex: batch 19/108, marker 1696415 (no new posts). Notify bank0_of_maxcut interface freeze.
+- P(math)~89, P(Lean)~87 (Bank0 checker complex fully closed).

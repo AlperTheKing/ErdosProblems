@@ -1727,5 +1727,580 @@ theorem sideb_extendCut (G : GraphData) (p : PeelData) (d : CutData)
   rw [List.getD_eq_getElem?_getD, List.getElem?_map]
   simp [List.getElem?_range hv]
 
+/-! ### SigmaChain provider, stage B2: bad-count preservation under extension.
+Kernel per the archived SigmaChain contract: appendage edges are never bad
+under ANY extension (P2 pendant-through-root + P3 blue-only + P5 parity),
+kept big edges are exactly the mapped small edges (induced correspondence),
+and badness transports through the keep map. Two generic filter lemmas carry
+the counting; the transfer chain then closes Bank0 self-containment. -/
+
+/-- Edge range facts from graph well-formedness. -/
+theorem checkGraph_edge_range (G : GraphData) (hG : checkGraph G = true) :
+    ∀ e ∈ G.edges, e.1 < e.2 ∧ e.2 < G.n := by
+  unfold checkGraph at hG
+  simp only [Bool.and_eq_true, List.all_eq_true] at hG
+  intro e he
+  have hedge := hG.1 e he
+  unfold checkEdge at hedge
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hedge
+  exact hedge
+
+/-- Edge-list nodup from graph well-formedness. -/
+theorem checkGraph_edges_nodup (G : GraphData) (hG : checkGraph G = true) :
+    G.edges.Nodup := by
+  unfold checkGraph at hG
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hG
+  exact hG.2
+
+/-- Both endpoints kept. -/
+def edgeKept (p : PeelData) (e : Nat × Nat) : Bool :=
+  decide (e.1 ∈ p.keepMap) && decide (e.2 ∈ p.keepMap)
+
+/-- Small-index edge pushed through the keep map. -/
+def smallEdgeToBig (p : PeelData) (e : Nat × Nat) : Nat × Nat :=
+  (p.keepMap.getD e.1 0, p.keepMap.getD e.2 0)
+
+/-- Generic: if failing q forces failing p, pre-filtering by q is invisible. -/
+theorem length_filter_eq_filter_filter_of_false {α : Type} (l : List α)
+    (p q : α → Bool) (h : ∀ x ∈ l, q x = false → p x = false) :
+    (l.filter p).length = ((l.filter q).filter p).length := by
+  rw [List.filter_filter]
+  have h' : ∀ a ∈ l, p a = (p a && q a) := by
+    intro a ha
+    cases hq : q a with
+    | true => simp
+    | false => simp [h a ha hq]
+  rw [List.filter_congr h']
+
+/-- Generic: filtered length transports along a map that permutes onto the
+    target and intertwines the predicates. -/
+theorem length_filter_eq_of_map_perm {α β : Type} (l : List α) (r : List β)
+    (f : α → β) (p : α → Bool) (q : β → Bool)
+    (hpred : ∀ x ∈ l, p x = q (f x)) (hperm : (l.map f).Perm r) :
+    (l.filter p).length = (r.filter q).length := by
+  have hmap : (l.filter p).map f = (l.map f).filter q := by
+    rw [List.filter_map]
+    exact congrArg (List.map f)
+      (List.filter_congr (fun x hx => by simpa [Function.comp] using hpred x hx))
+  calc (l.filter p).length
+      = ((l.filter p).map f).length := by simp
+    _ = ((l.map f).filter q).length := by rw [hmap]
+    _ = (r.filter q).length := (hperm.filter q).length_eq
+
+theorem idxOf?_eq_none_of_not_mem (l : List Nat) (v : Nat) (h : v ∉ l) :
+    idxOf? l v = none := by
+  rcases hm : idxOf? l v with _ | i
+  · rfl
+  · have hi := idxOf?_lt l v i hm
+    have hg := idxOf?_getD l v i hm
+    have hmem : l.getD i 0 ∈ l := by
+      rw [List.getD_eq_getElem _ _ hi]
+      exact List.getElem_mem hi
+    rw [hg] at hmem
+    exact absurd hmem h
+
+theorem idxOf?_nodup_getD : ∀ (l : List Nat), l.Nodup → ∀ i, i < l.length →
+    idxOf? l (l.getD i 0) = some i
+  | [], _, i, hi => by simp at hi
+  | a :: t, _, 0, _ => by simp [idxOf?]
+  | a :: t, hnd, i + 1, hi => by
+      have hti : i < t.length := by simpa using hi
+      have hv : (a :: t).getD (i + 1) 0 = t.getD i 0 := by simp
+      unfold idxOf?
+      rw [hv]
+      have hne : a ≠ t.getD i 0 := by
+        intro heq
+        have hmem : t.getD i 0 ∈ t := by
+          rw [List.getD_eq_getElem _ _ hti]
+          exact List.getElem_mem hti
+        rw [← heq] at hmem
+        exact (List.nodup_cons.mp hnd).1 hmem
+      rw [if_neg hne,
+        idxOf?_nodup_getD t (List.nodup_cons.mp hnd).2 i hti]
+      rfl
+
+/-- P0 facts: keep map literal, root data, small size. -/
+theorem checkPeel_sets_facts (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    p.keepMap = (List.range G.n).filter (fun v => decide (v ∉ p.removed)) ∧
+    p.root < G.n ∧ p.root ∉ p.removed ∧ p.smallG.n = p.keepMap.length ∧
+    p.rootSmallIdx < p.keepMap.length ∧
+    p.keepMap.getD p.rootSmallIdx 0 = p.root := by
+  unfold checkPeel at h
+  simp only [Bool.and_eq_true] at h
+  have hS := h.1.1.1.1.1.1.1
+  unfold checkPeelSets at hS
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hS
+  exact ⟨hS.1.1.1.2, hS.1.1.1.1.1.2, hS.1.1.1.1.2, hS.1.1.2, hS.1.2, hS.2⟩
+
+/-- P1 fact: the small edge list is the induced list. -/
+theorem checkPeel_smallG_edges (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    p.smallG.edges = inducedEdges G p.keepMap := by
+  unfold checkPeel at h
+  simp only [Bool.and_eq_true] at h
+  have hI := h.1.1.1.1.1.1.2
+  unfold checkPeelInduced at hI
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hI
+  exact hI.1.1
+
+/-- P2 facts: a half-removed edge pins its kept endpoint to the root. -/
+theorem checkPeel_pendant_fact (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    (∀ e ∈ G.edges, e.1 ∈ p.removed → e.2 ∉ p.removed → e.2 = p.root) ∧
+    (∀ e ∈ G.edges, e.2 ∈ p.removed → e.1 ∉ p.removed → e.1 = p.root) := by
+  unfold checkPeel at h
+  simp only [Bool.and_eq_true] at h
+  have hP := h.1.1.1.1.1.2
+  unfold checkPeelPendant at hP
+  rw [List.all_eq_true] at hP
+  constructor
+  · intro e he h1 h2
+    have hx := hP e he
+    simpa [h1, h2] using hx
+  · intro e he h1 h2
+    have hx := hP e he
+    simpa [h1, h2] using hx
+
+/-- P3 fact: every edge touching the removed set is blue under c. -/
+theorem checkPeel_blueApp_fact (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    ∀ e ∈ G.edges, (e.1 ∈ p.removed ∨ e.2 ∈ p.removed) →
+      sideb c e.1 ≠ sideb c e.2 := by
+  unfold checkPeel at h
+  simp only [Bool.and_eq_true] at h
+  have hB := h.1.1.1.1.2
+  unfold checkPeelBlueApp at hB
+  rw [List.all_eq_true] at hB
+  intro e he hor
+  have hx := hB e he
+  rcases hor with h1 | h1 <;>
+    · simp only [h1, decide_true, Bool.true_or, Bool.or_true, Bool.not_true,
+        Bool.false_or] at hx
+      unfold blueb at hx
+      simp only [Bool.and_eq_true, decide_eq_true_eq] at hx
+      exact hx.2
+
+/-- P5 fact: parity records are the side flags relative to the root. -/
+theorem checkPeel_parity_fact (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    ∀ r, r < p.removed.length →
+      p.parity.getD r false
+        = ((sideb c (p.removed.getD r 0)) != (sideb c p.root)) := by
+  unfold checkPeel at h
+  simp only [Bool.and_eq_true] at h
+  have hP := h.1.1.2
+  unfold checkPeelParity at hP
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true,
+    List.mem_range] at hP
+  exact fun r hr => hP.2 r hr
+
+/-- Keep-map membership characterization. -/
+theorem keepMap_mem_iff (G : GraphData) (p : PeelData)
+    (hkm : p.keepMap
+      = (List.range G.n).filter (fun v => decide (v ∉ p.removed)))
+    (v : Nat) : v ∈ p.keepMap ↔ v < G.n ∧ v ∉ p.removed := by
+  rw [hkm]
+  simp [List.mem_filter, List.mem_range]
+
+theorem keepMap_nodup (G : GraphData) (p : PeelData)
+    (hkm : p.keepMap
+      = (List.range G.n).filter (fun v => decide (v ∉ p.removed))) :
+    p.keepMap.Nodup := by
+  rw [hkm]
+  exact List.Nodup.filter _ (List.nodup_range)
+
+theorem keepMap_pairwise_lt (G : GraphData) (p : PeelData)
+    (hkm : p.keepMap
+      = (List.range G.n).filter (fun v => decide (v ∉ p.removed))) :
+    p.keepMap.Pairwise (· < ·) := by
+  rw [hkm]
+  exact List.Pairwise.filter _ (List.pairwise_lt_range)
+
+/-- Strict monotonicity of keep-map entries. -/
+theorem keepMap_getD_lt_getD (p : PeelData)
+    (hpw : p.keepMap.Pairwise (· < ·)) (i j : Nat) (hij : i < j)
+    (hj : j < p.keepMap.length) :
+    p.keepMap.getD i 0 < p.keepMap.getD j 0 := by
+  have hi : i < p.keepMap.length := lt_trans hij hj
+  rw [List.getD_eq_getElem _ _ hi, List.getD_eq_getElem _ _ hj]
+  exact List.pairwise_iff_getElem.mp hpw i j hi hj hij
+
+/-- Kept vertices read the small cut at their unique keep index. -/
+theorem extSide_kept (p : PeelData) (d : CutData)
+    (hnd : p.keepMap.Nodup) (i : Nat) (hi : i < p.keepMap.length) :
+    extSide p d (p.keepMap.getD i 0) = sideb d i := by
+  unfold extSide
+  rw [idxOf?_nodup_getD p.keepMap hnd i hi]
+
+/-- Removed vertices take root-side xor parity at their index. -/
+theorem extSide_removed (p : PeelData) (d : CutData) (v : Nat)
+    (hnk : v ∉ p.keepMap) (r : Nat) (hr : idxOf? p.removed v = some r) :
+    extSide p d v
+      = Bool.xor (sideb d p.rootSmallIdx) (p.parity.getD r false) := by
+  unfold extSide
+  rw [idxOf?_eq_none_of_not_mem p.keepMap v hnk, hr]
+
+/-- Membership characterization of the induced edge list. -/
+theorem mem_inducedEdges (G : GraphData) (km : List Nat) (i j : Nat) :
+    (i, j) ∈ inducedEdges G km ↔
+      i < km.length ∧ j < km.length ∧ i < j ∧
+        adjb G (km.getD i 0) (km.getD j 0) = true := by
+  unfold inducedEdges
+  simp only [List.mem_flatMap, List.mem_filterMap, List.mem_range,
+    Option.ite_none_right_eq_some, Option.some.injEq, Prod.mk.injEq,
+    Bool.and_eq_true, decide_eq_true_eq]
+  constructor
+  · rintro ⟨a, ha, b, hb, ⟨hab, hadj⟩, rfl, rfl⟩
+    exact ⟨ha, hb, hab, hadj⟩
+  · rintro ⟨hi, hj, hij, hadj⟩
+    exact ⟨i, hi, j, hj, ⟨hij, hadj⟩, rfl, rfl⟩
+
+/-- The induced edge list has no duplicates. -/
+theorem inducedEdges_nodup (G : GraphData) (km : List Nat) :
+    (inducedEdges G km).Nodup := by
+  unfold inducedEdges
+  rw [List.nodup_flatMap]
+  constructor
+  · intro i _
+    refine List.Nodup.filterMap ?_ List.nodup_range
+    intro a a' b hba hba'
+    simp only [Option.mem_def, Option.ite_none_right_eq_some,
+      Option.some.injEq] at hba hba'
+    have h2 : (i, a) = (i, a') := hba.2.trans hba'.2.symm
+    simpa using congrArg Prod.snd h2
+  · refine List.Pairwise.imp ?_ List.pairwise_lt_range
+    intro a b hab x hxa hxb
+    simp only [List.mem_filterMap, List.mem_range,
+      Option.ite_none_right_eq_some] at hxa hxb
+    obtain ⟨ja, _, _, heqa⟩ := hxa
+    obtain ⟨jb, _, _, heqb⟩ := hxb
+    rw [← heqb] at heqa
+    simp only [Option.some.injEq] at heqa
+    have : a = b := by simpa using congrArg Prod.fst heqa
+    omega
+
+/-- Projection 1: an edge not fully kept is an appendage edge and is never
+    bad under any extension (P2 + P3 + P5). -/
+theorem peel_appendage_edge_not_bad_under_extend (G : GraphData)
+    (c : CutData) (bads : List BadEdgeData) (p : PeelData) (d : CutData)
+    (hG : checkGraph G = true) (hPeel : checkPeel G c bads p = true) :
+    ∀ e ∈ G.edges, edgeKept p e = false →
+      badb G (extendCut G p d) e.1 e.2 = false := by
+  obtain ⟨hkm, hrootn, hrootnr, _, hidxlt, hgetDroot⟩ :=
+    checkPeel_sets_facts G c bads p hPeel
+  have hnd_km : p.keepMap.Nodup := keepMap_nodup G p hkm
+  have hmemkm := keepMap_mem_iff G p hkm
+  have hpend := checkPeel_pendant_fact G c bads p hPeel
+  have hblue := checkPeel_blueApp_fact G c bads p hPeel
+  have hpar := checkPeel_parity_fact G c bads p hPeel
+  have hrange := checkGraph_edge_range G hG
+  rintro ⟨u, v⟩ he hnk
+  obtain ⟨huv, hvn⟩ := hrange (u, v) he
+  have hun : u < G.n := lt_trans huv hvn
+  have hrootside : extSide p d p.root = sideb d p.rootSmallIdx := by
+    have h0 := idxOf?_nodup_getD p.keepMap hnd_km p.rootSmallIdx hidxlt
+    rw [hgetDroot] at h0
+    unfold extSide
+    rw [h0]
+  have hremside : ∀ w, w ∈ p.removed →
+      extSide p d w = Bool.xor (sideb d p.rootSmallIdx)
+        ((sideb c w) != (sideb c p.root)) := by
+    intro w hw
+    have hwnk : w ∉ p.keepMap := fun hmem => ((hmemkm w).mp hmem).2 hw
+    rcases hio : idxOf? p.removed w with _ | r
+    · have hsome := idxOf?_isSome_of_mem p.removed w hw
+      rw [hio] at hsome
+      simp at hsome
+    · have hr := idxOf?_lt p.removed w r hio
+      have hg := idxOf?_getD p.removed w r hio
+      rw [extSide_removed p d w hwnk r hio, hpar r hr, hg]
+  have hne : sideb (extendCut G p d) u ≠ sideb (extendCut G p d) v := by
+    rw [sideb_extendCut G p d u hun, sideb_extendCut G p d v hvn]
+    by_cases hu_r : u ∈ p.removed <;> by_cases hv_r : v ∈ p.removed
+    · have hbc : sideb c u ≠ sideb c v := hblue (u, v) he (Or.inl hu_r)
+      rw [hremside u hu_r, hremside v hv_r]
+      revert hbc
+      cases hcu : sideb c u <;> cases hcv : sideb c v <;>
+        cases hcr : sideb c p.root <;>
+        cases hs0 : sideb d p.rootSmallIdx <;> decide
+    · have hveq : v = p.root := hpend.1 (u, v) he hu_r hv_r
+      have hbc : sideb c u ≠ sideb c v := hblue (u, v) he (Or.inl hu_r)
+      rw [hveq] at hbc
+      rw [hremside u hu_r, hveq, hrootside]
+      revert hbc
+      cases hcu : sideb c u <;> cases hcr : sideb c p.root <;>
+        cases hs0 : sideb d p.rootSmallIdx <;> decide
+    · have hueq : u = p.root := hpend.2 (u, v) he hv_r hu_r
+      have hbc : sideb c u ≠ sideb c v := hblue (u, v) he (Or.inr hv_r)
+      rw [hueq] at hbc
+      rw [hremside v hv_r, hueq, hrootside]
+      revert hbc
+      cases hcv : sideb c v <;> cases hcr : sideb c p.root <;>
+        cases hs0 : sideb d p.rootSmallIdx <;> decide
+    · have hkept : edgeKept p (u, v) = true := by
+        unfold edgeKept
+        simp only [Bool.and_eq_true, decide_eq_true_eq]
+        exact ⟨(hmemkm u).mpr ⟨hun, hu_r⟩, (hmemkm v).mpr ⟨hvn, hv_r⟩⟩
+      rw [hkept] at hnk
+      simp at hnk
+  unfold badb
+  rw [decide_eq_false hne]
+  simp
+
+/-- Projection 2: mapped small edges permute onto the kept big edges. -/
+theorem peel_small_edges_perm_kept_big_edges (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (hG : checkGraph G = true) (hPeel : checkPeel G c bads p = true) :
+    (p.smallG.edges.map (smallEdgeToBig p)).Perm
+      (G.edges.filter (edgeKept p)) := by
+  obtain ⟨hkm, _, _, _, _, _⟩ := checkPeel_sets_facts G c bads p hPeel
+  have hEdges := checkPeel_smallG_edges G c bads p hPeel
+  have hnd_km : p.keepMap.Nodup := keepMap_nodup G p hkm
+  have hpw := keepMap_pairwise_lt G p hkm
+  have hmemkm := keepMap_mem_iff G p hkm
+  have hrange := checkGraph_edge_range G hG
+  rw [hEdges]
+  refine List.perm_of_nodup_nodup_toFinset_eq ?_ ?_ ?_
+  · refine List.Nodup.map_on ?_ (inducedEdges_nodup G p.keepMap)
+    rintro ⟨x1, x2⟩ hx ⟨y1, y2⟩ hy hf
+    rw [mem_inducedEdges] at hx hy
+    obtain ⟨hx1, hx2, -, -⟩ := hx
+    obtain ⟨hy1, hy2, -, -⟩ := hy
+    have h1 : p.keepMap.getD x1 0 = p.keepMap.getD y1 0 :=
+      congrArg Prod.fst hf
+    have h2 : p.keepMap.getD x2 0 = p.keepMap.getD y2 0 :=
+      congrArg Prod.snd hf
+    rw [List.getD_eq_getElem _ _ hx1, List.getD_eq_getElem _ _ hy1] at h1
+    rw [List.getD_eq_getElem _ _ hx2, List.getD_eq_getElem _ _ hy2] at h2
+    have e1 : x1 = y1 := (hnd_km.getElem_inj_iff).mp h1
+    have e2 : x2 = y2 := (hnd_km.getElem_inj_iff).mp h2
+    rw [e1, e2]
+  · exact List.Nodup.filter _ (checkGraph_edges_nodup G hG)
+  · apply Finset.ext
+    rintro ⟨u, v⟩
+    simp only [List.mem_toFinset, List.mem_map, List.mem_filter]
+    constructor
+    · rintro ⟨⟨i, j⟩, hmem, heq⟩
+      rw [mem_inducedEdges] at hmem
+      obtain ⟨hi, hj, hij, hadj⟩ := hmem
+      have hu : p.keepMap.getD i 0 = u := congrArg Prod.fst heq
+      have hv : p.keepMap.getD j 0 = v := congrArg Prod.snd heq
+      have hlt : p.keepMap.getD i 0 < p.keepMap.getD j 0 :=
+        keepMap_getD_lt_getD p hpw i j hij hj
+      have hedge : (u, v) ∈ G.edges := by
+        unfold adjb at hadj
+        simp only [Bool.and_eq_true, decide_eq_true_eq] at hadj
+        have hm := hadj.2
+        unfold normEdge at hm
+        rw [if_pos hlt] at hm
+        rw [hu, hv] at hm
+        exact hm
+      refine ⟨hedge, ?_⟩
+      unfold edgeKept
+      simp only [Bool.and_eq_true, decide_eq_true_eq]
+      constructor
+      · rw [← hu, List.getD_eq_getElem _ _ hi]
+        exact List.getElem_mem hi
+      · rw [← hv, List.getD_eq_getElem _ _ hj]
+        exact List.getElem_mem hj
+    · rintro ⟨hmem, hkept⟩
+      unfold edgeKept at hkept
+      simp only [Bool.and_eq_true, decide_eq_true_eq] at hkept
+      obtain ⟨hukm, hvkm⟩ := hkept
+      obtain ⟨i, hi, hu⟩ := List.mem_iff_getElem.mp hukm
+      obtain ⟨j, hj, hv⟩ := List.mem_iff_getElem.mp hvkm
+      have huv : u < v := (hrange (u, v) hmem).1
+      have hgu : p.keepMap.getD i 0 = u := by
+        rw [List.getD_eq_getElem _ _ hi]; exact hu
+      have hgv : p.keepMap.getD j 0 = v := by
+        rw [List.getD_eq_getElem _ _ hj]; exact hv
+      have hij : i < j := by
+        rcases Nat.lt_trichotomy i j with h | h | h
+        · exact h
+        · subst h
+          rw [hu] at hv
+          omega
+        · have hlt := List.pairwise_iff_getElem.mp hpw j i hj hi h
+          rw [hu, hv] at hlt
+          omega
+      refine ⟨(i, j), ?_, ?_⟩
+      · rw [mem_inducedEdges]
+        refine ⟨hi, hj, hij, ?_⟩
+        rw [hgu, hgv]
+        unfold adjb normEdge
+        rw [if_pos huv]
+        simp [Nat.ne_of_lt huv, hmem]
+      · unfold smallEdgeToBig
+        rw [hgu, hgv]
+
+/-- Projection 3: badness transports through the keep map on kept edges. -/
+theorem peel_badb_small_compat_extend (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData) (d : CutData)
+    (hPeel : checkPeel G c bads p = true) :
+    ∀ e ∈ p.smallG.edges,
+      badb p.smallG d e.1 e.2
+        = badb G (extendCut G p d)
+            (p.keepMap.getD e.1 0) (p.keepMap.getD e.2 0) := by
+  obtain ⟨hkm, _, _, _, _, _⟩ := checkPeel_sets_facts G c bads p hPeel
+  have hEdges := checkPeel_smallG_edges G c bads p hPeel
+  have hnd_km : p.keepMap.Nodup := keepMap_nodup G p hkm
+  have hmemkm := keepMap_mem_iff G p hkm
+  rintro ⟨i, j⟩ he
+  have he' := he
+  rw [hEdges, mem_inducedEdges] at he'
+  obtain ⟨hi, hj, hij, hadj⟩ := he'
+  have hun : p.keepMap.getD i 0 < G.n := by
+    have hmem : p.keepMap.getD i 0 ∈ p.keepMap := by
+      rw [List.getD_eq_getElem _ _ hi]
+      exact List.getElem_mem hi
+    exact ((hmemkm _).mp hmem).1
+  have hvn : p.keepMap.getD j 0 < G.n := by
+    have hmem : p.keepMap.getD j 0 ∈ p.keepMap := by
+      rw [List.getD_eq_getElem _ _ hj]
+      exact List.getElem_mem hj
+    exact ((hmemkm _).mp hmem).1
+  have hsu : sideb (extendCut G p d) (p.keepMap.getD i 0) = sideb d i := by
+    rw [sideb_extendCut G p d _ hun, extSide_kept p d hnd_km i hi]
+  have hsv : sideb (extendCut G p d) (p.keepMap.getD j 0) = sideb d j := by
+    rw [sideb_extendCut G p d _ hvn, extSide_kept p d hnd_km j hj]
+  have hadjS : adjb p.smallG i j = true := by
+    unfold adjb
+    simp only [Bool.and_eq_true, decide_eq_true_eq]
+    refine ⟨Nat.ne_of_lt hij, ?_⟩
+    unfold normEdge
+    rw [if_pos hij]
+    exact he
+  unfold badb
+  rw [hsu, hsv, hadjS, hadj]
+
+/-- B2 core: the three semantic facts give exact bad-count preservation. -/
+theorem badCount_extendCut_eq_core (G : GraphData) (p : PeelData)
+    (d : CutData)
+    (h_notKept_notBad : ∀ e ∈ G.edges, edgeKept p e = false →
+      badb G (extendCut G p d) e.1 e.2 = false)
+    (h_edges_perm : (p.smallG.edges.map (smallEdgeToBig p)).Perm
+      (G.edges.filter (edgeKept p)))
+    (h_bad_compat : ∀ e ∈ p.smallG.edges,
+      badb p.smallG d e.1 e.2
+        = badb G (extendCut G p d)
+            (p.keepMap.getD e.1 0) (p.keepMap.getD e.2 0)) :
+    badCount G (extendCut G p d) = badCount p.smallG d := by
+  unfold badCount
+  have hbig := length_filter_eq_filter_filter_of_false G.edges
+    (fun e => badb G (extendCut G p d) e.1 e.2) (edgeKept p)
+    (fun e he hq => h_notKept_notBad e he hq)
+  have hsmall := length_filter_eq_of_map_perm p.smallG.edges
+    (G.edges.filter (edgeKept p)) (smallEdgeToBig p)
+    (fun e => badb p.smallG d e.1 e.2)
+    (fun e => badb G (extendCut G p d) e.1 e.2)
+    (fun e he => h_bad_compat e he) h_edges_perm
+  exact hbig.trans hsmall.symm
+
+/-- STAGE B2 (SigmaChain provider): extending any small cut preserves the
+    bad count exactly. -/
+theorem badCount_extendCut_eq (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData) (d : CutData)
+    (hG : checkGraph G = true) (hPeel : checkPeel G c bads p = true) :
+    badCount G (extendCut G p d) = badCount p.smallG d :=
+  badCount_extendCut_eq_core G p d
+    (peel_appendage_edge_not_bad_under_extend G c bads p d hG hPeel)
+    (peel_small_edges_perm_kept_big_edges G c bads p hG hPeel)
+    (peel_badb_small_compat_extend G c bads p d hPeel)
+
+/-- The induced small graph is well-formed. -/
+theorem checkGraph_smallG_of_peel (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (hPeel : checkPeel G c bads p = true) :
+    checkGraph p.smallG = true := by
+  obtain ⟨_, _, _, hn, _, _⟩ := checkPeel_sets_facts G c bads p hPeel
+  have hEdges := checkPeel_smallG_edges G c bads p hPeel
+  unfold checkGraph
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true]
+  constructor
+  · rintro ⟨i, j⟩ he
+    rw [hEdges, mem_inducedEdges] at he
+    obtain ⟨_, hj, hij, _⟩ := he
+    unfold checkEdge
+    simp only [Bool.and_eq_true, decide_eq_true_eq]
+    exact ⟨hij, by rw [hn]; exact hj⟩
+  · rw [hEdges]
+    exact inducedEdges_nodup G p.keepMap
+
+/-- The restricted small cut is well-formed. -/
+theorem checkCut_smallCut_of_peel (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (hPeel : checkPeel G c bads p = true) :
+    checkCut p.smallG p.smallCut = true := by
+  unfold checkPeel at hPeel
+  simp only [Bool.and_eq_true] at hPeel
+  have hI := hPeel.1.1.1.1.1.1.2
+  unfold checkPeelInduced at hI
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at hI
+  unfold checkCut
+  simp only [decide_eq_true_eq]
+  exact hI.1.2
+
+/-- Minimality transfers to the peeled instance: any small competitor
+    extends to a big competitor with the same bad count. -/
+theorem small_badCount_min_of_peel (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (hG : checkGraph G = true) (hPeel : checkPeel G c bads p = true)
+    (hMin : BadCountMinimal G c) :
+    BadCountMinimal p.smallG p.smallCut := by
+  intro d _
+  have h1 := checkPeel_badCount_eq G c bads p hPeel
+  have h2 := hMin (extendCut G p d) (checkCut_extendCut G p d)
+  have h3 := badCount_extendCut_eq G c bads p d hG hPeel
+  omega
+
+/-- σ ≥ 0 descends through a peel. -/
+theorem sigmaNonneg_small_of_peel (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hPeel : checkPeel G c bads p = true)
+    (hs : sigmaNonneg G c) : sigmaNonneg p.smallG p.smallCut := by
+  have hmin := badCount_min_of_sigmaNonneg G c hG hc hs
+  have hminS := small_badCount_min_of_peel G c bads p hG hPeel hmin
+  exact sigmaNonneg_of_badCount_min p.smallG p.smallCut
+    (checkGraph_smallG_of_peel G c bads p hPeel)
+    (checkCut_smallCut_of_peel G c bads p hPeel) hminS
+
+/-- SIGMACHAIN PROVIDER: top-level σ ≥ 0 supplies the whole chain. -/
+theorem sigmaChain_of_sigmaNonneg :
+    ∀ (cert : Bank0Cert) (G : GraphData) (c : CutData)
+      (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat),
+    checkGraph G = true → checkCut G c = true →
+    checkBank0Cert G c bads atoms D cert = true →
+    sigmaNonneg G c →
+    SigmaChain G c cert
+  | .globalC5 _, _, _, _, _, _, _, _, _, hs => hs
+  | .bankBlocks _, _, _, _, _, _, _, _, _, hs => hs
+  | .cross _, _, _, _, _, _, _, _, _, hs => hs
+  | .nch _, _, _, _, _, _, _, _, _, hs => hs
+  | .peel p sB sA rest, G, c, bads, _, D, hG, hc, h, hs => by
+      simp only [checkBank0Cert, Bool.and_eq_true] at h
+      exact ⟨hs, sigmaChain_of_sigmaNonneg rest p.smallG p.smallCut sB sA D
+        (checkGraph_smallG_of_peel G c bads p h.1)
+        (checkCut_smallCut_of_peel G c bads p h.1)
+        h.2
+        (sigmaNonneg_small_of_peel G c bads p hG hc h.1 hs)⟩
+
+/-- BANK0 SELF-CONTAINED: checkers plus top-level σ ≥ 0 give the bank
+    inequality — no per-level hypotheses remain. -/
+theorem bank0_of_maxcut (cert : Bank0Cert) (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hchk : checkBank0Cert G c bads atoms D cert = true)
+    (hs : sigmaNonneg G c) :
+    25 * badCount G c ≤ G.n ^ 2 :=
+  bank0Cert_sound cert G c bads atoms D hchk
+    (sigmaChain_of_sigmaNonneg cert G c bads atoms D hG hc hchk hs)
+
 end CertGraph
 end Erdos23Delta0
