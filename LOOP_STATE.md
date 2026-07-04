@@ -506,3 +506,14 @@
   (15553c, queued). Main retask due next tick (queue: adversarial review of my B2 proof
   sketch if I want a second opinion, or idle-fill FAQ/paper). Sibling regen still unchecked.
   Marker 1692179.
+
+
+## TICK NOTES (2026-07-05T18:10Z) — B2 proof script commissioned; batch 19/108
+- Main = drafting the COMPLETE paste-ready Lean proof for badCount_extendCut_eq (helpers:
+  idxOf?_getD_self, keepMap monotonicity, membership dichotomy, appendage-blue, kept-edge
+  length correspondence — technique delegated: filterMap/map vs countP vs toFinset-card;
+  G.edges Nodup available, inducedEdges Nodup needs proof). ON LANDING: Fraction-gate the
+  claim structure (it is a proof, not numerics — REVIEW line by line vs my defs), paste,
+  build honestly, fix. Then the mechanical transfer chain closes Bank0 self-containment.
+- Batch 19/108 (k6/F4 reverified — 10th; every repaired row still personally verified).
+  Sibling 4.1 queued; on 4.2+. Marker 1696415.
