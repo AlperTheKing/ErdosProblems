@@ -1,0 +1,31 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 8,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_check_k8_F3_near_lexsmall_384prime_smallrepair_v1.json",
+  "check_summary_sha256": "d105423b64c272923cf8eb818b25d222e31ae2e50640c717a3ea37cbfca2ef16",
+  "columns_checked": 33549,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k8_F3_near_lexsmall_v1.jsonl",
+  "dominant": 2,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 160347,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k8_F3_near_lexsmall_384prime_v1.json",
+  "modular_summary_sha256": "cf2060245518cf98f3c9920fb5d4faab2898939119943a97ff8f2d6281ca2a30",
+  "nonzero_source_columns": 1870,
+  "repair": {
+    "kind": "source_small_residual_repair",
+    "summary": "tmp/eq_odl1_rung2_small_residual_repair_k8_F3_near_lexsmall_384prime_v1.json",
+    "increment_count": 2
+  },
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k8_F3_near_lexsmall_384prime_smallrepair_v1.jsonl",
+  "solution_jsonl_records": 1870,
+  "solution_jsonl_sha256": "93e2497caf66cd1ee43d48a7dfd45dccc14e5da7ea21261c8d6fb0d4c87f7e76",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 8 --dominant 2 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k8_F3_near_lexsmall_384prime_smallrepair_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_check_k8_F3_near_lexsmall_384prime_smallrepair_v1.json",
+  "repair_summary": "tmp/eq_odl1_rung2_small_residual_repair_k8_F3_near_lexsmall_384prime_v1.json",
+  "repair_summary_sha256": "13aef610d41b0e2dbd25bad7723f8db8da0687a8d6f3f59dedb5be1b0e8eb6ee"
+}

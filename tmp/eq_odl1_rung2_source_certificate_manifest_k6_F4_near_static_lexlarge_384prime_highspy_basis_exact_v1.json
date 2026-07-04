@@ -1,0 +1,31 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 6,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_check_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1.json",
+  "check_summary_sha256": "7653f224b1b97bc429d64caeb05a48ada7521c83b1842f4f173f24e11f13ba86",
+  "columns_checked": 32247,
+  "core": "tmp\\eq_odl1_rung2_static_markowitz_k6_F4_near_lexlarge_v1.jsonl",
+  "dominant": 3,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 159754,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_static_markowitz_k6_F4_near_lexlarge_384prime_v1.json",
+  "modular_summary_sha256": "9f66a2adca3d7c7e8ad5c64b8f08de46458852b0c39e0236c68bbfedfeeba26b",
+  "nonzero_source_columns": 1900,
+  "repair": {
+    "exact_basis_summary": "tmp\\eq_odl1_rung2_source_solution_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1_summary.json",
+    "exact_basis_summary_sha256": "dbee37a87e53f1dabb651cdb65c2bd614096bc15b7b706ff46045f9cf7aad973",
+    "highspy_basis": "tmp\\probe_k6_f4_static_lexlarge_highspy_basis_v1.json",
+    "highspy_basis_sha256": "a3cd5fa1da2a63b5f7803645931762e351d24ec40869d8ffa98c6ac734759deb",
+    "kind": "highspy_basis_exact"
+  },
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1.jsonl",
+  "solution_jsonl_records": 1900,
+  "solution_jsonl_sha256": "c9984e5c822c9deef91d7a22ab9187429cf4f92789cded06eb79e2bb8afeed23",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 6 --dominant 3 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_check_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1.json"
+}

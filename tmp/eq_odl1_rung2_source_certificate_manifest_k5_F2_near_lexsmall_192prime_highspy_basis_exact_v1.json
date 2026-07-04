@@ -1,0 +1,31 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 5,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_k5_F2_near_lexsmall_192prime_highspy_basis_exact_v1_check.json",
+  "check_summary_sha256": "dfe2d1f373dc950aa6d94891548a31ca90367e904c6e9e7821b485e7af488c73",
+  "columns_checked": 32384,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k5_F2_near_lexsmall_v1.jsonl",
+  "dominant": 1,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 160031,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k5_F2_near_lexsmall_192prime_v1.json",
+  "modular_summary_sha256": "9f83f2e6b0d0716124ef9b6290d4eaed1c3995e8dcf362c2eedd3dad2d44faae",
+  "nonzero_source_columns": 1803,
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k5_F2_near_lexsmall_192prime_highspy_basis_exact_v1.jsonl",
+  "solution_jsonl_records": 1803,
+  "solution_jsonl_sha256": "68ab58924a487ed0c4ea3ec338b0b73d5851f4bb22140a0165b636f84080f351",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 5 --dominant 1 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k5_F2_near_lexsmall_192prime_highspy_basis_exact_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_k5_F2_near_lexsmall_192prime_highspy_basis_exact_v1_check.json",
+  "repair": {
+    "kind": "highspy_basis_exact",
+    "highspy_basis": "tmp\\probe_k5_f2_highspy_basis_v1.json",
+    "highspy_basis_sha256": "6a2c803bed7f0336fd07f12e68ba550d2bd103d18310fd7f7f2c666744c92701",
+    "exact_basis_summary": "tmp\\eq_odl1_rung2_source_solution_k5_F2_near_lexsmall_192prime_highspy_basis_exact_v1_summary.json",
+    "exact_basis_summary_sha256": "88f70aa7c579de66bdee48d2cb2b4047bcabd56a0aea3e71cacd4a37b5cd38f6"
+  }
+}

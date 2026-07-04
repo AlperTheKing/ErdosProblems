@@ -1,0 +1,155 @@
+{
+  "history": [
+    {
+      "used": [
+        {
+          "source_col": 6044,
+          "status": "kBasic",
+          "t": 5.251696860024558e-09
+        },
+        {
+          "source_col": 6249,
+          "status": "kBasic",
+          "t": 1.3737276697175788e-07
+        },
+        {
+          "source_col": 6270,
+          "status": "kBasic",
+          "t": 1.5844009338747996e-08
+        },
+        {
+          "source_col": 6310,
+          "status": "kBasic",
+          "t": 2.703541276056204e-10
+        },
+        {
+          "source_col": 6330,
+          "status": "kBasic",
+          "t": 3.1510181160147345e-07
+        },
+        {
+          "source_col": 11669,
+          "status": "kBasic",
+          "t": 1.7284373824088724e-09
+        },
+        {
+          "source_col": 14406,
+          "status": "kBasic",
+          "t": 1.5844009338748e-08
+        },
+        {
+          "source_col": 16629,
+          "status": "kBasic",
+          "t": 1.5555936441679853e-09
+        },
+        {
+          "source_col": 16637,
+          "status": "kBasic",
+          "t": 4.753202801624398e-07
+        },
+        {
+          "source_col": 16908,
+          "status": "kBasic",
+          "t": 1.7284373824088726e-09
+        },
+        {
+          "source_col": 20708,
+          "status": "kBasic",
+          "t": 9.732748593802339e-09
+        },
+        {
+          "source_col": 20966,
+          "status": "kBasic",
+          "t": 1.7284373824088727e-10
+        },
+        {
+          "source_col": 20976,
+          "status": "kBasic",
+          "t": 9.506405603248798e-09
+        },
+        {
+          "source_col": 21015,
+          "status": "kBasic",
+          "t": 2.8619326452449554e-09
+        },
+        {
+          "source_col": 21231,
+          "status": "kBasic",
+          "t": 2.019558669922183e-10
+        },
+        {
+          "source_col": 21873,
+          "status": "kBasic",
+          "t": 1.946549718760468e-09
+        },
+        {
+          "source_col": 21945,
+          "status": "kBasic",
+          "t": 6.790289716606283e-09
+        },
+        {
+          "source_col": 25371,
+          "status": "kBasic",
+          "t": 3.2442495312674467e-09
+        },
+        {
+          "source_col": 25489,
+          "status": "kBasic",
+          "t": 2.2709746718872126e-08
+        },
+        {
+          "source_col": 27146,
+          "status": "kBasic",
+          "t": 1.7284373824088726e-09
+        },
+        {
+          "source_col": 28119,
+          "status": "kBasic",
+          "t": 4.4430290738288025e-10
+        },
+        {
+          "source_col": 28353,
+          "status": "kBasic",
+          "t": 6.2962518195389025e-09
+        },
+        {
+          "source_col": 28482,
+          "status": "kBasic",
+          "t": 2.2060896812618636e-09
+        },
+        {
+          "source_col": 28562,
+          "status": "kBasic",
+          "t": 4.121183009152737e-07
+        },
+        {
+          "source_col": 28576,
+          "status": "kBasic",
+          "t": 1.602682281337175e-08
+        },
+        {
+          "source_col": 28853,
+          "status": "kBasic",
+          "t": 4.4430290738288025e-10
+        },
+        {
+          "source_col": 29314,
+          "status": "kBasic",
+          "t": 1.81677973750977e-08
+        },
+        {
+          "source_col": 29341,
+          "status": "kBasic",
+          "t": 2.0914092327147356e-08
+        },
+        {
+          "source_col": 29373,
+          "status": "kBasic",
+          "t": 1.81677973750977e-08
+        }
+      ]
+    }
+  ],
+  "negative_source_columns": {},
+  "schema": "fake_history_from_highspy_basis_v1"
+}

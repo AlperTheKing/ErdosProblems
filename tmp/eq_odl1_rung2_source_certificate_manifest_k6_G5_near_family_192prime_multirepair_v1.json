@@ -1,0 +1,37 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 6,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_check_k6_G5_near_family_192prime_multirepair_v1.json",
+  "check_summary_sha256": "b071e256048960c89b88f23ff02b754798d550b5f05f50e392790f0fd036b6e0",
+  "columns_checked": 29423,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_G5_near_family_v1.jsonl",
+  "dominant": 12,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 160235,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k6_G5_near_family_192prime_v1.json",
+  "modular_summary_sha256": "cabf69f6f464baa1f2a3585bd257fb76e1aef40b498770048353e647d30cb351",
+  "nonzero_source_columns": 1878,
+  "repair": {
+    "kind": "source_multirepair_lp_exact",
+    "summary": "tmp/eq_odl1_rung2_source_solution_k6_G5_near_family_192prime_multirepair_v1_summary.json",
+    "increment_count": 2,
+    "float_probe": "tmp/probe_k6_g5_family_multirepair_lp_iters80_v1.json",
+    "float_probe_sha256": "ced5406c36d626f02fc0380fac8de87a535df2b9b237cf320ca5b84afd6bb1fc",
+    "used_source_cols": [
+      27373,
+      29103
+    ]
+  },
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k6_G5_near_family_192prime_multirepair_v1.jsonl",
+  "solution_jsonl_records": 1878,
+  "solution_jsonl_sha256": "f444ac07f12d6d72268bdf05cebf36bdbd7ed97fc6c55593a91374da6ec01bc7",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 6 --dominant 12 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k6_G5_near_family_192prime_multirepair_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_check_k6_G5_near_family_192prime_multirepair_v1.json",
+  "repair_summary": "tmp/eq_odl1_rung2_source_solution_k6_G5_near_family_192prime_multirepair_v1_summary.json",
+  "repair_summary_sha256": "7e63bf00ca6e31d46da70fcbdc7780915a19bca66931dbc5f0731033667bdb21"
+}

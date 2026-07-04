@@ -1,0 +1,1121 @@
+{
+  "schema": "probe_k8_g3_repair_lp_v1",
+  "initial_negative_rows": [
+    17148,
+    17164,
+    17218,
+    17234,
+    17264,
+    36401
+  ],
+  "history": [
+    {
+      "iter": 0,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 4.2149566961188513e-07,
+      "used_cols": 2,
+      "min_residual_float": -4.5756908843947893e-07,
+      "violated_count": 4,
+      "violated_prefix": [
+        7628,
+        15780,
+        16703,
+        17268
+      ],
+      "used_prefix": [
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 1,
+      "active_rows": 10,
+      "candidate_cols": 421,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 9.562795417255261e-07,
+      "used_cols": 6,
+      "min_residual_float": -2.459433850362199e-07,
+      "violated_count": 14,
+      "violated_prefix": [
+        15066,
+        15528,
+        15782,
+        15883,
+        17271,
+        17272,
+        32185,
+        33108,
+        33574,
+        33750,
+        34823,
+        35289,
+        35465,
+        36262
+      ],
+      "used_prefix": [
+        {
+          "source_col": 21562,
+          "t": 3.1457874830214175e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22017,
+          "t": 8.039234678832511e-08,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 22084,
+          "t": 6.990638851158706e-08,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "source_col": 22096,
+          "t": 6.990638851158706e-08,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 2,
+      "active_rows": 24,
+      "candidate_cols": 481,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 1.0141464966601176e-06,
+      "used_cols": 6,
+      "min_residual_float": -1.525230294798263e-07,
+      "violated_count": 26,
+      "violated_prefix": [
+        15762,
+        15778,
+        17255,
+        28597,
+        28648,
+        30035,
+        30135,
+        32029,
+        32080,
+        32953,
+        33004,
+        33415,
+        33450,
+        33466,
+        33467,
+        33536,
+        33566,
+        33567,
+        35182,
+        35975,
+        36045,
+        36075,
+        36077,
+        36201,
+        36251,
+        36253
+      ],
+      "used_prefix": [
+        {
+          "source_col": 6275,
+          "t": 7.76737650128745e-08,
+          "kind": "gen",
+          "name": "B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 6307,
+          "t": 9.32085180154494e-08,
+          "kind": "gen",
+          "name": "B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 6482,
+          "t": 1.071897957177668e-07,
+          "kind": "gen",
+          "name": "B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 3.1457874830214175e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 3,
+      "active_rows": 50,
+      "candidate_cols": 630,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 1.1065782770254383e-06,
+      "used_cols": 6,
+      "min_residual_float": -2.2878454421973946e-07,
+      "violated_count": 21,
+      "violated_prefix": [
+        17166,
+        17236,
+        17266,
+        20701,
+        21851,
+        22415,
+        22416,
+        30036,
+        30136,
+        35976,
+        36046,
+        36076,
+        36079,
+        36202,
+        36252,
+        36255,
+        40006,
+        41721,
+        42693,
+        44723,
+        45695
+      ],
+      "used_prefix": [
+        {
+          "source_col": 6556,
+          "t": 9.32085180154494e-08,
+          "kind": "gen",
+          "name": "B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 22016,
+          "t": 1.398127770231741e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22402,
+          "t": 1.374825640727879e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 3.1457874830214175e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 4,
+      "active_rows": 71,
+      "candidate_cols": 720,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 1.1764846655370255e-06,
+      "used_cols": 6,
+      "min_residual_float": -1.3447447099138017e-07,
+      "violated_count": 6,
+      "violated_prefix": [
+        32115,
+        33038,
+        33624,
+        34753,
+        35339,
+        36339
+      ],
+      "used_prefix": [
+        {
+          "source_col": 22038,
+          "t": 1.398127770231741e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22064,
+          "t": 1.398127770231741e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 3.1457874830214175e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22843,
+          "t": 1.6078469357665023e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 5,
+      "active_rows": 77,
+      "candidate_cols": 720,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 2.0456540960310913e-06,
+      "used_cols": 10,
+      "min_residual_float": -1.4299034013733718e-07,
+      "violated_count": 6,
+      "violated_prefix": [
+        15491,
+        16415,
+        16733,
+        33036,
+        34751,
+        35336
+      ],
+      "used_prefix": [
+        {
+          "source_col": 6275,
+          "t": 5.8255323759655875e-08,
+          "kind": "gen",
+          "name": "B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 11830,
+          "t": 5.8255323759655875e-08,
+          "kind": "gen",
+          "name": "G6_A2_9T",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 15541,
+          "t": 1.1651064751931175e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-F3",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 21562,
+          "t": 1.8236449176935755e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 21998,
+          "t": 1.7476597127896765e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 1.322142565327842e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 31747,
+          "t": 4.823540807299507e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 31829,
+          "t": 4.194383310695223e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 6,
+      "active_rows": 83,
+      "candidate_cols": 830,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 2.0573051607830225e-06,
+      "used_cols": 7,
+      "min_residual_float": -1.7540148390180025e-07,
+      "violated_count": 1,
+      "violated_prefix": [
+        6915
+      ],
+      "used_prefix": [
+        {
+          "source_col": 21562,
+          "t": 1.8236449176935755e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 1.322142565327842e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 30363,
+          "t": 4.194383310695223e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 31330,
+          "t": 4.823540807299507e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 31829,
+          "t": 4.194383310695223e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "iter": 7,
+      "active_rows": 84,
+      "candidate_cols": 920,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 2.057305160783022e-06,
+      "used_cols": 7,
+      "min_residual_float": -8.60341572260778e-10,
+      "violated_count": 0,
+      "violated_prefix": [],
+      "used_prefix": [
+        {
+          "source_col": 21562,
+          "t": 1.8236449176935755e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22555,
+          "t": 4.194383310695224e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "source_col": 22772,
+          "t": 1.322142565327842e-07,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 22926,
+          "t": 2.05733854236273e-09,
+          "kind": "delta",
+          "name": "G3_XY_T-B0_eta25_25",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 30363,
+          "t": 4.194383310695223e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "source_col": 31747,
+          "t": 4.823540807299507e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "source_col": 31829,
+          "t": 4.194383310695223e-07,
+          "kind": "band",
+          "name": "near_2s_minus_1",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "final_used_count": 7,
+  "final_violated_count": 0,
+  "final_min_residual_float": -8.60341572260778e-10
+}

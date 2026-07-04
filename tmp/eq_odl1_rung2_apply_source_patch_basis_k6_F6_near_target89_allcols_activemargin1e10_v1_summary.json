@@ -1,0 +1,77 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k6_F6_near_target89_allcols_activemargin1e10_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2891/den_bits=2886",
+  "full_min_residual": "-871/48500000000000",
+  "full_negative_residual_count": 15,
+  "increment_count": 14,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_source_patch_basis_solution_k6_F6_near_target89_allcols_activemargin1e10_384prime_v1.jsonl",
+  "min_solution_value": "num_bits=3240/den_bits=3275",
+  "negative_rows_prefix": [
+    {
+      "residual": "-469/66000000000000",
+      "row": 4453
+    },
+    {
+      "residual": "-469/66000000000000",
+      "row": 4492
+    },
+    {
+      "residual": "-67/12650000000000",
+      "row": 6139
+    },
+    {
+      "residual": "-67/12650000000000",
+      "row": 10033
+    },
+    {
+      "residual": "-67/12650000000000",
+      "row": 10355
+    },
+    {
+      "residual": "-111/12650000000000",
+      "row": 10400
+    },
+    {
+      "residual": "-3/287500000000",
+      "row": 10747
+    },
+    {
+      "residual": "-1/71875000000",
+      "row": 10862
+    },
+    {
+      "residual": "-67/12650000000000",
+      "row": 11050
+    },
+    {
+      "residual": "-201/12650000000000",
+      "row": 11057
+    },
+    {
+      "residual": "-3/287500000000",
+      "row": 11059
+    },
+    {
+      "residual": "-67/8250000000000",
+      "row": 20116
+    },
+    {
+      "residual": "-871/48500000000000",
+      "row": 34772
+    },
+    {
+      "residual": "-37/2750000000000",
+      "row": 41599
+    },
+    {
+      "residual": "-317/69575000000000",
+      "row": 63957
+    }
+  ],
+  "negative_source_prefix": [],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_lexsmall_384prime_highspy_allrow_target89_allcols_patch_v1.jsonl"
+}

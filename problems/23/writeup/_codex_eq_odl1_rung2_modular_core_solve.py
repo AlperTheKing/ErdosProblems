@@ -82,7 +82,14 @@ def store_crt(path: Path, residues: list[int] | None, modulus: int, used_primes:
     )
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(data, encoding="utf-8")
-    tmp.replace(path)
+    try:
+        tmp.replace(path)
+    except PermissionError:
+        path.write_text(data, encoding="utf-8")
+        try:
+            tmp.unlink()
+        except (FileNotFoundError, PermissionError):
+            pass
 
 
 def store_solution(path: Path, sol: list[Fraction]) -> None:

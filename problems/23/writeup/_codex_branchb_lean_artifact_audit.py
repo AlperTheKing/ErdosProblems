@@ -169,7 +169,22 @@ def main() -> None:
         require("import Erdos23Delta0.Cert.BranchBDictionaryAudit" in index_text, "dictionary audit missing from aggregate import")
         require("Erdos23Delta0.Cert.BranchBDictionaryAudit" in build_modules, "dictionary audit missing from build summary")
 
-    recovered = [r for r in build.get("results", []) if r.get("recovered_tmp")]
+    legacy_recovered = [r for r in build.get("results", []) if r.get("recovered_tmp")]
+    require(not legacy_recovered, "build summary uses legacy recovered_tmp stale-olean path")
+
+    recovered = [r for r in build.get("results", []) if r.get("recovery_olean")]
+    allowed_recovery = {"fresh_rerun", "fresh_rerun_tmp_copy"}
+    for r in recovered:
+        method = r.get("recovery_method")
+        stderr = r.get("stderr", "")
+        require(method in allowed_recovery, f"unexpected recovery method for {r.get('module')}: {method}")
+        require("WRITE_PERMISSION_RETRY_OLEAN=" in stderr, f"missing fresh retry marker for {r.get('module')}")
+        if method == "fresh_rerun":
+            require("RECOVERED_OLEAN_FROM_FRESH_RERUN=" in stderr, f"missing fresh-rerun marker for {r.get('module')}")
+        if method == "fresh_rerun_tmp_copy":
+            require("RECOVERED_OLEAN_FROM_FRESH_RERUN_TMP=" in stderr, f"missing fresh-rerun tmp marker for {r.get('module')}")
+        require("RECOVERED_OLEAN_FROM=" not in stderr, f"legacy stale recovery marker in {r.get('module')}")
+
     sha256 = {
         "input_jsonl": sha256_file(input_jsonl),
         "signatures": sha256_file(signatures),
@@ -195,8 +210,11 @@ def main() -> None:
         "forbidden_hits": 0,
         "build_modules": build["count"],
         "build_failures": 0,
-        "recovered_tmp_modules": len(recovered),
-        "recovered_tmp_workaround": len(recovered) > 0,
+        "legacy_recovered_tmp_modules": len(legacy_recovered),
+        "recovery_olean_modules": len(recovered),
+        "recovery_methods": sorted({r.get("recovery_method") for r in recovered}),
+        "recovered_tmp_modules": 0,
+        "recovered_tmp_workaround": False,
         "sha256": sha256,
         "dictionary_audit": {
             "present": dictionary_manifest is not None,

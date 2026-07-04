@@ -1,0 +1,31 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 6,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_k6_F1_near_lexsmall_192prime_highspy_basis_exact_v1_check.json",
+  "check_summary_sha256": "c5d885473020452274e361f3a7ea03a45853f8109d15552b7e8691c29b44d701",
+  "columns_checked": 32348,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_F1_near_lexsmall_v1.jsonl",
+  "dominant": 0,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 159894,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k6_F1_near_lexsmall_192prime_v1.json",
+  "modular_summary_sha256": "92ede815cea67e8411251618ecc00691d786588adb2983c360f227fca38df60b",
+  "nonzero_source_columns": 1852,
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k6_F1_near_lexsmall_192prime_highspy_basis_exact_v1.jsonl",
+  "solution_jsonl_records": 1852,
+  "solution_jsonl_sha256": "f370e0f25ac34a7f208ab524b5bc181848da473dcb6c14169a7b245aac9262bd",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 6 --dominant 0 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k6_F1_near_lexsmall_192prime_highspy_basis_exact_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_k6_F1_near_lexsmall_192prime_highspy_basis_exact_v1_check.json",
+  "repair": {
+    "kind": "highspy_basis_exact",
+    "highspy_basis": "tmp\\probe_k6_f1_highspy_basis_v2.json",
+    "highspy_basis_sha256": "f0570f77e8c1f7b0f1752f461d7f2177cfc9420dca7b41ab98a043d98a508d39",
+    "exact_basis_summary": "tmp\\eq_odl1_rung2_source_solution_k6_F1_near_lexsmall_192prime_highspy_basis_exact_v1_summary.json",
+    "exact_basis_summary_sha256": "bb85cb3a58afe298f0671da3effbbec4a21cd9bc7de01bdd6feef399be6548cf"
+  }
+}

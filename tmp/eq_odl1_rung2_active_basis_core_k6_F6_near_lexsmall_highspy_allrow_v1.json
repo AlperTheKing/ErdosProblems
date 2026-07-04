@@ -1,0 +1,12 @@
+{
+  "basis": "tmp\\probe_k6_f6_lexsmall_highspy_basis_allrow_v1.json",
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_F6_near_lexsmall_v1.jsonl",
+  "dimension": 1414,
+  "negative_source_count": 87,
+  "out_core": "tmp\\eq_odl1_rung2_active_basis_core_k6_F6_near_lexsmall_highspy_allrow_v1.jsonl",
+  "row_count": 167960,
+  "schema": "highspy_basis_increment_core_v1",
+  "solution": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_F6_near_lexsmall_384prime_solution_v1.jsonl",
+  "terms": 8201,
+  "upper_rows_count": 1414
+}

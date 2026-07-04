@@ -1,0 +1,9 @@
+{
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k5_B0_near_lexsmall_v1.jsonl",
+  "core_solution": "tmp\\eq_odl1_rung2_dynamic_markowitz_k5_B0_near_lexsmall_192prime_solution_v1.jsonl",
+  "dimension": 1829,
+  "schema": "eq_odl1_rung2_core_to_source_solution_v1",
+  "solution_negative_count": 0,
+  "source_records": 1829,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k5_B0_near_lexsmall_192prime_v1.jsonl"
+}

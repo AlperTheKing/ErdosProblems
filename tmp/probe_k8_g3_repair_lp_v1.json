@@ -1,0 +1,256 @@
+{
+  "schema": "probe_k8_g3_repair_lp_v1",
+  "initial_negative_rows": [
+    17148,
+    17164,
+    17218,
+    17234,
+    17264,
+    36401
+  ],
+  "history": [
+    {
+      "iter": 0,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 1,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 2,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 3,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 4,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 5,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 6,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 7,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 8,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 9,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 10,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    },
+    {
+      "iter": 11,
+      "active_rows": 6,
+      "candidate_cols": 8,
+      "linprog_status": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_success": true,
+      "objective": 0.0,
+      "used_cols": 0,
+      "min_residual_float": -4.5756908843947896e-08,
+      "violated_count": 5,
+      "violated_prefix": [
+        17148,
+        17164,
+        17218,
+        17234,
+        17264
+      ],
+      "used_prefix": []
+    }
+  ],
+  "final_used_count": 0,
+  "final_violated_count": 5,
+  "final_min_residual_float": -4.5756908843947896e-08
+}

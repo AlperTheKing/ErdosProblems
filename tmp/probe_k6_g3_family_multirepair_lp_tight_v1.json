@@ -1,0 +1,5923 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "core": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_G3_near_family_v1.jsonl",
+  "dominant": 10,
+  "final_min_residual_float": -1.3234889800848443e-23,
+  "final_used_count": 14,
+  "final_violated_count": 0,
+  "history": [
+    {
+      "active_rows": 10,
+      "candidate_cols": 76,
+      "iter": 0,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.0906129466148493e-07,
+      "objective": 5.680278826695595e-07,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F3",
+          "source_col": 1356,
+          "t": 3.998914137587781e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.816361547108678e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 9.997285343969453e-08
+        }
+      ],
+      "used_cols": 3,
+      "violated_count": 12,
+      "violated_prefix": [
+        6866,
+        7695,
+        15017,
+        15476,
+        15782,
+        15841,
+        17376,
+        17387,
+        19153,
+        20539,
+        20574,
+        20581
+      ]
+    },
+    {
+      "active_rows": 22,
+      "candidate_cols": 654,
+      "iter": 1,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -9.815516519533644e-08,
+      "objective": 6.91630856860249e-07,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 3.998914137587781e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.816361547108678e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19643,
+          "t": 2.2721205157028927e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19750,
+          "t": 4.498778404786254e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19758,
+          "t": 3.408180773554339e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20622,
+          "t": 2.2721205157028927e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 3.998914137587781e-08
+        }
+      ],
+      "used_cols": 8,
+      "violated_count": 22,
+      "violated_prefix": [
+        6505,
+        6921,
+        7373,
+        7725,
+        9331,
+        14866,
+        15072,
+        15530,
+        15886,
+        16680,
+        16788,
+        17417,
+        17420,
+        21828,
+        22290,
+        22360,
+        22370,
+        32169,
+        33090,
+        33722,
+        35435,
+        36506
+      ]
+    },
+    {
+      "active_rows": 44,
+      "candidate_cols": 807,
+      "iter": 2,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -2.1085183634553754e-07,
+      "objective": 7.967740881932899e-07,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 1.9994570687938905e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6046,
+          "t": 4.5442410314057856e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.816361547108678e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6733,
+          "t": 3.02949402093719e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 1.1108094826632726e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19620,
+          "t": 9.664042499170469e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            2,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19749,
+          "t": 2.6508072683200416e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.9994570687938905e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20024,
+          "t": 7.775666378642906e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20266,
+          "t": 1.8934337630857443e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 8.886475861306179e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 1.332971379195931e-09
+        }
+      ],
+      "used_cols": 12,
+      "violated_count": 48,
+      "violated_prefix": [
+        9351,
+        10252,
+        12538,
+        14114,
+        15479,
+        15875,
+        16400,
+        16706,
+        17342,
+        19218,
+        20122,
+        20138,
+        20704,
+        21835,
+        22386,
+        26995,
+        29635,
+        30097,
+        30223,
+        30243,
+        30246,
+        30249,
+        32149,
+        33070,
+        33675,
+        33687,
+        34783,
+        35245,
+        35371,
+        35391,
+        35397,
+        35450,
+        36037,
+        36163,
+        36183,
+        36186,
+        36189,
+        36373,
+        36393,
+        36396,
+        36399,
+        36428,
+        36431,
+        36434,
+        36437,
+        36439,
+        36444,
+        36528
+      ]
+    },
+    {
+      "active_rows": 92,
+      "candidate_cols": 1297,
+      "iter": 3,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -2.022591282812993e-07,
+      "objective": 1.309296622304444e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6571,
+          "t": 2.7871344992622147e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.599565655035112e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 8.747624675973273e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 6.248303339980896e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19706,
+          "t": 8.497692542374033e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            2,
+            1,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19894,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20185,
+          "t": 9.270210046226218e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 21033,
+          "t": 9.451978870662027e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.372455009971363e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.2542105246679967e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 1.7013561967191654e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.3887138186895745e-07
+        }
+      ],
+      "used_cols": 16,
+      "violated_count": 50,
+      "violated_prefix": [
+        6506,
+        6864,
+        10338,
+        15018,
+        15477,
+        15783,
+        16002,
+        19288,
+        20208,
+        20830,
+        21921,
+        22542,
+        26198,
+        27914,
+        28376,
+        28628,
+        28698,
+        28708,
+        28709,
+        28711,
+        31346,
+        31808,
+        32060,
+        32130,
+        32140,
+        32141,
+        32142,
+        32732,
+        32984,
+        33054,
+        33064,
+        33066,
+        33067,
+        33446,
+        33516,
+        33526,
+        33527,
+        33528,
+        33529,
+        33642,
+        33652,
+        33653,
+        33654,
+        33655,
+        33672,
+        33673,
+        33674,
+        33675,
+        33676,
+        33681
+      ]
+    },
+    {
+      "active_rows": 141,
+      "candidate_cols": 1444,
+      "iter": 4,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -4.045182565625986e-07,
+      "objective": 1.4965185114733261e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6571,
+          "t": 2.7871344992622147e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.599565655035112e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 8.747624675973273e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 6.248303339980896e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19721,
+          "t": 1.8903957741324054e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19815,
+          "t": 1.8540420092452436e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20264,
+          "t": 8.497692542374033e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20383,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.372455009971363e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.2542105246679967e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 1.7013561967191654e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.3887138186895745e-07
+        }
+      ],
+      "used_cols": 16,
+      "violated_count": 56,
+      "violated_prefix": [
+        6515,
+        6725,
+        6882,
+        6886,
+        8573,
+        9033,
+        9329,
+        9332,
+        10251,
+        10953,
+        15037,
+        15495,
+        15816,
+        19199,
+        20120,
+        20671,
+        21834,
+        22384,
+        26198,
+        27914,
+        28376,
+        28628,
+        28698,
+        28708,
+        28709,
+        28711,
+        31346,
+        31808,
+        32060,
+        32130,
+        32140,
+        32141,
+        32142,
+        32732,
+        32984,
+        33054,
+        33064,
+        33066,
+        33067,
+        33446,
+        33516,
+        33526,
+        33527,
+        33528,
+        33529,
+        33642,
+        33652,
+        33653,
+        33654,
+        33655,
+        33672,
+        33673,
+        33674,
+        33675,
+        33676,
+        33681
+      ]
+    },
+    {
+      "active_rows": 159,
+      "candidate_cols": 1534,
+      "iter": 5,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.1607915188318047e-07,
+      "objective": 2.019083246135095e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 5848,
+          "t": 7.093725948416585e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6571,
+          "t": 2.7871344992622147e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351124e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 8.747624675973273e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 11480,
+          "t": 8.886475861306136e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12134,
+          "t": 1.888376120527563e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 6.248303339980896e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20544,
+          "t": 6.271052623339984e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.372455009971363e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.2542105246679967e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456457e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.7595222205386235e-07
+        }
+      ],
+      "used_cols": 16,
+      "violated_count": 60,
+      "violated_prefix": [
+        7570,
+        7625,
+        10672,
+        10707,
+        10777,
+        10781,
+        10794,
+        10806,
+        12509,
+        14015,
+        14050,
+        15856,
+        16776,
+        17117,
+        17152,
+        17222,
+        17398,
+        23092,
+        23162,
+        23288,
+        23327,
+        23341,
+        26198,
+        27914,
+        28376,
+        28628,
+        28698,
+        28708,
+        28709,
+        28711,
+        31346,
+        31808,
+        32060,
+        32130,
+        32140,
+        32141,
+        32142,
+        32732,
+        32984,
+        33054,
+        33064,
+        33066,
+        33067,
+        33446,
+        33516,
+        33526,
+        33527,
+        33528,
+        33529,
+        33642,
+        33652,
+        33653,
+        33654,
+        33655,
+        33672,
+        33673,
+        33674,
+        33675,
+        33676,
+        33681
+      ]
+    },
+    {
+      "active_rows": 181,
+      "candidate_cols": 1934,
+      "iter": 6,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -3.7807915482648097e-07,
+      "objective": 2.548960076972989e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351124e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 8.747624675973266e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 11954,
+          "t": 4.532102689266151e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 6.248303339980908e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20139,
+          "t": 1.3596308067798453e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.372455009971361e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28854,
+          "t": 8.317741406182582e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456457e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.7595222205386235e-07
+        }
+      ],
+      "used_cols": 13,
+      "violated_count": 14,
+      "violated_prefix": [
+        3863,
+        10332,
+        10946,
+        14047,
+        17149,
+        17219,
+        20816,
+        22529,
+        23089,
+        23159,
+        23285,
+        23323,
+        23336,
+        23579
+      ]
+    },
+    {
+      "active_rows": 195,
+      "candidate_cols": 2249,
+      "iter": 7,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -4.213731839193735e-07,
+      "objective": 2.868267311898559e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351124e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 8.747624675973286e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19593,
+          "t": 6.248303339980907e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20950,
+          "t": 1.5450350077043695e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.372455009971361e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28854,
+          "t": 6.180140030817478e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28856,
+          "t": 8.157784840679071e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 1.5195873722833554e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456457e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.7595222205386235e-07
+        }
+      ],
+      "used_cols": 14,
+      "violated_count": 5,
+      "violated_prefix": [
+        3918,
+        4357,
+        8637,
+        9095,
+        9451
+      ]
+    },
+    {
+      "active_rows": 200,
+      "candidate_cols": 2332,
+      "iter": 8,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -7.931730520835268e-07,
+      "objective": 3.0207259133940927e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351124e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19771,
+          "t": 2.908301190972932e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175562e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28479,
+          "t": 8.157784840679071e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28854,
+          "t": 5.816602381945863e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 1.919478786042133e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456457e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.7595222205386235e-07
+        }
+      ],
+      "used_cols": 13,
+      "violated_count": 5,
+      "violated_prefix": [
+        3864,
+        4322,
+        8583,
+        9042,
+        9348
+      ]
+    },
+    {
+      "active_rows": 205,
+      "candidate_cols": 2400,
+      "iter": 9,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -7.931730520835268e-07,
+      "objective": 3.346455646783061e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351124e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.997828275175559e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20694,
+          "t": 3.708084018490487e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20786,
+          "t": 2.908301190972932e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28854,
+          "t": 5.816602381945863e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28856,
+          "t": 7.416168036980974e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 2.2103089051394252e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456454e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.7595222205386232e-07
+        }
+      ],
+      "used_cols": 14,
+      "violated_count": 9,
+      "violated_prefix": [
+        3726,
+        3883,
+        4188,
+        8602,
+        9060,
+        9077,
+        9381,
+        9999,
+        10339
+      ]
+    },
+    {
+      "active_rows": 214,
+      "candidate_cols": 2431,
+      "iter": 10,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -4.154715987104177e-07,
+      "objective": 3.3681900047905997e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6006,
+          "t": 2.2850937929072974e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351126e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27526,
+          "t": 2.39934848255267e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 1.019723105084884e-06
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28854,
+          "t": 6.855281378721909e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 1.8395005032903794e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 7.397991154537392e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.7995113619145002e-07
+        }
+      ],
+      "used_cols": 14,
+      "violated_count": 10,
+      "violated_prefix": [
+        2710,
+        3853,
+        3857,
+        3862,
+        8221,
+        8557,
+        9271,
+        9346,
+        9349,
+        22383
+      ]
+    },
+    {
+      "active_rows": 224,
+      "candidate_cols": 2725,
+      "iter": 11,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.9734900938744887e-07,
+      "objective": 3.4301731739232115e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6719,
+          "t": 1.0854195516309688e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351126e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.398262620140448e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28856,
+          "t": 3.2562586548929067e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 3.1991313100702247e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.317741406182585e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456465e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.1196959585245784e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.2796525240280896e-07
+        }
+      ],
+      "used_cols": 15,
+      "violated_count": 7,
+      "violated_prefix": [
+        2735,
+        2935,
+        4315,
+        4354,
+        10329,
+        10343,
+        10344
+      ]
+    },
+    {
+      "active_rows": 231,
+      "candidate_cols": 3102,
+      "iter": 12,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -3.9469801877489773e-07,
+      "objective": 3.5465052215621284e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351126e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19577,
+          "t": 1.4472260688412917e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20533,
+          "t": 1.454150595486466e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.398262620140448e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28856,
+          "t": 2.8944521376825834e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 2.9083011909729314e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.317741406182585e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456465e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.1196959585245784e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.2796525240280896e-07
+        }
+      ],
+      "used_cols": 16,
+      "violated_count": 7,
+      "violated_prefix": [
+        4443,
+        6531,
+        6738,
+        6918,
+        9165,
+        10086,
+        10497
+      ]
+    },
+    {
+      "active_rows": 238,
+      "candidate_cols": 3113,
+      "iter": 13,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -3.965865260417634e-07,
+      "objective": 3.720172349823083e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 5970,
+          "t": 1.0130582481889045e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.5995656550351126e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19622,
+          "t": 1.454150595486466e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20131,
+          "t": 2.026116496377809e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.398262620140448e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28479,
+          "t": 3.0391747445667133e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 2.9083011909729314e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.317741406182585e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456465e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.1196959585245784e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.2796525240280896e-07
+        }
+      ],
+      "used_cols": 17,
+      "violated_count": 6,
+      "violated_prefix": [
+        2755,
+        4314,
+        6550,
+        6756,
+        6951,
+        10273
+      ]
+    },
+    {
+      "active_rows": 244,
+      "candidate_cols": 3185,
+      "iter": 14,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -2.7628861314242853e-07,
+      "objective": 3.739305910290011e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F4",
+          "source_col": 2579,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6128,
+          "t": 8.801437814786504e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6178,
+          "t": 7.653424186770873e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.599565655035112e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 3.716694120700605e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 7.997828275175563e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 7.99782827517556e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 1.8798723158755956e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.398262620140448e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28574,
+          "t": 6.078349489133428e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.317741406182582e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.0794353515456457e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.1196959585245784e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.2796525240280896e-07
+        }
+      ],
+      "used_cols": 15,
+      "violated_count": 31,
+      "violated_prefix": [
+        4609,
+        6841,
+        12358,
+        12940,
+        13150,
+        13298,
+        13301,
+        13612,
+        13738,
+        13760,
+        13763,
+        14656,
+        14992,
+        15007,
+        15014,
+        15328,
+        15454,
+        15721,
+        15728,
+        15731,
+        15763,
+        15779,
+        15786,
+        16252,
+        16378,
+        16403,
+        16630,
+        16652,
+        16655,
+        16703,
+        16710
+      ]
+    },
+    {
+      "active_rows": 275,
+      "candidate_cols": 3304,
+      "iter": 15,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.274112902711951e-07,
+      "objective": 3.8077104092731134e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.738658320690339e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12254,
+          "t": 1.390926656552272e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19838,
+          "t": 1.5233958619382023e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.3909266565522722e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 8.693291603451695e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.954633282761356e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            5,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28051,
+          "t": 2.0863899848284095e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28479,
+          "t": 8.345559939313638e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            0,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28856,
+          "t": 8.34555993931364e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 3.0467917238764046e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.97147693476215e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.225482650483634e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 1.2518339908970437e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.390926656552271e-07
+        }
+      ],
+      "used_cols": 17,
+      "violated_count": 4,
+      "violated_prefix": [
+        1655,
+        6585,
+        6791,
+        7021
+      ]
+    },
+    {
+      "active_rows": 279,
+      "candidate_cols": 3379,
+      "iter": 16,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.031977841958137e-07,
+      "objective": 3.9701246233060935e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F2",
+          "source_col": 1289,
+          "t": 4.1727799696568127e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6496,
+          "t": 2.3454041862684923e-09
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6588,
+          "t": 3.518106279402736e-10
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.73865832069034e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12134,
+          "t": 5.1598892097906854e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12254,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-F3",
+          "source_col": 14324,
+          "t": 5.3944296284175323e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-F3",
+          "source_col": 14596,
+          "t": 5.1598892097906874e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            2,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19492,
+          "t": 2.579944604895344e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 8.6932916034517e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            2,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26036,
+          "t": 1.1727020931342464e-09
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.954633282761358e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27914,
+          "t": 2.0639556839162742e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5596715113923694e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            0,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28809,
+          "t": 2.2703512523079014e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.971476934762153e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.2254826504836351e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 8.345559939313633e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.3909266565522714e-07
+        }
+      ],
+      "used_cols": 22,
+      "violated_count": 22,
+      "violated_prefix": [
+        3071,
+        13356,
+        13798,
+        13814,
+        14015,
+        14140,
+        14170,
+        15052,
+        15514,
+        15836,
+        15841,
+        15852,
+        16438,
+        16760,
+        16780,
+        17222,
+        17242,
+        17348,
+        17364,
+        17368,
+        17394,
+        17403
+      ]
+    },
+    {
+      "active_rows": 298,
+      "candidate_cols": 3489,
+      "iter": 17,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -2.908301190972932e-07,
+      "objective": 3.990517912705699e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F2",
+          "source_col": 1289,
+          "t": 4.1727799696568127e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6217,
+          "t": 6.036096811453255e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.73865832069034e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12254,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 8.6932916034517e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 21064,
+          "t": 1.207219362290651e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.954633282761358e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 1.8108290434359765e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.971476934762153e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.2254826504836351e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 8.345559939313633e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29449,
+          "t": 2.776604533268497e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.3909266565522714e-07
+        }
+      ],
+      "used_cols": 17,
+      "violated_count": 4,
+      "violated_prefix": [
+        2720,
+        5732,
+        6722,
+        6910
+      ]
+    },
+    {
+      "active_rows": 302,
+      "candidate_cols": 3680,
+      "iter": 18,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -2.5241859393349974e-08,
+      "objective": 3.990517912705699e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F2",
+          "source_col": 1289,
+          "t": 4.1727799696568127e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "B0_eta25_25",
+          "source_col": 6217,
+          "t": 6.036096811453255e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.73865832069034e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12254,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19735,
+          "t": 1.207219362290651e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 8.6932916034517e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.954633282761358e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28649,
+          "t": 2.776604533268497e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28949,
+          "t": 1.8108290434359765e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.971476934762153e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.2254826504836351e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 8.345559939313633e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.3909266565522714e-07
+        }
+      ],
+      "used_cols": 17,
+      "violated_count": 3,
+      "violated_prefix": [
+        5732,
+        6714,
+        6910
+      ]
+    },
+    {
+      "active_rows": 303,
+      "candidate_cols": 3688,
+      "iter": 19,
+      "linprog_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "linprog_status": 0,
+      "linprog_success": true,
+      "min_residual_float": -1.3234889800848443e-23,
+      "objective": 3.990517912705699e-06,
+      "used": [
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "F2",
+          "source_col": 1289,
+          "t": 4.1727799696568127e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9131,
+          "t": 1.73865832069034e-07
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G4_VZ_XY",
+          "source_col": 9353,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "gen",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G6_A2_9T",
+          "source_col": 12254,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 19880,
+          "t": 1.3909266565522712e-07
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-B0_eta25_25",
+          "source_col": 20294,
+          "t": 8.6932916034517e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G6_A2_9T",
+          "source_col": 26119,
+          "t": 9.997285343969453e-08
+        },
+        {
+          "kind": "delta",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "G3_XY_T-G7_B2_4T",
+          "source_col": 27813,
+          "t": 6.954633282761358e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28192,
+          "t": 1.5677631558349956e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 28649,
+          "t": 6.398262620140449e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            4,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29033,
+          "t": 8.971476934762153e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29239,
+          "t": 2.2254826504836351e-07
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29316,
+          "t": 8.345559939313633e-08
+        },
+        {
+          "kind": "band",
+          "multiplier_exp": [
+            3,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            1
+          ],
+          "name": "near_2s_minus_1",
+          "source_col": 29527,
+          "t": 1.3909266565522714e-07
+        }
+      ],
+      "used_cols": 14,
+      "violated_count": 0,
+      "violated_prefix": []
+    }
+  ],
+  "initial_negative_rows": [
+    12148,
+    13276,
+    13291,
+    15706,
+    15756,
+    17385,
+    18901,
+    19198,
+    20119,
+    20670
+  ],
+  "schema": "rung2_multirepair_lp_v1",
+  "solution": "tmp\\eq_odl1_rung2_dynamic_markowitz_k6_G3_near_family_192prime_solution_v1.jsonl",
+  "support": "negative",
+  "threshold": -1e-12
+}

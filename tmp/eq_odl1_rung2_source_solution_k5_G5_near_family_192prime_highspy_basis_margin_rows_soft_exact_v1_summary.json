@@ -1,0 +1,25 @@
+{
+  "basic_cols_count": 1232,
+  "basis": "tmp\\probe_k5_g5_family_highspy_basis_margin_rows_soft_v1.json",
+  "exact_ok": false,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "increment_negative_count": 1,
+  "margin": "1/10000000",
+  "margin_rows": [
+    3050,
+    13436,
+    18508,
+    19327,
+    20911,
+    23723
+  ],
+  "min_solution_value": "0",
+  "negative_rows_prefix": [],
+  "negative_source_prefix": [],
+  "schema": "exact_from_highspy_basis_v1",
+  "solution_negative_count": 0,
+  "source_margin": "0",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k5_G5_near_family_192prime_highspy_basis_margin_rows_soft_exact_v1.jsonl",
+  "upper_rows_count": 1232
+}
