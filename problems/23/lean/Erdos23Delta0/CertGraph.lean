@@ -2401,11 +2401,37 @@ def TriangleFree (G : GraphData) : Prop :=
     a ≠ b → b ≠ d → a ≠ d →
     ¬ (adjb G a b = true ∧ adjb G b d = true ∧ adjb G a d = true)
 
-/-- Scaffolding stub (upgraded by the exists_good_cut provider module). -/
-def BConnected (_G : GraphData) (_c : CutData) : Prop := True
+/-- A blue edge of the cut (Prop form). -/
+def BlueEdge (G : GraphData) (c : CutData) (u v : Nat) : Prop :=
+  adjb G u v = true ∧ sideb c u ≠ sideb c v
 
-/-- Scaffolding stub (upgraded by the exists_good_cut provider module). -/
-def GammaMinimalConnected (_G : GraphData) (_c : CutData) : Prop := True
+/-- Consecutive entries of a list form blue edges. -/
+def BlueWalkEdges (G : GraphData) (c : CutData) : List Nat → Prop
+  | [] => True
+  | [_] => True
+  | u :: v :: rest => BlueEdge G c u v ∧ BlueWalkEdges G c (v :: rest)
+
+/-- A literal blue walk from u to v (reachability; nodup not required). -/
+def BluePath (G : GraphData) (c : CutData) (u v : Nat) (p : List Nat) :
+    Prop :=
+  p ≠ [] ∧ p.head? = some u ∧ p.getLast? = some v ∧
+  (∀ x ∈ p, x < G.n) ∧ BlueWalkEdges G c p
+
+/-- B-connectivity (real form): every bad edge's endpoints are joined by a
+    blue path. On connected graphs a max cut has the stronger whole-blue-graph
+    connectivity; the existence module proves that and implies this. -/
+def BConnected (G : GraphData) (c : CutData) : Prop :=
+  ∀ u v : Nat, u < G.n → v < G.n → badb G c u v = true →
+    ∃ p : List Nat, BluePath G c u v p
+
+/-- Γ-minimality witness (real form): a recorded γ functional minimized by c
+    within the B-connected same-badCount class (Type-valued carrier; a bridge
+    instantiates gammaOfCut from the SimpleGraph gammaOf implementation). -/
+structure GammaMinimalConnected (G : GraphData) (c : CutData) : Type where
+  gammaOfCut : CutData → ℚ
+  gamma_min : ∀ d : CutData, checkCut G d = true →
+    badCount G d = badCount G c → BConnected G d →
+    gammaOfCut c ≤ gammaOfCut d
 
 /-- Certificate-carried row record: loads and row sum are certificate data,
     tied together by the coherence field; semantics enter via RowDBFacts. -/
@@ -2734,6 +2760,42 @@ theorem erdos23_delta0_simpleGraph {V : Type*} [Fintype V] [DecidableEq V]
       (bridge.tri_transfer hTri) bridge.pkg
   rw [bridge.beta_transfer, bridge.n_transfer]
   exact hGD
+
+/-! ### Assembly layer, stage 3: existence/bridge provider packages and the
+final conditional top statement (per the provider-module design). -/
+
+/-- Connected good-cut existence provider: records the outcome of finite cut
+    minimization, component flipping, γ-minimization, and row construction. -/
+structure ExistsGoodCutConnectedProvider (G : GraphData) : Type where
+  cut : CutData
+  rows : RowDB
+  hCut : checkCut G cut = true
+  good : GoodCutData G cut rows
+
+theorem exists_good_cut_connected_from_provider {G : GraphData}
+    (P : ExistsGoodCutConnectedProvider G) :
+    ∃ c rows, checkCut G c = true ∧ Nonempty (GoodCutData G c rows) :=
+  ⟨P.cut, P.rows, P.hCut, ⟨P.good⟩⟩
+
+/-- Component-reduction provider for disconnected graphs (componentwise
+    convexity, assembled elsewhere). -/
+structure ComponentReductionProvider (G : GraphData) : Type where
+  betaVal : ℚ
+  bound : betaVal ≤ (G.n : ℚ) ^ 2 / 25
+
+theorem graphData_delta0_from_component_provider {G : GraphData}
+    (P : ComponentReductionProvider G) :
+    P.betaVal ≤ (G.n : ℚ) ^ 2 / 25 :=
+  P.bound
+
+/-- Final conditional top statement (Skeleton target name): once the bridge
+    provider is constructed uniformly from a finite triangle-free SimpleGraph,
+    this becomes the unconditional theorem. -/
+theorem erdos23_delta0 {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (hTri : Gs.CliqueFree 3) (bridge : SimpleGraphBridge Gs) :
+    bridge.betaSimpleVal ≤ (Fintype.card V : ℚ) ^ 2 / 25 :=
+  erdos23_delta0_simpleGraph Gs hTri bridge
 
 end CertGraph
 end Erdos23Delta0

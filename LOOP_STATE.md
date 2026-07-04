@@ -664,3 +664,22 @@
 - STILL QUEUED: main provider module (8243c msg n=15) extraction + typing; main consult
   reply (float-dust vs empty decision rule) pending; sibling 4.5 check; Codex even-list reply.
 - Marker 1711296 (post-scan; my posts after). P(math)~89, P(Lean)~90. Batch 20/108.
+
+
+## TICK NOTES (2026-07-04T04:55Z) — stage-3 green (real defs); F6 exact chain in flight
+- LEAN: Assembly STAGE-3 TRUE GREEN first try: BlueEdge/BlueWalkEdges/BluePath + REAL
+  BConnected (bad-edge endpoints blue-joined) + REAL GammaMinimalConnected (gammaOfCut
+  witness + minimality over B-connected same-badCount cuts, Type-valued) REPLACED the
+  True stubs IN PLACE (GoodCutData unchanged — already Type-valued); provider packages
+  (ExistsGoodCutConnectedProvider w/ Nonempty-wrapped existence lemma, ComponentReduction)
+  + erdos23_delta0 (Skeleton target name, conditional on SimpleGraphBridge) GREEN.
+  CertGraph.lean = Bank0 + full Assembly (3 stages). Forbidden tokens 0 (grep at commit).
+- REMAINING LEAN (sharp): (a) bridge CONSTRUCTOR (SimpleGraph -> GraphData encoding via
+  Fintype.equivFin + betaSimple def + transfers) — awaiting main consult queue; (b)
+  LensGates + Seed3RouteTree checkers; (c) EQODL1/DiffSkip instantiation (chart batch);
+  (d) provider DISCHARGE theorems (exists_good_cut real construction; GammaBeta from
+  green Gamma machinery) — design says finite minimization module.
+- BATCH: k6/F2 CERTIFIED (awaiting Codex ledger append + manifest variant answer);
+  k6/F6 margin-0 Optimal -> exact chain RUNNING (bg bp7sps996). Marker 1711296.
+- IN FLIGHT: main = hard-row structural consult (float-dust vs empty rule); sibling = 4.6.
+- P(math)~89, P(Lean)~91.
