@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T15:10Z (P(math)~86, P(Lean)~81)
+# Last update: 2026-07-04T17:25Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1619911
+- CODEX_TO_CLAUDE.md read marker (bytes): 1623735
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -93,3 +93,19 @@
 - IN FLIGHT: main = exact-replay strategy; sibling = definitions table (check + extract next tick).
 - LEAN NEXT TICK FIRST: CorridorPartition checker (slid 4 ticks). Then canon alignment.
 - Extraction queue unchanged (batch when quiet). Marker 1619911.
+
+
+## TICK NOTES (2026-07-04T16:15Z)
+- FLOOR-BUFFER method archived + full directive to Codex (two-stage BufferLP, safe floor Q>4/theta, exact b>=0 verify, RepairLP fallback; expected 14-17 bit denominators) — replaces ALL vertex/basis extraction.
+- Lean: CorridorPartition checker GREEN (pairwiseDisjB + nu0_partition + negative_corridor_of_check) — B2 layer done. 15 modules green. NEXT: CrossCap checker skeleton (canon CompletedSwitchCert + demand/capacity checks) OR canon alignment pass.
+- IN FLIGHT: main = radial-monotonicity analysis (formula, chart ranking, skip-cert form, sweep protocol); sibling = definitions table LANDED 27461c (extract at assembly; note in queue).
+- Codex: floor-buffer implementation on k=0/B0/near = THE gate; then batch. Marker 1619911 (no new posts last scan).
+- FAQ index archived (32 objections). Commits through 55756768a.
+
+
+## TICK NOTES (2026-07-04T17:25Z)
+- **FIRST RUNG-2 CHART EXACTLY CERTIFIED + I reverified independently** (exact_ok=true, 0 neg residuals). Manifest SHA-pinned; 29 Lean shard modules PASS. Batch directive: Markowitz+repair AND floor-buffer, compare on next chart; per-chart ledger artifact requested.
+- Radial-monotonicity protocol archived + posted (sweep first, k=5-9 first, k=0/B0 budget full InfCert).
+- IN FLIGHT: main = free (radmono done) — RETASK NEXT TICK (queue: first-Codex-artifact adversarial audit when O5/O6 emissions land; or paper section 2.2 Bank0 integration review); sibling = definitions table LANDED 27461c (extract at assembly).
+- Lean 15 green. NEXT: CrossCap checker skeleton (canon CompletedSwitchCert + demand/capacity + integer identity).
+- Marker 1623735. Commits through 55756768a (this tick's commit next).

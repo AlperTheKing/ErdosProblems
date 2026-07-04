@@ -244,3 +244,35 @@ METHOD:
 CONSEQUENCE: replaces ALL vertex/basis-extraction work across the 300 charts;
 expected certificate denominators ~15 bits, not thousands.
 
+
+# ===== RADIAL MONOTONICITY ANALYSIS + SKIP PROTOCOL (main thread, 2026-07-04) =====
+FORMULA: on chart k, Ptilde(s,u) = sum_{d=0}^{11} s^(11-d) (1-s)^d P_{k,d}(u)
+(homogeneous decomposition of the shifted target); per-term derivative
+d/ds [s^(11-d)(1-s)^d P_d] = s^(10-d)(1-s)^(d-1)((11-d) - 11 s) P_d for 0<d<11;
+endpoints d=0: 11 s^10 P_0; d=11: -11(1-s)^10 P_11.
+ASYMPTOTIC TEST (2.2): decreasing near s=0 iff 11 P_{k,11}(u) - P_{k,10}(u) >= 0
+on the simplex (leading positivity alone is NOT enough). If P_top vanishes on a
+face use the first nonzero coefficient of the s-expansion.
+SKIPS: decreasing cert (-d/ds Ptilde >= 0 on [0,1/2] x Delta) => inf band covered
+by near-band s=1/2. Increasing cert => covered by s=0 FaceCert. Neither => no
+skip. PARTIAL: monotone on [0,s0] (s0 = 1/8 or 1/4) => residual band [s0,1/2]
+only, with generators s-s0 >= 0 and 1/2-s >= 0.
+DERIVATIVE CERT FORM: M_k^{+-} = P_0 + sum G^rad P_G + sum Delta^rad P_{a,b} +
+B_inf P_inf; G^rad(s,u) = G#(s,(1-s)u); multipliers Bernstein-positive on
+[0,1/2] x Delta (substitute sigma = 2s in [0,1]); caps 10/8/8/9 => ~60-75% of the
+main chart LP size.
+CHART RANKING (seed ray w0..4=1, w5..9=t lives in charts k=0..4): most likely
+monotone k=5,6,7,8,9 (seed ray only at t=1); then k=3,4; then k=1,2; k=0 LAST.
+Within k: B0, U_A, U_B, F5-F7, then linear dominants. WARNING: k=0/B0-dominant
+may not be globally monotone (seed-ray infinity direction + bank-distance
+generator near-cancel) — expect at best sub-band skip there.
+SWEEP PROTOCOL (before any cert attempt): build M^- and M^+ exactly; sample
+s in {0, 1/32, 1/16, 3/32, 1/8, 3/16, 1/4, 3/8, 1/2}, u in {vertices, edge
+midpoints, 2/3/4-support barycenters, rational Dirichlet den 16 and 32}; keep
+only dominance-satisfying points; sign test both; both signs negative somewhere
+=> NO skip attempt; one-signed with margin => attempt that skip cert; near-zero
+=> exact boundary polynomials at s=0, 1/2; global fail => sub-band sweep
+[0,1/8], [0,1/4]. Cases: A decreasing pass => near-band covers; B increasing =>
+FaceCert covers; C sub-band => partial skip + residual band; D none => full
+corrected InfCert.
+
