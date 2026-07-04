@@ -311,3 +311,19 @@
 - LEAN NEXT TICK: type Peel layer INTO CertGraph with AUDITED signatures (PeelPreservesFacts
   extended form; GammaMinimalConnected G c; RowDBFactsAll5 for Bank0 side); then Assembly
   skeleton. Sibling: check + retask (3.7+ status unknown this tick).
+
+
+## TICK NOTES (2026-07-05T06:00Z) — final goal/loop armed; Peel layer green first try
+- USER INSTALLED the final /goal (4-conjunct Stop hook) + reissued /loop. Terminal pair live.
+- LEAN: B10 Peel layer GREEN FIRST BUILD (audited signatures worked): PeelData, inducedEdges,
+  blueReachStep/iterReach, checkPeelSets/Induced/Pendant/BlueApp/Counts/Parity/Reach/Rows,
+  checkPeel, checkPeel_badCount_eq, checkPeel_nlt, peel_bank_transfer. CertGraph now carries
+  L0-L3 + B6 + B2 + B3 + B1 + B10, all true green zero-warning.
+- Sibling: 3.7 Banked-UPO landed (3447c, queued) -> retasked 3.8+ w/ etaNonneg content update.
+- IN FLIGHT: main = Seed3 route-tree provider design (audit items 36-39). Codex = batch
+  (7/108) + emptiness probes + DiffSkip w/ corrected boundary-cover format.
+- LEAN NEXT: Assembly.lean skeleton (Bank0Statement w/ RowDBFactsAll5 + Bank0Cert inductive +
+  checkBank0Cert dispatch + bank0_all) — needs GlobalC5/NCHBank/CrossCert stubs decision:
+  type the inductive with all five constructors but ROUTE globalC5/nch through existing
+  checkers where possible; consult archived dispatch contract first.
+- EXTRACTION QUEUE += sibling 3.7 (3447c). Marker 1657699.

@@ -1051,5 +1051,132 @@ theorem bankClosureTrace_sound (G : GraphData) (c : CutData)
   exact ⟨replayTraceAux_subset G c bads basis tr.steps tr.start tr.final
     (by simpa [replayTrace] using h.1.1.2), h.1.2, h.2⟩
 
+/-! ### B10: blue-pendant peel — graph-side structural checker (audited contract).
+This layer verifies the literal peel data P0-P6: set hygiene, induced small
+graph and restricted cut recomputed and compared, pendant boundary (every
+removed-to-kept edge lands on the root), blue-only appendage (hence bad-count
+equality, recomputed on both sides), parity records, blue-connected appendage
+(bounded reachability), and row invisibility. The Assembly-level PeelCert
+wraps this with smallRows/smallCert and the preservation Props (P-MaxCut,
+P-GammaMinimal, ...), per the archived Bank0 assembly contract and audit
+item 5 (small-graph checkGraph/checkCut carried there). -/
+
+/-- Graph-side peel data. -/
+structure PeelData where
+  removed : List Nat
+  root : Nat
+  keepMap : List Nat
+  smallG : GraphData
+  smallCut : CutData
+  parity : List Bool
+deriving Repr
+
+/-- Induced edge list on the kept vertices (small indices, normalized i < j). -/
+def inducedEdges (G : GraphData) (keepMap : List Nat) : List (Nat × Nat) :=
+  (List.range keepMap.length).flatMap (fun i =>
+    (List.range keepMap.length).filterMap (fun j =>
+      if i < j && adjb G (keepMap.getD i 0) (keepMap.getD j 0)
+      then some (i, j) else none))
+
+/-- One blue-reachability expansion step inside a domain. -/
+def blueReachStep (G : GraphData) (c : CutData) (dom S : List Nat) :
+    List Nat :=
+  (S ++ dom.filter (fun v => S.any (fun u => blueb G c u v))).dedup
+
+/-- Fueled reachability iteration. -/
+def iterReach (G : GraphData) (c : CutData) (dom : List Nat) :
+    Nat → List Nat → List Nat
+  | 0, S => S
+  | n + 1, S => iterReach G c dom n (blueReachStep G c dom S)
+
+/-- P0: set hygiene and keepMap correctness. -/
+def checkPeelSets (G : GraphData) (p : PeelData) : Bool :=
+  decide (p.removed ≠ []) && decide p.removed.Nodup &&
+  p.removed.all (fun v => decide (v < G.n)) &&
+  decide (p.root < G.n) && decide (p.root ∉ p.removed) &&
+  decide (p.keepMap
+    = (List.range G.n).filter (fun v => decide (v ∉ p.removed))) &&
+  decide (p.smallG.n = p.keepMap.length)
+
+/-- P1: induced small graph and restricted small cut, recomputed. -/
+def checkPeelInduced (G : GraphData) (c : CutData) (p : PeelData) : Bool :=
+  decide (p.smallG.edges = inducedEdges G p.keepMap) &&
+  decide (p.smallCut.side.length = p.smallG.n) &&
+  (List.range p.keepMap.length).all (fun i =>
+    decide (sideb p.smallCut i = sideb c (p.keepMap.getD i 0)))
+
+/-- P2: pendant boundary — every removed-to-kept edge lands on the root. -/
+def checkPeelPendant (G : GraphData) (p : PeelData) : Bool :=
+  G.edges.all (fun e =>
+    !(decide (e.1 ∈ p.removed) != decide (e.2 ∈ p.removed)) ||
+    (decide (e.1 ∈ p.removed) && decide (e.2 = p.root)) ||
+    (decide (e.2 ∈ p.removed) && decide (e.1 = p.root)))
+
+/-- P3: blue-only appendage — every edge touching removed is blue. -/
+def checkPeelBlueApp (G : GraphData) (c : CutData) (p : PeelData) : Bool :=
+  G.edges.all (fun e =>
+    !(decide (e.1 ∈ p.removed) || decide (e.2 ∈ p.removed)) ||
+    blueb G c e.1 e.2)
+
+/-- Bad-count equality and strict size decrease, both recomputed. -/
+def checkPeelCounts (G : GraphData) (c : CutData) (p : PeelData) : Bool :=
+  decide (badCount G c = badCount p.smallG p.smallCut) &&
+  decide (p.smallG.n < G.n)
+
+/-- P5: parity records relative to the root. -/
+def checkPeelParity (c : CutData) (p : PeelData) : Bool :=
+  decide (p.parity.length = p.removed.length) &&
+  (List.range p.removed.length).all (fun i =>
+    decide (p.parity.getD i false
+      = (sideb c (p.removed.getD i 0) != sideb c p.root)))
+
+/-- P4: blue-connected appendage — every removed vertex is blue-reachable
+    from the root inside removed ∪ {root}. -/
+def checkPeelReach (G : GraphData) (c : CutData) (p : PeelData) : Bool :=
+  p.removed.all (fun v =>
+    decide (v ∈ iterReach G c (p.root :: p.removed)
+      (p.removed.length + 1) [p.root]))
+
+/-- P6: row invisibility — no database row uses a removed vertex. -/
+def checkPeelRows (bads : List BadEdgeData) (p : PeelData) : Bool :=
+  bads.all (fun b => b.rows.all (fun r =>
+    r.verts.all (fun v => decide (v ∉ p.removed))))
+
+/-- Full graph-side peel check (P0-P6). -/
+def checkPeel (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (p : PeelData) : Bool :=
+  checkPeelSets G p && checkPeelInduced G c p && checkPeelPendant G p &&
+  checkPeelBlueApp G c p && checkPeelCounts G c p && checkPeelParity c p &&
+  checkPeelReach G c p && checkPeelRows bads p
+
+/-- Fact extraction: exact bad-count transfer (the bank-inequality carrier). -/
+theorem checkPeel_badCount_eq (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    badCount G c = badCount p.smallG p.smallCut := by
+  unfold checkPeel checkPeelCounts at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  exact h.1.1.1.2.1
+
+/-- Fact extraction: strict vertex-count decrease (the induction carrier). -/
+theorem checkPeel_nlt (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true) :
+    p.smallG.n < G.n := by
+  unfold checkPeel checkPeelCounts at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  exact h.1.1.1.2.2
+
+/-- Bank-inequality transfer across a peel: the induction hypothesis at the
+    smaller size lifts to the big graph (audit-canonical Nat form). -/
+theorem peel_bank_transfer (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (p : PeelData)
+    (h : checkPeel G c bads p = true)
+    (hIH : 25 * badCount p.smallG p.smallCut ≤ p.smallG.n ^ 2) :
+    25 * badCount G c ≤ G.n ^ 2 := by
+  rw [checkPeel_badCount_eq G c bads p h]
+  exact le_trans hIH (Nat.pow_le_pow_left
+    (Nat.le_of_lt (checkPeel_nlt G c bads p h)) 2)
+
 end CertGraph
 end Erdos23Delta0
