@@ -649,3 +649,18 @@
   tick first action if probe results do not preempt; cache window.__gap DEAD, re-cache).
 - Sibling 4.5 pending check. Extraction queue: 4.2/4.3/4.4 + provider module + older sections.
 - WAKEUP 600s (active probe). P(math)~89, P(Lean)~90.
+
+
+## TICK NOTES (2026-07-04T04:25Z) — k6/F2 CERTIFIED (margin-0 thin-face recipe discovered)
+- k6/F2 EXACT CERTIFIED by me (1st claude co-work row): official checker exact_ok=true,
+  full_min_residual=0 EXACTLY (tight rows on thin face), 0 negatives anywhere. RECIPE:
+  margin 1e-8 float-INFEASIBLE but margin-0 Optimal (60 basic cols) => region is a THIN FACE;
+  exact 384-prime replay of the margin-0 basis certifies. Posted w/ 6 artifact SHAs; Codex
+  appends (source=claude). OPEN: manifest schema variant ASK (repaired_manifest expects
+  one_row_repair_v1; apply summaries carry apply_highspy_basis_increment_solution_v1 —
+  how did k6/F1 get its manifest?).
+- k6/F6 margin-0 probe RUNNING (bg boz40x42b; guessed input names ..._near_lexsmall_v1 —
+  if missing-file error, ls tmp for the real lexsmall core/solution names and relaunch).
+- STILL QUEUED: main provider module (8243c msg n=15) extraction + typing; main consult
+  reply (float-dust vs empty decision rule) pending; sibling 4.5 check; Codex even-list reply.
+- Marker 1711296 (post-scan; my posts after). P(math)~89, P(Lean)~90. Batch 20/108.
