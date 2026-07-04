@@ -163,3 +163,18 @@
   top target + True-placeholder BranchB stubs — Assembly fills). BUILD RULE addendum: always
   inspect LOGBYTES>0 logs; grep sorry in any new module before recording green.
 - Sibling retasked: section 3.2. Extraction queue += sibling 2.2 (14664c).
+
+
+## TICK NOTES (2026-07-04T21:15Z) — DiffSkipCert supersedes derivative skips
+- SKIP ROUTE FINAL: DiffSkipCert = exact division identity (P - Pbdry = (1-sigma)*M right /
+  sigma*M0 left; checkEq) + quotient ConeCert (M >= 0; slacks: G#, dominance deltas — REGION-
+  LOCAL NOW SOUND, band, box). Pure Q algebra: no deriv/MVT/MonotoneOn/RadialHull. Derivative
+  certs = deprecated fallback. Archived at EQ_ODL1_O14_ASSEMBLY_GPTPRO.md tail + BINDING posted.
+- FAQ 33-50 landed (index archived; verbatim at assembly). Codex: BranchB v2 denom guard +
+  SHA v6 + v9 reproducer PASS acked; exit-capture confirmation requested. Marker 1633308.
+- IN FLIGHT: main = O13 Seed3Complete finite-enumeration proof (completeness keystone of the
+  3-door branch); sibling = section 3.3 (3.2 landed 6591c -> extraction queue).
+- Lean: diffSkip_right/left scalar consumers added to PolyCert.lean — build in flight
+  (bg bd81hrrid). NEXT INCREMENT: ClosureTrace replay module (C1-C4); then EQODL1 cover-cert
+  skeleton (BandLabel/RegionCert/EQODL1CoverCert + checkers per O14 9.1-9.2 + DiffSkipCert).
+- EXTRACTION QUEUE += sibling 2.2 (14664c), 3.2 (6591c).

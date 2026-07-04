@@ -300,3 +300,56 @@ Q2 SKIP MODES (default + canonical Mode B):
  CAUTION (unsound form): +-d/ds >= 0 certified only on the dominance region at the SAME s is
  UNSOUND (path may leave the region). Dominance-local skips are sound ONLY in the Mode-B
  path-domain form.
+
+
+# ===== DIFFSKIPCERT: DIVIDED-DIFFERENCE SKIP CERTIFICATES (main thread, 2026-07-04) =====
+# SUPERSEDES derivative-based Mode-A/Mode-B skips for Lean pass 1 (derivative certs = optional
+# fallback consumed later by real analysis; NOT recommended first pass).
+
+RECOMMENDATION: divided-difference certificate, not derivative/monotonicity.
+Normalize sigma := 2s in [0,1]; P_inf_k(sigma,u) := Ptilde_k(sigma/2, (1-sigma/2)u).
+RIGHT skip (to near boundary s=1/2):  P(sigma,u) - P(1,u) = (1-sigma) * M+(sigma,u)  (SkipRight)
+  + ConeCert M+ >= 0 on the region  =>  P(sigma,u) >= P(1,u) since 1-sigma >= 0.
+LEFT skip (to s=0 face):              P(sigma,u) - P(0,u) = sigma * M0(sigma,u)      (SkipLeft)
+  + ConeCert M0 >= 0  =>  P(sigma,u) >= P(0,u).
+SOUNDNESS: P - P(1,·) vanishes at sigma=1 => divisible by (1-sigma) (unit leading coeff in
+sigma); checker verifies the IDENTITY by checkEq (never trusts symbolic division), then
+multiplies nonnegative rationals. Pure algebra over Q — no deriv, no integration, no MVT,
+no MonotoneOn, no radial-hull path tracking.
+DOMINANCE-LOCAL SKIPS NOW SOUND: comparison is pointwise (no path), so a skip cert restricted
+to a dominance region (k,a,inf) is valid — unlike derivative-based dominance-local skips.
+Region granularity choices: whole inf band (one cert covers all 15 regions — still preferred),
+dominance chart, sub-band [sa,sb] (affine normalize sigma=(s-sa)/(sb-sa)), or path domain
+(no longer usually needed).
+LEAN SHAPES:
+  theorem skip_right_sound (hsigma0 : 0 <= sigma) (hsigma1 : sigma <= 1)
+    (hDiv : evalP - evalPbdry = (1 - sigma) * evalM) (hM : 0 <= evalM) :
+    evalPbdry <= evalP   -- mul_nonneg + nlinarith; scalar-level over Q
+  theorem skip_left_sound: same with sigma * evalM.
+  Region-local: same statement under RegionPred hypotheses; hM from ConeCert/BernsteinCube
+  over the same region constraints.
+CHECKER OBJECT (replaces derivative skip objects):
+  inductive SkipBoundary | left | right
+  structure DiffSkipCert where
+    boundary : SkipBoundary;  region : RegionLabel
+    P Pbdry quotient : Poly
+    divIdentity : PolyEqCert     -- P - Pbdry = bandFactor * quotient (checkEq)
+    quotientCert : ConeCert      -- quotient >= 0 (Bernstein/cone; slacks: G#, deltas, band, box)
+EMISSION RECIPE: compute Pbdry := P at sigma=1 (or 0); exact polynomial division for quotient;
+emit identity + quotient ConeCert. Boundary consumer: right skip consumes the certified NEAR
+band cover at s=1/2 (full 15-label cover); left skip consumes the s=0 FaceCert.
+
+FAQ ADDITIONS 33-50 (index; full text in-thread for assembly-time extraction):
+33 all-or-nothing 300 regions; 34 s=0 face no-preimage but closed-simplex Bernstein; 35 ties in
+max generator harmless (any maximizer); 36 why bare dominance-local DERIVATIVE skip unsound
+(path leaves region) + divided-difference as the stronger fix; 37 why DiffSkip avoids analysis;
+38 float LP is hint-only, exact residual gate; 39 theta_max=0 does NOT mean infeasible
+(boundary-of-cone; fallbacks); 40 why vertex reconstruction abandoned (vertex denominators
+huge; ConeCert needs any rational feasible point); 41 height normalization loses no cases
+(H~h, eta~h^2, EQ-CERT1 eta>=1); 42 s=0 face controls asymptotic limit; 43 no real numbers
+needed (all Q); 44 dominance deltas valid cone generators region-locally; 45 corrected G# lift
+(Lambda^(2-d)) preserves leading homogeneous parts at s=0; 46 global-band cert makes dominance
+cover unnecessary for that band (checker records kind per region); 47 local certs valid but
+only full cover feeds the ledger; 48 empty regions via -1 = nonneg combination; 49 passive-AM
+row-existence faces vs O14 dominance regions (different problems); 50 numerical falsifier
+sweeps are diagnostics, never proofs.

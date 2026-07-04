@@ -387,5 +387,24 @@ theorem ConeCert.sound (c : ConeCert) (env : Var → ℚ)
   have hzip := zip_nfmul_sum_nonneg env hvars c.mults c.slacks c.hmults hslacks
   linarith
 
+/-! ### DiffSkipCert scalar consumers (divided-difference skip route).
+The emitted skip artifact carries the exact division identity (verified by
+checkEq) and a ConeCert for the quotient; these lemmas turn the evaluated
+facts into the skip inequality — pure rational algebra, no analysis. -/
+
+/-- Right-boundary skip: on σ ≤ 1, if P − P(1) = (1−σ)·M pointwise and
+    M ≥ 0, then P(1) ≤ P. -/
+theorem diffSkip_right (p pb m σ : ℚ) (hσ1 : σ ≤ 1)
+    (hDiv : p - pb = (1 - σ) * m) (hM : 0 ≤ m) : pb ≤ p := by
+  have h1 : 0 ≤ (1 - σ) * m := mul_nonneg (by linarith) hM
+  linarith
+
+/-- Left-boundary skip: on 0 ≤ σ, if P − P(0) = σ·M pointwise and M ≥ 0,
+    then P(0) ≤ P. -/
+theorem diffSkip_left (p pb m σ : ℚ) (hσ0 : 0 ≤ σ)
+    (hDiv : p - pb = σ * m) (hM : 0 ≤ m) : pb ≤ p := by
+  have h1 : 0 ≤ σ * m := mul_nonneg hσ0 hM
+  linarith
+
 end PolyCert
 end Erdos23Delta0
