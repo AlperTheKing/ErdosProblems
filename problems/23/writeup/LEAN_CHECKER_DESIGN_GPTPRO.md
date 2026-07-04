@@ -345,3 +345,41 @@ switch); coverage: 8 subsets, only full interior nontrivial; LABEL trace =
 identity labelling (all adjacent, 04 = 4-0 door). OK.
 => WITH THIS, EVERY CERT-PENDING NODE IN BOTH LEDGERS HAS AN EMISSION-READY SPEC.
 
+
+# ===== CROSS-SPEC INTERFACE CANON (12 mismatches resolved; main thread, 2026-07-04) =====
+# BINDING for Codex emitters AND my Lean checkers. Full text in thread; O13 spec follows in
+# same reply (extraction continuing).
+ 1 CompletedSwitchCert = ONE shared structure {S, completionTrace: SwitchCompletionTrace,
+   blueBoundary, badBoundary, sigmaVal, oldBad, newBlue, oldLenSq, newLenSq, KVal, nuVal,
+   nuKVal, flipCutValid: Bool, flipBConnected: Bool}. Used in T1 REC, T2 CROSS, Bank0
+   CrossCap, BH/OSC. Checker recomputes sigma, verifies nu = newLenSq - oldLenSq,
+   K = oldLenSq, nuK = nu + K sigma. CrossCap-only use may ignore nuK fields.
+ 2 TWO trace types: BankClosureTrace {start, steps: List BankClosureStep (C1_rowInterval |
+   C2_rowFamily | C3_blueDetour | C4_terminalShadow), final} for Bank0 B1 packet closure;
+   SwitchCompletionTrace {start, steps: List SwitchCompletionStep (OpSegment | OpTerminal |
+   OpNoncross | OpTwin | OpFlat5), final} for every CompletedSwitchCert.
+ 3 C4 is a PACKET closure step (fields: shadow, firstExit, addedCell, witnessRows); any flip
+   it induces is a SEPARATE CompletedSwitchCert.
+ 4 Numerator canon (all integer, all pre-multiplied by common D): kappaNum (T1 only;
+   REC target D - kappaNum); hallDemandNum (T2; slack D|C| - hallDemandNum); sNum, nu0Num
+   (Bank0; nu0Num = D N |C| - 5 sNum; CrossCap target nu0Num - D N sigma).
+ 5 NO rationals in large certs: scale : Nat (pos), aCoeff bCoeff : Int >= 0;
+   scale*(target) = aCoeff*sigma + bCoeff*nuK + R.
+ 6 OSCData {kind : OSC0|1|2|3|4, headOn : Bool} — headOn meaningful only for OSC4;
+   OSC4-head-on = {kind := OSC4, headOn := true}.
+ 7 PrimitiveLensCert = ONE shared structure {lensType RR|RB|RD|DD|TTsame|TTopposite|TR,
+   osc : OSCData, rows, terminals, splitData, ownedCore, completionTrace}. Used in T2
+   all-modes, Bank0 CrossCap, BH2/BH3.
+ 8 RESIDUALS: always the implemented ConeCert form target = base + sum mult*slack
+   (checkEq identity); constant residuals go in base; slack basis = sigma/nuK/closure
+   residual families; NO standalone residual field accepted by checkers.
+ 9 LabelTrace {labels, edgeAdjChecks, rowOrientationChecks}: BASE condition = C5-adjacency
+   for ALL graph edges; row +-1 orientations and 4-0 doors are EXTRA structure.
+10 nuK GATING: sigma_nonneg_of_maxcut for ANY S; nuK_nonneg_of_gamma_min REQUIRES
+   completed-switch validity + flipBConnected = true (GammaMinimal is the BConnected-
+   restricted form per assembly review).
+11 Checkers verify row-REFERENCE soundness only; global completeness via RowDBFacts Prop
+   (checkRowDB upgrade later).
+12 TManySplitCert {terminals, packetCover, corridorOwners, subcerts : List (T1 + T2)} is a
+   SEPARATE type; T2HallCert handles exactly two terminals.
+

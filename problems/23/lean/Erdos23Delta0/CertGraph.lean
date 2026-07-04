@@ -357,5 +357,108 @@ theorem checkBankBlock_disjoint (G : GraphData) (bads : List BadEdgeData)
   · exact absurd heq hij
   · exact hall v hv
 
+/-! ### Flip-counting lemma (assembly review Decision B): flipping a vertex set
+swaps blue/bad exactly on the boundary, so
+badCount(flip) − badCount = dB − dM, and σ(S) ≥ 0 follows from IsMaxCut. -/
+
+/-- Split a filter by a second predicate (complementary split on q). -/
+theorem length_filter_and_split {α : Type} : ∀ (l : List α) (p q : α → Bool),
+    (l.filter p).length
+      = (l.filter (fun x => q x && p x)).length
+        + (l.filter (fun x => !q x && p x)).length
+  | [], _, _ => by simp
+  | a :: l, p, q => by
+      have ih := length_filter_and_split l p q
+      cases hp : p a <;> cases hq : q a <;>
+        simp [List.filter_cons, hp, hq, ih] <;> omega
+
+/-- Pointwise side value after a flip (within range). -/
+theorem sideb_flip (c : CutData) (S : List Nat) (v : Nat)
+    (hv : v < c.side.length) :
+    sideb (flipCut c S) v = if v ∈ S then !(sideb c v) else sideb c v := by
+  unfold flipCut sideb
+  rw [List.getD_eq_getElem?_getD, List.getD_eq_getElem?_getD]
+  rw [List.getElem?_map]
+  have hz : (c.side.zipIdx)[v]? = some (c.side[v], v) := by
+    rw [List.getElem?_zipIdx]
+    simp [List.getElem?_eq_getElem hv]
+  rw [hz]
+  simp [List.getD_eq_getElem?_getD, List.getElem?_eq_getElem hv]
+
+/-- Pointwise edge status after a flip: crossing edges swap blue/bad,
+    non-crossing edges keep their status. -/
+theorem badb_flip (G : GraphData) (c : CutData) (S : List Nat) (u v : Nat)
+    (hu : u < c.side.length) (hv : v < c.side.length) :
+    badb G (flipCut c S) u v
+      = if crossesSet S (u, v) then blueb G c u v else badb G c u v := by
+  unfold badb blueb crossesSet
+  rw [sideb_flip c S u hu, sideb_flip c S v hv]
+  by_cases hus : u ∈ S <;> by_cases hvs : v ∈ S <;>
+    by_cases hadj : adjb G u v = true <;>
+      simp [hus, hvs, hadj] <;>
+        cases hsu : sideb c u <;> cases hsv : sideb c v <;> simp
+
+/-- THE FLIP-COUNTING IDENTITY (ℤ): badCount(flip) − badCount = dB − dM. -/
+theorem badCount_flip_eq (G : GraphData) (c : CutData) (S : List Nat)
+    (hlen : c.side.length = G.n) (hG : checkGraph G = true) :
+    (badCount G (flipCut c S) : ℤ) - badCount G c
+      = (dB G c S : ℤ) - dM G c S := by
+  unfold badCount dB dM
+  have hval : ∀ e ∈ G.edges, e.1 < c.side.length ∧ e.2 < c.side.length := by
+    intro e he
+    unfold checkGraph at hG
+    simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at hG
+    have := hG.1 e he
+    unfold checkEdge at this
+    simp only [Bool.and_eq_true, decide_eq_true_eq] at this
+    exact ⟨by omega, by omega⟩
+  -- rewrite the flipped filter pointwise
+  have hcongr : G.edges.filter (fun e => badb G (flipCut c S) e.1 e.2)
+      = G.edges.filter (fun e =>
+          if crossesSet S e then blueb G c e.1 e.2 else badb G c e.1 e.2) := by
+    apply List.filter_congr
+    intro e he
+    have h := hval e he
+    rw [badb_flip G c S e.1 e.2 h.1 h.2]
+  rw [hcongr]
+  -- split all three counts on the crossing predicate
+  have h1 := length_filter_and_split G.edges
+    (fun e => if crossesSet S e then blueb G c e.1 e.2 else badb G c e.1 e.2)
+    (fun e => crossesSet S e)
+  have h2 := length_filter_and_split G.edges
+    (fun e => badb G c e.1 e.2) (fun e => crossesSet S e)
+  -- identify the pieces
+  have e1 : G.edges.filter (fun e => crossesSet S e &&
+      (if crossesSet S e then blueb G c e.1 e.2 else badb G c e.1 e.2))
+      = G.edges.filter (fun e => blueb G c e.1 e.2 && crossesSet S e) := by
+    apply List.filter_congr
+    intro e _
+    cases hc : crossesSet S e <;> simp [hc]
+  have e2 : G.edges.filter (fun e => !crossesSet S e &&
+      (if crossesSet S e then blueb G c e.1 e.2 else badb G c e.1 e.2))
+      = G.edges.filter (fun e => !crossesSet S e && badb G c e.1 e.2) := by
+    apply List.filter_congr
+    intro e _
+    cases hc : crossesSet S e <;> simp [hc]
+  have e3 : G.edges.filter (fun e => crossesSet S e && badb G c e.1 e.2)
+      = G.edges.filter (fun e => badb G c e.1 e.2 && crossesSet S e) := by
+    apply List.filter_congr
+    intro e _
+    cases hc : crossesSet S e <;> cases hb : badb G c e.1 e.2 <;> simp [hc, hb]
+  rw [e1, e2] at h1
+  rw [e3] at h2
+  omega
+
+/-- σ(S) ≥ 0 at a maximum cut, derived from the flip identity and the
+    total-count split (blue + bad = all edges, for both cuts). -/
+theorem sigma_nonneg_of_isMaxCut (G : GraphData) (c : CutData) (S : List Nat)
+    (hlen : c.side.length = G.n) (hG : checkGraph G = true)
+    (hflip_len : (flipCut c S).side.length = G.n)
+    (hmax : badCount G c ≤ badCount G (flipCut c S)) :
+    0 ≤ sigma G c S := by
+  have h := badCount_flip_eq G c S hlen hG
+  unfold sigma
+  omega
+
 end CertGraph
 end Erdos23Delta0
