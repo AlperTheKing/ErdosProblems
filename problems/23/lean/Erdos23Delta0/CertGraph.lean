@@ -2302,5 +2302,438 @@ theorem bank0_of_maxcut (cert : Bank0Cert) (G : GraphData) (c : CutData)
   bank0Cert_sound cert G c bads atoms D hchk
     (sigmaChain_of_sigmaNonneg cert G c bads atoms D hG hc hchk hs)
 
+/-! ### Assembly layer, stage 1: rational quantities and η-bridges (per the
+archived 19-declaration contract; draft ASSEMBLY_LEAN_DRAFT_GPTPRO). The two
+scalar theorems are copied verbatim from BranchAInterface.lean / BankL.lean
+(single-file pattern; imports do not resolve across these standalone files). -/
+
+/-- η = (N² − 25m)/25 as an exact rational. -/
+def etaQ (G : GraphData) (c : CutData) : ℚ :=
+  ((G.n : ℚ) ^ 2 - 25 * (badCount G c : ℚ)) / 25
+
+/-- ρ_L = (L² − 25)/50. -/
+def rhoQ (L : Nat) : ℚ :=
+  ((L : ℚ) ^ 2 - 25) / 50
+
+/-- τ = 5m/N (uniform width threshold). -/
+def tauQ (G : GraphData) (c : CutData) : ℚ :=
+  5 * (badCount G c : ℚ) / (G.n : ℚ)
+
+/-- Bank0 discharge: a passing certificate under top-level σ ≥ 0 yields η ≥ 0. -/
+theorem etaNonneg_of_bank0 (G : GraphData) (c : CutData)
+    (bads : List BadEdgeData) (atoms : List AtomData) (D : Nat)
+    (cert : Bank0Cert)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hchk : checkBank0Cert G c bads atoms D cert = true)
+    (hs : sigmaNonneg G c) :
+    0 ≤ etaQ G c := by
+  have hb : 25 * badCount G c ≤ G.n ^ 2 :=
+    bank0_of_maxcut cert G c bads atoms D hG hc hchk hs
+  have hbq : (25 : ℚ) * (badCount G c : ℚ) ≤ (G.n : ℚ) ^ 2 := by
+    exact_mod_cast hb
+  unfold etaQ
+  have hnum : 0 ≤ (G.n : ℚ) ^ 2 - 25 * (badCount G c : ℚ) := by
+    nlinarith
+  exact div_nonneg hnum (by norm_num)
+
+/-- max(a, b) = b + max(a − b, 0) (copied from BranchAInterface). -/
+theorem max_shift (a b : ℚ) : max a b = b + max (a - b) 0 := by
+  rcases le_total a b with h | h
+  · rw [max_eq_right h, max_eq_right (by linarith : a - b ≤ 0)]
+    ring
+  · rw [max_eq_left h, max_eq_left (by linarith : (0:ℚ) ≤ a - b)]
+    ring
+
+/-- net-DW′ assembly (copied from BranchAInterface): uniform width plus the
+    C5-RS bound gives the GERSH row bound for the width-clamped row sum. -/
+theorem netDW_assembly (N eta tau : ℚ) (s : Fin 5 → ℚ)
+    (htau : 5*tau = N - 25*eta/N)
+    (hrs : (∑ i, max (s i - tau) 0) ≤ (1 + 25/N)*eta) :
+    (∑ i, max (s i) tau) ≤ N + eta := by
+  have hsum : (∑ i, max (s i) tau) =
+      5*tau + ∑ i, max (s i - tau) 0 := by
+    have h1 : (∑ i, max (s i) tau) =
+        ∑ i, (tau + max (s i - tau) 0) := by
+      exact Finset.sum_congr rfl (fun i _ => max_shift (s i) tau)
+    rw [h1, Finset.sum_add_distrib]
+    simp [Finset.card_univ]
+  rw [hsum, htau]
+  have hexp : (1 + 25/N)*eta = eta + 25*eta/N := by
+    rw [add_mul, one_mul, div_mul_eq_mul_div]
+  linarith [hrs]
+
+/-- ρ_L ≥ 0 for L > 5. -/
+theorem rho_nonneg_of_len_gt5 {L : Nat} (hL : 5 < L) : 0 ≤ rhoQ L := by
+  unfold rhoQ
+  have hLq : (5 : ℚ) < (L : ℚ) := by exact_mod_cast hL
+  have hnum : 0 ≤ (L : ℚ) ^ 2 - 25 := by nlinarith
+  exact div_nonneg hnum (by norm_num)
+
+/-- Bank-L reserve gives η ≥ 0 for L > 5. -/
+theorem eta_nonneg_of_bankL {G : GraphData} {c : CutData} {L : Nat}
+    (hL : 5 < L) (hBankL : 2 * rhoQ L ≤ etaQ G c) : 0 ≤ etaQ G c := by
+  have hrho : 0 ≤ rhoQ L := rho_nonneg_of_len_gt5 hL
+  nlinarith
+
+/-- Bank-L ⟹ GERSH for L > 5 (copied from BankL, Decision C.4 form). -/
+theorem gersh_Lgt5_of_bankL (R N eta L : ℚ) (hL : 5 < L)
+    (hbankL : 2 * ((L^2 - 25)/50) ≤ eta)
+    (hupo : R ≤ N + eta/2 - (L^2 - 25)/50) : R ≤ N + eta := by
+  have hrho : 0 < (L^2 - 25)/50 := by nlinarith
+  nlinarith
+
+/-! ### Assembly layer, stage 2: provider-facing interfaces, row layer, the
+Branch-A/Branch-B trichotomy, row aggregation, and the final GraphData /
+SimpleGraph statements (per the 3-gap fill; data-carrying packages are
+Type-valued — Prop structures cannot project data fields). BConnected and
+GammaMinimalConnected are SCAFFOLDING stubs (True) until the exists_good_cut
+provider module lands; nothing below eliminates them. -/
+
+/-- Max cut as validity plus bad-count minimality. -/
+structure IsMaxCut (G : GraphData) (c : CutData) : Prop where
+  valid : checkCut G c = true
+  min_bad : ∀ d : CutData, checkCut G d = true →
+    badCount G c ≤ badCount G d
+
+/-- Triangle-freeness of the literal graph. -/
+def TriangleFree (G : GraphData) : Prop :=
+  ∀ a b d : Nat, a < G.n → b < G.n → d < G.n →
+    a ≠ b → b ≠ d → a ≠ d →
+    ¬ (adjb G a b = true ∧ adjb G b d = true ∧ adjb G a d = true)
+
+/-- Scaffolding stub (upgraded by the exists_good_cut provider module). -/
+def BConnected (_G : GraphData) (_c : CutData) : Prop := True
+
+/-- Scaffolding stub (upgraded by the exists_good_cut provider module). -/
+def GammaMinimalConnected (_G : GraphData) (_c : CutData) : Prop := True
+
+/-- Certificate-carried row record: loads and row sum are certificate data,
+    tied together by the coherence field; semantics enter via RowDBFacts. -/
+structure RowCert where
+  badId : Nat
+  verts : List Nat
+  load5 : Fin 5 → ℚ
+  rowSumQ : ℚ
+  sum_load5_of_len5 :
+    verts.length = 5 → rowSumQ = ∑ i : Fin 5, load5 i
+
+namespace RowCert
+
+def length (Q : RowCert) : Nat := Q.verts.length
+
+end RowCert
+
+/-- Row database. -/
+structure RowDB where
+  rowList : List RowCert
+
+def RowInDB (rows : RowDB) (Q : RowCert) : Prop := Q ∈ rows.rowList
+
+def rowLoadAt (_G : GraphData) (_c : CutData) (_rows : RowDB) (Q : RowCert)
+    (i : Fin 5) : ℚ := Q.load5 i
+
+def rowSum (_G : GraphData) (_c : CutData) (_rows : RowDB) (Q : RowCert) :
+    ℚ := Q.rowSumQ
+
+/-- General row-database facts (both branches). -/
+structure RowDBFactsGeneral (G : GraphData) (c : CutData) (rows : RowDB) :
+    Prop where
+  length_ge_five : ∀ Q : RowCert, RowInDB rows Q → 5 ≤ Q.length
+
+/-- All-length-5 refinement (Bank0 side). -/
+structure RowDBFactsAll5 (G : GraphData) (c : CutData) (rows : RowDB) :
+    Prop extends RowDBFactsGeneral G c rows where
+  all_len5 : ∀ Q : RowCert, RowInDB rows Q → Q.length = 5
+
+/-- GERSH row bound. -/
+def RowGershBound (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Prop :=
+  rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c
+
+def rowSurplusAt (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (i : Fin 5) : ℚ :=
+  rowLoadAt G c rows Q i - tauQ G c
+
+def XMask (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (A : Finset (Fin 5)) : ℚ :=
+  ∑ i ∈ A, rowSurplusAt G c rows Q i
+
+def positiveMask (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Finset (Fin 5) :=
+  Finset.univ.filter (fun i : Fin 5 => 0 < rowSurplusAt G c rows Q i)
+
+/-- C5-RS: positive-part surplus bound. -/
+def C5RS (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) :
+    Prop :=
+  (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) ≤
+    (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c
+
+theorem sum_max_eq_XMask_positiveMask (G : GraphData) (c : CutData)
+    (rows : RowDB) (Q : RowCert) :
+    (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) =
+      XMask G c rows Q (positiveMask G c rows Q) := by
+  classical
+  unfold XMask positiveMask
+  symm
+  rw [Finset.sum_filter]
+  apply Finset.sum_congr rfl
+  intro i _
+  by_cases hp : 0 < rowSurplusAt G c rows Q i
+  · have hnonneg : 0 ≤ rowSurplusAt G c rows Q i := le_of_lt hp
+    simp [hp, max_eq_left hnonneg]
+  · have hle : rowSurplusAt G c rows Q i ≤ 0 := le_of_not_gt hp
+    simp [hp, max_eq_right hle]
+
+theorem XMask_univ_eq_rowSum_sub_5tau (G : GraphData) (c : CutData)
+    (rows : RowDB) (Q : RowCert) (hLen : Q.length = 5) :
+    XMask G c rows Q Finset.univ = rowSum G c rows Q - 5 * tauQ G c := by
+  classical
+  unfold XMask rowSurplusAt rowLoadAt rowSum
+  have hsum := Q.sum_load5_of_len5 hLen
+  rw [hsum, Finset.sum_sub_distrib]
+  have hconst : (∑ _i : Fin 5, tauQ G c) = 5 * tauQ G c := by
+    simp
+  rw [hconst]
+
+theorem eta_tau_identity (G : GraphData) (c : CutData) (hNpos : 0 < G.n) :
+    (G.n : ℚ) + etaQ G c - 5 * tauQ G c =
+      (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c := by
+  have hNne : (G.n : ℚ) ≠ 0 := by
+    exact_mod_cast (ne_of_gt hNpos)
+  unfold etaQ tauQ
+  field_simp
+  ring
+
+/-- F1 ruling: the full-mask bound is derived from the ambient ODL bound. -/
+theorem fullMaskBound_of_odlFull (G : GraphData) (c : CutData)
+    (rows : RowDB) (Q : RowCert) (hLen : Q.length = 5) (hNpos : 0 < G.n)
+    (hodl : rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c) :
+    XMask G c rows Q Finset.univ ≤
+      (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c := by
+  rw [XMask_univ_eq_rowSum_sub_5tau G c rows Q hLen]
+  have hid := eta_tau_identity G c hNpos
+  nlinarith
+
+/-- Branch-A per-row inputs (providers fill these; fullMask derived). -/
+structure BranchAInputs (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Prop where
+  hLen : Q.length = 5
+  hNpos : 0 < G.n
+  etaNonneg : 0 ≤ etaQ G c
+  a1Proper : ∀ A : Finset (Fin 5), A.Nonempty → A ≠ Finset.univ →
+    XMask G c rows Q A ≤
+      ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) * etaQ G c
+  odlFull : rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c
+
+/-- C5-RS trichotomy: P = ∅ / P = univ / proper. -/
+theorem c5RS_of_branchA_inputs {G : GraphData} {c : CutData} {rows : RowDB}
+    {Q : RowCert} (h : BranchAInputs G c rows Q) :
+    C5RS G c rows Q := by
+  classical
+  let P : Finset (Fin 5) := positiveMask G c rows Q
+  have hsum : (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) =
+      XMask G c rows Q P := by
+    simpa [P] using sum_max_eq_XMask_positiveMask G c rows Q
+  unfold C5RS
+  rw [hsum]
+  by_cases hPempty : P = ∅
+  · rw [hPempty]
+    simp only [XMask, Finset.sum_empty]
+    have hcoef : 0 ≤ (1 : ℚ) + (25 : ℚ) / (G.n : ℚ) := by
+      have hNq : (0 : ℚ) < (G.n : ℚ) := by exact_mod_cast h.hNpos
+      positivity
+    exact mul_nonneg hcoef h.etaNonneg
+  · by_cases hPuniv : P = Finset.univ
+    · rw [hPuniv]
+      exact fullMaskBound_of_odlFull G c rows Q h.hLen h.hNpos h.odlFull
+    · have hPnonempty : P.Nonempty :=
+        Finset.nonempty_iff_ne_empty.mpr hPempty
+      have ha1 := h.a1Proper P hPnonempty hPuniv
+      have hcoef : ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) ≤
+          ((25 : ℚ) / (G.n : ℚ) + 1) := by
+        norm_num
+      have hmul : ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) * etaQ G c ≤
+          ((25 : ℚ) / (G.n : ℚ) + 1) * etaQ G c :=
+        mul_le_mul_of_nonneg_right hcoef h.etaNonneg
+      calc XMask G c rows Q P
+          ≤ ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) * etaQ G c := ha1
+        _ ≤ ((25 : ℚ) / (G.n : ℚ) + 1) * etaQ G c := hmul
+        _ = (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c := by ring
+
+/-- Branch A GERSH: C5-RS plus positive-part domination close the row. -/
+theorem gersh_L5_of_branchA_inputs {G : GraphData} {c : CutData}
+    {rows : RowDB} {Q : RowCert} (h : BranchAInputs G c rows Q) :
+    RowGershBound G c rows Q := by
+  have hRS : C5RS G c rows Q := c5RS_of_branchA_inputs h
+  have hsumLoads : rowSum G c rows Q =
+      ∑ i : Fin 5, rowLoadAt G c rows Q i := by
+    unfold rowSum rowLoadAt
+    exact Q.sum_load5_of_len5 h.hLen
+  have hposDom : ∑ i : Fin 5, (rowLoadAt G c rows Q i - tauQ G c) ≤
+      ∑ i : Fin 5, max (rowLoadAt G c rows Q i - tauQ G c) 0 :=
+    Finset.sum_le_sum (fun i _ => le_max_left _ _)
+  have hleft : rowSum G c rows Q - 5 * tauQ G c ≤
+      (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c := by
+    rw [hsumLoads]
+    have hconst : (∑ _i : Fin 5, tauQ G c) = 5 * tauQ G c := by
+      simp
+    have hx : (∑ i : Fin 5, (rowLoadAt G c rows Q i - tauQ G c)) =
+        (∑ i : Fin 5, rowLoadAt G c rows Q i) - 5 * tauQ G c := by
+      rw [Finset.sum_sub_distrib, hconst]
+    have hchain := le_trans hposDom hRS
+    rw [hx] at hchain
+    exact hchain
+  have hid := eta_tau_identity G c h.hNpos
+  unfold RowGershBound
+  nlinarith
+
+/-- Branch-B per-row inputs. -/
+structure BranchBInputs (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Prop where
+  hLen : 5 < Q.length
+  bankL : 2 * rhoQ Q.length ≤ etaQ G c
+  bankedUPO : rowSum G c rows Q ≤
+    (G.n : ℚ) + etaQ G c / 2 - rhoQ Q.length
+
+/-- Branch B GERSH (Bank-L reserve argument, direct). -/
+theorem gersh_Lgt5_of_branchB_inputs {G : GraphData} {c : CutData}
+    {rows : RowDB} {Q : RowCert} (h : BranchBInputs G c rows Q) :
+    RowGershBound G c rows Q := by
+  unfold RowGershBound
+  have hrho : 0 ≤ rhoQ Q.length := rho_nonneg_of_len_gt5 h.hLen
+  nlinarith [h.bankL, h.bankedUPO]
+
+/-- Per-cut inputs across the whole row database. -/
+structure Delta0Inputs (G : GraphData) (c : CutData) (rows : RowDB) :
+    Prop where
+  etaNonneg : 0 ≤ etaQ G c
+  branchA : ∀ Q : RowCert, RowInDB rows Q → Q.length = 5 →
+    BranchAInputs G c rows Q
+  branchB : ∀ Q : RowCert, RowInDB rows Q → 5 < Q.length →
+    BranchBInputs G c rows Q
+
+/-- Every database row satisfies GERSH. -/
+theorem all_rows_gersh {G : GraphData} {c : CutData} {rows : RowDB}
+    (hRows : RowDBFactsGeneral G c rows)
+    (hDelta : Delta0Inputs G c rows) :
+    ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q := by
+  intro Q hQ
+  have hLenLower : 5 ≤ Q.length := hRows.length_ge_five Q hQ
+  by_cases hEq : Q.length = 5
+  · exact gersh_L5_of_branchA_inputs (hDelta.branchA Q hQ hEq)
+  · have hGt : 5 < Q.length := by omega
+    exact gersh_Lgt5_of_branchB_inputs (hDelta.branchB Q hQ hGt)
+
+/-- Γ/β provider facts (Type-valued: carries the two rational values). -/
+structure GammaBetaFacts (G : GraphData) (c : CutData) (rows : RowDB) where
+  gammaVal : ℚ
+  betaVal : ℚ
+  gammaLower : 25 * (badCount G c : ℚ) ≤ gammaVal
+  gammaUpper_of_all_rows_gersh :
+    (∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) →
+      gammaVal ≤ (G.n : ℚ) ^ 2
+  beta_eq_badCount : betaVal = (badCount G c : ℚ)
+
+/-- Γ squeeze: 25m ≤ Γ ≤ N² gives β ≤ N²/25. -/
+theorem beta_bound_of_gamma {G : GraphData} {c : CutData} {rows : RowDB}
+    (facts : GammaBetaFacts G c rows)
+    (hGamma : facts.gammaVal ≤ (G.n : ℚ) ^ 2) :
+    facts.betaVal ≤ (G.n : ℚ) ^ 2 / 25 := by
+  rw [facts.beta_eq_badCount]
+  nlinarith [facts.gammaLower, hGamma]
+
+/-- The selected good cut and its facts (Type-valued: carries GammaBetaFacts). -/
+structure GoodCutData (G : GraphData) (c : CutData) (rows : RowDB) where
+  maxCut : IsMaxCut G c
+  gammaMin : GammaMinimalConnected G c
+  bConnected : BConnected G c
+  rowsFacts : RowDBFactsGeneral G c rows
+  gammaBeta : GammaBetaFacts G c rows
+
+/-- δ=0 on literal graph data, from a selected good cut. -/
+theorem erdos23_delta0_graphData_from_good_cut {G : GraphData}
+    {c : CutData} {rows : RowDB}
+    (_hGraph : checkGraph G = true) (_hCut : checkCut G c = true)
+    (_hTri : TriangleFree G) (hGood : GoodCutData G c rows)
+    (hDelta : Delta0Inputs G c rows) :
+    hGood.gammaBeta.betaVal ≤ (G.n : ℚ) ^ 2 / 25 := by
+  have hAllRows : ∀ Q : RowCert, RowInDB rows Q →
+      RowGershBound G c rows Q :=
+    all_rows_gersh hGood.rowsFacts hDelta
+  have hGammaUpper : hGood.gammaBeta.gammaVal ≤ (G.n : ℚ) ^ 2 :=
+    hGood.gammaBeta.gammaUpper_of_all_rows_gersh hAllRows
+  exact beta_bound_of_gamma hGood.gammaBeta hGammaUpper
+
+/-- Certified Branch-A bundle (extension point for artifact-backed forms). -/
+structure BranchACertBundle (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Prop where
+  inputs : BranchAInputs G c rows Q
+
+structure BranchBCertBundle (G : GraphData) (c : CutData) (rows : RowDB)
+    (Q : RowCert) : Prop where
+  inputs : BranchBInputs G c rows Q
+
+structure Delta0CertBundles (G : GraphData) (c : CutData) (rows : RowDB) :
+    Prop where
+  etaNonneg : 0 ≤ etaQ G c
+  branchA : ∀ Q : RowCert, RowInDB rows Q → Q.length = 5 →
+    BranchACertBundle G c rows Q
+  branchB : ∀ Q : RowCert, RowInDB rows Q → 5 < Q.length →
+    BranchBCertBundle G c rows Q
+
+theorem delta0_inputs_of_cert_bundles {G : GraphData} {c : CutData}
+    {rows : RowDB} (h : Delta0CertBundles G c rows) :
+    Delta0Inputs G c rows where
+  etaNonneg := h.etaNonneg
+  branchA := fun Q hQ hLen => (h.branchA Q hQ hLen).inputs
+  branchB := fun Q hQ hLen => (h.branchB Q hQ hLen).inputs
+
+theorem erdos23_delta0_graphData_from_bundles {G : GraphData}
+    {c : CutData} {rows : RowDB}
+    (hGraph : checkGraph G = true) (hCut : checkCut G c = true)
+    (hTri : TriangleFree G) (hGood : GoodCutData G c rows)
+    (hBundles : Delta0CertBundles G c rows) :
+    hGood.gammaBeta.betaVal ≤ (G.n : ℚ) ^ 2 / 25 :=
+  erdos23_delta0_graphData_from_good_cut hGraph hCut hTri hGood
+    (delta0_inputs_of_cert_bundles hBundles)
+
+/-- Everything the existence provider must deliver for one graph. -/
+structure GoodCutPackage (G : GraphData) where
+  cut : CutData
+  rows : RowDB
+  hCut : checkCut G cut = true
+  good : GoodCutData G cut rows
+  delta : Delta0CertBundles G cut rows
+
+theorem erdos23_delta0_graphData_from_package {G : GraphData}
+    (hGraph : checkGraph G = true) (hTri : TriangleFree G)
+    (pkg : GoodCutPackage G) :
+    pkg.good.gammaBeta.betaVal ≤ (G.n : ℚ) ^ 2 / 25 :=
+  erdos23_delta0_graphData_from_bundles hGraph pkg.hCut hTri pkg.good
+    pkg.delta
+
+/-- Bridge data from a Mathlib SimpleGraph to the literal layer. -/
+structure SimpleGraphBridge {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] where
+  G : GraphData
+  hGraph : checkGraph G = true
+  tri_transfer : Gs.CliqueFree 3 → TriangleFree G
+  pkg : GoodCutPackage G
+  betaSimpleVal : ℚ
+  beta_transfer : betaSimpleVal = pkg.good.gammaBeta.betaVal
+  n_transfer : (Fintype.card V : ℚ) = (G.n : ℚ)
+
+/-- δ=0 through the bridge: β ≤ (card V)²/25. -/
+theorem erdos23_delta0_simpleGraph {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (hTri : Gs.CliqueFree 3) (bridge : SimpleGraphBridge Gs) :
+    bridge.betaSimpleVal ≤ (Fintype.card V : ℚ) ^ 2 / 25 := by
+  have hGD : bridge.pkg.good.gammaBeta.betaVal ≤
+      (bridge.G.n : ℚ) ^ 2 / 25 :=
+    erdos23_delta0_graphData_from_package bridge.hGraph
+      (bridge.tri_transfer hTri) bridge.pkg
+  rw [bridge.beta_transfer, bridge.n_transfer]
+  exact hGD
+
 end CertGraph
 end Erdos23Delta0

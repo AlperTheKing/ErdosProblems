@@ -579,3 +579,55 @@
   gap-fill drops in.
 - EXTRACTION QUEUE += sibling 4.2 (8159c), 4.3 (9135c). Marker 1696415 (no Codex posts).
 - P(math)~89, P(Lean)~87.
+
+
+## TICK NOTES (2026-07-04T02:08Z) — BATCH CO-WORK MODE (user directive)
+- USER: batch 19/108 too slow -> I now CO-COMPUTE charts with Codex. Plan posted to mailbox
+  (also relayed by user directly): parity split of pending map positions (Codex ODD incl.
+  in-flight k6/F6; me EVEN), canonical invocation templates requested (BLOCKING my start),
+  thread caps 48/48 (<=100 total), single-writer ledger (Codex; I post manifest+SHA rows,
+  tagged source=claude), symmetric spot-verification, hard-row 2-strikes stop rule.
+- ON CODEX TEMPLATE POST: claim even-list, launch first two EVEN charts (background, 48 threads),
+  verify exact_ok myself, post rows. Batch work now shares tick priority with Assembly.lean.
+- Scalar wrap targets confirmed for Assembly typing: netDW_assembly (N eta tau s) needs
+  htau: 5*tau = N - 25*eta/N and hrs: sum max(s_i - tau) 0 <= (1+25/N)*eta, gives
+  sum max(s_i) tau <= N + eta (NOTE: rowSum must be defined as sum of WIDTH-CLAMPED loads
+  max(s_i, tau) for L=5 — carry into main gap-fill review). gersh_Lgt5_of_bankL (R N eta L)
+  pure scalar. Main 3-gap reply + sibling 4.4 pending next tick.
+
+
+## TICK NOTES (2026-07-04T02:22Z) — Assembly architecture DECIDED (probe)
+- PROBE: `import Erdos23Delta0.CertGraph` FAILS under lake env lean (no search-path entry) =>
+  ASSEMBLY LAYER GOES INTO CertGraph.lean TAIL (single-file pattern, 7th layer), copying in
+  netDW_assembly (+max_shift dep) from BranchAInterface.lean and gersh_Lgt5_of_bankL
+  (+bankedUPO_implies_gersh dep if needed) from BankL.lean (~60 lines, Mathlib-only deps).
+  Final FC PR packaging may refactor to a proper lake root later; NOT now.
+- NEXT TICK ORDER: (1) main 3-gap reply -> extract, gate, then TYPE Assembly layer into
+  CertGraph tail (draft archived at problems/23/writeup/ASSEMBLY_LEAN_DRAFT_GPTPRO.lean.txt,
+  flags F1-F3 in header; scalar wrap notes in 02:08Z tick note); (2) Codex co-work: on
+  template post, claim EVEN pending charts + launch first two (48 threads); check mailbox
+  FIRST (user relaying plan directly). (3) sibling 4.4 extract-queue + retask.
+- Mailbox marker 1696415 (no reply yet at 02:20Z).
+
+
+## TICK NOTES (2026-07-04T03:10Z) — ASSEMBLY LAYER GREEN (stages 1+2); Bank0 discharge live
+- LEAN MILESTONE: CertGraph.lean now carries the COMPLETE top-level assembly, true green
+  zero-warning, forbidden tokens 0: stage-1 (etaQ/rhoQ/tauQ, etaNonneg_of_bank0 consuming
+  bank0_of_maxcut, netDW_assembly + gersh_Lgt5_of_bankL scalar copies) + stage-2 (IsMaxCut/
+  TriangleFree/RowCert/RowDB/RowDBFacts, RowGershBound/XMask/positiveMask/C5RS,
+  sum_max_eq_XMask_positiveMask, XMask_univ_eq_rowSum_sub_5tau + eta_tau_identity +
+  fullMaskBound_of_odlFull [F1 RESOLVED: field dropped, derived], BranchAInputs {hLen,hNpos,
+  etaNonneg,a1Proper,odlFull} -> c5RS trichotomy -> gersh_L5; BranchBInputs -> gersh_Lgt5;
+  Delta0Inputs -> all_rows_gersh; GammaBetaFacts (TYPE-valued) -> beta_bound_of_gamma;
+  GoodCutData/CertBundles/GoodCutPackage; SimpleGraphBridge -> erdos23_delta0_simpleGraph).
+  ADAPTATIONS: Prop-with-data de-Propped (large elimination); dup quantities skipped;
+  sum-in -> sum-mem; extends-after-colon syntax; unfold C5RS before rw.
+- SCAFFOLDING DEBT (recorded): BConnected/GammaMinimalConnected = True stubs; upgrade +
+  consumption story = main's current task (existence-provider module: real defs,
+  GammaBetaFacts providers from green Gamma machinery, SimpleGraphBridge constructor via
+  Fintype.equivFin, Skeleton top statement). GPT raw gap-fill lives in-thread (msg n=13).
+- IN FLIGHT: main = existence-provider module; sibling = 4.5+ (4.4 queued: 4589c).
+  Codex: NO reply yet to co-work plan (marker 1696415) — if still silent next tick, NUDGE
+  via mailbox + ask user to re-relay.
+- LEAN NEXT: on main reply: type provider module. Else: LensGates checker or Seed3RouteTree.
+- P(math)~89, P(Lean)~90.
