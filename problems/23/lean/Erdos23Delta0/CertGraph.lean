@@ -1178,5 +1178,36 @@ theorem peel_bank_transfer (G : GraphData) (c : CutData)
   exact le_trans hIH (Nat.pow_le_pow_left
     (Nat.le_of_lt (checkPeel_nlt G c bads p h)) 2)
 
+/-! ### Bank0 cross certificate: the partition + CrossCap dichotomy bundle.
+Combines the B2 corridor partition (which certifies a ν₀-negative corridor)
+with the B3 CrossCap capacity certificate on that same corridor; a passing
+bundle contradicts max-cut switch nonnegativity outright. This is the `cross`
+constructor payload of the Bank0 assembly dispatch. -/
+
+structure Bank0CrossCert where
+  partition : CorridorPartitionCert
+  crossCap : CrossCapCert
+deriving Repr
+
+/-- The bundle check: partition valid, the CrossCap corridor is exactly the
+    partition's claimed negative corridor, and the capacity check passes. -/
+def checkBank0Cross (G : GraphData) (c : CutData) (atoms : List AtomData)
+    (D : Nat) (w : Bank0CrossCert) : Bool :=
+  checkCorridorPartition G atoms D w.partition &&
+  decide (w.partition.corridors[w.partition.negIdx]? = some w.crossCap.corridor) &&
+  checkCrossCap G c atoms D w.crossCap
+
+/-- BANK0 CROSS SOUNDNESS: a passing bundle refutes max-cut — under max-cut
+    no such configuration exists (the assembly derives its inequality from
+    False). -/
+theorem bank0Cross_sound (G : GraphData) (c : CutData)
+    (atoms : List AtomData) (D : Nat) (w : Bank0CrossCert)
+    (h : checkBank0Cross G c atoms D w = true)
+    (hmax : ∀ S : List Nat, 0 ≤ sigma G c S) : False := by
+  unfold checkBank0Cross at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  exact partition_crossCap_sound G c atoms D w.partition w.crossCap
+    h.1.1 h.1.2 h.2 hmax
+
 end CertGraph
 end Erdos23Delta0

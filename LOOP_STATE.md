@@ -356,3 +356,19 @@
 - IN FLIGHT: main = q=3 completeness paper section; sibling = 3.8+ series.
 - LEAN NEXT: Bank0 Assembly skeleton (all contracts + audit fixes in hand; use RowDBFactsAll5,
   GammaMinimalConnected G c, PeelPreservesFacts extended, IsMaxCut structure form).
+
+
+## TICK NOTES (2026-07-05T08:50Z) — batch 10/108; cross payload green
+- Batch 10/108 (k6/F1 NEW highspy_basis_exact method — I reverified personally, SHA+exact
+  PASS; k5/F2; k6/B0 no-repair). Method ACCEPTED as standard alongside Markowitz+modular.
+  MDS PARKED w/ provenance (thread c/6a44c764, Slack-CAGE era, no live consumer).
+- LEAN: Bank0CrossCert wrapper GREEN (checkBank0Cross = partition + corridor-selection +
+  crossCap; bank0Cross_sound => False under max-cut). CertGraph constructor payload status:
+  bankBlocks (B6+Bank0Algebra) GREEN, cross GREEN, peel (B10 graph-side) GREEN;
+  REMAINING for Assembly: GlobalC5Cert checker, NCHBankCert wrapper, BankBlockCoverCert
+  (blocks->global composition w/ bads<->badCount linkage), then Bank0Cert inductive +
+  checkBank0Cert dispatch + Bank0Statement + bank0_all.
+- q=3 paper section landed on main (14978c — extraction at assembly). Main retask NEXT TICK
+  (queue: BankBlockCoverCert bads<->badCount linkage detail if fiddly; else FAQ 51+ or
+  O5/O6 artifact audit when they land). Sibling 3.8+ status: check next tick.
+- Marker 1668917. EXTRACTION QUEUE += main q=3 section (14978c).
