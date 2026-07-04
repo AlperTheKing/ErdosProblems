@@ -465,3 +465,17 @@
 - Sibling: regenerated section status unknown — CHECK NEXT TICK (was 3.9 regen after stub).
 - LEAN NEXT: on SigmaChain-provider landing, type Ext + badCount_Ext + the equivalence +
   sigmaChain_of_isMaxCut_peel; then Bank0 is fully self-contained modulo Branch-A consumption.
+
+
+## TICK NOTES (2026-07-05T15:10Z) — SigmaChain contracted; Bank0 closure on paper
+- SIGMACHAIN PROVIDER archived (LEAN_CHECKER_DESIGN tail): extendCut (range-map, idxOf?,
+  parity xor vs SMALL root side), badCount_extendCut_eq (kept-kept bijection + always-blue
+  appendage via P5), sigmaNonneg <-> BadCountMinimal (symmDiff flips), transfer chain,
+  SigmaChain_of_sigmaNonneg (structural recursion). NOTE: PeelData needs +rootSmallIdx field
+  + checker conjunct at typing.
+- LEAN NEXT TICK (headline): TYPE the SigmaChain chain into CertGraph (~200 lines: idxOf? +
+  extSide/extendCut + validity + badCount_Ext + sides-agreement + equivalence + transfer +
+  provider). Then Bank0 = SELF-CONTAINED from IsMaxCut + checks. After: Branch-A consumption
+  (etaNonneg edge) + Assembly.lean per top-level contract.
+- Main = Lean-architecture paper section (in flight). Sibling = post-stub regen (CHECK).
+  Batch 17/108, marker 1681172. FAQ 51+ + q=3 section + sections 2.2-3.8 in extraction queue.
