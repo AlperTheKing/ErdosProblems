@@ -294,3 +294,20 @@
 - Codex: batch 6/108 (k8/G3 multi-repair exact increments, k5/G3 no-repair); ledger v4.
   Marker 1654861.
 - LEAN NEXT TICK: Peel layer + GoodCut/Assembly skeletons WITH audit verdicts in hand.
+
+
+## TICK NOTES (2026-07-05T05:20Z) — 50-defect audit in; typing shield complete
+- CROSS-CONTRACT AUDIT archived (50 defects + resolutions, LEAN_CHECKER_DESIGN tail). TOP-10
+  type-critical: GammaMinimalConnected G c (rows dropped); RowDBFactsAll5 vs General;
+  BranchAInputs.etaNonneg (not bank0); Delta0Inputs.etaNonneg global; PeelPreservesFacts +=
+  hGraphSmall/hCutSmall + All5 rows; canonical CompletedSwitchCert (+oldBad/newBlue fields at
+  next touch); trace types distinct; Seed3Route.toODL vs toBank0 + route TREE provider;
+  exists_good_cut connected-only; grouped-generator provenance (EQGroupedSlacks_nonneg).
+  MY OVERRIDE: List Nat signatures stay (green code wins over Finset proposal).
+- NEW OBLIGATION (audit 36-39): ODL provider = Seed3RouteTree (internal nodes NOT_SATURATED/
+  PRUNABLE/FOUR_DOOR, leaves EQ/SIB/NO_OVERFULL/NEG_SWITCH, well-founded measure) — main
+  designing now. DiffSkip boundary-cover + FaceCert format posted to Codex (audit 41/42).
+- Batch 7/108; k6/G3 repaired row personally reverified (3rd). Marker 1657699.
+- LEAN NEXT TICK: type Peel layer INTO CertGraph with AUDITED signatures (PeelPreservesFacts
+  extended form; GammaMinimalConnected G c; RowDBFactsAll5 for Bank0 side); then Assembly
+  skeleton. Sibling: check + retask (3.7+ status unknown this tick).

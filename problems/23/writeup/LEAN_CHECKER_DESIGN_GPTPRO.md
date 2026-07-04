@@ -653,3 +653,60 @@ component reduction only (BConnected awkward); n=1 trivial (one-vertex blue grap
 Gamma=0); m=0 immediate; final beta step MUST use beta_eq_badCount_of_isMaxCut (never an
 arbitrary cut).
 => LAST imported reduction CONTRACTED. Nothing in the program remains design-open.
+
+
+# ===== CROSS-CONTRACT CONSISTENCY AUDIT — 50 DEFECTS + RESOLUTIONS (main, 2026-07-05) =====
+# BINDING for all typing. Full text in-thread; numbered summary with resolutions here.
+# MY OVERRIDE (items 11-12): audit proposed Finset Nat signatures for dB/dM/sigma/sNum/
+# pressureNum/nu0Num — but the GREEN CertGraph.lean uses List Nat throughout. VERIFIED CODE
+# WINS: List signatures are canonical; Finset wrappers only if assembly genuinely needs them.
+
+TYPE-CRITICAL TOP 10 (patch BEFORE typing Peel/Assembly):
+ 1 GammaMinimalConnected G c (row-INDEPENDENT, gammaOf from distances) — drop the rows arg
+   everywhere; nu_K users add CompletedSwitchSound + flip-BConnected hypotheses.
+ 2 RowDBFactsAll5 extends RowDBFactsGeneral w/ allBadLengthFive — Bank0Statement uses All5;
+   GoodCutData/exists_good_cut use General (l >= 5 only).
+ 3 BranchAInputs.bank0 REPLACED by etaNonneg : 0 <= etaQ (global eta can come from Bank0 OR
+   any Branch-B bankL row: eta_nonneg_of_bank0 / eta_nonneg_of_bankL / m=0 trivial).
+ 4 Delta0Inputs gains global etaNonneg field; provider fills BranchAInputs.etaNonneg from it.
+ 5 PeelPreservesFacts must ALSO carry hGraphSmall/hCutSmall (checkGraph/checkCut on smallG)
+   and rowsSmall : RowDBFactsAll5 (not General) — IH needs all of these.
+ 6 CompletedSwitchCert single canonical structure (S, completionTrace, boundaries, sigmaVal,
+   oldBad, newBlue, oldLenSq, newLenSq, KVal, nuVal, nuKVal, flipCutValid, flipBConnected).
+   NOTE: my green version lacks oldBad/newBlue and uses S : List Nat — add the two payload
+   fields at next touch, keep List.
+ 7 BankClosureTrace (C1-C4) vs SwitchCompletionTrace (Op1-Op5) never interchangeable.
+ 8 Seed3Route consumers split: Seed3Route.toODL vs Seed3Route.toBank0 (NO_OVERFULL means
+   I<=N in ODL but routes BankBlock in Bank0); NOT_SATURATED/FOUR_DOOR are REROUTES not
+   terminal proofs — ODL provider must be stated over a saturation/route TREE (new design
+   item, tasked); PRUNABLE requires ambientPrune then recursion, never direct ODL.
+ 9 exists_good_cut_connected + component_reduction separate; never call connected version on
+   possibly-disconnected data; BConnected n=0 handled outside; existence needs no
+   triangle-free (only length bound does).
+10 Grouped EQ/SIB generators (UV-T,...,U_A,U_B,B0; SIB G12/G23/GV/GZ) need PROVENANCE before
+   use as slacks: EQGroupedSlacks_nonneg / SIBGroupedSlacks_nonneg imported from CERT1
+   machinery (Option A); EQCone vs SIBCone separate structures.
+
+OTHER RESOLUTIONS (11-50 condensed): 13 T1/T2/Bank0 numerator field names distinct
+(kappaNum/hallDemandNum/sNumCorridor/nu0NumVal); 17 DiffSkipCert replaces RadialSkipCert in
+RegionCert (skip constructor takes DiffSkipCert; derivative fields removed pass 1);
+18 Gsharp = H_G * Lambda^(2-d) everywhere (never s^(2-d)); 19 all O14 certs over Q (no real
+deriv pass 1; density theorem later if needed); 20 sound_height1 needs EQCone hypothesis
+(weights >= 1 + F_j >= 0; grouped gens derived); 22 EQODL1_of_cover calls EQCert1_eta_ge_one
+internally (CERT1 supplies eta(wbar) >= 1); 23 BranchAInputs.odlFull is AMBIENT eta (pruned
+providers go through ambientPrune); 24 supportRowSum + AmbientExcess defs; 25 RowInDB
+abstract membership predicate (rep-independent); 26 RowCert {badId, verts, nodup} with
+.length = verts.length (Row5 via subtype/coercion); 27 rho_nonneg_of_len_gt5 +
+eta_nonneg_of_bankL cast lemmas; 28 delta0_inputs_of_cert_bundles(hGood, hBundles) w/ length
+split from rowsFacts.length_ge_five; 29 gamma_bound_of_all_rows_gersh takes NO eta/Bank0
+(anti-circularity); 30 gamma_lower_bound needs only l >= 5; 33 final beta step via
+beta_eq_badCount_of_isMaxCut always; 34 SimpleGraph bridge via Fintype.equivFin; 35 carry
+hGraph/hCut at top level, structures assume-or-check (never both absent); 40 RegionCert.sound
+returns 0 <= Phat with empty case via False.elim internally; 41 DiffSkip RIGHT boundary cert
+= BoundaryCoverCert covering the boundary IMAGE (s=1/2 point may fall in a DIFFERENT
+dominance region — use global near-band cover or reclassified region cert, never a bare
+same-(k,a) pointer); 42 LEFT skip carries explicit FaceCert for P(0,u) >= 0; 43 CubeChart
+{freeMu, fixedMu, rhoFree} — Bernstein basis after fixedMu substitution; 44 per-cert declared
+degrees (degreeX/Mu/Rho), checker verifies <= declared (no hardcoded EQ 15 / SIB 16);
+47 IsMaxCut = badCount-minimal structure {valid, min_bad} (8); 49 BConnected def guards n=0;
+50 gammaMinConnected_exists needs no triangle-free.
