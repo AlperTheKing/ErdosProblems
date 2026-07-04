@@ -343,3 +343,16 @@
   Nat.strong_induction_on) — GlobalC5/NCHBank sub-checkers stubbed as separate Bool checkers
   routed through existing machinery (template cuts via checkBankBlock-style counting; nch as
   wrapper inductive). Marker 1657699 (no new Codex posts this tick).
+
+
+## TICK NOTES (2026-07-05T07:40Z) — micro example GATED clean
+- ROUTE-TREE MICRO EXAMPLE archived + Fraction-gated ALL PASS (SEED3_COMPLETENESS tail):
+  N=21 m=12 eta=141/25, overfull row I=64/3, absorb(door 79, excess equal) -> prune(H={7,10},
+  T={7}, D=15, defect 15, increment exactly 1) -> EQ leaf (identity contraction, margin
+  323/75); final 64/3 <= 666/25, margin 398/75. Validation instance for O13/route-tree
+  emissions + Lean Seed3RouteTree module.
+- Codex MDS ASK ruled: scope-before-compute (park if superseded; run only for a named live
+  node + exact invocation). Marker 1659447.
+- IN FLIGHT: main = q=3 completeness paper section; sibling = 3.8+ series.
+- LEAN NEXT: Bank0 Assembly skeleton (all contracts + audit fixes in hand; use RowDBFactsAll5,
+  GammaMinimalConnected G c, PeelPreservesFacts extended, IsMaxCut structure form).

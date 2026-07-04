@@ -207,3 +207,28 @@ excess-link ConeCert + smaller rank; root = first candidate entering the route (
 saturated — tree supports saturation repair internally, serving both the formal
 saturated-core theorem and the practical emitter pipeline).
 => ODL PROVIDER ARCHITECTURE COMPLETE. Next validation step: hand-verified micro example.
+
+
+# ===== ROUTE-TREE MICRO EXAMPLE (main, 2026-07-05) — CLAUDE FRACTION-GATED: ALL PASS =====
+INSTANCE: EQ seed quotient, all 10 bag weights 2, + pendant bag 10 (weight 1, class V1,
+blue edge 7-10, on no row). N = 21, m = 12 (doors 19/27/79 each 2*2), eta = 141/25.
+Active row Q = (7,5,8,6,9) = R8. Height-2 loads s7=s9=4, s5=s6=68/15, s8=64/15;
+I(Q) = 64/3 (OVERFULL: I-N = 1/3 > 0 — example proves ambient ODL despite local overfullness).
+TREE: root(rank 2) -> absorb missing door 79 (rank 1) -> prune H={7,10} T={7} (rank 0) ->
+EQ leaf (identity contraction).
+- ABSORB: MissingDoor 79 witness (7,5,8,6,9); child support UNCHANGED; doors {19,27} ->
+  {19,27,79}; 5 rows of door 79 added; E(S0) = E(S1) = -398/75 (excess-link cone base 0).
+- PRUNE (Version A pure): only edge 10-rest is 7-10 (separation OK); s_H(Q cap T) = 0;
+  |H|w - |T|w = 1; D = 15: loadNum 0, sizeNum 15, defect 15. E(S2) = -323/75;
+  E(S2) - E(S1) = 1 = |H|-|T|-s_H EXACTLY (AmbientPrune link exact).
+- EQ LEAF: identity contractMap, singleton fibers, weights all 2, doors map identically to
+  {19,27,79} (weight 4 each, m = 12), 11 canonical templates identical; leaf check
+  64/3 <= 641/25 (1600 <= 1923, margin 323/75); seed-height-2 excess 4/3 <= eta = 141/25
+  (100 <= 423).
+- COMPOSITION: E(S0) <= 0; root support = full quotient (|S0|w = N = 21);
+  supportRowSum(root) = rowSum = 64/3; FINAL 64/3 <= 666/25 (1600 <= 1998), margin 398/75.
+CLAUDE GATE (2026-07-05): height-1 loads re-derived from the 11 templates door-by-door
+(s5 = 1 + 2/3 + 3/5 = 34/15, s8 = 2/3 + 2/3 + 4/5 = 32/15, s6 = 34/15, s7 = s9 = 2) —
+MATCH; all excess fractions, the prune increment, both leaf inequalities, and the final
+margin re-computed exactly — ALL PASS, zero discrepancies. This is the emitter/checker
+validation instance for O13/route-tree emissions and the Lean Seed3RouteTree module.
