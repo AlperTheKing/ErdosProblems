@@ -248,3 +248,48 @@ vertex-only shortcut refuted). PENDING — EQ 3x11 + generated attachment charts
 attachment charts; SIB V2 twin easiest, SIB V3 one-path hardest.
 IMPLEMENTATION ORDER: EQ V2 first (tau0 calibration), then EQ V1, EQ V3, then SIB V2/V1/V3.
 
+
+# ===== ASSEMBLY THEOREM REVIEW VERDICTS (main thread, 2026-07-04) =====
+DECISION A: RowsComplete as Prop hypothesis for the first sorry-free pass. Bundle
+RowDBFacts (G c rows) : Prop {rowsSound, rowsComplete, allBadLengthFive, atomDBSound}.
+Bank0Statement n := forall G c rows cert, G.n = n -> checkGraph -> checkCut ->
+checkBank0Cert -> TriangleFree -> IsMaxCut -> GammaMinimal -> BConnected ->
+RowDBFacts -> 25 * badCount <= n^2; bank0_all (strong-induction step) closed by
+Nat.strong_induction_on. UPGRADE PATH: rowDBFacts_of_check (checkRowDB = true ->
+RowDBFacts) as drop-in; Dist4Cert {witnessRows, noLen1/2/3 certs} lives inside the
+row-db checker (checkDist4 -> blueDist = 4), NOT in the first statement. Cost low
+iff all modules depend only on RowDBFacts.
+DECISION B: IsMaxCut G c := checkCut && forall c' valid, badCount c <= badCount c'
+(over ALL side lists, NO connectedness) — CONFIRMED. CORRECTION: GammaMinimal must
+be the CONNECTED version: forall c' valid, badCount c' = badCount c -> BConnected c'
+-> gammaOf c <= gammaOf c' (all-max-cuts version is STRONGER than the graph setup
+guarantees). Consequence: any SwitchCert invoking gamma-minimality on a flip must
+prove BConnected (flipCut c S) (completed-switch validity theorem supplies this).
+FLIP-COUNTING LEMMA (standalone, Int): badCount(flipCut c S) - badCount(c) =
+dB(c,S) - dM(c,S). Proof: partition edges into internal-S / internal-complement /
+crossing-blue / crossing-bad; non-crossing edges keep status (both endpoints flip
+together or neither); crossing blue <-> bad swap. Lean route: pointwise
+isBad_flip_iff (if crosses then IsBlue else IsBad) + INDICATOR SUMS
+(badCount = sum over edges of if-indicator) — easier than card_filter chains.
+Then sigma_nonneg_of_maxcut: flipCut valid + IsMaxCut.2 applied to flip + the
+counting identity => 0 <= dB - dM.
+DECISION C: THREE ASSEMBLY LAYERS with provider theorems hiding cert internals:
+ (1) BranchAInputs (G c rows Q) : Prop {hLen : Q.length = 5; bank0 : 25m <= N^2;
+     a1Proper : forall nonempty proper A, XMask <= (25/N + 2/3) eta;
+     odlFull : rowSum <= N + eta}. c5RS_of_branchA_inputs: cases P = positiveMask:
+     P = empty -> bank0 gives 0 <= eta; P proper nonempty -> a1Proper + bank0 lift;
+     P = univ -> odlFull. Then gersh_L5_of_branchA_inputs via netDW_assembly.
+ (2) BranchBInputs {hLen : 5 < L; bankL : 2 rho_L <= eta; bankedUPO : rowSum <=
+     N + eta/2 - rho_L}. gersh_Lgt5: eta >= 0 from bankL + rho >= 0 (nlinarith),
+     then nlinarith. NOTE: bankL hypothesis REQUIRED (never bankedUPO -> gersh
+     bare); align existing bankedUPO_implies_gersh with 2 rho_L <= eta form.
+ (3) Delta0Inputs {branchA : forall Q in rows, len = 5 -> BranchAInputs;
+     branchB : forall Q, 5 < len -> BranchBInputs}; row_length_ge_five from
+     TriangleFree + RowSound; all_rows_gersh by cases on length; then
+     delta0_from_gersh (hGersh + GershImpliesDelta0 reduction) =>
+     erdos23_delta0 : beta <= N^2/25.
+ PROVIDER THEOREMS (later): branchA_inputs_of_certs, branchB_inputs_of_certs,
+ odl_full_from_odl_tree, bank0_from_cert — final assembly stays stable while
+ Codex emits/repairs certificates. eta := (N^2 - 25 badCount)/25 : Q;
+ rho L := (L^2 - 25)/50 : Q; RowGershBound := rowSum <= N + eta.
+

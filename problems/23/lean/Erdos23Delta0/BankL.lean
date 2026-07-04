@@ -82,5 +82,14 @@ theorem bankedUPO_implies_gersh (R N eta L : ℚ) (hL : 5 ≤ L) (heta : 0 ≤ e
     (h : R ≤ N + eta/2 - (L^2 - 25)/50) : R ≤ N + eta := by
   nlinarith
 
+/-- Assembly-review form (Decision C.4): the Bank-L reserve hypothesis
+    2·ρ_L ≤ η replaces a bare η ≥ 0 — for L > 5 it derives η ≥ 0 from
+    ρ_L > 0, and the Banked-UPO bound then gives GERSH. -/
+theorem gersh_Lgt5_of_bankL (R N eta L : ℚ) (hL : 5 < L)
+    (hbankL : 2 * ((L^2 - 25)/50) ≤ eta)
+    (hupo : R ≤ N + eta/2 - (L^2 - 25)/50) : R ≤ N + eta := by
+  have hrho : 0 < (L^2 - 25)/50 := by nlinarith
+  nlinarith
+
 end BankL
 end Erdos23Delta0
