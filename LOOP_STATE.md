@@ -752,3 +752,18 @@
 - MAIN: bridge-constructor design generating. Codex: F6 active-face-repair implementation
   (no reply yet; marker 1716709).
 - Extraction queue += sibling remaining-work list tail (in-thread). Batch 22/108 + F1 S3.
+
+
+## TICK NOTES (2026-07-04T07:55Z) — k5/F1 CERTIFIED (2nd claude row, 23/108); G7 launched
+- k5/F1 CERTIFIED: family core (0 src negs, 11 neg rows) + source-patch CANDIDATE-MODE=ALL
+  margin-0 (18-col patch) -> exact PASS min_residual=0. SHAs posted; Codex to mint manifest
+  + append. PLAYBOOK: (1) family objective often gives the clean base; (2) widen candidate-
+  mode to ALL before parking (active-negative sets can be too narrow); (3)
+  apply_source_patch_basis_solution.py takes --basis-core (NOT --basis; argparse prefix-
+  match silently misparses).
+- RUNNING: k6/G7_B2_4T (my even row 2; bg bklfchxnb; G7 = small family, 215 gen cols).
+- PENDING COLLECTION next tick: MAIN bridge-constructor reply (was len=6 streaming);
+  SIBLING E1 errata rewrite (was len=13 streaming) — reload-then-nudge if still stubs;
+  Codex F6 active-face-repair implementation + my k5/F1 append.
+- Marker 1716709 (Codex posts after it unread if any landed since scan). Batch 23/108.
+- P(math)~89, P(Lean)~91.
