@@ -146,3 +146,57 @@ IMPLEMENTATION ORDER: GraphData/CutData/boundaries -> Rows/RowAtoms/pressure ->
    BankBlocks -> CorridorPartition -> CrossCap -> ClosureTrace -> LensGates ->
    Assembly.
 
+
+# ===== O5: T=1 REC FORMAL ARTIFACT SPEC (main thread, 2026-07-04) =====
+PURPOSE: T1HallCert(H,t) => D_t(U) <= |U| for all U in H minus t => NCH-def T=1 input
+s_H(t) = D_t(H minus t) <= |H| - 1. Non-circular: row data + switch calculus + REC
+capacity + optional C5-label propagation only.
+ARTIFACT INVENTORY (per instance):
+ - T1Instance {G: GraphData, cut: CutData, H: Finset Nat, root t, badEdges, rows,
+   atoms, D} — checker: t in H, H in V(G), rows/atoms inside H or declared terminal.
+ - TerminalAssign {atomId, badNeighbor}: atom row contains t as ENDPOINT, bad edge
+   (t,a), a in H minus t. Terminal counting: grouped terminalWeightByNeighbor
+   (integer numerators), checker verifies terminalWeight(a) <= D per neighbor.
+ - RECCert per nonterminal root blue edge e = tu: packets: List RECPacketCert.
+ - RECPacketCert {U, switch: SwitchCert, kappaNum (= D*kappa_e(U)), alpha, beta,
+   residual: ConeCert}: cleared identity L(D - kappaNum) = A sigma(S_e) +
+   B nuK(S_e) + R_e, A,B >= 0, R_e >= 0 (L clears rationals).
+ - SwitchCert {S, completion: ClosureTrace, blueBoundary, badBoundary, sigmaVal,
+   oldBad, newBlue, oldLenSq, newLenSq, nuVal, KVal, nuKVal}: checker RECOMPUTES
+   boundaries + sigma; K = sum l(g)^2 over dM(S) (= 25|dM| in all-l5); new-length
+   witnesses lambda(e) >= 5; nu = newLenSq - oldLenSq; nuK = nu + K sigma.
+   Soundness: sigma >= 0 (max-cut), nuK >= 0 (Gamma-minimality).
+ - Residual ConeCert slack basis: sigma(S_e), nuK(S_e), terminal-closure,
+   noncrossing, true-twin, anchor-exclusion, protected-cell residuals, row-atom
+   nonneg. Integer arithmetic for finite instances.
+ - LabelTrace {label: List (Nat x Fin 5), edgeChecks, rowChecks}: blue/bad edges
+   to adjacent labels, rows propagate, overlaps agree; used ONLY in the equality
+   escape — global label on assumed-non-C5-hom H = contradiction; proper-subclosure
+   label routes to pruning/corridor.
+N-PARAMETRIC VS FINITE: soundness theorem fully generic over GraphData (Lean);
+artifacts per-instance literal data (no graph search in Lean); optional parametric
+quotient form via x_i = w_i - 1 >= 0 ConeCerts for weighted families.
+CHECKER OBLIGATIONS IN ORDER: C0 graph/cut/row-database sanity; C1 row
+classification (terminal vs unique-root-edge) => D_t(U) = D_t^term(U) +
+sum_e kappa_e(U) (3.1); C2 terminal counting <= D per neighbor; C3 packet coverage
+(explicit closed-subset list OR zeta-compressed table w/ recurrence check);
+C4 switch legality (trace replay, t excluded, boundaries recomputed, sigma/nu/K/nuK
+recomputed, length witnesses); C5 REC integer identity + A,B,R >= 0 =>
+kappa_e(U) <= 1; C6 counting consistency D_t(U) <= #(bad nbrs in U) + #(blue nbrs
+in U) <= |U| (graph simplicity: one edge per vertex pair to t); C7 label escape
+(only place C5-labels appear).
+ASSEMBLY LEMMA (T1HallCert.sound): check = true + (forall S, sigma(S) >= 0) +
+(forall S, nuK(S) >= 0) + tri-free + all-l5 row-db soundness (+ non-C5-hom if label
+branch used) => D_t(U) <= |U| forall U => s_H(t) <= |H| - 1.
+MICRO-EXAMPLE (EMISSION TEMPLATE — I VERIFIED EVERY FIELD EXACTLY BY HAND):
+ C5 graph 0-1-4-2-3-0: edges (2,3),(3,0),(0,1),(1,4),(2,4); sides 0:0,1:1,2:0,3:1,
+ 4:0; blue 23,30,01,14; bad 24; single row P = (2,3,0,1,4); |cyc| = 1, D = 1;
+ root t = 0; U = {1,2,3,4}; root edge e = (0,1); kappaNum = 1.
+ Switch S = {1,4}: dB = {01}, dM = {24}, sigma = 0; K = 25; flip makes 01 bad with
+ length-5 witness 0-3-2-4-1-0 => newLenSq = 25, nu = 0, nuK = 0.
+ REC: 1 - kappa = 0 = 0*sigma + 0*nuK + 0. Fields: alpha = beta = residual = 0.
+ Label trace: phi = (0,1,4,2,3) -> (0,1,2,3,4): all five edges adjacent-label. OK.
+FINAL CODEX CHECKLIST: header, terminal assignments, root-edge list, per-edge
+(packets/zeta, kappaNum, switch, sigma/nu/K/nuK, REC ConeCert), counting
+consistency cert, optional label trace, optional shadow-descent chain.
+
