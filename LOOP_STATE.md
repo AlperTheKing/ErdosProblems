@@ -683,3 +683,19 @@
   k6/F6 margin-0 Optimal -> exact chain RUNNING (bg bp7sps996). Marker 1711296.
 - IN FLIGHT: main = hard-row structural consult (float-dust vs empty rule); sibling = 4.6.
 - P(math)~89, P(Lean)~91.
+
+
+## TICK NOTES (2026-07-04T05:20Z) — F6 parked (strategy 6 failed); consult addendum sent
+- k6/F6: margin-0 basis LARGE (1414/1010) -> exact replay exact_ok=FALSE (89 neg residuals,
+  3 neg coeffs, ~3000-bit min residual) = HIGH-DIM DEGENERATE FACE, not margin dust. Parked;
+  designer consult addendum sent (options: exact rational simplex on active subsystem /
+  exact Bland from float basis / eps-lexicographic perturbation / weak-cert form).
+  DECISION RULE emerging: thin-face rows certify via margin-0 IFF the optimal basis is SMALL
+  (F2: 60 cols PASS; F6: 1414 cols FAIL).
+- k6/F2 remains CERTIFIED (Codex append + manifest variant pending). Even-list still pending
+  from Codex. No new batch rows claimable until list lands.
+- NEXT TICK: (1) main reply (hard-row recipe + earlier decision-rule questions) -> extract,
+  act (F6 per recipe); (2) Codex scan (even-list, manifest variant, its odd-slice progress
+  incl. k5/G4); (3) sibling 4.6; (4) Lean idle increment if main slow: LensGates checker
+  contract from WRITEUP_REDTEAM archive.
+- Marker 1711296. P(math)~89, P(Lean)~91. Batch 20/108 (+F6 parked-hard).

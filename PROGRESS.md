@@ -2202,3 +2202,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T04:50Z] V LEAN | DID: Assembly stage-3 typed+built FIRST TRY | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0; BluePath/BConnected REAL defs replace True-stubs; GammaMinimalConnected real witness structure; ExistsGoodCutConnectedProvider + ComponentReductionProvider + erdos23_delta0 top wrapper GREEN | D: scaffolding debt cleared
 [2026-07-04T04:52Z] V BATCH | DID: k6/F6 margin-0 probe Optimal (1414 basic, 0 neg, -7.8e-11 float noise) | RESULT: F2 recipe reproduces; exact chain bp7sps996 running (384-prime CRT dim 1414) | D: none
 [2026-07-04T04:53Z] V THREADS | DID: sibling 4.5 landed (13276c, queued) -> retasked 4.6 | RESULT: send confirmed | D: none
+[2026-07-04T05:10Z] V BATCH | DID: k6/F6 margin-0 exact chain done | RESULT: exact_ok=FALSE (89 neg residuals, 3 neg coeffs, ~3000-bit min residual) — degenerate face, recipe insufficient; parked for designer (strategy 6) | D: F6 = the hard row
