@@ -327,3 +327,19 @@
   type the inductive with all five constructors but ROUTE globalC5/nch through existing
   checkers where possible; consult archived dispatch contract first.
 - EXTRACTION QUEUE += sibling 3.7 (3447c). Marker 1657699.
+
+
+## TICK NOTES (2026-07-05T06:45Z) — route-tree provider contracted
+- ODL ROUTE-TREE archived (SEED3_COMPLETENESS tail): Seed3RouteTree (5 leaves + absorb/prune),
+  AmbientExcess bookkeeping w/ excess-link ConeCerts (D-cleared) at every internal node,
+  structural recursion + checked rank decrease (audit metadata), prune Version A (pure) for
+  Lean / Version B (prune-and-close w/ BankClosureTrace) for emitters, ODLRouteInputs package,
+  Seed3RouteTree.sound + odl_full, distinct Bank0 consumer map, emission rules.
+- IN FLIGHT: main = route-tree MICRO EXAMPLE (absorb+prune+EQ leaf, exact numbers — I will
+  Fraction-gate every value on landing; it becomes the Codex emitter + Lean checker validation
+  instance). sibling = 3.8+ series. Codex = batch 7/108 + emptiness probes queue.
+- LEAN NEXT (with all contracts now in hand): Bank0 Assembly skeleton (Bank0Cert inductive +
+  checkBank0Cert dispatch + Bank0Statement w/ RowDBFactsAll5 + bank0_all via
+  Nat.strong_induction_on) — GlobalC5/NCHBank sub-checkers stubbed as separate Bool checkers
+  routed through existing machinery (template cuts via checkBankBlock-style counting; nch as
+  wrapper inductive). Marker 1657699 (no new Codex posts this tick).

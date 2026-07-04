@@ -156,3 +156,54 @@ FINAL WARNING (verbatim sense): role-profile hand bounds are unsound unless prov
 to true-twin neighborhood data or every overflow profile carries a non-survivor certificate.
 The width theorem is certificate-backed — this is the last honest form of Seed3-prime
 completeness.
+
+
+# ===== ODL SEED3 ROUTE-TREE PROVIDER (main thread, 2026-07-05) — FULL CONTRACT =====
+PURPOSE: classifier outputs NOT_SATURATED/PRUNABLE are reroutes, FOUR_DOOR exits to q>=4 —
+so the ODL provider is a FINITE ROUTE TREE proving ambient rowSum(Q) <= N + eta with eta
+ambient through all recursion.
+STATE: Seed3CoreState {support : VSet(List Nat), qut : C5QuotientData, activeRow, phase
+(saturating|saturated), rank : Nat (audit metadata; checker requires strict decrease but
+recursion is STRUCTURAL on the tree — rank prevents invalid cyclic route data)}.
+AMBIENT BOOKKEEPING: supportRowSum (support-local, ambient graph); AmbientExcess =
+supportRowSum - |S| - etaQ; CoreODLGoal = AmbientExcess <= 0; RootRepresentsRow:
+supportRowSum(root) = rowSum(Q); |root.support| <= N => root goal gives ambient ODL.
+TREE: inductive Seed3RouteTree = leafEQ(EQIsoCert) | leafSIB(SIBIsoCert) |
+leafNoOverfull(NoOverfullCert) | leafNegSwitch(NegSwitchCert) | leafFourDoor(FourDoorCert) |
+absorb(NotSaturatedCert, AbsorbLinkCert, child, subtree) |
+prune(PrunableCert, PruneLinkCert, child, saturationSubtree).
+ABSORB NODE: AbsorbLinkCert {parentSupport, childSupport, absorbedKind (missingDoor|
+missingBag), absorbedDoor/Bag, rowWitness, recomputeProof : QuotientRecomputeCert,
+supportProof, excessLink : ConeCert}. excessLink proves D*(AmbientExcess(child) -
+AmbientExcess(parent)) >= 0 — EXPLICIT, no informal harmlessness. Checker: witness valid +
+child = EXACT recomputed absorbed quotient + parent.phase = saturating + rank decrease +
+excessLink. Sound: child goal + link => parent goal.
+PRUNE NODE: PruneLinkCert {parentSupport, H, T, childSupport, separation, loadDefect
+ConeCert D(|H|-|T|) - D s_H(Q cap T) >= 0, recomputeProof, saturationProof :
+BankClosureTrace}. TWO CHILD VERSIONS: A pure prune (child = parent \ (H\T); simpler for
+Lean) | B prune-and-close (saturationProof verifies closure; easier for emitters) — both
+allowed with the excess-link chain AmbientExcess(parent) <= AmbientExcess(pureChild) <=
+AmbientExcess(child).
+LEAVES: EQ (checkEQIsoCert + EQBranchODLInputs => goal); SIB (SIB-S7 + SIB-AM);
+NO_OVERFULL (I_R <= |support| all active rows + etaNonneg => goal); NEG_SWITCH (sigma < 0
+OR sigma = 0 + nuK < 0 + flipBConnected; contradiction w/ maxcut/gamma-min => False.elim);
+FOUR_DOOR (leaf carries FourDoorCert only; FourMaskInputs lives in the GLOBAL provider
+package, not the leaf — q>=4 A1-5mask absorption applied by fourDoor_to_ODL).
+TERMINATION: checker structurally recursive on the tree (Lean-sufficient); rank checked
+strictly decreasing per internal node; recommended emitter rank = M*satDebt + supportSize
+(M > Nmax) but ANY strictly-decreasing Nat accepted (rank = audit metadata, not soundness).
+CHECKER: checkSeed3RouteTree dispatch per constructor (leaf checkers; internal: witness +
+link + rank + recurse).
+PROVIDER PACKAGE: ODLRouteInputs {etaNonneg, eqBranch, sibBranch, fourMask, maxCut,
+gammaMin (G c form), ambientRepresent}. SOUNDNESS: Seed3RouteTree.sound by tree recursion
+(7 cases). ROOT: Seed3RouteTree.odl_full: check + inputs + RootRepresentsRow + support in
+universe => rowSum <= N + etaQ.
+BANK0 MAP (distinct consumers): EQ -> EQ-CERT1; SIB -> SIB-CERT1; NO_OVERFULL -> BankBlock;
+NEG_SWITCH -> contradiction; PRUNABLE -> reduced core/BankBlock/NCHBank; NOT_SATURATED ->
+absorb+rerun; FOUR_DOOR -> BankBlock. Never reuse ODL conclusions for Bank0.
+EMISSION RULES: NOT_SATURATED => absorb node (never leaf); PRUNABLE => prune node;
+FOUR_DOOR => leaf; every internal node = witness + child quotient + recompute cert +
+excess-link ConeCert + smaller rank; root = first candidate entering the route (need not be
+saturated — tree supports saturation repair internally, serving both the formal
+saturated-core theorem and the practical emitter pipeline).
+=> ODL PROVIDER ARCHITECTURE COMPLETE. Next validation step: hand-verified micro example.
