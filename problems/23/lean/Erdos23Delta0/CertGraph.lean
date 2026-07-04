@@ -546,5 +546,73 @@ theorem negative_corridor_of_check (G : GraphData) (atoms : List AtomData)
     have := h.2
     simpa using this
 
+/-! ### Canon: completed switches (interface-canon items 1-2).
+The completion-trace step enums are data (replay semantics live in the trace
+module); the arithmetic and boundary checks are verified here against the
+graph, per the canon: boundaries RECOMPUTED, never trusted. -/
+
+/-- Switch-completion step kinds (canon item 2; replay semantics deferred). -/
+inductive SwitchCompletionStep
+  | OpSegment
+  | OpTerminal
+  | OpNoncross
+  | OpTwin
+  | OpFlat5
+deriving Repr, DecidableEq
+
+/-- Completion trace (data layer). -/
+structure SwitchCompletionTrace where
+  start : List Nat
+  steps : List SwitchCompletionStep
+  final : List Nat
+deriving Repr
+
+/-- The canonical completed-switch certificate (canon item 1). -/
+structure CompletedSwitchCert where
+  S : List Nat
+  completionTrace : SwitchCompletionTrace
+  blueBoundary : List (Nat × Nat)
+  badBoundary : List (Nat × Nat)
+  sigmaVal : Int
+  oldLenSq : Nat
+  newLenSq : Nat
+  KVal : Nat
+  nuVal : Int
+  nuKVal : Int
+  flipCutValid : Bool
+  flipBConnected : Bool
+deriving Repr
+
+/-- Boundary and arithmetic checks (canon: recompute, never trust):
+    declared boundaries match the recomputed filters, σ matches the count
+    difference, K = oldLenSq, ν = new − old, ν_K = ν + K·σ. -/
+def checkCompletedSwitch (G : GraphData) (c : CutData)
+    (w : CompletedSwitchCert) : Bool :=
+  decide (w.blueBoundary = G.edges.filter
+    (fun e => blueb G c e.1 e.2 && crossesSet w.S e)) &&
+  decide (w.badBoundary = G.edges.filter
+    (fun e => badb G c e.1 e.2 && crossesSet w.S e)) &&
+  decide (w.sigmaVal = (w.blueBoundary.length : Int) - w.badBoundary.length) &&
+  decide (w.KVal = w.oldLenSq) &&
+  decide (w.nuVal = (w.newLenSq : Int) - w.oldLenSq) &&
+  decide (w.nuKVal = w.nuVal + w.KVal * w.sigmaVal)
+
+/-- Fact extraction: a passing switch check pins σ to the graph-level value. -/
+theorem checkCompletedSwitch_sigma (G : GraphData) (c : CutData)
+    (w : CompletedSwitchCert) (h : checkCompletedSwitch G c w = true) :
+    w.sigmaVal = sigma G c w.S := by
+  unfold checkCompletedSwitch at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  unfold sigma dB dM
+  rw [h.2.2.1, h.1, h.2.1]
+
+/-- Fact extraction: the ν_K ledger identity. -/
+theorem checkCompletedSwitch_nuK (G : GraphData) (c : CutData)
+    (w : CompletedSwitchCert) (h : checkCompletedSwitch G c w = true) :
+    w.nuKVal = ((w.newLenSq : Int) - w.oldLenSq) + w.oldLenSq * w.sigmaVal := by
+  unfold checkCompletedSwitch at h
+  simp only [Bool.and_eq_true, decide_eq_true_eq] at h
+  rw [h.2.2.2.2.2, h.2.2.2.2.1, h.2.2.2.1]
+
 end CertGraph
 end Erdos23Delta0

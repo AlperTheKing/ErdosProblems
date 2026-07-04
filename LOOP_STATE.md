@@ -1,8 +1,8 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-04T17:25Z (P(math)~87, P(Lean)~82)
+# Last update: 2026-07-04T18:15Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1623735
+- CODEX_TO_CLAUDE.md read marker (bytes): 1626385
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -109,3 +109,11 @@
 - IN FLIGHT: main = free (radmono done) — RETASK NEXT TICK (queue: first-Codex-artifact adversarial audit when O5/O6 emissions land; or paper section 2.2 Bank0 integration review); sibling = definitions table LANDED 27461c (extract at assembly).
 - Lean 15 green. NEXT: CrossCap checker skeleton (canon CompletedSwitchCert + demand/capacity + integer identity).
 - Marker 1623735. Commits through 55756768a (this tick's commit next).
+
+
+## TICK NOTES (2026-07-04T18:15Z)
+- Numeric map 108/300 near-band feasible (k5-9 ~15/15 each as ranked; k0/1/2 = 6/2/1); inf-band awaits G# reruns + radmono sweep. Dynamic Markowitz no-go (no 200-prime spend). Codex: floor-buffer vs Markowitz on an easy chart, then batch 108 w/ per-chart SHA ledger.
+- Main retasked: O14 ASSEMBLY THEOREM (coverage lemma 10x15x2+stratum, per-chart pullback, final EQ-ODL1 composition, all-or-nothing accounting, Lean shapes).
+- Lean: canon CompletedSwitchCert + checkCompletedSwitch + sigma/nuK fact extraction — BUILD IN FLIGHT (bg bvwl8s15n; fix if red next wake).
+- Sibling: definitions table landed (extract at assembly); retask queue: paper 2.2/3.2 or idle-fill review.
+- Marker 1626385.
