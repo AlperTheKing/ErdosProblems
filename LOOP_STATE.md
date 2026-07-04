@@ -553,3 +553,29 @@
   etaNonneg_of_bank0 discharge); meanwhile candidates: LensGates checker or Seed3RouteTree module.
 - Codex: batch 19/108, marker 1696415 (no new posts). Notify bank0_of_maxcut interface freeze.
 - P(math)~89, P(Lean)~87 (Bank0 checker complex fully closed).
+
+
+## TICK NOTES (2026-07-04T01:45Z) — GOAL/LOOP reinstalled by user; Assembly draft in hand
+- USER reinstalled the refreshed GOAL (4 conjuncts, unchanged terminal condition) + LOOP (adds
+  explicit ENDGAME step 7: aggregate reverify -> final builds -> ONE FC PR assembly -> user send
+  decision). Both live.
+- BROWSER RESTARTED: tabs recreated — MAIN tab 1267096504, SIBLING tab 1267096505 (same URLs).
+  window.__asm / window.__b2 caches DEAD with old tabs (contents safely archived to files).
+- ASSEMBLY DRAFT (10896c) extracted + archived: problems/23/writeup/ASSEMBLY_LEAN_DRAFT_GPTPRO.lean.txt
+  with my adaptation flags F1-F3 in the header. NAME-DIFF RESULT: netDW_assembly (BranchAInterface)
+  and gersh_Lgt5_of_bankL (BankL) are GREEN but SCALAR ((N eta tau, s : Fin 5 -> Q) / (R N eta L));
+  RowDB/RowCert/RowInDB/rowLoadAt/rowSum and ALL Gamma-side glue (gammaOf-GraphData,
+  gamma_lower_bound, gamma_bound_of_all_rows_gersh, betaGD, betaSimple, beta_eq_badCount_of_isMaxCut,
+  IsMaxCut, GammaMinimalConnected, BConnected, RowDBFactsGeneral, TriangleFree) UNDEFINED at the
+  GraphData layer (gammaOf exists only over SimpleGraph Cut V in Gamma.lean).
+- IN FLIGHT: main = 3-gap consult (row-layer definitions vs scalar signatures + instantiation
+  wrappers; F1 ruling on odlFull vs fullMaskBound redundancy [XMask univ = rowSum - 5 tauQ and
+  N - 25m/N = 25 eta/N make fullMaskBound derivable from odlFull]; GraphData-layer gamma glue defs).
+  sibling = 4.4+ (4.3 landed 9135c, queued).
+- LEAN NEXT TICK (FIRST ACTION): on main reply landing, type Assembly.lean = draft + gap-fill
+  block, honest build, fix cycles. If main is slow: pre-type the draft parts that are
+  self-contained (etaQ/rhoQ/tauQ, rowSurplus/XMask/positiveMask/C5RS as parameters, the three
+  proven scalar-free theorems) in a new Assembly.lean with placeholders-as-parameters, so the
+  gap-fill drops in.
+- EXTRACTION QUEUE += sibling 4.2 (8159c), 4.3 (9135c). Marker 1696415 (no Codex posts).
+- P(math)~89, P(Lean)~87.

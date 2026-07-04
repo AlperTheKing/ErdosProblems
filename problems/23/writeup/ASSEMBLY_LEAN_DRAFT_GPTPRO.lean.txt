@@ -1,0 +1,376 @@
+-- GPT-Pro Assembly.lean paste-ready draft (MAIN thread, 2026-07-04, 10896c).
+-- Extracted via ZZEQZZ/ZZPLUSZZ offset-stitch, reverse-transformed. VERBATIM
+-- modulo the transform; adaptation to green module names happens at typing.
+-- ADAPTATION FLAGS (mine, at extraction):
+--  (F1) BranchAInputs carries BOTH odlFull (rowSum <= N + eta) AND
+--       fullMaskBound (XMask univ <= (1+25/N) eta). fullMaskBound is
+--       derivable from odlFull IF rowSum = sum of rowLoadAt (identity:
+--       XMask univ = rowSum - 5*tauQ, 5*tauQ = 25m/N, N - 25m/N = 25 eta/N).
+--       Decide at typing: derive + drop the field (fewer provider obligations)
+--       vs keep both. Audit question sent to main.
+--  (F2) Names to verify against green modules: RowDB, RowCert, RowInDB,
+--       rowLoadAt, rowSum, netDW_assembly, gammaOf, gamma_lower_bound,
+--       gamma_bound_of_all_rows_gersh, betaGD, betaSimple,
+--       beta_eq_badCount_of_isMaxCut, IsMaxCut, GammaMinimalConnected,
+--       BConnected, RowDBFactsGeneral, TriangleFree, CliqueFree usage,
+--       BadDB/AtomDB (draft) vs List BadEdgeData / List AtomData (green).
+--  (F3) Draft says `structure GoodCutPackage (G) : Prop` with data fields
+--       (cut : CutData, rows : RowDB) — a Prop structure cannot carry data
+--       usable in later fields' STATEMENTS the way written (it can — fields
+--       may depend on earlier fields — but eliminating INTO data from Prop
+--       is restricted; erdos23_delta0_graphData_from_package only proves a
+--       Prop, so elimination is fine). Verify at typing.
+
+import Mathlib
+
+open BigOperators
+
+namespace Erdos23Delta0
+
+noncomputable section
+
+/-! ### Basic rational quantities -/
+
+def etaQ (G : GraphData) (c : CutData) : ℚ :=
+  ((G.n : ℚ) ^ 2 - 25 * (badCount G c : ℚ)) / 25
+
+def rhoQ (L : Nat) : ℚ :=
+  ((L : ℚ) ^ 2 - 25) / 50
+
+def tauQ (G : GraphData) (c : CutData) : ℚ :=
+  5 * (badCount G c : ℚ) / (G.n : ℚ)
+
+/-! ### Row-facing interface -/
+
+def rowSurplusAt
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (i : Fin 5) : ℚ :=
+  rowLoadAt G c rows Q i - tauQ G c
+
+def XMask
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (A : Finset (Fin 5)) : ℚ :=
+  ∑ i in A, rowSurplusAt G c rows Q i
+
+def positiveMask
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) :
+    Finset (Fin 5) :=
+  Finset.univ.filter (fun i : Fin 5 => 0 < rowSurplusAt G c rows Q i)
+
+def C5RS
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop :=
+  (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) ≤
+    (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c
+
+def RowGershBound
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop :=
+  rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c
+
+theorem sum_max_eq_XMask_positiveMask
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) :
+    (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) =
+      XMask G c rows Q (positiveMask G c rows Q) := by
+  classical
+  unfold XMask positiveMask
+  symm
+  rw [Finset.sum_filter]
+  apply Finset.sum_congr rfl
+  intro i hi
+  by_cases hp : 0 < rowSurplusAt G c rows Q i
+  · have hnonneg : 0 ≤ rowSurplusAt G c rows Q i := le_of_lt hp
+    simp [hp, max_eq_left hnonneg]
+  · have hle : rowSurplusAt G c rows Q i ≤ 0 := le_of_not_gt hp
+    simp [hp, max_eq_right hle]
+
+theorem etaNonneg_of_bank0
+    (G : GraphData) (c : CutData)
+    (bads : BadDB) (atoms : AtomDB) (D : Nat) (cert : Bank0Cert)
+    (hG : checkGraph G = true)
+    (hc : checkCut G c = true)
+    (hchk : checkBank0Cert G c bads atoms D cert = true)
+    (hs : sigmaNonneg G c) :
+    0 ≤ etaQ G c := by
+  have hb : 25 * badCount G c ≤ G.n ^ 2 :=
+    bank0_of_maxcut cert G c bads atoms D hG hc hchk hs
+  have hbq : (25 : ℚ) * (badCount G c : ℚ) ≤ (G.n : ℚ) ^ 2 := by
+    exact_mod_cast hb
+  unfold etaQ
+  have hnum : 0 ≤ (G.n : ℚ) ^ 2 - 25 * (badCount G c : ℚ) := by
+    nlinarith
+  exact div_nonneg hnum (by norm_num)
+
+/-! ### Branch A -/
+
+structure BranchAInputs
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop where
+  hLen : Q.length = 5
+  hNpos : 0 < G.n
+  etaNonneg : 0 ≤ etaQ G c
+  a1Proper :
+    ∀ A : Finset (Fin 5),
+      A.Nonempty →
+      A ≠ Finset.univ →
+        XMask G c rows Q A ≤
+          ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) * etaQ G c
+  odlFull :
+    rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c
+  fullMaskBound :
+    XMask G c rows Q Finset.univ ≤
+      (1 + (25 : ℚ) / (G.n : ℚ)) * etaQ G c
+
+theorem c5RS_of_branchA_inputs
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (h : BranchAInputs G c rows Q) :
+    C5RS G c rows Q := by
+  classical
+  let P : Finset (Fin 5) := positiveMask G c rows Q
+  have hsum :
+      (∑ i : Fin 5, max (rowSurplusAt G c rows Q i) 0) =
+        XMask G c rows Q P := by
+    simpa [P] using sum_max_eq_XMask_positiveMask G c rows Q
+  rw [hsum]
+  by_cases hPempty : P = ∅
+  · subst P
+    simp [XMask]
+    have hNq : (0 : ℚ) < (G.n : ℚ) := by exact_mod_cast h.hNpos
+    have hcoef : 0 ≤ (1 : ℚ) + (25 : ℚ) / (G.n : ℚ) := by positivity
+    exact mul_nonneg hcoef h.etaNonneg
+  · by_cases hPuniv : P = Finset.univ
+    · rw [hPuniv]
+      exact h.fullMaskBound
+    · have hPnonempty : P.Nonempty := by
+        exact Finset.nonempty_iff_ne_empty.mpr hPempty
+      have ha1 := h.a1Proper P hPnonempty hPuniv
+      have hcoef :
+          ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) ≤
+            ((25 : ℚ) / (G.n : ℚ) + 1) := by
+        norm_num
+      have hmul :
+          ((25 : ℚ) / (G.n : ℚ) + (2 : ℚ) / 3) * etaQ G c ≤
+            ((25 : ℚ) / (G.n : ℚ) + 1) * etaQ G c :=
+        mul_le_mul_of_nonneg_right hcoef h.etaNonneg
+      exact le_trans ha1 hmul
+
+theorem gersh_L5_of_branchA_inputs
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (h : BranchAInputs G c rows Q) :
+    RowGershBound G c rows Q := by
+  have hRS : C5RS G c rows Q :=
+    c5RS_of_branchA_inputs h
+  exact netDW_assembly G c rows Q h.hLen hRS
+
+/-! ### Branch B -/
+
+structure BranchBInputs
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop where
+  hLen : 5 < Q.length
+  bankL : 2 * rhoQ Q.length ≤ etaQ G c
+  bankedUPO :
+    rowSum G c rows Q ≤
+      (G.n : ℚ) + etaQ G c / 2 - rhoQ Q.length
+
+theorem rho_nonneg_of_len_gt5
+    {L : Nat} (hL : 5 < L) :
+    0 ≤ rhoQ L := by
+  unfold rhoQ
+  have hLq : (5 : ℚ) < (L : ℚ) := by exact_mod_cast hL
+  have hsq : (25 : ℚ) ≤ (L : ℚ) ^ 2 := by
+    nlinarith [sq_nonneg ((L : ℚ) - 5), hLq]
+  have hnum : 0 ≤ (L : ℚ) ^ 2 - 25 := by nlinarith
+  exact div_nonneg hnum (by norm_num)
+
+theorem eta_nonneg_of_bankL
+    {G : GraphData} {c : CutData} {L : Nat}
+    (hL : 5 < L)
+    (hBankL : 2 * rhoQ L ≤ etaQ G c) :
+    0 ≤ etaQ G c := by
+  have hrho : 0 ≤ rhoQ L := rho_nonneg_of_len_gt5 hL
+  nlinarith
+
+theorem gersh_Lgt5_of_branchB_inputs
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (h : BranchBInputs G c rows Q) :
+    RowGershBound G c rows Q := by
+  exact gersh_Lgt5_of_bankL
+    (G := G) (c := c) (rows := rows) (Q := Q)
+    h.hLen h.bankL h.bankedUPO
+
+/-! ### Delta0 row aggregation -/
+
+structure Delta0Inputs
+    (G : GraphData) (c : CutData) (rows : RowDB) : Prop where
+  etaNonneg : 0 ≤ etaQ G c
+  branchA :
+    ∀ Q : RowCert,
+      RowInDB rows Q →
+      Q.length = 5 →
+        BranchAInputs G c rows Q
+  branchB :
+    ∀ Q : RowCert,
+      RowInDB rows Q →
+      5 < Q.length →
+        BranchBInputs G c rows Q
+
+theorem nat_lt_of_le_of_ne_eq
+    {a b : Nat} (h : a ≤ b) (hne : b ≠ a) :
+    a < b := by
+  omega
+
+theorem all_rows_gersh
+    {G : GraphData} {c : CutData} {rows : RowDB}
+    (hRows : RowDBFactsGeneral G c rows)
+    (hDelta : Delta0Inputs G c rows) :
+    ∀ Q : RowCert,
+      RowInDB rows Q →
+        RowGershBound G c rows Q := by
+  intro Q hQ
+  have hLenLower : 5 ≤ Q.length :=
+    hRows.length_ge_five Q hQ
+  by_cases hEq : Q.length = 5
+  · exact gersh_L5_of_branchA_inputs (hDelta.branchA Q hQ hEq)
+  · have hGt : 5 < Q.length := by
+      exact nat_lt_of_le_of_ne_eq hLenLower hEq
+    exact gersh_Lgt5_of_branchB_inputs (hDelta.branchB Q hQ hGt)
+
+/-! ### Gamma squeeze and beta -/
+
+theorem beta_bound_of_gamma
+    {G : GraphData} {c : CutData} {rows : RowDB}
+    (hMax : IsMaxCut G c)
+    (hRows : RowDBFactsGeneral G c rows)
+    (hGamma : gammaOf G c ≤ (G.n : ℚ) ^ 2) :
+    (betaGD G : ℚ) ≤ (G.n : ℚ) ^ 2 / 25 := by
+  have hLow : 25 * (badCount G c : ℚ) ≤ gammaOf G c :=
+    gamma_lower_bound (G := G) (c := c) (rows := rows) hRows
+  have hBad : (badCount G c : ℚ) ≤ (G.n : ℚ) ^ 2 / 25 := by
+    have h25 : (0 : ℚ) < 25 := by norm_num
+    nlinarith
+  have hBeta :
+      (betaGD G : ℚ) = (badCount G c : ℚ) :=
+    beta_eq_badCount_of_isMaxCut (G := G) (c := c) hMax
+  rw [hBeta]
+  exact hBad
+
+structure GoodCutData
+    (G : GraphData) (c : CutData) (rows : RowDB) : Prop where
+  maxCut : IsMaxCut G c
+  gammaMin : GammaMinimalConnected G c
+  bConnected : BConnected G c
+  rowsFacts : RowDBFactsGeneral G c rows
+
+theorem erdos23_delta0_graphData_from_good_cut
+    {G : GraphData} {c : CutData} {rows : RowDB}
+    (hGraph : checkGraph G = true)
+    (hCut : checkCut G c = true)
+    (hTri : TriangleFree G)
+    (hGood : GoodCutData G c rows)
+    (hDelta : Delta0Inputs G c rows) :
+    (betaGD G : ℚ) ≤ (G.n : ℚ) ^ 2 / 25 := by
+  have hAllRows :
+      ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q :=
+    all_rows_gersh hGood.rowsFacts hDelta
+  have hGammaUpper :
+      gammaOf G c ≤ (G.n : ℚ) ^ 2 :=
+    gamma_bound_of_all_rows_gersh
+      (G := G) (c := c) (rows := rows)
+      hGood.rowsFacts hAllRows
+  exact beta_bound_of_gamma hGood.maxCut hGood.rowsFacts hGammaUpper
+
+/-! ### Provider packages -/
+
+structure BranchACertBundle
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop where
+  inputs : BranchAInputs G c rows Q
+
+structure BranchBCertBundle
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : Prop where
+  inputs : BranchBInputs G c rows Q
+
+structure Delta0CertBundles
+    (G : GraphData) (c : CutData) (rows : RowDB) : Prop where
+  etaNonneg : 0 ≤ etaQ G c
+  branchA :
+    ∀ Q : RowCert,
+      RowInDB rows Q →
+      Q.length = 5 →
+        BranchACertBundle G c rows Q
+  branchB :
+    ∀ Q : RowCert,
+      RowInDB rows Q →
+      5 < Q.length →
+        BranchBCertBundle G c rows Q
+
+theorem delta0_inputs_of_cert_bundles
+    {G : GraphData} {c : CutData} {rows : RowDB}
+    (h : Delta0CertBundles G c rows) :
+    Delta0Inputs G c rows where
+  etaNonneg := h.etaNonneg
+  branchA := by
+    intro Q hQ hLen
+    exact (h.branchA Q hQ hLen).inputs
+  branchB := by
+    intro Q hQ hLen
+    exact (h.branchB Q hQ hLen).inputs
+
+/-! ### GraphData final theorem from a selected good cut -/
+
+theorem erdos23_delta0_graphData_from_bundles
+    {G : GraphData} {c : CutData} {rows : RowDB}
+    (hGraph : checkGraph G = true)
+    (hCut : checkCut G c = true)
+    (hTri : TriangleFree G)
+    (hGood : GoodCutData G c rows)
+    (hBundles : Delta0CertBundles G c rows) :
+    (betaGD G : ℚ) ≤ (G.n : ℚ) ^ 2 / 25 := by
+  exact erdos23_delta0_graphData_from_good_cut
+    hGraph hCut hTri hGood
+    (delta0_inputs_of_cert_bundles hBundles)
+
+/-! ### Good-cut existence interface -/
+
+structure GoodCutPackage (G : GraphData) : Prop where
+  cut : CutData
+  rows : RowDB
+  hCut : checkCut G cut = true
+  good : GoodCutData G cut rows
+  delta : Delta0CertBundles G cut rows
+
+theorem erdos23_delta0_graphData_from_package
+    {G : GraphData}
+    (hGraph : checkGraph G = true)
+    (hTri : TriangleFree G)
+    (pkg : GoodCutPackage G) :
+    (betaGD G : ℚ) ≤ (G.n : ℚ) ^ 2 / 25 := by
+  exact erdos23_delta0_graphData_from_bundles
+    hGraph pkg.hCut hTri pkg.good pkg.delta
+
+/-! ### SimpleGraph bridge -/
+
+structure SimpleGraphBridge
+    {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] : Prop where
+  G : GraphData
+  hGraph : checkGraph G = true
+  tri_transfer : CliqueFree Gs 3 → TriangleFree G
+  pkg : GoodCutPackage G
+  beta_transfer :
+    (betaSimple Gs : ℚ) = (betaGD G : ℚ)
+  n_transfer :
+    (Fintype.card V : ℚ) = (G.n : ℚ)
+
+theorem erdos23_delta0_simpleGraph
+    {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (hTri : CliqueFree Gs 3)
+    (bridge : SimpleGraphBridge Gs) :
+    (betaSimple Gs : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 := by
+  have hGD :
+      (betaGD bridge.G : ℚ) ≤ (bridge.G.n : ℚ) ^ 2 / 25 :=
+    erdos23_delta0_graphData_from_package
+      bridge.hGraph (bridge.tri_transfer hTri) bridge.pkg
+  rw [bridge.beta_transfer, bridge.n_transfer]
+  exact hGD
+
+end
+
+end Erdos23Delta0
