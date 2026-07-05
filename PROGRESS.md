@@ -2226,3 +2226,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T16:15Z] V LEAN | DID: Assembly stage-4 typed+built (2 rounds) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0 forbidden 0 — bridge encoding + betaSimple + EncodingFacts + betaSimple_eq_badCount PROVEN + CertificatePackage + erdos23_delta0 PACKAGE-FORM | D: FULL CONDITIONAL CHAIN GREEN
 [2026-07-04T16:30Z] V BATCH | DID: k8/G5 patch r1 | RESULT: residuals clean, 4 neg coeffs remain — PARKED as 1st sources-only row (ideal negative-source-mode test) | D: none
 [2026-07-04T17:00Z] V BATCH | DID: k7/F1 patch r1 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 5th row) | D: ~29-30/108
+[2026-07-04T17:30Z] V CODEX | DID: gated G1 face-split cert form (checkEq+ConeCert pair form = DiffSkipCert pattern; approved w/ 4 obligations) | RESULT: ruling posted; 29/108 acked (k5/G2 appended v27) | D: none
