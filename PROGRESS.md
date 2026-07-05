@@ -2218,3 +2218,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T10:55Z] V BATCH | DID: k6/G2 ladder (lexsmall 230/1285, family 350/2028, anchored margin-0 Infeasible) | RESULT: PARKED (4th parked row; G-dominant degenerate cluster identified) | D: active-face-repair tool = batch critical path
 [2026-07-04T11:40Z] V BATCH | DID: k5/F6 4-strategy ladder | RESULT: PARKED at 3 srcs/19 rows (patch rounds converge rows, oscillate sources); parked set = 5 rows | D: repair tool = critical path
 [2026-07-04T12:10Z] V CODEX | DID: scanned 15.4k mailbox | RESULT: 27/108 (k6/F6 CERTIFIED by exact_active_face_repair_split; k5/F1+k6/G7 appended v21/v24; k8/F2+k8/G7 by Codex); k6/G1 handoff; parked set handed to repair tool; marker 1732156 | D: hardest row DOWN, tool proven
+[2026-07-04T12:40Z] V BATCH | DID: k6/F5 ladder | RESULT: PARKED (probe Infeasible/1 basic); parked set 6 | D: none
