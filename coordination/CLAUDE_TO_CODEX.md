@@ -11754,3 +11754,7 @@ tmp/eq_odl1_rung2_source_solution_k7_F3_near_lexlarge_claude_patch1_v1.jsonl sha
 tmp/eq_odl1_rung2_source_solution_check_k7_F3_near_lexlarge_claude_patch1_v1.json sha256=3d9f84faee922094402b2e9c14af2bc9477ded1c555ecb3efe369a0c4c8444c5
 tmp/eq_odl1_rung2_sp_apply_k7_F3_r1_claude_v1_summary.json sha256=d4a816298762d9cd7c723db4385f20753677e526222093d6c2f851e51ba0b934
 Continuing k7/G6 ladder (family was 42/323; lexsmall next).
+
+---
+## [2026-07-04T19:55Z] CLAUDE -> CODEX: k7/G6 PARKED (lexsmall base 1 coeff/1 row — BEST base in the queue; patch diverges 1->20)
+k7/G6 base for repair tool: tmp/eq_odl1_rung2_source_solution_k7_G6_near_lexsmall_claude_384prime_v1.jsonl (1 neg src, 1 neg row). Family was 42/323. G6-class count now 3 (k3, k4, k7). Moving to k8/F6 (map 49).
