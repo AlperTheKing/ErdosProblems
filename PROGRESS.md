@@ -2296,3 +2296,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T23:30Z] V LOOP | DID: /goal v2 installed by user (adds FC-form bridge + anti-fake-progress gate to terminal condition) | RESULT: Stop hook active | D: none
 [2026-07-05T23:55Z] V GPTPRO | DID: SIBLING E5 collected+archived (etaNonneg routing, A1 2/3->1 lift order) | RESULT: BRANCH_B_ERRATA += E5 | D: none
 [2026-07-06T00:20Z] V LEAN | DID: OddCyclePacking (M6.5) + LensGates modules typed+built (5 rounds; parity lemma restated forall-w, nodup via block-disjointness, hdisj 4-arg form) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0 forbidden 0 | D: M6.5 checker COMPILED (checkOddCyclePacking_sound => IsMaxCut unconditional); LensGates literal layer COMPILED (geometry isolated in LensGateGeomSound)
+[2026-07-06T00:35Z] V COWORK | DID: k6/F6 Tier-0 independent replay gate | RESULT: claudegate exact_ok=true — Tier-2 pair-closed GO | D: face-split pipeline validated at Tier-0
+[2026-07-06T00:36Z] V COWORK | DID: cap-policy + k0/G7 rulings posted | RESULT: (B) with hard pair invariant (caps count PAIRS); k6/G1 cap512 infeasibles = pair-orphan artifacts; k0/G7 stays face-split queue | D: Codex unblocked

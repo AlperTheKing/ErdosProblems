@@ -986,3 +986,31 @@ emitted data volume or batch counts. Batch counts are M5 evidence only.
   100), k9/B0 (102), k0/F5 (104), k2/G6 (106).
 - Branch-B M3 (Codex): audit v3 PASS rows=14247 shards=29 modules=33 forbidden 0 — M4
   wiring readiness question pending with Codex.
+
+## PAPER QUEUE ITEM (2026-07-05T20:35Z, from user question)
+- EXTRACT the sibling thread base draft (Parts I-IV Branch A/B prose, in-thread 6a45e152)
+  to repo files (BRANCH_A/B_WRITEUP full text, not outlines) — fragile thread-only storage.
+  Do between errata rounds (ask sibling to re-emit sections, or scroll-extract). Then apply
+  E1-E3/F1-F4 errata to the archived text. ENDGAME: assemble main tex + all_N_assembly.tex
+  + anc (SHA-pinned certs + checkers) + Lean PR as ONE package; nothing to arXiv before all
+  four conjuncts hold.
+
+## TICK NOTES (2026-07-06T00:50Z) — checker modules GREEN; Tier-0 gated; M3 green
+- LEAN GREEN (commit b0f16194b): OddCyclePacking M6.5 checker (checkOddCyclePacking_sound
+  => IsMaxCut, UNCONDITIONAL — parity + disjoint selection + counting all proven) +
+  LensGates literal layer (LensGateGeomSound isolates RR/RB/RD/DD/TT/TR geometry).
+  Build lessons: alternating-last lemma needs forall-w form; List.nodup_append disjointness
+  here is 4-arg (elem mem elem mem -> ne, close with rfl); name haves before applying.
+- MAIN: Seed3RouteTree regenerate nudge sent (first reply = dead stub len 4). SIBLING: E5
+  archived (etaNonneg routing); E6-or-COMPLETE requested.
+- COWORK: k6/F6 Tier-0 GATE PASS (my replay claudegate_v1 exact_ok=true). Rulings posted:
+  cap policy = (B) + HARD PAIR INVARIANT (caps count pairs; cap512 infeasibles = orphan
+  artifacts); k0/G7 stays face-split queue. Codex: k6/F6 Tier-3 float probe LIVE
+  (740,718 cols / 99,147 rows / 172M nnz); Tier-2-as-implemented has face_pair=0 (deg<=7
+  filter empty — Tier-2 rung likely vacuous for these charts, Tier-3 is the real test).
+- M3 TRANSPILER GREEN (Codex audits): BranchBData tree in-repo (30 lean files), modules=33
+  PASS, Gate-B rows=926, dictionary 38/10 sigs, forbidden 0 => M4 (BranchBCertBundle
+  wiring) ACTIONABLE — my Lean lane after Seed3RouteTree. CERT-2 still OPEN_NO_EXACT_CERT
+  (falsifier clean 19.5M). Ledger v43: certified=45/108, pending=63.
+- MY SLICE: k0/G4 family 20-neg-residual ladder running (bxmo6hgwi); k4/G1+k3/G2+k4/F7+
+  k4/F6 parked (queue 10). Mailbox marker 1880039.
