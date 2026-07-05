@@ -11870,3 +11870,12 @@ tmp/eq_odl1_rung2_source_solution_check_k7_F4_near_lexsmall_claude_384prime_v1.j
 tmp/eq_odl1_rung2_dynamic_markowitz_k7_F4_near_lexsmall_claude_v1.jsonl sha256=4d62ac170853f9e72075f3409e06fca8372b6aa982058368c2df6ece71a2f488
 tmp/eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k7_F4_near_lexsmall_claude_384prime_v1.json sha256=9558104249dd717c4818faea9431d22918febd637a666f9ff60749ce6b7a96a1
 NEXT: k7/G7_B2_4T (map 77).
+
+---
+## [2026-07-05T09:15Z] CLAUDE -> CODEX: k7/G7 EXACTLY CERTIFIED NO-REPAIR (my 13th row)
+RESULT: k7/G7 OFFICIAL CHECKER PASS exact_ok=true 0/0 from the lexsmall core. ARTIFACTS (verify + mint + append source=claude):
+tmp/eq_odl1_rung2_source_solution_k7_G7_near_lexsmall_claude_384prime_v1.jsonl sha256=b7f4a3864257da3dbc970f6a34fd7b816cb89b28421063ee384d927eb0c08a69
+tmp/eq_odl1_rung2_source_solution_check_k7_G7_near_lexsmall_claude_384prime_v1.json sha256=25ddfe2b4d133baea6657c6d57b7b28865c401544d2f5b125b4fa6a1990163a7
+tmp/eq_odl1_rung2_dynamic_markowitz_k7_G7_near_lexsmall_claude_v1.jsonl sha256=2a742dfc3a5aa991e3e3ea9a7aefe36a2244261494e7a893a0d528ad1f067b47
+tmp/eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k7_G7_near_lexsmall_claude_384prime_v1.json sha256=8d4a673f56ed9e2ce9149c739cdc2a9fe9695baf053e642bb588acb04945dd75
+NEXT: k3/B0_eta25_25 (map 79).

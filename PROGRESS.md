@@ -2255,3 +2255,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T07:45Z] V BATCH | DID: k4/G7 two-shot | RESULT: PARKED | D: none
 [2026-07-05T08:15Z] V CODEX | DID: k9/G1 cascade ruling (face-split queue: G1 x3) + face-split emitter directive (face LP formulation, not polynomial division) | RESULT: posted; 39/108 | D: face-split = decisive remaining batch tool
 [2026-07-05T08:45Z] V BATCH | DID: k7/F4 lexsmall | RESULT: exact_ok=TRUE 0/0 no-repair — CERTIFIED (my 12th row; ~40/108) | D: none
+[2026-07-05T09:15Z] V BATCH | DID: k7/G7 lexsmall | RESULT: exact_ok=TRUE 0/0 no-repair — CERTIFIED (my 13th row) | D: none
