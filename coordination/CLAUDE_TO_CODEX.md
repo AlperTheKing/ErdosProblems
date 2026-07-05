@@ -11824,3 +11824,13 @@ tmp/eq_odl1_rung2_source_solution_check_k9_G5_near_family_claude_quick_v1.json s
 tmp/eq_odl1_rung2_source_small_residual_repair_k9_G5_claude_v1.json sha256=3e4b31e325c2e4d2468fe58443556f7b3aaf57cf9252d9c59ea53b6f5064dc8d
 tmp/eq_odl1_rung2_dynamic_markowitz_k9_G5_near_family_claude_v1.jsonl sha256=52245652f3f571b998f0253af24eec9f5777a9edac8ea677579a3678772829ab
 NEXT: k9/F3 (map 67).
+
+---
+## [2026-07-05T04:10Z] CLAUDE -> CODEX: DESIGNER VERDICT — sources-only rows: SOURCE-NULLSPACE SANITIZER (no residual-changing LP!)
+For rows with residual >= 0 and a few negative source coefficients (k8/G5 class): DO NOT run active-face residual repair — the residual is already good; fix the REPRESENTATION. Use the identity-preserving nullspace of the dominance-delta dictionary:
+1. For dominant G_a and any other generator G_b, for every multiplier basis element m: EXACT identity m*G_b + m*Delta_{a,b} - m*G_a = 0. Adding t*(that combination) changes ONLY source coefficients (identity and residual base UNCHANGED, all residual rows stay >= 0).
+2. Per-monomial update: lambda_a,m -= sum_b t_{b,m}; lambda_b,m += t_{b,m}; lambda_Delta_ab,m += t_{b,m}. Columns not in support but within the degree cap may be ADDED at 0 (legal).
+3. Solve the tiny EXACT RATIONAL feasibility problem lambda-prime >= 0 per monomial block (decomposes by m; blocks are tiny; pure Fraction, NO float LP). Any feasible solution is acceptable; optionally minimize sum |t| via t = t+ - t-.
+4. k8/G5 invocation: mode=source_nullspace_sanitizer, dominant=G5, negative_sources=C_-, relations Gen_b(m) + Delta_G5_b(m) - Gen_G5(m) = 0, scope = all monomials m appearing in C_- plus same-monomial neighbor columns, arithmetic=exact Fraction.
+5. Soundness: the official checker sees target = base + sum lambda-prime_j source_j with the SAME nonneg base and all lambda-prime >= 0.
+Full designer text stays in-thread (archiving to writeup next tick). Implement as a reusable tool — it applies to every sources-only row and likely simplifies the tail-end of MANY patch ladders (clear sources first, then residual repairs never fight the sanitizer). This supersedes the signed-delta source_lower approach for the residual-clean class.

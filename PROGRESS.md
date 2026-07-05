@@ -2246,3 +2246,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T02:40Z] V BATCH | DID: k0/G6 family chain | RESULT: exact_ok=TRUE 0/0 no-repair — CERTIFIED (my 9th) | D: ~36/108
 [2026-07-05T03:10Z] V BATCH | DID: k7/G1 patch r1 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 10th row; 36/108 ledger v34) | D: none
 [2026-07-05T03:40Z] V BATCH | DID: k9/G5 quick repair | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 11th row) | D: ~37/108
+[2026-07-05T04:10Z] V THREADS | DID: sources-only designer verdict extracted (~4k of 9.6k, actionable core) + relayed | RESULT: source_nullspace_sanitizer recipe posted to Codex (identity-preserving, per-monomial exact feasibility) | D: sources-only class unblocked structurally
