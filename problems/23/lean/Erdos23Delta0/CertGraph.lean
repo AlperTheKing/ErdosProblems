@@ -3570,5 +3570,38 @@ theorem delta0Bundles_from_remaining {G : GraphData} {c : CutData}
   branchA := fun Q hQ hLen => ⟨R.branchA_a1Proper_and_odl Q hQ hLen⟩
   branchB := fun Q hQ hLen => ⟨R.branchB_bankL_and_UPO Q hQ hLen⟩
 
+/-! ### Assembly layer, stage 7: B-connectedness of max cuts from the
+separator form of connectedness (the CutFn bridge was already discharged
+hypothesis-free above via badCount_congr_all_vertices). -/
+
+/-- GraphData connectedness in separator form: every non-blue-connected bad
+    edge admits a blue-closed separator (no blue boundary, some bad
+    boundary) — the finite certificate form of the component-flip setup. -/
+def GraphConnected (G : GraphData) : Prop :=
+  ∀ (c : CutData) (u v : Nat), checkCut G c = true → u < G.n → v < G.n →
+    badb G c u v = true → (¬ ∃ p : List Nat, BluePath G c u v p) →
+    ∃ S : List Nat, dB G c S = 0 ∧ 0 < dM G c S
+
+/-- Max cuts on separator-connected graphs are B-connected. -/
+theorem connectedMaxCut_bconnected_default (G : GraphData) (c : CutData)
+    (hG : checkGraph G = true) (hc : checkCut G c = true)
+    (hConn : GraphConnected G) (hMax : IsMaxCut G c) :
+    BConnected G c := by
+  intro u v hu hv hbad
+  by_contra hNo
+  have hNo' : ¬ ∃ p : List Nat, BluePath G c u v p := hNo
+  rcases hConn c u v hc hu hv hbad hNo' with ⟨S, hDB, hDMpos⟩
+  have hMin : BadCountMinimal G c := hMax.min_bad
+  have hSig : sigmaNonneg G c :=
+    (sigmaNonneg_iff_badCount_min G c hG hc).2 hMin
+  have hs := hSig S
+  unfold sigma at hs
+  rw [hDB] at hs
+  have hDMint_pos : (0 : Int) < (dM G c S : Int) := by
+    exact_mod_cast hDMpos
+  have hneg : (0 : Int) ≤ - (dM G c S : Int) := by
+    simpa using hs
+  omega
+
 end CertGraph
 end Erdos23Delta0

@@ -888,3 +888,21 @@
 - NEXT MAIN RETASK: those two mechanical proofs paste-ready. Sanitizer verdict full archive
   still pending (window.__so). Sibling E2 still uncollected.
 - P(math)~90, P(Lean)~95.
+
+
+## TICK NOTES (2026-07-05T14:45Z) — STAGE-7 GREEN: general-math Lean side COMPLETE
+- LEAN: all 7 assembly stages green (file ~3620 lines, forbidden 0). Stage-7 note: a
+  HYPOTHESIS-FREE cutFnBridgeFacts_default + badCount_congr_all_vertices + total round-trip
+  lemma ALREADY EXISTED (typed in a segment lost to compaction — lesson: grep before typing);
+  added GraphConnected (separator form) + connectedMaxCut_bconnected_default (sigma>=0 kill).
+- LEAN ASSUMPTION CHAIN NOW: erdos23_delta0 <= {enc DISCHARGED-total; CutFnBridge
+  DISCHARGED-total; BConnected DISCHARGED given GraphConnected(separator); good cut via
+  exists_good_cut_from_providers; GammaMinSelectionProvider = per-instance rows;
+  Delta0 bundles = per-row A/B certs}. NO theorem gaps left — remaining Lean = LensGates +
+  Seed3RouteTree CHECKERS + EQODL1/DiffSkip instantiation + Skeleton wiring + FC PR pack.
+- FALSE-ALARM POSTMORTEM: Measure-Object/Read transient line counts during the 12h
+  auto-commit looked like truncation; integrity build + grep -n end proved intact. Trust
+  the honest build, not line arithmetic.
+- BATCH: 43/108+; quotient face-split tool being built by Codex (verdict relayed);
+  sanitizer queue {k9/F3,k3/F4,k0/G7}; k4/G1 lexsmall chain result pending read.
+- P(math)~90, P(Lean)~96.
