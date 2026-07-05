@@ -930,3 +930,29 @@
 - Axioms probe artifact: erdos23_delta0 depends on [propext, Classical.choice, Quot.sound] ONLY
   (EXIT=0 build 2026-07-05; probe line reverted, file restored to committed state via git checkout).
 - arXiv sweep 2026-07-05: NO competing claims since 2026-06-26.
+
+## MILESTONE TABLE v2 (2026-07-05T18:40Z, G3 reclassification — anti-fake-progress gate ACTIVE)
+Gate: M6/M7 progress may ONLY be claimed via COMPILED LEMMAS (honest build green), never via
+emitted data volume or batch counts. Batch counts are M5 evidence only.
+- M1 SimpleGraph encoding bridge (simpleGraphEncodingFacts_default, no sorry) — DONE
+- M2 Conditional package theorem (erdos23_delta0 + axioms probe clean) — DONE
+- M2.5 EXTREMAL-CHOICE LAYER (was mislabeled inside M6): chooseMaxCutGD (CertGraph 3569),
+  chooseGammaMinimalCutFn (3578, decidable-feasible finite argmin), maxcut_exists_from_cutFn,
+  exists_good_cut_from_providers, connectedMaxCut_bconnected_default — DONE (green a0238a27f)
+- M3 Branch-B transpiler (Codex; JSONL -> Lean shards, no native_decide) — IN PROGRESS
+- M4 Branch-B data -> BranchBCertBundle wiring — NOT STARTED
+- M5 Branch-A chart certificates (108 rows exact; 43+ done) + CERT-2/tau0/Bernstein — IN PROGRESS
+- M6 [RESEARCH] Good-cut/gamma-min/row providers for arbitrary triangle-free Gs: remaining =
+  GammaMinSelectionProvider instance (chooseRows + RowDBGammaFacts + gamma_min_cut),
+  BConnected decidability or per-instance certs, GraphConnected discharge (component
+  reduction). = the structure-theory half of delta=0. — NOT STARTED (as compiled lemmas)
+- M6.5 [NEW, unblocks G2 toy] Lean TRUE-max cut certificate checker (checkMaxCutCert +
+  soundness: checker=true -> IsMaxCut) + gamma-min analogue — NOT STARTED, queued to MAIN
+  after LensGates
+- M7 [RESEARCH] Package construction for all official instances (= the delta=0 theorem
+  "forall tri-free Gs, Nonempty (Package Gs)" via strong-induction skeleton + checkers +
+  emitted certs) — NOT STARTED (as compiled lemmas)
+- M8 Official FC-form theorem (bridge lemma betaSimple -> exists-bipartite-subgraph + PR) — NOT STARTED
+- G2 TOY (C5[5] on Fin 25) — BLOCKED: first missing artifact = M6.5 checker (IsMaxCut for a
+  literal 25-vertex cut is not kernel-decidable; 2^25 cuts, native_decide forbidden);
+  second = LensGates/Seed3RouteTree checkers + per-row BranchA emissions (MAIN designing).

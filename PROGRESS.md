@@ -2273,3 +2273,9 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T16:23Z] > BATCH | NEXT: k4/G1 family core (strategy 2, bg) + k4/F7 family 384p CRT (44T, bg); k3/G2 requeued 24T after
 [2026-07-05T16:40Z] > AUDIT | NEXT: user verification interrogation — running #print axioms probe, FC statement diff, toolchain read, arXiv sweep; honest NOT-YET answers where artifacts do not exist
 [2026-07-05T16:55Z] V AUDIT | DID: interrogation evidence pass | RESULT: axioms=[propext,Classical.choice,Quot.sound] (no ofReduceBool); FC 23.lean read; toolchain v4.27.0+mathlib a3a10db; arXiv sweep=no competitors; CertGraph restored clean | D: none
+[2026-07-05T17:20Z] X BATCH | DID: k4/F7 family official check | RESULT: exact_ok=false — sources 0-neg BUT 5 negative full residuals (tiny, ~4400-bit) | D: small-residual repair launched (pipeline C quick)
+[2026-07-05T17:50Z] X BATCH | DID: k4/F7 source-patch probes active-negative(373 cand) + all(45499 cand) | RESULT: BOTH Infeasible — family base additive-immune | D: strategy 2 = lexsmall core launched
+[2026-07-05T18:05Z] V AUDIT | DID: cross-checked Codex interrogation answers vs my artifacts | RESULT: agree on all items; delta corrected in MY memory 4.7568e-5 -> 4.8557798e-5 (repo anc/README + SUBMIT.md are the ground truth) | D: none
+[2026-07-05T18:20Z] X BATCH | DID: k4/G1 family CRT | RESULT: core residual 0, solution_negative_count=166 @4160bit — both objectives dirty | D: k4/G1 PARKED to face-split queue (posted w/ 4 SHAs)
+[2026-07-05T18:42Z] V AUDIT | DID: verified Codex P1-P5 vs CertGraph.lean | RESULT: P1 verbatim OK; P3 "none" CONFIRMED; M6 correction — choosers EXIST (3569/3578, green); P5 honest-no CONFIRMED | D: none
+[2026-07-05T18:43Z] V LOOP | DID: G3 milestone reclassification | RESULT: LOOP_STATE milestone table v2 (M6/M7 = RESEARCH, anti-fake-progress gate; M6.5 maxcut-cert checker queued) | D: none
