@@ -1,0 +1,36 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 9,
+  "columns": 50535,
+  "dominant": 12,
+  "exact_ok": false,
+  "full_max_residual": "13775/66",
+  "full_min_residual": "-num_bits=3600/den_bits=3624",
+  "full_negative_residual_count": 1,
+  "full_zero_residual_count": 150985,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "residual": "-num_bits=3600/den_bits=3624",
+      "row": 35717
+    }
+  ],
+  "nonzero_source_columns": 2490,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k9_G5_near_family_claude_384prime_v1.jsonl",
+  "solution_max": "3775/3",
+  "solution_min": "num_bits=3492/den_bits=3516",
+  "solution_negative_count": 0,
+  "support": "negative"
+}

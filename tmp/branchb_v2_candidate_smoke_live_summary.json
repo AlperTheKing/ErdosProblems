@@ -1,0 +1,134 @@
+{
+  "counts": {
+    "case_counts": {
+      "MU_NUK": 1
+    },
+    "gate_b_candidate_counts": {
+      "candidate_v2": 1
+    },
+    "gate_b_rows": 1,
+    "input_rows": 1,
+    "op_steps": 2,
+    "rows": 1
+  },
+  "dictionary_emit": {
+    "cmd": [
+      "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "E:\\Projects\\ErdosProblems\\problems\\23\\writeup\\_codex_branchb_dictionary_audit_to_lean.py",
+      "--input",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl",
+      "--lean-out",
+      "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBDictionaryAuditV2Smoke.lean",
+      "--manifest",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_dictionary_smoke_manifest.json",
+      "--expected-row-occurrences",
+      "1",
+      "--expected-op-occurrences",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 0.065,
+    "stderr": "",
+    "stdout": "PASS branchb dictionary lean audit emit row_signatures=1 row_occurrences=1 op_signatures=1 op_occurrences=1\n"
+  },
+  "dictionary_expected_op_occurrences": 1,
+  "dictionary_expected_row_occurrences": 1,
+  "dictionary_lean_build": {
+    "cmd": [
+      "lake",
+      "env",
+      "lean",
+      "--root=E:\\Projects\\ErdosProblems\\problems\\23\\lean",
+      "--o=E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_dictionary_smoke.olean",
+      "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBDictionaryAuditV2Smoke.lean"
+    ],
+    "returncode": 0,
+    "seconds": 17.411,
+    "stderr": "",
+    "stdout": ""
+  },
+  "dictionary_manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_dictionary_smoke_manifest.json",
+  "dictionary_manifest_data": {
+    "checks": {
+      "all_op_products_exact": true,
+      "all_row_products_exact": true,
+      "lean_denominator_guard_emitted": true,
+      "op_occurrences_match_expected": true,
+      "row_occurrences_match_expected": true
+    },
+    "expected_op_occurrences": 1,
+    "expected_row_occurrences": 1,
+    "input": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl",
+    "lean_out": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBDictionaryAuditV2Smoke.lean",
+    "op_class_counts": {
+      "terminal-prefix-raw-extraction": 1
+    },
+    "op_piece_occurrences": 1,
+    "op_signature_count": 1,
+    "row_class_counts": {
+      "terminal-prefix": 1
+    },
+    "row_signature_count": 1,
+    "row_term_occurrences": 1,
+    "rows": 1,
+    "schema": "branchb_dictionary_audit_lean_v2"
+  },
+  "dictionary_support_lean_build": {
+    "cmd": [
+      "lake",
+      "env",
+      "lean",
+      "--root=E:\\Projects\\ErdosProblems\\problems\\23\\lean",
+      "--o=E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_dictionary_smoke_o\\Erdos23Delta0\\Cert\\BranchBSupport.olean",
+      "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBSupport.lean"
+    ],
+    "returncode": 0,
+    "seconds": 19.674,
+    "stderr": "",
+    "stdout": ""
+  },
+  "emit": {
+    "cmd": [
+      "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "E:\\Projects\\ErdosProblems\\problems\\23\\writeup\\_codex_branchb_jsonl_to_lean.py",
+      "--input",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl",
+      "--mode",
+      "full",
+      "--self-contained",
+      "--out-dir",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_lean",
+      "--manifest",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_manifest.json",
+      "--shard-size",
+      "1"
+    ],
+    "returncode": 0,
+    "seconds": 0.064,
+    "stderr": "",
+    "stdout": "PASS branchb lean full emit rows=1 gate_b_rows=1 op_steps=2 emitted=1\n"
+  },
+  "lean": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_lean\\Shard000.lean",
+  "lean_build": {
+    "cmd": [
+      "lake",
+      "env",
+      "lean",
+      "--root=E:\\Projects\\ErdosProblems",
+      "--o=E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke.olean",
+      "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_lean\\Shard000.lean"
+    ],
+    "returncode": 0,
+    "seconds": 20.895,
+    "stderr": "",
+    "stdout": ""
+  },
+  "manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_manifest.json",
+  "schema": "branchb_v2_candidate_smoke_v1",
+  "source_index": 1983,
+  "source_input": "E:\\Projects\\ErdosProblems\\tmp\\bankl_branchb_gateb_final_v1.jsonl",
+  "status": "PASS",
+  "synthetic_input": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl"
+}

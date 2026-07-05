@@ -1,0 +1,319 @@
+{"type": "meta", "dimension": 40, "terms": 199}
+{"type": "col", "col": 0, "source_col": 9985}
+{"type": "col", "col": 1, "source_col": 10038}
+{"type": "col", "col": 2, "source_col": 10412}
+{"type": "col", "col": 3, "source_col": 10465}
+{"type": "col", "col": 4, "source_col": 10515}
+{"type": "col", "col": 5, "source_col": 10648}
+{"type": "col", "col": 6, "source_col": 11087}
+{"type": "col", "col": 7, "source_col": 11330}
+{"type": "col", "col": 8, "source_col": 11397}
+{"type": "col", "col": 9, "source_col": 11483}
+{"type": "col", "col": 10, "source_col": 11589}
+{"type": "col", "col": 11, "source_col": 20072}
+{"type": "col", "col": 12, "source_col": 20171}
+{"type": "col", "col": 13, "source_col": 20463}
+{"type": "col", "col": 14, "source_col": 20946}
+{"type": "col", "col": 15, "source_col": 21404}
+{"type": "col", "col": 16, "source_col": 35183}
+{"type": "col", "col": 17, "source_col": 35286}
+{"type": "col", "col": 18, "source_col": 35298}
+{"type": "col", "col": 19, "source_col": 35340}
+{"type": "col", "col": 20, "source_col": 35550}
+{"type": "col", "col": 21, "source_col": 35741}
+{"type": "col", "col": 22, "source_col": 35851}
+{"type": "col", "col": 23, "source_col": 36081}
+{"type": "col", "col": 24, "source_col": 36242}
+{"type": "col", "col": 25, "source_col": 36350}
+{"type": "col", "col": 26, "source_col": 36460}
+{"type": "col", "col": 27, "source_col": 36465}
+{"type": "col", "col": 28, "source_col": 37165}
+{"type": "col", "col": 29, "source_col": 37342}
+{"type": "col", "col": 30, "source_col": 37415}
+{"type": "col", "col": 31, "source_col": 37543}
+{"type": "col", "col": 32, "source_col": 37715}
+{"type": "col", "col": 33, "source_col": 37725}
+{"type": "col", "col": 34, "source_col": 37749}
+{"type": "col", "col": 35, "source_col": 45487}
+{"type": "col", "col": 36, "source_col": 48119}
+{"type": "col", "col": 37, "source_col": 48913}
+{"type": "col", "col": 38, "source_col": 49540}
+{"type": "col", "col": 39, "source_col": 49873}
+{"type": "rhs", "row": 0, "value": "0"}
+{"type": "selected_row", "row": 0, "source_row": 1835}
+{"type": "rhs", "row": 1, "value": "-167597/178584740167680"}
+{"type": "selected_row", "row": 1, "source_row": 3122}
+{"type": "rhs", "row": 2, "value": "0"}
+{"type": "selected_row", "row": 2, "source_row": 3914}
+{"type": "rhs", "row": 3, "value": "0"}
+{"type": "selected_row", "row": 3, "source_row": 4574}
+{"type": "rhs", "row": 4, "value": "-3001/3189013217280"}
+{"type": "selected_row", "row": 4, "source_row": 4628}
+{"type": "rhs", "row": 5, "value": "-167333/178584740167680"}
+{"type": "selected_row", "row": 5, "source_row": 4698}
+{"type": "rhs", "row": 6, "value": "-57397/59528246722560"}
+{"type": "selected_row", "row": 6, "source_row": 4718}
+{"type": "rhs", "row": 7, "value": "-10573/11161546260480"}
+{"type": "selected_row", "row": 7, "source_row": 4728}
+{"type": "rhs", "row": 8, "value": "-15719/16234976378880"}
+{"type": "selected_row", "row": 8, "source_row": 4731}
+{"type": "rhs", "row": 9, "value": "-831629/892923700838400"}
+{"type": "selected_row", "row": 9, "source_row": 6125}
+{"type": "rhs", "row": 10, "value": "0"}
+{"type": "selected_row", "row": 10, "source_row": 6863}
+{"type": "rhs", "row": 11, "value": "0"}
+{"type": "selected_row", "row": 11, "source_row": 7325}
+{"type": "rhs", "row": 12, "value": "-2363/2536715059200"}
+{"type": "selected_row", "row": 12, "source_row": 7631}
+{"type": "rhs", "row": 13, "value": "-415823/446461850419200"}
+{"type": "selected_row", "row": 13, "source_row": 7701}
+{"type": "rhs", "row": 14, "value": "-832457/892923700838400"}
+{"type": "selected_row", "row": 14, "source_row": 7731}
+{"type": "rhs", "row": 15, "value": "-33295/35716948033536"}
+{"type": "selected_row", "row": 15, "source_row": 7734}
+{"type": "rhs", "row": 16, "value": "0"}
+{"type": "selected_row", "row": 16, "source_row": 7735}
+{"type": "rhs", "row": 17, "value": "0"}
+{"type": "selected_row", "row": 17, "source_row": 8632}
+{"type": "rhs", "row": 18, "value": "0"}
+{"type": "selected_row", "row": 18, "source_row": 9041}
+{"type": "rhs", "row": 19, "value": "0"}
+{"type": "selected_row", "row": 19, "source_row": 9094}
+{"type": "rhs", "row": 20, "value": "0"}
+{"type": "selected_row", "row": 20, "source_row": 9328}
+{"type": "rhs", "row": 21, "value": "0"}
+{"type": "selected_row", "row": 21, "source_row": 9344}
+{"type": "rhs", "row": 22, "value": "0"}
+{"type": "selected_row", "row": 22, "source_row": 9346}
+{"type": "rhs", "row": 23, "value": "0"}
+{"type": "selected_row", "row": 23, "source_row": 9408}
+{"type": "rhs", "row": 24, "value": "0"}
+{"type": "selected_row", "row": 24, "source_row": 9434}
+{"type": "rhs", "row": 25, "value": "0"}
+{"type": "selected_row", "row": 25, "source_row": 9451}
+{"type": "rhs", "row": 26, "value": "0"}
+{"type": "selected_row", "row": 26, "source_row": 9481}
+{"type": "rhs", "row": 27, "value": "0"}
+{"type": "selected_row", "row": 27, "source_row": 9965}
+{"type": "rhs", "row": 28, "value": "0"}
+{"type": "selected_row", "row": 28, "source_row": 10252}
+{"type": "rhs", "row": 29, "value": "0"}
+{"type": "selected_row", "row": 29, "source_row": 10268}
+{"type": "rhs", "row": 30, "value": "-83197/89292370083840"}
+{"type": "selected_row", "row": 30, "source_row": 10803}
+{"type": "rhs", "row": 31, "value": "-416291/446461850419200"}
+{"type": "selected_row", "row": 31, "source_row": 10833}
+{"type": "rhs", "row": 32, "value": "-417071/446461850419200"}
+{"type": "selected_row", "row": 32, "source_row": 10836}
+{"type": "rhs", "row": 33, "value": "-34711/37205154201600"}
+{"type": "selected_row", "row": 33, "source_row": 10962}
+{"type": "rhs", "row": 34, "value": "-278213/297641233612800"}
+{"type": "selected_row", "row": 34, "source_row": 10984}
+{"type": "rhs", "row": 35, "value": "-834839/892923700838400"}
+{"type": "selected_row", "row": 35, "source_row": 10994}
+{"type": "rhs", "row": 36, "value": "-419471/446461850419200"}
+{"type": "selected_row", "row": 36, "source_row": 10997}
+{"type": "rhs", "row": 37, "value": "-59659/63780264345600"}
+{"type": "selected_row", "row": 37, "source_row": 11012}
+{"type": "rhs", "row": 38, "value": "-619/661424963584"}
+{"type": "selected_row", "row": 38, "source_row": 11016}
+{"type": "rhs", "row": 39, "value": "-1244174422238128258802309381141016315579906396610564404010988354449739571383585944443971299036928847244761559784564165243341367045464111063065474071147774051240498698100600990681891315856146206757399632638507991562726835318803703019311404840279598533745288642664478663660141079482266361258246002816062688306501504146197416827755061158181958903286119987420068569136582162976056774658403697867328904508865359831558665831201808019790257480409020195843376682187467657227694042420129407663260771275932336228519814686969711268910729791103947078989180116056415662817450754957476914171073254727822699562106789348639741460427545286940338501373342037586256913868271204499984119275925738139/142645685087829486075709162113567319094729697244144627991448364335870982341100189030622983360548966342413419926050731586085153996381869967350952461997281306348550536944533141560435805220183647950822297556008823509144466385750286302317167264528847500547786731188319406189108476752180387146744569790279044289408791540291389161355902162783284803808057244577573115883643774977442211230008627158741559074427009629242141181892836974275035987567633382944510835218998486426441189343595717643094833874797331443452315312352559824157235921141937540770398199779465592141806802359717721371757451101064464879613636363991632084090402034649063886678495794891471547683534949134637548150076194816000000"}
+{"type": "term", "row": 7, "col": 0, "value": "-15/11"}
+{"type": "term", "row": 14, "col": 0, "value": "1/55"}
+{"type": "term", "row": 21, "col": 0, "value": "2/55"}
+{"type": "term", "row": 24, "col": 0, "value": "1/55"}
+{"type": "term", "row": 29, "col": 0, "value": "2/55"}
+{"type": "term", "row": 31, "col": 0, "value": "2/55"}
+{"type": "term", "row": 35, "col": 0, "value": "1/55"}
+{"type": "term", "row": 37, "col": 0, "value": "2/55"}
+{"type": "term", "row": 9, "col": 1, "value": "-12/11"}
+{"type": "term", "row": 13, "col": 2, "value": "-12/11"}
+{"type": "term", "row": 1, "col": 3, "value": "-15/11"}
+{"type": "term", "row": 9, "col": 3, "value": "2/55"}
+{"type": "term", "row": 10, "col": 3, "value": "2/55"}
+{"type": "term", "row": 11, "col": 3, "value": "2/55"}
+{"type": "term", "row": 12, "col": 3, "value": "2/55"}
+{"type": "term", "row": 13, "col": 3, "value": "2/55"}
+{"type": "term", "row": 14, "col": 3, "value": "2/55"}
+{"type": "term", "row": 15, "col": 3, "value": "2/55"}
+{"type": "term", "row": 16, "col": 3, "value": "1/55"}
+{"type": "term", "row": 38, "col": 4, "value": "-12/11"}
+{"type": "term", "row": 8, "col": 5, "value": "-15/11"}
+{"type": "term", "row": 15, "col": 5, "value": "1/55"}
+{"type": "term", "row": 17, "col": 5, "value": "1/55"}
+{"type": "term", "row": 19, "col": 5, "value": "1/55"}
+{"type": "term", "row": 22, "col": 5, "value": "2/55"}
+{"type": "term", "row": 32, "col": 5, "value": "2/55"}
+{"type": "term", "row": 33, "col": 5, "value": "2/55"}
+{"type": "term", "row": 36, "col": 5, "value": "1/55"}
+{"type": "term", "row": 37, "col": 5, "value": "2/55"}
+{"type": "term", "row": 38, "col": 5, "value": "3/55"}
+{"type": "term", "row": 5, "col": 6, "value": "-15/11"}
+{"type": "term", "row": 13, "col": 6, "value": "1/55"}
+{"type": "term", "row": 20, "col": 6, "value": "2/55"}
+{"type": "term", "row": 23, "col": 6, "value": "1/55"}
+{"type": "term", "row": 28, "col": 6, "value": "2/55"}
+{"type": "term", "row": 30, "col": 6, "value": "2/55"}
+{"type": "term", "row": 33, "col": 6, "value": "2/55"}
+{"type": "term", "row": 34, "col": 7, "value": "-12/11"}
+{"type": "term", "row": 14, "col": 8, "value": "-12/11"}
+{"type": "term", "row": 6, "col": 9, "value": "-15/11"}
+{"type": "term", "row": 23, "col": 9, "value": "2/55"}
+{"type": "term", "row": 24, "col": 9, "value": "2/55"}
+{"type": "term", "row": 34, "col": 9, "value": "2/55"}
+{"type": "term", "row": 35, "col": 9, "value": "2/55"}
+{"type": "term", "row": 36, "col": 9, "value": "2/55"}
+{"type": "term", "row": 21, "col": 10, "value": "-2/11"}
+{"type": "term", "row": 29, "col": 10, "value": "-2/11"}
+{"type": "term", "row": 31, "col": 10, "value": "-12/11"}
+{"type": "term", "row": 1, "col": 11, "value": "6/11"}
+{"type": "term", "row": 2, "col": 11, "value": "-9/22"}
+{"type": "term", "row": 4, "col": 11, "value": "12/11"}
+{"type": "term", "row": 5, "col": 11, "value": "12/11"}
+{"type": "term", "row": 6, "col": 11, "value": "6/11"}
+{"type": "term", "row": 7, "col": 11, "value": "12/11"}
+{"type": "term", "row": 8, "col": 11, "value": "12/11"}
+{"type": "term", "row": 9, "col": 11, "value": "1/55"}
+{"type": "term", "row": 12, "col": 11, "value": "2/55"}
+{"type": "term", "row": 13, "col": 11, "value": "2/55"}
+{"type": "term", "row": 14, "col": 11, "value": "2/55"}
+{"type": "term", "row": 15, "col": 11, "value": "2/55"}
+{"type": "term", "row": 25, "col": 11, "value": "-9/55"}
+{"type": "term", "row": 30, "col": 11, "value": "4/55"}
+{"type": "term", "row": 31, "col": 11, "value": "4/55"}
+{"type": "term", "row": 32, "col": 11, "value": "4/55"}
+{"type": "term", "row": 33, "col": 11, "value": "4/55"}
+{"type": "term", "row": 34, "col": 11, "value": "1/55"}
+{"type": "term", "row": 35, "col": 11, "value": "2/55"}
+{"type": "term", "row": 36, "col": 11, "value": "2/55"}
+{"type": "term", "row": 37, "col": 11, "value": "4/55"}
+{"type": "term", "row": 38, "col": 11, "value": "3/55"}
+{"type": "term", "row": 39, "col": 11, "value": "-1"}
+{"type": "term", "row": 3, "col": 12, "value": "18/11"}
+{"type": "term", "row": 4, "col": 12, "value": "-9/11"}
+{"type": "term", "row": 8, "col": 13, "value": "-9/11"}
+{"type": "term", "row": 20, "col": 14, "value": "-18/55"}
+{"type": "term", "row": 28, "col": 14, "value": "-18/55"}
+{"type": "term", "row": 30, "col": 14, "value": "-36/55"}
+{"type": "term", "row": 21, "col": 15, "value": "-18/55"}
+{"type": "term", "row": 29, "col": 15, "value": "-18/55"}
+{"type": "term", "row": 31, "col": 15, "value": "-36/55"}
+{"type": "term", "row": 10, "col": 16, "value": "-16/11"}
+{"type": "term", "row": 12, "col": 17, "value": "-8/11"}
+{"type": "term", "row": 30, "col": 17, "value": "-16/11"}
+{"type": "term", "row": 31, "col": 17, "value": "-16/11"}
+{"type": "term", "row": 32, "col": 17, "value": "-16/11"}
+{"type": "term", "row": 19, "col": 18, "value": "-12/55"}
+{"type": "term", "row": 10, "col": 19, "value": "-12/55"}
+{"type": "term", "row": 11, "col": 19, "value": "-12/55"}
+{"type": "term", "row": 12, "col": 19, "value": "-12/11"}
+{"type": "term", "row": 9, "col": 20, "value": "-16/11"}
+{"type": "term", "row": 12, "col": 20, "value": "-16/11"}
+{"type": "term", "row": 13, "col": 20, "value": "-16/11"}
+{"type": "term", "row": 14, "col": 20, "value": "-16/11"}
+{"type": "term", "row": 15, "col": 20, "value": "-16/11"}
+{"type": "term", "row": 16, "col": 20, "value": "24/11"}
+{"type": "term", "row": 1, "col": 21, "value": "-10/11"}
+{"type": "term", "row": 2, "col": 21, "value": "3/11"}
+{"type": "term", "row": 4, "col": 21, "value": "-20/11"}
+{"type": "term", "row": 5, "col": 21, "value": "-20/11"}
+{"type": "term", "row": 6, "col": 21, "value": "-10/11"}
+{"type": "term", "row": 7, "col": 21, "value": "-20/11"}
+{"type": "term", "row": 8, "col": 21, "value": "-20/11"}
+{"type": "term", "row": 9, "col": 21, "value": "-1/55"}
+{"type": "term", "row": 12, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 13, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 14, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 15, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 16, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 25, "col": 21, "value": "23/55"}
+{"type": "term", "row": 30, "col": 21, "value": "-4/55"}
+{"type": "term", "row": 31, "col": 21, "value": "-4/55"}
+{"type": "term", "row": 32, "col": 21, "value": "-4/55"}
+{"type": "term", "row": 33, "col": 21, "value": "-4/55"}
+{"type": "term", "row": 34, "col": 21, "value": "-1/55"}
+{"type": "term", "row": 35, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 36, "col": 21, "value": "-2/55"}
+{"type": "term", "row": 37, "col": 21, "value": "-4/55"}
+{"type": "term", "row": 38, "col": 21, "value": "-3/55"}
+{"type": "term", "row": 21, "col": 22, "value": "-16/11"}
+{"type": "term", "row": 24, "col": 22, "value": "-8/11"}
+{"type": "term", "row": 11, "col": 23, "value": "-16/11"}
+{"type": "term", "row": 17, "col": 24, "value": "-24/55"}
+{"type": "term", "row": 19, "col": 24, "value": "-12/55"}
+{"type": "term", "row": 22, "col": 24, "value": "16/11"}
+{"type": "term", "row": 14, "col": 25, "value": "-8/11"}
+{"type": "term", "row": 31, "col": 25, "value": "-16/11"}
+{"type": "term", "row": 35, "col": 25, "value": "-8/11"}
+{"type": "term", "row": 37, "col": 25, "value": "-16/11"}
+{"type": "term", "row": 15, "col": 26, "value": "-8/11"}
+{"type": "term", "row": 32, "col": 26, "value": "-16/11"}
+{"type": "term", "row": 33, "col": 26, "value": "-16/11"}
+{"type": "term", "row": 36, "col": 26, "value": "-8/11"}
+{"type": "term", "row": 37, "col": 26, "value": "-16/11"}
+{"type": "term", "row": 38, "col": 26, "value": "-24/11"}
+{"type": "term", "row": 23, "col": 27, "value": "-16/11"}
+{"type": "term", "row": 24, "col": 27, "value": "-16/11"}
+{"type": "term", "row": 24, "col": 28, "value": "-8/11"}
+{"type": "term", "row": 26, "col": 28, "value": "-16/11"}
+{"type": "term", "row": 29, "col": 29, "value": "-16/11"}
+{"type": "term", "row": 20, "col": 30, "value": "-16/11"}
+{"type": "term", "row": 23, "col": 30, "value": "-8/11"}
+{"type": "term", "row": 13, "col": 31, "value": "-8/11"}
+{"type": "term", "row": 30, "col": 31, "value": "-16/11"}
+{"type": "term", "row": 33, "col": 31, "value": "-16/11"}
+{"type": "term", "row": 11, "col": 32, "value": "-8/11"}
+{"type": "term", "row": 18, "col": 32, "value": "12/55"}
+{"type": "term", "row": 27, "col": 32, "value": "24/55"}
+{"type": "term", "row": 28, "col": 32, "value": "-16/11"}
+{"type": "term", "row": 29, "col": 32, "value": "-16/11"}
+{"type": "term", "row": 34, "col": 33, "value": "-16/11"}
+{"type": "term", "row": 35, "col": 33, "value": "-16/11"}
+{"type": "term", "row": 36, "col": 33, "value": "-16/11"}
+{"type": "term", "row": 10, "col": 34, "value": "-8/11"}
+{"type": "term", "row": 18, "col": 34, "value": "12/55"}
+{"type": "term", "row": 20, "col": 34, "value": "-16/11"}
+{"type": "term", "row": 21, "col": 34, "value": "-16/11"}
+{"type": "term", "row": 22, "col": 34, "value": "-16/11"}
+{"type": "term", "row": 1, "col": 35, "value": "-6/11"}
+{"type": "term", "row": 2, "col": 35, "value": "5/11"}
+{"type": "term", "row": 4, "col": 35, "value": "-12/11"}
+{"type": "term", "row": 5, "col": 35, "value": "-12/11"}
+{"type": "term", "row": 6, "col": 35, "value": "-6/11"}
+{"type": "term", "row": 7, "col": 35, "value": "-12/11"}
+{"type": "term", "row": 8, "col": 35, "value": "-12/11"}
+{"type": "term", "row": 9, "col": 35, "value": "-1/55"}
+{"type": "term", "row": 12, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 13, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 14, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 15, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 25, "col": 35, "value": "9/55"}
+{"type": "term", "row": 30, "col": 35, "value": "-4/55"}
+{"type": "term", "row": 31, "col": 35, "value": "-4/55"}
+{"type": "term", "row": 32, "col": 35, "value": "-4/55"}
+{"type": "term", "row": 33, "col": 35, "value": "-4/55"}
+{"type": "term", "row": 34, "col": 35, "value": "-1/55"}
+{"type": "term", "row": 35, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 36, "col": 35, "value": "-2/55"}
+{"type": "term", "row": 37, "col": 35, "value": "-4/55"}
+{"type": "term", "row": 38, "col": 35, "value": "-3/55"}
+{"type": "term", "row": 2, "col": 36, "value": "5/11"}
+{"type": "term", "row": 25, "col": 36, "value": "-2/11"}
+{"type": "term", "row": 11, "col": 37, "value": "-1/11"}
+{"type": "term", "row": 18, "col": 37, "value": "-1/11"}
+{"type": "term", "row": 27, "col": 37, "value": "-2/11"}
+{"type": "term", "row": 28, "col": 37, "value": "-2/11"}
+{"type": "term", "row": 29, "col": 37, "value": "-2/11"}
+{"type": "term", "row": 4, "col": 38, "value": "-5/11"}
+{"type": "term", "row": 12, "col": 38, "value": "1/11"}
+{"type": "term", "row": 30, "col": 38, "value": "2/11"}
+{"type": "term", "row": 31, "col": 38, "value": "2/11"}
+{"type": "term", "row": 32, "col": 38, "value": "2/11"}
+{"type": "term", "row": 0, "col": 39, "value": "6/11"}
+{"type": "term", "row": 1, "col": 39, "value": "-1/11"}
+{"type": "term", "row": 2, "col": 39, "value": "-1/11"}
+{"type": "term", "row": 4, "col": 39, "value": "-2/11"}
+{"type": "term", "row": 5, "col": 39, "value": "-2/11"}
+{"type": "term", "row": 6, "col": 39, "value": "-1/11"}
+{"type": "term", "row": 7, "col": 39, "value": "-2/11"}
+{"type": "term", "row": 8, "col": 39, "value": "-2/11"}

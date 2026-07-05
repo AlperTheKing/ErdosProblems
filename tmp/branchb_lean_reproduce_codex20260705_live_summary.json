@@ -1,0 +1,99 @@
+{
+  "artifacts": {
+    "audit_summary": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_artifact_audit_codex20260705_live.json",
+    "build_summary": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_module_build_codex20260705_live_summary.json",
+    "dictionary_manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_dictionary_audit_lean_codex20260705_live_manifest.json",
+    "transpile_manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_transpile_full_codex20260705_live_manifest.json"
+  },
+  "audit_build_modules": 33,
+  "audit_forbidden_hits": 0,
+  "audit_rows": 14247,
+  "audit_status": "PASS",
+  "error": null,
+  "input": "tmp/bankl_branchb_gateb_final_v1.jsonl",
+  "schema": "branchb_lean_reproduce_v1",
+  "signatures": "tmp/bankl_completion_op_sequence_core_signatures_v1.json",
+  "status": "PASS",
+  "steps": [
+    {
+      "cmd": [
+        "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "problems\\23\\writeup\\_codex_branchb_dictionary_audit_to_lean.py",
+        "--input",
+        "tmp/bankl_branchb_gateb_final_v1.jsonl",
+        "--lean-out",
+        "problems/23/lean/Erdos23Delta0/Cert/BranchBDictionaryAudit.lean",
+        "--manifest",
+        "tmp\\branchb_dictionary_audit_lean_codex20260705_live_manifest.json"
+      ],
+      "name": "dictionary_emit",
+      "returncode": 0,
+      "seconds": 0.373,
+      "stderr_tail": "",
+      "stdout_tail": "PASS branchb dictionary lean audit emit row_signatures=38 row_occurrences=19988 op_signatures=10 op_occurrences=713\n"
+    },
+    {
+      "cmd": [
+        "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "problems\\23\\writeup\\_codex_branchb_jsonl_to_lean.py",
+        "--mode",
+        "full",
+        "--input",
+        "tmp/bankl_branchb_gateb_final_v1.jsonl",
+        "--signatures",
+        "tmp/bankl_completion_op_sequence_core_signatures_v1.json",
+        "--manifest",
+        "tmp\\branchb_lean_transpile_full_codex20260705_live_manifest.json",
+        "--extra-index-import",
+        "Erdos23Delta0.Cert.BranchBDictionaryAudit"
+      ],
+      "name": "full_lean_emit",
+      "returncode": 0,
+      "seconds": 0.9,
+      "stderr_tail": "",
+      "stdout_tail": "PASS branchb lean full emit rows=14247 gate_b_rows=926 op_steps=1852 emitted=31\n"
+    },
+    {
+      "cmd": [
+        "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "problems\\23\\writeup\\_codex_branchb_lean_build.py",
+        "--build-root",
+        "tmp\\branchb_lean_o_codex20260705_live",
+        "--summary",
+        "tmp\\branchb_lean_module_build_codex20260705_live_summary.json",
+        "--workers",
+        "16"
+      ],
+      "name": "lean_build",
+      "returncode": 0,
+      "seconds": 244.216,
+      "stderr_tail": "",
+      "stdout_tail": "Erdos23Delta0.Cert.BranchBSupport rc=0 sec=22.003\nErdos23Delta0.Cert.BranchBDictionaryAudit rc=0 sec=19.488\nErdos23Delta0.Cert.BranchBData.Pilot rc=0 sec=20.49\nErdos23Delta0.Cert.BranchBData.Shard001 rc=0 sec=67.758\nErdos23Delta0.Cert.BranchBData.Shard009 rc=0 sec=71.49\nErdos23Delta0.Cert.BranchBData.Shard008 rc=0 sec=72.506\nErdos23Delta0.Cert.BranchBData.Shard013 rc=0 sec=72.881\nErdos23Delta0.Cert.BranchBData.Shard006 rc=0 sec=75.584\nErdos23Delta0.Cert.BranchBData.Shard002 rc=0 sec=76.669\nErdos23Delta0.Cert.BranchBData.Shard003 rc=0 sec=76.794\nErdos23Delta0.Cert.BranchBData.Shard014 rc=0 sec=76.797\nErdos23Delta0.Cert.BranchBData.Shard000 rc=0 sec=76.987\nErdos23Delta0.Cert.BranchBData.Shard011 rc=0 sec=77.245\nErdos23Delta0.Cert.BranchBData.Shard007 rc=0 sec=77.373\nErdos23Delta0.Cert.BranchBData.Shard012 rc=0 sec=77.401\nErdos23Delta0.Cert.BranchBData.Shard004 rc=0 sec=79.247\nErdos23Delta0.Cert.BranchBData.Shard005 rc=0 sec=88.923\nErdos23Delta0.Cert.BranchBData.Shard010 rc=0 sec=96.817\nErdos23Delta0.Cert.BranchBData.Shard015 rc=0 sec=97.915\nErdos23Delta0.Cert.BranchBData.Shard016 rc=0 sec=53.4\nErdos23Delta0.Cert.BranchBData.Shard028 rc=0 sec=42.223\nErdos23Delta0.Cert.BranchBData.Shard017 rc=0 sec=58.728\nErdos23Delta0.Cert.BranchBData.Shard018 rc=0 sec=57.92\nErdos23Delta0.Cert.BranchBData.Shard019 rc=0 sec=64.554\nErdos23Delta0.Cert.BranchBData.Shard023 rc=0 sec=62.986\nErdos23Delta0.Cert.BranchBData.Shard026 rc=0 sec=63.598\nErdos23Delta0.Cert.BranchBData.Shard025 rc=0 sec=64.523\nErdos23Delta0.Cert.BranchBData.Shard027 rc=0 sec=66.293\nErdos23Delta0.Cert.BranchBData.Shard020 rc=0 sec=71.133\nErdos23Delta0.Cert.BranchBData.Shard024 rc=0 sec=71.107\nErdos23Delta0.Cert.BranchBData.Shard022 rc=0 sec=78.469\nErdos23Delta0.Cert.BranchBData.Shard021 rc=0 sec=81.547\nErdos23Delta0.Cert.BranchBData rc=0 sec=23.949\nPASS modules=33 shards=29 summary=E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_module_build_codex20260705_live_summary.json\n"
+    },
+    {
+      "cmd": [
+        "C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "problems\\23\\writeup\\_codex_branchb_lean_artifact_audit.py",
+        "--manifest",
+        "tmp\\branchb_lean_transpile_full_codex20260705_live_manifest.json",
+        "--build-summary",
+        "tmp\\branchb_lean_module_build_codex20260705_live_summary.json",
+        "--dictionary-manifest",
+        "tmp\\branchb_dictionary_audit_lean_codex20260705_live_manifest.json",
+        "--summary",
+        "tmp\\branchb_lean_artifact_audit_codex20260705_live.json"
+      ],
+      "name": "artifact_audit",
+      "returncode": 0,
+      "seconds": 0.12,
+      "stderr_tail": "",
+      "stdout_tail": "\"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard012.lean\",\n        \"sha256\": \"a36a38f93df8aab38a92470501f34229973beeada0426ee39e9c7bbc7203d58d\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard013.lean\",\n        \"sha256\": \"8689beb5c9029f2dcb255630a3af378e7289a3b888994f835316a82cae85ff4d\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard014.lean\",\n        \"sha256\": \"0b6f6fe2a208c1bd39a335b3d3062bbdde1493ca2090153d1ebc6173c4b6081c\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard015.lean\",\n        \"sha256\": \"f2604ab41784333b6cb0d52ba4779156cb3068d023ecba7166691804ce1c77ac\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard016.lean\",\n        \"sha256\": \"a62f1444112061023af8a4f975fdb61402682d7dc7b541eb09cba47cb9631e4a\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard017.lean\",\n        \"sha256\": \"aaf4a1f7f7b0d407734af0a899260a8454b697be9d7e6bc5f1a13308c063475a\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard018.lean\",\n        \"sha256\": \"58857bc8a3f2436e459ba2747d654d8be7b360075f6fab6fafdef8020ea19362\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard019.lean\",\n        \"sha256\": \"bc3cf028eaa7cb5d8c76016e785e679bde72746e91dd4a42643d6fe09f84823a\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard020.lean\",\n        \"sha256\": \"9a6a203d2c04447788719d33bf065c4b82684b12c537f8e929310c0d982c03ec\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard021.lean\",\n        \"sha256\": \"5e439e817ae58a6fc9058d87598e60acf5ea6aa89b95ccf71777b9af5eb5f131\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard022.lean\",\n        \"sha256\": \"9ccc044610bf27da55942622b44babd1da70b58cb4ce05ca11d9c6531ce884d8\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard023.lean\",\n        \"sha256\": \"2080bbf9e356802db1e1d5b21f5860dd50a74eaad398800138d1385e823a40cf\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard024.lean\",\n        \"sha256\": \"21e4c55bb673953f8e4d8b0aa86d6f913b5b619d4315c7ca48cd3c20c23b02d8\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard025.lean\",\n        \"sha256\": \"33cc5af16fcab534c08d21bdf983dc781c8172add52478b9792f2ee851437ba0\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard026.lean\",\n        \"sha256\": \"fc5104b54e08cd92ffb8161c261cd70888702612a0b66889af8e9e1c501b13ea\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard027.lean\",\n        \"sha256\": \"a1ada5f7900c5b3e9efa41a98d03ca6780059f57aeafef48e77f7bbb636bf8c7\"\n      },\n      {\n        \"file\": \"E:\\\\Projects\\\\ErdosProblems\\\\problems\\\\23\\\\lean\\\\Erdos23Delta0\\\\Cert\\\\BranchBData\\\\Shard028.lean\",\n        \"sha256\": \"1c3ffe70235f40cb7e8f80ac41c8a6240317f59cb487ee7fda14cc5ad3a2f068\"\n      }\n    ],\n    \"signatures\": \"5a814c6739de71ab9ad1479c94b2c27ed47b9dc508e7b54dc9e6e62f5319c159\",\n    \"support\": \"ce52ea8806f5880d5b99e6f63a0cf0bce10168c4b529dced446dade86f2b3057\",\n    \"transpile_manifest\": \"66d62048524912e7d9a1abbfc3ac97aed25fd8ef39e832e30cdb3a0ed2bae1c0\"\n  },\n  \"shards\": 29,\n  \"status\": \"PASS\"\n}\n"
+    }
+  ],
+  "tag": "codex20260705_live",
+  "workers": 16
+}

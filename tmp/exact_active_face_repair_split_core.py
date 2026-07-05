@@ -48,7 +48,7 @@ def make_variables(
     for c in j0:
         if c not in exclude_u:
             variables.append({"kind": "u", "source_col": c, "sign": 1})
-        if c in old_vals:
+        if c in old_vals and old_vals[c] > 0:
             if c not in exclude_v:
                 variables.append({"kind": "v", "source_col": c, "sign": -1, "upper": fmt_fraction(old_vals[c])})
     return variables
@@ -57,6 +57,7 @@ def make_variables(
 def make_rows(
     r0: list[int],
     old_cols: list[int],
+    negative_cols: list[int],
     residual: list[Fraction],
     margins: dict[int, Fraction],
     old_vals: dict[int, Fraction],
@@ -66,6 +67,8 @@ def make_rows(
         rows.append({"type": "residual", "source_row": r, "rhs": residual[r] - margins.get(r, Fraction(0))})
     for c in old_cols:
         rows.append({"type": "source_bound", "source_col": c, "rhs": old_vals[c]})
+    for c in negative_cols:
+        rows.append({"type": "source_lower", "source_col": c, "rhs": old_vals[c]})
     return rows
 
 
@@ -79,7 +82,29 @@ def row_coeff(row: dict[str, object], var: dict[str, object], col_maps: dict[int
         if var["kind"] == "v" and int(var["source_col"]) == int(row["source_col"]):
             return Fraction(1)
         return Fraction(0)
+    if row["type"] == "source_lower":
+        if var["kind"] == "u" and int(var["source_col"]) == int(row["source_col"]):
+            return Fraction(-1)
+        return Fraction(0)
     raise ValueError(row["type"])
+
+
+def source_negative_damage_rows(
+    columns,
+    residual: list[Fraction],
+    negative_cols: set[int],
+    old_vals: dict[int, Fraction],
+) -> list[int]:
+    """Rows that would become negative if all negative source coefficients were lifted to zero."""
+    damaged: set[int] = set()
+    for c in negative_cols:
+        lift = -old_vals[c]
+        if lift <= 0:
+            continue
+        for row, coeff in columns[c].terms:
+            if coeff > 0 and residual[row] - coeff * lift < 0:
+                damaged.add(row)
+    return sorted(damaged)
 
 
 def solve_highs(
@@ -211,6 +236,158 @@ def export_core(
     meta_path.write_text(json.dumps(meta, indent=2, sort_keys=True), encoding="utf-8")
 
 
+def rank_mod(rows: list[int], cols: list[int], all_rows: list[dict[str, object]], all_vars: list[dict[str, object]], col_maps: dict[int, dict[int, Fraction]], prime: int) -> int:
+    mat = []
+    for row_idx in rows:
+        row = all_rows[row_idx]
+        vals = []
+        for col_idx in cols:
+            coeff = row_coeff(row, all_vars[col_idx], col_maps)
+            vals.append((coeff.numerator * pow(coeff.denominator % prime, -1, prime)) % prime)
+        mat.append(vals)
+    rank = 0
+    n_rows = len(mat)
+    n_cols = len(cols)
+    for col in range(n_cols):
+        pivot = None
+        for r in range(rank, n_rows):
+            if mat[r][col] % prime:
+                pivot = r
+                break
+        if pivot is None:
+            continue
+        mat[rank], mat[pivot] = mat[pivot], mat[rank]
+        inv = pow(mat[rank][col], -1, prime)
+        mat[rank] = [(x * inv) % prime for x in mat[rank]]
+        for r in range(n_rows):
+            if r == rank:
+                continue
+            factor = mat[r][col] % prime
+            if factor:
+                mat[r] = [(x - factor * y) % prime for x, y in zip(mat[r], mat[rank])]
+        rank += 1
+        if rank == n_rows:
+            break
+    return rank
+
+
+def choose_full_rank_square(
+    forced_vars: list[int],
+    forced_rows: list[int],
+    remaining_vars: list[int],
+    remaining_rows: list[int],
+    variables: list[dict[str, object]],
+    rows: list[dict[str, object]],
+    col_maps: dict[int, dict[int, Fraction]],
+) -> tuple[list[int], list[int], dict[str, object]]:
+    prime = 1073741789
+    candidate_vars = forced_vars + remaining_vars
+    candidate_rows = forced_rows + remaining_rows
+    forced_var_count = len(forced_vars)
+    forced_row_count = len(forced_rows)
+
+    # Current repair cases have one extra active row after forcing a source row.
+    # Keep the forced data and drop ordinary rows greedily only when full rank is preserved.
+    selected_vars = list(candidate_vars)
+    selected_rows = list(candidate_rows)
+    target_dim = min(len(selected_vars), len(selected_rows))
+    dropped_rows: list[int] = []
+    while len(selected_rows) > target_dim:
+        dropped = False
+        for idx in list(selected_rows[forced_row_count:]):
+            trial = [r for r in selected_rows if r != idx]
+            if rank_mod(trial, selected_vars, rows, variables, col_maps, prime) == target_dim:
+                selected_rows = trial
+                dropped_rows.append(idx)
+                dropped = True
+                break
+        if not dropped:
+            selected_rows = selected_rows[:target_dim]
+            dropped_rows.extend(candidate_rows[target_dim:])
+            break
+
+    dropped_vars: list[int] = []
+    while len(selected_vars) > target_dim:
+        dropped = False
+        for idx in list(selected_vars[forced_var_count:]):
+            trial = [c for c in selected_vars if c != idx]
+            if rank_mod(selected_rows, trial, rows, variables, col_maps, prime) == target_dim:
+                selected_vars = trial
+                dropped_vars.append(idx)
+                dropped = True
+                break
+        if not dropped:
+            selected_vars = selected_vars[:target_dim]
+            dropped_vars.extend(candidate_vars[target_dim:])
+            break
+
+    final_rank = rank_mod(selected_rows, selected_vars, rows, variables, col_maps, prime)
+    info = {
+        "rank_select_prime": prime,
+        "rank_select_mod_rank": final_rank,
+        "rank_select_target_dim": target_dim,
+        "rank_select_dropped_rows": dropped_rows,
+        "rank_select_dropped_vars": dropped_vars,
+    }
+    return selected_vars, selected_rows, info
+
+
+def force_source_lower_face(
+    variables: list[dict[str, object]],
+    rows: list[dict[str, object]],
+    col_maps: dict[int, dict[int, Fraction]],
+    basic_positions: list[int],
+    upper_positions: list[int],
+) -> tuple[list[int], list[int], dict[str, object]]:
+    """Include negative-source lower bounds in the exact square replay.
+
+    HiGHS may leave a source_lower inequality nonbasic; exact reconstruction of
+    only the active face can then violate lambda0 + u >= 0.  For certificate
+    repair, forcing this row means setting the corresponding u variable to the
+    exact lift -lambda0 inside the modularly checked core.
+    """
+    forced_vars: list[int] = []
+    forced_rows: list[int] = []
+    var_by_col = {
+        int(var["source_col"]): idx
+        for idx, var in enumerate(variables)
+        if var["kind"] == "u"
+    }
+    for row_idx, row in enumerate(rows):
+        if row["type"] != "source_lower":
+            continue
+        source_col = int(row["source_col"])
+        if source_col not in var_by_col:
+            raise RuntimeError(f"source_lower row has no u variable for source_col={source_col}")
+        forced_rows.append(row_idx)
+        forced_vars.append(var_by_col[source_col])
+
+    forced_var_set = set(forced_vars)
+    forced_row_set = set(forced_rows)
+    remaining_vars = [idx for idx in basic_positions if idx not in forced_var_set]
+    remaining_rows = [idx for idx in upper_positions if idx not in forced_row_set]
+    selected_vars, selected_rows, rank_info = choose_full_rank_square(
+        forced_vars,
+        forced_rows,
+        remaining_vars,
+        remaining_rows,
+        variables,
+        rows,
+        col_maps,
+    )
+    if len(selected_vars) != len(selected_rows):
+        raise RuntimeError(f"forced source_lower core not square: {len(selected_vars)} vs {len(selected_rows)}")
+    info = {
+        "forced_source_lower_count": len(forced_rows),
+        "forced_source_lower_rows": forced_rows,
+        "forced_source_lower_vars": forced_vars,
+        "dropped_basic_var_count": len(basic_positions) - len([v for v in selected_vars if v in set(basic_positions)]),
+        "dropped_upper_row_count": len(upper_positions) - len([r for r in selected_rows if r in set(upper_positions)]),
+    }
+    info.update(rank_info)
+    return selected_vars, selected_rows, info
+
+
 def run(args):
     prepared, columns, _mat, _b_ub = probe.build_lp(args.chart, args.dominant, args.band, args.support)
     vals = source_check.read_source_solution(args.source_solution)
@@ -218,14 +395,21 @@ def run(args):
     hard_rows = [int(x) for x in args.hard_row] or [i for i, v in enumerate(residual) if v < 0]
     extra_rows = set(int(x) for x in args.extra_row)
     old_cols = {c for c, v in vals.items() if v > 0}
-    gain_cols = base.select_gain_cols(columns, hard_rows)
-    map_cols = old_cols | gain_cols
+    negative_cols = {c for c, v in vals.items() if v < 0}
+    source_damage = (
+        source_negative_damage_rows(columns, residual, negative_cols, vals)
+        if args.source_negative_damage_guards
+        else []
+    )
+    gain_seed_rows = sorted(set(hard_rows) | set(source_damage))
+    gain_cols = base.select_gain_cols(columns, gain_seed_rows)
+    map_cols = old_cols | negative_cols | gain_cols
     col_maps_for_score = base.column_maps(columns, map_cols)
     tight = base.threshold_rows(prepared, residual, args.tight_guard_pow, args.tight_cap)
     damage = base.damage_rows(prepared, columns, residual, gain_cols, args.damage_guard_pow, args.damage_cap)
-    r0 = sorted(set(hard_rows) | set(tight) | set(damage) | extra_rows)
-    top_gain = base.top_gain_cols(columns, col_maps_for_score, hard_rows, r0, gain_cols, args.top_gain)
-    j0 = sorted(old_cols | top_gain)
+    r0 = sorted(set(hard_rows) | set(source_damage) | set(tight) | set(damage) | extra_rows)
+    top_gain = base.top_gain_cols(columns, col_maps_for_score, gain_seed_rows, r0, gain_cols, args.top_gain)
+    j0 = sorted(old_cols | negative_cols | top_gain)
     col_maps = base.column_maps(columns, set(j0))
 
     def margins(use_hard: bool) -> dict[int, Fraction]:
@@ -237,7 +421,7 @@ def run(args):
         }
 
     stage1_margin = margins(True)
-    rows_margin = make_rows(r0, sorted(old_cols), residual, stage1_margin, vals)
+    rows_margin = make_rows(r0, sorted(old_cols), sorted(negative_cols), residual, stage1_margin, vals)
     variables = make_variables(j0, vals, set(args.exclude_u_col), set(args.exclude_v_col))
     zero_costs = [0.0] * len(variables)
     stage1 = solve_highs(variables, rows_margin, col_maps, zero_costs, hard_rows, args.time_limit)
@@ -246,7 +430,7 @@ def run(args):
     if "optimal" not in stage1["model_status"].lower() or (
         stage1.get("objective") is not None and float(stage1["objective"]) > args.objective_tol
     ):
-        rows_zero = make_rows(r0, sorted(old_cols), residual, margins(False), vals)
+        rows_zero = make_rows(r0, sorted(old_cols), sorted(negative_cols), residual, margins(False), vals)
         stage1_zero = solve_highs(variables, rows_zero, col_maps, zero_costs, hard_rows, args.time_limit)
         stage1["fallback_zero_margin"] = {k: v for k, v in stage1_zero.items() if k != "values"}
         margin_used = "zero"
@@ -284,6 +468,9 @@ def run(args):
         "initial_full_negative_residual_count": sum(1 for val in residual if val < 0),
         "initial_min_residual": replay.fmt_fraction(min(residual) if residual else Fraction(0)),
         "old_support_count": len(old_cols),
+        "negative_source_count": len(negative_cols),
+        "source_negative_damage_guard_count": len(source_damage),
+        "gain_seed_row_count": len(gain_seed_rows),
         "gain_col_count": len(gain_cols),
         "top_gain_count": len(top_gain),
         "tight_guard_count": len(tight),
@@ -301,14 +488,27 @@ def run(args):
     summary["status"] = "stage2_optimal"
     summary["basic_var_count"] = len(stage2.get("basic_var_positions", []))
     summary["upper_row_count"] = len(stage2.get("upper_row_positions", []))
+    basic_positions = stage2.get("basic_var_positions", [])
+    upper_positions = stage2.get("upper_row_positions", [])
+    if args.force_source_lower_core:
+        basic_positions, upper_positions, forced_info = force_source_lower_face(
+            variables,
+            rows,
+            col_maps,
+            basic_positions,
+            upper_positions,
+        )
+        summary.update(forced_info)
+        summary["basic_var_count"] = len(basic_positions)
+        summary["upper_row_count"] = len(upper_positions)
     export_core(
         args.out_core,
         args.meta,
         variables,
         rows,
         col_maps,
-        stage2.get("basic_var_positions", []),
-        stage2.get("upper_row_positions", []),
+        basic_positions,
+        upper_positions,
         summary,
     )
     summary["status"] = "core_exported"
@@ -332,6 +532,8 @@ def main() -> None:
     ap.add_argument("--top-gain", type=int, default=512)
     ap.add_argument("--exclude-u-col", type=int, action="append", default=[])
     ap.add_argument("--exclude-v-col", type=int, action="append", default=[])
+    ap.add_argument("--source-negative-damage-guards", action="store_true")
+    ap.add_argument("--force-source-lower-core", action="store_true")
     ap.add_argument("--objective-tol", type=float, default=1e-9)
     ap.add_argument("--time-limit", type=float, default=240.0)
     ap.add_argument("--out-core", type=Path, required=True)

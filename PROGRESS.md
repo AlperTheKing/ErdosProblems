@@ -2251,3 +2251,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T05:30Z] V LEAN | DID: Assembly stage-6 typed+built (2 rounds, 1 direction fix) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0 — gammaOfGD/RowDBGammaFacts(coverage)/gammaLower PROVEN/gammaUpper/gammaBetaProvider_of_rowDB + maxcut_exists_from_cutFn_bridge PROVEN + exists_good_cut_from_providers PROVEN + RemainingDelta0CertificateData | D: assumption set minimized to row constructions + per-row A/B certs
 [2026-07-05T06:00Z] V BATCH | DID: k9/G1 two-shot | RESULT: PARKED (G1 class) | D: none
 [2026-07-05T06:40Z] V CODEX | DID: sanitizer ASK answered from the full designer text (infeasible = anticipated; signed-t check; zero+additive-repair ladder w/ exact params) + FULL VERDICT ARCHIVED | RESULT: SOURCES_ONLY_SANITIZER_GPTPRO.md; 38/108 acked | D: none
+[2026-07-05T07:10Z] V BATCH | DID: k7/F6 patch r1 | RESULT: 13/63 -> 11/19 PARKED (F6-class) | D: none

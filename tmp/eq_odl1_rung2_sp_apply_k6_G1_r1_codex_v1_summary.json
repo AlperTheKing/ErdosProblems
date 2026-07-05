@@ -1,0 +1,33 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_sp_core_k6_G1_r1_codex_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2923/den_bits=2915",
+  "full_min_residual": "-num_bits=2937/den_bits=2973",
+  "full_negative_residual_count": 4,
+  "increment_count": 21,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_sp_sol_k6_G1_r1_codex_384prime_v1.jsonl",
+  "min_solution_value": "num_bits=2937/den_bits=2972",
+  "negative_rows_prefix": [
+    {
+      "residual": "-num_bits=2937/den_bits=2973",
+      "row": 17355
+    },
+    {
+      "residual": "-num_bits=2937/den_bits=2975",
+      "row": 28742
+    },
+    {
+      "residual": "-num_bits=2937/den_bits=2974",
+      "row": 29663
+    },
+    {
+      "residual": "-num_bits=2937/den_bits=2974",
+      "row": 30299
+    }
+  ],
+  "negative_source_prefix": [],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_G1_near_family_codex_patch1_v1.jsonl"
+}
