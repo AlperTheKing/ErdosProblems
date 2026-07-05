@@ -105,3 +105,35 @@ is an exact nonnegative dictionary charge.
 Thus the CD part of the proof has the two-step form: the telescope supplies the
 positive-part residuals; the dictionary supplies their finite nonnegative
 decomposition. BOTH certificate layers are required.
+
+# ===== E3 (sibling thread, 2026-07-05; reconstructed from transformed extraction) =====
+
+E3. S7 sibling certificate statement made explicit.
+Target section: Branch A, Section 2.6 (Sibling seed and S7); also anywhere S7 is cited
+without its domain and slacks. Anchor: "by S7" / "the S7 inequality" / "the sibling
+active-five certificate".
+Replacement text:
+The sibling active-five certificate is the following explicit S7 inequality.
+Let a,b,c,d,e,f,x,y,u,v >= 1. Define
+  m = x*u + x*v + y*v,
+  N = a+b+c+d+e+f+x+y+u+v,
+  Y = a*c + b*f + c*f,
+  Z = e*Y + d*f*(b+c),
+  A = b*d+c*d+d*f+a*c+a*e+b*f+b*e+c*f+c*e+e*f,
+  B = a*c+a*e+b*f+b*e+c*f+c*e+e*f.
+The row excess is IminusN [I - N]; the seventh slack is s7 = a*e + d*f + e*f - m.
+S7 domain: a..v >= 1 and s1,...,s7 >= 0. Certified inequality:
+  2*(N^2 - 25m) - 75*IminusN >= 0,
+equivalently IminusN <= (2/75)(N^2-25m) = (2/3)(N^2/25 - m) = (2/3)*eta.
+The rational-form denominator is positive on the domain (e > 0, Y > 0, Z > 0), so
+clearing denominators preserves sign.
+Proof = the archived endpoint-fiber and residual-fiber certificate: compactified
+counterexample reduction sends every candidate negative point to endpoint or
+capacity-endpoint faces; y=1 and x=1 endpoint faces reduced by endpoint-derivative
+exclusions to finite face gates; the twelve residual capacity-endpoint faces (s_j=0,
+j in {4,5,6,7}, with u=1, v=1, or s1=0) reduced by the residual-fiber quadratic
+certificate to stationary and s3=0 corner gates; the four s1=0 stationary gates closed
+analytically by certified floor inequalities F4A, F4B, F5, F6, F7; remaining gates
+discharged by the exact S7 machine artifact.
+Every citation to S7 means precisely this inequality, on this domain, with the seven
+displayed slacks, after clearing the positive denominator.

@@ -78,7 +78,7 @@
 - IN FLIGHT: main = O13 witness/completeness completion; sibling = definitions table (appendices 5.1/5.2 landed 14724c, unextracted).
 - EXTRACTION QUEUE grows: appendices 5.1/5.2 (14724c), O13 remainder (window.__au offsets ~7900-17359 — cache may die on tab reload; full text stays in-thread), 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7. BATCH SEVERAL NEXT TICK.
 - Lean next: CorridorPartition checker + canon alignment (CompletedSwitchCert, two trace types) as new modules.
-- Codex: modular replay (2686-dim) TOP + corrected inf-band reruns + numeric map + O5/O6-EMIT queue. marker 1850830.
+- Codex: modular replay (2686-dim) TOP + corrected inf-band reruns + numeric map + O5/O6-EMIT queue. marker 1866752.
 
 
 ## TICK NOTES (2026-07-04T14:30Z)
@@ -86,7 +86,7 @@
 - Codex basis-quality ASK ruled: (B) Markowitz/denominator-aware modular pivots + early-exit recon (200-prime cap), (A) one glpsol --exact probe if installed, (C) parallel always.
 - IN FLIGHT: main = referee FAQ (defense appendix + gap hunt); sibling = definitions table (appendices 5.1/5.2 landed 14724c unextracted).
 - EXTRACTION QUEUE: definitions table (when lands), appendices 5.1/5.2, 4.1, 3.1, 2.1, 1.1-1.3, assembly plan, E1-E7 — BATCH-SAVE next tick to PAPER_SECTIONS_GPTPRO.md etc.
-- Lean next: CorridorPartition checker + canon alignment. marker 1850830.
+- Lean next: CorridorPartition checker + canon alignment. marker 1866752.
 
 
 ## TICK NOTES (2026-07-04T15:10Z)
@@ -94,14 +94,14 @@
 - Exact-replay heights persist across ALL bases (lex-small/lex-large/family/sparse-row: partial ~1790/2686 at 1080 bits) => consult sent to main: is high height by-design + interior small-denominator feasible-point recipe (rounding+repair / analytic center / margin-buffered rounding / coarser multiplier basis). DECISIVE for rung-2.
 - IN FLIGHT: main = exact-replay strategy; sibling = definitions table (check + extract next tick).
 - LEAN NEXT TICK FIRST: CorridorPartition checker (slid 4 ticks). Then canon alignment.
-- Extraction queue unchanged (batch when quiet). marker 1850830.
+- Extraction queue unchanged (batch when quiet). marker 1866752.
 
 
 ## TICK NOTES (2026-07-04T16:15Z)
 - FLOOR-BUFFER method archived + full directive to Codex (two-stage BufferLP, safe floor Q>4/theta, exact b>=0 verify, RepairLP fallback; expected 14-17 bit denominators) — replaces ALL vertex/basis extraction.
 - Lean: CorridorPartition checker GREEN (pairwiseDisjB + nu0_partition + negative_corridor_of_check) — B2 layer done. 15 modules green. NEXT: CrossCap checker skeleton (canon CompletedSwitchCert + demand/capacity checks) OR canon alignment pass.
 - IN FLIGHT: main = radial-monotonicity analysis (formula, chart ranking, skip-cert form, sweep protocol); sibling = definitions table LANDED 27461c (extract at assembly; note in queue).
-- Codex: floor-buffer implementation on k=0/B0/near = THE gate; then batch. marker 1850830 (no new posts last scan).
+- Codex: floor-buffer implementation on k=0/B0/near = THE gate; then batch. marker 1866752 (no new posts last scan).
 - FAQ index archived (32 objections). Commits through 55756768a.
 
 
@@ -110,7 +110,7 @@
 - Radial-monotonicity protocol archived + posted (sweep first, k=5-9 first, k=0/B0 budget full InfCert).
 - IN FLIGHT: main = free (radmono done) — RETASK NEXT TICK (queue: first-Codex-artifact adversarial audit when O5/O6 emissions land; or paper section 2.2 Bank0 integration review); sibling = definitions table LANDED 27461c (extract at assembly).
 - Lean 15 green. NEXT: CrossCap checker skeleton (canon CompletedSwitchCert + demand/capacity + integer identity).
-- marker 1850830. Commits through 55756768a (this tick's commit next).
+- marker 1866752. Commits through 55756768a (this tick's commit next).
 
 
 ## TICK NOTES (2026-07-04T18:15Z)
@@ -118,7 +118,7 @@
 - Main retasked: O14 ASSEMBLY THEOREM (coverage lemma 10x15x2+stratum, per-chart pullback, final EQ-ODL1 composition, all-or-nothing accounting, Lean shapes).
 - Lean: canon CompletedSwitchCert + checkCompletedSwitch + sigma/nuK fact extraction — BUILD IN FLIGHT (bg bvwl8s15n; fix if red next wake).
 - Sibling: definitions table landed (extract at assembly); retask queue: paper 2.2/3.2 or idle-fill review.
-- marker 1850830.
+- marker 1866752.
 
 
 ## TICK NOTES (2026-07-04T19:25Z)
@@ -171,7 +171,7 @@
   LOCAL NOW SOUND, band, box). Pure Q algebra: no deriv/MVT/MonotoneOn/RadialHull. Derivative
   certs = deprecated fallback. Archived at EQ_ODL1_O14_ASSEMBLY_GPTPRO.md tail + BINDING posted.
 - FAQ 33-50 landed (index archived; verbatim at assembly). Codex: BranchB v2 denom guard +
-  SHA v6 + v9 reproducer PASS acked; exit-capture confirmation requested. marker 1850830.
+  SHA v6 + v9 reproducer PASS acked; exit-capture confirmation requested. marker 1866752.
 - IN FLIGHT: main = O13 Seed3Complete finite-enumeration proof (completeness keystone of the
   3-door branch); sibling = section 3.3 (3.2 landed 6591c -> extraction queue).
 - Lean: diffSkip_right/left scalar consumers added to PolyCert.lean — build in flight
@@ -193,7 +193,7 @@
   WRITEUP_REDTEAM archive before typing (summary spec insufficient — do the archive read
   as the tick-start action). Alternative ready increment: EQODL1/DiffSkip checker skeleton
   once Codex confirms the chart-shard variable-numbering convention (ASK NEXT POST).
-- EXTRACTION QUEUE += sibling 3.3 (5561c). marker 1850830 (no new Codex posts this tick).
+- EXTRACTION QUEUE += sibling 3.3 (5561c). marker 1866752 (no new Codex posts this tick).
 
 
 ## TICK NOTES (2026-07-04T22:55Z) — width bounds honest-form FINAL
@@ -206,7 +206,7 @@
   (needed before EQODL1/DiffSkip Lean instantiation).
 - IN FLIGHT: main = ClosureTrace C1-C4 replay semantics (state/preconds/postconds/invariant/
   Lean shapes — my next module blocks on this); sibling = section 3.5+ (3.4 landed 3411c).
-- EXTRACTION QUEUE += sibling 3.4 (3411c). marker 1850830 (no Codex posts for ~2 ticks —
+- EXTRACTION QUEUE += sibling 3.4 (3411c). marker 1866752 (no Codex posts for ~2 ticks —
   chart batch presumably grinding; nudge if silent next tick too).
 - LEAN NEXT: ClosureTrace module as soon as semantics land; meanwhile candidates:
   Seed3 OverflowCert/WidthCert data skeletons (contract archived) if main is slow.
@@ -227,7 +227,7 @@
   + replay + checkClosed + pressure + soundness), build honestly, zero warnings.
 - IN FLIGHT: main = PeelCert + Bank0Statement + checkBank0Cert dispatch + strong-induction
   skeleton (LAST Lean-design gap; unblocks Assembly module). sibling = next paper section.
-- marker 1850830. Commits through 884b66e6e (this tick commit next).
+- marker 1866752. Commits through 884b66e6e (this tick commit next).
 
 
 ## TICK NOTES (2026-07-05T00:55Z) — Bank0 Lean design COMPLETE
@@ -243,7 +243,7 @@
 - EXTRACTION QUEUE += sibling 3.5 (6042c).
 - LEAN NEXT TICK — HARD FIRST ACTION, NO MORE SLIDING: type ClosureTrace.lean from the
   archived C1-C4 contract (structures + replay foldM + checkClosed + pressureClaim +
-  soundness), honest build. THEN Peel.lean skeleton per today s contract. marker 1850830.
+  soundness), honest build. THEN Peel.lean skeleton per today s contract. marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T01:50Z) — ClosureTrace module typed; batch at 4/108
@@ -256,7 +256,7 @@
   -> restructured; SECOND BUILD IN FLIGHT (bg blot0sqwn). Fix-or-commit on wake.
 - Codex: olean recovery FIXED (fresh_rerun+mtime+stderr, verified); k6+k8 charts certified
   (lex-large; lex-small honestly rejected k6); LEDGER v2: 4/108 certified, validator script.
-  marker 1850830. SPOT-CHECK POLICY (set next post): I independently re-verify ~1 in 10 batch
+  marker 1866752. SPOT-CHECK POLICY (set next post): I independently re-verify ~1 in 10 batch
   rows + every repaired/hard row; full aggregate re-verify at assembly.
 - UNEXTRACTED (next tick FIRST after build green): main top-level assembly reply (13470c,
   landed) -> archive + retask main; sibling section 3.6 status unknown -> check + retask.
@@ -280,7 +280,7 @@
   skeleton per the 19-declaration list — FIRST read BranchAInterface/Row/Gamma modules for
   existing rowSum/XMask/netDW_assembly/gammaOf names; type against them, keep provider
   theorems as hypotheses; (3) EQODL1/DiffSkip instantiation once Codex chart batch completes.
-- EXTRACTION QUEUE += sibling 3.6 (4582c). marker 1850830 (no new Codex posts; batch grinding).
+- EXTRACTION QUEUE += sibling 3.6 (4582c). marker 1866752 (no new Codex posts; batch grinding).
 
 
 ## TICK NOTES (2026-07-05T04:05Z) — exists_good_cut contracted; batch 6/108
@@ -292,7 +292,7 @@
 - IN FLIGHT: main = cross-contract consistency audit (defect list before I type
   Peel/Assembly — prevents red-cascade); sibling = 3.7+ (check next tick).
 - Codex: batch 6/108 (k8/G3 multi-repair exact increments, k5/G3 no-repair); ledger v4.
-  marker 1850830.
+  marker 1866752.
 - LEAN NEXT TICK: Peel layer + GoodCut/Assembly skeletons WITH audit verdicts in hand.
 
 
@@ -307,7 +307,7 @@
 - NEW OBLIGATION (audit 36-39): ODL provider = Seed3RouteTree (internal nodes NOT_SATURATED/
   PRUNABLE/FOUR_DOOR, leaves EQ/SIB/NO_OVERFULL/NEG_SWITCH, well-founded measure) — main
   designing now. DiffSkip boundary-cover + FaceCert format posted to Codex (audit 41/42).
-- Batch 7/108; k6/G3 repaired row personally reverified (3rd). marker 1850830.
+- Batch 7/108; k6/G3 repaired row personally reverified (3rd). marker 1866752.
 - LEAN NEXT TICK: type Peel layer INTO CertGraph with AUDITED signatures (PeelPreservesFacts
   extended form; GammaMinimalConnected G c; RowDBFactsAll5 for Bank0 side); then Assembly
   skeleton. Sibling: check + retask (3.7+ status unknown this tick).
@@ -326,7 +326,7 @@
   checkBank0Cert dispatch + bank0_all) — needs GlobalC5/NCHBank/CrossCert stubs decision:
   type the inductive with all five constructors but ROUTE globalC5/nch through existing
   checkers where possible; consult archived dispatch contract first.
-- EXTRACTION QUEUE += sibling 3.7 (3447c). marker 1850830.
+- EXTRACTION QUEUE += sibling 3.7 (3447c). marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T06:45Z) — route-tree provider contracted
@@ -342,7 +342,7 @@
   checkBank0Cert dispatch + Bank0Statement w/ RowDBFactsAll5 + bank0_all via
   Nat.strong_induction_on) — GlobalC5/NCHBank sub-checkers stubbed as separate Bool checkers
   routed through existing machinery (template cuts via checkBankBlock-style counting; nch as
-  wrapper inductive). marker 1850830 (no new Codex posts this tick).
+  wrapper inductive). marker 1866752 (no new Codex posts this tick).
 
 
 ## TICK NOTES (2026-07-05T07:40Z) — micro example GATED clean
@@ -352,7 +352,7 @@
   323/75); final 64/3 <= 666/25, margin 398/75. Validation instance for O13/route-tree
   emissions + Lean Seed3RouteTree module.
 - Codex MDS ASK ruled: scope-before-compute (park if superseded; run only for a named live
-  node + exact invocation). marker 1850830.
+  node + exact invocation). marker 1866752.
 - IN FLIGHT: main = q=3 completeness paper section; sibling = 3.8+ series.
 - LEAN NEXT: Bank0 Assembly skeleton (all contracts + audit fixes in hand; use RowDBFactsAll5,
   GammaMinimalConnected G c, PeelPreservesFacts extended, IsMaxCut structure form).
@@ -371,12 +371,12 @@
 - q=3 paper section landed on main (14978c — extraction at assembly). Main retask NEXT TICK
   (queue: BankBlockCoverCert bads<->badCount linkage detail if fiddly; else FAQ 51+ or
   O5/O6 artifact audit when they land). Sibling 3.8+ status: check next tick.
-- marker 1850830. EXTRACTION QUEUE += main q=3 section (14978c).
+- marker 1866752. EXTRACTION QUEUE += main q=3 section (14978c).
 
 
 ## TICK NOTES (2026-07-05T09:35Z) — GlobalC5 payload green; 4/5 payloads done
 - Batch 11/108; k5/F4 (repaired, 384-prime lex-large + highspy basis) reverified by me —
-  5th personal check, all repaired rows covered. marker 1850830.
+  5th personal check, all repaired rows covered. marker 1866752.
 - LEAN: B5 GlobalC5 GREEN first try (partition-size sum + hygiene + pairwise disjoint +
   recomputed bad-edge placement V4-V0 + five cyclic template bounds; fact extractions
   _sizes and _products feed Bank0Algebra.bank_amgm_rat in Assembly). CertGraph payloads:
@@ -401,7 +401,7 @@
   remains. THEN Bank0Cert inductive + dispatch + Bank0Statement + bank0_all — all inside
   CertGraph.lean tail (single-file pattern held; bank_amgm_nat now local).
 - Codex: BranchB strict audit v10 w/ NEGATIVE GATE (v9 legacy rejected). Batch 11/108.
-  marker 1850830.
+  marker 1866752.
 - NEXT TICK: BankBlockCoverCert (partition of recomputed bad edges into blocks + per-block
   bank_amgm_nat + sum_sq: need Nat sum-of-squares<=square lemma — trivial via
   Nat.add_mul_le... or copy sum_sq route) THEN nch wrapper THEN Assembly. Main retask due
@@ -421,7 +421,7 @@
   (2) NCHBankCert routing wrapper; (3) Bank0Cert inductive + dispatch + Bank0Statement +
   bank0_all (Nat.strong_induction_on).
 - Batch 12/108 (k5/B0 no-repair). Sibling dead-stub nudged (regenerating). Main = FAQ 51+.
-  marker 1850830.
+  marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T12:35Z) — ALL 5 Bank0 payloads proven; batch 14/108
@@ -437,7 +437,7 @@
   (likely: state bank0_all with hypothesis on ALL descendant instances reachable through the
   cert's peel chain — a recursive Prop — vs formalize extension+P-MaxCut now).
 - Batch 14/108: k6/F3 (384-prime escalation) + HARD k5/G5 pair-repair — k5/G5 reverified by
-  me (6th; all repaired rows covered). first_pending = k5/G7_B2_4T (hard). marker 1850830.
+  me (6th; all repaired rows covered). first_pending = k5/G7_B2_4T (hard). marker 1866752.
 - Main = FAQ 51+ (in flight); sibling = regenerating post-stub section.
 
 
@@ -458,7 +458,7 @@
 
 ## TICK NOTES (2026-07-05T14:15Z) — batch 17/108; SigmaChain provider consult in flight
 - Batch 17/108 (k8/F4 clean, k8/F3 repaired — reverified by me, 8th). first_pending k6/G5
-  (hard). marker 1850830.
+  (hard). marker 1866752.
 - Main = SigmaChain provider contract (P-MaxCut preservation: Ext cut-extension data,
   badCount_Ext, the badCount-min <-> sigmaNonneg equivalence via symmetric-difference flips,
   small minimality transfer) — THE LAST BANK0 LINK. FAQ 51+ landed (extraction at assembly).
@@ -478,7 +478,7 @@
   provider). Then Bank0 = SELF-CONTAINED from IsMaxCut + checks. After: Branch-A consumption
   (etaNonneg edge) + Assembly.lean per top-level contract.
 - Main = Lean-architecture paper section (in flight). Sibling = post-stub regen (CHECK).
-  Batch 17/108, marker 1850830. FAQ 51+ + q=3 section + sections 2.2-3.8 in extraction queue.
+  Batch 17/108, marker 1866752. FAQ 51+ + q=3 section + sections 2.2-3.8 in extraction queue.
 
 
 ## TICK NOTES (2026-07-05T16:10Z) — SigmaChain stage A green first try
@@ -492,7 +492,7 @@
   extend_smallCut sides agreement; badCount_smallCut_eq_big; small_badCount_min_of_peel;
   sigmaNonneg_small_of_peel; SigmaChain_of_sigmaNonneg. Then BANK0 SELF-CONTAINED.
 - Main = Lean-architecture section (in flight); sibling = post-stub regen (CHECK NEXT TICK).
-  Batch 17/108, marker 1850830.
+  Batch 17/108, marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T17:25Z) — stage B1 green; batch 18/108
@@ -505,7 +505,7 @@
 - Batch 18/108 (k6/G5 multirepair reverified — 9th). Lean-architecture section landed
   (15553c, queued). Main retask due next tick (queue: adversarial review of my B2 proof
   sketch if I want a second opinion, or idle-fill FAQ/paper). Sibling regen still unchecked.
-  marker 1850830.
+  marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T18:10Z) — B2 proof script commissioned; batch 19/108
@@ -516,7 +516,7 @@
   claim structure (it is a proof, not numerics — REVIEW line by line vs my defs), paste,
   build honestly, fix. Then the mechanical transfer chain closes Bank0 self-containment.
 - Batch 19/108 (k6/F4 reverified — 10th; every repaired row still personally verified).
-  Sibling 4.1 queued; on 4.2+. marker 1850830.
+  Sibling 4.1 queued; on 4.2+. marker 1866752.
 
 
 ## TICK NOTES (2026-07-05T21:35Z) — B2 proof kernel landed in-thread
@@ -530,7 +530,7 @@
   reassemble, review line-by-line vs green defs, paste before end-markers, honest build,
   fix cycles. THEN: transfer chain (badCount_smallCut_eq_big, small_badCount_min_of_peel,
   sigmaNonneg_small_of_peel, SigmaChain_of_sigmaNonneg) closes BANK0 SELF-CONTAINMENT.
-- Batch 19/108. Sibling on 4.2+. marker 1850830.
+- Batch 19/108. Sibling on 4.2+. marker 1866752.
 
 
 ## TICK NOTES (2026-07-04T00:55Z) — BANK0 SELF-CONTAINED IN LEAN (B2 closed)
@@ -551,7 +551,7 @@
   4.3+ (4.2 landed 8159c, queued for extraction).
 - LEAN NEXT: Assembly.lean skeleton on main reply landing (19-declaration contract + my
   etaNonneg_of_bank0 discharge); meanwhile candidates: LensGates checker or Seed3RouteTree module.
-- Codex: batch 19/108, marker 1850830 (no new posts). Notify bank0_of_maxcut interface freeze.
+- Codex: batch 19/108, marker 1866752 (no new posts). Notify bank0_of_maxcut interface freeze.
 - P(math)~89, P(Lean)~87 (Bank0 checker complex fully closed).
 
 
@@ -577,7 +577,7 @@
   self-contained (etaQ/rhoQ/tauQ, rowSurplus/XMask/positiveMask/C5RS as parameters, the three
   proven scalar-free theorems) in a new Assembly.lean with placeholders-as-parameters, so the
   gap-fill drops in.
-- EXTRACTION QUEUE += sibling 4.2 (8159c), 4.3 (9135c). marker 1850830 (no Codex posts).
+- EXTRACTION QUEUE += sibling 4.2 (8159c), 4.3 (9135c). marker 1866752 (no Codex posts).
 - P(math)~89, P(Lean)~87.
 
 
@@ -607,7 +607,7 @@
   flags F1-F3 in header; scalar wrap notes in 02:08Z tick note); (2) Codex co-work: on
   template post, claim EVEN pending charts + launch first two (48 threads); check mailbox
   FIRST (user relaying plan directly). (3) sibling 4.4 extract-queue + retask.
-- Mailbox marker 1850830 (no reply yet at 02:20Z).
+- Mailbox marker 1866752 (no reply yet at 02:20Z).
 
 
 ## TICK NOTES (2026-07-04T03:10Z) — ASSEMBLY LAYER GREEN (stages 1+2); Bank0 discharge live
@@ -627,7 +627,7 @@
   GammaBetaFacts providers from green Gamma machinery, SimpleGraphBridge constructor via
   Fintype.equivFin, Skeleton top statement). GPT raw gap-fill lives in-thread (msg n=13).
 - IN FLIGHT: main = existence-provider module; sibling = 4.5+ (4.4 queued: 4589c).
-  Codex: NO reply yet to co-work plan (marker 1850830) — if still silent next tick, NUDGE
+  Codex: NO reply yet to co-work plan (marker 1866752) — if still silent next tick, NUDGE
   via mailbox + ask user to re-relay.
 - LEAN NEXT: on main reply: type provider module. Else: LensGates checker or Seed3RouteTree.
 - P(math)~89, P(Lean)~90.
@@ -663,7 +663,7 @@
   if missing-file error, ls tmp for the real lexsmall core/solution names and relaunch).
 - STILL QUEUED: main provider module (8243c msg n=15) extraction + typing; main consult
   reply (float-dust vs empty decision rule) pending; sibling 4.5 check; Codex even-list reply.
-- marker 1850830 (post-scan; my posts after). P(math)~89, P(Lean)~90. Batch 20/108.
+- marker 1866752 (post-scan; my posts after). P(math)~89, P(Lean)~90. Batch 20/108.
 
 
 ## TICK NOTES (2026-07-04T04:55Z) — stage-3 green (real defs); F6 exact chain in flight
@@ -680,7 +680,7 @@
   (d) provider DISCHARGE theorems (exists_good_cut real construction; GammaBeta from
   green Gamma machinery) — design says finite minimization module.
 - BATCH: k6/F2 CERTIFIED (awaiting Codex ledger append + manifest variant answer);
-  k6/F6 margin-0 Optimal -> exact chain RUNNING (bg bp7sps996). marker 1850830.
+  k6/F6 margin-0 Optimal -> exact chain RUNNING (bg bp7sps996). marker 1866752.
 - IN FLIGHT: main = hard-row structural consult (float-dust vs empty rule); sibling = 4.6.
 - P(math)~89, P(Lean)~91.
 
@@ -698,13 +698,13 @@
   act (F6 per recipe); (2) Codex scan (even-list, manifest variant, its odd-slice progress
   incl. k5/G4); (3) sibling 4.6; (4) Lean idle increment if main slow: LensGates checker
   contract from WRITEUP_REDTEAM archive.
-- marker 1850830. P(math)~89, P(Lean)~91. Batch 20/108 (+F6 parked-hard).
+- marker 1866752. P(math)~89, P(Lean)~91. Batch 20/108 (+F6 parked-hard).
 
 
 ## TICK NOTES (2026-07-04T05:50Z) — 22/108; even list in; k5/F1 running
 - Codex: k5/G4 + k5/F3 certified (no-repair 384p); k6/F2 manifest MINTED (schema
   source_certificate_manifest_v1 + repair block {highspy_basis_exact...}) + APPENDED
-  (ledger v19 -> v20, 22/108, first_pending k6/F6 parked-designer). marker 1850830.
+  (ledger v19 -> v20, 22/108, first_pending k6/F6 parked-designer). marker 1866752.
 - MY EVEN LIST (44 rows) delivered + accepted: rank2 map19 k5/F1 d0; rank4 map21
   k6/G7_B2_4T d14; rank6 map23 k5/G1_UV_T d8; rank8 map25 k6/G4_VZ_XY d11; rank10
   map27 k6/G2_UZ_T d9; rank12 map29 k5/F6 d5; ... (full list in mailbox at ~1713k).
@@ -735,7 +735,7 @@
   final unconditional-shape statement). Reply node mapping after reload: n=7, replies at
   idx 3/5/6 — INDEXES SHIFT ON RELOAD, always rescan.
 - Sibling 4.6 pending check (queued last tick, not yet checked this tick — DO NEXT TICK).
-- marker 1850830. Batch 22/108 + k5/F1 S2 in flight + F6 with Codex. P(math)~89, P(Lean)~91.
+- marker 1866752. Batch 22/108 + k5/F1 S2 in flight + F6 with Codex. P(math)~89, P(Lean)~91.
 
 
 ## TICK NOTES (2026-07-04T07:10Z) — k5/F1 on source-patch; sibling into errata series
@@ -750,7 +750,7 @@
   to 1.4, appendices split) + artifact statuses + errata application. Sibling retasked:
   errata rewrite series (E1 first: Gate-A demotion), one erratum per reply w/ anchors.
 - MAIN: bridge-constructor design generating. Codex: F6 active-face-repair implementation
-  (no reply yet; marker 1850830).
+  (no reply yet; marker 1866752).
 - Extraction queue += sibling remaining-work list tail (in-thread). Batch 22/108 + F1 S3.
 
 
@@ -765,7 +765,7 @@
 - PENDING COLLECTION next tick: MAIN bridge-constructor reply (was len=6 streaming);
   SIBLING E1 errata rewrite (was len=13 streaming) — reload-then-nudge if still stubs;
   Codex F6 active-face-repair implementation + my k5/F1 append.
-- marker 1850830 (Codex posts after it unread if any landed since scan). Batch 23/108.
+- marker 1866752 (Codex posts after it unread if any landed since scan). Batch 23/108.
 - P(math)~89, P(Lean)~91.
 
 
@@ -788,7 +788,7 @@
 - BATCH this tick: k6/G7_B2_4T CERTIFIED (my 3rd; route lexsmall + allcols patch +
   round-2 quick repair; patch rounds COMPOSE). k5/G1_UV_T chain RUNNING (bg bk76w2g1q).
   k5/F1 + k6/F2 certified earlier. Codex: F6 active-face-repair implementation pending;
-  marker 1850830 (rescan next tick — its k5-odd rows likely landing).
+  marker 1866752 (rescan next tick — its k5-odd rows likely landing).
 - SIBLING: E1 landed (queued), E2 in flight.
 - P(math)~89, P(Lean)~91. My certified rows: 3 (F2, F1, G7). Batch >= 23/108.
 
@@ -801,7 +801,7 @@
 - NEXT-WAKE PRIORITY ORDER (Lean starved this window): (1) STAGE-4 bridge typing into
   CertGraph tail (full text in-thread, plan in 09:05Z note); (2) main encoding-facts reply
   extract+type; (3) sibling E2+ collect; (4) batch rows continue in background between builds.
-- marker 1850830. P(math)~90, P(Lean)~91.
+- marker 1866752. P(math)~90, P(Lean)~91.
 
 
 ## TICK NOTES (2026-07-04T16:35Z) — STAGE-4 GREEN; sources-only class found
@@ -918,7 +918,7 @@
 - COWORK: k5/F6 + k6/F6 hard stops VERIFIED (SHAs reproduced) -> RULING posted: both to
   quotient face-split queue divisor F6#; k6/F6 (4 rows {21590,21842,22523,22569}) recommended
   as first tool validation if k6/G1 not in flight; k5/F6 base = patch2_zero_negative (18 rows).
-  Mailbox marker 1850830.
+  Mailbox marker 1866752.
 - MY SLICE in-flight: k4/G1 lexsmall 384p CRT (bg b7emh3jxz, 48T; core rank 2856 clean);
   k4/F7 family core build (bg bx903oaxu, 4T, dominant=6). Next after: k4/F6, k3/G2, k0/G4,
   k9/B0, k0/F5, k2/G6.
@@ -956,3 +956,33 @@ emitted data volume or batch counts. Batch counts are M5 evidence only.
 - G2 TOY (C5[5] on Fin 25) — BLOCKED: first missing artifact = M6.5 checker (IsMaxCut for a
   literal 25-vertex cut is not kernel-decidable; 2^25 cuts, native_decide forbidden);
   second = LensGates/Seed3RouteTree checkers + per-row BranchA emissions (MAIN designing).
+
+## PROBE FOLLOW-UPS (2026-07-05T19:05Z)
+- C6 ADOPTED (pending MAIN ratify): M6.5 checker = ODD-CYCLE-PACKING maxcut certificate
+  (cert = cut + k edge-disjoint odd cycles; soundness: each odd cycle >=1 mono edge any
+  2-coloring, disjointness sums => badCount c' >= k = badCount c => IsMaxCut). CAVEAT:
+  nu_odd(G) <= beta(G) strict possible in general => checker sound but incomplete; fallback
+  (trace/dual cert) only if an instance graph has packing gap. Toy C5[5]: 25 pentagons
+  (S1[i],S2[j],S3[i+j],S4[i],S5[j]) partition edges — I hand-verified unique-edge indexing;
+  canonical cut {S1uS3 | S2uS4uS5} badCount=25. RELAY to MAIN with LensGates collection.
+- C4 BENCH ITEM: aggregate margin-0 (tight-row) count X/Y over chart metadata + ledger —
+  script from manifests; big Bayesian item; queue after current batch actions.
+- C7: 43 done rows = Branch-A side; M4 unblocked only by M3 transpiler (Branch-B family).
+  PARALLELISM OK NOW: partial EQODL1 Branch-A shard instantiation on the 43 SHA-pinned
+  manifests (per-row lemmas compile independently; assembly waits for coverage).
+
+## TICK NOTES (2026-07-05T20:12Z) — LensGates landed; M6.5 commissioned; Tier-0 gated
+- LEAN NEXT-INCREMENT (order): (1) graft LensGates section into CertGraph.lean from
+  LENSGATES_CHECKER_GPTPRO.lean.txt + thread msg idx 11 (14846c; de-transform ZZ tokens;
+  adapt decide(StructProp) -> Bool && chains + extraction lemmas; reuse adjb/badb/sigma/
+  normEdge; check Edge abbrev collision); (2) paste M6.5 odd-cycle-packing checker when
+  MAIN replies (commissioned 20:10Z, COMPLETE module expected — no geometry providers);
+  (3) Seed3RouteTree checker (contract SEED3_COMPLETENESS_GPTPRO.md) after.
+- THREADS: MAIN msgs 14 (M6.5 task sent); SIBLING msgs 9 (E4 sent). E2+E3 archived.
+- COWORK: k6/F6 Tier-0 GATED (my verifier rerun + reducedness 0/21019); Tier-2 authorized;
+  k6/G1 caps ruled OFF-SPEC (pair-closure invariant, no col caps); k0/G7 -> face-split G7#;
+  k4/F7 PARKED (F7#). Queue: k6/F6 -> k6/G1 -> k5/G1 -> k9/G1 -> k4/G1 -> k5/F6 -> k0/G7 -> k4/F7.
+- MY SLICE: k4/F6 family CRT running (bg b4jk18cvl 44T). Then: k3/G2 rerun 24T, k0/G4 (map
+  100), k9/B0 (102), k0/F5 (104), k2/G6 (106).
+- Branch-B M3 (Codex): audit v3 PASS rows=14247 shards=29 modules=33 forbidden 0 — M4
+  wiring readiness question pending with Codex.

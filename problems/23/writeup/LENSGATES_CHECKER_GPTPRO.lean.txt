@@ -1,0 +1,67 @@
+# LensGates checker module (MAIN thread, 2026-07-05, 14846 chars — TRANSFORMED archive)
+# Transform legend: ' ZZEQZZ '='=', ' ZZPLUSZZ '='+', ' ZZAMPZZ '='&', '#'=one non-ASCII char
+# (contextually: → ∀ ∃ ∈ ≤ × α ≠ — reconstruct at typing time). ': ZZEQZZ ' = ':='.
+# 'fun e ZZEQZZ >' = 'fun e =>'. Structure verified complete: end LensGates/end/end Erdos23Delta0.
+#
+# ARCHITECTURE SUMMARY (exact, from full extraction):
+# - Utilities: memNat, subsetNatList, checkNatList (Nodup + all < G.n), edgeNorm/normEdge,
+#   edgeCrosses, lensBlueb (adjb && sides differ), blueBoundaryEdges/badBoundaryEdges
+#   (edges.filter crossing && blue/bad), listLast?, consecutiveEdges, allBlueConsecutive,
+#   allValidEdges.
+# - Tags: LensType RR|RB|RD|DD|TTsame|TTopposite|TR; OSCKind OSC0..OSC4;
+#   OSCData{kind,headOn}; ForbidKind triangle|shorterOdd|invalidRow|invalidShadow|invalidOSC.
+# - LensRowWitness{bad:Edge, verts:List Nat}; rowEndpointOK (head/last = bad endpoints,
+#   either orientation); checkLensRowWitness = len=5 && natlist && badb && endpointOK &&
+#   allBlueConsecutive.
+# - LensSwitchData{S, blueBoundary, badBoundary, sigmaVal:Int, nuKVal:Int,
+#   flipBConnected:Bool}; LensSwitchCheckFacts Prop{S_ok; blue_boundary_ok = RECOMPUTATION
+#   equality vs blueBoundaryEdges; bad_boundary_ok; sigma_ok = sigmaVal = sigma G c S};
+#   checkLensSwitch = decide(Facts); checkLensSwitch_sound = of_decide_eq_true.
+# - PrimitiveLensData{lensType, osc, terminals, rows, splitVertices, ownedCore};
+#   PrimitiveLensCheckFacts{terminals/split/owned natlists + each subset of corridor +
+#   rows all checkLensRowWitness}; checkPrimitiveLens + _sound.
+# - LabelCert{labels: List (Nat x Nat)}; labelKeys/labelVal?; labelDefinedOn (all corridor
+#   verts labeled, label < 5); c5AdjLabel (a,b<5 && (a+1)%5=b or (b+1)%5=a); labelEdgeOK;
+#   checkLabelEdges (ALL G.edges with both ends in corridor must be adjacent-labeled);
+#   LabelCheckFacts{labels_nodup; labels_defined; edge_labels_ok}; checkLabelCert + _sound.
+# - ForbidCert{kind, witnessVertices, witnessEdges} + ForbidCheckFacts (syntax only) +
+#   checkForbidCert + _sound; OSCResidualCert{osc, witnessVertices, witnessEdges} +
+#   OSCCheckFacts + checkOSCCert + _sound.
+# - LensGateOutcome = cross(lensIdx, sw) | label(lensIdx, lab) | forbid(lensIdx, F) |
+#   osc(lensIdx, O); checkOutcome dispatches per case (lensIdxValid && payload check);
+#   OutcomeCheckFacts{ok}; checkOutcomeProp + _sound.
+# - LensGateData{corridorId, corridor, terminals, rowWitnesses, lenses, outcome};
+#   LensGateCheckFacts{corridor_ok, terminals_ok, terminals_in_corridor, row_witnesses_ok,
+#   lenses_ok, outcome_ok}; checkLensGates = decide(Facts); checkLensGates_facts.
+# - Semantic layer: LensRowsAllLengthFive(D); LensNuKNonneg(G,c) = forall sw,
+#   checkLensSwitch true -> flipBConnected -> 0 <= nuKVal (Gamma-min-shaped hypothesis);
+#   CrossRouteReady = checkLensSwitch true; LabelWellDefined = checkLabelCert true;
+#   CorridorForbidden = False; LensGateConclusion(G,c,D) : Prop = cross(sw,h) |
+#   label(lab,h) | forbidden(h:False).
+# - GEOMETRY PROVIDER LensGateGeomSound{cross_sound, label_sound, forbid_sound, osc_sound}:
+#   each: outcome-eq -> LensGateCheckFacts -> sigmaNonneg -> LensNuKNonneg -> TriangleFree
+#   -> LensRowsAllLengthFive -> LensGateConclusion. (RR/RB/RD/DD/TT/TR geometry, OSC
+#   residuals, forbid contradictions isolated here.)
+# - MAIN THEOREM checkLensGates_sound: geom + hcheck + sigmaNonneg + LensNuKNonneg + tri +
+#   rows5 => LensGateConclusion, by cases on D.outcome, dispatching to geom fields.
+# - Extraction lemmas: checkLensGates_outcome_ok/corridor_ok/lenses_ok,
+#   checkLensSwitch_sigma/blueBoundary/badBoundary.
+#
+# TYPING ADAPTATION NOTES (mine):
+# 1. `decide (StructureProp)` needs Decidable instances Lean will NOT auto-derive for
+#    structure Props — adapt to the file's established idiom: Bool `&&` chains for check*
+#    plus manual extraction lemmas (Bool.and_eq_true + of_decide_eq_true per conjunct),
+#    keeping the Facts structures as the SOUND output form.
+# 2. Drop `import Mathlib`/section headers; graft as a section INSIDE CertGraph.lean
+#    (single-file pattern), reusing existing adjb/badb/sideb/sigma/normEdge/TriangleFree.
+#    Check for name collisions: normEdge exists; Edge abbrev may collide — namespace-local.
+# 3. CorridorForbidden = False is intentional: forbid_sound derives the contradiction from
+#    the witness (triangle in tri-free, shorter odd cycle vs all-l5, invalid row/shadow/OSC).
+# 4. deriving Repr on structures with Int fields fine; DecidableEq on LensType/OSCKind fine.
+#
+# ===== RAW TRANSFORMED TEXT (18 slices, verbatim) =====
+#
+# [Slices archived in session transcript 2026-07-05T20:00Z; full de-transformed typing
+#  happens at the CertGraph.lean grafting increment (next Lean action). Key theorem
+#  signatures preserved above; raw text retrievable from window.__lg on MAIN tab until
+#  reload, and from the thread message (msg index 11, 14846 chars) permanently.]
