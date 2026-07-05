@@ -922,3 +922,11 @@
 - MY SLICE in-flight: k4/G1 lexsmall 384p CRT (bg b7emh3jxz, 48T; core rank 2856 clean);
   k4/F7 family core build (bg bx903oaxu, 4T, dominant=6). Next after: k4/F6, k3/G2, k0/G4,
   k9/B0, k0/F5, k2/G6.
+
+## AUDIT ADDENDA (2026-07-05T17:00Z, from user verification interrogation)
+- ENDGAME items ADDED: (1) FC-form bridge lemma betaSimple-min-coloring => exists-bipartite-subgraph
+  card form (FC 23.lean erdos_23 statement), REQUIRED for PR; (2) independent re-audit posture for
+  107-type 7-root enumeration + Gram certificate (single-enumerator, flagged not claimed).
+- Axioms probe artifact: erdos23_delta0 depends on [propext, Classical.choice, Quot.sound] ONLY
+  (EXIT=0 build 2026-07-05; probe line reverted, file restored to committed state via git checkout).
+- arXiv sweep 2026-07-05: NO competing claims since 2026-06-26.

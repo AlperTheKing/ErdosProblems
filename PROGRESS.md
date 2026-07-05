@@ -2269,3 +2269,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T15:20Z] V GPTPRO | DID: SIBLING E2 collected (2337c, transformed extraction) | RESULT: BRANCH_B_ERRATA_GPTPRO.md += E2 (CD telescope vs 24-signature dictionary = two separate certificate layers) | D: errata series advancing
 [2026-07-05T15:30Z] V GPTPRO | DID: MAIN retasked (LensGates checker design, 4-part deliverable) + SIBLING retasked (E3) | RESULT: both sends confirmed (msgs 10/7, composers empty) | D: none
 [2026-07-05T15:31Z] > BATCH | NEXT: k4/F7 family-objective core build launched (dominant=6, 4 threads) alongside k4/G1 384p CRT
+[2026-07-05T16:22Z] X BATCH | DID: k4/G1 lexsmall 384p CRT done | RESULT: core residual 0 BUT solution_negative_count=158 @ 4260-bit heights — DIRTY (G1 degenerate-face signature) | D: strategy 1 failed
+[2026-07-05T16:23Z] > BATCH | NEXT: k4/G1 family core (strategy 2, bg) + k4/F7 family 384p CRT (44T, bg); k3/G2 requeued 24T after
+[2026-07-05T16:40Z] > AUDIT | NEXT: user verification interrogation — running #print axioms probe, FC statement diff, toolchain read, arXiv sweep; honest NOT-YET answers where artifacts do not exist
+[2026-07-05T16:55Z] V AUDIT | DID: interrogation evidence pass | RESULT: axioms=[propext,Classical.choice,Quot.sound] (no ofReduceBool); FC 23.lean read; toolchain v4.27.0+mathlib a3a10db; arXiv sweep=no competitors; CertGraph restored clean | D: none
