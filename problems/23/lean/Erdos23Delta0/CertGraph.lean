@@ -3515,6 +3515,75 @@ theorem maxcut_exists_from_cutFn (G : GraphData) :
     ∃ c : CutData, checkCut G c = true ∧ IsMaxCut G c :=
   maxcut_exists_from_cutFn_bridge G (cutFnBridgeFacts_default G)
 
+/-- Generic finite extremal-choice selector. This is the noncomputable
+    argmin primitive used for max-cut and γ-minimal selections; it carries a
+    proof of optimality and no certificate data. -/
+noncomputable def chooseFiniteMinimizer {α β : Type*} [Fintype α]
+    [Nonempty α] [LinearOrder β] (score : α → β) :
+    { a : α // ∀ b : α, score a ≤ score b } := by
+  classical
+  let S : Finset β := Finset.univ.image score
+  have hS : S.Nonempty := Finset.image_nonempty.mpr Finset.univ_nonempty
+  let m : β := S.min' hS
+  have hm_mem : m ∈ S := Finset.min'_mem S hS
+  let a : α := Classical.choose (Finset.mem_image.mp hm_mem)
+  have ha : a ∈ Finset.univ ∧ score a = m :=
+    Classical.choose_spec (Finset.mem_image.mp hm_mem)
+  refine ⟨a, ?_⟩
+  intro b
+  have hb_mem : score b ∈ S := by
+    exact Finset.mem_image.mpr ⟨b, Finset.mem_univ b, rfl⟩
+  have hm_le : m ≤ score b := Finset.min'_le S (score b) hb_mem
+  simpa [m, ha.2] using hm_le
+
+/-- Generic finite extremal-choice selector over a nonempty feasible subset. -/
+noncomputable def chooseFiniteFeasibleMinimizer {α β : Type*} [Fintype α]
+    [LinearOrder β] (feasible : α → Prop) [DecidablePred feasible]
+    (hFeasible : ∃ a : α, feasible a) (score : α → β) :
+    { a : α // feasible a ∧ ∀ b : α, feasible b → score a ≤ score b } := by
+  classical
+  haveI : Nonempty {a : α // feasible a} := by
+    rcases hFeasible with ⟨a, ha⟩
+    exact ⟨⟨a, ha⟩⟩
+  let chosen :=
+    chooseFiniteMinimizer (fun a : {a : α // feasible a} => score a.1)
+  refine ⟨chosen.1.1, chosen.1.2, ?_⟩
+  intro b hb
+  exact chosen.2 ⟨b, hb⟩
+
+/-- Noncomputable selected max cut for literal graph data, obtained by finite
+    argmin over Boolean colorings. -/
+noncomputable def chooseMaxCutGD (G : GraphData) :
+    { c : CutData // checkCut G c = true ∧ IsMaxCut G c } := by
+  classical
+  exact ⟨Classical.choose (maxcut_exists_from_cutFn G),
+    Classical.choose_spec (maxcut_exists_from_cutFn G)⟩
+
+/-- Noncomputable γ-minimal finite cut-function selector over any supplied
+    nonempty feasible class. The feasible class is where callers encode
+    "max-cut, B-connected, same bad count" or the analogous row-built domain. -/
+noncomputable def chooseGammaMinimalCutFn (G : GraphData)
+    (gamma : CutFn G.n → ℚ) (feasible : CutFn G.n → Prop)
+    [DecidablePred feasible] (hFeasible : ∃ f : CutFn G.n, feasible f) :
+    { f : CutFn G.n //
+      feasible f ∧ ∀ d : CutFn G.n, feasible d → gamma f ≤ gamma d } :=
+  chooseFiniteFeasibleMinimizer feasible hFeasible gamma
+
+/-- SimpleGraph-facing max-cut predicate for Boolean colorings. -/
+def IsMaxSimpleCut {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] (f : V → Bool) : Prop :=
+  ∀ g : V → Bool, simpleMonoCount Gs f ≤ simpleMonoCount Gs g
+
+/-- Noncomputable selected max cut for a finite SimpleGraph, obtained by
+    finite argmin over all Boolean colorings. -/
+noncomputable def chooseMaxCut {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] :
+    { f : V → Bool // IsMaxSimpleCut Gs f } := by
+  classical
+  haveI : Nonempty (V → Bool) := ⟨fun _ => false⟩
+  let chosen := chooseFiniteMinimizer (fun f : V → Bool => simpleMonoCount Gs f)
+  exact ⟨chosen.1, chosen.2⟩
+
 /-- Component-flip provider: on connected graphs every max cut is
     B-connected (flip a proper blue component to strictly drop badCount). -/
 structure ConnectedMaxCutImpliesBConnected (G : GraphData) : Prop where
@@ -3602,6 +3671,905 @@ theorem connectedMaxCut_bconnected_default (G : GraphData) (c : CutData)
   have hneg : (0 : Int) ≤ - (dM G c S : Int) := by
     simpa using hs
   omega
+
+
+/-! ### OddCyclePacking: TRUE-max cut certificate checker (M6.5).
+cert = (cut, k pairwise edge-disjoint odd closed walks). Soundness: an odd
+closed walk has a monochromatic edge under ANY cut (Boolean parity), edge-
+disjointness makes the chosen monochromatic edges distinct, so every valid
+cut has badCount >= k; badCount c = k then gives IsMaxCut c. -/
+
+namespace OddCyclePacking
+
+/-- Vertex list bounds check. -/
+def checkVertexList (G : GraphData) (xs : List Nat) : Bool :=
+  xs.all (fun v => decide (v < G.n))
+
+def listLast? {α : Type} (xs : List α) : Option α :=
+  xs.reverse.head?
+
+def closedList (xs : List Nat) : Bool :=
+  match xs.head?, listLast? xs with
+  | some a, some b => decide (a = b)
+  | _, _ => false
+
+def consecutiveEdges : List Nat → List (Nat × Nat)
+  | [] => []
+  | [_] => []
+  | u :: v :: rest => normEdge u v :: consecutiveEdges (v :: rest)
+
+def allCycleEdgesInGraph (G : GraphData) (xs : List Nat) : Bool :=
+  (consecutiveEdges xs).all (fun e => adjb G e.1 e.2)
+
+def edgeCount (xs : List Nat) : Nat :=
+  (consecutiveEdges xs).length
+
+def oddEdgeCount (xs : List Nat) : Bool :=
+  decide (edgeCount xs % 2 = 1)
+
+def checkOddClosedWalk (G : GraphData) (xs : List Nat) : Bool :=
+  checkVertexList G xs &&
+  decide (2 ≤ xs.length) &&
+  closedList xs &&
+  oddEdgeCount xs &&
+  allCycleEdgesInGraph G xs &&
+  decide (consecutiveEdges xs).Nodup
+
+def flattenCycleEdges (cycles : List (List Nat)) : List (Nat × Nat) :=
+  cycles.flatMap consecutiveEdges
+
+structure OddCyclePackingCert where
+  k : Nat
+  cycles : List (List Nat)
+
+def checkOddCyclePacking (G : GraphData) (c : CutData)
+    (cert : OddCyclePackingCert) : Bool :=
+  checkCut G c &&
+  decide (cert.k = cert.cycles.length) &&
+  decide (badCount G c = cert.k) &&
+  cert.cycles.all (fun cyc => checkOddClosedWalk G cyc) &&
+  decide (flattenCycleEdges cert.cycles).Nodup
+
+/-! #### Boolean parity: an odd closed walk cannot alternate. -/
+
+def BoolPathAlternates (side : Nat → Bool) : List Nat → Prop
+  | [] => True
+  | [_] => True
+  | u :: v :: rest =>
+      side u ≠ side v ∧ BoolPathAlternates side (v :: rest)
+
+def flipN : Nat → Bool → Bool
+  | 0, b => b
+  | n + 1, b => flipN n (!b)
+
+lemma flipN_two (n : Nat) (b : Bool) :
+    flipN (n + 2) b = flipN n b := by
+  induction n generalizing b with
+  | zero => cases b <;> rfl
+  | succ n ih =>
+      show flipN (n + 2) (!b) = flipN n (!b)
+      exact ih (!b)
+
+lemma flipN_odd_ne :
+    ∀ n : Nat, n % 2 = 1 → ∀ b : Bool, flipN n b ≠ b
+  | 0, h, _ => by norm_num at h
+  | 1, _, b => by cases b <;> simp [flipN]
+  | n + 2, h, b => by
+      have h' : n % 2 = 1 := by omega
+      simpa [flipN_two] using flipN_odd_ne n h' b
+
+lemma bool_eq_not_of_ne (a b : Bool) (h : a ≠ b) : b = !a := by
+  cases a <;> cases b <;> simp_all
+
+lemma listLast_cons_cons {α : Type} (a b : α) (xs : List α) :
+    listLast? (a :: b :: xs) = listLast? (b :: xs) := by
+  unfold listLast?
+  simp
+
+lemma alternating_last_flipN :
+    ∀ (side : Nat → Bool) (v : Nat) (xs : List Nat),
+      BoolPathAlternates side (v :: xs) →
+      ∀ w, listLast? (v :: xs) = some w →
+        side w = flipN xs.length (side v)
+  | _, v, [], _, w, hw => by
+      have hv : w = v := by
+        unfold listLast? at hw
+        simpa using hw.symm
+      subst hv
+      rfl
+  | side, v, u :: rest, h, w, hw => by
+      rcases h with ⟨hvu, halt⟩
+      have hu : side u = !side v := bool_eq_not_of_ne (side v) (side u) hvu
+      rw [listLast_cons_cons] at hw
+      have ih := alternating_last_flipN side u rest halt w hw
+      have hstep : flipN (u :: rest).length (side v) =
+          flipN rest.length (!side v) := by
+        simp only [List.length_cons]
+        rfl
+      rw [hstep, ih, hu]
+
+lemma alternates_of_no_mono (side : Nat → Bool) :
+    ∀ xs : List Nat,
+      (∀ e ∈ consecutiveEdges xs, side e.1 ≠ side e.2) →
+      BoolPathAlternates side xs
+  | [], _ => trivial
+  | [_], _ => trivial
+  | u :: v :: rest, hno => by
+      constructor
+      · intro hsame
+        apply hno (normEdge u v) (by simp [consecutiveEdges])
+        unfold normEdge
+        by_cases huv : u < v
+        · simpa [huv] using hsame
+        · by_cases hvu : v < u
+          · simpa [huv, hvu] using hsame.symm
+          · have huv_eq : u = v := by omega
+            simp [huv_eq]
+      · exact alternates_of_no_mono side (v :: rest)
+          (fun e he => hno e (by simp [consecutiveEdges, he]))
+
+lemma mono_edge_on_odd_closed_walk_bool
+    (side : Nat → Bool) (xs : List Nat)
+    (hlen : 2 ≤ xs.length)
+    (hclosed : closedList xs = true)
+    (hodd : edgeCount xs % 2 = 1) :
+    ∃ e ∈ consecutiveEdges xs, side e.1 = side e.2 := by
+  classical
+  by_contra hnone
+  push_neg at hnone
+  have halt : BoolPathAlternates side xs :=
+    alternates_of_no_mono side xs hnone
+  match xs, hlen with
+  | first :: second :: tail, _ =>
+      have hlenEdges :
+          edgeCount (first :: second :: tail) = (second :: tail).length := by
+        clear hclosed hodd halt hnone
+        unfold edgeCount
+        induction tail generalizing first second with
+        | nil => rfl
+        | cons t ts ih => simpa [consecutiveEdges] using ih second t
+      have hoddRest : (second :: tail).length % 2 = 1 := by
+        rw [← hlenEdges]; exact hodd
+      cases hl : listLast? (first :: second :: tail) with
+      | none =>
+          unfold closedList at hclosed
+          rw [hl] at hclosed
+          simp at hclosed
+      | some w =>
+          have hfw : first = w := by
+            unfold closedList at hclosed
+            rw [hl] at hclosed
+            simp only [List.head?_cons] at hclosed
+            exact of_decide_eq_true hclosed
+          have hside :=
+            alternating_last_flipN side first (second :: tail) halt w hl
+          rw [← hfw] at hside
+          exact flipN_odd_ne (second :: tail).length hoddRest
+            (side first) hside.symm
+
+/-! #### Per-cycle: every valid cut has a bad edge on each certified walk. -/
+
+lemma odd_closed_walk_has_mono_edge
+    (G : GraphData) (d : CutData) (cyc : List Nat)
+    (hcycle : checkOddClosedWalk G cyc = true) :
+    ∃ e ∈ consecutiveEdges cyc, badb G d e.1 e.2 = true := by
+  classical
+  unfold checkOddClosedWalk at hcycle
+  rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true,
+      Bool.and_eq_true, Bool.and_eq_true] at hcycle
+  obtain ⟨⟨⟨⟨⟨_hvalid, hlenB⟩, hclosed⟩, hoddB⟩, hedges⟩, _hnodup⟩ := hcycle
+  have hlen : 2 ≤ cyc.length := of_decide_eq_true hlenB
+  have hodd : edgeCount cyc % 2 = 1 := of_decide_eq_true hoddB
+  rcases mono_edge_on_odd_closed_walk_bool
+      (fun v => sideb d v) cyc hlen hclosed hodd with ⟨e, he, hside⟩
+  refine ⟨e, he, ?_⟩
+  have hadj : adjb G e.1 e.2 = true := by
+    have hall := List.all_eq_true.mp hedges
+    exact hall e he
+  unfold badb
+  rw [hadj, hside]
+  simp
+
+/-! #### Selection of one bad edge per cycle. -/
+
+noncomputable def chooseBadEdge
+    (G : GraphData) (d : CutData) (cyc : List Nat)
+    (hcycle : checkOddClosedWalk G cyc = true) : Nat × Nat :=
+  Classical.choose (odd_closed_walk_has_mono_edge G d cyc hcycle)
+
+lemma chooseBadEdge_mem
+    (G : GraphData) (d : CutData) (cyc : List Nat)
+    (hcycle : checkOddClosedWalk G cyc = true) :
+    chooseBadEdge G d cyc hcycle ∈ consecutiveEdges cyc :=
+  (Classical.choose_spec (odd_closed_walk_has_mono_edge G d cyc hcycle)).1
+
+lemma chooseBadEdge_bad
+    (G : GraphData) (d : CutData) (cyc : List Nat)
+    (hcycle : checkOddClosedWalk G cyc = true) :
+    badb G d (chooseBadEdge G d cyc hcycle).1
+      (chooseBadEdge G d cyc hcycle).2 = true :=
+  (Classical.choose_spec (odd_closed_walk_has_mono_edge G d cyc hcycle)).2
+
+noncomputable def selectedBadEdges
+    (G : GraphData) (d : CutData) :
+    ∀ (cycles : List (List Nat)),
+      (∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true) → List (Nat × Nat)
+  | [], _ => []
+  | cyc :: rest, h =>
+      chooseBadEdge G d cyc (h cyc (by simp)) ::
+        selectedBadEdges G d rest (fun c hc => h c (by simp [hc]))
+
+lemma selectedBadEdges_length
+    (G : GraphData) (d : CutData) :
+    ∀ (cycles : List (List Nat))
+      (hcycles : ∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true),
+      (selectedBadEdges G d cycles hcycles).length = cycles.length
+  | [], _ => rfl
+  | _ :: rest, h => by
+      simpa [selectedBadEdges] using
+        selectedBadEdges_length G d rest (fun c hc => h c (by simp [hc]))
+
+lemma flattenCycleEdges_cons (cyc : List Nat) (rest : List (List Nat)) :
+    flattenCycleEdges (cyc :: rest) =
+      consecutiveEdges cyc ++ flattenCycleEdges rest := by
+  simp [flattenCycleEdges]
+
+lemma selectedBadEdges_subset_flatten
+    (G : GraphData) (d : CutData) :
+    ∀ (cycles : List (List Nat))
+      (hcycles : ∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true),
+      ∀ e ∈ selectedBadEdges G d cycles hcycles,
+        e ∈ flattenCycleEdges cycles
+  | [], _, e, he => by simp [selectedBadEdges] at he
+  | cyc :: rest, h, e, he => by
+      unfold selectedBadEdges at he
+      rw [flattenCycleEdges_cons]
+      rcases List.mem_cons.mp he with rfl | htail
+      · exact List.mem_append.mpr
+          (Or.inl (chooseBadEdge_mem G d cyc (h cyc (by simp))))
+      · exact List.mem_append.mpr
+          (Or.inr (selectedBadEdges_subset_flatten G d rest
+            (fun c hc => h c (by simp [hc])) e htail))
+
+lemma selectedBadEdges_bad
+    (G : GraphData) (d : CutData) :
+    ∀ (cycles : List (List Nat))
+      (hcycles : ∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true),
+      ∀ e ∈ selectedBadEdges G d cycles hcycles,
+        badb G d e.1 e.2 = true
+  | [], _, e, he => by simp [selectedBadEdges] at he
+  | cyc :: rest, h, e, he => by
+      unfold selectedBadEdges at he
+      rcases List.mem_cons.mp he with rfl | htail
+      · exact chooseBadEdge_bad G d cyc (h cyc (by simp))
+      · exact selectedBadEdges_bad G d rest
+          (fun c hc => h c (by simp [hc])) e htail
+
+lemma selectedBadEdges_nodup
+    (G : GraphData) (d : CutData) :
+    ∀ (cycles : List (List Nat))
+      (hcycles : ∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true),
+      (flattenCycleEdges cycles).Nodup →
+      (selectedBadEdges G d cycles hcycles).Nodup
+  | [], _, _ => by simp [selectedBadEdges]
+  | cyc :: rest, h, hflat => by
+      rw [flattenCycleEdges_cons] at hflat
+      rcases List.nodup_append.mp hflat with ⟨_hcyc, hrest, hdisj⟩
+      unfold selectedBadEdges
+      refine List.nodup_cons.mpr ⟨?_, ?_⟩
+      · intro hmem
+        have hin_flat := selectedBadEdges_subset_flatten G d rest
+          (fun c hc => h c (by simp [hc])) _ hmem
+        have hin_cyc : chooseBadEdge G d cyc (h cyc (by simp)) ∈
+            consecutiveEdges cyc :=
+          chooseBadEdge_mem G d cyc (h cyc (by simp))
+        exact hdisj _ hin_cyc _ hin_flat rfl
+      · exact selectedBadEdges_nodup G d rest
+          (fun c hc => h c (by simp [hc])) hrest
+
+lemma consecutive_fst_le_snd :
+    ∀ (xs : List Nat), ∀ e ∈ consecutiveEdges xs, e.1 ≤ e.2
+  | [], e, he => by simp [consecutiveEdges] at he
+  | [_], e, he => by simp [consecutiveEdges] at he
+  | u :: v :: rest, e, he => by
+      rcases List.mem_cons.mp he with rfl | htail
+      · by_cases h : u < v
+        · simpa [normEdge, h] using Nat.le_of_lt h
+        · simpa [normEdge, h] using Nat.le_of_not_lt h
+      · exact consecutive_fst_le_snd (v :: rest) e htail
+
+lemma mem_edges_of_adjb_of_consecutive
+    (G : GraphData) (cyc : List Nat) (e : Nat × Nat)
+    (he : e ∈ consecutiveEdges cyc) (hadj : adjb G e.1 e.2 = true) :
+    e ∈ G.edges := by
+  unfold adjb at hadj
+  rw [Bool.and_eq_true] at hadj
+  obtain ⟨hne, hmem⟩ := hadj
+  have hne' : e.1 ≠ e.2 := of_decide_eq_true hne
+  have hle : e.1 ≤ e.2 := consecutive_fst_le_snd cyc e he
+  have hlt : e.1 < e.2 := lt_of_le_of_ne hle hne'
+  have hnorm : normEdge e.1 e.2 = e := by
+    unfold normEdge
+    simp [hlt]
+  rw [← hnorm]
+  exact of_decide_eq_true hmem
+
+/-! #### Counting. -/
+
+lemma length_le_filter_of_nodup_subset
+    {α : Type} [DecidableEq α]
+    (xs ys : List α) (p : α → Bool)
+    (hxs : xs.Nodup)
+    (hsub : ∀ x ∈ xs, x ∈ ys)
+    (hp : ∀ x ∈ xs, p x = true) :
+    xs.length ≤ (ys.filter p).length := by
+  classical
+  have hcard : xs.toFinset ⊆ (ys.filter p).toFinset := by
+    intro x hx
+    have hx' : x ∈ xs := List.mem_toFinset.mp hx
+    exact List.mem_toFinset.mpr
+      (List.mem_filter.mpr ⟨hsub x hx', hp x hx'⟩)
+  have hlen_xs : xs.toFinset.card = xs.length :=
+    List.toFinset_card_of_nodup hxs
+  have hlen_ys : (ys.filter p).toFinset.card ≤ (ys.filter p).length :=
+    List.toFinset_card_le _
+  have hle_card := Finset.card_le_card hcard
+  omega
+
+lemma packing_lower_bound_badCount
+    (G : GraphData) (d : CutData)
+    (cycles : List (List Nat))
+    (hcycles : ∀ cyc ∈ cycles, checkOddClosedWalk G cyc = true)
+    (hflat : (flattenCycleEdges cycles).Nodup) :
+    cycles.length ≤ badCount G d := by
+  classical
+  have hsel_len : (selectedBadEdges G d cycles hcycles).length =
+      cycles.length :=
+    selectedBadEdges_length G d cycles hcycles
+  have hsel_nodup : (selectedBadEdges G d cycles hcycles).Nodup :=
+    selectedBadEdges_nodup G d cycles hcycles hflat
+  have hsel_sub_edges :
+      ∀ e ∈ selectedBadEdges G d cycles hcycles, e ∈ G.edges := by
+    intro e he
+    have hflatmem :=
+      selectedBadEdges_subset_flatten G d cycles hcycles e he
+    unfold flattenCycleEdges at hflatmem
+    rcases List.mem_flatMap.mp hflatmem with ⟨cyc, hcyc, hedge⟩
+    have hcheck := hcycles cyc hcyc
+    unfold checkOddClosedWalk at hcheck
+    rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true,
+        Bool.and_eq_true, Bool.and_eq_true] at hcheck
+    obtain ⟨⟨⟨⟨⟨_, _⟩, _⟩, _⟩, hedges⟩, _⟩ := hcheck
+    have hadj : adjb G e.1 e.2 = true :=
+      List.all_eq_true.mp hedges e hedge
+    exact mem_edges_of_adjb_of_consecutive G cyc e hedge hadj
+  have hsel_bad :
+      ∀ e ∈ selectedBadEdges G d cycles hcycles,
+        badb G d e.1 e.2 = true :=
+    selectedBadEdges_bad G d cycles hcycles
+  have hle :
+      (selectedBadEdges G d cycles hcycles).length ≤
+        (G.edges.filter (fun e => badb G d e.1 e.2)).length :=
+    length_le_filter_of_nodup_subset _ G.edges
+      (fun e => badb G d e.1 e.2) hsel_nodup hsel_sub_edges hsel_bad
+  unfold badCount
+  omega
+
+/-! #### Checker soundness. -/
+
+theorem checkOddCyclePacking_sound
+    {G : GraphData} {c : CutData} {cert : OddCyclePackingCert}
+    (hcheck : checkOddCyclePacking G c cert = true) :
+    IsMaxCut G c := by
+  classical
+  unfold checkOddCyclePacking at hcheck
+  rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true,
+      Bool.and_eq_true] at hcheck
+  obtain ⟨⟨⟨⟨hcut, hkB⟩, hbadB⟩, hcycB⟩, hflatB⟩ := hcheck
+  have hk_len : cert.k = cert.cycles.length := of_decide_eq_true hkB
+  have hbad_eq_k : badCount G c = cert.k := of_decide_eq_true hbadB
+  have hflat : (flattenCycleEdges cert.cycles).Nodup :=
+    of_decide_eq_true hflatB
+  have hcycles :
+      ∀ cyc ∈ cert.cycles, checkOddClosedWalk G cyc = true :=
+    fun cyc hcyc => List.all_eq_true.mp hcycB cyc hcyc
+  refine { valid := hcut, min_bad := ?_ }
+  intro d _hd
+  have hlower : cert.cycles.length ≤ badCount G d :=
+    packing_lower_bound_badCount G d cert.cycles hcycles hflat
+  rw [hbad_eq_k, hk_len]
+  exact hlower
+
+end OddCyclePacking
+
+
+/-! ### LensGates: literal-data checker layer for the primitive lens system.
+The checker verifies lens/row/switch/label/forbid/OSC payload syntax and
+recomputes boundaries and sigma; the RR/RB/RD/DD/TT/TR geometry is isolated
+in `LensGateGeomSound` and consumed by the final soundness theorem. -/
+
+namespace LensGates
+
+def memNat (v : Nat) (xs : List Nat) : Bool :=
+  decide (v ∈ xs)
+
+def subsetNatList (xs ys : List Nat) : Bool :=
+  xs.all (fun v => memNat v ys)
+
+def checkNatList (G : GraphData) (xs : List Nat) : Bool :=
+  decide xs.Nodup && xs.all (fun v => decide (v < G.n))
+
+def edgeCrosses (S : List Nat) (e : Nat × Nat) : Bool :=
+  decide ((e.1 ∈ S) ≠ (e.2 ∈ S))
+
+def lensBlueb (G : GraphData) (c : CutData) (u v : Nat) : Bool :=
+  adjb G u v && decide (sideb c u ≠ sideb c v)
+
+def blueBoundaryEdges (G : GraphData) (c : CutData) (S : List Nat) :
+    List (Nat × Nat) :=
+  G.edges.filter (fun e => edgeCrosses S e && lensBlueb G c e.1 e.2)
+
+def badBoundaryEdges (G : GraphData) (c : CutData) (S : List Nat) :
+    List (Nat × Nat) :=
+  G.edges.filter (fun e => edgeCrosses S e && badb G c e.1 e.2)
+
+def listLast? {α : Type} (xs : List α) : Option α :=
+  xs.reverse.head?
+
+def consecutiveEdges : List Nat → List (Nat × Nat)
+  | [] => []
+  | [_] => []
+  | u :: v :: rest => normEdge u v :: consecutiveEdges (v :: rest)
+
+def allBlueConsecutive (G : GraphData) (c : CutData) (xs : List Nat) : Bool :=
+  (consecutiveEdges xs).all (fun e => lensBlueb G c e.1 e.2)
+
+def allValidEdges (G : GraphData) (es : List (Nat × Nat)) : Bool :=
+  es.all (fun e => adjb G e.1 e.2)
+
+/-! #### Lens, OSC, and outcome tags -/
+
+inductive LensType
+  | RR | RB | RD | DD | TTsame | TTopposite | TR
+  deriving DecidableEq, Repr
+
+inductive OSCKind
+  | OSC0 | OSC1 | OSC2 | OSC3 | OSC4
+  deriving DecidableEq, Repr
+
+structure OSCData where
+  kind : OSCKind
+  headOn : Bool
+  deriving Repr
+
+inductive ForbidKind
+  | triangle
+  | shorterOdd
+  | invalidRow
+  | invalidShadow
+  | invalidOSC
+  deriving DecidableEq, Repr
+
+/-! #### Row witnesses -/
+
+structure LensRowWitness where
+  bad : Nat × Nat
+  verts : List Nat
+  deriving Repr
+
+def rowEndpointOK (r : LensRowWitness) : Bool :=
+  ((r.verts.head? == some r.bad.1) && (listLast? r.verts == some r.bad.2)) ||
+  ((r.verts.head? == some r.bad.2) && (listLast? r.verts == some r.bad.1))
+
+def checkLensRowWitness (G : GraphData) (c : CutData)
+    (r : LensRowWitness) : Bool :=
+  decide (r.verts.length = 5) &&
+  checkNatList G r.verts &&
+  badb G c r.bad.1 r.bad.2 &&
+  rowEndpointOK r &&
+  allBlueConsecutive G c r.verts
+
+/-! #### Completed switch payload used by lens gates -/
+
+structure LensSwitchData where
+  S : List Nat
+  blueBoundary : List (Nat × Nat)
+  badBoundary : List (Nat × Nat)
+  sigmaVal : Int
+  nuKVal : Int
+  flipBConnected : Bool
+  deriving Repr
+
+def checkLensSwitch (G : GraphData) (c : CutData)
+    (sw : LensSwitchData) : Bool :=
+  checkNatList G sw.S &&
+  decide (sw.blueBoundary = blueBoundaryEdges G c sw.S) &&
+  decide (sw.badBoundary = badBoundaryEdges G c sw.S) &&
+  decide (sw.sigmaVal = sigma G c sw.S)
+
+structure LensSwitchCheckFacts
+    (G : GraphData) (c : CutData) (sw : LensSwitchData) : Prop where
+  S_ok : checkNatList G sw.S = true
+  blue_boundary_ok : sw.blueBoundary = blueBoundaryEdges G c sw.S
+  bad_boundary_ok : sw.badBoundary = badBoundaryEdges G c sw.S
+  sigma_ok : sw.sigmaVal = sigma G c sw.S
+
+theorem checkLensSwitch_sound
+    {G : GraphData} {c : CutData} {sw : LensSwitchData}
+    (h : checkLensSwitch G c sw = true) :
+    LensSwitchCheckFacts G c sw := by
+  unfold checkLensSwitch at h
+  rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true] at h
+  obtain ⟨⟨⟨hS, hblue⟩, hbad⟩, hsigma⟩ := h
+  exact
+    { S_ok := hS
+      blue_boundary_ok := of_decide_eq_true hblue
+      bad_boundary_ok := of_decide_eq_true hbad
+      sigma_ok := of_decide_eq_true hsigma }
+
+/-! #### Primitive lens payload -/
+
+structure PrimitiveLensData where
+  lensType : LensType
+  osc : OSCData
+  terminals : List Nat
+  rows : List LensRowWitness
+  splitVertices : List Nat
+  ownedCore : List Nat
+  deriving Repr
+
+def checkPrimitiveLens
+    (G : GraphData) (c : CutData) (corridor : List Nat)
+    (L : PrimitiveLensData) : Bool :=
+  checkNatList G L.terminals &&
+  subsetNatList L.terminals corridor &&
+  checkNatList G L.splitVertices &&
+  subsetNatList L.splitVertices corridor &&
+  checkNatList G L.ownedCore &&
+  subsetNatList L.ownedCore corridor &&
+  L.rows.all (fun r => checkLensRowWitness G c r)
+
+structure PrimitiveLensCheckFacts
+    (G : GraphData) (c : CutData) (corridor : List Nat)
+    (L : PrimitiveLensData) : Prop where
+  terminals_ok : checkNatList G L.terminals = true
+  terminals_in_corridor : subsetNatList L.terminals corridor = true
+  split_ok : checkNatList G L.splitVertices = true
+  split_in_corridor : subsetNatList L.splitVertices corridor = true
+  owned_ok : checkNatList G L.ownedCore = true
+  owned_in_corridor : subsetNatList L.ownedCore corridor = true
+  rows_ok : L.rows.all (fun r => checkLensRowWitness G c r) = true
+
+theorem checkPrimitiveLens_sound
+    {G : GraphData} {c : CutData} {corridor : List Nat}
+    {L : PrimitiveLensData}
+    (h : checkPrimitiveLens G c corridor L = true) :
+    PrimitiveLensCheckFacts G c corridor L := by
+  unfold checkPrimitiveLens at h
+  rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true,
+      Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true] at h
+  obtain ⟨⟨⟨⟨⟨⟨ht, htc⟩, hs⟩, hsc⟩, ho⟩, hoc⟩, hr⟩ := h
+  exact
+    { terminals_ok := ht
+      terminals_in_corridor := htc
+      split_ok := hs
+      split_in_corridor := hsc
+      owned_ok := ho
+      owned_in_corridor := hoc
+      rows_ok := hr }
+
+/-! #### Label certificates -/
+
+structure LabelCert where
+  labels : List (Nat × Nat)
+  deriving Repr
+
+def labelKeys (lab : LabelCert) : List Nat :=
+  lab.labels.map Prod.fst
+
+def labelVal? (lab : LabelCert) (v : Nat) : Option Nat :=
+  (lab.labels.find? (fun p => p.1 == v)).map Prod.snd
+
+def labelDefinedOn (lab : LabelCert) (S : List Nat) : Bool :=
+  S.all (fun v =>
+    match labelVal? lab v with
+    | some a => decide (a < 5)
+    | none => false)
+
+def c5AdjLabel (a b : Nat) : Bool :=
+  decide (a < 5) &&
+  decide (b < 5) &&
+    (decide (((a + 1) % 5) = b) || decide (((b + 1) % 5) = a))
+
+def labelEdgeOK (lab : LabelCert) (e : Nat × Nat) : Bool :=
+  match labelVal? lab e.1, labelVal? lab e.2 with
+  | some a, some b => c5AdjLabel a b
+  | _, _ => false
+
+def checkLabelEdges
+    (G : GraphData) (corridor : List Nat) (lab : LabelCert) : Bool :=
+  G.edges.all (fun e =>
+    if (memNat e.1 corridor && memNat e.2 corridor) then
+      labelEdgeOK lab e
+    else
+      true)
+
+def checkLabelCert (G : GraphData) (corridor : List Nat)
+    (lab : LabelCert) : Bool :=
+  decide (labelKeys lab).Nodup &&
+  labelDefinedOn lab corridor &&
+  checkLabelEdges G corridor lab
+
+structure LabelCheckFacts
+    (G : GraphData) (corridor : List Nat) (lab : LabelCert) : Prop where
+  labels_nodup : (labelKeys lab).Nodup
+  labels_defined : labelDefinedOn lab corridor = true
+  edge_labels_ok : checkLabelEdges G corridor lab = true
+
+theorem checkLabelCert_sound
+    {G : GraphData} {corridor : List Nat} {lab : LabelCert}
+    (h : checkLabelCert G corridor lab = true) :
+    LabelCheckFacts G corridor lab := by
+  unfold checkLabelCert at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  obtain ⟨⟨hnd, hdef⟩, hedges⟩ := h
+  exact
+    { labels_nodup := of_decide_eq_true hnd
+      labels_defined := hdef
+      edge_labels_ok := hedges }
+
+/-! #### Forbid and OSC residual payloads -/
+
+structure ForbidCert where
+  kind : ForbidKind
+  witnessVertices : List Nat
+  witnessEdges : List (Nat × Nat)
+  deriving Repr
+
+def checkForbidCert (G : GraphData) (F : ForbidCert) : Bool :=
+  checkNatList G F.witnessVertices && allValidEdges G F.witnessEdges
+
+structure ForbidCheckFacts (G : GraphData) (F : ForbidCert) : Prop where
+  vertices_ok : checkNatList G F.witnessVertices = true
+  edges_ok : allValidEdges G F.witnessEdges = true
+
+theorem checkForbidCert_sound
+    {G : GraphData} {F : ForbidCert}
+    (h : checkForbidCert G F = true) :
+    ForbidCheckFacts G F := by
+  unfold checkForbidCert at h
+  rw [Bool.and_eq_true] at h
+  exact { vertices_ok := h.1, edges_ok := h.2 }
+
+structure OSCResidualCert where
+  osc : OSCData
+  witnessVertices : List Nat
+  witnessEdges : List (Nat × Nat)
+  deriving Repr
+
+def checkOSCCert (G : GraphData) (O : OSCResidualCert) : Bool :=
+  checkNatList G O.witnessVertices && allValidEdges G O.witnessEdges
+
+structure OSCCheckFacts (G : GraphData) (O : OSCResidualCert) : Prop where
+  vertices_ok : checkNatList G O.witnessVertices = true
+  edges_ok : allValidEdges G O.witnessEdges = true
+
+theorem checkOSCCert_sound
+    {G : GraphData} {O : OSCResidualCert}
+    (h : checkOSCCert G O = true) :
+    OSCCheckFacts G O := by
+  unfold checkOSCCert at h
+  rw [Bool.and_eq_true] at h
+  exact { vertices_ok := h.1, edges_ok := h.2 }
+
+/-! #### Gate outcomes -/
+
+inductive LensGateOutcome
+  | cross (lensIdx : Nat) (sw : LensSwitchData)
+  | label (lensIdx : Nat) (lab : LabelCert)
+  | forbid (lensIdx : Nat) (forbid : ForbidCert)
+  | osc (lensIdx : Nat) (osc : OSCResidualCert)
+  deriving Repr
+
+def lensIdxValid (lenses : List PrimitiveLensData) (i : Nat) : Bool :=
+  decide (i < lenses.length)
+
+def checkOutcome
+    (G : GraphData) (c : CutData) (corridor : List Nat)
+    (lenses : List PrimitiveLensData)
+    (out : LensGateOutcome) : Bool :=
+  match out with
+  | .cross i sw =>
+      lensIdxValid lenses i && checkLensSwitch G c sw
+  | .label i lab =>
+      lensIdxValid lenses i && checkLabelCert G corridor lab
+  | .forbid i F =>
+      lensIdxValid lenses i && checkForbidCert G F
+  | .osc i O =>
+      lensIdxValid lenses i && checkOSCCert G O
+
+/-! #### Whole corridor gate data -/
+
+structure LensGateData where
+  corridorId : Nat
+  corridor : List Nat
+  terminals : List Nat
+  rowWitnesses : List LensRowWitness
+  lenses : List PrimitiveLensData
+  outcome : LensGateOutcome
+  deriving Repr
+
+def checkLensGates
+    (G : GraphData) (c : CutData) (D : LensGateData) : Bool :=
+  checkNatList G D.corridor &&
+  checkNatList G D.terminals &&
+  subsetNatList D.terminals D.corridor &&
+  D.rowWitnesses.all (fun r => checkLensRowWitness G c r) &&
+  D.lenses.all (fun L => checkPrimitiveLens G c D.corridor L) &&
+  checkOutcome G c D.corridor D.lenses D.outcome
+
+structure LensGateCheckFacts
+    (G : GraphData) (c : CutData) (D : LensGateData) : Prop where
+  corridor_ok : checkNatList G D.corridor = true
+  terminals_ok : checkNatList G D.terminals = true
+  terminals_in_corridor : subsetNatList D.terminals D.corridor = true
+  row_witnesses_ok :
+    D.rowWitnesses.all (fun r => checkLensRowWitness G c r) = true
+  lenses_ok :
+    D.lenses.all (fun L => checkPrimitiveLens G c D.corridor L) = true
+  outcome_ok :
+    checkOutcome G c D.corridor D.lenses D.outcome = true
+
+theorem checkLensGates_facts
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    (h : checkLensGates G c D = true) :
+    LensGateCheckFacts G c D := by
+  unfold checkLensGates at h
+  rw [Bool.and_eq_true, Bool.and_eq_true, Bool.and_eq_true,
+      Bool.and_eq_true, Bool.and_eq_true] at h
+  obtain ⟨⟨⟨⟨⟨hc, ht⟩, htc⟩, hr⟩, hl⟩, ho⟩ := h
+  exact
+    { corridor_ok := hc
+      terminals_ok := ht
+      terminals_in_corridor := htc
+      row_witnesses_ok := hr
+      lenses_ok := hl
+      outcome_ok := ho }
+
+/-! #### Semantic conclusion consumed by corridor layers -/
+
+def LensRowsAllLengthFive (D : LensGateData) : Prop :=
+  ∀ r : LensRowWitness, r ∈ D.rowWitnesses → r.verts.length = 5
+
+def LensNuKNonneg (G : GraphData) (c : CutData) : Prop :=
+  ∀ sw : LensSwitchData,
+    checkLensSwitch G c sw = true →
+    sw.flipBConnected = true →
+      0 ≤ sw.nuKVal
+
+def CrossRouteReady
+    (G : GraphData) (c : CutData) (_D : LensGateData)
+    (sw : LensSwitchData) : Prop :=
+  checkLensSwitch G c sw = true
+
+def LabelWellDefined
+    (G : GraphData) (_c : CutData) (D : LensGateData)
+    (lab : LabelCert) : Prop :=
+  checkLabelCert G D.corridor lab = true
+
+def CorridorForbidden
+    (_G : GraphData) (_c : CutData) (_D : LensGateData) : Prop :=
+  False
+
+inductive LensGateConclusion
+    (G : GraphData) (c : CutData) (D : LensGateData) : Prop
+  | cross (sw : LensSwitchData) (h : CrossRouteReady G c D sw)
+  | label (lab : LabelCert) (h : LabelWellDefined G c D lab)
+  | forbidden (h : CorridorForbidden G c D)
+
+/-- Geometry side of the lens-gate proof: the remaining geometric lemmas
+    for the primitive lens system (RR/RB/RD/DD/TT/TR cases, OSC residuals,
+    forbid contradictions). The checker verifies the literal data; these
+    fields carry the geometry. -/
+structure LensGateGeomSound
+    (G : GraphData) (c : CutData) (D : LensGateData) : Prop where
+  cross_sound :
+    ∀ i sw,
+      D.outcome = LensGateOutcome.cross i sw →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        LensGateConclusion G c D
+  label_sound :
+    ∀ i lab,
+      D.outcome = LensGateOutcome.label i lab →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        LensGateConclusion G c D
+  forbid_sound :
+    ∀ i F,
+      D.outcome = LensGateOutcome.forbid i F →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        LensGateConclusion G c D
+  osc_sound :
+    ∀ i O,
+      D.outcome = LensGateOutcome.osc i O →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        LensGateConclusion G c D
+
+/-- Main checker soundness statement for LensGates. -/
+theorem checkLensGates_sound
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    (geom : LensGateGeomSound G c D)
+    (hcheck : checkLensGates G c D = true)
+    (hSigma : sigmaNonneg G c)
+    (hNuK : LensNuKNonneg G c)
+    (hTri : TriangleFree G)
+    (hRows5 : LensRowsAllLengthFive D) :
+    LensGateConclusion G c D := by
+  have hfacts : LensGateCheckFacts G c D := checkLensGates_facts hcheck
+  cases h : D.outcome with
+  | cross i sw =>
+      exact geom.cross_sound i sw h hfacts hSigma hNuK hTri hRows5
+  | label i lab =>
+      exact geom.label_sound i lab h hfacts hSigma hNuK hTri hRows5
+  | forbid i F =>
+      exact geom.forbid_sound i F h hfacts hSigma hNuK hTri hRows5
+  | osc i O =>
+      exact geom.osc_sound i O h hfacts hSigma hNuK hTri hRows5
+
+/-! #### Mechanical extraction lemmas for common consumers -/
+
+theorem checkLensGates_outcome_ok
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    (hcheck : checkLensGates G c D = true) :
+    checkOutcome G c D.corridor D.lenses D.outcome = true :=
+  (checkLensGates_facts hcheck).outcome_ok
+
+theorem checkLensGates_corridor_ok
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    (hcheck : checkLensGates G c D = true) :
+    checkNatList G D.corridor = true :=
+  (checkLensGates_facts hcheck).corridor_ok
+
+theorem checkLensGates_lenses_ok
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    (hcheck : checkLensGates G c D = true) :
+    D.lenses.all (fun L => checkPrimitiveLens G c D.corridor L) = true :=
+  (checkLensGates_facts hcheck).lenses_ok
+
+theorem checkLensSwitch_sigma
+    {G : GraphData} {c : CutData} {sw : LensSwitchData}
+    (h : checkLensSwitch G c sw = true) :
+    sw.sigmaVal = sigma G c sw.S :=
+  (checkLensSwitch_sound h).sigma_ok
+
+theorem checkLensSwitch_blueBoundary
+    {G : GraphData} {c : CutData} {sw : LensSwitchData}
+    (h : checkLensSwitch G c sw = true) :
+    sw.blueBoundary = blueBoundaryEdges G c sw.S :=
+  (checkLensSwitch_sound h).blue_boundary_ok
+
+theorem checkLensSwitch_badBoundary
+    {G : GraphData} {c : CutData} {sw : LensSwitchData}
+    (h : checkLensSwitch G c sw = true) :
+    sw.badBoundary = badBoundaryEdges G c sw.S :=
+  (checkLensSwitch_sound h).bad_boundary_ok
+
+end LensGates
 
 end CertGraph
 end Erdos23Delta0

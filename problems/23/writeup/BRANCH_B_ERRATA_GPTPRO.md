@@ -137,3 +137,71 @@ analytically by certified floor inequalities F4A, F4B, F5, F6, F7; remaining gat
 discharged by the exact S7 machine artifact.
 Every citation to S7 means precisely this inequality, on this domain, with the seven
 displayed slacks, after clearing the positive denominator.
+
+# ===== E4 (sibling thread, 2026-07-05; reconstructed from transformed extraction) =====
+# (sibling numbering; follows the CD-dictionary erratum I archived as E2)
+
+E4. q<3-prime and Seed3-prime quotient model made explicit.
+Target section: Branch A, Sections 2.7 (q<3-prime and Seed3-prime); also any place where
+these certificates are described as informal finite quotient checks.
+Anchor phrases: "the q<3-prime quotient check" / "the Seed3-prime seed check" /
+"the quotient certificate verifies this case".
+
+Replacement text:
+The q<3-prime and Seed3-prime certificates are interpreted in the formal Seed10 quotient
+model. A Seed10 quotient consists of: a map phi : V -> {0..9} (ten bags); bag weights
+w_i = |phi^{-1}(i)|; a seed edge relation on the bags; a fixed cut side
+side : {0..9} -> {0,1}; a C5-class map cls : {0..9} -> Z/5Z; a door list; and a finite
+list of seed row templates R : {0,1,2,3,4} -> {0..9}.
+A realization of the seed by the graph means: every graph edge projects to a seed edge;
+every seed edge represents complete bipartite adjacency between its bags; no graph edge
+between seed nonedges; vertex cut side agrees with bag side; vertex C5-class agrees with
+bag class; every seed row template used by the certificate lifts to a certified row of
+the graph. A seed row template is VALID when its four consecutive edges are cut edges in
+the seed, its closing edge is a bad edge in the seed, and its C5 classes advance
+monotonically around C5 up to reflection — checked from the literal seed data.
+Weights satisfy N = sum_{i=0}^{9} w_i.
+The seven-cut cone is NOT an abstract assumption. Each of its seven slacks is attached to
+a witnessed seed cut X subset {0..9}. The slack polynomial is
+  F_X(w) = sum_{ij in E_seed, i in X, j notin X, side(i) != side(j)} w_i w_j
+         - sum_{ij in E_seed, i in X, j notin X, side(i) == side(j)} w_i w_j.
+For a realized graph, F_X(w) = delta_B(phi^{-1}(X)) - delta_M(phi^{-1}(X)). Since the cut
+is maximum, this is nonnegative — every seven-cut slack is a genuine max-cut switch slack.
+The checker records the literal slack polynomial AND the seed cut witness X, verifies
+slackLit = F_X(w) by exact polynomial equality; semantic nonnegativity follows from the
+max-cut inequality on phi^{-1}(X).
+Cone semantics of the Seed10 realization: w_i >= 0; N = sum w_i; each witnessed seven-cut
+slack F_X(w) >= 0; any listed equality/seed-vanishing polynomial vanishes on the declared
+quotient stratum. Every polynomial inequality in these sections is then certified by the
+generic ConeCert, BernsteinSimplex, or BernsteinCube checker over this Seed10 realization.
+No quotient inequality is used without a seed realization, a witnessed cut slack, and the
+corresponding checker identity.
+
+# ===== E5 (sibling thread, 2026-07-05; reconstructed from transformed extraction) =====
+
+E5. Five-mask absorption branch routed through etaNonneg.
+Target section: Branch A, Section 2.3 (Proper-mask A1 cones); also any coefficient-
+comparison passage where the lift from the certified proper-mask coefficient to the
+C5-RS coefficient uses eta >= 0.
+Anchor phrases: "using eta >= 0" / "the 7/30-to-2/3 lift" / "the five-mask absorption
+gives the required coefficient".
+
+Replacement text:
+The proper-mask A1 certificates are applied only AFTER the global scalar input
+etaNonneg : eta >= 0 has been established. This scalar input is supplied by Bank0 in
+the pure all-length-five case, and by Bank-L whenever a longer positive row exists.
+The A1 cones do NOT prove eta >= 0.
+Let A be a nonempty proper active mask (empty != A subsetneq Z/5Z) and define
+X(A) = sum_{i in A} (s_i - tau). The A1 proper-mask cone certificate proves the
+certified inequality X(A) <= (25/N + 2/3) * eta. Since etaNonneg gives eta >= 0, one
+has (2/3)*eta <= eta, therefore X(A) <= (25/N + 1) * eta. For the active mask P = A,
+sum_i (s_i - tau)_+ = X(A). Hence the proper-mask case of C5-RS follows:
+sum_i (s_i - tau)_+ <= (1 + 25/N) * eta.
+The logical order is essential: FIRST etaNonneg is supplied externally (Bank0 if all
+bad edges have length 5; Bank-L if some positive row is longer); SECOND the six A1
+proper-mask cones prove their certified coefficient; THIRD etaNonneg permits the
+coefficient lift from 2/3 to 1. No empty-mask cone certificate is used to prove
+eta >= 0, and no A1 cone is invoked before etaNonneg is available.
+In the Branch-A input package the required scalar hypothesis is the field
+etaNonneg : eta >= 0 — not a direct Bank0 hypothesis. Bank0 is one possible source of
+etaNonneg; Bank-L is the other.
