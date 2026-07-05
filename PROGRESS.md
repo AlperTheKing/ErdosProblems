@@ -2264,3 +2264,8 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T13:00Z] V BATCH | DID: k0/G7 patch r1 | RESULT: rows 15->0, 3 srcs — SANITIZER QUEUE | D: none
 [2026-07-05T13:40Z] V THREADS | DID: face-split staging verdict extracted FULL (9647c) + archived + relayed w/ direct ASK answers (pair-closure explains capped infeasibility) | RESULT: FACE_SPLIT_QUOTIENT_LP_GPTPRO.md; quotient-coupled LP = the batch-tail tool | D: face-split cluster UNBLOCKED structurally
 [2026-07-05T14:40Z] V LEAN | DID: stage-7 typed+built (dedup vs pre-existing hypothesis-free bridge from lost-to-compaction segment) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0 — GraphConnected (separator form) + connectedMaxCut_bconnected_default PROVEN via sigma>=0; cutFnBridgeFacts_default hypothesis-free | D: ALL GENERAL-MATH LEAN THEOREMS DONE
+[2026-07-05T15:06Z] V COWORK | DID: verified k5/F6+k6/F6 hard-row stops (SHA 865b428d/658669715/patch3 counts reproduced) | RESULT: RULING posted — both to quotient face-split queue divisor F6#, k6/F6 (4 rows) recommended first | D: F6 rows reclassified face-split
+[2026-07-05T15:06Z] > BATCH | NEXT: k4/G1 lexsmall 384-prime CRT solve running bg (core rank 2856, LP optimal 4199.4476)
+[2026-07-05T15:20Z] V GPTPRO | DID: SIBLING E2 collected (2337c, transformed extraction) | RESULT: BRANCH_B_ERRATA_GPTPRO.md += E2 (CD telescope vs 24-signature dictionary = two separate certificate layers) | D: errata series advancing
+[2026-07-05T15:30Z] V GPTPRO | DID: MAIN retasked (LensGates checker design, 4-part deliverable) + SIBLING retasked (E3) | RESULT: both sends confirmed (msgs 10/7, composers empty) | D: none
+[2026-07-05T15:31Z] > BATCH | NEXT: k4/F7 family-objective core build launched (dominant=6, 4 threads) alongside k4/G1 384p CRT

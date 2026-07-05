@@ -70,3 +70,38 @@ certificate family cited here, not by Gate-A itself.
 [Standard per-mention sentence: tail cut at extraction boundary; full text in
 thread 6a45e152 — re-extract if needed at document assembly time.]
 
+
+# ===== E2 (sibling thread, 2026-07-05; reconstructed from transformed extraction) =====
+
+E2. CD lambda_a positive-part residuals and the 24-signature dictionary.
+Target section: Part III, 3.3 (CD completion operations and telescope); also any
+Branch-B section that treats the CD residuals rho_a as already decomposed or
+automatically nonnegative dictionary charges.
+Anchor phrases (old text): "the CD residuals are the 24-signature rows" /
+"rho_a is paid by the signature dictionary" / "the 24 signatures give the CD telescope".
+
+Replacement text:
+The CD completion telescope and the 24-signature dictionary are TWO SEPARATE
+certificate layers.
+For each completion operation a, the trace records the exchange quadruple
+    (e_B(X_a, I_a), e_M(X_a, I_a), e_B(X_a, O_a), e_M(X_a, O_a)),
+where I_a is the carrier before the operation, X_a is the added set, and
+O_a = V \ (I_a u X_a). The signed sigma loss is
+    q_a = e_B(X_a,I_a) - e_M(X_a,I_a) - e_B(X_a,O_a) + e_M(X_a,O_a),
+so that q_a = sigma(I_a) - sigma(I_a u X_a).
+The positive-part residual attached to the operation is rho_a = 25 * max(0, q_a).
+The CD telescope proves
+    25*sigma(I_0) <= sigma_K(S) + SUM_a rho_a.
+This is the telescope theorem. It uses only the exchange quadruple identities, the
+definition of rho_a, and the final completion dominance inequality. It does NOT by
+itself decompose the residuals rho_a into the finite signature atoms.
+The decomposition of the residuals is a SECOND certificate theorem. For every
+operation a, the trace records a core signature id sig(a) in {1,...,24} and an
+integer environment env(a). The 24-signature dictionary certificate proves the
+exact identity rho_a = Dict_{sig(a)}(env(a)). Each dictionary row is a nonnegative
+linear combination of the declared core-signature atoms. Hence
+    SUM_a rho_a = SUM_a Dict_{sig(a)}(env(a))
+is an exact nonnegative dictionary charge.
+Thus the CD part of the proof has the two-step form: the telescope supplies the
+positive-part residuals; the dictionary supplies their finite nonnegative
+decomposition. BOTH certificate layers are required.
