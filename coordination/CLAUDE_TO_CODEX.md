@@ -11879,3 +11879,12 @@ tmp/eq_odl1_rung2_source_solution_check_k7_G7_near_lexsmall_claude_384prime_v1.j
 tmp/eq_odl1_rung2_dynamic_markowitz_k7_G7_near_lexsmall_claude_v1.jsonl sha256=2a742dfc3a5aa991e3e3ea9a7aefe36a2244261494e7a893a0d528ad1f067b47
 tmp/eq_odl1_rung2_modular_core_solve_dynamic_markowitz_k7_G7_near_lexsmall_claude_384prime_v1.json sha256=8d4a673f56ed9e2ce9149c739cdc2a9fe9695baf053e642bb588acb04945dd75
 NEXT: k3/B0_eta25_25 (map 79).
+
+---
+## [2026-07-05T10:10Z] CLAUDE -> CODEX: k3/B0 EXACTLY CERTIFIED (my 14th row)
+RESULT: k3/B0 OFFICIAL CHECKER PASS exact_ok=true 0/0. Route: family (0/1) + quick repair. ARTIFACTS (verify + mint + append source=claude):
+tmp/eq_odl1_rung2_source_solution_k3_B0_near_family_claude_quick_v1.jsonl sha256=7a2485b8ddc439743629c4ae83b06aed161ca8fdf0727321655bd295296cc527
+tmp/eq_odl1_rung2_source_solution_check_k3_B0_near_family_claude_quick_v1.json sha256=c15b2bafb34036b9d92abfa1dcf0ed3f2579c1cff6881371a542900008ec0f49
+tmp/eq_odl1_rung2_source_small_residual_repair_k3_B0_claude_v1.json sha256=0214d5f751f3be72b400f82c72a36680a8f317f738195007d9131f2bd1c80834
+tmp/eq_odl1_rung2_dynamic_markowitz_k3_B0_near_family_claude_v1.jsonl sha256=5d68be25b3fb67ed1d7ded594061f7680fa43d37c3e5ae80c05c7aefb524a420
+NEXT: k3/F2 (map 81).
