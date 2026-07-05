@@ -3345,5 +3345,184 @@ noncomputable def simpleGraphEncodingFacts_default :
 
 end EncodingFacts
 
+/-! ### Assembly layer, stage 6: provider discharges — real γ from the row
+database (coverage + Σℓ² + summation facts), finite max-cut minimization,
+and the good-cut assembly. After this, the only per-instance certificate
+data are the row constructions and the per-row Branch-A/B inputs. -/
+
+/-- γ computed from the row database: Σ ℓ² over the rows. -/
+def gammaOfGD (_G : GraphData) (_c : CutData) (rows : RowDB) : ℚ :=
+  (rows.rowList.map (fun Q : RowCert => (Q.length : ℚ) ^ 2)).sum
+
+/-- Sum of row sums over the database. -/
+def totalRowSum (G : GraphData) (c : CutData) (rows : RowDB) : ℚ :=
+  (rows.rowList.map (fun Q : RowCert => rowSum G c rows Q)).sum
+
+/-- Row-database γ facts: coverage (one row per bad edge) plus the two
+    summation facts of the archived GERSH → Γ ≤ N² reduction. -/
+structure RowDBGammaFacts (G : GraphData) (c : CutData) (rows : RowDB) :
+    Type extends RowDBFactsGeneral G c rows where
+  rowList_length_eq_badCount : rows.rowList.length = badCount G c
+  gamma_le_totalRowSum : gammaOfGD G c rows ≤ totalRowSum G c rows
+  totalRowSum_le_N2_of_gersh :
+    (∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) →
+      totalRowSum G c rows ≤ (G.n : ℚ) ^ 2
+  betaVal : ℚ
+  beta_eq_badCount : betaVal = (badCount G c : ℚ)
+
+private lemma list_len_sq_ge_25_length (l : List RowCert)
+    (hLen : ∀ Q : RowCert, Q ∈ l → 5 ≤ Q.length) :
+    25 * (l.length : ℚ) ≤
+      (l.map (fun Q : RowCert => (Q.length : ℚ) ^ 2)).sum := by
+  induction l with
+  | nil => simp
+  | cons Q qs ih =>
+      have hQ : 5 ≤ Q.length := hLen Q (by simp)
+      have hqs : ∀ R : RowCert, R ∈ qs → 5 ≤ R.length := by
+        intro R hR
+        exact hLen R (by simp [hR])
+      have ih' := ih hqs
+      have hQsq : (25 : ℚ) ≤ (Q.length : ℚ) ^ 2 := by
+        have hQq : (5 : ℚ) ≤ (Q.length : ℚ) := by exact_mod_cast hQ
+        nlinarith [sq_nonneg ((Q.length : ℚ) - 5)]
+      simp only [List.map_cons, List.sum_cons, List.length_cons]
+      have hlen_cast : ((qs.length + 1 : Nat) : ℚ) = (qs.length : ℚ) + 1 := by
+        norm_num
+      rw [hlen_cast]
+      nlinarith
+
+/-- Γ lower bound: 25m ≤ Γ from ℓ ≥ 5 per row plus coverage. -/
+theorem gammaLower_from_rowDB {G : GraphData} {c : CutData} {rows : RowDB}
+    (h : RowDBGammaFacts G c rows) :
+    25 * (badCount G c : ℚ) ≤ gammaOfGD G c rows := by
+  unfold gammaOfGD
+  have hsum : 25 * (rows.rowList.length : ℚ) ≤
+      (rows.rowList.map (fun Q : RowCert => (Q.length : ℚ) ^ 2)).sum :=
+    list_len_sq_ge_25_length rows.rowList
+      (fun Q hQ => h.length_ge_five Q hQ)
+  rw [← h.rowList_length_eq_badCount]
+  exact hsum
+
+/-- Γ upper bound from the row GERSH bounds. -/
+theorem gammaUpper_from_all_rows_gersh {G : GraphData} {c : CutData}
+    {rows : RowDB} (h : RowDBGammaFacts G c rows)
+    (hGersh : ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) :
+    gammaOfGD G c rows ≤ (G.n : ℚ) ^ 2 :=
+  le_trans h.gamma_le_totalRowSum (h.totalRowSum_le_N2_of_gersh hGersh)
+
+/-- γ/β facts discharged from the row database. -/
+def gammaBetaProvider_of_rowDB {G : GraphData} {c : CutData} {rows : RowDB}
+    (h : RowDBGammaFacts G c rows) :
+    GammaBetaFacts G c rows where
+  gammaVal := gammaOfGD G c rows
+  betaVal := h.betaVal
+  gammaLower := gammaLower_from_rowDB h
+  gammaUpper_of_all_rows_gersh := fun hGersh =>
+    gammaUpper_from_all_rows_gersh h hGersh
+  beta_eq_badCount := h.beta_eq_badCount
+
+/-- Boolean colorings of Fin n. -/
+abbrev CutFn (n : Nat) := Fin n → Bool
+
+/-- CutData from a coloring of Fin G.n. -/
+def cutDataOfFn (G : GraphData) (f : CutFn G.n) : CutData :=
+  { side := List.ofFn f }
+
+theorem checkCut_cutDataOfFn (G : GraphData) (f : CutFn G.n) :
+    checkCut G (cutDataOfFn G f) = true := by
+  unfold checkCut cutDataOfFn
+  simp
+
+/-- Finite representation of a valid cut. -/
+def cutFnOfCutData (G : GraphData) (c : CutData) : CutFn G.n :=
+  fun i => sideb c i.val
+
+/-- Mechanical CutData↔CutFn bridge obligation (kept named because checkCut
+    unfolding behavior varies across call sites). -/
+structure CutFnBridgeFacts (G : GraphData) : Prop where
+  badCount_cutDataOfFn_of_cut :
+    ∀ c : CutData, checkCut G c = true →
+      badCount G (cutDataOfFn G (cutFnOfCutData G c)) = badCount G c
+
+/-- Minimum bad count over the finite coloring space. -/
+noncomputable def minBadCountGD (G : GraphData) : Nat :=
+  (Finset.univ.image (fun f : CutFn G.n => badCount G (cutDataOfFn G f))).min'
+    (Finset.image_nonempty.mpr Finset.univ_nonempty)
+
+/-- FINITE MAX-CUT EXISTENCE: minimization over the coloring space. -/
+theorem maxcut_exists_from_cutFn_bridge (G : GraphData)
+    (hBridge : CutFnBridgeFacts G) :
+    ∃ c : CutData, checkCut G c = true ∧ IsMaxCut G c := by
+  classical
+  let S : Finset Nat :=
+    Finset.univ.image (fun f : CutFn G.n => badCount G (cutDataOfFn G f))
+  have hS_nonempty : S.Nonempty :=
+    Finset.image_nonempty.mpr Finset.univ_nonempty
+  let m : Nat := S.min' hS_nonempty
+  have hm_mem : m ∈ S := Finset.min'_mem S hS_nonempty
+  rcases Finset.mem_image.mp hm_mem with ⟨fmin, _hfmin, hfmin⟩
+  let cmin : CutData := cutDataOfFn G fmin
+  refine ⟨cmin, checkCut_cutDataOfFn G fmin, ?_⟩
+  refine { valid := checkCut_cutDataOfFn G fmin, min_bad := ?_ }
+  intro d hd
+  have hd_mem : badCount G (cutDataOfFn G (cutFnOfCutData G d)) ∈ S := by
+    dsimp [S]
+    exact Finset.mem_image.mpr ⟨cutFnOfCutData G d, Finset.mem_univ _, rfl⟩
+  have hm_le : m ≤ badCount G (cutDataOfFn G (cutFnOfCutData G d)) :=
+    Finset.min'_le S _ hd_mem
+  have hmin_count : badCount G cmin = m := by
+    simpa [cmin] using hfmin
+  rw [hmin_count]
+  rw [hBridge.badCount_cutDataOfFn_of_cut d hd] at hm_le
+  exact hm_le
+
+/-- Component-flip provider: on connected graphs every max cut is
+    B-connected (flip a proper blue component to strictly drop badCount). -/
+structure ConnectedMaxCutImpliesBConnected (G : GraphData) : Prop where
+  bconnected_of_maxCut :
+    ∀ c : CutData, IsMaxCut G c → BConnected G c
+
+/-- Provider for γ-minimal selection with row construction. -/
+structure GammaMinSelectionProvider (G : GraphData) : Type where
+  chooseRows : ∀ c : CutData, checkCut G c = true → BConnected G c → RowDB
+  rowGammaFacts : ∀ c : CutData, ∀ hc : checkCut G c = true,
+    ∀ hB : BConnected G c, RowDBGammaFacts G c (chooseRows c hc hB)
+  gamma_min_cut : ∀ c : CutData, checkCut G c = true → IsMaxCut G c →
+    BConnected G c → GammaMinimalConnected G c
+
+/-- GOOD-CUT EXISTENCE from the three providers. -/
+theorem exists_good_cut_from_providers (G : GraphData)
+    (hCutBridge : CutFnBridgeFacts G)
+    (hConnMax : ConnectedMaxCutImpliesBConnected G)
+    (hGammaSel : GammaMinSelectionProvider G) :
+    ∃ c rows, checkCut G c = true ∧ Nonempty (GoodCutData G c rows) := by
+  rcases maxcut_exists_from_cutFn_bridge G hCutBridge with ⟨c, hc, hMax⟩
+  have hB : BConnected G c := hConnMax.bconnected_of_maxCut c hMax
+  let rows : RowDB := hGammaSel.chooseRows c hc hB
+  have hRowsGamma : RowDBGammaFacts G c rows :=
+    hGammaSel.rowGammaFacts c hc hB
+  refine ⟨c, rows, hc, ⟨?_⟩⟩
+  exact
+    { maxCut := hMax
+      gammaMin := hGammaSel.gamma_min_cut c hc hMax hB
+      bConnected := hB
+      rowsFacts := hRowsGamma.toRowDBFactsGeneral
+      gammaBeta := gammaBetaProvider_of_rowDB hRowsGamma }
+
+/-- The per-graph certificate payload remaining after the discharges:
+    exactly the row-wise Branch-A and Branch-B obligations. -/
+structure RemainingDelta0CertificateData (G : GraphData) (c : CutData)
+    (rows : RowDB) : Prop where
+  branchA_a1Proper_and_odl : ∀ Q : RowCert, RowInDB rows Q →
+    Q.length = 5 → BranchAInputs G c rows Q
+  branchB_bankL_and_UPO : ∀ Q : RowCert, RowInDB rows Q →
+    5 < Q.length → BranchBInputs G c rows Q
+
+theorem delta0Bundles_from_remaining {G : GraphData} {c : CutData}
+    {rows : RowDB} (R : RemainingDelta0CertificateData G c rows) :
+    Delta0CertBundles G c rows where
+  branchA := fun Q hQ hLen => ⟨R.branchA_a1Proper_and_odl Q hQ hLen⟩
+  branchB := fun Q hQ hLen => ⟨R.branchB_bankL_and_UPO Q hQ hLen⟩
+
 end CertGraph
 end Erdos23Delta0

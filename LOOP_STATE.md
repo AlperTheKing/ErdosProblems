@@ -854,3 +854,37 @@
   (k9/F4, maybe more). Lean-fix technique notes: omit [inst] in for section-var lint;
   IsNClique = ⟨IsClique, card⟩; rw [hpEq] at hadj ⊢ replaces goal-noop simpa.
 - P(math)~90, P(Lean)~94.
+
+
+## TICK NOTES (2026-07-05T04:15Z) — sanitizer verdict relayed; provider module cached
+- SOURCES-ONLY VERDICT (main msg idx 6 post-reload, 9163c raw; ~4k core extracted + relayed;
+  window.__so cache on MAIN tab — dies on reload; FULL ARCHIVE NEXT TICK): identity-preserving
+  source_nullspace_sanitizer via dominance-delta dictionary. Codex implementing as reusable
+  tool; supersedes signed-delta source_lower for residual-clean rows.
+- PROVIDER-DISCHARGE MODULE landed (main msg idx 4, 11524c; window.__prov2 cache xLen 11941;
+  UNEXTRACTED — NEXT TICK PRIORITY: extract fully + archive + type as CertGraph stage-6:
+  gammaOfGD real def + RowDBFacts coverage + gammaLower/gammaUpper discharges +
+  exists_good_cut finite minimization + real GammaMinimalConnected/GoodCutData assembly).
+- BATCH: my certified 11 (F2k6,F1k5,G7k6,G2k5,F1k7,F3k7,F4k9,F2k7,G6k0,G1k7,G5k9); k9/F3 patch
+  chain RUNNING (buh72rgo6). Ledger >= 36/108. Sibling E2 STILL uncollected (stub last check).
+- MAIN retask after provider extraction: LensGates or Seed3RouteTree checker design detail,
+  or FaceSplit certificate emission format for the degenerate queue (F6/G1/G2/G4-class rows).
+
+
+## TICK NOTES (2026-07-05T05:35Z) — STAGE-6 GREEN: provider discharges landed
+- LEAN: CertGraph.lean now ~3550 lines, 6 assembly stages all TRUE GREEN zero-warning,
+  forbidden 0. NEW: gammaOfGD (sum ell^2), RowDBGammaFacts (COVERAGE field
+  rowList_length_eq_badCount + two summation facts + betaVal), list_len_sq_ge_25_length +
+  gammaLower PROVEN, gammaUpper chained, gammaBetaProvider_of_rowDB discharges
+  GammaBetaFacts; CutFn/cutDataOfFn/CutFnBridgeFacts (1 mechanical obligation) +
+  maxcut_exists_from_cutFn_bridge PROVEN (finite minimization); 
+  ConnectedMaxCutImpliesBConnected (component-flip provider) + GammaMinSelectionProvider +
+  exists_good_cut_from_providers PROVEN; RemainingDelta0CertificateData (per-row A/B only,
+  dead etaNonneg NOT reintroduced) + delta0Bundles_from_remaining.
+- REMAINING LEAN (fully provable, no certificates): CutFnBridgeFacts mechanical proof
+  (badCount invariance under ofFn round-trip); ConnectedMaxCutImpliesBConnected proof
+  (component-flip via badCount_flip_eq — already green!); THEN checkers (LensGates,
+  Seed3RouteTree) + per-row artifact consumption (EQODL1/DiffSkip, batch-fed).
+- NEXT MAIN RETASK: those two mechanical proofs paste-ready. Sanitizer verdict full archive
+  still pending (window.__so). Sibling E2 still uncollected.
+- P(math)~90, P(Lean)~95.
