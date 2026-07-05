@@ -62,6 +62,18 @@ def fmt_fraction(q: Fraction) -> str:
     return f"{sign}num_bits={abs(q.numerator).bit_length()}/den_bits={q.denominator.bit_length()}"
 
 
+def fraction_record(q: Fraction) -> dict[str, int]:
+    return {"num": q.numerator, "den": q.denominator}
+
+
+def write_solution_jsonl(path: Path, values: list[Fraction]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        for source_col, val in enumerate(values):
+            if val:
+                f.write(json.dumps({"source_col": source_col, **fraction_record(val)}, sort_keys=True) + "\n")
+
+
 def exp_add(a: Exp, b: Exp) -> Exp:
     return tuple(x + y for x, y in zip(a, b))
 
@@ -283,6 +295,61 @@ def make_m_lift_columns(
     return columns
 
 
+def exact_replay_candidate(
+    prepared: support.PreparedChart,
+    columns: list[SplitColumn],
+    raw: np.ndarray,
+    max_denominators: list[int],
+    solution_jsonl: Path | None,
+) -> dict[str, object]:
+    attempts: list[dict[str, object]] = []
+    best_q: list[Fraction] | None = None
+    for max_den in max_denominators:
+        q = [Fraction(str(max(0.0, float(x)))).limit_denominator(max_den) for x in raw]
+        best_q = q
+        residual = prepared.p_beta[:]
+        nonzero = 0
+        for val, col in zip(q, columns):
+            if not val:
+                continue
+            nonzero += 1
+            for row, coeff in col.terms:
+                residual[row] -= coeff * val
+        negative_rows = [(i, x) for i, x in enumerate(residual) if x < 0]
+        attempt = {
+            "max_denominator": max_den,
+            "nonzero_multiplier_count": nonzero,
+            "residual_min_coeff": fmt_fraction(min(residual) if residual else Fraction(0)),
+            "negative_residual_count": len(negative_rows),
+            "negative_rows_prefix": [
+                {"row": i, "residual": fmt_fraction(x)}
+                for i, x in negative_rows[:10]
+            ],
+        }
+        attempts.append(attempt)
+        if not negative_rows:
+            best_q = q
+            if solution_jsonl is not None:
+                write_solution_jsonl(solution_jsonl, q)
+            return {
+                "exact_ok": True,
+                "solution_jsonl": str(solution_jsonl) if solution_jsonl is not None else None,
+                "max_denominator": max_den,
+                "nonzero_multiplier_count": nonzero,
+                "attempts": attempts,
+            }
+    return {
+        "exact_ok": False,
+        "solution_jsonl": None,
+        "attempts": attempts,
+        "candidate_nonzero_prefix": [
+            {"source_col": i, "value": fmt_fraction(v)}
+            for i, v in enumerate(best_q or [])
+            if v
+        ][:20],
+    }
+
+
 def solve_float(prepared: support.PreparedChart, columns: list[SplitColumn], args: argparse.Namespace) -> dict[str, object]:
     rows: list[int] = []
     cols: list[int] = []
@@ -328,6 +395,15 @@ def solve_float(prepared: support.PreparedChart, columns: list[SplitColumn], arg
                 "row_tol": args.row_tol,
             }
         )
+        max_denominators = [int(x) for x in args.max_den.split(",") if x]
+        if args.exact_replay_candidate:
+            out["exact_replay_candidate"] = exact_replay_candidate(
+                prepared,
+                columns,
+                res.x,
+                max_denominators,
+                args.candidate_solution_jsonl,
+            )
     return out
 
 
@@ -343,6 +419,41 @@ def summarize_columns(columns: list[SplitColumn]) -> dict[str, object]:
     }
 
 
+def write_columns_json(
+    path: Path,
+    *,
+    prepared: support.PreparedChart,
+    args: argparse.Namespace,
+    column_set: str,
+    columns: list[SplitColumn],
+) -> None:
+    payload = {
+        "schema": "eq_odl1_rung2_face_split_columns_v1",
+        "chart": args.chart,
+        "dominant": args.dominant,
+        "dominant_name": prepared.chart.generator_names[args.dominant],
+        "band": args.band,
+        "support": args.support,
+        "target_degree": TARGET_DEGREE,
+        "row_count": len(prepared.betas),
+        "column_set": column_set,
+        "columns": [
+            {
+                "kind": col.kind,
+                "name": col.name,
+                "multiplier_exp": list(col.multiplier_exp),
+                "terms": [
+                    {"row": int(row), **fraction_record(coeff)}
+                    for row, coeff in col.terms
+                ],
+            }
+            for col in columns
+        ],
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, separators=(",", ":"), sort_keys=True), encoding="utf-8")
+
+
 def run(args: argparse.Namespace) -> dict[str, object]:
     t0 = time.monotonic()
     prepared = support.prepare_chart(args.chart)
@@ -350,24 +461,54 @@ def run(args: argparse.Namespace) -> dict[str, object]:
     max_columns_per_family = None if args.max_columns_per_family == 0 else args.max_columns_per_family
     max_band_columns = None if args.max_band_columns == 0 else args.max_band_columns
 
-    face_columns = make_face_columns(
-        prepared,
-        args.dominant,
-        args.band,
-        args.support,
-        max_columns_per_family,
-        max_band_columns,
-    )
-    lift_columns = make_m_lift_columns(
-        prepared,
-        args.dominant,
-        args.band,
-        args.support,
-        max_columns_per_family,
-        max_band_columns,
-        include_base=not args.no_lift_base,
-    )
+    export_only = args.no_solve and args.emit_columns_json and args.emit_column_set != "combined"
+    need_face = not (export_only and args.emit_column_set == "lift")
+    need_lift = not (export_only and args.emit_column_set == "face")
+    skipped_column_sets: list[str] = []
+    if need_face:
+        face_columns = make_face_columns(
+            prepared,
+            args.dominant,
+            args.band,
+            args.support,
+            max_columns_per_family,
+            max_band_columns,
+        )
+    else:
+        face_columns = []
+        skipped_column_sets.append("face")
+    if need_lift:
+        lift_columns = make_m_lift_columns(
+            prepared,
+            args.dominant,
+            args.band,
+            args.support,
+            max_columns_per_family,
+            max_band_columns,
+            include_base=not args.no_lift_base,
+        )
+    else:
+        lift_columns = []
+        skipped_column_sets.append("lift")
     columns = face_columns + lift_columns
+    emitted_columns_json = None
+    if args.emit_columns_json:
+        if args.emit_column_set == "face":
+            emit_columns = face_columns
+        elif args.emit_column_set == "lift":
+            emit_columns = lift_columns
+        elif args.emit_column_set == "combined":
+            emit_columns = columns
+        else:
+            raise ValueError(args.emit_column_set)
+        write_columns_json(
+            args.emit_columns_json,
+            prepared=prepared,
+            args=args,
+            column_set=args.emit_column_set,
+            columns=emit_columns,
+        )
+        emitted_columns_json = str(args.emit_columns_json)
     solve = solve_float(prepared, columns, args) if not args.no_solve else {"skipped": True}
     return {
         "schema": "eq_odl1_rung2_face_split_probe_v1",
@@ -384,6 +525,8 @@ def run(args: argparse.Namespace) -> dict[str, object]:
         "face_columns": summarize_columns(face_columns),
         "lift_columns": summarize_columns(lift_columns),
         "combined_columns": summarize_columns(columns),
+        "skipped_column_sets": skipped_column_sets,
+        "emitted_columns_json": emitted_columns_json,
         "solve": solve,
         "seconds": time.monotonic() - t0,
     }
@@ -399,11 +542,16 @@ def main() -> None:
     ap.add_argument("--max-band-columns", type=int, default=64, help="0 means uncapped")
     ap.add_argument("--no-lift-base", action="store_true")
     ap.add_argument("--no-solve", action="store_true")
+    ap.add_argument("--emit-columns-json", type=Path, default=None)
+    ap.add_argument("--emit-column-set", choices=["face", "lift", "combined"], default="combined")
     ap.add_argument("--method", choices=["highs", "highs-ds", "highs-ipm"], default="highs")
     ap.add_argument("--objective", choices=["sum", "zero"], default="sum")
     ap.add_argument("--time-limit", type=float, default=120.0)
     ap.add_argument("--x-tol", type=float, default=1e-9)
     ap.add_argument("--row-tol", type=float, default=1e-8)
+    ap.add_argument("--exact-replay-candidate", action="store_true")
+    ap.add_argument("--max-den", default="1000,10000,1000000")
+    ap.add_argument("--candidate-solution-jsonl", type=Path, default=None)
     ap.add_argument("--summary", type=Path, required=True)
     args = ap.parse_args()
     out = run(args)

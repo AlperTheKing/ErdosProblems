@@ -1,0 +1,92 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": {
+    "count": 17408,
+    "family_counts": {
+      "face:face_base:B11": 1024,
+      "lift:lift_band:near_2s_minus_1": 512,
+      "lift:lift_base:B9": 1024,
+      "lift:lift_delta:G1_UV_T-B0_eta25_25": 512,
+      "lift:lift_delta:G1_UV_T-F1": 512,
+      "lift:lift_delta:G1_UV_T-F2": 512,
+      "lift:lift_delta:G1_UV_T-F3": 512,
+      "lift:lift_delta:G1_UV_T-F4": 512,
+      "lift:lift_delta:G1_UV_T-F5": 512,
+      "lift:lift_delta:G1_UV_T-F6": 512,
+      "lift:lift_delta:G1_UV_T-F7": 512,
+      "lift:lift_delta:G1_UV_T-G2_UZ_T": 512,
+      "lift:lift_delta:G1_UV_T-G3_XY_T": 512,
+      "lift:lift_delta:G1_UV_T-G4_VZ_XY": 512,
+      "lift:lift_delta:G1_UV_T-G5_VZ_T": 512,
+      "lift:lift_delta:G1_UV_T-G6_A2_9T": 512,
+      "lift:lift_delta:G1_UV_T-G7_B2_4T": 512,
+      "lift:lift_gen:B0_eta25_25": 512,
+      "lift:lift_gen:F1": 512,
+      "lift:lift_gen:F2": 512,
+      "lift:lift_gen:F3": 512,
+      "lift:lift_gen:F4": 512,
+      "lift:lift_gen:F5": 512,
+      "lift:lift_gen:F6": 512,
+      "lift:lift_gen:F7": 512,
+      "lift:lift_gen:G1_UV_T": 512,
+      "lift:lift_gen:G2_UZ_T": 512,
+      "lift:lift_gen:G3_XY_T": 512,
+      "lift:lift_gen:G4_VZ_XY": 512,
+      "lift:lift_gen:G5_VZ_T": 512,
+      "lift:lift_gen:G6_A2_9T": 512,
+      "lift:lift_gen:G7_B2_4T": 512
+    },
+    "quo_terms": 321777,
+    "rem_terms": 133637
+  },
+  "divisor_summary": {
+    "max_coeff": "2",
+    "min_coeff": "-2",
+    "negative_terms": 7,
+    "positive_terms": 5,
+    "terms": 12,
+    "total_degree": 2
+  },
+  "dominant": 8,
+  "dominant_name": "G1_UV_T",
+  "quoP_summary": {
+    "max_coeff": "18349/2",
+    "min_coeff": "-13277/4",
+    "negative_terms": 5958,
+    "positive_terms": 7328,
+    "terms": 13286,
+    "total_degree": 9
+  },
+  "quotient_nnz": 455414,
+  "quotient_rows": 46966,
+  "remP_summary": {
+    "max_coeff": "14109",
+    "min_coeff": "-12602",
+    "negative_terms": 13426,
+    "positive_terms": 15764,
+    "terms": 29190,
+    "total_degree": 11
+  },
+  "rhs_nonzero": 42476,
+  "schema": "eq_odl1_rung2_face_split_quotient_probe_v1",
+  "seconds": 57.171000000002095,
+  "solve": {
+    "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+    "lp_status": 2,
+    "method": "highs",
+    "objective": "sum",
+    "success": false
+  },
+  "support": "derived",
+  "target_summary": {
+    "max_coeff": "28540",
+    "min_coeff": "-23324",
+    "negative_terms": 1434,
+    "positive_terms": 3821,
+    "terms": 5255,
+    "total_degree": 11
+  },
+  "term_order": "graded_reverse_lex",
+  "tier": "tier2"
+}

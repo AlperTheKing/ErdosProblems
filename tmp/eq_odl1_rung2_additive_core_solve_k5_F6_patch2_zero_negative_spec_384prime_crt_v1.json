@@ -1,0 +1,13 @@
+{
+  "modulus": "1073741789",
+  "modulus_bits": 30,
+  "residues": [
+    "0",
+    "0"
+  ],
+  "schema": "eq_odl1_rung2_modular_crt_state_v1",
+  "skipped_primes": [],
+  "used_primes": [
+    1073741789
+  ]
+}

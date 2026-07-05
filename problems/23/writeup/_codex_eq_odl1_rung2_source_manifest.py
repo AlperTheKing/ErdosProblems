@@ -60,6 +60,14 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     require(check.get("full_negative_residual_count") == 0, "negative residual in check")
     require(check.get("full_min_residual") == "0", "full minimum residual is not exactly zero")
     require(norm_path_text(solution) in norm_path_text(check.get("solution", "")), "check summary does not point at solution")
+    target_beta_mode = check.get("target_beta_mode", "prepared_p_beta")
+    target_beta_json = check.get("target_beta_json")
+    target_beta_path = Path(target_beta_json) if target_beta_json else None
+    if target_beta_mode == "custom":
+        require(target_beta_path is not None, "custom target check missing target_beta_json")
+        require(target_beta_path.exists(), f"custom target beta JSON missing: {target_beta_path}")
+    else:
+        require(target_beta_mode == "prepared_p_beta", f"unexpected target beta mode: {target_beta_mode}")
 
     records = count_jsonl(solution)
     require(records == int(check["nonzero_source_columns"]), "source solution record count mismatch")
@@ -83,12 +91,23 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "full_zero_residual_count": int(check["full_zero_residual_count"]),
         "nonzero_source_columns": int(check["nonzero_source_columns"]),
         "columns_checked": int(check["columns"]),
+        "target_beta_mode": target_beta_mode,
+        "target_beta_json": str(target_beta_path) if target_beta_path is not None else None,
+        "target_beta_json_sha256": sha256_path(target_beta_path) if target_beta_path is not None else None,
+        "target_beta_nonzero_count": check.get("target_beta_nonzero_count"),
         "certificate_kind": "source",
         "repair": None,
-        "verification_command": (
+        "verification_command": " ".join(
+            [
             "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py "
-            f"--chart {check['chart']} --dominant {check['dominant']} --band {check['band']} "
-            f"--support {check['support']} --solution {solution} --summary {args.check_summary}"
+            f"--chart {check['chart']}",
+            f"--dominant {check['dominant']}",
+            f"--band {check['band']}",
+            f"--support {check['support']}",
+            f"--solution {solution}",
+            *( [f"--target-beta-json {target_beta_path}"] if target_beta_path is not None else [] ),
+            f"--summary {args.check_summary}",
+            ]
         ),
     }
     if args.core:

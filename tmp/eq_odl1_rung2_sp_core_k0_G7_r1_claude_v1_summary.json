@@ -1,0 +1,29 @@
+{
+  "active_margin": "1/1000000000",
+  "active_rows": [
+    10478,
+    13887,
+    16935,
+    20772,
+    22524,
+    22541,
+    22650,
+    24071,
+    36512,
+    36533,
+    41708,
+    45644,
+    66150,
+    70190,
+    71492
+  ],
+  "basis": "tmp\\probe_k0_G7_sp_r1_claude_v1.json",
+  "dimension": 195,
+  "margin": "0",
+  "out_core": "tmp\\eq_odl1_rung2_sp_core_k0_G7_r1_claude_v1.jsonl",
+  "row_count": 167960,
+  "schema": "source_patch_basis_core_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k0_G7_near_family_claude_384prime_v1.jsonl",
+  "terms": 633,
+  "upper_rows_count": 195
+}

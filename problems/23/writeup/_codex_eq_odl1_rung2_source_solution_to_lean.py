@@ -80,6 +80,9 @@ def support_lines() -> list[str]:
         "  fullNegativeResidualCount : Nat",
         "  fullMinResidual : String",
         "  fullZeroResidualCount : Nat",
+        "  targetBetaMode : String",
+        "  targetBetaJsonSha256 : String",
+        "  targetBetaNonzeroCount : Nat",
         "  solutionSha256 : String",
         "  checkSummarySha256 : String",
         "  modularSummarySha256 : String",
@@ -90,6 +93,7 @@ def support_lines() -> list[str]:
         "  (m.solutionNegativeCount == 0) &&",
         "  (m.fullNegativeResidualCount == 0) &&",
         "  (m.fullMinResidual == \"0\") &&",
+        "  (m.targetBetaMode == \"prepared_p_beta\" || (m.targetBetaMode == \"custom\" && m.targetBetaJsonSha256 != \"\")) &&",
         "  decide (0 < m.columnsChecked)",
         "",
         "end Cert",
@@ -113,6 +117,7 @@ def emit_shard(path: Path, shard_index: int, records: list[dict[str, int]], colu
     lines.append("namespace Erdos23Delta0")
     lines.append("namespace Cert")
     lines.append("")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append(f"def {name} : List Rung2SourceCoeff := [")
     row_lines = []
     for rec in records:
@@ -129,7 +134,7 @@ def emit_shard(path: Path, shard_index: int, records: list[dict[str, int]], colu
     lines.append(f"theorem {name}_length : {name}.length = {len(records)} := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 200000 in")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append(f"theorem {name}_check : rung2SourceCoeffListCheck {columns_checked} {name} = true := by")
     lines.append("  rfl")
     lines.append("")
@@ -163,6 +168,9 @@ def emit_index(path: Path, manifest: dict[str, Any], shard_count: int, shard_len
     lines.append(f"  fullNegativeResidualCount := {manifest['full_negative_residual_count']},")
     lines.append(f"  fullMinResidual := {lean_str(manifest['full_min_residual'])},")
     lines.append(f"  fullZeroResidualCount := {manifest['full_zero_residual_count']},")
+    lines.append(f"  targetBetaMode := {lean_str(manifest.get('target_beta_mode', 'prepared_p_beta'))},")
+    lines.append(f"  targetBetaJsonSha256 := {lean_str(manifest.get('target_beta_json_sha256') or '')},")
+    lines.append(f"  targetBetaNonzeroCount := {int(manifest.get('target_beta_nonzero_count') or 0)},")
     lines.append(f"  solutionSha256 := {lean_str(manifest['solution_jsonl_sha256'])},")
     lines.append(f"  checkSummarySha256 := {lean_str(manifest['check_summary_sha256'])},")
     lines.append(f"  modularSummarySha256 := {lean_str(manifest.get('modular_summary_sha256', ''))}")
@@ -171,20 +179,22 @@ def emit_index(path: Path, manifest: dict[str, Any], shard_count: int, shard_len
     lines.append("theorem rung2SourceMeta_check : Rung2SourceMeta.check rung2SourceMeta = true := by")
     lines.append("  rfl")
     lines.append("")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("def rung2SourceCoeffShardChecks : List Bool := [")
     lines.append("  " + ",\n  ".join(f"rung2SourceCoeffListCheck rung2SourceMeta.columnsChecked {d}" for d in def_names))
     lines.append("]")
     lines.append("")
-    lines.append("set_option maxRecDepth 200000 in")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem rung2SourceCoeffShardChecks_expected :")
     lines.append("    rung2SourceCoeffShardChecks = [" + ", ".join(["true"] * len(def_names)) + "] := by")
     lines.append("  rfl")
     lines.append("")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("def rung2SourceCoeffShardLengths : List Nat := [")
     lines.append("  " + ",\n  ".join(f"{d}.length" for d in def_names))
     lines.append("]")
     lines.append("")
-    lines.append("set_option maxRecDepth 200000 in")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem rung2SourceCoeffShardLengths_expected :")
     lines.append("    rung2SourceCoeffShardLengths = [" + ", ".join(str(x) for x in shard_lengths) + "] := by")
     lines.append("  rfl")
@@ -192,11 +202,11 @@ def emit_index(path: Path, manifest: dict[str, Any], shard_count: int, shard_len
     lines.append("theorem rung2SourceCoeffShardCount : rung2SourceCoeffShardChecks.length = " + str(len(def_names)) + " := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 200000 in")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem rung2SourceCoeffTotalRows : natListSum rung2SourceCoeffShardLengths = " + str(sum(shard_lengths)) + " := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 200000 in")
+    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem rung2SourceCoeffTotalRows_matches_meta : natListSum rung2SourceCoeffShardLengths = rung2SourceMeta.solutionRecords := by")
     lines.append("  rfl")
     lines.append("")

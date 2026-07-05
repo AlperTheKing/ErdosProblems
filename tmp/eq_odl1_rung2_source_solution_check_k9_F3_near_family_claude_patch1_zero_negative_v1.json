@@ -64,5 +64,8 @@
   "solution_max": "2675/2",
   "solution_min": "11/800000000",
   "solution_negative_count": 0,
-  "support": "negative"
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 13119
 }

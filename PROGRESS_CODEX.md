@@ -27706,3 +27706,263 @@
 2026-07-05T10:11:29Z > ATTACK | NEXT: regenerate Branch-B Lean shards with aggregate distribution count theorems
 2026-07-05T10:11:39Z OK ATTACK | DID: regenerated Branch-B Lean with aggregate count theorems | RESULT: tmp/branchb_lean_transpile_full_codex20260705_counts_manifest.json rows=14247 gate_b_rows=926 | D: distribution theorems emitted
 2026-07-05T10:11:45Z > VERIFY | NEXT: build regenerated Branch-B Lean modules with aggregate count theorems
+2026-07-05T10:18:40Z OK VERIFY | DID: built Branch-B Lean with aggregate count theorems | RESULT: PASS modules=33 shards=29 summary=tmp/branchb_lean_module_build_codex20260705_counts_summary.json | D: distribution build passed
+2026-07-05T10:18:40Z > VERIFY | NEXT: audit Branch-B Lean artifacts with aggregate count theorem requirements
+2026-07-05T10:18:56Z OK VERIFY | DID: audited Branch-B Lean aggregate distribution theorems | RESULT: PASS rows=14247 case_counts_ok gate_b_counts_ok lean_scan_files=106 forbidden=0 | D: distribution audit passed
+2026-07-05T10:18:56Z OK CHECK | DID: posted Branch-B aggregate count theorem FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md | D: sync_posted
+2026-07-05T10:19:44Z > VERIFY | NEXT: refresh Claude mailbox before EQ face-split checker work
+2026-07-05T10:20:02Z > ATTACK | NEXT: inspect face-split probe and source checker for custom target-beta gap
+2026-07-05T10:20:17Z OK ATTACK | DID: inspected face-split probe/source checker | RESULT: source checker hard-codes prepared.p_beta; face-split probe has no exact target checker | D: custom_target_gap
+2026-07-05T10:20:17Z > ATTACK | NEXT: add optional exact target-beta JSON support to Rung-2 source solution checker
+2026-07-05T10:21:06Z > VERIFY | NEXT: py_compile and regression-test custom-target source checker path
+2026-07-05T10:22:07Z OK VERIFY | DID: ran default source checker regression for k3/B0 | RESULT: exact_ok=true residual_neg=0 summary=tmp/eq_odl1_rung2_source_solution_check_k3_B0_near_family_claude_quick_codex_custom_target_regression_default_v1.json | D: no_regression
+2026-07-05T10:22:53Z OK VERIFY | DID: generated sparse custom target beta for k3/B0 | RESULT: tmp/eq_odl1_rung2_target_beta_k3_B0_prepared_p_beta_sparse_v1.json rows=167960 nonzero=7720 | D: custom_target_fixture
+2026-07-05T10:23:49Z OK VERIFY | DID: ran custom-target source checker regression for k3/B0 | RESULT: exact_ok=true residual_neg=0 summary=tmp/eq_odl1_rung2_source_solution_check_k3_B0_near_family_claude_quick_codex_custom_target_regression_v1.json | D: custom_target_checker_passed
+2026-07-05T10:24:01Z > ATTACK | NEXT: extend source certificate manifest to pin custom target-beta artifacts
+2026-07-05T10:24:38Z OK VERIFY | DID: emitted source manifest with custom target-beta pin | RESULT: tmp/eq_odl1_rung2_source_certificate_manifest_k3_B0_custom_target_regression_v1.json exact_ok=true | D: custom_target_manifest_passed
+2026-07-05T10:25:20Z > VERIFY | NEXT: compile source manifest/emitter and emit custom-target Lean source-cert data in temp root
+2026-07-05T10:25:40Z OK VERIFY | DID: emitted custom-target Rung-2 source Lean data in temp root | RESULT: tmp/eq_odl1_rung2_source_lean_transpile_k3_B0_custom_target_regression_v1_manifest.json rows=2621 shards=6 | D: lean_target_metadata_emitted
+2026-07-05T10:27:03Z FAIL VERIFY | DID: built temp custom-target Rung-2 source Lean modules | RESULT: 5 shard failures maxRecDepth at line 511 | D: increase_source_maxRecDepth
+2026-07-05T10:29:25Z FAIL VERIFY | DID: rebuilt temp custom-target Rung-2 source Lean modules after maxRecDepth theorem bump | RESULT: 5 shard failures still at list elaboration line 511 | D: maxRecDepth_on_list_defs_needed
+2026-07-05T10:31:37Z > VERIFY | NEXT: poll Claude mailbox and temp Rung-2 source Lean build, objective current exact status
+2026-07-05T10:31:59Z FAIL VERIFY | DID: polled temp custom-target Rung-2 source Lean build | RESULT: maxRecDepth shards=5 summary=tmp/eq_odl1_rung2_source_lean_build_k3_B0_custom_target_regression_v3_summary.json | D: reduce_shard_size
+2026-07-05T10:32:04Z > VERIFY | NEXT: rerun custom-target Rung-2 source Lean emission with shard-size 100, objective avoid list recursion failure
+2026-07-05T10:32:24Z OK VERIFY | DID: re-emitted custom-target Rung-2 source Lean with shard-size 100 | RESULT: rows=2621 shards=27 manifest=tmp/eq_odl1_rung2_source_lean_transpile_k3_B0_custom_target_regression_s100_manifest.json | D: build_s100
+2026-07-05T10:32:29Z > VERIFY | NEXT: build shard-size 100 custom-target Rung-2 source Lean modules, objective temp source-data kernel pass
+2026-07-05T10:32:50Z FAIL VERIFY | DID: ran generic Rung-2 Lean builder on source-data tree | RESULT: wrong module Erdos23Delta0.Cert.Rung2Support rc=1 summary=tmp/eq_odl1_rung2_source_lean_build_k3_B0_custom_target_regression_s100_summary.json | D: use_source_build_driver
+2026-07-05T10:33:04Z > VERIFY | NEXT: add temp source-data Lean build driver for s100 tree, objective build Rung2Source modules
+2026-07-05T10:33:28Z OK VERIFY | DID: added temp source-data Lean build driver | RESULT: tmp/rung2_source_custom_target_lean_build_driver_s100.py | D: run_source_build
+2026-07-05T10:33:32Z > VERIFY | NEXT: run s100 temp source-data Lean build driver, objective confirm custom-target Lean packaging
+2026-07-05T10:36:11Z OK VERIFY | DID: built s100 temp custom-target Rung-2 source Lean modules | RESULT: PASS modules=29 shards=27 summary=tmp/eq_odl1_rung2_source_lean_build_k3_B0_custom_target_regression_s100_summary.json | D: custom_target_lean_passed
+2026-07-05T10:36:16Z > VERIFY | NEXT: post custom-target Lean packaging pass to Claude mailbox, objective sync exact artifacts
+2026-07-05T10:36:33Z OK VERIFY | DID: posted custom-target Lean packaging pass to Claude mailbox | RESULT: coordination/CODEX_TO_CLAUDE.md | D: sync_sent
+2026-07-05T10:37:02Z > SELECT | NEXT: sync Claude mailbox and repo state to choose next EQ certificate tooling action
+2026-07-05T10:37:18Z OK SELECT | DID: synced Claude mailbox and git state | RESULT: latest=2026-07-05T11:00Z k3/F2 parked; git dirty includes custom-target tooling | D: face_split_priority
+2026-07-05T10:37:30Z > PLAN | NEXT: inspect face-split specs and existing EQ tooling to define next exact emitter step
+2026-07-05T10:37:48Z OK PLAN | DID: inspected face-split specs | RESULT: gated form requires face ConeCert plus lift ConeCert from LP targets | D: inspect_probe
+2026-07-05T10:37:54Z > ATTACK | NEXT: read face_split_probe implementation and identify exact emitter gaps
+2026-07-05T10:38:10Z OK ATTACK | DID: read face_split_probe | RESULT: probe builds combined float cone only; no gated target emission or exact subcert replay | D: target_emitter_gap
+2026-07-05T10:38:20Z > ATTACK | NEXT: inspect source solution JSONL schema and exact Markowitz emitter interfaces
+2026-07-05T10:38:43Z > VERIFY | NEXT: run existing face-split probe on hard G1 row to test current support feasibility
+2026-07-05T10:41:13Z FAIL VERIFY | DID: attempted chart generator-name query | RESULT: killed slow local python pid=68612; Claude k3/F4 pid=67020 left running | D: use_existing_artifacts
+2026-07-05T10:42:43Z OK ATTACK | DID: identified face-split exact checker gap | RESULT: lift columns require arbitrary sparse cone checker, not standard source-only checker | D: implement_custom_cone_checker
+2026-07-05T10:42:48Z > ATTACK | NEXT: add generic sparse cone checker and face-split column export hook
+2026-07-05T10:44:03Z OK ATTACK | DID: added generic custom cone checker and face-split column export hook | RESULT: files=_codex_eq_odl1_rung2_custom_cone_check.py,_codex_eq_odl1_rung2_face_split_probe.py | D: run_regressions
+2026-07-05T10:44:08Z > VERIFY | NEXT: py_compile custom cone checker and face-split probe
+2026-07-05T10:44:20Z OK VERIFY | DID: py_compile custom cone checker and face-split probe | RESULT: PASS files=2 | D: standard_regression
+2026-07-05T10:44:27Z > VERIFY | NEXT: run generic cone checker standard-dictionary regression on k3/B0
+2026-07-05T10:45:25Z OK VERIFY | DID: ran generic cone checker standard regression on k3/B0 | RESULT: exact_ok=true columns=43131 summary=tmp/eq_odl1_rung2_custom_cone_check_k3_B0_standard_regression_v1.json | D: custom_columns_smoke
+2026-07-05T10:45:40Z > VERIFY | NEXT: export capped face-split lift columns and smoke-test custom-column checker
+2026-07-05T10:49:36Z OK VERIFY | DID: smoke-tested custom-column checker on capped lift dictionary | RESULT: exact_ok=true columns=31 summary=tmp/eq_odl1_rung2_custom_cone_check_k3_B0_lift_cap1_zero_smoke_v1.json | D: materializer_next
+2026-07-05T10:50:03Z > ATTACK | NEXT: add face-split materializer for exact face/lift subcert targets
+2026-07-05T10:51:03Z OK ATTACK | DID: added face-split materializer | RESULT: problems/23/writeup/_codex_eq_odl1_rung2_face_split_materialize.py | D: materializer_regression
+2026-07-05T10:51:08Z > VERIFY | NEXT: compile face-split materializer and rerun generic checker smoke tests
+2026-07-05T10:51:21Z OK VERIFY | DID: py_compile face-split exact tooling | RESULT: PASS files=3 | D: combined_export_smoke
+2026-07-05T10:51:26Z > VERIFY | NEXT: export capped combined face-split columns for materializer smoke test
+2026-07-05T10:55:25Z OK VERIFY | DID: materialized and checked zero face-split subcert smoke | RESULT: face exact_ok=true lift exact_ok=true summary=tmp/eq_odl1_rung2_face_split_materialize_k3_B0_zero_smoke_v1.json | D: optimize_export
+2026-07-05T10:55:31Z > ATTACK | NEXT: optimize face-split probe to avoid unrequested half construction during no-solve column export
+2026-07-05T10:56:41Z OK VERIFY | DID: ran face-only export smoke after skip optimization | RESULT: face_columns=28 lift_columns=0 skipped=lift summary=tmp/eq_odl1_rung2_face_split_probe_k3_B0_face_cap1_fast_smoke_v1.json | D: face_split_tooling_ready
+2026-07-05T10:56:58Z > CHECK | NEXT: post face-split exact tooling FYI to Claude mailbox
+2026-07-05T10:57:19Z OK CHECK | DID: posted face-split exact tooling FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md | D: sync_sent
+2026-07-05T10:58:11Z > SELECT | NEXT: sync Claude mailbox and active compute before extending face-split candidate exporter
+2026-07-05T10:58:50Z OK SELECT | DID: synced Claude mailbox and process state | RESULT: latest=k3/F2 parked; active Claude pid=67020 k3/F4 modular solve | D: add_face_split_solution_export
+2026-07-05T10:58:55Z > ATTACK | NEXT: add exact rational candidate-solution export to face_split_probe
+2026-07-05T10:59:29Z OK ATTACK | DID: added face-split rational candidate replay/export hook | RESULT: _codex_eq_odl1_rung2_face_split_probe.py | D: compile_and_unit
+2026-07-05T10:59:35Z > VERIFY | NEXT: py_compile and unit-test face-split candidate replay/export
+2026-07-05T11:00:10Z OK VERIFY | DID: compiled face-split candidate replay/export hook | RESULT: py_compile PASS; unit exact_ok=true tmp/eq_odl1_rung2_face_split_candidate_empty_unit_v1.jsonl | D: choose_probe
+2026-07-05T11:00:15Z > PLAN | NEXT: inspect existing face-split probe outcomes to choose non-duplicate hard-row probe
+2026-07-05T11:00:40Z OK PLAN | DID: inspected existing G1 face-split probes | RESULT: k5/k6 cap128 infeasible; k5 cap512 timeout; k6 uncapped timeout | D: run_k9G1_cap128
+2026-07-05T11:00:46Z > VERIFY | NEXT: run k9/G1 cap128 face-split probe with exact candidate replay/export enabled
+2026-07-05T11:02:55Z OK VERIFY | DID: ran k9/G1 cap128 face-split probe | RESULT: lp_status=2 success=False cols=7296 summary=tmp/eq_odl1_rung2_face_split_probe_k9_G1_cap128_zero_v1.json | D: cap128_infeasible
+2026-07-05T11:03:27Z OK CHECK | DID: checked Claude k3/F4 process after k9/G1 probe | RESULT: pid=67020 still running; no k3_F4 summary file | D: none
+2026-07-05T11:03:55Z > SELECT | NEXT: sync Claude mailbox and process state before next k9/G1 face-split support probe
+2026-07-05T11:04:22Z > VERIFY | NEXT: run k9/G1 cap256 face-split probe with exact candidate replay/export enabled
+2026-07-05T11:07:01Z > SELECT | NEXT: read Claude mailbox and process/probe status for current user status update
+2026-07-05T11:07:28Z OK SELECT | DID: read Claude mailbox and probe summaries | RESULT: latest=k3/F2 parked; k9/G1 cap256 infeasible; k3/F4 has 1 neg source | D: status_update
+2026-07-05T11:07:58Z > SELECT | NEXT: sync Claude mailbox and repo state before choosing next certificate action
+2026-07-05T11:08:17Z OK SELECT | DID: synced Claude mailbox and repo state | RESULT: latest=k3/F2 parked; ledger tool present; face-split cap256 infeasible | D: verify_ledger_entries
+2026-07-05T11:08:17Z > PLAN | NEXT: inspect EQ chart ledger tooling and current ledger artifacts before appending Claude-certified rows
+2026-07-05T11:08:35Z OK PLAN | DID: inspected EQ ledger and sanitizer tooling | RESULT: ledger validates manifests; sanitizer script exists; v41 ledger present | D: rebuild_ledger
+2026-07-05T11:08:35Z > VERIFY | NEXT: inspect latest EQ chart ledger v41 and manifest coverage
+2026-07-05T11:09:02Z OK VERIFY | DID: inspected chart ledger v41 | RESULT: certified=43 pending=65 first_pending=k5/G1 order=19 | D: attack_first_pending_face_split
+2026-07-05T11:09:02Z > ATTACK | NEXT: inspect face-split probe options and specs for first pending k5/G1 support route
+2026-07-05T11:09:43Z OK ATTACK | DID: inspected k5/G1 face-split and signed-delta artifacts | RESULT: cap128 infeasible; cap512 timeout; active-face rowgen still 1 neg source and 40 neg rows | D: run_k5G1_ipm
+2026-07-05T11:09:43Z > VERIFY | NEXT: run k5/G1 cap512 face-split probe with highs-ipm and exact candidate export
+2026-07-05T11:26:44Z OK VERIFY | DID: ran k5/G1 cap512 face-split probe with highs-ipm | RESULT: lp_status=1 success=false cols=28795 summary=tmp/eq_odl1_rung2_face_split_probe_k5_G1_cap512_ipm_zero_v1.json | D: cap512_ipm_timeout
+2026-07-05T11:27:07Z > CHECK | NEXT: post face-split timeout blocker and ledger state to Claude mailbox
+2026-07-05T11:27:07Z OK CHECK | DID: posted face-split blocker ASK to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await_or_build_separate_emitter
+2026-07-05T11:27:20Z > ATTACK | NEXT: inspect face-split probe internals to compare monolithic cone with gated checkEq formulation
+2026-07-05T11:27:37Z OK ATTACK | DID: inspected face-split probe internals | RESULT: current LP is monolithic exact cone P=P_face+Ga*M; separate checkEq materializer exists | D: no_duplicate_emitter
+2026-07-05T11:27:57Z OK SELECT | DID: checked latest Claude mailbox and active processes | RESULT: new k3/F4 sanitizer queue; active Claude pid=62344 k3/F3 modular solve | D: run_k3F4_sanitizer
+2026-07-05T11:27:57Z > VERIFY | NEXT: verify k3/F4 patch1 sources-only state before sanitizer/additive ladder
+2026-07-05T11:28:16Z OK VERIFY | DID: verified k3/F4 patch1 sources-only state | RESULT: exact_ok=false neg_sources=1 neg_rows=0 summary=tmp/eq_odl1_rung2_source_solution_check_k3_F4_near_family_claude_patch1_v1.json | D: run_sanitizer
+2026-07-05T11:28:16Z > ATTACK | NEXT: run exact source-nullspace sanitizer on k3/F4 patch1
+2026-07-05T11:29:11Z OK ATTACK | DID: ran k3/F4 source-nullspace sanitizer | RESULT: final_negative_count=1 skipped_blocks=1 summary=tmp/eq_odl1_rung2_source_nullspace_sanitizer_k3_F4_patch1_v1.json | D: additive_zero_negative_fallback
+2026-07-05T11:29:11Z > ATTACK | NEXT: inspect sanitizer skip reason and additive repair tooling for k3/F4
+2026-07-05T11:29:49Z OK ATTACK | DID: inspected additive zero-negative tooling | RESULT: scripts=zero_negative_sources.py,tmp/exact_additive_source_repair_core.py,tmp/apply_source_patch_basis_solution.py | D: zero_k3F4
+2026-07-05T11:29:49Z > ATTACK | NEXT: zero k3/F4 unresolved negative source and exact-check exposed residual rows
+2026-07-05T11:31:04Z OK ATTACK | DID: zeroed k3/F4 negative source and ran official checker | RESULT: exact_ok=true neg_sources=0 neg_rows=0 summary=tmp/eq_odl1_rung2_source_solution_check_k3_F4_near_family_claude_patch1_zero_negative_v1.json | D: mint_manifest
+2026-07-05T11:31:04Z > VERIFY | NEXT: mint k3/F4 zero-negative manifest and rebuild chart ledger v42
+2026-07-05T11:32:55Z > VERIFY | NEXT: record k3/F4 zero-negative manifest and ledger v42 state, then notify Claude
+2026-07-05T11:33:30Z OK VERIFY | DID: posted k3/F4 exact closeout and ledger v42 hashes to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md; ledger certified=44 pending=64 | D: k3F4_closed
+2026-07-05T11:34:07Z > SELECT | NEXT: sync Claude mailbox, active solver processes, and ledger after k3/F4 closeout
+2026-07-05T11:34:24Z OK SELECT | DID: synced mailbox, ledger v42, and active process | RESULT: latest=k3/F4 queue; ledger=44/108; k9/F3 patch exists unchecked; Claude pid=62344 k3/F3 | D: run_k9F3_ladder
+2026-07-05T11:34:24Z > VERIFY | NEXT: exact-check k9/F3 patch1 sources-only state before sanitizer/zero fallback
+2026-07-05T11:35:34Z OK VERIFY | DID: exact-checked k9/F3 patch1 sources-only state | RESULT: exact_ok=false neg_sources=1 neg_rows=0 summary=tmp/eq_odl1_rung2_source_solution_check_k9_F3_near_family_claude_patch1_v1.json | D: run_sanitizer
+2026-07-05T11:35:34Z > ATTACK | NEXT: run exact source-nullspace sanitizer on k9/F3 patch1
+2026-07-05T11:36:34Z OK ATTACK | DID: ran k9/F3 source-nullspace sanitizer | RESULT: final_negative_count=1 skipped_blocks=1 summary=tmp/eq_odl1_rung2_source_nullspace_sanitizer_k9_F3_patch1_v1.json | D: zero_k9F3
+2026-07-05T11:36:34Z > ATTACK | NEXT: zero k9/F3 unresolved negative source and exact-check residual rows
+2026-07-05T11:37:44Z OK ATTACK | DID: zeroed k9/F3 negative source and ran official checker | RESULT: neg_sources=0 neg_rows=3 summary=tmp/eq_odl1_rung2_source_solution_check_k9_F3_near_family_claude_patch1_zero_negative_v1.json | D: additive_repair
+2026-07-05T11:37:44Z > PLAN | NEXT: inspect additive-only repair scripts and choose exact k9/F3 repair invocation
+2026-07-05T11:38:13Z OK PLAN | DID: audited existing k9/F3 additive artifacts | RESULT: rowgen1 exact_ok=true neg_sources=0 neg_rows=0 manifest=tmp/eq_odl1_rung2_source_certificate_manifest_k9_F3_near_family_claude_patch1_zero_negative_additive_rowgen1_v1.json | D: ledger_k9F3
+2026-07-05T11:38:13Z > VERIFY | NEXT: inspect ledger v42 manifest set for k9/F3 before rebuilding v43
+2026-07-05T11:38:45Z OK VERIFY | DID: checked ledger and mailbox for k9/F3 duplicate state | RESULT: ledger v42 already contains k9/F3; CODEX_TO_CLAUDE already has exact RESULT block | D: return_face_split
+2026-07-05T11:38:45Z > PLAN | NEXT: inspect gated face-split materializer/checker and specs for k5/G1 next action
+2026-07-05T11:39:29Z OK PLAN | DID: inspected face-split tooling and specs | RESULT: probe solves only combined cone; custom checker/materializer exist; no custom solver found | D: build_custom_solver
+2026-07-05T11:39:29Z > ATTACK | NEXT: add reusable JSON custom-cone float solver with exact candidate replay for separated face/lift experiments
+2026-07-05T11:40:46Z OK ATTACK | DID: added custom cone solver and help-smoke passed | RESULT: problems/23/writeup/_codex_eq_odl1_rung2_custom_cone_solve.py | D: smoke_solver
+2026-07-05T11:40:46Z > VERIFY | NEXT: run export-only zero-target smoke through custom cone solver
+2026-07-05T11:41:50Z OK VERIFY | DID: ran custom cone solver zero-target smoke | RESULT: exact_ok=true summary=tmp/eq_odl1_rung2_custom_cone_solve_k3_B0_face_zero_solver_smoke_v1.json | D: inspect_target_split
+2026-07-05T11:41:50Z > PLAN | NEXT: inspect face/lift column construction to identify correct separated target split
+2026-07-05T11:43:08Z OK PLAN | DID: inspected k5/G1 existing exact attempts | RESULT: best base=lexsmall_highspy_margin0 with neg_sources=1 neg_rows=20; signed-delta attempts failed | D: try_additive_ladder
+2026-07-05T11:43:08Z > ATTACK | NEXT: zero k5/G1 highspy margin0 negative source and build additive-only repair core
+2026-07-05T11:44:41Z OK ATTACK | DID: zeroed k5/G1 highspy margin0 source and exported additive core | RESULT: zero_neg_rows=22; core status=core_exported j0=713 r0=790 basic=15 | D: exact_solve_core
+2026-07-05T11:44:41Z > VERIFY | NEXT: solve k5/G1 additive core exactly with 384 primes, apply increment, and official-check
+2026-07-05T11:45:02Z FAIL VERIFY | DID: solved first k5/G1 additive core exactly | RESULT: core residual zero but increment_solution_negative_count=3 summary=tmp/eq_odl1_rung2_additive_core_solve_k5_G1_highspy_margin0_zero_negative_384prime_v1.json | D: rerun_margin_core
+2026-07-05T11:45:02Z > ATTACK | NEXT: rerun k5/G1 additive core with hard-margin-pow 30 to reduce exact degeneracy
+2026-07-05T11:46:00Z OK ATTACK | DID: exported k5/G1 margin30 additive core | RESULT: status=core_exported j0=713 r0=790 basic=48 | D: exact_solve_margin_core
+2026-07-05T11:46:19Z OK VERIFY | DID: exact-solved k5/G1 margin30 additive core | RESULT: dimension=48 solution_negative_count=0 summary=tmp/eq_odl1_rung2_additive_core_solve_k5_G1_highspy_margin0_zero_negative_margin30_384prime_v1.json | D: apply_patch
+2026-07-05T11:47:44Z FAIL VERIFY | DID: applied k5/G1 margin30 additive patch and official-checked | RESULT: exact_ok=false neg_sources=0 neg_rows=75 summary=tmp/eq_odl1_rung2_source_solution_check_k5_G1_near_lexsmall_highspy_margin0_zero_negative_additive_margin30_v1.json | D: additive_rowgen1
+2026-07-05T11:47:44Z > ATTACK | NEXT: run one additive rowgen pass from k5/G1 margin30 patched solution with current negative rows as hard rows
+2026-07-05T11:48:58Z OK ATTACK | DID: exported k5/G1 additive rowgen1 core | RESULT: status=core_exported j0=994 r0=843 basic=31 | D: exact_solve_rowgen1
+2026-07-05T11:49:15Z OK VERIFY | DID: exact-solved k5/G1 rowgen1 additive core | RESULT: dimension=31 solution_negative_count=0 summary=tmp/eq_odl1_rung2_additive_core_solve_k5_G1_highspy_margin0_zero_negative_margin30_rowgen1_384prime_v1.json | D: apply_rowgen1
+2026-07-05T11:50:33Z FAIL VERIFY | DID: applied k5/G1 additive rowgen1 and official-checked | RESULT: exact_ok=false neg_sources=0 neg_rows=18 summary=tmp/eq_odl1_rung2_source_solution_check_k5_G1_near_lexsmall_highspy_margin0_zero_negative_additive_margin30_rowgen1_v1.json | D: additive_rowgen2
+2026-07-05T11:50:33Z > ATTACK | NEXT: run k5/G1 additive rowgen2 from rowgen1 patched solution
+2026-07-05T11:51:30Z FAIL ATTACK | DID: ran k5/G1 additive rowgen2 core export | RESULT: status=stage2_failed j0=427 r0=786 summary=tmp/eq_odl1_rung2_additive_core_k5_G1_highspy_margin0_zero_negative_margin30_rowgen2_v1_summary.json | D: post_blocker
+2026-07-05T11:52:17Z OK CHECK | DID: posted k5/G1 additive blocker and custom solver update to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await_face_split_direction
+2026-07-05T11:52:45Z OK SELECT | DID: synced Claude mailbox after k5/G1 blocker | RESULT: new k3/F3 parked; active Claude pid=66716 k0/G7 sparse row core | D: run_k3F3_repair
+2026-07-05T11:52:45Z > VERIFY | NEXT: exact-check Claude k3/F3 family base before additive repair
+2026-07-05T11:53:38Z OK VERIFY | DID: exact-checked k3/F3 family base | RESULT: exact_ok=false neg_sources=0 neg_rows=14 summary=tmp/eq_odl1_rung2_source_solution_check_k3_F3_near_family_claude_384prime_v1.json | D: additive_repair
+2026-07-05T11:53:38Z > ATTACK | NEXT: export k3/F3 additive-only repair core from 14 hard residual rows
+2026-07-05T11:54:42Z FAIL ATTACK | DID: ran k3/F3 additive-only repair core export | RESULT: stage1_failed j0=54 r0=361 summary=tmp/eq_odl1_rung2_additive_core_k3_F3_family_base_v1_summary.json | D: post_k3F3_additive_fail
+2026-07-05T11:54:52Z OK CHECK | DID: posted k3/F3 additive failure to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md | D: await_signed_delta_or_face_direction
+2026-07-05T11:55:29Z > SELECT | NEXT: sync Claude mailbox, active processes, and ledger before choosing next certificate action
+2026-07-05T11:55:49Z OK SELECT | DID: synced mailbox/process/ledger | RESULT: latest=k3/F3 parked; active Claude pid=69016 k0/G7; ledger=44/108 pending=64 | D: inspect_small_parked
+2026-07-05T11:55:49Z > PLAN | NEXT: inspect pending status and artifacts for smaller parked rows k3/F2,k3/F3 before choosing next attack
+2026-07-05T11:56:23Z OK PLAN | DID: inspected k3/F2 and k3/F3 summaries | RESULT: k3/F2 has 1048/1100 neg rows; k3/F3 allcols infeasible and additive stage1_failed | D: inspect_ledger_prefix_rows
+2026-07-05T11:56:23Z > PLAN | NEXT: inspect artifact state for ledger-prefix pending rows k6/G4,k6/G1,k6/G2,k5/F6
+[2026-07-05T11:58:58Z] > SELECT | NEXT: sync Claude mailbox, ledger, and live jobs before choosing the next Rung-2 chart repair.
+[2026-07-05T11:59:11Z] OK SELECT | DID: synced Claude mailbox and ledger v42 | RESULT: no new blocks; certified_count=44 pending_count=64 | D: target k6/G4
+[2026-07-05T11:59:11Z] > ATTACK | NEXT: inspect k6/G4 rowgen1 artifacts and repair scripts for an additive exact repair attempt.
+[2026-07-05T12:00:23Z] OK ATTACK | DID: reran k6/G4 rowgen1 official checker | RESULT: exact_ok=false neg_sources=0 neg_rows=3 | D: additive repair
+[2026-07-05T12:00:23Z] > ATTACK | NEXT: build k6/G4 additive core with tight=2^-40 cap256 damage=2^-34 cap512 top_gain=1024.
+[2026-07-05T12:01:17Z] OK ATTACK | DID: built k6/G4 additive core rowgen1 spec | RESULT: core_exported j0=183 r0=423 basic=13 | D: modular solve
+[2026-07-05T12:01:17Z] > ATTACK | NEXT: solve k6/G4 additive core with 384-prime exact reconstruction.
+[2026-07-05T12:01:32Z] OK ATTACK | DID: solved k6/G4 additive core with 384 primes | RESULT: exact core residual=0 neg_increments=0 dim=13 | D: apply patch
+[2026-07-05T12:01:32Z] > VERIFY | NEXT: apply k6/G4 additive increment and run official exact source checker.
+[2026-07-05T12:02:25Z] OK VERIFY | DID: applied k6/G4 additive repair | RESULT: exact_ok=true neg_sources=0 neg_rows=0 | D: manifest
+[2026-07-05T12:02:25Z] > VERIFY | NEXT: run standalone official checker for k6/G4 repaired source solution.
+[2026-07-05T12:03:13Z] OK VERIFY | DID: ran k6/G4 standalone official checker | RESULT: exact_ok=true neg_sources=0 neg_rows=0 | D: ledger append
+[2026-07-05T12:03:40Z] OK VERIFY | DID: minted k6/G4 source manifest | RESULT: exact_ok=true records=1957 | D: ledger v43
+[2026-07-05T12:03:40Z] > VERIFY | NEXT: rebuild batch ledger v43 with k6/G4 manifest appended.
+[2026-07-05T12:04:23Z] OK VERIFY | DID: rebuilt batch ledger v43 | RESULT: certified_count=45 pending_count=63 sha256=cd6ee14151d5add7255aa6253b8f43281cba85082d1f8e3862d1cd3bba760987 | D: notify Claude
+[2026-07-05T12:04:23Z] OK VERIFY | DID: posted k6/G4 exact certification to Claude mailbox | RESULT: CODEX_TO_CLAUDE RESULT block appended | D: next target
+[2026-07-05T12:04:40Z] > SELECT | NEXT: compare pending k5/F6, k6/G2, and k6/G1 artifacts to choose the smallest non-overlap repair target.
+[2026-07-05T12:05:04Z] OK SELECT | DID: compared pending defect summaries | RESULT: k5/F6 best non-G1 candidate has negsrc=3 negrows=19 | D: target k5/F6
+[2026-07-05T12:05:04Z] > ATTACK | NEXT: locate zero-negative-source tooling for k5/F6 patch2 base.
+[2026-07-05T12:05:26Z] OK ATTACK | DID: inspected k5/F6 patch2 state | RESULT: neg_sources=3 neg_rows=19 | D: zero negative sources
+[2026-07-05T12:05:26Z] > ATTACK | NEXT: zero k5/F6 patch2 negative source coefficients and recheck residuals.
+[2026-07-05T12:06:24Z] OK ATTACK | DID: zeroed and checked k5/F6 patch2 | RESULT: neg_sources=0 neg_rows=18 | D: additive repair
+[2026-07-05T12:06:24Z] > ATTACK | NEXT: build k5/F6 additive core with tight=2^-40 cap256 damage=2^-34 cap512 top_gain=1024.
+[2026-07-05T12:07:19Z] OK ATTACK | DID: built k5/F6 additive core | RESULT: core_exported j0=857 r0=786 basic=2 | D: modular solve
+[2026-07-05T12:07:19Z] > ATTACK | NEXT: solve k5/F6 additive core with 384-prime exact reconstruction.
+[2026-07-05T12:07:50Z] OK ATTACK | DID: solved k5/F6 additive core | RESULT: exact core residual=0 neg_increments=0 dim=2 solution_max=0 | D: apply zero increment
+[2026-07-05T12:07:50Z] > VERIFY | NEXT: apply k5/F6 additive increment and run official checker.
+[2026-07-05T12:08:55Z] FAIL VERIFY | DID: applied k5/F6 additive increment | RESULT: exact_ok=false neg_sources=0 neg_rows=18 increment_max=0 | D: hard-row blocker
+[2026-07-05T12:09:18Z] OK VERIFY | DID: posted k5/F6 hard-row blocker to Claude mailbox | RESULT: CODEX_TO_CLAUDE ASK block appended | D: none
+[2026-07-05T12:09:44Z] OK SELECT | DID: synced after k5/F6 blocker | RESULT: Claude active job=k0/G7 source patch; ledger=45/108 | D: choose non-overlap target
+[2026-07-05T12:09:44Z] > SELECT | NEXT: scan pending-prefix exact summaries after k5/F6 to find a lighter chart than G1/F6 blockers.
+[2026-07-05T12:11:22Z] OK SELECT | DID: inspected k7/G6 existing signed-delta artifact | RESULT: exact_ok=false neg_sources=0 neg_rows=98 | D: skip quick repair
+[2026-07-05T12:11:52Z] > SELECT | NEXT: sync Claude mailbox, process state, and ledger v43 before the next repair/tooling action.
+[2026-07-05T12:12:21Z] OK SELECT | DID: synced mailbox/process/ledger | RESULT: no new Claude blocks; ledger=45/108; no active python | D: face-split tooling
+[2026-07-05T12:12:21Z] > PLAN | NEXT: inspect F6_ACTIVE_FACE_REPAIR and sources-only face-split specs for gated emitter implementation.
+[2026-07-05T12:13:46Z] > ATTACK | NEXT: zero k8/G4 family-base negative source and recheck residual profile.
+[2026-07-05T12:15:37Z] OK SELECT | DID: synced Claude mailbox and ledger for status | RESULT: latest Claude=k4/G1 running; ledger=45/108 | D: none
+[2026-07-05T12:16:13Z] > SELECT | NEXT: sync Claude mailbox, ledger, and active Python jobs before choosing next non-overlap chart.
+[2026-07-05T12:16:32Z] OK SELECT | DID: synced Claude mailbox/process/ledger | RESULT: new face-split quotient LP spec; Claude active k4/G1; ledger=45/108 | D: face-split implementation
+[2026-07-05T12:16:41Z] > PLAN | NEXT: read FACE_SPLIT_QUOTIENT_LP_GPTPRO.md and existing face-split tooling before editing.
+[2026-07-05T12:18:12Z] OK PLAN | DID: read quotient face-split spec and current probe/materializer | RESULT: need new quotient-coupled LP row builder | D: implement script
+[2026-07-05T12:18:17Z] > ATTACK | NEXT: add quotient-coupled face-split probe with grevlex division and pair-closed caps.
+[2026-07-05T12:20:43Z] OK ATTACK | DID: added quotient-coupled face-split probe | RESULT: py_compile passed | D: diagnostic run
+[2026-07-05T12:20:47Z] > ATTACK | NEXT: run k6/G1 quotient face-split Tier1 diagnostic without solving.
+[2026-07-05T12:22:51Z] FAIL ATTACK | DID: stopped k6/G1 quotient Tier1 diagnostic | RESULT: base-column enumeration exceeded 90s before summary | D: sparse-base patch
+[2026-07-05T12:23:05Z] > ATTACK | NEXT: patch quotient probe base support to avoid all degree-11 monomial division.
+[2026-07-05T12:23:20Z] OK ATTACK | DID: patched quotient probe sparse base selector | RESULT: py_compile passed | D: rerun diagnostic
+[2026-07-05T12:23:25Z] > ATTACK | NEXT: rerun k6/G1 quotient Tier1 diagnostic with sparse base support.
+[2026-07-05T12:24:46Z] FAIL ATTACK | DID: stopped k6/G1 quotient Tier1 diagnostic v2 | RESULT: pair-column scan exceeded 60s before summary | D: add caps
+[2026-07-05T12:24:53Z] > ATTACK | NEXT: patch quotient probe to honor early family caps during column scanning.
+[2026-07-05T12:25:07Z] OK ATTACK | DID: patched early caps in quotient probe | RESULT: py_compile passed | D: capped diagnostic
+[2026-07-05T12:25:12Z] > ATTACK | NEXT: run capped k6/G1 quotient Tier1 diagnostic with 64 pair/band columns per family.
+[2026-07-05T12:25:59Z] FAIL ATTACK | DID: stopped capped target-support quotient diagnostic | RESULT: target-support scan exceeded 30s before summary | D: smoke support=all
+[2026-07-05T12:26:03Z] > ATTACK | NEXT: run capped k6/G1 quotient smoke diagnostic with support=all.
+[2026-07-05T12:26:47Z] FAIL ATTACK | DID: stopped support=all quotient smoke | RESULT: base support ignored early cap and exceeded 30s | D: fix base cap
+[2026-07-05T12:26:53Z] > ATTACK | NEXT: patch quotient probe base generation to honor max-base-columns during support=all.
+[2026-07-05T12:27:05Z] OK ATTACK | DID: patched base early cap | RESULT: py_compile passed | D: rerun smoke
+[2026-07-05T12:27:10Z] > ATTACK | NEXT: rerun k6/G1 quotient smoke diagnostic after base cap fix.
+[2026-07-05T12:28:27Z] FAIL ATTACK | DID: stopped quotient smoke v2 | RESULT: no summary after 60s with tiny caps | D: add phase instrumentation
+[2026-07-05T12:28:34Z] > ATTACK | NEXT: add verbose phase tracing to quotient face-split probe.
+[2026-07-05T12:28:58Z] OK ATTACK | DID: added quotient probe verbose phase tracing | RESULT: py_compile passed | D: verbose smoke
+[2026-07-05T12:29:02Z] > ATTACK | NEXT: run verbose k6/G1 quotient smoke diagnostic.
+[2026-07-05T12:31:33Z] FAIL ATTACK | DID: stopped verbose quotient smoke | RESULT: target grevlex dict division exceeded 90s | D: optimize division
+[2026-07-05T12:32:06Z] > ATTACK | NEXT: replace quotient probe dictionary division max-scan with heap-based exact grevlex division.
+[2026-07-05T12:32:31Z] OK ATTACK | DID: implemented heap-based grevlex division | RESULT: py_compile passed | D: rerun verbose smoke
+[2026-07-05T12:32:35Z] > ATTACK | NEXT: rerun k6/G1 quotient smoke with heap division.
+[2026-07-05T12:34:33Z] FAIL ATTACK | DID: stopped heap quotient smoke | RESULT: found division loop reintroduced leading term | D: fix divider
+[2026-07-05T12:34:38Z] > ATTACK | NEXT: fix quotient probe divide loop to subtract with leading term still present.
+[2026-07-05T12:34:56Z] OK ATTACK | DID: fixed grevlex divider and ran unit recomposition | RESULT: diff={} on test division | D: rerun smoke
+[2026-07-05T12:35:01Z] > ATTACK | NEXT: rerun k6/G1 quotient smoke after divider fix.
+[2026-07-05T12:35:53Z] OK ATTACK | DID: ran k6/G1 quotient smoke diagnostic | RESULT: rows=43560 cols=1008 nnz=26130 solve=skipped | D: smoke solve
+[2026-07-05T12:35:59Z] > ATTACK | NEXT: solve tiny capped k6/G1 quotient LP smoke with HiGHS.
+[2026-07-05T12:36:48Z] OK ATTACK | DID: solved tiny k6/G1 quotient smoke LP | RESULT: HiGHS infeasible rows=43560 cols=1008 | D: Tier2 size probe
+[2026-07-05T12:36:56Z] > ATTACK | NEXT: run k6/G1 quotient Tier2 moderate-cap size probe.
+[2026-07-05T12:37:46Z] OK ATTACK | DID: ran k6/G1 quotient Tier2 size probe | RESULT: rows=46524 cols=8576 nnz=334685 | D: solve Tier2
+[2026-07-05T12:37:51Z] > ATTACK | NEXT: solve k6/G1 quotient Tier2 cap128 LP with HiGHS.
+[2026-07-05T12:38:44Z] FAIL ATTACK | DID: solved k6/G1 quotient Tier2 cap128 LP | RESULT: HiGHS infeasible rows=46524 cols=8576 | D: widen cap512
+[2026-07-05T12:38:49Z] > ATTACK | NEXT: solve k6/G1 quotient Tier2 cap512 LP with HiGHS.
+[2026-07-05T12:39:54Z] FAIL ATTACK | DID: solved k6/G1 quotient Tier2 cap512 LP | RESULT: HiGHS infeasible rows=53713 cols=32256 nnz=1567396 | D: target-support Tier2
+[2026-07-05T12:40:01Z] > ATTACK | NEXT: run k6/G1 quotient Tier2 target-support cap512 size probe after divider fix.
+[2026-07-05T12:42:07Z] FAIL ATTACK | DID: stopped k6/G1 target-support Tier2 scan | RESULT: build_columns exceeded 60s after target division | D: Tier3 cap ladder
+[2026-07-05T12:42:13Z] > ATTACK | NEXT: solve k6/G1 quotient Tier3 cap512 LP with HiGHS.
+[2026-07-05T12:43:39Z] FAIL ATTACK | DID: solved k6/G1 quotient Tier3 cap512 LP | RESULT: HiGHS infeasible rows=53713 cols=32256 nnz=1567396 | D: derived-support selector
+[2026-07-05T12:43:45Z] > ATTACK | NEXT: add derived-support multiplier selection to quotient probe.
+[2026-07-05T12:44:46Z] OK ATTACK | DID: added derived-support selector | RESULT: py_compile passed | D: derived Tier2 probe
+[2026-07-05T12:44:53Z] > ATTACK | NEXT: run k6/G1 quotient Tier2 derived-support cap512 size probe.
+[2026-07-05T12:46:04Z] OK ATTACK | DID: ran k6/G1 quotient Tier2 derived size probe | RESULT: rows=46966 cols=17408 nnz=455414 | D: solve derived Tier2
+[2026-07-05T12:46:09Z] > ATTACK | NEXT: solve k6/G1 quotient Tier2 derived cap512 LP.
+[2026-07-05T12:47:22Z] FAIL ATTACK | DID: solved k6/G1 quotient Tier2 derived cap512 LP | RESULT: HiGHS infeasible rows=46966 cols=17408 nnz=455414 | D: Tier3 derived
+[2026-07-05T12:47:28Z] > ATTACK | NEXT: solve k6/G1 quotient Tier3 derived cap1024 LP.
+[2026-07-05T12:50:37Z] FAIL ATTACK | DID: stopped k6/G1 Tier3 derived cap1024 | RESULT: build_columns exceeded 150s | D: add derived scan cap
+[2026-07-05T12:50:45Z] > ATTACK | NEXT: add derived support term scan cap to quotient probe.
+[2026-07-05T12:51:02Z] OK ATTACK | DID: added derived-support scan cap | RESULT: py_compile passed | D: Tier3 derived capped scan
+[2026-07-05T12:51:10Z] > ATTACK | NEXT: solve k6/G1 quotient Tier3 derived cap1024 support4096 LP.
+[2026-07-05T12:54:43Z] FAIL ATTACK | DID: stopped k6/G1 Tier3 derived cap1024 support4096 | RESULT: build_columns exceeded 180s | D: ask Claude cap policy
+[2026-07-05T12:55:35Z] OK ATTACK | DID: posted quotient face-split tooling ASK to Claude | RESULT: CODEX_TO_CLAUDE ASK block appended | D: wait for cap policy
+[2026-07-05T12:55:55Z] > SELECT | NEXT: inspect ledger structure and sanitizer queue membership before choosing next chart.
+[2026-07-05T12:57:25Z] > ATTACK | NEXT: run k0/G7 source-nullspace sanitizer on Claude patch1 source solution.
+[2026-07-05T12:58:19Z] FAIL ATTACK | DID: ran k0/G7 source-nullspace sanitizer | RESULT: initial_neg=3 final_neg=3 moves=0 skipped=1 | D: zero negatives
+[2026-07-05T12:58:25Z] > ATTACK | NEXT: zero k0/G7 unresolved negative source coefficients and run official checker.
+[2026-07-05T12:58:44Z] OK ATTACK | DID: zeroed k0/G7 negative source coefficients | RESULT: zeroed=3 output_nonzero=2823 | D: official check
+[2026-07-05T12:59:32Z] OK VERIFY | DID: checked k0/G7 zero-negative source solution | RESULT: exact_ok=false neg_sources=0 neg_rows=7 | D: additive repair
+[2026-07-05T12:59:43Z] > ATTACK | NEXT: build k0/G7 additive repair core with tight=2^-40 damage=2^-34 top_gain=1024.
+[2026-07-05T13:00:36Z] OK ATTACK | DID: built k0/G7 additive core | RESULT: core_exported j0=494 r0=772 basic=9 | D: modular solve
+[2026-07-05T13:00:41Z] > ATTACK | NEXT: solve k0/G7 additive core with 384-prime exact reconstruction.
+[2026-07-05T13:00:57Z] OK ATTACK | DID: solved k0/G7 additive core | RESULT: exact_core_residual=0 neg_increments=0 dim=9 | D: apply repair
+[2026-07-05T13:01:35Z] > VERIFY | NEXT: apply k0/G7 additive increment and compute full residual.
+[2026-07-05T13:02:30Z] FAIL VERIFY | DID: applied k0/G7 additive increment | RESULT: exact_ok=false neg_sources=0 neg_rows=6 | D: hard-row blocker
+2026-07-05T13:04:11Z > VERIFY | NEXT: Read Claude mailbox and chart ledger to validate screenshot status claim.
+2026-07-05T13:04:41Z OK VERIFY | DID: Read Claude mailbox, ledger v43, process list, and face-split spec presence. | RESULT: ledger 45 certified/63 pending; latest Claude 15:05Z routes k5/F6,k6/F6 to quotient face-split; two k4/G1 solves running. | D: none
+2026-07-05T13:05:13Z > SELECT | NEXT: Sync Claude mailbox and read face-split quotient spec before touching k6/F6.
+2026-07-05T13:05:29Z OK SELECT | DID: Read Claude tail and FACE_SPLIT_QUOTIENT_LP_GPTPRO.md; searched outbox for k0/G7 blocker. | RESULT: latest ruling k6/F6 first quotient target; k0/G7 blocker not found. | D: next post blocker
+2026-07-05T13:06:01Z > PLAN | NEXT: Post k0/G7 blocker ASK with sanitizer and additive artifacts.
+2026-07-05T13:06:29Z OK PLAN | DID: Posted k0/G7 hard-row blocker ASK to CODEX_TO_CLAUDE.md. | RESULT: timestamp 2026-07-05T13:06:29Z; artifacts listed with sha256. | D: k0/G7 awaiting route
+2026-07-05T13:07:20Z > ATTACK | NEXT: Patch quotient probe to add monic divisor normalization and Tier-0 support diagnostic.

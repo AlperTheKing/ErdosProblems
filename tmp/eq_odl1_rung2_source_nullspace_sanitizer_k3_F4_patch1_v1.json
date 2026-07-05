@@ -1,0 +1,59 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 3,
+  "columns": 48096,
+  "dominant": 3,
+  "dominant_name": "F4",
+  "exact_source_nonnegative": false,
+  "final_negative_count": 1,
+  "final_negative_detail": [
+    {
+      "kind": "delta",
+      "multiplier_exp": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        1,
+        0
+      ],
+      "name": "F4-F1",
+      "source_col": 18445,
+      "value": "-num_bits=4442/den_bits=4460"
+    }
+  ],
+  "initial_negative_count": 1,
+  "input_nonzero": 2739,
+  "input_solution": "tmp\\eq_odl1_rung2_source_solution_k3_F4_near_family_claude_patch1_v1.jsonl",
+  "moves": [],
+  "output_nonzero": 2739,
+  "output_solution": "tmp\\eq_odl1_rung2_source_solution_k3_F4_near_family_claude_patch1_sanitized_v1.jsonl",
+  "representation_changed": false,
+  "schema": "eq_odl1_rung2_source_nullspace_sanitizer_v1",
+  "skipped_blocks": [
+    {
+      "deficit": "num_bits=4442/den_bits=4460",
+      "dominant_col": 2963,
+      "dominant_value": "0",
+      "lower_sum": "num_bits=4442/den_bits=4460",
+      "multiplier_exp": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        1,
+        0
+      ],
+      "reason": "block infeasible under selected source dictionary"
+    }
+  ],
+  "support": "negative"
+}

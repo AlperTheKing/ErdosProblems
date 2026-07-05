@@ -1,0 +1,29 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_sp_core_k0_G7_r1_claude_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3361/den_bits=3355",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "increment_count": 41,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_sp_sol_k0_G7_r1_claude_384prime_v1.jsonl",
+  "min_solution_value": "-num_bits=3366/den_bits=3377",
+  "negative_rows_prefix": [],
+  "negative_source_prefix": [
+    {
+      "source_col": 6505,
+      "value": "-num_bits=3366/den_bits=3377"
+    },
+    {
+      "source_col": 45894,
+      "value": "-num_bits=3398/den_bits=3415"
+    },
+    {
+      "source_col": 46806,
+      "value": "-num_bits=3374/den_bits=3393"
+    }
+  ],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 3,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k0_G7_near_family_claude_patch1_v1.jsonl"
+}
