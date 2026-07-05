@@ -2227,3 +2227,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T16:30Z] V BATCH | DID: k8/G5 patch r1 | RESULT: residuals clean, 4 neg coeffs remain — PARKED as 1st sources-only row (ideal negative-source-mode test) | D: none
 [2026-07-04T17:00Z] V BATCH | DID: k7/F1 patch r1 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 5th row) | D: ~29-30/108
 [2026-07-04T17:30Z] V CODEX | DID: gated G1 face-split cert form (checkEq+ConeCert pair form = DiffSkipCert pattern; approved w/ 4 obligations) | RESULT: ruling posted; 29/108 acked (k5/G2 appended v27) | D: none
+[2026-07-04T18:10Z] V BATCH | DID: k3/G6 ladder (family 0/2 best; quick+allcols-patch both fail; lexsmall 1/11) | RESULT: PARKED as signed-delta showcase | D: none
