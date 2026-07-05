@@ -2229,3 +2229,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T17:30Z] V CODEX | DID: gated G1 face-split cert form (checkEq+ConeCert pair form = DiffSkipCert pattern; approved w/ 4 obligations) | RESULT: ruling posted; 29/108 acked (k5/G2 appended v27) | D: none
 [2026-07-04T18:10Z] V BATCH | DID: k3/G6 ladder (family 0/2 best; quick+allcols-patch both fail; lexsmall 1/11) | RESULT: PARKED as signed-delta showcase | D: none
 [2026-07-04T18:45Z] V BATCH | DID: k4/G6 bundle | RESULT: PARKED (G6-dominant additive-immune class, twin of k3/G6) | D: none
+[2026-07-04T19:20Z] V BATCH | DID: k7/F3 rescue (Codex lexlarge base + my allcols patch, 1 round) | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 6th; 31/108 pending append) | D: handoff loop proven
