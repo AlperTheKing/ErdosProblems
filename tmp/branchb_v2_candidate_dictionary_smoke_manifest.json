@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "all_op_products_exact": true,
+    "all_row_products_exact": true,
+    "lean_denominator_guard_emitted": true,
+    "op_occurrences_match_expected": true,
+    "row_occurrences_match_expected": true
+  },
+  "expected_op_occurrences": 1,
+  "expected_row_occurrences": 1,
+  "input": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl",
+  "lean_out": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBDictionaryAuditV2Smoke.lean",
+  "op_class_counts": {
+    "terminal-prefix-raw-extraction": 1
+  },
+  "op_piece_occurrences": 1,
+  "op_signature_count": 1,
+  "row_class_counts": {
+    "terminal-prefix": 1
+  },
+  "row_signature_count": 1,
+  "row_term_occurrences": 1,
+  "rows": 1,
+  "schema": "branchb_dictionary_audit_lean_v2"
+}

@@ -1,0 +1,180 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": 31167,
+  "dominant": 4,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2946/den_bits=2939",
+  "full_min_residual": "-num_bits=2982/den_bits=2990",
+  "full_negative_residual_count": 1075,
+  "full_zero_residual_count": 159804,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "residual": "-num_bits=2960/den_bits=2969",
+      "row": 1066
+    },
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "residual": "-num_bits=2934/den_bits=2952",
+      "row": 1107
+    },
+    {
+      "beta": [
+        6,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "residual": "-num_bits=2949/den_bits=2961",
+      "row": 1477
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "residual": "-num_bits=2950/den_bits=2962",
+      "row": 1703
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2945/den_bits=2958",
+      "row": 1897
+    },
+    {
+      "beta": [
+        5,
+        3,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=2941/den_bits=2959",
+      "row": 2068
+    },
+    {
+      "beta": [
+        5,
+        3,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2941/den_bits=2959",
+      "row": 2136
+    },
+    {
+      "beta": [
+        5,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=2941/den_bits=2958",
+      "row": 2188
+    },
+    {
+      "beta": [
+        5,
+        2,
+        1,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=2941/den_bits=2958",
+      "row": 2252
+    },
+    {
+      "beta": [
+        5,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "residual": "-num_bits=2941/den_bits=2959",
+      "row": 2254
+    }
+  ],
+  "nonzero_source_columns": 1971,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k6_F5_near_family_claude_384prime_v1.jsonl",
+  "solution_max": "2675/4",
+  "solution_min": "-num_bits=2961/den_bits=2966",
+  "solution_negative_count": 172,
+  "support": "negative"
+}

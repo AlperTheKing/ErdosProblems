@@ -1,0 +1,21 @@
+{
+  "candidate_count": 5,
+  "chart": 6,
+  "dominant": 14,
+  "found": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "increment_count": 1,
+  "increments": {
+    "1103": "847/720000000000"
+  },
+  "neg_rows": [
+    15872,
+    17429
+  ],
+  "schema": "exact_small_residual_repair_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_G7_near_lexsmall_claude_patch2quick_v1.jsonl",
+  "source_solution_in": "tmp\\eq_odl1_rung2_source_solution_k6_G7_near_lexsmall_claude_allcolspatch_v1.jsonl",
+  "why": "diagonal_01"
+}

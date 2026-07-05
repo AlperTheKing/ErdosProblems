@@ -1,0 +1,180 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 8,
+  "columns": 32756,
+  "dominant": 11,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2506/den_bits=2499",
+  "full_min_residual": "-num_bits=2546/den_bits=2579",
+  "full_negative_residual_count": 195,
+  "full_zero_residual_count": 159260,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-112711/36216278100000000",
+      "row": 1106
+    },
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "residual": "-733/83601750000000",
+      "row": 1112
+    },
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "residual": "-1/71297500000",
+      "row": 1148
+    },
+    {
+      "beta": [
+        6,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "residual": "-1057/78427250000000",
+      "row": 1157
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "residual": "-7582849/482883708000000000",
+      "row": 1652
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-386713/13175778000000000",
+      "row": 1685
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "residual": "-16859/1003221000000000",
+      "row": 1778
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-338133/40240309000000000",
+      "row": 1807
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "residual": "-120638461/3983790591000000000",
+      "row": 1823
+    },
+    {
+      "beta": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-459/115577000000000",
+      "row": 1881
+    }
+  ],
+  "nonzero_source_columns": 2148,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k8_G4_near_family_claude_patch2_v1.jsonl",
+  "solution_max": "num_bits=2508/den_bits=2499",
+  "solution_min": "-56441/1003221000000000",
+  "solution_negative_count": 14,
+  "support": "negative"
+}

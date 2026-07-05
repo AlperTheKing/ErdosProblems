@@ -21,6 +21,17 @@ inductive DictClass where
   | noncrossingCoBComponentAddition
 deriving Repr, DecidableEq
 
+inductive GateBCandidate where
+  | none
+  | candidateV1
+  | candidateV2
+deriving Repr, DecidableEq
+
+def GateBCandidate.expectsOps : GateBCandidate -> Bool
+  | GateBCandidate.none => false
+  | GateBCandidate.candidateV1 => true
+  | GateBCandidate.candidateV2 => true
+
 structure ScaledEqCert where
   terms : List Int
   target : Int
@@ -45,10 +56,10 @@ def natListSum : List Nat -> Nat
   | x :: xs => x + natListSum xs
 
 def ScaledEqCert.check (c : ScaledEqCert) : Bool :=
-  intListSum c.terms == c.target
+  (c.den != 0) && (intListSum c.terms == c.target)
 
 def ScaledGeCert.check (c : ScaledGeCert) : Bool :=
-  c.lhs + Int.ofNat c.margin == c.rhs
+  (c.den != 0) && (c.lhs + Int.ofNat c.margin == c.rhs)
 
 structure OpStepPilot where
   opClass : DictClass
@@ -87,14 +98,19 @@ structure RowPilot where
   m : Nat
   L : Nat
   caseTag : BranchBCase
+  gateBCandidate : GateBCandidate
   pressure : ScaledEqCert
   finiteMargin : ScaledGeCert
   opSteps : List OpStepPilot
 deriving Repr
 
+def RowPilot.candidateCheck (r : RowPilot) : Bool :=
+  GateBCandidate.expectsOps r.gateBCandidate == !r.opSteps.isEmpty
+
 def RowPilot.check (r : RowPilot) : Bool :=
   ScaledEqCert.check r.pressure &&
   ScaledGeCert.check r.finiteMargin &&
+  RowPilot.candidateCheck r &&
   opStepListCheck r.opSteps
 
 def rowPilotListCheck : List RowPilot -> Bool

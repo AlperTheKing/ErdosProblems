@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "all_finite_margins_scaled": true,
+    "all_pressure_eq_scaled": true
+  },
+  "counts": {
+    "case_counts": {
+      "MU_NUK": 1
+    },
+    "gate_b_candidate_counts": {
+      "candidate_v2": 1
+    },
+    "gate_b_rows": 1,
+    "input_rows": 1,
+    "op_steps": 2,
+    "rows": 1
+  },
+  "emitted": [
+    "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_lean\\Shard000.lean"
+  ],
+  "extra_index_imports": [],
+  "index_out": null,
+  "input": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_input.jsonl",
+  "lean_out": null,
+  "mode": "full",
+  "out_dir": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_lean",
+  "schema": "branchb_lean_transpile_v1",
+  "selected": {
+    "mode": "full",
+    "selected_rows": 1
+  },
+  "self_contained": true,
+  "signatures": "tmp/bankl_completion_op_sequence_core_signatures_v1.json",
+  "support_out": null
+}

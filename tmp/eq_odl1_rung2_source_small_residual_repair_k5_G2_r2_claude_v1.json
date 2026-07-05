@@ -1,0 +1,11 @@
+{
+  "candidate_count": 0,
+  "chart": 5,
+  "dominant": 9,
+  "found": false,
+  "neg_rows": [
+    17146
+  ],
+  "schema": "exact_small_residual_repair_v1",
+  "source_solution_in": "tmp\\eq_odl1_rung2_source_solution_k5_G2_near_family_claude_allcolspatch_v1.jsonl"
+}

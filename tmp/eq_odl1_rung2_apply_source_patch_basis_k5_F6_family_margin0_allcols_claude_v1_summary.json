@@ -1,0 +1,106 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k5_F6_family_margin0_allcols_claude_v1.jsonl",
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2899/den_bits=2893",
+  "full_min_residual": "-num_bits=2910/den_bits=2944",
+  "full_negative_residual_count": 27,
+  "increment_count": 111,
+  "increment_negative_count": 2,
+  "increment_solution": "tmp\\eq_odl1_rung2_source_patch_basis_solution_k5_F6_family_margin0_allcols_claude_384prime_v1.jsonl",
+  "min_solution_value": "-num_bits=2910/den_bits=2947",
+  "negative_rows_prefix": [
+    {
+      "residual": "-num_bits=2910/den_bits=2946",
+      "row": 9960
+    },
+    {
+      "residual": "-num_bits=2910/den_bits=2944",
+      "row": 10674
+    },
+    {
+      "residual": "-num_bits=2910/den_bits=2945",
+      "row": 10709
+    },
+    {
+      "residual": "-num_bits=2910/den_bits=2944",
+      "row": 10719
+    },
+    {
+      "residual": "-num_bits=2910/den_bits=2945",
+      "row": 10810
+    },
+    {
+      "residual": "-num_bits=2910/den_bits=2946",
+      "row": 10813
+    },
+    {
+      "residual": "-num_bits=2915/den_bits=2953",
+      "row": 21841
+    },
+    {
+      "residual": "-num_bits=2915/den_bits=2954",
+      "row": 22398
+    },
+    {
+      "residual": "-num_bits=2949/den_bits=2985",
+      "row": 33781
+    },
+    {
+      "residual": "-num_bits=2930/den_bits=2968",
+      "row": 39893
+    },
+    {
+      "residual": "-num_bits=2930/den_bits=2967",
+      "row": 42401
+    },
+    {
+      "residual": "-num_bits=2930/den_bits=2968",
+      "row": 42471
+    },
+    {
+      "residual": "-num_bits=2930/den_bits=2967",
+      "row": 42491
+    },
+    {
+      "residual": "-num_bits=2930/den_bits=2968",
+      "row": 42494
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2962",
+      "row": 42655
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2963",
+      "row": 44705
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2963",
+      "row": 45667
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2961",
+      "row": 46784
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2960",
+      "row": 46945
+    },
+    {
+      "residual": "-num_bits=2920/den_bits=2961",
+      "row": 46951
+    }
+  ],
+  "negative_source_prefix": [
+    {
+      "source_col": 6822,
+      "value": "-num_bits=2910/den_bits=2947"
+    },
+    {
+      "source_col": 20124,
+      "value": "-num_bits=2920/den_bits=2957"
+    }
+  ],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 2,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k5_F6_near_family_claude_allcolspatch_v1.jsonl"
+}

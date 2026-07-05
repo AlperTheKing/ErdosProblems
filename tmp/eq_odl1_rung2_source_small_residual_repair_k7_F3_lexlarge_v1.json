@@ -1,0 +1,15 @@
+{
+  "candidate_count": 1,
+  "chart": 7,
+  "dominant": 2,
+  "found": false,
+  "neg_rows": [
+    11678,
+    12148,
+    13276,
+    15007,
+    31363
+  ],
+  "schema": "exact_small_residual_repair_v1",
+  "source_solution_in": "tmp\\eq_odl1_rung2_source_solution_k7_F3_near_lexlarge_384prime_v1.jsonl"
+}

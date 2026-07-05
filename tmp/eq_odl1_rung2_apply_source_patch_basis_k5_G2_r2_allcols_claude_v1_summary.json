@@ -1,0 +1,16 @@
+{
+  "basis_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k5_G2_r2_allcols_claude_v1.jsonl",
+  "exact_ok": true,
+  "full_max_residual": "num_bits=2894/den_bits=2888",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "increment_count": 4,
+  "increment_negative_count": 0,
+  "increment_solution": "tmp\\eq_odl1_rung2_source_patch_basis_solution_k5_G2_r2_allcols_claude_384prime_v1.jsonl",
+  "min_solution_value": "num_bits=2916/den_bits=2947",
+  "negative_rows_prefix": [],
+  "negative_source_prefix": [],
+  "schema": "apply_source_patch_basis_solution_v1",
+  "solution_negative_count": 0,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k5_G2_near_family_claude_patch2_v1.jsonl"
+}

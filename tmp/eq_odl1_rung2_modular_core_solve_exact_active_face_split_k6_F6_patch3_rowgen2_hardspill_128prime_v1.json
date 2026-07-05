@@ -1,0 +1,38 @@
+{
+  "core": "tmp\\eq_odl1_rung2_exact_active_face_split_core_k6_F6_patch3_rowgen2_hardspill_v1.jsonl",
+  "dimension": 16,
+  "exact_check": {
+    "core_max_residual": "0",
+    "core_min_residual": "0",
+    "core_nonzero_residuals": 0,
+    "solution_max": "55/1610612736",
+    "solution_min": "0",
+    "solution_negative_count": 0
+  },
+  "last_reconstruction_check": {
+    "core_max_residual": "0",
+    "core_min_residual": "0",
+    "core_nonzero_residuals": 0,
+    "solution_max": "55/1610612736",
+    "solution_min": "0",
+    "solution_negative_count": 0
+  },
+  "modular": {
+    "modulus_bits": 180,
+    "partial_reconstruction_count": 16,
+    "reconstructed": true,
+    "skipped_primes": [],
+    "used_primes": [
+      1073741789,
+      1073741783,
+      1073741741,
+      1073741723,
+      1073741719,
+      1073741717
+    ]
+  },
+  "prime_count_requested": 128,
+  "schema": "eq_odl1_rung2_modular_core_solve_v1",
+  "solution": "tmp\\eq_odl1_rung2_exact_active_face_split_k6_F6_patch3_rowgen2_hardspill_128prime_solution_v1.jsonl",
+  "terms": 37
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_count": 42,
+  "chart": 6,
+  "dominant": 14,
+  "found": false,
+  "neg_rows": [
+    5094,
+    5319,
+    5915,
+    35436
+  ],
+  "schema": "exact_small_residual_repair_v1",
+  "source_solution_in": "tmp\\eq_odl1_rung2_source_solution_k6_G7_near_lexsmall_claude_384prime_v1.jsonl"
+}

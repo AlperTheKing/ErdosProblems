@@ -242,6 +242,8 @@ def main() -> None:
     ap.add_argument("--input", default="tmp/bankl_branchb_gateb_final_v1.jsonl")
     ap.add_argument("--lean-out", default="problems/23/lean/Erdos23Delta0/Cert/BranchBDictionaryAudit.lean")
     ap.add_argument("--manifest", default="tmp/branchb_dictionary_audit_lean_v2_manifest.json")
+    ap.add_argument("--expected-row-occurrences", type=int, default=19988)
+    ap.add_argument("--expected-op-occurrences", type=int, default=713)
     args = ap.parse_args()
 
     row_sigs, op_sigs, row_classes, op_classes, rows = collect(Path(args.input))
@@ -257,11 +259,13 @@ def main() -> None:
         "op_piece_occurrences": sum(op_sigs.values()),
         "op_signature_count": len(op_sigs),
         "op_class_counts": dict(sorted(op_classes.items())),
+        "expected_row_occurrences": args.expected_row_occurrences,
+        "expected_op_occurrences": args.expected_op_occurrences,
         "checks": {
             "all_row_products_exact": all(sig.check() for sig in row_sigs),
             "all_op_products_exact": all(sig.check() for sig in op_sigs),
-            "row_occurrences_match_expected": sum(row_sigs.values()) == 19988,
-            "op_occurrences_match_expected": sum(op_sigs.values()) == 713,
+            "row_occurrences_match_expected": sum(row_sigs.values()) == args.expected_row_occurrences,
+            "op_occurrences_match_expected": sum(op_sigs.values()) == args.expected_op_occurrences,
             "lean_denominator_guard_emitted": True,
         },
     }

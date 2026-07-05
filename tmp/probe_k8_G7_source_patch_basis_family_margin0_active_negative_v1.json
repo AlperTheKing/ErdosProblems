@@ -1,0 +1,24 @@
+{
+  "active_margin": 0.0,
+  "candidate_count": 66,
+  "candidate_mode": "active-negative",
+  "chart": 8,
+  "column_count": 33301,
+  "dominant": 14,
+  "initial_negative_rows": [
+    15883,
+    16704,
+    45473,
+    45599,
+    45622,
+    45809,
+    45832,
+    45873
+  ],
+  "margin": 0.0,
+  "model_status": "Infeasible",
+  "objective": 0.0,
+  "row_count": 167960,
+  "schema": "source_patch_highspy_basis_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k8_G7_near_family_192prime_v1.jsonl"
+}

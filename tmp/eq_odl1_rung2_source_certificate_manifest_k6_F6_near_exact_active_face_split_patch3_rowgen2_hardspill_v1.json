@@ -1,0 +1,66 @@
+{
+  "band": "near_2s_minus_1",
+  "certificate_kind": "source",
+  "chart": 6,
+  "check_summary": "tmp\\eq_odl1_rung2_source_solution_check_k6_F6_near_exact_active_face_split_patch3_rowgen2_hardspill_v1.json",
+  "check_summary_sha256": "1e3fe681108140e43e86c35a5f99abf7c75e9a262d6fde4d9ebf708dcf30ffff",
+  "columns_checked": 29759,
+  "core": "tmp\\eq_odl1_rung2_exact_active_face_split_core_k6_F6_patch3_rowgen2_hardspill_v1.jsonl",
+  "dominant": 5,
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 158472,
+  "modular_summary": "tmp\\eq_odl1_rung2_modular_core_solve_exact_active_face_split_k6_F6_patch3_rowgen2_hardspill_128prime_v1.json",
+  "modular_summary_sha256": "492bfd3274c5ca3f55f039acc15482d855a7cf1295de0f7c59034bd8d7e912b6",
+  "nonzero_source_columns": 2432,
+  "repair": {
+    "kind": "exact_active_face_repair_split",
+    "base_solution_jsonl": "tmp/eq_odl1_rung2_source_solution_k6_F6_near_lexsmall_384prime_highspy_allrow_target89_allcols_patch3_v1.jsonl",
+    "base_solution_jsonl_sha256": "a6bb36a62c7161ad147d6857a9566770385475e209d01e50f333c3979c587e86",
+    "repair_core": "tmp/eq_odl1_rung2_exact_active_face_split_core_k6_F6_patch3_rowgen2_hardspill_v1.jsonl",
+    "repair_core_sha256": "c726354e9e8a77534171146ec340c471ec81fca227ef992c0ddee2ec35b49171",
+    "repair_meta": "tmp/eq_odl1_rung2_exact_active_face_split_core_k6_F6_patch3_rowgen2_hardspill_v1_meta.json",
+    "repair_meta_sha256": "115f3b65477047ee530d380e76aae465bf31c8f9fd21cffd2b68994ab2023c3c",
+    "repair_apply_summary": "tmp/eq_odl1_rung2_apply_exact_active_face_split_k6_F6_patch3_rowgen2_hardspill_v1_summary.json",
+    "repair_apply_summary_sha256": "0908c3065cba737850fa7de5dec17faf2a872734aa8b6eff14b048c59904703e",
+    "hard_rows": [
+      21590,
+      21842,
+      22523,
+      22569
+    ],
+    "promoted_hard_spill_rows": [
+      35393,
+      41828,
+      44220,
+      44834,
+      45874,
+      45881
+    ],
+    "extra_rows": [
+      32986,
+      35393,
+      41599,
+      41828,
+      44220,
+      44834,
+      45477,
+      45874,
+      45881
+    ],
+    "excluded_u_cols": [
+      19551,
+      13638
+    ],
+    "rowgen_round": "rowgen2_hardspill"
+  },
+  "schema": "eq_odl1_rung2_source_certificate_manifest_v1",
+  "solution_jsonl": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_exact_active_face_split_patch3_rowgen2_hardspill_v1.jsonl",
+  "solution_jsonl_records": 2432,
+  "solution_jsonl_sha256": "3f754ef9ccd615fce0071319e36398251a0f9d56de621584a61fdbcca3824976",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "verification_command": "python -B problems/23/writeup/_codex_eq_odl1_rung2_source_solution_check.py --chart 6 --dominant 5 --band near_2s_minus_1 --support negative --solution tmp\\eq_odl1_rung2_source_solution_k6_F6_near_exact_active_face_split_patch3_rowgen2_hardspill_v1.jsonl --summary tmp\\eq_odl1_rung2_source_solution_check_k6_F6_near_exact_active_face_split_patch3_rowgen2_hardspill_v1.json",
+  "source": "codex"
+}

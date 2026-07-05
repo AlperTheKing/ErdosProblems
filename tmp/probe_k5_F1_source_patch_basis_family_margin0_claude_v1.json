@@ -1,0 +1,27 @@
+{
+  "active_margin": 1e-09,
+  "candidate_count": 98,
+  "candidate_mode": "active-negative",
+  "chart": 5,
+  "column_count": 33357,
+  "dominant": 0,
+  "initial_negative_rows": [
+    22809,
+    26943,
+    30045,
+    30115,
+    30150,
+    35985,
+    36055,
+    36090,
+    36181,
+    36216,
+    36272
+  ],
+  "margin": 0.0,
+  "model_status": "Infeasible",
+  "objective": 0.0,
+  "row_count": 167960,
+  "schema": "source_patch_highspy_basis_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k5_F1_near_family_claude_384prime_v1.jsonl"
+}

@@ -47,6 +47,14 @@ DICT_TO_LEAN = {
     "noncrossing-coB-component-addition": "DictClass.noncrossingCoBComponentAddition",
 }
 
+CANDIDATE_PRIORITY = ("candidate_v2", "candidate_v1")
+
+CANDIDATE_TO_LEAN = {
+    "none": "GateBCandidate.none",
+    "candidate_v1": "GateBCandidate.candidateV1",
+    "candidate_v2": "GateBCandidate.candidateV2",
+}
+
 
 def frac(s: Any) -> Fraction:
     if s is None:
@@ -149,6 +157,22 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def select_gate_b_sequence(row: dict[str, Any]) -> tuple[str, dict[str, Any] | None]:
+    """Return the preferred Gate-B op-sequence and its JSON candidate key.
+
+    The accepted v1 file only carries ``candidate_v1``.  The v2+dictionary
+    format may carry both, and v2 is the binding semantics when present.
+    Falling back to v1 keeps the current v1 artifact reproducible.
+    """
+
+    gb = row.get("gate_b_dictionary", {}) or {}
+    for key in CANDIDATE_PRIORITY:
+        seq = (gb.get(key) or {}).get("op_sequence")
+        if seq:
+            return key, seq
+    return "none", None
+
+
 def select_pilot_rows(
     rows: list[dict[str, Any]], signatures_path: Path | None
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -172,8 +196,7 @@ def select_pilot_rows(
 
     surplus_count = 0
     for row in rows:
-        gb = row.get("gate_b_dictionary", {})
-        seq = gb.get("candidate_v1", {}).get("op_sequence")
+        _, seq = select_gate_b_sequence(row)
         if not seq:
             continue
         if frac(seq["op_sequence_rho_sum"]) > frac(seq["raw_to_final_rho_a"]):
@@ -215,8 +238,7 @@ def certify_row(row: dict[str, Any]) -> dict[str, Any]:
     if reported_margin != frac(params["rho_Q"]) - frac(params["target"]):
         raise ValueError("reported finite margin mismatch")
 
-    gb = row.get("gate_b_dictionary", {})
-    seq = gb.get("candidate_v1", {}).get("op_sequence")
+    candidate_version, seq = select_gate_b_sequence(row)
     op_certs = []
     dominance = None
     if seq:
@@ -259,6 +281,7 @@ def certify_row(row: dict[str, Any]) -> dict[str, Any]:
         "finite_margin": finite_margin,
         "gate_b": {
             "required": bool(seq),
+            "candidate_version": candidate_version,
             "dominance": dominance,
             "op_certs": op_certs,
         },
@@ -313,6 +336,17 @@ def support_lines() -> list[str]:
     lines.append("  | noncrossingCoBComponentAddition")
     lines.append("deriving Repr, DecidableEq")
     lines.append("")
+    lines.append("inductive GateBCandidate where")
+    lines.append("  | none")
+    lines.append("  | candidateV1")
+    lines.append("  | candidateV2")
+    lines.append("deriving Repr, DecidableEq")
+    lines.append("")
+    lines.append("def GateBCandidate.expectsOps : GateBCandidate -> Bool")
+    lines.append("  | GateBCandidate.none => false")
+    lines.append("  | GateBCandidate.candidateV1 => true")
+    lines.append("  | GateBCandidate.candidateV2 => true")
+    lines.append("")
     lines.append("structure ScaledEqCert where")
     lines.append("  terms : List Int")
     lines.append("  target : Int")
@@ -337,10 +371,10 @@ def support_lines() -> list[str]:
     lines.append("  | x :: xs => x + natListSum xs")
     lines.append("")
     lines.append("def ScaledEqCert.check (c : ScaledEqCert) : Bool :=")
-    lines.append("  intListSum c.terms == c.target")
+    lines.append("  (c.den != 0) && (intListSum c.terms == c.target)")
     lines.append("")
     lines.append("def ScaledGeCert.check (c : ScaledGeCert) : Bool :=")
-    lines.append("  c.lhs + Int.ofNat c.margin == c.rhs")
+    lines.append("  (c.den != 0) && (c.lhs + Int.ofNat c.margin == c.rhs)")
     lines.append("")
     lines.append("structure OpStepPilot where")
     lines.append("  opClass : DictClass")
@@ -379,14 +413,19 @@ def support_lines() -> list[str]:
     lines.append("  m : Nat")
     lines.append("  L : Nat")
     lines.append("  caseTag : BranchBCase")
+    lines.append("  gateBCandidate : GateBCandidate")
     lines.append("  pressure : ScaledEqCert")
     lines.append("  finiteMargin : ScaledGeCert")
     lines.append("  opSteps : List OpStepPilot")
     lines.append("deriving Repr")
     lines.append("")
+    lines.append("def RowPilot.candidateCheck (r : RowPilot) : Bool :=")
+    lines.append("  GateBCandidate.expectsOps r.gateBCandidate == !r.opSteps.isEmpty")
+    lines.append("")
     lines.append("def RowPilot.check (r : RowPilot) : Bool :=")
     lines.append("  ScaledEqCert.check r.pressure &&")
     lines.append("  ScaledGeCert.check r.finiteMargin &&")
+    lines.append("  RowPilot.candidateCheck r &&")
     lines.append("  opStepListCheck r.opSteps")
     lines.append("")
     lines.append("def rowPilotListCheck : List RowPilot -> Bool")
@@ -447,6 +486,7 @@ def emit_lean(
             "  { "
             f"name := {lean_str(rid['name'])}, n := {rid['n']}, m := {rid['m']}, L := {cert['L']}, "
             f"caseTag := {CASE_TO_LEAN[cert['case']]}, "
+            f"gateBCandidate := {CANDIDATE_TO_LEAN[cert['gate_b']['candidate_version']]}, "
             f"pressure := {emit_scaled_eq('pressure', cert['pressure_eq'])}, "
             f"finiteMargin := {emit_scaled_ge(cert['finite_margin'])}, "
             f"opSteps := [{', '.join(op_entries)}] "
@@ -576,6 +616,7 @@ def main() -> None:
             emitted.append(args.index_out)
 
     case_counts = Counter(c["case"] for c in certs)
+    gate_b_candidate_counts = Counter(c["gate_b"]["candidate_version"] for c in certs)
     op_steps = sum(len(c["gate_b"]["op_certs"]) for c in certs)
     manifest = {
         "schema": "branchb_lean_transpile_v1",
@@ -596,6 +637,7 @@ def main() -> None:
             "gate_b_rows": sum(1 for c in certs if c["gate_b"]["required"]),
             "op_steps": op_steps,
             "case_counts": dict(case_counts),
+            "gate_b_candidate_counts": dict(gate_b_candidate_counts),
         },
         "checks": {
             "all_pressure_eq_scaled": all(c["pressure_eq"].ok for c in certs),

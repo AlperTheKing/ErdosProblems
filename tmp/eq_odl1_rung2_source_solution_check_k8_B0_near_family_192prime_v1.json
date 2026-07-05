@@ -1,0 +1,19 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 8,
+  "columns": 30201,
+  "dominant": 7,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=1525/den_bits=1519",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 164326,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 2027,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k8_B0_near_family_192prime_v1.jsonl",
+  "solution_max": "num_bits=1522/den_bits=1512",
+  "solution_min": "num_bits=1500/den_bits=1523",
+  "solution_negative_count": 0,
+  "support": "negative"
+}
