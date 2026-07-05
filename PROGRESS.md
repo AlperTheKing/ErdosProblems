@@ -2261,3 +2261,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T11:00Z] V BATCH | DID: k3/F2 two-shot | RESULT: PARKED | D: none
 [2026-07-05T11:40Z] V BATCH | DID: k3/F4 patch r1 | RESULT: rows 3->0, 1 src — SANITIZER QUEUE | D: none
 [2026-07-05T12:15Z] V BATCH | DID: k3/F3 patch probe | RESULT: Infeasible from clean base — PARKED additive-immune | D: none
+[2026-07-05T13:00Z] V BATCH | DID: k0/G7 patch r1 | RESULT: rows 15->0, 3 srcs — SANITIZER QUEUE | D: none
+[2026-07-05T13:40Z] V THREADS | DID: face-split staging verdict extracted FULL (9647c) + archived + relayed w/ direct ASK answers (pair-closure explains capped infeasibility) | RESULT: FACE_SPLIT_QUOTIENT_LP_GPTPRO.md; quotient-coupled LP = the batch-tail tool | D: face-split cluster UNBLOCKED structurally
