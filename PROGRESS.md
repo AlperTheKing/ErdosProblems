@@ -2221,3 +2221,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T12:40Z] V BATCH | DID: k6/F5 ladder | RESULT: PARKED (probe Infeasible/1 basic); parked set 6 | D: none
 [2026-07-04T13:45Z] V BATCH | DID: k5/G2 patch r2 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 4th; 1st G-dominant via ladder; family-base salvage lesson) | D: ~28/108
 [2026-07-04T14:20Z] V BATCH | DID: k8/G4 patch ladder | RESULT: DIVERGES (19->70->195) — PARKED (7th in repair queue) | D: none
+[2026-07-04T15:00Z] V CODEX | DID: G1-cascade ruling posted (cap 8 exclusions; 1024-gain escalation first; then face-split); scanned to 28/108 | RESULT: marker 1753540 | D: none
