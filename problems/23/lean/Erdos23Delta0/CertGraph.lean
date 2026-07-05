@@ -2788,14 +2788,156 @@ theorem graphData_delta0_from_component_provider {G : GraphData}
     P.betaVal ≤ (G.n : ℚ) ^ 2 / 25 :=
   P.bound
 
-/-- Final conditional top statement (Skeleton target name): once the bridge
-    provider is constructed uniformly from a finite triangle-free SimpleGraph,
-    this becomes the unconditional theorem. -/
-theorem erdos23_delta0 {V : Type*} [Fintype V] [DecidableEq V]
+/-- Bridge-form top statement (superseded by the package form below). -/
+theorem erdos23_delta0_viaBridge {V : Type*} [Fintype V] [DecidableEq V]
     (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
     (hTri : Gs.CliqueFree 3) (bridge : SimpleGraphBridge Gs) :
     bridge.betaSimpleVal ≤ (Fintype.card V : ℚ) ^ 2 / 25 :=
   erdos23_delta0_simpleGraph Gs hTri bridge
+
+/-! ### Assembly layer, stage 4: SimpleGraph → GraphData executable encoding
+and the package-form final theorem (per the bridge-module design; the hard
+low-level encoding facts are packaged as provider fields, discharged by the
+encoding-facts module). -/
+
+/-- The canonical finite-type encoding used by the bridge. -/
+noncomputable def vEquivFin (V : Type*) [Fintype V] :
+    V ≃ Fin (Fintype.card V) :=
+  Fintype.equivFin V
+
+/-- Ordered edge finset: one orientation chosen through the Fin encoding. -/
+noncomputable def orderedEdgeFinset {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] : Finset (V × V) :=
+  Finset.univ.filter
+    (fun p : V × V => vEquivFin V p.1 < vEquivFin V p.2 ∧ Gs.Adj p.1 p.2)
+
+/-- Literal GraphData encoding of a finite SimpleGraph. -/
+noncomputable def graphDataOfSimpleGraph {V : Type*} [Fintype V]
+    [DecidableEq V] (Gs : SimpleGraph V) [DecidableRel Gs.Adj] :
+    GraphData :=
+  { n := Fintype.card V
+    edges := (orderedEdgeFinset Gs).toList.map
+      (fun p : V × V => ((vEquivFin V p.1).val, (vEquivFin V p.2).val)) }
+
+/-- CutData induced by a Boolean coloring of the vertices. -/
+noncomputable def cutDataOfColoring {V : Type*} [Fintype V]
+    (f : V → Bool) : CutData :=
+  { side := List.ofFn
+      (fun i : Fin (Fintype.card V) => f ((vEquivFin V).symm i)) }
+
+/-- Boolean coloring induced by a GraphData cut. -/
+noncomputable def coloringOfCut {V : Type*} [Fintype V]
+    (c : CutData) : V → Bool :=
+  fun v => sideb c ((vEquivFin V) v).val
+
+/-- Monochromatic edge count of a coloring. -/
+noncomputable def simpleMonoCount {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] (f : V → Bool) : Nat :=
+  ((orderedEdgeFinset Gs).filter (fun p : V × V => f p.1 = f p.2)).card
+
+/-- β as the minimum monochromatic count over all Boolean colorings. -/
+noncomputable def betaSimple {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] : Nat :=
+  (Finset.univ.image (simpleMonoCount Gs)).min'
+    (by
+      classical
+      exact Finset.image_nonempty.mpr Finset.univ_nonempty)
+
+/-- Encoding facts (bridge proof obligations; provider fields discharged by
+    the encoding-facts module). -/
+structure SimpleGraphEncodingFacts {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj] : Type where
+  G : GraphData := graphDataOfSimpleGraph Gs
+  hGraph : checkGraph G = true
+  n_transfer : (G.n : ℚ) = (Fintype.card V : ℚ)
+  tri_transfer : Gs.CliqueFree 3 → TriangleFree G
+  cutDataOfColoring_valid : ∀ f : V → Bool,
+    checkCut G (cutDataOfColoring f) = true
+  badCount_cutDataOfColoring : ∀ f : V → Bool,
+    badCount G (cutDataOfColoring f) = simpleMonoCount Gs f
+  badCount_coloringOfCut : ∀ c : CutData, checkCut G c = true →
+    simpleMonoCount Gs (coloringOfCut c) = badCount G c
+
+/-- β equals the bad count of any badCount-minimal valid cut. -/
+theorem betaSimple_eq_badCount_of_isMaxCut {V : Type*} [Fintype V]
+    [DecidableEq V] (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (E : SimpleGraphEncodingFacts Gs) (c : CutData)
+    (hMax : IsMaxCut E.G c) :
+    betaSimple Gs = badCount E.G c := by
+  classical
+  let S : Finset Nat := Finset.univ.image (simpleMonoCount Gs)
+  have hS_nonempty : S.Nonempty := by
+    dsimp [S]
+    exact Finset.image_nonempty.mpr Finset.univ_nonempty
+  have hmem_c : simpleMonoCount Gs (coloringOfCut c) ∈ S := by
+    dsimp [S]
+    exact Finset.mem_image.mpr ⟨coloringOfCut c, Finset.mem_univ _, rfl⟩
+  have hbeta_le_cmono :
+      betaSimple Gs ≤ simpleMonoCount Gs (coloringOfCut c) := by
+    dsimp [betaSimple, S] at hmem_c ⊢
+    exact Finset.min'_le _ _ hmem_c
+  have hmono_c : simpleMonoCount Gs (coloringOfCut c) = badCount E.G c :=
+    E.badCount_coloringOfCut c hMax.valid
+  have hbeta_le_bad : betaSimple Gs ≤ badCount E.G c :=
+    le_trans hbeta_le_cmono (le_of_eq hmono_c)
+  have hbeta_mem : betaSimple Gs ∈ S := by
+    dsimp [betaSimple, S]
+    exact Finset.min'_mem _ hS_nonempty
+  rcases Finset.mem_image.mp hbeta_mem with ⟨f, _hf, hf⟩
+  have hvalid_f : checkCut E.G (cutDataOfColoring f) = true :=
+    E.cutDataOfColoring_valid f
+  have hmax_f : badCount E.G c ≤ badCount E.G (cutDataOfColoring f) :=
+    hMax.min_bad (cutDataOfColoring f) hvalid_f
+  have hbad_f : badCount E.G (cutDataOfColoring f) = simpleMonoCount Gs f :=
+    E.badCount_cutDataOfColoring f
+  have hbad_le_beta : badCount E.G c ≤ betaSimple Gs := by
+    rw [hbad_f, hf] at hmax_f
+    exact hmax_f
+  exact le_antisymm hbeta_le_bad hbad_le_beta
+
+/-- Complete certificate package: encoding facts + selected good cut +
+    Delta0 certificate bundles. The single remaining assumption of the
+    conditional top theorem. -/
+structure SimpleGraphCertificatePackage {V : Type*} [Fintype V]
+    [DecidableEq V] (Gs : SimpleGraph V) [DecidableRel Gs.Adj] :
+    Type where
+  enc : SimpleGraphEncodingFacts Gs
+  cut : CutData
+  rows : RowDB
+  hCut : checkCut enc.G cut = true
+  good : GoodCutData enc.G cut rows
+  delta : Delta0CertBundles enc.G cut rows
+
+theorem simpleGraphPackage_beta_transfer {V : Type*} [Fintype V]
+    [DecidableEq V] (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (P : SimpleGraphCertificatePackage Gs) :
+    (betaSimple Gs : ℚ) = P.good.gammaBeta.betaVal := by
+  have hβnat : betaSimple Gs = badCount P.enc.G P.cut :=
+    betaSimple_eq_badCount_of_isMaxCut Gs P.enc P.cut P.good.maxCut
+  have hγβ : P.good.gammaBeta.betaVal = (badCount P.enc.G P.cut : ℚ) :=
+    P.good.gammaBeta.beta_eq_badCount
+  rw [hβnat, hγβ]
+
+theorem erdos23_delta0_simpleGraph_from_package {V : Type*} [Fintype V]
+    [DecidableEq V] (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (hTri : Gs.CliqueFree 3) (P : SimpleGraphCertificatePackage Gs) :
+    (betaSimple Gs : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 := by
+  have hGD : P.good.gammaBeta.betaVal ≤ (P.enc.G.n : ℚ) ^ 2 / 25 :=
+    erdos23_delta0_graphData_from_bundles P.enc.hGraph P.hCut
+      (P.enc.tri_transfer hTri) P.good P.delta
+  have hβ : (betaSimple Gs : ℚ) = P.good.gammaBeta.betaVal :=
+    simpleGraphPackage_beta_transfer Gs P
+  rw [hβ, ← P.enc.n_transfer]
+  exact hGD
+
+/-- FINAL Skeleton-facing statement: conditional exactly on the per-graph
+    certificate package; unconditional once the emitters provide packages
+    for every finite triangle-free graph. -/
+theorem erdos23_delta0 {V : Type*} [Fintype V] [DecidableEq V]
+    (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+    (hTri : Gs.CliqueFree 3) (P : SimpleGraphCertificatePackage Gs) :
+    (betaSimple Gs : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 :=
+  erdos23_delta0_simpleGraph_from_package Gs hTri P
 
 end CertGraph
 end Erdos23Delta0

@@ -802,3 +802,15 @@
   CertGraph tail (full text in-thread, plan in 09:05Z note); (2) main encoding-facts reply
   extract+type; (3) sibling E2+ collect; (4) batch rows continue in background between builds.
 - Marker 1753540. P(math)~90, P(Lean)~91.
+
+
+## TICK NOTES (2026-07-04T16:35Z) — STAGE-4 GREEN; sources-only class found
+- LEAN MILESTONE: CertGraph.lean = FULL conditional chain green (L0-L3, Bank0 self-contained,
+  Assembly 1-4, erdos23_delta0 package-form final; old alias renamed _viaBridge; forbidden 0).
+  REMAINING: encoding-facts discharge (main), provider discharges, LensGates/Seed3RouteTree,
+  EQODL1/DiffSkip, Skeleton wiring, FC PR packaging.
+- BATCH: my certified 4 (F2/F1/G7/G2k5); parked 8 (G1k5,G4k6,G2k6,F6k5,F5k6,G4k8,F7k5 + G5k8
+  sources-only NEW CLASS — ideal first test for negative-source repair mode). Next fresh:
+  k7/F1 (map 41). 28/108 + pending appends.
+- NEXT TICK: main encoding-facts reply collect+type; sibling E2+; Codex G1-cascade outcome.
+- P(math)~90, P(Lean)~93.

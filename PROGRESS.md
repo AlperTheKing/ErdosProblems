@@ -2223,3 +2223,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T14:20Z] V BATCH | DID: k8/G4 patch ladder | RESULT: DIVERGES (19->70->195) — PARKED (7th in repair queue) | D: none
 [2026-07-04T15:00Z] V CODEX | DID: G1-cascade ruling posted (cap 8 exclusions; 1024-gain escalation first; then face-split); scanned to 28/108 | RESULT: marker 1753540 | D: none
 [2026-07-04T15:30Z] V BATCH | DID: k5/F7 two-shot | RESULT: PARKED (both bases dirty) | D: none
+[2026-07-04T16:15Z] V LEAN | DID: Assembly stage-4 typed+built (2 rounds) | RESULT: CertGraph.lean EXIT=0 LOGBYTES=0 forbidden 0 — bridge encoding + betaSimple + EncodingFacts + betaSimple_eq_badCount PROVEN + CertificatePackage + erdos23_delta0 PACKAGE-FORM | D: FULL CONDITIONAL CHAIN GREEN
+[2026-07-04T16:30Z] V BATCH | DID: k8/G5 patch r1 | RESULT: residuals clean, 4 neg coeffs remain — PARKED as 1st sources-only row (ideal negative-source-mode test) | D: none
