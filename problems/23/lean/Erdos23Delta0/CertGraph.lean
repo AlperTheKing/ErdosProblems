@@ -2629,10 +2629,11 @@ theorem gersh_Lgt5_of_branchB_inputs {G : GraphData} {c : CutData}
   have hrho : 0 ≤ rhoQ Q.length := rho_nonneg_of_len_gt5 h.hLen
   nlinarith [h.bankL, h.bankedUPO]
 
-/-- Per-cut inputs across the whole row database. -/
+/-- Per-cut inputs across the whole row database (audit: the per-cut
+    etaNonneg field was dead — η ≥ 0 lives per-row inside BranchAInputs and
+    via bankL inside BranchBInputs). -/
 structure Delta0Inputs (G : GraphData) (c : CutData) (rows : RowDB) :
     Prop where
-  etaNonneg : 0 ≤ etaQ G c
   branchA : ∀ Q : RowCert, RowInDB rows Q → Q.length = 5 →
     BranchAInputs G c rows Q
   branchB : ∀ Q : RowCert, RowInDB rows Q → 5 < Q.length →
@@ -2701,7 +2702,6 @@ structure BranchBCertBundle (G : GraphData) (c : CutData) (rows : RowDB)
 
 structure Delta0CertBundles (G : GraphData) (c : CutData) (rows : RowDB) :
     Prop where
-  etaNonneg : 0 ≤ etaQ G c
   branchA : ∀ Q : RowCert, RowInDB rows Q → Q.length = 5 →
     BranchACertBundle G c rows Q
   branchB : ∀ Q : RowCert, RowInDB rows Q → 5 < Q.length →
@@ -2710,7 +2710,6 @@ structure Delta0CertBundles (G : GraphData) (c : CutData) (rows : RowDB) :
 theorem delta0_inputs_of_cert_bundles {G : GraphData} {c : CutData}
     {rows : RowDB} (h : Delta0CertBundles G c rows) :
     Delta0Inputs G c rows where
-  etaNonneg := h.etaNonneg
   branchA := fun Q hQ hLen => (h.branchA Q hQ hLen).inputs
   branchB := fun Q hQ hLen => (h.branchB Q hQ hLen).inputs
 

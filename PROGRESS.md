@@ -2234,3 +2234,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T20:45Z] V BATCH | DID: k9/F4 rescue (family + 13-col patch) | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 7th; 32/108 pending) | D: family-first rule posted to Codex
 [2026-07-04T21:15Z] V BATCH | DID: k8/F6 two-shot | RESULT: PARKED (F6-class) | D: none
 [2026-07-05T00:00Z] OK AUDIT-VERIFY | DID: adversarial re-check of ComponentReductionProvider finding | RESULT: CertGraph.lean 2782-2789 confirmed unpinned (betaVal:Q + bound only, zero consumers); finding REAL | D: none
+[2026-07-05T00:00Z] ✔ AUDIT-VERIFY | DID: adversarial re-check of finding (a) GraphData beta/gamma provider-field weakening vs draft | RESULT: CONFIRMED — CertGraph.lean 2654-2669/2685/2748 + draft 237-277/356-357 match claim; GammaBetaFacts never instantiated; betaGD/gamma_lower_bound absent from lean tree | Δ: none
+[2026-07-04T21:50Z] V BATCH | DID: k7/G3 patch | RESULT: rows 1->0 but 1 neg coeff — PARKED sources-only #2 | D: none
+[2026-07-04T22:00Z] V AUDIT | DID: ultracode 4-lens workflow (8 agents, 619k tokens) | RESULT: ALL 35 posted artifact SHAs verified exact; NO Lean unsoundness; 2 confirmed majors = interface honesty (package fields conclusion-strength pending providers; 2 dead etaNonneg fields; empty-RowDB vacuity) | D: dead fields removed, rebuild in flight

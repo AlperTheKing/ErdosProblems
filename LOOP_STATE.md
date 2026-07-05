@@ -814,3 +814,23 @@
   k7/F1 (map 41). 28/108 + pending appends.
 - NEXT TICK: main encoding-facts reply collect+type; sibling E2+; Codex G1-cascade outcome.
 - P(math)~90, P(Lean)~93.
+
+
+## TICK NOTES (2026-07-04T22:05Z) — quality-audit verdicts + interface fixes
+- ULTRACODE AUDIT (workflow wf_22362976): sha-audit = 35/35 posted hashes EXACT MATCH (all 7
+  certified rows); mailbox-consistency + type-discipline = no confirmed serious findings;
+  lean-soundness = NO UNSOUNDNESS, trichotomy exhaustive, n=0/edgeless handled, division
+  guarded by hNpos. CONFIRMED MAJORS (both interface-honesty): (1) certificate package embeds
+  conclusion-strength fields (Delta0CertBundles.etaNonneg === 25m<=N^2; GammaBetaFacts w/
+  empty rows degenerates to assuming the squeeze) — file is a SOUND CONDITIONAL SKELETON,
+  never advertise as full combinatorial reduction until provider discharges land (the real
+  discharge etaNonneg_of_bank0 exists+correct); (2) GraphData-level beta/gamma theorems talk
+  about provider rationals; realness enters at stage-4 betaSimple (proven transfer).
+- FIXES APPLIED: dead per-cut etaNonneg fields REMOVED from Delta0Inputs + Delta0CertBundles
+  (fewer provider obligations); rebuild bs31pl7id in flight.
+- OBLIGATIONS SHARPENED for main's provider module (RELAY on next retask): (a) RowDBFacts
+  needs a COVERAGE field (every bad edge of the max cut owns a row in the DB) to close the
+  empty-RowDB vacuity of gammaUpper; (b) GammaBetaFacts discharge must tie gammaVal to the
+  literal graph (sum ell^2 over the real row set), not provider-chosen values; (c) hTri
+  must become load-bearing at package construction (tri-freeness feeding row existence).
+- Batch: k7/F2 chain running (bcideqev6). 31/108 + k9/F4 append pending.
