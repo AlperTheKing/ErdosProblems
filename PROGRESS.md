@@ -2220,3 +2220,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T12:10Z] V CODEX | DID: scanned 15.4k mailbox | RESULT: 27/108 (k6/F6 CERTIFIED by exact_active_face_repair_split; k5/F1+k6/G7 appended v21/v24; k8/F2+k8/G7 by Codex); k6/G1 handoff; parked set handed to repair tool; marker 1732156 | D: hardest row DOWN, tool proven
 [2026-07-04T12:40Z] V BATCH | DID: k6/F5 ladder | RESULT: PARKED (probe Infeasible/1 basic); parked set 6 | D: none
 [2026-07-04T13:45Z] V BATCH | DID: k5/G2 patch r2 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 4th; 1st G-dominant via ladder; family-base salvage lesson) | D: ~28/108
+[2026-07-04T14:20Z] V BATCH | DID: k8/G4 patch ladder | RESULT: DIVERGES (19->70->195) — PARKED (7th in repair queue) | D: none
