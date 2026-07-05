@@ -84,3 +84,10 @@ _tmp_*/
 # Lean olean build-output dirs + interrupted .olean.tmp files
 *.olean.*
 tmp/rung2_lean_o_*/
+
+# Large regeneratable gate/chart artifacts (user-approved 2026-07-05): traces + CRT/solution dumps.
+# Small spec/meta/summary JSONs stay versioned; already-tracked files are unaffected.
+tmp/*.jsonl
+tmp/eq_odl1_rung2_*_384prime_v*.json
+tmp/probe_*multirepair*.json
+tmp/eq_odl1_rung2_face_split_*_v*.json
