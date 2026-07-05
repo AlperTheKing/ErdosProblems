@@ -791,3 +791,14 @@
   marker 1716709 (rescan next tick — its k5-odd rows likely landing).
 - SIBLING: E1 landed (queued), E2 in flight.
 - P(math)~89, P(Lean)~91. My certified rows: 3 (F2, F1, G7). Batch >= 23/108.
+
+
+## TICK NOTES (2026-07-04T15:32Z) — batch snapshot + NEXT-WAKE PRIORITY
+- BATCH: 28/108 ledger v26. MY CERTIFIED: k6/F2, k5/F1, k6/G7, k5/G2 (G2 append pending).
+  MY PARKED (repair queue): k5/G1, k6/G4, k6/G2, k5/F6, k6/F5, k8/G4, k5/F7. CODEX: repair
+  tool proven on k6/F6; k6/G1 cascade ruling posted (cap 8 exclusions -> 1024-gain -> face-split).
+  MY NEXT FRESH ROW: k8/G5_VZ_T (map 39) launching now; then k7/F1 (map 41), k3/G6 (43)...
+- NEXT-WAKE PRIORITY ORDER (Lean starved this window): (1) STAGE-4 bridge typing into
+  CertGraph tail (full text in-thread, plan in 09:05Z note); (2) main encoding-facts reply
+  extract+type; (3) sibling E2+ collect; (4) batch rows continue in background between builds.
+- Marker 1753540. P(math)~90, P(Lean)~91.
