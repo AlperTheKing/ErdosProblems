@@ -2245,3 +2245,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T02:10Z] V BATCH | DID: k7/F7 two-shot | RESULT: PARKED; k7/G3 certified by Codex signed-delta (35/108) | D: sources-only mode proven
 [2026-07-05T02:40Z] V BATCH | DID: k0/G6 family chain | RESULT: exact_ok=TRUE 0/0 no-repair — CERTIFIED (my 9th) | D: ~36/108
 [2026-07-05T03:10Z] V BATCH | DID: k7/G1 patch r1 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 10th row; 36/108 ledger v34) | D: none
+[2026-07-05T03:40Z] V BATCH | DID: k9/G5 quick repair | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 11th row) | D: ~37/108
