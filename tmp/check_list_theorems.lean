@@ -1,0 +1,11 @@
+import Mathlib
+#check List.getD_eq_getElem
+#check List.getD_eq_getElem?
+#check List.getD_eq_getElem?_getD
+#check List.getElem?_ofFn
+#check List.getElem_ofFn
+#check List.length_ofFn
+#check List.getElem?_eq_none_iff
+#check List.getElem?_eq_getElem
+#check List.getElem?_eq_some_getElem
+#check List.getD_eq_default

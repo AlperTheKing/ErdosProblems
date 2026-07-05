@@ -47,6 +47,12 @@ def scan_forbidden(paths: list[Path]) -> list[dict]:
     return hits
 
 
+def lean_files_under(path: Path) -> list[Path]:
+    if path.is_file():
+        return [path] if path.suffix == ".lean" else []
+    return sorted(p for p in path.rglob("*.lean") if p.is_file())
+
+
 def shard_record_count(path: Path) -> int:
     text = path.read_text(encoding="utf-8")
     return len(re.findall(r"\{\s*name\s*:=", text))
@@ -96,6 +102,42 @@ def load_dictionary_audit(root: Path, path_arg: str) -> tuple[dict | None, Path 
     return manifest, lean_out, manifest_path
 
 
+def load_v2_smoke(root: Path, path_arg: str | None) -> tuple[dict | None, Path | None]:
+    if not path_arg:
+        return None, None
+    smoke_path = rel_to_abs(root, path_arg)
+    require(smoke_path.exists(), f"missing candidate_v2 smoke summary: {smoke_path}")
+    smoke = read_json(smoke_path)
+    require(smoke.get("schema") == "branchb_v2_candidate_smoke_v1", "unexpected candidate_v2 smoke schema")
+    require(smoke.get("status") == "PASS", "candidate_v2 smoke did not PASS")
+    counts = smoke.get("counts", {})
+    require(counts.get("gate_b_candidate_counts") == {"candidate_v2": 1}, "candidate_v2 smoke did not exercise candidate_v2 only")
+    require(counts.get("gate_b_rows") == 1, "candidate_v2 smoke expected exactly one Gate-B row")
+    require(counts.get("op_steps", 0) > 0, "candidate_v2 smoke has no op steps")
+    emit = smoke.get("emit", {})
+    require(emit.get("returncode") == 0, "candidate_v2 smoke emitter failed")
+    lean_build = smoke.get("lean_build", {})
+    require(lean_build.get("returncode") == 0, "candidate_v2 smoke Lean build failed")
+    dict_emit = smoke.get("dictionary_emit", {})
+    require(dict_emit.get("returncode") == 0, "candidate_v2 smoke dictionary emitter failed")
+    dict_manifest = smoke.get("dictionary_manifest_data") or {}
+    require(dict_manifest.get("schema") == "branchb_dictionary_audit_lean_v2", "candidate_v2 smoke dictionary schema mismatch")
+    dict_checks = dict_manifest.get("checks", {})
+    require(bool(dict_checks) and all(dict_checks.values()), "candidate_v2 smoke dictionary checks failed")
+    require(dict_manifest.get("row_term_occurrences") == smoke.get("dictionary_expected_row_occurrences"), "candidate_v2 smoke row occurrence mismatch")
+    require(dict_manifest.get("op_piece_occurrences") == smoke.get("dictionary_expected_op_occurrences"), "candidate_v2 smoke op occurrence mismatch")
+    dict_support = smoke.get("dictionary_support_lean_build") or {}
+    require(dict_support.get("returncode") == 0, "candidate_v2 smoke dictionary support build failed")
+    dict_build = smoke.get("dictionary_lean_build") or {}
+    require(dict_build.get("returncode") == 0, "candidate_v2 smoke dictionary Lean build failed")
+    lean_path = rel_to_abs(root, smoke["lean"])
+    require(lean_path.exists(), f"missing candidate_v2 smoke Lean file: {lean_path}")
+    lean_text = lean_path.read_text(encoding="utf-8")
+    require("gateBCandidate := GateBCandidate.candidateV2" in lean_text, "candidate_v2 smoke Lean row missing candidateV2 tag")
+    require("gateBCandidate := GateBCandidate.candidateV1" not in lean_text, "candidate_v2 smoke Lean row contains candidateV1 tag")
+    return smoke, smoke_path
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -109,6 +151,16 @@ def main() -> None:
     ap.add_argument(
         "--dictionary-manifest",
         default="tmp/branchb_dictionary_audit_lean_v1_manifest.json",
+    )
+    ap.add_argument(
+        "--v2-smoke-summary",
+        default=None,
+        help="Optional candidate_v2 smoke summary; when supplied, require the v2+dictionary path to PASS and build.",
+    )
+    ap.add_argument(
+        "--lean-scan-root",
+        default=None,
+        help="Optional Lean file or directory for an additional tree-wide forbidden-token scan.",
     )
     ap.add_argument(
         "--summary",
@@ -130,6 +182,9 @@ def main() -> None:
     index = rel_to_abs(root, manifest["index_out"])
     require(support.exists(), f"missing support file: {support}")
     require(index.exists(), f"missing aggregate index file: {index}")
+    support_text = support.read_text(encoding="utf-8")
+    require("gateBDominance : ScaledGeCert" in support_text, "support missing Gate-B dominance certificate field")
+    require("ScaledGeCert.check r.gateBDominance" in support_text, "support does not check Gate-B dominance")
 
     input_jsonl = rel_to_abs(root, manifest["input"])
     signatures = rel_to_abs(root, manifest["signatures"])
@@ -137,6 +192,7 @@ def main() -> None:
     require(signatures.exists(), f"missing signature artifact: {signatures}")
 
     dictionary_manifest, dictionary_lean, dictionary_manifest_path = load_dictionary_audit(root, args.dictionary_manifest)
+    v2_smoke, v2_smoke_path = load_v2_smoke(root, args.v2_smoke_summary)
 
     all_files = [support, *emitted]
     if index not in all_files:
@@ -145,6 +201,20 @@ def main() -> None:
         all_files.append(dictionary_lean)
     forbidden_hits = scan_forbidden(all_files)
     require(not forbidden_hits, f"forbidden Lean tokens found: {forbidden_hits[:3]}")
+
+    tree_scan_files: list[Path] = []
+    if args.lean_scan_root:
+        scan_root = rel_to_abs(root, args.lean_scan_root)
+        require(scan_root.exists(), f"missing Lean scan root: {scan_root}")
+        tree_scan_files = lean_files_under(scan_root)
+        require(tree_scan_files, f"Lean scan root contained no .lean files: {scan_root}")
+        tree_forbidden_hits = scan_forbidden(tree_scan_files)
+        require(
+            not tree_forbidden_hits,
+            f"tree-wide forbidden Lean tokens found: {tree_forbidden_hits[:3]}",
+        )
+    else:
+        tree_forbidden_hits = []
 
     shard_files = sorted(p for p in emitted if p.name.startswith("Shard") and p.suffix == ".lean")
     record_counts = [shard_record_count(p) for p in shard_files]
@@ -156,8 +226,30 @@ def main() -> None:
     require(total_rows == manifest["counts"]["rows"], "manifest row count mismatch")
     require(total_rows == 14247, "unexpected Branch-B row total")
     require(len(shard_files) == 29, "unexpected shard count")
+    checks = manifest.get("checks", {})
+    require(checks.get("all_pressure_eq_scaled") is True, "manifest pressure checks not all true")
+    require(checks.get("all_finite_margins_scaled") is True, "manifest finite-margin checks not all true")
+    require(checks.get("all_gate_b_dominance_scaled") is True, "manifest Gate-B dominance checks not all true")
+    require(
+        manifest["counts"].get("case_counts")
+        == {
+            "DETOUR_RESIDUAL": 136,
+            "FREE_PACKET_EXCHANGE": 3688,
+            "MU_NUK": 800,
+            "MU_NUK_REPAIRED": 126,
+            "SPARSE_M1_BANKL_BYPASS": 9463,
+            "TIGHT_ZERO": 34,
+        },
+        "unexpected Branch-B case counts",
+    )
+    require(manifest["counts"].get("gate_b_candidate_counts") == {"candidate_v1": 926, "none": 13321}, "unexpected Gate-B candidate counts")
+    require(manifest["counts"].get("gate_b_rows") == 926, "unexpected Gate-B row count")
+    require(manifest["counts"].get("op_steps") == 1852, "unexpected Gate-B op-step count")
     require("branchBTotalRows : natListSum branchBShardLengths = 14247" in index_text, "missing total-row theorem")
     require("branchBShardCount : branchBShardChecks.length = 29" in index_text, "missing shard-count theorem")
+    require("branchBShardCaseCountVectors_expected" in index_text, "missing shard case-count theorem")
+    require("branchBShardCandidateCountVectors_expected" in index_text, "missing shard candidate-count theorem")
+    require("branchBShardGateBRowCounts_expected" in index_text, "missing shard Gate-B row-count theorem")
 
     require(build.get("failures") == [], "build summary contains failures")
     build_modules = {r.get("module") for r in build.get("results", [])}
@@ -208,6 +300,9 @@ def main() -> None:
         "op_steps": manifest["counts"]["op_steps"],
         "forbidden_tokens": list(FORBIDDEN),
         "forbidden_hits": 0,
+        "lean_scan_root": str(rel_to_abs(root, args.lean_scan_root)) if args.lean_scan_root else None,
+        "lean_scan_files": len(tree_scan_files),
+        "lean_scan_forbidden_hits": len(tree_forbidden_hits),
         "build_modules": build["count"],
         "build_failures": 0,
         "legacy_recovered_tmp_modules": len(legacy_recovered),
@@ -224,6 +319,13 @@ def main() -> None:
             "row_term_occurrences": dictionary_manifest.get("row_term_occurrences") if dictionary_manifest else None,
             "op_signature_count": dictionary_manifest.get("op_signature_count") if dictionary_manifest else None,
             "op_piece_occurrences": dictionary_manifest.get("op_piece_occurrences") if dictionary_manifest else None,
+        },
+        "candidate_v2_smoke": {
+            "present": v2_smoke is not None,
+            "summary": str(v2_smoke_path) if v2_smoke_path is not None else None,
+            "status": v2_smoke.get("status") if v2_smoke else None,
+            "gate_b_candidate_counts": v2_smoke.get("counts", {}).get("gate_b_candidate_counts") if v2_smoke else None,
+            "op_steps": v2_smoke.get("counts", {}).get("op_steps") if v2_smoke else None,
         },
         "status": "PASS",
     }

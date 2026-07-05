@@ -1,0 +1,182 @@
+{
+  "build_failures": 0,
+  "build_modules": 33,
+  "build_summary": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_module_build_codex20260705_current_summary.json",
+  "candidate_v2_smoke": {
+    "gate_b_candidate_counts": {
+      "candidate_v2": 1
+    },
+    "op_steps": 2,
+    "present": true,
+    "status": "PASS",
+    "summary": "E:\\Projects\\ErdosProblems\\tmp\\branchb_v2_candidate_smoke_live_summary.json"
+  },
+  "case_counts": {
+    "DETOUR_RESIDUAL": 136,
+    "FREE_PACKET_EXCHANGE": 3688,
+    "MU_NUK": 800,
+    "MU_NUK_REPAIRED": 126,
+    "SPARSE_M1_BANKL_BYPASS": 9463,
+    "TIGHT_ZERO": 34
+  },
+  "dictionary_audit": {
+    "lean_out": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBDictionaryAudit.lean",
+    "manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_dictionary_audit_lean_codex20260705_live_manifest.json",
+    "op_piece_occurrences": 713,
+    "op_signature_count": 10,
+    "present": true,
+    "row_signature_count": 38,
+    "row_term_occurrences": 19988
+  },
+  "forbidden_hits": 0,
+  "forbidden_tokens": [
+    "native_decide",
+    "sorry",
+    "admit",
+    "axiom",
+    "unsafe"
+  ],
+  "gate_b_rows": 926,
+  "lean_scan_files": 106,
+  "lean_scan_forbidden_hits": 0,
+  "lean_scan_root": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0",
+  "legacy_recovered_tmp_modules": 0,
+  "manifest": "E:\\Projects\\ErdosProblems\\tmp\\branchb_lean_transpile_full_codex20260705_live_manifest.json",
+  "op_steps": 1852,
+  "recovered_tmp_modules": 0,
+  "recovered_tmp_workaround": false,
+  "recovery_methods": [],
+  "recovery_olean_modules": 0,
+  "rows": 14247,
+  "schema": "branchb_lean_artifact_audit_v2",
+  "sha256": {
+    "build_summary": "f228a2070f80af35fb9c2d35b16c84b74c7da64cd12c93f823fe9bec3d73d17c",
+    "dictionary_lean": "f1938dbb867c3959b270bf22672d112a44db2028843968827f058dfecebd6e45",
+    "dictionary_manifest": "2b124689c1b844aa335d74830f4c20f5f39ae8eaf024a443cfe34cefadd6957d",
+    "index": "86d57255cde178242f44a87dc8a8b84b73b1a023a929b9da6e1e6c6bf4366722",
+    "input_jsonl": "a23d59c6bd547265ec0a098d77399af87bb27a01a84dfa29b844ddc8933d6f1e",
+    "shards": [
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard000.lean",
+        "sha256": "c3808156eb71afca3baa72531ee840db6e7749525d1580f4887e2586400fbf15"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard001.lean",
+        "sha256": "60349213a7ce3402f53d8944aad4e0f4c94ccf2296af782cd7fb0bd0245c7807"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard002.lean",
+        "sha256": "85e35d6140c6b9cb5db4ffd19d58d09449e3adce26a6393e6ce6852dcfaa14d1"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard003.lean",
+        "sha256": "1196852162215e2b8ca14ef54666c716d9259cf7d47910fd3b9a0032acdd5ba7"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard004.lean",
+        "sha256": "fa5ecff393ba92c96b11a9102ce1c8a0998aa3d21e3767a5867b47b666505a52"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard005.lean",
+        "sha256": "d1d1a9489c06e609e1b62a8a4eb4c9f7ed1088a54a65cc838feddb4ed2f3e444"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard006.lean",
+        "sha256": "648270eb236f985cbeb5d199cbbb3cfbc7b1bf5c90301c51eb87fcbe8ba01ab6"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard007.lean",
+        "sha256": "a58b3deb94064004fb68473a66cdb6f33afa9624d3bd1b2304adc8dd98943b70"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard008.lean",
+        "sha256": "87576192490c401dc7a3d2000f6a1358a5a54909c11d3220fc252eaeb0d47fca"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard009.lean",
+        "sha256": "2ad890e61f729767dab7e5df32d14e90971b8570033c43cb61c9836e788e65b5"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard010.lean",
+        "sha256": "8c53d9976b7a8f958353b0592b91b5e8afb6984ce8cb68b1a264edf3fe8af8e5"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard011.lean",
+        "sha256": "9117663018404b3ad220abec330b74893b022b4ce37fed604858a29cbfdefaab"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard012.lean",
+        "sha256": "a36a38f93df8aab38a92470501f34229973beeada0426ee39e9c7bbc7203d58d"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard013.lean",
+        "sha256": "8689beb5c9029f2dcb255630a3af378e7289a3b888994f835316a82cae85ff4d"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard014.lean",
+        "sha256": "0b6f6fe2a208c1bd39a335b3d3062bbdde1493ca2090153d1ebc6173c4b6081c"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard015.lean",
+        "sha256": "f2604ab41784333b6cb0d52ba4779156cb3068d023ecba7166691804ce1c77ac"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard016.lean",
+        "sha256": "a62f1444112061023af8a4f975fdb61402682d7dc7b541eb09cba47cb9631e4a"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard017.lean",
+        "sha256": "aaf4a1f7f7b0d407734af0a899260a8454b697be9d7e6bc5f1a13308c063475a"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard018.lean",
+        "sha256": "58857bc8a3f2436e459ba2747d654d8be7b360075f6fab6fafdef8020ea19362"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard019.lean",
+        "sha256": "bc3cf028eaa7cb5d8c76016e785e679bde72746e91dd4a42643d6fe09f84823a"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard020.lean",
+        "sha256": "9a6a203d2c04447788719d33bf065c4b82684b12c537f8e929310c0d982c03ec"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard021.lean",
+        "sha256": "5e439e817ae58a6fc9058d87598e60acf5ea6aa89b95ccf71777b9af5eb5f131"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard022.lean",
+        "sha256": "9ccc044610bf27da55942622b44babd1da70b58cb4ce05ca11d9c6531ce884d8"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard023.lean",
+        "sha256": "2080bbf9e356802db1e1d5b21f5860dd50a74eaad398800138d1385e823a40cf"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard024.lean",
+        "sha256": "21e4c55bb673953f8e4d8b0aa86d6f913b5b619d4315c7ca48cd3c20c23b02d8"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard025.lean",
+        "sha256": "33cc5af16fcab534c08d21bdf983dc781c8172add52478b9792f2ee851437ba0"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard026.lean",
+        "sha256": "fc5104b54e08cd92ffb8161c261cd70888702612a0b66889af8e9e1c501b13ea"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard027.lean",
+        "sha256": "a1ada5f7900c5b3e9efa41a98d03ca6780059f57aeafef48e77f7bbb636bf8c7"
+      },
+      {
+        "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\Cert\\BranchBData\\Shard028.lean",
+        "sha256": "1c3ffe70235f40cb7e8f80ac41c8a6240317f59cb487ee7fda14cc5ad3a2f068"
+      }
+    ],
+    "signatures": "5a814c6739de71ab9ad1479c94b2c27ed47b9dc508e7b54dc9e6e62f5319c159",
+    "support": "ce52ea8806f5880d5b99e6f63a0cf0bce10168c4b529dced446dade86f2b3057",
+    "transpile_manifest": "66d62048524912e7d9a1abbfc3ac97aed25fd8ef39e832e30cdb3a0ed2bae1c0"
+  },
+  "shards": 29,
+  "status": "PASS"
+}

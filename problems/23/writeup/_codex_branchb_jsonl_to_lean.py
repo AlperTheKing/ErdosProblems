@@ -48,6 +48,7 @@ DICT_TO_LEAN = {
 }
 
 CANDIDATE_PRIORITY = ("candidate_v2", "candidate_v1")
+CANDIDATE_NAMES = ("none", "candidate_v1", "candidate_v2")
 
 CANDIDATE_TO_LEAN = {
     "none": "GateBCandidate.none",
@@ -240,7 +241,7 @@ def certify_row(row: dict[str, Any]) -> dict[str, Any]:
 
     candidate_version, seq = select_gate_b_sequence(row)
     op_certs = []
-    dominance = None
+    dominance = scaled_ge(Fraction(0), Fraction(0))
     if seq:
         raw_rho = frac(seq["raw_to_final_rho_a"])
         op_sum = frac(seq["op_sequence_rho_sum"])
@@ -416,6 +417,7 @@ def support_lines() -> list[str]:
     lines.append("  gateBCandidate : GateBCandidate")
     lines.append("  pressure : ScaledEqCert")
     lines.append("  finiteMargin : ScaledGeCert")
+    lines.append("  gateBDominance : ScaledGeCert")
     lines.append("  opSteps : List OpStepPilot")
     lines.append("deriving Repr")
     lines.append("")
@@ -425,12 +427,40 @@ def support_lines() -> list[str]:
     lines.append("def RowPilot.check (r : RowPilot) : Bool :=")
     lines.append("  ScaledEqCert.check r.pressure &&")
     lines.append("  ScaledGeCert.check r.finiteMargin &&")
+    lines.append("  ScaledGeCert.check r.gateBDominance &&")
     lines.append("  RowPilot.candidateCheck r &&")
     lines.append("  opStepListCheck r.opSteps")
     lines.append("")
     lines.append("def rowPilotListCheck : List RowPilot -> Bool")
     lines.append("  | [] => true")
     lines.append("  | r :: rs => RowPilot.check r && rowPilotListCheck rs")
+    lines.append("")
+    lines.append("def rowPilotCaseCount (tag : BranchBCase) : List RowPilot -> Nat")
+    lines.append("  | [] => 0")
+    lines.append("  | r :: rs => (if r.caseTag = tag then 1 else 0) + rowPilotCaseCount tag rs")
+    lines.append("")
+    lines.append("def rowPilotCandidateCount (tag : GateBCandidate) : List RowPilot -> Nat")
+    lines.append("  | [] => 0")
+    lines.append("  | r :: rs => (if r.gateBCandidate = tag then 1 else 0) + rowPilotCandidateCount tag rs")
+    lines.append("")
+    lines.append("def rowPilotGateBRowCount : List RowPilot -> Nat")
+    lines.append("  | [] => 0")
+    lines.append("  | r :: rs => (if GateBCandidate.expectsOps r.gateBCandidate then 1 else 0) + rowPilotGateBRowCount rs")
+    lines.append("")
+    lines.append("def branchBCaseCountVector (rows : List RowPilot) : List Nat := [")
+    lines.append("  rowPilotCaseCount BranchBCase.tightZero rows,")
+    lines.append("  rowPilotCaseCount BranchBCase.freePacketExchange rows,")
+    lines.append("  rowPilotCaseCount BranchBCase.sparseM1BankLBypass rows,")
+    lines.append("  rowPilotCaseCount BranchBCase.muNuk rows,")
+    lines.append("  rowPilotCaseCount BranchBCase.muNukRepaired rows,")
+    lines.append("  rowPilotCaseCount BranchBCase.detourResidual rows")
+    lines.append("]")
+    lines.append("")
+    lines.append("def branchBCandidateCountVector (rows : List RowPilot) : List Nat := [")
+    lines.append("  rowPilotCandidateCount GateBCandidate.none rows,")
+    lines.append("  rowPilotCandidateCount GateBCandidate.candidateV1 rows,")
+    lines.append("  rowPilotCandidateCount GateBCandidate.candidateV2 rows")
+    lines.append("]")
     lines.append("")
     lines.append("end Cert")
     lines.append("end Erdos23Delta0")
@@ -489,6 +519,7 @@ def emit_lean(
             f"gateBCandidate := {CANDIDATE_TO_LEAN[cert['gate_b']['candidate_version']]}, "
             f"pressure := {emit_scaled_eq('pressure', cert['pressure_eq'])}, "
             f"finiteMargin := {emit_scaled_ge(cert['finite_margin'])}, "
+            f"gateBDominance := {emit_scaled_ge(cert['gate_b']['dominance'])}, "
             f"opSteps := [{', '.join(op_entries)}] "
             "}"
         )
@@ -517,7 +548,29 @@ def module_name_from_path(path: Path) -> str:
     raise ValueError(f"cannot derive module name from {path}")
 
 
-def emit_index(out_path: Path, shard_paths: list[str], shard_lengths: list[int], extra_imports: list[str]) -> None:
+def count_cases(certs: list[dict[str, Any]]) -> list[int]:
+    counter = Counter(c["case"] for c in certs)
+    return [counter[name] for name in CASE_NAMES]
+
+
+def count_candidates(certs: list[dict[str, Any]]) -> list[int]:
+    counter = Counter(c["gate_b"]["candidate_version"] for c in certs)
+    return [counter[name] for name in CANDIDATE_NAMES]
+
+
+def count_gate_b_rows(certs: list[dict[str, Any]]) -> int:
+    return sum(1 for c in certs if c["gate_b"]["required"])
+
+
+def emit_index(
+    out_path: Path,
+    shard_paths: list[str],
+    shard_lengths: list[int],
+    extra_imports: list[str],
+    shard_case_counts: list[list[int]],
+    shard_candidate_counts: list[list[int]],
+    shard_gate_b_counts: list[int],
+) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines: list[str] = []
     lines.append("/- Generated aggregate imports for Branch-B certificate shards. -/")
@@ -534,6 +587,9 @@ def emit_index(out_path: Path, shard_paths: list[str], shard_lengths: list[int],
     def_names = [f"branchBRowsShard{name[-3:]}" for name in names]
     checks = [f"rowPilotListCheck {d}" for d in def_names]
     lens = [f"{d}.length" for d in def_names]
+    case_vectors = [f"branchBCaseCountVector {d}" for d in def_names]
+    candidate_vectors = [f"branchBCandidateCountVector {d}" for d in def_names]
+    gate_b_counts = [f"rowPilotGateBRowCount {d}" for d in def_names]
     lines.append("def branchBShardChecks : List Bool := [")
     lines.append("  " + ",\n  ".join(checks))
     lines.append("]")
@@ -547,9 +603,40 @@ def emit_index(out_path: Path, shard_paths: list[str], shard_lengths: list[int],
     lines.append("  " + ",\n  ".join(lens))
     lines.append("]")
     lines.append("")
+    lines.append("def branchBShardCaseCountVectors : List (List Nat) := [")
+    lines.append("  " + ",\n  ".join(case_vectors))
+    lines.append("]")
+    lines.append("")
+    lines.append("def branchBShardCandidateCountVectors : List (List Nat) := [")
+    lines.append("  " + ",\n  ".join(candidate_vectors))
+    lines.append("]")
+    lines.append("")
+    lines.append("def branchBShardGateBRowCounts : List Nat := [")
+    lines.append("  " + ",\n  ".join(gate_b_counts))
+    lines.append("]")
+    lines.append("")
     lines.append("set_option maxRecDepth 20000 in")
     lines.append("theorem branchBShardLengths_expected :")
     lines.append("    branchBShardLengths = [" + ", ".join(str(x) for x in shard_lengths) + "] := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBShardCaseCountVectors_expected :")
+    lines.append("    branchBShardCaseCountVectors = [")
+    lines.append("      " + ",\n      ".join(lean_int_list(v) for v in shard_case_counts))
+    lines.append("    ] := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBShardCandidateCountVectors_expected :")
+    lines.append("    branchBShardCandidateCountVectors = [")
+    lines.append("      " + ",\n      ".join(lean_int_list(v) for v in shard_candidate_counts))
+    lines.append("    ] := by")
+    lines.append("  rfl")
+    lines.append("")
+    lines.append("set_option maxRecDepth 20000 in")
+    lines.append("theorem branchBShardGateBRowCounts_expected :")
+    lines.append("    branchBShardGateBRowCounts = [" + ", ".join(str(x) for x in shard_gate_b_counts) + "] := by")
     lines.append("  rfl")
     lines.append("")
     lines.append("set_option maxRecDepth 20000 in")
@@ -597,6 +684,9 @@ def main() -> None:
         certs = [certify_row(r) for r in rows]
         out_dir = Path(args.out_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
+        shard_case_counts: list[list[int]] = []
+        shard_candidate_counts: list[list[int]] = []
+        shard_gate_b_counts: list[int] = []
         for idx in range(0, len(certs), args.shard_size):
             shard_no = idx // args.shard_size
             chunk = certs[idx : idx + args.shard_size]
@@ -610,9 +700,20 @@ def main() -> None:
             )
             emitted.append(str(shard_path))
             shard_lengths.append(len(chunk))
+            shard_case_counts.append(count_cases(chunk))
+            shard_candidate_counts.append(count_candidates(chunk))
+            shard_gate_b_counts.append(count_gate_b_rows(chunk))
         shard_paths = emitted if args.self_contained else emitted[1:]
         if not args.self_contained:
-            emit_index(Path(args.index_out), shard_paths, shard_lengths, args.extra_index_import)
+            emit_index(
+                Path(args.index_out),
+                shard_paths,
+                shard_lengths,
+                args.extra_index_import,
+                shard_case_counts,
+                shard_candidate_counts,
+                shard_gate_b_counts,
+            )
             emitted.append(args.index_out)
 
     case_counts = Counter(c["case"] for c in certs)
@@ -642,6 +743,7 @@ def main() -> None:
         "checks": {
             "all_pressure_eq_scaled": all(c["pressure_eq"].ok for c in certs),
             "all_finite_margins_scaled": all(c["finite_margin"].ok for c in certs),
+            "all_gate_b_dominance_scaled": all(c["gate_b"]["dominance"].ok for c in certs),
         },
     }
     Path(args.manifest).write_text(json.dumps(manifest, indent=2, sort_keys=True), encoding="utf-8")

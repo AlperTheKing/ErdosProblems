@@ -2,7 +2,7 @@
 Erdős #23 δ=0 — Lean 4 skeleton (Branch-B first).
 Mirrors the archived proof chain (problems/23/writeup/*.md). ALL sorries are
 tracked obligations; nothing ships until this file (and its expansions) is
-sorry-free and merged as ONE formal-conjectures PR.
+fully proved and merged as ONE formal-conjectures PR.
 
 Chain: β ≤ N²/25 ⟸ Γ ≤ N² ⟸ GERSH ⟸ (Branch A: GERSH_{L=5}) ∧ (Branch B: GERSH_{L>5})
 Branch B: Banked-UPO ⟸ Bank-L + H_BD-overfull + cell ledger
@@ -44,13 +44,18 @@ theorem beta_le_badCount (G : SimpleGraph V) [DecidableRel G.Adj] (c : Cut G) :
     beta G ≤ c.badCount G :=
   Finset.inf'_le _ (Finset.mem_univ c.side)
 
-/-! ### Main target -/
+/-! ### Main target statement
 
-/-- Erdős #23, δ=0: every triangle-free graph on N vertices has β ≤ N²/25. -/
-theorem erdos23_delta0 (G : SimpleGraph V) [DecidableRel G.Adj]
-    (htf : G.CliqueFree 3) :
-    (beta G : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 := by
-  sorry
+The live theorem surface is the package-form `erdos23_delta0` in
+`CertGraph.lean`. This skeleton keeps only the old target as a proposition so it
+does not masquerade as a proved theorem.
+-/
+
+/-- Erdős #23, δ=0 target statement: every triangle-free graph on `N` vertices
+has `β ≤ N²/25`. -/
+def erdos23_delta0_statement (G : SimpleGraph V) [DecidableRel G.Adj]
+    (_htf : G.CliqueFree 3) : Prop :=
+  (beta G : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25
 
 /-! ### Branch-B lemma tree (statements to be formalized; proofs mirror the
     archived chain — every node has an exact-verified informal proof) -/

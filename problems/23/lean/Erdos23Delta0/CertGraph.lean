@@ -2385,9 +2385,9 @@ theorem gersh_Lgt5_of_bankL (R N eta L : ℚ) (hL : 5 < L)
 /-! ### Assembly layer, stage 2: provider-facing interfaces, row layer, the
 Branch-A/Branch-B trichotomy, row aggregation, and the final GraphData /
 SimpleGraph statements (per the 3-gap fill; data-carrying packages are
-Type-valued — Prop structures cannot project data fields). BConnected and
-GammaMinimalConnected are SCAFFOLDING stubs (True) until the exists_good_cut
-provider module lands; nothing below eliminates them. -/
+Type-valued — Prop structures cannot project data fields). BConnected is the
+real bad-edge endpoint blue-path condition; GammaMinimalConnected is a
+Type-valued carrier for the selected γ-minimal connected maximum cut. -/
 
 /-- Max cut as validity plus bad-count minimality. -/
 structure IsMaxCut (G : GraphData) (c : CutData) : Prop where
@@ -3437,12 +3437,46 @@ theorem checkCut_cutDataOfFn (G : GraphData) (f : CutFn G.n) :
 def cutFnOfCutData (G : GraphData) (c : CutData) : CutFn G.n :=
   fun i => sideb c i.val
 
+/-- Bad counts agree for cuts with identical side predicates on every Nat. -/
+theorem badCount_congr_all_vertices (G : GraphData) (c1 c2 : CutData)
+    (hs : ∀ v : Nat, sideb c1 v = sideb c2 v) :
+    badCount G c1 = badCount G c2 := by
+  unfold badCount
+  congr 1
+  apply List.filter_congr
+  intro e _he
+  unfold badb
+  rw [hs e.1, hs e.2]
+
+/-- The finite-coloring representation round-trips a valid literal cut. -/
+theorem sideb_cutDataOfFn_cutFnOfCutData (G : GraphData) (c : CutData)
+    (hc : checkCut G c = true) (v : Nat) :
+    sideb (cutDataOfFn G (cutFnOfCutData G c)) v = sideb c v := by
+  have hlen : c.side.length = G.n := by
+    unfold checkCut at hc
+    simpa using hc
+  unfold sideb cutDataOfFn cutFnOfCutData
+  rw [List.getD_eq_getElem?_getD, List.getD_eq_getElem?_getD, List.getElem?_ofFn]
+  by_cases hv : v < G.n
+  · simp [hv]
+    change c.side.getD v false = c.side[v]?.getD false
+    rw [List.getD_eq_getElem?_getD]
+  · have hcv : c.side.length ≤ v := by omega
+    have hnone : c.side[v]? = none := List.getElem?_eq_none_iff.mpr hcv
+    simp [hv, hnone]
+
 /-- Mechanical CutData↔CutFn bridge obligation (kept named because checkCut
     unfolding behavior varies across call sites). -/
 structure CutFnBridgeFacts (G : GraphData) : Prop where
   badCount_cutDataOfFn_of_cut :
     ∀ c : CutData, checkCut G c = true →
       badCount G (cutDataOfFn G (cutFnOfCutData G c)) = badCount G c
+
+/-- Default discharge of the CutData↔CutFn bridge. -/
+theorem cutFnBridgeFacts_default (G : GraphData) : CutFnBridgeFacts G where
+  badCount_cutDataOfFn_of_cut := fun c hc =>
+    badCount_congr_all_vertices G (cutDataOfFn G (cutFnOfCutData G c)) c
+      (sideb_cutDataOfFn_cutFnOfCutData G c hc)
 
 /-- Minimum bad count over the finite coloring space. -/
 noncomputable def minBadCountGD (G : GraphData) : Nat :=
@@ -3476,6 +3510,11 @@ theorem maxcut_exists_from_cutFn_bridge (G : GraphData)
   rw [hBridge.badCount_cutDataOfFn_of_cut d hd] at hm_le
   exact hm_le
 
+/-- FINITE MAX-CUT EXISTENCE with the generic CutData↔CutFn bridge discharged. -/
+theorem maxcut_exists_from_cutFn (G : GraphData) :
+    ∃ c : CutData, checkCut G c = true ∧ IsMaxCut G c :=
+  maxcut_exists_from_cutFn_bridge G (cutFnBridgeFacts_default G)
+
 /-- Component-flip provider: on connected graphs every max cut is
     B-connected (flip a proper blue component to strictly drop badCount). -/
 structure ConnectedMaxCutImpliesBConnected (G : GraphData) : Prop where
@@ -3508,6 +3547,13 @@ theorem exists_good_cut_from_providers (G : GraphData)
       bConnected := hB
       rowsFacts := hRowsGamma.toRowDBFactsGeneral
       gammaBeta := gammaBetaProvider_of_rowDB hRowsGamma }
+
+/-- GOOD-CUT EXISTENCE with the CutData↔CutFn bridge discharged generically. -/
+theorem exists_good_cut_from_providers_default (G : GraphData)
+    (hConnMax : ConnectedMaxCutImpliesBConnected G)
+    (hGammaSel : GammaMinSelectionProvider G) :
+    ∃ c rows, checkCut G c = true ∧ Nonempty (GoodCutData G c rows) :=
+  exists_good_cut_from_providers G (cutFnBridgeFacts_default G) hConnMax hGammaSel
 
 /-- The per-graph certificate payload remaining after the discharges:
     exactly the row-wise Branch-A and Branch-B obligations. -/
