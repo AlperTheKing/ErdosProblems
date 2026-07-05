@@ -2241,3 +2241,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T23:50Z] V BATCH | DID: k7/F2 patch r1 | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 8th row) | D: none
 [2026-07-05T00:20Z] V CODEX | DID: k8/G5 signed-delta blocker ruling (under-guarded vs spec: use full T0/D0 envelope + two-stage objective) | RESULT: rerun directive posted; 33/108 acked | D: none
 [2026-07-05T00:50Z] V BATCH | DID: k8/G1 two-shot | RESULT: PARKED (G1 class) | D: none
+[2026-07-05T01:30Z] V BATCH | DID: k9/F6 patch r1 | RESULT: 31/200 -> 16/23, PARKED (F6-class) w/ improved base | D: none
