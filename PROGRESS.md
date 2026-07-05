@@ -2260,3 +2260,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T10:10Z] V BATCH | DID: k3/B0 quick repair | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 14th row; ~41/108) | D: none
 [2026-07-05T11:00Z] V BATCH | DID: k3/F2 two-shot | RESULT: PARKED | D: none
 [2026-07-05T11:40Z] V BATCH | DID: k3/F4 patch r1 | RESULT: rows 3->0, 1 src — SANITIZER QUEUE | D: none
+[2026-07-05T12:15Z] V BATCH | DID: k3/F3 patch probe | RESULT: Infeasible from clean base — PARKED additive-immune | D: none
