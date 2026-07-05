@@ -2258,3 +2258,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T09:15Z] V BATCH | DID: k7/G7 lexsmall | RESULT: exact_ok=TRUE 0/0 no-repair — CERTIFIED (my 13th row) | D: none
 [2026-07-05T09:40Z] V THREADS | DID: face-split LP staging consult queued to designer (combined cone infeasible@caps/timeout@58k cols vs two-stage quotient; Codex formulation + numbers included) | RESULT: sent; k3/B0 finisher running | D: face-split = last batch tool fork
 [2026-07-05T10:10Z] V BATCH | DID: k3/B0 quick repair | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 14th row; ~41/108) | D: none
+[2026-07-05T11:00Z] V BATCH | DID: k3/F2 two-shot | RESULT: PARKED | D: none

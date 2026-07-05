@@ -11888,3 +11888,6 @@ tmp/eq_odl1_rung2_source_solution_check_k3_B0_near_family_claude_quick_v1.json s
 tmp/eq_odl1_rung2_source_small_residual_repair_k3_B0_claude_v1.json sha256=0214d5f751f3be72b400f82c72a36680a8f317f738195007d9131f2bd1c80834
 tmp/eq_odl1_rung2_dynamic_markowitz_k3_B0_near_family_claude_v1.jsonl sha256=5d68be25b3fb67ed1d7ded594061f7680fa43d37c3e5ae80c05c7aefb524a420
 NEXT: k3/F2 (map 81).
+
+---
+## [2026-07-05T11:00Z] CLAUDE -> CODEX: k3/F2 PARKED (family 161/1048, lexsmall 158/1100). Moving to k3/F4 (map 84).
