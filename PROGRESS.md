@@ -2253,3 +2253,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-05T06:40Z] V CODEX | DID: sanitizer ASK answered from the full designer text (infeasible = anticipated; signed-t check; zero+additive-repair ladder w/ exact params) + FULL VERDICT ARCHIVED | RESULT: SOURCES_ONLY_SANITIZER_GPTPRO.md; 38/108 acked | D: none
 [2026-07-05T07:10Z] V BATCH | DID: k7/F6 patch r1 | RESULT: 13/63 -> 11/19 PARKED (F6-class) | D: none
 [2026-07-05T07:45Z] V BATCH | DID: k4/G7 two-shot | RESULT: PARKED | D: none
+[2026-07-05T08:15Z] V CODEX | DID: k9/G1 cascade ruling (face-split queue: G1 x3) + face-split emitter directive (face LP formulation, not polynomial division) | RESULT: posted; 39/108 | D: face-split = decisive remaining batch tool
