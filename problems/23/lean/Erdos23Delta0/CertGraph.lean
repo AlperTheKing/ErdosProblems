@@ -2938,5 +2938,412 @@ theorem erdos23_delta0 {V : Type*} [Fintype V] [DecidableEq V]
     (betaSimple Gs : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 :=
   erdos23_delta0_simpleGraph_from_package Gs hTri P
 
+/-! ### Assembly layer, stage 5: encoding-facts discharge — the total
+constructor `simpleGraphEncodingFacts_default` with real proofs of all six
+fields. After this, the certificate package reduces to the good cut plus
+the Delta0 bundles. -/
+
+section EncodingFacts
+
+variable {V : Type*} [Fintype V] [DecidableEq V]
+variable (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
+
+private noncomputable abbrev eFin : V ≃ Fin (Fintype.card V) :=
+  vEquivFin V
+
+private noncomputable def encPair : V × V → Nat × Nat :=
+  fun p => ((eFin p.1).val, (eFin p.2).val)
+
+omit [DecidableEq V] in
+private lemma encPair_injective :
+    Function.Injective (encPair (V := V)) := by
+  intro p q h
+  rcases p with ⟨p₁, p₂⟩
+  rcases q with ⟨q₁, q₂⟩
+  simp [encPair] at h
+  rcases h with ⟨h₁, h₂⟩
+  have hp₁ : eFin p₁ = eFin q₁ := Fin.ext h₁
+  have hp₂ : eFin p₂ = eFin q₂ := Fin.ext h₂
+  have hq₁ : p₁ = q₁ := (eFin (V := V)).injective hp₁
+  have hq₂ : p₂ = q₂ := (eFin (V := V)).injective hp₂
+  simp [hq₁, hq₂]
+
+private lemma encoded_edges_nodup :
+    (graphDataOfSimpleGraph Gs).edges.Nodup := by
+  classical
+  unfold graphDataOfSimpleGraph
+  dsimp
+  exact (Finset.nodup_toList (orderedEdgeFinset Gs)).map encPair_injective
+
+private lemma mem_orderedEdgeFinset_iff (p : V × V) :
+    p ∈ orderedEdgeFinset Gs ↔
+      eFin p.1 < eFin p.2 ∧ Gs.Adj p.1 p.2 := by
+  classical
+  unfold orderedEdgeFinset
+  simp [vEquivFin]
+
+private lemma encoded_edge_check_ok (x : Nat × Nat)
+    (hx : x ∈ (graphDataOfSimpleGraph Gs).edges) :
+    checkEdge (graphDataOfSimpleGraph Gs) x = true := by
+  classical
+  unfold graphDataOfSimpleGraph at hx ⊢
+  dsimp at hx ⊢
+  rcases List.mem_map.mp hx with ⟨p, hp, rfl⟩
+  have hp' : p ∈ orderedEdgeFinset Gs := by
+    simpa using (Finset.mem_toList.mp hp)
+  have hlt : (eFin p.1).val < (eFin p.2).val :=
+    (mem_orderedEdgeFinset_iff (Gs := Gs) p).mp hp' |>.1
+  have hbound : (eFin p.2).val < Fintype.card V := (eFin p.2).isLt
+  unfold checkEdge
+  simp only [Bool.and_eq_true, decide_eq_true_eq]
+  exact ⟨hlt, hbound⟩
+
+private lemma list_all_checkEdge_encoded :
+    ((graphDataOfSimpleGraph Gs).edges.all
+      (fun x => checkEdge (graphDataOfSimpleGraph Gs) x)) = true := by
+  classical
+  apply List.all_eq_true.mpr
+  intro x hx
+  exact encoded_edge_check_ok Gs x hx
+
+theorem checkGraph_graphDataOfSimpleGraph :
+    checkGraph (graphDataOfSimpleGraph Gs) = true := by
+  classical
+  unfold checkGraph
+  simp [list_all_checkEdge_encoded (Gs := Gs), encoded_edges_nodup (Gs := Gs)]
+
+private lemma mem_encoded_edges_of_adj_lt {u v : V}
+    (hord : eFin u < eFin v) (hadj : Gs.Adj u v) :
+    ((eFin u).val, (eFin v).val) ∈ (graphDataOfSimpleGraph Gs).edges := by
+  classical
+  unfold graphDataOfSimpleGraph
+  dsimp
+  apply List.mem_map.mpr
+  refine ⟨(u, v), ?_, rfl⟩
+  apply Finset.mem_toList.mpr
+  exact (mem_orderedEdgeFinset_iff (Gs := Gs) (u, v)).mpr ⟨hord, hadj⟩
+
+private lemma adj_of_mem_encoded_edge {a b : Nat}
+    (ha : a < Fintype.card V) (hb : b < Fintype.card V)
+    (hmem : normEdge a b ∈ (graphDataOfSimpleGraph Gs).edges) :
+    Gs.Adj ((eFin (V := V)).symm ⟨a, ha⟩)
+      ((eFin (V := V)).symm ⟨b, hb⟩) := by
+  classical
+  unfold graphDataOfSimpleGraph at hmem
+  dsimp at hmem
+  rcases List.mem_map.mp hmem with ⟨p, hp, hmap⟩
+  have hp' : p ∈ orderedEdgeFinset Gs := by
+    simpa using (Finset.mem_toList.mp hp)
+  have hadj : Gs.Adj p.1 p.2 :=
+    (mem_orderedEdgeFinset_iff (Gs := Gs) p).mp hp' |>.2
+  have hltp : (eFin p.1).val < (eFin p.2).val :=
+    (mem_orderedEdgeFinset_iff (Gs := Gs) p).mp hp' |>.1
+  by_cases hab : a < b
+  · have hn : normEdge a b = (a, b) := by
+      unfold normEdge
+      simp [hab]
+    rw [hn] at hmap
+    have h₁ : (eFin p.1).val = a := congrArg Prod.fst hmap
+    have h₂ : (eFin p.2).val = b := congrArg Prod.snd hmap
+    have hp1 : p.1 = (eFin (V := V)).symm ⟨a, ha⟩ := by
+      have hfin : eFin p.1 = ⟨a, ha⟩ := Fin.ext h₁
+      have := congrArg (Equiv.symm (eFin (V := V))) hfin
+      simpa using this
+    have hp2 : p.2 = (eFin (V := V)).symm ⟨b, hb⟩ := by
+      have hfin : eFin p.2 = ⟨b, hb⟩ := Fin.ext h₂
+      have := congrArg (Equiv.symm (eFin (V := V))) hfin
+      simpa using this
+    simpa [hp1, hp2] using hadj
+  · by_cases hba : b < a
+    · have hn : normEdge a b = (b, a) := by
+        unfold normEdge
+        simp [hab]
+      rw [hn] at hmap
+      have h₁ : (eFin p.1).val = b := congrArg Prod.fst hmap
+      have h₂ : (eFin p.2).val = a := congrArg Prod.snd hmap
+      have hp1 : p.1 = (eFin (V := V)).symm ⟨b, hb⟩ := by
+        have hfin : eFin p.1 = ⟨b, hb⟩ := Fin.ext h₁
+        have := congrArg (Equiv.symm (eFin (V := V))) hfin
+        simpa using this
+      have hp2 : p.2 = (eFin (V := V)).symm ⟨a, ha⟩ := by
+        have hfin : eFin p.2 = ⟨a, ha⟩ := Fin.ext h₂
+        have := congrArg (Equiv.symm (eFin (V := V))) hfin
+        simpa using this
+      simpa [hp1, hp2] using Gs.symm hadj
+    · have heq : a = b := by omega
+      subst b
+      have hn : normEdge a a = (a, a) := by
+        unfold normEdge
+        simp
+      rw [hn] at hmap
+      have h₁ : (eFin p.1).val = a := congrArg Prod.fst hmap
+      have h₂ : (eFin p.2).val = a := congrArg Prod.snd hmap
+      have : (eFin p.1).val < (eFin p.2).val := hltp
+      omega
+
+private lemma mem_encoded_edges_iff {a b : Nat}
+    (ha : a < Fintype.card V) (hb : b < Fintype.card V) :
+    normEdge a b ∈ (graphDataOfSimpleGraph Gs).edges ↔
+      a ≠ b ∧ Gs.Adj ((eFin (V := V)).symm ⟨a, ha⟩)
+        ((eFin (V := V)).symm ⟨b, hb⟩) := by
+  classical
+  constructor
+  · intro hmem
+    have hadj := adj_of_mem_encoded_edge (Gs := Gs) ha hb hmem
+    have hne : a ≠ b := by
+      intro h
+      subst b
+      exact Gs.loopless _ hadj
+    exact ⟨hne, hadj⟩
+  · rintro ⟨hne, hadj⟩
+    by_cases hab : a < b
+    · have hfin : (⟨a, ha⟩ : Fin (Fintype.card V)) < ⟨b, hb⟩ := hab
+      have hmem :=
+        mem_encoded_edges_of_adj_lt (Gs := Gs)
+          (u := (eFin (V := V)).symm ⟨a, ha⟩)
+          (v := (eFin (V := V)).symm ⟨b, hb⟩)
+          (by simpa using hfin) (by simpa using hadj)
+      have hn : normEdge a b = (a, b) := by
+        unfold normEdge
+        simp [hab]
+      simpa [hn] using hmem
+    · have hba : b < a := by omega
+      have hfin : (⟨b, hb⟩ : Fin (Fintype.card V)) < ⟨a, ha⟩ := hba
+      have hmem :=
+        mem_encoded_edges_of_adj_lt (Gs := Gs)
+          (u := (eFin (V := V)).symm ⟨b, hb⟩)
+          (v := (eFin (V := V)).symm ⟨a, ha⟩)
+          (by simpa using hfin) (by simpa using Gs.symm hadj)
+      have hn : normEdge a b = (b, a) := by
+        unfold normEdge
+        simp [hab]
+      simpa [hn] using hmem
+
+theorem adjb_graphDataOfSimpleGraph_iff {a b : Nat}
+    (ha : a < Fintype.card V) (hb : b < Fintype.card V) :
+    adjb (graphDataOfSimpleGraph Gs) a b = true ↔
+      a ≠ b ∧ Gs.Adj ((eFin (V := V)).symm ⟨a, ha⟩)
+        ((eFin (V := V)).symm ⟨b, hb⟩) := by
+  classical
+  unfold adjb
+  simp [mem_encoded_edges_iff (Gs := Gs) ha hb]
+
+omit [Fintype V] [DecidableRel Gs.Adj] in
+private lemma cliqueFree_three_no_triangle (hCF : Gs.CliqueFree 3)
+    {x y z : V} (hxy_ne : x ≠ y) (hyz_ne : y ≠ z) (hxz_ne : x ≠ z)
+    (hxy : Gs.Adj x y) (hyz : Gs.Adj y z) (hxz : Gs.Adj x z) :
+    False := by
+  classical
+  let s : Finset V := {x, y, z}
+  have hs_card : s.card = 3 := by
+    simp [s, hxy_ne, hyz_ne, hxz_ne]
+  have hs_clique : Gs.IsClique (s : Set V) := by
+    intro a ha b hb hne
+    simp [s] at ha hb
+    rcases ha with rfl | rfl | rfl <;>
+    rcases hb with rfl | rfl | rfl <;>
+    first
+      | contradiction
+      | exact hxy
+      | exact hxz
+      | exact Gs.symm hxy
+      | exact hyz
+      | exact Gs.symm hxz
+      | exact Gs.symm hyz
+  exact hCF s ⟨hs_clique, hs_card⟩
+
+theorem tri_transfer_graphDataOfSimpleGraph (hCF : Gs.CliqueFree 3) :
+    TriangleFree (graphDataOfSimpleGraph Gs) := by
+  intro a b d ha hb hd hab hbd had htri
+  rcases htri with ⟨habg, hbdg, hadg⟩
+  have hab' :=
+    (adjb_graphDataOfSimpleGraph_iff (Gs := Gs) ha hb).mp habg |>.2
+  have hbd' :=
+    (adjb_graphDataOfSimpleGraph_iff (Gs := Gs) hb hd).mp hbdg |>.2
+  have had' :=
+    (adjb_graphDataOfSimpleGraph_iff (Gs := Gs) ha hd).mp hadg |>.2
+  have hxy_ne : (eFin (V := V)).symm ⟨a, ha⟩ ≠
+      (eFin (V := V)).symm ⟨b, hb⟩ := by
+    intro h
+    apply hab
+    have := congrArg (eFin (V := V)) h
+    simpa using congrArg Fin.val this
+  have hyz_ne : (eFin (V := V)).symm ⟨b, hb⟩ ≠
+      (eFin (V := V)).symm ⟨d, hd⟩ := by
+    intro h
+    apply hbd
+    have := congrArg (eFin (V := V)) h
+    simpa using congrArg Fin.val this
+  have hxz_ne : (eFin (V := V)).symm ⟨a, ha⟩ ≠
+      (eFin (V := V)).symm ⟨d, hd⟩ := by
+    intro h
+    apply had
+    have := congrArg (eFin (V := V)) h
+    simpa using congrArg Fin.val this
+  exact cliqueFree_three_no_triangle (Gs := Gs) hCF hxy_ne hyz_ne hxz_ne
+    hab' hbd' had'
+
+theorem cutDataOfColoring_valid_default (f : V → Bool) :
+    checkCut (graphDataOfSimpleGraph Gs) (cutDataOfColoring f) = true := by
+  unfold checkCut cutDataOfColoring graphDataOfSimpleGraph
+  simp
+
+omit [DecidableEq V] in
+theorem sideb_cutDataOfColoring_apply (f : V → Bool) (v : V) :
+    sideb (cutDataOfColoring f) ((eFin (V := V)) v).val = f v := by
+  classical
+  unfold sideb cutDataOfColoring
+  simp [vEquivFin]
+
+private lemma length_filter_map_eq {α β : Type*} (l : List α) (f : α → β)
+    (p : β → Bool) :
+    ((l.map f).filter p).length =
+      (l.filter (fun x => p (f x))).length := by
+  induction l with
+  | nil => simp
+  | cons x xs ih =>
+      by_cases hp : p (f x) = true
+      · simp [hp, ih]
+      · have hpfalse : p (f x) = false := by
+          cases h : p (f x) <;> simp_all
+        simp [hpfalse, ih]
+
+private lemma badb_encoded_cutDataOfColoring (f : V → Bool) (p : V × V)
+    (hp : p ∈ orderedEdgeFinset Gs) :
+    badb (graphDataOfSimpleGraph Gs) (cutDataOfColoring f)
+      ((eFin p.1).val) ((eFin p.2).val) = decide (f p.1 = f p.2) := by
+  classical
+  have hbound1 : (eFin p.1).val < Fintype.card V := (eFin p.1).isLt
+  have hbound2 : (eFin p.2).val < Fintype.card V := (eFin p.2).isLt
+  have hadj : Gs.Adj p.1 p.2 :=
+    (mem_orderedEdgeFinset_iff (Gs := Gs) p).mp hp |>.2
+  have hadjb : adjb (graphDataOfSimpleGraph Gs)
+      ((eFin p.1).val) ((eFin p.2).val) = true := by
+    rw [adjb_graphDataOfSimpleGraph_iff (Gs := Gs) hbound1 hbound2]
+    constructor
+    · intro h
+      have hfin : eFin p.1 = eFin p.2 := Fin.ext h
+      exact (Gs.loopless p.1) (by
+        have hpEq : p.1 = p.2 := (eFin (V := V)).injective hfin
+        rw [hpEq] at hadj ⊢
+        exact hadj)
+    · have h1 : (eFin (V := V)).symm ⟨(eFin p.1).val, hbound1⟩ = p.1 := by
+        simp
+      have h2 : (eFin (V := V)).symm ⟨(eFin p.2).val, hbound2⟩ = p.2 := by
+        simp
+      rw [h1, h2]
+      exact hadj
+  unfold badb
+  simp [hadjb, sideb_cutDataOfColoring_apply (V := V) f p.1,
+    sideb_cutDataOfColoring_apply (V := V) f p.2]
+
+theorem badCount_cutDataOfColoring_default (f : V → Bool) :
+    badCount (graphDataOfSimpleGraph Gs) (cutDataOfColoring f) =
+      simpleMonoCount Gs f := by
+  classical
+  unfold badCount graphDataOfSimpleGraph simpleMonoCount
+  dsimp
+  rw [length_filter_map_eq]
+  have hfilter :
+      ((orderedEdgeFinset Gs).toList.filter
+        (fun p : V × V =>
+          badb
+            { n := Fintype.card V
+              edges := (orderedEdgeFinset Gs).toList.map
+                (fun p => (((vEquivFin V) p.1).val, ((vEquivFin V) p.2).val)) }
+            (cutDataOfColoring f)
+            (((vEquivFin V) p.1).val) (((vEquivFin V) p.2).val))).length
+        =
+      ((orderedEdgeFinset Gs).toList.filter
+        (fun p : V × V => decide (f p.1 = f p.2))).length := by
+    apply congrArg List.length
+    apply List.filter_congr
+    intro p hp
+    have hp' : p ∈ orderedEdgeFinset Gs := by
+      simpa using (Finset.mem_toList.mp hp)
+    exact badb_encoded_cutDataOfColoring (Gs := Gs) f p hp'
+  rw [hfilter]
+  rw [← List.countP_eq_length_filter, ← Multiset.coe_countP,
+    Finset.coe_toList, Multiset.countP_eq_card_filter]
+  rfl
+
+private lemma badb_encoded_coloringOfCut (c : CutData) (p : V × V)
+    (hp : p ∈ orderedEdgeFinset Gs) :
+    badb (graphDataOfSimpleGraph Gs) c
+      ((eFin p.1).val) ((eFin p.2).val) =
+      decide (coloringOfCut c p.1 = coloringOfCut c p.2) := by
+  classical
+  have hbound1 : (eFin p.1).val < Fintype.card V := (eFin p.1).isLt
+  have hbound2 : (eFin p.2).val < Fintype.card V := (eFin p.2).isLt
+  have hadj : Gs.Adj p.1 p.2 :=
+    (mem_orderedEdgeFinset_iff (Gs := Gs) p).mp hp |>.2
+  have hadjb : adjb (graphDataOfSimpleGraph Gs)
+      ((eFin p.1).val) ((eFin p.2).val) = true := by
+    rw [adjb_graphDataOfSimpleGraph_iff (Gs := Gs) hbound1 hbound2]
+    constructor
+    · intro h
+      have hfin : eFin p.1 = eFin p.2 := Fin.ext h
+      have hpEq : p.1 = p.2 := (eFin (V := V)).injective hfin
+      exact (Gs.loopless p.1) (by rw [hpEq] at hadj ⊢; exact hadj)
+    · have h1 : (eFin (V := V)).symm ⟨(eFin p.1).val, hbound1⟩ = p.1 := by
+        simp
+      have h2 : (eFin (V := V)).symm ⟨(eFin p.2).val, hbound2⟩ = p.2 := by
+        simp
+      rw [h1, h2]
+      exact hadj
+  unfold badb coloringOfCut
+  simp only [hadjb, Bool.true_and]
+
+theorem badCount_coloringOfCut_default (c : CutData)
+    (_hc : checkCut (graphDataOfSimpleGraph Gs) c = true) :
+    simpleMonoCount Gs (coloringOfCut c) =
+      badCount (graphDataOfSimpleGraph Gs) c := by
+  classical
+  unfold badCount graphDataOfSimpleGraph simpleMonoCount
+  dsimp
+  rw [length_filter_map_eq]
+  have hfilter :
+      ((orderedEdgeFinset Gs).toList.filter
+        (fun p : V × V =>
+          badb
+            { n := Fintype.card V
+              edges := (orderedEdgeFinset Gs).toList.map
+                (fun p => (((vEquivFin V) p.1).val, ((vEquivFin V) p.2).val)) }
+            c
+            (((vEquivFin V) p.1).val) (((vEquivFin V) p.2).val))).length
+        =
+      ((orderedEdgeFinset Gs).toList.filter
+        (fun p : V × V =>
+          decide (coloringOfCut c p.1 = coloringOfCut c p.2))).length := by
+    apply congrArg List.length
+    apply List.filter_congr
+    intro p hp
+    have hp' : p ∈ orderedEdgeFinset Gs := by
+      simpa using (Finset.mem_toList.mp hp)
+    exact badb_encoded_coloringOfCut (Gs := Gs) c p hp'
+  rw [hfilter]
+  rw [← List.countP_eq_length_filter, ← Multiset.coe_countP,
+    Finset.coe_toList, Multiset.countP_eq_card_filter]
+  rfl
+
+/-- DEFAULT ENCODING FACTS: every field discharged by a real proof. -/
+noncomputable def simpleGraphEncodingFacts_default :
+    SimpleGraphEncodingFacts Gs where
+  G := graphDataOfSimpleGraph Gs
+  hGraph := checkGraph_graphDataOfSimpleGraph (Gs := Gs)
+  n_transfer := by
+    unfold graphDataOfSimpleGraph
+    simp
+  tri_transfer := fun hCF =>
+    tri_transfer_graphDataOfSimpleGraph (Gs := Gs) hCF
+  cutDataOfColoring_valid := fun f =>
+    cutDataOfColoring_valid_default (Gs := Gs) f
+  badCount_cutDataOfColoring := fun f =>
+    badCount_cutDataOfColoring_default (Gs := Gs) f
+  badCount_coloringOfCut := fun c hc =>
+    badCount_coloringOfCut_default (Gs := Gs) c hc
+
+end EncodingFacts
+
 end CertGraph
 end Erdos23Delta0

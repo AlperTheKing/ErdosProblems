@@ -834,3 +834,23 @@
   literal graph (sum ell^2 over the real row set), not provider-chosen values; (c) hTri
   must become load-bearing at package construction (tri-freeness feeding row existence).
 - Batch: k7/F2 chain running (bcideqev6). 31/108 + k9/F4 append pending.
+
+
+## TICK NOTES (2026-07-04T23:35Z) — STAGE-5 GREEN: encoding facts discharged
+- LEAN MILESTONE: simpleGraphEncodingFacts_default GREEN (zero-warning, forbidden 0):
+  encPair injective -> encoded edges nodup; checkEdge per edge (Fin bounds);
+  checkGraph_graphDataOfSimpleGraph; adjb iff (normEdge case split + Equiv transfer);
+  tri_transfer (3-clique construction, IsNClique anonymous ctor); cut validity (ofFn
+  length); sideb transfer; badCount BOTH directions (filter_congr over orderedEdgeFinset
+  toList + countP/Multiset/Finset.card bridge: List.countP_eq_length_filter +
+  Multiset.coe_countP + Finset.coe_toList + Multiset.countP_eq_card_filter + rfl).
+  CERTIFICATE PACKAGE NOW = {enc (DISCHARGED by default ctor), cut, rows, hCut, good,
+  delta} — the encoding side of erdos23_delta0 is fully unconditional.
+- REMAINING LEAN GAPS (audit-mapped, exact): (1) GammaBetaFacts real discharge + RowDBFacts
+  coverage field (main designing NOW — consult sent with the countP-style summation ask);
+  (2) exists_good_cut finite minimization (same consult); (3) per-row BranchA/B inputs from
+  emitted artifacts (EQODL1/DiffSkip, awaits batch); (4) LensGates + Seed3RouteTree checkers.
+- BATCH: k7/F2 patch r1 RUNNING (bawuesg9y; family base 0/10). 31/108 + pending appends
+  (k9/F4, maybe more). Lean-fix technique notes: omit [inst] in for section-var lint;
+  IsNClique = ⟨IsClique, card⟩; rw [hpEq] at hadj ⊢ replaces goal-noop simpa.
+- P(math)~90, P(Lean)~94.
