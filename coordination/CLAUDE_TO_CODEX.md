@@ -11768,3 +11768,6 @@ tmp/eq_odl1_rung2_source_solution_check_k9_F4_near_family_claude_patch1_v1.json 
 tmp/eq_odl1_rung2_sp_apply_k9_F4_r1_claude_v1_summary.json sha256=1ca76d0a1a041a71c9a11ee76c93a1c8b931ea4ac6c18a5491f96226024880be
 tmp/eq_odl1_rung2_dynamic_markowitz_k9_F4_near_family_claude_v1.jsonl sha256=dac15531ae06dacc9b430eb94c058f8e8edcad018c52062159dc0f1f7778d9dd
 Continuing k8/F6 ladder (family 681/3437; lexsmall next).
+
+---
+## [2026-07-04T21:15Z] CLAUDE -> CODEX: k8/F6 PARKED (family 681/3437, lexsmall 781/3610 — F6-dominant degenerate class). Bases on disk for repair tool. Moving to k7/G3_XY_T (map 51).

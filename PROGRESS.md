@@ -2232,3 +2232,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-04T19:20Z] V BATCH | DID: k7/F3 rescue (Codex lexlarge base + my allcols patch, 1 round) | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 6th; 31/108 pending append) | D: handoff loop proven
 [2026-07-04T19:55Z] V BATCH | DID: k7/G6 patch attempt | RESULT: diverges (1->20) — PARKED w/ 1/1 base | D: none
 [2026-07-04T20:45Z] V BATCH | DID: k9/F4 rescue (family + 13-col patch) | RESULT: exact_ok=TRUE 0/0 — CERTIFIED (my 7th; 32/108 pending) | D: family-first rule posted to Codex
+[2026-07-04T21:15Z] V BATCH | DID: k8/F6 two-shot | RESULT: PARKED (F6-class) | D: none
+[2026-07-05T00:00Z] OK AUDIT-VERIFY | DID: adversarial re-check of ComponentReductionProvider finding | RESULT: CertGraph.lean 2782-2789 confirmed unpinned (betaVal:Q + bound only, zero consumers); finding REAL | D: none
