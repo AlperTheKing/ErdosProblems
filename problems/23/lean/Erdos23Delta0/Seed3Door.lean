@@ -75,5 +75,29 @@ theorem hasType_p4_inhabited : HasType (0, 0) (0, 1) (2, 0) .p4 := by
 theorem hasType_k13_inhabited : HasType (0, 0) (0, 1) (0, 2) .k13 := by
   refine ⟨?_, ?_, ?_⟩ <;> simp [share]
 
+/-- Pairwise-distinct door edges (the nodup hypothesis of a valid door graph). -/
+def Nodup3 (e1 e2 e3 : ℕ × ℕ) : Prop := e1 ≠ e2 ∧ e1 ≠ e3 ∧ e2 ≠ e3
+
+/-- NO FIFTH DOOR TYPE (falsifier guard, per MAIN): a K13-type door graph of pairwise-distinct edges is
+    a genuine STAR — the three edges share a common left endpoint or a common right endpoint. The
+    would-be "triangle" fifth type cannot occur, because three pairwise-sharing distinct edges that do
+    not meet in a common vertex would force two edges to coincide. -/
+theorem k13_star (e1 e2 e3 : ℕ × ℕ) (hnd : Nodup3 e1 e2 e3) (h : HasType e1 e2 e3 .k13) :
+    (e1.1 = e2.1 ∧ e2.1 = e3.1) ∨ (e1.2 = e2.2 ∧ e2.2 = e3.2) := by
+  obtain ⟨h12, h13, h23⟩ := h
+  obtain ⟨hne12, hne13, _hne23⟩ := hnd
+  unfold share at h12 h13 h23
+  rcases h12 with hL12 | hR12
+  · rcases h13 with hL13 | hR13
+    · exact Or.inl ⟨hL12, by omega⟩
+    · rcases h23 with hL23 | hR23
+      · exact Or.inl ⟨hL12, hL23⟩
+      · exact absurd (Prod.ext_iff.mpr ⟨hL12, by omega⟩) hne12
+  · rcases h13 with hL13 | hR13
+    · rcases h23 with hL23 | hR23
+      · exact absurd (Prod.ext_iff.mpr ⟨by omega, hR12⟩) hne12
+      · exact Or.inr ⟨hR12, by omega⟩
+    · exact Or.inr ⟨hR12, by omega⟩
+
 end Seed3Door
 end Erdos23Delta0
