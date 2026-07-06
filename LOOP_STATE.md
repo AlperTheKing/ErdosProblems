@@ -1055,3 +1055,19 @@ emitted data volume or batch counts. Batch counts are M5 evidence only.
 0=F1 1=F2 2=F3 3=F4 4=F5 5=F6 6=F7 7=B0_eta25_25 8=G1_UV_T 9=G2_UZ_T 10=G3_XY_T 11=G4_VZ_XY
 12=G5_VZ_T 13=G6_A2_9T 14=G7_B2_4T. (LESSON 2026-07-06: I mislabeled dom12 as G6; it is G5.
 The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong tag.)
+
+## TICK NOTES (2026-07-06T12:25Z) — M4 BRIDGE COMPILED (real types)
+- LEAN M4: branchBInputs_of_rowPilot COMPILED GREEN (Cert/BranchBBridge.lean, cf00bd268) against
+  REAL CertGraph.BranchBInputs + Cert.RowPilot (multi-module --root+LEAN_PATH build; deps
+  CertGraph.olean+BranchBSupport.olean compiled to gitignored oleans). axioms clean. This is the
+  M4 arithmetic transport: RowPilot.check (scaled-int Banked-UPO/dominance certs) + RowPilotBinding
+  (provider identification) -> the 3 BranchBInputs Q-fields. MILESTONE M4: bridge DONE; provider
+  (RowPilotBinding per row) = M6/M7.
+- BUILD METHOD for multi-module Lean (NEW, works): compile dep oleans with
+  `lake env lean --root=problems/23/lean -o <path>.olean <src>` (gitignored), then build the
+  importing file with $env:LEAN_PATH="problems/23/lean;..." + same --root. Codex asked to fold
+  BranchBBridge into its module-build+audit.
+- MILESTONE TABLE v3 DELTA: M4 = BRIDGE COMPILED (was not-started). Remaining M4-adjacent: wire
+  branchBCertBundle_of_rowPilot into Delta0CertBundles.branchB once per-row RowPilotBinding
+  provider data exists (M6/M7). M6.5 checker triad done; LensGate geometry scaffold archived
+  (deferred). Next Lean: MAIN geometry concrete fields + FC-form bridge.
