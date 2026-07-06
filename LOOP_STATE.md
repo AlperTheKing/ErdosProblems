@@ -1505,3 +1505,18 @@ CODEX marker CODEX_TO_CLAUDE.md 1961043. MAIN retasked coreOf emission. SIBLING 
   separation. If MAIN says (B), it confirms the deepest node is genuinely separate from the chart work.
 - IN FLIGHT: MAIN generating coverage-vs-Hall verdict; SIBLING generating coverage-completeness (N-uniform?)
   answer. Gate both next tick against my O14 read. Wakeup armed 22:28.
+
+## TICK ADDENDUM (2026-07-07T10:35Z) — INDEPENDENT Seed3-completeness assessment (prep for gating MAIN's Seed3 answer)
+- Read SEED3_COMPLETENESS_GPTPRO.md myself. ASSESSMENT of Seed3 ClassifierComplete (the key at-risk node):
+  * STRUCTURAL/PROVEN: door-type completeness (only P4/K13/P2uE/3E); endpoint bounds |V0|<=3, |V4|<=3.
+  * CERTIFICATE-BACKED, CERT-PENDING: interior width finiteness via Seed3WidthCert = endpoint bounds +
+    List OverflowCert + canonical lookup table. OverflowCert reasons (TwinDuplicate/NotSaturated/Prunable/
+    NoOverfull/NegSwitch/FourDoor) are STRUCTURAL + N-uniform (NOT census-up-to-N); non-circularity pinned.
+    BUT archive marks it "CERT-PENDING as finite enumeration artifact" / "width theorem is certificate-backed".
+- MY GATE VERDICT: Seed3 is STRUCTURAL BY DESIGN (not census), but its COMPLETENESS is NOT yet closed — the
+  open piece = proving the OverflowCert enumeration + canonical lookup table are COMPLETE (every over-width
+  pattern covered). Structural-in-intent, unemitted/unverified. So neither "fully structural-proven" nor
+  "census-only" — it is "structural design, enumeration-completeness CERT-PENDING".
+- GATE MAIN's Seed3 answer against this: if "fully structural" -> note width-enumeration completeness is the
+  unclosed piece; if "census-only" -> push back (reasons are structural). Cross-check O13-UNIVERSE-EMIT status.
+- IN FLIGHT: MAIN = Seed3 ClassifierComplete structural proof; SIBLING = coverage-theorem gap ledger. Wakeup 22:28.
