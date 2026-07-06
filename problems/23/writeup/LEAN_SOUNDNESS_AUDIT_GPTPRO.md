@@ -230,3 +230,96 @@ exact-verify V2) — consistent with the charts/cones architecture but "data" no
 bounds + tri-free + max-cut. Which is feasible = the decisive open design question routed back to MAIN.
 NOT a falsifier (the aggregation is TRUE; task#16 LRS proven); a scoped formalization obligation.
 
+
+## M6 GERSH-aggregation node — DEFINITIVE classification (GPT-Pro MAIN, 2026-07-07; Claude-gated)
+
+MAIN's decisive verdict on the token-charge EXISTENCE construction (the compiled-vs-certified determinant):
+
+### Classification (document this as the honest status of the deepest node)
+- **Soundness: COMPILED Lean theorem.** `checkLengthSurplusChargeCertV2 = true  =>  Sum_f (ell(f)^2-25) <= 25*eta`.
+  (Committed in GammaAggregation.lean; axioms clean.)
+- **Completeness: CERTIFIED PER-INSTANCE** by emitted token-charge certificates (Codex emits the atoms +
+  charge coefficients per graph; Claude exact-verifies the identity + nonnegativity via V2).
+- **Universal construction: OPEN.** Would require a graph-generic Hall / max-flow / uncrossing theorem
+  proving the CANONICAL token network always admits a feasible nonnegative charge. That theorem is exactly
+  the missing combinatorial content; it is NOT a consequence of LRS + Cauchy + row-GERSH alone.
+
+### Why LRS + Cauchy are insufficient (MAIN, precise)
+Compiled LRS gives `v^T v ... <= Gamma*(N+eta) ...`; Cauchy gives `Gamma^2 <= N * v^T v ...`; together only
+`Gamma <= N(N+eta)`. That is weaker than `Gamma <= N^2`; the missing amount is precisely the bank reserve
+`= N*eta`. The bank reserve is not a scalar formula — it is the positive remainder produced by the token-
+charge construction.
+
+### The compiled-universal Lean shape (MAIN)
+    structure CanonicalTokenNetwork (G : GraphData) (c : CutData) (rows : RowDB) : Type where
+      tokens : List Token ; rowSlackSinks : List RowId ; residualAtoms : List ResidualAtom
+      edges : List TokenEdge ; capacities : List ...
+    def canonicalTokenNetwork (G) (c) (rows) (hRows : RowDBFactsGeneral G c rows)
+        (hMax : IsMaxCut G c) (hGamma : GammaMinimalConnected G c) : CanonicalTokenNetwork G c rows := ...
+    theorem canonicalTokenNetwork_feasible ... -- HARD: the network always has a feasible nonneg charge
+The successful c(t,g) / atom choices are currently INSTANCE-SENSITIVE (the emitted cert records them for
+that instance); a compiled theorem must prove a canonical RULE always finds them. That rule is not yet
+specified.
+
+### Is it non-finitary? NO (MAIN)
+Not in principle: the graph is finite and a canonical max-flow/Hall construction COULD be formalized. But
+it is not currently graph-generic — the emitted token certificates are finite and checkable, yet their
+support/decomposition are instance-dependent. Correct classification: FINITE AND EXACTLY CHECKABLE PER
+INSTANCE, not yet compiled-universal without a new Hall/token-network theorem. NOT a falsifier.
+
+### Consequence for the /goal
+- Conjunct-3 (M6 via compiled lemmas, never data volume): the aggregation SOUNDNESS is a compiled lemma;
+  its UNIVERSAL completeness is currently certified-per-instance (emitted token certs), which the strict
+  anti-fake-progress reading treats as data, not a compiled lemma. To fully satisfy, build the
+  CanonicalTokenNetwork + canonicalTokenNetwork_feasible Hall theorem (finite, formalizable-in-principle,
+  not yet specified). This is the single deepest remaining Lean obligation for a fully-compiled proof.
+- SIBLING is attempting the canonical charging invariant constructively — if it produces the canonical
+  rule, that is the missing specification MAIN names; then build the Lean network + feasibility theorem.
+
+
+## Token-charge = a GLOBAL Hall condition (GPT-Pro SIBLING constructive attempt, 2026-07-07; Claude-gated)
+
+SIBLING attempted the canonical token-charge construction directly and hit — and precisely named — a real
+GLOBAL DUALITY WALL. This corroborates MAIN's existence verdict from an independent (constructive) angle.
+
+### Finding (verbatim-faithful)
+"A clean graph-generic LOCAL token charge does NOT exist in the form requested. The construction hits a
+real global duality wall. The obstruction is not the definition of the tokens (that part is canonical);
+the obstruction is the step that must prove the chosen token-to-bank assignment has enough GLOBAL CAPACITY.
+That step is a Hall/Farkas dual statement over the whole row/cut incidence structure. It is NOT forced by a
+finite local rule from triangle-freeness, max-cut, Gamma-minimality, and per-row GERSH alone."
+
+### Canonical token model (the part that IS canonical)
+For each bad edge f, L(f)=ell(f); excess to charge = L(f)^2 - 25. Canonical rational token model via row
+incidences: p_f(v) = sum_{Q in cyc(f)} Pr(v in Q). Then sum_v p_f(v) = L(f), so L(f)^2 = sum_{u,v} p_f(u)p_f(v);
+the length-square mass of f is the rational measure mu_f(u,v)=p_f(u)p_f(v) on ordered vertex pairs, and
+Gamma = sum_f L(f)^2 = sum_{u,v} sum_f mu_f(u,v).
+
+### The Hall condition = the true bank-reserve statement
+Let T = multiset of excess tokens (union over f of the L(f)^2-25 row-pair tokens + base tokens), and B the
+global bank of size N^2-25m = 25 eta. A generic charging lemma needs an ordering with a running occupied
+bank B_k, |B_k|>=k. Equivalently, the HALL CONDITION  |S| <= |Gamma(S)|  for every token subset S ⊆ T,
+where Gamma(S) = bank units reachable by the charging rule. THIS HALL CONDITION IS THE TRUE BANK-RESERVE
+STATEMENT. Local facts certify only PIECES: triangle-freeness prevents certain row lenses/shortcut
+triangles; max-cut gives switch slacks sigma(S)>=0; Gamma-minimality gives neutral switch refinements
+(K(S)>=0 when sigma(S)=0); row realization semantics gives the p_f / row-sum identities. NONE of these
+local facts gives the Hall condition itself — it is global.
+
+### The strongest HONEST would-be lemma = my committed V2
+SIBLING's "TokenCharge Farkas Lemma": for the RowDB of a B-connected Gamma-minimal maximum cut, IF the token
+artifact emits C(g)>=0 and residual atoms r_lrs,r_cau,r_bank>=0 with the exact identity
+  25 eta - sum_f(ell^2-25) = sum r_lrs + sum r_cau + sum r_bank + sum_g C(g)*((N+eta)-ROWSUM(g)),
+THEN sum(ell^2-25) <= 25 eta. R_bank = sum_c r_c^bank, nonnegativity checked atom-by-atom.
+=> This is EXACTLY the committed `lengthSurplus_le_25eta_of_chargeV2` (checkLengthSurplusChargeCertV2).
+SIBLING confirms it is the strongest HONEST compiled lemma; the universal existence of the emitted
+coefficients is the global Hall condition, per-instance-certified.
+
+### DEFINITIVE terminal characterization (3 independent derivations agree)
+The GERSH aggregation deepest node: SOUNDNESS compiled (V2 = TokenCharge Farkas Lemma). COMPLETENESS
+certified per-instance (emitted token certs = per-instance Hall witnesses). UNIVERSAL = a global Hall/Farkas
+feasibility theorem (|S|<=|Gamma(S)| for all token subsets), FINITE but NOT local (no rule from tri-free +
+max-cut + Gamma-min + GERSH), currently unspecified/unbuilt. NOT a falsifier (theorem true; task#16 LRS
+proven; per-instance certs valid). Open question relayed to MAIN: does the PROVEN LRS family (task#16)
+already constitute a compiled-universal establishment of this Hall condition, or is it itself a per-instance
+certificate family?
+
