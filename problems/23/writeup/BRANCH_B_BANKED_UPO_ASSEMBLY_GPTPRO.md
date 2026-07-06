@@ -134,3 +134,17 @@ packets COULD replace the per-node certs but is NOT currently established.
 => Branch-B (Conjunct-2) = CERTIFIED modulo a FINITE PeelInvariantCert family (Codex enumerates+emits, I
 exact-verify) + coverage cert. LIVE RISK: a failing node = falsifier of THIS architecture (not yet exhibited;
 requires Codex enumeration to check the actual nodes). Routed to Codex 2026-07-07.
+
+## ⚠ RECONCILIATION PENDING (Claude catch, 2026-07-07T02:05Z): bare form vs proven (SH')
+The "live risk" above analyzes the BARE PeelInvariant m_out<=r_out^2/25. BUT the peel invariant §H was
+ALREADY PROVEN on 2026-07-02 as (SH'): m_out <= r_out^2/25 + d/2, d=|delta_B(U,R)| (blue boundary door
+count), via the SAME two-orientation exchange (PEEL_INVARIANT_SHPRIME_GPTPRO.md, gated 4 witnesses; memory
+erdos23-branchB-fan-cactus-state item 4). CLAUDE-VERIFIED: the C5[t] W_out=V0∪V4 obstruction (which breaks
+the BARE form) SATISFIES (SH'): m_out=t^2, r_out=2t, d=|delta_B(W_out,R)|=(V0-V1)+(V4-V3)=2t^2, so
+r_out^2/25+d/2 = 4t^2/25+t^2 = 29t^2/25 >= t^2. TRUE. So the bare-form counterexample is NOT a counterexample
+to (SH'). DECISIVE OPEN QUESTION (retasked SIBLING): does the cactus ledger P7 consume BARE or (SH')?
+(A) P7 uses (SH') => PeelInvariant PROVEN structurally, NO per-node obligation, NO live Branch-B risk.
+(B) P7 needs BARE because the d/2 door credit is ALREADY SPENT (PacketExchange -d/2 / CombinedHBD single-spend)
+    => bare per-node obligation + live risk stands. This is a d/2 SINGLE-SPEND accounting question.
+=> The Branch-B "live risk" is NOT confirmed; it is PENDING this reconciliation. Do NOT surface it as a
+falsifier or a confirmed risk until resolved.
