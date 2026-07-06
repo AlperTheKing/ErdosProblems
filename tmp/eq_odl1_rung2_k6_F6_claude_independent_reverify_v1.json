@@ -1,0 +1,25 @@
+{
+  "verifier": "Claude independent exact-Fraction recompute (NOT Codex checker)",
+  "script": "scratchpad/claude_k6f6_independent_check.py",
+  "chart": 6, "dominant": 5, "dominant_name": "F6", "band": "near_2s_minus_1",
+  "route": "source->custom import (eq_odl1_rung2_custom_cone_check_v1)",
+  "inputs": {
+    "cols": "tmp/eq_odl1_rung2_k6_F6_known_source_import_cols_v1.json",
+    "solution": "tmp/eq_odl1_rung2_k6_F6_known_source_import_solution_v1.jsonl",
+    "target_beta": "tmp/eq_odl1_rung2_k6_F6_known_source_import_target_beta_v1.json"
+  },
+  "result_codex_convention_residual_eq_target_minus_Ax": {
+    "columns": 2432,
+    "x_negative_count": 0,
+    "x_min_positive": true,
+    "target_nonzero": 5255,
+    "rows_checked": 167960,
+    "residual_negative_count": 0,
+    "residual_zero_count": 158472,
+    "residual_positive_count": 9488,
+    "all_residuals_nonneg": true,
+    "extremal_residual_bits": "num_bits=2891/den_bits=2886 (matches Codex full_max_residual EXACTLY)"
+  },
+  "verdict": "CONFIRMED — k6/F6 custom-mode cone certificate is exact-valid; independently reproduces Codex exact_ok=true (identical zero-structure, x>=0, extremal magnitude bit-exact).",
+  "caveat": "Confirms certificate arithmetic (feasibility of custom-mode LP). Chart-to-LP reduction / constraint-type mapping is the shared pipeline (same as the 45 already-certified charts + official checker), not re-derived here."
+}
