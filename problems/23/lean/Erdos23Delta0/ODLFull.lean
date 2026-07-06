@@ -21,6 +21,7 @@ namespace ODLFull
 
 open CertGraph
 open PolyCert
+open CertGraph.Seed3RouteTree
 
 /-- Support-local ODL data attached to a route-tree node: a vertex support with its size
     (≤ N) and the row mass carried on it. -/
@@ -144,6 +145,163 @@ theorem coreODLGoal_of_coneCert {G : GraphData} {c : CutData} {rows : RowDB} {Q 
   have h0 : 0 ≤ NF.eval env cert.target := ConeCert.sound cert env hvars hslacks
   rw [htarget] at h0
   exact CoreODLGoal_of_defect_nonneg core h0
+
+/-! ### Semantic tree assembly (GPT-Pro MAIN): recursive ODL resolution over the route tree.
+Opaque leaf/internal providers (`Seed3ODLLeafProviders`, `Seed3ODLInternalLinks`) plug in the
+concrete per-family leaf checkers and the excess-monotonicity links; the recursive checker
+propagates `resolvedODL` from terminal leaves to the root, which `ODLFull_of_rootCore` lifts to
+`odlFull`. Reuses the green `checkSeed3RouteTree` (structural coverage). -/
+
+/-- Terminal-leaf semantic provider: a Bool leaf checker with a soundness field giving
+    `resolvedODL` at each leaf it accepts. -/
+structure Seed3ODLLeafProviders
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T) : Type where
+  checkLeaf : Seed3Node → Bool
+  sound : ∀ n : Seed3Node,
+    isLeafKind n.kind = true →
+    checkLeaf n = true →
+      resolvedODL G c rows Q T sem n
+
+/-- Internal-node link provider: a Bool link checker whose soundness turns children's
+    `resolvedODL` into the parent's (via the excess-monotonicity link). -/
+structure Seed3ODLInternalLinks
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T) : Type where
+  checkLink : Seed3Node → Bool
+  sound : ∀ n : Seed3Node,
+    isInternalKind n.kind = true →
+    checkLink n = true →
+    (∀ child : Seed3Node, child ∈ childNodes T n → resolvedODL G c rows Q T sem child) →
+      resolvedODL G c rows Q T sem n
+
+/-- Fuel-bounded recursive semantic checker: a leaf resolves via its leaf checker; an internal
+    node resolves if its link check passes and all children resolve. -/
+def checkODLResolveNode
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T)
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem) :
+    Nat → Seed3Node → Bool
+  | 0, _ => false
+  | fuel + 1, n =>
+      if isLeafKind n.kind then
+        leafs.checkLeaf n
+      else
+        links.checkLink n &&
+          (childNodes T n).all (fun child => checkODLResolveNode T sem leafs links fuel child)
+
+/-- Soundness of the recursive semantic checker: a checked node is ODL-resolved. -/
+theorem checkODLResolveNode_sound
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem) :
+    ∀ (fuel : Nat) (n : Seed3Node),
+      checkODLResolveNode T sem leafs links fuel n = true →
+        resolvedODL G c rows Q T sem n := by
+  intro fuel
+  induction fuel with
+  | zero =>
+      intro n h
+      simp [checkODLResolveNode] at h
+  | succ fuel ih =>
+      intro n h
+      by_cases hleaf : isLeafKind n.kind = true
+      · simp [checkODLResolveNode, hleaf] at h
+        exact leafs.sound n hleaf h
+      · have hleafFalse : isLeafKind n.kind = false := by
+          cases hb : isLeafKind n.kind <;> simp_all
+        simp [checkODLResolveNode, hleafFalse] at h
+        rcases h with ⟨hlink, hchildren⟩
+        have hinternal : isInternalKind n.kind = true := by
+          cases hk : n.kind <;> simp [isLeafKind, isInternalKind, hk] at hleafFalse ⊢
+        exact links.sound n hinternal hlink
+          (by
+            intro child hchild
+            exact ih child (hchildren child hchild))
+
+/-- Root semantic checker: resolve the root with fuel `|nodes|+1`. -/
+def checkODLResolveRoot
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T)
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem) : Bool :=
+  match findNode? T T.root with
+  | some root => checkODLResolveNode T sem leafs links (T.nodes.length + 1) root
+  | none => false
+
+theorem checkODLResolveRoot_sound
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem)
+    (hroot : checkODLResolveRoot T sem leafs links = true) :
+    ∃ root : Seed3Node,
+      findNode? T T.root = some root ∧
+      resolvedODL G c rows Q T sem root := by
+  unfold checkODLResolveRoot at hroot
+  cases hfind : findNode? T T.root with
+  | none => simp [hfind] at hroot
+  | some root =>
+      simp [hfind] at hroot
+      have hres : resolvedODL G c rows Q T sem root :=
+        checkODLResolveNode_sound leafs links (T.nodes.length + 1) root hroot
+      exact ⟨root, by first | exact hfind | rfl, hres⟩
+
+/-- Full semantic tree checker: structural coverage (`checkSeed3RouteTree`, green) plus root
+    ODL resolution. -/
+def checkSeed3ODLSemanticTree
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T)
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem) : Bool :=
+  checkSeed3RouteTree G c T && checkODLResolveRoot T sem leafs links
+
+theorem checkSeed3ODLSemanticTree_sound_exists_root
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem)
+    (hcheck : checkSeed3ODLSemanticTree T sem leafs links = true) :
+    ∃ root : Seed3Node,
+      findNode? T T.root = some root ∧
+      resolvedODL G c rows Q T sem root := by
+  unfold checkSeed3ODLSemanticTree at hcheck
+  rw [Bool.and_eq_true] at hcheck
+  exact checkODLResolveRoot_sound leafs links hcheck.2
+
+theorem checkSeed3ODLSemanticTree_sound
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    {root : Seed3Node}
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem)
+    (hfind : findNode? T T.root = some root)
+    (hcheck : checkSeed3ODLSemanticTree T sem leafs links = true) :
+    resolvedODL G c rows Q T sem root := by
+  rcases checkSeed3ODLSemanticTree_sound_exists_root leafs links hcheck with ⟨root', hfind', hres⟩
+  rw [hfind] at hfind'
+  simp only [Option.some.injEq] at hfind'
+  subst hfind'
+  exact hres
+
+/-- The odlFull provider theorem from the semantic tree: if the semantic tree checks and the
+    root core represents the row, then `rowSum ≤ N + η` = `BranchAInputs.odlFull`. This closes
+    the odlFull ASSEMBLY modulo the concrete per-family leaf checkers (Seed3ODLLeafProviders)
+    and the internal links (Seed3ODLInternalLinks). -/
+theorem ODLFull_of_semantic_tree
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    {root : Seed3Node}
+    (leafs : Seed3ODLLeafProviders G c rows Q T sem)
+    (links : Seed3ODLInternalLinks G c rows Q T sem)
+    (hfind : findNode? T T.root = some root)
+    (hcheck : checkSeed3ODLSemanticTree T sem leafs links = true)
+    (hrep : RootRepresentsRow G c rows Q (sem.coreOf root.id)) :
+    rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c := by
+  have hres := checkSeed3ODLSemanticTree_sound leafs links hfind hcheck
+  exact ODLFull_of_rootCore hrep hres
 
 end ODLFull
 end Erdos23Delta0
