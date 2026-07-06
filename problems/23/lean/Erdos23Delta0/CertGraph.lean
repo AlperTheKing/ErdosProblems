@@ -4571,5 +4571,424 @@ theorem checkLensSwitch_badBoundary
 
 end LensGates
 
+
+/-! ### Seed3RouteTree: the route-tree completeness checker.
+Enumerates the Seed3 case split; certifies the tree is well-formed (single
+parent, strictly decreasing rank, internal nodes partition their children's
+cases), that every leaf resolves to a cited certificate family, and coverage:
+every root case is owned by exactly one leaf. Leaf semantics enter only through
+the Seed3LeafCitedFacts hypothesis structure. -/
+
+namespace Seed3RouteTree
+
+abbrev CaseId := Nat
+abbrev NodeId := Nat
+abbrev PayloadId := Nat
+
+inductive LeafTag
+  | EQ
+  | SIB
+  | NO_OVERFULL
+  | NEG_SWITCH
+  | PRUNABLE
+  | NOT_SATURATED
+  | FOUR_DOOR
+  | CONE
+  | BANK_BLOCK
+  | LENS_GATE
+  | SEED10
+  deriving DecidableEq, BEq, Repr
+
+inductive InternalTag
+  | SPLIT
+  | ABSORB
+  | PRUNE
+  deriving DecidableEq, BEq, Repr
+
+structure PayloadRef where
+  family : Nat
+  id : PayloadId
+  deriving DecidableEq, BEq, Repr
+
+structure Seed10CutWitness where
+  X : List Nat
+  slackPolyRef : PayloadRef
+  slackLitRef : PayloadRef
+  deriving DecidableEq, BEq, Repr
+
+structure Seed10RealizationData where
+  bags : List Nat
+  cuts : List Seed10CutWitness
+  deriving DecidableEq, BEq, Repr
+
+structure Seed3PayloadTables where
+  eqPayloads : List PayloadId
+  sibPayloads : List PayloadId
+  noOverfullPayloads : List PayloadId
+  negSwitchPayloads : List PayloadId
+  prunablePayloads : List PayloadId
+  notSaturatedPayloads : List PayloadId
+  fourDoorPayloads : List PayloadId
+  conePayloads : List PayloadId
+  bankBlockPayloads : List PayloadId
+  lensGatePayloads : List PayloadId
+  seed10Payloads : List (PayloadId × Seed10RealizationData)
+  deriving Repr
+
+def payloadIdsFor (P : Seed3PayloadTables) : LeafTag → List PayloadId
+  | .EQ => P.eqPayloads
+  | .SIB => P.sibPayloads
+  | .NO_OVERFULL => P.noOverfullPayloads
+  | .NEG_SWITCH => P.negSwitchPayloads
+  | .PRUNABLE => P.prunablePayloads
+  | .NOT_SATURATED => P.notSaturatedPayloads
+  | .FOUR_DOOR => P.fourDoorPayloads
+  | .CONE => P.conePayloads
+  | .BANK_BLOCK => P.bankBlockPayloads
+  | .LENS_GATE => P.lensGatePayloads
+  | .SEED10 => P.seed10Payloads.map Prod.fst
+
+def lookupSeed10? (P : Seed3PayloadTables) (id : PayloadId) :
+    Option Seed10RealizationData :=
+  (P.seed10Payloads.find? (fun q => q.1 == id)).map Prod.snd
+
+def checkNatList (xs : List Nat) : Bool :=
+  decide xs.Nodup
+
+def checkSeed10CutWitness (W : Seed10CutWitness) : Bool :=
+  checkNatList W.X
+
+def checkSeed10Realization (R : Seed10RealizationData) : Bool :=
+  checkNatList R.bags &&
+  R.cuts.all checkSeed10CutWitness
+
+inductive NodeKind
+  | internal (tag : InternalTag) (payload : Option PayloadRef)
+  | leaf (tag : LeafTag) (payload : PayloadRef)
+  deriving DecidableEq, BEq, Repr
+
+structure Seed3Node where
+  id : NodeId
+  rank : Nat
+  cases : List CaseId
+  kind : NodeKind
+  deriving DecidableEq, BEq, Repr
+
+structure Seed3RouteTreeData where
+  root : NodeId
+  cases : List CaseId
+  nodes : List Seed3Node
+  edges : List (NodeId × NodeId)
+  payloads : Seed3PayloadTables
+  deriving Repr
+
+def nodeIds (T : Seed3RouteTreeData) : List NodeId :=
+  T.nodes.map (fun n => n.id)
+
+def findNode? (T : Seed3RouteTreeData) (i : NodeId) : Option Seed3Node :=
+  T.nodes.find? (fun n => n.id == i)
+
+def nodeExists (T : Seed3RouteTreeData) (i : NodeId) : Bool :=
+  match findNode? T i with
+  | some _ => true
+  | none => false
+
+def childrenOf (T : Seed3RouteTreeData) (i : NodeId) : List NodeId :=
+  (T.edges.filter (fun e => e.1 == i)).map Prod.snd
+
+def parentsOf (T : Seed3RouteTreeData) (i : NodeId) : List NodeId :=
+  (T.edges.filter (fun e => e.2 == i)).map Prod.fst
+
+def childNodes (T : Seed3RouteTreeData) (n : Seed3Node) : List Seed3Node :=
+  (childrenOf T n.id).filterMap (findNode? T)
+
+def isLeafKind : NodeKind → Bool
+  | .leaf _ _ => true
+  | .internal _ _ => false
+
+def isInternalKind : NodeKind → Bool
+  | .internal _ _ => true
+  | .leaf _ _ => false
+
+def leafNodes (T : Seed3RouteTreeData) : List Seed3Node :=
+  T.nodes.filter (fun n => isLeafKind n.kind)
+
+def leafCases (T : Seed3RouteTreeData) : List CaseId :=
+  (leafNodes T).flatMap (fun n => n.cases)
+
+def childCases (T : Seed3RouteTreeData) (n : Seed3Node) : List CaseId :=
+  (childNodes T n).flatMap (fun m => m.cases)
+
+def checkPayloadRef (T : Seed3RouteTreeData) (tag : LeafTag) (ref : PayloadRef) :
+    Bool :=
+  decide (ref.id ∈ payloadIdsFor T.payloads tag)
+
+def checkSeed10PayloadRef (T : Seed3RouteTreeData) (ref : PayloadRef) : Bool :=
+  checkPayloadRef T .SEED10 ref &&
+  match lookupSeed10? T.payloads ref.id with
+  | some R => checkSeed10Realization R
+  | none => false
+
+def checkLeafSyntax (T : Seed3RouteTreeData) (n : Seed3Node) : Bool :=
+  match n.kind with
+  | .leaf .SEED10 ref => checkSeed10PayloadRef T ref
+  | .leaf tag ref => checkPayloadRef T tag ref
+  | .internal _ _ => true
+
+def checkInternalSyntax (_T : Seed3RouteTreeData) (n : Seed3Node) : Bool :=
+  match n.kind with
+  | .internal .ABSORB (some _) => true
+  | .internal .PRUNE (some _) => true
+  | .internal .SPLIT _ => true
+  | .internal .ABSORB none => false
+  | .internal .PRUNE none => false
+  | .leaf _ _ => true
+
+def checkEdgeEndpoints (T : Seed3RouteTreeData) : Bool :=
+  T.edges.all (fun e => nodeExists T e.1 && nodeExists T e.2)
+
+def checkParentCounts (T : Seed3RouteTreeData) : Bool :=
+  T.nodes.all (fun n =>
+    if n.id == T.root then
+      decide ((parentsOf T n.id).length = 0)
+    else
+      decide ((parentsOf T n.id).length = 1))
+
+def checkRankDecrease (T : Seed3RouteTreeData) : Bool :=
+  T.edges.all (fun e =>
+    match findNode? T e.1, findNode? T e.2 with
+    | some p, some q => decide (q.rank < p.rank)
+    | _, _ => false)
+
+def checkLeafChildren (T : Seed3RouteTreeData) : Bool :=
+  T.nodes.all (fun n =>
+    if isLeafKind n.kind then
+      decide ((childrenOf T n.id).length = 0)
+    else
+      decide (0 < (childrenOf T n.id).length))
+
+def checkInternalCasePartition (T : Seed3RouteTreeData) : Bool :=
+  T.nodes.all (fun n =>
+    if isInternalKind n.kind then
+      decide (n.cases = childCases T n)
+    else
+      true)
+
+def checkRootCases (T : Seed3RouteTreeData) : Bool :=
+  match findNode? T T.root with
+  | some r => decide (r.cases = T.cases)
+  | none => false
+
+def checkCoverage (T : Seed3RouteTreeData) : Bool :=
+  decide T.cases.Nodup &&
+  decide (leafCases T).Nodup &&
+  decide (leafCases T = T.cases)
+
+def checkNodeSyntax (T : Seed3RouteTreeData) (n : Seed3Node) : Bool :=
+  decide n.cases.Nodup &&
+  (checkLeafSyntax T n &&
+   checkInternalSyntax T n)
+
+def checkTreeMeta (T : Seed3RouteTreeData) : Bool :=
+  decide (nodeIds T).Nodup &&
+  (nodeExists T T.root &&
+  (checkEdgeEndpoints T &&
+  (checkParentCounts T &&
+  (checkRankDecrease T &&
+  (checkLeafChildren T &&
+  (checkInternalCasePartition T &&
+   checkRootCases T))))))
+
+def checkSeed3TreeShape (T : Seed3RouteTreeData) : Bool :=
+  checkTreeMeta T &&
+  (checkCoverage T &&
+   T.nodes.all (checkNodeSyntax T))
+
+def checkSeed3RouteTree
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData) : Bool :=
+  checkGraph G &&
+  (checkCut G c &&
+   checkSeed3TreeShape T)
+
+theorem checkSeed3RouteTree_graph
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (h : checkSeed3RouteTree G c T = true) :
+    checkGraph G = true := by
+  unfold checkSeed3RouteTree at h
+  rw [Bool.and_eq_true] at h
+  exact h.1
+
+theorem checkSeed3RouteTree_cut
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (h : checkSeed3RouteTree G c T = true) :
+    checkCut G c = true := by
+  unfold checkSeed3RouteTree at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  exact h.2.1
+
+theorem checkSeed3RouteTree_shape
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (h : checkSeed3RouteTree G c T = true) :
+    checkSeed3TreeShape T = true := by
+  unfold checkSeed3RouteTree at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  exact h.2.2
+
+theorem checkSeed3TreeShape_coverage
+    {T : Seed3RouteTreeData}
+    (h : checkSeed3TreeShape T = true) :
+    checkCoverage T = true := by
+  unfold checkSeed3TreeShape at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  exact h.2.1
+
+theorem checkSeed3TreeShape_nodes
+    {T : Seed3RouteTreeData}
+    (h : checkSeed3TreeShape T = true) :
+    T.nodes.all (checkNodeSyntax T) = true := by
+  unfold checkSeed3TreeShape at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  exact h.2.2
+
+theorem checkNodeSyntax_leaf
+    {T : Seed3RouteTreeData} {n : Seed3Node}
+    (h : checkNodeSyntax T n = true) :
+    checkLeafSyntax T n = true := by
+  unfold checkNodeSyntax at h
+  rw [Bool.and_eq_true, Bool.and_eq_true] at h
+  exact h.2.1
+
+theorem leaf_syntax_of_tree
+    {T : Seed3RouteTreeData} {n : Seed3Node}
+    (hshape : checkSeed3TreeShape T = true)
+    (hn : n ∈ T.nodes)
+    (_hleaf : isLeafKind n.kind = true) :
+    checkLeafSyntax T n = true := by
+  have hall : T.nodes.all (checkNodeSyntax T) = true :=
+    checkSeed3TreeShape_nodes hshape
+  have hncheck : checkNodeSyntax T n = true :=
+    List.all_eq_true.mp hall n hn
+  exact checkNodeSyntax_leaf hncheck
+
+/-- The remaining leaf semantics: for each leaf tag, a resolution predicate on
+    nodes and a proof that a syntactically-valid leaf of that tag is resolved.
+    These fields are exactly the per-leaf-family certificate implications the
+    Branch-A/B layers supply (ConeCert, bank block, lens gate, Seed10, etc.). -/
+structure Seed3LeafCitedFacts
+    (_G : GraphData) (_c : CutData) (T : Seed3RouteTreeData) : Type where
+  resolved : Seed3Node → Prop
+  eq_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.EQ ref →
+      checkLeafSyntax T n = true → resolved n
+  sib_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.SIB ref →
+      checkLeafSyntax T n = true → resolved n
+  no_overfull_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.NO_OVERFULL ref →
+      checkLeafSyntax T n = true → resolved n
+  neg_switch_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.NEG_SWITCH ref →
+      checkLeafSyntax T n = true → resolved n
+  prunable_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.PRUNABLE ref →
+      checkLeafSyntax T n = true → resolved n
+  not_saturated_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.NOT_SATURATED ref →
+      checkLeafSyntax T n = true → resolved n
+  four_door_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.FOUR_DOOR ref →
+      checkLeafSyntax T n = true → resolved n
+  cone_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.CONE ref →
+      checkLeafSyntax T n = true → resolved n
+  bank_block_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.BANK_BLOCK ref →
+      checkLeafSyntax T n = true → resolved n
+  lens_gate_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.LENS_GATE ref →
+      checkLeafSyntax T n = true → resolved n
+  seed10_sound :
+    ∀ n ref, n ∈ T.nodes → n.kind = NodeKind.leaf LeafTag.SEED10 ref →
+      checkLeafSyntax T n = true → resolved n
+
+structure Seed3CompletenessProp
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (facts : Seed3LeafCitedFacts G c T) : Prop where
+  checked : checkSeed3RouteTree G c T = true
+  coverage : checkCoverage T = true
+  leaves_resolved :
+    ∀ n : Seed3Node, n ∈ T.nodes → isLeafKind n.kind = true → facts.resolved n
+
+theorem leaf_resolved_of_cited
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (facts : Seed3LeafCitedFacts G c T)
+    {n : Seed3Node}
+    (hn : n ∈ T.nodes)
+    (hleaf : isLeafKind n.kind = true)
+    (hsyn : checkLeafSyntax T n = true) :
+    facts.resolved n := by
+  cases hk : n.kind with
+  | internal tag payload => simp [isLeafKind, hk] at hleaf
+  | leaf tag ref =>
+      cases tag with
+      | EQ => exact facts.eq_sound n ref hn hk hsyn
+      | SIB => exact facts.sib_sound n ref hn hk hsyn
+      | NO_OVERFULL => exact facts.no_overfull_sound n ref hn hk hsyn
+      | NEG_SWITCH => exact facts.neg_switch_sound n ref hn hk hsyn
+      | PRUNABLE => exact facts.prunable_sound n ref hn hk hsyn
+      | NOT_SATURATED => exact facts.not_saturated_sound n ref hn hk hsyn
+      | FOUR_DOOR => exact facts.four_door_sound n ref hn hk hsyn
+      | CONE => exact facts.cone_sound n ref hn hk hsyn
+      | BANK_BLOCK => exact facts.bank_block_sound n ref hn hk hsyn
+      | LENS_GATE => exact facts.lens_gate_sound n ref hn hk hsyn
+      | SEED10 => exact facts.seed10_sound n ref hn hk hsyn
+
+theorem checkSeed3RouteTree_sound
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (facts : Seed3LeafCitedFacts G c T)
+    (hcheck : checkSeed3RouteTree G c T = true) :
+    Seed3CompletenessProp G c T facts := by
+  have hshape : checkSeed3TreeShape T = true := checkSeed3RouteTree_shape hcheck
+  have hcov : checkCoverage T = true := checkSeed3TreeShape_coverage hshape
+  refine { checked := hcheck, coverage := hcov, leaves_resolved := ?_ }
+  intro n hn hleaf
+  have hsyn : checkLeafSyntax T n = true := leaf_syntax_of_tree hshape hn hleaf
+  exact leaf_resolved_of_cited facts hn hleaf hsyn
+
+def caseCoveredByLeaf (T : Seed3RouteTreeData) (caseId : CaseId) : Prop :=
+  ∃ n : Seed3Node, n ∈ T.nodes ∧ isLeafKind n.kind = true ∧ caseId ∈ n.cases
+
+theorem caseCovered_of_checkCoverage
+    {T : Seed3RouteTreeData}
+    (hcov : checkCoverage T = true)
+    {caseId : CaseId}
+    (hcase : caseId ∈ T.cases) :
+    caseCoveredByLeaf T caseId := by
+  unfold checkCoverage at hcov
+  rw [Bool.and_eq_true, Bool.and_eq_true] at hcov
+  have hEq : leafCases T = T.cases := of_decide_eq_true hcov.2
+  have hleafcase : caseId ∈ leafCases T := by
+    rw [hEq]; exact hcase
+  unfold leafCases at hleafcase
+  rcases List.mem_flatMap.mp hleafcase with ⟨n, hnLeaf, hcid⟩
+  unfold leafNodes at hnLeaf
+  have hnmem : n ∈ T.nodes := (List.mem_filter.mp hnLeaf).1
+  have hleaf : isLeafKind n.kind = true := (List.mem_filter.mp hnLeaf).2
+  exact ⟨n, hnmem, hleaf, hcid⟩
+
+theorem checkSeed3RouteTree_case_resolved
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (facts : Seed3LeafCitedFacts G c T)
+    (hcheck : checkSeed3RouteTree G c T = true)
+    {caseId : CaseId}
+    (hcase : caseId ∈ T.cases) :
+    ∃ n : Seed3Node, n ∈ T.nodes ∧ isLeafKind n.kind = true ∧
+      caseId ∈ n.cases ∧ facts.resolved n := by
+  have hcomp := checkSeed3RouteTree_sound facts hcheck
+  rcases caseCovered_of_checkCoverage hcomp.coverage hcase with ⟨n, hn, hleaf, hcid⟩
+  exact ⟨n, hn, hleaf, hcid, hcomp.leaves_resolved n hn hleaf⟩
+
+end Seed3RouteTree
+
 end CertGraph
 end Erdos23Delta0

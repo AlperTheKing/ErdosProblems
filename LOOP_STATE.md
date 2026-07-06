@@ -1014,3 +1014,16 @@ emitted data volume or batch counts. Batch counts are M5 evidence only.
   (falsifier clean 19.5M). Ledger v43: certified=45/108, pending=63.
 - MY SLICE: k0/G4 family 20-neg-residual ladder running (bxmo6hgwi); k4/G1+k3/G2+k4/F7+
   k4/F6 parked (queue 10). Mailbox marker 1880039.
+
+## TICK NOTES (2026-07-06T08:20Z) — Seed3RouteTree GREEN; checker triad complete
+- LEAN: CertGraph.lean 4994 lines, all checker modules green (OddCyclePacking M6.5 +
+  LensGates + Seed3RouteTree). Seed3 provides checkSeed3RouteTree_sound (tree well-formed:
+  single parent, strict rank decrease, internal case-partition, coverage; every leaf resolves
+  via Seed3LeafCitedFacts per-tag hypotheses) + checkSeed3RouteTree_case_resolved. Build note:
+  this Lean version REJECTS `Bool.and_eq_true.mp` in TERM position (unknownIdentifier) — must
+  use `rw [Bool.and_eq_true] at h` then `.1/.2`. (Prior modules already used rw form.)
+- LEAN NEXT: (a) geometry-discharge design for LensGateGeomSound (MAIN designing NOW);
+  (b) M6.5 OddCyclePacking toy C5[5] instantiation when Branch-A emissions ready;
+  (c) M4 BranchBData->BranchBCertBundle wiring (transpiler audit-green); (d) FC-form bridge.
+- SIBLING: E6 archived (HBD certificate implication); E7-or-COMPLETE requested.
+- MY SLICE: k9/B0 PARKED (queue 12); k2/G6 family core building. Mailbox marker 1880039.

@@ -205,3 +205,38 @@ eta >= 0, and no A1 cone is invoked before etaNonneg is available.
 In the Branch-A input package the required scalar hypothesis is the field
 etaNonneg : eta >= 0 — not a direct Bank0 hypothesis. Bank0 is one possible source of
 etaNonneg; Bank-L is the other.
+
+# ===== E6 (sibling thread, 2026-07-06; reconstructed from transformed extraction) =====
+
+E6. HBD Lemma 4.10 renamed as a certificate implication.
+Target section: Branch B, Section 3.6 (CombinedHBD); also any earlier HBD subsection
+where "Lemma 4.10" is stated as an unconditional structural lemma.
+Anchor phrases: "Lemma 4.10" / "HBD Lemma 4.10 gives" / "the HBD lemma implies".
+
+Replacement text:
+Replace the unconditional statement called "HBD Lemma 4.10" by the following certificate
+implication.
+HBD CERTIFICATE IMPLICATION. Let Q be an overfull row, and let the BlueDetour and
+PeelSplit certificates have produced R_Q <= N + U_{Q,res} + Sigma_fan + Sigma_cell.
+Suppose a CombinedHBD certificate is supplied for Q. The certificate consists of: the
+residual packet W_Q^res; the residual positive detour term U_{Q,res}; the fan ledger
+contribution Sigma_fan; the protected-cell contribution Sigma_cell; the ledger reserve
+rho_L >= 0; a finite packet-bank addition trace; the no-bad-crossing witnesses required
+in each simplified bank increment; the exact arithmetic certificate proving the final
+CombinedHBD inequality. Then the certificate proves
+  2*(U_{Q,res} + Sigma_fan + Sigma_cell + rho_L) <= B(W_Q^res).
+Equivalently, U_{Q,res} + Sigma_fan + Sigma_cell <= (1/2)*B(W_Q^res) - rho_L. Together
+with PacketExchange, B(W_Q^res) <= eta, this gives
+  U_{Q,res} + Sigma_fan + Sigma_cell <= eta/2 - rho_L.
+Substituting into PeelSplit yields the Banked-UPO row bound R_Q <= N + eta/2 - rho_L.
+The HBD statement is therefore NOT an unconditional graph-theoretic lemma. It is a
+certificate implication whose hypotheses are exactly the emitted CombinedHBD trace, the
+no-bad-crossing checks for the bank increments, the component and protected-cell coverage
+checks, and the final exact arithmetic check.
+The packet-bank increment used in the trace is the exact identity
+  B25(W union A) = B25(W) + 2*|W union A|*|A| - |A|^2 - 25*e_M(A) - 25*e_M(W,A).
+A simplified increment may be used only when the certificate proves e_M(W,A) = 0. Thus
+every HBD step is justified either by the full identity above or by the certified
+no-bad-crossing specialization. No separate protected-cell eta/2 estimate is invoked
+inside HBD; all protected-cell charges are included in Sigma_cell and paid by the single
+CombinedHBD inequality.
