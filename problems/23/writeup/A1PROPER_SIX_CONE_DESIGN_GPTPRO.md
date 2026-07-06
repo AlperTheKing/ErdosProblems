@@ -108,3 +108,13 @@ for A1ProperCertBundle design (relay to MAIN if its reply assumes checkConeCert)
   identity, explicit for nonneg) instead of decide. Codex should keep the emitted cone NFs compact / canonical.
 - So a1Proper closure = Codex 6 compact cone NFs -> build 6 proof-carrying ConeCerts (by decide) -> A1ProperCertBundle
   -> A1ProperCertBundle.sound via ConeCert.sound + slack-dictionary (Sigma_r>=0) + mask table + (75+2N)>0.
+
+## UPDATE 2026-07-06T20:05Z — mask-symmetry table COMPUTED + VERIFIED (independent) = 1 of 4 a1Proper pieces done
+Independently computed the D5-orbit structure of the 30 nonempty proper masks of Z/5 (rotation r:i->i+1,
+reversal s:i->-i): EXACTLY 6 orbits, each size 5 (30 total) — VERIFIES MAIN six-cone claim (falsifiable check
+PASSED, not 5 or 7). Canonical reps: M0={0}(sz1) M1={0,1}(sz2-adj) M2={0,1,2}(sz3-consec) M3={0,1,2,3}(sz4)
+M4={0,1,3}(sz3-nonconsec) M5={0,2}(sz2-dist2). Full 30-entry mask->(canonical M_j, (rot^a . rev^b)) table
+emitted: problems/23/writeup/a1_mask_symmetry_table.json (the COORDINATING STANDARD for M0-M5 labeling — MAIN
+Lean canonicalProperMaskId/mask_symmetry_sound + Codex cone emission must use THIS labeling). Complement NOT
+used to merge (it is a separate relation; 6 orbits under D5 alone). This is one of the 4 remaining a1Proper
+closure pieces (mask table) DONE independently.
