@@ -1225,3 +1225,20 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   overview/Banked-UPO; CODEX = Phase-I pricing impl for k6/F6. Wakeup ~1200s.
 - NEXT TICK: (1) extract MAIN helper layer (transform) -> graft CertGraph LensGates -> honest build;
   (2) check Codex Phase-I first feasible support -> gate; (3) SIBLING Branch-B section.
+
+
+## TICK NOTES (2026-07-06T17:15Z) — LensGates graft prep: API reconciled, clean re-emission requested
+- KEY API FACT (for the graft): LensGateConclusion (G c D) = inductive 3 ctors: cross(sw)(h:CrossRouteReady
+  =checkLensSwitch=true) | label(lab)(h:LabelWellDefined=checkLabelCert=true) | forbidden(h:CorridorForbidden
+  :=False). NO forbid/osc conclusion ctor => forbid AND osc outcomes discharge ONLY by DERIVING False.
+- EXISTING (verified): OSCKind{OSC0..4}DecEq, OSCData{kind,headOn}, OSCResidualCert{osc:OSCData,witnessVertices,
+  witnessEdges}, ForbidKind{triangle,shorterOdd,invalidRow,invalidShadow,invalidOSC}DecEq, ForbidCert{kind,
+  witnessVertices,witnessEdges}, LensGateOutcome{cross|label|forbid|osc}, checkForbidTriangleFromCert(5025),
+  triangle_forbid_from_cert_false(5061 -> False), checkOutcome, checkLensGates_facts, LensGateGeomSound struct(4474).
+- MISSING (MAIN re-emitting self-contained): checkForbidShorterOddFromCert, shorterOdd_forbid_from_cert_false,
+  LensGateGeomSubcert(6ctor), checkLensGateGeomSubcert, IrreducibleLensGeomFacts(osc1_sound+osc4_head_on_sound,
+  each -> False), lensGateGeomSound_of_subcert constructor. Sent MAIN the precise spec.
+- MAIN's first draft (9637c, in-thread) referenced triangle_forbid_lens_conclusion etc. as if present = NOT
+  graftable; re-emission requested. NEXT TICK: graft MAIN's clean re-emission -> honest build -> the 2
+  IrreducibleLensGeomFacts OSC fields become the sole named LensGates geom obligation.
+- CODEX Phase-I pricing in flight (k6/F6). Ledger 45/108. SIBLING on Branch-B.
