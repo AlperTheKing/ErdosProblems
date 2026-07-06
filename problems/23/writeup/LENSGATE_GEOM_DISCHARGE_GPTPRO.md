@@ -73,3 +73,26 @@ MISSING (MAIN must emit): AllLengthFiveOddClosedWitnesses, checkForbidShorterOdd
 STATUS: LensGates checker soundness NARROWED from "all 4 outcomes' geometry" to "IrreducibleLensGeomFacts
   (OSC/head-on primitive)". Full Lean code proposal persists in MAIN thread (7601c); re-extract at graft.
 RETASK: MAIN to emit the FULL self-contained helper layer + minimal IrreducibleLensGeomFacts.
+
+
+## UPDATE 2026-07-06T17:05Z — MAIN helper layer LANDED (9637c, in-thread); LensGates obligation NARROWED to 2 fields
+The full "Mechanical and irreducible LensGate geometry layer" is in the MAIN thread (asst msg #9,
+9637 chars; re-extract via @EQ@/@PL@/@AM@ transform, ~10 slices due to display cap). Contents:
+- checkForbidShorterOddFromCert (new): decide kind=shorterOdd && OddCyclePacking.checkOddClosedWalk
+  witness && edgeCount<5 && witnessEdges match.
+- LensGateGeomSubcert (new inductive, 6 ctors): cross | label | forbidTriangle | forbidShorterOdd |
+  osc1 _ | osc4HeadOn _.
+- checkLensGateGeomSubcert (dispatch on outcome x subcert: cross/label->true, forbid*->checkForbid*,
+  osc1->decide O.osc.kind=OSC1, osc4HeadOn->decide kind=OSC4 && headOn=true, else false).
+- LensGateGeomSound CONSTRUCTOR (cert : subcert)(facts : IrreducibleLensGeomFacts): cross via
+  checkOutcome_cross_switch->LensGateConclusion.cross; label via checkOutcome_label_cert; forbid via
+  triangle_forbid_lens_conclusion / shorterOdd_forbid_lens_conclusion; osc via facts.
+- **IrreducibleLensGeomFacts = EXACTLY 2 fields**: osc1_sound (OSC1 primitive-lens residual, types
+  RR/RB/RD/DD/TTsame/TTopposite/TR) + osc4_head_on_sound (OSC4 head-on residual). THAT IS THE ENTIRE
+  remaining LensGates geometric obligation.
+- Needs existence-check at graft: OSCKind(OSC1/OSC4), O.osc.kind/headOn, ForbidKind.shorterOdd,
+  F.witnessVertices/witnessEdges, triangle_forbid_lens_conclusion, shorterOdd_forbid_lens_conclusion
+  (MAIN to also supply the 2 forbid *_lens_conclusion lemmas + AllLengthFiveOddClosedWitnesses if missing).
+NEXT-TICK FIRST ACTION: extract full layer (slices) -> existence-check referenced types -> graft into
+CertGraph LensGates namespace -> honest build (expect multi-round like beta_bipartization) -> the 2
+IrreducibleLensGeomFacts fields become the named remaining LensGates obligation (route to MAIN geometry).
