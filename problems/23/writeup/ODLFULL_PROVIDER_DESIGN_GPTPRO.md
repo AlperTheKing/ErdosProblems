@@ -122,3 +122,37 @@ including the face-split-queue rows) is required for the EQ leaf global theorem.
    (Seed3LeafODLFacts) + EQ/SIB/... leaf global-provider soundness. That is the next
    MAIN design increment (per-family GeomSound lemmas).
 4. Blocked on O14: full 108/108 chart cover for the EQ leaf global theorem.
+
+## UPDATE 2026-07-06T23:35Z — MAIN per-leaf reply gated; root-representation BUILT; design CORRECTION
+MAIN (thread msg 11) delivered the semantic ODL layer + a design correction. Key points:
+- **CORRECTION**: PRUNABLE and NOT_SATURATED are NOT terminal ODL leaves — they are internal
+  prune/absorb nodes with child-link inequalities. `checkPrunableTerminalLeaf := fun _ _ => false`,
+  `checkNotSaturatedTerminalLeaf := fun _ _ => false`. (Supersedes the ODLFullRowCert `negSwitch`/etc.
+  treatment where these appeared as leaves.)
+- **Semantic layer** (separate from the STRUCTURAL tree; checkSeed3RouteTree_sound_from_closeData is
+  structural only):
+  ```lean
+  structure ODLCoreData (G c rows Q) where
+    support : List Nat ; supportSize : ℚ ; supportRowSum : ℚ ; supportSize_le_N : supportSize ≤ (G.n:ℚ)
+  def CoreODLGoal (G c rows Q) (core) : Prop := core.supportRowSum ≤ core.supportSize + etaQ G c
+  structure ODLNodeSemantics (G c rows Q) (T) where coreOf : NodeId → ODLCoreData G c rows Q
+  def resolvedODL (G c rows Q) (T) (sem) (n : Seed3Node) : Prop := CoreODLGoal (sem.coreOf n.id)
+  ```
+- **Root-representation (BUILT GREEN, commit c8a7c3157, ODLFull.lean)**:
+  ```lean
+  structure RootRepresentsRow (G c rows Q) (rootCore) : Prop where
+    row_le_support : rowSum G c rows Q ≤ rootCore.supportRowSum
+  theorem ODLFull_of_rootCore (hRoot : RootRepresentsRow ...) (hCore : CoreODLGoal ... rootCore) :
+      rowSum G c rows Q ≤ (G.n:ℚ) + etaQ G c := by unfold CoreODLGoal at hCore; linarith
+  ```
+  axioms [propext,Classical.choice,Quot.sound]. This is the root-local-to-row passage that lifts a
+  certified root-core bound to BranchAInputs.odlFull.
+- **Leaf providers** `Seed3ODLLeafProviders` (structure): checkEQLeaf/checkSIBLeaf/checkNoOverfullLeaf/
+  checkNegSwitchLeaf/checkFourDoorLeaf/checkConeLeaf/checkBankBlockLeaf/checkLensGateLeaf/checkSeed10Leaf/
+  checkTwoDoorODLLeaf/checkNCHODLLeaf (each Seed3Node→PayloadRef→Bool) + per-tag soundness
+  (eq_sound/sib_sound/no_overfull_sound/neg_switch_sound/four_door_sound/cone_sound/bank_block_sound/
+  lens_gate_sound/…): n∈T.nodes → n.kind=leaf TAG ref → checkXLeaf n ref=true → resolvedODL n.
+- REMAINING odlFull: (a) the ODLNodeSemantics TREE-ASSEMBLY theorem (per-leaf resolvedODL + internal
+  prune/absorb child-link inequalities ⟹ root resolvedODL) — the semantic analog of
+  checkSeed3RouteTree_sound; (b) the leaf checker Bool defs + soundness (checkEQLeaf etc.); (c) O14 full
+  108 cover for the EQ leaf global theorem. MAIN retasked for (a)+(b).
