@@ -156,3 +156,28 @@ MAIN (thread msg 11) delivered the semantic ODL layer + a design correction. Key
   prune/absorb child-link inequalities ⟹ root resolvedODL) — the semantic analog of
   checkSeed3RouteTree_sound; (b) the leaf checker Bool defs + soundness (checkEQLeaf etc.); (c) O14 full
   108 cover for the EQ leaf global theorem. MAIN retasked for (a)+(b).
+
+## UPDATE 2026-07-07T00:10Z — MAIN tree-assembly gated; excess-monotonicity link BUILT
+MAIN (thread msg 13) delivered the semantic tree assembly. Key design + build status:
+- **Internal-node numeric link** (BUILT GREEN, commit 616f7b706, ODLFull.lean): coreExcess(S) :=
+  supportRowSum − supportSize; CoreExcessLE parent child := coreExcess parent ≤ coreExcess child;
+  `CoreODLGoal_of_excess_le (hlink : CoreExcessLE parent child)(hchild : CoreODLGoal child) :
+  CoreODLGoal parent := by unfold; linarith`. Since η is ambient/fixed, parent-excess ≤ child-excess
+  propagates the child's ODL bound up. **This is the heart of the tree assembly.** PRUNABLE/NOT_SATURATED
+  are internal nodes whose link certificates prove this inequality (NOT terminal leaves).
+- **Composition (design, buildable next)**: `resolvedODL := CoreODLGoal (sem.coreOf n.id)`;
+  `resolvedODL_of_one_child_excess_link := CoreODLGoal_of_excess_le` (prune/absorb one-child helper);
+  `ODLFull_of_resolved_root (hresolved : resolvedODL root)(hrep : RootRepresentsRow (sem.coreOf root.id))
+  : rowSum ≤ N+η := ODLFull_of_rootCore hrep hresolved` (resolvedODL root ≡ CoreODLGoal rootCore
+  definitionally). Needs Seed3Node/Seed3RouteTreeData (in ns Seed3RouteTree, CertGraph.lean:4582).
+- **Recursive checker (design)**: `checkODLResolveNode (fuel)(n) : Bool` — leaf → leafs.sound; internal →
+  link check && all children resolve; soundness by fuel induction (mirrors checkSeed3RouteTree_sound,
+  using isLeafKind/isInternalKind + List.all_eq_true over childrenOf). Needs Seed3ODLLeafProviders
+  (gated on leaf checkers) + Seed3ODLInternalLinks.
+- **Composition chain**: checkSeed3ODLSemanticTree_sound ⟹ resolvedODL(root) ≡ CoreODLGoal(rootCore);
+  emitted RootRepresentsRow(rootCore) gives row_le_support + supportSize_le_N; ODLFull_of_rootCore ⟹
+  rowSum ≤ N+η = BranchAInputs.odlFull.
+- REMAINING: leaf checker Bool defs + per-tag soundness (checkEQLeaf/checkSIBLeaf/… ⟹ resolvedODL), the
+  Seed3ODLInternalLinks structure + the recursive checker soundness build, and O14 (full 108 cover for the
+  EQ leaf). MAIN retasked for the leaf checkers. RootRepresentsRow provenance = structural row/support
+  ownership data (emitted per row), not tree-shape alone.
