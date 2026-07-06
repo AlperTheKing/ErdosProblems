@@ -240,3 +240,31 @@ every HBD step is justified either by the full identity above or by the certifie
 no-bad-crossing specialization. No separate protected-cell eta/2 estimate is invoked
 inside HBD; all protected-cell charges are included in Sigma_cell and paid by the single
 CombinedHBD inequality.
+
+# ===== E7 (sibling thread, 2026-07-06; reconstructed from transformed extraction) =====
+
+E7. Branch-A coefficient-comparison head paragraph routed through Bank0.
+Target section: Branch A, Section 2.1 (Branch A: the length-five reduction to C5-RS); also
+the opening of any Branch-A coefficient-comparison subsection.
+Anchor phrases: "We prove the mask inequalities by coefficient comparison" / "The empty,
+proper, and full masks are handled by the coefficient comparison" / "The coefficient-
+comparison section begins".
+
+Replacement text:
+The Branch-A coefficient-comparison certificates are applied only AFTER the scalar bank has
+been established. The scalar bank is eta = (N^2 - 25*m)/25. In the pure all-length-five case
+the scalar input etaNonneg : eta >= 0 is supplied by Bank0 (proves N^2 - 25*m >= 0). If any
+positive row has length L > 5, the same scalar input is supplied by Bank-L, which proves
+25*m <= N^2 - L^2 + 25, hence eta >= (L^2 - 25)/25 > 0.
+Thus the Branch-A mask proof CONSUMES etaNonneg as an input; it does not ask any empty-mask
+cone to prove eta >= 0.
+The active mask is P = {i in Z/5Z : s_i > tau}, tau = 5*m/N. Mask trichotomy:
+- P empty: sum_i (s_i - tau)_+ = 0, and C5-RS follows immediately from etaNonneg (Bank0 in
+  the pure all-length-five case).
+- P nonempty proper: the six A1 proper-mask cone certificates prove X(P) <= (25/N + 2/3)*eta
+  where X(P) = sum_{i in P} (s_i - tau); since eta >= 0 this lifts to X(P) <= (25/N + 1)*eta.
+- P = Z/5Z: full-mask case discharged by ODL, I(Q) <= N + eta.
+This is the ONLY coefficient-comparison routing in Branch A: empty -> etaNonneg (Bank0/Bank-L);
+proper -> A1 proper-mask cones + etaNonneg; full -> ODL. All coefficient-comparison passages
+must keep the logical order: first establish etaNonneg; then apply the A1 or ODL certificate;
+then assemble C5-RS; then derive the length-five GERSH bound.
