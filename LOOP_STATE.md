@@ -1308,3 +1308,21 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - CODEX: Phase-I IPM+support-extract ruling; k6/F6 calibration in flight. marker 1941117.
 - BUILD LESSON: `if (b:Bool)=true` ite reduces via `if_pos hleaf` (hleaf : b = true), NOT rw[hleaf]+rw[and].
 - NEXT TICK: gate audit workflow report; gate MAIN Seed3-instantiation reply; check Codex Phase-I.
+
+
+## TICK NOTES (2026-07-06T19:25Z) — Strategic convergence: Lean infra DONE, remaining = package construction (the math)
+- MAIN VERDICT (Seed3 resolved question): "resolved must be a real mathematical proposition for the leaf
+  results to give the ODL/Bank0 result" => Seed3 non-lens closure is a REAL math obligation, NOT Bool
+  structural coverage. Confirms my honest boundary + the adversarial audit.
+- CONVERGENCE (audit + MAIN + my grafts agree): the Lean CHECKER/SKELETON infrastructure is COMPLETE and
+  GENUINE (FC-bridge unconditional, LensGates fully mechanical, Seed3 wired, Bank0/OddCyclePacking proven,
+  axioms clean, no fake progress). The ENTIRE remaining difficulty = CONSTRUCT the SimpleGraphCertificatePackage
+  = the deep math: general BranchAInputs (a1Proper/C5-RS), BranchBInputs (Bank-L/Banked-UPO), GoodCutData
+  (M6 general max-cut) + the finite chart certs (Codex, 45/108).
+- MAIN RETASKED (core): a1Proper/C5-RS general provider — is it a closed-form Lean theorem (uniform-width
+  w_i=N/5, census 0-fail, tight C5[t]) or theorem-modulo-finite-cert (name the exact sub-case needing a
+  literal cert so charts instantiate ONLY that)? In flight.
+- CODEX: k6/F6 targeted Phase-I (artificial_sum 0.09, 5 rows) in flight. marker 1948005.
+- MAIN thread STALLED-RENDER recurring: reload fixes; short Turkish-preview replies = decision answers.
+- NEXT TICK: gate MAIN a1Proper reply (decisive for whether Conjunct-1/4 core is a theorem or cert-modulo);
+  gate Codex k6/F6 exact solve.
