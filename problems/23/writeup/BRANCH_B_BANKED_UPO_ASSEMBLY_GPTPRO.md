@@ -108,3 +108,29 @@ certification obligation: if some actual peel node has 25*m_out > r_out^2, THAT 
 cactus-peel construction STRUCTURALLY GUARANTEES valid packets (peel produces size-dominant W_out) or must
 be checked empirically per node is the remaining question (retasked SIBLING). Conjunct-2 closes iff Codex
 emits + I exact-verify a passing PeelInvariantCert for every cactus peel node in the Branch-B rows.
+
+## PEELINVARIANT SAFETY (SIBLING structural-guarantee answer, 2026-07-07) — NO guarantee; per-node cert MANDATORY
+DECISIVE (falsifier-first, transcribed faithfully):
+"The current cactus-peel construction does NOT structurally guarantee the PeelInvariant. It must be treated
+as a per-node certified obligation. A genuine cactus-peel node that fails 25*m_out <= r_out^2 would FALSIFY
+the current Branch-B/Conjunct-2 proof chain. It would not automatically falsify the THEOREM, but it would
+break this proof architecture unless the cactus ledger is replaced or the node is routed through a different
+certified bank."
+WHY no guarantee: the cactus interface proves only membership/ownership/peel-legality — NOT that the inherited
+restricted cut on W_out is maximum, C5-balanced, or Bank0-valid. So 25*m_out<=r_out^2 is NOT a theorem of the
+current interface. The C5[t] W_out=V4∪V0 obstruction (25t^2>4t^2) stands. "A genuine cactus-peel node CAN
+violate the PeelInvariant unless its node-specific certificate rules it out. A failing node is a DECISIVE
+obstruction to the current Conjunct-2 proof."
+CONCRETE CLOSURE PATH (Codex): for every cactus peel node C referenced by P7, emit PeelInvariantCert(C) with
+data {nodeId(C), (Q,cellId), W_out(C)⊆V, r_out(C), M_out(C)={uv∈E: u,v∈W_out(C), uv∈M}, m_out(C), integer
+proof 25*m_out(C)<=r_out(C)^2}; verifier checks W_out(C)=ledger's outside packet, r_out=|W_out|, M_out=restricted
+bad set, m_out=|M_out|, 25*m_out<=r_out^2 (all exact finite). PLUS a COVERAGE certificate proving every required
+node has a matching verified cert. Q ranges over the finite Branch-B row list. Count: #RequiredCactusPeelNodes
+<= #CactusCells × max-peel-nodes-per-cell (exact from artifact manifest).
+FINAL STATUS: PeelInvariant NOT structurally guaranteed; MANDATORY per-node cert family; if ANY required
+cactus peel node fails 25*m_out<=r_out^2, Conjunct-2 is NOT closed; once every required node passes the exact
+check, P7/P9/P10 become fully certified. A future "five-sector size-dominance" theorem for all cactus outside
+packets COULD replace the per-node certs but is NOT currently established.
+=> Branch-B (Conjunct-2) = CERTIFIED modulo a FINITE PeelInvariantCert family (Codex enumerates+emits, I
+exact-verify) + coverage cert. LIVE RISK: a failing node = falsifier of THIS architecture (not yet exhibited;
+requires Codex enumeration to check the actual nodes). Routed to Codex 2026-07-07.
