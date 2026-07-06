@@ -4990,5 +4990,85 @@ theorem checkSeed3RouteTree_case_resolved
 
 end Seed3RouteTree
 
+/-! ### LensGates triangle-forbid discharge: a checked triangle forbid
+certificate contradicts `TriangleFree` (a genuinely-proven geometric field,
+not a hypothesis). -/
+
+namespace LensGates
+
+structure TriangleForbidPayload where
+  u : Nat
+  v : Nat
+  w : Nat
+  edgeUV : Nat × Nat
+  edgeVW : Nat × Nat
+  edgeUW : Nat × Nat
+  deriving Repr
+
+def trianglePayload? (F : ForbidCert) : Option TriangleForbidPayload :=
+  match F.witnessVertices, F.witnessEdges with
+  | u :: v :: w :: [], euv :: evw :: euw :: [] =>
+      some { u := u, v := v, w := w, edgeUV := euv, edgeVW := evw, edgeUW := euw }
+  | _, _ => none
+
+def checkTriangleForbidPayload (G : GraphData) (P : TriangleForbidPayload) : Bool :=
+  [ decide (P.u < G.n),
+    decide (P.v < G.n),
+    decide (P.w < G.n),
+    decide (P.edgeUV = normEdge P.u P.v),
+    decide (P.edgeVW = normEdge P.v P.w),
+    decide (P.edgeUW = normEdge P.u P.w),
+    adjb G P.u P.v,
+    adjb G P.v P.w,
+    adjb G P.u P.w ].all id
+
+def checkForbidTriangleFromCert (G : GraphData) (F : ForbidCert) : Bool :=
+  decide (F.kind = ForbidKind.triangle) &&
+  match trianglePayload? F with
+  | some P => checkTriangleForbidPayload G P
+  | none => false
+
+theorem ne_of_adjb_true {G : GraphData} {u v : Nat}
+    (h : adjb G u v = true) : u ≠ v := by
+  unfold adjb at h
+  rw [Bool.and_eq_true] at h
+  exact of_decide_eq_true h.1
+
+theorem triangle_forbid_payload_false {G : GraphData} {P : TriangleForbidPayload}
+    (hcheck : checkTriangleForbidPayload G P = true) (hTri : TriangleFree G) :
+    False := by
+  have hall := List.all_eq_true.mp hcheck
+  have hu_dec : decide (P.u < G.n) = true :=
+    hall (decide (P.u < G.n)) (by simp)
+  have hv_dec : decide (P.v < G.n) = true :=
+    hall (decide (P.v < G.n)) (by simp)
+  have hw_dec : decide (P.w < G.n) = true :=
+    hall (decide (P.w < G.n)) (by simp)
+  have huv : adjb G P.u P.v = true :=
+    hall (adjb G P.u P.v) (by simp)
+  have hvw : adjb G P.v P.w = true :=
+    hall (adjb G P.v P.w) (by simp)
+  have huw : adjb G P.u P.w = true :=
+    hall (adjb G P.u P.w) (by simp)
+  have hu : P.u < G.n := of_decide_eq_true hu_dec
+  have hv : P.v < G.n := of_decide_eq_true hv_dec
+  have hw : P.w < G.n := of_decide_eq_true hw_dec
+  have huv_ne : P.u ≠ P.v := ne_of_adjb_true huv
+  have hvw_ne : P.v ≠ P.w := ne_of_adjb_true hvw
+  have huw_ne : P.u ≠ P.w := ne_of_adjb_true huw
+  exact (hTri P.u P.v P.w hu hv hw huv_ne hvw_ne huw_ne) ⟨huv, hvw, huw⟩
+
+theorem triangle_forbid_from_cert_false {G : GraphData} {F : ForbidCert}
+    (hcheck : checkForbidTriangleFromCert G F = true) (hTri : TriangleFree G) :
+    False := by
+  unfold checkForbidTriangleFromCert at hcheck
+  rw [Bool.and_eq_true] at hcheck
+  rcases hcheck with ⟨hkind, hpayload⟩
+  cases hP : trianglePayload? F with
+  | none => rw [hP] at hpayload; contradiction
+  | some P => rw [hP] at hpayload; exact triangle_forbid_payload_false hpayload hTri
+
+end LensGates
+
 end CertGraph
 end Erdos23Delta0
