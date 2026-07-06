@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 7,
+  "columns": 51045,
+  "dominant": 10,
+  "exact_ok": true,
+  "full_max_residual": "210715/1188",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 150999,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 2347,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k7_G3_near_family_claude_patch1_signeddelta_fullspec_rowgen3_v1.jsonl",
+  "solution_max": "2675/2",
+  "solution_min": "num_bits=2258/den_bits=2281",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 13119
+}

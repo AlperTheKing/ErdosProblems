@@ -191,8 +191,10 @@ def main() -> None:
 
     support = rel_to_abs(root, manifest["support_out"])
     index = rel_to_abs(root, manifest["index_out"])
+    bridge = root / "problems/23/lean/Erdos23Delta0/Cert/BranchBBridge.lean"
     require(support.exists(), f"missing support file: {support}")
     require(index.exists(), f"missing aggregate index file: {index}")
+    require(bridge.exists(), f"missing BranchBBridge Lean file: {bridge}")
     support_text = support.read_text(encoding="utf-8")
     require("gateBDominance : ScaledGeCert" in support_text, "support missing Gate-B dominance certificate field")
     require("ScaledGeCert.check r.gateBDominance" in support_text, "support does not check Gate-B dominance")
@@ -218,7 +220,7 @@ def main() -> None:
         require(smoke_dict_lean.exists(), f"missing candidate_v2 smoke dictionary Lean file: {smoke_dict_lean}")
         smoke_lean_files.append(smoke_dict_lean)
 
-    all_files = [support, *emitted]
+    all_files = [support, bridge, *emitted]
     if index not in all_files:
         all_files.append(index)
     if dictionary_lean is not None:
@@ -278,7 +280,9 @@ def main() -> None:
 
     require(build.get("failures") == [], "build summary contains failures")
     build_modules = {r.get("module") for r in build.get("results", [])}
-    expected_build_count = 33 if dictionary_manifest is not None else 32
+    require("Erdos23Delta0.CertGraph" in build_modules, "CertGraph missing from build summary")
+    require("Erdos23Delta0.Cert.BranchBBridge" in build_modules, "BranchBBridge missing from build summary")
+    expected_build_count = 35 if dictionary_manifest is not None else 34
     require(build.get("count") == expected_build_count, "unexpected build module count")
     require(build.get("shard_count") == 29, "unexpected build shard count")
     if dictionary_manifest is not None:
@@ -309,6 +313,7 @@ def main() -> None:
         "build_summary": sha256_file(build_path),
         "support": sha256_file(support),
         "index": sha256_file(index),
+        "branchb_bridge": sha256_file(bridge),
         "dictionary_manifest": sha256_file(dictionary_manifest_path) if dictionary_manifest is not None else None,
         "dictionary_lean": sha256_file(dictionary_lean) if dictionary_lean is not None else None,
         "candidate_v2_smoke_summary": sha256_file(v2_smoke_path) if v2_smoke_path is not None else None,

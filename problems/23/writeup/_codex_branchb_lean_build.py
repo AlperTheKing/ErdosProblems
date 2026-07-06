@@ -119,14 +119,16 @@ def main() -> None:
     build_root = (root / args.build_root).resolve()
     build_root.mkdir(parents=True, exist_ok=True)
 
+    certgraph = src_root / "Erdos23Delta0/CertGraph.lean"
     support = src_root / "Erdos23Delta0/Cert/BranchBSupport.lean"
     dictionary = src_root / "Erdos23Delta0/Cert/BranchBDictionaryAudit.lean"
+    bridge = src_root / "Erdos23Delta0/Cert/BranchBBridge.lean"
     pilot = src_root / "Erdos23Delta0/Cert/BranchBData/Pilot.lean"
     shards = sorted((src_root / "Erdos23Delta0/Cert/BranchBData").glob("Shard*.lean"))
     index = src_root / "Erdos23Delta0/Cert/BranchBData.lean"
 
     results: list[dict] = []
-    prelude = [support] + ([dictionary] if dictionary.exists() else []) + [pilot]
+    prelude = [certgraph, support] + ([dictionary] if dictionary.exists() else []) + ([bridge] if bridge.exists() else []) + [pilot]
     for path in prelude:
         res = run_lean(formal_root, src_root, build_root, path)
         results.append(res)

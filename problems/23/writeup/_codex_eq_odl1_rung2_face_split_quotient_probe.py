@@ -1464,6 +1464,12 @@ def main() -> None:
         default=None,
         help="Optional exact degree-11 Bernstein target vector; default is the chart target polynomial.",
     )
+    ap.add_argument(
+        "--tier0-json",
+        type=Path,
+        default=None,
+        help="Reuse exact remP/quoP/divisor terms from a previous tier0 quotient diagnostic JSON.",
+    )
     ap.add_argument("--max-base-columns", type=int, default=0, help="0 means uncapped after support filter")
     ap.add_argument("--max-pairs-per-family", type=int, default=0, help="0 means uncapped after support filter")
     ap.add_argument("--max-band-columns", type=int, default=0, help="0 means uncapped after support filter")

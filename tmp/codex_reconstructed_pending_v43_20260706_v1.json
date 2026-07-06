@@ -1,0 +1,734 @@
+{
+  "schema": "codex_reconstructed_pending_v43_v1",
+  "utc": "2026-07-06T10:27:37Z",
+  "ledger": "tmp/eq_odl1_rung2_chart_batch_ledger_v43.json",
+  "numeric_map": "tmp/eq_odl1_rung2_support_numeric_map_full_sum_t60_w16_v1.json",
+  "certified_count": 45,
+  "pending_count": 63,
+  "feasible_near_row_count": 108,
+  "dominant_parity_counts": {
+    "even": 36,
+    "odd": 27
+  },
+  "position_parity_counts": {
+    "even": 32,
+    "odd": 31
+  },
+  "claude_hybrid_queue_status": [
+    {
+      "label": "k6/F6",
+      "chart": 6,
+      "dominant": 5,
+      "in_v43_pending": false
+    },
+    {
+      "label": "k9/B0",
+      "chart": 9,
+      "dominant": 7,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k2/G5 per Claude corrected queue",
+      "chart": 2,
+      "dominant": 12,
+      "in_v43_pending": false
+    },
+    {
+      "label": "k6/G1",
+      "chart": 6,
+      "dominant": 8,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k5/G1",
+      "chart": 5,
+      "dominant": 8,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k9/G1",
+      "chart": 9,
+      "dominant": 8,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k4/G1",
+      "chart": 4,
+      "dominant": 8,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k0/G7",
+      "chart": 0,
+      "dominant": 14,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k5/F6",
+      "chart": 5,
+      "dominant": 5,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k4/F7",
+      "chart": 4,
+      "dominant": 6,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k4/F6",
+      "chart": 4,
+      "dominant": 5,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k3/G2",
+      "chart": 3,
+      "dominant": 9,
+      "in_v43_pending": true
+    },
+    {
+      "label": "k0/G4",
+      "chart": 0,
+      "dominant": 11,
+      "in_v43_pending": true
+    }
+  ],
+  "notes": [
+    "v43 pending is reconstructed as near-band numeric-map feasible rows minus v43 certified rows.",
+    "Claude 14:05Z hybrid queue item k2/G5 chart=2 dominant=12 is not in v43 pending; v43 pending contains chart=2 dominant=13 G6 instead.",
+    "Post-v43 k2_G6-named check artifact records chart=2 dominant=12 exact_ok=false negres=3."
+  ],
+  "pending_rows": [
+    {
+      "position": 0,
+      "chart": 0,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2912,
+      "variables": 48930,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 1,
+      "chart": 0,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 3243,
+      "variables": 45786,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 2,
+      "chart": 0,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2950,
+      "variables": 47515,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 3,
+      "chart": 0,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 2820,
+      "variables": 47152,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 4,
+      "chart": 1,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 3329,
+      "variables": 72284,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 5,
+      "chart": 1,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 3825,
+      "variables": 75442,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 6,
+      "chart": 2,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 3360,
+      "variables": 72284,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 7,
+      "chart": 3,
+      "dominant": 1,
+      "dominant_name": "F2",
+      "float_nonzero": 2640,
+      "variables": 48959,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 8,
+      "chart": 3,
+      "dominant": 2,
+      "dominant_name": "F3",
+      "float_nonzero": 2790,
+      "variables": 47869,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 9,
+      "chart": 3,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2867,
+      "variables": 47199,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 10,
+      "chart": 3,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2855,
+      "variables": 45493,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 11,
+      "chart": 3,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2979,
+      "variables": 46885,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 12,
+      "chart": 3,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 2929,
+      "variables": 44799,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 13,
+      "chart": 3,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2927,
+      "variables": 44063,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 14,
+      "chart": 3,
+      "dominant": 10,
+      "dominant_name": "G3_XY_T",
+      "float_nonzero": 2458,
+      "variables": 45508,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 15,
+      "chart": 3,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2787,
+      "variables": 46862,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 16,
+      "chart": 3,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2815,
+      "variables": 43584,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 17,
+      "chart": 3,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 2240,
+      "variables": 43973,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 18,
+      "chart": 3,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 2612,
+      "variables": 47613,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 19,
+      "chart": 4,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2659,
+      "variables": 48992,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 20,
+      "chart": 4,
+      "dominant": 1,
+      "dominant_name": "F2",
+      "float_nonzero": 2764,
+      "variables": 47236,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 21,
+      "chart": 4,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2888,
+      "variables": 46885,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 22,
+      "chart": 4,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2867,
+      "variables": 45499,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 23,
+      "chart": 4,
+      "dominant": 7,
+      "dominant_name": "B0_eta25_25",
+      "float_nonzero": 2588,
+      "variables": 43131,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 24,
+      "chart": 4,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 2851,
+      "variables": 44069,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 25,
+      "chart": 4,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2845,
+      "variables": 44799,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 26,
+      "chart": 4,
+      "dominant": 10,
+      "dominant_name": "G3_XY_T",
+      "float_nonzero": 2396,
+      "variables": 45514,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 27,
+      "chart": 4,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2787,
+      "variables": 43584,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 28,
+      "chart": 4,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 2267,
+      "variables": 43973,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 29,
+      "chart": 4,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 2522,
+      "variables": 47619,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 30,
+      "chart": 5,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2084,
+      "variables": 30310,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 31,
+      "chart": 5,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 1979,
+      "variables": 31307,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 32,
+      "chart": 5,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2035,
+      "variables": 30638,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 33,
+      "chart": 5,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 1946,
+      "variables": 29094,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 34,
+      "chart": 6,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 1995,
+      "variables": 31167,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 35,
+      "chart": 6,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2032,
+      "variables": 31308,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 36,
+      "chart": 6,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 1973,
+      "variables": 29560,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 37,
+      "chart": 6,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 1975,
+      "variables": 28215,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 38,
+      "chart": 7,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2508,
+      "variables": 53497,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 39,
+      "chart": 7,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2510,
+      "variables": 53129,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 40,
+      "chart": 7,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2397,
+      "variables": 53065,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 41,
+      "chart": 7,
+      "dominant": 7,
+      "dominant_name": "B0_eta25_25",
+      "float_nonzero": 3126,
+      "variables": 52101,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 42,
+      "chart": 7,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2493,
+      "variables": 55550,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 43,
+      "chart": 7,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2500,
+      "variables": 50535,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 44,
+      "chart": 7,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 2318,
+      "variables": 53609,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 45,
+      "chart": 8,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2008,
+      "variables": 34102,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 46,
+      "chart": 8,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2345,
+      "variables": 33033,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 47,
+      "chart": 8,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2335,
+      "variables": 32663,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 48,
+      "chart": 8,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2341,
+      "variables": 32664,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 49,
+      "chart": 8,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 2370,
+      "variables": 30982,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 50,
+      "chart": 8,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2309,
+      "variables": 30981,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 51,
+      "chart": 8,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2026,
+      "variables": 32756,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 52,
+      "chart": 9,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2392,
+      "variables": 49646,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    },
+    {
+      "position": 53,
+      "chart": 9,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2417,
+      "variables": 53468,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 54,
+      "chart": 9,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2395,
+      "variables": 53048,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 55,
+      "chart": 9,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2523,
+      "variables": 53146,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 56,
+      "chart": 9,
+      "dominant": 7,
+      "dominant_name": "B0_eta25_25",
+      "float_nonzero": 3091,
+      "variables": 52101,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 57,
+      "chart": 9,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 2502,
+      "variables": 50907,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 58,
+      "chart": 9,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2487,
+      "variables": 50805,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 59,
+      "chart": 9,
+      "dominant": 10,
+      "dominant_name": "G3_XY_T",
+      "float_nonzero": 2346,
+      "variables": 51045,
+      "dominant_parity": "even",
+      "position_parity": "odd"
+    },
+    {
+      "position": 60,
+      "chart": 9,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2510,
+      "variables": 55550,
+      "dominant_parity": "odd",
+      "position_parity": "even"
+    },
+    {
+      "position": 61,
+      "chart": 9,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 2326,
+      "variables": 53609,
+      "dominant_parity": "odd",
+      "position_parity": "odd"
+    },
+    {
+      "position": 62,
+      "chart": 9,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 2618,
+      "variables": 56541,
+      "dominant_parity": "even",
+      "position_parity": "even"
+    }
+  ]
+}

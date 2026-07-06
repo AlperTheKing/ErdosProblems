@@ -1365,3 +1365,38 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   + mask_symmetry_sound (confirm XMask/rowSurplusAt exist) -> A1SlackHypotheses + slack lemmas -> wrapper -> bundle.
   Then Codex 6 cones -> proof-carrying ConeCerts (by decide) -> BranchAInputs.a1Proper closed.
 - CODEX marker 1948005 (k6/F6 running; 6 cones queued w/ corrected labeling). MAIN idle (retask on odlFull next?).
+
+## TICK NOTES (2026-07-06T23:05Z) — a1Proper cone-bridge + C5[5] M6.5 toy committed; odlFull design gated
+- LEAN COMMITTED (user alone): (a) e1569ff87 A1ProperWrapper.lean canonicalCone_bound (ConeCert.sound + cleared-defect
+  env-binding => XMaskCanonical<=(25/N+2/3)eta) + a1Proper_of_six_cones (6 per-canonical-mask cones => a1Proper ALL
+  proper masks). Built PolyCert.olean into build_root (CertGraph imports Mathlib ONLY, PolyCert not in closure).
+  a1Proper Lean now = ONE hypothesis (per-canonical ConeCert+env-binding); only Codex 6 cone NFs remain.
+  (b) cdff00b68 Toy/OddCyclePackingC5Blowup.lean c5b5_isMaxCut — C5[5] blow-up (25 modular transversal 5-cycles
+  cycle(s,d)=(0,s)(1,s+d)..(4,s+4d) edge-DECOMPOSE it; block-alt cut badCount=25=k) TRUE-max via
+  checkOddCyclePacking_sound; honest decide n=25/125edges (25s); Python exact pre-gate maxcut=100 beta=25=N^2/25 tight.
+  Both EXIT=0 LOGBYTES=0 forbidden=0 axioms=[propext,Classical.choice,Quot.sound]. build_root tmp/a1proper_o_claude_v1.
+- ODLFULL DESIGN GATED+ARCHIVED (3f7894be0 ODLFULL_PROVIDER_DESIGN_GPTPRO.md): odlFull=row-local ODLFullProvider.sound
+  (inductive ODLFullRowCert 9 ctors directCone/seed3Route/eqLeaf/sibLeaf/noOverfull/negSwitch/fourDoor/qlt3/nch;
+  checkODLFullRowCert dispatch reuses green checkSeed3RouteTree_sound_from_closeData; Seed3LeafODLFacts semantic layer
+  per-leaf-tag=>resolvedODL; ODLFullGoal rowSum<=N+eta, CoreODLGoal supportRowSum S<=|S|+eta + root-rep lemma).
+  ODLFullProvider.sound:=P.rowCertSound fills BranchAInputs.odlFull. EQ charts => EQLeaf.sound ONLY.
+- O14 GATE (surfaced): 45/108 partial cover => EQ leaf GLOBAL theorem (forall w, EQCone w => bound) NOT available =>
+  odlFull cannot close until FULL 108 certified cover lands. Ties Branch-A full-mask to the chart bottleneck.
+- CHART BOTTLENECK confirmed: 63 pending ALL hybrid-class (my 6 even F-rows dirty 25-415 neg, parked); SOLE path =
+  Codex hybrid CG (k6/F6 calibration, my Farkas/families ruling posted CLAUDE_TO_CODEX marker 1952896). No independent
+  standard-pipeline chart work for me.
+- AGENTS: MAIN retasked = odlFull per-leaf semantic soundness (Seed3LeafODLFacts + root-rep + leaf checkers). SIBLING =
+  Branch-B BlueDetour+CD-telescope+24-sig-dictionary section. CODEX = k6/F6 Farkas/families then 6 A1 cones.
+  CODEX marker 1952896. Wakeup armed ~1200s.
+
+## TICK NOTE (2026-07-06T23:20Z) — CONFIRMED: six A1 cones require Codex PMTS tooling (NOT Claude-derivable)
+Investigated deriving the six A1 cones myself to bypass Codex. FINDING: the cone identity
+D_j=(75+2N)eta-3N*X_j = P_0 + Sum_r P_r*Sigma_r is a Positivstellensatz cert whose slack generators
+Sigma_r (max-cut flip slacks sigma(S), terminal-shadow, PMTS closure residuals, completed-switch nuK)
+are GRAPH-SIDE linear functionals from the PMTS slack cone. Solving for the Bernstein-nonneg multipliers
+= switch-set enumeration + exact LP over those generators = Codex's specialized PMTS tooling. NOT a quick
+hand-derivation; attempting it risks an unsound cone (exact-verify discipline). => six cones are genuinely
+Codex's task (like chart certs). a1Proper Lean is otherwise MAXIMALLY BUILT (mask symmetry + XMaskCanonical
++ mask_symmetry_sound + canonicalCone_bound + a1Proper_of_six_cones + defect algebra, all green, axioms
+clean, reusing PolyCert.ConeCert.sound). ONLY remaining a1Proper work = instantiate B.certs from Codex's 6
+compact cone NFs (by decide) + slack-nonneg env-binding. DO NOT re-investigate self-derivation.
