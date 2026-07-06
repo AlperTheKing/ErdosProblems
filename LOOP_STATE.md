@@ -1567,3 +1567,30 @@ Routed to MAIN (designer) for active-face-repair guidance once NCHRoute lands.
   = validated O14 route (k6/F6 confirmed). Codex batching low-defect rows + per-chart source-data index.
 - IN FLIGHT: MAIN = multi-terminal splitting lemma; SIBLING = M6 Hall existence + hardness-equivalence;
   CODEX = source batch + per-chart index + door-ownership. Commits through acf806f28. Wakeup 22:28.
+
+## CHROME MCP OUTAGE (2026-07-07T13:15Z)
+Chrome extension "not connected" across multiple retries. BLOCKS reading/gating both GPT-Pro threads
+(SIBLING M6 hardness-equivalence verdict + MAIN multi-terminal splitting lemma — both generated/generating,
+UNREADABLE until Chrome recovers). Codex mailbox (file-based) still works; k9/F6 routed to face-split queue.
+NEXT TICK: FIRST retry Chrome (tabs_context); if up, gate SIBLING M6 verdict (most consequential) + MAIN
+splitting lemma. If Chrome still down after several ticks, surface to user (may need to reopen Chrome/extension).
+Pending, non-Chrome-dependent: Codex source-basis batch (low-defect rows) + per-chart source-data index.
+
+## TICK NOTES (2026-07-07T13:50Z) — ENTIRE remaining structural program reduced to ONE question
+- M6 hardness verdict (SIBLING, gated): M6 NOT hardness-equivalent to delta=0 — it's the CONDITIONAL
+  aggregation [ROWSUM(f)<=N+eta forall f]=>Gamma<=N^2, strictly weaker, PROGRAM NON-CIRCULAR, M6 reachable.
+  One hard step = project minimal token-bank Hall violator to closed corridor.
+- Splitting-lemma verdict (MAIN, gated): naive multi-terminal split FALSE (non-Helly); T=1/T=2 NCH closed;
+  T>=3 via <=2-separator recursion EXCEPT irreducible high-terminal case; split-cert SOUNDNESS buildable,
+  EXISTENCE missing.
+- UNIFICATION: NCH T>=3 separator-existence == M6 closed-corridor projection == ONE shared structural wall.
+- THE DECISIVE QUESTION (both threads now attacking, two angles): does triangle-freeness + saturation +
+  pruning + full-mask + overfull FORCE a <=2 separator / closed-corridor projection (rule out irreducible
+  high-terminal obstructions)? YES => NCH + M6 both close as COMPILED theorems => program closes. NO =>
+  per-instance CSP/Hall certificate scheme for these atoms (not fully compiled). Determines whether a
+  fully-compiled delta=0 proof is reachable via this program. Falsifier-watch: a realizable irreducible
+  obstruction forces the per-instance route.
+- IN FLIGHT: MAIN = separator-existence (triangle-freeness lever); SIBLING = closed-corridor projection
+  (Hall angle, cross-check). CODEX = source-basis batch + per-chart index; 4 face-split-queue rows.
+- SESSION LEAN: 18 axiom-clean increments; FC bridge verified sorry-free; k6/F6 independently re-verified.
+  Commits through b1de31551. Wakeup 22:28. Chrome flaky (recovered; reload tabs if stall).
