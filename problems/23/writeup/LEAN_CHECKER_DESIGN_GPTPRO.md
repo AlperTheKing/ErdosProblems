@@ -791,3 +791,38 @@ Route(O):
 - Termination: absorb/prune are internal nodes that strictly decrease the ambient-excess / rank measure
   (well-founded), so the recursion terminates.
 
+
+## Qlt3 PrimeComplete — structural classifier design (GPT-Pro SIBLING, 2026-07-07; Claude-gated)
+
+FALSIFIER-FIRST VERDICT: Qlt3 PrimeComplete is NOT yet a structural theorem. It CAN be made N-uniform +
+finite, but ONLY IF (a) the q3-prime (q<=2 door) LEAF TABLE is explicitly emitted, and (b) the
+admissible-SIGNATURE EXHAUSTION theorem is proved. SIBLING can design the classifier + Lean statement but
+cannot honestly name the certified leaf list unless it exists as an external artifact. Missing either =>
+Qlt3 remains a real coverage gap (consistent with the gap ledger).
+
+### Design: finite signature classifier (NOT bounded-N census)
+A q3-prime ODL node reduces to a finite SIGNATURE (bounded row/door/side/class/terminal-shadow data), not a
+graph-size-dependent object. Row skeleton fixed = (q0,q1,q2,q3,q4) in Z/5Z. The signature records only
+bounded door-side / class / terminal-shadow data. Structure Qlt3Sig { rowOrient, ... }.
+
+### Relationship to Seed3 (q=3): DISTINCT domain
+q3 = "q<=2" = FEWER than 3 active doors (the route's q<=2 / TWO_DOOR branch); Seed3 = the exactly-3-door
+seed-prime condition. Safe classification: q3-prime is a DISTINCT ODL domain with its own finite classifier,
+UNLESS the archives contain a formal reduction to Seed3 (then Qlt3PrimeComplete follows from
+Seed3ClassifierComplete + an embedding theorem). Overlaps require the route tree to state priority.
+
+### Would-be Lean theorem (two layers)
+1. Signature extraction: structure Qlt3Sig where rowOrient : RowOrient ; ... (finite bounded data).
+2. Signature-exhaustion + leaf classifier: every admissible Qlt3Sig maps to one of the finite q2 leaves
+   (the emitted leaf table), proved by finite enumeration over the signature space.
+
+### Claude gate + unified pattern
+Consistent with MAIN's keystone: Qlt3 = the route's q<=2 branch. The UNIFIED PATTERN across the 6 unproven
+coverage theorems (Qlt3, NCH, ODLFullMaskRoute-composition, SiblingRoute, ownership): each is a FINITE
+SIGNATURE CLASSIFIER needing (i) an emitted finite leaf-table/ownership artifact + (ii) a signature/route
+EXHAUSTION proof. NOT census, NOT a hardness wall - a closeable structure (emit artifact + prove exhaustion).
+The ONE exception is M6 aggregation existence (lengthSurplusChargeCert_exists = a genuine global Hall/Farkas
+theorem, not a finite signature classifier). ACTIONABLE: emit the finite leaf tables (Codex) + prove the
+exhaustion theorems (GPT-Pro), per coverage atom. Falsifier watch: a q3/NCH signature outside its finite
+leaf table = the gap.
+
