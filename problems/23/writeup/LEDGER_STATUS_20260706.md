@@ -75,3 +75,18 @@ be exact-verified. This is the anti-fake-progress boundary.
   certs [Codex Farkas-CG, in flight]; (c) Branch-B per-node closure; (d) M6/M7 general
   package construction; (e) full aggregate manifest re-verification (endgame).
 - No falsifier. The bottleneck is certificate DATA (Conjuncts 1–3), not the deductive skeleton.
+
+
+## UPDATE 2026-07-06T17:20Z — Conjunct-3 SHA re-verify (6/6 PASS) + k6/F6 categorization CORRECTION
+INDEPENDENT SHA RE-VERIFICATION (from SHA-pinned manifests, ~1-in-7.5 sample of the 45 certified):
+rows 0,9,18,27,36,44 = k5/G6, k5/F4, k6/F6, k5/G2, k0/G6, k3/F4 -> manifest sha256 recompute ALL 6 PASS
+(byte-identical to ledger v43 pins). Certified artifacts intact, no drift. Script:
+scratchpad/reverify_sha.py.
+CORRECTION (my earlier authoritative ledger post error): **k6/F6 (chart6 dom5) IS CERTIFIED**, not
+parked. Its manifest (eq_odl1_rung2_source_certificate_manifest_k6_F6_near_exact_active_face_split_
+patch3_rowgen2_hardspill_v1.json) has exact_ok=True, full_negative_residual_count=0,
+full_min_residual=0, columns_checked=29759, nonzero_source_columns=2432 — SHA-verified. It is Codex's
+hybrid/Phase-I method CALIBRATION anchor (known-good exact cert => validate the scalable pricing on it,
+then apply to the 63 genuinely-pending). Codex's "not a ledger completion" disclaimers were correct.
+=> My parked-queue is 12 rows, NOT 13 (k9/B0,k2/G5,k6/G1,k5/G1,k9/G1,k4/G1,k0/G7,k5/F6,k4/F7,k4/F6,
+k3/G2,k0/G4 — all verified NOT-certified). Ledger 45 certified + 63 pending = 108 CONSISTENT.
