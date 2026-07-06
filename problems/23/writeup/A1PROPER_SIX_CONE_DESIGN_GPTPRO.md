@@ -78,3 +78,18 @@ mask_symmetry_sound, per-cone checker) — literal finite tables, NOT mathematic
    (slack-dictionary soundness) + the finite mask-symmetry table + A1ProperCertBundle.sound +
    BranchAProviderInputs + toBranchAInputs. Closes the PROPER-MASK branch of Branch-A as a general theorem.
 4. The ODL full-mask (odlFull) provider is the SEPARATE obligation fed by the 108 charts + Seed3/EQ/SIB.
+
+## UPDATE 2026-07-06T19:45Z — ConeCert.sound ALREADY EXISTS (PolyCert.lean:379) = the A1-cone bridge
+Verified: PolyCert.lean has ConeCert{target,base,mults,slacks,hid:checkEq target (comboNF base mults slacks)=true,
+hbase:allCoeffNonneg,hmults:all allCoeffNonneg} + ConeCert.sound (c)(env)(hvars:forall v,0<=env v)(hslacks:
+forall s in slacks,0<=eval env s) : 0<=eval env target. Docstring: "the machine-certificate bridge for THE A1
+CONES, seed banks, CrossCap". => A1CanonicalCone.sound REUSES ConeCert.sound DIRECTLY. So the a1Proper Lean
+plumbing is LARGELY DONE. Remaining to close proper-mask branch:
+  (a) Codex emits six A1 cones as ConeCert data (target=(75+2N)*A1Defect_Mj, base=P0, mults=P_r, slacks=Sigma_r).
+  (b) SLACK DISCHARGE: prove each slack Sigma_r >= 0 (eval env) from A1SlackHypotheses (sigmaNonneg gives
+      sigma(S)>=0; etaNonneg; row-atom nonneg; terminal-shadow/PMTS/noncrossing residuals) = the slack-dictionary
+      soundness. This is the one nontrivial new Lean piece (the env->graph-quantity binding + each generator>=0).
+  (c) mask-symmetry finite table (canonicalProperMaskId + mask_symmetry_sound) + XMaskCanonical + env wiring.
+  (d) (75+2N)*A1Defect>=0 => A1Defect>=0 (trivial, 75+2N>0) => XMask<=(25/N+2/3)eta.
+NOTE FOR MAIN: use ConeCert.sound directly; the design question narrows to the SLACK DICTIONARY (env binding +
+each Sigma_r>=0 lemma) + the mask table. This is the real remaining Lean work for a1Proper.
