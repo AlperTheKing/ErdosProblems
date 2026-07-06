@@ -513,3 +513,72 @@ CONSEQUENCE: the deepest node is NOT a hardness-equivalent dead end; it is a spe
 shared-machinery structural lemma. This raises P(the compiled program can close). NOT a falsifier; a genuine
 positive reduction. (Remainder of SIBLING's token-Hall formulation detail pending Chrome stabilization.)
 
+
+## THE CRUX VERDICT — compiled-universal route hits an UNPROVEN theorem (GPT-Pro MAIN, 2026-07-07; Claude-gated)
+
+The single most decision-relevant finding of the effort. Answered decisively — and it is a FORK, not a close.
+
+### Verdict: the separator/exclusion theorem is UNPROVEN (naive form FALSE); no counterexample either
+- The naive claim "triangle-free non-C5-hom => small (<=2) separator" is FALSE: triangle-free non-C5-hom graphs
+  can have HIGH CONNECTIVITY (e.g. any triangle-free 4-chromatic graph is non-C5-hom [a hom to C5 + 3-coloring
+  of C5 would 3-color it]; Grotzsch-type / infinite families exist, many with no small separator).
+- The CORRECT needed theorem uses the FULL Branch-A structure (not just tri-free):
+    theorem high_terminal_obstruction_excluded (hTri)(hMax)(hGamma)(hNode : FullMaskODLNode ...)
+      (hSat : SaturatedCore)(hPruned : PrunedCore)(hOver : OverfullCore)(hFull : FullMask)
+      (hMin : MinimalNonC5TerminalBlock ... H T)(hT3 : 3 <= T.card) :
+      (exists S, S.card <= 2 and TerminalSeparator H T S) OR PrunableAppendage ... OR [other leaf trigger]
+  i.e. under the full hypotheses a high-terminal block is EXCLUDED (has a <=2 separator OR triggers a leaf).
+- STATUS: UNPROVEN. MAIN cannot prove it true, and has NO exact full-Branch-A counterexample (a graph/cut/core
+  with ALL of: tri-free, Gamma-min B-connected max cut, saturated+pruned+full-mask+overfull, non-C5-hom, |T|>=3,
+  no <=2 separator, no prune/neg-switch/shorter-odd-row trigger). So: NOT provably true, NOT provably false.
+
+### Honest bottom line (the program's ceiling)
+- delta=0 IS provable PER-INSTANCE: the full certificate scheme (charts + cones + per-instance NCH CSP/Hall
+  certs + per-instance M6 token certs) certifies every actual triangle-free graph. NO falsifier exists.
+- A FULLY-COMPILED-UNIVERSAL proof (the /goal's strict Conjunct-3/4: M6 + coverage via COMPILED lemmas, never
+  data volume) is BLOCKED on `high_terminal_obstruction_excluded` — UNPROVEN, non-trivial (naive form false),
+  and GPT-Pro can neither prove nor refute it. NCHRoute is SOUNDNESS-complete but NOT existence-complete. The
+  same wall blocks M6's closure-projection (SIBLING).
+- MAIN'S RECOMMENDATION: do NOT bet the program on the exclusion theorem; take the PER-INSTANCE route (extend
+  NCHRouteCert with general multi-terminal CSP/Hall certs). Then NCH is certified-per-instance (sound+complete
+  per instance) even if high-terminal irreducibles exist.
+
+### Consequence for the /goal (Claude, honest)
+NOT a falsifier of delta=0 (theorem true; per-instance certs work; no counterexample). BUT a decisive
+characterization of the program's ceiling: with current mathematics, the FULLY-COMPILED route is blocked on an
+unproven exclusion theorem, so the strict /goal (all-compiled, anti-fake-progress: M6/coverage via compiled
+lemmas) is NOT currently reachable via this program for the NCH + M6 atoms. The honest fork:
+  (A) prove `high_terminal_obstruction_excluded` (no current path; naive form false; GPT-Pro can't) => compiled; OR
+  (B) accept certified-PER-INSTANCE for NCH + M6 (robust, recommended) => certifies every graph, but is DATA not
+      a compiled lemma for these atoms => does NOT meet the /goal's strict compiled-M6 requirement.
+This is a USER-DECISION juncture: the fully-compiled all-or-nothing /goal may require new mathematics (the
+exclusion theorem) beyond the current program, OR a relaxation to certified-per-instance for these two atoms.
+Cross-check pending: SIBLING's parallel Hall-angle verdict.
+
+
+## SIBLING confirmation (two-source agreement on the crux) — 2026-07-07
+SIBLING's token-Hall-angle verdict INDEPENDENTLY CONFIRMS MAIN's separator-angle verdict:
+- "I cannot honestly prove that every minimal token-bank Hall violator projects to a closed corridor / <=2
+  separator from the stated hypotheses. I also cannot emit an exact triangle-free Gamma-min counterexample."
+- "MAIN's separator statement and the token-Hall projection statement are now the SAME theorem in different
+  languages." The common obstruction = an IRREDUCIBLE HIGH-TERMINAL NON-HELLY HALL CORE.
+- It is the genuinely GLOBAL Hall theorem — NOT finite-artifact bookkeeping like Qlt3/Seed3/cactus-door.
+- To close BOTH M6 and NCHRoute: prove such a core cannot occur in an actual triangle-free Gamma-minimal
+  max-cut RowDB, OR route it to a new finite seed/certificate family (per-instance).
+- EXACT FALSIFIER DEFINITION (SIBLING): data (G, B, RowDB, S) with G triangle-free, B a B-connected maximum
+  cut, B Gamma-minimal, S a minimal deficient token set (|S| > |Gamma(S)|) that is an irreducible high-terminal
+  core (no <=2 separator, no existing route-leaf trigger). NEITHER thread has one; NEITHER can prove exclusion.
+
+## TWO-SOURCE DECISIVE BOTTOM LINE (Claude)
+The fully-compiled-universal delta=0 proof reduces to ONE unproven GLOBAL theorem (MAIN's high-terminal
+exclusion == SIBLING's closed-corridor projection): "no irreducible high-terminal non-Helly Hall core occurs
+in an actual triangle-free Gamma-minimal max-cut RowDB." UNPROVEN + UN-REFUTED (no proof, no counterexample).
+- delta=0 IS provable PER-INSTANCE (the certificate scheme certifies every actual graph; NO falsifier exists).
+- The STRICT /goal (all-compiled; anti-fake-progress: M6 + coverage via COMPILED lemmas, never data) requires
+  this unproven global theorem for the NCH + M6 atoms. NOT currently reachable via this program without it.
+- HONEST OPTIONS (user-decision juncture): (A) prove the global exclusion theorem — new mathematics; both
+  GPT-Pro threads cannot currently, and its naive triangle-free-only form is FALSE; OR (B) accept certified-
+  PER-INSTANCE NCH + M6 (extend NCHRouteCert / M6 with general multi-terminal CSP/Hall certs) — robust,
+  GPT-Pro-recommended, certifies every graph, but is DATA not a compiled lemma => does NOT meet the strict
+  compiled-M6 requirement of the /goal.
+NOT a falsifier of delta=0. IS the decisive, two-source-confirmed characterization of the program's ceiling.
