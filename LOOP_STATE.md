@@ -1550,3 +1550,19 @@ STATUS: NOT falsifiers (additive-infeasible != unprovable; face-split is the des
 FALSIFIER CONDITION: if the face-split route ALSO fails to certify any of these three exactly, emit the
 exact separating point + failed face-split cert => that is the decisive obstruction to surface to the user.
 Routed to MAIN (designer) for active-face-repair guidance once NCHRoute lands.
+
+## TICK NOTES (2026-07-07T13:00Z) — Branch-A reduced to ONE sub-lemma; M6 isolated
+- SESSION LEAN: 18 axiom-clean increments (GammaAggregation V2 aggregation-soundness; Seed3Door full
+  door-type classifier module: exhaustive/unique/4-inhabited/k13_star/computable/iff). FC bridge VERIFIED
+  sorry-free + axiom-clean (erdos23_fcForm_of_bipartization). k6/F6 hardest chart independently re-verified.
+- BRANCH-A COVERAGE now reduces (via MAIN's keystone route design) to: ODLFullMaskRoute = total procedure
+  structural at every branch EXCEPT NCH; SiblingRoute + others discharge through it; q=3 branch = my
+  compiled classifyDoor. NCH existence reduces to {T=1 Terminal Hall (3 contradictions), 7 primitive-lens
+  routings, MULTI-TERMINAL SPLITTING LEMMA T>=3->T<=2}. The SPLITTING LEMMA is THE pivotal remaining
+  Branch-A sub-lemma. Qlt3/Seed3-width = finite leaf-table + exhaustion (closeable, Codex emits).
+- LONE GENUINE-HARD NODE: M6 aggregation existence (global Hall/Farkas); SIBLING evaluating hardness-
+  equivalence to delta=0 itself (decisive for whether fully-compiled proof is reachable via this program).
+- FACE-SPLIT QUEUE (falsifier-watch): k3/G6, k0/G7, k6/G1 (additive-infeasible, 2 neg res each). Source-basis
+  = validated O14 route (k6/F6 confirmed). Codex batching low-defect rows + per-chart source-data index.
+- IN FLIGHT: MAIN = multi-terminal splitting lemma; SIBLING = M6 Hall existence + hardness-equivalence;
+  CODEX = source batch + per-chart index + door-ownership. Commits through acf806f28. Wakeup 22:28.
