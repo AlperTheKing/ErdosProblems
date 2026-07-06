@@ -44,5 +44,19 @@ theorem a1Proper_of_canonical
   rw [mask_symmetry_sound G c rows Q sd]
   exact hcanon A sd
 
+/-- The cleared-defect algebra: from `0 ≤ (75+2N)·η − 3N·X` (what a ConeCert for the
+    cleared A1 defect delivers) derive `X ≤ (25/N + 2/3)·η`. Pure rational division by
+    `3N > 0`; this is the final step of `A1CanonicalCone.sound`. -/
+theorem xmask_bound_of_clearedDefect (n η X : ℚ) (hNpos : 0 < n)
+    (hdefect : 0 ≤ (75 + 2 * n) * η - 3 * n * X) :
+    X ≤ (25 / n + 2 / 3) * η := by
+  have hn : n ≠ 0 := ne_of_gt hNpos
+  rw [← sub_nonneg]
+  have key : (25 / n + 2 / 3) * η - X = ((75 + 2 * n) * η - 3 * n * X) / (3 * n) := by
+    field_simp
+    ring
+  rw [key]
+  exact div_nonneg hdefect (by linarith)
+
 end A1Proper
 end Erdos23Delta0
