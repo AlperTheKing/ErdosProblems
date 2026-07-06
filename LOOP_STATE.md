@@ -1152,3 +1152,22 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - CERT COMPLETION: entire 63 pending = hybrid-class (my 6 even F-rows all dirty 25-415 neg).
   SOLE path = Codex hybrid column-gen. 0/13 hybrid certified so far. k6/F6 CG first-pass pending.
 - MANUSCRIPT: 2.1 archived; sibling on 2.2 (code-fenced). Marker at CODEX file len.
+
+
+## TICK NOTES (2026-07-06T15:55Z) — beta_bipartization PROVEN + committed; FCBridge unconditionalization in flight
+- LEAN MILESTONE: SimpleGraphBridge.beta_bipartization GREEN in CertGraph.lean (17->0 errors:
+  Finset.card_bij, Sym2.eq_iff conj-form, omit [Fintype][DecidableEq] on 5 instance-free lemmas,
+  classical removed so filter DecidablePred instances match simpleMonoCount). build EXIT=0
+  LOGBYTES=0; axioms [propext, Classical.choice, Quot.sound] ONLY; forbidden-token grep clean.
+  betaSimple Gs <= K => exists bipartite H <= Gs, edge-del card <= K. COMMIT 641315eda (user alone).
+- FCBridge.lean EDITED: dropped beta_bipartization hypothesis -> now calls
+  SimpleGraphBridge.beta_bipartization Gs (n^2) hbeta_le directly. erdos23_fcForm_of_bipartization
+  becoming UNCONDITIONAL. Building CertGraph.olean (self-contained, imports Mathlib only) into
+  tmp/fcbridge_o_claude_v1, then FCBridge.olean against it (bg bpcsbc8mi). Verify EXIT=0 + empty log
+  + axioms next.
+- CODEX mailbox: k6/F6 hybrid capped-seed CG three passes ALL INFEASIBLE (mp256/mp1024 presolve,
+  mp4096 real-simplex at 171,800 cols). RULED: NOT a falsifier (subset infeasibility expected;
+  full 1.24M pool still feasible); GREENLIT true Phase-I/Farkas-pricing CG; ledger CONFIRM 45/108
+  unchanged, 0 new manifests (answers Codex ASK 3). Posted 15:45Z.
+- Ledger: 45/108 certified, 63 pending (all hybrid-class), 0/13 hybrid certified, 0 falsified.
+- Conjunct-4 official-shape bridge: closing on Lean side (FC-form becomes hypothesis-free).
