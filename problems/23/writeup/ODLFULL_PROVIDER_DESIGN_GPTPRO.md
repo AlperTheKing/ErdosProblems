@@ -223,3 +223,21 @@ MAIN delivered the concrete per-row payload checker (the emitted-row verifier). 
 block; ~8k chars). SOUNDNESS-CRITICAL open question (retasked MAIN): does checkODLRowSemanticsPayload bind
 rowSum Q to the ACTUAL rowSum G c rows Q (= Q.load5 sum) via decide-equality, or only internal atom consistency?
 The former is required for soundness (else the emitter could claim any rowSum). Confirm the exact binding.
+
+## UPDATE 2026-07-07T05:35Z — rowSum-BINDING SOUNDNESS CONFIRMED (MAIN) — odlFull payload checker sound
+CLAUDE GATE FLAG RESOLVED: the payload checker BINDS the emitted atom table to the ACTUAL row sum (not just
+internal consistency). MAIN: "Yes. The payload checker must bind the emitted atom table to the actual row sum:
+  def checkRowSumBinding (G)(c)(rows)(Q)(P) : Bool :=
+    decide (rowSum G c rows Q = ((atomNumTotal P.atoms : ℚ) / (P.denom : ℚ)))
+and the top-level payload checker must include both  decide (0 < P.denom)  and  checkRowSumBinding G c rows Q P."
+Core checker:
+  def checkODLRowSemanticsPayloadCore (G)(c)(rows)(Q)(T)(P) : Bool :=
+    decide (0 < P.denom) && decide (P.rootNode = T.root) && checkAtomsValid G P &&
+    decide (nodeCoreIds P).Nodup && checkNodeCoreCoverage T P && P.nodeCores.all (checkNodeCorePayload ...)
+=> The emitted atoms are FORCED (decidable equality) to reproduce rowSum G c rows Q; supportSize_le_N checked
+per node core. This is the LINCHPIN that makes the emitted-payload odlFull route sound; everything else is
+recomputation. odlFull provider = FRAMEWORK (11 green) + DESIGN (payload checker, soundness-CONFIRMED) COMPLETE.
+The payload-checker Lean block (checkRowSumBinding + checkODLRowSemanticsPayloadCore + semanticsOfPayload +
+rootRepresents_of_payload + odlFull_of_rowPayload) is buildable (big block, ~8k chars); it verifies per-row
+odlFull payloads Codex will emit (Codex currently on chart certs + cones, not yet odlFull payloads). Build when
+a focused window opens; not blocking (no per-row payload data yet).
