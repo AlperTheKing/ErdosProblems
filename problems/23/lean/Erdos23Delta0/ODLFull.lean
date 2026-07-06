@@ -79,5 +79,38 @@ theorem CoreODLGoal_of_excess_le {G : GraphData} {c : CutData} {rows : RowDB} {Q
   unfold CoreExcessLE coreExcess at hlink
   linarith
 
+/-- Semantic ODL data over a route tree: each node id carries a support-local core. -/
+structure ODLNodeSemantics (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (T : Seed3RouteTree.Seed3RouteTreeData) : Type where
+  coreOf : Seed3RouteTree.NodeId → ODLCoreData G c rows Q
+
+/-- A route-tree node is ODL-resolved iff its core meets the support-local ODL goal. -/
+def resolvedODL (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (T : Seed3RouteTree.Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T)
+    (n : Seed3RouteTree.Seed3Node) : Prop :=
+  CoreODLGoal G c rows Q (sem.coreOf n.id)
+
+/-- One-child prune/absorb helper: if the internal parent's core excess is ≤ its child's
+    and the child resolves, the parent resolves. (Composed over the tree by the recursive
+    checker.) -/
+theorem resolvedODL_of_one_child_excess_link {G : GraphData} {c : CutData} {rows : RowDB}
+    {Q : RowCert} {T : Seed3RouteTree.Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    {parent child : Seed3RouteTree.Seed3Node}
+    (hlink : CoreExcessLE (sem.coreOf parent.id) (sem.coreOf child.id))
+    (hchild : resolvedODL G c rows Q T sem child) :
+    resolvedODL G c rows Q T sem parent :=
+  CoreODLGoal_of_excess_le hlink hchild
+
+/-- Composition: if the ROOT node is ODL-resolved and its core represents the row, the
+    row-level odlFull goal `rowSum ≤ N + η` holds. This is where the semantic tree assembly
+    (root resolvedODL) meets the root-representation certificate to fill BranchAInputs.odlFull. -/
+theorem ODLFull_of_resolved_root {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTree.Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    {root : Seed3RouteTree.Seed3Node}
+    (hresolved : resolvedODL G c rows Q T sem root)
+    (hrep : RootRepresentsRow G c rows Q (sem.coreOf root.id)) :
+    rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c :=
+  ODLFull_of_rootCore hrep hresolved
+
 end ODLFull
 end Erdos23Delta0
