@@ -176,3 +176,57 @@ as the universal story.
   remaining M6 obligation, currently discharged by exact-verified artifact rather than compiled proof.
   THIS IS THE HONEST BOUNDARY between "certified" and "compiled" for the single deepest aggregation node.
 
+
+## Bank-reserve residual — TWO-SOURCE decisive verdict (MAIN + SIBLING independent, 2026-07-07 ~09:15)
+
+BOTH GPT-Pro threads, independently, reached the SAME conclusion. Claude-gated.
+
+### The verdict (both agree)
+- There is NO non-tautological closed-form `R_bank = bankReserveVal(G,c,rows)` depending only on the
+  scalars {N, m, eta, ell(f), ROWSUM(f)}. The bank reserve is a CERTIFICATE-LEVEL object, not a scalar
+  function of row lengths/maxima. Setting bankReserveVal = 25eta - lengthSurplus is sound but tautological
+  (a direct target certificate, not a compiled consequence of LRS).
+- CURRENT STATE: CERTIFIED PER-INSTANCE, not compiled-universal. The compiled soundness
+  `checkLengthSurplusChargeCertV2 = true => lengthSurplusGD <= 25 eta` is real; but the EXISTENCE of a
+  valid V2 certificate for every triangle-free Gamma-minimal max cut is NOT a compiled theorem unless the
+  token-charge construction is formalized.
+
+### The precise obstruction (SIBLING, sharp)
+Per-row GERSH gives ROWSUM(f) <= N+eta. From these ALONE the strongest uniform scalar aggregation is
+`Gamma <= N(N+eta)`, NOT `Gamma <= N^2`. The missing gap is EXACTLY `N*eta`. It cannot be recovered from
+the row-GERSH slacks alone: every slack term has the form `(N+eta) - ROWSUM(f)` and any nonnegative
+combination carries a positive eta coefficient, so no nonneg combo removes the residual `N*eta`. The
+token-charge witness is what absorbs that gap. (This is the same fact that made the original CertGraph
+two-field design `Gamma <= sum rowSum <= N^2` unsatisfiable.)
+
+### The token-charge certificate structure (SIBLING explicit — matches MAIN's BankReserveTokenCert)
+The exact LRS/token artifact contains, per instance:
+- token set T(f) for each bad edge f, with |T(f)| = ell(f)^2 - 25
+- row-GERSH charge weights c(t,g) >= 0 assigning token t to the row-slack of bad edge g
+- LRS residual atoms r_a^LRS >= 0 ; Cauchy residual atoms r_b^Cau >= 0 ; bank residual atoms r_c^bank >= 0
+- the EXACT identity:
+    25*eta - sum_f (ell(f)^2 - 25)
+      = sum_a r_a^LRS + sum_b r_b^Cau + sum_c r_c^bank + sum_g C(g) * ((N+eta) - ROWSUM(g)),
+    with C(g) = sum_t c(t,g) >= 0.
+Then R_bank = sum_c r_c^bank; its nonnegativity is a FINITE CERTIFICATE (sum of emitted nonneg atoms), NOT
+a scalar formula. Cross-check (SIBLING): any claimed scalar R_bank must expand as the sum of emitted
+nonneg bank atoms in this identity, else it is not the residual used by the proof.
+
+### Claude reconciliation with the committed Lean V2
+`checkLengthSurplusChargeCertV2` ALREADY realizes this structure: its `residuals` list = the lrs/cauchy/bank
+atoms (each checked >= 0 by the typed kind), and its `coeffs` list = the charge coefficients C(g) (each
+checked >= 0), with the identity `25 eta - lengthSurplus = residualValues.sum + ratDot coeffs rowGershSlacks`.
+=> V2 is the CORRECT per-instance token-charge certificate CHECKER; its soundness is compiled; two
+independent derivations validate the structure. The token MAP c(t,g) (with |T(f)|=ell^2-25) is finer data
+that would make the checker verify the map itself, but the aggregation BOUND needs only nonneg atoms +
+charge coeffs + the identity, which V2 has.
+
+### THE remaining gap (deepest node, precisely scoped)
+Compiled-universal aggregation requires a Lean EXISTENCE theorem: for every triangle-free Gamma-minimal
+max cut, a valid token-charge certificate EXISTS. That is the token-charge CONSTRUCTION (combinatorial
+heart), NOT yet formalized. Options: (a) certified-per-instance (Codex emits the atoms+coeffs per graph; I
+exact-verify V2) — consistent with the charts/cones architecture but "data" not "compiled lemma" for M6;
+(b) formalize the token-charge construction as a compiled Lean theorem `Sum(ell^2-25) <= 25 eta` from GERSH
+bounds + tri-free + max-cut. Which is feasible = the decisive open design question routed back to MAIN.
+NOT a falsifier (the aggregation is TRUE; task#16 LRS proven); a scoped formalization obligation.
+

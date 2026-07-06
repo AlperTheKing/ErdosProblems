@@ -1464,3 +1464,28 @@ CODEX marker CODEX_TO_CLAUDE.md 1961043. MAIN retasked coreOf emission. SIBLING 
   nonneg feasible -> build the bankReserve compiled lemma (aggregation becomes compiled-universal M6).
   If certified-per-instance -> lock that status honestly + wire ResidualFormulas from Codex LRS emit.
 
+
+## TICK ADDENDUM (2026-07-07T09:05Z) — k6/F6 INDEPENDENTLY re-verified (hardest chart certified)
+- Did an INDEPENDENT exact-Fraction recompute (my own script, NOT Codex checker) of the k6/F6
+  source->custom import cone cert: 2432 cols, x>=0 (0 neg), all 167960 residuals>=0 (158472 exact-zero
+  equalities + 9488 nonneg slacks), extremal residual bits 2891/2886 == Codex full_max_residual EXACT.
+  MATCH_codex=true. Verdict tmp/eq_odl1_rung2_k6_F6_claude_independent_reverify_v1.json sha A1C83FD2;
+  checker tmp/claude_k6f6_independent_check.py. Commit e62012343.
+- CHART LEDGER: k6/F6 CERTIFIED + independently re-verified => source->custom import is the VALIDATED
+  O14 route. Codex GO to batch the remaining 62 pending charts via this route (per-chart SHA ledger);
+  I re-verify every hard/repaired + ~1-in-10 clean independently.
+- NEXT TICK: gate MAIN Q1/Q2 (bankReserve) + SIBLING R_bank cross-derive; gate Codex 62-chart batch
+  progress; Fraction-verify sampled charts.
+
+## TICK ADDENDUM (2026-07-07T09:25Z) — bank-reserve TWO-SOURCE verdict; deepest node = token-charge existence
+- MAIN + SIBLING INDEPENDENTLY confirm: no scalar closed-form R_bank; missing gap = exactly N*eta;
+  token-atom certificate structure = my committed checkLengthSurplusChargeCertV2 EXACTLY (residuals =
+  lrs/cauchy/bank atoms, coeffs = charge coefficients C(g)). V2 = correct per-instance token-charge
+  checker, compiled-sound. Archived LEAN_SOUNDNESS_AUDIT_GPTPRO.md tail.
+- DEEPEST NODE now precisely scoped: aggregation is CERTIFIED-PER-INSTANCE; compiled-universal needs a
+  Lean EXISTENCE theorem (token-charge construction: Sum(ell^2-25)<=25eta from GERSH+trifree+maxcut,
+  graph-generic). NOT a falsifier (aggregation true, task#16 proven).
+- IN FLIGHT: MAIN = is the construction a finite compiled Lean theorem (decisive step + sketch, or the
+  non-finitary wall)? SIBLING = exhibit the charging invariant constructively. Both generating.
+- NEXT TICK: gate both; if constructible -> build token-charge existence lemma (closes deepest node
+  compiled); else document certified-per-instance boundary. Also gate Codex 62-chart source-import batch.
