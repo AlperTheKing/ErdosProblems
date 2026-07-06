@@ -99,5 +99,33 @@ theorem k13_star (e1 e2 e3 : ℕ × ℕ) (hnd : Nodup3 e1 e2 e3) (h : HasType e1
       · exact Or.inr ⟨hR12, by omega⟩
     · exact Or.inr ⟨hR12, by omega⟩
 
+/-- Computable door-type classifier (the decision procedure): the door type as a TOTAL function of the
+    three edges, branching on the finite symbolic data (the sharing pattern). This is the checker form
+    MAIN's Seed3 spec requires. -/
+def classifyDoor (e1 e2 e3 : ℕ × ℕ) : DoorType :=
+  if share e1 e2 then
+    if share e1 e3 then
+      if share e2 e3 then .k13 else .p4
+    else
+      if share e2 e3 then .p4 else .p2uE
+  else
+    if share e1 e3 then
+      if share e2 e3 then .p4 else .p2uE
+    else
+      if share e2 e3 then .p2uE else .threeE
+
+/-- SOUNDNESS of the computable classifier: it always returns the structural door type of the triple. -/
+theorem hasType_classifyDoor (e1 e2 e3 : ℕ × ℕ) : HasType e1 e2 e3 (classifyDoor e1 e2 e3) := by
+  unfold classifyDoor
+  split_ifs <;> simp only [HasType] <;> tauto
+
+/-- The computable classifier agrees with the structural predicate: `HasType` holds iff the classifier
+    outputs that type (combines soundness + uniqueness). -/
+theorem hasType_iff_classifyDoor (e1 e2 e3 : ℕ × ℕ) (ty : DoorType) :
+    HasType e1 e2 e3 ty ↔ classifyDoor e1 e2 e3 = ty := by
+  constructor
+  · intro h; exact (hasType_unique e1 e2 e3 ty (classifyDoor e1 e2 e3) h (hasType_classifyDoor e1 e2 e3)).symm
+  · intro h; rw [← h]; exact hasType_classifyDoor e1 e2 e3
+
 end Seed3Door
 end Erdos23Delta0
