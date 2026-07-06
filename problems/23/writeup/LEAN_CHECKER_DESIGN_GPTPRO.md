@@ -745,3 +745,49 @@ current root side, NOT the original); 7.4 P5 = blue-under-every-extension; 7.5 m
 excluded by P2; 7.6 peel cases force n >= 2 (no degenerate handling needed).
 => BANK0 IS FULLY SELF-CONTAINED once typed: bank0Cert_sound + SigmaChain_of_sigmaNonneg +
 sigma_nonneg_of_isMaxCut (green) = 25*badCount <= n^2 from IsMaxCut + checkBank0Cert alone.
+
+## ODLFullMaskRouteComplete — keystone route design (GPT-Pro MAIN, 2026-07-07; Claude-gated)
+
+VERDICT: ODLFullMaskRouteComplete is N-uniform + structural, but NOT a single local graph argument — it is a
+FINITE route-completeness theorem parameterized by a finite list of structural coverage atoms. Structural
+modulo each atom. The ONE census-colored branch is NCHRoute; the keystone is fully structural once NCHRoute
+is upgraded census -> certified. So: structurally reducible to finite symbolic coverage; present proof
+conditional on the remaining route atoms (especially NCHRoute).
+
+### Total route decision procedure (branch order; absorb/prune are internal, recurse)
+Route(O):
+ 1. row not overfull            -> NO_OVERFULL           (structural: RowDB + closure-basis completeness)
+ 2. O not saturated             -> ABSORB (missing door/bag witness) -> Route(absorb O)  (internal)
+ 3. O has a negative switch      -> NEG_SWITCH            (structural: sigma<0 contradicts max-cut; neutral
+                                                          switch sigma=0,K(S)<0,flipBConn -> Gamma-min contra)
+ 4. O prunable                   -> PRUNE (appendage H,T + excess-link) -> Route(prune O)  (internal;
+                                    ambient-prune: coreExcess(parent) <= coreExcess(child) => child ODL => parent ODL)
+ 5. O not C5-hom                 -> NCH                   (*** WEAKEST ATOM — currently census ***)
+ 6. q = # distinct effective C5 bad doors:
+      q<=2 -> TWO_DOOR / q2 leaf
+      q=4  -> FOUR_DOOR leaf routed to A1 five-mask / BankBlock
+      q=3  -> classify three-door graph (P4/K13/P2uE/3E) via Seed3 classifier: EQ-iso->EQ, SIB-iso->SIB,
+              NO_OVERFULL->NO_OVERFULL, NEG_SWITCH->... [uses Claude's compiled Seed3Door.classifyDoor]
+
+### Lean shapes (MAIN)
+  inductive ODLRouteLeaf | cone | bank | lens | noOverfull | negSwitch | eq | sib
+    | seed3 (door : Seed3DoorType) | qlt2 | fourDoor | nch
+  structure FullMaskODLNode (G) (c) (rows) (Q : RowCert) (O : ODLCore) : Prop where
+    rowInDB : RowInDB rows Q ; len5 : Q.length = 5 ; fullMask : FullMask G c rows Q
+    activeClosure : ActiveClosure G c rows Q O
+    saturatedBasisSound : SaturationBasisSound G c rows O
+    pruneBasisSound : PruneBasisSound G c rows O ; doorBasisSound : DoorBasisSound G c rows O
+  theorem seed3_route_complete (hDoorType : Seed3.DoorTypeOf O ty) (hWidth : Seed3.WidthCertSound ...)
+      (hLookup : Seed3.UniverseCertSound ...) : exists leaf, Seed3.RouteLeaf O leaf
+  theorem odl_fullmask_route_complete (hTri) (hMax) (hGamma) (hRows) (hNode : FullMaskODLNode ...) :
+      exists leaf, ODLRouteLeaf ...   -- via the total procedure + per-branch soundness; NCH = weak atom
+
+### Claude gate + connection
+- My compiled Seed3Door module (classifyDoor + hasType_* + k13_star, axiom-clean) IS the q=3 door-type
+  branch of this route procedure. Direct plug-in.
+- Every route branch is STRUCTURAL except NCH. => the keystone ODLFullMaskRouteComplete, and via it
+  SiblingRoute + several others, all reduce to closing NCHRoute (census -> certified/structural) + the
+  finite leaf certs. NCHRoute is THE pivotal remaining Branch-A coverage atom.
+- Termination: absorb/prune are internal nodes that strictly decrease the ambient-excess / rank measure
+  (well-founded), so the recursion terminates.
+
