@@ -323,3 +323,110 @@ proven; per-instance certs valid). Open question relayed to MAIN: does the PROVE
 already constitute a compiled-universal establishment of this Hall condition, or is it itself a per-instance
 certificate family?
 
+
+## Disentangling verdict = B (GPT-Pro MAIN, 2026-07-07; Claude O14-independently-corroborated)
+
+Claude's independent O14 read (per-row bound is N-uniform/finite, but is DISTINCT from the aggregation)
+was CONFIRMED by MAIN. Verdict:
+
+### VERDICT B: chart coverage does NOT discharge the aggregation
+The existing O14 / Seed3 / route-tree coverage does NOT by itself discharge universal existence of the M6
+token-charge certificate. Those coverage theorems prove LOCAL ROW obligations (ROWSUM(f) <= N+eta, or the
+Branch-A/Branch-B ingredients to get that row bound). The M6 aggregation is a DIFFERENT GLOBAL statement:
+`sum_f (ell(f)^2 - 25) <= 25 eta`. A valid V2 token-charge certificate is a global Farkas/Hall witness over
+ALL bad edges and ALL length-surplus tokens SIMULTANEOUSLY. It is NOT implied merely by knowing that every
+individual row belongs to a covered local ODL chart.
+
+Why local chart coverage is insufficient: O14/Seed3/q3/NCH/route-tree classify ONE active overfull row/core
+at a time; their output is essentially `forall f, ROWSUM(f) <= N+eta`. The M6 charge certificate is a global
+witness over all edges — a separate object. Coverage objects for M6 would need to classify GLOBAL token cuts
+/ global charge patterns; they are NOT the O14/EQ charts or Seed3 route trees unless those are explicitly
+AUGMENTED with global token-allocation data + a proof that every graph's full token network is covered. If
+Codex later emits finite M6 token-chart certificates + a coverage theorem for the global token network, then
+M6 universality can be certified by finite coverage — but that is a NEW coverage theorem.
+
+### THE exact missing universal theorem (MAIN's Lean shape)
+    theorem lengthSurplusChargeCert_exists
+        (hTri : TriangleFree G) (hMax : IsMaxCut G c) (hGamma : GammaMinimalConnected G c)
+        (hRows : RowDBFactsGeneral G c rows)
+        (hGersh : forall Q, RowInDB rows Q -> RowGershBound G c rows Q) :
+        exists cert : LengthSurplusChargeCertV2, checkLengthSurplusChargeCertV2 G c rows cert = true
+"Every valid instance admits a V2 length-surplus charge certificate." A max-flow/Hall version would state the
+canonical token network always admits a feasible nonnegative charge.
+
+### DEFINITIVE terminal reduction (Claude)
+The compiled-universal delta=0 proof reduces to EXACTLY:
+- Branch-A + Branch-B + O14/Seed3/route-tree coverage  =>  per-row GERSH  (forall f, ROWSUM(f) <= N+eta).
+  [Conjunct-1/2 obligations: charts 45/108 + k6/F6 verified, a1Proper 6 cones, door-ownership, etc.]
+- `lengthSurplusChargeCert_exists` : the M6 GLOBAL existence theorem (Farkas/Hall). THE single deepest
+  unbuilt node. Currently certified-per-instance (Codex emits V2 cert, Claude exact-verifies); its
+  canonical construction rule is UNSPECIFIED (neither GPT-Pro thread could produce a graph-generic local
+  rule; both hit the global duality wall). Finite/formalizable-in-principle, but genuinely global.
+- Downstream ALL compiled: lengthSurplus_le_25eta_of_chargeV2 (soundness, committed) + gammaUpper_from_
+  chargeCertV2 + Gamma<=N^2 => beta<=N^2/25 + FC bridge (beta_bipartization, unconditional).
+
+### Honest consequence for the /goal
+A FULLY-COMPILED (Conjunct-3 M6-via-compiled-lemma + Conjunct-4) delta=0 proof is BLOCKED on exactly one
+precisely-stated theorem `lengthSurplusChargeCert_exists` — a global Hall/max-flow feasibility whose
+universal proof is genuinely open (GPT-Pro cannot yet specify the construction). NOT a falsifier (the theorem
+is TRUE; every per-instance token cert validates, incl. k6/F6 which I independently re-verified). It is the
+crux mathematical content, currently discharged per-instance, not compiled-universal. This is the sharpest,
+most honest characterization of exactly what stands between the current state and a complete compiled proof.
+
+
+## COVERAGE-COMPLETENESS LEDGER — unified verdict (MAIN Verdict B + SIBLING, 2026-07-07; Claude O14-corroborated)
+
+The single most important structural finding of the session. The compiled-universal delta=0 proof is
+complete FOR ALL N **if and only if** the following COVERAGE theorems are proved as N-UNIFORM STRUCTURAL
+CLASSIFIER theorems — NOT merely validated on a bounded census. Census validation closes NONE of them; if
+any is census-only, the proof has a RESIDUAL INFINITE OBLIGATION (an uncovered row / O-node / seed-type /
+token outside the finite certificate families = a real gap, though not a falsifier).
+
+### Branch-A coverage theorems (each must be N-uniform structural)
+- ODLFullMaskRouteComplete : every full-mask O node is routed to exactly one certified ODL leaf.
+- O14 CoverComplete        : every EQ-ODL1 leaf point lies in one of the 300 O14 charts (10x15x2).
+    [Claude-verified: O14 IS a finite N-uniform reduction OF THE EQ LEAF domain (normalized quotient
+     variables), via eq_chart_cover (9.7) + EQODL1_of_cover (9.9). But it is NOT global row coverage by
+     itself — only the routed EQ leaf.]
+- Seed3 ClassifierComplete : every Seed3-prime O node realizes one of the finite door-type leaves
+    {P4, K13, P2uE, 3E}. N-uniform IFF proved for ARBITRARY Seed3-prime O nodes (finite row positions +
+     door types + quotient relations + cut-side/C5-class patterns) — NOT census up to some N / named families.
+     *** THIS IS THE KEY AT-RISK NODE: if Seed3 completeness is census-only, it is a residual infinite gap. ***
+- Qlt3 PrimeComplete       : every q3-prime instance realizes one of its finite quotient leaves.
+- SiblingRouteComplete     : every sibling-seed instance routed to S7 or the passive-AM master cube.
+- NCHRouteComplete         : every non-C5-hom overfull support handled by NCH-def / Terminal-Hall corridor
+                             certificates / routed as a new seed obstruction.
+
+### Branch-B coverage theorems
+- LongRowRouteComplete        : every row with L>5 enters the BlueDetour/CombinedHBD/PacketExchange chain.
+- BlueDetourComponentCover    : row-deleted blue components partition the whole vertex set + every positive
+                                detour charge assigned.
+- CellLedgerOwnershipComplete : every fan/cell/SH'/flat atom assigned exactly once.
+- CactusDoorOwnershipComplete : every cactus d_C/2 credit assigned exactly once (the door-ownership wiring).
+
+### Aggregation (M6) — the deepest, SEPARATE node (Verdict B)
+- Row/Gamma token coverage = `lengthSurplusChargeCert_exists` : every valid instance admits a V2 length-
+  surplus charge certificate (a GLOBAL Farkas/Hall witness over all bad edges + all length-surplus tokens
+  simultaneously). NOT implied by per-row coverage (O14/Seed3 give forall f ROWSUM(f)<=N+eta; the aggregation
+  is a different global statement). Canonical construction rule UNSPECIFIED (both threads hit the global
+  duality wall). Currently certified-per-instance (Codex emits V2 cert, Claude exact-verifies).
+    theorem lengthSurplusChargeCert_exists (hTri : TriangleFree G) (hMax : IsMaxCut G c)
+      (hGamma : GammaMinimalConnected G c) (hRows : RowDBFactsGeneral G c rows)
+      (hGersh : forall Q, RowInDB rows Q -> RowGershBound G c rows Q) :
+      exists cert : LengthSurplusChargeCertV2, checkLengthSurplusChargeCertV2 G c rows cert = true
+
+### The complete compiled proof (unified reduction)
+1. Branch-A + Branch-B + ALL the coverage theorems above (as N-uniform STRUCTURAL theorems)  => per-row GERSH.
+2. `lengthSurplusChargeCert_exists` (the deepest, separate global Hall existence)  => a valid V2 cert exists.
+3. checkLengthSurplusChargeCertV2 (V2 soundness, COMPILED, committed)  => Sum(ell^2-25) <= 25 eta  => Gamma<=N^2.
+4. Gamma<=N^2 => 25m<=N^2 => beta<=N^2/25 => FC bridge (beta_bipartization, unconditional).  [all compiled]
+
+### Honest status vs the /goal
+- Steps 3-4 COMPILED (committed). Step 1 = the Conjunct-1/2 chart/cone/coverage work (45/108 + k6/F6
+  independently re-verified; a1Proper cones + door-ownership + the coverage theorems pending). Step 2 =
+  the deepest node, certified-per-instance, compiled-universal-unbuilt.
+- CRITICAL ACTIONABLE AUDIT (anti-fake-progress, Conjunct-3): classify EACH coverage theorem above as
+  STRUCTURAL-PROVEN vs CENSUS-ONLY vs UNPROVEN. Any census-only coverage theorem is a residual infinite
+  obligation. This is the exact completeness audit the /goal demands ("coverage/assembly theorems included,
+  zero hand-waves"). NOT a falsifier — but the precise map of what must be structurally proved.
+
