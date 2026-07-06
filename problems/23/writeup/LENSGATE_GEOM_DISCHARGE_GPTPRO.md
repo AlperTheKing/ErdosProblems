@@ -40,3 +40,17 @@ fields, so the layer lands with real content:
   Gamma-minimality => provable from the OddCyclePacking parity machinery already compiled.
 - The RR/RB/RD/DD/TT/TR head-on osculation cases = the irreducible geometric core; keep as
   clearly-named sub-lemma hypotheses until real geometric proofs exist.
+
+## UPDATE 2026-07-06T12:55Z — MAIN delivered REAL mechanical geometry fields (no sorry)
+MAIN reply (11453c, code-fenced Lean, in-thread) — verified head + triangle region:
+- TriangleForbidPayload {u,v,w, edgeUV/VW/UW} + trianglePayload? extractor + checkTriangleForbidPayload
+  (recomputes vertex bounds + normEdge identities + adjb u v / v w / u w) + checkForbidTriangleFromCert.
+- ne_of_adjb_true (adjb=true -> u != v) + triangle_forbid_payload_false (a checked triangle payload +
+  TriangleFree G -> False). = GENUINE discharge of the triangle-forbid field (not a hypothesis).
+- (shorterOdd field + GeomDischarge assembly at ~9736 also present; no sorry/admit anywhere.)
+GRAFT DECISION REVISED: the scaffold now has PROVEN content to anchor. Next Lean increment =
+graft the geometry SCAFFOLD (PrimitiveLensGeomDischarge from the 15KB reply) TOGETHER WITH these
+triangle-forbid + shorterOdd proofs, so the graft lands real unconditional content (2 of the
+forbid/osc geometric fields proven; the RR/RB/RD/DD/TT/TR head-on osculation core stays hypothesis).
+Full Lean text in-thread 6a450f06 (both replies) — extract at graft time (@EQ@/@PL@/@AM@ transform;
+Lean is code-fenced so clean). Uses Bool.and_eq_true in TERM form in places -> convert to rw form.

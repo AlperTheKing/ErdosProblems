@@ -1071,3 +1071,19 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   branchBCertBundle_of_rowPilot into Delta0CertBundles.branchB once per-row RowPilotBinding
   provider data exists (M6/M7). M6.5 checker triad done; LensGate geometry scaffold archived
   (deferred). Next Lean: MAIN geometry concrete fields + FC-form bridge.
+
+## TICK NOTES (2026-07-06T13:00Z) — TWO Lean bridges compiled (M4 + FC-form)
+- LEAN M4: branchBInputs_of_rowPilot GREEN (cf00bd268).
+- LEAN FC-FORM: erdos23_fcForm_of_bipartization GREEN (FCBridge.lean, 747623f19) — official
+  erdos_23 shape reduced to ONE Mathlib lemma beta_bipartization; (5n)^2/25=n^2 + betaSimple<=n^2
+  + assembly proven; axioms clean. IsBipartite = Colorable 2 (Mathlib Bipartite.lean:282).
+- THREADS: MAIN delivered REAL triangle-forbid + shorterOdd geometry proofs (no sorry, verified);
+  RETASKED MAIN to prove beta_bipartization (the FC-form crux, self-contained Mathlib; full spec
+  sent). SIBLING manuscript extraction hit KaTeX-mangle (unfenced math -> innerText garbage);
+  RETASKED sibling to re-emit sections in ```latex code fences (monospace -> clean source).
+  PROCESS LESSON: GPT-Pro prose math must be code-fenced to extract; Lean is already fenced (clean).
+- LEAN NEXT (order): (1) beta_bipartization from MAIN -> graft -> FC-form UNCONDITIONAL on Mathlib
+  side; (2) graft geometry scaffold + triangle-forbid/shorterOdd proofs (real content anchor);
+  (3) MAIN irreducible RR/RB/RD/DD/TT/TR geometry core; (4) M4 provider (RowPilotBinding) + Branch-A
+  shard instantiation = M6/M7 research. MILESTONE: FC-bridge EXISTS (was "does not exist").
+- MULTI-MODULE BUILD RECIPE confirmed working (deps->olean gitignored + LEAN_PATH + --root).
