@@ -71,3 +71,40 @@ emitted (certified) for every cactus peel node. Subtlety (memory §H): restricti
 max-cut-of-restriction, so it is NOT a β-induction — the genuine Branch-B open core.
 So Conjunct-2 = {P5,P6,P8 CERTIFIED} + {P11 PROVEN} + {P7,P9,P10,P12 PROVEN/CERTIFIED conditional on
 PeelInvariant} + {PeelInvariant OBLIGATION}. Everything reduces to certifying/proving the PeelInvariant.
+
+## PEELINVARIANT RESOLUTION (SIBLING, 2026-07-07) — per-node certificate, NOT universal
+DECISIVE status of the single remaining Branch-B obligation (transcribed, symbol-decoded, faithful):
+
+NON-UNIVERSALITY (concrete obstruction, C5[t]): balanced blowup C5[t], classes V0..V4 cyclic, |Vi|=t,
+max cut = {V0,V2,V4 | V1,V3}. Only bad class-edge is V4V0, so m=t^2 global, cut is maximum. Take outside
+packet W_out = V4 ∪ V0: r_out=|W_out|=2t; the inherited restricted cut makes ALL t^2 edges between V4,V0
+bad, so m_out=t^2. Then 25*m_out=25t^2 > 4t^2 = r_out^2. So  m_out <= r_out^2/25  is FALSE for arbitrary
+outside packets under a restricted maximum cut. Cause: restriction-of-max-cut != max-cut-of-restriction
+(inside W_out the inherited cut is NOT a max cut). => the cactus peel invariant CANNOT be a blanket
+structural lemma; it is a certified LOCAL BANK FACT for the particular outside packet a cactus peel produces.
+
+PER-NODE CERTIFICATE SCHEMA — PeelInvariantCert(C):
+  Data: ambient cut state (G,B,M) with fixed side; cactus peel node C + its outside packet W_out(C)⊆V;
+        declared r_out; declared M_out = {uv∈E(G): u,v∈W_out, uv∈M} (M=ambient bad-edge set, restricted
+        count under inherited cut); declared m_out=|M_out|; integer inequality cert 25*m_out <= r_out^2.
+  Verifier obligations (all EXACT finite checks): r_out=|W_out|; M_out={uv∈E: u,v∈W_out, uv∈M};
+        m_out=|M_out|; 25*m_out <= r_out^2.
+  Implication: verified => m_out(C) <= r_out(C)^2/25. Proof = divide by 25. Content is NOT a universal
+  inequality; it is the exact per-node fact that THIS peel packet has enough size vs its inherited bad edges.
+  Symbolic/quotient variant: local quotient model for W_out, polynomials R_out(w)=r_out, M_out(w)=m_out, +
+  a ConeCert/Bernstein cert proving R_out(w)^2 - 25*M_out(w) >= 0 on the declared domain; verifier checks
+  evaluated R_out,M_out equal the packet size + inherited bad-edge count. For finite artifacts the direct
+  integer-count cert is preferred.
+  LEDGER: P7 cactus ledger CERTIFIED conditional on PeelInvariantCert(C) for EVERY cactus peel node C;
+  P9, P10 CERTIFIED conditional on all required PeelInvariantCerts. Once Codex emits a PeelInvariantCert for
+  every cactus peel node and the verifier accepts, the condition disappears; P7/P9/P10 become fully certified.
+  => PeelInvariant is PER-NODE CERTIFIED, not universal. Final finite certificate family for Conjunct 2,
+  ANALOGOUS TO THE A1 SIX CONES.
+
+⚠ CLAUDE CAVEAT (not overclaiming): the C5[t] W_out=V4∪V0 is an ILLUSTRATIVE ARBITRARY packet (proves
+non-universality) — it is NOT shown to be an actual cactus-peel outside packet, so it is NOT a proof
+falsifier. BUT validity of 25*m_out<=r_out^2 for the ACTUAL cactus-peel nodes is now an UNVERIFIED
+certification obligation: if some actual peel node has 25*m_out > r_out^2, THAT is a falsifier. Whether the
+cactus-peel construction STRUCTURALLY GUARANTEES valid packets (peel produces size-dominant W_out) or must
+be checked empirically per node is the remaining question (retasked SIBLING). Conjunct-2 closes iff Codex
+emits + I exact-verify a passing PeelInvariantCert for every cactus peel node in the Branch-B rows.
