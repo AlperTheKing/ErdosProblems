@@ -1,0 +1,16 @@
+{
+  "candidate_count": 0,
+  "chart": 9,
+  "dominant": 7,
+  "found": false,
+  "neg_rows": [
+    5124,
+    5244,
+    5328,
+    5399,
+    5408,
+    6100
+  ],
+  "schema": "exact_small_residual_repair_v1",
+  "source_solution_in": "tmp\\eq_odl1_rung2_source_solution_k9_B0_near_family_claude_384prime_v1.jsonl"
+}

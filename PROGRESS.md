@@ -2303,3 +2303,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-06T02:00Z] V GPTPRO | DID: SIBLING E6 collected+archived (HBD Lemma 4.10 -> certificate implication; single-spend CombinedHBD; B25 packet increment identity) | RESULT: BRANCH_B_ERRATA += E6 | D: none
 [2026-07-06T02:15Z] X BATCH | DID: k9/B0 patch probes (5 + 52101 cand) | RESULT: BOTH Infeasible — PARKED (B0#), best base = family 6 residual rows | D: queue=12; k2/G6 next
 [2026-07-06T08:20Z] V LEAN | DID: Seed3RouteTree checker typed+built (2 rounds; Bool.and_eq_true.mp term-form -> rw form, unused hleaf -> _hleaf) | RESULT: CertGraph.lean 4994 lines EXIT=0 LOGBYTES=0 forbidden 0 | D: checkSeed3RouteTree_sound (route-tree coverage + per-leaf resolution) + case_resolved COMPILED
+[2026-07-06T08:45Z] X BATCH | DID: k2/G6 family 384p CRT | RESULT: reconstructed=false, only 2526/3989 coords (11520-bit modulus insufficient — large heights) | D: resuming to 768 primes via --resume-crt
+[2026-07-06T09:05Z] X BATCH | DID: k2/G6 family patch probes (9 + 69431 cand) | RESULT: BOTH Infeasible (family had only 3 residual negs) | D: lexsmall core launched (strategy 2)

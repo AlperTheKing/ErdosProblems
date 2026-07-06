@@ -91,3 +91,6 @@ tmp/*.jsonl
 tmp/eq_odl1_rung2_*_384prime_v*.json
 tmp/probe_*multirepair*.json
 tmp/eq_odl1_rung2_face_split_*_v*.json
+tmp/eq_odl1_rung2_modular_crt_*.json
+tmp/eq_odl1_rung2_residual_target_*.json
+tmp/codex_k*_tier0_*.json

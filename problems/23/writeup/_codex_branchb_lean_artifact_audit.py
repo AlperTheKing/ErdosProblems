@@ -17,6 +17,12 @@ from pathlib import Path
 
 FORBIDDEN = ("native_decide", "sorry", "admit", "axiom", "unsafe")
 
+DEFAULT_MANIFEST = "tmp/branchb_lean_transpile_full_codex20260705_counts_manifest.json"
+DEFAULT_BUILD_SUMMARY = "tmp/branchb_lean_module_build_codex20260705_counts_summary.json"
+DEFAULT_DICTIONARY_MANIFEST = "tmp/branchb_dictionary_audit_lean_codex20260705_live_manifest.json"
+DEFAULT_V2_SMOKE_SUMMARY = "tmp/branchb_v2_candidate_smoke_live_summary.json"
+DEFAULT_SUMMARY = "tmp/branchb_lean_artifact_audit_current.json"
+
 
 def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -75,6 +81,8 @@ def require(condition: bool, message: str) -> None:
 
 
 def load_dictionary_audit(root: Path, path_arg: str) -> tuple[dict | None, Path | None, Path]:
+    if not path_arg:
+        return None, None, root / "<skipped-dictionary-manifest>"
     manifest_path = rel_to_abs(root, path_arg)
     if not manifest_path.exists():
         return None, None, manifest_path
@@ -142,20 +150,23 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--manifest",
-        default="tmp/branchb_lean_transpile_full_v6_manifest.json",
+        default=DEFAULT_MANIFEST,
+        help="Branch-B Lean transpiler manifest to audit.",
     )
     ap.add_argument(
         "--build-summary",
-        default="tmp/branchb_lean_module_build_v6g_summary.json",
+        default=DEFAULT_BUILD_SUMMARY,
+        help="Branch-B Lean module build summary to audit.",
     )
     ap.add_argument(
         "--dictionary-manifest",
-        default="tmp/branchb_dictionary_audit_lean_v1_manifest.json",
+        default=DEFAULT_DICTIONARY_MANIFEST,
+        help="Dictionary-audit manifest. Use an empty string to skip dictionary checks.",
     )
     ap.add_argument(
         "--v2-smoke-summary",
-        default=None,
-        help="Optional candidate_v2 smoke summary; when supplied, require the v2+dictionary path to PASS and build.",
+        default=DEFAULT_V2_SMOKE_SUMMARY,
+        help="Candidate_v2 smoke summary. Use an empty string only for legacy audits without the v2+dictionary path.",
     )
     ap.add_argument(
         "--lean-scan-root",
@@ -164,7 +175,7 @@ def main() -> None:
     )
     ap.add_argument(
         "--summary",
-        default="tmp/branchb_lean_artifact_audit_v1.json",
+        default=DEFAULT_SUMMARY,
     )
     args = ap.parse_args()
 
@@ -191,14 +202,28 @@ def main() -> None:
     require(input_jsonl.exists(), f"missing input JSONL: {input_jsonl}")
     require(signatures.exists(), f"missing signature artifact: {signatures}")
 
-    dictionary_manifest, dictionary_lean, dictionary_manifest_path = load_dictionary_audit(root, args.dictionary_manifest)
-    v2_smoke, v2_smoke_path = load_v2_smoke(root, args.v2_smoke_summary)
+    dictionary_arg = args.dictionary_manifest or ""
+    smoke_arg = args.v2_smoke_summary or ""
+    dictionary_manifest, dictionary_lean, dictionary_manifest_path = load_dictionary_audit(root, dictionary_arg)
+    v2_smoke, v2_smoke_path = load_v2_smoke(root, smoke_arg)
+
+    smoke_lean_files: list[Path] = []
+    if v2_smoke is not None:
+        smoke_lean = rel_to_abs(root, v2_smoke["lean"])
+        require(smoke_lean.exists(), f"missing candidate_v2 smoke Lean file: {smoke_lean}")
+        smoke_lean_files.append(smoke_lean)
+        smoke_dict_lean_value = (v2_smoke.get("dictionary_manifest_data") or {}).get("lean_out")
+        require(bool(smoke_dict_lean_value), "candidate_v2 smoke is missing dictionary Lean path")
+        smoke_dict_lean = rel_to_abs(root, smoke_dict_lean_value)
+        require(smoke_dict_lean.exists(), f"missing candidate_v2 smoke dictionary Lean file: {smoke_dict_lean}")
+        smoke_lean_files.append(smoke_dict_lean)
 
     all_files = [support, *emitted]
     if index not in all_files:
         all_files.append(index)
     if dictionary_lean is not None:
         all_files.append(dictionary_lean)
+    all_files.extend(smoke_lean_files)
     forbidden_hits = scan_forbidden(all_files)
     require(not forbidden_hits, f"forbidden Lean tokens found: {forbidden_hits[:3]}")
 
@@ -286,11 +311,15 @@ def main() -> None:
         "index": sha256_file(index),
         "dictionary_manifest": sha256_file(dictionary_manifest_path) if dictionary_manifest is not None else None,
         "dictionary_lean": sha256_file(dictionary_lean) if dictionary_lean is not None else None,
+        "candidate_v2_smoke_summary": sha256_file(v2_smoke_path) if v2_smoke_path is not None else None,
+        "candidate_v2_smoke_lean_files": [
+            {"file": str(p), "sha256": sha256_file(p)} for p in smoke_lean_files
+        ],
         "shards": [{"file": str(p), "sha256": sha256_file(p)} for p in shard_files],
     }
 
     out = {
-        "schema": "branchb_lean_artifact_audit_v2",
+        "schema": "branchb_lean_artifact_audit_v3",
         "manifest": str(manifest_path),
         "build_summary": str(build_path),
         "rows": total_rows,
@@ -326,6 +355,7 @@ def main() -> None:
             "status": v2_smoke.get("status") if v2_smoke else None,
             "gate_b_candidate_counts": v2_smoke.get("counts", {}).get("gate_b_candidate_counts") if v2_smoke else None,
             "op_steps": v2_smoke.get("counts", {}).get("op_steps") if v2_smoke else None,
+            "lean_files": [str(p) for p in smoke_lean_files],
         },
         "status": "PASS",
     }

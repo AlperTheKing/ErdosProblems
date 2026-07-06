@@ -1,0 +1,873 @@
+{
+  "acceptance_policy": "exact rational gates only; float LP success is non-certifying",
+  "candidate_count": 60,
+  "candidates": [
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_atom_coverage_v1.json",
+      "schema": "eq_cert2_chart_atom_coverage_v1",
+      "sha256": "46f78a6b19c07666901adbba8b0793b94b1ec732bcad61ba33d4cbaadb16cd57"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_iter3_rows.json",
+      "schema": null,
+      "sha256": "9a676d51a2e80e9d6caa4c3c862598fc9d35c37053e4347fded8aa426f445417"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 0,
+        "lp_message": "MaxTime",
+        "lp_status": 1,
+        "oracle": "clarabel",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_iter3_rows_clarabel_sum.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "c0cb4a57094e2ea6bd7b5388bb2a7075f17a319ce9f2e4545045ec1d25e63bbb"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 0,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "oracle": "scipy",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_iter3_rows_highsds_zero.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "9549adc7fbad4e94c9374cbb25378e0c6c938287c5a090d56efd2c3c1b96454f"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 0,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "oracle": "scipy",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_iter3_rows_highsipm_zero.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "9549adc7fbad4e94c9374cbb25378e0c6c938287c5a090d56efd2c3c1b96454f"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 0,
+        "lp_message": "Infeasible",
+        "lp_status": 2,
+        "oracle": "highspy",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_iter3_rows_highspy_ds_zero.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "30565a06a2cc551fdf396b9b50c3007747aa4c4f6c0c2a54562d348329175d1c"
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "lp_status": 1,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_cap1000_ipm_t60_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "2f8e60058c14e6cdf649a0ccdfbb1f60ca63902c67700d8bbb0803d652aa636c",
+      "success": false
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "lp_status": 1,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_cap1000_scaled_t60_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "7e94ec9137fa8edec17b35eb3450f32647de073b344323764fa29a76cabda946",
+      "success": false
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "lp_status": 1,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_cap1000_t60_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "1c36d5823ef79fd729aa4b3b37f43ab63de81a53651bc82e55f4442a40afb194",
+      "success": false
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "lp_status": 2,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_cap200_t30_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "448c71344b178195662513c459555e7d71626c05d431047ecb369ef620afe874",
+      "success": false
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+      "lp_status": 2,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_cap500_t45_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "b2f0ab0dca9c64fbf94efeea240fd06e6aa0c5aa9737a724051b3d6133963e85",
+      "success": false
+    },
+    {
+      "chart": 0,
+      "classification": "lp_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "float_nonzero": null,
+      "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+      "lp_status": 1,
+      "path": "tmp\\eq_cert2_chart0_lp_repair_t60_v1.json",
+      "schema": "eq_cert2_chart_bernstein_lp_v1",
+      "sha256": "6dc38eacd0bc52b8595ec5e15735a1e4b5c84f656f8d884b73598505f0a1eed1",
+      "success": false
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_residual_row_classify_fullbase_v1.json",
+      "schema": "eq_cert2_chart_residual_row_classify_v1",
+      "sha256": "13ceec2838e4f2ccd3d927b90d101d1685c7cab5df7e24ed47e184a8db61e8ec"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_residual_row_classify_fullbase_v2.json",
+      "schema": "eq_cert2_chart_residual_row_classify_v1",
+      "sha256": "db23ab10b9b8eb16ae3610ae00c778bcf9915064f443160219490d80b70bea0c"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 2800,
+        "iteration": 0,
+        "lp_message": "PrimalInfeasible",
+        "lp_status": 1,
+        "oracle": "clarabel",
+        "rows": 2140,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_clarabel_cap200_smoke.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "16eb96c035d5acc77926c5c585c60e463ae5be499cfa87d740933bb182fa0064"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_gate": {
+        "max_denominator": 100,
+        "residual_min_coeff": "-194549/55",
+        "seed_residual": "0"
+      },
+      "exact_ok": false,
+      "exists": true,
+      "final": "NO_EXACT_CERT",
+      "history_len": 7,
+      "last_history_event": {
+        "columns": 18432,
+        "float_nonzero": 15669,
+        "iteration": 6,
+        "lp_message": "AlmostSolved",
+        "lp_status": 0,
+        "oracle": "clarabel",
+        "rows": 16532,
+        "success": true,
+        "violated": 2696,
+        "worst_residual": -207.77848974242164
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_clarabel_full_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "c7c84acaffcb128b923d10529dcacc8ede7ceac30d1f16acf7cdc77ebb38611b"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 2800,
+        "iteration": 0,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 2140,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_cap200_smoke.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "4abb023e5216763d79745a2c1a17a6f36d663dc6025982acf57a9c310a2fe0d5"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 2,
+      "last_history_event": {
+        "columns": 70514,
+        "iteration": 1,
+        "lp_message": "MaxTime",
+        "lp_status": 1,
+        "oracle": "clarabel",
+        "rows": 14878,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_clarabel_threads64_smoke_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "ac0d3dfbb09ebaa14c0c71ee2c6d398479463963ea7294eb6620dcd492610e15"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 2,
+      "last_history_event": {
+        "columns": 70514,
+        "iteration": 1,
+        "lp_message": "MaxTime",
+        "lp_status": 1,
+        "oracle": "clarabel",
+        "rows": 14878,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_clarabel_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "9dcdd944c725379b43e7ccbb5f091a97c221c0b4606dd4818d44825ed6124457"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 4,
+      "last_history_event": {
+        "columns": 42837,
+        "iteration": 3,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "oracle": "scipy",
+        "rows": 7472,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_highs_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "138b3fc6431dd2e2894e94bc64498f7f9c12356ce721f18c803c52c07a708bc3"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_gate": {
+        "max_denominator": 25,
+        "residual_min_coeff": "-7707",
+        "seed_residual": "0"
+      },
+      "exact_ok": false,
+      "exists": true,
+      "final": "NO_EXACT_CERT",
+      "history_len": 5,
+      "last_history_event": {
+        "columns": 116763,
+        "float_nonzero": 3795,
+        "iteration": 4,
+        "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "lp_status": 0,
+        "oracle": "scipy",
+        "rows": 9482,
+        "success": true,
+        "violated": 697,
+        "worst_residual": -450.00000000000006
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmax16_sum_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "98db38e77bedefd418f04ffd6843e1f8f767dd10eaa3cad43dcd20fd203aea31"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 2,
+      "last_history_event": {
+        "columns": 207434,
+        "iteration": 1,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 10529,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmax32_replay_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "fc4dc8536f23af0f6d17d20beb2b5263d7d1c62bc2e3f22307fd5bac0a7fd246"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 5,
+      "last_history_event": {
+        "columns": 194053,
+        "iteration": 4,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "oracle": "scipy",
+        "rows": 9967,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmax32_sum_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "ad730fce3acd60ac4015b042617747c8345a2b6ce081cac256d9a066eed4b1f2"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 276302,
+        "iteration": 0,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 10529,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmax48_replay_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "7fc3fd3f9bec53a817ea7b40cd1a2b60dd8a0e5c9cf8684abd0a7694cd3e1b3e"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 295358,
+        "iteration": 0,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 10529,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmax52_frontier_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "bf85dbf3f568c5720b9d1806989896c9850fa6533135fbd4b2e31c41ab94026d"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 1338738,
+        "iteration": 0,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "oracle": "scipy",
+        "rows": 10529,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmaxall_frontier_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "e9c2007fe732ed8ac3deeb991d958ca9a1e6cc15dabd2889ebcf07905126b3aa"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 44748,
+        "iteration": 0,
+        "lp_message": "Infeasible",
+        "lp_status": 2,
+        "oracle": "highspy",
+        "rows": 2140,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmaxtight_highspy_sum_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "eae9b073b53d238d9bd17664de2d24280c85d314de6f9b30de5b5a865fca49c2"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_gate": {
+        "max_denominator": 10,
+        "residual_min_coeff": "-1839697/35",
+        "seed_residual": "0"
+      },
+      "exact_ok": false,
+      "exists": true,
+      "final": "NO_EXACT_CERT",
+      "history_len": 2,
+      "last_history_event": {
+        "columns": 72014,
+        "float_nonzero": 2921,
+        "iteration": 1,
+        "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "lp_status": 0,
+        "oracle": "scipy",
+        "rows": 6350,
+        "success": true,
+        "violated": 1709,
+        "worst_residual": -52606.52895036412
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_qmaxtight_scipy_sum_smoke.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "2ae5ec6f5e8886bd1b038a97ce782be6ac6aead586bc438b6e0b55c84e97e170"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 4,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 3,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_sum_highs_dump_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "03c5268052c594601cd94a66794f1875e2dfd57c63e58aea0ab77b3e74cddb20"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 4,
+      "last_history_event": {
+        "columns": 40828,
+        "iteration": 3,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "oracle": "scipy",
+        "rows": 8468,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_dyn_sum_highs_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "9f5b96e7df9316b670f45bffbe12881cd0553fa1283b37c10b59695931f89a2b"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 1,
+      "last_history_event": {
+        "columns": 2800,
+        "iteration": 0,
+        "lp_message": "Infeasible",
+        "lp_status": 2,
+        "oracle": "highspy",
+        "rows": 2140,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_highspy_cap200_smoke.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "d7ab8ab27e6dd512158e3ae2954bb2da1cec6d6fe2f8f3a6ed120a87102d07c7"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 3,
+      "last_history_event": {
+        "columns": 18432,
+        "iteration": 2,
+        "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "lp_status": 2,
+        "rows": 7514,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_sum_threads64_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "9076452dee81840ac3b4d3e0e6dcf28c34af02c069cc3816af7a4d4deadf6ca3"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 5,
+      "last_history_event": {
+        "columns": 18432,
+        "iteration": 4,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "rows": 7585,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_threads64_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "ab8bd010211d894ae8050391a638ad1b3f70ccb650dda36d3972fdc84eb96f41"
+    },
+    {
+      "chart": 0,
+      "classification": "rowgen_no_exact_cert",
+      "exact_certificate": false,
+      "exact_ok": false,
+      "exists": true,
+      "final": "LP_FAIL",
+      "history_len": 5,
+      "last_history_event": {
+        "columns": 18432,
+        "iteration": 4,
+        "lp_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+        "lp_status": 1,
+        "rows": 7585,
+        "success": false
+      },
+      "path": "tmp\\eq_cert2_chart0_rowgen_v1.json",
+      "schema": "eq_cert2_chart_rowgen_v1",
+      "sha256": "ab8bd010211d894ae8050391a638ad1b3f70ccb650dda36d3972fdc84eb96f41"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_allatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "a991bb45c4d1e1223f796272391ffcfc0401a323dabd61069789f7c2292b1298"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_diag_mid_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "54cece25ef2c43aae420d48b2630f21481a79284e45d0214f51450303561c893"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_allatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "399be989fea38e4a8cf083c46f3e5c3b7e238ee364374dda03ce57b535286897"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_resid180_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "c480bfdaf4d7dc58316f62e494e611da8462dc781eb2ed78f91d7dd500593d30"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_split2_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "03f3063835399171d9d9e6c31992d8fc2435340b8b247e533faf2467f711839a"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_targetatoms10_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "f4b02238dff62931e3b6015fcefecea7d28eda7f16fed9b6d77f59cc158e9d0f"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_zero_allatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "a284e9f8c0935e81566da313b8c3785ca7d7369c895e6aaed479e7f530e07f92"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_zero_diag180_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "241abc4b126b1c0f350c98bfd0f100a586dc0f4244865fc4f4437321fd1cd86f"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_fullbase_zero_tol1e2_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "3267b17da6c61db6e7c13c16d4ae7acb317a19ae38bcf63f501937c58781afe1"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_mid_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "c542cade16a34c2248fe34226d37b78b5d772b4f091fbd09b12757eceb4b78dc"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_resid_mid_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "c1c77d95679f47b55cd27fdf22411d67280c92f30e972830afb73432bcf6fccb"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_split2_restricted_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "ebb986b4be07cd1f48d9c51245a3d935b627c01b9f428cce7fb4bf4bbcfb8cd4"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_targetatoms10_restricted_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "81aed54410223f6f8fb118342d7f55109a849a11e212a41f9ae5e2ef53b935f0"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_tiny_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "e3b87ae0cd8c373136682e1afc5707e67094802a9046d288a070937c99af9b19"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_direct_zero_allatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_direct_v1",
+      "sha256": "8f241cb64171ce623200f4589c68862ba7dec0a2370880517c72020a9b4bc6dd"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_smoke_allatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_smoke_v1",
+      "sha256": "4118c83d82e67eb52888a8bfd54b16cd8de21ce3897c139053a506199c2e7fbf"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_smoke_fullatoms_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_smoke_v1",
+      "sha256": "bcf36b7fb0dd920b1b63c15b3119cc83647d4f9e6fbc0841e562a5c67f296cc1"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_smoke_mid_v1.json",
+      "schema": "eq_cert2_chart_sos_2x2_smoke_v1",
+      "sha256": "f9e9ea80f641a8edbca4b02b592f3496425c42a9c164167e78461b89f28cc9fa"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_2x2_smoke_tiny_v2.json",
+      "schema": "eq_cert2_chart_sos_2x2_smoke_v1",
+      "sha256": "afa66e52e32e13f740dbce2e187e398fd44473fd797a6776d91bc1f00f8b32c7"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_psd_block120_v1.json",
+      "schema": "eq_cert2_chart_sos_psd_blocks_v1",
+      "sha256": "15d73ca855b88d02904d821b9a63ad76d5165791912aad1c749be3e80210d93e"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_size_qmax32frontier_v1.json",
+      "schema": "eq_cert2_chart_sos_size_v1",
+      "sha256": "2fa88ef82f6f776ca18f3416aeae16490f0ee84d3bef486964d0bd640fc23a5e"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_size_targetneg_v1.json",
+      "schema": "eq_cert2_chart_sos_size_v1",
+      "sha256": "e39e143ed970f106c0a0b1151091ecde64c7a3099b999be5ff72f3a44939d597"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_sparsity_sparse_negrows_v1.json",
+      "schema": "eq_cert2_chart_sos_sparsity_v1",
+      "sha256": "753c6417638449bbc257e0e9350d60fb499f10c1baaa34df6104f02a3846c067"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_sparsity_sparse_qmax52frontier_v1.json",
+      "schema": "eq_cert2_chart_sos_sparsity_v1",
+      "sha256": "f169e123b3c7939cde2c652d62ba58bffcf9a559ace31b7c981941af9c0ab1d2"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_width_sparse_negrows_v1.json",
+      "schema": "eq_cert2_chart_sos_width_v1",
+      "sha256": "06fa627128781678bdff57c61c587f1b1a5dbacf91b0b8ffa2a31e580f3d8be0"
+    },
+    {
+      "classification": "unrecognized_schema",
+      "exact_certificate": false,
+      "exists": true,
+      "path": "tmp\\eq_cert2_chart0_sos_width_sparse_qmax52frontier_v1.json",
+      "schema": "eq_cert2_chart_sos_width_v1",
+      "sha256": "5ebfee102962ec0f2de2aa62457c842ab459dc03b4958ea7f105e81dfc31abfe"
+    }
+  ],
+  "exact_certificate_count": 0,
+  "falsifier": {
+    "best_zero_chart_count": 10,
+    "chart_count": 10,
+    "chart_hits_clean": true,
+    "exists": true,
+    "ok": true,
+    "path": "tmp\\eq_cert2_chart_falsifier_bound4_all_v2.json",
+    "schema": "eq_cert2_chart_falsifier_bound4_aggregate_v1",
+    "schema_ok": true,
+    "sha256": "0c405203f5b28ea721fd9f5b5b2eb32dfa66bfefe80be8357a0600514aaf9fcf",
+    "top_hit_clean": true,
+    "total_checked": 19531250,
+    "total_feasible": 3434182
+  },
+  "numeric_oracle_attempt_count": 30,
+  "schema": "eq_cert2_artifact_audit_v1",
+  "status": "OPEN_NO_EXACT_CERT"
+}

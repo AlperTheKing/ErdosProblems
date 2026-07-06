@@ -1,0 +1,9 @@
+============================================================
+cactus: PASS
+shprime: PASS
+packet_exchange: PASS
+v2_artifact: PASS
+v2_cross: {'equal:tight': 34, 'overfull:nuK': 130, 'underfull:detour': 843, 'underfull:nuK': 13240}
+constants_and_sparse_identity: PASS
+============================================================
+ASSEMBLY VERDICT: ASSEMBLY-PASS (components + interfaces green; long gates bd_overfull/pq_crosstab certified in prior runs per PROGRESS.md)

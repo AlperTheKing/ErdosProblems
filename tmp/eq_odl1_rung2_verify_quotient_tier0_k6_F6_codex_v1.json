@@ -1,0 +1,24 @@
+{
+  "artifact": "tmp\\eq_odl1_rung2_face_split_quotient_tier0_k6_F6_codex_v1.json",
+  "chart": 6,
+  "checks": {
+    "divisor_terms_ok": true,
+    "dominant_name_ok": true,
+    "normalization_ok": true,
+    "quo_terms_ok": true,
+    "raw_leading_coeff_ok": true,
+    "raw_leading_exp_ok": true,
+    "recomposition_ok": true,
+    "rem_terms_ok": true,
+    "schema_ok": true,
+    "term_order_ok": true
+  },
+  "divisor_terms": 14,
+  "dominant": 5,
+  "dominant_name": "F6",
+  "exact_ok": true,
+  "quo_terms": 8192,
+  "rem_terms": 21019,
+  "schema": "eq_odl1_rung2_verify_quotient_tier0_v1",
+  "target_terms": 5255
+}
