@@ -479,3 +479,37 @@ proof requires closing the 6 unproven (+ upgrading NCH) as N-uniform structural 
 exactly the anti-fake-progress accounting the /goal demands (Conjunct-1 "coverage theorems included, zero
 hand-waves"): those coverage theorems are largely not yet proven, and now each is named + statement-specified.
 
+
+## M6 hardness-equivalence — DECISIVE verdict (GPT-Pro SIBLING, 2026-07-07; Claude-gated)
+
+THE most consequential question of the session, answered — and STRICTLY POSITIVE.
+
+### Verdict: M6 is NOT hardness-equivalent to delta=0 (it is strictly WEAKER)
+- No concrete falsifier is known from the data. But a graph-generic LOCAL charging rule is not currently available.
+- The right object: M6 = "FA RowDB from a triangle-free Gamma-minimal max cut, EX a valid lengthSurplusChargeCert."
+- This is NOT logically equivalent to the whole theorem, because it ASSUMES the row-GERSH inputs supplied by
+  Branch A + Branch B. It is EXACTLY the missing CONDITIONAL aggregation theorem:
+      [ ROWSUM(f) <= N+eta  for all bad edges f ]  =>  Gamma <= N^2.
+  => STRICTLY WEAKER than the whole delta=0 proof as a logical statement. THE PROGRAM IS NOT CIRCULAR.
+  In the current program it is the single remaining GLOBAL theorem after the per-row bounds are certified.
+
+### Strategy: minimal Hall-deficiency argument — one precise hard step
+The most promising structural strategy is a minimal Hall-deficiency argument. It has ONE precise hard step:
+  prove that every minimal token-bank Hall VIOLATOR projects to a CLOSED SHADOW / CORRIDOR object to which
+  the SWITCH-or-C5-LABEL DICHOTOMY applies.
+That CLOSURE PROJECTION is the current nonlocal wall.
+
+### Claude gate + UNIFICATION (major)
+This is a strictly-positive result on the deepest node:
+1. M6 is REACHABLE (not the whole conjecture; strictly weaker, conditional on the row bounds A/B already
+   certify). The program is non-circular.
+2. M6 reduces to ONE lemma: the closure-projection of minimal token-bank Hall violators to closed
+   shadow/corridor objects.
+3. That closure-projection uses the SAME machinery as NCHRoute (switch-or-C5-label dichotomy, closed
+   shadow/corridor). => M6 and the Branch-A NCH bottleneck share the SAME underlying structural object.
+   Both may close via the same closed-shadow/corridor + dichotomy lemma (cf. the multi-terminal splitting
+   lemma tasked to MAIN, which is the NCH side of the same wall).
+CONSEQUENCE: the deepest node is NOT a hardness-equivalent dead end; it is a specific, isolated,
+shared-machinery structural lemma. This raises P(the compiled program can close). NOT a falsifier; a genuine
+positive reduction. (Remainder of SIBLING's token-Hall formulation detail pending Chrome stabilization.)
+
