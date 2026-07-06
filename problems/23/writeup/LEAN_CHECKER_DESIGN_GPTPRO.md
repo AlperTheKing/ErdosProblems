@@ -826,3 +826,42 @@ theorem, not a finite signature classifier). ACTIONABLE: emit the finite leaf ta
 exhaustion theorems (GPT-Pro), per coverage atom. Falsifier watch: a q3/NCH signature outside its finite
 leaf table = the gap.
 
+
+## NCHRoute completeness — structural design (GPT-Pro MAIN, 2026-07-07; Claude-gated)
+
+THE Branch-A coverage bottleneck. Classification:
+- NCHRoute SOUNDNESS: finite / checker-complete, N-uniform (NCHRouteCert + payloads, LensGates, T=1/T=2 corridor).
+- NCHRoute EXISTENCE/COMPLETENESS: structural theorem STILL OPEN. Missing theorem: every saturated, pruned,
+  overfull, full-mask, non-C5-hom core contains a terminal Hall corridor certificate (a Z5 voltage obstruction).
+
+### Structural proof strategy (finite, reducible - NOT a hardness wall)
+O saturated+pruned+overfull+full-mask, non-C5-hom => boundary C5 labeling does not extend to a minimal
+obstruction H; T = its terminal set. Saturation+pruning => H is a CLOSED terminal obstruction (no missing
+door/bag, no prunable appendage, every terminal shadow closed, every corridor owned).
+- **T=1**: Terminal Hall theorem. Minimal Hall obstruction rooted at t gives a terminal shadow; the completed
+  flip is either sigma<0 (contradicts max-cut), sigma=0 & K<0 (contradicts Gamma-min), or FLAT (C5 labeling
+  extends, contradicts minimality of H). => T=1 STRUCTURALLY COVERABLE.
+- **T=2**: corridor theorem. A minimal two-terminal label obstruction yields a PRIMITIVE LENS. Finite lens
+  types = {RR, RB, RD, DD, TTsame, TTopposite, TR} (7). Each routed by NONNEG (corridor Hall >=0) / CROSS
+  (switch contradiction) / LABEL (labeling extends) / FORBID (triangle/shorter-odd-row/invalid-shadow) / OSC
+  (residual close).
+- **T>=3**: NEEDS THE MULTI-TERMINAL SPLITTING LEMMA (T>=3 -> T<=2). *** THE KEY MISSING PIECE. *** The finite
+  7-lens type list does NOT discharge completeness unless the splitting lemma is proven.
+
+### Would-be Lean shapes (MAIN)
+  structure FullMaskODLNode (G)(c)(rows)(Q)(O) : Prop where rowInDB; len5; fullMask; overfull; saturated;
+    pruned; activeClosure
+  structure NCHRouteCert (G)(c)(rows)(Q)(O) : Type where symbol : NCHSymbol; checkSymbol : Bool
+    terminalHallPayloads : List TerminalHallCert; corridorPayloads : List T2CorridorCert
+    lensPayloads : List LensGates.LensGateData; closePayloads : List LensGates.OSCResidualCloseCert
+    leaf : ODLRouteLeaf
+  -- Soundness: checkNCHRouteCert = true => NCH leaf bound holds (checker-complete)
+  theorem nch_route_complete (hTri)(hMax)(hGamma)(hNode : FullMaskODLNode ...)(hNotC5Hom : not C5HomCore G c O) :
+    exists cert, checkNCHRouteCert G c rows Q O cert = true   -- OPEN: needs multi-terminal splitting lemma
+
+### Claude gate + pivot
+NCHRoute existence reduces to {T=1 Terminal Hall theorem, 7 primitive-lens routings, MULTI-TERMINAL SPLITTING
+LEMMA}. The splitting lemma (T>=3 -> T<=2) is THE pivotal remaining Branch-A sub-lemma; T=1 + 7-lens are finite
+structural arguments (max-cut/Gamma-min/tri-free contradictions). Closeable finite structure. Retasked MAIN on
+the multi-terminal splitting lemma. Consistent with the unified coverage pattern (finite classifier + exhaustion).
+
