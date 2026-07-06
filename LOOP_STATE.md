@@ -1292,3 +1292,19 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - SIBLING: Branch-B section (in flight).
 - NEXT TICK: gate MAIN Seed3 cited-facts reply -> graft; check Codex Phase-I exact support-solve; SIBLING.
 - P(Lean)~98 (both remaining ODL checkers -- LensGates DONE, Seed3 in closure).
+
+
+## TICK NOTES (2026-07-06T18:50Z) — Seed3 close wiring GREEN (honest boundary) + adversarial audit workflow launched
+- LEAN: Seed3 route-tree close-data layer grafted (commit 2 files 203+), EXIT=0 LOGBYTES=0, axioms
+  [propext,Quot.sound], forbidden 0. checkSeed3RouteTree_sound_from_closeData dischargeable from literal data.
+  LENS_GATE leaf CLOSED (proven LensGates stack); 10 non-lens families deferred to Seed3LeafExternalCheckers
+  (unconstrained) = HONEST remaining obligation (instantiate w/ proven Bank0/ODL checkers + soundness bridge).
+- MAIN RETASKED: seed3LeafExternalCheckers_proven instantiation (map 10 families to proven checkers; decide
+  whether resolved is Bool-structural [DONE] or needs per-leaf math bound [real obligation]). In flight.
+- ULTRACODE: launched adversarial Lean-closure audit workflow wpxfy565q (5 dims: satisfiability/circularity/
+  fcbridge/hollow-reduction/axiom-leak -> verify -> synthesize). Gate its report on completion; act on any
+  CONFIRMED critical gap (falsifier-adjacent).
+- CONJUNCT-3 this session: 45/45 SHA (179/179) + 23/23 repaired-row exact re-verify + k5/F1.
+- CODEX: Phase-I IPM+support-extract ruling; k6/F6 calibration in flight. marker 1941117.
+- BUILD LESSON: `if (b:Bool)=true` ite reduces via `if_pos hleaf` (hleaf : b = true), NOT rw[hleaf]+rw[and].
+- NEXT TICK: gate audit workflow report; gate MAIN Seed3-instantiation reply; check Codex Phase-I.
