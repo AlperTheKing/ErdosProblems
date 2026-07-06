@@ -5396,6 +5396,208 @@ def lensGateGeomSound_of_subcert_and_close
 end LensGates
 
 
+namespace Seed3RouteTree
+
+/-!
+Literal close-data layer for Seed3 leaves. Turns already-proven leaf-family
+checkers into the `Seed3LeafCitedFacts` object required by
+`checkSeed3RouteTree_sound`. The lens-gate leaf is checked directly through the
+proven LensGates stack; all other leaf families are supplied through
+`Seed3LeafExternalCheckers` (instantiate with the proven concrete checkers). -/
+
+structure Seed3LeafExternalCheckers
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData) : Type where
+  checkEQ : PayloadRef → Bool
+  checkSIB : PayloadRef → Bool
+  checkNoOverfull : PayloadRef → Bool
+  checkNegSwitch : PayloadRef → Bool
+  checkPrunable : PayloadRef → Bool
+  checkNotSaturated : PayloadRef → Bool
+  checkFourDoor : PayloadRef → Bool
+  checkCone : PayloadRef → Bool
+  checkBankBlock : PayloadRef → Bool
+  checkSeed10 : PayloadRef → Bool
+
+inductive Seed3LeafCloseCert
+| eq (ref : PayloadRef)
+| sib (ref : PayloadRef)
+| noOverfull (ref : PayloadRef)
+| negSwitch (ref : PayloadRef)
+| prunable (ref : PayloadRef)
+| notSaturated (ref : PayloadRef)
+| fourDoor (ref : PayloadRef)
+| cone (ref : PayloadRef)
+| bankBlock (ref : PayloadRef)
+| lensGate
+    (ref : PayloadRef)
+    (gate : LensGates.LensGateData)
+    (geom : LensGates.LensGateGeomSubcert)
+    (close : LensGates.OSCResidualCloseCert)
+| seed10 (ref : PayloadRef)
+deriving Repr
+
+structure Seed3LeafCloseEntry where
+  nodeId : NodeId
+  cert : Seed3LeafCloseCert
+deriving Repr
+
+structure Seed3LeafCloseData where
+  entries : List Seed3LeafCloseEntry
+deriving Repr
+
+def findClose? (C : Seed3LeafCloseData) (id : NodeId) :
+    Option Seed3LeafCloseEntry :=
+  C.entries.find? (fun e => e.nodeId == id)
+
+def checkPayloadEq (a b : PayloadRef) : Bool :=
+  decide (a = b)
+
+def checkLeafCloseCert
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (ext : Seed3LeafExternalCheckers G c T)
+    (n : Seed3Node)
+    (cert : Seed3LeafCloseCert) : Bool :=
+  match n.kind, cert with
+  | NodeKind.leaf LeafTag.EQ ref, Seed3LeafCloseCert.eq ref' =>
+      checkPayloadEq ref ref' && ext.checkEQ ref'
+  | NodeKind.leaf LeafTag.SIB ref, Seed3LeafCloseCert.sib ref' =>
+      checkPayloadEq ref ref' && ext.checkSIB ref'
+  | NodeKind.leaf LeafTag.NO_OVERFULL ref, Seed3LeafCloseCert.noOverfull ref' =>
+      checkPayloadEq ref ref' && ext.checkNoOverfull ref'
+  | NodeKind.leaf LeafTag.NEG_SWITCH ref, Seed3LeafCloseCert.negSwitch ref' =>
+      checkPayloadEq ref ref' && ext.checkNegSwitch ref'
+  | NodeKind.leaf LeafTag.PRUNABLE ref, Seed3LeafCloseCert.prunable ref' =>
+      checkPayloadEq ref ref' && ext.checkPrunable ref'
+  | NodeKind.leaf LeafTag.NOT_SATURATED ref, Seed3LeafCloseCert.notSaturated ref' =>
+      checkPayloadEq ref ref' && ext.checkNotSaturated ref'
+  | NodeKind.leaf LeafTag.FOUR_DOOR ref, Seed3LeafCloseCert.fourDoor ref' =>
+      checkPayloadEq ref ref' && ext.checkFourDoor ref'
+  | NodeKind.leaf LeafTag.CONE ref, Seed3LeafCloseCert.cone ref' =>
+      checkPayloadEq ref ref' && ext.checkCone ref'
+  | NodeKind.leaf LeafTag.BANK_BLOCK ref, Seed3LeafCloseCert.bankBlock ref' =>
+      checkPayloadEq ref ref' && ext.checkBankBlock ref'
+  | NodeKind.leaf LeafTag.LENS_GATE ref,
+      Seed3LeafCloseCert.lensGate ref' gate geom close =>
+      checkPayloadEq ref ref' &&
+        (LensGates.checkLensGates G c gate &&
+          (LensGates.checkLensGateGeomSubcert G c gate geom &&
+            LensGates.checkIrreducibleOSCResidualClose G c gate geom close))
+  | NodeKind.leaf LeafTag.SEED10 ref, Seed3LeafCloseCert.seed10 ref' =>
+      checkPayloadEq ref ref' && ext.checkSeed10 ref'
+  | _, _ =>
+      false
+
+def checkLeafCloseForNode
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (ext : Seed3LeafExternalCheckers G c T)
+    (C : Seed3LeafCloseData)
+    (n : Seed3Node) : Bool :=
+  match findClose? C n.id with
+  | some e => checkLeafCloseCert G c T ext n e.cert
+  | none => false
+
+def checkSeed3LeafCloseData
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (ext : Seed3LeafExternalCheckers G c T)
+    (C : Seed3LeafCloseData) : Bool :=
+  decide ((C.entries.map (fun e => e.nodeId)).Nodup) &&
+    T.nodes.all (fun n =>
+      if isLeafKind n.kind then
+        checkLeafSyntax T n &&
+          checkLeafCloseForNode G c T ext C n
+      else
+        true)
+
+theorem leaf_close_for_node_of_check
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    {ext : Seed3LeafExternalCheckers G c T}
+    {C : Seed3LeafCloseData}
+    (hC : checkSeed3LeafCloseData G c T ext C = true)
+    {n : Seed3Node}
+    (hn : n ∈ T.nodes)
+    (hleaf : isLeafKind n.kind = true) :
+    checkLeafCloseForNode G c T ext C n = true := by
+  unfold checkSeed3LeafCloseData at hC
+  rw [Bool.and_eq_true] at hC
+  rcases hC with ⟨_hnodup, hall⟩
+  have hncheck := List.all_eq_true.mp hall n hn
+  rw [if_pos hleaf, Bool.and_eq_true] at hncheck
+  exact hncheck.2
+
+def seed3LeafResolved
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (ext : Seed3LeafExternalCheckers G c T)
+    (C : Seed3LeafCloseData)
+    (n : Seed3Node) : Prop :=
+  checkLeafCloseForNode G c T ext C n = true
+
+def seed3LeafCitedFacts_of_closeData
+    (G : GraphData) (c : CutData) (T : Seed3RouteTreeData)
+    (ext : Seed3LeafExternalCheckers G c T)
+    (C : Seed3LeafCloseData)
+    (hC : checkSeed3LeafCloseData G c T ext C = true) :
+    Seed3LeafCitedFacts G c T where
+  resolved := seed3LeafResolved G c T ext C
+  eq_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  sib_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  no_overfull_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  neg_switch_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  prunable_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  not_saturated_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  four_door_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  cone_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  bank_block_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  lens_gate_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+  seed10_sound := by
+    intro n ref hn hkind _hsyn
+    have hleaf : isLeafKind n.kind = true := by simp [hkind, isLeafKind]
+    exact leaf_close_for_node_of_check hC hn hleaf
+
+theorem checkSeed3RouteTree_sound_from_closeData
+    {G : GraphData} {c : CutData} {T : Seed3RouteTreeData}
+    (ext : Seed3LeafExternalCheckers G c T)
+    (C : Seed3LeafCloseData)
+    (hC : checkSeed3LeafCloseData G c T ext C = true)
+    (hT : checkSeed3RouteTree G c T = true) :
+    Seed3CompletenessProp G c T
+      (seed3LeafCitedFacts_of_closeData G c T ext C hC) :=
+  checkSeed3RouteTree_sound
+    (seed3LeafCitedFacts_of_closeData G c T ext C hC)
+    hT
+
+end Seed3RouteTree
+
+
 /-! ### FC bridge: `beta_bipartization` — betaSimple ≤ K yields a bipartite
 subgraph deleting ≤ K edges (the sole Mathlib lemma the official erdos_23
 shape reduces to). Grafted here (not a separate file) because it uses the
