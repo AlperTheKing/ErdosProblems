@@ -403,5 +403,49 @@ def leafProviders_of_concreteChecks
         | LENS_GATE => exact P.soundLensGate n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
         | SEED10 => simp [checkODLLeafDispatch, hk] at hcheck
 
+/-! ### Per-row payload data + the rowSum-binding soundness linchpin (GPT-Pro MAIN).
+The emitter supplies a per-row atom table; the SOUNDNESS LINCHPIN is that the checker binds the
+emitted atoms to the ACTUAL `rowSum G c rows Q` via decidable equality (not mere internal
+consistency), so a malicious emitter cannot fabricate a row sum. Confirmed by MAIN. -/
+
+/-- A row-load atom: vertex `v` with integer load numerator `num` (common denominator in the payload). -/
+structure ODLRowAtom where
+  v : Nat
+  num : Int
+deriving Repr
+
+/-- Per-node emitted core payload. -/
+structure ODLNodeCorePayload where
+  nodeId : Seed3RouteTree.NodeId
+  support : List Nat
+  supportSize : ℚ
+  supportRowSum : ℚ
+deriving Repr
+
+/-- The per-row ODL semantic payload the emitter produces. -/
+structure ODLRowSemanticsPayload where
+  atoms : List ODLRowAtom
+  denom : Nat
+  nodeCores : List ODLNodeCorePayload
+  rootNode : Seed3RouteTree.NodeId
+deriving Repr
+
+/-- Total atom numerator. -/
+def atomNumTotal (atoms : List ODLRowAtom) : Int :=
+  (atoms.map (fun a => a.num)).sum
+
+/-- THE SOUNDNESS LINCHPIN: the emitted atoms must reproduce the ACTUAL row sum. -/
+def checkRowSumBinding (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (P : ODLRowSemanticsPayload) : Bool :=
+  decide (rowSum G c rows Q = ((atomNumTotal P.atoms : ℚ) / (P.denom : ℚ)))
+
+/-- Soundness of the binding: a passing `checkRowSumBinding` forces `rowSum G c rows Q` to equal the
+    emitted atom sum over the denominator — so downstream support-row-sum recomputations are bound to
+    the real row. -/
+theorem rowSum_eq_of_checkRowSumBinding {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {P : ODLRowSemanticsPayload} (h : checkRowSumBinding G c rows Q P = true) :
+    rowSum G c rows Q = ((atomNumTotal P.atoms : ℚ) / (P.denom : ℚ)) :=
+  of_decide_eq_true h
+
 end ODLFull
 end Erdos23Delta0
