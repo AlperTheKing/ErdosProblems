@@ -865,3 +865,55 @@ LEMMA}. The splitting lemma (T>=3 -> T<=2) is THE pivotal remaining Branch-A sub
 structural arguments (max-cut/Gamma-min/tri-free contradictions). Closeable finite structure. Retasked MAIN on
 the multi-terminal splitting lemma. Consistent with the unified coverage pattern (finite classifier + exhaustion).
 
+
+## Multi-terminal splitting lemma — verdict + THE decisive crux (GPT-Pro MAIN, 2026-07-07; Claude-gated)
+
+### Verdict: the NAIVE splitting lemma is FALSE (non-Helly)
+As stated it is false at the level of pure C5-label extension: a T>=3 terminal obstruction need NOT contain a
+genuine obstruction on a subset T'<=T with |T'|<=2. The obstruction can be NON-HELLY (every 1- and 2-terminal
+projection extends, but the whole 3-terminal system does not). MAIN gives a minimal non-Helly obstruction shape.
+
+### NCHRoute status (refined)
+- T=1 Terminal Hall: structurally/certifiably CLOSED.
+- T=2 primitive lens (7 types): structurally/certifiably CLOSED (modulo lens/OSC close certs).
+- T>=3 splitting: GENUINE RESIDUAL STRUCTURAL GAP.
+
+### The separator-split recursion (works EXCEPT the irreducible case)
+If a separator S (|S|<=2) splits H into components each meeting terminals: branch over S -> Z5 (<=25 cases).
+For each label assignment, at least one component C with terminal set (T cap C) union S must fail to extend
+(else all components glue -> extension of H). So the obstruction splits into a finite disjunction of smaller
+terminal obstructions; measure |H|+|T| lexicographic; well-founded.
+  MultiTerminal(H,T): if |T|<=2 use T=1/T=2 NCH machinery; else if a <=2 separator S exists, for each alpha:S->Z5
+  choose a failing component C_alpha, recurse on (C_alpha, (T cap C_alpha) union S); ELSE irreducible high-terminal
+  obstruction. THE LAST CASE IS THE PROBLEM.
+
+### Lean shapes (MAIN)
+  structure TerminalSeparatorSplitCert { sep : List Nat (card<=2); assignments : List(List Nat) (Fin5);
+    children : List ChildObstruction; coverage : Bool (every alpha:sep->Fin5 once); childSound : List ChildNCHCert }
+  theorem terminal_separator_split_sound (hcheck = true)(hChildren : forall child, NCHRouteSound child) :
+    NCHRouteSound (parent H T)                              -- SOUNDNESS: buildable/checker-complete
+  theorem multiterminal_splitting_complete (hTri)(hMax)(hGamma)(hNode)(hMin : MinimalNonC5TerminalBlock ... H T)
+    (hT3 : 3 <= T.card) : exists cert : TerminalSeparatorSplitCert, checkTerminalSeparatorSplitCert = true
+    -- EXISTENCE: currently MISSING (the irreducible high-terminal case is unproven)
+
+### Two repair paths
+1. STRUCTURAL: prove the existence theorem = "every minimal saturated/pruned/full-mask/overfull non-C5-hom
+   terminal obstruction HAS a <=2 separator" (rules out irreducible high-terminal cores). => compiled.
+2. PER-INSTANCE: extend NCHRouteCert to allow general multi-terminal (T>=3) finite CSP/Hall certificates
+   emitted per instance. => sidesteps the theorem but makes these atoms a per-instance certificate SCHEME
+   (data, not a compiled structural lemma; anti-fake-progress-insufficient for a compiled M6/coverage).
+
+### THE decisive crux (Claude) — the single shared structural question of the whole remaining program
+NCH T>=3 splitting existence == M6 closure-projection (SIBLING): both need EVERY minimal saturated/pruned/
+full-mask/overfull non-C5-hom obstruction to have a <=2 SEPARATOR (equiv. project to a CLOSED CORRIDOR /
+closed shadow to which the switch-or-C5-label dichotomy applies). ONE structural question:
+  Does triangle-freeness + saturation + pruning + full-mask + overfull FORCE a <=2 separator (no irreducible
+  high-terminal obstruction)?
+  YES => NCHRoute + M6 both close as COMPILED structural theorems => the compiled program can close.
+  NO (irreducible obstructions occur in actual cores) => these atoms need per-instance CSP/Hall certs => the
+  program is inherently a per-instance certificate scheme for these nodes (not fully compiled-universal).
+This is THE decisive question for whether a fully-compiled delta=0 proof is reachable via this program.
+Falsifier-watch: if a realizable irreducible high-terminal obstruction (in an actual saturated/pruned/full-mask/
+overfull non-C5-hom core) is exhibited, that forces path-2 (per-instance) for these atoms — not a delta=0
+falsifier, but a proof that the compiled-universal route needs the general CSP cert.
+
