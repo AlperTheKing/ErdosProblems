@@ -1489,3 +1489,19 @@ CODEX marker CODEX_TO_CLAUDE.md 1961043. MAIN retasked coreOf emission. SIBLING 
   non-finitary wall)? SIBLING = exhibit the charging invariant constructively. Both generating.
 - NEXT TICK: gate both; if constructible -> build token-charge existence lemma (closes deepest node
   compiled); else document certified-per-instance boundary. Also gate Codex 62-chart source-import batch.
+
+## TICK ADDENDUM (2026-07-07T09:55Z) — INDEPENDENT O14 coverage assessment (prep for gating the coverage verdict)
+- Read EQ_ODL1_O14_ASSEMBLY_GPTPRO.md myself. FINDING: O14 chart coverage IS N-uniform + finite — a
+  geometric partition of the NORMALIZED domain {w_i>=1, min w_i=1} into 10 height x 15 gen x 2 band = 300
+  regions + stratum; eq_chart_cover (9.7) + EQODL1_of_cover (9.9) give P_EQ1(w)>=0 for ALL normalized
+  points => all N via h/h^2 scaling. NOT a per-N enumeration.
+- KEY DISTINCTION for the disentangling question: O14 covers the PER-ROW ODL bound (full-mask EQ leaf:
+  ROWSUM(f)<=N+eta for a length-5 row), NOT the AGGREGATION. The GERSH aggregation Sum(ell^2-25)<=25eta is a
+  SEPARATE global sum-over-bad-edges obligation = the token-charge Hall condition. O14/Seed3 supply per-row
+  HYPOTHESES; the aggregation COMBINES them.
+- MY INDEPENDENT LEAN: answer (B) is more likely — aggregation Hall condition is NOT discharged by chart
+  coverage (which handles per-row bounds); it's a separate global theorem. GATE MAIN's coverage answer
+  against this: if MAIN says (A) [coverage discharges aggregation], push back with per-row-vs-aggregation
+  separation. If MAIN says (B), it confirms the deepest node is genuinely separate from the chart work.
+- IN FLIGHT: MAIN generating coverage-vs-Hall verdict; SIBLING generating coverage-completeness (N-uniform?)
+  answer. Gate both next tick against my O14 read. Wakeup armed 22:28.
