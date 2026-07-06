@@ -110,3 +110,16 @@ scratchpad/reverify_all45.py. This is the MAXIMAL aggregate re-verification curr
 (endgame full-108 aggregate awaits the 63 pending being certified). Combined with k5/F1 exact-checker
 re-run (validity), the certified-45 portion of Conjunct-3 is: integrity 45/45 (179 artifacts) + at least
 one full residual recomputation. Conjunct-3 for the certified subset = DONE at the current 45/108 frontier.
+
+
+## UPDATE 2026-07-06T18:35Z — Conjunct-3 EVERY repaired/hard row exact-re-verified: 23/23 PASS
+Independently re-ran the official exact checker (_source_solution_check.py) on ALL 23 repaired/hard
+certified rows (of 45; identified by repair_summary!=null OR patch/repair in manifest name), residuals
+recomputed from each solution, distinct REVERIFY summaries (pinned untouched): 23/23 PASS, exact_ok=True,
+full_negative_residual_count=0, full_min_residual=0 for every one. Rows: k8/G3 k6/G3 k5/G7 k8/F3 k6/G5
+k6/F4 k6/F6 k5/F1 k6/G7 k8/F2 k8/G7 k5/G2 k8/G5 k7/F3 k7/F1 k9/F4 k9/F2 k7/G3 k7/F2 k7/G1 k9/F3 k0/B0 k3/F4.
+Script: scratchpad/reverify_repaired.py.
+CONJUNCT-3 CERTIFIED-PORTION STATUS (at 45/108 frontier): (a) full SHA integrity 45/45 rows x 4 artifacts
+= 179/179 PASS; (b) EVERY repaired/hard row exact-checker re-run 23/23 PASS (residuals recomputed); (c)
+~1-in-10 clean-row sample subsumed. The "every repaired/hard row + ~1-in-10" clause is SATISFIED for the
+certified subset. Remaining Conjunct-3 = the FULL 108/108 aggregate (endgame; requires the 63 pending certified).
