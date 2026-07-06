@@ -103,3 +103,25 @@ the LRS charging map (task #16, PROVEN math; needs compiling as a provider — t
 (b) GRAFT the corrected RowDBGammaFacts into CertGraph (replace buggy pair, update gammaBetaProvider +
 gammaUpper_from_all_rows_gersh) — assembly-time surgical fix, careful re downstream (heavy CertGraph rebuild).
 => The anti-fake-progress gate WORKED: caught an unsatisfiable "compiled aggregation" field, fixed the reduction.
+
+## ⭐ AGGREGATION FIXED + COMPILED as CHARGE CERT (MAIN design + Claude build 3ed7f8b79) — anti-fake-progress WIN
+MAIN gave the token-charging as a length-surplus CHARGE CERTIFICATE (Positivstellensatz), and the minimal graft.
+CLAUDE BUILT it GREEN (GammaAggregation.lean, commit 3ed7f8b79, 14th increment, axioms clean, first-try):
+- rowGershSlack Q := (N+η)−rowSum Q; rowGershSlackList; ratDot; lengthSurplusTarget := 25η−lengthSurplusGD.
+- structure LengthSurplusChargeCert { coeffs : List ℚ, residual : ℚ }.
+- checkLengthSurplusChargeCert := 0≤residual && coeffs.all(0≤·) && coeffs.length=rowList.length &&
+  (lengthSurplusTarget = residual + ratDot coeffs rowGershSlackList)  [exact rational identity].
+- ratDot_nonneg (induction) + lengthSurplus_le_25eta_of_charge (cert + per-row GERSH => lengthSurplus≤25η) +
+  gammaUpper_from_chargeCert (coverage + cert + GERSH => Γ≤N²). ALL GREEN.
+=> The deep GERSH aggregation is now a COMPILED PROVIDER consuming an EXACT-VERIFIABLE certificate (a_Q, R) —
+the anti-fake-progress-compliant form. No longer an assumed/unsatisfiable field.
+GRAFT PLAN (MAIN, minimal blast radius): replace RowDBGammaFacts buggy pair with the charge cert (or
+lengthSurplus_le_25eta_of_gersh backed by it); rewire gammaUpper_from_all_rows_gersh -> gammaUpper_from_chargeCert;
+update gammaBetaProvider_of_rowDB (gammaLower via length>=5, gammaUpper via charge cert). exists_good_cut_from_
+providers: no logical change (type update). GoodCutData / Delta0CertBundles / A1ProperWrapper / ODLFull: NO CHANGE
+(consume row GERSH + ODL, not Gamma internals). => heavy CertGraph rebuild but contained blast radius; DEFERRED
+to a focused window (mechanical wiring).
+REMAINING aggregation: (a) Codex emits the charge cert (a_Q coefficients + R residual) for real graphs from the
+LRS reduction (task #16 proven math -> the exact linear-charge coefficients); I exact-verify via the checker.
+(b) The CertGraph graft (wire in). CAVEAT (MAIN, truncated): does a valid (a_Q,R) charge cert ALWAYS exist
+(completeness of the linear charge form)? — the LRS quadratic may need care; retasked MAIN.
