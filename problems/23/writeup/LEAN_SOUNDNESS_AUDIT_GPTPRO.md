@@ -61,3 +61,20 @@ that must be discharged by compiled lemmas + exact-verified certificate artifact
 theorem. The GERSH aggregation is the top priority: its math is the LRS certificate family (task #16, proven in
 the N≤200 work: Σ T² ≤ Γ(N + N²/25 − m)); it must be COMPILED here to discharge the two summation-fact fields.
 Routed to MAIN. NO falsifier — the aggregation is a true fact, just not yet compiled.
+
+## CLAUDE DERIVATION 2026-07-07T06:45Z — the CORRECT aggregation is token-charging Σ(ℓ²−25)≤25η, NOT Σrowsum≤N²
+Independent derivation from SIBLING's proven top-level statement (TOPLEVEL_DELTA0_ASSEMBLY): the GERSH
+aggregation is  Σ_{f∈M} (ℓ(f)²−25) ≤ 25·η  under ∀f ROWSUM(f)≤N+η. Arithmetic:
+  Σ(ℓ²−25) = Σℓ² − 25m = Γ − 25m ≤ 25η = 25·(N²−25m)/25 = N²−25m  ⟺  Γ ≤ N².  (clean, exact)
+This is the token-charging: each bad edge f contributes (ℓ(f)²−25) EXCESS tokens charged against the 25η slack.
+MISMATCH WITH CertGraph: the CertGraph abstraction is  gamma_le_totalRowSum (Γ ≤ totalRowSum=Σ Q.rowSumQ) +
+totalRowSum_le_N2_of_gersh ((∀Q rowSum≤N+η) → Σ rowSum ≤ N²). The correct proven aggregation is Σ(ℓ²−25)≤25η,
+which does NOT obviously equal Σrowsum≤N² (naive Σrowsum ≤ m(N+η) = N³/25 > N² at extremal). So EITHER:
+ (a) Q.rowSumQ is specially defined so Σ Q.rowSumQ encodes the token budget (then abstraction OK, but rowSumQ
+     def must be checked), OR
+ (b) the CertGraph two-field abstraction is INCORRECT and should be RESTATED to the clean token-charging form:
+     replace totalRowSum_le_N2_of_gersh with  (∀Q RowGershBound) → Σ(ℓ²−25) ≤ 25η  [equivalently Γ ≤ N²],
+     which IS the proven LRS/token-charging (task #16) and satisfiable.
+RECOMMENDED FIX (pending MAIN): compile the aggregation directly as gammaUpper via Σ(ℓ²−25)≤25η ⟺ Γ≤N², using
+the per-row excess-token charging map (the LRS certificate), NOT the Σrowsum≤N² field. This is satisfiable and
+matches the proven math. MAIN resolving the satisfiability + formalization now.
