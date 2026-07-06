@@ -232,3 +232,46 @@ CLAUDE GATE (2026-07-05): height-1 loads re-derived from the 11 templates door-b
 MATCH; all excess fractions, the prune increment, both leaf inequalities, and the final
 margin re-computed exactly — ALL PASS, zero discrepancies. This is the emitter/checker
 validation instance for O13/route-tree emissions and the Lean Seed3RouteTree module.
+
+## Seed3 ClassifierComplete — MAIN verdict (2026-07-07; Claude independent read CONFIRMED it)
+
+The key at-risk coverage node. MAIN's answer matches Claude's independent SEED3_COMPLETENESS read exactly.
+
+### DE-RISKED: structural-by-design, NOT census
+- **Door-type partition (4 types P4/K13/P2uE/3E): STRUCTURAL THEOREM.** Under the q=3 hypothesis (exactly
+  three effective bad doors as three DISTINCT quotient door-edges in the V0-V4 layer), the four leaves are
+  FORCED by finite graph theory. No triangle-free census, no bounded-N enumeration, no named-family testing.
+  (This is just the classification of simple bipartite graphs with exactly 3 edges up to iso: P4, K13,
+  P2uE=P3+K2, 3E=3K2 — exactly 4, since triangle K3 is excluded by bipartiteness.)
+- **Width/overflow/canonical-lookup ("only EQ/SIB survive"): certificate-based finite classification over the
+  BOUNDED quotient universe.** N-uniform IF the width cert + canonical lookup are verified — NOT a bounded-N
+  census, but CERT-PENDING (must be emitted + verified). NOT proved by the four door types alone.
+
+### Buildable Lean shape (MAIN) — QUEUED as next structural increment
+    inductive Seed3DoorType | P4 | K13 | P2uE | ThreeE
+    structure DoorGraph where left : List Nat; right : List Nat; doors : List (Nat x Nat)
+      -- facts: doors.Nodup, doors.length = 3, endpoints_ok (forall e in doors, e.1 in left, e.2 in right)
+    theorem classify_three_edge_bipartite_door_graph (D : DoorGraph) : exists ty, DoorGraphHasType D ty
+    theorem classify_three_edge_bipartite_door_graph_unique (D) (ty ty') (h) (h') : ty = ty'   -- canonicalized
+    structure Seed3Prime (G) (c) (O) : Prop where
+      c5_hom : C5HomCore G c O; saturated : SaturatedCore G c O; pruned : PrunedCore G c O
+      q_eq_three : EffectiveDoorCount O = 3; doorGraphSimple : DoorGraphSimple (doorGraph O)
+    theorem seed3_classifier_complete_door_type (hTri : TriangleFree G) (hSeed3 : Seed3Prime G c O) : exists ty ...
+
+### Falsifier-first (MAIN) — a "fifth door type" can occur ONLY if a Seed3Prime hypothesis is too weak:
+1. Door multiplicity counted with weights not distinct quotient edges (=> 3 doors = 3 units on fewer edges).
+   FIX: define door-graph type by DISTINCT effective quotient door-edges, or include multiplicity patterns.
+2. Parallel/twin uncontracted doors allowed (same V0-V4 endpoint bags, treated as different doors) =>
+   simple-graph classification fails. FIX: true-twin contraction OR multigraph classifier.
+3. Hidden effective doors not declared in the saturated core => q=3 false; route = NOT_SATURATED / FOUR_DOOR.
+4. A bad door outside the V0-V4 layer allowed => C5-hom hypothesis not strong enough.
+=> The Lean Seed3Prime structure must ENFORCE: distinct quotient edges + twin-contraction + saturation +
+   C5-hom (bad doors only in V0-V4). With those, the door-type theorem is sound and structural.
+
+### Claude gate verdict
+Seed3 ClassifierComplete = STRUCTURAL-BY-DESIGN (not a census residual-infinite-obligation). Reduces to:
+(a) door-type classifier theorem (buildable structural Lean — the 4-type classification, with Seed3Prime
+    enforcing the 4 falsifier-guarding hypotheses) — QUEUED as next Lean increment; and
+(b) width cert + canonical lookup verified over the bounded quotient universe (CERT-PENDING; Codex emits,
+    Claude exact-verifies; finite). GOOD OUTCOME: the key at-risk node is not a hidden infinite gap.
+
