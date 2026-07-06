@@ -204,3 +204,22 @@ from tree shape):
 => odlFull provider FRAMEWORK (built, 11 green) + DESIGN (coreOf emission) both COMPLETE. Remaining odlFull =
 concrete per-row emitted ODLRowSemanticsPayload data (from chart certs + row structure) + O14 EQ-leaf cover.
 The coreOf emission is a data-instantiation step (gated on Codex chart certs), not a new theorem.
+
+## UPDATE 2026-07-07T05:00Z — PAYLOAD CHECKER design (MAIN) — odlFull provider DESIGN-COMPLETE
+MAIN delivered the concrete per-row payload checker (the emitted-row verifier). Types:
+- ODLRowAtom { v : Nat, num : Int }; ODLNodeCorePayload { nodeId : NodeId, support : List Nat, supportSize : ℚ,
+  supportRowSum : ℚ }; ODLRowSemanticsPayload { atoms : List ODLRowAtom, denom : Nat, nodeCores : List
+  ODLNodeCorePayload, rootNode : NodeId }.
+- checkODLSupport (G)(S) := decide S.Nodup && S.all (v < G.n); denomQ P := if denom=0 then 1 else denom.
+- checkODLRowSemanticsPayload RECOMPUTES (not trusting payload numerals): supportSize = support.length (guarded
+  supportSize<=N); supportRowSum = (atom sum over support)/denom; rowSum Q = (total atom sum)/denom; root
+  row_le_support from the root core. semanticsOfPayload uses the RECOMPUTED values.
+- semanticsOfPayload : ODLRowSemanticsPayload -> ODLNodeSemantics (coreOf lookup by node id, recomputed cores).
+- rootRepresents_of_payload : payload checks + hfind -> RootRepresentsRow (coreOf root.id).
+- odlFull_of_rowPayload : (checkODLRowSemanticsPayload) + (checkSeed3ODLSemanticTree with built providers) =>
+  rowSum G c rows Q <= (G.n:ℚ) + etaQ G c  [via checkSeed3ODLSemanticTree_sound_exists_root + rootRepresents_of_
+  payload + my green ODLFull_of_rootCore]. THIS FILLS BranchAInputs.odlFull for an emitted row.
+=> odlFull provider: FRAMEWORK built (11 green) + DESIGN complete (payload checker). Buildable next tick (big
+block; ~8k chars). SOUNDNESS-CRITICAL open question (retasked MAIN): does checkODLRowSemanticsPayload bind
+rowSum Q to the ACTUAL rowSum G c rows Q (= Q.load5 sum) via decide-equality, or only internal atom consistency?
+The former is required for soundness (else the emitter could claim any rowSum). Confirm the exact binding.
