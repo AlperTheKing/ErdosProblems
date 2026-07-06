@@ -148,3 +148,28 @@ to (SH'). DECISIVE OPEN QUESTION (retasked SIBLING): does the cactus ledger P7 c
     => bare per-node obligation + live risk stands. This is a d/2 SINGLE-SPEND accounting question.
 => The Branch-B "live risk" is NOT confirmed; it is PENDING this reconciliation. Do NOT surface it as a
 falsifier or a confirmed risk until resolved.
+
+## ⭐ PEELINVARIANT RESOLVED = SH' (SIBLING reconciliation, 2026-07-07) — LIVE RISK DISSOLVED
+CLAUDE CATCH CONFIRMED: P7 consumes (SH'), NOT the bare invariant. SIBLING decisive:
+"The correct form for the cactus ledger is SH', not the bare invariant: m_out <= r_out^2/25 + d/2, d=|delta_B(U,R)|
+(blue boundary door count of peeled outside packet U=W_out vs retained side R). The bare form m_out<=r_out^2/25
+is FALSE and must NOT be used by P7. (SH') 50*m_out <= 2*r_out^2 + 25*d is the form PROVED by the two-orientation
+exchange — the exact analogue of PacketExchange with a boundary-door term RETAINED instead of discarded. The
+C5[t] W_out=V4∪V0 is NOT a counterexample: it violates the bare inequality but SATISFIES SH'."
+d/2 SINGLE-SPEND CLEAN: "The d/2 term is not an extra copy of eta/2. PacketExchange has eta>=(N^2-r^2)/25-p-d/2-h/2,
+so the packet bank available to CombinedHBD ALREADY contains the door penalty -d/2. A local cactus estimate may
+use a +d/2 door credit exactly when that same door is charged once in the packet's global d-term. NOT
+double-spending — the same door term on opposite sides of the combined inequality." Ownership condition: each
+blue boundary door credited to a cactus node assigned to EXACTLY ONE ledger node, counted once in packet d; no
+door doubly used (cactus d_C/2, fan boundary, another cactus, untracked p).
+DECISIVE STATUS (SIBLING §5): (1) P7 consumes SH', not bare. (2) SH' structurally PROVED by two-orientation
+exchange under cactus peel witness hypotheses. (3) d/2 credit available (PacketExchange pays it via -d/2). (4)
+NO Branch-B falsifier from bare C5[t] (only refutes obsolete bare form). (5) Conjunct-2 SAFE provided P7/P9/P10
+wired with SH' door-credit ownership check.
+REMAINING (finite WIRING checks, NOT new inequalities, NOT a live extremal risk): every cactus peel node
+satisfies SH' two-orientation-exchange hypotheses; emitted d_C = |delta_B(U_C,R_C)|; cactus ledger uses SH'
+form; door-credit ownership map injective; every cactus-credited door in packet door count d; no cactus door
+also spent by fan/another cell.
+=> BRANCH-B LIVE RISK DISSOLVED. PeelInvariant = SH' (PROVEN, archived PEEL_INVARIANT_SHPRIME_GPTPRO.md).
+Conjunct-2 = certified layers + SH' (proven) + finite door-ownership wiring. SUPERSEDES the bare per-node
+PeelInvariantCert framing above. (Claude gate caught SIBLING's bare-form error via the archived SH' proof.)
