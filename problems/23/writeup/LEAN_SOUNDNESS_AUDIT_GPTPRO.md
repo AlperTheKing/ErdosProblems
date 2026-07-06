@@ -430,3 +430,52 @@ token outside the finite certificate families = a real gap, though not a falsifi
   obligation. This is the exact completeness audit the /goal demands ("coverage/assembly theorems included,
   zero hand-waves"). NOT a falsifier — but the precise map of what must be structurally proved.
 
+
+## COVERAGE-THEOREM GAP LEDGER — definitive classification (GPT-Pro SIBLING, 2026-07-07; Claude-gated)
+
+SIBLING's discipline: STRUCTURAL-PROVEN only where the archive/thread asserts an N-uniform finite
+classifier/cover theorem or a standard graph theorem — NOT an artifact checker or census. This is the
+honest map of exactly which coverage theorems a fully-compiled proof still needs. Claude's independent O14
++ Seed3 reads MATCH SIBLING's classifications (verification-gate cross-confirmed).
+
+### STRUCTURAL-PROVEN (4)
+- **O14 CoverComplete** — for the EQ-ODL1 leaf only (N-uniform geometric partition of the normalized domain,
+  eq_chart_cover 9.7 + EQODL1_of_cover 9.9). NOT global row coverage by itself. [Claude O14 read agrees.]
+- **Seed3 ClassifierComplete** — door-type layer structural (assuming SEED3_COMPLETENESS is the universal
+  finite classifier). [Claude: door-type structural core now COMPILED — Seed3Door.lean hasType_* + k13_star,
+  16th/17th increments; width/canonical-lookup layer still cert-pending; Seed3Prime->named-graph bridge pending.]
+- **LongRowRouteComplete** — recorded in Branch-B completeness / Banked-UPO assembly. No residual coverage issue.
+- **BlueDetourComponentCover** — graph-theoretic component partition + finite sum identity R_Q <= N + U_Q.
+
+### CENSUS-ONLY / PARTIAL (1)
+- **NCHRouteComplete** — not yet an N-uniform structural route theorem.
+
+### UNPROVEN / UNSPECIFIED (6) — the real remaining structural-math obligations for a compiled proof
+- **ODLFullMaskRouteComplete** — need: finite N-uniform route-tree coverage `forall O FullMaskONode, exists RouteLeaf O`,
+  independent of census. Framework + route-tree language specified; no asserted structural proof. (Several others
+  reduce to this.)
+- **Qlt3 PrimeComplete** — need: finite symbolic classifier for the q3-prime domain + proof every realized
+  q3-prime O node hits a certified leaf. Gap if absent: a q3-prime node outside the finite quotient leaves.
+- **SiblingRouteComplete (S7)** — UNPROVEN as a ROUTE coverage theorem; the S7 inequality itself is
+  certified on its domain. Need: `forall O SiblingLeaf, O in S7-domain or passive-AM-cube-domain`. (May be
+  discharged by ODLFullMaskRouteComplete.)
+- **CellLedgerOwnershipComplete** — need the finite ownership artifact (every fan/cactus/SH'/flat/residual atom
+  assigned exactly once). OP5/fan/SH'-peel certified in design; cell ledger conditional on ownership + door wiring.
+- **CactusDoorOwnershipComplete** — cactus SH' structurally proven, but the d_C/2 door credits require the
+  ownership-wiring certificate (Codex).
+- **M6 aggregation existence** (`lengthSurplusChargeCert_exists`) — the V2 checker is a checker theorem, NOT by
+  itself an existence theorem for every RowDB. Need for universal coverage: `forall RowDB from a triangle-free
+  Gamma-min cut, exists lengthSurplusChargeCert accepted by V2 checker`. NOT established universally. Missing:
+  either a universal structural Hall/Farkas token-coverage theorem, OR a finite N-uniform route from every
+  RowDB/token config to one of the certified chart/seed token identities. Gap if absent: an excess-token config
+  outside the finite Farkas/token identities. [= the deepest node; see erdos23-coverage-completeness-ledger.]
+
+### Claude bottom line
+The certificate LEAVES (S7 inequality, cones, chart certs, SH', PacketExchange, etc.) are done/certified. The
+ROUTING/COVERAGE completeness theorems — the theorems that make the finite certificate families cover EVERY
+triangle-free graph for ALL N — are: 4 structural-proven, 1 census-only, 6 unproven. A fully-compiled delta=0
+proof requires closing the 6 unproven (+ upgrading NCH) as N-uniform structural theorems. NOT a falsifier
+(all believed true, leaves certified); the precise, honest map of the remaining structural-math work. This is
+exactly the anti-fake-progress accounting the /goal demands (Conjunct-1 "coverage theorems included, zero
+hand-waves"): those coverage theorems are largely not yet proven, and now each is named + statement-specified.
+
