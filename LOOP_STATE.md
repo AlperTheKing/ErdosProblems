@@ -1326,3 +1326,23 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - MAIN thread STALLED-RENDER recurring: reload fixes; short Turkish-preview replies = decision answers.
 - NEXT TICK: gate MAIN a1Proper reply (decisive for whether Conjunct-1/4 core is a theorem or cert-modulo);
   gate Codex k6/F6 exact solve.
+
+
+## TICK NOTES (2026-07-06T19:35Z) — a1Proper = SIX-CONE GLOBAL THEOREM (major core clarification)
+- MAIN DECISIVE (a1Proper design, A1PROPER_SIX_CONE_DESIGN_GPTPRO.md): the proper-mask branch of Branch-A
+  is a GENERAL Lean theorem UNIFORM in N, discharged by SIX fixed symbolic A1 ConeCerts (M0-M5) + a finite
+  mask-symmetry table. NOT per-graph, NOT per-row, NOT the 108 charts, NOT pure nlinarith-from-width.
+  Each cone: (75+2N)*A1Defect_Mj = P0 + sum_r Pr*Sigma_r (Bernstein-nonneg P, PMTS slack generators Sigma_r:
+  max-cut flip sigma>=0/terminal-shadow/PMTS-closure/noncrossing/row-atom/Bank0). Lean checks identity +
+  invokes slack-dictionary soundness. CRITICAL SPLIT: a1Proper = six cones ONLY; the 108 EQ-ODL1 charts +
+  Seed3/EQ/SIB/NCH feed the SEPARATE odlFull (full-mask) branch, NOT a1Proper.
+- Lean interface: A1ProperCertBundle{certs:Fin 6->ConeCert} + checkA1ProperCertBundle + A1ProperCertBundle.sound
+  + BranchAProviderInputs + toBranchAInputs. sorrys in sketch = finite-table plumbing (mask classifier/symmetry),
+  NOT math gaps. Likely reuses PolyCert ConeCert/PosCert machinery.
+- CODEX directed: emit six symbolic A1 cones M0-M5 + mask_symmetry_table (checker format); k6/F6 stays priority.
+- MAIN retasked: A1CanonicalCone.sound (checked cone + nonneg slacks => defect>=0 => XMask bound; reuse PolyCert?)
+  + mask-symmetry finite tables (canonicalProperMaskId/applyMaskSymmetry/mask_symmetry_sound) + XMaskCanonical +
+  exact slack-generator dictionary list. In flight.
+- NEXT: gate Codex six cones (exact-verify Bernstein-nonneg+slack+residual=0); gate MAIN Lean plumbing; build
+  A1ProperCertBundle -> closes proper-mask branch as general theorem. Then odlFull (charts) + BranchB remain.
+- CODEX marker 1948005 (k6/F6 targeted pricing still running). P(math a1Proper closure) up.
