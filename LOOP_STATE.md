@@ -1190,3 +1190,21 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - CODEX: k6/F6 hybrid capped-seed CG all INFEASIBLE (subset artifact, NOT falsifier); greenlit true
   Farkas-pricing CG; ledger 45/108 confirmed unchanged, 0 new. marker: CODEX_TO_CLAUDE.md 1934538.
 - MAIN tab 1267096870, SIBLING tab 1267096873 (URLs stable). Wakeup ~270s to catch GPT-Pro replies.
+
+
+## TICK NOTES (2026-07-06T16:50Z) — very productive tick: FC-form + C5 toy + LensGate finding
+- COMMITS: 641315eda beta_bipartization, 075a5c0c6 FCBridge-unconditional, LEDGER_STATUS audit,
+  M6.5 C5 toy (Toy/OddCyclePackingC5.lean: c5_isMaxCut via checkOddCyclePacking_sound(by decide),
+  axioms [propext,Classical.choice,Quot.sound], NO native_decide — checker validated on concrete graph).
+- MAIN FINDING GATED (LENSGATE_GEOM_DISCHARGE_GPTPRO.md UPDATE): lensGateGeomSound_default NO-arg is
+  UNSOUND; cross/label mechanical, forbid.triangle/shorterOdd via lemmas, OSC/head-on IRREDUCIBLE ->
+  new IrreducibleLensGeomFacts subcert. Def-check: only checkForbidTriangleFromCert exists (L5025/5062);
+  4 others missing. RETASKED MAIN: emit full self-contained helper layer + MINIMAL IrreducibleLensGeomFacts.
+  Full 7601c Lean proposal persists in MAIN thread (re-extract via @EQ@/@PL@/@AM@ transform at graft).
+- SIBLING: full-mask/ODL manuscript section done (Branch-A trichotomy complete: empty/proper/full);
+  retasked Branch-B overview + Banked-UPO. Manuscript sections (2.1 A1 cones, full-mask/ODL) PENDING
+  extraction in-thread (harness blocks LaTeX; endgame extraction).
+- olean build_root: tmp/fcbridge_o_claude_v1 (CertGraph.olean + FCBridge.olean fresh).
+- CODEX: k6/F6 Farkas-CG in flight; ledger 45/108 unchanged. marker CODEX_TO_CLAUDE.md 1934538.
+- NEXT TICK: extract MAIN helper-layer reply (transform) -> graft into CertGraph LensGates -> honest build
+  -> IrreducibleLensGeomFacts = the one remaining named LensGates geom obligation. Check Codex k6/F6.

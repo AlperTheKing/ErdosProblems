@@ -54,3 +54,22 @@ triangle-forbid + shorterOdd proofs, so the graft lands real unconditional conte
 forbid/osc geometric fields proven; the RR/RB/RD/DD/TT/TR head-on osculation core stays hypothesis).
 Full Lean text in-thread 6a450f06 (both replies) — extract at graft time (@EQ@/@PL@/@AM@ transform;
 Lean is code-fenced so clean). Uses Bool.and_eq_true in TERM form in places -> convert to rw form.
+
+
+## UPDATE 2026-07-06T16:45Z — LensGateGeomSound is NOT a free total constructor (MAIN finding, GATED)
+KEY FINDING (honest, reduces but does not close the obligation):
+- A no-argument `lensGateGeomSound_default : forall G c D, LensGateGeomSound G c D` is UNSOUND.
+  The forbid and osc outcomes are NOT mechanically contradictory from checkLensGates alone.
+- Mechanical (dischargeable for free): cross_sound (via checkLensSwitch + checkOutcome_cross_switch
+  -> LensGateConclusion.cross), label_sound (via checkLabelCert + checkOutcome_label_cert ->
+  LensGateConclusion.label). forbid.triangle + forbid.shorterOdd dischargeable via mechanical lemmas.
+- IRREDUCIBLE (remaining geometric obligation): the primitive OSC / head-on geometry, isolated in a
+  new subcertificate structure `IrreducibleLensGeomFacts`. LensGateGeomSound becomes constructible
+  ONLY with (cert : LensGateGeomSubcert) + (facts : IrreducibleLensGeomFacts) attached as DATA.
+DEF-EXISTENCE CHECK (CertGraph.lean): checkForbidTriangleFromCert EXISTS (L5025) + soundness (L5062).
+MISSING (MAIN must emit): AllLengthFiveOddClosedWitnesses, checkForbidShorterOddFromCert,
+  triangle_forbid_lens_conclusion, shorterOdd_forbid_lens_conclusion, IrreducibleLensGeomFacts,
+  checkLensGateGeomSubcert, the constructor.
+STATUS: LensGates checker soundness NARROWED from "all 4 outcomes' geometry" to "IrreducibleLensGeomFacts
+  (OSC/head-on primitive)". Full Lean code proposal persists in MAIN thread (7601c); re-extract at graft.
+RETASK: MAIN to emit the FULL self-contained helper layer + minimal IrreducibleLensGeomFacts.
