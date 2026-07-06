@@ -1242,3 +1242,19 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   graftable; re-emission requested. NEXT TICK: graft MAIN's clean re-emission -> honest build -> the 2
   IrreducibleLensGeomFacts OSC fields become the sole named LensGates geom obligation.
 - CODEX Phase-I pricing in flight (k6/F6). Ledger 45/108. SIBLING on Branch-B.
+
+
+## TICK NOTES (2026-07-06T17:30Z) — MAIN clean LensGates re-emission READY (next-tick graft) + Conjunct-3 verify
+- MAIN re-emitted a self-contained graftable LensGates layer (asst msg #11, 8854c, in-thread). Confirmed
+  it defines checkForbidShorterOddFromCert (via reduction to checkForbidTriangleFromCert on first-3 verts),
+  AllLengthFiveOddClosedWitnesses (forall cyc, checkOddClosedWalk -> 5<=edgeCount), and uses the EXACT
+  existing names (normEdge, OddCyclePacking.checkOddClosedWalk/edgeCount, ForbidKind.shorterOdd/.triangle).
+  EXTRACT METHOD: transform =@EQ@ +@PL@ &@AM@ <@LT@ >@GT@ (raw slices BLOCKED by harness); display caps
+  ~1000 chars/call so ~12 slices, OR 5 parallel javascript_tool calls per response (700-raw slices).
+- NEXT-TICK PRIMARY ACTION: extract full 8854c -> reverse transform -> assemble scratch .lean -> reconcile
+  vs CertGraph (LensGateConclusion 3-ctor .forbidden=False routing) -> graft into CertGraph LensGates ns
+  (after LensGateGeomSound struct L4474) -> honest build (expect multi-round) -> 2 IrreducibleLensGeomFacts
+  OSC fields = sole remaining LensGates geom obligation.
+- CONJUNCT-3 THIS TICK: SHA re-verify 6/6 certified rows PASS; k6/F6 = CERTIFIED (was mis-listed parked) =
+  Codex Phase-I calibration anchor; parked-queue=12 not 13; 45+63=108 consistent.
+- CODEX Phase-I pricing in flight (k6/F6 calibration). SIBLING on Branch-B.
