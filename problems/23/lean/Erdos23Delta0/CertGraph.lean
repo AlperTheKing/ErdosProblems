@@ -5256,6 +5256,146 @@ def lensGateGeomSound_of_subcert
 end LensGates
 
 
+namespace LensGates
+
+/-! ### Irreducible OSC residual closure certificate
+
+The raw `OSCResidualCert` (O.osc, O.witnessVertices, O.witnessEdges) is not enough
+by itself to prove False. This tiny literal certificate specifies HOW the residual
+closes: triangle / shorterOdd forbid, or a recomputed switch with sigma < 0 (against
+sigmaNonneg) / a checked B-connected switch with nuK < 0 (against LensNuKNonneg).
+Only OSC1 and OSC4-head-on reach this layer. -/
+
+inductive OSCResidualCloseCert
+| triangle
+| shorterOdd
+| negSigma (sw : LensSwitchData)
+| negNuK (sw : LensSwitchData)
+deriving Repr
+
+def oscResidualAsForbid (k : ForbidKind) (O : OSCResidualCert) : ForbidCert :=
+  { kind := k
+    witnessVertices := O.witnessVertices
+    witnessEdges := O.witnessEdges }
+
+def checkOSCResidualCloseCert
+    (G : GraphData) (c : CutData)
+    (O : OSCResidualCert) (C : OSCResidualCloseCert) : Bool :=
+  match C with
+  | OSCResidualCloseCert.triangle =>
+      checkForbidTriangleFromCert G (oscResidualAsForbid ForbidKind.triangle O)
+  | OSCResidualCloseCert.shorterOdd =>
+      checkForbidShorterOddFromCert G
+        (oscResidualAsForbid ForbidKind.shorterOdd O)
+  | OSCResidualCloseCert.negSigma sw =>
+      checkLensSwitch G c sw &&
+        decide (sigma G c sw.S < 0)
+  | OSCResidualCloseCert.negNuK sw =>
+      checkLensSwitch G c sw &&
+        (decide (sw.flipBConnected = true) &&
+          decide (sw.nuKVal < 0))
+
+theorem oscResidualCloseCert_false
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    {O : OSCResidualCert} {C : OSCResidualCloseCert}
+    (hcheck : checkOSCResidualCloseCert G c O C = true)
+    (hsigma : sigmaNonneg G c)
+    (hnuk : LensNuKNonneg G c)
+    (htri : TriangleFree G)
+    (hrows : LensRowsAllLengthFive D) :
+    False := by
+  cases C with
+  | triangle =>
+      exact triangle_forbid_from_cert_false hcheck htri
+  | shorterOdd =>
+      exact shorterOdd_forbid_from_cert_false
+        (G := G) (D := D)
+        (F := oscResidualAsForbid ForbidKind.shorterOdd O)
+        hcheck hrows htri
+  | negSigma sw =>
+      unfold checkOSCResidualCloseCert at hcheck
+      rw [Bool.and_eq_true] at hcheck
+      rcases hcheck with ⟨_hsw, hltDec⟩
+      have hlt : sigma G c sw.S < 0 := of_decide_eq_true hltDec
+      exact (not_lt_of_ge (hsigma sw.S)) hlt
+  | negNuK sw =>
+      unfold checkOSCResidualCloseCert at hcheck
+      rw [Bool.and_eq_true] at hcheck
+      rcases hcheck with ⟨hsw, hrest⟩
+      rw [Bool.and_eq_true] at hrest
+      rcases hrest with ⟨hflipDec, hltDec⟩
+      have hflip : sw.flipBConnected = true := of_decide_eq_true hflipDec
+      have hlt : sw.nuKVal < 0 := of_decide_eq_true hltDec
+      have hnonneg : 0 ≤ sw.nuKVal := hnuk sw hsw hflip
+      exact (not_lt_of_ge hnonneg) hlt
+
+/-! ### Checked irreducible close data for a LensGateGeomSubcert -/
+
+def checkIrreducibleOSCResidualClose
+    (G : GraphData) (c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert) (C : OSCResidualCloseCert) : Bool :=
+  match D.outcome, cert with
+  | LensGateOutcome.osc _ O, LensGateGeomSubcert.osc1 _ =>
+      decide (O.osc.kind = OSCKind.OSC1) &&
+        checkOSCResidualCloseCert G c O C
+  | LensGateOutcome.osc _ O, LensGateGeomSubcert.osc4HeadOn _ =>
+      decide (O.osc.kind = OSCKind.OSC4) &&
+        (decide (O.osc.headOn = true) &&
+          checkOSCResidualCloseCert G c O C)
+  | _, _ =>
+      false
+
+/-! ### IrreducibleLensGeomFacts fully discharged from a close certificate.
+The remaining external data is exactly `C : OSCResidualCloseCert`; there is no
+geometric hand-wave — every field closes mechanically. -/
+
+def irreducibleLensGeomFacts_of_closeCert
+    (G : GraphData) (c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert)
+    (C : OSCResidualCloseCert)
+    (hclose : checkIrreducibleOSCResidualClose G c D cert C = true) :
+    IrreducibleLensGeomFacts G c D cert where
+  osc1_sound := by
+    intro _ty i O payloadId hcert hout _hty _hkind
+      _hfacts hsigma hnuk htri hrows
+    have hlocal : checkOSCResidualCloseCert G c O C = true := by
+      unfold checkIrreducibleOSCResidualClose at hclose
+      rw [hcert, hout] at hclose
+      rw [Bool.and_eq_true] at hclose
+      exact hclose.2
+    exact oscResidualCloseCert_false
+      (G := G) (c := c) (D := D) (O := O) (C := C)
+      hlocal hsigma hnuk htri hrows
+  osc4_head_on_sound := by
+    intro _ty i O payloadId hcert hout _hty _hkind _hhead
+      _hfacts hsigma hnuk htri hrows
+    have hlocal : checkOSCResidualCloseCert G c O C = true := by
+      unfold checkIrreducibleOSCResidualClose at hclose
+      rw [hcert, hout] at hclose
+      rw [Bool.and_eq_true] at hclose
+      rcases hclose with ⟨_hkindDec, hrest⟩
+      rw [Bool.and_eq_true] at hrest
+      exact hrest.2
+    exact oscResidualCloseCert_false
+      (G := G) (c := c) (D := D) (O := O) (C := C)
+      hlocal hsigma hnuk htri hrows
+
+/-! ### One-shot LensGateGeomSound from subcert + residual close cert -/
+
+def lensGateGeomSound_of_subcert_and_close
+    (G : GraphData) (c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert)
+    (hcert : checkLensGateGeomSubcert G c D cert = true)
+    (C : OSCResidualCloseCert)
+    (hclose : checkIrreducibleOSCResidualClose G c D cert C = true) :
+    LensGateGeomSound G c D :=
+  lensGateGeomSound_of_subcert
+    G c D cert hcert
+    (irreducibleLensGeomFacts_of_closeCert G c D cert C hclose)
+
+end LensGates
+
+
 /-! ### FC bridge: `beta_bipartization` — betaSimple ≤ K yields a bipartite
 subgraph deleting ≤ K edges (the sole Mathlib lemma the official erdos_23
 shape reduces to). Grafted here (not a separate file) because it uses the
