@@ -1136,3 +1136,19 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   chart-0 F-dominant -> --selector sparse-row.
 - I verify every hybrid cert + ~1-in-10 mechanical + every repaired before CERTIFIED. Single-writer
   ledger = Codex. GOAL: 108/108 certified.
+
+## TICK NOTES (2026-07-06T16:20Z) — beta_bipartization drafted (MAIN repair pending)
+- LEAN: MAIN returned beta_bipartization (real proof, no sorry: monoGraph/bichromSubgraph via
+  fromEdgeSet, IsBipartite=Colorable 2 via f, orderedEdgeFinset<->Sym2 edgeFinset counting
+  bridge). Grafted into CertGraph (private mem_orderedEdgeFinset_iff needs same-file) -> 17
+  build errors vs our pin (Finset.card_congr RENAMED + Sym2.mk_eq_mk_iff case direction +
+  rw-unfold on monoGraph/bichromSubgraph). REVERTED CertGraph to green (04c285c1e). Draft
+  archived beta_bipartization_draft.lean. Sent MAIN precise errors for pin-targeted repair.
+  When fixed: graft -> FC-form UNCONDITIONAL (Mathlib side). Currently FC-form still conditional
+  on this ONE lemma.
+- LEAN STATUS SUMMARY: checker triad + M4 bridge + FC-form bridge + triangle-forbid ALL green.
+  Pending: beta_bipartization (repair), shorterOdd graft, LensGateGeomSound scaffold, irreducible
+  RR/RB/RD/DD/TT/TR geometry, M6/M7 providers (research), Skeleton wiring, PR pack.
+- CERT COMPLETION: entire 63 pending = hybrid-class (my 6 even F-rows all dirty 25-415 neg).
+  SOLE path = Codex hybrid column-gen. 0/13 hybrid certified so far. k6/F6 CG first-pass pending.
+- MANUSCRIPT: 2.1 archived; sibling on 2.2 (code-fenced). Marker at CODEX file len.
