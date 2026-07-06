@@ -181,3 +181,26 @@ MAIN (thread msg 13) delivered the semantic tree assembly. Key design + build st
   Seed3ODLInternalLinks structure + the recursive checker soundness build, and O14 (full 108 cover for the
   EQ leaf). MAIN retasked for the leaf checkers. RootRepresentsRow provenance = structural row/support
   ownership data (emitted per row), not tree-shape alone.
+
+## UPDATE 2026-07-07T04:20Z — coreOf EMISSION design (MAIN) — odlFull provider FULLY DESIGNED
+MAIN closed the odlFull recipe. coreOf is emitted PER NODE from a checked per-row core table (NOT inferred
+from tree shape):
+- ODLRowAtom { v : Nat, num : Int } + denom D; rowSum(Q) = (Sum atoms.num)/D.
+- For node support S: supportRowSum(S,Q) = (Sum_{a.v in S} a.num)/D; supportSize(S) = |S| (unweighted graph).
+- Emitted core: ODLCoreData.mk (support := S_n) (supportSize := (S_n.length:ℚ)) (supportRowSum := num/D)
+  (supportSize_le_N := ...). supportRowSum is RECOMPUTED from atoms, not arbitrary.
+- ROOT REPRESENTATION discharge: if root support covers every atom (atomsCoveredByRoot: ∀ atom∈atoms,
+  atom.v∈rootSupport), then supportRowSum(root)=rowSum(Q), so row_le_support by le_of_eq. SAFE FALLBACK:
+  rootSupport = V(G) => row_le_support automatic, supportSize = N (always sound; larger active closure is
+  the tighter option). supportSize_le_N : N<=N.
+- INTERNAL LINKS: PRUNE node child removes appendage H\T; coreExcess(parent)-coreExcess(child) =
+  s_H(Q∩T) - (|H|-|T|); pruning inequality s_H(Q∩T)<=|H|-|T| => coreExcess(parent)<=coreExcess(child). SPLIT
+  node: my internalLinks_of_coreExcess checks coreExcess(parent)<=coreExcess(child) per child (stronger, convenient).
+- Per-row payload: ODLRowSemanticsPayload { atoms : List ODLRowAtom, denom : Nat, nodeCores : List
+  ODLNodeCorePayload, rootNode : NodeId }.
+- CLOSURE RECIPE: emit Seed3RouteTreeData + ODLRowSemanticsPayload; verify checkSeed3RouteTree + core table +
+  internal links (exact core-excess) + terminal leaves (concrete providers); checkSeed3ODLSemanticTree_sound =>
+  root CoreODLGoal; ODLFull_of_rootCore with RootRepresentsRow => BranchAInputs.odlFull filled for that row.
+=> odlFull provider FRAMEWORK (built, 11 green) + DESIGN (coreOf emission) both COMPLETE. Remaining odlFull =
+concrete per-row emitted ODLRowSemanticsPayload data (from chart certs + row structure) + O14 EQ-leaf cover.
+The coreOf emission is a data-instantiation step (gated on Codex chart certs), not a new theorem.
