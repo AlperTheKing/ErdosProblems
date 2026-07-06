@@ -123,3 +123,24 @@ CONJUNCT-3 CERTIFIED-PORTION STATUS (at 45/108 frontier): (a) full SHA integrity
 = 179/179 PASS; (b) EVERY repaired/hard row exact-checker re-run 23/23 PASS (residuals recomputed); (c)
 ~1-in-10 clean-row sample subsumed. The "every repaired/hard row + ~1-in-10" clause is SATISFIED for the
 certified subset. Remaining Conjunct-3 = the FULL 108/108 aggregate (endgame; requires the 63 pending certified).
+
+
+## UPDATE 2026-07-06T19:05Z — ADVERSARIAL LEAN-CLOSURE AUDIT (20 agents, Ultracode): GENUINE, NO fake progress
+Ran a 5-dimension adversarial audit workflow (satisfiability/circularity/fcbridge/hollow-reduction/axiom-leak
+-> adversarial-verify -> synthesize; 20 agents, 1.67M tokens). VERDICT: confirmedCount=0, NO CRITICAL gap.
+Independently corroborated:
+- NO sorry/admit/axiom/native_decide on the live path; #print axioms erdos23_delta0 = [propext,
+  Classical.choice, Quot.sound] (matches my probe).
+- NO bogus total package constructor (highest fake-progress risk) — absent; nothing feeds a fabricated
+  SimpleGraphCertificatePackage into erdos23_delta0.
+- BranchAInputs (CertGraph:2544: a1Proper 25/N+2/3, odlFull) + BranchBInputs (2617: bankL 2rho(L)<=eta,
+  bankedUPO) are REAL inequalities (NOT True); derivations do genuine nlinarith/case-split. cert1_shape real AM-GM.
+- FC-shape (FCBridge:30) MATCHES official erdos_23; beta_bipartization proven not assumed.
+VERDICT: GENUINE-MODULO-RECORDED-OBLIGATIONS. Entire difficulty honestly relocated into ONE unfilled,
+non-vacuous hypothesis (SimpleGraphCertificatePackage), carried as a theorem ARGUMENT. Not claimed proven.
+HYGIENE FLAG (act at PR assembly): Skeleton.lean:68-114 has inert `theorem <name> : True := by trivial`
+Branch-B placeholders — OFF the live path (live surface = package-form in CertGraph), harmless but must
+NEVER be promoted/cited; remove or mark-stub before the FC PR. ENDGAME: re-run #print axioms on the FINAL
+erdos23_fcForm_of_bipartization at merge (already clean) + confirm package arg still present (not defaulted).
+REMAINING (confirmed by audit) = CONSTRUCT the package: BranchA/BInputs per row + GoodCutData (M6/M7 max-cut
+provider + chart instantiation). That is the open MATH (achievability of the honest reduction).
