@@ -303,5 +303,42 @@ theorem ODLFull_of_semantic_tree
   have hres := checkSeed3ODLSemanticTree_sound leafs links hfind hcheck
   exact ODLFull_of_rootCore hrep hres
 
+/-! ### Concrete internal-node links from emitted core-excess (GPT-Pro MAIN instantiation).
+For PRUNE/ABSORB/SPLIT internal nodes the emitted child core satisfies
+`coreExcess(parent) ≤ coreExcess(child)`; the link checker verifies this (decidably) for each
+child, and soundness lifts any one resolved child to the parent via `CoreODLGoal_of_excess_le`. -/
+
+/-- Decidable parent→child excess-link check on the emitted cores. -/
+def checkCoreExcessLE {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} (sem : ODLNodeSemantics G c rows Q T)
+    (parent child : Seed3Node) : Bool :=
+  decide (coreExcess (sem.coreOf parent.id) ≤ coreExcess (sem.coreOf child.id))
+
+/-- Internal-node link checker: the node has at least one child and every child satisfies the
+    excess link. -/
+def checkInternalCoreExcessLinks {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} (sem : ODLNodeSemantics G c rows Q T)
+    (n : Seed3Node) : Bool :=
+  match childNodes T n with
+  | [] => false
+  | childs => childs.all (fun child => checkCoreExcessLE sem n child)
+
+/-- The concrete internal-links provider. -/
+def internalLinks_of_coreExcess {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} (sem : ODLNodeSemantics G c rows Q T) :
+    Seed3ODLInternalLinks G c rows Q T sem where
+  checkLink := checkInternalCoreExcessLinks sem
+  sound := by
+    intro n _hInternal hcheck hchildren
+    unfold checkInternalCoreExcessLinks at hcheck
+    cases hkids : childNodes T n with
+    | nil => simp [hkids] at hcheck
+    | cons child rest =>
+        simp only [hkids, List.all_cons, Bool.and_eq_true, checkCoreExcessLE] at hcheck
+        have hchildResolved : resolvedODL G c rows Q T sem child :=
+          hchildren child (by rw [hkids]; simp)
+        have hlink := of_decide_eq_true hcheck.1
+        exact CoreODLGoal_of_excess_le hlink hchildResolved
+
 end ODLFull
 end Erdos23Delta0
