@@ -1275,3 +1275,20 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - NEXT TICK: (1) check MAIN 2-OSC-facts reply -> gate/graft; (2) check Codex Phase-I k6/F6 result; (3)
   SIBLING Branch-B. Extract GPT-Pro via parallel transformed slices (=@EQ@ etc, ~5 calls/response).
 - P(Lean)~98 (LensGates checker now dischargeable modulo 2 named OSC geometry facts).
+
+
+## TICK NOTES (2026-07-06T18:15Z) — LensGates geometry FULLY CLOSED (major); Seed3 cited-facts next
+- LEAN MILESTONE: LensGates geometry 100% mechanical. OSCResidualCloseCert layer grafted (commit follows),
+  EXIT=0 LOGBYTES=0, 2 rounds, axioms [propext,Classical.choice,Quot.sound], forbidden 0. oscResidualCloseCert_false
+  (4 routes triangle/shorterOdd/negSigma/negNuK -> False), irreducibleLensGeomFacts_of_closeCert,
+  lensGateGeomSound_of_subcert_and_close. LensGates checker = dischargeable from literal certs ALONE (subcert +
+  close cert); the "2 irreducible OSC fields" are CLOSED. Full block: scratchpad/lensgate_osc_close_graft.lean.
+- PATTERN (reusable): geometric obligation -> small literal CLOSE cert (route enum + witness) + mechanical *_false proof.
+- MAIN RETASKED: apply pattern to Seed3LeafCitedFacts (11 per-leaf-tag fields eq/sib/no_overfull/neg_switch/
+  prunable/not_saturated/four_door/cone/bank_block/lens_gate/seed10; each -> its proven checker; LENS_GATE ->
+  lensGateGeomSound_of_subcert_and_close). Makes checkSeed3RouteTree_sound dischargeable from literal data. In flight.
+- CONJUNCT-3 this session: full certified-set aggregate SHA re-verify 179/179 PASS + k5/F1 exact-checker re-run.
+- CODEX: Phase-I pricing (IPM + support-extract ruling posted). k6/F6 calibration in flight. marker 1941117.
+- SIBLING: Branch-B section (in flight).
+- NEXT TICK: gate MAIN Seed3 cited-facts reply -> graft; check Codex Phase-I exact support-solve; SIBLING.
+- P(Lean)~98 (both remaining ODL checkers -- LensGates DONE, Seed3 in closure).
