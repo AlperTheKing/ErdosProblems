@@ -78,3 +78,28 @@ which does NOT obviously equal Σrowsum≤N² (naive Σrowsum ≤ m(N+η) = N³/
 RECOMMENDED FIX (pending MAIN): compile the aggregation directly as gammaUpper via Σ(ℓ²−25)≤25η ⟺ Γ≤N², using
 the per-row excess-token charging map (the LRS certificate), NOT the Σrowsum≤N² field. This is satisfiable and
 matches the proven math. MAIN resolving the satisfiability + formalization now.
+
+## ⭐ RESOLUTION (MAIN, 2026-07-07) — DESIGN BUG CONFIRMED + CORRECTED FORM + Claude COMPILED the reduction
+MAIN verdict (verbatim-faithful): "The two current fields gamma_le_totalRowSum / totalRowSum_le_N2_of_gersh are
+NOT sound as literally typed if totalRowSum = Σ_Q rowSum(Q) over one row-object per bad edge. Your falsifier is
+correct: rowSum(Q)≤N+η only gives Σ rowSum ≤ m(N+η), which can be much larger than N². The current
+RowDBGammaFacts design is potentially unsatisfiable or mathematically wrong. THIS IS A DESIGN BUG. Do NOT keep
+the current pair. The correct aggregation target is Σ_Q (ℓ(Q)²−25) ≤ 25η, i.e. Γ = 25m + Σ(ℓ²−25) ≤ 25m+25η=N²."
+CORRECTED CertGraph design (MAIN):
+- def lengthSurplusGD (rows) := Σ_Q (ℓ(Q)²−25).
+- theorem sum_sq_eq_25_len_plus_surplus (l) : Σℓ² = 25·|l| + Σ(ℓ²−25) [list induction].
+- theorem gamma_eq_25m_plus_surplus (hlen: |rowList|=badCount) : gammaOfGD = 25m + lengthSurplusGD.
+- CORRECTED RowDBGammaFacts: DROP gamma_le_totalRowSum + totalRowSum_le_N2_of_gersh; ADD
+  lengthSurplus_le_25eta_of_gersh : (∀Q RowInDB → RowGershBound) → lengthSurplusGD rows ≤ 25*etaQ G c.
+  Keep rowList_length_eq_badCount, betaVal, beta_eq_badCount.
+- theorem gammaUpper_from_lengthSurplus (h)(hGersh) : gammaOfGD ≤ N² [via gamma_eq_25m_plus_surplus +
+  unfold etaQ + nlinarith].
+- CORRECTED gammaBetaProvider_of_rowDB uses gammaLower_from_rows_length_ge_five + gammaUpper_from_lengthSurplus.
+CLAUDE COMPILED the REDUCTION (commit 2c0cfebd5, GammaAggregation.lean, 13th green increment, axioms clean):
+lengthSurplusGD + sum_sq_eq_25_len_plus_surplus + gamma_eq_25m_plus_surplus + gammaUpper_from_lengthSurplus
+(coverage + lengthSurplus≤25η => Γ≤N², via etaQ ring + linarith). FIRST-TRY GREEN.
+REMAINING aggregation obligation: (a) the token-charging lengthSurplusGD ≤ 25η from the per-row GERSH bounds +
+the LRS charging map (task #16, PROVEN math; needs compiling as a provider — the ONE substantive assumed field);
+(b) GRAFT the corrected RowDBGammaFacts into CertGraph (replace buggy pair, update gammaBetaProvider +
+gammaUpper_from_all_rows_gersh) — assembly-time surgical fix, careful re downstream (heavy CertGraph rebuild).
+=> The anti-fake-progress gate WORKED: caught an unsatisfiable "compiled aggregation" field, fixed the reduction.
