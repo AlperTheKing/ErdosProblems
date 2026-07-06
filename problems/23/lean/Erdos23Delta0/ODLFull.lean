@@ -340,5 +340,68 @@ def internalLinks_of_coreExcess {G : GraphData} {c : CutData} {rows : RowDB} {Q 
         have hlink := of_decide_eq_true hcheck.1
         exact CoreODLGoal_of_excess_le hlink hchildResolved
 
+/-! ### Concrete leaf-provider dispatch (GPT-Pro MAIN instantiation).
+Per-family terminal-leaf checkers packaged as `ConcreteODLLeafChecks` (CONE routes to the green
+`coreODLGoal_of_coneCert`; NO_OVERFULL/NEG_SWITCH/BANK_BLOCK/LENS_GATE route to their green family
+checkers). The dispatch builds a `Seed3ODLLeafProviders`. EQ/SIB (O14-gated), and
+PRUNABLE/NOT_SATURATED/FOUR_DOOR/SEED10 (internal or not-yet-available) return false here. -/
+
+structure ConcreteODLLeafChecks
+    (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert)
+    (T : Seed3RouteTreeData) (sem : ODLNodeSemantics G c rows Q T) : Type where
+  checkCone : Seed3Node → PayloadRef → Bool
+  soundCone : ∀ n ref, n.kind = NodeKind.leaf LeafTag.CONE ref → checkCone n ref = true →
+    resolvedODL G c rows Q T sem n
+  checkNoOverfull : Seed3Node → PayloadRef → Bool
+  soundNoOverfull : ∀ n ref, n.kind = NodeKind.leaf LeafTag.NO_OVERFULL ref → checkNoOverfull n ref = true →
+    resolvedODL G c rows Q T sem n
+  checkNegSwitch : Seed3Node → PayloadRef → Bool
+  soundNegSwitch : ∀ n ref, n.kind = NodeKind.leaf LeafTag.NEG_SWITCH ref → checkNegSwitch n ref = true →
+    resolvedODL G c rows Q T sem n
+  checkBankBlock : Seed3Node → PayloadRef → Bool
+  soundBankBlock : ∀ n ref, n.kind = NodeKind.leaf LeafTag.BANK_BLOCK ref → checkBankBlock n ref = true →
+    resolvedODL G c rows Q T sem n
+  checkLensGate : Seed3Node → PayloadRef → Bool
+  soundLensGate : ∀ n ref, n.kind = NodeKind.leaf LeafTag.LENS_GATE ref → checkLensGate n ref = true →
+    resolvedODL G c rows Q T sem n
+
+/-- Per-leaf-tag dispatch to the concrete family checkers. -/
+def checkODLLeafDispatch
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    (P : ConcreteODLLeafChecks G c rows Q T sem) (n : Seed3Node) : Bool :=
+  match n.kind with
+  | NodeKind.leaf LeafTag.CONE ref => P.checkCone n ref
+  | NodeKind.leaf LeafTag.NO_OVERFULL ref => P.checkNoOverfull n ref
+  | NodeKind.leaf LeafTag.NEG_SWITCH ref => P.checkNegSwitch n ref
+  | NodeKind.leaf LeafTag.BANK_BLOCK ref => P.checkBankBlock n ref
+  | NodeKind.leaf LeafTag.LENS_GATE ref => P.checkLensGate n ref
+  | _ => false
+
+/-- Build the leaf provider from concrete per-family checks. -/
+def leafProviders_of_concreteChecks
+    {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {T : Seed3RouteTreeData} {sem : ODLNodeSemantics G c rows Q T}
+    (P : ConcreteODLLeafChecks G c rows Q T sem) :
+    Seed3ODLLeafProviders G c rows Q T sem where
+  checkLeaf := checkODLLeafDispatch P
+  sound := by
+    intro n _hleaf hcheck
+    cases hk : n.kind with
+    | internal tag payload => simp [checkODLLeafDispatch, hk] at hcheck
+    | leaf tag ref =>
+        cases tag with
+        | EQ => simp [checkODLLeafDispatch, hk] at hcheck
+        | SIB => simp [checkODLLeafDispatch, hk] at hcheck
+        | NO_OVERFULL => exact P.soundNoOverfull n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
+        | NEG_SWITCH => exact P.soundNegSwitch n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
+        | PRUNABLE => simp [checkODLLeafDispatch, hk] at hcheck
+        | NOT_SATURATED => simp [checkODLLeafDispatch, hk] at hcheck
+        | FOUR_DOOR => simp [checkODLLeafDispatch, hk] at hcheck
+        | CONE => exact P.soundCone n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
+        | BANK_BLOCK => exact P.soundBankBlock n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
+        | LENS_GATE => exact P.soundLensGate n ref hk (by simpa [checkODLLeafDispatch, hk] using hcheck)
+        | SEED10 => simp [checkODLLeafDispatch, hk] at hcheck
+
 end ODLFull
 end Erdos23Delta0
