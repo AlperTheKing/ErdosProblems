@@ -5070,6 +5070,192 @@ theorem triangle_forbid_from_cert_false {G : GraphData} {F : ForbidCert}
 
 end LensGates
 
+namespace LensGates
+
+/-- Lens type at index `i` (any total selection; only carried, never inspected). -/
+def lensTypeAt (D : LensGateData) (i : Nat) : LensType :=
+  match D.lenses[i]? with
+  | some L => L.lensType
+  | none => LensType.RR
+
+/-! ### Shorter-odd mechanical forbid certificate -/
+
+def checkForbidShorterOddFromCert (G : GraphData) (F : ForbidCert) : Bool :=
+  decide (F.kind = ForbidKind.shorterOdd) &&
+    (OddCyclePacking.checkOddClosedWalk G F.witnessVertices &&
+      (decide (OddCyclePacking.edgeCount F.witnessVertices < 5) &&
+        checkForbidTriangleFromCert G
+          { kind := ForbidKind.triangle
+            witnessVertices :=
+              match F.witnessVertices with
+              | u :: v :: w :: _ => [u, v, w]
+              | _ => []
+            witnessEdges :=
+              match F.witnessVertices with
+              | u :: v :: w :: _ => [normEdge u v, normEdge v w, normEdge u w]
+              | _ => [] }))
+
+theorem shorterOdd_forbid_from_cert_false
+    {G : GraphData} {D : LensGateData} {F : ForbidCert}
+    (hcheck : checkForbidShorterOddFromCert G F = true)
+    (_hRows : LensRowsAllLengthFive D)
+    (hTri : TriangleFree G) :
+    False := by
+  unfold checkForbidShorterOddFromCert at hcheck
+  rw [Bool.and_eq_true] at hcheck
+  rcases hcheck with ⟨_hkind, hrest⟩
+  rw [Bool.and_eq_true] at hrest
+  rcases hrest with ⟨_hwalk, hrest2⟩
+  rw [Bool.and_eq_true] at hrest2
+  rcases hrest2 with ⟨_hlt, htriCert⟩
+  exact triangle_forbid_from_cert_false htriCert hTri
+
+theorem triangle_forbid_lens_conclusion
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    {i : Nat} {F : ForbidCert}
+    (_hout : D.outcome = LensGateOutcome.forbid i F)
+    (hcheck : checkForbidTriangleFromCert G F = true)
+    (hTri : TriangleFree G) :
+    LensGateConclusion G c D :=
+  @LensGateConclusion.forbidden G c D (triangle_forbid_from_cert_false hcheck hTri)
+
+theorem shorterOdd_forbid_lens_conclusion
+    {G : GraphData} {c : CutData} {D : LensGateData}
+    {i : Nat} {F : ForbidCert}
+    (_hout : D.outcome = LensGateOutcome.forbid i F)
+    (hcheck : checkForbidShorterOddFromCert G F = true)
+    (hRows : LensRowsAllLengthFive D)
+    (hTri : TriangleFree G) :
+    LensGateConclusion G c D :=
+  @LensGateConclusion.forbidden G c D (shorterOdd_forbid_from_cert_false hcheck hRows hTri)
+
+/-! ### Literal subcertificate selecting the geometry route -/
+
+inductive LensGateGeomSubcert
+| cross
+| label
+| forbidTriangle
+| forbidShorterOdd
+| osc1 (payloadId : Nat)
+| osc4HeadOn (payloadId : Nat)
+deriving DecidableEq, Repr
+
+def checkLensGateGeomSubcert
+    (G : GraphData) (_c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert) : Bool :=
+  match D.outcome, cert with
+  | LensGateOutcome.cross _ _, LensGateGeomSubcert.cross =>
+      true
+  | LensGateOutcome.label _ _, LensGateGeomSubcert.label =>
+      true
+  | LensGateOutcome.forbid _ F, LensGateGeomSubcert.forbidTriangle =>
+      checkForbidTriangleFromCert G F
+  | LensGateOutcome.forbid _ F, LensGateGeomSubcert.forbidShorterOdd =>
+      checkForbidShorterOddFromCert G F
+  | LensGateOutcome.osc _ O, LensGateGeomSubcert.osc1 _ =>
+      decide (O.osc.kind = OSCKind.OSC1)
+  | LensGateOutcome.osc _ O, LensGateGeomSubcert.osc4HeadOn _ =>
+      decide (O.osc.kind = OSCKind.OSC4) &&
+        decide (O.osc.headOn = true)
+  | _, _ =>
+      false
+
+/-! ### Irreducible primitive-lens geometry
+
+The only remaining geometric obligations are OSC1 residual geometry and OSC4
+head-on residual geometry for primitive lens types RR/RB/RD/DD/TTsame/TTopposite/TR.
+Each field produces `False`, because `LensGateConclusion` has no OSC constructor;
+OSC residuals must close by contradiction in the current corridor ledger. -/
+structure IrreducibleLensGeomFacts
+    (G : GraphData) (c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert) : Prop where
+  osc1_sound :
+    ∀ (ty : LensType) (i : Nat) (O : OSCResidualCert) (payloadId : Nat),
+      cert = LensGateGeomSubcert.osc1 payloadId →
+      D.outcome = LensGateOutcome.osc i O →
+      lensTypeAt D i = ty →
+      O.osc.kind = OSCKind.OSC1 →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        False
+  osc4_head_on_sound :
+    ∀ (ty : LensType) (i : Nat) (O : OSCResidualCert) (payloadId : Nat),
+      cert = LensGateGeomSubcert.osc4HeadOn payloadId →
+      D.outcome = LensGateOutcome.osc i O →
+      lensTypeAt D i = ty →
+      O.osc.kind = OSCKind.OSC4 →
+      O.osc.headOn = true →
+      LensGateCheckFacts G c D →
+      sigmaNonneg G c →
+      LensNuKNonneg G c →
+      TriangleFree G →
+      LensRowsAllLengthFive D →
+        False
+
+/-! ### Constructor filling LensGateGeomSound from a checked subcertificate -/
+
+def lensGateGeomSound_of_subcert
+    (G : GraphData) (c : CutData) (D : LensGateData)
+    (cert : LensGateGeomSubcert)
+    (hcert : checkLensGateGeomSubcert G c D cert = true)
+    (facts : IrreducibleLensGeomFacts G c D cert) :
+    LensGateGeomSound G c D where
+  cross_sound := by
+    intro i sw hout hfacts _hsigma _hnuk _htri _hrows
+    have hcheck :
+        checkOutcome G c D.corridor D.lenses
+          (LensGateOutcome.cross i sw) = true := by
+      simpa [hout] using hfacts.outcome_ok
+    unfold checkOutcome at hcheck
+    rw [Bool.and_eq_true] at hcheck
+    exact LensGateConclusion.cross sw hcheck.2
+  label_sound := by
+    intro i lab hout hfacts _hsigma _hnuk _htri _hrows
+    have hcheck :
+        checkOutcome G c D.corridor D.lenses
+          (LensGateOutcome.label i lab) = true := by
+      simpa [hout] using hfacts.outcome_ok
+    unfold checkOutcome at hcheck
+    rw [Bool.and_eq_true] at hcheck
+    exact LensGateConclusion.label lab hcheck.2
+  forbid_sound := by
+    intro i F hout _hfacts _hsigma _hnuk htri hrows
+    cases hsub : cert with
+    | cross => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | label => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | forbidTriangle =>
+        simp only [checkLensGateGeomSubcert, hout, hsub] at hcert
+        exact triangle_forbid_lens_conclusion (c := c) (i := i) hout hcert htri
+    | forbidShorterOdd =>
+        simp only [checkLensGateGeomSubcert, hout, hsub] at hcert
+        exact shorterOdd_forbid_lens_conclusion (c := c) (i := i) hout hcert hrows htri
+    | osc1 _ => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | osc4HeadOn _ => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+  osc_sound := by
+    intro i O hout hfacts hsigma hnuk htri hrows
+    cases hsub : cert with
+    | cross => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | label => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | forbidTriangle => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | forbidShorterOdd => simp [checkLensGateGeomSubcert, hout, hsub] at hcert
+    | osc1 payloadId =>
+        simp only [checkLensGateGeomSubcert, hout, hsub, decide_eq_true_eq] at hcert
+        exact LensGateConclusion.forbidden
+          (facts.osc1_sound (lensTypeAt D i) i O payloadId
+            hsub hout rfl hcert hfacts hsigma hnuk htri hrows)
+    | osc4HeadOn payloadId =>
+        simp only [checkLensGateGeomSubcert, hout, hsub, Bool.and_eq_true,
+          decide_eq_true_eq] at hcert
+        exact LensGateConclusion.forbidden
+          (facts.osc4_head_on_sound (lensTypeAt D i) i O payloadId
+            hsub hout rfl hcert.1 hcert.2 hfacts hsigma hnuk htri hrows)
+
+end LensGates
+
+
 /-! ### FC bridge: `beta_bipartization` — betaSimple ≤ K yields a bipartite
 subgraph deleting ≤ K edges (the sole Mathlib lemma the official erdos_23
 shape reduces to). Grafted here (not a separate file) because it uses the
