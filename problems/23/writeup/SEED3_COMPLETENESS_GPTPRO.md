@@ -275,3 +275,36 @@ Seed3 ClassifierComplete = STRUCTURAL-BY-DESIGN (not a census residual-infinite-
 (b) width cert + canonical lookup verified over the bounded quotient universe (CERT-PENDING; Codex emits,
     Claude exact-verifies; finite). GOOD OUTCOME: the key at-risk node is not a hidden infinite gap.
 
+
+## Door-type classifier — COMPLETE BUILD SPEC (Claude, 2026-07-07) for next Lean increment
+Goal: a NON-VACUOUS, structural Lean theorem `classify_three_edge_bipartite_door_graph`. The 4 types are
+determined by the equality patterns of the left endpoints {a1,a2,a3} and right endpoints {b1,b2,b3} of the
+3 door edges (bipartite => a's coincide only with a's, b's only with b's). Partition-type of a 3-multiset:
+DISTINCT (all different) | PAIR (exactly two equal) | ALL (all three equal).
+
+Complete case table (edges = (a1,b1),(a2,b2),(a3,b3); nodup + length 3 + bipartite):
+  (apat, bpat) -> door type
+  (DISTINCT, DISTINCT) -> 3E     (3 pairwise-disjoint edges = matching 3K2)
+  (ALL,      DISTINCT) -> K13    (star from one left vertex to 3 right)
+  (DISTINCT, ALL)      -> K13    (star from 3 left to one right vertex)
+  (PAIR,     DISTINCT) -> P2uE   (2 edges share a left vertex -> P3, third disjoint -> +K2)
+  (DISTINCT, PAIR)     -> P2uE   (symmetric)
+  (PAIR,     PAIR)     -> P4     (e1,e2 share left a; e2,e3 share right b => path b1-a-b-a3; the two PAIRs
+                                  MUST involve different edge-pairs, else same edge => contradicts nodup)
+  (ALL,      ALL)      -> EXCLUDED by nodup (all edges = (a,b), only 1 distinct)
+  (ALL,      PAIR)     -> EXCLUDED by nodup (two edges identical)
+  (PAIR,     ALL)      -> EXCLUDED by nodup (symmetric)
+Triangle K3 (3 pairwise-distinct shared vertices) is impossible in bipartite => no 5th type.
+
+Lean plan (self-contained combinatorial module, no graph machinery):
+  inductive Seed3DoorType | P4 | K13 | P2uE | ThreeE  deriving DecidableEq, Repr
+  -- DoorGraphHasType D ty := STRUCTURAL predicate per type (pairwise-disjoint / common-vertex / path / P3+K2)
+  -- ValidDoorGraph left right d : d.length=3, d.Nodup, forall e in d, e.1 in left & e.2 in right, left∩right=∅
+  theorem classify_three_edge_bipartite_door_graph (h : ValidDoorGraph left right d) :
+      exists ty, DoorGraphHasType d ty     -- EXHAUSTIVENESS (non-vacuous: DoorGraphHasType is structural)
+  theorem ..._unique : DoorGraphHasType d ty -> DoorGraphHasType d ty' -> ty = ty'   -- canonicalized
+Proof: destruct d = [(a1,b1),(a2,b2),(a3,b3)]; case on decide-equalities a1=a2,a1=a3,a2=a3,b1=b2,b1=b3,b2=b3
+  (2^6 raw, pruned by nodup: (ai,bi)!=(aj,bj)); each surviving case exhibits the structural type. omega/decide
+  discharge the nodup exclusions. Enforce Seed3Prime hyps (distinct quotient edges / twin-contraction /
+  saturation / C5-hom, per MAIN's falsifier list) at the ValidDoorGraph <- Seed3Prime bridge.
+BUILD FRESH next tick (session-tail rush risks vacuity/unsoundness). Spec is complete + verified by hand above.
