@@ -93,3 +93,18 @@ plumbing is LARGELY DONE. Remaining to close proper-mask branch:
   (d) (75+2N)*A1Defect>=0 => A1Defect>=0 (trivial, 75+2N>0) => XMask<=(25/N+2/3)eta.
 NOTE FOR MAIN: use ConeCert.sound directly; the design question narrows to the SLACK DICTIONARY (env binding +
 each Sigma_r>=0 lemma) + the mask table. This is the real remaining Lean work for a1Proper.
+
+## UPDATE 2026-07-06T19:55Z — INTERFACE: ConeCert is PROOF-CARRYING (no checkConeCert exists)
+Verified: NO `checkConeCert : ConeCert -> Bool` in the codebase. ConeCert EMBEDS its checks as proof fields
+(hid : checkEq target (comboNF base mults slacks) = true; hbase/hmults : allCoeffNonneg = true). Implications
+for A1ProperCertBundle design (relay to MAIN if its reply assumes checkConeCert):
+- Use OPTION (a): A1ProperCertBundle{certs : Fin 6 -> ConeCert} carries PROOF-CARRYING ConeCerts; construction
+  IS validation (no separate checkA1ProperCertBundle Bool checker; no hcheck hypothesis in .sound). Each cone j
+  is already a validated ConeCert, so A1ProperCertBundle.sound uses ConeCert.sound (B.certs j) directly.
+- The six ConeCerts are constructed from Codex's concrete cone NF DATA (target/base/mults/slacks as NF monomial
+  lists, symbolic in the N-variable) with hid/hbase/hmults := by decide (NATIVE_DECIDE FORBIDDEN). FEASIBILITY
+  CHECKPOINT: decide on checkEq (NF list-equality) + allCoeffNonneg (list-all) is tractable IF the cone
+  polynomials are moderate (dozens-hundreds of monomials); if a cone is huge, need explicit proof (ring for the
+  identity, explicit for nonneg) instead of decide. Codex should keep the emitted cone NFs compact / canonical.
+- So a1Proper closure = Codex 6 compact cone NFs -> build 6 proof-carrying ConeCerts (by decide) -> A1ProperCertBundle
+  -> A1ProperCertBundle.sound via ConeCert.sound + slack-dictionary (Sigma_r>=0) + mask table + (75+2N)>0.
