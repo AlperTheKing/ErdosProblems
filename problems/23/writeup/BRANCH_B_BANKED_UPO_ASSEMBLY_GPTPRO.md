@@ -173,3 +173,16 @@ also spent by fan/another cell.
 => BRANCH-B LIVE RISK DISSOLVED. PeelInvariant = SH' (PROVEN, archived PEEL_INVARIANT_SHPRIME_GPTPRO.md).
 Conjunct-2 = certified layers + SH' (proven) + finite door-ownership wiring. SUPERSEDES the bare per-node
 PeelInvariantCert framing above. (Claude gate caught SIBLING's bare-form error via the archived SH' proof.)
+
+## BRANCH-B COMPLETENESS STATEMENT (SIBLING, 2026-07-07) — consolidated, SH'-corrected
+Final consolidated Branch-B completeness section (transcribed head+tail, faithful):
+"The only correction from the earlier draft is that the cactus peel input is the STRENGTHENED peel invariant
+m_C <= r_C^2/25 + d_C/2, NOT the bare m_C <= r_C^2/25. The strengthened form is the invariant proved by the
+two-orientation exchange. The d_C/2 term is a door credit, paid exactly once by the -d/2 term in PacketExchange."
+Final chain: R_Q <= N + eta/2 - Sigma_L; Bank-L gives 25m <= N^2-L^2+25, i.e. eta=(N^2-25m)/25 >= (L^2-25)/25 =
+2*Sigma_L; so N+eta/2-Sigma_L <= N+eta; therefore R_Q <= N+eta; since Q in cyc(f) arbitrary, ROWSUM(f) <= N+eta.
+DECISIVE: "The Branch-B theorem has NO remaining open extremal inequality. The corrected cactus input is SH',
+proven by the two-orientation exchange. The only remaining finite task is the door-ownership wiring certificate
+ensuring the cactus d_C/2 credits are counted exactly once in the packet door count d used by PacketExchange."
+=> Branch-B (Conjunct-2) = PROVEN modulo the finite door-ownership wiring cert (Codex, routed). Consistent with
+the SH' resolution above. No open extremal risk. This is the manuscript Branch-B completeness certificate.
