@@ -58,5 +58,98 @@ theorem gammaUpper_from_lengthSurplus {G : GraphData} {c : CutData} {rows : RowD
   rw [hgamma]
   linarith
 
+/-! ### Token-charging as a length-surplus charge certificate (GPT-Pro MAIN).
+The substantive obligation `lengthSurplus ≤ 25η` is a Positivstellensatz certificate:
+`25η − lengthSurplus = R + Σ_Q a_Q·((N+η) − rowSum(Q))` with `R ≥ 0`, `a_Q ≥ 0`. Under the per-row
+GERSH bounds each slack is nonnegative, so the target is nonnegative. This makes the deep GERSH
+aggregation an EXACT-VERIFIABLE certificate (like the A1 cones): the LRS reduction (task #16) provides
+the coefficients `a_Q` and residual `R`; the checker verifies the exact rational identity + nonneg. -/
+
+/-- The per-row GERSH slack `(N+η) − rowSum(Q)` (≥0 under RowGershBound). -/
+def rowGershSlack (G : GraphData) (c : CutData) (rows : RowDB) (Q : RowCert) : ℚ :=
+  (G.n : ℚ) + etaQ G c - rowSum G c rows Q
+
+def rowGershSlackList (G : GraphData) (c : CutData) (rows : RowDB) : List ℚ :=
+  rows.rowList.map (fun Q => rowGershSlack G c rows Q)
+
+def ratDot (xs ys : List ℚ) : ℚ :=
+  (List.zipWith (fun x y => x * y) xs ys).sum
+
+def lengthSurplusTarget (G : GraphData) (c : CutData) (rows : RowDB) : ℚ :=
+  25 * etaQ G c - lengthSurplusGD rows
+
+structure LengthSurplusChargeCert where
+  coeffs : List ℚ
+  residual : ℚ
+deriving Repr
+
+/-- Checker: nonneg residual, nonneg coefficients, matching length, and the exact charge identity. -/
+def checkLengthSurplusChargeCert (G : GraphData) (c : CutData) (rows : RowDB)
+    (cert : LengthSurplusChargeCert) : Bool :=
+  decide (0 ≤ cert.residual) &&
+    (cert.coeffs.all (fun a => decide (0 ≤ a)) &&
+      (decide (cert.coeffs.length = rows.rowList.length) &&
+        decide (lengthSurplusTarget G c rows =
+          cert.residual + ratDot cert.coeffs (rowGershSlackList G c rows))))
+
+theorem ratDot_nonneg : ∀ (xs ys : List ℚ),
+    (∀ x ∈ xs, 0 ≤ x) → (∀ y ∈ ys, 0 ≤ y) → 0 ≤ ratDot xs ys := by
+  intro xs
+  induction xs with
+  | nil => intro ys _ _; unfold ratDot; simp
+  | cons x xs ih =>
+      intro ys hxs hys
+      cases ys with
+      | nil => unfold ratDot; simp
+      | cons y ys =>
+          unfold ratDot
+          simp only [List.zipWith_cons_cons, List.sum_cons]
+          have hx : 0 ≤ x := hxs x (by simp)
+          have hy : 0 ≤ y := hys y (by simp)
+          have hxs' : ∀ z ∈ xs, 0 ≤ z := fun z hz => hxs z (by simp [hz])
+          have hys' : ∀ z ∈ ys, 0 ≤ z := fun z hz => hys z (by simp [hz])
+          have hrest : 0 ≤ ratDot xs ys := ih ys hxs' hys'
+          unfold ratDot at hrest
+          nlinarith [mul_nonneg hx hy]
+
+/-- SOUNDNESS: a passing length-surplus charge certificate + the per-row GERSH bounds give the
+    token-charging inequality `lengthSurplus ≤ 25η` (hence, with `gammaUpper_from_lengthSurplus`,
+    `Γ ≤ N²`). This is the corrected, satisfiable, COMPILED GERSH-aggregation provider. -/
+theorem lengthSurplus_le_25eta_of_charge {G : GraphData} {c : CutData} {rows : RowDB}
+    (cert : LengthSurplusChargeCert)
+    (hcheck : checkLengthSurplusChargeCert G c rows cert = true)
+    (hGersh : ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) :
+    lengthSurplusGD rows ≤ 25 * etaQ G c := by
+  unfold checkLengthSurplusChargeCert at hcheck
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at hcheck
+  obtain ⟨hres, hcoeffs, _hlen, hid⟩ := hcheck
+  have hcoeffs' : ∀ a ∈ cert.coeffs, 0 ≤ a := by
+    intro a ha
+    have := hcoeffs a ha
+    simpa using this
+  have hslacks : ∀ y ∈ rowGershSlackList G c rows, 0 ≤ y := by
+    intro y hy
+    unfold rowGershSlackList at hy
+    rw [List.mem_map] at hy
+    obtain ⟨Q, hQ, rfl⟩ := hy
+    have hgersh := hGersh Q hQ
+    unfold RowGershBound at hgersh
+    unfold rowGershSlack
+    linarith
+  have hdot := ratDot_nonneg cert.coeffs (rowGershSlackList G c rows) hcoeffs' hslacks
+  unfold lengthSurplusTarget at hid
+  linarith
+
+/-- The full corrected aggregation from a charge certificate: coverage + a passing charge cert +
+    per-row GERSH give `Γ ≤ N²`. This is the compiled, satisfiable replacement for the design-bug
+    `gammaUpper_from_all_rows_gersh` route. -/
+theorem gammaUpper_from_chargeCert {G : GraphData} {c : CutData} {rows : RowDB}
+    (hlen : rows.rowList.length = badCount G c)
+    (cert : LengthSurplusChargeCert)
+    (hcheck : checkLengthSurplusChargeCert G c rows cert = true)
+    (hGersh : ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) :
+    gammaOfGD G c rows ≤ (G.n : ℚ) ^ 2 :=
+  gammaUpper_from_lengthSurplus hlen (lengthSurplus_le_25eta_of_charge cert hcheck hGersh)
+
 end GammaAggregation
 end Erdos23Delta0
