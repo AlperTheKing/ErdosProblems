@@ -1102,3 +1102,20 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   side); SIBLING code-fenced §2.1 (manuscript-out-of-thread).
 - NEXT LEAN ORDER: collect beta_bipartization -> graft -> FC-form Mathlib-complete; graft shorterOdd
   + scaffold; then M6/M7 providers (RowPilotBinding, Branch-A shard instantiation) research-gated.
+
+## TICK NOTES (2026-07-06T13:50Z) — HYBRID GATE PASSED; manuscript archiving started
+- COWORK MAJOR: k3/B0 hybrid round-trip INDEPENDENTLY VERIFIED (SHA 13c95bfe/00caf07d match;
+  exact_ok+checker_exact_ok=true, row_count=167960=C(20,9), negres=0, slackneg=0). HYBRID
+  VALIDATION GATE SATISFIED -> GREENLIT Codex to scale hybrid to ALL 13 PARKED ROWS (order
+  k6/F6 -> k9/B0 -> k2/G5 -> k6/G1 -> k5/G1 -> k9/G1 -> k4/G1 -> k0/G7 -> k5/F6 -> k4/F7 ->
+  k4/F6 -> k3/G2 -> k0/G4). Each hybrid cert: recover Bernstein slack -> expand ConeCert ->
+  official exact checker -> post manifest+SHAs; I re-verify each before CERTIFIED. THIS clears
+  the parked queue = big Conjunct 1&3 progress.
+- k0/F5 BUILDER CRASH SOLVED (Codex): --selector dynamic-markowitz silently dies on chart0/F;
+  --selector sparse-row works. Relaunched k0/F5 sparse-row (rank 3224=dim); 384p CRT running.
+  RULE: chart-0 F-dominant -> use --selector sparse-row.
+- MANUSCRIPT: section 2.1 (Branch A length-five -> C5-RS, mask trichotomy) archived to
+  problems/23/writeup/manuscript_branchA.tex (code-fenced clean LaTeX, errata-incorporated).
+  SIBLING retasked for 2.2. Manuscript-out-of-fragile-thread STARTED.
+- PENDING: MAIN beta_bipartization (still streaming); Codex hybrid parked-row certs incoming.
+  Mailbox marker at CODEX file len (see prior). Ledger still 45 certified (parked clearing next).
