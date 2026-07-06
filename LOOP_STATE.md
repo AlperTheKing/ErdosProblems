@@ -1346,3 +1346,22 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - NEXT: gate Codex six cones (exact-verify Bernstein-nonneg+slack+residual=0); gate MAIN Lean plumbing; build
   A1ProperCertBundle -> closes proper-mask branch as general theorem. Then odlFull (charts) + BranchB remain.
 - CODEX marker 1948005 (k6/F6 targeted pricing still running). P(math a1Proper closure) up.
+
+
+## TICK NOTES (2026-07-06T20:25Z) — a1Proper Lean design COMPLETE (buildable) + labeling reconciled
+- MAIN slack-dictionary reply (10205c) extracted + archived: A1PROPER_SLACK_DICTIONARY_GPTPRO.md. Complete
+  buildable Lean design reusing PolyCert.ConeCert.sound. Cleared defect D_j=(75+2N)eta-3N*X_j (D_j>=0 <=> A1
+  bound since 25/N+2/3=(75+2N)/3N). 5-slack enum A1SlackId{eta,sigma sid,nuK sid,atomNonneg aid,closureResidual
+  rid} + named Lean sources. Canonical masks bit-code M0=1{0} M1=3{0,1} M2=5{0,2} M3=7{0,1,2} M4=11{0,1,3}
+  M5=15{0,1,2,3}. MaskSymmetryData{id,rot,mask_eq:A=(canonicalMask id).image(rotBack rot)} + mask_symmetry_sound
+  (via Finset.sum_image + rotBack_injective). A1CanonicalCone.sound (ConeCert.sound + hNpos + /3N).
+  A1ProperCertBundle.sound (maskSymmetryData_of_proper + bundle_check_extract).
+- ULTRACODE CATCH: my 20:07Z Codex labeling (M2/M3/M5) MISMATCHED MAIN bit-code labeling. Cross-verified MAIN
+  rotation table 30/30 + 6 orbits (verify_main_table.py); rewrote a1_mask_symmetry_table.json v2_MAIN_authoritative;
+  re-posted CORRECTED labeling to Codex (supersedes 20:07Z). Averted a cone-labeling break.
+- INTERFACE: ConeCert proof-carrying (no checkConeCert) — resolve hcheck at build (drop or RawConeCert variant).
+- NEXT (focused build): finite mask-symmetry Lean layer (GRAPH-INDEPENDENT, buildable NOW from verified table:
+  maskCode/canonicalMask*/rotBack/rotBack_injective/MaskSymmetryData/maskSymmetryData_of_proper) -> XMaskCanonical
+  + mask_symmetry_sound (confirm XMask/rowSurplusAt exist) -> A1SlackHypotheses + slack lemmas -> wrapper -> bundle.
+  Then Codex 6 cones -> proof-carrying ConeCerts (by decide) -> BranchAInputs.a1Proper closed.
+- CODEX marker 1948005 (k6/F6 running; 6 cones queued w/ corrected labeling). MAIN idle (retask on odlFull next?).
