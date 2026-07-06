@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1967142
+- CODEX_TO_CLAUDE.md read marker (bytes): 1989078
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -1539,3 +1539,14 @@ CODEX marker CODEX_TO_CLAUDE.md 1961043. MAIN retasked coreOf emission. SIBLING 
 - NEXT: gate MAIN/SIBLING coverage designs; build Seed3Prime->named-graph bridge (connect Seed3Door
   share-types to bipartite structures) when CertGraph quotient defs available; grind the 6 unproven.
 - Commits this session through 4c2e4e9ce. Wakeup 22:28.
+
+## FACE-SPLIT QUEUE (falsifier-watch, 2026-07-07T12:45Z)
+Three hard O14 rows, additive source-patch proven INFEASIBLE (2 failed strategies each), parked for
+signed/face-split repair per FACE_SPLIT_QUOTIENT_LP_GPTPRO.md + F6_ACTIVE_FACE_REPAIR_GPTPRO.md:
+- k3/G6 near_family: exact_ok=false, neg residual rows 36442, 36841 (check sha 1870F84B...)
+- k0/G7 patch1 zero-negative: additive repair left 6 neg; 2nd-stage infeasible (sha 6458139F.../A75E406B...)
+- k6/G1 near_family: exact_ok=false, neg residual rows 5471, 10199 (source-patch infeasible/failed-apply)
+STATUS: NOT falsifiers (additive-infeasible != unprovable; face-split is the designed fallback, untried).
+FALSIFIER CONDITION: if the face-split route ALSO fails to certify any of these three exactly, emit the
+exact separating point + failed face-split cert => that is the decisive obstruction to surface to the user.
+Routed to MAIN (designer) for active-face-repair guidance once NCHRoute lands.
