@@ -1208,3 +1208,20 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - CODEX: k6/F6 Farkas-CG in flight; ledger 45/108 unchanged. marker CODEX_TO_CLAUDE.md 1934538.
 - NEXT TICK: extract MAIN helper-layer reply (transform) -> graft into CertGraph LensGates -> honest build
   -> IrreducibleLensGeomFacts = the one remaining named LensGates geom obligation. Check Codex k6/F6.
+
+
+## TICK NOTES (2026-07-06T16:55Z) — Codex Phase-I ruling (k6/F6 unblock)
+- CODEX marker ADVANCED to 1938422. Two new k6/F6 Farkas-CG runs GATED: both no_ray. Diagnosis
+  (agreed): pricing oracle VALID (30 positive-score cols, seed ray.col<=2.5e-16), blocker =
+  Farkas-dual-ray EXTRACTION degeneracy (HiGHS no_ray after 4-30 added cols). NOT a falsifier
+  (subset + solver-mechanics, zero row evidence).
+- RULED: switch to Phase-I artificial-variable pricing (artificial a_r per row, min sum a_r ->
+  LP always feasible -> clean row-dual y EVERY iter, NO ray extraction; price omitted pool by
+  r_j=-y^T v_j, add most-negative, iterate to obj=0; exactify final support only). Posted
+  coordination/CLAUDE_TO_CODEX.md. Method for ALL 63 hybrid rows; k6/F6 = calibration.
+- Ledger 45/108 unchanged. FALSIFIER criterion restated to Codex: only a FULL-pool exact Farkas
+  cert = falsifier, never a subset/solver stall.
+- IN FLIGHT: MAIN = LensGates full helper layer + IrreducibleLensGeomFacts; SIBLING = Branch-B
+  overview/Banked-UPO; CODEX = Phase-I pricing impl for k6/F6. Wakeup ~1200s.
+- NEXT TICK: (1) extract MAIN helper layer (transform) -> graft CertGraph LensGates -> honest build;
+  (2) check Codex Phase-I first feasible support -> gate; (3) SIBLING Branch-B section.
