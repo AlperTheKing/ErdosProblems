@@ -14,11 +14,13 @@ leaves — they are internal prune/absorb links, so the terminal-leaf provider s
 them.
 -/
 import Erdos23Delta0.CertGraph
+import Erdos23Delta0.PolyCert
 
 namespace Erdos23Delta0
 namespace ODLFull
 
 open CertGraph
+open PolyCert
 
 /-- Support-local ODL data attached to a route-tree node: a vertex support with its size
     (≤ N) and the row mass carried on it. -/
@@ -111,6 +113,37 @@ theorem ODLFull_of_resolved_root {G : GraphData} {c : CutData} {rows : RowDB} {Q
     (hrep : RootRepresentsRow G c rows Q (sem.coreOf root.id)) :
     rowSum G c rows Q ≤ (G.n : ℚ) + etaQ G c :=
   ODLFull_of_rootCore hrep hresolved
+
+/-- The core defect: `supportSize + η − supportRowSum`. A leaf checker certifies its target
+    equals this defect for the node's emitted core; nonnegativity of the defect is exactly
+    the support-local ODL goal. (Per MAIN: `coreOf` is emitted per node in `ODLNodeSemantics`;
+    a leaf checker does NOT reconstruct the core from the graph.) -/
+def coreDefect {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (core : ODLCoreData G c rows Q) : ℚ :=
+  core.supportSize + etaQ G c - core.supportRowSum
+
+/-- Defect nonnegativity is the support-local ODL goal. -/
+theorem CoreODLGoal_of_defect_nonneg {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (core : ODLCoreData G c rows Q) (h : 0 ≤ coreDefect core) :
+    CoreODLGoal G c rows Q core := by
+  unfold CoreODLGoal coreDefect at *
+  linarith
+
+/-- ConeCert-backed leaf soundness (the CONE / scalar-bank leaf pattern): a `ConeCert` whose
+    target evaluates (under a nonnegative environment with nonnegative slacks) to the node's
+    core defect certifies `CoreODLGoal` for that core. This is the odlFull leaf analog of the
+    a1Proper cone-bridge (`canonicalCone_bound`), reusing `PolyCert.ConeCert.sound` directly.
+    The concrete leaf checkers (checkConeLeaf / checkBankBlockLeaf / …) supply `cert`, `env`,
+    and the target identity. -/
+theorem coreODLGoal_of_coneCert {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (core : ODLCoreData G c rows Q) (cert : ConeCert) (env : Var → ℚ)
+    (hvars : ∀ v, 0 ≤ env v)
+    (hslacks : ∀ s ∈ cert.slacks, 0 ≤ NF.eval env s)
+    (htarget : NF.eval env cert.target = coreDefect core) :
+    CoreODLGoal G c rows Q core := by
+  have h0 : 0 ≤ NF.eval env cert.target := ConeCert.sound cert env hvars hslacks
+  rw [htarget] at h0
+  exact CoreODLGoal_of_defect_nonneg core h0
 
 end ODLFull
 end Erdos23Delta0
