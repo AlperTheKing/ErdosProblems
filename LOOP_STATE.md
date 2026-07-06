@@ -1087,3 +1087,18 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
   (3) MAIN irreducible RR/RB/RD/DD/TT/TR geometry core; (4) M4 provider (RowPilotBinding) + Branch-A
   shard instantiation = M6/M7 research. MILESTONE: FC-bridge EXISTS (was "does not exist").
 - MULTI-MODULE BUILD RECIPE confirmed working (deps->olean gitignored + LEAN_PATH + --root).
+
+## TICK NOTES (2026-07-06T13:20Z) — THREE compiled increments (M4 + FC-form + triangle-forbid)
+- LEAN THIS TICK: (1) M4 branchBInputs_of_rowPilot (cf00bd268); (2) FC-form
+  erdos23_fcForm_of_bipartization (747623f19, reduces official erdos_23 to beta_bipartization);
+  (3) triangle-forbid discharge grafted into CertGraph LensGates (04c285c1e) —
+  triangle_forbid_payload_false + triangle_forbid_from_cert_false PROVEN (checked triangle + 
+  TriangleFree -> False). CertGraph now 5074 lines, all green, forbidden 0.
+- GEOMETRY GRAFT PROGRESS: triangle-forbid field = PROVEN (was scaffold hypothesis). NEXT graft:
+  shorterOdd field (reuses OddCyclePacking parity machinery; chunks 6-17 of MAIN geometry reply
+  in-thread) + the LensGateGeomSound scaffold wiring (PrimitiveLensGeomDischarge from 15KB reply).
+  Then the irreducible RR/RB/RD/DD/TT/TR head-on osculation core stays hypothesis (MAIN designing).
+- PENDING THREAD REPLIES: MAIN beta_bipartization (routed, completes FC-form unconditional Mathlib
+  side); SIBLING code-fenced §2.1 (manuscript-out-of-thread).
+- NEXT LEAN ORDER: collect beta_bipartization -> graft -> FC-form Mathlib-complete; graft shorterOdd
+  + scaffold; then M6/M7 providers (RowPilotBinding, Branch-A shard instantiation) research-gated.
