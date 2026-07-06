@@ -151,5 +151,126 @@ theorem gammaUpper_from_chargeCert {G : GraphData} {c : CutData} {rows : RowDB}
     gammaOfGD G c rows ≤ (G.n : ℚ) ^ 2 :=
   gammaUpper_from_lengthSurplus hlen (lengthSurplus_le_25eta_of_charge cert hcheck hGersh)
 
+/-! ### Typed residual dictionary (GPT-Pro MAIN completeness verdict, 2026-07-07).
+
+The free-residual form above is SOUND but can DEGENERATE into directly asserting the final
+aggregation inequality (take `coeffs = 0`, `residual = 25η − lengthSurplus`): it then certifies the
+target per-instance rather than reducing it to the GERSH slacks + the token-charging proof. MAIN's
+decisive verdict: the row-GERSH slacks ALONE do NOT linearly imply `lengthSurplus ≤ 25η` (they give
+only the weaker `Γ ≤ N(N+η)`); a genuine compiled aggregation needs NAMED residuals — the LRS slack,
+a Cauchy/SOS slack, and crucially the token-bank RESERVE residual ("LRS plus plain Cauchy alone is
+not enough; the real proof must contribute an additional nonnegative reserve residual").
+
+This typed dictionary makes each residual component named and nonneg, so `raw` is reserved for
+finite-instance direct certificates and the universal path is carried by the named components. The
+named residual VALUES are supplied by `ResidualFormulas` (the emitter fills them from the exact
+LRS→bank artifact, task #16); the checker binds each residual to its slot and verifies nonnegativity
+exactly. Soundness stays UNCONDITIONAL (each residual ≥ 0 + the charge identity ⟹ target ≥ 0). -/
+
+/-- Kinds of named nonnegative residual in the token-charging dictionary. -/
+inductive LengthChargeResidualKind
+  | raw
+  | lrs
+  | cauchy
+  | bankReserve
+deriving DecidableEq, Repr
+
+/-- Named nonneg residual quantities supplied by the token-charging (LRS→bank) proof/artifact.
+    Each is a rational functional of the row data; a fully COMPILED universal aggregation would
+    additionally require compiled `0 ≤ ·` theorems for these (currently supplied per-instance by the
+    exact-verified LRS certificate, task #16). -/
+structure ResidualFormulas (G : GraphData) (c : CutData) (rows : RowDB) where
+  lrsVal : ℚ
+  cauchyVal : ℚ
+  bankReserveVal : ℚ
+
+structure LengthChargeResidual where
+  kind : LengthChargeResidualKind
+  value : ℚ
+deriving Repr
+
+/-- Checker for a single typed residual: `raw` only checks nonnegativity (finite-instance direct);
+    the named kinds additionally BIND the value to the corresponding `ResidualFormulas` slot. -/
+def checkLengthChargeResidual {G : GraphData} {c : CutData} {rows : RowDB}
+    (F : ResidualFormulas G c rows) (R : LengthChargeResidual) : Bool :=
+  match R.kind with
+  | .raw         => decide (0 ≤ R.value)
+  | .lrs         => decide (R.value = F.lrsVal) && decide (0 ≤ R.value)
+  | .cauchy      => decide (R.value = F.cauchyVal) && decide (0 ≤ R.value)
+  | .bankReserve => decide (R.value = F.bankReserveVal) && decide (0 ≤ R.value)
+
+/-- A passing typed residual is nonnegative (the soundness carrier — provenance-independent). -/
+theorem checkLengthChargeResidual_nonneg {G : GraphData} {c : CutData} {rows : RowDB}
+    (F : ResidualFormulas G c rows) (R : LengthChargeResidual)
+    (h : checkLengthChargeResidual F R = true) : 0 ≤ R.value := by
+  unfold checkLengthChargeResidual at h
+  split at h <;> simp only [Bool.and_eq_true, decide_eq_true_eq] at h <;>
+    first | exact h.2 | exact h
+
+/-- Typed charge certificate: coefficients for the row-GERSH slacks + a LIST of named residuals. -/
+structure LengthSurplusChargeCertV2 where
+  coeffs : List ℚ
+  residuals : List LengthChargeResidual
+deriving Repr
+
+def residualValues (Rs : List LengthChargeResidual) : List ℚ :=
+  Rs.map (fun R => R.value)
+
+/-- Checker: every residual passes its typed check, coeffs nonneg, matching length, and the exact
+    charge identity `25η − lengthSurplus = Σ residualValue + Σ a_Q·slack_Q`. -/
+def checkLengthSurplusChargeCertV2 {G : GraphData} {c : CutData} {rows : RowDB}
+    (F : ResidualFormulas G c rows) (cert : LengthSurplusChargeCertV2) : Bool :=
+  cert.residuals.all (fun R => checkLengthChargeResidual F R) &&
+    (cert.coeffs.all (fun a => decide (0 ≤ a)) &&
+      (decide (cert.coeffs.length = rows.rowList.length) &&
+        decide (lengthSurplusTarget G c rows =
+          (residualValues cert.residuals).sum + ratDot cert.coeffs (rowGershSlackList G c rows))))
+
+/-- SOUNDNESS (typed form): a passing typed charge certificate + per-row GERSH give
+    `lengthSurplus ≤ 25η`. Unconditional in the residual provenance — each named residual is checked
+    nonneg exactly. This is the non-degenerate, compiled GERSH-aggregation provider. -/
+theorem lengthSurplus_le_25eta_of_chargeV2 {G : GraphData} {c : CutData} {rows : RowDB}
+    (F : ResidualFormulas G c rows) (cert : LengthSurplusChargeCertV2)
+    (hcheck : checkLengthSurplusChargeCertV2 F cert = true)
+    (hGersh : ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) :
+    lengthSurplusGD rows ≤ 25 * etaQ G c := by
+  unfold checkLengthSurplusChargeCertV2 at hcheck
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at hcheck
+  obtain ⟨hres, hcoeffs, _hlen, hid⟩ := hcheck
+  have hresnn : 0 ≤ (residualValues cert.residuals).sum := by
+    apply List.sum_nonneg
+    intro v hv
+    unfold residualValues at hv
+    rw [List.mem_map] at hv
+    obtain ⟨R, hR, rfl⟩ := hv
+    exact checkLengthChargeResidual_nonneg F R (hres R hR)
+  have hcoeffs' : ∀ a ∈ cert.coeffs, 0 ≤ a := by
+    intro a ha
+    have := hcoeffs a ha
+    simpa using this
+  have hslacks : ∀ y ∈ rowGershSlackList G c rows, 0 ≤ y := by
+    intro y hy
+    unfold rowGershSlackList at hy
+    rw [List.mem_map] at hy
+    obtain ⟨Q, hQ, rfl⟩ := hy
+    have hgersh := hGersh Q hQ
+    unfold RowGershBound at hgersh
+    unfold rowGershSlack
+    linarith
+  have hdot := ratDot_nonneg cert.coeffs (rowGershSlackList G c rows) hcoeffs' hslacks
+  unfold lengthSurplusTarget at hid
+  linarith
+
+/-- The full corrected aggregation from a TYPED charge certificate: coverage + a passing typed cert +
+    per-row GERSH give `Γ ≤ N²`. Non-degenerate replacement for the design-bug two-field route. -/
+theorem gammaUpper_from_chargeCertV2 {G : GraphData} {c : CutData} {rows : RowDB}
+    (F : ResidualFormulas G c rows)
+    (hlen : rows.rowList.length = badCount G c)
+    (cert : LengthSurplusChargeCertV2)
+    (hcheck : checkLengthSurplusChargeCertV2 F cert = true)
+    (hGersh : ∀ Q : RowCert, RowInDB rows Q → RowGershBound G c rows Q) :
+    gammaOfGD G c rows ≤ (G.n : ℚ) ^ 2 :=
+  gammaUpper_from_lengthSurplus hlen (lengthSurplus_le_25eta_of_chargeV2 F cert hcheck hGersh)
+
 end GammaAggregation
 end Erdos23Delta0

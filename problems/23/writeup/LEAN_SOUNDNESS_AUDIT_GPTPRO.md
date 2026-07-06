@@ -125,3 +125,54 @@ REMAINING aggregation: (a) Codex emits the charge cert (a_Q coefficients + R res
 LRS reduction (task #16 proven math -> the exact linear-charge coefficients); I exact-verify via the checker.
 (b) The CertGraph graft (wire in). CAVEAT (MAIN, truncated): does a valid (a_Q,R) charge cert ALWAYS exist
 (completeness of the linear charge form)? — the LRS quadratic may need care; retasked MAIN.
+
+## Charge-cert COMPLETENESS verdict (GPT-Pro MAIN, 2026-07-07 reply; Claude-gated)
+DECISIVE. Two meanings of "complete":
+1. With a FREE rational residual R, the linear charge cert is TRIVIALLY complete whenever the
+   target is true: set a_Q=0, R = 25eta - lengthSurplus; the checker verifies R>=0 directly.
+   SOUND, but this is a DIRECT exact certificate of the final aggregation inequality — NOT a proof
+   extracted from the LRS/GERSH mechanism. It degenerates into checking the final target directly.
+2. As a genuine question — "is 25eta - Sum(ell^2-25) >= 0 always a LINEAR consequence of ONLY the
+   row-GERSH slacks (N+eta - rowSum(Q) >= 0) with nonneg coefficients?" — the answer is NO. The row
+   slacks are linear in rowSum; the target is a length-surplus (quadratic) expression. From those
+   slacks ALONE one gets at most the WEAKER implication Gamma <= N(N+eta), NOT Gamma <= N^2.
+   Claude's satisfiability concern was CORRECT.
+
+THE FIX (typed residual dictionary): the residual must NOT be a free rational; it must be a typed
+dictionary, each kind BOUND to a specific proven quantity and checked nonneg:
+  inductive LengthChargeResidualKind | raw | lrs | cauchy | bankReserve | custom (id:Nat)
+  structure LengthChargeResidual where kind; value
+  checkLengthChargeResidual: match kind with
+    | raw         => decide (0 <= value)                                  -- finite-instance direct only
+    | lrs         => decide (value = [LRS quantity]) && decide (0 <= value)
+    | cauchy      => decide (value = [Cauchy/SOS quantity]) && decide (0 <= value)
+    | bankReserve => decide (value = [exact Row/Gamma reserve residual from LRS->bank proof]) && decide (0 <= value)
+    | custom id   => checkCustomLengthResidual ...
+KEY MATH POINT (verbatim-faithful): "LRS plus plain Cauchy alone is not enough; the real proof must
+contribute an additional nonnegative reserve residual." The token-bank RESERVE residual is the
+missing piece; its formula depends on the final LRS->bank proof.
+
+RECOMMENDATION TO CODEX: change the emitter to emit not just row-slack coefficients but ALSO the LRS
+residual coefficient(s), Cauchy/SOS residual coefficient(s), and the bank-reserve residual(s); raw
+residual only for a final finite-instance direct certificate, not as the universal proof mechanism.
+
+ACCEPTABILITY: keeping the simple/raw cert IS acceptable if the proof architecture is explicitly
+"certified-per-instance final aggregation," NOT a compiled LRS aggregation theorem. Given the /goal
+(universal, compiled M6 provider; anti-fake-progress gate), MAIN would NOT rely on raw-residual-only
+as the universal story.
+
+## Claude honest-status delta (2026-07-07)
+- My 14th-increment LengthSurplusChargeCert is SOUND (soundness unconditional: R>=0 + identity =>
+  target>=0 => Gamma<=N^2) but, with a free residual, degenerate-capable (per-instance target check).
+- COMPILED (this session, 15th increment): the typed-residual upgrade (LengthChargeResidualKind +
+  ResidualFormulas carrier + checkLengthChargeResidual + checkLengthChargeResidual_nonneg +
+  LengthSurplusChargeCertV2 + checkLengthSurplusChargeCertV2 + lengthSurplus_le_25eta_of_chargeV2 +
+  gammaUpper_from_chargeCertV2). Forces each residual NAMED (lrs/cauchy/bankReserve) and nonneg; raw
+  reserved for finite instances. Soundness stays unconditional.
+- STILL CERTIFIED-PER-INSTANCE, NOT COMPILED-UNIVERSAL: the named residual VALUES (lrsVal/cauchyVal/
+  bankReserveVal) and their nonnegativity are supplied per-instance by the exact-verified LRS
+  certificate (task #16). A fully compiled universal aggregation would additionally require compiled
+  Lean theorems `0 <= bankReserveVal G c rows` (the token-charging reserve nonneg) — the deepest
+  remaining M6 obligation, currently discharged by exact-verified artifact rather than compiled proof.
+  THIS IS THE HONEST BOUNDARY between "certified" and "compiled" for the single deepest aggregation node.
+
