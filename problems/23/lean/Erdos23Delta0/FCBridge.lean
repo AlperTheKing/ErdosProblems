@@ -18,18 +18,15 @@ open SimpleGraph
 namespace Erdos23Delta0
 namespace CertGraph
 
-/-- FC-FORM (conditional on the bipartization identity). A triangle-free graph
-    with a certificate package on `5n` vertices admits a bipartite subgraph
-    deleting at most `n^2` edges — the official `erdos_23` shape. -/
+/-- FC-FORM (unconditional). A triangle-free graph with a certificate package on
+    `5n` vertices admits a bipartite subgraph deleting at most `n^2` edges — the
+    official `erdos_23` shape. The bipartization identity is now discharged by the
+    proven `SimpleGraphBridge.beta_bipartization`. -/
 theorem erdos23_fcForm_of_bipartization
     {V : Type*} [Fintype V] [DecidableEq V]
     (Gs : SimpleGraph V) [DecidableRel Gs.Adj]
     (n : ℕ) (hcard : Fintype.card V = 5 * n)
-    (hTri : Gs.CliqueFree 3) (P : SimpleGraphCertificatePackage Gs)
-    (beta_bipartization :
-      ∀ K : ℕ, betaSimple Gs ≤ K →
-        ∃ H : SimpleGraph V, H ≤ Gs ∧ H.IsBipartite ∧
-          (Gs.edgeFinset \ H.edgeFinset).card ≤ K) :
+    (hTri : Gs.CliqueFree 3) (P : SimpleGraphCertificatePackage Gs) :
     ∃ H : SimpleGraph V, H ≤ Gs ∧ H.IsBipartite ∧
       (Gs.edgeFinset \ H.edgeFinset).card ≤ n ^ 2 := by
   have hbound : (betaSimple Gs : ℚ) ≤ (Fintype.card V : ℚ) ^ 2 / 25 :=
@@ -40,7 +37,7 @@ theorem erdos23_fcForm_of_bipartization
   have hn2 : ((5 : ℚ) * (n : ℚ)) ^ 2 / 25 = (n : ℚ) ^ 2 := by ring
   rw [hn2] at hbound
   have hbeta_le : betaSimple Gs ≤ n ^ 2 := by exact_mod_cast hbound
-  exact beta_bipartization (n ^ 2) hbeta_le
+  exact SimpleGraphBridge.beta_bipartization Gs (n ^ 2) hbeta_le
 
 end CertGraph
 end Erdos23Delta0
