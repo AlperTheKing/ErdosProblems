@@ -96,3 +96,20 @@ The full "Mechanical and irreducible LensGate geometry layer" is in the MAIN thr
 NEXT-TICK FIRST ACTION: extract full layer (slices) -> existence-check referenced types -> graft into
 CertGraph LensGates namespace -> honest build (expect multi-round like beta_bipartization) -> the 2
 IrreducibleLensGeomFacts fields become the named remaining LensGates obligation (route to MAIN geometry).
+
+
+## UPDATE 2026-07-06T17:45Z — LensGates geometry layer GRAFTED GREEN (commit follows), obligation = 2 OSC fields
+GRAFTED into CertGraph.lean (LensGates ns, EXIT=0 LOGBYTES=0, axioms [propext,Quot.sound], no native_decide,
+4 build rounds): lensTypeAt, checkForbidShorterOddFromCert, shorterOdd_forbid_from_cert_false,
+triangle_forbid_lens_conclusion, shorterOdd_forbid_lens_conclusion, LensGateGeomSubcert (6 ctors),
+checkLensGateGeomSubcert, IrreducibleLensGeomFacts, lensGateGeomSound_of_subcert.
+BUILD LESSONS: (1) unused implicit {c} that appears only in a lemma's conclusion is fine in TERM mode but a
+def param c unused in body warns -> rename _c; (2) `A && B = true` PRECEDENCE TRAP: = binds tighter than &&,
+so parenthesize (A && B) = true OR use simp [Bool.and_eq_true, decide_eq_true_eq] at h to normalize; (3)
+mismatched match-arm cases: `simp [checkLensGateGeomSubcert, hout, hsub] at hcert` closes via false=true absurdity.
+REMAINING LensGates obligation = EXACTLY 2 IrreducibleLensGeomFacts fields:
+  osc1_sound: (ty i O payloadId) OSC1 residual + LensGateCheckFacts + sigmaNonneg + LensNuKNonneg +
+    TriangleFree + all-length-5 => False, for primitive lens types RR/RB/RD/DD/TTsame/TTopposite/TR.
+  osc4_head_on_sound: same with OSC4 + headOn=true => False.
+These are the genuine remaining primitive-lens residual geometry (route to MAIN). checkLensGates_sound now
+fully dischargeable via lensGateGeomSound_of_subcert once these 2 facts are provided.

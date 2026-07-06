@@ -1258,3 +1258,20 @@ The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong
 - CONJUNCT-3 THIS TICK: SHA re-verify 6/6 certified rows PASS; k6/F6 = CERTIFIED (was mis-listed parked) =
   Codex Phase-I calibration anchor; parked-queue=12 not 13; 45+63=108 consistent.
 - CODEX Phase-I pricing in flight (k6/F6 calibration). SIBLING on Branch-B.
+
+
+## TICK NOTES (2026-07-06T17:45Z) — LensGates geometry layer GREEN (major); obligation = 2 OSC fields
+- LEAN MILESTONE: LensGates geometry layer grafted into CertGraph.lean, EXIT=0 LOGBYTES=0, 4 build rounds,
+  axioms [propext,Quot.sound]. lensGateGeomSound_of_subcert discharges the LensGateGeomSound that
+  checkLensGates_sound needs, MODULO exactly 2 IrreducibleLensGeomFacts fields (osc1_sound OSC1-residual +
+  osc4_head_on_sound OSC4-head-on-residual). Commit after this note. Full block: scratchpad/
+  lensgate_geom_graft.lean (final version, re-graftable).
+- MAIN RETASKED: prove the 2 OSC geometry facts (primitive-lens residual -> False per lensType). In flight.
+- CONJUNCT-3 (earlier this session): SHA re-verify 6/6 certified rows PASS; k6/F6 CERTIFIED (=Codex Phase-I
+  calibration anchor, was mis-listed parked); parked=12 not 13; 45+63=108.
+- CODEX: Phase-I artificial-variable pricing ruled for k6/F6 (Farkas-ray degeneracy redirect); in flight.
+  marker CODEX_TO_CLAUDE.md 1938422.
+- SIBLING: Branch-B overview/Banked-UPO section (in flight).
+- NEXT TICK: (1) check MAIN 2-OSC-facts reply -> gate/graft; (2) check Codex Phase-I k6/F6 result; (3)
+  SIBLING Branch-B. Extract GPT-Pro via parallel transformed slices (=@EQ@ etc, ~5 calls/response).
+- P(Lean)~98 (LensGates checker now dischargeable modulo 2 named OSC geometry facts).
