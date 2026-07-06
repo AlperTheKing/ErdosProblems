@@ -100,3 +100,13 @@ This recomputes the residuals from the solution (not just SHA integrity) — con
 genuinely valid, and validates the re-verification pipeline end-to-end for the endgame full-aggregate pass.
 Conjunct-3 status this session: 6/6 certified manifests SHA-verified (integrity) + k5/F1 exact-checker
 re-run (validity). Endgame full-aggregate re-verify (all 108) still pending 108/108 certification.
+
+
+## UPDATE 2026-07-06T18:05Z — Conjunct-3 FULL CERTIFIED-SET aggregate SHA re-verify: 179/179 PASS
+Ran full aggregate SHA re-verification over ALL 45 certified rows x their entire artifact chain
+(manifest + check_summary + modular_summary + solution): 179 total sha256 checks, 179 PASS, 0 fail,
+0 missing. The ENTIRE certified set is byte-identical to the ledger v43 SHA pins. Script:
+scratchpad/reverify_all45.py. This is the MAXIMAL aggregate re-verification currently possible
+(endgame full-108 aggregate awaits the 63 pending being certified). Combined with k5/F1 exact-checker
+re-run (validity), the certified-45 portion of Conjunct-3 is: integrity 45/45 (179 artifacts) + at least
+one full residual recomputation. Conjunct-3 for the certified subset = DONE at the current 45/108 frontier.
