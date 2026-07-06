@@ -90,3 +90,13 @@ hybrid/Phase-I method CALIBRATION anchor (known-good exact cert => validate the 
 then apply to the 63 genuinely-pending). Codex's "not a ledger completion" disclaimers were correct.
 => My parked-queue is 12 rows, NOT 13 (k9/B0,k2/G5,k6/G1,k5/G1,k9/G1,k4/G1,k0/G7,k5/F6,k4/F7,k4/F6,
 k3/G2,k0/G4 — all verified NOT-certified). Ledger 45 certified + 63 pending = 108 CONSISTENT.
+
+
+## UPDATE 2026-07-06T17:55Z — Conjunct-3 EXACT-CHECKER re-run (stronger than SHA): k5/F1 VALID
+Independently RE-RAN the official exact checker (_codex_eq_odl1_rung2_source_solution_check.py) on
+certified row k5/F1 from its manifest verification_command, output to a DISTINCT reverify summary
+(pinned summary untouched): exact_ok=True, full_negative_residual_count=0, full_min_residual=0.
+This recomputes the residuals from the solution (not just SHA integrity) — confirms the certificate is
+genuinely valid, and validates the re-verification pipeline end-to-end for the endgame full-aggregate pass.
+Conjunct-3 status this session: 6/6 certified manifests SHA-verified (integrity) + k5/F1 exact-checker
+re-run (validity). Endgame full-aggregate re-verify (all 108) still pending 108/108 certification.
