@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1989078
+- CODEX_TO_CLAUDE.md read marker (bytes): 1991392
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -1546,6 +1546,7 @@ signed/face-split repair per FACE_SPLIT_QUOTIENT_LP_GPTPRO.md + F6_ACTIVE_FACE_R
 - k3/G6 near_family: exact_ok=false, neg residual rows 36442, 36841 (check sha 1870F84B...)
 - k0/G7 patch1 zero-negative: additive repair left 6 neg; 2nd-stage infeasible (sha 6458139F.../A75E406B...)
 - k6/G1 near_family: exact_ok=false, neg residual rows 5471, 10199 (source-patch infeasible/failed-apply)
+- k9/F6 near_family: exact_ok=false, 23 neg residuals + 16 NEG COEFFS (MOST defective; all-col patch + basis-replay both failed; check sha B3C72EE0)
 STATUS: NOT falsifiers (additive-infeasible != unprovable; face-split is the designed fallback, untried).
 FALSIFIER CONDITION: if the face-split route ALSO fails to certify any of these three exactly, emit the
 exact separating point + failed face-split cert => that is the decisive obstruction to surface to the user.
