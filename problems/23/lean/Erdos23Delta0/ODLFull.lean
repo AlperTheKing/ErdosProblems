@@ -54,5 +54,30 @@ theorem ODLFull_of_rootCore {G : GraphData} {c : CutData} {rows : RowDB} {Q : Ro
   have h2 := rootCore.supportSize_le_N
   linarith
 
+/-- The support excess: how far the support row mass exceeds the support size. The
+    support-local ODL goal is exactly `coreExcess ≤ η`. -/
+def coreExcess {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (core : ODLCoreData G c rows Q) : ℚ :=
+  core.supportRowSum - core.supportSize
+
+/-- Internal-link relation: the parent's excess is at most the child's. This is the
+    reusable numeric link a prune/absorb internal node certifies. -/
+def CoreExcessLE {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    (parent child : ODLCoreData G c rows Q) : Prop :=
+  coreExcess parent ≤ coreExcess child
+
+/-- Internal-node monotonicity (the heart of the semantic tree assembly): since η is
+    ambient and fixed, a parent whose excess is ≤ a child's inherits the child's
+    support-local ODL bound. Composed up the route tree, this propagates the terminal
+    leaves' certified ODL bounds to the root. -/
+theorem CoreODLGoal_of_excess_le {G : GraphData} {c : CutData} {rows : RowDB} {Q : RowCert}
+    {parent child : ODLCoreData G c rows Q}
+    (hlink : CoreExcessLE parent child)
+    (hchild : CoreODLGoal G c rows Q child) :
+    CoreODLGoal G c rows Q parent := by
+  unfold CoreODLGoal at hchild ⊢
+  unfold CoreExcessLE coreExcess at hlink
+  linarith
+
 end ODLFull
 end Erdos23Delta0
