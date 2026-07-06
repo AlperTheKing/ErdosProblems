@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 1629435
+- CODEX_TO_CLAUDE.md read marker (bytes): 1967142
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
@@ -1400,3 +1400,67 @@ Codex's task (like chart certs). a1Proper Lean is otherwise MAXIMALLY BUILT (mas
 + mask_symmetry_sound + canonicalCone_bound + a1Proper_of_six_cones + defect algebra, all green, axioms
 clean, reusing PolyCert.ConeCert.sound). ONLY remaining a1Proper work = instantiate B.certs from Codex's 6
 compact cone NFs (by decide) + slack-nonneg env-binding. DO NOT re-investigate self-derivation.
+
+## TICK NOTE (2026-07-07T00:55Z) — Codex marker advanced; MAIN leaf-checkers streaming
+- CODEX marker CODEX_TO_CLAUDE.md advanced 1952896 -> 1956100 (read k6/F6 targeted-active result 16:29Z).
+  Verdict: float Phase-I->0.0 but EXACT infeasible at 28383/35328/40696 cols => 4-family {F5,G2_UZ_T,G3_XY_T,
+  G7_B2_4T} tier3-derived support EXACT-INSUFFICIENT in FAMILIES. Ruling posted (reject widen; do EXACT FARKAS
+  on step3 40696-col custom solve + KNOWN-CERT 2432-col family cross-ref). Ledger 45/108 unchanged.
+- MAIN thread msg 14 STREAMING (leaf checkers reply, stuck at 203 chars across 3 checks — may be slow reasoning
+  or stalled render; if still 203 next tick, navigate-reload). SIBLING retasked on PeelInvariant (the single
+  remaining Branch-B obligation).
+- Session Lean: 7 green increments (a1Proper cone-bridge + C5[5] toy + odlFull root-rep/excess-link/composition).
+  odlFull skeleton COMPLETE; remaining = recursive checker + leaf checkers (MAIN) + O14. Branch-B = PeelInvariant.
+
+## SESSION SNAPSHOT (2026-07-07T04:05Z) — odlFull PROVIDER FRAMEWORK complete; 11 green increments
+LEAN (11 committed green axiom-clean increments this session, build_root tmp/a1proper_o_claude_v1):
+- a1Proper: A1MaskSymmetry + A1ProperWrapper (canonicalCone_bound + a1Proper_of_six_cones + xmask_bound_of_
+  clearedDefect); reduces a1Proper to ONE hypothesis (6 canonical-mask ConeCerts). PolyCert.olean in build_root.
+- C5[5] M6.5 toy: Toy/OddCyclePackingC5Blowup c5b5_isMaxCut (extremal graph TRUE-max, beta=25=N^2/25 tight).
+- ODLFull.lean (odlFull provider, FRAMEWORK COMPLETE): ODLCoreData/CoreODLGoal/RootRepresentsRow/
+  ODLFull_of_rootCore + coreExcess/CoreExcessLE/CoreODLGoal_of_excess_le (internal-node monotonicity) +
+  ODLNodeSemantics/resolvedODL/resolvedODL_of_one_child_excess_link/ODLFull_of_resolved_root (composition) +
+  coreDefect/CoreODLGoal_of_defect_nonneg/coreODLGoal_of_coneCert (ConeCert leaf bridge) +
+  Seed3ODLLeafProviders/Seed3ODLInternalLinks + checkODLResolveNode(+sound) + checkODLResolveRoot +
+  checkSeed3ODLSemanticTree(+sound) + ODLFull_of_semantic_tree (ASSEMBLY: providers+tree+RootRepresentsRow =>
+  rowSum<=N+eta = BranchAInputs.odlFull) + internalLinks_of_coreExcess (concrete Seed3ODLInternalLinks) +
+  ConcreteODLLeafChecks/checkODLLeafDispatch/leafProviders_of_concreteChecks (concrete Seed3ODLLeafProviders;
+  CONE->coreODLGoal_of_coneCert, EQ/SIB O14-gated). ALL green, axioms [propext,Classical.choice,Quot.sound].
+REMAINING odlFull = concrete ConcreteODLLeafChecks per row (CONE via chart ConeCerts + Bank/Lens/NoOverfull
+  green checkers) + coreOf EMISSION (MAIN designing) + O14 EQ-leaf global cover (Codex charts).
+BRANCH-B (Conjunct-2): SH' PROVEN (my exact-gate catch: P7 consumes m_out<=r^2/25+d/2 via 2-orient exchange,
+  NOT bare; C5[t] satisfies SH'; d/2 single-spend clean via PacketExchange -d/2). Live risk DISSOLVED. Remaining =
+  finite door-ownership WIRING (Codex: d_C=|delta_B|, injective ownership, doors counted once). All other layers
+  P5/P6/P8 CERTIFIED, P11/P12 PROVEN.
+BRANCH-A charts (Conjunct-1): 45/108; k6/F6 Farkas + known-cert AGREE on 22 missing families (band/B0/G6/G7/F7/
+  deltas); Codex reproducing k6/F6 from expanded pool then batch 62. a1Proper: 6 cones (Codex, PMTS tooling).
+CODEX marker CODEX_TO_CLAUDE.md 1961043. MAIN retasked coreOf emission. SIBLING retasked final Branch-B status.
+
+
+## TICK NOTES (2026-07-07T08:45Z) — GERSH aggregation completeness RESOLVED; typed-residual cert green (15th increment)
+- MAIN COMPLETENESS VERDICT (gated + archived LEAN_SOUNDNESS_AUDIT_GPTPRO.md tail): the linear charge
+  form is NOT complete from row-GERSH slacks alone (they give only Gamma<=N(N+eta), not Gamma<=N^2);
+  a free residual degenerates to per-instance target-assertion. FIX = typed residual dictionary; KEY:
+  "LRS + plain Cauchy alone are not enough; the real proof contributes an extra nonneg bank-reserve."
+  My satisfiability concern CONFIRMED. => aggregation is certified-per-instance UNTIL the bank-reserve
+  nonneg is a compiled lemma. This is the single deepest open M6 node.
+- LEAN 15th increment GREEN (committed daa3fb0fc): GammaAggregation.lean typed-residual upgrade
+  (LengthChargeResidualKind + ResidualFormulas + checkLengthChargeResidual+_nonneg +
+  LengthSurplusChargeCertV2 + checkLengthSurplusChargeCertV2 + lengthSurplus_le_25eta_of_chargeV2 +
+  gammaUpper_from_chargeCertV2). Typecheck EXIT=0 LOGBYTES=0 forbidden=0 axioms clean. NOTE: olean
+  refresh into build_root DEFERRED (V2 additive, nothing imports it; -o package-root check needs source
+  relocation) — refresh at graft time.
+- CODEX k6/F6 (gated 3 expansions): known22 derived (74752 cols sha 77D0.../5091...) + farkaspos
+  (70656 sha 5FA3...) + farkaspos2 (131768 sha 0CF4...) ALL lp_status=2 infeasible; exact rays stable.
+  BUT source checker validates k6/F6 exact_ok=true @2432 source cols => REPRESENTATION mismatch, NOT
+  math obstruction (Codex agrees). RULED: emit source-basis ConeCert directly (preferred) OR direct
+  source->hybrid col import + explicit non-representable-col list. Chart bottleneck DE-RISKED.
+- SIBLING proof-map + finite-cert manifest gated + archived (PROOF_MAP_MANIFEST_GPTPRO.md) — consistent
+  w/ Lean skeleton + SH' (bare m_C<=r_C^2/25 FALSE+unused; census=annotation only).
+- IN FLIGHT: MAIN = bankReserve Q1 (exact R_bank formula) + Q2 (compiled-vs-certified nonneg). SIBLING =
+  independent adversarial cross-derivation of R_bank (falsifier-first). CODEX = source-basis k6/F6 emit.
+- CODEX marker CODEX_TO_CLAUDE.md -> 1967142 (read through 18:55Z known22 result).
+- NEXT TICK: gate MAIN Q1/Q2 + SIBLING R_bank; Fraction-cross-check the two derivations. If compiled
+  nonneg feasible -> build the bankReserve compiled lemma (aggregation becomes compiled-universal M6).
+  If certified-per-instance -> lock that status honestly + wire ResidualFormulas from Codex LRS emit.
+
