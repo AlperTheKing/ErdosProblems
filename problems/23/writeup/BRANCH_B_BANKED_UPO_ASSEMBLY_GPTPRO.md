@@ -49,3 +49,25 @@ to certifying the named layers (CombinedHBD single-spend, PacketExchange P11, ce
 ledgers P5–P9, CD telescope + 24-signature dictionary) — each already stated as a [CERT: Pxx]
 node — NOT to proving a standalone hard-core theorem. (Corrects the earlier "Pure-UPO k=0 = open
 hard core" framing in [[erdos23-branchB-fan-cactus-state]].)
+
+## ⭐ CERTIFIED-LAYER INVENTORY (SIBLING msg 15, 2026-07-07) — Conjunct-2 status pinned to ONE obligation
+SIBLING's per-node inventory gives the exact PROVEN/CERTIFIED/OBLIGATION status of every Branch-B layer:
+```
+P5 OP5 transfer   : CERTIFIED (finite injection/counting artifact)
+P6 fan ledger     : CERTIFIED (finite injection/counting artifact)
+P7 cactus ledger  : CERTIFIED conditional — requires PeelInvariant certificates
+PeelInvariant     : OBLIGATION — unless emitted for every cactus peel node    ← THE remaining open item
+P8 SH-prime peel  : CERTIFIED (finite peel artifact)
+P9 cell ledger    : CERTIFIED conditional — depends on P5, P7, P8 and PeelInvariant
+P10 CombinedHBD   : CERTIFIED conditional — single residual packet bank artifact
+P11 PacketExchange: PROVEN (two-orientation injection theorem, B(W)≤η)
+P12 Banked-UPO    : PROVEN conditional — arithmetic assembly from P10, P11, Bank-L
+```
+**THE PEELINVARIANT** is the single genuine remaining Branch-B obligation:
+    m_out ≤ r_out²/25,
+where r_out = size of the peeled OUTSIDE packet and m_out = its bad-edge count under the RESTRICTED
+cut. "This is the only nonlocal input to the cactus half-bank inequality." It is an OBLIGATION unless
+emitted (certified) for every cactus peel node. Subtlety (memory §H): restriction-of-max-cut ≠
+max-cut-of-restriction, so it is NOT a β-induction — the genuine Branch-B open core.
+So Conjunct-2 = {P5,P6,P8 CERTIFIED} + {P11 PROVEN} + {P7,P9,P10,P12 PROVEN/CERTIFIED conditional on
+PeelInvariant} + {PeelInvariant OBLIGATION}. Everything reduces to certifying/proving the PeelInvariant.
