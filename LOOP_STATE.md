@@ -1050,3 +1050,8 @@ emitted data volume or batch counts. Batch counts are M5 evidence only.
 - PIPELINE NOTE: charts with ~6000-bit heights (chart k2 family) need --prime-count 768 +
   --resume-crt from 384 checkpoint. Ledger v43: certified=45+ (my k9/B0/k2/G6/k0/G4 parked, not
   certified); pending includes the 13 face-split.
+
+## DOMINANT INDEX -> NAME MAP (ground truth from _codex_eq_odl1_rung2_charts.py generator_names)
+0=F1 1=F2 2=F3 3=F4 4=F5 5=F6 6=F7 7=B0_eta25_25 8=G1_UV_T 9=G2_UZ_T 10=G3_XY_T 11=G4_VZ_XY
+12=G5_VZ_T 13=G6_A2_9T 14=G7_B2_4T. (LESSON 2026-07-06: I mislabeled dom12 as G6; it is G5.
+The "k2/G6" park artifact is chart2/dom12=G5, valid but filename keeps the wrong tag.)
