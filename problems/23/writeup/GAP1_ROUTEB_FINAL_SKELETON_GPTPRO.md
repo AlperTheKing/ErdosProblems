@@ -218,3 +218,37 @@ battery-SUPPORT for PositiveSlackAbsorption's CONCLUSION (sigma>0 leaf deficient
 bypass -- because the sigma>0 objects R-D/R-A actually handle are the SIDE-DOOR SUBCAGES (sigma(D_d)>0), not leaf
 deficient caps. Bypass holds only if "positive-debt deficient => sigma=0" has a DIRECT proof simpler than the Hall
 condition (open question for GPT-Pro; may be equivalent-hardness).
+
+================================================================================
+## R-D GATE + FINAL RESIDUAL STRUCTURE (GPT-Pro, 2026-07-07, 11669 char)
+================================================================================
+### CONFIRMED (a) sigma>0 cages = side-door/composite/prunable SUBCAGES, NOT leaf deficient caps => my probe
+(positive-debt deficient leaf caps sigma=0 across C5+C7, 632M sets) is CONSISTENT+EXPECTED (support, not bypass).
+### CONFIRMED (b) NO bypass: "positive-debt terminal cage => sigma=0" IS EXACTLY PositiveSlackAbsorption + max-cutness;
+"the Hall/prefix theorem is the non-circular content." No independent shortcut.
+
+### R-D GATE STATUS -- decisive gate BLOCKED on the concrete rowDB CageBankData:
+- Faithful gate must consume emitted rowDB CageBankData(C): prefixes P_i (each with vertex set U_i, sigma_i=
+  delta_B(U_i)-delta_M(U_i)), surplus atoms A(C) (demand mu_C(e)*(8j+24)), bank tokens T(C) (C5Cell cap=25*mass,
+  DoorSlack cap=25*sigma_i, AmbientSlack cap=(N-|V_h|)*tau, PruneReserve cap=Balance(D)), incidence CanCharge.
+- GRAPH-ONLY door-only sufficient test (I CAN compute from adj/side/switch/ell): Demand_graph(i) <= 25*sigma_i
+  (ignores C5/Ambient/Prune). **PASS => sufficient (absorption via door slack alone); FAIL => INCONCLUSIVE, NOT a
+  refutation.** Since 8j+24 > 25 for j>=1, no one-atom/one-token cover -- mechanism is CUMULATIVE Ferrers Hall.
+- So I CANNOT decisively falsify-test PositiveSlackHallPrefix without the rowDB CageBankData emission (concrete layer).
+
+### THE ACTUAL OPEN CONTENT (not yet proven by GPT-Pro):
+- GPT-Pro's `PositiveSlackHallPrefix` Lean thm TAKES the prefix inequalities (hPrefix) as a HYPOTHESIS and proves
+  Balance>=0 via greedy Ferrers filling + Claude's surplus_le_bankCap_of_hall_charge. **So the greedy-filling
+  REDUCTION is provable; the OPEN residual is proving the prefix inequalities THEMSELVES hold for every sigma>0
+  cage** (the cumulative Ferrers Hall content, dependent on the concrete C5Cap/AmbientCap/PruneCap cage geometry).
+- R-A: SideDoorCreatesPositiveSlackSubcage (extra side door d => proper subcage D_d with sigma(D_d)>0; the side-door
+  interval has one more B-door than bad-door). The pruning algebra (Balance additivity + my pruned_balance_neg_of_neg)
+  is DONE; the geometric subcage construction + sigma(D_d)>0 is the open R-A residual.
+
+### FINAL RESIDUAL MAP: gap#1 = **PositiveSlackHallPrefix (the prefix inequalities) + SideDoorCreatesPositiveSlackSubcage**,
+both GEOMETRIC/structural, both dependent on the concrete rowDB cage/token decomposition (the unbuilt concrete layer).
+gap#1 = PositiveSlackHallPrefix ALONE iff SideDoorCreatesPositiveSlackSubcage is already in the CAP boundary blockers.
+Everything else PROVEN/formalized (6 RouteBAssembly.lean theorems + GPT-Pro greedy-filling/pruning schemas).
+=> The gap#1 "wall risk" now concentrates in these 2 Ferrers/annulus cage-geometry lemmas, which cannot be quickly
+gate-de-risked (need the concrete decomposition). Reliant on GPT-Pro proving the geometry OR building the rowDB
+CageBankData emission tool.
