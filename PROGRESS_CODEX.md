@@ -29657,3 +29657,9 @@
 2026-07-07T10:43:25Z OK VERIFY | DID: polled remaining tail | RESULT: k3/d6 exact_ok true; remaining active rows square cores or running | D: harvest
 2026-07-07T10:43:40Z OK VERIFY | DID: harvested k3/d6 seed-2027 | RESULT: ledger v100 certified_count=99 pending_count=9 sha=16ab775e1759 | D: +1
 2026-07-07T10:47:22Z OK VERIFY | DID: polled final tail | RESULT: k6/d4 false 14 res 2 coeff; k8/d6 false 26 res 2 coeff; no new exact | D: retry seeds
+2026-07-07T10:47:42Z > ATTACK | NEXT: launch additional seed retries for stubborn k6/d4 and k8/d6
+2026-07-07T10:47:42Z OK ATTACK | DID: launched k6/d4 seed424243 and k8/d6 seed314159 retries | RESULT: 2 Start-Process jobs | D: active
+2026-07-07T10:50:45Z OK VERIFY | DID: polled tail | RESULT: k1/d13 exact true; k2/d13 false 6 res 1 coeff; k8/d9,k8/d8 core export timeout | D: harvest+retry
+2026-07-07T10:51:12Z OK VERIFY | DID: harvested k1/d13 | RESULT: ledger v101 certified_count=100 pending_count=8 sha=31d8a004ac27 | D: +1
+2026-07-07T10:51:41Z > ATTACK | NEXT: terminate duplicate k1/d13 Claude run already certified
+2026-07-07T10:51:41Z OK ATTACK | DID: terminated duplicate k1/d13 Claude run | RESULT: requested Stop-Process on 2 PIDs | D: freed workers

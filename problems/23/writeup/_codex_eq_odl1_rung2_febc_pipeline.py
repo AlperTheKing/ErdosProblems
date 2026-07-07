@@ -76,6 +76,7 @@ def main() -> None:
     ap.add_argument("--support-threshold", type=float, default=1.0e-4)
     ap.add_argument("--tight-row-tol", type=float, default=1.0e-7)
     ap.add_argument("--qr-oversample", type=int, default=4)
+    ap.add_argument("--time-limit", type=float, default=None)
     ap.add_argument("--clarabel-objective", choices=["l1", "zero"], default="l1")
     ap.add_argument("--stop-after-core", action="store_true")
     ap.add_argument("--summary", type=Path, default=None)
@@ -117,6 +118,8 @@ def main() -> None:
         "--out-core", str(core),
         "--summary", str(core_summary),
     ]
+    if args.time_limit is not None:
+        extract_cmd.extend(["--time-limit", str(args.time_limit)])
     steps.append(run_step("extract_core", extract_cmd, cwd=REPO))
     if steps[-1]["returncode"] != 0 or not core_summary.exists():
         final = {"exact_ok": False, "abort": "extract_core_failed", "steps": steps}

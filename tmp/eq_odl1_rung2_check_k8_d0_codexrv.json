@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 8,
+  "columns": 34102,
+  "dominant": 0,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=3053/den_bits=3047",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 159847,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 1966,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k8_d0_codex_cpp_onerepair.jsonl",
+  "solution_max": "num_bits=3036/den_bits=3026",
+  "solution_min": "num_bits=3037/den_bits=3063",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5418
+}
