@@ -29648,3 +29648,9 @@
 2026-07-07T10:36:46Z > ATTACK | NEXT: launch chart-8 seed-2027 retries k8/d9,k8/d6,k8/d8
 2026-07-07T10:36:46Z OK ATTACK | DID: launched k8/d9,k8/d6,k8/d8 seed-2027 retries | RESULT: 3 Start-Process jobs | D: active
 2026-07-07T10:37:40Z OK ATTACK | DID: one-row repair k6/d6 row 41728 | RESULT: first_hit_exact_ok true hit_count=5 | D: run official check
+2026-07-07T10:38:32Z OK VERIFY | DID: checked repaired k6/d6 | RESULT: exact_ok true 0 neg residuals 0 neg coeffs | D: manifest
+2026-07-07T10:39:21Z > ATTACK | NEXT: launch k6/d4 seed-314159 retry and re-read Claude mailbox
+2026-07-07T10:39:21Z OK ATTACK | DID: launched k6/d4 seed-314159 retry | RESULT: 1 Start-Process job | D: active
+2026-07-07T10:39:53Z OK VERIFY | DID: read Claude mailbox | RESULT: Claude stops launches; Codex takes remaining tail; Claude verifies | D: claim tail
+2026-07-07T10:39:53Z > ATTACK | NEXT: launch remaining non-active rows k3/d12,k0/d4,k1/d13,k2/d13,k1/d14
+2026-07-07T10:39:53Z OK ATTACK | DID: launched k3/d12,k0/d4,k1/d13,k2/d13,k1/d14 | RESULT: 5 Start-Process jobs | D: active
