@@ -29630,3 +29630,8 @@
 2026-07-07T10:23:48Z OK VERIFY | DID: harvested k9/d8 | RESULT: ledger v92 certified_count=89 pending_count=19 sha=4a414fb023df | D: +1
 2026-07-07T10:24:28Z OK VERIFY | DID: checked disappeared row k7/d12 | RESULT: exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
 2026-07-07T10:24:47Z OK VERIFY | DID: harvested Codex cpp5 | RESULT: ledger v93 certified_count=91 pending_count=17 k7/d12+k7/d4 | D: +2
+2026-07-07T10:25:42Z > ATTACK | NEXT: retry parked k5/d5,k6/d4,k6/d6 with alternate random seed 2027
+2026-07-07T10:25:42Z OK ATTACK | DID: launched k5/d5,k6/d4,k6/d6 seed-2027 retries | RESULT: 3 Start-Process jobs | D: active
+2026-07-07T10:28:14Z OK VERIFY | DID: polled active rows | RESULT: k7/d5 and k9/d7 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
+2026-07-07T10:29:05Z OK VERIFY | DID: verified ledger v95 | RESULT: certified_count=93 includes k7/d5 and k9/d7 | D: +2
+2026-07-07T10:32:06Z OK VERIFY | DID: polled active rows | RESULT: k9/d11,k9/d6 modular; no completed exact result | D: continue
