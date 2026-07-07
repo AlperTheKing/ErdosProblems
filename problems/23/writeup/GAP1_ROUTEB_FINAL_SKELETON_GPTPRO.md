@@ -534,3 +534,25 @@ certificate. rem(a),V_a (geodesic support) ARE graph-computable; cap_i(v) needs 
 candidate discharging proof (per-vertex AmbientShadowPrefixBound). Needs the rowDB bank emitter to gate + a real proof
 of the per-vertex bound. P(gap#1 math) ~45-50 (well-characterized wall with a candidate approach, not lower).
 ### BROWSER: old MAIN tab 1267096933 STUCK rendering; FRESH tab (recreate from URL) renders correctly -- use a fresh tab.
+
+================================================================================
+## cap(v) MODEL + graph-computable diagnostic N-T(v) (GPT-Pro, 2026-07-08)
+================================================================================
+cap_i(v) is NOT graph-determined: rowDB ambient-token allocation cap_i(v) = sum_{h: v notin V_h, h avail to prefix i}
+tau_h (exact rational bank weights, not recoverable from adj/side/ell alone). THE RESIDUAL = AmbientShadowLoadBound /
+PositiveSlackHallPrefix_FullBank: for every prefix i and vertex v, sum_{a: v notin V_a} rem(a)/(N-|V_a|) <= cap_i(v).
+Gate forms: UNIFORM q(a,v)=rem(a)/(N-|V_a|); or STRONGER max-flow/LP feasibility (q>=0, sum_v q=rem(a), sum_a q<=cap(v),
+q=0 if v in V_a). GRAPH-COMPUTABLE DIAGNOSTIC cap (GPT-Pro sec 2): cap_global(v) = N - T(v), T(v)=sum_e ell(e)*p_e(v)
+the load; sum_v (N-T(v)) = N^2-Gamma = reserveResidual. "Use cap=N-T(v) as a STRONG DIAGNOSTIC; not the official cap_i(v)
+unless a theorem shows rowDB AmbientCap dominates this vertex slack model." C_18: cap=18 on the 9 outside vertices >= 31/9
+=> passes. Lean: structure AmbientToken{support,tau}; PositiveSlackHallPrefix_FullBank; AmbientShadowLoadBound. Proof
+provable "only after tau_h and the ambient token ownership rules are fixed" (tri-free+Ferrers-laminar+max-cut MAY prove it
+for the intended tau_h, but the theorem is not determined until tau_h defined).
+
+### CLAUDE GATE (_claude_ambient_shadow_gate.py, cap=N-T(v), door-precharge 25 + max-flow LP): even-cycle+chord
+N=18,22,26,30 (the C_18 single-row-long-annulus ESCAPE regime) 0 fail => cap=N-T(v) door+ambient ABSORBS the escapes
+(C_18 reconciliation CONFIRMED, N>=18 coverage). Census N<=11: 185/192032 fail, all near-extremal ell=9-in-N=9
+(Gamma=N^2, cycle fills graph, no ambient room, 1 door token insufficient) => the crude proxy limit; the extremal
+boundary needs the full rowDB bank (actual 25sigma sigma>=2 + C5 + prune), NOT a refutation. Fixed my own ell off-by-one.
+STATUS: escape regime empirically absorbed by the natural cap; the wall's PROOF still needs the rowDB tau_h + the
+discharging argument. P(gap#1 math) ~48-52.
