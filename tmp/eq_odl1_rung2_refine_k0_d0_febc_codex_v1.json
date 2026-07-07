@@ -1,0 +1,18 @@
+{
+  "active_rows": 0,
+  "band": "near_2s_minus_1",
+  "basic_cols": 0,
+  "chart": 0,
+  "dominant": 0,
+  "float_nonzero": 0,
+  "model_status": "Infeasible",
+  "presolve": "on",
+  "run_status": "HighsStatus.kOk",
+  "schema": "eq_odl1_rung2_refine_support_basis_v1",
+  "solver": "simplex",
+  "square": true,
+  "support": "negative",
+  "support_columns": 2314,
+  "support_core": "tmp\\eq_odl1_rung2_core_k0_d0_febc.jsonl",
+  "threads": 32
+}

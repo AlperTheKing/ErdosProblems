@@ -66,6 +66,7 @@ def main() -> None:
     ap.add_argument("--support-threshold", type=float, default=1.0e-4)
     ap.add_argument("--tight-row-tol", type=float, default=1.0e-7)
     ap.add_argument("--qr-oversample", type=int, default=4)
+    ap.add_argument("--clarabel-objective", choices=["l1", "zero"], default="l1")
     ap.add_argument("--stop-after-core", action="store_true")
     ap.add_argument("--summary", type=Path, default=None)
     args = ap.parse_args()
@@ -95,6 +96,7 @@ def main() -> None:
         "--support-threshold", str(args.support_threshold),
         "--tight-row-tol", str(args.tight_row_tol),
         "--qr-oversample", str(args.qr_oversample),
+        "--clarabel-objective", args.clarabel_objective,
         "--out-core", str(core),
         "--summary", str(core_summary),
     ]

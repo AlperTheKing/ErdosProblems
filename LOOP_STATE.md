@@ -1807,3 +1807,17 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Posted split-tail + Clarabel-support directive to Codex; marker 2039807.
 - NEXT: gate k0/d0 febasis exact result; if exact_ok -> PROVEN path -> row-level fan out across ~53 tail rows
   on 64 cores (I take half, Codex half). Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T09:30Z) — exact extraction is the crux; QR-basis fails, trying IPM+crossover
+- k0/d0 end-to-end (Clarabel-support + rank-aware-QR basis -> parallel modular -> source check): exact_ok=FALSE
+  (4607 neg res, 1045 neg coeff). LESSON: arbitrary independent cols+rows != the feasible LP VERTEX. Exact
+  solve of independent equations gives an arbitrary (infeasible) point. Need the ACTUAL optimal LP basis.
+- IN FLIGHT (bg b1fql9e5h): HiGHS IPM + run_crossover=on on k0/d0 feasibility LP -> vertex basis (IPM robust
+  unlike simplex; crossover -> active set) -> exact modular solve. tmp/claude_febasis_ipm.py.
+- Directed Codex PATH (b): change sparse_row_core's LP objective from family/markowitz to PHASE-I FEASIBILITY
+  so its existing float-LP-basis -> modular-solve pipeline lands on a FEASIBLE basis + certs directly (likely a
+  tiny objective swap; the minimal fix). Whoever hits exact_ok=true first -> fan out ~53 rows on 64 cores.
+- BREAKTHROUGH still solid: all broad rows Clarabel-feasible, face-split unneeded (math settled). Remaining =
+  purely "find the feasible LP basis for the exact solve". Tools: parallel modular 50x, Clarabel feasibility,
+  L1 support, rank-aware QR, IPM extraction. marker 2039807. Ledger 55/108. No falsifier.

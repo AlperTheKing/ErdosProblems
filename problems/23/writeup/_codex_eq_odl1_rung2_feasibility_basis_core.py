@@ -94,9 +94,17 @@ def solve_basis(A, target: np.ndarray, *, solver: str, presolve: str, threads: i
     return h, run_status, h.getModelStatus(), h.getBasis(), h.getSolution()
 
 
-def solve_clarabel_l1(A, target: np.ndarray, *, threads: int, max_iter: int, tol: float):
+def solve_clarabel_support(
+    A,
+    target: np.ndarray,
+    *,
+    objective: str,
+    threads: int,
+    max_iter: int,
+    tol: float,
+):
     rows, cols = A.shape
-    q = np.ones(cols)
+    q = np.ones(cols) if objective == "l1" else np.zeros(cols)
     P = sparse.csc_matrix((cols, cols))
     constraints = sparse.vstack([A, -sparse.identity(cols, format="csc")], format="csc")
     rhs = np.concatenate([target, np.zeros(cols)])
@@ -201,6 +209,7 @@ def main() -> None:
     ap.add_argument("--time-limit", type=float, default=600.0)
     ap.add_argument("--clarabel-max-iter", type=int, default=400)
     ap.add_argument("--clarabel-tol", type=float, default=1.0e-9)
+    ap.add_argument("--clarabel-objective", choices=["l1", "zero"], default="l1")
     ap.add_argument("--support-threshold", type=float, default=1.0e-4)
     ap.add_argument("--tight-row-tol", type=float, default=1.0e-7)
     ap.add_argument("--qr-oversample", type=int, default=4)
@@ -253,9 +262,10 @@ def main() -> None:
         if "Optimal" in model_status_text:
             payload["export_core"] = export_core(args.out_core, target_frac, col_maps, core_cols, selected_rows)
     else:
-        sol, x, residual = solve_clarabel_l1(
+        sol, x, residual = solve_clarabel_support(
             A,
             target,
+            objective=args.clarabel_objective,
             threads=args.threads,
             max_iter=args.clarabel_max_iter,
             tol=args.clarabel_tol,
@@ -273,6 +283,7 @@ def main() -> None:
         rank_ok = row_meta.get("qr_rank", 0) >= len(core_cols)
         payload.update({
             "clarabel_status": str(sol.status),
+            "clarabel_objective_mode": args.clarabel_objective,
             "clarabel_obj": float(getattr(sol, "obj_val", float("nan"))),
             "float_nonzero": sum(1 for value in x if value > 1e-9),
             "support_threshold": args.support_threshold,

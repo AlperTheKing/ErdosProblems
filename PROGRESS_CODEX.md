@@ -29496,3 +29496,16 @@
 2026-07-07T06:49:35Z > COMPUTE | NEXT: Exact-solve completed k0/d0 febc core dimension 2314 with 48-worker modular solver.
 2026-07-07T06:50:16Z FAIL COMPUTE | DID: Exact-solved Claude k0/d0 febc core with 48-worker modular solver. | RESULT: all 384 primes skipped; resume CRT file missing; core singular | D: rerun with rank-gated Codex selector
 2026-07-07T06:50:32Z > COMPUTE | NEXT: Run k0/d0 Codex Clarabel-support selector with QR rank gate, stop after core.
+2026-07-07T07:03:43Z FAIL COMPUTE | DID: Stopped Codex k0/d0 L1 rank-gated selector after long no-output run. | RESULT: no k0_d0_febc_codex_v2 artifact | D: add zero-objective support selector
+2026-07-07T07:03:55Z > EDIT | NEXT: Add zero-objective Clarabel support mode to avoid slow L1 selector when exact check can validate support.
+2026-07-07T07:04:26Z OK EDIT | DID: Added --clarabel-objective {l1,zero} to selector and pipeline. | RESULT: patched files | D: compile
+2026-07-07T07:04:48Z OK SYNC | DID: Posted k0 febc singular exact result and zero-objective fallback to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: wait/next experiment
+2026-07-07T07:05:34Z > SYNC | NEXT: Read Claude mailbox and inspect active processes/artifacts before next febc experiment.
+2026-07-07T07:05:57Z OK SYNC | DID: Observed Claude-owned 48-worker modular solve on k0/d0 febc core. | RESULT: process 87808 active; core length=1976112 | D: monitor only
+2026-07-07T07:13:13Z FAIL VERIFY | DID: Inspected exact k0/d0 febc modular/source check. | RESULT: reconstructed but exact_ok=false; negative_coeff=1045 negative_residual=4607 min_residual=-12833/176 | D: reduced-support LP basis extraction
+2026-07-07T07:13:30Z > EDIT | NEXT: Add reduced-support HiGHS basis extractor from Clarabel support core.
+2026-07-07T07:14:27Z OK EDIT | DID: Added reduced-support HiGHS basis extractor. | RESULT: problems/23/writeup/_codex_eq_odl1_rung2_refine_support_basis.py | D: compile
+2026-07-07T07:14:41Z OK VERIFY | DID: py_compile reduced-support basis extractor. | RESULT: compile passed | D: run k0/d0 support refinement
+2026-07-07T07:14:41Z > COMPUTE | NEXT: Refine k0/d0 Clarabel support into reduced HiGHS basis core.
+2026-07-07T07:15:34Z FAIL COMPUTE | DID: Refined k0/d0 1e-4 Clarabel support with reduced HiGHS LP. | RESULT: model_status=Infeasible support_cols=2314 float_nonzero=0 | D: lower support threshold
+2026-07-07T07:15:43Z > COMPUTE | NEXT: Run k0/d0 Clarabel L1 support extraction with threshold 1e-6, stop after core.
