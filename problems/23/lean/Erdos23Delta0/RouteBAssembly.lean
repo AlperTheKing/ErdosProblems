@@ -106,5 +106,16 @@ theorem pruned_balance_neg_of_neg
     (hCneg : balC < 0) :
     balC' < 0 := by linarith
 
+/-- Door-only absorption core (GPT-Pro's collapse of R-D away from the full Ferrers-Hall theorem). If a prunable
+    side-door subcage `D` satisfies `SmallSideDoorSubcage` — `Surplus(D) ≤ 25·sigma(D)` — and its door slack is part
+    of its bank (`25·sigma(D) ≤ BankCap(D)`), then `Balance(D) = BankCap(D) − Surplus(D) ≥ 0`, absorbed by door
+    slack ALONE. This replaces `PositiveSlackHallPrefix` for exactly the `sigma>0` objects that arise in pruning.
+    Pure algebra; NO Γ-minimality, NO switch, NO cumulative Hall. -/
+theorem doorOnly_balance_nonneg
+    (surplus bankCap sigma : ℚ)
+    (hSmall : surplus ≤ 25 * sigma)
+    (hDoor : 25 * sigma ≤ bankCap) :
+    0 ≤ bankCap - surplus := by linarith
+
 end RouteBAssembly
 end Erdos23Delta0

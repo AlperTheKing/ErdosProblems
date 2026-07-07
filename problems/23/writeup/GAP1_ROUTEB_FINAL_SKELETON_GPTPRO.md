@@ -252,3 +252,35 @@ Everything else PROVEN/formalized (6 RouteBAssembly.lean theorems + GPT-Pro gree
 => The gap#1 "wall risk" now concentrates in these 2 Ferrers/annulus cage-geometry lemmas, which cannot be quickly
 gate-de-risked (need the concrete decomposition). Reliant on GPT-Pro proving the geometry OR building the rowDB
 CageBankData emission tool.
+
+================================================================================
+## FORK RESOLVED -> LIKELY DOOR-ONLY (EASY) CASE (GPT-Pro, 2026-07-07, 11109 char)
+================================================================================
+GPT-Pro assessment: "You are PROBABLY in the small/door-only case" (evidence: no sigma>0 positive-debt deficient
+LEAF caps [my C5+C7 probe], positive-slack objects are side-door subcages, j=0 door-only matches the local picture).
+
+### THE COLLAPSE: if SmallSideDoorSubcage holds, the full Ferrers-Hall (hardest node) is BYPASSED.
+SmallSideDoorSubcage: every prunable side-door subcage D has only j=0 assigned atoms (ell=7-level) AND total j=0 mass
+<= sigma(D). Then Demand(D) = 24*mass <= 24*sigma(D) <= 25*sigma(D) = DoorSlackCap(D) <= BankCap(D) => Balance(D)>=0
+IMMEDIATE by door slack alone. R-D reduces to PositiveSlackAbsorption_DoorOnlyForPrunableSideCage. Extraction then
+uses this ONLY for prunable side-door subcages, not every abstract sigma>0 cage.
+
+### CRITICAL nuance: "all bad edges in D have ell=7" is STRONGER than necessary (a subcage may own only the j=0
+atom of a LONG ell>=9 edge). The EXACT condition is AssignedAtoms(D) subset {j=0} AND mass <= sigma(D). My probe
+"max ell<=7" is a valid SUFFICIENT check (if all edges ell<=7, all atoms j=0), but door-only can ALSO hold with long
+edges if only their j=0 atom is assigned. Full-edge-surplus gate: PASS => proven; FAIL => may overcount (not a refutation).
+
+### DECISIVE GRAPH GATE (GPT-Pro sec 6, graph-computable, avoids Ferrers order): for each inclusion-minimal side-door
+candidate D (contains extra door d + adjacent door adj(d) as B-doors, sigma(D)>0, connectivity, minimal), check
+Demand(D) <= 25*sigma(D). [Exact properties 1-5 truncated in reply -- RE-ASK.] Two gates: Gate A strong graph-only
+(Demand_full=sum(ell^2-25) over M_D <= 25*sigma; pass=>proven, fail=>maybe overcount); Gate B exact annular-atom
+(needs rowDB atom assignment).
+
+### Lean statements: SmallSideDoorSubcage (D hSide) : Surplus D <= 25*sigma D. doorOnly_absorption (SmallSideDoorSubcage
++ doorSlack_le_bankCap) : Balance>=0. PositiveSlackAbsorption_sideDoorOnly (D hSide) : 0 <= Balance D. Extraction uses
+this only for prunable side-door subcages.
+
+### STATUS: if SmallSideDoorSubcage passes/proves => R-D collapses to door-only, gap#1 = SmallSideDoorSubcage +
+SideDoorCreatesPositiveSlackSubcage (both LOCAL, gateable) + the pruning algebra (DONE). If not => full PositiveSlackHallPrefix.
+CLAUDE C5 PROBE (all bad edges ell<=7, j_max=1) is strong SUFFICIENT support for the door-only case (C7 ell-dist running).
+NEXT: RE-ASK exact minimal-side-door-subcage properties 1-5 + build the Demand(D)<=25*sigma(D) gate.

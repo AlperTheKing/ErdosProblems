@@ -6,3 +6,4 @@ import Erdos23Delta0.RouteBAssembly
 #print axioms Erdos23Delta0.RouteBAssembly.surplus_le_bankCap_of_hall_charge
 #print axioms Erdos23Delta0.RouteBAssembly.balance_nonneg_of_hall_charge
 #print axioms Erdos23Delta0.RouteBAssembly.pruned_balance_neg_of_neg
+#print axioms Erdos23Delta0.RouteBAssembly.doorOnly_balance_nonneg
