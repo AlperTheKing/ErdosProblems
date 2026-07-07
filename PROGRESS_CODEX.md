@@ -29537,3 +29537,24 @@
 2026-07-07T08:04:33Z OK ATTACK | DID: Validated native mod-p solver against Python | RESULT: k8_d11 prime match true; k4/G3 one prime solved in 8.7119566s | D: build native parallel CRT wrapper.
 2026-07-07T08:05:44Z OK ATTACK | DID: Smoke-tested native CRT wrapper | RESULT: one-prime k8_d11 handoff rc=0, residues parsed, partial_reconstruction_count=1267 | D: launch native k4/G3 exact solve.
 2026-07-07T08:05:44Z > VERIFY | NEXT: Run native C++ parallel CRT on k4/G3 all-basic core with 16 workers.
+2026-07-07T08:13:34Z OK ATTACK | DID: Ran native k4/G3 16-prime wave | RESULT: 16 primes solved in 12.8s, residue handoff rc=0 | D: run full native CRT when lane clear.
+2026-07-07T08:13:47Z > VERIFY | NEXT: Run full native C++ CRT on k4/G3 all-basic core with 48 workers and exact reconstruction.
+2026-07-07T08:15:17Z OK VERIFY | DID: Ran full native k4/G3 CRT solve | RESULT: reconstructed=true primes=192 seconds=70.9 core_nonzero_residuals=0 solution_negative_count=0 | D: run exact source checker.
+2026-07-07T08:16:40Z OK VERIFY | DID: Exact-checked k4/G3 native IPM certificate and posted to Claude | RESULT: exact_ok=true full_min_residual=0 full_negative_residual_count=0 solution_negative_count=0 | D: batch path established.
+2026-07-07T08:18:09Z OK VERIFY | DID: Emitted k4/G3 manifest and rebuilt ledger | RESULT: ledger v54 certified_count=56 pending_count=52 | D: start native batch pipeline.
+2026-07-07T08:18:39Z OK ATTACK | DID: Patched febc pipeline for native cpp modular backend | RESULT: py_compile passed | D: run next pending row k5/G1.
+2026-07-07T08:18:49Z > VERIFY | NEXT: Run end-to-end native pipeline for next pending row k5/G1 (chart=5, dominant=8).
+[2026-07-07T11:22:51.9042933+03:00] > SELECT | NEXT: Sync Claude mailbox and current O14 ledger before continuing exact chart certification.
+[2026-07-07T11:23:12.5999450+03:00] OK SELECT | DID: Read Claude mailbox and current ledgers. | RESULT: latest ledger v54 at 56 certified / 52 pending; Claude tail pivot acknowledged. | D: continue exact cert tail.
+[2026-07-07T11:23:12.6304373+03:00] > VERIFY | NEXT: Inspect k5/G1 pipeline artifacts and create exact manifest for ledger inclusion.
+[2026-07-07T11:23:22.6954045+03:00] > VERIFY | NEXT: Identify active Python process before launching additional row workers.
+[2026-07-07T11:23:59.9702451+03:00] OK VERIFY | DID: Created k5/G1 exact source manifest and rebuilt ledger v55. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v55_codex.json. | D: certified count should advance.
+[2026-07-07T11:24:27.9547891+03:00] OK VERIFY | DID: Posted k5/G1 exact certificate result to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md. | D: ledger 57/108.
+[2026-07-07T11:24:27.9695041+03:00] > ATTACK | NEXT: Run k6/G1 full-source IPM basis plus native parallel modular exact certification.
+[2026-07-07T11:27:55.4499888+03:00] OK ATTACK | DID: Completed and ledgered k6/G1 exact source certificate. | RESULT: ledger v56 certified_count=58 pending_count=50. | D: continue next pending row.
+[2026-07-07T11:28:09.5481251+03:00] > ATTACK | NEXT: Run k6/G2 full-source IPM basis plus native parallel modular exact certification.
+[2026-07-07T11:30:55.8266937+03:00] OK ATTACK | DID: Completed and ledgered k6/G2 exact source certificate. | RESULT: ledger v57 certified_count=59 pending_count=49. | D: continue next pending row.
+[2026-07-07T11:31:10.1226224+03:00] > ATTACK | NEXT: Run k5/F6 full-source IPM basis plus native parallel modular exact certification.
+[2026-07-07T11:33:43.5557436+03:00] FAIL ATTACK | DID: Ran k5/F6 exact pipeline. | RESULT: exact_ok=false full_negative_residual_count=8 solution_negative_count=0. | D: switch to repair.
+[2026-07-07T11:34:16.9328635+03:00] > ATTACK | NEXT: Run float multirepair and exact rationalization for k5/F6 eight residual rows.
+[2026-07-07T11:35:12.9093669+03:00] FAIL ATTACK | DID: Attempted k5/F6 multirepair with malformed negative threshold. | RESULT: argparse rejected --threshold. | D: rerun repair probe.

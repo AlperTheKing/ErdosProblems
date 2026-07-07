@@ -63,6 +63,8 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=48)
     ap.add_argument("--threads", type=int, default=32)
     ap.add_argument("--prime-count", type=int, default=384)
+    ap.add_argument("--modular-backend", choices=["python", "cpp"], default="cpp")
+    ap.add_argument("--native-exe", type=Path, default=Path("tmp/codex_mod_prime_solve.exe"))
     ap.add_argument("--selector", choices=["highs-basis", "clarabel-support"], default="highs-basis")
     ap.add_argument("--solver", choices=["simplex", "ipm", "choose"], default="ipm")
     ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
@@ -141,16 +143,29 @@ def main() -> None:
         print(json.dumps({"exact_ok": None, "stopped_after_core": True, "summary": str(summary)}, sort_keys=True))
         return
 
-    solve_cmd = [
-        sys.executable,
-        "tmp/claude_modular_solve_parallel.py",
-        "--core", str(core),
-        "--prime-count", str(args.prime_count),
-        "--workers", str(args.workers),
-        "--store-solution", str(core_solution),
-        "--summary", str(modular_summary),
-        "--store-crt", str(crt_state),
-    ]
+    if args.modular_backend == "cpp":
+        solve_cmd = [
+            sys.executable,
+            "tmp/codex_modular_solve_cpp_parallel.py",
+            "--core", str(core),
+            "--prime-count", str(args.prime_count),
+            "--workers", str(args.workers),
+            "--native-exe", str(args.native_exe),
+            "--store-solution", str(core_solution),
+            "--summary", str(modular_summary),
+            "--store-crt", str(crt_state),
+        ]
+    else:
+        solve_cmd = [
+            sys.executable,
+            "tmp/claude_modular_solve_parallel.py",
+            "--core", str(core),
+            "--prime-count", str(args.prime_count),
+            "--workers", str(args.workers),
+            "--store-solution", str(core_solution),
+            "--summary", str(modular_summary),
+            "--store-crt", str(crt_state),
+        ]
     steps.append(run_step("modular_solve", solve_cmd, cwd=REPO))
     if steps[-1]["returncode"] != 0 or not core_solution.exists() or not modular_summary.exists():
         final = {"exact_ok": False, "abort": "modular_solve_failed", "steps": steps}

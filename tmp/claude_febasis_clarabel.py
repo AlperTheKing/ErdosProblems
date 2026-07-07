@@ -42,8 +42,9 @@ for j, col in enumerate(columns):
         ri.append(r); cj.append(j); vv.append(float(coeff))
 A = sparse.csc_matrix((vv, (ri, cj)), shape=(m, ncol))
 
-# 1) Clarabel L1-min -> sparse feasible x*
-q = np.ones(ncol); P = sparse.csc_matrix((ncol, ncol))
+# 1) Clarabel with GENERIC positive objective -> UNIQUE NON-DEGENERATE vertex (breaks L1 ties -> invertible basis)
+q = np.array([1.0 + ((j * 1103515245 + 12345) % 100003) / 100003.0 for j in range(ncol)], dtype=float)
+P = sparse.csc_matrix((ncol, ncol))
 Amat = sparse.vstack([A, -sparse.identity(ncol, format="csc")], format="csc")
 b = np.concatenate([target, np.zeros(ncol)])
 cones = [clarabel.NonnegativeConeT(m), clarabel.NonnegativeConeT(ncol)]
