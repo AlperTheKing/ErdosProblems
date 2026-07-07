@@ -417,3 +417,33 @@ AdjacentExtraDoorInterval_sigma_pos + finite descent]. A,B + closure = DERIVED t
 confirms the conclusion (17757, 0 fail). NEXT: (1) RE-AUDIT archived S1 first-split for the layer-cover conclusion
 (K2T_INTERVAL_HALL_PROOF_TARGET / BANK0_SECTION / BRANCH_A_ASSEMBLY_AUDIT); (2) formalize the CAP interface + derive
 A,B + closure in Lean (named-hyp form, S1S2_annularLayer_cover the isolated obligation). P(gap#1 math)~70.
+
+================================================================================
+## RECONCILED RESIDUAL = ApplicationGeometry (GPT-Pro + Claude S2 full-read, 2026-07-08)
+================================================================================
+Reconciles the WALL verdict with GPT-Pro's refinement by reading S2_FROZEN_STATEMENT.md IN FULL:
+- ell(h) IS the true cut-geodesic: D_h = ell(h)-1 = dist_B(a,b) (S2 :24). "blue"="cut" (B-walk = cut walk, :12-13).
+- S2-Core 1 (:32-76) PROVEN (pure walk-concat arithmetic): a NewArm saving>=2 => shorter B-walk P' of len<=ell(h)-3
+  => dist_B<=ell(h)-3 CONTRADICTS D_h=ell(h)-1. This IS GPT-Pro's ShorterBlueRow_impossible, ALREADY ARCHIVED.
+- S2-Core 2 (:78-108) PROVEN (trivial): triangle degeneration => REAL triangle u-x-v. This IS TriangleDegeneration_sound.
+- BUT S2-Core 3 (:110-146) = ONLY A WRAPPER around Core1+Core2 + an APPLICATION-SUPPLIED disjunction (:225 "S2-Core 3
+  is only a wrapper around 1 and 2 plus an application-supplied geometry disjunction"; :154-159 "take the disjunction-
+  producing hypothesis FROM THE APPLICATION: ApplicationGeometry -> IntermediateDoor OR TriangleDegeneration OR
+  ValidReplacementArmSavingAtLeastTwo"). So S2 does NOT prove the disjunction -- WALL verdict CONFIRMED.
+=> THE TRUE RESIDUAL = **ApplicationGeometry** for a level-j>=1 owned atom of a GENERAL inclusion-minimal side-door
+subcage: prove the long annular transition yields a strict-reduced-theta with a replacement arm saving>=2 (the
+"annulus excess>=2" of the Cap-L5-Forcing application row, S2 :203-216, which currently proves ApplicationGeometry
+only for a GIVEN nested core L>=7 with reducedness + no-intermediate-door; general minimal side-door subcage + the
+boundary-attach leg are open). GIVEN ApplicationGeometry: S2-Core 1 kills ValidReplacementArm (=>ShorterBlueRow=>dist
+contradiction), tri-free kills Triangle => IntermediateDoor FORCED => AnnularAtom_has_firstSplit => NoLongSideDoorAnnulus.
+
+### CLAUDE LEAN (RouteBCAP.lean, 3 thms GREEN + axiom-clean): noLongSideDoor_of_primitives (no axioms, the 3-case A
+derivation), **intermediateDoor_forced_of_S2disjunction** (NEW: given the S2 disjunction hS2 + tri-free + dist-min,
+door FORCED via omega/rcases -- machine-checks the S2 CLOSING step, isolating ApplicationGeometry=hS2 as the residual),
+surplus_le_25sigma_of_level0. So the whole S2-disjunct-forcing DERIVATION is compiled; the single open obligation is
+ApplicationGeometry (the local geometric forcing: level>=1 atom => saving>=2 replacement arm), battery-only (17757, 0 fail).
+
+### GPT-Pro RECOMMENDS: formalize AnnularAtom_has_firstSplit / S2_forces_intermediateDoor_of_owned_long_atom as THE
+named hypothesis (not pair-door metric-stability); do NOT spend budget on the L5_FORCING boundary-attach leg (Route B
+avoids L5 forcing, only needs strict drop 4L+4). P(gap#1 math) ~55-60 (residual now LOCAL + closing machinery archived,
+but the geometric forcing ApplicationGeometry still open + battery-only).

@@ -53,6 +53,27 @@ theorem noLongSideDoor_of_primitives
   · exact hTerminality D D' x hProp hZT.1 hZT.2 hOwn
   · exact hNoViolation D' hBAD
 
+/-- **S2-disjunct forcing: the interior door is forced given `ApplicationGeometry`** (2026-07-08, reconciling the S1
+    re-audit WALL verdict with GPT-Pro's refinement). The archived S2 theory (`S2_FROZEN_STATEMENT.md`) proves, for a
+    strict reduced terminal theta, the disjunction `IntermediateDoor ∨ Triangle ∨ (a B-walk saving ≥2)` — but the
+    disjunction is **application-supplied** (`:154-159`, `:225`), so it is NOT itself proved by S2. This theorem
+    machine-checks the CLOSING step: given that disjunction (`hS2`), triangle-freeness (`hTriFree`, kills S2-Core 2's
+    real triangle), and distance-minimality (`hDistMin`: the true cut-distance `dist_B(a,b)` is ≤ any B-walk between
+    the same endpoints — this is S2-Core 1 composed with walk→path→dist), the interior door is FORCED. The remaining
+    obligation is exactly `hS2` (= `ApplicationGeometry` = a valid replacement arm saving ≥2 for the level-`j≥1`
+    transition), which S1/S2 do NOT discharge for a general minimal side-door subcage (battery-only: 17757 cases). -/
+theorem intermediateDoor_forced_of_S2disjunction
+    (IntermediateDoor Triangle : Prop)
+    (walkLen dist : Nat)
+    (hS2 : IntermediateDoor ∨ Triangle ∨ walkLen + 2 ≤ dist)
+    (hTriFree : ¬ Triangle)
+    (hDistMin : dist ≤ walkLen) :
+    IntermediateDoor := by
+  rcases hS2 with h | h | h
+  · exact h
+  · exact absurd h hTriFree
+  · omega
+
 /-- **Door-only surplus bound from `NoLongSideDoor` + mass ≤ sigma** (rational arithmetic). If every owned atom is
     level 0 then the cage surplus is `24 * mass`; with `mass ≤ sigma` and `0 ≤ sigma` this gives `Surplus ≤ 25*sigma`,
     the exact hypothesis consumed by `RouteBAssembly.doorOnly_balance_nonneg`. Non-circular. -/
