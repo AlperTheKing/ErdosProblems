@@ -1,0 +1,18 @@
+{
+  "core": "tmp\\eq_odl1_rung2_core_k8_d11_claude.jsonl",
+  "dimension": 2036,
+  "modular": {
+    "modulus_bits": 30,
+    "partial_reconstruction_count": 1267,
+    "reconstructed": false,
+    "skipped_primes": [],
+    "used_primes": [
+      1073741789
+    ]
+  },
+  "prime_count_requested": 1,
+  "resumed_crt": "tmp\\codex_cpp_smoke.crtstate.json",
+  "resumed_modulus_bits": 30,
+  "schema": "eq_odl1_rung2_modular_core_solve_v1",
+  "terms": 18146
+}

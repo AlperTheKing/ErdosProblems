@@ -29535,3 +29535,5 @@
 2026-07-07T08:02:09Z OK ATTACK | DID: Checked native compiler availability | RESULT: g++ and clang++ found under C:\msys64\mingw64\bin | D: implement native mod-p one-prime solver.
 2026-07-07T08:03:15Z OK ATTACK | DID: Compiled native mod-p one-prime solver | RESULT: tmp/codex_mod_prime_solve.exe built with g++ -O3 | D: validate against Python residues.
 2026-07-07T08:04:33Z OK ATTACK | DID: Validated native mod-p solver against Python | RESULT: k8_d11 prime match true; k4/G3 one prime solved in 8.7119566s | D: build native parallel CRT wrapper.
+2026-07-07T08:05:44Z OK ATTACK | DID: Smoke-tested native CRT wrapper | RESULT: one-prime k8_d11 handoff rc=0, residues parsed, partial_reconstruction_count=1267 | D: launch native k4/G3 exact solve.
+2026-07-07T08:05:44Z > VERIFY | NEXT: Run native C++ parallel CRT on k4/G3 all-basic core with 16 workers.
