@@ -164,3 +164,15 @@ which SKIPPED all sigma>0 caps -> its "all 36000 caps sigma=0, zero sigma>0" was
 sigmapos_masks=0 CAUGHT it). Probe FIXED (sigma>0 <=> bd>0) and re-running. The "possible bypass" claim is RETRACTED
 pending the corrected run. (The sigma=0-filtered gates -- _claude_ambient_pairdoor_convexity_gate.py,
 _claude_multiatom_gammadrop_gate.py -- were CORRECT; only this new probe had the sign confusion in its relaxation.)
+
+### CORRECTED PROBE RESULT (2026-07-07T19:52Z, glue core+C5): with sigma>0 <=> boundary_delta>0 fixed:
+- 81,670,000 sigma>0 switch sets enumerated; **71,435,000 REACHED witness_structure** (nonempty cross/bdy) -> NO
+  detection-machinery bias against sigma>0.
+- Yet **ZERO sigma>0 positive-debt DEFICIENT caps**; all 36000 positive-debt deficient caps are sigma=0.
+=> STRONG (non-bias) empirical signal: positive-debt deficient cage => sigma=0 (door-balanced). IF this is a
+STRUCTURAL fact (not just "deficient" being sigma=0-by-definition), the minimal positive-debt cage is automatically
+sigma=0 and **PositiveSlackHallPrefix (the sigma>0 Hall condition) is UNNEEDED -- the hardest residual would be
+BYPASSED.** OPEN QUESTIONS for GPT-Pro: (a) does the "deficient terminal cage" definition already force sigma=0
+(making this definitional), or is it a real structural theorem "positive-debt deficient => sigma=0"? (b) B4 needs
+absorption for positive-debt TERMINAL cages before they are known deficient -- does the sigma=0-forcing apply at that
+scope? Testing universality on glue C7 (background). Framed as a QUESTION/signal, NOT a proof (battery != proof, 1 family).
