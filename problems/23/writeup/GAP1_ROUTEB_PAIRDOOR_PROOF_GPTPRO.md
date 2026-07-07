@@ -120,3 +120,66 @@ Checkable NOW on stretched L=5,7,9,11 (+ glue families): (a) §9.2 exact deltaM(
 NOT gateable solo (GPT-Pro/proof): the GENERAL CAP_PairDoorConvexity proof (all cages), and §9.8 token-bank
 decomposition. STATUS: gap #1 switch-geometry side reduced to gateable structural claims + 2 genuinely-open CAP/bank
 lemmas. P(Lean gap#1) unchanged pending #2 general proof + #5 bank decomposition.
+
+================================================================================
+## PART (A)+(B) REPLY (GPT-Pro MAIN, 2026-07-07, 15275 chars) -- the GENERAL proof + honest residuals
+================================================================================
+GPT-Pro did NOT overclaim. "Route B is valid in SHAPE. The switch algebra is provable from (A)+(B). I cannot
+honestly claim raw S1 Ferrers + S2 annulus alone proves (A) unless those include the ambient no-side-door and
+pair-door convexity conclusions. If those are only local theta statements, the missing hypothesis is precisely
+NoSideDoorForLongAnnulus / CAP_PairDoorBoundary_LUniform."
+
+### A1. Pair-door metric stability -- NOW CLEAN AND GENERAL (proven):
+PairDoorConvex(H,U,d0,d1): dist_{H[U]}(u0,u1) <= 2 + dist_{H[V\U]}(w0,w1) AND symmetric.
+Thm PairDoorMetricStability: given deltaB(U)={born0,born1}, deltaBU(U)={oldLo,oldHi}, PairDoorConvex before+after,
+then for old bad e=xy NOT crossing U (x,y same side of U): a shortest B-path uses 0 or BOTH born doors (not one --
+same side; not a door twice -- simple path). With B[U]=B^U[U], B[V\U]=B^U[V\U] (switch changes only crossing edges),
+same-side distances are equal => ell_{B^U}(e)=ell_B(e). NO L=5 forcing.
+
+### A2. No-cross -- GENERAL from max-cutness (proven): |deltaM(U)| <= |deltaB(U)| = 2, oldLo/oldHi distinct in
+deltaM => deltaM(U) = {oldLo,oldHi}. No extra no-cross assumption once deltaB(U) + the 2 crossing old bads known.
+
+### A3. Gamma drop (proven): Gamma(B)-Gamma(B^U) = ell(oldLo)^2+ell(oldHi)^2-ell'(born0)^2-ell'(born1)^2 >=
+L^2+(L+2)^2-L^2-L^2 = 4L+4 > 0. Strict decrease suffices (exact identity 4L+4 if born lengths = L).
+
+### (A) RESIDUAL: the CAP geometry that SUPPLIES the gate data for an ARBITRARY nested type-B core =
+CAP_PairDoorTheta_LUniform: deltaB(U)={born0,born1}, PairDoorConvex(B) & PairDoorConvex(B^U),
+PairDoorSidesConnected, ell(oldLo)=L, ell(oldHi)=L+2, born lengths <= L. GPT-Pro: S1 first-split gives the two
+B-door candidates; boundary-compat blockers rule out other B-doors (=> deltaB(U)={born0,born1}); S2 annulus-inc=2
+gives oldLo,oldHi lengths L,L+2; completed recut gives born cut-path L-1; Ferrers door-distance facts give
+convexity before+after (internal 1->2, external 1->2, L-uniform). **HONEST GAP: this holds ONLY IF S1/S2 include the
+ambient no-side-door + convexity conclusions; if they are only LOCAL theta statements the missing hypothesis is
+NoSideDoorForLongAnnulus / CAP_PairDoorBoundary_LUniform.** [my _claude_pairdoor_convexity_gate.py battery-validates
+this on stretched L=5..15, but that does NOT replace the general L-uniform CAP theorem.]
+
+### (B) TOKEN-BANK decomposition -- independent of switch geometry:
+Global length surplus S(G,B) = sum_{e in M}(ell_B(e)^2 - 25). Reserve = 25*eta - S. [Claude-verified EXACT:
+S = Gamma - 25m, 25eta = N^2 - 25m, so **Reserve = N^2 - Gamma** -- checked on stretched cores + C5[t] blow-ups
+(C5[t] Reserve=0 tight). This is ReserveLedgerCompleteness top-level.]
+Per-cage: sur(C), bank(C), bal(C)=25*bank(C)-sur(C), debt(C)=sur(C)-25*bank(C)=-bal(C), sigma(C).
+B1+B2 => exact identity: Reserve = GlobalBankLeft + GoodBalance + sum_C bal(C), with GlobalBankLeft>=0, GoodBalance>=0.
+B3: Reserve<0 => some bal(C)<0 => debt(C)>0 (positive-debt cage).
+B4 PositiveSlackAbsorption: debt(C)>0 => sigma(C)=0. **GPT-Pro: "This is NOT a consequence of pure algebra. It is a
+structural token-bank lemma: positive cut-slack must supply enough local bank to pay the cage surplus."** Combined
+with max-cutness (sigma(C)>=0), debt(C)>0 forces sigma(C)=0. [THE hard residual of (B).]
+B5 PositiveDebtTerminalization: any positive-debt cage contains a terminal positive-debt descendant.
+B6 => negative_reserve_yields_minPositive_sigma0_deficient_cage PROVED from B1-B5.
+
+### Lean theorem signatures (GPT-Pro, 1-9): checkPairTypeBThetaGate_sound (now INCLUDES PairDoorConvex B & B^U +
+PairDoorSidesConnected); pairDoor_deltaM_exact_of_maxcut; pairDoor_metric_stability (e bad, not crossing U =>
+ell equal); pairTypeBTheta_gammaDrop_pos; pairTypeBTheta_switch_connected; activePairTypeB_exists_of_minPositiveDeficient
+(residual = PositiveDebtLocalizesToDeficientCAP + DeficientCAP_has_nested_TypeB_LCore + CAP_PairDoorTheta_LUniform);
+no_minPositive_sigma0_deficient_cage_routeB; negative_reserve_yields_minPositive_sigma0_deficient_cage (residual =
+ReserveLedgerCompleteness + PositiveSlackAbsorption + PositiveDebtTerminalization); reserveResidual_nonneg_core_routeB
+(assume <0; get C from theorem 8; contradict via theorem 7).
+
+## GAP#1 FINAL HONEST REDUCTION = 5 named residuals (switch-algebra + assembly + global ledger identity ALL PROVEN):
+  R-A  CAP_PairDoorTheta_LUniform  (incl. PairDoorConvex before+after + PairDoorSidesConnected; the NoSideDoorForLongAnnulus
+       ambient obstruction is the honest gap if S1/S2 are only local) -- battery-validated stretched L=5..15.
+  R-B  PositiveDebtLocalizesToDeficientCAP + DeficientCAP_has_nested_TypeB_LCore (active-core existence; gate |A|>=1).
+  R-C  ReserveLedgerCompleteness  (top-level Reserve=N^2-Gamma VERIFIED exact; per-cage refinement = residual).
+  R-D  PositiveSlackAbsorption  (debt(C)>0 => sigma(C)=0; "NOT pure algebra" = THE hard structural token-bank lemma).
+  R-E  PositiveDebtTerminalization.
+reserveResidual = N^2 - Gamma (rowDB enters only via the cage decomposition, not the value). Route-B proves Gamma<=N^2
+DIRECTLY via the Gamma-minimality switch contradiction -- it does NOT need an external charge cert (self-contained
+aggregation discharge). Retask sent to MAIN: prove R-A (general, incl. NoSideDoor) + R-D (PositiveSlackAbsorption).
