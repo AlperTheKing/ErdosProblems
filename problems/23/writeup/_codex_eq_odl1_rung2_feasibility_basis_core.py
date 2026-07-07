@@ -59,7 +59,16 @@ def build_float_matrix(col_maps: list[dict[int, Fraction]], rows: int):
     return sparse.csc_matrix((vv, (ri, cj)), shape=(rows, len(col_maps)))
 
 
-def solve_basis(A, target: np.ndarray, *, solver: str, presolve: str, threads: int, time_limit: float):
+def solve_basis(
+    A,
+    target: np.ndarray,
+    *,
+    solver: str,
+    presolve: str,
+    run_crossover: str,
+    threads: int,
+    time_limit: float,
+):
     inf = highspy.kHighsInf
     rows, cols = A.shape
     lp = highspy.HighsLp()
@@ -86,6 +95,8 @@ def solve_basis(A, target: np.ndarray, *, solver: str, presolve: str, threads: i
     h.setOptionValue("output_flag", False)
     h.setOptionValue("solver", solver)
     h.setOptionValue("presolve", presolve)
+    if solver == "ipm":
+        h.setOptionValue("run_crossover", run_crossover)
     h.setOptionValue("time_limit", float(time_limit))
     if threads > 0:
         h.setOptionValue("threads", int(threads))
@@ -204,7 +215,10 @@ def main() -> None:
     ap.add_argument("--support", default="negative")
     ap.add_argument("--solver", choices=["simplex", "ipm", "choose"], default="simplex")
     ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
+    ap.add_argument("--run-crossover", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--selector", choices=["highs-basis", "clarabel-support"], default="highs-basis")
+    ap.add_argument("--basis-column-mode", choices=["all-basic", "positive-basic"], default="all-basic")
+    ap.add_argument("--basis-positive-tol", type=float, default=1.0e-9)
     ap.add_argument("--threads", type=int, default=32)
     ap.add_argument("--time-limit", type=float, default=600.0)
     ap.add_argument("--clarabel-max-iter", type=int, default=400)
@@ -244,22 +258,49 @@ def main() -> None:
             target,
             solver=args.solver,
             presolve=args.presolve,
+            run_crossover=args.run_crossover,
             threads=args.threads,
             time_limit=args.time_limit,
         )
         basic = highspy.HighsBasisStatus.kBasic
-        core_cols = [j for j, st in enumerate(basis.col_status) if st == basic]
-        selected_rows = [i for i, st in enumerate(basis.row_status) if st != basic]
+        all_basic_cols = [j for j, st in enumerate(basis.col_status) if st == basic]
+        basis_rows = [i for i, st in enumerate(basis.row_status) if st != basic]
+        sol_values = list(sol.col_value)
+        if args.basis_column_mode == "positive-basic":
+            core_cols = [j for j in all_basic_cols if sol_values[j] > args.basis_positive_tol]
+            residual = target - A.dot(np.array(sol_values))
+            selected_rows, row_meta = select_qr_rows(
+                A,
+                core_cols,
+                residual,
+                tight_tol=args.tight_row_tol,
+                oversample=args.qr_oversample,
+                qr_tol=args.qr_tol,
+            )
+            rank_ok = row_meta.get("qr_rank", 0) >= len(core_cols)
+        else:
+            core_cols = all_basic_cols
+            selected_rows = basis_rows
+            row_meta = None
+            rank_ok = None
         model_status_text = h.modelStatusToString(model_status)
         payload.update({
             "run_status": str(run_status),
             "model_status": model_status_text,
-            "float_nonzero": sum(1 for x in sol.col_value if x > 1e-9),
+            "run_crossover": args.run_crossover if args.solver == "ipm" else None,
+            "basis_column_mode": args.basis_column_mode,
+            "basis_positive_tol": args.basis_positive_tol,
+            "all_basic_cols": len(all_basic_cols),
+            "basis_rows": len(basis_rows),
+            "float_nonzero": sum(1 for x in sol_values if x > 1e-9),
             "core_cols": len(core_cols),
             "selected_rows": len(selected_rows),
             "square": len(core_cols) == len(selected_rows),
+            "rank_ok": rank_ok,
         })
-        if "Optimal" in model_status_text:
+        if row_meta is not None:
+            payload["row_selection"] = row_meta
+        if "Optimal" in model_status_text and len(core_cols) == len(selected_rows) and (rank_ok is not False):
             payload["export_core"] = export_core(args.out_core, target_frac, col_maps, core_cols, selected_rows)
     else:
         sol, x, residual = solve_clarabel_support(

@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 2039807
+- CODEX_TO_CLAUDE.md read marker (bytes): 2044098
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (FRESH 2026-07-07 — old threads bloated/stalling, retired per user; recreate tabs via tabs_create + navigate)

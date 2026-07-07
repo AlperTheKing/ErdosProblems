@@ -29509,3 +29509,29 @@
 2026-07-07T07:14:41Z > COMPUTE | NEXT: Refine k0/d0 Clarabel support into reduced HiGHS basis core.
 2026-07-07T07:15:34Z FAIL COMPUTE | DID: Refined k0/d0 1e-4 Clarabel support with reduced HiGHS LP. | RESULT: model_status=Infeasible support_cols=2314 float_nonzero=0 | D: lower support threshold
 2026-07-07T07:15:43Z > COMPUTE | NEXT: Run k0/d0 Clarabel L1 support extraction with threshold 1e-6, stop after core.
+2026-07-07T07:23:30Z FAIL COMPUTE | DID: Stopped Codex k0/d0 l1 threshold 1e-6 extraction due collision with Claude IPM job. | RESULT: processes 74456/74724 stopped if present | D: yield CPU to Claude IPM
+2026-07-07T07:25:24Z > GATE | NEXT: Read Claude mailbox and inspect current full-source feasibility artifacts/processes before launching exact certification.
+2026-07-07T07:26:05Z OK GATE | DID: Read Claude mailbox and process/artifact state | RESULT: Claude IPM job pid 72188 active; broad rows full-source feasible, exact extraction is blocker | D: switch to feasibility-basis extraction.
+2026-07-07T07:26:05Z > PLAN | NEXT: Inspect current sparse/core-selection scripts and identify the smallest feasibility-objective hook.
+2026-07-07T07:26:45Z OK PLAN | DID: Inspected feasibility-basis and Claude IPM scripts | RESULT: QR support core is invalid path; IPM/crossover vertex basis is the active extraction target | D: patch local exporter to expose crossover.
+2026-07-07T07:26:45Z > ATTACK | NEXT: Patch local feasibility-basis exporter to enable HiGHS IPM crossover and square-basis diagnostics.
+2026-07-07T07:27:22Z OK ATTACK | DID: Patched and compiled feasibility-basis exporter with IPM crossover gate | RESULT: py_compile passed for _codex_eq_odl1_rung2_feasibility_basis_core.py | D: local extraction hook ready.
+2026-07-07T07:27:22Z > VERIFY | NEXT: Check Claude IPM process and k0/d0 IPM artifacts before any exact solve.
+2026-07-07T07:28:06Z OK VERIFY | DID: Checked Claude IPM process and k0/d0 IPM artifacts | RESULT: pid 72188 still active; tmp/eq_odl1_rung2_core_k0_d0_ipm.jsonl absent | D: no collision; prepare local pipeline.
+2026-07-07T07:28:06Z > ATTACK | NEXT: Inspect and adapt the one-row pipeline for IPM+crossover feasibility-basis extraction.
+2026-07-07T07:28:51Z OK ATTACK | DID: Patched febc pipeline for highs-basis IPM+crossover and core-export guard | RESULT: py_compile passed for _codex_eq_odl1_rung2_febc_pipeline.py | D: one-row IPM exact pipeline ready.
+2026-07-07T07:28:51Z > VERIFY | NEXT: Poll active IPM job and inspect whether a square feasibility-basis core landed.
+2026-07-07T07:29:43Z OK VERIFY | DID: Checked active IPM CPU | RESULT: pid 72188 CPU=954.640625s, working_set=859320320, no core yet | D: launch bounded independent k4/G3 IPM core extraction.
+2026-07-07T07:29:43Z > ATTACK | NEXT: Run k4/G3 highs-basis IPM+crossover extraction with stop-after-core.
+2026-07-07T07:31:05Z OK ATTACK | DID: Ran k4/G3 IPM+crossover core extraction | RESULT: core dim=3893 terms=31653 sha256=64CA9761A2CABBCAC01D12EE0D573DC632A86636ADF3E3095BCAEB8A30FA30A2 | D: exact modular solve candidate.
+2026-07-07T07:31:05Z > VERIFY | NEXT: Solve k4/G3 IPM basis core with 48-worker modular CRT and exact source checker.
+2026-07-07T07:52:14Z FAIL VERIFY | DID: Stopped Codex k4/G3 3893-dim CRT tree after sustained CPU with no output | RESULT: parent pid 78408 targeted; reason=Python mod-p too slow at dim 3893 | D: need smaller exact core or native mod-p.
+2026-07-07T07:52:37Z OK VERIFY | DID: Checked post-stop artifacts | RESULT: no k0/d0 IPM core; k4/G3 IPM core exists dim=3893 but Python CRT abandoned as too slow | D: attack native mod-p kernel / smaller basis.
+2026-07-07T07:52:37Z > ATTACK | NEXT: Inspect modular solver/replay format to design native mod-p acceleration path.
+2026-07-07T07:53:26Z > ATTACK | NEXT: Patch exporter to drop zero-valued basic columns from IPM/crossover basis and export positive-support core.
+2026-07-07T07:55:39Z OK ATTACK | DID: Added positive-basic extraction mode and pipeline forwarding | RESULT: py_compile passed; accidental all-basic posbasis launch stopped | D: run positive-basic k4/G3 extraction.
+2026-07-07T07:59:56Z OK ATTACK | DID: Posted all-basic CRT bottleneck and positive-basic patch to Claude mailbox | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: coordinate switch to smaller exact core.
+2026-07-07T08:01:24Z FAIL ATTACK | DID: Tested k4/G3 positive-basic core extraction | RESULT: core_cols=2383 but qr_rank=587; no core exported | D: positive support alone insufficient; need different vertex or faster all-basic exact solve.
+2026-07-07T08:02:09Z OK ATTACK | DID: Checked native compiler availability | RESULT: g++ and clang++ found under C:\msys64\mingw64\bin | D: implement native mod-p one-prime solver.
+2026-07-07T08:03:15Z OK ATTACK | DID: Compiled native mod-p one-prime solver | RESULT: tmp/codex_mod_prime_solve.exe built with g++ -O3 | D: validate against Python residues.
+2026-07-07T08:04:33Z OK ATTACK | DID: Validated native mod-p solver against Python | RESULT: k8_d11 prime match true; k4/G3 one prime solved in 8.7119566s | D: build native parallel CRT wrapper.

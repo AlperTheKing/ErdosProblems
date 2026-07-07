@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Run one full-source Clarabel-support exact row certificate pipeline.
+"""Run one full-source feasibility-basis exact row certificate pipeline.
 
 Pipeline:
-  1. export Clarabel-support square core;
+  1. export a full-source feasibility-basis square core;
   2. solve the core exactly with the parallel modular CRT solver;
   3. convert the core solution to source-column coefficients;
   4. run the exact full source-solution checker.
@@ -63,6 +63,12 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=48)
     ap.add_argument("--threads", type=int, default=32)
     ap.add_argument("--prime-count", type=int, default=384)
+    ap.add_argument("--selector", choices=["highs-basis", "clarabel-support"], default="highs-basis")
+    ap.add_argument("--solver", choices=["simplex", "ipm", "choose"], default="ipm")
+    ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
+    ap.add_argument("--run-crossover", choices=["on", "off", "choose"], default="on")
+    ap.add_argument("--basis-column-mode", choices=["all-basic", "positive-basic"], default="all-basic")
+    ap.add_argument("--basis-positive-tol", type=float, default=1.0e-9)
     ap.add_argument("--support-threshold", type=float, default=1.0e-4)
     ap.add_argument("--tight-row-tol", type=float, default=1.0e-7)
     ap.add_argument("--qr-oversample", type=int, default=4)
@@ -91,7 +97,12 @@ def main() -> None:
         "--dominant", str(args.dominant),
         "--band", args.band,
         "--support", args.support,
-        "--selector", "clarabel-support",
+        "--selector", args.selector,
+        "--solver", args.solver,
+        "--presolve", args.presolve,
+        "--run-crossover", args.run_crossover,
+        "--basis-column-mode", args.basis_column_mode,
+        "--basis-positive-tol", str(args.basis_positive_tol),
         "--threads", str(args.threads),
         "--support-threshold", str(args.support_threshold),
         "--tight-row-tol", str(args.tight_row_tol),
@@ -103,6 +114,16 @@ def main() -> None:
     steps.append(run_step("extract_core", extract_cmd, cwd=REPO))
     if steps[-1]["returncode"] != 0 or not core_summary.exists():
         final = {"exact_ok": False, "abort": "extract_core_failed", "steps": steps}
+        summary.write_text(json.dumps(final, indent=2, sort_keys=True), encoding="utf-8")
+        print(json.dumps({"exact_ok": False, "abort": final["abort"], "summary": str(summary)}, sort_keys=True))
+        sys.exit(1)
+    if not core.exists():
+        final = {
+            "exact_ok": False,
+            "abort": "extract_core_not_exported",
+            "core_summary": read_json(core_summary),
+            "steps": steps,
+        }
         summary.write_text(json.dumps(final, indent=2, sort_keys=True), encoding="utf-8")
         print(json.dumps({"exact_ok": False, "abort": final["abort"], "summary": str(summary)}, sort_keys=True))
         sys.exit(1)
