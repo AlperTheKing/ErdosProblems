@@ -1,5 +1,5 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-07T18:04Z (gap#1 Route-B FULLY reduced: non-circular Lean skeleton, switch-algebra+extraction+top PROVEN, EXACTLY 2 residual leaves = NoSideDoorForLongAnnulus [local] + PositiveSlackAbsorption_Hall [hardest]; P(Lean unconditional)~30-40)
+# Last update: 2026-07-07T18:52Z (gap#1 -> ONE irreducible residual = PositiveSlackHallPrefix; R-A folds via Option C; RouteBAssembly.lean 5 thms green+axiom-clean [B4 extraction + Hall charge-cert soundness]; P(Lean unconditional)~30-40)
 
 ## MAILBOX
 - CODEX_TO_CLAUDE.md read marker (bytes): 2065930  (whole file read as of this tick)
@@ -18,7 +18,9 @@
 - MY GATES 0-fail: _claude_pairdoor_convexity_gate.py (stretched L=5..15, canonical U), _claude_ambient_pairdoor_convexity_gate.py (36000 real caps, sigma=0). Reserve=N^2-Gamma verified stretched+C5[t].
 - MAIN retask (sent 18:02Z): R-D exact Surplus/Bank defs + PositiveSlackAbsorption_Hall charge cert (non-circular) [priority]; R-A NoSideDoorForLongAnnulus from S1/S2 boundary-compat blockers.
 - CODEX (OUT until Thu ~08:00): chart-8 k8/d8 + k8/d9; the ONLY 2 pending certs. PARKED.
-- ME (solo, Route-B Lean assembly IN PROGRESS): problems/23/lean/Erdos23Delta0/RouteBAssembly.lean INCREMENT 1 GREEN + axiom-clean [propext,Classical.choice,Quot.sound] (tmp/claude_build_routeb.py; oleans in tmp/claude_lean_o_base_v1): reserveResidual:=N^2-gammaOfGD, gamma_le_N2_of_reserveResidual_nonneg, betaSimple_le_of_reserveResidual_nonneg (=beta-landing, reuses GammaChargeGraft.gammaLower_of_len5). NEXT INCREMENTS: (2) switch layer defs (deltaB/deltaM via flipCut, PairTypeBThetaGate, PairDoorConvex) + proven switch-algebra theorems (metric-stab/no-cross/drop) with the 2 leaves as NAMED hypotheses -- buildable NOW; (3) cage/ledger layer (TerminalCage, sigma, Balance/Surplus/Bank, B4 extraction, top) -- Balance/Surplus/Bank DEPEND on GPT-Pro's pending R-D ledger spec. Then R-D falsifier gate (sigma>0 positive-debt caps, Balance>=0).
+- GAP#1 -> ONE IRREDUCIBLE RESIDUAL (R-D/R-A leaf reply 18:50Z, archived in GAP1_ROUTEB_FINAL_SKELETON): **PositiveSlackHallPrefix** (every sigma>0 cage: Ferrers prefix ineqs demand(P)<=capacity(N(P)) => greedy Hall matching => Balance>=0). R-A FOLDS via Option C (SideDoorCreatesPositiveSlackAbsorbableCage: side-door=positive-slack subcage, absorbed, can't occur in zero-slack extraction; my ambient finding supports). Surplus(C)=sum_e mu_C(e)(ell^2-25), atoms demand=mu*(8j+24). All PROVABLE-NOW parts FORMALIZED.
+- ME (Route-B Lean assembly, RouteBAssembly.lean, 5 thms GREEN+axiom-clean, tmp/claude_build_routeb.py): reserveResidual:=N^2-gammaOfGD, gamma_le_N2_of_reserveResidual_nonneg, betaSimple_le_of_reserveResidual_nonneg (beta-landing), zeroSlack_negBalance_cage_of_neg_reserve (B4 non-circular extraction), surplus_le_bankCap_of_hall_charge + balance_nonneg_of_hall_charge (Hall charge-cert soundness Surplus<=BankCap=>Balance>=0). NEXT: R-D falsifier gate (sigma>0 pos-debt caps, Surplus<=BankCap) once GPT-Pro gives exact cap_C(t); the concrete switch/cage layer needs graph-geodesic ell infra (row-DB base abstracts ell away = the deep infra piece).
+- MAIN retask (sent 18:52Z): PositiveSlackHallPrefix proof + exact bank cap_C(t) per kind + R-A Option C confirm (is gap#1 = PositiveSlackHallPrefix ALONE?).
 
 ## LEDGER (O14 chart batch)
 - 106/108 certified (tmp/eq_odl1_rung2_chart_batch_ledger_v106_codex.json). Pending: chart 8 d8 (G1_UV_T), d9 (G2_UZ_T).
