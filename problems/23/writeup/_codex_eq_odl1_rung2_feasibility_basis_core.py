@@ -79,6 +79,9 @@ def solve_basis(
     if objective == "random":
         rng = np.random.default_rng(int(objective_seed))
         lp.col_cost_ = (1.0 + rng.random(cols)).astype(np.float64)
+    elif objective == "perturbed-l1":
+        rng = np.random.default_rng(int(objective_seed))
+        lp.col_cost_ = (1.0 + 1.0e-3 * rng.random(cols)).astype(np.float64)
     else:
         lp.col_cost_ = np.ones(cols)
     lp.sense_ = highspy.ObjSense.kMinimize
@@ -223,7 +226,7 @@ def main() -> None:
     ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--run-crossover", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--selector", choices=["highs-basis", "clarabel-support"], default="highs-basis")
-    ap.add_argument("--highs-objective", choices=["l1", "random"], default="l1")
+    ap.add_argument("--highs-objective", choices=["l1", "random", "perturbed-l1"], default="l1")
     ap.add_argument("--highs-objective-seed", type=int, default=1729)
     ap.add_argument("--basis-column-mode", choices=["all-basic", "positive-basic"], default="all-basic")
     ap.add_argument("--basis-positive-tol", type=float, default=1.0e-9)
