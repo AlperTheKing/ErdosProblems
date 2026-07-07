@@ -2474,3 +2474,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T12:55Z] ✔ MILESTONE-80 | certified+reverified k3/d5 (0/0); ledger 79 + k3/d5 = ~80/108; 15 chart-0-4 rows by me | Δ: 80 milestone
 [2026-07-07T12:57Z] ► 79/108 | launched 3/6,3/8 (last charts-0-4 pending); 4/6,4/5,3/9 still solving; then help Codex 7/9. My 15 rows certified.
 [2026-07-07T13:00Z] ✔ VERIFY-CODEX | DID: independently reverified Codex charts-7-9 certs ch8/d4, ch9/d10 | RESULT: both exact_ok=TRUE 0/0; ~19 hard rows now verified (15 mine + k4/G3,k6/G2,k6/G1,k5/G1,k8/d4,k9/d10) | Δ: conjunct-3 progress; 81/108, my 5 rows solving
+[2026-07-07T13:04Z] ✔ k4/d6,k3/d9 | certified+reverified (0/0); 17 chart-0-4 rows by me; ~83/108
