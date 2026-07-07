@@ -1,0 +1,50 @@
+{
+  "chart": 4,
+  "columns_json": "tmp\\eq_odl1_rung2_face_split_cg_k4_G3_allfam_checkpoint_lastopt_cols_v1.json",
+  "dominant": 10,
+  "dominant_name": "G3_XY_T",
+  "dual_box": 1.0,
+  "expected_check": {
+    "abs_diff": 2.60770320892334e-08,
+    "expected_objective": 20357506.2575708,
+    "tolerance": 0.001,
+    "within_tolerance": true
+  },
+  "pair_interval_summary": {
+    "delta_only_count": 0,
+    "delta_only_examples": [],
+    "face_delta_columns": 1578,
+    "face_gen_columns": 1578,
+    "gen_only_count": 0,
+    "gen_only_examples": [],
+    "lift_columns": 536,
+    "other_face_columns": 30,
+    "pair_closure_ok": true,
+    "pair_objects": 1578
+  },
+  "quotient_nnz": 316948,
+  "quotient_rows": 28806,
+  "rhs_nonzero": 16709,
+  "schema": "eq_odl1_rung2_dual_objective_gate_v1",
+  "seconds": 7.8289999999979045,
+  "selected_columns": 3722,
+  "solve": {
+    "ipm_iteration_count": 34,
+    "max_column_activity": 7.665948942303658e-08,
+    "message": "Optimal",
+    "model_status": 7,
+    "objective": 20357506.257570826,
+    "positive_column_activity_count": 0,
+    "row_dual_max": 1.0000000000001066,
+    "row_dual_min": -1.0000000000000282,
+    "row_dual_nonzero": 28628,
+    "run_status": 0,
+    "simplex_iteration_count": 328,
+    "solver": "ipm",
+    "success": true,
+    "threads": 32,
+    "time_limit": 600.0
+  },
+  "support": "derived",
+  "tier": "tier3"
+}

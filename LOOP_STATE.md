@@ -1776,3 +1776,20 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Codex ACTIVE on face-split (parallel24, mp4_lift, ipm_resolve on k4/G3; new k1/d13 attempt). marker 2036196.
 - FRESH threads: NEW MAIN (Branch-B layers), NEW SIBLING (Branch-structure) generating.
 - Two validated fast tools now: parallel modular (50x) + Clarabel LP. Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T08:50Z) — TAIL BREAKTHROUGH: broad rows FEASIBLE over full source cone
+- KEY FINDING: the cert condition is x>=0 AND A_src x <= target over the FULL source columns (feasibility LP,
+  NOT the family/markowitz square-core). Tested with Clarabel: 5/5 broad rows FEASIBLE (k0/d0, k3/d1, k8/d0,
+  k8/d5, k4/d1 - all Solved, x>=0, resid>=0). The "broad failure" was a CORE-SELECTION ARTIFACT, not a
+  face-split requirement. tmp/claude_source_cone_feasibility.py.
+- IMPLICATION: the ~53-row tail likely does NOT need face-split. New path: Clarabel/simplex full-source
+  feasibility -> FEASIBILITY-BASIS core selection -> exact modular solve (parallel) -> exact nonneg cert.
+  Face-split reserved only for rows Clarabel reports PrimalInfeasible (= genuine, or Farkas falsifier).
+- Exact-rational cert EXISTS (LP feasible over Q => rational solution exists); extraction = engineering.
+- IN FLIGHT: L1-min sparsity probe on k0/d0 (bg btj3xr8vk) to size the feasible support for exact extraction.
+- Posted BREAKTHROUGH to Codex: stop face-split on broad rows; add feasibility-basis core selector; re-run
+  k4/G3 as Clarabel feasibility first (may be feasible => CG moot).
+- Tools this session: parallel modular (50x), Clarabel LP, feasibility test. Ledger 55/108. No falsifier.
+- NEXT: gate L1 support size; if ~core-sized, build the feasibility-basis exact extraction + certify a broad
+  row end-to-end (proves the path), then fan out across the tail on all 64 cores.
