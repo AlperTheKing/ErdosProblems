@@ -29725,3 +29725,7 @@
 [2026-07-07T11:31:00Z] FAIL ATTACK | DID: Exact-solved d8 exported core with 48 workers. | RESULT: 280 negative core coefficients. | D: relaunch d8
 [2026-07-07T11:31:29Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d6.
 [2026-07-07T11:31:29Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d9.
+[2026-07-07T11:33:01Z] OK VERIFY | DID: Polled chart-8 extractors. | RESULT: no new core; process count 41. | D: launch d8 clarabel
+[2026-07-07T11:33:01Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d8.
+[2026-07-07T11:34:54Z] > VERIFY | NEXT: Poll all chart-8 routes for emitted cores or exact manifests.
+[2026-07-07T11:37:47Z] > VERIFY | NEXT: Poll active chart-8 full-source jobs after 120s.

@@ -46,3 +46,19 @@ the green module list):
 6. FIX CD telescope: contiguity alone does NOT prove telescoping unless weights are constant OR coefficient
    cancellation is explicitly checked.
 Full cleaned build contract (all 5 layers, corrected) is in the MAIN thread — extract at Branch-B build time.
+
+## BRANCH-B -> ODL BRIDGE THEOREM (MAIN, 2026-07-07, 11920c in-thread) — closes fix #4, conjunct-2 design COMPLETE
+The bridge is a PURE SLACK-DECOMPOSITION (exact algebra, zero hand-wave). Goes in Erdos23/BranchB/ODLBridge.lean.
+  CoreODLSlack_Q := supportSize_Q + eta - supportRowSum_Q     (this is the ODLFull.CoreODLGoal defect, need >=0)
+  R_Q            := N + supportRowSum_Q - supportSize_Q        (BranchB per-row quantity)
+  BranchB bound  : R_Q <= N + eta/2 - SigmaL_Q                 (certified by BranchBProvider)
+  IDENTITY: CoreODLSlack_Q = (N + eta/2 - SigmaL_Q - R_Q) + (eta/2 + SigmaL_Q)
+  Two nonneg inputs:
+    (1) BranchBSlack_Q := N + eta/2 - SigmaL_Q - R_Q >= 0   (from BranchBProvider soundness = the Banked-UPO bound)
+    (2) Payback_Q      := eta/2 + SigmaL_Q >= 0             (from GammaAggregation: eta>=0 AND SigmaL_Q>=0)
+  => CoreODLSlack_Q >= 0 => ODLFull.CoreODLGoal.  theorem branchB_to_coreODLGoal.
+  Objects: branchBPaybackNF ctx q := nfAdd (nfConst (eta/2)) (sigmaL_NF ctx q); ODL-slack NF; the two nonneg
+  lemmas; the exact NF identity via checkEq. Uses ONLY existing green decls (PolyCert NF/checkEq, GammaAggregation
+  eta>=0/SigmaL>=0). => ODLFullProvider.branchB is now checker-PRODUCED, not assumed. CONJUNCT-2 DESIGN COMPLETE
+  (5 layers Dict24/CombinedHBD/CDTelescope/BankedUPO/BranchBProvider + self-review 6 fixes + this bridge).
+  Full 11920c derivation in MAIN thread; build at Branch-B time.
