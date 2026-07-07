@@ -62,3 +62,37 @@ The bridge is a PURE SLACK-DECOMPOSITION (exact algebra, zero hand-wave). Goes i
   eta>=0/SigmaL>=0). => ODLFullProvider.branchB is now checker-PRODUCED, not assumed. CONJUNCT-2 DESIGN COMPLETE
   (5 layers Dict24/CombinedHBD/CDTelescope/BankedUPO/BranchBProvider + self-review 6 fixes + this bridge).
   Full 11920c derivation in MAIN thread; build at Branch-B time.
+
+## SURFACE RECONCILIATION vs REAL GREEN API (Claude, 2026-07-07) — corrects self-review fix #3 concretely
+Extracted MAIN's full 43940c build contract (section 0 "Allowed external surface"). GPT's contract
+INVENTED a Ctx-based PolyCert API (`PolyCert.Ctx`, `eval ctx : Ctx -> NF -> Rat`,
+`checkEq ctx a b`, `checkConeCert_sound`) with `sorry` placeholders. The REAL green surface is
+ENV-based (verified in PolyCert.lean, sorry/admit/native_decide count = 0):
+  - `NF.eval (env : Var -> Q) (f : NF) : Q`
+  - `checkEq (f g : NF) : Bool` ; `checkEq_sound (f g) (h : checkEq f g = true) (env) : f.eval env = g.eval env`  [L284, PROVEN]
+  - `structure ConeCert { target base : NF, mults slacks : List NF, hid : checkEq target (comboNF base mults slacks) = true, hbase, hmults }` [L367]
+  - `ConeCert.sound (c) (env) (hvars : forall v, 0<=env v) (hslacks : forall s in c.slacks, 0<=NF.eval env s) : 0 <= NF.eval env c.target` [L379, PROVEN]
+ANY Branch-B build MUST use this env-based API, NOT GPT's Ctx API (would fail to compile).
+
+## THE BRIDGE IS ALREADY GREEN MACHINERY (major simplification)
+ODLFull.lean already provides the bridge pattern (all PROVEN, linarith):
+  - `structure ODLCoreData { support : List Nat, supportSize supportRowSum : Q, supportSize_le_N : supportSize <= G.n }` [L28]
+  - `CoreODLGoal G c rows Q core := core.supportRowSum <= core.supportSize + etaQ G c` [L36]
+  - `coreDefect core := core.supportSize + etaQ G c - core.supportRowSum` [L122]
+  - `CoreODLGoal_of_defect_nonneg (core) (h : 0 <= coreDefect core) : CoreODLGoal ...` [L127, PROVEN]
+  - `coreODLGoal_of_coneCert (core) (cert : ConeCert) (env) (hvars) (hslacks) (htarget : NF.eval env cert.target = coreDefect core) : CoreODLGoal ...` [L139, PROVEN]
+So Branch-B rows enter ODL via EITHER a defect-nonneg proof (linarith from the Banked-UPO bound)
+OR a ConeCert whose target NF = coreDefect. No new "bridge layer" needed beyond the slack lemma.
+
+## ODLBridge.lean WRITTEN (Erdos23Delta0/BranchB/ODLBridge.lean) — SOURCE correct, BUILD QUEUED
+theorem branchB_to_coreODLGoal {G c rows Q} (core : ODLCoreData G c rows Q) (SigmaL : Q)
+  (hEta : 0 <= etaQ G c) (hSigmaL : 0 <= SigmaL)
+  (hBankedUPO : (G.n:Q) + core.supportRowSum - core.supportSize <= (G.n:Q) + etaQ G c/2 - SigmaL)
+  : CoreODLGoal G c rows Q core := by apply CoreODLGoal_of_defect_nonneg core; unfold coreDefect; linarith
+Math verified: hBankedUPO => supportSize-supportRowSum >= SigmaL-eta/2 => coreDefect = (supportSize-supportRowSum)+eta >= SigmaL+eta/2 >= 0. linarith closes.
+STATUS: source written, NOT yet honest-green-built (no cached ODLFull.olean; full CertGraph->PolyCert->ODLFull
+chain rebuild is multi-minute + CPU-heavy, deferred off the saturated machine). `hBankedUPO` is EXACTLY the
+per-row obligation the (still-unbuilt) BankedUPO/BranchBProvider layers must certify per Branch-B row.
+NEXT (build tick, CPU free): compile CertGraph+PolyCert+ODLFull+ODLBridge in dep order into a tmp olean
+tree; EXIT=0 + empty log + sorry/axiom grep before recording green.
+

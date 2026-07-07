@@ -29729,3 +29729,66 @@
 [2026-07-07T11:33:01Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d8.
 [2026-07-07T11:34:54Z] > VERIFY | NEXT: Poll all chart-8 routes for emitted cores or exact manifests.
 [2026-07-07T11:37:47Z] > VERIFY | NEXT: Poll active chart-8 full-source jobs after 120s.
+[2026-07-07T11:41:06Z] > VERIFY | NEXT: Poll chart-8 full-source routes after 180s.
+[2026-07-07T11:41:26Z] > ATTACK | NEXT: Stop weaker chart-8 IPM duplicate routes and leave Clarabel active.
+[2026-07-07T11:41:27Z] OK ATTACK | DID: Stopped weaker chart-8 duplicate routes. | RESULT: stopped 5 processes. | D: Clarabel only
+[2026-07-07T11:43:51Z] > VERIFY | NEXT: Poll three Clarabel chart-8 routes for emitted cores.
+[2026-07-07T11:44:49Z] OK ATTACK | DID: Patched basis exporter to allow square time-limit cores. | RESULT: _feasibility_basis_core.py exportable_status. | D: time-limit core replay
+[2026-07-07T11:48:06Z] > ATTACK | NEXT: Stop long Clarabel chart-8 runs and launch patched 600s pipelines.
+[2026-07-07T11:48:06Z] OK ATTACK | DID: Stopped long Clarabel chart-8 runs. | RESULT: stopped 3 processes. | D: patched pipelines
+[2026-07-07T11:55:37Z] FAIL VERIFY | DID: Checked k8/d6 patch600 seed11117 pipeline. | RESULT: exact false, 7 neg residuals, 2 neg coeffs. | D: retry seed
+[2026-07-07T11:55:37Z] > ATTACK | NEXT: Launch k8/d6 patched 600s retry seed44449.
+[2026-07-07T12:02:18Z] OK VERIFY | DID: Checked k8/d6 seed44449 pipeline. | RESULT: exact true, 0 neg residuals, 0 neg coeffs. | D: manifest
+[2026-07-07T12:02:18Z] > VERIFY | NEXT: Emit source manifest for k8/d6 seed44449 and harvest v106.
+[2026-07-07T12:02:20Z] OK VERIFY | DID: Emitted k8/d6 manifest and harvested v106. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v106_codex.json | D: count updated
+[2026-07-07T12:08:22Z] > ATTACK | NEXT: Stop d9 16-worker wrapper and run direct 48-worker exact solve.
+[2026-07-07T12:15:32Z] > VERIFY | NEXT: Poll remaining k8/d8 and k8/d9 exact-solve jobs and artifacts.
+[2026-07-07T12:15:56Z] OK VERIFY | DID: Polled remaining k8 jobs. | RESULT: k8/d8 and k8/d9 cores exist; d8 wrapper pid94900 active, d9 fast48 pid25008 active. | D: inspect workers
+[2026-07-07T12:16:02Z] > VERIFY | NEXT: Inspect active Python command lines to remove stale exact-solve workers.
+[2026-07-07T12:16:36Z] > ATTACK | NEXT: Stop orphaned exact-solve worker groups whose parent processes are missing.
+[2026-07-07T12:17:13Z] OK ATTACK | DID: Stopped orphaned exact-solve worker groups. | RESULT: stopped 32 python workers from missing parents. | D: live d8/d9 only
+[2026-07-07T12:17:39Z] > VERIFY | NEXT: Wait 60s and check d8/d9 modular summaries.
+[2026-07-07T12:18:58Z] OK VERIFY | DID: Waited 60s for d8/d9 modular summaries. | RESULT: no summary files; 68 python processes active. | D: continue exact solves
+[2026-07-07T12:19:55Z] > VERIFY | NEXT: Wait 120s for d8/d9 exact solver completion.
+[2026-07-07T12:22:13Z] OK VERIFY | DID: Waited 120s for d8/d9 exact solvers. | RESULT: no modular summaries; pids 94900 and 25008 still active. | D: continue exact solves
+[2026-07-07T12:22:46Z] > VERIFY | NEXT: Wait 180s for native prime-solve wave to finish and check reconstruction.
+[2026-07-07T12:25:56Z] OK VERIFY | DID: Waited 180s for native prime wave. | RESULT: no summaries; native prime-solve count 2. | D: wait stragglers
+[2026-07-07T12:26:31Z] OK VERIFY | DID: Checked d8/d9 reconstruction state. | RESULT: d9 CRT state written; stock modular_core_solve pid99188 active. | D: wait d9 summary
+[2026-07-07T12:27:20Z] OK ATTACK | DID: Ran d9 direct 48-worker exact solve. | RESULT: tmp/eq_odl1_rung2_core_solution_k8_d9_patch600_s33331_fast48.jsonl | D: convert/check
+[2026-07-07T12:27:48Z] FAIL VERIFY | DID: Checked k8/d9 384-prime modular summary. | RESULT: reconstructed false; partial_reconstruction_count 3356/5366. | D: extend CRT primes
+[2026-07-07T12:28:04Z] > ATTACK | NEXT: Patch parallel modular helper to resume CRT states for extended-prime runs.
+[2026-07-07T12:28:25Z] OK ATTACK | DID: Patched parallel modular helper with --resume-crt. | RESULT: tmp/codex_modular_solve_cpp_parallel.py | D: launch d9 extended primes
+[2026-07-07T12:28:33Z] > ATTACK | NEXT: Launch k8/d9 resumed 768-prime 48-worker modular solve.
+[2026-07-07T12:28:50Z] OK ATTACK | DID: Launched k8/d9 resumed 768-prime solve. | RESULT: session 29965, resume CRT fast48 384-prime state. | D: wait d9 p768
+[2026-07-07T12:29:41Z] OK VERIFY | DID: Inspected active native prime commands. | RESULT: native processes are k8/d9 p768 wave; d8 no CRT checkpoint yet. | D: keep d8, wait d9
+[2026-07-07T12:29:51Z] > VERIFY | NEXT: Wait 180s for k8/d9 p768 resumed modular solve.
+[2026-07-07T12:33:00Z] OK VERIFY | DID: Waited 180s for d9 p768 solve. | RESULT: no p768 summary; native_count 0; python pid76212 active. | D: inspect reconstruction
+[2026-07-07T12:33:26Z] > ATTACK | NEXT: Patch parallel modular helper to checkpoint CRT after each completed wave.
+[2026-07-07T12:33:38Z] OK ATTACK | DID: Patched parallel helper wave checkpointing. | RESULT: tmp/codex_modular_solve_cpp_parallel.py | D: future reruns safer
+[2026-07-07T12:35:17Z] > ATTACK | NEXT: Stop d8/d9 small-batch modular parents and relaunch with large-batch prime solving.
+[2026-07-07T12:36:35Z] OK ATTACK | DID: Stopped small-batch d8/d9 modular parents. | RESULT: stopped 20 processes. | D: relaunch large-batch
+[2026-07-07T12:36:51Z] > ATTACK | NEXT: Launch large-batch d8 and resumed d9 modular solves with 64 total workers.
+[2026-07-07T12:37:01Z] OK ATTACK | DID: Launched large-batch d8/d9 modular solves. | RESULT: d9 workers48 batch384 resume; d8 workers16 batch768 fresh. | D: wait summaries
+[2026-07-07T12:37:43Z] OK VERIFY | DID: Verified large-batch worker split. | RESULT: d9 48 native workers, d8 16 native workers. | D: wait summaries
+[2026-07-07T12:37:57Z] > VERIFY | NEXT: Wait 180s for large-batch d8/d9 modular jobs.
+[2026-07-07T12:41:19Z] OK VERIFY | DID: Waited 180s for large-batch jobs. | RESULT: no summaries; native split d8=16,d9=48. | D: continue wait
+[2026-07-07T12:41:49Z] OK VERIFY | DID: Checked Claude mailbox. | RESULT: no d8/d9 cert; Lean ODLBridge green reported. | D: continue d8/d9 compute
+[2026-07-07T12:42:06Z] > VERIFY | NEXT: Wait 300s for large-batch d8/d9 runs.
+[2026-07-07T12:47:28Z] OK VERIFY | DID: Waited 300s for large-batch jobs. | RESULT: no summaries; native_total 64 with d8=16,d9=47. | D: continue prime solves
+[2026-07-07T12:48:15Z] > VERIFY | NEXT: Wait 180s and check d9 big-batch completion first.
+[2026-07-07T12:51:26Z] OK VERIFY | DID: Waited 180s for d9 big-batch. | RESULT: d9 native workers done; d8 native workers 16 remain; no d9 summary yet. | D: inspect d9 reconstruction
+[2026-07-07T12:52:02Z] FAIL VERIFY | DID: Checked d9 big-batch stderr. | RESULT: Python int string digit limit crashed CRT store at 768 primes. | D: patch int limit
+[2026-07-07T12:52:21Z] > ATTACK | NEXT: Patch modular scripts to disable Python big-int string digit cap.
+[2026-07-07T12:52:52Z] OK ATTACK | DID: Patched Python big-int digit cap in modular scripts. | RESULT: codex_modular_solve_cpp_parallel.py and _modular_core_solve.py. | D: restart d8/d9
+[2026-07-07T12:52:59Z] > ATTACK | NEXT: Stop pre-patch d8 large-batch job before CRT-store crash.
+[2026-07-07T12:53:54Z] OK ATTACK | DID: Stopped pre-patch d8 large-batch job. | RESULT: stopped 31 processes. | D: relaunch patched d8/d9
+[2026-07-07T12:54:11Z] > ATTACK | NEXT: Relaunch patched large-batch d8/d9 modular solves after int-limit fix.
+[2026-07-07T12:54:22Z] OK ATTACK | DID: Relaunched patched p768 large-batch d8/d9 jobs. | RESULT: d9 p768b2 resume; d8 p768b2 fresh. | D: verify workers
+[2026-07-07T12:55:06Z] OK VERIFY | DID: Verified patched p768b2 worker split. | RESULT: d9=48,d8=16,native_total=64. | D: wait summaries
+[2026-07-07T12:55:22Z] > VERIFY | NEXT: Wait 300s for patched p768b2 d8/d9 artifacts.
+[2026-07-07T13:00:50Z] OK VERIFY | DID: Waited 300s for patched p768b2 jobs. | RESULT: no artifacts; native split d8=16,d9=48. | D: continue prime solves
+[2026-07-07T13:01:19Z] OK VERIFY | DID: Checked native process ages. | RESULT: d8/d9 native tasks spawned in current wave window. | D: continue wait
+[2026-07-07T13:01:35Z] > VERIFY | NEXT: Wait another 300s for p768b2 summaries.
+[2026-07-07T13:07:13Z] OK VERIFY | DID: Waited another 300s for p768b2 jobs. | RESULT: no artifacts; native split d8=16,d9=48. | D: continue wait
+[2026-07-07T13:07:35Z] > VERIFY | NEXT: Wait 300s more for p768b2 exact artifacts.
+[2026-07-07T13:12:46Z] OK VERIFY | DID: Waited for p768b2 jobs. | RESULT: d9 CRT state written; d9 native done; d8 native 16 remains. | D: wait d9 summary

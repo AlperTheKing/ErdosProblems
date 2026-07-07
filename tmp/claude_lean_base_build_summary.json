@@ -1,0 +1,107 @@
+{
+ "build_root": "E:\\Projects\\ErdosProblems\\tmp\\claude_lean_o_base_v1",
+ "total_sec": 601.2,
+ "all_ok": true,
+ "green_count": 14,
+ "total": 14,
+ "results": [
+  {
+   "module": "Erdos23Delta0.Skeleton",
+   "rc": 0,
+   "sec": 68.616,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.Darts",
+   "rc": 0,
+   "sec": 29.723,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.Distances",
+   "rc": 0,
+   "sec": 53.301,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.Gamma",
+   "rc": 0,
+   "sec": 39.848,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.Row",
+   "rc": 0,
+   "sec": 20.214,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.BankL",
+   "rc": 0,
+   "sec": 58.353,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.BranchAInterface",
+   "rc": 0,
+   "sec": 40.921,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.PacketExchange",
+   "rc": 0,
+   "sec": 21.484,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.CDCore",
+   "rc": 0,
+   "sec": 40.51,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.PolyCert",
+   "rc": 0,
+   "sec": 79.449,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.Bank0Algebra",
+   "rc": 0,
+   "sec": 24.489,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.CertGraph",
+   "rc": 0,
+   "sec": 83.276,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.ODLFull",
+   "rc": 0,
+   "sec": 19.692,
+   "ok": true,
+   "err_tail": ""
+  },
+  {
+   "module": "Erdos23Delta0.BranchB.ODLBridge",
+   "rc": 0,
+   "sec": 21.287,
+   "ok": true,
+   "err_tail": ""
+  }
+ ]
+}

@@ -15,6 +15,9 @@ import time
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
+
 WRITEUP = str(Path(__file__).resolve().parent.parent / "problems" / "23" / "writeup")
 if WRITEUP not in sys.path:
     sys.path.insert(0, WRITEUP)
@@ -47,6 +50,7 @@ def main() -> None:
     ap.add_argument("--store-solution", type=Path, required=True)
     ap.add_argument("--summary", type=Path, required=True)
     ap.add_argument("--store-crt", type=Path, default=None)
+    ap.add_argument("--resume-crt", type=Path, default=None)
     args = ap.parse_args()
 
     t0 = time.time()
@@ -58,12 +62,16 @@ def main() -> None:
     used_primes: list[int] = []
     skipped_primes: list[int] = []
     reconstructed = False
+    if args.resume_crt:
+        residues, modulus, used_primes, skipped_primes = mcs.load_crt(args.resume_crt, n)
 
     exe = str(args.native_exe.resolve())
     core = str(args.core.resolve())
+    used_set = set(used_primes) | set(skipped_primes)
+    pending_primes = [p for p in primes if p not in used_set]
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
-        for start in range(0, len(primes), batch):
-            wave = primes[start:start + batch]
+        for start in range(0, len(pending_primes), batch):
+            wave = pending_primes[start:start + batch]
             results = dict(pool.map(solve_native_args, [(exe, core, p) for p in wave]))
             for p in wave:
                 sol_p = results[p]
@@ -81,6 +89,8 @@ def main() -> None:
                     modulus = old * p
                 used_primes.append(p)
             if residues is not None:
+                if args.store_crt:
+                    mcs.store_crt(args.store_crt, residues, modulus, used_primes, skipped_primes)
                 cands = [replay.rational_reconstruct(a, modulus) for a in residues]
                 if all(c is not None for c in cands):
                     reconstructed = True

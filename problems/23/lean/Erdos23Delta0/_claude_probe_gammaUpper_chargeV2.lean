@@ -1,0 +1,4 @@
+import Erdos23Delta0.FCBridge
+import Erdos23Delta0.GammaAggregation
+
+#print axioms Erdos23Delta0.GammaAggregation.gammaUpper_from_chargeCertV2

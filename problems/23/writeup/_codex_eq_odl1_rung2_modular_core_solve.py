@@ -5,8 +5,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from fractions import Fraction
 from pathlib import Path
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 import _codex_eq_odl1_rung2_modular_replay as replay
 

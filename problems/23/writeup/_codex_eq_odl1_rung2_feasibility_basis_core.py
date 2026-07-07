@@ -315,7 +315,8 @@ def main() -> None:
         })
         if row_meta is not None:
             payload["row_selection"] = row_meta
-        if "Optimal" in model_status_text and len(core_cols) == len(selected_rows) and (rank_ok is not False):
+        exportable_status = "Optimal" in model_status_text or "Time limit" in model_status_text
+        if exportable_status and len(core_cols) == len(selected_rows) and (rank_ok is not False):
             payload["export_core"] = export_core(args.out_core, target_frac, col_maps, core_cols, selected_rows)
     else:
         sol, x, residual = solve_clarabel_support(
