@@ -2468,3 +2468,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T12:27Z] ► 67/108 | load cleared (py 86->32), launched remaining died rows 3/10,4/14; 5 chart-0-4 rows running (3/4,3/13,4/13,3/10,4/14); Codex 5/7/8/9; pending 41. Gate+verify toward 70.
 [2026-07-07T12:30Z] ✔ MILESTONE-70 | DID: certified+reverified k3/d13,k4/d13 (exact_ok 0/0) | RESULT: ~71/108 (ledger 69 + my 2), PAST 70; my verified chart-0-4 certs now 9 (k0/d0,d14,d11; k3/d1,d2,d13; k4/d1,d8,d13) | Δ: 70 milestone crossed, ~37 pending
 [2026-07-07T12:41Z] ✔ 75->77 | DID: certified+reverified k3/d10,k4/d14 (0/0); launched 4/6,4/5,3/9 | RESULT: ~77/108, 12 chart-0-4 rows certified by me; marker advanced | Δ: toward 80
+[2026-07-07T12:44Z] ✔ k3/d4 | certified+reverified k3/d4 (0/0); 13 chart-0-4 rows by me; ledger 76/108; charts 0-4 nearly exhausted -> will help Codex 7/9

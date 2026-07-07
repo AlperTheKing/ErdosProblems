@@ -29596,3 +29596,8 @@
 2026-07-07T09:40:46.4944941Z OK VERIFY | DID: emitted repaired manifest for k5/d4 and rebuilt ledger | RESULT: 76/108 certified; pending=32 | D: none
 2026-07-07T09:41:12.5865961Z > VERIFY | NEXT: run exact one-row repair for k8/d5 one-negative residual
 2026-07-07T09:42:28.0429378Z OK VERIFY | DID: one-row repair k8/d5 | RESULT: first_hit_exact_ok=true initial_neg=1 | D: checker_next
+2026-07-07T09:42:45.9330718Z > ATTACK | NEXT: launch fresh rows k8/d6,k8/d4,k9/d10,k8/d8 at 8 workers each
+2026-07-07T09:43:03.2684940Z OK ATTACK | DID: launched four cpp random rows with 8 workers each | RESULT: k8/d6,k8/d4,k9/d10,k8/d8 running | D: none
+2026-07-07T09:44:15.1478133Z OK VERIFY | DID: emitted repaired manifest for k8/d5 and rebuilt ledger | RESULT: 77/108 certified; pending=31 | D: none
+2026-07-07T09:45:03.3294832Z OK VERIFY | DID: harvested latest Claude files | RESULT: no count change; k3/d4 duplicate; ledger remains 77/108 | D: none
+2026-07-07T09:45:33.9731397Z > ATTACK | NEXT: patch perturbed-l1 objective support for faster retry cores
