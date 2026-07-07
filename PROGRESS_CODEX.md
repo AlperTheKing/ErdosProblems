@@ -29721,3 +29721,7 @@
 [2026-07-07T11:27:30Z] > VERIFY | NEXT: Poll chart-8 exact/core jobs after 60s.
 [2026-07-07T11:28:00Z] > ATTACK | NEXT: Stop d8 duplicate/8-worker jobs and rerun exact solve with 48 workers.
 [2026-07-07T11:28:01Z] OK ATTACK | DID: Stopped redundant d8 jobs. | RESULT: stopped 23 processes. | D: 48-worker solve
+[2026-07-07T11:30:36Z] OK ATTACK | DID: Ran d8 48-worker modular solve. | RESULT: tmp/eq_odl1_rung2_core_solution_k8_d8_tl1800_s314159_fast48.jsonl | D: convert/check
+[2026-07-07T11:31:00Z] FAIL ATTACK | DID: Exact-solved d8 exported core with 48 workers. | RESULT: 280 negative core coefficients. | D: relaunch d8
+[2026-07-07T11:31:29Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d6.
+[2026-07-07T11:31:29Z] > ATTACK | NEXT: Run Clarabel-support QR core extraction for k8/d9.

@@ -2483,3 +2483,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T13:38Z] ✔ k3/d6-FIXED + claim1,2 | k3/d6 seed2027 exact_ok=TRUE (degenerate-seed fix works, not falsifier); claimed+launched 1/13,2/13,1/14; ~99/108, ~44 hard rows verified all PASS
 [2026-07-07T14:20Z] ► SEED-SEARCH | 102/108 stuck on 6 degenerate rows; parallel seed search: I take 8/9(s99991),8/8(s88883), Codex 8/6,6/4; my 0/4(s2027),1/14 running. All feasible (HiGHS Optimal), not falsifiers.
 [2026-07-07T14:28Z] ✔ AGG-SCRIPT | wrote tmp/claude_aggregate_reverify.py (canonical conjunct-3 pass: all 108 rows, SHA-pin + exact recheck, ready to fire at 108); 105/108, chart-8 trio grinding
+[2026-07-07T14:32Z] ✔ CHART8->CODEX | DIAGNOSIS: chart-8 dim~6025, HiGHS times out at default 600s (need tl1800); killed my futile attempts, Codex takes all 3 (has tl1800). I verify. 105/108
