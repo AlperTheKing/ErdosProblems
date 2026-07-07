@@ -29672,3 +29672,5 @@
 2026-07-07T11:02:09Z FAIL ATTACK | DID: one-row repair k6/d4 row 17238 | RESULT: first_hit_exact_ok false hit_count=9 | D: needs multirepair/seed
 2026-07-07T11:02:09Z OK ATTACK | DID: launched k6/d4 seed987654 retry | RESULT: 1 Start-Process job | D: active
 2026-07-07T11:06:06Z OK VERIFY | DID: polled tail | RESULT: k3/d12 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
+2026-07-07T11:10:26Z FAIL VERIFY | DID: polled k6/d4 seed987654 | RESULT: exact false 1 neg residual 3 neg coeffs | D: launch variants
+2026-07-07T11:10:26Z OK ATTACK | DID: launched k6/d4 random seed13579 and perturbed-l1 seed24680 | RESULT: 2 Start-Process jobs | D: active
