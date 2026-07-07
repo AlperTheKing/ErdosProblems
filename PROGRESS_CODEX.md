@@ -29475,3 +29475,24 @@
 2026-07-07T06:14:25Z > COMPUTE | NEXT: Run k4/G3 full-source feasibility-basis core extraction with 32 HiGHS threads and 600s limit.
 2026-07-07T06:15:55Z OK COMPUTE | DID: Ran k4/G3 full-source feasibility-basis extraction. | RESULT: Optimal square core dimension=3415 variables=45514 float_nonzero=2396 | D: exact modular solve
 2026-07-07T06:16:07Z > COMPUTE | NEXT: Run 48-worker exact modular solve for k4/G3 feasibility-basis core dimension 3415.
+2026-07-07T06:33:43Z FAIL COMPUTE | DID: Interrupted k4/G3 exact modular solve after long 3415-core run. | RESULT: no summary; process in prime-wave map | D: reduce support core
+2026-07-07T06:34:30Z > EDIT | NEXT: Add Clarabel-support selector to Codex feasibility-basis exporter for smaller exact cores.
+2026-07-07T06:35:48Z OK EDIT | DID: Added --selector clarabel-support with QR row selection to feasibility-basis exporter. | RESULT: patched file | D: py_compile
+2026-07-07T06:35:59Z OK VERIFY | DID: py_compile feasibility-basis exporter after Clarabel-support patch. | RESULT: compile passed | D: wait Claude k0 febc
+2026-07-07T06:36:33Z OK SYNC | DID: Posted Clarabel-support exporter status and k4/G3 command chain to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: wait CPU/free process
+2026-07-07T06:37:33Z OK CHECK | DID: Rechecked Claude k0 febc process after wait. | RESULT: process 81640 still running; no *febc* artifact listed | D: pause Codex heavy compute
+2026-07-07T06:38:07Z > SYNC | NEXT: Read Claude mailbox and inspect febc process/artifacts before launching k4/G3.
+2026-07-07T06:38:36Z > EDIT | NEXT: Add one-row Clarabel-support exact pipeline wrapper for extraction, CRT, conversion, and exact check.
+2026-07-07T06:39:58Z OK EDIT | DID: Added one-row febc pipeline wrapper. | RESULT: problems/23/writeup/_codex_eq_odl1_rung2_febc_pipeline.py | D: compile
+2026-07-07T06:40:19Z OK VERIFY | DID: py_compile/help for febc pipeline. | RESULT: compile passed and --help printed | D: inspect Claude febc artifact
+2026-07-07T06:40:45Z OK CHECK | DID: Inspected Claude k0 febc artifact while process active. | RESULT: dimension=2314 cols=2314 terms=0 partial file | D: wait for complete artifact
+2026-07-07T06:42:04Z FAIL CHECK | DID: Rechecked Claude k0 febc artifact after wait. | RESULT: still partial rhs=2314 terms=0 process active | D: prepare independent k4 stop-after-core when CPU policy allows
+2026-07-07T06:42:24Z > EDIT | NEXT: Make Codex feasibility core export atomic to prevent partial core consumption.
+2026-07-07T06:43:02Z OK EDIT | DID: Patched feasibility-basis core export to write tmp then atomic replace. | RESULT: patched file | D: compile
+2026-07-07T06:43:17Z OK VERIFY | DID: py_compile after atomic export patch. | RESULT: compile passed | D: low-thread k4/G3 stop-after-core
+2026-07-07T06:43:17Z > COMPUTE | NEXT: Run k4/G3 Clarabel-support stop-after-core with 8 threads to avoid competing with Claude exact/Clarabel job.
+2026-07-07T06:48:16Z FAIL COMPUTE | DID: Stopping Codex k4/G3 L1 stop-after-core after no output under contention. | RESULT: processes 48488/52352 active, no k4 artifact | D: add zero-objective support selector
+2026-07-07T06:48:34Z OK COMPUTE | DID: Stopped Codex-owned k4/G3 L1 extractor processes 48488/52352. | RESULT: stopped if present | D: add zero-objective support selector
+2026-07-07T06:49:35Z > COMPUTE | NEXT: Exact-solve completed k0/d0 febc core dimension 2314 with 48-worker modular solver.
+2026-07-07T06:50:16Z FAIL COMPUTE | DID: Exact-solved Claude k0/d0 febc core with 48-worker modular solver. | RESULT: all 384 primes skipped; resume CRT file missing; core singular | D: rerun with rank-gated Codex selector
+2026-07-07T06:50:32Z > COMPUTE | NEXT: Run k0/d0 Codex Clarabel-support selector with QR rank gate, stop after core.

@@ -55,29 +55,40 @@ S = [j for j in range(ncol) if xstar[j] > tau]
 nS = len(S)
 print(f"support |S|={nS} (tau={tau})", flush=True)
 
-# 2) most-binding rows -> QR-pivot to nS independent rows
+# 2) RANK-AWARE basis: independent columns S' (rank r0) + r0 independent binding rows T
 Ax = A.dot(xstar)
 r = target - Ax                      # residual (>=0 ~feasible; ~0 = binding)
-cand = np.argsort(np.abs(r))[: min(m, 4 * nS + 50)]   # most-binding candidate rows
-A_cand_S = np.asarray(A[cand][:, S].todense())         # (|cand| x nS)
-# pivoted QR on transpose picks independent rows (columns of A_cand_S.T)
-_, R, piv = qr(A_cand_S.T, mode="economic", pivoting=True)
-diag = np.abs(np.diag(R))
-tol = max(diag.max() * 1e-9, 1e-12) if diag.size else 1e-12
-rank = int((diag > tol).sum())
-sel = piv[:nS]
-T = [int(cand[i]) for i in sel[:nS]]
-print(f"tight_candidates={len(cand)} qr_rank={rank} selected_rows={len(T)} need={nS} "
-      f"square={rank >= nS and len(T) == nS}", flush=True)
+AS = A[:, S]                          # (m x nS)
+rownorm = np.asarray(np.abs(AS).sum(axis=1)).ravel()
+nontrivial = np.where(rownorm > 1e-12)[0]                   # exclude all-zero (0<=0 trivial) rows
+binding = int((np.abs(r[nontrivial]) < 1e-7).sum())
+order = nontrivial[np.argsort(np.abs(r[nontrivial]))]       # most-binding non-trivial first
+cand = order[: min(len(order), 6 * nS + 100)]
+A_cand_S = np.asarray(AS[cand].todense())                  # (|cand| x nS)
+# (a) independent COLUMNS of A_cand_S -> rank r0 basis columns S'
+_, Rc, pivc = qr(A_cand_S, mode="economic", pivoting=True)
+dc = np.abs(np.diag(Rc)); tolc = max(dc.max() * 1e-9, 1e-12) if dc.size else 1e-12
+r0 = int((dc > tolc).sum())
+colsel = pivc[:r0]                                          # local indices into S
+Sb = [S[c] for c in colsel]                                # basis source columns
+# (b) independent ROWS over the basis columns -> r0 tight rows T
+A_cand_Sb = A_cand_S[:, colsel]                            # (|cand| x r0)
+_, Rr, pivr = qr(A_cand_Sb.T, mode="economic", pivoting=True)
+dr = np.abs(np.diag(Rr)); tolr = max(dr.max() * 1e-9, 1e-12) if dr.size else 1e-12
+rrank = int((dr > tolr).sum())
+T = [int(cand[i]) for i in pivr[:r0]]
+rank = min(r0, rrank)
+print(f"nontrivial_rows={len(nontrivial)} binding_nontrivial={binding} candidates={len(cand)} "
+      f"col_rank r0={r0} row_rank={rrank} |Sb|={len(Sb)} |T|={len(T)} square={r0 == rrank == len(T)}", flush=True)
 
-# 3) exact square core A[T,S] x_S = target[T], col k -> source_col S[k]
-recs = [{"type": "meta", "dimension": nS}]
-for k, j in enumerate(S):
+# 3) exact square core A[T,Sb] x = target[T], core col k -> source_col Sb[k]
+recs = [{"type": "meta", "dimension": len(Sb)}]
+for k, j in enumerate(Sb):
     recs.append({"type": "col", "col": k, "source_col": j})
 for ti, row in enumerate(T):
     tv = target_frac[row]
     recs.append({"type": "rhs", "row": ti, "value": f"{tv.numerator}/{tv.denominator}"})
-    for k, j in enumerate(S):
+    for k, j in enumerate(Sb):
         c = col_map[j].get(row)
         if c:
             recs.append({"type": "term", "row": ti, "col": k, "value": f"{c.numerator}/{c.denominator}"})
@@ -85,5 +96,6 @@ out_core.parent.mkdir(parents=True, exist_ok=True)
 with out_core.open("w", encoding="utf-8") as f:
     for rec in recs:
         f.write(json.dumps(rec) + "\n")
-print(json.dumps({"row": f"{chart}/{dom}", "dim": nS, "rank": rank, "square": rank >= nS,
+print(json.dumps({"row": f"{chart}/{dom}", "dim": len(Sb), "col_rank": r0, "row_rank": rrank,
+                  "square": r0 == rrank == len(T), "support": nS,
                   "core": str(out_core), "clarabel_status": str(sol.status)}))
