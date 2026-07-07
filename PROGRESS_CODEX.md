@@ -29604,3 +29604,6 @@
 2026-07-07T09:46:39.4234001Z OK ATTACK | DID: added perturbed-l1 objective mode and help-checked scripts | RESULT: option visible in core and pipeline help | D: retry_lane
 2026-07-07T09:50:45.1934473Z OK VERIFY | DID: polled harvest for codex/claude pipelines | RESULT: no new manifests; ledger remains 77/108 | D: none
 2026-07-07T09:53:39.3264620Z OK VERIFY | DID: harvested Claude k4/d9 | RESULT: ledger v79 certified_count=78/108 pending_count=30 | D: none
+2026-07-07T09:55:06.3021903Z OK VERIFY | DID: harvested k9/d10 exact row | RESULT: ledger v80 certified_count=79/108 pending_count=29 | D: perturbed_retry_next
+2026-07-07T09:55:37.0017251Z > ATTACK | NEXT: launch perturbed-l1 retries k8/d6,k8/d8,k8/d9
+2026-07-07T09:55:56.1916509Z OK ATTACK | DID: launched perturbed-l1 retries with 8 workers | RESULT: k8/d6,k8/d8,k8/d9 running | D: retry_lane
