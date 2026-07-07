@@ -780,6 +780,7 @@ def main() -> None:
                 "last_artificial_sum": last.get("phase1", {}).get("artificial_sum"),
                 "last_positive_added": None if "pricing" not in last else last["pricing"].get("positive_added_columns"),
                 "support_count": out.get("support_count"),
+                "emitted_last_optimal_columns_json": out.get("emitted_last_optimal_columns_json"),
                 "emitted_support_columns_json": out.get("emitted_support_columns_json"),
                 "summary": str(args.summary),
             },

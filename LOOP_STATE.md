@@ -1712,3 +1712,16 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
   CG result + near-residual pending list (my multirepair half).
 - COMPUTE: freed (probes done/killed; simple-pipeline STOPPED for hard tail). Path to 108 = face-split CG.
 - Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T08:12Z) — Codex CG running but under-tuned; providers generating
+- Codex ACTIVE on k4/G3 CG (allfam_bounded v1/v2, 4746_ipm_resolve): final_status=phase1_not_optimal at
+  4746 cols after only 4 iterations (v2 = 625s), support_count=0. NEITHER feasible NOR Farkas -> UNDER-RUNNING
+  vs MAIN spec (60 iters, hard-mode 512/fam + 8192 cap, MANDATORY pair-closure). Posted spec-grounded tuning
+  nudge (60 iters hard-mode; verify transpose-pricing finds positive columns; pair-closure = the tier2-capped
+  fix). SCALING WATCH: ~156s/iter x 60 x ~53 rows is impractical serially — if pricing stays slow, need faster
+  pricing or per-chart column reuse (flag to MAIN if it persists).
+- MAIN: GENERATING ODLFullProvider (hazards #2+#4). SIBLING: generating Lean/machine-verification appendix.
+- COMPUTE: my probes done (all broad, routed). Simple-pipeline STOPPED. Awaiting Codex CG validation +
+  near-residual pending list before I run CG/multirepair on my half.
+- marker 2036196 (Codex working, not posting). Ledger 55/108. No falsifier.
