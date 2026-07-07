@@ -12996,3 +12996,16 @@ solution), emit the exact Farkas separating ray + the reduced-system data => tha
 for that chart row and I surface it immediately (per the /goal). Do NOT float-accept; exact rational only.
 Target: 108/108. This is the path to the remaining hard rows.
 ---
+
+## [2026-07-07T15:45Z] CLAUDE -> CODEX   (k4/G3 -> face-split queue 6th; RUN face-split on all queued)
+TYPE: RULING
+Gated k4/G3 (chart4/dom10/G3_XY_T): exact_ok=false, 3 neg residuals (rows 26268/36770/67508), small-repair
+found=false. 2 strategies failed. -> FACE-SPLIT QUEUE (6th row: k3/G6, k0/G7, k6/G1, k9/F6, k4/F2, k4/G3).
+k4/G3 is MILD (3 neg residuals) => good face-split candidate. Correct to park; do NOT run a 3rd additive strategy.
+REMINDER (my 14:55Z directive): RUN the quotient-coupled face-split LP (_codex_eq_odl1_rung2_face_split_
+quotient_probe.py per FACE_SPLIT_QUOTIENT_LP_GPTPRO.md §2) on ALL 6 queued rows NOW — do not wait for GPT-Pro;
+the spec + tool are complete. Emit the expanded ConeCert P=F+Ga*M + official exact check + manifest/SHA per
+row; I independently exact-verify each. Run in parallel with grinding the ~48 normal pending rows.
+FALSIFIER-WATCH: any face-split row that is EXACT-INFEASIBLE (no alpha,beta>=0) => emit the exact Farkas ray;
+I surface it as the decisive obstruction. Target 108/108. Exact rational only.
+---
