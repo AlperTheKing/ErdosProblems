@@ -176,3 +176,45 @@ BYPASSED.** OPEN QUESTIONS for GPT-Pro: (a) does the "deficient terminal cage" d
 (making this definitional), or is it a real structural theorem "positive-debt deficient => sigma=0"? (b) B4 needs
 absorption for positive-debt TERMINAL cages before they are known deficient -- does the sigma=0-forcing apply at that
 scope? Testing universality on glue C7 (background). Framed as a QUESTION/signal, NOT a proof (battery != proof, 1 family).
+
+================================================================================
+## R-D + R-A FULL PROOF CONTRACTS (GPT-Pro, 2026-07-07, relayed) -- exact bank caps + Ferrers greedy + pruning
+================================================================================
+### R-D PositiveSlackHallPrefix -- exact per-prefix bank capacities (surplus units):
+- C5Cap(i) = 25 * sum_{z in N_C5(P_i)} mass_C(z).
+- DoorSlackCap(i) = 25 * sigma_i, sigma_i = delta_B(P_i) - delta_M(P_i) (prefix-local unmatched B-door mass).
+- AmbientCap(i) = sum_{h in N_Amb(P_i)} (N-|V_h|) * tau_C(h).
+- PruneCap(i) = sum_{D in N_Prune(P_i)} Balance(D)  [WELL-FOUNDED: descendant of smaller cage rank].
+- PrefixDeficit(i) = Demand(i) - C5Cap(i) - AmbientCap(i) - PruneCap(i).
+THE prefix theorem: for every sigma(C)>0 cage & Ferrers prefix, PrefixDeficit(i) <= 25*sigma_i, i.e.
+Demand(i) <= C5Cap(i)+AmbientCap(i)+PruneCap(i)+DoorSlackCap(i).
+GREEDY FERRERS FILLING proof: scan atoms a_0..a_{p-1}; fill each atom's demand from earliest available neighbor
+tokens in Ferrers order; if it first fails at a_i then N(P_{i+1}) capacity exhausted while Demand(P_{i+1}) exceeds
+it -- contradicts prefix-Hall. => charge matrix q exists => (Claude's surplus_le_bankCap => balance_nonneg) Balance>=0.
+DECISIVE gate obstruction: sigma(C)>0 & Surplus(C)>BankCap(C), OR a prefix i with Demand(i)>NeighborCap(i) even if total passes.
+
+### R-A SideDoorPruningPreservesPositiveDebt -- debt-additivity route:
+1. SideDoorCreatesPositiveSlackSubcage: extra side door d => exists proper subcage D_d with sigma(D_d)>0
+   (clean case delta_B(D_d)={d,adjacentDoor}, delta_M(D_d)={one matched}, sigma=1). LOCAL CAP/Ferrers geometry.
+2. PositiveSlackAbsorption(D_d): sigma(D_d)>0 => Balance(D_d)>=0.
+3. Balance-additivity identity: Balance(C) = Balance(C') + Balance(D_d) + PruneRemainder, PruneRemainder>=0
+   (C'=prune(C,D_d)). => Balance(C')=Balance(C)-Balance(D_d)-PruneRemainder <= Balance(C) < 0 => Debt(C')>0
+   => proper positive-debt descendant => CONTRADICTS minimality. NO Gamma-min, NO switch.
+Lean sigs: PositiveSlackHallPrefix, PositiveSlackAbsorption_Hall, SideDoorCreatesPositiveSlackSubcage,
+Balance_prune_sideDoor (the additivity identity), PruneRemainder_nonneg, NoSideDoor_in_minPositiveDebt.
+
+### GPT-Pro RECOMMENDED ORDER: R-D first (DERISK -- a single sigma>0 cage with a failed prefix ineq refutes the
+whole absorption route); then R-A pruning (mostly algebra given the additivity identity). gap#1 = PositiveSlackHallPrefix
+ALONE iff ReserveLedgerComplete already has the additivity identity + side-door subcage construction; else + SideDoorCreatesAbsorbablePrunableSubcage.
+
+### CLAUDE LEAN (RouteBAssembly.lean, now 6 thms GREEN + axiom-clean): added pruned_balance_neg_of_neg (R-A pruning
+algebraic heart: balC=balC'+balD+pruneRem, balD>=0, pruneRem>=0, balC<0 => balC'<0; pure linarith, non-circular).
+So the ALGEBRAIC cores of BOTH residuals' assembly + B4 extraction + charge-cert soundness + beta-landing are compiled.
+REMAINING (unformalized): the GEOMETRIC/EXISTENCE residuals -- PositiveSlackHallPrefix existence, SideDoorCreatesPositiveSlackSubcage,
+the Balance-additivity identity itself, the concrete graph-geodesic ell/switch/cage layer.
+
+### CLAUDE PROBE RECALIBRATION: my "positive-debt deficient => sigma=0" finding (71M sigma>0 sets, 0 deficient) is
+battery-SUPPORT for PositiveSlackAbsorption's CONCLUSION (sigma>0 leaf deficient caps don't occur), NOT a proven
+bypass -- because the sigma>0 objects R-D/R-A actually handle are the SIDE-DOOR SUBCAGES (sigma(D_d)>0), not leaf
+deficient caps. Bypass holds only if "positive-debt deficient => sigma=0" has a DIRECT proof simpler than the Hall
+condition (open question for GPT-Pro; may be equivalent-hardness).

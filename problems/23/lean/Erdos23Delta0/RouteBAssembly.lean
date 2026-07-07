@@ -94,5 +94,17 @@ theorem balance_nonneg_of_hall_charge
   have := surplus_le_bankCap_of_hall_charge atoms tokens demand cap q hAtom hCap
   linarith
 
+/-- R-A pruning core (GPT-Pro `SideDoorPruningPreservesPositiveDebt`, algebraic heart). Given the balance-additivity
+    identity `Balance(C) = Balance(C') + Balance(D) + PruneRemainder` with `PruneRemainder ≥ 0` and `Balance(D) ≥ 0`
+    (from `PositiveSlackAbsorption` on the positive-slack side-door subcage `D`), a positive-debt cage
+    (`Balance(C) < 0`) prunes to a proper descendant `C'` that STILL has positive debt (`Balance(C') < 0`) —
+    contradicting minimality of `C`. Pure algebra: NO Γ-minimality, NO switch (non-circular). -/
+theorem pruned_balance_neg_of_neg
+    (balC balC' balD pruneRem : ℚ)
+    (hAdd : balC = balC' + balD + pruneRem)
+    (hDnn : 0 ≤ balD) (hRemnn : 0 ≤ pruneRem)
+    (hCneg : balC < 0) :
+    balC' < 0 := by linarith
+
 end RouteBAssembly
 end Erdos23Delta0
