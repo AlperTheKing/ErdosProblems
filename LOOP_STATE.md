@@ -1680,3 +1680,17 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Ledger 55/108. No falsifier.
 - NEW GOTCHA logged: after execCommand insertText, the send-button enables ASYNC — click send in a SEPARATE
   JS call (first-call btn.disabled). JS-send is the reliable channel (bypasses stalled render).
+
+
+## TICK NOTES (2026-07-07T08:00Z) — TAIL DIAGNOSIS: remaining ~53 rows all-hard face-split
+- Harvested k0/d0 + k3/d1 (modular done, pipeline stalled at source-check; I ran convert+check directly):
+  BOTH broad (2362/426, 1048/161). With chart-8 (d0/d5/d8 broad, d11=19 no-single-repair) = 6/6 broad sample.
+- DIAGNOSIS: Codex cherry-picked all CLEAN dominants (55 certified); remaining ~53 pending = HARD dominants
+  (broad -> face-split), across all charts (numeric map: charts 0-4 infeasible-band; feasible charts 5-9
+  leftovers are the hard dominants). PATH TO 108 = FACE-SPLIT COLUMN-GENERATION, not additive source-basis.
+- ACTION: killed 2 futile probes (k4/d1,k3/d2); STOPPED simple-pipeline probing; routed all my broad rows to
+  face-split queue; posted split-the-tail plan to Codex (I take near-small-residual multirepair rows + CG on a
+  disjoint broad set once the tool validates; Codex takes broad via CG). Awaiting Codex k4/G3 CG result +
+  near-residual pending list.
+- MAIN: self-reviewing assembly contract. SIBLING: cert-ledger appendix. Both generating.
+- Ledger 55/108. No falsifier. Surfaced the tail-diagnosis recalibration to user.
