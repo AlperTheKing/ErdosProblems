@@ -1,0 +1,36 @@
+{
+  "bad_beta": [
+    3,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    0,
+    2
+  ],
+  "bad_residual": "-num_bits=2888/den_bits=2902",
+  "bad_row": 17430,
+  "band": "near_2s_minus_1",
+  "blockers": {
+    "missing_bad_coeff": 32707,
+    "tested_bad_sign_columns": 28,
+    "too_small_allowance": 28,
+    "wrong_bad_sign": 21
+  },
+  "chart": 8,
+  "columns": 32756,
+  "core": "tmp\\eq_odl1_rung2_core_k8_d11_claude.jsonl",
+  "dominant": 11,
+  "first_hit_exact_ok": false,
+  "initial_min_residual": "-num_bits=2888/den_bits=2902",
+  "initial_negative_residual_count": 19,
+  "schema": "eq_odl1_rung2_one_row_repair_v1",
+  "single_column_hit_count_reported": 0,
+  "single_column_hits": [],
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k8_d11_claude.jsonl",
+  "source_core_columns": 2036,
+  "support": "negative"
+}

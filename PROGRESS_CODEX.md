@@ -29382,3 +29382,20 @@
 [2026-07-07T04:27:47Z] > ATTACK | NEXT: run source-level exact small-residual repair for k4/G5 one-row residue.
 [2026-07-07T04:28:27Z] OK ATTACK | DID: source-level small-residual repair k4/G5 | RESULT: tmp/eq_odl1_rung2_exact_small_residual_repair_k4_G5_multirepair_v1.json | D: inspect repair
 [2026-07-07T04:28:40Z] OK ATTACK | DID: source-level small-residual repair k4/G5 | RESULT: found=true increment_count=1 internal negres=0 negsol=0 | D: official check needed
+[2026-07-07T04:29:21Z] OK VERIFY | DID: official exact check k4/G5 smallres | RESULT: tmp/eq_odl1_rung2_source_solution_check_k4_G5_near_family_codex_384prime_multirepair_smallres_v1.json | D: inspect exact_ok
+[2026-07-07T04:29:38Z] OK VERIFY | DID: official exact check k4/G5 smallres | RESULT: exact_ok=true negres=0 negsol=0 | D: manifest needed
+[2026-07-07T04:29:38Z] OK VERIFY | DID: emitted k4/G5 source manifest | RESULT: tmp/eq_odl1_rung2_source_certificate_manifest_k4_G5_near_family_codex_384prime_multirepair_smallres_v1.json | D: ledger rebuild needed
+[2026-07-07T04:29:51Z] OK VERIFY | DID: rebuilt chart ledger v53 | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v53_codex.json | D: count should update
+[2026-07-07T04:30:12Z] OK VERIFY | DID: posted k4/G5 certificate and ledger v53 to Claude | RESULT: certified_count=55 pending_count=53 | D: count 55/108
+[2026-07-07T04:31:12Z] > ATTACK | NEXT: bounded source-negative correction attempt for k5/F6 patch2 solution.
+[2026-07-07T04:31:54Z] OK ATTACK | DID: bounded source-negative correction k5/F6 | RESULT: tmp/eq_odl1_rung2_source_negative_correction_k5_F6_patch2_v1.json | D: inspect correction
+[2026-07-07T04:32:08Z] FAIL ATTACK | DID: bounded source-negative correction k5/F6 patch2 | RESULT: exact_ok=false negres=18 negsol=0 | D: no certificate
+[2026-07-07T04:32:23Z] OK VERIFY | DID: posted k5/F6 failed bounded correction FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: none
+[2026-07-07T04:34:32Z] FAIL CHECK | DID: Mailbox/ledger read command used bash heredoc in PowerShell. | RESULT: ParserError | D: rerun
+[2026-07-07T04:34:32Z] > CHECK | NEXT: Rerun mailbox and ledger count using PowerShell-safe commands.
+[2026-07-07T04:34:32Z] OK CHECK | DID: Read Claude mailbox tail and ledger v53. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v53_codex.json | D: none
+[2026-07-07T04:35:16Z] > CHECK | NEXT: Refresh Claude mailbox, ledger, git state, and relevant face-split files.
+[2026-07-07T04:35:32Z] OK CHECK | DID: Refreshed Claude mailbox and ledger. | RESULT: 55/108 certified, 53 pending | D: face-split CG directive active
+[2026-07-07T04:36:28Z] > COMPUTE | NEXT: Run k4/G3 tier3 quotient candidate summary before full cache generation.
+[2026-07-07T04:37:20Z] OK COMPUTE | DID: Ran k4/G3 tier3 quotient candidate summary. | RESULT: tmp/eq_odl1_rung2_qcandidate_k4_G3_tier3_derived_codex_v1.json | D: inspect totals
+[2026-07-07T04:38:26Z] > EDIT | NEXT: Add quotient-space face-split column-generation driver using QColumn streaming pricing.

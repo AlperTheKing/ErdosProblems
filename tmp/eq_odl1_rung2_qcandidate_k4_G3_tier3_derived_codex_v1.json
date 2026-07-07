@@ -1,0 +1,329 @@
+{
+  "band": "near_2s_minus_1",
+  "candidate_plan": {
+    "caps": {
+      "face_band_cap": 10,
+      "face_pair_cap": 9,
+      "lift_band_cap": 8,
+      "lift_gen_cap": 7
+    },
+    "face_band_columns": 15238,
+    "face_base_columns": 16709,
+    "face_pair_columns": 320140,
+    "face_pair_families": [
+      {
+        "multiplier_candidates": 11085,
+        "multiplier_count_after_cap": 11085,
+        "name": "F1",
+        "pair_columns": 22170
+      },
+      {
+        "multiplier_candidates": 11337,
+        "multiplier_count_after_cap": 11337,
+        "name": "F2",
+        "pair_columns": 22674
+      },
+      {
+        "multiplier_candidates": 11085,
+        "multiplier_count_after_cap": 11085,
+        "name": "F3",
+        "pair_columns": 22170
+      },
+      {
+        "multiplier_candidates": 11337,
+        "multiplier_count_after_cap": 11337,
+        "name": "F4",
+        "pair_columns": 22674
+      },
+      {
+        "multiplier_candidates": 11820,
+        "multiplier_count_after_cap": 11820,
+        "name": "F5",
+        "pair_columns": 23640
+      },
+      {
+        "multiplier_candidates": 11568,
+        "multiplier_count_after_cap": 11568,
+        "name": "F6",
+        "pair_columns": 23136
+      },
+      {
+        "multiplier_candidates": 11695,
+        "multiplier_count_after_cap": 11695,
+        "name": "F7",
+        "pair_columns": 23390
+      },
+      {
+        "multiplier_candidates": 11820,
+        "multiplier_count_after_cap": 11820,
+        "name": "B0_eta25_25",
+        "pair_columns": 23640
+      },
+      {
+        "multiplier_candidates": 11695,
+        "multiplier_count_after_cap": 11695,
+        "name": "G1_UV_T",
+        "pair_columns": 23390
+      },
+      {
+        "multiplier_candidates": 11568,
+        "multiplier_count_after_cap": 11568,
+        "name": "G2_UZ_T",
+        "pair_columns": 23136
+      },
+      {
+        "multiplier_candidates": 11715,
+        "multiplier_count_after_cap": 11715,
+        "name": "G4_VZ_XY",
+        "pair_columns": 23430
+      },
+      {
+        "multiplier_candidates": 11715,
+        "multiplier_count_after_cap": 11715,
+        "name": "G5_VZ_T",
+        "pair_columns": 23430
+      },
+      {
+        "multiplier_candidates": 11820,
+        "multiplier_count_after_cap": 11820,
+        "name": "G6_A2_9T",
+        "pair_columns": 23640
+      },
+      {
+        "multiplier_candidates": 9810,
+        "multiplier_count_after_cap": 9810,
+        "name": "G7_B2_4T",
+        "pair_columns": 19620
+      }
+    ],
+    "face_pair_family_filter": null,
+    "lift_band_columns": 4678,
+    "lift_base_columns": 6342,
+    "lift_families": [
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 2720,
+        "multiplier_candidates": 2720,
+        "name": "F1"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 2931,
+        "multiplier_candidates": 2931,
+        "name": "F2"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "F3"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 2931,
+        "multiplier_candidates": 2931,
+        "name": "F4"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "F5"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "F6"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "F7"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "B0_eta25_25"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G1_UV_T"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G2_UZ_T"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G4_VZ_XY"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G5_VZ_T"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G6_A2_9T"
+      },
+      {
+        "kind": "lift_gen",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G7_B2_4T"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F1"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F2"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F3"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F4"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F5"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F6"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-F7"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-B0_eta25_25"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G1_UV_T"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G2_UZ_T"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G4_VZ_XY"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G5_VZ_T"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G6_A2_9T"
+      },
+      {
+        "kind": "lift_delta",
+        "legal_count_after_degree_and_cap": 3166,
+        "multiplier_candidates": 3166,
+        "name": "G3_XY_T-G7_B2_4T"
+      }
+    ],
+    "lift_family_columns": 90898,
+    "note": "For support=derived and no max caps, these counts match kept columns before quotient row construction.",
+    "total_candidate_columns": 454005
+  },
+  "chart": 4,
+  "derived_support_limit": null,
+  "divisor_normalization": "leading_coeff_to_1",
+  "divisor_summary": {
+    "max_coeff": "1",
+    "min_coeff": "1",
+    "negative_terms": 0,
+    "positive_terms": 3,
+    "terms": 3,
+    "total_degree": 2
+  },
+  "dominant": 10,
+  "dominant_name": "G3_XY_T",
+  "quoP_summary": {
+    "max_coeff": "26561",
+    "min_coeff": "-26561",
+    "negative_terms": 3020,
+    "positive_terms": 3322,
+    "terms": 6342,
+    "total_degree": 9
+  },
+  "remP_summary": {
+    "max_coeff": "71267",
+    "min_coeff": "-43308",
+    "negative_terms": 4091,
+    "positive_terms": 6276,
+    "terms": 10367,
+    "total_degree": 11
+  },
+  "schema": "eq_odl1_rung2_face_split_quotient_candidate_summary_v1",
+  "seconds": 42.937999999994645,
+  "support": "derived",
+  "target_beta_json": null,
+  "target_beta_nonzero_count": null,
+  "target_division_identity_ok": true,
+  "target_mode": "chart_target",
+  "target_summary": {
+    "max_coeff": "71267",
+    "min_coeff": "-43308",
+    "negative_terms": 2084,
+    "positive_terms": 5636,
+    "terms": 7720,
+    "total_degree": 11
+  },
+  "term_order": "graded_reverse_lex",
+  "tier": "tier3",
+  "tier0_json": null
+}
