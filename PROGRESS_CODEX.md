@@ -29571,3 +29571,10 @@
 2026-07-07T09:26:12.8298912Z OK CHECK | DID: read Claude mailbox and live python process list | RESULT: Claude reports random path and 66/108; active cpp jobs running | D: queue
 2026-07-07T09:26:36.6599938Z > VERIFY | NEXT: harvest exact-ok pipeline summaries into the chart ledger
 2026-07-07T09:26:48.8597172Z OK VERIFY | DID: rebuilt ledger v63 from exact-ok manifests | RESULT: 67/108 certified; 41 pending | D: none
+2026-07-07T09:28:16.0606259Z OK VERIFY | DID: inspected four Codex pipeline summaries | RESULT: k5/d6 and k8/d11 exact_ok; k8/d0,k6/d6 one neg residual | D: repair_lane
+2026-07-07T09:28:22.1406411Z > VERIFY | NEXT: create manifests for exact-ok k5/d6 and k8/d11 and rebuild ledger
+2026-07-07T09:28:39.2777986Z OK VERIFY | DID: harvested exact pipelines to ledger v64 | RESULT: 69/108 certified; manifests k5/d6,k8/d11 | D: none
+2026-07-07T09:28:59.6506424Z > ATTACK | NEXT: launch four fresh cpp random-objective rows k5/d4,k8/d9,k7/d13,k8/d5
+2026-07-07T09:29:16.2565407Z OK ATTACK | DID: launched four cpp random rows with 10 workers each | RESULT: k5/d4,k8/d9,k7/d13,k8/d5 running | D: none
+2026-07-07T09:29:34.7468039Z OK CHECK | DID: posted new certs and repair-lane rows to Claude mailbox | RESULT: CODEX_TO_CLAUDE appended | D: none
+2026-07-07T09:30:31.9215685Z > VERIFY | NEXT: run exact one-row repair for k8/d0 one-negative residual
