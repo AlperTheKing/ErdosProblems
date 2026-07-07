@@ -29608,3 +29608,5 @@
 2026-07-07T09:55:37.0017251Z > ATTACK | NEXT: launch perturbed-l1 retries k8/d6,k8/d8,k8/d9
 2026-07-07T09:55:56.1916509Z OK ATTACK | DID: launched perturbed-l1 retries with 8 workers | RESULT: k8/d6,k8/d8,k8/d9 running | D: retry_lane
 2026-07-07T09:57:14.4160904Z OK VERIFY | DID: harvested Claude k3/d5 | RESULT: ledger v82 certified_count=80/108 pending_count=28 | D: none
+2026-07-07T09:57:55.2225191Z OK VERIFY | DID: harvested k8/d4 exact row | RESULT: ledger v83 certified_count=81/108 pending_count=27 | D: none
+2026-07-07T10:01:17.1860530Z OK VERIFY | DID: polled perturbed and Claude harvest | RESULT: no new manifests; ledger remains 81/108 | D: none
