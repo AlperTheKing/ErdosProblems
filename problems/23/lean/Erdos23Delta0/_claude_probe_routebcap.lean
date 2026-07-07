@@ -1,0 +1,3 @@
+import Erdos23Delta0.RouteBCAP
+#print axioms Erdos23Delta0.RouteBCAP.noLongSideDoor_of_primitives
+#print axioms Erdos23Delta0.RouteBCAP.surplus_le_25sigma_of_level0
