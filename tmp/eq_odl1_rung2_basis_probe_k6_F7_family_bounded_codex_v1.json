@@ -1,0 +1,23 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "col_status_counts": {
+    "At lower/fixed bound": 31308
+  },
+  "constraints": 167960,
+  "dominant": 6,
+  "dominant_name": "F7",
+  "float_nonzero": 0,
+  "highs_run_status": "HighsStatus.kOk",
+  "model_status": "Infeasible",
+  "objective": "family",
+  "presolve": "off",
+  "row_status_counts": {
+    "Basic": 167960
+  },
+  "schema": "eq_odl1_rung2_basis_replay_probe_v1",
+  "solver": "simplex",
+  "support": "negative",
+  "threads": 64,
+  "variables": 31308
+}

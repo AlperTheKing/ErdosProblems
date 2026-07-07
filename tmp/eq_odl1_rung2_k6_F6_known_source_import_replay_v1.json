@@ -1,0 +1,95 @@
+{
+  "exact_ok": true,
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 158472,
+  "import_solution": "tmp\\eq_odl1_rung2_k6_F6_known_source_import_solution_v1.jsonl",
+  "imported_columns": 2432,
+  "old_to_new_prefix": [
+    {
+      "import_col": 0,
+      "source_col": 6
+    },
+    {
+      "import_col": 1,
+      "source_col": 610
+    },
+    {
+      "import_col": 2,
+      "source_col": 701
+    },
+    {
+      "import_col": 3,
+      "source_col": 734
+    },
+    {
+      "import_col": 4,
+      "source_col": 768
+    },
+    {
+      "import_col": 5,
+      "source_col": 778
+    },
+    {
+      "import_col": 6,
+      "source_col": 900
+    },
+    {
+      "import_col": 7,
+      "source_col": 950
+    },
+    {
+      "import_col": 8,
+      "source_col": 956
+    },
+    {
+      "import_col": 9,
+      "source_col": 958
+    },
+    {
+      "import_col": 10,
+      "source_col": 981
+    },
+    {
+      "import_col": 11,
+      "source_col": 999
+    },
+    {
+      "import_col": 12,
+      "source_col": 1092
+    },
+    {
+      "import_col": 13,
+      "source_col": 1141
+    },
+    {
+      "import_col": 14,
+      "source_col": 1148
+    },
+    {
+      "import_col": 15,
+      "source_col": 1191
+    },
+    {
+      "import_col": 16,
+      "source_col": 1245
+    },
+    {
+      "import_col": 17,
+      "source_col": 1249
+    },
+    {
+      "import_col": 18,
+      "source_col": 1262
+    },
+    {
+      "import_col": 19,
+      "source_col": 1477
+    }
+  ],
+  "schema": "eq_odl1_rung2_source_import_replay_v1",
+  "solution_negative_count": 0,
+  "source_nonzero_columns": 2432,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_F6_near_exact_active_face_split_patch3_rowgen2_hardspill_v1.jsonl",
+  "target_beta": "tmp\\eq_odl1_rung2_k6_F6_known_source_import_target_beta_v1.json"
+}

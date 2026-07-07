@@ -1,0 +1,22 @@
+{
+  "active_margin": 0.0,
+  "candidate_count": 176,
+  "candidate_mode": "active-negative",
+  "chart": 0,
+  "column_count": 47152,
+  "dominant": 14,
+  "initial_negative_rows": [
+    1832,
+    1835,
+    3911,
+    4728,
+    23587,
+    36457
+  ],
+  "margin": 0.0,
+  "model_status": "Infeasible",
+  "objective": 0.0016693535861548297,
+  "row_count": 167960,
+  "schema": "source_patch_highspy_basis_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k0_G7_near_family_claude_patch1_zero_negative_additive_codex_v1.jsonl"
+}

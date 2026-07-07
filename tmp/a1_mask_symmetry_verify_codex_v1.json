@@ -1,0 +1,23 @@
+{
+  "canonical_codes": {
+    "M0": 1,
+    "M1": 3,
+    "M2": 5,
+    "M3": 7,
+    "M4": 11,
+    "M5": 15
+  },
+  "exact_ok": true,
+  "orbit_counts": {
+    "M0": 5,
+    "M1": 5,
+    "M2": 5,
+    "M3": 5,
+    "M4": 5,
+    "M5": 5
+  },
+  "rows": 30,
+  "schema": "a1_mask_symmetry_verify_v1",
+  "table": "problems\\23\\writeup\\a1_mask_symmetry_table.json",
+  "table_schema": "a1_mask_symmetry_v2_MAIN_authoritative"
+}

@@ -96,3 +96,4 @@ tmp/eq_odl1_rung2_residual_target_*.json
 tmp/codex_k*_tier0_*.json
 tmp/eq_odl1_rung2_hybrid_*
 tmp/*_cols_v*.json
+*.json.tmp

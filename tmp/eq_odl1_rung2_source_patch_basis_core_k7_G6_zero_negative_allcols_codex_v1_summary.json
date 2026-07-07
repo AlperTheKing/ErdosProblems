@@ -1,0 +1,18 @@
+{
+  "active_margin": "0",
+  "active_rows": [
+    1790,
+    1859,
+    4714,
+    4743
+  ],
+  "basis": "tmp\\probe_k7_G6_zero_negative_source_patch_allcols_codex_v1.json",
+  "dimension": 128,
+  "margin": "0",
+  "out_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k7_G6_zero_negative_allcols_codex_v1.jsonl",
+  "row_count": 167960,
+  "schema": "source_patch_basis_core_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k7_G6_near_lexsmall_zero_negative_v1.jsonl",
+  "terms": 546,
+  "upper_rows_count": 128
+}

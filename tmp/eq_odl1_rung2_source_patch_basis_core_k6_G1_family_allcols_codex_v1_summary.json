@@ -1,0 +1,16 @@
+{
+  "active_margin": "0",
+  "active_rows": [
+    5471,
+    10199
+  ],
+  "basis": "tmp\\probe_k6_G1_source_patch_highspy_basis_family_allcols_codex_v1.json",
+  "dimension": 139,
+  "margin": "0",
+  "out_core": "tmp\\eq_odl1_rung2_source_patch_basis_core_k6_G1_family_allcols_codex_v1.jsonl",
+  "row_count": 167960,
+  "schema": "source_patch_basis_core_v1",
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k6_G1_near_family_codex_384prime_v1.jsonl",
+  "terms": 574,
+  "upper_rows_count": 139
+}

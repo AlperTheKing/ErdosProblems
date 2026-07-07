@@ -1,0 +1,70 @@
+{
+  "complete": true,
+  "exact_ok": 0,
+  "infeasible_or_failed": 0,
+  "items": [
+    {
+      "band": "near_2s_minus_1",
+      "constraints": 167960,
+      "dominant_index": 9,
+      "dominant_name": "G2_UZ_T",
+      "exact_check": {
+        "attempts": [
+          {
+            "max_denominator": 1000000000000,
+            "negative_residual_count": 1339,
+            "nonzero_multiplier_count": 2311,
+            "residual_min_coeff": "-1796011019617681716130576227792278731124045467339989397711205804296018549/25044414842798185120368992126336212536935103403282904555077790153460908869306800"
+          }
+        ]
+      },
+      "exact_ok": false,
+      "family_counts": {
+        "band:near_2s_minus_1": 1757,
+        "delta:G2_UZ_T-B0_eta25_25": 1703,
+        "delta:G2_UZ_T-F1": 1504,
+        "delta:G2_UZ_T-F2": 1567,
+        "delta:G2_UZ_T-F3": 1504,
+        "delta:G2_UZ_T-F4": 1567,
+        "delta:G2_UZ_T-F5": 984,
+        "delta:G2_UZ_T-F7": 985,
+        "delta:G2_UZ_T-G1_UV_T": 985,
+        "delta:G2_UZ_T-G3_XY_T": 1111,
+        "delta:G2_UZ_T-G4_VZ_XY": 985,
+        "delta:G2_UZ_T-G5_VZ_T": 985,
+        "delta:G2_UZ_T-G6_A2_9T": 1343,
+        "delta:G2_UZ_T-G7_B2_4T": 1111,
+        "gen:B0_eta25_25": 1111,
+        "gen:F1": 667,
+        "gen:F2": 667,
+        "gen:F3": 667,
+        "gen:F4": 667,
+        "gen:F5": 1111,
+        "gen:F6": 1111,
+        "gen:F7": 1111,
+        "gen:G1_UV_T": 1111,
+        "gen:G2_UZ_T": 1111,
+        "gen:G4_VZ_XY": 1111,
+        "gen:G5_VZ_T": 1111,
+        "gen:G6_A2_9T": 1111,
+        "gen:G7_B2_4T": 223
+      },
+      "float_nonzero": 2309,
+      "include_deltas": true,
+      "k": 8,
+      "leading_s0_only": false,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "method": "highs-ds",
+      "schema": "eq_odl1_rung2_support_lp_item_v1",
+      "success": true,
+      "support": "negative",
+      "target_negative_coeffs": 1467,
+      "variables": 30981
+    }
+  ],
+  "rows": 1,
+  "schema": "eq_odl1_rung2_support_lp_v1",
+  "success": 1,
+  "timeouts": 0
+}

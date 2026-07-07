@@ -1,0 +1,94 @@
+{
+  "counts": {
+    "by_pattern": {
+      "broad_default_route_failure": 3,
+      "small_defect_repair_or_face_split": 4
+    },
+    "by_status": {
+      "awaiting_claude_ruling": 3,
+      "face_split_queue": 4
+    }
+  },
+  "inventory": "tmp/parked_row_failure_inventory_codex_v1.json",
+  "rows": [
+    {
+      "basis_status": null,
+      "chart": 3,
+      "classifier_full_neg": 11,
+      "classifier_sol_neg": 1,
+      "dominant": 13,
+      "pattern": "small_defect_repair_or_face_split",
+      "row": "k3/G6",
+      "status": "face_split_queue",
+      "support_neg": null
+    },
+    {
+      "basis_status": null,
+      "chart": 0,
+      "classifier_full_neg": 7,
+      "classifier_sol_neg": 0,
+      "dominant": 14,
+      "pattern": "small_defect_repair_or_face_split",
+      "row": "k0/G7",
+      "status": "face_split_queue",
+      "support_neg": null
+    },
+    {
+      "basis_status": null,
+      "chart": 6,
+      "classifier_full_neg": 15,
+      "classifier_sol_neg": 0,
+      "dominant": 8,
+      "pattern": "small_defect_repair_or_face_split",
+      "row": "k6/G1",
+      "status": "face_split_queue",
+      "support_neg": null
+    },
+    {
+      "basis_status": "Infeasible",
+      "chart": 9,
+      "classifier_full_neg": 23,
+      "classifier_sol_neg": 16,
+      "dominant": 5,
+      "pattern": "small_defect_repair_or_face_split",
+      "row": "k9/F6",
+      "status": "face_split_queue",
+      "support_neg": null
+    },
+    {
+      "basis_status": "Infeasible",
+      "chart": 5,
+      "classifier_full_neg": null,
+      "classifier_sol_neg": null,
+      "dominant": 4,
+      "pattern": "broad_default_route_failure",
+      "row": "k5/F5",
+      "status": "awaiting_claude_ruling",
+      "support_neg": 1132
+    },
+    {
+      "basis_status": "Infeasible",
+      "chart": 8,
+      "classifier_full_neg": null,
+      "classifier_sol_neg": null,
+      "dominant": 9,
+      "pattern": "broad_default_route_failure",
+      "row": "k8/G2",
+      "status": "awaiting_claude_ruling",
+      "support_neg": 1339
+    },
+    {
+      "basis_status": "Infeasible",
+      "chart": 6,
+      "classifier_full_neg": null,
+      "classifier_sol_neg": null,
+      "dominant": 6,
+      "pattern": "broad_default_route_failure",
+      "row": "k6/F7",
+      "status": "awaiting_claude_ruling",
+      "support_neg": 1234
+    }
+  ],
+  "schema": "codex_parked_row_failure_pattern_v1",
+  "utc": "2026-07-06T21:23:11Z"
+}

@@ -134,6 +134,19 @@ def solve_feasibility(mat, target_beta: list, args: argparse.Namespace) -> dict[
                     "seed_score_min": float(scores.min()) if len(scores) else 0.0,
                     "seed_score_max": float(scores.max()) if len(scores) else 0.0,
                     "seed_positive_score_count": int(np.sum(scores > args.price_tol)),
+                    "ray_support_top": [
+                        {
+                            "row": int(i),
+                            "value": float(ray_arr[i]),
+                            "abs_value": float(abs(ray_arr[i])),
+                            "target_beta": float(target_beta[i]),
+                        }
+                        for i in sorted(
+                            np.flatnonzero(np.abs(ray_arr) > args.ray_tol),
+                            key=lambda j: abs(float(ray_arr[j])),
+                            reverse=True,
+                        )[: args.ray_support_top]
+                    ],
                     "_ray": ray_arr,
                 }
             )
@@ -315,6 +328,7 @@ def main() -> None:
     ap.add_argument("--presolve-off", action="store_true")
     ap.add_argument("--retry-no-ray-presolve-off", action="store_true")
     ap.add_argument("--ray-tol", type=float, default=1.0e-10)
+    ap.add_argument("--ray-support-top", type=int, default=200)
     ap.add_argument("--row-tol", type=float, default=1.0e-8)
     ap.add_argument("--x-tol", type=float, default=1.0e-9)
     ap.add_argument("--verbose", action="store_true")

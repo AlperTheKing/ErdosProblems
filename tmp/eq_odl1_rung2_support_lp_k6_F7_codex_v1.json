@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "exact_ok": 0,
+  "infeasible_or_failed": 0,
+  "items": [
+    {
+      "band": "near_2s_minus_1",
+      "constraints": 167960,
+      "dominant_index": 6,
+      "dominant_name": "F7",
+      "exact_check": {
+        "attempts": [
+          {
+            "max_denominator": 1000000000000,
+            "negative_residual_count": 1234,
+            "nonzero_multiplier_count": 2040,
+            "residual_min_coeff": "-673418/10601086312597"
+          }
+        ]
+      },
+      "exact_ok": false,
+      "family_counts": {
+        "band:near_2s_minus_1": 1691,
+        "delta:F7-B0_eta25_25": 1642,
+        "delta:F7-F1": 1513,
+        "delta:F7-F2": 1075,
+        "delta:F7-F3": 1511,
+        "delta:F7-F4": 1418,
+        "delta:F7-F5": 956,
+        "delta:F7-F6": 956,
+        "delta:F7-G1_UV_T": 1007,
+        "delta:F7-G2_UZ_T": 1147,
+        "delta:F7-G3_XY_T": 1075,
+        "delta:F7-G4_VZ_XY": 1222,
+        "delta:F7-G5_VZ_T": 1222,
+        "delta:F7-G6_A2_9T": 1330,
+        "delta:F7-G7_B2_4T": 1073,
+        "gen:B0_eta25_25": 1075,
+        "gen:F1": 645,
+        "gen:F2": 645,
+        "gen:F3": 645,
+        "gen:F4": 645,
+        "gen:F5": 1075,
+        "gen:F6": 1075,
+        "gen:F7": 1075,
+        "gen:G1_UV_T": 1075,
+        "gen:G2_UZ_T": 1075,
+        "gen:G4_VZ_XY": 1075,
+        "gen:G5_VZ_T": 1075,
+        "gen:G6_A2_9T": 1075,
+        "gen:G7_B2_4T": 215
+      },
+      "float_nonzero": 2032,
+      "include_deltas": true,
+      "k": 6,
+      "leading_s0_only": false,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "method": "highs-ds",
+      "schema": "eq_odl1_rung2_support_lp_item_v1",
+      "success": true,
+      "support": "negative",
+      "target_negative_coeffs": 1434,
+      "variables": 31308
+    }
+  ],
+  "rows": 1,
+  "schema": "eq_odl1_rung2_support_lp_v1",
+  "success": 1,
+  "timeouts": 0
+}

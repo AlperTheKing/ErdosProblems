@@ -1,0 +1,41 @@
+{
+  "bad_json": 0,
+  "dupe_keys": 3,
+  "exact_source_manifests": 47,
+  "sample_dupes": [
+    {
+      "count": 2,
+      "key": [
+        3,
+        7
+      ],
+      "latest_paths": [
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k3_B0_custom_target_regression_v1.json",
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k3_B0_near_family_claude_quick_codex_v1.json"
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        5,
+        12
+      ],
+      "latest_paths": [
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k5_G5_near_family_192prime_highspy_basis_margin_rows_soft_exact_v1.json",
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k5_G5_near_lexlarge_192prime_highspy_basis_pairrepair_v1.json"
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        6,
+        3
+      ],
+      "latest_paths": [
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k6_F4_near_static_lexlarge_384prime_highspy_allrow_exact_v1.json",
+        "tmp\\eq_odl1_rung2_source_certificate_manifest_k6_F4_near_static_lexlarge_384prime_highspy_basis_exact_v1.json"
+      ]
+    }
+  ],
+  "unique_keys": 44
+}

@@ -149,6 +149,127 @@ def poly_from_terms_record(records: list[dict[str, object]]) -> Poly:
     return clean(out)
 
 
+def qterm_records(items: tuple[tuple[Exp, Fraction], ...]) -> list[dict[str, object]]:
+    return [
+        {"exp": list(exp), "coeff": fraction_record(coeff)}
+        for exp, coeff in sorted(items, key=lambda item: grevlex_key(item[0]), reverse=True)
+    ]
+
+
+def qterms_from_records(records: list[dict[str, object]]) -> tuple[tuple[Exp, Fraction], ...]:
+    out: Poly = {}
+    for rec in records:
+        exp_raw = rec.get("exp")
+        if not isinstance(exp_raw, list):
+            raise ValueError(f"quotient term record missing exp list: {rec!r}")
+        exp = tuple(int(x) for x in exp_raw)
+        coeff = parse_fraction(rec.get("coeff"))
+        out[exp] = out.get(exp, Fraction(0)) + coeff
+    return tuple(sorted(clean(out).items(), key=lambda item: grevlex_key(item[0]), reverse=True))
+
+
+def qcolumn_record(col: QColumn) -> dict[str, object]:
+    return {
+        "side": col.side,
+        "kind": col.kind,
+        "name": col.name,
+        "multiplier_exp": list(col.multiplier_exp),
+        "rem_terms": qterm_records(col.rem),
+        "quo_terms": qterm_records(col.quo),
+    }
+
+
+def qcolumn_from_record(rec: dict[str, object]) -> QColumn:
+    mult_raw = rec.get("multiplier_exp")
+    if not isinstance(mult_raw, list):
+        raise ValueError(f"column record missing multiplier_exp list: {rec!r}")
+    rem_raw = rec.get("rem_terms", rec.get("rem"))
+    quo_raw = rec.get("quo_terms", rec.get("quo"))
+    if not isinstance(rem_raw, list) or not isinstance(quo_raw, list):
+        raise ValueError(f"column record missing rem_terms/quo_terms lists: {rec!r}")
+    return QColumn(
+        side=str(rec["side"]),
+        kind=str(rec["kind"]),
+        name=str(rec["name"]),
+        multiplier_exp=tuple(int(x) for x in mult_raw),
+        rem=qterms_from_records(rem_raw),
+        quo=qterms_from_records(quo_raw),
+    )
+
+
+def write_qcolumns_json(
+    path: Path,
+    *,
+    args: argparse.Namespace,
+    chart: charts.ChartData,
+    tier0_payload: dict[str, object] | None,
+    target_beta_nonzero_count: object,
+    target_summary: object,
+    divisor: Poly,
+    rem_p: Poly,
+    quo_p: Poly,
+    columns: list[QColumn],
+    seconds: float,
+) -> None:
+    payload = {
+        "schema": "eq_odl1_rung2_face_split_quotient_qcolumns_v1",
+        **target_metadata(args, tier0_payload),
+        "target_beta_nonzero_count": target_beta_nonzero_count,
+        "chart": args.chart,
+        "dominant": args.dominant,
+        "dominant_name": chart.generator_names[args.dominant],
+        "band": args.band,
+        "tier": args.tier,
+        "support": args.support,
+        "derived_support_limit": DERIVED_SUPPORT_TERM_LIMIT,
+        "max_base_columns": args.max_base_columns,
+        "max_pairs_per_family": args.max_pairs_per_family,
+        "max_band_columns": args.max_band_columns,
+        "face_pair_families": args.face_pair_families or "",
+        "term_order": "graded_reverse_lex",
+        "divisor_normalization": "leading_coeff_to_1",
+        "target_summary": target_summary,
+        "divisor_summary": poly_summary(divisor),
+        "divisor_monic_terms": poly_terms_record(divisor),
+        "remP_summary": poly_summary(rem_p),
+        "quoP_summary": poly_summary(quo_p),
+        "remP_terms": poly_terms_record(rem_p),
+        "quoP_terms": poly_terms_record(quo_p),
+        "columns_summary": column_summary(columns, chart.generator_names, args.dominant),
+        "columns": [qcolumn_record(col) for col in columns],
+        "seconds": seconds,
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, separators=(",", ":"), sort_keys=True), encoding="utf-8")
+
+
+def read_qcolumns_json(
+    path: Path,
+    *,
+    args: argparse.Namespace,
+    divisor: Poly,
+    rem_p: Poly,
+    quo_p: Poly,
+) -> tuple[dict[str, object], list[QColumn]]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if payload.get("schema") != "eq_odl1_rung2_face_split_quotient_qcolumns_v1":
+        raise ValueError(f"unsupported qcolumns schema in {path}: {payload.get('schema')!r}")
+    if int(payload.get("chart")) != args.chart or int(payload.get("dominant")) != args.dominant:
+        raise ValueError("--columns-json chart/dominant does not match requested chart/dominant")
+    cached_divisor = poly_from_terms_record(payload["divisor_monic_terms"])  # type: ignore[index]
+    if cached_divisor != divisor:
+        raise ValueError("--columns-json divisor_monic_terms do not match current chart/dominant divisor")
+    cached_rem = poly_from_terms_record(payload["remP_terms"])  # type: ignore[index]
+    cached_quo = poly_from_terms_record(payload["quoP_terms"])  # type: ignore[index]
+    if cached_rem != rem_p or cached_quo != quo_p:
+        raise ValueError("--columns-json remP/quoP terms do not match the current target division")
+    raw_columns = payload.get("columns")
+    if not isinstance(raw_columns, list):
+        raise ValueError("--columns-json payload missing columns list")
+    columns = [qcolumn_from_record(rec) for rec in raw_columns]
+    return payload, columns
+
+
 def clean(poly: Poly) -> Poly:
     return {exp: coeff for exp, coeff in poly.items() if coeff}
 

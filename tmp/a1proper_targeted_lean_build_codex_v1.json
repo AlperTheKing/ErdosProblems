@@ -1,0 +1,29 @@
+{
+  "schema": "a1proper_targeted_lean_build_v1",
+  "results": [
+    {
+      "module": "Erdos23Delta0.A1MaskSymmetry",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\A1MaskSymmetry.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.olean",
+      "returncode": 0,
+      "seconds": 34.597,
+      "stdout": "",
+      "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.olean': 13 Permission denied\n\nWRITE_PERMISSION_RETRY_OLEAN=E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.retry.82956.1783368805662092100.olean\nfailed to write 'E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.retry.82956.1783368805662092100.olean': 13 Permission denied\n\nRECOVERED_OLEAN_FROM_FRESH_RERUN_TMP=E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.retry.82956.1783368805662092100.olean.tmp.88680\n",
+      "recovered_tmp": null,
+      "recovery_olean": "E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1MaskSymmetry.retry.82956.1783368805662092100.olean.tmp.88680",
+      "recovery_method": "fresh_rerun_tmp_copy"
+    },
+    {
+      "module": "Erdos23Delta0.A1ProperWrapper",
+      "file": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\A1ProperWrapper.lean",
+      "olean": "E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\A1ProperWrapper.olean",
+      "returncode": 1,
+      "seconds": 1.875,
+      "stdout": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\A1ProperWrapper.lean:8:0: error: object file 'E:\\Projects\\ErdosProblems\\tmp\\a1proper_lean_o_v1\\Erdos23Delta0\\CertGraph.olean' of module Erdos23Delta0.CertGraph does not exist\n",
+      "stderr": "",
+      "recovered_tmp": null,
+      "recovery_olean": null,
+      "recovery_method": null
+    }
+  ]
+}

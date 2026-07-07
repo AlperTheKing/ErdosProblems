@@ -1,0 +1,371 @@
+{
+  "fresh": [
+    {
+      "chart": 9,
+      "dominant": 10,
+      "dominant_name": "G3_XY_T",
+      "float_nonzero": 2346,
+      "numeric_order_key": [
+        2346,
+        51045,
+        9,
+        10
+      ],
+      "variables": 51045
+    },
+    {
+      "chart": 9,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2392,
+      "numeric_order_key": [
+        2392,
+        49646,
+        9,
+        0
+      ],
+      "variables": 49646
+    },
+    {
+      "chart": 4,
+      "dominant": 10,
+      "dominant_name": "G3_XY_T",
+      "float_nonzero": 2396,
+      "numeric_order_key": [
+        2396,
+        45514,
+        4,
+        10
+      ],
+      "variables": 45514
+    },
+    {
+      "chart": 9,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2417,
+      "numeric_order_key": [
+        2417,
+        53468,
+        9,
+        4
+      ],
+      "variables": 53468
+    },
+    {
+      "chart": 9,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2487,
+      "numeric_order_key": [
+        2487,
+        50805,
+        9,
+        9
+      ],
+      "variables": 50805
+    },
+    {
+      "chart": 7,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2493,
+      "numeric_order_key": [
+        2493,
+        55550,
+        7,
+        11
+      ],
+      "variables": 55550
+    },
+    {
+      "chart": 7,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2500,
+      "numeric_order_key": [
+        2500,
+        50535,
+        7,
+        12
+      ],
+      "variables": 50535
+    },
+    {
+      "chart": 7,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2508,
+      "numeric_order_key": [
+        2508,
+        53497,
+        7,
+        4
+      ],
+      "variables": 53497
+    },
+    {
+      "chart": 9,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2510,
+      "numeric_order_key": [
+        2510,
+        55550,
+        9,
+        11
+      ],
+      "variables": 55550
+    },
+    {
+      "chart": 9,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2523,
+      "numeric_order_key": [
+        2523,
+        53146,
+        9,
+        6
+      ],
+      "variables": 53146
+    },
+    {
+      "chart": 4,
+      "dominant": 7,
+      "dominant_name": "B0_eta25_25",
+      "float_nonzero": 2588,
+      "numeric_order_key": [
+        2588,
+        43131,
+        4,
+        7
+      ],
+      "variables": 43131
+    },
+    {
+      "chart": 9,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 2618,
+      "numeric_order_key": [
+        2618,
+        56541,
+        9,
+        14
+      ],
+      "variables": 56541
+    },
+    {
+      "chart": 4,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2659,
+      "numeric_order_key": [
+        2659,
+        48992,
+        4,
+        0
+      ],
+      "variables": 48992
+    },
+    {
+      "chart": 4,
+      "dominant": 1,
+      "dominant_name": "F2",
+      "float_nonzero": 2764,
+      "numeric_order_key": [
+        2764,
+        47236,
+        4,
+        1
+      ],
+      "variables": 47236
+    },
+    {
+      "chart": 4,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2787,
+      "numeric_order_key": [
+        2787,
+        43584,
+        4,
+        12
+      ],
+      "variables": 43584
+    },
+    {
+      "chart": 3,
+      "dominant": 11,
+      "dominant_name": "G4_VZ_XY",
+      "float_nonzero": 2787,
+      "numeric_order_key": [
+        2787,
+        46862,
+        3,
+        11
+      ],
+      "variables": 46862
+    },
+    {
+      "chart": 3,
+      "dominant": 12,
+      "dominant_name": "G5_VZ_T",
+      "float_nonzero": 2815,
+      "numeric_order_key": [
+        2815,
+        43584,
+        3,
+        12
+      ],
+      "variables": 43584
+    },
+    {
+      "chart": 4,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2845,
+      "numeric_order_key": [
+        2845,
+        44799,
+        4,
+        9
+      ],
+      "variables": 44799
+    },
+    {
+      "chart": 3,
+      "dominant": 5,
+      "dominant_name": "F6",
+      "float_nonzero": 2855,
+      "numeric_order_key": [
+        2855,
+        45493,
+        3,
+        5
+      ],
+      "variables": 45493
+    },
+    {
+      "chart": 3,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 2867,
+      "numeric_order_key": [
+        2867,
+        47199,
+        3,
+        4
+      ],
+      "variables": 47199
+    },
+    {
+      "chart": 0,
+      "dominant": 0,
+      "dominant_name": "F1",
+      "float_nonzero": 2912,
+      "numeric_order_key": [
+        2912,
+        48930,
+        0,
+        0
+      ],
+      "variables": 48930
+    },
+    {
+      "chart": 3,
+      "dominant": 9,
+      "dominant_name": "G2_UZ_T",
+      "float_nonzero": 2927,
+      "numeric_order_key": [
+        2927,
+        44063,
+        3,
+        9
+      ],
+      "variables": 44063
+    },
+    {
+      "chart": 3,
+      "dominant": 8,
+      "dominant_name": "G1_UV_T",
+      "float_nonzero": 2929,
+      "numeric_order_key": [
+        2929,
+        44799,
+        3,
+        8
+      ],
+      "variables": 44799
+    },
+    {
+      "chart": 3,
+      "dominant": 6,
+      "dominant_name": "F7",
+      "float_nonzero": 2979,
+      "numeric_order_key": [
+        2979,
+        46885,
+        3,
+        6
+      ],
+      "variables": 46885
+    },
+    {
+      "chart": 7,
+      "dominant": 7,
+      "dominant_name": "B0_eta25_25",
+      "float_nonzero": 3126,
+      "numeric_order_key": [
+        3126,
+        52101,
+        7,
+        7
+      ],
+      "variables": 52101
+    },
+    {
+      "chart": 0,
+      "dominant": 4,
+      "dominant_name": "F5",
+      "float_nonzero": 3243,
+      "numeric_order_key": [
+        3243,
+        45786,
+        0,
+        4
+      ],
+      "variables": 45786
+    },
+    {
+      "chart": 1,
+      "dominant": 13,
+      "dominant_name": "G6_A2_9T",
+      "float_nonzero": 3329,
+      "numeric_order_key": [
+        3329,
+        72284,
+        1,
+        13
+      ],
+      "variables": 72284
+    },
+    {
+      "chart": 1,
+      "dominant": 14,
+      "dominant_name": "G7_B2_4T",
+      "float_nonzero": 3825,
+      "numeric_order_key": [
+        3825,
+        75442,
+        1,
+        14
+      ],
+      "variables": 75442
+    }
+  ],
+  "fresh_count": 28,
+  "ledger": "tmp/eq_odl1_rung2_chart_batch_ledger_v44_codex.json",
+  "schema": "fresh_pending_rows_v1"
+}

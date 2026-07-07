@@ -1,0 +1,119 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 9,
+  "columns": 52101,
+  "dominant": 7,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=2292/den_bits=2286",
+  "full_min_residual": "-num_bits=2279/den_bits=2304",
+  "full_negative_residual_count": 6,
+  "full_zero_residual_count": 158449,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        4,
+        4,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2304",
+      "row": 5124
+    },
+    {
+      "beta": [
+        4,
+        3,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2305",
+      "row": 5244
+    },
+    {
+      "beta": [
+        4,
+        3,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2305",
+      "row": 5328
+    },
+    {
+      "beta": [
+        4,
+        3,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2304",
+      "row": 5399
+    },
+    {
+      "beta": [
+        4,
+        3,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2305",
+      "row": 5408
+    },
+    {
+      "beta": [
+        4,
+        2,
+        0,
+        0,
+        1,
+        3,
+        0,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=2279/den_bits=2305",
+      "row": 6100
+    }
+  ],
+  "nonzero_source_columns": 3095,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_srcsol_k9_d7_claude.jsonl",
+  "solution_max": "num_bits=2291/den_bits=2281",
+  "solution_min": "num_bits=2285/den_bits=2310",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 13119
+}
