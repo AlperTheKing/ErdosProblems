@@ -66,5 +66,33 @@ theorem zeroSlack_negBalance_cage_of_neg_reserve
   · exact hzero.symm
   · exact absurd (hAbsorb C hC hpos) (not_le.mpr hBneg)
 
+/-- CageHallCert soundness core (GPT-Pro R-D step 4, abstract). A per-cage token-matching charge cert `q`
+    with **atom-exactness** (`Σ_t q a t = demand a`) and **token-capacity** (`Σ_a q a t ≤ cap t`) forces
+    `Surplus = Σ demand ≤ Σ cap = BankCap`. Hence `Balance = BankCap − Surplus ≥ 0` (see corollary). Only
+    finite exact-rational sums — NO Γ-minimality, NO switch: this is the non-circular absorption cert, the same
+    Hall/charge shape as the Branch-A certificates. The remaining R-D residual is only the *existence* of such a
+    `q` for every positive-slack cage (`PositiveSlackHallPrefix`). -/
+theorem surplus_le_bankCap_of_hall_charge
+    {Atom Token : Type*} (atoms : Finset Atom) (tokens : Finset Token)
+    (demand : Atom → ℚ) (cap : Token → ℚ) (q : Atom → Token → ℚ)
+    (hAtom : ∀ a ∈ atoms, ∑ t ∈ tokens, q a t = demand a)
+    (hCap : ∀ t ∈ tokens, ∑ a ∈ atoms, q a t ≤ cap t) :
+    ∑ a ∈ atoms, demand a ≤ ∑ t ∈ tokens, cap t := by
+  have h1 : ∑ a ∈ atoms, demand a = ∑ a ∈ atoms, ∑ t ∈ tokens, q a t :=
+    Finset.sum_congr rfl (fun a ha => (hAtom a ha).symm)
+  rw [h1, Finset.sum_comm]
+  exact Finset.sum_le_sum hCap
+
+/-- `Balance ≥ 0` from the Hall charge cert: with `Surplus = Σ demand`, `BankCap = Σ cap`, and
+    `Balance = BankCap − Surplus`, the charge cert gives `0 ≤ Balance`. -/
+theorem balance_nonneg_of_hall_charge
+    {Atom Token : Type*} (atoms : Finset Atom) (tokens : Finset Token)
+    (demand : Atom → ℚ) (cap : Token → ℚ) (q : Atom → Token → ℚ)
+    (hAtom : ∀ a ∈ atoms, ∑ t ∈ tokens, q a t = demand a)
+    (hCap : ∀ t ∈ tokens, ∑ a ∈ atoms, q a t ≤ cap t) :
+    0 ≤ (∑ t ∈ tokens, cap t) - (∑ a ∈ atoms, demand a) := by
+  have := surplus_le_bankCap_of_hall_charge atoms tokens demand cap q hAtom hCap
+  linarith
+
 end RouteBAssembly
 end Erdos23Delta0

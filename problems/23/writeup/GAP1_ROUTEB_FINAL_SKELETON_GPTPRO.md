@@ -71,3 +71,45 @@ Reserve=N^2-Γ verified). NEXT: (Claude) formalize this skeleton in Lean as a NE
 the 2 leaves + ReserveLedgerComplete as NAMED hypotheses, never sorry; prove the switch algebra + extraction + top);
 (GPT-Pro) prove NoSideDoorForLongAnnulus from S1/S2 boundary-compat blockers + construct PositiveSlackAbsorption_Hall
 charge cert. Gap#1 NOT closed until both leaves proven.
+
+================================================================================
+## R-D + R-A LEAF REPLY (GPT-Pro, 2026-07-07, 12120 char) -- gap#1 -> ONE irreducible residual
+================================================================================
+GPT-Pro attacked R-D first and gave the EXACT ledger definitions + a KEY R-A<->R-D bridge.
+
+### R-D exact definitions:
+- ell(e)^2 - 25 = sum_{j=0}^{r_e-1} [(5+2(j+1))^2-(5+2j)^2], increment d_j = (7+2j)^2-(5+2j)^2 = 8j+24. (r_e=(ell(e)-5)/2)
+- Surplus atoms A(C) = {(e,j): e in M, mu_C(e)>0, 0<=j<r_e}; demand_C(e,j) = mu_C(e)*(8j+24).
+- Surplus(C) = sum_a demand = sum_e mu_C(e)*(ell(e)^2-25). [mu_C(e) integral 0/1.]
+- Bank tokens T(C) (kinds C5Cell/DoorSlack/AmbientSlack/PruneReserve), cap_C(t)>=0; BankCap(C)=sum cap = 25*Bank(C).
+- CageHallCert = charge matrix q_C(a,t)>=0 (0 if not CanCharge = Ferrers domination) + unused. Checker (exact rational):
+  atom-exactness sum_t q(a,t)=demand(a); token-capacity sum_a q(a,t)+unused(t)=cap(t), unused>=0.
+
+### PROVABLE NOW (GPT-Pro "Final answer" -- 3 parts, 2 now Lean-formalized by Claude):
+1. CageHallCert soundness: exact charge matrix => Balance(C)>=0. [CLAUDE LEAN: surplus_le_bankCap_of_hall_charge +
+   balance_nonneg_of_hall_charge in RouteBAssembly.lean, GREEN + axiom-clean -- Surplus=sum demand <= sum cap=BankCap
+   by atom-exactness+token-capacity+sum_comm; non-circular.]
+2. PositiveSlackAbsorptionProvider soundness: checked Hall certs for ALL sigma>0 cages => absorption.
+3. Negative reserve extraction: Reserve<0 + absorption => min-positive-debt sigma=0 deficient cage. [CLAUDE LEAN:
+   zeroSlack_negBalance_cage_of_neg_reserve in RouteBAssembly.lean, GREEN + axiom-clean, NON-CIRCULAR (no hGammaMin/switch).]
+
+### THE SINGLE IRREDUCIBLE RESIDUAL (R-D leaf):
+**PositiveSlackHallPrefix**: for every terminal cage C with sigma(C)>0, order atoms/tokens by the Ferrers door/annulus
+order; for every Ferrers prefix P of surplus atoms, demand(P) <= capacity(N(P)). Then greedy Ferrers filling
+constructs q_C => the Hall matching exists => Balance(C)>=0. "A single sigma>0 / Balance<0 cage would break the
+extraction, and switch Gamma-minimality cannot repair it without circularity." = THE hardest node, global-to-local.
+
+### R-A resolved into 3 options; Option C = the R-A<->R-D BRIDGE:
+- Option A CAP_PairDoorBoundary_LUniform (deltaB(U)={born0,born1} for canonical U). If Claude's gate sees extra side
+  doors for the SAME canonical U, Option A is FALSE. [my ambient gate found side-doors on RAW switch sets -- need to
+  test the CANONICAL U specifically to decide A.]
+- Option B CAP_PairDoorBoundary_AfterDoorClosure (replace raw U by canonical door-closed U^cl).
+- **Option C SideDoorCreatesPositiveSlackAbsorbableCage: any extra side door creates a POSITIVE-SLACK subcage whose
+  balance is nonneg by PositiveSlackAbsorption, so it cannot occur in the minimal-positive-debt ZERO-SLACK
+  extraction. "Option C may be the natural bridge between R-A and R-D."** My ambient finding (side-doors = positive-
+  slack leakages) SUPPORTS Option C -> R-A largely SUBSUMED into R-D.
+
+## GAP#1 NOW = ESSENTIALLY ONE IRREDUCIBLE RESIDUAL: PositiveSlackHallPrefix (universal Ferrers prefix-Hall for
+positive-slack cages). Everything else (extraction, charge-cert soundness, R-A via Option C) is provable/proven;
+Claude has 5 RouteBAssembly.lean theorems GREEN + axiom-clean covering the extraction + charge-cert soundness.
+Retask to MAIN: prove PositiveSlackHallPrefix (Ferrers prefix inequalities) + confirm R-A Option C. Gap#1 NOT closed.
