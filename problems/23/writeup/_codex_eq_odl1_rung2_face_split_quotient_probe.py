@@ -1493,22 +1493,54 @@ def run(args: argparse.Namespace) -> dict[str, object]:
             "seconds": time.monotonic() - t0,
         }
 
-    columns = build_columns(
-        chart,
-        args.dominant,
-        args.band,
-        args.tier,
-        args.support,
-        None if args.max_base_columns == 0 else args.max_base_columns,
-        None if args.max_pairs_per_family == 0 else args.max_pairs_per_family,
-        None if args.max_band_columns == 0 else args.max_band_columns,
-        parse_family_filter(args.face_pair_families),
-        divisor,
-        rem_p,
-        quo_p,
-        progress=args.verbose,
-        progress_t0=t0,
-    )
+    columns_payload: dict[str, object] | None = None
+    if args.columns_json:
+        if args.verbose:
+            print("phase=load_columns start", flush=True)
+        columns_payload, columns = read_qcolumns_json(args.columns_json, args=args, divisor=divisor, rem_p=rem_p, quo_p=quo_p)
+        if args.verbose:
+            print(
+                f"phase=load_columns done columns={len(columns)} seconds={time.monotonic() - t0:.3f}",
+                flush=True,
+            )
+    else:
+        columns = build_columns(
+            chart,
+            args.dominant,
+            args.band,
+            args.tier,
+            args.support,
+            None if args.max_base_columns == 0 else args.max_base_columns,
+            None if args.max_pairs_per_family == 0 else args.max_pairs_per_family,
+            None if args.max_band_columns == 0 else args.max_band_columns,
+            parse_family_filter(args.face_pair_families),
+            divisor,
+            rem_p,
+            quo_p,
+            progress=args.verbose,
+            progress_t0=t0,
+        )
+    if args.emit_columns_json:
+        if args.verbose:
+            print("phase=emit_columns_json start", flush=True)
+        write_qcolumns_json(
+            args.emit_columns_json,
+            args=args,
+            chart=chart,
+            tier0_payload=tier0_payload,
+            target_beta_nonzero_count=target_beta_nonzero_count,
+            target_summary=target_summary,
+            divisor=divisor,
+            rem_p=rem_p,
+            quo_p=quo_p,
+            columns=columns,
+            seconds=time.monotonic() - t0,
+        )
+        if args.verbose:
+            print(
+                f"phase=emit_columns_json done path={args.emit_columns_json} seconds={time.monotonic() - t0:.3f}",
+                flush=True,
+            )
     if args.verbose:
         print(f"phase=build_columns done columns={len(columns)} seconds={time.monotonic() - t0:.3f}", flush=True)
         if not args.columns_only:
@@ -1532,6 +1564,9 @@ def run(args: argparse.Namespace) -> dict[str, object]:
             "remP_summary": poly_summary(rem_p),
             "quoP_summary": poly_summary(quo_p),
             "target_division_identity_ok": True,
+            "columns_json": str(args.columns_json) if args.columns_json else None,
+            "emit_columns_json": str(args.emit_columns_json) if args.emit_columns_json else None,
+            "columns_json_schema": columns_payload.get("schema") if columns_payload else None,
             "columns": column_summary(columns, chart.generator_names, args.dominant),
             "seconds": time.monotonic() - t0,
         }
@@ -1563,6 +1598,9 @@ def run(args: argparse.Namespace) -> dict[str, object]:
         "divisor_summary": poly_summary(divisor),
         "remP_summary": poly_summary(rem_p),
         "quoP_summary": poly_summary(quo_p),
+        "columns_json": str(args.columns_json) if args.columns_json else None,
+        "emit_columns_json": str(args.emit_columns_json) if args.emit_columns_json else None,
+        "columns_json_schema": columns_payload.get("schema") if columns_payload else None,
         "columns": column_summary(columns, chart.generator_names, args.dominant),
         "quotient_rows": len(rows),
         "quotient_nnz": int(mat.nnz),
@@ -1599,6 +1637,8 @@ def main() -> None:
     ap.add_argument("--tier0-only", action="store_true", help="only emit rem(P)/quo(P) monic division diagnostic")
     ap.add_argument("--candidate-summary-only", action="store_true", help="emit exact candidate-set sizes without quotient column construction")
     ap.add_argument("--columns-only", action="store_true", help="build selected quotient columns but skip row matrix and LP")
+    ap.add_argument("--columns-json", type=Path, default=None, help="Reuse serialized quotient columns emitted by --emit-columns-json.")
+    ap.add_argument("--emit-columns-json", type=Path, default=None, help="Write selected quotient columns to a compact reusable JSON file.")
     ap.add_argument("--no-solve", action="store_true")
     ap.add_argument("--method", choices=["highs", "highs-ds", "highs-ipm", "highspy"], default="highs")
     ap.add_argument("--solver-threads", type=int, default=0)

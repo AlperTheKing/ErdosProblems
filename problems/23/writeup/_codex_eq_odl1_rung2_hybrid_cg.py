@@ -479,7 +479,7 @@ def main() -> None:
     ap.add_argument("--support", choices=["target", "derived", "all"], default="derived")
     ap.add_argument("--target-beta-json", type=Path, default=None)
     ap.add_argument("--tier0-json", type=Path, default=None)
-    ap.add_argument("--face-pair-families", default=None)
+    ap.add_argument("--face-pair-families", default="")
     ap.add_argument("--seed-max-pairs", type=int, default=1024)
     ap.add_argument("--seed-max-band", type=int, default=4096)
     ap.add_argument("--seed-columns-json", type=Path, default=None)

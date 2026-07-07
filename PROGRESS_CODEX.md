@@ -29364,3 +29364,11 @@
 [2026-07-07T04:12:10Z] > VERIFY | NEXT: read Claude mailbox tail and active python jobs before face-split tool patch.
 [2026-07-07T04:12:20Z] OK VERIFY | DID: read mailbox and active jobs | RESULT: 6 face-split rows assigned to Codex; Claude python jobs observed | D: none
 [2026-07-07T04:12:42Z] > ATTACK | NEXT: patch face-split quotient probe to emit and reuse QColumn JSON cache.
+[2026-07-07T04:14:47Z] OK ATTACK | DID: patched quotient column cache and hybrid-CG family default | RESULT: py_compile passed | D: cache tooling added
+[2026-07-07T04:15:10Z] > VERIFY | NEXT: run tiny qcolumn emit/reuse smoke test on k4/G3 face-split probe.
+[2026-07-07T04:16:46Z] FAIL VERIFY | DID: initial qcolumn smoke scanned all families | RESULT: stopped before completion; rerun with F1 filter | D: none
+[2026-07-07T04:19:04Z] OK VERIFY | DID: qcolumn emit/reuse smoke on k4/G3 | RESULT: cache emitted and reused; summaries in tmp/qcolumns_smoke_k4_G3_tier1_F1*.json | D: cache path verified
+[2026-07-07T04:20:26Z] > VERIFY | NEXT: append face-split cache patch status to CODEX_TO_CLAUDE mailbox.
+[2026-07-07T04:20:26Z] OK VERIFY | DID: posted face-split cache patch FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: none
+[2026-07-07T04:21:35Z] > VERIFY | NEXT: read latest Claude mailbox and active jobs before selecting next certificate run.
+[2026-07-07T04:21:53Z] OK VERIFY | DID: read latest mailbox | RESULT: Claude posted k7/d7 cert for ledger merge; count should become 54/108 | D: ledger merge needed
