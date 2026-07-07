@@ -607,3 +607,30 @@ the deep GERSH ledger design -- NOT graph-gateable, NOT triangle-free-provable. 
 cert) is COMPLETE + axiom-clean. gap#1 = the GERSH crux, fully mapped; all shortcuts (door-only, companion-theta,
 triangle-free discharging, canonical cap) eliminated. P(gap#1 math) ~45-50 (a precisely-stated Hall charge-cert existence
 theorem; the rowDB bank construction is the remaining deep design).
+
+================================================================================
+## DEFINITIVE VERDICT: gap#1 = GERSH aggregation core, per-instance CHECKABLE, universal = the wall, NOT circular / NOT the conjecture (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro FINAL: PositiveSlackHallPrefix_FullBank is CONSTRUCTIBLE as an exact certificate search (no known graph-only
+closed-form for all graphs). PER-INSTANCE: constructible + checkable (non-circular IF the checker verifies token-origin
+identities + no-double-spend + flow feasibility + global ledger identity reserveResidual=FreeBank+GoodBalance+sum_C
+Balance(C); tokens tied to residual identities, not free money). UNIVERSAL existence ("this allocation exists for every
+good cut") = the true remaining wall = the GERSH AGGREGATION CORE. "NOT automatically equivalent to the whole conjecture,
+because the switch contradiction handles the negative zero-slack cages after absorption. But it is the hardest remaining core."
+
+### TOKEN ORIGINS (graph-anchored): Ambient token h = component X (support V_X, tau=T_X), from the sign-atom/component
+residual decomposition R_full(X) = R_local(X) + (N-|V_X|)*T_X, T_X>=0. C5 token z from R_local(X): mass(z)>=0, cap=25*mass(z).
+Prune token D: cap=Balance(D). Door: 25*sigma. ell=9-in-N=9 leaf (Gamma=N^2): ambient empty, prune 0 => C5Cap>=31 required
+(Balance=25+31-56=0 tight). MAX-FLOW: atoms(demand mu*(8j+24)) -> {Door 25sigma, Ambient cap(v)=sum_{X: v notin V_X}T_X,
+C5 25*mass(z), Prune Balance(D)} with incidence (ambient v iff v notin support(a); C5 iff z in Ferrers nbhd of a; etc.);
+feasible => Surplus <= FullBank => Balance>=0. Nonnegativity + residual-identity ties prevent a vacuous LP.
+
+### Lean (GPT-Pro): structures AmbientToken/C5Token/PruneToken/FullBankFlowCert; checkFullBankFlowCert_sound (= Claude's
+surplus_le_bankCap_of_hall_charge generalized) + PositiveSlackAbsorption_FullBank_of_cert (0<=Balance). Claude HAS the
+soundness half; OPEN = universal cert EXISTENCE.
+
+### CLAUDE STATUS (DEFINITIVE): gap#1 = the GERSH aggregation core = "a valid full-bank flow cert exists for every sigma>0
+cage". PER-INSTANCE gate buildable IF I implement the component/residual machinery (V_X, T_X, R_local from the sign-atom
+decomposition) -- deep but graph-anchored. My cap=N-T(v) gate = the AMBIENT vertex-level approximation only (missing C5=R_local).
+UNIVERSAL existence = the hardest remaining core (NOT the conjecture; the switch handles negatives). P(gap#1 math) ~45-50
+(a bounded hard core, per-instance checkable, non-circular, not the whole conjecture -- but the universal Hall existence is genuinely hard).
