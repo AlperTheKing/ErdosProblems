@@ -1,0 +1,89 @@
+{
+  "bad_beta": [
+    1,
+    0,
+    2,
+    1,
+    0,
+    2,
+    3,
+    1,
+    1,
+    0
+  ],
+  "bad_residual": "-num_bits=5252/den_bits=5283",
+  "bad_row": 77823,
+  "band": "near_2s_minus_1",
+  "blockers": {
+    "missing_bad_coeff": 45757,
+    "tested_bad_sign_columns": 23,
+    "too_small_allowance": 22,
+    "wrong_bad_sign": 6
+  },
+  "chart": 0,
+  "columns": 45786,
+  "core": "tmp\\eq_odl1_rung2_core_k0_d4_s2027_codex_cpp10.jsonl",
+  "dominant": 4,
+  "first_hit": {
+    "already_in_core": false,
+    "bad_coeff": "-2/11",
+    "kind": "band",
+    "limiting_coeff": "2/11",
+    "limiting_row": 42073,
+    "max_t": "num_bits=5266/den_bits=5284",
+    "multiplier_exp": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      2,
+      3,
+      1,
+      1,
+      0
+    ],
+    "name": "near_2s_minus_1",
+    "required": "num_bits=5252/den_bits=5280",
+    "source_col": 45357,
+    "terms": 10
+  },
+  "first_hit_exact_ok": true,
+  "first_hit_min_residual": "0",
+  "first_hit_negative_residual_count": 0,
+  "first_hit_zero_residual_count": 156248,
+  "initial_min_residual": "-num_bits=5252/den_bits=5283",
+  "initial_negative_residual_count": 2,
+  "repaired_source_solution": "tmp\\eq_odl1_rung2_source_solution_k0_d4_s2027_codex_cpp10_repair77823.jsonl",
+  "schema": "eq_odl1_rung2_one_row_repair_v1",
+  "single_column_hit_count_reported": 1,
+  "single_column_hits": [
+    {
+      "already_in_core": false,
+      "bad_coeff": "-2/11",
+      "kind": "band",
+      "limiting_coeff": "2/11",
+      "limiting_row": 42073,
+      "max_t": "num_bits=5266/den_bits=5284",
+      "multiplier_exp": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        2,
+        3,
+        1,
+        1,
+        0
+      ],
+      "name": "near_2s_minus_1",
+      "required": "num_bits=5252/den_bits=5280",
+      "source_col": 45357,
+      "terms": 10
+    }
+  ],
+  "solution": "tmp\\eq_odl1_rung2_core_solution_k0_d4_s2027_codex_cpp10.jsonl",
+  "source_core_columns": 4601,
+  "support": "negative"
+}

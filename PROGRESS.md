@@ -2481,3 +2481,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T13:25Z] ✔ MILESTONE-90 | ledger 91/108 (past 90); claimed+launched 3 more 7/9 helps: 7/5,9/11,9/6; k3/d6 seed-2027 retry running | Δ: 90 milestone, 17 pending
 [2026-07-07T13:34Z] ✔ COLLISION-FIX | killed redundant collided rows (7/5,9/11,9/6 Codex did first); Codex takes whole 7/9 tail (faster), I focus on aggregate verification + k3/d6 retry | 93/108, 15 pending
 [2026-07-07T13:38Z] ✔ k3/d6-FIXED + claim1,2 | k3/d6 seed2027 exact_ok=TRUE (degenerate-seed fix works, not falsifier); claimed+launched 1/13,2/13,1/14; ~99/108, ~44 hard rows verified all PASS
+[2026-07-07T14:20Z] ► SEED-SEARCH | 102/108 stuck on 6 degenerate rows; parallel seed search: I take 8/9(s99991),8/8(s88883), Codex 8/6,6/4; my 0/4(s2027),1/14 running. All feasible (HiGHS Optimal), not falsifiers.

@@ -29689,3 +29689,12 @@
 [2026-07-07T11:17:04Z] OK ATTACK | DID: Stopped redundant k0/d4 duplicate process tree. | RESULT: stopped 19 processes. | D: workers freed
 [2026-07-07T11:17:34Z] > ATTACK | NEXT: Run k0/d4 one-row repair for bad row 77823.
 [2026-07-07T11:17:34Z] > ATTACK | NEXT: Run k0/d4 one-row repair for bad row 82013.
+[2026-07-07T11:18:18Z] OK ATTACK | DID: Ran k0/d4 one-row repair row 82013. | RESULT: tmp/eq_odl1_rung2_one_row_repair_k0_d4_s2027_codex_cpp10_82013.json | D: repair result
+[2026-07-07T11:18:18Z] OK ATTACK | DID: Ran k0/d4 one-row repair row 77823. | RESULT: tmp/eq_odl1_rung2_one_row_repair_k0_d4_s2027_codex_cpp10_77823.json | D: repair result
+[2026-07-07T11:18:41Z] > ATTACK | NEXT: Run full-source IPM feasibility-basis core extraction for k8/d6.
+[2026-07-07T11:19:02Z] OK ATTACK | DID: Ran k0/d4 one-row repairs. | RESULT: row 77823 exact_ok true; row 82013 exact_ok false. | D: k0/d4 check
+[2026-07-07T11:19:02Z] > VERIFY | NEXT: Official exact-check repaired k0/d4 source solution.
+[2026-07-07T11:19:39Z] OK VERIFY | DID: Polled active target rows. | RESULT: k1/d14 exact true; k6/d4 pert has 1 neg residual,0 neg coeff. | D: ledger+repair
+[2026-07-07T11:19:39Z] > ATTACK | NEXT: Stop duplicate k1/d14 alternate process tree after exact-clean codex run.
+[2026-07-07T11:19:39Z] OK ATTACK | DID: Stopped duplicate k1/d14 alternate process tree. | RESULT: stopped 11 processes. | D: workers freed
+[2026-07-07T11:19:46Z] OK VERIFY | DID: Official exact-check repaired k0/d4. | RESULT: tmp/eq_odl1_rung2_check_k0_d4_s2027_codex_cpp10_repair77823.json | D: manifest if exact
