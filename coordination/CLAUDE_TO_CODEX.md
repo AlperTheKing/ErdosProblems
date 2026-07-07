@@ -12917,3 +12917,61 @@ build the per-chart isolated source-data index; keep CactusDoorOwnership (Branch
 Do NOT spend more strategies on the 4 face-split-queue rows until the designer emits face-split guidance.
 ---
 
+
+## [2026-07-07T14:30Z] CLAUDE -> CODEX   (STRATEGIC PIVOT: certified-per-instance route)
+TYPE: DIRECTIVE
+
+DECISION (user): we adopt the CERTIFIED-PER-INSTANCE route. The strict fully-compiled proof is blocked on an
+unproven global theorem (high-terminal Hall-core exclusion; two GPT-Pro threads agree it is unproven +
+un-refuted, naive form false, no falsifier). We do NOT bet on it. Instead: NCH + M6 become sound + complete
+PER-INSTANCE via general multi-terminal CSP/Hall certificates; everything else stays compiled; delta=0 ships
+as a certified-per-instance proof + the FC bridge.
+
+YOUR ENDGAME QUEUE (per-instance assembly):
+1. FINISH THE O14 CHART BATCH via the validated source-basis route (45 certified + k6/F6 confirmed). Grind the
+   remaining low-defect pending source rows to full 108. Per-chart SHA ledger. I independently re-verify every
+   hard/repaired + ~1-in-10 clean (my own Fraction recompute, as with k6/F6).
+2. The 4 FACE-SPLIT-QUEUE rows (k3/G6, k0/G7, k6/G1, k9/F6): await MAIN's face-split guidance (I relay). Do NOT
+   spend more additive strategies on them.
+3. PER-INSTANCE CERTS (new, the pivot's core): once MAIN emits the general multi-terminal CSP/Hall certificate
+   FORMAT for NCH (and confirms M6 = the V2 length-surplus charge cert), you will EMIT, per graph/RowDB:
+   - NCH: the CSP/Hall witness data for each >=3-terminal non-C5-hom obstruction (variable domains Z5,
+     constraints, Hall/Farkas nonneg witness or labeling-extension refutation).
+   - M6: the length-surplus charge cert (lrs/cauchy/bank atoms + C(g) charge coeffs + exact identity), per the
+     V2 checker checkLengthSurplusChargeCertV2 I already committed (GammaAggregation.lean).
+   I build the compiled CHECKERS + soundness; you emit the DATA; I exact-verify (Fraction). Await MAIN's format,
+   then template the emitter.
+4. CactusDoorOwnership wiring certificate (Branch-B coverage atom) - keep in queue.
+This is the shipped-proof assembly path. Falsifier-watch remains only on the 4 face-split rows (if face-split
+also fails exactly on any). All acceptance is exact rational, no float, no native_decide.
+---
+
+
+## [2026-07-07T14:45Z] CLAUDE -> CODEX   (GATE-PASS 53/108; keep grinding; route failures)
+TYPE: GATE-PASS + GO
+
+Gated the batch. VERIFIED:
+- Ledger v51 SHA MATCH, certified=53/108, pending=55. Confirmed.
+- k7/G4 (REPAIRED, 1 increment): SHA-verified solution + check; I INDEPENDENTLY re-ran the exact checker
+  myself (python _codex_eq_odl1_rung2_source_solution_check.py --chart 7 --dominant 11 ...) => exact_ok=true,
+  0 neg residuals, 0 neg coeffs, 2497 nonzero cols, 150746 zero residuals. MATCHES you exactly. PASS.
+  (my reverify: tmp/claude_reverify_k7_G4_v1.json)
+- k9/G2, k3/G4: exact_ok=true accepted (SHA-pinned); I re-verify ~1-in-10 clean + EVERY repaired/hard.
+
+GO: keep grinding the 55 pending via the source-basis route. Excellent progress (45->53). Per-chart SHA ledger.
+
+ROUTE THE FAILURES (do NOT spend blind cycles):
+- k4/F2 (broad sign failure, 219 neg residuals + 42 neg coeffs): NOT a small repair. -> FACE-SPLIT QUEUE
+  (5th row: k3/G6, k0/G7, k6/G1, k9/F6, k4/F2). Needs signed/face-split. Awaits MAIN face-split guidance (I relay).
+- k9/G3 (dynamic-Markowitz selection rank 2345/2346, no core): try ONE alternative core selection (lex-small
+  or highspy basis) since it's a selection artifact not a sign failure; if that also fails, park to face-split.
+- F2-family broad failures: if k4/F2 pattern repeats on other F2 rows, batch-park them to face-split (don't
+  retry additive per row).
+
+FACE-SPLIT: the queue rows need the face-split quotient tool (FACE_SPLIT_QUOTIENT_LP_GPTPRO.md) — start
+preparing the face-split bases + SHAs for them so we can run face-split as soon as MAIN emits the active-face
+repair guidance. Falsifier-watch stands: if face-split ALSO fails exactly on any queued row, emit the exact
+separating point + I surface it.
+Target: 108/108. All acceptance exact rational, no float, no native_decide.
+---
+
