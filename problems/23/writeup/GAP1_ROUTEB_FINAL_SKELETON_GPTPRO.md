@@ -502,3 +502,35 @@ door-only detour proved the ell<=7 special case + found the C_18 escape (shortcu
 the residual is the full-bank Hall. NOT graph-gateable (needs rowDB C5/Ambient/Prune model = deep infra). Lean:
 formalize PositiveSlackAbsorption_FullBank (or the prefix Hall form) as THE named hypothesis; door-only theorems are
 the proven special case. P(gap#1 math) ~45-50 (back at the hard node, no shortcut; C_18 reconciled not refuting).
+
+================================================================================
+## gap#1 TRUE WALL = PositiveSlackHallPrefix_FullBank + candidate discharging proof (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro HONEST READ: "PositiveSlackHallPrefix_FullBank is the true wall now. The pair-door switch and S2 disjunction
+issues have been downgraded; the proof now lives or dies on the full ambient/C5/prune bank." NOT equivalent to the
+whole conjecture (easier 3 ways: only sigma>0 cages; local/prefixwise; checkable by an exact capacitated Hall/charge
+certificate). But NOT a minor lemma -- a counterexample = a sigma>0 Balance<0 cage surviving absorption (the exact
+obstruction). Idea (1) FAILS: global Reserve<0 gives only sum-of-balances<0, NOT a per-cage ambient lower bound.
+
+### THE SHARP RESIDUAL (Lean-ready):
+  PositiveSlackHallPrefix_FullBank (rowDB C) (hSigma:0<sigma) : forall i, IsFerrersPrefix i ->
+    PrefixDemand(i) <= 25*PrefixSigma(i) + PrefixC5Cap(i) + PrefixAmbientCap(i) + PrefixPruneCap(i).
+  Atomic form AmbientShadowPrefixBound: PrefixLongDeficit(i) := PrefixDemand(i)-25*PrefixSigma(i)-PrefixC5Cap(i)-
+    PrefixPruneCap(i) <= PrefixAmbientCap(i). Door-only was the special case PrefixLongDeficit(i)<=0 (C_18 breaks it).
+
+### CANDIDATE DISCHARGING PROOF (GPT-Pro sec 3-5): fractional charge q(a,v)=rem(a)/(N-|V_a|) for v in Amb(a) (ambient
+vertices OFF atom a's geodesic support V_a), 0 for v in V_a. Atom-exactness automatic (sum_v q = rem(a)). Reduces to
+the PER-VERTEX AmbientShadowPrefixBound: for every ambient vertex v, sum_{a: v notin V_a} rem(a)/(N-|V_a|) <= cap_i(v)
+(sum_v cap(v)=PrefixAmbientCap(i)). Hypotheses used: Ferrers nesting (laminar V_a), max-cut slack (25sigma), TRIANGLE-
+FREE (prevents shortcut overlaps overcharging a vertex), rowDB ambient ownership (cap_i(v)). Reframing: "long single-
+row atoms are ALLOWED, but their long annular residual is SPREAD over the ambient vertices outside their support, and
+the rowDB ambient capacities are large enough" = the C_18 reconciliation.
+
+### TO GATE (GPT-Pro sec 8): needs rowDB bank data (graph-only insufficient). For every sigma-positive cage/prefix emit
+PrefixDemand, PrefixSigma, PrefixC5Cap, PrefixAmbientCap, PrefixPruneCap + check the inequality = exact Ferrers charge
+certificate. rem(a),V_a (geodesic support) ARE graph-computable; cap_i(v) needs the rowDB ambient capacity model.
+
+### STATUS: gap#1 = PositiveSlackHallPrefix_FullBank (THE true wall = GERSH crux), precisely named + Lean-ready + a
+candidate discharging proof (per-vertex AmbientShadowPrefixBound). Needs the rowDB bank emitter to gate + a real proof
+of the per-vertex bound. P(gap#1 math) ~45-50 (well-characterized wall with a candidate approach, not lower).
+### BROWSER: old MAIN tab 1267096933 STUCK rendering; FRESH tab (recreate from URL) renders correctly -- use a fresh tab.
