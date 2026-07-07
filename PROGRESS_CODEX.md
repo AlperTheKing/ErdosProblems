@@ -29607,3 +29607,4 @@
 2026-07-07T09:55:06.3021903Z OK VERIFY | DID: harvested k9/d10 exact row | RESULT: ledger v80 certified_count=79/108 pending_count=29 | D: perturbed_retry_next
 2026-07-07T09:55:37.0017251Z > ATTACK | NEXT: launch perturbed-l1 retries k8/d6,k8/d8,k8/d9
 2026-07-07T09:55:56.1916509Z OK ATTACK | DID: launched perturbed-l1 retries with 8 workers | RESULT: k8/d6,k8/d8,k8/d9 running | D: retry_lane
+2026-07-07T09:57:14.4160904Z OK VERIFY | DID: harvested Claude k3/d5 | RESULT: ledger v82 certified_count=80/108 pending_count=28 | D: none
