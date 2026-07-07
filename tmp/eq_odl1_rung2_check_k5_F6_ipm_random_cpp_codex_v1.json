@@ -1,0 +1,87 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 5,
+  "columns": 31307,
+  "dominant": 5,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3073/den_bits=3067",
+  "full_min_residual": "-num_bits=3073/den_bits=3101",
+  "full_negative_residual_count": 4,
+  "full_zero_residual_count": 159793,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "residual": "-num_bits=3070/den_bits=3102",
+      "row": 31775
+    },
+    {
+      "beta": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "residual": "-num_bits=3070/den_bits=3098",
+      "row": 33002
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "residual": "-num_bits=3073/den_bits=3101",
+      "row": 34715
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0
+      ],
+      "residual": "-num_bits=3070/den_bits=3098",
+      "row": 35273
+    }
+  ],
+  "nonzero_source_columns": 2085,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k5_F6_ipm_random_cpp_codex_v1.jsonl",
+  "solution_max": "2675/4",
+  "solution_min": "num_bits=3069/den_bits=3100",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}

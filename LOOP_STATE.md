@@ -1821,3 +1821,17 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - BREAKTHROUGH still solid: all broad rows Clarabel-feasible, face-split unneeded (math settled). Remaining =
   purely "find the feasible LP basis for the exact solve". Tools: parallel modular 50x, Clarabel feasibility,
   L1 support, rank-aware QR, IPM extraction. marker 2039807. Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T10:45Z) — FIRST HARD ROWS CERTIFIED; fan-out live (path PROVEN)
+- BREAKTHROUGH: exact-extraction CRACKED. Path = HiGHS IPM+crossover Optimal FULL-rank basis (all-basic) +
+  C++ native mod-p solver (tmp/codex_mod_prime_solve.exe) + exact source check. DEGENERACY fixed by
+  --highs-objective random (my fix; L1/zero gave rank-deficient). NO face-split anywhere.
+- CERTIFIED + I independently reverified (SHA + exact 0/0): k6/G2(ch6/d9), k6/G1(ch6/d8), k5/G1(ch5/d8).
+  Codex ledger v57 = 59/108 (was 55). k5/F6 repairing (8->4 neg res).
+- FAN-OUT LIVE: Codex charts 5/7/8/9 (C++); ME charts 0-4 via febc_pipeline --modular-backend cpp
+  --selector highs-basis --solver ipm --run-crossover on --highs-objective random --basis-column-mode
+  all-basic. Launched 0/0, 3/1, 4/1, 0/14. I re-verify EVERY cert.
+- Tools: febc_pipeline.py (cpp+ipm+crossover+random), codex_mod_prime_solve.exe, my parallel solver (50x),
+  Clarabel feasibility. marker 2045079. No falsifier.
+- NEXT: gate my rows + Codex's; keep fanning charts 0-4; at 108 -> aggregate reverify + Lean assembly.
