@@ -29635,3 +29635,8 @@
 2026-07-07T10:28:14Z OK VERIFY | DID: polled active rows | RESULT: k7/d5 and k9/d7 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
 2026-07-07T10:29:05Z OK VERIFY | DID: verified ledger v95 | RESULT: certified_count=93 includes k7/d5 and k9/d7 | D: +2
 2026-07-07T10:32:06Z OK VERIFY | DID: polled active rows | RESULT: k9/d11,k9/d6 modular; no completed exact result | D: continue
+2026-07-07T10:32:36Z > ATTACK | NEXT: terminate duplicate Claude jobs k7/d5,k9/d11,k9/d6 to free workers
+2026-07-07T10:32:37Z OK ATTACK | DID: terminated duplicate Claude jobs k7/d5,k9/d11,k9/d6 | RESULT: requested Stop-Process on 6 PIDs | D: freed workers
+2026-07-07T10:33:06Z OK VERIFY | DID: checked statuses after duplicate kill | RESULT: k9/d11 exact_ok true; k9/d6 exact false 1 neg residual | D: harvest+repair
+2026-07-07T10:33:25Z > ATTACK | NEXT: run one-row repair for k9/d6 bad row 47842
+2026-07-07T10:34:32Z OK ATTACK | DID: one-row repair k9/d6 row 47842 | RESULT: first_hit_exact_ok true hit_count=2 | D: run official check

@@ -1,0 +1,113 @@
+{
+  "bad_beta": [
+    2,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    2,
+    2,
+    3
+  ],
+  "bad_residual": "-num_bits=3625/den_bits=3654",
+  "bad_row": 47842,
+  "band": "near_2s_minus_1",
+  "blockers": {
+    "missing_bad_coeff": 53101,
+    "tested_bad_sign_columns": 27,
+    "too_small_allowance": 25,
+    "wrong_bad_sign": 18
+  },
+  "chart": 9,
+  "columns": 53146,
+  "core": "tmp\\eq_odl1_rung2_core_k9_d6_codex_cpp6.jsonl",
+  "dominant": 6,
+  "first_hit": {
+    "already_in_core": false,
+    "bad_coeff": "-1/55",
+    "kind": "gen",
+    "limiting_coeff": "3/110",
+    "limiting_row": 43065,
+    "max_t": "num_bits=3633/den_bits=3643",
+    "multiplier_exp": [
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      2,
+      0,
+      3
+    ],
+    "name": "F2",
+    "required": "num_bits=3625/den_bits=3648",
+    "source_col": 263,
+    "terms": 18
+  },
+  "first_hit_exact_ok": true,
+  "first_hit_min_residual": "0",
+  "first_hit_negative_residual_count": 0,
+  "first_hit_zero_residual_count": 150841,
+  "initial_min_residual": "-num_bits=3625/den_bits=3654",
+  "initial_negative_residual_count": 1,
+  "repaired_source_solution": "tmp\\eq_odl1_rung2_source_solution_k9_d6_codex_cpp6_onerepair.jsonl",
+  "schema": "eq_odl1_rung2_one_row_repair_v1",
+  "single_column_hit_count_reported": 2,
+  "single_column_hits": [
+    {
+      "already_in_core": false,
+      "bad_coeff": "-1/55",
+      "kind": "gen",
+      "limiting_coeff": "3/110",
+      "limiting_row": 43065,
+      "max_t": "num_bits=3633/den_bits=3643",
+      "multiplier_exp": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        3
+      ],
+      "name": "F2",
+      "required": "num_bits=3625/den_bits=3648",
+      "source_col": 263,
+      "terms": 18
+    },
+    {
+      "already_in_core": false,
+      "bad_coeff": "-1/55",
+      "kind": "gen",
+      "limiting_coeff": "3/110",
+      "limiting_row": 46068,
+      "max_t": "num_bits=3632/den_bits=3642",
+      "multiplier_exp": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        3
+      ],
+      "name": "F4",
+      "required": "num_bits=3625/den_bits=3648",
+      "source_col": 2895,
+      "terms": 30
+    }
+  ],
+  "solution": "tmp\\eq_odl1_rung2_core_solution_k9_d6_codex_cpp6.jsonl",
+  "source_core_columns": 4227,
+  "support": "negative"
+}
