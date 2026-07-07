@@ -1,5 +1,5 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-07T17:02Z (gap#1 Route-B proof harvested+gated 0-fail L=5..15; switch-side reduced to CAP residuals #1-4 [battery-validated] + #5 token-bank [open]; P(Lean unconditional)~30-40)
+# Last update: 2026-07-07T18:04Z (gap#1 Route-B FULLY reduced: non-circular Lean skeleton, switch-algebra+extraction+top PROVEN, EXACTLY 2 residual leaves = NoSideDoorForLongAnnulus [local] + PositiveSlackAbsorption_Hall [hardest]; P(Lean unconditional)~30-40)
 
 ## MAILBOX
 - CODEX_TO_CLAUDE.md read marker (bytes): 2065930  (whole file read as of this tick)
@@ -12,10 +12,13 @@
 - Read replies: [data-message-author-role="assistant"] innerText; sanitize non-ASCII; tokenize = -> @EQ@, & -> @AMP@, ? -> @QQQ@ to dodge the "cookie/query-string" block; display truncates ~1400 chars/call so pull skeleton (structure/def/theorem lines) not full text.
 
 ## IN FLIGHT
-- GAP#1 ROUTE-B PROOF HARVESTED + GATED (2026-07-07, GAP1_ROUTEB_PAIRDOOR_PROOF_GPTPRO.md): GPT-Pro self-corrected the 49-bound -> strict drop >=4L+4>0 (matches my gate). Reduces gap#1 switch-side to a PAIR-DOOR theta gate. §9 gives full Lean proof-contracts (checkPairTypeBThetaGate_sound, pairDoor_deltaM_exact_of_maxcut [FULLY GENERAL: max-cutness], pairDoor_metric_stability [induced-invariance + convexity], pairTypeBTheta_gammaDrop_pos, _switch_connected, activePairTypeB_exists, no_minPositive_..._routeB, reserveResidual_nonneg_core_routeB). My _claude_pairdoor_convexity_gate.py: ALL PASS 0-fail L=5..15 (deltaM={f0,f1} exact, convexity B&B^U True, induced UU/WW invariant, metric-stable, drop=4L+4 exact 24..64, born_ells=[L,L], sides conn). §10 CLOSURE = 5 residuals: #1 CAP_PairDoorTheta_LUniform, #2 PairDoorConvexity_LUniform (the crux; battery-validated stretched), #3 PairDoorSidesConnected, #4 ActivePairTypeB_exists (=R2, |A|>=1 on 42800), #5 negative_reserve_yields_minPositive_sigma0_deficient_cage (TOKEN-BANK decomposition = the ONE non-geometry piece, FULLY OPEN).
-- MAIN retask (sent): GENERAL proof of #1-3 from S1/S2 CAP theory (not just stretched) + #5 token-bank decomposition.
-- CODEX (OUT until Thu ~08:00): chart-8 k8/d8 + k8/d9 patch600 solves (dim ~31k); the ONLY 2 pending certs. PARKED.
-- ME: on GPT-Pro #5/#1-3 general proofs -> exact-gate + Lean-formalize the Route-B chain (honest NAMED-hypothesis form).
+- GAP#1 ROUTE-B FULLY REDUCED (2026-07-07, definitive spec = GAP1_ROUTEB_FINAL_SKELETON_GPTPRO.md; evolution in GAP1_ROUTEB_PAIRDOOR_PROOF_GPTPRO.md). GPT-Pro delivered the complete NON-CIRCULAR Lean closure skeleton. reserveResidual=N^2-Gamma (verified exact). PROVEN GENERAL: pairDoor_deltaM_exact_of_maxcut, pairDoor_metric_stability (convexity+induced-invariance), pairTypeBTheta_gammaDrop_pos (4L+4), switch_connected, B4 negative_reserve_yields_..._cage (non-circular: no hGammaMin/switch), top reserveResidual_nonneg_core_routeB. EXACTLY 2 RESIDUAL LEAVES:
+    LEAF1 NoSideDoorForLongAnnulus/CAP_PairDoorBoundary_LUniform (deltaB(U)={born0,born1} for canonical terminal-shadow U; local CAP, lower risk). MY AMBIENT GATE (_claude_ambient_pairdoor_convexity_gate.py, 36000 real caps) CONFIRMS: convexity of RAW switch set fails 1000/4000 ONLY via extra side-doors; metric-stab broken=0, drop pos=4000 => gap#1 CONCLUSION robust, and NoSideDoor (not convexity) is THE obstruction.
+    LEAF2 PositiveSlackAbsorption_Hall (sigma(C)>0 => Surplus(C)<=25*Bank(C) via per-cage Hall/CSP charge cert; STRICTLY non-circular, signature takes NO hGammaMin; HARDEST per GPT-Pro -- "positive-slack positive-debt cages the switch never reaches").
+- MY GATES 0-fail: _claude_pairdoor_convexity_gate.py (stretched L=5..15, canonical U), _claude_ambient_pairdoor_convexity_gate.py (36000 real caps, sigma=0). Reserve=N^2-Gamma verified stretched+C5[t].
+- MAIN retask (sent 18:02Z): R-D exact Surplus/Bank defs + PositiveSlackAbsorption_Hall charge cert (non-circular) [priority]; R-A NoSideDoorForLongAnnulus from S1/S2 boundary-compat blockers.
+- CODEX (OUT until Thu ~08:00): chart-8 k8/d8 + k8/d9; the ONLY 2 pending certs. PARKED.
+- ME NEXT (solo, highest value): FORMALIZE the Route-B assembly in Lean = new module (reserveResidual:=N^2-Gamma; 2 leaves + ReserveLedgerComplete as NAMED hypotheses never sorry; prove switch-algebra + B4 + top). Then build R-D falsifier gate (sigma>0 positive-debt caps, check Balance>=0) once GPT-Pro gives Surplus/Bank defs.
 
 ## LEDGER (O14 chart batch)
 - 106/108 certified (tmp/eq_odl1_rung2_chart_batch_ledger_v106_codex.json). Pending: chart 8 d8 (G1_UV_T), d9 (G2_UZ_T).
