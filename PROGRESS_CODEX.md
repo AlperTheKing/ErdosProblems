@@ -29666,3 +29666,6 @@
 2026-07-07T10:52:23Z OK ATTACK | DID: patched febc pipeline time-limit passthrough | RESULT: --time-limit forwarded to core extractor | D: enables k8 timeout retry
 2026-07-07T10:52:23Z > ATTACK | NEXT: launch k8/d9,k8/d8 with --time-limit 1800
 2026-07-07T10:52:23Z OK ATTACK | DID: launched k8/d9,k8/d8 time-limit retries | RESULT: 2 Start-Process jobs | D: active
+2026-07-07T10:59:13Z OK VERIFY | DID: polled active rows | RESULT: k2/d13 exact true; k6/d4 false 2 residuals 0 coeffs; k8/d6 timeout | D: harvest+repair
+2026-07-07T10:59:29Z > ATTACK | NEXT: run one-row repair for k6/d4 bad row 15766
+2026-07-07T11:00:44Z FAIL ATTACK | DID: one-row repair k6/d4 row 15766 | RESULT: first_hit_exact_ok false hit_count=4 | D: try row17238
