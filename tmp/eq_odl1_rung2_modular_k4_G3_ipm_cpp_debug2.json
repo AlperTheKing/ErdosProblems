@@ -1,0 +1,19 @@
+{
+  "core": "tmp\\eq_odl1_rung2_core_k4_G3_ipm_basis_codex_v2.jsonl",
+  "dimension": 3893,
+  "modular": {
+    "modulus_bits": 60,
+    "partial_reconstruction_count": 3052,
+    "reconstructed": false,
+    "skipped_primes": [],
+    "used_primes": [
+      1073741789,
+      1073741783
+    ]
+  },
+  "prime_count_requested": 2,
+  "resumed_crt": "tmp\\eq_odl1_rung2_modular_k4_G3_ipm_cpp_debug2.crtstate.json",
+  "resumed_modulus_bits": 60,
+  "schema": "eq_odl1_rung2_modular_core_solve_v1",
+  "terms": 31653
+}
