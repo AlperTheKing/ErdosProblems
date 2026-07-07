@@ -183,3 +183,32 @@ ReserveLedgerCompleteness + PositiveSlackAbsorption + PositiveDebtTerminalizatio
 reserveResidual = N^2 - Gamma (rowDB enters only via the cage decomposition, not the value). Route-B proves Gamma<=N^2
 DIRECTLY via the Gamma-minimality switch contradiction -- it does NOT need an external charge cert (self-contained
 aggregation discharge). Retask sent to MAIN: prove R-A (general, incl. NoSideDoor) + R-D (PositiveSlackAbsorption).
+
+================================================================================
+## CLAUDE ADVERSARIAL FINDING: ambient pair-door convexity fails (but conclusion robust) -- refines R-A
+================================================================================
+_claude_ambient_pairdoor_convexity_gate.py ran on 36000 REAL deficient-cap switches (glue core 'I?AEBAwF_' + C5
+baggage, all bridges; triangle-free, B-connected Gamma-min max cuts, sigma=0 zero-slack positive-debt deficient
+caps -- the SAME family where dG=-24 uniform). Unlike the isolated stretched gate (no ambient side-doors), this
+probes R-A's NoSideDoorForLongAnnulus question directly.
+
+RESULT:
+- 4000 PAIR-door caps (|deltaB(Sset)|=|deltaM(Sset)|=2, type-B oldlens {L,L+2}); 32000 multi-door (passive/baggage,
+  (3,3) doors).
+- **gap#1 CONCLUSION ROBUST: metric-stability broken = 0 ; strict Gamma-drop pos = 4000, nonpos = 0. NO FALSIFIER.**
+- **GPT-Pro's convexity ROUTE (PairDoorConvex of the raw sigma=0 switch set U=Sset) FAILS on 1000/4000 pair-door
+  caps -- and in ALL 1000, metric stability STILL HOLDS (chg=[]).** Convexity is sufficient-but-not-necessary.
+- Failure mechanism (example g0-10, n=15, Sset=[3,4,8,9], born={(5,9),(6,9)}, old={(0,8),(2,8)}, oldlens=[5,7]):
+  AFTER the switch both old doors share U-endpoint 8 (dU=0) but their W-endpoints 0,2 are cut-distance dW=4 apart,
+  so c2 (dW <= 2+dU => 4 <= 2) FAILS. Yet no stable bad edge's ell changes. The non-door vertices 3,4 in Sset
+  create the "side door"; the RAW switch set is NOT the canonical minimal pair-door terminal-shadow.
+
+INTERPRETATION (honest): this does NOT falsify gap#1 (metric stability + strict drop hold on all 4000). It REFUTES
+"PairDoorConvex of the raw sigma=0 switch set" as a provable form of R-A: convexity is NOT implied by being a sigma=0
+deficient cap -- it is U-choice dependent. So R-A must be proven EITHER (a) for the CANONICAL minimal pair-door
+terminal-shadow U (excluding non-door vertices; my stretched gate's U={s,u,a1} is canonical and 0-fail), with a
+precise canonical-U construction; OR (b) via a WEAKER invariant than convexity that still gives metric stability
+(since stability is robust even where convexity fails -- the true reason is induced-subgraph invariance
+B[U]=B^U[U], B[V\U]=B^U[V\U], which holds for ANY U; convexity was only used to rule out a shorter 2-door reroute,
+which never actually materializes here). TO SURFACE to GPT-Pro after its R-A/R-D reply lands: pin the canonical U or
+give the weaker metric-stability invariant; the raw-switch-set convexity is false.
