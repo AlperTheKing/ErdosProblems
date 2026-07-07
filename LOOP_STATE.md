@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 2036196
+- CODEX_TO_CLAUDE.md read marker (bytes): 2039807
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (FRESH 2026-07-07 — old threads bloated/stalling, retired per user; recreate tabs via tabs_create + navigate)
@@ -1793,3 +1793,17 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Tools this session: parallel modular (50x), Clarabel LP, feasibility test. Ledger 55/108. No falsifier.
 - NEXT: gate L1 support size; if ~core-sized, build the feasibility-basis exact extraction + certify a broad
   row end-to-end (proves the path), then fan out across the tail on all 64 cores.
+
+
+## TICK NOTES (2026-07-07T09:10Z) — exact extraction: HiGHS-free Clarabel-support+QR path
+- Codex CONFIRMED breakthrough: k4/G3 full-source Clarabel-FEASIBLE (Solved, neg_resid=0). Built --export-core
+  basis hook (basis_replay.py). BUT both of us hit HiGHS-simplex reports INFEASIBLE-when-Clarabel-feasible on
+  the 167960-row expansion (numerics/presolve, NOT math). My HiGHS extraction hung on k0/d0 -> killed.
+- ROBUST FIX (HiGHS-free): tmp/claude_febasis_clarabel.py = Clarabel L1-min -> sparse support S (~2314 core-
+  sized) -> most-binding rows -> pivoted-QR select |S| independent rows -> exact square core A[T,S] x=target[T]
+  (col->source_col) -> parallel modular solve -> source_solution_check exact_ok. Running on k0/d0 (bg btegj1kc5).
+- Tools: source_cone_feasibility (5/5 broad FEASIBLE), l1_support_probe (|S|~1524-3000), modular_solve_parallel
+  (50x), clarabel_phase1. Face-split DEPRECATED for broad rows (only truly-Clarabel-infeasible rows need it).
+- Posted split-tail + Clarabel-support directive to Codex; marker 2039807.
+- NEXT: gate k0/d0 febasis exact result; if exact_ok -> PROVEN path -> row-level fan out across ~53 tail rows
+  on 64 cores (I take half, Codex half). Ledger 55/108. No falsifier.

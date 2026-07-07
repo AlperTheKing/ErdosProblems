@@ -1,0 +1,23 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 4,
+  "col_status_counts": {
+    "At lower/fixed bound": 45514
+  },
+  "constraints": 167960,
+  "dominant": 10,
+  "dominant_name": "G3_XY_T",
+  "float_nonzero": 0,
+  "highs_run_status": "HighsStatus.kOk",
+  "model_status": "Infeasible",
+  "objective": "sum",
+  "presolve": "off",
+  "row_status_counts": {
+    "Basic": 167960
+  },
+  "schema": "eq_odl1_rung2_basis_replay_probe_v1",
+  "solver": "simplex",
+  "support": "negative",
+  "threads": 32,
+  "variables": 45514
+}

@@ -1,0 +1,314 @@
+Use a pair-interval dual master. It is exact-equivalent to the pair-closed quotient cone, but it removes the pathological primal Phase-I artificials and stops the solver from carrying both members of a pair as nearly cancelling columns.
+
+The key identity is specific to your quotient split, so it is not generic LP advice.
+
+Lemma: pair closure is an interval constraint in the quotient dual
+
+Let
+
+D(F) := (rem_Ga(F), quo_Ga(F)).
+
+For a mandatory pair indexed by a non-dominant generator Gb and multiplier m, define
+
+v_{b,m}  := D(Gb*m)
+ell_m    := D(Ga*m) = (0, m)
+v'_{b,m} := D((Ga - Gb)*m).
+
+Because Ga is monic and the quotient division is by Ga,
+
+v'_{b,m} = ell_m - v_{b,m}.
+
+So the original pair-closed cone uses the two columns
+
+v_{b,m},     ell_m - v_{b,m},
+
+plus the lift column ell_m.
+
+Now take a dual row vector y in the quotient coordinate space. The two pair inequalities
+
+<y, v_{b,m}> <= 0
+<y, ell_m - v_{b,m}> <= 0
+
+are exactly the interval condition
+
+<y, ell_m> <= <y, v_{b,m}> <= 0.
+
+Thus, after imposing the lift inequality
+
+<y, ell_m> <= 0,
+
+a whole mandatory pair is priced by one scalar
+
+s_{b,m} := <y, v_{b,m}>
+t_m     := <y, ell_m>,
+
+and the pair is dual-feasible iff
+
+t_m <= s_{b,m} <= 0.
+
+Violation score:
+
+viol(b,m) = max(s_{b,m}, t_m - s_{b,m}, 0).
+
+This is exact-testable and preserves pair closure. In the final primal certificate, the upper-side dual variable becomes the coefficient of Gb*m; the lower-side dual variable becomes the coefficient of (Ga-Gb)*m.
+
+Replace the primal Phase-I master by the bounded dual master
+
+Your current master is
+
+A_J x + u+ - u- = b,
+x,u+,u- >= 0,
+min 1'u+ + 1'u-.
+
+Its dual is
+
+max <b,y>
+s.t. <A_j,y> <= 0       for active structural columns j
+     -1 <= y_r <= 1     for every quotient row r.
+
+Do not solve the primal Phase-I master during column generation. Solve this dual directly.
+
+For the pair-closed quotient master, use the interval form:
+
+max <b,y>
+
+bounds:
+  -w_r <= y_r <= w_r
+
+lift/base constraints:
+  <y, L_k> <= 0
+
+pair interval constraints:
+  <y, v_{b,m}> <= 0
+  <y, ell_m - v_{b,m}> <= 0
+
+equivalently:
+  <y, ell_m> <= <y, v_{b,m}> <= 0.
+
+Use positive rational row weights w_r; for search, I would start with power-of-two weights
+
+w_r = 1 / 2^ceil(log2(max(1, |b_r|, max_seed_col |A_{rj}|))).
+
+Weighted Phase-I has the same zero/nonzero status as unweighted Phase-I:
+
+min sum_r w_r |res_r| = 0
+
+iff
+
+b is in the cone.
+
+So this cannot invalidate the final exact certificate. It only makes the search numerically saner. Your current artificial objective around 20M is a scaling smell; weighted dual boxes will usually bring the objective and dual coordinates into a much better range.
+
+Concrete implementation
+1. Exact identity precheck
+
+Run this on the full Tier3 pair family before changing the LP:
+
+Python
+Run
+for pair in all_face_pairs:
+    b, m = pair.Gb, pair.multiplier
+
+    v  = divide_by_Ga(Gb[b] * m)              # (rem, quo)
+    vc = divide_by_Ga((Ga - Gb[b]) * m)       # (rem, quo)
+    ell = lift_Ga_multiplier(m)               # D(Ga*m) = (0, m)
+
+    assert v + vc == ell
+
+If this fails even once, the quotient division or multiplier normalization is inconsistent. If it passes, the interval formulation is algebraically exact.
+
+2. Collapse the 3722-column checkpoint
+
+From the last clean checkpoint, replace literal pair columns by pair objects:
+
+Gb*m              -> upper side of pair (b,m)
+(Ga-Gb)*m         -> lower side of pair (b,m)
+Ga*m              -> lift ell_m
+
+The dual master should contain one pair interval object per touched (b,m), not two independent face columns.
+
+For every active pair (b,m), ensure the lift ell_m = Ga*m is present in the lift constraint set.
+
+3. Solve the dual master, not the artificial primal
+
+LP variables are the quotient-row duals y_r.
+
+LP objective:
+
+maximize sum_r b_r y_r.
+
+Bounds:
+
+-w_r <= y_r <= w_r.
+
+For each active lift/base column L:
+
+sum_r L_r y_r <= 0.
+
+For each active pair (b,m):
+
+sum_r v_{b,m,r} y_r <= 0
+sum_r (ell_m,r - v_{b,m,r}) y_r <= 0.
+
+This model has no u+, no u-, and no 16,727 equality rows. At the 3722 checkpoint, it should be much easier than the current primal Phase-I solve.
+
+For debugging, first run unweighted with w_r = 1. The dual objective should match the old restricted Phase-I artificial value at the same active column set, up to float tolerance. Then switch to weighted boxes.
+
+4. Pair-bundled pricing
+
+Given dual y, compute lift scores once:
+
+Python
+Run
+t[m] = dot(y, ell_m)
+
+Then for each pair:
+
+Python
+Run
+s = dot(y, v[b,m])
+
+upper_violation = s
+lower_violation = t[m] - s
+viol = max(upper_violation, lower_violation, 0)
+
+Interpretation:
+
+upper_violation > 0  -> add/prioritize Gb*m side
+lower_violation > 0  -> add/prioritize (Ga-Gb)*m side
+
+But activation is by pair object (b,m), not by a lone column. That preserves pair closure.
+
+Important: after the lift constraint t[m] <= 0 is active, both upper and lower cannot be strongly violated at once unless the lift itself is also violated. So price in this order:
+
+1. price missing lift constraints ell_m with t[m] > tol;
+2. price pair intervals using max(s, t[m]-s).
+
+This usually reduces useless pair insertions.
+
+5. Stopping tests
+
+There are two exact exits.
+
+ConeCert exit
+
+If the dual optimum is numerically zero and full-family pricing has no positive violation, solve the primal certificate only on the active interval constraints.
+
+The dual-of-dual coefficients have direct certificate meaning:
+
+alpha_{b,m} >= 0  coefficient of Gb*m
+beta_{b,m}  >= 0  coefficient of (Ga-Gb)*m
+lambda_m    >= 0  coefficient of Ga*m
+
+Then verify exactly:
+
+b =
+  sum alpha_{b,m} D(Gb*m)
++ sum beta_{b,m}  D((Ga-Gb)*m)
++ sum lambda_m    D(Ga*m)
++ other lift/base terms.
+
+Expand back to the ordinary ConeCert format:
+
+P = F + Ga*M
+
+with both pair sides present where required. Zero coefficients for unused companions are harmless if your checker accepts sparse support; otherwise emit explicit zero-coefficient pair companions in the manifest but omit them from arithmetic accumulation.
+
+Farkas exit
+
+If the dual objective remains positive and full-family pricing has no violation, rationalize y and exact-check:
+
+<y, b> > 0
+<y, L_k> <= 0                         for every lift/base column
+<y, v_{b,m}> <= 0                     for every face pair
+<y, ell_m - v_{b,m}> <= 0             for every face pair
+-w_r <= y_r <= w_r.
+
+Then y is an exact Farkas obstruction. The row bounds are not part of the mathematical obstruction; they only make the Phase-I dual bounded. The essential obstruction is:
+
+<y, b> > 0
+<y, every cone column> <= 0.
+Why this should cut down k4/G3
+
+Your failure point is not that 320k + 90k columns are too many in principle. The failure is that the primal Phase-I master is badly conditioned:
+
+16,727 equality rows
+33,454 artificial variables
+thousands of almost-cancelling pair columns
+huge artificial objective scale
+
+The pair identity
+
+D(Gb*m) + D((Ga-Gb)*m) = D(Ga*m)
+
+means the primal is carrying a large amount of quotient-only cancellation that should be represented as a lift interval, not as two face columns fighting inside the equality system.
+
+The dual interval master turns this into:
+
+16,727 bounded variables y_r
+one or two sparse inequalities per active pair
+no artificials
+no equality residual basis
+pair pricing by scalar interval violation
+
+At the 3722 checkpoint, the model should be dramatically more stable. The 4234-column primal timeout is exactly the kind of failure this avoids.
+
+Minimal acceptance test on current artifacts
+
+Run these four tests before doing a long CG continuation.
+
+Test A: exact pair identity
+
+Full Tier3:
+
+D(Gb*m) + D((Ga-Gb)*m) = D(Ga*m)
+
+for every pair. This must pass exactly.
+
+Test B: objective equivalence
+
+Using the same 3722 active structural set and w_r = 1, solve the dual interval master.
+
+Expected:
+
+dual objective ~= 20357506.26
+
+matching the last clean primal Phase-I checkpoint, modulo float tolerance.
+
+If it does not match, the sign convention is wrong.
+
+Test C: pricing equivalence
+
+For the dual solution y, compare old literal-column pricing with interval pricing:
+
+old_price(Gb*m)        = <y, v_{b,m}>
+old_price((Ga-Gb)*m)   = <y, ell_m - v_{b,m}>
+interval_violation     = max(old_price(Gb*m), old_price((Ga-Gb)*m), 0)
+
+The top violated pair objects should explain the same columns your old pricing would have added.
+
+Test D: continuation
+
+Continue CG by adding the top violated pair objects, not raw pair columns.
+
+Suggested batch size:
+
+128 to 512 pair objects per iteration
+
+plus all newly touched Ga*m lifts.
+
+Use persistent HiGHS model row-addition/reoptimization if possible. Do not rebuild the whole master each time.
+
+Clarabel / interior-point
+
+Clarabel is useful only as a search backend for the dual interval master, not as the main fix.
+
+It can help find a central dual y for pricing, especially after row weighting. But it will not give you the sparse rational basis you need for the final ConeCert, and on the original artificial primal it is likely to produce dense, poorly replayable solutions.
+
+The main issue is column selection and master conditioning, not lack of an interior-point solver. Use:
+
+dual interval master + row weights + pair-bundled pricing
+
+as the main route.
+
+Then, once Phase-I reaches zero, switch to a sparse primal extraction/replay on the active interval constraints and exact-check the expanded ConeCert.

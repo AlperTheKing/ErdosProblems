@@ -18,6 +18,7 @@ import highspy
 import numpy as np
 import sympy as sp
 
+import _codex_eq_odl1_rung2_modular_replay as replay
 import _codex_eq_odl1_rung2_support_lp as support
 
 
@@ -172,6 +173,37 @@ def exact_core_probe(
     return out
 
 
+def export_basis_core(path: Path, prepared: support.PreparedChart, columns: list[support.Column], basis) -> dict[str, object]:
+    basic = highspy.HighsBasisStatus.kBasic
+    basic_cols = [j for j, st in enumerate(basis.col_status) if st == basic]
+    active_rows = [i for i, st in enumerate(basis.row_status) if st != basic]
+    if len(basic_cols) != len(active_rows):
+        raise RuntimeError(f"basis not square: {len(basic_cols)} cols vs {len(active_rows)} rows")
+
+    terms, rhs, nnz_by_col = replay.extract_core(prepared, columns, basic_cols, active_rows)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        f.write(json.dumps({"type": "meta", "dimension": len(basic_cols), "terms": len(terms)}) + "\n")
+        for j, source_col in enumerate(basic_cols):
+            f.write(json.dumps({"type": "col", "col": j, "source_col": int(source_col)}) + "\n")
+        for i, row_index in enumerate(active_rows):
+            f.write(json.dumps({"type": "selected_row", "row": i, "source_row": int(row_index)}) + "\n")
+        for i, val in enumerate(rhs):
+            f.write(json.dumps({"type": "rhs", "row": i, "value": fmt_fraction(val)}) + "\n")
+        for i, j, coeff in terms:
+            f.write(json.dumps({"type": "term", "row": i, "col": j, "value": fmt_fraction(coeff)}) + "\n")
+    return {
+        "dimension": len(basic_cols),
+        "terms": len(terms),
+        "rhs_nonzero": sum(1 for x in rhs if x),
+        "nnz_by_col_min": min(nnz_by_col) if nnz_by_col else 0,
+        "nnz_by_col_max": max(nnz_by_col) if nnz_by_col else 0,
+        "export_core": str(path),
+        "basic_cols_prefix": basic_cols[:20],
+        "active_rows_prefix": active_rows[:20],
+    }
+
+
 def run(args) -> dict[str, object]:
     prepared, columns = build_item(args.chart, args.dominant, args.band, args.support, args.objective)
     h = build_highs(prepared, columns, args.time_limit, args.presolve, args.solver, args.threads, args.objective)
@@ -208,6 +240,8 @@ def run(args) -> dict[str, object]:
     }
     if "Optimal" in out["model_status"]:
         out["exact_core_probe"] = exact_core_probe(prepared, columns, basis, args.max_exact_dim)
+        if args.export_core:
+            out["export_core"] = export_basis_core(args.export_core, prepared, columns, basis)
     return out
 
 
@@ -223,6 +257,7 @@ def main() -> None:
     ap.add_argument("--threads", type=int, default=0)
     ap.add_argument("--time-limit", type=float, default=120.0)
     ap.add_argument("--max-exact-dim", type=int, default=700)
+    ap.add_argument("--export-core", type=Path, default=None)
     ap.add_argument("--summary", type=Path, default=Path("tmp/eq_odl1_rung2_basis_probe_v1.json"))
     args = ap.parse_args()
     out = run(args)
