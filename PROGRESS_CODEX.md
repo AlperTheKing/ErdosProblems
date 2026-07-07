@@ -29698,3 +29698,26 @@
 [2026-07-07T11:19:39Z] > ATTACK | NEXT: Stop duplicate k1/d14 alternate process tree after exact-clean codex run.
 [2026-07-07T11:19:39Z] OK ATTACK | DID: Stopped duplicate k1/d14 alternate process tree. | RESULT: stopped 11 processes. | D: workers freed
 [2026-07-07T11:19:46Z] OK VERIFY | DID: Official exact-check repaired k0/d4. | RESULT: tmp/eq_odl1_rung2_check_k0_d4_s2027_codex_cpp10_repair77823.json | D: manifest if exact
+[2026-07-07T11:20:07Z] > VERIFY | NEXT: Emit source manifest for exact-clean k1/d14.
+[2026-07-07T11:20:07Z] OK VERIFY | DID: Emitted source manifest for k1/d14. | RESULT: tmp/eq_odl1_rung2_source_certificate_manifest_k1_d14_s2027_codex_cpp10.json | D: ledger
+[2026-07-07T11:20:28Z] > ATTACK | NEXT: Run one-row repair for k6/d4 perturbed row 15766.
+[2026-07-07T11:20:50Z] OK VERIFY | DID: Official exact-check repaired k0/d4. | RESULT: exact_ok true, 0 neg residuals, 0 neg coeffs. | D: manifest
+[2026-07-07T11:20:50Z] > VERIFY | NEXT: Emit repaired manifest for k0/d4.
+[2026-07-07T11:20:51Z] OK VERIFY | DID: Emitted repaired manifest for k0/d4. | RESULT: tmp/eq_odl1_rung2_repaired_certificate_manifest_k0_d4_s2027_codex_cpp10_repair77823.json | D: ledger
+[2026-07-07T11:21:01Z] > VERIFY | NEXT: Harvest manifests into next O14 ledger.
+[2026-07-07T11:21:01Z] OK VERIFY | DID: Harvested ledger v104. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v104_codex.json | D: count updated
+[2026-07-07T11:21:12Z] OK ATTACK | DID: Ran one-row repair for k6/d4 perturbed row 15766. | RESULT: tmp/eq_odl1_rung2_one_row_repair_k6_d4_pert24680_codex_cpp14_15766.json | D: check if exact
+[2026-07-07T11:21:23Z] OK ATTACK | DID: Ran k6/d4 one-row repair row 15766. | RESULT: first_hit_exact_ok true. | D: k6/d4 check
+[2026-07-07T11:21:23Z] > VERIFY | NEXT: Official exact-check repaired k6/d4 source solution.
+[2026-07-07T11:22:08Z] OK VERIFY | DID: Official exact-check repaired k6/d4. | RESULT: tmp/eq_odl1_rung2_check_k6_d4_pert24680_codex_cpp14_repair15766.json | D: manifest if exact
+[2026-07-07T11:22:28Z] OK VERIFY | DID: Official exact-check repaired k6/d4. | RESULT: exact_ok true, 0 neg residuals, 0 neg coeffs. | D: manifest
+[2026-07-07T11:22:28Z] > VERIFY | NEXT: Emit repaired manifest for k6/d4 and harvest v105.
+[2026-07-07T11:22:29Z] OK VERIFY | DID: Emitted k6/d4 manifest and harvested v105. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v105_codex.json | D: count updated
+[2026-07-07T11:22:57Z] > ATTACK | NEXT: Run full-source IPM feasibility-basis core extraction for k8/d8.
+[2026-07-07T11:22:57Z] > ATTACK | NEXT: Run full-source IPM feasibility-basis core extraction for k8/d9.
+[2026-07-07T11:23:17Z] OK VERIFY | DID: Posted 105/108 status to Claude mailbox. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: awaiting verify
+[2026-07-07T11:23:34Z] > VERIFY | NEXT: Poll chart-8 extractor outputs for square cores.
+[2026-07-07T11:26:12Z] OK VERIFY | DID: Polled chart-8 active jobs. | RESULT: d8 modular still running; d6/d8/d9 full-source in IPM. | D: none
+[2026-07-07T11:27:30Z] > VERIFY | NEXT: Poll chart-8 exact/core jobs after 60s.
+[2026-07-07T11:28:00Z] > ATTACK | NEXT: Stop d8 duplicate/8-worker jobs and rerun exact solve with 48 workers.
+[2026-07-07T11:28:01Z] OK ATTACK | DID: Stopped redundant d8 jobs. | RESULT: stopped 23 processes. | D: 48-worker solve
