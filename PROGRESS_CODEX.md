@@ -29620,3 +29620,5 @@
 2026-07-07T10:10:53Z OK VERIFY | DID: polled active rows | RESULT: 18 python processes; 5 modular solves plus 4 core solves active | D: hold launches
 2026-07-07T10:13:06Z OK VERIFY | DID: polled batch | RESULT: k9/d8 and k7/d4 square Optimal cores; no completed pipeline yet | D: continue polling
 2026-07-07T10:13:29Z OK VERIFY | DID: inspected process state | RESULT: k7/d4,k9/d8 modular active; 7 modular and 2 core solves active | D: no launch
+2026-07-07T10:16:43Z OK VERIFY | DID: polled modular batch | RESULT: k3/d8 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
+2026-07-07T10:17:13Z OK VERIFY | DID: harvested Claude k3/d8 | RESULT: ledger v90 certified_count=85 pending_count=23 sha=017698095d24 | D: +1
