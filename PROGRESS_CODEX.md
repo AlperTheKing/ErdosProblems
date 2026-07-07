@@ -29578,3 +29578,7 @@
 2026-07-07T09:29:16.2565407Z OK ATTACK | DID: launched four cpp random rows with 10 workers each | RESULT: k5/d4,k8/d9,k7/d13,k8/d5 running | D: none
 2026-07-07T09:29:34.7468039Z OK CHECK | DID: posted new certs and repair-lane rows to Claude mailbox | RESULT: CODEX_TO_CLAUDE appended | D: none
 2026-07-07T09:30:31.9215685Z > VERIFY | NEXT: run exact one-row repair for k8/d0 one-negative residual
+2026-07-07T09:31:37.1540985Z > VERIFY | NEXT: harvest Claude k3/d13,k4/d13 and rebuild ledger
+2026-07-07T09:32:20.7778307Z OK VERIFY | DID: harvested Claude cpp2 exact rows | RESULT: ledger v66 certified_count=71/108 pending_count=37 | D: none
+2026-07-07T09:32:47.9212857Z OK VERIFY | DID: ran one-row repair for k8/d0 | RESULT: first_hit_exact_ok=true initial_neg=1 | D: checker_next
+2026-07-07T09:32:54.1252820Z > VERIFY | NEXT: official source check repaired k8/d0 solution

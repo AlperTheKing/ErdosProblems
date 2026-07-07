@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 7,
+  "columns": 53609,
+  "dominant": 13,
+  "exact_ok": true,
+  "full_max_residual": "2375/11",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 153136,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 2176,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k7_d13_codex_cpp2.jsonl",
+  "solution_max": "99350/77",
+  "solution_min": "3725010833719340008402041205818246580408273925030324043382399732009476200627989981454886911770411226695402779172422697758537614181874279453349735399965393729638970183584575116211070716309730383/9642815165741201063472112124256941525192252122404452320545375320409704113795006745070412431337673663287921191953485863351274864142039964600460264878879984936022923051890302403418787796782399242240000",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 13119
+}
