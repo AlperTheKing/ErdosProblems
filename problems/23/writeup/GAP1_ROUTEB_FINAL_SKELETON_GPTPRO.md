@@ -386,3 +386,34 @@ has |delta_M|<=1 => sigma>0; if |delta_M|=2 it is a nested zero-slack type-B cor
 strongly (17757 cases, 0 fail, no ell>=9). NEXT: (1) CHECK the S1/S2 archive for the first-split theorem; (2) formalize
 the CAP primitive interface + derive A,B + closure chain in Lean (named-hypothesis form, AnnularAtom_has_firstSplit
 the key primitive); (3) if S1 doesn't prove it, AnnularAtom_has_firstSplit = the true residual wall -- surface.
+
+================================================================================
+## gap#1 = ONE SUB-THEOREM: S1S2_annularLayer_cover (GPT-Pro, 2026-07-08) -- the decisive audit
+================================================================================
+GPT-Pro HONEST: AnnularAtom_has_firstSplit is NOT a consequence of Ferrers order alone. It reduces to ONE sub-theorem:
+  S1S2_annularLayer_cover: a STRICT annular-layer transition I_{k-1}->I_k (in a two-door Ferrers interval, owned atom
+  level j>=1) has an INTERIOR first-split / cover-relation door d' strictly between the two outer doors {a,d}.
+PROOF of AnnularAtom_has_firstSplit GIVEN S1S2_annularLayer_cover (GPT-Pro sec 4): x=(e,j), j>=1 => annular layers
+I_0<...<I_j; first transition I_0->I_1 strict; S1 first-split gives interior door d' (NOT a: I_0 inside D; NOT d:
+else x level 0) => D'=firstSplitInterval(D,d') proper subset D. QED. Then A (3-case), B (adjacent-door), closure chain.
+Where tri-free/max-cut enter (sec 5): INSIDE S1/S2 -- tri-free rules out shortcut chords collapsing the transition;
+max-cut enforces door/bad-door balance; S2 annulus-increment=2 => each proper transition = one +2 layer so j>=1 => >=1 strict transition.
+
+### THE DECISIVE AUDIT QUESTION: does the archived S1 first-split/last-rejoin theta theorem assert
+  "annular layer transition => interior first-split/cover-relation door"  [=> gap#1 math CLOSES]
+or only
+  "the four-door theta is Ferrers-ordered"  [=> S1S2_annularLayer_cover is the TRUE RESIDUAL WALL].
+GPT-Pro: keep AnnularAtom_has_firstSplit as the named primitive obligation until the archive is re-audited vs this exact statement.
+
+### FULL CAP PRIMITIVE INTERFACE (GPT-Pro sec 8, Lean-ready): FerrersFrame{G,B,parent,doorRank,interval}; ValidCAPFrame
+(packages tri-free + max-cut + S1 + S2 + boundary-blockers + no-violation); IsTwoDoorFerrersInterval,
+IsInclusionMinimalSideDoorSubcage, IsFirstSplitInterval, IsInteriorSplitDoor; SurplusAtom{edge,level,mass}, OwnedAtom.
+PRIMITIVES: (1) AnnularAtom_has_firstSplit [=S1S2_annularLayer_cover]; (2) FirstSplit_classification (PS|ZT|BAD);
+(3) ValidCAPFrame_no_violation; (4) positiveSideDoor_contradicts_minimal; (5) OwnedAtom terminality/NoHiddenSurplus;
+(6) SideDoorCreatesPositiveSlackSubcage [from Ferrers_adjacentDoorInterval_exists + twoDoorBoundary + connected +
+AdjacentExtraDoorInterval_sigma_pos + finite descent]. A,B + closure = DERIVED theorems.
+
+### STATUS: gap#1 math = S1S2_annularLayer_cover (ONE geometric sub-theorem) + the CAP interface derivations. Battery
+confirms the conclusion (17757, 0 fail). NEXT: (1) RE-AUDIT archived S1 first-split for the layer-cover conclusion
+(K2T_INTERVAL_HALL_PROOF_TARGET / BANK0_SECTION / BRANCH_A_ASSEMBLY_AUDIT); (2) formalize the CAP interface + derive
+A,B + closure in Lean (named-hyp form, S1S2_annularLayer_cover the isolated obligation). P(gap#1 math)~70.
