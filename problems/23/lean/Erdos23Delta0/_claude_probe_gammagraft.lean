@@ -1,0 +1,3 @@
+import Erdos23Delta0.GammaChargeGraft
+
+#print axioms Erdos23Delta0.GammaChargeGraft.gammaBetaProvider_of_chargeCert

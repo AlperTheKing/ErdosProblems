@@ -26,7 +26,8 @@ from _bdef_construct import is_triangle_free
 
 def new_acc():
     return dict(defcap=0, bd_dist=Counter(), sigma0_posdebt=0, sigmapos_posdebt=0,
-                sigmapos_surplus=Counter(), ex_sigmapos=None)
+                sigmapos_surplus=Counter(), ex_sigmapos=None,
+                sigmapos_masks=0, sigmapos_reached_witness=0, sigmapos_posdebt_prewit=0)
 
 
 def scan(name, n, edges, acc):
@@ -41,16 +42,20 @@ def scan(name, n, edges, acc):
         if not M:
             continue
         for mask in range(1, (1 << n) - 1):
-            bd = boundary_delta(n, adj, side, mask)
-            if bd > 0:
-                continue  # not a max-cut-respecting switch (shouldn't happen for a max cut, but guard)
+            bd = boundary_delta(n, adj, side, mask)  # bd = dB - dM = sigma(C) >= 0 for a max cut
+            if bd < 0:
+                continue  # anomaly (should not happen for a max cut); skip
             Sset = set(i for i in range(n) if (mask >> i) & 1)
+            if bd > 0:
+                acc['sigmapos_masks'] += 1
             res = witness_structure(n, adj, side, st, Sset)
             if res is None:
                 continue
             crossM, bdyB, wit = res
             if not crossM or not bdyB:
                 continue
+            if bd > 0:
+                acc['sigmapos_reached_witness'] += 1
             witnesses = {e: set() for e in bdyB}
             for (f, e) in wit:
                 witnesses[e].add(f)
@@ -72,7 +77,7 @@ def scan(name, n, edges, acc):
             surplus = sum(ell[e] ** 2 - 25 for e in crossM)
             if bd == 0:
                 acc['sigma0_posdebt'] += 1
-            else:  # bd < 0  => sigma>0 candidate
+            else:  # bd > 0  => sigma(C) = bd > 0
                 acc['sigmapos_posdebt'] += 1
                 acc['sigmapos_surplus'][surplus] += 1
                 if acc['ex_sigmapos'] is None:
@@ -88,15 +93,21 @@ def report(label, acc):
     print('  boundary_delta distribution:', dict(sorted(acc['bd_dist'].items(), reverse=True)))
     print('  sigma=0 (bd==0) positive-debt: %d' % acc['sigma0_posdebt'])
     print('  sigma>0 (bd<0)  positive-debt: %d' % acc['sigmapos_posdebt'])
+    print('  [bias diagnostic] sigma>0 masks enumerated: %d ; reached witness_structure (nonempty cross/bdy): %d'
+          % (acc['sigmapos_masks'], acc['sigmapos_reached_witness']))
     if acc['sigmapos_posdebt']:
         print('  sigma>0 Surplus(C) distribution:', dict(sorted(acc['sigmapos_surplus'].items())))
         print('  *** sigma>0 positive-debt cap EXISTS -- the object PositiveSlackAbsorption must handle ***:',
               acc['ex_sigmapos'])
+    # sigma(C) = boundary_delta = dB - dM (GPT-Pro-confirmed). sigma>0 <=> bd>0.
     print('VERDICT: sigma>0 positive-debt deficient caps %s'
-          % ('DO NOT OCCUR in this family => R-D sigma>0 branch VACUOUS here (pending sigma=-bd confirmation)'
-             if acc['sigmapos_posdebt'] == 0 and acc['sigma0_posdebt'] > 0 else
-             ('EXIST (%d) => absorption non-trivially needed' % acc['sigmapos_posdebt']
-              if acc['sigmapos_posdebt'] else 'none found (no positive-debt caps at all)')))
+          % (('DO NOT OCCUR here despite %d sigma>0 masks reaching witness => POSSIBLE BYPASS (positive-debt=>sigma=0)'
+              % acc['sigmapos_reached_witness'])
+             if acc['sigmapos_posdebt'] == 0 and acc['sigma0_posdebt'] > 0 and acc['sigmapos_reached_witness'] > 0 else
+             ('EXIST (%d) => PositiveSlackAbsorption non-trivially needed (the objects it must handle)'
+              % acc['sigmapos_posdebt'] if acc['sigmapos_posdebt'] else
+              ('sigma>0 masks never reached deficient-detection (%d masks, %d reached witness) => inconclusive/bias'
+               % (acc['sigmapos_masks'], acc['sigmapos_reached_witness'])))))
 
 
 def census(maxn):

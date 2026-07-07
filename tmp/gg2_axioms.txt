@@ -1,0 +1,3 @@
+'Erdos23Delta0.GammaChargeGraft.gammaBetaProvider_of_chargeCert' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

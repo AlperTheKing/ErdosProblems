@@ -113,3 +113,46 @@ extraction, and switch Gamma-minimality cannot repair it without circularity." =
 positive-slack cages). Everything else (extraction, charge-cert soundness, R-A via Option C) is provable/proven;
 Claude has 5 RouteBAssembly.lean theorems GREEN + axiom-clean covering the extraction + charge-cert soundness.
 Retask to MAIN: prove PositiveSlackHallPrefix (Ferrers prefix inequalities) + confirm R-A Option C. Gap#1 NOT closed.
+
+================================================================================
+## PositiveSlackHallPrefix REPLY (GPT-Pro, 2026-07-07, 10316 char) -- EXACT sigma/bank defs + FINAL residual map
+================================================================================
+### EXACT sigma(C) def (CONFIRMS Claude probe): sigma(C) = delta_B(C) - delta_M(C) = #unmatched B-doors after
+matching each crossing bad-door to a crossing B-door. >=0 by max-cutness. [= -boundary_delta: boundary_delta =
+delta_M - delta_B = -sigma. So Claude's _claude_sigma_positive_debt_probe.py (classifying by boundary_delta) IS
+measuring -sigma correctly.]
+
+### Bank token capacities (exact):
+- C5Cell: ordinary C5-bank units.
+- DoorSlack d (the positive-slack source): cap = 25*mass_C(d); TOTAL door-slack cap = 25*sigma(C). So sigma>0 feeds
+  the Hall bank through DoorSlack.
+- AmbientSlack h: cap = (N-|V(X_h)|)*tau_C(h) [from sign-atom R_full = R_local + (N-|Vcomp|)*T], surplus units.
+- PruneReserve.
+- BankCap(C) = sum_t cap_C(t); Balance(C) = BankCap(C) - Surplus(C); Debt(C) = -Balance(C).
+
+### Surplus atoms: ell(e)=5+2*r_e; ell(e)^2-25 = sum_{j=0}^{r_e-1}(8j+24); atom demand weight_C(e,j)=mu_C(e)*(8j+24).
+
+### The R-D residual PositiveSlackHallPrefix (necessary+sufficient for the nonneg charge matrix):
+For sigma(C)>0, every Ferrers prefix P_i: Demand(i) <= NeighborCap(i), where NeighborCap(i)=C5Cap(i)+AmbientCap(i)+
+PruneCap(i)+DoorSlackCap(i), DoorSlackCap(i)=25*sigma_i (prefix-local unmatched B-door mass sigma_i=delta_B(P_i)-delta_M(P_i)).
+Core checkable inequality: PrefixDeficit(i) := Demand(i)-C5Cap(i)-AmbientCap(i)-PruneCap(i) <= 25*sigma_i.
+
+### R-A Option C needs MORE than absorption (a PRUNING lemma):
+A side-door d creates a positive-slack subcage D_d (sigma(D_d)>0, cleanest =1). PositiveSlackAbsorption => Balance(D_d)>=0
+(not a source of positive debt). BUT to rule out side doors in the min-positive-debt ZERO-slack extraction you ALSO
+need SideDoorPruningPreservesPositiveDebt: C min-positive-debt + D_d proper side-door subcage with Balance(D_d)>=0 =>
+pruning D_d leaves a proper descendant C' with positive debt => contradicts minimality. Chain: extra side door ->
+positive-slack subcage -> absorption gives nonneg balance -> pruning leaves smaller positive-debt cage -> contra minimality.
+
+### FINAL RESIDUAL MAP (GPT-Pro):
+- ALREADY FORMALIZED (Claude Lean): reserveResidual=N^2-Gamma; Hall charge-cert soundness (checked q => Surplus<=BankCap
+  => Balance>=0); B4 non-circular extraction.
+- REMAINING: gap#1 = PositiveSlackHallPrefix ALONE **iff** ReserveLedgerComplete/terminalization already proves side-
+  door pruning; ELSE gap#1 = PositiveSlackHallPrefix + SideDoorCreatesAbsorbablePrunableSubcage. "Ambient side doors
+  exist for raw switches, so the safe formal statement is the PRUNING version." R-D is the riskier/more important node.
+
+### CLAUDE PROBE (_claude_sigma_positive_debt_probe.py, glue core+C5, sigma-def now CONFIRMED): ALL 36000 positive-debt
+deficient caps have sigma=0 (boundary_delta=0); ZERO at sigma>0. SUGGESTS a POSSIBLE BYPASS: if "positive-debt
+deficient cage => sigma=0" holds directly, the minimal positive-debt cage is automatically sigma=0 and
+PositiveSlackHallPrefix (about sigma>0 cages) is not needed. CAVEAT: one family + possible detection bias; needs
+GPT-Pro to (a) confirm the detection can find sigma>0 caps, (b) say if "positive-debt=>sigma=0" is directly provable.

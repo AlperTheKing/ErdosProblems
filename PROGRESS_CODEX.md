@@ -29792,3 +29792,72 @@
 [2026-07-07T13:07:13Z] OK VERIFY | DID: Waited another 300s for p768b2 jobs. | RESULT: no artifacts; native split d8=16,d9=48. | D: continue wait
 [2026-07-07T13:07:35Z] > VERIFY | NEXT: Wait 300s more for p768b2 exact artifacts.
 [2026-07-07T13:12:46Z] OK VERIFY | DID: Waited for p768b2 jobs. | RESULT: d9 CRT state written; d9 native done; d8 native 16 remains. | D: wait d9 summary
+[2026-07-07T13:14:30Z] FAIL VERIFY | DID: Checked k8/d9 p768b2 exact reconstruction. | RESULT: core residuals 0, solution_negative_count 2000. | D: seed retry
+[2026-07-07T13:14:57Z] > ATTACK | NEXT: Launch alternate k8/d9 and k8/d8 full-source seed extractions.
+[2026-07-07T13:15:07Z] OK ATTACK | DID: Launched alternate chart-8 seed pipelines. | RESULT: d9 seeds 55579/77773, d8 seed 88891. | D: monitor cores
+[2026-07-07T13:15:36Z] > VERIFY | NEXT: Wait 300s for d8 exact replay or alternate seed cores.
+[2026-07-07T13:20:59Z] OK VERIFY | DID: Waited 300s for d8 exact/alternate cores. | RESULT: no artifacts; d8 native workers 16 only. | D: restart d8 with 40 workers
+[2026-07-07T13:21:06Z] > ATTACK | NEXT: Stop uncheckpointed d8 16-worker exact replay and relaunch with 40 workers.
+[2026-07-07T13:22:02Z] OK ATTACK | DID: Stopped d8 16-worker exact replay. | RESULT: stopped 28 processes. | D: launch d8 40-worker replay
+[2026-07-07T13:22:14Z] > ATTACK | NEXT: Launch d8 p768b3 40-worker large-batch exact replay.
+[2026-07-07T13:22:23Z] OK ATTACK | DID: Launched d8 p768b3 40-worker exact replay. | RESULT: tmp/eq_odl1_rung2_modular_k8_d8_patch600_s22229_p768b3_w40.json target. | D: monitor
+[2026-07-07T13:26:48Z] OK VERIFY | DID: Checked alternate seed exports. | RESULT: cores exported for d9 s55579/s77773 and d8 s88891. | D: run exact on alternates
+[2026-07-07T13:27:55Z] > ATTACK | NEXT: Stop alternate pipeline small-batch modular children after core export.
+[2026-07-07T13:32:49Z] > ATTACK | NEXT: Launch d9 seed55579 p768 24-worker exact replay.
+[2026-07-07T13:33:00Z] OK ATTACK | DID: Launched d9 seed55579 p768 exact replay. | RESULT: workers 24, batch 768. | D: monitor d8/d9
+[2026-07-07T13:33:53Z] OK VERIFY | DID: Verified d8/d9 exact worker split. | RESULT: d8=40,d9=24,native_total=64. | D: wait exact artifacts
+[2026-07-07T13:34:16Z] > VERIFY | NEXT: Wait 300s for d8 s22229 or d9 s55579 exact artifacts.
+[2026-07-07T13:39:35Z] OK VERIFY | DID: Waited 300s for d8/d9 exact artifacts. | RESULT: no artifacts; native_total 64. | D: continue wait
+[2026-07-07T13:40:06Z] > VERIFY | NEXT: Wait 300s more for current d8/d9 modular exact runs.
+[2026-07-07T13:45:43Z] FAIL VERIFY | DID: Assessed p768 first-pass strategy. | RESULT: p768 wastes time before testing p384 sufficiency. | D: restart p384 first
+[2026-07-07T13:46:20Z] > ATTACK | NEXT: Stop current p768 exact workers for d8/d9.
+[2026-07-07T13:46:35Z] OK ATTACK | DID: Stopped p768 exact workers for d8/d9. | RESULT: stopped 65 processes. | D: launch p384
+[2026-07-07T13:46:52Z] > ATTACK | NEXT: Launch p384 first-pass exact jobs for d8 s22229 and d9 s55579.
+[2026-07-07T13:47:09Z] OK ATTACK | DID: Launched p384 d8/d9 exact jobs. | RESULT: d8 w40 batch384; d9 w24 batch384. | D: monitor p384
+[2026-07-07T13:49:09Z] OK VERIFY | DID: Rechecked p384 worker split after startup. | RESULT: d8=40,d9=24,native_total=64. | D: wait p384
+[2026-07-07T13:50:16Z] > VERIFY | NEXT: Wait 300s for p384 d8/d9 exact summaries.
+[2026-07-07T13:55:36Z] OK VERIFY | DID: Waited 300s for p384 summaries. | RESULT: no artifacts; d8=40,d9=24 native workers. | D: continue p384
+[2026-07-07T13:56:04Z] > VERIFY | NEXT: Post current chart-8 exact-solve status to Claude mailbox.
+[2026-07-07T13:56:21Z] OK VERIFY | DID: Posted chart-8 status to Claude mailbox. | RESULT: coordination/CODEX_TO_CLAUDE.md | D: continue p384
+[2026-07-07T13:56:48Z] > VERIFY | NEXT: Wait 300s for p384 d8/d9 artifacts after status post.
+[2026-07-07T14:02:25Z] OK VERIFY | DID: Waited 300s for p384 artifacts. | RESULT: no artifacts; native_total 64. | D: continue p384
+[2026-07-07T14:03:03Z] OK VERIFY | DID: Checked p384 native process ages. | RESULT: d8/d9 workers are current-wave processes. | D: continue wait
+[2026-07-07T14:03:24Z] > VERIFY | NEXT: Wait 300s for p384 summaries after age check.
+[2026-07-07T14:08:42Z] OK VERIFY | DID: Waited 300s for p384 summaries. | RESULT: no artifacts; native_total 64. | D: continue p384
+[2026-07-07T14:09:26Z] > VERIFY | NEXT: Wait 300s for current p384 d8/d9 jobs.
+[2026-07-07T14:14:44Z] OK VERIFY | DID: Waited 300s for p384 jobs. | RESULT: d8 native count 9, d9 native count 24, no artifacts. | D: d8 near CRT
+[2026-07-07T14:16:38Z] OK VERIFY | DID: Checked d8 p384 after native drop. | RESULT: d8 CRT state written; d8 native done; d9 native 24. | D: wait d8 summary
+[2026-07-07T14:17:59Z] FAIL VERIFY | DID: Checked d8 p384 modular summary. | RESULT: reconstructed false, partial 3948/6058. | D: extend d8 to p768
+[2026-07-07T14:18:12Z] > ATTACK | NEXT: Launch d8 p768 extension from p384 CRT with 40 workers.
+[2026-07-07T14:18:22Z] OK ATTACK | DID: Launched d8 p768 extension. | RESULT: resume p384 CRT, workers40 batch384. | D: monitor d8ext/d9
+[2026-07-07T14:19:25Z] OK VERIFY | DID: Checked worker split after d8 p768 extension. | RESULT: d8=40,d9=22,native_total=62. | D: d9 nearing CRT
+[2026-07-07T14:22:16Z] OK VERIFY | DID: Checked d9 p384 after native drop. | RESULT: d9 CRT state written; d9 native done; d8 native 40. | D: wait d9 summary
+[2026-07-07T14:23:42Z] FAIL VERIFY | DID: Checked d9 seed55579 p384 summary. | RESULT: reconstructed false, partial 3690/5889. | D: extend d9 to p768
+[2026-07-07T14:23:56Z] > ATTACK | NEXT: Launch d9 seed55579 p768 extension from p384 CRT.
+[2026-07-07T14:24:07Z] OK ATTACK | DID: Launched d9 p768 extension. | RESULT: resume p384 CRT, workers24 batch384. | D: monitor extensions
+[2026-07-07T14:24:59Z] OK VERIFY | DID: Verified d8/d9 extension worker split. | RESULT: d8=40,d9=24,native_total=64. | D: wait p768 summaries
+[2026-07-07T14:25:26Z] > VERIFY | NEXT: Wait 180s for d8/d9 p768 extension artifacts.
+[2026-07-07T14:28:44Z] OK VERIFY | DID: Waited 180s for p768 extensions. | RESULT: no artifacts; native_total 64. | D: continue extensions
+[2026-07-07T14:29:25Z] OK VERIFY | DID: Checked p768 extension native ages. | RESULT: current-wave d8/d9 native processes. | D: continue wait
+[2026-07-07T14:29:48Z] > VERIFY | NEXT: Wait 300s for p768 extension artifacts.
+[2026-07-07T14:35:12Z] OK VERIFY | DID: Waited 300s for p768 extension artifacts. | RESULT: no artifacts; native_total 64. | D: continue extensions
+[2026-07-07T14:35:56Z] > VERIFY | NEXT: Wait 300s for p768 extension CRT states.
+[2026-07-07T14:41:16Z] OK VERIFY | DID: Waited 300s for p768 extension CRT states. | RESULT: no artifacts; native_total 64. | D: continue extensions
+[2026-07-07T14:41:37Z] > VERIFY | NEXT: Wait 300s more for p768 extension completion.
+[2026-07-07T14:47:02Z] OK VERIFY | DID: Waited for p768 extensions. | RESULT: d8 CRT state written; d8 native done; d9 native 23. | D: wait d8 summary
+2026-07-07T14:48:20Z > VERIFY | NEXT: Check Claude mailbox and current k8/d8,k8/d9 exact replay artifacts to choose harvest, extension, or seed switch.
+2026-07-07T14:48:41Z OK VERIFY | DID: Checked mailbox and k8 exact replay artifacts. | RESULT: d8 p768 summary exists; d9 p768 pending from p384 CRT. | D: inspect d8 summary
+2026-07-07T14:49:10Z > ATTACK | NEXT: Launch k8/d8 alternate seed88891 p384 exact replay with 40 workers after seed22229 reconstructed with 2411 negatives.
+2026-07-07T14:49:29Z OK ATTACK | DID: Launched k8/d8 seed88891 p384 exact replay. | RESULT: tmp/eq_odl1_rung2_modular_k8_d8_patch600_s88891_p384_w40.json pending. | D: two rows in exact replay
+2026-07-07T14:50:03Z OK ATTACK | DID: Verified exact replay worker allocation. | RESULT: d8_s88891=40, d9_s55579=24. | D: wait summaries
+2026-07-07T14:51:23Z OK VERIFY | DID: Polled d8/d9 exact summaries after 60s. | RESULT: no p384/p768ext summary yet. | D: keep 64-worker replay
+2026-07-07T14:52:43Z OK PLAN | DID: Confirmed conversion/check/manifest CLIs. | RESULT: convert_core_solution_to_source_solution.py and source_solution_check help read. | D: ready to harvest
+2026-07-07T14:53:40Z OK VERIFY | DID: Polled d8/d9 replay files after 120s. | RESULT: summary files absent; stderr files zero bytes. | D: continue 64-worker wait
+2026-07-07T14:54:36Z OK VERIFY | DID: Checked native worker counts. | RESULT: d8_s88891=40; d9_s55579 native workers done. | D: inspect d9 reconstruction
+2026-07-07T14:54:54Z > VERIFY | NEXT: Wait 60s for d9 p768 reconstruction after CRT state write, then inspect exact summary.
+2026-07-07T14:56:11Z OK VERIFY | DID: Waited for d9 p768 summary after CRT state. | RESULT: summary still absent. | D: launch alternate d9 seed77773
+2026-07-07T14:56:29Z OK ATTACK | DID: Launched k8/d9 seed77773 p384 exact replay. | RESULT: tmp/eq_odl1_rung2_modular_k8_d9_patch600_s77773_p384_w24.json pending. | D: first clean d9 wins
+2026-07-07T14:57:13Z OK VERIFY | DID: Checked worker count after d9 seed77773 launch. | RESULT: d8_s88891=39, d9_s77773=24. | D: wait summaries
+2026-07-07T14:58:49Z OK VERIFY | DID: Polled replay files after 120s. | RESULT: no d8/d9 summary; d9 seed55579 CRT timestamp updated. | D: inspect live processes
+2026-07-07T14:59:34Z OK VERIFY | DID: Inspected live d9 parent processes. | RESULT: seed55579 stock resume child active plus d8/d9 alternate workers. | D: avoid extra spawn
+2026-07-07T15:03:24Z OK VERIFY | DID: Inspected d9 seed55579 p768 summary. | RESULT: residuals=0, solution_negative_count=2391. | D: discard degenerate seed55579
