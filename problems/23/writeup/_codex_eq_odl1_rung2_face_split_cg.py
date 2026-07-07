@@ -573,6 +573,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     iterations: list[dict[str, Any]] = []
     final_status = "iteration_limit"
     last_x: np.ndarray | None = None
+    last_optimal_cols: list[QColumn] | None = None
     for it in range(args.iterations + 1):
         rows, rhs, _ = qprobe.build_equalities(rem_p, quo_p, current_cols)
         log(f"iteration={it} columns={len(current_cols)} rows={len(rows)}")
@@ -596,6 +597,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         }
         artificial_sum = float(phase1.get("artificial_sum", math.inf))
         log(f"iteration={it} status={phase1.get('message')} artificial_sum={artificial_sum}")
+        if phase1.get("success"):
+            last_optimal_cols = list(current_cols)
         if phase1.get("success") and artificial_sum <= args.art_tol:
             final_status = "phase1_zero"
             iterations.append(rec)
@@ -668,6 +671,23 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         )
         emitted_columns_json = str(args.emit_current_columns_json)
 
+    emitted_last_optimal_columns_json = None
+    if args.emit_last_optimal_columns_json and last_optimal_cols is not None:
+        qprobe.write_qcolumns_json(
+            args.emit_last_optimal_columns_json,
+            args=args,
+            chart=chart,
+            tier0_payload=None,
+            target_beta_nonzero_count=None,
+            target_summary=None,
+            divisor=divisor,
+            rem_p=rem_p,
+            quo_p=quo_p,
+            columns=last_optimal_cols,
+            seconds=time.monotonic() - t0,
+        )
+        emitted_last_optimal_columns_json = str(args.emit_last_optimal_columns_json)
+
     support_count = 0
     support_value_sum = 0.0
     emitted_support_columns_json = None
@@ -704,6 +724,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "final_columns": len(current_cols),
         "iterations": iterations,
         "emitted_columns_json": emitted_columns_json,
+        "emitted_last_optimal_columns_json": emitted_last_optimal_columns_json,
         "emitted_support_columns_json": emitted_support_columns_json,
         "support_count": support_count,
         "support_value_sum": support_value_sum,
@@ -738,6 +759,7 @@ def main() -> None:
     ap.add_argument("--x-tol", type=float, default=1.0e-9)
     ap.add_argument("--support-tol", type=float, default=1.0e-8)
     ap.add_argument("--emit-current-columns-json", type=Path, default=None)
+    ap.add_argument("--emit-last-optimal-columns-json", type=Path, default=None)
     ap.add_argument("--emit-support-columns-json", type=Path, default=None)
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--summary", type=Path, required=True)

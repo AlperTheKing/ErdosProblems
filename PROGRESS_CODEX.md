@@ -29409,3 +29409,6 @@
 [2026-07-07T04:45:44Z] > COMPUTE | NEXT: Run bounded all-family k4/G3 quotient CG diagnostic from 138-column smoke cache.
 [2026-07-07T04:51:08Z] OK COMPUTE | DID: Ran bounded all-family k4/G3 quotient CG diagnostic. | RESULT: 138->1674 cols, artificial 23393511.951701358->22357229.01190628 | D: positive pricing remains
 [2026-07-07T04:51:19Z] > COMPUTE | NEXT: Continue k4/G3 quotient CG from 1674 columns with larger add cap.
+[2026-07-07T05:02:00Z] OK COMPUTE | DID: Continued k4/G3 quotient CG from 1674 columns. | RESULT: 4746 cols, artificial reported 5690033.160515135, final phase1_not_optimal | D: inspect solve error
+[2026-07-07T05:02:26Z] > VERIFY | NEXT: Re-solve 4746-column k4/G3 master with IPM to validate solve-error objective.
+[2026-07-07T05:04:07Z] FAIL VERIFY | DID: Re-solved 4746-column k4/G3 master with IPM. | RESULT: Solve error, artificial 19677454.059068885 | D: add optimal-checkpoint emit

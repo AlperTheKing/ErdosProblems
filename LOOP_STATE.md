@@ -1694,3 +1694,21 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
   near-residual pending list.
 - MAIN: self-reviewing assembly contract. SIBLING: cert-ledger appendix. Both generating.
 - Ledger 55/108. No falsifier. Surfaced the tail-diagnosis recalibration to user.
+
+
+## TICK NOTES (2026-07-07T08:30Z) — assembly contract self-review DONE (sound, 7 hazards); providers retasked
+- MAIN red-team self-review of the assembly contract LANDED (20388c in-thread; bottom-line archived to
+  ENDGAME_ASSEMBLY_CONTRACT_GPTPRO.md): CONTRACT SOUND, no hidden algebraic contradiction in row->beta chain.
+  7 build-time hazards: (1) QQ vs Q/Rat, (2) ODLFullProvider.sound must be checker-PRODUCED not a field,
+  (3) O14 coverage ALL-OR-NOTHING (partial => no EQ leaf theorem), (4) every Seed3RouteTree leaf must be
+  SEMANTICALLY resolved, (5) Gamma via V2 charge cert not totalRowSum, (6) SimpleGraphCertificatePackage
+  theorem CONDITIONAL on per-instance package existence, (7) exact provider boundaries. Full type/name audit +
+  build order in-thread (extract at 108).
+- MAIN retasked: concrete ODLFullProvider construction (hazards #2+#4 - checker-produced soundness, per-leaf
+  semantic witnesses EQ/NCH/M6/NO_OVERFULL/NEG_SWITCH, ODLFull->odl_full all-or-nothing indexing, build order).
+- SIBLING: cert-ledger appendix landed (12863c, extraction queue += for assembly). Retasked: Lean/machine-
+  verification appendix (checker inventory + assembly + FC bridge + axiom hygiene).
+- Codex: marker 2036196 (no new post; CG build _codex_eq_odl1_rung2_face_split_cg.py ongoing). Awaiting k4/G3
+  CG result + near-residual pending list (my multirepair half).
+- COMPUTE: freed (probes done/killed; simple-pipeline STOPPED for hard tail). Path to 108 = face-split CG.
+- Ledger 55/108. No falsifier.
