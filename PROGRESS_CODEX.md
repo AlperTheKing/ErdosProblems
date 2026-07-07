@@ -29420,3 +29420,11 @@
 [2026-07-07T05:15:10Z] > CHECK | NEXT: Check local availability of clarabel/scipy/highspy for Phase-I backend options.
 [2026-07-07T05:15:48Z] OK CHECK | DID: Checked local LP backends. | RESULT: clarabel 0.11.1, highspy present, scipy 1.14.0 | D: keep exact gate; use parallel pricing
 [2026-07-07T05:15:48Z] > COMPUTE | NEXT: Continue k4/G3 from 3722-column clean checkpoint with 24 pricing workers.
+[2026-07-07T05:23:02Z] FAIL COMPUTE | DID: Ran k4/G3 24-worker continuation from 3722 cols. | RESULT: 4234 cols; next master hit time limit, artificial 5559755.84208532 | D: consult design
+[2026-07-07T05:23:14Z] > CONSULT | NEXT: Read browser-control skill before opening a GPT-Pro consult for the k4/G3 CG bottleneck.
+[2026-07-07T05:25:06Z] OK CONSULT | DID: Posted one GPT-Pro consult for k4/G3 CG bottleneck. | RESULT: ChatGPT tab shows Stop answering | D: wait for answer
+[2026-07-07T05:25:24Z] > EDIT | NEXT: Add multiprocessing for lift-family pricing to improve CPU utilization.
+[2026-07-07T05:26:01Z] > VERIFY | NEXT: Compile lift-parallel pricing patch and smoke-test with 4 workers.
+[2026-07-07T05:26:26Z] FAIL VERIFY | DID: Compiled lift-parallel patch. | RESULT: SyntaxError unmatched paren | D: removed stale block
+[2026-07-07T05:27:27Z] OK VERIFY | DID: Smoke-tested lift-parallel pricing with 4 workers. | RESULT: k4/G3 smoke priced 8 cols, no spawn failure | D: test IPM master
+[2026-07-07T05:27:27Z] > COMPUTE | NEXT: Re-solve 4234-column k4/G3 master with IPM and 32 threads.

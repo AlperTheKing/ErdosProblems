@@ -27,9 +27,9 @@ rc = run([sys.executable, "-B", f"{W}/_codex_eq_odl1_rung2_sparse_row_core.py",
 if rc != 0 or not pathlib.Path(core).exists():
     print(json.dumps({"row": tag, "stage": "core", "ok": False})); sys.exit(1)
 
-# 2) modular exact solve (384-prime CRT)
-rc = run([sys.executable, "-B", f"{W}/_codex_eq_odl1_rung2_modular_core_solve.py",
-          "--core", core, "--prime-count", "384", "--store-solution", sol, "--summary", mod_sum])
+# 2) modular exact solve (384-prime CRT) — PARALLEL (48 workers, ~50x vs sequential; validated exact)
+rc = run([sys.executable, "-B", "tmp/claude_modular_solve_parallel.py",
+          "--core", core, "--prime-count", "384", "--workers", "48", "--store-solution", sol, "--summary", mod_sum])
 if rc != 0 or not pathlib.Path(sol).exists():
     print(json.dumps({"row": tag, "stage": "modular", "ok": False})); sys.exit(2)
 

@@ -380,6 +380,38 @@ def price_family_columns(
     )
 
 
+def price_one_lift_family(payload: dict[str, Any]) -> tuple[list[tuple[float, QColumn]], dict[str, Any]]:
+    kind: str = payload["kind"]
+    name: str = payload["name"]
+    poly: Poly = payload["poly"]
+    divisor: Poly = payload["divisor"]
+    quo_support: set[Exp] = payload["quo_support"]
+    support_mode: str = payload["support_mode"]
+    degree_cap: int = int(payload["degree_cap"])
+    num_vars: int = int(payload["num_vars"])
+    row_dual = np.array(payload["row_dual"], dtype=float)
+    row_index: dict[tuple[str, Exp], int] = payload["row_index"]
+    current_keys: set[tuple[str, str, str, tuple[int, ...]]] = payload["current_keys"]
+    add_per_family: int = int(payload["add_per_family"])
+    price_tol: float = float(payload["price_tol"])
+    exps = candidate_exps_for_poly(poly, quo_support, degree_cap, support_mode, 0, num_vars)
+    candidates = []
+    for exp in exps:
+        if sum(exp) + qprobe.total_degree(poly) <= 9:
+            candidates.append(("lift", kind, name, exp, qprobe.mul_poly(poly, qprobe.bernstein_basis_poly(sum(exp), exp))))
+    scored, summary = price_family_columns(
+        label=f"{kind}:{name}",
+        candidates=candidates,
+        divisor=divisor,
+        row_dual=row_dual,
+        row_index=row_index,
+        current_keys=current_keys,
+        add_per_family=add_per_family,
+        price_tol=price_tol,
+    )
+    return scored, summary
+
+
 def price_columns_streaming(
     *,
     chart: qprobe.charts.ChartData,
@@ -528,24 +560,37 @@ def price_columns_streaming(
     for i, poly in enumerate(gen_polys):
         if i != dominant:
             lift_families.append(("lift_delta", f"{chart.generator_names[dominant]}-{chart.generator_names[i]}", qprobe.sub_poly(ga, poly)))
-    for kind, name, poly in lift_families:
-        exps = candidate_exps_for_poly(poly, quo_support, lift_gen_cap, support_mode, 0, num_vars)
-        candidates = []
-        for exp in exps:
-            if sum(exp) + qprobe.total_degree(poly) <= 9:
-                candidates.append(("lift", kind, name, exp, qprobe.mul_poly(poly, qprobe.bernstein_basis_poly(sum(exp), exp))))
-        cols, summary = price_family_columns(
-            label=f"{kind}:{name}",
-            candidates=candidates,
-            divisor=divisor,
-            row_dual=row_dual,
-            row_index=row_index,
-            current_keys=current_keys,
-            add_per_family=add_per_family,
-            price_tol=price_tol,
-        )
-        scored.extend(cols)
-        families.append(summary)
+    lift_payloads = [
+        {
+            "kind": kind,
+            "name": name,
+            "poly": poly,
+            "divisor": divisor,
+            "quo_support": quo_support,
+            "support_mode": support_mode,
+            "degree_cap": lift_gen_cap,
+            "num_vars": num_vars,
+            "row_dual": [float(x) for x in row_dual],
+            "row_index": row_index,
+            "current_keys": current_keys,
+            "add_per_family": add_per_family,
+            "price_tol": price_tol,
+        }
+        for kind, name, poly in lift_families
+    ]
+    if pricing_workers > 1 and len(lift_payloads) > 1:
+        with ProcessPoolExecutor(max_workers=min(pricing_workers, len(lift_payloads))) as pool:
+            futures = [pool.submit(price_one_lift_family, payload) for payload in lift_payloads]
+            for fut in as_completed(futures):
+                cols, summary = fut.result()
+                scored.extend(cols)
+                families.append(summary)
+        families.sort(key=lambda rec: str(rec.get("kind", "")))
+    else:
+        for payload in lift_payloads:
+            cols, summary = price_one_lift_family(payload)
+            scored.extend(cols)
+            families.append(summary)
 
     scored.sort(key=lambda item: item[0], reverse=True)
     if global_cap > 0:
