@@ -29610,3 +29610,5 @@
 2026-07-07T09:57:14.4160904Z OK VERIFY | DID: harvested Claude k3/d5 | RESULT: ledger v82 certified_count=80/108 pending_count=28 | D: none
 2026-07-07T09:57:55.2225191Z OK VERIFY | DID: harvested k8/d4 exact row | RESULT: ledger v83 certified_count=81/108 pending_count=27 | D: none
 2026-07-07T10:01:17.1860530Z OK VERIFY | DID: polled perturbed and Claude harvest | RESULT: no new manifests; ledger remains 81/108 | D: none
+2026-07-07T10:05:46.4861718Z OK VERIFY | DID: harvested Claude k3/d9,k4/d5,k4/d6 | RESULT: ledger v87 certified_count=84/108 pending_count=24 | D: none
+2026-07-07T10:06:26.6448080Z > ATTACK | NEXT: launch fresh rows k9/d5,k7/d6,k9/d4,k7/d12
