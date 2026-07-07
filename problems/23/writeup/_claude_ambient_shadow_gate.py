@@ -20,12 +20,15 @@ from fractions import Fraction as F
 from collections import deque
 from itertools import combinations
 import sys
-from _h import dec, maxcut_all, loads, Bconn, GENG
+from _h import dec, maxcut_all, loads, Bconn, GENG, gmin
 from _codex_k2t_switch_probe import adj_from_edges
 
 # DOOR PRECHARGE: each bad edge first draws one 25-door-token (crude per-cage 25*sigma proxy); ambient pays the rest.
 # rem(a) = max(0, surplus - DOOR_PRECHARGE). DOOR_PRECHARGE=0 -> ambient-only (strongest); =25 -> door+ambient.
-DOOR_PRECHARGE = 25
+# DOOR_PRECHARGE = 25*sigma proxy. Gamma-min scope census fails shrink MONOTONICALLY with sigma: sigma=1 -> 24 fails,
+# sigma=2 -> 10, sigma=3 (75>=56) -> ell=9 fully door-covered. The residual fails are ell=9 cages whose odd cycle
+# fills the graph (no ambient room), needing sigma>=3 door slack (rowDB-dependent per-cage), NOT an absorption failure.
+DOOR_PRECHARGE = 25  # honest baseline: one door token
 
 try:
     from scipy.optimize import linprog
@@ -178,15 +181,18 @@ def even_cycle_chord(n, chord):
 
 
 def run_census(maxn, acc):
+    """Restrict to the GAMMA-MINIMAL B-connected max cut (the scope of the GERSH absorption theorem)."""
     import subprocess
     for nn in range(5, maxn + 1):
         for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
             n, E = dec(g6)
             adj = adj_from_edges(n, E)
-            for side in maxcut_all(n, adj):
-                r = analyze('cen%d' % nn, n, adj, side)
-                if r:
-                    acc.append(r)
+            best = gmin(n, adj, maxcut_all(n, adj))  # (side, Gamma, M, ell) for the Gamma-min B-conn max cut
+            if best is None:
+                continue
+            r = analyze('cen%d' % nn, n, adj, best[0])
+            if r:
+                acc.append(r)
         print('  census N=%d done (rows so far %d, uniform_fail %d, lp_fail %d)'
               % (nn, len(acc), sum(1 for r in acc if not r['uniform_ok']), sum(1 for r in acc if r['lp'] is False)), flush=True)
 
