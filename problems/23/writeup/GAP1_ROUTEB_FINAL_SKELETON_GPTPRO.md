@@ -348,3 +348,41 @@ extra side door produces >=1 P1-P6 D -- CLAUDE TO BUILD).
 ### STATUS: gap#1 = A (LongSideDoorFirstSplit, battery-confirmed) + B (AdjacentSideDoorIntervalPositiveSlack), both
 LOCAL CAP geometry lemmas resting on the S1/S2 Ferrers theory. P(gap#1 math)~70. NEXT: build Gate B existence;
 GPT-Pro make A rigorous; formalize the closure chain + A,B named hypotheses in Lean.
+
+================================================================================
+## gap#1 = MINIMAL CAP PRIMITIVE INTERFACE; A,B DERIVED; ONE key primitive (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro: formalize A,B as DERIVED theorems from a minimal CAP primitive interface, then the closure chain. The single
+most important primitive = **AnnularAtom_has_firstSplit** ("if not in the S1 Ferrers archive, it is the true residual wall").
+
+### PROOF that a long owned atom forces an interior split (GPT-Pro sec 3, L-UNIFORM, no L=5 forcing):
+level-j atom x=(e,j), j>=1 => shortest B-geodesic closing e crosses j+1 nested annular layers I_0<I_1<...<I_j<D
+(Ferrers nested intervals). Transition I_{j-1}->I_j is a first-split with an INTERIOR split door d' (Ferrers first-
+split primitive). j>=1 => d' strictly inside D (not the outer doors a,d) => proper subinterval D'<D. Level-0 atoms
+charge at the outer two-door interval; level>=1 necessarily crosses an inner annular transition = the interior first split.
+
+### A (NoLongSideDoorAnnulus) DERIVED from: AnnularAtom_has_firstSplit + FirstSplit_classification (=> D' is PS
+positive-slack side-door | ZT zero-slack type-B core | BAD S2/boundary violation) + ValidCAPFrame_no_violation +
+OwnedAtom_terminality/NoHiddenSurplus. 3 cases: PS contra P6 minimality; ZT contra ownership (atom belongs to D' not
+D); BAD contra ValidCAPFrame. => all owned atoms level 0 => owned ell<=7. NON-CIRCULAR (no Gamma-min/switch/reserve).
+Then SmallSideDoorSubcage: Surplus(D)=24*mass<=24*sigma<=25*sigma (mass<=sigma via OwnedMass_le_sigma_of_minSideDoor:
+clean minimal case |OwnedBad|<=1<=1=sigma).
+
+### B (SideDoorCreatesPositiveSlackSubcage) DERIVED from: FerrersInterval_twoDoorBoundary + FerrersInterval_connected
+(+complement) + AdjacentExtraDoorInterval_sigma_pos (the only nontrivial B primitive: adjacent extra-door interval
+has |delta_M|<=1 => sigma>0; if |delta_M|=2 it is a nested zero-slack type-B core not a side-door interval).
+
+### MINIMAL CAP PRIMITIVE INTERFACE (Lean-ready sigs, GPT-Pro sec 7) -- the NAMED HYPOTHESES to formalize:
+ 7.1 structure FerrersFrame {G,B,parent,doorRank,interval}; IsFerrersDoor/Interval, DoorBetween, AdjacentDoors.
+ 7.2 FerrersInterval_twoDoorBoundary (AdjacentDoors a d => deltaB D = pairSet a d).
+ 7.3 FerrersInterval_connected + FerrersInterval_complement_connected.
+ 7.4 **AnnularAtom_has_firstSplit** (OwnedAtom + level>=1 => exists proper D' + interior split door). = THE key primitive.
+ 7.5 FirstSplit_classification (=> PS | ZT | BAD) + ValidCAPFrame_no_violation (Valid => not BAD).
+ 7.6 OwnedAtom_terminality (proper zero-slack core D'<D owns x => not OwnedAtom D x) / NoHiddenSurplus_of_minSideDoor.
+ 7.7 AdjacentExtraDoorInterval_sigma_pos (= THE key B primitive).
+
+### HONEST FINAL STATUS: gap#1 = these CAP primitives; A,B + closure chain are DERIVED (proofs given). THE RESIDUAL
+= AnnularAtom_has_firstSplit (is it in the S1 Ferrers archive, or new/the wall?). Battery confirms A's CONCLUSION very
+strongly (17757 cases, 0 fail, no ell>=9). NEXT: (1) CHECK the S1/S2 archive for the first-split theorem; (2) formalize
+the CAP primitive interface + derive A,B + closure chain in Lean (named-hypothesis form, AnnularAtom_has_firstSplit
+the key primitive); (3) if S1 doesn't prove it, AnnularAtom_has_firstSplit = the true residual wall -- surface.
