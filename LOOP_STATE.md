@@ -1633,3 +1633,19 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
   unreachable this tick).
 - MY CHART SLICE: chart-8 (8,0)(8,5)(8,8)(8,11) in 384-prime CRT solve (11 procs). Gate on completion.
 - marker 2032647.
+
+
+## TICK NOTES (2026-07-07T06:10Z) — chart-8 all hard; MAIN assembly contract generating
+- Codex ledger 55/108 (v53): merged my k7/d7 (v52) + closed k4/G5 multirepair-smallres (I reverified
+  exact_ok=true 0/0, 11th personal check). marker 2036196.
+- MY CHART-8 slice all HARD (grabbed dominants Codex left): k8/d11=19 negres but NO single-col repair
+  (->Codex multirepair), k8/d0=169, k8/d5=3437, k8/d8=3263 negres broad (->face-split queue). Routed all
+  4 back to Codex with cached cores. NONE certified by me.
+- CLAIMED next: (0,0)(3,1)(4,1)(3,2) [told Codex to skip]; probing (0,0)(3,1) now (2 rows to limit CRT
+  waste after chart-8 lesson). Gate on completion; certify clean, route broad.
+- MAIN: brief CG ack first (my long assembly-contract msg was SPLIT by composer send-on-newline bug);
+  RE-SENT as single newline-free message -> MAIN now GENERATING the per-instance Lean endgame assembly
+  contract (ODLNodeSemantics/coreOf; O14 cover->odl_full; C5RS->beta<=N^2/25; top theorem->FC bridge).
+  Memory updated (reading-gpt-replies: type action sends on newline).
+- SIBLING idle (honest-completeness section landed) -> retask NEXT TICK from clean tab.
+- marker 2036196.

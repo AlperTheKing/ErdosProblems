@@ -29399,3 +29399,7 @@
 [2026-07-07T04:36:28Z] > COMPUTE | NEXT: Run k4/G3 tier3 quotient candidate summary before full cache generation.
 [2026-07-07T04:37:20Z] OK COMPUTE | DID: Ran k4/G3 tier3 quotient candidate summary. | RESULT: tmp/eq_odl1_rung2_qcandidate_k4_G3_tier3_derived_codex_v1.json | D: inspect totals
 [2026-07-07T04:38:26Z] > EDIT | NEXT: Add quotient-space face-split column-generation driver using QColumn streaming pricing.
+[2026-07-07T04:41:01Z] OK EDIT | DID: Added quotient streaming CG driver. | RESULT: problems/23/writeup/_codex_eq_odl1_rung2_face_split_cg.py | D: compile
+[2026-07-07T04:41:15Z] > COMPUTE | NEXT: Smoke-test quotient CG on k4/G3 with F1 cache seed and F2 pricing.
+[2026-07-07T04:41:59Z] FAIL COMPUTE | DID: Smoke-tested quotient CG k4/G3 F1seed/F2price. | RESULT: TypeError heap tie on QColumn | D: patch tie-breaker
+[2026-07-07T04:42:16Z] > VERIFY | NEXT: Compile patched quotient CG and rerun k4/G3 smoke.
