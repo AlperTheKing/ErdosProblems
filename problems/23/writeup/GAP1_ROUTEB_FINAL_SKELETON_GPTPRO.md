@@ -582,3 +582,28 @@ CONFIRMS the ambient diagnostic (escape regime absorbed, Gamma-min scope, N>=18;
 C5/prune). But the FULL proof needs the rowDB bank construction (tau_h + C5Cap + PruneCap) + a Hall/max-flow certificate
 -- NOT a triangle-free discharging shortcut (that route is now closed). This is the original GERSH crux, no shortcut.
 P(gap#1 math) ~45-50 (discharging shortcut eliminated; the wall is the full rowDB Hall theorem, needs deep bank construction).
+
+================================================================================
+## FINAL: gap#1 = rowDB full-bank Hall CHARGE-CERT existence (free-with-constraints) (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro: the bank is FREE-WITH-CONSTRAINTS, not canonical from adj/side/ell. GRAPH-COMPUTABLE: DoorCap(C)=25*sigma(C)
+(sigma=delta_B-delta_M); PruneCap(C)=0 for a leaf else sum checked descendant Balances; Surplus(C)=sum annular demands.
+NOT graph-computable (rowDB ledger allocations): C5Cap(C) [C5Token z: mass(z)>=0, cap=25*mass(z)] and AmbientCap(C)
+[AmbientToken h: support V_h, tau_h>=0, cap=(N-|V_h|)*tau_h]. cap=N-T(v) is a DIAGNOSTIC only (to be official needs a
+theorem "rowDB ambient cap dominates N-T"). THE GATE = exact rational MAX-FLOW certificate: atoms(demand) -> sinks
+{Door 25sigma, Ambient (N-|V_h|)tau_h, C5 25*mass(z), Prune Balance(D)}; q>=0, sum_sink q=demand(a), sum_a q<=cap(s);
+feasible => Surplus<=FullBank => Balance>=0. FREE tokens must satisfy: tau,mass>=0; cap formulas; prune=checked child
+Balance; prefix availability; and the GLOBAL LEDGER IDENTITY reserveResidual = FreeBank + GoodBalance + sum_C B_C (no
+double-spend). Extremal ell=9-in-N=9 (Gamma=N^2, reserve=0): FreeBank=0 => C5Cap+AmbientCap=0 => need 25*sigma>=56 =>
+sigma>=3 (door alone). Triangle-free does NOT prove the per-vertex bound (Hall/flow over rowDB tokens). PROOF = A. emit
+per-cage max-flow/Hall certs (rowDB emits, Lean verifies via surplus_le_bankCap_of_hall_charge) OR B. structural rowDB Hall.
+
+### CLAUDE-VERIFIABLE LIMIT REACHED: the FULL-BANK gate needs the rowDB TOKEN SUPPORTS (C5 cells, ambient V_h) which are
+rowDB-defined, NOT graph-computable. My cap=N-T(v) ambient gate is the diagnostic (escape regime absorbed). My Lean has the
+SOUNDNESS half (RouteBAssembly.surplus_le_bankCap_of_hall_charge + balance_nonneg_of_hall_charge: given a valid full-bank
+charge matrix q => Balance>=0). So gap#1's OPEN residual = "a valid full-bank charge cert EXISTS for every sigma>0 cage"
+= PositiveSlackHallPrefix_FullBank, needing the rowDB bank CONSTRUCTION (token allocation) + per-cage feasibility. This is
+the deep GERSH ledger design -- NOT graph-gateable, NOT triangle-free-provable. The conditional Lean derivation (given the
+cert) is COMPLETE + axiom-clean. gap#1 = the GERSH crux, fully mapped; all shortcuts (door-only, companion-theta,
+triangle-free discharging, canonical cap) eliminated. P(gap#1 math) ~45-50 (a precisely-stated Hall charge-cert existence
+theorem; the rowDB bank construction is the remaining deep design).
