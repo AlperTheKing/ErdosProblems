@@ -27,7 +27,8 @@ from _bdef_construct import is_triangle_free
 def new_acc():
     return dict(defcap=0, bd_dist=Counter(), sigma0_posdebt=0, sigmapos_posdebt=0,
                 sigmapos_surplus=Counter(), ex_sigmapos=None,
-                sigmapos_masks=0, sigmapos_reached_witness=0, sigmapos_posdebt_prewit=0)
+                sigmapos_masks=0, sigmapos_reached_witness=0, sigmapos_posdebt_prewit=0,
+                ell_crossM_dist=Counter(), ell_M_dist=Counter(), max_ell_crossM=0, max_ell_M=0)
 
 
 def scan(name, n, edges, acc):
@@ -74,6 +75,12 @@ def scan(name, n, edges, acc):
                 continue
             acc['defcap'] += 1
             acc['bd_dist'][bd] += 1
+            for e in crossM:
+                acc['ell_crossM_dist'][ell[e]] += 1
+                acc['max_ell_crossM'] = max(acc['max_ell_crossM'], ell[e])
+            for e in M:
+                acc['ell_M_dist'][ell[e]] += 1
+                acc['max_ell_M'] = max(acc['max_ell_M'], ell[e])
             surplus = sum(ell[e] ** 2 - 25 for e in crossM)
             if bd == 0:
                 acc['sigma0_posdebt'] += 1
@@ -95,6 +102,14 @@ def report(label, acc):
     print('  sigma>0 (bd<0)  positive-debt: %d' % acc['sigmapos_posdebt'])
     print('  [bias diagnostic] sigma>0 masks enumerated: %d ; reached witness_structure (nonempty cross/bdy): %d'
           % (acc['sigmapos_masks'], acc['sigmapos_reached_witness']))
+    print('  [FORK PROBE] ell(crossM) dist: %s  MAX=%d (j_max=%s)'
+          % (dict(sorted(acc['ell_crossM_dist'].items())), acc['max_ell_crossM'],
+             (acc['max_ell_crossM'] - 5) // 2 if acc['max_ell_crossM'] else '-'))
+    print('  [FORK PROBE] ell(M all bad edges) dist: %s  MAX=%d (j_max=%s)'
+          % (dict(sorted(acc['ell_M_dist'].items())), acc['max_ell_M'],
+             (acc['max_ell_M'] - 5) // 2 if acc['max_ell_M'] else '-'))
+    print('  [FORK] door-only sufficient for a subcage iff its bad edges have ell<=7 (j=0, demand 24<=25). '
+          'max ell<=7 => small-subcage/door-only case SUPPORTED; ell>=9 present => large subcages POSSIBLE.')
     if acc['sigmapos_posdebt']:
         print('  sigma>0 Surplus(C) distribution:', dict(sorted(acc['sigmapos_surplus'].items())))
         print('  *** sigma>0 positive-debt cap EXISTS -- the object PositiveSlackAbsorption must handle ***:',
