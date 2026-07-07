@@ -29558,3 +29558,4 @@
 [2026-07-07T11:33:43.5557436+03:00] FAIL ATTACK | DID: Ran k5/F6 exact pipeline. | RESULT: exact_ok=false full_negative_residual_count=8 solution_negative_count=0. | D: switch to repair.
 [2026-07-07T11:34:16.9328635+03:00] > ATTACK | NEXT: Run float multirepair and exact rationalization for k5/F6 eight residual rows.
 [2026-07-07T11:35:12.9093669+03:00] FAIL ATTACK | DID: Attempted k5/F6 multirepair with malformed negative threshold. | RESULT: argparse rejected --threshold. | D: rerun repair probe.
+[2026-07-07T11:41:22.8130685+03:00] > ATTACK | NEXT: Rerun k5/F6 with deterministic random HiGHS objective to avoid degenerate basis residuals.

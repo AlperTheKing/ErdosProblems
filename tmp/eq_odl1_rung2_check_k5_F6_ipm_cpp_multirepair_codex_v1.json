@@ -1,0 +1,87 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 5,
+  "columns": 31307,
+  "dominant": 5,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3004/den_bits=2997",
+  "full_min_residual": "-num_bits=3000/den_bits=3034",
+  "full_negative_residual_count": 4,
+  "full_zero_residual_count": 159820,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        3,
+        1,
+        0,
+        0,
+        2,
+        0,
+        3,
+        1,
+        1,
+        0
+      ],
+      "residual": "-num_bits=3000/den_bits=3034",
+      "row": 17284
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        0,
+        3,
+        1,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3000/den_bits=3034",
+      "row": 34731
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        3,
+        1,
+        0,
+        1
+      ],
+      "residual": "-num_bits=3000/den_bits=3034",
+      "row": 35303
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        3,
+        1,
+        0,
+        2
+      ],
+      "residual": "-num_bits=3000/den_bits=3034",
+      "row": 36286
+    }
+  ],
+  "nonzero_source_columns": 1968,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k5_F6_ipm_cpp_multirepair_codex_v1.jsonl",
+  "solution_max": "2675/4",
+  "solution_min": "num_bits=3000/den_bits=3031",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}

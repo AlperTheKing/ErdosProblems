@@ -66,6 +66,8 @@ def solve_basis(
     solver: str,
     presolve: str,
     run_crossover: str,
+    objective: str,
+    objective_seed: int,
     threads: int,
     time_limit: float,
 ):
@@ -74,7 +76,11 @@ def solve_basis(
     lp = highspy.HighsLp()
     lp.num_col_ = cols
     lp.num_row_ = rows
-    lp.col_cost_ = np.ones(cols)
+    if objective == "random":
+        rng = np.random.default_rng(int(objective_seed))
+        lp.col_cost_ = (1.0 + rng.random(cols)).astype(np.float64)
+    else:
+        lp.col_cost_ = np.ones(cols)
     lp.sense_ = highspy.ObjSense.kMinimize
     lp.col_lower_ = np.zeros(cols)
     lp.col_upper_ = np.full(cols, inf)
@@ -217,6 +223,8 @@ def main() -> None:
     ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--run-crossover", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--selector", choices=["highs-basis", "clarabel-support"], default="highs-basis")
+    ap.add_argument("--highs-objective", choices=["l1", "random"], default="l1")
+    ap.add_argument("--highs-objective-seed", type=int, default=1729)
     ap.add_argument("--basis-column-mode", choices=["all-basic", "positive-basic"], default="all-basic")
     ap.add_argument("--basis-positive-tol", type=float, default=1.0e-9)
     ap.add_argument("--threads", type=int, default=32)
@@ -259,6 +267,8 @@ def main() -> None:
             solver=args.solver,
             presolve=args.presolve,
             run_crossover=args.run_crossover,
+            objective=args.highs_objective,
+            objective_seed=args.highs_objective_seed,
             threads=args.threads,
             time_limit=args.time_limit,
         )
@@ -287,6 +297,8 @@ def main() -> None:
         payload.update({
             "run_status": str(run_status),
             "model_status": model_status_text,
+            "highs_objective": args.highs_objective,
+            "highs_objective_seed": args.highs_objective_seed,
             "run_crossover": args.run_crossover if args.solver == "ipm" else None,
             "basis_column_mode": args.basis_column_mode,
             "basis_positive_tol": args.basis_positive_tol,

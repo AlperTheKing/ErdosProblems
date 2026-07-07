@@ -69,6 +69,8 @@ def main() -> None:
     ap.add_argument("--solver", choices=["simplex", "ipm", "choose"], default="ipm")
     ap.add_argument("--presolve", choices=["on", "off", "choose"], default="on")
     ap.add_argument("--run-crossover", choices=["on", "off", "choose"], default="on")
+    ap.add_argument("--highs-objective", choices=["l1", "random"], default="l1")
+    ap.add_argument("--highs-objective-seed", type=int, default=1729)
     ap.add_argument("--basis-column-mode", choices=["all-basic", "positive-basic"], default="all-basic")
     ap.add_argument("--basis-positive-tol", type=float, default=1.0e-9)
     ap.add_argument("--support-threshold", type=float, default=1.0e-4)
@@ -103,6 +105,8 @@ def main() -> None:
         "--solver", args.solver,
         "--presolve", args.presolve,
         "--run-crossover", args.run_crossover,
+        "--highs-objective", args.highs_objective,
+        "--highs-objective-seed", str(args.highs_objective_seed),
         "--basis-column-mode", args.basis_column_mode,
         "--basis-positive-tol", str(args.basis_positive_tol),
         "--threads", str(args.threads),
