@@ -29612,3 +29612,8 @@
 2026-07-07T10:01:17.1860530Z OK VERIFY | DID: polled perturbed and Claude harvest | RESULT: no new manifests; ledger remains 81/108 | D: none
 2026-07-07T10:05:46.4861718Z OK VERIFY | DID: harvested Claude k3/d9,k4/d5,k4/d6 | RESULT: ledger v87 certified_count=84/108 pending_count=24 | D: none
 2026-07-07T10:06:26.6448080Z > ATTACK | NEXT: launch fresh rows k9/d5,k7/d6,k9/d4,k7/d12
+2026-07-07T10:08:08Z > ATTACK | NEXT: read Claude mailbox and active O14 process state before launching new rows
+2026-07-07T10:08:40Z OK ATTACK | DID: read Claude mailbox and process state | RESULT: Claude claimed 9/5,7/6,9/4; active python O14 jobs listed | D: skip claimed rows
+2026-07-07T10:09:02Z > ATTACK | NEXT: launch unclaimed rows k7/d12,k9/d8,k7/d4,k7/d5 with cpp random pipeline
+2026-07-07T10:09:03Z OK ATTACK | DID: launched k7/d12,k9/d8,k7/d4,k7/d5 cpp random pipelines | RESULT: 4 Start-Process jobs | D: active
+2026-07-07T10:09:45Z > VERIFY | NEXT: poll active rows after launch and harvest any completed exact certificates

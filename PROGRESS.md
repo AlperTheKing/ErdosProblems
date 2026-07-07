@@ -2476,3 +2476,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T13:00Z] ✔ VERIFY-CODEX | DID: independently reverified Codex charts-7-9 certs ch8/d4, ch9/d10 | RESULT: both exact_ok=TRUE 0/0; ~19 hard rows now verified (15 mine + k4/G3,k6/G2,k6/G1,k5/G1,k8/d4,k9/d10) | Δ: conjunct-3 progress; 81/108, my 5 rows solving
 [2026-07-07T13:04Z] ✔ k4/d6,k3/d9 | certified+reverified (0/0); 17 chart-0-4 rows by me; ~83/108
 [2026-07-07T13:06Z] ✔ k4/d5 + HELP7/9 | k4/d5 certified (0/0); 18 chart-0-4 rows; launched 9/5,7/6,9/4 to help Codex on 7/9 tail; ~85/108
+[2026-07-07T13:09Z] ✔ VERIFY | reverified Codex ch7/d13, ch8/d11 (0/0); working through 18 unverified Codex certs ~2/cycle for aggregate re-verification (conjunct 3); 84/108
