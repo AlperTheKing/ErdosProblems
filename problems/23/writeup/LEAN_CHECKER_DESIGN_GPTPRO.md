@@ -917,3 +917,48 @@ Falsifier-watch: if a realizable irreducible high-terminal obstruction (in an ac
 overfull non-C5-hom core) is exhibited, that forces path-2 (per-instance) for these atoms — not a delta=0
 falsifier, but a proof that the compiled-universal route needs the general CSP cert.
 
+
+## Per-instance NCH/M6 checker design (GPT-Pro MAIN, 2026-07-07; Claude-gated) — pivot Lean side
+
+ENDGAME CHOICE: for BOTH NCH and M6, checker SOUNDNESS is compiled, certificate EXISTENCE is per-instance.
+
+### M6 per-instance token-charge cert = ALREADY COMPILED
+MAIN CONFIRMS: checkLengthSurplusChargeCertV2 (committed, GammaAggregation.lean) IS EXACTLY the per-instance
+M6 certificate. It proves Sum_f(ell(f)^2-25) <= 25 eta; my compiled gammaUpper_from_chargeCertV2 gives
+Gamma <= N^2 => beta <= N^2/25. Codex emits per RowDB: the lrs/cauchy/bank atoms + C(g) charge coeffs +
+the exact identity. => M6 Lean side DONE (checker compiled); only the emitted data is per-instance.
+
+### NCH per-instance cert = NCHMultiTermCert (two independent components)
+Do NOT rely on "non-C5-hom => ODL bound" (the unproved global implication). The cert proves BOTH directly:
+  structure NCHMultiTermCert where
+    nodeId : NodeId ; support : List Nat ; vars : List Nat
+    terminalLabels : List (Nat x Nat)   -- boundary labels in Z5 {0..4}
+    constraints : List C5Constraint     -- terminal blue-edge / bad-door / C5-compatibility
+    resolution : CSPResolutionCert       -- proves NOT-C5-extendable (resolution refutation -> empty clause)
+    coreCone : ConeCert                  -- exact rational cone cert proving the numeric ODL bound
+    targetOK : Bool                      -- exact NF equality binding cone target to coreOf(nodeId) defect
+- NUMERIC ODL bound (supportRowSum <= supportSize + eta): proven by coreCone (ConeCert) =>
+  CoreODLGoal_of_defect_nonneg => CoreODLGoal. **THIS REUSES my already-built coreODLGoal_of_coneCert
+  (ODLFull.lean) + ConeCert.sound (PolyCert.lean).** => the NCH numeric-bound soundness is ALREADY COMPILED.
+- CLASSIFICATION (not-C5-extendable): the CSPResolutionCert = the genuinely NEW piece. A resolution
+  refutation of the C5-labeling CSP:
+    structure Literal { varIdx, label (<5), positive } ; Clause := List Literal
+    structure CSPResolutionCert { steps : List ResolutionStep ; finalClause : Clause }
+    checkClause / resolveClause (C\{p} ++ D\{compl p}, dedup) / checkResolutionStep / checkCSPResolutionCert
+      (base clauses well-formed + trace valid + finalClause = empty)
+    theorem checkCSPResolutionCert_sound : checkCSPResolutionCert base cert = true -> NoSatisfyingAssignment base
+- ODL leaf provider uses checkNCHMultiTermCert_sound to resolve the NCH leaf.
+
+### Codex emits per NCH leaf
+vars (all vertices/bags in the terminal obstruction), terminalLabels (boundary labels from the maximal
+labelled region), constraints (terminal blue-edge/bad-door/C5-compat), resolution (proof -> empty clause),
+coreCone (exact ConeCert for the node core defect supportSize + eta - supportRowSum >= 0), targetOK (exact NF
+equality binding cone target to coreOf(nodeId) defect). NCH existence PER-INSTANCE, but sound + checker-complete.
+
+### Claude bottom line — pivot Lean side is LARGELY ALREADY COMPILED
+- M6 checker: DONE (committed V2).
+- NCH numeric-bound soundness: DONE (coreODLGoal_of_coneCert + ConeCert.sound, reused).
+- NEW piece to build: CSPResolutionCert resolution-refutation checker + soundness (self-contained, no Codex dep).
+Then the thin NCHMultiTermCert wrapper: checkNCHMultiTermCert = checkCSPResolutionCert && coreCone-binding &&
+targetOK; soundness via coreODLGoal_of_coneCert (numeric) + checkCSPResolutionCert_sound (classification).
+
