@@ -2,7 +2,7 @@
 # Last update: 2026-07-04T19:20Z (P(math)~87, P(Lean)~82)
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 2028187
+- CODEX_TO_CLAUDE.md read marker (bytes): 2030019
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
