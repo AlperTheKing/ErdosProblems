@@ -29566,3 +29566,4 @@
 [2026-07-07T11:54:32.8000355+03:00] > ATTACK | NEXT: Run k6/F5 with 16 workers alongside Claude four-way batch to use remaining CPU budget.
 [2026-07-07T12:00:32.9645351+03:00] FAIL ATTACK | DID: Ran k6/F5 alongside Claude batch. | RESULT: exact_ok=false full_negative_residual_count=12 solution_negative_count=2. | D: park k6/F5 repair-needed.
 [2026-07-07T12:04:50.0899387+03:00] OK VERIFY | DID: Manifested four Claude native exact rows and rebuilt ledger v58. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v58_codex.json. | D: expected 63/108.
+[2026-07-07T12:12:39.8300576+03:00] OK VERIFY | DID: Added and ran exact pipeline harvester. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v59_codex.json. | D: ledger refresh.
