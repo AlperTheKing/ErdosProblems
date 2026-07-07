@@ -447,3 +447,30 @@ ApplicationGeometry (the local geometric forcing: level>=1 atom => saving>=2 rep
 named hypothesis (not pair-door metric-stability); do NOT spend budget on the L5_FORCING boundary-attach leg (Route B
 avoids L5 forcing, only needs strict drop 4L+4). P(gap#1 math) ~55-60 (residual now LOCAL + closing machinery archived,
 but the geometric forcing ApplicationGeometry still open + battery-only).
+
+================================================================================
+## ⚠ DECISIVE: NoLongSideDoorAnnulus FALSE from weak hyps -- C_18 single-row escape (GPT-Pro + Claude verified 2026-07-08)
+================================================================================
+GPT-Pro answered the decisive question with a CONCRETE COUNTEREXAMPLE, which Claude EXACT-VERIFIED
+(_claude_c18_singlerow_escape.py): AnnularAtom_has_firstSplit / NoLongSideDoorAnnulus is FALSE from
+{triangle-free, max-cut, Ferrers order, inclusion-minimal side-door interval, ell>=9} ALONE.
+  C_18 (even cycle, parity cut) + ONE bad edge h=(v0,v8): triangle-free; parity=max cut; ell(h)=9; D={v0} is a
+  two-door (deltaB={v0v1,v0v17}) one-bad (deltaM={v0v8}) sigma=1 inclusion-minimal side-door subcage, both sides
+  connected, owning the ell=9 edge with NO companion row / theta / interior door / triangle / shorter blue row.
+  Demand(D)=81-25=56 > 25=25*sigma => DOOR-ONLY ABSORPTION FAILS. (beta=1<=12.96 => CONJECTURE still holds; C_18 is
+  NOT a tight/deficient cage -- this refutes the LEMMA, not the theorem.)
+CONSEQUENCE: Claude's _claude_sidedoor_dooronly_gate.py "0 fail / no ell>=9 in 17757 cases" was a SEARCH-SPACE
+ARTIFACT (census N<=9 + specific glue cannot host an ell>=9 single-row escape, needs N>=18). The battery does NOT
+support NoLongSideDoorAnnulus. This corrects the session's reliance on it.
+
+### THE RESIDUAL is now LongOwnedAtom_has_companionTheta (GPT-Pro sec 4-5): exists a companion atom y != x, owned/
+adjacent, with FormsStrictReducedTerminalTheta(x,y) => S2ApplicationGeometry => S2 disjunction => (tri-free + dist-min)
+=> interior door. The C_18 escape is excluded ONLY IF the actual negative-reserve / deficient-cage / rowDB-ownership
+extraction FORBIDS single-row long annuli (a TIGHT-BANK argument, NOT battery). "If that stronger condition exists in
+the rowDB decomposition, make it explicit in ValidCAPFrame or the hypothesis." This is genuinely OPEN and NOT battery-
+supported. GPT-Pro: name S2/application-geometry as the Lean hypothesis (not pair-door metric-stability); do NOT close
+L5_FORCING (Route B needs only strict drop 4L+4).
+
+### RECALIBRATE: P(gap#1 math) ~55-60 -> ~45-50. The door-only path (the "easy" branch) is BROKEN by a verified escape;
+the real residual (companion-theta) needs the deficient-cage/tight-bank structure to exclude single-row annuli and is
+NOT battery-supported. NOT a conjecture falsifier (C_18: beta=1<=N^2/25). P(full Lean) ~12-20.
