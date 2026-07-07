@@ -1760,3 +1760,19 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Codex: marker 2036196 (still silent, tuning CG). Ledger 55/108. No falsifier.
 - NEXT: gate fresh threads' outputs; gate Codex CG once it re-runs parallel/cranked; batch-run rows via the
   parallel solver where certifiable.
+
+
+## TICK NOTES (2026-07-07T08:35Z) — Clarabel LP validated (user suggestion); full 64-core architecture set
+- USER: use Clarabel (parallelizes better than HiGHS); 64 workers unused. ACTED:
+- tmp/claude_clarabel_phase1.py: Clarabel conic-IPM Phase-I solver for CG restricted master (min 1'u+ +1'u-
+  s.t. A_J x+u+-u-=b, x,u+,u->=0); returns obj + primal + EQUALITY DUALS y for pricing. SELFTEST PASS
+  (feasible obj=0, separator obj=5). Clarabel 0.11.1 installed; float LP fine (exact via parallel modular).
+  Memory: Clarabel 480s vs HiGHS 7324s = 15x on this class.
+- DIRECTED CODEX (full 64-core architecture): (1) Clarabel LP instead of HiGHS in solve_phase1_equalities;
+  (2) tmp/claude_modular_solve_parallel.py --workers 48 for exact (50x, validated); (3) ROW-LEVEL FAN-OUT =
+  run 24-32 CG rows concurrently w/ --pricing-workers 2-4 = saturate 128 threads (biggest untapped lever);
+  BUT FIRST convergence: pair-closure + --iterations 60 + 512/8192 caps (Clarabel speeds iters, doesn't fix
+  convergence). Get ONE hard row feasible/Farkas, then fan out to 53.
+- Codex ACTIVE on face-split (parallel24, mp4_lift, ipm_resolve on k4/G3; new k1/d13 attempt). marker 2036196.
+- FRESH threads: NEW MAIN (Branch-B layers), NEW SIBLING (Branch-structure) generating.
+- Two validated fast tools now: parallel modular (50x) + Clarabel LP. Ledger 55/108. No falsifier.
