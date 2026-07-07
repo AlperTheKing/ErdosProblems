@@ -2470,3 +2470,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T12:41Z] ✔ 75->77 | DID: certified+reverified k3/d10,k4/d14 (0/0); launched 4/6,4/5,3/9 | RESULT: ~77/108, 12 chart-0-4 rows certified by me; marker advanced | Δ: toward 80
 [2026-07-07T12:44Z] ✔ k3/d4 | certified+reverified k3/d4 (0/0); 13 chart-0-4 rows by me; ledger 76/108; charts 0-4 nearly exhausted -> will help Codex 7/9
 [2026-07-07T12:50Z] ✔ BRANCH-B-REVIEW | DID: MAIN self-review of Branch-B design (43940c) - 6 build-time fixes (Rat not Q; Nat+checker; drop invented names; strengthen single-spend; fix telescope; add ODL bridge) archived; retasked MAIN for the Branch-B->ODL bridge theorem | Δ: conjunct-2 design hardened
+[2026-07-07T12:53Z] ✔ k4/d9 | certified+reverified (0/0); 14 chart-0-4 rows by me; ~78/108
