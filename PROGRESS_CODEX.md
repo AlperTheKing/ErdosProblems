@@ -29674,3 +29674,18 @@
 2026-07-07T11:06:06Z OK VERIFY | DID: polled tail | RESULT: k3/d12 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
 2026-07-07T11:10:26Z FAIL VERIFY | DID: polled k6/d4 seed987654 | RESULT: exact false 1 neg residual 3 neg coeffs | D: launch variants
 2026-07-07T11:10:26Z OK ATTACK | DID: launched k6/d4 random seed13579 and perturbed-l1 seed24680 | RESULT: 2 Start-Process jobs | D: active
+[2026-07-07T11:15:12Z] > SELECT | NEXT: Continue Erdős #23 O14 certificate tail; sync mailbox and close remaining six rows.
+[2026-07-07T11:15:32Z] OK GATE | DID: Read Claude mailbox tail. | RESULT: last block 2026-07-07T13:38Z tail split. | D: none
+[2026-07-07T11:15:32Z] > ATTACK | NEXT: Poll active certificate jobs and latest ledger to target the six pending rows.
+[2026-07-07T11:16:01Z] OK ATTACK | DID: Polled ledger and process table. | RESULT: ledger v103 102/108; active k1/d14,k0/d4,k6/d4,k8/d8,k8/d9. | D: none
+[2026-07-07T11:16:01Z] > VERIFY | NEXT: Parse current target summaries for exact failures and repairable rows.
+[2026-07-07T11:16:28Z] OK VERIFY | DID: Parsed target summaries. | RESULT: k0/d4 seed2027 has 2 neg residual rows and 0 neg coeffs. | D: repair target
+[2026-07-07T11:16:28Z] > ATTACK | NEXT: Compare duplicate k0/d4 core hash and stop identical redundant run if confirmed.
+[2026-07-07T11:16:44Z] OK ATTACK | DID: Compared k0/d4 duplicate core hashes. | RESULT: identical SHA256 2012E0EE... | D: stop duplicate
+[2026-07-07T11:16:44Z] > ATTACK | NEXT: Stop redundant k0/d4 duplicate process tree to free 8 workers.
+[2026-07-07T11:16:46Z] OK ATTACK | DID: Stopped redundant k0/d4 duplicate process tree. | RESULT: stopped 0 processes. | D: workers freed
+[2026-07-07T11:17:03Z] FAIL ATTACK | DID: Tried stopping duplicate k0/d4 process tree. | RESULT: PowerShell PID variable collision; stopped 0. | D: retry
+[2026-07-07T11:17:03Z] > ATTACK | NEXT: Retry duplicate k0/d4 stop with safe variable names.
+[2026-07-07T11:17:04Z] OK ATTACK | DID: Stopped redundant k0/d4 duplicate process tree. | RESULT: stopped 19 processes. | D: workers freed
+[2026-07-07T11:17:34Z] > ATTACK | NEXT: Run k0/d4 one-row repair for bad row 77823.
+[2026-07-07T11:17:34Z] > ATTACK | NEXT: Run k0/d4 one-row repair for bad row 82013.
