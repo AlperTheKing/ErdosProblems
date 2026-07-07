@@ -29663,3 +29663,6 @@
 2026-07-07T10:51:12Z OK VERIFY | DID: harvested k1/d13 | RESULT: ledger v101 certified_count=100 pending_count=8 sha=31d8a004ac27 | D: +1
 2026-07-07T10:51:41Z > ATTACK | NEXT: terminate duplicate k1/d13 Claude run already certified
 2026-07-07T10:51:41Z OK ATTACK | DID: terminated duplicate k1/d13 Claude run | RESULT: requested Stop-Process on 2 PIDs | D: freed workers
+2026-07-07T10:52:23Z OK ATTACK | DID: patched febc pipeline time-limit passthrough | RESULT: --time-limit forwarded to core extractor | D: enables k8 timeout retry
+2026-07-07T10:52:23Z > ATTACK | NEXT: launch k8/d9,k8/d8 with --time-limit 1800
+2026-07-07T10:52:23Z OK ATTACK | DID: launched k8/d9,k8/d8 time-limit retries | RESULT: 2 Start-Process jobs | D: active
