@@ -556,3 +556,29 @@ N=18,22,26,30 (the C_18 single-row-long-annulus ESCAPE regime) 0 fail => cap=N-T
 boundary needs the full rowDB bank (actual 25sigma sigma>=2 + C5 + prune), NOT a refutation. Fixed my own ell off-by-one.
 STATUS: escape regime empirically absorbed by the natural cap; the wall's PROOF still needs the rowDB tau_h + the
 discharging argument. P(gap#1 math) ~48-52.
+
+================================================================================
+## HONEST CONSOLIDATION: wall = rowDB Hall theorem; triangle-free discharging FAILS (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro HONEST verdict (sec 4,9): AmbientShadowLoadBound / the per-vertex load_i(v)<=N-T(v) bound CANNOT be proved
+from triangle-free + Ferrers-laminar + max-cut alone. "Overcharging a vertex v does not necessarily create a local
+triangle/shortcut; if many long supports all avoid v, v can be in many ambient shadows without a forbidden triangle.
+Triangle-free controls edges and short chords; ambient shadow charging is a GLOBAL property." The per-vertex capacity
+inequality "is not a direct corollary of triangle-free. It is a rowDB bank theorem -- a Hall-prefix theorem in disguise."
+=> the DISCHARGING SHORTCUT does NOT close the wall. cap=N-T(v) is "the ambient part only, too weak as the full bank."
+
+### THE WALL, FINAL FORM = FULL-BANK HALL/MAX-FLOW CERTIFICATE. FullCap_i = DoorCap_i + AmbientCap_i + C5Cap_i +
+PruneCap_i. Single flow network per prefix: atom nodes (demand) -> door sink (cap 25*sigma_i) + ambient vertex sinks
+(cap_i^amb(v)=sum_{h: v notin V_h} tau_h, atom a->v iff v notin V_a) + C5/Prune sinks (PrefixC5Cap, PrefixPruneCap).
+Feasibility proves full absorption. Split (GPT-Pro sec 8):
+  PositiveSlackAbsorption_FullBank: AmbientResidualDemand(i) <= PrefixAmbientCap(i).
+  FullSupportResidual_C5PruneBound: FullSupportResidualDemand(i) <= PrefixC5Cap(i)+PrefixPruneCap(i)  [the ell=9-fill-
+    graph / N=9 Gamma=N^2 tight regime where ambient is empty]. These two cover C_18 + the N=9 extremal failures.
+Proof must be EITHER (A) a checked per-cage max-flow/Hall certificate over the rowDB door/ambient/C5/prune tokens, OR
+(B) a structural rowDB Hall-prefix theorem (tau_h laminar along the same chain as the supports V_a).
+
+### CLAUDE STATUS: gap#1 = the rowDB Hall absorption theorem, FULLY CHARACTERIZED. My cap=N-T(v) ambient gate
+CONFIRMS the ambient diagnostic (escape regime absorbed, Gamma-min scope, N>=18; extremal ell=9 need sigma>=3 door /
+C5/prune). But the FULL proof needs the rowDB bank construction (tau_h + C5Cap + PruneCap) + a Hall/max-flow certificate
+-- NOT a triangle-free discharging shortcut (that route is now closed). This is the original GERSH crux, no shortcut.
+P(gap#1 math) ~45-50 (discharging shortcut eliminated; the wall is the full rowDB Hall theorem, needs deep bank construction).
