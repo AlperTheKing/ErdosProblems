@@ -1594,3 +1594,21 @@ Pending, non-Chrome-dependent: Codex source-basis batch (low-defect rows) + per-
   (Hall angle, cross-check). CODEX = source-basis batch + per-chart index; 4 face-split-queue rows.
 - SESSION LEAN: 18 axiom-clean increments; FC bridge verified sorry-free; k6/F6 independently re-verified.
   Commits through b1de31551. Wakeup 22:28. Chrome flaky (recovered; reload tabs if stall).
+
+## ⭐ USER DECISION (2026-07-07T14:25Z): CERTIFIED-PER-INSTANCE ROUTE (fork resolved)
+At the two-source crux verdict — the strict fully-compiled /goal is blocked on ONE unproven global theorem
+(high-terminal Hall-core exclusion; naive form false; neither GPT-Pro thread can prove or refute; no
+falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
+- NCH + M6 atoms: extend NCHRouteCert + M6 with GENERAL MULTI-TERMINAL CSP/HALL per-instance certificates.
+  Sound + complete PER INSTANCE (certifies delta=0 for every actual graph). These 2 atoms are per-instance
+  DATA (checker-sound, exact-verified) NOT compiled-universal lemmas — relaxes strict anti-fake-progress for
+  NCH+M6 ONLY. Everything else stays compiled (skeleton, FC bridge, finite coverage atoms, charts).
+- NEW ENDGAME PLAN: certified-per-instance assembly:
+  (1) charts: Codex source-basis batch to full 108 (45 done + k6/F6; 4 face-split-queue rows via face-split);
+  (2) per-instance certs: Codex emits NCH CSP/Hall + M6 token-charge certs per graph; I exact-verify (Fraction).
+  (3) Lean: build the per-instance NCHRouteCert + M6 cert CHECKERS (soundness compiled) + wire; finite coverage
+      atoms (Seed3 width, Qlt3, cactus-door) via emitted leaf tables + exhaustion; Seed3Prime bridge.
+  (4) assemble the SimpleGraphCertificatePackage per instance + the ONE FC PR (user alone).
+- TASKS: MAIN = per-instance NCH/M6 CSP/Hall cert + checker design; SIBLING = per-instance route writeup/
+  assembly; CODEX = emit per-instance certs + finish chart batch + door-ownership; CLAUDE = checkers +
+  exact-verify + PR assembly.
