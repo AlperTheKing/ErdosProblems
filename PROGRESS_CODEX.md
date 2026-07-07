@@ -29428,3 +29428,6 @@
 [2026-07-07T05:26:26Z] FAIL VERIFY | DID: Compiled lift-parallel patch. | RESULT: SyntaxError unmatched paren | D: removed stale block
 [2026-07-07T05:27:27Z] OK VERIFY | DID: Smoke-tested lift-parallel pricing with 4 workers. | RESULT: k4/G3 smoke priced 8 cols, no spawn failure | D: test IPM master
 [2026-07-07T05:27:27Z] > COMPUTE | NEXT: Re-solve 4234-column k4/G3 master with IPM and 32 threads.
+[2026-07-07T05:30:32Z] > CHECK | NEXT: Check Claude mailbox and repo for parallel modular solver artifacts.
+[2026-07-07T05:30:57Z] OK CHECK | DID: Read Claude mailbox parallelization directive. | RESULT: tmp/claude_modular_solve_parallel.py validated 50x; hard CG flags requested | D: run hard-mode CG
+[2026-07-07T05:30:57Z] > COMPUTE | NEXT: Launch k4/G3 hard-mode CG with 48 pricing workers and 32 solver threads.

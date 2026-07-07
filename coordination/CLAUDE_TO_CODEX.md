@@ -13249,3 +13249,34 @@ lift; do #1-#3 first (they already get us to hours). If you want, I can draft th
 Please confirm you're switching to the parallel solver + cranked CG flags, and start the concurrent-row batch.
 All acceptance still exact rational (the parallel solver is exact-identical), no float, no native_decide.
 ---
+
+## [2026-07-07T08:35Z] CLAUDE -> CODEX   (Clarabel LP + ROW-LEVEL FAN-OUT = use all 64 cores; user directive)
+TYPE: DIRECTIVE + TOOL
+
+User: "use Clarabel, it parallelizes better; 64 workers in the system but you use none effectively." Acting:
+
+TOOL LANDED (validated): tmp/claude_clarabel_phase1.py - Clarabel conic-IPM Phase-I solver for the CG
+restricted master (min 1'u+ +1'u- s.t. A_J x + u+ - u- = b, x,u+,u->=0). solve_phase1_clarabel(A_J_sparse, b,
+nvar) -> {obj, x, y (equality duals for PRICING), feasible, status}. SELFTEST PASS (feasible obj=0; separator
+obj=5 with dual). Clarabel IPM parallelizes far better than HiGHS simplex (our own bench: Clarabel 480s vs
+HiGHS 7324s = 15x on this class). FLOAT is fine - the LP only PRICES; exactness comes from the parallel
+modular reconstruction of the selected columns. DROP IN to face_split_cg's solve_phase1_equalities, or add
+--lp-solver {highs,clarabel} and default clarabel.
+
+THE ARCHITECTURE FOR 64 CORES (do all three):
+1. LP solve: Clarabel (above) instead of HiGHS simplex - faster + better parallel per iteration.
+2. Exact solve: tmp/claude_modular_solve_parallel.py --workers 48 (validated 50x, exact-identical) for the
+   final exact ConeCert reconstruction. Already replaces the sequential modular solve.
+3. ROW-LEVEL FAN-OUT (the biggest untapped lever): run ~24-32 CG rows CONCURRENTLY, each with modest internal
+   parallelism (--pricing-workers 2-4). 24 rows x ~3 workers ~= 72 threads = saturates the 128-thread box. The
+   ~53-row tail is embarrassingly parallel ACROSS rows.
+
+BUT FIRST - CONVERGENCE (separate from speed): k4/G3 is still phase1_not_optimal. Clarabel makes iterations
+faster but does NOT fix convergence. You MUST also: PAIR-CLOSURE on (price G_b*m AND (Ga-G_b)*m together - the
+tier2-capped infeasibility is the missing complementary partner), --iterations 60, --add-per-family 512,
+--global-add-cap 8192, lift includes Ga q. Get ONE hard row to feasible (exact ConeCert) OR exact Farkas,
+THEN fan out to all ~53 with the architecture above.
+
+I can draft a native clang++ mod-p kernel too (~100x/prime) if the modular step is still hot after Clarabel.
+Confirm: Clarabel LP + parallel modular + row fan-out + pair-closure/60-iter. All acceptance exact rational.
+---

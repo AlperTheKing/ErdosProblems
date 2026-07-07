@@ -1,0 +1,205 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 1,
+  "columns": {
+    "count": 556895,
+    "face_pair_closure": {
+      "checked_family_count": 14,
+      "delta_only_count": 0,
+      "families": [
+        {
+          "delta_name": "G6_A2_9T-F1",
+          "delta_only_count": 0,
+          "gen_name": "F1",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F2",
+          "delta_only_count": 0,
+          "gen_name": "F2",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F3",
+          "delta_only_count": 0,
+          "gen_name": "F3",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F4",
+          "delta_only_count": 0,
+          "gen_name": "F4",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F5",
+          "delta_only_count": 0,
+          "gen_name": "F5",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F6",
+          "delta_only_count": 0,
+          "gen_name": "F6",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-F7",
+          "delta_only_count": 0,
+          "gen_name": "F7",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-B0_eta25_25",
+          "delta_only_count": 0,
+          "gen_name": "B0_eta25_25",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G1_UV_T",
+          "delta_only_count": 0,
+          "gen_name": "G1_UV_T",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G2_UZ_T",
+          "delta_only_count": 0,
+          "gen_name": "G2_UZ_T",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G3_XY_T",
+          "delta_only_count": 0,
+          "gen_name": "G3_XY_T",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G4_VZ_XY",
+          "delta_only_count": 0,
+          "gen_name": "G4_VZ_XY",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G5_VZ_T",
+          "delta_only_count": 0,
+          "gen_name": "G5_VZ_T",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        },
+        {
+          "delta_name": "G6_A2_9T-G7_B2_4T",
+          "delta_only_count": 0,
+          "gen_name": "G7_B2_4T",
+          "gen_only_count": 0,
+          "paired_multiplier_count": 0
+        }
+      ],
+      "gen_only_count": 0,
+      "mismatch_examples": [],
+      "ok": true,
+      "paired_multiplier_count": 0
+    },
+    "family_counts": {
+      "face:face_base:B11": 152205,
+      "lift:lift_band:near_2s_minus_1": 24310,
+      "lift:lift_base:B9": 48620,
+      "lift:lift_delta:G6_A2_9T-B0_eta25_25": 11440,
+      "lift:lift_delta:G6_A2_9T-F1": 11440,
+      "lift:lift_delta:G6_A2_9T-F2": 11440,
+      "lift:lift_delta:G6_A2_9T-F3": 11440,
+      "lift:lift_delta:G6_A2_9T-F4": 11440,
+      "lift:lift_delta:G6_A2_9T-F5": 11440,
+      "lift:lift_delta:G6_A2_9T-F6": 11440,
+      "lift:lift_delta:G6_A2_9T-F7": 11440,
+      "lift:lift_delta:G6_A2_9T-G1_UV_T": 11440,
+      "lift:lift_delta:G6_A2_9T-G2_UZ_T": 11440,
+      "lift:lift_delta:G6_A2_9T-G3_XY_T": 11440,
+      "lift:lift_delta:G6_A2_9T-G4_VZ_XY": 11440,
+      "lift:lift_delta:G6_A2_9T-G5_VZ_T": 11440,
+      "lift:lift_delta:G6_A2_9T-G7_B2_4T": 11440,
+      "lift:lift_gen:B0_eta25_25": 11440,
+      "lift:lift_gen:F1": 11440,
+      "lift:lift_gen:F2": 11440,
+      "lift:lift_gen:F3": 11440,
+      "lift:lift_gen:F4": 11440,
+      "lift:lift_gen:F5": 11440,
+      "lift:lift_gen:F6": 11440,
+      "lift:lift_gen:F7": 11440,
+      "lift:lift_gen:G1_UV_T": 11440,
+      "lift:lift_gen:G2_UZ_T": 11440,
+      "lift:lift_gen:G3_XY_T": 11440,
+      "lift:lift_gen:G4_VZ_XY": 11440,
+      "lift:lift_gen:G5_VZ_T": 11440,
+      "lift:lift_gen:G6_A2_9T": 11440,
+      "lift:lift_gen:G7_B2_4T": 11440
+    },
+    "quo_terms": 24806878,
+    "rem_terms": 67889153
+  },
+  "derived_support_limit": null,
+  "divisor_summary": {
+    "max_coeff": "1",
+    "min_coeff": "-3/2",
+    "negative_terms": 5,
+    "positive_terms": 27,
+    "terms": 32,
+    "total_degree": 2
+  },
+  "dominant": 13,
+  "dominant_name": "G6_A2_9T",
+  "quoP_summary": {
+    "max_coeff": "421807/12",
+    "min_coeff": "-474545/64",
+    "negative_terms": 23967,
+    "positive_terms": 24653,
+    "terms": 48620,
+    "total_degree": 9
+  },
+  "quotient_nnz": 92696031,
+  "quotient_rows": 167875,
+  "remP_summary": {
+    "max_coeff": "103095/4",
+    "min_coeff": "-11369565/512",
+    "negative_terms": 51742,
+    "positive_terms": 51843,
+    "terms": 103585,
+    "total_degree": 11
+  },
+  "rhs_nonzero": 152205,
+  "schema": "eq_odl1_rung2_face_split_quotient_probe_v1",
+  "seconds": 5693.093999999997,
+  "solve": {
+    "lp_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+    "lp_status": 2,
+    "method": "highs",
+    "objective": "sum",
+    "success": false
+  },
+  "support": "target",
+  "target_beta_json": null,
+  "target_beta_nonzero_count": null,
+  "target_mode": "chart_target",
+  "target_summary": {
+    "max_coeff": "71267",
+    "min_coeff": "-43308",
+    "negative_terms": 3056,
+    "positive_terms": 10065,
+    "terms": 13121,
+    "total_degree": 11
+  },
+  "term_order": "graded_reverse_lex",
+  "tier": "tier2",
+  "tier0_json": null
+}
