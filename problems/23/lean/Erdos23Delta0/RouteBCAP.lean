@@ -82,5 +82,41 @@ theorem surplus_le_25sigma_of_level0
     (hmass : mass ≤ sigma) (hsig : 0 ≤ sigma) :
     (24 : ℚ) * mass ≤ 25 * sigma := by nlinarith
 
+/-- **R-D door-only absorption, assembled from the CAP primitives** (machine-checks the whole door-only chain).
+    Composing `noLongSideDoor_of_primitives` (A: every owned atom of a minimal side-door subcage is level 0) with the
+    surplus model (`Surplus = 24·mass` when all owned atoms are level 0), `mass ≤ sigma`, and the door-slack bank
+    (`25·sigma ≤ BankCap`), a minimal side-door subcage has nonnegative balance: `0 ≤ BankCap − Surplus`. This is
+    `PositiveSlackAbsorption` for the prunable side-door subcages — the R-D result — derived (no `sorry`) from the
+    CAP primitives, of which the single OPEN one is `hFirstSplit` (= `AnnularAtom_has_firstSplit`, whose sole
+    remaining input is `ApplicationGeometry`; battery-only, 17757 cases). Route-independent (shared by A and B). -/
+theorem sideDoor_balance_nonneg_of_primitives
+    {Cage Atom : Type}
+    (level : Atom → Nat)
+    (OwnedAtom AtomInCage : Cage → Atom → Prop)
+    (ProperSub : Cage → Cage → Prop)
+    (IsMinSideDoor IsPosSlackSideDoor IsZeroSlackTypeBCore CAPViolation : Cage → Prop)
+    (Surplus BankCap sigmaC mass : Cage → ℚ)
+    (hFirstSplit : ∀ (D : Cage) (x : Atom), IsMinSideDoor D → OwnedAtom D x → 1 ≤ level x →
+        ∃ D', ProperSub D' D ∧
+          (IsPosSlackSideDoor D' ∨ (IsZeroSlackTypeBCore D' ∧ AtomInCage D' x) ∨ CAPViolation D'))
+    (hMinNoProperPS : ∀ (D D' : Cage), IsMinSideDoor D → ProperSub D' D → ¬ IsPosSlackSideDoor D')
+    (hTerminality : ∀ (D D' : Cage) (x : Atom),
+        ProperSub D' D → IsZeroSlackTypeBCore D' → AtomInCage D' x → ¬ OwnedAtom D x)
+    (hNoViolation : ∀ (D' : Cage), ¬ CAPViolation D')
+    (hSurplusModel : ∀ D, (∀ x, OwnedAtom D x → level x = 0) → Surplus D = 24 * mass D)
+    (hMassSig : ∀ D, mass D ≤ sigmaC D)
+    (hSigNN : ∀ D, 0 ≤ sigmaC D)
+    (hDoorBank : ∀ D, 25 * sigmaC D ≤ BankCap D)
+    (D : Cage) (hMin : IsMinSideDoor D) :
+    0 ≤ BankCap D - Surplus D := by
+  have hlvl : ∀ x, OwnedAtom D x → level x = 0 := fun x hx =>
+    noLongSideDoor_of_primitives level OwnedAtom AtomInCage ProperSub IsMinSideDoor
+      IsPosSlackSideDoor IsZeroSlackTypeBCore CAPViolation
+      hFirstSplit hMinNoProperPS hTerminality hNoViolation D x hMin hx
+  have hsurp : Surplus D = 24 * mass D := hSurplusModel D hlvl
+  have hbound : Surplus D ≤ 25 * sigmaC D := by
+    rw [hsurp]; nlinarith [hMassSig D, hSigNN D]
+  linarith [hDoorBank D]
+
 end RouteBCAP
 end Erdos23Delta0
