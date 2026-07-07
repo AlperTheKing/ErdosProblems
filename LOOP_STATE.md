@@ -1662,3 +1662,21 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - Codex: no new post (marker 2036196); grinding CG impl (_codex_eq_odl1_rung2_face_split_cg.py created) +
   moderate rows + chart-8 handoff (d11 multirepair, d0/d5/d8 face-split).
 - Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T07:00Z) — MAIN endgame assembly contract DELIVERED (design complete)
+- MAIN delivered the full 17594-char per-instance Lean endgame assembly contract (in-thread; pointer +
+  section-1 verbatim archived to problems/23/writeup/ENDGAME_ASSEMBLY_CONTRACT_GPTPRO.md). Section 1 =
+  ODLCoreData + CoreODLGoal + core defect binding (aligns with green ODLFull coreODLGoal_of_coneCert).
+  Sections 2-4 (O14 cover->odl_full; C5RS->beta<=N^2/25; top theorem->FC bridge) stay in-thread; FULL
+  extract + paste-build AT 108 (currently 55). => the entire Lean path is now DESIGNED; only build remains.
+  ANTI-FAKE-PROGRESS: this is DESIGN not compiled — do NOT claim conjunct-4 progress until modules build green.
+- MAIN retasked (JS-send): ADVERSARIAL SELF-REVIEW of the contract (missing refs vs my green modules,
+  non-compiling shapes, O14 coverage-discharge gaps, C5RS wiring, dependency-sorted build order). GENERATING.
+- SIBLING: generating cert-ledger appendix (retasked last tick via JS-send).
+- COMPUTE: 4 probes still grinding — k0_d0 + k3_d1 in slow 384-prime CRT (~40min class, chart 0 large),
+  k4_d1 + k3_d2 core-build. None done. Gate next tick.
+- Codex: marker 2036196 (no new post; grinding CG impl _codex_eq_odl1_rung2_face_split_cg.py + rows).
+- Ledger 55/108. No falsifier.
+- NEW GOTCHA logged: after execCommand insertText, the send-button enables ASYNC — click send in a SEPARATE
+  JS call (first-call btn.disabled). JS-send is the reliable channel (bypasses stalled render).

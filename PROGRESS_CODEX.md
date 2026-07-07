@@ -29407,3 +29407,5 @@
 [2026-07-07T04:43:54Z] > VERIFY | NEXT: Compile and rerun k4/G3 quotient CG smoke with JSON emission.
 [2026-07-07T04:45:20Z] OK VERIFY | DID: Compiled and smoke-tested quotient CG driver. | RESULT: k4/G3 smoke 122->138 cols, artificial 23400181.951701358->23394525.451701358 | D: report
 [2026-07-07T04:45:44Z] > COMPUTE | NEXT: Run bounded all-family k4/G3 quotient CG diagnostic from 138-column smoke cache.
+[2026-07-07T04:51:08Z] OK COMPUTE | DID: Ran bounded all-family k4/G3 quotient CG diagnostic. | RESULT: 138->1674 cols, artificial 23393511.951701358->22357229.01190628 | D: positive pricing remains
+[2026-07-07T04:51:19Z] > COMPUTE | NEXT: Continue k4/G3 quotient CG from 1674 columns with larger add cap.
