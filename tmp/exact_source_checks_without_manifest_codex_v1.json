@@ -1,6 +1,6 @@
 {
-  "exact_check_keys": 42,
+  "exact_check_keys": 50,
   "exact_check_keys_without_manifest": 0,
-  "exact_manifest_keys": 45,
+  "exact_manifest_keys": 54,
   "missing": []
 }

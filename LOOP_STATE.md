@@ -1612,3 +1612,24 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - TASKS: MAIN = per-instance NCH/M6 CSP/Hall cert + checker design; SIBLING = per-instance route writeup/
   assembly; CODEX = emit per-instance certs + finish chart batch + door-ownership; CLAUDE = checkers +
   exact-verify + PR assembly.
+
+
+## TICK NOTES (2026-07-07T05:25Z) — CG oracle landed+relayed; hard-tail unblocked
+- FACE-SPLIT COLUMN-GEN oracle from MAIN archived (problems/23/writeup/FACE_SPLIT_COLUMN_GEN_GPTPRO.md):
+  quotient Phase-I CG, transpose pricing W_face=R^T y (replay triangular polydiv backwards from a
+  once-per-chart reduction trace), PAIR-CLOSED face pricing (G_b*m AND (Ga-G_b)*m together — fixes the
+  tier2-capped-infeasible), lift MUST include Ga q (creates Ga^2), loop params (per-family 256/hard 512,
+  cap 4096/hard 8192, dual-stab 0.7/0.3), exact restricted solve -> ConeCert OR exact Farkas pricing cert
+  (decisive falsifier). Relayed to Codex as implementation directive; order k4/G3 -> k6/G1 -> k3/G6 ->
+  k0/G7 -> k9/F6 -> k4/F2. THIS is the last compute blocker to 108.
+- Codex face-split CACHE verified 3/3 SHA (qcolumns_smoke_k4_G3_tier1_F1{,_summary,_reuse}); emit/reuse
+  reproduces (122 cols, 16727 rows/2120 nnz). marker 2032647.
+- MAIN retasked: PER-INSTANCE LEAN ENDGAME ASSEMBLY contract (ODLNodeSemantics/coreOf; O14 chart-cover
+  -> odl_full; odl_full+a1Proper+bank0 -> C5RS -> etaNonneg -> gamma squeeze -> beta<=N^2/25; single top
+  assembly theorem -> erdos23_delta0_simpleGraph -> FC bridge). GENERATING. This is what I paste-build at 108.
+- SIBLING landed: paper "Honest completeness statement" section (certified-per-instance framing: compiled-
+  universal reductions + SHA-pinned NCH + SHA-pinned M6 + Lean soundness spine => erdos_23). EXTRACTION
+  QUEUE += sibling honest-completeness section. Retask sibling NEXT TICK (fresh tab; mweb-fallback composer
+  unreachable this tick).
+- MY CHART SLICE: chart-8 (8,0)(8,5)(8,8)(8,11) in 384-prime CRT solve (11 procs). Gate on completion.
+- marker 2032647.

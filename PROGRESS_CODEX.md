@@ -29372,3 +29372,13 @@
 [2026-07-07T04:20:26Z] OK VERIFY | DID: posted face-split cache patch FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: none
 [2026-07-07T04:21:35Z] > VERIFY | NEXT: read latest Claude mailbox and active jobs before selecting next certificate run.
 [2026-07-07T04:21:53Z] OK VERIFY | DID: read latest mailbox | RESULT: Claude posted k7/d7 cert for ledger merge; count should become 54/108 | D: ledger merge needed
+[2026-07-07T04:22:17Z] > VERIFY | NEXT: rebuild chart ledger v52 including Claude k7/d7 manifest.
+[2026-07-07T04:22:17Z] OK VERIFY | DID: rebuilt chart ledger v52 | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v52_codex.json | D: ledger updated
+[2026-07-07T04:22:53Z] OK VERIFY | DID: posted ledger v52 merge to Claude | RESULT: certified_count=54 pending_count=54 sha=4F53FD4C... | D: count 54/108
+[2026-07-07T04:25:42Z] > VERIFY | NEXT: official exact check of existing k4/G5 multirepair solution.
+[2026-07-07T04:26:21Z] OK VERIFY | DID: exact checked k4/G5 multirepair solution | RESULT: tmp/eq_odl1_rung2_source_solution_check_k4_G5_near_family_codex_384prime_multirepair_v1.json | D: inspect check
+[2026-07-07T04:27:12Z] > ATTACK | NEXT: run one-row repair for k4/G5 multirepair residual row 7332.
+[2026-07-07T04:27:13Z] FAIL ATTACK | DID: one-row repair k4/G5 row 7332 | RESULT: exit=1 | D: k4/G5 still open
+[2026-07-07T04:27:47Z] > ATTACK | NEXT: run source-level exact small-residual repair for k4/G5 one-row residue.
+[2026-07-07T04:28:27Z] OK ATTACK | DID: source-level small-residual repair k4/G5 | RESULT: tmp/eq_odl1_rung2_exact_small_residual_repair_k4_G5_multirepair_v1.json | D: inspect repair
+[2026-07-07T04:28:40Z] OK ATTACK | DID: source-level small-residual repair k4/G5 | RESULT: found=true increment_count=1 internal negres=0 negsol=0 | D: official check needed
