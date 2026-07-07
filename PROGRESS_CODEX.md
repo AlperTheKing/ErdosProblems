@@ -29568,3 +29568,6 @@
 [2026-07-07T12:04:50.0899387+03:00] OK VERIFY | DID: Manifested four Claude native exact rows and rebuilt ledger v58. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v58_codex.json. | D: expected 63/108.
 [2026-07-07T12:12:39.8300576+03:00] OK VERIFY | DID: Added and ran exact pipeline harvester. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v59_codex.json. | D: ledger refresh.
 [2026-07-07T12:23:45.8695627+03:00] > ATTACK | NEXT: Launched four-row codex native batch k8/d0,k8/d11,k6/d6,k5/d6 at 12 workers each.
+2026-07-07T09:26:12.8298912Z OK CHECK | DID: read Claude mailbox and live python process list | RESULT: Claude reports random path and 66/108; active cpp jobs running | D: queue
+2026-07-07T09:26:36.6599938Z > VERIFY | NEXT: harvest exact-ok pipeline summaries into the chart ledger
+2026-07-07T09:26:48.8597172Z OK VERIFY | DID: rebuilt ledger v63 from exact-ok manifests | RESULT: 67/108 certified; 41 pending | D: none
