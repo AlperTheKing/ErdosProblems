@@ -29628,3 +29628,5 @@
 2026-07-07T10:20:30Z OK ATTACK | DID: launched k9/d11,k9/d6,k9/d14,k9/d7 cpp random pipelines | RESULT: 4 Start-Process jobs | D: active
 2026-07-07T10:23:31Z OK VERIFY | DID: polled Codex rows | RESULT: k9/d8 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
 2026-07-07T10:23:48Z OK VERIFY | DID: harvested k9/d8 | RESULT: ledger v92 certified_count=89 pending_count=19 sha=4a414fb023df | D: +1
+2026-07-07T10:24:28Z OK VERIFY | DID: checked disappeared row k7/d12 | RESULT: exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
+2026-07-07T10:24:47Z OK VERIFY | DID: harvested Codex cpp5 | RESULT: ledger v93 certified_count=91 pending_count=17 k7/d12+k7/d4 | D: +2

@@ -2478,3 +2478,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T13:06Z] ✔ k4/d5 + HELP7/9 | k4/d5 certified (0/0); 18 chart-0-4 rows; launched 9/5,7/6,9/4 to help Codex on 7/9 tail; ~85/108
 [2026-07-07T13:09Z] ✔ VERIFY | reverified Codex ch7/d13, ch8/d11 (0/0); working through 18 unverified Codex certs ~2/cycle for aggregate re-verification (conjunct 3); 84/108
 [2026-07-07T13:20Z] ✔ 4-CERTS+RETRY | certified+reverified k3/d8,k9/d5,k7/d6,k9/d4 (0/0, first 7/9 helps); k3/d6 exact_ok=false but Optimal(feasible)=degenerate-seed, re-running seed 2027 (NOT falsifier); ~89/108
+[2026-07-07T13:25Z] ✔ MILESTONE-90 | ledger 91/108 (past 90); claimed+launched 3 more 7/9 helps: 7/5,9/11,9/6; k3/d6 seed-2027 retry running | Δ: 90 milestone, 17 pending
