@@ -542,6 +542,12 @@ def load_qcolumns_json(path: Path, args: argparse.Namespace, divisor: Poly, rem_
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
     t0 = time.monotonic()
+    # Reuse the quotient probe's QColumn JSON writer, whose metadata field
+    # names come from the one-shot probe CLI.
+    args.max_base_columns = args.seed_max_base
+    args.max_pairs_per_family = args.seed_max_pairs
+    args.max_band_columns = args.seed_max_band
+    args.tier0_json = None
     qprobe.DERIVED_SUPPORT_TERM_LIMIT = None if args.derived_support_limit == 0 else args.derived_support_limit
     chart, divisor, rem_p, quo_p = prepare_problem(args)
     if args.seed_columns_json:

@@ -29403,3 +29403,7 @@
 [2026-07-07T04:41:15Z] > COMPUTE | NEXT: Smoke-test quotient CG on k4/G3 with F1 cache seed and F2 pricing.
 [2026-07-07T04:41:59Z] FAIL COMPUTE | DID: Smoke-tested quotient CG k4/G3 F1seed/F2price. | RESULT: TypeError heap tie on QColumn | D: patch tie-breaker
 [2026-07-07T04:42:16Z] > VERIFY | NEXT: Compile patched quotient CG and rerun k4/G3 smoke.
+[2026-07-07T04:43:37Z] FAIL VERIFY | DID: Reran k4/G3 quotient CG smoke. | RESULT: priced 8 cols, artificial 23400181.951701358->23394525.451701358, emit AttributeError | D: patch writer attrs
+[2026-07-07T04:43:54Z] > VERIFY | NEXT: Compile and rerun k4/G3 quotient CG smoke with JSON emission.
+[2026-07-07T04:45:20Z] OK VERIFY | DID: Compiled and smoke-tested quotient CG driver. | RESULT: k4/G3 smoke 122->138 cols, artificial 23400181.951701358->23394525.451701358 | D: report
+[2026-07-07T04:45:44Z] > COMPUTE | NEXT: Run bounded all-family k4/G3 quotient CG diagnostic from 138-column smoke cache.

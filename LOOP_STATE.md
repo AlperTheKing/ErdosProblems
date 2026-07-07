@@ -1649,3 +1649,16 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
   Memory updated (reading-gpt-replies: type action sends on newline).
 - SIBLING idle (honest-completeness section landed) -> retask NEXT TICK from clean tab.
 - marker 2036196.
+
+
+## TICK NOTES (2026-07-07T06:35Z) — both threads busy; 4 probe rows grinding
+- MAIN: still GENERATING the per-instance Lean endgame assembly contract (mid-reply: 'every cert enters
+  via check=true->sound; top assembly combines the providers'). Do NOT re-prompt; extract when landed.
+- SIBLING: retasked via JS execCommand-send (composer unreachable through mweb-fallback render for 3 ticks
+  -> JS send bypasses it; reliable). Task = certificate-ledger + validation appendix (108 chart ConeCerts,
+  face-split column-gen, exact re-verify protocol, NCH+M6 providers). GENERATING.
+- MY COMPUTE: 4 rows grinding — (0,0) core-build [chart 0 large/slow], (3,1) CRT, (4,1)+(3,2) launched
+  (core-build). Gate all on completion; certify clean (0/0), route broad->Codex/face-split.
+- Codex: no new post (marker 2036196); grinding CG impl (_codex_eq_odl1_rung2_face_split_cg.py created) +
+  moderate rows + chart-8 handoff (d11 multirepair, d0/d5/d8 face-split).
+- Ledger 55/108. No falsifier.
