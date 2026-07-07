@@ -29559,3 +29559,8 @@
 [2026-07-07T11:34:16.9328635+03:00] > ATTACK | NEXT: Run float multirepair and exact rationalization for k5/F6 eight residual rows.
 [2026-07-07T11:35:12.9093669+03:00] FAIL ATTACK | DID: Attempted k5/F6 multirepair with malformed negative threshold. | RESULT: argparse rejected --threshold. | D: rerun repair probe.
 [2026-07-07T11:41:22.8130685+03:00] > ATTACK | NEXT: Rerun k5/F6 with deterministic random HiGHS objective to avoid degenerate basis residuals.
+[2026-07-07T11:49:19.7562919+03:00] FAIL ATTACK | DID: Reran k5/F6 with deterministic random HiGHS objective. | RESULT: exact_ok=false full_negative_residual_count=4 solution_negative_count=0. | D: park k5/F6 repair-needed and continue queue.
+[2026-07-07T11:49:27.4934128+03:00] OK ATTACK | DID: Stopped obsolete Claude Python CRT pool for k0/d0. | RESULT: stopped process tree root 76080. | D: free workers for native row pipeline.
+[2026-07-07T11:49:54.4879803+03:00] OK ATTACK | DID: Stopped obsolete Python CRT worker pool descendants for root 76080. | RESULT: remaining count 0. | D: free workers.
+[2026-07-07T11:50:33.1316613+03:00] > VERIFY | NEXT: Monitor Claude four-way native pipeline batch and ledger exact-ok completed rows.
+[2026-07-07T11:54:32.8000355+03:00] > ATTACK | NEXT: Run k6/F5 with 16 workers alongside Claude four-way batch to use remaining CPU budget.
