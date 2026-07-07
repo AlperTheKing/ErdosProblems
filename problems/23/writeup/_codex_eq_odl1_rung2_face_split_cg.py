@@ -13,6 +13,7 @@ import json
 import math
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from fractions import Fraction
 from pathlib import Path
 from typing import Any
@@ -188,6 +189,79 @@ def bounded_push(heap: list[tuple[float, int, QColumn]], item: tuple[float, int,
         heapq.heapreplace(heap, item)
 
 
+def price_one_face_pair_family(payload: dict[str, Any]) -> tuple[list[tuple[float, QColumn]], dict[str, Any]]:
+    gb: Poly = payload["gb"]
+    ga: Poly = payload["ga"]
+    gen_name: str = payload["gen_name"]
+    delta_name: str = payload["delta_name"]
+    divisor: Poly = payload["divisor"]
+    face_product_support: set[Exp] = payload["face_product_support"]
+    row_dual = np.array(payload["row_dual"], dtype=float)
+    row_index: dict[tuple[str, Exp], int] = payload["row_index"]
+    current_keys: set[tuple[str, str, str, tuple[int, ...]]] = payload["current_keys"]
+    support_mode: str = payload["support_mode"]
+    degree_cap: int = int(payload["degree_cap"])
+    add_per_family: int = int(payload["add_per_family"])
+    price_tol: float = float(payload["price_tol"])
+    num_vars: int = int(payload["num_vars"])
+    dominant_lc: Fraction = payload["dominant_lc"]
+
+    delta = qprobe.sub_poly(ga, gb)
+    if support_mode == "derived":
+        gen_candidates = qprobe.candidate_multiplier_exps(gb, face_product_support, degree_cap, None)
+        delta_candidates = qprobe.candidate_multiplier_exps(delta, face_product_support, degree_cap, None)
+        candidate_exps = sorted(set(gen_candidates) | set(delta_candidates), key=qprobe.grevlex_key, reverse=True)
+    else:
+        candidate_exps = qprobe.charts.exps_upto(num_vars, degree_cap)
+
+    heap: list[tuple[float, int, QColumn]] = []
+    checked = positive_pairs = skipped_existing = 0
+    for checked, exp in enumerate(candidate_exps, start=1):
+        mult = qprobe.bernstein_basis_poly(sum(exp), exp)
+        gen_quo, gen_rem = qprobe.divide_grevlex(qprobe.mul_poly(gb, mult), divisor)
+        gen_col = qprobe.qcolumn_from_parts(
+            side="face",
+            kind="face_gen",
+            name=gen_name,
+            multiplier_exp=exp,
+            rem=gen_rem,
+            quo=gen_quo,
+        )
+        delta_col = qprobe.qcolumn_from_parts(
+            side="face",
+            kind="face_delta",
+            name=delta_name,
+            multiplier_exp=exp,
+            rem=qprobe.scale_poly(gen_rem, Fraction(-1)),
+            quo=qprobe.sub_poly(qprobe.scale_poly(mult, dominant_lc), gen_quo),
+        )
+        if column_key(gen_col) in current_keys and column_key(delta_col) in current_keys:
+            skipped_existing += 1
+            continue
+        s1 = qscore(gen_col, row_dual, row_index)
+        s2 = qscore(delta_col, row_dual, row_index)
+        pair_score = max(s1, s2)
+        if pair_score <= price_tol:
+            continue
+        positive_pairs += 1
+        if column_key(gen_col) not in current_keys:
+            bounded_push(heap, (pair_score, checked * 2, gen_col), add_per_family * 2)
+        if column_key(delta_col) not in current_keys:
+            bounded_push(heap, (pair_score, checked * 2 + 1, delta_col), add_per_family * 2)
+    chosen = sorted(heap, key=lambda item: item[0], reverse=True)
+    summary = {
+        "kind": "face_pair",
+        "name": gen_name,
+        "delta_name": delta_name,
+        "checked": checked,
+        "positive_pairs": positive_pairs,
+        "added_columns": len(chosen),
+        "skipped_existing_pairs": skipped_existing,
+        "best_score": float(chosen[0][0]) if chosen else 0.0,
+    }
+    return [(score, col) for score, _idx, col in chosen], summary
+
+
 def candidate_exps_for_poly(
     poly: Poly,
     output_support: set[Exp],
@@ -217,14 +291,15 @@ def price_face_pairs(
     add_per_family: int,
     price_tol: float,
     face_pair_family_filter: set[str] | None,
+    pricing_workers: int,
 ) -> tuple[list[tuple[float, QColumn]], list[dict[str, Any]]]:
     gen_polys = [qprobe.homogenize_poly(expr, chart.variables, qprobe.GEN_DEGREE) for expr in chart.generators]
     gen_names = chart.generator_names
     ga = gen_polys[dominant]
     dominant_lc = qprobe.leading_term(ga)[1]
     num_vars = len(chart.variables)
-    out: list[tuple[float, QColumn]] = []
-    family_summaries: list[dict[str, Any]] = []
+    row_dual_payload = [float(x) for x in row_dual]
+    payloads: list[dict[str, Any]] = []
     for i, gb in enumerate(gen_polys):
         if i == dominant:
             continue
@@ -232,61 +307,40 @@ def price_face_pairs(
         delta_name = f"{gen_names[dominant]}-{gen_name}"
         if face_pair_family_filter is not None and gen_name not in face_pair_family_filter and delta_name not in face_pair_family_filter:
             continue
-        delta = qprobe.sub_poly(ga, gb)
-        if support_mode == "derived":
-            gen_candidates = qprobe.candidate_multiplier_exps(gb, face_product_support, degree_cap, None)
-            delta_candidates = qprobe.candidate_multiplier_exps(delta, face_product_support, degree_cap, None)
-            candidate_exps = sorted(set(gen_candidates) | set(delta_candidates), key=qprobe.grevlex_key, reverse=True)
-        else:
-            candidate_exps = qprobe.charts.exps_upto(num_vars, degree_cap)
-        heap: list[tuple[float, int, QColumn]] = []
-        checked = positive_pairs = skipped_existing = 0
-        for checked, exp in enumerate(candidate_exps, start=1):
-            mult = qprobe.bernstein_basis_poly(sum(exp), exp)
-            gen_quo, gen_rem = qprobe.divide_grevlex(qprobe.mul_poly(gb, mult), divisor)
-            gen_col = qprobe.qcolumn_from_parts(
-                side="face",
-                kind="face_gen",
-                name=gen_name,
-                multiplier_exp=exp,
-                rem=gen_rem,
-                quo=gen_quo,
-            )
-            delta_col = qprobe.qcolumn_from_parts(
-                side="face",
-                kind="face_delta",
-                name=delta_name,
-                multiplier_exp=exp,
-                rem=qprobe.scale_poly(gen_rem, Fraction(-1)),
-                quo=qprobe.sub_poly(qprobe.scale_poly(mult, dominant_lc), gen_quo),
-            )
-            if column_key(gen_col) in current_keys and column_key(delta_col) in current_keys:
-                skipped_existing += 1
-                continue
-            s1 = qscore(gen_col, row_dual, row_index)
-            s2 = qscore(delta_col, row_dual, row_index)
-            pair_score = max(s1, s2)
-            if pair_score <= price_tol:
-                continue
-            positive_pairs += 1
-            if column_key(gen_col) not in current_keys:
-                bounded_push(heap, (pair_score, checked * 2, gen_col), add_per_family * 2)
-            if column_key(delta_col) not in current_keys:
-                bounded_push(heap, (pair_score, checked * 2 + 1, delta_col), add_per_family * 2)
-        chosen = sorted(heap, key=lambda item: item[0], reverse=True)
-        out.extend((score, col) for score, _idx, col in chosen)
-        family_summaries.append(
+        payloads.append(
             {
-                "kind": "face_pair",
-                "name": gen_name,
+                "gb": gb,
+                "ga": ga,
+                "gen_name": gen_name,
                 "delta_name": delta_name,
-                "checked": checked,
-                "positive_pairs": positive_pairs,
-                "added_columns": len(chosen),
-                "skipped_existing_pairs": skipped_existing,
-                "best_score": float(chosen[0][0]) if chosen else 0.0,
+                "divisor": divisor,
+                "face_product_support": face_product_support,
+                "row_dual": row_dual_payload,
+                "row_index": row_index,
+                "current_keys": current_keys,
+                "support_mode": support_mode,
+                "degree_cap": degree_cap,
+                "add_per_family": add_per_family,
+                "price_tol": price_tol,
+                "num_vars": num_vars,
+                "dominant_lc": dominant_lc,
             }
         )
+    out: list[tuple[float, QColumn]] = []
+    family_summaries: list[dict[str, Any]] = []
+    if pricing_workers > 1 and len(payloads) > 1:
+        with ProcessPoolExecutor(max_workers=min(pricing_workers, len(payloads))) as pool:
+            futures = [pool.submit(price_one_face_pair_family, payload) for payload in payloads]
+            for fut in as_completed(futures):
+                scored, summary = fut.result()
+                out.extend(scored)
+                family_summaries.append(summary)
+        family_summaries.sort(key=lambda rec: str(rec.get("name", "")))
+    else:
+        for payload in payloads:
+            scored, summary = price_one_face_pair_family(payload)
+            out.extend(scored)
+            family_summaries.append(summary)
     return out, family_summaries
 
 
@@ -344,6 +398,7 @@ def price_columns_streaming(
     price_tol: float,
     face_pair_family_filter: set[str] | None,
     include_base_band: bool,
+    pricing_workers: int,
 ) -> dict[str, Any]:
     row_index = {row: idx for idx, row in enumerate(rows)}
     num_vars = len(chart.variables)
@@ -373,6 +428,7 @@ def price_columns_streaming(
         add_per_family=add_per_family,
         price_tol=price_tol,
         face_pair_family_filter=face_pair_family_filter,
+        pricing_workers=pricing_workers,
     )
     scored.extend(pair_scored)
     families.extend(pair_families)
@@ -628,6 +684,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             price_tol=args.price_tol,
             face_pair_family_filter=qprobe.parse_family_filter(args.face_pair_families),
             include_base_band=args.price_base_band,
+            pricing_workers=args.pricing_workers,
         )
         add_cols: list[QColumn] = pricing.pop("added")
         rec["pricing"] = pricing["summary"]
@@ -752,6 +809,7 @@ def main() -> None:
     ap.add_argument("--price-tol", type=float, default=1.0e-9)
     ap.add_argument("--art-tol", type=float, default=1.0e-7)
     ap.add_argument("--price-base-band", action="store_true")
+    ap.add_argument("--pricing-workers", type=int, default=1)
     ap.add_argument("--price-from-nonoptimal", action="store_true")
     ap.add_argument("--highspy-solver", choices=["choose", "simplex", "ipm"], default="simplex")
     ap.add_argument("--solver-threads", type=int, default=16)

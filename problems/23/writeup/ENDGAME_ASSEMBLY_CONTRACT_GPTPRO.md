@@ -57,3 +57,13 @@ paste-building; full type/name audit + dependency-sorted BUILD ORDER in-thread, 
 7. Assembly must be typed with these EXACT provider boundaries.
 DEEPEST hazards = #2 + #4 (ODLFullProvider must be checker-produced with every leaf semantically resolved) —
 retasked MAIN to design the concrete ODLFullProvider construction next.
+
+## ODLFullProvider DESIGN — LANDED (MAIN, 2026-07-07, 15335 chars)
+MAIN delivered the concrete ODLFullProvider construction (checker-produced soundness, per-leaf semantic
+witnesses EQ/NCH/M6/NO_OVERFULL/NEG_SWITCH, ODLFull->odl_full all-or-nothing indexing, build order). Full
+text is IN THE OLD MAIN THREAD (https://chatgpt.com/c/6a450f06-be68-83eb-b6f4-5b855434e550, last assistant
+message) — that thread is being RETIRED (bloated, per user 2026-07-07) but persists as an ARCHIVE; extract the
+ODLFullProvider + full assembly self-review type/name audit + build order from it AT 108 build time.
+OLD THREAD ARCHIVE URLs (all Lean design lives here — assembly contract, self-review, ODLFullProvider):
+  MAIN-old = https://chatgpt.com/c/6a450f06-be68-83eb-b6f4-5b855434e550
+  SIBLING-old = https://chatgpt.com/c/6a45e152-8de4-83eb-9aa3-87cb13427526 (paper sections)

@@ -29413,3 +29413,10 @@
 [2026-07-07T05:02:26Z] > VERIFY | NEXT: Re-solve 4746-column k4/G3 master with IPM to validate solve-error objective.
 [2026-07-07T05:04:07Z] FAIL VERIFY | DID: Re-solved 4746-column k4/G3 master with IPM. | RESULT: Solve error, artificial 19677454.059068885 | D: add optimal-checkpoint emit
 [2026-07-07T05:04:54Z] > VERIFY | NEXT: Compile checkpoint patch and rerun k4/G3 to emit last optimal 3722-column cache.
+[2026-07-07T05:12:30Z] OK VERIFY | DID: Emitted k4/G3 checkpoint caches. | RESULT: last optimal 3722 cols artificial 20357506.257570803; current 4746 cols | D: add pricing workers
+[2026-07-07T05:12:55Z] > EDIT | NEXT: Add multiprocessing workers for face-pair pricing families in quotient CG.
+[2026-07-07T05:14:05Z] > VERIFY | NEXT: Compile multiprocessing pricing patch and smoke-test with 2 workers.
+[2026-07-07T05:15:10Z] OK VERIFY | DID: Smoke-tested multiprocessing face-pair pricing with 2 workers. | RESULT: k4/G3 smoke priced 8 cols, no spawn failure | D: consider backend speed
+[2026-07-07T05:15:10Z] > CHECK | NEXT: Check local availability of clarabel/scipy/highspy for Phase-I backend options.
+[2026-07-07T05:15:48Z] OK CHECK | DID: Checked local LP backends. | RESULT: clarabel 0.11.1, highspy present, scipy 1.14.0 | D: keep exact gate; use parallel pricing
+[2026-07-07T05:15:48Z] > COMPUTE | NEXT: Continue k4/G3 from 3722-column clean checkpoint with 24 pricing workers.

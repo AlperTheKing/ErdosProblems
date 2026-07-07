@@ -5,9 +5,11 @@
 - CODEX_TO_CLAUDE.md read marker (bytes): 2036196
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
-## GPT-PRO THREADS (thread URLs stable; tab IDs go stale — find or recreate via tabs_context/tabs_create)
-- MAIN    (theorem design):   https://chatgpt.com/c/6a450f06-be68-83eb-b6f4-5b855434e550  [last tab 1267096329]
-- SIBLING (writeup + second): https://chatgpt.com/c/6a45e152-8de4-83eb-9aa3-87cb13427526  [last tab 1267096303]
+## GPT-PRO THREADS (FRESH 2026-07-07 — old threads bloated/stalling, retired per user; recreate tabs via tabs_create + navigate)
+- MAIN    (Lean design):  https://chatgpt.com/c/6a4c8b1a-439c-83eb-8f49-427107d01d61  "Branch-B Lean Layer Design"  [Kapsamlı Pro]
+- SIBLING (writeup):      https://chatgpt.com/c/6a4c8b49-111c-83eb-85b6-912000770748  "Erdos 23 Proof"  [Kapsamlı Pro]
+- ARCHIVE (retired, still hold all prior design — extract at 108): MAIN-old=6a450f06-be68-83eb-b6f4-5b855434e550 (assembly contract + self-review + ODLFullProvider); SIBLING-old=6a45e152-8de4-83eb-9aa3-87cb13427526 (paper sections)
+- SEED/SEND in fresh chat: JS-insert into #prompt-textarea then click button[data-testid=send-button]; confirm model reads "Kapsamlı Pro".
 
 ## IN FLIGHT
 - MAIN: floor-buffer theta_max=0 diagnosis (full support? per-row buffers? caps? Markowitz-only k0
@@ -1725,3 +1727,20 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
 - COMPUTE: my probes done (all broad, routed). Simple-pipeline STOPPED. Awaiting Codex CG validation +
   near-residual pending list before I run CG/multirepair on my half.
 - marker 2036196 (Codex working, not posting). Ledger 55/108. No falsifier.
+
+
+## TICK NOTES (2026-07-07T08:15Z) — FRESH GPT-Pro threads opened (user: old threads bloated)
+- USER DIRECTIVE: old MAIN/SIBLING threads too bloated (cause of the render stalls) -> open 2 fresh, continue.
+- DONE: opened 2 new Kapsamlı Pro chats, seeded self-contained context + first task, sent:
+  NEW MAIN = https://chatgpt.com/c/6a4c8b1a-439c-83eb-8f49-427107d01d61 "Branch-B Lean Layer Design"
+    -> FIRST TASK: Branch-B certified Lean layers (conjunct 2): Banked-UPO R_Q<=N+eta/2-SigmaL, single-spend
+       CombinedHBD ledger, CD telescope, 24-signature dictionary (structure+checker+soundness each).
+  NEW SIBLING = https://chatgpt.com/c/6a4c8b49-111c-83eb-85b6-912000770748 "Erdos 23 Proof"
+    -> FIRST TASK: Branch-structure paper section (Branch A O14/Seed3/route-tree; Branch B Banked-UPO/CombinedHBD/
+       CD/24-sig; reduction of delta=0 to the two branches).
+- OLD threads RETIRED but persist as archives (all prior Lean design lives there: assembly contract +
+  self-review + ODLFullProvider [15335c] + paper sections). Extract from old MAIN at 108 build time.
+- MAIN's ODLFullProvider design (15335c) landed in old thread before retirement (archived pointer in
+  ENDGAME_ASSEMBLY_CONTRACT_GPTPRO.md).
+- Seeding fresh chat: JS-insert #prompt-textarea + click send-button; model = Kapsamlı Pro confirmed.
+- Codex: k4/G3 CG still phase1_not_optimal (nudged to 60-iter hard-mode); marker 2036196. Ledger 55/108.
