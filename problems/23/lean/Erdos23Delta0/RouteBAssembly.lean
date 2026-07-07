@@ -43,5 +43,28 @@ theorem betaSimple_le_of_reserveResidual_nonneg {G : GraphData} {c : CutData} {r
   have hupper : gammaOfGD G c rows ≤ (G.n : ℚ) ^ 2 := gamma_le_N2_of_reserveResidual_nonneg h
   linarith
 
+/-- Core NON-CIRCULAR reserve extraction (GPT-Pro's B4, abstract form). A negative reserve, decomposed as
+    `reserve = free + good + Σ_C Balance C` with `free, good ≥ 0`, each cage's slack `sigma C ≥ 0`
+    (maximum-cutness) and the slack-absorption `0 < sigma C → 0 ≤ Balance C`, forces a **zero-slack
+    negative-balance** terminal cage. NO Γ-minimality and NO switch is used — the hypotheses are exactly the
+    ledger facts L1–L5, so this is non-circular by construction (it does not even mention the switch or Γ). -/
+theorem zeroSlack_negBalance_cage_of_neg_reserve
+    {Cage : Type*} (cages : Finset Cage) (Balance sigma : Cage → ℚ) (free good reserve : ℚ)
+    (hLedger : reserve = free + good + ∑ C ∈ cages, Balance C)
+    (hFree : 0 ≤ free) (hGood : 0 ≤ good)
+    (hSigmaNonneg : ∀ C ∈ cages, 0 ≤ sigma C)
+    (hAbsorb : ∀ C ∈ cages, 0 < sigma C → 0 ≤ Balance C)
+    (hNeg : reserve < 0) :
+    ∃ C ∈ cages, Balance C < 0 ∧ sigma C = 0 := by
+  have hsum : (∑ C ∈ cages, Balance C) < 0 := by linarith
+  obtain ⟨C, hC, hBneg⟩ : ∃ C ∈ cages, Balance C < 0 := by
+    by_contra hcon
+    push_neg at hcon
+    exact absurd (Finset.sum_nonneg hcon) (not_le.mpr hsum)
+  refine ⟨C, hC, hBneg, ?_⟩
+  rcases eq_or_lt_of_le (hSigmaNonneg C hC) with hzero | hpos
+  · exact hzero.symm
+  · exact absurd (hAbsorb C hC hpos) (not_le.mpr hBneg)
+
 end RouteBAssembly
 end Erdos23Delta0
