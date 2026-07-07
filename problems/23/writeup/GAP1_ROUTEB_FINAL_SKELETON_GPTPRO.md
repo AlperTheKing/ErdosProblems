@@ -284,3 +284,32 @@ this only for prunable side-door subcages.
 SideDoorCreatesPositiveSlackSubcage (both LOCAL, gateable) + the pruning algebra (DONE). If not => full PositiveSlackHallPrefix.
 CLAUDE C5 PROBE (all bad edges ell<=7, j_max=1) is strong SUFFICIENT support for the door-only case (C7 ell-dist running).
 NEXT: RE-ASK exact minimal-side-door-subcage properties 1-5 + build the Demand(D)<=25*sigma(D) gate.
+
+================================================================================
+## EXACT SIDE-DOOR SUBCAGE CONSTRUCTION P1-P6 (GPT-Pro, 2026-07-08) -- the decisive door-only gate
+================================================================================
+For each extra B-door d in delta_B(U)\{born0,born1}, each anchor a in {born0,born1}, each orientation S in {U, W_C\U},
+enumerate vertex sets D subset S:
+  P1. empty != D proper subset W_C; d in delta_B(D); a in delta_B(D).
+  P2. delta_B(D) = {d,a}  (exactly two B-doors = minimal side-door interval).
+  P3. B[D] connected AND B[W_C\D] connected (or B[V\D], matching the pruning predicate).
+  P4. sigma(D)=|delta_B(D)|-|delta_M(D)| > 0; clean case delta_M(D)={m_D} => sigma=2-1=1.
+  P5. no hidden internal surplus: M_internal(D)={bad edges both endpoints in D}=empty (else include in OwnedBad).
+  P6. inclusion-minimal among P1-P5 candidates for fixed (d,a,orientation).
+Then OwnedBad(D)=delta_M(D) union M_internal(D); Demand(D)=sum_{e in OwnedBad}(ell_B(e)^2-25); CHECK Demand(D)<=25*sigma(D).
+CLEAN: delta_B={d,a},delta_M={m_D},ell(m_D)=7 => Demand=24, sigma=1, 24<=25 door-only OK. FAIL: owned ell=9 => Demand=56>25.
+
+### DECISIVE LEMMA: SmallSideDoorSubcage / NoLongSideDoorAnnulus (GPT-Pro: "NOT from S1/S2 alone... a real geometric
+lemma; your empirical all-ell<=7 strongly supports it"): an inclusion-minimal side-door subcage cannot own a level
+j>=1 atom (every owned bad edge ell<=7, total mass<=sigma(D)). Then Surplus(D)=24*mass<=24*sigma<=25*sigma =>
+Balance(D)>=0 by doorOnly_balance_nonneg (GREEN). Clean path: SideDoorCreatesPositiveSlackSubcage + SmallSideDoorSubcage
++ doorOnly_balance_nonneg + pruning algebra. NO full Ferrers Hall if SmallSideDoorSubcage true.
+
+### Lean sigs: IsSideDoorCandidate (P1-P5), IsMinimalSideDoorSubcage (P6), SmallSideDoorSubcage (Surplus<=25*sigma),
+SmallSideDoorSubcage_level0 (all j=0 + mass<=sigma), PositiveSlackAbsorption_sideDoorOnly (= doorOnly_balance_nonneg
+applied). mass<=sigma: clean minimal case |OwnedBad|=1<=1=sigma; rowDB-fractional sum mu<=sigma.
+
+### CLAUDE GATE TO BUILD: enumerate minimal 2-B-door sigma>0 connected sets D, check Demand(D)<=25*sigma(D) across
+census+glue. Pass=door-only CONFIRMED (SmallSideDoorSubcage battery-validated); a genuine minimal side-door D with
+Demand>25*sigma = the hard case (full Hall) or obstruction. STATUS: likely small/door-only; not proven from S1/S2
+unless NoLongSideDoorAnnulus named+proven. gap#1 clean path = door-only if SmallSideDoorSubcage holds.
