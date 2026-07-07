@@ -29669,3 +29669,5 @@
 2026-07-07T10:59:13Z OK VERIFY | DID: polled active rows | RESULT: k2/d13 exact true; k6/d4 false 2 residuals 0 coeffs; k8/d6 timeout | D: harvest+repair
 2026-07-07T10:59:29Z > ATTACK | NEXT: run one-row repair for k6/d4 bad row 15766
 2026-07-07T11:00:44Z FAIL ATTACK | DID: one-row repair k6/d4 row 15766 | RESULT: first_hit_exact_ok false hit_count=4 | D: try row17238
+2026-07-07T11:02:09Z FAIL ATTACK | DID: one-row repair k6/d4 row 17238 | RESULT: first_hit_exact_ok false hit_count=9 | D: needs multirepair/seed
+2026-07-07T11:02:09Z OK ATTACK | DID: launched k6/d4 seed987654 retry | RESULT: 1 Start-Process job | D: active
