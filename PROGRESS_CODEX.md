@@ -29640,3 +29640,4 @@
 2026-07-07T10:33:06Z OK VERIFY | DID: checked statuses after duplicate kill | RESULT: k9/d11 exact_ok true; k9/d6 exact false 1 neg residual | D: harvest+repair
 2026-07-07T10:33:25Z > ATTACK | NEXT: run one-row repair for k9/d6 bad row 47842
 2026-07-07T10:34:32Z OK ATTACK | DID: one-row repair k9/d6 row 47842 | RESULT: first_hit_exact_ok true hit_count=2 | D: run official check
+2026-07-07T10:35:33Z OK VERIFY | DID: checked repaired k9/d6 | RESULT: exact_ok true 0 neg residuals 0 neg coeffs | D: manifest
