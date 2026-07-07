@@ -1,0 +1,183 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": 31167,
+  "dominant": 4,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3041/den_bits=3034",
+  "full_min_residual": "-num_bits=3050/den_bits=3075",
+  "full_negative_residual_count": 12,
+  "full_zero_residual_count": 159701,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        4,
+        3,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3069",
+      "row": 5220
+    },
+    {
+      "beta": [
+        4,
+        3,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3068",
+      "row": 5304
+    },
+    {
+      "beta": [
+        4,
+        3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=3035/den_bits=3069",
+      "row": 5347
+    },
+    {
+      "beta": [
+        4,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3071",
+      "row": 5550
+    },
+    {
+      "beta": [
+        4,
+        2,
+        1,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3070",
+      "row": 5634
+    },
+    {
+      "beta": [
+        4,
+        2,
+        1,
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3070",
+      "row": 5670
+    },
+    {
+      "beta": [
+        4,
+        2,
+        0,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3069",
+      "row": 5844
+    },
+    {
+      "beta": [
+        4,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3035/den_bits=3069",
+      "row": 5880
+    },
+    {
+      "beta": [
+        4,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=3035/den_bits=3070",
+      "row": 5887
+    },
+    {
+      "beta": [
+        4,
+        2,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "residual": "-num_bits=3035/den_bits=3070",
+      "row": 5978
+    }
+  ],
+  "nonzero_source_columns": 1998,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k6_F5_ipm_cpp_codex_v1.jsonl",
+  "solution_max": "2675/4",
+  "solution_min": "-num_bits=3051/den_bits=3076",
+  "solution_negative_count": 2,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}
