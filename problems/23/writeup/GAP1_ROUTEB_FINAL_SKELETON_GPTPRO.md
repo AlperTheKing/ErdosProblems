@@ -156,3 +156,11 @@ deficient caps have sigma=0 (boundary_delta=0); ZERO at sigma>0. SUGGESTS a POSS
 deficient cage => sigma=0" holds directly, the minimal positive-debt cage is automatically sigma=0 and
 PositiveSlackHallPrefix (about sigma>0 cages) is not needed. CAVEAT: one family + possible detection bias; needs
 GPT-Pro to (a) confirm the detection can find sigma>0 caps, (b) say if "positive-debt=>sigma=0" is directly provable.
+
+### !!! CORRECTION (2026-07-07T19:20Z) to the CLAUDE PROBE note above !!!
+boundary_delta(n,adj,side,mask) = dB - dM = |delta_B| - |delta_M| = **+sigma(C)** (NOT -sigma). Verified from the
+def (_codex_k2t_switch_probe.py:47). So sigma=0 <=> bd=0, sigma>0 <=> bd>0. The first probe run had `if bd>0: continue`
+which SKIPPED all sigma>0 caps -> its "all 36000 caps sigma=0, zero sigma>0" was a BUG ARTIFACT (bias diagnostic
+sigmapos_masks=0 CAUGHT it). Probe FIXED (sigma>0 <=> bd>0) and re-running. The "possible bypass" claim is RETRACTED
+pending the corrected run. (The sigma=0-filtered gates -- _claude_ambient_pairdoor_convexity_gate.py,
+_claude_multiatom_gammadrop_gate.py -- were CORRECT; only this new probe had the sign confusion in its relaxation.)
