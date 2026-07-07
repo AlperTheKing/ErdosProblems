@@ -29622,3 +29622,9 @@
 2026-07-07T10:13:29Z OK VERIFY | DID: inspected process state | RESULT: k7/d4,k9/d8 modular active; 7 modular and 2 core solves active | D: no launch
 2026-07-07T10:16:43Z OK VERIFY | DID: polled modular batch | RESULT: k3/d8 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
 2026-07-07T10:17:13Z OK VERIFY | DID: harvested Claude k3/d8 | RESULT: ledger v90 certified_count=85 pending_count=23 sha=017698095d24 | D: +1
+2026-07-07T10:20:04Z OK VERIFY | DID: polled rows | RESULT: k9/d5,k7/d6,k9/d4 exact_ok true; k3/d6 exact false 1 res 1 coeff | D: harvest+report
+2026-07-07T10:20:30Z OK VERIFY | DID: harvested Claude rows | RESULT: ledger v91 certified_count=88 pending_count=20 | D: +3
+2026-07-07T10:20:30Z > ATTACK | NEXT: launch unclaimed chart-9 rows k9/d11,k9/d6,k9/d14,k9/d7
+2026-07-07T10:20:30Z OK ATTACK | DID: launched k9/d11,k9/d6,k9/d14,k9/d7 cpp random pipelines | RESULT: 4 Start-Process jobs | D: active
+2026-07-07T10:23:31Z OK VERIFY | DID: polled Codex rows | RESULT: k9/d8 exact_ok true 0 neg residuals 0 neg coeffs | D: harvest
+2026-07-07T10:23:48Z OK VERIFY | DID: harvested k9/d8 | RESULT: ledger v92 certified_count=89 pending_count=19 sha=4a414fb023df | D: +1
