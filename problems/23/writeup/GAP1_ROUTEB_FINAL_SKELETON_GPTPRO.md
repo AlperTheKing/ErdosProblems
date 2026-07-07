@@ -313,3 +313,38 @@ applied). mass<=sigma: clean minimal case |OwnedBad|=1<=1=sigma; rowDB-fractiona
 census+glue. Pass=door-only CONFIRMED (SmallSideDoorSubcage battery-validated); a genuine minimal side-door D with
 Demand>25*sigma = the hard case (full Hall) or obstruction. STATUS: likely small/door-only; not proven from S1/S2
 unless NoLongSideDoorAnnulus named+proven. gap#1 clean path = door-only if SmallSideDoorSubcage holds.
+
+================================================================================
+## COMPLETE GAP#1 CLOSURE = 2 LOCAL CAP LEMMAS (GPT-Pro, 2026-07-08) -- A + B
+================================================================================
+gap#1 CLOSES modulo two LOCAL CAP lemmas (everything else proven/compiled: doorOnly_balance_nonneg, pruning algebra,
+B4 extraction, switch algebra Route B, reserveResidual=N^2-Gamma, beta-landing -- 9 RouteBAssembly.lean thms green):
+
+### A. NoLongSideDoorAnnulus (HARDER/RISKIER): every inclusion-minimal side-door subcage D (P1-P6) owns only ell<=7
+bad edges (all atoms j=0). PROOF STRATEGY: assume D owns ell>=9; CAP first-split gives a split door d' strictly
+between d and a, cutting D' proper subset D; 3 cases: (1) D' positive-slack side-door => contradicts minimality;
+(2) D' zero-slack type-B core => the long atom belongs to it, not D; (3) split violates Ferrers/S2 => invalid embedding.
+IRREDUCIBLE RESIDUAL = LongSideDoorFirstSplit. **Claude gate BATTERY-CONFIRMS A: owned ell in {5,7}, 0 fail, 17757
+cases census+glue.** (Proof rests on the S1 Ferrers/S2 annulus CAP theory = prose-level, earlier flagged not-fully-rigorous.)
+
+### B. SideDoorCreatesPositiveSlackSubcage (mostly construction): extra B-door d in delta_B(U)\{born0,born1} =>
+exists inclusion-minimal P1-P6 D with sigma(D)>0. CONSTRUCTION: Ferrers door order; a = adjacent door to d; D_d =
+interval between a,d endpoints; P1-P3 from Ferrers interval convexity; P4 from AdjacentSideDoorIntervalPositiveSlack
+(|delta_M(D_d)|<=1: if =2 it is a nested zero-slack type-B core, not a side-door interval => in minimal-positive-debt
+context becomes the active core or a proper zero-slack descendant, contra). IRREDUCIBLE RESIDUAL = AdjacentSideDoorIntervalPositiveSlack.
+
+### COMPLETE NON-CIRCULAR CLOSURE CHAIN (GPT-Pro sec 6):
+extra side door -> [B] side-door subcage D, sigma(D)>0 -> [A] Surplus(D)<=25*sigma(D) -> [doorOnly_balance_nonneg]
+Balance(D)>=0 -> [pruning algebra] prune D, positive debt preserved in proper descendant -> minimality FORBIDS =>
+no extra side door in minimal positive-debt cage -> CAP pair-door gate applies -> pair-door switch Gamma drop>0 ->
+Gamma-minimality forbids zero-slack deficient cage -> negative reserve would create one => reserveResidual>=0 =
+N^2-Gamma => Gamma<=N^2. QED (modulo A,B).
+
+### GPT-Pro: A is the HARDER node (must rule out all long annular atoms ell>=9 in every minimal side-door interval;
+"where hidden long side annuli could exist"). Census strongly supports A but it is the decisive geometric claim.
+Recommended gates: Gate A (max ell over OwnedBad(D)<=7 & Demand<=25*sigma -- CLAUDE DONE, 0 fail); Gate B (every
+extra side door produces >=1 P1-P6 D -- CLAUDE TO BUILD).
+
+### STATUS: gap#1 = A (LongSideDoorFirstSplit, battery-confirmed) + B (AdjacentSideDoorIntervalPositiveSlack), both
+LOCAL CAP geometry lemmas resting on the S1/S2 Ferrers theory. P(gap#1 math)~70. NEXT: build Gate B existence;
+GPT-Pro make A rigorous; formalize the closure chain + A,B named hypotheses in Lean.
