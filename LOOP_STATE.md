@@ -1744,3 +1744,19 @@ falsifier) — the USER chose the GPT-Pro-recommended PER-INSTANCE route:
   ENDGAME_ASSEMBLY_CONTRACT_GPTPRO.md).
 - Seeding fresh chat: JS-insert #prompt-textarea + click send-button; model = Kapsamlı Pro confirmed.
 - Codex: k4/G3 CG still phase1_not_optimal (nudged to 60-iter hard-mode); marker 2036196. Ledger 55/108.
+
+
+## TICK NOTES (2026-07-07T08:25Z) — COMPUTE PARALLELIZED (user directive): 50x modular solve validated
+- USER: certificate compute single-threaded on 64-core box ("aylar sürer"). ROOT CAUSE: modular_core_solve
+  solves 384 primes SEQUENTIALLY; CG defaults --pricing-workers 1 / --iterations 3.
+- FIX LANDED: tmp/claude_modular_solve_parallel.py (48-worker batched-prime ProcessPool, reuses
+  replay.solve_mod_prime/crt_pair + stock resume-crt reconstruct). VALIDATED on k0/d0: EXACT MATCH sequential
+  (2905/2905 identical), 111s vs ~1.5h = ~50x. Swapped into claude_row_pipeline.py step 2. Memory saved
+  (erdos23-parallel-modular-solve).
+- DIRECTED CODEX: (1) use the parallel solver for CG exact-solve + batch; (2) crank CG flags --pricing-workers
+  48 --solver-threads 32 --iterations 60 (already exist; k4/G3 ran defaults = the stall); (3) run 32-48 rows
+  concurrently; (4) optional native clang++ mod-p kernel (~100x/prime more; I offered to draft).
+- FRESH THREADS generating: NEW MAIN (Branch-B Lean layers), NEW SIBLING (Branch-structure section).
+- Codex: marker 2036196 (still silent, tuning CG). Ledger 55/108. No falsifier.
+- NEXT: gate fresh threads' outputs; gate Codex CG once it re-runs parallel/cranked; batch-run rows via the
+  parallel solver where certifiable.
