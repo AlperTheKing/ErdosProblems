@@ -1,0 +1,4 @@
+import Erdos23Delta0.RouteBAssembly
+
+#print axioms Erdos23Delta0.RouteBAssembly.betaSimple_le_of_reserveResidual_nonneg
+#print axioms Erdos23Delta0.RouteBAssembly.gamma_le_N2_of_reserveResidual_nonneg
