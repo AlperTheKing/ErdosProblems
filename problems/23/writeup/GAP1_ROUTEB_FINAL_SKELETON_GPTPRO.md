@@ -474,3 +474,31 @@ L5_FORCING (Route B needs only strict drop 4L+4).
 ### RECALIBRATE: P(gap#1 math) ~55-60 -> ~45-50. The door-only path (the "easy" branch) is BROKEN by a verified escape;
 the real residual (companion-theta) needs the deficient-cage/tight-bank structure to exclude single-row annuli and is
 NOT battery-supported. NOT a conjecture falsifier (C_18: beta=1<=N^2/25). P(full Lean) ~12-20.
+
+================================================================================
+## RESOLUTION: residual = PositiveSlackAbsorption_FullBank (the ORIGINAL hard node) (GPT-Pro, 2026-07-08)
+================================================================================
+The C_18 escape resolves the fork to (B): the residual is NOT companion-theta (false under weak hyps) and NOT
+door-only (special case). It is the FULL-BANK absorption = the original PositiveSlackHallPrefix hard node:
+  PositiveSlackAbsorption_FullBank: sigma(D)>0 => Surplus(D) <= 25*sigma(D) + C5Cap(D) + AmbientCap(D) + PruneCap(D).
+  (Ferrers-prefix form: PrefixDemand(i) <= 25*PrefixSigma(i) + PrefixC5Cap(i) + PrefixAmbientCap(i) + PrefixPruneCap(i).)
+DOOR-ONLY = the special case DoorSlackCap only (handles ell<=7 / j=0 atoms). My RouteBCAP door-only theorems are CORRECT
+but PARTIAL -- they prove the ell<=7 subcase; the general (long) case needs the full bank.
+
+### C_18 ACCOUNTING (GPT-Pro): N=18,m=1,ell=9,Gamma=81,Reserve=N^2-Gamma=243>0 (globally far from deficient). D={v0}:
+sigma=1, Surplus=56, DoorSlackCap=25, door-only deficit=31. Balance(D)>=0 IFF C5Cap+AmbientCap+PruneCap>=31. With
+AmbientCap=(18-|V_h|)*tau: V_h={v8} tau=2 => 34>=31 absorbed; |V_h|=9 needs tau>=31/9. => depends on the ACTUAL rowDB
+tau/V_h; NOT graph-computable. So C_18 does NOT refute the theorem if the full bank absorbs it (and beta=1<=12.96
+anyway). C18_sideDoor_balance_condition (Balance>=0 <-> C5+Ambient+Prune>=31) = a sanity check, not needed in the proof.
+
+### GPT-Pro SALVAGE of companion-theta (add the missing bank hypothesis): NegativeBalanceLongAtom_has_companionTheta:
+a sigma-positive side-door cage owning a level-j>=1 atom WITH Balance(D)<0 cannot be a single-row annulus (a single
+row would have Balance>=0 via the full bank = LongSingleRowAmbientAbsorption), so it has a companion theta. Route:
+sigma>0 + Balance<0 => not single-row => companion theta => application geometry => S2 disjunction => door forced.
+So the extraction (which produces Balance<0 positive-debt cages) may exclude single rows IF LongSingleRowAmbientAbsorption holds.
+
+### NET: gap#1's absorption residual = the FULL PositiveSlackHallPrefix (the hard node from the very start). The
+door-only detour proved the ell<=7 special case + found the C_18 escape (shortcut fails for long atoms) + confirmed
+the residual is the full-bank Hall. NOT graph-gateable (needs rowDB C5/Ambient/Prune model = deep infra). Lean:
+formalize PositiveSlackAbsorption_FullBank (or the prefix Hall form) as THE named hypothesis; door-only theorems are
+the proven special case. P(gap#1 math) ~45-50 (back at the hard node, no shortcut; C_18 reconciled not refuting).
