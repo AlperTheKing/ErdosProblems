@@ -32,4 +32,17 @@ HBD ledger; (3) CDTelescope = CD telescope; (4) BankedUPO = per-row R_Q<=N+eta/2
 composes them; feeds ODLFullProvider.branchB. [FULL 32.7k design in-thread — extract sections 1-5 at build time.]
 
 NEXT: at Branch-B build (post-108), extract the full design + build the 5 layers bottom-up (Dict24 first).
-MAIN retasked to adversarially self-review this design.
+
+## SELF-REVIEW VERDICT (MAIN, 2026-07-07, 43940-char cleaned build contract in-thread)
+Architecture USABLE; no hidden contradiction. Build-time fixes (the first draft had convenience names not in
+the green module list):
+1. Use Rat (NOT Q) in ALL public certificate structures.
+2. Emitted data: Nat + `sig < 24` checker, NOT Fin 24.
+3. REMOVE invented PolyCert names (checkNF, denote, NF.add, ...) unless they already exist in green PolyCert.
+4. ADD an explicit Branch-B -> ODL BRIDGE THEOREM: without it, the chain R_Q <= N+eta/2-SigmaL_Q -> ODLFull
+   .CoreODLGoal is a HAND-WAVE. (retasked MAIN to produce this concretely.)
+5. STRENGTHEN CombinedHBD + CDTelescope single-spend checks so row balances can't be reused/double-counted
+   across Banked-UPO rows.
+6. FIX CD telescope: contiguity alone does NOT prove telescoping unless weights are constant OR coefficient
+   cancellation is explicitly checked.
+Full cleaned build contract (all 5 layers, corrected) is in the MAIN thread — extract at Branch-B build time.

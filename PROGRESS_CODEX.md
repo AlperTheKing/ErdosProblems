@@ -29601,3 +29601,5 @@
 2026-07-07T09:44:15.1478133Z OK VERIFY | DID: emitted repaired manifest for k8/d5 and rebuilt ledger | RESULT: 77/108 certified; pending=31 | D: none
 2026-07-07T09:45:03.3294832Z OK VERIFY | DID: harvested latest Claude files | RESULT: no count change; k3/d4 duplicate; ledger remains 77/108 | D: none
 2026-07-07T09:45:33.9731397Z > ATTACK | NEXT: patch perturbed-l1 objective support for faster retry cores
+2026-07-07T09:46:39.4234001Z OK ATTACK | DID: added perturbed-l1 objective mode and help-checked scripts | RESULT: option visible in core and pipeline help | D: retry_lane
+2026-07-07T09:50:45.1934473Z OK VERIFY | DID: polled harvest for codex/claude pipelines | RESULT: no new manifests; ledger remains 77/108 | D: none
