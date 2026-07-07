@@ -29641,3 +29641,10 @@
 2026-07-07T10:33:25Z > ATTACK | NEXT: run one-row repair for k9/d6 bad row 47842
 2026-07-07T10:34:32Z OK ATTACK | DID: one-row repair k9/d6 row 47842 | RESULT: first_hit_exact_ok true hit_count=2 | D: run official check
 2026-07-07T10:35:33Z OK VERIFY | DID: checked repaired k9/d6 | RESULT: exact_ok true 0 neg residuals 0 neg coeffs | D: manifest
+2026-07-07T10:35:49Z OK VERIFY | DID: manifested repaired k9/d6 and harvested cpp6 | RESULT: ledger v97 certified_count=96 pending_count=12 | D: +3
+2026-07-07T10:36:17Z OK VERIFY | DID: checked parked retries | RESULT: k5/d5 exact true; k6/d6 1 neg residual; k6/d4 12 neg residuals 3 neg coeffs | D: harvest+repair
+2026-07-07T10:36:46Z OK VERIFY | DID: harvested k5/d5 | RESULT: ledger v98 certified_count=97 pending_count=11 | D: +1
+2026-07-07T10:36:46Z > ATTACK | NEXT: run one-row repair for k6/d6 bad row 41728
+2026-07-07T10:36:46Z > ATTACK | NEXT: launch chart-8 seed-2027 retries k8/d9,k8/d6,k8/d8
+2026-07-07T10:36:46Z OK ATTACK | DID: launched k8/d9,k8/d6,k8/d8 seed-2027 retries | RESULT: 3 Start-Process jobs | D: active
+2026-07-07T10:37:40Z OK ATTACK | DID: one-row repair k6/d6 row 41728 | RESULT: first_hit_exact_ok true hit_count=5 | D: run official check
