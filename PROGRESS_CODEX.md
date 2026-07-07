@@ -29617,3 +29617,6 @@
 2026-07-07T10:09:02Z > ATTACK | NEXT: launch unclaimed rows k7/d12,k9/d8,k7/d4,k7/d5 with cpp random pipeline
 2026-07-07T10:09:03Z OK ATTACK | DID: launched k7/d12,k9/d8,k7/d4,k7/d5 cpp random pipelines | RESULT: 4 Start-Process jobs | D: active
 2026-07-07T10:09:45Z > VERIFY | NEXT: poll active rows after launch and harvest any completed exact certificates
+2026-07-07T10:10:53Z OK VERIFY | DID: polled active rows | RESULT: 18 python processes; 5 modular solves plus 4 core solves active | D: hold launches
+2026-07-07T10:13:06Z OK VERIFY | DID: polled batch | RESULT: k9/d8 and k7/d4 square Optimal cores; no completed pipeline yet | D: continue polling
+2026-07-07T10:13:29Z OK VERIFY | DID: inspected process state | RESULT: k7/d4,k9/d8 modular active; 7 modular and 2 core solves active | D: no launch
