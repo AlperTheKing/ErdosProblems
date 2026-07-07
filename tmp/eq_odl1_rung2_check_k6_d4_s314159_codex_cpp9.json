@@ -1,0 +1,183 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": 31167,
+  "dominant": 4,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3172/den_bits=3165",
+  "full_min_residual": "-num_bits=3165/den_bits=3201",
+  "full_negative_residual_count": 14,
+  "full_zero_residual_count": 159682,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3203",
+      "row": 31808
+    },
+    {
+      "beta": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3203",
+      "row": 32732
+    },
+    {
+      "beta": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 32984
+    },
+    {
+      "beta": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3203",
+      "row": 33054
+    },
+    {
+      "beta": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 33064
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 34700
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 34780
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        3,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 35162
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        3,
+        2,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3202",
+      "row": 35232
+    },
+    {
+      "beta": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "residual": "-num_bits=3165/den_bits=3201",
+      "row": 35242
+    }
+  ],
+  "nonzero_source_columns": 2045,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k6_d4_s314159_codex_cpp9.jsonl",
+  "solution_max": "2675/4",
+  "solution_min": "-num_bits=3165/den_bits=3197",
+  "solution_negative_count": 2,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}

@@ -2480,3 +2480,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-07T13:20Z] ✔ 4-CERTS+RETRY | certified+reverified k3/d8,k9/d5,k7/d6,k9/d4 (0/0, first 7/9 helps); k3/d6 exact_ok=false but Optimal(feasible)=degenerate-seed, re-running seed 2027 (NOT falsifier); ~89/108
 [2026-07-07T13:25Z] ✔ MILESTONE-90 | ledger 91/108 (past 90); claimed+launched 3 more 7/9 helps: 7/5,9/11,9/6; k3/d6 seed-2027 retry running | Δ: 90 milestone, 17 pending
 [2026-07-07T13:34Z] ✔ COLLISION-FIX | killed redundant collided rows (7/5,9/11,9/6 Codex did first); Codex takes whole 7/9 tail (faster), I focus on aggregate verification + k3/d6 retry | 93/108, 15 pending
+[2026-07-07T13:38Z] ✔ k3/d6-FIXED + claim1,2 | k3/d6 seed2027 exact_ok=TRUE (degenerate-seed fix works, not falsifier); claimed+launched 1/13,2/13,1/14; ~99/108, ~44 hard rows verified all PASS

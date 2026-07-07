@@ -29656,3 +29656,4 @@
 2026-07-07T10:39:53Z OK ATTACK | DID: launched k3/d12,k0/d4,k1/d13,k2/d13,k1/d14 | RESULT: 5 Start-Process jobs | D: active
 2026-07-07T10:43:25Z OK VERIFY | DID: polled remaining tail | RESULT: k3/d6 exact_ok true; remaining active rows square cores or running | D: harvest
 2026-07-07T10:43:40Z OK VERIFY | DID: harvested k3/d6 seed-2027 | RESULT: ledger v100 certified_count=99 pending_count=9 sha=16ab775e1759 | D: +1
+2026-07-07T10:47:22Z OK VERIFY | DID: polled final tail | RESULT: k6/d4 false 14 res 2 coeff; k8/d6 false 26 res 2 coeff; no new exact | D: retry seeds
