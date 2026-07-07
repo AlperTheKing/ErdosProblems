@@ -29582,3 +29582,17 @@
 2026-07-07T09:32:20.7778307Z OK VERIFY | DID: harvested Claude cpp2 exact rows | RESULT: ledger v66 certified_count=71/108 pending_count=37 | D: none
 2026-07-07T09:32:47.9212857Z OK VERIFY | DID: ran one-row repair for k8/d0 | RESULT: first_hit_exact_ok=true initial_neg=1 | D: checker_next
 2026-07-07T09:32:54.1252820Z > VERIFY | NEXT: official source check repaired k8/d0 solution
+2026-07-07T09:33:53.1910356Z OK ATTACK | DID: checked active wave status | RESULT: k7/d13 exact_ok=true; k5/d4,k8/d5 core-built; k8/d9 running | D: harvest_next
+2026-07-07T09:34:12.9066447Z OK VERIFY | DID: harvested k7/d13 exact row | RESULT: ledger v67 certified_count=72/108 pending_count=36 | D: none
+2026-07-07T09:34:42.6231378Z OK VERIFY | DID: official source check repaired k8/d0 | RESULT: exact_ok=true neg_res=0 neg_coeff=0 | D: manifest_next
+2026-07-07T09:35:01.6446298Z OK VERIFY | DID: emitted repaired manifest for k8/d0 and rebuilt ledger | RESULT: 73/108 certified; pending=35 | D: none
+2026-07-07T09:35:28.7655098Z > VERIFY | NEXT: run exact one-row repair for k6/d6 one-negative residual
+2026-07-07T09:36:34.2875063Z OK ATTACK | DID: checked live rows | RESULT: k5/d4 one-neg; k8/d5 modular; k8/d9 core; k6/d6 repair running | D: repair_lane
+2026-07-07T09:36:51.5118633Z FAIL VERIFY | DID: one-row repair k6/d6 | RESULT: first_hit_exact_ok=false hit_count=0 | D: parked_seed_or_multirepair
+2026-07-07T09:37:04.1605429Z > VERIFY | NEXT: run exact one-row repair for k5/d4 one-negative residual
+2026-07-07T09:38:17.4140473Z OK VERIFY | DID: harvested Claude k3/d10,k4/d14 | RESULT: ledger v70 certified_count=75/108 pending_count=33 | D: none
+2026-07-07T09:38:38.7627106Z OK VERIFY | DID: one-row repair k5/d4 | RESULT: first_hit_exact_ok=true initial_neg=1 | D: checker_next
+2026-07-07T09:40:30.4974908Z OK ATTACK | DID: inspected k8/d9 pipeline | RESULT: core extraction time limit; no exported core | D: retry_lane
+2026-07-07T09:40:46.4944941Z OK VERIFY | DID: emitted repaired manifest for k5/d4 and rebuilt ledger | RESULT: 76/108 certified; pending=32 | D: none
+2026-07-07T09:41:12.5865961Z > VERIFY | NEXT: run exact one-row repair for k8/d5 one-negative residual
+2026-07-07T09:42:28.0429378Z OK VERIFY | DID: one-row repair k8/d5 | RESULT: first_hit_exact_ok=true initial_neg=1 | D: checker_next

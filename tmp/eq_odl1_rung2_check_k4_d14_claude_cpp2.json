@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 4,
+  "columns": 47619,
+  "dominant": 14,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=3009/den_bits=3003",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 159056,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 2628,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k4_d14_claude_cpp2.jsonl",
+  "solution_max": "2675/3",
+  "solution_min": "num_bits=3036/den_bits=3058",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 7720
+}

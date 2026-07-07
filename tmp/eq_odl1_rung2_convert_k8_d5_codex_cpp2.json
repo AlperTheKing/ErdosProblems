@@ -1,0 +1,9 @@
+{
+  "core": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_core_k8_d5_codex_cpp2.jsonl",
+  "core_solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_core_solution_k8_d5_codex_cpp2.jsonl",
+  "dimension": 3617,
+  "schema": "eq_odl1_rung2_core_to_source_solution_v1",
+  "solution_negative_count": 0,
+  "source_records": 2500,
+  "source_solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k8_d5_codex_cpp2.jsonl"
+}

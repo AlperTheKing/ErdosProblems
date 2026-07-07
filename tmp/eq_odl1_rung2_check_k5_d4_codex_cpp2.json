@@ -1,0 +1,39 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 5,
+  "columns": 30310,
+  "dominant": 4,
+  "exact_ok": false,
+  "full_max_residual": "num_bits=3210/den_bits=3203",
+  "full_min_residual": "-num_bits=3199/den_bits=3229",
+  "full_negative_residual_count": 1,
+  "full_zero_residual_count": 159884,
+  "negative_rows_prefix": [
+    {
+      "beta": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "residual": "-num_bits=3199/den_bits=3229",
+      "row": 66015
+    }
+  ],
+  "nonzero_source_columns": 2019,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k5_d4_codex_cpp2.jsonl",
+  "solution_max": "num_bits=3207/den_bits=3198",
+  "solution_min": "num_bits=3199/den_bits=3227",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}
