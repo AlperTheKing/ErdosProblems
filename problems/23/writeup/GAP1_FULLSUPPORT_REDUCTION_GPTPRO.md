@@ -178,3 +178,23 @@ FALSIFIER-FIRST GATE (GPT-Pro sec 8): for an over-door full-support shell, enume
 CLAUDE STATUS: verifier READY; TESTING BOTTLENECK = need OVER-DOOR full-support shells (Gamma_X>25*b_X), which need large N
   (single atom N>=25; multi-atom irreducible = hard to construct) -- they do NOT arise in small Gamma-min census cuts (all
   Demand<=Door). gap#1 = OverdoorFullSupportSwitchExistence: sharply stated, checkable, UNPROVEN (GPT-Pro's honest status). P~52.
+
+## GPT-Pro reply 10 (2026-07-08) -- OPTION-3 CLEAN FINAL STRUCTURE. gap#1 = 2 atomic obligations.
+"Your reduction is now at the right granularity." Full-support shell splits into:
+  LONG single-edge leaves (ell>=25): handled by base density [Claude: fullSupport_leaf_absorbed_by_density, DONE].
+  SHORT remainder S (all ell<=23): satisfy ShortRowCutEdgeHall.
+=> Gamma_X <= 25*b_X + BaseDensityCap_X + PruneCap_X  (ReducedFullSupportHall_NoTopEta, NO top eta_C).
+TWO ATOMIC OBLIGATIONS (Lean interfaces given):
+  (i) LongAtoms_are_prunable_base_leaves: e in X, ell(e)>=25 => IsPrunableBaseLeaf.
+  (ii) ShortRowCutEdgeHall (THE clean single inequality): for every subset A of short rows,
+         sum_{e in A} ell(e)^2 <= 25 * |union_{e in A} P_e|   (P_e = canonical shortest-row cut edges).
+     = max-flow: sources=rows demand ell(e)^2, sinks=cut edges capacity 25 each, row e -> c iff c in P_e. Feasible <=> Hall.
+     Per-row it is ell^2<=25(ell-1) [Claude atom_sq_le_25_shortAtom, DONE]; the SUBSET form rules out cut-edge DOUBLE-SPEND
+     when rows share cut edges. GATE (GPT-Pro sec 8): max-flow feasibility; if INFEASIBLE, print the obstructing subset A =
+     the exact candidate for a switch/reducibility proof. Weak hyps: over-door likely possible; reduced Gamma-min: data says NO.
+RECONCILIATION (my earlier concern): the bank is Door(25 per cut edge) + Base + Prune, NO top eta_C -- so the relevant
+  quantity IS Gamma_X<=25*b_X (+base+prune), NOT |V_X|^2. The C5=25(eta-sigma) with C5<0 => door-only, and the cut-edge Hall
+  (25/edge) is the door capacity. So Gamma_X<=25*b_X is correct (door=cut-edge capacity 25 each). Concern resolved.
+CLAUDE: building _claude_shortrow_hall_gate.py = the DEFINITIVE obligation-(ii) gate (exact subset Hall via max-flow).
+  atom_sq_le_25_shortAtom + fullSupport_doorDominance_of_shortAtoms FORMALIZED (the per-row + aggregate); the SUBSET Hall
+  (no double-spend) is the remaining structural lemma. P(gap#1 math)~53-55.
