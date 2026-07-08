@@ -661,3 +661,29 @@ universal existence is a genuine OPEN HARD structural Hall theorem -- the actual
 has the SOUNDNESS half (cert=>Balance>=0). Building the per-instance K2-component full-bank gate = a large error-prone
 implementation (reuse _claude_bank0_component_gate.py K2 machinery), ultimately BATTERY (universal existence is the proof).
 P(gap#1 math) ~45-50 (a precisely-stated, non-circular, per-instance-checkable open hard theorem, smaller than the conjecture).
+
+================================================================================
+## ABSOLUTE FINAL RESIDUAL: support-restricted Hall inequality; R[u]>=0 gives nonneg NOT feasibility (GPT-Pro, 2026-07-08)
+================================================================================
+GPT-Pro: R[u]=N*T(u)-(K2*T)(u)>=0 (PROVEN, K2-disjoint-stable) gives bank NONNEGATIVITY (R_full(X)=sum_{u in V_X}R[u]>=0)
+but NOT full-bank FEASIBILITY. THREE explicit FAILURE MODES it does NOT rule out:
+ 1. WRONG SPLIT: R_full(X)>=0 but R_local(X)<0 with (N-|V_X|)T_X compensating => a full-support atom can't use ambient.
+ 2. WRONG LOCATION: total AmbientCap large but atom a routes only to v notin V_a => total capacity != feasible atom-to-vertex flow.
+ 3. DOUBLE-SPEND across overlapping prefixes/cages.
+=> THE FINAL RESIDUAL = the SUPPORT-RESTRICTED HALL inequality:
+  PositiveSlackHallPrefix_FullBank: for every Ferrers prefix P_i, PrefixDemand(i) <= 25*PrefixSigma(i) + PrefixAmbientCap(i)
+  + PrefixC5Cap(i) + PrefixPruneCap(i). (Subset form FullBankHall(P): for every atom subset A, demand(A) <= 25*sigma(N_Door(A))
+  + AmbientCap(N_Amb(A)) + C5Cap(N_C5(A)) + PruneCap(N_Prune(A)).) Residual-token form: demand(A) <= 25*sigma(A) + PruneCap(A)
+  + sum_{u in LocalReach(A)} R_local_token(u) + sum_{v in AmbientReach(A)} R_ambient_token(v).
+REDUCES to two dominance sub-theorems: LocalResidualDominance (R_local covers full-support/no-ambient-room atoms) +
+AmbientResidualDominance ((N-|V_X|)T_X covers ambient-routable demand, support-constrained: sum_{a in P, v notin V_a}q(a,v)<=cap_X(v)).
+SUPPORT-CONSISTENCY subtlety: atom ambient support = V\V_a, not V\V_X; if V_a<V_X, vertices in V_X\V_a need consistent
+token support (V_h=V_a finer) or a proof that charging outside V_X suffices. Proof strategy: Ferrers monotonicity + K2-disjoint stability.
+
+### DEFINITIVE END-STATE: gap#1 = the SUPPORT-RESTRICTED HALL theorem PositiveSlackHallPrefix_FullBank (the GERSH
+aggregation core). PROVEN R[u]>=0 => bank nonneg but NOT feasibility (3 explicit failure modes). It is the exact
+"support-restricted Hall condition" that LRS lacks. GATEABLE: a per-instance max-flow feasibility gate CHECKS this Hall
+inequality AND would DETECT any of the 3 failure modes (an infeasible Gamma-min positive-slack cage = decisive obstruction).
+Universal proof = the support-constrained Hall theorem (LocalResidualDominance + AmbientResidualDominance) from Ferrers
+monotonicity + K2-disjoint stability -- genuine open hard combinatorial theorem, bounded, NOT the whole conjecture.
+Claude Lean has the SOUNDNESS half (cert=>Balance>=0). P(gap#1 math) ~45-50.
