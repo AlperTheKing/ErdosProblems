@@ -231,3 +231,36 @@ LP on candidate finite configs.** "No such config is currently known."
 2. Lean: compile weak duality (primal cert + dual cert ⟹ False) so falsifier verification is machine-checked;
    BankCost δ-elimination lemma; L1 where stateable abstractly.
 3. GPT-Pro: path decision (L3 new-idea attack vs dual-config family search vs secondary lanes until GPT-5.6).
+
+---
+
+# REPLIES 4-6 (2026-07-08 evening): path B executed; packing detour opened and closed exact
+
+- **Reply 4 (path decision)**: B — five falsifier families. EXECUTED: F1/F3 guarded books/sunflowers
+  **STRUCTURALLY DEAD** (single shared corridor ⟹ odd-cycle packing number 1 ⟹ true max cut separates X|Y;
+  book cut E−|R| loses to opposite cut E−1 whenever |R|>1; guards help both sides equally — exact, exhaustive
+  ≤2^26). F2 necklace: k=3 = triangle bug (h-edges close C3; valid k=2 or ≥4); k=2 genuine-max but |O|=0. F4
+  circulant sweep 7/7: declared cuts never max; true Γ-min max cuts all verdict D with exact certs including the
+  FIRST genuinely bank-using covers (ext 9/2, 13/3, 36/11, all ≤ σ). Dual-LP search: 735 real configs, 0 dual
+  certs. F5 abstract lifts: not yet run.
+- **Reply 5**: L1/L2 Lean-ready designs → **COMPILED** (`RelaxedCoverSkeleton.lean`: quotient_cuts_pay_alpha +
+  remaining_alpha_le_closure_alpha + alpha_paid_or_in_closure, axiom-clean first-try). Skeleton compiled except
+  exactly L3.
+- **Claude mechanism candidate (from F1's failure mode)**: odd-cycle packing/covering duality — unit-weight
+  geodesic-5-cycle packing with congestion ≤1 as the cycle-side mirror of the relaxed cover; Guenin/odd-K5 angle.
+- **Reply 6 + my gate, CONVERGENT REFUTATION (same hour)**: my `_claude_oddcycle_packing_gate.py` found census
+  N=9 violations (t*=2.0, 1.5) among 757 real configs; GPT-Pro independently produced an 18-vtx counterexample —
+  **CLAUDE EXACT-VERIFIED** (`_claude_verify_packing_ce.py`): genuine max cut 19 (unique mod flip), Γ-min = 50,
+  e=x-y, f=z-w both ell=5 with UNIQUE geodesics sharing exactly a-b ⟹ t*=2 > 1, while Hall holds 2 ≤ 7.
+  Factor-4 dead (4|S|=8 > |E_short|=7). Guenin/weakly-bipartite = wrong object (restricted geodesic-cycle family
+  ≠ odd-cycle clutter; obstruction is a tiny shared-edge theta, not odd-K5). **DEAD-END TABLE += unit odd-cycle
+  packing / factor-4 / Guenin mirror.**
+- **What survives (reply 6)**: the b-matching Hall target `|S| ≤ |E_short(S)|` itself (untouched, large slack at
+  the CE); `C5BookSupportExpansion` with its clean proof consuming ONLY max-cut vertex ineq + closed-book
+  boundary (no Γ-min) — already compiled abstractly (`Ell5CSReduction.c5book_support_expansion`). Live route
+  re-confirmed: minimal Hall obstruction → no-private-edge → P4 shared-support classification → C5-book or
+  reducible → contradiction; remaining hard node = **the impure balanced-neutral lens / full-bank Hall branch**
+  (= BankedCutDomination in dual form; the wall, unchanged).
+- **[CLAUDE] Channel pivot**: crux wall re-confirmed identical from primal (P4/lens) and dual (BankedCutDomination)
+  sides; GPT-Pro marginal value on the wall exhausted tonight → channel moves to secondary lanes (M6 good-cut
+  existence provider design first); the wall goes to GPT-5.6 tomorrow with the updated brief (§8 + this file).

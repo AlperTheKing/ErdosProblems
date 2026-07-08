@@ -1,0 +1,17 @@
+ODD-CYCLE PACKING mirror gate: t* = min max-congestion (unit weight per bad edge, geodesic cycles)
+====================================================================================================
+  census N=5: cfgs 1, violations 0, worst cen5 t*=1.000000
+  census N=6: cfgs 3, violations 0, worst cen5 t*=1.000000
+  census N=7: cfgs 18, violations 0, worst cen5 t*=1.000000
+  census N=8: cfgs 103, violations 0, worst cen5 t*=1.000000
+  census N=9: cfgs 753, violations 2, worst cen9 t*=2.000000
+   ANCHOR C5[1]      t*=1.000000 exact-verify=True (max congestion 1)
+   ANCHOR C5[2]      t*=1.000000 exact-verify=True (max congestion 1)
+   ANCHOR C5[3]      t*=1.000000 exact-verify=True (max congestion 1)
+   ANCHOR CP11       t*=1.000000 exact-verify=True (max congestion 1)
+====================================================================================================
+TOTALS: 757 configs | t*>1 VIOLATIONS: 2 | worst t* = ('cen9', 2.0)
+   VIOLATION: {'name': 'cen9', 'n': 9, 'bads': 2, 'cutE': 10, 'cols': 4, 'tstar': 2.0}
+   VIOLATION: {'name': 'cen9', 'n': 9, 'bads': 2, 'cutE': 9, 'cols': 3, 'tstar': 1.5}
+t* histogram (x0.1 buckets): {3: 1, 5: 142, 6: 1, 10: 613}
+VERDICT: PACKING MIRROR REFUTED on a real config (see VIOLATION rows) -- only the leak/bank version survives; correct GPT-Pro NOW

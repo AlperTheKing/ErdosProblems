@@ -69,6 +69,7 @@ So the remaining content is exactly the **general-`|S|` expansion** (the base ca
 | `m·Q ≤ T²` (Cauchy–Schwarz) | sufficient, NOT necessary (sunflower breaks it, Hall holds). |
 | S1ThetaPattern via Γ-decrease | FALSE — balanced ell=5 theta is Γ-NEUTRAL. |
 | medium-band BCL bypass | deficiency = length-square density ≠ edge-density; lemmas as hard as original. |
+| unit odd-cycle packing mirror (+factor-4, +Guenin) | **FALSE** (2026-07-08) — exact 18-vtx CE: Γ-min max cut, two unique-geodesic ell=5 atoms share edge a-b ⟹ t*=2>1 while Hall holds 2≤7; census N=9 t*=2.0 independently; factor-4 dead (8>7); restricted geodesic-cycle family ≠ odd-cycle clutter, obstruction is a shared-edge theta not odd-K5. b-matching Hall target itself untouched. |
 
 ## 6. Genuinely untried angles for the DIRECT attack
 
