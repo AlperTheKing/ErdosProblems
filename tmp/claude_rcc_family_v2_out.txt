@@ -1,0 +1,31 @@
+RCC FAMILY HARNESS v2: guard-corrected F1 + F2 necklace | chunked maxcut n<=27 | A-E
+====================================================================================================
+  F1(2,2;g2,2): n=15 edges=18 tri-free OK
+    maxcut=17 declared=14 #maxcuts=2 (A: DECLARED NOT MAX)
+  >> F1(2,2;g2,2) VERDICT A: declared cut 14 < max 17 (guards insufficient); analyzing true Gamma-min max cut anyway
+    [exhaustive] Gamma-min=25 (of 2 B-conn maxcuts) N^2=225 | ells=[5] |S|=1 |F|=9 |O|=8 sigma=16 HALL=True
+  >> F1(2,2;g2,2) VERDICT D: primal cover+Door cert (fam 126, ext~2.000, exact=True ext=2); Hall=True Gamma=25/225 [exhaustive]
+  F1(3,2;g2,3): n=20 edges=25 tri-free OK
+    maxcut=24 declared=19 #maxcuts=2 (A: DECLARED NOT MAX)
+  >> F1(3,2;g2,3) VERDICT A: declared cut 19 < max 24 (guards insufficient); analyzing true Gamma-min max cut anyway
+    [exhaustive] Gamma-min=25 (of 2 B-conn maxcuts) N^2=400 | ells=[5] |S|=1 |F|=12 |O|=12 sigma=23 HALL=True
+  >> F1(3,2;g2,3) VERDICT D: primal cover+Door cert (fam 218, ext~1.000, exact=True ext=1); Hall=True Gamma=25/400 [exhaustive]
+  F1(3,3;g3,3): n=27 edges=35 tri-free OK
+    maxcut=34 declared=26 #maxcuts=2 (A: DECLARED NOT MAX)
+  >> F1(3,3;g3,3) VERDICT A: declared cut 26 < max 34 (guards insufficient); analyzing true Gamma-min max cut anyway
+    [exhaustive] Gamma-min=25 (of 2 B-conn maxcuts) N^2=729 | ells=[5] |S|=1 |F|=16 |O|=18 sigma=33 HALL=True
+  >> F1(3,3;g3,3) VERDICT D: primal cover+Door cert (fam 388, ext~1.000, exact=True ext=1); Hall=True Gamma=25/729 [exhaustive]
+  F2(2): n=20 edges=29 tri-free OK
+    maxcut=24 declared=24 #maxcuts=25 (declared IS max)
+    [exhaustive] Gamma-min=125 (of 25 B-conn maxcuts) N^2=400 | ells=[5] |S|=5 |F|=24 |O|=0 sigma=19 HALL=True
+  >> F2(2) VERDICT D: primal cover+Door cert (fam 212, ext~0.000, exact=True ext=0); Hall=True Gamma=125/400 [exhaustive]
+  >> F2(3) VERDICT B: not simple/tri-free: triangle at (0, 1)
+====================================================================================================
+   F1(2,2;g2,2)     A        declared cut 14 < max 17 (guards insufficient); analyzing true Gamma-min max cut anyway
+   F1(2,2;g2,2)     D        primal cover+Door cert (fam 126, ext~2.000, exact=True ext=2); Hall=True Gamma=25/225 [exhaustive]
+   F1(3,2;g2,3)     A        declared cut 19 < max 24 (guards insufficient); analyzing true Gamma-min max cut anyway
+   F1(3,2;g2,3)     D        primal cover+Door cert (fam 218, ext~1.000, exact=True ext=1); Hall=True Gamma=25/400 [exhaustive]
+   F1(3,3;g3,3)     A        declared cut 26 < max 34 (guards insufficient); analyzing true Gamma-min max cut anyway
+   F1(3,3;g3,3)     D        primal cover+Door cert (fam 388, ext~1.000, exact=True ext=1); Hall=True Gamma=25/729 [exhaustive]
+   F2(2)            D        primal cover+Door cert (fam 212, ext~0.000, exact=True ext=0); Hall=True Gamma=125/400 [exhaustive]
+   F2(3)            B        not simple/tri-free: triangle at (0, 1)

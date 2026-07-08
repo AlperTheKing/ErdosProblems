@@ -1,0 +1,22 @@
+[
+ [
+  "F1(2,2)",
+  "D",
+  "primal cover+Door cert exists (family 65 cuts, ext_load~1.000, exact=True ext=1); Hall=True Gamma=25 vs N^2=121"
+ ],
+ [
+  "F1(3,2)",
+  "D",
+  "primal cover+Door cert exists (family 121 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=25 vs N^2=225"
+ ],
+ [
+  "F1(3,3)",
+  "D",
+  "primal cover+Door cert exists (family 236 cuts, ext_load~2.000, exact=True ext=2); Hall=True Gamma=25 vs N^2=441"
+ ],
+ [
+  "F2(2)",
+  "D",
+  "primal cover+Door cert exists (family 210 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=125 vs N^2=400"
+ ]
+]

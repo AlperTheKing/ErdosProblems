@@ -1,0 +1,27 @@
+RCC FAMILY HARNESS v1: F1 guarded-book + F2 necklace | A-E protocol
+====================================================================================================
+  F1(2,2): n=11 edges=14 (cut-intent 10 bad-intent 4) tri-free OK
+    maxcut=13 declared=10 #maxcuts=2 (A: DECLARED NOT MAX)
+    Gamma-min over 2 B-connected maxcuts: Gamma=25, N^2=121, bad=1
+    ells=[5] |S|=1 |F|=9 |O|=4 sigma=12 HALL(|S|<=|F|)=True
+  >> F1(2,2) VERDICT D: primal cover+Door cert exists (family 65 cuts, ext_load~1.000, exact=True ext=1); Hall=True Gamma=25 vs N^2=121
+  F1(3,2): n=15 edges=20 (cut-intent 14 bad-intent 6) tri-free OK
+    maxcut=19 declared=14 #maxcuts=2 (A: DECLARED NOT MAX)
+    Gamma-min over 2 B-connected maxcuts: Gamma=25, N^2=225, bad=1
+    ells=[5] |S|=1 |F|=12 |O|=7 sigma=18 HALL(|S|<=|F|)=True
+  >> F1(3,2) VERDICT D: primal cover+Door cert exists (family 121 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=25 vs N^2=225
+  F1(3,3): n=21 edges=29 (cut-intent 20 bad-intent 9) tri-free OK
+    maxcut=28 declared=20 #maxcuts=2 (A: DECLARED NOT MAX)
+    Gamma-min over 2 B-connected maxcuts: Gamma=25, N^2=441, bad=1
+    ells=[5] |S|=1 |F|=16 |O|=12 sigma=27 HALL(|S|<=|F|)=True
+  >> F1(3,3) VERDICT D: primal cover+Door cert exists (family 236 cuts, ext_load~2.000, exact=True ext=2); Hall=True Gamma=25 vs N^2=441
+  F2(2): n=20 edges=29 (cut-intent 24 bad-intent 5) tri-free OK
+    maxcut=24 declared=24 #maxcuts=25 (declared IS max)
+    Gamma-min over 25 B-connected maxcuts: Gamma=125, N^2=400, bad=5
+    ells=[5] |S|=5 |F|=24 |O|=0 sigma=19 HALL(|S|<=|F|)=True
+  >> F2(2) VERDICT D: primal cover+Door cert exists (family 210 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=125 vs N^2=400
+====================================================================================================
+   F1(2,2)    D       primal cover+Door cert exists (family 65 cuts, ext_load~1.000, exact=True ext=1); Hall=True Gamma=25 vs N^2=121
+   F1(3,2)    D       primal cover+Door cert exists (family 121 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=25 vs N^2=225
+   F1(3,3)    D       primal cover+Door cert exists (family 236 cuts, ext_load~2.000, exact=True ext=2); Hall=True Gamma=25 vs N^2=441
+   F2(2)      D       primal cover+Door cert exists (family 210 cuts, ext_load~0.000, exact=True ext=0); Hall=True Gamma=125 vs N^2=400

@@ -1,0 +1,25 @@
+RCC DUAL-LP search: val = max Sum(a)-Sum(b)-sigma*d | val>0 => falsifier candidate | margin map
+====================================================================================================
+  census N=5: cfgs 1, positives 0, FALSIFIERS 0, tightest cen5 val=-0.000000
+  census N=6: cfgs 3, positives 0, FALSIFIERS 0, tightest cen5 val=-0.000000
+  census N=7: cfgs 17, positives 0, FALSIFIERS 0, tightest cen5 val=-0.000000
+  census N=8: cfgs 100, positives 0, FALSIFIERS 0, tightest cen5 val=-0.000000
+  census N=9: cfgs 732, positives 0, FALSIFIERS 0, tightest cen5 val=-0.000000
+====================================================================================================
+   C5[1]      n=5   |S|=1   |F|=4   |O|=0  sigma=3   dual-val=-0.0
+   C5[2]      n=10  |S|=4   |F|=16  |O|=0  sigma=12  dual-val=-0.0
+   CP11       n=11  |S|=3   |F|=12  |O|=0  sigma=9   dual-val=-0.0
+TOTALS: 735 configs | positives 0 | EXACT FALSIFIERS 0 | val range [-0.000000, -0.000000]
+TIGHTEST (closest to dual cert): cen5 val=-0.000000000 (S=1 F=4 O=0 sigma=3)
+10 tightest configs (binding-pattern candidates for L3):
+   cen5       n=5  |S|=1  |F|=4   |O|=0  sigma=3  val=-0.000000
+   cen6       n=6  |S|=1  |F|=4   |O|=1  sigma=4  val=-0.000000
+   cen6       n=6  |S|=1  |F|=6   |O|=0  sigma=5  val=-0.000000
+   cen7       n=7  |S|=1  |F|=4   |O|=2  sigma=5  val=-0.000000
+   cen7       n=7  |S|=1  |F|=4   |O|=2  sigma=5  val=-0.000000
+   cen7       n=7  |S|=1  |F|=6   |O|=1  sigma=6  val=-0.000000
+   cen7       n=7  |S|=1  |F|=8   |O|=0  sigma=7  val=-0.000000
+   cen7       n=7  |S|=1  |F|=4   |O|=2  sigma=5  val=-0.000000
+   cen7       n=7  |S|=1  |F|=6   |O|=1  sigma=6  val=-0.000000
+   cen7       n=7  |S|=1  |F|=8   |O|=0  sigma=7  val=-0.000000
+VERDICT: no dual certificate on any tested real config (margin map saved); consistent with counterfactual-only binding; tightest configs above = L3 binding-pattern data

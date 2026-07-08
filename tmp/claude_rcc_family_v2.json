@@ -1,0 +1,42 @@
+[
+ [
+  "F1(2,2;g2,2)",
+  "A",
+  "declared cut 14 < max 17 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F1(2,2;g2,2)",
+  "D",
+  "primal cover+Door cert (fam 126, ext~2.000, exact=True ext=2); Hall=True Gamma=25/225 [exhaustive]"
+ ],
+ [
+  "F1(3,2;g2,3)",
+  "A",
+  "declared cut 19 < max 24 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F1(3,2;g2,3)",
+  "D",
+  "primal cover+Door cert (fam 218, ext~1.000, exact=True ext=1); Hall=True Gamma=25/400 [exhaustive]"
+ ],
+ [
+  "F1(3,3;g3,3)",
+  "A",
+  "declared cut 26 < max 34 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F1(3,3;g3,3)",
+  "D",
+  "primal cover+Door cert (fam 388, ext~1.000, exact=True ext=1); Hall=True Gamma=25/729 [exhaustive]"
+ ],
+ [
+  "F2(2)",
+  "D",
+  "primal cover+Door cert (fam 212, ext~0.000, exact=True ext=0); Hall=True Gamma=125/400 [exhaustive]"
+ ],
+ [
+  "F2(3)",
+  "B",
+  "not simple/tri-free: triangle at (0, 1)"
+ ]
+]
