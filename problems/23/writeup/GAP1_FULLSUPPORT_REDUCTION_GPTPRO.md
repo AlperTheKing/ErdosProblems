@@ -198,3 +198,26 @@ RECONCILIATION (my earlier concern): the bank is Door(25 per cut edge) + Base + 
 CLAUDE: building _claude_shortrow_hall_gate.py = the DEFINITIVE obligation-(ii) gate (exact subset Hall via max-flow).
   atom_sq_le_25_shortAtom + fullSupport_doorDominance_of_shortAtoms FORMALIZED (the per-row + aggregate); the SUBSET Hall
   (no double-spend) is the remaining structural lemma. P(gap#1 math)~53-55.
+
+## 2026-07-08 CONVERGENCE: both atomic obligations reduce to ONE switch lemma (Gamma-decreasing switch existence).
+### Obligation (ii) -- multi-agent adversarial WORKFLOW (11 agents, 775k tok):
+- FOUND A GATE BUG: my ShortRowCutEdgeHall used ONE canonical geodesic per bad edge => lemma is FALSE as written.
+  COUNTEREXAMPLE C5[3] (N=15, tri-free, Gamma-min all 70 max cuts tie Gamma=225): 9 bad edges ell=5, sum ell^2=225 >
+  200=25*|union canonical P_e| (union=8). My census gate MISSED it (C5[t] N=15 not in census/even-chord battery).
+- CORRECTED lemma = SPREADING-FEASIBILITY (all shortest B-geodesics, demand spreads): max-flow source e demand ell^2,
+  sink cut-edge c cap 25, arc e->c iff c on SOME shortest geodesic of e. FEASIBLE on C5[3] (225=225 TIGHT) + all tested.
+- REDUCES TO: a congestion-SPREADABILITY bound under Gamma-min: min over fractional geodesic selections of max per-cut-edge
+  weighted load <= 25, tight at C5[t]. Structural reason: an over-congested cut edge (load>25 after optimal spread) is the
+  site of a Gamma-DECREASING zero-slack re-cut, contradicting Gamma-minimality. BINDING REGIME ell in [13,23] (N>=23,
+  slack s(23)=21 tiny) UNTESTED = the genuine remaining risk. The gamma-min-switch decisive step is UNPROVEN.
+### Obligation (i) -- GPT-Pro reply 11 (LongAtom_reduces_or_switches):
+- ell>=25 rows CANNOT be paid by their own row cut edges; must be a prunable base leaf OR create a Gamma-decreasing switch.
+- Prunable base leaf D_e: Balance(D_e)>=0 via ell(e)<=|V(D_e)| (geodesic cycle in D_e) => ell^2-25<=|V(D_e)|^2-25<=25*sigma+baseCap.
+  NON-circular (uses ell<=|V(D_e)|, not the density conjecture).
+- ENTANGLED long atoms CAN exist under WEAK hyps (a long bad edge shares geodesic support, not a clean prune unit). Under
+  reduced Gamma-min: DISJUNCTION theorem LongAtom_reduces_or_switches -- either prunes OR a Gamma-decreasing switch exists.
+### => UNIFYING RESIDUAL of gap#1 = the Gamma-DECREASING SWITCH EXISTENCE (zero-slack, connected, Delta_Gamma<0) under
+Gamma-minimality: any over-congested (ii) / entangled-long (i) configuration admits it, contradicting minimality. This is
+the "NoLongSideDoorAnnulus / annular first-split" switch (the S1 re-audit WALL), now re-derived as the single unifying core.
+EMPIRICALLY BULLETPROOF (no such config arises in any tested Gamma-min cut) but the EXPLICIT switch W (with controlled global
+effect on other rows' ell) is UNPROVEN. P(gap#1 math)~53-55.
