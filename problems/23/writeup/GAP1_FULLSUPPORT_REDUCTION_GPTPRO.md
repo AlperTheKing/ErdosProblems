@@ -136,3 +136,24 @@ proved from ell<=|V|, Claude's fullSupport_leaf_absorbed_by_density). ILLEGAL: C
   GATE: search for multi-atom (m>=2) full-support (|V_X|=N) shells; if none arise, or all have Demand <= Door(+prune+base),
   the induction closes. If a genuine one with Demand > Door+Prune+Base exists, that is the circularity obstruction.
   Claude building _claude_multiatom_fullsupport_gate.py (falsifier-first).
+
+## *** THE SINGLE FINAL LEMMA (GPT-Pro reply 8, 10452 char, 2026-07-08) ***
+gap#1's ENTIRE remaining hard content = ONE named structural lemma. The split after Claude's gates:
+- proper-support atoms (|V_X|<N): MIXED bank (door+ambient(N-T(v))+C5(eta_X>=0 where Demand>0, Claude-verified)+prune);
+  ambient HELPS but does not dominate alone (Claude's falsification stands). Handled by the mixed-bank flow (ambient available).
+- single full-support LEAF: base density, CLOSED + Lean-formalized (fullSupport_leaf_absorbed_by_density).
+- MULTI-ATOM full-support reduced shell: the LAST circularity point (no ambient, |V_X|=N).
+THE LEMMA (equivalent forms): ReducedFullSupportDoorDominance / NoReducedOverdoorFullSupportMultiShell:
+   For a REDUCED (all prunable nonneg subcages + base leaves removed) Gamma-MINIMAL multi-atom full-support shell X,
+      Gamma_X = sum_{e in X} ell(e)^2  <=  25 * b_X   (b_X = cut-edge count of the shell = 25*sigma+25m form),
+   equivalently Demand_X <= Door_X, equivalently no reduced over-door full-support multi shell exists.
+   With base/prune allowed: Gamma_X <= 25*b_X + PruneCap_X + BaseDensityCap_X (ReducedFullSupportHall_NoTopEta).
+HONEST STATUS (GPT-Pro): NOT true for arbitrary max cuts -- NEEDS the reduced/Gamma-minimal/K2-shell hypotheses
+(weak examples violate it without them). Minimality lever (Claude-formalized) removes prunable pieces but does NOT
+prove Gamma_X<=25*b_X. Claude's gate (9956 multi-atom full-support, 74 long-atom, ALL Demand<=Door) = strong EVIDENCE
+but not a proof. Missing structural reason is ONE of: (1) any over-door full-support shell admits a zero-slack
+Gamma-DECREASING SWITCH => Gamma-minimality excludes it [most promising, connects to switch_connected machinery];
+(2) it decomposes into prunable base/side-door blocks; (3) Ferrers/K2 structure forces enough cut edges when >=2 long
+atoms share full support [Claude's gates suggest (3) in reduced shells]. Proof direction: contradiction (avg square-length
+per cut edge too large under Gamma-min). Lean-ready: theorem NoReducedOverdoorFullSupportMultiShell (hMin, hReduced, hFull).
+=> gap#1 = this single lemma + the proper-support mixed-bank feasibility. Base cases + minimality lever FORMALIZED.
