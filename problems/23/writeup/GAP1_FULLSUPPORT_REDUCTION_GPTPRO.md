@@ -322,6 +322,19 @@ NO counterexample. Findings:
   the C5[t] 'no crossing' claim is FALSE (C5[t] Gamma-min cuts DO cross, Gamma-neutrally + non-y-tightly) -- keep only the
   y-tightness qualifier. gap#1 crux = R-A (y-tight crossing => balanced {L,L+2} door), decisively gateable at N>=23.
 
+### GPT-Pro reply 17 + Claude R-A arm gate -- crux = NET POSITIVITY LocalSaving+StableGain>0 (StableGain>=0 is FALSE, exact-verified).
+- GPT-Pro: StableGain(W)>=0 is FALSE. Correct universal target = LocalSaving(W) + StableGain(W) > 0 (the real G4 lemma).
+  Only stable rows whose shortest geodesic USES d0 or d1 can lengthen (limited, 2 edges removed) but they CAN.
+  EXACT EXAMPLE (Claude-VERIFIED via eval_switch): 10-vertex tri-free graph, 3 bad edges all ell=5, W={a,c,b} zero-slack
+  (dcut=0), stable row h=A-B lengthens ell 5->9 => StableGain = 25-81 = -56, dGamma = +56 (recut RAISES Gamma). So a clean
+  two-door zero-slack recut can badly increase Gamma. edges=[(0,5),(5,2),(2,6),(6,1),(0,8),(8,4),(4,7),(3,9),(9,1),(2,3),(5,7),(0,1)].
+- CLAUDE R-A arm gate (_claude_ra_arm_gate.py): workflow dGamma formula VALIDATED (two forms agree, 21063 tuples);
+  18351 BALANCED (dGamma<0 switch works) vs 2712 UNBALANCED (dGamma>=0 switch FAILS, long-arm-absorbing).
+- *** THREE-WAY CONVERGENCE: gap#1 irreducible crux = LocalSaving(W)+StableGain(W) > 0 for the dual-obstruction pair-door
+  recut W, UNDER y-tightness + Gamma-minimality (= R-A = G4). The local switch DEMONSTRABLY FAILS without this structure
+  (2712 unbalanced profiles + verified StableGain=-56). The whole gap#1 = this ONE net-positivity lemma; the arc closes
+  onto the {L,L+2} pair-door / pairTypeBTheta machinery. Maximally precise, exact-verified, genuinely HARD (multi-month). ***
+
 ## GPT-Pro reply 15 (2026-07-08) -- G1 COLLAPSES INTO G4. The switch theorem is MONOLITHIC.
 BLUNT: DualTightGeodesicUncrossing (G1) in the fixed-commodity form is NOT provable and is the WRONG milestone. Standard
 path uncrossing either (1) preserves endpoints but doesn't remove the order-crossing, OR (2) removes the crossing by
