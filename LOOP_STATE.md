@@ -1,5 +1,13 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-07T18:52Z (gap#1 -> ONE irreducible residual = PositiveSlackHallPrefix; R-A folds via Option C; RouteBAssembly.lean 5 thms green+axiom-clean [B4 extraction + Hall charge-cert soundness]; P(Lean unconditional)~30-40)
+# Last update: 2026-07-08T06:00Z (gap#1 = ONE gateable lemma MultiAtomFullSupportShell_absorbed_without_topEta; GPT-Pro's clean reduction FALSIFIED+conceded; leaf full-support CLOSED+formalized; minimality lever formalized; RouteBCAP.lean=6 axiom-clean thms; P(gap#1 math)~50, P(Lean)~12-20)
+
+## GAP#1 STATE (2026-07-08 SESSION — the definitive arc)
+- gap#1 = full mixed-bank support-restricted Hall theorem (Door 25sigma + Ambient N-T(v) + C5 density + Prune), dual demand(A)<=cap(N(A)). ALL shortcuts eliminated (door-only, companion-theta, tri-free, canonical-cap, LRS, full-support-localization).
+- GPT-Pro's clean "proper-support=>ambient-alone" reduction FALSIFIED by Claude (cap_X(v)=Gamma_X fictional; real N-T(v)<=N; N=8 single-ell=7-atom CE; 544/71815 cages), GPT-Pro CONCEDED.
+- CLOSED + LEAN-FORMALIZED (RouteBCAP.lean, all axiom-clean [propext,Classical.choice,Quot.sound], 6 thms): minimality lever (pruned_balance_le, no_nonneg_prunable_subcage_in_minNeg) + leaf full-support (fullSupport_leaf_absorbed_by_density, leaf_demand_le_of_ell_le_N -- density bank eta=|V|^2/25-m + ell<=N graph fact, census 47369 single-bad-edge 0-fail) + the A-derivation (noLongSideDoor_of_primitives, intermediateDoor_forced_of_S2disjunction, surplus_le_25sigma_of_level0, sideDoor_balance_nonneg_of_primitives).
+- DEFINITIVE REDUCTION (GPT-Pro reply 7): gap#1 = ONE gateable lemma MultiAtomFullSupportShell_absorbed_without_topEta. Induction on rank=#owned-atoms; IH strict-proper-cages nonneg-balance; STEP ReducedShellHall_NoTopEta (Demand(A)<=25sigma+Ambient+sum Balance(D)+BaseDensity, NO top eta_C); minimality lever removes prunable subcages => reduced shell; circular IFF bottoms out at IRREDUCIBLE multi-atom full-support shell (support=all V => no ambient) needing own eta_C.
+- CLAUDE REDUCTION: for a full-support shell, Demand<=Door <=> sum_e ell^2 <= 25*maxcut. Census gate: 74 long-atom multi-atom full-support shells ALL Demand<=Door (0 Demand>Door) => no obstruction on census; eta_X>=0 on every positive-demand K2-component (71894).
+- OPEN (last residual, with GPT-Pro): can an IRREDUCIBLE multi-atom full-support shell have sum ell^2>25*maxcut + not be covered by base/prune (=> needs eta_C, circular), OR do they not arise from B4 extraction. Gate files: _claude_residual_hall_gate.py (STAGE1/2/3), _claude_residual_family_sweep.py, _claude_propersupport_ambient_gate.py, _claude_leaf_c5_gate.py, _claude_eta_nonneg_gate.py, _claude_multiatom_fullsupport_gate.py. Archive: GAP1_FULLSUPPORT_REDUCTION_GPTPRO.md.
 
 ## MAILBOX
 - CODEX_TO_CLAUDE.md read marker (bytes): 2065930  (whole file read as of this tick)
