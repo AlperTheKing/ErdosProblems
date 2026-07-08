@@ -221,3 +221,28 @@ Gamma-minimality: any over-congested (ii) / entangled-long (i) configuration adm
 the "NoLongSideDoorAnnulus / annular first-split" switch (the S1 re-audit WALL), now re-derived as the single unifying core.
 EMPIRICALLY BULLETPROOF (no such config arises in any tested Gamma-min cut) but the EXPLICIT switch W (with controlled global
 effect on other rows' ell) is UNPROVEN. P(gap#1 math)~53-55.
+
+## GPT-Pro reply 12 (2026-07-08) -- DEFINITIVE: the switch lemma is a base-leaf-OR-switch DISJUNCTION; gap#1 = S1 WALL GENERALIZED.
+- My 'over-congested edge => Gamma-decreasing switch' is FALSE. COUNTEREXAMPLE: odd cycle C_N (N>=25). ell=N, Gamma=N^2, every
+  cut edge load N^2/(N-1)>25; Gamma-MINIMAL (every max cut has one bad edge length N); any zero-slack switch just MOVES the bad
+  edge to another cycle edge, still length N => Delta_Gamma=0 (NOT <0). So NO Gamma-decreasing switch -- but C_N is a BASE LEAF.
+- CORRECT lemma (disjunction): FullSupportHallFailure_baseLeaf_or_switch -- a Hall failure => base leaf OR Gamma-decreasing switch.
+  Named form ReducedNonBaseGeodesicHall: (hMin, hReduced, hGammaMin, hFull, hMulti, hNoBase: no prunable base leaf D exists)
+  => ShortestGeodesicSpreadingFeasible X 25. [matches Claude's corrected gate: all shortest geodesics, demand ell^2, cap 25.]
+- The infeasibility certificate is a DUAL cut-edge weight y (NOT a single congested edge). Candidate switch from the dual:
+  Y={c: y(c)>0}, tight row family A_y, H_y = union of y-shortest geodesics; compute Ferrers/laminar decomposition of row
+  overlaps in H_y; candidate switches = minimal balanced intervals W; check sigma(W)=0, B^W connected, Gamma(B^W)<Gamma(B).
+  If W exists => Gamma-min contradiction; if not, the dual obstruction must be a base leaf. GRAPH-COMPUTABLE (LP dual + laminar).
+- *** RELATION TO S1: for the theta/pair-door subclass the switch W IS EXACTLY the S1 first-split/last-rejoin interval (S2
+  supplies intermediate-door/triangle/shorter-blue-row alternatives, non-door killed by triangle-free + shortestness). BUT the
+  full geodesic Hall obstruction can be MORE GLOBAL than a single S1 theta. So the S1 door is a LOCAL INSTANCE of the switch
+  theorem, NOT the whole theorem. gap#1 = the S1 WALL GENERALIZED to a global dual-obstruction switch theorem. ***
+- Base-leaf split confirmed: ell<=23 => ell^2<=25(ell-1) payable [atom_sq_le_25_shortAtom DONE]; ell>=25 => single-row over-
+  congestion = odd-cycle base leaf, handled by base density/prune [fullSupport_leaf_absorbed_by_density DONE], NOT by a switch.
+
+### DEFINITIVE gap#1 END-STATE (2026-07-08): gap#1 = ReducedNonBaseGeodesicHall = the global Gamma-decreasing switch theorem
+(base-leaf-OR-switch), which GENERALIZES the S1 annular-first-split door (S1 = its local theta instance). FORMALIZED
+(RouteBCAP.lean, 8 axiom-clean): minimality lever, leaf absorption, short-atom bound, door-dominance derivation. EMPIRICALLY
+BULLETPROOF: corrected SPREADING-FEASIBILITY feasible on 71820 Gamma-min cages incl C5[t] tight family. OPEN CORE: the global
+switch existence (dual-obstruction laminar balanced interval with Delta_Gamma<0, controlled global effect) -- graph-computable,
+checkable, UNPROVEN. Binding regime ell in [13,23] N>=23 untested. P(gap#1 math)~50-52; P(full Lean)~12-20.
