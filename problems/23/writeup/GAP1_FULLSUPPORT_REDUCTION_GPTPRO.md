@@ -1,0 +1,73 @@
+# gap#1 FULL-SUPPORT REDUCTION (GPT-Pro MAIN, 2026-07-08, in reply to Claude's STAGE-1/2/3 + family-sweep findings)
+
+GPT-Pro: "This is the first genuinely simplifying structural reduction after the C18 correction." Given Claude's
+validated facts (K2-closure, split identity, `sum_{u in V_X} T(u) = Gamma_X`, `R_local<0 => Demand=0`), gap#1
+(PositiveSlackAbsorption_FullBank) reduces to ONE residual lemma about FULL-SUPPORT components.
+
+## 1. ProperSupportAmbientAbsorption (|V_X| < N)  -- CLAIMED PROVEN
+For a K2-closed component X with proper support (|V_X| < N):
+- `R_full(X) = R_local(X) + (N-|V_X|)*T_X`,  `T_X = sum_{u in V_X}T(u) = sum_{e in X} ell(e)^2 = Gamma_X`.
+- `R_full(X) = sum_{u in V_X} R[u] >= 0`.
+- Canonical ambient token of X: support = V_X, tau = T_X = Gamma_X, so cap_X(v) = Gamma_X for every v not in V_X;
+  total ambient capacity (N-|V_X|)*Gamma_X.
+- Since `Demand_X <= Gamma_X` (Demand_X = Gamma_X - 25|X_atoms|), route ALL demand to a single external vertex v0:
+  q(a,v0)=demand(a), else 0; check sum_a q(a,v0) = Demand_X <= Gamma_X = cap_X(v0).  =>  ambient covers all
+  proper-support demand, support-constrained. NO C5, NO Ferrers Hall, NO LRS.
+  Lean: theorem ProperSupportAmbientAbsorption (hProper: card(VX)<N) (hDemand: Demand X <= GammaX X)
+        (hAtoms: forall a in X, AtomSupport a subseteq VX X) : exists flow, CheckAmbientFlow X flow = true.
+
+  *** CLAUDE GATE CONCERN (to verify, falsifier-first): cap_X(v)=Gamma_X is a PER-(component,vertex) cap, NOT a
+      global per-vertex cap. The REAL per-vertex ambient reserve is N-T(v) (Sigma_v (N-T(v)) = N^2-Gamma). If
+      Gamma_X > N-T(v0) or multiple components share v0, the single-vertex routing DOUBLE-SPENDS v0's real reserve.
+      SOUND test = GLOBAL max-flow: atoms -> door(25sigma) + external vertices v (v notin V_comp(a)) with cap N-T(v);
+      only full-support (|V_X|=N) components should be infeasible. ***
+
+## 2. R_local < 0 harmless  (Claude's finding, folded in): R_local(X)<0 => Demand(X)=0.
+
+## 3. Minimality lever  no_nonneg_prunable_subcage_in_minNeg  -- CLAIMED (pure ledger algebra)
+For minimal negative-balance cage C, proper subcage D with Prune C D = C' and
+`Balance C = Balance C' + Balance D + PruneRemainder C D`, if `0<=Balance D` and `0<=PruneRemainder`, then
+`Balance C' = Balance C - Balance D - PruneRemainder <= Balance C < 0` => C' is a proper negative-balance
+descendant, contradicting minimality. So a tight full-support block (Balance D = 0) cannot be a proper subcage of a
+minimal negative-balance cage; nor the selected cage (which has Balance C < 0). EXCLUDES the C_25 tight odd-cycle escape.
+
+## 4. Full-support disjunction  (the residual)
+theorem full_support_block_balance_nonneg_or_prunable (hFull: VX X = FullVertexSet) (hX: X in ComponentsOfCage C):
+   0 <= BalanceOfComponent X  \/  exists D, ProperSubcage D C /\ Balance D < 0.
+For minimal C the 2nd disjunct is impossible => full-support blocks inside the minimal cage are nonnegative.
+
+## 5. THE SOLE REMAINING RESIDUAL = FullSupportC5Dominance
+For a FULL-support component (|V_X|=N, Demand>0): Ambient=0, R_local=0, so need
+   `C5Cap >= N^2 - 25 - 25*sigma`.
+Calibration (odd cycle C_{2k+1}, one bad edge, sigma=1): C5Cap >= N^2-50; N=9 => >=31; N=25 => >=575.
+GPT-Pro: "the C5/density bank should be the source" since 25*eta = N^2-25 (m=1) is also large. Claude's observed
+`25*sigma+R_full` failures at long odd cycles ARE EXACTLY this full-support case (they calibrate FullSupportC5Dominance,
+NOT failures of the ambient theorem).
+
+## OVERALL PROOF SKELETON (GPT-Pro, sigma>0 minimal candidate C):
+1. proper-support components: ProperSupportAmbientAbsorption (ambient).
+2. full-support component with Demand>0: FullSupportC5Dominance  [THE OPEN RESIDUAL].
+3. R_local<0 harmless (Demand=0).
+4. K2-disjoint stability + ledger no-double-spend: add the component absorptions.
+5. minimality lever: excludes tight full-support blocks from being minimal.
+6. => Balance(C) >= 0 for every sigma>0 minimal candidate.  "Much smaller than the original full Hall theorem."
+
+CLAUDE STATUS: exact-gating (1) [double-spend concern] + confirming (5) is the only residual. If (1) gates clean,
+gap#1 has shrunk from the full support-restricted Hall to the SINGLE lemma FullSupportC5Dominance (C5 density bank on
+a single long-geodesic-filling cage). Verbatim archive: this file; thread 6a4c8b1a.
+
+## *** CLAUDE FALSIFICATION (2026-07-08, _claude_propersupport_ambient_gate.py) — claim (1) is UNSOUND as stated ***
+GLOBAL max-flow (proper-support atoms -> external vertices v notin V_X, REAL per-vertex reserve cap(v)=N-T(v),
+Sigma_v(N-T(v))=N^2-Gamma, NO door): proper-support demand is NOT ambient-absorbable on **544/71815** Gamma-min cages
+(census N<=11). GPT-Pro's literal single-external-vertex route fails on 903 components.
+HAND-VERIFIED minimal counterexample (cen8): a single ell=7 atom, |V_X|=7 (support fills 7 of 8 vertices) => exactly
+ONE external vertex v0, real reserve cap(v0)=8-T(v0) <= 8, but Demand = 7^2-25 = 24 > 8. INFEASIBLE.
+ROOT CAUSE: GPT-Pro's cap_X(v)=Gamma_X (=T_X) is FICTIONAL. The split R_full(X)=R_local(X)+(N-|V_X|)*T_X is an
+ALGEBRAIC rewriting; R_full(X)=Sigma_{u in V_X}R[u] is reserve located at the component's INTERIOR vertices V_X, NOT
+capacity physically available at external vertices. Routing demand to an external vertex v uses v's OWN reserve
+N-T(v) <= N, which for an ell-atom (Gamma_X ~ ell^2) is ~ell times smaller than the claimed Gamma_X.
+CONSEQUENCE: the clean reduction "proper-support => ambient alone; full-support => C5 alone" does NOT hold. Proper-
+support components with high demand-to-external-reserve ALSO need the door/C5, so the residual is NOT full-support-only.
+The full bank (door 25*sigma + ambient + C5) IS still feasible on all census (STAGE 2, 0 infeasible) — the DOOR does the
+heavy lifting GPT-Pro's decomposition under-counted. So gap#1 remains the FULL mixed-bank Hall theorem, NOT a single
+C5 lemma. The minimality lever (sec 3/4, pure ledger algebra) is independent and may still stand; sent back to GPT-Pro.
