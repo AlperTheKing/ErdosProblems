@@ -246,3 +246,21 @@ effect on other rows' ell) is UNPROVEN. P(gap#1 math)~53-55.
 BULLETPROOF: corrected SPREADING-FEASIBILITY feasible on 71820 Gamma-min cages incl C5[t] tight family. OPEN CORE: the global
 switch existence (dual-obstruction laminar balanced interval with Delta_Gamma<0, controlled global effect) -- graph-computable,
 checkable, UNPROVEN. Binding regime ell in [13,23] N>=23 untested. P(gap#1 math)~50-52; P(full Lean)~12-20.
+
+## GPT-Pro reply 13 (2026-07-08) -- BLUNT STRATEGIC VERDICT on gap#1's provability.
+VERDICT: gap#1 is a REAL reduction (NOT logically equivalent to beta<=N^2/25 -- it is sharply structured, lives only inside the
+reduced full-support shell after door/ambient/prune/base-leaf/short-row reductions), BUT in DIFFICULTY it is "very close to the
+heart of the conjecture" -- NOT "just an assembly lemma." Current techniques prove the LOCAL theta case (one first-split/last-
+rejoin theta -> S2 disjunction -> triangle+shorter-row die -> intermediate door/switch -> Gamma drop) but are NOT yet enough
+for the GLOBAL entangled multi-row case. Option-3 (Gamma_X<=25b_X / spreading feasibility) = primal/Hall; Option-1 (Hall fail =>
+switch) = dual/Gamma-min; they are the SAME obstruction from opposite sides (Hall fail -> dual y -> overloaded laminar interval
+-> switch). LOCAL->GLOBAL gap = 4 parts: G1 (minimal dual Hall obstruction y has a Ferrers/laminar interval W = global "first
+split"); G2 (balancedness sigma(W)=0 from dual-minimality/reduced-shell); G3 (B^W connected); G4 (Delta_Gamma<0 via affected-row cert).
+KEY SUB-LEMMA (for proof dev) = MinimalDualDefectIntervalSwitch; CLEAN assembly theorem = ReducedNonBaseGeodesicHall (hMin,
+hReduced, hGammaMin, hFull, hNonBase => ShortestGeodesicSpreadingFeasible X 25). BEST NEXT GATE (do NOT prove all at once):
+given a dual Hall obstruction y for a reduced nonbase full-support shell, does a laminar interval W of y-tight geodesics exist
+with sigma(W)=0, B^W connected, Gamma(B^W)<Gamma(B)? Algorithm: solve spreading LP; if infeasible extract dual y; build y-tight
+geodesic laminar arrangement; enumerate intervals W; check sigma/conn/DeltaGamma. A single infeasible shell with NO such W =
+DECISIVE OBSTRUCTION; every infeasible non-Gamma-min shell producing W + no Gamma-min shell infeasible = the exact empirical theorem.
+STRATEGIC: gap#1 is a genuine HARD open research theorem (the global laminar-switch, close to the conjecture's heart), NOT
+closeable with current techniques for the global case -- likely a substantial (multi-round/month) problem. Documented open core.
