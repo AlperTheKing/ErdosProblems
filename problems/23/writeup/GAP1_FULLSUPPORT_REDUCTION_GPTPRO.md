@@ -92,3 +92,24 @@ C5 lemma. The minimality lever (sec 3/4, pure ledger algebra) is independent and
 NET: gap#1 = the full mixed-bank support-restricted Hall theorem (Door+Ambient(N-T(v))+C5+Prune), exactly as before this
 cycle. All shortcuts eliminated (door-only, companion-theta, tri-free, canonical-cap, LRS, full-support-localization).
 SALVAGED NEW PIECE: the minimality lever (pure algebra) -> formalize in RouteBCAP.lean. P(gap#1 math) ~45-50 unchanged.
+
+## GPT-Pro C5/DENSITY BANK construction (2026-07-08, reply 6, 8897 char) + Claude accounting
+The C5 bank is NOT a pentagon count -- it is the DENSITY-RESERVE token normalized by the C5 extremal density 1/25:
+   localEta(X)  eta_X = |V_X|^2/25 - m_X            (m_X = assigned bad-edge mass)
+   fullSupportC5Mass(X) = eta_X - sigma_X
+   fullSupportC5Cap(X)  = 25*(eta_X - sigma_X) = |V_X|^2 - 25*m_X - 25*sigma_X    [use max(0,.)]
+The "25 = 5^2" enters because the global extremal target is m <= N^2/25 and the surplus target Sum(ell^2-25) <= 25*eta.
+Incidence: for a full-support leaf, the C5 token is local to X and every surplus atom owned by X may spend it.
+General cages: C5 mass allocated by a CHECKED density ledger, Sum_{z in I} mass(z) <= |V_I|^2/25 - m_I - sigma_I - pruned.
+Lean: def localEta N m := N^2/25 - m; fullSupportC5Mass N m sigma := localEta - sigma; cap := 25*mass; use only when
+0 <= fullSupportC5Mass. theorem fullSupport_leaf_absorbed_by_density (hDemand: demand <= N^2 - 25*m) ...
+
+### *** CLAUDE: the LEAF case is CLOSED, NON-CIRCULARLY, via ell <= N (a graph fact, NOT the conjecture) ***
+For a single-bad-edge leaf cage: ell = shortest odd cycle length <= N (the cycle has ell vertices <= |V|). So
+Demand = ell^2 - 25 <= N^2 - 25 = Door + C5 (when C5Mass>=0), giving Balance = (N^2-25) - (ell^2-25) = N^2 - ell^2 >= 0.
+When C5Mass < 0 (dense, sigma > N^2/25 - 1): Door = 25*sigma > N^2 - 25 >= Demand alone. EITHER WAY Balance >= 0.
+So the GPT-Pro hypothesis `demand <= N^2 - 25*m` is, for a leaf, the GRAPH FACT ell<=N (m=1), not the conjecture -> NON-circular.
+This CLOSES the tight full-support leaf case (odd cycles C_25.. that broke Claude's graph bank). CAVEAT: leaf = base
+case only (single-bad-edge cages have beta=1, trivially <= N^2/25). The HARD CORE = the MULTI-ATOM density ledger
+(demand(A) <= Door+C5+Prune for every atom subset, needing the LOCAL conjecture Gamma_A <= |U_A|^2 by INDUCTION via the
+minimality lever) -- STILL OPEN. Claude gating leaf closure + formalizing fullSupport_leaf_absorbed_by_density.

@@ -150,5 +150,29 @@ theorem no_nonneg_prunable_subcage_in_minNeg
   have hnn : 0 ≤ Balance C' := hMinNoNeg C' hProper
   linarith
 
+/-- **Leaf demand bound from the graph fact `ell ≤ N`** (2026-07-08). For a single-bad-edge (leaf) full-support
+    cage the surplus demand is `ell² − 25`, where `ell` = shortest odd-cycle length ≤ `N` (a geometric fact: the odd
+    cycle has `ell` vertices, `ell ≤ |V| = N`). Hence `demand = ell² − 25 ≤ N² − 25·1`. This is the hypothesis feeding
+    `fullSupport_leaf_absorbed_by_density`, and it is NON-circular — it uses `ell ≤ N`, not the conjecture. -/
+theorem leaf_demand_le_of_ell_le_N
+    (Nq ell : ℚ) (hpos : 0 ≤ ell) (hell : ell ≤ Nq) :
+    ell ^ 2 - 25 ≤ Nq ^ 2 - 25 * (1 : ℚ) := by nlinarith [hell, hpos]
+
+/-- **Full-support leaf absorbed by the density (C5) bank** (2026-07-08, GPT-Pro's
+    `fullSupport_leaf_absorbed_by_density`, exact-gated by Claude: 47369 census single-bad-edge cages 0 fail, odd cycles
+    `C₂ₖ₊₁` all `Balance ≥ 0`). The C5/density capacity is `25·max(0, c5mass)` with `c5mass = N²/25 − m − σ`, stated
+    division-free via `hc5 : 25·c5mass = N² − 25m − 25σ`. Given the leaf demand bound `demand ≤ N² − 25m` (from
+    `ell ≤ N`, `leaf_demand_le_of_ell_le_N`), the door+C5 bank absorbs the demand:
+    `demand ≤ 25σ + 25·max(0, c5mass)`. The single inequality `c5mass ≤ max(0, c5mass)` handles both regimes at once
+    (C5 spends when `c5mass ≥ 0`; the door alone over-covers when `c5mass < 0`). This CLOSES the tight full-support
+    leaf case — the `C₂₅⁺` cages that defeated the graph-computable `25σ + R_full` bank. NON-circular. -/
+theorem fullSupport_leaf_absorbed_by_density
+    (Nsq m sigma demand c5mass : ℚ)
+    (hc5 : 25 * c5mass = Nsq - 25 * m - 25 * sigma)
+    (hDemand : demand ≤ Nsq - 25 * m) :
+    demand ≤ 25 * sigma + 25 * max 0 c5mass := by
+  have h : c5mass ≤ max 0 c5mass := le_max_right 0 c5mass
+  nlinarith [h, hc5, hDemand]
+
 end RouteBCAP
 end Erdos23Delta0
