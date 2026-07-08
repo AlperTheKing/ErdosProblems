@@ -1,0 +1,8 @@
+  F2(4): n=40 edges=60 tri-free OK
+    flip-stable (nec-only): base cut verified stable under singles+pairs+blocks
+    [nec-only] Gamma-min=300 (of 1 B-conn maxcuts) N^2=1600 | ells=[5] |S|=12 |F|=48 |O|=0 sigma=36 HALL=True
+  >> F2(4) VERDICT D: primal cover+Door cert (fam 824, ext~0.000, exact=True ext=0); Hall=True Gamma=300/1600 [nec-only]
+  F2(6): n=60 edges=90 tri-free OK
+    flip-stable (nec-only): base cut verified stable under singles+pairs+blocks
+    [nec-only] Gamma-min=450 (of 1 B-conn maxcuts) N^2=3600 | ells=[5] |S|=18 |F|=72 |O|=0 sigma=54 HALL=True
+  >> F2(6) VERDICT D: primal cover+Door cert (fam 1836, ext~0.000, exact=True ext=0); Hall=True Gamma=450/3600 [nec-only]

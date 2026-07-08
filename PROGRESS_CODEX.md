@@ -29867,3 +29867,5 @@
 2026-07-08T19:00:37Z OK ATTACK | DID: Launched d8 s88891 p768ext w40 and d9 s77773 p384_r2 w24. | RESULT: summaries pending. | D: wait exact replays
 2026-07-08T19:00:57Z OK VERIFY | DID: Verified replay worker allocation. | RESULT: d8_s88891=40, d9_s77773=24. | D: poll summaries
 2026-07-08T19:03:59Z > VERIFY | NEXT: Inspect current repo state, chart-tail artifacts, Lean gap files, and coordination mailbox after user reports Fable-5 handoff.
+2026-07-08T19:04:32Z OK VERIFY | DID: Inspected repo/mailbox for Fable-5 handoff context. | RESULT: 106/108; Lean gap#1 impure balanced neutral ell=5 lens; d8/d9 replays running. | D: prepare general goal
+2026-07-08T19:05:06Z OK VERIFY | DID: Checked active exact replay status before handoff note. | RESULT: d8_s88891=39,d9_s77773=24,summary files absent. | D: goal handoff
