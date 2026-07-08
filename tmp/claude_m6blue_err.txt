@@ -1,0 +1,13 @@
+RC=0 sec=23.7
+=OUT=
+'Erdos23Delta0.M6BlueConnectivity.deltaB_blueComponent_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.M6BlueConnectivity.badEdge_mem_deltaM_of_not_reachable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.M6BlueConnectivity.maxCut_badEdge_blueReachable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.M6BlueConnectivity.exists_maxCut_argmin_bconnected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+

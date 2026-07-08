@@ -1,0 +1,5 @@
+F5 incidence lift: minimal 4-uniform Hall-deficient cores -> P4 realizability
+==========================================================================================
+|F|=5: 0 minimal Hall-deficient cores (|R|=6)
+   lifted (path-consistent): 0 | realized (simple+bipartite+tri-free): 0 | fails: {}
+|F|=6: 6435 minimal Hall-deficient cores (|R|=7)
