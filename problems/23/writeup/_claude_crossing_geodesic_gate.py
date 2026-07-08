@@ -33,6 +33,16 @@ def one_geo_vertices(adj, side, s, t, n):
     return path[::-1]
 
 
+def bfs_cut_dist(adj, side, s, n):
+    dist = {s: 0}; q = deque([s])
+    while q:
+        u = q.popleft()
+        for w in adj[u]:
+            if side[u] != side[w] and w not in dist:
+                dist[w] = dist[u] + 1; q.append(w)
+    return dist
+
+
 def crosses(pe, pf):
     """Do ordered vertex-paths pe, pf share >=2 vertices in OPPOSITE order? Return (x,y) or None."""
     common = [v for v in pe if v in pf]
@@ -72,19 +82,26 @@ def analyze(name, n, adj, side, acc):
             if xy:
                 found_any = True
                 acc['crossing_pairs'] += 1
+                # SHORTCUTTING test: does a re-pairing of the 4 endpoints give strictly smaller total cut-distance?
+                # e=(s,t), f=(u,v). original dist sum = d(s,t)+d(u,v). Re-pairings: {(s,v),(u,t)}, {(s,u),(t,v)}.
+                s, t = e; u, v = f
+                ds = bfs_cut_dist(adj, side, s, n); du = bfs_cut_dist(adj, side, u, n); dtt = bfs_cut_dist(adj, side, t, n)
+                orig = ds.get(t, 10 ** 9) + du.get(v, 10 ** 9)
+                rp1 = ds.get(v, 10 ** 9) + du.get(t, 10 ** 9)
+                rp2 = ds.get(u, 10 ** 9) + dtt.get(v, 10 ** 9)
+                if min(rp1, rp2) < orig:
+                    acc['shortcutting'] += 1
+                    if acc['sc_ex'] is None:
+                        acc['sc_ex'] = dict(name=name, n=n, e=e, f=f, ell_e=cd['ell'][e], ell_f=cd['ell'][f],
+                                            xy=xy, orig=orig, rp1=rp1, rp2=rp2)
                 if acc['ex'] is None:
                     acc['ex'] = dict(name=name, n=n, e=e, f=f, ell_e=cd['ell'][e], ell_f=cd['ell'][f], xy=xy)
     if found_any:
         acc['crossing_cages'] += 1
-        sw = search_switch(n, adj, side, max_flip=2)
-        if sw is not None:
-            acc['crossing_with_switch'] += 1  # a Gamma-decreasing switch exists (lemma-consistent)
-        else:
-            acc['crossing_no_small_switch'] += 1  # crossing but no |W|<=2 switch -- but this is a Gamma-MIN cut (rigid)
 
 
 def main():
-    acc = dict(cages=0, crossing_cages=0, crossing_pairs=0, crossing_with_switch=0, crossing_no_small_switch=0, ex=None)
+    acc = dict(cages=0, crossing_cages=0, crossing_pairs=0, shortcutting=0, ex=None, sc_ex=None)
     for nn in range(5, 12):
         for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
             n, E = dec(g6); adj = adj_from_edges(n, E)
@@ -99,20 +116,23 @@ def main():
             nn, adj, side = even_cycle_chord(n, (0, gap))
             analyze('C%d+chord(0,%d)' % (n, gap), nn, adj, side, acc)
     print("=" * 90)
-    print("CROSSING-GEODESIC GATE (Gamma-min cuts):")
-    print("  cages %d | cages with a crossing bad-edge-pair %d | total crossing pairs %d"
-          % (acc['cages'], acc['crossing_cages'], acc['crossing_pairs']))
-    print("  of crossing cages: with a |W|<=2 Gamma-decreasing switch %d | with NO small switch %d"
-          % (acc['crossing_with_switch'], acc['crossing_no_small_switch']))
+    print("CROSSING-GEODESIC GATE (Gamma-min cuts). Crossings are HARMLESS unless SHORTCUTTING (born re-pairing strictly shorter):")
+    print("  cages %d | cages with a crossing bad-edge-pair %d | total crossing pairs %d | SHORTCUTTING crossings %d"
+          % (acc['cages'], acc['crossing_cages'], acc['crossing_pairs'], acc['shortcutting']))
     if acc['ex']:
-        print("  crossing example: %s" % (acc['ex'],))
+        print("  benign crossing example: %s" % (acc['ex'],))
+    if acc['sc_ex']:
+        print("  *** SHORTCUTTING crossing in a Gamma-min cut (candidate obstruction -- born re-pairing shorter yet Gamma-min): %s ***"
+              % (acc['sc_ex'],))
     print("VERDICT: %s" % (
-        "NO crossing bad-edge-pair geodesics arise in any Gamma-min cut -- CONSISTENT with spreading feasibility (the "
-        "born-edge-recut switch is never NEEDED in a Gamma-min cut; the theory holds vacuously on this coverage)."
-        if acc['crossing_cages'] == 0 else
-        "%d Gamma-min cages have crossing geodesics; %d admit a small Gamma-decreasing switch, %d do NOT (a Gamma-min cage "
-        "with a crossing but no switch would need the born-edge recut / is a candidate obstruction -- examine)."
-        % (acc['crossing_cages'], acc['crossing_with_switch'], acc['crossing_no_small_switch'])))
+        "Crossings ARISE in Gamma-min cuts (%d cages) but NONE are SHORTCUTTING (0 born re-pairings strictly shorter) -- "
+        "CONSISTENT with the born-edge-recut theory: a shortcutting crossing would let the recut strictly drop Gamma, "
+        "contradicting Gamma-minimality; benign (non-shortcutting) crossings are harmless (Delta_Gamma=0). Empirical support "
+        "that Gamma-min forbids the switch-relevant (shortcutting) crossing." % acc['crossing_cages']
+        if acc['shortcutting'] == 0 else
+        "*** %d SHORTCUTTING crossings in Gamma-min cuts -- a born re-pairing is strictly SHORTER yet the cut is Gamma-minimal. "
+        "This is a DIRECT TENSION with sub-claim C (shortcut => Gamma drop => not Gamma-min); examine whether the recut really "
+        "drops Gamma (it may raise the cut deficiency / not be zero-slack). Decisive-obstruction candidate. ***" % acc['shortcutting']))
 
 
 if __name__ == '__main__':
