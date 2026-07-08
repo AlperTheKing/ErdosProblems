@@ -264,3 +264,17 @@ geodesic laminar arrangement; enumerate intervals W; check sigma/conn/DeltaGamma
 DECISIVE OBSTRUCTION; every infeasible non-Gamma-min shell producing W + no Gamma-min shell infeasible = the exact empirical theorem.
 STRATEGIC: gap#1 is a genuine HARD open research theorem (the global laminar-switch, close to the conjecture's heart), NOT
 closeable with current techniques for the global case -- likely a substantial (multi-round/month) problem. Documented open core.
+
+## GPT-Pro reply 14 (2026-07-08) -- G1 structure. BLUNT: G1 is NOT automatic from LP duality.
+The missing proof is an UNCROSSING theorem for dual-tight shortest rows. G1 milestone =
+  DualTightGeodesicUncrossing: crossing y-tight geodesics can be UNCROSSED without increasing y-cost, UNLESS they already
+  expose a base leaf or a Gamma-decreasing zero-slack switch. If proved, G1 follows by a crossing-minimal tight-geodesic
+  representation of the dual obstruction. (Spreading LP: q_e = ell(e)^2/(ell(e)-1); rows spread over all shortest geodesics.)
+The HARDEST part of the whole switch theorem is still likely G4 (controlled global Gamma effect after the switch). G1 nontrivial.
+
+### DEFINITIVE OPEN-CORE MAP (2026-07-08): gap#1 = ReducedNonBaseGeodesicHall = the global Gamma-decreasing SWITCH theorem,
+decomposed into: G1 DualTightGeodesicUncrossing (nontrivial, the entry point) -> G2 balancedness sigma(W)=0 -> G3 B^W connected
+-> G4 controlled global Gamma effect (the HARDEST). Generalizes S1 first-split (= local theta instance). Each of G1-G4 is
+genuine hard research; G4 is the crux. FORMALIZED base cases (8 axiom-clean). Empirically bulletproof (71820 cages incl C5[t]).
+CONCLUSION: gap#1 is a multi-month research problem; the full 4-conjunct proof is not closeable in an autonomous run.
+This is the honest documented end-state of the whole-day gap#1 arc. P(gap#1 math)~50; P(full Lean)~12-20.
