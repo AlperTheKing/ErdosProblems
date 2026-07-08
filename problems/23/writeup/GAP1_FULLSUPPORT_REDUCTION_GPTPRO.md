@@ -299,6 +299,29 @@ Gamma(B^W)<Gamma(B) by EXACT ell recomputation. If such W always exists for dual
 the exact empirical theorem. CAVEAT: dual obstructions don't arise in Gamma-min cuts (spreading feasible) => needs over-
 congested/N>=23 configs to run on (the same testing wall). gap#1 crux = StableGain-controlled pair-door recut (G4), multi-month.
 
+### 6-ANGLE ADVERSARIAL WORKFLOW (13 agents, 954k tok) -- SHARPENS the crux to R-A (balanced-door forcing). The arc CLOSES onto the pair-door.
+NO counterexample. Findings:
+- (D) base-leaf cutoff PROVEN EXACT: q(ell)=ell^2/(ell-1) <= 25 iff ell <= 23 (roots 1.04, 23.96; q23=24.045, q25=26.04);
+  ell>=25 over-capacity => forced base leaf. [= Claude's formalized atom_sq_le_25_shortAtom.]
+- (C) strict Gamma-drop is FALSE as a general statement -- KEY INSIGHT: two crossing y-tight geodesics share equal arcs of
+  length d=d(x,y); the endpoint-swap drops TOTAL alternating length by exactly 2d, BUT Gamma=sum ell^2 is CONVEX, so a length
+  drop != a Gamma drop. An ASYMMETRIC crossing RAISES Gamma: dGamma=+104 at arms (11,2,2,11,1); +48 at (13,13)->(19,5). The
+  recut works ONLY for BALANCED crossings => the {L,L+2}->[L,L] door, dGamma=-(4L+4)<0 (verified L=5..23).
+- (A)/(B) the naive endpoint-swap W={s,u} is REFUTED (breaks max-cut in 77% of census crossings; born pairs are non-edges in
+  ~78-90%; independently confirms Claude's retraction + GPT-Pro). Correct W = the LENS = symmetric difference of the odd cycles
+  C_e=P_e+e, C_f=P_f+f. delta_cut=0 <=> balanced boundary of the lens (=GPT-Pro G2, existence OPEN).
+- *** THE WHOLE LEMMA REDUCES TO ONE PRIMITIVE R-A (balanced-door forcing): in a Gamma-min connected max cut of a triangle-
+  free (odd-girth>=5) non-base shell (all ell<=23), every Y-TIGHT crossing (delta_cut=0 lens) has BALANCED born lengths
+  a^2+b^2 < ell(e)^2+ell(f)^2 -- i.e. is forced into the {L,L+2}->[L,L] door -- never the long-arm-absorbing profile. ***
+- *** THE ARC CLOSES: R-A's balanced door with dGamma=-(4L+4) IS the pairTypeBTheta_gammaDrop_pos / {L,L+2} pair-door recut
+  from the session's OPENING Route-B work. gap#1's global crux = the pair-door/annular {L,L+2} door forcing, now under
+  y-tightness + Gamma-minimality (the S1/S2 pair-door machinery, generalized). ***
+- DECISIVE OBSTRUCTION GATE: enumerate Gamma-min cuts with >=2 bad edges ell in [13,23], N>=23; for each delta_cut=0
+  opposite-order crossing compute born cut-path lengths via the LENS W and test a^2+b^2 < ell(e)^2+ell(f)^2. ONE unbalanced
+  y-tight crossing in a real Gamma-min graph = DECISIVE OBSTRUCTION. Untested: census stops at N<=11 (only ell=5). CORRECTION:
+  the C5[t] 'no crossing' claim is FALSE (C5[t] Gamma-min cuts DO cross, Gamma-neutrally + non-y-tightly) -- keep only the
+  y-tightness qualifier. gap#1 crux = R-A (y-tight crossing => balanced {L,L+2} door), decisively gateable at N>=23.
+
 ## GPT-Pro reply 15 (2026-07-08) -- G1 COLLAPSES INTO G4. The switch theorem is MONOLITHIC.
 BLUNT: DualTightGeodesicUncrossing (G1) in the fixed-commodity form is NOT provable and is the WRONG milestone. Standard
 path uncrossing either (1) preserves endpoints but doesn't remove the order-crossing, OR (2) removes the crossing by
