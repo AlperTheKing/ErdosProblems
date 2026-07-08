@@ -29896,3 +29896,25 @@
 2026-07-08T19:18:30Z OK VERIFY | DID: Found live F5 lift artifact. | RESULT: claude_f5_lift_out.txt reports |F|=5 no cores; |F|=6 has 6435 cores in progress. | D: do not duplicate F5
 2026-07-08T19:19:56Z OK VERIFY | DID: Waited 60s and re-polled d8/d9/F5 artifacts. | RESULT: d8/d9 summaries absent; codex_mod_prime_solve count=24; F5 still at |F|=6 cores. | D: keep waiting
 2026-07-08T19:22:20Z OK VERIFY | DID: Waited 120s and re-polled d8/d9/F5 artifacts. | RESULT: d8/d9 summaries absent; codex_mod_prime_solve count=24; python count=29; F5 still at |F|=6. | D: infer d8 reconstruction
+2026-07-08T19:24:16Z OK VERIFY | DID: Classified d8 s88891 p768 exact replay. | RESULT: reconstructed=true residuals=0 solution_negative_count=2055. | D: degenerate seed, retry d8
+2026-07-08T19:25:21Z > ATTACK | NEXT: Launch fresh k8/d8 random-seed core extraction stop-after-core to escape degenerate exact bases.
+2026-07-08T19:25:21Z OK ATTACK | DID: Launched k8/d8 s246813 stop-after-core extraction. | RESULT: pid=75180, summary=tmp/eq_odl1_rung2_pipeline_k8_d8_patch600_s246813_codex_cpp23.json. | D: wait core
+2026-07-08T19:28:42Z OK VERIFY | DID: Polled active d8-core/d9/F5 jobs. | RESULT: d8 core child active; d9 summary absent with 24 native workers; F5 still |F|=6. | D: wait
+2026-07-08T19:38:23Z OK VERIFY | DID: Read new Claude 19:22Z mailbox note. | RESULT: M6_GOODCUT_PROVIDER_GPTPRO.md and M6BlueConnectivity.lean landed green; L3 wall remains. | D: continue d8/d9
+2026-07-08T19:50:11Z > VERIFY | NEXT: Read Claude mailbox and inspect current k8/d8,k8/d9 artifacts/processes before choosing harvest or Clarabel pivot.
+2026-07-08T19:50:35Z OK VERIFY | DID: Read mailbox and current chart-tail artifacts/processes. | RESULT: d9 s77773 p384 summary exists; d8 s246813 core extraction still active; F5 python active. | D: inspect d9 summary
+2026-07-08T19:51:05Z OK VERIFY | DID: Inspected d9 s77773 p384 exact summary. | RESULT: reconstructed=false partial=4742/7500 primes=384 seconds=2845.6. | D: extend d9 CRT
+2026-07-08T19:51:26Z > ATTACK | NEXT: Extend k8/d9 s77773 CRT from 384 to 768 primes with 48 native workers.
+2026-07-08T19:51:47Z OK ATTACK | DID: Launched k8/d9 s77773 p768 CRT extension. | RESULT: pid=72888 workers=48 summary=tmp/eq_odl1_rung2_modular_k8_d9_patch600_s77773_p768_r2_w48.json. | D: inspect Clarabel path
+2026-07-08T19:52:18Z FAIL ATTACK | DID: Tried detached k8/d9 p768 CRT extension. | RESULT: WinError 5 creating multiprocessing Pipe; no summary written. | D: rerun attached
+2026-07-08T19:56:31Z OK VERIFY | DID: Waited for k8/d8 s246813 stop-after-core extraction to finish. | RESULT: attached session exited. | D: inspect d8 extraction artifacts
+2026-07-08T19:56:56Z OK VERIFY | DID: Inspected d8 s246813 extraction artifact. | RESULT: core .tmp written; export failed only at os.replace WinError5. | D: salvage tmp core
+2026-07-08T19:57:19Z > ATTACK | NEXT: Copy salvaged d8 s246813 core and launch d8/d9 exact CRT solves with 39/24 workers.
+2026-07-08T19:57:55Z FAIL ATTACK | DID: Launched d8/d9 CRT in parallel. | RESULT: d8 pool creation WinError5; d9 session active. | D: retry d8 after d9 pool established
+2026-07-08T19:58:08Z FAIL ATTACK | DID: Retried attached modular CRT pool creation. | RESULT: d8 and d9 both WinError5 at multiprocessing.Pipe before primes solved. | D: switch to no-ProcessPool runner
+2026-07-08T19:58:24Z > ATTACK | NEXT: Add ThreadPool native-prime modular runner to avoid Windows ProcessPool Pipe failures.
+2026-07-08T19:59:25Z OK ATTACK | DID: Added ThreadPool native-prime CRT runner. | RESULT: tmp/codex_modular_solve_cpp_threads.py | D: syntax-check and run
+2026-07-08T19:59:40Z FAIL VERIFY | DID: Ran py_compile on thread CRT runner. | RESULT: WinError5 pycache rename; no syntax result. | D: in-memory compile
+2026-07-08T19:59:50Z OK VERIFY | DID: In-memory syntax-checked thread CRT runner. | RESULT: syntax_ok. | D: launch thread CRT solves
+2026-07-08T20:00:12Z OK ATTACK | DID: Launched thread CRT solves for d8 and d9. | RESULT: d8_session=47611 workers=39; d9_session=44985 workers=24. | D: monitor summaries
+2026-07-08T20:20:27Z OK VERIFY | DID: Monitored thread CRT solves. | RESULT: d8 p384 checkpoint written; no reconstruction yet; second wave active; native count=63. | D: wait p768

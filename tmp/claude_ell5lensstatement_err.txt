@@ -1,0 +1,111 @@
+RC=0 sec=78.0
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:57:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.blueGraph_adj_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:62:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.edgeCut_eq_true_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:68:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.edgeCut_eq_false_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:74:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.edgeBoundary_eq_true_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:81:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.mem_deltaM_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:88:59: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [hc̵,̵ ̵h̵b]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:88:63: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp [hc,̵ ̵h̵b̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:91:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.mem_deltaB_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:98:59: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [hc̵,̵ ̵h̵b]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:98:63: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp [hc,̵ ̵h̵b̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5LensStatement.lean:111:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5LensStatement.ell_eq_five_iff_dist_eq_four`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.Ell5LensStatement.blueGraph_adj_iff' depends on axioms: [propext, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.edgeCut_eq_true_iff' depends on axioms: [propext, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.edgeCut_eq_false_iff' depends on axioms: [propext, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.edgeBoundary_eq_true_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.mem_deltaM_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.mem_deltaB_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.mem_blueGraph_edgeFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.ell_eq_five_iff_dist_eq_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.SharedSupportPair.supportA_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.BalancedNeutralLens.balanced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.BalancedNeutralLens.pairA_adj' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.BalancedNeutralLens.pairA_bad' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.pure_lens_impossible_in_minNeg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.dichotomy_of_pure_and_impure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.lens_dichotomy_kills_minimal_violator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5LensStatement.minimal_violator_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+

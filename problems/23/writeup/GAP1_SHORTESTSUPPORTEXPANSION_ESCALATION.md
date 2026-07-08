@@ -10,6 +10,12 @@ impure-lens framing of GAP1_IMPURE_LENS_ESCALATION_BRIEF.md (that path is resolv
 > exact-verified, and the open core is a single certificate-existence theorem with a FINITE Farkas-dual falsifier
 > criterion. §6's angle list is superseded by §8. Full detail: `GAP1_SSE_RELAXEDCUTCOVER_GPTPRO.md`.
 
+> **⚠⚠ 2026-07-08 LATE CORRECTION — THE §1 BARE FORM IS FALSE.** A triple-verified 24-vertex counterexample
+> (dead-end table, last row) shows `|S| ≤ |E_short(S)|` FAILS at a genuine unique Γ-min max cut of a real
+> triangle-free graph. **Attack ONLY the FullBankHall/banked form** (`Demand ≤ DoorCap + VertexSlackCap +
+> C5BaseCap + PruneCap`, equivalently `BankedCutDomination`, compiled as a named Prop in
+> `BankedCutDominationCore.lean`). The definitive current deliverable + task list: `LENS_LEMMA_HANDOFF_CODEX.md`.
+
 ## 1. THE THEOREM (attack this directly)
 
 > **ShortestSupportExpansion.** In a reduced triangle-free Γ-minimal **maximum** cut, for every set `S` of ell=5 atoms
@@ -69,7 +75,8 @@ So the remaining content is exactly the **general-`|S|` expansion** (the base ca
 | `m·Q ≤ T²` (Cauchy–Schwarz) | sufficient, NOT necessary (sunflower breaks it, Hall holds). |
 | S1ThetaPattern via Γ-decrease | FALSE — balanced ell=5 theta is Γ-NEUTRAL. |
 | medium-band BCL bypass | deficiency = length-square density ≠ edge-density; lemmas as hard as original. |
-| unit odd-cycle packing mirror (+factor-4, +Guenin) | **FALSE** (2026-07-08) — exact 18-vtx CE: Γ-min max cut, two unique-geodesic ell=5 atoms share edge a-b ⟹ t*=2>1 while Hall holds 2≤7; census N=9 t*=2.0 independently; factor-4 dead (8>7); restricted geodesic-cycle family ≠ odd-cycle clutter, obstruction is a shared-edge theta not odd-K5. b-matching Hall target itself untouched. |
+| unit odd-cycle packing mirror (+factor-4, +Guenin) | **FALSE** (2026-07-08) — exact 18-vtx CE: Γ-min max cut, two unique-geodesic ell=5 atoms share edge a-b ⟹ t*=2>1 while Hall holds 2≤7; census N=9 t*=2.0 independently; factor-4 dead (8>7); restricted geodesic-cycle family ≠ odd-cycle clutter, obstruction is a shared-edge theta not odd-K5. |
+| **BARE SSE itself** (`|S| ≤ |E_short(S)|` from tri-free + max-cut + Γ-min + K2-comp alone) | **FALSE** (2026-07-08, LANDMARK) — exact 24-vtx CE (K33 cluster + double-star waist + 6-layer anchor web, 71 edges): UNIQUE max cut 62 (⟹ Γ-min), 9 ell=5 atoms with unique geodesics, E_short = 8 double-star edges, **9 > 8**. Triple-verified (2 workflow codes + Claude 3rd impl, 2^23 exhaustive, `_claude_verify_24vtx_ce.py`). The 0/71910 battery was a census-size artifact (min violating N ∈ 11..24). **Only the BANKED form survives** (this CE: deficit 25 ≪ DoorCap; Γ=225 ≤ 576 — conjecture-consistent). The §1 theorem below must be read in its FullBankHall form ONLY; the lens route alone is insufficient (this violator is lens-free: all 9 atoms share ONE unique geodesic). |
 
 ## 6. Genuinely untried angles for the DIRECT attack
 
