@@ -1,0 +1,8 @@
+RC=0 sec=17.4
+=OUT=
+'Erdos23Delta0.NeutralLensLedger.no_ledgerSep_in_minNeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.NeutralLensLedger.book_of_book_or_ledgerSep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.NeutralLensLedger.no_balanced_neutral_lens_of_dichotomy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+

@@ -113,11 +113,24 @@ theorem deltaM_card_le_deltaB_card (s : V → Bool) (U : Finset V) (hmax : IsMax
   have hid := cutVal_flip_add_deltaB_card G s U
   omega
 
+/-- **Improving flip refutes maximality** (contrapositive of the vertex inequality). If some vertex set `U` has strictly
+    more boundary bad edges than boundary cut edges — `|δ_B(U)| < |δ_M(U)|`, an improving flip — then `s` is NOT a
+    maximum cut. This is the maximality lever for the gap#1 escaping-atom argument: an escaping atom that produces such a
+    `U` cannot occur at a maximum cut, so at a max cut the balanced-neutral lens has no escaping atom (its escape closure
+    is proper), and `NeutralLensLedger.no_ledgerSep_in_minNeg` then closes it. (Pending: the graph lemma
+    "escaping atom ⟹ ∃ such `U`".) -/
+theorem not_isMaxCut_of_improving_flip (s : V → Bool) (U : Finset V)
+    (h : (deltaB G s U).card < (deltaM G s U).card) : ¬ IsMaxCut G s := by
+  intro hmax
+  have := deltaM_card_le_deltaB_card G s U hmax
+  omega
+
 end Graph
 
 #print axioms bcount_xor_add_bcount_and
 #print axioms edgeCut_flip
 #print axioms deltaM_card_le_deltaB_card
+#print axioms not_isMaxCut_of_improving_flip
 
 end MaxCutVertexIneq
 end Erdos23Delta0
