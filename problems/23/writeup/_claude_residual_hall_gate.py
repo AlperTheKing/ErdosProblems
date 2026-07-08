@@ -123,6 +123,75 @@ def even_cycle_chord(n, chord):
     return n, adj_from_edges(n, E), [i % 2 for i in range(n)]
 
 
+try:
+    from scipy.optimize import linprog
+    import numpy as np
+    HAVE_SCIPY = True
+except Exception:
+    HAVE_SCIPY = False
+
+DOOR = 25  # one door token per bad edge (25*sigma proxy); ambient/R[v] pays the rest
+
+
+def stage2_support_hall(n, cd):
+    """STAGE 2: route each bad edge's rem = max(0, ell^2-25-DOOR) to vertex banks cap=R[v], ONLY to v notin V_e
+    (support restriction = GPT-Pro failure mode 2). Max-flow feasibility (LP). Returns (feasible, detail)."""
+    M, ell, p, R = cd['M'], cd['ell'], cd['p'], cd['R']
+    edges = []
+    for e in M:
+        rem = ell[e] ** 2 - 25 - DOOR
+        if rem > 0:
+            edges.append((e, F(rem)))
+    if not edges:
+        return True, 'no long atoms'
+    if not HAVE_SCIPY:
+        return None, 'no scipy'
+    Ve = {e: set(v for v in range(n) if p[e][v] > 0) for e, _ in edges}
+    # variables q(e,v) for v notin V_e AND R[v] > 0
+    var = []
+    for ei, (e, rem) in enumerate(edges):
+        for v in range(n):
+            if v not in Ve[e] and R[v] > 0:
+                var.append((ei, v))
+    idx = {kv: i for i, kv in enumerate(var)}
+    if not var:
+        return False, 'atoms have no eligible ambient bank'
+    nv = len(var)
+    A_eq = np.zeros((len(edges), nv)); b_eq = np.zeros(len(edges))
+    for ei, (e, rem) in enumerate(edges):
+        b_eq[ei] = float(rem)
+        has = False
+        for v in range(n):
+            if (ei, v) in idx:
+                A_eq[ei, idx[(ei, v)]] = 1.0; has = True
+        if not has:
+            return False, ('edge %s (rem %s) has no ambient bank' % (e, rem))
+    A_ub = np.zeros((n, nv)); b_ub = np.zeros(n)
+    for v in range(n):
+        b_ub[v] = float(R[v])
+        for ei, (e, rem) in enumerate(edges):
+            if (ei, v) in idx:
+                A_ub[v, idx[(ei, v)]] = 1.0
+    res = linprog(c=np.zeros(nv), A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=[(0, None)] * nv, method='highs')
+    return bool(res.success), ('feasible' if res.success else ('INFEASIBLE: %d long edges, maxell=%d' % (len(edges), max(ell.values()))))
+
+
+def check_stage2(name, n, adj, side, acc2):
+    if not Bconn(n, adj, side):
+        return
+    if not any(side[a] == side[b] for a in range(n) for b in adj[a] if a < b):
+        return
+    cd = residuals(n, adj, side)
+    if cd is None:
+        return
+    acc2['cages'] += 1
+    feas, detail = stage2_support_hall(n, cd)
+    if feas is False:
+        acc2['infeasible'] += 1
+        if acc2['ex'] is None:
+            acc2['ex'] = (name, n, detail, cd['ell'])
+
+
 def main():
     ok, info = validate_k2t_model()
     print("K2 machinery self-validation vs K2T table:", "PASS" if ok else "FAIL", info)
@@ -149,6 +218,26 @@ def main():
         print("  *** R[u]<0 EXAMPLE: %s ***" % (acc['ex'],))
     print("VERDICT: %s" % ("R[u]>=0 holds on ALL %d Gamma-min cages (proven residual-sign lemma reproduced; K2 machinery validated) -- foundation for the support-restricted Hall gate"
                            % acc['cages'] if acc['Rneg'] == 0 else "R[u]<0 on %d cages -- SCOPE/BUG to investigate (contradicts the proven lemma)" % acc['Rneg']))
+    print()
+    print("STAGE 2: support-restricted Hall (route rem=max(0,ell^2-25-25) to vertex banks R[v], only v notin V_e; scipy=%s):" % HAVE_SCIPY)
+    acc2 = dict(cages=0, infeasible=0, ex=None)
+    for nn in range(5, 12):
+        for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
+            n, E = dec(g6); adj = adj_from_edges(n, E)
+            best = gmin(n, adj, maxcut_all(n, adj))
+            if best is None:
+                continue
+            check_stage2('cen%d' % nn, n, adj, best[0], acc2)
+        print("  census N=%d: cages %d, INFEASIBLE %d" % (nn, acc2['cages'], acc2['infeasible']), flush=True)
+    for n in [18, 22, 26, 30]:
+        for gap in range(4, n // 2 + 1):
+            nn, adj, side = even_cycle_chord(n, (0, gap))
+            check_stage2('C%d+chord(0,%d)' % (n, gap), nn, adj, side, acc2)
+    print("  cages checked: %d | support-restricted-Hall INFEASIBLE: %d" % (acc2['cages'], acc2['infeasible']))
+    if acc2['ex']:
+        print("  *** INFEASIBLE (support-restricted Hall fails -- decisive-obstruction candidate): %s ***" % (acc2['ex'],))
+    print("STAGE-2 VERDICT: %s" % ("support-restricted Hall FEASIBLE on ALL %d Gamma-min cages (door+R[v]-ambient absorbs, respecting v notin V_e) -- strong support for PositiveSlackHallPrefix_FullBank"
+                                  % acc2['cages'] if acc2['infeasible'] == 0 else "INFEASIBLE on %d Gamma-min cages -- failure mode 2 (wrong location) REALIZED; investigate (decisive-obstruction candidate)" % acc2['infeasible']))
 
 
 if __name__ == '__main__':
