@@ -40,6 +40,29 @@ def build_f1(p, q, rX, rY):
     return 'F1(%d,%d;g%d,%d)' % (p, q, rX, rY), names, cut, bad, side, blocks
 
 
+def build_f4(n, gpr):
+    """Circulant short-row shell: blue 2n-cycle (r_i red, b_i blue; cut r_i-b_i, b_i-r_{i+1}),
+    bads r_i - r_{i+2 mod n} (n != 6 to stay tri-free), gpr blue leaf guards per r_i."""
+    assert n >= 5 and n != 6
+    names = []
+    def add(v): names.append(v); return len(names) - 1
+    Rv = [add('r%d' % i) for i in range(n)]
+    Bv = [add('b%d' % i) for i in range(n)]
+    Gv = {(i, t): add('g%d_%d' % (i, t)) for i in range(n) for t in range(gpr)}
+    side = [0] * len(names)
+    for v in Bv: side[v] = 1
+    for g in Gv.values(): side[g] = 1
+    cut = []
+    for i in range(n):
+        cut.append((Rv[i], Bv[i]))
+        cut.append((Bv[i], Rv[(i + 1) % n]))
+    for (i, t), g in Gv.items():
+        cut.append((Rv[i], g))
+    bad = sorted(set((min(Rv[i], Rv[(i + 2) % n]), max(Rv[i], Rv[(i + 2) % n])) for i in range(n)))
+    blocks = [set(Rv), set(Rv[0::2]), set(Rv) | set(Bv[0::2])]
+    return 'F4(%d;g%d)' % (n, gpr), names, cut, bad, side, blocks
+
+
 def build_f2(k):
     names = []
     def add(v): names.append(v); return len(names) - 1
@@ -328,12 +351,10 @@ def main():
         print("  >> %s VERDICT %s: %s" % (name, verdict, msg), flush=True)
     print("RCC FAMILY HARNESS v2: guard-corrected F1 + F2 necklace | chunked maxcut n<=27 | A-E")
     print("=" * 100)
-    for (p, q) in [(2, 2), (3, 2), (3, 3)]:
-        analyze(*build_f1(p, q, rX=q, rY=p), report)
-    for (p, q, rX, rY) in [(3, 3, 4, 4)]:
-        pass  # n=31 > 27; enable in v3 nec-only if needed
-    for k in [2, 3]:
-        analyze(*build_f2(k), report)
+    for n in [5, 7, 9]:
+        for gpr in [0, 1, 2]:
+            if 2 * n + n * gpr <= 27:
+                analyze(*build_f4(n, gpr), report)
     print("=" * 100)
     for r in results:
         print("   %-16s %-8s %s" % r)

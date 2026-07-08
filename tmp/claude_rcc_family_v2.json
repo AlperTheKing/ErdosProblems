@@ -1,42 +1,72 @@
 [
  [
-  "F1(2,2;g2,2)",
+  "F4(5;g0)",
   "A",
-  "declared cut 14 < max 17 (guards insufficient); analyzing true Gamma-min max cut anyway"
+  "declared cut 10 < max 12 (guards insufficient); analyzing true Gamma-min max cut anyway"
  ],
  [
-  "F1(2,2;g2,2)",
+  "F4(5;g0)",
   "D",
-  "primal cover+Door cert (fam 126, ext~2.000, exact=True ext=2); Hall=True Gamma=25/225 [exhaustive]"
+  "primal cover+Door cert (fam 57, ext~0.000, exact=True ext=0); Hall=True Gamma=75/100 [exhaustive]"
  ],
  [
-  "F1(3,2;g2,3)",
+  "F4(5;g1)",
   "A",
-  "declared cut 19 < max 24 (guards insufficient); analyzing true Gamma-min max cut anyway"
+  "declared cut 15 < max 17 (guards insufficient); analyzing true Gamma-min max cut anyway"
  ],
  [
-  "F1(3,2;g2,3)",
+  "F4(5;g1)",
   "D",
-  "primal cover+Door cert (fam 218, ext~1.000, exact=True ext=1); Hall=True Gamma=25/400 [exhaustive]"
+  "primal cover+Door cert (fam 122, ext~4.500, exact=True ext=9/2); Hall=True Gamma=75/225 [exhaustive]"
  ],
  [
-  "F1(3,3;g3,3)",
+  "F4(5;g2)",
   "A",
-  "declared cut 26 < max 34 (guards insufficient); analyzing true Gamma-min max cut anyway"
+  "declared cut 20 < max 22 (guards insufficient); analyzing true Gamma-min max cut anyway"
  ],
  [
-  "F1(3,3;g3,3)",
+  "F4(5;g2)",
   "D",
-  "primal cover+Door cert (fam 388, ext~1.000, exact=True ext=1); Hall=True Gamma=25/729 [exhaustive]"
+  "primal cover+Door cert (fam 217, ext~3.000, exact=True ext=3); Hall=True Gamma=75/400 [exhaustive]"
  ],
  [
-  "F2(2)",
+  "F4(7;g0)",
+  "A",
+  "declared cut 14 < max 16 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F4(7;g0)",
   "D",
-  "primal cover+Door cert (fam 212, ext~0.000, exact=True ext=0); Hall=True Gamma=125/400 [exhaustive]"
+  "primal cover+Door cert (fam 108, ext~0.000, exact=True ext=0); Hall=True Gamma=125/196 [exhaustive]"
  ],
  [
-  "F2(3)",
-  "B",
-  "not simple/tri-free: triangle at (0, 1)"
+  "F4(7;g1)",
+  "A",
+  "declared cut 21 < max 23 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F4(7;g1)",
+  "D",
+  "primal cover+Door cert (fam 233, ext~4.333, exact=True ext=13/3); Hall=True Gamma=125/441 [exhaustive]"
+ ],
+ [
+  "F4(9;g0)",
+  "A",
+  "declared cut 18 < max 22 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F4(9;g0)",
+  "D",
+  "primal cover+Door cert (fam 174, ext~0.000, exact=True ext=0); Hall=True Gamma=125/324 [exhaustive]"
+ ],
+ [
+  "F4(9;g1)",
+  "A",
+  "declared cut 27 < max 31 (guards insufficient); analyzing true Gamma-min max cut anyway"
+ ],
+ [
+  "F4(9;g1)",
+  "D",
+  "primal cover+Door cert (fam 380, ext~3.273, exact=True ext=36/11); Hall=True Gamma=125/729 [exhaustive]"
  ]
 ]
