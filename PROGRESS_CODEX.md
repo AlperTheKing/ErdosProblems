@@ -29861,3 +29861,9 @@
 2026-07-07T14:58:49Z OK VERIFY | DID: Polled replay files after 120s. | RESULT: no d8/d9 summary; d9 seed55579 CRT timestamp updated. | D: inspect live processes
 2026-07-07T14:59:34Z OK VERIFY | DID: Inspected live d9 parent processes. | RESULT: seed55579 stock resume child active plus d8/d9 alternate workers. | D: avoid extra spawn
 2026-07-07T15:03:24Z OK VERIFY | DID: Inspected d9 seed55579 p768 summary. | RESULT: residuals=0, solution_negative_count=2391. | D: discard degenerate seed55579
+2026-07-08T18:59:16Z > VERIFY | NEXT: Read Claude mailbox and inspect current k8/d8,k8/d9 exact replay artifacts after resume.
+2026-07-08T18:59:46Z OK VERIFY | DID: Read Claude mailbox and listed current d8/d9 replay artifacts/processes. | RESULT: Claude latest says d8/d9 still uncertified; no live d8/d9 process listed. | D: classify summaries
+2026-07-08T19:00:21Z > ATTACK | NEXT: Launch d8 seed88891 p768 extension from p384 CRT and relaunch d9 seed77773 p384 rerun under 64 workers.
+2026-07-08T19:00:37Z OK ATTACK | DID: Launched d8 s88891 p768ext w40 and d9 s77773 p384_r2 w24. | RESULT: summaries pending. | D: wait exact replays
+2026-07-08T19:00:57Z OK VERIFY | DID: Verified replay worker allocation. | RESULT: d8_s88891=40, d9_s77773=24. | D: poll summaries
+2026-07-08T19:03:59Z > VERIFY | NEXT: Inspect current repo state, chart-tail artifacts, Lean gap files, and coordination mailbox after user reports Fable-5 handoff.
