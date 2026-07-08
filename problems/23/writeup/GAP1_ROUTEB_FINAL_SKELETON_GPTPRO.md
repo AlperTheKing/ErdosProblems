@@ -634,3 +634,30 @@ cage". PER-INSTANCE gate buildable IF I implement the component/residual machine
 decomposition) -- deep but graph-anchored. My cap=N-T(v) gate = the AMBIENT vertex-level approximation only (missing C5=R_local).
 UNIVERSAL existence = the hardest remaining core (NOT the conjecture; the switch handles negatives). P(gap#1 math) ~45-50
 (a bounded hard core, per-instance checkable, non-circular, not the whole conjecture -- but the universal Hall existence is genuinely hard).
+
+================================================================================
+## LRS does NOT close it + the constructive recipe (GPT-Pro, 2026-07-08) -- gap#1 = genuine open GERSH aggregation core
+================================================================================
+GPT-Pro (sec E): LRS certificate (sum T^2 <= Gamma(N+eta), PROVEN task#16) does NOT prove universal full-bank feasibility.
+"It gives only the weak global consequence Gamma <= N(N+eta) [Cauchy]. It does NOT provide, for every cage/prefix i,
+PrefixDemand(i) <= Door+Ambient+C5+Prune, nor the support-restricted Hall conditions." So the LRS-derivation SHORTCUT is
+CLOSED too. Universal existence of feasible full-bank flows = the remaining GERSH aggregation core, genuinely OPEN.
+
+### FULL CONSTRUCTIVE RECIPE (for the per-instance gate):
+- K2-support component decomposition: from G,B,M,ell_B(e),p_e(v),T(v)=sum_e ell_B(e)*p_e(v), and K2 = the two-support
+  operator ((K2*T)(u)=sum_w K2(u,w)*T(w); K2(u,w)~ co-geodesic-support; T(u)=L => (K2*T)(u)=L^2, R^loc=0). Merge until K2-closed.
+- R_full(X) = sum_{u in V_X} (N*T(u)-(K2*T)(u)); R_local(X) = sum_{u in V_X} (|V_X|*T(u)-(K2_X*T)(u)); identity (K2-closed)
+  R_full(X)=R_local(X)+(N-|V_X|)*T_X; else subtract Cross_X = sum_{u in V_X,w notin V_X} K2(u,w)*T(w).
+- Ambient token X: support V_X, tau=T_X, cap_X(v)=T_X if v notin V_X else 0, total (N-|V_X|)*T_X.
+- C5: R_local(X)=sum_z 25*mass(z), mass>=0 (if R_local<0 the component is locally deficient -> prune/switch, not bank).
+- Door: 25*sigma; Prune: Balance(D) (0 leaf). Max-flow: atoms(demand mu*(8j+24)) -> sinks; feasible => Balance>=0.
+- Checker verifies: atom exactness, sink capacity, token-origin identities, no-double-spend, global reserve ledger identity => non-circular.
+K2*T machinery EXISTS in code (_claude_bank0_component_gate.py + residual files; K2T_INTERVAL_HALL_PROOF_TARGET.md R[u]=N*T(u)-(K2*T)(u)).
+
+### DEFINITIVE FINAL STATE: gap#1 = the GERSH AGGREGATION CORE = universal full-bank flow-cert existence. NON-circular,
+per-instance CHECKABLE (recipe above), NOT equivalent to the whole conjecture (switch handles negatives). ALL SHORTCUTS
+ELIMINATED: door-only (C_18), companion-theta, triangle-free discharging, canonical cap=N-T(v), LRS-derivation. The
+universal existence is a genuine OPEN HARD structural Hall theorem -- the actual remaining GERSH research. Claude's Lean
+has the SOUNDNESS half (cert=>Balance>=0). Building the per-instance K2-component full-bank gate = a large error-prone
+implementation (reuse _claude_bank0_component_gate.py K2 machinery), ultimately BATTERY (universal existence is the proof).
+P(gap#1 math) ~45-50 (a precisely-stated, non-circular, per-instance-checkable open hard theorem, smaller than the conjecture).
