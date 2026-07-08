@@ -278,3 +278,18 @@ decomposed into: G1 DualTightGeodesicUncrossing (nontrivial, the entry point) ->
 genuine hard research; G4 is the crux. FORMALIZED base cases (8 axiom-clean). Empirically bulletproof (71820 cages incl C5[t]).
 CONCLUSION: gap#1 is a multi-month research problem; the full 4-conjunct proof is not closeable in an autonomous run.
 This is the honest documented end-state of the whole-day gap#1 arc. P(gap#1 math)~50; P(full Lean)~12-20.
+
+## GPT-Pro reply 15 (2026-07-08) -- G1 COLLAPSES INTO G4. The switch theorem is MONOLITHIC.
+BLUNT: DualTightGeodesicUncrossing (G1) in the fixed-commodity form is NOT provable and is the WRONG milestone. Standard
+path uncrossing either (1) preserves endpoints but doesn't remove the order-crossing, OR (2) removes the crossing by
+swapping TERMINAL PAIRINGS -- but then the new paths are NOT geodesics for the same bad edges e,f; they are candidate rows
+for the BORN bad edges after a recut. So case-2 IS the switch geometry: "uncrossing" and "Gamma-decreasing switch" are the
+SAME operation from two sides. => G1 is NOT an easy preliminary lemma; it is ENTANGLED with G4. The clean residual is NOT a
+standalone laminarity theorem but the monolithic disjunction:
+   DualHallObstruction_baseLeaf_or_switch: a dual Hall obstruction for a reduced nonbase full-support shell exposes a base
+   leaf OR a zero-slack connected Gamma-decreasing switch (endpoint-swapped recut).
+### FINAL HONEST END-STATE (2026-07-08, tonight): gap#1 = DualHallObstruction_baseLeaf_or_switch, a MONOLITHIC hard theorem
+(no easy G1 entry; the uncrossing = the switch = the born-edge recut). = ReducedNonBaseGeodesicHall. Generalizes S1 first-split.
+Base cases FORMALIZED (8 axiom-clean). Empirically bulletproof (71820 cages). NEXT ATTACK (user plan): GPT-5.6 + Fable-5
+tomorrow on the monolithic switch (attack the born-edge recut directly: for a dual Hall obstruction, either a base leaf or a
+terminal-pairing swap that keeps the cut maximum, stays connected, and strictly drops Gamma). P(gap#1 math)~50.
