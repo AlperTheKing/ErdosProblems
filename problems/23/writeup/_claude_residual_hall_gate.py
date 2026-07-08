@@ -13,10 +13,15 @@ Claude DERIVED + VALIDATED the K2 operator from K2T_INTERVAL_HALL_PROOF_TARGET.m
 This reproduces the table EXACTLY (10-vertex 5/7 model f0=(0,8) f1=(1,7): T={0:5,1:7,2:7,3:6,4:6,5:5/2,6:19/2,7:7,8:12,9:12},
 (K2*T)(0)=41, R(0)=9). See validate_k2t_model().
 
-STAGE 1 (this file): verify R[u] >= 0 (the PROVEN residual-sign lemma) exactly on census Gamma-min + even-cycle+chord N>=18.
-A single R[u]<0 on a Gamma-min B-connected max cut would contradict the proven lemma (=> a bug or a scope error to surface).
-STAGE 2 (next): the support-restricted Hall feasibility (LocalResidualDominance + AmbientResidualDominance) -- the actual residual.
-EXACT rational (Fraction). Gamma-min scope. Coverage stated. Run from problems/23/writeup.
+STAGE 1: verify R[u] >= 0 (the PROVEN residual-sign lemma) exactly on census Gamma-min + even-cycle+chord N>=18.
+STAGE 2: whole-cage support-restricted Hall feasibility (max-flow; GENEROUS pooled door 25*sigma) -- necessary-condition all-subset Hall.
+STAGE 3: K2-support component decomposition. Verifies (a) K2-closure, (b) split identity R_full(X)=R_local(X)+(N-|VX|)*T_sum(X),
+  (c) failure-mode-1 test R_local(X)>=0 vs Demand(X). FINDING (census N<=11 + even-chord N=18-30, 71894 components):
+  closure+identity EXACT everywhere; R_local<0 occurs but ONLY at Demand(X)=0 components => the clean lemma
+  R_local(X)<0 => Demand(X)=0 (failure mode 1 harmless); and Demand(X)<=R_full(X) on EVERY component (0 uncovered).
+KEY IDENTITY (K2-closure): sum_{u in V_X} T(u) = sum_{e in X} ell(e)^2 = Gamma_X (component's exact contribution to Gamma).
+  => R_full(X) = N*Gamma_X - sum_{e in X} ell(e)*edge_dot(e), edge_dot(e)=sum_w p_e(w)T(w). The GERSH aggregation at component level.
+EXACT rational (Fraction). Gamma-min scope. Coverage stated (C_18 lesson: incl N>=18). Run from problems/23/writeup.
 """
 from fractions import Fraction as F
 from collections import deque
@@ -133,47 +138,152 @@ except Exception:
 DOOR = 25  # one door token per bad edge (25*sigma proxy); ambient/R[v] pays the rest
 
 
-def stage2_support_hall(n, cd):
-    """STAGE 2: route each bad edge's rem = max(0, ell^2-25-DOOR) to vertex banks cap=R[v], ONLY to v notin V_e
-    (support restriction = GPT-Pro failure mode 2). Max-flow feasibility (LP). Returns (feasible, detail)."""
+def stage2_support_hall(n, adj, side, cd):
+    """STAGE 2 (corrected): whole-cage support-restricted Hall. Route each bad edge's FULL surplus ell^2-25 to a
+    shared DOOR sink (cap 25*sigma, sigma=#cutedges-m, all atoms eligible) + vertex banks cap=R[v] (edge e -> v iff
+    v notin V_e, the support restriction = failure mode 2). Max-flow feasibility (LP). Returns (feasible, detail)."""
     M, ell, p, R = cd['M'], cd['ell'], cd['p'], cd['R']
-    edges = []
-    for e in M:
-        rem = ell[e] ** 2 - 25 - DOOR
-        if rem > 0:
-            edges.append((e, F(rem)))
+    cut_edges = sum(1 for a in range(n) for b in adj[a] if a < b and side[a] != side[b])
+    sigma = cut_edges - len(M)
+    door_cap = F(25) * sigma
+    edges = [(e, F(ell[e] ** 2 - 25)) for e in M if ell[e] ** 2 - 25 > 0]
     if not edges:
-        return True, 'no long atoms'
+        return True, 'no surplus'
     if not HAVE_SCIPY:
         return None, 'no scipy'
     Ve = {e: set(v for v in range(n) if p[e][v] > 0) for e, _ in edges}
-    # variables q(e,v) for v notin V_e AND R[v] > 0
+    # sinks: index 0 = door; index 1+v = vertex v (cap R[v]). var q(e, sink).
     var = []
     for ei, (e, rem) in enumerate(edges):
+        var.append((ei, 'door'))
         for v in range(n):
             if v not in Ve[e] and R[v] > 0:
                 var.append((ei, v))
     idx = {kv: i for i, kv in enumerate(var)}
-    if not var:
-        return False, 'atoms have no eligible ambient bank'
     nv = len(var)
     A_eq = np.zeros((len(edges), nv)); b_eq = np.zeros(len(edges))
     for ei, (e, rem) in enumerate(edges):
         b_eq[ei] = float(rem)
-        has = False
-        for v in range(n):
-            if (ei, v) in idx:
-                A_eq[ei, idx[(ei, v)]] = 1.0; has = True
-        if not has:
-            return False, ('edge %s (rem %s) has no ambient bank' % (e, rem))
-    A_ub = np.zeros((n, nv)); b_ub = np.zeros(n)
-    for v in range(n):
-        b_ub[v] = float(R[v])
-        for ei, (e, rem) in enumerate(edges):
-            if (ei, v) in idx:
-                A_ub[v, idx[(ei, v)]] = 1.0
+        for kv, i in idx.items():
+            if kv[0] == ei:
+                A_eq[ei, i] = 1.0
+    # capacity rows: door + each vertex
+    sinks = ['door'] + [v for v in range(n)]
+    A_ub = np.zeros((len(sinks), nv)); b_ub = np.zeros(len(sinks))
+    b_ub[0] = float(door_cap)
+    for si, s in enumerate(sinks):
+        cap = door_cap if s == 'door' else R[s]
+        b_ub[si] = float(cap)
+        for kv, i in idx.items():
+            if kv[1] == s:
+                A_ub[si, i] = 1.0
     res = linprog(c=np.zeros(nv), A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=[(0, None)] * nv, method='highs')
-    return bool(res.success), ('feasible' if res.success else ('INFEASIBLE: %d long edges, maxell=%d' % (len(edges), max(ell.values()))))
+    return bool(res.success), ('feasible' if res.success else ('INFEASIBLE sigma=%d door=%s surplus=%s maxell=%d'
+                               % (sigma, door_cap, sum(r for _, r in edges), max(ell.values()))))
+
+
+def k2_components(n, cd):
+    """K2-support component decomposition: atoms (bad edges) union-merged when their supports V_e overlap.
+    Returns list of dicts {atoms:[e...], VX:set, T_sum:F}. By construction each component is K2-CLOSED (every atom
+    whose support touches V_X is in the component), so (K2*T)(u)=(K2_X*T)(u) for u in V_X -- verified in stage3."""
+    M, p = cd['M'], cd['p']
+    Ve = {e: frozenset(v for v in range(n) if p[e][v] > 0) for e in M}
+    parent = {e: e for e in M}
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]; x = parent[x]
+        return x
+    def union(a, b):
+        parent[find(a)] = find(b)
+    for i in range(len(M)):
+        for j in range(i + 1, len(M)):
+            if Ve[M[i]] & Ve[M[j]]:
+                union(M[i], M[j])
+    groups = {}
+    for e in M:
+        groups.setdefault(find(e), []).append(e)
+    comps = []
+    for atoms in groups.values():
+        VX = set()
+        for e in atoms:
+            VX |= Ve[e]
+        comps.append(dict(atoms=atoms, VX=VX, T_sum=sum(cd['T'][u] for u in VX)))
+    return comps
+
+
+def stage3_component_gate(n, cd):
+    """STAGE 3 (tight, graph-computable): per-K2-component residual dominance. For each component X:
+      * K2-CLOSURE self-check: for u in V_X, (K2_X*T)(u) == K2T[u] (all atoms touching u are inside X);
+      * IDENTITY: R_full(X) = R_local(X) + (N-|V_X|)*T_sum(X) EXACTLY  [validates the decomposition split];
+      * FAILURE-MODE-1 test: R_local(X) = sum_{u in V_X}(|V_X|*T(u) - K2T[u]) >= 0?
+    Returns dict(ncomp, closure_ok, identity_ok, rlocal_min, rlocal_neg_comps, worst)."""
+    M, ell, p, T, K2T, R = cd['M'], cd['ell'], cd['p'], cd['T'], cd['K2T'], cd['R']
+    edge_dot = {e: sum(p[e][w] * T[w] for w in range(n)) for e in M}
+    comps = k2_components(n, cd)
+    closure_ok = True; identity_ok = True
+    rlocal_min = None; rneg = 0; worst = None
+    dangerous = 0; danger_ex = None; danger_uncovered = 0
+    for X in comps:
+        VX = X['VX']; nV = len(VX); atomsX = set(X['atoms'])
+        for u in VX:
+            k2x = sum(p[e][u] * edge_dot[e] for e in atomsX)
+            if k2x != K2T[u]:
+                closure_ok = False
+        R_full = sum(R[u] for u in VX)
+        R_local = sum(F(nV) * T[u] - K2T[u] for u in VX)
+        ambient = F(n - nV) * X['T_sum']
+        if R_full != R_local + ambient:
+            identity_ok = False
+        Demand = sum(ell[e] ** 2 - 25 for e in atomsX if ell[e] ** 2 - 25 > 0)
+        if R_local < 0:
+            rneg += 1
+            if Demand > 0:  # THE dangerous case: negative local bank AT a positive-demand component
+                dangerous += 1
+                # necessary condition: does the FULL component bank R_full cover Demand? (door adds more, so R_full-only is the sharp residual test)
+                if Demand > R_full:
+                    danger_uncovered += 1
+                if danger_ex is None:
+                    danger_ex = dict(nV=nV, natoms=len(atomsX), R_local=str(R_local), R_full=str(R_full),
+                                     Demand=str(Demand), maxell=max(ell[e] for e in atomsX),
+                                     covered_by_Rfull=bool(Demand <= R_full))
+        if rlocal_min is None or R_local < rlocal_min:
+            rlocal_min = R_local
+            worst = dict(nV=nV, natoms=len(atomsX), R_local=str(R_local), R_full=str(R_full),
+                         Demand=str(Demand), maxell=max(ell[e] for e in atomsX))
+    return dict(ncomp=len(comps), closure_ok=closure_ok, identity_ok=identity_ok,
+                rlocal_min=rlocal_min, rlocal_neg=rneg, worst=worst,
+                dangerous=dangerous, danger_ex=danger_ex, danger_uncovered=danger_uncovered)
+
+
+def check_stage3(name, n, adj, side, acc3):
+    if not Bconn(n, adj, side):
+        return
+    if not any(side[a] == side[b] for a in range(n) for b in adj[a] if a < b):
+        return
+    cd = residuals(n, adj, side)
+    if cd is None:
+        return
+    r = stage3_component_gate(n, cd)
+    acc3['cages'] += 1
+    acc3['ncomp'] += r['ncomp']
+    if not r['closure_ok']:
+        acc3['closure_fail'] += 1
+        if acc3['clex'] is None:
+            acc3['clex'] = (name, n)
+    if not r['identity_ok']:
+        acc3['identity_fail'] += 1
+        if acc3['idex'] is None:
+            acc3['idex'] = (name, n)
+    if r['rlocal_neg']:
+        acc3['rlocal_neg_cages'] += 1
+        if acc3['rlex'] is None or (r['rlocal_min'] is not None and r['rlocal_min'] < F(acc3['rlex'][2])):
+            acc3['rlex'] = (name, n, str(r['rlocal_min']), r['worst'])
+    if r['dangerous']:
+        acc3['dangerous_cages'] += 1
+        acc3['dangerous_comps'] += r['dangerous']
+        acc3['danger_uncovered'] += r['danger_uncovered']
+        if acc3['dgex'] is None:
+            acc3['dgex'] = (name, n, r['danger_ex'])
 
 
 def check_stage2(name, n, adj, side, acc2):
@@ -185,7 +295,7 @@ def check_stage2(name, n, adj, side, acc2):
     if cd is None:
         return
     acc2['cages'] += 1
-    feas, detail = stage2_support_hall(n, cd)
+    feas, detail = stage2_support_hall(n, adj, side, cd)
     if feas is False:
         acc2['infeasible'] += 1
         if acc2['ex'] is None:
@@ -219,7 +329,10 @@ def main():
     print("VERDICT: %s" % ("R[u]>=0 holds on ALL %d Gamma-min cages (proven residual-sign lemma reproduced; K2 machinery validated) -- foundation for the support-restricted Hall gate"
                            % acc['cages'] if acc['Rneg'] == 0 else "R[u]<0 on %d cages -- SCOPE/BUG to investigate (contradicts the proven lemma)" % acc['Rneg']))
     print()
-    print("STAGE 2: support-restricted Hall (route rem=max(0,ell^2-25-25) to vertex banks R[v], only v notin V_e; scipy=%s):" % HAVE_SCIPY)
+    print("STAGE 2: support-restricted Hall, WHOLE-CAGE POOLED door (route full surplus ell^2-25 to shared door sink"
+          " cap 25*sigma [sigma=cutedges-m, all atoms eligible] + vertex banks R[v], edge->v iff v notin V_e; scipy=%s)."
+          "\n  NOTE: pooled door is GENEROUS (per-cage door is smaller); a pass is a NECESSARY-condition all-subset-Hall"
+          " check, NOT the tight per-cage theorem. STAGE 3 tightens to per-K2-component doors." % HAVE_SCIPY)
     acc2 = dict(cages=0, infeasible=0, ex=None)
     for nn in range(5, 12):
         for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
@@ -238,6 +351,45 @@ def main():
         print("  *** INFEASIBLE (support-restricted Hall fails -- decisive-obstruction candidate): %s ***" % (acc2['ex'],))
     print("STAGE-2 VERDICT: %s" % ("support-restricted Hall FEASIBLE on ALL %d Gamma-min cages (door+R[v]-ambient absorbs, respecting v notin V_e) -- strong support for PositiveSlackHallPrefix_FullBank"
                                   % acc2['cages'] if acc2['infeasible'] == 0 else "INFEASIBLE on %d Gamma-min cages -- failure mode 2 (wrong location) REALIZED; investigate (decisive-obstruction candidate)" % acc2['infeasible']))
+    print()
+    print("STAGE 3: K2-support component decomposition -- closure self-check + identity R_full=R_local+(N-|VX|)*T_sum")
+    print("  + FAILURE-MODE-1 test R_local(X)>=0 (the 'wrong split' mode; NOT implied by R[u]>=0). Graph-computable, exact.")
+    acc3 = dict(cages=0, ncomp=0, closure_fail=0, identity_fail=0, rlocal_neg_cages=0, clex=None, idex=None, rlex=None,
+                dangerous_cages=0, dangerous_comps=0, danger_uncovered=0, dgex=None)
+    for nn in range(5, 12):
+        for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
+            n, E = dec(g6); adj = adj_from_edges(n, E)
+            best = gmin(n, adj, maxcut_all(n, adj))
+            if best is None:
+                continue
+            check_stage3('cen%d' % nn, n, adj, best[0], acc3)
+        print("  census N=%d: cages %d, comps %d, R_local<0 cages %d, DANGEROUS(R_local<0 & Demand>0) comps %d, uncovered-by-Rfull %d"
+              % (nn, acc3['cages'], acc3['ncomp'], acc3['rlocal_neg_cages'], acc3['dangerous_comps'], acc3['danger_uncovered']), flush=True)
+    for n in [18, 22, 26, 30]:
+        for gap in range(4, n // 2 + 1):
+            nn, adj, side = even_cycle_chord(n, (0, gap))
+            check_stage3('C%d+chord(0,%d)' % (n, gap), nn, adj, side, acc3)
+    print("  TOTAL: cages %d, components %d | closure_fail %d | identity_fail %d | R_local<0 cages %d"
+          % (acc3['cages'], acc3['ncomp'], acc3['closure_fail'], acc3['identity_fail'], acc3['rlocal_neg_cages']))
+    print("  DANGEROUS components (R_local<0 AND Demand>0): %d | of those UNCOVERED by R_full (Demand>R_full): %d"
+          % (acc3['dangerous_comps'], acc3['danger_uncovered']))
+    if acc3['clex']:
+        print("  *** K2-CLOSURE FAILED (decomposition bug): %s ***" % (acc3['clex'],))
+    if acc3['idex']:
+        print("  *** IDENTITY FAILED (split bug): %s ***" % (acc3['idex'],))
+    if acc3['rlex']:
+        print("  R_local<0 worst (harmless if Demand=0): %s" % (acc3['rlex'],))
+    if acc3['dgex']:
+        print("  *** DANGEROUS example (R_local<0 at positive-demand comp): %s ***" % (acc3['dgex'],))
+    ok3 = acc3['closure_fail'] == 0 and acc3['identity_fail'] == 0
+    print("STAGE-3 VERDICT: %s" % (
+        ("decomposition VALID (closure+identity exact). R_local<0 occurs on %d cages but ONLY at ZERO-demand components (Demand=0) -- failure mode 1 is HARMLESS: the local bank is never negative where surplus must be routed. Clean structural fact: R_local(X)<0 => Demand(X)=0. STRONG support for the reduction."
+         % acc3['rlocal_neg_cages'] if acc3['dangerous_comps'] == 0 else
+         ("decomposition VALID. R_local<0 co-occurs with POSITIVE demand on %d components, but R_full(X) covers Demand(X) on ALL of them (0 uncovered) -- failure mode 1 needs ambient rescue and the FULL component bank always suffices (necessary condition holds per-component). Support-constrained routing = the remaining question."
+          % acc3['dangerous_comps'] if acc3['danger_uncovered'] == 0 else
+          "decomposition VALID but %d DANGEROUS components have Demand>R_full -- the full component bank does NOT cover; DECISIVE-OBSTRUCTION CANDIDATE, examine %s" % (acc3['danger_uncovered'], acc3['dgex'])))
+        if ok3 else
+        "DECOMPOSITION BUG (closure_fail=%d identity_fail=%d) -- fix before trusting" % (acc3['closure_fail'], acc3['identity_fail'])))
 
 
 if __name__ == '__main__':
