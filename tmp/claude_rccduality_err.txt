@@ -1,0 +1,6 @@
+RC=0 sec=18.1
+=OUT=
+'Erdos23Delta0.RelaxedCoverDuality.relaxed_cover_weak_duality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
