@@ -1,0 +1,8 @@
+RC=0 sec=17.8
+=OUT=
+'Erdos23Delta0.ProbeRigidity.incident_start_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.ProbeRigidity.incident_end_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.ProbeRigidity.two_edges_of_internal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.ProbeRigidity.start_mem_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.ProbeRigidity.edges_determine_badedge' depends on axioms: [propext, Classical.choice, Quot.sound]
+

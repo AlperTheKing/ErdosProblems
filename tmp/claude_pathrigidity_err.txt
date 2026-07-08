@@ -1,0 +1,8 @@
+RC=0 sec=20.9
+=OUT=
+'Erdos23Delta0.PathRigidity.incident_start_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.PathRigidity.incident_end_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.PathRigidity.two_edges_of_internal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.PathRigidity.start_mem_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.PathRigidity.edges_determine_badedge' depends on axioms: [propext, Classical.choice, Quot.sound]
+

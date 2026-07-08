@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 6,
+  "columns": 33299,
+  "dominant": 1,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=2778/den_bits=2771",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 159892,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 1921,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k6_F2_near_family_highspy_margin0_claude_v1.jsonl",
+  "solution_max": "num_bits=2776/den_bits=2766",
+  "solution_min": "num_bits=2801/den_bits=2828",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 5255
+}

@@ -1,0 +1,21 @@
+RC=0 sec=17.0
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5AtomBase.lean:68:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5AtomBase.Ell5Atom.not_nil`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5AtomBase.lean:71:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5AtomBase.Ell5Atom.uv_ne`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.Ell5AtomBase.hall_le_five_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5AtomBase.Ell5Atom.uv_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5AtomBase.Ell5Atom.badEdge_eq_of_support_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5AtomBase.ell5_base_case' depends on axioms: [propext, Classical.choice, Quot.sound]
+

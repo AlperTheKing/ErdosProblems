@@ -1,0 +1,25 @@
+RC=0 sec=16.3
+=OUT=
+@Ell5CSReduction.hall_le_five : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq β] (Erow : α → Finset β),
+  (∀ (e : α), 4 ≤ (Erow e).card) →
+    (∀ (e f : α), e ≠ f → 5 ≤ (Erow e ∪ Erow f).card) → ∀ (S : Finset α), S.card ≤ 5 → S.card ≤ (S.biUnion Erow).card
+@Ell5GraphBridge.ell5_support_card_ge_four : ∀ {V : Type u_1} (G : SimpleGraph V) [inst : DecidableEq V]
+  (c : Distances.Cut V) {u v : V},
+  Distances.ell G c u v = 5 →
+    (Distances.blueGraph G c).Reachable u v →
+      ∀ (P : Finset (Sym2 V)),
+        (∀ (p : (Distances.blueGraph G c).Walk u v), p.IsPath → p.length = 4 → p.edges.toFinset ⊆ P) → 4 ≤ P.card
+@PathRigidity.edges_determine_badedge : ∀ {V : Type u_1} {G : SimpleGraph V} [inst : DecidableEq V] {u v u' v' : V}
+  {p : G.Walk u v} {q : G.Walk u' v'},
+  p.IsPath → q.IsPath → ¬p.Nil → u ≠ v → p.edges.toFinset = q.edges.toFinset → s(u, v) = s(u', v')
+@Ell5AtomBase.ell5_base_case : ∀ {V : Type u_1} {G : SimpleGraph V} [inst : DecidableEq V]
+  (S : Finset (Ell5AtomBase.Ell5Atom G)),
+  (∀ a ∈ S, ∀ b ∈ S, s(a.u, a.v) = s(b.u, b.v) → a = b) →
+    S.card ≤ 5 → S.card ≤ (S.biUnion Ell5AtomBase.Ell5Atom.support).card
+@Ell5AtomGraph.ell5_atom_of_badEdge : ∀ {V : Type u_1} {G : SimpleGraph V} {c : Distances.Cut V} {u v : V},
+  Distances.ell G c u v = 5 → (Distances.blueGraph G c).Reachable u v → ∃ a, a.u = u ∧ a.v = v
+@CageSuperadditivity.card_le_Nsq_div_25 : ∀ {ι : Type u_1} (s : Finset ι) (ell : ι → ℚ) (Nq : ℚ),
+  (∀ i ∈ s, 5 ≤ ell i) → ∑ i ∈ s, ell i ^ 2 ≤ Nq ^ 2 → ↑s.card ≤ Nq ^ 2 / 25
+@CageSuperadditivity.gamma_le_Nsq_of_components : ∀ {ι : Type u_1} (s : Finset ι) (Γ N : ι → ℚ) (Ntot Γtot : ℚ),
+  Γtot = ∑ i ∈ s, Γ i → Ntot = ∑ i ∈ s, N i → (∀ i ∈ s, 0 ≤ N i) → (∀ i ∈ s, Γ i ≤ N i ^ 2) → Γtot ≤ Ntot ^ 2
+

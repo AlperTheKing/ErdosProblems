@@ -1,0 +1,10 @@
+RC=0 sec=16.4
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5AtomGraph.lean:39:70: warning: unused variable `u`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5AtomGraph.lean:39:72: warning: unused variable `v`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'Erdos23Delta0.Ell5AtomGraph.ell5_atom_of_badEdge' depends on axioms: [propext, Classical.choice, Quot.sound]
+

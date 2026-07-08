@@ -1,0 +1,5 @@
+RC=0 sec=19.9
+=OUT=
+'Erdos23Delta0.Ell5GraphBridge.dist_eq_four_of_ell_eq_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5GraphBridge.ell5_support_card_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+

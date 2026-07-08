@@ -1,0 +1,9 @@
+RC=0 sec=18.0
+=OUT=
+'Erdos23Delta0.CageSuperadditivity.sum_sq_le_sq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.CageSuperadditivity.gamma_le_Nsq_of_components' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.CageSuperadditivity.sum_sq_ge_25_mul_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.CageSuperadditivity.card_le_Nsq_div_25' depends on axioms: [propext, Classical.choice, Quot.sound]
+

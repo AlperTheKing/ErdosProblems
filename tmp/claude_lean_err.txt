@@ -1,0 +1,14 @@
+RC=0 sec=18.3
+=OUT=
+'Erdos23Delta0.Ell5CSReduction.card_support_ge_of_mQ_le_Tsq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.minimal_hall_obstruction_no_private_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.hall_le_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.c5book_support_expansion' depends on axioms: [propext, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.geodesic_len4_card_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.support_card_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.pair_union_ge_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5CSReduction.cross_flip_bool' does not depend on any axioms
+'Erdos23Delta0.Ell5CSReduction.ell5_geodesic_four_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+
