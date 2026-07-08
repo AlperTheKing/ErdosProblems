@@ -113,3 +113,26 @@ This CLOSES the tight full-support leaf case (odd cycles C_25.. that broke Claud
 case only (single-bad-edge cages have beta=1, trivially <= N^2/25). The HARD CORE = the MULTI-ATOM density ledger
 (demand(A) <= Door+C5+Prune for every atom subset, needing the LOCAL conjecture Gamma_A <= |U_A|^2 by INDUCTION via the
 minimality lever) -- STILL OPEN. Claude gating leaf closure + formalizing fullSupport_leaf_absorbed_by_density.
+
+## *** DEFINITIVE FINAL REDUCTION (GPT-Pro reply 7, 9983 char, 2026-07-08) -- gap#1 = ONE gateable lemma ***
+Claude's circularity concern CONFIRMED and made precise. The safe induction CANNOT use the top cage's own density
+reserve eta_C = |V_C|^2/25 - m_C (proving that IS the local square bound for C). Legal tokens for cage C: (1) Door
+25*sigma(C); (2) true vertex ambient = nonneg parts of N-T(v), incidence-checked; (3) Prune = Balance(D) for STRICT
+proper pruned descendants D, already certified; (4) independent base-density tokens (single-bad-edge full-support LEAF,
+proved from ell<=|V|, Claude's fullSupport_leaf_absorbed_by_density). ILLEGAL: C's own unproved eta_C.
+- (1) Balance(D)>=0 does NOT imply eta_D>=0 (different quantities; a subcage can be paid by external ambient/door).
+  [Claude note: my eta_nonneg gate tested K2-support COMPONENTS (|V_X|>=5 => eta>=0 where Demand>0); GPT-Pro's eta_D is
+   over the CAGE/PRUNE tree where singleton doors have eta_D<0 -- different decompositions, both consistent.]
+- INDUCTION: measure rank(C)=#owned atoms (or inclusion rank in the terminal-cage forest). IH: all strict proper cages
+  have checked nonneg balance / valid absorption certs. STEP = prove ReducedShellHall_NoTopEta for C:
+     Demand(A) <= 25*sigma(A) + AmbientCap(A) + sum_{D proper} Balance(D) + BaseDensityCap(A)   for every prefix/subset A,
+  with NO top eta_C token. The minimality lever (Claude-formalized no_nonneg_prunable_subcage_in_minNeg) removes all
+  nonneg-prunable subcages => the minimal counterexample is a REDUCED SHELL to absorb by Door+ambient+base only.
+- WELL-FOUNDED iff the reduced shell is covered without top eta_C. CIRCULAR iff the induction bottoms out at a
+  MULTI-ATOM FULL-SUPPORT SHELL (support = all vertices => NO ambient room; not decomposable into proper prunable
+  descendants; not an independent base leaf) whose only apparent capacity is its own eta_C.
+- **THE SINGLE REMAINING RESIDUAL = MultiAtomFullSupportShell_absorbed_without_topEta.** DECISIVE OBSTRUCTION (exact):
+  a reduced multi-atom full-support shell with Demand > Door + Prune + independent BaseDensity and no ambient room.
+  GATE: search for multi-atom (m>=2) full-support (|V_X|=N) shells; if none arise, or all have Demand <= Door(+prune+base),
+  the induction closes. If a genuine one with Demand > Door+Prune+Base exists, that is the circularity obstruction.
+  Claude building _claude_multiatom_fullsupport_gate.py (falsifier-first).
