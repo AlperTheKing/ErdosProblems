@@ -1,0 +1,18 @@
+RC=0 sec=19.0
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\MaxCutSelection.lean:24:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.MaxCutSelection.exists_maxCut`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\MaxCutSelection.lean:46:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.MaxCutSelection.exists_maxCut_argmin`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.MaxCutSelection.exists_maxCut' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.MaxCutSelection.exists_min_over' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.MaxCutSelection.exists_maxCut_argmin' depends on axioms: [propext, Classical.choice, Quot.sound]
+
