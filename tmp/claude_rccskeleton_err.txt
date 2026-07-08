@@ -1,0 +1,8 @@
+RC=0 sec=21.8
+=OUT=
+'Erdos23Delta0.RelaxedCoverSkeleton.quotient_cuts_pay_alpha' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.RelaxedCoverSkeleton.remaining_alpha_le_closure_alpha' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.RelaxedCoverSkeleton.alpha_paid_or_in_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+
