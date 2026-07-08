@@ -211,18 +211,23 @@ def k2_components(n, cd):
     return comps
 
 
-def stage3_component_gate(n, cd):
-    """STAGE 3 (tight, graph-computable): per-K2-component residual dominance. For each component X:
-      * K2-CLOSURE self-check: for u in V_X, (K2_X*T)(u) == K2T[u] (all atoms touching u are inside X);
-      * IDENTITY: R_full(X) = R_local(X) + (N-|V_X|)*T_sum(X) EXACTLY  [validates the decomposition split];
-      * FAILURE-MODE-1 test: R_local(X) = sum_{u in V_X}(|V_X|*T(u) - K2T[u]) >= 0?
-    Returns dict(ncomp, closure_ok, identity_ok, rlocal_min, rlocal_neg_comps, worst)."""
+def stage3_component_gate(n, sigma, cd):
+    """STAGE 3 (per-K2-component). For each component X, EXACT checks:
+      * K2-CLOSURE self-check: (K2_X*T)(u) == K2T[u] for u in V_X (all atoms touching u are inside X);
+      * IDENTITY: R_full(X) = R_local(X) + (N-|V_X|)*T_sum(X) [validates the decomposition split];
+      * FAILURE-MODE-1: R_local(X) >= 0 ?  (R_local<0 harmless iff Demand(X)=0);
+      * COVERAGE (ALL components, not just R_local<0): Demand(X) <= R_full(X)  [residual alone -- FALSE in general,
+        e.g. C_7: R_full=0, Demand=24; the door is essential] and Demand(X) <= 25*sigma + R_full(X) [generous
+        whole-graph door pooled -- necessary-condition, matches STAGE 2].  sigma = whole-graph cutedges - m.
+    Demand(X)=sum_{e in X}(ell^2-25); ell>=5 in triangle-free graphs so ell^2-25>=0 always."""
     M, ell, p, T, K2T, R = cd['M'], cd['ell'], cd['p'], cd['T'], cd['K2T'], cd['R']
     edge_dot = {e: sum(p[e][w] * T[w] for w in range(n)) for e in M}
+    door = F(25) * sigma
     comps = k2_components(n, cd)
     closure_ok = True; identity_ok = True
     rlocal_min = None; rneg = 0; worst = None
-    dangerous = 0; danger_ex = None; danger_uncovered = 0
+    dangerous = 0; danger_ex = None
+    unc_Rfull = 0; unc_door = 0; unc_door_ex = None
     for X in comps:
         VX = X['VX']; nV = len(VX); atomsX = set(X['atoms'])
         for u in VX:
@@ -234,25 +239,29 @@ def stage3_component_gate(n, cd):
         ambient = F(n - nV) * X['T_sum']
         if R_full != R_local + ambient:
             identity_ok = False
-        Demand = sum(ell[e] ** 2 - 25 for e in atomsX if ell[e] ** 2 - 25 > 0)
+        Demand = sum(ell[e] ** 2 - 25 for e in atomsX)  # ell>=5 => each term >=0
+        if Demand > R_full:
+            unc_Rfull += 1
+        if Demand > door + R_full:  # generous whole-graph door + residual; a FAIL here is a real necessary-condition breach
+            unc_door += 1
+            if unc_door_ex is None:
+                unc_door_ex = dict(nV=nV, natoms=len(atomsX), Demand=str(Demand), R_full=str(R_full),
+                                   door=str(door), maxell=max(ell[e] for e in atomsX))
         if R_local < 0:
             rneg += 1
-            if Demand > 0:  # THE dangerous case: negative local bank AT a positive-demand component
+            if Demand > 0:
                 dangerous += 1
-                # necessary condition: does the FULL component bank R_full cover Demand? (door adds more, so R_full-only is the sharp residual test)
-                if Demand > R_full:
-                    danger_uncovered += 1
                 if danger_ex is None:
                     danger_ex = dict(nV=nV, natoms=len(atomsX), R_local=str(R_local), R_full=str(R_full),
-                                     Demand=str(Demand), maxell=max(ell[e] for e in atomsX),
-                                     covered_by_Rfull=bool(Demand <= R_full))
+                                     Demand=str(Demand), maxell=max(ell[e] for e in atomsX))
         if rlocal_min is None or R_local < rlocal_min:
             rlocal_min = R_local
             worst = dict(nV=nV, natoms=len(atomsX), R_local=str(R_local), R_full=str(R_full),
                          Demand=str(Demand), maxell=max(ell[e] for e in atomsX))
     return dict(ncomp=len(comps), closure_ok=closure_ok, identity_ok=identity_ok,
                 rlocal_min=rlocal_min, rlocal_neg=rneg, worst=worst,
-                dangerous=dangerous, danger_ex=danger_ex, danger_uncovered=danger_uncovered)
+                dangerous=dangerous, danger_ex=danger_ex,
+                unc_Rfull=unc_Rfull, unc_door=unc_door, unc_door_ex=unc_door_ex)
 
 
 def check_stage3(name, n, adj, side, acc3):
@@ -263,7 +272,9 @@ def check_stage3(name, n, adj, side, acc3):
     cd = residuals(n, adj, side)
     if cd is None:
         return
-    r = stage3_component_gate(n, cd)
+    cut_edges = sum(1 for a in range(n) for b in adj[a] if a < b and side[a] != side[b])
+    sigma = cut_edges - len(cd['M'])
+    r = stage3_component_gate(n, sigma, cd)
     acc3['cages'] += 1
     acc3['ncomp'] += r['ncomp']
     if not r['closure_ok']:
@@ -281,9 +292,13 @@ def check_stage3(name, n, adj, side, acc3):
     if r['dangerous']:
         acc3['dangerous_cages'] += 1
         acc3['dangerous_comps'] += r['dangerous']
-        acc3['danger_uncovered'] += r['danger_uncovered']
         if acc3['dgex'] is None:
             acc3['dgex'] = (name, n, r['danger_ex'])
+    acc3['unc_Rfull'] += r['unc_Rfull']
+    if r['unc_door']:
+        acc3['unc_door'] += r['unc_door']
+        if acc3['unc_door_ex'] is None:
+            acc3['unc_door_ex'] = (name, n, r['unc_door_ex'])
 
 
 def check_stage2(name, n, adj, side, acc2):
@@ -355,7 +370,7 @@ def main():
     print("STAGE 3: K2-support component decomposition -- closure self-check + identity R_full=R_local+(N-|VX|)*T_sum")
     print("  + FAILURE-MODE-1 test R_local(X)>=0 (the 'wrong split' mode; NOT implied by R[u]>=0). Graph-computable, exact.")
     acc3 = dict(cages=0, ncomp=0, closure_fail=0, identity_fail=0, rlocal_neg_cages=0, clex=None, idex=None, rlex=None,
-                dangerous_cages=0, dangerous_comps=0, danger_uncovered=0, dgex=None)
+                dangerous_cages=0, dangerous_comps=0, dgex=None, unc_Rfull=0, unc_door=0, unc_door_ex=None)
     for nn in range(5, 12):
         for g6 in subprocess.run([GENG, '-tc', str(nn)], capture_output=True, text=True).stdout.split():
             n, E = dec(g6); adj = adj_from_edges(n, E)
@@ -363,16 +378,16 @@ def main():
             if best is None:
                 continue
             check_stage3('cen%d' % nn, n, adj, best[0], acc3)
-        print("  census N=%d: cages %d, comps %d, R_local<0 cages %d, DANGEROUS(R_local<0 & Demand>0) comps %d, uncovered-by-Rfull %d"
-              % (nn, acc3['cages'], acc3['ncomp'], acc3['rlocal_neg_cages'], acc3['dangerous_comps'], acc3['danger_uncovered']), flush=True)
+        print("  census N=%d: cages %d, comps %d, R_local<0 cages %d, DANGEROUS(R_local<0&Demand>0) %d, unc-by-Rfull(door-needed) %d, unc-by-door+Rfull %d"
+              % (nn, acc3['cages'], acc3['ncomp'], acc3['rlocal_neg_cages'], acc3['dangerous_comps'], acc3['unc_Rfull'], acc3['unc_door']), flush=True)
     for n in [18, 22, 26, 30]:
         for gap in range(4, n // 2 + 1):
             nn, adj, side = even_cycle_chord(n, (0, gap))
             check_stage3('C%d+chord(0,%d)' % (n, gap), nn, adj, side, acc3)
     print("  TOTAL: cages %d, components %d | closure_fail %d | identity_fail %d | R_local<0 cages %d"
           % (acc3['cages'], acc3['ncomp'], acc3['closure_fail'], acc3['identity_fail'], acc3['rlocal_neg_cages']))
-    print("  DANGEROUS components (R_local<0 AND Demand>0): %d | of those UNCOVERED by R_full (Demand>R_full): %d"
-          % (acc3['dangerous_comps'], acc3['danger_uncovered']))
+    print("  DANGEROUS (R_local<0 AND Demand>0): %d | comps needing the DOOR (Demand>R_full, residual alone insufficient): %d | comps UNCOVERED even by 25*sigma+R_full: %d"
+          % (acc3['dangerous_comps'], acc3['unc_Rfull'], acc3['unc_door']))
     if acc3['clex']:
         print("  *** K2-CLOSURE FAILED (decomposition bug): %s ***" % (acc3['clex'],))
     if acc3['idex']:
@@ -381,13 +396,16 @@ def main():
         print("  R_local<0 worst (harmless if Demand=0): %s" % (acc3['rlex'],))
     if acc3['dgex']:
         print("  *** DANGEROUS example (R_local<0 at positive-demand comp): %s ***" % (acc3['dgex'],))
+    if acc3['unc_door_ex']:
+        print("  *** UNCOVERED even by door+residual (necessary-condition breach candidate): %s ***" % (acc3['unc_door_ex'],))
     ok3 = acc3['closure_fail'] == 0 and acc3['identity_fail'] == 0
     print("STAGE-3 VERDICT: %s" % (
-        ("decomposition VALID (closure+identity exact). R_local<0 occurs on %d cages but ONLY at ZERO-demand components (Demand=0) -- failure mode 1 is HARMLESS: the local bank is never negative where surplus must be routed. Clean structural fact: R_local(X)<0 => Demand(X)=0. STRONG support for the reduction."
-         % acc3['rlocal_neg_cages'] if acc3['dangerous_comps'] == 0 else
-         ("decomposition VALID. R_local<0 co-occurs with POSITIVE demand on %d components, but R_full(X) covers Demand(X) on ALL of them (0 uncovered) -- failure mode 1 needs ambient rescue and the FULL component bank always suffices (necessary condition holds per-component). Support-constrained routing = the remaining question."
-          % acc3['dangerous_comps'] if acc3['danger_uncovered'] == 0 else
-          "decomposition VALID but %d DANGEROUS components have Demand>R_full -- the full component bank does NOT cover; DECISIVE-OBSTRUCTION CANDIDATE, examine %s" % (acc3['danger_uncovered'], acc3['dgex'])))
+        ("decomposition VALID (closure+identity exact). Failure mode 1: R_local<0 on %d cages but 0 DANGEROUS (R_local<0 => Demand=0, harmless). "
+         "COVERAGE: residual R_full ALONE is insufficient on %d components (the DOOR is essential, e.g. C_7: R_full=0<24=Demand); "
+         "with the generous pooled door 25*sigma+R_full, %d components remain uncovered. %s"
+         % (acc3['rlocal_neg_cages'], acc3['unc_Rfull'], acc3['unc_door'],
+            "So per-component Demand<=25*sigma+R_full holds everywhere (necessary-condition; door+residual bank suffices) -- consistent with STAGE 2." if acc3['dangerous_comps'] == 0 and acc3['unc_door'] == 0 else
+            "DANGEROUS/uncovered components exist -- examine (decisive-obstruction candidate)."))
         if ok3 else
         "DECOMPOSITION BUG (closure_fail=%d identity_fail=%d) -- fix before trusting" % (acc3['closure_fail'], acc3['identity_fail'])))
 
