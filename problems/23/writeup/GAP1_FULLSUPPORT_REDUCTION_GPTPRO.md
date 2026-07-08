@@ -157,3 +157,24 @@ Gamma-DECREASING SWITCH => Gamma-minimality excludes it [most promising, connect
 atoms share full support [Claude's gates suggest (3) in reduced shells]. Proof direction: contradiction (avg square-length
 per cut edge too large under Gamma-min). Lean-ready: theorem NoReducedOverdoorFullSupportMultiShell (hMin, hReduced, hFull).
 => gap#1 = this single lemma + the proper-support mixed-bank feasibility. Base cases + minimality lever FORMALIZED.
+
+## GPT-Pro reply 9 (2026-07-08, 9322 char) -- HONEST: "I would not yet claim a proof." The switch-existence lemma + certificate.
+gap#1 final lemma, EQUIVALENT switch form:
+  theorem OverdoorFullSupportSwitchExistence (hReduced, hFull: VX=FullVertexSet, hMulti: 2<=AtomCount, hOver: 25*b_X < Gamma_X):
+     exists W, ZeroSlackSwitch W /\ ConnectedAfterSwitch W /\ GammaAfter W < GammaBefore.   (then Gamma-min => contradiction).
+  NOT implied by K2-closure/Ferrers/max-cutness alone -- the remaining structural lemma. GPT-Pro does NOT prove existence.
+CANDIDATE SWITCH W (graph-computable): for every pair of bad edges e=ab, f=cd in the SAME K2-component, shortest geodesics
+  P_e, P_f, form Theta(e,f)=P_e union P_f + endpoint bad edges; search BALANCED Ferrers/pair-door intervals of Theta. (Connects
+  to the earlier pair-door machinery: pairDoor_metric_stability, pairTypeBTheta_gammaDrop_pos.)
+SWITCH CERTIFICATE (S1-S6, exact, graph-computable): S1 sigma(W)=0 (zero-slack); S2 delta(W) boundary; S3 B^W connected
+  (spanning-tree cert); S4 M^W=(M\Kill(W)) union Born(W), Kill=M cap delta(W), Born=B cap delta(W); S5 stable-edge length
+  accounting; S6 DeltaGamma(W)=Gamma(B^W)-Gamma(B)<0. EXACT DeltaGamma:
+    Gamma(B)-Gamma(B^W) = sum_{e in M cap delta(W)} ell_B(e)^2 + sum_{e in M\delta(W)}(ell_B(e)^2-ell_{B^W}(e)^2)
+                          - sum_{d in B cap delta(W)} ell_{B^W}(d)^2.
+  [Claude's _claude_gamma_switch_verifier.py eval_switch computes Gamma(B),Gamma(B^W) DIRECTLY = this, self-check PASS.]
+FALSIFIER-FIRST GATE (GPT-Pro sec 8): for an over-door full-support shell, enumerate W (pair-door Ferrers intervals /
+  small-boundary cuts), check sigma(W)=0 + B^W connected + Gamma(B^W)<Gamma(B). If found => switch cert; if NONE found with
+  Gamma_X>25*b_X => the DECISIVE OBSTRUCTION. Option 1 (this switch) is conceptually closest to Gamma-minimality.
+CLAUDE STATUS: verifier READY; TESTING BOTTLENECK = need OVER-DOOR full-support shells (Gamma_X>25*b_X), which need large N
+  (single atom N>=25; multi-atom irreducible = hard to construct) -- they do NOT arise in small Gamma-min census cuts (all
+  Demand<=Door). gap#1 = OverdoorFullSupportSwitchExistence: sharply stated, checkable, UNPROVEN (GPT-Pro's honest status). P~52.
