@@ -1,4 +1,4 @@
-RC=0 sec=19.0
+RC=0 sec=20.7
 =OUT=
 E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\MaxCutSelection.lean:24:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.MaxCutSelection.exists_maxCut`:
   [DecidableEq V]

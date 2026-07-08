@@ -26,7 +26,7 @@ theorem exists_maxCut (G : SimpleGraph V) [Fintype G.edgeSet] :
   obtain ⟨s, hs⟩ := Finite.exists_max (fun s : V → Bool => cutVal G s)
   exact ⟨s, hs⟩
 
-/-- **Generic refined selection.** Over a finite type, any nonempty property `P` admits an element minimizing any
+/-- **Generic refined selection.** Over a finite type, any nonempty property `P` yields an element minimizing any
     `ℕ`-valued functional `g` among the `P`-satisfiers. -/
 theorem exists_min_over {α : Type*} [Finite α] (P : α → Prop) (hne : ∃ a, P a) (g : α → ℕ) :
     ∃ a, P a ∧ ∀ b, P b → g a ≤ g b := by
