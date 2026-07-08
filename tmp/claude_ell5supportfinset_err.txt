@@ -1,0 +1,23 @@
+RC=0 sec=20.0
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5SupportFinset.lean:40:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5SupportFinset.mem_geodesicSupport`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.Ell5SupportFinset.mem_geodesicSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5SupportFinset.edges_toFinset_subset_geodesicSupport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5SupportFinset.four_le_geodesicSupport_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5SupportFinset.atom_support_subset_geodesicSupport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5SupportFinset.ell5_base_case_Eshort' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5SupportFinset.ell5_base_case_Eshort_of_ell' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+

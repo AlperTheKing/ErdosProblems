@@ -1,0 +1,6 @@
+RC=0 sec=18.4
+=OUT=
+'Erdos23Delta0.RelaxedCutCover.relaxed_cutcover_defect_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.RelaxedCutCover.hall_absorbed_of_bank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.RelaxedCutCover.expansion_of_zero_load' depends on axioms: [propext, Classical.choice, Quot.sound]
+

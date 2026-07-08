@@ -1,0 +1,20 @@
+RELAXED CUT-COVER LP gate: min externalLoad + exact certs + Door-fit, per real config
+====================================================================================================
+  census N=5 done: cfgs 1, strict(L*=0) 1, exact-certs 1, beyond-Door 0
+  census N=6 done: cfgs 3, strict(L*=0) 3, exact-certs 3, beyond-Door 0
+  census N=7 done: cfgs 17, strict(L*=0) 17, exact-certs 17, beyond-Door 0
+  census N=8 done: cfgs 100, strict(L*=0) 100, exact-certs 100, beyond-Door 0
+  census N=9 done: cfgs 732, strict(L*=0) 732, exact-certs 732, beyond-Door 0
+  C5[1] done
+  C5[2] done
+  C5[3] done
+====================================================================================================
+TOTALS: configs 736 (noS skipped 21) | strict L*=0: 736 | exact certs 736 (inexact 0) | LP fails 0
+SINGLETON half-cover overflow (|X| > sigma <=> m_all > |F|): 0
+BEYOND-DOOR (exact LP-cert load > sigma): 0
+named configs:
+   C5[1]              n=5   |S|=1   |F|=4   |X|=0   m=1   sigma=3   L*=0.0       exact=0 doorfitLP=True single-doorfit=True strict=True
+   C5[2]              n=10  |S|=4   |F|=16  |X|=0   m=4   sigma=12  L*=0.0       exact=0 doorfitLP=True single-doorfit=True strict=True
+   C5[3]              n=15  |S|=9   |F|=36  |X|=0   m=9   sigma=27  L*=0.0       exact=0 doorfitLP=True single-doorfit=True strict=True
+   CP11-escaping      n=11  |S|=3   |F|=12  |X|=0   m=3   sigma=9   L*=0.0       exact=0 doorfitLP=True single-doorfit=True strict=True
+VERDICT: min-load relaxed covers exist with EXACT certificates and fit the DOOR bank alone on ALL 736 configs => Door-only absorption is the construction target (annotation, counterfactual caveat).
