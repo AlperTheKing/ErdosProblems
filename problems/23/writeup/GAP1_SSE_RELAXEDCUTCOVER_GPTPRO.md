@@ -173,3 +173,61 @@ With universal Door access (γ_c ≤ δ_door ∀c∈O, κ_door=σ): a dual cert 
 defect > 0 leaves arithmetic room — so the existence fight is genuinely over (a) richer-cut domination
 (quotient/lens/closure), (b) incidence restrictions I(c,j), (c) the structural hypotheses. NEXT RETASK = exactly
 this question + dual-side falsifier search harness on abstract counter-schema configs.
+
+---
+
+# REPLY 3 (harvested 2026-07-08): HONEST endpoint — BankedCutDomination = the exact remaining theorem
+
+**Verdict (GPT-Pro, honest):** "I cannot honestly prove no-dual from the current ingredients. The exact no-dual
+theorem is now the remaining mathematical statement." The wall is unchanged in difficulty; its sharpest form:
+
+## 1-2. δ-elimination ⟹ the ONE finite inequality
+For fixed γ the cheapest δ is `δ_j = max{γ_c : I(c,j)}` (0 if none), giving
+`BankCost(γ) = Σ_j κ_j · max{γ_c : I(c,j)}`. **No-dual ⟺ BankedCutDomination**:
+> ∀ α,β,γ ≥ 0 satisfying (D1) over the FULL cut family: `Σ_e α_e ≤ Σ_{c∈F} β_c + BankCost(γ)`.
+Lean-ready statement given (hypotheses: nonneg + hCutDom; conclusion the inequality).
+
+## 3. Cut-class force map
+- **Singletons**: Σα ≤ Σ_Fβ + Σ_Oγ — insufficient when |O| > σ (matches my analysis).
+- **Quotient cuts** (unions of components of B\F): δ_B(Y) ⊆ F, γ vanishes ⟹ all quotient-separable α is paid by
+  β ALONE. Failure mode: a row with both endpoints in the SAME component of B\F is invisible to quotient cuts —
+  exactly the escaping/full-closure phenomenon.
+- **Lens/theta cuts**: pure neutral lens has no side-door γ (rows paid by β); impure/escaping lens creates
+  side-door γ that must be bank-paid.
+- **Closure cuts**: proper ledger-separating closure = killed by compiled minimality (dual mass crossing D paid
+  by β or closure-boundary γ); hard case = D = full support (no nontrivial closure cut left) ⟹ full-bank
+  obstruction on the whole cage = BankedCutDomination.
+
+## 4. MinimalHallCore (Lean structure)
+`bad: |S| > |F|` + `proper_ok: ∀ T ⊂ S, |T| ≤ |E_short(T)|` + `no_private: ∀e∈S, E_e ⊆ E_short(S\{e})`
+(= compiled `minimal_hall_obstruction_no_private_edge`). BankedCutDomination should be proved ONLY under
+MinimalHallCore + ReducedShell + FullEscapingClosure.
+
+## 5. Anchor dual shapes
+Odd cycle: base sink pays exactly (BankCost tight — leak-free requirement). C5[t]: Σα ≤ Σβ, no bank. CP11:
+escaping row's dual mass paid by β through the ALTERNATE OUTSIDE support — "a model for how full closure can
+still be harmless."
+
+## 6-7. No-dual proof skeleton (3 lemmas)
+- **L1 `quotient_cuts_pay_separable_alpha`** (provable now): all quotient-separable row-price mass is support-paid.
+- **L2 `remaining_alpha_lies_in_full_escape_closure`** (uses MinimalHallCore + compiled no_ledgerSep): residual
+  dual mass lives in the full escaping closure.
+- **L3 `full_closure_bank_dominates_dual`** = **THE core** — residual row price not payable by support β is paid
+  by legal bank sinks. GPT-Pro: "No. Lemma 3 is exactly the remaining full-bank Hall theorem, in dual form. It is
+  the sharp dual form of the wall."
+
+## 8. Falsifier recipe (decisive, finite)
+A dual counterexample = finite graph/cut data (tri-free, max-cut) + S,F + sinks (κ, I) + rational α,β,γ,δ with
+(D1) ∀U, (D2) ∀incidence, strict (D3), + reduced/minimal/full-closure predicates. **Generate by solving the dual
+LP on candidate finite configs.** "No such config is currently known."
+
+## 9. Lean-ready residual (the named hypothesis pair)
+`NoDualBankedRelaxedCover` (¬∃ dual cert under hMax+hReduced+hMin+hFull+hMinimalHall) ⟺
+`Ell5FullBankRelaxedCover_exists` (∃ cover+bank certs) — equivalent by finite LP duality over ℚ.
+
+## [CLAUDE next after reply 3]
+1. Dual-LP falsifier search harness (solve exact dual LP over candidate config families; any rational solution
+   satisfying the predicates = decisive falsifier; verifier `_claude_rcc_dual_verify.py` READY).
+2. Lean: compile weak duality (primal cert + dual cert ⟹ False) so falsifier verification is machine-checked;
+   BankCost δ-elimination lemma; L1 where stateable abstractly.
+3. GPT-Pro: path decision (L3 new-idea attack vs dual-config family search vs secondary lanes until GPT-5.6).
