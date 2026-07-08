@@ -1,0 +1,21 @@
+RC=0 sec=17.2
+=OUT=
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\RelaxedCoverGraphBridge.lean:33:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.RelaxedCoverGraphBridge.deltaB_subset_cutEdges`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\RelaxedCoverGraphBridge.lean:47:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.RelaxedCoverGraphBridge.badEdge_mem_deltaM`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.RelaxedCoverGraphBridge.deltaB_subset_cutEdges' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.RelaxedCoverGraphBridge.badEdge_mem_deltaM' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.RelaxedCoverGraphBridge.graph_defect_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.RelaxedCoverGraphBridge.graph_hall_absorbed' depends on axioms: [propext, Classical.choice, Quot.sound]
+

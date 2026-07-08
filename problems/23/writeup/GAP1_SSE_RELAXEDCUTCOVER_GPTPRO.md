@@ -115,11 +115,61 @@ Primary = angle (3) as relaxed cut-covers + external slack charged to the full b
 capacity lemma; Lean-checkable certificate route. **The one theorem: `Ell5FullBankRelaxedCover_exists`.**
 
 ## [CLAUDE next actions]
-1. EXACT LP GATE (falsifier-first annotation): census Gamma-min max cuts + C5[t] + odd cycles + 11-vtx
-   counterpattern — per component, S = all ell=5 atoms, cut family = singletons + endpoint pairs + balls +
-   quotients; solve exact rational LP min externalLoad; check 25*minLoad vs legal bank caps. Overflow on a real
-   tight config = diagnostic that the existence proof MUST use the obstruction hypothesis (not route-death — real
-   graphs never have defect); fit everywhere = consistency annotation.
-2. LEAN: formalize 4.1 (weighted sum, direct from MaxCutVertexIneq) + the 4.2 defect-bound soundness as the next
-   axiom-clean increment (abstract Finset/Rat level first, rowDB later).
-3. Retask GPT-Pro on the existence proof for structured cut families (quotient+ball) vs the counter-schema search.
+1. EXACT LP GATE — DONE: _claude_relaxedcover_lp_gate.py, 736/736 real configs L*=0 (strict covers exist
+   fractionally, exact certs 736/736), 0 beyond-Door, 0 singleton overflow; C5[t]+CP11 have |X|=0. Binding case
+   confirmed counterfactual-only.
+2. LEAN — DONE: RelaxedCutCover.lean (abstract soundness, 3 thms) + RelaxedCoverGraphBridge.lean (graph
+   instantiation via compiled MaxCutVertexIneq: graph_defect_bound + graph_hall_absorbed + badEdge_mem_deltaM,
+   4 thms). Lean = 11 axiom-clean modules.
+3. Retask sent (tasks 1-3: anchors / structured existence / dual). Reply 2 below.
+
+---
+
+# REPLY 2 (harvested 2026-07-08): anchors + structured construction + EXACT LP DUAL
+
+## Task 1 — explicit anchor certs (ALL THREE EXACT-VERIFIED, _claude_rcc_anchors_gate.py)
+
+- **1A C5[t]** (Γ-min max cut A0A2A4 | A1A3, bad = A4×A0, all ell=5, geodesics x-a3-a2-a1-y):
+  zero-external cover = `{x}` singleton per x ∈ A4, λ=1. Coverage 1 per row; congestion: δB({x}) = {x-a3 : a3∈A3}
+  ⊆ E_short, each x-a3 exactly 1. External 0, bank none. **VERIFIED t=1,2,3 exact.**
+- **1B odd cycle C_N** (base-leaf density case, m=1, ell=N, Demand=N²−25, σ=N−2): DoorCap=25(N−2),
+  BaseCap=max(0,N²−25N+25). N≤23: Demand ≤ Door. N≥25: **Door+Base == Demand EXACTLY (TIGHT)**.
+  C_25: 575+25=600; C_41: 975+681=1656. **VERIFIED N=5..41 exact.** ⟹ the bank is exactly balanced on the
+  Γ=N² extremals — any proof of the existence theorem must be leak-free there.
+- **1C CP11** (escaping-atom max-cut pattern): cover {p},{q} λ=1: coverage e=1,f=1,h=2; δB({p})={p-a,p-r1},
+  δB({q})={q-c,q-r3}, all 4 ∈ E_short(S) (p-r1 lies on h's ALTERNATE outside geodesic — multi-geodesic support
+  does the work). External 0. **VERIFIED exact incl p-r1 ∈ P_h.** "The escaping lens is not itself a Hall
+  obstruction: the support hypergraph expands enough."
+
+## Task 2 — structured family K(S) + hypothesis-consumption map
+
+K(S) = endpoint singletons + quotient cuts (unions of components of B\F) + lens cuts (pair-door/first-split/
+last-rejoin from P4-witness pairs) + escaping-closure cuts + optional balls. Consumption: singletons ⟵ ell=5
+geometry+cut; quotients ⟵ F; lens ⟵ triangle-free+shortestness; closure ⟵ rowDB ownership; Door ⟵ compiled
+MaxCutVertexIneq; VertexSlack ⟵ certified available part of N−T(v); Base ⟵ base-leaf density theorem;
+Prune ⟵ compiled descendant balances. **ReducedShell/MinimalNegBalance only forbid proper ledger-sep closures +
+justify prune tokens — NOT needed for the raw LP.** Stall = LP infeasible ⟹ Farkas dual = the next sublemma
+(cutting-plane loop: add the dual's most violated cut).
+
+## Task 3 — EXACT LP dual (the finite falsifier mechanism)
+
+Normalized (÷25): row demand 1, support capacity 1, sink j capacity κ_j = cap_j/25. Matrices A(e,U)=[U separates
+e], B(c,U)=[c ∈ δB(U)], I(c,j)=[c may spend sink j]. Primal: coverage Σ_U A λ ≥ 1; congestion Σ_U B λ ≤ 1 (c∈F);
+routing Σ_j q(c,j) ≥ Σ_U B(c,U)λ_U (c∈O); capacity Σ_c q(c,j) ≤ κ_j. **Dual/Farkas infeasibility certificate**:
+α_e ≥ 0 (rows), β_c ≥ 0 (support), γ_c ≥ 0 (off-support), δ_j ≥ 0 (sinks) with
+- (D1) cut-price domination ∀U ∈ K: Σ_e α_e A(e,U) ≤ Σ_{c∈F} β_c B(c,U) + Σ_{c∈O} γ_c B(c,U)
+- (D2) bank-coverable ∀ I(c,j)=1: γ_c ≤ δ_j
+- (D3) strict violation: Σ_e α_e > Σ_{c∈F} β_c + Σ_j κ_j δ_j
+∃ such (α,β,γ,δ) ⟺ primal infeasible (standard Farkas; Lean-checkable as finite rational linear cert).
+**Degenerations:** bank-empty dual = the STRICT cut-cover obstruction (matches Gate-1 atom (5,9)); the direct
+b-matching Hall dual (α_e ≤ β_c per incidence, Σα > Σβ) is a DIFFERENT object — do not conflate.
+Lean names: RelaxedCoverBankPrimalCert/DualCert, relaxed_cover_bank_dual_infeasible, relaxed_cover_bank_primal_sound.
+Workflow: solve primal over K(S) → cert; infeasible → dual; full-family-feasible-but-K(S)-not → cutting-plane;
+full family + full bank infeasible → the dual cert IS the exact obstruction.
+
+## [CLAUDE analysis after reply 2]
+Singleton-domination (U={v} ∀v) alone forces Σα ≤ Σ_{F}β + Σ_O γ (sum over v, each row/edge counted twice).
+With universal Door access (γ_c ≤ δ_door ∀c∈O, κ_door=σ): a dual cert needs Σ_O γ > Σκδ, and |O| − σ = m − |F| =
+defect > 0 leaves arithmetic room — so the existence fight is genuinely over (a) richer-cut domination
+(quotient/lens/closure), (b) incidence restrictions I(c,j), (c) the structural hypotheses. NEXT RETASK = exactly
+this question + dual-side falsifier search harness on abstract counter-schema configs.
