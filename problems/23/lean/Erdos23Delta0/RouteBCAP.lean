@@ -174,5 +174,31 @@ theorem fullSupport_leaf_absorbed_by_density
   have h : c5mass ≤ max 0 c5mass := le_max_right 0 c5mass
   nlinarith [h, hc5, hDemand]
 
+/-- **Short-atom square bound** (2026-07-08, the option-3 arithmetic core for `NoReducedOverdoorFullSupportMultiShell`).
+    For an odd-cycle length `ell` in the range `[5, 23]` (the shortest odd cycle in a triangle-free graph has `ell ≥ 5`;
+    `ell ≥ 25` atoms are the base leaves handled by `fullSupport_leaf_absorbed_by_density`), the atom's squared length is
+    dominated by 25 times its geodesic cut-edge count `ell − 1`:  `ell² ≤ 25·(ell − 1)`. Exact rational; the first
+    failure is `ell = 24` (`576 > 575`), so `ell ≤ 23` is the exact short-atom window. -/
+theorem atom_sq_le_25_shortAtom (ell : ℚ) (h5 : 5 ≤ ell) (h23 : ell ≤ 23) :
+    ell ^ 2 ≤ 25 * (ell - 1) := by nlinarith
+
+/-- **Full-support door dominance from short atoms + geodesic disjointness** (2026-07-08, the option-3 derivation of
+    `Γ_X ≤ 25·b_X`, machine-checked). If every atom of the shell has `ell ∈ [5,23]` (short: `ell ≥ 25` atoms are pruned as
+    base leaves) and the geodesic cut-edge counts `(ell−1)` sum to at most the shell's distinct cut-edge count `b`
+    (`hb`: the geodesic edge-disjointness / cut-edge-forcing structural input), then `Γ_X = Σ ell² ≤ 25·b = 25·b_X`, i.e.
+    `Demand ≤ Door`. Pure summation over `atom_sq_le_25_shortAtom`; the two hypotheses (all atoms short after leaf-pruning,
+    and `Σ(ell−1) ≤ b`) are the remaining structural obligations of `NoReducedOverdoorFullSupportMultiShell`. -/
+theorem fullSupport_doorDominance_of_shortAtoms {α : Type} (s : Finset α) (ell : α → ℚ) (b : ℚ)
+    (h5 : ∀ a ∈ s, 5 ≤ ell a) (h23 : ∀ a ∈ s, ell a ≤ 23)
+    (hb : (∑ a ∈ s, (ell a - 1)) ≤ b) :
+    (∑ a ∈ s, (ell a) ^ 2) ≤ 25 * b := by
+  have hstep : (∑ a ∈ s, (ell a) ^ 2) ≤ ∑ a ∈ s, 25 * (ell a - 1) :=
+    Finset.sum_le_sum (fun a ha => atom_sq_le_25_shortAtom (ell a) (h5 a ha) (h23 a ha))
+  have hpull : (∑ a ∈ s, 25 * (ell a - 1)) = 25 * ∑ a ∈ s, (ell a - 1) := by
+    rw [Finset.mul_sum]
+  calc (∑ a ∈ s, (ell a) ^ 2) ≤ ∑ a ∈ s, 25 * (ell a - 1) := hstep
+    _ = 25 * ∑ a ∈ s, (ell a - 1) := hpull
+    _ ≤ 25 * b := by linarith
+
 end RouteBCAP
 end Erdos23Delta0
