@@ -4,6 +4,12 @@
 computation) that definitively localized gap#1. This is the ONE theorem to attack. Reads standalone; supersedes the
 impure-lens framing of GAP1_IMPURE_LENS_ESCALATION_BRIEF.md (that path is resolved — see §2).*
 
+> **⚠ 2026-07-08 UPDATE (Fable-5 session) — READ §8 (appended at bottom) FIRST.** The theorem below is unchanged,
+> but the ATTACK FRAME advanced decisively: the relaxed cut-cover + external-slack-bank mechanism is now the
+> primary route, its soundness is COMPILED end-to-end in Lean (11 axiom-clean modules), its anchors are
+> exact-verified, and the open core is a single certificate-existence theorem with a FINITE Farkas-dual falsifier
+> criterion. §6's angle list is superseded by §8. Full detail: `GAP1_SSE_RELAXEDCUTCOVER_GPTPRO.md`.
+
 ## 1. THE THEOREM (attack this directly)
 
 > **ShortestSupportExpansion.** In a reduced triangle-free Γ-minimal **maximum** cut, for every set `S` of ell=5 atoms
@@ -79,3 +85,29 @@ Prove `ShortestSupportExpansion` / `FullBankHall` for the full escape closure, o
 cage violating it (the decisive falsifier — note every counterpattern found so far is non-deficient, hence consistent
 with δ=0). Reason deductively (§3). On success, the compiled scaffolding (§4) + `book_of_book_or_ledgerSep` wire it to
 close gap#1 ⟹ Γ≤N² ⟹ β≤N²/25.
+
+## 8. 2026-07-08 UPDATE — the relaxed cut-cover frame (CURRENT; supersedes §6)
+
+GPT-Pro (replies 1-2, archive `GAP1_SSE_RELAXEDCUTCOVER_GPTPRO.md`) recast the theorem as a **certificate
+existence** problem, and the whole soundness reduction is now **compiled** (Lean modules `RelaxedCutCover`,
+`RelaxedCoverGraphBridge`, `Ell5SupportFinset` — 11 axiom-clean total):
+
+- **Relaxed cut-cover**: weights λ_U ≥ 0 on vertex sets; row coverage ≥ 1; in-support congestion ≤ 1; off-support
+  load r(c) FREE but charged to the legal bank (Door 25σ + VertexSlack + C5Base + Prune, never η_C). Compiled:
+  `defect(S) ≤ Σ_{c∉F} r(c)` and `25|S| ≤ 25|F| + Bank` (graph-level, only `IsMaxCut` + cert data needed).
+- **Anchors exact-verified** (`_claude_rcc_anchors_gate.py`): C5[t] singleton-A4 cover (ext=0); odd cycles
+  **Door+Base == Demand exactly (TIGHT) for N ≥ 25** — the bank has zero slack at the Γ=N² extremals, so any
+  existence argument must be leak-free there; CP11 escaping-pattern cover {p},{q} (ext=0, the alternate outside
+  geodesic carries the congestion). LP gate: 736/736 real configs have strict covers (L*=0), exact certs.
+- **THE open core**: `Ell5FullBankRelaxedCover_exists` — every minimal full-closure ell=5 obstruction admits
+  cover + bank certs. By LP duality (exact, rational) this is EQUIVALENT to: **no Farkas dual certificate**
+  (α_e, β_c, γ_c, δ_j ≥ 0 with (D1) per-cut price domination over the full cut family, (D2) γ_c ≤ δ_j on allowed
+  incidences, (D3) Σα > Σβ + Σκ_jδ_j) **coexists with the structural hypotheses** (minimal-neg-balance, reduced,
+  full escape closure, max cut, triangle-free). The falsifier search is therefore FINITE per abstract config:
+  search dual certificates, not "every cover".
+- **Known dual arithmetic** (Claude): singleton-domination alone gives Σα ≤ Σβ + Σ_Oγ; defect>0 leaves room, so
+  the proof must be won by richer-cut domination (quotient/lens/closure cuts) + incidence restrictions + the
+  minimality/no-private-edge structure (`minimal_hall_obstruction_no_private_edge`, compiled).
+- **Ask (updated)**: prove the no-dual theorem, or construct an abstract dual-carrying config satisfying the
+  counter-schema (ell=5 defect + every cover un-bankable + no proper ledger-sep + no base leaf + max-cut ineqs +
+  Balance<0) — exact rationals, machine-checkable either way.
