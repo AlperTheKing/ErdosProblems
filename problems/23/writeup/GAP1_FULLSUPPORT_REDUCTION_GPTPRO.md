@@ -71,3 +71,24 @@ support components with high demand-to-external-reserve ALSO need the door/C5, s
 The full bank (door 25*sigma + ambient + C5) IS still feasible on all census (STAGE 2, 0 infeasible) — the DOOR does the
 heavy lifting GPT-Pro's decomposition under-counted. So gap#1 remains the FULL mixed-bank Hall theorem, NOT a single
 C5 lemma. The minimality lever (sec 3/4, pure ledger algebra) is independent and may still stand; sent back to GPT-Pro.
+
+## GPT-Pro CONCEDES (2026-07-08, reply 5, 8902 char) — honest convergence to the FULL Hall theorem
+"Yes -- I agree with all three corrections." Point by point:
+- (A) cap_X(v)=Gamma_X was NOT a real per-vertex capacity ("confused a scalar component identity with a routable vertex
+  capacity"). CORRECTED: cap_amb(v) = vertexSlack(v) = N - T(v), atom a uses v only when v notin V_a. "The real ambient
+  capacity is O(N) per vertex, not O(ell^2) per external vertex." The interior->exterior transfer is FALSE in general
+  (Claude's N=8 counterexample proves it). The split R_full=R_local+(N-|VX|)T_X is an ALGEBRAIC identity, NOT a routing
+  theorem; R[u] is a residual token owned by INTERIOR structure, contributing to C5/Prune/rowDB caps only through an
+  incidence-checked allocation -- never as spendable external-vertex capacity.
+- (B) MINIMALITY LEVER STANDS (independent of the false split): Balance(C)=Balance(C')+Balance(D)+PruneRemainder,
+  Balance(D)>=0, PruneRemainder>=0, Balance(C)<0 => Balance(C')<0 => proper prunable D can't exist in a minimal
+  neg-balance cage. Valid with the corrected full bank Door+true-vertex-ambient+C5+Prune. [Claude: FORMALIZE THIS.]
+- (C) The clean "proper-support => ambient alone" localization is FALSE. Survives only as ORIGIN CHECKS (K2-closure, split
+  identity, R_local facts); the actual capacity SINKS are Door(25sigma) + true vertex slack(N-T(v)) + C5(25*mass(z)) +
+  Prune(Balance(D)). RESIDUAL = the full-bank flow LP per cage/prefix; its Hall dual = the exact missing universal
+  inequality: for every atom subset A, demand(A) <= cap(N(A)) with legal Door/Ambient/C5/Prune incidences.
+  atom a=(e,j,mu), demand(a)=mu*(8j+24), V_a=annular support. THIS IS THE FULL support-restricted Hall theorem, no shortcut.
+
+NET: gap#1 = the full mixed-bank support-restricted Hall theorem (Door+Ambient(N-T(v))+C5+Prune), exactly as before this
+cycle. All shortcuts eliminated (door-only, companion-theta, tri-free, canonical-cap, LRS, full-support-localization).
+SALVAGED NEW PIECE: the minimality lever (pure algebra) -> formalize in RouteBCAP.lean. P(gap#1 math) ~45-50 unchanged.

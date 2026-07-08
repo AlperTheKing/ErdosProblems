@@ -118,5 +118,37 @@ theorem sideDoor_balance_nonneg_of_primitives
     rw [hsurp]; nlinarith [hMassSig D, hSigNN D]
   linarith [hDoorBank D]
 
+/-- **Pruning drops balance below the parent** (pure ledger algebra). Given the prune balance identity
+    `Balance C = Balance C' + Balance D + PruneRemainder D` with a nonnegative prunable block (`0 ≤ Balance D`) and
+    nonnegative prune remainder (`0 ≤ PruneRemainder D`), the pruned descendant `C'` has `Balance C' ≤ Balance C`;
+    in particular a strictly-negative parent forces a strictly-negative descendant. -/
+theorem pruned_balance_le
+    {Cage : Type} (Balance PruneRem : Cage → ℚ)
+    (C C' D : Cage)
+    (hBal : Balance C = Balance C' + Balance D + PruneRem D)
+    (hDnn : 0 ≤ Balance D) (hRem : 0 ≤ PruneRem D) :
+    Balance C' ≤ Balance C := by linarith
+
+/-- **Minimality lever: no nonnegative prunable subcage inside a minimal negative-balance cage** (2026-07-08,
+    GPT-Pro's `no_nonneg_prunable_subcage_in_minNeg`, the one piece that survived Claude's falsification of the clean
+    ambient reduction). It is pure ledger algebra, independent of the (false) `cap_X(v)=Γ_X` ambient split, and stays
+    valid with the corrected full bank `Door + vertexSlack(N−T) + C5 + Prune`. Given a minimal negative-balance cage
+    `C` (every proper subcage has nonnegative balance, `hMinNoNeg`), a proper prunable subcage `C'` obtained from a
+    nonnegative block `D`, the prune balance identity, and `Balance C < 0`, we reach a contradiction: the algebra
+    forces `Balance C' < 0`, contradicting minimality. This excludes a tight full-support block (`Balance D = 0`,
+    e.g. the C₂ₖ₊₁ / C_25 escape) from sitting inside the minimal negative-balance cage. -/
+theorem no_nonneg_prunable_subcage_in_minNeg
+    {Cage : Type} (Balance PruneRem : Cage → ℚ) (ProperSub : Cage → Cage → Prop)
+    (C C' D : Cage)
+    (hMinNoNeg : ∀ E, ProperSub E C → 0 ≤ Balance E)
+    (hProper : ProperSub C' C)
+    (hBal : Balance C = Balance C' + Balance D + PruneRem D)
+    (hDnn : 0 ≤ Balance D) (hRem : 0 ≤ PruneRem D)
+    (hCneg : Balance C < 0) :
+    False := by
+  have hle : Balance C' ≤ Balance C := pruned_balance_le Balance PruneRem C C' D hBal hDnn hRem
+  have hnn : 0 ≤ Balance C' := hMinNoNeg C' hProper
+  linarith
+
 end RouteBCAP
 end Erdos23Delta0
