@@ -279,6 +279,26 @@ genuine hard research; G4 is the crux. FORMALIZED base cases (8 axiom-clean). Em
 CONCLUSION: gap#1 is a multi-month research problem; the full 4-conjunct proof is not closeable in an autonomous run.
 This is the honest documented end-state of the whole-day gap#1 arc. P(gap#1 math)~50; P(full Lean)~12-20.
 
+## INTENSIVE ATTACK (2026-07-08 evening, user: keep going) -- CONVERGED on the PRECISE crux (StableGain / G4).
+Three parallel attacks (6-angle adversarial workflow + GPT-Pro reply 16 + Claude crossing-geodesic gate) CONVERGED:
+- CLAUDE crossing gate (_claude_crossing_geodesic_gate.py): crossings of bad-edge-pair shortest geodesics DO ARISE in
+  Gamma-min cuts (8896/71833 cages) but are BENIGN (Gamma-min => no Gamma-decreasing switch). SELF-CAUGHT a FLAWED proxy:
+  my "shortcutting" test compared d_B of re-paired endpoints on the ORIGINAL cut (!=  born-edge recut Delta_Gamma, which
+  needs the FLIP W + born edges = actual G-edges same-side in B^W). Retracted. Sound evidence stays SPREADING-FEASIBILITY.
+- GPT-Pro reply 16: BornEdgeRecutGammaDrop is NOT provable from "two y-tight geodesics cross" alone -- the endpoint-swap can
+  fail to correspond to actual born GRAPH EDGES or raise Gamma through other rows (INDEPENDENTLY confirms Claude's retraction).
+  Correct milestone: crossing + VALID PAIR-DOOR RECUT CERTIFICATE => strict Gamma-drop. The switch set W is NOT the lens
+  interior; it is a COMPONENT of B\{d0,d1} with delta_B(W)={d0,d1}, delta_M(W)={e,f} (pair-door boundary), B^W connected.
+  EXACT Gamma identity: Gamma(B)-Gamma(B^W) = ell(e)^2+ell(f)^2 - ell(d0)^2-ell(d1)^2 + StableGain(W),
+  StableGain(W) = sum_{h notin {e,f}} (ell_B(h)^2 - ell_{B^W}(h)^2). STRICT DROP iff local saving > -StableGain.
+- *** THE CRUX = StableGain(W) >= 0 (G4, controlled global effect): the recut must not LENGTHEN other bad rows enough to
+  kill the local square saving. IRREDUCIBLE OPEN LEMMA = DualHallObstruction_baseLeaf_or_certifiedSwitch. ***
+GATEABLE ALGORITHM (GPT-Pro, graph-computable, no metric-stability assumption): for candidate cut-edge pairs {d0,d1} from
+the two crossing paths, W = component of B\{d0,d1}; check e,f cross W, delta_B(W)={d0,d1}, delta_M(W)={e,f}, B^W connected,
+Gamma(B^W)<Gamma(B) by EXACT ell recomputation. If such W always exists for dual Hall obstructions (except base leaves) =
+the exact empirical theorem. CAVEAT: dual obstructions don't arise in Gamma-min cuts (spreading feasible) => needs over-
+congested/N>=23 configs to run on (the same testing wall). gap#1 crux = StableGain-controlled pair-door recut (G4), multi-month.
+
 ## GPT-Pro reply 15 (2026-07-08) -- G1 COLLAPSES INTO G4. The switch theorem is MONOLITHIC.
 BLUNT: DualTightGeodesicUncrossing (G1) in the fixed-commodity form is NOT provable and is the WRONG milestone. Standard
 path uncrossing either (1) preserves endpoints but doesn't remove the order-crossing, OR (2) removes the crossing by
