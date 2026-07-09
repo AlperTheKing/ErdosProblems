@@ -1,0 +1,2 @@
+ledger tmp\eq_odl1_rung2_chart_batch_ledger_v108_codex.json: certified=108 pending=0
+  progress: 10 pass, 0 fail
