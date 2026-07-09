@@ -1,0 +1,14 @@
+[
+  {
+    "path": "problems\\23\\lean\\Erdos23Delta0\\O14\\ChunkedConeWitness.lean",
+    "sha256": "FBA2DBC7F3D12D1D28CD4D2757AAC007B039648A777A712C2A9B1737D99A2C32"
+  },
+  {
+    "path": "tmp\\codex_chunked_cone_witness_build_escalated.json",
+    "sha256": "F9E8147AC44B3BD15F412EBCD06793324AB1ACDF43E5F43245E5949BB1777226"
+  },
+  {
+    "path": "tmp\\codex_import_chunked_cone_witness.lean",
+    "sha256": "4C6D04BAC8A52E1F79C978E7F3729CE3E5BC2891CD4C10231EC409976F829EAB"
+  }
+]

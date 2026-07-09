@@ -1,0 +1,12 @@
+Erdos23Delta0.O14.ChunkedCone.Witness.sound {G : Erdos23Delta0.CertGraph.GraphData}
+  {c : Erdos23Delta0.CertGraph.CutData} {rows : Erdos23Delta0.CertGraph.RowDB} {Q : Erdos23Delta0.CertGraph.RowCert}
+  {core : Erdos23Delta0.ODLFull.ODLCoreData G c rows Q} (W : Erdos23Delta0.O14.ChunkedCone.Witness core) :
+  Erdos23Delta0.ODLFull.CoreODLGoal G c rows Q core
+Erdos23Delta0.O14.ChunkedCone.chartSound_of_chartWitnesses.{u} {G : Erdos23Delta0.CertGraph.GraphData}
+  {c : Erdos23Delta0.CertGraph.CutData} {rows : Erdos23Delta0.CertGraph.RowDB} {Q : Erdos23Delta0.CertGraph.RowCert}
+  {Inst : Type u} {coreOf : Inst → Erdos23Delta0.ODLFull.ODLCoreData G c rows Q}
+  {C : Erdos23Delta0.O14.EQODL1CoverInterface.EQODL1Classifier Inst}
+  {P : Erdos23Delta0.O14.EQODL1CoverInterface.EQODL1CoverPayload}
+  (W : Erdos23Delta0.O14.ChunkedCone.ChartWitnesses coreOf C P) :
+  Erdos23Delta0.O14.EQODL1CoverInterface.EQODL1ChartSound Inst
+    (fun I => Erdos23Delta0.ODLFull.CoreODLGoal G c rows Q (coreOf I)) C P
