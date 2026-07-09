@@ -1,7 +1,30 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
 # Last update: 2026-07-09T11:58 (local)
 
-## TICK-32/33 SNAPSHOT (2026-07-09 ~12:00 local) — WALL ATTACK R1 LANDED + BOOKKEEPING LAYER COMPILED
+## TICK-33/34 SNAPSHOT (2026-07-09 ~12:50 local) — R2 CORRECTION + UNCROSSING COMPILED + CODEX WAVES ACCEPTED
+- **WALL_ATTACK_R2_GPTPRO.md archived (USER-RELAYED reply 7)**: Phase-3-as-stated FALSE — two exact route
+  falsifiers, BOTH verified by my gate `_claude_porthall_uncross_gate.py` (ALL PASS: falsifiers + 24k
+  supermodularity/overlap identity checks + 692/692 minimal-deficient one-component): (i) closure adds
+  zero-load root neighborhoods ⟹ corrected predicate = **MinimalClosedDeficient**; (ii) add-only patch dies
+  on saturated short edges (= my flagged risk (c)) ⟹ **restricted-Farkas route ADOPTED** (drops ExchangePatch
+  + ClosurePreservesDeficiency). WALL OF RECORD: **W1 NoUnbankableExposedPorts (checker-level, from
+  cage-legality) + W2 RootBlockClosureSeparable (= rootBlockClosureSeparable_of_minimalFullClosure, THE hard
+  theorem) + W3 noStrictRestrictedDual_rootedEscape + (B) dualSqueeze_exists_iff_no_restrictedStrict (finite
+  rational Farkas — NEW infra; compiled dualCert_iff_not_bankedCutDomination is δ-elimination only; future
+  Codex lane)** ⟹ RootedEscapeSqueeze_exists_wall ⟹ bundle.
+- **LEAN +2 first-try modules (both rc=0, axiom-clean)**: BankedWallLP.lean (LP surface +
+  noStrictDual_of_dualSqueeze + noStrictDual_of_primal) and PortHallUncrossing.lean (deficiency
+  supermodularity, exact overlap identity, disjoint-neighborhood additivity, LegalComponentPartition,
+  minimal_deficient_has_one_legal_component). Both in base cache.
+- **CODEX WAVES ACCEPTED (my re-gate all_ok=True, tmp/claude_t8_chart000_regate_summary.json)**: T8
+  ConcreteCage 6/6 + sharded Chart000Cone (support + 410/410 shards + aggregator; 418-file token scan 0 hits;
+  7 axiom probes clean). Module-29 PILOT DONE. Outbox: acceptance + lane = scale emitter to remaining 107
+  charts + SPEC-1 continues + Farkas-iff heads-up.
+- **GPT-Pro reply 8 IN FLIGHT**: W2 full proof demanded (escape-chain invariant precise; proper_if_multiple
+  w/ defect-one; footprint-connectivity-vs-separability tension EXPLICIT; the four contradiction outlets
+  mapped to the ten facts; W3 derivation skeleton from W1+W2).
+
+## TICK-32 SNAPSHOT (2026-07-09 ~12:00 local) — WALL ATTACK R1 LANDED + BOOKKEEPING LAYER COMPILED
 - **WALL_ATTACK_R1_GPTPRO.md archived** (38k reply, new thread, harvested via clipboard after Copy-button click;
   desktop restart wiped the old tab group — glow was extension click-overlays, avoid desktop-level clicking).
   Route verdict: LP-duality dual-squeeze (NOT induction/endpoint-singleton alone); NEW cut class =
