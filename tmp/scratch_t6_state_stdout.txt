@@ -1,0 +1,43 @@
+case cons.cons.cons.cons.nil.cons.cons.cons.cons.nil
+V : Type u_1
+inst✝ : DecidableEq V
+G : SimpleGraph V
+u v a : V
+hpa : G.Adj u a
+b : V
+hpb : G.Adj a b
+c : V
+hpc : G.Adj b c
+hpd : G.Adj c v
+hp :
+  (SimpleGraph.Walk.cons hpa
+      (SimpleGraph.Walk.cons hpb (SimpleGraph.Walk.cons hpc (SimpleGraph.Walk.cons hpd SimpleGraph.Walk.nil)))).IsPath
+hlp :
+  (SimpleGraph.Walk.cons hpa
+        (SimpleGraph.Walk.cons hpb
+          (SimpleGraph.Walk.cons hpc (SimpleGraph.Walk.cons hpd SimpleGraph.Walk.nil)))).length =
+    4
+a' : V
+hqa : G.Adj u a'
+b' : V
+hqb : G.Adj a' b'
+c' : V
+hqc : G.Adj b' c'
+hqd : G.Adj c' v
+hq :
+  (SimpleGraph.Walk.cons hqa
+      (SimpleGraph.Walk.cons hqb (SimpleGraph.Walk.cons hqc (SimpleGraph.Walk.cons hqd SimpleGraph.Walk.nil)))).IsPath
+hlq :
+  (SimpleGraph.Walk.cons hqa
+        (SimpleGraph.Walk.cons hqb
+          (SimpleGraph.Walk.cons hqc (SimpleGraph.Walk.cons hqd SimpleGraph.Walk.nil)))).length =
+    4
+hne :
+  insert s(u, a) (insert s(a, b) (insert s(b, c) (insert s(c, v) ∅))) ≠
+    insert s(u, a') (insert s(a', b') (insert s(b', c') (insert s(c', v) ∅)))
+h3 :
+  #(insert s(u, a) (insert s(a, b) (insert s(b, c) (insert s(c, v) ∅))) ∩
+        insert s(u, a') (insert s(a', b') (insert s(b', c') (insert s(c', v) ∅)))) =
+    3
+⊢ False
+E:\Projects\ErdosProblems\tmp\scratch_t6_state.lean:10:8: warning: declaration uses 'sorry'

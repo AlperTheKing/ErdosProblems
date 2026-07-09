@@ -1,0 +1,12 @@
+{
+  "schema": "eq_odl1_rung2_aggregate_reverify_v1",
+  "ledger": "tmp\\eq_odl1_rung2_chart_batch_ledger_v108_codex.json",
+  "ledger_sha256": "981D353F88C8148DEC975DF75CBEDCC4975505F2ADF2345E6A6A9329FD3BD1AF",
+  "command": "python tmp\\claude_aggregate_reverify.py tmp\\eq_odl1_rung2_chart_batch_ledger_v108_codex.json",
+  "total_rows": 108,
+  "passed": 108,
+  "failed_count": 0,
+  "all_verified": true,
+  "failures": [],
+  "completed_utc": "2026-07-09T00:22:06Z"
+}

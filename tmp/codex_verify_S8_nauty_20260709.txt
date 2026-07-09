@@ -1,0 +1,52 @@
+INDEPENDENT re-verification of |S|<=8 (workflow: connected F with e<=7 edges => D4(F) <= e-1).
+============================================================================================
+  done geng -c 2 (1 graphs); running max(D4-e) per e so far: {1: -1}
+  done geng -c 3 (2 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3}
+  done geng -c 4 (6 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -4, 5: -5, 6: -6}
+  done geng -c 5 (21 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -3, 5: -5, 6: -6, 7: -7, 8: -8, 9: -9, 10: -10}
+  done geng -c 6 (112 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -3, 5: -3, 6: -4, 7: -6, 8: -8, 9: -9, 10: -10, 11: -11, 12: -12, 13: -13, 14: -14, 15: -15}
+  done geng -c 7 (853 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -3, 5: -3, 6: -2, 7: -3, 8: -4, 9: -6, 10: -8, 11: -10, 12: -12, 13: -13, 14: -14, 15: -15, 16: -16, 17: -17, 18: -18, 19: -19, 20: -20, 21: -21}
+  done geng -c 8 (11117 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -3, 5: -3, 6: -2, 7: -1, 8: -2, 9: -3, 10: -4, 11: -5, 12: -8, 13: -9, 14: -11, 15: -13, 16: -15, 17: -17, 18: -18, 19: -19, 20: -20, 21: -21, 22: -22, 23: -23, 24: -24, 25: -25, 26: -26, 27: -27, 28: -28}
+  done geng -c 9 (261080 graphs); running max(D4-e) per e so far: {1: -1, 2: -2, 3: -3, 4: -3, 5: -3, 6: -2, 7: -1, 8: 1, 9: 0, 10: -1, 11: -2, 12: -3, 13: -4, 14: -5, 15: -7, 16: -10, 17: -12, 18: -13, 19: -15, 20: -17, 21: -19, 22: -21, 23: -23, 24: -24, 25: -25, 26: -26, 27: -27, 28: -28, 29: -29, 30: -30, 31: -31, 32: -32, 33: -33, 34: -34, 35: -35, 36: -36}
+============================================================================================
+max(D4 - e) bucketed by edge count e:
+  e= 1: max(D4-e) = -1
+  e= 2: max(D4-e) = -2
+  e= 3: max(D4-e) = -3
+  e= 4: max(D4-e) = -3
+  e= 5: max(D4-e) = -3
+  e= 6: max(D4-e) = -2
+  e= 7: max(D4-e) = -1
+  e= 8: max(D4-e) = +1  saturation witness ('H???FaM', 9, 8, 9)
+  e= 9: max(D4-e) = +0
+  e=10: max(D4-e) = -1
+  e=11: max(D4-e) = -2
+  e=12: max(D4-e) = -3
+  e=13: max(D4-e) = -4
+  e=14: max(D4-e) = -5
+  e=15: max(D4-e) = -7
+  e=16: max(D4-e) = -10
+  e=17: max(D4-e) = -12
+  e=18: max(D4-e) = -13
+  e=19: max(D4-e) = -15
+  e=20: max(D4-e) = -17
+  e=21: max(D4-e) = -19
+  e=22: max(D4-e) = -21
+  e=23: max(D4-e) = -23
+  e=24: max(D4-e) = -24
+  e=25: max(D4-e) = -25
+  e=26: max(D4-e) = -26
+  e=27: max(D4-e) = -27
+  e=28: max(D4-e) = -28
+  e=29: max(D4-e) = -29
+  e=30: max(D4-e) = -30
+  e=31: max(D4-e) = -31
+  e=32: max(D4-e) = -32
+  e=33: max(D4-e) = -33
+  e=34: max(D4-e) = -34
+  e=35: max(D4-e) = -35
+  e=36: max(D4-e) = -36
+============================================================================================
+VERDICT: CONFIRMED. For every connected graph with e<=7 edges, D4 <= e-1 (max D4-e = -1); first saturation
+  (D4-e >= +1) is at e=8. => the workflow's |S|<=8 Hall proof is INDEPENDENTLY VERIFIED: a minimal violator
+  would need m+1 <= D4(F) <= m-1 for m<=7, impossible. Ell5SupportExpansion holds for all |S| <= 8.

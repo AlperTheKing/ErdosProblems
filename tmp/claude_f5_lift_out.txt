@@ -3,3 +3,6 @@ F5 incidence lift: minimal 4-uniform Hall-deficient cores -> P4 realizability
 |F|=5: 0 minimal Hall-deficient cores (|R|=6)
    lifted (path-consistent): 0 | realized (simple+bipartite+tri-free): 0 | fails: {}
 |F|=6: 6435 minimal Hall-deficient cores (|R|=7)
+   lifted (path-consistent): 90 | realized (simple+bipartite+tri-free): 0 | fails: {'no-lift': 6345, 'cut graph has odd cycle (not 2-colorable)': 90}
+==========================================================================================
+VERDICT: realized cores exist -> run pipeline on tmp/claude_f5_realized.json; none realized -> 'Hall-deficient skeletons not P4-realizable (small |F|)' = L3 lemma candidate

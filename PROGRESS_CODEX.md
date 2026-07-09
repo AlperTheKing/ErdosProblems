@@ -29918,3 +29918,261 @@
 2026-07-08T19:59:50Z OK VERIFY | DID: In-memory syntax-checked thread CRT runner. | RESULT: syntax_ok. | D: launch thread CRT solves
 2026-07-08T20:00:12Z OK ATTACK | DID: Launched thread CRT solves for d8 and d9. | RESULT: d8_session=47611 workers=39; d9_session=44985 workers=24. | D: monitor summaries
 2026-07-08T20:20:27Z OK VERIFY | DID: Monitored thread CRT solves. | RESULT: d8 p384 checkpoint written; no reconstruction yet; second wave active; native count=63. | D: wait p768
+2026-07-08T20:41:35Z FAIL VERIFY | DID: Exact-solved d8 s246813 p768 thread CRT. | RESULT: core residuals=0; solution_negative_count=2056. | D: d8 needs Clarabel/full-source core
+2026-07-08T20:41:43Z > ATTACK | NEXT: Launch k8/d8 Clarabel-support rank-aware core extraction with tau=1e-4.
+2026-07-08T20:55:35Z OK ATTACK | DID: Extracted d8 Clarabel-support core. | RESULT: dim=1587 square=True status=Solved core=tmp/eq_odl1_rung2_core_k8_d8_clarabel_tau1e4.jsonl. | D: exact solve d8 clarabel core
+2026-07-08T20:55:56Z OK ATTACK | DID: Launched exact CRT for d8 Clarabel core. | RESULT: session=64057 workers=40 summary=tmp/eq_odl1_rung2_modular_k8_d8_clarabel_tau1e4_p384_thread_w40.json. | D: monitor d8/d9
+2026-07-08T20:56:20Z FAIL VERIFY | DID: Exact-solved d8 Clarabel tau1e-4 core. | RESULT: residuals=0; solution_negative_count=675; dim=1587. | D: vary Clarabel support/basis
+2026-07-08T20:56:41Z > ATTACK | NEXT: Launch d8 Clarabel-support core extraction with tau=1e-3 after tau1e-4 exact basis was negative.
+2026-07-08T21:03:28Z FAIL VERIFY | DID: Exact-solved d9 s77773 p768 thread CRT. | RESULT: residuals=0; solution_negative_count=3328; dim=7500. | D: d9 needs Clarabel/full-source core
+2026-07-08T21:03:36Z > ATTACK | NEXT: Launch k8/d9 Clarabel-support rank-aware core extraction with tau=1e-4.
+2026-07-08T21:11:31Z OK ATTACK | DID: Extracted d8 Clarabel tau1e-3 core. | RESULT: dim=1068 square=True status=Solved core=tmp/eq_odl1_rung2_core_k8_d8_clarabel_tau1e3.jsonl. | D: exact solve d8 tau1e-3
+2026-07-08T21:12:57Z FAIL VERIFY | DID: Exact-solved d8 Clarabel tau1e-3 core. | RESULT: residuals=0; solution_negative_count=464; dim=1068. | D: try tau1e-2
+2026-07-08T21:13:02Z > ATTACK | NEXT: Launch d8 Clarabel-support core extraction with tau=1e-2.
+2026-07-08T21:16:48Z OK ATTACK | DID: Extracted d9 Clarabel tau1e-4 core. | RESULT: dim=1657 square=True status=Solved core=tmp/eq_odl1_rung2_core_k8_d9_clarabel_tau1e4.jsonl. | D: exact solve d9 Clarabel core
+2026-07-08T21:18:19Z FAIL VERIFY | DID: Exact-solved d9 Clarabel tau1e-4 core. | RESULT: residuals=0; solution_negative_count=808; dim=1657. | D: try d9 tau1e-3
+2026-07-08T21:18:29Z > ATTACK | NEXT: Launch d9 Clarabel-support core extraction with tau=1e-3.
+2026-07-08T21:29:08Z OK ATTACK | DID: Extracted tighter Clarabel cores. | RESULT: d8_tau1e-2 dim=632; d9_tau1e-3 dim=1066; both square. | D: exact solve both
+2026-07-08T21:29:27Z OK ATTACK | DID: Launched exact CRT for d8 tau1e-2 and d9 tau1e-3 Clarabel cores. | RESULT: d8_session=58557 workers=31; d9_session=81503 workers=32. | D: monitor exact checks
+2026-07-08T21:29:42Z FAIL VERIFY | DID: Exact-solved d8 tau1e-2 and d9 tau1e-3 Clarabel cores. | RESULT: d8 neg=262 dim=632; d9 neg=502 dim=1066. | D: try tighter thresholds
+2026-07-08T21:29:47Z > ATTACK | NEXT: Launch d8 tau=0.1 and d9 tau=0.01 Clarabel core extractions.
+2026-07-08T21:45:43Z OK ATTACK | DID: Extracted d9 Clarabel tau1e-2 core. | RESULT: dim=617 square=True status=Solved core=tmp/eq_odl1_rung2_core_k8_d9_clarabel_tau1e2.jsonl. | D: exact solve d9 tau1e-2
+2026-07-08T21:46:13Z FAIL VERIFY | DID: Exact-solved d9 Clarabel tau1e-2 core and extracted d8 tau1e-1 core. | RESULT: d9 neg=268 dim=617; d8 dim=296 square=True. | D: exact d8, try d9 tau1e-1
+2026-07-08T21:49:41Z OK VERIFY | DID: Read Claude mailbox for chart-tail status. | RESULT: mailbox says k8/d8,k8/d9 remain 2 cert gaps; lens handoff landed. | D: goal text update
+2026-07-08T21:52:23Z > VERIFY | NEXT: Read Claude mailbox and inspect k8/d8,k8/d9 artifacts for current tail state.
+2026-07-08T21:52:42Z > VERIFY | NEXT: Inspect latest Clarabel exact summaries for d8/d9 negative-count trend.
+2026-07-08T21:53:01Z FAIL VERIFY | DID: Inspected latest d8/d9 Clarabel exact summaries. | RESULT: d8 tau0.1 neg=112 dim=296; d9 tau0.01 neg=268 dim=617. | D: improve basis extraction
+2026-07-08T21:53:06Z > ATTACK | NEXT: Inspect Clarabel basis extraction script and current live process before choosing next cert attempt.
+2026-07-08T21:53:28Z > VERIFY | NEXT: Check source-column coefficient signs to see if rounded Clarabel feasible points can certify directly.
+2026-07-08T21:55:16Z OK VERIFY | DID: Checked k8/d8,k8/d9 source-column signs. | RESULT: mixed signs; direct rounded Clarabel flooring invalid. | D: try small-support simplex vertex
+2026-07-08T21:55:23Z > ATTACK | NEXT: Add support-restricted HiGHS vertex extractor after Clarabel support discovery.
+2026-07-08T21:56:12Z OK ATTACK | DID: Added and syntax-checked support-restricted HiGHS vertex extractor. | RESULT: tmp/codex_clarabel_support_highs_vertex.py syntax_ok. | D: run d8 hybrid
+2026-07-08T21:56:16Z > ATTACK | NEXT: Run d8 Clarabel-support restricted-HiGHS vertex extractor at tau=0.1.
+2026-07-08T22:04:03Z FAIL ATTACK | DID: Ran d8 tau0.1 support-restricted HiGHS vertex extractor. | RESULT: restricted support infeasible; support=296. | D: rerun d8 at tau0.01
+2026-07-08T22:04:08Z > ATTACK | NEXT: Run d8 restricted-HiGHS vertex extractor at Clarabel tau=0.01.
+2026-07-08T22:11:46Z FAIL ATTACK | DID: Ran d8 tau0.01 support-restricted HiGHS vertex extractor. | RESULT: restricted support infeasible; support=632. | D: test d8 tau1e-4
+2026-07-08T22:11:50Z > ATTACK | NEXT: Run d8 restricted-HiGHS vertex extractor at Clarabel tau=1e-4.
+2026-07-08T22:18:41Z FAIL ATTACK | DID: Ran d8 tau1e-4 support-restricted HiGHS vertex extractor. | RESULT: restricted support infeasible; support=1587. | D: profile Clarabel threshold residuals
+2026-07-08T22:18:47Z > VERIFY | NEXT: Profile d8 Clarabel solution threshold residuals to diagnose infeasible supports.
+2026-07-08T22:19:12Z OK ATTACK | DID: Added Clarabel support residual profiler. | RESULT: tmp/codex_clarabel_support_profile.py | D: run d8 profile
+2026-07-08T22:26:03Z OK VERIFY | DID: Profiled d8 Clarabel residuals. | RESULT: full min residual=-1.22e-7, x_min=-5.53e-8, threshold supports all violate. | D: try scaled rational direct source
+2026-07-08T22:26:28Z > ATTACK | NEXT: Add direct scaled-rational Clarabel source emitter and exact-check it.
+2026-07-08T22:26:56Z OK ATTACK | DID: Added scaled Clarabel source emitter. | RESULT: tmp/codex_emit_scaled_clarabel_source.py | D: try d8 scale0.999
+2026-07-08T22:27:01Z > ATTACK | NEXT: Emit d8 scaled Clarabel source candidate with scale=0.999 and den=1e12.
+2026-07-08T22:33:42Z OK ATTACK | DID: Emitted d8 scaled Clarabel source candidate. | RESULT: records=14509 scale=0.999 solution=tmp/eq_odl1_rung2_source_solution_k8_d8_clarabel_scaled0999_d1e12.jsonl. | D: exact check
+2026-07-08T22:33:47Z > VERIFY | NEXT: Run official exact source_solution_check on d8 scaled Clarabel candidate.
+2026-07-08T22:34:41Z FAIL VERIFY | DID: Exact-checked d8 scaled Clarabel source candidate. | RESULT: exact_ok=false residual_neg=2937 solution_neg=0 min=-6225001601417/11000000000000. | D: abandon direct scaling
+2026-07-08T22:35:27Z > VERIFY | NEXT: Inspect exact source-patch repair scripts for applicability to d8 tau0.1 negative core.
+2026-07-08T22:36:08Z > VERIFY | NEXT: Convert d8 tau0.1 exact core solution to source solution and run official source check.
+2026-07-08T22:37:10Z FAIL VERIFY | DID: Exact-checked converted d8 tau0.1 source solution. | RESULT: residual_neg=1378 solution_neg=112 min=-211878406843437941/17067875945472000. | D: run increment repair LP
+2026-07-08T22:37:19Z > ATTACK | NEXT: Run d8 highspy increment-repair LP from tau0.1 exact source solution.
+2026-07-08T22:38:14Z OK ATTACK | DID: Ran d8 increment-repair LP. | RESULT: Optimal; basic_cols=2474 used=1679 neg_residual_float=0 neg_source_float=0. | D: exactify repair
+[2026-07-09T01:39:07+03:00] > SELECT | NEXT: Read Claude mailbox and current cert artifacts before resuming d8/d9 certificate exactification.
+[2026-07-09T01:39:28+03:00] OK SELECT | DID: Read Claude mailbox and d8 increment artifact list. | RESULT: d8/d9 remain 2 cert gaps; d8 increment basis exists. | D: resume exactification
+[2026-07-09T01:39:55+03:00] > VERIFY | NEXT: Re-read Claude mailbox and inspect d8/d9 repair artifacts before exactifying k8/d8.
+[2026-07-09T01:40:12+03:00] OK VERIFY | DID: Re-read mailbox and d8/d9 artifacts. | RESULT: d8 increment basis present; d9 Clarabel tau cores present; no new Claude cert. | D: exactify d8
+[2026-07-09T01:40:20+03:00] > ATTACK | NEXT: Build exact d8 increment-repair square core from the highspy basis JSON.
+[2026-07-09T01:41:21+03:00] OK ATTACK | DID: Built d8 increment-repair exact core. | RESULT: dimension=2474 upper_rows=2474 negative_source_count=112. | D: launch CRT
+[2026-07-09T01:41:27+03:00] > ATTACK | NEXT: Solve d8 increment-repair core exactly with 48-thread modular CRT.
+[2026-07-09T01:42:00+03:00] OK ATTACK | DID: Solved d8 increment-repair core by 48-thread CRT. | RESULT: reconstructed=true residuals=0 solution_negative_count=0. | D: apply repair
+[2026-07-09T01:42:06+03:00] > VERIFY | NEXT: Apply exact d8 increment repair and run official source_solution_check.
+[2026-07-09T01:43:03+03:00] OK VERIFY | DID: Applied exact d8 increment repair. | RESULT: exact_ok=true residual_neg=0 solution_neg=0. | D: run standalone checker
+[2026-07-09T01:43:50+03:00] OK VERIFY | DID: Ran standalone d8 source_solution_check. | RESULT: exact_ok=true full_negative_residual_count=0 solution_negative_count=0. | D: hash+post
+[2026-07-09T01:44:05+03:00] OK VERIFY | DID: Posted k8/d8 cert RESULT to CODEX_TO_CLAUDE. | RESULT: sha=58A50857C118A3DCF01EE63F1FA399415BAE5EE214C765022A8C3977CED99FD3. | D: d9
+[2026-07-09T01:44:14+03:00] > VERIFY | NEXT: Inspect k8/d9 tau0.1 Clarabel core dimension before exact solve.
+[2026-07-09T01:44:35+03:00] OK VERIFY | DID: Inspected d9 tau0.1 Clarabel core. | RESULT: dimension=305 terms=2882. | D: exact solve d9 tau0.1
+[2026-07-09T01:44:40+03:00] > ATTACK | NEXT: Solve k8/d9 tau0.1 Clarabel core exactly with threaded CRT.
+[2026-07-09T01:44:50+03:00] FAIL ATTACK | DID: Exact-solved d9 tau0.1 Clarabel core. | RESULT: residuals=0 solution_negative_count=128 dim=305. | D: convert+repair
+[2026-07-09T01:45:08+03:00] > VERIFY | NEXT: Convert d9 tau0.1 core solution to source solution and exact-check it.
+[2026-07-09T01:46:03+03:00] FAIL VERIFY | DID: Exact-checked converted d9 tau0.1 source solution. | RESULT: residual_neg=1432 solution_neg=128. | D: run increment repair LP
+[2026-07-09T01:46:08+03:00] > ATTACK | NEXT: Run d9 highspy increment-repair LP from tau0.1 exact source solution.
+[2026-07-09T01:46:47+03:00] OK ATTACK | DID: Ran d9 increment-repair LP. | RESULT: Optimal; basic_cols=2624 used=1829 neg_residual_float=0 neg_source_float=0. | D: exactify d9 repair
+[2026-07-09T01:46:53+03:00] > ATTACK | NEXT: Build exact d9 increment-repair square core from highspy basis JSON.
+[2026-07-09T01:47:50+03:00] OK ATTACK | DID: Built d9 increment-repair exact core. | RESULT: dimension=2624 upper_rows=2624 negative_source_count=128. | D: launch CRT
+[2026-07-09T01:47:55+03:00] > ATTACK | NEXT: Solve d9 increment-repair core exactly with 48-thread modular CRT.
+[2026-07-09T01:48:38+03:00] OK ATTACK | DID: Solved d9 increment-repair core by 48-thread CRT. | RESULT: reconstructed=true residuals=0 solution_negative_count=0. | D: apply repair
+[2026-07-09T01:48:43+03:00] > VERIFY | NEXT: Apply exact d9 increment repair and run official source_solution_check.
+[2026-07-09T01:49:37+03:00] OK VERIFY | DID: Applied exact d9 increment repair. | RESULT: exact_ok=true residual_neg=0 solution_neg=0. | D: run standalone checker
+[2026-07-09T01:50:24+03:00] OK VERIFY | DID: Ran standalone d9 source_solution_check. | RESULT: exact_ok=true full_negative_residual_count=0 solution_negative_count=0. | D: hash+post
+[2026-07-09T01:50:50+03:00] OK VERIFY | DID: Posted k8/d9 cert RESULT to CODEX_TO_CLAUDE. | RESULT: sha=5E223AD84D277B8176799479A45732ADA16303F37EB6B23EE74009FB45C04A8E. | D: scan pending
+[2026-07-09T01:51:05+03:00] > VERIFY | NEXT: Inspect manifest helper and pending-row scanner after posting d8/d9 certs.
+[2026-07-09T01:51:32+03:00] OK VERIFY | DID: Inspected source manifest tool and ledger files. | RESULT: source_manifest accepts solution/check/core/modular directly; latest ledger v106. | D: emit manifests
+[2026-07-09T01:51:38+03:00] > VERIFY | NEXT: Emit source certificate manifests for k8/d8 and k8/d9.
+[2026-07-09T01:51:44+03:00] OK VERIFY | DID: Emitted d8/d9 source certificate manifests. | RESULT: d8_records=1757 d9_records=1875 exact_ok=true. | D: hash manifests
+[2026-07-09T01:52:18+03:00] OK VERIFY | DID: Posted d8/d9 manifest hashes to CODEX_TO_CLAUDE. | RESULT: d8_manifest_sha=4D6C2E7C... d9_manifest_sha=C39B993B... | D: Gap#1
+[2026-07-09T01:52:30+03:00] > PLAN | NEXT: Read LENS_LEMMA_HANDOFF_CODEX.md and existing Ell5 Lean files to select first compiled Gap#1 task.
+[2026-07-09T01:52:53+03:00] OK PLAN | DID: Read Gap#1 handoff task list. | RESULT: T1 rebuild audit first; T2-T9 ordered; bare SSE false. | D: run T1
+[2026-07-09T01:52:58+03:00] > VERIFY | NEXT: Run tmp/claude_build_ell5lensstatement.py for T1 surface audit.
+[2026-07-09T01:53:25+03:00] FAIL VERIFY | DID: Ran Ell5LensStatement T1 build script. | RESULT: rc=1; terminal showed only axiom probes. | D: inspect log
+[2026-07-09T01:53:51+03:00] FAIL VERIFY | DID: Inspected Ell5Lens build log. | RESULT: Lean reached axiom probes; failed writing cached olean Permission denied. | D: rerun to codex olean dir
+[2026-07-09T01:53:58+03:00] > VERIFY | NEXT: Rebuild Ell5LensStatement to tmp/codex_lean_o_gap1 with cached base on LEAN_PATH.
+[2026-07-09T01:55:00+03:00] FAIL VERIFY | DID: Rebuilt Ell5LensStatement to codex tmp. | RESULT: no Lean errors; allowed axioms printed; olean temp written; final rename Permission denied. | D: T1 semantic-pass
+[2026-07-09T01:55:08+03:00] > PLAN | NEXT: Read Section 2 templates for T2/T3 and source definitions before adding a small Lean lemma.
+[2026-07-09T01:56:15+03:00] > ATTACK | NEXT: Add and compile Ell5GapLemmas.lean with T2 ell_eq_five_of_ell5Atom.
+[2026-07-09T01:56:36+03:00] OK ATTACK | DID: Compiled Ell5GapLemmas.lean T2. | RESULT: theorem ell_eq_five_of_ell5Atom; allowed axioms only. | D: grep new file
+[2026-07-09T01:58:10+03:00] OK ATTACK | DID: Compiled Ell5GapLemmas T2+T3. | RESULT: ell_eq_five_of_ell5Atom and surplus_split; allowed axioms only. | D: inspect S3
+[2026-07-09T02:00:03+03:00] OK ATTACK | DID: Added and compiled S3 pure_lens_ledgerSep. | RESULT: Ell5GapLemmas has T2,T3,S3; allowed axioms only. | D: post FYI
+[2026-07-09T02:02:03+03:00] OK VERIFY | DID: Posted Gap#1 helper lemma FYI to CODEX_TO_CLAUDE. | RESULT: Ell5GapLemmas T2,T3,S3 rc=0. | D: none
+[2026-07-09T02:02:58+03:00] > VERIFY | NEXT: Read Claude mailbox for d8/d9 reverify response and latest Gap#1 instructions.
+[2026-07-09T02:03:02+03:00] OK VERIFY | DID: Read Claude mailbox after posting d8/d9. | RESULT: no new reverify response; latest ledger file v106. | D: continue Gap#1
+[2026-07-09T02:03:10+03:00] > ATTACK | NEXT: Add S4 no_pure_lens_in_minNeg wrapper to Ell5GapLemmas and compile.
+[2026-07-09T02:05:11+03:00] OK ATTACK | DID: Added and compiled S4 no_pure_lens_in_minNeg. | RESULT: Ell5GapLemmas T2,T3,S3,S4 rc=0 allowed axioms only. | D: post FYI
+[2026-07-09T02:05:25+03:00] > ATTACK | NEXT: Add G2 dist_eq_of_le_of_geodesic_sub to Ell5GapLemmas and compile.
+[2026-07-09T02:06:35+03:00] OK ATTACK | DID: Added and compiled Ell5DistancePrune G2. | RESULT: dist_eq_of_le_of_geodesic_sub rc=0 allowed axioms only. | D: post FYI
+[2026-07-09T02:06:48+03:00] > PLAN | NEXT: Read T6 geodesics_union_ge_six candidate statement and decide whether to implement or split.
+[2026-07-09T02:07:15+03:00] > VERIFY | NEXT: Run mandatory Gap#1 negative regression gates for 24-vtx bare-SSE killer and escaping-atom pattern.
+[2026-07-09T02:07:30+03:00] OK VERIFY | DID: Ran Gap#1 negative regression scripts. | RESULT: 24-vtx bare-SSE violation confirmed; 11-vtx escaping atom max-cut confirmed. | D: keep banked route
+[2026-07-08T23:09:08Z] > SELECT | NEXT: Read Claude mailbox and current coordination state before issuing updated full-proof goal text.
+[2026-07-08T23:09:22Z] OK SELECT | DID: Read Claude mailbox tail and active goal. | RESULT: mailbox older than local d8/d9 certs; active goal present. | D: none
+[2026-07-08T23:09:48Z] > GATE | NEXT: Inspect mailbox, ledger, and k8/d8-d9 manifests to establish current authoritative chart state.
+[2026-07-08T23:10:02Z] OK GATE | DID: Inspected mailbox and ledger files. | RESULT: mailbox lacks d8/d9 acknowledgement; latest ledger is v106. | D: verify manifests
+[2026-07-08T23:10:06Z] > VERIFY | NEXT: Read v106 ledger schema and d8/d9 manifest/check files before any ledger mutation.
+[2026-07-08T23:10:39Z] OK VERIFY | DID: Read d8/d9 manifests and ledger builder. | RESULT: both exact_ok true, manifest SHA pinned. | D: rebuild v108
+[2026-07-08T23:10:44Z] > VERIFY | NEXT: Rebuild v108 ledger from v106 manifests plus k8/d8 and k8/d9 exact manifests.
+[2026-07-08T23:10:58Z] OK VERIFY | DID: Rebuilt chart ledger with d8/d9 manifests. | RESULT: tmp/eq_odl1_rung2_chart_batch_ledger_v108_codex.json certified_count=108 pending_count=0 | D: chart batch locally closed
+[2026-07-08T23:11:21Z] OK VERIFY | DID: Ran SHA integrity dry-run on v108 ledger. | RESULT: sha_ok=108/108 hard_issues=0. | D: launch aggregate exact reverify
+[2026-07-08T23:11:26Z] > VERIFY | NEXT: Run canonical aggregate Fraction reverify for all 108 chart rows.
+[2026-07-08T23:28:42Z] > PLAN | NEXT: Inspect Gap#1 handoff T6/T7 and current Lean surfaces while aggregate verifier runs.
+[2026-07-08T23:29:59Z] > CHECK | NEXT: Post v108 ledger and d8/d9 SHA-pinned artifacts to Claude/Fable while local aggregate reverify continues.
+[2026-07-08T23:30:20Z] OK CHECK | DID: Posted v108 closure packet to CODEX_TO_CLAUDE. | RESULT: ledger SHA 981D353F... certified_count=108 pending_count=0. | D: await independent reverify
+[2026-07-08T23:30:32Z] > PLAN | NEXT: Inspect BankedCutDomination and RelaxedCover APIs for a Gap#1 banked-route lemma cut.
+[2026-07-08T23:30:58Z] > ATTACK | NEXT: Add no-dual wrapper lemmas for BankedCutDomination to support Gap#1 no-Farkas route.
+[2026-07-08T23:31:23Z] > VERIFY | NEXT: Compile BankedCutDominationExtras.lean and inspect axiom probes.
+[2026-07-08T23:31:55Z] OK VERIFY | DID: Compiled BankedCutDominationExtras.lean. | RESULT: rc=0; axioms allowed set only. | D: no-dual wrapper available
+[2026-07-08T23:32:30Z] OK CHECK | DID: Posted BankedCutDominationExtras FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: none
+[2026-07-08T23:32:44Z] OK VERIFY | DID: Grepped new Lean helpers for forbidden tokens. | RESULT: no sorry/admit/native_decide matches. | D: none
+[2026-07-08T23:38:14Z] > ATTACK | NEXT: Add finite-cardinality T6 support lemma for two 4-edge sets with small union.
+[2026-07-08T23:39:13Z] OK VERIFY | DID: Compiled Ell5UnionCount.lean. | RESULT: rc=0; two T6 counting lemmas axiom-clean. | D: T6 reduced to graph-walk intersection case
+[2026-07-08T23:45:04Z] OK CHECK | DID: Posted Ell5UnionCount FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: none
+[2026-07-08T23:50:24Z] > ATTACK | NEXT: Add path-level T6 bridge reducing geodesics_union_ge_six to no-three-common-edges.
+[2026-07-08T23:51:04Z] FAIL VERIFY | DID: Compiled Ell5GeodesicUnion.lean. | RESULT: missing Ell5UnionCount.olean import cache, not proof error. | D: patch standalone
+[2026-07-08T23:52:13Z] OK VERIFY | DID: Compiled Ell5GeodesicUnion.lean. | RESULT: rc=0; path-level T6 bridge axiom-clean. | D: T6 remaining no-three-common-edges
+[2026-07-08T23:52:26Z] OK CHECK | DID: Posted Ell5GeodesicUnion FYI to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md updated. | D: none
+[2026-07-09T00:21:58Z] OK VERIFY | DID: Ran canonical aggregate Fraction reverify on v108 ledger. | RESULT: total_rows=108 passed=108 failed_count=0 all_verified=true. | D: chart certificates closed locally
+[2026-07-09T00:22:24Z] OK CHECK | DID: Posted aggregate v108 reverify result to Claude. | RESULT: summary SHA DF76E994... all_verified=true. | D: chart batch locally exact-closed
+[2026-07-09T00:23:23Z] > SELECT | NEXT: Re-read Claude mailbox and verify whether v108 chart closure has independent acknowledgement.
+[2026-07-09T00:23:42Z] OK SELECT | DID: Re-read mailbox and v108 summary. | RESULT: no independent v108 ack yet; local aggregate all_verified=true. | D: continue Gap#1
+[2026-07-09T00:23:48Z] > ATTACK | NEXT: Test Lean proof of no exactly-three common edges for two distinct same-endpoint length-4 paths.
+2026-07-09T00:25:30Z > SELECT | NEXT: Re-read Claude mailbox and active goal state before returning reusable goal text.
+2026-07-09T00:25:41Z OK SELECT | DID: Read Claude mailbox tail and active goal. | RESULT: goal stale at 106/108; local v108 aggregate exists from prior run | D: provide corrected goal
+2026-07-09T00:26:13Z > SELECT | NEXT: Read Claude mailbox and inspect current cert/Lean artifacts for Gap#1 continuation.
+2026-07-09T00:26:26Z OK SELECT | DID: Inspected mailbox, git status, v108 ledger and aggregate summary presence. | RESULT: v108 artifacts exist; no newer Claude ack in mailbox tail | D: audit v108 summary
+2026-07-09T00:26:36Z > VERIFY | NEXT: Inspect v108 aggregate summary and ledger hashes without rerunning the heavy verifier.
+2026-07-09T00:26:53Z OK VERIFY | DID: Audited v108 ledger and aggregate summary. | RESULT: ledger certified_count=108 pending_count=0; aggregate passed=108 failed=0 | D: cert tail locally closed
+2026-07-09T00:27:03Z > VERIFY | NEXT: Compile Gap#1 helper Lean modules against cached base olean tree.
+2026-07-09T00:27:17Z FAIL VERIFY | DID: Launched inline Python Lean compile harness. | RESULT: Python syntax error before Lean invocation | D: write temp compile harness
+2026-07-09T00:29:12Z OK VERIFY | DID: Compiled five Gap#1 helper Lean modules via tmp/codex_compile_gap1_helpers.py. | RESULT: rc=0 all; axioms only propext/Classical.choice/Quot.sound | D: helper stack green
+2026-07-09T00:29:31Z > PLAN | NEXT: Search Mathlib/current Lean surface for existing walk/path edge-set lemmas for the T6 symmetric-difference fact.
+2026-07-09T00:30:36Z > ATTACK | NEXT: Instrument T6 scratch proof to inspect normalized Lean goal after 4-walk destructuring.
+2026-07-09T00:34:10Z > ATTACK | NEXT: Test arbitrary-walk incidence parity lemma as a cleaner route to T6.
+2026-07-09T00:35:39Z OK ATTACK | DID: Tested arbitrary-walk incidence parity lemma in scratch. | RESULT: tmp/scratch_walk_parity.lean rc=0; allowed axioms only | D: promote parity helper
+2026-07-09T00:35:58Z > VERIFY | NEXT: Compile new WalkParity Lean helper and check axiom surface.
+2026-07-09T00:36:59Z OK VERIFY | DID: Compiled WalkParity.lean. | RESULT: rc=0; axioms only propext/Classical.choice/Quot.sound | D: parity helper available for T6
+2026-07-09T00:38:46Z FAIL ATTACK | DID: Attempted Python insertion into WalkParity.lean. | RESULT: cp1252 write error truncated file; restored file with UTF-8 Set-Content | D: recompile WalkParity
+2026-07-09T00:39:19Z OK VERIFY | DID: Recompiled restored WalkParity.lean with Sym2 bridge. | RESULT: rc=0; axioms only propext/Classical.choice/Quot.sound | D: T6 parity toolkit green
+2026-07-09T00:40:29Z OK ATTACK | DID: Proved singleton extraction from four-set/three-intersection in scratch. | RESULT: tmp/scratch_sdiff.lean rc=0; allowed axioms only | D: promote finite-set lemma
+2026-07-09T00:42:40Z OK VERIFY | DID: Recompiled Gap#1 helper stack after adding sdiff_card_one_of_four_inter_three. | RESULT: rc=0 all stack modules; allowed axioms only | D: finite-set T6 bridge strengthened
+2026-07-09T00:42:57Z OK VERIFY | DID: Ran forbidden-token sweep over six Gap#1 helper modules. | RESULT: no sorry/admit/native_decide matches | D: safe to share helper FYI
+2026-07-09T00:43:30Z OK REPORT | DID: Posted v108 + WalkParity + Ell5UnionCount helper FYI to CODEX_TO_CLAUDE. | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: shared artifacts
+2026-07-09T00:45:24Z FAIL VERIFY | DID: Tried to cache WalkParity.olean for scratch import. | RESULT: Lean source rc=0 but -o write returned permission denied | D: defer full T6 composition
+2026-07-09T00:46:03Z > SELECT | NEXT: Read Claude mailbox and resume Gap#1 T6 proof composition from WalkParity helpers.
+2026-07-09T00:46:28Z OK SELECT | DID: Read Claude mailbox and current helper files. | RESULT: no newer Claude block; WalkParity source present | D: repair olean/import path
+2026-07-09T00:47:05Z FAIL VERIFY | DID: Tried Lean -o for WalkParity.olean under C:\tmp. | RESULT: access denied / failed to create olean | D: use self-contained T6 scratch
+2026-07-09T00:50:55Z OK ATTACK | DID: Proved finite-set parity cancellation for singleton differences in scratch. | RESULT: tmp/scratch_even_cancel.lean rc=0; allowed axioms only | D: promote cancellation lemma
+2026-07-09T00:53:50Z OK VERIFY | DID: Compiled WalkParity and Ell5UnionCount after adding count/cancellation helpers. | RESULT: rc=0 both; allowed axioms only | D: T6 helper algebra ready
+2026-07-09T00:56:59Z OK ATTACK | DID: Completed full T6 no-three-common-edge proof in scratch. | RESULT: tmp/scratch_t6_full.lean rc=0; allowed axioms only | D: promote to Ell5GeodesicUnion
+2026-07-09T00:58:04Z > VERIFY | NEXT: Compile promoted Ell5GeodesicUnion T6 theorem.
+2026-07-09T00:58:40Z OK VERIFY | DID: Compiled Ell5GeodesicUnion.lean with promoted T6 theorem. | RESULT: geodesics_union_ge_six rc=0; axioms only propext/Classical.choice/Quot.sound | D: T6 closed
+2026-07-09T00:58:53Z OK VERIFY | DID: Ran forbidden-token sweep over T6 touched Lean files. | RESULT: no sorry/admit/native_decide matches | D: T6 artifact clean
+[2026-07-09T01:00:22Z] > VERIFY | NEXT: Read Claude mailbox and inspect current chart-certificate state before choosing tail vs Gap#1.
+[2026-07-09T01:00:37Z] OK VERIFY | DID: Inspected Claude mailbox and v108 ledger artifacts. | RESULT: aggregate_reverify total_rows=108 passed=108 failed_count=0 | D: chart tail appears closed locally
+[2026-07-09T01:00:58Z] > PLAN | NEXT: Inspect Gap#1 handoff Section 5 and current Ell5 helper files to select the next missing compiled lemma.
+[2026-07-09T01:01:32Z] > ATTACK | NEXT: Formalize T7 m<=6 small-Hall expansion from pair-union>=6, avoiding finite decide search.
+[2026-07-09T01:02:42Z] OK ATTACK | DID: Added and compiled Ell5HallSmall small-Hall T7 base module. | RESULT: hall_le_six and no_minimal_violator_le_six rc=0 allowed axioms only | D: T7 m<=6 closed
+[2026-07-09T01:03:05Z] OK VERIFY | DID: Posted T6/T7<=6 SHA-pinned Lean update to CODEX_TO_CLAUDE. | RESULT: coordination/CODEX_TO_CLAUDE.md appended | D: Claude/Fable notified
+[2026-07-09T01:03:48Z] > ATTACK | NEXT: Formalize the intended T7 m=6 counting route via 4-subsets of a 5-set, using T6 to exclude card-5 supports.
+[2026-07-09T01:06:07Z] OK ATTACK | DID: Compiled intended T7 m=6 counting theorem in Ell5HallSmall. | RESULT: no_minimal_violator_card_six_of_no_card_five rc=0 allowed axioms only | D: T7 m=6 intended route closed
+[2026-07-09T01:06:55Z] > ATTACK | NEXT: Prove geodesicSupport_card_ne_five from T6 to instantiate the T7 m=6 counting theorem.
+[2026-07-09T01:09:29Z] OK ATTACK | DID: Added geodesicSupport_card_ne_five to Ell5GeodesicUnion and compiled. | RESULT: rc=0 allowed axioms only | D: T7 hnot5 bridge closed
+[2026-07-09T01:10:04Z] > ATTACK | NEXT: Prove full-support equality at card 4 determines the endpoint bad edge, providing the T7 support-injectivity bridge.
+[2026-07-09T01:10:54Z] OK ATTACK | DID: Added support-injectivity bridge badEdge_eq_of_geodesicSupport_eq_card_four. | RESULT: Ell5GeodesicUnion rc=0 allowed axioms only | D: T7 hinj bridge closed
+[2026-07-09T01:11:37Z] > VERIFY | NEXT: Read Claude mailbox for any newer Gap#1/Fable direction before selecting next lemma.
+[2026-07-09T01:12:01Z] OK VERIFY | DID: Read Claude mailbox and local outgoing state. | RESULT: no newer Claude/Fable direction beyond lens handoff | D: continue T7 bridge
+[2026-07-09T01:12:07Z] > ATTACK | NEXT: Add actual geodesicSupport m=6 no-minimal-violator wrapper in Ell5GeodesicUnion.
+[2026-07-09T01:13:50Z] OK ATTACK | DID: Added actual geodesicSupport m=6 minimal-violator wrapper. | RESULT: no_minimal_violator_card_six_geodesicSupport rc=0 allowed axioms only | D: T7 m=6 actual wrapper closed
+[2026-07-09T01:14:08Z] > SELECT | NEXT: Locate existing m=7/8 footprint artifacts/scripts before designing a new finite T7 certificate.
+[2026-07-09T01:14:55Z] OK VERIFY | DID: Ran _claude_verify_S8_nauty.py for T7 m=7/8. | RESULT: e<=7 max(D4-e)<=-1, first saturation e=8 g6=H???FaM | D: finite T7 evidence confirmed
+[2026-07-09T01:15:58Z] OK ATTACK | DID: Added and compiled Ell5FootprintCount Lean interface. | RESULT: distance4 count bound kills |S|=|E|+1 rc=0 allowed axioms only | D: T7 m=7/8 certificate hook added
+[2026-07-09T01:16:26Z] > VERIFY | NEXT: Save the m<=8 nauty verifier output as a SHA-pinned artifact for the T7 footprint certificate interface.
+[2026-07-09T01:16:45Z] OK VERIFY | DID: Saved m<=8 nauty verifier output. | RESULT: tmp/codex_verify_S8_nauty_20260709.txt | D: T7 external artifact pinned next
+[2026-07-09T01:17:18Z] > VERIFY | NEXT: Read Claude mailbox before attacking banked FullBankHall / relaxed cover next step.
+2026-07-09T01:18:41Z OK VERIFY | DID: read CLAUDE_TO_CODEX tail and active goal | RESULT: goal active; latest mailbox 2026-07-08T20:25Z | D: none
+2026-07-09T01:19:03Z > VERIFY | NEXT: inspect mailbox, ledger/reverify artifacts, and Gap#1 module surface before choosing next action
+2026-07-09T01:19:23Z > VERIFY | NEXT: inspect v108 ledger and aggregate reverify JSON for exact row counts and failure counts
+2026-07-09T01:19:37Z OK VERIFY | DID: inspected v108 aggregate reverify | RESULT: total_rows=108 passed=108 failed_count=0 all_verified=true | D: cert-tail closed locally
+2026-07-09T01:19:46Z > PLAN | NEXT: read Lens handoff Section 5 and banked relaxed-cover Lean modules to identify the smallest next bridge
+2026-07-09T01:20:18Z > ATTACK | NEXT: add Lean bridge from relaxed-cover primal certificate to BankedCutDomination
+2026-07-09T01:20:41Z > VERIFY | NEXT: compile RelaxedCoverBanked.lean and check axiom/forbidden-token status
+2026-07-09T01:21:06Z FAIL VERIFY | DID: compiled RelaxedCoverBanked.lean | RESULT: missing cached BankedCutDominationExtras.olean | D: remove new-module import
+2026-07-09T01:21:54Z FAIL VERIFY | DID: recompiled RelaxedCoverBanked.lean | RESULT: stale open BankedCutDominationExtras line | D: remove stale namespace
+2026-07-09T01:22:36Z OK VERIFY | DID: compiled RelaxedCoverBanked.lean | RESULT: rc=0; axioms=[propext,Classical.choice,Quot.sound]; forbidden sweep clean | D: added primal-to-banked bridge
+2026-07-09T01:23:13Z > ATTACK | NEXT: add graph-level wrapper for relaxed-cover primal to BankedCutDomination
+2026-07-09T01:24:03Z OK VERIFY | DID: compiled graph wrapper in RelaxedCoverBanked.lean | RESULT: rc=0; axioms allowed; SHA256=32EF2B0FBD145385252AEE26CA355437D80E7480218391EC380C2A736BBFD29C | D: graph-level primal-to-banked bridge
+2026-07-09T01:24:46Z > VERIFY | NEXT: read coordination mailbox and inspect current Gap#1 surfaces before next proof edit
+2026-07-09T01:25:13Z > ATTACK | NEXT: add no-dual corollaries to RelaxedCoverBanked for banked test articles
+2026-07-09T01:26:50Z OK VERIFY | DID: compiled no-dual wrappers in RelaxedCoverBanked.lean | RESULT: rc=0; four theorems allowed axioms; SHA256=2AFE4CE5F3582B6B151136BE1976A01FA23A8F001CAA5DB0780AFBB6EB0DF259 | D: no-dual test surface added
+2026-07-09T01:27:14Z > SELECT | NEXT: inspect mandatory Gap#1 regression scripts for existing banked-cover/dual data emitters
+2026-07-09T01:27:39Z > VERIFY | NEXT: run mandatory 24-vtx and 11-vtx Gap#1 regression scripts
+2026-07-09T01:27:55Z OK VERIFY | DID: ran 24-vtx and 11-vtx Gap#1 regression scripts | RESULT: bare SSE false; no-escaping-at-maxcut false; banked form required | D: none
+2026-07-09T01:28:21Z OK SELECT | DID: inspected Gap#1 bank schema docs and regressions | RESULT: no concrete lam/q emitter found; sinks described as Door/VertexSlack/Base/Prune | D: prepare ASK
+2026-07-09T01:29:20Z > VERIFY | NEXT: read mailbox and start finite relaxed-cover payload checker for mandatory Gap#1 articles
+2026-07-09T01:29:39Z > PLAN | NEXT: inspect existing RCC anchor/dual scripts before writing a new payload checker
+[2026-07-09T01:30:51Z] > CHECK | NEXT: read Claude mailbox and current goal state before returning stable goal text
+[2026-07-09T01:31:01Z] OK CHECK | DID: read Claude mailbox and active goal | RESULT: mailbox tail through 2026-07-08T20:25Z plus active goal | D: none
+[2026-07-09T01:31:43Z] > CHECK | NEXT: reconcile mailbox and current v108/gap artifacts before choosing next proof action
+[2026-07-09T01:31:56Z] > VERIFY | NEXT: inspect v108 aggregate and ledger hashes to decide if chart tail is closed
+[2026-07-09T01:32:12Z] OK VERIFY | DID: inspected v108 aggregate and SHA | RESULT: total_rows=108 passed=108 all_verified=true ledger_sha=981D353F... | D: chart tail closed
+[2026-07-09T01:32:24Z] > VERIFY | NEXT: run Gap#1 exact regression and anchor gates for banked relaxed-cover route
+[2026-07-09T01:32:42Z] OK VERIFY | DID: ran Gap#1 regressions and RCC anchors | RESULT: 24vtx bare-SSE CE confirmed; escaping maxcut CE confirmed; RCC anchors all exact-verified | D: focus banked form
+[2026-07-09T01:33:08Z] > EDIT | NEXT: add Codex RCC anchor payload emitter and verify emitted primal JSONs exactly
+[2026-07-09T01:33:46Z] OK VERIFY | DID: emitted and verified RCC anchor primal payloads | RESULT: c5_t1,c5_t2,c5_t3,cp11 PRIMAL CERT VERIFIED | D: payload schema pinned
+[2026-07-09T01:34:06Z] OK COORD | DID: posted v108 reconciliation and RCC anchor payload FYI to Claude | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: none
+[2026-07-09T01:34:16Z] > PLAN | NEXT: inspect Lean relaxed-cover modules for JSON-to-theorem bridge surface
+[2026-07-09T01:34:33Z] > EDIT | NEXT: extend RCC anchor payload emitter with SHA/status manifest
+[2026-07-09T01:35:42Z] OK VERIFY | DID: added RCC anchor manifest and reran verifier | RESULT: manifest tmp/codex_rcc_anchor_payloads/manifest.json sha=8666D723... | D: manifest available
+[2026-07-09T01:35:58Z] > VERIFY | NEXT: compile RelaxedCoverBanked Lean wrapper against cached base tree
+[2026-07-09T01:36:27Z] OK VERIFY | DID: compiled RelaxedCoverBanked.lean | RESULT: rc=0 axioms=[propext,Classical.choice,Quot.sound] | D: wrapper green
+[2026-07-09T01:36:51Z] > VERIFY | NEXT: compile T2-T7 Lean support modules for current Gap#1 handoff
+[2026-07-09T01:38:16Z] OK VERIFY | DID: compiled Ell5GapLemmas, Ell5DistancePrune, Ell5GeodesicUnion, Ell5HallSmall | RESULT: rc=0 allowed axioms only | D: T2-T7 support green
+[2026-07-09T01:38:25Z] > VERIFY | NEXT: run Ell5LensStatement build harness
+[2026-07-09T01:39:12Z] FAIL VERIFY | DID: ran tmp/claude_build_ell5lensstatement.py | RESULT: Lean probes printed but write failed Permission denied on tmp/claude_lean_o_base_v1/Ell5LensStatement.olean | D: rerun with Codex output
+[2026-07-09T01:39:17Z] > VERIFY | NEXT: compile Ell5LensStatement with Codex-owned olean output path
+[2026-07-09T01:40:02Z] FAIL VERIFY | DID: tried Ell5LensStatement with -o codex path | RESULT: probes printed but olean write Permission denied; shell can write same directory | D: rerun no -o
+[2026-07-09T01:40:10Z] > VERIFY | NEXT: compile Ell5LensStatement as source check without olean output
+[2026-07-09T01:40:42Z] OK VERIFY | DID: source-checked Ell5LensStatement.lean without olean output | RESULT: rc=0 allowed axioms only; warnings only | D: lens surface green
+[2026-07-09T01:41:22Z] > CHECK | NEXT: read Claude mailbox before continuing Gap#1 banked-cover work
+[2026-07-09T01:41:36Z] OK CHECK | DID: read Claude and Codex coordination mailboxes | RESULT: no new Claude block after 2026-07-08T20:25Z | D: continue local Gap#1
+[2026-07-09T01:41:47Z] > CHECK | NEXT: inspect relaxed-cover LP/family harness for 24-vtx mandatory article
+[2026-07-09T01:42:01Z] OK CHECK | DID: inspected relaxed-cover gates | RESULT: existing gate lacks 24-vtx bare-SSE article | D: wire targeted 24-vtx bank LP
+[2026-07-09T01:42:51Z] > EDIT | NEXT: add 24-vtx bare-SSE killer banked primal payload to RCC emitter
+[2026-07-09T01:44:16Z] OK VERIFY | DID: added and verified bare_sse_24 RCC payload | RESULT: PRIMAL CERT VERIFIED; Hall defect=1; payload sha=8BA4B5EA... | D: 24-vtx banked test holds
+[2026-07-09T01:44:32Z] FAIL VERIFY | DID: tried single bare_sse_24 verifier run | RESULT: wrong relative script path; no certificate checked | D: rerun correct path
+[2026-07-09T01:44:43Z] OK VERIFY | DID: reran single bare_sse_24 RCC verifier | RESULT: n=24 rows=9 F=8 O=54 cuts=3 door=53 PRIMAL CERT VERIFIED | D: none
+[2026-07-09T01:46:15Z] > CHECK | NEXT: read Claude mailbox before Lean payload fixture work
+[2026-07-09T01:47:16Z] > EDIT | NEXT: add Lean RCCPayloadFixtures.lean for abstract bare_sse_24 primal fixture
+[2026-07-09T01:48:01Z] FAIL VERIFY | DID: compiled RCCPayloadFixtures.lean | RESULT: missing RelaxedCoverBanked.olean dependency | D: build dependency olean
+[2026-07-09T01:49:12Z] FAIL VERIFY | DID: compiled RCCPayloadFixtures.lean after import rewrite | RESULT: syntax/open namespace issue and unknown IsDualCert | D: fix fixture
+2026-07-09T01:51:00Z > SELECT | NEXT: Read mailbox and inspect current Gap1/chart artifacts.
+2026-07-09T01:51:19Z OK SELECT | DID: Read mailbox and v108 aggregate. | RESULT: v108 all_verified=true; latest Claude handoff 2026-07-08T20:25Z. | D: charts closed
+2026-07-09T01:51:31Z > VERIFY | NEXT: Source-check RCCPayloadFixtures.lean against cached Gap1 modules.
+2026-07-09T01:52:04Z FAIL VERIFY | DID: Source-checked RCCPayloadFixtures.lean. | RESULT: four finite rational obligations stuck at decide; no source errors. | D: replace decide proofs
+2026-07-09T01:52:28Z > ATTACK | NEXT: Replace stuck finite decide obligations with explicit RCCPayloadFixtures lemmas.
+2026-07-09T01:53:00Z OK ATTACK | DID: Rewrote RCCPayloadFixtures finite obligations as named lemmas. | RESULT: problems/23/lean/Erdos23Delta0/RCCPayloadFixtures.lean | D: compile next
+2026-07-09T01:53:06Z > VERIFY | NEXT: Re-source-check RCCPayloadFixtures after explicit finite lemmas.
+2026-07-09T01:54:33Z OK ATTACK | DID: Simplified RCCPayloadFixtures sep/dB/q tables to explicit finite sets. | RESULT: problems/23/lean/Erdos23Delta0/RCCPayloadFixtures.lean | D: compile next
+2026-07-09T01:55:20Z FAIL VERIFY | DID: Rechecked RCCPayloadFixtures explicit tables. | RESULT: loaded Decidable and finite-card proofs still unresolved. | D: booleanize q and direct proofs
+2026-07-09T01:56:15Z OK ATTACK | DID: Compressed RCCPayloadFixtures to 17-edge nonzero bank core. | RESULT: kap=9, O=9 loaded exits. | D: compile next
+2026-07-09T01:57:27Z OK ATTACK | DID: Added heartbeat budget and card_le_univ hcap proof for RCCPayloadFixtures. | RESULT: kap=17 compressed overcapacity. | D: compile next
+2026-07-09T01:58:31Z FAIL VERIFY | DID: Rechecked RCCPayloadFixtures with heartbeat/card fix. | RESULT: hcov/hcong/hroute timeout at 200000 heartbeats. | D: table-proof rewrite
+2026-07-09T01:59:04Z OK ATTACK | DID: Inserted RCCPayloadFixtures heartbeat option after imports. | RESULT: maxHeartbeats=2000000 visible. | D: compile next
+2026-07-09T02:00:35Z OK ATTACK | DID: Replaced slow finite RCC lemmas with fin_cases+decide branches. | RESULT: hcov/hcong/hroute table proofs rewritten. | D: compile next

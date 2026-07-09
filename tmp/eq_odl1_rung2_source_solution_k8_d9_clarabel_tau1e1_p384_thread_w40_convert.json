@@ -1,0 +1,9 @@
+{
+  "core": "tmp\\eq_odl1_rung2_core_k8_d9_clarabel_tau1e1.jsonl",
+  "core_solution": "tmp\\eq_odl1_rung2_core_solution_k8_d9_clarabel_tau1e1_p384_thread_w40.jsonl",
+  "dimension": 305,
+  "schema": "eq_odl1_rung2_core_to_source_solution_v1",
+  "solution_negative_count": 128,
+  "source_records": 304,
+  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k8_d9_clarabel_tau1e1_p384_thread_w40.jsonl"
+}

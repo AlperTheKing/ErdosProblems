@@ -1,0 +1,22 @@
+{
+  "band": "near_2s_minus_1",
+  "chart": 7,
+  "columns": 56541,
+  "dominant": 14,
+  "exact_ok": true,
+  "full_max_residual": "num_bits=2954/den_bits=2947",
+  "full_min_residual": "0",
+  "full_negative_residual_count": 0,
+  "full_zero_residual_count": 153267,
+  "negative_rows_prefix": [],
+  "nonzero_source_columns": 2600,
+  "schema": "eq_odl1_rung2_source_solution_check_v1",
+  "solution": "tmp\\eq_odl1_rung2_source_solution_k7_G7_near_lexsmall_claude_384prime_v1.jsonl",
+  "solution_max": "num_bits=2954/den_bits=2944",
+  "solution_min": "num_bits=2988/den_bits=3011",
+  "solution_negative_count": 0,
+  "support": "negative",
+  "target_beta_json": null,
+  "target_beta_mode": "prepared_p_beta",
+  "target_beta_nonzero_count": 13119
+}

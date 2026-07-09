@@ -1,0 +1,1 @@
+-- Temporary file neutralized; geodesicSupport_card_ne_five lives in Ell5GeodesicUnion.lean.\n
