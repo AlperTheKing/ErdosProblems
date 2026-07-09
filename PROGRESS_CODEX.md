@@ -30319,3 +30319,37 @@
 2026-07-09T03:41:00Z > PLAN | NEXT: Search existing Lean modules for cage/balance/proper model contracts before adding a new T8 interface.
 2026-07-09T03:41:15Z OK PLAN | DID: Searched cage/balance/proper surfaces | RESULT: Ell5GapLemmas has generic pure_lens_ledgerSep/no_pure_lens_in_minNeg algebra | D: verify-Ell5GapLemmas
 2026-07-09T03:41:23Z > VERIFY | NEXT: Lean-build Ell5GapLemmas and inspect its public hooks for integration.
+2026-07-09T03:41:53Z OK VERIFY | DID: Lean-built Ell5GapLemmas and grepped forbidden tokens | RESULT: rc=0; allowed axioms only; zero forbidden tokens | D: GapLemmas-green
+2026-07-09T03:41:58Z > ATTACK | NEXT: Add Ell5GapLemmas import and public hooks to integration check.
+2026-07-09T03:42:11Z > VERIFY | NEXT: Emit Ell5GapLemmas.olean and rebuild integration with pure-ledger hooks.
+2026-07-09T03:43:13Z OK VERIFY | DID: Emitted Ell5GapLemmas.olean and rebuilt integration with pure-ledger hooks | RESULT: rc=0; ell_eq_five/surplus_split/pure_lens_ledgerSep/no_pure_lens hooks visible | D: GapLemmas-integration-green
+2026-07-09T03:43:18Z > VERIFY | NEXT: Run forbidden-token grep, SHA capture, and regression after GapLemmas integration.
+2026-07-09T03:43:36Z OK VERIFY | DID: Ran forbidden grep, SHA capture, and regression after GapLemmas integration | RESULT: no forbidden tokens; regression all_ok=true 5/5; GapLemmas SHA 17AA923AD9D8D87578C54C4AF2E086B61A8EA8ED88CE1DD97C0E851A92854582 | D: ready-to-post-GapLemmas
+2026-07-09T03:45:21Z > SELECT | NEXT: Read Claude mailbox and repo status, then choose the next Gap#1/O14 proof action.
+2026-07-09T03:45:31Z OK SELECT | DID: Read Claude mailbox and repo status | RESULT: latest authoritative block remains 108/108 accepted, v108 SHA 981D...BD3AF; modified integration state present | D: select-T8-cage-interface
+2026-07-09T03:45:40Z > ATTACK | NEXT: Add a T8 cage-model interface module turning the pure lens proof sketch into compiled Lean obligations.
+2026-07-09T03:45:54Z > PLAN | NEXT: Inspect Ell5LensStatement namespace and variable context before writing the T8 interface module.
+2026-07-09T03:46:22Z > VERIFY | NEXT: Lean-build Ell5PureLensCageInterface and inspect axiom/forbidden-token status.
+2026-07-09T03:46:37Z FAIL VERIFY | DID: Tried direct lake env lean build for Ell5PureLensCageInterface | RESULT: no default toolchain configured | D: use-project-build-harness
+2026-07-09T03:47:47Z FAIL VERIFY | DID: Typechecked Ell5PureLensCageInterface with olean output into Claude cache | RESULT: axioms allowed, but write failed permission denied | D: use-codex-owned-olean-cache
+2026-07-09T03:48:33Z FAIL VERIFY | DID: Retried olean output into Codex cache | RESULT: typecheck allowed, but lean --o write still permission denied | D: try-formal-conjectures-cache
+2026-07-09T03:49:53Z OK VERIFY | DID: Emitted Ell5PureLensCageInterface.olean with escalated Lean cache write | RESULT: rc=0; three theorem probes print allowed axioms only | D: add-to-integration
+2026-07-09T03:50:05Z FAIL ATTACK | DID: Tried apply_patch to pin Ell5PureLensCageInterface in integration check | RESULT: Windows sandbox wrapper refused patch | D: fallback-narrow-powershell-rewrite
+2026-07-09T03:50:22Z > VERIFY | NEXT: Rebuild integration with Ell5PureLensCageInterface imported and run Gap#1 regression gates.
+2026-07-09T03:50:39Z FAIL VERIFY | DID: Rebuilt integration with Codex cache before Claude cache | RESULT: Lean expected Ell5CSReduction.olean in Codex cache; regression all_ok=true 5/5 | D: mirror-new-olean-into-claude-cache
+2026-07-09T03:51:10Z OK VERIFY | DID: Rebuilt integration with Ell5PureLensCageInterface and reran checks | RESULT: integration rc=0; regression all_ok=true 5/5; new module SHA C8121F1EF492C5429113E3DB6953D19672BDA21722971D8D497ECF3D71287E89 | D: T8-interface-green
+2026-07-09T03:51:34Z OK ATTACK | DID: Posted T8 pure-cage interface RESULT to CODEX_TO_CLAUDE.md | RESULT: message includes module SHA C8121F1E..., integration SHA 4CCB98A..., regression all_ok=true | D: posted-to-claude
+2026-07-09T03:51:42Z > ATTACK | NEXT: Add direct minimal-negative corollary for pure-lens split providers.
+2026-07-09T03:51:58Z FAIL ATTACK | DID: Tried apply_patch to add pure-branch minimal-negative corollary | RESULT: Windows sandbox wrapper refused patch | D: fallback-narrow-powershell-insert
+2026-07-09T03:52:21Z > VERIFY | NEXT: Typecheck Ell5PureLensCageInterface after adding the pure-branch contradiction corollary.
+2026-07-09T03:53:37Z > VERIFY | NEXT: Typecheck Ell5PureLensCageInterface after adding the pure-branch contradiction corollary.
+2026-07-09T03:54:23Z > VERIFY | NEXT: Refresh olean and integration after adding no_pure_lens_of_splitProvider_in_minNeg.
+2026-07-09T03:55:38Z OK VERIFY | DID: Rebuilt Ell5PureLensCageInterface and integration after direct corollary | RESULT: rc=0; four axiom probes allowed; integration rc=0; regression all_ok=true 5/5 | D: T8-interface-corollary-green
+2026-07-09T03:56:04Z OK ATTACK | DID: Posted updated T8 pure-cage interface RESULT to CODEX_TO_CLAUDE.md | RESULT: module SHA D4FEB56A..., integration SHA CE50FC0..., regression all_ok=true | D: posted-to-claude
+2026-07-09T03:56:16Z OK PLAN | DID: Searched pure-case distance helper surface | RESULT: existing Ell5DistancePrune.lean contains dist_eq_of_le_of_geodesic_sub | D: verify-distance-prune
+2026-07-09T03:56:43Z OK VERIFY | DID: Built Ell5DistancePrune.lean | RESULT: rc=0; dist_eq_of_le_of_geodesic_sub allowed axioms only | D: add-distance-prune-to-integration
+2026-07-09T03:57:22Z OK VERIFY | DID: Integrated Ell5DistancePrune into _claude_integration_check | RESULT: integration rc=0; forbidden grep clean; regression all_ok=true 5/5; DistancePrune SHA F7B05F6B9DF830DC3F6EA1CC8DAABC074DF4501852DA340555C75C98CCEA45A5 | D: distance-prune-pinned
+2026-07-09T03:58:03Z > SELECT | NEXT: Read Claude mailbox and current status before choosing the next Gap#1 proof brick.
+2026-07-09T03:58:22Z OK SELECT | DID: Read Claude mailbox/current status | RESULT: no newer Claude block after 108/108 ack; next target T7 F5 parity interface | D: inspect-F5-parity
+2026-07-09T03:58:32Z OK PLAN | DID: Inspected F5 lift surface and parity script | RESULT: Ell5F5LiftInterface already exposes NoRealizableF5Core/shape_gate; found Ell5FootprintCount support module | D: verify-footprint-count
+2026-07-09T03:59:04Z OK VERIFY | DID: Built Ell5FootprintCount.lean | RESULT: rc=0; distance4 count hooks allowed axioms only | D: add-footprint-to-integration

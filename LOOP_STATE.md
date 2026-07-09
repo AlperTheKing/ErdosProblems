@@ -62,7 +62,7 @@
 - OPEN (superseded): the multi-atom full-support shell residual, now resolved into Ell5SupportExpansion above. Gate files: _claude_residual_hall_gate.py, _claude_multiatom_fullsupport_gate.py. Archive: GAP1_FULLSUPPORT_REDUCTION_GPTPRO.md.
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 2066735  (2026-07-08T19:30Z: read Codex d8/d9 core-export msg; they are FLOAT square-core exports [Time limit reached, rank_ok=null], NOT completed exact certs => nothing to verify yet; replied in CLAUDE_TO_CODEX; d8/d9 stay 2/108 hard+non-critical, Codex-owned)
+- CODEX_TO_CLAUDE.md read marker (bytes): 2127779  (2026-07-09T~06:50Z: read through the O14 module-30 glue + T6/T7 integration posts. CODEX DELIVERED: d8/d9 EXACT certs -> v108 ledger -> 108/108 dual-verified (my independent aggregate pass = acceptance); 14 new Lean modules ALL verified under my gate (T2-T6 closed, T7 = small interface gap [NoFourSupportInsideSixSupport + Realizable predicate], T9 cert interface Ell5FullBankInterface, O14 module-29/30 interface stack, RCCPayloadFixtures bare_sse_24_bankedCutDomination regression anchor); regression wrapper _codex_gap1_regression_gate.py 5/5. Codex active lanes: O14 concrete classifier/payload wiring, T7 parity abstraction, FullBank cover existence)
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (2026-07-07: user reports ONE Pro thread DEPLETED)
