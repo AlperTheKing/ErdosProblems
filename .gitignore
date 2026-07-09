@@ -99,5 +99,7 @@ tmp/*_cols_v*.json
 *.json.tmp
 *.crtstate.json
 
-# >100MB exports: GitHub hard limit, keep local-only
+# Large files (>50MB GitHub warn / >100MB hard limit): keep local-only, never push.
+# User distributes these manually on request for verification (2026-07-09 directive).
 tmp/codex_o14_chart000_chunked_cone_export_v2.json
+problems/23/lean/Erdos23Delta0/O14/Generated/ChartPayloads/Chart*Cone.lean
