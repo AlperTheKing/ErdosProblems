@@ -30513,3 +30513,13 @@
 2026-07-09T05:08:43Z > SELECT | NEXT: Sync Claude mailbox for ChunkedConeWitness verdict and continue O14 module-29 assembly.
 2026-07-09T05:09:04Z OK SELECT | DID: Synced mailbox and received Claude approval for ChunkedCone target. | RESULT: [2026-07-09T05:06Z] says value-level bridge ACCEPTED; Lean=47 modules. | D: inspect Chart000 core/schema
 2026-07-09T05:10:01Z > ATTACK | NEXT: Inspect chart expression representation and prototype Chart000 cone-export JSON from v108 slot 0.
+2026-07-09T05:11:54Z OK ATTACK | DID: Added O14 chunked cone JSON exporter script. | RESULT: problems/23/writeup/_codex_o14_chunked_cone_export.py | D: run slot0 export
+2026-07-09T05:12:00Z > VERIFY | NEXT: Run exact O14 chunked cone export for v108 slot 0 / Chart000.
+2026-07-09T05:13:12Z OK VERIFY | DID: Ran O14 chunked cone export for slot0 Chart000. | RESULT: tmp/codex_o14_chart000_chunked_cone_export.json SHA B4A68ACD2077524F137CDF9F42100AB2644F790A420C883CBD3F751B553F5E73 size=23842548 chunks=83 mults=1414. | D: emit Lean pilot next
+2026-07-09T05:14:05Z > ATTACK | NEXT: Update Chart000 cone exporter to emit combo-order chunks so hcombo can be definitional.
+2026-07-09T05:15:43Z OK ATTACK | DID: Patched O14 cone exporter with combo-order chunks. | RESULT: _codex_o14_chunked_cone_export.py now emits combo_order_chunks and raw_combo_terms. | D: rerun slot0 export
+2026-07-09T05:17:36Z OK VERIFY | DID: Ran v2 Chart000 cone export with combo-order chunks. | RESULT: export SHA 1D66708620E34870F95AF8BD966935FBC3327D0B42F7BE6B33953CDD55EC3E8B size=125759118 raw_combo_terms=46521 combo_order_chunks=727 script_SHA=FA28AF70D6F8367A989BC24F5807E64867AEBB4DEDC42B1940BFF00966A29D3D. | D: generate Lean data module
+2026-07-09T05:20:10Z > ATTACK | NEXT: Emit Chart000 chunked-cone Lean pilot from v2 exact export.
+2026-07-09T05:20:24Z OK ATTACK | DID: Emitted Chart000 chunked-cone Lean pilot. | RESULT: Chart000Cone.lean SHA FBA3C5D7FA36FE9467896FD7073A67A316A461FE4C16AE16DEB15132C8DE509D size=72819329 mults=1414 slacks=1414 pairs=727. | D: audit/build next
+2026-07-09T05:20:41Z OK VERIFY | DID: Audited emitted Chart000Cone pilot. | RESULT: SHA FBA3C5D7FA36FE9467896FD7073A67A316A461FE4C16AE16DEB15132C8DE509D size=72819329 forbidden-token rg no matches. | D: Lean build next
+2026-07-09T05:20:46Z > VERIFY | NEXT: Build generated Chart000Cone Lean pilot against cached O14 bridge.
