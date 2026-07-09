@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
 # Last update: 2026-07-09T11:58 (local)
 
+## TICK-35 SNAPSHOT (2026-07-09 ~13:20 local) — R3: W2-AS-STATED REFUTED; DECISIVE Q = REAL-GRAPH ROOT-LOCALITY
+- **WALL_ATTACK_R3_GPTPRO.md archived (USER-RELAYED reply 8)**: W2 RootBlockClosureSeparable is FALSE at the
+  abstraction level — 2-quotient-component CE (closure step {A}→{A,B} crosses legal root blocks while sink
+  neighborhoods stay disjoint), EXACT-VERIFIED by `_claude_w2_ce_gate.py` (closure laws, Def(full)=2 minimal
+  closed deficient, blockClosed fails, disjoint roots — ALL PASS). Missing implication = "crossing ⟹ legal
+  components merge" — NOT from the ten facts + W1. Tension resolved: support/footprint graph ≠ legal-incidence
+  graph (connected footprint blocks support-side decompositions only).
+- **WALL OF RECORD (R3 §8)**: W1 NoUnbankableExposedPorts + **ROOT-LOCALITY** (EscapeClosureRespectsLegalRoots,
+  esp step_new_ports_legal_connected: a newly exposed port shares a legal sink with an old one; OR weaker
+  PositiveRootBlockClosedExtraction) + **ClosedWeightedHallCompleteness** + **closed-cut exchange identity**
+  (closedRootCut_violates_D1_of_weightedDeficiency) + (B) finite-Farkas iff. W3 4-lemma skeleton adopted
+  (singletonAlmostSqueeze_exists [from compiled singleton domination] + weightedRoutingFailure [BOOKKEEPING,
+  my next Lean increment] + closedHall + exchange). firstRootCrossing_outlet needs concrete
+  ForcedEll5EscapeStep.
+- **LEAN +1: ClosedShoreExtraction.lean** (AbstractEscapeQuotient + ClosedPortSet + MinimalClosedDeficient +
+  PositiveRootBlockClosedExtraction + minimalClosedDeficient_has_unique_root_of_positiveExtraction, full
+  proof) — build in flight (first attempt: missing local decEq instance, fixed).
+- **CAVEAT (mine, load-bearing): the R3 CE is ABSTRACT.** Whether the REAL forced-ℓ=5-escape closure can cross
+  legal roots is THE decisive open question. GROUNDING RETASK SENT (reply 9 streaming): concrete defs of
+  QComp/ForcedEll5EscapeStep/exposedPorts/LegalSinkPort against the compiled surface (Ell5SupportFinset +
+  ConcreteCage + anchors) + prove-or-break real-graph root-locality + operational spec for MY census falsifier
+  search (71k cages) — the route lives or dies there.
+
 ## TICK-33/34 SNAPSHOT (2026-07-09 ~12:50 local) — R2 CORRECTION + UNCROSSING COMPILED + CODEX WAVES ACCEPTED
 - **WALL_ATTACK_R2_GPTPRO.md archived (USER-RELAYED reply 7)**: Phase-3-as-stated FALSE — two exact route
   falsifiers, BOTH verified by my gate `_claude_porthall_uncross_gate.py` (ALL PASS: falsifiers + 24k
