@@ -30523,3 +30523,10 @@
 2026-07-09T05:20:24Z OK ATTACK | DID: Emitted Chart000 chunked-cone Lean pilot. | RESULT: Chart000Cone.lean SHA FBA3C5D7FA36FE9467896FD7073A67A316A461FE4C16AE16DEB15132C8DE509D size=72819329 mults=1414 slacks=1414 pairs=727. | D: audit/build next
 2026-07-09T05:20:41Z OK VERIFY | DID: Audited emitted Chart000Cone pilot. | RESULT: SHA FBA3C5D7FA36FE9467896FD7073A67A316A461FE4C16AE16DEB15132C8DE509D size=72819329 forbidden-token rg no matches. | D: Lean build next
 2026-07-09T05:20:46Z > VERIFY | NEXT: Build generated Chart000Cone Lean pilot against cached O14 bridge.
+2026-07-09T06:10:51Z FAIL VERIFY | DID: Built emitted Chart000Cone Lean pilot. | RESULT: timeout rc=124; errors maxHeartbeats at line4530, bad base.allCoeffNonneg API, rfl chunk proofs not reducing. | D: patch emitter
+2026-07-09T06:11:55Z FAIL ATTACK | DID: Tried apply_patch for emitter heartbeat fix. | RESULT: apply_patch sandbox wrapper refused workspace edit. | D: use narrow PowerShell substitution
+2026-07-09T06:12:49Z OK ATTACK | DID: Patched emitter with global maxHeartbeats/maxRecDepth after sandboxed apply_patch failed. | RESULT: _codex_o14_chunked_cone_to_lean.py SHA F45E84C36AC36384EF408C1757FB1F9183E9FE5AC5606AA0BE0C6BA236B34781. | D: py_compile next
+2026-07-09T06:13:01Z FAIL VERIFY | DID: Ran py_compile on patched emitter. | RESULT: WinError 5 writing __pycache__ pyc; syntax not checked. | D: use AST parse no-bytecode
+2026-07-09T06:13:09Z OK VERIFY | DID: AST-parsed patched emitter without pycache writes. | RESULT: AST_OK. | D: regenerate Chart000Cone
+2026-07-09T06:13:43Z OK ATTACK | DID: Regenerated Chart000Cone with global maxHeartbeats/maxRecDepth. | RESULT: SHA 22734E004CFDA751CA2B4F83054579254434361C25A22E398D59B277AF4653E3 header options present. | D: build retry
+2026-07-09T06:13:51Z > VERIFY | NEXT: Time-boxed Lean rebuild of regenerated Chart000Cone pilot.

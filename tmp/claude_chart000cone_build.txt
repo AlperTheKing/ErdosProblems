@@ -1,0 +1,33 @@
+RC=1 sec=3282.6
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:4530:719: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162859:16: error(lean.unknownIdentifier): Unknown identifier `base.allCoeffNonneg`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162864:2: error: Tactic `rfl` failed: The left-hand side
+  mults.all NF.allCoeffNonneg
+is not definitionally equal to the right-hand side
+  true
+
+⊢ mults.all NF.allCoeffNonneg = true
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162868:2: error: Tactic `rfl` failed: The left-hand side
+  checkEqPairs pairs
+is not definitionally equal to the right-hand side
+  true
+
+⊢ checkEqPairs pairs = true
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162873:2: error: Tactic `rfl` failed: The left-hand side
+  (List.map Prod.snd pairs).flatten
+is not definitionally equal to the right-hand side
+  comboNF base mults slacks
+
+base : NF
+⊢ (List.map Prod.snd pairs).flatten = comboNF base mults slacks
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162889:10: error(lean.unknownIdentifier): Unknown identifier `base`
+'Erdos23Delta0.O14.Generated.Chart000Cone.hchunks' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos23Delta0.O14.Generated.Chart000Cone.hcombo' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Erdos23Delta0.O14.Generated.Chart000Cone.chart000Witness' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

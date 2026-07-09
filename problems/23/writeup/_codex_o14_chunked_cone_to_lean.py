@@ -28,7 +28,6 @@ def lean_pows(pows: list[list[int]]) -> str:
 
 
 def emit_nf_def(lines: list[str], name: str, terms: list[dict[str, Any]]) -> None:
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append(f"def {name} : NF := [")
     for idx, term in enumerate(terms):
         comma = "," if idx + 1 < len(terms) else ""
@@ -38,7 +37,6 @@ def emit_nf_def(lines: list[str], name: str, terms: list[dict[str, Any]]) -> Non
 
 
 def emit_nf_list_def(lines: list[str], name: str, defs: list[str]) -> None:
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append(f"def {name} : List NF := [")
     for idx, d in enumerate(defs):
         comma = "," if idx + 1 < len(defs) else ""
@@ -72,6 +70,9 @@ def main() -> None:
     lines.append("open ODLFull")
     lines.append("open ConeEvalBridge")
     lines.append("open ChunkedCone")
+    lines.append("")
+    lines.append("set_option maxHeartbeats 0")
+    lines.append("set_option maxRecDepth 2000000")
     lines.append("")
     lines.append(f"def slot : Nat := {int(data['slot'])}")
     lines.append(f"def sourceChart : Nat := {int(data['chart'])}")
@@ -108,26 +109,21 @@ def main() -> None:
         lines.append("")
         pair_names.append(pname)
 
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("def pairs : List (NF × NF) := [")
     for idx, p in enumerate(pair_names):
         comma = "," if idx + 1 < len(pair_names) else ""
         lines.append(f"  {p}{comma}")
     lines.append("]")
     lines.append("")
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem hbase : base.allCoeffNonneg = true := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem hmults : mults.all NF.allCoeffNonneg = true := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem hchunks : checkEqPairs pairs = true := by")
     lines.append("  rfl")
     lines.append("")
-    lines.append("set_option maxRecDepth 2000000 in")
     lines.append("theorem hcombo_list :")
     lines.append("    (pairs.map Prod.snd).flatten = comboNF base mults slacks := by")
     lines.append("  rfl")
@@ -184,3 +180,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

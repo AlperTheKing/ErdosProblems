@@ -1,0 +1,10 @@
+FAIL Chart000Cone rc=1 3282.6s
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:4530:719: error: (deterministic) timeout at `whnf`, maxim
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162859:16: error(lean.unknownIdentifier): Unknown identif
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162864:2: error: Tactic `rfl` failed: The left-hand side
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162868:2: error: Tactic `rfl` failed: The left-hand side
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162873:2: error: Tactic `rfl` failed: The left-hand side
+  E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Cone.lean:162889:10: error(lean.unknownIdentifier): Unknown identif
+  'Erdos23Delta0.O14.Generated.Chart000Cone.hchunks' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+  'Erdos23Delta0.O14.Generated.Chart000Cone.hcombo' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+  'Erdos23Delta0.O14.Generated.Chart000Cone.chart000Witness' depends on axioms: [propext,
