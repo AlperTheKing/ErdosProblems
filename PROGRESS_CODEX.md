@@ -30530,3 +30530,20 @@
 2026-07-09T06:13:09Z OK VERIFY | DID: AST-parsed patched emitter without pycache writes. | RESULT: AST_OK. | D: regenerate Chart000Cone
 2026-07-09T06:13:43Z OK ATTACK | DID: Regenerated Chart000Cone with global maxHeartbeats/maxRecDepth. | RESULT: SHA 22734E004CFDA751CA2B4F83054579254434361C25A22E398D59B277AF4653E3 header options present. | D: build retry
 2026-07-09T06:13:51Z > VERIFY | NEXT: Time-boxed Lean rebuild of regenerated Chart000Cone pilot.
+2026-07-09T07:06:54Z FAIL VERIFY | DID: Started time-boxed Lean rebuild of regenerated Chart000Cone. | RESULT: tool run aborted by turn interruption; no Lean rc captured. | D: inspect live process/olean
+2026-07-09T07:07:04Z FAIL VERIFY | DID: Inspected and stopped orphan Chart000Cone one-file Lean build. | RESULT: lean pid 82064 had CPU~3460s, no Chart000Cone.olean. | D: one-file pilot rejected; shard emitter
+2026-07-09T07:08:53Z > ATTACK | NEXT: Create sharded Chart000 cone emitter to replace nonviable one-file Lean payload.
+2026-07-09T07:10:13Z OK ATTACK | DID: Created sharded Chart000 cone emitter. | RESULT: _codex_o14_chunked_cone_to_lean_sharded.py SHA D02DFE66A0B22CD1BF13D85E19B86EED2A047009D71F27F3A460645E5539B047. | D: AST/generate next
+2026-07-09T07:10:20Z OK VERIFY | DID: AST-parsed sharded emitter. | RESULT: AST_OK. | D: emit Chart000 shard family
+2026-07-09T07:10:46Z OK ATTACK | DID: Emitted sharded Chart000Cone module family. | RESULT: 94 Lean files, total_size=72753365, max_file=Chart000ConeBase.lean:4673305, ms_shards=45, pair_shards=46. | D: support build next
+2026-07-09T07:10:54Z > VERIFY | NEXT: Build Chart000ConeSupport sharded helper module.
+2026-07-09T07:12:01Z OK ATTACK | DID: Patched sharded emitter support proofs and explicit NF.allCoeffNonneg calls. | RESULT: sharded emitter SHA 81D216EFE455C5B6E9A25ED2540553728702816C9BF3A0CBE5418E8FA3B5BA54. | D: regenerate/rebuild support
+2026-07-09T07:12:28Z OK ATTACK | DID: Regenerated sharded Chart000Cone family after support-proof patch. | RESULT: ms_shards=45 pair_shards=46 base_chunk=64 source_chunk=32 pair_chunk=16. | D: support rebuild
+2026-07-09T07:13:19Z FAIL VERIFY | DID: Built Chart000ConeSupport.lean. | RESULT: rc=1 Boolean append simp made no progress at lines23,55. | D: patch support with explicit change/rw; emitter_SHA 19070A82618A7E818813D1D3DD23B68B5BBE552A1BE1A218480B78304F8E9234
+2026-07-09T07:14:14Z OK VERIFY | DID: Built Chart000ConeSupport.lean. | RESULT: rc=0 axioms=[propext,Classical.choice,Quot.sound] elapsed=17.6s. | D: build base shard
+2026-07-09T07:14:23Z > VERIFY | NEXT: Build Chart000ConeBase largest base chunk module.
+2026-07-09T07:16:25Z FAIL VERIFY | DID: Built Chart000ConeBase.lean. | RESULT: rc=1; all base chunk NF.allCoeffNonneg proofs need norm_num, rfl insufficient. | D: patched emitter SHA E253DEE6E56CAB2D0DFA4CF2A12182A995FE2466F525F377FDD0283DD533EADE
+2026-07-09T07:17:51Z OK VERIFY | DID: Built Chart000ConeBase.lean. | RESULT: rc=0 elapsed=64.4s axioms=[propext,Classical.choice,Quot.sound]. | D: build MS000 and Pairs000 probes
+2026-07-09T07:18:27Z OK VERIFY | DID: Built Chart000ConeMS000.lean. | RESULT: rc=0 elapsed=19.5s axioms=[propext,Classical.choice,Quot.sound]. | D: build Pairs000 probe
+2026-07-09T07:19:41Z FAIL VERIFY | DID: Built Chart000ConePairs000.lean. | RESULT: rc=1; checkEqPairs proof needs arithmetic reduction, rfl insufficient. | D: patched pair shards to one-pair norm_num; emitter_SHA A021A576931E2998FB460A074062A18DF0338393E1631F70A6CE2CB63DB344C4
+2026-07-09T07:21:45Z OK VERIFY | DID: Built Chart000ConePairs000.lean one-pair norm_num shard. | RESULT: rc=0 elapsed=64.7s axioms=[propext,Classical.choice,Quot.sound]. | D: test pair_chunk=4 batching
