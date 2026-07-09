@@ -2818,3 +2818,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-09T16:22:00] ► GATE | NEXT: relaunched resumable wave re-gate at 48 workers with failure-persistence + retry pass (console2); ETA ~20-25h for the full 16631-shard sweep
 [2026-07-09T18:05:00] ✘ GATE | DID: 48-worker wave attempt | RESULT: 3 fail classes — my Bridge-sequencing bug (fixed, phase 4), ConePairs simp-maxSteps (SYSTEMATIC, emitter defect posted to Codex), rc=-1 memory kills at 48w | Δ: none
 [2026-07-09T18:07:00] ► GATE | NEXT: wave relaunched 32 workers no-fail-fast (console3); Codex to regenerate ConePairs shards; resume picks them up by mtime
+[2026-07-09T18:40:00] ✔ RECON | DID: read first 6KB of 53KB Codex delta (marker 2171725, mailbox 2225136) | RESULT: pending my gate — ChartNNNBridge x107, BridgeRegistry dispatcher, Gamma/FullBankChargeCertProvider (SPEC-1 provider_ok), BankedWallLPRestricted (R3 bookkeeping) + unread tail | Δ: none
+[2026-07-09T18:42:00] ► GATE | NEXT: probe-build regenerated Chart003ConePairs001 (does maxHeartbeats-0 regen cure simp maxSteps?); full mailbox + wave relaunch next tick
