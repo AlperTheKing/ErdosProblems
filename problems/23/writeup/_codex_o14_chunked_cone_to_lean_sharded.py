@@ -69,6 +69,7 @@ def module_header(module_ns: str, imports: list[str]) -> list[str]:
     lines.append(f"namespace {module_ns}")
     lines.append("")
     lines.append("open PolyCert")
+    lines.append("open ODLFull")
     lines.append("open ConeEvalBridge")
     lines.append("open ChunkedCone")
     lines.append("")
@@ -227,21 +228,28 @@ def emit_pair_shards(out_dir: Path, data: dict[str, Any], pair_chunk: int) -> li
         pair_names: list[str] = []
         pair_def_names: list[str] = []
         start = shard_idx * pair_chunk
+        hpair_names: list[str] = []
         for local_idx, pair in enumerate(part):
             global_idx = start + local_idx
             lname = f"pair{global_idx:03d}Left"
             rname = f"pair{global_idx:03d}Right"
             pname = f"pair{global_idx:03d}"
+            hname = f"hpair{global_idx:03d}"
             emit_nf_def(lines, lname, pair["left"])
             emit_nf_def(lines, rname, pair["right"])
             lines.append(f"def {pname} : NF × NF := ({lname}, {rname})")
             lines.append("")
+            lines.append(f"theorem {hname} : checkEq {pname}.1 {pname}.2 = true := by")
+            unfold_defs = ", ".join(["checkEq", "isZeroNF", "collect", "insertAdd", "NF.sub", "NF.neg", pname, lname, rname])
+            lines.append(f"  norm_num [{unfold_defs}]")
+            lines.append("")
             pair_names.append(pname)
             pair_def_names.extend([lname, rname, pname])
+            hpair_names.append(hname)
         emit_list_def(lines, "pairs", "(NF × NF)", pair_names)
         lines.append("theorem hchunks : checkEqPairs pairs = true := by")
-        unfold_defs = ", ".join(["checkEqPairs", "checkEq", "isZeroNF", "collect", "insertAdd", "NF.sub", "NF.neg", "pairs"] + pair_def_names)
-        lines.append(f"  norm_num [{unfold_defs}]")
+        simp_defs = ", ".join(["pairs", "checkEqPairs"] + hpair_names)
+        lines.append(f"  simp [{simp_defs}]")
         lines.append("")
         lines.append("#print axioms hchunks")
         lines.append("")

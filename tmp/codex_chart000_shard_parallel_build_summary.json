@@ -1,0 +1,2880 @@
+{
+  "fail": 0,
+  "ok": 410,
+  "results": [
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeBase.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeBase.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Base.hbase' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 108.779
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS000.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS000.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS000.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.176
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS001.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS001.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS001.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.552
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS002.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS002.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS002.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.298
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS003.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS003.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS003.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.638
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS004.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS004.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS004.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.793
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS005.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS005.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS005.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.136
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS006.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS006.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS006.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.935
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS007.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS007.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS007.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.073
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS008.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS008.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS008.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.122
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS009.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS009.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS009.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.44
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS010.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS010.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS010.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.307
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS011.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS011.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS011.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.733
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS012.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS012.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS012.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.809
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS013.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS013.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS013.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.293
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS014.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS014.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS014.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.619
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS015.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS015.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS015.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.721
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS016.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS016.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS016.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.774
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS017.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS017.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS017.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.838
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS018.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS018.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS018.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.761
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS019.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS019.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS019.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.536
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS020.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS020.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS020.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.627
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS021.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS021.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS021.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.763
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS022.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS022.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS022.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.555
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS023.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS023.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS023.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.361
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS024.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS024.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS024.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.341
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS025.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS025.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS025.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.954
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS026.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS026.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS026.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.173
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS027.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS027.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS027.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.8
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS028.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS028.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS028.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.936
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS029.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS029.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS029.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.746
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS030.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS030.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS030.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.063
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS031.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS031.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS031.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 44.686
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS032.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS032.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS032.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 48.352
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS033.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS033.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS033.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 55.926
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS034.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS034.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS034.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.518
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS035.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS035.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS035.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.254
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS036.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS036.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS036.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.491
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS037.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS037.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS037.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.411
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS038.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS038.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS038.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.867
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS039.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS039.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS039.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.31
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS040.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS040.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS040.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.072
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS041.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS041.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS041.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.801
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS042.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS042.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS042.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.171
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS043.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS043.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS043.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.852
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS044.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConeMS044.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.MS044.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.532
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs000.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs000.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs000.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 70.923
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs001.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs001.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs001.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.198
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs002.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs002.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs002.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.144
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs003.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs003.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs003.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.581
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs004.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs004.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs004.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.002
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs005.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs005.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs005.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.434
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs006.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs006.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs006.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.69
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs007.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs007.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs007.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.938
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs008.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs008.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs008.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.734
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs009.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs009.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs009.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.576
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs010.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs010.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs010.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.018
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs011.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs011.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs011.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.127
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs012.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs012.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs012.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.724
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs013.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs013.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs013.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.25
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs014.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs014.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs014.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.953
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs015.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs015.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs015.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.563
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs016.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs016.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs016.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.747
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs017.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs017.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs017.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 39.944
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs018.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs018.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs018.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 38.921
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs019.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs019.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs019.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.416
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs020.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs020.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs020.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.717
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs021.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs021.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs021.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.726
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs022.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs022.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs022.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 44.168
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs023.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs023.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs023.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 42.538
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs024.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs024.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs024.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 45.509
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs025.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs025.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs025.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.727
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs026.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs026.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs026.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 54.428
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs027.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs027.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs027.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 51.962
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs028.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs028.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs028.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.399
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs029.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs029.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs029.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.545
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs030.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs030.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs030.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.945
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs031.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs031.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs031.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.186
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs032.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs032.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs032.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.59
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs033.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs033.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs033.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.921
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs034.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs034.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs034.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.497
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs035.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs035.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs035.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.743
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs036.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs036.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs036.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.222
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs037.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs037.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs037.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.664
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs038.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs038.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs038.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.586
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs039.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs039.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs039.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.441
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs040.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs040.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs040.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.677
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs041.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs041.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs041.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.564
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs042.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs042.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs042.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.431
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs043.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs043.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs043.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.074
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs044.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs044.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs044.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.889
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs045.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs045.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs045.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.686
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs046.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs046.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs046.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.053
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs047.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs047.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs047.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.053
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs048.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs048.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs048.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.043
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs049.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs049.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs049.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.327
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs050.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs050.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs050.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.668
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs051.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs051.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs051.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.782
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs052.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs052.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs052.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 53.779
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs053.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs053.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs053.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 54.168
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs054.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs054.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs054.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 48.946
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs055.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs055.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs055.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 48.241
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs056.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs056.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs056.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 46.71
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs057.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs057.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs057.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 42.526
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs058.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs058.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs058.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.456
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs059.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs059.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs059.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 38.114
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs060.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs060.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs060.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 35.735
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs061.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs061.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs061.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 35.891
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs062.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs062.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs062.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 35.674
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs063.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs063.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs063.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 33.801
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs064.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs064.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs064.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 53.477
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs065.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs065.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs065.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 55.968
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs066.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs066.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs066.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 55.762
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs067.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs067.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs067.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.832
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs068.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs068.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs068.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.584
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs069.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs069.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs069.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.643
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs070.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs070.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs070.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.931
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs071.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs071.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs071.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.327
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs072.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs072.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs072.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.016
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs073.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs073.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs073.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.302
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs074.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs074.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs074.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.923
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs075.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs075.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs075.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.867
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs076.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs076.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs076.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.753
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs077.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs077.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs077.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.965
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs078.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs078.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs078.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.067
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs079.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs079.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs079.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.071
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs080.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs080.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs080.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.071
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs081.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs081.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs081.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.866
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs082.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs082.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs082.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.527
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs083.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs083.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs083.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.382
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs084.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs084.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs084.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.543
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs085.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs085.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs085.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.362
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs086.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs086.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs086.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.672
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs087.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs087.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs087.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.129
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs088.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs088.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs088.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.222
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs089.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs089.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs089.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.463
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs090.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs090.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs090.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.612
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs091.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs091.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs091.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.907
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs092.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs092.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs092.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.869
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs093.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs093.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs093.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.661
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs094.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs094.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs094.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.911
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs095.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs095.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs095.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.915
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs096.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs096.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs096.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 30.015
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs097.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs097.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs097.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 33.382
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs098.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs098.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs098.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 34.883
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs099.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs099.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs099.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 38.385
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs100.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs100.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs100.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.042
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs101.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs101.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs101.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.971
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs102.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs102.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs102.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.146
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs103.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs103.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs103.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.109
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs104.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs104.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs104.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.758
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs105.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs105.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs105.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.027
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs106.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs106.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs106.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.971
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs107.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs107.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs107.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.687
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs108.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs108.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs108.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.876
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs109.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs109.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs109.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.858
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs110.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs110.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs110.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.47
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs111.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs111.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs111.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.577
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs112.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs112.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs112.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.192
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs113.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs113.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs113.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.493
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs114.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs114.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs114.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.818
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs115.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs115.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs115.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.597
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs116.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs116.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs116.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.46
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs117.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs117.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs117.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.406
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs118.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs118.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs118.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.026
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs119.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs119.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs119.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.928
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs120.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs120.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs120.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.98
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs121.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs121.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs121.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.957
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs122.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs122.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs122.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.702
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs123.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs123.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs123.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.827
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs124.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs124.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs124.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.994
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs125.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs125.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs125.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.542
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs126.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs126.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs126.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.715
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs127.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs127.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs127.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.151
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs128.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs128.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs128.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.15
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs129.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs129.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs129.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.522
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs130.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs130.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs130.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 53.255
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs131.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs131.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs131.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 49.348
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs132.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs132.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs132.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.946
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs133.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs133.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs133.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.926
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs134.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs134.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs134.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.3
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs135.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs135.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs135.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.54
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs136.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs136.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs136.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.583
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs137.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs137.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs137.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.45
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs138.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs138.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs138.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.835
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs139.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs139.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs139.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.642
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs140.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs140.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs140.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.883
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs141.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs141.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs141.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.016
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs142.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs142.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs142.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.632
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs143.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs143.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs143.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.051
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs144.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs144.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs144.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 79.678
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs145.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs145.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs145.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 79.888
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs146.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs146.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs146.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.416
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs147.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs147.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs147.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.143
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs148.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs148.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs148.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.816
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs149.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs149.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs149.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.006
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs150.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs150.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs150.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.475
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs151.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs151.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs151.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.825
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs152.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs152.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs152.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.886
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs153.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs153.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs153.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.534
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs154.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs154.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs154.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.745
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs155.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs155.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs155.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.145
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs156.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs156.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs156.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.632
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs157.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs157.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs157.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.381
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs158.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs158.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs158.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 80.528
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs159.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs159.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs159.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.65
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs160.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs160.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs160.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 80.503
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs161.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs161.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs161.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 80.407
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs162.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs162.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs162.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.835
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs163.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs163.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs163.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.442
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs164.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs164.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs164.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.919
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs165.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs165.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs165.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 68.512
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs166.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs166.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs166.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 54.858
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs167.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs167.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs167.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 54.667
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs168.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs168.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs168.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 44.422
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs169.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs169.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs169.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 41.26
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs170.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs170.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs170.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.682
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs171.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs171.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs171.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 34.434
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs172.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs172.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs172.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 34.182
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs173.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs173.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs173.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 34.122
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs174.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs174.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs174.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 34.975
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs175.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs175.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs175.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 36.186
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs176.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs176.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs176.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 45.205
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs177.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs177.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs177.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.823
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs178.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs178.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs178.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.089
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs179.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs179.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs179.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.307
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs180.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs180.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs180.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.393
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs181.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs181.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs181.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.387
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs182.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs182.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs182.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.502
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs183.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs183.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs183.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.185
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs184.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs184.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs184.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.739
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs185.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs185.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs185.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.26
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs186.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs186.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs186.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.964
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs187.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs187.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs187.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.754
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs188.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs188.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs188.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.47
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs189.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs189.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs189.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.587
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs190.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs190.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs190.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.034
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs191.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs191.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs191.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.478
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs192.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs192.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs192.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.821
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs193.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs193.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs193.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.911
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs194.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs194.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs194.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.307
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs195.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs195.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs195.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.792
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs196.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs196.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs196.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.527
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs197.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs197.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs197.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.804
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs198.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs198.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs198.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.454
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs199.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs199.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs199.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.378
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs200.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs200.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs200.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.038
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs201.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs201.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs201.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.03
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs202.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs202.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs202.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.67
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs203.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs203.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs203.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.605
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs204.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs204.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs204.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.996
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs205.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs205.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs205.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 68.048
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs206.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs206.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs206.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.348
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs207.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs207.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs207.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.212
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs208.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs208.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs208.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.171
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs209.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs209.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs209.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 49.707
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs210.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs210.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs210.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 43.144
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs211.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs211.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs211.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.195
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs212.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs212.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs212.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 39.282
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs213.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs213.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs213.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.276
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs214.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs214.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs214.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.117
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs215.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs215.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs215.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 69.789
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs216.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs216.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs216.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 68.616
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs217.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs217.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs217.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.086
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs218.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs218.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs218.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.963
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs219.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs219.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs219.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.605
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs220.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs220.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs220.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.662
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs221.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs221.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs221.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 79.808
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs222.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs222.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs222.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 79.693
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs223.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs223.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs223.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.598
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs224.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs224.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs224.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.771
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs225.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs225.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs225.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.992
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs226.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs226.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs226.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.988
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs227.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs227.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs227.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.734
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs228.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs228.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs228.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.045
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs229.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs229.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs229.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 84.323
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs230.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs230.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs230.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 84.118
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs231.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs231.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs231.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 85.289
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs232.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs232.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs232.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 84.239
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs233.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs233.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs233.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.59
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs234.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs234.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs234.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 84.241
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs235.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs235.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs235.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.485
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs236.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs236.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs236.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.91
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs237.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs237.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs237.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.386
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs238.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs238.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs238.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.765
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs239.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs239.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs239.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 80.404
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs240.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs240.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs240.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.888
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs241.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs241.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs241.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.362
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs242.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs242.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs242.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.932
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs243.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs243.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs243.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.982
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs244.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs244.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs244.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.227
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs245.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs245.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs245.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 49.093
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs246.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs246.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs246.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 42.162
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs247.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs247.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs247.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.853
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs248.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs248.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs248.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 41.095
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs249.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs249.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs249.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.351
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs250.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs250.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs250.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.872
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs251.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs251.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs251.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 42.162
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs252.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs252.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs252.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.009
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs253.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs253.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs253.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.835
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs254.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs254.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs254.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.34
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs255.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs255.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs255.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.418
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs256.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs256.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs256.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 70.172
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs257.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs257.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs257.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.874
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs258.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs258.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs258.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.939
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs259.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs259.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs259.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 76.291
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs260.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs260.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs260.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.897
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs261.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs261.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs261.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 77.588
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs262.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs262.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs262.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 79.662
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs263.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs263.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs263.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.501
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs264.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs264.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs264.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.558
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs265.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs265.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs265.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.849
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs266.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs266.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs266.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.732
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs267.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs267.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs267.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.837
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs268.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs268.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs268.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.013
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs269.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs269.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs269.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.503
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs270.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs270.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs270.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.592
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs271.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs271.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs271.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.808
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs272.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs272.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs272.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.211
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs273.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs273.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs273.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 83.34
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs274.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs274.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs274.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 82.929
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs275.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs275.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs275.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.839
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs276.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs276.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs276.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 81.623
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs277.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs277.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs277.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 78.585
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs278.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs278.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs278.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 75.436
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs279.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs279.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs279.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 74.746
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs280.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs280.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs280.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.843
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs281.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs281.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs281.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.302
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs282.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs282.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs282.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 70.363
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs283.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs283.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs283.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.528
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs284.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs284.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs284.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 58.046
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs285.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs285.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs285.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.214
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs286.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs286.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs286.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 49.722
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs287.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs287.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs287.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 43.119
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs288.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs288.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs288.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 39.831
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs289.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs289.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs289.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.622
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs290.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs290.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs290.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 40.089
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs291.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs291.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs291.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 43.951
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs292.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs292.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs292.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 46.073
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs293.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs293.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs293.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 50.568
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs294.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs294.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs294.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.796
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs295.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs295.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs295.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.54
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs296.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs296.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs296.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 65.568
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs297.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs297.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs297.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.394
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs298.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs298.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs298.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.994
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs299.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs299.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs299.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 68.946
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs300.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs300.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs300.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 68.972
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs301.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs301.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs301.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.983
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs302.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs302.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs302.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.171
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs303.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs303.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs303.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.11
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs304.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs304.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs304.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.873
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs305.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs305.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs305.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 71.633
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs306.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs306.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs306.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.099
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs307.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs307.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs307.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.184
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs308.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs308.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs308.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 73.942
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs309.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs309.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs309.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.811
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs310.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs310.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs310.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.949
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs311.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs311.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs311.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.995
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs312.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs312.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs312.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 72.221
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs313.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs313.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs313.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 70.421
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs314.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs314.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs314.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 70.162
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs315.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs315.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs315.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 69.678
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs316.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs316.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs316.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 69.866
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs317.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs317.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs317.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 66.257
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs318.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs318.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs318.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 67.891
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs319.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs319.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs319.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.64
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs320.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs320.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs320.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 64.611
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs321.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs321.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs321.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.032
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs322.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs322.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs322.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.469
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs323.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs323.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs323.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 53.657
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs324.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs324.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs324.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 49.623
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs325.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs325.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs325.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 44.263
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs326.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs326.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs326.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 35.777
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs327.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs327.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs327.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 31.593
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs328.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs328.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs328.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 31.904
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs329.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs329.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs329.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 38.098
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs330.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs330.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs330.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 41.153
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs331.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs331.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs331.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 44.088
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs332.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs332.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs332.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 45.704
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs333.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs333.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs333.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.339
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs334.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs334.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs334.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.437
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs335.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs335.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs335.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 57.286
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs336.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs336.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs336.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.009
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs337.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs337.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs337.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.828
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs338.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs338.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs338.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.612
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs339.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs339.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs339.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.814
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs340.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs340.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs340.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.293
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs341.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs341.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs341.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.202
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs342.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs342.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs342.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.273
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs343.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs343.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs343.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.944
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs344.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs344.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs344.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.053
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs345.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs345.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs345.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 63.034
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs346.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs346.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs346.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.13
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs347.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs347.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs347.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.511
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs348.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs348.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs348.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.315
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs349.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs349.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs349.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 62.318
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs350.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs350.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs350.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.107
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs351.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs351.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs351.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.783
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs352.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs352.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs352.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.213
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs353.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs353.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs353.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.189
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs354.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs354.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs354.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.857
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs355.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs355.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs355.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 60.525
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs356.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs356.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs356.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 59.054
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs357.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs357.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs357.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 61.462
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs358.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs358.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs358.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 56.564
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs359.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs359.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs359.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 53.708
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs360.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs360.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs360.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 52.88
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs361.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs361.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs361.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 46.466
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs362.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs362.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs362.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 41.408
+    },
+    {
+      "file": "problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs363.lean",
+      "out": "tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart000ConePairs363.olean",
+      "output_tail": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Pairs363.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "rc": 0,
+      "seconds": 37.493
+    }
+  ],
+  "schema": "codex_chart000_shard_parallel_build_v1",
+  "seconds": 828.732,
+  "total": 410,
+  "workers": 32
+}

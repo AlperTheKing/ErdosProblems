@@ -1,0 +1,9 @@
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hchunks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hmults' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.chart000Witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

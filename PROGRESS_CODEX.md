@@ -30547,3 +30547,20 @@
 2026-07-09T07:18:27Z OK VERIFY | DID: Built Chart000ConeMS000.lean. | RESULT: rc=0 elapsed=19.5s axioms=[propext,Classical.choice,Quot.sound]. | D: build Pairs000 probe
 2026-07-09T07:19:41Z FAIL VERIFY | DID: Built Chart000ConePairs000.lean. | RESULT: rc=1; checkEqPairs proof needs arithmetic reduction, rfl insufficient. | D: patched pair shards to one-pair norm_num; emitter_SHA A021A576931E2998FB460A074062A18DF0338393E1631F70A6CE2CB63DB344C4
 2026-07-09T07:21:45Z OK VERIFY | DID: Built Chart000ConePairs000.lean one-pair norm_num shard. | RESULT: rc=0 elapsed=64.7s axioms=[propext,Classical.choice,Quot.sound]. | D: test pair_chunk=4 batching
+2026-07-09T07:23:21Z FAIL VERIFY | DID: Built Chart000ConePairs000 with pair_chunk=4. | RESULT: rc=1 simp maximum steps exceeded at hchunks. | D: re-export combo chunks at size16
+2026-07-09T07:24:32Z OK ATTACK | DID: Exported Chart000 cone JSON with chunk_size=16. | RESULT: tmp/codex_o14_chart000_chunked_cone_export_v3_chunk16.json SHA AE869CA940CF4B1741ACA05C62E9C9F494CFCE13D42AD445946BE427A6DE4606. | D: inspect/generate shards
+2026-07-09T07:25:45Z OK VERIFY | DID: Built chunk16 Chart000ConePairs000 one-pair shard. | RESULT: rc=0 elapsed=22.1s axioms=[propext,Classical.choice,Quot.sound]. | D: patched per-pair shard emitter SHA 5A173DB8E6F03356055B54AC969F6F6EDD8ECED22BC3FB24DDCF857BF1BD96A2
+2026-07-09T07:26:53Z OK VERIFY | DID: Built chunk16 Chart000ConePairs000 with 8 per-pair norm_num checks. | RESULT: rc=0 elapsed=25.8s axioms=[propext,Classical.choice,Quot.sound]. | D: clean stale pair shards and parallel-build Chart000 shards
+2026-07-09T07:27:16Z OK ATTACK | DID: Cleaned stale generated pair shards and regenerated Chart000Cone chunk16 pair_chunk=8 family. | RESULT: ms_shards=45 pair_shards=364 raw_combo_terms=46521. | D: parallel shard build
+2026-07-09T07:27:47Z > VERIFY | NEXT: Parallel Lean build Chart000 sharded payload with workers=32 over base+45MS+364Pairs.
+2026-07-09T07:41:58Z OK VERIFY | DID: Parallel-built Chart000 sharded payload modules. | RESULT: tmp/codex_chart000_shard_parallel_build_summary.json SHA EA5C6CE237A5396B39885343F3252F4B3E12B9165FB660D834D8E7FCF9F6A39A workers=32 total=410 ok=410 fail=0 seconds=828.732. | D: build aggregator
+2026-07-09T07:43:06Z FAIL VERIFY | DID: Built Chart000Cone aggregator. | RESULT: rc=1; ODLCoreData/coreDefect unknown due missing open ODLFull; hchunks/hmults probes allowed. | D: add ODLFull open
+2026-07-09T07:44:38Z OK VERIFY | DID: Built Chart000Cone thin aggregator. | RESULT: rc=0 elapsed=64.3s axioms=[propext,Classical.choice,Quot.sound]; hchunks/hmults/chart000Witness green. | D: audit/post to Claude
+2026-07-09T07:45:06Z OK VERIFY | DID: Audited sharded Chart000Cone artifact set. | RESULT: forbidden-token rg no matches; 412 files total_size=74177372; build_summary ok=410 fail=0. | D: post ASK to Claude
+2026-07-09T07:45:46Z OK ATTACK | DID: Posted Chart000 sharded payload result and hcombo ASK to Claude. | RESULT: coordination/CODEX_TO_CLAUDE.md contains artifact paths and SHA. | D: switch to T8 cage lane while awaiting reply
+2026-07-09T07:47:48Z > VERIFY | NEXT: Inspect Claude Chart000Cone rejection log and current generated emitter to isolate the mismatch.
+2026-07-09T07:48:22Z > VERIFY | NEXT: Rebuild current sharded Chart000Cone aggregator to compare against Claude rejection.
+2026-07-09T07:50:01Z OK VERIFY | DID: Rebuilt current sharded Chart000Cone aggregator. | RESULT: rc=0 elapsed=65.1s axioms=[propext,Classical.choice,Quot.sound] log=tmp/codex_chart000cone_current_build.txt. | D: full shard freshness check next
+2026-07-09T07:50:12Z > VERIFY | NEXT: Parallel rebuild all current Chart000Cone shard sources to rule out stale olean acceptance.
+2026-07-09T07:51:27Z FAIL VERIFY | DID: Tried fresh-cache Chart000 shard rebuild. | RESULT: support rc=1 missing ChunkedConeWitness.olean in LEAN_PATH; summary=tmp/codex_chart000_fresh_parallel_build_summary.json. | D: locate actual dependency cache
+2026-07-09T07:51:54Z > VERIFY | NEXT: Rebuild all current Chart000Cone sources into existing base cache in dependency order.

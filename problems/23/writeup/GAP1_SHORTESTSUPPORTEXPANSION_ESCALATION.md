@@ -16,6 +16,17 @@ impure-lens framing of GAP1_IMPURE_LENS_ESCALATION_BRIEF.md (that path is resolv
 > C5BaseCap + PruneCap`, equivalently `BankedCutDomination`, compiled as a named Prop in
 > `BankedCutDominationCore.lean`). The definitive current deliverable + task list: `LENS_LEMMA_HANDOFF_CODEX.md`.
 
+> **⚠⚠⚠ 2026-07-09 WALL REFINEMENT (wiring specs, `WIRING_SPECS_GPTPRO.md`).** The bare existence
+> `∀ obstruction, ∃ cover, check = true` is NOT sufficient for the final assembly. The wall's required
+> conclusion is `Ell5FullBankRelaxedCover_globalPackage_exists`: the covers must be deliverable as a
+> **FullBankGlobalPackage** — globally indexed local covers + an η-free token ledger (kinds: door/vertexSlack/
+> c5Base/prune ONLY) + per-local spend matrices + **no-double-spend** (each token spent ≤ cap, spends never
+> cross components, token sources globally unique) + **component reserve identities** (spendable caps +
+> nonneg slack = N_c²−25m_c) + the **global superadditivity identity** (ΣN_c² + nonneg slack = N²). If your
+> proof produces per-obstruction covers whose sink/source IDs are globally labelled and whose caps trace to
+> the component decomposition, the package is a repackaging corollary; a proof yielding only local
+> BankedCutDomination facts is NOT enough. Prove the wall in the package-producing form.
+
 ## 1. THE THEOREM (attack this directly)
 
 > **ShortestSupportExpansion.** In a reduced triangle-free Γ-minimal **maximum** cut, for every set `S` of ell=5 atoms
