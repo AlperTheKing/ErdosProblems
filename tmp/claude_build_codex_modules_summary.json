@@ -1,11 +1,11 @@
 {
- "Ell5GapLemmas": "OK rc=0 17.5s axlines=4",
- "Ell5DistancePrune": "OK rc=0 16.1s axlines=1",
- "BankedCutDominationExtras": "OK rc=0 17.4s axlines=3",
- "Ell5UnionCount": "OK rc=0 17.1s axlines=4",
- "Ell5GeodesicUnion": "OK rc=0 18.0s axlines=6",
- "Ell5FootprintCount": "OK rc=0 17.2s axlines=3",
- "Ell5HallSmall": "OK rc=0 17.0s axlines=4",
- "RCCPayloadFixtures": "OK rc=0 26.3s axlines=1",
- "RelaxedCoverBanked": "OK rc=0 18.5s axlines=4"
+ "Ell5GapLemmas": "FAIL rc=1 18.3s axlines=4",
+ "Ell5DistancePrune": "FAIL rc=1 17.5s axlines=1",
+ "BankedCutDominationExtras": "FAIL rc=1 18.2s axlines=3",
+ "Ell5UnionCount": "FAIL rc=1 17.9s axlines=4",
+ "Ell5GeodesicUnion": "FAIL rc=1 20.0s axlines=6",
+ "Ell5FootprintCount": "FAIL rc=1 19.7s axlines=3",
+ "Ell5HallSmall": "FAIL rc=1 19.7s axlines=4",
+ "RCCPayloadFixtures": "FAIL rc=1 32.8s axlines=2",
+ "RelaxedCoverBanked": "FAIL rc=1 17.7s axlines=4"
 }

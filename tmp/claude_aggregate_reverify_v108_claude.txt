@@ -1,2 +1,12 @@
 ledger tmp\eq_odl1_rung2_chart_batch_ledger_v108_codex.json: certified=108 pending=0
   progress: 10 pass, 0 fail
+  progress: 20 pass, 0 fail
+  progress: 30 pass, 0 fail
+  progress: 40 pass, 0 fail
+  progress: 50 pass, 0 fail
+  progress: 60 pass, 0 fail
+  progress: 70 pass, 0 fail
+  progress: 80 pass, 0 fail
+  progress: 90 pass, 0 fail
+  progress: 100 pass, 0 fail
+AGGREGATE_RESULT {"total_rows": 108, "passed": 108, "failed_count": 0, "all_verified": true, "failures": []}

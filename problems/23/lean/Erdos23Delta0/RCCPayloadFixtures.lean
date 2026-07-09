@@ -1,5 +1,6 @@
 import Erdos23Delta0.RelaxedCoverDuality
 import Erdos23Delta0.BankedCutDominationCore
+import Erdos23Delta0.BankedCutDominationExtras
 
 set_option maxHeartbeats 2000000
 
@@ -22,6 +23,7 @@ namespace BareSSE24
 open Finset
 open RelaxedCoverDuality
 open BankedCutDominationCore
+open BankedCutDominationExtras
 
 abbrev Row := Fin 9
 abbrev Edge := Fin 17
@@ -165,6 +167,19 @@ theorem bare_sse_24_no_dualCert :
     hD1 hD3
 
 #print axioms bare_sse_24_no_dualCert
+
+
+lemma hkap_nonneg : ∀ j ∈ J, (0 : ℚ) ≤ kap j := by
+  intro j hj
+  simp [kap]
+
+/-- The compressed 24-vertex banked core satisfies the δ-eliminated banked cut-domination inequality. -/
+theorem bare_sse_24_bankedCutDomination :
+    BankedCutDomination S F O J K sep dB inc kap :=
+  bankedCutDomination_of_no_dualCert S F O J K sep dB inc kap hkap_nonneg
+    bare_sse_24_no_dualCert
+
+#print axioms bare_sse_24_bankedCutDomination
 
 end BareSSE24
 end RCCPayloadFixtures
