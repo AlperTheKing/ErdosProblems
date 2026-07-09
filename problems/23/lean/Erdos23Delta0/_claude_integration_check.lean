@@ -21,6 +21,8 @@ import Erdos23Delta0.BranchB.Dict24
 import Erdos23Delta0.BranchB.CombinedHBD
 import Erdos23Delta0.BranchB.CDTelescope
 import Erdos23Delta0.BranchB.PureUPOK0
+import Erdos23Delta0.BranchB.BankedUPO
+import Erdos23Delta0.BranchB.Provider
 
 /-! Integration check: forces all seven session modules to load and typecheck TOGETHER (catches olean staleness /
     cross-module conflict before assembly). The imports themselves are the test; the `#check`s pin the public
@@ -69,6 +71,11 @@ namespace IntegrationCheck
 #check @BranchB.CombinedHBD.hbd_ledger_sound
 #check @BranchB.CDTelescope.cd_telescope_sound
 #check @BranchB.PureUPOK0.pureUPOK0_of_fullBankCert
+#check @BranchB.BankedUPO.checkBankedUPOCert_sound
+#check @BranchB.BankedUPO.branchBInputs_of_bankedUPO
+#check @BranchB.Provider.branchBInputs_of_provider
+#check @BranchB.Provider.branchBCertBundle_of_provider
+#check @BranchB.Provider.branchB_bundle_family_of_provider
 
 end IntegrationCheck
 end Erdos23Delta0
