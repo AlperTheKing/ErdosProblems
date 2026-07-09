@@ -1,5 +1,33 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-09T00:50Z (gap#1 crux = IMPURE BALANCED NEUTRAL ell=5 LENS, counterfactual, escalation brief ready; medium-band bypass REJECTED; GPT-Pro maxed. LEAN = 7 axiom-clean modules/~24 thms: Ell5CSReduction+MaxCutVertexIneq+Ell5GraphBridge(h4)+PathRigidity(hpair)+Ell5AtomBase(|S|<=5 BASE CASE)+Ell5AtomGraph(atom<->blueGraph)+CageSuperadditivity(4 thms = FULL NON-GATED aggregation arithmetic: sum_sq_le_sq_sum + gamma_le_Nsq_of_components [component-decomp] + sum_sq_ge_25_mul_card [Gamma>=25m from ell>=5] + card_le_Nsq_div_25 [badCount<=N^2/25 from Gamma<=N^2]). ~26 thms. KEY INSIGHT: the ASSEMBLY/GLUE layer (combining gated per-comp/per-row results via clean arithmetic) is NON-gated + buildable now. FULL Ell5SupportExpansion still gated on OPEN impure lens. P(gap#1 math)~45)
+# Last update: 2026-07-09T11:58 (local)
+
+## TICK-32/33 SNAPSHOT (2026-07-09 ~12:00 local) — WALL ATTACK R1 LANDED + BOOKKEEPING LAYER COMPILED
+- **WALL_ATTACK_R1_GPTPRO.md archived** (38k reply, new thread, harvested via clipboard after Copy-button click;
+  desktop restart wiped the old tab group — glow was extension click-overlays, avoid desktop-level clicking).
+  Route verdict: LP-duality dual-squeeze (NOT induction/endpoint-singleton alone); NEW cut class =
+  **BankRootedClosureCut** (closed quotient shore, exposed ports route to ONE root neighborhood of real bank
+  sinks); two-layer wall split: Layer A = RootedEscapeSqueeze_exists_wall (HARD: Phase-3 closure lemma
+  deficientPortSet_has_rooted_or_gammaFree_cut + Phase-4 patch loop), Layer B = Farkas-to-bundle bookkeeping.
+  m=9 double-star = bank-rooted base case (Defect 25 vs DoorCap>=300, matches my 24-vtx CE). Falsifier format
+  sharpened = WallFalsifier (checked strict banked dual on graph-realizable minimal full-closure obstruction).
+- **BankedWallLP.lean COMPILED FIRST-TRY** (rc=0, axioms=[propext,Classical.choice,Quot.sound]): the §3
+  bookkeeping layer with FULL proofs — noStrictDual_of_dualSqueeze + noStrictDual_of_primal
+  (DualSqueeze.ofPrimal); DualSqueeze parameterized by abstract Allowed : Cut → Prop. In base cache.
+- **GPT-Pro retasked (reply 7 STREAMING)**: Phase-3 full proof demanded — (a) precise uncrossing/submodularity
+  incl sink-cap double-count, (b) trichotomy exhaustiveness (scattered-sinks case), (c) THE PATCH RISK
+  (short_coeff saturation — my highest-failure-risk estimate; exchange amounts or redesign), (d) any hypothesis
+  beyond the ten must be named + graph-derivable.
+- **Codex mailbox reconciled (marker → 2161067)**: (i) my Chart000Cone rejection was against the STALE MONOLITH;
+  current = sharded aggregator FE83BD29… + 410 shards + support (412 files, 74MB); Codex rebuilt all rc=0 +
+  axiom-clean, asked me to re-gate. (ii) T8 ConcreteCage wave: 6 modules (Basic/Bank/Proper/Restrict/PureSplit/
+  PureLensSplit), SHAs MATCH (my check), no forbidden tokens (my scan, 418 files 0 hits), scope note honest
+  (graph bridge NOT claimed — lens facts remain explicit hypotheses in concretePureLensCageSplit).
+- **MY RE-GATE IN FLIGHT** (tmp/claude_t8_chart000_regate.py, 32 workers, into base cache; first attempt failed
+  on layered-LEAN_PATH — Lean wants dep oleans in the FIRST entry ⟹ single-dir pattern restored): T8 6 modules
+  sequential → Chart000 support → 410 shards → aggregator → axiom probe. Summary →
+  tmp/claude_t8_chart000_regate_summary.json. ACCEPTANCE of both Codex RESULTs pends this verdict.
+- Chrome MCP: fresh tab group, tab 1267097367 = the GPT-Pro thread. Send recipe unchanged; harvest recipe:
+  Copy-button click + mcp__computer-use__read_clipboard WORKS (grant active) — but click it ONCE (overlay glow). (gap#1 crux = IMPURE BALANCED NEUTRAL ell=5 LENS, counterfactual, escalation brief ready; medium-band bypass REJECTED; GPT-Pro maxed. LEAN = 7 axiom-clean modules/~24 thms: Ell5CSReduction+MaxCutVertexIneq+Ell5GraphBridge(h4)+PathRigidity(hpair)+Ell5AtomBase(|S|<=5 BASE CASE)+Ell5AtomGraph(atom<->blueGraph)+CageSuperadditivity(4 thms = FULL NON-GATED aggregation arithmetic: sum_sq_le_sq_sum + gamma_le_Nsq_of_components [component-decomp] + sum_sq_ge_25_mul_card [Gamma>=25m from ell>=5] + card_le_Nsq_div_25 [badCount<=N^2/25 from Gamma<=N^2]). ~26 thms. KEY INSIGHT: the ASSEMBLY/GLUE layer (combining gated per-comp/per-row results via clean arithmetic) is NON-gated + buildable now. FULL Ell5SupportExpansion still gated on OPEN impure lens. P(gap#1 math)~45)
 
 # 2026-07-08 FABLE-5 TICKS 13-14 — TWO LANDMARK EVENTS (supersedes everything below on the lens/SSE lineage):
 # (1) **BARE SSE FALSIFIED IN REAL GRAPHS** (24-vtx CE, TRIPLE-verified incl my 3rd impl _claude_verify_24vtx_ce.py, 2^23: K33 cluster + double-star waist + 6-layer anchor web, 71 edges, UNIQUE max cut 62 => Gamma-min + B-conn, 9 ell5 atoms unique geodesics, E_short = 8 double-star edges, 9>8). The 0/71910 battery = census-size artifact (min violating N in 11..24). ONLY THE BANKED FORM (FullBankHall = BankedCutDomination, compiled Prop) SURVIVES as target; the lens route ALONE is insufficient (the 24-CE violator is lens-free: all 9 atoms share ONE unique geodesic => double-star violators must be handled by the BANK). CE is conjecture-consistent (Gamma=225 <= 576; deficit 25 << DoorCap).
@@ -62,7 +90,8 @@
 - OPEN (superseded): the multi-atom full-support shell residual, now resolved into Ell5SupportExpansion above. Gate files: _claude_residual_hall_gate.py, _claude_multiatom_fullsupport_gate.py. Archive: GAP1_FULLSUPPORT_REDUCTION_GPTPRO.md.
 
 ## MAILBOX
-- CODEX_TO_CLAUDE.md read marker (bytes): 2127779  (2026-07-09T~06:50Z: read through the O14 module-30 glue + T6/T7 integration posts. CODEX DELIVERED: d8/d9 EXACT certs -> v108 ledger -> 108/108 dual-verified (my independent aggregate pass = acceptance); 14 new Lean modules ALL verified under my gate (T2-T6 closed, T7 = small interface gap [NoFourSupportInsideSixSupport + Realizable predicate], T9 cert interface Ell5FullBankInterface, O14 module-29/30 interface stack, RCCPayloadFixtures bare_sse_24_bankedCutDomination regression anchor); regression wrapper _codex_gap1_regression_gate.py 5/5. Codex active lanes: O14 concrete classifier/payload wiring, T7 parity abstraction, FullBank cover existence)
+- CODEX_TO_CLAUDE.md read marker (bytes): 2161067  (2026-07-09T11:35: Chart000Cone sharded-set reconciliation + T8 ConcreteCage wave — both RESULTs pending MY re-gate verdict, in flight)
+- (superseded marker 2127779  (2026-07-09T~06:50Z: read through the O14 module-30 glue + T6/T7 integration posts. CODEX DELIVERED: d8/d9 EXACT certs -> v108 ledger -> 108/108 dual-verified (my independent aggregate pass = acceptance); 14 new Lean modules ALL verified under my gate (T2-T6 closed, T7 = small interface gap [NoFourSupportInsideSixSupport + Realizable predicate], T9 cert interface Ell5FullBankInterface, O14 module-29/30 interface stack, RCCPayloadFixtures bare_sse_24_bankedCutDomination regression anchor); regression wrapper _codex_gap1_regression_gate.py 5/5. Codex active lanes: O14 concrete classifier/payload wiring, T7 parity abstraction, FullBank cover existence)
 - My outbox: coordination/CLAUDE_TO_CODEX.md (append-only)
 
 ## GPT-PRO THREADS (2026-07-07: user reports ONE Pro thread DEPLETED)
