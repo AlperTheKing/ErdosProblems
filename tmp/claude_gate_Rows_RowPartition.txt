@@ -1,0 +1,15 @@
+'Erdos23Delta0.Rows.RowPartition.ODLFullRowPartitionView.class_eqodl1_of_allL5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Rows.RowPartition.ODLFullRowPartitionView.class_branchB_of_mixed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Rows.RowPartition.ODLFullRowPartitionView.rowGersh_of_partition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Rows.RowPartition.ODLFullRowPartitionView.allRowsGersh_of_partition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Rows.RowPartition.ODLFullRowPartitionView.beta_bound_of_partitioned_provider' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

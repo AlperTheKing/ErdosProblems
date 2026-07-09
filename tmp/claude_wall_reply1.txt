@@ -1,0 +1,139 @@
+
+Daha az göster
+
+I’ll ground the wall attack in the existing predicates and aim for a Lean-ready route, while briefly checking outside terminology to avoid incompatible framing.
+
+I’ll frame the wall as a finite rational LP/separation problem and push the dual route, keeping all bank terms explicit. The key reduction is deficiency-one minimality toward a Lean-checkable cut-basis lemma.
+
+16m 6s boyunca düşündüm
+
+I would attack the wall through LP duality, not induction. I did not find a rational dual falsifier. The most promising missing ingredient is a specific extra cut class:
+
+bank-rooted full-escape quotient cuts: cuts obtained from a union of components of B \ F, closed under forced ell-5 escape, with all off-support load legally routed to one globally labelled bank root or to the root’s sink neighborhood.
+
+These are the cuts that should close the gap left by singleton domination plus gamma-free quotient cuts.
+
+Below is the full reduction I would put in the Lean design. The remaining real theorem is not “cover exists” again; it is a dual-specific uncrossing/squeeze lemma using only singleton, quotient-closed, and bank-rooted escape cuts.
+
+0. Honest evaluation of the three candidate routes
+0.1 Induction on the minimal obstruction is not the main route
+
+Minimality gives the useful identity
+
+|S| = |E_short(S)| + 1
+
+and every proper full-closure subobject is nonviolating. But the known no private edge fact kills the naive induction step.
+
+Removing one atom a usually does not remove a short edge:
+
+E_short(S \ {a}) = E_short(S)
+
+so the smaller object is tight, not slack:
+
+|S \ {a}| = |E_short(S)|.
+
+A cover of S \ {a} may saturate every in-support short edge. To add a, every cut separating a still crosses already saturated support geometry, unless one has a banked escape patch. That patch is essentially the wall again.
+
+So the induction extension fails exactly at:
+
+lean
+-- desired but generally false
+∀ a ∈ S,
+∃ patch,
+covers a
+∧ adds no in-support congestion on saturated F
+∧ routes all new off-support load to unused bank
+
+The double-star m = 9 anchor is the warning example: removal leaves the shared corridor geometry tight. The verified 24-vertex realization is bank-absorbable, but not by a bare inductive slack argument.
+
+Conclusion: induction may become a proof of a later structural lemma, but it is not the clean wall proof.
+
+0.2 Endpoint-singleton construction is a strong special case, not the whole wall
+
+The useful special construction is:
+
+lean
+structure EndpointSingletonCoverData
+(O : MinimalFullClosureObstruction G cut rows cage) where
+Endpoint : Type
+endpointFintype : Fintype Endpoint
+endpointDecEq : DecidableEq Endpoint
+
+endpointCut : Endpoint → CutAtom O
+
+incidentAtom : Endpoint → O.Atom → Bool
+incidentShort : Endpoint → O.ShortEdge → Bool
+
+chosen : Endpoint → Bool
+
+coversAtom :
+∀ a : O.Atom,
+1 ≤
+∑ v : Endpoint,
+if chosen v && incidentAtom v a then (1 : Rat) else 0
+
+shortCongestion :
+∀ f : O.ShortEdge,
+(∑ v : Endpoint,
+if chosen v && incidentShort v f then (1 : Rat) else 0) ≤ 1
+
+routedDoorLoad :
+Endpoint → O.BankSink → Rat
+
+routedDoorLoad_nonneg :
+∀ v s, 0 ≤ routedDoorLoad v s
+
+routedDoorLoad_legal :
+∀ v s,
+routedDoorLoad v s ≠ 0 →
+O.LegalSink (endpointCut v) s
+
+endpointLoadCovered :
+∀ v,
+chosen v = true →
+O.OffSupportLoad (endpointCut v)
+≤ ∑ s : O.BankSink, routedDoorLoad v s
+
+sinkCapacity :
+∀ s : O.BankSink,
+(∑ v : Endpoint,
+if chosen v then routedDoorLoad v s else 0)
+≤ O.BankCap s
+
+Then the soundness theorem is pure bookkeeping:
+
+lean
+theorem endpointSingletonCoverData_sound
+{O : MinimalFullClosureObstruction G cut rows cage}
+(D : EndpointSingletonCoverData O) :
+∃ b : FullBankRelaxedCoverBundle,
+checkFullBankRelaxedCoverBundle O b = true :=
+by
+-- Construct `lam` by:
+--
+-- lam X = number of chosen endpoints v with endpointCut v = X.
+--
+-- Construct `q` from `routedDoorLoad`.
+--
+-- Coverage is `coversAtom`.
+-- In-support congestion is `shortCongestion`.
+-- Sink capacity is `sinkCapacity`.
+-- Legal incidence is `routedDoorLoad_legal`.
+--
+-- No eta term appears.
+sorry
+
+This explains why the construction works on C5[t], CP11, and the double-star anchor: one endpoint class is an independent transversal of the relevant footprint, and the induced singleton off-support load is door-bankable.
+
+But this construction can fail in two ways:
+
+(1) selector failure:
+no endpoint side hits every atom while selecting at most one endpoint
+across every short support edge;
+
+(2) bank-routing failure:
+the selected endpoint cuts produce off-support ports whose legal
+sink neighborhood does not have enough door/vertexSlack/C5/prune capacity.
+
+
+[output truncated at 50000 of 81506 characters. Pass a larger max_chars (default 50000) to see more, or use read_page with a ref_id to focus on a smaller section.]

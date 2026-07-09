@@ -1,0 +1,1 @@
+..\problems\23\lean\Erdos23Delta0\BankedWallLPRestricted.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\codex_lean_o_wall_v1\Erdos23Delta0\BankedWallLP.olean' of module Erdos23Delta0.BankedWallLP does not exist

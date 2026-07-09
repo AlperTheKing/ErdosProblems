@@ -1,0 +1,2 @@
+import Erdos23Delta0.BankedWallRoutingFailure
+#print axioms Erdos23Delta0.Wall.strictRestrictedDual_gives_weightedRoutingFailure

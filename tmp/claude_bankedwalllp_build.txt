@@ -1,0 +1,2 @@
+'Erdos23Delta0.Wall.noStrictDual_of_dualSqueeze' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Wall.noStrictDual_of_primal' depends on axioms: [propext, Classical.choice, Quot.sound]

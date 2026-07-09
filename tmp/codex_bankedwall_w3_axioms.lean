@@ -1,0 +1,4 @@
+import Erdos23Delta0.ClosedWeightedHall
+import Erdos23Delta0.BankedWallW3Skeleton
+#print axioms Erdos23Delta0.Wall.ClosedShore.uniqueRoot_of_closedWeightedHallCompleteness
+#print axioms Erdos23Delta0.Wall.ClosedShore.noStrictRestrictedDual_of_closedHall_and_exchange

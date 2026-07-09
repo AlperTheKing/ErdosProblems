@@ -1,0 +1,2 @@
+c:\Users\a\.elan\toolchains\leanprover--lean4---v4.27.0\lib\lean\Init.olean
+E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\Gamma\FullBankToLengthSurplusCharge.olean

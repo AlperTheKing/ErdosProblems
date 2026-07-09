@@ -1,0 +1,33 @@
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankRelaxedCoverBundleView.demand_le_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankRelaxedCoverBundleView.rhs_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.localSurplus_le_localDemand' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.localDemand_le_localCap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.localCap_eq_localSpend' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.localSpend_eq_tokenSpend' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.tokenSpend_le_tokenCap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.componentTokenCap_le_componentResidual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.componentResidual_le_globalResidual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.fullBankGlobalPackage_sound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankGlobalPackage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

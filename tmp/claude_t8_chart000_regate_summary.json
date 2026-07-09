@@ -1,0 +1,100 @@
+{
+ "started": "2026-07-09T11:43:29",
+ "phases": {
+  "token_scan": {
+   "files": 418,
+   "hits": []
+  },
+  "t8": {
+   "ok": true,
+   "results": [
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.Basic",
+     "rc": 0,
+     "ok": true,
+     "sec": 18.0,
+     "err": ""
+    },
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.Bank",
+     "rc": 0,
+     "ok": true,
+     "sec": 17.7,
+     "err": ""
+    },
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.Proper",
+     "rc": 0,
+     "ok": true,
+     "sec": 17.5,
+     "err": ""
+    },
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.Restrict",
+     "rc": 0,
+     "ok": true,
+     "sec": 17.7,
+     "err": ""
+    },
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.PureSplit",
+     "rc": 0,
+     "ok": true,
+     "sec": 17.8,
+     "err": ""
+    },
+    {
+     "module": "Erdos23Delta0.Ell5.ConcreteCage.PureLensSplit",
+     "rc": 0,
+     "ok": true,
+     "sec": 18.6,
+     "err": ""
+    }
+   ]
+  },
+  "chart000": {
+   "ok": true,
+   "support": [
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000ConeSupport",
+     "rc": 0,
+     "ok": true,
+     "sec": 17.6,
+     "err": ""
+    }
+   ],
+   "shards_ok": 410,
+   "shards_fail": [],
+   "aggregator": {
+    "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone",
+    "rc": 0,
+    "ok": true,
+    "sec": 63.8,
+    "err": ""
+   },
+   "counts": {
+    "total": 412,
+    "support": 1,
+    "shards": 410
+   }
+  },
+  "axiom_probe": {
+   "ok": true,
+   "decls": [
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.comboOrderChunks",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.multShards",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.mults",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hmultShards",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hmults",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hchunks",
+    "Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.chart000Witness"
+   ],
+   "note": "",
+   "rc": 0,
+   "stdout": "'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.comboOrderChunks' does not depend on any axioms\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.multShards' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.mults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hmultShards' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hmults' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.hchunks' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Cone.Main.chart000Witness' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+   "bad": []
+  }
+ },
+ "all_ok": true,
+ "finished": "2026-07-09T12:00:45"
+}

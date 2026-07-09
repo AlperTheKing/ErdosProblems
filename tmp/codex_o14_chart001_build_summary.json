@@ -1,0 +1,38 @@
+{
+ "started": "2026-07-09T09:34:22Z",
+ "slots": [
+  1
+ ],
+ "cache": "tmp\\claude_lean_o_base_v1",
+ "worker_caps": {
+  "support": 4,
+  "base": 2,
+  "shard": 32,
+  "aggregator": 4
+ },
+ "source_counts": {
+  "support": 1,
+  "base": 1,
+  "shard": 93,
+  "aggregator": 1
+ },
+ "token_scan": {
+  "files": 96,
+  "hits": []
+ },
+ "phases": [
+  {
+   "phase": "support",
+   "total": 1,
+   "todo": 1,
+   "skipped": 0,
+   "ok": 1,
+   "fail": 0,
+   "started": "2026-07-09T09:34:22Z",
+   "workers": 4,
+   "failures": [],
+   "finished": "2026-07-09T09:34:41Z",
+   "seconds": 18.949
+  }
+ ]
+}

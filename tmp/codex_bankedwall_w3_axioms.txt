@@ -1,0 +1,6 @@
+'Erdos23Delta0.Wall.ClosedShore.uniqueRoot_of_closedWeightedHallCompleteness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Wall.ClosedShore.noStrictRestrictedDual_of_closedHall_and_exchange' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

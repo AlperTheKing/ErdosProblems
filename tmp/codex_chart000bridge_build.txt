@@ -1,0 +1,3 @@
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Bridge.coreODLGoal_of_chart000Cone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

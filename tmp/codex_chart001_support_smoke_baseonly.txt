@@ -1,0 +1,7 @@
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Support.nf_allCoeffNonneg_flatten_true' depends on axioms: [propext,
+ Quot.sound]
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Support.all_nf_allCoeffNonneg_flatten_true' depends on axioms: [propext,
+ Quot.sound]
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Support.checkEqPairs_flatten_true' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

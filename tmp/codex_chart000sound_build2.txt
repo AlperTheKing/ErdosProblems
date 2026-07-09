@@ -1,0 +1,33 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:26:0: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:48:4: error(lean.invalidField): Invalid field `coreData`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.coreData`, so it is not possible to project the field `coreData` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:80:38: error(lean.invalidField): Invalid field `coreData`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.coreData`, so it is not possible to project the field `coreData` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:80:49: error(lean.invalidField): Invalid field `env`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.env`, so it is not possible to project the field `env` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:80:55: error(lean.invalidField): Invalid field `hvars`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.hvars`, so it is not possible to project the field `hvars` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:80:63: error(lean.invalidField): Invalid field `hslacks`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.hslacks`, so it is not possible to project the field `hslacks` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:81:6: error(lean.invalidField): Invalid field `hcombo`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.hcombo`, so it is not possible to project the field `hcombo` from an expression
+  I
+of type `BoundInst G c rows Q`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart000Sound.lean:81:15: error(lean.invalidField): Invalid field `htarget`: The environment does not contain `Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.BoundInst.htarget`, so it is not possible to project the field `htarget` from an expression
+  I
+of type `BoundInst G c rows Q`
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.chart000Payload_not_final' does not depend on any axioms
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.chart000ChartSound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart000Sound.coreODLGoal_of_boundInst' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

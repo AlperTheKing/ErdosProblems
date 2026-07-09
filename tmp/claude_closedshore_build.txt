@@ -1,0 +1,3 @@
+'Erdos23Delta0.Wall.ClosedShore.minimalClosedDeficient_has_unique_root_of_positiveExtraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,6 @@
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.chargeCertProviderOfFullBankLedger_ok' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankPackage_via_chargeCertV2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

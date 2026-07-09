@@ -1,0 +1,1 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConeSupport.lean:2:0: error: object file 'E:\Projects\ErdosProblems\tmp\codex_lean_o_o14_v108\Erdos23Delta0\O14\ChunkedConeWitness.olean' of module Erdos23Delta0.O14.ChunkedConeWitness does not exist

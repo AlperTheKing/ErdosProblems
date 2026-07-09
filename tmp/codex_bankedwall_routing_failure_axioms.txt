@@ -1,0 +1,3 @@
+'Erdos23Delta0.Wall.strictRestrictedDual_gives_weightedRoutingFailure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

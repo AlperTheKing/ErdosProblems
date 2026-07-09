@@ -1,0 +1,9 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5\ConcreteCage\Restrict.lean:35:0: warning: automatically included section variable(s) unused in theorem `Erdos23Delta0.Ell5.ConcreteCage.mem_restrict_atoms`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.Ell5.ConcreteCage.mem_restrict_atoms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5.ConcreteCage.restrict_atoms_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5.ConcreteCage.mem_restrictCompl_atoms' depends on axioms: [propext, Classical.choice, Quot.sound]

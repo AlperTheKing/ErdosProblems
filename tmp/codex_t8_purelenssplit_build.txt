@@ -1,0 +1,10 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5\ConcreteCage\PureLensSplit.lean:22:8: warning: automatically included section variable(s) unused in theorem `_private.Erdos23Delta0.Ell5.ConcreteCage.PureLensSplit.0.Erdos23Delta0.Ell5.ConcreteCage.diff_subset_finset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Erdos23Delta0.Ell5.ConcreteCage.concretePureLensCageSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5.ConcreteCage.ledgerSep_of_concretePureLensCageSplit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

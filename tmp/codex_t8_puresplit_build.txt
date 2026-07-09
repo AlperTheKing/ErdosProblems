@@ -1,0 +1,4 @@
+'_private.Erdos23Delta0.Ell5.ConcreteCage.PureSplit.0.Erdos23Delta0.Ell5.ConcreteCage.sum_split_filter_aux' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Ell5.ConcreteCage.surplus_split_of_strongPure' depends on axioms: [propext, Classical.choice, Quot.sound]

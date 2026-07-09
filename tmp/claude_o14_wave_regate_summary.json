@@ -1,0 +1,15 @@
+{
+ "started": "2026-07-09T13:03:27",
+ "phases": {
+  "tokens": {
+   "files": 16846,
+   "hits": []
+  },
+  "supports": {
+   "ok": 106,
+   "skip": 1,
+   "fail": [],
+   "sec": 274
+  }
+ }
+}

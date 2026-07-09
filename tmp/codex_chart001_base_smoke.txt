@@ -1,0 +1,1 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConeBase.lean:2:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConeSupport.olean' of module Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConeSupport does not exist

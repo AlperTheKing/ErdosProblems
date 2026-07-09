@@ -1,6 +1,19 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
 # Last update: 2026-07-09T11:58 (local)
 
+## TICK-36 SNAPSHOT (2026-07-09 ~13:55 local) — SPEC-1 COMPILED (WALL OUTPUT INTERFACE DONE) + 107-CHART WAVE
+- **SPEC-1 Gamma/FullBankToLengthSurplusCharge.lean ACCEPTED** (my gate: SHA match, rc=0, 0 tokens, probes
+  clean incl fullBankGlobalPackage_sound → gammaUpper_from_fullBankGlobalPackage). THE WALL IS NOW LITERALLY
+  "construct a Checked FullBankGlobalPackage" — all downstream aggregation compiled. Also ACCEPTED: SPEC-2
+  Rows/RowPartition.lean (component-level dispatch, kills the old hLen>5 bottleneck) + Chart000Bridge.lean.
+- **Codex scaled ALL 107 remaining charts** (exports 107/107 ok + sharded emission 107/107 ok; 17,258 generated
+  files, 37.5GB; 108 thin aggregators present; PayloadRegistry v108 all-present replaces the pilot guardrail).
+  Codex's LOCAL Lean is TOOLCHAIN-BLOCKED (elan no default) ⟹ MY wave re-gate is the only build gate:
+  tmp/claude_o14_wave_regate.py RUNNING (32 workers, resumable, token-scan → supports → shards → aggregators →
+  registry; summary tmp/claude_o14_wave_regate_summary.json; multi-hour). Mailbox marker → 2171725.
+- GPT-Pro grounding reply (concrete ForcedEll5EscapeStep etc.) NOT YET OUT (my retask confirmed as last thread
+  message; Pro thinking phase). Harvest next tick; R3 text also captured via clipboard (matches user relay).
+
 ## TICK-35 SNAPSHOT (2026-07-09 ~13:20 local) — R3: W2-AS-STATED REFUTED; DECISIVE Q = REAL-GRAPH ROOT-LOCALITY
 - **WALL_ATTACK_R3_GPTPRO.md archived (USER-RELAYED reply 8)**: W2 RootBlockClosureSeparable is FALSE at the
   abstraction level — 2-quotient-component CE (closure step {A}→{A,B} crosses legal root blocks while sink
