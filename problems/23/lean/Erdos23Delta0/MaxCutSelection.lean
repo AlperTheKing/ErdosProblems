@@ -10,7 +10,7 @@ satisfying any nonempty property one can select one minimizing any ℕ-valued fu
 particular a Γ-minimal maximum cut once Γ is wired (`exists_maxCut_argmin`). The B-connectivity refinement slots
 in through the same generic `P` (e.g. `P s := IsMaxCut G s ∧ BConnected s`), so the provider's selection step is
 fully covered by these lemmas; what remains for M6 is the RowDB construction and the GammaBetaFacts instantiation.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -51,9 +51,6 @@ theorem exists_maxCut_argmin (G : SimpleGraph V) [Fintype G.edgeSet]
     exists_min_over (fun s : V → Bool => IsMaxCut G s ∧ Q s) hQ g
   exact ⟨s, hmax, hq, fun s' h1 h2 => hmin s' ⟨h1, h2⟩⟩
 
-#print axioms exists_maxCut
-#print axioms exists_min_over
-#print axioms exists_maxCut_argmin
 
 end MaxCutSelection
 end Erdos23Delta0

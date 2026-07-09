@@ -1,0 +1,3 @@
+import Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge
+#print axioms Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.fullBankGlobalPackage_sound
+#print axioms Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankGlobalPackage

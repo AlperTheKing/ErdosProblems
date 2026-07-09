@@ -1,0 +1,11 @@
+[
+  {
+    "file": "E:\\Projects\\ErdosProblems\\tmp\\codex_probe_fullbank_to_lengthsurplus.lean",
+    "rc": 1,
+    "sec": 5.6,
+    "ok": false,
+    "axiom_lines": [],
+    "stdout_tail": "",
+    "stderr_tail": "input file 'e:\\Projects\\ErdosProblems\\tmp\\codex_probe_fullbank_to_lengthsurplus.lean' must be contained in root directory (E:\\Projects\\ErdosProblems\\problems\\23\\lean\\)\n"
+  }
+]

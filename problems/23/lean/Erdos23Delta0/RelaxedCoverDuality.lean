@@ -16,7 +16,7 @@ Consequences compiled here:
 * `bankCost_le_of_pointwise` — the δ-elimination step (`BankCost(γ) = Σ_j κ_j · max{γ_c}` is optimal) is
   represented through the flow-supported form.
 
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -153,7 +153,6 @@ theorem relaxed_cover_weak_duality
       _ ≤ (∑ c ∈ F, beta c) + ∑ j ∈ J, kap j * del j := add_le_add h5a h5b
   linarith
 
-#print axioms relaxed_cover_weak_duality
 
 end RelaxedCoverDuality
 end Erdos23Delta0

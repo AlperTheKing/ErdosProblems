@@ -97,10 +97,6 @@ theorem even_singletons_of_even_sum {A B : Finset β} {eP eQ : β} (f : β → N
   use k - C
   omega
 
-#print axioms inter_card_eq_three_of_four_four_union_le_five
-#print axioms union_card_ge_six_of_inter_ne_three
-#print axioms sdiff_card_one_of_four_inter_three
-#print axioms even_singletons_of_even_sum
 
 end Ell5UnionCount
 end Erdos23Delta0

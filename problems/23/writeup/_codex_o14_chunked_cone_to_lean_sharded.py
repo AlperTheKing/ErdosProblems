@@ -145,9 +145,6 @@ def emit_support(out_dir: Path, chart_ns: str) -> Path:
         "      simp only [List.flatten_cons]",
         "      exact checkEqPairs_append_true c cs.flatten h.1 (checkEqPairs_flatten_true cs h.2)",
         "",
-        "#print axioms nf_allCoeffNonneg_flatten_true",
-        "#print axioms all_nf_allCoeffNonneg_flatten_true",
-        "#print axioms checkEqPairs_flatten_true",
         "",
     ]
     lines += module_footer(chart_ns, "Support")
@@ -179,8 +176,6 @@ def emit_base(out_dir: Path, data: dict[str, Any], term_chunk: int, chart_ns: st
     lines.append("")
     lines.append("theorem hbase : NF.allCoeffNonneg base = true := by")
     lines.append("  exact Support.nf_allCoeffNonneg_flatten_true chunks hchunks")
-    lines.append("")
-    lines.append("#print axioms hbase")
     lines.append("")
     lines += module_footer(chart_ns, "Base")
     path = out_dir / f"{chart_ns}Base.lean"
@@ -219,8 +214,6 @@ def emit_ms_shards(out_dir: Path, data: dict[str, Any], src_chunk: int, chart_ns
         hnames = ", ".join(f"h{name}" for name in mult_names)
         lines.append(f"  simp [mults, {hnames}]")
         lines.append("")
-        lines.append("#print axioms hmults")
-        lines.append("")
         lines += module_footer(chart_ns, ns)
         path = out_dir / f"{chart_ns}MS{shard_idx:03d}.lean"
         write_module(path, lines)
@@ -253,7 +246,7 @@ def emit_pair_shards(out_dir: Path, data: dict[str, Any], pair_chunk: int, chart
             lines.append("")
             lines.append(f"theorem {hname} : checkEq {pname}.1 {pname}.2 = true := by")
             unfold_defs = ", ".join(["checkEq", "isZeroNF", "collect", "insertAdd", "NF.sub", "NF.neg", pname, lname, rname])
-            lines.append(f"  norm_num [{unfold_defs}]")
+            lines.append(f"  norm_num (maxSteps := 10000000) [{unfold_defs}]")
             lines.append("")
             pair_names.append(pname)
             pair_def_names.extend([lname, rname, pname])
@@ -261,9 +254,7 @@ def emit_pair_shards(out_dir: Path, data: dict[str, Any], pair_chunk: int, chart
         emit_list_def(lines, "pairs", "(NF × NF)", pair_names)
         lines.append("theorem hchunks : checkEqPairs pairs = true := by")
         simp_defs = ", ".join(["pairs", "checkEqPairs"] + hpair_names)
-        lines.append(f"  simp [{simp_defs}]")
-        lines.append("")
-        lines.append("#print axioms hchunks")
+        lines.append(f"  simp (config := {{ maxSteps := 10000000 }}) [{simp_defs}]")
         lines.append("")
         lines += module_footer(chart_ns, ns)
         path = out_dir / f"{chart_ns}Pairs{shard_idx:03d}.lean"
@@ -315,7 +306,7 @@ def emit_aggregator(
     lines.append("def pairs : List (NF × NF) := pairShards.flatten")
     lines.append("")
     lines.append("theorem hpairShards : pairShards.all checkEqPairs = true := by")
-    lines.append("  simp [pairShards, " + ", ".join(f"{n}.hchunks" for n in pair_names) + "]")
+    lines.append("  simp (config := { maxSteps := 10000000 }) [pairShards, " + ", ".join(f"{n}.hchunks" for n in pair_names) + "]")
     lines.append("")
     lines.append("theorem hchunks : checkEqPairs pairs = true := by")
     lines.append("  exact Support.checkEqPairs_flatten_true pairShards hpairShards")
@@ -344,10 +335,6 @@ def emit_aggregator(
     lines.append("  hcombo := hcombo")
     lines.append("  htarget := htarget")
     lines.append("")
-    lines.append("#print axioms hchunks")
-    lines.append("#print axioms hmults")
-    lines.append(f"#print axioms {witness_name}")
-    lines.append("")
     lines += module_footer(chart_ns, "Main")
     path = out_dir / f"{chart_ns}.lean"
     write_module(path, lines)
@@ -360,7 +347,11 @@ def main() -> None:
     ap.add_argument("--out-dir", type=Path, default=Path("problems/23/lean/Erdos23Delta0/O14/Generated/ChartPayloads"))
     ap.add_argument("--base-term-chunk", type=int, default=64)
     ap.add_argument("--source-chunk", type=int, default=32)
-    ap.add_argument("--pair-chunk", type=int, default=16)
+    # Pair shards contain large `checkEq`/`norm_num` goals.  A chunk of 16
+    # produced multi-MB Lean files on heavy charts (for example Chart014),
+    # which can leave all workers stuck on one chart.  Keep the default small;
+    # callers can still raise it for a known-light pilot.
+    ap.add_argument("--pair-chunk", type=int, default=4)
     ap.add_argument("--chart-ns", default=None)
     ap.add_argument("--witness-name", default=None)
     args = ap.parse_args()

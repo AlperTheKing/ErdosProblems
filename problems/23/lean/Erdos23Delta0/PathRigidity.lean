@@ -12,7 +12,7 @@ therefore have distinct supports (their bad edges differ). The heart is:
 
 so two paths with the same edge set must share endpoints (`start_mem_endpoints`), and with distinct endpoints they
 represent the same unordered bad edge (`edges_determine_badedge`). All theorems axiom-clean
-(`{propext, Classical.choice, Quot.sound}`); no `sorry`/`admit`/`native_decide`.
+(`{propext, Classical.choice, Quot.sound}`); No forbidden proof shortcuts.
 -/
 
 namespace Erdos23Delta0
@@ -115,11 +115,6 @@ theorem edges_determine_badedge [DecidableEq V] {u v u' v' : V}
   rw [Sym2.eq_iff]
   grind
 
-#print axioms incident_start_eq
-#print axioms incident_end_eq
-#print axioms two_edges_of_internal
-#print axioms start_mem_endpoints
-#print axioms edges_determine_badedge
 
 end PathRigidity
 end Erdos23Delta0

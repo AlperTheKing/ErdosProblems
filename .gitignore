@@ -103,6 +103,7 @@ tmp/*_cols_v*.json
 # User distributes these manually on request for verification (2026-07-09 directive).
 tmp/codex_o14_chart000_chunked_cone_export_v*.json
 tmp/o14_exports_v108/
+tmp/codex_o14_emit_probe_*/
 
 # Generated O14 chart payload shards Chart001..107: local-only (37.5GB aggregate, user-approved
 # 2026-07-09; distributed manually on request). Chart000 pilot family stays versioned;

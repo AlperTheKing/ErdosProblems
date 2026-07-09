@@ -10,7 +10,7 @@ each component). The ASSEMBLY step — combining the per-component bounds into t
 squares, proved here. Together with the (gap#1-gated) per-component bounds it gives
 `Γ = Σ Γ_i ≤ Σ N_i² ≤ (Σ N_i)² = N²`.
 
-Axiom-clean (`{propext, Classical.choice, Quot.sound}`); no `sorry`/`admit`/`native_decide`.
+Axiom-clean (`{propext, Classical.choice, Quot.sound}`); No forbidden proof shortcuts.
 -/
 
 namespace Erdos23Delta0
@@ -68,10 +68,6 @@ theorem card_le_Nsq_div_25 {ι : Type*} (s : Finset ι) (ell : ι → ℚ) (Nq :
   have h25 : 25 * (s.card : ℚ) ≤ Nq ^ 2 := le_trans (sum_sq_ge_25_mul_card s ell hell) hgamma
   linarith
 
-#print axioms sum_sq_le_sq_sum
-#print axioms gamma_le_Nsq_of_components
-#print axioms sum_sq_ge_25_mul_card
-#print axioms card_le_Nsq_div_25
 
 end CageSuperadditivity
 end Erdos23Delta0

@@ -2814,3 +2814,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-09T13:22:00] ✔ CONSULT | DID: grounding retask sent (reply 9 streaming): concrete QComp/ForcedEll5EscapeStep/exposedPorts/LegalSinkPort defs vs compiled surface + prove-or-break REAL-GRAPH root-locality + census-search spec | RESULT: sent | Δ: none
 [2026-07-09T13:50:00] ✔ GATE | DID: SHA+rebuild SPEC-1 Gamma/FullBankToLengthSurplusCharge + SPEC-2 Rows/RowPartition + Chart000Bridge | RESULT: 3/3 rc=0, SHAs match, 0 tokens — ACCEPTED; wall output interface compiled | Δ: wall = construct Checked FullBankGlobalPackage
 [2026-07-09T13:52:00] ► GATE | NEXT: wave re-gate Chart001..107 sharded payloads + PayloadRegistry (tmp/claude_o14_wave_regate.py, 32 workers, multi-hour background)
+[2026-07-09T16:20:00] ✘ GATE | DID: app restart killed the 107-chart wave re-gate at 1076/16631 shards (53 fails, err texts lost to a logging gap) | RESULT: tmp/claude_o14_wave_regate_console.txt tail | Δ: none
+[2026-07-09T16:22:00] ► GATE | NEXT: relaunched resumable wave re-gate at 48 workers with failure-persistence + retry pass (console2); ETA ~20-25h for the full 16631-shard sweep
+[2026-07-09T18:05:00] ✘ GATE | DID: 48-worker wave attempt | RESULT: 3 fail classes — my Bridge-sequencing bug (fixed, phase 4), ConePairs simp-maxSteps (SYSTEMATIC, emitter defect posted to Codex), rc=-1 memory kills at 48w | Δ: none
+[2026-07-09T18:07:00] ► GATE | NEXT: wave relaunched 32 workers no-fail-fast (console3); Codex to regenerate ConePairs shards; resume picks them up by mtime

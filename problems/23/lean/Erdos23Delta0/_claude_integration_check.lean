@@ -23,6 +23,12 @@ import Erdos23Delta0.BranchB.CDTelescope
 import Erdos23Delta0.BranchB.PureUPOK0
 import Erdos23Delta0.BranchB.BankedUPO
 import Erdos23Delta0.BranchB.Provider
+import Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge
+import Erdos23Delta0.Gamma.FullBankChargeCertProvider
+import Erdos23Delta0.BankedWallLPRestricted
+import Erdos23Delta0.BankedWallRoutingFailure
+import Erdos23Delta0.ClosedWeightedHall
+import Erdos23Delta0.BankedWallW3Skeleton
 
 /-! Integration check: forces all seven session modules to load and typecheck TOGETHER (catches olean staleness /
     cross-module conflict before assembly). The imports themselves are the test; the `#check`s pin the public
@@ -76,6 +82,15 @@ namespace IntegrationCheck
 #check @BranchB.Provider.branchBInputs_of_provider
 #check @BranchB.Provider.branchBCertBundle_of_provider
 #check @BranchB.Provider.branchB_bundle_family_of_provider
+#check @Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.fullBankGlobalPackage_sound
+#check @Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankGlobalPackage
+#check @Gamma.FullBankChargeCertProvider.chargeCertProviderOfFullBankLedger_ok
+#check @Gamma.FullBankChargeCertProvider.gammaUpper_from_fullBankPackage_via_chargeCertV2
+#check @Wall.noStrictDual_of_restrictedDualSqueeze
+#check @Wall.noStrictDual_of_dualSqueeze_via_restricted
+#check @Wall.strictRestrictedDual_gives_weightedRoutingFailure
+#check @Wall.ClosedShore.uniqueRoot_of_closedWeightedHallCompleteness
+#check @Wall.ClosedShore.noStrictRestrictedDual_of_closedHall_and_exchange
 
 end IntegrationCheck
 end Erdos23Delta0

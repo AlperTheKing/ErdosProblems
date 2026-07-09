@@ -1,2 +1,1 @@
 import Erdos23Delta0.RouteBCAP
-#print axioms Erdos23Delta0.RouteBCAP.sideDoor_balance_nonneg_of_primitives

@@ -12,7 +12,7 @@ B1/B2 buildable-from-spec items: `CertGraph.IsMaxCut` is min-bad-count over vali
   the all-`false` cut witnesses validity);
 * `exists_isMaxCut_argmin` — among maximum cuts one can select a minimizer of any `ℕ`-valued functional (the
   Γ-of-cut slot for `GammaMinimalConnected`, once the bridge supplies the concrete γ).
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -60,9 +60,6 @@ theorem exists_isMaxCut_argmin (G : GraphData) (g : CutData → ℕ) :
   rw [hdk]
   exact Nat.sInf_le ⟨e, he, rfl⟩
 
-#print axioms badCount_eq_of_isMaxCut
-#print axioms exists_isMaxCut
-#print axioms exists_isMaxCut_argmin
 
 end M6DataSelection
 end Erdos23Delta0

@@ -127,10 +127,6 @@ theorem not_isMaxCut_of_improving_flip (s : V → Bool) (U : Finset V)
 
 end Graph
 
-#print axioms bcount_xor_add_bcount_and
-#print axioms edgeCut_flip
-#print axioms deltaM_card_le_deltaB_card
-#print axioms not_isMaxCut_of_improving_flip
 
 end MaxCutVertexIneq
 end Erdos23Delta0

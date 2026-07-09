@@ -19,8 +19,8 @@ compiles that reduction against the compiled uncrossing algebra:
   minimal closed deficiency ⟹ exactly ONE legal component.
 
 Root-locality itself (why the real forced-ℓ=5 escape closure satisfies the extraction) is THE open graph-side
-obligation — deliberately a hypothesis here.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+obligation — deliberately a hypothesis here. Axiom-probe expected
+`⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -98,8 +98,6 @@ theorem minimalClosedDeficient_has_unique_root_of_positiveExtraction
   have hClosedBlock : ClosedPortSet Q (D.ports k) := ⟨Ur, hUrClosed, hExpUr⟩
   have hle : deficiencyQ I L (D.ports k) ≤ 0 := hMinimal (D.ports k) hClosedBlock hProper
   exact absurd (hDefBlock : 0 < deficiencyQ I L (D.ports k)) (not_lt.mpr hle)
-
-#print axioms minimalClosedDeficient_has_unique_root_of_positiveExtraction
 
 end ClosedShore
 end Wall

@@ -153,11 +153,6 @@ theorem beta_bound_of_partitioned_provider
     hGood.gammaBeta.gammaUpper_of_all_rows_gersh hAllRows
   exact beta_bound_of_gamma hGood.gammaBeta hGammaUpper
 
-#print axioms class_eqodl1_of_allL5
-#print axioms class_branchB_of_mixed
-#print axioms rowGersh_of_partition
-#print axioms allRowsGersh_of_partition
-#print axioms beta_bound_of_partitioned_provider
 
 end ODLFullRowPartitionView
 

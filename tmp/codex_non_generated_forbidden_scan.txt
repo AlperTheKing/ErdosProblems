@@ -1,0 +1,5 @@
+print_axioms=0
+unsafe=0
+sorry=0
+admit=0
+native_decide=0

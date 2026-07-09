@@ -1,0 +1,3 @@
+'Erdos23Delta0.O14.ChartCoverToODLFull.rowODL_of_o14_eq_cover_semantic_tree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

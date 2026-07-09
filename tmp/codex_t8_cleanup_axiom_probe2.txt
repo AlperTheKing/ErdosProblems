@@ -1,0 +1,4 @@
+'Erdos23Delta0.Ell5.ConcreteCage.concretePureLensCageSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Ell5.ConcreteCage.ledgerSep_of_concretePureLensCageSplit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -159,7 +159,7 @@ def collect_phase(slots: Iterable[int], phase: str, include_registry: bool) -> l
 
 
 def scan_forbidden(files: Iterable[Path]) -> list[dict]:
-    pat = re.compile(rb"sorry|admit|native_decide|sorryAx")
+    pat = re.compile(rb"sorry|admit|native_decide|sorryAx|#print\s+axioms|print\s+axioms")
     hits: list[dict] = []
     for path in files:
         data = path.read_bytes()
@@ -243,7 +243,12 @@ def main() -> int:
     ap.add_argument("--base-workers", type=int, default=8)
     ap.add_argument("--shard-workers", type=int, default=48)
     ap.add_argument("--aggregator-workers", type=int, default=16)
-    ap.add_argument("--timeout", type=int, default=0, help="per-file timeout seconds; 0 disables")
+    ap.add_argument(
+        "--timeout",
+        type=int,
+        default=1800,
+        help="per-file timeout seconds; use 0 to disable",
+    )
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--skip-token-scan", action="store_true")
     ap.add_argument("--include-registry", action="store_true")

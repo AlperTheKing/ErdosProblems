@@ -102,10 +102,6 @@ theorem graph_no_dualCert_of_cert
     (fun k => MaxCutVertexIneq.deltaM G cut (Ufam k))
     (fun k => MaxCutVertexIneq.deltaB G cut (Ufam k)) inc kap cert
 
-#print axioms bankedCutDomination_of_cert
-#print axioms no_dualCert_of_cert
-#print axioms graph_bankedCutDomination_of_cert
-#print axioms graph_no_dualCert_of_cert
 
 end Ell5FullBankInterface
 end Erdos23Delta0

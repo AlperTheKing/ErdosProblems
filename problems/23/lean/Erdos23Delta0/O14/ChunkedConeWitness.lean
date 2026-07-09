@@ -89,9 +89,6 @@ theorem chartSound_of_chartWitnesses
     intro i hi hp I hchart
     exact (W.witness i hi hp I hchart).sound
 
-#print axioms Witness.sound
-#print axioms chartSound_of_chartWitnesses
-
 end ChunkedCone
 end O14
 end Erdos23Delta0

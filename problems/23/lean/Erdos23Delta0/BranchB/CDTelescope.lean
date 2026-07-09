@@ -57,10 +57,6 @@ theorem cd_gain_sum_nonneg (A : Finset α) (D : CDTelescopeData α)
     0 ≤ ∑ a ∈ A, D.gain a :=
   Finset.sum_nonneg fun a ha => (hD a ha).1
 
-#print axioms cd_atom_sound
-#print axioms cd_sum_start_eq_finish_plus_gain
-#print axioms cd_telescope_sound
-#print axioms cd_gain_sum_nonneg
 
 end CDTelescope
 end BranchB

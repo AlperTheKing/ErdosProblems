@@ -36,6 +36,41 @@ theorem listedCoreODLGoals_of_bridgeInputs
     (chartSound_of_bridgeInputs P)
     v108Payload_check
 
+/-- The remaining structural coverage obligation for the listed classifier:
+every semantically sound EQ-ODL1 shape must land in one of the 108 certified
+ledger pairs. -/
+def ListedShapeCoverage
+    {G : CertGraph.GraphData} {c : CertGraph.CutData}
+    {rows : CertGraph.RowDB} {Q : CertGraph.RowCert} : Prop :=
+  ∀ I : EQODL1ShapeInst G c rows Q, EQODL1ShapeSound I → ListedShape I.shape
+
+/-- Package a semantically covered EQ-ODL1 instance as a listed instance. -/
+def listedInstOfCoverage
+    {G : CertGraph.GraphData} {c : CertGraph.CutData}
+    {rows : CertGraph.RowDB} {Q : CertGraph.RowCert}
+    (hCover : ListedShapeCoverage (G := G) (c := c) (rows := rows) (Q := Q))
+    (I : EQODL1ShapeInst G c rows Q) (hSound : EQODL1ShapeSound I) :
+    ListedShapeInst G c rows Q := {
+  inst := I
+  listed := hCover I hSound
+}
+
+/-- Final listed-cover bridge in the form expected by the structural extraction
+layer: once it proves `ListedShapeCoverage` and supplies the chart-specific
+semantic bindings, each semantically sound EQ-ODL1 instance obtains its ODL
+core goal. -/
+theorem coreODLGoal_of_listedCoverage
+    {G : CertGraph.GraphData} {c : CertGraph.CutData}
+    {rows : CertGraph.RowDB} {Q : CertGraph.RowCert}
+    (hCover : ListedShapeCoverage (G := G) (c := c) (rows := rows) (Q := Q))
+    (P : ChartBridgeInputs
+      (fun I : ListedShapeInst G c rows Q => I.inst.core)
+      (listedClassifier (G := G) (c := c) (rows := rows) (Q := Q)))
+    (I : EQODL1ShapeInst G c rows Q) (hSound : EQODL1ShapeSound I) :
+    CoreODLGoal G c rows Q I.core := by
+  exact listedCoreODLGoals_of_bridgeInputs P
+    (listedInstOfCoverage hCover I hSound)
+
 end Generated
 end O14
 end Erdos23Delta0

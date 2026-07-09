@@ -1,0 +1,598 @@
+[scope] 16953 files = 107 supports + 16632 shards + 107 aggregators + 107 bridges
+[0] token scan: 16953 files, 0 hits
+[supports] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeSupport rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeSupport.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[supports] 1/1 ok=0 fail=1 (33s)
+[supports] retrying 1 failures (8 workers)
+[supports] RETRY-FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeSupport rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeSupport.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[supports] DONE ok=0 skip=106 fail=1 in 51s
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS002 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS002.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 1/14958 ok=0 fail=1 (71s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS003 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS003.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 2/14958 ok=0 fail=2 (72s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS000 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS000.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 3/14958 ok=0 fail=3 (72s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS004 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS004.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 4/14958 ok=0 fail=4 (72s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS011 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS011.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 5/14958 ok=0 fail=5 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS013 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS013.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 6/14958 ok=0 fail=6 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS015 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS015.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 7/14958 ok=0 fail=7 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS012 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS012.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 8/14958 ok=0 fail=8 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS001 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS001.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 9/14958 ok=0 fail=9 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS014 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS014.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 10/14958 ok=0 fail=10 (73s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS016 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS016.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 11/14958 ok=0 fail=11 (74s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS010 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS010.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 12/14958 ok=0 fail=12 (74s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS005 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS005.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 13/14958 ok=0 fail=13 (75s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS008 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS008.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 14/14958 ok=0 fail=14 (76s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS017 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS017.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 15/14958 ok=0 fail=15 (76s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS019 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS019.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 16/14958 ok=0 fail=16 (76s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS009 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS009.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 17/14958 ok=0 fail=17 (76s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS007 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS007.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 18/14958 ok=0 fail=18 (76s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS006 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS006.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 19/14958 ok=0 fail=19 (77s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS018 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS018.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 20/14958 ok=0 fail=20 (77s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS020 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS020.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 21/14958 ok=0 fail=21 (77s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS021 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS021.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 22/14958 ok=0 fail=22 (77s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS022 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS022.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 23/14958 ok=0 fail=23 (151s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS024 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS024.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 24/14958 ok=0 fail=24 (155s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS035 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS035.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 25/14958 ok=0 fail=25 (156s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS030 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS030.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 26/14958 ok=0 fail=26 (156s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS034 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS034.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 27/14958 ok=0 fail=27 (157s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS041 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS041.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 28/14958 ok=0 fail=28 (159s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS040 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS040.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 29/14958 ok=0 fail=29 (160s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS043 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS043.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 30/14958 ok=0 fail=30 (163s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS038 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS038.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 31/14958 ok=0 fail=31 (163s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS037 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS037.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 32/14958 ok=0 fail=32 (164s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS042 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS042.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 33/14958 ok=0 fail=33 (164s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS025 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS025.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 34/14958 ok=0 fail=34 (165s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS026 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS026.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 35/14958 ok=0 fail=35 (166s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS028 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS028.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 36/14958 ok=0 fail=36 (168s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS033 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS033.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 37/14958 ok=0 fail=37 (170s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS023 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS023.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 38/14958 ok=0 fail=38 (170s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS036 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS036.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 39/14958 ok=0 fail=39 (171s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS039 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS039.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 40/14958 ok=0 fail=40 (172s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS032 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS032.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 41/14958 ok=0 fail=41 (172s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS029 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS029.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 42/14958 ok=0 fail=42 (175s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS031 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS031.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 43/14958 ok=0 fail=43 (175s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS027 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS027.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 44/14958 ok=0 fail=44 (177s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeBase rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeBase.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 45/14958 ok=0 fail=45 (199s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS044 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS044.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 46/14958 ok=0 fail=46 (208s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS045 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS045.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 47/14958 ok=0 fail=47 (211s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS046 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS046.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 48/14958 ok=0 fail=48 (221s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS050 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS050.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 49/14958 ok=0 fail=49 (222s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS048 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS048.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 50/14958 ok=0 fail=50 (224s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS047 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS047.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 51/14958 ok=0 fail=51 (225s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS052 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS052.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 52/14958 ok=0 fail=52 (226s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS049 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS049.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 53/14958 ok=0 fail=53 (226s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS053 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS053.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 54/14958 ok=0 fail=54 (227s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS051 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConeMS051.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 55/14958 ok=0 fail=55 (229s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs000 rc=1: ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConePairs000.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 56/14958 ok=0 fail=56 (285s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConePairs002.lean:1546:2: error: `simp` failed: maximum number of 
+[shards] 57/14958 ok=0 fail=57 (286s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs001 rc=1: rror: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs001.lean:435:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 58/14958 ok=0 fail=58 (310s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs005 rc=1: rror: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs005.lean:435:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 59/14958 ok=0 fail=59 (315s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs001 rc=1: 02ConePairs001.lean:851:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002ConePairs001.lean:990:2: error: `simp` failed: maximum number of 
+[shards] 60/14958 ok=0 fail=60 (318s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs013 rc=1: rror: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs013.lean:435:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 61/14958 ok=0 fail=61 (319s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs002 rc=1: ConePairs002.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002ConePairs002.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 62/14958 ok=0 fail=62 (322s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs000 rc=1: ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002ConePairs000.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 63/14958 ok=0 fail=63 (323s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs004 rc=1: rs004.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs004.lean:435:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 64/14958 ok=0 fail=64 (323s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs007 rc=1: rror: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs007.lean:296:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 65/14958 ok=0 fail=65 (326s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs002 rc=1: rs002.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs002.lean:157:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 66/14958 ok=0 fail=66 (339s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs008 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs008.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 67/14958 ok=0 fail=67 (342s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs003 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs003.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 68/14958 ok=0 fail=68 (343s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs006 rc=1: rs006.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs006.lean:157:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 69/14958 ok=0 fail=69 (345s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs012 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs012.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 70/14958 ok=0 fail=70 (345s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs000 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs000.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 71/14958 ok=0 fail=71 (346s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs010 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs010.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 72/14958 ok=0 fail=72 (346s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs011 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs011.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 73/14958 ok=0 fail=73 (351s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs009 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs009.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 74/14958 ok=0 fail=74 (356s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs001 rc=1: 01ConePairs001.lean:295:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConePairs001.lean:712:2: error: `simp` failed: maximum number of 
+[shards] 75/14958 ok=0 fail=75 (359s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs014 rc=1: rs014.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs014.lean:157:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 76/14958 ok=0 fail=76 (359s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs019 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs019.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 77/14958 ok=0 fail=77 (366s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs017 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs017.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 78/14958 ok=0 fail=78 (368s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs003 rc=1: ConePairs003.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConePairs003.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 79/14958 ok=0 fail=79 (372s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs020 rc=1: rs020.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs020.lean:157:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\E
+[shards] 80/14958 ok=0 fail=80 (375s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs018 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs018.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 81/14958 ok=0 fail=81 (375s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs015 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs015.lean:17:0: error: Unknown option `maxSimpSteps`
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\C
+[shards] 82/14958 ok=0 fail=82 (375s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs016 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs016.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 83/14958 ok=0 fail=83 (386s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs004 rc=1: 02ConePairs004.lean:434:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002ConePairs004.lean:712:2: error: `simp` failed: maximum number of 
+[shards] 84/14958 ok=0 fail=84 (387s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs022 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs022.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 85/14958 ok=0 fail=85 (395s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs021 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs021.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 86/14958 ok=0 fail=86 (402s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs004 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001ConePairs004.lean:156:2: error: `simp` failed: maximum number of steps exceeded
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs004.hc
+[shards] 87/14958 ok=0 fail=87 (422s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs024 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs024.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 88/14958 ok=0 fail=88 (433s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs023 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs023.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 89/14958 ok=0 fail=89 (437s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs031 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs031.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 90/14958 ok=0 fail=90 (438s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs030 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs030.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 91/14958 ok=0 fail=91 (440s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs032 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs032.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 92/14958 ok=0 fail=92 (443s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs033 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs033.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 93/14958 ok=0 fail=93 (450s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs029 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs029.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 94/14958 ok=0 fail=94 (453s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs035 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs035.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 95/14958 ok=0 fail=95 (456s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs025 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs025.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 96/14958 ok=0 fail=96 (457s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs043 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs043.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 97/14958 ok=0 fail=97 (459s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs026 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs026.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 98/14958 ok=0 fail=98 (462s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs034 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs034.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 99/14958 ok=0 fail=99 (462s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs038 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs038.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 100/14958 ok=0 fail=100 (462s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs027 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs027.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 101/14958 ok=0 fail=101 (464s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs040 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs040.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 102/14958 ok=0 fail=102 (465s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs028 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs028.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 103/14958 ok=0 fail=103 (465s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs039 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs039.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 104/14958 ok=0 fail=104 (465s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs037 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs037.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 105/14958 ok=0 fail=105 (467s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs045 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs045.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 106/14958 ok=0 fail=106 (467s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs036 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs036.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 107/14958 ok=0 fail=107 (467s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs044 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs044.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 108/14958 ok=0 fail=108 (470s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs042 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs042.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 109/14958 ok=0 fail=109 (471s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs048 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs048.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 110/14958 ok=0 fail=110 (472s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs041 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs041.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 111/14958 ok=0 fail=111 (472s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs050 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs050.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 112/14958 ok=0 fail=112 (480s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs047 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs047.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 113/14958 ok=0 fail=113 (485s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs046 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs046.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 114/14958 ok=0 fail=114 (485s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs049 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs049.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 115/14958 ok=0 fail=115 (487s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs051 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs051.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 116/14958 ok=0 fail=116 (492s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs052 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs052.lean:17:0: error: Unknown option `maxSimpSteps`
+
+[shards] 117/14958 ok=0 fail=117 (501s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs001 rc=1: ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs001.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 121/14958 ok=3 fail=118 (694s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs003 rc=1: ConePairs003.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs003.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 122/14958 ok=3 fail=119 (902s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs000 rc=1: 05ConePairs000.lean:851:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs000.lean:990:2: error: `simp` failed: maximum number of 
+[shards] 123/14958 ok=3 fail=120 (910s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs000 rc=1: ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs000.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 124/14958 ok=3 fail=121 (950s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs000 rc=1: ConePairs000.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs000.lean:1685:2: error: `simp` failed: maximum number of 
+[shards] 125/14958 ok=3 fail=122 (952s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 126/14958 ok=3 fail=123 (960s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs004 rc=1: 4ConePairs004.lean:434:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs004.lean:1268:2: error: `simp` failed: maximum number of 
+[shards] 127/14958 ok=3 fail=124 (971s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 128/14958 ok=3 fail=125 (973s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs003 rc=1: ConePairs003.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs003.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 129/14958 ok=3 fail=126 (1000s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs002 rc=1: ConePairs002.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs002.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 130/14958 ok=3 fail=127 (1006s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs000 rc=1: 4ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs000.lean:1685:2: error: `simp` failed: maximum number of 
+[shards] 131/14958 ok=3 fail=128 (1007s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs005 rc=1: 5ConePairs005.lean:851:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs005.lean:1129:2: error: `simp` failed: maximum number of 
+[shards] 132/14958 ok=3 fail=129 (1012s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 133/14958 ok=3 fail=130 (1013s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs004 rc=1: ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs004.lean:1407:2: error: `simp` failed: maximum number of 
+[shards] 134/14958 ok=3 fail=131 (1022s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 135/14958 ok=3 fail=132 (1025s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs005 rc=1: ConePairs005.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs005.lean:1546:2: error: `simp` failed: maximum number of 
+[shards] 136/14958 ok=3 fail=133 (1025s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs005 rc=1: ConePairs005.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs005.lean:1407:2: error: `simp` failed: maximum number of 
+[shards] 137/14958 ok=3 fail=134 (1027s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs003 rc=1: ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs003.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 138/14958 ok=3 fail=135 (1042s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart008ConePairs001 rc=1: 08ConePairs001.lean:295:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart008ConePairs001.lean:434:2: error: `simp` failed: maximum number of 
+[shards] 139/14958 ok=3 fail=136 (1049s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs000 rc=1: 6ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs000.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 140/14958 ok=3 fail=137 (1082s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs002 rc=1: 5ConePairs002.lean:851:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs002.lean:1407:2: error: `simp` failed: maximum number of 
+[shards] 141/14958 ok=3 fail=138 (1086s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs005 rc=1: 4ConePairs005.lean:712:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs005.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 142/14958 ok=3 fail=139 (1098s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs003 rc=1: ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs003.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 143/14958 ok=3 fail=140 (1105s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs002 rc=1: 04ConePairs002.lean:573:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs002.lean:712:2: error: `simp` failed: maximum number of 
+[shards] 144/14958 ok=3 fail=141 (1108s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs006 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs006.lean:295:2: error: `simp` failed: maximum number of steps exceeded
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs006.hc
+[shards] 145/14958 ok=3 fail=142 (1117s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs002.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 146/14958 ok=3 fail=143 (1142s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs000 rc=1: ConePairs000.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs000.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 147/14958 ok=3 fail=144 (1146s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs005 rc=1: 9ConePairs005.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs005.lean:1268:2: error: `simp` failed: maximum number of 
+[shards] 148/14958 ok=3 fail=145 (1157s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs003 rc=1: ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs003.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 149/14958 ok=3 fail=146 (1163s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 150/14958 ok=3 fail=147 (1171s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs002.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 151/14958 ok=3 fail=148 (1179s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart008ConePairs000 rc=1: 8ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart008ConePairs000.lean:1129:2: error: `simp` failed: maximum number of 
+[shards] 152/14958 ok=3 fail=149 (1268s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs004 rc=1: 7ConePairs004.lean:156:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs004.lean:1129:2: error: `simp` failed: maximum number of 
+[shards] 153/14958 ok=3 fail=150 (1324s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs004 rc=1: ConePairs004.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs004.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 154/14958 ok=3 fail=151 (1332s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs003 rc=1: ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs003.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 155/14958 ok=3 fail=152 (1348s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs000 rc=1: ConePairs000.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart011ConePairs000.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 156/14958 ok=3 fail=153 (1375s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs001 rc=1: ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart013ConePairs001.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 157/14958 ok=3 fail=154 (1377s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs003 rc=1: ConePairs003.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart013ConePairs003.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 158/14958 ok=3 fail=155 (1417s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs005 rc=1: 0ConePairs005.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs005.lean:1129:2: error: `simp` failed: maximum number of 
+[shards] 159/14958 ok=3 fail=156 (1431s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs000 rc=1: ConePairs000.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart013ConePairs000.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 160/14958 ok=3 fail=157 (1453s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs001 rc=1: ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs001.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 161/14958 ok=3 fail=158 (1464s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs003 rc=1: ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs003.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 162/14958 ok=3 fail=159 (1480s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs004 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs004.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs004.hc
+[shards] 163/14958 ok=3 fail=160 (1508s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010ConePairs002.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 164/14958 ok=3 fail=161 (1524s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs001 rc=1: ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 165/14958 ok=3 fail=162 (1549s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs003 rc=1: ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs003.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 166/14958 ok=3 fail=163 (1555s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs003 rc=1: ConePairs003.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs003.lean:1546:2: error: `simp` failed: maximum number of 
+[shards] 167/14958 ok=3 fail=164 (1567s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs002 rc=1: ConePairs002.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs002.lean:1407:2: error: `simp` failed: maximum number of 
+[shards] 168/14958 ok=3 fail=165 (1596s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs001 rc=1: ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 169/14958 ok=3 fail=166 (1609s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs000 rc=1: ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs000.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 170/14958 ok=3 fail=167 (1619s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs004 rc=1: ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs004.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 171/14958 ok=3 fail=168 (1621s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs001 rc=1: 11ConePairs001.lean:573:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart011ConePairs001.lean:712:2: error: `simp` failed: maximum number of 
+[shards] 172/14958 ok=3 fail=169 (1633s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs002 rc=1: ConePairs002.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart013ConePairs002.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 173/14958 ok=3 fail=170 (1640s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 174/14958 ok=3 fail=171 (1646s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs005 rc=1: 14ConePairs005.lean:156:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs005.lean:434:2: error: `simp` failed: maximum number of 
+[shards] 175/14958 ok=3 fail=172 (1651s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs002.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 176/14958 ok=3 fail=173 (1664s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs000 rc=1: 2ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs000.lean:1268:2: error: `simp` failed: maximum number of 
+[shards] 177/14958 ok=3 fail=174 (1697s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs005 rc=1: 5ConePairs005.lean:573:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs005.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 178/14958 ok=3 fail=175 (1731s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs002 rc=1: 11ConePairs002.lean:295:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart011ConePairs002.lean:434:2: error: `simp` failed: maximum number of 
+[shards] 179/14958 ok=3 fail=176 (1732s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs000 rc=1: ConePairs000.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart014ConePairs000.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 180/14958 ok=3 fail=177 (1734s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs003 rc=1: ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs003.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 181/14958 ok=3 fail=178 (1744s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs004 rc=1: 12ConePairs004.lean:712:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs004.lean:851:2: error: `simp` failed: maximum number of 
+[shards] 182/14958 ok=3 fail=179 (1759s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs002 rc=1: ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs002.lean:1546:2: error: `simp` failed: maximum number of 
+[shards] 183/14958 ok=3 fail=180 (1763s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs003 rc=1: ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs003.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 184/14958 ok=3 fail=181 (1794s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs005 rc=1: 12ConePairs005.lean:573:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart012ConePairs005.lean:851:2: error: `simp` failed: maximum number of 
+[shards] 185/14958 ok=3 fail=182 (1807s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs004 rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart013ConePairs004.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs004.h
+[shards] 186/14958 ok=3 fail=183 (1823s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs000 rc=1: 6ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs000.lean:1129:2: error: `simp` failed: maximum number of 
+[shards] 187/14958 ok=3 fail=184 (1823s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs004 rc=1: ConePairs004.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs004.lean:1685:2: error: `simp` failed: maximum number of 
+[shards] 188/14958 ok=3 fail=185 (1854s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs004 rc=1: 5ConePairs004.lean:712:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs004.lean:1268:2: error: `simp` failed: maximum number of 
+[shards] 189/14958 ok=3 fail=186 (1883s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs001 rc=1: ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs001.lean:1963:2: error: `simp` failed: maximum number of 
+[shards] 190/14958 ok=3 fail=187 (1921s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs002 rc=1: ConePairs002.lean:1129:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs002.lean:1824:2: error: `simp` failed: maximum number of 
+[shards] 191/14958 ok=3 fail=188 (1943s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs000 rc=1: ConePairs000.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs000.lean:1546:2: error: `simp` failed: maximum number of 
+[shards] 193/14958 ok=4 fail=189 (1948s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs004 rc=1: ConePairs004.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs004.lean:1685:2: error: `simp` failed: maximum number of 
+[shards] 194/14958 ok=4 fail=190 (1971s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs002 rc=1: ConePairs002.lean:1546:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs002.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 197/14958 ok=6 fail=191 (2004s)
+[shards] 200/14958 ok=9 fail=191 (2038s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs005 rc=1: 16ConePairs005.lean:712:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConePairs005.lean:851:2: error: `simp` failed: maximum number of 
+[shards] 201/14958 ok=9 fail=192 (2040s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs005 rc=1: ConePairs005.lean:1268:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart017ConePairs005.lean:1685:2: error: `simp` failed: maximum number of 
+[shards] 209/14958 ok=16 fail=193 (2216s)

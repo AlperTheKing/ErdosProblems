@@ -11,7 +11,7 @@ the compiled maximum-cut vertex inequality `deltaM_card_le_deltaB_card`. The off
 `cutEdges \ F`. Result: `graph_defect_bound` — for ANY weighted family of vertex sets over a MAXIMUM cut, with row
 coverage ≥ 1 and in-support congestion ≤ 1, the Hall defect `|S| − |F|` is bounded by the external load, with NO
 remaining graph hypotheses. `badEdge_mem_deltaM` is the membership helper for building coverage certificates.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -96,10 +96,6 @@ theorem graph_hall_absorbed {ι : Type*}
 
 end Graph
 
-#print axioms deltaB_subset_cutEdges
-#print axioms badEdge_mem_deltaM
-#print axioms graph_defect_bound
-#print axioms graph_hall_absorbed
 
 end RelaxedCoverGraphBridge
 end Erdos23Delta0

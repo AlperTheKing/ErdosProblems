@@ -1,0 +1,73 @@
+timestamp_utc=2026-07-09T12:53:38Z
+scope=problems/23/lean/Erdos23Delta0/**/*.lean excluding O14/Generated
+action=removed command lines matching ^\s*#print\s+axioms\b
+removed_lines=173
+removed_files=47
+PRINT_AXIOMS_COMMAND_HITS=0
+diff_name_count=65
+diff_names:
+  problems/23/lean/Erdos23Delta0/BankedCutDominationCore.lean
+  problems/23/lean/Erdos23Delta0/BankedCutDominationExtras.lean
+  problems/23/lean/Erdos23Delta0/BankedWallLP.lean
+  problems/23/lean/Erdos23Delta0/BranchB/BankedUPO.lean
+  problems/23/lean/Erdos23Delta0/BranchB/CDTelescope.lean
+  problems/23/lean/Erdos23Delta0/BranchB/CombinedHBD.lean
+  problems/23/lean/Erdos23Delta0/BranchB/Dict24.lean
+  problems/23/lean/Erdos23Delta0/BranchB/Provider.lean
+  problems/23/lean/Erdos23Delta0/BranchB/PureUPOK0.lean
+  problems/23/lean/Erdos23Delta0/CageSuperadditivity.lean
+  problems/23/lean/Erdos23Delta0/ClosedShoreExtraction.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/Bank.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/Basic.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/Proper.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/PureLensSplit.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/PureSplit.lean
+  problems/23/lean/Erdos23Delta0/Ell5/ConcreteCage/Restrict.lean
+  problems/23/lean/Erdos23Delta0/Ell5AtomBase.lean
+  problems/23/lean/Erdos23Delta0/Ell5AtomGraph.lean
+  problems/23/lean/Erdos23Delta0/Ell5CSReduction.lean
+  problems/23/lean/Erdos23Delta0/Ell5DistancePrune.lean
+  problems/23/lean/Erdos23Delta0/Ell5F5LiftInterface.lean
+  problems/23/lean/Erdos23Delta0/Ell5FootprintCount.lean
+  problems/23/lean/Erdos23Delta0/Ell5FullBankAssignedSink.lean
+  problems/23/lean/Erdos23Delta0/Ell5FullBankHall.lean
+  problems/23/lean/Erdos23Delta0/Ell5FullBankInterface.lean
+  problems/23/lean/Erdos23Delta0/Ell5GapLemmas.lean
+  problems/23/lean/Erdos23Delta0/Ell5GeodesicUnion.lean
+  problems/23/lean/Erdos23Delta0/Ell5GraphBridge.lean
+  problems/23/lean/Erdos23Delta0/Ell5HallSmall.lean
+  problems/23/lean/Erdos23Delta0/Ell5LensStatement.lean
+  problems/23/lean/Erdos23Delta0/Ell5PureLensCageInterface.lean
+  problems/23/lean/Erdos23Delta0/Ell5SupportFinset.lean
+  problems/23/lean/Erdos23Delta0/Ell5UnionCount.lean
+  problems/23/lean/Erdos23Delta0/Gamma/FullBankChargeCertProvider.lean
+  problems/23/lean/Erdos23Delta0/Gamma/FullBankToLengthSurplusCharge.lean
+  problems/23/lean/Erdos23Delta0/M6BlueConnectivity.lean
+  problems/23/lean/Erdos23Delta0/M6DataSelection.lean
+  problems/23/lean/Erdos23Delta0/MaxCutSelection.lean
+  problems/23/lean/Erdos23Delta0/MaxCutVertexIneq.lean
+  problems/23/lean/Erdos23Delta0/NeutralLensLedger.lean
+  problems/23/lean/Erdos23Delta0/O14/ChartCoverToODLFull.lean
+  problems/23/lean/Erdos23Delta0/O14/ChunkedConeWitness.lean
+  problems/23/lean/Erdos23Delta0/O14/ConeEvalBridge.lean
+  problems/23/lean/Erdos23Delta0/O14/EQODL1CoverInterface.lean
+  problems/23/lean/Erdos23Delta0/O14/EQODL1LeafProvider.lean
+  problems/23/lean/Erdos23Delta0/O14/EQODL1Shape.lean
+  problems/23/lean/Erdos23Delta0/PathRigidity.lean
+  problems/23/lean/Erdos23Delta0/PortHallUncrossing.lean
+  problems/23/lean/Erdos23Delta0/RCCPayloadFixtures.lean
+  problems/23/lean/Erdos23Delta0/RelaxedCoverBanked.lean
+  problems/23/lean/Erdos23Delta0/RelaxedCoverDuality.lean
+  problems/23/lean/Erdos23Delta0/RelaxedCoverGraphBridge.lean
+  problems/23/lean/Erdos23Delta0/RelaxedCoverSkeleton.lean
+  problems/23/lean/Erdos23Delta0/RelaxedCutCover.lean
+  problems/23/lean/Erdos23Delta0/RowPartitionCore.lean
+  problems/23/lean/Erdos23Delta0/Rows/RowPartition.lean
+  problems/23/lean/Erdos23Delta0/WalkParity.lean
+  problems/23/lean/Erdos23Delta0/_claude_integration_check.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_erdos23_delta0_conditional.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_fcForm_official_bridge.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_gammaUpper_chargeV2.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_gammagraft.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_routeb.lean
+  problems/23/lean/Erdos23Delta0/_claude_probe_routebcap.lean

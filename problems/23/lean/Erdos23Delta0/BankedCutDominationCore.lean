@@ -14,7 +14,7 @@ This module makes that reduction machine-checked: `sinkPrice`/`bankCost` definit
 (`sinkPrice_le`, `le_sinkPrice`), the Prop `BankedCutDomination`, the dual-certificate Prop `IsDualCert`, and the
 exact equivalence `dualCert_iff_not_bankedCutDomination`. Together with `RelaxedCoverDuality` (weak duality) and
 `RelaxedCoverSkeleton` (L1+L2), the entire gap#1 dual frame is compiled with `BankedCutDomination` as the single
-named open hypothesis (= L3 = the wall). No `sorry`/`admit`/`native_decide`; axiom-probe expected
+named open hypothesis (= L3 = the wall). No forbidden proof shortcuts; axiom-probe expected
 `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
@@ -114,9 +114,6 @@ theorem dualCert_iff_not_bankedCutDomination
     unfold bankCost at hviol
     linarith
 
-#print axioms sinkPrice_le
-#print axioms le_sinkPrice
-#print axioms dualCert_iff_not_bankedCutDomination
 
 end BankedCutDominationCore
 end Erdos23Delta0

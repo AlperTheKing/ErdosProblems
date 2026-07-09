@@ -33,7 +33,7 @@ the already-compiled declarations:
   `Ell5CSReduction.c5book_support_expansion` + `MaxCutVertexIneq.deltaM_card_le_deltaB_card` refute a
   minimal Hall violator, plus the capstone `minimal_violator_contradiction`.
 
-`sorry` does not occur; the open mathematics is carried by the two named Prop hypotheses.
+placeholder commands do not occur; the open mathematics is carried by the two named Prop hypotheses.
 No new axioms; expected axiom set `{propext, Classical.choice, Quot.sound}` for every theorem here.
 -/
 
@@ -402,22 +402,6 @@ theorem minimal_violator_contradiction
 
 end Wiring
 
-#print axioms blueGraph_adj_iff
-#print axioms edgeCut_eq_true_iff
-#print axioms edgeCut_eq_false_iff
-#print axioms edgeBoundary_eq_true_iff
-#print axioms mem_deltaM_iff
-#print axioms mem_deltaB_iff
-#print axioms mem_blueGraph_edgeFinset
-#print axioms ell_eq_five_iff_dist_eq_four
-#print axioms SharedSupportPair.supportA_subset
-#print axioms BalancedNeutralLens.balanced
-#print axioms BalancedNeutralLens.pairA_adj
-#print axioms BalancedNeutralLens.pairA_bad
-#print axioms pure_lens_impossible_in_minNeg
-#print axioms dichotomy_of_pure_and_impure
-#print axioms lens_dichotomy_kills_minimal_violator
-#print axioms minimal_violator_contradiction
 
 /-!
 ## External declarations used (audit list)
@@ -436,7 +420,7 @@ From Mathlib: `SimpleGraph` (`Adj`, `edgeSet`, `edgeFinset`, `mem_edgeSet`, `mem
   `mem_filter`, `card_pair`, `mem_insert_self`, `mem_insert_of_mem`, `mem_singleton_self`, `sym2`,
   complement `ᶜ`, `Nonempty`, `∩`), `ℚ`.
 
-Open Props (the ONLY unproven content, carried as named hypotheses — no `sorry` anywhere):
+Open Props (the ONLY unproven content, carried as named hypotheses — no placeholder commands):
   1. `ImpureBalancedNeutralLens_book_or_ledgerSep`  — THE gap#1 crux.
   2. `PureLensLedgerSeparation` — informally proven; awaits the cage-model encoding of
      `γ / Balance / Proper` (including the `cProper` validity obligation).

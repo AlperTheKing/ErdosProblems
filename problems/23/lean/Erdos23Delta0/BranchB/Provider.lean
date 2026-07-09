@@ -49,9 +49,6 @@ theorem branchB_bundle_family_of_provider {G : GraphData} {c : CutData} {rows : 
       BranchBCertBundle G c rows Q :=
   fun Q hQ hLen => branchBCertBundle_of_provider P Q hQ hLen
 
-#print axioms branchBInputs_of_provider
-#print axioms branchBCertBundle_of_provider
-#print axioms branchB_bundle_family_of_provider
 
 end Provider
 end BranchB

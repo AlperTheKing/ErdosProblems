@@ -132,14 +132,6 @@ theorem coreODLGoal_of_chunkedConeEval
   exact coreODLGoal_of_coneEval core ((pairs.map Prod.fst).flatten)
     base mults slacks env hvars hbase hmults hslacks hidEval htarget
 
-#print axioms checkEqPairs
-#print axioms NF_eval_flatten_chunks
-#print axioms eval_sum_eq_of_checkEqPairs
-#print axioms eval_flatten_fst_eq_snd_of_checkEqPairs
-#print axioms cone_eval_nonneg_of_eval_combo
-#print axioms coreODLGoal_of_coneEval
-#print axioms coreODLGoal_of_chunkedConeEval
-
 end ConeEvalBridge
 end O14
 end Erdos23Delta0

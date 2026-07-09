@@ -21,7 +21,6 @@ theorem dist_eq_of_le_of_geodesic_sub {V : Type*} (K H : SimpleGraph V) (hle : K
     omega
   omega
 
-#print axioms dist_eq_of_le_of_geodesic_sub
 
 end Ell5DistancePrune
 end Erdos23Delta0

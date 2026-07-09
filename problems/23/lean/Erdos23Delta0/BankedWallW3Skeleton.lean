@@ -61,6 +61,21 @@ theorem noStrictRestrictedDual_of_closedHall_and_exchange
   have hD1 := hd.d1_allowed X hAllowed
   exact not_lt.mpr hD1 hbad
 
+/-- All-cut version of the W3 skeleton.  This is a final-assembly convenience
+wrapper: if a dual is checked against every routed cut, it is checked against
+the restricted allowed family by `Dual.Checked.restrict`, and the same
+closed-Hall/exchange argument rules out strictness. -/
+theorem noStrictDual_of_closedHall_and_exchange
+    {Allowed : I.Cut → Prop} {Q : AbstractEscapeQuotient I} {d : Dual I}
+    (hd : d.Checked)
+    (Z : DualAlmostSqueeze I Allowed d)
+    (hHall : ClosedWeightedHallCompleteness Q)
+    (hExtract : PositiveRootBlockClosedExtraction Q)
+    (hExchange : ClosedRootCutViolatesD1 Allowed Q d Z.portLoad) :
+    ¬ d.StrictGap :=
+  noStrictRestrictedDual_of_closedHall_and_exchange
+    (hd.restrict (Allowed := Allowed)) Z hHall hExtract hExchange
+
 end ClosedShore
 end Wall
 end Erdos23Delta0

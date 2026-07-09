@@ -41,9 +41,6 @@ theorem proper_verts_ne {C D : AmbientCage G c}
     D.verts ≠ C.verts :=
   h.verts_ne
 
-#print axioms proper_verts_subset
-#print axioms proper_verts_ne
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

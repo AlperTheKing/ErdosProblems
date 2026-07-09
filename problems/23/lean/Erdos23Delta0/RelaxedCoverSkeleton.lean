@@ -17,7 +17,7 @@ GPT-Pro reply 5 (archive `GAP1_SSE_RELAXEDCUTCOVER_GPTPRO.md`): of the three-lem
   quotient payment plus the closure α-mass. What remains open beyond this module is exactly L3
   (`full_closure_bank_dominates_dual` = BankedCutDomination for the closure part = the wall).
 
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -139,9 +139,6 @@ theorem alpha_paid_or_in_closure
       = (∑ r ∈ S.filter P, alpha r) + ∑ r ∈ S.filter (fun r => ¬ P r), alpha r := hsplit
     _ ≤ _ := add_le_add hL1 hL2
 
-#print axioms quotient_cuts_pay_alpha
-#print axioms remaining_alpha_le_closure_alpha
-#print axioms alpha_paid_or_in_closure
 
 end RelaxedCoverSkeleton
 end Erdos23Delta0

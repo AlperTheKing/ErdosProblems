@@ -82,9 +82,6 @@ theorem surplus_split_of_strongPure (C : AmbientCage G c) (U : Finset V)
     (fun a => atomSupportedOn a (C.verts \ U))
     h.noDouble h.coverOrZero
 
-#print axioms sum_split_filter_aux
-#print axioms surplus_split_of_strongPure
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

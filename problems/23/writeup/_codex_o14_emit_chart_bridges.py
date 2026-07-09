@@ -77,8 +77,6 @@ theorem coreODLGoal_of_chart{slot:03d}Cone
     ({chart}.Main.{witness} core env hvars hslacks hcombo
       htarget).sound
 
-#print axioms coreODLGoal_of_chart{slot:03d}Cone
-
 end {bridge}
 end ChartPayloads
 end Generated

@@ -92,9 +92,6 @@ theorem gammaUpper_from_fullBankPackage_via_chargeCertV2
     (chargeCertProviderOfFullBankLedger_ok h)
     hGersh
 
-#print axioms chargeCertProviderOfFullBankLedger_ok
-#print axioms gammaUpper_from_fullBankPackage_via_chargeCertV2
-
 end FullBankGlobalPackage
 end FullBankToLengthSurplusCharge
 end Gamma

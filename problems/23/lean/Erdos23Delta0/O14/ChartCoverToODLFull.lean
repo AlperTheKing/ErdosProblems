@@ -44,8 +44,6 @@ theorem rowODL_of_o14_eq_cover_semantic_tree
       (concreteChecksWithEQ_of_o14_cover base cover))
     links hfind hcheck hrep
 
-#print axioms rowODL_of_o14_eq_cover_semantic_tree
-
 end ChartCoverToODLFull
 end O14
 end Erdos23Delta0

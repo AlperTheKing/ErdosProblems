@@ -1,15 +1,1380 @@
 {
- "started": "2026-07-09T13:03:27",
+ "started": "2026-07-09T18:00:24",
  "phases": {
   "tokens": {
-   "files": 16846,
+   "files": 16953,
    "hits": []
   },
   "supports": {
-   "ok": 106,
-   "skip": 1,
-   "fail": [],
-   "sec": 274
+   "ok": 0,
+   "skip": 106,
+   "fail": [
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeSupport",
+     "rc": 1,
+     "ok": false,
+     "sec": 18.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeSupport.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    }
+   ],
+   "sec": 51
+  },
+  "shards": {
+   "ok": 16,
+   "skip": 1674,
+   "fail": [
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS002",
+     "rc": 1,
+     "ok": false,
+     "sec": 70.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS002.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS003",
+     "rc": 1,
+     "ok": false,
+     "sec": 70.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS003.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS000",
+     "rc": 1,
+     "ok": false,
+     "sec": 71.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS000.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS004",
+     "rc": 1,
+     "ok": false,
+     "sec": 71.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS004.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS011",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS011.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS013",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS013.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS015",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS015.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS012",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS012.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS001",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS001.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS014",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS014.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS016",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS016.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS010",
+     "rc": 1,
+     "ok": false,
+     "sec": 72.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS010.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS005",
+     "rc": 1,
+     "ok": false,
+     "sec": 74.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS005.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS008",
+     "rc": 1,
+     "ok": false,
+     "sec": 74.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS008.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS017",
+     "rc": 1,
+     "ok": false,
+     "sec": 75.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS017.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS019",
+     "rc": 1,
+     "ok": false,
+     "sec": 75.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS019.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS009",
+     "rc": 1,
+     "ok": false,
+     "sec": 75.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS009.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS007",
+     "rc": 1,
+     "ok": false,
+     "sec": 75.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS007.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS006",
+     "rc": 1,
+     "ok": false,
+     "sec": 75.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS006.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS018",
+     "rc": 1,
+     "ok": false,
+     "sec": 76.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS018.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS020",
+     "rc": 1,
+     "ok": false,
+     "sec": 76.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS020.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS021",
+     "rc": 1,
+     "ok": false,
+     "sec": 76.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS021.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS022",
+     "rc": 1,
+     "ok": false,
+     "sec": 79.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS022.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS024",
+     "rc": 1,
+     "ok": false,
+     "sec": 82.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS024.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS035",
+     "rc": 1,
+     "ok": false,
+     "sec": 79.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS035.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS030",
+     "rc": 1,
+     "ok": false,
+     "sec": 83.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS030.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS034",
+     "rc": 1,
+     "ok": false,
+     "sec": 81.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS034.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS041",
+     "rc": 1,
+     "ok": false,
+     "sec": 81.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS041.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS040",
+     "rc": 1,
+     "ok": false,
+     "sec": 83.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS040.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS043",
+     "rc": 1,
+     "ok": false,
+     "sec": 85.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS043.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS038",
+     "rc": 1,
+     "ok": false,
+     "sec": 87.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS038.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS037",
+     "rc": 1,
+     "ok": false,
+     "sec": 87.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS037.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS042",
+     "rc": 1,
+     "ok": false,
+     "sec": 87.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS042.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS025",
+     "rc": 1,
+     "ok": false,
+     "sec": 92.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS025.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS026",
+     "rc": 1,
+     "ok": false,
+     "sec": 93.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS026.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS028",
+     "rc": 1,
+     "ok": false,
+     "sec": 95.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS028.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS033",
+     "rc": 1,
+     "ok": false,
+     "sec": 96.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS033.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS023",
+     "rc": 1,
+     "ok": false,
+     "sec": 98.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS023.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS036",
+     "rc": 1,
+     "ok": false,
+     "sec": 94.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS036.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS039",
+     "rc": 1,
+     "ok": false,
+     "sec": 95.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS039.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS032",
+     "rc": 1,
+     "ok": false,
+     "sec": 98.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS032.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS029",
+     "rc": 1,
+     "ok": false,
+     "sec": 102.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS029.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS031",
+     "rc": 1,
+     "ok": false,
+     "sec": 102.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS031.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS027",
+     "rc": 1,
+     "ok": false,
+     "sec": 104.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS027.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeBase",
+     "rc": 1,
+     "ok": false,
+     "sec": 198.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeBase.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS044",
+     "rc": 1,
+     "ok": false,
+     "sec": 57.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS044.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS045",
+     "rc": 1,
+     "ok": false,
+     "sec": 56.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS045.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS046",
+     "rc": 1,
+     "ok": false,
+     "sec": 65.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS046.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS050",
+     "rc": 1,
+     "ok": false,
+     "sec": 61.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS050.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS048",
+     "rc": 1,
+     "ok": false,
+     "sec": 67.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS048.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS047",
+     "rc": 1,
+     "ok": false,
+     "sec": 68.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS047.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS052",
+     "rc": 1,
+     "ok": false,
+     "sec": 63.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS052.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS049",
+     "rc": 1,
+     "ok": false,
+     "sec": 67.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS049.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS053",
+     "rc": 1,
+     "ok": false,
+     "sec": 63.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS053.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConeMS051",
+     "rc": 1,
+     "ok": false,
+     "sec": 65.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConeMS051.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 284.5,
+     "err": "ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart001ConePairs000.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 284.9,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart001ConePairs002.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 144.7,
+     "err": "rror: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs001.lean:435:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs001.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 145.3,
+     "err": "rror: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs005.lean:435:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs005.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 316.7,
+     "err": "02ConePairs001.lean:851:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart002ConePairs001.lean:990:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart002Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs013",
+     "rc": 1,
+     "ok": false,
+     "sec": 110.7,
+     "err": "rror: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs013.lean:435:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs013.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 321.1,
+     "err": "ConePairs002.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart002ConePairs002.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart002Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 322.0,
+     "err": "ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart002ConePairs000.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart002Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 153.9,
+     "err": "rs004.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs004.lean:435:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs004.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs007",
+     "rc": 1,
+     "ok": false,
+     "sec": 154.0,
+     "err": "rror: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs007.lean:296:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs007.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 172.7,
+     "err": "rs002.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs002.lean:157:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs002.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs008",
+     "rc": 1,
+     "ok": false,
+     "sec": 170.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs008.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs008.lean:296:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 175.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs003.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs003.lean:157:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs006",
+     "rc": 1,
+     "ok": false,
+     "sec": 174.0,
+     "err": "rs006.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs006.lean:157:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs006.lean:296:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs012",
+     "rc": 1,
+     "ok": false,
+     "sec": 145.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs012.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs012.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 181.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs000.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs010",
+     "rc": 1,
+     "ok": false,
+     "sec": 170.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs010.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs010.lean:435:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs011",
+     "rc": 1,
+     "ok": false,
+     "sec": 173.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs011.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs011.lean:296:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs009",
+     "rc": 1,
+     "ok": false,
+     "sec": 180.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs009.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 357.6,
+     "err": "01ConePairs001.lean:295:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart001ConePairs001.lean:712:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs014",
+     "rc": 1,
+     "ok": false,
+     "sec": 147.3,
+     "err": "rs014.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs014.lean:157:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs014.lean:296:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs019",
+     "rc": 1,
+     "ok": false,
+     "sec": 139.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs019.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs019.lean:574:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs017",
+     "rc": 1,
+     "ok": false,
+     "sec": 143.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs017.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs017.lean:157:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 371.5,
+     "err": "ConePairs003.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart001ConePairs003.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs020",
+     "rc": 1,
+     "ok": false,
+     "sec": 148.2,
+     "err": "rs020.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs020.lean:157:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs020.lean:435:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs018",
+     "rc": 1,
+     "ok": false,
+     "sec": 150.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs018.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs018.lean:157:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs015",
+     "rc": 1,
+     "ok": false,
+     "sec": 154.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs015.lean:17:0: error: Unknown option `maxSimpSteps`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs015.lean:435:2: error: `simp` failed: maximum number of steps exceeded\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs016",
+     "rc": 1,
+     "ok": false,
+     "sec": 164.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs016.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 386.0,
+     "err": "02ConePairs004.lean:434:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart002ConePairs004.lean:712:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart002Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs022",
+     "rc": 1,
+     "ok": false,
+     "sec": 165.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs022.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs021",
+     "rc": 1,
+     "ok": false,
+     "sec": 174.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs021.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart001ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 420.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart001ConePairs004.lean:156:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs024",
+     "rc": 1,
+     "ok": false,
+     "sec": 147.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs024.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs023",
+     "rc": 1,
+     "ok": false,
+     "sec": 151.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs023.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs031",
+     "rc": 1,
+     "ok": false,
+     "sec": 115.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs031.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs030",
+     "rc": 1,
+     "ok": false,
+     "sec": 117.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs030.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs032",
+     "rc": 1,
+     "ok": false,
+     "sec": 116.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs032.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs033",
+     "rc": 1,
+     "ok": false,
+     "sec": 111.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs033.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs029",
+     "rc": 1,
+     "ok": false,
+     "sec": 130.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs029.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs035",
+     "rc": 1,
+     "ok": false,
+     "sec": 113.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs035.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs025",
+     "rc": 1,
+     "ok": false,
+     "sec": 147.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs025.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs043",
+     "rc": 1,
+     "ok": false,
+     "sec": 100.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs043.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs026",
+     "rc": 1,
+     "ok": false,
+     "sec": 147.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs026.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs034",
+     "rc": 1,
+     "ok": false,
+     "sec": 119.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs034.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs038",
+     "rc": 1,
+     "ok": false,
+     "sec": 116.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs038.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs027",
+     "rc": 1,
+     "ok": false,
+     "sec": 146.2,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs027.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs040",
+     "rc": 1,
+     "ok": false,
+     "sec": 113.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs040.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs028",
+     "rc": 1,
+     "ok": false,
+     "sec": 146.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs028.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs039",
+     "rc": 1,
+     "ok": false,
+     "sec": 118.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs039.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs037",
+     "rc": 1,
+     "ok": false,
+     "sec": 121.6,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs037.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs045",
+     "rc": 1,
+     "ok": false,
+     "sec": 99.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs045.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs036",
+     "rc": 1,
+     "ok": false,
+     "sec": 122.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs036.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs044",
+     "rc": 1,
+     "ok": false,
+     "sec": 104.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs044.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs042",
+     "rc": 1,
+     "ok": false,
+     "sec": 112.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs042.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs048",
+     "rc": 1,
+     "ok": false,
+     "sec": 97.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs048.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs041",
+     "rc": 1,
+     "ok": false,
+     "sec": 116.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs041.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs050",
+     "rc": 1,
+     "ok": false,
+     "sec": 94.1,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs050.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs047",
+     "rc": 1,
+     "ok": false,
+     "sec": 110.0,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs047.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs046",
+     "rc": 1,
+     "ok": false,
+     "sec": 112.8,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs046.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs049",
+     "rc": 1,
+     "ok": false,
+     "sec": 111.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs049.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs051",
+     "rc": 1,
+     "ok": false,
+     "sec": 105.3,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs051.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs052",
+     "rc": 1,
+     "ok": false,
+     "sec": 106.4,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart003ConePairs052.lean:17:0: error: Unknown option `maxSimpSteps`\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 255.5,
+     "err": "ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 439.4,
+     "err": "ConePairs003.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart005ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 453.9,
+     "err": "05ConePairs000.lean:851:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart005ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 462.8,
+     "err": "ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs000.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 484.4,
+     "err": "ConePairs000.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 492.5,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 521.4,
+     "err": "4ConePairs004.lean:434:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 515.4,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart005ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 557.7,
+     "err": "ConePairs003.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 505.0,
+     "err": "ConePairs002.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs002.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 569.5,
+     "err": "4ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 549.5,
+     "err": "5ConePairs005.lean:851:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart005ConePairs005.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 549.1,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 557.3,
+     "err": "ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs004.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 532.7,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 558.5,
+     "err": "ConePairs005.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs005.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 555.1,
+     "err": "ConePairs005.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs005.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 577.3,
+     "err": "ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs003.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart008ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 563.8,
+     "err": "08ConePairs001.lean:295:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart008ConePairs001.lean:434:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart008Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 619.8,
+     "err": "6ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 627.2,
+     "err": "5ConePairs002.lean:851:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart005ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 645.8,
+     "err": "4ConePairs005.lean:712:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs005.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 603.3,
+     "err": "ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs003.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 667.5,
+     "err": "04ConePairs002.lean:573:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart004ConePairs002.lean:712:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs006",
+     "rc": 1,
+     "ok": false,
+     "sec": 636.7,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs006.lean:295:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs006.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 677.5,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart006ConePairs002.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 452.4,
+     "err": "ConePairs000.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs000.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 533.7,
+     "err": "9ConePairs005.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs005.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 691.7,
+     "err": "ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 269.4,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 708.4,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs002.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart008ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 783.1,
+     "err": "8ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart008ConePairs000.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart008Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 852.4,
+     "err": "7ConePairs004.lean:156:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart007ConePairs004.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 779.7,
+     "err": "ConePairs004.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart009ConePairs004.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 398.0,
+     "err": "ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 403.7,
+     "err": "ConePairs000.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart011ConePairs000.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart011Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 350.0,
+     "err": "ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart013ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 368.0,
+     "err": "ConePairs003.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart013ConePairs003.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 471.2,
+     "err": "0ConePairs005.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs005.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 427.7,
+     "err": "ConePairs000.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart013ConePairs000.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 457.4,
+     "err": "ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 467.4,
+     "err": "ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs003.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 556.5,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs004.lean:990:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 613.3,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart010ConePairs002.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 391.1,
+     "err": "ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 383.9,
+     "err": "ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs003.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 458.8,
+     "err": "ConePairs003.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs003.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 490.9,
+     "err": "ConePairs002.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 510.3,
+     "err": "ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 472.8,
+     "err": "ConePairs000.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs000.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 504.6,
+     "err": "ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs004.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 659.9,
+     "err": "11ConePairs001.lean:573:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart011ConePairs001.lean:712:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart011Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 598.0,
+     "err": "ConePairs002.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart013ConePairs002.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 313.6,
+     "err": "ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs001.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 509.1,
+     "err": "14ConePairs005.lean:156:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs005.lean:434:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 501.2,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs002.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 691.1,
+     "err": "2ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs000.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 463.2,
+     "err": "5ConePairs005.lean:573:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs005.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart011ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 732.1,
+     "err": "11ConePairs002.lean:295:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart011ConePairs002.lean:434:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart011Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart014ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 648.2,
+     "err": "ConePairs000.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart014ConePairs000.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart014Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 369.0,
+     "err": "ConePairs003.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs003.lean:2241:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 736.7,
+     "err": "12ConePairs004.lean:712:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs004.lean:851:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 751.3,
+     "err": "ConePairs002.lean:1407:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs002.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs003",
+     "rc": 1,
+     "ok": false,
+     "sec": 313.3,
+     "err": "ConePairs003.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs003.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs003.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart012ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 782.5,
+     "err": "12ConePairs005.lean:573:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart012ConePairs005.lean:851:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart012Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart013ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 740.9,
+     "err": "E:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart013ConePairs004.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart013Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 498.9,
+     "err": "6ConePairs000.lean:990:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs000.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 477.0,
+     "err": "ConePairs004.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs004.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 704.1,
+     "err": "5ConePairs004.lean:712:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart015ConePairs004.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart015Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs001",
+     "rc": 1,
+     "ok": false,
+     "sec": 467.8,
+     "err": "ConePairs001.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs001.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 595.7,
+     "err": "ConePairs002.lean:1129:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs002.lean:1824:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs000",
+     "rc": 1,
+     "ok": false,
+     "sec": 516.8,
+     "err": "ConePairs000.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs000.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs000.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs004",
+     "rc": 1,
+     "ok": false,
+     "sec": 463.0,
+     "err": "ConePairs004.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs004.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs004.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs002",
+     "rc": 1,
+     "ok": false,
+     "sec": 539.4,
+     "err": "ConePairs002.lean:1546:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs002.lean:2102:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs002.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 623.0,
+     "err": "16ConePairs005.lean:712:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart016ConePairs005.lean:851:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart016Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+     "module": "Erdos23Delta0.O14.Generated.ChartPayloads.Chart017ConePairs005",
+     "rc": 1,
+     "ok": false,
+     "sec": 692.1,
+     "err": "ConePairs005.lean:1268:2: error: `simp` failed: maximum number of steps exceeded\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\Generated\\ChartPayloads\\Chart017ConePairs005.lean:1685:2: error: `simp` failed: maximum number of steps exceeded\n'Erdos23Delta0.O14.Generated.ChartPayloads.Chart017Cone.Pairs005.hchunks' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+    }
+   ]
   }
  }
 }

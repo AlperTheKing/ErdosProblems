@@ -250,12 +250,6 @@ theorem no_card_seven_violator_of_no_realizable_f5_core_shape_gate
     hS hlt hmin h4 hnot5
     (no_six_row_in_minimal_obstruction_of_shape_gate Erow S hS hlt hmin h4 hnot5 hinj hshape)
     hinj hrealize
-#print axioms fourUniformF5Core_of_minimal_obstruction
-#print axioms no_six_row_in_minimal_obstruction_of_shape_gate
-#print axioms no_card_seven_violator_of_no_realizable_f5_core_shape_gate
-#print axioms fourUniformF5Core_of_minimal_obstruction_no_large_rows
-#print axioms no_card_seven_violator_of_no_realizable_f5_core
-#print axioms no_card_seven_violator_of_no_realizable_f5_core_no_large_rows
 
 end Ell5F5LiftInterface
 end Erdos23Delta0

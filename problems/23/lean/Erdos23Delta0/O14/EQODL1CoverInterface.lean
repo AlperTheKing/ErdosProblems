@@ -94,12 +94,6 @@ theorem coreODLGoal_of_checkEQODL1CoverCert
     ∀ I, CoreODLGoal G c rows Q (coreOf I) :=
   goal_of_checkEQODL1CoverCert C P H hcheck
 
-#print axioms natLtB_sound
-#print axioms natEqB_sound
-#print axioms present_of_checkEQODL1CoverCert
-#print axioms goal_of_checkEQODL1CoverCert
-#print axioms coreODLGoal_of_checkEQODL1CoverCert
-
 end EQODL1CoverInterface
 end O14
 end Erdos23Delta0

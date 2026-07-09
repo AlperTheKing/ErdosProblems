@@ -86,8 +86,13 @@ def main() -> None:
     ap.add_argument("--summary", type=Path, default=Path("tmp/codex_o14_batch_emit_summary.jsonl"))
     ap.add_argument("--base-term-chunk", type=int, default=64)
     ap.add_argument("--source-chunk", type=int, default=32)
-    ap.add_argument("--pair-chunk", type=int, default=16)
+    # Keep pair shards small by default; heavy charts have very large
+    # `checkEq` goals and benefit more from finer Lean files than from fewer
+    # generated modules.
+    ap.add_argument("--pair-chunk", type=int, default=4)
     args = ap.parse_args()
+    if args.workers > 64:
+        raise SystemExit(f"worker cap exceeded: {args.workers} > 64")
 
     slots = parse_slots(args.slots)
     args.summary.parent.mkdir(parents=True, exist_ok=True)

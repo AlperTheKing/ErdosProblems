@@ -63,8 +63,6 @@ theorem pureUPOK0_of_fullBankCert
     S F O J K sep dB inc kap cert hFO hdB hmcap
   linarith
 
-#print axioms pureUPOK0Bound_iff
-#print axioms pureUPOK0_of_fullBankCert
 
 end PureUPOK0
 end BranchB

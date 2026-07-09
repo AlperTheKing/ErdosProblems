@@ -372,11 +372,5 @@ theorem no_minimal_violator_card_six_geodesicSupport [Fintype V]
       _ = Nat.choose U.card 4 := Finset.card_powersetCard 4 U
       _ = 5 := by rw [hU]; norm_num
   omega
-#print axioms no_three_common_edges_len4_same_endpoints
-#print axioms geodesics_union_ge_six_of_inter_ne_three
-#print axioms geodesics_union_ge_six
-#print axioms geodesicSupport_card_ne_five
-#print axioms badEdge_eq_of_geodesicSupport_eq_card_four
-#print axioms no_minimal_violator_card_six_geodesicSupport
 end Ell5GeodesicUnion
 end Erdos23Delta0

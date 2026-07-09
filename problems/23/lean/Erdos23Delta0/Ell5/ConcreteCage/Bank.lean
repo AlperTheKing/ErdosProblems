@@ -143,9 +143,6 @@ theorem bank_add_le_of_disjoint_subcages (F : BankFrame (V := V))
   exact bankOn_add_le F.terms hWsub hCsub
     (fun t _ => not_termIn_both_of_disjoint t hdisj)
 
-#print axioms balance_eq_bank_sub_surplus
-#print axioms bank_add_le_of_disjoint_subcages
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

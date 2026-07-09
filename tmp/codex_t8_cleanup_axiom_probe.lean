@@ -1,0 +1,4 @@
+import Erdos23Delta0.Ell5.ConcreteCage.PureLensSplit
+
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.concretePureLensCageSplit
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.ledgerSep_of_concretePureLensCageSplit

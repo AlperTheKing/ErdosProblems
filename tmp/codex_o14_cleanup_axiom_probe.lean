@@ -1,0 +1,3 @@
+import Erdos23Delta0.O14.ChartCoverToODLFull
+
+#print axioms Erdos23Delta0.O14.ChartCoverToODLFull.rowODL_of_o14_eq_cover_semantic_tree

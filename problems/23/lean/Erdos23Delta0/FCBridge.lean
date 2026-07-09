@@ -19,7 +19,7 @@ namespace Erdos23Delta0
 namespace CertGraph
 
 /-- FC-FORM (unconditional). A triangle-free graph with a certificate package on
-    `5n` vertices admits a bipartite subgraph deleting at most `n^2` edges — the
+    `5n` vertices has a bipartite subgraph deleting at most `n^2` edges — the
     official `erdos_23` shape. The bipartization identity is now discharged by the
     proven `SimpleGraphBridge.beta_bipartization`. -/
 theorem erdos23_fcForm_of_bipartization
@@ -39,6 +39,28 @@ theorem erdos23_fcForm_of_bipartization
   have hbeta_le : betaSimple Gs ≤ n ^ 2 := by exact_mod_cast hbound
   exact SimpleGraphBridge.beta_bipartization Gs (n ^ 2) hbeta_le
 
+/-- Official-form wrapper from the remaining generic package provider.
+
+This is the final bookkeeping shape for the `formal-conjectures` theorem: once
+the delta=0 assembly constructs a `SimpleGraphCertificatePackage` for every
+finite triangle-free graph, the displayed Erdős #23 statement follows. -/
+theorem erdos23_fcForm_of_packageProvider
+    (packageProvider :
+      ∀ {V : Type*} [Fintype V] [DecidableEq V]
+        (Gs : SimpleGraph V) [DecidableRel Gs.Adj],
+        Gs.CliqueFree 3 → Nonempty (SimpleGraphCertificatePackage Gs)) :
+    ∀ (n : ℕ) (V : Type*) [Fintype V],
+      Fintype.card V = 5 * n →
+        ∀ (Gs : SimpleGraph V), Gs.CliqueFree 3 →
+          ∃ H : SimpleGraph V,
+            H ≤ Gs ∧ H.IsBipartite ∧
+              (Gs.edgeFinset \ H.edgeFinset).card ≤ n^2 := by
+  intro n V _ hcard Gs hTri
+  classical
+  letI : DecidableEq V := Classical.decEq V
+  letI : DecidableRel Gs.Adj := Classical.decRel Gs.Adj
+  obtain ⟨P⟩ := packageProvider Gs hTri
+  exact erdos23_fcForm_of_bipartization Gs n hcard hTri P
+
 end CertGraph
 end Erdos23Delta0
-

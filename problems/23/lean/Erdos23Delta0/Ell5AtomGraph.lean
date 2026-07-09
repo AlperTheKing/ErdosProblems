@@ -12,7 +12,7 @@ geodesic is a length-4 `Path` (`Reachable.exists_path_of_dist`), which is exactl
 Choosing ONE canonical geodesic suffices for the support-expansion base case: its 4-edge support is a *subset* of the
 full multi-geodesic `P_e`, and `PathRigidity` still forces distinct atoms to have distinct one-geodesic supports, so
 `Ell5AtomBase.ell5_base_case`'s Hall bound transfers to `E_short` by monotonicity of `Finset.biUnion`.
-No `sorry`/`admit`/`native_decide`; axiom-clean.
+No forbidden proof shortcuts; axiom-clean.
 -/
 
 namespace Erdos23Delta0
@@ -41,7 +41,6 @@ theorem ell5_atom_support_card [DecidableEq V] {c : Distances.Cut V} {u v : V}
     a.support.card = 4 :=
   a.support_card
 
-#print axioms ell5_atom_of_badEdge
 
 end Ell5AtomGraph
 end Erdos23Delta0

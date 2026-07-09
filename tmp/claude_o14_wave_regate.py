@@ -39,8 +39,9 @@ def save(): SUMMARY.write_text(json.dumps(summary, indent=1))
 all_new = sorted(f for f in CP.glob("Chart*.lean") if not f.name.startswith("Chart000"))
 aggs = [f for f in all_new if re.fullmatch(r"Chart\d{3}Cone\.lean", f.name)]
 supports = [f for f in all_new if "Support" in f.name]
-shards = [f for f in all_new if f not in aggs and f not in supports and f.name != "Chart000Bridge.lean"]
-print(f"[scope] {len(all_new)} files = {len(supports)} supports + {len(shards)} shards + {len(aggs)} aggregators", flush=True)
+bridges = [f for f in all_new if re.fullmatch(r"Chart\d{3}Bridge\.lean", f.name)]
+shards = [f for f in all_new if f not in aggs and f not in supports and f not in bridges]
+print(f"[scope] {len(all_new)} files = {len(supports)} supports + {len(shards)} shards + {len(aggs)} aggregators + {len(bridges)} bridges", flush=True)
 
 # Phase 0: token scan
 tok = re.compile(rb"sorry|admit|native_decide|sorryAx")
@@ -60,6 +61,7 @@ if hits:
 
 def wave(name, files, workers):
     res = {"ok": 0, "skip": 0, "fail": []}
+    summary["phases"][name] = res  # live-visible so failures survive a process kill
     t0 = time.time()
     todo = [f for f in files if not fresh(f)]
     res["skip"] = len(files) - len(todo)
@@ -69,24 +71,42 @@ def wave(name, files, workers):
         for fut in as_completed(futs):
             r = fut.result(); done += 1
             if r["ok"]: res["ok"] += 1
-            else: res["fail"].append(r)
+            else:
+                res["fail"].append(r)
+                print(f"[{name}] FAIL {r['module']} rc={r['rc']}: {r['err'][:240]}", flush=True)
             if done % 200 == 0 or not r["ok"]:
                 print(f"[{name}] {done}/{len(todo)} ok={res['ok']} fail={len(res['fail'])} ({round(time.time()-t0)}s)", flush=True)
                 save()
+    # one retry pass for transient contention failures
+    if res["fail"]:
+        retry = [SRC / (f["module"].replace(".", "/") + ".lean") for f in res["fail"]]
+        res["fail"] = []
+        print(f"[{name}] retrying {len(retry)} failures (8 workers)", flush=True)
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            for fut in as_completed({ex.submit(run_lean, f): f for f in retry}):
+                r = fut.result()
+                if r["ok"]: res["ok"] += 1
+                else:
+                    res["fail"].append(r)
+                    print(f"[{name}] RETRY-FAIL {r['module']} rc={r['rc']}: {r['err'][:400]}", flush=True)
+        save()
     res["sec"] = round(time.time() - t0)
     print(f"[{name}] DONE ok={res['ok']} skip={res['skip']} fail={len(res['fail'])} in {res['sec']}s", flush=True)
     return res
 
+# NO fail-fast between phases: collect every failure, give a full per-class verdict at the end
+# (aggregators of charts with failed shards will fail on missing oleans — expected, listed).
 summary["phases"]["supports"] = wave("supports", supports, 16); save()
-if summary["phases"]["supports"]["fail"]: print("VERDICT all_ok=False (supports)", flush=True); raise SystemExit(1)
 summary["phases"]["shards"] = wave("shards", shards, 32); save()
-if summary["phases"]["shards"]["fail"]: print("VERDICT all_ok=False (shards)", flush=True); raise SystemExit(1)
-summary["phases"]["aggregators"] = wave("aggregators", aggs, 16); save()
-if summary["phases"]["aggregators"]["fail"]: print("VERDICT all_ok=False (aggregators)", flush=True); raise SystemExit(1)
+summary["phases"]["aggregators"] = wave("aggregators", aggs, 12); save()
+summary["phases"]["bridges"] = wave("bridges", bridges, 12); save()
 reg = run_lean(SRC / "Erdos23Delta0/O14/Generated/PayloadRegistry.lean")
-summary["phases"]["registry"] = reg
-summary["all_ok"] = reg["ok"]
+summary["phases"]["registry"] = {k: reg[k] for k in ("module", "rc", "ok", "sec", "err")}
+summary["all_ok"] = all(not summary["phases"][ph]["fail"] for ph in
+                        ("supports", "shards", "aggregators", "bridges")) and reg["ok"]
 summary["finished"] = time.strftime("%Y-%m-%dT%H:%M:%S")
 save()
 print(f"[registry] rc={reg['rc']} ok={reg['ok']}", flush=True)
-print(f"VERDICT all_ok={summary['all_ok']}", flush=True)
+print(f"VERDICT all_ok={summary['all_ok']} fails: " + ", ".join(
+    f"{ph}={len(summary['phases'][ph]['fail'])}" for ph in
+    ("supports", "shards", "aggregators", "bridges")), flush=True)

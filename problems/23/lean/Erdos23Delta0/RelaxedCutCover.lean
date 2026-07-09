@@ -19,7 +19,7 @@ instantiation plugs `sep k := S-rows separated by U_k` and `dB k := δ_B(U_k)` w
 
 The OPEN core after this module is exactly the certificate-existence theorem `Ell5FullBankRelaxedCover_exists`
 (a cover + bank assignment exists for every minimal full-closure obstruction) — everything else is compiled algebra.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -125,9 +125,6 @@ theorem expansion_of_zero_load
   rw [hzero, add_zero] at h
   exact h
 
-#print axioms relaxed_cutcover_defect_bound
-#print axioms hall_absorbed_of_bank
-#print axioms expansion_of_zero_load
 
 end RelaxedCutCover
 end Erdos23Delta0

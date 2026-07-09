@@ -81,10 +81,6 @@ theorem no_pure_lens_of_splitProvider_in_minNeg {γ : Type*}
       Ell5LensStatement.PureLensLedgerSeparation Balance Proper C G c S pair lens :=
     pureLensLedgerSeparation_of_splitProvider Bank Surplus Balance Proper C G c S pair lens provide
   exact Ell5LensStatement.pure_lens_impossible_in_minNeg Balance Proper C G c S pair lens hCneg hMin hpure hSep
-#print axioms ledgerSep_of_pureLensCageSplit
-#print axioms lensReducible_of_pureLensCageSplit
-#print axioms pureLensLedgerSeparation_of_splitProvider
-#print axioms no_pure_lens_of_splitProvider_in_minNeg
 
 end Ell5PureLensCageInterface
 end Erdos23Delta0

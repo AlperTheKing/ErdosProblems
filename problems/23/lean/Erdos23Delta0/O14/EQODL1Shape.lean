@@ -110,7 +110,5 @@ structure EQODL1ShapeSound {G : GraphData} {c : CutData} {rows : RowDB}
   routeSound : RouteSound I
   scalarSound : ScalarSound I
 
-#print axioms inListNat_sound
-
 end O14
 end Erdos23Delta0

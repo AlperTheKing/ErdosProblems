@@ -21,7 +21,8 @@ exact-gated first (`_claude_porthall_uncross_gate.py`: falsifiers F1/F2 verified
 The closure-level versions (MinimalClosedDeficient etc.) attach at the EscapeQuotientData/extractor level —
 deliberately not here. R2's falsifier 1 shows plain `InclusionMinimalDeficient` + closure is NOT enough; the
 one-component theorem below is stated for the plain predicate, which is what its proof actually needs.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof placeholders; axiom-probe expected
+`⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -233,11 +234,6 @@ theorem minimal_deficient_has_one_legal_component (L : I.Port → ℚ) {P : Fins
     have hss : D.ports k ⊂ P := (Finset.ssubset_iff_of_subset hsub).mpr ⟨x, hxP, hxk⟩
     exact absurd hk (not_lt.mpr (hproper (D.ports k) hss))
   exact Fintype.card_eq_one_iff.mpr ⟨k, huniq⟩
-
-#print axioms deficiencyQ_supermodular
-#print axioms deficiencyQ_union_of_disjoint_ports
-#print axioms deficiencyQ_disjoint_neighbor_split
-#print axioms minimal_deficient_has_one_legal_component
 
 end PortHall
 end Wall

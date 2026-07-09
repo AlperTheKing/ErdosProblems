@@ -1,0 +1,1 @@
+E:\Projects\ErdosProblems\tmp\codex_t8_cleanup_axiom_probe.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\codex_lean_o_t8_cleanup\Erdos23Delta0\Ell5\ConcreteCage\PureSplit.olean' of module Erdos23Delta0.Ell5.ConcreteCage.PureSplit does not exist

@@ -114,8 +114,6 @@ theorem branchBInputs_of_bankedUPO {G : GraphData} {c : CutData}
     bankL := hBankL
     bankedUPO := hBound }
 
-#print axioms checkBankedUPOCert_sound
-#print axioms branchBInputs_of_bankedUPO
 
 end BankedUPO
 end BranchB

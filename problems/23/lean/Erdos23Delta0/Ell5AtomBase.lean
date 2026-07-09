@@ -99,10 +99,6 @@ theorem ell5_base_case (S : Finset (Ell5Atom G))
   intro a ha b hb hab
   exact Ell5Atom.pair_union (fun hbad => hab (hInj a ha b hb hbad))
 
-#print axioms hall_le_five_local
-#print axioms Ell5Atom.uv_ne
-#print axioms Ell5Atom.badEdge_eq_of_support_eq
-#print axioms ell5_base_case
 
 end Ell5AtomBase
 end Erdos23Delta0

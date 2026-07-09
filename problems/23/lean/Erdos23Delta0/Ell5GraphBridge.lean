@@ -15,7 +15,7 @@ giving `|P| ≥ 4`. Concretely it turns `Distances.ell G c u v = 5` into the `h4
 `Ell5CSReduction.hall_le_five`. (The second fact — `hpair` graph-level rigidity — is a separate, harder lemma and is
 NOT proved here; the open research core `BalancedNeutralTheta_book_or_reducible` is downstream of both.)
 
-No `sorry`/`admit`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -51,8 +51,6 @@ theorem ell5_support_card_ge_four [DecidableEq V] (c : Cut V) {u v : V}
   rw [hd] at hlen
   exact Ell5CSReduction.support_card_ge_four p hpath hlen P (hP p hpath hlen)
 
-#print axioms dist_eq_four_of_ell_eq_five
-#print axioms ell5_support_card_ge_four
 
 end Ell5GraphBridge
 end Erdos23Delta0

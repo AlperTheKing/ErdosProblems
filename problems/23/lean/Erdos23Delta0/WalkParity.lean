@@ -78,10 +78,6 @@ theorem List.countP_eq_sum_toFinset_of_nodup {α : Type*} [DecidableEq α]
     rw [List.countP_cons, List.toFinset_cons, Finset.sum_insert hnot, ih ht]
     by_cases hP : P a <;> simp [hP] <;> omega
 
-#print axioms even_countP_edges_iff_walk
-#print axioms even_countP_edges_closed
-#print axioms sym2_eq_of_even_two_nonloop
-#print axioms List.countP_eq_sum_toFinset_of_nodup
 
 end WalkParity
 end Erdos23Delta0

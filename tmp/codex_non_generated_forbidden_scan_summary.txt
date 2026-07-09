@@ -1,0 +1,8 @@
+timestamp_utc=2026-07-09T12:59:55Z
+scope=problems/23/lean/Erdos23Delta0/**/*.lean excluding O14/Generated
+sorry=0
+admit=0
+native_decide=0
+unsafe=0
+print_axioms=0
+note=generated O14 payloads intentionally excluded while Claude wave owns them

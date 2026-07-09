@@ -1,0 +1,20 @@
+[
+  {
+    "rel": "Erdos23Delta0/Gamma/FullBankToLengthSurplusCharge.lean",
+    "rc": 0,
+    "sec": 99.65,
+    "ok": true,
+    "out": "E:\\Projects\\ErdosProblems\\tmp\\codex_lean_o_spec1_cleanup_privateout_v1\\Erdos23Delta0\\Gamma\\FullBankToLengthSurplusCharge.olean",
+    "stdout_tail": "",
+    "stderr_tail": ""
+  },
+  {
+    "rel": "Erdos23Delta0/Gamma/FullBankChargeCertProvider.lean",
+    "rc": 0,
+    "sec": 132.11,
+    "ok": true,
+    "out": "E:\\Projects\\ErdosProblems\\tmp\\codex_lean_o_spec1_cleanup_privateout_v1\\Erdos23Delta0\\Gamma\\FullBankChargeCertProvider.olean",
+    "stdout_tail": "",
+    "stderr_tail": ""
+  }
+]

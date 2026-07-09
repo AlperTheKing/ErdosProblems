@@ -92,10 +92,6 @@ theorem Surplus_eq_gamma_sub_25_card (C : AmbientCage G c) :
 
 end AmbientCage
 
-#print axioms atom_surplus_eq_zero_of_ell5
-#print axioms atomEdgeSupport_nonempty_of_dist4
-#print axioms AmbientCage.Surplus_eq_gamma_sub_25_card
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

@@ -131,10 +131,6 @@ theorem no_dualCert_of_assignedSink
     (cert_of_assignedSink S F O J K sep dB inc kap lam sink
       hlam hkap hcov hcong hsink hinc hcap)
 
-#print axioms load_nonneg
-#print axioms cert_of_assignedSink
-#print axioms bankedCutDomination_of_assignedSink
-#print axioms no_dualCert_of_assignedSink
 
 end Ell5FullBankAssignedSink
 end Erdos23Delta0

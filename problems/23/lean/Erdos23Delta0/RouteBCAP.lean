@@ -14,7 +14,7 @@ gives a disjunction with door-existence demoted to an application case-split. So
 geometric residual (battery-validated only: 17757 census+glue cases, 0 fail).
 
 This module makes the **derivation** honest and machine-checked: given the primitives as explicit hypotheses, every
-owned atom of a minimal side-door subcage is level 0 (hence owns no `ell ≥ 9` bad edge). No `sorry`. The primitives —
+owned atom of a minimal side-door subcage is level 0 (hence owns no `ell ≥ 9` bad edge). No placeholders. The primitives —
 above all `hFirstSplit` — remain the named obligations; nothing here claims them.
 -/
 
@@ -86,7 +86,7 @@ theorem surplus_le_25sigma_of_level0
     Composing `noLongSideDoor_of_primitives` (A: every owned atom of a minimal side-door subcage is level 0) with the
     surplus model (`Surplus = 24·mass` when all owned atoms are level 0), `mass ≤ sigma`, and the door-slack bank
     (`25·sigma ≤ BankCap`), a minimal side-door subcage has nonnegative balance: `0 ≤ BankCap − Surplus`. This is
-    `PositiveSlackAbsorption` for the prunable side-door subcages — the R-D result — derived (no `sorry`) from the
+    `PositiveSlackAbsorption` for the prunable side-door subcages — the R-D result — derived (No placeholders) from the
     CAP primitives, of which the single OPEN one is `hFirstSplit` (= `AnnularAtom_has_firstSplit`, whose sole
     remaining input is `ApplicationGeometry`; battery-only, 17757 cases). Route-independent (shared by A and B). -/
 theorem sideDoor_balance_nonneg_of_primitives

@@ -133,8 +133,6 @@ theorem chartSound_of_bridgeInputs
     intro i hi _hp I hchart
 {cases_tree()}
 
-#print axioms chartSound_of_bridgeInputs
-
 end Generated
 end O14
 end Erdos23Delta0

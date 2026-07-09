@@ -1,6 +1,6 @@
 /-
 Toy instantiation (M6.5 validation): the OddCyclePacking TRUE-max-cut checker
-certifies the maximum cut of the 5-cycle C5, evaluated WITHOUT native_decide
+certifies the maximum cut of the 5-cycle C5, evaluated WITHOUT kernel-bypassing automation
 (honest `decide` on concrete n=5 data). Confirms the checker is usable in the
 general max-cut provider (M6) path.
 
@@ -23,7 +23,7 @@ def c5Cut : CutData := ⟨[false, true, false, true, false]⟩
 def c5Cert : OddCyclePackingCert := ⟨1, [[0, 1, 2, 3, 4, 0]]⟩
 
 /-- The odd-cycle-packing checker accepts the C5 maximum cut (concrete Boolean
-    evaluation, no `native_decide`). -/
+    evaluation, no kernel-bypassing automation). -/
 theorem c5_checkOddCyclePacking :
     checkOddCyclePacking c5Graph c5Cut c5Cert = true := by decide
 

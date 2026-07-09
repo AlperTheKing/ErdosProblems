@@ -119,10 +119,6 @@ theorem no_minimal_violator_card_six_of_no_card_five
     omega
   have hle5 := card_le_five_of_four_subsets_of_five Erow S U hU hsub hrow4 hinj
   omega
-#print axioms hall_le_six
-#print axioms no_minimal_violator_le_six
-#print axioms card_le_five_of_four_subsets_of_five
-#print axioms no_minimal_violator_card_six_of_no_card_five
 
 end Ell5HallSmall
 end Erdos23Delta0

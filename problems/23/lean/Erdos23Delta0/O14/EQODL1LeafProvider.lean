@@ -143,10 +143,6 @@ def concreteChecksWithEQ_of_o14_cover
     intro n ref hkind hcheck
     exact resolvedODL_eq_leaf_of_o14_cover P hkind hcheck
 
-#print axioms leafProviders_of_concreteChecksWithEQ
-#print axioms resolvedODL_eq_leaf_of_o14_cover
-#print axioms concreteChecksWithEQ_of_o14_cover
-
 end EQODL1LeafProvider
 end O14
 end Erdos23Delta0

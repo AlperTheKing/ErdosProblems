@@ -1,7 +1,7 @@
 /-
 Toy instantiation (M6.5 validation, EXTREMAL case): the OddCyclePacking TRUE-max-cut
 checker certifies the maximum cut of the blow-up C5[5] — the actual extremal graph for
-Erdős #23, where β = N²/25 is tight (N = 25, β = 25). Evaluated WITHOUT native_decide
+Erdős #23, where β = N²/25 is tight (N = 25, β = 25). Evaluated WITHOUT kernel-bypassing automation
 (honest `decide` on concrete n = 25 data).
 
 C5[5]: 5 blocks B0..B4 of 5 vertices each (Bi = {5i,…,5i+4}); consecutive blocks are
@@ -58,7 +58,7 @@ def c5b5Cert : OddCyclePackingCert :=
     [4, 8, 12, 16, 20, 4]]⟩
 
 /-- The odd-cycle-packing checker accepts the C5[5] block-alternating cut (concrete
-    Boolean evaluation, no `native_decide`). -/
+    Boolean evaluation, no kernel-bypassing automation). -/
 theorem c5b5_checkOddCyclePacking :
     checkOddCyclePacking c5b5Graph c5b5Cut c5b5Cert = true := by decide
 

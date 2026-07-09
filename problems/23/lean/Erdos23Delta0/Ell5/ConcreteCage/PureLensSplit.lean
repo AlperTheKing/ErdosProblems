@@ -65,9 +65,6 @@ theorem ledgerSep_of_concretePureLensCageSplit (F : BankFrame (V := V))
     C (restrict C U) (restrictCompl C U)
     (concretePureLensCageSplit F C U hWProper hCProper hStrong hDisj)
 
-#print axioms concretePureLensCageSplit
-#print axioms ledgerSep_of_concretePureLensCageSplit
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

@@ -1,0 +1,1 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Ell5\ConcreteCage\Basic.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\codex_lean_o_t8_cleanup\Erdos23Delta0\Ell5LensStatement.olean' of module Erdos23Delta0.Ell5LensStatement does not exist

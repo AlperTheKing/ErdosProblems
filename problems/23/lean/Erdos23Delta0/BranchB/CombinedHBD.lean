@@ -65,10 +65,6 @@ theorem hbd_capacity_sum_nonneg (A : Finset α) (T : Finset τ)
     0 ≤ ∑ t ∈ T, D.cap t :=
   Finset.sum_nonneg fun t ht => hD.2.1 t ht
 
-#print axioms hbd_demand_sum_eq_q_sum
-#print axioms hbd_capacity_sum_eq_q_sum_plus_unused
-#print axioms hbd_ledger_sound
-#print axioms hbd_capacity_sum_nonneg
 
 end CombinedHBD
 end BranchB

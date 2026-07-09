@@ -180,15 +180,6 @@ theorem ell5_geodesic_four_edges {V : Type*} [DecidableEq V] {G : SimpleGraph V}
   obtain ⟨p, hpath, hlen⟩ := hr.exists_path_of_dist
   exact ⟨p, hpath, geodesic_len4_card_edges p hpath (hlen.trans hd)⟩
 
-#print axioms card_support_ge_of_mQ_le_Tsq
-#print axioms minimal_hall_obstruction_no_private_edge
-#print axioms hall_le_five
-#print axioms c5book_support_expansion
-#print axioms geodesic_len4_card_edges
-#print axioms support_card_ge_four
-#print axioms pair_union_ge_five
-#print axioms cross_flip_bool
-#print axioms ell5_geodesic_four_edges
 
 end Ell5CSReduction
 end Erdos23Delta0

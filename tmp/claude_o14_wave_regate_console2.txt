@@ -1,0 +1,52 @@
+[scope] 16953 files = 107 supports + 16739 shards + 107 aggregators
+[0] token scan: 16953 files, 0 hits
+[supports] DONE ok=0 skip=107 fail=0 in 0s
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart001Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart001Cone.ole
+[shards] 1/15011 ok=0 fail=1 (11s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart002Cone.ole
+[shards] 2/15011 ok=0 fail=2 (11s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003Cone.ole
+[shards] 3/15011 ok=0 fail=3 (14s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005Cone.ole
+[shards] 4/15011 ok=0 fail=4 (16s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004Cone.ole
+[shards] 5/15011 ok=0 fail=5 (19s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006Cone.ole
+[shards] 6/15011 ok=0 fail=6 (20s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007Cone.ole
+[shards] 7/15011 ok=0 fail=7 (21s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart008Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart008Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart008Cone.ole
+[shards] 8/15011 ok=0 fail=8 (21s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009Cone.ole
+[shards] 9/15011 ok=0 fail=9 (22s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart010Cone.ole
+[shards] 10/15011 ok=0 fail=10 (31s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart006ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart006ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 11/15011 ok=0 fail=11 (1691s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs001 rc=1: ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 12/15011 ok=0 fail=12 (1693s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs001 rc=1: ConePairs001.lean:1963:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart004ConePairs001.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 13/15011 ok=0 fail=13 (1705s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart005ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart005ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 14/15011 ok=0 fail=14 (1847s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart007ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart007ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 15/15011 ok=0 fail=15 (1857s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart003ConePairs003 rc=1: ConePairs003.lean:1407:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart003ConePairs003.lean:2102:2: error: `simp` failed: maximum number of 
+[shards] 16/15011 ok=0 fail=16 (2005s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart009ConePairs001 rc=1: ConePairs001.lean:2102:2: error: `simp` failed: maximum number of steps exceeded
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart009ConePairs001.lean:2241:2: error: `simp` failed: maximum number of 
+[shards] 17/15011 ok=0 fail=17 (2018s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart011Bridge rc=1: E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\O14\Generated\ChartPayloads\Chart011Bridge.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart011Cone.ole
+[shards] 18/15011 ok=0 fail=18 (2070s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart002ConePairs000 rc=4294967295: 
+[shards] 19/15011 ok=0 fail=19 (2106s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart010ConePairs001 rc=4294967295: 
+[shards] 20/15011 ok=0 fail=20 (2106s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart004ConePairs003 rc=4294967295: 
+[shards] 21/15011 ok=0 fail=21 (2106s)

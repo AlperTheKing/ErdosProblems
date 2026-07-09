@@ -14,7 +14,7 @@ against the graph-level row-connectivity relation is a separate checked obligati
 until the concrete relation is wired). Compiled here: the class definitions, the anti-bug theorem
 (`nonEQ_L5_row_is_BranchB`), the exhaustive coverage theorem (`rowCoverage`: every row is in EXACTLY one class),
 the long-row guardrail, and the no-third-class theorem. All pure finite case analysis.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -107,10 +107,6 @@ theorem noOtherGreenLeafRows {rows : RowDB} (D : K2ComponentData rows) :
   intro i h
   exact h.2 h.1
 
-#print axioms K2ComponentData.nonEQ_L5_row_is_BranchB
-#print axioms K2ComponentData.BranchB_component_contains_long_row
-#print axioms rowCoverage
-#print axioms noOtherGreenLeafRows
 
 end RowPartitionCore
 end Erdos23Delta0

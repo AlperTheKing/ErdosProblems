@@ -314,18 +314,6 @@ theorem gammaUpper_from_fullBankGlobalPackage
   gammaUpper_from_lengthSurplus h.rows_length_eq_badCount
     (fullBankGlobalPackage_sound h)
 
-#print axioms FullBankRelaxedCoverBundleView.demand_le_cap
-#print axioms FullBankRelaxedCoverBundleView.rhs_nonneg
-#print axioms localSurplus_le_localDemand
-#print axioms localDemand_le_localCap
-#print axioms localCap_eq_localSpend
-#print axioms localSpend_eq_tokenSpend
-#print axioms tokenSpend_le_tokenCap
-#print axioms componentTokenCap_le_componentResidual
-#print axioms componentResidual_le_globalResidual
-#print axioms fullBankGlobalPackage_sound
-#print axioms gammaUpper_from_fullBankGlobalPackage
-
 end FullBankGlobalPackage
 
 end FullBankToLengthSurplusCharge

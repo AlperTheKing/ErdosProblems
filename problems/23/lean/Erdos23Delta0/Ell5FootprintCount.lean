@@ -61,9 +61,6 @@ theorem no_minimal_violator_of_distance4_count_bound_endpoints
   exact no_minimal_violator_of_distance4_count_bound F S (fun a => s(x a, y a))
     hD4 hS (fun a ha => mem_distance4Pairs.mpr ⟨x a, y a, rfl, hdist a ha⟩) hinj
 
-#print axioms distance4Pairs
-#print axioms no_minimal_violator_of_distance4_count_bound
-#print axioms no_minimal_violator_of_distance4_count_bound_endpoints
 
 end Ell5FootprintCount
 end Erdos23Delta0

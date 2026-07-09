@@ -7,7 +7,7 @@ First layer of the Branch-B stack (design: `BRANCH_B_LAYERS_V2_GPTPRO.md`; build
 already-green `BranchB.ODLBridge`). Pure bookkeeping: every Branch-B atom's demand splits exactly into its
 pure / HBD / CD parts, all nonnegative, with a signature index below 24. The sum-level split
 (`dict24_sum_split`) and nonnegativity of the part-sums are what layer 25 (`BankedUPO`) consumes.
-No graph theory, no row geometry, no bank theorem. No `sorry`/`admit`/`native_decide`;
+No graph theory, no row geometry, no bank theorem. No forbidden proof shortcuts;
 axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
@@ -56,10 +56,6 @@ theorem dict24_demand_sum_nonneg (A : Finset α) (D : Dict24AtomData α)
     (hD : Dict24Checked A D) : 0 ≤ ∑ a ∈ A, D.demand a :=
   Finset.sum_nonneg fun a ha => (hD a ha).2.1
 
-#print axioms dict24_sig_lt
-#print axioms dict24_sum_split
-#print axioms dict24_part_sums_nonneg
-#print axioms dict24_demand_sum_nonneg
 
 end Dict24
 end BranchB

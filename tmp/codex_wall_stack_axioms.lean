@@ -1,0 +1,9 @@
+import Erdos23Delta0.BankedWallLPRestricted
+import Erdos23Delta0.BankedWallRoutingFailure
+import Erdos23Delta0.ClosedWeightedHall
+import Erdos23Delta0.BankedWallW3Skeleton
+#print axioms Erdos23Delta0.Wall.noStrictDual_of_restrictedDualSqueeze
+#print axioms Erdos23Delta0.Wall.noStrictDual_of_dualSqueeze_via_restricted
+#print axioms Erdos23Delta0.Wall.strictRestrictedDual_gives_weightedRoutingFailure
+#print axioms Erdos23Delta0.Wall.ClosedShore.uniqueRoot_of_closedWeightedHallCompleteness
+#print axioms Erdos23Delta0.Wall.ClosedShore.noStrictRestrictedDual_of_closedHall_and_exchange

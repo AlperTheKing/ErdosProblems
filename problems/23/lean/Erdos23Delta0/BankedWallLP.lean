@@ -18,7 +18,8 @@ finite rational banked LP; this module supplies the abstract LP surface and the 
 restrict to singleton / quotient-closed / bank-rooted-closure cuts without this module knowing about them.
 Sink kind/source-ID labels, Bool `decide` checkers, and the obstruction extractor attach at the SPEC-1 ledger
 level (Codex lane) — deliberately not here, so this module depends on nothing but Mathlib.
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof placeholders; axiom-probe expected
+`⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -207,9 +208,6 @@ exact-side theorem behind the falsifier format: a `WallFalsifier` (checked dual 
 a verified cover would be an outright contradiction. -/
 theorem noStrictDual_of_primal {d : Dual I} (hd : d.Checked) (P : Primal I) : ¬ d.StrictGap :=
   noStrictDual_of_dualSqueeze hd (DualSqueeze.ofPrimal hd P)
-
-#print axioms noStrictDual_of_dualSqueeze
-#print axioms noStrictDual_of_primal
 
 end Wall
 end Erdos23Delta0

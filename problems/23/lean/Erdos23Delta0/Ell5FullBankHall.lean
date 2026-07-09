@@ -65,8 +65,6 @@ theorem hall_bound_of_fullBank_cert
   exact RelaxedCutCover.hall_absorbed_of_bank S F O hFO K cert.lam sep dB
     cert.hlam hdB hmcap cert.hcov cert.hcong (25 * (∑ j ∈ J, kap j)) hbankLoad
 
-#print axioms external_load_le_bank_of_cert
-#print axioms hall_bound_of_fullBank_cert
 
 end Ell5FullBankHall
 end Erdos23Delta0

@@ -49,10 +49,6 @@ theorem mem_restrictCompl_atoms {C : AmbientCage G c} {U : Finset V}
       a ∈ C.atoms ∧ atomSupportedOn a (C.verts \ U) := by
   simp [restrictCompl, mem_restrict_atoms]
 
-#print axioms mem_restrict_atoms
-#print axioms restrict_atoms_subset
-#print axioms mem_restrictCompl_atoms
-
 end ConcreteCage
 end Ell5
 end Erdos23Delta0

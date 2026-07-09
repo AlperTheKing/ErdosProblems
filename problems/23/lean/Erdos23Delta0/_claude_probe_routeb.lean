@@ -1,9 +1,1 @@
 import Erdos23Delta0.RouteBAssembly
-
-#print axioms Erdos23Delta0.RouteBAssembly.betaSimple_le_of_reserveResidual_nonneg
-#print axioms Erdos23Delta0.RouteBAssembly.gamma_le_N2_of_reserveResidual_nonneg
-#print axioms Erdos23Delta0.RouteBAssembly.zeroSlack_negBalance_cage_of_neg_reserve
-#print axioms Erdos23Delta0.RouteBAssembly.surplus_le_bankCap_of_hall_charge
-#print axioms Erdos23Delta0.RouteBAssembly.balance_nonneg_of_hall_charge
-#print axioms Erdos23Delta0.RouteBAssembly.pruned_balance_neg_of_neg
-#print axioms Erdos23Delta0.RouteBAssembly.doorOnly_balance_nonneg

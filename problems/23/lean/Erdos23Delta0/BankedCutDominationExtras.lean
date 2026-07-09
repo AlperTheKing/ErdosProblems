@@ -50,9 +50,6 @@ theorem bankedCutDomination_of_no_dualCert
     BankedCutDomination S F O J K sep dB inc kap :=
   (not_dualCert_iff_bankedCutDomination S F O J K sep dB inc kap hkap).mp hno
 
-#print axioms bankCost_nonneg
-#print axioms not_dualCert_iff_bankedCutDomination
-#print axioms bankedCutDomination_of_no_dualCert
 
 end BankedCutDominationExtras
 end Erdos23Delta0

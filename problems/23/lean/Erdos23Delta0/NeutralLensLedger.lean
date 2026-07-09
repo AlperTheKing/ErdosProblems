@@ -12,7 +12,7 @@ subcage — then minimality kills it **regardless of its balance sign**: both `W
 proper descendants, so minimality forces both balances `≥ 0`, whence `Balance(C) = Balance(C') + Balance(W) + rem ≥ 0`
 contradicts `Balance(C) < 0`. This module compiles that lever and the resulting crux reduction: the whole crux becomes
 the single open local lemma `book_or_ledgerSep` (equivalently `NoEscapingAtomThroughBalancedNeutralLens`), with the
-balance-sign difficulty removed. Abstract, axiom-clean; no `sorry`/`admit`/`native_decide`.
+balance-sign difficulty removed. Abstract, axiom-clean; No forbidden proof shortcuts.
 -/
 
 namespace Erdos23Delta0
@@ -71,9 +71,6 @@ theorem no_balanced_neutral_lens_of_dichotomy {γ : Type*} (Balance : γ → ℚ
   · exact no_ledgerSep_in_minNeg Balance Proper C W C' rem hCneg hMin hLS
   · linarith
 
-#print axioms no_ledgerSep_in_minNeg
-#print axioms book_of_book_or_ledgerSep
-#print axioms no_balanced_neutral_lens_of_dichotomy
 
 end NeutralLensLedger
 end Erdos23Delta0

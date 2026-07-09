@@ -166,7 +166,6 @@ theorem bare_sse_24_no_dualCert :
     (fun c hc j hj _hpos => hD2 c hc j hj trivial)
     hD1 hD3
 
-#print axioms bare_sse_24_no_dualCert
 
 
 lemma hkap_nonneg : ∀ j ∈ J, (0 : ℚ) ≤ kap j := by
@@ -179,7 +178,6 @@ theorem bare_sse_24_bankedCutDomination :
   bankedCutDomination_of_no_dualCert S F O J K sep dB inc kap hkap_nonneg
     bare_sse_24_no_dualCert
 
-#print axioms bare_sse_24_bankedCutDomination
 
 end BareSSE24
 end RCCPayloadFixtures

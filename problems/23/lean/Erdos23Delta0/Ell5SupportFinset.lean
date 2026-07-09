@@ -21,7 +21,7 @@ closes both gaps:
   transferred to the TRUE `E_short` (monotonicity: each canonical support is a subset of the atom's full `P_e`),
   stated end-to-end from the actual row length `Distances.ell = 5`.
 
-No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -102,12 +102,6 @@ theorem ell5_base_case_Eshort_of_ell (G : SimpleGraph V) (c : Distances.Cut V)
   ell5_base_case_Eshort S hInj
     (fun a ha => Ell5GraphBridge.dist_eq_four_of_ell_eq_five G c (hell a ha)) hS
 
-#print axioms mem_geodesicSupport
-#print axioms edges_toFinset_subset_geodesicSupport
-#print axioms four_le_geodesicSupport_card
-#print axioms atom_support_subset_geodesicSupport
-#print axioms ell5_base_case_Eshort
-#print axioms ell5_base_case_Eshort_of_ell
 
 end Ell5SupportFinset
 end Erdos23Delta0

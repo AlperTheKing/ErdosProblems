@@ -84,10 +84,6 @@ theorem no_pure_lens_in_minNeg {γ : Type*} (Balance : γ -> ℚ) (Proper : γ -
     False := by
   exact NeutralLensLedger.no_ledgerSep_in_minNeg Balance Proper C W C' rem hCneg hMin hLS
 
-#print axioms ell_eq_five_of_ell5Atom
-#print axioms surplus_split
-#print axioms pure_lens_ledgerSep
-#print axioms no_pure_lens_in_minNeg
 
 end Ell5GapLemmas
 end Erdos23Delta0

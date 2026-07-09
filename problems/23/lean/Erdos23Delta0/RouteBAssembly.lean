@@ -6,11 +6,11 @@ switch contradiction (no charge cert needed), with `reserveResidual = N² − Γ
 `0 ≤ reserveResidual`. The full switch/cage layer (PairTypeBThetaGate, PairDoorConvex, TerminalCage,
 sigma, Balance, Surplus, Bank) + the two residual leaves (NoSideDoorForLongAnnulus,
 PositiveSlackAbsorption_Hall) + ReserveLedgerComplete are built in later increments as NAMED hypotheses,
-never sorry (spec: problems/23/writeup/GAP1_ROUTEB_FINAL_SKELETON_GPTPRO.md).
+never uses placeholders (spec: problems/23/writeup/GAP1_ROUTEB_FINAL_SKELETON_GPTPRO.md).
 
 This increment lands the chain into the β-bound: `0 ≤ reserveResidual  ⟹  β = badCount ≤ N²/25`, reusing
 the fundamental Γ lower bound `25·badCount ≤ Γ` (`GammaChargeGraft.gammaLower_of_len5`, from length ≥ 5 +
-coverage). Additive: does NOT edit CertGraph. Honest = no sorry/admit/native_decide.
+coverage). Additive: does NOT edit CertGraph. Honest = no forbidden proof shortcuts.
 -/
 import Erdos23Delta0.CertGraph
 import Erdos23Delta0.GammaChargeGraft

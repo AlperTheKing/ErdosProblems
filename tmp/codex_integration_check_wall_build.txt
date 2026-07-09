@@ -1,0 +1,1 @@
+..\problems\23\lean\Erdos23Delta0\_claude_integration_check.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\codex_lean_o_wall_v1\Erdos23Delta0\Ell5CSReduction.olean' of module Erdos23Delta0.Ell5CSReduction does not exist

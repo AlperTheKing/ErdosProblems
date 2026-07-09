@@ -15,7 +15,7 @@ contradicting maximality (`MaxCutVertexIneq.not_isMaxCut_of_improving_flip`). Th
 Consequence `maxCut_badEdge_blueReachable`: the `bConnected` field of the M6 `GoodCutData` provider is FREE for
 every maximum cut — no per-component surgery needed at selection time. `exists_maxCut_argmin_bconnected` then
 packages the full selection: a Γ-minimal (any `ℕ`-functional) maximum cut that is blue-connected on all its bad
-pairs exists. No `sorry`/`admit`/`native_decide`; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
+pairs exists. No forbidden proof shortcuts; axiom-probe expected `⊆ {propext, Classical.choice, Quot.sound}`.
 -/
 
 namespace Erdos23Delta0
@@ -125,10 +125,6 @@ theorem exists_maxCut_argmin_bconnected (G : SimpleGraph V) [Fintype G.edgeSet]
   exact ⟨s, hmax, fun u v hadj hmono => maxCut_badEdge_blueReachable G hmax hadj hmono,
     fun s' h1 => hmin s' h1 trivial⟩
 
-#print axioms deltaB_blueComponent_empty
-#print axioms badEdge_mem_deltaM_of_not_reachable
-#print axioms maxCut_badEdge_blueReachable
-#print axioms exists_maxCut_argmin_bconnected
 
 end M6BlueConnectivity
 end Erdos23Delta0
