@@ -8,6 +8,7 @@ import Erdos23Delta0.CageSuperadditivity
 import Erdos23Delta0.Ell5GeodesicUnion
 import Erdos23Delta0.Ell5F5LiftInterface
 import Erdos23Delta0.Ell5FullBankInterface
+import Erdos23Delta0.Ell5FullBankAssignedSink
 import Erdos23Delta0.Ell5GapLemmas
 import Erdos23Delta0.Ell5PureLensCageInterface
 import Erdos23Delta0.Ell5DistancePrune
@@ -15,6 +16,9 @@ import Erdos23Delta0.Ell5FootprintCount
 import Erdos23Delta0.O14.EQODL1CoverInterface
 import Erdos23Delta0.O14.EQODL1LeafProvider
 import Erdos23Delta0.O14.ChartCoverToODLFull
+import Erdos23Delta0.BranchB.Dict24
+import Erdos23Delta0.BranchB.CombinedHBD
+import Erdos23Delta0.BranchB.CDTelescope
 
 /-! Integration check: forces all seven session modules to load and typecheck TOGETHER (catches olean staleness /
     cross-module conflict before assembly). The imports themselves are the test; the `#check`s pin the public
@@ -36,6 +40,9 @@ namespace IntegrationCheck
 #check @Ell5F5LiftInterface.no_card_seven_violator_of_no_realizable_f5_core_shape_gate
 #check @Ell5FullBankInterface.graph_bankedCutDomination_of_cert
 #check @Ell5FullBankInterface.graph_no_dualCert_of_cert
+#check @Ell5FullBankAssignedSink.cert_of_assignedSink
+#check @Ell5FullBankAssignedSink.bankedCutDomination_of_assignedSink
+#check @Ell5FullBankAssignedSink.no_dualCert_of_assignedSink
 #check @Ell5GapLemmas.ell_eq_five_of_ell5Atom
 #check @Ell5GapLemmas.surplus_split
 #check @Ell5GapLemmas.pure_lens_ledgerSep
@@ -53,6 +60,10 @@ namespace IntegrationCheck
 #check @O14.EQODL1LeafProvider.resolvedODL_eq_leaf_of_o14_cover
 #check @O14.EQODL1LeafProvider.concreteChecksWithEQ_of_o14_cover
 #check @O14.ChartCoverToODLFull.rowODL_of_o14_eq_cover_semantic_tree
+#check @BranchB.Dict24.dict24_sum_split
+#check @BranchB.Dict24.dict24_part_sums_nonneg
+#check @BranchB.CombinedHBD.hbd_ledger_sound
+#check @BranchB.CDTelescope.cd_telescope_sound
 
 end IntegrationCheck
 end Erdos23Delta0

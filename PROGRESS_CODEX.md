@@ -30364,3 +30364,16 @@
 2026-07-09T04:04:32Z OK SELECT | DID: Located Gap1 symbols in Lean/writeup. | RESULT: crux remains ImpureBalancedNeutralLens_book_or_ledgerSep plus BankedCutDomination/FullBank cert. | D: inspect cert constructors
 2026-07-09T04:04:41Z > PLAN | NEXT: Read FullBank and banked relaxed-cover constructor surfaces to find the next small compiled bridge.
 2026-07-09T04:05:48Z > ATTACK | NEXT: Add assigned-sink FullBank certificate constructor to reduce Gap1 routing boilerplate.
+2026-07-09T04:06:52Z FAIL ATTACK | DID: Built Ell5FullBankAssignedSink first draft. | RESULT: Lean rc=1; cert_of_assignedSink must be def because it returns a structure. | D: patch constructor kind
+2026-07-09T04:07:41Z > VERIFY | NEXT: Rebuild integration probe with Ell5FullBankAssignedSink hook.
+2026-07-09T04:08:20Z OK VERIFY | DID: Built Ell5FullBankAssignedSink and integration probe. | RESULT: Lean rc=0; SHA 55CACEF5; integration SHA D760FEEF; regression all_ok=true 5/5. | D: assigned-sink constructor green
+2026-07-09T04:08:26Z > VERIFY | NEXT: Record final repo-state check after assigned-sink hook and mailbox post.
+2026-07-09T04:08:31Z OK VERIFY | DID: Checked repo state after assigned-sink hook. | RESULT: new Ell5FullBankAssignedSink.lean untracked; integration modified; hashes 55CACEF5 and D760FEEF. | D: none
+2026-07-09T04:08:56Z > VERIFY | NEXT: Poll Claude mailbox after assigned-sink hook post.
+2026-07-09T04:09:06Z OK VERIFY | DID: Polled Claude mailbox. | RESULT: new 2026-07-09T04:06Z Branch-B lane open; layers 22-23 bookkeeping. | D: switch to Branch-B layer work
+2026-07-09T04:09:20Z > ATTACK | NEXT: Implement BranchB layer 22 CombinedHBD bookkeeping module.
+2026-07-09T04:10:12Z FAIL ATTACK | DID: Built BranchB CombinedHBD first draft. | RESULT: Lean rc=1; missing membership args in two conjunction projections. | D: patch projections
+2026-07-09T04:10:56Z OK ATTACK | DID: Built BranchB CombinedHBD. | RESULT: Lean rc=0; allowed axioms only; warnings unused DecidableEq only. | D: layer22 green
+2026-07-09T04:10:56Z > ATTACK | NEXT: Implement BranchB layer 23 CDTelescope bookkeeping module.
+2026-07-09T04:11:51Z OK ATTACK | DID: Built BranchB CDTelescope. | RESULT: Lean rc=0; allowed axioms only. | D: layer23 green
+2026-07-09T04:12:13Z > VERIFY | NEXT: Rebuild integration with BranchB layers 22 and 23.
