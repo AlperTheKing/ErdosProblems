@@ -207,3 +207,30 @@
 ## TICK-45 (2026-07-10 ~02:05): ROUTE-DECIDER LANDED — R5 359-vtx candidate EXACT-VERIFIED (my gate ALL PASS). Root-locality (forcedEscapeStep_commonBankSink) FALSIFIED in real graphs under door/vertexSlack incidence; residual gates = C5Base/prune cross-root sinks + ReducedMinimalNegativeBalance of the candidate (check both next). WALL OF RECORD pivots to: W1 + RootCrossingPureLensSplit_exists (root crossing => checked bank-separated PureLensCageSplit => child negative => contradicts reduced minimality; derivable from compiled T8) + ClosedWeightedHallCompleteness + exchange identity + Farkas iff. Retask 5.6-Pro on the split lemma NEXT TICK.
 ## TICK-50 NOTE (2026-07-10 ~10:00): GPT thread MOVED — new URL https://chatgpt.com/c/6a4ff2f3-05c0-83ed-ac11-6e4d7429bdd4 ("Erdős Problem #23 Strategy"; R6/R7 likely from here; old 6a4f4bd6 thread retired). Final-theorem retask SENT there (streaming). R7 CE exact-verified (my gate). WALL = StrictDualRootCrossingPureLensSplit_exists; DEAD list grew: universal fibers, fiberless=>bankable. Codex bookkeeping-stack post still pending (next tick with their delta gate).
 ## TICK-60 NOTE (2026-07-11 ~09:50): R12-R16 batch archived (WALL_ATTACK_R12_GPTPRO56.md + _R13_R16_BATCH.md, commits b9a69d1ca etc.). LIVE THEOREM = R16 FBH via C5-collision reserve (η-accounting = the one new extractor lemma). LAST batch reply STILL GENERATING on thread https://chatgpt.com/c/6a4ff2f3-05c0-83ed-ac11-6e4d7429bdd4 — I RESUME BROWSER HARVESTING from here (user directive): fresh tabs_context after the restart, navigate to the thread, wait for stream end, Copy-button+clipboard harvest (fallback chunked innerText), archive as R17, exact-gate. GATE QUEUE: R13 7-vtx (trivial), R14 13-vtx script, R15 167-vtx script, R16 max-flow gate + closed-form expectations. CODEX LANES to post after harvest: typed-source SPEC-1 upgrade (R13 §5-6), first-collision owner atlas checker (R14 §7), componentwise bridge (R15 §16), η-accounting formalization (R16 §4). Staged chart re-gate relaunched (b8o2vef59, resumable ledger).
+## TICK-70 RECONCILIATION (2026-07-11 ~13:40): CODEX PARALLEL LANE INVENTORIED (235KB delta, ~40 new modules, ALL pending my gate)
+- **CRITICAL FORK**: Codex 23:19Z claims the R17/R18 residual-transfer route is DEAD (GPT-Pro transfer
+  double-spends; Collision→Free alone ⟺ N²−25m ≥ 0 = compiled Bank0 ⟹ circular) — compiled replacement:
+  TypedPositiveCapacityMixedPath (673FDF97…) + PositiveCouplingSideInvariant (82C14CE7…) ⟹ **NMC reduced to
+  TWO local one-step obligations: (a) primitive escape-block steps preserve the inside-corner label;
+  (b) shared positive c5Base/prune fibers preserve it** (Door eliminated formally; vertexSlack automatic).
+  MY R19 retask (transfer constructor) may be MOOT — on harvest, cross-check R19 vs the circularity claim;
+  RECONCILE the two frontiers before any further consult. Verify the circularity argument EXACTLY (is
+  HitNeed ≤ componentResidual a real noncircular inequality? read 23:06/23:08/23:19 posts in full).
+- Key compiled-by-Codex (claims; gate queue in priority order): RootLayerHalfSqueeze (R11 half-layer as MY
+  DualSqueeze — exactly my proposed corollary) + DisjointPetalHalfSqueeze(+Checker);
+  PrimitiveBlockClosureCounterexample (R11's NMC was NOT the only gap — PrimitiveBlockClosureExactOn
+  independent!); W3 stack (BankedWallRoutingFailure, ClosedWeightedHall, BankedWallW3Skeleton,
+  ClosedShoreBankPrime, DualWeightedHallReduction — claims to REMOVE ClosedWeightedHallCompleteness at the
+  scaled-LP level); Wall24PrimalFixture + Wall359PrimalFixture (no_dualCert on both verified exhibits!);
+  active-component stack (Ell5ActiveComponentFlow/Hall wiring, Ell5CollisionBudget, Ell5SupportEdgeCollision,
+  Ell5GeodesicSupportAdj, Ell5MinimalCircuitDualHall, EndpointReserveHall, CollisionReserveCounting);
+  R13 typed sources (Gamma/TypedFullBankSources); MY row-intersection lemma ALREADY COMPILED
+  (InternalOffSupportRowIntersection); R13/R14 countermodels+checkers (AggregateLedgerNoIncidence…,
+  HornSplitOrTwoCover…, HornClosedShoreSplitChecker, HornSplitOrHalfLayerChecker,
+  InactiveComponentBlockChecker); FCBridge wrappers + PackageProviderSkeleton (remaining top FC theorem =
+  ∀ tri-free Gs, Nonempty (SimpleGraphCertificatePackage Gs)) + BankedWallEndgameCert + dependency map
+  CODEX_ENDGAME_DEPENDENCY_MAP_20260709.md.
+- Hygiene: SPEC-1/provider files got #print-probe cleanup ⟹ NEW SHAs (F4806742…, 8F7941DF…) — re-gate;
+  emitters no longer emit probes; generated tree still carries probes (final regeneration pass needed);
+  my wave script flaws flagged (fail-persist mid-wave + probe-blind token regex) — staged script inherits.
+- Mailbox marker → 2406439 AFTER the full-text gating session (inventory only so far — headers + artifacts).
