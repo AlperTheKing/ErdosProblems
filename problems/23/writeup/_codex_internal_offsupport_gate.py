@@ -185,11 +185,31 @@ def component_path_counterexample(n, support_edges, bad_edges, seed_chord,
     candidate = [set() for _ in range(n)]
     for u in range(n):
         for v in range(u + 1, n):
-            if colours[u] != colours[v] and (u, v) not in support_set:
+            if (colours[u] != colours[v] and (u, v) not in support_set and
+                    valid_offsupport_set(
+                        n, support_edges, bad_edges, {tuple(sorted((u, v)))})):
                 candidate[u].add(v)
                 candidate[v].add(u)
 
+    reachable_bad = []
     for a, b in bad_edges:
+        seen = {a}
+        queue = deque([a])
+        while queue:
+            x = queue.popleft()
+            for y in candidate[x]:
+                if y not in seen:
+                    seen.add(y)
+                    queue.append(y)
+        if b in seen:
+            reachable_bad.append((a, b))
+
+    # Any genuine off-support component is a subgraph of `candidate`, so an
+    # active component requires one selected bad pair to be connected here.
+    if not reachable_bad:
+        return None
+
+    for a, b in reachable_bad:
         path = [a]
         used = {a}
 

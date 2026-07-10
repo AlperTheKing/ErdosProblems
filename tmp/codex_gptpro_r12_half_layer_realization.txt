@@ -1,0 +1,49 @@
+We are proving full Erdos Problem #23. Please attack ONE precise remaining lemma, not survey alternatives.
+
+CURRENT EXACT STATE.
+
+Two Lean theorems are already compiled, sorry-free, exact-rational:
+
+1. `noStrictDual_of_halfLayerTwoCover`:
+for a checked BankedWallLP dual d, if listed wall rows cover every positive-alpha atom exactly twice and their half-sum has a legal bank routing within short-edge and sink capacities, then d has no positive strict gap.
+
+2. `noStrictDual_of_disjointPetalTwoCover`:
+the routing follows if the rows are actual boundary indicators of pairwise-disjoint petal shores and every port has an injective legal own Door of capacity >= 1.
+
+Thus the fractional half-layer algebra is DONE. The missing realization data are:
+
+  (TWO) every positive-alpha atom is covered exactly twice by the real root rows;
+  (PETAL) their actual root-free shores are pairwise disjoint;
+  (DOOR) every exposed restriction-exit port has an injective legal own edge-labelled Door.
+
+The actual compiled global package currently exposes only:
+
+```
+LedgerToken = (comp : Fin componentCount, kind : CapKind,
+               sourceId : Nat, capQ : Rat)
+GlobalLedgerData = token + spendQ(local,token) + reserve slacks
+FullBankGlobalPackage.Checked:
+  local views checked, spend nonnegative, no double spend,
+  no cross-component spend,
+  uniqueness of (comp,kind,sourceId), reserve identities, ...
+```
+
+It has NO port type and NO legal edge-to-token incidence. The source contains the explicit guardrail: "legal edge-to-token incidence is still absent from this package; finite sinks and capacities do not assert a Hall condition." The concrete `LocalBankTerm` is only `(kind,support,cap)` and also has no source edge.
+
+So DO NOT assume `MandatoryDoorRoute`, `CheckedRootLayerOddCircuit`, `RootWallRow`, or a port-to-token map: none currently has a concrete constructor. Adding a Prop provider that simply assumes them is not progress.
+
+Also ruled out today: the conjecture that every minimal local support obstruction is series-parallel. Exact exhaustive search found a valid m=17 obstruction on a bipartite K4 subdivision (14 vertices, 16 supply edges, 17 distance-4 triangle-free atoms, every supply edge multiplicity >=3). So a global series-parallel multiflow shortcut is false.
+
+REQUEST.
+
+Decide and prove one of the following, with exact formulas.
+
+(A) Derive a half-layer routing from the EXISTING aggregate `spendQ` ledger without a port-to-token map. State the precise theorem using only fields listed above and give the construction of rho / the inequality that replaces own Doors.
+
+or
+
+(B) Prove this is impossible by an explicit finite rational countermodel satisfying every current `FullBankGlobalPackage.Checked` field plus TWO and PETAL at the abstract wall level, but admitting a checked positive-gap wall dual because no legal port incidence is fixed. Then state the MINIMAL additional mechanically-checkable datum that suffices, and prove its soundness without assuming the desired Hall inequality.
+
+If (B), the datum must be operational: identify ports and tokens from existing graph/extractor objects (not a naked Prop), give a Boolean/exact checker, and show how its accepted output constructs `HalfLayerRouted`. Specify exactly which current source field must change (for example a typed source key replacing bare `sourceId : Nat`).
+
+The answer should end with ONE Lean-ready theorem statement and either a proof or a complete exact countermodel. Do not re-prove the half-layer theorem itself; it is already compiled. Do not return to no-mixed-corner closure, strict lenses, integral fibers, or series-parallel support.

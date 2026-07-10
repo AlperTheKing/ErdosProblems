@@ -1,0 +1,50 @@
+We are proving full Erdos Problem #23. Attack ONE precise geometric/combinatorial bridge. Do not survey old routes.
+
+COMPILED FACTS.
+
+1. Canonical tight-corner algebra: two D1-tight cuts X,Y with nonnegative intersection/union slacks and a positive opposite-corner port imply a positive-alpha atom between Q10=X\Y and Q01=Y\X.
+
+2. Exact directed-Horn closure checker: a finite rule is `(premise : Finset Port, conclusion : Port)`. `checkHornClosed rules S=true` soundly means every rule with premise subset S has conclusion in S. `checkHornClosedSplitCandidate` verifies two supplied proper Horn-closed child shores, a disjoint/exhaustive exposed-port partition, and disjoint legal sink neighborhoods; acceptance constructs `ProperClosedBankSplit` at the SAME load.
+
+3. Exact half-layer checker: supplied actual wall rows, pairwise-disjoint root-free petal shores, actual short/port boundary edge maps, injective legal own Doors cap>=1, and positive-alpha coverage exactly 2 construct `HalfLayerRouted` and exclude every checked strict dual. The algebra is done.
+
+4. Aggregate spendQ cannot replace legal port incidence. This is formally countermodeled. A real payload must carry actual typed port/sink data.
+
+5. Every-support-series-parallel is false: exact m=17 K4-subdivision local obstruction.
+
+CRITICAL CORRECTION.
+
+The real full-escape closure is DIRECTED HORN closure. It is not equivalently saturation under undirected primitive blocks. A compiled finite counterexample refutes `FullEscapeClosedIffBlockSaturated`. Therefore do NOT assume block components, NMC as a hypothesis, or take connected components of a symmetrized rule relation.
+
+TARGET ROUTE.
+
+Let parent be a minimal positive-deficiency Horn-closed shore with one root. Let seedL and seedR be the actual opposite-corner ports from an innermost tight D1 crossing. Compute the directed closures
+
+  L0 = close_Horn(seedL),   R0 = close_Horn(seedR).
+
+If a proper closed partition can be extracted, the existing split checker finishes. The remaining case is a first collision / forced overlap of the two directed derivations. The hoped-for theorem is:
+
+  collision of the two minimal Horn derivations
+    => an actual finite family of root-wall rows whose root-free petal shores
+       are pairwise disjoint and cover every positive-alpha atom exactly twice
+    => half-layer contradiction.
+
+REQUEST.
+
+Give a rigorous `HORN-SPLIT-OR-TWOCOVER` theorem. You must:
+
+- use directed derivation trees/forests, not undirected block components;
+- specify the minimal derivation chosen at the first collision;
+- state exactly what real extractor label/witness each Horn rule must carry (actual graph edge, inside endpoint, corridor, wall row, or sink ID);
+- construct either concrete left/right child port sets accepted by the current split checker, OR concrete `walls/shore/shortEdge/portEdge/door` data accepted by the current half-layer checker;
+- prove pairwise petal disjointness and positive-alpha exact TwoCover, not assume them;
+- identify where triangle-freeness, shortest four-edge corridors, and Gamma-minimality are used;
+- preserve the original load in the split branch.
+
+If this implication is false even with the natural real-rule labels, give the smallest exact finite countermodel and state the weakest operational rule annotation that repairs it. A naked Prop such as `NoMixedCornerPortComponent`, `collisionProducesTwoCover`, or `RealCouplingCorridorWitness` without a finite construction is not an answer.
+
+End with ONE Lean-ready theorem statement whose conclusion is a sum type:
+
+  ProperClosedBankSplit ...  ⊕  CheckedDisjointPetalTwoCover ...
+
+and either a full proof or a complete exact countermodel. Do not re-prove the half-layer algebra or return to integral fibers, strict lenses, arbitrary Hall, or block saturation.

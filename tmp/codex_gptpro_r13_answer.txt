@@ -1,0 +1,1076 @@
+Result: the unannotated implication is false
+
+Directed Horn derivations, even with individually valid graph-edge, inside-endpoint, shortest-corridor, wall-row, and sink labels, do not impose the global conservation needed for PETAL and TWO.
+
+The following exact finite model has:
+
+a triangle-free connected-B, Γ-minimal maximum cut;
+
+a genuine ℓ=5 atom;
+
+a checked strict dual over the full cut family;
+
+two tight crossing rows and a positive actual opposite-corner port;
+
+a minimal positive-deficiency Horn-closed shore with one root;
+
+a nonseed first collision of the two minimal directed derivations;
+
+no proper closed split;
+
+no routed disjoint-petal TwoCover.
+
+The missing datum is a globally checked first-owner wall atlas, together with typed Door sources for every port in the resulting petal boundaries.
+
+1. Exact graph
+
+Use vertices
+
+{x,a,b,c,y,r
+1
+	​
+
+,r
+2
+	​
+
+,u,v,r
+3
+	​
+
+,x
+∘
+,y
+∘
+,b
+∘
+}.
+
+The blue edges are the two internally disjoint even x-y paths
+
+P
+4
+	​
+
+:x−a−b−c−y,
+P
+6
+	​
+
+:x−r
+1
+	​
+
+−r
+2
+	​
+
+−u−v−r
+3
+	​
+
+−y,
+
+together with three restriction-exit edges
+
+xx
+∘
+,yy
+∘
+,bb
+∘
+.
+
+The only bad edge is
+
+f=xy.
+
+Thus
+
+∣V∣=13,∣B∣=13,∣H∣=1,∣E∣=14.
+
+The graph is triangle-free. Its only cycles have lengths 5,7,10.
+
+Take the bipartition of the connected blue graph as the displayed cut. It cuts all thirteen blue edges and leaves xy bad.
+
+If another cut makes xy blue, then each of the two even x-y paths must contain an uncut blue edge. Since those paths are edge-disjoint, such a cut has size at most
+
+13−2+1=12.
+
+Hence the displayed cut is globally maximum, of size 13, and is unique up to complementation.
+
+The unique shortest blue x-y path is P
+4
+	​
+
+, so
+
+d
+B
+	​
+
+(x,y)=4,ℓ(f)=5.
+
+Every connected-B maximum cut has one bad edge. Triangle-freeness forces that edge’s even blue distance to be at least 4, so every such cut has Γ≥25. The displayed cut has Γ=25, hence is Γ-minimal.
+
+2. Full-family checked strict dual
+
+Let the wall-row vertex universe be
+
+W={x,a,b,c,y,r
+1
+	​
+
+,r
+2
+	​
+
+,u,v,r
+3
+	​
+
+}.
+
+Rows are all 2
+10
+=1024 subsets of W.
+
+Treat the six edges of P
+6
+	​
+
+ as actual port coordinates. Each is oriented to one endpoint and has one legal bank token t
+e
+	​
+
+, with
+
+cap(t
+e
+	​
+
+)=0,
+
+and a nonempty singleton vertex support. Thus these are typed, banked sinks; they are not supportless pooled sinks.
+
+Set
+
+α
+f
+	​
+
+=
+13
+1
+	​
+
+,
+γ
+e
+	​
+
+=
+13
+1
+	​
+
+(e∈E(P
+6
+	​
+
+)),
+δ
+t
+e
+	​
+
+	​
+
+=
+13
+1
+	​
+
+(e∈E(P
+6
+	​
+
+)),
+
+and set every β and every other dual coordinate to zero.
+
+Normalization is exact:
+
+13
+1
+	​
+
++6
+13
+1
+	​
+
++6
+13
+1
+	​
+
+=1.
+
+For any row S⊆W,
+
+1[xy∈δ(S)]≤
+e∈E(P
+6
+	​
+
+)
+∑
+	​
+
+1[e∈δ(S)].
+(1)
+
+Indeed, if S separates x from y, then the boundary of the x-y path P
+6
+	​
+
+ has odd, hence positive, cardinality.
+
+Multiplying (1) by 1/13 proves every one of the 1024 D1 inequalities. Every D2 inequality is tight:
+
+γ
+e
+	​
+
+=δ
+t
+e
+	​
+
+	​
+
+.
+
+Since all six sink capacities are zero,
+
+StrictGap=α
+f
+	​
+
+−
+e
+∑
+	​
+
+0⋅δ
+t
+e
+	​
+
+	​
+
+=
+13
+1
+	​
+
+>0.
+(2)
+Tight crossing
+
+Define
+
+X={x,r
+1
+	​
+
+,r
+2
+	​
+
+,u,b},
+Y={y,r
+3
+	​
+
+,v,b}.
+
+Then
+
+X∩Y={b},
+Q
+10
+	​
+
+=X∖Y={x,r
+1
+	​
+
+,r
+2
+	​
+
+,u},
+Q
+01
+	​
+
+=Y∖X={y,r
+3
+	​
+
+,v}.
+
+The central actual port edge
+
+p
+×
+	​
+
+=uv
+
+joins Q
+10
+	​
+
+ to Q
+01
+	​
+
+, and γ
+p
+×
+	​
+
+	​
+
+=1/13>0. The atom xy also joins the opposite corners.
+
+Exactly one P
+6
+	​
+
+-edge, namely uv, crosses each of X and Y. Therefore
+
+D1Slack(X)=D1Slack(Y)=0.
+
+For
+
+I=X∩Y={b},J=X∪Y,
+
+neither the atom nor any P
+6
+	​
+
+-edge crosses, so
+
+D1Slack(I)=D1Slack(J)=0.
+
+Thus the accepted four-corner algebra applies exactly.
+
+3. Directed Horn system
+
+The Port type contains
+
+{L,R,Z,P
+0
+	​
+
+,…,P
+5
+	​
+
+}.
+
+Here:
+
+L is the actual exit edge xx
+∘
+;
+
+R is the actual exit edge yy
+∘
+;
+
+Z is the actual exit edge bb
+∘
+;
+
+P
+i
+	​
+
+ is the i-th actual edge of P
+6
+	​
+
+.
+
+The Horn rules are
+
+{L}→Z,{R}→Z,{Z}→L,{Z}→R,
+(3)
+
+and, for each 0≤i<6,
+
+{Z}→P
+i
+	​
+
+,{P
+i
+	​
+
+}→Z.
+(4)
+
+The only Horn-closed shores are
+
+∅andP
+all
+	​
+
+={L,R,Z,P
+0
+	​
+
+,…,P
+5
+	​
+
+}.
+(5)
+
+Indeed, any nonempty shore derives Z, and Z derives every port.
+
+First collision
+
+Use the usual forward-round rank
+
+rank
+S
+	​
+
+(p)=min{n:p is derivable from seed S in n rounds}.
+
+From seed L,
+
+rank
+L
+	​
+
+(L)=0,rank
+L
+	​
+
+(Z)=1,
+
+and every other port has rank 2. Symmetrically,
+
+rank
+R
+	​
+
+(R)=0,rank
+R
+	​
+
+(Z)=1.
+
+With collision order
+
+(max(rank
+L
+	​
+
+p,rank
+R
+	​
+
+p),rank
+L
+	​
+
+p+rank
+R
+	​
+
+p,code(p)),
+
+the first nonseed collision is exactly
+
+Z.
+
+The two minimal derivations are the one-rule trees
+
+L→Z,R→Z.
+
+This is the smallest possible unary-Horn collision core: two distinct seeds plus a distinct first collision require three ports, and making both seed closures equal to the parent requires the four rules in (3). The six P
+i
+	​
+
+ are additional wall-port coordinates, not part of the minimal collision core.
+
+4. Minimal positive-deficiency parent
+
+At the original load L
+0
+	​
+
+, set
+
+L
+0
+	​
+
+(L)=L
+0
+	​
+
+(R)=
+2
+3
+	​
+
+,
+
+and
+
+L
+0
+	​
+
+(Z)=L
+0
+	​
+
+(P
+i
+	​
+
+)=0.
+
+Give L and R their actual typed own Doors:
+
+cap(Door(xx
+∘
+))=1,
+cap(Door(yy
+∘
+))=1.
+
+All other legal tokens have capacity zero.
+
+Hence
+
+deficiency(P
+all
+	​
+
+)=3−2=1.
+(6)
+
+By (5), the only proper closed shore is empty, whose deficiency is zero. Therefore P
+all
+	​
+
+ is inclusion-minimal positive-deficient.
+
+Assign every port the same extractor root. The parent has exactly one root.
+
+No two strict proper Horn-closed children can partition the parent, because no nonempty proper Horn-closed shore exists. Thus the ProperClosedBankSplit branch is impossible before even checking sink-neighborhood disjointness.
+
+5. Every rule has the requested natural labels
+
+Every rule is assigned all of the following concrete data:
+
+an actual source port and actual graph edge;
+
+the actual inside endpoint;
+
+the atom xy;
+
+the actual shortest four-edge corridor
+
+x−a−b−c−y;
+
+an actual vertex-subset wall row;
+
+an existing typed sink ID.
+
+Use the following row labels for the four rules in (3):
+
+L→Z↦X,
+R→Z↦Y,
+Z→L↦I,
+Z→R↦J.
+
+For P
+i
+	​
+
+→Z, use the actual prefix row
+
+S
+i
+	​
+
+={x,r
+1
+	​
+
+,…,the endpoint preceding P
+i
+	​
+
+}.
+
+This row cuts exactly P
+i
+	​
+
+ on P
+6
+	​
+
+ and separates x from y, so it is D1-tight.
+
+For Z→P
+i
+	​
+
+, use I={b}. Its source edge bb
+∘
+ is an actual boundary edge.
+
+Thus every label is individually checkable from the graph. Nevertheless, the labels carry no global statement relating the different wall shores to a partition of the first-collision derivation.
+
+6. Why no TwoCover branch exists
+
+Suppose a finite family of actual wall rows S
+j
+	​
+
+ covers the unique positive-alpha atom exactly twice:
+
+j
+∑
+	​
+
+1[xy∈δ(S
+j
+	​
+
+)]=2.
+(7)
+
+In the half-layer, each row has weight 1/2. For every S
+j
+	​
+
+, path parity gives
+
+e∈E(P
+6
+	​
+
+)
+∑
+	​
+
+1[e∈δ(S
+j
+	​
+
+)]≥1[xy∈δ(S
+j
+	​
+
+)].
+
+Therefore the total half-layer demand on the six P
+6
+	​
+
+-ports is at least
+
+e∈E(P
+6
+	​
+
+)
+∑
+	​
+
+L
+e
+	​
+
+	​
+
+=
+2
+1
+	​
+
+j
+∑
+	​
+
+e∈E(P
+6
+	​
+
+)
+∑
+	​
+
+1[e∈δ(S
+j
+	​
+
+)]
+≥
+2
+1
+	​
+
+j
+∑
+	​
+
+1[xy∈δ(S
+j
+	​
+
+)]
+=1.
+	​
+
+(8)
+
+The total capacity of every sink legally reachable by those six ports is zero. Thus no legal ρ can satisfy their demand conservation.
+
+Consequently there is no HalfLayerRouted, and hence no accepted CheckedDisjointPetalTwoCover, irrespective of whether some row shores happen to be disjoint.
+
+For the two distinguished tight rows specifically,
+
+X∩Y={b}
+
+=∅,
+
+and their half-layer places exact load
+
+2
+1
+	​
+
++
+2
+1
+	​
+
+=1
+
+on the zero-capacity central port uv.
+
+So both alternatives in the requested sum type fail.
+
+Triangle-freeness, shortestness of the four-edge corridor, and Γ-minimality all hold in this model. They therefore cannot supply the missing global Horn-to-wall coherence.
+
+The exact checker enumerates:
+
+all 2
+13
+ graph cuts;
+
+all 2
+10
+ D1 rows;
+
+all 2
+9
+ Horn shores;
+
+every split candidate;
+
+all rule-label validity conditions.
+
+erdos23_horn_split_twocover_countermodel.py
+
+SHA-256:
+
+30ab773948748677d0e3fa2e32f6994614fba0aa3062bf6b77a03c08b6c9e3c0
+7. Minimal operational repair
+
+The rule labels need one global, mechanically checked coherence layer. It should not store PETAL or TWO as propositions.
+
+7.1 Typed token sources
+
+The existing field
+
+lean
+sourceId : Nat
+
+must become a kind-indexed extractor key:
+
+lean
+def CapSource
+    (E : RealExtractorData)
+    (c : Fin E.componentCount) :
+    CapKind → Type
+  | .door        => E.ExitPortKey c
+  | .vertexSlack => E.VertexKey c
+  | .baseLeaf    => E.BaseLeafKey c
+  | .prune       => E.PruneKey c
+
+and
+
+lean
+structure LedgerToken
+    (E : RealExtractorData) where
+  comp   : Fin E.componentCount
+  kind   : CapKind
+  source : CapSource E comp kind
+  capQ   : Rat
+
+For .door, token equality then contains equality of the actual extractor exit-port key. This makes own-Door legality and injectivity computable, rather than certificate-assumed.
+
+7.2 Deterministic first-collision forest
+
+From the Horn rules and the two seeds, compute:
+
+both forward-round ranks;
+
+the first collision using the rank tuple above;
+
+for each derived nonseed port, the lexicographically least producer rule minimizing
+
+	​
+
+p∈premise(r)
+max
+	​
+
+rank(p),
+p∈premise(r)
+∑
+	​
+
+rank(p),code(r)
+	​
+
+;
+
+the two finite producer DAGs leading to the first collision.
+
+No proof forest is supplied by the certificate.
+
+7.3 Per-rule concrete label
+
+Each producer rule must carry this finite data:
+
+lean
+structure RealHornRuleLabel
+    (E : RealExtractorData)
+    (r : HornRule E.Port) where
+  principal : E.Port
+  edgeKey   : E.GraphEdgeKey
+  insideKey : E.VertexKey
+  atomKey   : E.AtomKey
+  corridor  : Fin 5 → E.VertexKey
+  wallKey   : E.WallRowKey
+  sinkKey   : E.TokenKey
+
+The Boolean checker recomputes:
+
+principal ∈ r.premise;
+
+edgeOfPort principal = edgeKey;
+
+insideEndpoint principal = insideKey;
+
+corridor is simple, blue, has four edges, and has the atom endpoints;
+
+it is the canonical Γ-minimal shortest corridor;
+
+wallKey is the actual boundary row of its stored shore;
+
+sinkKey is an actual package token;
+
+legal principal sinkKey.
+
+Triangle-freeness and shortest-ℓ=5 are consumed in the corridor check. Γ-minimality is consumed when checking that an equal-length alternative has no smaller canonical corridor code. They do not imply the global checks below.
+
+7.4 Owner fibres, not supplied petals
+
+For a proof-forest node n, define its finite footprint by
+
+foot(n)=V(corridor(n))∪{inside(p):p∈premise(n)∪{conclusion(n)}}.
+
+Order the proof nodes deterministically by
+
+(derivation depth,side,port code,rule code).
+
+For every parent vertex v, compute
+
+owner(v)=the first proof node n with v∈foot(n),
+
+with the unique root forced to have owner none.
+
+Define
+
+petal(n)={v:owner(v)=n}.
+(9)
+
+Pairwise petal disjointness is now a theorem, because these are fibres of a function.
+
+The checker verifies the finite equality
+
+shore(wallKey(n))=petal(n)
+(10)
+
+for every selected node. It does not accept an independently supplied petal mask.
+
+The countermodel fails (10): both X and Y contain b, whereas a deterministic owner can assign b to only one node.
+
+7.5 Endpoint-owner check implies TWO
+
+For every atom f=st with α
+f
+	​
+
+>0, check
+
+lean
+owner s = some i
+owner t = some j
+i ≠ j
+
+using its actual graph endpoints.
+
+This is not an incidence-count assumption. Given (9) and (10), it proves exact TwoCover:
+
+n
+∑
+	​
+
+1[f∈δ(petal(n))]=2.
+(11)
+
+Indeed, only the fibres of owner s and owner t separate the endpoints.
+
+7.6 Boundary-complete Door check
+
+For every edge in the actual boundary of every owner fibre, the checker requires exactly one of:
+
+it is an actual short-edge coordinate; or
+
+it is an actual restriction-exit port.
+
+Internal off-support port edges are rejected in this branch.
+
+For each resulting exit port p, search the token array for the unique token satisfying
+
+lean
+t.comp   = p.comp
+t.kind   = .door
+t.source = .door p.key
+1 ≤ wallSinkCap t
+legal p t
+
+The map doorOf is generated by this search. Injectivity follows from typed source equality, not from a supplied proposition.
+
+The 13-vertex countermodel fails here as well: its six P
+6
+	​
+
+-ports have only zero-capacity non-Door sinks.
+
+7.7 Exact branch algorithm
+
+checkHornSplitOrTwoCover does the following.
+
+First enumerate port masks in canonical order. For each S⊆parent, run the already compiled
+
+lean
+checkHornClosedSplitCandidate
+  rules Q L parent S (parent \ S)
+
+with the original load L. If one is accepted, return its two shores.
+
+If no split is accepted:
+
+compute the first collision and canonical proof DAGs;
+
+construct owner fibres;
+
+check (10);
+
+check distinct endpoint owners for every positive-alpha atom;
+
+recompute all actual row boundaries;
+
+construct typed own Doors by token lookup;
+
+invoke the existing disjoint-petal TwoCover checker.
+
+Thus the split branch preserves the original load definitionally, while the other branch constructs the exact data consumed by the compiled half-layer theorem.
+
+The soundness proof is short:
+
+accepted split search gives ProperClosedBankSplit Q L parent by the existing split-checker soundness theorem;
+
+otherwise owner fibres are pairwise disjoint;
+
+row-fibre equality makes them actual wall shores;
+
+distinct endpoint owners prove (11);
+
+the boundary checker supplies actual short/port maps;
+
+typed Door lookup supplies legal injective own Doors of capacity at least 1;
+
+the compiled checker constructs CheckedDisjointPetalTwoCover.
+
+The graph countermodel proves that acceptance of this additional finite checker cannot be removed from the hypotheses.
+
+lean
+theorem hornSplitOrTwoCover_of_checkedFirstCollisionAtlas
+    {V Port Sink Atom Comp : Type*}
+    [Fintype V] [DecidableEq V]
+    [Fintype Port] [DecidableEq Port]
+    [Fintype Sink] [DecidableEq Sink]
+    [Fintype Atom] [DecidableEq Atom]
+    (E : RealHornExtractorData V Port Sink Atom Comp)
+    (Q : AbstractEscapeQuotient Port Comp)
+    (L : Port → ℚ)
+    (parent : ClosedPortSet Q)
+    (hmin : MinimalClosedDeficient Q L parent)
+    (hroot : parent.HasUniqueRoot)
+    (d : BankedWallLP.Dual E.wallLP)
+    (hd : d.Checked)
+    (hstrict : 0 < d.strictGap)
+    (crossing : E.CheckedTightRootCrossing d parent)
+    (labels : E.HornRule → RealHornRuleLabel E)
+    (hlabels : checkRealHornRuleLabels E labels = true)
+    (hatlas :
+      checkHornSplitOrTwoCover
+        E Q L parent d crossing labels = true) :
+    ProperClosedBankSplit Q L parent ⊕
+      CheckedDisjointPetalTwoCover E.wallLP d := by
+  classical
+  unfold checkHornSplitOrTwoCover at hatlas
+  split at hatlas
+  next left right hfind =>
+    exact Sum.inl <|
+      checkHornClosedSplitCandidate_sound
+        (Q := Q) (L := L) (parent := parent)
+        (left := left) (right := right) hfind
+  next hnone =>
+    exact Sum.inr <|
+      checkFirstCollisionOwnerAtlas_sound
+        (E := E) (d := d) (parent := parent)
+        (crossing := crossing) (labels := labels)
+        hd hlabels hatlas

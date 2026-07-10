@@ -31822,3 +31822,174 @@
 [2026-07-10T17:42:19+03:00] > ATTACK | NEXT: send the PortHall follow-up exactly once, then wait 20+ minutes without page interaction.
 [2026-07-10T17:43:01+03:00] OK ATTACK | DID: submitted PortHall follow-up exactly once | RESULT: prompt length 2557 chars; dedicated thread URL unchanged | D: generation launched
 [2026-07-10T17:43:01+03:00] > VERIFY | NEXT: wait 20+ minutes with zero page interaction, then inspect completion state.
+[2026-07-10T18:03:38+03:00] OK VERIFY | DID: waited 1220 seconds, then checked generation controls | RESULT: Stop answering and Answer now visible | D: generation active
+[2026-07-10T18:03:38+03:00] > VERIFY | NEXT: continue waiting 10 minutes without page interaction, then recheck completion.
+[2026-07-10T15:06:52Z] > VERIFY | NEXT: compile CanonicalTightCorner.lean against cached wallLP/MaxCut APIs and inspect all diagnostics.
+[2026-07-10T15:09:42Z] OK VERIFY | DID: built and axiom-probed CanonicalTightCorner.lean | RESULT: rc=0; SHA 80A5F993; 7 probes allowed-only; forbidden=0 | D: algebra compiled
+[2026-07-10T15:12:00Z] OK VERIFY | DID: compiled universal ConcreteCage balance audit | RESULT: every current cage has Surplus<=0 Balance>=0 Defect<=0; SHA 2264BD85 | D: R10 balance-MinNeg arm vacuous
+[2026-07-10T15:12:00Z] OK ATTACK | DID: compiled canonical tight-corner algebra | RESULT: four-corner+anchor+essential-gamma rc=0 SHA 80A5F993 | D: algebra closed; geometry open
+[2026-07-10T15:12:00Z] OK ATTACK | DID: compiled direct PortHall split adapter | RESULT: disjoint ports+sink nbrs -> ProperClosedBankSplit rc=0 SHA 48BAC0A6 | D: correct MinNeg target isolated
+[2026-07-10T15:12:00Z] FAIL VERIFY | DID: audited R10 bank/MinNeg semantics | RESULT: MandatoryDoorRoute absent in Lean; global ledger lacks legal edge-token incidence | D: two semantic bridges remain
+[2026-07-10T15:12:00Z] > ATTACK | NEXT: gate full row/port realization and official sink-locality; reject ConcreteCage balance as PortHall MinNeg.
+[2026-07-10T15:16:00Z] OK VERIFY | DID: compiled connected-shore split theorem | RESULT: every connected all-ell5 cage has PureLensCageSplit; SHA 058707A2 | D: R10 corner geometry unnecessary in T8 API
+[2026-07-10T15:16:00Z] FAIL VERIFY | DID: tested T8 interface as Gap1 discriminator | RESULT: split always exists while Balance never negative | D: redesign or direct PortHall wall required
+[2026-07-10T18:14:21+03:00] OK VERIFY | DID: observed completed PortHall Pro answer | RESULT: Worked for 21m16s; final response 15150 chars; Stop/Answer now absent | D: generation complete
+[2026-07-10T18:14:21+03:00] > VERIFY | NEXT: verify saved PortHall response byte length and SHA-256 on disk.
+[2026-07-10T18:14:26+03:00] OK VERIFY | DID: verified saved PortHall response | RESULT: tmp/codex_gptpro_r10_porthall_followup.txt; 15773 bytes; SHA 63AFE893 | D: response captured
+[2026-07-10T15:25:00Z] FAIL VERIFY | DID: exact-audited Pro R10 PortHall follow-up | RESULT: Pro concedes compiled facts do not imply closed/sink-separated corner children | D: R10 balance route retired
+[2026-07-10T15:25:00Z] OK PLAN | DID: isolated real extractor wall | RESULT: NMC forbids coupling component meeting both corner seed sets; same-load split then exact | D: target sharpened
+[2026-07-10T15:25:00Z] > ATTACK | NEXT: compile NMC/component checker and exact-gate real full-escape/sink coupling chains.
+[2026-07-10T15:23:30Z] OK VERIFY | DID: audited real full-bank extractor and R10 source assumptions | RESULT: no compiled 4-kind sink/owner/legal-support bridge exists | D: extractor semantics is research wall
+[2026-07-10T15:23:30Z] > ATTACK | NEXT: specify real port/sink support interface, then gate NMC only after an honest extractor instantiates it.
+[2026-07-10T15:34:11Z] OK VERIFY | DID: compiled exact closed-shore partition checker | RESULT: bool iff + split constructor rc0 SHA 2CBAE1E4; allowed axioms; forbidden 0 | D: finite reflection closed
+[2026-07-10T15:34:11Z] OK VERIFY | DID: compiled conditional sink-support locality adapter | RESULT: localized disjoint shores imply disjoint legalNbr rc0 SHA 54664311 | D: provider existence remains open
+[2026-07-10T15:34:11Z] > ATTACK | NEXT: isolate strict-dual internal-off-support branch after universal endpoint-half Door fast path.
+[2026-07-10T15:36:58Z] OK VERIFY | DID: compiled abstract NMC component construction/checker | RESULT: NMC+block saturation -> same-load ProperClosedBankSplit rc0 SHA 15208602 | D: abstract algebra closed
+[2026-07-10T15:36:58Z] > ATTACK | NEXT: prove or falsify real internal-off-support bank/split provider; abstract NMC existence remains unclaimed.
+[2026-07-10T15:38:00Z] > VERIFY | NEXT: run exact 32-worker singleton mixed Door/vertexSlack gate through census N<=10 plus structured witnesses.
+[2026-07-10T15:40:00Z] OK VERIFY | DID: ran exact mixed Door/vertexSlack gate through census N<=10 + structured cases | RESULT: 6574 graphs, 3 deficient sets, 3 pass/0 fail, min internal margin 0 | D: simple mixed bank survives
+[2026-07-10T15:40:00Z] > VERIFY | NEXT: extend the same exact 32-worker gate to the full triangle-free census N<=11.
+[2026-07-10T15:42:00Z] OK VERIFY | DID: extended exact mixed Door/vertexSlack gate through full census N<=11 | RESULT: 71818 graphs, 3 deficient sets, 3 pass/0 fail, min margin 0 | D: candidate survives
+[2026-07-10T15:42:00Z] > ATTACK | NEXT: send exact Internal Endpoint Slack lemma to Claude and falsifier-search larger structured families.
+[2026-07-10T15:49:00Z] FAIL VERIFY | DID: enumerated every deficient set behind the IES gate | RESULT: only canonical24, waistDoor, canonical359; each has nInternal=0, so all 3 IES passes are vacuous | D: evidence reset
+[2026-07-10T15:49:00Z] > ATTACK | NEXT: generate support-deficient real cages with internal off-support edges or prove those edges impossible.
+[2026-07-10T15:58:00Z] OK ATTACK | DID: built exact 16-vtx IES near-counterexample | RESULT: triangle-free, B-connected, all ell5, minimal 16>15, internal edge, margin -1/2; cut 16<max31 | D: max-cut is essential
+[2026-07-10T15:58:00Z] OK VERIFY | DID: exhausted triangle-free same-vertex blue completions | RESULT: 2048 completions, 0 make displayed cut maximum | D: any IES falsifier completion needs new vertices/nonlocal gadget
+[2026-07-10T16:07:00Z] > VERIFY | NEXT: independently rebuild Ell5InternalEndpointSlackFullBank and audit forbidden tokens.
+[2026-07-10T16:08:00Z] OK VERIFY | DID: rebuilt conditional IES-to-full-bank Lean bridge | RESULT: rc0 in 30.5s; SHA 506BA26C; forbidden token grep empty; allowed axioms reported | D: conditional algebra closed
+[2026-07-10T16:12:00Z] FAIL ATTACK | DID: exact-verified 3164-vtx maxcut/Gamma-min IES falsifier | RESULT: A 13>12, I={48}, T(4)=3165>N=3164; edge SHA 38a790b5; script rc0 | D: unrestricted IES dead
+[2026-07-10T16:12:00Z] > PLAN | NEXT: replace subset-local IES by whole-K2 closure or an external-load split/bank dichotomy; retain compiled conditional bridge.
+[2026-07-10T16:26:00Z] FAIL ATTACK | DID: exact-verified 3892-vtx endpoint-flow falsifier | RESULT: A 13>12, I={48}, caps4=caps8=0, demand1; maxcut/Gamma-min | D: endpoint Hall dead
+[2026-07-10T16:26:00Z] > VERIFY | NEXT: audit Pro half-layer against concrete root-circuit and Door APIs, then compile only the honest conditional squeeze.
+[2026-07-10T16:31:00Z] > ATTACK | NEXT: implement a generic rational half-layer-to-DualSqueeze constructor with explicit TwoCover and routed-capacity hypotheses.
+[2026-07-10T16:36:00Z] OK VERIFY | DID: compiled fractional half-layer DualSqueeze constructor | RESULT: rc0 SHA F94D971D; axioms allowed; forbidden0 | D: odd-circuit LP algebra closed
+[2026-07-10T16:36:00Z] > ATTACK | NEXT: instantiate half-layer only after concrete petal masks, exact half loads, and legal Door routing are exported.
+[2026-07-10T16:41:00Z] > ATTACK | NEXT: compile pairwise-disjoint petal congestion and injective own-Door routing into a concrete half-layer provider.
+[2026-07-10T16:45:00Z] OK VERIFY | DID: compiled disjoint-petal own-Door half-layer provider | RESULT: rc0 SHA 2A01E4C4; 4 probes allowed axioms; forbidden0 | D: capacity geometry closed
+[2026-07-10T16:45:00Z] > ATTACK | NEXT: locate or construct the actual root-layer TwoCover witness; otherwise return to NMC real-corridor extraction.
+[2026-07-10T16:50:00Z] > ATTACK | NEXT: formalize a two-port directed-closure countermodel to R11 PrimitiveBlockClosureExactOn.
+[2026-07-10T16:58:00Z] FAIL VERIFY | DID: compiled directed-closure countermodel to block saturation | RESULT: rc0 SHA 78787466; closure axioms hold but PrimitiveBlockClosureExactOn fails | D: R11 has 2 walls
+[2026-07-10T16:58:00Z] > PLAN | NEXT: require a real bidirectional/block closure theorem in addition to NMC, or redesign the split for directed Horn closure.
+[2026-07-10T17:02:00Z] OK VERIFY | DID: strengthened block countermodel to actual HornEscapeSurface | RESULT: rule {0}->1; {1} closed/not block-saturated; rc0 SHA F2CD1A52 | D: R11 component split invalid for generic Horn closure
+[2026-07-10T17:02:00Z] > ATTACK | NEXT: pivot R11 component partition back to direct Horn-closed split-or-root certificates.
+[2026-07-10T17:05:24Z] > ATTACK | NEXT: classify GPT-Pro half-layer response against compiled modules and isolate any new real-extractor obligation.
+[2026-07-10T17:07:32Z] > ATTACK | NEXT: implement direct Horn-closed child split reflection, avoiding invalid component-union saturation.
+[2026-07-10T17:08:20Z] > VERIFY | NEXT: build HornClosedShoreSplitChecker and audit axioms/forbidden proof tokens.
+[2026-07-10T17:12:00Z] OK VERIFY | DID: built direct Horn child-split checker | RESULT: HornClosedShoreSplitChecker.lean rc0 SHA F3CC5B36, axioms allowed, forbidden0 | D: false block-union bypassed
+[2026-07-10T17:21:20Z] > ATTACK | NEXT: run exact m=9..10 local-obstruction census at 64 workers and test series-parallel/odd-spindle applicability.
+[2026-07-10T17:31:05Z] > ATTACK | NEXT: resolve four capped m=15 support-obstruction cases at 100M DFS nodes and test every witness for series-parallel support.
+[2026-07-10T17:32:46Z] OK ATTACK | DID: resolved four capped m=15 cases at 100M nodes | RESULT: 4/4 nonwitness, 0 abort; m9-15 = 14836/14836 SP | D: none
+[2026-07-10T17:33:58Z] > VERIFY | NEXT: rebuild the generic and disjoint-petal half-layer theorems and recheck their axiom/forbidden-token surface.
+[2026-07-10T17:35:15Z] OK VERIFY | DID: rebuilt half-layer modules | RESULT: both rc0; axioms allowed only; forbidden tokens 0; SHAs F94D971D/2A01E4C4 | D: none
+[2026-07-10T17:36:31Z] > ATTACK | NEXT: exhaust bipartite K4 subdivisions of path lengths 1..5 for a non-series-parallel local obstruction, using 60 workers.
+[2026-07-10T17:39:21Z] FAIL ATTACK | DID: searched bipartite K4 subdivisions | RESULT: 89 witnesses; first exact at m=17, g6 Mo_Gj@?CH??@?@C?_ | D: DEAD SP-only route
+[2026-07-10T17:43:48Z] > ATTACK | NEXT: GPT-Pro R12 tests whether aggregate spendQ can realize half-layer routing or requires a typed port-token checker.
+[2026-07-10T17:46:48Z] > VERIFY | NEXT: compile the aggregate-ledger/no-incidence Lean countermodel and audit its axioms.
+[2026-07-10T17:52:16Z] OK VERIFY | DID: compiled aggregate-ledger/no-incidence countermodel | RESULT: rc0, allowed axioms, tokens 0, SHA CCB901A5 | D: incidence required
+[2026-07-10T17:53:39Z] > VERIFY | NEXT: compile the exact disjoint-petal/own-Door/TwoCover checker and audit its proof surface.
+[2026-07-10T17:55:09Z] OK VERIFY | DID: compiled half-layer payload checker | RESULT: rc0, allowed axioms, tokens 0, SHA 3832CB92 | D: real payload now exact gate
+[2026-07-10T17:59:10Z] OK VERIFY | DID: strengthened incidence countermodel with disjoint restriction-exit petals | RESULT: rc0, allowed axioms, tokens 0, SHA 624C5699 | D: none
+[2026-07-10T18:00:56Z] > ATTACK | NEXT: GPT-Pro R13 targets a directed-Horn split-or-TwoCover theorem, excluding the refuted block-saturation shortcut.
+[2026-07-10T18:03:10Z] > VERIFY | NEXT: compile the combined Horn-split-or-half-layer checker and audit its soundness theorem.
+[2026-07-10T18:05:50Z] OK VERIFY | DID: compiled combined Horn-split/half-layer gate | RESULT: rc0, allowed axioms, tokens 0, SHA B76E6C01 | D: classifier target fixed
+[2026-07-10T18:08:49Z] > VERIFY | NEXT: compile an abstract strict-dual countermodel to Horn-split-or-TwoCover despite legal injective own Doors.
+[2026-07-10T18:14:52Z] FAIL VERIFY | DID: compiled abstract Horn split-or-TwoCover model | RESULT: strict dual + own Doors, but neither branch; SHA 69579159 | D: real geometry required
+[2026-07-10T18:21:39Z] OK VERIFY | DID: classified Pro fractional half-layer proof | RESULT: algebra matches compiled F94D971D/2A01E4C4; real TwoCover payload remains unproved | D: odd-circuit branch closed
+[2026-07-10T18:21:39Z] > ATTACK | NEXT: inspect completed R13 directed-Horn answer once, then exact-gate any added real corridor hypothesis.
+[2026-07-10T18:24:00Z] > VERIFY | NEXT: recompute active-component half-block loads on the 3164/3892 endpoint-flow falsifiers.
+[2026-07-10T18:28:41Z] OK VERIFY | DID: ran active-component half-block gate | RESULT: both falsifiers have 0 active comps/0 internal load; boundary loads all 1/2 | D: active case isolated
+[2026-07-10T18:28:41Z] > ATTACK | NEXT: exact-gate first active-component examples and classify them into Horn split or half-layer output.
+[2026-07-10T18:34:08Z] OK VERIFY | DID: audited Pro R13 13-vtx model | RESULT: graph/D1 valid, but actual own Doors change gap +1/13 to <=-1/13; SHA DE97BCAC | D: not real falsifier
+[2026-07-10T18:34:08Z] > ATTACK | NEXT: retask Pro on the actual active-component dichotomy with canonical core/port semantics.
+[2026-07-10T18:35:00Z] > VERIFY | NEXT: exhaust m=9..13 local obstructions for any genuine active off-support component at path length <=14.
+[2026-07-10T18:37:05Z] OK VERIFY | DID: exhausted m9..13 active-component gate | RESULT: 8361 support graphs, 0 active path witnesses | D: no-active lemma survives
+[2026-07-10T18:37:05Z] OK ATTACK | DID: sent canonical no-active-component lemma to Pro once | RESULT: 3819 chars; generation active | D: awaiting prove-or-refute
+[2026-07-10T18:37:05Z] > ATTACK | NEXT: extend direct active-component census to m=14..15 while Pro reasons.
+[2026-07-10T18:59:08Z] OK VERIFY | DID: active-component search through m14 | RESULT: m14 16809 supports/0 witnesses; m15 direct tail stopped after flow-dichotomy already clean | D: none
+[2026-07-10T18:59:08Z] OK VERIFY | DID: ran 60000 random exact supports m16..32 | RESULT: 3340 obstructions/2704 minimal circuits/0 active paths/0 caps; SHA 8D56DF5A | D: no-active survives
+[2026-07-10T18:59:08Z] FAIL ATTACK | DID: tested explicit 10-leg spider circuit | RESULT: exact minimal 21/20 circuit but every candidate detour enters another atom support | D: supports exchange mechanism
+[2026-07-10T18:59:08Z] > ATTACK | NEXT: extract a proof of no-active from Hall-circuit matching plus shortest-support adjacency, or exact-gate Pro's response.
+[2026-07-10T19:15:36Z] OK VERIFY | DID: widened random active search | RESULT: 600000 supports; 13238 exact circuits; 0 active paths; 52 local DFS caps at 5M | D: evidence, not closure
+[2026-07-10T19:15:36Z] OK VERIFY | DID: exhausted theta10 active geometry | RESULT: 32768 completions/16128 connected; 0 keep forced atom support disjoint from P6 | D: exchange target sharpened
+[2026-07-10T19:15:36Z] > ATTACK | NEXT: prove the first-detour-edge enters some selected atom's shortest support using circuit minimality.
+[2026-07-10T19:17:46Z] OK VERIFY | DID: rebuilt inactive-component Lean checker | RESULT: rc0; SHA 7273589D; axioms allowed; forbidden0 | D: inactive branch formalized
+[2026-07-10T19:17:46Z] > ATTACK | NEXT: close the sole remaining existence step: selected atom endpoints lie in distinct off-support components.
+[2026-07-10T19:26:25Z] OK VERIFY | DID: completed optimized m15 active census | RESULT: 53357 support graphs/0 active witnesses; exact path bound16; SHA EBE194C5 | D: exhaustive through m15
+[2026-07-10T19:26:25Z] > ATTACK | NEXT: convert the clean finite invariant into a general alternating-support proof; await Pro prove-or-refute.
+[2026-07-10T19:29:46Z] OK VERIFY | DID: audited Pro fractional half-layer/NMC response | RESULT: half-layer already compiled; NMC explicitly unproved; SHA 6BECFFED | D: none
+[2026-07-10T19:29:46Z] > ATTACK | NEXT: prove canonical NO-ACTIVE-COMPONENT directly; do not reopen the broader NMC provider route.
+[2026-07-10T19:32:30Z] > ATTACK | NEXT: test metric-sign separation on exact support circuits to isolate a Lean-ready invariant for safe off-support components.
+[2026-07-10T19:35:20Z] FAIL ATTACK | DID: probed individually safe-edge components | RESULT: metric sign fails; one component joined atom endpoints only edgewise | D: joint safety essential
+[2026-07-10T19:38:44Z] OK VERIFY | DID: audited 500 exact circuits | RESULT: 0 joint active; sole edgewise path made triangle with its bad atom; SHA 54E2ED27 | D: path-level gate
+[2026-07-10T19:42:00Z] > ATTACK | NEXT: construct an exact 37/36 two-spider circuit and exhaust cross-gadget off-support paths for the shared atom.
+[2026-07-10T19:43:00Z] OK VERIFY | DID: exhausted 361 exact 37/36 two-spider circuits | RESULT: 217 had safe chords; 0 endpoint paths/0 active | D: fixed 2-sum clean
+[2026-07-10T19:43:00Z] > ATTACK | NEXT: stress arbitrary exact-circuit 2-sums at low-degree shared atoms for a structured active-component falsifier.
+[2026-07-10T19:43:29Z] OK VERIFY | DID: tested 64 random exact-circuit 2-sums at 1444 shared atoms | RESULT: 0 edgewise paths/0 active; SHA A85CFC82 | D: 2-sum threat clean
+[2026-07-10T19:43:29Z] > ATTACK | NEXT: derive endpoint separation from circuit matching plus joint path legality; await Pro's direct proof/refutation.
+[2026-07-10T19:48:00Z] OK VERIFY | DID: measured legal-chord components on 500 exact circuits | RESULT: max diameter 2; joint active needs length>=6 | D: diameter lemma candidate
+[2026-07-10T19:48:00Z] > ATTACK | NEXT: parallel-stress SAFE-DIAMETER<=2 on thousands of exact circuits before proving it from minimal Hall support.
+[2026-07-10T19:50:30Z] OK VERIFY | DID: stressed 3200 exact circuits up to m50 | RESULT: max safe diameter2; 8 generator caps excluded | D: dense evidence only
+[2026-07-10T19:50:30Z] > ATTACK | NEXT: remove the n<=20 bias by searching sparse depth-two tree circuits up to 50 vertices for diameter>2 or active paths.
+[2026-07-10T19:57:00Z] FAIL ATTACK | DID: ran generic sparse-tree obstruction search | RESULT: no worker completed before bounded stop; nothing | D: generic DFS too broad
+[2026-07-10T19:57:00Z] > ATTACK | NEXT: replace generic DFS by direct four-edge support masks and exact Hall matchings for depth-two trees.
+[2026-07-10T19:58:30Z] FAIL ATTACK | DID: launched direct sparse generator | RESULT: branch/leaf count assertion caught before any result | D: generator fixed
+[2026-07-10T19:58:49Z] OK VERIFY | DID: tested 6400 exact sparse depth-two circuits n16..50 | RESULT: 177540 supports; safe graph had 0 edges in every circuit | D: sparse threat clean
+[2026-07-10T19:58:49Z] > ATTACK | NEXT: prove SAFE-DIAMETER<=2 or derive a weaker path-six contradiction from circuit matching and geodesic support.
+[2026-07-10T20:01:00Z] > ATTACK | NEXT: force a safe P4 with CP-SAT, then exact-check Hall minimality and active-path legality.
+[2026-07-10T20:03:00Z] FAIL ATTACK | DID: ran forced-P4 search | RESULT: witness branch fired, but cancelled-future handling suppressed output | D: collector fixed
+[2026-07-10T20:04:30Z] FAIL ATTACK | DID: exact forced-P4 CP-SAT search | RESULT: n22 exact 22/21 circuit has safe diameter3; batch max4; no active path | D: DEAD diam<=2
+[2026-07-10T20:04:30Z] > VERIFY | NEXT: lock the n22 falsifier independently, then test sufficient same-part safe distance<=4.
+[2026-07-10T20:11:30Z] OK VERIFY | DID: locked n22 diameter falsifier | RESULT: exact 22/21, triangle-free, diameter3, no active in 640 nodes | D: verified
+[2026-07-10T20:11:30Z] FAIL ATTACK | DID: forced-six batches | RESULT: no completed task before bounded stops; inner 20-solution loop was bottleneck | D: loop capped at3
+[2026-07-10T20:13:30Z] OK VERIFY | DID: bounded forced-six search | RESULT: 76577 trees/64 exact circuits; max diameter5, same-part<=4, no active | D: direct model next
+[2026-07-10T20:13:30Z] > ATTACK | NEXT: CP-SAT force an exact minimal circuit containing an atom with a jointly valid six-edge off-support path.
+[2026-07-10T20:18:43Z] OK VERIFY | DID: direct active-path CP-SAT gate | RESULT: 25 geometry-valid trees all cover-infeasible; 0 unknown/0 circuits | D: extra-Hall-unit target
+[2026-07-10T20:18:43Z] > ATTACK | NEXT: extract a dual/multicover inequality showing a jointly valid active path forces at least |F|+2 atoms.
+[2026-07-10T20:27:29Z] FAIL ATTACK | DID: scaled full-cone active-path gate | RESULT: 100 feasible double covers; 0 exact circuits; edge-shortage claim false | D: minimality decisive
+[2026-07-10T20:27:29Z] > ATTACK | NEXT: test ACTIVE-PATH PROPER-DEFICIENCY and extract a matching/path proof from every feasible model.
+[2026-07-10T20:28:54Z] > VERIFY | NEXT: run exact Hall-cut separation; each cut forbids an intrinsic deficient atom subset, preserving every minimal circuit.
+[2026-07-10T20:30:40Z] OK VERIFY | DID: smoke-tested Hall separator on 3390 geometries | RESULT: 0 models/0 unknown; 96 edge shortages | D: scale rare regime
+[2026-07-10T20:30:40Z] > VERIFY | NEXT: run 48-worker 128000-geometry Hall separation to close or falsify rare feasible active-path cones.
+[2026-07-10T20:33:45Z] OK VERIFY | DID: scaled tree Hall separation | RESULT: 88790 geometries; 0 models/0 unknown; generator missed rare cone | D: broaden F
+[2026-07-10T20:33:45Z] > VERIFY | NEXT: exact Hall-cut search on connected bipartite supports with 0-5 extra support edges; SHA B573F777.
+[2026-07-10T20:36:03Z] OK VERIFY | DID: non-tree active-path Hall search | RESULT: 9131 geometries; 0 models/0 unknown; no falsifier | D: sparse cone
+[2026-07-10T20:36:03Z] > ATTACK | NEXT: recover a feasible nonminimal active model and classify its intrinsic Hall witness against the detour path.
+[2026-07-10T20:45:53Z] OK VERIFY | DID: locked active nonminimal witness | RESULT: exact 43/42 splits as 33/32 circuit + 10/10 block; internal ends F-distance4 | D: decomposition target
+[2026-07-10T20:45:53Z] > ATTACK | NEXT: prove active detour forces a proper circuit plus balanced complementary corridor block.
+[2026-07-10T20:49:47Z] > VERIFY | NEXT: build Ell5MinimalCircuitDualHall.card_add_one_le_incidentAtoms, the exact support-side factor-critical lemma.
+[2026-07-10T20:54:15Z] OK VERIFY | DID: built Ell5MinimalCircuitDualHall | RESULT: rc0 in 19.263s; support-side strict Hall compiled | D: graph W-construction only
+[2026-07-10T20:54:15Z] > VERIFY | NEXT: axiom-probe both strict-Hall declarations and scan forbidden proof tokens.
+[2026-07-10T20:56:57Z] OK VERIFY | DID: audited Ell5MinimalCircuitDualHall | RESULT: rc0; axioms allowed-only; forbidden0; SHA DDC1AF81 | D: low-incidence W lemma
+[2026-07-10T20:56:57Z] > ATTACK | NEXT: derive a detour-generated nonempty support set W with incidentAtoms(W)<=|W| from ell5 geometry.
+[2026-07-10T20:58:22Z] FAIL ATTACK | DID: tested near-corridor neighborhood closure | RESULT: locked 43/42 witness does not recover its 10/10 block | D: DEAD naive closure
+[2026-07-10T20:58:22Z] > ATTACK | NEXT: classify exact missing/excess edges and derive the Hall block from alternating matching reachability instead.
+[2026-07-10T20:59:28Z] OK ATTACK | DID: classified locked near-corridor closure | RESULT: canonical closure is 9 atoms/9 edges, already a strict-Hall contradiction | D: candidate revived
+[2026-07-10T20:59:28Z] > VERIFY | NEXT: run 60-worker exact gate for near-pair distance4 + closedEdges>=incidentAtoms across feasible active cones.
+[2026-07-10T21:03:12Z] FAIL ATTACK | DID: tested single-cut realization of 9/9 block | RESULT: detour internal but only 4/9 incident atoms cross | D: single max-cut DEAD
+[2026-07-10T21:03:12Z] > ATTACK | NEXT: derive a fractional layer-cut cover/matching for corridor-touching atoms inside neighborhood-closed support.
+[2026-07-10T21:12:02Z] FAIL VERIFY | DID: stopped 60-worker near-closure gate | RESULT: uncapped path recursion yielded no bounded verdict | D: add node cap
+[2026-07-10T21:12:02Z] > VERIFY | NEXT: add exact path-node cap with cap counts, then relaunch the bounded active-cone gate.
+[2026-07-10T21:17:14Z] FAIL ATTACK | DID: bounded 61-worker near-closure gate | RESULT: exact 49/48 active circuit has nearClosureFailure; 10 failures/1 success | D: DEAD closure lemma
+[2026-07-10T21:17:14Z] > VERIFY | NEXT: independently lock the minimal-circuit active-detour falsifier and its failed closure counts.
+[2026-07-10T21:18:07Z] OK VERIFY | DID: independent active-circuit falsifier check | RESULT: exact 49/48, triangle-free detour; near closure 12 atoms/9 edges | D: direct NO-ACTIVE dead
+[2026-07-10T21:18:07Z] > PLAN | NEXT: return to banked wall and isolate the weakest real-extractor condition excluding this abstract active circuit.
+[2026-07-10T21:24:00Z] > VERIFY | NEXT: independently reconstruct GPT-Pro's 28/27 active circuit and 167-vertex max-cut/Gamma lock.
+[2026-07-10T21:24:29Z] OK VERIFY | DID: reconstructed Pro active-cycle lock | RESULT: exact 28/27 core; N167 maxcut207 Gamma700 triangle-free | D: NO-ACTIVE dead
+[2026-07-10T21:24:29Z] FAIL PLAN | DID: audited endpoint-Hall replacement | RESULT: existing N3892 exact graph has demand1 and endpoint cap0 | D: endpoint-only Hall DEAD
+[2026-07-10T21:24:29Z] > ATTACK | NEXT: test a full-bank active-component Hall/NMC repair that consumes c5Base and prune capacities.
+[2026-07-10T21:28:34Z] OK VERIFY | DID: reran N3892 endpoint-Hall falsifier | RESULT: demand1, cap0; maxcut91769 Gamma39525; exact output reproduced | D: full bank mandatory
+[2026-07-10T21:28:34Z] > PLAN | NEXT: isolate a base-leaf-or-full-bank-Hall dichotomy surviving both N167 and N3892 locks.
+[2026-07-10T21:35:03Z] OK PLAN | DID: audited half-layer/NMC response and bank APIs | RESULT: half-layer conditional compiled; c5Base/prune have no graph incidence provider | D: provider is frontier
+[2026-07-10T21:35:03Z] > ATTACK | NEXT: define the weakest graph-semantic base/prune sink and exact Hall dichotomy surviving N167 and N3892.
+[2026-07-10T21:40:37Z] OK ATTACK | DID: implemented positive-capacity corner split | RESULT: new PositiveCapacityCornerSplit.lean reduces all-sink NMC to harmful sinks | D: compile gate
+[2026-07-10T21:40:37Z] > VERIFY | NEXT: build PositiveCapacityCornerSplit and audit its three exported theorem axioms.
+[2026-07-10T21:42:45Z] OK VERIFY | DID: built/audited PositiveCapacityCornerSplit | RESULT: rc0 20.2s; allowed axioms only; SHA C6277B0D | D: NMC weakened
+[2026-07-10T21:42:45Z] > ATTACK | NEXT: compile split-or-half-layer dichotomy with only harmful-positive mixed-component extraction open.
+[2026-07-10T22:05:42Z] OK ATTACK | DID: compiled positive-capacity split-or-half-layer route and collision reserve count | RESULT: 2 Lean modules rc0 | D: token transfer only
+[2026-07-10T22:05:42Z] > VERIFY | NEXT: finish EndpointReserveHall, then axiom-probe the exact reserve-to-subset-Hall adapter.
+[2026-07-10T22:07:49Z] FAIL VERIFY | DID: built EndpointReserveHall | RESULT: proof parses; whnf exceeded 200k heartbeats at theorem | D: raise local budget
+[2026-07-10T22:07:49Z] > VERIFY | NEXT: rebuild EndpointReserveHall with a local 2M-heartbeat budget and audit output.
+[2026-07-10T22:10:20Z] OK VERIFY | DID: built/audited EndpointReserveHall | RESULT: rc0; allowed axioms only; forbidden0; SHA 9CFA35F2 | D: transfer map only
+[2026-07-10T22:10:20Z] > ATTACK | NEXT: state the exact collision-to-c5Base/prune assignment interface and connect it to subset Hall.
+[2026-07-10T22:46:00Z] FAIL PLAN | DID: audited Pro collision transfer | RESULT: bare transfer false; collisions are residual debits, not cap sources | D: residual-source matching
+[2026-07-10T22:46:00Z] > VERIFY | NEXT: build CollisionTokenAssignment and audit the matching/provider-to-Hall boundary.

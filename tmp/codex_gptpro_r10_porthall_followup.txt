@@ -1,0 +1,1165 @@
+Verdict
+
+The four-corner argument is sufficient to select an actual opposite-corner bad atom, but it does not control the full-escape closure relation or zero-priced legal sink arcs. Therefore the unconditional theorem is not yet derivable from the listed compiled facts.
+
+The smallest missing real-extractor statement is a no-mixed corner component lemma. It is both necessary and sufficient for turning the innermost tight corner into a ProperClosedBankSplit.
+
+Load-bearing theorem
+
+Let P be the underlying port set of the extracted minimal closed deficient shore. After the standard essential-dual reduction, choose an innermost tight crossing pair X,Y, and set
+
+Q
+10
+	​
+
+:=X∖Y,Q
+01
+	​
+
+:=Y∖X.
+
+The D1 slack is
+
+σ
+d
+	​
+
+(S)=
+f∈F∩δ(S)
+∑
+	​
+
+β
+f
+	​
+
++
+edge(p)∈δ(S)
+∑
+	​
+
+γ
+p
+	​
+
+−
+edge(a)∈δ(S)
+∑
+	​
+
+α
+a
+	​
+
+.
+
+For
+
+I=X∩Y,J=X∪Y,
+
+the accepted four-corner identity gives
+
+0−σ
+d
+	​
+
+(I)−σ
+d
+	​
+
+(J)
+	​
+
+=2(β(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))+γ(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))−α(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))).
+	​
+
+
+Consequently,
+
+α(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))=β(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))+γ(E(Q
+10
+	​
+
+,Q
+01
+	​
+
+))+
+2
+σ
+d
+	​
+
+(I)+σ
+d
+	​
+
+(J)
+	​
+
+.
+	​
+
+(1)
+
+The real crossing has a positive-γ actual port edge between the opposite corners, so (1) supplies an actual selected atom a
+×
+	​
+
+ with
+
+α
+a
+×
+	​
+
+	​
+
+>0,edge(a
+×
+	​
+
+)∈E(Q
+10
+	​
+
+,Q
+01
+	​
+
+).
+(2)
+
+That atom and its shortest four-edge corridor are the geometric anchor.
+
+Port coupling relation
+
+Inside the parent shore P, define a symmetric relation on actual ports:
+
+p∼
+P
+	​
+
+q
+
+when either:
+
+p and q occur in the same primitive full-escape block of the real extractor; or
+
+there is an official bank term t such that
+
+legal(p,t)andlegal(q,t).
+
+Let ≈
+P
+	​
+
+ be the reflexive-transitive closure of ∼
+P
+	​
+
+.
+
+Define the forced corner seeds
+
+P
+10
+	​
+
+:={p∈P:inside(p)∈Q
+10
+	​
+
+},
+P
+01
+	​
+
+:={p∈P:inside(p)∈Q
+01
+	​
+
+}.
+
+The exact missing extractor property is
+
+∀p∈P
+10
+	​
+
+ ∀q∈P
+01
+	​
+
+,¬(p≈
+P
+	​
+
+q).
+	​
+
+(NMC)
+
+Call this NoMixedCornerPortComponent.
+
+The complete theorem is:
+
+lean
+theorem strictDualRootCrossing_properClosedBankSplit
+    (Q : AbstractEscapeQuotient Port Comp)
+    (I : PortHall.Instance Q)
+    (L : Port → ℚ)
+    (parent : ClosedPortSet Q)
+    (hdef : 0 < PortHall.deficiencyQ I L parent.ports)
+    (hmin :
+      ∀ child : ClosedPortSet Q,
+        child.ports ⊂ parent.ports →
+        PortHall.deficiencyQ I L child.ports ≤ 0)
+    (hroot : parent.HasUniqueRoot)
+    (d : Dual (wallLP I.realFullBankData))
+    (hd : d.Checked)
+    (hstrict : 0 < d.StrictGap)
+    (crossing : R7ActiveRootCrossing I parent d)
+    (htri : TriangleFree I.G)
+    (hell5 : I.AllAtomsHaveShortestBluePathLengthFour)
+    (hΓ : I.ChosenCorridorsAreGammaMinimal)
+    (hactual : I.PortsAreActualOffSupportGraphEdges)
+    (hsink : I.OfficialSinkLocality)
+    (hblocks : I.FullEscapeClosedIffBlockSaturated)
+    (hNMC :
+      NoMixedCornerPortComponent
+        I parent crossing.innermostX crossing.innermostY) :
+    ∃ left right : ClosedPortSet Q,
+      ProperClosedBankSplit Q L parent left right
+
+The only noncompiled hypothesis here is hNMC; hblocks is merely the exact representation theorem needed to reason about the existing full-escape closure implementation.
+
+Construction of the two children
+
+Let C(p) be the ≈
+P
+	​
+
+-component of p.
+
+Assign every component meeting P
+01
+	​
+
+ to the right. Assign all remaining components to the left:
+
+R
+P
+	​
+
+:={p∈P:∃q∈P
+01
+	​
+
+, p≈
+P
+	​
+
+q},
+L
+P
+	​
+
+:=P∖R
+P
+	​
+
+.
+(3)
+
+Unseeded components are deliberately placed on the left; any deterministic choice would work.
+
+Define
+
+lean
+right.ports := R_P
+left.ports  := L_P
+
+with closedness proved below.
+
+This is the exact construction from the opposite corners XY=X∖Y and YX=Y∖X. There is no additional closure after (3); taking another closure would risk merging the two sides. Instead, saturation by ≈
+P
+	​
+
+-components proves that the sets in (3) are already closed.
+
+(a) Closedness
+
+Suppose p∈R
+P
+	​
+
+, and one primitive full-escape block contains both p and q. Then p∼
+P
+	​
+
+q, hence q≈
+P
+	​
+
+p. Since p is connected to a port in P
+01
+	​
+
+, so is q, and therefore q∈R
+P
+	​
+
+.
+
+Thus R
+P
+	​
+
+ is saturated under every primitive full-escape block.
+
+If p∈L
+P
+	​
+
+ and a primitive block also contains q, then q∈
+/
+R
+P
+	​
+
+; otherwise p∼
+P
+	​
+
+q would imply p∈R
+P
+	​
+
+. Hence q∈L
+P
+	​
+
+.
+
+Therefore both L
+P
+	​
+
+ and R
+P
+	​
+
+ are block-saturated. By FullEscapeClosedIffBlockSaturated, both define closed shores.
+
+No weighted or dual argument is used in this step.
+
+(b) Port partition
+
+By definition,
+
+L
+P
+	​
+
+∩R
+P
+	​
+
+=∅,L
+P
+	​
+
+∪R
+P
+	​
+
+=P.
+(4)
+
+The exposed port sets of the two closed shores are exactly their underlying port sets, so
+
+exposedPorts(left)
+∪
+˙
+exposedPorts(right)=exposedPorts(parent).
+
+The no-mixed condition also implies
+
+P
+10
+	​
+
+⊆L
+P
+	​
+
+,P
+01
+	​
+
+⊆R
+P
+	​
+
+.
+(5)
+
+Indeed, a port in P
+10
+	​
+
+∩R
+P
+	​
+
+ would be connected to a port of P
+01
+	​
+
+, contradicting (NMC).
+
+(c) Disjoint legal sink neighborhoods
+
+Assume an official sink t belongs to both legal neighborhoods. Then there are ports
+
+p∈L
+P
+	​
+
+,q∈R
+P
+	​
+
+
+such that
+
+legal(p,t),legal(q,t).
+
+By the second clause in the definition of ∼
+P
+	​
+
+,
+
+p∼
+P
+	​
+
+q.
+
+Since q∈R
+P
+	​
+
+, it is connected to a port in P
+01
+	​
+
+. Therefore p is also connected to that port, implying p∈R
+P
+	​
+
+, contrary to p∈L
+P
+	​
+
+.
+
+Hence
+
+legalNbr(L
+P
+	​
+
+)∩legalNbr(R
+P
+	​
+
+)=∅.
+	​
+
+(6)
+
+The kind-by-kind interpretation is exact.
+
+Door
+
+If t=Door(e), official legality gives
+
+legal(p,t)⟹edge(p)=e.
+
+Thus a Door cannot be shared by two distinct actual edge ports. In the coupling graph, a Door contributes only a trivial one-port component.
+
+vertexSlack(v)
+
+Official legality gives
+
+legal(p,vertexSlack(v))⟹inside(p)=v.
+(7)
+
+All ports legal to the same vertexSlack(v) are joined by ∼
+P
+	​
+
+. Therefore the component construction places the entire inside-vertex star on one side.
+
+This is stronger than merely saying that the term has support {v}: it prevents splitting two ports at the same inside endpoint between the children.
+
+c5Base
+
+If t is a c5Base term, all actual ports legally routed to that exact term are joined by the sink clause of ∼
+P
+	​
+
+. Consequently, the whole legal port fiber of that concrete base term is assigned to one child.
+
+The geometric burden is not in the final disjointness argument. It is in proving (NMC): a c5Base fiber must not connect a Q
+10
+	​
+
+-seed to a Q
+01
+	​
+
+-seed.
+
+prune
+
+Every pruned term retains the identity and legal-port fiber of its underlying concrete base term, with some arcs removed. Therefore the same argument applies. Pruning cannot create a new cross-side legal arc.
+
+Thus (6) is for the actual global sink IDs; it is not merely a term-support or cage-availability statement.
+
+(d) Strict properness
+
+The real root crossing supplies at least one actual parent port on each side:
+
+P
+10
+	​
+
+
+=∅,P
+01
+	​
+
+
+=∅.
+(8)
+
+By (5), L
+P
+	​
+
+ contains a P
+10
+	​
+
+-port and R
+P
+	​
+
+ contains a P
+01
+	​
+
+-port. Therefore both are nonempty.
+
+Since the two sets are disjoint and both nonempty,
+
+L
+P
+	​
+
+⊊P,R
+P
+	​
+
+⊊P.
+(9)
+
+Thus both closed children are strict proper subsets of the parent.
+
+Exact deficiency identity at the same load
+
+Because the port sets partition P,
+
+L(P)=L(L
+P
+	​
+
+)+L(R
+P
+	​
+
+).
+(10)
+
+Legal neighborhoods satisfy
+
+legalNbr(P)=legalNbr(L
+P
+	​
+
+)∪legalNbr(R
+P
+	​
+
+).
+(11)
+
+By (6), this union is disjoint, so exact sink-capacity additivity gives
+
+cap(legalNbr(P))=cap(legalNbr(L
+P
+	​
+
+))+cap(legalNbr(R
+P
+	​
+
+)).
+(12)
+
+Therefore
+
+deficiency
+Q
+	​
+
+(I,L,P)
+	​
+
+=L(P)−cap(legalNbr(P))
+=deficiency
+Q
+	​
+
+(I,L,L
+P
+	​
+
+)+deficiency
+Q
+	​
+
+(I,L,R
+P
+	​
+
+).
+	​
+
+(13)
+
+In particular,
+
+deficiency
+Q
+	​
+
+(I,L,P)≤deficiency
+Q
+	​
+
+(I,L,L
+P
+	​
+
+)+deficiency
+Q
+	​
+
+(I,L,R
+P
+	​
+
+).
+	​
+
+
+This is the exact field required by ProperClosedBankSplit, and it uses the original load L unchanged.
+
+Minimal closed deficiency then gives
+
+deficiency(L
+P
+	​
+
+)≤0,deficiency(R
+P
+	​
+
+)≤0,
+
+which contradicts the positive parent deficiency through (13).
+
+The one genuinely missing geometric lemma
+
+The remaining theorem is exactly:
+
+lean
+theorem innermostTightRootCorner_noMixedPortComponent
+    (hd : d.Checked)
+    (hstrict : 0 < d.StrictGap)
+    (crossing : R7ActiveRootCrossing I parent d)
+    (hroot : parent.HasUniqueRoot)
+    (htri : TriangleFree I.G)
+    (hell5 : I.AllAtomsHaveShortestBluePathLengthFour)
+    (hΓ : I.ChosenCorridorsAreGammaMinimal)
+    (hactual : I.PortsAreActualOffSupportGraphEdges)
+    (hsink : I.OfficialSinkLocality)
+    (hclosure : I.RealFullEscapeBlockWitnesses) :
+    NoMixedCornerPortComponent
+      I parent crossing.innermostX crossing.innermostY
+
+The four-corner identity gives the positive-α anchor (2). To prove this lemma, assume a mixed component and choose a shortest coupling chain
+
+p
+0
+	​
+
+∼
+P
+	​
+
+p
+1
+	​
+
+∼
+P
+	​
+
+⋯∼
+P
+	​
+
+p
+k
+	​
+
+
+with
+
+p
+0
+	​
+
+∈P
+10
+	​
+
+,p
+k
+	​
+
+∈P
+01
+	​
+
+.
+
+A minimal chain has no repeated port or repeated coupling block.
+
+Each transition must be converted into a concrete graph corridor between the inside endpoints.
+
+A Door transition is trivial and can be deleted.
+
+A vertexSlack(v) transition has the same inside endpoint on both ports, so it cannot be the first transition changing from the Q
+10
+	​
+
+-side to the Q
+01
+	​
+
+-side.
+
+A c5Base or prune transition must export its checked concrete base-leaf corridor.
+
+A full-escape-block transition must export the checked real escape corridor belonging to that block.
+
+Let W be the corridor obtained from the first genuinely mixed transition. The needed extractor witness is the exact lexicographic alternative
+
+∣W∣<∣P
+a
+×
+	​
+
+	​
+
+[u,v]∣
+(14a)
+
+or
+
+∣W∣=∣P
+a
+×
+	​
+
+	​
+
+[u,v]∣andΓ(W)<Γ(P
+a
+×
+	​
+
+	​
+
+[u,v]).
+(14b)
+
+Splicing W into the four-edge shortest corridor of a
+×
+	​
+
+:
+
+(14a) contradicts shortestness;
+
+(14b) contradicts Γ-minimality.
+
+Triangle-freeness is used to ensure that after deleting immediate repetitions, the splice does not collapse through a three-cycle and remains a simple blue path with the asserted endpoints.
+
+The audit gap
+
+The current hypotheses as listed do not state that a primitive full-escape block, or a shared c5Base/prune term, exports a corridor satisfying (14a) or (14b).
+
+That is the weakest missing real-extractor API:
+
+lean
+structure RealCouplingCorridorWitness
+    (p q : Port) where
+  path : BluePath (inside p) (inside q)
+  internalToExtractorBlock : ...
+  improvesAnchor :
+    path.length < anchorSegment.length ∨
+      (path.length = anchorSegment.length ∧
+       gammaCode path < gammaCode anchorSegment)
+
+The logically weakest final statement is (NMC) itself. The corridor witness is the weakest operational datum currently apparent for proving it from triangle-freeness, shortestness, and Γ-minimality.
+
+Without either (NMC) or such a corridor witness, the requested theorem is not proved.
+
+Exact countermodel to the missing extractor property
+
+This is not claimed as a full canonical R7 counterexample. It is a countermodel to deriving closed-corner separation from the currently exposed PortHall and graph-edge interfaces.
+
+Take two actual off-support edge ports
+
+p
+L
+	​
+
+=(u,u
+′
+),p
+R
+	​
+
+=(v,v
+′
+)
+
+with
+
+u∈Q
+10
+	​
+
+,v∈Q
+01
+	​
+
+.
+
+Let the real-escape abstraction have one primitive block
+
+B={p
+L
+	​
+
+,p
+R
+	​
+
+}.
+
+Thus the only closed port shores contained in the parent are
+
+∅,P={p
+L
+	​
+
+,p
+R
+	​
+
+}.
+
+Use the exact load
+
+L(p
+L
+	​
+
+)=L(p
+R
+	​
+
+)=
+2
+1
+	​
+
+.
+
+Give each port its own official local zero-capacity vertex sink:
+
+t
+L
+	​
+
+=vertexSlack(u),t
+R
+	​
+
+=vertexSlack(v),
+support(t
+L
+	​
+
+)={u},support(t
+R
+	​
+
+)={v},
+cap(t
+L
+	​
+
+)=cap(t
+R
+	​
+
+)=0.
+
+Legal arcs are only
+
+p
+L
+	​
+
+⇝t
+L
+	​
+
+,p
+R
+	​
+
+⇝t
+R
+	​
+
+.
+
+Then
+
+deficiency(P)=1−0=1,
+
+while the only proper closed shore is empty and has deficiency 0. Hence P is minimal closed deficient and may have a single quotient root.
+
+However,
+
+p
+L
+	​
+
+∼
+P
+	​
+
+p
+R
+	​
+
+
+through the one escape block. Consequently, closing either corner seed yields the entire parent:
+
+close({p
+L
+	​
+
+})=close({p
+R
+	​
+
+})=P.
+
+No two strict proper closed children can partition P.
+
+The underlying port edges can be placed in a triangle-free graph. Connecting the corresponding extractor regions by a sufficiently long external blue path creates the one mixed escape block without producing a triangle or a shorter path between the endpoints of any existing four-edge corridor. Thus triangle-freeness and local ℓ=5 shortestness alone do not forbid the pattern.
+
+For this to become a decisive counterexample to the canonical theorem, the graph must additionally pass the exact real extractor, full wall dual, R7ActiveRootCrossing, and ten-fact checkers. The point of the countermodel is narrower and exact: the current abstract closure interface permits the failure, so a real-extractor separation theorem is indispensable.
+
+There is an analogous sink-only obstruction. If two opposite-corner ports have the same inside endpoint r, both may be legal to the official term vertexSlack(r). With load 1/2 on each and capacity 1/2,
+
+def(P)=
+2
+1
+	​
+
+,def({p
+L
+	​
+
+})=def({p
+R
+	​
+
+})=0,
+
+and the shared-neighborhood correction is exactly
+
+def({p
+L
+	​
+
+})+def({p
+R
+	​
+
+})=def(P)−cap({vertexSlack(r)}).
+
+If R7ActiveRootCrossing rejects such a common-owner star, that rejection should be exported as the exact theorem
+
+lean
+no_shared_insideOwner_across_innermost_corner
+
+and becomes the vertexSlack case of (NMC).
+
+Exact finite falsifier gate
+
+For each checked canonical instance:
+
+Recompute the normalized checked strict dual over the full wall cut family.
+
+Enumerate tight real root-crossing pairs X,Y.
+
+Use (1) to verify the positive-α opposite-corner anchor.
+
+Choose the prescribed innermost pair.
+
+Build the finite port coupling graph:
+
+one clique for every primitive full-escape block;
+
+one clique for the legal port fiber of every actual Door, vertexSlack, c5Base, and prune term.
+
+Label every parent port whose inside endpoint is in Q
+10
+	​
+
+ by L, and every one whose inside endpoint is in Q
+01
+	​
+
+ by R.
+
+Compute connected components exactly.
+
+Reject the pair if a component contains both labels.
+
+Otherwise construct L
+P
+	​
+
+,R
+P
+	​
+
+ by (3).
+
+Recompute:
+
+both closedness proofs from the primitive block table;
+
+strict subset checks;
+
+port disjointness and union;
+
+all four sink-kind neighborhood intersections;
+
+exact deficiencies using Fraction;
+
+equality (13).
+
+A failure record for (NMC) is:
+
+X-mask
+Y-mask
+Q10-mask
+Q01-mask
+left seed port
+right seed port
+shortest coupling chain
+for each chain step:
+  escape-block ID
+  or sink ID, kind, support, cap
+actual graph edge for every port
+inside endpoint for every port
+D1 slacks for X,Y,I,J
+alpha-positive anchor atom and its four-edge corridor
+
+A mixed component disproves the proposed corner-component construction. It is a decisive counterexample to the full theorem only after the checker also enumerates all strict proper closed shore pairs and verifies that none satisfies ProperClosedBankSplit at the same load L.
+
+The proof wall is therefore now sharply localized:
+
+innermost tight real root corner⟹no mixed full-escape/sink component.
+	​
+
+
+Once that exact extractor statement is compiled or certificate-checked, the construction above yields the required ProperClosedBankSplit with deficiency equality, not merely inequality.

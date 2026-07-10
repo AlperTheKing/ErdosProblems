@@ -1,0 +1,33 @@
+We are proving full Erdos Problem #23. Your previous 13-vertex directed-Horn countermodel was exact as an abstract wall, but it is not a counterexample to the canonical full-bank instance. I independently enumerated all 8192 graph cuts and all 1024 D1 rows. The actual selected ell=5 core is the unique P4 support core C={x,a,b,c,y}, F=E(P4). Of your six P6 gamma coordinates, only x-r1 and y-r3 are actual core-boundary exits. Their official unit own Doors force delta>=gamma, changing the asserted strict gap from +1/13 to at most -1/13. The existing half-block cover has no positive internal load and five boundary loads, all exactly 1/2. Exact audit SHA is DE97BCAC7A162C879E270522DBBC12B944852AD477D6049A54CBAB073CD6135D. So do not use arbitrary Horn labels or zero-cap fake ports.
+
+Attack ONE concrete graph lemma below. Do not return another checker/provider hypothesis.
+
+CANONICAL DATA.
+Let G be triangle-free. Let B be the connected blue graph of a Gamma-minimal maximum cut. Let A be an inclusion-minimal ell=5 support-deficient family of bad edges: for each a=uv in A, d_B(u,v)=4; F_a is the union of ALL shortest u-v B-geodesic edges; F=union_a F_a; |F|=|A|-1; and every nonempty proper A' subset A has |union_{a in A'} F_a| >= |A'|. Let C be the union of all vertices on those shortest geodesics. Let
+
+  I = { e in B : both endpoints of e lie in C and e notin F }.
+
+Call a connected component H of (C,I) ACTIVE if H contains both endpoints of some atom a in A.
+
+If no component is active, the proof is already compiled: collapse each I-component, put weight 1/2 on each block shore, cover every atom exactly once, give every support edge load <=1, every internal off-support edge load 0, and route each boundary restriction exit of C at load 1/2 to its typed own Door. This kills the strict dual.
+
+PRECISE REQUEST.
+
+Prove or refute:
+
+  NO-ACTIVE-COMPONENT LEMMA.
+  Under the canonical data above, no component of (C,I) is active.
+
+Try the strongest version first using only triangle-free + all-shortest-geodesic support + minimal defect one. If false, determine whether connected-B maximum-cut and Gamma-minimality repair it. A counterexample must be an ACTUAL finite graph and must list G, the displayed cut, A, every full support F_a, C, I, an active component/path, and exact verification of minimal defect one. If it claims the repaired version false, it must also certify maximum cut and Gamma minimality.
+
+Do not use Horn rules, NMC, root-locality, first-owner atlases, arbitrary Hall, or a new Prop provider. This is a direct finite graph question.
+
+EXACT EVIDENCE TO EXPLAIN.
+- Exhaustive local census m=9..13: 8361 connected bipartite F graphs, every candidate distance-4 triangle-free atom family and every possible off-support path up to length 14; 0 active-component witnesses.
+- Complete m=15 flow-dichotomy census: 53557 support graphs across n=8..15, 0 cases with both an active path and failing endpoint Hall.
+- First non-series-parallel m=17 K4-subdivision obstruction: 33 possible first off-support seed edges, 0 active-component realizations.
+- The N=3164 and N=3892 endpoint-flow falsifiers each have one internal off-support edge (4,8), but that component is inactive; collapsing it gives zero internal load and only 1/2 boundary loads.
+
+If the lemma is true, give a proof structured around a shortest I-path between the atom endpoints and the first/last intersections with the atom's four-edge corridor. Explicitly justify why every internal path vertex lying in C (possibly via a DIFFERENT atom's geodesic) forces a contradiction using minimal support deficiency. End with a Lean-ready theorem statement over finite edge/support sets.
+
+If false, give the smallest exact counterexample and then state the weakest corrected split-or-bank lemma that the counterexample still satisfies.
