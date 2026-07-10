@@ -1,0 +1,6 @@
+import agent_r7_strong_split_v3
+
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.strongPureLensAtomSplit_of_all_ell5
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.term_singleOwner_restrict_restrictCompl
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.bank_restrict_add_le_parent
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.not_balance_neg_of_all_ell5

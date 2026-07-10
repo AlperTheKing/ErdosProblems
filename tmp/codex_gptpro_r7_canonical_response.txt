@@ -1,0 +1,676 @@
+(B) Canonical tight-corner lemma
+
+The right replacement for integral-fiber selection is an innermost pair of dual-tight root cuts. The selected vertex set is an opposite corner of those two cuts.
+
+The essential point is that D1 is indexed by the full family of actual vertex cuts, so its slack is a signed graph cut function. That gives an exact four-corner identity unavailable in the abstract incidence models.
+
+Canonical D1 slack
+
+For a vertex set S⊆C.verts, write
+
+σ
+d
+	​
+
+(S):=
+	​
+
+f∈F
+f∈δ(S)
+	​
+
+∑
+	​
+
+β
+f
+	​
+
++
+p∈Port
+portEdge(p)∈δ(S)
+	​
+
+∑
+	​
+
+γ
+p
+	​
+
+−
+a∈Atom
+badEdge(a)∈δ(S)
+	​
+
+∑
+	​
+
+α
+a
+	​
+
+.
+	​
+
+(1)
+
+Every port in the second sum is an actual off-support graph edge. D1 is exactly
+
+0≤σ
+d
+	​
+
+(S)for every row S
+(D1)
+
+after applying the existing row-realization lemmas of wallLP.
+
+If one graph edge carries more than one legal wall label, (1) sums all of those labels; no edge is silently deduplicated.
+
+Proposed load-bearing lemma
+lean
+theorem R7ActiveRootCrossing.innermostTightCorner_isPure
+    (C : RealEll5Cage G Γ)
+    (d : Dual (wallLP C.fullBankData))
+    (hd : d.Checked)
+    (hStrict : 0 < d.StrictGap)
+    (crossing : R7ActiveRootCrossing C d)
+    (hTenFacts : C.TenFacts)
+    (hMinNeg : C.ReducedMinimalNegativeBalance) :
+    ∃ U : Finset V,
+      checkConcretePureLensCageSplit C U = true
+
+The witness U is constructed as follows.
+
+1. Remove inessential positive port prices
+
+For an active port p, define
+
+m
+p
+	​
+
+:=min{σ
+d
+	​
+
+(S):portEdge(p)∈δ(S)}.
+
+If m
+p
+	​
+
+>0, lower γ
+p
+	​
+
+ by
+
+ε
+p
+	​
+
+:=min(
+2
+γ
+p
+	​
+
+	​
+
+,m
+p
+	​
+
+).
+
+This preserves every D1 inequality, makes D2 easier, and leaves StrictGap unchanged because γ does not occur in the dual objective. Iterate until either:
+
+γ
+p
+	​
+
+=0, in which case p was not genuinely active; or
+
+a row separating the endpoints of p is D1-tight.
+
+Do the analogous exact reduction for δ
+t
+	​
+
+:
+
+δ
+t
+	​
+
+←
+p⇝t
+max
+	​
+
+γ
+p
+	​
+
+.
+
+This preserves D2 and weakly increases StrictGap.
+
+Thus the active crossing can be represented by positive actual ports and D1-tight root rows. No normalization or integral selection is used.
+
+The required exact micro-lemma is:
+
+lean
+lemma essentialGamma_has_tight_root_row
+    (hp : 0 < d.gamma p)
+    (hessential :
+      ∀ ε, 0 < ε → ε ≤ d.gamma p →
+        ¬ (d.lowerGamma p ε).Checked) :
+    ∃ X : FullCutRow C,
+      portCrosses p X ∧ d.D1Slack X = 0
+
+Closing the row to its canonical root shore does not create positive slack; that is the closure adapter consumed here.
+
+2. Choose an innermost tight crossing pair
+
+Let X,Y be canonical full-escape-closed root rows such that:
+
+σ
+d
+	​
+
+(X)=σ
+d
+	​
+
+(Y)=0,
+
+and the active crossing supplies an actual positive-price port between the opposite corners
+
+Q:=X∖Y,R:=Y∖X.
+
+Choose X,Y lexicographically minimizing
+
+(∣Q∣+∣R∣,∣δ
+F
+	​
+
+(Q)∣+∣δ
+F
+	​
+
+(R)∣,ΓRank(X,Y),code(X,Y)).
+(2)
+
+The raw split seed is
+
+U:=Q=X∖Y.
+	​
+
+(3)
+
+The existing concrete checker constructs its two descendants from this U; no synthetic closure or regenerated bank is introduced.
+
+Exact four-corner identity
+
+For arbitrary vertex sets X,Y, put
+
+I=X∩Y,J=X∪Y,Q=X∖Y,R=Y∖X.
+
+For every actual labelled edge e,
+
+	​
+
+1[e∈δ(X)]+1[e∈δ(Y)]
+−1[e∈δ(I)]−1[e∈δ(J)]
+=21[e∈E(Q,R)].
+	​
+
+(4)
+
+Multiplying by the relevant β,γ,−α coefficient and summing gives
+
+	​
+
+σ
+d
+	​
+
+(X)+σ
+d
+	​
+
+(Y)−σ
+d
+	​
+
+(I)−σ
+d
+	​
+
+(J)
+=2
+	​
+
+f∈F∩E(Q,R)
+∑
+	​
+
+β
+f
+	​
+
++
+portEdge(p)∈E(Q,R)
+∑
+	​
+
+γ
+p
+	​
+
+−
+badEdge(a)∈E(Q,R)
+∑
+	​
+
+α
+a
+	​
+
+	​
+
+.
+	​
+
+(5)
+
+Because X,Y are tight and I,J satisfy D1,
+
+	​
+
+badEdge(a)∈E(Q,R)
+∑
+	​
+
+α
+a
+	​
+
+−
+f∈F∩E(Q,R)
+∑
+	​
+
+β
+f
+	​
+
+−
+portEdge(p)∈E(Q,R)
+∑
+	​
+
+γ
+p
+	​
+
+=
+2
+σ
+d
+	​
+
+(I)+σ
+d
+	​
+
+(J)
+	​
+
+≥0.
+	​
+
+	​
+
+(6)
+
+The active crossing supplies a port p
+×
+	​
+
+ with
+
+portEdge(p
+×
+	​
+
+)∈E(Q,R),γ
+p
+×
+	​
+
+	​
+
+>0.
+
+Consequently,
+
+badEdge(a)∈E(Q,R)
+∑
+	​
+
+α
+a
+	​
+
+>0.
+(7)
+
+Hence there is an actual selected atom a
+×
+	​
+
+ such that
+
+α
+a
+×
+	​
+
+	​
+
+>0,badEdge(a
+×
+	​
+
+)∈E(Q,R).
+(8)
+
+This is how the strict dual selects the lens anchor. It does not select an exact-one fiber.
+
+Why the innermost corner is a concrete pure lens
+
+The geometric core needed here is the following sharpened statement.
+
+lean
+lemma innermostTightRootCorner_pure
+    (X Y : ClosedRootRow C)
+    (hXtight : d.D1Slack X = 0)
+    (hYtight : d.D1Slack Y = 0)
+    (hp :
+      ∃ p,
+        0 < d.gamma p ∧
+        portEdge p ∈ E(X \ Y, Y \ X))
+    (ha :
+      ∃ a,
+        0 < d.alpha a ∧
+        badEdge a ∈ E(X \ Y, Y \ X))
+    (hinner : InnermostTightCrossingPair C d X Y)
+    (htri : TriangleFree G)
+    (hGamma : GammaMinimal Γ)
+    (hgeo : C.AllSelectedRowsAreShortestLength4) :
+    checkConcretePureLensCageSplit C (X \ Y) = true
+
+Here is the proof mechanism.
+
+noDouble
+
+Assume the checker returns a noDouble witness. Then some selected length-four geodesic
+
+P
+b
+	​
+
+=(v
+0
+	​
+
+,v
+1
+	​
+
+,v
+2
+	​
+
+,v
+3
+	​
+
+,v
+4
+	​
+
+)
+
+meets the corner Q=X∖Y in at least two separated intervals.
+
+Take the first and last Q-intervals. The subpath between them, together with the two canonical root-corridor segments in the crossing witness, defines a strictly smaller crossing corner Q
+′
+.
+
+There are only five vertices in P
+b
+	​
+
+, so the possible corner words
+
+((1
+X
+	​
+
+(v
+i
+	​
+
+),1
+Y
+	​
+
+(v
+i
+	​
+
+)))
+i=0
+4
+	​
+
+∈{00,10,11,01}
+5
+
+form a finite case split. For every non-convex occurrence of 10, the replacement does one of two things:
+
+It gives a blue path between the same two vertices shorter than the corresponding segment of P
+b
+	​
+
+, contradicting shortestness of the selected length-four geodesic.
+
+It gives an equal-length blue replacement with strictly smaller
+Γ-signature:
+fewer alternations between the two root corridors, and then fewer off-support edges, and then a smaller canonical edge code.
+
+The second case contradicts GammaMinimal.
+
+Triangle-freeness is used at the only degeneracies in this case table:
+
+a one-edge alternate route cannot be paired with a two-edge route, because that would create a triangle;
+
+the first and last corridor contacts are distinct;
+
+the spliced walk is simple rather than a path with an immediate repeated vertex.
+
+Thus every selected row meets Q in a single interval. That is the concrete condition used by noDouble.
+
+cover-or-zero
+
+Suppose the checker returns an atom b that is inherited by neither child and is not a zero-surplus atom.
+
+Its concrete row necessarily enters and exits Q. The first-entry/last-exit segment gives the same corridor splice as above.
+
+A strictly shorter replacement contradicts the ℓ=5 shortest-geodesic fact.
+
+An equal replacement reduces the Γ-signature.
+
+Therefore every nonzero-surplus atom is wholly owned by one descendant. Any atom cut by the lens is one of the zero-surplus ℓ=5 atoms allowed by cover-or-zero.
+
+No assertion that every atom crosses the layer is made.
+
+Properness
+
+The active port and the dual-positive bad atom both join Q to R, so both opposite corners are nonempty.
+
+Suppose the inherited full-escape closure of Q were the entire parent. Follow the existing closure trace and take the first real graph-edge port whose inside endpoint is in the current closure and whose other endpoint lies outside Q.
+
+It cannot be a Door-only obstruction: the compiled edge-specific Door discharge removes such a port from a strict wall obstruction.
+
+Therefore it is an actual non-Door active port.
+
+Together with a
+×
+	​
+
+, it forms a crossing corner strictly smaller than the pair chosen in (2).
+
+That contradicts innermostness. The same argument applies to the other descendant. Hence both descendants are proper.
+
+Vertex-disjointness
+
+If the two inherited descendants shared a vertex, take the earliest meeting of their two concrete closure traces. The last steps into that vertex are actual graph-edge ports arriving from opposite corners.
+
+They either:
+
+form a smaller active crossing directly; or
+
+give an equal-size corridor replacement with smaller Γ-rank.
+
+Both contradict (2). Therefore the descendants are vertex-disjoint.
+
+This establishes every Boolean checked by the present checkConcretePureLensCageSplit.
+
+Bank single ownership and the exact balance inequality
+
+Let the checked descendants be W and C
+′
+.
+
+Because
+
+W.verts∩C
+′
+.verts=∅,
+
+the compiled lemma gives, for every LocalBankTerm t,
+
+termInCage(t,W)⟹¬termInCage(t,C
+′
+).
+(9)
+
+This is PureLensBankSingleOwner.
+
+Termwise,
+
+termCapIn(t,W)+termCapIn(t,C
+′
+)≤termCapIn(t,C).
+(10)
+
+Summing over the finite real term manifest,
+
+Bank(W)+Bank(C
+′
+)≤Bank(C).
+	​
+
+(11)
+
+The concrete pure-lens exchange gives
+
+Surplus(C)=Surplus(W)+Surplus(C
+′
+).
+(12)
+
+Therefore
+
+Defect(W)+Defect(C
+′
+)
+	​
+
+=Surplus(C)−Bank(W)−Bank(C
+′
+)
+≥Surplus(C)−Bank(C)
+=Defect(C).
+	​
+
+(13)
+
+Equivalently,
+
+Balance(W)+Balance(C
+′
+)≤Balance(C)<0.
+	​
+
+(14)
+
+Thus one proper descendant has negative balance, contradicting hMinNeg.
+
+Direct exact gate for this lemma
+
+This is the finite gate that directly tests the proposed proof and nothing broader.
+
+For a checked strict dual d:
+
+Remove inessential positive γ's exactly.
+
+Enumerate the actual full-cut rows and retain those with exact D1 slack 0.
+
+Enumerate pairs X,Y that satisfy the existing R7ActiveRootCrossing predicate.
+
+Form
+
+Q=X∖Y,R=Y∖X.
+
+Recompute (5) exactly with Fraction.
+
+Retain pairs with a positive-γ actual port in E(Q,R).
+
+Enumerate the α-positive actual bad atoms in E(Q,R).
+
+Order the candidates by (2).
+
+For each candidate, set
+
+U=Q
+
+and run the existing checkConcretePureLensCageSplit.
+
+Verify single ownership and (10) using the existing bank checker.
+
+A decisive falsifier is:
+
+real graph and displayed cut
+real ell=5 atom/path table
+real off-support edge-port table
+real LocalBankTerm manifest
+full checked strict dual
+all full-family D1 slacks
+all D2 slacks
+R7ActiveRootCrossing witness
+all innermost tight crossing pairs
+four-corner identity for every pair
+every alpha-positive opposite-corner atom
+checker failure witness for every U = X \ Y
+MinNeg table for every proper inherited cage
+
+A hit remains decisive only if the failing candidate uses the current real closure and actual edge ports. No synthetic port or pooled sink is permitted.
+
+The genuinely new geometric statement is innermostTightRootCorner_pure. The dual selection before it is exact finite slack reduction plus the four-corner identity; the bank portion after it is already closed.

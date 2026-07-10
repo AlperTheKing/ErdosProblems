@@ -1,0 +1,3 @@
+E:\Projects\ErdosProblems\tmp\o14_packed_int_pilot\src\Erdos23Delta0\O14\PackedIntPilot\Chart000\Weights.lean:1435:49: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information

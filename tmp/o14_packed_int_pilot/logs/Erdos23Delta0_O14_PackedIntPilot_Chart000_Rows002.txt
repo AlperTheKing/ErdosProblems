@@ -1,0 +1,7 @@
+E:\Projects\ErdosProblems\tmp\o14_packed_int_pilot\src\Erdos23Delta0\O14\PackedIntPilot\Chart000\Rows002.lean:534:22: error: Type mismatch
+  base weightDenom weights nfRows
+has type
+  PolyCert.NF
+but is expected to have type
+  NF
+E:\Projects\ErdosProblems\tmp\o14_packed_int_pilot\src\Erdos23Delta0\O14\PackedIntPilot\Chart000\Rows002.lean:536:21: error(lean.unknownIdentifier): Unknown identifier `NF.allCoeffNonneg`

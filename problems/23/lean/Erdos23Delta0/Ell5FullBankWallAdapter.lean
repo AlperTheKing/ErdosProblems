@@ -110,6 +110,130 @@ noncomputable def primalOfCert
           ∑ c ∈ O, cert.q c j.1 := sum_subtype_mem O (fun c => cert.q c j.1)
       _ ≤ kap j.1 := cert.hcap j.1 j.2
 
+/-- A primal for the canonical subtype wall LP, zero-extended to the ambient
+cut, port, and sink types, gives a full-bank relaxed-cover certificate. -/
+noncomputable def certOfPrimal
+    (S : Finset R) (F O : Finset E) (J : Finset JT) (K : Finset ι)
+    (sep : ι → Finset R) (dB : ι → Finset E)
+    (inc : E → JT → Prop) (kap : JT → ℚ)
+    (P : Wall.Primal (wallLP S F O J K sep dB inc kap)) :
+    FullBankRelaxedCoverCert S F O J K sep dB inc kap := by
+  classical
+  let lam : ι → ℚ := fun k =>
+    if hk : k ∈ K then P.lam ⟨k, hk⟩ else 0
+  let q : E → JT → ℚ := fun c j =>
+    if hc : c ∈ O then
+      if hj : j ∈ J then P.q ⟨c, hc⟩ ⟨j, hj⟩ else 0
+    else 0
+  have hLamSum (a : ι → ℚ) :
+      (∑ k : {k // k ∈ K}, P.lam k * a k.1) =
+        ∑ k ∈ K, lam k * a k := by
+    calc
+      (∑ k : {k // k ∈ K}, P.lam k * a k.1) =
+          ∑ k : {k // k ∈ K}, lam k.1 * a k.1 := by
+        apply Finset.sum_congr rfl
+        intro k _
+        simp [lam, k.2]
+      _ = ∑ k ∈ K, lam k * a k := sum_subtype_mem K (fun k => lam k * a k)
+  have hQRow (c : E) (hc : c ∈ O) :
+      (∑ j : {j // j ∈ J}, P.q ⟨c, hc⟩ j) = ∑ j ∈ J, q c j := by
+    calc
+      (∑ j : {j // j ∈ J}, P.q ⟨c, hc⟩ j) =
+          ∑ j : {j // j ∈ J}, q c j.1 := by
+        apply Finset.sum_congr rfl
+        intro j _
+        simp [q, hc, j.2]
+      _ = ∑ j ∈ J, q c j := sum_subtype_mem J (q c)
+  have hQCol (j : JT) (hj : j ∈ J) :
+      (∑ c : {c // c ∈ O}, P.q c ⟨j, hj⟩) = ∑ c ∈ O, q c j := by
+    calc
+      (∑ c : {c // c ∈ O}, P.q c ⟨j, hj⟩) =
+          ∑ c : {c // c ∈ O}, q c.1 j := by
+        apply Finset.sum_congr rfl
+        intro c _
+        simp [q, c.2, hj]
+      _ = ∑ c ∈ O, q c j := sum_subtype_mem O (fun c => q c j)
+  refine
+    { lam := lam
+      q := q
+      hlam := ?_
+      hq := ?_
+      hkap := ?_
+      hcov := ?_
+      hcong := ?_
+      hroute := ?_
+      hcap := ?_
+      hqinc := ?_ }
+  · intro k hk
+    simpa [lam, hk] using P.lam_nonneg ⟨k, hk⟩
+  · intro c hc j hj
+    simpa [q, hc, hj] using P.q_nonneg ⟨c, hc⟩ ⟨j, hj⟩
+  · intro j hj
+    have hsum : 0 ≤ ∑ c : {c // c ∈ O}, P.q c ⟨j, hj⟩ :=
+      Finset.sum_nonneg fun c _ => P.q_nonneg c ⟨j, hj⟩
+    have hcap := P.sinkCapacity ⟨j, hj⟩
+    change (∑ c : {c // c ∈ O}, P.q c ⟨j, hj⟩) ≤ kap j at hcap
+    exact hsum.trans hcap
+  · intro r hr
+    have h := P.coverage ⟨r, hr⟩
+    change 1 ≤ ∑ k : {k // k ∈ K},
+      P.lam k * (if r ∈ sep k.1 then 1 else 0) at h
+    calc
+      1 ≤ ∑ k : {k // k ∈ K},
+          P.lam k * (if r ∈ sep k.1 then 1 else 0) := h
+      _ = ∑ k ∈ K, lam k * (if r ∈ sep k then 1 else 0) :=
+        hLamSum (fun k => if r ∈ sep k then 1 else 0)
+      _ = ∑ k ∈ K, if r ∈ sep k then lam k else 0 := by simp [mul_ite]
+  · intro c hc
+    have h := P.shortCongestion ⟨c, hc⟩
+    change (∑ k : {k // k ∈ K},
+      P.lam k * (if c ∈ dB k.1 then 1 else 0)) ≤ 1 at h
+    calc
+      (∑ k ∈ K, if c ∈ dB k then lam k else 0) =
+          ∑ k ∈ K, lam k * (if c ∈ dB k then 1 else 0) := by simp [mul_ite]
+      _ = ∑ k : {k // k ∈ K},
+          P.lam k * (if c ∈ dB k.1 then 1 else 0) :=
+        (hLamSum (fun k => if c ∈ dB k then 1 else 0)).symm
+      _ ≤ 1 := h
+  · intro c hc
+    have h := P.portRouted ⟨c, hc⟩
+    change (∑ k : {k // k ∈ K},
+      P.lam k * (if c ∈ dB k.1 then 1 else 0)) ≤
+        ∑ j : {j // j ∈ J}, P.q ⟨c, hc⟩ j at h
+    calc
+      (∑ k ∈ K, if c ∈ dB k then lam k else 0) =
+          ∑ k ∈ K, lam k * (if c ∈ dB k then 1 else 0) := by simp [mul_ite]
+      _ = ∑ k : {k // k ∈ K},
+          P.lam k * (if c ∈ dB k.1 then 1 else 0) :=
+        (hLamSum (fun k => if c ∈ dB k then 1 else 0)).symm
+      _ ≤ ∑ j : {j // j ∈ J}, P.q ⟨c, hc⟩ j := h
+      _ = ∑ j ∈ J, q c j := hQRow c hc
+  · intro j hj
+    have h := P.sinkCapacity ⟨j, hj⟩
+    change (∑ c : {c // c ∈ O}, P.q c ⟨j, hj⟩) ≤ kap j at h
+    rw [hQCol j hj] at h
+    exact h
+  · intro c hc j hj hpos
+    have hpos' : 0 < P.q ⟨c, hc⟩ ⟨j, hj⟩ := by
+      simpa [q, hc, hj] using hpos
+    have hlegal := P.q_legal ⟨c, hc⟩ ⟨j, hj⟩ (ne_of_gt hpos')
+    change inc c j at hlegal
+    exact hlegal
+
+/-- Feasibility of the ambient full-bank certificate is exactly feasibility of
+the canonical finite-subtype wall primal. -/
+theorem nonempty_cert_iff_nonempty_primal
+    (S : Finset R) (F O : Finset E) (J : Finset JT) (K : Finset ι)
+    (sep : ι → Finset R) (dB : ι → Finset E)
+    (inc : E → JT → Prop) (kap : JT → ℚ) :
+    Nonempty (FullBankRelaxedCoverCert S F O J K sep dB inc kap) ↔
+      Nonempty (Wall.Primal (wallLP S F O J K sep dB inc kap)) := by
+  constructor
+  · rintro ⟨cert⟩
+    exact ⟨primalOfCert S F O J K sep dB inc kap cert⟩
+  · rintro ⟨P⟩
+    exact ⟨certOfPrimal S F O J K sep dB inc kap P⟩
+
 /-- Every checked dual of the canonical wall instance has no strict gap. -/
 theorem noStrictDualOfCert
     (S : Finset R) (F O : Finset E) (J : Finset JT) (K : Finset ι)

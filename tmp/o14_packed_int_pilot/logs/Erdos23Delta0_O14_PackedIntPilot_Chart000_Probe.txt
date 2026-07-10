@@ -1,0 +1,9 @@
+'Erdos23Delta0.O14.SparseConePackedInt.residualRat_nonneg_of_checkRow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.O14.SparseConePackedInt.coreODLGoal_of_packedRows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.O14.PackedIntPilot.Chart000.Cone.coreODLGoal_of_packedInt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

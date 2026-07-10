@@ -31787,3 +31787,38 @@
 [2026-07-10T06:20:52Z] OK ATTACK | DID: audited real wall constructors and Pro collision fan | RESULT: no graph-to-wall ctor; raw fan omits ambient boundary | D: active Hall sole route
 [2026-07-10T06:20:52Z] > ATTACK | NEXT: prove rational capacitated Hall-to-flow and compile FullBank-to-Wall.Primal adapter.
 [2026-07-10T06:38:00Z] OK ATTACK | DID: compiled and independently reviewed FullBank-to-Wall.Primal adapter | RESULT: rc=0; exact allowed axioms; forbidden 0 | D: assembly gap closed
+[2026-07-10T08:41:00Z] FAIL VERIFY | DID: audited m<=15 BLOCK-OR-FLOW gate against real bank APIs | RESULT: 78590/0 is synthetic proxy; fixtures pass vacuously | D: evidence downgraded
+[2026-07-10T08:41:00Z] > ATTACK | NEXT: build real bank-data adapter and exact all-subset Hall gate; continue exact Hall-to-flow Lean proof.
+[2026-07-10T08:54:12Z] OK ATTACK | DID: compiled exact capacitated Hall-to-flow via rational Farkas/coarea | RESULT: rc=0; SHA 0B01898D; allowed axioms; forbidden 0 | D: flow gap closed
+[2026-07-10T08:54:12Z] FAIL ATTACK | DID: exact-audited GPT-Pro self-fiber elimination | RESULT: CE J????B_fEE? has minimal 12/11 defect but edge E mu=3/2 | D: proposal rejected
+[2026-07-10T08:54:12Z] > ATTACK | NEXT: specialize Hall-to-flow to active FullBank and send exact multiplicity CE to GPT-Pro/Claude.[2026-07-10T09:39:00Z] OK ATTACK | DID: specialized exact Hall-to-flow to active-component FullBank cert | RESULT: rc=0; SHA 180F362F; allowed axioms | D: crux is ActiveComponentHall
+[2026-07-10T09:39:00Z] > ATTACK | NEXT: construct real graph bank data and prove/falsify ActiveComponentHall with edge-specific sinks.
+
+[2026-07-10T13:12:00Z] OK ATTACK | DID: generalized active Hall to arbitrary full-bank sinks plus edge-specific Doors | RESULT: 2 modules rc=0; SHAs AA06F400/9E907495 | D: all sink kinds supported
+[2026-07-10T13:12:00Z] OK ATTACK | DID: mapped global ledger tokens to finite Hall-scale sinks | RESULT: rc=0; SHA EC03183E; legal edge-token incidence remains open | D: cap bridge closed
+[2026-07-10T13:12:00Z] FAIL VERIFY | DID: audited Pro determinant-2 counterexample against canonical R7 | RESULT: wrong ports/D1/root/atoms; kills only universal exact-one | D: R7 wall survives
+[2026-07-10T13:12:00Z] > ATTACK | NEXT: compile R7 endpoint-half partition/load lemmas and packed O14 pilot; retain exhaustive split wall.[2026-07-10T13:41:00Z] OK ATTACK | DID: compiled and independently audited R7 endpoint-half stack | RESULT: cover+partition+Loff>=1 rc=0; SHA BFB51085 | D: first R7 layer closed
+[2026-07-10T13:41:00Z] OK ATTACK | DID: compiled exact-one-fiber checker and reflection only | RESULT: rc=0; SHA 34FFC171; kernel decide; no existence claim | D: optional fast path closed
+[2026-07-10T13:41:00Z] OK ATTACK | DID: compiled and audited all-Doors FullBank fast path | RESULT: rc=0; SHA 800547BC; canonical primal/noStrictDual | D: Door-complete branch closed
+[2026-07-10T13:41:00Z] > ATTACK | NEXT: define FullBankLPBundle equivalence and concrete pure-lens enumeration/trichotomy checker; packed pilot continues.
+[2026-07-10T16:43:05+03:00] > ATTACK | NEXT: inspect ChatGPT Pro canonical R7 thread; if generation is active, wait without interaction.
+[2026-07-10T16:44:29+03:00] OK ATTACK | DID: inspected ChatGPT Pro R7 thread | RESULT: prior response complete; no Stop button in DOM | D: ready to submit canonical prompt
+[2026-07-10T16:44:29+03:00] > ATTACK | NEXT: send canonical R7 prompt exactly once and wait at least 20 minutes without interruption.
+[2026-07-10T16:45:40+03:00] OK ATTACK | DID: submitted canonical R7 prompt exactly once | RESULT: Prompt 10 visible; Pro thinking; Answer now untouched | D: generation active
+[2026-07-10T16:45:40+03:00] > VERIFY | NEXT: wait 20+ minutes without browser interaction, then verify generation completion and capture full response.
+[2026-07-10T17:06:21+03:00] OK VERIFY | DID: waited 1220 seconds, then checked thread | RESULT: Pro still thinking; Stop answering visible; Answer now untouched | D: generation active
+[2026-07-10T17:06:21+03:00] > VERIFY | NEXT: continue waiting without interaction until the Pro generation completes.
+[2026-07-10T17:21:43+03:00] OK VERIFY | DID: observed completed Pro answer after 25m09s | RESULT: final assistant response 10194 chars; Stop/Answer now absent | D: generation complete
+[2026-07-10T17:21:43+03:00] > VERIFY | NEXT: verify saved canonical response byte length and SHA-256 on disk.
+[2026-07-10T17:21:52+03:00] OK VERIFY | DID: verified saved canonical response | RESULT: tmp/codex_gptpro_r7_canonical_response.txt; 10639 bytes; SHA E35D9BEE | D: response captured
+[2026-07-10T14:39:15Z] > PLAN | NEXT: audit live cut/D1 APIs and compile canonical tight-corner algebra in one new production module.
+[2026-07-10T17:41:13+03:00] > ATTACK | NEXT: inspect the dedicated GPT-Pro R7 thread, then submit the PortHall follow-up exactly once if idle.
+[2026-07-10T14:39:21Z] FAIL VERIFY | DID: audited Pro R9 odd-root model against concrete Atom API | RESULT: ell7 distance-6 rows cannot instantiate length-4 Ell5Atom | D: kills abstract integral layer only
+[2026-07-10T14:39:21Z] OK ATTACK | DID: promoted all-ell5 proper-shore reduction | RESULT: Ell5ProperShoreSplit rc=0 SHA 542EA435; purity/bank automatic once both shores proper | D: wall shrinks
+[2026-07-10T14:39:21Z] FAIL VERIFY | DID: compared R7 MinNeg to ConcreteCage balance | RESULT: all-ell5 balance is compiled nonnegative; PortHall deficiency bridge must be direct | D: reject vacuous ConcreteMinNeg
+[2026-07-10T14:39:21Z] > ATTACK | NEXT: compile canonical four-corner algebra and formulate proper-shore PortHall split without balance identification.
+[2026-07-10T14:39:21Z] OK VERIFY | DID: ran packed-int O14 pilot | RESULT: chart000 239.34MiB PASS; charts066/107 sampled PASS, projected 955/1133MiB | D: compact design needs second compression
+[2026-07-10T17:42:19+03:00] OK ATTACK | DID: inspected dedicated GPT-Pro R7 thread | RESULT: prior answer complete; no Stop/Answering control | D: ready for PortHall follow-up
+[2026-07-10T17:42:19+03:00] > ATTACK | NEXT: send the PortHall follow-up exactly once, then wait 20+ minutes without page interaction.
+[2026-07-10T17:43:01+03:00] OK ATTACK | DID: submitted PortHall follow-up exactly once | RESULT: prompt length 2557 chars; dedicated thread URL unchanged | D: generation launched
+[2026-07-10T17:43:01+03:00] > VERIFY | NEXT: wait 20+ minutes with zero page interaction, then inspect completion state.
