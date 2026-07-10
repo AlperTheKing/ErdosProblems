@@ -1,0 +1,928 @@
+{
+  "summary": {
+    "wall": 359.212,
+    "files": 131,
+    "ok": 131,
+    "bytes": 381746696,
+    "failures": []
+  },
+  "rows": [
+    {
+      "name": "Chart000ScaledDirect000",
+      "rc": 0,
+      "seconds": 142.434,
+      "bytes": 9056200,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect001",
+      "rc": 0,
+      "seconds": 132.691,
+      "bytes": 7607968,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect002",
+      "rc": 0,
+      "seconds": 126.016,
+      "bytes": 7271472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect003",
+      "rc": 0,
+      "seconds": 130.499,
+      "bytes": 7048776,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect004",
+      "rc": 0,
+      "seconds": 121.824,
+      "bytes": 6701208,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect005",
+      "rc": 0,
+      "seconds": 71.329,
+      "bytes": 6308312,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect006",
+      "rc": 0,
+      "seconds": 123.928,
+      "bytes": 6409968,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect007",
+      "rc": 0,
+      "seconds": 123.029,
+      "bytes": 6034528,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect008",
+      "rc": 0,
+      "seconds": 123.357,
+      "bytes": 5904952,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect009",
+      "rc": 0,
+      "seconds": 116.1,
+      "bytes": 5625096,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect010",
+      "rc": 0,
+      "seconds": 106.246,
+      "bytes": 5546472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect011",
+      "rc": 0,
+      "seconds": 112.144,
+      "bytes": 5281952,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect012",
+      "rc": 0,
+      "seconds": 118.827,
+      "bytes": 5203256,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect013",
+      "rc": 0,
+      "seconds": 116.512,
+      "bytes": 5192016,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect014",
+      "rc": 0,
+      "seconds": 114.276,
+      "bytes": 4848424,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect015",
+      "rc": 0,
+      "seconds": 114.903,
+      "bytes": 4896184,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect016",
+      "rc": 0,
+      "seconds": 113.976,
+      "bytes": 4777472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect017",
+      "rc": 0,
+      "seconds": 113.922,
+      "bytes": 4519040,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect018",
+      "rc": 0,
+      "seconds": 112.228,
+      "bytes": 4543104,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect019",
+      "rc": 0,
+      "seconds": 112.488,
+      "bytes": 4473576,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect020",
+      "rc": 0,
+      "seconds": 111.097,
+      "bytes": 4486328,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect021",
+      "rc": 0,
+      "seconds": 111.856,
+      "bytes": 4354552,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect022",
+      "rc": 0,
+      "seconds": 111.013,
+      "bytes": 4199736,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect023",
+      "rc": 0,
+      "seconds": 110.878,
+      "bytes": 4201504,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect024",
+      "rc": 0,
+      "seconds": 110.571,
+      "bytes": 4177136,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect025",
+      "rc": 0,
+      "seconds": 110.128,
+      "bytes": 4121248,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect026",
+      "rc": 0,
+      "seconds": 109.975,
+      "bytes": 3884184,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect027",
+      "rc": 0,
+      "seconds": 109.663,
+      "bytes": 3858384,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect028",
+      "rc": 0,
+      "seconds": 108.721,
+      "bytes": 3836760,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect029",
+      "rc": 0,
+      "seconds": 109.036,
+      "bytes": 3834888,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect030",
+      "rc": 0,
+      "seconds": 108.348,
+      "bytes": 3810176,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect031",
+      "rc": 0,
+      "seconds": 107.696,
+      "bytes": 3457952,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect032",
+      "rc": 0,
+      "seconds": 55.238,
+      "bytes": 3478224,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect033",
+      "rc": 0,
+      "seconds": 54.623,
+      "bytes": 3494488,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect034",
+      "rc": 0,
+      "seconds": 67.831,
+      "bytes": 3512904,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect035",
+      "rc": 0,
+      "seconds": 67.838,
+      "bytes": 3424728,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect036",
+      "rc": 0,
+      "seconds": 72.707,
+      "bytes": 3407088,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect037",
+      "rc": 0,
+      "seconds": 71.691,
+      "bytes": 3407920,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect038",
+      "rc": 0,
+      "seconds": 73.347,
+      "bytes": 3046232,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect039",
+      "rc": 0,
+      "seconds": 74.003,
+      "bytes": 3102584,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect040",
+      "rc": 0,
+      "seconds": 74.649,
+      "bytes": 3062952,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect041",
+      "rc": 0,
+      "seconds": 76.57,
+      "bytes": 3120696,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect042",
+      "rc": 0,
+      "seconds": 78.98,
+      "bytes": 3098816,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect043",
+      "rc": 0,
+      "seconds": 79.196,
+      "bytes": 3084760,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect044",
+      "rc": 0,
+      "seconds": 77.77,
+      "bytes": 2991712,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect045",
+      "rc": 0,
+      "seconds": 79.343,
+      "bytes": 3038376,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect046",
+      "rc": 0,
+      "seconds": 78.228,
+      "bytes": 2966472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect047",
+      "rc": 0,
+      "seconds": 77.72,
+      "bytes": 3000592,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect048",
+      "rc": 0,
+      "seconds": 77.739,
+      "bytes": 2636256,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect049",
+      "rc": 0,
+      "seconds": 77.93,
+      "bytes": 2704528,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect050",
+      "rc": 0,
+      "seconds": 74.204,
+      "bytes": 2687024,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect051",
+      "rc": 0,
+      "seconds": 77.918,
+      "bytes": 2748128,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect052",
+      "rc": 0,
+      "seconds": 74.811,
+      "bytes": 2709848,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect053",
+      "rc": 0,
+      "seconds": 76.281,
+      "bytes": 2785136,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect054",
+      "rc": 0,
+      "seconds": 73.505,
+      "bytes": 2737784,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect055",
+      "rc": 0,
+      "seconds": 74.374,
+      "bytes": 2683352,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect056",
+      "rc": 0,
+      "seconds": 69.851,
+      "bytes": 2725272,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect057",
+      "rc": 0,
+      "seconds": 69.412,
+      "bytes": 2697264,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect058",
+      "rc": 0,
+      "seconds": 69.001,
+      "bytes": 2674376,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect059",
+      "rc": 0,
+      "seconds": 70.047,
+      "bytes": 2672792,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect060",
+      "rc": 0,
+      "seconds": 66.997,
+      "bytes": 2315864,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect061",
+      "rc": 0,
+      "seconds": 66.653,
+      "bytes": 2239352,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect062",
+      "rc": 0,
+      "seconds": 61.869,
+      "bytes": 2360672,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect063",
+      "rc": 0,
+      "seconds": 60.847,
+      "bytes": 2266304,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect064",
+      "rc": 0,
+      "seconds": 52.115,
+      "bytes": 2281672,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect065",
+      "rc": 0,
+      "seconds": 35.489,
+      "bytes": 2307440,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect066",
+      "rc": 0,
+      "seconds": 32.01,
+      "bytes": 2309240,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect067",
+      "rc": 0,
+      "seconds": 32.488,
+      "bytes": 2288016,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect068",
+      "rc": 0,
+      "seconds": 48.528,
+      "bytes": 2287432,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect069",
+      "rc": 0,
+      "seconds": 51.346,
+      "bytes": 2281184,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect070",
+      "rc": 0,
+      "seconds": 60.229,
+      "bytes": 2227176,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect071",
+      "rc": 0,
+      "seconds": 65.123,
+      "bytes": 2207032,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect072",
+      "rc": 0,
+      "seconds": 70.125,
+      "bytes": 2387584,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect073",
+      "rc": 0,
+      "seconds": 82.168,
+      "bytes": 2306008,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect074",
+      "rc": 0,
+      "seconds": 86.726,
+      "bytes": 2328480,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect075",
+      "rc": 0,
+      "seconds": 90.176,
+      "bytes": 2246568,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect076",
+      "rc": 0,
+      "seconds": 97.424,
+      "bytes": 2225368,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect077",
+      "rc": 0,
+      "seconds": 98.175,
+      "bytes": 2303296,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect078",
+      "rc": 0,
+      "seconds": 98.739,
+      "bytes": 2231528,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect079",
+      "rc": 0,
+      "seconds": 97.845,
+      "bytes": 2147664,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect080",
+      "rc": 0,
+      "seconds": 97.461,
+      "bytes": 1917128,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect081",
+      "rc": 0,
+      "seconds": 96.881,
+      "bytes": 1935632,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect082",
+      "rc": 0,
+      "seconds": 97.405,
+      "bytes": 1941288,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect083",
+      "rc": 0,
+      "seconds": 97.983,
+      "bytes": 1994544,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect084",
+      "rc": 0,
+      "seconds": 98.514,
+      "bytes": 1995112,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect085",
+      "rc": 0,
+      "seconds": 99.604,
+      "bytes": 1971120,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect086",
+      "rc": 0,
+      "seconds": 99.923,
+      "bytes": 1933472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect087",
+      "rc": 0,
+      "seconds": 100.132,
+      "bytes": 1951472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect088",
+      "rc": 0,
+      "seconds": 100.582,
+      "bytes": 2000912,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect089",
+      "rc": 0,
+      "seconds": 101.098,
+      "bytes": 1995264,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect090",
+      "rc": 0,
+      "seconds": 101.141,
+      "bytes": 2014688,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect091",
+      "rc": 0,
+      "seconds": 100.752,
+      "bytes": 1979040,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect092",
+      "rc": 0,
+      "seconds": 100.473,
+      "bytes": 1896592,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect093",
+      "rc": 0,
+      "seconds": 100.238,
+      "bytes": 1875304,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect094",
+      "rc": 0,
+      "seconds": 100.54,
+      "bytes": 2028400,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect095",
+      "rc": 0,
+      "seconds": 100.029,
+      "bytes": 1970736,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect096",
+      "rc": 0,
+      "seconds": 100.268,
+      "bytes": 1965600,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect097",
+      "rc": 0,
+      "seconds": 100.425,
+      "bytes": 2003088,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect098",
+      "rc": 0,
+      "seconds": 100.65,
+      "bytes": 1962552,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect099",
+      "rc": 0,
+      "seconds": 99.331,
+      "bytes": 1889456,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect100",
+      "rc": 0,
+      "seconds": 91.439,
+      "bytes": 1953496,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect101",
+      "rc": 0,
+      "seconds": 90.512,
+      "bytes": 1931416,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect102",
+      "rc": 0,
+      "seconds": 85.001,
+      "bytes": 1807632,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect103",
+      "rc": 0,
+      "seconds": 81.978,
+      "bytes": 1779168,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect104",
+      "rc": 0,
+      "seconds": 78.582,
+      "bytes": 1547592,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect105",
+      "rc": 0,
+      "seconds": 71.742,
+      "bytes": 1529624,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect106",
+      "rc": 0,
+      "seconds": 70.105,
+      "bytes": 1583960,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect107",
+      "rc": 0,
+      "seconds": 68.522,
+      "bytes": 1613256,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect108",
+      "rc": 0,
+      "seconds": 69.041,
+      "bytes": 1543648,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect109",
+      "rc": 0,
+      "seconds": 68.263,
+      "bytes": 1529696,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect110",
+      "rc": 0,
+      "seconds": 67.772,
+      "bytes": 1561856,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect111",
+      "rc": 0,
+      "seconds": 69.04,
+      "bytes": 1595720,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect112",
+      "rc": 0,
+      "seconds": 69.301,
+      "bytes": 1567064,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect113",
+      "rc": 0,
+      "seconds": 67.711,
+      "bytes": 1560048,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect114",
+      "rc": 0,
+      "seconds": 67.046,
+      "bytes": 1527024,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect115",
+      "rc": 0,
+      "seconds": 68.627,
+      "bytes": 1481848,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect116",
+      "rc": 0,
+      "seconds": 67.978,
+      "bytes": 1603720,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect117",
+      "rc": 0,
+      "seconds": 66.009,
+      "bytes": 1610136,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect118",
+      "rc": 0,
+      "seconds": 66.687,
+      "bytes": 1643072,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect119",
+      "rc": 0,
+      "seconds": 65.404,
+      "bytes": 1538728,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect120",
+      "rc": 0,
+      "seconds": 66.055,
+      "bytes": 1503840,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect121",
+      "rc": 0,
+      "seconds": 64.718,
+      "bytes": 1502296,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect122",
+      "rc": 0,
+      "seconds": 64.832,
+      "bytes": 1525168,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect123",
+      "rc": 0,
+      "seconds": 64.49,
+      "bytes": 1584472,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect124",
+      "rc": 0,
+      "seconds": 64.512,
+      "bytes": 1501592,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect125",
+      "rc": 0,
+      "seconds": 65.169,
+      "bytes": 1495384,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect126",
+      "rc": 0,
+      "seconds": 65.125,
+      "bytes": 1495064,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect127",
+      "rc": 0,
+      "seconds": 63.993,
+      "bytes": 1475944,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect128",
+      "rc": 0,
+      "seconds": 63.871,
+      "bytes": 1383968,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect129",
+      "rc": 0,
+      "seconds": 61.288,
+      "bytes": 1273368,
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect130",
+      "rc": 0,
+      "seconds": 51.193,
+      "bytes": 554488,
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+FORBIDDEN_SCAN_OK
+BUILD Erdos23Delta0\CertGraph.lean
+BUILD Erdos23Delta0\GammaAggregation.lean
+BUILD Erdos23Delta0\Gamma\FullBankToLengthSurplusCharge.lean
+BUILD Erdos23Delta0\Gamma\FullBankChargeCertProvider.lean
+GAMMA_PROVIDER_BUILD_OK

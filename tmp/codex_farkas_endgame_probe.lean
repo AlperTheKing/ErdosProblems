@@ -1,0 +1,3 @@
+import Erdos23Delta0.BankedWallFiniteFarkasEndgame
+
+#print axioms Erdos23Delta0.Wall.EndgameWallCert.dualSqueeze_exists

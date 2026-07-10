@@ -1,0 +1,4 @@
+import Erdos23Delta0.Wall359PrimalFixture
+
+#print axioms Erdos23Delta0.Wall359PrimalFixture.certificate
+#print axioms Erdos23Delta0.Wall359PrimalFixture.no_dualCert

@@ -1,0 +1,9 @@
+import Erdos23Delta0.O14.CompactPilot.Chart000CompactCone
+
+#print axioms Erdos23Delta0.O14.SparseConeScaledFun.weightedSumRat_eq_scaled
+#print axioms Erdos23Delta0.O14.SparseConeScaledFun.residualRat_eq_scaled
+#print axioms Erdos23Delta0.O14.SparseConeScaledFun.residualRat_nonneg_of_scaled
+#print axioms Erdos23Delta0.O14.CompactPilot.Chart000ScaledDirect000.residual0000_nonneg
+#print axioms Erdos23Delta0.O14.CompactPilot.Chart000ScaledDirect000.row0000_rational_nonneg
+#print axioms Erdos23Delta0.O14.CompactPilot.Chart000ScaledDirect000.hbaseTerms
+#print axioms Erdos23Delta0.O14.CompactPilot.Chart000CompactCone.coreODLGoal_of_compactCone

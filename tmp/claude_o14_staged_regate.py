@@ -21,11 +21,14 @@ ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 def mod_name(p): return ".".join(p.relative_to(SRC).with_suffix("").parts)
 
 def run_lean(p, olean=True):
-    out = BASE / p.relative_to(SRC).with_suffix(".olean")
-    out.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
     env["LEAN_PATH"] = str(BASE) + os.pathsep + env.get("LEAN_PATH", "")
-    cmd = ["lake", "env", "lean", f"--root={SRC}"] + ([f"--o={out}"] if olean else []) + [str(p)]
+    cmd = ["lake", "env", "lean", f"--root={SRC}"]
+    if olean:
+        out = BASE / p.relative_to(SRC).with_suffix(".olean")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        cmd.append(f"--o={out}")
+    cmd.append(str(p))
     r = subprocess.run(cmd, cwd=FORMAL, env=env, text=True, capture_output=True)
     ok = (r.returncode == 0) and ("error:" not in r.stderr.lower())
     return ok, r.returncode, r.stdout, (r.stdout[-300:] + r.stderr[-900:] if not ok else "")

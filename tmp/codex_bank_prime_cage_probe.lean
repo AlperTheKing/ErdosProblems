@@ -1,0 +1,6 @@
+import Erdos23Delta0.Ell5.ConcreteCage.BankPrime
+
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.properSplitOfPureLens
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.properSplitOfConcretePureLens
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.splitOrRoot_of_pureSplitOrRoot
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.balance_nonneg_of_pureSplitOrRoot

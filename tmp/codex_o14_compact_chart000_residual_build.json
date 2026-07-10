@@ -1,0 +1,930 @@
+{
+  "summary": {
+    "files": 131,
+    "ok": 131,
+    "fail": 0,
+    "wall_sec": 294.752,
+    "bytes": 434756664,
+    "max_mb": 16.025,
+    "failures": []
+  },
+  "rows": [
+    {
+      "file": "Chart000Residual000.lean",
+      "rc": 0,
+      "sec": 82.751,
+      "bytes": 16803008,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual001.lean",
+      "rc": 0,
+      "sec": 72.454,
+      "bytes": 13401776,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual002.lean",
+      "rc": 0,
+      "sec": 83.084,
+      "bytes": 12476472,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual003.lean",
+      "rc": 0,
+      "sec": 81.308,
+      "bytes": 11892520,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual004.lean",
+      "rc": 0,
+      "sec": 81.103,
+      "bytes": 11333672,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual005.lean",
+      "rc": 0,
+      "sec": 74.953,
+      "bytes": 10289112,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual006.lean",
+      "rc": 0,
+      "sec": 79.558,
+      "bytes": 10420456,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual007.lean",
+      "rc": 0,
+      "sec": 77.954,
+      "bytes": 9674608,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual008.lean",
+      "rc": 0,
+      "sec": 74.522,
+      "bytes": 9500352,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual009.lean",
+      "rc": 0,
+      "sec": 81.197,
+      "bytes": 8858560,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual010.lean",
+      "rc": 0,
+      "sec": 80.767,
+      "bytes": 8620960,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual011.lean",
+      "rc": 0,
+      "sec": 77.625,
+      "bytes": 8222880,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual012.lean",
+      "rc": 0,
+      "sec": 74.324,
+      "bytes": 8017992,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual013.lean",
+      "rc": 0,
+      "sec": 75.524,
+      "bytes": 7783208,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual014.lean",
+      "rc": 0,
+      "sec": 73.903,
+      "bytes": 7251296,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual015.lean",
+      "rc": 0,
+      "sec": 78.051,
+      "bytes": 7142216,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual016.lean",
+      "rc": 0,
+      "sec": 81.442,
+      "bytes": 7048936,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual017.lean",
+      "rc": 0,
+      "sec": 81.655,
+      "bytes": 6519304,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual018.lean",
+      "rc": 0,
+      "sec": 81.189,
+      "bytes": 6581896,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual019.lean",
+      "rc": 0,
+      "sec": 76.814,
+      "bytes": 6397336,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual020.lean",
+      "rc": 0,
+      "sec": 77.711,
+      "bytes": 6408704,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual021.lean",
+      "rc": 0,
+      "sec": 80.933,
+      "bytes": 6073312,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual022.lean",
+      "rc": 0,
+      "sec": 80.502,
+      "bytes": 5767216,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual023.lean",
+      "rc": 0,
+      "sec": 81.577,
+      "bytes": 5798280,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual024.lean",
+      "rc": 0,
+      "sec": 77.087,
+      "bytes": 5741728,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual025.lean",
+      "rc": 0,
+      "sec": 76.62,
+      "bytes": 5551808,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual026.lean",
+      "rc": 0,
+      "sec": 80.698,
+      "bytes": 5287896,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual027.lean",
+      "rc": 0,
+      "sec": 76.635,
+      "bytes": 5223728,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual028.lean",
+      "rc": 0,
+      "sec": 80.928,
+      "bytes": 5120496,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual029.lean",
+      "rc": 0,
+      "sec": 80.685,
+      "bytes": 4997832,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual030.lean",
+      "rc": 0,
+      "sec": 81.119,
+      "bytes": 4804144,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual031.lean",
+      "rc": 0,
+      "sec": 76.64,
+      "bytes": 4389592,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual032.lean",
+      "rc": 0,
+      "sec": 65.227,
+      "bytes": 4478072,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual033.lean",
+      "rc": 0,
+      "sec": 66.745,
+      "bytes": 4395112,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual034.lean",
+      "rc": 0,
+      "sec": 66.372,
+      "bytes": 4374360,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual035.lean",
+      "rc": 0,
+      "sec": 64.152,
+      "bytes": 4213480,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual036.lean",
+      "rc": 0,
+      "sec": 64.257,
+      "bytes": 4185016,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual037.lean",
+      "rc": 0,
+      "sec": 72.668,
+      "bytes": 4170472,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual038.lean",
+      "rc": 0,
+      "sec": 72.052,
+      "bytes": 3757416,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual039.lean",
+      "rc": 0,
+      "sec": 72.995,
+      "bytes": 3772600,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual040.lean",
+      "rc": 0,
+      "sec": 68.226,
+      "bytes": 3679856,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual041.lean",
+      "rc": 0,
+      "sec": 71.189,
+      "bytes": 3705128,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual042.lean",
+      "rc": 0,
+      "sec": 73.87,
+      "bytes": 3611952,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual043.lean",
+      "rc": 0,
+      "sec": 70.61,
+      "bytes": 3652456,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual044.lean",
+      "rc": 0,
+      "sec": 73.335,
+      "bytes": 3430760,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual045.lean",
+      "rc": 0,
+      "sec": 73.206,
+      "bytes": 3487328,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual046.lean",
+      "rc": 0,
+      "sec": 75.329,
+      "bytes": 3425296,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual047.lean",
+      "rc": 0,
+      "sec": 73.513,
+      "bytes": 3318144,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual048.lean",
+      "rc": 0,
+      "sec": 75.352,
+      "bytes": 2928904,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual049.lean",
+      "rc": 0,
+      "sec": 75.887,
+      "bytes": 2994952,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual050.lean",
+      "rc": 0,
+      "sec": 74.325,
+      "bytes": 2853648,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual051.lean",
+      "rc": 0,
+      "sec": 73.905,
+      "bytes": 2855968,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual052.lean",
+      "rc": 0,
+      "sec": 75.592,
+      "bytes": 2843544,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual053.lean",
+      "rc": 0,
+      "sec": 74.099,
+      "bytes": 2913440,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual054.lean",
+      "rc": 0,
+      "sec": 75.726,
+      "bytes": 2846784,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual055.lean",
+      "rc": 0,
+      "sec": 76.369,
+      "bytes": 2667440,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual056.lean",
+      "rc": 0,
+      "sec": 75.563,
+      "bytes": 2837336,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual057.lean",
+      "rc": 0,
+      "sec": 73.726,
+      "bytes": 2735432,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual058.lean",
+      "rc": 0,
+      "sec": 73.894,
+      "bytes": 2622952,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual059.lean",
+      "rc": 0,
+      "sec": 75.507,
+      "bytes": 2545416,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual060.lean",
+      "rc": 0,
+      "sec": 74.851,
+      "bytes": 2265496,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual061.lean",
+      "rc": 0,
+      "sec": 73.508,
+      "bytes": 2074792,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual062.lean",
+      "rc": 0,
+      "sec": 73.661,
+      "bytes": 2145840,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual063.lean",
+      "rc": 0,
+      "sec": 71.58,
+      "bytes": 1857888,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual064.lean",
+      "rc": 0,
+      "sec": 38.039,
+      "bytes": 2019496,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual065.lean",
+      "rc": 0,
+      "sec": 40.517,
+      "bytes": 2146040,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual066.lean",
+      "rc": 0,
+      "sec": 42.699,
+      "bytes": 2024456,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual067.lean",
+      "rc": 0,
+      "sec": 46.094,
+      "bytes": 1920048,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual068.lean",
+      "rc": 0,
+      "sec": 47.357,
+      "bytes": 1945080,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual069.lean",
+      "rc": 0,
+      "sec": 58.33,
+      "bytes": 1946456,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual070.lean",
+      "rc": 0,
+      "sec": 64.288,
+      "bytes": 1916232,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual071.lean",
+      "rc": 0,
+      "sec": 65.819,
+      "bytes": 1906488,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual072.lean",
+      "rc": 0,
+      "sec": 65.99,
+      "bytes": 2047736,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual073.lean",
+      "rc": 0,
+      "sec": 66.66,
+      "bytes": 1886568,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual074.lean",
+      "rc": 0,
+      "sec": 67.745,
+      "bytes": 1996160,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual075.lean",
+      "rc": 0,
+      "sec": 69.116,
+      "bytes": 1912744,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual076.lean",
+      "rc": 0,
+      "sec": 69.361,
+      "bytes": 1833288,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual077.lean",
+      "rc": 0,
+      "sec": 68.375,
+      "bytes": 1862336,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual078.lean",
+      "rc": 0,
+      "sec": 70.51,
+      "bytes": 1859904,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual079.lean",
+      "rc": 0,
+      "sec": 70.734,
+      "bytes": 1545232,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual080.lean",
+      "rc": 0,
+      "sec": 71.616,
+      "bytes": 1470424,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual081.lean",
+      "rc": 0,
+      "sec": 71.195,
+      "bytes": 1464280,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual082.lean",
+      "rc": 0,
+      "sec": 71.217,
+      "bytes": 1421760,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual083.lean",
+      "rc": 0,
+      "sec": 71.776,
+      "bytes": 1361560,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual084.lean",
+      "rc": 0,
+      "sec": 73.197,
+      "bytes": 1415560,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual085.lean",
+      "rc": 0,
+      "sec": 73.271,
+      "bytes": 1411992,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual086.lean",
+      "rc": 0,
+      "sec": 72.549,
+      "bytes": 1315008,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual087.lean",
+      "rc": 0,
+      "sec": 73.147,
+      "bytes": 1314544,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual088.lean",
+      "rc": 0,
+      "sec": 71.59,
+      "bytes": 1434976,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual089.lean",
+      "rc": 0,
+      "sec": 71.165,
+      "bytes": 1423648,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual090.lean",
+      "rc": 0,
+      "sec": 71.472,
+      "bytes": 1417224,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual091.lean",
+      "rc": 0,
+      "sec": 73.04,
+      "bytes": 1385912,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual092.lean",
+      "rc": 0,
+      "sec": 71.084,
+      "bytes": 1153472,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual093.lean",
+      "rc": 0,
+      "sec": 72.495,
+      "bytes": 1244016,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual094.lean",
+      "rc": 0,
+      "sec": 72.214,
+      "bytes": 1374376,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual095.lean",
+      "rc": 0,
+      "sec": 70.465,
+      "bytes": 1281840,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual096.lean",
+      "rc": 0,
+      "sec": 58.107,
+      "bytes": 1350456,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual097.lean",
+      "rc": 0,
+      "sec": 54.887,
+      "bytes": 1385608,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual098.lean",
+      "rc": 0,
+      "sec": 53.647,
+      "bytes": 1290544,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual099.lean",
+      "rc": 0,
+      "sec": 49.952,
+      "bytes": 1157144,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual100.lean",
+      "rc": 0,
+      "sec": 49.098,
+      "bytes": 1176728,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual101.lean",
+      "rc": 0,
+      "sec": 39.342,
+      "bytes": 1343760,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual102.lean",
+      "rc": 0,
+      "sec": 43.989,
+      "bytes": 949440,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual103.lean",
+      "rc": 0,
+      "sec": 47.355,
+      "bytes": 731728,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual104.lean",
+      "rc": 0,
+      "sec": 47.434,
+      "bytes": 754136,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual105.lean",
+      "rc": 0,
+      "sec": 49.745,
+      "bytes": 718920,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual106.lean",
+      "rc": 0,
+      "sec": 53.382,
+      "bytes": 771984,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual107.lean",
+      "rc": 0,
+      "sec": 57.524,
+      "bytes": 744952,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual108.lean",
+      "rc": 0,
+      "sec": 59.562,
+      "bytes": 670488,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual109.lean",
+      "rc": 0,
+      "sec": 61.205,
+      "bytes": 667912,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual110.lean",
+      "rc": 0,
+      "sec": 62.102,
+      "bytes": 658088,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual111.lean",
+      "rc": 0,
+      "sec": 62.934,
+      "bytes": 751944,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual112.lean",
+      "rc": 0,
+      "sec": 63.433,
+      "bytes": 715600,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual113.lean",
+      "rc": 0,
+      "sec": 63.502,
+      "bytes": 636992,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual114.lean",
+      "rc": 0,
+      "sec": 63.606,
+      "bytes": 645184,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual115.lean",
+      "rc": 0,
+      "sec": 64.645,
+      "bytes": 585536,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual116.lean",
+      "rc": 0,
+      "sec": 64.775,
+      "bytes": 649800,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual117.lean",
+      "rc": 0,
+      "sec": 64.742,
+      "bytes": 598416,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual118.lean",
+      "rc": 0,
+      "sec": 64.826,
+      "bytes": 724480,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual119.lean",
+      "rc": 0,
+      "sec": 65.279,
+      "bytes": 585912,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual120.lean",
+      "rc": 0,
+      "sec": 65.01,
+      "bytes": 539976,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual121.lean",
+      "rc": 0,
+      "sec": 65.26,
+      "bytes": 590808,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual122.lean",
+      "rc": 0,
+      "sec": 65.109,
+      "bytes": 566048,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual123.lean",
+      "rc": 0,
+      "sec": 64.634,
+      "bytes": 636424,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual124.lean",
+      "rc": 0,
+      "sec": 64.72,
+      "bytes": 573176,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual125.lean",
+      "rc": 0,
+      "sec": 64.16,
+      "bytes": 457584,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual126.lean",
+      "rc": 0,
+      "sec": 64.286,
+      "bytes": 441424,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual127.lean",
+      "rc": 0,
+      "sec": 64.138,
+      "bytes": 461504,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual128.lean",
+      "rc": 0,
+      "sec": 60.921,
+      "bytes": 276208,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual129.lean",
+      "rc": 0,
+      "sec": 59.865,
+      "bytes": 143888,
+      "tail": ""
+    },
+    {
+      "file": "Chart000Residual130.lean",
+      "rc": 0,
+      "sec": 58.654,
+      "bytes": 96440,
+      "tail": ""
+    }
+  ]
+}

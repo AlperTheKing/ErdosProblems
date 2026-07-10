@@ -1,0 +1,9 @@
+import Erdos23Delta0.FCBridge
+
+#check @Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_bipartization
+#check @Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_packageProvider
+#check @Erdos23Delta0.CertGraph.erdos23_fcForm_of_packageProvider
+
+#print axioms Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_bipartization
+#print axioms Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_packageProvider
+#print axioms Erdos23Delta0.CertGraph.erdos23_fcForm_of_packageProvider

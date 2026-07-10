@@ -1,0 +1,18 @@
+[scope] 107 charts, 0 already in ledger
+[Chart001] ok=True shards=233 1660s del=235 fails=0
+[Chart002] ok=True shards=247 1751s del=249 fails=0
+[Chart003] ok=True shards=278 1996s del=280 fails=0
+[Chart004] ok=True shards=279 2278s del=281 fails=0
+[Chart005] ok=True shards=280 1919s del=282 fails=0
+[Chart006] ok=True shards=307 2240s del=309 fails=0
+[Chart007] ok=True shards=300 2296s del=302 fails=0
+[Chart008] ok=True shards=216 1593s del=218 fails=0
+[Chart009] ok=True shards=301 2594s del=303 fails=0
+[Chart010] ok=True shards=301 2320s del=303 fails=0
+[Chart011] ok=True shards=217 1481s del=219 fails=0
+[Chart012] ok=True shards=303 2203s del=305 fails=0
+[Chart013] ok=True shards=276 2163s del=278 fails=0
+[Chart014] ok=True shards=307 2332s del=309 fails=0
+[Chart015] ok=True shards=311 2461s del=313 fails=0
+[Chart016] ok=True shards=300 2401s del=302 fails=0
+[Chart017] ok=True shards=323 2687s del=325 fails=0

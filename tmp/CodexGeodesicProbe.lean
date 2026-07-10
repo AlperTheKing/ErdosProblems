@@ -1,0 +1,4 @@
+import Erdos23Delta0.Ell5GeodesicSupportAdj
+
+#print axioms Erdos23Delta0.Ell5GeodesicSupportAdj.blue_adj_mem_geodesicSupport
+#print axioms Erdos23Delta0.Ell5GeodesicSupportAdj.not_both_onGeodesic_of_adj_not_mem

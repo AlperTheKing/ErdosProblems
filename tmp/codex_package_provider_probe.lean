@@ -1,0 +1,81 @@
+import Erdos23Delta0.PackageProviderSkeleton
+import Erdos23Delta0.BankedWallForcedEscapeBridge
+import Erdos23Delta0.BankedWallForcedEscapeCert
+import Erdos23Delta0.BankedWallRestrictedSqueezeCert
+import Erdos23Delta0.BankedWallEndgameCert
+import Erdos23Delta0.BankedWallHornQuotient
+import Erdos23Delta0.BankedWallHornEscapeBridge
+
+namespace Erdos23Delta0
+namespace CertGraph
+
+#check GraphDataPackageProviderInputs
+#check GraphDataPartitionProviderInputs
+#check goodCutPackage_of_providerInputs
+#check packageProvider_of_graphDataInputs
+#check erdos23_fcForm_of_graphDataInputs
+#check erdos23_rationalDeletion_of_graphDataInputs
+#check graphData_beta_bound_of_partitionInputs
+#check simpleGraph_beta_bound_of_partitionInputs
+#check erdos23_fcForm_of_partitionInputs
+#check erdos23_rationalDeletion_of_partitionInputs
+
+#print axioms erdos23_fcForm_of_graphDataInputs
+#print axioms erdos23_rationalDeletion_of_graphDataInputs
+#print axioms erdos23_fcForm_of_partitionInputs
+#print axioms erdos23_rationalDeletion_of_partitionInputs
+
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallInputs
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallInputs.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallInputs.noStrictDual
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallCert
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallCert.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallCert.noStrictDual
+#check Erdos23Delta0.Wall.RestrictedSqueezeWallCert
+#check Erdos23Delta0.Wall.RestrictedSqueezeWallCert.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.RestrictedSqueezeWallCert.noStrictDual
+#check Erdos23Delta0.Wall.EndgameWallCert
+#check Erdos23Delta0.Wall.EndgameWallCert.hornForcedEscape
+#check Erdos23Delta0.Wall.EndgameWallCert.allowed_hornForcedEscape
+#check Erdos23Delta0.Wall.EndgameWallCert.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.EndgameWallCert.noStrictDual
+#check Erdos23Delta0.Wall.ClosedShore.HornRule
+#check Erdos23Delta0.Wall.ClosedShore.HornClosed
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure_extensive
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure_closed
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure_idempotent
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure_monotone
+#check Erdos23Delta0.Wall.ClosedShore.hornClosure_eq_self_iff
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.toQ
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.fullClosure_eq_self_iff
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.RootFiberClosed
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.fullClosure_rootFiber_eq_self
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.closedPortSet_of_hornClosed
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.closedPortSet_rootFiber
+#check Erdos23Delta0.Wall.ClosedShore.HornEscapeSurface.AtomRootPure
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs.toForcedEscapeWallInputs
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs.noStrictDual
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert.toForcedEscapeWallCert
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert.noStrictRestrictedDual
+#check Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert.noStrictDual
+
+#print axioms Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallInputs.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallInputs.noStrictDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallCert.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.ForcedEscapeWallCert.noStrictDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallInputs.noStrictDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.ClosedShore.HornForcedEscapeWallCert.noStrictDual
+#print axioms Erdos23Delta0.Wall.RestrictedSqueezeWallCert.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.RestrictedSqueezeWallCert.noStrictDual
+#print axioms Erdos23Delta0.Wall.EndgameWallCert.noStrictRestrictedDual
+#print axioms Erdos23Delta0.Wall.EndgameWallCert.noStrictDual
+
+end CertGraph
+end Erdos23Delta0

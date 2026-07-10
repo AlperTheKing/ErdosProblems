@@ -1,0 +1,11 @@
+import Erdos23Delta0.BankedWallLPFiniteFarkas
+
+#print axioms Erdos23Delta0.FiniteFarkasRat.System.zeroCertificate_of_not_point
+#print axioms Erdos23Delta0.FiniteFarkasRat.certificate_of_not_feasible
+#print axioms Erdos23Delta0.FiniteFarkasRat.feasible_iff_no_certificate
+#print axioms Erdos23Delta0.Wall.SqueezeFeasible.toAlphaSqueeze
+#print axioms Erdos23Delta0.Wall.AlphaSqueeze.toFiniteFeasible
+#print axioms Erdos23Delta0.Wall.SqueezeCertificate.toRestrictedFarkasCert
+#print axioms Erdos23Delta0.Wall.RestrictedFarkasCert.toSqueezeCertificate
+#print axioms Erdos23Delta0.Wall.alphaSqueeze_exists_iff_no_restrictedStrict
+#print axioms Erdos23Delta0.Wall.dualSqueeze_exists_iff_no_restrictedStrict

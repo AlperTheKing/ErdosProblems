@@ -1,0 +1,21 @@
+Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.chargeCertProviderOfFullBankLedger_ok
+  {G : Erdos23Delta0.CertGraph.GraphData} {c : Erdos23Delta0.CertGraph.CutData} {rows : Erdos23Delta0.CertGraph.RowDB}
+  {P : Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage G c rows} (h : P.Checked) :
+  Erdos23Delta0.GammaAggregation.checkLengthSurplusChargeCertV2
+      (Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.residualFormulasOfFullBankPackage G c
+        rows)
+      P.chargeCertProviderOfFullBankLedger =
+    true
+Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankPackage_via_chargeCertV2
+  {G : Erdos23Delta0.CertGraph.GraphData} {c : Erdos23Delta0.CertGraph.CutData} {rows : Erdos23Delta0.CertGraph.RowDB}
+  {P : Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage G c rows} (h : P.Checked)
+  (hGersh :
+    ∀ (Q : Erdos23Delta0.CertGraph.RowCert),
+      Erdos23Delta0.CertGraph.RowInDB rows Q → Erdos23Delta0.CertGraph.RowGershBound G c rows Q) :
+  Erdos23Delta0.CertGraph.gammaOfGD G c rows ≤ ↑G.n ^ 2
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.chargeCertProviderOfFullBankLedger_ok' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.FullBankToLengthSurplusCharge.FullBankGlobalPackage.gammaUpper_from_fullBankPackage_via_chargeCertV2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

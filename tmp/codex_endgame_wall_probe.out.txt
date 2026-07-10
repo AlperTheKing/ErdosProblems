@@ -1,0 +1,7 @@
+@Erdos23Delta0.Wall.EndgameWallCert.noStrictRestrictedDual : ∀ {I : Erdos23Delta0.Wall.BankedWallLP}
+  (C : Erdos23Delta0.Wall.EndgameWallCert I) {d : Erdos23Delta0.Wall.Dual I},
+  Erdos23Delta0.Wall.Dual.RestrictedChecked C.allowed d → ¬d.StrictGap
+@Erdos23Delta0.Wall.EndgameWallCert.noStrictDual : ∀ {I : Erdos23Delta0.Wall.BankedWallLP}
+  (C : Erdos23Delta0.Wall.EndgameWallCert I) {d : Erdos23Delta0.Wall.Dual I}, d.Checked → ¬d.StrictGap
+'Erdos23Delta0.Wall.EndgameWallCert.noStrictRestrictedDual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos23Delta0.Wall.EndgameWallCert.noStrictDual' depends on axioms: [propext, Classical.choice, Quot.sound]

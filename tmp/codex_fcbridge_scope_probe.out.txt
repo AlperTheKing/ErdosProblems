@@ -1,0 +1,24 @@
+@Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_bipartization : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] (Gs : SimpleGraph V) [inst_2 : DecidableRel Gs.Adj],
+  Gs.CliqueFree 3 →
+    ∀ (P : Erdos23Delta0.CertGraph.SimpleGraphCertificatePackage Gs),
+      ∃ H ≤ Gs, H.IsBipartite ∧ ↑(Gs.edgeFinset \ H.edgeFinset).card ≤ ↑(Fintype.card V) ^ 2 / 25
+Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_packageProvider : (∀ {V : Type u_1} [inst : Fintype V]
+    [inst_1 : DecidableEq V] (Gs : SimpleGraph V) [inst_2 : DecidableRel Gs.Adj],
+    Gs.CliqueFree 3 → Nonempty (Erdos23Delta0.CertGraph.SimpleGraphCertificatePackage Gs)) →
+  ∀ (V : Type u_1) [inst : Fintype V] [inst_1 : DecidableEq V] (Gs : SimpleGraph V) [inst_2 : DecidableRel Gs.Adj],
+    Gs.CliqueFree 3 → ∃ H ≤ Gs, H.IsBipartite ∧ ↑(Gs.edgeFinset \ H.edgeFinset).card ≤ ↑(Fintype.card V) ^ 2 / 25
+Erdos23Delta0.CertGraph.erdos23_fcForm_of_packageProvider : (∀ {V : Type u_1} [inst : Fintype V]
+    [inst_1 : DecidableEq V] (Gs : SimpleGraph V) [inst_2 : DecidableRel Gs.Adj],
+    Gs.CliqueFree 3 → Nonempty (Erdos23Delta0.CertGraph.SimpleGraphCertificatePackage Gs)) →
+  ∀ (n : ℕ) (V : Type u_1) [inst : Fintype V] [inst_1 : DecidableEq V],
+    Fintype.card V = 5 * n →
+      ∀ (Gs : SimpleGraph V) [inst_2 : DecidableRel Gs.Adj],
+        Gs.CliqueFree 3 → ∃ H ≤ Gs, H.IsBipartite ∧ (Gs.edgeFinset \ H.edgeFinset).card ≤ n ^ 2
+'Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_bipartization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.CertGraph.erdos23_rationalDeletion_of_packageProvider' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.CertGraph.erdos23_fcForm_of_packageProvider' depends on axioms: [propext, Classical.choice, Quot.sound]

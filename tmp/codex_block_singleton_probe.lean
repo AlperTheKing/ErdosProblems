@@ -1,0 +1,9 @@
+import Erdos23Delta0.Ell5BlockSingleton
+
+open Erdos23Delta0 Ell5BlockSingleton
+
+#print axioms half_block_boundary_sum_distinct
+#print axioms block_bad_coverage
+#print axioms block_cut_load_same
+#print axioms block_cut_load_boundary
+#print axioms certificate_of_blockSingleton_boundaryDoors

@@ -1,0 +1,7 @@
+import Erdos23Delta0.Ell5SingletonVertexSlack
+
+open Erdos23Delta0 Ell5SingletonVertexSlack
+
+#print axioms sum_mixedVertexQ_eq_half_internal_card
+#print axioms certificate_of_singletonCore_mixedDoorVertex
+#print axioms certificate_of_singletonCore_mixedDoorVertexCount

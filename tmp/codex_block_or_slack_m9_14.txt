@@ -1,0 +1,7 @@
+{"m":9,"graphs":94,"witnesses":[]}
+{"m":10,"graphs":237,"witnesses":[]}
+{"m":11,"graphs":658,"witnesses":[]}
+{"m":12,"graphs":1845,"witnesses":[]}
+{"m":13,"graphs":5527,"witnesses":[]}
+{"m":14,"graphs":16809,"witnesses":[]}
+INTERNAL_OFFSUPPORT_GATE {"range":[9,14],"mode":"dichotomy","graphs":25170,"witnesses":0}

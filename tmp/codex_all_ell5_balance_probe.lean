@@ -1,0 +1,11 @@
+import Erdos23Delta0.Ell5.ConcreteCage.Bank
+import Erdos23Delta0.Ell5.ConcreteCage.BankPrime
+
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.bank_nonneg
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.surplus_eq_zero_of_atoms_ell5
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.balance_nonneg_of_atoms_ell5
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.defect_nonpos_of_atoms_ell5
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.defect_le_surplus
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.surplus_pos_of_defect_pos
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.exists_atom_not_ell5_of_defect_pos
+#print axioms Erdos23Delta0.Ell5.ConcreteCage.exists_long_atom_of_defect_pos

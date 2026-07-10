@@ -1,0 +1,41 @@
+[scope] 42715 files = 107 supports + 42394 shards + 107 aggregators + 107 bridges
+[0] token scan: 42715 files, 0 hits
+[supports] DONE ok=107 skip=0 fail=0 in 229s
+[shards] 200/42390 ok=200 fail=0 (957s)
+[shards] 400/42390 ok=400 fail=0 (1766s)
+[shards] 600/42390 ok=600 fail=0 (2572s)
+[shards] 800/42390 ok=800 fail=0 (3305s)
+[shards] 1000/42390 ok=1000 fail=0 (4145s)
+[shards] 1200/42390 ok=1200 fail=0 (4869s)
+[shards] 1400/42390 ok=1400 fail=0 (5603s)
+[shards] 1600/42390 ok=1600 fail=0 (6487s)
+[shards] 1800/42390 ok=1800 fail=0 (7258s)
+[shards] 2000/42390 ok=2000 fail=0 (8022s)
+[shards] 2200/42390 ok=2200 fail=0 (8861s)
+[shards] 2400/42390 ok=2400 fail=0 (9700s)
+[shards] 2600/42390 ok=2600 fail=0 (10534s)
+[shards] 2800/42390 ok=2800 fail=0 (11266s)
+[shards] 3000/42390 ok=3000 fail=0 (12143s)
+[shards] 3200/42390 ok=3200 fail=0 (13228s)
+[shards] 3400/42390 ok=3400 fail=0 (14029s)
+[shards] 3600/42390 ok=3600 fail=0 (14764s)
+[shards] 3800/42390 ok=3800 fail=0 (15622s)
+[shards] 4000/42390 ok=4000 fail=0 (16369s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS000 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS000.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4140/42390 ok=4139 fail=1 (16985s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS001 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS001.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4141/42390 ok=4139 fail=2 (16991s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS002 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS002.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4142/42390 ok=4139 fail=3 (16998s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS003 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS003.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4143/42390 ok=4139 fail=4 (16999s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS004 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS004.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4144/42390 ok=4139 fail=5 (17000s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart015ConePairs236 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart015ConePairs236.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generat
+[shards] 4145/42390 ok=4139 fail=6 (17002s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS005 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS005.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4146/42390 ok=4139 fail=7 (17003s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS006 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS006.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4147/42390 ok=4139 fail=8 (17004s)
+[shards] FAIL Erdos23Delta0.O14.Generated.ChartPayloads.Chart016ConeMS008 rc=1: failed to write 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\ChartPayloads\Chart016ConeMS008.olean': failed to create file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\O14\Generated\
+[shards] 4148/42390 ok=4139 fail=9 (17005s)

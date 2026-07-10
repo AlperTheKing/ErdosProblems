@@ -1,0 +1,1060 @@
+{
+  "schema": "o14_chart000_scaled_semantic_v1",
+  "workers": 32,
+  "wall": 355.423,
+  "files": 131,
+  "ok": 131,
+  "bytes": 278290176,
+  "shared_weight_bytes": 6974536,
+  "failures": [],
+  "results": [
+    {
+      "name": "Chart000ScaledDirect000",
+      "rc": 0,
+      "sec": 123.954,
+      "bytes": 8387832,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect000.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect000.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect001",
+      "rc": 0,
+      "sec": 107.112,
+      "bytes": 6866296,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect001.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect001.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect002",
+      "rc": 0,
+      "sec": 105.815,
+      "bytes": 6517000,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect002.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect002.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect003",
+      "rc": 0,
+      "sec": 100.161,
+      "bytes": 6280440,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect003.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect003.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect004",
+      "rc": 0,
+      "sec": 98.269,
+      "bytes": 5921656,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect004.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect004.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect005",
+      "rc": 0,
+      "sec": 97.371,
+      "bytes": 5522712,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect005.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect005.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect006",
+      "rc": 0,
+      "sec": 98.773,
+      "bytes": 5634080,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect006.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect006.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect007",
+      "rc": 0,
+      "sec": 97.047,
+      "bytes": 5268280,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect007.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect007.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect008",
+      "rc": 0,
+      "sec": 98.355,
+      "bytes": 5140912,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect008.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect008.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect009",
+      "rc": 0,
+      "sec": 93.342,
+      "bytes": 4873376,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect009.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect009.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect010",
+      "rc": 0,
+      "sec": 95.105,
+      "bytes": 4763976,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect010.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect010.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect011",
+      "rc": 0,
+      "sec": 93.552,
+      "bytes": 4512456,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect011.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect011.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect012",
+      "rc": 0,
+      "sec": 93.01,
+      "bytes": 4446552,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect012.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect012.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect013",
+      "rc": 0,
+      "sec": 91.956,
+      "bytes": 4407104,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect013.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect013.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect014",
+      "rc": 0,
+      "sec": 89.686,
+      "bytes": 4130352,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect014.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect014.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect015",
+      "rc": 0,
+      "sec": 88.543,
+      "bytes": 4116696,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect015.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect015.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect016",
+      "rc": 0,
+      "sec": 90.336,
+      "bytes": 3981064,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect016.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect016.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect017",
+      "rc": 0,
+      "sec": 89.795,
+      "bytes": 3789960,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect017.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect017.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect018",
+      "rc": 0,
+      "sec": 86.815,
+      "bytes": 3797584,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect018.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect018.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect019",
+      "rc": 0,
+      "sec": 88.888,
+      "bytes": 3682888,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect019.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect019.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect020",
+      "rc": 0,
+      "sec": 87.56,
+      "bytes": 3702944,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect020.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect020.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect021",
+      "rc": 0,
+      "sec": 85.93,
+      "bytes": 3588656,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect021.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect021.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect022",
+      "rc": 0,
+      "sec": 86.591,
+      "bytes": 3454120,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect022.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect022.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect023",
+      "rc": 0,
+      "sec": 85.127,
+      "bytes": 3428384,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect023.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect023.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect024",
+      "rc": 0,
+      "sec": 85.433,
+      "bytes": 3366728,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect024.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect024.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect025",
+      "rc": 0,
+      "sec": 83.786,
+      "bytes": 3301344,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect025.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect025.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect026",
+      "rc": 0,
+      "sec": 83.697,
+      "bytes": 3129872,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect026.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect026.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect027",
+      "rc": 0,
+      "sec": 84.167,
+      "bytes": 3091512,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect027.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect027.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect028",
+      "rc": 0,
+      "sec": 82.584,
+      "bytes": 3031544,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect028.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect028.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect029",
+      "rc": 0,
+      "sec": 82.54,
+      "bytes": 3034192,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect029.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect029.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect030",
+      "rc": 0,
+      "sec": 83.891,
+      "bytes": 2981960,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect030.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect030.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect031",
+      "rc": 0,
+      "sec": 81.497,
+      "bytes": 2751400,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect031.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect031.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect032",
+      "rc": 0,
+      "sec": 61.254,
+      "bytes": 2722912,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect032.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect032.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect033",
+      "rc": 0,
+      "sec": 69.46,
+      "bytes": 2711016,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect033.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect033.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect034",
+      "rc": 0,
+      "sec": 71.287,
+      "bytes": 2730888,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect034.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect034.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect035",
+      "rc": 0,
+      "sec": 79.642,
+      "bytes": 2605696,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect035.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect035.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect036",
+      "rc": 0,
+      "sec": 80.573,
+      "bytes": 2590032,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect036.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect036.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect037",
+      "rc": 0,
+      "sec": 80.991,
+      "bytes": 2599064,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect037.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect037.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect038",
+      "rc": 0,
+      "sec": 80.607,
+      "bytes": 2330544,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect038.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect038.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect039",
+      "rc": 0,
+      "sec": 85.316,
+      "bytes": 2342224,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect039.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect039.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect040",
+      "rc": 0,
+      "sec": 86.98,
+      "bytes": 2301080,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect040.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect040.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect041",
+      "rc": 0,
+      "sec": 88.526,
+      "bytes": 2326168,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect041.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect041.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect042",
+      "rc": 0,
+      "sec": 89.527,
+      "bytes": 2309744,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect042.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect042.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect043",
+      "rc": 0,
+      "sec": 90.456,
+      "bytes": 2266616,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect043.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect043.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect044",
+      "rc": 0,
+      "sec": 92.395,
+      "bytes": 2223672,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect044.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect044.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect045",
+      "rc": 0,
+      "sec": 93.801,
+      "bytes": 2202048,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect045.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect045.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect046",
+      "rc": 0,
+      "sec": 95.61,
+      "bytes": 2162392,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect046.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect046.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect047",
+      "rc": 0,
+      "sec": 97.243,
+      "bytes": 2176976,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect047.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect047.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect048",
+      "rc": 0,
+      "sec": 95.488,
+      "bytes": 1934072,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect048.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect048.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect049",
+      "rc": 0,
+      "sec": 95.41,
+      "bytes": 1947376,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect049.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect049.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect050",
+      "rc": 0,
+      "sec": 96.876,
+      "bytes": 1897400,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect050.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect050.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect051",
+      "rc": 0,
+      "sec": 96.764,
+      "bytes": 1952696,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect051.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect051.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect052",
+      "rc": 0,
+      "sec": 97.741,
+      "bytes": 1919416,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect052.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect052.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect053",
+      "rc": 0,
+      "sec": 97.239,
+      "bytes": 1932320,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect053.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect053.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect054",
+      "rc": 0,
+      "sec": 98.068,
+      "bytes": 1905224,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect054.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect054.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect055",
+      "rc": 0,
+      "sec": 98.464,
+      "bytes": 1856888,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect055.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect055.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect056",
+      "rc": 0,
+      "sec": 98.225,
+      "bytes": 1861160,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect056.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect056.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect057",
+      "rc": 0,
+      "sec": 99.435,
+      "bytes": 1874368,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect057.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect057.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect058",
+      "rc": 0,
+      "sec": 98.749,
+      "bytes": 1805664,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect058.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect058.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect059",
+      "rc": 0,
+      "sec": 98.871,
+      "bytes": 1873408,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect059.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect059.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect060",
+      "rc": 0,
+      "sec": 97.853,
+      "bytes": 1577400,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect060.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect060.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect061",
+      "rc": 0,
+      "sec": 96.697,
+      "bytes": 1496704,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect061.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect061.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect062",
+      "rc": 0,
+      "sec": 95.857,
+      "bytes": 1595312,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect062.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect062.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect063",
+      "rc": 0,
+      "sec": 90.688,
+      "bytes": 1457720,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect063.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect063.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect064",
+      "rc": 0,
+      "sec": 86.001,
+      "bytes": 1493832,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect064.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect064.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect065",
+      "rc": 0,
+      "sec": 83.918,
+      "bytes": 1540224,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect065.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect065.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect066",
+      "rc": 0,
+      "sec": 83.048,
+      "bytes": 1473336,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect066.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect066.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect067",
+      "rc": 0,
+      "sec": 83.645,
+      "bytes": 1451200,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect067.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect067.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect068",
+      "rc": 0,
+      "sec": 83.599,
+      "bytes": 1478480,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect068.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect068.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect069",
+      "rc": 0,
+      "sec": 82.998,
+      "bytes": 1486312,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect069.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect069.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect070",
+      "rc": 0,
+      "sec": 83.519,
+      "bytes": 1467592,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect070.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect070.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect071",
+      "rc": 0,
+      "sec": 81.597,
+      "bytes": 1380888,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect071.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect071.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect072",
+      "rc": 0,
+      "sec": 82.326,
+      "bytes": 1506928,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect072.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect072.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect073",
+      "rc": 0,
+      "sec": 81.164,
+      "bytes": 1457920,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect073.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect073.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect074",
+      "rc": 0,
+      "sec": 82.163,
+      "bytes": 1510440,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect074.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect074.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect075",
+      "rc": 0,
+      "sec": 82.019,
+      "bytes": 1458536,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect075.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect075.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect076",
+      "rc": 0,
+      "sec": 81.837,
+      "bytes": 1391464,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect076.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect076.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect077",
+      "rc": 0,
+      "sec": 79.942,
+      "bytes": 1426456,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect077.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect077.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect078",
+      "rc": 0,
+      "sec": 80.022,
+      "bytes": 1407696,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect078.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect078.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect079",
+      "rc": 0,
+      "sec": 81.236,
+      "bytes": 1353576,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect079.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect079.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect080",
+      "rc": 0,
+      "sec": 78.942,
+      "bytes": 1177944,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect080.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect080.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect081",
+      "rc": 0,
+      "sec": 77.732,
+      "bytes": 1192376,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect081.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect081.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect082",
+      "rc": 0,
+      "sec": 78.622,
+      "bytes": 1166800,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect082.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect082.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect083",
+      "rc": 0,
+      "sec": 76.201,
+      "bytes": 1171440,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect083.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect083.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect084",
+      "rc": 0,
+      "sec": 77.489,
+      "bytes": 1207424,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect084.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect084.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect085",
+      "rc": 0,
+      "sec": 75.62,
+      "bytes": 1204832,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect085.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect085.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect086",
+      "rc": 0,
+      "sec": 76.003,
+      "bytes": 1139616,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect086.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect086.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect087",
+      "rc": 0,
+      "sec": 72.911,
+      "bytes": 1121080,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect087.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect087.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect088",
+      "rc": 0,
+      "sec": 73.066,
+      "bytes": 1154256,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect088.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect088.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect089",
+      "rc": 0,
+      "sec": 72.588,
+      "bytes": 1178456,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect089.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect089.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect090",
+      "rc": 0,
+      "sec": 73.703,
+      "bytes": 1199216,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect090.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect090.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect091",
+      "rc": 0,
+      "sec": 72.33,
+      "bytes": 1185768,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect091.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect091.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect092",
+      "rc": 0,
+      "sec": 72.899,
+      "bytes": 1112104,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect092.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect092.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect093",
+      "rc": 0,
+      "sec": 68.065,
+      "bytes": 1049808,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect093.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect093.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect094",
+      "rc": 0,
+      "sec": 68.803,
+      "bytes": 1145864,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect094.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect094.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect095",
+      "rc": 0,
+      "sec": 59.007,
+      "bytes": 1112328,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect095.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect095.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect096",
+      "rc": 0,
+      "sec": 49.272,
+      "bytes": 1146792,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect096.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect096.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect097",
+      "rc": 0,
+      "sec": 44.607,
+      "bytes": 1176480,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect097.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect097.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect098",
+      "rc": 0,
+      "sec": 43.977,
+      "bytes": 1152816,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect098.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect098.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect099",
+      "rc": 0,
+      "sec": 40.733,
+      "bytes": 1049304,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect099.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect099.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect100",
+      "rc": 0,
+      "sec": 42.269,
+      "bytes": 1061472,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect100.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect100.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect101",
+      "rc": 0,
+      "sec": 42.683,
+      "bytes": 1117832,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect101.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect101.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect102",
+      "rc": 0,
+      "sec": 42.566,
+      "bytes": 981624,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect102.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect102.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect103",
+      "rc": 0,
+      "sec": 46.376,
+      "bytes": 969520,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect103.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect103.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect104",
+      "rc": 0,
+      "sec": 50.9,
+      "bytes": 812560,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect104.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect104.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect105",
+      "rc": 0,
+      "sec": 52.868,
+      "bytes": 812456,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect105.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect105.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect106",
+      "rc": 0,
+      "sec": 59.209,
+      "bytes": 809104,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect106.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect106.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect107",
+      "rc": 0,
+      "sec": 61.153,
+      "bytes": 810312,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect107.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect107.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect108",
+      "rc": 0,
+      "sec": 66.542,
+      "bytes": 792760,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect108.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect108.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect109",
+      "rc": 0,
+      "sec": 67.942,
+      "bytes": 783960,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect109.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect109.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect110",
+      "rc": 0,
+      "sec": 73.081,
+      "bytes": 759016,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect110.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect110.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect111",
+      "rc": 0,
+      "sec": 73.628,
+      "bytes": 775024,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect111.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect111.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect112",
+      "rc": 0,
+      "sec": 73.788,
+      "bytes": 814392,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect112.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect112.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect113",
+      "rc": 0,
+      "sec": 74.56,
+      "bytes": 779088,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect113.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect113.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect114",
+      "rc": 0,
+      "sec": 75.416,
+      "bytes": 780592,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect114.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect114.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect115",
+      "rc": 0,
+      "sec": 75.975,
+      "bytes": 699056,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect115.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect115.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect116",
+      "rc": 0,
+      "sec": 76.411,
+      "bytes": 768872,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect116.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect116.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect117",
+      "rc": 0,
+      "sec": 77.211,
+      "bytes": 751520,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect117.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect117.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect118",
+      "rc": 0,
+      "sec": 77.607,
+      "bytes": 820728,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect118.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect118.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect119",
+      "rc": 0,
+      "sec": 77.712,
+      "bytes": 752216,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect119.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect119.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect120",
+      "rc": 0,
+      "sec": 77.823,
+      "bytes": 724112,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect120.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect120.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect121",
+      "rc": 0,
+      "sec": 77.986,
+      "bytes": 723536,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect121.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect121.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect122",
+      "rc": 0,
+      "sec": 77.68,
+      "bytes": 702752,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect122.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect122.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect123",
+      "rc": 0,
+      "sec": 78.13,
+      "bytes": 755456,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect123.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect123.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect124",
+      "rc": 0,
+      "sec": 78.132,
+      "bytes": 697312,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect124.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect124.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect125",
+      "rc": 0,
+      "sec": 78.279,
+      "bytes": 667528,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect125.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect125.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect126",
+      "rc": 0,
+      "sec": 77.907,
+      "bytes": 687704,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect126.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect126.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect127",
+      "rc": 0,
+      "sec": 77.334,
+      "bytes": 692376,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect127.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect127.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect128",
+      "rc": 0,
+      "sec": 75.76,
+      "bytes": 570120,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect128.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect128.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect129",
+      "rc": 0,
+      "sec": 74.877,
+      "bytes": 475656,
+      "stdout": "on linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect129.lean:1140:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect129.lean:1158:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    },
+    {
+      "name": "Chart000ScaledDirect130",
+      "rc": 0,
+      "sec": 74.406,
+      "bytes": 219864,
+      "stdout": "tion linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect130.lean:420:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nE:\\Projects\\ErdosProblems\\problems\\23\\lean\\Erdos23Delta0\\O14\\CompactPilot\\Chart000ScaledDirect130.lean:438:2: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": ""
+    }
+  ]
+}

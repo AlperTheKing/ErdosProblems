@@ -64,6 +64,41 @@ noncomputable def Balance (F : BankFrame (V := V)) (C : AmbientCage G c) : ℚ :
 theorem balance_eq_bank_sub_surplus (F : BankFrame (V := V)) (C : AmbientCage G c) :
     Balance F C = Bank F C - C.Surplus := rfl
 
+theorem termCapIn_nonneg (t : LocalBankTerm (V := V)) (C : AmbientCage G c) :
+    0 ≤ termCapIn t C := by
+  classical
+  unfold termCapIn
+  by_cases h : termInCage t C
+  · simpa [h] using t.cap_nonneg
+  · simp [h]
+
+theorem bankOn_nonneg (ts : List (LocalBankTerm (V := V))) (C : AmbientCage G c) :
+    0 ≤ bankOn ts C := by
+  induction ts with
+  | nil => simp [bankOn]
+  | cons t ts ih =>
+      simpa [bankOn] using add_nonneg (termCapIn_nonneg t C) ih
+
+theorem bank_nonneg (F : BankFrame (V := V)) (C : AmbientCage G c) :
+    0 ≤ Bank F C :=
+  bankOn_nonneg F.terms C
+
+/-- A cage owning only length-five atoms has zero normalized surplus. -/
+theorem surplus_eq_zero_of_atoms_ell5 (C : AmbientCage G c)
+    (hell5 : ∀ a ∈ C.atoms, Distances.ell G c a.u a.v = 5) :
+    C.Surplus = 0 := by
+  classical
+  unfold AmbientCage.Surplus
+  exact Finset.sum_eq_zero fun a ha => atom_surplus_eq_zero_of_ell5 G c a (hell5 a ha)
+
+/-- Pure length-five cages cannot be reduced minimal negative-balance cages,
+regardless of how the nonnegative bank terms are incident to ports. -/
+theorem balance_nonneg_of_atoms_ell5 (F : BankFrame (V := V)) (C : AmbientCage G c)
+    (hell5 : ∀ a ∈ C.atoms, Distances.ell G c a.u a.v = 5) :
+    0 ≤ Balance F C := by
+  rw [balance_eq_bank_sub_surplus, surplus_eq_zero_of_atoms_ell5 C hell5, sub_zero]
+  exact bank_nonneg F C
+
 private theorem not_termIn_both_of_disjoint (t : LocalBankTerm (V := V))
     {W C' : AmbientCage G c} (hdisj : Disjoint W.verts C'.verts) :
     ¬ (termInCage t W ∧ termInCage t C') := by

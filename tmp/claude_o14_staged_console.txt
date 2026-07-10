@@ -1,0 +1,11 @@
+[scope] 107 charts, 0 already in ledger
+Traceback (most recent call last):
+  File "E:\Projects\ErdosProblems\tmp\claude_o14_staged_regate.py", line 84, in <module>
+    ok, rc, out, err = run_lean(probe, olean=False)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Projects\ErdosProblems\tmp\claude_o14_staged_regate.py", line 24, in run_lean
+    out = BASE / p.relative_to(SRC).with_suffix(".olean")
+                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'E:\\Projects\\ErdosProblems\\tmp\\claude_staged_probe.lean' is not in the subpath of 'E:\\Projects\\ErdosProblems\\problems\\23\\lean'

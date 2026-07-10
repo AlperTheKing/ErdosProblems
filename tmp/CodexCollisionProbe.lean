@@ -1,0 +1,5 @@
+import Erdos23Delta0.Ell5CollisionBudget
+#print axioms Erdos23Delta0.Ell5CollisionBudget.disjoint_fanUnion
+#print axioms Erdos23Delta0.Ell5CollisionBudget.collisionZ_ge
+#print axioms Erdos23Delta0.Ell5CollisionBudget.collisionZ_nonneg
+#print axioms Erdos23Delta0.Ell5CollisionBudget.exists_ge_of_card_mul_le_sum
