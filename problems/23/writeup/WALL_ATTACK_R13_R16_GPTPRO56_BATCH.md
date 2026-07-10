@@ -73,3 +73,32 @@ owner-atlas checker (Codex); (iii) R15 167-vtx CE (script: maxcut cert + support
 (iv) R16 = THE LIVE THEOREM — verify the counting inequality algebra (done by inspection: (4)⟹(5)⟹(6)⟹(7)
 ✓ sound) + the 3892 numbers (2295 = 3920−1625 ✓) + implement the max-flow gate; the c5BasePrune accounting
 (12) is the new load-bearing extractor lemma (Codex formalization lane after design ack).]
+
+## R17 (batch final) — bare COLLISION-TO-TOKEN FALSE; repair = checked residual-source matching
+- ALGEBRAIC OBSTRUCTION: the exact signed ordered-pair identity |Free_w| - |Coll_w| = N^2 - 25m (each
+  selected 5-vtx row contributes EXACTLY 25 ordered pairs incl diagonals — the atomization of the residual).
+  Collisions are NEGATIVE summands (debits); hits are not positive terms ⟹ (q+h) cannot fund c5Base/prune
+  tokens without identifying DISTINCT POSITIVE residual summands (Free pairs) as sources.
+- SMALLEST ABSTRACT COUNTERMODEL: equality C5 (N=5, m=1, row 0-1-2-3-4) + abstract active I-path 0-2-4:
+  Free = Coll = empty, residual 0, needs sum = 2 ⟹ 2 <= 0. (Abstract only: REAL I-edges 0-2,2-4 would
+  shorten the row — the real theorem must derive exactly that injection from tri-free/maxcut/Gamma-min used
+  GEOMETRICALLY, not through the two scalar identities.)
+- REPAIR (adopted): **mu : CollisionHalf ⊔ HitNeed ↪ FreeHalf** (injective, component-preserving; NeedSlot
+  count D_v = max(0, K deg_H(v) - S_v) with D_v u = the compiled half-reserve, u = 1/(2K); needWitness
+  injection from the compiled counting theorem is COMPUTED). Token construction from mu: kind c5Base,
+  support {v} (nonempty, graph-derived), cap u, sourceId = rank of matched FreeHalf ⟹ distinct; legality =
+  incident active endpoint ports; ALL fields verified: (i) nonneg, (ii) legality, (iii) cap + no-double-spend
+  + component locality, (iv) endpoint reserve deg_H(v)/2 <= s(v) + sum eta (= EndpointReserveHall input),
+  (v) EXACT component ledger F_c/(2K) = C_c/(2K) + sum caps(hit tokens) + R_c^rem >= 0 — sums back to the
+  residual identity, nothing added to the N^2-25m budget, (vi) balanced C5-blow-up equality accepted exactly
+  (bijection, zero tokens).
+- FALSIFIER GATE (finite, per component): **C_c + H_c <= F_c** (interchangeable sources) or exact bipartite
+  matching (finer ownership); decisive failure exports Z with |Z| > |N_residual(Z)| — NOT a port-Hall
+  obstruction, a residual-sourcing one. Countermodel fails as 4 <= 0. The 3892 example pays via the two
+  attachments' collision debits (no hit-only extra sources needed if duplicates large).
+- Lean: collisionToToken_of_checkedResidualMatching (certificate CheckedCollisionResidualMatching) ⟹ full
+  CollisionTokenFamily with all eight fields. Claimed checker SHA 36b9fb7d…
+- [CLAUDE: UNGATED; the identity |Free|-|Coll| = N^2-25m is verifiable by inspection (1[n=0]-(n-1)_+ = 1-n
+  summed over V^2, rows contribute 25 each ✓ EXACT). NEW WALL OF RECORD = existence of the checked residual
+  matching on canonical real cages (per-cage FINITE integer gate C_c+H_c <= F_c!) — census-checkable at
+  scale; the geometric content = real I-incidences inject into Free pairs. Gate + census run next session.]
