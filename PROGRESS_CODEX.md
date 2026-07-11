@@ -32191,3 +32191,6 @@
 [2026-07-11T06:39:40Z] OK ATTACK | DID: classified all active-scoped failures N10-11 | RESULT: 705/705 one-row descents; all kill active comps; all use internal alternative row | D: local-optimality implication
 [2026-07-11T06:39:41Z] > PLAN | NEXT: derive active-scoped Hall from all one-row local-optimality inequalities via finite duality.
 [2026-07-11T06:45:17Z] > ATTACK | NEXT: exact-test whether all 705 scoped Hall failures admit collision-nonincreasing, active-edge-decreasing one-row descent.
+[2026-07-11T06:46:58Z] OK ATTACK | DID: exact N10-11 monotone-descent census | RESULT: 705/705 failures have collision-nonincreasing, active-decreasing one-row move | D: monotone exchange frontier
+[2026-07-11T06:46:59Z] > PLAN | NEXT: reduce scoped Hall at a canonical minimum to the monotone one-row exchange lemma using compiled score arithmetic.
+[2026-07-11T06:50:16Z] > ATTACK | NEXT: classify the active-component and deficient-shore anatomy of all 705 monotone one-row descents.

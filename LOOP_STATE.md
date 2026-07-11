@@ -317,3 +317,30 @@
   NOTE certificates may fix ONE canonical tuple (K=1, caps 1/2) — simpler than Omega-averages.
 - L2 unchanged: h_boundary exporter still my open lane; PricedCutCert stack compiled+gated.
 - Fixture set: 24/167/175/311/3892/89 (+ 175/3892 script backlog).
+
+## TICK-74 (2026-07-11T09:4xZ) — SCOPE CORRECTION accepted; wall = SCOPED ONE-ROW DESCENT lemma
+- R24 archived (WALL_ATTACK_R24_GPTPRO56.md): exact shore identity press(A) = 2(5r(A)-N|A|)+d_I(A);
+  Hall(A) <=> press(A) <= |Extra4(A)|; CheckedGlobalRowTrade ledger + elementary soundness;
+  ONE lemma (16) OwnerExpansionOrGlobalTrade; minimizer consequence compiled-shape. My 89/311 numbers
+  cross-check the identities exactly.
+- CODEX SCOPE CORRECTION (gated: ActiveComponentZeroLoadHall.lean GREEN, SHAs match, axioms clean):
+  obligations generated AFTER active-component collapse; 89 family (gap formula 2(3ab-a^2-b^2-2a-2b),
+  unbounded diagonal 2a(a-4)) AND 3892 have EMPTY off-support graphs => zero active components => zero
+  transfer obligations (collision demand was unscoped artifact; half-singleton vertexSlack pays exactly).
+  C5[3] six-row-trade necessity ALSO an unscoping artifact. Pattern 4 survives corrected audit (89
+  776/776; 311 corrected 3624/3624 incl reservations+HitNeed) but NOT needed at minimizers (308,912
+  minimizing tuples N<=11, 0 scoped failures even with pattern 4 OFF).
+- NEW WALL (L1, replaces (16)): Ell5ScopedOneRowDescent — scoped owner-Hall failure at omega => strict
+  Hamming-ONE obligationScore descent via alternative shortest row Q inside U_omega (edges in old
+  support + old active; census 705/705, 691 all-four-active + 14 three-active-one-supported; each kills
+  ALL active components). Then canonical-minimum contradiction (compiled finite-choice machinery).
+  R25 SENT (prove via one-row-local-optimality => scoped Hall, assignment/Farkas duality; or falsify).
+- Also gated: LinearFiveDesignColorObstruction (PG(2,4)-style dense falsifier template EXCLUDED by
+  compiled arithmetic no_split23_pair_design); CollisionOwnerLoadReduction v2 (pairCount_rowSum_eq_
+  five_mul_diagonal). Codex census gates: _codex_r23_outside_attachment_census_gate (N<=11 minima clean),
+  _codex_r23_one_row_descent_anatomy (the 705 anatomy). Mailbox read through 2470255 (headline posts);
+  full-text marker still behind — non-headline backlog acceptable.
+- Fixture status: 89 + 3892 = zero-active (vertexSlack branch); 24 mixed Door+vertex; 167 stage-1;
+  311 stage-3 (corrected full-obligation 3624/3624 by Codex). My 175 script still backlog.
+- L2: h_boundary exporter still MY open lane (design next idle tick). P estimate: math ~50-60 (scoped
+  target empirically bulletproof + both frontiers converged), Lean|math ~75-85 unchanged.

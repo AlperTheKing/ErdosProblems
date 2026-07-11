@@ -1,0 +1,9 @@
+import Erdos23Delta0.Gamma.ActiveComponentZeroLoadHall
+import Erdos23Delta0.Gamma.LinearFiveDesignColorObstruction
+import Erdos23Delta0.Gamma.CollisionOwnerLoadReduction
+
+#print axioms Erdos23Delta0.Gamma.ActiveComponentZeroLoadHall.activeComponentBankHall_of_demand_zero
+#print axioms Erdos23Delta0.Gamma.ActiveComponentZeroLoadHall.activeComponentBankHall_of_blockLoad_zero
+#print axioms Erdos23Delta0.Gamma.LinearFiveDesignColorObstruction.split23_quadratic_pos
+#print axioms Erdos23Delta0.Gamma.LinearFiveDesignColorObstruction.no_split23_pair_design
+#print axioms Erdos23Delta0.Gamma.CanonicalCollisionHall.pairCount_rowSum_eq_five_mul_diagonal
