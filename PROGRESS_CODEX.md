@@ -32200,3 +32200,18 @@
 [2026-07-11T06:58:24Z] > VERIFY | NEXT: run exact order-12 active-scoped canonical-minimum Hall census with 64 workers.
 [2026-07-11T06:59:27Z] FAIL VERIFY | DID: launched order-12 gate at 64 workers | RESULT: Python Windows ProcessPool limit is 61; no graphs tested | D: rerun at 61
 [2026-07-11T07:11:33Z] FAIL VERIFY | DID: ran order-12 gate 11m at 61 workers | RESULT: one graph serialized the ordered batch while 60 workers idled; run stopped | D: preflight products then shard straggler
+[2026-07-11T07:14:57Z] OK ATTACK | DID: order-12 row-product preflight | RESULT: 1,144,061 graphs; 921,910 eligible; max product 104,976; SHA F79A80D1 | D: flatten heavy tuple flows
+[2026-07-11T07:14:58Z] > ATTACK | NEXT: build exact two-pass sharded minimum/flow gate for heavy order-12 graphs and rerun without per-graph serialization.
+[2026-07-11T07:28:15Z] OK VERIFY | DID: bounded order-12 canonical census | RESULT: 921,860 graphs; 37,492,957 tuples; 4,565,167 minima; zero failures; 50 heavy deferred | D: shard 50
+[2026-07-11T07:28:16Z] > VERIFY | NEXT: exact-shard all 50 deferred order-12 graphs; six largest already pass.
+[2026-07-11T07:41:36Z] OK VERIFY | DID: completed full order-12 scoped minimum gate | RESULT: 921,910 graphs; 39,142,819 tuples; 4,572,937 minima; zero failures | D: R25 survives N12
+[2026-07-11T07:41:37Z] > VERIFY | NEXT: compile the active-scoped one-row exchange target and finite-minimum contradiction surface in Lean.
+[2026-07-11T07:47:19Z] OK VERIFY | DID: compiled ActiveScopedMinimumExchange | RESULT: rc0 SHA 8B86F19E; Hall+minimum bridge axioms only allowed triple | D: sole input is real monotone exchange
+[2026-07-11T07:47:20Z] > ATTACK | NEXT: prove or falsify RealHallFailureHasMonotoneOneRowDescent using active-component tree/shortest-row geometry.
+[2026-07-11T07:49:13Z] OK PLAN | DID: audited R25 wrapper against compiled score | RESULT: R25 uses scoped |Obl|; canonicalChoice/census use global 2C+2I; zero scoped score does not imply global descent | D: gate scoped minimizer
+[2026-07-11T07:49:14Z] > ATTACK | NEXT: implement exact scoped-demand score, census its minima, and decide whether upstream may select the scoped minimizer.
+[2026-07-11T07:54:01Z] OK ATTACK | DID: exact scoped-score gates N10-11 | RESULT: 1,060,641 scoped minimizing tuples; zero failures; helper equals flow demand on 89/311 | D: run N12
+[2026-07-11T07:54:02Z] > VERIFY | NEXT: run full order-12 scoped-demand canonical-minimum census with exact zero-demand shortcut.
+[2026-07-11T08:19:09Z] FAIL VERIFY | DID: first scoped-killer Lean build | RESULT: filter precedence error and Type-valued constructor declared theorem | D: parenthesize filter; theorem->def
+[2026-07-11T08:21:29Z] OK VERIFY | DID: scoped selector N12 + Lean wrapper | RESULT: 921,910 graphs; 39,142,819 tuples; 37,514,965 scoped minima; 0 fail; rc0 SHA 8B24A026 | D: k>=6 alignment
+[2026-07-11T08:21:30Z] > ATTACK | NEXT: prove/falsify k>=6 producer alignment and replace semantic killer check with executable finite connectivity checker.

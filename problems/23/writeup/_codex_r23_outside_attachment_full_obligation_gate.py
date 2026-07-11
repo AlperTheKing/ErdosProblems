@@ -80,6 +80,63 @@ def dinic(node_count: int, source: int, sink: int, arcs):
             flow += pushed
 
 
+def active_scoped_obligation_score(n_vertices, blue, bad, rows):
+    """Exact cardinality of collision-plus-HitNeed active-scoped demand."""
+    counts = {}
+    row_count = [0] * n_vertices
+    selected_support = set()
+    for row in rows:
+        for x in row:
+            row_count[x] += 1
+            for y in row:
+                counts[(x, y)] = counts.get((x, y), 0) + 1
+        selected_support.update(edge(x, y) for x, y in zip(row, row[1:]))
+    selected = {x for row in rows for x in row}
+    active = {
+        e for e in blue
+        if e[0] in selected and e[1] in selected and e not in selected_support
+    }
+    parent = {v: v for v in selected}
+
+    def find(v):
+        while parent[v] != v:
+            parent[v] = parent[parent[v]]
+            v = parent[v]
+        return v
+
+    def union(x, y):
+        x, y = find(x), find(y)
+        if x != y:
+            parent[max(x, y)] = min(x, y)
+
+    for x, y in active:
+        union(x, y)
+    active_roots = {
+        find(x) for x, y in bad
+        if x in selected and y in selected and find(x) == find(y)
+    }
+    active_vertices = {v for v in selected if find(v) in active_roots}
+    demanded_active = {e for e in active if find(e[0]) in active_roots}
+    active_degree = [0] * n_vertices
+    for x, y in demanded_active:
+        active_degree[x] += 1
+        active_degree[y] += 1
+    collision = sum(
+        2 * sum(
+            multiplicity - 1
+            for (x, _), multiplicity in counts.items()
+            if x == v and multiplicity >= 2
+        )
+        for v in active_vertices
+    )
+    tload = [5 * row_count[v] for v in range(n_vertices)]
+    hitneed = sum(
+        max(0, active_degree[v] - max(0, n_vertices - tload[v]))
+        for v in active_vertices
+    )
+    return collision + hitneed
+
+
 def full_owner_flow(
     n_vertices, blue, bad, rows, label, *, require_full=True, quiet=False,
     scope="all", include_outside=True

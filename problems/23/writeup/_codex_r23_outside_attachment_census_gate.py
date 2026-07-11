@@ -19,7 +19,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from collections import Counter
+from collections import Counter, deque
 from concurrent.futures import ProcessPoolExecutor
 from itertools import product
 
@@ -29,12 +29,33 @@ from _codex_r20_two_row_exchange_gate import (
     obligation_score,
     shortest_row_families,
 )
-from _codex_r23_outside_attachment_full_obligation_gate import full_owner_flow
+from _codex_r23_outside_attachment_full_obligation_gate import (
+    active_scoped_obligation_score,
+    full_owner_flow,
+)
+
+
+def edge_distance(edges, source, target):
+    adjacency = {}
+    for x, y in edges:
+        adjacency.setdefault(x, set()).add(y)
+        adjacency.setdefault(y, set()).add(x)
+    queue = deque([(source, 0)])
+    seen = {source}
+    while queue:
+        x, distance = queue.popleft()
+        if x == target:
+            return distance
+        for y in adjacency.get(x, ()):
+            if y not in seen:
+                seen.add(y)
+                queue.append((y, distance + 1))
+    return None
 
 
 def evaluate_graph(
     g6: str, minima_only: bool = False, include_outside: bool = True,
-    failure_limit: int = 2
+    failure_limit: int = 2, max_product: int = 0, score_mode: str = "global"
 ):
     n, graph_edges = dec(g6)
     info = loads(n, graph_edges)
@@ -45,13 +66,28 @@ def evaluate_graph(
 
     families = shortest_row_families(info)
     family_sizes = tuple(len(family) for family in families)
+    total_product = 1
+    for size in family_sizes:
+        total_product *= size
+    if max_product and total_product > max_product:
+        return {
+            "status": "skipHeavy", "order": n, "g6": g6,
+            "tuples": total_product, "familySizes": family_sizes,
+        }
     scored = []
     for choice in product(*(range(size) for size in family_sizes)):
         rows = tuple(
             families[index][row_index]
             for index, row_index in enumerate(choice)
         )
-        scored.append((obligation_score(n, info, rows), choice, rows))
+        score = (
+            obligation_score(n, info, rows)
+            if score_mode == "global"
+            else active_scoped_obligation_score(
+                n, set(info["Bset"]), set(info["Mset"]), rows
+            )
+        )
+        scored.append((score, choice, rows))
     total = len(scored)
     minimum_score = min(score for score, _, _ in scored)
     score_by_choice = {choice: score for score, choice, _ in scored}
@@ -66,18 +102,25 @@ def evaluate_graph(
     failing_choices = []
     first = []
     for score, choice, rows in selected:
-        record = full_owner_flow(
-            n,
-            set(info["Bset"]),
-            set(info["Mset"]),
-            rows,
-            g6,
-            require_full=False,
-            quiet=True,
-            scope="active",
-            include_outside=include_outside,
-        )
-        failed = not record["full"]
+        if score_mode == "scoped" and score == 0:
+            record = {
+                "full": True, "totalDemand": 0, "activeComponents": 0,
+                "activeEdges": 0,
+            }
+            failed = False
+        else:
+            record = full_owner_flow(
+                n,
+                set(info["Bset"]),
+                set(info["Mset"]),
+                rows,
+                g6,
+                require_full=False,
+                quiet=True,
+                scope="active",
+                include_outside=include_outside,
+            )
+            failed = not record["full"]
         if score == minimum_score:
             failing_minimizers += int(failed)
         if failed:
@@ -252,6 +295,8 @@ def main() -> int:
     parser.add_argument("--failure-limit", type=int, default=4)
     parser.add_argument("--minima-only", action="store_true")
     parser.add_argument("--no-outside", action="store_true")
+    parser.add_argument("--max-product", type=int, default=0)
+    parser.add_argument("--score-mode", choices=("global", "scoped"), default="global")
     args = parser.parse_args()
     if args.workers > 64:
         parser.error("--workers must not exceed 64")
@@ -262,7 +307,11 @@ def main() -> int:
     by_order = {}
     first = []
     first_nonactive_alternative = None
-    tasks = [(g6, args.minima_only, not args.no_outside, 2) for g6 in graph6]
+    heavy = []
+    tasks = [
+        (g6, args.minima_only, not args.no_outside, 2, args.max_product, args.score_mode)
+        for g6 in graph6
+    ]
     if args.workers == 1:
         results = (evaluate_graph(*task) for task in tasks)
         pool = None
@@ -272,6 +321,12 @@ def main() -> int:
     try:
         for result in results:
             status[result["status"]] += 1
+            if result["status"] == "skipHeavy":
+                heavy.append({
+                    "g6": result["g6"], "order": result["order"],
+                    "tuples": result["tuples"],
+                    "familySizes": result["familySizes"],
+                })
             if result["status"] != "eligible":
                 continue
             aggregate["graphs"] += result["graphs"]
@@ -332,6 +387,9 @@ def main() -> int:
         "byOrder": {str(k): v for k, v in sorted(by_order.items())},
         "firstFailures": first,
         "firstNonActiveAlternative": first_nonactive_alternative,
+        "maxProduct": args.max_product,
+        "scoreMode": args.score_mode,
+        "heavy": sorted(heavy, key=lambda row: (-row["tuples"], row["g6"])),
     }
     print(json.dumps(payload, sort_keys=True, separators=(",", ":")))
     decisive_failures = (
