@@ -1,6 +1,6 @@
 import Erdos23Delta0.Gamma.ActiveScopedCoordinateTransport
 import Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring
-import tmp.fanout.r42_graph_specific_exclusion.BadStarCoverFreeness
+import Erdos23Delta0.Gamma.BadStarCoverFreeness
 
 /-!
 # K3,3 closed-bad-star adapter
@@ -156,3 +156,4 @@ theorem pairCount_eq_zero_of_closedBadStar
 end K33BadStarPairCountZero
 end Gamma
 end Erdos23Delta0
+

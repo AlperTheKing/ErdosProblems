@@ -33010,3 +33010,4 @@
 [2026-07-11T21:20:17Z] OK VERIFY | DID: compiled K3,3 pairCount adapter + shape-free R43 incidence | RESULT: rc0; SHAs 8A8E5C9C/66649670; t3 rotor empty | D: next t4/k2
 [2026-07-11T21:25:43Z] OK ATTACK | DID: reduced t4/k2 support incidence | RESULT: |F*|<=15 forces common tail edge/shared bad neighbour; Lean SHA 12DFB927 | D: K2,3 core
 [2026-07-11T21:31:58Z] OK ATTACK | DID: applied minimal-circuit dual Hall to t4 owner stars | RESULT: ninth nonincident bad atom must use owner-star support; Lean SHA A8D39A65 | D: row adapter
+[2026-07-11T21:36:08Z] > COMPUTE | NEXT: search 64 seeded 16/15 support families with forced t4 K2,3 footprint using 8 workers x 20000 rounds

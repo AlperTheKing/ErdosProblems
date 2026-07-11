@@ -1,0 +1,9 @@
+import Erdos23Delta0.Gamma.BadStarCoverFreeness
+import Erdos23Delta0.Gamma.K33BadStarPairCountZero
+import Erdos23Delta0.Gamma.R43SupportIncidence
+import Erdos23Delta0.Gamma.R44K2TailOverlap
+
+#print axioms Erdos23Delta0.Gamma.BadStarCoverFreeness.bad_star_cover_row_impossible
+#print axioms Erdos23Delta0.Gamma.K33BadStarPairCountZero.pairCount_eq_zero_of_closedBadStar
+#print axioms Erdos23Delta0.Gamma.R43SupportIncidence.no_t3_balancedDeficiencyRotor
+#print axioms Erdos23Delta0.Gamma.R44K2TailOverlap.K2TailIncidence.exists_common_tail_of_support_card_le_fifteen
