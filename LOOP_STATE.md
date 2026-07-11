@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T06:45 (local) — TICK-97
+# Last update: 2026-07-12T07:25 (local) — TICK-98
 
+## TICK-98 (2026-07-12T07:2xZ) — T=4 CLOSED UNCONDITIONALLY (THREE ROUTES, LEDGER FACT); P=4%; R46 =
+## GENERAL-t CYCLE-SPACE CROSSOVER
+- **T=4/(k=2) CLOSED, LEDGER**: (i) GPT R45 (archived WALL_ATTACK_R45_GPTPRO56.md, 28m34s): |V|=16 tree kill;
+  |V|=15 unicyclic kill (each covered pair {x0,y_i} forces a second 2-path => distinct 4-cycle through v;
+  deg 4 => >=2 new cycles vs 1 available — verified by inspection); |V|<=14 exact catalogue (10/11 no
+  profile; 12 max 10<16 pairs; 13: 280 graphs 0 circuits; 14: 455 graphs 0 covered-stars); tight 14-vtx
+  regression circuit exhibited (survives all but coverage; checker 4644e5ab). (ii) Codex r-INDEPENDENT
+  raw-middle-swap exclusion: ZERO live swap row pairs in ANY complete family of the 576 census circuits
+  (MY SCOPE-A OBJECTION CONFIRMED: their first run was r=4-filtered; retraction + rerun; corrected SHA
+  b464682b; my replay PASS). (iii) production adapter LiveMiddleSwapCrossOuter 3DFF7897 (my rebuild GREEN)
+  + graph-only cross-outer exhaustion (79db75b9, total 0, my replay PASS). geng coverage: per-n counts
+  verified (153,978 = 2+30+496+3675+15285+36337+52909+45244); color-swap invariance sound.
+- **AMBIENT CORRECTION propagated to GPT in R46** (R44/R45 claim reversed; closure support-internal,
+  unaffected). **t=5 UNROOTED CENSUS INFEASIBLE** (measured: geng 24-edge n16 = 194.6M @ 62s) => rooted
+  generation or structural lemma. **GPT P(falsifier) 7 -> 4%.** Next scalar windows (5,2) slack 7, (5,3)
+  slack 4.
+- R46 SENT (3,601 ch): general-t cycle-space argument (t-1 independent 4-cycles per covered owner via
+  vy_i-uniqueness; cyclomatic budget t^2-|V|; vertex-demand crossover — if closes ALL t: THE WALL FALLS to
+  k<=1/no-cycle with t=3/t=4 catalogues as base cases) + rooted-generation spec for (5,2)/(5,3) + the
+  one-t-uniform-theorem reformulation. Codex lanes: rooted harness skeleton; |V|<=14 catalogue kernel-replay
+  mapping; production-path consolidation of closure modules; LiveMiddleSwapCrossOuter axiom cross-probe.
+- GATE QUEUE: R46 harvest; my axiom probe on LiveMiddleSwapCrossOuter; catalogue mapping review; N=94;
+  ablation. Marker 2596919.
 ## TICK-97 (2026-07-12T06:4xZ) — AMBIENT CORRECTION ACCEPTED; T4 CENSUS: 576 CIRCUITS ALL FORCE r>=8
 ## (PROFILE-EXCLUSION REPLAY PASS); TWO SCOPE QUESTIONS BLOCK "t=4 CLOSED"; R45 STILL GENERATING
 - **CODEX AMBIENT FALSIFIER ACCEPTED**: R44's restriction was REVERSED — |V(F*)| <= 16 at N=20 gives >= 4
@@ -875,6 +898,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

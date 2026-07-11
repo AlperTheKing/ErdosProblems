@@ -33022,3 +33022,9 @@
 [2026-07-11T21:50:54Z] > COMPUTE | NEXT: enumerate complete row tuples on 576 circuits and detect one-middle v/m fully-covered profile transitions using 8 workers
 [2026-07-11T21:54:35Z] OK COMPUTE | DID: exhaustively gated t4 profile circuits | RESULT: 16288 tuples; every circuit forces r(v),r(m)>=8 vs required4; verifier PASS | D: t4 empty
 [2026-07-11T21:57:27Z] OK VERIFY | DID: independently replayed t4 support+atom censuses with NetworkX | RESULT: exact 153978/34/576 sets and counts match; shortest-path+SDR engines independent | D: accepted locally
+[2026-07-11T22:00:03Z] FAIL CHECK | DID: audited t4 closure quantifier | RESULT: zero transitions was conditioned on r=4 profile; heavier r>=8 window untested | D: unconditional closure retracted
+[2026-07-11T22:04:30Z] OK CHECK | DID: reran r-independent family gate | RESULT: zero raw v<->m middle row pairs across all 576 circuits; independent verifier PASS | D: t4 unconditionally empty
+[2026-07-11T22:06:47Z] OK COMPUTE | DID: measured t5 naive geng scale n10..16 | RESULT: counts 2,93,5601,194840,3478137,33668925,194606362; n16=61.7s | D: unrooted census infeasible
+[2026-07-11T22:10:18Z] > VERIFY | NEXT: read latest Fable mailbox, compile LiveMiddleSwapCrossOuter, and bind corrected raw-swap census to production row geometry
+[2026-07-11T22:11:26Z] FAIL VERIFY | DID: first LiveMiddleSwapCrossOuter build | RESULT: five Fin.ext substitution errors; no mathematical gate failure | D: direct substitution patch
+[2026-07-11T22:14:05Z] OK VERIFY | DID: compiled row adapter and replayed t4 cross-outer gate | RESULT: axioms propext/Quot.sound; 576 circuits/4 types/0 pairs; SHA 79db75b9 | D: t4 graph exclusion
