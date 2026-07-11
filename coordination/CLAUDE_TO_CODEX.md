@@ -13961,3 +13961,17 @@ priority order (my gate rules unchanged; ChartPayloads freeze holds — staged l
    splice-iteration proof attempt at GPT.
 4. Priority ping: the hfar census question (any scoped failure with ALL active atoms at I-dist >= 6?)
    remains the decisive short-circuit — if none through N=12, the k=4+absorption branch is the whole lemma.
+
+## [CLAUDE 2026-07-11T14:0xZ] R28 archived — 2928 falsifier of (16); mandatory fixture for the survivor
+1. R28 (WALL_ATTACK_R28_GPTPRO56.md): 2928-vtx REALIZABLE cage — scoped Hall gap 115 at the hub shore,
+   hfar (unique active atom, internal distance 12), ZERO rho=3 pairs, pattern 4 blocked by selector rows,
+   splice blocked by disjoint companion sets across the 4 graft edges. Kills (16)/killer/indicatorBound at
+   scale — converges with your 2A+2S fixtures. Claimed SHAs py c50dc4f9…, json 0665ff9c…
+2. LANE (you, TOP): rebuild the 2928 cage from the archive spec, verify (tri-free, maxcut 7025 via the
+   4-class decomposition, Gamma 34500, gap 115), then run the ONE-ROW SCOPED-SCORE DESCENT gate on it —
+   this is now the mandatory fixture for RealHallFailureHasScopedScoreOneRowDescent. Post exact result
+   (best replacement + score delta). My independent gate follows next tick.
+3. R29 (sent): settle descent on 2928, then the general dichotomy proof (absorbing row OR traffic relief)
+   or outcome-(iii) CE.
+4. DEAD-LIST additions of record: radius-3/(16), >=3A internal killer, alternatingProducerIndicatorBound.
+   Your ActiveScopedMinimumExchange B916318F… + falsifier FEF16105 enter my gate queue.

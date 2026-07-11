@@ -19,9 +19,15 @@ from functools import lru_cache
 from fractions import Fraction
 
 from _codex_r19_global_base_census import dec, graph6_for_orders, loads
-from _codex_r20_two_row_exchange_gate import shortest_row_families
+from _codex_r20_two_row_exchange_gate import multiplicities, shortest_row_families
 from _codex_r23_order12_preflight import inspect
+from _codex_scoped_variation_anatomy import (
+    component_transport_flow,
+    owner_shore_source_count,
+    scoped_state,
+)
 from _codex_r23_outside_attachment_full_obligation_gate import (
+    active_scoped_obligation_parts,
     active_scoped_obligation_score,
     full_owner_flow,
 )
@@ -57,6 +63,21 @@ def scoped_score(n, info, rows):
     )
 
 
+def scoped_parts(n, info, rows):
+    return active_scoped_obligation_parts(
+        n, set(info["Bset"]), set(info["Mset"]), rows
+    )
+
+
+def raw_collision_score(n, rows):
+    count = multiplicities(n, rows)
+    return 2 * sum(
+        max(0, count[x][y] - 1)
+        for x in range(n)
+        for y in range(n)
+    )
+
+
 def analyze_chunk(task):
     g6, start, stop = task
     n, info, families, sizes = graph_context(g6)
@@ -69,18 +90,33 @@ def analyze_chunk(task):
     nonnegative_delta_sum = 0
     variation_deficiency_bound_failures = 0
     variation_alternative_deficiency_bound_failures = 0
+    collision_alternative_deficiency_bound_failures = 0
+    positive_hitneed_variation = 0
+    coordinate_collision_deficiency_bound_failures = 0
+    positive_coordinate_hitneed_variation = 0
+    coordinate_raw_collision_deficiency_bound_failures = 0
+    component_transport_failures = 0
     min_negative_variation_per_deficiency = None
     min_normalized_ratio = None
+    min_normalized_record = None
     first_failure = None
     first_no_descent = None
     first_nonnegative_delta_sum = None
     first_variation_deficiency_bound_failure = None
     first_variation_alternative_deficiency_bound_failure = None
+    first_collision_alternative_deficiency_bound_failure = None
+    first_positive_hitneed_variation = None
+    first_coordinate_collision_deficiency_bound_failure = None
+    first_positive_coordinate_hitneed_variation = None
+    first_coordinate_raw_collision_deficiency_bound_failure = None
+    first_component_transport_failure = None
     for tuple_index in range(start, stop):
         checked += 1
         choice = choice_at(tuple_index, sizes)
         rows = rows_for_choice(families, choice)
-        score = scoped_score(n, info, rows)
+        old_collision, old_hitneed = scoped_parts(n, info, rows)
+        old_raw_collision = raw_collision_score(n, rows)
+        score = old_collision + old_hitneed
         if score == 0:
             continue
         positive += 1
@@ -98,16 +134,53 @@ def analyze_chunk(task):
         if flow["full"]:
             continue
         failures += 1
+        old_state = scoped_state(
+            n, set(info["Bset"]), set(info["Mset"]), rows
+        )
+        _, source_by_owner, source_capacities = owner_shore_source_count(
+            n,
+            set(info["Bset"]),
+            set(info["Mset"]),
+            old_state,
+            flow["deficientOwners"],
+        )
+        deficient_owner_set = set(flow["deficientOwners"])
         best = score
         witness = None
         delta_sum = 0
+        collision_delta_sum = 0
+        hitneed_delta_sum = 0
+        coordinate_collision_failures = []
+        coordinate_hitneed_positive = []
+        coordinate_raw_collision_failures = []
+        coordinate_transport_failures = []
         for index, family in enumerate(families):
+            coordinate_collision_delta = 0
+            coordinate_hitneed_delta = 0
+            coordinate_raw_collision_delta = 0
+            coordinate_states = []
+            coordinate_rows = []
             for replacement, replacement_row in enumerate(family):
                 if replacement == choice[index]:
                     continue
                 new_rows = rows[:index] + (replacement_row,) + rows[index + 1:]
-                new_score = scoped_score(n, info, new_rows)
+                new_collision, new_hitneed = scoped_parts(n, info, new_rows)
+                new_raw_collision = raw_collision_score(n, new_rows)
+                coordinate_states.append(
+                    scoped_state(
+                        n, set(info["Bset"]), set(info["Mset"]), new_rows
+                    )
+                )
+                coordinate_rows.append(replacement_row)
+                new_score = new_collision + new_hitneed
                 delta_sum += new_score - score
+                collision_delta_sum += new_collision - old_collision
+                hitneed_delta_sum += new_hitneed - old_hitneed
+                coordinate_collision_delta += new_collision - old_collision
+                coordinate_hitneed_delta += new_hitneed - old_hitneed
+                coordinate_raw_collision_delta += (
+                    new_raw_collision - old_raw_collision
+                )
                 if new_score < best:
                     best = new_score
                     witness = {
@@ -117,6 +190,42 @@ def analyze_chunk(task):
                         "newRow": list(replacement_row),
                         "newScore": new_score,
                     }
+            coordinate_bound = -(len(family) - 1) * flow["deficiency"]
+            if coordinate_collision_delta > coordinate_bound:
+                coordinate_collision_failures.append({
+                    "index": index,
+                    "familySize": len(family),
+                    "collisionDelta": coordinate_collision_delta,
+                    "bound": coordinate_bound,
+                })
+            if coordinate_hitneed_delta > 0:
+                coordinate_hitneed_positive.append({
+                    "index": index,
+                    "familySize": len(family),
+                    "hitNeedDelta": coordinate_hitneed_delta,
+                })
+            if coordinate_raw_collision_delta > coordinate_bound:
+                coordinate_raw_collision_failures.append({
+                    "index": index,
+                    "familySize": len(family),
+                    "rawCollisionDelta": coordinate_raw_collision_delta,
+                    "bound": coordinate_bound,
+                })
+            transport = component_transport_flow(
+                old_state,
+                deficient_owner_set,
+                source_by_owner,
+                source_capacities,
+                coordinate_states,
+                rows[index],
+                coordinate_rows,
+            )
+            if transport["gap"]:
+                coordinate_transport_failures.append({
+                    "index": index,
+                    "familySize": len(family),
+                    "transport": transport,
+                })
         record = {
             "g6": g6,
             "tupleIndex": tuple_index,
@@ -126,6 +235,13 @@ def analyze_chunk(task):
             "flow": flow,
             "bestNeighborScore": best,
             "deltaSum": delta_sum,
+            "collisionDeltaSum": collision_delta_sum,
+            "hitNeedDeltaSum": hitneed_delta_sum,
+            "coordinateCollisionFailures": coordinate_collision_failures,
+            "positiveCoordinateHitNeed": coordinate_hitneed_positive,
+            "coordinateRawCollisionFailures":
+                coordinate_raw_collision_failures,
+            "coordinateTransportFailures": coordinate_transport_failures,
             "descent": witness,
         }
         if first_failure is None:
@@ -158,10 +274,35 @@ def analyze_chunk(task):
         )
         if min_normalized_ratio is None or normalized_ratio < min_normalized_ratio:
             min_normalized_ratio = normalized_ratio
+            min_normalized_record = record
         if delta_sum > -flow["deficiency"] * alternative_count:
             variation_alternative_deficiency_bound_failures += 1
             if first_variation_alternative_deficiency_bound_failure is None:
                 first_variation_alternative_deficiency_bound_failure = record
+        if collision_delta_sum > -flow["deficiency"] * alternative_count:
+            collision_alternative_deficiency_bound_failures += 1
+            if first_collision_alternative_deficiency_bound_failure is None:
+                first_collision_alternative_deficiency_bound_failure = record
+        if hitneed_delta_sum > 0:
+            positive_hitneed_variation += 1
+            if first_positive_hitneed_variation is None:
+                first_positive_hitneed_variation = record
+        if coordinate_collision_failures:
+            coordinate_collision_deficiency_bound_failures += 1
+            if first_coordinate_collision_deficiency_bound_failure is None:
+                first_coordinate_collision_deficiency_bound_failure = record
+        if coordinate_hitneed_positive:
+            positive_coordinate_hitneed_variation += 1
+            if first_positive_coordinate_hitneed_variation is None:
+                first_positive_coordinate_hitneed_variation = record
+        if coordinate_raw_collision_failures:
+            coordinate_raw_collision_deficiency_bound_failures += 1
+            if first_coordinate_raw_collision_deficiency_bound_failure is None:
+                first_coordinate_raw_collision_deficiency_bound_failure = record
+        if coordinate_transport_failures:
+            component_transport_failures += 1
+            if first_component_transport_failure is None:
+                first_component_transport_failure = record
     return {
         "checked": checked,
         "positive": positive,
@@ -173,6 +314,16 @@ def analyze_chunk(task):
         "variationDeficiencyBoundFailures": variation_deficiency_bound_failures,
         "variationAlternativeDeficiencyBoundFailures":
             variation_alternative_deficiency_bound_failures,
+        "collisionAlternativeDeficiencyBoundFailures":
+            collision_alternative_deficiency_bound_failures,
+        "positiveHitNeedVariation": positive_hitneed_variation,
+        "coordinateCollisionDeficiencyBoundFailures":
+            coordinate_collision_deficiency_bound_failures,
+        "positiveCoordinateHitNeedVariation":
+            positive_coordinate_hitneed_variation,
+        "coordinateRawCollisionDeficiencyBoundFailures":
+            coordinate_raw_collision_deficiency_bound_failures,
+        "componentTransportFailures": component_transport_failures,
         "minRatio": (
             None if min_negative_variation_per_deficiency is None else
             [
@@ -184,6 +335,7 @@ def analyze_chunk(task):
             None if min_normalized_ratio is None else
             [min_normalized_ratio.numerator, min_normalized_ratio.denominator]
         ),
+        "minNormalizedRecord": min_normalized_record,
         "firstFailure": first_failure,
         "firstNoDescent": first_no_descent,
         "firstNonnegativeDeltaSum": first_nonnegative_delta_sum,
@@ -191,6 +343,16 @@ def analyze_chunk(task):
             first_variation_deficiency_bound_failure,
         "firstVariationAlternativeDeficiencyBoundFailure":
             first_variation_alternative_deficiency_bound_failure,
+        "firstCollisionAlternativeDeficiencyBoundFailure":
+            first_collision_alternative_deficiency_bound_failure,
+        "firstPositiveHitNeedVariation": first_positive_hitneed_variation,
+        "firstCoordinateCollisionDeficiencyBoundFailure":
+            first_coordinate_collision_deficiency_bound_failure,
+        "firstPositiveCoordinateHitNeedVariation":
+            first_positive_coordinate_hitneed_variation,
+        "firstCoordinateRawCollisionDeficiencyBoundFailure":
+            first_coordinate_raw_collision_deficiency_bound_failure,
+        "firstComponentTransportFailure": first_component_transport_failure,
     }
 
 
@@ -243,8 +405,15 @@ def main():
     first_nonnegative_delta_sum = None
     first_variation_deficiency_bound_failure = None
     first_variation_alternative_deficiency_bound_failure = None
+    first_collision_alternative_deficiency_bound_failure = None
+    first_positive_hitneed_variation = None
+    first_coordinate_collision_deficiency_bound_failure = None
+    first_positive_coordinate_hitneed_variation = None
+    first_coordinate_raw_collision_deficiency_bound_failure = None
+    first_component_transport_failure = None
     min_ratio = None
     min_normalized_ratio = None
+    min_normalized_record = None
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
         for result in pool.map(analyze_chunk, tasks, chunksize=1):
             aggregate["checked"] += result["checked"]
@@ -260,6 +429,24 @@ def main():
             aggregate["variationAlternativeDeficiencyBoundFailures"] += (
                 result["variationAlternativeDeficiencyBoundFailures"]
             )
+            aggregate["collisionAlternativeDeficiencyBoundFailures"] += (
+                result["collisionAlternativeDeficiencyBoundFailures"]
+            )
+            aggregate["positiveHitNeedVariation"] += (
+                result["positiveHitNeedVariation"]
+            )
+            aggregate["coordinateCollisionDeficiencyBoundFailures"] += (
+                result["coordinateCollisionDeficiencyBoundFailures"]
+            )
+            aggregate["positiveCoordinateHitNeedVariation"] += (
+                result["positiveCoordinateHitNeedVariation"]
+            )
+            aggregate["coordinateRawCollisionDeficiencyBoundFailures"] += (
+                result["coordinateRawCollisionDeficiencyBoundFailures"]
+            )
+            aggregate["componentTransportFailures"] += (
+                result["componentTransportFailures"]
+            )
             if result["minRatio"] is not None:
                 ratio = Fraction(*result["minRatio"])
                 if min_ratio is None or ratio < min_ratio:
@@ -268,6 +455,7 @@ def main():
                 ratio = Fraction(*result["minNormalizedRatio"])
                 if min_normalized_ratio is None or ratio < min_normalized_ratio:
                     min_normalized_ratio = ratio
+                    min_normalized_record = result["minNormalizedRecord"]
             if first_failure is None and result["firstFailure"] is not None:
                 first_failure = result["firstFailure"]
             if first_no_descent is None and result["firstNoDescent"] is not None:
@@ -291,6 +479,51 @@ def main():
             ):
                 first_variation_alternative_deficiency_bound_failure = (
                     result["firstVariationAlternativeDeficiencyBoundFailure"]
+                )
+            if (
+                first_collision_alternative_deficiency_bound_failure is None
+                and result["firstCollisionAlternativeDeficiencyBoundFailure"]
+                is not None
+            ):
+                first_collision_alternative_deficiency_bound_failure = (
+                    result["firstCollisionAlternativeDeficiencyBoundFailure"]
+                )
+            if (
+                first_positive_hitneed_variation is None
+                and result["firstPositiveHitNeedVariation"] is not None
+            ):
+                first_positive_hitneed_variation = (
+                    result["firstPositiveHitNeedVariation"]
+                )
+            if (
+                first_coordinate_collision_deficiency_bound_failure is None
+                and result["firstCoordinateCollisionDeficiencyBoundFailure"]
+                is not None
+            ):
+                first_coordinate_collision_deficiency_bound_failure = (
+                    result["firstCoordinateCollisionDeficiencyBoundFailure"]
+                )
+            if (
+                first_positive_coordinate_hitneed_variation is None
+                and result["firstPositiveCoordinateHitNeedVariation"] is not None
+            ):
+                first_positive_coordinate_hitneed_variation = (
+                    result["firstPositiveCoordinateHitNeedVariation"]
+                )
+            if (
+                first_coordinate_raw_collision_deficiency_bound_failure is None
+                and result["firstCoordinateRawCollisionDeficiencyBoundFailure"]
+                is not None
+            ):
+                first_coordinate_raw_collision_deficiency_bound_failure = (
+                    result["firstCoordinateRawCollisionDeficiencyBoundFailure"]
+                )
+            if (
+                first_component_transport_failure is None
+                and result["firstComponentTransportFailure"] is not None
+            ):
+                first_component_transport_failure = (
+                    result["firstComponentTransportFailure"]
                 )
     assert aggregate["checked"] == heavy_tuples
     assert aggregate["failures"] == aggregate["descents"] + aggregate["noDescent"]
@@ -317,6 +550,16 @@ def main():
             first_variation_deficiency_bound_failure,
         "firstVariationAlternativeDeficiencyBoundFailure":
             first_variation_alternative_deficiency_bound_failure,
+        "firstCollisionAlternativeDeficiencyBoundFailure":
+            first_collision_alternative_deficiency_bound_failure,
+        "firstPositiveHitNeedVariation": first_positive_hitneed_variation,
+        "firstCoordinateCollisionDeficiencyBoundFailure":
+            first_coordinate_collision_deficiency_bound_failure,
+        "firstPositiveCoordinateHitNeedVariation":
+            first_positive_coordinate_hitneed_variation,
+        "firstCoordinateRawCollisionDeficiencyBoundFailure":
+            first_coordinate_raw_collision_deficiency_bound_failure,
+        "firstComponentTransportFailure": first_component_transport_failure,
         "minNegativeVariationPerDeficiency": (
             None if min_ratio is None else [min_ratio.numerator, min_ratio.denominator]
         ),
@@ -324,6 +567,7 @@ def main():
             None if min_normalized_ratio is None else
             [min_normalized_ratio.numerator, min_normalized_ratio.denominator]
         ),
+        "minNormalizedRecord": min_normalized_record,
     }
     print(json.dumps(payload, sort_keys=True, separators=(",", ":")))
     return 1 if aggregate["noDescent"] else 0

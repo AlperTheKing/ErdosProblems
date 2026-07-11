@@ -80,8 +80,8 @@ def dinic(node_count: int, source: int, sink: int, arcs):
             flow += pushed
 
 
-def active_scoped_obligation_score(n_vertices, blue, bad, rows):
-    """Exact cardinality of collision-plus-HitNeed active-scoped demand."""
+def active_scoped_obligation_parts(n_vertices, blue, bad, rows):
+    """Exact collision and HitNeed cardinalities in the active scope."""
     counts = {}
     row_count = [0] * n_vertices
     selected_support = set()
@@ -133,6 +133,14 @@ def active_scoped_obligation_score(n_vertices, blue, bad, rows):
     hitneed = sum(
         max(0, active_degree[v] - max(0, n_vertices - tload[v]))
         for v in active_vertices
+    )
+    return collision, hitneed
+
+
+def active_scoped_obligation_score(n_vertices, blue, bad, rows):
+    """Exact cardinality of collision-plus-HitNeed active-scoped demand."""
+    collision, hitneed = active_scoped_obligation_parts(
+        n_vertices, blue, bad, rows
     )
     return collision + hitneed
 

@@ -32251,3 +32251,45 @@
 [2026-07-11T10:13:29Z] OK VERIFY | DID: compiled one-row variation reduction | RESULT: negative sum=>descent=>minimum Hall rc0 SHA 10D1F60A; allowed axioms | D: wall is scalar shore inequality
 [2026-07-11T10:29:27Z] > VERIFY | NEXT: compile deficient owner-shore defect bound => negative variation => minimum Hall.
 [2026-07-11T10:34:00Z] OK VERIFY | DID: compiled quantitative owner-shore variation chain | RESULT: shore defect bound=>minimum Hall rc0 SHA 383E84FC; allowed axioms | D: sole scalar graph inequality isolated
+[2026-07-11T10:36:50Z] > ATTACK | NEXT: audit R27 unit-defect normalization and derive the owner-shore one-row variation identity from exact source-cell formulas.
+[2026-07-11T10:39:52Z] > VERIFY | NEXT: regenerate every N10 scoped failure at 48 workers and extract exact owner-shore/rowwise variation anatomy.
+[2026-07-11T10:40:57Z] OK VERIFY | DID: regenerated N10 scoped population at 48 workers | RESULT: 47030 tuples; 283 Hall failures; 283 negative variations; 0 failing minima | D: decompose drift
+[2026-07-11T10:40:58Z] > ATTACK | NEXT: add an exact anatomy gate separating collision, HitNeed, active-scope, and owner-source variation on canonical failures.
+[2026-07-11T10:43:39Z] OK ATTACK | DID: decomposed first N10 failure exactly | RESULT: defect2, 13 alternatives, variation -247=-208 collision-39 HitNeed; all alternatives kill scope | D: inspect sharp case
+[2026-07-11T10:43:40Z] > VERIFY | NEXT: rerun 4,801,067 N12 heavy tuples at 61 workers and emit the exact minimum normalized-variation fixture.
+[2026-07-11T10:48:49Z] OK VERIFY | DID: replayed N12 heavy tail and decomposed sharp fixture | RESULT: 7144/7144; min 259/135 at defect12,K45,V=-1036=-990C-46H | D: split-test components
+[2026-07-11T10:48:50Z] > VERIFY | NEXT: test collision-alone defect payment and nonpositive aggregate HitNeed variation on every N10 failure at 48 workers.
+[2026-07-11T10:49:41Z] OK VERIFY | DID: split-tested all N10 failures | RESULT: 283/283 collision drift<=-K*defect; 283/283 HitNeed drift<=0; zero violations | D: extend N11/N12
+[2026-07-11T10:49:42Z] > VERIFY | NEXT: run the same exact split over every N11 row tuple and Hall failure at 48 workers.
+[2026-07-11T10:51:07Z] OK VERIFY | DID: split-tested all N11 failures | RESULT: 422/422 collision drift<=-K*defect; 422/422 HitNeed drift<=0, including 2 R26 falsifiers | D: N12 gate
+[2026-07-11T10:51:08Z] > VERIFY | NEXT: split-test every Hall failure in the 4,801,067-tuple N12 heavy tail at 61 workers.
+[2026-07-11T10:53:54Z] OK VERIFY | DID: split-tested N12 heavy failures | RESULT: 7144/7144 collision drift<=-K*defect; 7144/7144 HitNeed drift<=0; zero violations | D: medium band
+[2026-07-11T10:53:55Z] > VERIFY | NEXT: split-test the remaining 14,160,291 N12 medium-band tuples at 61 workers for full order-12 coverage.
+[2026-07-11T10:57:50Z] OK VERIFY | DID: split-tested N12 medium failures | RESULT: 1080/1080 collision drift<=-K*defect; 1080/1080 HitNeed drift<=0; full N12 split green | D: formalize split
+[2026-07-11T10:57:51Z] > VERIFY | NEXT: compile collision/HitNeed variation decomposition and split-bound-to-minimum-Hall theorem in Lean.
+[2026-07-11T11:01:48Z] OK VERIFY | DID: compiled+axiom-audited split variation chain | RESULT: rc0 SHA C5012784; split bounds=>owner variation=>minimum Hall; allowed axioms | D: two graph inequalities
+[2026-07-11T11:01:49Z] > ATTACK | NEXT: derive collision drift from cooccurrence/free-half counting and prove aggregate HitNeed superharmonicity separately.
+[2026-07-11T11:03:26Z] > VERIFY | NEXT: test the stronger per-row-family collision-defect and HitNeed-superharmonic bounds on all N10 failures at 48 workers.
+[2026-07-11T11:04:39Z] OK VERIFY | DID: per-coordinate N10 gate | RESULT: 283/283 each row family pays own K_i*defect and has HitNeed drift<=0; zero violations | D: N11 test
+[2026-07-11T11:04:40Z] > VERIFY | NEXT: run the per-row-family bounds on every N11 tuple/failure, including both prior geometric falsifiers.
+[2026-07-11T11:06:41Z] OK VERIFY | DID: per-coordinate N11 gate | RESULT: 422/422 each family pays K_i*defect and HitNeed drift<=0; both R26 falsifiers pass | D: N12 completion
+[2026-07-11T11:06:42Z] > VERIFY | NEXT: per-coordinate split-test the N12 heavy tail at 61 workers, then the medium band if green.
+[2026-07-11T11:14:47Z] OK VERIFY | DID: completed per-coordinate N12 split gate | RESULT: 8224/8224 each row family pays K_i*defect and HitNeed drift<=0; SHA 22E2B4D6 | D: one-coordinate lemma
+[2026-07-11T11:14:48Z] > PLAN | NEXT: reduce the split theorem to one-coordinate resampling inequalities plus existence of a nontrivial alternative family.
+[2026-07-11T11:21:27Z] OK VERIFY | DID: compiled+audited one-coordinate reduction | RESULT: coordinate bounds+nontrivial family=>variation=>minimum Hall; rc0 SHA F3FFD8B2; allowed axioms | D: local graph lemmas
+[2026-07-11T11:21:28Z] > ATTACK | NEXT: prove the fixed-coordinate collision injection and HitNeed superharmonicity from shortest-row geometry.
+[2026-07-11T11:25:41Z] FAIL ATTACK | DID: tested raw-collision replacement for scoped lemma | RESULT: 283/283 N10 failures have coordinate violations; first raw drift +144 vs bound -98 | D: active scope essential
+[2026-07-11T11:25:42Z] > ATTACK | NEXT: decompose scoped collision drift into raw overlap drift plus active-component deactivation credit per coordinate.
+[2026-07-11T11:34:33Z] > VERIFY | NEXT: formalize one-coordinate demand transport and prove injection cardinality implies the coordinate variation bound.
+[2026-07-11T11:41:26Z] OK VERIFY | DID: compiled+audited coordinate transport chain | RESULT: injection family=>owner variation=>minimum Hall; rc0 SHA B207BCDC; allowed axioms | D: construct real injection
+[2026-07-11T11:41:27Z] > ATTACK | NEXT: exact-gate the transport injection itself and infer the smallest graph-derived eligibility relation that saturates it.
+[2026-07-11T11:49:16Z] OK ATTACK | DID: endpoint-bridge component transport gate N10 | RESULT: first relation failed16; endpoint inheritance repairs all 283, zero transport gaps | D: stress N11/N12
+[2026-07-11T11:49:17Z] > VERIFY | NEXT: run endpoint-bridge transport relation on all N11 failures, including the two R26 falsifiers.
+[2026-07-11T11:51:42Z] OK VERIFY | DID: endpoint-bridge transport gate N11 | RESULT: all 422 failures and every coordinate saturate; zero transport gaps | D: N12 stress
+[2026-07-11T11:51:43Z] > VERIFY | NEXT: run endpoint-bridge transport on all 7144 N12 heavy failures at 61 workers.
+[2026-07-11T11:59:45Z] OK ATTACK | DID: repaired transport with replacement-row component inheritance | RESULT: initial N12 gap20 tuples; repaired relation clears all7144 heavy failures | D: medium completion
+[2026-07-11T11:59:46Z] > VERIFY | NEXT: run repaired component transport on all 1080 N12 medium-band failures at 61 workers.
+[2026-07-11T12:08:01Z] OK VERIFY | DID: completed repaired component transport census+Lean target | RESULT: 9929/9929 failures zero gaps; rc0 SHA D9D69443; allowed axioms | D: prove real transport
+[2026-07-11T12:08:02Z] > ATTACK | NEXT: prove component/endpoint/row inheritance transport existence and nontrivial-coordinate lemma from real shortest-row geometry.
+[2026-07-11T12:12:54Z] OK VERIFY | DID: narrowed transport frontier to one existential deficient shore | RESULT: failure transport=>negative variation=>minimum Hall rc0 SHA 6919B342; allowed axioms | D: exact quantifiers
+[2026-07-11T12:16:51Z] > VERIFY | NEXT: compile changed-row transport and rerun exact guardrails to validate endpoint-bridge simplification.
