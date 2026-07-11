@@ -2971,3 +2971,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-11T21:08:24Z] ► WALL-R44 | NEXT: send R44 (general-t crossover: t^2-1 support budget vs k-owner rotor forcing; t>=4 defect-one family classification; k=2-at-t=4 = surviving case)
 [2026-07-11T21:11:02Z] ✔ GATE-SIGMA | DID: rebuilt SingletonPairSigma E4060BCC + axiom probe | RESULT: rc=0; axioms exactly [propext,Quot.sound] on 2 probed thms | Δ: star-theorem core adapter = ledger fact
 [2026-07-11T21:11:02Z] ✔ WALL-R44 | DID: sent R44 (3578 ch) | RESULT: general-t crossover question (|F*| identity, family classification, L(k,t) table, emptiness generalization, surviving window) | Δ: none (generating)
+[2026-07-11T21:34:47Z] ✔ WALL-R44 | DID: harvested R44 (~13.4k ch) + archived | RESULT: |F*|=|A|-1 proved; crossover table => SOLE surviving window (t,k)=(4,2) slack 1; coverage-emptiness needs StarClosedAt; P 8->7 | Δ: wall reduced to one finite window
+[2026-07-11T21:34:47Z] ✔ GATE-T3COMPILE | DID: staged 4 Codex closure modules (SHAs match: AFD944EA/8A8E5C9C/66649670/12DFB927), rebuild launched | RESULT: pending rc | Δ: t=3 closure kernel-checked on their side, my gate running
+[2026-07-11T21:34:47Z] ✔ WALL-R45 | DID: sent R45 (3426 ch) | RESULT: forced-coincidence stack + tree-dichotomy (K_{2,3} core 4-cycle kills |V|=16) + distance-4 supply bound => no_t4 or unique candidate | Δ: none (generating)

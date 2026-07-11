@@ -1,0 +1,2 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Gamma\K33BadStarPairCountZero.lean:1:0: error: object file '\tmp\fanout\r42_graph_specific_exclusion\BadStarCoverFreeness.olean' of module tmp.fanout.r42_graph_specific_exclusion.BadStarCoverFreeness does not exist
+

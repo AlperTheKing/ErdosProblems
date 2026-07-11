@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T05:25 (local) — TICK-95
+# Last update: 2026-07-12T06:05 (local) — TICK-96
 
+## TICK-96 (2026-07-12T06:0xZ) — R44: SOLE SURVIVING WINDOW (t,k)=(4,2) SLACK 1; t=3 CLOSURE COMPILED BOTH
+## ROUTES; K_{2,3} CORE FORCED AT t=4; R45 = FORCED-COINCIDENCE STACK
+- R44 harvested+archived (WALL_ATTACK_R44_GPTPRO56.md): **|F*| = |A|-1 PROVED** (transversal-matroid circuit:
+  proper Hall + integrality; every support edge multiplicity >=2; incidence connected; deletion-SDRs).
+  Double-star coincidence UNIQUE to t=3 ((t-3)(t+1)=0). Shape-independent: |F*| >= kt+t => k >= t-1
+  impossible; k=2 => |F*| >= 3t+2 (+2 coverage-row edges, universal). **CROSSOVER TABLE: t=3 all dead; t=4
+  k=2 survives by EXACTLY 1 (14<=15), k=3 dead; range 2<=k<=t-2; SOLE FIRST WINDOW = (4,2).** Coverage-
+  emptiness does NOT generalize (StarClosedAt adapter only; 8-vtx rotor realizes covered pairs). Exact
+  surviving window: N=20, |M|=16, |F*|=15, ambient <=4 vertices (|V(F*)|<=16) => INTRINSIC maxcut cert;
+  T4TwoOwnerRotorCandidate structure = gate target; no-hit promotes to no_t4_twoOwnerDefectOneRotor.
+  **GPT P(falsifier) ~7%.**
+- **CODEX (independent, same tick): t=3 closure FULLY COMPILED both routes** (R43SupportIncidence 66649670 =
+  shape-independent four lemmas incl. no_t3_balancedDeficiencyRotor; BadStarCoverFreeness AFD944EA +
+  K33BadStarPairCountZero 8A8E5C9C = canonical K3,3 emptiness chain) + **t=4/k=2 FIRST REDUCTION: tail
+  families cannot be disjoint (16>15) => v,m share a bad neighbour b => EVERY SURVIVOR CONTAINS THE K_{2,3}
+  CORE {v,m}-{x,y,b}** (R44K2TailOverlap 12DFB927). My rebuild of all 4 modules RUNNING (SHAs verified).
+- MY ADDITION (posted + in R45): the K_{2,3} core's blue 4-cycle v-x-m-y lies in F* (owner support stars
+  contain all t blue edges) => F* NOT a tree => |V(F*)| <= 15, cyclomatic >= 1 — the tree case dies.
+- R45 SENT (3,426 ch): stack ALL forced coincidences (coverage externals must hit T_m or budget bursts;
+  symmetric bounce; per-|V| distance-4 supply bound: 16 distinct same-shore distance-exactly-4 pairs in a
+  15-edge graph) => no_t4 outline OR the explicit near-unique candidate. Codex t=4 enumeration lane LIVE
+  (core-forced, |V| in [8..15], per-|V| counts + first-violated-constraint reporting).
+- GATE QUEUE: R45 harvest; 4-module rebuild verdicts; t=4 enumeration outputs; N=94; ablation. Marker 2585562.
 ## TICK-95 (2026-07-12T05:2xZ) — R43: t=3 WINDOW CLOSED (TWICE, INDEPENDENTLY); P=8%; R44 = GENERAL-t CROSSOVER
 - R43 harvested+archived (WALL_ATTACK_R43_GPTPRO56.md): **t=3/N=15/|M|=9 WINDOW CLOSED.** k=2: fully-covered
   profile owner forces deg_F*(v)>=3 (detour rows put vx,vy0,vy1 into the COMPLETE support union F*, |E|=8);
@@ -829,6 +852,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

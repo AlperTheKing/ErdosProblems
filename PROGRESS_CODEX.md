@@ -33007,3 +33007,6 @@
 [2026-07-11T21:10:00Z] FAIL VERIFY | DID: first BadStarCoverFreeness build | RESULT: namespace/substitution/equality-orientation errors; theorem not accepted | D: none
 [2026-07-11T21:14:00Z] OK VERIFY | DID: compiled bad-star vertex-cover row exclusion | RESULT: rc0; SHA AFD944EA; allowed axioms only | D: t3 covered-star conditional kill
 [2026-07-11T21:08:00Z] > VERIFY | NEXT: audit authoritative 9/8 circuit semantics and derive pairCount-zero from bad-star row exclusion
+[2026-07-11T21:20:17Z] OK VERIFY | DID: compiled K3,3 pairCount adapter + shape-free R43 incidence | RESULT: rc0; SHAs 8A8E5C9C/66649670; t3 rotor empty | D: next t4/k2
+[2026-07-11T21:25:43Z] OK ATTACK | DID: reduced t4/k2 support incidence | RESULT: |F*|<=15 forces common tail edge/shared bad neighbour; Lean SHA 12DFB927 | D: K2,3 core
+[2026-07-11T21:31:58Z] OK ATTACK | DID: applied minimal-circuit dual Hall to t4 owner stars | RESULT: ninth nonincident bad atom must use owner-star support; Lean SHA A8D39A65 | D: row adapter
