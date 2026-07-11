@@ -1,4 +1,14 @@
-# R42 residual source-swap rotor
+# R42 residual source-swap rotor (superseded as the live R37 surface)
+
+> **Live-surface correction, 2026-07-11.**  This note analyzes a conditional
+> detour class in which both entering edges are absent from selected support.
+> The exact N<=12 R37 census found zero attachment detours with that premise.
+> In the actual R37 construction, `xv` is active/new but `vy` is already a
+> selected-support edge.  Across 7,600,710 genuine detours,
+> `genuinelyNewEdges=1` and support delta has histogram
+> `-1:3,364,027`, `0:3,066,915`, `+1:1,169,768`.  Therefore support is not
+> monotone and the two-new-edge source-swap model below is not the live wall.
+> The identities remain valid only under their explicitly stronger premise.
 
 ## Reduction from support monotonicity
 
@@ -61,7 +71,7 @@ Weak probes with `sigma` zero or one are not production common-blue sources.
 The exhaustive `N<=12` gate contains 229 such probes but zero positive-defect
 canonical states.
 
-The current proof target is therefore:
+The historical conditional target was:
 
 ```text
 NoPositiveDefectSourceSwapRotor:
@@ -70,4 +80,6 @@ NoPositiveDefectSourceSwapRotor:
 ```
 
 This statement is strictly narrower than R38's saturated-rotor lemma and is
-the target of the fixture Exposure gate and real-cage search.
+not the current target.  The live target is the four-state,
+family-alternating R37/R39 rotor with one genuinely new edge per attachment
+detour and even owner fibers.

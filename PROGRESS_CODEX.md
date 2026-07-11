@@ -32962,6 +32962,9 @@
 [2026-07-11T22:39:41+03:00] OK VERIFY | DID: compiled production half-pair and four-key owner lemmas; ran exact owner gate | RESULT: r42_graph_specific_exclusion rc0 | D: exact 5/4 rotor excluded; even analogue open
 [2026-07-11T22:41:47+03:00] OK CHECK | DID: exhausted parity-corrected abstract rotor | RESULT: 6 obligations/5 sources, 720 optima/state, defect1 | D: parity-only closure refuted; graph geometry remains necessary
 [2026-07-11T22:47:33+03:00] > ATTACK | NEXT: run 8-worker N<=12 census of same-shore outer-pair exposure on every canonical support-constant detour.
+[2026-07-11T22:54:51+03:00] FAIL ATTACK | DID: stopped superseded two-new-edge census after live-surface correction | RESULT: R40 has 7,600,710 one-new-edge detours; delta -1/0/+1 | D: R42 source-swap wall retired
+[2026-07-11T22:54:52+03:00] > PLAN | NEXT: retarget graph exclusion to the live four-state family-alternating rotor with even owner fibers.
+[2026-07-11T22:58:00+03:00] OK ATTACK | DID: evaluated exact N78 live four-state graft with full production matcher | RESULT: defects 0,0,0,0; minimum owner margin 183 | D: explicit graft falsifier excluded
 [2026-07-11T22:26:27+03:00] OK VERIFY | DID: replayed R41 exposure/support and R42 source-swap gates | RESULT: all Python exact checks rc0; abstract defect1 rotor has 120 optima/state | D: matching-only route dead
 [2026-07-11T22:26:28+03:00] FAIL VERIFY | DID: built SaturatedRotorSupportPersistence.lean | RESULT: rc1 at lines45/50/182; sorryAx remains | D: returned to owner for repair
 [2026-07-11T22:26:29+03:00] > ATTACK | NEXT: prove or realize the graph-specific source-swap rotor using exact cage search and production eligibility geometry.
@@ -32972,3 +32975,19 @@
 [2026-07-11T22:43:30+03:00] OK VERIFY | DID: rebuilt R42 production parity/owner filter | RESULT: rc0; 5-by-4 rotor impossible; only external P1/P3 owner sees all 4 keys | D: even rotor remains
 [2026-07-11T22:49:00+03:00] OK ATTACK | DID: formalized universal R43 owner-turnover arithmetic | RESULT: OwnerBalanceTurnover.lean rc0; SHA 66AF8980; allowed axioms only | D: exact 6/8 transport compiled
 [2026-07-11T22:55:00+03:00] FAIL CHECK | DID: applied R41 theorem to live R37 detours | RESULT: live has 1 new edge; deltas -1/0/+1 over 7600710 cases | D: monotone rotor exclusion withdrawn
+[2026-07-11T19:58:00Z] > VERIFY | NEXT: rebuild corrected live one-new-edge owner-turnover Lean and confirm allowed axioms before attacking the alternating rotor.
+[2026-07-11T19:58:34Z] OK VERIFY | DID: rebuilt live R37 owner-turnover formulas | RESULT: rc0; SHA 1C9DA141; exact 7/9 transfer; allowed axioms only | D: frontier remains 4-state rotor
+[2026-07-11T20:01:20Z] > ATTACK | NEXT: parallelize the live rotor wall into endpoint-source Lean, cut-slack geometry, turnover table, and abstract Hall classification.
+[2026-07-11T23:02:36+03:00] > ATTACK | NEXT: audit the R40 live one-new-edge census and isolate the exact four-state/even-fiber invariant replacing false support monotonicity.
+[2026-07-11T23:13:00+03:00] FAIL ATTACK | DID: opened a fresh Pro consult with the corrected rotor prompt | RESULT: Chrome session expired; no prompt transmitted | D: none
+[2026-07-11T20:02:24Z] > ATTACK | NEXT: formalize static live-detour endpoint FreeHalf/CommonBlueOwner facts in a disjoint Lean module and rebuild exactly.
+[2026-07-11T20:03:15Z] > ATTACK | NEXT: derive exact endpoint cut-slack formulas for live detours and gate the both-weak branch on real graphs.
+[2026-07-11T20:04:05Z] > ATTACK | NEXT: Build exact R39 four-state live turnover enumerator and decide summed Hall inequality versus parity-correct countermodel.
+[2026-07-11T20:06:33Z] > COMPUTE | NEXT: scan N=5..10 exact Gamma-min cuts and global defect minimizers for both-weak live detours.
+[2026-07-11T20:06:40Z] OK ATTACK | DID: submitted one separate GPT-Pro prompt on the weak endpoint branch | RESULT: asks proof or real countermodel; response pending | D: none
+[2026-07-11T20:06:50Z] > VERIFY | NEXT: independently replay the claimed N8 weak-endpoint canonical cage and audit its complete-row/defect semantics.
+[2026-07-11T20:07:55Z] FAIL VERIFY | DID: replayed N8 weak-endpoint cage and N5-8 census | RESULT: GCQbo maxcut8; 4/20 live endpoint atoms sigma1; forced P2 strongness false | D: weak branch survives
+[2026-07-11T20:12:16Z] FAIL ATTACK | DID: submitted new R44 exact turnover script patch | RESULT: apply_patch approval quota exhausted until 02:29 | D: none
+[2026-07-11T20:12:49Z] > VERIFY | NEXT: independently rebuild LiveDetourEndpointSource, audit forbidden tokens/axioms, and hash the exact artifact.
+[2026-07-11T20:13:59Z] OK VERIFY | DID: built LiveDetourEndpointSource | RESULT: rc0; SHA F2B35F03; both endpoints/halves checked; allowed axioms only | D: sigma+unusedness open
+[2026-07-11T20:15:33Z] OK ATTACK | DID: endpoint-slack derivation + N19 exact falsifier | RESULT: maxcut23, Gamma125, active collision v, sigma(ma)=sigma(mb)=1 | D: positive-defect premise needed

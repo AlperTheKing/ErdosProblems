@@ -8,8 +8,9 @@ The collision contribution of a pair of multiplicity `k` is
 pair is an active edge and half zero is reserved.  Decreasing a nonactive
 positive multiplicity by one therefore improves source-minus-demand balance
 by exactly two, independently of `k`.  The active path case improves it by
-one.  These arithmetic atoms give the six/eight unit turnover used by the
-R43 source-swap analysis.
+one. The older two-new-edge surface has a six/eight turnover. The live R37
+surface has one new edge and one already-supported edge; its support-constant
+turnover is seven/nine.
 -/
 
 namespace Erdos23Delta0
@@ -85,6 +86,54 @@ theorem entering_middle_loss (rowCount : Nat) :
     entering_diagonal_loss rowCount]
   omega
 
+/-- Correct disappearing-middle balance for a live R37 support-constant
+attachment detour. The endpoint pairs have arbitrary positive
+multiplicities. One old path pair is unique and becomes active, while the
+other has multiplicity at least two and remains selected support. -/
+theorem leaving_live_support_constant_gain
+    (endpointA endpointB repeatedPath rowCount : Nat)
+    (ha : 1 ≤ endpointA) (hb : 1 ≤ endpointB)
+    (hpath : 2 ≤ repeatedPath) (hrow : 1 ≤ rowCount) :
+    (balanceContribution false (endpointA - 1) -
+        balanceContribution false endpointA) +
+      (balanceContribution false (endpointB - 1) -
+        balanceContribution false endpointB) +
+      (balanceContribution true 0 - balanceContribution false 1) +
+      (balanceContribution false (repeatedPath - 1) -
+        balanceContribution false repeatedPath) +
+      (diagonalBalance (rowCount - 1) - diagonalBalance rowCount) =
+        7 + if 2 ≤ rowCount then 2 else 0 := by
+  rw [leaving_nonactive_pair_gain endpointA ha,
+    leaving_nonactive_pair_gain endpointB hb,
+    leaving_path_pair_gain,
+    leaving_nonactive_pair_gain repeatedPath (by omega),
+    leaving_diagonal_gain rowCount hrow]
+  omega
+
+/-- Correct entering-owner balance for a live R37 attachment detour. The
+x-v pair was an active zero-pair; the v-y pair was already covered and has
+arbitrary positive multiplicity. -/
+theorem entering_live_support_constant_loss
+    (endpointA endpointB supportedPath rowCount : Nat)
+    (hpath : 1 ≤ supportedPath) :
+    (balanceContribution false (endpointA + 1) -
+        balanceContribution false endpointA) +
+      (balanceContribution false (endpointB + 1) -
+        balanceContribution false endpointB) +
+      (balanceContribution false 1 - balanceContribution true 0) +
+      (balanceContribution false (supportedPath + 1) -
+        balanceContribution false supportedPath) +
+      (diagonalBalance (rowCount + 1) - diagonalBalance rowCount) =
+        -7 + if 1 ≤ rowCount then -2 else 0 := by
+  rw [entering_nonactive_pair_loss endpointA,
+    entering_nonactive_pair_loss endpointB,
+    entering_path_pair_loss,
+    entering_nonactive_pair_loss supportedPath,
+    entering_diagonal_loss rowCount]
+  omega
+
+#print axioms leaving_live_support_constant_gain
+#print axioms entering_live_support_constant_loss
 #print axioms leaving_nonactive_pair_gain
 #print axioms leaving_middle_gain
 #print axioms entering_middle_loss

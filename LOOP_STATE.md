@@ -1,6 +1,33 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T03:30 (local) — TICK-92
+# Last update: 2026-07-12T04:10 (local) — TICK-93
 
+## TICK-93 (2026-07-12T04:1xZ) — R41: STAR THEOREM (sigma-gap CLOSED at cut-tight); t=3 WINDOW; SUPPORT NOT MONOTONE; R42 = DEFICIENCY-ROTATION RATCHET
+- R41 harvested+archived (WALL_ATTACK_R41_GPTPRO56.md): P1 mass pincer FALSE (D_v - P1_v = 10r(v) - 2N +
+  deg_I(v) — companions CANCEL; equality scale admits proper deficient shores). **NEW PROVABLE LEMMA:
+  cutTightActiveStar_strongProbe_or_detour** — star switch S={v} u N_B(v) (independent by tri-freeness) gives
+  Sum sigma(a) >= 2k - sigma(v) >= 2k-1 at cut-tight v => every active nbr x has SOME y with covered pair
+  (detour) or sigma(x)+sigma(y) >= 2 = loss({x,y}) (PRODUCTION-strength common-blue). NO WEAK-FREE BRANCH.
+  My inspection gate: SOUND. Cut-tight active owners are bad endpoints (dM>=1). **SURVIVOR WINDOW: t=3, N=15,
+  |M|=9** (dB=dM=3, r=3, deg_I=1 => P1 pressure exactly 1; all pairs coverable; P3 floor 0) = falsifier-gate
+  enumeration target. REMAINING INVARIANT: noPositiveDefectFullyCoveredCutTightStar (augment XOR trade at a
+  least-deficient cut-tight fully-covered owner). **GPT P(falsifier) 15% -> 10%.**
+- CODEX DELTA (10.8k, marker 2570235-ish): (a) **N=78 production eval CONFIRMS collapse** (264/264,0,183 /
+  180/180,0,207 x2; SHA 743326e6) — ACCEPTED; (b) **URGENT CORRECTION accepted: live R37 detours have ONE
+  new edge** (y = support nbr; vy already supported); 7,600,710-detour census: supportDelta = 1 - [pc(m,x)=1]
+  - [pc(m,y)=1] in {-1,0,+1} (3.36M/3.07M/1.17M) => support NOT monotone; SaturatedRotorSupportPersistence
+  B4438520 (green) scoped to two-new-edge only (NOT live wall); OwnerBalanceTurnover corrected 1C9DA141
+  (live +-7/9 signed transfers, CAN cancel) accepted; (c) **GCQb`o N=8 CE: MY GATE PASS** — freed endpoint
+  pairs sigma=1 on a real defect-0 cage => NO universal local sigma>=2; star theorem (existential) INTACT;
+  (d) parity: production obligations = stems x Fin 2 (even owner fibers) => literal 5/4 abstract rotor cannot
+  embed; even 6/5 persistent-source analogue survives abstractly (guardrail); (e) r42_source_swap_hunt N29
+  pin family: all 24 tuples defect 0, two support-constant swaps with Exposure 36 — more anti-falsifier.
+  Codex own Pro consult in flight (owner-turnover/diagonal-coverage) — reconcile on landing.
+- R42 SENT (3,638 ch): deficiency-rotation ledger — exact Delta decomposition of the star detour at a
+  least-deficient deg_I=1 cut-tight owner (v deactivates WITH its unmatched obligation; compensation channels
+  = freed-cell activation at m + signed +-7/9 + P4/P5 + P1 shifts); prove the ratchet (candidate decreasing
+  quantity around the cycle) or spec the balancing cage; even-6/5 guardrail folded.
+- GATE QUEUE: R42 harvest; Codex t=3/N=15 window enumeration + endpoint zero-pair census + Pro-consult
+  reconciliation; star theorem compile (N1); N=94; ablation; micro modules. Marker 2573678.
 ## TICK-92 (2026-07-12T03:3xZ) — R40: N=78 GRAFT COLLAPSES (MY GATE PASS); P(falsifier)~15%; R41 = P1-STARVATION PINCER
 - R40 harvested+archived (WALL_ATTACK_R40_GPTPRO56.md): GPT built the FULLY EXPLICIT N=78 grafted rotor
   (3-fold blow-up, grafts 0-6/1-9, 9/8 circuit at 24-32, 9 length-6 locks 33-77, bridge 2-34) and it
@@ -754,6 +781,8 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
+
 
 
 
