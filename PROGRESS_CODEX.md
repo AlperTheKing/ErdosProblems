@@ -32921,3 +32921,54 @@
 [2026-07-11T19:14:13Z] > ATTACK | NEXT: formalize/referee support-persistence and derive Exposure>0 or non-inverse transition for every saturated rotor.
 [2026-07-11T22:15:30+03:00] OK GATE | DID: read GOAL_LOOP, onboarding, latest CLAUDE mailbox, R38, and R36 proof/search | RESULT: production exposure requires sigma>=2 | D: GATE->PLAN
 [2026-07-11T22:15:31+03:00] > PLAN | NEXT: implement exact fixed-state/census gate with production relations, coherent matchings, neutral detours, SCCs, and replay certs.
+[2026-07-11T22:17:13+03:00] OK PLAN | DID: specified zero-defect short circuit and positive-defect exposure replay schema | RESULT: tmp/fanout/r41_exposure_gate/exposure_gate.py | D: PLAN->ATTACK
+[2026-07-11T22:17:14+03:00] > ATTACK | NEXT: run corrected gate with 8-worker cap and verify fixture, census, sigma, and monotone-support assertions.
+[2026-07-11T22:16:53+03:00] OK PLAN | DID: isolated zero-class flip incidence and fixed-cut carrier mismatch | RESULT: dB=dM gives equal boundary counts but no old-atom row map | D: PLAN -> ATTACK
+[2026-07-11T22:16:54+03:00] > ATTACK | NEXT: prove the detour selected-support monotonicity/equality dichotomy and test the residual source-swap rotor.
+[2026-07-11T22:17:47+03:00] OK ATTACK | DID: exhausted support-retention and detour models | RESULT: 11232 retention and 101 detour models; 0 failures | D: saturated cycle -> unsaturated source-swap cycle
+[2026-07-11T22:17:48+03:00] > VERIFY | NEXT: rerun checker, manifest replay, syntax check, and inspect the referee theorem and countermodels.
+[2026-07-11T22:18:01+03:00] OK VERIFY | DID: reran checker, py_compile, manifest replay, and diff check | RESULT: all PASS; REPORT SHA256 2520332FD1417D15 | D: VERIFY -> CHECK
+[2026-07-11T22:18:02+03:00] > CHECK | NEXT: record the monotone-support dichotomy, cycle corollary, and exact omitted-hypothesis countermodels.
+[2026-07-11T22:18:03+03:00] OK CHECK | DID: wrote referee report and exact checker | RESULT: tmp/fanout/r41_support_referee/REPORT.md | D: R38 saturated rotor excluded globally
+[2026-07-11T22:18:04+03:00] > DECIDE | NEXT: deliver the audited theorem; residual frontier is eligibility/matching of eight raw keys per neutral transition.
+[2026-07-11T22:18:05+03:00] OK DECIDE | DID: completed R41 adversarial audit | RESULT: no gap under genuine detour hypotheses; sharp countermodels document omitted premises | D: STOP
+[2026-07-11T22:18:09+03:00] OK ATTACK | DID: ran 8-worker corrected exposure gate on 4 fixtures and available N<=12 states | RESULT: 992618 states, defect>0 hits 0, weak excluded 229 | D: ATTACK->VERIFY
+[2026-07-11T22:18:10+03:00] > VERIFY | NEXT: replay manifest, verify hashes, and audit monotone-support and zero-defect short-circuit claims.
+[2026-07-11T22:18:26+03:00] OK VERIFY | DID: replayed manifest, checked 4 artifact hashes, and py-compiled both scripts | RESULT: manifest SHA ed9a02a8; rc0; hash mismatches 0 | D: VERIFY->CHECK
+[2026-07-11T22:18:27+03:00] OK CHECK | DID: audited corrected sigma gate and monotone-support dichotomy | RESULT: defects 89/2943/3892/join=0; Exposure=0; positive hits 0 | D: none
+[2026-07-11T22:19:31+03:00] > PLAN | NEXT: reconstruct R42 definitions and isolate the exact physical-key turnover lemma for the source-swap SCC.
+[2026-07-11T22:24:00+03:00] OK PLAN | DID: read goal, onboarding, mailbox, R40-R42 reports, adapter, and matching APIs | RESULT: usable turnover is 4 half-one keys out and 4 in per detour | D: PLAN->ATTACK
+[2026-07-11T22:24:01+03:00] > ATTACK | NEXT: inspect the exact rotor engine and test whether optimal coherent matchings have any cross-state invariant beyond per-state coherence.
+[2026-07-11T22:30:00+03:00] OK ATTACK | DID: derived raw 8-for-8 and usable 4-for-4 source turnover | RESULT: half-zero reserved on both orientations; coherence vacuous on singleton usable bases | D: proof route refuted
+[2026-07-11T22:30:01+03:00] > VERIFY | NEXT: run exhaustive two-state optimal-matching countermodel and audit the R42 report against production definitions.
+[2026-07-11T22:19:33+03:00] > ATTACK | NEXT: run exact R41 support-dichotomy replay on all 144 row tuples and every genuine directed middle detour.
+[2026-07-11T22:19:42+03:00] FAIL ATTACK | DID: ran support replay with demanded-active filter | RESULT: 0 transitions; R41 cage edges are off-support but outside demanded scope | D: none
+[2026-07-11T22:19:43+03:00] > ATTACK | NEXT: correct the checker to use literal old activeEdges and rerun all directed detours.
+[2026-07-11T22:19:56+03:00] > VERIFY | NEXT: audit the live mailbox, agent outputs, and corrected R41/R42 exact gates for a current proof-status verdict.
+[2026-07-11T22:21:47+03:00] OK ATTACK | DID: proved support identity/cardinality dichotomy and replayed strict/equality branches | RESULT: 224 strict R41 detours; N10 equality fixture support 8->8, 4 ordered zero-pairs | D: ATTACK -> VERIFY
+[2026-07-11T22:21:48+03:00] > VERIFY | NEXT: rerun replay with complete-family checks, compile the verifier, and hash the final artifacts.
+[2026-07-11T22:22:12+03:00] OK VERIFY | DID: py-compiled and replayed support checker; checked complete N10 row DB and hashes | RESULT: PASS; manifest SHA256 DF90414C3A5F3D573C3D3201004E0D0889FDAD7A2B9B6285DAAB355B80424AE2 | D: VERIFY -> CHECK
+[2026-07-11T22:22:13+03:00] > CHECK | NEXT: classify the new fact and state the exact unresolved source-swap obstruction in REPORT.md.
+[2026-07-11T22:22:14+03:00] OK CHECK | DID: audited implication against coherent matching semantics | RESULT: saturated rotor excluded; source-swap rotor not excluded and no real positive-defect witness found | D: stall=0; CHECK -> DECIDE
+[2026-07-11T22:22:15+03:00] > DECIDE | NEXT: finalize r41_cut_tight_class report with proved monotone-support theorem and honest frontier.
+[2026-07-11T22:22:16+03:00] OK DECIDE | DID: wrote exact proof and replay instructions | RESULT: tmp/fanout/r41_cut_tight_class/REPORT.md | D: target reduced to source-swap expansion; no full proof/counterexample
+[2026-07-11T22:23:20+03:00] OK VERIFY | DID: enumerated both matching states and py-compiled checker | RESULT: 120 optima/state; defect 1; SHA 6bb4386d705883cb | D: VERIFY->CHECK
+[2026-07-11T22:23:21+03:00] > CHECK | NEXT: referee-audit whether turnover plus per-state base coherence forces a cross-state augmenting path.
+[2026-07-11T22:23:22+03:00] OK CHECK | DID: audited exact matching chase | RESULT: 4 usable keys leave and 4 enter; every gained key is consumed; no augment/trade | D: route refuted
+[2026-07-11T22:23:23+03:00] > DECIDE | NEXT: record the countermodel scope and distinguish it from the unresolved real-cage theorem.
+[2026-07-11T22:23:24+03:00] OK DECIDE | DID: wrote R42 audit and checker | RESULT: tmp/fanout/r42_source_swap_proof/REPORT.md | D: real theorem open; no real cage
+[2026-07-11T22:26:17+03:00] > ATTACK | NEXT: derive or falsify a graph-specific exclusion of the exact R42 source-swap rotor using complete-row and active-scope geometry.
+[2026-07-11T22:33:25+03:00] > VERIFY | NEXT: compile ActiveCollisionHalfParity and run the exact owner-filter gate for the R42 5/4 abstract rotor.
+[2026-07-11T22:39:41+03:00] OK VERIFY | DID: compiled production half-pair and four-key owner lemmas; ran exact owner gate | RESULT: r42_graph_specific_exclusion rc0 | D: exact 5/4 rotor excluded; even analogue open
+[2026-07-11T22:41:47+03:00] OK CHECK | DID: exhausted parity-corrected abstract rotor | RESULT: 6 obligations/5 sources, 720 optima/state, defect1 | D: parity-only closure refuted; graph geometry remains necessary
+[2026-07-11T22:47:33+03:00] > ATTACK | NEXT: run 8-worker N<=12 census of same-shore outer-pair exposure on every canonical support-constant detour.
+[2026-07-11T22:26:27+03:00] OK VERIFY | DID: replayed R41 exposure/support and R42 source-swap gates | RESULT: all Python exact checks rc0; abstract defect1 rotor has 120 optima/state | D: matching-only route dead
+[2026-07-11T22:26:28+03:00] FAIL VERIFY | DID: built SaturatedRotorSupportPersistence.lean | RESULT: rc1 at lines45/50/182; sorryAx remains | D: returned to owner for repair
+[2026-07-11T22:26:29+03:00] > ATTACK | NEXT: prove or realize the graph-specific source-swap rotor using exact cage search and production eligibility geometry.
+[2026-07-11T22:30:00+03:00] > ATTACK | NEXT: exact-gate owner-saturated paired-demand turnover under a support-constant row swap; abstract 5-by-4 model omits this invariant.
+[2026-07-11T22:37:54+03:00] OK ATTACK | DID: proved and exhaustively gated owner Hall-balance turnover | RESULT: leaving middle gains 6/8, entering loses 6/8; SHA A7587681 | D: graph transport isolated
+[2026-07-11T22:39:10+03:00] OK VERIFY | DID: rebuilt SaturatedRotorSupportPersistence.lean after repair | RESULT: rc0; SHA B4438520; allowed axioms only; no sorryAx | D: saturated rotor Lean-closed
+[2026-07-11T22:40:00+03:00] OK ATTACK | DID: exact-searched 16 active-pin source-swap cages | RESULT: N29 maxcut34; 24 tuples defect0; each real swap Exposure36 | D: no graph hit
+[2026-07-11T22:43:30+03:00] OK VERIFY | DID: rebuilt R42 production parity/owner filter | RESULT: rc0; 5-by-4 rotor impossible; only external P1/P3 owner sees all 4 keys | D: even rotor remains
+[2026-07-11T22:49:00+03:00] OK ATTACK | DID: formalized universal R43 owner-turnover arithmetic | RESULT: OwnerBalanceTurnover.lean rc0; SHA 66AF8980; allowed axioms only | D: exact 6/8 transport compiled
+[2026-07-11T22:55:00+03:00] FAIL CHECK | DID: applied R41 theorem to live R37 detours | RESULT: live has 1 new edge; deltas -1/0/+1 over 7600710 cases | D: monotone rotor exclusion withdrawn

@@ -1,6 +1,34 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T02:50 (local) — TICK-91
+# Last update: 2026-07-12T03:30 (local) — TICK-92
 
+## TICK-92 (2026-07-12T03:3xZ) — R40: N=78 GRAFT COLLAPSES (MY GATE PASS); P(falsifier)~15%; R41 = P1-STARVATION PINCER
+- R40 harvested+archived (WALL_ATTACK_R40_GPTPRO56.md): GPT built the FULLY EXPLICIT N=78 grafted rotor
+  (3-fold blow-up, grafts 0-6/1-9, 9/8 circuit at 24-32, 9 length-6 locks 33-77, bridge 2-34) and it
+  **COLLAPSES: defect 0 in ALL FOUR states** — P1 alone over-pays (capacity 3038/2300 vs demand 264/180,
+  min owner margin 94); rotor block alone: owner x0 demand 20 vs 374 keys. Blockers: pin rows FIRE
+  (histogram {54:7,63:10,75:1}); **DECISIVE = strong-probe dichotomy** (square-part sigma=9; K_{t,t} centre
+  sigma=t+1; compile-ready heavySupportNeighbour_commonBlue_or_detour KILLS all positive-surplus/double-star
+  rotors); disjoint support witness FIRES (>=108 same-first halves vs margin 94 => must OVERLAP); no positive
+  SCC anywhere. WeakProbeClassTightness squeeze: falsifier must live in CUT-TIGHT (sigma<=1) attachment
+  classes = balanced C5-blow-up geometry = exactly where censuses show big pools. **GPT P(falsifier)~15%.**
+  NARROWED QUESTION: "Can a cut-tight, support-overlapping active rotor have positive minimum collision
+  defect?"
+- **MY GATE PASS** (_claude_r40_n78_instance_gate.py, built from spec alone): counts 78/137/27/164, tri-free,
+  cut 137, blue-connected, bads dist-4, histogram matches my ANALYTIC derivation (54=3*6*3; +9/graft side;
+  +3 double-graft at p0q0 =75), 9/8 minimality, active {24,18,18,24}, demand {264,180,180,264}, P1 supply >=
+  demand at EVERY owner EVERY state. Codex lane: full production matching x4 states; compile
+  heavySupportNeighbour; generator retarget cut-tight+overlapping; P1-starved-AND-cut-tight census probe.
+- R41 SENT (3,477 ch): the P1-STARVATION PINCER — positive-defect owner must be P1-starved; #{z: n(v,z)>=1}
+  <= 4 r(v); starving shore Z over union U needs |Z|(U-1)/4 <= 5|M|; vs cut-tight (dB-dM<=1 => hubs) + row
+  mass + minimality. Deliver theorem sketch or the parameter window + candidate.
+- Earlier this tick: FIVE modules ACCEPTED (my rebuild rc=0 + axioms exactly allowed-triple: WeakProbeClass
+  Tightness BA1279CE, CanonicalCollisionLexSelection BDFE98D0, CanonicalCollisionProgress 2F313660,
+  CollisionDefectGraphAdapter 1C606265, CanonicalCollisionGraphSelection 5B701E46); 2943 25->0 typing
+  ACCEPTED (17E5BAD0 replay PASS; hallWitness 19950/19925/25 reconciles with MY R29 19953/19925/28 = +3
+  HitNeed); r41/r42 replays ALL PASS (support-persistence N33 1A8A538D; dichotomy 224/224+N10; exposure
+  ED9A02A8 0 hits; source-swap 6BB4386D); R38 2-STATE rotor DEAD (support persistence); 4-state evades.
+- GATE QUEUE: R41 harvest; Codex 4-state production eval; heavySupportNeighbour compile; N=94; ablation;
+  micro modules 71308BE7/056A888A + 2CE03EBD/93DB65E9 (SHAs may be stale — Codex to repost). Marker 2559387.
 ## TICK-91 (2026-07-12T02:5xZ) — R39: 8-VTX ROTOR REAL (MY GATE PASS); WALL = ACTIVE-GRAFT QUESTION; R40 SENT
 - R39 harvested+archived (WALL_ATTACK_R39_GPTPRO56.md): cascade FAILS (saturatedPair_preservesSelectedEdge —
   n(m,x)>=2 keeps xm in support; n_w'(v,x)=1 no new-middle collision at the generating pair; opposite-middle
@@ -726,6 +754,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

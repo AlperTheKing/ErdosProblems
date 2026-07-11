@@ -1,0 +1,7 @@
+{
+ "Gamma/WeakProbeClassTightness": true,
+ "Gamma/CanonicalCollisionLexSelection": true,
+ "Gamma/CanonicalCollisionProgress": true,
+ "Gamma/CollisionDefectGraphAdapter": true,
+ "Gamma/CanonicalCollisionGraphSelection": true
+}

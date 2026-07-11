@@ -1,0 +1,2 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\_claude_probe_selection_modules.lean:8:14: error(lean.unknownIdentifier): Unknown constant `Erdos23Delta0.Gamma.WeakProbeClassTightness.weakClass_surplus_zero`
+
