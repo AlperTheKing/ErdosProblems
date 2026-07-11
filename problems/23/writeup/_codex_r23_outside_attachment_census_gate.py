@@ -53,9 +53,22 @@ def edge_distance(edges, source, target):
     return None
 
 
+def edge_radius(edges, atom, selected_edge):
+    a, b = atom
+    x, y = selected_edge
+    oriented = []
+    for left, right in ((x, y), (y, x)):
+        d_left = edge_distance(edges, a, left)
+        d_right = edge_distance(edges, b, right)
+        if d_left is not None and d_right is not None:
+            oriented.append(d_left + d_right)
+    return min(oriented) if oriented else None
+
+
 def evaluate_graph(
     g6: str, minima_only: bool = False, include_outside: bool = True,
-    failure_limit: int = 2, max_product: int = 0, score_mode: str = "global"
+    failure_limit: int = 2, max_product: int = 0, score_mode: str = "global",
+    min_product: int = 0,
 ):
     n, graph_edges = dec(g6)
     info = loads(n, graph_edges)
@@ -69,6 +82,11 @@ def evaluate_graph(
     total_product = 1
     for size in family_sizes:
         total_product *= size
+    if min_product and total_product < min_product:
+        return {
+            "status": "skipLight", "order": n, "g6": g6,
+            "tuples": total_product, "familySizes": family_sizes,
+        }
     if max_product and total_product > max_product:
         return {
             "status": "skipHeavy", "order": n, "g6": g6,
@@ -144,7 +162,19 @@ def evaluate_graph(
     active_alternative_descent = 0
     internal_alternative_descent = 0
     monotone_one_row_descent = 0
+    internal_killer_descent = 0
+    k4_killer_descent = 0
+    radius_three_absorbing_descent = 0
+    no_killer_but_one_row_descent = 0
+    hfar_failures = 0
+    hfar_no_radius_three = 0
+    hfar_radius_three_no_absorbing = 0
+    hfar_no_one_row_descent = 0
+    negative_one_row_delta_sum = 0
+    nonnegative_one_row_delta_sum = 0
     first_nonactive_alternative = None
+    first_three_outcome_failure = None
+    first_nonnegative_delta_sum = None
     if not minima_only:
         for choice, score, old_record in failing_choices:
             old_rows = tuple(
@@ -160,6 +190,44 @@ def evaluate_graph(
                 if edge[0] in old_vertices and edge[1] in old_vertices
                 and edge not in old_support
             }
+            active_atom_distances = [
+                edge_distance(old_active, *bad_edge)
+                for bad_edge in info["M"]
+            ]
+            active_atom_distances = [
+                distance for distance in active_atom_distances
+                if distance is not None
+            ]
+            hfar = bool(active_atom_distances) and min(active_atom_distances) >= 6
+            hfar_failures += int(hfar)
+            radius_three_pairs = [
+                (index, selected_edge)
+                for index, bad_edge in enumerate(info["M"])
+                for selected_edge in old_support
+                if edge_radius(old_active, bad_edge, selected_edge) == 3
+            ]
+            has_radius_three = bool(radius_three_pairs)
+            hfar_no_radius_three += int(hfar and not has_radius_three)
+            delta_sum = sum(
+                score_by_choice[
+                    choice[:index] + (replacement,) + choice[index + 1:]
+                ] - score
+                for index, size in enumerate(family_sizes)
+                for replacement in range(size)
+                if replacement != choice[index]
+            )
+            negative_one_row_delta_sum += int(delta_sum < 0)
+            nonnegative_one_row_delta_sum += int(delta_sum >= 0)
+            if delta_sum >= 0 and first_nonnegative_delta_sum is None:
+                first_nonnegative_delta_sum = {
+                    "g6": g6,
+                    "order": n,
+                    "choice": list(choice),
+                    "rows": [list(row) for row in old_rows],
+                    "score": score,
+                    "deltaSum": delta_sum,
+                    "flow": old_record,
+                }
             best_one, best_two = minimum_neighbor_scores(
                 choice, family_sizes, score_by_choice
             )
@@ -170,6 +238,9 @@ def evaluate_graph(
                 active_alternative = False
                 internal_alternative = False
                 monotone_descent = False
+                internal_killer = False
+                k4_killer = False
+                radius_three_absorbing = False
                 first_descent = None
                 for index, size in enumerate(family_sizes):
                     for replacement in range(size):
@@ -211,18 +282,52 @@ def evaluate_graph(
                             replacement_edges <= (old_active | old_support)
                             and set(replacement_row) <= old_vertices
                         )
-                        old_collision_units = (
-                            score // 2 - old_record["activeEdges"]
+                        is_internal = (
+                            replacement_edges <= (old_active | old_support)
+                            and set(replacement_row) <= old_vertices
                         )
-                        new_collision_units = (
-                            score_by_choice[neighbor] // 2
-                            - neighbor_record["activeEdges"]
+                        active_count = len(replacement_edges & old_active)
+                        is_killer = (
+                            is_internal
+                            and active_count >= 3
+                            and neighbor_record["activeComponents"] == 0
                         )
-                        monotone_descent = monotone_descent or (
-                            new_collision_units <= old_collision_units
-                            and neighbor_record["activeEdges"]
-                            < old_record["activeEdges"]
+                        internal_killer = internal_killer or is_killer
+                        atom_distance = edge_distance(
+                            old_active, *info["M"][index]
                         )
+                        k4_killer = k4_killer or (
+                            is_killer
+                            and active_count == 4
+                            and atom_distance == 4
+                        )
+                        supported_edges = replacement_edges & old_support
+                        is_radius_three_absorbing = (
+                            is_killer
+                            and active_count == 3
+                            and len(supported_edges) == 1
+                            and edge_radius(
+                                old_active,
+                                info["M"][index],
+                                next(iter(supported_edges)),
+                            ) == 3
+                        )
+                        radius_three_absorbing = (
+                            radius_three_absorbing or is_radius_three_absorbing
+                        )
+                        if score_mode == "global":
+                            old_collision_units = (
+                                score // 2 - old_record["activeEdges"]
+                            )
+                            new_collision_units = (
+                                score_by_choice[neighbor] // 2
+                                - neighbor_record["activeEdges"]
+                            )
+                            monotone_descent = monotone_descent or (
+                                new_collision_units <= old_collision_units
+                                and neighbor_record["activeEdges"]
+                                < old_record["activeEdges"]
+                            )
                         if first_descent is None:
                             first_descent = {
                                 "changedRow": index,
@@ -240,6 +345,13 @@ def evaluate_graph(
                 active_alternative_descent += int(active_alternative)
                 internal_alternative_descent += int(internal_alternative)
                 monotone_one_row_descent += int(monotone_descent)
+                internal_killer_descent += int(internal_killer)
+                k4_killer_descent += int(k4_killer)
+                radius_three_absorbing_descent += int(radius_three_absorbing)
+                no_killer_but_one_row_descent += int(not internal_killer)
+                hfar_radius_three_no_absorbing += int(
+                    hfar and has_radius_three and not radius_three_absorbing
+                )
                 if not active_alternative and first_nonactive_alternative is None:
                     first_nonactive_alternative = {
                         "g6": g6,
@@ -249,10 +361,35 @@ def evaluate_graph(
                         "flow": old_record,
                         "descent": first_descent,
                     }
+                if (
+                    first_three_outcome_failure is None
+                    and (
+                        not internal_killer
+                        or (hfar and not has_radius_three)
+                        or (hfar and has_radius_three and not radius_three_absorbing)
+                    )
+                ):
+                    first_three_outcome_failure = {
+                        "g6": g6,
+                        "order": n,
+                        "choice": list(choice),
+                        "rows": [list(row) for row in old_rows],
+                        "score": score,
+                        "flow": old_record,
+                        "activeAtomDistances": active_atom_distances,
+                        "radiusThreePairs": [
+                            [index, list(edge)]
+                            for index, edge in radius_three_pairs
+                        ],
+                        "internalKiller": internal_killer,
+                        "radiusThreeAbsorbing": radius_three_absorbing,
+                    }
             elif best_two is not None and best_two < score:
                 only_two_row_descent += 1
+                hfar_no_one_row_descent += int(hfar)
             else:
                 no_two_row_descent += 1
+                hfar_no_one_row_descent += int(hfar)
     return {
         "status": "eligible",
         "order": n,
@@ -271,7 +408,19 @@ def evaluate_graph(
         "activeAlternativeDescent": active_alternative_descent,
         "internalAlternativeDescent": internal_alternative_descent,
         "monotoneOneRowDescent": monotone_one_row_descent,
+        "internalKillerDescent": internal_killer_descent,
+        "k4KillerDescent": k4_killer_descent,
+        "radiusThreeAbsorbingDescent": radius_three_absorbing_descent,
+        "noKillerButOneRowDescent": no_killer_but_one_row_descent,
+        "hfarFailures": hfar_failures,
+        "hfarNoRadiusThree": hfar_no_radius_three,
+        "hfarRadiusThreeNoAbsorbing": hfar_radius_three_no_absorbing,
+        "hfarNoOneRowDescent": hfar_no_one_row_descent,
+        "negativeOneRowDeltaSum": negative_one_row_delta_sum,
+        "nonnegativeOneRowDeltaSum": nonnegative_one_row_delta_sum,
         "firstNonActiveAlternative": first_nonactive_alternative,
+        "firstThreeOutcomeFailure": first_three_outcome_failure,
+        "firstNonnegativeDeltaSum": first_nonnegative_delta_sum,
         "first": first,
     }
 
@@ -296,6 +445,8 @@ def main() -> int:
     parser.add_argument("--minima-only", action="store_true")
     parser.add_argument("--no-outside", action="store_true")
     parser.add_argument("--max-product", type=int, default=0)
+    parser.add_argument("--min-product", type=int, default=0)
+    parser.add_argument("--omit-heavy-list", action="store_true")
     parser.add_argument("--score-mode", choices=("global", "scoped"), default="global")
     args = parser.parse_args()
     if args.workers > 64:
@@ -307,9 +458,16 @@ def main() -> int:
     by_order = {}
     first = []
     first_nonactive_alternative = None
+    first_three_outcome_failure = None
+    first_nonnegative_delta_sum = None
     heavy = []
+    heavy_count = 0
+    heavy_tuples = 0
     tasks = [
-        (g6, args.minima_only, not args.no_outside, 2, args.max_product, args.score_mode)
+        (
+            g6, args.minima_only, not args.no_outside, 2,
+            args.max_product, args.score_mode, args.min_product,
+        )
         for g6 in graph6
     ]
     if args.workers == 1:
@@ -322,11 +480,14 @@ def main() -> int:
         for result in results:
             status[result["status"]] += 1
             if result["status"] == "skipHeavy":
-                heavy.append({
-                    "g6": result["g6"], "order": result["order"],
-                    "tuples": result["tuples"],
-                    "familySizes": result["familySizes"],
-                })
+                heavy_count += 1
+                heavy_tuples += result["tuples"]
+                if not args.omit_heavy_list:
+                    heavy.append({
+                        "g6": result["g6"], "order": result["order"],
+                        "tuples": result["tuples"],
+                        "familySizes": result["familySizes"],
+                    })
             if result["status"] != "eligible":
                 continue
             aggregate["graphs"] += result["graphs"]
@@ -343,6 +504,16 @@ def main() -> int:
             aggregate["activeAlternativeDescent"] += result["activeAlternativeDescent"]
             aggregate["internalAlternativeDescent"] += result["internalAlternativeDescent"]
             aggregate["monotoneOneRowDescent"] += result["monotoneOneRowDescent"]
+            aggregate["internalKillerDescent"] += result["internalKillerDescent"]
+            aggregate["k4KillerDescent"] += result["k4KillerDescent"]
+            aggregate["radiusThreeAbsorbingDescent"] += result["radiusThreeAbsorbingDescent"]
+            aggregate["noKillerButOneRowDescent"] += result["noKillerButOneRowDescent"]
+            aggregate["hfarFailures"] += result["hfarFailures"]
+            aggregate["hfarNoRadiusThree"] += result["hfarNoRadiusThree"]
+            aggregate["hfarRadiusThreeNoAbsorbing"] += result["hfarRadiusThreeNoAbsorbing"]
+            aggregate["hfarNoOneRowDescent"] += result["hfarNoOneRowDescent"]
+            aggregate["negativeOneRowDeltaSum"] += result["negativeOneRowDeltaSum"]
+            aggregate["nonnegativeOneRowDeltaSum"] += result["nonnegativeOneRowDeltaSum"]
             row = by_order.setdefault(
                 result["order"], {
                     "graphs": 0,
@@ -359,6 +530,16 @@ def main() -> int:
                     "activeAlternativeDescent": 0,
                     "internalAlternativeDescent": 0,
                     "monotoneOneRowDescent": 0,
+                    "internalKillerDescent": 0,
+                    "k4KillerDescent": 0,
+                    "radiusThreeAbsorbingDescent": 0,
+                    "noKillerButOneRowDescent": 0,
+                    "hfarFailures": 0,
+                    "hfarNoRadiusThree": 0,
+                    "hfarRadiusThreeNoAbsorbing": 0,
+                    "hfarNoOneRowDescent": 0,
+                    "negativeOneRowDeltaSum": 0,
+                    "nonnegativeOneRowDeltaSum": 0,
                 }
             )
             for key in row:
@@ -371,6 +552,16 @@ def main() -> int:
                 and result["firstNonActiveAlternative"] is not None
             ):
                 first_nonactive_alternative = result["firstNonActiveAlternative"]
+            if (
+                first_three_outcome_failure is None
+                and result["firstThreeOutcomeFailure"] is not None
+            ):
+                first_three_outcome_failure = result["firstThreeOutcomeFailure"]
+            if (
+                first_nonnegative_delta_sum is None
+                and result["firstNonnegativeDeltaSum"] is not None
+            ):
+                first_nonnegative_delta_sum = result["firstNonnegativeDeltaSum"]
     finally:
         if pool is not None:
             pool.shutdown()
@@ -387,8 +578,13 @@ def main() -> int:
         "byOrder": {str(k): v for k, v in sorted(by_order.items())},
         "firstFailures": first,
         "firstNonActiveAlternative": first_nonactive_alternative,
+        "firstThreeOutcomeFailure": first_three_outcome_failure,
+        "firstNonnegativeDeltaSum": first_nonnegative_delta_sum,
         "maxProduct": args.max_product,
+        "minProduct": args.min_product,
         "scoreMode": args.score_mode,
+        "heavyCount": heavy_count,
+        "heavyTuples": heavy_tuples,
         "heavy": sorted(heavy, key=lambda row: (-row["tuples"], row["g6"])),
     }
     print(json.dumps(payload, sort_keys=True, separators=(",", ":")))

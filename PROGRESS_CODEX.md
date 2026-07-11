@@ -32215,3 +32215,37 @@
 [2026-07-11T08:19:09Z] FAIL VERIFY | DID: first scoped-killer Lean build | RESULT: filter precedence error and Type-valued constructor declared theorem | D: parenthesize filter; theorem->def
 [2026-07-11T08:21:29Z] OK VERIFY | DID: scoped selector N12 + Lean wrapper | RESULT: 921,910 graphs; 39,142,819 tuples; 37,514,965 scoped minima; 0 fail; rc0 SHA 8B24A026 | D: k>=6 alignment
 [2026-07-11T08:21:30Z] > ATTACK | NEXT: prove/falsify k>=6 producer alignment and replace semantic killer check with executable finite connectivity checker.
+[2026-07-11T08:34:37Z] > VERIFY | NEXT: rebuild and axiom-audit executable killer checker, then instrument exact k4/k>=6/no-killer census outcomes.
+[2026-07-11T08:37:42Z] OK VERIFY | DID: rebuilt literal component-label killer checker and audited axioms | RESULT: rc0 SHA 2BEB36BD; checker uses propext+Quot.sound only | D: executable gate ready
+[2026-07-11T08:40:26Z] > VERIFY | NEXT: run exact N10 scoped Hall-failure classifier for k4, radius-3 absorption, and no-killer outcomes at 48 workers.
+[2026-07-11T08:41:38Z] OK VERIFY | DID: classified every N10 scoped Hall failure | RESULT: 283/283 internal killers; 283 k4; hfar0; no-killer0; SHA A24ADA44 | D: launch N11 exceptional branch
+[2026-07-11T08:41:39Z] > VERIFY | NEXT: run exact N11 classifier and test all path6/8 failures for radius-3 absorbing producer bridges.
+[2026-07-11T08:44:36Z] FAIL VERIFY | DID: classified N11 and froze exact exception | RESULT: 420/422 >=3A killers; 2 no-killer/no-rho3; gate SHA FEF16105 | D: R25/R26 as stated DEAD
+[2026-07-11T08:44:37Z] > PLAN | NEXT: weaken the bridge to an internal active-killing row, verify wrapper sufficiency, and retask proof design on the exact 2A+2S fixture.
+[2026-07-11T08:47:06Z] > VERIFY | NEXT: build corrected ScopedAbsorbingInternalRow checker and minimum-to-Hall wrappers in Lean.
+[2026-07-11T08:48:56Z] OK VERIFY | DID: built corrected absorbing-row checker and Hall wrappers | RESULT: rc0 SHA 14AB6054; allowed axioms only | D: frontier weakened without loss
+[2026-07-11T08:48:57Z] > ATTACK | NEXT: prove/falsify scoped Hall failure => internal active-killing row using the 2A+2S fixture as mandatory gate.
+[2026-07-11T08:56:30Z] OK ATTACK | DID: exact-glued two N10 local failures through blue path | RESULT: global owner flow 32/32; SHA 72D552FF | D: cross-component free pairs heal composition
+[2026-07-11T08:56:31Z] > VERIFY | NEXT: compile weakest sufficient scoped-score one-row descent frontier and minimum contradiction.
+[2026-07-11T08:59:02Z] OK VERIFY | DID: compiled weakest scoped-score descent wrapper | RESULT: rc0 SHA B916318F; allowed axioms only | D: exact proof wall isolated without overstrengthening
+[2026-07-11T09:00:00Z] > VERIFY | NEXT: run order-12 all-tuple scoped-descent falsifier slice (row-product <=256) at 61 workers.
+[2026-07-11T09:20:47Z] OK VERIFY | DID: exhausted N12 row-product<=256 population | RESULT: 899619 graphs; 20181461 tuples; 0 Hall failures; 22291 heavy deferred | D: obstruction, if any, is high-product
+[2026-07-11T09:20:48Z] > ATTACK | NEXT: shard the 18,961,358 deferred N12 tuples and attack the weakest scoped-score descent lemma structurally.
+[2026-07-11T09:22:48Z] OK ATTACK | DID: added exact min/max product bands and compact tail accounting | RESULT: py_compile+N5 regression rc0; SHA E0477237 | D: no light-row recomputation
+[2026-07-11T09:22:49Z] > VERIFY | NEXT: exhaust N12 product band 257..4096 at 61 workers for Hall/descent falsifiers.
+[2026-07-11T09:43:23Z] OK VERIFY | DID: exhausted N12 product band 257..4096 | RESULT: 21841 graphs; 14160291 tuples; 1080 Hall fails; 1080 descents; 0 route falsifiers | D: 450 heavy graphs remain
+[2026-07-11T09:43:24Z] > ATTACK | NEXT: build tuple-sharded all-row gate for the final 4,801,067 N12 tuples.
+[2026-07-11T09:45:07Z] > VERIFY | NEXT: regression-test new tuple-sharded Hall/descent gate on all 47,030 N10 tuples.
+[2026-07-11T09:46:08Z] OK VERIFY | DID: sharded-gate N10 regression | RESULT: 47030 tuples; 283 failures; 283 descents; 0 misses; SHA A2CCE967 | D: launch final N12 tail
+[2026-07-11T09:46:09Z] > VERIFY | NEXT: exhaust final 450 N12 graphs / 4,801,067 tuples with tuple sharding at 61 workers.
+[2026-07-11T09:48:55Z] OK VERIFY | DID: exhausted final N12 heavy tail | RESULT: 4801067 tuples; 7144 failures; 7144 descents; 0 misses | D: full N12 all-tuple route green
+[2026-07-11T09:48:56Z] > ATTACK | NEXT: derive scoped Hall=>one-row descent from owner-shore duality; use full N12 corpus as exact gate.
+[2026-07-11T09:52:07Z] > VERIFY | NEXT: compile active-scoped owner-saturation and exact deficient-owner-shore extraction in Lean.
+[2026-07-11T09:55:52Z] OK VERIFY | DID: compiled scoped owner-Hall reduction | RESULT: failure iff deficient owner shore; rc0 SHA 6A4D4753; allowed axioms only | D: arbitrary demand shores eliminated
+[2026-07-11T09:58:09Z] > VERIFY | NEXT: test whether every N10-11 Hall failure has negative total one-row score variation.
+[2026-07-11T09:59:45Z] OK VERIFY | DID: summed every one-row score change on N10-11 failures | RESULT: 705/705 negative sums; 0 counterexamples; SHA AC0EB3EB | D: averaging route alive
+[2026-07-11T09:59:46Z] > VERIFY | NEXT: extend summed-variation gate to all 7,144 heavy N12 Hall failures.
+[2026-07-11T10:04:00Z] OK VERIFY | DID: summed variation on N12 heavy failures | RESULT: 7144/7144 negative sums; 0 counterexamples; SHA 1E5C8982 | D: check medium band identically
+[2026-07-11T10:08:15Z] OK VERIFY | DID: summed variation on N12 medium failures | RESULT: 1080/1080 negative; full N12 8224/8224; SHA A0F6D162 | D: scalar averaging frontier
+[2026-07-11T10:08:16Z] > VERIFY | NEXT: compile negative total one-row variation => scoped-score descent => minimum Hall in Lean.
+[2026-07-11T10:13:29Z] OK VERIFY | DID: compiled one-row variation reduction | RESULT: negative sum=>descent=>minimum Hall rc0 SHA 10D1F60A; allowed axioms | D: wall is scalar shore inequality

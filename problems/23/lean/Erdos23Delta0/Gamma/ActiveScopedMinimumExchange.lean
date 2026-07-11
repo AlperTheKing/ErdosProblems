@@ -272,6 +272,16 @@ theorem scopedCanonicalChoice_optimal (G : GraphData) (c : CutData)
       scopedObligationScore G c eta :=
   (minScopedChoice G c bads h).2 eta
 
+/-- Weakest one-row statement sufficient for the corrected scoped selector. -/
+structure ScopedScoreOneRowDescent (G : GraphData) (c : CutData)
+    {bads : List BadEdgeData} (omega : RowChoice bads) : Type where
+  index : Fin bads.length
+  replacement : Fin (bads.get index).rows.length
+  changed : replacement ≠ omega index
+  score_drop :
+    scopedObligationScore G c (replaceOne omega index replacement) <
+      scopedObligationScore G c omega
+
 /-- Number of replacement-row edges that were active before the
 replacement. -/
 def rowActiveEdgeCount (G : GraphData) (c : CutData)
@@ -294,6 +304,30 @@ structure ScopedInternalKillerRow (G : GraphData) (c : CutData)
     ((bads.get index).rows.get replacement)
   kills_active : ∀ v : Fin G.n,
     ¬ActiveOwner G c (replaceOne omega index replacement) v
+
+/-- Corrected R26 frontier after the order-11 `2A+2S` falsifier.  The
+replacement is internal and destroys every active component; no lower bound
+on its number of old active edges is imposed. -/
+structure ScopedAbsorbingInternalRow (G : GraphData) (c : CutData)
+    {bads : List BadEdgeData} (omega : RowChoice bads) : Type where
+  index : Fin bads.length
+  replacement : Fin (bads.get index).rows.length
+  changed : replacement ≠ omega index
+  internal : ∀ x ∈ ((bads.get index).rows.get replacement).verts,
+    x ∈ selectedVertices omega
+  kills_active : ∀ v : Fin G.n,
+    ¬ActiveOwner G c (replaceOne omega index replacement) v
+
+def ScopedInternalKillerRow.toAbsorbing
+    {G : GraphData} {c : CutData} {bads : List BadEdgeData}
+    {omega : RowChoice bads} (K : ScopedInternalKillerRow G c omega) :
+    ScopedAbsorbingInternalRow G c omega := {
+  index := K.index
+  replacement := K.replacement
+  changed := K.changed
+  internal := K.internal
+  kills_active := K.kills_active
+}
 
 def KillerRawValid (G : GraphData) (c : CutData)
     {bads : List BadEdgeData} (omega : RowChoice bads)
@@ -411,6 +445,66 @@ theorem killer_of_checkScopedInternalKillerRow
   }⟩
   simpa only [eta] using hkills
 
+abbrev ScopedAbsorbingInternalRowData {bads : List BadEdgeData} :=
+  ScopedInternalKillerRowData (bads := bads)
+
+def checkScopedAbsorbingInternalRow
+    (G : GraphData) (c : CutData) {bads : List BadEdgeData}
+    (omega : RowChoice bads)
+    (K : ScopedAbsorbingInternalRowData (bads := bads)) : Bool :=
+  let eta := replaceOne omega K.index K.replacement
+  decide (K.labels.length = G.n) &&
+    decide (K.replacement ≠ omega K.index) &&
+    ((bads.get K.index).rows.get K.replacement).verts.all
+      (fun x => decide (x ∈ selectedVertices omega)) &&
+    (activeEdges G c eta).all (fun e =>
+      decide (e.1 < G.n ∧ e.2 < G.n) &&
+        decide (K.labels.getD e.1 0 = K.labels.getD e.2 0)) &&
+    bads.all (fun b =>
+      decide (b.u < G.n ∧ b.v < G.n) &&
+        decide (K.labels.getD b.u 0 ≠ K.labels.getD b.v 0))
+
+/-- Soundness of the executable corrected absorbing-row checker. -/
+theorem absorbing_of_checkScopedAbsorbingInternalRow
+    {G : GraphData} {c : CutData} {bads : List BadEdgeData}
+    {omega : RowChoice bads}
+    {K : ScopedAbsorbingInternalRowData (bads := bads)}
+    (hcheck : checkScopedAbsorbingInternalRow G c omega K = true) :
+    Nonempty (ScopedAbsorbingInternalRow G c omega) := by
+  classical
+  unfold checkScopedAbsorbingInternalRow at hcheck
+  simp only [Bool.and_eq_true, List.all_eq_true, decide_eq_true_eq] at hcheck
+  rcases hcheck with
+    ⟨⟨⟨⟨hlen, hchanged⟩, hinternal⟩, hedgeLabels⟩, hbadLabels⟩
+  let eta := replaceOne omega K.index K.replacement
+  have hedge : ∀ x y : Fin G.n,
+      (activeGraph G c eta).Adj x y →
+        K.labels.getD x.1 0 = K.labels.getD y.1 0 := by
+    intro x y hxy
+    have hitem := hedgeLabels (normEdge x.1 y.1) hxy.2
+    by_cases hlt : x.1 < y.1
+    · simpa [normEdge, hlt] using hitem.2
+    · simpa [normEdge, hlt] using hitem.2.symm
+  have hkills : ∀ v : Fin G.n, ¬ActiveOwner G c eta v := by
+    intro v hv
+    rcases hv with ⟨i, hu, hv, hreachU, hreachV⟩
+    have hlu : K.labels.getD (bads.get i).u 0 = K.labels.getD v.1 0 :=
+      label_eq_of_reachable
+        (fun x : Fin G.n => K.labels.getD x.1 0) hedge hreachU
+    have hlv : K.labels.getD (bads.get i).v 0 = K.labels.getD v.1 0 :=
+      label_eq_of_reachable
+        (fun x : Fin G.n => K.labels.getD x.1 0) hedge hreachV
+    have hbad := hbadLabels (bads.get i) (List.get_mem bads i)
+    exact hbad.2 (hlu.trans hlv.symm)
+  refine ⟨{
+    index := K.index
+    replacement := K.replacement
+    changed := hchanged
+    internal := hinternal
+    kills_active := ?_
+  }⟩
+  simpa only [eta] using hkills
+
 theorem scopedScore_zero_of_no_active_owner
     (G : GraphData) (c : CutData) {bads : List BadEdgeData}
     (omega : RowChoice bads)
@@ -434,6 +528,14 @@ theorem scopedScore_zero_of_no_active_owner
 theorem ScopedInternalKillerRow.scopedScore_zero
     {G : GraphData} {c : CutData} {bads : List BadEdgeData}
     {omega : RowChoice bads} (K : ScopedInternalKillerRow G c omega) :
+    scopedObligationScore G c
+      (replaceOne omega K.index K.replacement) = 0 :=
+  scopedScore_zero_of_no_active_owner G c
+    (replaceOne omega K.index K.replacement) K.kills_active
+
+theorem ScopedAbsorbingInternalRow.scopedScore_zero
+    {G : GraphData} {c : CutData} {bads : List BadEdgeData}
+    {omega : RowChoice bads} (K : ScopedAbsorbingInternalRow G c omega) :
     scopedObligationScore G c
       (replaceOne omega K.index K.replacement) = 0 :=
   scopedScore_zero_of_no_active_owner G c
@@ -476,6 +578,34 @@ def RealHallFailureHasInternalKillerRow
     CompleteShortestRowDB G c bads →
     HallFailureHasInternalKillerRow G c bads
 
+def HallFailureHasAbsorbingInternalRow
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  ∀ omega : RowChoice bads,
+    ¬Nonempty (Matching G c omega) →
+      Nonempty (ScopedAbsorbingInternalRow G c omega)
+
+def RealHallFailureHasAbsorbingInternalRow
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  TriangleFree G →
+    IsMaxCut G c →
+    BConnected G c →
+    CompleteShortestRowDB G c bads →
+    HallFailureHasAbsorbingInternalRow G c bads
+
+def HallFailureHasScopedScoreOneRowDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  ∀ omega : RowChoice bads,
+    ¬Nonempty (Matching G c omega) →
+      Nonempty (ScopedScoreOneRowDescent G c omega)
+
+def RealHallFailureHasScopedScoreOneRowDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  TriangleFree G →
+    IsMaxCut G c →
+    BConnected G c →
+    CompleteShortestRowDB G c bads →
+    HallFailureHasScopedScoreOneRowDescent G c bads
+
 def MinimumActiveScopedHall (G : GraphData) (c : CutData)
     (bads : List BadEdgeData) (h : RowsNonempty bads) : Prop :=
   Nonempty (Matching G c (scopedCanonicalChoice G c bads h))
@@ -508,6 +638,60 @@ theorem realMinimumActiveScopedHall_of_killer
     MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
   apply minimumActiveScopedHall_of_killer
   exact hkiller htri hmax hconn hdb
+
+/-- Corrected finite-minimum wrapper.  The falsified three-active threshold
+does not occur in this proof: destroying all active owners is sufficient. -/
+theorem minimumActiveScopedHall_of_absorbing
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hrows : RowsNonempty bads)
+    (habsorbing : HallFailureHasAbsorbingInternalRow G c bads) :
+    MinimumActiveScopedHall G c bads hrows := by
+  unfold MinimumActiveScopedHall
+  by_contra hmatching
+  let omega := scopedCanonicalChoice G c bads hrows
+  have hpos := scopedScore_pos_of_matching_failure G c omega hmatching
+  obtain ⟨K⟩ := habsorbing omega hmatching
+  have hzero := K.scopedScore_zero
+  have hmin := scopedCanonicalChoice_optimal G c bads hrows
+    (replaceOne omega K.index K.replacement)
+  change scopedObligationScore G c omega ≤ _ at hmin
+  rw [hzero] at hmin
+  omega
+
+theorem realMinimumActiveScopedHall_of_absorbing
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (htri : TriangleFree G) (hmax : IsMaxCut G c)
+    (hconn : BConnected G c)
+    (hdb : CompleteShortestRowDB G c bads)
+    (habsorbing : RealHallFailureHasAbsorbingInternalRow G c bads) :
+    MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
+  apply minimumActiveScopedHall_of_absorbing
+  exact habsorbing htri hmax hconn hdb
+
+/-- Canonical-minimum contradiction from the weakest scoped-score descent
+frontier. -/
+theorem minimumActiveScopedHall_of_scopedScoreDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hrows : RowsNonempty bads)
+    (hdescent : HallFailureHasScopedScoreOneRowDescent G c bads) :
+    MinimumActiveScopedHall G c bads hrows := by
+  unfold MinimumActiveScopedHall
+  by_contra hmatching
+  let omega := scopedCanonicalChoice G c bads hrows
+  obtain ⟨D⟩ := hdescent omega hmatching
+  have hmin := scopedCanonicalChoice_optimal G c bads hrows
+    (replaceOne omega D.index D.replacement)
+  exact (Nat.not_lt_of_ge hmin) D.score_drop
+
+theorem realMinimumActiveScopedHall_of_scopedScoreDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (htri : TriangleFree G) (hmax : IsMaxCut G c)
+    (hconn : BConnected G c)
+    (hdb : CompleteShortestRowDB G c bads)
+    (hdescent : RealHallFailureHasScopedScoreOneRowDescent G c bads) :
+    MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
+  apply minimumActiveScopedHall_of_scopedScoreDescent
+  exact hdescent htri hmax hconn hdb
 
 end ActiveScopedMinimumExchange
 end Gamma
