@@ -32303,3 +32303,6 @@
 [2026-07-11T12:55:47Z] FAIL ATTACK | DID: ran N11 branch census | RESULT: shell timeout at 126s before verdict | D: relaunch with 10-minute timeout
 [2026-07-11T13:07:15Z] OK ATTACK | DID: exact N11 branch census | RESULT: 16559/16559 groups, 116127/116127 demand touch changed rows | D: test N12 tail
 [2026-07-11T13:13:24Z] OK ATTACK | DID: exact N12-heavy branch census | RESULT: 375405 touched groups; 32 inherited-only; 0 unanchored | D: persistence is load-bearing
+[2026-07-11T13:15:16Z] > VERIFY | NEXT: exact-replay 26-duplicate-row transport falsifier; objective is gate semantic row uniqueness repair.
+[2026-07-11T13:17:00Z] FAIL VERIFY | DID: replayed duplicate-row T1 instance | RESULT: domain 494, target/flow 493, exact gap 1 | D: require semantic row Nodup
+[2026-07-11T13:18:00Z] > VERIFY | NEXT: rebuild Lean chain after adding semantic rowVerts_nodup to CompleteShortestRowDB.

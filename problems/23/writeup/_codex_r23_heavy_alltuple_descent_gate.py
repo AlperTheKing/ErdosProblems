@@ -118,6 +118,7 @@ def analyze_chunk(task):
     first_positive_coordinate_hitneed_variation = None
     first_coordinate_raw_collision_deficiency_bound_failure = None
     first_component_transport_failure = None
+    first_inherited_transport = None
     for tuple_index in range(start, stop):
         checked += 1
         choice = choice_at(tuple_index, sizes)
@@ -162,6 +163,7 @@ def analyze_chunk(task):
         coordinate_hitneed_positive = []
         coordinate_raw_collision_failures = []
         coordinate_transport_failures = []
+        coordinate_inherited_usage = []
         for index, family in enumerate(families):
             coordinate_collision_delta = 0
             coordinate_hitneed_delta = 0
@@ -246,6 +248,14 @@ def analyze_chunk(task):
                     "familySize": len(family),
                     "transport": transport,
                 })
+            if transport["inheritedOnlyGroups"]:
+                coordinate_inherited_usage.append({
+                    "index": index,
+                    "familySize": len(family),
+                    "oldRow": list(rows[index]),
+                    "alternativeRows": [list(row) for row in coordinate_rows],
+                    "transport": transport,
+                })
         record = {
             "g6": g6,
             "tupleIndex": tuple_index,
@@ -262,10 +272,13 @@ def analyze_chunk(task):
             "coordinateRawCollisionFailures":
                 coordinate_raw_collision_failures,
             "coordinateTransportFailures": coordinate_transport_failures,
+            "coordinateInheritedUsage": coordinate_inherited_usage,
             "descent": witness,
         }
         if first_failure is None:
             first_failure = record
+        if first_inherited_transport is None and coordinate_inherited_usage:
+            first_inherited_transport = record
         if best < score:
             descents += 1
         else:
@@ -383,6 +396,7 @@ def analyze_chunk(task):
         "firstCoordinateRawCollisionDeficiencyBoundFailure":
             first_coordinate_raw_collision_deficiency_bound_failure,
         "firstComponentTransportFailure": first_component_transport_failure,
+        "firstInheritedTransport": first_inherited_transport,
     }
 
 
@@ -441,6 +455,7 @@ def main():
     first_positive_coordinate_hitneed_variation = None
     first_coordinate_raw_collision_deficiency_bound_failure = None
     first_component_transport_failure = None
+    first_inherited_transport = None
     min_ratio = None
     min_normalized_ratio = None
     min_normalized_record = None
@@ -575,6 +590,11 @@ def main():
                 first_component_transport_failure = (
                     result["firstComponentTransportFailure"]
                 )
+            if (
+                first_inherited_transport is None
+                and result["firstInheritedTransport"] is not None
+            ):
+                first_inherited_transport = result["firstInheritedTransport"]
     assert aggregate["checked"] == heavy_tuples
     assert aggregate["failures"] == aggregate["descents"] + aggregate["noDescent"]
     assert aggregate["failures"] == (
@@ -610,6 +630,7 @@ def main():
         "firstCoordinateRawCollisionDeficiencyBoundFailure":
             first_coordinate_raw_collision_deficiency_bound_failure,
         "firstComponentTransportFailure": first_component_transport_failure,
+        "firstInheritedTransport": first_inherited_transport,
         "minNegativeVariationPerDeficiency": (
             None if min_ratio is None else [min_ratio.numerator, min_ratio.denominator]
         ),

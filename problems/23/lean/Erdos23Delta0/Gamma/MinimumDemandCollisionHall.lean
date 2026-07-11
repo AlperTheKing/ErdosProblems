@@ -34,6 +34,10 @@ structure CompleteShortestRowDB (G : GraphData) (c : CutData)
     (bads : List BadEdgeData) : Prop where
   checked : AllBadsChecked G c bads
   badKeys_nodup : (bads.map badEdgeKey).Nodup
+  /-- The row list represents shortest paths as a set.  Multiplicity would
+  distort the heat-bath variation and can falsify the transport bound. -/
+  rowVerts_nodup : ∀ i : Fin bads.length,
+    ((bads.get i).rows.map Row5.verts).Nodup
   covers_bad : ∀ u v : Nat,
     u < G.n → v < G.n → badb G c u v = true →
       ∃ i : Fin bads.length, badEdgeKey (bads.get i) = normEdge u v

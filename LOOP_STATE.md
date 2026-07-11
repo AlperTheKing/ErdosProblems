@@ -371,3 +371,17 @@
 - R29 still generating at GPT-Pro (2928 descent check + traffic-relief dichotomy).
 - Standing: keep GPT-Pro as deep prover + my exact gates as the only ledger entry point; workflows add
   breadth, never bypass verification.
+
+## TICK-77 (2026-07-11T16:4xZ) — FORK: 2943 gate = decisive arbiter for BOTH frontiers
+- Codex delta (2487252-2500496 read): variation/transport lane built+compiled (V <= -K*defect exact-green
+  on ALL 9,929 failures N<=12 incl 2A+2S; one-coordinate localization; component-aware transport injection
+  w/ falsifier-driven eligibility [3 iterations]; existential-shore quantifier fix; endpoint bridge
+  eliminated; modules ActiveScopedVariationReduction F3FFD8B2/C5012784 + ActiveScopedCoordinateTransport
+  51AD9297/6919B342 — gate queue). Codex ALSO launched its own 6-agent GPT round (user-directed).
+- CONFLICT: R29's 2943 CE (all 459,004 deltas >= +2) contradicts the variation lane head-on (V >> 0 there).
+  ONE of them falls. Dedicated gate agent launched (background) + my descent-ce-hunt workflow (wvdldd781)
+  still running. Codex does NOT yet reflect R29 in these posts (timestamps precede my R29 mailbox post).
+- If 2943 CONFIRMED: Hamming-one + variation/transport lanes both dead; record = global-minimizer /
+  unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
+  = the live wall (component-aware coordinate injection existence).
+- Mailbox marker now 2500496.
