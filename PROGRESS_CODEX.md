@@ -32870,6 +32870,18 @@
 [2026-07-11T22:04:15+03:00] FAIL ATTACK | DID: requested 64 Python process workers on Windows | RESULT: ProcessPoolExecutor maximum is 61 | D: worker cap corrected
 [2026-07-11T22:04:25+03:00] OK ATTACK | DID: enumerated order 11 with 60 workers and 128 graphs/chunk | RESULT: 4,016 singleton systems all inactive; witness_n11.json witness=null | D: no counterexample <=11
 [2026-07-11T22:04:25+03:00] > ATTACK | NEXT: run order 12 singleton census with 60 workers and 128 graphs/chunk.
+[2026-07-11T22:06:20+03:00] OK ATTACK | DID: enumerated order 12 singleton cages with 60 workers | RESULT: 33,720 singleton systems all inactive; witness_n12.json witness=null | D: singleton route dead through N12
+[2026-07-11T22:06:20+03:00] > ATTACK | NEXT: search all lex-first N<=12 states with universal weak probes and audit every one-row replacement for defect drop or scope vacuation.
+[2026-07-11T22:07:00+03:00] > ATTACK | NEXT: test the zero-class reduction and run lex-first orders 5..11 with 60 workers, auditing all scoped one-row replacements.
+[2026-07-11T22:07:20+03:00] OK ATTACK | DID: audited all lex-first all-length-five states on orders 5..11 | RESULT: 70,690 inactive; 18 active states each had a nonweak probe; no universal-weak state | D: no counterexample <=11
+[2026-07-11T22:07:20+03:00] > ATTACK | NEXT: audit lex-first order-12 states with 60 workers and 128 graphs/chunk under the same replacement gate.
+[2026-07-11T22:09:30+03:00] OK ATTACK | DID: audited all 1,144,061 order-12 lex-first states | RESULT: 921,266 inactive; all 644 active states had a nonweak probe; witness=null | D: universal weakness absent through N12 lex states
+[2026-07-11T22:09:30+03:00] > ATTACK | NEXT: test 100,000 deterministic row tuples of the real N24 cage for universal weakness before closing the zero-class proof audit.
+[2026-07-11T22:10:05+03:00] OK ATTACK | DID: tested 100,000 seeded N24 row tuples | RESULT: 43,953 inactive; 56,047 had a nonweak probe; universal-weak count 0 | D: no real counterexample found
+[2026-07-11T22:10:05+03:00] > VERIFY | NEXT: replay N20 replacement/vacuation and write the exact zero-class boundary report without claiming the missing carrier-to-row implication.
+[2026-07-11T22:11:10+03:00] OK VERIFY | DID: recomputed N20 before/after scope and compiled both R40 gates | RESULT: old active path 0-7-10-15-1; replacement active scope empty; REPORT SHA 5A3BA24B | D: none
+[2026-07-11T22:11:10+03:00] > CHECK | NEXT: referee-check whether zero-class tight flips preserve fixed bad-atom keys required by collision-defect trades.
+[2026-07-11T22:11:25+03:00] OK CHECK | DID: audited tight-flip carrier identity against fixed RowChoice API | RESULT: flip maps old atom zw to new atom zp1; no fixed-key row replacement follows | D: stall=0; exact frontier isolated
 [2026-07-11T21:56:49+03:00] OK VERIFY | DID: ran R39 boundary, N40 aggregate, and Lean bank checks | RESULT: all rc0; report SHA ADD5155A; allowed axioms only | D: VERIFY->CHECK
 [2026-07-11T21:56:49+03:00] OK CHECK | DID: separated proven obstructions from full positive-defect claim | RESULT: switch and bank routes false; no real positive-defect CE; r39_weak_free_comp/REPORT.md | D: frontier unchanged
 [2026-07-11T21:57:52+03:00] > SELECT->GATE | NEXT: Read goal, onboarding, latest mailbox, and r36/r39 reports to identify the weak-pair Gamma frontier.
@@ -32884,3 +32896,28 @@
 [2026-07-11T22:01:39+03:00] OK CHECK | DID: wrote R40 boundary audit | RESULT: tmp/fanout/r40_weak_gamma_trade/REPORT.md SHA256 6358B5B3BC99AE10 | D: no real positive-defect CE
 [2026-07-11T19:02:48Z] FAIL VERIFY | DID: audited GammaMinimalConnected API | RESULT: arbitrary gammaOfCut admits constant-zero inhabitant | D: semantic gamma bridge required
 [2026-07-11T19:02:49Z] OK ATTACK | DID: searched 174436 N20 weak-graft atom subsets | RESULT: 3 maxcut survivors, all exact min defect 0; SHA BA31C6CE | D: no CE
+[2026-07-11T22:04:33+03:00] > SELECT->PLAN | NEXT: extract R38 cage semantics and define exact real-cage rotor enumeration from current handoff artifacts.
+[2026-07-11T22:07:13+03:00] OK PLAN | DID: derived support-retention obstruction for inverse saturated square swaps | RESULT: n(m,x)>=2 keeps blue edge mx in target support | D: PLAN->ATTACK
+[2026-07-11T22:07:14+03:00] > ATTACK | NEXT: build anchored square cage and enumerate complete rows, tuple minima, matchings, and production exposure exactly.
+[2026-07-11T19:10:25Z] OK VERIFY | DID: replayed corrected weak-free N<=12 manifest | RESULT: 992618 canonical states; positive defect=0; deadends=0; SHA 580F2694 | D: none
+[2026-07-11T19:10:26Z] OK ATTACK | DID: derived one-class-tight weak-probe lemma | RESULT: Lean rc=0; allowed axioms; SHA BA1279CE | D: weak case reduced
+[2026-07-11T19:10:27Z] OK VERIFY | DID: wired graph canonical tuple to checked progress contradiction | RESULT: rc=0; allowed axioms; SHA 5B701E46 | D: outer chain compiled
+[2026-07-11T22:11:15+03:00] OK ATTACK | DID: enumerated N33 locked rotor cage, 9 complete families and 144 tuples | RESULT: min defect 0; 32 saturated swaps; payload SHA 02B22CE9 | D: no witness
+[2026-07-11T22:11:16+03:00] > VERIFY | NEXT: referee-check row chord invariants, support retention, cut-tight prune, and deterministic manifest replay.
+[2026-07-11T22:11:47+03:00] OK VERIFY | DID: replayed manifest and checked 84 row chords plus 32 saturated swaps | RESULT: rc0; file SHA 1A8A538D; support failures 0 | D: VERIFY->CHECK
+[2026-07-11T22:11:48+03:00] OK CHECK | DID: emitted exact bounded 0-failure manifest and exclusion report | RESULT: tmp/fanout/r41_rotor_realization/REPORT.md | D: strict multiplicity rotor excluded
+[2026-07-11T22:13:02+03:00] > SELECT->GATE | NEXT: read goal, onboarding, latest mailbox, R38 report, and R36 code to recover the exact exposure contract.
+[2026-07-11T22:13:03+03:00] > SELECT | NEXT: inspect latest mailbox, WeakProbeClassTightness.lean, and r36/r39 reports to fix the exact equality-case frontier.
+[2026-07-11T22:14:07+03:00] OK SELECT | DID: read mailbox tails, WeakProbeClassTightness, and r36/r39/r40/r41 reports | RESULT: zero-class lemma proved; fixed-cut transport remains open | D: SELECT -> PLAN
+[2026-07-11T22:14:08+03:00] > PLAN | NEXT: derive the zero-class incidence consequences and test whether complete anchored rows force a fixed-cut detour/trade.
+[2026-07-11T22:14:19+03:00] > SELECT | NEXT: adversarially audit the R41 general claim against R38 definitions and exact small models.
+[2026-07-11T22:14:20+03:00] OK SELECT | DID: located R38 and r41 report/checkers | RESULT: problems/23/writeup/WALL_ATTACK_R38_GPTPRO56.md; tmp/fanout/r41_rotor_realization | D: SELECT -> GATE
+[2026-07-11T22:14:21+03:00] > GATE | NEXT: reconstruct every R41 quantifier and compare it with R38 active-row and replacement semantics.
+[2026-07-11T22:15:27+03:00] OK GATE | DID: traced R41 through Lean row semantics | RESULT: pairCount counts row slots; activeEdges excludes selectedSupport | D: GATE -> PLAN
+[2026-07-11T22:15:28+03:00] > PLAN | NEXT: prove one-slot support retention and exhaustively falsify each omitted hypothesis on finite row systems.
+[2026-07-11T22:15:29+03:00] OK PLAN | DID: isolated frontier lemma | RESULT: pairCount>=2 plus one-slot replacement plus cooccurrence-to-support implies retained support | D: PLAN -> ATTACK
+[2026-07-11T22:15:30+03:00] > ATTACK | NEXT: build and run an exact finite checker for duplicate rows, occurrence semantics, inducedness, replacement scope, components, and activity.
+[2026-07-11T19:14:12Z] OK ATTACK | DID: exact-gated strict saturated square rotor | RESULT: N33, 144 tuples all defect0; 32 swaps, support-persistence failures0 | D: R38 rotor excluded
+[2026-07-11T19:14:13Z] > ATTACK | NEXT: formalize/referee support-persistence and derive Exposure>0 or non-inverse transition for every saturated rotor.
+[2026-07-11T22:15:30+03:00] OK GATE | DID: read GOAL_LOOP, onboarding, latest CLAUDE mailbox, R38, and R36 proof/search | RESULT: production exposure requires sigma>=2 | D: GATE->PLAN
+[2026-07-11T22:15:31+03:00] > PLAN | NEXT: implement exact fixed-state/census gate with production relations, coherent matchings, neutral detours, SCCs, and replay certs.

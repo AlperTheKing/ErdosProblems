@@ -1,6 +1,33 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T02:15 (local) — TICK-90
+# Last update: 2026-07-12T02:50 (local) — TICK-91
 
+## TICK-91 (2026-07-12T02:5xZ) — R39: 8-VTX ROTOR REAL (MY GATE PASS); WALL = ACTIVE-GRAFT QUESTION; R40 SENT
+- R39 harvested+archived (WALL_ATTACK_R39_GPTPRO56.md): cascade FAILS (saturatedPair_preservesSelectedEdge —
+  n(m,x)>=2 keeps xm in support; n_w'(v,x)=1 no new-middle collision at the generating pair; opposite-middle
+  pair matched-or-detour, no unbounded chain). **EXACT 8-VTX 4-STATE NEUTRAL SQUARE ROTOR constructed** —
+  MY EXHAUSTIVE GATE PASS (_claude_r39_8vtx_rotor_gate.py: tri-free, maxcut 8 = 2^8 exhaustive via four-C5
+  double-count, families {A_m,A_v}/{B_x,B_y} complete my DFS, 4-state one-middle-swap cycle, scope VACUOUS
+  [missing square edge = inactive 1-edge comp] => defect 0, mass rotates 8 halves/state). Bare rotor NOT a
+  falsifier; canonical hypotheses do NOT forbid finite rotors; pair-mass counting CANNOT exclude them
+  (Sum n = 25|M|, shared mass, double-star quadratic |M|). **NEW FINAL OBLIGATION:
+  noPositiveDefectActiveAlternatingMiddleRotor (R : CheckedActiveNeutralSquareRotor) : False.**
+- **NEW TOP FALSIFIER LANE (posted to Codex): ACTIVE-GRAFTED ROTOR FAMILY** (blueprint archived sec 7-8:
+  8-vtx core + I-spine active pin + 4x K3,3 traffic blocks at x,y,m,v + optional 28/27 circuit + even-6 locks
+  + selector-C5; ~400-800 vtx; 8 gate conditions; 4 likely blockers to report). R40 SENT (3,490 ch): fully
+  explicit instance/pinned generator + per-blocker verdicts + crux question (all-weak-free owner vs K3,3
+  traffic pumping sigma via blue degree — WeakProbeClassTightness tension) + honest P(falsifier).
+- CODEX DELTA (marker 2555131): ASK answered same tick — WALL_ATTACK_R37_FULLTEXT_EXTRACT.md posted (verbatim
+  R37 Lean blocks + sigma-gap overlays) + LIVE UNION RULING (production six-relation w/ sigma>=2 embedded;
+  no-common-blue adapter = stronger diagnostic, transfers). Their new: existential-probe form 0 failures /
+  50,104 N<=10 tuples; weak-free census 992,618 states N<=12 (sigma0=55/sigma1=174/sigma>=2=8509/detour=1027,
+  0 positive-defect coexistence); pooling FALSE (N40); bank routing FALSE (Lean CM); WeakProbeClassTightness
+  compiled BA1279CE; CanonicalCollisionGraphSelection 5B701E46 (consumes ProgressAtCanonical); noncanonical
+  N12 deadEnd fixture K?ABBBo}CuBw (selection load-bearing); 2943 anchor cert all-131071-shores min slack 3.
+  **GAMMA-CARRIER AUDIT ACCEPTED: GammaMinimalConnected is semantically vacuous (arbitrary gammaOfCut;
+  trivially inhabited) — Lean acceptance gate now requires the semantic bridge before any consumer ships.**
+- MY GATE QUEUE: R40 harvest; rotor-family instances as they land (exact gate per 8 conditions); modules
+  BA1279CE/5B701E46/CA4AAED5 + 2CE03EBD/93DB65E9/71308BE7/056A888A rebuild+probe; 2943 25->0 typing 17E5BAD0;
+  N=94 reconstruction; 1-in-10 ablation. Marker 2555131.
 ## TICK-90 (2026-07-12T02:1xZ) — R38: ROTOR; SIGMA-GAP CE GATED (R37 DICHOTOMY DOWNGRADED); 24-VTX TRADE GATED
 - R38 harvested+archived (WALL_ATTACK_R38_GPTPRO56.md): BOTH proof mechanisms FAIL (closure keeps unit defect;
   equal-defect detour frees nothing under n(m,z)>=2,r(m)>=2; created keys land in the NEW tuple's own matching).
@@ -699,6 +726,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

@@ -1,4 +1,4 @@
-import Erdos23Delta0.Gamma.CanonicalCollisionLexSelection
+import Erdos23Delta0.Gamma.CanonicalCollisionProgress
 import Erdos23Delta0.Gamma.CollisionDefectGraphAdapter
 
 /-!
@@ -19,6 +19,7 @@ open CanonicalCollisionHall
 open CheckedCollisionDefectTrade
 open CheckedCollisionLexTrade
 open CanonicalCollisionLexSelection
+open CanonicalCollisionProgress
 open CollisionDefectGraphAdapter
 
 /-- Prefix product of the row-family sizes before coordinate `i`. -/
@@ -78,6 +79,46 @@ theorem canonicalChoice_defect_eq_zero_of_exists
   have hle := (canonicalChoice_lexMinimal G c bads R hrows).1 omega
   exact Nat.eq_zero_of_le_zero (homega ▸ hle)
 
+/-- Graph-specialized progress predicate with row-choice nonemptiness supplied
+by the checked complete-row database. -/
+def GraphProgressAtCanonical
+    (G : CertGraph.GraphData) (c : CertGraph.CutData)
+    (bads : List CertGraph.BadEdgeData)
+    (R : NoCommonBlueSourceRelations G c bads)
+    (hrows : RowsNonempty bads)
+    (stateRealized : RowChoice bads → Prop)
+    (ChangeWitness : Type*)
+    (simultaneousRowChangeRealized :
+      RowChoice bads → RowChoice bads → ChangeWitness → Prop) : Prop :=
+  let _ : Nonempty (RowChoice bads) := ⟨defaultChoice hrows⟩
+  ProgressAtCanonical (defectData G c bads R)
+      (rowCode bads) stateRealized ChangeWitness
+      simultaneousRowChangeRealized
+
+/-- Any graph-checked progress producer at the canonical tuple gives a total
+coherent collision assignment there. -/
+theorem canonicalChoice_total_of_progress
+    (G : CertGraph.GraphData) (c : CertGraph.CutData)
+    (bads : List CertGraph.BadEdgeData)
+    (R : NoCommonBlueSourceRelations G c bads)
+    (hrows : RowsNonempty bads)
+    {stateRealized : RowChoice bads → Prop}
+    {ChangeWitness : Type*}
+    {simultaneousRowChangeRealized :
+      RowChoice bads → RowChoice bads → ChangeWitness → Prop}
+    (hprogress : GraphProgressAtCanonical G c bads R hrows
+      stateRealized ChangeWitness simultaneousRowChangeRealized) :
+    Nonempty (TotalCoherentAssignment G c R
+      (canonicalChoice G c bads R hrows)) := by
+  letI : Nonempty (RowChoice bads) := ⟨defaultChoice hrows⟩
+  have hp : ProgressAtCanonical (defectData G c bads R)
+      (rowCode bads) stateRealized ChangeWitness
+      simultaneousRowChangeRealized := by
+    simpa [GraphProgressAtCanonical] using hprogress
+  apply (collisionDefect_eq_zero_iff_total G c R
+    (canonicalChoice G c bads R hrows)).mp
+  exact canonical_defect_eq_zero_of_progress hp
+
 /-- Feasibility is exactly total coherent assignment at the canonical tuple.
 The graph hypotheses remain explicit and are not packaged as certificate
 fields. -/
@@ -108,6 +149,7 @@ theorem feasibility_iff_canonical_total
 #print axioms finiteAuditCode_injective
 #print axioms canonicalChoice_lexMinimal
 #print axioms canonicalChoice_defect_eq_zero_of_exists
+#print axioms canonicalChoice_total_of_progress
 #print axioms feasibility_iff_canonical_total
 
 end CanonicalCollisionGraphSelection
