@@ -302,3 +302,18 @@
   theorem"); verify my browser thread has no foreign user messages before any R22 send.
 - Mailbox marker: full-text gating of 2171725..2459806 still pending EXCEPT the posts read 02:20-05:33Z
   (inventoried + 3 modules gated); browser tab reopened (preview_start, tab seed, same thread URL).
+
+## TICK-73 (2026-07-11T09:0xZ) — PATTERN 4 ADOPTED (gated): outside-component attachment transfer
+- R23 (exit a) harvested + archived (WALL_ATTACK_R23_GPTPRO56.md); MY GATE ALL PASS
+  (_claude_r23_outside_attachment_gate.py SHA 6147ac4c…): 89 repaired to FULL matching 776/776
+  (outside = one 77-comp, Att = 9 leaves, loss 38, +11704 halves); 311 fixed lex-least tuple FULL
+  3606/3606 (owner-9 demand 636, eligible outside = 191 = 63 P3 + 63 P1 + 65 lock(a1..a13), +72580).
+  Monotone extension => 24/167/175/3892 unaffected. Soundness INHERITED (compiled consumer unchanged;
+  capacity = FreeHalf unit; loss never spent; injective sourceIds; component-local legality).
+- WALL NOW (L1): is the FOUR-pattern relation (sameFirst + commonBad + rowCompanion + outsideAttachment)
+  Hall-complete on canonical cages? R24 prove-or-break at GPT; Codex census re-run with pattern 4 +
+  adversarial family search (attachment boundaries avoiding overloaded owners' co-occurrence sets).
+- Lean lane: CheckedOutsideAttachmentBaseTerminal + soundness (shapes in archive) — Codex compile lane;
+  NOTE certificates may fix ONE canonical tuple (K=1, caps 1/2) — simpler than Omega-averages.
+- L2 unchanged: h_boundary exporter still my open lane; PricedCutCert stack compiled+gated.
+- Fixture set: 24/167/175/311/3892/89 (+ 175/3892 script backlog).

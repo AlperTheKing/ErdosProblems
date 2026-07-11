@@ -32167,3 +32167,18 @@
 [2026-07-11T05:35:00Z] FAIL ATTACK | DID: solved PG(2,4) split-2/3 coloring gate | RESULT: CP-SAT INFEASIBLE before cycle orientation; candidate falsifier impossible | D: derive design count obstruction
 [2026-07-11T05:36:00Z] OK VERIFY | DID: compiled split-2/3 five-design obstruction | RESULT: no_split23_pair_design rc0 SHA 6A3B5AC2; allowed axioms | D: dense linear falsifier family closed
 [2026-07-11T05:36:01Z] > ATTACK | NEXT: generalize the design count to a local leave inequality that lower-bounds free companion pairs for owner shores.
+[2026-07-11T05:45:00Z] > VERIFY | NEXT: compile exact per-owner row-incidence identity in CollisionOwnerLoadReduction.
+[2026-07-11T05:46:00Z] FAIL VERIFY | DID: first owner-incidence build | RESULT: missing dependency olean then two list-rewrite errors; no theorem falsifier | D: rebuild dependency+use tested sum pattern
+[2026-07-11T05:49:00Z] OK VERIFY | DID: compiled per-owner row-incidence identity | RESULT: pairCount_rowSum_eq_five_mul_diagonal rc0 SHA 4A36A650; allowed axioms | D: T=5 rowCount formal
+[2026-07-11T05:58:00Z] FAIL ATTACK | DID: processed exact 89-vtx double-star gate | RESULT: global-min 3-pattern owner Hall false; demand 528, reach 526 | D: freeze candidate theorem
+[2026-07-11T05:58:01Z] > ATTACK | NEXT: parameterize double-star locks and compute Hall/full-bank failure boundary exactly.
+[2026-07-11T06:01:34Z] OK ATTACK | DID: exact double-star quotient gate a,b<=40 | RESULT: 780 pairs; first fail (4,5), gap formula unbounded; SHA 4B1AB99A | D: 4th/global ownership mandatory
+[2026-07-11T06:01:35Z] > ATTACK | NEXT: compute whether the infinite double-star shore is absorbed by legal FullBank door/vertex/base capacity.
+[2026-07-11T06:04:48Z] OK ATTACK | DID: exact double-star FullBank audit | RESULT: half-singleton vertexSlack obligations pass; 89 outside load 19, loaded margin 123/2 | D: collision-only failure
+[2026-07-11T06:04:49Z] > VERIFY | NEXT: gate collision-Hall OR half-singleton/mixed-bank fallback on census and hard fixtures.
+[2026-07-11T06:08:04Z] OK VERIFY | DID: fallback portfolio on N<=10+fixtures | RESULT: 6574 graphs, 3 deficient sets, mixed singleton 3/3; 167/311/3892 branches pass | D: extend census N11
+[2026-07-11T06:08:05Z] > VERIFY | NEXT: run exact mixed singleton fallback over full triangle-free N<=11 census.
+[2026-07-11T06:10:00Z] OK VERIFY | DID: full N<=11 mixed singleton census | RESULT: 71818 graphs; 3 deficient sets; mixed fallback 3/3, zero failures | D: formalize zero-load active branch
+[2026-07-11T06:10:01Z] > VERIFY | NEXT: compile zero-block-load implies ActiveComponentBankHall as the corrected 89-family branch.
+[2026-07-11T06:14:46Z] OK VERIFY | DID: compiled zero-load active-component Hall branch | RESULT: two theorems rc0 SHA ACAAC13C, allowed axioms | D: 89 false demand removed before transfer
+[2026-07-11T06:14:47Z] > ATTACK | NEXT: exact-search active components failing both endpoint Hall and scoped collision transfer.
