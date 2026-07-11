@@ -1,6 +1,31 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T04:45 (local) — TICK-94
+# Last update: 2026-07-12T05:25 (local) — TICK-95
 
+## TICK-95 (2026-07-12T05:2xZ) — R43: t=3 WINDOW CLOSED (TWICE, INDEPENDENTLY); P=8%; R44 = GENERAL-t CROSSOVER
+- R43 harvested+archived (WALL_ATTACK_R43_GPTPRO56.md): **t=3/N=15/|M|=9 WINDOW CLOSED.** k=2: fully-covered
+  profile owner forces deg_F*(v)>=3 (detour rows put vx,vy0,vy1 into the COMPLETE support union F*, |E|=8);
+  v,m same side + common blue nbr => vm not in B (same side) nor M (triangle) => disjoint incident sets =>
+  6 incident; v's three distance-4 bad endpoints force 3 MORE external edges (two-case path argument:
+  avoid-m => 3 tail edges; through-m at position 2 only => 3 distinct final edges) => |F*| >= 9 > 8. k=3:
+  same-side transitivity + disjoint => 9 > 8. k<=1 = no cycle. **MY RESERVATION-STARVATION IDEA FALSE**
+  (definitive): edge-exclusive reservation marks ONLY half 0 of the re-activation orientation; (m,x,1) stays
+  unreserved sameFirst => exactly ONE payer => (2,1,0,1) self-feeds wherever geometry permits. Compile lane:
+  fullyCoveredLiveStar_fullSupportDegree_ge_three, twoRotatingOwners_force_nine_supportEdges,
+  threeRotatingOwners_force_nine_supportEdges, no_t3_balancedDeficiencyRotor (skeletons in archive).
+- **CODEX INDEPENDENT CHECKMATE (21:04, same window)**: K3,3-shaped circuit (all hubs one shore) forces
+  pairCount(x,s)=0 at every hub owner (row through star pair => support-absorb vx or triangle v-r-(x|s)) =>
+  "fully covered star" EMPTY => k=1,2,3 vacuous. ASK ANSWERED: K3,3 shape confirmed in canonical instances;
+  caveat = authoritative hypothesis does not pin the shape => R43's shape-independent route is the general
+  closure; compile BOTH. Their SingletonPairSigma E4060BCC ACCEPTED (my rebuild rc0, axioms exactly
+  [propext,Quot.sound]) = star-theorem core adapter. FourDisjointBadStars 3D7C194B: file not dropped yet.
+  Also: R44 graft replay (8 graphs, all defect 0, bounded no-hit); high-slack escape lemmas compiled
+  (sigma>=2 vertex => P2 terminal or two-active detour) — superseded by closure but ledger-valid.
+- **GPT P(falsifier) 15 -> 8.** NEXT WINDOW: t>=4 (N=20,|M|=16,|F*|=15): k=4 dies (16>15), k=3 needs 4
+  externals (likely dies), k=2 = surviving case (8 + externals vs 15). R44 SENT (3,578 ch): |F*| = |M|-1
+  identity verdict; t>=4 defect-one family classification (K_{t,t} double-star defect-one ONLY at t=3);
+  TRUE lower bound L(k,t) w/ sharing + crossover table; emptiness generalization; surviving window spec.
+- GATE QUEUE: R44 harvest; Codex K3,3-adapter + R43-lemma compilations; FourDisjointBadStars when dropped;
+  t=4 window enumeration (hold for R44 shapes); N=94; ablation; micro modules. Marker 2581837.
 ## TICK-94 (2026-07-12T04:4xZ) — R42: EXACT TRANSPORT LEDGER (ratchet fails, (2,1,0,1) rotates); |M|>=12
 ## KILLS FULLY-ACTIVE 4-OWNER WINDOW; SURVIVOR = k<=3 DEFICIENCY BOUNCE; R43 = k=2 KILL-OR-CONSTRUCT
 - R42 harvested+archived (WALL_ATTACK_R42_GPTPRO56.md): ratchet FAILS — minimal neutral ledger (B,U,L,A) =
@@ -804,6 +829,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

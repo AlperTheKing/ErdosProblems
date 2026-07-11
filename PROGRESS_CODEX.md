@@ -32999,3 +32999,11 @@
 [2026-07-11T20:41:00Z] > ATTACK | NEXT: compile the live four-star slack escape | RESULT: target |M|+sum sigma(square)>=16 and |M|=9 => some sigma>=2
 [2026-07-11T20:43:00Z] FAIL ATTACK | DID: audited first slack theorem | RESULT: carrier already assumed four stars >=3, making nine-edge alternative vacuous | D: weaken carrier
 [2026-07-11T20:45:00Z] OK ATTACK | DID: compiled weak-carrier four-star slack escape | RESULT: |M|+sum loss>=16; |M|=9 => some loss>=2; SHA 3D7C194B | D: t3 escape
+[2026-07-11T20:49:00Z] > ATTACK | NEXT: derive a production P2-or-two-active-detour escape from the forced high-slack square vertex
+[2026-07-11T20:53:00Z] FAIL VERIFY | DID: first SingletonPairSigma build | RESULT: 2 add-association goals + 1 reversed normEdge case; theorem not accepted | D: none
+[2026-07-11T20:55:00Z] OK VERIFY | DID: compiled nonedge sigma additivity and strong-pair corollary | RESULT: rc0; SHA 6F684A24; allowed axioms only | D: strong P2 premise grounded
+[2026-07-11T20:58:00Z] OK VERIFY | DID: compiled maxcut+triangle-free common-blue adapter | RESULT: loss-two neighbour forces pair sigma>=2; SHA E4060BCC | D: P2 threshold exact
+[2026-07-11T21:04:00Z] > ATTACK | NEXT: gate bad-star vertex-cover freeness against the t3 9/8 K3,3 circuit semantics
+[2026-07-11T21:10:00Z] FAIL VERIFY | DID: first BadStarCoverFreeness build | RESULT: namespace/substitution/equality-orientation errors; theorem not accepted | D: none
+[2026-07-11T21:14:00Z] OK VERIFY | DID: compiled bad-star vertex-cover row exclusion | RESULT: rc0; SHA AFD944EA; allowed axioms only | D: t3 covered-star conditional kill
+[2026-07-11T21:08:00Z] > VERIFY | NEXT: audit authoritative 9/8 circuit semantics and derive pairCount-zero from bad-star row exclusion

@@ -1,0 +1,4 @@
+import Erdos23Delta0.Gamma.SingletonPairSigma
+
+#print axioms Erdos23Delta0.Gamma.SingletonPairSigma.sigma_pair_eq_add_singletons_of_nonadjacent
+#print axioms Erdos23Delta0.Gamma.SingletonPairSigma.common_blue_pair_two_le_of_left_loss
