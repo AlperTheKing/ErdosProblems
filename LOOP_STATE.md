@@ -1,6 +1,31 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T08:05 (local) — TICK-99
+# Last update: 2026-07-12T08:45 (local) — TICK-100
 
+## TICK-100 (2026-07-12T08:4xZ) — R47 BRIDGE FROZEN (CheapGeometry iff); SCOPE CORRECTION (hits NOT fully
+## covered — GPT t5 lemma BACK ON THE TABLE); INTEGRATED PROFILE LAYER KILLS EVERYTHING; R48 = PROFILE
+## EMPTINESS AT t=5
+- R47 harvested+archived: **exact maxcut/row-preservation bridge** — kappa(S) switch characterization (cut
+  maximal iff every switch covered); row preservation = independence in the finite monotone hypergraph
+  H_safe (forbidden paths <4 or new-4 + triangles; multi-edge interactions); Cap_rp(S); one-switch exclusion
+  lemma; singleSafe per-edge pruning; **CheapGeometry(D) iff TriangleFreeRowPreservingMaximumCutExtension**
+  (5 compile shells). NO all-t coefficient contradiction (raw capacity ~21t^2/4 > demand t^2) => FILTER not
+  closer; defect-one universally forces only a deficit-1 switch. **TWO-LAYER ENDGAME: L1 geometric exclusion
+  (profile realizability -> cheap geometry), L2 production matching on cheap survivors.** GPT P ~5%.
+- **ENGINE EVENTS (same hour): (a) maxcut obstruction repeats** — 3 independent support hits (10+8/9+9/12+6,
+  switch demands 21/22/23), all 8 splits UNSAT each, 13+5 rooted-infeasible; **(b) SCOPE CORRECTION (my
+  profile question caught it, Codex retracted): the hits are NOT fully covered** — exact selected-row layer:
+  NO individual owner profile in any hit => GPT's no_t5_triangleFree_twoOwnerCoveredCircuit NOT falsified;
+  first failure = PROFILE REALIZABILITY (maxcut second, of the weaker model); R46 archive corrected;
+  **(c) INTEGRATED profile+circuit CP-SAT: the 3 hits INFEASIBLE + 400 bounded rooted supports => ZERO
+  integrated hits**; (d) MY RULING (answering their audit): shared-bad-neighbour rooting DROPPED at t=5
+  (t=4 budget forcing vacuous at t=5) — widened exhaustive sweep ordered.
+- R48 SENT (3,237 ch): is the integrated profile layer provably EMPTY at t=5 — generalize the t=4
+  forced-row mechanism ((a) forced-through count at t=5 vs r=5; (b) coverage vertex/edge budget vs
+  |V|<=21/24 edges; (c) active-edge survival threshold when forced rows consume the star); relaxation
+  ladder for calibration; k=3 same question; P update.
+- GATE QUEUE: R48 harvest; widened-sweep outputs; Codex profile artifacts (fda5e079/a1db64de/7183ffc7) +
+  integrated no-hit artifacts (45df384a/b9d85370/e0f14e25/05de63e6) replays; R47 shells compile; N=94;
+  ablation. Marker 2604793.
 ## TICK-99 (2026-07-12T08:0xZ) — R46: NO ALL-t CLOSURE; CODEX t5: TRIANGLE-FREE CIRCUIT EXISTS BUT DIES AT
 ## MAXCUT-vs-ROW-PRESERVATION; NEW WALL = SWITCH-DEFICIT TENSION; R47 SENT
 - R46 harvested+archived: cycle-space per-owner t-1 CORRECT (fullyCoveredOwner_cycleRank_ge compile-ready;
@@ -921,6 +946,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

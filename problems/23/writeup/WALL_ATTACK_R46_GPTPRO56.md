@@ -7,9 +7,11 @@
 THIS REPLY: (1) the CP-SAT rooted harness found a PATH-REALIZABLE t=5 25/24 circuit with TRIANGLE-FREE
 selected bad graph (18 support vtx, L10/R8, 29 available atoms/25 selected, multiplicity ≥3, all 25
 deletion-SDRs, live swap present; graph6 Q???????F?Y?E{d?KOE??B?B???; my replay queue) — GPT's closing
-question "can the 25 atoms be chosen triangle-free?" is answered YES at the support level, and the proposed
-no_t5_triangleFree_twoOwnerCoveredCircuit is FALSIFIED AS STATED (pending my fully-covered-profile check on
-the hit); (2) the SAME candidate dies at MAXCUT-vs-ROW-PRESERVATION: all 8 ambient shore-splits exactly
+question "can the 25 atoms be chosen triangle-free?" is answered YES at the SUPPORT level ONLY — ⚠ CORRECTED
+(Codex 22:53Z, my profile question caught it): the hits are NOT fully covered (exact selected-row layer:
+NEITHER owner admits ANY individual profile in any of the three hits) ⟹ no_t5_triangleFree_twoOwnerCovered-
+Circuit is NOT falsified; the hits fail at fully-covered-profile realizability FIRST, maxcut SECOND (of the
+weaker model); (2) the SAME candidate dies at MAXCUT-vs-ROW-PRESERVATION: all 8 ambient shore-splits exactly
 UNSAT (the decisive switch family crosses 24 bads but only 3 support edges ⟹ needs 21 new blue crossings,
 each creating forbidden new shortest rows; CaDiCaL-verified, 468-1054 vars). One-candidate exclusion, not
 general t5. THE NEW WALL = the maxcut/row-preservation tension. R47 targets it.]**
@@ -42,7 +44,10 @@ covered-row feasibility, atom triangle-freeness, complete-row closure). k=3: ≤
 feasible. Estimates: k=2 ~9.5e9 crude labelled (needs canonical augmentation), k=3 ~2.9e6.
 
 ## 10. Verdict + P
-No uniform reduction; proposed size-specific lemma no_t5_triangleFree_twoOwnerCoveredCircuit — **FALSIFIED
-AS STATED by the engine's hit within the hour** (must gain the maxcut/ambient hypothesis). GPT P ≈ 6%
-(near-candidate proximity). ENGINE FIRST-VIOLATED-INVARIANT (candidate #1): maxcut domination vs
-complete-row preservation (21-crossing switch demand vs forbidden new rows). R47 = formalize THAT tension.
+No uniform reduction; proposed size-specific lemma no_t5_triangleFree_twoOwnerCoveredCircuit — ⚠ CORRECTED:
+NOT falsified (the engine's support hits lack the fully-covered profile; the integrated profile+circuit
+CP-SAT layer finds the three hits INFEASIBLE and 400 bounded rooted supports yield ZERO integrated hits).
+GPT P ≈ 6% (superseded 5% in R47). ENGINE FIRST-VIOLATED-INVARIANTS: (1) fully-covered-profile realizability;
+(2) maxcut domination vs complete-row preservation (21/22/23-crossing switch demands across THREE independent
+support hits, all 8 splits UNSAT each). R47 formalized the maxcut tension; the profile layer may be the lemma.
+

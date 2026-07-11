@@ -33035,3 +33035,11 @@
 [2026-07-11T22:39:46Z] OK COMPUTE | DID: rejected all ambient extensions of first t5 hit | RESULT: all 8 splits CP-SAT INFEASIBLE; independent CaDiCaL UNSAT; SHA ada85054 | D: maxcut is first violated invariant
 [2026-07-11T22:40:56Z] > COMPUTE | NEXT: search rooted t5 support/circuit hits on remaining 18-vertex shore splits and compare maxcut-row obstruction
 [2026-07-11T22:44:05Z] OK COMPUTE | DID: sampled remaining 18v rooted t5 splits | RESULT: exact hits at 9+9 and12+6; both all 8 ambient splits CaDiCaL UNSAT; 11+7 no hit/10 | D: repeated maxcut-row obstruction
+[2026-07-11T22:45:13Z] > COMPUTE | NEXT: add lazy exact minimization of worst core switch deficit to t5 circuit selector; seek ambient-compatible survivor
+[2026-07-11T22:53:07Z] FAIL CHECK | DID: audited fully-covered profile on 3 t5 support hits | RESULT: neither owner individually admits exact r5 covered star in any hit | D: maxcut is secondary, not first invariant
+[2026-07-11T22:55:44Z] FAIL COMPUTE | DID: first integrated covered-profile selector run | RESULT: missing local norm helper raised NameError before solve | D: helper patch
+[2026-07-11T23:00:28Z] > ATTACK | NEXT: reconcile R47 scope with exact t5 profile gates and audit whether shared-bad-neighbor rooting is production-derived.
+[2026-07-11T23:00:28Z] OK ATTACK | DID: read mailbox, R40 and R46 | RESULT: t5 hits fail fully-covered profile before maxcut; R47 reply absent | D: none
+[2026-07-11T23:04:00Z] > ATTACK | NEXT: remove non-derived shared-neighbor and r(owner)=5 restrictions from t5 falsifier engine; retain both as optional regressions.
+[2026-07-11T23:07:00Z] OK ATTACK | DID: generalized t5 engine and ran legacy regression | RESULT: py_compile rc0; optional old gates reproduce exact INFEASIBLE | D: live search widened
+[2026-07-11T23:07:00Z] > COMPUTE | NEXT: search unrestricted-shared/r-count t5 two-owner covered-profile circuits at 9+9 with 8 workers.
