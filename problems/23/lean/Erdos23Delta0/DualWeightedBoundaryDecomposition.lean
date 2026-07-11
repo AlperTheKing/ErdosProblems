@@ -24,27 +24,27 @@ variable {I : BankedWallLP}
 /-- Port mass already sent by a partial routing. -/
 noncomputable def routedPortMass (P : Finset I.Port)
     (u : I.Port -> I.Sink -> ℚ) (p : I.Port) : ℚ :=
-  ∑ s in legalNbr I P, u p s
+  ∑ s ∈ legalNbr I P, u p s
 
 /-- Sink mass received from the selected port shore. -/
 noncomputable def routedSinkMass (P : Finset I.Port)
     (u : I.Port -> I.Sink -> ℚ) (s : I.Sink) : ℚ :=
-  ∑ p in P, u p s
+  ∑ p ∈ P, u p s
 
 /-- Price of the selected load not yet represented by the partial routing. -/
 noncomputable def unmatchedPortPrice (d : Dual I) (L : I.Port -> ℚ)
     (P : Finset I.Port) (u : I.Port -> I.Sink -> ℚ) : ℚ :=
-  ∑ p in P, (L p - routedPortMass P u p) * d.gamma p
+  ∑ p ∈ P, (L p - routedPortMass P u p) * d.gamma p
 
 /-- Reserve supplied by the checked D2 inequalities on routed legal arcs. -/
 noncomputable def d2Reserve (d : Dual I) (P : Finset I.Port)
     (u : I.Port -> I.Sink -> ℚ) : ℚ :=
-  ∑ p in P, ∑ s in legalNbr I P, u p s * (d.delta s - d.gamma p)
+  ∑ p ∈ P, ∑ s ∈ legalNbr I P, u p s * (d.delta s - d.gamma p)
 
 /-- Reserve supplied by unused sink capacity in the dual-scaled LP. -/
 noncomputable def unusedCapacityReserve (d : Dual I) (P : Finset I.Port)
     (u : I.Port -> I.Sink -> ℚ) : ℚ :=
-  ∑ s in legalNbr I P, (I.cap s - routedSinkMass P u s) * d.delta s
+  ∑ s ∈ legalNbr I P, (I.cap s - routedSinkMass P u s) * d.delta s
 
 /-- The signed dual value of one routed cut. -/
 def cutGap (d : Dual I) (X : I.Cut) : ℚ :=
@@ -65,15 +65,29 @@ theorem scaledDeficiency_eq_unmatched_sub_reserves
       unmatchedPortPrice d L P u - d2Reserve d P u -
         unusedCapacityReserve d P u := by
   have hcomm :
-      (∑ p in P, ∑ s in legalNbr I P, u p s * d.delta s) =
-        ∑ s in legalNbr I P, ∑ p in P, u p s * d.delta s := by
+      (∑ p ∈ P, ∑ s ∈ legalNbr I P, u p s * d.delta s) =
+        ∑ s ∈ legalNbr I P, ∑ p ∈ P, u p s * d.delta s := by
     rw [Finset.sum_comm]
+  have hportGamma :
+      (∑ p ∈ P, (∑ s ∈ legalNbr I P, u p s) * d.gamma p) =
+        ∑ p ∈ P, ∑ s ∈ legalNbr I P, u p s * d.gamma p := by
+    apply Finset.sum_congr rfl
+    intro p hp
+    rw [Finset.sum_mul]
+  have hsinkDelta :
+      (∑ s ∈ legalNbr I P, (∑ p ∈ P, u p s) * d.delta s) =
+        ∑ s ∈ legalNbr I P, ∑ p ∈ P, u p s * d.delta s := by
+    apply Finset.sum_congr rfl
+    intro s hs
+    rw [Finset.sum_mul]
   rw [deficiencyQ, dualScaled_legalNbr]
   simp only [loadQ, capQ, dualScaledLoad_apply, dualScaledLP_cap]
   unfold unmatchedPortPrice d2Reserve unusedCapacityReserve
     routedPortMass routedSinkMass
-  rw [hcomm]
-  ring
+  simp only [mul_sub, sub_mul, Finset.sum_sub_distrib]
+  rw [hportGamma, hsinkDelta, hcomm]
+  ring_nf
+  rfl
 
 /-- Exact cut-gap decomposition.  The graph geometry is confined to the
 single signed boundary term `cutGap d X - unmatchedPortPrice ...`. -/
@@ -103,7 +117,7 @@ theorem scaledDeficiency_le_cutGap_of_boundary_bound
 theorem d2Reserve_nonneg (d : Dual I) (hd : d.Checked)
     (P : Finset I.Port) (u : I.Port -> I.Sink -> ℚ)
     (hu_nonneg : forall p s, 0 <= u p s)
-    (hu_legal : forall p s, u p s != 0 -> I.legal p s) :
+    (hu_legal : forall p s, u p s ≠ 0 -> I.legal p s) :
     0 <= d2Reserve d P u := by
   unfold d2Reserve
   refine Finset.sum_nonneg fun p _ => Finset.sum_nonneg fun s _ => ?_

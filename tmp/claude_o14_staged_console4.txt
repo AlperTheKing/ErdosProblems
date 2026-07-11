@@ -1,3 +1,7 @@
 [scope] 107 charts, 34 already in ledger
 [Chart035] ok=True shards=330 2578s del=332 fails=0
 [Chart036] ok=True shards=316 2469s del=318 fails=0
+[Chart037] ok=True shards=312 2440s del=314 fails=0
+[Chart038] ok=True shards=322 2408s del=324 fails=0
+[Chart039] ok=True shards=338 2490s del=340 fails=0
+[Chart040] ok=True shards=468 3671s del=470 fails=0

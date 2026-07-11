@@ -32054,3 +32054,74 @@
 [2026-07-11T00:12:19Z] OK ATTACK | DID: added exact exists-row policy to R19 global census | RESULT: _codex_r19_global_base_census.py SHA 57C0DEBF88D086AE6EB6D618DA68D6A24E57DC368FB73AFD72E3A45851886B24 | D: 9-obstruction frontier
 [2026-07-11T00:24:22Z] OK GATE | DID: read completed GPT-5.6-Pro scaled exchange derivation | RESULT: sink terms telescope; first uncontrolled term R_boundary=cutGap-unmatchedPrice | D: exact boundary gate isolated
 [2026-07-11T00:24:22Z] > ATTACK | NEXT: compile exact scaled deficiency/cut-gap decomposition and boundary-bound theorem
+[2026-07-11T00:33:39Z] OK VERIFY | DID: built DualWeightedBoundaryDecomposition.lean under Lean 4.27.0 | RESULT: rc=0; SHA C35F96F8B93808EC7A4BAE4C1ED565346C68230B23DDBDB0F1EB419426F12E37; allowed axioms only | D: hboundary sole arithmetic wall
+[2026-07-11T00:33:39Z] > ATTACK | NEXT: implement R20 CheckedRowCompanionBaseTerminal against typed transfer interfaces
+[2026-07-11T00:43:32Z] OK VERIFY | DID: built concrete CheckedRowCompanionBaseTransfer.lean | RESULT: rc=0; SHA 84B632C5329EA1205729FF0B95AB124FC573F119F17C50D4AA2F02AC9AFDF09A; axioms [propext,Quot.sound] | D: R20 third terminal compiled
+[2026-07-11T00:43:32Z] > ATTACK | NEXT: connect checked row-companion terminal to typed c5Base source and matching soundness surface
+[2026-07-11T00:47:10Z] OK ATTACK | DID: added exact rowCompanion relation and enumerated all coherent row tuples, full connected tri-free census N5-11 | RESULT: 70708/70708 all-ell5 cases pass, 0 fail; script SHA F2DF0674EA2A920CD95F4ADA1AD2FE119EBB5044A47703F537AFCA25BC8DA60A | D: stage-3 survives census
+[2026-07-11T00:47:10Z] > PLAN | NEXT: isolate the universal stage-3 Hall lemma suggested by the 0/70708 falsifier result
+[2026-07-11T00:51:13Z] FAIL GATE | DID: randomized abstract 5-uniform stage-3 Hall test | RESULT: N6 rows {0,1,2,4,5},{0,2,3,4,5} give demand 32, match 4, deficiency 28 | D: graph-free row-system lemma false
+[2026-07-11T00:51:13Z] > ATTACK | NEXT: measure selected-row intersection profile on full real census to isolate required shortest-row geometry
+[2026-07-11T00:55:06Z] OK ATTACK | DID: chose shortest-row tuple minimizing exact obligation count, then gated sameOwner+rowCompanion only | RESULT: full connected tri-free census N5-11 70708/70708 pass, 0 fail; max demand 36 | D: canonical min-demand exchange target
+[2026-07-11T00:55:06Z] OK GATE | DID: removed common-blue and prune sources from min-demand census gate | RESULT: zero source of either kind needed through N11; script SHA AF77A21FBF3C074512D91EE01BAFA85E31FE31D5D00122E3B044C2A4B894E808 | D: stage-3 theorem sharpened
+[2026-07-11T00:55:06Z] > PLAN | NEXT: formulate min-demand row-exchange Hall lemma and exact one-row replacement identity
+[2026-07-11T00:57:11Z] FAIL GATE | DID: reserved active-hit keys and minimized collision count only | RESULT: unique fail I?rFf_{N? N10; 4096 row tuples, deficiency 4 | D: active-edge term necessary
+[2026-07-11T00:57:11Z] OK ATTACK | DID: min full obligation objective + reserved active hits + collision-only rowCompanion matching | RESULT: N5-11 70708/70708 pass, 0 fail; script SHA B49E9A2ADD265052605AC412449B9FB12B1B879CC67E254B68189DB7B831A737 | D: exact exchange potential fixed
+[2026-07-11T01:07:04Z] OK VERIFY | DID: built MinimumDemandRowSelection.lean with literal collision/active score and finite argmin | RESULT: rc=0; SHA E4D216FCE19E96416BE0842F5410BAB0CF8FEE9AF933FF1160A3B77A3A67B11A; allowed axioms only | D: canonical omega compiled
+[2026-07-11T01:07:04Z] > ATTACK | NEXT: state and prove/falsify Hall completeness for the compiled min-demand omega
+[2026-07-11T01:14:36Z] > VERIFY | NEXT: poll Claude mailbox and run exact N18-22 blow-up stress for canonical min-demand row selection
+[2026-07-11T01:15:28Z] OK VERIFY | DID: exact min-demand transfer gate on 2500 nonuniform C5 blow-ups N18-22 + 6 specials | RESULT: 2506/2506 pass; 0 fail; SHA 90376B46FFC691A84268341510C5D453EE75BAE2E03F567854D5C9B1EF786CD0 | D: blow-up stress clean
+[2026-07-11T01:15:28Z] > PLAN | NEXT: encode the sole MinimumDemandCollisionHall frontier against compiled canonical row choice
+[2026-07-11T01:21:33Z] > VERIFY | NEXT: build MinimumDemandCollisionHall.lean and audit its axiom surface
+[2026-07-11T01:23:15Z] OK VERIFY | DID: built literal collision-demand/free-source/reserved-hit matching frontier | RESULT: rc=0; SHA 886632DCA17EFB693CAB49DA21E984BAE2B064EF7FE41D9E468077876A9478AB; allowed axioms only | D: sole Hall lemma fixed
+[2026-07-11T01:23:15Z] > ATTACK | NEXT: derive a Hall-deficient shore to simultaneous row exchange lowering the compiled obligation score
+[2026-07-11T01:26:01Z] OK ATTACK | DID: compiled two-row exchange reduction to canonical collision Hall | RESULT: theorem minimumDemandCollisionHall_of_twoRowExchange rc=0; SHA AF21B8A892E18FC7954DE035A3852B4522CCC5554E0009F01E4B4B3C39F78CE3 | D: frontier reduced to bounded exchange
+[2026-07-11T01:33:25Z] OK VERIFY | DID: added finite Hall iff and real complete-row semantic contract | RESULT: collisionMatching_nonempty_iff_hall + realMinimumDemandCollisionHall_of_exchange rc=0; SHA CF7F631D767F0BD8964792BACDEFBA6CDEDDAD15D3F00A0BC0230A3AFAC38003 | D: incomplete-DB loophole closed
+[2026-07-11T01:34:09Z] > VERIFY | NEXT: independently audit and rerun full N5-10 two-row exchange gate
+[2026-07-11T01:34:59Z] OK VERIFY | DID: enumerated every coherent row tuple in full N5-10 all-ell5 census | RESULT: 50104 tuples; 4735 matching fails; 4615 one-row descents; 120 two-row-only; 0 no-descent; SHA 73697B12B1E22A30E320FB970415E79FA90D88D1A6DB27F42022CF9FFD9C6D83 | D: bounded exchange survives exact gate
+[2026-07-11T01:37:32Z] > ATTACK | NEXT: poll collaboration channels and classify the 120 two-row-only descents into a structural exchange atom
+[2026-07-11T01:41:04Z] OK ATTACK | DID: classified all two-row-only descent witnesses in full N5-10 gate | RESULT: 120/120 from I?rFf_{N?; every best repair preserves each column pair and swaps positions; SHA 2C9896C140FF54411018BFD1A3F54DCC21309FB3FF132A70ACC5E5FAED1787C7 | D: rectangle exchange atom isolated
+[2026-07-11T01:41:04Z] > PLAN | NEXT: prove rectangle row-swap validity and exact obligation-score delta, then connect Hall deficiency to one-row or rectangle descent
+[2026-07-11T01:51:46Z] OK ATTACK | DID: compiled dependent two-row replacement and rectangle-to-improvement reduction | RESULT: disagreementCount_replaceTwo_le_two + hasTwoRowImprovement_of_rectangle rc=0; SHA 6C628F41512097F65D520BDDA78EC89235A509235E965F524B6B7394DC99B9C2 | D: rectangle bookkeeping closed
+[2026-07-11T01:54:41Z] OK ATTACK | DID: compiled one-row-or-monotone-rectangle descent certificate and reduction | RESULT: twoRowExchangeComplete_of_hallFailureHasDescent rc=0; SHA DD1D599FE3325C0B0FE7C74B1AB35CD5283F0A0BCA5017C789ABF0071FDDC022 | D: exact geometric frontier isolated
+[2026-07-11T01:57:34Z] FAIL VERIFY | DID: launched N11 row-tuple sizing with 64 ProcessPool workers | RESULT: Python Windows cap rejects workers>61 before work; no data | D: rerun at 61
+[2026-07-11T01:58:10Z] FAIL VERIFY | DID: reran N11 sizing from stdin at 61 workers | RESULT: Windows spawn cannot import <stdin>; no data | D: persist a real sizing script before rerun
+[2026-07-11T01:59:11Z] OK VERIFY | DID: sized complete N11 coherent-row product at 61 workers | RESULT: 64287 graphs; 1035476 tuples; max 20736/graph; SHA 50BC68F2376EF4FA5A83EB09CDF27844EC3970B9E95D477787856B1E3326E87F | D: full exchange gate feasible
+[2026-07-11T01:59:11Z] > VERIFY | NEXT: run full N11 two-row exchange falsifier gate over 1035476 tuples
+[2026-07-11T02:00:54Z] OK VERIFY | DID: exact full N11 two-row exchange gate at 61 workers | RESULT: 1035476 tuples; 20540 matching fails; all 20540 one-row descents; 0 two-row-only; 0 no-descent | D: total N5-11 gate 1085580 tuples clean
+[2026-07-11T02:01:47Z] > ATTACK | NEXT: classify all one-row descents by contiguous shortest-path reroute and collision/active monotonicity
+[2026-07-11T02:04:10Z] OK ATTACK | DID: classified all failed N5-11 tuples by one-row descent geometry | RESULT: 25155 one-row descents; all 25155 admit contiguous interval reroute; 22785 contiguous monotone; 120 rectangle-only; SHA 92F13F80F06E13436C2A542EE7A56D8D9150798A6A999530DCC59EE71F21C909 | D: one-row atom sharpened
+[2026-07-11T02:13:07Z] FAIL GATE | DID: tested Hall-owner-shore escape as the descent invariant on all N5-11 failures | RESULT: 71 one-row descents have shore delta 0; 120 rectangles have full-V shore; SHA 5E3AC2040485226311A4D4AB05CCB266FFD2CFD2BCCC13ED9D742475C1BC187B | D: vertex-only coarea route dead
+[2026-07-11T02:13:07Z] > PLAN | NEXT: use pair-level Hall dual/collision marginal identity; do not pursue vertex-shore escape
+[2026-07-11T02:20:06Z] FAIL GATE | DID: compared maximum Hall deficiency with best <=2-row score drop on all N5-11 failures | RESULT: drop>=def false in 24 N10 tuples; minimum ratio 9/10; N11 minimum 25/22; SHA 66A67C8F3E509A5FDF7FC4C6529DF87173CE59A6A9378341A71172E72E8566CA | D: unit-coefficient min-max route dead
+[2026-07-11T02:23:02Z] FAIL GATE | DID: audited semantic force of CertGraph.GammaMinimalConnected | RESULT: universally inhabited by constant-zero gammaOfCut; compiled witness SHA 03140109BB4F8FD1A6B4DB9CB20B55B433231927F015540F84B54D688AFADB10 | D: carrier cannot justify Gamma-min arguments
+[2026-07-11T02:24:25Z] OK VERIFY | DID: exact exchange gate over every B-connected all-ell5 maximum cut N5-10 | RESULT: 17648 cuts; 197494 tuples; 65003 matching fails; 63603 one-row + 1400 two-row descents; 0 no-descent; SHA E009FC31D7CF6A2CC77579BEE735D8DD032971213297F9535E19B9BEC3192077 | D: Gamma-min removed
+[2026-07-11T02:26:09Z] OK VERIFY | DID: rebuilt real Hall/descent chain after removing vacuous GammaMinimalConnected hypothesis | RESULT: both rc=0; SHAs 72EB0318... and 6AFE14D3...; allowed axioms only | D: nonvacuous target compiled
+[2026-07-11T02:28:41Z] OK ATTACK | DID: compiled selected-support/active/internal-blue partition identity | RESULT: activeEdges_add_selectedSupport_eq_internalBlue rc=0; SHA EE64F7090C381834C3CCB39A974E0A89277FEF22CCF03C22D7B427B9B16FB029 | D: rectangle active-drop algebra closed under support soundness
+[2026-07-11T02:31:46Z] > VERIFY | NEXT: stress HallFailureHasDescent on random sparse five-layer all-ell5 max-cut instances N12-16 at 61 workers.
+[2026-07-11T02:32:37Z] OK VERIFY | DID: ran 500 sparse five-layer trials N12-16 at 61 workers | RESULT: 5705 tuples, all matching-pass, 0 falsifier; SHA 3D3C24BA | D: nonadversarial stress vacuous
+[2026-07-11T02:43:27Z] > ATTACK | NEXT: compile collision coverage/marginal identities exposing obligationScore as constant pair incidence minus new coverage plus active edges.
+[2026-07-11T02:47:22Z] OK VERIFY | DID: built CollisionCoveragePotential.lean | RESULT: 3 coverage/score identities rc0; SHA B9A7F479; allowed axioms only | D: descent is covered-pair gain minus active cost
+[2026-07-11T03:05:28Z] OK VERIFY | DID: grounded coverage potential in AllBadsChecked | RESULT: totalPairIncidences=25|M| and checked score-descent iff coverage gain; rc0 SHA 3A283DC3 | D: exact objective linearized
+[2026-07-11T03:06:11Z] > ATTACK | NEXT: inspect a minimal real Hall failure and identify the deterministic row/producer move predicted by the coverage potential.
+[2026-07-11T04:07:14Z] > VERIFY | NEXT: adversarially search balanced C5[3] row choices for a matching-failing two-local minimum (Latin-trade obstruction).
+[2026-07-11T04:10:13Z] FAIL VERIFY | DID: ran 256 C5[3] exact local searches at 61 workers | RESULT: 25 Hall-failing 2-local minima; score96 best2=100 deficiency12; SHA 3A0A2B90 | D: HallFailureHasDescent DEAD
+[2026-07-11T02:35:55Z] > SELECT | NEXT: inspect current Hall-failure and row-exchange APIs, then trace canonical producer states on the first failing tuple.
+[2026-07-11T02:37:18Z] OK SELECT | DID: read R20 Hall/atom gates and Lean interface | RESULT: existing gates search neighbors; no deterministic producer walk | D: producer extraction frontier
+[2026-07-11T02:37:19Z] > PLAN | NEXT: reconstruct the first Hall failure and define a canonical blocked-pair-to-producer-row transition.
+[2026-07-11T02:38:00Z] > ATTACK | NEXT: compile a new literal checked-row adapter proving selected-support soundness and the active/internal-blue partition corollary.
+[2026-07-11T02:39:56Z] > VERIFY | NEXT: build CheckedSelectedSupportSoundness against tmp/claude_lean_o_base_v1 and inspect theorem axioms.
+[2026-07-11T02:41:17Z] FAIL VERIFY | DID: first Lean build | RESULT: Bool.and_eq_true.mp absent at lines 82/85; no mathematical failure | D: replace with simp extraction
+[2026-07-11T02:41:18Z] > VERIFY | NEXT: rebuild the corrected Bool conjunction extraction and check for remaining type obligations.
+[2026-07-11T02:42:37Z] OK VERIFY | DID: built CheckedSelectedSupportSoundness and audited markers/axioms | RESULT: rc=0; SHA 2D42FFE7; allowed axioms only; no forbidden markers | D: support adapter closed
+[2026-07-11T02:43:25Z] > ATTACK | NEXT: test min-cost producer reroute/2-cycle extraction on all 50104 row tuples from the N5-10 Gamma-min census.
+[2026-07-11T02:44:39Z] OK ATTACK | DID: tested canonical min-cost producer extraction N5-10 | RESULT: 4735 fails -> 4615 contiguous reroutes + 120 producer swaps; 0 misses | D: rule fixed
+[2026-07-11T02:44:40Z] > ATTACK | NEXT: implement the deterministic alternating-Hall producer analyzer with exact falsifier export.
+[2026-07-11T02:52:59Z] > VERIFY | NEXT: py_compile the producer analyzer, then run the 4096-tuple I?rFf_{N? fixture.
+[2026-07-11T02:54:05Z] OK VERIFY | DID: py_compile + I?rFf_{N? producer extraction | RESULT: 4096 tuples; 4056 fails -> A3936+B120; 0 misses | D: fixture exact
+[2026-07-11T02:54:06Z] > VERIFY | NEXT: run full N5-10 producer extraction at 61 workers and compare the 4735-failure regression.
+[2026-07-11T02:55:05Z] OK VERIFY | DID: ran canonical producer extraction N5-10 at 61 workers | RESULT: 50104 tuples; 4735 fails=A4615+B120; misses0 | D: regression exact
+[2026-07-11T02:55:06Z] > VERIFY | NEXT: run exact N5-11 producer extraction at 61 workers; export first missing-state falsifier if any.
+[2026-07-11T02:56:55Z] OK VERIFY | DID: ran N5-11 producer extraction at 61 workers | RESULT: 1085580 tuples; 25275 fails=A25155+B120; conflicts0; misses0 | D: coverage clean
+[2026-07-11T02:56:56Z] > CHECK | NEXT: compute analyzer SHA-256 and audit compile, ASCII, and shared-worktree ownership.
+[2026-07-11T02:57:13Z] OK CHECK | DID: audited producer analyzer | RESULT: py_compile+AST OK; ASCII; SHA DA1285538863F9E1C1E26926D6F802BA291C527112C92BFA4C57B35A577AA0A8 | D: complete
