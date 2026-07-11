@@ -32306,3 +32306,119 @@
 [2026-07-11T13:15:16Z] > VERIFY | NEXT: exact-replay 26-duplicate-row transport falsifier; objective is gate semantic row uniqueness repair.
 [2026-07-11T13:17:00Z] FAIL VERIFY | DID: replayed duplicate-row T1 instance | RESULT: domain 494, target/flow 493, exact gap 1 | D: require semantic row Nodup
 [2026-07-11T13:18:00Z] > VERIFY | NEXT: rebuild Lean chain after adding semantic rowVerts_nodup to CompleteShortestRowDB.
+[2026-07-11T13:24:00Z] OK VERIFY | DID: added rowVerts_nodup and rebuilt six-module Lean chain | RESULT: rc0; DB SHA EA36FC95; transport SHA 51AD9297 | D: duplicate CE excluded
+[2026-07-11T13:27:00Z] OK ATTACK | DID: exact N12-medium branch census | RESULT: 18841/18841 groups touched changed rows; 0 inherited/unanchored | D: isolate heavy inherited fixture
+[2026-07-11T13:35:30Z] > ATTACK | NEXT: launch approved 64-worker external fanout on R29 2943 gate and global-minimizer Hall survivor.
+[2026-07-11T13:39:20Z] > ATTACK | NEXT: launch 10 isolated exact-test routes for global-min scoped Hall theorem; objective shortest chain or falsifier.
+[2026-07-11T13:46:38Z] OK ATTACK | DID: launched 10 distinct Codex routes | RESULT: 10 thread.started IDs under tmp/fanout/global_min_proof | D: fanout active
+[2026-07-11T13:46:38Z] > PLAN | NEXT: audit exact Lean minimizer-to-Hall chain; objective isolate the weakest unproved global exchange lemma.
+[2026-07-11T13:49:24Z] OK PLAN | DID: isolated unbounded global descent wrapper | RESULT: tmp/fanout/global_min_proof/lead/GlobalScopedMinimum.lean | D: one open input
+[2026-07-11T13:49:24Z] > VERIFY | NEXT: build GlobalScopedMinimum.lean; objective rc0 and allowed axioms only.
+[2026-07-11T13:49:56Z] OK VERIFY | DID: elaborated GlobalScopedMinimum.lean | RESULT: no Lean diagnostics; two allowed-triple axioms prints | D: explicit rc check
+[2026-07-11T13:49:56Z] > VERIFY | NEXT: rerun GlobalScopedMinimum.lean with explicit exit capture; objective record rc.
+[2026-07-11T13:50:31Z] FAIL VERIFY | DID: reran via lake child | RESULT: wrapper returned no rc/stdout capture | D: use Start-Process exit code
+[2026-07-11T13:50:31Z] > VERIFY | NEXT: build via Start-Process with redirected logs; objective record rc and axioms.
+[2026-07-11T13:52:30Z] FAIL VERIFY | DID: built global wrapper with explicit logs | RESULT: missing RowChoice/RowsNonempty namespace opens; sorryAx downstream | D: add production opens
+[2026-07-11T13:52:30Z] > VERIFY | NEXT: rebuild wrapper after namespace repair; objective rc0 and no sorryAx.
+[2026-07-11T13:55:35Z] OK VERIFY | DID: rebuilt unbounded global descent wrapper | RESULT: rc0; axioms propext, choice, Quot.sound | D: prove exact equivalence
+[2026-07-11T13:55:35Z] > VERIFY | NEXT: add and build descent iff all global minima Hall; objective exact theorem-of-record equivalence.
+[2026-07-11T13:57:04Z] OK VERIFY | DID: built exact global-minimum iff unbounded-descent theorem | RESULT: rc0; SHA 5A6B8B41; allowed axioms only | D: multi-row geometry open
+[2026-07-11T13:57:04Z] > CHECK | NEXT: synthesize exact claims, dead routes, hashes, and multi-row proof gaps from 10 descendants.
+[2026-07-11T13:59:30Z] > ATTACK | NEXT: exact-test PHT on 4,801,067 heavy N12 tuples; objective falsifier or minimum rational residual.
+[2026-07-11T14:01:00Z] FAIL ATTACK | DID: launched N12 PHT gate | RESULT: import path failed before enumeration; 0 tuples tested | D: add writeup sys.path
+[2026-07-11T14:01:00Z] > ATTACK | NEXT: rerun exact N12 PHT gate after import repair; objective test 4,801,067 tuples.
+[2026-07-11T14:04:30Z] > ATTACK | NEXT: exact-bound 2943 PHT uniform mean from reconstructed row families; objective compare with 30783.
+[2026-07-11T14:06:30Z] FAIL ATTACK | DID: ran N12 PHT at 61 workers | RESULT: worker pool exited without output; 0 accepted tuples | D: rerun at 16 amid shared load
+[2026-07-11T14:06:30Z] > ATTACK | NEXT: rerun N12 PHT at 16 workers; objective exact heavy-tail verdict.
+[2026-07-11T14:07:00Z] > VERIFY | NEXT: build descendant AmortizedOwnerShore.lean against known cache; objective rc0 and allowed axioms.
+[2026-07-11T14:09:00Z] > VERIFY | NEXT: cross-check R29 global-min tuple against Hall certificate; objective exact theorem/PHT falsifier.
+[2026-07-11T14:10:00Z] FAIL VERIFY | DID: cross-checked R29 global-min and Hall certs | RESULT: score23115 global; demand19953>19925; defect28 | D: global-min theorem false
+[2026-07-11T14:10:00Z] > ATTACK | NEXT: terminate redundant 2943 mean-bound job; objective retain exact PHT contradiction 28*680^676.
+[2026-07-11T14:10:30Z] FAIL VERIFY | DID: built AmortizedOwnerShore | RESULT: missing Nat add-cancellation caused sorryAx in second theorem | D: cancel activation term
+[2026-07-11T14:10:30Z] > VERIFY | NEXT: rebuild corrected AmortizedOwnerShore; objective rc0 and allowed axioms only.
+[2026-07-11T14:11:30Z] OK VERIFY | DID: rebuilt AmortizedOwnerShore | RESULT: rc0; both theorems allowed-triple axioms only | D: endpoint arithmetic closed
+[2026-07-11T14:11:30Z] OK ATTACK | DID: exact-tested PHT on R29 global minimizer | RESULT: K*23115 > K*23087 by 28K, K=680^676 | D: PHT false
+[2026-07-11T14:12:00Z] OK ATTACK | DID: exact N12 heavy PHT gate at 16 workers | RESULT: 7144/7144 pass; min residual 94289/12500 | D: N12 clean, R29 kills universal
+[2026-07-11T14:12:00Z] > CHECK | NEXT: write final 10-route synthesis and hash manifest; objective exact falsifier with proof gaps.
+[2026-07-11T14:14:25Z] OK CHECK | DID: reconciled 10 routes, N12 PHT, R29 certs | RESULT: SYNTHESIS.md; global score23115 has Hall defect28 | D: theorem/PHT false
+[2026-07-11T13:37:00Z] OK SELECT | DID: read R29 gate handoff and wall attack | RESULT: 2943 claim is ungated; global 30811 minimum is open | D: SELECT -> GATE
+[2026-07-11T13:37:01Z] > GATE | NEXT: launch exactly 10 isolated descendants for independent 2943 certificate audits.
+[2026-07-11T13:40:26Z] OK GATE | DID: launched 10 Codex descendants d01-d10 in isolated namespaces | RESULT: PIDs 65256,88332,3948,90284,85352,87932,4288,77292,70452,43952 | D: none
+[2026-07-11T13:40:27Z] > ATTACK | NEXT: lead reconstructs the global selector-trade state model without duplicating descendant solvers.
+[2026-07-11T13:47:10Z] FAIL GATE | DID: audited d01-d10 first-run reports | RESULT: all lacked adjacent codex-code-mode-host.exe; no workspace commands ran | D: retry same 10 identities
+[2026-07-11T13:47:11Z] > GATE | NEXT: copy runtime companion binaries and retry d01-d10 into retry1 namespaces.
+[2026-07-11T13:47:12Z] OK GATE | DID: retried same d01-d10 identities with complete adjacent runtime | RESULT: PIDs 86400,103120,83620,107368,73520,98160,101364,83976,66024,109144 active | D: none
+[2026-07-11T13:55:00Z] > ATTACK | NEXT: run exact lead constructor, 1383 BFS row counts, baseline score, and 676-row all-anchor trade.
+[2026-07-11T14:02:00Z] OK ATTACK | DID: classified 459680 selector rows and solved count-compressed global landscape | RESULT: global min 23115 at 676 anchor rows; SHA fc4f3ab9; delta -7696 | D: 30811 not global
+[2026-07-11T14:02:01Z] > VERIFY | NEXT: cross-check scoped Hall flow and synthesize ten descendant audits, including Hamming-one enumeration.
+[2026-07-11T14:03:00Z] OK VERIFY | DID: ran production owner-flow on independent lead graph | RESULT: demand 30811, flow 30783, gap 28, shore [0,1,2] | D: none
+[2026-07-11T14:06:00Z] FAIL VERIFY | DID: synthesized first d01-d10 reports | RESULT: all rejected graph claims because archive lacked incidence data | D: provide lead candidate for adversarial retry
+[2026-07-11T14:06:01Z] > VERIFY | NEXT: retry same ten identities against untrusted lead incidence with independent implementations.
+[2026-07-11T14:07:00Z] OK VERIFY | DID: launched d01-d10 retry2 against lead candidate | RESULT: PIDs 49576,86500,107040,112732,113084,105884,67652,71436,26412,101596 | D: none
+[2026-07-11T14:09:00Z] > VERIFY | NEXT: enumerate 459004 one-row replacements by exact multiplicity deltas and full-check minima.
+[2026-07-11T14:10:00Z] OK VERIFY | DID: enumerated all 459004 Hamming-one replacements | RESULT: min 30813, delta 2, multiplicity 676; SHA bd7f6203 | D: one-row claim gated by lead
+[2026-07-11T14:13:00Z] FAIL VERIFY | DID: cross-checked lead fixed-scope deltas against d06 full recomputation | RESULT: multiplicity is 1352, not 676; vertex 57 deactivates | D: lead histogram rejected
+[2026-07-11T14:13:01Z] OK VERIFY | DID: d06 full active-scope enumeration with 61 workers | RESULT: 459004 checked; min 30813; multiplicity 1352; SHA b71bdde1 | D: >=+2 claim survives
+[2026-07-11T14:17:00Z] OK VERIFY | DID: d07 independent 16-shard Hamming audit | RESULT: same min 30813/multiplicity 1352; active-set falsifier lost {57,59,732} | D: none
+[2026-07-11T14:17:01Z] > VERIFY | NEXT: replay lead and certificate-only verifiers, hash final synthesis, and check no required process remains.
+[2026-07-11T14:18:00Z] OK VERIFY | DID: replayed lead, MaxCut, Hall, Hamming aggregate, and global certs | RESULT: all rc0; synthesis SHA 25e1f0f4 | D: none
+[2026-07-11T14:18:01Z] > CHECK | NEXT: decide R29 lane claims from independent gates and record remaining gaps.
+[2026-07-11T14:18:02Z] OK CHECK | DID: reconciled 10 descendants and lead | RESULT: 30811 non-global; exact selector min 23115; Hamming min 30813 | D: stall=0
+[2026-07-11T14:18:03Z] OK DECIDE | DID: completed R29 gate lane | RESULT: tmp/fanout/r29_gate/lead/SYNTHESIS.md SHA 25e1f0f4 | D: general global-minimizer theorem remains open
+[2026-07-11T13:37:18Z] OK ATTACK | DID: spawned six leads with 58-descendant mandate | RESULT: agent ids 019f5164..019f5165 | D: 64-worker portfolio active
+[2026-07-11T13:38:42Z] > ATTACK | NEXT: spawn exactly 9 isolated transport_dual descendants on distinct owner-shore duality subproblems.
+[2026-07-11T13:41:05Z] FAIL ATTACK | DID: invoked 9 CLI workers | RESULT: 0 spawned; exec rejected misplaced -a flag in all stderr.log files | D: relaunch corrected
+[2026-07-11T13:41:06Z] > ATTACK | NEXT: relaunch exactly 9 descendants with global CLI flags before exec and record live PIDs.
+[2026-07-11T13:42:25Z] OK ATTACK | DID: spawned 9 isolated transport_dual descendants | RESULT: live PIDs 83064,91020,51004,34840,70420,83796,91932,96144,97444 | D: synthesize in parallel
+[2026-07-11T13:42:26Z] > PLAN | NEXT: derive lead-only aggregate dual weights from coordinate bounds and minimal-shore defect, then exact-test candidate scalarizations.
+[2026-07-11T13:44:32Z] OK PLAN | DID: derived scalar no-go and multi-row candidate | RESULT: nonnegative one-row weights cannot beat R29 local min; test full-product mean inequality | D: ATTACK
+[2026-07-11T13:44:33Z] > ATTACK | NEXT: exact-test Hall failure => score exceeds uniform full-product mean on all N10-N11 tuples at 12 workers.
+[2026-07-11T13:48:44Z] OK ATTACK | DID: exact full-product heat-bath gate N10-N11 | RESULT: 705/705 pay |Omega|*defect; min residual 1804/108; SHA C986093A | D: product transport frontier
+[2026-07-11T13:48:45Z] > PLAN | NEXT: state full-product legal transport/Farkas Hall condition and separate proved scalar algebra from graph eligibility gap.
+[2026-07-11T13:55:03Z] OK PLAN | DID: synthesized 9-lane transport dual | RESULT: CA-Hall is exact gap; 4-unit abstract CE; tmp/fanout/transport_dual/SYNTHESIS.md | D: VERIFY
+[2026-07-11T13:55:04Z] > VERIFY | NEXT: incorporate N12 heavy transport result, current Lean SHA, descendant hashes, and exact minimal-shore outcomes.
+[2026-07-11T13:56:34Z] OK VERIFY | DID: audited 9 descendant reports and exact reruns | RESULT: py_compile rc0; Farkas 682; referee 35; synthesis SHA 8F2195C0; 0 live | D: CA-Hall open
+[2026-07-11T13:56:35Z] OK CHECK | DID: completed transport_dual lane synthesis | RESULT: tmp/fanout/transport_dual/SYNTHESIS.md; current Lean SHA 6B10458B | D: exact graph capacity lemma remains
+[2026-07-11T16:38:34+03:00] > ATTACK | NEXT: spawn exactly 9 isolated lean_bridge descendants and audit the R29 global-descent Lean interface.
+[2026-07-11T16:43:18+03:00] OK ATTACK | DID: spawned 9 isolated lean_bridge descendants | RESULT: PID files under tmp/fanout/lean_bridge/*/pid.txt | D: fanout active
+[2026-07-11T16:43:18+03:00] > PLAN | NEXT: map the compiled minimum/exchange chain and derive the minimal global-descent theorem interface.
+[2026-07-11T16:44:33+03:00] OK PLAN | DID: derived arbitrary-row descent bridge | RESULT: tmp/fanout/lean_bridge/lead/GlobalDescentInterface.lean | D: frontier isolated
+[2026-07-11T16:44:33+03:00] > VERIFY | NEXT: compile GlobalDescentInterface and audit axioms/tokens without native_decide.
+[2026-07-11T16:51:13+03:00] > VERIFY | NEXT: source-rebuild ActiveScopedMinimumExchange.lean into the lean_bridge namespace.
+[2026-07-11T16:51:13+03:00] > VERIFY | NEXT: source-rebuild ActiveScopedVariationReduction.lean into the lean_bridge namespace.
+[2026-07-11T16:51:13+03:00] > VERIFY | NEXT: source-rebuild ActiveScopedCoordinateTransport.lean into the lean_bridge namespace.
+[2026-07-11T16:53:43+03:00] > VERIFY | NEXT: source-rebuild ActiveScopedOwnerHallReduction.lean and verify matching-duality surface.
+[2026-07-11T13:39:09Z] > ATTACK | NEXT: spawn exactly 10 isolated referee_alt descendants: five global-min falsifiers and five bypass proofs.
+[2026-07-11T13:41:28Z] OK ATTACK | DID: launched 10 isolated Codex descendants | RESULT: child_01..child_10; PIDs 95708,94128,51952,49624,93220,91124,9680,89008,38832,76532 | D: ATTACK -> VERIFY
+[2026-07-11T13:41:28Z] > VERIFY | NEXT: hash and reconcile R25-R29 dead-list claims against the current global-minimizer theorem of record.
+[2026-07-11T16:39:26+03:00] > ATTACK | NEXT: spawn exactly 9 adversarial_search descendants on distinct global-minimizer Hall falsification families.
+[2026-07-11T13:39:55Z] OK VERIFY | DID: heavy N12 component-transport census, 61 workers | RESULT: 4,801,067 tuples; 0 failures; 32 inherited groups | D: none
+[2026-07-11T13:39:55Z] > ATTACK | NEXT: promote persistent-owner/load lemmas and derive active-degree/HitNeed monotonicity in Lean.
+[2026-07-11T16:47:21+03:00] FAIL ATTACK | DID: launched 9 adversarial_search workers | RESULT: all tool calls failed; missing tmp/fanout/_bin/codex-code-mode-host.exe | D: retry same 9 slots
+[2026-07-11T16:47:22+03:00] > ATTACK | NEXT: restore isolated CLI host runtime and rerun the same 9 adversarial_search lane slots.
+[2026-07-11T16:50:37+03:00] > ATTACK | NEXT: exact-test the lead support-expansion joint-trade invariant on small real row systems.
+[2026-07-11T16:52:01+03:00] OK ATTACK | DID: exact census N=5..8 cap=256 | RESULT: 100 systems, 304 safe trades, 0 score violations | D: extend to N=9
+[2026-07-11T16:52:02+03:00] > ATTACK | NEXT: run exact N=9 support-expansion census with 256-tuple cap.
+[2026-07-11T16:52:42+03:00] OK ATTACK | DID: exact N=9 census cap=256 | RESULT: 632 systems, 3,084 safe trades, 0 violations | D: extend to N=10
+[2026-07-11T16:52:43+03:00] > ATTACK | NEXT: run exact N=10 support-expansion census with 256-tuple cap.
+[2026-07-11T13:53:30Z] OK VERIFY | DID: exact referee audit and Lean rebuild | RESULT: report SHA 58E65EFE; checker PASS 36 models; Lean rc0 | D: quantifier mismatch found
+[2026-07-11T13:53:30Z] > CHECK | NEXT: separate certified source facts from ungated R29 graph claims and record remaining proof gaps.
+[2026-07-11T13:53:31Z] OK CHECK | DID: classified R25-R29 claims and child outputs | RESULT: tmp/fanout/referee_alt/lead/REPORT.md; 10 child hashes logged | D: global-min route open
+[2026-07-11T16:54:07+03:00] OK ATTACK | DID: exact N=10 census cap=256 | RESULT: 5,686 systems; 53,903 safe trades; 57 full deactivations; 0 violations | D: extract witness
+[2026-07-11T16:54:08+03:00] > VERIFY | NEXT: rerun N=10 exact census and persist first full-deactivation row witness.
+[2026-07-11T13:54:11Z] OK ATTACK | DID: proved persistent ActiveOwner/load/degree/HitNeed lemmas | RESULT: Lean rc=0; axioms allowed triple; SHA 6B10458B | D: none
+[2026-07-11T13:56:24Z] OK VERIFY | DID: referee fanout audited R29 and selector quantifiers | RESULT: canonical Hall != all-minimizer Hall; exact 2-state falsifier | D: target clarified
+[2026-07-11T13:56:24Z] > ATTACK | NEXT: recover failed descendant host paths and distinguish canonical, all-minimizer, and Hall-good tie-break routes.
+[2026-07-11T13:56:59Z] > ATTACK | NEXT: compile the exact global-descent/all-minimizers Hall interface replacing the falsified Hamming-one frontier.
+[2026-07-11T16:59:41+03:00] OK VERIFY | DID: rebuilt MinimumExchange, Variation, CoordinateTransport, OwnerHall | RESULT: all rc=0; current Coord SHA 6B10458B | D: none
+[2026-07-11T16:59:41+03:00] OK VERIFY | DID: compiled global-descent bridge and axiom probe | RESULT: rc=0; axioms allowed triple; source SHA 90033FDF | D: interface fixed
+[2026-07-11T16:59:41+03:00] OK ATTACK | DID: collected exactly 9 descendant reports | RESULT: 2 analyses; 7 host-blocked; hashes in lean_bridge/lead/SYNTHESIS.md | D: none
+[2026-07-11T16:59:41+03:00] > CHECK | NEXT: reconcile global_min_proof equivalent theorem and record exact falsifiers, hashes, and proof gaps.
+[2026-07-11T16:59:41+03:00] OK CHECK | DID: reconciled equivalent interfaces | RESULT: tmp/fanout/lean_bridge/lead/SYNTHESIS.md SHA 37065567 | D: global-descent math open
+[2026-07-11T17:00:33+03:00] > ATTACK | NEXT: exact-test PHT on adversarial graph6, C5 blow-ups, singleton double-star, and reconstructible R29 data.
+[2026-07-11T14:06:43Z] OK ATTACK | DID: compiled global-descent iff all-minimizers-Hall bridge | RESULT: rc=0; allowed axioms; SHA 9FD3CA20 | D: frontier generalized
+[2026-07-11T14:06:43Z] OK VERIFY | DID: 9-agent transport/Farkas portfolio | RESULT: CA-Hall exact reduction; PHT passed 705 N10/11 failures | D: N12 gate launched
+[2026-07-11T17:19:57+03:00] OK ATTACK | DID: exact adversarial PHT gate | RESULT: 226354 tuples; 903 Hall failures; 0 PHT failures; SHA BE502A56 | D: no falsifier
+[2026-07-11T17:19:58+03:00] OK VERIFY | DID: reconstructed R29 product bound | RESULT: baseline 30811, defect 28; conditional mean <29585, margin >1198 | D: 3 invariants open
+[2026-07-11T17:19:59+03:00] OK CHECK | DID: synthesized PHT tests and gaps | RESULT: tmp/fanout/adversarial_search_lead/PHT_REPORT.md SHA B26A129D | D: PHT alive
+[2026-07-11T14:43:15Z] > VERIFY | NEXT: independently replay R29 constructor, all-anchor global lower bound, and all-anchor Hall certificate.

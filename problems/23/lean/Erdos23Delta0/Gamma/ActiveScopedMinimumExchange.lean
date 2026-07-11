@@ -606,6 +606,50 @@ def RealHallFailureHasScopedScoreOneRowDescent
     CompleteShortestRowDB G c bads →
     HallFailureHasScopedScoreOneRowDescent G c bads
 
+/-- R29-corrected frontier: a Hall-failing row tuple has some lower-scoring
+tuple, with no bound on the number of changed coordinates. -/
+def HallFailureHasScopedScoreGlobalDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  ∀ omega : RowChoice bads,
+    ¬Nonempty (Matching G c omega) →
+      ∃ eta : RowChoice bads,
+        scopedObligationScore G c eta <
+          scopedObligationScore G c omega
+
+def RealHallFailureHasScopedScoreGlobalDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  TriangleFree G →
+    IsMaxCut G c →
+    BConnected G c →
+    CompleteShortestRowDB G c bads →
+    HallFailureHasScopedScoreGlobalDescent G c bads
+
+def EveryScopedScoreMinimizerHasMatching
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  ∀ omega : RowChoice bads,
+    (∀ eta : RowChoice bads,
+      scopedObligationScore G c omega ≤ scopedObligationScore G c eta) →
+    Nonempty (Matching G c omega)
+
+theorem globalDescent_iff_everyMinimizerHasMatching
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) :
+    HallFailureHasScopedScoreGlobalDescent G c bads ↔
+      EveryScopedScoreMinimizerHasMatching G c bads := by
+  constructor
+  · intro hdescent omega hminimum
+    by_contra hmatching
+    obtain ⟨eta, hlt⟩ := hdescent omega hmatching
+    exact (Nat.not_lt_of_ge (hminimum eta)) hlt
+  · intro hminimum omega hmatching
+    by_contra hlower
+    have homegaMinimum : ∀ eta : RowChoice bads,
+        scopedObligationScore G c omega ≤ scopedObligationScore G c eta := by
+      intro eta
+      apply Nat.le_of_not_gt
+      intro hlt
+      exact hlower ⟨eta, hlt⟩
+    exact hmatching (hminimum omega homegaMinimum)
+
 def MinimumActiveScopedHall (G : GraphData) (c : CutData)
     (bads : List BadEdgeData) (h : RowsNonempty bads) : Prop :=
   Nonempty (Matching G c (scopedCanonicalChoice G c bads h))
@@ -691,6 +735,40 @@ theorem realMinimumActiveScopedHall_of_scopedScoreDescent
     (hdescent : RealHallFailureHasScopedScoreOneRowDescent G c bads) :
     MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
   apply minimumActiveScopedHall_of_scopedScoreDescent
+  exact hdescent htri hmax hconn hdb
+
+/-- Global descent is equivalent to excluding a Hall-failing global
+minimizer; this form is the exact survivor after R29. -/
+theorem allScopedScoreMinimizersHall_of_globalDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hdescent : HallFailureHasScopedScoreGlobalDescent G c bads)
+    (omega : RowChoice bads)
+    (hmin : ∀ eta : RowChoice bads,
+      scopedObligationScore G c omega ≤ scopedObligationScore G c eta) :
+    Nonempty (Matching G c omega) := by
+  by_contra hmatching
+  obtain ⟨eta, hlt⟩ := hdescent omega hmatching
+  exact (Nat.not_lt_of_ge (hmin eta)) hlt
+
+theorem minimumActiveScopedHall_of_globalDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hrows : RowsNonempty bads)
+    (hdescent : HallFailureHasScopedScoreGlobalDescent G c bads) :
+    MinimumActiveScopedHall G c bads hrows := by
+  unfold MinimumActiveScopedHall
+  exact allScopedScoreMinimizersHall_of_globalDescent
+    G c bads hdescent
+      (scopedCanonicalChoice G c bads hrows)
+      (scopedCanonicalChoice_optimal G c bads hrows)
+
+theorem realMinimumActiveScopedHall_of_globalDescent
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (htri : TriangleFree G) (hmax : IsMaxCut G c)
+    (hconn : BConnected G c)
+    (hdb : CompleteShortestRowDB G c bads)
+    (hdescent : RealHallFailureHasScopedScoreGlobalDescent G c bads) :
+    MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
+  apply minimumActiveScopedHall_of_globalDescent
   exact hdescent htri hmax hconn hdb
 
 end ActiveScopedMinimumExchange

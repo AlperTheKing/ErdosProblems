@@ -111,3 +111,6 @@ tmp/o14_packed_int_pilot/src/
 # acceptance of the rest is recorded via SHA-pinned PayloadRegistry/ledger.
 problems/23/lean/Erdos23Delta0/O14/Generated/ChartPayloads/Chart*.lean
 !problems/23/lean/Erdos23Delta0/O14/Generated/ChartPayloads/Chart000*.lean
+
+# Multi-agent workflow fan-out transcripts (ephemeral scratch)
+tmp/fanout/

@@ -107,6 +107,54 @@ theorem replaceOne_apply_of_ne
     replaceOne omega i replacement j = omega j := by
   exact replaceTwo_eq_of_ne omega i i j replacement replacement hji hji
 
+theorem length_filter_ofFn_eq_card_filter
+    {α : Type*} (n : Nat) (f : Fin n → α) (p : α → Prop)
+    [DecidablePred p] :
+    ((List.ofFn f).filter p).length =
+      (Finset.univ.filter fun i : Fin n => p (f i)).card := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+      rw [List.ofFn_succ, Finset.card_eq_sum_ones, Finset.sum_filter,
+        Fin.sum_univ_succ]
+      by_cases h : p (f 0)
+      · simp [h, ih, Nat.add_comm]
+      · simp [h, ih]
+
+theorem pairCount_eq_card_filter
+    {bads : List BadEdgeData} (omega : RowChoice bads) (x y : Nat) :
+    pairCount omega x y =
+      (Finset.univ.filter fun i : Fin bads.length =>
+        x ∈ ((bads.get i).rows.get (omega i)).verts ∧
+        y ∈ ((bads.get i).rows.get (omega i)).verts).card := by
+  unfold pairCount selectedRows
+  rw [length_filter_ofFn_eq_card_filter]
+
+/-- If an owner lies on neither changed row, all of its co-occurrence
+multiplicities are unchanged. -/
+theorem pairCount_replaceOne_of_owner_not_mem_changed
+    {bads : List BadEdgeData} (omega : RowChoice bads)
+    (i : Fin bads.length)
+    (replacement : Fin (bads.get i).rows.length)
+    (owner other : Nat)
+    (hownerOld : owner ∉ ((bads.get i).rows.get (omega i)).verts)
+    (hownerNew : owner ∉ ((bads.get i).rows.get replacement).verts) :
+    pairCount (replaceOne omega i replacement) owner other =
+      pairCount omega owner other := by
+  rw [pairCount_eq_card_filter, pairCount_eq_card_filter]
+  congr 1
+  ext j
+  simp only [Finset.mem_filter, Finset.mem_univ, true_and]
+  by_cases hji : j = i
+  · subst j
+    rw [replaceOne_apply_self]
+    constructor
+    · intro h
+      exact False.elim (hownerNew h.1)
+    · intro h
+      exact False.elim (hownerOld h.1)
+  · rw [replaceOne_apply_of_ne omega i j replacement hji]
+
 theorem mem_selectedRows_replaceOne_iff
     {bads : List BadEdgeData} (omega : RowChoice bads)
     (i : Fin bads.length)
@@ -316,6 +364,103 @@ theorem newComponent_reachable_old_of_not_touchesChangedRows
       apply hnot
       exact ⟨z, Or.inr hznew, by simpa [choiceAfterAlternative] using hz⟩
   · simpa [choiceAfterAlternative] using hreach
+
+/-- An active owner in a new component that avoids both changed rows was
+already active before the replacement. -/
+theorem activeOwner_old_of_new_not_touchesChangedRows
+    (G : GraphData) (c : CutData) {bads : List BadEdgeData}
+    (omega : RowChoice bads) (i : Fin bads.length)
+    (q : OneCoordinateAlternative omega i) (owner : Fin G.n)
+    (hnot : ¬NewComponentTouchesChangedRows G c omega i q owner)
+    (hactive : ActiveOwner G c (choiceAfterAlternative omega ⟨i, q⟩) owner) :
+    ActiveOwner G c omega owner := by
+  rcases hactive with ⟨j, hu, hv, hureach, hvreach⟩
+  refine ⟨j, hu, hv, ?_, ?_⟩
+  · exact (newComponent_reachable_old_of_not_touchesChangedRows
+      G c omega i q owner ⟨(bads.get j).u, hu⟩ hnot hureach.symm).symm
+  · exact (newComponent_reachable_old_of_not_touchesChangedRows
+      G c omega i q owner ⟨(bads.get j).v, hv⟩ hnot hvreach.symm).symm
+
+/-- If an owner lies on neither changed row, its selected length-five load is
+unchanged. -/
+theorem selectedLoad_replaceOne_of_owner_not_mem_changed
+    {bads : List BadEdgeData} (omega : RowChoice bads)
+    (i : Fin bads.length)
+    (replacement : Fin (bads.get i).rows.length)
+    (owner : Nat)
+    (hownerOld : owner ∉ ((bads.get i).rows.get (omega i)).verts)
+    (hownerNew : owner ∉ ((bads.get i).rows.get replacement).verts) :
+    selectedLoad (replaceOne omega i replacement) owner =
+      selectedLoad omega owner := by
+  simp [selectedLoad,
+    pairCount_replaceOne_of_owner_not_mem_changed omega i replacement owner owner
+      hownerOld hownerNew]
+
+theorem newReachable_not_mem_changedRows
+    (G : GraphData) (c : CutData) {bads : List BadEdgeData}
+    (omega : RowChoice bads) (i : Fin bads.length)
+    (q : OneCoordinateAlternative omega i) (owner z : Fin G.n)
+    (hnot : ¬NewComponentTouchesChangedRows G c omega i q owner)
+    (hreach :
+      (activeGraph G c (choiceAfterAlternative omega ⟨i, q⟩)).Reachable
+        owner z) :
+    z.1 ∉ ((bads.get i).rows.get (omega i)).verts ∧
+      z.1 ∉ ((bads.get i).rows.get q.1).verts := by
+  constructor
+  · intro hz
+    exact hnot ⟨z, Or.inl hz, hreach⟩
+  · intro hz
+    exact hnot ⟨z, Or.inr hz, hreach⟩
+
+/-- Active degree cannot increase in a persistent component. -/
+theorem activeDegree_new_le_old_of_not_touchesChangedRows
+    (G : GraphData) (c : CutData) {bads : List BadEdgeData}
+    (omega : RowChoice bads) (i : Fin bads.length)
+    (q : OneCoordinateAlternative omega i) (owner : Fin G.n)
+    (hnot : ¬NewComponentTouchesChangedRows G c omega i q owner) :
+    activeDegree G c (choiceAfterAlternative omega ⟨i, q⟩) owner ≤
+      activeDegree G c omega owner := by
+  classical
+  by_cases hactive :
+      ActiveOwner G c (choiceAfterAlternative omega ⟨i, q⟩) owner
+  · have holdactive :=
+      activeOwner_old_of_new_not_touchesChangedRows
+        G c omega i q owner hnot hactive
+    simp only [activeDegree, if_pos hactive, if_pos holdactive]
+    apply Finset.card_le_card
+    intro w hw
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hw ⊢
+    have hownerAvoid := newReachable_not_mem_changedRows
+      G c omega i q owner owner hnot .rfl
+    have hwAvoid := newReachable_not_mem_changedRows
+      G c omega i q owner w hnot hw.reachable
+    apply (activeGraph_adj_replaceOne_iff_of_not_mem_changed
+      G c omega i q.1 owner w
+      hownerAvoid.1 hownerAvoid.2 hwAvoid.1 hwAvoid.2).mp
+    simpa [choiceAfterAlternative] using hw
+  · simp [activeDegree, hactive]
+
+/-- Residual endpoint-hit demand cannot increase in a persistent component. -/
+theorem hitNeedUnits_new_le_old_of_not_touchesChangedRows
+    (G : GraphData) (c : CutData) {bads : List BadEdgeData}
+    (omega : RowChoice bads) (i : Fin bads.length)
+    (q : OneCoordinateAlternative omega i) (owner : Fin G.n)
+    (hnot : ¬NewComponentTouchesChangedRows G c omega i q owner) :
+    hitNeedUnits G c (choiceAfterAlternative omega ⟨i, q⟩) owner ≤
+      hitNeedUnits G c omega owner := by
+  have hownerAvoid := newReachable_not_mem_changedRows
+    G c omega i q owner owner hnot .rfl
+  have hload :
+      selectedLoad (choiceAfterAlternative omega ⟨i, q⟩) owner.1 =
+        selectedLoad omega owner.1 := by
+    simpa [choiceAfterAlternative] using
+      selectedLoad_replaceOne_of_owner_not_mem_changed
+        omega i q.1 owner.1 hownerAvoid.1 hownerAvoid.2
+  unfold hitNeedUnits
+  rw [hload]
+  exact Nat.sub_le_sub_right
+    (activeDegree_new_le_old_of_not_touchesChangedRows
+      G c omega i q owner hnot) _
 
 structure ComponentAwareCoordinateReplacementInjection
     (G : GraphData) (c : CutData) {bads : List BadEdgeData}
