@@ -1,6 +1,27 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T08:45 (local) — TICK-100
+# Last update: 2026-07-12T09:20 (local) — TICK-101
 
+## TICK-101 (2026-07-12T09:2xZ) — R48: PROFILE = FOUR-NUMBER CLASSIFIER; FROZEN LEMMA
+## t5_localProfile_forces_badTriangle (ENGINE DECIDES); R49 = ATOM-ENDPOINT GEOMETRY
+- R48 harvested+archived: **T5LocalOwnerProfile ⟺ (e_forced, i_step, d_step, d_cov) = (0,0,0,0)** — exact
+  reduction to forced-through test (Forced(v)=Inc(v), sharp: >=6 forced impossible but circuits force only
+  5 — t=4 mechanism does NOT generalize) + first-step matching (multiplicities (2,1,1,1)) + coverage
+  matching (ONE owner-avoiding row covers AT MOST ONE star pair [parity proof] => 4 distinct nonincident
+  atoms). Consequences: mu(F*) >= 4; supportMult(vx0) >= 4 vs selectedMult 0 (latent gap defect-one
+  permits). Near-candidate realizes the FULL profile but with 30 triangles AND scope-vacuity (I_omega =
+  {vx4}, no bad pair) — two independent failures => arithmetic alone insufficient. **FROZEN L1 LEMMA:
+  t5_localProfile_forces_badTriangle (GPT CANNOT prove; fallback t5_triangleFree_localProfile_is_
+  scopeVacuous; no example distinguishes).** Relaxation ladder (d_cov->1 first). k=3 not faster (coverage
+  shareable) but rooted small (15 fixed / 9 free); triangle lemma would kill both. **P 5 -> 4%.**
+- SWEEP SPEC UPDATE POSTED: classifier replaces integrated CP-SAT (orders cheaper); lex near-miss
+  distribution reporting; zero-vector pipeline (tuple from matchings -> selected internal graph ->
+  ACTIVE-SCOPE test -> second owner -> ledger); k=3 exhaustion.
+- R49 SENT (3,138 ch): atom-endpoint geometry — coverage rows' position case-split pins coverage-atom
+  endpoints near v's neighbourhood; clustering count vs 25 tri-free atoms on <=21 vertices (Mantel + forced
+  incidences); two-owner doubling (10 incident + 2x4 coverage w/ sharing); active-scope fallback analysis
+  (what I_omega structure the profile forces near v; when can vx0's component capture a bad pair).
+- GATE QUEUE: R49 harvest; sweep near-miss distributions; Codex artifact replays (7 SHAs); R47/R48 shells
+  compile; N=94; ablation. Marker 2604793 (no Codex delta this tick).
 ## TICK-100 (2026-07-12T08:4xZ) — R47 BRIDGE FROZEN (CheapGeometry iff); SCOPE CORRECTION (hits NOT fully
 ## covered — GPT t5 lemma BACK ON THE TABLE); INTEGRATED PROFILE LAYER KILLS EVERYTHING; R48 = PROFILE
 ## EMPTINESS AT t=5
@@ -946,6 +967,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

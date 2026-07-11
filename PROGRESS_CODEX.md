@@ -33043,3 +33043,7 @@
 [2026-07-11T23:04:00Z] > ATTACK | NEXT: remove non-derived shared-neighbor and r(owner)=5 restrictions from t5 falsifier engine; retain both as optional regressions.
 [2026-07-11T23:07:00Z] OK ATTACK | DID: generalized t5 engine and ran legacy regression | RESULT: py_compile rc0; optional old gates reproduce exact INFEASIBLE | D: live search widened
 [2026-07-11T23:07:00Z] > COMPUTE | NEXT: search unrestricted-shared/r-count t5 two-owner covered-profile circuits at 9+9 with 8 workers.
+[2026-07-11T23:09:00Z] OK COMPUTE | DID: tested 200 widened simultaneous-profile supports | RESULT: all 200 exact INFEASIBLE; SHA 757666b1 | D: bounded only
+[2026-07-11T23:12:00Z] > COMPUTE | NEXT: exact-search the production two-state live attachment profile, with unchanged non-live rows, no shared-neighbor/r-count assumptions.
+[2026-07-11T23:20:00Z] OK COMPUTE | DID: exact-tested 1000 general 9+9 supports against live two-state profile | RESULT: 1000/1000 INFEASIBLE; SHA 47bb2de2 | D: bounded only
+[2026-07-11T23:20:00Z] > ATTACK | NEXT: isolate the earliest t5 transition contradiction by toggling multiplicity and deletion-SDR circuit layers.
