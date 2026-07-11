@@ -32296,3 +32296,10 @@
 [2026-07-11T12:21:44Z] OK VERIFY | DID: changed-row transport guards+Lean build | RESULT: both fixtures gap0; SHA 5422AED1; axioms allowed triple | D: endpoint branch removed
 [2026-07-11T12:24:58Z] > ATTACK | NEXT: prove changed-row component persistence, reducing transport eligibility to inherited components or row contact.
 [2026-07-11T12:37:31Z] > ATTACK | NEXT: launch dynamic 64-agent Sol-Ultra proof/falsifier portfolio on component transport and nontrivial-coordinate walls.
+[2026-07-11T12:42:11Z] > ATTACK | NEXT: run 64-worker exact N10 branch-usage census to test whether inherited/outside transport is ever needed.
+[2026-07-11T12:42:46Z] FAIL ATTACK | DID: launched N10 census at 64 workers | RESULT: Windows ProcessPool cap is 61 | D: relaunch at 61
+[2026-07-11T12:50:59Z] OK ATTACK | DID: exact N10 transport-branch census | RESULT: 4518/4518 groups, 35635/35635 demand touch changed rows | D: test N11
+[2026-07-11T12:54:36Z] OK ATTACK | DID: proved changed-row component persistence in Lean | RESULT: theorem compiled; SHA 51AD9297; axioms allowed triple | D: T1 narrowed
+[2026-07-11T12:55:47Z] FAIL ATTACK | DID: ran N11 branch census | RESULT: shell timeout at 126s before verdict | D: relaunch with 10-minute timeout
+[2026-07-11T13:07:15Z] OK ATTACK | DID: exact N11 branch census | RESULT: 16559/16559 groups, 116127/116127 demand touch changed rows | D: test N12 tail
+[2026-07-11T13:13:24Z] OK ATTACK | DID: exact N12-heavy branch census | RESULT: 375405 touched groups; 32 inherited-only; 0 unanchored | D: persistence is load-bearing

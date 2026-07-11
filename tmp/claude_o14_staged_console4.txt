@@ -7,3 +7,11 @@
 [Chart040] ok=True shards=468 3671s del=470 fails=0
 [Chart041] ok=True shards=468 3473s del=470 fails=0
 [Chart042] ok=True shards=470 4765s del=472 fails=0
+[Chart043] ok=True shards=348 2863s del=350 fails=0
+[Chart044] ok=True shards=464 4004s del=466 fails=0
+[Chart045] ok=True shards=342 2803s del=344 fails=0
+[Chart046] ok=True shards=300 2526s del=302 fails=0
+[Chart047] ok=True shards=397 3341s del=399 fails=0
+[Chart048] ok=True shards=438 3490s del=440 fails=0
+[Chart049] ok=True shards=383 3189s del=385 fails=0
+[Chart050] ok=True shards=370 3594s del=372 fails=0

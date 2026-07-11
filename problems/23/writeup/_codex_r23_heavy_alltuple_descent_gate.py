@@ -96,6 +96,14 @@ def analyze_chunk(task):
     positive_coordinate_hitneed_variation = 0
     coordinate_raw_collision_deficiency_bound_failures = 0
     component_transport_failures = 0
+    component_transport_groups = 0
+    component_transport_demand = 0
+    component_transport_touched_groups = 0
+    component_transport_touched_demand = 0
+    component_transport_inherited_only_groups = 0
+    component_transport_inherited_only_demand = 0
+    component_transport_unanchored_groups = 0
+    component_transport_unanchored_demand = 0
     min_negative_variation_per_deficiency = None
     min_normalized_ratio = None
     min_normalized_record = None
@@ -220,6 +228,18 @@ def analyze_chunk(task):
                 rows[index],
                 coordinate_rows,
             )
+            component_transport_groups += transport["groups"]
+            component_transport_demand += transport["demand"]
+            component_transport_touched_groups += transport["touchedGroups"]
+            component_transport_touched_demand += transport["touchedDemand"]
+            component_transport_inherited_only_groups += (
+                transport["inheritedOnlyGroups"]
+            )
+            component_transport_inherited_only_demand += (
+                transport["inheritedOnlyDemand"]
+            )
+            component_transport_unanchored_groups += transport["unanchoredGroups"]
+            component_transport_unanchored_demand += transport["unanchoredDemand"]
             if transport["gap"]:
                 coordinate_transport_failures.append({
                     "index": index,
@@ -324,6 +344,16 @@ def analyze_chunk(task):
         "coordinateRawCollisionDeficiencyBoundFailures":
             coordinate_raw_collision_deficiency_bound_failures,
         "componentTransportFailures": component_transport_failures,
+        "componentTransportGroups": component_transport_groups,
+        "componentTransportDemand": component_transport_demand,
+        "componentTransportTouchedGroups": component_transport_touched_groups,
+        "componentTransportTouchedDemand": component_transport_touched_demand,
+        "componentTransportInheritedOnlyGroups":
+            component_transport_inherited_only_groups,
+        "componentTransportInheritedOnlyDemand":
+            component_transport_inherited_only_demand,
+        "componentTransportUnanchoredGroups": component_transport_unanchored_groups,
+        "componentTransportUnanchoredDemand": component_transport_unanchored_demand,
         "minRatio": (
             None if min_negative_variation_per_deficiency is None else
             [
@@ -446,6 +476,26 @@ def main():
             )
             aggregate["componentTransportFailures"] += (
                 result["componentTransportFailures"]
+            )
+            aggregate["componentTransportGroups"] += result["componentTransportGroups"]
+            aggregate["componentTransportDemand"] += result["componentTransportDemand"]
+            aggregate["componentTransportTouchedGroups"] += (
+                result["componentTransportTouchedGroups"]
+            )
+            aggregate["componentTransportTouchedDemand"] += (
+                result["componentTransportTouchedDemand"]
+            )
+            aggregate["componentTransportInheritedOnlyGroups"] += (
+                result["componentTransportInheritedOnlyGroups"]
+            )
+            aggregate["componentTransportInheritedOnlyDemand"] += (
+                result["componentTransportInheritedOnlyDemand"]
+            )
+            aggregate["componentTransportUnanchoredGroups"] += (
+                result["componentTransportUnanchoredGroups"]
+            )
+            aggregate["componentTransportUnanchoredDemand"] += (
+                result["componentTransportUnanchoredDemand"]
             )
             if result["minRatio"] is not None:
                 ratio = Fraction(*result["minRatio"])
