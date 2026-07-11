@@ -79,9 +79,23 @@ theorem free_sub_collision_eq_residual
       (Fintype.card V : ℤ) ^ 2 - 25 * (m : ℤ) := by
   rw [free_sub_collision_eq, htotal]
 
+/-- Merely matching every collision debit into a distinct free source already
+proves nonnegativity of the target quadratic residual. Thus a source matching
+cannot be used as an independent bank construction unless its existence is
+proved from genuinely stronger graph geometry. -/
+theorem residual_nonneg_of_collision_le_free
+    (n : V → V → Nat) (m : Nat)
+    (htotal :
+      (∑ v : V, ∑ z : V, (n v z : ℤ)) = 25 * (m : ℤ))
+    (hmatch : collisionMass n ≤ freeMass n) :
+    0 ≤ (Fintype.card V : ℤ) ^ 2 - 25 * (m : ℤ) := by
+  rw [← free_sub_collision_eq_residual n m htotal]
+  linarith
+
 #print axioms pointwise_signed_identity
 #print axioms free_sub_collision_eq
 #print axioms free_sub_collision_eq_residual
+#print axioms residual_nonneg_of_collision_le_free
 
 end CollisionResidualIdentity
 end Erdos23Delta0

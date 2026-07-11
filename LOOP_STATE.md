@@ -234,3 +234,29 @@
   emitters no longer emit probes; generated tree still carries probes (final regeneration pass needed);
   my wave script flaws flagged (fail-persist mid-wave + probe-blind token regex) — staged script inherits.
 - Mailbox marker → 2406439 AFTER the full-text gating session (inventory only so far — headers + artifacts).
+
+## TICK-71 (2026-07-11T03:12Z) — R20 HARVESTED (two-part); GOAL v6-short delivered; loop re-armed
+- R20a: BASE-ONLY (sameFirst+commonBad) Hall-completeness FALSE — 311-vtx corridor-overload CE
+  (167 core + (8,64,1,64,8) C5-blowup at v=9; T(v)=345, N=311, gap 66K; SHAs 76b594f6/42275b6b UNGATED).
+  loss(S)>=0 is AUTOMATIC for every S (max-cut maximality) — commonBad was only an ownership rule.
+  THIRD base pattern adopted: ROW-COMPANION pair terminal (CheckedRowCompanionBaseTerminal, Lean shape
+  given); repairs 311 exactly (33 orbits x 2K = 66K), ZERO prune. Staged gate: sameFirst -> +commonBad ->
+  +rowCompanion -> +prune on 167/175/3892/311 then census. NEW SHARP Q: is stage-3 always complete?
+- R20b: exact LP decomposition cutGap = scaledDeficiency + R_Delta + R_D2 + R_cap (R_D2,R_cap >= 0
+  compiled-checkable; theorems scaledDeficiency_cutGap_decomposition/_of_boundary_bound COMPILE-READY
+  against BankedWallLP). THE UNCONTROLLED TERM = h_boundary = R_Delta: unweighted loss >= 0 does NOT sign
+  the dual-weighted Lambda_d(S) (explicit 2-weight sign flip); Gamma-rank is ordinal (no rational summand);
+  symmetric-difference composition leaves 2 signed errors incl parity. h_boundary FALSIFIER GATE:
+  D=Def_d(P) vs G_trace (affine F2-span of trace cuts) vs G_max (all allowed cuts); D>G_max = decisive.
+  VERBATIM TAIL: "sink and routing portions are closed; the exact remaining quantitative bridge is
+  h_boundary; the present transfer/switch record does not establish it."
+- WALL NOW = TWO LAYERS, one spine: L1 transfer-matching (3 base patterns; stage-3 completeness Q),
+  L2 h_boundary (dual-weighted cut realization). Independent finite gates, fixtures 167/175/3892/311.
+- GATE QUEUE (priority order): (1) 311 CE gate script; (2) staged 4-pattern matching gate impl;
+  (3) h_boundary D/G_trace/G_max gate on fixtures; (4) compile scaledDeficiency decomposition (Codex lane
+  candidate); (5) Codex 235KB delta full-text gating (marker still 2171725); (6) R13/14/15/18 CE scripts;
+  (7) staged chart re-gate monitor (was 34/107, task biww9b0ot — check alive after restart).
+- R21 RETASK (sent this tick): h_boundary cut-construction — minimal additional checked trace field or
+  atlas-derived cut rule achieving Lambda_d(X) >= M_d - R_D2 - R_cap, or a canonical D>G_max falsifier.
+- /goal arm FAILED at 4765 ch (limit 4000); 3654-ch GOAL v6-short delivered to user in text box
+  (scratchpad goal_v6_short.txt); /loop v6 ARMED (dynamic mode, this session).

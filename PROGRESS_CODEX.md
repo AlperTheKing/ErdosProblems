@@ -31993,3 +31993,62 @@
 [2026-07-10T22:10:20Z] > ATTACK | NEXT: state the exact collision-to-c5Base/prune assignment interface and connect it to subset Hall.
 [2026-07-10T22:46:00Z] FAIL PLAN | DID: audited Pro collision transfer | RESULT: bare transfer false; collisions are residual debits, not cap sources | D: residual-source matching
 [2026-07-10T22:46:00Z] > VERIFY | NEXT: build CollisionTokenAssignment and audit the matching/provider-to-Hall boundary.
+[2026-07-10T22:58:59Z] OK VERIFY | DID: compiled collision identity, token assignment, tokenization | RESULT: 3 modules rc0; allowed axioms; forbidden0 | D: matching existence
+[2026-07-10T22:58:59Z] FAIL VERIFY | DID: exact-tested Pro residual matching | RESULT: F=C=Need=1 passes Pro map but spends 1/2 from residual0 | D: map corrected
+[2026-07-10T22:58:59Z] > ATTACK | NEXT: prove or exact-falsify componentwise injection Collision plus Need into Free on real cages.
+[2026-07-10T23:01:37Z] FAIL ATTACK | DID: audited corrected residual matching | RESULT: Collision->Free alone implies N^2-25m>=0; route is conjecture-circular | D: DEAD collision bank
+[2026-07-10T23:01:37Z] OK VERIFY | DID: compiled circularity theorem | RESULT: residual_nonneg_of_collision_le_free rc0; allowed axioms | D: return NMC
+[2026-07-10T23:01:37Z] > PLAN | NEXT: retarget harmful positive-capacity mixed-component extractor, avoiding residual-source circularity.
+[2026-07-10T22:58:55Z] OK VERIFY | DID: compiled 3 collision/residual modules | RESULT: rc0; allowed axioms; forbidden0; signed residual exact | D: source matching
+[2026-07-10T22:58:55Z] FAIL VERIFY | DID: tested Pro residual matching | RESULT: F=C=Need=1 passes Pro map but spends 1/2 from residual0 | D: no source reuse
+[2026-07-10T22:58:55Z] > ATTACK | NEXT: exact-test corrected Collision+Need-to-Free matching per real component and derive the residual inequality.
+[2026-07-10T23:06:41Z] FAIL VERIFY | DID: audited Hall scaling | RESULT: Pro map omitted capQ/25; Free12 Need1 spends 1/2 from budget12/25 | D: factor25
+[2026-07-10T23:06:41Z] OK VERIFY | DID: compiled 2/25 micro-source tokenization | RESULT: rc0; exact 25Need<=2(Free-Collision); SHA 6509C4F9 | D: scaled inequality
+[2026-07-10T23:08:12Z] FAIL ATTACK | DID: gated scaled residual route on real N167 lock | RESULT: Need 7/2 > residual bank 29/25; exact deficit117/50 | D: DEAD collision
+[2026-07-10T23:08:12Z] > PLAN | NEXT: return to harmful positive-capacity mixed-component extraction and use N167 to identify the surviving bank mechanism.
+[2026-07-10T23:10:08Z] OK VERIFY | DID: built PositiveCapacityMixedPath | RESULT: rc0; simple harmful path extractor compiled | D: frontier narrowed
+[2026-07-10T23:10:08Z] > ATTACK | NEXT: ask GPT-Pro for real path-to-half-layer theorem and classify sink kinds
+[2026-07-10T23:12:57Z] > ATTACK | NEXT: audit Pro's fractional half-layer against real RootLayer/door APIs and test primitive-component split-or-root.
+[2026-07-10T23:19:28Z] OK VERIFY | DID: built TypedPositiveCapacityMixedPath | RESULT: rc0; SHA 673FDF97; axioms allowed; token hits 0 | D: Door/VS removed
+[2026-07-10T23:22:36Z] > VERIFY | NEXT: Compile the exact connected-positive-component counterexample and isolate the compatibility missing from split-or-root.
+[2026-07-10T23:24:45Z] OK VERIFY | DID: Built PositiveCouplingConnectedNotRootCounterexample.lean | RESULT: rc=0; SHA256=4DD84DDB3FB05A06A0972CE2BA569FC80FAC6A41316A53C9DE6FC65DAFB5F308; allowed axioms only | D: connected-coupling shortcut DEAD
+[2026-07-10T23:24:45Z] > ATTACK | NEXT: Prove the repaired primitive-compatible legal-component extraction theorem and align it with the R18 transfer frontier.
+[2026-07-10T23:25:46Z] OK VERIFY | DID: built PositiveCouplingSideInvariant | RESULT: rc0; SHA 82C14CE7; axioms allowed; token hits 0 | D: NMC now two local checks
+[2026-07-10T23:29:28Z] FAIL ATTACK | DID: tested typed inside-owner reduction on N167 | RESULT: one edge port is legal to VS at both endpoints | D: conditional route DEAD
+[2026-07-10T23:30:20Z] OK VERIFY | DID: built TypedFullBankSources | RESULT: rc0; kind-indexed Door checker; allowed axioms; token hits 0 | D: R13 typed seam
+[2026-07-10T23:30:46Z] OK ATTACK | DID: added DualWeightedHallReduction | RESULT: weighted failure -> minimal closed scaled Hall shore; SHA 606BBE69 | D: may replace closedHall
+[2026-07-10T23:32:25Z] OK ATTACK | DID: Proved primitive-compatible unique-root extraction | RESULT: PrimitiveCompatibleRootExtraction.lean rc=0; SHA256=1D666F32C4B6F6489BAF869659C9ABF1BAC2F04F659A3AA5F4783E1B8154CAD4 | D: missing compatibility exact
+[2026-07-10T23:32:25Z] OK VERIFY | DID: Compiled R18 induced-geodesic row-intersection theorem and off-row corollary | RESULT: InternalOffSupportRowIntersection.lean rc=0; SHA256=0E6AEAF85BCE57026156AABBDECD1376D4CC50514A8029E97644003EE15959FE; allowed axioms only | D: R18 lemma closed
+[2026-07-10T23:36:32Z] OK VERIFY | DID: built DualWeightedW3Skeleton | RESULT: rc=0; axioms=[propext, Classical.choice, Quot.sound]; SHA A2419F9F0F67 | D: closed-Hall removed at scaled LP
+[2026-07-10T23:40:33Z] > VERIFY | NEXT: build DualWeightedPrimitiveW3 to test scaling invariance of primitive-root extraction
+[2026-07-10T23:43:00Z] > ATTACK | NEXT: Exact-audit R19 base-only transfers on the 3892 fixture by classifying two-vertex switch losses and common-bad-neighbour source pairs.
+[2026-07-10T23:45:34Z] OK VERIFY | DID: built DualWeightedPrimitiveW3 | RESULT: rc=0; allowed axioms; SHA 952D1976307F | D: scaling preserves primitive-root extraction
+[2026-07-10T23:47:29Z] > VERIFY | NEXT: build exact scaled closed-root exchange certificate interface and W3 consumer
+[2026-07-10T23:48:48Z] OK VERIFY | DID: built DualWeightedClosedRootExchange | RESULT: rc=0; allowed axioms; SHA 9A28474BB0D1 | D: exchange reduced to exact cut+reserve identity
+[2026-07-10T23:50:11Z] OK ATTACK | DID: exact-audited R19 base transfer on N3892 | RESULT: 81 distinct permanent-Free sources; common-blue adjusted surplus=56; common-bad relation fails; gate SHA=4AA7623E | D: R19 relation corrected
+[2026-07-10T23:50:40Z] > ATTACK | NEXT: GPT-Pro derive or falsify exact scaled cut/reserve exchange identity from R18 transfer traces
+[2026-07-10T23:52:28Z] > VERIFY | NEXT: build typed own-Door to HalfLayerRouted adapter
+[2026-07-10T23:52:56Z] > ATTACK | NEXT: audit Pro fractional half-layer against real APIs and N167/N3892 exact transfer scaling.
+[2026-07-10T23:55:30Z] FAIL ATTACK | DID: audited Pro half-layer theorem | RESULT: algebra already compiled in RootLayerHalfSqueeze+DisjointPetalHalfSqueeze; real petal/Door extractor absent | D: no wall change
+[2026-07-10T23:59:30Z] > VERIFY | NEXT: exact-test corrected base-only transfer matching on the locked N167 cage at half-slot scale.
+[2026-07-11T00:01:06Z] FAIL VERIFY | DID: gated base-only R19 matching on N167 component | RESULT: Hall set owners 0,23,24,25 has 171 demands vs146 sources; deficit25; SHA 32992D8A | D: prune/extra transfer required
+[2026-07-11T00:04:00Z] > ATTACK | NEXT: classify N167 Hall-deficient source pairs by adjusted switch surplus and row geometry.
+[2026-07-11T00:07:13Z] OK ATTACK | DID: classified all common-neighbor color patterns on N167 | RESULT: BB+MM leaves7 unmatched; adding mixed B/M gives 926/926 exact matching; SHA 45288CE4 | D: mixed-rule soundness frontier
+[2026-07-10T23:56:30Z] OK VERIFY | DID: built TypedOwnDoorHalfLayer | RESULT: rc=0; allowed axioms; SHA 793F8B47926D | D: R13 typed Door fast path compiled
+[2026-07-10T23:57:55Z] > ATTACK | NEXT: run exact R19 3892 base-transfer gate and inspect whether prune is needed
+[2026-07-10T23:59:27Z] OK ATTACK | DID: ran R19 3892 base-transfer gate | RESULT: 81 distinct Free sources pay 43+38 deficits; common-bad relation false | D: use common-blue adjusted surplus
+[2026-07-11T00:01:06Z] > VERIFY | NEXT: build corrected common-blue C5-base transfer terminal checker
+[2026-07-11T00:03:44Z] OK VERIFY | DID: built CheckedC5BaseTransfer | RESULT: rc=0; axioms=[propext, Quot.sound]; SHA 12451978D18A | D: corrected R19 common-blue terminal compiled
+[2026-07-11T00:04:28Z] > ATTACK | NEXT: run exact N167 base-only transfer Hall gate to decide whether prune transport is necessary
+[2026-07-11T00:04:51Z] FAIL ATTACK | DID: ran N167 base-only transfer gate | RESULT: matched 901/926; exact Hall deficiency 25, witness SHA 401a03fa5bcb | D: prune or stronger base relation required
+[2026-07-11T00:05:40Z] > ATTACK | NEXT: rerun N167 base-transfer matching with all 167 vertices eligible as external Free sources
+[2026-07-11T00:06:08Z] OK ATTACK | DID: ran global-scope N167 base gate | RESULT: matched 926/926; 59 external sources; SHA dfe38403ae2b | D: prior deficiency was scope artifact
+[2026-07-11T00:07:46Z] > ATTACK | NEXT: run 48-worker global base-transfer census on unique all-ell5 gamma-min cages through N=10
+[2026-07-11T00:08:18Z] OK ATTACK | DID: global base-transfer census N5-10 | RESULT: 687/687 pass, 0 fail; 15 use external sources; SHA 93584ADDEB3F | D: extend to N11
+[2026-07-11T00:08:18Z] > ATTACK | NEXT: run exact 48-worker order-11 global base-transfer census
+[2026-07-11T00:09:12Z] OK ATTACK | DID: order-11 unique-row global base census | RESULT: 4016/4016 pass; 184 use external sources; 0 fail | D: test nonunique bundles
+[2026-07-11T00:09:12Z] > ATTACK | NEXT: test deterministic first-row selection on all-ell5 nonunique cases N5-10
+[2026-07-11T00:11:04Z] FAIL ATTACK | DID: ran global R19 base transfer, first-row policy, N5-10, 48 workers | RESULT: 6343 pass, 78 fail; first fail G?`F`w deficiency 6 | D: fixed-row route false
+[2026-07-11T00:11:04Z] > ATTACK | NEXT: exact-enumerate coherent shortest-row choices on all 78 first-row failures
+[2026-07-11T00:12:19Z] FAIL ATTACK | DID: exact-enumerated all shortest-row tuples, global R19 base relation, N5-10 | RESULT: 6412 pass, 9 fail; smallest g6 G?q`qg, deficit 12 | D: base-only shortcut dead
+[2026-07-11T00:12:19Z] OK ATTACK | DID: added exact exists-row policy to R19 global census | RESULT: _codex_r19_global_base_census.py SHA 57C0DEBF88D086AE6EB6D618DA68D6A24E57DC368FB73AFD72E3A45851886B24 | D: 9-obstruction frontier
