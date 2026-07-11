@@ -32052,3 +32052,5 @@
 [2026-07-11T00:11:04Z] > ATTACK | NEXT: exact-enumerate coherent shortest-row choices on all 78 first-row failures
 [2026-07-11T00:12:19Z] FAIL ATTACK | DID: exact-enumerated all shortest-row tuples, global R19 base relation, N5-10 | RESULT: 6412 pass, 9 fail; smallest g6 G?q`qg, deficit 12 | D: base-only shortcut dead
 [2026-07-11T00:12:19Z] OK ATTACK | DID: added exact exists-row policy to R19 global census | RESULT: _codex_r19_global_base_census.py SHA 57C0DEBF88D086AE6EB6D618DA68D6A24E57DC368FB73AFD72E3A45851886B24 | D: 9-obstruction frontier
+[2026-07-11T00:24:22Z] OK GATE | DID: read completed GPT-5.6-Pro scaled exchange derivation | RESULT: sink terms telescope; first uncontrolled term R_boundary=cutGap-unmatchedPrice | D: exact boundary gate isolated
+[2026-07-11T00:24:22Z] > ATTACK | NEXT: compile exact scaled deficiency/cut-gap decomposition and boundary-bound theorem

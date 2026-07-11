@@ -260,3 +260,19 @@
   atlas-derived cut rule achieving Lambda_d(X) >= M_d - R_D2 - R_cap, or a canonical D>G_max falsifier.
 - /goal arm FAILED at 4765 ch (limit 4000); 3654-ch GOAL v6-short delivered to user in text box
   (scratchpad goal_v6_short.txt); /loop v6 ARMED (dynamic mode, this session).
+
+## TICK-71b (2026-07-11T03:3xZ) — 311 GATED (30/30) + R21 harvested; certificate architecture COMPLETE both layers
+- 311 CE: _claude_r20_311_gate.py 30/30 PASS (SHA 0d4a2b93a3…) — base-only Hall GATED-FALSE, rowCompanion
+  adopted, 311 = fixture #7. Codex lanes posted (CheckedRowCompanionBaseTerminal; scaledDeficiency
+  decomposition compile).
+- R21 (exit c): PricedCutCert = ONE allowed-cut key; checker recomputes all; soundness +
+  noCheckedDual_of_pricedCut (D1 row of the supplied cut itself) compile-ready; routing-independence
+  identity (1) = no transfer rearrangement can affect the margin. PROVE-OR-BREAK, finite+irreducible:
+  max_{X allowed} Lambda_d(X) >= Def_d(P) per canonical instance (G_atlas/G_all trichotomy; G_all<0 =
+  decisive W3 falsifier spec).
+- GATE QUEUE NOW: (1) h_boundary gate impl (Def vs G_atlas vs G_all) on fixtures 167/175/311/3892 —
+  NEEDS concrete wall-LP instantiation from real cages (allowed-cut family + checked duals from the W3
+  skeleton; reuse R11-era half-layer LP extraction); (2) staged 4-pattern matching gate; (3) compile
+  PricedCutCert stack (mine or Codex — statements self-contained); (4) Codex 235KB delta full-text gate
+  (marker 2171725); (5) R13/14/15/18 CE scripts; (6) chart re-gate monitor.
+- RULE FOR R22: no further theory retasks until BOTH gates produce fixture data (falsifier-first).

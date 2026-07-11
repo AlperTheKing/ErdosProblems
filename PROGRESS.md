@@ -2868,3 +2868,4 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-11T03:14:38] ► WALL-R21 | NEXT: sent h_boundary cut-construction retask to GPT-5.6 Pro (construct allowed X with Lambda_d(X)>=Def_d(P) from atlas/D1-row summing, or D>G_max falsifier, or minimal priced trace field)
 [2026-07-11T03:18:11] ✔ GOAL-LOOP | DID: GOAL v6.1 pure-ASCII 3755 bytes (limiter counts BYTES; unicode overflowed 4000) + folded R20 (311 CE, rowCompanion, h_boundary) | RESULT: GOAL_LOOP.md updated | Δ: none
 [2026-07-11T03:24:15] ✔ GATE-311 | DID: independent exact gate of R20 311-vtx corridor CE | RESULT: _claude_r20_311_gate.py 30/30 PASS rc=0 SHA 0d4a2b93 | Δ: base-only transfer Hall GATED-FALSE; rowCompanion pattern adopted; 311 = new fixture
+[2026-07-11T03:26:18] ✔ WALL-R21 | DID: harvested R21 (~10 min turnaround, 8536 ch) | RESULT: problems/23/writeup/WALL_ATTACK_R21_GPTPRO56.md | Δ: minimal field = PricedCutCert (ONE cut key); routing terms cancel; wall = G_all>=Def_d(P) finite gate
