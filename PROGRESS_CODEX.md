@@ -32182,3 +32182,12 @@
 [2026-07-11T06:10:01Z] > VERIFY | NEXT: compile zero-block-load implies ActiveComponentBankHall as the corrected 89-family branch.
 [2026-07-11T06:14:46Z] OK VERIFY | DID: compiled zero-load active-component Hall branch | RESULT: two theorems rc0 SHA ACAAC13C, allowed axioms | D: 89 false demand removed before transfer
 [2026-07-11T06:14:47Z] > ATTACK | NEXT: exact-search active components failing both endpoint Hall and scoped collision transfer.
+[2026-07-11T06:27:53Z] OK ATTACK | DID: active-scoped R23 minimum census N<=11 | RESULT: 70708 graphs, 1085580 tuples scored, 308912 minima, 0 failures | D: test pattern-4 necessity
+[2026-07-11T06:27:54Z] > ATTACK | NEXT: rerun minima without outsideAttachment to isolate whether corrected scope alone closes the census.
+[2026-07-11T06:29:35Z] OK ATTACK | DID: active-scoped minima census without pattern 4 | RESULT: 102405 graphs generated, 308912 minima, 0 failures | D: pattern4 empirically unnecessary after scope
+[2026-07-11T06:29:36Z] > PLAN | NEXT: state and attack active-scoped minimum Hall; retain outsideAttachment as monotone fallback.
+[2026-07-11T06:33:00Z] OK ATTACK | DID: classified all N10 active-scoped failures | RESULT: 283/283 have strict one-row score descent; 0 need two rows | D: candidate one-row exchange lemma
+[2026-07-11T06:33:01Z] > ATTACK | NEXT: run full N11 all-tuple gate to falsify active-scoped one-row exchange completeness.
+[2026-07-11T06:39:40Z] OK ATTACK | DID: classified all active-scoped failures N10-11 | RESULT: 705/705 one-row descents; all kill active comps; all use internal alternative row | D: local-optimality implication
+[2026-07-11T06:39:41Z] > PLAN | NEXT: derive active-scoped Hall from all one-row local-optimality inequalities via finite duality.
+[2026-07-11T06:45:17Z] > ATTACK | NEXT: exact-test whether all 705 scoped Hall failures admit collision-nonincreasing, active-edge-decreasing one-row descent.
