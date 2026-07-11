@@ -94,3 +94,15 @@
   (ii) implement the staged 4-pattern matching gate; (iii) compile scaledDeficiency_cutGap_decomposition
   into BankedWallLP (Codex lane candidate — compile-ready); (iv) h_boundary falsifier gate on fixtures;
   (v) retask R21 = the h_boundary cut-construction question (L2 is now the innermost wall).**]
+
+## [CLAUDE GATE VERDICT 2026-07-11T03:2x — 311 CE FULLY VERIFIED]
+_claude_r20_311_gate.py (SHA 0d4a2b93a351059f2754060cb105a03a876bd89fa618f82f138674348330b69d): 30/30 PASS —
+tri-free; displayed cut = exactly B (1359); maxcut 1359 EXACT (attachment twin-enum 684k configs = 1152;
+core 207 = 39 + 28 gadget 7-cycles at <=6; gluing only at v=9 => additive); Gamma = 2300 min (all 92 bad at
+blue-dist exactly 4; parity + tri-free force dist>=4 in ANY maxcut); 28 core rows UNIQUE; each attachment
+atom 4096 rows ALL through v=9 (unique dist-2/2 middle); T(9)=345, deg_I(9)=2 {0,18}, d_bad(9)=2 {5,13};
+EXACT identity E[F_9]-E[C_9] = -34 = N-T verified through Binom(64,1/64) fractions; BASE-ONLY HALL GAP = 66K
+(obligations 2E[C]+2K vs sameFirst 2E[F] + commonBad 4K, (5,13)/(13,5) permanently Free); rowCompanion
+repair verified (every row has exactly ONE P0 vertex => 56 ordered P0-pairs permanently Free; loss({x,z}) =
+128-16 = 112 >= 0; 33 pairs x 2 halves = 66 = gap). VERDICT: base-only Hall-completeness GATED-FALSE;
+rowCompanion third pattern ADOPTED (repairs with ZERO prune). 311 joins the fixture set.]
