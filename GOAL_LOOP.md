@@ -1,95 +1,99 @@
-# GOAL_LOOP.md — read FIRST on every resume/compaction (GENERAL VERSION v5, updated 2026-07-10 — STRICT-DUAL ERA)
+# GOAL_LOOP.md — read FIRST on every resume/compaction (GENERAL VERSION v6, updated 2026-07-11 — TRANSFER-MATCHING ERA)
 # Volatile state lives in LOOP_STATE.md — read it immediately after this file.
-# Resume flow: (1) this file; (2) LOOP_STATE.md; (3) PROGRESS.md last ~30 lines;
-# (4) MEMORY.md ACTIVE block; (5) newest CODEX->CLAUDE posts; (6) resume the LOOP below.
+# Resume flow: (1) this file; (2) LOOP_STATE.md (latest TICK notes); (3) PROGRESS.md last ~30 lines;
+# (4) MEMORY.md ACTIVE block; (5) newest CODEX->CLAUDE posts from the byte marker; (6) resume the LOOP.
 
 ================================================================================
 GOAL  (the /goal Stop-hook text; ALL FOUR conjuncts must hold before stopping)
 ================================================================================
 Erdős #23 δ=0: prove every triangle-free graph on N vertices satisfies β = e − maxcut ≤ N²/25, via the GERSH
 program (per-bad-edge row bound on B-connected Γ-minimal maximum cuts; GERSH ⟹ Γ ≤ N² ⟹ β ≤ N²/25).
-STANDING CORRECTIONS (all exact-verified; NEVER re-derive a DEAD route): bare support expansion is FALSE
-(24-vtx CE) — BANKED form only (Demand ≤ Door+VertexSlack+C5Base+Prune caps; NO η token in any certificate
-type). DEAD: add-only patching; closure-of-minimal-deficient; W2-as-stated (abstract 2-comp CE);
-root-locality/common-sink (my verified 359-vtx CE); direct root-block split (noDouble CE); universal fiber
-existence (verified 12-row integrality CE, 4·x₅=1, + 662-vtx realization); "fiberless ⟹ bankable".
-Do not stop until ALL FOUR conjuncts hold simultaneously:
-(1) Branch A: MAINTAIN 108/108 certified charts (SHA-pinned ledger, dual-verified aggregate) AND complete the
-    payload/coverage stack: per-chart staged verification ledger (build+probe per chart) for all sharded
-    payload modules + classifier/registry/dispatcher soundness. The single registry-level compile is gated on
-    the COMPACT RE-EMISSION lane (the 81MB-olean/3.4TB disk wall is a PR-blocker until fixed; target ≤~50GB
-    total olean mass, plain `lake env lean` buildable). External-SHA-only is NEVER final.
+STANDING CORRECTIONS (all exact-verified; NEVER re-derive a DEAD route — every entry has a CE or compiled
+countermodel on file in problems/23/writeup/): bare support expansion (24-vtx CE) — BANKED form only
+(Demand ≤ Door+VertexSlack+C5Base+Prune caps; NO η token in any certificate type); add-only patching;
+closure-of-minimal-deficient; W2-as-stated; root-locality/common-sink (359-vtx); direct root-block split
+(noDouble); universal fibers (12-row integrality CE + 662-vtx); "fiberless ⟹ bankable"; strict-dual-split at
+abstract bank (2-atom shared-sink, cage-illegal); strong integral root layer (154-vtx det-2 odd circuit);
+the oddCircuit escape (killed by the half-layer squeeze); IES (118-vtx booster: T(v) can exceed N);
+aggregate-ledger ⟹ routing (typed sources required); unannotated Horn derivations (owner atlas required);
+NO-ACTIVE-COMPONENT (167-vtx); bare COLLISION-TO-TOKEN (collisions are debits in |Free|−|Coll| = N²−25m);
+permanent-Free-as-quantified over all bad edges (175-vtx; the A-SCOPED row-intersection lemma SURVIVES);
+prune-by-Γ-decrease (Γ-minimality points the WRONG way from the chosen cut — prune needs per-step INJECTIVE
+slot transport). Do not stop until ALL FOUR conjuncts hold simultaneously:
+(1) Branch A: MAINTAIN 108/108 certified charts (SHA-pinned, dual-verified aggregate) + complete the
+    payload/coverage stack: per-chart staged verification ledger for all sharded payload modules +
+    classifier/registry/dispatcher soundness; the single registry-level compile is gated on the COMPACT
+    RE-EMISSION lane (the 81MB-olean/3.4TB disk wall is a PR-blocker; target ≤~50GB, plain lake-buildable);
+    final generated-artifact cleanup pass (strip probe commands). External-SHA-only is NEVER final.
 (2) Branch B: layer stack fully compiled with banked Pure-UPO existence discharged by the same one wall;
-    SPEC-2 row partition (component-level EQODL1; rowCoverage ExactlyOne) compiled and wired.
+    SPEC-2 row partition (component-level EQODL1) compiled and wired.
 (3) EXACT VERIFICATION (mine, non-negotiable): rational Fraction/ℚ only; battery pass = annotation never
     proof; every teammate artifact passes MY independent gate (SHA match + rebuild rc=0 + no 'error:' +
-    axioms EXACTLY ⊆ {propext, Classical.choice, Quot.sound} + zero sorry/admit/native_decide/sorryAx) — a
-    RESULT post is a CLAIM until my re-gate verdict; full aggregate re-verify re-run at final assembly;
-    milestones advance ONLY via compiled Lean or exact certificates.
-(4) LEAN COMPLETE + SHIPPED: the whole proof sorry/admit/axiom-free, INCLUDING THE ONE WALL, current form
-    (the converged strict-dual era statement): **W1 NoUnbankableExposedPorts +
-    StrictDualRootCrossingPureLensSplit_exists** (in a reduced minimal-negative-balance cage with a concrete
-    root crossing, a CHECKED STRICT full-bank dual forces a checked ConcretePureLensCageSplit +
-    PureLensBankSingleOwner — the strict dual SELECTS the lens) **+ the finite-Farkas iff** (constructive
-    Fourier–Motzkin over ℚ per the archived blueprint) ⟹ no_rootCrossing_in_minNeg (elimination arms are
-    bookkeeping on compiled modules: split branch via concretePureLensCageSplit → ledgerSep →
-    no_ledgerSep_in_minNeg; banked branch via FullBankRelaxedCoverBundle → Checked FullBankGlobalPackage,
-    whose output interface fullBankGlobalPackage_sound → gammaUpper_from_fullBankGlobalPackage is COMPILED).
-    Wall support already compiled: BankedWallLP(+Restricted), PortHallUncrossing, ClosedShoreExtraction,
-    SPEC-1/SPEC-2, T8 ConcreteCage stack. Plus remaining engineering (M6 provider, extractor seam, T7,
-    compact re-emission), the official erdos_23 bridge (FCBridge compiled), shipped as ONE formal-conjectures
-    PR committed as the USER ALONE (never any Anthropic/Claude co-author trailer). All-or-nothing. The
-    published N≤200 paper stays untouched.
-TERMINAL ALTERNATIVE — THE DECISIVE FALSIFIER (current form): a **RootCrossingDichotomyFalsifier** = exact
-rational, cage-legal configuration with ALL validity predicates + MinNeg + a concrete root crossing +
-EXHAUSTIVE no-concrete-PureLens-split certificate + a CHECKED STRICT full-bank dual (checkDual = true ∧
-StrictGap). Bankable exhibits (my verified 359-vtx +3475 and 662-vtx +6475 cages) do NOT count — they are
-conjecture-consistent. If found: machine-verify via compiled weak duality, archive + memory + user one-liner,
-then stop.
+    axioms EXACTLY ⊆ {propext, Classical.choice, Quot.sound} + zero sorry/admit/native_decide/sorryAx +
+    no #print-axioms probe commands in final sources) — a RESULT post is a CLAIM until my re-gate verdict;
+    full aggregate re-verify at final assembly; milestones advance ONLY via compiled Lean or exact certs.
+(4) LEAN COMPLETE + SHIPPED, INCLUDING THE ONE WALL, current form (transfer-matching era): the
+    per-cage **CheckedTransferMatching** route — Obligations (CollisionHalf ⊔ HitNeed from the exact
+    atomized identity |Free_ω| − |Coll_ω| = N² − 25m) injectively matched into FreeHalf via checked
+    transfer traces (base patterns: same-owner cancellation + common-bad-neighbour c5Base terminals with
+    recomputed switch loss ≥ 0; prune steps only with injective slot transport + local row-rank decrease),
+    generating the banked token family ⟹ compiled EndpointReserveHall ⟹ compiled active-component flow +
+    boundary own-Door routing ⟹ ActiveComponentFullBankCert ⟹ Checked FullBankGlobalPackage (SPEC-1 output
+    interface COMPILED: fullBankGlobalPackage_sound → gammaUpper_from_fullBankGlobalPackage). THE remaining
+    research content: (a) base-only Hall-completeness or the corridor-vertex third pattern / slot-transport
+    theorem; (b) the Codex side-invariant pair (primitive escape-block steps and shared positive
+    c5Base/prune fibers preserve the inside-corner label — NMC's two local one-step obligations). Plus the
+    finite-Farkas iff (FM-over-ℚ blueprint), the FC package provider (remaining top theorem: ∀ finite
+    tri-free Gs, Nonempty (SimpleGraphCertificatePackage Gs)), and remaining engineering (M6 provider,
+    typed-source migration, compact re-emission). Official erdos_23 bridge (FCBridge compiled), shipped as
+    ONE formal-conjectures PR committed as the USER ALONE (never any Anthropic/Claude co-author trailer).
+    All-or-nothing. The published N≤200 paper stays untouched.
+TERMINAL ALTERNATIVE — THE DECISIVE FALSIFIER (current form): the transfer-aware matching gate fails on a
+canonical real cage — an exact minimum-cut certificate with obligation set Z, |Z| > |ReachFree(Z)| under the
+FULL checked transfer relation (all base patterns + all valid slot-transported prunes), with every
+structural predicate verified (tri-free, genuine max cut, Γ-min, B-connected, ten facts, cage legality,
+official bank profile). Bankable exhibits (24/167/175/359/662/3892 — all verified conjecture-consistent) do
+NOT count. If found: machine-verify, archive + memory + user one-liner, then stop.
 
 ================================================================================
-LOOP  (the /loop text; STRICT-DUAL ERA — roles + volatile state in LOOP_STATE.md)
+LOOP  (the /loop text; TRANSFER-MATCHING ERA — roles + volatile state in LOOP_STATE.md)
 ================================================================================
-Autonomous Erdős #23 δ=0 proof loop (strict-dual era). ENGLISH ONLY. GENERAL text — ALL volatile state
-(thread URLs, tab IDs, byte markers, lane assignments, P estimates) lives in LOOP_STATE.md; read it every
-tick. ROLES: (a) me (Claude) = coordinator, exact-verification gate (everything enters the ledger ONLY
-through my independent re-verification), Lean formalizer, archivist, prover, falsifier-hunter; (b) Codex
-(5.6 Sol Ultra) = major formalizer + emitter + compute partner (single-writer: posts artifacts+SHAs to
-CODEX_TO_CLAUDE.md; a RESULT post is a CLAIM until my re-gate; lanes via CLAUDE_TO_CODEX.md; current lanes:
-finite-Farkas FM stack per FARKAS_FM_DESIGN_GPTPRO56.md, R7 bookkeeping stack, lane-0 compact re-emission);
-(c) GPT-5.6 Pro (browser thread, URL in LOOP_STATE) = frontier wall prover via Chrome MCP (send = JS-insert
-#prompt-textarea then click send button in a SEPARATE call; harvest = Copy-button click ONCE +
-read_clipboard, fallback chunked innerText, else USER-RELAY; never desktop-click sprees; browser responding
-≠ MCP connected); (d) the user relays replies when faster — treat USER-RELAY as first-class.
+Autonomous Erdős #23 δ=0 proof loop (transfer-matching era). ENGLISH ONLY. GENERAL text — ALL volatile state
+(thread URLs, tab IDs, byte markers, lane assignments, gate queues, P estimates) lives in LOOP_STATE.md;
+read it every tick. ROLES: (a) me (Claude) = coordinator, exact-verification gate (everything enters the
+ledger ONLY through my independent re-verification), Lean formalizer, archivist, prover, falsifier-hunter;
+(b) Codex (5.6 Sol Ultra) = major formalizer + emitter + PARALLEL prover (single-writer: posts
+artifacts+SHAs to CODEX_TO_CLAUDE.md; a RESULT post is a CLAIM until my re-gate — SHA + rebuild + axiom
+probe + token grep EACH; lanes via CLAUDE_TO_CODEX.md; RECONCILE its parallel wall lane with the GPT thread
+every tick — the two frontiers converged once and can fork again); (c) GPT-5.6 Pro = frontier wall prover
+via the IN-APP BROWSER (mcp__Claude_Browser__* tools; tab/thread in LOOP_STATE; send = javascript
+insertText into #prompt-textarea then click send-button in a SEPARATE call; harvest = innerText slices
+~7900 chars when streaming=false; verified recipe); (d) USER-RELAY remains first-class when faster.
 EVERY TICK, in order:
 (0) Read LOOP_STATE.md + PROGRESS.md tail + CODEX_TO_CLAUDE.md delta from the byte marker (+ GOAL_LOOP.md
-    after compaction). Reconcile; never re-derive settled verdicts; never re-tread the DEAD list (in the
-    GOAL above; every entry has an exact-verified CE on file in problems/23/writeup/).
-(1) CRITICAL PATH = THE WALL, strict-dual form: W1 + StrictDualRootCrossingPureLensSplit_exists +
-    finite-Farkas iff ⟹ no_rootCrossing_in_minNeg ⟹ RootedEscapeSqueeze ⟹ compiled Layer B + extractor seam
-    ⟹ Checked FullBankGlobalPackage (SPEC-1 output interface COMPILED). Attack modes, rotated: (i) frontier
-    deductive (dual-guided lens selection via complementary slackness — the dual's β-positive short edges /
-    γ-positive ports select the split; noDouble needed only for dual-positive rows); (ii) the
-    RootCrossingDichotomyFalsifier search on abstract cage-legal configurations (dual-LP per candidate,
-    exact rational, like the 735-config search); (iii) certificate construction on structured families
-    (endpoint-half fast path); (iv) multi-agent Workflows (AUTHORIZED) when breadth beats depth. Compute ≤64
-    threads HARD CAP shared with Codex.
+    after compaction). Reconcile ALL THREE frontiers (my ledger, Codex lane, GPT thread); never re-derive
+    settled verdicts; never re-tread the DEAD list (in the GOAL above).
+(1) CRITICAL PATH = THE WALL, transfer-matching form (GOAL conjunct 4): base-only Hall-completeness /
+    corridor-vertex question + the side-invariant pair + slot-transport theorem if needed. Attack modes,
+    rotated: (i) frontier deductive (in-app browser consults; single highest-leverage question per retask;
+    demand constructions against the EXISTING compiled surface, no invented APIs); (ii) the transfer-aware
+    falsifier gate (bipartite matching with orbit classes) on fixtures FIRST (167/175/3892) then census;
+    (iii) certificate construction on structured families; (iv) multi-agent Workflows (AUTHORIZED) when
+    breadth beats depth. Compute ≤64 threads HARD CAP shared with Codex.
 (2) Consult cadence: harvest any landed reply FIRST (EXACT-GATE every checkable claim, falsifier-first —
-    six route-drafts died to cheap CEs in two days, the discipline works; archive verbatim-or-marked to
-    problems/23/writeup/ as WALL_ATTACK_R<n>), then retask with the single highest-leverage open question;
-    demand constructions/certificates/Lean-ready statements against the EXISTING compiled surface (no
-    invented APIs), never vibes.
+    ~18 route-drafts died to cheap CEs so far, the discipline works; archive verbatim-or-marked to
+    problems/23/writeup/ as WALL_ATTACK_R<n>), then retask.
 (3) VERIFICATION GATE (mine): every quantitative claim gets an exact rational gate or Lean compile before
     the ledger; every teammate module gets independent rebuild + exact axiom-subset + token grep; every CE
     gets brute-force verification before it kills a lemma; SHAs verified on all artifacts.
 (4) LEAN (continuous): harness = lake env lean --root=problems/23/lean --o=<olean>, cwd=formal-conjectures,
     LEAN_PATH=tmp/claude_lean_o_base_v1, SINGLE build dir (dep oleans in the FIRST entry); green = rc=0 AND
     no 'error:'; grep tokens; axioms EXACTLY ⊆ {propext,Classical.choice,Quot.sound}. Honest
-    named-hypothesis obligations, NEVER a sorry. Invariant: everything compiled except the wall statement.
-(5) ENGINEERING LANES: staged per-chart re-gate (ledger-based, disk-guarded; ChartPayloads FROZEN for Codex
-    until my verdicts); lane-0 compact re-emission (PR-blocker); Farkas FM stack; R7 bookkeeping stack
-    (endpointHalf cover + Loff≥1 + trichotomy + classifier + checker APIs); extractor seam; M6 provider; T7;
-    1-in-10 documentation.
+    named-hypothesis obligations, NEVER a sorry. Invariant: everything compiled except the wall statements.
+(5) ENGINEERING LANES: Codex module gating batch (queue in LOOP_STATE); staged per-chart re-gate
+    (ledger-based, disk-guarded; ChartPayloads FROZEN until verdicts); lane-0 compact re-emission
+    (PR-blocker); Farkas FM stack; typed-source migration; FC package provider seam; M6 provider; final
+    probe-cleanup regeneration; 1-in-10 documentation.
 (6) BOOKKEEPING every tick: PROGRESS.md protocol lines (►/✔, ≤200 chars, verifiable RESULT,
     'progress/promising' banned); LOOP_STATE.md updates incl the mailbox byte marker; memory on
     milestones/verdicts/pivots; checkpoint-commit as the USER ALONE.
@@ -103,5 +107,5 @@ EVERY TICK, in order:
     rebuilds + token greps + axiom probes of ALL modules in the final assembly, the ONE formal-conjectures
     PR (user-alone commits, official erdos_23 bridge) + paper package, surface for the send decision.
 (10) Re-arm ScheduleWakeup (~900-1800s idle; ~270s only when actively polling) with THIS SAME /loop text
-    verbatim. Do not stop until the /goal's four conjuncts hold or the decisive
-    RootCrossingDichotomyFalsifier is documented and surfaced.
+    verbatim. Do not stop until the /goal's four conjuncts hold or the decisive transfer-gate falsifier is
+    documented and surfaced.
