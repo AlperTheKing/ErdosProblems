@@ -95,6 +95,7 @@ def analyze_graph(g6):
     sizes = tuple(len(family) for family in families)
     hist = Counter()
     failures = 0
+    exceptions = []
     for choice in product(*(range(size) for size in sizes)):
         rows = tuple(families[i][choice[i]] for i in range(len(choice)))
         old_flow = full_owner_flow(
@@ -149,7 +150,7 @@ def analyze_graph(g6):
         candidate = min(
             candidates,
             key=lambda item: (
-                not item[13],
+                not item[12],
                 len(item[5]["activeComponents"]) != 0,
                 item[0], item[1], item[2],
             ),
@@ -185,7 +186,26 @@ def analyze_graph(g6):
             "exists.allNewVerticesInOldActiveComponent="
             f"{bool(existential['allNewVerticesInOldActiveComponent'])}"
         ] += 1
-    return {"status": "eligible", "order": n, "failures": failures, "hist": dict(hist)}
+        if distance != 4:
+            exceptions.append({
+                "g6": g6,
+                "choice": list(choice),
+                "badEdges": [list(e) for e in info["M"]],
+                "deficientOwners": sorted(shore),
+                "oldRow": list(rows[index]),
+                "newRow": list(new_row),
+                "oldActive": [list(e) for e in sorted(old_structure["active"])],
+                "oldSupport": [list(e) for e in sorted(old_structure["support"])],
+                "component": sorted(component),
+                "activeDistance": distance,
+                "edgeTypes": [active_count, support_count],
+                "deltaCollision": new_collision - old_collision,
+                "deltaActive": new_active - old_active,
+            })
+    return {
+        "status": "eligible", "order": n, "failures": failures,
+        "hist": dict(hist), "exceptions": exceptions,
+    }
 
 
 def positive(value):
@@ -206,6 +226,7 @@ def main():
     graph6, generated = graph6_for_orders(args.min_order, args.max_order)
     total = Counter()
     status = Counter()
+    exceptions = []
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
         for result in pool.map(analyze_graph, graph6, chunksize=16):
             status[result["status"]] += 1
@@ -213,12 +234,14 @@ def main():
                 continue
             total["failures"] += result["failures"]
             total.update(result["hist"])
+            exceptions.extend(result["exceptions"])
     print(json.dumps({
         "orders": [args.min_order, args.max_order],
         "workers": args.workers,
         "generatedGraphs": generated,
         "status": dict(status),
         "result": dict(sorted(total.items())),
+        "exceptions": exceptions,
     }, sort_keys=True, separators=(",", ":")))
     assert total["failures"] == total["exists.allNewVerticesInOldActiveComponent=True"]
     return 0

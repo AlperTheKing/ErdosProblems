@@ -32194,3 +32194,9 @@
 [2026-07-11T06:46:58Z] OK ATTACK | DID: exact N10-11 monotone-descent census | RESULT: 705/705 failures have collision-nonincreasing, active-decreasing one-row move | D: monotone exchange frontier
 [2026-07-11T06:46:59Z] > PLAN | NEXT: reduce scoped Hall at a canonical minimum to the monotone one-row exchange lemma using compiled score arithmetic.
 [2026-07-11T06:50:16Z] > ATTACK | NEXT: classify the active-component and deficient-shore anatomy of all 705 monotone one-row descents.
+[2026-07-11T06:53:17Z] FAIL ATTACK | DID: first refined descent-anatomy run | RESULT: tuple-index error before verdict | D: fixed analyzer index 13->12; rerun unchanged gate
+[2026-07-11T06:54:42Z] OK ATTACK | DID: classified 705 component-internal descents | RESULT: all failures have one active tree; 691 path4, 14 path6/8; 705 internal moves kill it | D: tree-exchange frontier
+[2026-07-11T06:54:43Z] > ATTACK | NEXT: derive the one-row exchange from a deficient shore inside a single active tree, including the 14 support-shortcut cases.
+[2026-07-11T06:58:24Z] > VERIFY | NEXT: run exact order-12 active-scoped canonical-minimum Hall census with 64 workers.
+[2026-07-11T06:59:27Z] FAIL VERIFY | DID: launched order-12 gate at 64 workers | RESULT: Python Windows ProcessPool limit is 61; no graphs tested | D: rerun at 61
+[2026-07-11T07:11:33Z] FAIL VERIFY | DID: ran order-12 gate 11m at 61 workers | RESULT: one graph serialized the ordered batch while 60 workers idled; run stopped | D: preflight products then shard straggler
