@@ -33028,3 +33028,10 @@
 [2026-07-11T22:10:18Z] > VERIFY | NEXT: read latest Fable mailbox, compile LiveMiddleSwapCrossOuter, and bind corrected raw-swap census to production row geometry
 [2026-07-11T22:11:26Z] FAIL VERIFY | DID: first LiveMiddleSwapCrossOuter build | RESULT: five Fin.ext substitution errors; no mathematical gate failure | D: direct substitution patch
 [2026-07-11T22:14:05Z] OK VERIFY | DID: compiled row adapter and replayed t4 cross-outer gate | RESULT: axioms propext/Quot.sound; 576 circuits/4 types/0 pairs; SHA 79db75b9 | D: t4 graph exclusion
+[2026-07-11T22:23:19Z] > COMPUTE | NEXT: build rooted t5 CP-SAT harness fixing live swap core; search exact 25/24 path-realizable deletion-SDR circuits with <=8 workers
+[2026-07-11T22:25:53Z] FAIL COMPUTE | DID: first t5 L10/R8 rooted run reached candidate | RESULT: verifier stopped at missing NetworkX is_triangle_free API before acceptance | D: explicit triangle-count repair
+[2026-07-11T22:27:57Z] OK COMPUTE | DID: exact-found and independently replayed rooted t5 support circuit | RESULT: 18v/24 support/25 atoms/all deletion SDR24/live swap; SHA a8eeca69 | D: maxcut/eligibility required
+[2026-07-11T22:30:02Z] > COMPUTE | NEXT: exact-extend t5 hit to N25 using triangle-free ambient blue locks, complete-row preservation, and lazy all-switch maxcut separation
+[2026-07-11T22:39:46Z] OK COMPUTE | DID: rejected all ambient extensions of first t5 hit | RESULT: all 8 splits CP-SAT INFEASIBLE; independent CaDiCaL UNSAT; SHA ada85054 | D: maxcut is first violated invariant
+[2026-07-11T22:40:56Z] > COMPUTE | NEXT: search rooted t5 support/circuit hits on remaining 18-vertex shore splits and compare maxcut-row obstruction
+[2026-07-11T22:44:05Z] OK COMPUTE | DID: sampled remaining 18v rooted t5 splits | RESULT: exact hits at 9+9 and12+6; both all 8 ambient splits CaDiCaL UNSAT; 11+7 no hit/10 | D: repeated maxcut-row obstruction

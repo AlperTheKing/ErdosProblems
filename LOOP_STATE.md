@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T07:25 (local) — TICK-98
+# Last update: 2026-07-12T08:05 (local) — TICK-99
 
+## TICK-99 (2026-07-12T08:0xZ) — R46: NO ALL-t CLOSURE; CODEX t5: TRIANGLE-FREE CIRCUIT EXISTS BUT DIES AT
+## MAXCUT-vs-ROW-PRESERVATION; NEW WALL = SWITCH-DEFICIT TENSION; R47 SENT
+- R46 harvested+archived: cycle-space per-owner t-1 CORRECT (fullyCoveredOwner_cycleRank_ge compile-ready;
+  H-v connected) but k=2 floor is ONLY t-1 (K_{2,t} shares all cycles; exact mu(H) = mu(H-O)+kt-k+1-c,
+  2c<=kt); crossover closes only t=3; t=4 needed its catalogue. t=5: |V| in [14,21] (k=2; Mantel 14, at 14
+  only (9,5) split) / [14,19] (k=3); coincidence budget s+a+b+d >= 4t+5-t^2 VACUOUS at t=5. GPT 18-vtx
+  near-candidate (L={v,m,a,b0..4}, R={x0..4,y0..4}) passes everything EXCEPT 30 atom triangles (K5 on b's +
+  20 owner triangles). Rooted spec (9 pruning invariants; k=3 ~2.9e6 feasible; k=2 ~9.5e9 needs canonical
+  augmentation). Proposed lemma no_t5_triangleFree_twoOwnerCoveredCircuit; P 4->6.
+- **CODEX (same hour, supersedes): (1) CP-SAT rooted harness FOUND A PATH-REALIZABLE TRIANGLE-FREE t=5
+  25/24 CIRCUIT** (18 vtx L10/R8, 29 atoms avail/25 selected, mult>=3, all 25 deletion-SDRs, live swap rows
+  present; graph6 Q???????F?Y?E{d?KOE??B?B???; NetworkX verifier PASS 65bc9f52) => GPT's t5 lemma FALSE AS
+  STATED (pending my fully-covered-profile check); **(2) THE SAME CANDIDATE DIES AT MAXCUT**: all 8 ambient
+  splits of its 7 outside vertices exactly UNSAT (CaDiCaL 468-1054 vars; decisive switch family = 24 bads /
+  3 support edges => 21 blue crossings demanded, each creating forbidden new shortest rows; verifier
+  ada85054). FIRST-VIOLATED-INVARIANT: MAXCUT DOMINATION vs COMPLETE-ROW PRESERVATION. One-candidate kill.
+- R47 SENT (3,449 ch): the general SWITCH-DEFICIT lemma (heavy-bad/light-support families forced by
+  Mantel-tight atom concentration; D(S) = dM(S) - dB_support(S) vs max addable blue without new rows) OR
+  cheap-switch-geometry characterization + all-t scale verdict + production-alternative ruling.
+- MY GATE QUEUE: t5 hit verifier replay (65bc9f52) + 8-splits UNSAT replay (ada85054) + CNF spot-check +
+  fully-covered-profile check on the hit; LiveMiddleSwapCrossOuter axiom probe; N=94; ablation. CODEX LANES:
+  rooted sweep continues (accumulate first-violated-invariants; ANY survivor passing ambient audit =>
+  falsifier hunt gets real); k=3 exhaustion; 8-splits methodology frozen as template. Marker 2600338.
 ## TICK-98 (2026-07-12T07:2xZ) — T=4 CLOSED UNCONDITIONALLY (THREE ROUTES, LEDGER FACT); P=4%; R46 =
 ## GENERAL-t CYCLE-SPACE CROSSOVER
 - **T=4/(k=2) CLOSED, LEDGER**: (i) GPT R45 (archived WALL_ATTACK_R45_GPTPRO56.md, 28m34s): |V|=16 tree kill;
@@ -898,6 +921,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
