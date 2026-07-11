@@ -33047,3 +33047,15 @@
 [2026-07-11T23:12:00Z] > COMPUTE | NEXT: exact-search the production two-state live attachment profile, with unchanged non-live rows, no shared-neighbor/r-count assumptions.
 [2026-07-11T23:20:00Z] OK COMPUTE | DID: exact-tested 1000 general 9+9 supports against live two-state profile | RESULT: 1000/1000 INFEASIBLE; SHA 47bb2de2 | D: bounded only
 [2026-07-11T23:20:00Z] > ATTACK | NEXT: isolate the earliest t5 transition contradiction by toggling multiplicity and deletion-SDR circuit layers.
+[2026-07-11T23:30:19Z] OK ATTACK | DID: implemented R48 four-number local-profile classifier in circuit selector | RESULT: py_compile rc0; classifier-v smoke exact INFEASIBLE | D: frozen t5 lemma now directly gateable
+[2026-07-11T23:30:19Z] > COMPUTE | NEXT: search 1000 no-shared 9+9 supports for a triangle-free 25/24 circuit with one zero-vector local owner profile.
+[2026-07-11T23:36:07Z] FAIL COMPUTE | DID: ran R48 classifier on 298 supports | RESULT: exact triangle-free zero-vector hit at #298; source SHA c1d474d7 | D: frozen support lemma false
+[2026-07-11T23:36:07Z] OK VERIFY | DID: independent NetworkX replay + tuple construction | RESULT: SHA 48ce1638; activeOwner=false; min cut sigma=-20 | D: fallback scope/maxcut gates survive
+[2026-07-11T23:38:00Z] > ATTACK | NEXT: stage exact row-choice/active-flow gate after each zero-vector classifier hit; search for positive-scope falsifier.
+[2026-07-11T23:42:19Z] OK COMPUTE | DID: staged active-flow gate across 350 supports | RESULT: zero positive-scope hits; artifact SHA f0cd4403; bounded only | D: fallback alive
+[2026-07-11T23:43:26Z] > COMPUTE | NEXT: scan 5000 no-shared 9+9 supports with R48 classifier plus exact active-scope row/flow gate; 8 workers, PID 104400.
+[2026-07-11T23:48:00Z] OK VERIFY | DID: independently encoded fixed-hit profile+active reachability in CNF | RESULT: CaDiCaL195 UNSAT, 1680 vars/5239 clauses; SHA a8a160d5 | D: none
+[2026-07-11T23:49:47Z] FAIL COMPUTE | DID: stopped unfiltered 5000-support scan | RESULT: no checkpoint artifact | D: sound degree-2 scope-vacuity filter added
+[2026-07-11T23:49:47Z] > COMPUTE | NEXT: scan 5000 supports with active endpoint degree>=3 plus classifier and active-flow gates; 8 workers, PID 56812.
+[2026-07-11T23:53:00Z] FAIL COMPUTE | DID: stopped generic active-scope scan | RESULT: no checkpoint artifact | D: zero-vector hit active endpoint is not on live swap
+[2026-07-11T23:53:00Z] > COMPUTE | NEXT: scan 5000 supports with classifier active fixed to rooted live x; 8 workers, PID 67496.

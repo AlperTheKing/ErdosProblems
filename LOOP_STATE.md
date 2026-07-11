@@ -1,6 +1,30 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T09:20 (local) — TICK-101
+# Last update: 2026-07-12T09:55 (local) — TICK-102
 
+## TICK-102 (2026-07-12T09:5xZ) — TRIANGLE LEMMA FALSIFIED (#298); FALLBACK EXACT (ALL-ROW SCOPE-VACUITY);
+## LIVE LEMMA = t5_triangleFree_localProfile_is_scopeVacuous; R50 = TAIL-STARVATION / LATENT-MATCHING
+- **ENGINE: t5_localProfile_forces_badTriangle EXACTLY FALSIFIED** — zero-vector triangle-free 25/24 circuit
+  at 9+9 rooted support #298 (graph6 Q??????wE_[?EGs?D_@A?C_B???; 297 prior infeasible; classifier (0,0,0,0);
+  full profile reconstructed + independently verified 017D1E44/48ce1638). **FALLBACK SURVIVES EXACTLY**: the
+  hit is scope-vacuous OVER ALL ROW CHOICES (CP-SAT INFEASIBLE f5c0cbca + CaDiCaL UNSAT 1680v/5239c
+  a8a160d5); displayed cut fails maxcut (sigma -20); staged sweep rejects ALL local-profile circuits at
+  active scope through 350 supports (f0cd4403, bounded). LIVE LEMMA: t5_triangleFree_localProfile_is_
+  scopeVacuous. My replay queue: c1d474d7/48ce1638/f5c0cbca/a8a160d5/f0cd4403.
+- R49 harvested+archived w/ overlay: endpoint trichotomy (Types 0/1/2, exact exclusion sets); **ORDER-14
+  CLOSED** (4-atoms-on-3-vertices; Mantel-K44-degree) => range 15-21; clustering+Mantel cannot close 15-21
+  (abstract tri-free pattern); two-owner doubling adds NOTHING (shared coverage orientations = the bounce;
+  floors 14/19 <= 25); exact active-scope criterion (incident capture I-path >= 3, remote >= 4;
+  degreeOneProfile_active_iff_tailCapturesBad); disjunction shell triangle_or_scopeVacuous (triangle branch
+  now dead standalone). P(GPT) 4 -> 3%.
+- R50 SENT (3,231 ch): prove scope-vacuity via circuit completion — (1) TAIL STARVATION: latent edges
+  (F* \ S_omega) — do they form a MATCHING in tri-free profile circuits (then tail radius 1 => capture >= 3
+  impossible — t-uniform!); (2) separator construction from profile data (cut-certificate form; asked Codex
+  to extract the #298 CaDiCaL cut certificate); (3) full t=5 closure chain + t >= 6 scaling + enumeration
+  fallback shape.
+- SWEEP DIRECTIVES posted: R49 gate-record format (type-word + tail classification); per-split exhaustion
+  totals; ACTIVE hit => immediate post (falsifier path: second owner + matching + ledger + cheap-geometry);
+  k=3 same staging. GATE QUEUE: R50 harvest; 5 artifact replays; order-14 lemma compile; N=94; ablation.
+  Marker 2609067.
 ## TICK-101 (2026-07-12T09:2xZ) — R48: PROFILE = FOUR-NUMBER CLASSIFIER; FROZEN LEMMA
 ## t5_localProfile_forces_badTriangle (ENGINE DECIDES); R49 = ATOM-ENDPOINT GEOMETRY
 - R48 harvested+archived: **T5LocalOwnerProfile ⟺ (e_forced, i_step, d_step, d_cov) = (0,0,0,0)** — exact
@@ -967,6 +991,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
