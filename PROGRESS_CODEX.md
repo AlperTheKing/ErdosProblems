@@ -32293,3 +32293,6 @@
 [2026-07-11T12:08:02Z] > ATTACK | NEXT: prove component/endpoint/row inheritance transport existence and nontrivial-coordinate lemma from real shortest-row geometry.
 [2026-07-11T12:12:54Z] OK VERIFY | DID: narrowed transport frontier to one existential deficient shore | RESULT: failure transport=>negative variation=>minimum Hall rc0 SHA 6919B342; allowed axioms | D: exact quantifiers
 [2026-07-11T12:16:51Z] > VERIFY | NEXT: compile changed-row transport and rerun exact guardrails to validate endpoint-bridge simplification.
+[2026-07-11T12:21:44Z] OK VERIFY | DID: changed-row transport guards+Lean build | RESULT: both fixtures gap0; SHA 5422AED1; axioms allowed triple | D: endpoint branch removed
+[2026-07-11T12:24:58Z] > ATTACK | NEXT: prove changed-row component persistence, reducing transport eligibility to inherited components or row contact.
+[2026-07-11T12:37:31Z] > ATTACK | NEXT: launch dynamic 64-agent Sol-Ultra proof/falsifier portfolio on component transport and nontrivial-coordinate walls.

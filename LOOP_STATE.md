@@ -357,3 +357,17 @@
   RealHallFailureHasScopedScoreOneRowDescent with the 2A+2S fixture mandatory.
 - MY GATE QUEUE: ActiveScopedMinimumExchange B916318F full gate; FEF16105 fixture re-verify; then the
   standing backlog (h_boundary exporter, 175, chart monitor, mailbox tail from 2487252).
+
+## TICK-76 (2026-07-11T15:4xZ) — PARALLEL-DIVERSITY LAYER ADDED (user-approved architecture change)
+- User shared officechai CDC article (GPT-5.6 Sol, 64 subagents, 1h claim). MY FETCH+ASSESSMENT: claim is
+  UNVERIFIED (X announcement, no peer review, no formalization, CDC has withdrawn-proof history); their
+  prompt discipline = ours (blocked-agent marking, adversarial edge-case hunters, no-special-class rules).
+  What we adopt = the missing layer: PARALLEL FRONTIER DIVERSITY via Workflow fan-outs.
+- LAUNCHED: Workflow descent-ce-hunt (task wvdldd781, run wf_ae5f3e90-c4d): 6 construction families
+  (double-star-traffic, multi-graft, rigid-selector-web, circuit-chain, blowup-hybrid, random-structured)
+  hunting an outcome-(iii) CE against RealHallFailureHasScopedScoreOneRowDescent; every agent must
+  write+RUN a standalone exact gate script (_wf_ce_<family>.py); claimed hits go through adversarial
+  verify stage. Notification on completion.
+- R29 still generating at GPT-Pro (2928 descent check + traffic-relief dichotomy).
+- Standing: keep GPT-Pro as deep prover + my exact gates as the only ledger entry point; workflows add
+  breadth, never bypass verification.

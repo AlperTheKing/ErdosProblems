@@ -187,6 +187,12 @@ def component_transport_flow(
     arcs = [(source, group_base + j, amount) for j, (_, _, amount, _) in enumerate(groups)]
     arcs.append((outside, sink, alternative_count * old_outside_demand))
     cell_index = {cell: j for j, cell in enumerate(cells)}
+    touched_groups = 0
+    touched_demand = 0
+    inherited_only_groups = 0
+    inherited_only_demand = 0
+    unanchored_groups = 0
+    unanchored_demand = 0
     for cell, capacity in capacities.items():
         arcs.append((cell_base + cell_index[cell], sink, alternative_count * capacity))
 
@@ -198,7 +204,7 @@ def component_transport_flow(
             v for v, cid in new["activeComponent"].items()
             if cid == component
         }
-        anchors = {
+        inherited_anchors = {
             a for a in owner_set
             if any(
                 old["activeComponent"].get(v) ==
@@ -207,8 +213,18 @@ def component_transport_flow(
             )
         }
         changed_row_vertices = set(old_row) | set(alternative_rows[alternative_id])
-        if new_component_vertices & changed_row_vertices:
+        touches_changed_rows = bool(new_component_vertices & changed_row_vertices)
+        anchors = set(inherited_anchors)
+        if touches_changed_rows:
             anchors.update(owner_set)
+            touched_groups += 1
+            touched_demand += amount
+        elif inherited_anchors:
+            inherited_only_groups += 1
+            inherited_only_demand += amount
+        else:
+            unanchored_groups += 1
+            unanchored_demand += amount
         eligible = set().union(*(by_owner[a] for a in anchors)) if anchors else set()
         for cell in eligible:
             if cell in cell_index:
@@ -223,6 +239,12 @@ def component_transport_flow(
         "outsideCapacity": alternative_count * old_outside_demand,
         "sourceCapacity": alternative_count * sum(capacities.values()),
         "groups": len(groups),
+        "touchedGroups": touched_groups,
+        "touchedDemand": touched_demand,
+        "inheritedOnlyGroups": inherited_only_groups,
+        "inheritedOnlyDemand": inherited_only_demand,
+        "unanchoredGroups": unanchored_groups,
+        "unanchoredDemand": unanchored_demand,
     }
 
 
