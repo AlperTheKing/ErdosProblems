@@ -1,0 +1,5 @@
+import Erdos23Delta0.Gamma.CutTightStarPigeonhole
+import Erdos23Delta0.Gamma.CutTightActiveRotorIncidence
+
+#print axioms Erdos23Delta0.Gamma.CutTightActiveRotorIncidence.FourBadStars.not_ambient_card_nine
+#print axioms Erdos23Delta0.Gamma.CutTightActiveRotorIncidence.three_le_badDegree_of_four_le_blueDegree_of_cutTight

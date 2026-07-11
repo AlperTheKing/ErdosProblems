@@ -32980,6 +32980,10 @@
 [2026-07-11T20:01:20Z] > ATTACK | NEXT: parallelize the live rotor wall into endpoint-source Lean, cut-slack geometry, turnover table, and abstract Hall classification.
 [2026-07-11T23:02:36+03:00] > ATTACK | NEXT: audit the R40 live one-new-edge census and isolate the exact four-state/even-fiber invariant replacing false support monotonicity.
 [2026-07-11T23:13:00+03:00] FAIL ATTACK | DID: opened a fresh Pro consult with the corrected rotor prompt | RESULT: Chrome session expired; no prompt transmitted | D: none
+[2026-07-11T23:19:39+03:00] > VERIFY | NEXT: formalize the 12-bad-edge incidence bound excluding the cut-tight active four-state rotor at N15/M9.
+[2026-07-11T23:25:54+03:00] OK VERIFY | DID: compiled four-star incidence bound | RESULT: M>=12; N15/M9 fully active rotor impossible; SHA 0814A665 | D: t=3 rotor window closed
+[2026-07-11T23:29:05+03:00] OK VERIFY | DID: compiled cut-tight star pigeonhole | RESULT: strong pair or covered detour arithmetic; SHA DD6DA23C | D: weak-free branch removed in tight star
+[2026-07-11T23:31:00+03:00] > ATTACK | NEXT: replay the live family-alternating graft battery exactly with 8 workers and compare canonical payload semantics.
 [2026-07-11T20:02:24Z] > ATTACK | NEXT: formalize static live-detour endpoint FreeHalf/CommonBlueOwner facts in a disjoint Lean module and rebuild exactly.
 [2026-07-11T20:03:15Z] > ATTACK | NEXT: derive exact endpoint cut-slack formulas for live detours and gate the both-weak branch on real graphs.
 [2026-07-11T20:04:05Z] > ATTACK | NEXT: Build exact R39 four-state live turnover enumerator and decide summed Hall inequality versus parity-correct countermodel.
@@ -32991,3 +32995,7 @@
 [2026-07-11T20:12:49Z] > VERIFY | NEXT: independently rebuild LiveDetourEndpointSource, audit forbidden tokens/axioms, and hash the exact artifact.
 [2026-07-11T20:13:59Z] OK VERIFY | DID: built LiveDetourEndpointSource | RESULT: rc0; SHA F2B35F03; both endpoints/halves checked; allowed axioms only | D: sigma+unusedness open
 [2026-07-11T20:15:33Z] OK ATTACK | DID: endpoint-slack derivation + N19 exact falsifier | RESULT: maxcut23, Gamma125, active collision v, sigma(ma)=sigma(mb)=1 | D: positive-defect premise needed
+[2026-07-11T20:38:12Z] OK VERIFY | DID: replayed R44 live graft with 8 workers | RESULT: semantic SHA 799a50aa; 8/8 exact defect 0; graph hits 0 | D: none
+[2026-07-11T20:41:00Z] > ATTACK | NEXT: compile the live four-star slack escape | RESULT: target |M|+sum sigma(square)>=16 and |M|=9 => some sigma>=2
+[2026-07-11T20:43:00Z] FAIL ATTACK | DID: audited first slack theorem | RESULT: carrier already assumed four stars >=3, making nine-edge alternative vacuous | D: weaken carrier
+[2026-07-11T20:45:00Z] OK ATTACK | DID: compiled weak-carrier four-star slack escape | RESULT: |M|+sum loss>=16; |M|=9 => some loss>=2; SHA 3D7C194B | D: t3 escape

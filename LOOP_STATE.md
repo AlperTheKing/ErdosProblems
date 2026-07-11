@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T04:10 (local) — TICK-93
+# Last update: 2026-07-12T04:45 (local) — TICK-94
 
+## TICK-94 (2026-07-12T04:4xZ) — R42: EXACT TRANSPORT LEDGER (ratchet fails, (2,1,0,1) rotates); |M|>=12
+## KILLS FULLY-ACTIVE 4-OWNER WINDOW; SURVIVOR = k<=3 DEFICIENCY BOUNCE; R43 = k=2 KILL-OR-CONSTRUCT
+- R42 harvested+archived (WALL_ATTACK_R42_GPTPRO56.md): ratchet FAILS — minimal neutral ledger (B,U,L,A) =
+  (2,1,0,1) rotates deficiency (stem dies at v incl. THE unmatched half, stem born at m, one new half paid);
+  +-7/9 transfers + support deltas telescope; NO strictly decreasing compiled invariant. **EXACT TRANSPORT
+  IDENTITY: Delta' - Delta = B + L - U - A_reopt** (proof by inspection PASS; U>=1 FORCED at live deg_I=1
+  star detours — v not in A' identity). CheckedDetourTransportLedger + defect_delta = compile lane. Balanced-
+  rotor spec (18)-(22) = COMPLETE falsifier-gate constraints (handed to Codex verbatim). Wall =
+  noExactBalancedFullyCoveredDetourRotor. **GPT P(falsifier) 10 -> 15** (even-fibre ledger internally
+  consistent; scalars satisfiable).
+- **CODEX |M|>=12 INCIDENCE EXCLUSION (my inspection gate PASS + module rebuilt green)**: fully-active
+  4-owner cut-tight rotor forces dM>=3 at each square vertex w/ pairwise edge-disjoint stars => |M|>=12 > 9.
+  FULLY-ACTIVE 4-OWNER WINDOW DEAD. Same counting: k rotating (22)-owners => |M| >= 3k => k <= 3. Survivor =
+  k=2 DEFICIENCY BOUNCE (v,m alternate; forward live detour at v; reverse at m) or tight k=3 (all 9 atoms in
+  stars => self-coverage). MODULES ACCEPTED: CutTightStarPigeonhole DD6DA23C + CutTightActiveRotorIncidence
+  0814A665 (+ dep LiveDetourEndpointSource) — axioms exactly allowed triple.
+- R43 SENT (3,853 ch): (1) incidence extension to k=2 (coverage rows + 6 star atoms + 9/8 circuit on N=15 —
+  force |M|>=10 or vtx>15? circuit hubs as v,m?); (2) SELF-FEEDING LOOP: born stem at m paid by freed cell
+  (m,z) [P1 sameFirst] UNLESS reservation-blocked when the re-activation edge mx IS the freed pair — exact
+  reservation semantics decide bounce-lives vs bounce-starves (the final lemma); (3) k=3 self-coverage
+  nodup/anchoring viability. If all three die: window CLOSED, wall reduces to k<=1 = NO CYCLE.
+- GATE QUEUE: R43 harvest; Codex k=2 incidence + window enumeration + transport-ledger compile + own Pro
+  consult reconciliation; N=94; ablation; micro modules. Marker 2575685.
 ## TICK-93 (2026-07-12T04:1xZ) — R41: STAR THEOREM (sigma-gap CLOSED at cut-tight); t=3 WINDOW; SUPPORT NOT MONOTONE; R42 = DEFICIENCY-ROTATION RATCHET
 - R41 harvested+archived (WALL_ATTACK_R41_GPTPRO56.md): P1 mass pincer FALSE (D_v - P1_v = 10r(v) - 2N +
   deg_I(v) — companions CANCEL; equality scale admits proper deficient shores). **NEW PROVABLE LEMMA:
@@ -781,6 +804,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
