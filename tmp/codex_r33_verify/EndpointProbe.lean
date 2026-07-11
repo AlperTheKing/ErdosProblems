@@ -1,0 +1,6 @@
+import Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring
+
+#print axioms Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_checked
+#print axioms Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_endpoints
+#print axioms Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_length_and_nodup
+#print axioms Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_verts_injective

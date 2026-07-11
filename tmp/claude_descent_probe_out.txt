@@ -1,0 +1,5 @@
+all-anchor score = 23115 (expect 23115)
+PHASE1 single-local delta histogram (640 moves): {-3: 320, -2: 160, 198: 160}
+PHASE2 greedy: 20 adds, best score 23055 (delta -60 vs all-anchor)
+PHASE3 Hall at best tuple: hubs_active=[0, 1, 2] demand_full=19953 reach_full=19925 DEFECT=28 (active_vertices=39)
+result JSON written; elapsed 22.8s

@@ -1,0 +1,4 @@
+import Erdos23Delta0.Gamma.CheckedFullBankLedgerBridge
+
+#print axioms Erdos23Delta0.Gamma.CheckedFullBankLedgerBridge.Compatible.toMicroReservationLedger
+#print axioms Erdos23Delta0.Gamma.CheckedFullBankLedgerBridge.Compatible.connectedSoundness

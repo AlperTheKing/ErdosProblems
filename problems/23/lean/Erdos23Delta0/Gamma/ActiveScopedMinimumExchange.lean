@@ -606,8 +606,11 @@ def RealHallFailureHasScopedScoreOneRowDescent
     CompleteShortestRowDB G c bads →
     HallFailureHasScopedScoreOneRowDescent G c bads
 
-/-- R29-corrected frontier: a Hall-failing row tuple has some lower-scoring
-tuple, with no bound on the number of changed coordinates. -/
+/-- Abstract global-descent interface: a Hall-failing row tuple has some
+lower-scoring tuple, with no bound on the number of changed coordinates.
+The R29 reconstruction shows that this is not a universal graph theorem; the
+definition and finite-minimum bridge remain useful for auditing stronger
+selectors. -/
 def HallFailureHasScopedScoreGlobalDescent
     (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
   ∀ omega : RowChoice bads,
@@ -738,7 +741,8 @@ theorem realMinimumActiveScopedHall_of_scopedScoreDescent
   exact hdescent htri hmax hconn hdb
 
 /-- Global descent is equivalent to excluding a Hall-failing global
-minimizer; this form is the exact survivor after R29. -/
+minimizer.  R29 supplies a counterexample to this hypothesis for the current
+active-scoped score. -/
 theorem allScopedScoreMinimizersHall_of_globalDescent
     (G : GraphData) (c : CutData) (bads : List BadEdgeData)
     (hdescent : HallFailureHasScopedScoreGlobalDescent G c bads)

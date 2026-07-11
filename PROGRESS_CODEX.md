@@ -32422,3 +32422,465 @@
 [2026-07-11T17:19:58+03:00] OK VERIFY | DID: reconstructed R29 product bound | RESULT: baseline 30811, defect 28; conditional mean <29585, margin >1198 | D: 3 invariants open
 [2026-07-11T17:19:59+03:00] OK CHECK | DID: synthesized PHT tests and gaps | RESULT: tmp/fanout/adversarial_search_lead/PHT_REPORT.md SHA B26A129D | D: PHT alive
 [2026-07-11T14:43:15Z] > VERIFY | NEXT: independently replay R29 constructor, all-anchor global lower bound, and all-anchor Hall certificate.
+[2026-07-11T14:48:21Z] FAIL ATTACK | DID: replayed R29 all-anchor global minimum and Hall | RESULT: score 23115, demand 19953, reach 19925, defect 28 | D: DEAD global descent/PHT
+[2026-07-11T14:51:57Z] > ATTACK | NEXT: launch approved external fanout on R29 full-bank reach, scoped-gap invariance, and 28-unit absorber.
+[2026-07-11T15:03:39Z] OK ATTACK | DID: launched 5 R29 full-bank leads; semantics/referee spawned 18 visible children | RESULT: tmp/fanout/r29_fullbank_* | D: none
+[2026-07-11T15:08:49Z] OK VERIFY | DID: exact R29 four-pattern replay | RESULT: outsideAttachment adds 912600 slots; 28 explicit slots close 19953/19925 gap | D: R29 not falsifier
+[2026-07-11T15:15:56Z] FAIL VERIFY | DID: audited R23 semantics | RESULT: loose gate omitted written component equality; strict outsideAttachment adds 0 | D: discard loose repair
+[2026-07-11T15:15:56Z] OK VERIFY | DID: exact corrected common-blue R29 gate | RESULT: 216 new keys; minimum 28-key absorber; flow 19953/19953 | D: corrected transfer survives
+[2026-07-11T15:23:24Z] > PLAN | NEXT: productionize corrected common-blue extended relation and finite Hall equivalence in Lean.
+[2026-07-11T15:24:08Z] > VERIFY | NEXT: build CommonBlueExtendedMatching.matching_nonempty_iff_hall and audit axioms.
+[2026-07-11T15:27:14Z] OK VERIFY | DID: built CommonBlueExtendedMatching + Hall iff | RESULT: rc0; SHA 41251F26; axioms allowed triple; token grep clean | D: relation compiled
+[2026-07-11T15:27:58Z] > ATTACK | NEXT: fan out universal common-blue Hall, dual proof, token adapter, and adversarial cage search.
+[2026-07-11T15:28:28Z] OK ATTACK | DID: launched universal-gate and proof leads; delegated adapter/adversarial children | RESULT: agents 019f51cb-3220, 019f51cb-4627 | D: none
+[2026-07-11T15:30:00Z] > VERIFY | NEXT: audit R29 common-blue Hall with the production 25-microcopy HitNeed scale.
+[2026-07-11T15:31:11Z] OK VERIFY | DID: ran R29 25-microcopy common-blue Hall | RESULT: demand 20025, reach 20141, min margin 0, full-shore margin 116 | D: micro-scale survives
+[2026-07-11T15:31:11Z] > PLAN | NEXT: add explicit bank-scale demand/matching/Hall target to CommonBlueExtendedMatching Lean.
+[2026-07-11T15:31:40Z] > VERIFY | NEXT: build MicroDemand/MicroMatching.microMatching_nonempty_iff_hall and audit axioms.
+[2026-07-11T15:33:31Z] OK VERIFY | DID: built bank-scale MicroMatching Hall iff | RESULT: rc0; SHA 71308BE7; axioms allowed triple | D: exact target compiled
+[2026-07-11T15:39:24Z] > ATTACK | NEXT: run 64-worker N12 medium/heavy common-blue MicroMatching gate on 18,961,358 tuples.
+[2026-07-11T15:40:00Z] > PLAN | NEXT: formalize CommonBlue MicroMatching Hall reduction to full owner shores.
+[2026-07-11T15:43:29Z] OK VERIFY | DID: built CommonBlue micro owner-shore reduction | RESULT: rc0; SHA 056A888A; 4 theorem axioms allowed triple | D: frontier reduced
+[2026-07-11T15:44:19Z] FAIL ATTACK | DID: 61-worker N12 common-blue micro gate | RESULT: 55,533 failures/18,961,358 tuples; first K??E@cyjFgWk gap13 | D: DEAD common-blue-only wall
+[2026-07-11T15:45:08Z] > ATTACK | NEXT: reconstruct K??E@cyjFgWk micro defect-13 source/demand quotient and bank-capacity anatomy.
+[2026-07-11T15:47:58Z] OK ATTACK | DID: reconstructed K??E@cyjFgWk | RESULT: shore {10,11} demand72/reach59; only 12/2400 choices fail; min demand0 passes | D: selection survives locally
+[2026-07-11T15:47:58Z] > ATTACK | NEXT: run N12 medium/heavy exact minimum-micro-demand matching gate.
+[2026-07-11T14:52:03Z] > ATTACK | NEXT: launch approved fanout to audit R29 all-anchor against the real four-pattern transfer and FullBank wall.
+[2026-07-11T14:53:47Z] OK ATTACK | DID: launched 6 xhigh fanout leads with descendant mandates | RESULT: agent ids recorded in mailbox; 2 extra leads hit thread limit | D: none
+[2026-07-11T14:55:12Z] > VERIFY | NEXT: rebuild the retained ActiveScoped Lean modules after marking global-descent/PHT providers false on R29.
+[2026-07-11T15:02:04Z] OK VERIFY | DID: rebuilt ActiveScopedMinimumExchange after R29 dead-route annotation | RESULT: lake lean rc=0 in 141.2s | D: none
+[2026-07-11T15:02:04Z] > VERIFY | NEXT: rebuild ActiveScopedCoordinateTransport against the refreshed MinimumExchange olean.
+[2026-07-11T15:03:04Z] OK VERIFY | DID: rebuilt ActiveScopedCoordinateTransport | RESULT: lake lean rc=0 in 60.3s; source SHA 6B10458B | D: none
+[2026-07-11T15:04:12Z] OK VERIFY | DID: probed 3 retained ActiveScoped theorems | RESULT: rc=0; axioms exactly propext, Classical.choice, Quot.sound | D: none
+[2026-07-11T15:06:13Z] > GATE | NEXT: replay stale four-pattern R29 defect and the compiled common-blue c5Base 28-half-slot repair independently.
+[2026-07-11T17:54:10+03:00] > SELECT | NEXT: audit R29 N=2943 ActiveScoped selector invariance from exact row supports.
+[2026-07-11T17:56:20+03:00] OK SELECT | DID: selected R29 N=2943 all-anchor tuple | RESULT: 680^676 selectors; claimed demand 19953 reach 19925 | D: none
+[2026-07-11T17:56:21+03:00] > GATE | NEXT: search repo and handoffs for a prior selector-invariance proof or corrected count.
+[2026-07-11T17:58:30+03:00] OK GATE | DID: searched repo/handoffs for selector-invariance proof | RESULT: only all-anchor 19953/19925 replays found; no universal proof | D: novel lane
+[2026-07-11T17:58:31+03:00] > PLAN | NEXT: split support proof, verifier, source-count audit, and real-wall predicate audit across 7 descendants.
+[2026-07-11T18:00:10+03:00] OK PLAN | DID: created 7 isolated briefs d01-d07 | RESULT: tmp/fanout/r29_fullbank/D_invariance/d01..d07/prompt.txt | D: frontier=selector support signatures
+[2026-07-11T18:00:11+03:00] > ATTACK | NEXT: launch 7 Codex descendants on structural, counting, verifier, predicate, and referee lanes.
+[2026-07-11T17:55:30+03:00] OK ATTACK | DID: launched 7 Codex descendants | RESULT: PIDs 77436,77152,77176,76408,66564,74904,66520 | D: none
+[2026-07-11T17:58:50+03:00] > ATTACK | NEXT: run exact 459680-row support-signature verifier for the 680^676 tuple space.
+[2026-07-11T17:59:05+03:00] FAIL ATTACK | DID: ran support verifier | RESULT: FileNotFoundError from incorrect ROOT parent index | D: none
+[2026-07-11T17:59:06+03:00] > ATTACK | NEXT: correct ROOT path and rerun exact support verifier.
+[2026-07-11T17:59:16+03:00] OK ATTACK | DID: checked 676x680 selector rows by support signatures | RESULT: demand 19953, reach 17325+2600=19925, defect 28 | D: invariant holds
+[2026-07-11T17:59:20+03:00] > VERIFY | NEXT: synthesize completed descendants and audit remaining agents independently.
+[2026-07-11T18:03:10+03:00] > ATTACK | NEXT: exact-check R23 outsideAttachment on all-anchor versus one-local selector tuples.
+[2026-07-11T17:54:20+03:00] > GATE | NEXT: read mission, latest coordination, R20/R23/R28/R29 writeups, WIRING_SPECS, and compiled FullBank APIs.
+[2026-07-11T18:03:10+03:00] OK GATE | DID: read mission/R20/R23/R28/R29/WIRING and ledger APIs | RESULT: four CapKinds compiled; graph provider absent | D: full-bank audit scoped
+[2026-07-11T18:03:11+03:00] > ATTACK | NEXT: launch 7 exact isolated audits of R29 Door, vertexSlack, c5Base, prune, APIs, flow, and replay.
+[2026-07-11T18:05:40+03:00] OK ATTACK | DID: completed 7-agent full-bank portfolio | RESULT: 7 reports; all replay defect 28; providers absent | D: Door fast path audit
+[2026-07-11T18:05:41+03:00] > ATTACK | NEXT: construct exact R29 singleton all-Door primal and typed-ledger no-double-spend audit.
+[2026-07-11T18:09:50+03:00] OK ATTACK | DID: exact singleton all-Door gate | RESULT: 4242 caps, spend 2750, slack 1492; ownDoor provider assumed | D: 28 conditionally absorbed
+[2026-07-11T18:09:51+03:00] > VERIFY | NEXT: replay independent audits, hash artifacts, and referee-check source units and assumptions.
+[2026-07-11T17:54:10+03:00] > ATTACK | NEXT: reconstruct canonical R29 tuple and exact four-pattern hub shore with reservations and multiplicities.
+[2026-07-11T17:53:52+03:00] > SELECT | NEXT: Audit Erdős #23 R29 FullBank Lean chain and identify the smallest missing real-data provider theorem.
+[2026-07-11T17:54:09+03:00] OK SELECT | DID: selected #23 FullBank chain audit | RESULT: R29 exact defect 28 is auxiliary-route falsifier; FullBank wall survives | D: none
+[2026-07-11T17:54:09+03:00] > GATE | NEXT: read mission, latest coordination, R20/R23/R28/R29 archives, and compiled FullBank APIs.
+[2026-07-11T17:54:36+03:00] OK GATE | DID: read mission and coordination through 18:20+03 block | RESULT: ActiveScoped route dead; FullBank four-kind provider remains open | D: frontier=real FullBank provider
+[2026-07-11T17:54:36+03:00] > ATTACK | NEXT: launch 7 read-focused Codex descendants for chain, provider, semantics, falsifier, theorem, build, and axiom audits.
+[2026-07-11T18:00:38+03:00] OK ATTACK | DID: launched 7 Codex descendants | RESULT: PIDs 67652,61860,4016,58628,65836,67276,68028; lane F_lean/d1..d7 | D: none
+[2026-07-11T18:00:38+03:00] > PLAN | NEXT: isolate the first absent arrow among graph terminals, relaxed-cover feasibility, and checked global ledger.
+[2026-07-11T18:01:43+03:00] OK PLAN | DID: traced production chain | RESULT: no cert-to-package or four-relation-to-token bridge; package Checked has 19 assumed fields | D: frontier split
+[2026-07-11T18:01:43+03:00] > ATTACK | NEXT: write a namespaced Lean probe for exact R29 defect, relation Hall surface, provider seam, and incidence separation.
+[2026-07-11T18:03:16+03:00] OK ATTACK | DID: wrote FullBankProviderProbe.lean | RESULT: 6 probe theorems/targets under tmp/fanout/r29_fullbank/F_lean | D: none
+[2026-07-11T18:03:16+03:00] > VERIFY | NEXT: compile FullBankProviderProbe with Lean 4.27 and print axioms for six load-bearing declarations.
+[2026-07-11T18:04:00+03:00] FAIL VERIFY | DID: started Lean 4.27 probe build | RESULT: missing AggregateLedgerNoIncidenceCounterexample.olean in base cache | D: none
+[2026-07-11T18:04:00+03:00] > VERIFY | NEXT: compile the missing production countermodel into a lane-local olean cache, then rebuild the probe.
+[2026-07-11T17:54:06+03:00] OK SELECT | DID: chose #23 R29 FullBank source lane | RESULT: active wall is exact 28-unit hub-shore defect at N=2943 | D: none
+[2026-07-11T17:54:06+03:00] > GATE | NEXT: audit R20/R23/R28/R29 definitions, FullBank APIs, and canonical R29 exact artifacts.
+[2026-07-11T14:54:09Z] > ATTACK | NEXT: trace compiled CheckedTransferMatching and FullBankGlobalPackage semantics and audit whether R29 ActiveScoped reaches the real wall.
+[2026-07-11T14:54:53Z] > ATTACK | NEXT: launch 7 read-only Codex descendants on transfer, FullBank, bridge, source, ActiveScoped, chain, and writeup semantics.
+[2026-07-11T14:55:19Z] FAIL ATTACK | DID: invoked 7 read-only Codex descendants | RESULT: CLI rejected exec-level -a; zero descendants ran | D: none
+[2026-07-11T14:55:19Z] > ATTACK | NEXT: relaunch 7 descendants with top-level approval flag and unchanged read-only scopes.
+[2026-07-11T17:54:30+03:00] > ATTACK | NEXT: launch 7 exact R29 four-pattern audits; each writes only under tmp/fanout/r29_fullbank/B_fourpattern/worker_*.
+[2026-07-11T14:54:45Z] > ATTACK | NEXT: audit R29 all-anchor hub shore against implemented FullBank relation and exact per-class capacities.
+[2026-07-11T17:54:59+03:00] OK GATE | DID: read mission, coordination, R20/R23/R28/R29, WIRING_SPECS, and FullBank source APIs | RESULT: licensed kinds are Door/vertexSlack/c5Base/prune | D: none
+[2026-07-11T17:54:59+03:00] > PLAN | NEXT: isolate the exact R29 hub-shore port loads and seven independent FullBank source/capacity audits.
+[2026-07-11T17:55:06+03:00] OK PLAN | DID: set frontier to exact R29 core FullBank residual after four-pattern failure | RESULT: 7-lane portfolio specified | D: none
+[2026-07-11T17:55:06+03:00] > ATTACK | NEXT: replay canonical R29 reconstruction and exact all-anchor Hall certificate before source enumeration.
+[2026-07-11T14:55:31Z] > SELECT->GATE | NEXT: Lead C independently reconstructs R29 and audits scoped invariance plus all FullBank source classes.
+[2026-07-11T14:56:12Z] > SELECT->GATE | NEXT: Lead D audits production FullBank semantics and searches an existing-class absorber for R29 defect 28.
+[2026-07-11T15:03:17Z] > ATTACK | NEXT: run 9-lane R29 repair portfolio on Door/vertexSlack/c5Base/prune, mixed flow, guardrails, and referee.
+[2026-07-11T15:10:27Z] OK GATE | DID: exact R29 production-dispatch audit + Lean scope lemma | RESULT: 1383/1383 rows ell=5, surplus=0, BranchB rows=0; Lean rc=0 allowed axioms | D: R29 standalone not FullBank CE
+[2026-07-11T15:23:13Z] OK ATTACK | DID: add compiled common-blue C5Base relation to exact R29 owner flow | RESULT: reach 19925->20141, max defect 28->0; 28-key injective repair, Lean rc=0 | D: R29 repaired
+[2026-07-11T15:26:50Z] > VERIFY | NEXT: exact-test common-blue extension on 18,961,358 order-12 medium/heavy row tuples using 32 workers.
+[2026-07-11T17:56:39+03:00] OK ATTACK | DID: ran 5 exact R29 replay checkers | RESULT: N=2943 score=23115 demand=19953 reach=19925 defect=28; cert SHA dd1f1a2c... | D: none
+[2026-07-11T17:56:39+03:00] > ATTACK | NEXT: launch 7 Codex descendants for semantics, vertexSlack, Door, c5Base, prune, exact flow/dual, and referee audits.
+[2026-07-11T17:57:12+03:00] > ATTACK | NEXT: exact-recompute R29 hub shore under sameFirst/commonBad/rowCompanion/outsideAttachment with active reservations.
+[2026-07-11T17:57:25+03:00] OK ATTACK | DID: launched 7 external Codex audits; PIDs recorded in E_source_search/processes.json | RESULT: 7 processes started | D: none
+[2026-07-11T17:57:25+03:00] > ATTACK | NEXT: compute exact all-anchor core S/F/O, vertexSlack margins, and boundary/internal off-support split.
+[2026-07-11T14:57:07Z] > ATTACK | NEXT: Lead E audits the production CheckedTransferMatching-to-FullBankGlobalPackage Lean seam with 9 disjoint definition/proof lanes.
+[2026-07-11T17:59:15+03:00] > ATTACK | NEXT: Lead A traces production FullBank/CheckedTransferMatching sources, sinks, eligibility, and executable exact checks for R29.
+[2026-07-11T18:00:16+03:00] > ATTACK | NEXT: run exact R29 all-anchor S/F/O/J/C singleton FullBank audit and compare units with FreeHalf defect 28.
+[2026-07-11T18:01:10+03:00] FAIL ATTACK | DID: first FullBank audit | RESULT: O contains 112 zero-load edges outside C; assertion removed | D: semantic correction.
+[2026-07-11T18:02:05+03:00] OK VERIFY | DID: replayed exact all-anchor audit | RESULT: S=1383,F=2797,O=J=4242,C=K=2803; O loads 56/4074/112 half/one/zero | D: FreeHalf 28 not residual.
+[2026-07-11T18:02:35+03:00] OK ATTACK | DID: enumerated current and CheckedC5BaseTransfer sources on R29 | RESULT: 216 new keys; candidate 28-key absorber (x,2929,h), x=3..16 | D: frontier=c5Base
+[2026-07-11T18:02:35+03:00] > VERIFY | NEXT: run independent exact c5Base absorber checker and hash its flow certificate.
+[2026-07-11T18:03:25.5717286+03:00] > SELECT | NEXT: audit exact four-pattern min-cut for canonical N=2943 all-anchor R29 tuple and locate instance artifacts.
+[2026-07-11T18:03:30.6401137+03:00] OK SELECT | DID: searched repository and r29_fullbank tree | RESULT: candidate scripts in problems/23/writeup and fanout artifacts enumerated | D: SELECT->GATE
+[2026-07-11T18:03:35.2089685+03:00] > GATE | NEXT: inspect generator, verifier, certificate, and source tuple to establish exact audit scope.
+[2026-07-11T18:04:13+03:00] OK PLAN | DID: traced ActiveScoped and FullBank APIs | RESULT: CheckedTransferMatching absent; compiled bank kinds are door/vertexSlack/c5Base/prune | D: ATTACK->VERIFY
+[2026-07-11T18:04:13+03:00] > VERIFY | NEXT: replay exact R29 four-pattern transfer and independent certificate checks; confirm no float use.
+[2026-07-11T18:04:21+03:00] FAIL VERIFY | DID: started F_lean countermodel build | RESULT: lane overlay shadowed RootLayerHalfSqueeze.olean | D: none
+[2026-07-11T18:04:21+03:00] > VERIFY | NEXT: seed the F_lean olean overlay from the accepted base cache and rebuild the countermodel.
+[2026-07-11T18:04:58.5258997+03:00] OK GATE | DID: reconstructed exact FreeHalf and Reserved semantics from Lean and R23 relation | RESULT: reservation deletes only h=0; pattern/owner overlap does not multiply capacity | D: GATE->PLAN
+[2026-07-11T18:04:58.5507267+03:00] > ATTACK | NEXT: run independent expanded-half checker and direct-sum all eight cuts for auxiliary and literal ledgers.
+[2026-07-11T18:03:25+03:00] OK ATTACK | DID: compared all-anchor and one-local R23 sources | RESULT: outside halves 912600 vs 909900; hub comp 19 vs 73 | D: full-wall invariance false
+[2026-07-11T15:05:33Z] OK ATTACK | DID: ran 7 read-only semantic descendants and direct source audit | RESULT: CheckedTransferMatching has zero tracked Lean declarations; 7/7 descendants exited 0 | D: ATTACK->VERIFY
+[2026-07-11T15:05:33Z] > VERIFY | NEXT: emit executable semantic map, compile authoritative modules, and audit hashes and forbidden tokens.
+[2026-07-11T18:05:52+03:00] OK VERIFY | DID: ran primary and literal-edge independent c5Base checks | RESULT: 28 keys PASS; assignment SHA 43e50aee...; verifier SHA ccab5e0f... | D: defect closed on R29
+[2026-07-11T18:05:52+03:00] > VERIFY | NEXT: replay descendant vertexSlack, Door, flow/dual, and prune audits; reject semantic overclaims.
+[2026-07-11T18:05:49+03:00] FAIL VERIFY | DID: seeded F_lean overlay | RESULT: base cache 57.7GB; copy stopped at 42.7GB and removed from verified F_lean path | D: none
+[2026-07-11T18:05:49+03:00] > VERIFY | NEXT: rebuild the reduced F_lean probe using the accepted base cache without the uncompiled countermodel import.
+[2026-07-11T18:06:11.5903925+03:00] OK ATTACK | DID: expanded 932525 unreserved half keys and directly summed 8 cuts for two demand ledgers | RESULT: auxiliary mincut=19953; literal collision mincut=19950; max deficiency=0 both | D: ATTACK->VERIFY
+[2026-07-11T18:06:17.1692181+03:00] > VERIFY | NEXT: compile checker, rerun supplied verifier, and hash worker artifacts.
+[2026-07-11T18:06:46+03:00] FAIL VERIFY | DID: rebuilt F_lean probe | RESULT: missing imports/open namespace and decidability; no theorem compiled | D: none
+[2026-07-11T18:06:46+03:00] > VERIFY | NEXT: add explicit package import, RowChoice namespace, and exact Nat decidability, then rebuild.
+[2026-07-11T18:06:52.8708966+03:00] OK VERIFY | DID: enforced exact R23 selected-component equalities and reran expanded-key checker | RESULT: outside capacity=0; mask caps 5775,5775,5775,2600; full-shore deficiencies auxiliary=28 literal=25 | D: VERIFY->CHECK
+[2026-07-11T18:06:52.8762975+03:00] > CHECK | NEXT: confirm artifacts and state smallest finite falsifier without FullBank overclaim.
+[2026-07-11T18:06:57.2625728+03:00] OK CHECK | DID: wrote RESULT.md, checker.py, checker.out, certificate.json and compiled checker | RESULT: tmp/fanout/r29_fullbank/B_fourpattern/worker_5/RESULT.md; exact finite falsifier stated | D: result complete
+[2026-07-11T18:07:02+03:00] FAIL VERIFY | DID: replayed two R29 four-pattern gates + cert check | RESULT: loose R23 gives 912600 slots; strict comp equality gives 0; cert checker assertion failed | D: none
+[2026-07-11T18:07:02+03:00] > VERIFY | NEXT: reconcile R23 component equality with compiled APIs and audit common-blue c5Base adapter before verdict.
+[2026-07-11T18:07:56+03:00] > VERIFY | NEXT: replay strict R23 four-pattern verifier, independent certificate checker, worker-7 audit, and SHA manifest.
+[2026-07-11T18:07:58+03:00] OK VERIFY | DID: replayed 7-lane outputs and rejected invalid all-Door semantic audit | RESULT: c5Base absorber uniquely survives; other sources zero/infeasible/conditional | D: none
+[2026-07-11T18:07:58+03:00] > VERIFY | NEXT: rebuild CheckedC5BaseTransfer.lean against current source and record axioms/hash.
+[2026-07-11T18:10:49+03:00] > VERIFY | NEXT: independently enumerate common-blue c5 terminals on R29 and check all 8 owner shores with collision-free exact max flow.
+[2026-07-11T18:11:29+03:00] OK VERIFY | DID: enumerated corrected common-blue c5 terminals and exact max flow | RESULT: new keys=216; flow=19953; max shore defect=0; explicit 28 keys | D: R29 not transfer falsifier
+[2026-07-11T18:16:25+03:00] > VERIFY | NEXT: rebuild CheckedC5BaseTransfer.lean under the production Lean root and inspect forbidden tokens/axioms.
+[2026-07-11T15:16:24Z] > VERIFY | NEXT: reconcile 9 semantic/API child audits and distinguish transfer absorption from missing production FullBank provider.
+[2026-07-11T15:19:28Z] OK VERIFY | DID: reconciled 9 API audits | RESULT: SEMANTICS.md+JSON hashed; c5Base 216 keys repairs defect 28; FullBank provider absent | D: seam isolated
+[2026-07-11T18:17:11+03:00] OK VERIFY | DID: rebuilt CheckedC5BaseTransfer.lean and scanned tokens | RESULT: rc=0; axioms=[propext,Quot.sound]; source SHA=12451978...; 0 forbidden hits | D: none
+[2026-07-11T18:18:07+03:00] > CHECK | NEXT: validate SEMANTICS.md/source_class_map.json, hashes, closed child statuses, and exact absorber certificates.
+[2026-07-11T18:18:47+03:00] FAIL CHECK | DID: ran artifact/fanout validator | RESULT: process filter matched validator's own command line; no child codex.exe remained | D: none
+[2026-07-11T18:18:47+03:00] > CHECK | NEXT: rerun validation with child-process filter restricted to codex.exe.
+[2026-07-11T18:19:16+03:00] OK CHECK | DID: validated artifacts, 19 classes, 8 c5 shores, and 9 closed children | RESULT: SEMANTICS SHA ccf2ba1a; JSON SHA c9000ec9 | D: VERIFY->DECIDE
+[2026-07-11T18:19:16+03:00] > DECIDE | NEXT: state exact R29 transfer/FullBank verdict and missing production bridge.
+[2026-07-11T18:19:16+03:00] OK DECIDE | DID: reconciled semantic/API audit | RESULT: c5 transfer absorbs 28 exactly; R29 is not FullBank falsifier; kernel consumer/provider absent | D: none
+[2026-07-11T15:19:47Z] > VERIFY | NEXT: replay R29 graph, all-anchor demand, staged common-blue Hall repair, and compiled-surface assertions exactly.
+[2026-07-11T18:28:40+03:00] > SELECT | NEXT: audit assigned Erdos #23 universal exact gate inputs, coordination state, and canonical census surfaces.
+[2026-07-11T18:30:11+03:00] OK SELECT | DID: read goal, mailboxes, transfer note, Lean relation, and gates | RESULT: CommonBlueOwner is TerminalData.Valid; N12 gate exists | D: SELECT->GATE
+[2026-07-11T18:30:11+03:00] > GATE | NEXT: run exact universal CommonBlueExtendedMatching census, fixtures, obstructions, and adversarial cage search in nine lanes.
+[2026-07-11T18:32:50+03:00] OK GATE | DID: audited current production and mailboxes | RESULT: universal CommonBlue matching/provider absent; R29 repair only | D: GATE->PLAN
+[2026-07-11T18:32:50+03:00] > PLAN | NEXT: split exact census, fixtures, nine obstructions, semantic replay, and adversarial cage construction across nine children.
+[2026-07-11T18:32:50+03:00] OK PLAN | DID: assigned nine disjoint lanes under tmp/fanout/common_blue_universal | RESULT: nine effective_prompt.md files | D: PLAN->ATTACK
+[2026-07-11T18:32:50+03:00] > ATTACK | NEXT: run nine exact child gates at <=6 workers each and independently audit ordered FreeHalf/reservation semantics.
+[2026-07-11T18:37:10+03:00] FAIL ATTACK | DID: abandoned one-copy universal gate | RESULT: production demand is collision+25*HitNeed; 8224 repair gate tests collision+HitNeed | D: restart ATTACK
+[2026-07-11T18:37:10+03:00] > ATTACK | NEXT: relaunch nine lanes at MicroDemand scale and recompute every canonical tuple with HitNeed>0.
+[2026-07-11T18:40:32+03:00] OK ATTACK | DID: restarted nine lanes at collision+25*HitNeed scale | RESULT: nine micro effective prompts; R29 target 20025/20141 | D: none
+[2026-07-11T18:40:32+03:00] > ATTACK | NEXT: exhaust N12 light 20181461 tuples; user separately runs medium/heavy; continue N<=11 and fixtures.
+[2026-07-11T18:44:43+03:00] FAIL ATTACK | DID: stopped light/universal fanout after micro gate falsifier | RESULT: 55533 failures; first K??E@cyjFgWk choice[0,4,5,7], flow65/78 | D: ATTACK->VERIFY
+[2026-07-11T18:44:43+03:00] > VERIFY | NEXT: independently replay first defect13 fixture and audit vertexSlack, Door, and prune capacity against its deficient shore.
+[2026-07-11T18:53:50+03:00] OK VERIFY | DID: independently replayed N12 defect13 | RESULT: replay_defect13_result.json SHA aca5f284; flow65/78, shore{10,11} 59/72 | D: none
+[2026-07-11T18:53:50+03:00] FAIL VERIFY | DID: stopped canonical-min MicroHall attack after mailbox correction | RESULT: R31 baseline tuple is Pattern5 boundary-starved, defect28 | D: VERIFY->ATTACK
+[2026-07-11T18:53:50+03:00] > ATTACK | NEXT: independently replay Pattern5 all-anchor repair and baseline starvation, then formalize reservation/loss soundness kernel.
+[2026-07-11T18:28:52+03:00] > SELECT | NEXT: reconstruct #23 CommonBlue universal Hall hypotheses and allocate disjoint proof, dual, search, and adapter lanes.
+[2026-07-11T15:29:17Z] OK VERIFY | DID: R29 FullBank referee | RESULT: +216 common-blue keys; 23115/23115 injection; REFEREE.md | D: R29 not a FullBank CE
+[2026-07-11T18:29:49+03:00] OK SELECT | DID: read goal, mailboxes, reconciliation, matching and token APIs | RESULT: universal Hall and supplied-matching adapter absent | D: SELECT->GATE
+[2026-07-11T18:29:49+03:00] > GATE | NEXT: exact-gate nine disjoint proof, dual, falsifier, Lean, and adapter attacks under tmp/fanout/common_blue_proof/.
+[2026-07-11T18:30:47+03:00] OK GATE | DID: compared production, R29 reconciliation, and mailboxes | RESULT: no universal Hall/adapter theorem; nine non-PHT lanes specified | D: GATE->PLAN
+[2026-07-11T18:30:47+03:00] OK PLAN | DID: split shore, maxcut, surplus, census, dual, Lean, adapter, falsifier, referee tasks | RESULT: 9 PROMPT.md files | D: PLAN->ATTACK
+[2026-07-11T18:30:47+03:00] > ATTACK | NEXT: launch 9 child agents at throttle 9; require exact gates and isolated outputs.
+[2026-07-11T18:37:26+03:00] OK ATTACK | DID: completed 9-child fanout | RESULT: 9 rc0; owner-shore capacity remains open; no graph falsifier found | D: none
+[2026-07-11T18:37:26+03:00] > ATTACK | NEXT: relaunch adapter child on MicroMatching SHA 71308BE7 and compile raw embedding plus component hypothesis.
+[2026-07-11T18:45:57.7291974+03:00] > ATTACK | NEXT: Read lane COMMON and production matching/token/source/port/extractor code to fix exact reconstruction semantics.
+[2026-07-11T18:46:04.8297844+03:00] > ATTACK | NEXT: reconstruct fixture Door keys, capacities, incidence, and no-double-spend in laneC using exact arithmetic.
+[2026-07-11T18:46:01+03:00] > SELECT | NEXT: audit Erdos #23 fixture K??E@cyjFgWk deficient shore owners 10,11 for concrete prune providers.
+[2026-07-11T18:46:01+03:00] OK SELECT | DID: selected assigned prune lane | RESULT: pivot defect=13 in n12_common_blue_micro_result.json | D: SELECT -> GATE
+[2026-07-11T18:46:01+03:00] > GATE | NEXT: reconstruct fixture from graph6 and production row-family/provider definitions.
+[2026-07-11T18:46:49+03:00] OK ATTACK | DID: compiled MicroMatching adapter child | RESULT: rawSourceEmbedding and dataOfMicroMatching rc0; missing ComponentPreserving | D: ATTACK->VERIFY
+[2026-07-11T18:46:49+03:00] > VERIFY | NEXT: independently rebuild adapter and replay owner-shore, dual, and surplus exact gates.
+[2026-07-11T18:47:51.5144928+03:00] OK ATTACK | DID: exact Door replay for N12 shore {10,11} | RESULT: dB=8,dM=2,sigma=6, HallCap=6<13; laneC_door/result.json | D: Door-only repair false
+[2026-07-11T18:46:04+03:00] > ATTACK | NEXT: reconstruct N=12 fixture rows and audit vertexSlack on deficient owners 10,11 with exact arithmetic.
+[2026-07-11T18:49:20+03:00] OK ATTACK | DID: rebuilt graph6 and choice 0,4,5,7 | RESULT: owners 10,11 raw slack 0,2; active degree 2,2; residual 0,0 | D: none
+[2026-07-11T18:49:21+03:00] > VERIFY | NEXT: run replay checking typed keys, legal incidences, capQ scaling, and zero residual capacity.
+[2026-07-11T18:46:49+03:00] OK GATE | DID: reconstructed graph6, rows, owner Hall cuts | RESULT: shore {10,11}: demand 72, reach 59, defect 13 | D: GATE -> PLAN
+[2026-07-11T18:46:49+03:00] > PLAN | NEXT: enumerate Hamming-one rewrite pre-universe and production prune constructors/incidence.
+[2026-07-11T18:47:54+03:00] OK PLAN | DID: identified frontier as missing graph-to-prune token provider | RESULT: 25 rewrite candidates; production constructor search empty | D: PLAN -> ATTACK
+[2026-07-11T18:47:54+03:00] > ATTACK | NEXT: replay exact candidate ranks, typed keys, capQ, port incidence, and no-double-spend.
+[2026-07-11T18:47:54+03:00] OK ATTACK | DID: ran replay.py with one process | RESULT: 24 scoped-score descents; 0 legal prune sources; capQ 0 | D: ATTACK -> VERIFY
+[2026-07-11T18:47:54+03:00] > VERIFY | NEXT: rerun replay deterministically and hash lane artifacts.
+[2026-07-11T18:48:34+03:00] OK VERIFY | DID: reran replay and compared result SHA256 | RESULT: stable ecc8223432d7ebf52ac361904c8e874943da57ac64c86870563c886fe77312b7 | D: none
+[2026-07-11T18:48:34+03:00] > CHECK | NEXT: validate report arithmetic and artifact manifest.
+[2026-07-11T18:48:34+03:00] OK CHECK | DID: checked 25-candidate inventory and manifest | RESULT: laneD_prune/MANIFEST.sha256 lists 3 artifacts | D: stall=0
+[2026-07-11T18:48:34+03:00] > DECIDE | NEXT: deliver provider-absence verdict for deficient shore.
+[2026-07-11T18:48:34+03:00] OK DECIDE | DID: finalized assigned lane | RESULT: prune provides 0 of 13 Hall slots; required capQ 325 | D: complete
+[2026-07-11T18:48:30+03:00] OK VERIFY | DID: ran replay and py_compile; checked manifest | RESULT: NO_VERTEXSLACK_PAYMENT; residual capQ 0; MANIFEST.sha256 verified | D: defect 13 unpaid
+[2026-07-11T18:48:31+03:00] OK CHECK | DID: audited non-double-spend on owners 10,11 | RESULT: owner 11 capQ 50 is exhausted by two active endpoints; owner 10 capQ 0 | D: lane complete
+[2026-07-11T18:49:58.3383681+03:00] > ATTACK | NEXT: Run standalone N=12 fixture replay with one Python process and verify exact 78/65 min-cut.
+[2026-07-11T18:50:24.5057302+03:00] OK ATTACK | DID: Replayed graph6/cut/rows/MicroAvailable and integer matching | RESULT: laneA_replay/result.json has demand 78, flow 65, defect 13 | D: universal claim falsified
+[2026-07-11T18:55:49+03:00] FAIL GATE | DID: tested P5 on first N12 micro fixture | RESULT: 4/65 positive-score tuples fail; first flow 69/78, defect 9 | D: all-tuple P5 false
+[2026-07-11T18:55:49+03:00] > ATTACK | NEXT: run exact 61-worker N12 five-pattern census and classify failures versus canonical selection/full-bank sources.
+[2026-07-11T18:50:26+03:00] OK ATTACK | DID: ran 61-worker N12 minimum-score gate | RESULT: 22291/22291 graphs have score 0 and MicroMatching; 0 failures | D: frontier=minimizer Hall
+[2026-07-11T18:50:26+03:00] > PLAN | NEXT: fan out proof, falsifier, Lean-score, adapter, and dual attacks on minimum-score MicroHall while integrating locally.
+[2026-07-11T18:51:01.2175593+03:00] OK VERIFY | DID: Re-ran replay and hashed report/script/result | RESULT: laneA_replay/MANIFEST.sha256; exact 78/65/13 assertions pass | D: none
+[2026-07-11T18:52:56+03:00] > ATTACK | NEXT: Audit Pattern-5 switch semantics, preservation, reservations, and source uniqueness from current exact definitions.
+[2026-07-11T18:54:00+03:00] OK ATTACK | DID: Read goal, onboarding, R30, and current Pattern-5 references | RESULT: local switch-to-token implication is unstated | D: frontier=soundness
+[2026-07-11T19:04:00+03:00] > ATTACK | NEXT: Exact-audit 2943 Pattern-5 switch for selected-row and active-component preservation.
+[2026-07-11T18:54:20+03:00] FAIL ATTACK | DID: tested universal common-blue MicroHall | RESULT: g6 K??E@cyjFgWk shore {10,11} has demand72/reach59/defect13 | D: universal route DEAD
+[2026-07-11T18:54:20+03:00] > ATTACK | NEXT: run reservation/deduction and reservation-free Pattern-5 adapter audits; no idempotence assumption.
+[2026-07-11T18:55:14+03:00] > ATTACK | NEXT: certify baseline 2943 Pattern-5 boundary starvation and all-anchor exact repair with integer replay.
+[2026-07-11T18:57:57+03:00] OK ATTACK | DID: replayed baseline/all-anchor P5 | RESULT: baseline reach0 defect28; anchor adds28 and gap0 | D: forall-tuple P5 DEAD
+[2026-07-11T18:57:57+03:00] > VERIFY | NEXT: compile boundary-starvation, reservation-free, and maxcut switch-loss Pattern-5 kernels.
+[2026-07-11T19:04:54+03:00] FAIL VERIFY | DID: reconciled P5 switch referee | RESULT: K(3) sigma26 invalidates 1014 rows | D: transition/token reading DEAD
+[2026-07-11T19:04:54+03:00] > ATTACK | NEXT: prove weakest static base-key component coherence adapter and gate R29/N12 ownership.
+[2026-07-11T19:05:38+03:00] > VERIFY | NEXT: compile coherence iff sourceComp and static residual-token adapter in tmp namespace.
+[2026-07-11T19:12:17+03:00] OK VERIFY | DID: compiled StaticOwnership and axiom probes | RESULT: sourceComp exists iff base-key coherence | D: static adapter closed
+[2026-07-11T19:12:17+03:00] OK ATTACK | DID: gated R29 and first N12 P5 ownership | RESULT: coherent roots0; N12 remains flow69/demand78/defect9 | D: FullBank incidence open
+[2026-07-11T19:13:11+03:00] > ATTACK | NEXT: join two exact 2943 cages by a quiescent bridge to test P5 component uniqueness.
+[2026-07-11T19:15:17+03:00] FAIL ATTACK | DID: built doubled 2943 cage | RESULT: one P5 base eligible in active roots0,2943 | D: local ownership rule DEAD
+[2026-07-11T19:15:17+03:00] OK VERIFY | DID: replayed doubled cert and manifest | RESULT: MaxCut14079 Gamma69150; manifest verified | D: matching-level coherence required
+[2026-07-11T18:58:38+03:00] FAIL ATTACK | DID: ran 61-worker N12 P1-P5 micro census | RESULT: 89640/1589852 positive-score tuples fail; first 69/78 | D: all-row P5 DEAD
+[2026-07-11T18:58:38+03:00] > VERIFY | NEXT: audit gate semantics and isolate selected-choice or additional FullBank capacity needed for the first defect-9 fixture.
+[2026-07-11T18:59:06+03:00] OK ATTACK | DID: audited all-anchor K(3) switch exactly | RESULT: sigma=26 but 1014 selected rows fail after flip | D: transition soundness falsified
+[2026-07-11T18:59:06+03:00] > VERIFY | NEXT: Referee-check static lemma tree, micro-scale assumptions, and report hash.
+[2026-07-11T18:59:07+03:00] OK VERIFY | DID: audited report and source hashes | RESULT: p5_soundness/REPORT.md SHA256 85353E20B1B4703C11917B35D1393F0 | D: static lemma only
+[2026-07-11T18:59:41+03:00] OK VERIFY | DID: corrected Lean sketch and rehashed report | RESULT: REPORT.md SHA256 E13275A7B805ECA50482823C5642B96C | D: none
+[2026-07-11T18:59:41+03:00] > DECIDE | NEXT: Finalize referee lane without asserting Pattern-5 token soundness or the main theorem.
+[2026-07-11T18:59:42+03:00] OK DECIDE | DID: finalized assigned report | RESULT: tmp/fanout/p5_soundness/REPORT.md | D: lane complete
+[2026-07-11T19:02:10+03:00] OK VERIFY | DID: independently replayed P5 preservation | RESULT: 1014 crossing rows, sigma26; verifier SHA E2B4C6AA | D: transition soundness DEAD
+[2026-07-11T19:02:10+03:00] > PLAN | NEXT: retain P5 only as static relation and isolate the missing graph-derived token/component adapter theorem.
+[2026-07-11T19:04:58+03:00] OK PLAN | DID: isolated static P5 provider fields | RESULT: only quiescent=>not ScopedReserved is derivable; six provider/spend fields explicit | D: PLAN->VERIFY
+[2026-07-11T19:04:58+03:00] > VERIFY | NEXT: rebuild all scratch Lean adapters, replay defect13 and R29 deduction gates, and hash outputs.
+[2026-07-11T19:05:20+03:00] FAIL VERIFY | DID: audited parallel P5 census semantics | RESULT: its P2 was common-blue without reservation deduction | D: verdict rejected
+[2026-07-11T19:05:20+03:00] > ATTACK | NEXT: rerun selection tests with reservation-free P1/P3/P4/P5 only; keep common-blue in a separate honest ledger.
+[2026-07-11T19:06:29+03:00] OK VERIFY | DID: rebuilt 5 Lean interfaces and replayed exact gates | RESULT: defect13 BF83142A; deduction 85C13028; forbidden grep empty | D: VERIFY->CHECK
+[2026-07-11T19:06:29+03:00] OK CHECK | DID: audited P5 against referee E13275A7 | RESULT: only quiescent=>not ScopedReserved derived; transition/token inference absent | D: CHECK->DECIDE
+[2026-07-11T19:06:29+03:00] OK DECIDE | DID: finalized lead-P synthesis | RESULT: tmp/fanout/common_blue_proof/SYNTHESIS.md; universal MicroHall DEAD | D: none
+[2026-07-11T19:07:20+03:00] OK VERIFY | DID: integrated static P5 Lean surface and adapter audit | RESULT: source SHA93DB65E9; build rc0; consumer remains explicit | D: frontier=exists-omega FullBank
+[2026-07-11T19:07:20+03:00] > ATTACK | NEXT: prove-or-break active-scope-minimal row selection with honest reservation-aware micro sources and typed sinks.
+[2026-07-11T19:48:45+03:00] > ATTACK | NEXT: inspect R32 reservation contract, handoff, and production checker patterns before implementing the owned ledger.
+[2026-07-11T19:49:16+03:00] OK ATTACK | DID: read goal, onboarding, R32 brief, and handoff tail | RESULT: R32 fixes exclusive key/term spend and imposed coherence | D: ATTACK->PLAN
+[2026-07-11T19:49:16+03:00] > PLAN | NEXT: map ledger fields and reflection lemmas to existing typed source, bank-term, and checker APIs.
+[2026-07-11T19:52:45+03:00] OK PLAN | DID: fixed generic R32 ledger surface | RESULT: canonical ordered half keys; keyed and typed-term caps; imposed coherence | D: PLAN->ATTACK
+[2026-07-11T19:52:45+03:00] > ATTACK | NEXT: create CheckedMicroReservationLedger with exact predicates, checker reflection, and explicit graph-realization boundary.
+[2026-07-11T19:54:31+03:00] OK ATTACK | DID: created exact R32 ledger and proofs | RESULT: CheckedMicroReservationLedger.lean SHA D5DEA650; 315 lines | D: ATTACK->VERIFY
+[2026-07-11T19:54:31+03:00] > VERIFY | NEXT: compile CheckedMicroReservationLedger with Lean 4.27 and capture every elaboration error.
+[2026-07-11T19:56:09+03:00] FAIL VERIFY | DID: launched first Lean wrapper | RESULT: scratch log parent resolved under formal-conjectures; Lean did not run | D: rerun absolute
+[2026-07-11T19:56:09+03:00] > VERIFY | NEXT: remove the empty misresolved scratch path and compile with absolute owned output paths.
+[2026-07-11T19:56:32+03:00] FAIL VERIFY | DID: invoked Lean with absolute input | RESULT: Lean root check rejected input outside formal-conjectures | D: use relative input
+[2026-07-11T19:56:32+03:00] > VERIFY | NEXT: rerun Lean with relative source path and absolute owned olean/log outputs.
+[2026-07-11T19:56:54+03:00] FAIL VERIFY | DID: retried relative input | RESULT: default compiler root still canonicalized to formal-conjectures | D: pass --root=..
+[2026-07-11T19:56:54+03:00] > VERIFY | NEXT: compile with Lean --root=.. so the owned production source is inside the declared package root.
+[2026-07-11T19:57:48+03:00] OK VERIFY | DID: compiled CheckedMicroReservationLedger with Lean 4.27 | RESULT: rc0; olean 852416 bytes; SHA D5DEA650 | D: none
+[2026-07-11T19:57:48+03:00] > VERIFY | NEXT: import the generated olean in a separate axiom probe and scan exact forbidden tokens.
+[2026-07-11T19:58:24+03:00] FAIL VERIFY | DID: imported isolated olean with new root first | RESULT: transitive MinimumDemandCollisionHall lookup stayed in first root | D: reverse roots
+[2026-07-11T19:58:24+03:00] > VERIFY | NEXT: rerun the independent axiom probe with production dependency cache first.
+[2026-07-11T19:59:01+03:00] FAIL VERIFY | DID: reversed Lean roots | RESULT: resolver stayed in dependency root and missed new olean | D: create owned merged direct cache
+[2026-07-11T19:59:01+03:00] > VERIFY | NEXT: copy two direct dependency oleans into the owned probe root and rerun the import audit.
+[2026-07-11T19:59:31+03:00] FAIL VERIFY | DID: probed with two direct imports copied | RESULT: resolver reached missing transitive MinimumDemandRowSelection | D: copy exact import closure
+[2026-07-11T19:59:31+03:00] > VERIFY | NEXT: compute the source import closure and build a minimal owned olean overlay for the probe.
+[2026-07-11T20:00:47+03:00] OK VERIFY | DID: imported generated olean and probed 10 declarations | RESULT: rc0; log SHA 1BA43309; axioms only allowed triple | D: VERIFY->CHECK
+[2026-07-11T20:00:47+03:00] > CHECK | NEXT: run diff, forbidden-token, namespace, and semantic guardrail audits on owned artifacts.
+[2026-07-11T20:01:49+03:00] OK CHECK | DID: audited owned source and logs | RESULT: target diff-check pass; forbidden hits 0; graph existence remains hypothesis | D: CHECK->VERIFY
+[2026-07-11T20:01:49+03:00] > VERIFY | NEXT: perform final clean rebuild and imported axiom probe for the unchanged ledger source.
+[2026-07-11T20:02:27+03:00] OK VERIFY | DID: rebuilt ledger from minimal owned dependency closure | RESULT: rc0; source SHA D5DEA650; build SHA A1232CFE | D: none
+[2026-07-11T20:02:27+03:00] > VERIFY | NEXT: rerun AxiomProbe against the final rebuilt olean and require only the allowed axiom triple.
+[2026-07-11T20:03:01+03:00] OK VERIFY | DID: ran final imported AxiomProbe | RESULT: rc0; probe SHA 1BA43309; olean SHA 262F2D26; allowed axioms only | D: VERIFY->CHECK
+[2026-07-11T20:03:01+03:00] > CHECK | NEXT: confirm final hashes, owned-file scope, and absence of graph/main-theorem overclaims.
+[2026-07-11T20:03:27+03:00] OK CHECK | DID: completed final guardrail audit | RESULT: quality pass; axiom BAD=0; main-theorem references=0 | D: CHECK->DECIDE
+[2026-07-11T20:03:27+03:00] > DECIDE | NEXT: finalize the R32 exclusivity module while leaving graph-realized ledger existence explicit and open.
+[2026-07-11T20:03:27+03:00] OK DECIDE | DID: finalized owned R32 ledger artifacts | RESULT: source D5DEA650; build rc0; probe rc0; REPORT.md | D: lane complete; graph wall open
+[2026-07-11T19:48:47+03:00] > ATTACK | NEXT: audit R32 handoff and Gamma production interfaces to specify the checked microflow theorem.
+[2026-07-11T19:48:59+03:00] FAIL ATTACK | DID: checked owned path | RESULT: tmp/fanout/r32_n12_fullbank absent | D: create path after source audit
+[2026-07-11T19:48:59+03:00] > ATTACK | NEXT: read R32 coordination, fixture, census, and production modules to recover exact full-bank semantics.
+[2026-07-11T19:49:00+03:00] OK ATTACK | DID: read goal, onboarding, R32 attack, and Claude handoff tail | RESULT: R32 wall and L1 ownership confirmed | D: ATTACK->PLAN
+[2026-07-11T19:49:00+03:00] > PLAN | NEXT: inspect Gamma tokenization, bank, ownership, and checked-data interfaces for the minimal lemma tree.
+[2026-07-11T19:49:12+03:00] > ATTACK | NEXT: audit R32 static-token source and owned Gamma interfaces before exact production promotion.
+[2026-07-11T19:49:24+03:00] OK ATTACK | DID: audited static source and Gamma inventory | RESULT: target absent; iff/sourceComp proof isolated | D: ATTACK->PLAN
+[2026-07-11T19:49:24+03:00] > PLAN | NEXT: inspect residual-token interfaces and module conventions, then define the minimal production ownership surface.
+[2026-07-11T19:50:10+03:00] OK VERIFY | DID: fixed 311 endpoint orientation and added row-validity assertions | RESULT: gate passes 3608/3608; SHA542E1B33 | D: fixture repaired
+[2026-07-11T19:50:10+03:00] > ATTACK | NEXT: exact-gate R32 full-bank model and canonicalMicroFeasibleTuple_exists under exclusivity/coherence.
+[2026-07-11T19:51:08+03:00] OK PLAN | DID: isolated assignment coherence, iff constructor, and residual adapter | RESULT: relation uniqueness excluded | D: PLAN->ATTACK
+[2026-07-11T19:51:08+03:00] > ATTACK | NEXT: create Pattern5StaticOwnership with only matching-level coherence and exact residual-data construction.
+[2026-07-11T19:51:55+03:00] OK ATTACK | DID: created production ownership module and axiom probe | RESULT: Pattern5StaticOwnership.lean; AxiomProbe.lean | D: ATTACK->VERIFY
+[2026-07-11T19:51:55+03:00] > VERIFY | NEXT: build ResidualSourceTokenization, production ownership, and four-declaration axiom probe under Lean 4.27.
+[2026-07-11T19:51:48+03:00] OK ATTACK | DID: audited R32/R33, fixture, P5 census, and production APIs | RESULT: collisions bind; retained hits have typed Door cap25 | D: ATTACK->PLAN
+[2026-07-11T19:51:48+03:00] OK PLAN | DID: specified exact full-bank gate | RESULT: P1/P3/P5 raw Hall plus exclusive deducting common-blue fallback | D: PLAN->ATTACK
+[2026-07-11T19:51:48+03:00] > ATTACK | NEXT: implement owned exact core and reproduce K??E@cyjFgWk as 28 FreeHalf plus two legal Door25 resources.
+[2026-07-11T19:52:36+03:00] OK VERIFY | DID: rebuilt ResidualSourceTokenization under Lean 4.27 | RESULT: residual_build.log rc0 | D: none
+[2026-07-11T19:52:36+03:00] > VERIFY | NEXT: build Pattern5StaticOwnership sourceComp iff and toResidualData into the owned olean overlay.
+[2026-07-11T19:53:18+03:00] FAIL VERIFY | DID: built ownership with owned-first LEAN_PATH | RESULT: missing CollisionTokenAssignment.olean in first overlay | D: none
+[2026-07-11T19:53:18+03:00] > VERIFY | NEXT: retry ownership build with base-first LEAN_PATH and owned residual fallback.
+[2026-07-11T19:53:17+03:00] OK PLAN | DID: fixed generic microflow API | RESULT: collision/free embedding, typed hit banks, coherence, exclusive ledgers | D: PLAN->ATTACK
+[2026-07-11T19:53:17+03:00] > ATTACK | NEXT: implement the checked microflow module and a one-collision one-Door exact probe in the owned paths.
+[2026-07-11T19:54:09+03:00] FAIL VERIFY | DID: retried ownership with base-first LEAN_PATH | RESULT: ResidualSourceTokenization missing in first overlay | D: none
+[2026-07-11T19:54:09+03:00] > VERIFY | NEXT: hardlink the complete proven Erdos olean closure into the owned overlay, preserving rebuilt residual.
+[2026-07-11T19:54:40+03:00] OK VERIFY | DID: completed owned Erdos olean closure | RESULT: 1225 hardlinks; rebuilt residual kept | D: none
+[2026-07-11T19:54:40+03:00] > VERIFY | NEXT: rebuild Pattern5StaticOwnership iff and residual adapter against the complete owned overlay.
+[2026-07-11T19:55:00+03:00] > ATTACK | NEXT: gate the length-3-subdivided 2943 cage as an all-tuple full-bank collision-starvation candidate.
+[2026-07-11T19:55:24+03:00] OK ATTACK | DID: created CheckedFullBankMicroFlow | RESULT: owned production source defines typed flow, coherence, and exclusive ledgers | D: ATTACK->VERIFY
+[2026-07-11T19:55:24+03:00] > VERIFY | NEXT: build CheckedFullBankMicroFlow with Lean 4.27 and repair each kernel elaboration failure.
+[2026-07-11T19:55:22+03:00] OK VERIFY | DID: built Pattern5StaticOwnership under Lean 4.27 | RESULT: production_build.log rc0 | D: none
+[2026-07-11T19:55:22+03:00] > VERIFY | NEXT: compile AxiomProbe for sourceComponentOf_assigned, iff, source_component, and toResidualData.
+[2026-07-11T19:56:07+03:00] OK VERIFY | DID: compiled four-declaration AxiomProbe | RESULT: rc0; axioms propext, choice, Quot.sound | D: none
+[2026-07-11T19:56:07+03:00] > VERIFY | NEXT: replay doubled-cage integer gate into owned external evidence; assert relation uniqueness falsified.
+[2026-07-11T19:56:57+03:00] FAIL VERIFY | DID: first Lean build of CheckedFullBankMicroFlow | RESULT: build2.log reports Embedding.comp and erased-parameter errors | D: none
+[2026-07-11T19:56:57+03:00] > VERIFY | NEXT: replace embedding composition and make all flow-data arguments explicit, then rebuild.
+[2026-07-11T19:56:58+03:00] OK VERIFY | DID: replayed doubled-cage integer gate | RESULT: BE92DDE1; roots 0,2943; relation uniqueness false | D: none
+[2026-07-11T19:56:58+03:00] > VERIFY | NEXT: scan owned source for forbidden proof terms, absent relation theorem, exact hashes, and worktree isolation.
+[2026-07-11T19:57:36+03:00] OK ATTACK | DID: wrote exact owned flow/coherence/door core | RESULT: tmp/fanout/r32_n12_fullbank/fullbank_core.py | D: none
+[2026-07-11T19:57:36+03:00] > ATTACK | NEXT: delete common-blue from tested relation and exact-gate collision-only P1/P3/strictP4/P5 through N12.
+[2026-07-11T19:58:26+03:00] OK VERIFY | DID: ran manifest, scope, exactness, and forbidden-term scans | RESULT: manifest pass; all hit counts 0 | D: VERIFY->CHECK
+[2026-07-11T19:58:26+03:00] OK CHECK | DID: audited owned static-ownership lane | RESULT: SHA93A86DBE; build/probe rc0; main theorem unclaimed | D: stall=0
+[2026-07-11T19:58:39+03:00] FAIL VERIFY | DID: second microflow build | RESULT: build3.log has one implicit residual embedding argument error | D: none
+[2026-07-11T19:58:39+03:00] > VERIFY | NEXT: make residualCollisionEmbedding's flow argument explicit and rebuild the production module.
+[2026-07-11T19:59:22+03:00] OK ATTACK | DID: isolated no-common exact analyzer | RESULT: collision_only_core.py uses P1/P3/strictP4/P5 and collision demand only | D: none
+[2026-07-11T19:59:22+03:00] > VERIFY | NEXT: compile owned Python and replay K??E@cyjFgWk choice [0,4,5,7] for collision 28/28 without common-blue.
+[2026-07-11T19:59:42+03:00] OK VERIFY | DID: rebuilt CheckedFullBankMicroFlow | RESULT: build4.log rc0; olean SHA0403A374; no sorryAx | D: VERIFY->ATTACK
+[2026-07-11T19:59:42+03:00] > ATTACK | NEXT: add kernel decide checkers and an exact one-collision one-Door25 fixture probe.
+[2026-07-11T19:59:57+03:00] FAIL VERIFY | DID: compiled three owned Python modules then launched fixture | RESULT: import-order ModuleNotFoundError before analysis | D: none
+[2026-07-11T19:59:57+03:00] > VERIFY | NEXT: rerun K??E@cyjFgWk after adding the pinned P5 census path explicitly.
+[2026-07-11T20:00:20+03:00] OK VERIFY | DID: independently replayed join-5886 coherence gate | RESULT: flow19950+19950; result SHA EDEF16D2 | D: coherence sufficient on fixture
+[2026-07-11T20:00:20+03:00] > ATTACK | NEXT: complete no-common collision census and attack existence of a zero-defect row tuple.
+[2026-07-11T20:00:51+03:00] FAIL VERIFY | DID: built first checker revision | RESULT: build5.log lacks synthesized Decidable for checked structures | D: none
+[2026-07-11T20:00:51+03:00] > VERIFY | NEXT: use explicit classical decide checkers, retain iff soundness, and rebuild.
+[2026-07-11T20:02:18+03:00] OK VERIFY | DID: replayed K??E@cyjFgWk without common-blue | RESULT: collision28/28; Doors50; payload SHA0BD7938B | D: fixture green
+[2026-07-11T20:02:18+03:00] > ATTACK | NEXT: compile census driver and smoke exact P1/P3/strictP4/P5 collision Hall on fixture plus N5-N8 using 8 workers.
+[2026-07-11T20:02:25+03:00] OK VERIFY | DID: rebuilt module with finite iff checkers | RESULT: build6.log rc0; axiom probes exclude sorryAx | D: VERIFY->ATTACK
+[2026-07-11T20:02:25+03:00] OK ATTACK | DID: wrote exact microflow Probe.lean | RESULT: fixture has one debit, one hit, one typed Door25 | D: ATTACK->VERIFY
+[2026-07-11T20:02:25+03:00] > VERIFY | NEXT: compile Probe.lean and check reservation, residual, 25x bank, and axiom outputs.
+[2026-07-11T20:02:38+03:00] OK ATTACK | DID: exact-gated N5-N8 no-common collision Hall with 8 workers | RESULT: 100 graphs/290 tuples/0 failures | D: none
+[2026-07-11T20:02:38+03:00] > ATTACK | NEXT: exhaust N9-N10 P1/P3/strictP4/P5 collision-only Hall with 10 workers and export first falsifier if any.
+[2026-07-11T17:02:53Z] > ATTACK | NEXT: authorize disjoint external fanout on exact census, Lean ledger, and selector-exchange lanes under 64-worker cap.
+[2026-07-11T20:03:08+03:00] FAIL VERIFY | DID: first Probe.lean build | RESULT: probe1.log has 3 identity/rewrite/constructor proof errors | D: none
+[2026-07-11T20:03:08+03:00] > VERIFY | NEXT: rebuild probe after explicit identity, canonical-source change, and kind disequality proofs.
+[2026-07-11T17:03:10Z] OK ATTACK | DID: approved bounded external fanout and posted lane split | RESULT: CODEX_TO_CLAUDE mailbox block at 17:03:10Z | D: none
+[2026-07-11T20:03:38+03:00] FAIL ATTACK | DID: exhausted N9-N10 no-common collision Hall with 10 workers | RESULT: 32 failures/49814 tuples; minimizer failures 0/6321 | D: universal tuple false
+[2026-07-11T20:03:38+03:00] > VERIFY | NEXT: exact-replay first I?rFf_{N? tuple defect2 and certify its graph-level defect minimum is zero.
+[2026-07-11T17:05:00Z] > ATTACK | NEXT: fan out four disjoint R33 lanes: trade Lean, 2943 trade cert, microflow audit, and dense-blocker exchange.
+[2026-07-11T20:04:05+03:00] OK VERIFY | DID: compiled exact microflow probe | RESULT: probe2.log rc0; view=(25,25,0,0,0); no sorryAx | D: VERIFY->CHECK
+[2026-07-11T20:04:05+03:00] > CHECK | NEXT: clean-rebuild module and probe, scan forbidden tokens, and hash owned artifacts.
+[2026-07-11T20:04:14+03:00] OK VERIFY | DID: replayed first tuple failure | RESULT: I?rFf_{N? shore{4,6,8} demand32 reach30; tuple0 defect0 | D: all-tuple false only
+[2026-07-11T20:04:14+03:00] > ATTACK | NEXT: exhaust N11 no-common collision Hall with 20 workers; test every graph's exact defect-minimal tuple.
+[2026-07-11T20:04:39+03:00] OK CHECK | DID: clean-built CheckedFullBankMicroFlow | RESULT: build_final.log rc0; olean SHAF0DF1F9C; axioms allowed | D: none
+[2026-07-11T20:04:39+03:00] > CHECK | NEXT: refresh owned olean overlay and clean-build Probe exact declarations.
+[2026-07-11T20:05:00+03:00] FAIL ATTACK | DID: exhausted N11 collision-only Hall | RESULT: 120 failures/1035476 tuples; minimizer failures 0/64287 | D: all-tuple false
+[2026-07-11T20:05:00+03:00] > ATTACK | NEXT: exhaust all 39142819 canonical N12 tuples with exactly 20 workers; export minimizer falsifier if present.
+[2026-07-11T17:06:20Z] OK ATTACK | DID: filled external-agent slots with disjoint R32/R33 lanes | RESULT: ledger done; microflow+census+trade Lean active | D: none
+[2026-07-11T17:10:00Z] > VERIFY | NEXT: independently audit and rebuild the R32 ledger and full-bank microflow modules against exact semantics.
+[2026-07-11T20:06:33+03:00] OK CHECK | DID: audited microflow source, probe, hashes, and forbidden terms | RESULT: module/probe rc0; manifest 4/4; forbidden scan empty | D: CHECK->DECIDE
+[2026-07-11T20:06:33+03:00] > DECIDE | NEXT: close only the supplied-data accounting lane and leave canonical flow existence open.
+[2026-07-11T20:06:33+03:00] OK DECIDE | DID: finalized checked microflow interface | RESULT: conditional Residual/FullBank outputs; no existence or main theorem | D: lane complete
+[2026-07-11T20:10:27+03:00] OK ATTACK | DID: exhausted N12 no-common collision Hall with 20 workers | RESULT: 145 failures/39142819; minimizer failures 0/921910 | D: selection survives
+[2026-07-11T20:10:27+03:00] > VERIFY | NEXT: rerun fixtures 24/167/175/311/3892/89/2943 with P2/common-blue deleted and HitNeed excluded from Hall.
+[2026-07-11T17:18:00Z] > ATTACK | NEXT: add a compiled adapter proving one checked serialized ledger supplies the microflow exclusivity view.
+[2026-07-11T20:13:03+03:00] OK VERIFY | DID: exact-gated 7 active and 2 legacy fixtures without common-blue | RESULT: all 9 pass; 2943 collision23108/23108 | D: none
+[2026-07-11T20:13:03+03:00] > CHECK | NEXT: aggregate N5-N12 counts, verify null minimizer/all-tuple falsifiers and fixture ledgers, then pin SHA256 manifest.
+[2026-07-11T20:16:34+03:00] OK CHECK | DID: aggregated and verified no-common artifacts | RESULT: 992618 graphs; 40228399 tuples; 297 failures; minimizer failures0; manifest BA3E9175 | D: CHECK->DECIDE
+[2026-07-11T20:16:34+03:00] OK DECIDE | DID: classified simplification gate | RESULT: all-tuple false at I?rFf_{N? defect2; every defect minimum and 9 fixtures pass | D: no theorem claim
+[2026-07-11T17:18:30Z] OK VERIFY | DID: compiled serialized-ledger-to-microflow bridge and import probe | RESULT: source SHA2CE03EBD; rc0; allowed axioms | D: bookkeeping gap closed; graph wall open
+[2026-07-11T17:22:00Z] > VERIFY | NEXT: replay the N5-N12 aggregate manifest and independently recompute coverage, defects, and minimizer totals.
+[2026-07-11T17:24:00Z] OK VERIFY | DID: replayed N5-N12 manifests, verifier, and independent sums | RESULT: 992618 graphs; 40228399 tuples; minfail0; aggregate A5742712 | D: census complete
+[2026-07-11T17:28:00Z] > ATTACK | NEXT: obtain an independent Pro lemma or anchored countermodel for closed-cycle/dead-end exclusion.
+[2026-07-11T17:28:01Z] OK ATTACK | DID: submitted one anchored endpoint-diversity question in a separate Pro chat | RESULT: independent consultation running | D: none
+[2026-07-11T17:32:00Z] OK VERIFY | DID: rebuilt R33 defect trade, zero-total iff, and 1-to-0 probe | RESULT: source SHA7467DC4E; rc0; allowed axioms | D: finite trade layer complete
+[2026-07-11T17:36:00Z] > ATTACK | NEXT: compile selected-row endpoint anchoring and distinct-row facts from CompleteShortestRowDB.
+[2026-07-11T17:40:00Z] OK ATTACK | DID: compiled production endpoint anchoring and selected-row injectivity | RESULT: source SHAE3ACD119; probe rc0; no sorryAx | D: R34 omitted axiom closed
+[2026-07-11T17:45:00Z] > ATTACK | NEXT: exact-gate lexicographic closed-cycle exclusion using reversible rotation and endpoint anchoring.
+[2026-07-11T17:49:00Z] OK ATTACK | DID: compiled lexicographic nonincreasing-defect trade terminal | RESULT: source SHA0214880A; probe rc0 | D: closedCycle target weakened
+[2026-07-11T17:39:48Z] > ATTACK | NEXT: launch user-approved external fanout on anchored closed-trace exclusion; keep canonical lex selector local.
+[2026-07-11T17:44:00Z] OK ATTACK | DID: external fanout launched; 2 new proof lanes active, 3 prior lanes returned exact artifacts | RESULT: agent IDs 5245-2efa,5245-b5a1 | D: none
+[2026-07-11T17:44:01Z] > VERIFY | NEXT: rebuild CollisionDefectGraphAdapter and replay the exact 2943 collision-only 25-to-0 trade certificate.
+[2026-07-11T18:31:26Z] OK VERIFY | DID: replayed 2943 collision trade | RESULT: exact PASS; baseline defect 25, anchor defect 0; cert SHA 17E5BAD0 | D: correct 28 legacy label
+[2026-07-11T18:31:27Z] OK VERIFY | DID: rebuilt CollisionDefectGraphAdapter | RESULT: rc=0; allowed axioms only; SHA 1C606265 | D: graph reduction compiled
+[2026-07-11T18:31:28Z] FAIL ATTACK | DID: exact-gated endpoint-diversity source-floor | RESULT: real 24-vtx Gamma-min cage has defect 24; verifier SHA 90583154 | D: static floor dead
+[2026-07-11T18:31:29Z] > ATTACK | NEXT: pivot fanout to canonical selector plus explicit coherent augment/lex-trade; gate the 24-vtx row alternative.
+[2026-07-11T21:41:34+03:00] > SELECT | NEXT: isolate graph-specific base purification or simultaneous lex trade at a least deficient coherent canonical shore.
+[2026-07-11T21:41:34+03:00] OK SELECT | DID: selected problem 23 canonical collision wall | RESULT: LOOP_STATE T89 names positive-defect neutral SCC frontier | D: SELECT->GATE
+[2026-07-11T21:41:34+03:00] > GATE | NEXT: compare the proposed dichotomy against r35 dual report, graph adapter, and canonical defect/lex selector APIs.
+[2026-07-11T18:38:00Z] > ATTACK | NEXT: read goal, onboarding, latest mailbox, r35 trace/switch/referee, and graph adapter to formalize the r36 sink-SCC escape target.
+[2026-07-11T18:47:00Z] OK ATTACK | DID: read goal/onboarding/mailbox and r35 engine/switch/referee/adapter | RESULT: frontier realSinkNeutralAttachmentClass_hasAugment | D: local deadEnd removed
+[2026-07-11T18:47:01Z] > PLAN | NEXT: define full-matching neutral SCC gate and test active-owner free-pair/detour escape on exact real fixtures and abstract R35 core.
+[2026-07-11T18:55:00Z] OK PLAN | DID: aligned gate to R37 finite graph over defect-minimal tuples, optimal matchings, and full cursors | RESULT: WALL_ATTACK_R37_GPTPRO56.md sec exact falsifier spec | D: none
+[2026-07-11T18:55:01Z] > ATTACK | NEXT: launch exact two-geodesic sink-SCC construction and audit every real active-scope, max-cut, row, matching, and sink hypothesis.
+[2026-07-11T19:04:00Z] OK ATTACK | DID: built full-cursor two-state sink SCC and audited two-geodesic real carrier | RESULT: abstract defect 1 sink; real ActiveOwner false; SHA A3CB52F4 | D: local-to-global implication false abstractly
+[2026-07-11T19:04:01Z] > VERIFY | NEXT: referee exact matching optimum, SCC sinkness, detour geometry, and failed real hypothesis; write r36 report.
+[2026-07-11T21:42:14.0000145+03:00] > SELECT | NEXT: inspect r35 cage certificates and canonical adapter to define the r36 exact search surface.
+[2026-07-11T21:43:04+03:00] FAIL GATE | DID: compared purification target with R37 | RESULT: R37 removes local deadEnd; sole frontier is sink neutral SCC augmentation | D: abandon purification
+[2026-07-11T21:43:04+03:00] > PLAN | NEXT: derive a one-state alternating-core saturation inequality with physical bases partitioned by exact component label.
+[2026-07-11T18:43:26Z] OK ATTACK | DID: external fanout tested 6 proof abstractions | RESULT: static floor, pure cycle, generic dual, lex-orientation all exact-falsified | D: real geometry required
+[2026-07-11T18:43:27Z] OK VERIFY | DID: exact-replayed 24-vtx row trade | RESULT: full defect 68->0; rank 90510000000000->90502000000000; SHA 8B6E8DB0 | D: selector supported
+[2026-07-11T18:43:28Z] OK VERIFY | DID: compiled canonical finite+graph selectors | RESULT: rc=0; allowed axioms; SHAs BDFE98D0,AED58870 | D: finite choice discharged
+[2026-07-11T18:43:29Z] > ATTACK | NEXT: compile R37 attachment dichotomy and conditional chain; falsify/prove realSinkNeutralAttachmentClass_hasAugment.
+[2026-07-11T21:45:30+03:00] OK PLAN | DID: derived component-partition saturation ledger | RESULT: |O_c|=|S_c|+1[c=root]; saturation alone gives no contradiction | D: PLAN->ATTACK
+[2026-07-11T21:45:30+03:00] > ATTACK | NEXT: exact-check the smallest positive-defect saturated sink model with two physical halves and exact base coherence.
+[2026-07-11T21:46:11.5681850+03:00] OK PLAN | DID: implemented R37 full-relation mutation gate | RESULT: tmp/fanout/r37_sink_scc_hunt/sink_scc_gate.py | D: PLAN->ATTACK
+[2026-07-11T21:46:11.5869533+03:00] > ATTACK | NEXT: compile and run 32 deterministic 24-vertex cage mutations at tuple bound 250000.
+[2026-07-11T21:46:23.1012071+03:00] FAIL ATTACK | DID: compiled gate and launched 32 mutations | RESULT: dataclass import failed before graph 1; sys.modules registration missing | D: none
+[2026-07-11T21:46:23.1221399+03:00] > ATTACK | NEXT: rerun the same 32-mutation exact smoke gate after loader repair.
+[2026-07-11T21:46:41+03:00] FAIL ATTACK | DID: exhausted minimal saturation models | RESULT: defect1 sink with 3 obligations/2 coherent halves; payload b11d18ed | D: saturation-only route dead
+[2026-07-11T21:46:41+03:00] > VERIFY | NEXT: pycompile checker and audit component-partition identity and artifact hashes.
+[2026-07-11T21:46:41+03:00] OK VERIFY | DID: audited checker, ledger proof, and hashes | RESULT: REPORT 1ED9BADD; checker BCEBF2FC; pycompile rc0 | D: VERIFY->CHECK
+[2026-07-11T21:46:41+03:00] OK CHECK | DID: isolated necessary distinct-base expansion | RESULT: 2|B_c|>|O_c|-1[c=root] suffices; final graph lemma remains open | D: none
+[2026-07-11T21:47:09.3064880+03:00] OK ATTACK | DID: ran corrected 32-mutation smoke gate | RESULT: 16 zero witnesses,16 disconnected,0 positive sink candidates | D: extend mutation families
+[2026-07-11T21:47:09.3276796+03:00] > ATTACK | NEXT: run 256 lock/join/random mutations with exact tuple bound 250000 and beam cap 5000.
+[2026-07-11T19:13:00Z] OK VERIFY | DID: rebuilt occurrence-valid 2-state SCC and pycompiled checker | RESULT: 12 obligations, optimum11, defect1, sink; payload SHAF9C000BE | D: exact abstract obstruction
+[2026-07-11T19:13:01Z] OK CHECK | DID: audited real two-geodesic carrier | RESULT: tri-free/maxcut6/complete rows; ActiveOwner false; REPORT.md | D: no real counterexample
+[2026-07-11T21:47:53.5664965+03:00] FAIL VERIFY | DID: audited representative maxcuts after 256-family sweep | RESULT: reporter KeyError matching_cursor_closure after maxcut computations | D: none
+[2026-07-11T21:47:53.5872936+03:00] > VERIFY | NEXT: rerun 256-family gate with corrected zero-witness maxcut reporter.
+[2026-07-11T18:49:06Z] FAIL ATTACK | DID: exact-audited R37 common-blue branch | RESULT: 20-vtx maxcut cage has sigma=1; terminal needs sigma>=2 | D: R37 deadEnd elimination invalid
+[2026-07-11T18:49:07Z] OK VERIFY | DID: compiled CanonicalCollisionProgress | RESULT: rc=0; allowed axioms; SHA 2F313660 | D: outer contradiction complete
+[2026-07-11T18:49:08Z] > ATTACK | NEXT: restore weak-free deadEnd case; prove global compensation for 0<=sigma<2 or find canonical real sink falsifier.
+[2026-07-11T21:50:47+03:00] > SELECT | NEXT: read goal, onboarding, latest mailbox, and r36 free-pair artifacts to isolate the weak-free switch frontier.
+[2026-07-11T21:51:29+03:00] OK SELECT | DID: audited live #23 wall and R36 real cage | RESULT: 20-vtx maxcut cage has free pair sigma=1 | D: SELECT->GATE
+[2026-07-11T21:51:30+03:00] > GATE | NEXT: compare multi-pair surplus target against local max-cut and common-blue audits.
+[2026-07-11T21:51:30+03:00] OK GATE | DID: checked R36/R38 and common-blue maxcut/surplus lanes | RESULT: no aggregate 2-per-terminal theorem; singleton identity only | D: GATE->PLAN
+[2026-07-11T21:51:31+03:00] > PLAN | NEXT: derive signed symmetric-difference identity and test a tree-joined two-copy R36 cage with zero pair interactions.
+[2026-07-11T21:51:31+03:00] OK PLAN | DID: reduced frontier to interaction correction | RESULT: sigma(symdiff P_i)=sum sigma(P_i)-2 sum_e w(e) floor(r_e/2) | D: PLAN->ATTACK
+[2026-07-11T21:51:32+03:00] > ATTACK | NEXT: build exact 40-vertex two-copy checker and verify maxcut, complete rows, active owners, and aggregate shortfall.
+[2026-07-11T21:54:02+03:00] OK ATTACK | DID: built tree-joined two-copy R36 cage | RESULT: N40, maxcut41, pair sigmas 1+1, union sigma2<4 | D: aggregate upgrade false
+[2026-07-11T21:54:03+03:00] > VERIFY | NEXT: rerun checker, pycompile, audit identities edgewise, and hash R39 artifacts.
+[2026-07-11T21:50:36+03:00] > ATTACK | NEXT: read goal, onboarding, latest mailbox, r36 proof, and four bank/matching modules to reconstruct typed free-pair routing.
+[2026-07-11T21:51:07+03:00] > PLAN | NEXT: derive exact global compensation for canonical weak-free attachments with sigma 0 or 1, or exhibit a real counterexample.
+[2026-07-11T21:52:02+03:00] OK PLAN | DID: audited canonical trace, adapter, weak-free gate, and mutation hunt | RESULT: N5-N10 and 7 fixtures have min defect0; 1200 mutations displayed defect0 | D: PLAN->ATTACK
+[2026-07-11T21:52:02+03:00] > ATTACK | NEXT: replay the 20-vertex sigma1 carrier under exact P1/P3/P4/P5 accounting and derive the two-switch boundary identity.
+[2026-07-11T21:51:04+03:00] OK ATTACK | DID: read goal/onboarding/mailbox and r36 weak-free audit | RESULT: r36 REPORT gives 20-vtx sigma=1 real cage; CommonBlueOwner needs sigma>=2 | D: weak pair not common-blue
+[2026-07-11T21:51:04+03:00] > PLAN | NEXT: type-audit Door/vertexSlack/prune/c5Base constructors and capacities for a reservation-free sigma=0/1 route.
+[2026-07-11T21:52:07+03:00] OK PLAN | DID: audited TypedFullBankSources, CommonBlueExtendedMatching, and CheckedFullBankMicroFlow | RESULT: HitBankSource omits c5Base; fullBankView.c5BaseCapQ=0; weak FreeHalf has no bank-term adapter | D: test impossibility
+[2026-07-11T21:52:07+03:00] > VERIFY | NEXT: replay r36 real cage and compile a minimal typed model with two free units but zero bank capacity.
+[2026-07-11T21:51:19.8309636+03:00] FAIL GATE | DID: audited R37 free-pair implication on N20 | RESULT: sigma=1 but CheckedC5BaseTransfer requires sigma>=2; tmp/fanout/r36_freepair_proof/REPORT.md | D: R37 deadEnd elimination invalid
+[2026-07-11T21:51:19.8535098+03:00] > ATTACK | NEXT: run 600 balanced blue-edge/bad-atom deletions for exact weak-free canonical minima.
+[2026-07-11T21:51:33.7169910+03:00] OK ATTACK | DID: ran all 600 one-blue/one-bad balanced mutations | RESULT: 600 displayed defect-zero,0 weak dead-end candidates | D: extend to paired locks
+[2026-07-11T21:51:33.7347010+03:00] > ATTACK | NEXT: run first 1200 two-blue/two-bad lock interactions with the same exact gate.
+[2026-07-11T21:52:46.7000231+03:00] OK ATTACK | DID: searched 5000 balanced weak-attachment mutations | RESULT: 5000 displayed defect-zero,0 positive minima; r38 manifest.json | D: ATTACK->VERIFY
+[2026-07-11T21:52:46.7195837+03:00] > VERIFY | NEXT: replay N20 obstruction, R35 compatibility, R38 manifest, and Python compilation.
+[2026-07-11T21:53:01.8780287+03:00] OK VERIFY | DID: replayed N20, R35 certificate, R38 manifest and py_compile | RESULT: all rc0; manifest SHA 0e458e4cc2b634377ed389254e8798847117e479277b5a95b8d221811380bf3a | D: VERIFY->CHECK
+[2026-07-11T21:53:01.9008765+03:00] OK CHECK | DID: classified balanced weak-free cage family | RESULT: bounded 0-failure over 5000 variants; tmp/fanout/r38_weak_attachment_hunt/REPORT.md | D: no decisive witness
+[2026-07-11T21:54:31+03:00] OK VERIFY | DID: reran R39 checker and pycompile | RESULT: PASS; REPORT SHA35502BA6; checker SHABF3DC619 | D: VERIFY->CHECK
+[2026-07-11T21:54:32+03:00] > CHECK | NEXT: classify whether any max-cut uncrossing can force two surplus units per weak-free terminal.
+[2026-07-11T21:54:32+03:00] OK CHECK | DID: audited all subfamily switches in N40 cage | RESULT: sigma(U_J)=|J|<2|J| for every nonempty J | D: aggregate route dead
+[2026-07-11T21:54:06+03:00] OK ATTACK | DID: replayed sigma1 carrier and 24-vtx positive state | RESULT: 20-vtx demand0, weak1, sources0; 24-vtx defect68, weak0, row trade68->51 | D: boundary obstruction
+[2026-07-11T21:54:06+03:00] > VERIFY | NEXT: encode and run the signed-cut interaction identity and publish the exact R39 boundary report.
+[2026-07-11T21:55:04+03:00] OK VERIFY | DID: replayed r36 cage and compiled R39 typed countermodel | RESULT: replay PASS; Lean rc=0; two free units; all bank columns zero | D: weak-bank route impossible
+[2026-07-11T21:55:04+03:00] OK CHECK | DID: referee-checked R39 report against four production modules | RESULT: tmp/fanout/r39_weak_free_bank/REPORT.md; source SHA A614B578570473C7 | D: stall=0
+[2026-07-11T21:56:24+03:00] > SELECT | NEXT: read goal, onboarding, mailbox, and R36/R38/R39 reports to formalize the R40 all-weak trade claim.
+[2026-07-11T21:56:50+03:00] OK SELECT | DID: read controlling files and four requested reports | RESULT: R36 N20 has weak probe plus alternate row; R38 says other strong probes exist | D: R40 selected
+[2026-07-11T21:56:50+03:00] > GATE | NEXT: check reports and mailbox for an existing proof or counterexample to the all-probes weak trade statement.
+[2026-07-11T21:57:10+03:00] OK GATE | DID: searched reports, mailbox, and writeups for the exact R40 implication | RESULT: no settled result; pooling and full-bank routes cited dead in R38/R39 | D: gate passed
+[2026-07-11T21:57:10+03:00] > PLAN | NEXT: formalize probe quantifiers, enumerate N20 attachment probes, and test every alternative-row replacement for defect drop or scope vacuation.
+[2026-07-11T21:59:40+03:00] OK PLAN | DID: derived frontier split from active-path geometry | RESULT: length-4 active path gives alternate row; a singleton-row cage with all weak probes refutes the claim | D: frontier=real singleton-row cage
+[2026-07-11T21:59:40+03:00] > ATTACK | NEXT: implement an exact N<=12 cage census for nonempty active scope, singleton row DBs, and universally weak attachment probes.
+[2026-07-11T22:01:20+03:00] > ATTACK | NEXT: run singleton counterexample census on orders 5..10 with 8 workers, 64 graphs/chunk, exact integer semantics.
+[2026-07-11T22:01:45+03:00] OK ATTACK | DID: enumerated orders 5..10 singleton complete-row cages | RESULT: 687 singleton systems all inactive; witness.json has witness=null | D: no counterexample <=10
+[2026-07-11T22:01:45+03:00] > ATTACK | NEXT: run the same exact singleton census on orders 11..12 with 32 workers and 64 graphs/chunk.
+[2026-07-11T22:04:00+03:00] FAIL ATTACK | DID: launched orders 11..12 singleton census | RESULT: process exceeded 124-second command window; no output artifact produced | D: none
+[2026-07-11T22:04:00+03:00] > ATTACK | NEXT: split the census and run order 11 with 64 workers, 128 graphs/chunk, exact integer semantics.
+[2026-07-11T22:04:15+03:00] FAIL ATTACK | DID: requested 64 Python process workers on Windows | RESULT: ProcessPoolExecutor maximum is 61 | D: worker cap corrected
+[2026-07-11T22:04:25+03:00] OK ATTACK | DID: enumerated order 11 with 60 workers and 128 graphs/chunk | RESULT: 4,016 singleton systems all inactive; witness_n11.json witness=null | D: no counterexample <=11
+[2026-07-11T22:04:25+03:00] > ATTACK | NEXT: run order 12 singleton census with 60 workers and 128 graphs/chunk.
+[2026-07-11T21:56:49+03:00] OK VERIFY | DID: ran R39 boundary, N40 aggregate, and Lean bank checks | RESULT: all rc0; report SHA ADD5155A; allowed axioms only | D: VERIFY->CHECK
+[2026-07-11T21:56:49+03:00] OK CHECK | DID: separated proven obstructions from full positive-defect claim | RESULT: switch and bank routes false; no real positive-defect CE; r39_weak_free_comp/REPORT.md | D: frontier unchanged
+[2026-07-11T21:57:52+03:00] > SELECT->GATE | NEXT: Read goal, onboarding, latest mailbox, and r36/r39 reports to identify the weak-pair Gamma frontier.
+[2026-07-11T18:58:33Z] OK VERIFY | DID: patched canonical graph selector to explicit mixed-radix rank | RESULT: rc=0; allowed axioms; SHA 47E8E4CA | D: exact rank live
+[2026-07-11T18:58:34Z] FAIL ATTACK | DID: tested weak-free pooling/bank repairs | RESULT: exact N40 + Lean models refute both; no positive-defect real CE | D: strong-probe/trade remains
+[2026-07-11T18:58:35Z] > ATTACK | NEXT: prove/falsify existential strong-probe-or-detour/trade and Exposure=0 weak rotor on real canonical cages.
+[2026-07-11T22:04:00+03:00] OK GATE | DID: audited R36/R39 and canonical defect fixtures | RESULT: no existing positive-defect weak-pair witness or proof | D: GATE->PLAN
+[2026-07-11T22:04:01+03:00] > PLAN | NEXT: test R29 positive-defect cage for weak probes and derive the exact cut-switch/Gamma domain calculation.
+[2026-07-11T22:08:00+03:00] OK ATTACK | DID: enumerated R29 active/support probes | RESULT: 5523 probes; sigma min 3; defect 28; no sigma0/1 probe | D: candidate counterexample rejected
+[2026-07-11T22:08:01+03:00] > VERIFY | NEXT: replay weak and positive fixtures and referee-check whether Gamma minimality compares row tuples after sigma0/1 switching.
+[2026-07-11T22:01:38+03:00] OK VERIFY | DID: replayed R36/R39 checks and Gamma carrier audit | RESULT: all 3 Python checks rc0; Gamma carrier has constant-zero inhabitant | D: route false
+[2026-07-11T22:01:39+03:00] OK CHECK | DID: wrote R40 boundary audit | RESULT: tmp/fanout/r40_weak_gamma_trade/REPORT.md SHA256 6358B5B3BC99AE10 | D: no real positive-defect CE
+[2026-07-11T19:02:48Z] FAIL VERIFY | DID: audited GammaMinimalConnected API | RESULT: arbitrary gammaOfCut admits constant-zero inhabitant | D: semantic gamma bridge required
+[2026-07-11T19:02:49Z] OK ATTACK | DID: searched 174436 N20 weak-graft atom subsets | RESULT: 3 maxcut survivors, all exact min defect 0; SHA BA31C6CE | D: no CE

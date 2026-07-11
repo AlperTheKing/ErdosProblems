@@ -1,0 +1,77 @@
+cell(  0,  0) sample0: score d09=23115 lead=23115 bound=23115 margin=+0 PASS
+cell(  1,  0) sample0: score d09=23113 lead=23113 bound=23307 margin=-194 FAIL
+cell(  1,  0) sample1: score d09=23112 lead=23112 bound=23307 margin=-195 FAIL
+cell(  1,  0) sample2: score d09=23112 lead=23112 bound=23307 margin=-195 FAIL
+cell(  0,  1) sample0: score d09=23313 lead=23313 bound=23307 margin=+6 PASS
+cell(  0,  1) sample1: score d09=23113 lead=23113 bound=23307 margin=-194 FAIL
+cell(  0,  1) sample2: score d09=23313 lead=23313 bound=23307 margin=+6 PASS
+cell(  1,  1) sample0: score d09=23110 lead=23110 bound=23503 margin=-393 FAIL
+cell(  1,  1) sample1: score d09=23110 lead=23110 bound=23503 margin=-393 FAIL
+cell(  1,  1) sample2: score d09=23110 lead=23110 bound=23503 margin=-393 FAIL
+cell(  2,  0) sample0: score d09=23110 lead=23110 bound=23303 margin=-193 FAIL
+cell(  2,  0) sample1: score d09=23109 lead=23109 bound=23303 margin=-194 FAIL
+cell(  2,  0) sample2: score d09=23311 lead=23311 bound=23303 margin=+8 PASS
+cell(  3,  2) sample0: score d09=23704 lead=23704 bound=23491 margin=+213 PASS
+cell(  3,  2) sample1: score d09=23304 lead=23304 bound=23491 margin=-187 FAIL
+cell(  3,  2) sample2: score d09=23303 lead=23303 bound=23491 margin=-188 FAIL
+cell( 26,  0) sample0: score d09=24503 lead=24503 bound=23207 margin=+1296 PASS
+cell( 26,  0) sample1: score d09=24730 lead=24730 bound=23207 margin=+1523 PASS
+cell( 26,  0) sample2: score d09=24299 lead=24299 bound=23207 margin=+1092 PASS
+cell( 27,  0) sample0: score d09=24716 lead=24716 bound=23203 margin=+1513 PASS
+cell( 27,  0) sample1: score d09=23680 lead=23680 bound=23203 margin=+477 PASS
+cell( 27,  0) sample2: score d09=24294 lead=24294 bound=23203 margin=+1091 PASS
+cell( 28,  0) sample0: score d09=24482 lead=24482 bound=23399 margin=+1083 PASS
+cell( 28,  0) sample1: score d09=24498 lead=24498 bound=23399 margin=+1099 PASS
+cell( 28,  0) sample2: score d09=25288 lead=25288 bound=23399 margin=+1889 PASS
+cell(  0, 27) sample0: score d09=24088 lead=24088 bound=23203 margin=+885 PASS
+cell(  0, 27) sample1: score d09=24088 lead=24088 bound=23203 margin=+885 PASS
+cell(  0, 27) sample2: score d09=23867 lead=23867 bound=23203 margin=+664 PASS
+cell(  5,  5) sample0: score d09=23690 lead=23690 bound=23471 margin=+219 PASS
+cell(  5,  5) sample1: score d09=23901 lead=23901 bound=23471 margin=+430 PASS
+cell(  5,  5) sample2: score d09=23287 lead=23287 bound=23471 margin=-184 FAIL
+cell( 27, 27) sample0: score d09=25719 lead=25719 bound=23295 margin=+2424 PASS
+cell( 27, 27) sample1: score d09=26275 lead=26275 bound=23295 margin=+2980 PASS
+cell( 27, 27) sample2: score d09=25638 lead=25638 bound=23295 margin=+2343 PASS
+cell( 54, 27) sample0: score d09=26767 lead=26767 bound=23387 margin=+3380 PASS
+cell( 54, 27) sample1: score d09=26257 lead=26257 bound=23387 margin=+2870 PASS
+cell( 54, 27) sample2: score d09=26771 lead=26771 bound=23387 margin=+3384 PASS
+cell(100, 50) sample0: score d09=29331 lead=29331 bound=23711 margin=+5620 PASS
+cell(100, 50) sample1: score d09=28229 lead=28229 bound=23711 margin=+4518 PASS
+cell(100, 50) sample2: score d09=28269 lead=28269 bound=23711 margin=+4558 PASS
+cell(169,169) sample0: score d09=33573 lead=33573 bound=24559 margin=+9014 PASS
+cell(169,169) sample1: score d09=33467 lead=33467 bound=24559 margin=+8908 PASS
+cell(169,169) sample2: score d09=33843 lead=33843 bound=24559 margin=+9284 PASS
+cell(200,150) sample0: score d09=32139 lead=32139 bound=24511 margin=+7628 PASS
+cell(200,150) sample1: score d09=33841 lead=33841 bound=24511 margin=+9330 PASS
+cell(200,150) sample2: score d09=33423 lead=33423 bound=24511 margin=+8912 PASS
+cell(300,300) sample0: score d09=34331 lead=34331 bound=25511 margin=+8820 PASS
+cell(300,300) sample1: score d09=34027 lead=34027 bound=25511 margin=+8516 PASS
+cell(300,300) sample2: score d09=34099 lead=34099 bound=25511 margin=+8588 PASS
+cell(338,  0) sample0: score d09=28777 lead=28777 bound=24361 margin=+4416 PASS
+cell(338,  0) sample1: score d09=28701 lead=28701 bound=24361 margin=+4340 PASS
+cell(338,  0) sample2: score d09=28725 lead=28725 bound=24361 margin=+4364 PASS
+cell(338,338) sample0: score d09=34171 lead=34171 bound=25611 margin=+8560 PASS
+cell(338,338) sample1: score d09=34395 lead=34395 bound=25611 margin=+8784 PASS
+cell(338,338) sample2: score d09=34195 lead=34195 bound=25611 margin=+8584 PASS
+cell(138,280) sample0: score d09=33699 lead=33699 bound=24839 margin=+8860 PASS
+cell(138,280) sample1: score d09=33477 lead=33477 bound=24839 margin=+8638 PASS
+cell(138,280) sample2: score d09=33581 lead=33581 bound=24839 margin=+8742 PASS
+cell(106,228) sample0: score d09=32655 lead=32655 bound=24375 margin=+8280 PASS
+cell(106,228) sample1: score d09=32813 lead=32813 bound=24375 margin=+8438 PASS
+cell(106,228) sample2: score d09=32609 lead=32609 bound=24375 margin=+8234 PASS
+cell( 84, 63) sample0: score d09=28761 lead=28761 bound=23923 margin=+4838 PASS
+cell( 84, 63) sample1: score d09=28985 lead=28985 bound=23923 margin=+5062 PASS
+cell( 84, 63) sample2: score d09=29521 lead=29521 bound=23923 margin=+5598 PASS
+cell(337, 76) sample0: score d09=31589 lead=31589 bound=24659 margin=+6930 PASS
+cell(337, 76) sample1: score d09=31427 lead=31427 bound=24659 margin=+6768 PASS
+cell(337, 76) sample2: score d09=32623 lead=32623 bound=24659 margin=+7964 PASS
+cell(241,102) sample0: score d09=32975 lead=32975 bound=24339 margin=+8636 PASS
+cell(241,102) sample1: score d09=32397 lead=32397 bound=24339 margin=+8058 PASS
+cell(241,102) sample2: score d09=32709 lead=32709 bound=24339 margin=+8370 PASS
+cell(  2,278) sample0: score d09=28605 lead=28605 bound=24391 margin=+4214 PASS
+cell(  2,278) sample1: score d09=28377 lead=28377 bound=24391 margin=+3986 PASS
+cell(  2,278) sample2: score d09=28613 lead=28613 bound=24391 margin=+4222 PASS
+============================================================================
+VERDICT: CELL-BOUND FORMULA FALSIFIED on 12 sample(s); best sampled score 23109 (< 23115 claimed min: True)
+witnesses -> _claude_r29_cellbound_witnesses.json
+=> the 23115 global-minimum certificate is INVALID; global min may lie below; reopen landscape.

@@ -1,0 +1,13 @@
+import Erdos23Delta0.Gamma.CommonBlueMicroOwnerHallReduction
+
+open Erdos23Delta0.Gamma.CommonBlueExtendedMatching
+
+#print axioms matching_nonempty_iff_hall
+#print axioms microMatching_nonempty_iff_hall
+#print axioms microHallCondition_iff_ownerHallCondition
+#print axioms microMatching_nonempty_iff_ownerHallCondition
+#print axioms microMatching_failure_iff_exists_ownerDefect
+#print axioms available_implies_extended
+#print axioms matchingOfActiveScoped
+#print axioms commonBlue_check_eq_true
+#print axioms commonBlue_adjustedSurplus_nonneg

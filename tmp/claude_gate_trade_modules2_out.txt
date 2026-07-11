@@ -1,0 +1,8 @@
+  ... Gamma/CheckedCollisionDefectTrade needs Gamma/Pattern5StaticOwnership; building dep first
+  ... Gamma/Pattern5StaticOwnership needs ResidualSourceTokenization; building dep first
+OK   ResidualSourceTokenization rc=0 20.6s (depth 2)
+OK   Gamma/Pattern5StaticOwnership rc=0 18.8s (depth 1)
+OK   Gamma/CheckedCollisionDefectTrade rc=0 18.5s (depth 0)
+OK   Gamma/CheckedCollisionLexTrade rc=0 18.0s (depth 0)
+OK   probe rc=0 18.1s
+'Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_verts_injective' depends on axioms: [propext, Quot.sound]

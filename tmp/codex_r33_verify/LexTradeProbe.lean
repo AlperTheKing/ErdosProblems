@@ -1,0 +1,4 @@
+import Erdos23Delta0.Gamma.CheckedCollisionLexTrade
+
+#print axioms Erdos23Delta0.Gamma.CheckedCollisionLexTrade.defect_lt_or_eq_and_rowCode_lt
+#print axioms Erdos23Delta0.Gamma.CheckedCollisionLexTrade.false_of_lexMinimal

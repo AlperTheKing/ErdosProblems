@@ -416,7 +416,15 @@ def build_311():
     bad.extend(attachment_bad)
     rows = [tuple((i + step) % 26 for step in range(5)) for i in range(26)]
     rows.extend(((26, 0, 1, 2, 3), (26, 0, 25, 24, 23)))
-    rows.extend((x, p3[0], owner, p1[0], y) for x, y in attachment_bad)
+    # `edge` normalizes each attachment atom to `(P0, P4)`, while the blue
+    # template must run from `P4` through `P3-owner-P1` to `P0`.
+    rows.extend((y, p3[0], owner, p1[0], x) for x, y in attachment_bad)
+    assert len(rows) == len(bad)
+    assert all(
+        all(edge(u, v) in blue for u, v in zip(row, row[1:]))
+        for row in rows
+    )
+    assert all(edge(row[0], row[-1]) == atom for row, atom in zip(rows, bad))
     assert nxt == 311
     return nxt, blue, set(bad), rows
 

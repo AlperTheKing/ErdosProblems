@@ -1,0 +1,2 @@
+E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Gamma\CheckedCollisionDefectTrade.lean:1:0: error: object file 'E:\Projects\ErdosProblems\tmp\claude_lean_o_base_v1\Erdos23Delta0\Gamma\Pattern5StaticOwnership.olean' of module Erdos23Delta0.Gamma.Pattern5StaticOwnership does not exist
+

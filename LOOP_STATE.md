@@ -1,5 +1,319 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-09T11:58 (local)
+# Last update: 2026-07-12T02:15 (local) — TICK-90
+
+## TICK-90 (2026-07-12T02:1xZ) — R38: ROTOR; SIGMA-GAP CE GATED (R37 DICHOTOMY DOWNGRADED); 24-VTX TRADE GATED
+- R38 harvested+archived (WALL_ATTACK_R38_GPTPRO56.md): BOTH proof mechanisms FAIL (closure keeps unit defect;
+  equal-defect detour frees nothing under n(m,z)>=2,r(m)>=2; created keys land in the NEW tuple's own matching).
+  MINIMAL SURVIVOR = SATURATED NEUTRAL SQUARE ROTOR (2 states, inverse blue-square middle-swap detours, all
+  sources matched/blocked). **NEW LAST LEMMA: noPositiveDefectSaturatedNeutralSquareRotor — 0<defect =>
+  0<neutralExposure(C)**; Exposure = unused compatible probe sources + unused Escape(tau) (eqs 9-11); decisive
+  falsifier = real cage defect>0 AND Exposure=0 (eq 12). Conditional main takes hrotor. R39 SENT (cascade attack:
+  saturation middles are forced owners; (m,v)-row forces A-side cascade; construct-or-refute) — GENERATING.
+- **SIGMA-GAP (Codex r36_freepair_proof): MY GATE PASS** (_claude_n20_sigma_gap_gate.py, own implementation:
+  maxcut 20 exhaustive, sigma({0,5})=1). R37 free branch does NOT reach production CommonBlueOwner (needs
+  sigma>=2; maxcut gives >=0). **4TH LOCAL OUTCOME: weak-free pair 0<=sigma<2.** N1 adjusted: compile Codex's
+  ActiveAttachmentProbeResult (free carries hsigma:0<=sigma). Exposure/falsifier MUST filter by production
+  relations. r37_sink_saturation replayed: one-state ledger 2|B_c|<=|O_c|-1 converges w/ R38; missing stmt =
+  2|B_c|>|O_c|-1 at ONE state (distinct bases; cross-state accumulation INVALID).
+- **24-VTX TRADE CERT 8B6E8DB0: MY GATE PASS** (_claude_r35_24_trade_gate.py: tri-free, cut-70 realizable,
+  fams (10x9,45x3) my DFS, ACTIVE SCOPE recomputed==theirs both states (quiescent 6 excluded — scoped-owner
+  semantics), demand recounts 240/250 match, 250 srcs injective; maxcut=70 exact via endpoint replay 90583154
+  PASS). Real cages so far ALWAYS admit the explicit trade (N=24: 68->0 one row; 2943 25->0 typing = my next gate).
+- Codex fanout lanes live: r37_sink_scc_hunt (manifest 74k), r38_weak_attachment_hunt (5000 bounded mutations,
+  all defect-0, no weak-free dead end yet — graft N20-weak onto loaded 2943/89 cores next). Their 18:43 message
+  cut mid-sentence — tail requested twice.
+- GATE QUEUE: R39 harvest; 2943 25->0 typing 17E5BAD0; CollisionDefectGraphAdapter 1C606265 rebuild+probe;
+  modules 2CE03EBD/93DB65E9/71308BE7/056A888A; N=94 reconstruction; 1-in-10 ablation. Marker 2546249.
+## TICK-89 (2026-07-12T01:3xZ) — R37: LOCAL DICHOTOMY PROVED; DEAD ENDS OUT; LAST OBLIGATION NAMED
+- R37 (14,362 ch, archived WALL_ATTACK_R37_GPTPRO56.md): activeOwner_commonBlue_or_twoEdgeDetour PROVED
+  (compile-ready w/ body: same-side probe pair => Free => both halves unreserved common-blue [reservation CANNOT
+  bind non-blue pairs] OR covered => positions differ EXACTLY 2 => detour row Q[mid->v] genuine by completeness;
+  position table exhausted; off-cable owners resolved); attachmentStep_total (deadEnd REMOVED; join-5886 = follow
+  across components, base label fixed); detour trichotomy (strict=trade / equal=neutral / uphill=ignored); ONE unit
+  of progress suffices. CONDITIONAL canonicalCollisionFeasibleTuple_exists (GIVEN hneutral) compilable NOW.
+- **THE LAST MATHEMATICAL OBLIGATION: realSinkNeutralAttachmentClass_hasAugment** — no positive-defect sink
+  neutral attachment SCC (finite graph over defect-minimal tuples; edges = matched-source + coherence-conflict +
+  equal-defect detours). Exact unresolved question: "Can maximum-cut lock geometry support a positive-defect sink
+  neutral attachment SCC?" Falsifier-gate spec recorded (archive sec 11).
+- CODEX LANES N1-N4 posted (01:25): N1 compile the 4 R37 theorems + conditional main; N2 build+run the final-lemma
+  falsifier gate (fixtures then N<=12); N3 lex encoding patch (mixed-radix tupleRank + explicit decrease); N4 six
+  wall-lanes onto the last obligation (counting-pressure / lock-equality mechanisms).
+- R38 SENT (GENERATING): proof-side attack — (1) counting pressure (sink-ness forces all probe keys matched;
+  pigeonhole on halves vs |Z_O|=|Z_S|+1 alternating core; enlarged-relation closure growth), (2) equal-defect
+  detour creates NEW Free pair at the old row (post-transition key cannot be pre-matched — augmentation?),
+  (3) else minimal surviving abstract shape + the exact real-graph question.
+- MY GATE QUEUE: N=94 reconstruction; modules 2CE03EBD/93DB65E9/71308BE7/056A888A; 1-in-10 ablation re-gate;
+  R38 + Codex Pro-consult harvests; N1/N2 outputs. Marker 2541989.
+## TICK-88 (2026-07-12T01:0xZ) — R36: LEX IDEA DEAD + R35 CORE KILLED ON REAL GRAPHS; WALL = realNeutralTraceComponent_progress
+- MODULE BATCH DUAL-VERIFIED (my dep-resolving rebuild ALL GREEN): ResidualSourceTokenization +
+  Pattern5StaticOwnership (93A86DBE) + CheckedCollisionDefectTrade (7467DC4E) + CheckedCollisionLexTrade
+  (0214880A) + SelectedRowEndpointAnchoring (E3ACD119; probe axioms EXACTLY [propext, Quot.sound]); tokens 0.
+- R36 (12,397 ch, archived WALL_ATTACK_R36_GPTPRO56.md): (1) LEX-ORIENTATION FALSE — orbit-minimum obstruction
+  (every finite exchange orbit's least element sees all moves code-INCREASING; reversibility proves nothing about
+  direction); tupleRank must be INJECTIVE mixed-radix + EXPLICITLY checked (Codex auditing 0214880A encoding);
+  neutralExchange class survives every tie-break. (2) R35 STERILE CORE REALIZED AT N=94 (maxcut 108 certified via
+  30 core + 13x6 lock caps; Gamma=325) AND KILLED 3 WAYS: detour rows Q_0j (2-edge detour lemma), one-replacement
+  scope VACUATION (activeComponents=EMPTY), 20 forced common-blue halves >> abstract deficit 10. Common-blue
+  RETAINED (first graph-derived sterile-cycle killer). (3) TWO COMPILE-READY LEMMAS: twoEdgeDetour_shortestRow +
+  commonBlue_of_free_blueNeighbours (assigned to Codex). (4) Corrected skeleton: argmin(Delta, tupleRank);
+  contradictory = augment/strict-trade/rank-checked-lex-trade; open = neutral tuple-changing + tuple-identical
+  (general) + dead ends. **WALL = realNeutralTraceComponent_progress** (closed-or-dead trace component at positive
+  defect => augment ⊕ trade ⊕ rank-checked lex trade; finer: unusedCommonBlue ⊕ twoEdgeDetourTrade ⊕ globalTrade).
+- MY CANDIDATE MECHANISM (fed to R37): the N=94 kill generalizes — active components ATTACH to selected rows;
+  attachments force detour rows (lemma 1) + cable owners get Free blue-neighbour pairs (lemma 2). R37 SENT
+  (GENERATING): prove realNeutralTraceComponent_progress from attachment geometry (subcases: {0,4}/{1,3}-only
+  attachments, off-cable owners, one-unit progress suffices, falsifier shape = attachment avoiding BOTH mechanisms)
+  — if ONE new lemma remains, state compile-ready = the last mathematical obligation.
+- Codex: lex refutation + 0214880A encoding check + 2 lemmas + lane retargets pushed (00:55 post). 6 wall-lanes
+  active + own Pro consult pending. Ablation = diagnostic-only (now with concrete reason).
+- MY GATE QUEUE: N=94 reconstruction gate (structural + maxcut + detours + vacuation + 20 halves); remaining
+  modules 2CE03EBD/93DB65E9/71308BE7/056A888A; 1-in-10 ablation census re-gate; harvest R37 + Codex Pro consult.
+  Marker 2541989.
+
+## TICK-87 (2026-07-11T23:4xZ) — R35: ANCHORED STERILE CORE EXISTS (abstract); WALL FROZEN; closedCycle CLASSIFIED
+- R35 (11,172 ch, archived WALL_ATTACK_R35_GPTPRO56.md): ANCHORED countermodel (29 vtx, K3,3 double-star, 13
+  distinct atoms+rows, minimal 9/8 circuit, demand 72 vs sources 62 [P1 38 + P3 24; P4/P5/common-blue EMPTY BY
+  FIAT], Delta=10, sterile SDR 9-cycle, tuple identical w/o shared rows). MY quadratic floor REFUTED exactly
+  (D−S_end = 2(5ab−a²−b²−3)). Common-blue RETAINED in frozen statement. **WALL FROZEN:
+  canonicalCollisionFeasibleTuple_exists (6-relation union; full hypothesis list incl anchoring+injectivity) ==
+  canonicalCollisionDefect_argmin_zero; lockTrace_step OUT; progress theorem must conclude
+  CheckedCoherentAugmentation ⊕ CheckedCollisionDefectTrade.**
+- CODEX (marker → 2541367; ASK 17:45 ANSWERED SAME TICK per comms directive): (i) ablation census COMPLETE —
+  992,618 graphs / 40,228,399 tuples N≤12, 297 nonminimal-tuple failures / 29 graphs, **minfail 0 EVERYWHERE**,
+  no all-tuple-failing graph (my 1-in-10 re-gate queued; ledgered as strongest empirical support of the wall);
+  (ii) COMPILED: CheckedCollisionDefectTrade (7467DC4E), SelectedRowEndpointAnchoring (E3ACD119 — my anchoring
+  axioms now production FACTS; kills R34 core, not R35), CheckedCollisionLexTrade (0214880A — lex terminal);
+  (iii) MY RULING on their lex idea: kills TUPLE-CHANGING cycles only; R35 core is TUPLE-IDENTICAL w/o shared
+  rows => their (ii) false abstractly; retargeted their dense-blocker lane off my dead conjecture onto R35's
+  exact formula; (iv) Codex launched own Pro consult on anchored exclusion — reconcile on harvest.
+- **closedCycle CLASSIFICATION (frontier of record)**: tuple-changing (lex-trade orientation argument — R36 asks
+  for rigorous proof + period/parity obstruction check) vs tuple-identical (R35 core — exclusion must come from a
+  REAL-GRAPH lemma: (a) z-row quiescent/outside boundaries fire P5, (b) max-cut blue geometry forces common-blue
+  terminals at high-degree owners, (c) scoped-vacuity as in real 89; OR the real embedding of the R35 core exists
+  = the decisive falsifier).
+- R36 SENT (GENERATING): (1) prove orientation claim for tuple-changing cycles (+ repaired tie-break if
+  period-obstructed); (2) attempt the REAL embedding of the R35 core — produce the falsifier or name the forced
+  lemma (a)/(b)/(c); (3) full proof skeleton of the frozen wall with named lemmas + consumers.
+- MY GATE QUEUE: 1-in-10 ablation census re-gate; modules 7467DC4E/E3ACD119/0214880A/2CE03EBD/93DB65E9/93A86DBE/
+  71308BE7/056A888A; 2943 micro re-gate under exclusivity; harvest R36 + Codex Pro-consult harvest. Marker 2541367.
+
+## TICK-86 (2026-07-11T22:5xZ) — R34: ENGINE FALSE AS STATED (abstract CM) BUT MY ANCHORING AUDIT COLLAPSES IT;
+## R35 SENT (anchored countermodel-or-exclusion + common-blue ablation)
+- R34 (12,777 ch, archived WALL_ATTACK_R34_GPTPRO56.md): 9-vtx ABSTRACT countermodel kills lockTrace engine AT THE
+  STATED INTERFACE (5 atoms sharing ONE identical singleton row => K_{40,6}, Δ=34, sterile producer 5-cycle, no
+  augment, no trade; state loses occurrence/half/cursor — two obligations share a state). Corrected engine surface
+  ADOPTED (LockTraceContext w/ global baseOwner; occurrence-level cursor; trade terminal must carry explicit cert;
+  honest thm = lockTraceSearch_terminates; result ∈ {augment,trade,closedCycle,deadEnd}). "New geometric theorem
+  must rule out closedCycle/deadEnd."
+- **MY ANCHORING AUDIT (falsifier-first on the falsifier)**: the CM exploits an OMITTED axiom — RowEndpointAnchoring
+  (row of atom (x,y) runs x→y; distinct atoms distinct endpoint pairs => distinct rows; = compiled PathRigidity
+  graph-side). 5 identical rows = 5 parallel bad edges, real-graph-impossible. MY anchored adaptation COLLAPSES:
+  atoms (v,d_i) give demand 24 vs ~46 sources (d-diversity creates 40 row-companion halves) => NO defect. The
+  sterile cycle needs the un-anchored degeneracy.
+- CODEX (marker → 2534301): 311 orientation bugfix (3608/3608); subdivision starvation candidate SELF-CORRECTED
+  likely-dead (2704 new vertices inflate same-first pool); **ASK common-blue ABLATION** (collision-only
+  P1+P3+strictP4+P5 at argmin tuples; census running) — folded into R35 (if exclusion never needs common-blue, the
+  reservation ledger drops from the live theorem); join-5886 independent re-gate PASS (matching-level coherence
+  suffices, zero defect, Pattern5StaticOwnership.lean 93A86DBE); lanes authorized (64w/192GB, 4 disjoint lanes).
+- R35 SENT (GENERATING): (1) anchored countermodel OR closedCycle/deadEnd exclusion proof (quantify: source floor
+  grows quadratically in endpoint diversity vs linear collision demand — make exact or refute); (2) common-blue
+  ablation verdict; (3) freeze the final wall statement (name+hypotheses+conclusion) for the Lean surface.
+- MY GATE QUEUE: Codex M1 outputs (argmin census + ablation); ledger/flow module gates; 93DB65E9 + micro modules;
+  2943 micro re-gate under exclusivity; harvest R35. Mailbox marker 2535460. COMMS DIRECTIVE (user, 2026-07-11): tight Codex cadence — answer every ASK <=1 tick, push every finding/gate verdict same-tick.
+- Fixtures: 24/167/175/311(3608/3608 corrected)/3892/89/2943/join-5886(gated)/K??E@cyjFgWk.
+
+## TICK-85 (2026-07-11T22:2xZ) — R33 ADOPTED: WALL FINAL NAMED FORM = lockExposureOrTrade + lockTrace_step
+- R33 (12,986 ch, archived WALL_ATTACK_R33_GPTPRO56.md): adversarial all-tuple collision-starvation attempt FAILS
+  AT MAXCUT (rigid-selector gadget, single-leaf flip gains t−1>0; repairs recreate expose-or-trade); no adversarial
+  cage, no impossibility proof. ARCHITECTURE OF RECORD: Delta(omega) = coherence-constrained collision-matching
+  defect (base-key component labels = matching CONSTRAINT per join-5886; hits OUT -> Door(e) cap 25); SELECTION =
+  argmin(Delta, rowCode) (honest objective; 2943 all-local 28 / all-anchor 0; K??E@cyjFgWk 0); TARGET =
+  canonicalCollisionFeasibleTuple_exists; CheckedCollisionDefectTrade w/ defect_lt (2943 676-row trade = first
+  concrete 28->0 cert, both endpoints my-gated); DERIVATION: at argmin+optimal matching both branches of
+  lockExposureOrTrade are contradictions => Delta(argmin)=0 (argmin absorbs cycling).
+- **THE WALL: deficientCollisionCut_lockExposureOrTrade** ("first statement GPT cannot prove") — augment-or-trade
+  at any optimal coherent matching with positive defect; FIRST OBLIGATION = **lockTrace_step** (finite trace
+  machine: state (atom,row,position,component,base-label); terminal = typed source [augment] / repeat = row-trade
+  cycle; termination by finiteness; traces need not decrease Gamma). Hypothesis map recorded (maxcut = terminal
+  validation + lock-equality forces sharing; nodup = finite states; min-defect-one = deletion-producer maps).
+- R34 SENT (GENERATING): prove lockTrace_step (full case analysis; subtle cases (a) shared lock all-alternatives-
+  cross-Z atom-move coherence, (b) base-label at component boundaries [join-5886 shape], (c) reserved-half-zero
+  stuck-states / half-one sibling sufficiency, (d) repeated-state => STRICT defect drop sign argument) OR the
+  failed-engine certificate (sec-8 spec) OR at minimum the exact Lean signature list for the engine surface.
+- CODEX LANES M1-M4 posted: M1 exact Delta evaluator + argmin + falsifier gate on fixtures->N12 (argmin-defect>0
+  graph = DECISIVE CE); M2 compile CheckedCollisionDefectTrade + 2943 cert; M3 lockTrace engine (Python on 2943
+  baseline shore first, then checked Lean); M4 join-5886 cert + module gating queue (93DB65E9 etc).
+- MY GATE QUEUE: join-5886; 93DB65E9 + micro modules; 2943 micro re-gate under exclusivity model; M1 outputs;
+  harvest R34. Mailbox marker 2529739. Fixtures: 24/167/175/311/3892/89/2943/join-5886/K??E@cyjFgWk.
+
+## TICK-84 (2026-07-11T22:0xZ) — R32 GATED+ADOPTED: FULL-BANK MICRO MODEL; WALL = canonicalMicroFeasibleTuple_exists
+- R32 (12,392 ch, archived WALL_ATTACK_R32_GPTPRO56.md): N12 missing-13 PAID BY TYPED DOORS (my gate confirmed
+  78/78 = 28 FreeHalf + 25*Door(0,10) + 25*Door(2,10); fixture FULL-BANK GREEN, no prune); full-bank micro flow
+  model (MicroObligation collision⊔hit×25 w/ edge-retaining HitNeed; MicroResource free-cap1/bank-terms; Door(e)=25,
+  vertexSlack=max(0,N−T(v)), prune=exported-only); **RESERVATION = EXCLUSIVITY decided** (idempotence unsound;
+  ratifies my edge-exclusive convention; common-blue stays non-closing on 2943, P5 pays); collisions = FreeHalves
+  ONLY; soundness chain -> ResidualSourceTokenization -> 0<=Balance; maxcut enters ONLY via terminal σ≥0.
+  **SELECTION = argmin of the exact micro defect Δ_μ itself** (score proxies dead), tie-break quiescent-mass.
+  **WALL (singular): canonicalMicroFeasibleTuple_exists = ∃ω microDefect(ω)=0 on every canonical cage.**
+- MY GATES this tick: (i) R32 N12 assignment PASS (every key/row/Door verified); (ii) P5 preservation counts =
+  3rd-impl EXACT MATCH (K(3)=1379, crossing 1014/1352/676/702, σ26, first (3,1,0,2,29)) — P5 = STATIC relation only.
+- CODEX (marker -> 2529739): P1-P5-only micro census 89,640 failures/1.59M pos-score tuples (bank needed — matches
+  R32); parallel false-repair lane self-rejected; P5 production surface compiled (93DB65E9, gate queue);
+  StaticPattern5Adapter + StaticOwnership (BaseKeyComponentCoherent iff); **join-5886 falsifier: two 2943s joined by
+  one blue edge kill RelationBaseComponentUnique => coherence IMPOSED on matching** (my re-gate queued; fixture +=
+  join-5886).
+- R33 SENT (GENERATING): (A) adversarial ALL-TUPLE COLLISION-STARVATION cage (tuple-universal starvation; would be
+  the /goal terminal falsifier) vs (B) existence-theorem skeleton (signed-identity margin; tuple choice aligning
+  per-shore pool>=collisions; defect-decreasing moves on Δ_μ). Codex lanes L1-L5 posted (ledger+flow impl, selection
+  def, N12 full-bank census, join-5886 cert, module gating).
+- MY GATE QUEUE: join-5886 certificate; 93DB65E9 + micro modules rebuild/probe; 2943 micro re-gate under the R32
+  exclusivity model (all-anchor expect green via P5+3 Doors; baseline expect red via collision shortfall 19950>19925);
+  harvest R33. Mailbox marker 2529739.
+
+## TICK-82 (2026-07-11T21:0xZ) — R31 GATED (FORALL-omega five-pattern DEAD, EXISTS-omega alive) + MICRO-SCALE RESET
+- R31 harvested (9060 ch) + MY SAME-TICK GATE CONFIRMED every number at the ORIGINAL 2943 tuple: |U|=2803,
+  |A|=2775, quiescent comps [1,1,4,4,4,5,44,50,55], |Comp(W)|=55 (3 hubs+26L+26R), **0/9 boundaries hit Comp(W)
+  => P5 reach EMPTY (QuiescentBoundaryStarved eq.13)**, P2=0, ledger 17325+2600=19925 < 19953 gap 28.
+  => `FORALL omega, CheckedFivePatternMatching` FALSIFIED on canonical cage; `EXISTS omega` SURVIVES (all-anchor
+  zero-slack, my gate). GPT WITHDREW cell-bound + unique-min claims. Archive WALL_ATTACK_R31_GPTPRO56.md.
+- CODEX MICRO-SCALE RESET (marker -> 2522128): production scale = 25 microcopies/HitNeed (ResidualSourceTokenization).
+  2943 micro: demand 20025, common-blue reach 20141, margin 116 all shores (their gate). **THEIR OWN DECISIVE
+  FALSIFIER: common-blue-ONLY DEAD at micro scale — N12 22,291 graphs / 18,961,358 tuples / 55,533 MicroMatching
+  failures; first fixture g6 K??E@cyjFgWk families [6,5,8,10] choice [0,4,5,7]: micro demand 78, flow 65, DEFECT 13,
+  deficient owners {10,11}. One-copy N12 8224/8224 = SCALE ARTIFACT.** Compiled (my gate queue): micro layer in
+  CommonBlueExtendedMatching (SHA 71308BE7), CommonBlueMicroOwnerHallReduction (056A888A).
+- NET WALL (3 frontiers agree): **EXISTS-omega SELECTION + FULL-BANK MICRO-SCALE MATCHING** — sources P1/P3/P5 +
+  common-blue w/ EXPLICIT reservation ledger (adapter still undecided: permissive margin 116 vs edge-exclusive +2 on
+  2943); sinks Door 25/sigma + vertexSlack max(0,N-T(v)) + prune; obligations at 25x HitNeed; + terminal-to-token
+  adapter. R32 SENT (GENERATING): (1) design the full-bank micro matching statement + explicit ledger choice,
+  (2) COMPUTE which capacity pays the missing 13 on K??E@cyjFgWk (if NONE => decisive candidate, I gate immediately),
+  (3) the selection principle (active-scope-minimal? quiescence-companion-max?) for EXISTS-omega.
+- MY GATE QUEUE: (a) K??E@cyjFgWk re-gate = **DONE-PASS (TICK-83)**: _claude_n12_micro_fixture_gate.py, ALL 2400
+  tuples, own impl — 12 failures, claimed profile (78/13/{10,11}) realized at 2 tuples, min score 0 w/ 0 failing
+  minima. LEDGERED: common-blue-only micro DEAD; EXISTS-omega consistent on N12. (b) re-gate 2943 micro margin-116
+  (deduction-aware); (c) rebuild+probe CommonBlueExtendedMatching 71308BE7 + CommonBlueMicroOwnerHallReduction
+  056A888A; (d) harvest R32 (STILL GENERATING ~30min).
+- CODEX SYNC (marker -> 2523267): they retire scoped-score selection + do NOT count common-blue as ledger repair
+  (my rulings absorbed); their bank-scale N12 MINIMUM gate: 0 failures (consistent w/ my fixture gate); their
+  critical path = (1) conservative P5 compiled relation, (2) P5 fixture/N12/adversarial gates, (3) common-blue
+  exclusive/permissive-with-deduction ledger, (4) reservation-free P5->ResidualSourceTokenization adapter w/
+  ComponentPreserving explicit (my addendum: make no-reservation a compiled THEOREM).
+- Fixture suite += K??E@cyjFgWk. GOAL v7 + LOOP v7 both ARMED by user.
+
+## TICK-81 (2026-07-11T20:0xZ) — COMMON-BLUE GATED: predicate-level CONFIRMED, ledger-level BLOCKED on adapter semantics
+- Codex delta (2509988->2519093): their P4-repair claim CORRECTED to zero by their own strict comp-check (matches
+  my/GPT finding); NEW repair via compiled CheckedC5BaseTransfer.TerminalData.Valid (common-blue = corrected P2:
+  owner = common BLUE neighbour of the free pair, dM({x,y})+2<=dB pays reserving the two source->owner edges):
+  28 keys (x,2930,h) x=29..42 owner 2; CommonBlueExtendedMatching.lean productionized (monotone ext + Hall iff;
+  honest: adapter/consumer OPEN). Their ASK: any condition beyond Valid+Free+activeOwner+unreserved forbidding it?
+- **MY GATE (_claude_r29_commonblue_gate.py)**: CB-1 all 14 pairs CONFIRMED (dB=30 dM=27 adjSur=1, Valid+free+
+  new+unreserved); CB-2 pool CONFIRMED (216 new keys, hist {0:4,1:106,2:106}, reach 20141); **CB-3 ANSWER = YES:
+  RESERVED-EDGE EXCLUSIVITY + POOL-DEDUCTION is uncompiled and LOAD-BEARING — conservative ledger nets +2 over
+  the WHOLE pool (all owner-2 pairs funnel through few hub blue edges; 14 share (2930,2)); permissive per-key
+  accounting gives their 19953/19953 but needs a compositional double-reservation soundness proof + old-source
+  deduction recount.** RULING posted: common-blue accepted predicate-level NOT ledger-level; missing theorem =
+  terminal-to-token adapter w/ explicit reservation ledger; **P5 (reserves NOTHING, my gate 28/28 at all-anchor
+  + random tuple) = the currently-SAFE repair, not the fallback**; both live; R31 adversary must target both;
+  lane A = fix reservation semantics.
+- R31 STILL GENERATING (~35 min; P5-adversarial hunt (A) preferred else completeness skeleton (B)). On harvest:
+  exact-gate any adversarial cage (rebuild predicates + BOTH repair mechanisms before accepting a kill); fold the
+  common-blue/adapter finding into R32.
+- Mailbox marker -> 2519093. My gates this arc now +_claude_r29_commonblue_gate.py.
+
+## TICK-80 (2026-07-11T19:3xZ) — R30 HARVESTED + PATTERN 5 GATED PASS: 2943 DEFECT PAID; ROUTE ALIVE (5-pattern)
+- R30 (13,625 ch, archived WALL_ATTACK_R30_GPTPRO56.md): **PATTERN 5 = quiescent-component attachment** — contract
+  the complement of the ACTIVE SCOPE (P4 contracted complement of U_omega; 2943 beat P4 by keeping pylons
+  selected-but-inactive). Source (omega,x,y,eps): n(x,y)=0, x,y notin A_omega, active-boundary attachments a,b
+  with owner-companionship n(v,a)>0,n(v,b)>0 + same active component; switch K(x)uK(y), maxcut => loss>=0; half-0
+  reservations can't bind. Lean checker shape + soundness + checkedFivePatternMatching_to_activeFullBank included.
+- **MY GATE PASS (_claude_r29_pattern5_gate.py)**: all-anchor — K(leaf3)=1379 exact, boundary {1,55} exact, 14 x_j
+  (56..82) in K with pair=0, 3 hubs eligible, 28 keys NEW+unreserved, loss 702-676=26, AUGMENTED SHORE 19953/19953
+  GAP 0 (all 8 shores; per-owner 5775+876, shared 2600+28=2628=3x876 EXACTLY TIGHT) => matching EXISTS. Random
+  tuple: leaf3 still quiescent, gap 0 too. **2943 = zero-slack tight fixture; wall route ALIVE via 5 patterns.**
+- R30 secondary (cell bound) = DEAD ON ARRIVAL: re-derives the d09 formula via step (19) "local row activates a
+  leaf" — falsified by my witnesses BEFORE R30 landed. Kill argument of record = my invariance gate (TICK-79).
+- SYNTHESIS OF RECORD: 4-pattern reach frozen at 19925 at EVERY tuple (invariance) => selection can't save the
+  4-pattern frame (DEAD, ledgered); P5 supplies exactly the missing 28 tuple-locally. NEW STATEMENT-OF-RECORD
+  CANDIDATE: **five-pattern CheckedTransferMatching completeness at canonical cages**.
+- R31 SENT (GENERATING): gate verdict + invariance + (19)-correction + THE ASK: (A) P5-adversarial falsifier
+  (lock quiescent attachment: boundary-companion starvation / A_omega=V / quiescent FreeHalf exhaustion) with
+  constructor spec, prefer (A) first; else (B) five-pattern completeness skeleton (lemma names, maxcut leverage,
+  extraction order).
+- CODEX LANES POSTED (19:35): P1 production-Lean Pattern 5; P2 N<=12 census under 5 patterns; P3 fixture regate
+  (24/167/175/311/3892/89/2943); P4 lead-E capacity => P5-adversarial hunt; L1'' invariance formalization stays.
+  Mailbox marker 2509988 (delta pending their reaction).
+- MY NEW GATES this arc: _claude_r29_2943_structural_gate.py, _claude_r29_cellbound_sampling_gate.py (+witnesses
+  JSON), _claude_r29_descent_probe.py (+result JSON), _claude_r29_shore_invariance_gate.py, _claude_r29_pattern5_gate.py.
+
+## TICK-79 (2026-07-11T19:0xZ) — MY GATE FALSIFIED THE FANOUT'S MIN CERT, THEN KILLED THE ROUTE CLEANER (INVARIANCE)
+- CELL-BOUND FALSIFIED (mine, falsifier-first): _claude_r29_cellbound_sampling_gate.py — 12 sampled tuples BELOW
+  the d09 per-cell bound; best 23109 < 23115 "global min"; (0,0) control exact 23115; both impls agree on scores;
+  the formula's "touched leaf => activated leaf" premise is FALSE (some locals delta -2/-3, others +198).
+  => d09/retry2 global-min certificate INVALID; witnesses _claude_r29_cellbound_witnesses.json.
+- DESCENT PROBE (mine): 480/640 single-local moves negative; greedy 23055; Hall AT 23055 defect STILL 28.
+- **INVARIANCE KILL (mine, ledger-grade)**: _claude_r29_shore_invariance_gate.py — STRUCTURAL B1 (no hub in any
+  of 460,387 selector rows) + B2 (selector rows FULLY disjoint from hub companions, max intersect 0) + B3
+  (N_B(hubs) ⊆ always-selected) + EMPIRICAL 22 tuples over FULL families (all-anchor/all-local/20 random):
+  demand 19953, reach 19925, DEFECT 28 at EVERY tuple. => defect selector-INVARIANT over 680^676 =>
+  **EveryScopedScoreMinimizerHasMatching + HallFailureHasScopedScoreGlobalDescent FALSIFIED on canonical gated
+  2943 with NO min certificate needed**. Scoped-score selection route DEAD (ledgered); freeze accepted.
+- CRITICAL PATH NOW: does the FULL banked relation (door/vertexSlack/c5Base/prune + pattern-4) absorb the
+  invariant 28 on 2943? (Codex leads B/C/E; my audit next; R30 streaming at GPT = eligibility-enrichment-or-pivot,
+  sent BEFORE the invariance finding — harvest then send R31 update w/ invariance + cell-bound correction.)
+- Codex lane updates posted (L1'' = formalize invariance argument, replaces min-cert lanes). Mailbox marker 2509988.
+- My new gates: _claude_r29_2943_structural_gate.py (S1-S6), _claude_r29_cellbound_sampling_gate.py,
+  _claude_r29_descent_probe.py, _claude_r29_shore_invariance_gate.py — all exact, all in writeup/.
+
+## TICK-78 (2026-07-11T18:1xZ) — 2943 GATED BY ME: scoped-score selection FALSIFIED on real cage (one audit leg pending)
+- CONTEXT: previous session died mid-fork (descent-ce-hunt workflow wvdldd781 ALL 6 hunters errored [5x 64K
+  output-token cap, 1x session limit], 0 results; dedicated 2943 gate agent interrupted). Meanwhile the
+  user-approved Codex 6-lead external fanout (tmp/fanout/, 64 workers) COMPLETED the job.
+- MY GATE (this tick, all exact/integer):
+  * _claude_r29_2943_structural_gate.py (MY OWN code): S1-S6 ALL PASS on the deterministic reconstruction
+    (lead constructor 5d29b1d6...): n=2943 |B|=7039 |M|=1383 |E|=8422, blue bichromatic/bad mono,
+    TRIANGLE-FREE, all 1383 bads blue-dist EXACTLY 4, complete row enumeration {1:707, 680:676} total
+    460387, baseline+anchor rows genuine, per-family 676 anchors + 4 locals, rowVerts nodup.
+  * d03/retry2 verify_maxcut.py RE-RUN: MaxCut=7039 EXACT (5 disjoint classes 4110+2704+12+207+6; 11664
+    traffic-quotient cases; attaining 2943-bit cut verified classwise) => every max cut has 1383 bads,
+    ell>=5 always => Gamma-min = 34575 attained. CANONICAL REAL CAGE (modulo historical 00186166 provenance,
+    irrelevant — the gate applies to the reconstruction).
+  * global_min cross-check REPLAYED (verify_r29_global_min_hall_falsifier.py): PASS — all-anchor tuple
+    (676 anchor rows, tuple SHA 93d5d64c...) recomputed score 23115 < 30811 baseline; d09/retry2 (indep
+    impl #2, own BFS+state) same score; cell scan 339^2=114921 cells, formula min 23115 UNIQUE at (0,0),
+    next cell 23203; d05/retry2 (indep impl #3, full rebuild from incidence) Hall at ALL-ANCHOR: hub shore
+    {0,1,2} demand 19953 (3x6651), reach 17325(same-first)+2600(companion)=19925, DEFECT 28; flow cert
+    value 19925; all 8 shores checked. I audited d05+d09 code line-by-line (Lean Nat-truncation semantics
+    mirrored: hit = max(0, deg - max(0, n-5*load))).
+  * HAMMING CORRECTION accepted: fixed-scope delta method was NOT an acceptance verifier; d06/d07 full
+    recompute => min neighbor 30813 (+2), multiplicity 1352 (not 676). Hamming-one CE stands.
+- VERDICTS (ledger):
+  1. RealHallFailureHasScopedScoreOneRowDescent: FALSE as stated — CONFIRMED on canonical real 2943.
+  2. EveryScopedScoreMinimizerHasMatching (== HallFailureHasScopedScoreGlobalDescent, compiled iff):
+     FALSIFIED on 2943 — the global-min all-anchor tuple ITSELF fails scoped Hall (defect 28) —
+     **PENDING ONE AUDIT LEG**: derivation of the d09 cell lower-bound formula
+     (20411 + C55(l,r) + 200*(ceil(l/27)+ceil(r/27)) + 4*[l=r=0] valid for EVERY tuple in cell (l,r));
+     computationally verified over all cells, argmin (0,0) = directly-computed 23115; formula proof = open
+     audit lane (fanout d10 flagged it too). If the formula audit fails, only "some tuple scores 23115 <
+     baseline" survives and the global-min question reopens BELOW 23115.
+  3. RECONCILIATION: r29_gate-lead "route survives" = answered the WEAKER baseline-descends question (true:
+     -7696 coordinated trade) — NOT minimizer-Hall. No contradiction. global_min-lead verdict stands.
+  4. PHT: impossible at a Hall-failing global minimizer (mean >= min beats S(omega)-defect); alive only at
+     non-minimal failing tuples => cannot serve as the descent lemma. N12 PHT pass (8224/8224) = finite-size
+     pattern.
+  5. Referee interfaces: (A) every-failing-descends DEAD (minimizer fails+cannot descend); (B) opaque
+     canonical minimizer Hall-good DEAD IF canonical selects all-anchor-type (unique argmin cell) —
+     effectively DEAD; (C) Hall-good tie-break among minimizers DEAD (argmin unique per cell scan).
+- SURVIVING ROUTE QUESTIONS (next frontier, R30): (i) ELIGIBILITY ENRICHMENT — a 5th graph-realizable
+  source pattern paying the 28 at the 2943 minimizer (analogous to R23 pattern-4 repairing the 89); note
+  the CE was DESIGNED to lock pattern-4-style attachment (selector-covered pylons); (ii) a NON-score
+  selection principle; (iii) honest pivot: scoped-score selection cannot power the wall — return to
+  transfer-matching completeness on a different axis. ALSO: formalize the cell bound (audit leg).
+- IN FLIGHT: none (workflows dead, gate agent interrupted — both superseded by this tick's verdicts).
+- Mailbox marker -> 2506813 (read the 5 posts 2500496-2506813: nodup bug repair EA36FC95, fanout launch,
+  N12-heavy transport rerun green C19C4BBE, referee A/B/C quantifier note 58E65EFE, global-descent iff
+  compiled 9FD3CA20 + PHT launch).
+- GPT-5.6 Pro thread (in-app browser): last harvested R29; R30 retask = THIS verdict + the eligibility
+  question. Codex: post my gate verdict + assign cell-bound formalization + pattern-5 exploration lanes.
 
 ## TICK-36 SNAPSHOT (2026-07-09 ~13:55 local) — SPEC-1 COMPILED (WALL OUTPUT INTERFACE DONE) + 107-CHART WAVE
 - **SPEC-1 Gamma/FullBankToLengthSurplusCharge.lean ACCEPTED** (my gate: SHA match, rc=0, 0 tokens, probes
@@ -385,3 +699,6 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
+
+

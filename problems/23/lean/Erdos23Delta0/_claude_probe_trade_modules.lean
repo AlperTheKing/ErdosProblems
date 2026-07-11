@@ -1,0 +1,5 @@
+import Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring
+import Erdos23Delta0.Gamma.CheckedCollisionDefectTrade
+import Erdos23Delta0.Gamma.CheckedCollisionLexTrade
+
+#print axioms Erdos23Delta0.Gamma.SelectedRowEndpointAnchoring.selectedRow_verts_injective

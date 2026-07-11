@@ -1,0 +1,4 @@
+OK   Gamma/SelectedRowEndpointAnchoring rc=0 18.4s
+FAIL Gamma/CheckedCollisionDefectTrade rc=1 2.1s
+FAIL Gamma/CheckedCollisionLexTrade rc=1 2.1s
+FAIL probe rc=1 8.5s
