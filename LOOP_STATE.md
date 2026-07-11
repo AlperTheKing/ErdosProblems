@@ -1,6 +1,29 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T06:05 (local) — TICK-96
+# Last update: 2026-07-12T06:45 (local) — TICK-97
 
+## TICK-97 (2026-07-12T06:4xZ) — AMBIENT CORRECTION ACCEPTED; T4 CENSUS: 576 CIRCUITS ALL FORCE r>=8
+## (PROFILE-EXCLUSION REPLAY PASS); TWO SCOPE QUESTIONS BLOCK "t=4 CLOSED"; R45 STILL GENERATING
+- **CODEX AMBIENT FALSIFIER ACCEPTED**: R44's restriction was REVERSED — |V(F*)| <= 16 at N=20 gives >= 4
+  OUTSIDE vertices (>= 5 after tree-kill), NOT <= 4; "intrinsic maxcut / no locks" does NOT follow. My R45
+  prompt repeated the malformed claim — R45 reply must be read with the overlay; R46 carries the correction.
+- **T4 SUPPORT CENSUS (Codex, replayed by me: PASS)**: geng 153,978 connected bipartite 15-edge graphs
+  (n=8..15) -> 34 owner embeddings -> 74,920 completions -> 2,299 tri-free -> 862 multiplicity-ok -> **576
+  exact minimal defect-one circuits (4 iso types, all n=15)**. DECISIVE: every circuit forces >= 8 atom
+  families whose EVERY shortest row contains v (same for m; histograms {8:255,9:193,10:101,11:26,12:1}) =>
+  r(v),r(m) >= 8 vs PROFILE r=4 => 0 owner profiles, 0 middle-swap transitions in 16,288 tuples. Fires
+  before activity/maxcut/ledger (F* contains ALL rows by definition — outside vertices carry none).
+- **TWO BLOCKING SCOPE QUESTIONS (posted)**: (A) r=4 was PRESCRIBED (GPT window design), not derived —
+  r >= 8 heavier window not obviously excluded UNLESS their "16,288 tuples / 0 middle-swap transitions"
+  quantifies over ALL tuples of ALL circuits (then bounce dies r-INDEPENDENTLY) — quantifier confirmation
+  requested; (B) geng coverage independent rerun (exact invocations + per-n counts + bipartite=blue-graph
+  + all 2-colorings confirmation). If A resolves r-independent: t=4 CLOSED -> R46 retargets t=5 (nauty
+  feasibility estimate requested for 24-edge space).
+- Also from Codex: dual-Hall external-atom lemma A8D39A65; abstract support-only falsifier 5b386cd9 (any
+  t4 proof must use path realizability/geometry/eligibility, not support cardinalities alone); row adapter
+  A815A9A1 — queued behind the scope questions.
+- R45 STILL GENERATING (17+ min). On landing: read with ambient overlay; reconcile with census; archive;
+  R46 = t=5 + corrected ambient + r-scope resolution + general-t argument hunt.
+- GATE QUEUE: R45; scope answers; geng rerun; N=94; ablation. Marker 2591268.
 ## TICK-96 (2026-07-12T06:0xZ) — R44: SOLE SURVIVING WINDOW (t,k)=(4,2) SLACK 1; t=3 CLOSURE COMPILED BOTH
 ## ROUTES; K_{2,3} CORE FORCED AT t=4; R45 = FORCED-COINCIDENCE STACK
 - R44 harvested+archived (WALL_ATTACK_R44_GPTPRO56.md): **|F*| = |A|-1 PROVED** (transversal-matroid circuit:
@@ -852,6 +875,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

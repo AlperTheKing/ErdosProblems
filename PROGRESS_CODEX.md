@@ -33011,3 +33011,14 @@
 [2026-07-11T21:25:43Z] OK ATTACK | DID: reduced t4/k2 support incidence | RESULT: |F*|<=15 forces common tail edge/shared bad neighbour; Lean SHA 12DFB927 | D: K2,3 core
 [2026-07-11T21:31:58Z] OK ATTACK | DID: applied minimal-circuit dual Hall to t4 owner stars | RESULT: ninth nonincident bad atom must use owner-star support; Lean SHA A8D39A65 | D: row adapter
 [2026-07-11T21:36:08Z] > COMPUTE | NEXT: search 64 seeded 16/15 support families with forced t4 K2,3 footprint using 8 workers x 20000 rounds
+[2026-07-11T21:38:11Z] OK COMPUTE | DID: exact-found/replayed t4 abstract support circuit | RESULT: 16/15 defect1; 65534 proper Hall checks pass; SHA 5b386cd9 | D: incidence-only route dead
+[2026-07-11T21:38:12Z] OK CORRECTION | DID: corrected launch parameters | RESULT: actual run was 8 workers, 64 seeds, 200 rounds; hit seed0 step0 | D: none
+[2026-07-11T21:43:16Z] FAIL GATE | DID: audited R44 ambient restriction | RESULT: |V(F*)|<=16 implies >=4 outside at N20, not <=4; intrinsic-maxcut census spec invalid | D: repair needed
+[2026-07-11T21:45:17Z] > COMPUTE | NEXT: enumerate all connected bipartite 15-edge support graphs n=8..15 with 8 geng residue workers; filter forced t4 owner core
+[2026-07-11T21:45:30Z] FAIL COMPUTE | DID: launched support census | RESULT: repo-root parent index resolved to E:/Projects; geng not found | D: fixed parents[3]
+[2026-07-11T21:48:28Z] OK COMPUTE | DID: enumerated 153978 support graphs | RESULT: 34 graphs/owner embeddings survive coarse t4 core; SHA 40f16a84 | D: atom completion
+[2026-07-11T21:48:29Z] > COMPUTE | NEXT: complete 34 embeddings with 16 triangle-free distance4 atoms and exact 16 deletion-SDR circuit gates using 8 workers
+[2026-07-11T21:50:53Z] OK COMPUTE | DID: completed t4 atom circuits | RESULT: 576 hits on 4 n15 support graphs; 16 deletion SDRs each; SHA 302e04ef | D: row profiles
+[2026-07-11T21:50:54Z] > COMPUTE | NEXT: enumerate complete row tuples on 576 circuits and detect one-middle v/m fully-covered profile transitions using 8 workers
+[2026-07-11T21:54:35Z] OK COMPUTE | DID: exhaustively gated t4 profile circuits | RESULT: 16288 tuples; every circuit forces r(v),r(m)>=8 vs required4; verifier PASS | D: t4 empty
+[2026-07-11T21:57:27Z] OK VERIFY | DID: independently replayed t4 support+atom censuses with NetworkX | RESULT: exact 153978/34/576 sets and counts match; shortest-path+SDR engines independent | D: accepted locally
