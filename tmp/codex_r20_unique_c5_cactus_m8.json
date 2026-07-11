@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "n": 40,
+    "left": 20,
+    "cycles": 8,
+    "seeds": 4096,
+    "attempts": 32,
+    "greedy_trials": 1024,
+    "seed": 20260711,
+    "workers": 61,
+    "output": "..\\..\\..\\tmp\\codex_r20_unique_c5_cactus_m8.json"
+  },
+  "validUniqueRowInstances": 131070,
+  "bestCyclesBuilt": 8,
+  "rejections": {},
+  "falsifier": null,
+  "verdict": "NO_FALSIFIER"
+}

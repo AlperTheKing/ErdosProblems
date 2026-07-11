@@ -66,14 +66,16 @@ def verify_graph(t: int, layers, info, families):
     edges = info["Bset"] | info["Mset"]
     for a, b, c in combinations(range(n), 3):
         assert not ({edge(a, b), edge(a, c), edge(b, c)} <= edges)
-    min_bad = len(info["Mset"])
-    for mask in range(1 << (n - 1)):
-        same = 0
-        for u, v in edges:
-            cu = 0 if u == n - 1 else (mask >> u) & 1
-            cv = 0 if v == n - 1 else (mask >> v) & 1
-            same += cu == cv
-        min_bad = min(min_bad, same)
+    # Vertices are twins inside each class, so every cut value is determined
+    # exactly by the five class-side counts.
+    max_cut = 0
+    for ones in product(range(t + 1), repeat=5):
+        cut = 0
+        for i in range(5):
+            j = (i + 1) % 5
+            cut += ones[i] * (t - ones[j]) + (t - ones[i]) * ones[j]
+        max_cut = max(max_cut, cut)
+    min_bad = len(edges) - max_cut
     assert min_bad == t * t
     for i, (u, v) in enumerate(info["M"]):
         assert len(families[i]) == t**3

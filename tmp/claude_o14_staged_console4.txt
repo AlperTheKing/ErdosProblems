@@ -5,3 +5,5 @@
 [Chart038] ok=True shards=322 2408s del=324 fails=0
 [Chart039] ok=True shards=338 2490s del=340 fails=0
 [Chart040] ok=True shards=468 3671s del=470 fails=0
+[Chart041] ok=True shards=468 3473s del=470 fails=0
+[Chart042] ok=True shards=470 4765s del=472 fails=0

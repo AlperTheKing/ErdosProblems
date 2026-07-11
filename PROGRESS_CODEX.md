@@ -32106,6 +32106,10 @@
 [2026-07-11T03:06:11Z] > ATTACK | NEXT: inspect a minimal real Hall failure and identify the deterministic row/producer move predicted by the coverage potential.
 [2026-07-11T04:07:14Z] > VERIFY | NEXT: adversarially search balanced C5[3] row choices for a matching-failing two-local minimum (Latin-trade obstruction).
 [2026-07-11T04:10:13Z] FAIL VERIFY | DID: ran 256 C5[3] exact local searches at 61 workers | RESULT: 25 Hall-failing 2-local minima; score96 best2=100 deficiency12; SHA 3A0A2B90 | D: HallFailureHasDescent DEAD
+[2026-07-11T04:12:49Z] FAIL VERIFY | DID: independently scanned explicit C5[3] witness through 3-row changes | RESULT: 1,500,954 neighbors, no descent from score96; SHA 265DB408 | D: repair needs >=4-row Latin trade
+[2026-07-11T04:15:33Z] OK ATTACK | DID: solved C5[3] row potential and minimum strict trade by CP-SAT | RESULT: optimum84 matching84/84; nearest descent changes6 rows to score84; SHA 8AEE011F | D: target arbitrary producer-cycle exchange
+[2026-07-11T04:24:06Z] > VERIFY | NEXT: compile routing-cancellation identity plus exact PricedCutCert checker/soundness against real BankedWallLP APIs.
+[2026-07-11T04:25:40Z] OK VERIFY | DID: built DualWeightedPricedCut.lean | RESULT: routing cancellation, checker soundness, D1 contradiction, existence iff rc0 SHA 1E3B7AA4 | D: wall reduced to one priced cut key
 [2026-07-11T02:35:55Z] > SELECT | NEXT: inspect current Hall-failure and row-exchange APIs, then trace canonical producer states on the first failing tuple.
 [2026-07-11T02:37:18Z] OK SELECT | DID: read R20 Hall/atom gates and Lean interface | RESULT: existing gates search neighbors; no deterministic producer walk | D: producer extraction frontier
 [2026-07-11T02:37:19Z] > PLAN | NEXT: reconstruct the first Hall failure and define a canonical blocked-pair-to-producer-row transition.
@@ -32125,3 +32129,41 @@
 [2026-07-11T02:56:55Z] OK VERIFY | DID: ran N5-11 producer extraction at 61 workers | RESULT: 1085580 tuples; 25275 fails=A25155+B120; conflicts0; misses0 | D: coverage clean
 [2026-07-11T02:56:56Z] > CHECK | NEXT: compute analyzer SHA-256 and audit compile, ASCII, and shared-worktree ownership.
 [2026-07-11T02:57:13Z] OK CHECK | DID: audited producer analyzer | RESULT: py_compile+AST OK; ASCII; SHA DA1285538863F9E1C1E26926D6F802BA291C527112C92BFA4C57B35A577AA0A8 | D: complete
+[2026-07-11T04:29:40Z] > ATTACK | NEXT: locate concrete wall-dual fixtures and build the exact priced-cut maximization/falsifier gate.
+[2026-07-11T04:39:46Z] FAIL ATTACK | DID: searched real wall-LP fixtures/adapters | RESULT: no graph-derived BankedWallLP or dual export exists; only abstract/toy instances | D: gate needs schema+exporter
+[2026-07-11T04:39:46Z] > ATTACK | NEXT: implement an exact Fraction JSON gate for checked duals, closed shores, all-cut/atlas maxima, and falsifier export.
+[2026-07-11T04:45:39Z] > VERIFY | NEXT: run endpoint-half restricted-dual priced-cut pilot on the full N=5..7 triangle-free census at 16 workers.
+[2026-07-11T04:46:04Z] OK VERIFY | DID: ran N=5..7 priced-cut pilot | RESULT: 84 graphs; 10 restricted LPs non-strict; 0 strict duals/failures | D: extend census
+[2026-07-11T04:46:04Z] > VERIFY | NEXT: run endpoint-half restricted-dual priced-cut gate on full N=8..9 census at 61 workers.
+[2026-07-11T04:48:42Z] FAIL VERIFY | DID: ran N=8..9 endpoint-half priced-cut gate | RESULT: 1647 graphs; 572 non-strict LPs; 0 strict duals; door-only relaxation exposes no shore | D: real sink incidence required
+[2026-07-11T04:48:42Z] OK ATTACK | DID: classified C5[3] global repair | RESULT: all 25 local falsifiers have canonical 6-row K3,3-minus-matching Latin trade 96->84 Hall-pass | D: arbitrary-cycle target sharpened
+[2026-07-11T04:48:42Z] > ATTACK | NEXT: derive or falsify an alternating shortest-path producer-cycle theorem for global minimizers.
+[2026-07-11T04:51:55Z] > VERIFY | NEXT: solve global score + Hall-failing optimum on exact C5 blow-up (3,6,1,6,3) using 64 CP-SAT workers.
+[2026-07-11T04:57:29Z] FAIL CHECK | DID: audited endpoint-half core semantics | RESULT: pilot used endpoints(S), but real C is union of all shortest-row vertices; prior zero-strict counts withdrawn | D: gate correction
+[2026-07-11T04:57:29Z] > ATTACK | NEXT: correct C and rerun the exact restricted-dual/priced-cut census.
+[2026-07-11T04:59:08Z] OK VERIFY | DID: solved C5 blow-up (3,6,1,6,3), rotated min cut | RESULT: optimum88 Hall-pass; Hall-failing optimum INFEASIBLE; exact replay | D: global target survives
+[2026-07-11T04:59:08Z] > VERIFY | NEXT: rerun corrected all-row-vertex endpoint-half priced-cut census N=5..9 at 61 workers.
+[2026-07-11T04:59:42Z] OK VERIFY | DID: reran corrected R21 census N5-9 | RESULT: 1731 graphs; 582 non-strict; 0 strict duals/failures; aggregate sink still vacuous | D: real incidence exporter remains blocker
+[2026-07-11T04:59:42Z] > VERIFY | NEXT: solve preserved hard max-cut orientation C5(3,9,1,9,3), including Hall-failing global-optimum model, at 64 workers.
+[2026-07-11T05:03:48Z] OK VERIFY | DID: solved preserved C5(3,9,1,9,3) | RESULT: optimum160 Hall-pass; failing optimum INFEASIBLE; 160/160 independent match | D: bottleneck survives
+[2026-07-11T05:03:48Z] > VERIFY | NEXT: scale bottleneck family to C5(4,16,1,16,4), exact optimum and Hall-failing optimum, 64 workers.
+[2026-07-11T05:09:35Z] OK VERIFY | DID: tested every global-minimum tuple N5-11 | RESULT: 3,812,476 tuples; 670,459 minima; 0 Hall-failing minima across 184,691 eligible cuts | D: universal target strengthened
+[2026-07-11T05:09:35Z] OK VERIFY | DID: compiled owner-saturated Hall reduction | RESULT: collisionHallCondition_iff_ownerHallCondition rc0 SHA 1BB99196; allowed axioms | D: shores reduce to vertex-owner sets
+[2026-07-11T05:20:00Z] OK VERIFY | DID: compiled exact owner-demand cardinal formula | RESULT: ownerHallCondition_iff_ownerUnits rc0 SHA CC91B262; allowed axioms | D: Hall is one scalar inequality per owner set
+[2026-07-11T05:20:01Z] > ATTACK | NEXT: derive the owner-source lower bound from free-pair ownership and global score minimality; falsify on unique-row packings first.
+[2026-07-11T05:21:00Z] > VERIFY | NEXT: syntax-check and audit the edge-disjoint unique-C5 packing falsifier gate before its 61-worker run.
+[2026-07-11T05:21:10Z] OK VERIFY | DID: py_compile+AST audited unique-C5 packing gate | RESULT: rc0 SHA CD2C9A18; exact max-cut/row uniqueness checks present | D: ready after CP-SAT
+[2026-07-11T05:29:00Z] OK VERIFY | DID: solved C5(4,16,1,16,4) global optimum | RESULT: score318 Hall318/318; failing-optimum search UNKNOWN after1233s | D: no falsifier, no closure
+[2026-07-11T05:29:01Z] > ATTACK | NEXT: run 4096-seed unique-row edge-disjoint C5 packing falsifier search at 61 workers on n16/m8.
+[2026-07-11T05:30:10Z] FAIL ATTACK | DID: ran n16/m8 unique-row packing search | RESULT: 4096 seeds built m8 but 0 valid instances; run vacuous | D: instrument rejection causes
+[2026-07-11T05:30:11Z] > VERIFY | NEXT: syntax-check rejection instrumentation, then rerun 1024 seeds to identify the failed structural gate.
+[2026-07-11T05:31:00Z] FAIL VERIFY | DID: diagnostic unique-row run | RESULT: one full packing reached exact gate and failed row uniqueness; other attempts incomplete | D: enforce connected attachment+trim pool
+[2026-07-11T05:31:01Z] > VERIFY | NEXT: rerun corrected connected-packing generator with unchanged exact max-cut and complete-row gates.
+[2026-07-11T05:32:00Z] OK VERIFY | DID: compiled owner-source partition | RESULT: ownerHallCondition_iff_ownerLoadUnits rc0 SHA F455632C; allowed axioms | D: wall is companion-only capacity
+[2026-07-11T05:32:20Z] FAIL VERIFY | DID: connected unique-row packing gate | RESULT: 235413 connected m8 packings all had alternate shortest rows | D: restrict to one-vertex cactus attachment
+[2026-07-11T05:32:21Z] > VERIFY | NEXT: run nonvacuous unique-row C5-cactus class at 61 workers with exact complete-row/max-cut replay.
+[2026-07-11T05:33:30Z] OK VERIFY | DID: ran unique-row C5-cactus gate | RESULT: 131070 valid m8 instances; 0 Hall failures; exact singleton DB/max-cut replay | D: sparse class clean
+[2026-07-11T05:33:31Z] > ATTACK | NEXT: construct PG(2,4) 2-(21,5,1) block-design C5 orientation; test cut, triangle-free, and unique-row Hall falsifier exactly.
+[2026-07-11T05:35:00Z] FAIL ATTACK | DID: solved PG(2,4) split-2/3 coloring gate | RESULT: CP-SAT INFEASIBLE before cycle orientation; candidate falsifier impossible | D: derive design count obstruction
+[2026-07-11T05:36:00Z] OK VERIFY | DID: compiled split-2/3 five-design obstruction | RESULT: no_split23_pair_design rc0 SHA 6A3B5AC2; allowed axioms | D: dense linear falsifier family closed
+[2026-07-11T05:36:01Z] > ATTACK | NEXT: generalize the design count to a local leave inequality that lower-bounds free companion pairs for owner shores.

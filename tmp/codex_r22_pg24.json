@@ -1,0 +1,16 @@
+{
+  "design": "PG(2,4)",
+  "points": 21,
+  "blocks": 21,
+  "parameters": {
+    "workers": 64,
+    "colorings": 16,
+    "orientations": 256,
+    "time_limit": 15.0,
+    "output": "..\\..\\..\\tmp\\codex_r22_pg24.json"
+  },
+  "coloringsTested": 0,
+  "status": "INFEASIBLE",
+  "falsifier": null,
+  "attempts": []
+}
