@@ -32249,3 +32249,5 @@
 [2026-07-11T10:08:15Z] OK VERIFY | DID: summed variation on N12 medium failures | RESULT: 1080/1080 negative; full N12 8224/8224; SHA A0F6D162 | D: scalar averaging frontier
 [2026-07-11T10:08:16Z] > VERIFY | NEXT: compile negative total one-row variation => scoped-score descent => minimum Hall in Lean.
 [2026-07-11T10:13:29Z] OK VERIFY | DID: compiled one-row variation reduction | RESULT: negative sum=>descent=>minimum Hall rc0 SHA 10D1F60A; allowed axioms | D: wall is scalar shore inequality
+[2026-07-11T10:29:27Z] > VERIFY | NEXT: compile deficient owner-shore defect bound => negative variation => minimum Hall.
+[2026-07-11T10:34:00Z] OK VERIFY | DID: compiled quantitative owner-shore variation chain | RESULT: shore defect bound=>minimum Hall rc0 SHA 383E84FC; allowed axioms | D: sole scalar graph inequality isolated

@@ -344,3 +344,16 @@
   311 stage-3 (corrected full-obligation 3624/3624 by Codex). My 175 script still backlog.
 - L2: h_boundary exporter still MY open lane (design next idle tick). P estimate: math ~50-60 (scoped
   target empirically bulletproof + both frontiers converged), Lean|math ~75-85 unchanged.
+
+## TICK-75 (2026-07-11T13:5xZ) — R25/R26-strong FALSIFIED by Codex fixtures; weakest scoped-descent form survives FULL N12
+- Codex: (16)/radius-3 and >=3A-killer FALSE as stated (2 N11 hfar tuples, no rho=3 pair, killers are
+  1A+3S / 2A+2S; gate _codex_r26_two_support_falsifier.py FEF16105 — MY re-gate queued). Surviving chain,
+  ALL COMPILED in Gamma/ActiveScopedMinimumExchange.lean (final SHA B916318F…, kernel-replayable checker,
+  axiom-clean): ScopedAbsorbingInternalRow (422/422) and THEOREM-OF-RECORD =
+  RealHallFailureHasScopedScoreOneRowDescent (weakest; 8,224/8,224 through FULL N12 all-tuple:
+  921,910 graphs / 39,142,819 tuples / 0 failing scoped minimizers). R25 score-mismatch caught+repaired
+  (scopedObligationScore selector). Composition guardrail: glued local failures Hall-feasible.
+- R28 (splice iteration for the falsified (16)) generating — harvest for salvage value only; R29 retask =
+  RealHallFailureHasScopedScoreOneRowDescent with the 2A+2S fixture mandatory.
+- MY GATE QUEUE: ActiveScopedMinimumExchange B916318F full gate; FEF16105 fixture re-verify; then the
+  standing backlog (h_boundary exporter, 175, chart monitor, mailbox tail from 2487252).

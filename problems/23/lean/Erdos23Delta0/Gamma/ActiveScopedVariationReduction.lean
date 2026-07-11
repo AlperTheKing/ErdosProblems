@@ -87,6 +87,50 @@ def RealHallFailureHasNegativeOneRowVariation
     CompleteShortestRowDB G c bads →
     HallFailureHasNegativeOneRowVariation G c bads
 
+/-- Quantitative owner-shore target.  Every Hall-deficient owner shore pays
+its entire cardinal defect in negative total one-row variation. -/
+noncomputable def DeficientOwnerShoreVariationBound
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  ∀ (omega : RowChoice bads) (A : Finset (Fin G.n)),
+    (scopedOwnerSourceSet G c omega A).card <
+        (scopedOwnerDemandSet
+          (G := G) (c := c) (omega := omega) A).card →
+      oneRowVariation G c omega ≤
+        ((scopedOwnerSourceSet G c omega A).card : Int) -
+          ((scopedOwnerDemandSet
+            (G := G) (c := c) (omega := omega) A).card : Int)
+
+noncomputable def RealDeficientOwnerShoreVariationBound
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData) : Prop :=
+  TriangleFree G →
+    IsMaxCut G c →
+    BConnected G c →
+    CompleteShortestRowDB G c bads →
+    DeficientOwnerShoreVariationBound G c bads
+
+theorem hallFailureHasNegativeVariation_of_ownerShoreBound
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hbound : DeficientOwnerShoreVariationBound G c bads) :
+    HallFailureHasNegativeOneRowVariation G c bads := by
+  intro omega hfailure
+  rcases (matching_failure_iff_exists_scopedOwner_defect G c omega).mp
+      hfailure with ⟨A, hdefect⟩
+  have hvariation := hbound omega A hdefect
+  have hrhs :
+      ((scopedOwnerSourceSet G c omega A).card : Int) -
+          ((scopedOwnerDemandSet
+            (G := G) (c := c) (omega := omega) A).card : Int) < 0 := by
+    exact sub_neg.mpr (by exact_mod_cast hdefect)
+  exact lt_of_le_of_lt hvariation hrhs
+
+theorem realHallFailureHasNegativeVariation_of_ownerShoreBound
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (hbound : RealDeficientOwnerShoreVariationBound G c bads) :
+    RealHallFailureHasNegativeOneRowVariation G c bads := by
+  intro htri hmax hconn hdb
+  exact hallFailureHasNegativeVariation_of_ownerShoreBound G c bads
+    (hbound htri hmax hconn hdb)
+
 theorem hallFailureHasScopedScoreDescent_of_negativeVariation
     (G : GraphData) (c : CutData) (bads : List BadEdgeData)
     (hvariation : HallFailureHasNegativeOneRowVariation G c bads) :
@@ -114,6 +158,18 @@ theorem realMinimumActiveScopedHall_of_negativeVariation
     G c bads htri hmax hconn hdb
   exact realHallFailureHasScopedScoreDescent_of_negativeVariation
     G c bads hvariation
+
+theorem realMinimumActiveScopedHall_of_ownerShoreVariationBound
+    (G : GraphData) (c : CutData) (bads : List BadEdgeData)
+    (htri : TriangleFree G) (hmax : IsMaxCut G c)
+    (hconn : BConnected G c)
+    (hdb : CompleteShortestRowDB G c bads)
+    (hbound : RealDeficientOwnerShoreVariationBound G c bads) :
+    MinimumActiveScopedHall G c bads hdb.rowsNonempty := by
+  apply realMinimumActiveScopedHall_of_negativeVariation
+    G c bads htri hmax hconn hdb
+  exact realHallFailureHasNegativeVariation_of_ownerShoreBound
+    G c bads hbound
 
 end ActiveScopedMinimumExchange
 end Gamma
