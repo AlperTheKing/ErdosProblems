@@ -1,4 +1,7 @@
-# GOAL_LOOP.md — read FIRST on every resume/compaction (GENERAL VERSION v6, updated 2026-07-11 — TRANSFER-MATCHING ERA)
+# GOAL_LOOP.md — read FIRST on every resume/compaction (GENERAL VERSION v6.1, updated 2026-07-11 — TRANSFER-MATCHING ERA)
+# v6.1: GOAL re-issued in pure ASCII <=3755 bytes (the /goal limiter counts BYTES, cap 4000; unicode math
+# symbols overflowed it) + folded in R20: 311-vtx base-only CE -> rowCompanion third pattern; h_boundary.
+# THE ARMABLE /goal TEXT = scratchpad goal_v61_ascii.txt content, reproduced as the GOAL section below.
 # Volatile state lives in LOOP_STATE.md — read it immediately after this file.
 # Resume flow: (1) this file; (2) LOOP_STATE.md (latest TICK notes); (3) PROGRESS.md last ~30 lines;
 # (4) MEMORY.md ACTIVE block; (5) newest CODEX->CLAUDE posts from the byte marker; (6) resume the LOOP.
@@ -6,54 +9,12 @@
 ================================================================================
 GOAL  (the /goal Stop-hook text; ALL FOUR conjuncts must hold before stopping)
 ================================================================================
-Erdős #23 δ=0: prove every triangle-free graph on N vertices satisfies β = e − maxcut ≤ N²/25, via the GERSH
-program (per-bad-edge row bound on B-connected Γ-minimal maximum cuts; GERSH ⟹ Γ ≤ N² ⟹ β ≤ N²/25).
-STANDING CORRECTIONS (all exact-verified; NEVER re-derive a DEAD route — every entry has a CE or compiled
-countermodel on file in problems/23/writeup/): bare support expansion (24-vtx CE) — BANKED form only
-(Demand ≤ Door+VertexSlack+C5Base+Prune caps; NO η token in any certificate type); add-only patching;
-closure-of-minimal-deficient; W2-as-stated; root-locality/common-sink (359-vtx); direct root-block split
-(noDouble); universal fibers (12-row integrality CE + 662-vtx); "fiberless ⟹ bankable"; strict-dual-split at
-abstract bank (2-atom shared-sink, cage-illegal); strong integral root layer (154-vtx det-2 odd circuit);
-the oddCircuit escape (killed by the half-layer squeeze); IES (118-vtx booster: T(v) can exceed N);
-aggregate-ledger ⟹ routing (typed sources required); unannotated Horn derivations (owner atlas required);
-NO-ACTIVE-COMPONENT (167-vtx); bare COLLISION-TO-TOKEN (collisions are debits in |Free|−|Coll| = N²−25m);
-permanent-Free-as-quantified over all bad edges (175-vtx; the A-SCOPED row-intersection lemma SURVIVES);
-prune-by-Γ-decrease (Γ-minimality points the WRONG way from the chosen cut — prune needs per-step INJECTIVE
-slot transport). Do not stop until ALL FOUR conjuncts hold simultaneously:
-(1) Branch A: MAINTAIN 108/108 certified charts (SHA-pinned, dual-verified aggregate) + complete the
-    payload/coverage stack: per-chart staged verification ledger for all sharded payload modules +
-    classifier/registry/dispatcher soundness; the single registry-level compile is gated on the COMPACT
-    RE-EMISSION lane (the 81MB-olean/3.4TB disk wall is a PR-blocker; target ≤~50GB, plain lake-buildable);
-    final generated-artifact cleanup pass (strip probe commands). External-SHA-only is NEVER final.
-(2) Branch B: layer stack fully compiled with banked Pure-UPO existence discharged by the same one wall;
-    SPEC-2 row partition (component-level EQODL1) compiled and wired.
-(3) EXACT VERIFICATION (mine, non-negotiable): rational Fraction/ℚ only; battery pass = annotation never
-    proof; every teammate artifact passes MY independent gate (SHA match + rebuild rc=0 + no 'error:' +
-    axioms EXACTLY ⊆ {propext, Classical.choice, Quot.sound} + zero sorry/admit/native_decide/sorryAx +
-    no #print-axioms probe commands in final sources) — a RESULT post is a CLAIM until my re-gate verdict;
-    full aggregate re-verify at final assembly; milestones advance ONLY via compiled Lean or exact certs.
-(4) LEAN COMPLETE + SHIPPED, INCLUDING THE ONE WALL, current form (transfer-matching era): the
-    per-cage **CheckedTransferMatching** route — Obligations (CollisionHalf ⊔ HitNeed from the exact
-    atomized identity |Free_ω| − |Coll_ω| = N² − 25m) injectively matched into FreeHalf via checked
-    transfer traces (base patterns: same-owner cancellation + common-bad-neighbour c5Base terminals with
-    recomputed switch loss ≥ 0; prune steps only with injective slot transport + local row-rank decrease),
-    generating the banked token family ⟹ compiled EndpointReserveHall ⟹ compiled active-component flow +
-    boundary own-Door routing ⟹ ActiveComponentFullBankCert ⟹ Checked FullBankGlobalPackage (SPEC-1 output
-    interface COMPILED: fullBankGlobalPackage_sound → gammaUpper_from_fullBankGlobalPackage). THE remaining
-    research content: (a) base-only Hall-completeness or the corridor-vertex third pattern / slot-transport
-    theorem; (b) the Codex side-invariant pair (primitive escape-block steps and shared positive
-    c5Base/prune fibers preserve the inside-corner label — NMC's two local one-step obligations). Plus the
-    finite-Farkas iff (FM-over-ℚ blueprint), the FC package provider (remaining top theorem: ∀ finite
-    tri-free Gs, Nonempty (SimpleGraphCertificatePackage Gs)), and remaining engineering (M6 provider,
-    typed-source migration, compact re-emission). Official erdos_23 bridge (FCBridge compiled), shipped as
-    ONE formal-conjectures PR committed as the USER ALONE (never any Anthropic/Claude co-author trailer).
-    All-or-nothing. The published N≤200 paper stays untouched.
-TERMINAL ALTERNATIVE — THE DECISIVE FALSIFIER (current form): the transfer-aware matching gate fails on a
-canonical real cage — an exact minimum-cut certificate with obligation set Z, |Z| > |ReachFree(Z)| under the
-FULL checked transfer relation (all base patterns + all valid slot-transported prunes), with every
-structural predicate verified (tri-free, genuine max cut, Γ-min, B-connected, ten facts, cage legality,
-official bank profile). Bankable exhibits (24/167/175/359/662/3892 — all verified conjecture-consistent) do
-NOT count. If found: machine-verify, archive + memory + user one-liner, then stop.
+Erdos #23 delta=0: prove every triangle-free graph on N vertices satisfies beta = e - maxcut <= N^2/25 via GERSH (per-bad-edge row bound on B-connected Gamma-minimal max cuts; GERSH => Gamma <= N^2 => beta <= N^2/25). DEAD ROUTES (all exact-verified, CEs in problems/23/writeup/ - NEVER re-derive): bare SSE (24-vtx) - BANKED form only, NO eta token anywhere; add-only patching; closure-of-minimal-deficient; W2-as-stated; root-locality/common-sink (359); direct root-block split; universal fibers (12-row + 662); fiberless=>bankable; strict-dual-split at abstract bank; strong integral root layer (154); oddCircuit escape (half-layer squeeze); IES (118: T(v)>N possible); aggregate-ledger=>routing (typed sources required); unannotated Horn (owner atlas required); NO-ACTIVE-COMPONENT (167); bare COLLISION-TO-TOKEN (collisions are debits in |Free|-|Coll|=N^2-25m); permanent-Free-over-all-bad-edges (175; A-SCOPED row-intersection lemma survives); prune-by-Gamma-decrease (prune needs INJECTIVE slot transport); base-only transfer Hall (311-vtx corridor-overload CE => rowCompanion third base pattern adopted). Do not stop until ALL FOUR conjuncts hold:
+(1) Branch A: maintain 108/108 certified charts (SHA-pinned, dual-verified) + payload/coverage stack: per-chart staged verification ledger for all sharded payloads + classifier/registry/dispatcher soundness; registry-level compile gated on COMPACT RE-EMISSION (81MB-olean/3.4TB disk wall = PR-blocker; target <=50GB plain lake-buildable); final probe-cleanup pass. External-SHA-only is never final.
+(2) Branch B: layer stack fully compiled; banked Pure-UPO existence discharged by the same one wall; SPEC-2 row partition compiled and wired.
+(3) EXACT VERIFICATION (mine): rational Fraction/Q only; battery pass = annotation never proof; every teammate artifact passes MY independent gate (SHA + rebuild rc=0 + no 'error:' + axioms EXACTLY within {propext, Classical.choice, Quot.sound} + zero sorry/admit/native_decide/sorryAx + no #print-axioms probes in final sources) - a RESULT post is a CLAIM until my re-gate; full aggregate re-verify at final assembly.
+(4) LEAN COMPLETE + SHIPPED incl THE ONE WALL (transfer-matching era): per-cage CheckedTransferMatching - Obligations (CollisionHalf + HitNeed from |Free|-|Coll|=N^2-25m) injectively matched into FreeHalf via checked transfer traces (base patterns: sameFirst cancellation, commonBad, rowCompanion - switch loss >= 0 automatic at max cut; prune only with injective slot transport + local rank decrease) => banked token family => compiled EndpointReserveHall => active-component flow + boundary own-Door routing => ActiveComponentFullBankCert => Checked FullBankGlobalPackage (SPEC-1 interface COMPILED). Open research: (a) stage-3 base-pattern Hall-completeness or the slot-transport theorem; (b) h_boundary - the dual-weighted cut-realization bridge (unweighted loss cannot price Lambda_d; needs cut construction or a priced trace field); (c) Codex side-invariant pair. Plus finite-Farkas iff, FC package provider (forall finite tri-free Gs, Nonempty (SimpleGraphCertificatePackage Gs)), engineering (M6 provider, typed sources, compact re-emission). Official erdos_23 bridge, ONE formal-conjectures PR committed as the USER ALONE (never any Anthropic/Claude co-author trailer). All-or-nothing. N<=200 paper untouched.
+TERMINAL ALTERNATIVE - DECISIVE FALSIFIER: the transfer-aware matching gate fails on a canonical real cage (obligation set Z, |Z| > |ReachFree(Z)| under the FULL checked relation, all structural predicates verified) OR the h_boundary gate finds Def_d(P) > G_max on a canonical instance. Bankable exhibits (24/167/175/311/359/662/3892) do NOT count. If found: machine-verify, archive + memory + user one-liner, then stop.
 
 ================================================================================
 LOOP  (the /loop text; TRANSFER-MATCHING ERA — roles + volatile state in LOOP_STATE.md)
