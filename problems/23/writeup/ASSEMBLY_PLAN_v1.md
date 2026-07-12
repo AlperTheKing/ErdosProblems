@@ -41,3 +41,18 @@
 Every module: rc=0, no error/sorry tokens, axiom probe on the top theorem; the assembly probe imports
 EVERYTHING and probes canonicalCollisionFeasibleTuple_exists_conditional. GammaMinimalConnected consumers
 remain BLOCKED pending the semantic bridge (tracked separately; the conditional main must NOT consume it).
+
+## M3 INTERFACE REQUIREMENTS (from my no_t3 consumer study, 2026-07-12 TICK-107)
+The compiled no_t3_balancedDeficiencyRotor consumes ABSTRACT data (R43SupportIncidence):
+TwoRotatingOwners { support, atV, atM, external : Finset Edge; subsets; pairwise Disjoint; ThreeMembers
+witnesses each } + support_card = 8 (analogous ThreeRotatingOwners). THEREFORE the production
+CheckedBalancedDeficiencyRotor (M3) MUST expose, per rotating owner v:
+  (a) three EXPLICIT owner-incident support-edge witnesses (the covered-star detour rows put vx0, vy_i in
+      F* — the graph adapter fullyCoveredLiveStar_fullSupportDegree_ge_three's witness triple);
+  (b) the same-side + common-blue-neighbour facts (for pairwise disjointness of owner-incident sets:
+      vm not blue [same side], not bad [triangle with common nbr]);
+  (c) the bad-neighbour 4-path data (for the external-edge triple via the two-case argument);
+  (d) the circuit cardinality hook (|F*| = |A|-1 instance at the window's |A|).
+M5's bridge then: production rotor at |M|=9 -> build TwoRotatingOwners/ThreeRotatingOwners -> no_t3 -> False.
+Same pattern for t=4/t=5 once their catalogue certs land (T4/T5 consumers per R51 shapes).
+CODEX: design M3 fields to make (a)-(d) PROJECTIONS, not re-derivations.
