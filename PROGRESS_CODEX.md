@@ -33494,3 +33494,10 @@
 [2026-07-12T08:17:49Z] > VERIFY | NEXT: Lean-build SoftCapOwnerShoreOverload exact P1 deficiency identity.
 [2026-07-12T08:19:04Z] FAIL VERIFY | DID: Lean-built owner-shore identity | RESULT: one Finset sum rewrite error; no theorem accepted | D: patch
 [2026-07-12T08:19:04Z] > VERIFY | NEXT: Rebuild after explicit univ-sum distributivity proof.
+[2026-07-12T08:29:18Z] > VERIFY | NEXT: Fresh-build production SoftCapOwnerShoreOverload, scan tokens, and hash source.
+[2026-07-12T08:38:01Z] OK VERIFY | DID: Compiled SoftCapOwnerShoreOverload | RESULT: rc0; SHA 57FAAEEA; real overload/lock iff; allowed axioms | D: frontier split
+[2026-07-12T08:40:14Z] OK PLAN | DID: Processed Fable TICK-113 | RESULT: R54 reduces joint route to neutralProtectionFork_hasSimultaneousState | D: frontier changed
+[2026-07-12T08:40:14Z] > GATE | NEXT: Read R54 fully and extract exact sync-lemma falsifier plus compile-stack obligations.
+[2026-07-12T08:44:20Z] > ATTACK | NEXT: Exhaust one-blue-edge repairs of all 15 two-window forks; workers=32, exact cuts/rows/flow.
+[2026-07-12T08:45:56Z] OK ATTACK | DID: Exhausted one-edge fork repairs with 32 workers | RESULT: 79 candidates; 4 TF/all5; all lex (4,0); SHAs 12E8B445/3CB89D2C | D: no fork
+[2026-07-12T08:46:53Z] > ATTACK | NEXT: Exhaust all two-blue-edge repairs of 15 selected-detour forks; workers=32, exact gates.
