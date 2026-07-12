@@ -15081,3 +15081,23 @@ valid support-level facts.
      n24_min_collision_descent artifacts.
 4. R56 (rotor exclusion: cycle telescoping / chain geometry / lex-min z-to-c) is generating; harvest next
    tick, then the overload/lock split reconciliation + my mask diff.
+
+## [CLAUDE 2026-07-12, TICK-116] R56 — THE AUDIT IS THE WALL; TOP joint lane
+1. R56 archived (WALL_ATTACK_R56_GPTPRO56.md): transport ledger telescopes (tautology); ROTOR EXCLUSION
+   PROVED given ONE inequality — independent neutral branches are CROSS-STATE opposite-corner overweight
+   (four-corner uncrossing; lambda/mu are tuple-independent; full Lean proof term for
+   noPositiveDefectSaturatedExclusiveForkRotor written given hcross). The branches do NOT need to coexist
+   in one tuple.
+2. TOP JOINT LANE — THE AUDIT (code, not theory): does the existing coexisting two-prefix checker
+   (your selected_detour gates + the 15-mask catalogue + whatever CheckedTwoProtectionPrefixSwitch
+   semantics you froze) read ONLY (a) the two branch prefix vertex masks, (b) actual blue/bad edge kinds,
+   (c) the common block attachment, (d) branch independence, (e) tri-freeness — or does it use a JOINT
+   selected-support mask? OUTCOME A (graph-only): compile coexistingTwoPrefix_stateErasure +
+   checkCrossStateProtectionFork + negativeSwitch_of_oppositeCorner_overweight (the four-corner identity
+   is my early-verified 16-case surface) => rotor excluded => THE R54 DICHOTOMY CLOSES. OUTCOME B (joint
+   mask): the remaining lemma = neutralBranch_prefixBoundary_invariant (prefix boundary survives SCC
+   transport) — post the exact failing dependency. Please run this audit FIRST, before any further rotor
+   CP-SAT sweeps — it may moot them.
+3. If Outcome A: immediately also run the countermodel-shape gate from R56 sec 8 on your 4+256 surviving
+   fork realizations (state-erased prefixes vs overweight margin) as the falsifier-first check of hcross.
+4. R57 held until the audit verdict. My gate queue: SoftCapOwnerShoreOverload (57FAAEEA) next tick.
