@@ -1,6 +1,13 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T11:45 (local) — TICK-105
+# Last update: 2026-07-12T12:20 (local) — TICK-106
 
+## TICK-106 (2026-07-12T12:2xZ) — T5 REPLAY BATCH ALL PASS; ENUMERATION GRINDING; NO DELTA
+- MY REPLAY BATCH (6/6 PASS, SHAs match): #298 + #264 profile-hit verifiers; both all-row scope UNSATs;
+  #264 tail blanket; #264 8-split extension. t5 falsification + fallback + extension artifacts = LEDGER.
+- No Codex delta (56-split enumeration grinding; M-modules queued in its gaps). GPT held per ruling.
+- NEXT: M4/M5 drafting continues when M1/M2/M3 land; enumeration split totals = the pacing item; remaining
+  personal queue: order-14 + support-bound shells compile check (GPT gave shells only — Codex may compile
+  as part of M6), N=94 regression fixture, ablation. Marker 2617970.
 ## TICK-105 (2026-07-12T11:4xZ) — ASSEMBLY PLAN v1 (M1-M6); NO CODEX DELTA (ENUMERATION RUNNING); GPT HELD
 - Consumer-assembly survey DONE: sink/rotor interface layer ABSENT from tree (0 grep hits for
   CheckedSinkNeutralAttachmentClass / CheckedDetourTransportLedger / CheckedBalancedDeficiencyRotor /
@@ -1043,6 +1050,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
