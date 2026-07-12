@@ -1,6 +1,15 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T13:30 (local) — TICK-108
+# Last update: 2026-07-12T14:05 (local) — TICK-109
 
+## TICK-109 (2026-07-12T14:0xZ) — SOLO SWEEP: ORDER n=15 ENTIRELY CLOSED (4/4 SPLITS EXACT INFEASIBLE)
+- Solo staged sweep via Codex driver (8-worker cap; left >= 7 root validation): **n=15 splits (7,8),(8,7),
+  (9,6),(10,5) ALL supportTerminalStatus=INFEASIBLE, 0 supports** (SHAs 14ac9d93/8d194613/66e0813c/5721cbc5)
+  => the two-owner rooted support model has NO order-15 realization; with the order-14 lemma, the k=2
+  catalogue starts at n=16. Posted to mailbox (Codex reconciles on return).
+- n=16 chain launched (7,9),(8,8),(9,7),(10,6),(11,5) background bsphuds92. Codex still idle; GPT held.
+- NOTE: split bookkeeping corrected — left 7..n-5 (driver root), so per-order split counts differ from the
+  R50 sec-7 p>=6 estimate; the "56 splits" total shrinks accordingly (exact count recomputed at walk end).
+  Marker 2617970.
 ## TICK-108 (2026-07-12T13:3xZ) — CODEX IDLE 2H+; SOLO ENUMERATION STARTED (SPLIT 6,9)
 - CODEX FRONTIER IDLE since 03:11 local (newest genuine artifact = REPORT/switch-capacity; the 04:31 file
   was MY replay output). 56-split enumeration was NOT running. Posted FYI to mailbox.
@@ -1066,6 +1075,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
