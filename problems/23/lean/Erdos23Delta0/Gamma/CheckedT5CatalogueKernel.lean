@@ -331,6 +331,106 @@ theorem rooted_shore_range
 
 end RootedT5OwnerShoreData
 
+/-! ### Rooted support-order projection -/
+
+/-- Literal support edges not incident with the rooted owner. -/
+noncomputable def supportWithoutOwnerEdges
+    (circuit : RootedT5Circuit) : Finset Edge :=
+  circuit.support.filter fun edge =>
+    ¬ (edge.1 = circuit.owner.1 ∨ edge.2 = circuit.owner.1)
+
+/-- Support vertices other than the rooted owner. -/
+abbrev SupportNonOwner (circuit : RootedT5Circuit) :=
+  {vertex : Fin circuit.graph.n // vertex ≠ circuit.owner}
+
+/-- Exact simple graph induced by the literal support away from the owner. -/
+noncomputable def supportWithoutOwnerGraph
+    (circuit : RootedT5Circuit) : SimpleGraph (SupportNonOwner circuit) where
+  Adj first second :=
+    normEdge first.1.1 second.1.1 ∈ circuit.support
+  symm := by
+    intro first second h
+    simpa only [normEdge_comm] using h
+  loopless := by
+    intro vertex h
+    have hnormalized := circuit.support_normalized _ h
+    exact (Nat.lt_irrefl vertex.1.1) (by
+      simpa [normEdge] using hnormalized.1)
+
+theorem supportWithoutOwnerEdges_card
+    (circuit : RootedT5Circuit) :
+    (supportWithoutOwnerEdges circuit).card = 19 := by
+  classical
+  have hpartition := Finset.card_filter_add_card_filter_not
+    (s := circuit.support)
+    (fun edge : Edge =>
+      edge.1 = circuit.owner.1 ∨ edge.2 = circuit.owner.1)
+  change supportDegree circuit.support circuit.owner.1 +
+      (supportWithoutOwnerEdges circuit).card = circuit.support.card at hpartition
+  rw [circuit.owner_support_degree, circuit.support_card] at hpartition
+  omega
+
+/-- Minimal production/profile bridge for the upper-order argument.
+
+neighbor_connected packages the four owner-avoiding paths from neighbor
+zero to the other four neighbors (the zero case is reflexive).
+reaches_neighbor is the standard consequence of connectedness: after the
+owner is removed, every remaining vertex reaches some owner neighbor.
+The final cardinal field only identifies the literal filtered support with
+the edge set of the exact SimpleGraph representation. -/
+structure RootedT5SupportOrderData (circuit : RootedT5Circuit) where
+  support_spanning :
+    supportVertices circuit.support = Finset.range circuit.graph.n
+  neighbors : Fin 5 → Fin circuit.graph.n
+  neighbors_injective : Function.Injective neighbors
+  neighbor_ne_owner : ∀ i, neighbors i ≠ circuit.owner
+  neighbor_support_edge : ∀ i,
+    normEdge circuit.owner.1 (neighbors i).1 ∈ circuit.support
+  neighbor_connected : ∀ i,
+    (supportWithoutOwnerGraph circuit).Reachable
+      ⟨neighbors 0, neighbor_ne_owner 0⟩
+      ⟨neighbors i, neighbor_ne_owner i⟩
+  reaches_neighbor : ∀ vertex : SupportNonOwner circuit,
+    ∃ i,
+      (supportWithoutOwnerGraph circuit).Reachable vertex
+        ⟨neighbors i, neighbor_ne_owner i⟩
+  reduced_edge_card :
+    Nat.card (supportWithoutOwnerGraph circuit).edgeSet =
+      (supportWithoutOwnerEdges circuit).card
+
+theorem RootedT5SupportOrderData.deletedSupport_connected
+    {circuit : RootedT5Circuit}
+    (data : RootedT5SupportOrderData circuit) :
+    (supportWithoutOwnerGraph circuit).Connected := by
+  let anchor : SupportNonOwner circuit :=
+    ⟨data.neighbors 0, data.neighbor_ne_owner 0⟩
+  refine ⟨?_, ⟨anchor⟩⟩
+  intro first second
+  rcases data.reaches_neighbor first with ⟨i, hfirst⟩
+  rcases data.reaches_neighbor second with ⟨j, hsecond⟩
+  exact hfirst.trans <|
+    (data.neighbor_connected i).symm.trans <|
+      (data.neighbor_connected j).trans hsecond.symm
+
+/-- Removing the degree-five owner leaves a connected graph with 19 edges,
+so it has at most 20 vertices and the original support order is at most 21. -/
+theorem supportOrder_le_twentyOne {circuit : RootedT5Circuit}
+    (data : RootedT5SupportOrderData circuit) :
+    circuit.graph.n ≤ 21 := by
+  have hcard := data.deletedSupport_connected.card_vert_le_card_edgeSet_add_one
+  have hedge : Nat.card (supportWithoutOwnerGraph circuit).edgeSet = 19 := by
+    calc
+      Nat.card (supportWithoutOwnerGraph circuit).edgeSet =
+          (supportWithoutOwnerEdges circuit).card := data.reduced_edge_card
+      _ = 19 := supportWithoutOwnerEdges_card circuit
+  have hvertices : Nat.card (SupportNonOwner circuit) =
+      circuit.graph.n - 1 := by
+    rw [Nat.card_eq_fintype_card]
+    simpa [SupportNonOwner] using (Set.card_ne_eq circuit.owner)
+  rw [hvertices, hedge] at hcard
+  have howner_lt := circuit.owner.isLt
+  omega
+
 /-! ### Small-order distance-four pair-cover gates -/
 
 /-- A proof-carrying cover of all 25 literal bad-atom endpoint pairs.  The
@@ -969,10 +1069,14 @@ theorem CheckedT5CatalogueBundle.lookup
 #print axioms RootedT5AtomPairCover.atom_card_le
 #print axioms no_order15_rootedT5
 #print axioms no_order16_rootedT5
+#print axioms supportWithoutOwnerEdges_card
+#print axioms RootedT5SupportOrderData.deletedSupport_connected
+#print axioms supportOrder_le_twentyOne
 
 end CheckedT5CatalogueKernel
 end Gamma
 end Erdos23Delta0
+
 
 
 

@@ -33120,3 +33120,8 @@
 [2026-07-12T05:14:01Z] OK VERIFY | DID: built M3 twice | RESULT: rc0; src 3A6DC08D; identical olean 813A40CB; allowed axioms; forbidden 0 | D: M3 complete
 [2026-07-12T05:18:24Z] OK VERIFY | DID: independently rebuilt M3 Lean module | RESULT: rc=0; source SHA 3A6DC08D2668267B; allowed axioms only | D: M3 accepted
 [2026-07-12T05:22:16Z] > ATTACK | NEXT: exact-enumerate the n16 (9,7) neighborhood model to gate the claimed d4-pair cap 24 and the W-intermediate step.
+[2026-07-12T05:25:10Z] OK CHECK | DID: audited label-fiber matroid lane | RESULT: exact fiber MI gate; global nonmatroid CE and neutral (2,1,0,1) rotor | D: matroid-only closure dead
+[2026-07-12T05:25:10Z] OK CHECK | DID: audited C5 stability lane | RESULT: C5-homomorphic rotors excluded; aligned K-core implies t<=2K-1 | D: target K<=3 extraction for t>=6
+[2026-07-12T05:28:35Z] OK ATTACK | DID: proved rooted profile support-order upper bound | RESULT: fully covered degree5 owner => F*-v connected with 19 edges, so n<=21 | D: range bridge identified
+[2026-07-12T05:30:47Z] OK COMPUTE | DID: completed n18 9+9 bounded sweep | RESULT: 3000 supports, 0 hits, LIMIT_REACHED; SHA 0641d3896cda0c51 | D: telemetry only
+[2026-07-12T05:30:47Z] > COMPUTE | NEXT: run n19 split 10+9 at 3000 supports with 8 workers; total CPU allocation remains 64.
