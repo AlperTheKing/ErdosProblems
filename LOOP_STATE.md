@@ -1,6 +1,15 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T12:55 (local) — TICK-107
+# Last update: 2026-07-12T13:30 (local) — TICK-108
 
+## TICK-108 (2026-07-12T13:3xZ) — CODEX IDLE 2H+; SOLO ENUMERATION STARTED (SPLIT 6,9)
+- CODEX FRONTIER IDLE since 03:11 local (newest genuine artifact = REPORT/switch-capacity; the 04:31 file
+  was MY replay output). 56-split enumeration was NOT running. Posted FYI to mailbox.
+- **SOLO CONTINUATION**: their driver rooted_t5_support_cp_sat.py has a full CLI; prior runs covered ONLY
+  n=18 splits (l9r9/l10r8/l11r7/l12r6/l13r5). Launched solo staged sweep split (left 6, right 9, n=15,
+  3000 supports, 32 workers, classifier v + require-active-scope, NO shared-s) -> t5_solo_l6_r9_3000.json
+  (background bvh1xqgub). Plan: walk the n=15 splits (6,9)(7,8)(8,7)(9,6)(10,5), then n=16..21, posting
+  per-split totals; Codex takes the lane back on return.
+- GPT still HELD (no new substance until split data). M-modules await Codex. Marker 2617970.
 ## TICK-107 (2026-07-12T12:5xZ) — M3 INTERFACE REQUIREMENTS; QUIET PERIOD (ENUMERATION GRINDING)
 - M3 consumer study: no_t3_balancedDeficiencyRotor eats ABSTRACT incidence data (TwoRotatingOwners/
   ThreeRotatingOwners: support/atV/atM/external Finsets + pairwise Disjoint + ThreeMembers witnesses +
@@ -1057,6 +1066,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
