@@ -1,0 +1,87 @@
+# R54 — Lean-declaration extract from the unfiltered unicode-true innerText capture (slice 1).
+# Prose elided for size; declarations are EXACT as GPT wrote them ("..." elisions are GPT's own).
+# Full thread remains harvestable on demand (tab seed, assistant msg len 14908).
+
+structure LexMinSoftcap
+    (D : CanonicalRealEll5Data)
+    (ω : D.RowTuple) : Prop where
+  collision_min :
+    ∀ τ : D.RowTuple,
+      D.collisionCount ω ≤ D.collisionCount τ
+  defect_min_on_face :
+    ∀ τ : D.RowTuple,
+      D.collisionCount τ = D.collisionCount ω →
+      D.groupedHallDefect ω ≤ D.groupedHallDefect τ
+
+theorem LexMinSoftcapRigidityOrGlobalC5
+    (D : CanonicalRealEll5Data)
+    (htri : D.G.CliqueFree 3)
+    (hblueConnected : D.blueGraph.Connected)
+    (hmax : D.cut.IsMaximumCut)
+    (hGamma : D.cut.IsGammaMinimal)
+    (hrows : D.CompleteShortestRowDB)
+    (ω : D.RowTuple)
+    (hmin : LexMinSoftcap D ω) :
+    D.groupedHallDefect ω = 0
+      ∨
+    ∃ label : D.Vertex → Fin 5,
+      CertGraph.checkGlobalC5 D.certGraph label = true
+
+theorem erdos23_of_LexMinSoftcapRigidityOrGlobalC5
+    (D : CanonicalRealEll5Data)
+    (hcanonical : D.CanonicalHypotheses) :
+    25 * D.badEdges.card ≤ (Fintype.card D.Vertex)^2 := by
+  let ω := D.leastCollisionThenDefectTuple
+  rcases
+    LexMinSoftcapRigidityOrGlobalC5 D
+      hcanonical.triangleFree hcanonical.blueConnected hcanonical.maximumCut
+      hcanonical.gammaMinimal hcanonical.completeRows ω
+      (D.leastCollisionThenDefectTuple_min)
+    with hzero | ⟨label, hlabel⟩
+  · let cert := SoftEdgeCapGraphAdapter.toCheckedTwoCover D ω hzero
+    exact CheckedSoftCollisionTwoCover.bound cert
+  · exact CertGraph.globalC5_bound D.certGraph label hlabel
+
+theorem positiveGroupedDefect_hasUnitCore
+    (hpos : 0 < D.groupedHallDefect ω) :
+    Nonempty (CheckedUnitGroupedHallCore D ω)
+-- unit core: least unmatched obligation + full residual alternating closure in the grouped network
+-- (unit caps at literal FreeHalfKeys; cap 2 at each active edge's four-key group; six relations);
+-- |O_K| = cap(S_K) + 1. Direct consumer of MinimumCollisionGlobalHallReduction.
+
+structure CheckedNeutralProtectionSCC
+    (D : CanonicalRealEll5Data) where
+  states : Finset (D.NeutralProtectionState)
+  nonempty : states.Nonempty
+  same_collision :
+    ∀ s ∈ states, s.collisionCount = collisionMinimum
+  same_defect :
+    ∀ s ∈ states, s.groupedDefect = defectMinimum
+  positive_defect :
+    0 < defectMinimum
+  closed_under_matched_sources : ...
+  closed_under_neutral_absorption : ...
+  sink : ...
+-- GPT's own elisions; ruled semantics: closure under matched-source moves + neutral absorptions (both
+-- preserving (C*, Δ*) per R54 §3) + sink-ness in the finite transition graph over
+-- (row tuple, exact optimal grouped flow, least unmatched root, alternating cursor).
+
+structure CheckedProtectionQuotient
+    (D : CanonicalRealEll5Data)
+    (K : CheckedNeutralProtectionSCC D) where
+  Block : Type
+  [fintypeBlock : Fintype Block]
+  [decEqBlock : DecidableEq Block]
+  blockOf : D.Vertex → Block
+  graph : SimpleGraph Block
+  connected : graph.Connected
+  rowWalk :
+    ∀ state ∈ K.states, ∀ atom,
+      CheckedLengthFourWalk graph (blockOf ∘ state.omega atom)
+  closure_exact :
+    checkProtectionQuotient D K blockOf graph = true
+
+theorem neutralProtectionQuotient_minDegree_two
+    (K : CheckedNeutralProtectionSCC D)
+    (Q : CheckedProtectionQuotient D K) :
+    ∀ B, 2 ≤ Q.graph.degree B
