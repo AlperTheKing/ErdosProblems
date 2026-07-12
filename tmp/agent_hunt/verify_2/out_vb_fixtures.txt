@@ -1,0 +1,96 @@
+18-vtx near-candidate atom-graph triangles: 30 (report: 30)
+
+########## fixture 298 ##########
+n=18 |E|=24 shores 9+9 candidates=32 union==edges: True cycle_rank=7
+triangles in blue+ALL-candidate-bad: 12
+STRICT circuits (Forced=Inc excl owners 0,1; usable 32): 5
+--- circuit#0 ---
+ pinned edges: 10/24 -> [(2, 14), (2, 15), (3, 12), (3, 16), (4, 12), (4, 14), (5, 14), (6, 16), (7, 15), (8, 12)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=52: dead=0 forced=0 free=52 forced-targets={}
+ swap squares [pos123]: n=12 rankQ=7 kerQ=5 rankF2=6 kerF2=6 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=8 rankQ=5 kerQ=3 rankF2=5 kerF2=3 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 52/52; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 377487360000): {'L0': 396686}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#1 ---
+ pinned edges: 10/24 -> [(2, 14), (2, 15), (3, 12), (3, 16), (4, 12), (4, 14), (5, 14), (6, 16), (7, 15), (8, 12)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=52: dead=0 forced=0 free=52 forced-targets={}
+ swap squares [pos123]: n=12 rankQ=7 kerQ=5 rankF2=6 kerF2=6 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=8 rankQ=5 kerQ=3 rankF2=5 kerF2=3 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 52/52; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 377487360000): {'L0': 396754}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#2 ---
+ pinned edges: 10/24 -> [(2, 14), (2, 15), (3, 12), (3, 16), (4, 12), (4, 14), (5, 14), (6, 16), (7, 15), (8, 12)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=52: dead=0 forced=0 free=52 forced-targets={}
+ swap squares [pos123]: n=12 rankQ=7 kerQ=5 rankF2=6 kerF2=6 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=8 rankQ=5 kerQ=3 rankF2=5 kerF2=3 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 52/52; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 377487360000): {'L0': 396754}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#3 ---
+ pinned edges: 10/24 -> [(2, 14), (2, 15), (3, 12), (3, 16), (4, 12), (4, 14), (5, 14), (6, 16), (7, 15), (8, 12)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=52: dead=0 forced=0 free=52 forced-targets={}
+ swap squares [pos123]: n=12 rankQ=7 kerQ=5 rankF2=6 kerF2=6 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=8 rankQ=5 kerQ=3 rankF2=5 kerF2=3 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 52/52; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 377487360000): {'L0': 396754}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#4 ---
+ pinned edges: 10/24 -> [(2, 14), (2, 15), (3, 12), (3, 16), (4, 12), (4, 14), (5, 14), (6, 16), (7, 15), (8, 12)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=56: dead=0 forced=0 free=56 forced-targets={}
+ swap squares [pos123]: n=12 rankQ=7 kerQ=5 rankF2=6 kerF2=6 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=8 rankQ=5 kerQ=3 rankF2=5 kerF2=3 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 56/56; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 1509949440000): {'L0': 420754, 'profile_lean': 2, 'profile_strict': 2, 'profile_any': 2}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+
+########## fixture 264 ##########
+n=18 |E|=24 shores 9+9 candidates=30 union==edges: True cycle_rank=7
+triangles in blue+ALL-candidate-bad: 10
+STRICT circuits (Forced=Inc excl owners 0,1; usable 27): 0
+RELAXED circuits (excl owner 0 only; usable 30): 3
+--- circuit#0 ---
+ pinned edges: 15/24 -> [(1, 9), (1, 17), (2, 9), (2, 14), (3, 10), (3, 11), (3, 12), (3, 13), (4, 11), (4, 14), (5, 11), (5, 16), (6, 11), (7, 11), (8, 14)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=18: dead=0 forced=9 free=9 forced-targets={(1, 10): 3, (1, 12): 3, (1, 13): 3}
+ swap squares [pos123]: n=10 rankQ=6 kerQ=4 rankF2=6 kerF2=4 edges-covered-evenly-mod2=False
+ swap squares [middle-only]: n=10 rankQ=6 kerQ=4 rankF2=6 kerF2=4 edges-covered-evenly-mod2=False
+ rotor-core squares: 0
+ arcs graph-level capture-feasible: 18/18; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 1567641600): {'L0': 338162}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#1 ---
+ pinned edges: 15/24 -> [(1, 9), (1, 17), (2, 9), (2, 14), (3, 10), (3, 11), (3, 12), (3, 13), (4, 11), (4, 14), (5, 11), (5, 16), (6, 11), (7, 11), (8, 14)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=18: dead=0 forced=9 free=9 forced-targets={(1, 10): 3, (1, 12): 3, (1, 13): 3}
+ swap squares [pos123]: n=17 rankQ=10 kerQ=7 rankF2=6 kerF2=11 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=16 rankQ=9 kerQ=7 rankF2=6 kerF2=10 edges-covered-evenly-mod2=False
+ rotor-core squares: 6
+   sq=(0, 9, 1, 10) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(0, 9, 1, 12) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(0, 9, 1, 13) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 10, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 12, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 13, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+ arcs graph-level capture-feasible: 18/18; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 2612736000): {'L0': 347421}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []
+--- circuit#2 ---
+ pinned edges: 15/24 -> [(1, 9), (1, 17), (2, 9), (2, 14), (3, 10), (3, 11), (3, 12), (3, 13), (4, 11), (4, 14), (5, 11), (5, 16), (6, 11), (7, 11), (8, 14)]
+ owners(degB=degM=5)=[0, 1]; owner-swap arcs=18: dead=0 forced=9 free=9 forced-targets={(1, 10): 3, (1, 12): 3, (1, 13): 3}
+ swap squares [pos123]: n=17 rankQ=10 kerQ=7 rankF2=6 kerF2=11 edges-covered-evenly-mod2=True
+ swap squares [middle-only]: n=16 rankQ=9 kerQ=7 rankF2=6 kerF2=10 edges-covered-evenly-mod2=False
+ rotor-core squares: 6
+   sq=(0, 9, 1, 10) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(0, 9, 1, 12) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(0, 9, 1, 13) AB=(2, 3) PQ=(15, 17) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 10, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 12, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+   sq=(9, 0, 13, 1) AB=(15, 17) PQ=(2, 3) blocked=[(1, 8), (14, 17)] rows/edges={(1, 8): [((1, 9, 2, 14, 8), [(1, 9)])], (14, 17): [((14, 2, 9, 1, 17), [(1, 9)])]}
+ arcs graph-level capture-feasible: 18/18; owners 0,1 common bad nbrs: [4, 5, 6, 7, 8]
+ census SAMPLED(12000 of 1959552000): {'L0': 353338, 'profile_lean': 3, 'profile_strict': 3, 'profile_any': 3}
+ R50 gate |S|>=14 & |L|<=10 on every profile state: violations=0 []

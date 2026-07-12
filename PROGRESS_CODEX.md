@@ -33464,3 +33464,20 @@
 [2026-07-12T10:02:08.5588371+03:00] > ATTACK | NEXT: solve the implicit 27^9 C5[3] collision minimum and nearest strict trade by integer CP-SAT; workers=16.
 [2026-07-12T10:02:11.3484619+03:00] OK CHECK | DID: audited corrected exchange and official adversary reports | RESULT: R35 Cmin=82 flow164/164; 120/120 N10 R2 cases are rectangles | D: none
 [2026-07-12T10:02:11.3484619+03:00] > ATTACK | NEXT: derive universal rectangle-or-single exchange lemma and exact-test its minimal-shore premises.
+[2026-07-12T10:04:09.2143650+03:00] FAIL ATTACK | DID: ran C5[3] CP-SAT reporter | RESULT: C<=41 is INFEASIBLE but reporter raised on exact certificate | D: fix output
+[2026-07-12T10:04:09.2143650+03:00] > ATTACK | NEXT: rerun C5[3] C=42 optimal-face flow checks with infeasibility handled; workers=16.
+[2026-07-12T10:06:12.9015954+03:00] FAIL ATTACK | DID: reran C5[3] reporter | RESULT: INFEASIBLE handler was inserted in optimum branch, not strict-trade branch | D: move handler
+[2026-07-12T10:06:12.9015954+03:00] > ATTACK | NEXT: rerun corrected C5[3] C=42 optimal-face and strict-trade certificate; workers=16.
+[2026-07-12T10:08:20.5694283+03:00] OK ATTACK | DID: solved C5[3] collision optimum | RESULT: Cmin=42; C<=41 UNSAT; sampled optima both defect 12 | D: test whole face
+[2026-07-12T10:08:20.5694283+03:00] > ATTACK | NEXT: minimize unselectedVertices+activeEdges over the entire C=42 face by integer CP-SAT; workers=16.
+[2026-07-12T10:09:48.1566557+03:00] FAIL ATTACK | DID: minimized C5[3] capacity loss on C=42 face | RESULT: minimum=0; explicit optimum flow 84/84 | D: every-min theorem dead, exists-min alive
+[2026-07-12T10:09:48.1566557+03:00] > VERIFY | NEXT: rerun C5[3] global-face reporter with existential selector verdict; workers=16.
+[2026-07-12T07:20:48Z] > COORD | NEXT: poll Fable mailbox, share the live C5-rigidity frontier, and answer exact-test/interface questions continuously.
+[2026-07-12T07:21:42Z] OK COORD | DID: processed Fable inbox through 05:39Z and sent live-frontier sync | RESULT: CODEX_TO_CLAUDE block 07:21:42Z | D: none
+[2026-07-12T07:22:58Z] > PLAN | NEXT: reconcile corrected softcap/C5 artifacts with the full graph-provider wall and select one exact structural gate.
+[2026-07-12T07:29:00Z] > ATTACK | NEXT: exact-test simple unit-edge realizations of the weighted six-vertex Hall obstruction using two long disjoint blue detours.
+[2026-07-12T07:33:46Z] OK ATTACK | DID: tested unit-edge detour cores L=6,8,10,12 | RESULT: all max-cut/Gamma-min; P1 flow=32/32; script DC4CDDE88E2BF0E7 | D: none
+[2026-07-12T07:37:00Z] > ATTACK | NEXT: exhaust all 64 length-four window closures of the simple two-detour core for max-cut, rows, lex-min defect, and globalC5.
+[2026-07-12T07:41:39Z] OK ATTACK | DID: exhausted 64 selected-window closures | RESULT: 7 max cuts, all defect0; every 2-window pair has min sigma=-1 | D: stall=0
+[2026-07-12T07:48:00Z] > VERIFY | NEXT: compile SupportBoundaryScratch real-graph dB=support+active+outside partition with Lean 4.27.
+[2026-07-12T07:53:25Z] > COLLAB | NEXT: Poll Fable mailbox, process every new block, and send a self-contained exact-state reply.

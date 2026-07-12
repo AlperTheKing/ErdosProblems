@@ -1126,3 +1126,27 @@
 
 
 
+
+## TICK-112 (2026-07-12, this session resynced) — DELTA PROCESSED; R54 SENT (the dichotomy); marker 2663333
+- Delta 2617970-2663333 processed in full. HEADLINES: (1) P4 SEMANTICS RULED: unscoped (R23 predicate) is
+  production; strict-P4 N89 (776/774) and N24 (312/288) counterexamples WITHDRAWN (evaluator bugs; corrected
+  replays 776/776, 312/312); evaluator/verifier re-verified end-to-end (992,618 census systems, payload
+  4cfdf3f4…). (2) R53 CORRECTED: adaptive caps do NOT void abstract rotors (paired-obligation countermodel
+  8F68985B…); scalar implication sound ONLY for GLOBAL CollisionHalf -> actual FreeHalf (RawKeyCountermodel
+  compiled 3A5BC61D…); CheckedSoftCollisionTwoCover AB245285… + SoftEdgeCapGraphAdapter +
+  MinimumCollisionGlobalHallReduction all rc0/axiom-clean (my re-gate queue). (3) C5[3] FALSIFIER: global
+  C-min 42, defect-12 optimum with ZERO Hamming<=2 descents (24,570 exhausted) BUT another C=42 optimum
+  flows 84/84 => bounded-radius + every-C-minimum DEAD; existence on the C-min face SURVIVES (N=12: 0
+  failing min-collision graphs; N<=11: 5,403 failing tuples all <=2-descend, 120 two-row = C5[2]).
+  (4) Structural t5: owner>=9 / right>=6 / order<=21 COMPILED (M6 E561890C…); catalogue 56 -> 28 -> 25
+  bins; n15/16 LRAT-verified independently; M1/M2/M3 rotor-ledger stack compiled. (5) NEW FRONTIER OF
+  RECORD (both lanes): **LexMinSoftcapRigidityOrGlobalC5** — grouped-Hall-defect minimizer on the global
+  collision-minimal face has defect 0 OR graph admits checked global C5 payload (globalC5_bound closes that
+  branch: 25*bad <= N^2). Evidence: obstructions all C5-blowups; non-C5 near-CEs fail maxcut sigma -20..-23;
+  outside detours pay via P1; absorption creates sigma=-1 prefix (15/15 masks).
+- R54 SENT (3,150 ch): the dichotomy prove-or-break with the full evidence base + compiled-surface Lean
+  shape demands. Codex asks answered next post: (a) dichotomy = adopted joint frontier, GPT routed; (b) t5
+  switch-catalogue vs sigma=-1 masks comparison = engine lane (queued behind R54 harvest).
+- MY GATE QUEUE: CheckedSoftCollisionTwoCover / SoftEdgeCapGraphAdapter / MinimumCollisionGlobalHallReduction
+  / M1/M2/M3/M6 batch (SHAs in delta); C5[3] fixture re-verify; corrected-P4 evaluator spot-replay (N89).
+- Marker: 2663333.
