@@ -136,11 +136,11 @@ def BothHalvesUsed (base : FreeBase G P.omega) : Prop :=
         distinct := base.distinct
         free := base.free }
 
-def PositiveUnitDefect : Prop :=
+def GlobalDefectOne : Prop :=
   P.defect = 1
 
-theorem flow_positiveUnitDefect_iff :
-    P.flow.PositiveUnitDefect ↔ P.PositiveUnitDefect := by
+theorem flow_globalDefectOne_iff :
+    P.flow.GlobalDefectOne ↔ P.GlobalDefectOne := by
   change P.flow.unmatchedCount = 1 ↔ P.defect = 1
   rw [P.defect_eq_unmatchedCount]
 
@@ -148,7 +148,7 @@ end Payload
 
 #print axioms Payload.defect_eq_unmatchedCount
 #print axioms Payload.defect_pos
-#print axioms Payload.flow_positiveUnitDefect_iff
+#print axioms Payload.flow_globalDefectOne_iff
 
 end GlobalSoftCapTrace
 end Gamma

@@ -41,13 +41,13 @@ structure CheckedSameAtomExclusiveFork
   common_prefix :
     leftRow.verts.take position = rightRow.verts.take position
   left_predecessor :
-    leftRow.verts.get? (position - 1) = some commonPredecessor.1
+    leftRow.verts[position - 1]? = some commonPredecessor.1
   right_predecessor :
-    rightRow.verts.get? (position - 1) = some commonPredecessor.1
+    rightRow.verts[position - 1]? = some commonPredecessor.1
   left_at_divergence :
-    leftRow.verts.get? position = some leftVertex.1
+    leftRow.verts[position]? = some leftVertex.1
   right_at_divergence :
-    rightRow.verts.get? position = some rightVertex.1
+    rightRow.verts[position]? = some rightVertex.1
   first_divergence : leftVertex ≠ rightVertex
   common_left_blue :
     blueb G c commonPredecessor.1 leftVertex.1 = true

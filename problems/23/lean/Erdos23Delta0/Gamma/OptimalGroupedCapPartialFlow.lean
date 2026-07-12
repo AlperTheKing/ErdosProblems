@@ -99,11 +99,11 @@ theorem activeLoad_le_two (edge : ActiveEdge) :
     activeLoad F.matched F.assign edge ≤ 2 :=
   F.active_load_le_two edge
 
-/-- The exact unit-defect predicate used by the saturated-rotor interface. -/
-def PositiveUnitDefect : Prop :=
+/-- The global Hall defect is exactly one; this is not R55's local residual unit-core equation. -/
+def GlobalDefectOne : Prop :=
   F.unmatchedCount = 1
 
-theorem hallDefect_eq_one (h : F.PositiveUnitDefect) :
+theorem hallDefect_eq_one (h : F.GlobalDefectOne) :
     hallDefect Eligible = 1 := by
   rw [← F.unmatchedCount_eq_hallDefect]
   exact h

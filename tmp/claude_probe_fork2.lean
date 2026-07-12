@@ -1,0 +1,3 @@
+import Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork
+#print axioms Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork.CheckedSameAtomExclusiveFork.Payload.divergenceBase_not_active
+#print axioms Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork.CheckedSameAtomExclusiveFork.Payload.exists_distinct_matched_of_fork_bothHalvesUsed

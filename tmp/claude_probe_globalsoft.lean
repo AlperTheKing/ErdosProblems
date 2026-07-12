@@ -1,0 +1,16 @@
+import Erdos23Delta0.Gamma.OptimalGroupedCapPartialFlow
+import Erdos23Delta0.Gamma.GlobalSoftCapTrace
+import Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork
+
+open Erdos23Delta0.Gamma.OptimalGroupedCapPartialFlow in
+#print axioms Flow.hallDefect_eq_one
+open Erdos23Delta0.Gamma.OptimalGroupedCapPartialFlow in
+#print axioms Flow.exists_distinct_demands_of_bothHalvesUsed
+open Erdos23Delta0.Gamma.GlobalSoftCapTrace in
+#print axioms Payload.defect_min_on_collision_face
+open Erdos23Delta0.Gamma.GlobalSoftCapTrace in
+#print axioms Payload.flow_globalDefectOne_iff
+open Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork in
+#print axioms CheckedSameAtomExclusiveFork.Payload.divergenceBase_not_active
+open Erdos23Delta0.Gamma.GlobalSoftCapExclusiveFork in
+#print axioms CheckedSameAtomExclusiveFork.Payload.exists_distinct_matched_of_fork_bothHalvesUsed

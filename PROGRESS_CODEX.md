@@ -33522,3 +33522,9 @@
 [2026-07-12T09:34:56Z] OK COLLAB | DID: Processed TICK-117 | RESULT: Fable adopts global soft trace Option A; old coherent M1/M2 excluded | D: route A frozen.
 [2026-07-12T09:34:56Z] OK VERIFY | DID: Checked new trace and rotor gate hashes | RESULT: GlobalSoftCapTrace C666B12C; rotor gate 48714FFF, 0 SCC, no D=1 | D: none.
 [2026-07-12T09:35:58Z] > ATTACK | NEXT: Define R55 same-atom fork and saturated-rotor records over GlobalSoftCapTrace; isolate the universal extraction hypothesis.
+[2026-07-12T09:42:10Z] > VERIFY | NEXT: Build GlobalSoftCapExclusiveFork and probe divergent-base and two-used-halves lemmas under Lean 4.27.
+[2026-07-12T09:44:02Z] OK VERIFY | DID: Built GlobalSoftCapExclusiveFork | RESULT: rc=0, SHA 64F11529; 3 lemmas allowed-axioms-only; token scan clean | D: fork typed.
+[2026-07-12T09:45:47Z] > VERIFY | NEXT: Rebuild partial-flow, global trace, and fork after separating global defect=1 from R55 local unit-core semantics.
+[2026-07-12T09:48:08Z] OK COLLAB | DID: Processed TICK-118 | RESULT: Fable accepts extraction bridge as wall; R57 sent | D: frontier narrowed.
+[2026-07-12T09:48:08Z] OK VERIFY | DID: Renamed global defect-one predicate and rebuilt 3 modules | RESULT: rc=0; SHAs 98BED3DB/A214D901/64F11529 | D: semantic bug removed.
+[2026-07-12T09:51:59Z] > ATTACK | NEXT: Compile tuple-independent four-corner overweight-to-negative-switch theorem; leave only R57 extraction premise.
