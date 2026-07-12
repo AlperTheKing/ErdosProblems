@@ -33072,3 +33072,24 @@
 [2026-07-12T00:10:51Z] OK CHECK | DID: Wrote graph-specific lemma and sent Fable exact hashes/correction | RESULT: CODEX_R42_GRAPH_SPECIFIC_EXCLUSION.md | D: fixed live-x model closed
 [2026-07-12T00:11:28Z] > VERIFY | NEXT: Run syntax, hash, and diff-integrity checks on the new capacity certificate and graph-specific writeup.
 [2026-07-12T00:12:14Z] OK VERIFY | DID: py_compile, canonical-hash replay, git diff --check | RESULT: all pass; capacity SHA ddc0376f8de231fa | D: lane result ready
+[2026-07-12T04:38:28Z] > VERIFY | NEXT: replay the rooted t5 driver on the exact n15 l7/r8 split and compare terminal status/hash semantics before resuming enumeration.
+[2026-07-12T04:38:49Z] OK VERIFY | DID: replayed t5 n15 l7/r8 with 8 workers | RESULT: exact INFEASIBLE; canonical SHA 14ac9d93 matches Fable | D: driver semantics accepted
+[2026-07-12T04:39:58Z] > COMPUTE | NEXT: run 6 disjoint t5 splits: n17 l10/l11 at 30k and n18 l7-l10 at 3k; 48 workers, total 56 with Fable.
+[2026-07-12T04:39:58Z] OK COMPUTE | DID: launched hidden CP-SAT batch | RESULT: PIDs 112264,53432,104428,114852,74376,104204; manifest t5_codex_batch_launch.json | D: none
+[2026-07-12T04:41:01Z] > ATTACK | NEXT: rotate the six-agent fanout onto M1/M2/M3/M6 production interfaces plus catalogue coverage and artifact audits.
+[2026-07-12T04:42:31Z] > PLAN | NEXT: Recover exact M1 R37/R38 contracts and production D05 adapter APIs before implementing the checked sink-neutral layer.
+[2026-07-12T04:43:36Z] > PLAN | NEXT: extract R42 sec.6 and production APIs for M2 CheckedDetourTransportLedger; objective is a conditional exact checker.
+[2026-07-12T04:44:31Z] > SELECT | NEXT: own M3 only; extract ASSEMBLY_PLAN_v1 and R42/R51 contracts for CheckedBalancedDeficiencyRotor.
+[2026-07-12T04:46:00Z] > ATTACK | NEXT: Create M1 checked trace states, three neutral transitions, sink-SCC checker, and soundness over CollisionDefectGraphAdapter.
+[2026-07-12T04:46:08Z] > ATTACK | NEXT: derive M6 R51 kernel interfaces from production Lean APIs without asserting catalogue completeness or no_t5.
+[2026-07-12T04:47:38Z] OK PLAN | DID: mapped R42 sec.6 to production matching APIs | RESULT: six turnover sets + 4 audit groups + Int defect identity | D: PLAN->ATTACK
+[2026-07-12T04:47:39Z] > ATTACK | NEXT: implement M2 production module and prove carried matching coherence plus defect_delta.
+[2026-07-12T04:48:01Z] > SELECT | NEXT: Audit rooted t=5 n=15/n=16 artifacts and build an independent exact verifier under tmp/fanout/r51_independent_t5_verifier.
+[2026-07-12T04:48:27Z] OK COMPUTE | DID: closed n18 splits 7+11 and 8+10 at support model | RESULT: exact INFEASIBLE; SHAs daf2d151/27263655 | D: n18 feasible frontier >=9+9
+[2026-07-12T04:48:27Z] > COMPUTE | NEXT: run remaining n18 splits 11+7,12+6,13+5; total active allocation exactly 64 workers.
+[2026-07-12T04:49:11Z] > VERIFY | NEXT: Compile CheckedSinkNeutralAttachmentClass.lean independently against the production olean cache.
+[2026-07-12T04:49:38Z] > ATTACK | NEXT: implement M3 checked rotor carrier with direct support/path/side/cardinality projections and conditional owner extractor.
+[2026-07-12T04:50:07Z] OK GATE | DID: Located 9 n=15/16 t5_solo UNSAT claims and support model | RESULT: UNSAT occurs before circuit/classifier stage | D: frontier=independent CNF
+[2026-07-12T04:51:18Z] > ATTACK | NEXT: Solve independent symmetry-free disconnected CNF relaxation for n=15 split 7+8 using CaDiCaL195.
+[2026-07-12T04:53:20Z] > VERIFY | NEXT: compile CheckedDetourTransportLedger.lean against production imports; repair only kernel errors.
+[2026-07-12T04:54:07Z] OK VERIFY | DID: compiled M1 once | RESULT: r45_m1_sink_neutral_attachment/logs/build.log rc=0; all printed axioms allowed | D: fresh replay pending
