@@ -404,7 +404,8 @@ theorem RootedT5SupportOrderData.deletedSupport_connected
     (supportWithoutOwnerGraph circuit).Connected := by
   let anchor : SupportNonOwner circuit :=
     ⟨data.neighbors 0, data.neighbor_ne_owner 0⟩
-  refine ⟨?_, ⟨anchor⟩⟩
+  letI : Nonempty (SupportNonOwner circuit) := ⟨anchor⟩
+  refine ⟨?_⟩
   intro first second
   rcases data.reaches_neighbor first with ⟨i, hfirst⟩
   rcases data.reaches_neighbor second with ⟨j, hsecond⟩
@@ -426,7 +427,7 @@ theorem supportOrder_le_twentyOne {circuit : RootedT5Circuit}
   have hvertices : Nat.card (SupportNonOwner circuit) =
       circuit.graph.n - 1 := by
     rw [Nat.card_eq_fintype_card]
-    simpa [SupportNonOwner] using (Set.card_ne_eq circuit.owner)
+    simp [SupportNonOwner]
   rw [hvertices, hedge] at hcard
   have howner_lt := circuit.owner.isLt
   omega
@@ -1076,6 +1077,9 @@ theorem CheckedT5CatalogueBundle.lookup
 end CheckedT5CatalogueKernel
 end Gamma
 end Erdos23Delta0
+
+
+
 
 
 
