@@ -33059,3 +33059,16 @@
 [2026-07-11T23:49:47Z] > COMPUTE | NEXT: scan 5000 supports with active endpoint degree>=3 plus classifier and active-flow gates; 8 workers, PID 56812.
 [2026-07-11T23:53:00Z] FAIL COMPUTE | DID: stopped generic active-scope scan | RESULT: no checkpoint artifact | D: zero-vector hit active endpoint is not on live swap
 [2026-07-11T23:53:00Z] > COMPUTE | NEXT: scan 5000 supports with classifier active fixed to rooted live x; 8 workers, PID 67496.
+[2026-07-11T23:56:10Z] FAIL COMPUTE | DID: fixed-live classifier scan | RESULT: zero-vector hit at support #264; source SHA 6595501f | D: live-specific profile lemma false
+[2026-07-11T23:56:10Z] OK VERIFY | DID: replayed live-x hit + all-row scope | RESULT: trianglefree/SDR pass; CP-SAT+CaDiCaL scope UNSAT; SHAs d9e73413/c7fbcc70 | D: scope-vacuity survives
+[2026-07-11T23:58:00Z] OK VERIFY | DID: extracted R50 tail cut on live-x hit | RESULT: 19-absent and29-absent both CaDiCaL UNSAT; SHA 3720a8c2 | D: tail blanket identified
+[2026-07-12T00:00:00Z] > COMPUTE | NEXT: scan 5000 supports with fixed live x, degree>=3, zero-vector classifier, and exact positive-scope flow; 8 workers, PID 84720.
+[2026-07-11T23:59:16Z] FAIL REPORT | DID: detected 44-second future timestamp on prior start line | RESULT: action actually started 2026-07-11T23:59:16Z | D: corrected here append-only
+[2026-07-12T00:04:39Z] FAIL CHECK | DID: audited active-scope universe | RESULT: gates quantify rows on F* only, not row-safe ambient blue extensions | D: scope-vacuity narrowed to intrinsic F*
+[2026-07-12T00:06:40Z] > VERIFY | NEXT: Independently replay all 8 live-x R47 extension UNSAT splits with exact CaDiCaL and identify the rejected production invariant.
+[2026-07-12T00:07:12Z] OK VERIFY | DID: Rebuilt 8 live-x R47 extension CNFs and ran CaDiCaL | RESULT: all UNSAT; verifier SHA 8618fe18d5539b7f | D: live hit violates R47 extension
+[2026-07-12T00:08:05Z] > ATTACK | NEXT: Extract exact row/triangle-safe capacity for the fixed 23-vs-2 switch in every ambient split, replacing opaque UNSAT by a finite cut lemma.
+[2026-07-12T00:10:51Z] OK ATTACK | DID: Extracted fixed-switch capacities 21,19,17,15,13,11,9,7 and k0 joint cap28<42 | RESULT: artifact SHA ddc0376f8de231fa | D: precise R47 exclusion lemma
+[2026-07-12T00:10:51Z] OK CHECK | DID: Wrote graph-specific lemma and sent Fable exact hashes/correction | RESULT: CODEX_R42_GRAPH_SPECIFIC_EXCLUSION.md | D: fixed live-x model closed
+[2026-07-12T00:11:28Z] > VERIFY | NEXT: Run syntax, hash, and diff-integrity checks on the new capacity certificate and graph-specific writeup.
+[2026-07-12T00:12:14Z] OK VERIFY | DID: py_compile, canonical-hash replay, git diff --check | RESULT: all pass; capacity SHA ddc0376f8de231fa | D: lane result ready

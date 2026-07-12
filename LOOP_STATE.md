@@ -1,6 +1,26 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T09:55 (local) — TICK-102
+# Last update: 2026-07-12T10:35 (local) — TICK-103
 
+## TICK-103 (2026-07-12T10:3xZ) — R50: TAIL <= 9 + SEPARATOR CERTS + 56-SPLIT KERNEL SPEC; #264 LIVE-X
+## FALSIFICATION (fallback holds); INTRINSIC QUALIFIER; CHEAPGEOMETRY KILLS #264; BUNDLE FROZEN; R51 SENT
+- R50 harvested+archived: latent-matching FALSE (even theta; complete-vs-selected gap); **|S_omega| >= 3t-1
+  => |L_omega| <= t(t-3)** (t=5: tail <= 9 edges); per-tuple + tuple-independent separator certificates
+  (T5ForcedTailSeparator; ProfileForced decidable); **56-split kernel-replay enumeration spec** (census
+  becomes a kernel theorem via T5SupportCircuitCert + separator-or-LRAT + catalogue completeness); full t=5
+  closure chain -> no_t5_balancedDeficiencyRotor; honest: mechanism weakens (latent 0/4/10/18/28).
+- **ENGINE: #264 second falsification at ACTUAL live x** (live middle swaps present) — live-specific
+  triangle lemma dead too; fallback EXACT again; tail blanket {19,29} via FIBER-INTERSECTION certificates
+  (ProfileForced realized: every R_cov witness fiber uses 9-1; y=15 unique witness uses 9-2). **INTRINSIC
+  QUALIFIER (adopted)**: F*-fixed UNSATs prove intrinsic vacuity only; production needs the R47 extension
+  overlay. **#264 EXCLUDED at CheapGeometry**: 8/8 splits UNSAT; fixed switch (badCross 23/fixedBlue 2,
+  demand 21) capacities 21,19,...,7 kill k=1..7; k=0 dies by JOINT two-switch capacity 28 < 42. Cheap live
+  filter: d_B(x) >= 3. **PER-CANDIDATE BUNDLE FROZEN: classifier + tail-blanket + 8-split extension.**
+- 56-SPLIT ENUMERATION ORDERED (n=15..21, p=6..n-5; (G,C,P,A) per split; A=0 everywhere = lemma; A>0 =
+  falsifier path). R51 SENT (3,428 ch): the single Lean consumer statement stack (catalogue/cert/extension
+  soundness -> rotor consumer); the t=6 CheapGeometry coefficient question (row-safe capacity on Mantel-
+  tight circuits vs raw 21t^2/4 — is maxcut/rows the true all-t closer?); priority ruling (a-d).
+- GATE QUEUE: R51 harvest; 56-split totals; my replay queue (13 artifacts now — batch next tick); order-14 +
+  bound shells compile; N=94; ablation. Marker 2617970.
 ## TICK-102 (2026-07-12T09:5xZ) — TRIANGLE LEMMA FALSIFIED (#298); FALLBACK EXACT (ALL-ROW SCOPE-VACUITY);
 ## LIVE LEMMA = t5_triangleFree_localProfile_is_scopeVacuous; R50 = TAIL-STARVATION / LATENT-MATCHING
 - **ENGINE: t5_localProfile_forces_badTriangle EXACTLY FALSIFIED** — zero-vector triangle-free 25/24 circuit
@@ -991,6 +1011,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
