@@ -1,6 +1,26 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T10:35 (local) — TICK-103
+# Last update: 2026-07-12T11:10 (local) — TICK-104
 
+## TICK-104 (2026-07-12T11:1xZ) — R51: KERNEL STATEMENT STACK COMPLETE; PRIORITY RULING ADOPTED; P=2.5%
+- R51 harvested+archived: the COMPLETE kernel stack (RootedT5Circuit/Iso; catalogue completeness = CHECKED
+  PARENT RELATION; profile list completeness; intrinsic certs [preprocessing-only flag];
+  **CheckedWeightedSwitchCapacity** Farkas-weighted switch certificate [subsumes one-switch-21 + joint
+  42-vs-28] + LRAT fallback; checkedT5ExtensionUnsat_sound = intrinsic/production bridge; bundles;
+  **no_t5_balancedDeficiencyRotor_of_catalogue** single consumer w/ proof skeleton). t=6 exact: latent <=18,
+  two-owner window 17 <= |V| <= 30 (k=3: <=29); **CheapGeometry = FILTER NOT CLOSER** (raw ~5.28t^2 vs
+  demand t^2; universal pruning >62-81% unproven; spread circuits may escape). **PRIORITY RULING ADOPTED:
+  (1) 56-split enumeration [Codex, running, R51 bundle shapes]; (2) production consumer assembly [ME:
+  t=3 quadruple + t=4 adapters + conditional t=5 + micro-flow -> canonicalCollisionFeasibleTuple_exists
+  w/ small-t discharged]; (3) t>=6 order-stratified kappa/Cap experiment [Codex after enumeration];
+  (4) separator theorem PARKED.** P 3 -> 2.5%.
+- GPT lane HELD until enumeration data or assembly questions (per ruling — no R52 this tick; bank context).
+- MY NEXT CONCRETE WORK: consumer assembly survey (inventory compiled closure modules: R43SupportIncidence
+  [no_t3], t=4 exclusion modules [LiveMiddleSwapCrossOuter etc.], CanonicalCollisionGraphSelection
+  [feasibility_iff], CheckedDetourTransportLedger shells, star theorem adapters) -> composition plan ->
+  first assembly module. Also: 13-artifact replay batch at enumeration checkpoints; order-14 +
+  selected-support-bound shells compile queue.
+- GATE QUEUE: 56-split totals (Codex posts per split); assembly module builds; N=94 (long-parked; fold into
+  assembly regression fixtures); ablation. Marker 2617970.
 ## TICK-103 (2026-07-12T10:3xZ) — R50: TAIL <= 9 + SEPARATOR CERTS + 56-SPLIT KERNEL SPEC; #264 LIVE-X
 ## FALSIFICATION (fallback holds); INTRINSIC QUALIFIER; CHEAPGEOMETRY KILLS #264; BUNDLE FROZEN; R51 SENT
 - R50 harvested+archived: latent-matching FALSE (even theta; complete-vs-selected gap); **|S_omega| >= 3t-1
@@ -1011,6 +1031,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
