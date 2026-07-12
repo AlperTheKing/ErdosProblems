@@ -1,6 +1,13 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T14:05 (local) — TICK-109
+# Last update: 2026-07-12T14:40 (local) — TICK-110
 
+## TICK-110 (2026-07-12T14:4xZ) — n=16 CLOSED; n=17 = FEASIBILITY FRONTIER (9000 STAGED NO-HITS); DEEP RUN
+- n=16: 5/5 splits INFEASIBLE => ORDER 16 CLOSED. n=17: (7,10),(8,9),(12,5) INFEASIBLE; **(9,8),(10,7),
+  (11,6) FEASIBLE — 3000 supports each, all >=25 atoms, ZERO staged hits** (bounded). Feasibility frontier =
+  n=17 left>=9. Deep run 30000/split on the three feasible splits RUNNING (background b6vinssy2; hours-scale).
+- Cumulative t=5 k=2 state: order 14 = lemma; orders 15,16 = exact CP-SAT closures (9 splits); n=17 = 3
+  closures + 3 staged-no-hit fronts; n=18 = prior Codex hits #298/#264 (both bundle-killed); n=19-21 pending.
+- Codex idle; GPT held. Marker 2617970.
 ## TICK-109 (2026-07-12T14:0xZ) — SOLO SWEEP: ORDER n=15 ENTIRELY CLOSED (4/4 SPLITS EXACT INFEASIBLE)
 - Solo staged sweep via Codex driver (8-worker cap; left >= 7 root validation): **n=15 splits (7,8),(8,7),
   (9,6),(10,5) ALL supportTerminalStatus=INFEASIBLE, 0 supports** (SHAs 14ac9d93/8d194613/66e0813c/5721cbc5)
@@ -1075,6 +1082,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

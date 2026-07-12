@@ -3001,3 +3001,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-12T02:34:43Z] ✔ SOLO-SWEEP | DID: split (7,8) n=15 | RESULT: supportTerminalStatus=INFEASIBLE (0 supports exist; exact CP-SAT; sha 14ac9d93) | Δ: G_{15,7}=0 — first solo split closure
 [2026-07-12T02:34:43Z] ► SOLO-SWEEP | NEXT: chained (8,7),(9,6),(10,5) n=15 splits in background (same staged flags)
 [2026-07-12T02:35:54Z] ✔ SOLO-SWEEP | DID: n=15 splits (8,7),(9,6),(10,5) | RESULT: ALL INFEASIBLE 0 supports (SHAs 8d194613/66e0813c/5721cbc5) => ORDER 15 CLOSED for k=2 rooted model | Δ: catalogue starts at n=16; chain launched
+[2026-07-12T02:36:57Z] ✔ SOLO-SWEEP | DID: n=16 splits (7,9),(8,8),(9,7),(10,6),(11,5) | RESULT: ALL INFEASIBLE 0 supports (8dff49ea/bd0c0320/cc5462d6/b5037e11/9f9401d0) => ORDER 16 CLOSED | Δ: k=2 catalogue starts at n>=17; n=17 chain launched (6 splits)
+[2026-07-12T04:21:54Z] ✔ SOLO-SWEEP | DID: n=17 six splits | RESULT: 3 INFEASIBLE (4d450ca0/f76b9d64/325012ec) + 3 FEASIBLE w/ 3000-support staged no-hits each (95dbc901/d612c59e/31d82c62) | Δ: feasibility frontier = n=17 left>=9; deep 30000-run launched
