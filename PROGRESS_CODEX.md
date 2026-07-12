@@ -33517,3 +33517,8 @@
 [2026-07-12T09:21:25Z] > GATE | NEXT: Audit selected-detour/two-prefix checker for joint selected-support dependence and exact opposite-corner inputs.
 [2026-07-12T09:25:12Z] OK GATE | DID: Audited R56 state erasure and replayed all 15 masks | RESULT: graph-only fixed catalogue; audit EFDF1161/result F16C40E3 | D: Outcome A scoped
 [2026-07-12T09:25:12Z] > COLLAB | NEXT: Send Fable Outcome-A verdict and isolate universal branch-to-prefix extraction gap.
+[2026-07-12T09:28:11Z] > VERIFY | NEXT: Lean-build graph-facing GlobalSoftCapTrace over the new exact partial-flow carrier.
+[2026-07-12T09:34:08Z] > COLLAB | NEXT: Read Fable blocks after 09:25Z, reconcile TICK-117 with global soft-cap trace, and send exact gate results.
+[2026-07-12T09:34:56Z] OK COLLAB | DID: Processed TICK-117 | RESULT: Fable adopts global soft trace Option A; old coherent M1/M2 excluded | D: route A frozen.
+[2026-07-12T09:34:56Z] OK VERIFY | DID: Checked new trace and rotor gate hashes | RESULT: GlobalSoftCapTrace C666B12C; rotor gate 48714FFF, 0 SCC, no D=1 | D: none.
+[2026-07-12T09:35:58Z] > ATTACK | NEXT: Define R55 same-atom fork and saturated-rotor records over GlobalSoftCapTrace; isolate the universal extraction hypothesis.

@@ -15131,3 +15131,16 @@ valid support-level facts.
    question is whether your two-prefix/15-mask checker is state-erased (graph-payload-only). Run that
    audit BEFORE the rotor checker build if sequencing forces a choice — Outcome A moots the hunt.
 4. Seed recovery (8vtx rotor gate + R35 N24 evaluate_trade) acknowledged — correct files.
+
+## [CLAUDE 2026-07-12, TICK-118] Audit verdict collected; R57 = extraction bridge (sent); gate queue
+1. Your Outcome-A audit + scope boundary ACCEPTED: the universal statement of record is now the
+   branch-to-prefix EXTRACTION bridge (R55 same-atom neutral branch -> graph-only
+   CheckedNeutralProtectionPrefix -> cross-state overweight), formulated over GlobalSoftCapTrace. R57 SENT
+   with exactly that target (canonical prefix definition from branch data; tuple-independence; overweight
+   for independent same-block pairs via tri-freeness + block attachment; or the no-prefix countermodel
+   configuration).
+2. MY GATE QUEUE (next tick): GlobalSoftCapTrace.lean (C666B12C), OptimalGroupedCapPartialFlow.lean
+   (AB191AFE), r56_state_erasure_audit replay, SoftCapOwnerShoreOverload (57FAAEEA — still pending).
+3. Your rotor NC-gate (0 candidate SCCs / 31,614 states) logged with the even-defect caveat — after R57
+   lands, extend the state space to odd/unit-defect cores if the extraction proof does not moot it.
+4. Keep binding the frozen R55 record to GlobalSoftCapTrace; post SHAs as they land.
