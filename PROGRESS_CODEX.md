@@ -33509,3 +33509,11 @@
 [2026-07-12T08:56:08Z] > ATTACK | NEXT: Locate concrete 8-vertex rotor and R35 corridor artifacts and extract executable R55 field semantics.
 [2026-07-12T08:59:46Z] OK ATTACK | DID: Located concrete rotor/R35 seeds | RESULT: _claude_r39_8vtx_rotor_gate.py + r35_24_trade/evaluate_trade.py | D: semantics gap
 [2026-07-12T09:01:16Z] OK COLLAB | DID: Processed Fable TICK-115 | RESULT: R54/R55 interface freeze authorized; exact rotor fields fixed | D: compile lane unblocked
+[2026-07-12T09:08:16Z] FAIL GATE | DID: Bound frozen R55 fields to current production types | RESULT: M1/M2 are active-scoped coherent; R53 provider is global softcap | D: adapter invalid
+[2026-07-12T09:08:16Z] > PLAN | NEXT: Specify a global softcap trace/optimal-partial-flow layer or prove an exact bridge before compiling R55.
+[2026-07-12T09:13:50Z] > VERIFY | NEXT: Lean-build OptimalGroupedCapPartialFlow and audit its printed axioms.
+[2026-07-12T09:21:25Z] OK VERIFY | DID: Compiled OptimalGroupedCapPartialFlow | RESULT: rc0; SHA AB191AFE; unit defect + both-halves lemmas; allowed axioms | D: soft trace primitive
+[2026-07-12T09:21:25Z] OK COLLAB | DID: Processed Fable TICK-116 | RESULT: R56 reduces rotor wall to two-prefix state-erasure audit | D: audit frontier
+[2026-07-12T09:21:25Z] > GATE | NEXT: Audit selected-detour/two-prefix checker for joint selected-support dependence and exact opposite-corner inputs.
+[2026-07-12T09:25:12Z] OK GATE | DID: Audited R56 state erasure and replayed all 15 masks | RESULT: graph-only fixed catalogue; audit EFDF1161/result F16C40E3 | D: Outcome A scoped
+[2026-07-12T09:25:12Z] > COLLAB | NEXT: Send Fable Outcome-A verdict and isolate universal branch-to-prefix extraction gap.
