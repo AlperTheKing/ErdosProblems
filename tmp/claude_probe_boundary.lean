@@ -1,0 +1,5 @@
+import Erdos23Delta0.Gamma.SelectedSupportBoundaryExposure
+open Erdos23Delta0.Gamma.SelectedSupportBoundaryExposure in
+#print axioms dB_eq_support_add_exposure
+open Erdos23Delta0.Gamma.SelectedSupportBoundaryExposure in
+#print axioms support_deficit_le_exposure
