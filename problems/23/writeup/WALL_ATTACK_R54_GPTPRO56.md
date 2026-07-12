@@ -45,3 +45,8 @@ beyond the corpus filter (consistent with my/Codex gated fixtures):**
 - NEXT: R55 = attack the sync lemma (sent); Codex lanes = compile the R54 stack (unit core / SCC / quotient
   / minDeg / cycle-to-C5 — all proven-shape) + engine hunt for the exclusive-fork falsifier (small models
   first: does ANY canonical graph realize a fork?); my mask-diff feeds CheckedTwoProtectionPrefixSwitch.**]
+
+
+## VERBATIM FULL TEXT (unfiltered innerText capture; unicode-true; Lean blocks exact)
+### [slice 1 of 2 follows in the committed file via _r54_verbatim.txt]
+
