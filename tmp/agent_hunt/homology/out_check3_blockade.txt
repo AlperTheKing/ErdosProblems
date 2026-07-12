@@ -1,0 +1,40 @@
+excl {0,1} mult2: usable=27 circuits=0
+excl {0} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult1: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+  candidates 32 -> usable after Forced=Inc exclusion 32
+
+===== 298: 5 circuits =====
+ circuit#0: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#1: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#2: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#3: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#4: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+
+===== 264: 3 circuits =====
+ circuit#0: rotor-core squares: 0
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#1: rotor-core squares: 6
+   square (0, 9, 1, 10) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (0, 9, 1, 12) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (0, 9, 1, 13) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 10, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 12, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 13, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples
+ circuit#2: rotor-core squares: 6
+   square (0, 9, 1, 10) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (0, 9, 1, 12) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (0, 9, 1, 13) AB=(2, 3) PQ=(15, 17): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 10, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 12, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   square (9, 0, 13, 1) AB=(15, 17) PQ=(2, 3): blocked atoms (no sigma-avoiding row): 2 [(1, 8), (14, 17)]
+   liveness hunt: best activity score 0; L1 transitions found 0 over 0 exact-checked tuples

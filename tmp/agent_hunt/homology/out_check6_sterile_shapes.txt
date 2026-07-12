@@ -1,0 +1,38 @@
+=== marked vertex REQUIRED deg 1 (profile owner) ===
+e=1: classes=1 admitting=0
+e=2: classes=1 admitting=0
+e=3: classes=2 admitting=0
+e=4: classes=4 admitting=1
+   n=5 v=3 edges=((0, 1), (0, 2), (1, 3), (2, 4)) degseq=[1, 1, 2, 2, 2] PATH INCIDENT=((3, 4),) REMOTE=()
+e=5: classes=10 admitting=5
+   n=6 v=3 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 5)) degseq=[1, 1, 1, 2, 2, 3] INCIDENT=() REMOTE=((4, 5),)
+   n=6 v=4 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 5)) degseq=[1, 1, 1, 2, 2, 3] INCIDENT=((4, 5),) REMOTE=()
+   n=6 v=2 edges=((0, 1), (0, 2), (0, 3), (1, 4), (4, 5)) degseq=[1, 1, 1, 2, 2, 3] INCIDENT=((2, 5),) REMOTE=((3, 5),)
+   n=6 v=5 edges=((0, 1), (0, 2), (0, 3), (1, 4), (4, 5)) degseq=[1, 1, 1, 2, 2, 3] INCIDENT=((2, 5), (3, 5)) REMOTE=()
+   n=6 v=4 edges=((0, 1), (0, 2), (1, 3), (2, 4), (3, 5)) degseq=[1, 1, 2, 2, 2, 2] PATH INCIDENT=((3, 4),) REMOTE=((2, 5),)
+e=6: classes=24 admitting=17
+   n=6 v=5 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 4), (3, 5)) degseq=[1, 2, 2, 2, 2, 3] INCIDENT=((4, 5),) REMOTE=()
+   n=6 v=3 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 4), (4, 5)) degseq=[1, 1, 2, 2, 3, 3] INCIDENT=((3, 5),) REMOTE=()
+   n=7 v=3 edges=((0, 1), (0, 2), (0, 3), (0, 4), (1, 5), (2, 6)) degseq=[1, 1, 1, 1, 2, 2, 4] INCIDENT=() REMOTE=((5, 6),)
+   n=7 v=5 edges=((0, 1), (0, 2), (0, 3), (0, 4), (1, 5), (2, 6)) degseq=[1, 1, 1, 1, 2, 2, 4] INCIDENT=((5, 6),) REMOTE=()
+   n=7 v=2 edges=((0, 1), (0, 2), (0, 3), (0, 4), (1, 5), (5, 6)) degseq=[1, 1, 1, 1, 2, 2, 4] INCIDENT=((2, 6),) REMOTE=((3, 6), (4, 6))
+   n=7 v=6 edges=((0, 1), (0, 2), (0, 3), (0, 4), (1, 5), (5, 6)) degseq=[1, 1, 1, 1, 2, 2, 4] INCIDENT=((2, 6), (3, 6), (4, 6)) REMOTE=()
+   n=7 v=3 edges=((0, 1), (0, 2), (0, 3), (1, 4), (1, 5), (2, 6)) degseq=[1, 1, 1, 1, 2, 3, 3] INCIDENT=() REMOTE=((4, 6), (5, 6))
+   n=7 v=4 edges=((0, 1), (0, 2), (0, 3), (1, 4), (1, 5), (2, 6)) degseq=[1, 1, 1, 1, 2, 3, 3] INCIDENT=((4, 6),) REMOTE=((5, 6),)
+   n=7 v=6 edges=((0, 1), (0, 2), (0, 3), (1, 4), (1, 5), (2, 6)) degseq=[1, 1, 1, 1, 2, 3, 3] INCIDENT=((4, 6), (5, 6)) REMOTE=()
+   n=7 v=4 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 5), (3, 6)) degseq=[1, 1, 1, 2, 2, 2, 3] INCIDENT=((4, 5), (4, 6)) REMOTE=((5, 6),)
+   n=7 v=3 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 5), (4, 6)) degseq=[1, 1, 1, 2, 2, 2, 3] INCIDENT=((3, 6),) REMOTE=((2, 6), (4, 5))
+   n=7 v=5 edges=((0, 1), (0, 2), (0, 3), (1, 4), (2, 5), (4, 6)) degseq=[1, 1, 1, 2, 2, 2, 3] INCIDENT=((4, 5),) REMOTE=((2, 6), (3, 6))
+C6a (e<=3 all sterile): PASS
+C6b (e=4: unique admitting class = P5 end-marked, single INCIDENT end-pair): PASS
+C6c e=5: admitting=5 (incident-only=2, with-remote=3)
+
+=== marked vertex UNRESTRICTED (any owner latent degree) ===
+e=1: classes=1 admitting=0
+e=2: classes=2 admitting=0
+e=3: classes=4 admitting=0
+e=4: classes=10 admitting=3
+e=5: classes=24 admitting=12
+C6d (e<=3 sterile even without deg-1 marking): PASS
+
+VERDICT: ALL PASS

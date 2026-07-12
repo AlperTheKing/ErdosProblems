@@ -1,0 +1,65 @@
+{
+  "hits": [
+    {
+      "active": 20,
+      "classifierVector": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "coverageFibers": {
+        "12": [
+          1,
+          4
+        ],
+        "13": [
+          1
+        ],
+        "14": [
+          1,
+          4
+        ],
+        "17": [
+          1
+        ],
+        "18": [
+          1
+        ]
+      },
+      "degX0": 3,
+      "doubleStarKappa": {
+        "badCross": 22,
+        "blueCross": 12,
+        "kappa": 10,
+        "switch": [
+          0,
+          1,
+          12,
+          13,
+          14,
+          17,
+          18,
+          20
+        ]
+      },
+      "graph6": "T???????????z?t?Z??OwCwBc?Eg?@E?BG??",
+      "hitIndex": 0,
+      "minSigma": -32,
+      "minSigmaStatus": "OPTIMAL",
+      "owner": 0,
+      "scBlanketCertificate": false,
+      "scopeStatus": "INFEASIBLE",
+      "scopeWitness": null,
+      "singletonFiberForcedEdges": [
+        1
+      ],
+      "x0NonOwnerNbrs": [
+        1,
+        4
+      ]
+    }
+  ],
+  "schema": "t6-harvest-scope-analysis-v1",
+  "t": 6
+}

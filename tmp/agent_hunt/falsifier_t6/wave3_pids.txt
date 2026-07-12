@@ -1,0 +1,6 @@
+68140 cuttight_l11_r10
+76224 cuttight_l12_r9
+88184 cuttight_l12_r12
+101592 cuttight_l13_r13
+93896 harvest_l12r9
+102376 deep_l12r9

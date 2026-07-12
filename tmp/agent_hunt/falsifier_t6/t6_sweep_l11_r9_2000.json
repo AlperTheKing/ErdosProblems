@@ -1,0 +1,20 @@
+{
+  "canonicalSha256": "1ba601b249b2a063c3f36a0db1cdf8491ea69eae97ba200c547fa90693009731",
+  "circuitStatuses": {
+    "INFEASIBLE": 2000
+  },
+  "hits": [],
+  "left": 11,
+  "localClassifier": "v",
+  "requireActiveScope": true,
+  "right": 9,
+  "schema": "rooted-tN-support-circuit-search-v1",
+  "scope": "falsifier search; a no-hit is not a proof",
+  "supportLimit": 2000,
+  "supportTerminalStatus": "LIMIT_REACHED",
+  "supportsSolved": 2000,
+  "supportsWithEnoughAtoms": 2000,
+  "t": 6,
+  "verdict": "NO_HIT_WITHIN_EXPLICIT_LIMIT",
+  "workers": 8
+}

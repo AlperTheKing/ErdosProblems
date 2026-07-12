@@ -1,0 +1,33 @@
+excl {0,1} mult2: usable=27 circuits=0
+excl {0} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult1: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+#264 circuits: 3
+
+square (0, 9, 1, 10); edges [(0, 9), (1, 9), (1, 10), (0, 10)]
+movers: AB=(2,3) rows: [(2, 9, 0, 10, 3), (2, 9, 0, 12, 3), (2, 9, 0, 13, 3), (2, 9, 1, 10, 3), (2, 9, 1, 12, 3), (2, 9, 1, 13, 3), (2, 14, 4, 11, 3), (2, 15, 0, 10, 3), (2, 15, 0, 12, 3), (2, 15, 0, 13, 3)]
+        PQ=(15,17) rows: [(15, 0, 9, 1, 17), (15, 0, 10, 1, 17), (15, 0, 12, 1, 17), (15, 0, 13, 1, 17), (15, 2, 9, 1, 17)]
+
+blocked atom (1, 8): 1 rows, per-row square edges used:
+   (1, 9, 2, 14, 8) -> [(1, 9)]
+
+blocked atom (14, 17): 1 rows, per-row square edges used:
+   (14, 2, 9, 1, 17) -> [(1, 9)]
+
+BLOCKADE VERIFIED: every row of (1,8) and (14,17) uses >=1 square edge
+=> in every tuple their fixed selected rows pin >=1 square edge at multiplicity >=1
+=> the four square edges can never all serve as holes along a period-4 rotor
+circuit#0: equality-scale owners (degB=degM=5): [0, 1]
+circuit#1: equality-scale owners (degB=degM=5): [0, 1]
+circuit#2: equality-scale owners (degB=degM=5): [0, 1]
+
+one-atom row-swap graphs (chosen atoms, #264 circuit#1):
+  atom (2, 3): 10 rows, directed 4-cycles (distinct rows): 12
+  atom (9, 11): 7 rows, directed 4-cycles (distinct rows): 6
+  atom (15, 17): 5 rows, directed 4-cycles (distinct rows): 6
+total one-atom 4-cycle skeletons: 24
+
+[264-c1] 30000-tuple census: {'L0': 869266, 'L1': 0, 'L2': 0, 'L3': 0, 'profile': 10}

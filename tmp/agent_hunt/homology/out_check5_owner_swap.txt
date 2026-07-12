@@ -1,0 +1,392 @@
+excl {0,1} mult2: usable=27 circuits=0
+excl {0} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult2: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+excl {} mult1: usable=30 circuits=3
+  first: [(0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (2, 7), (3, 8), (9, 11), (10, 14), (10, 16), (11, 15), (11, 17), (12, 14), (12, 16), (13, 14), (13, 16), (14, 17)]
+  candidates 32 -> usable after Forced=Inc exclusion 32
+
+===== 298: 5 circuits =====
+  [298-c0] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 8, components [2, 2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+      (2, 9, 1, 13, 3) -> (2, 9, 0, 13, 3) (expel 1, enter 0)
+    atom (9, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 12) -> (9, 1, 10, 3, 12) (expel 0, enter 1)
+      (9, 0, 13, 3, 12) -> (9, 1, 13, 3, 12) (expel 0, enter 1)
+      (9, 1, 10, 3, 12) -> (9, 0, 10, 3, 12) (expel 1, enter 0)
+      (9, 1, 13, 3, 12) -> (9, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (9, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 16) -> (9, 1, 10, 3, 16) (expel 0, enter 1)
+      (9, 0, 13, 3, 16) -> (9, 1, 13, 3, 16) (expel 0, enter 1)
+      (9, 1, 10, 3, 16) -> (9, 0, 10, 3, 16) (expel 1, enter 0)
+      (9, 1, 13, 3, 16) -> (9, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 0, 11, 2, 14) -> (10, 1, 11, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+      (10, 1, 11, 2, 14) -> (10, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (10, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 15) -> (10, 1, 9, 2, 15) (expel 0, enter 1)
+      (10, 0, 11, 2, 15) -> (10, 1, 11, 2, 15) (expel 0, enter 1)
+      (10, 1, 9, 2, 15) -> (10, 0, 9, 2, 15) (expel 1, enter 0)
+      (10, 1, 11, 2, 15) -> (10, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (11, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 12) -> (11, 1, 10, 3, 12) (expel 0, enter 1)
+      (11, 0, 13, 3, 12) -> (11, 1, 13, 3, 12) (expel 0, enter 1)
+      (11, 1, 10, 3, 12) -> (11, 0, 10, 3, 12) (expel 1, enter 0)
+      (11, 1, 13, 3, 12) -> (11, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (11, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 16) -> (11, 1, 10, 3, 16) (expel 0, enter 1)
+      (11, 0, 13, 3, 16) -> (11, 1, 13, 3, 16) (expel 0, enter 1)
+      (11, 1, 10, 3, 16) -> (11, 0, 10, 3, 16) (expel 1, enter 0)
+      (11, 1, 13, 3, 16) -> (11, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (12, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (12, 3, 10, 0, 17) -> (12, 3, 10, 1, 17) (expel 0, enter 1)
+      (12, 3, 10, 1, 17) -> (12, 3, 10, 0, 17) (expel 1, enter 0)
+      (12, 3, 13, 0, 17) -> (12, 3, 13, 1, 17) (expel 0, enter 1)
+      (12, 3, 13, 1, 17) -> (12, 3, 13, 0, 17) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 0, 11, 2, 14) -> (13, 1, 11, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+      (13, 1, 11, 2, 14) -> (13, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (13, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 15) -> (13, 1, 9, 2, 15) (expel 0, enter 1)
+      (13, 0, 11, 2, 15) -> (13, 1, 11, 2, 15) (expel 0, enter 1)
+      (13, 1, 9, 2, 15) -> (13, 0, 9, 2, 15) (expel 1, enter 0)
+      (13, 1, 11, 2, 15) -> (13, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (14, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (14, 2, 9, 0, 17) -> (14, 2, 9, 1, 17) (expel 0, enter 1)
+      (14, 2, 9, 1, 17) -> (14, 2, 9, 0, 17) (expel 1, enter 0)
+      (14, 2, 11, 0, 17) -> (14, 2, 11, 1, 17) (expel 0, enter 1)
+      (14, 2, 11, 1, 17) -> (14, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (16, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (16, 3, 10, 0, 17) -> (16, 3, 10, 1, 17) (expel 0, enter 1)
+      (16, 3, 10, 1, 17) -> (16, 3, 10, 0, 17) (expel 1, enter 0)
+      (16, 3, 13, 0, 17) -> (16, 3, 13, 1, 17) (expel 0, enter 1)
+      (16, 3, 13, 1, 17) -> (16, 3, 13, 0, 17) (expel 1, enter 0)
+  [298-c0] owner-swappable atoms: 12; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [298-c1] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 8, components [2, 2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+      (2, 9, 1, 13, 3) -> (2, 9, 0, 13, 3) (expel 1, enter 0)
+    atom (9, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 12) -> (9, 1, 10, 3, 12) (expel 0, enter 1)
+      (9, 0, 13, 3, 12) -> (9, 1, 13, 3, 12) (expel 0, enter 1)
+      (9, 1, 10, 3, 12) -> (9, 0, 10, 3, 12) (expel 1, enter 0)
+      (9, 1, 13, 3, 12) -> (9, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (9, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 16) -> (9, 1, 10, 3, 16) (expel 0, enter 1)
+      (9, 0, 13, 3, 16) -> (9, 1, 13, 3, 16) (expel 0, enter 1)
+      (9, 1, 10, 3, 16) -> (9, 0, 10, 3, 16) (expel 1, enter 0)
+      (9, 1, 13, 3, 16) -> (9, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 0, 11, 2, 14) -> (10, 1, 11, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+      (10, 1, 11, 2, 14) -> (10, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (10, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 15) -> (10, 1, 9, 2, 15) (expel 0, enter 1)
+      (10, 0, 11, 2, 15) -> (10, 1, 11, 2, 15) (expel 0, enter 1)
+      (10, 1, 9, 2, 15) -> (10, 0, 9, 2, 15) (expel 1, enter 0)
+      (10, 1, 11, 2, 15) -> (10, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (11, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 12) -> (11, 1, 10, 3, 12) (expel 0, enter 1)
+      (11, 0, 13, 3, 12) -> (11, 1, 13, 3, 12) (expel 0, enter 1)
+      (11, 1, 10, 3, 12) -> (11, 0, 10, 3, 12) (expel 1, enter 0)
+      (11, 1, 13, 3, 12) -> (11, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (11, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 16) -> (11, 1, 10, 3, 16) (expel 0, enter 1)
+      (11, 0, 13, 3, 16) -> (11, 1, 13, 3, 16) (expel 0, enter 1)
+      (11, 1, 10, 3, 16) -> (11, 0, 10, 3, 16) (expel 1, enter 0)
+      (11, 1, 13, 3, 16) -> (11, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 0, 11, 2, 14) -> (13, 1, 11, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+      (13, 1, 11, 2, 14) -> (13, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (13, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 15) -> (13, 1, 9, 2, 15) (expel 0, enter 1)
+      (13, 0, 11, 2, 15) -> (13, 1, 11, 2, 15) (expel 0, enter 1)
+      (13, 1, 9, 2, 15) -> (13, 0, 9, 2, 15) (expel 1, enter 0)
+      (13, 1, 11, 2, 15) -> (13, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (14, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (14, 2, 9, 0, 17) -> (14, 2, 9, 1, 17) (expel 0, enter 1)
+      (14, 2, 9, 1, 17) -> (14, 2, 9, 0, 17) (expel 1, enter 0)
+      (14, 2, 11, 0, 17) -> (14, 2, 11, 1, 17) (expel 0, enter 1)
+      (14, 2, 11, 1, 17) -> (14, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (15, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (15, 2, 9, 0, 17) -> (15, 2, 9, 1, 17) (expel 0, enter 1)
+      (15, 2, 9, 1, 17) -> (15, 2, 9, 0, 17) (expel 1, enter 0)
+      (15, 2, 11, 0, 17) -> (15, 2, 11, 1, 17) (expel 0, enter 1)
+      (15, 2, 11, 1, 17) -> (15, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (16, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (16, 3, 10, 0, 17) -> (16, 3, 10, 1, 17) (expel 0, enter 1)
+      (16, 3, 10, 1, 17) -> (16, 3, 10, 0, 17) (expel 1, enter 0)
+      (16, 3, 13, 0, 17) -> (16, 3, 13, 1, 17) (expel 0, enter 1)
+      (16, 3, 13, 1, 17) -> (16, 3, 13, 0, 17) (expel 1, enter 0)
+  [298-c1] owner-swappable atoms: 12; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [298-c2] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 8, components [2, 2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+      (2, 9, 1, 13, 3) -> (2, 9, 0, 13, 3) (expel 1, enter 0)
+    atom (9, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 12) -> (9, 1, 10, 3, 12) (expel 0, enter 1)
+      (9, 0, 13, 3, 12) -> (9, 1, 13, 3, 12) (expel 0, enter 1)
+      (9, 1, 10, 3, 12) -> (9, 0, 10, 3, 12) (expel 1, enter 0)
+      (9, 1, 13, 3, 12) -> (9, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (9, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 16) -> (9, 1, 10, 3, 16) (expel 0, enter 1)
+      (9, 0, 13, 3, 16) -> (9, 1, 13, 3, 16) (expel 0, enter 1)
+      (9, 1, 10, 3, 16) -> (9, 0, 10, 3, 16) (expel 1, enter 0)
+      (9, 1, 13, 3, 16) -> (9, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 0, 11, 2, 14) -> (10, 1, 11, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+      (10, 1, 11, 2, 14) -> (10, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (10, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 15) -> (10, 1, 9, 2, 15) (expel 0, enter 1)
+      (10, 0, 11, 2, 15) -> (10, 1, 11, 2, 15) (expel 0, enter 1)
+      (10, 1, 9, 2, 15) -> (10, 0, 9, 2, 15) (expel 1, enter 0)
+      (10, 1, 11, 2, 15) -> (10, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (11, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 12) -> (11, 1, 10, 3, 12) (expel 0, enter 1)
+      (11, 0, 13, 3, 12) -> (11, 1, 13, 3, 12) (expel 0, enter 1)
+      (11, 1, 10, 3, 12) -> (11, 0, 10, 3, 12) (expel 1, enter 0)
+      (11, 1, 13, 3, 12) -> (11, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (11, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 16) -> (11, 1, 10, 3, 16) (expel 0, enter 1)
+      (11, 0, 13, 3, 16) -> (11, 1, 13, 3, 16) (expel 0, enter 1)
+      (11, 1, 10, 3, 16) -> (11, 0, 10, 3, 16) (expel 1, enter 0)
+      (11, 1, 13, 3, 16) -> (11, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (12, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (12, 3, 10, 0, 17) -> (12, 3, 10, 1, 17) (expel 0, enter 1)
+      (12, 3, 10, 1, 17) -> (12, 3, 10, 0, 17) (expel 1, enter 0)
+      (12, 3, 13, 0, 17) -> (12, 3, 13, 1, 17) (expel 0, enter 1)
+      (12, 3, 13, 1, 17) -> (12, 3, 13, 0, 17) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 0, 11, 2, 14) -> (13, 1, 11, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+      (13, 1, 11, 2, 14) -> (13, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (13, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 15) -> (13, 1, 9, 2, 15) (expel 0, enter 1)
+      (13, 0, 11, 2, 15) -> (13, 1, 11, 2, 15) (expel 0, enter 1)
+      (13, 1, 9, 2, 15) -> (13, 0, 9, 2, 15) (expel 1, enter 0)
+      (13, 1, 11, 2, 15) -> (13, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (14, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (14, 2, 9, 0, 17) -> (14, 2, 9, 1, 17) (expel 0, enter 1)
+      (14, 2, 9, 1, 17) -> (14, 2, 9, 0, 17) (expel 1, enter 0)
+      (14, 2, 11, 0, 17) -> (14, 2, 11, 1, 17) (expel 0, enter 1)
+      (14, 2, 11, 1, 17) -> (14, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (15, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (15, 2, 9, 0, 17) -> (15, 2, 9, 1, 17) (expel 0, enter 1)
+      (15, 2, 9, 1, 17) -> (15, 2, 9, 0, 17) (expel 1, enter 0)
+      (15, 2, 11, 0, 17) -> (15, 2, 11, 1, 17) (expel 0, enter 1)
+      (15, 2, 11, 1, 17) -> (15, 2, 11, 0, 17) (expel 1, enter 0)
+  [298-c2] owner-swappable atoms: 12; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [298-c3] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 8, components [2, 2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+      (2, 9, 1, 13, 3) -> (2, 9, 0, 13, 3) (expel 1, enter 0)
+    atom (9, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 12) -> (9, 1, 10, 3, 12) (expel 0, enter 1)
+      (9, 0, 13, 3, 12) -> (9, 1, 13, 3, 12) (expel 0, enter 1)
+      (9, 1, 10, 3, 12) -> (9, 0, 10, 3, 12) (expel 1, enter 0)
+      (9, 1, 13, 3, 12) -> (9, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (9, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 16) -> (9, 1, 10, 3, 16) (expel 0, enter 1)
+      (9, 0, 13, 3, 16) -> (9, 1, 13, 3, 16) (expel 0, enter 1)
+      (9, 1, 10, 3, 16) -> (9, 0, 10, 3, 16) (expel 1, enter 0)
+      (9, 1, 13, 3, 16) -> (9, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 0, 11, 2, 14) -> (10, 1, 11, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+      (10, 1, 11, 2, 14) -> (10, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (10, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 15) -> (10, 1, 9, 2, 15) (expel 0, enter 1)
+      (10, 0, 11, 2, 15) -> (10, 1, 11, 2, 15) (expel 0, enter 1)
+      (10, 1, 9, 2, 15) -> (10, 0, 9, 2, 15) (expel 1, enter 0)
+      (10, 1, 11, 2, 15) -> (10, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (11, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 12) -> (11, 1, 10, 3, 12) (expel 0, enter 1)
+      (11, 0, 13, 3, 12) -> (11, 1, 13, 3, 12) (expel 0, enter 1)
+      (11, 1, 10, 3, 12) -> (11, 0, 10, 3, 12) (expel 1, enter 0)
+      (11, 1, 13, 3, 12) -> (11, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (11, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 16) -> (11, 1, 10, 3, 16) (expel 0, enter 1)
+      (11, 0, 13, 3, 16) -> (11, 1, 13, 3, 16) (expel 0, enter 1)
+      (11, 1, 10, 3, 16) -> (11, 0, 10, 3, 16) (expel 1, enter 0)
+      (11, 1, 13, 3, 16) -> (11, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (12, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (12, 3, 10, 0, 17) -> (12, 3, 10, 1, 17) (expel 0, enter 1)
+      (12, 3, 10, 1, 17) -> (12, 3, 10, 0, 17) (expel 1, enter 0)
+      (12, 3, 13, 0, 17) -> (12, 3, 13, 1, 17) (expel 0, enter 1)
+      (12, 3, 13, 1, 17) -> (12, 3, 13, 0, 17) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 0, 11, 2, 14) -> (13, 1, 11, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+      (13, 1, 11, 2, 14) -> (13, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (13, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 15) -> (13, 1, 9, 2, 15) (expel 0, enter 1)
+      (13, 0, 11, 2, 15) -> (13, 1, 11, 2, 15) (expel 0, enter 1)
+      (13, 1, 9, 2, 15) -> (13, 0, 9, 2, 15) (expel 1, enter 0)
+      (13, 1, 11, 2, 15) -> (13, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (15, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (15, 2, 9, 0, 17) -> (15, 2, 9, 1, 17) (expel 0, enter 1)
+      (15, 2, 9, 1, 17) -> (15, 2, 9, 0, 17) (expel 1, enter 0)
+      (15, 2, 11, 0, 17) -> (15, 2, 11, 1, 17) (expel 0, enter 1)
+      (15, 2, 11, 1, 17) -> (15, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (16, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (16, 3, 10, 0, 17) -> (16, 3, 10, 1, 17) (expel 0, enter 1)
+      (16, 3, 10, 1, 17) -> (16, 3, 10, 0, 17) (expel 1, enter 0)
+      (16, 3, 13, 0, 17) -> (16, 3, 13, 1, 17) (expel 0, enter 1)
+      (16, 3, 13, 1, 17) -> (16, 3, 13, 0, 17) (expel 1, enter 0)
+  [298-c3] owner-swappable atoms: 12; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [298-c4] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 8, components [2, 2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+      (2, 9, 1, 13, 3) -> (2, 9, 0, 13, 3) (expel 1, enter 0)
+    atom (9, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 12) -> (9, 1, 10, 3, 12) (expel 0, enter 1)
+      (9, 0, 13, 3, 12) -> (9, 1, 13, 3, 12) (expel 0, enter 1)
+      (9, 1, 10, 3, 12) -> (9, 0, 10, 3, 12) (expel 1, enter 0)
+      (9, 1, 13, 3, 12) -> (9, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (9, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (9, 0, 10, 3, 16) -> (9, 1, 10, 3, 16) (expel 0, enter 1)
+      (9, 0, 13, 3, 16) -> (9, 1, 13, 3, 16) (expel 0, enter 1)
+      (9, 1, 10, 3, 16) -> (9, 0, 10, 3, 16) (expel 1, enter 0)
+      (9, 1, 13, 3, 16) -> (9, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 0, 11, 2, 14) -> (10, 1, 11, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+      (10, 1, 11, 2, 14) -> (10, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (10, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (10, 0, 9, 2, 15) -> (10, 1, 9, 2, 15) (expel 0, enter 1)
+      (10, 0, 11, 2, 15) -> (10, 1, 11, 2, 15) (expel 0, enter 1)
+      (10, 1, 9, 2, 15) -> (10, 0, 9, 2, 15) (expel 1, enter 0)
+      (10, 1, 11, 2, 15) -> (10, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (11, 12): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 12) -> (11, 1, 10, 3, 12) (expel 0, enter 1)
+      (11, 0, 13, 3, 12) -> (11, 1, 13, 3, 12) (expel 0, enter 1)
+      (11, 1, 10, 3, 12) -> (11, 0, 10, 3, 12) (expel 1, enter 0)
+      (11, 1, 13, 3, 12) -> (11, 0, 13, 3, 12) (expel 1, enter 0)
+    atom (11, 16): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (11, 0, 10, 3, 16) -> (11, 1, 10, 3, 16) (expel 0, enter 1)
+      (11, 0, 13, 3, 16) -> (11, 1, 13, 3, 16) (expel 0, enter 1)
+      (11, 1, 10, 3, 16) -> (11, 0, 10, 3, 16) (expel 1, enter 0)
+      (11, 1, 13, 3, 16) -> (11, 0, 13, 3, 16) (expel 1, enter 0)
+    atom (12, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (12, 3, 10, 0, 17) -> (12, 3, 10, 1, 17) (expel 0, enter 1)
+      (12, 3, 10, 1, 17) -> (12, 3, 10, 0, 17) (expel 1, enter 0)
+      (12, 3, 13, 0, 17) -> (12, 3, 13, 1, 17) (expel 0, enter 1)
+      (12, 3, 13, 1, 17) -> (12, 3, 13, 0, 17) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 0, 11, 2, 14) -> (13, 1, 11, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+      (13, 1, 11, 2, 14) -> (13, 0, 11, 2, 14) (expel 1, enter 0)
+    atom (13, 15): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (13, 0, 9, 2, 15) -> (13, 1, 9, 2, 15) (expel 0, enter 1)
+      (13, 0, 11, 2, 15) -> (13, 1, 11, 2, 15) (expel 0, enter 1)
+      (13, 1, 9, 2, 15) -> (13, 0, 9, 2, 15) (expel 1, enter 0)
+      (13, 1, 11, 2, 15) -> (13, 0, 11, 2, 15) (expel 1, enter 0)
+    atom (14, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (14, 2, 9, 0, 17) -> (14, 2, 9, 1, 17) (expel 0, enter 1)
+      (14, 2, 9, 1, 17) -> (14, 2, 9, 0, 17) (expel 1, enter 0)
+      (14, 2, 11, 0, 17) -> (14, 2, 11, 1, 17) (expel 0, enter 1)
+      (14, 2, 11, 1, 17) -> (14, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (15, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (15, 2, 9, 0, 17) -> (15, 2, 9, 1, 17) (expel 0, enter 1)
+      (15, 2, 9, 1, 17) -> (15, 2, 9, 0, 17) (expel 1, enter 0)
+      (15, 2, 11, 0, 17) -> (15, 2, 11, 1, 17) (expel 0, enter 1)
+      (15, 2, 11, 1, 17) -> (15, 2, 11, 0, 17) (expel 1, enter 0)
+    atom (16, 17): owner-swap arcs 4, components [2, 2], contains cycle: False
+      (16, 3, 10, 0, 17) -> (16, 3, 10, 1, 17) (expel 0, enter 1)
+      (16, 3, 10, 1, 17) -> (16, 3, 10, 0, 17) (expel 1, enter 0)
+      (16, 3, 13, 0, 17) -> (16, 3, 13, 1, 17) (expel 0, enter 1)
+      (16, 3, 13, 1, 17) -> (16, 3, 13, 0, 17) (expel 1, enter 0)
+  [298-c4] owner-swappable atoms: 13; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+===== 298: ALL CIRCUITS BOUNCE-ONLY: True =====
+
+===== 264: 3 circuits =====
+  [264-c0] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 12, 3) -> (2, 9, 1, 12, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+    atom (9, 11): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (9, 0, 10, 3, 11) -> (9, 1, 10, 3, 11) (expel 0, enter 1)
+      (9, 0, 12, 3, 11) -> (9, 1, 12, 3, 11) (expel 0, enter 1)
+      (9, 0, 13, 3, 11) -> (9, 1, 13, 3, 11) (expel 0, enter 1)
+      (9, 1, 10, 3, 11) -> (9, 0, 10, 3, 11) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (12, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (12, 0, 9, 2, 14) -> (12, 1, 9, 2, 14) (expel 0, enter 1)
+      (12, 1, 9, 2, 14) -> (12, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+  [264-c0] owner-swappable atoms: 5; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [264-c1] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 12, 3) -> (2, 9, 1, 12, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+    atom (9, 11): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (9, 0, 10, 3, 11) -> (9, 1, 10, 3, 11) (expel 0, enter 1)
+      (9, 0, 12, 3, 11) -> (9, 1, 12, 3, 11) (expel 0, enter 1)
+      (9, 0, 13, 3, 11) -> (9, 1, 13, 3, 11) (expel 0, enter 1)
+      (9, 1, 10, 3, 11) -> (9, 0, 10, 3, 11) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (12, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (12, 0, 9, 2, 14) -> (12, 1, 9, 2, 14) (expel 0, enter 1)
+      (12, 1, 9, 2, 14) -> (12, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+  [264-c1] owner-swappable atoms: 5; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+  [264-c2] eligible equality-scale owners: [0, 1]
+    atom (2, 3): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (2, 9, 0, 10, 3) -> (2, 9, 1, 10, 3) (expel 0, enter 1)
+      (2, 9, 0, 12, 3) -> (2, 9, 1, 12, 3) (expel 0, enter 1)
+      (2, 9, 0, 13, 3) -> (2, 9, 1, 13, 3) (expel 0, enter 1)
+      (2, 9, 1, 10, 3) -> (2, 9, 0, 10, 3) (expel 1, enter 0)
+    atom (9, 11): owner-swap arcs 6, components [2, 2, 2], contains cycle: False
+      (9, 0, 10, 3, 11) -> (9, 1, 10, 3, 11) (expel 0, enter 1)
+      (9, 0, 12, 3, 11) -> (9, 1, 12, 3, 11) (expel 0, enter 1)
+      (9, 0, 13, 3, 11) -> (9, 1, 13, 3, 11) (expel 0, enter 1)
+      (9, 1, 10, 3, 11) -> (9, 0, 10, 3, 11) (expel 1, enter 0)
+    atom (10, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (10, 0, 9, 2, 14) -> (10, 1, 9, 2, 14) (expel 0, enter 1)
+      (10, 1, 9, 2, 14) -> (10, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (12, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (12, 0, 9, 2, 14) -> (12, 1, 9, 2, 14) (expel 0, enter 1)
+      (12, 1, 9, 2, 14) -> (12, 0, 9, 2, 14) (expel 1, enter 0)
+    atom (13, 14): owner-swap arcs 2, components [2], contains cycle: False
+      (13, 0, 9, 2, 14) -> (13, 1, 9, 2, 14) (expel 0, enter 1)
+      (13, 1, 9, 2, 14) -> (13, 0, 9, 2, 14) (expel 1, enter 0)
+  [264-c2] owner-swappable atoms: 5; VERDICT: BOUNCE-ONLY => no all-live rotor of any period on this circuit
+===== 264: ALL CIRCUITS BOUNCE-ONLY: True =====

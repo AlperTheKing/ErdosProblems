@@ -1,0 +1,26 @@
+
+================ fixture 298 ================
+n=18 |E|=24 shores 9+9
+atoms (same-shore d4 pairs): 32
+family sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 9]
+union of rows = F*: True
+inclusion-minimal (every edge carried by some atom's every row): False
+triangles in blue+bad: 12
+equality-scale vertices (deg_B=deg_M=5): [0, 1]
+rooted (V,M,X,Y,A,B) embeddings: 3; first 5: [(0, 1, 9, 10, 2, 3), (0, 1, 9, 13, 2, 3), (0, 1, 11, 13, 2, 3)]
+squares (C4s): 28; with ONE side atom pair covered both ways: 28 (n/a breakdown below); FULL rotor cores (both transposed atoms, both middles): 0 []
+tuple space size: 1509949440000; multi-row atoms: 23 with sizes [4, 2, 2, 2, 2, 4, 2, 2, 2, 2, 9, 5, 4, 5, 4, 5, 4, 4, 5, 4, 4, 4, 4]
+[298] transition census (SAMPLED 20000 over 20000 states): {'L0': 701224, 'P_deg': 241761, 'P_deg_onelat': 27759, 'P_deg_onelat_rt': 56, 'P_full_profile': 12}
+
+================ fixture 264 ================
+n=18 |E|=24 shores 9+9
+atoms (same-shore d4 pairs): 30
+family sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 7, 10]
+union of rows = F*: True
+inclusion-minimal (every edge carried by some atom's every row): False
+triangles in blue+bad: 10
+equality-scale vertices (deg_B=deg_M=5): [0, 1]
+rooted (V,M,X,Y,A,B) embeddings: 3; first 5: [(0, 1, 9, 10, 2, 3), (0, 1, 9, 12, 2, 3), (0, 1, 9, 13, 2, 3)]
+squares (C4s): 26; with ONE side atom pair covered both ways: 20 (n/a breakdown below); FULL rotor cores (both transposed atoms, both middles): 6 [(0, 9, 1, 10), (0, 9, 1, 12), (0, 9, 1, 13), (9, 0, 10, 1), (9, 0, 12, 1), (9, 0, 13, 1)]
+tuple space size: 7838208000; multi-row atoms: 17 with sizes [5, 3, 3, 3, 2, 4, 3, 3, 3, 10, 7, 4, 4, 3, 4, 4, 5]
+[264] transition census (SAMPLED 20000 over 20000 states): {'L0': 619851, 'P_deg': 62758, 'P_deg_onelat': 14098, 'P_deg_onelat_rt': 40, 'P_full_profile': 14}

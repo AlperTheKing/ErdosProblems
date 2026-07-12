@@ -1,0 +1,300 @@
+{
+ "reports": [
+  {
+   "atomsAvailable": 32,
+   "captureChecksTried": 160,
+   "captureFeasible": false,
+   "captureWitness": null,
+   "classifier": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "cycleRank": 7,
+   "deletionSdr": "24x25 all perfect",
+   "elapsedSec": 358.5,
+   "exampleSelectionLatent": [
+    "0-17"
+   ],
+   "fibers": {
+    "10": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-17"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 2
+    },
+    "11": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-17"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 2
+    },
+    "13": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-17"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 2
+    },
+    "9": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-17"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 2
+    }
+   },
+   "hit": "298",
+   "latentFeasible": {
+    "0-10": false,
+    "0-11": false,
+    "0-13": false,
+    "0-17": true,
+    "0-9": false,
+    "1-10": false,
+    "1-11": false,
+    "1-13": false,
+    "1-17": false,
+    "1-9": false,
+    "2-11": false,
+    "2-14": false,
+    "2-15": false,
+    "2-9": false,
+    "3-10": false,
+    "3-12": false,
+    "3-13": false,
+    "3-16": false,
+    "4-12": false,
+    "4-14": false,
+    "5-14": false,
+    "6-16": false,
+    "7-15": false,
+    "8-12": false
+   },
+   "maxLatentAnySelection": 1,
+   "minSelectedSupport": 23,
+   "muMin": 2,
+   "owner": 0,
+   "scCertificate": {
+    "1": [
+     9,
+     10,
+     11,
+     13
+    ]
+   },
+   "scHolds": true,
+   "supersaturation": [
+    {
+     "k": 1,
+     "minOwners": 2,
+     "slack": 0,
+     "tight": [
+      "6-16"
+     ]
+    },
+    {
+     "k": 2,
+     "minOwners": 4,
+     "slack": 1,
+     "tight": [
+      "0-17",
+      "1-17"
+     ]
+    },
+    {
+     "k": 3,
+     "minOwners": 6,
+     "slack": 2,
+     "tight": [
+      "0-17",
+      "1-17",
+      "6-16"
+     ]
+    }
+   ],
+   "tailBlanketProved": true,
+   "triangles": 0,
+   "x0": 17,
+   "ys": [
+    9,
+    10,
+    11,
+    13
+   ]
+  },
+  {
+   "atomsAvailable": 30,
+   "captureChecksTried": 252,
+   "captureFeasible": false,
+   "captureWitness": null,
+   "classifier": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "cycleRank": 7,
+   "deletionSdr": "24x25 all perfect",
+   "elapsedSec": 2.1,
+   "exampleSelectionLatent": [
+    "0-9"
+   ],
+   "fibers": {
+    "10": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-9"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 3
+    },
+    "12": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-9"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 3
+    },
+    "13": {
+     "C": [
+      1
+     ],
+     "forced": [
+      "1-9"
+     ],
+     "middles": [
+      1
+     ],
+     "witnesses": 3
+    },
+    "15": {
+     "C": [
+      2
+     ],
+     "forced": [
+      "1-9",
+      "2-9"
+     ],
+     "middles": [
+      2
+     ],
+     "witnesses": 1
+    }
+   },
+   "hit": "264",
+   "latentFeasible": {
+    "0-10": false,
+    "0-12": false,
+    "0-13": false,
+    "0-15": false,
+    "0-9": true,
+    "1-10": false,
+    "1-12": false,
+    "1-13": false,
+    "1-17": false,
+    "1-9": false,
+    "2-14": false,
+    "2-15": false,
+    "2-9": false,
+    "3-10": false,
+    "3-11": false,
+    "3-12": false,
+    "3-13": false,
+    "4-11": false,
+    "4-14": false,
+    "5-11": false,
+    "5-16": false,
+    "6-11": false,
+    "7-11": false,
+    "8-14": false
+   },
+   "maxLatentAnySelection": 1,
+   "minSelectedSupport": 23,
+   "muMin": 2,
+   "owner": 0,
+   "scCertificate": {
+    "1": [
+     10,
+     12,
+     13
+    ],
+    "2": [
+     15
+    ]
+   },
+   "scHolds": true,
+   "supersaturation": [
+    {
+     "k": 1,
+     "minOwners": 2,
+     "slack": 0,
+     "tight": [
+      "1-17"
+     ]
+    },
+    {
+     "k": 2,
+     "minOwners": 5,
+     "slack": 2,
+     "tight": [
+      "1-17",
+      "5-16"
+     ]
+    },
+    {
+     "k": 3,
+     "minOwners": 8,
+     "slack": 4,
+     "tight": [
+      "1-17",
+      "5-11",
+      "5-16"
+     ]
+    }
+   ],
+   "tailBlanketProved": true,
+   "triangles": 0,
+   "x0": 9,
+   "ys": [
+    10,
+    12,
+    13,
+    15
+   ]
+  }
+ ],
+ "schema": "fiberhunter-hits-v2"
+}

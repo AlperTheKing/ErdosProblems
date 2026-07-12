@@ -33134,3 +33134,296 @@
 [2026-07-12T08:36:29+03:00] > SELECT | NEXT: attack R52 soft-collision Hall feasibility because its six finite eligibility relations expose an exact obstruction.
 [2026-07-12T08:38:04+03:00] OK SELECT | DID: located R52 target | RESULT: WALL_ATTACK_R52 names an unformalized six-relation Hall theorem | D: SELECT->GATE
 [2026-07-12T08:38:04+03:00] > GATE | NEXT: audit local theorem corpus and external prior art for the same coherence-free soft matching statement.
+[2026-07-12T05:39:22Z] OK GATE | DID: compared R52 soft object to compiled APIs | RESULT: soft 0/2 cover iff ordinary matching; old active-scoped coherence-free Hall already compiled | D: new content narrowed to six-relation provider
+
+[2026-07-12T05:39:33Z] OK VERIFY | DID: fresh-built/import-probed M6 range stack | RESULT: rc0; source E561890C; only propext/choice/Quot.sound | D: M6 range gates compiled
+[2026-07-12T05:39:33Z] OK CHECK | DID: exact-gated n15/n16 neighborhood models | RESULT: maxima 17,24,21; n16(9,7) has 2360 W-root d4 cases | D: pointwise exclusion false
+[2026-07-12T05:39:33Z] OK REPORT | DID: hashed M6 source/olean/gate | RESULT: source E561890C; olean 851CE7A1; gate 323CC338/output 2ED9EC88 | D: handoff
+[2026-07-12T08:41:12+03:00] OK GATE | DID: searched local corpus, Erdős #23 page, and arXiv | RESULT: exact soft theorem absent; #23 remains open | D: GATE->PLAN
+[2026-07-12T08:41:12+03:00] > PLAN | NEXT: reduce a minimal Hall defect to owner fibers, derive its P1 deficit identity, then exact-gate switch/detour escape.
+[2026-07-12T05:41:22Z] FAIL COMPUTE | DID: smoke-tested external GPT-5.6-Sol API fanout | RESULT: HTTP 401 invalid API credential; no external agent pool available | D: use six-agent waves + Pro + 64 CPU
+
+[2026-07-12T05:42:20Z] OK GATE | DID: audited local APIs and current status | RESULT: #23 OPEN at erdosproblems.com/23; 0/2 equivalence absent | D: GATE -> PLAN
+[2026-07-12T05:42:20Z] > PLAN | NEXT: specify a 0/2-cover audit wrapper, six-family relation extension, and the sole provider proposition.
+[2026-07-12T05:42:37Z] OK PLAN | DID: fixed minimal audit lemma and six-family extension | RESULT: frontier = canonicalSoftCollisionFeasibleTuple_exists | D: PLAN -> ATTACK
+[2026-07-12T05:42:37Z] > ATTACK | NEXT: create CheckedSoftCollisionTwoCover.lean and prove cover/matching equivalence via finite Hall counting.
+[2026-07-12T05:45:26Z] FAIL ATTACK | DID: audited R52 0/2 wrapper | RESULT: ordinary Hall already compiled; R53 adds active-edge cap 2 | D: abandon R52 wrapper
+[2026-07-12T05:45:26Z] > PLAN | NEXT: encode fractional flow on four active-edge keys plus direct non-active keys and derive residual nonnegativity.
+[2026-07-12T05:48:18Z] FAIL ATTACK | DID: launched independent softcap graph-lemma agent | RESULT: agent usage ceiling before output; lane closed | D: continue locally and with five active agents
+
+[2026-07-12T05:50:18Z] OK VERIFY | DID: replayed 3 wave4 C5-core DRAT proofs | RESULT: all s VERIFIED; report SHA 14AE61F9DFD1A759; max-cut is first missing field | D: C5 shortcut narrowed
+
+[2026-07-12T05:53:03Z] OK CHECK | DID: exact-tested adaptive softcap rotor abstraction | RESULT: 4 obligations/cap2 gives neutral defect-2 cycle; report SHA 8F68985B6C8C253C | D: R53 still needs graph exposure
+
+[2026-07-12T05:53:30Z] OK PLAN | DID: fixed R53 source model | RESULT: key=((active edge x orientation) + direct base) x half | D: PLAN -> ATTACK
+[2026-07-12T05:53:30Z] > ATTACK | NEXT: implement fractional key/edge capacities and prove the exact residual counting adapter.
+[2026-07-12T05:55:05Z] OK CHECK | DID: replayed 2943 common-blue gate | RESULT: six-relation soft defect 0; exclusive ledger net gain only 2 | D: R52 fixture passes, scope narrowed
+[2026-07-12T05:57:03Z] > ATTACK | NEXT: compile CheckedSoftCollisionTwoCover with Lean 4.27 and repair the first elaboration errors.
+[2026-07-12T05:57:10Z] > VERIFY | NEXT: replay R53 referee countermodel and compile the global FreeHalf edge-cap counting module; objective is typed soundness.
+[2026-07-12T05:57:45Z] FAIL ATTACK | DID: built CheckedSoftCollisionTwoCover | RESULT: missing MinimumDemandCollisionHall.olean in first LEAN_PATH cache | D: none
+[2026-07-12T05:58:52Z] > ATTACK | NEXT: rebuild CheckedSoftCollisionTwoCover against the merged pinned olean cache.
+[2026-07-12T06:00:00Z] FAIL ATTACK | DID: rebuilt edge-cap flow module | RESULT: explicit key sum type missing at lines 117/121/125 | D: none
+[2026-07-12T06:00:00Z] > ATTACK | NEXT: rebuild after making all physical-key sums and theorem applications explicit.
+[2026-07-12T06:01:29Z] FAIL ATTACK | DID: rebuilt after explicit key sums | RESULT: compiler exited without olean; parent log pipe timed out | D: none
+[2026-07-12T06:01:29Z] > ATTACK | NEXT: rerun the pinned build in a persistent PTY and capture complete diagnostics.
+[2026-07-12T06:02:39Z] OK ATTACK | DID: built CheckedSoftCollisionTwoCover | RESULT: rc=0; four #print axioms outputs equal allowed triple | D: ATTACK -> VERIFY
+[2026-07-12T06:02:39Z] > VERIFY | NEXT: fresh-rebuild, hash source/olean, scan forbidden tokens, and print the provider signature.
+[2026-07-12T06:01:30Z] OK VERIFY | DID: compiled typed R53 count and raw-key guardrail | RESULT: FreeHalf theorem rc0; raw-key residual -9; report r53_softcap_verify | D: provider scope corrected
+[2026-07-12T06:03:10Z] > ATTACK | NEXT: launch six independent GPT-5.6-Sol lanes on the corrected global FreeHalf provider: adapter, exact gate, Hall dual, switching, algebra, adversary.
+[2026-07-12T06:04:08Z] > VERIFY | NEXT: final-build LF-normalized CheckedSoftCollisionTwoCover and recheck axioms/hash determinism.
+[2026-07-12T09:04:52+03:00] > SELECT | NEXT: inspect Problem 23 R52/R53 artifacts and select the typed graph-adapter frontier.
+[2026-07-12T09:05:24+03:00] OK SELECT | DID: read four R52/R53 target artifacts | RESULT: referee ranks the typed four-key adapter P1 in r52_soft_referee/REPORT.md | D: frontier selected
+[2026-07-12T09:05:24+03:00] > GATE | NEXT: search production Lean for existing cardinal, active-edge freeness, and block-partition lemmas.
+[2026-07-12T09:06:24+03:00] OK GATE | DID: searched Erdos23Delta0 declarations | RESULT: no typed edge-block/cardinality adapter; induced-row lemma at SaturatedRotorSupportPersistence:198 | D: novel adapter
+[2026-07-12T09:06:24+03:00] > PLAN | NEXT: specify canonical ActiveEdge, FreeBase, DirectBase, four-key blocks, and exact cardinal equivalences.
+[2026-07-12T09:07:16+03:00] OK PLAN | DID: fixed four-lemma adapter tree | RESULT: frontier is activeEdge_pairCount_eq_zero from checkedRow_blue_cooccur_implies_pathEdge | D: proof attack ready
+[2026-07-12T09:07:16+03:00] > ATTACK | NEXT: compile scratch cardinality and active-edge freeness proofs with Lean 4.27, workers=1, RAM<1GB.
+[2026-07-12T09:07:51+03:00] > ATTACK | NEXT: compile Scratch.lean proofs collisionHalfEquiv and collisionHalf_card_sum under Lean 4.27.
+[2026-07-12T09:08:20+03:00] FAIL ATTACK | DID: started CheckedSoftCollisionTwoCover dependency build | RESULT: missing CollisionResidualIdentity.olean in base cache | D: add r53 deps
+[2026-07-12T09:08:20+03:00] > ATTACK | NEXT: rebuild CheckedSoftCollisionTwoCover with r53 residual dependency before Scratch.lean.
+[2026-07-12T09:10:15+03:00] FAIL ATTACK | DID: retried CheckedSoftCollisionTwoCover build | RESULT: split LEAN_PATH root missed Gamma/MinimumDemandCollisionHall.olean | D: unify cache root
+[2026-07-12T09:10:15+03:00] > ATTACK | NEXT: hardlink cached Erdos23Delta0 oleans into worker-local root and add residual olean.
+[2026-07-12T09:20:52+03:00] OK ATTACK | DID: compiled collision cardinal sum and activeEdge_pairCount_eq_zero scratch proofs | RESULT: Scratch.lean rc0 | D: graph frontier discharged
+[2026-07-12T09:20:52+03:00] > ATTACK | NEXT: construct activeBaseEquiv, disjoint four-key blocks, and DirectBase complement partition.
+[2026-07-12T09:33:36+03:00] OK ATTACK | DID: implemented SoftEdgeCapGraphAdapter.lean | RESULT: 18 typed lemmas plus key equivalence and conditional global-flow consumer | D: VERIFY
+[2026-07-12T09:33:36+03:00] > VERIFY | NEXT: compile SoftEdgeCapGraphAdapter and eight printed-axiom probes with Lean 4.27.
+[2026-07-12T09:34:33+03:00] FAIL VERIFY | DID: compiled SoftEdgeCapGraphAdapter | RESULT: line 156 card subtype did not simplify to toFinset.card; all 8 axiom probes allowed | D: repair
+[2026-07-12T09:34:33+03:00] > VERIFY | NEXT: make activeEdge_card_eq_activeEdges_length use an explicit toFinset cardinal and rebuild.
+[2026-07-12T09:35:41+03:00] FAIL VERIFY | DID: retried adapter build | RESULT: direct change was not definitional for Finset coe-sort cardinal | D: use Fintype.card_coe theorem
+[2026-07-12T09:35:41+03:00] > VERIFY | NEXT: bridge ActiveEdge cardinal with Fintype.card_coe explicitly and rebuild.
+[2026-07-12T09:36:50+03:00] OK VERIFY | DID: compiled SoftEdgeCapGraphAdapter and 8 axiom probes | RESULT: Lean rc0; axioms propext, Classical.choice, Quot.sound | D: static audit
+[2026-07-12T09:36:50+03:00] > VERIFY | NEXT: scan forbidden tokens, hash source/olean, and audit owned-path diff.
+[2026-07-12T09:37:49+03:00] > VERIFY | NEXT: compile active/direct branch reduction lemmas for edgeCappedKeyEquivFreeHalf under Lean 4.27.
+[2026-07-12T09:39:38+03:00] OK VERIFY | DID: audited final source, olean, and owned paths | RESULT: rc0; forbidden hits 0; REPORT.md records hashes | D: DECIDE
+[2026-07-12T09:39:38+03:00] > DECIDE | NEXT: rerun declaration novelty search and confirm no provider-existence assertion.
+[2026-07-12T09:39:59+03:00] OK DECIDE | DID: reran production declaration and provider scans | RESULT: adapter names unique; provider-existence scan empty | D: adapter complete
+[2026-07-12T09:05:22+03:00] > GATE | NEXT: transition SELECT -> GATE; read R52/R53, referee report, and checked Lean model to fix the exact switching frontier.
+[2026-07-12T09:05:43+03:00] OK GATE | DID: audited four requested artifacts | RESULT: CheckedSoftCollisionTwoCover sinks are abstract keys, not FreeHalf | D: GATE -> PLAN
+[2026-07-12T09:05:43+03:00] > PLAN | NEXT: trace row choices and six production relations, then derive exact one/two-row Hall-defect changes on actual FreeHalf sinks.
+[2026-07-12T09:11:41+03:00] OK PLAN | DID: derived pair-count and grouped-cap defect variables | RESULT: full-shore gap depends on uncovered vertices, active caps, eligibility loss | D: PLAN -> ATTACK
+[2026-07-12T09:11:41+03:00] > ATTACK | NEXT: run an exact finite two-state row replacement and test exposed FreeHalf capacity against created collision halves.
+[2026-07-12T09:12:21+03:00] OK ATTACK | DID: evaluated 2 exact row states on Fin 7 | RESULT: each has demand 32, cap 26, defect 6; switch creates 14 and exposes cap 2 | D: claim refuted abstractly
+[2026-07-12T09:12:21+03:00] > VERIFY | NEXT: exhaust all 441 ordered pairs of five-subsets on Fin 7 and check the full-shore cardinal identity.
+[2026-07-12T09:13:36+03:00] OK VERIFY | DID: checked 21^2 row tuples on Fin 7 | RESULT: 441/441 satisfy D-S=2(25m-N^2+unselected); failures=0 | D: none
+[2026-07-12T09:13:36+03:00] > GATE | NEXT: transition VERIFY -> GATE; check Problem 23 status and prior art for the full-shore exchange invariant.
+[2026-07-12T09:15:46+03:00] OK GATE | DID: searched Problem 23 page and local prior art | RESULT: erdosproblems.com/23 is OPEN; no off-diagonal/unselected identity found | D: GATE -> CHECK
+[2026-07-12T09:15:46+03:00] > CHECK | NEXT: independently replay the two-state countermodel and referee the formulas against actual FreeHalf distinctness.
+[2026-07-12T09:16:55+03:00] OK CHECK | DID: independent Python integer replay | RESULT: demand/free/cap/defect=32/28/26/6; turnover=14/14/4/4 | D: stall=0
+[2026-07-12T09:16:55+03:00] > ATTACK | NEXT: exhaust the real N12 corrected defects and test every positive tuple for one/two-row defect descent.
+[2026-07-12T09:17:37+03:00] OK ATTACK | DID: exhausted 2400 corrected N12 states and all neighbors | RESULT: 46 positive; 0 one-row local minima; 0 two-row local minima | D: none
+[2026-07-12T09:17:37+03:00] > ATTACK | NEXT: decompose one defect-4 to defect-0 real one-row move into demand, FreeHalf, eligibility, and grouped-cap changes.
+[2026-07-12T09:19:16+03:00] OK ATTACK | DID: decomposed N12 choice 0,5,6,6 -> 0,0,6,6 | RESULT: defect 4->0; created 30, new FreeHalf 12; shore demand -16, cap +4 | D: claim false
+[2026-07-12T09:19:16+03:00] > VERIFY | NEXT: exhaust finite two-row transitions and check the positive-part demand and zero-crossing FreeHalf formulas.
+[2026-07-12T09:19:56+03:00] OK VERIFY | DID: checked 8820 one-row and 194481 two-row transitions | RESULT: demand/FreeHalf formula failures=0 | D: VERIFY -> CHECK
+[2026-07-12T09:19:56+03:00] > CHECK | NEXT: referee the finite minimizer lemma and confirm that only the append-only protocol log was edited.
+[2026-07-12T09:20:24+03:00] OK CHECK | DID: audited formulas, writes, and worktree | RESULT: finite lemma proved on paper; this lane changed only PROGRESS_CODEX.md | D: provider remains open
+[2026-07-12T09:05:01+03:00] > ATTACK | NEXT: reconstruct the corrected global FreeHalf flow model and inventory exact fixture/relation data.
+[2026-07-12T09:05:12.6763797+03:00] > SELECT | NEXT: inspect R52/R53, referee report, and CheckedSoftCollisionTwoCover to reconstruct Problem 23 graph-provider frontier.
+[2026-07-12T09:05:19+03:00] > SELECT | NEXT: select Problem 23 corrected global FreeHalf softcap dual as the concrete algebraic frontier.
+[2026-07-12T09:05:20+03:00] OK SELECT | DID: selected Problem 23 global FreeHalf flow | RESULT: target has six eligibility relations, key caps 1, edge caps 2 | D: SELECT -> GATE
+[2026-07-12T09:05:21+03:00] > GATE | NEXT: read R52/R53, soft-referee report, and checked Lean model to identify known results and exact primal constraints.
+[2026-07-12T09:05:33.9299657+03:00] OK SELECT | DID: read R52/R53, referee audit, and soft-flow Lean | RESULT: frontier is global CollisionHalf-to-FreeHalf capped flow | D: SELECT->GATE
+[2026-07-12T09:05:33.9299657+03:00] > GATE | NEXT: verify #23 status and search prior art for the global six-relation Hall provider and shore-switch lemma.
+[2026-07-12T09:05:53.1207498+03:00] OK GATE | DID: checked #23 page and current primary papers | RESULT: #23 remains open; no global six-relation Hall provider located | D: GATE->PLAN
+[2026-07-12T09:05:53.1207498+03:00] > PLAN | NEXT: recover production eligibility, owner/fiber maps, and row-switch laws; isolate the strongest minimal-shore frontier lemma.
+[2026-07-12T06:06:26Z] OK VERIFY | DID: final-built edge-cap module three times | RESULT: rc=0; source DC9306D0; identical olean 1B77F07D; allowed axioms | D: VERIFY -> CHECK
+[2026-07-12T06:06:26Z] > CHECK | NEXT: verify forbidden-token scan and record the exact sole provider proposition.
+[2026-07-12T06:06:26Z] OK CHECK | DID: scanned source and audited provider | RESULT: forbidden 0; provider at CheckedSoftCollisionTwoCover.lean:220 | D: graph provider open
+[2026-07-12T09:06:59+03:00] OK GATE | DID: checked Problem 23 and CDC proof | RESULT: erdosproblems.com/23 is Open; no six-relation global flow result cited | D: GATE -> PLAN
+[2026-07-12T09:07:00+03:00] > PLAN | NEXT: derive the exact global grouped-cap LP dual, then seek an endpoint/row identity or a rational obstruction.
+[2026-07-12T09:08:37+03:00] OK ATTACK | DID: audited prior evaluators | RESULT: r52 soft_core uses active-only demand and fixed reservations | D: none
+[2026-07-12T09:08:37+03:00] > ATTACK | NEXT: implement exact global CollisionHalf-to-FreeHalf max flow with unit keys and cap-2 active-edge blocks.
+[2026-07-12T09:09:00.8261981+03:00] OK PLAN | DID: reduced capped Hall to owner fibers and minimal shores | RESULT: frontier is a graph switch that increases typed block capacity | D: PLAN->ATTACK
+[2026-07-12T09:09:00.8261981+03:00] > ATTACK | NEXT: replay the exact adaptive rotor and N=20 typed-source counterexample; test minimal-shore identities against both.
+[2026-07-12T09:09:02+03:00] OK PLAN | DID: derived grouped-cap primal/dual lemma tree | RESULT: frontier is sum p_d <= sum q_s + 2 sum r_e for all feasible prices | D: PLAN -> ATTACK
+[2026-07-12T09:09:03+03:00] > ATTACK | NEXT: run exact integer max-flow/min-cut on corrected global demand and proof-carrying source fixtures.
+[2026-07-12T06:07:20Z] FAIL ATTACK | DID: attempted six-agent Sol Ultra wave | RESULT: agent thread quota reached before any spawn | D: local+Pro lanes continue until quota reset
+[2026-07-12T06:07:20Z] > COMPUTE | NEXT: derive and exact-gate the unreserved global CollisionHalf-to-FreeHalf model on named fixtures using at most 16 idle workers.
+[2026-07-12T09:10:19.1422987+03:00] OK ATTACK | DID: replayed adaptive rotor and N=20 source probe | RESULT: defect-2 neutral rotor; real free pair has sigma=1 and no common-blue arc | D: none
+[2026-07-12T09:10:19.1422987+03:00] > ATTACK | NEXT: prove the minimal capped-shore exactness lemma by Lean stdin, including deletion-invariant capacity for every demand.
+[2026-07-12T09:11:38+03:00] OK ATTACK | DID: ran exact global six-family cap-2 flow on real N=24 tuple | RESULT: demand 312, flow 288; shore {6,8}: 144>120 | D: obstruction found
+[2026-07-12T09:11:39+03:00] > VERIFY | NEXT: verify the explicit rational dual witness and prove coefficient-comparison equivalence with a primal flow.
+[2026-07-12T09:12:03.6737440+03:00] FAIL ATTACK | DID: started Lean proof minimalDeficientShore_exact | RESULT: lake had no default toolchain | D: retry explicit v4.27
+[2026-07-12T09:12:03.6737440+03:00] > ATTACK | NEXT: compile minimalDeficientShore_exact via elan v4.27 and Lean --stdin in the formal-conjectures environment.
+[2026-07-12T06:10:40Z] OK COMPUTE | DID: exhausted N12 global unreserved soft gate | RESULT: 2352/2400 feasible; all 27 min-collision tuples pass | D: provider survives fixture
+[2026-07-12T09:13:40+03:00] > ATTACK | NEXT: run Python compile and three exact grouped-flow guardrails on global_softcap.py.
+[2026-07-12T09:14:00+03:00] OK ATTACK | DID: compiled evaluator and ran 3 guardrails | RESULT: all checks true | D: none
+[2026-07-12T09:14:00+03:00] > ATTACK | NEXT: evaluate N12 K??E@cyjFgWk choice [0,4,7,9] under the global six-family cap-2 model.
+[2026-07-12T09:14:53+03:00] OK ATTACK | DID: evaluated N12 choice [0,4,7,9] | RESULT: global demand 68, flow 64, defect 4 at shore {1,3} | D: tuple fails
+[2026-07-12T09:14:53+03:00] > ATTACK | NEXT: exhaust all 2400 row tuples of K??E@cyjFgWk and compute exact minimum corrected defect.
+[2026-07-12T09:15:19+03:00] OK ATTACK | DID: exhausted 2400 N12 tuples | RESULT: min defect 0; 46 failed tuples, named tuple defect 4 | D: graph passes
+[2026-07-12T09:15:19+03:00] > ATTACK | NEXT: evaluate the N2943 all-anchor tuple with 36648 global halves and 1370 cap-2 edge blocks.
+[2026-07-12T06:14:00Z] OK COMPUTE | DID: exact global-unreserved census N5-10 | RESULT: 6321 eligible graphs/49814 tuples; 0 all-fail, 0 min-collision failures | D: min-collision selector survives
+[2026-07-12T06:14:00Z] > COMPUTE | NEXT: extend corrected global-unreserved census to all N=11 graphs with exactly 16 workers.
+[2026-07-12T09:15:58+03:00] OK ATTACK | DID: evaluated N2943 all-anchor global flow | RESULT: demand 36648; common-blue closes row-companion defect 22 | D: tuple passes
+[2026-07-12T09:15:58+03:00] > ATTACK | NEXT: evaluate N3892 lex rows with 70940 global halves and one cap-2 active-edge block.
+[2026-07-12T06:15:00Z] OK COMPUTE | DID: exact global-unreserved census N11 | RESULT: 64287 graphs/1035476 tuples; 0 all-fail, 0 min-collision failures | D: selector survives N<=11
+[2026-07-12T06:15:00Z] > COMPUTE | NEXT: run the full corrected global-unreserved N12 census with exactly 16 workers; test 39,142,819 tuples.
+[2026-07-12T09:16:23+03:00] OK ATTACK | DID: evaluated N3892 lex global flow | RESULT: demand 70940; P3 closes P1+P2 defect 372 | D: tuple passes
+[2026-07-12T09:16:23+03:00] > ATTACK | NEXT: evaluate all four N78 rotor states with global halves and all active cap-2 blocks.
+[2026-07-12T09:16:58+03:00] OK VERIFY | DID: replayed N24 max-cut and checked dual directly | RESULT: maxcut 70, gamma 300; p 144, q 116, r 2, gap 24 | D: VERIFY -> CHECK
+[2026-07-12T09:16:59+03:00] > CHECK | NEXT: compare coefficients in every nonnegative dual-gap decomposition to test whether it bypasses flow.
+[2026-07-12T09:17:00+03:00] OK CHECK | DID: compared p/q/r coefficients | RESULT: decomposition coefficients satisfy demand 1, key cap 1, group cap 2, hence form a flow | D: CDC fixed-tuple class DEAD
+[2026-07-12T09:17:01+03:00] > DECIDE | NEXT: rerun local novelty search for the corrected N24 global cap-2 dual witness.
+[2026-07-12T09:17:02+03:00] OK DECIDE | DID: searched repository for corrected witness | RESULT: no prior 312/288 or shore 144/120 artifact found | D: obstruction report complete
+[2026-07-12T09:17:53+03:00] OK ATTACK | DID: evaluated four N78 states | RESULT: global demand 576 each; P1 defect 0 under 35 edge caps | D: all pass
+[2026-07-12T09:17:53+03:00] > ATTACK | NEXT: independently gate N24/89/167/175/311 fixed rows under the corrected global cap-2 model.
+[2026-07-12T09:20:22+03:00] OK ATTACK | DID: gated N24/89/167/175/311 | RESULT: N89 demand 776, flow 774 after all six; N167/175/311 pass | D: N89 counterexample
+[2026-07-12T09:20:22+03:00] > ATTACK | NEXT: exhaust all one-row changes from the R35 N24 displayed tuple under corrected global caps.
+[2026-07-12T06:21:44Z] OK GATE | DID: audited official CDC proof/prompt | RESULT: transfer requires diverse registry plus exact algebraic annihilation; raw fanout is insufficient | D: none
+[2026-07-12T06:21:44Z] FAIL ATTACK | DID: checked universal exposure-gain exchange | RESULT: exact N12 transition closes by demand deletion, not source gain | D: reformulate descent
+[2026-07-12T06:21:44Z] > ATTACK | NEXT: test graph-specific minimum-collision descent and replay the real N24 capped-shore obstruction.
+[2026-07-12T06:26:32Z] OK ATTACK | DID: replayed N24 global six-family descent | RESULT: demand/defect 312/24 -> 284/8 -> 256/0 by two one-row moves | D: selector survives N24
+[2026-07-12T06:26:32Z] > VERIFY | NEXT: gate the descent principle across all corrected census failures and the N89 fixture.
+[2026-07-12T06:29:07Z] FAIL VERIFY | DID: replayed N89 under strict P4 | RESULT: unique tuple remains 776/774; unscoped R23 P4 gives 776/776 | D: provider semantics audit sent
+[2026-07-12T09:22:23.3375595+03:00] OK ATTACK | DID: proved capped minimal-shore and active-edge freeness lemmas | RESULT: both compile under Lean 4.27 with allowed axiom triple | D: ATTACK->VERIFY
+[2026-07-12T09:22:23.3375595+03:00] > VERIFY | NEXT: recompile minimalDeficientShore_blockwise_exact and activeEdge_pairCount_eq_zero together under Lean 4.27.
+[2026-07-12T09:22:23.3375595+03:00] > VERIFY | NEXT: exhaust all 16 shores of the 4-obligation cap-2 rotor and verify minimality, parity, and deletion identities.
+[2026-07-12T09:23:13+03:00] OK ATTACK | DID: exhausted 214 R35 N24 Hamming<=1 tuples | RESULT: min corrected defect 8; zero count 0 | D: local neighborhood fails
+[2026-07-12T09:23:13+03:00] > ATTACK | NEXT: run named global gate on 16 fixed states, 2400 N12 tuples, and 214 R35 local tuples; workers=1.
+[2026-07-12T09:23:30.9900774+03:00] FAIL VERIFY | DID: combined Lean referee build | RESULT: blockwise lemma rc0; active-edge call had namespace resolution error | D: retry qualified call
+[2026-07-12T09:23:30.9900774+03:00] OK VERIFY | DID: exhausted 16 cap-2 rotor shores | RESULT: four minimal 3-shores have defect 1; owner saturation has defect 2 | D: none
+[2026-07-12T09:23:30.9900774+03:00] > VERIFY | NEXT: recompile activeEdge_pairCount_eq_zero with the previously accepted sibling-namespace call.
+[2026-07-12T09:23:31.4183880+03:00] > SELECT | NEXT: select #23 corrected grouped-cap row-exchange frontier and load coordination evidence.
+[2026-07-12T09:23:31.4183880+03:00] OK SELECT | DID: selected #23 row-exchange frontier | RESULT: exact finite N<=12 collision-flow enumeration is available | D: SELECT->GATE
+[2026-07-12T09:23:31.4183880+03:00] > GATE | NEXT: audit coordination, R52/R53 wall attacks, and exact production gates for novelty and definitions.
+[2026-07-12T09:23:45.2478287+03:00] > SELECT | NEXT: INIT->SELECT; recover #23 selector contract, fixtures, and exact gate interfaces before constructing the adversarial search.
+[2026-07-12T09:24:24+03:00] OK ATTACK | DID: ran named global gate | RESULT: N89 defect 2; N2943/N3892/N78 pass; named_results.json | D: ATTACK->VERIFY
+[2026-07-12T09:24:24+03:00] > VERIFY | NEXT: census all connected triangle-free N5-10 systems with six relations, cap-2 blocks, workers=16.
+[2026-07-12T09:24:53.1976363+03:00] OK VERIFY | DID: recompiled activeEdge_pairCount_eq_zero | RESULT: Lean 4.27 returned no errors | D: none
+[2026-07-12T09:24:53.1976363+03:00] > VERIFY | NEXT: replay N=20 and certify the exposed (0,5,h) pair misses P1/P3/P4/P5/common-blue and common-bad branches.
+[2026-07-12T09:24:55+03:00] FAIL VERIFY | DID: ran N5-10 census | RESULT: JSON written; exit 1 at relative output formatting | D: none
+[2026-07-12T09:24:55+03:00] > VERIFY | NEXT: rerun identical N5-10 census after resolving output path before display.
+[2026-07-12T09:25:14.4627871+03:00] FAIL VERIFY | DID: ran N=20 branch guard | RESULT: BConnected and collision count were printed constants, not recomputed | D: rerun exact
+[2026-07-12T09:25:14.4627871+03:00] > VERIFY | NEXT: recompute blue connectivity and global CollisionHalf cardinality before accepting the N=20 branch guard.
+[2026-07-12T09:25:40+03:00] OK VERIFY | DID: exact corrected census N5-10 | RESULT: 6421 systems; min defect 0 for all; census_n5_n10.json | D: none
+[2026-07-12T09:25:40+03:00] > VERIFY | NEXT: census all N11 systems with six relations, cap-2 blocks, workers=32.
+[2026-07-12T09:26:16.4176647+03:00] OK VERIFY | DID: recomputed N=20 branch guard | RESULT: blueReach=20, CollisionHalf=0; six local branches reject (0,5,h) | D: none
+[2026-07-12T09:26:16.4176647+03:00] > CHECK | NEXT: decide whether this cycle produced a verifiable new fact beyond the existing flow interface.
+[2026-07-12T09:26:16.4176647+03:00] OK CHECK | DID: referee-checked both lemmas and exact models | RESULT: blockwise shore exactness and active-edge pairCount zero compile | D: stall=0
+[2026-07-12T09:26:16.4176647+03:00] > DECIDE | NEXT: test whether the new lemmas close the global graph provider or leave a row-switch/source-exposure wall.
+[2026-07-12T09:26:16.4176647+03:00] OK DECIDE | DID: compared lemmas with the global provider | RESULT: provider remains open; 4-obligation cap-2 rotor blocks pure Hall inference | D: none
+[2026-07-12T09:26:35.2275646+03:00] > ATTACK | NEXT: audit the concurrent N89 defect-2 artifact for global CollisionHalf scope, typed FreeHalf sinks, six relations, and all-tuple quantification.
+[2026-07-12T09:26:39.0249887+03:00] OK GATE | DID: audited #23 status and R52/R53 exact gates | RESULT: #23 open; no grouped-cap collision-minimum exchange gate exists | D: GATE->PLAN
+[2026-07-12T09:26:39.0249887+03:00] > PLAN | NEXT: define exact grouped-cap lex exchange, exhaust N<=11/N12, and isolate demand-deletion/capacity-gain witnesses.
+[2026-07-12T09:26:46+03:00] OK VERIFY | DID: exact corrected census N11 | RESULT: 64287 systems; min defect 0 for all; census_n11.json | D: none
+[2026-07-12T09:26:46+03:00] > VERIFY | NEXT: census full N12 graph stream with six relations and cap-2 blocks; workers=48, concurrent lane=16.
+[2026-07-12T09:27:14.9757770+03:00] OK ATTACK | DID: audited concurrent N89 payload | RESULT: singleton tuple has global demand 776, exact six-family flow 774, shore {0,1,2} cap 526 vs demand 528 | D: candidate real CE
+[2026-07-12T09:27:14.9757770+03:00] > VERIFY | NEXT: independently replay the N89 graph/max-cut/complete-row guardrail and regenerate its typed six-family min-cut certificate.
+[2026-07-12T09:28:13.6582259+03:00] OK SELECT | DID: read goal, onboarding, R52/R53, selector Lean, and integer gate | RESULT: N24/N89 fixed defects 102/2 | D: SELECT->GATE
+[2026-07-12T09:28:13.7050995+03:00] > GATE | NEXT: verify graph scope, complete shortest-row DB, six predicates, and exact grouped Hall shore on N24/N89.
+[2026-07-12T09:28:27.9130918+03:00] > GATE | NEXT: run N24 2^23 max-cut audit and N89 2^12 quotient audit; integer arithmetic, workers=1, exact shortest-row counts.
+[2026-07-12T09:29:34.2102802+03:00] OK PLAN | DID: defined grouped-cap lex and shore exchange predicates | RESULT: tmp/fanout/cdc_wave1/exchange/exchange_gate.py | D: PLAN->ATTACK
+[2026-07-12T09:29:34.2102802+03:00] > ATTACK | NEXT: exhaust all 2400 N12 row tuples under exact six-relation grouped flow; workers=1, integers only.
+[2026-07-12T09:30:05.5958924+03:00] OK GATE | DID: replayed N24 2^23 and N89 2^12 exact cut gates | RESULT: both real, Gamma-min, connected-B, singleton row DB | D: GATE->PLAN
+[2026-07-12T09:30:05.6572943+03:00] > PLAN | NEXT: implement independent six-family actual-FreeHalf grouped-cap checker and certificate emitter in owned adversary lane.
+[2026-07-12T09:30:13.5861262+03:00] OK ATTACK | DID: exhausted 2400 N12 tuples | RESULT: 27/27 collision minima pass; 46/46 failures have one-row corrected exchange; cap-only 4/46 | D: none
+[2026-07-12T09:30:13.5861262+03:00] > ATTACK | NEXT: exhaust canonical all-ell-5 N=5..10 tuples under grouped flow and corrected exchanges; workers=16.
+[2026-07-12T09:31:01.7141164+03:00] OK VERIFY | DID: replayed N89 graph and six-family Hall | RESULT: 4095 shores; unique defect 2 at owners {0,1,2}; payload d1fb5e19 | D: none
+[2026-07-12T09:31:01.7141164+03:00] FAIL ATTACK | DID: tested global six-relation edge-cap provider | RESULT: N89 singleton DB has typed FreeHalf max flow 774 < global demand 776 | D: DEAD provider
+[2026-07-12T09:31:01.7141164+03:00] > CHECK | NEXT: extract exact N89 owner/fiber identities and confirm the counterexample does not threaten the Erdos inequality.
+[2026-07-12T09:31:01.7141164+03:00] OK CHECK | DID: computed N89 owner fibers and residual | RESULT: 77 private bases/owner +32 shared; residual 7421; provider-only CE | D: stall=0
+[2026-07-12T09:31:01.7141164+03:00] > DECIDE | NEXT: report the proved shore lemmas and explicit N89 counterexample; leave full #23 on a different provider route.
+[2026-07-12T09:31:01.7141164+03:00] OK DECIDE | DID: reran novelty and soundness checks for this route | RESULT: canonicalSoftEdgeCapFeasibleTuple_exists is false for the six stated relations | D: route closed
+[2026-07-12T09:31:09.2995546+03:00] FAIL DECIDE | DID: audited prior DECIDE log line | RESULT: novelty was checked earlier, not rerun after N89; soundness alone was replayed | D: correction
+[2026-07-12T09:31:09.2995546+03:00] OK DECIDE | DID: completed exact soundness replay | RESULT: six-relation canonicalSoftEdgeCapFeasibleTuple_exists is false on N89 | D: route closed
+[2026-07-12T09:31:52.0002573+03:00] FAIL ATTACK | DID: exhausted 50104 N=5..10 tuples | RESULT: I?rFf_{N? has collision-minimum choice C=18, defect=4 | D: all-minimizer claim dead
+[2026-07-12T09:31:52.0002573+03:00] OK ATTACK | DID: checked corrected exchanges on 4083 failures | RESULT: 4083/4083 have Hamming<=2 flow+shore descent; 120 need two rows | D: none
+[2026-07-12T09:31:52.0002573+03:00] > VERIFY | NEXT: replay all 4096 tuples of I?rFf_{N? and separate feasible-minimum existence from all-minimum feasibility.
+[2026-07-12T09:32:38.4285393+03:00] OK VERIFY | DID: replayed I?rFf_{N? all 4096 tuples | RESULT: Cmin=18 has 96 choices: 40 pass, 56 fail; all 4056 failures have 2-row exchange | D: none
+[2026-07-12T09:32:38.4285393+03:00] > ATTACK | NEXT: exhaust all canonical all-ell-5 N=11 row tuples under grouped flow and corrected exchanges; workers=32.
+[2026-07-12T09:33:11.8518930+03:00] > GATE | NEXT: audit strict versus unscoped P4 against CollisionHalf, FreeHalf, and FractionalCollisionFlowWithEdgeCaps production fields.
+[2026-07-12T09:33:12.5516738+03:00] OK PLAN | DID: built independent integer six-family grouped-cap checker | RESULT: selector_core.py py_compile rc0 | D: PLAN->ATTACK
+[2026-07-12T09:33:12.5839809+03:00] > ATTACK | NEXT: run exhaustive singleton products for N24/N89; literal keys, all owner shores, workers=1.
+[2026-07-12T09:33:35.7378910+03:00] OK GATE | DID: inspected soft-flow and P4 production fields | RESULT: no component field/equality occurs in CollisionHalf, FreeHalf, or soft flow | D: GATE->ATTACK
+[2026-07-12T09:33:35.7378910+03:00] > ATTACK | NEXT: replay unscoped R23 P4 on N89 and verify all assigned sinks are actual non-active FreeHalf keys under unit caps.
+[2026-07-12T09:33:38+03:00] OK VERIFY | DID: exact corrected census N12 | RESULT: 921910 systems; min defect 0 for all; census_n12.json | D: none
+[2026-07-12T09:33:38+03:00] > VERIFY | NEXT: verify hashes, literal assignments, grouped loads, dual shores, and 992618-system coverage.
+[2026-07-12T09:34:12+03:00] OK VERIFY | DID: verified 26 artifacts | RESULT: all checks pass; verification hash 7040061d0df15b7 | D: VERIFY->CHECK
+[2026-07-12T09:34:12+03:00] > CHECK | NEXT: replay N89 max-cut/singleton gate and scan new Python for float/native_decide use.
+[2026-07-12T09:34:34.3355584+03:00] > VERIFY | NEXT: exhaust N24 Gray-code cuts modulo complement; 8,388,608 cuts, integer updates, workers=1.
+[2026-07-12T09:34:40.1151861+03:00] FAIL ATTACK | DID: first in-memory unscoped P4 audit | RESULT: assertion expected strict P4 base set empty; actual discrepancy is owner masks, not bases | D: correct audit
+[2026-07-12T09:34:40.1151861+03:00] > ATTACK | NEXT: compare strict and unscoped P4 owner masks on the same 5852 N89 outside bases, then recheck full flow.
+[2026-07-12T06:34:39Z] OK COMPUTE | DID: exhausted corrected N12 subset gate | RESULT: 39142819 tuples; 15779 fail; 0 all-fail and 0 min-collision-fail graphs | D: selector survives N<=12
+[2026-07-12T06:34:39Z] > COMPUTE | NEXT: exhaust one/two-row collision descent on every N5-10 Hall-failing tuple with 16 workers.
+[2026-07-12T09:34:57.8101999+03:00] OK ATTACK | DID: exhausted 1035476 N11 tuples | RESULT: 309464/309464 minima pass; all 3469 failures have one-row corrected exchange | D: ATTACK->VERIFY
+[2026-07-12T09:34:57.8101999+03:00] > VERIFY | NEXT: independently reconstruct N89, enumerate 4096 quotient cuts and 4095 owner shores, and replay all-six flow.
+[2026-07-12T09:35:18+03:00] OK CHECK | DID: replayed N89 structural gate | RESULT: maxcut 125; 20 singleton rows; base defect 2 | D: none
+[2026-07-12T09:35:18+03:00] > ATTACK | NEXT: test alternate unscoped P4 on N89 with global demand 776 and literal FreeHalf assignment.
+[2026-07-12T09:36:03.9920621+03:00] OK ATTACK | DID: compared strict/unscoped P4 masks on N89 | RESULT: flow 776/776; 776 FreeHalf keys; max key load 1; activeEdges=0 | D: retract N89 CE
+[2026-07-12T09:36:03.9920621+03:00] > VERIFY | NEXT: audit whether soft production types require owner/source component equality.
+[2026-07-12T09:36:03.9920621+03:00] OK VERIFY | DID: audited soft-flow fields and scalar lemmas | RESULT: no component hypothesis; supported/Eligible is unused by scalar bounds | D: none
+[2026-07-12T09:36:03.9920621+03:00] > CHECK | NEXT: type every unscoped P4 sink as a non-active FreeHalf and identify any contrary theorem premise.
+[2026-07-12T09:36:03.9920621+03:00] OK CHECK | DID: checked P4 endpoint predicates against FreeHalf/activeEdge definitions | RESULT: outside + distinct implies free; no contrary premise exists | D: stall=0
+[2026-07-12T09:36:03.9920621+03:00] > DECIDE | NEXT: withdraw the strict-P4 N89 verdict and report the remaining provider obligation.
+[2026-07-12T09:36:03.9920621+03:00] OK DECIDE | DID: corrected N89 verdict | RESULT: unscoped P4 is sound for coherence-free soft provider; N89 passes 776/776 | D: provider remains open
+[2026-07-12T06:37:34Z] OK COMPUTE | DID: exhausted N5-10 subset descent gate | RESULT: all 2637 failing tuples have a one-row strict collision descent | D: no local minimum
+[2026-07-12T06:37:34Z] > COMPUTE | NEXT: exhaust the same corrected descent gate on all N11 failing tuples with 16 workers.
+[2026-07-12T09:37:23.3701122+03:00] OK VERIFY | DID: exhausted 8,388,608 N24 cuts | RESULT: maxcut 62 unique modulo complement | D: none
+[2026-07-12T09:37:23.4121850+03:00] > ATTACK | NEXT: emit N24/N89 certificates; tuple products=1/1, shores=511/4095, exact Dinic, workers=1.
+[2026-07-12T09:38:24.8494464+03:00] > VERIFY | NEXT: compile evaluator/verifier and regenerate hashes and manifest after the P4-scope audit.
+[2026-07-12T09:38:47.0420912+03:00] OK VERIFY | DID: compiled 5 Python files and ran verify.py | RESULT: 28 artifacts pass; censusSystems=992618; hash=12a2dd674036f7d | D: none
+[2026-07-12T09:38:47.0420912+03:00] > CHECK | NEXT: verify manifest, exact-arithmetic scan, JSON parses, and owned-path hygiene.
+[2026-07-12T09:38:44.0627706+03:00] FAIL VERIFY | DID: audited N89 defect-2 model | RESULT: strict P4 omits sound coherence-free owner arcs; universal counterexample withdrawn | D: correct model
+[2026-07-12T09:38:44.0627706+03:00] > VERIFY | NEXT: replay N89 under strict and corrected unscoped P4, with 4096 cuts and 4095 shores; workers=1.
+[2026-07-12T09:39:00.5239729+03:00] OK ATTACK | DID: exhausted N24/N89 row products and all owner shores | RESULT: all-min defects 102 and 2; JSON certificates emitted | D: selector false
+[2026-07-12T09:39:00.5600645+03:00] > ATTACK | NEXT: sample 30 geng graphs/order at N=8..10 and five C5 blowups; tuple cap 100000, seed 230053, workers=1.
+[2026-07-12T09:39:10.6500689+03:00] OK VERIFY | DID: replayed N89 dual P4 modes | RESULT: strict flow 774/776; sound unscoped P4 flow 776/776 over 4095 shores | D: none
+[2026-07-12T09:39:10.6500689+03:00] > ATTACK | NEXT: exhaust 2400 N12 tuples under corrected unscoped-P4 grouped flow and exchange predicates; workers=1.
+[2026-07-12T09:39:33.2808541+03:00] OK ATTACK | DID: exhausted 2400 corrected N12 tuples | RESULT: all 2400 flows pass; 27/27 collision minima pass | D: none
+[2026-07-12T09:39:33.2808541+03:00] > ATTACK | NEXT: exhaust corrected unscoped-P4 grouped flow and exchanges on N=5..10; workers=16.
+[2026-07-12T09:39:55.9039578+03:00] FAIL ATTACK | DID: launched random/blowup stress | RESULT: selector_core.py:722 empty-owner shore assertion | D: add vacuous 0=0 case
+[2026-07-12T09:40:11.1036710+03:00] > ATTACK | NEXT: rerun same 90-graph+5-blowup stress after empty-demand fix; cap 100000, seed 230053, workers=1.
+[2026-07-12T09:40:20.3185384+03:00] FAIL CHECK | DID: recomputed 28 manifest entries | RESULT: global_softcap.py changed after manifest; expected b4e1b379, found 5a4b7b7c | D: current core is unscoped P4
+[2026-07-12T09:40:20.3185384+03:00] > VERIFY | NEXT: replay named fixtures with the current corrected unscoped-P4 evaluator and refresh dependent artifacts.
+[2026-07-12T09:40:12.7002877+03:00] OK ATTACK | DID: exhausted 50104 corrected N=5..10 tuples | RESULT: all 4070 failures have <=2-row corrected exchange; 120 need two rows | D: none
+[2026-07-12T09:40:12.7002877+03:00] > ATTACK | NEXT: exhaust corrected unscoped-P4 grouped flow and exchanges on N=11; workers=32.
+[2026-07-12T09:41:02.1254232+03:00] OK ATTACK | DID: exact stress on 90 random graphs and 33 C5 blowup cuts | RESULT: selector passes 91/91 random and 33/33 blowup cases | D: ATTACK->VERIFY
+[2026-07-12T09:41:02.1516491+03:00] > VERIFY | NEXT: validate graph6 with nauty, replay JSON hashes, cross-check N24/N89 against independent R53 gate, and scan integer-only source.
+[2026-07-12T09:47:12.3780031+03:00] OK VERIFY | DID: replayed corrected production evaluator | RESULT: 28 artifacts pass; 992618 systems; payload 4cfdf3f4fb384344 | D: none
+[2026-07-12T09:47:12.3780031+03:00] OK ATTACK | DID: replayed wave1 N24 under unscoped P4 | RESULT: exact flow 312/312; strict-P4 counterexample withdrawn | D: none
+[2026-07-12T09:47:12.3780031+03:00] > VERIFY | NEXT: fresh-build three soft-cap Lean modules and audit load-bearing axioms with Lean 4.27.
+[2026-07-12T09:41:23+03:00] OK ATTACK | DID: exhausted N11 subset descent gate | RESULT: 2299/2299 Hall failures have one-row strict collision descent | D: none
+[2026-07-12T09:41:23+03:00] > VERIFY | NEXT: compile and replay the corrected unscoped-P4 evaluator on named guardrails; then verify Lean adapter axioms.
+[2026-07-12T09:41:20.9912699+03:00] OK VERIFY | DID: replayed corrected global gate | RESULT: N12 2400/2400; N89 776/776; N24 R1 312/312; R35 min defect 6/214 | D: none
+[2026-07-12T09:41:20.9912699+03:00] > ATTACK | NEXT: rerun corrected graph census N=5..10, all 50104 tuples available, workers=16.
+[2026-07-12T09:41:41.3827956+03:00] OK ATTACK | DID: evaluated 6421 N=5..10 systems | RESULT: 6664 tuples examined; graph minimum 0 for all; hash=896c30a9f6ef99c6 | D: none
+[2026-07-12T09:41:41.3827956+03:00] > ATTACK | NEXT: rerun corrected graph census N=11, all 1035476 tuples available, workers=32.
+[2026-07-12T09:42:01.8565226+03:00] OK ATTACK | DID: evaluated 64287 N=11 systems | RESULT: 64291 tuples examined; graph minimum 0 for all; hash=99cd35885e5dc873 | D: none
+[2026-07-12T09:42:01.8565226+03:00] > ATTACK | NEXT: rerun corrected graph census N=12, all 39142819 tuples available, workers=48.
+[2026-07-12T09:42:36.4171284+03:00] OK ATTACK | DID: exhausted 1035476 corrected N11 tuples | RESULT: all 1333 failures have one-row corrected exchange; all 309464 minima pass | D: ATTACK->VERIFY
+[2026-07-12T09:42:36.4171284+03:00] > VERIFY | NEXT: replay pinned strict/unscoped N89 and corrected N12 after upstream evaluator changed; workers=1.
+[2026-07-12T09:42:49.3444143+03:00] > VERIFY | NEXT: replay 2 singleton tuple flows and 4606 shores; verify hashes and R53 cross-gate, workers=1, integers only.
+[2026-07-12T09:43:29.8968337+03:00] OK VERIFY | DID: replayed pinned N89 and N12 | RESULT: N89 strict 774/776 vs corrected 776/776; corrected N12 2400/2400 | D: none
+[2026-07-12T09:43:29.8968337+03:00] > VERIFY | NEXT: replay all 4096 I?rFf_{N? tuples and emit the first exchange that genuinely requires two rows; workers=1.
+[2026-07-12T09:44:25.8766607+03:00] OK VERIFY | DID: replayed 4096 N10 tuples | RESULT: [0,1,6,7]->[0,3,6,5] needs 2 rows; demand -16, capacity -12, gap -4 | D: none
+[2026-07-12T09:44:25.8766607+03:00] > VERIFY | NEXT: emit an exact <=2-row repair from the first failing global collision minimizer on I?rFf_{N?; workers=1.
+[2026-07-12T09:45:35.0813148+03:00] FAIL VERIFY | DID: replayed owned artifacts plus moving shared named gate | RESULT: owned checks pass; shared gate switched to unscoped-P4 values | D: pin model fork
+[2026-07-12T09:45:35.1132352+03:00] > VERIFY | NEXT: regenerate strict-P4 artifacts with explicit scope fork, then replay against stable strict and unscoped records.
+[2026-07-12T09:45:37.1171974+03:00] OK ATTACK | DID: evaluated 921910 N=12 systems | RESULT: 921911 tuples examined; graph minimum 0 for all; hash=24164e7d2bfd2d36 | D: none
+[2026-07-12T09:45:37.1171974+03:00] > PLAN | NEXT: align verifier and report to corrected unscoped P4; retain strict N89 only as an archived comparison.
+[2026-07-12T09:46:03.4550715+03:00] OK VERIFY | DID: replayed failing N10 collision minimizer | RESULT: [0,3,7,4]->[0,3,5,6], C=18, defect 4->0, capacity +4 | D: none
+[2026-07-12T09:46:03.4550715+03:00] > VERIFY | NEXT: replay pinned family semantics on N89 and N12 and scan owned scripts for noninteger acceptance paths; workers=1.
+[2026-07-12T09:46:40.5818395+03:00] OK PLAN | DID: fixed corrected P4 semantics and archived strict comparison | RESULT: core hash=32c7f9bc0c4d2921; family key=P4_outsideAttachment | D: none
+[2026-07-12T09:46:40.5818395+03:00] > ATTACK | NEXT: replay all named fixtures and 2400 N12 tuples against core hash 32c7f9bc.
+[2026-07-12T09:47:11.5050814+03:00] OK VERIFY | DID: replayed pinned scripts and integer-only scan | RESULT: N89 strict 774 vs corrected 776; N12 2400/2400; no float path | D: VERIFY->CHECK
+[2026-07-12T09:47:11.5050814+03:00] > CHECK | NEXT: state the finite descent lemma, exact battery theorem, and sharp counterexamples in owned REPORT.md.
+[2026-07-12T09:47:35.7855048+03:00] OK ATTACK | DID: replayed 16 named states and N12 tuples | RESULT: 13 pass; R35 defects=24,6,6; N12 2400/2400; hash=ff818777 | D: none
+[2026-07-12T09:47:35.7855048+03:00] > ATTACK | NEXT: regenerate corrected N=5..11 census hashes against core 32c7f9bc, workers=16 then 32.
+[2026-07-12T09:47:50.3688864+03:00] OK ATTACK | DID: evaluated 6421 N=5..10 systems | RESULT: 6664 tuples examined; all graph minima 0; hash=a07974020e50b6b3 | D: none
+[2026-07-12T09:47:50.3688864+03:00] > ATTACK | NEXT: regenerate corrected N=11 census hash, 1035476 tuples available, workers=32.
+[2026-07-12T09:48:11.2996217+03:00] FAIL VERIFY | DID: audited P4 scope against corrected gate | RESULT: official unscoped P4 gives N24 312/312 and N89 776/776 | D: strict-P4 cex retracted
+[2026-07-12T09:48:11.3220362+03:00] > PLAN | NEXT: implement independent official unscoped-P4 evaluator, then optimize global minimum-collision tuples on R35 N24 and stress corpus.
+[2026-07-12T09:48:14.7592368+03:00] OK ATTACK | DID: evaluated 64287 N=11 systems | RESULT: 64291 tuples examined; all graph minima 0; hash=00c1760f5b8d23fb | D: none
+[2026-07-12T09:48:14.7592368+03:00] > ATTACK | NEXT: regenerate corrected N=12 census hash, 39142819 tuples available, workers=48.
+[2026-07-12T09:49:04.5117321+03:00] OK CHECK | DID: wrote finite lemma, battery, and guardrails | RESULT: tmp/fanout/cdc_wave1/exchange/REPORT.md | D: stall=0
+[2026-07-12T09:49:04.5117321+03:00] > VERIFY | NEXT: replay pinned owned N=5..10 exchange census; 50104 tuples, workers=16, integers only.
+[2026-07-12T09:50:24.5943197+03:00] OK PLAN | DID: built independent official unscoped-P4 evaluator | RESULT: N24 312/312; N89 776/776 exact | D: PLAN->ATTACK
+[2026-07-12T09:50:24.6216075+03:00] > ATTACK | NEXT: solve R35 N24 global minimum collision over radices 10^9*45^3 with integer CP-SAT, workers=16.
+[2026-07-12T09:50:42.9034543+03:00] OK VERIFY | DID: replayed pinned N=5..10 exchange census | RESULT: 4070/4070 corrected <=2; 120 require 2 rows; minima pass exists | D: none
+[2026-07-12T09:50:42.9034543+03:00] > VERIFY | NEXT: after the 48-worker N12 pool clears, replay pinned N11 exchange census with workers<=16.
+[2026-07-12T09:51:10.2176945+03:00] OK ATTACK | DID: evaluated 921910 N=12 systems | RESULT: 921911 tuples examined; all graph minima 0; hash=05c39e0ca3716cd8 | D: none
+[2026-07-12T09:51:10.2176945+03:00] > CHECK | NEXT: rewrite the owned report with corrected verdicts, failures, availability, hashes, and replay commands.
+[2026-07-12T09:51:47.4149449+03:00] OK ATTACK | DID: optimized full R35 N24 row product by CP-SAT | RESULT: OPTIMAL collisionUnits=82; first optimum Hall 164/164 | D: no counterexample
+[2026-07-12T09:51:47.4355076+03:00] > VERIFY | NEXT: exhaust 8,388,608 R35 cuts for maxcut/Gamma scope; workers=1, integer Gray code.
+[2026-07-12T09:52:06.7688970+03:00] > VERIFY | NEXT: replay independent corrected P4 on N89 and six named diagnostics, workers=1.
