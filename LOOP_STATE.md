@@ -1,6 +1,18 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T11:10 (local) — TICK-104
+# Last update: 2026-07-12T11:45 (local) — TICK-105
 
+## TICK-105 (2026-07-12T11:4xZ) — ASSEMBLY PLAN v1 (M1-M6); NO CODEX DELTA (ENUMERATION RUNNING); GPT HELD
+- Consumer-assembly survey DONE: sink/rotor interface layer ABSENT from tree (0 grep hits for
+  CheckedSinkNeutralAttachmentClass / CheckedDetourTransportLedger / CheckedBalancedDeficiencyRotor /
+  canonicalCollisionFeasibleTuple_exists); selection chain PRESENT (NoCommonBlueCollisionFeasibility ->
+  TotalCoherentAssignment -> ProgressAtCanonical -> feasibility_iff_canonical_total + CanonicalCollision-
+  Progress outer contradiction). ASSEMBLY_PLAN_v1.md: M1 sink-class, M2 transport ledger, M3 rotor structure
+  + extractor, M4 conditional main (ME), M5 small-t parameter bridges (ME), M6 T5 kernel stack types.
+  Division posted (Codex M1/M2/M3/M6 in enumeration gaps; me M4/M5 + whole-closure probe).
+- No Codex delta this tick (56-split enumeration running). GPT lane held per priority ruling.
+- GATE QUEUE: 56-split totals + bundles; M-module SHAs as they land; my M4/M5 drafting next tick (start
+  from the R38/R51 skeletons against the actual CanonicalCollisionGraphSelection API); 13-artifact replay
+  batch at checkpoints; N=94 regression fixture; ablation. Marker 2617970.
 ## TICK-104 (2026-07-12T11:1xZ) — R51: KERNEL STATEMENT STACK COMPLETE; PRIORITY RULING ADOPTED; P=2.5%
 - R51 harvested+archived: the COMPLETE kernel stack (RootedT5Circuit/Iso; catalogue completeness = CHECKED
   PARENT RELATION; profile list completeness; intrinsic certs [preprocessing-only flag];
@@ -1031,6 +1043,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 
