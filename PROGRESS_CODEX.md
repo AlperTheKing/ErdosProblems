@@ -33383,6 +33383,8 @@
 [2026-07-12T09:47:12.3780031+03:00] OK VERIFY | DID: replayed corrected production evaluator | RESULT: 28 artifacts pass; 992618 systems; payload 4cfdf3f4fb384344 | D: none
 [2026-07-12T09:47:12.3780031+03:00] OK ATTACK | DID: replayed wave1 N24 under unscoped P4 | RESULT: exact flow 312/312; strict-P4 counterexample withdrawn | D: none
 [2026-07-12T09:47:12.3780031+03:00] > VERIFY | NEXT: fresh-build three soft-cap Lean modules and audit load-bearing axioms with Lean 4.27.
+[2026-07-12T09:52:37.6524943+03:00] OK VERIFY | DID: fresh-built 3 soft-cap Lean modules | RESULT: rc0; axioms allowed triple; forbidden-token scan empty | D: none
+[2026-07-12T09:52:37.6524943+03:00] > ATTACK | NEXT: derive and exact-gate the deficient-shore strict global row-trade lemma under corrected six-family semantics.
 [2026-07-12T09:41:23+03:00] OK ATTACK | DID: exhausted N11 subset descent gate | RESULT: 2299/2299 Hall failures have one-row strict collision descent | D: none
 [2026-07-12T09:41:23+03:00] > VERIFY | NEXT: compile and replay the corrected unscoped-P4 evaluator on named guardrails; then verify Lean adapter axioms.
 [2026-07-12T09:41:20.9912699+03:00] OK VERIFY | DID: replayed corrected global gate | RESULT: N12 2400/2400; N89 776/776; N24 R1 312/312; R35 min defect 6/214 | D: none
@@ -33427,3 +33429,38 @@
 [2026-07-12T09:51:47.4149449+03:00] OK ATTACK | DID: optimized full R35 N24 row product by CP-SAT | RESULT: OPTIMAL collisionUnits=82; first optimum Hall 164/164 | D: no counterexample
 [2026-07-12T09:51:47.4355076+03:00] > VERIFY | NEXT: exhaust 8,388,608 R35 cuts for maxcut/Gamma scope; workers=1, integer Gray code.
 [2026-07-12T09:52:06.7688970+03:00] > VERIFY | NEXT: replay independent corrected P4 on N89 and six named diagnostics, workers=1.
+[2026-07-12T09:53:04.4467312+03:00] OK VERIFY | DID: replayed pinned N11 exchange census | RESULT: 1333/1333 corrected one-row; 309464/309464 minima pass | D: none
+[2026-07-12T09:53:04.4467312+03:00] > CHECK | NEXT: audit owned files, SHA-256 values, protocol line lengths, and report claims against exact outputs.
+[2026-07-12T09:53:28.6466383+03:00] OK VERIFY | DID: exhausted 8,388,608 R35 cuts | RESULT: maxcut 70, 12 bad edges, Gamma lower=displayed=300 | D: VERIFY->ATTACK
+[2026-07-12T09:53:28.6648575+03:00] > ATTACK | NEXT: rerun R35 optimum cert, then official 90-graph and 33-cut C5 stress; cap=100000, seed=230053.
+[2026-07-12T09:53:55.9787636+03:00] OK CHECK | DID: audited owned AST, ASCII, SHA, and replays | RESULT: REPORT SHA256=E7817791129A0476; no owned process remains | D: stall=0
+[2026-07-12T09:53:55.9787636+03:00] > DECIDE | NEXT: decide whether the finite exchange gate proves or falsifies the corrected universal selector.
+[2026-07-12T09:53:55.9787636+03:00] OK DECIDE | DID: compared gate with universal target | RESULT: 5403/5403 finite exchanges; no universal proof or corrected CE | D: none
+[2026-07-12T09:53:55.9787636+03:00] > ATTACK | NEXT: derive the universal <=2 exchange from N10 rectangle and one-row demand-deletion identities.
+[2026-07-12T09:53:52.6645663+03:00] OK VERIFY | DID: replayed independent corrected P4 | RESULT: N89 flow 776/776; 776 distinct FreeHalf keys; hash=f3e74c613f213e99 | D: none
+[2026-07-12T09:53:52.6645663+03:00] OK CHECK | DID: rewrote corrected gate report | RESULT: tmp/fanout/r53_global_softcap_gate/REPORT.md | D: none
+[2026-07-12T09:53:52.6645663+03:00] > VERIFY | NEXT: compile all owned scripts and run 28-artifact verifier with integer-source audit.
+[2026-07-12T09:54:11.6333681+03:00] OK VERIFY | DID: ran verify.py | RESULT: 28 artifacts pass; census=992618; hash=6e739c8f05034c91 | D: none
+[2026-07-12T09:54:11.6333681+03:00] > CHECK | NEXT: recompute manifest entries, parse all JSON, confirm source hash, and remove owned bytecode cache.
+[2026-07-12T09:54:46.5629403+03:00] OK CHECK | DID: checked manifest and JSON | RESULT: 28/28 hashes; 21 JSON parse; manifest=3cb8f9b4f28ac39e; bytecode removed | D: none
+[2026-07-12T09:54:46.5629403+03:00] > DECIDE | NEXT: deliver corrected gate with fixed/local failures separated from unavailable graph verdicts.
+[2026-07-12T09:54:46.5629403+03:00] OK DECIDE | DID: classified corrected verdicts | RESULT: N5-12 minima pass; R35 local min=6; full R35 minimum unavailable | D: handoff
+[2026-07-12T09:55:18.1135289+03:00] OK PLAN | DID: defined exact R35 Hamming-two gate | RESULT: 19630 states around defect-6 one-row minimum | D: PLAN->ATTACK
+[2026-07-12T09:55:18.1135289+03:00] > ATTACK | NEXT: exhaust 19630 R35 states around [0^10,31,44] under corrected grouped flow; workers=16, integers only.
+[2026-07-12T09:55:27.7940700+03:00] OK ATTACK | DID: ran official N24/N89/R35 plus 90-graph and 33-cut blowup wave | RESULT: 0 all-min failures; 124 covered cuts pass | D: ATTACK->VERIFY
+[2026-07-12T09:55:27.8164891+03:00] > VERIFY | NEXT: replay official fixture flows, R35 CP-SAT optimum and witness, coverage hashes, and external P4 repairs.
+[2026-07-12T09:55:51.5761489+03:00] OK ATTACK | DID: exhausted 19630 states around R35 defect-6 state | RESULT: 11246 zero descents; best C 165->136, defect 6->0 | D: none
+[2026-07-12T09:55:51.5761489+03:00] > ATTACK | NEXT: exhaust 19630 corrected Hamming<=2 states around the original R35 displayed tuple; workers=16.
+[2026-07-12T09:56:24.8551620+03:00] OK ATTACK | DID: exhausted 19630 R35 displayed neighbors | RESULT: 6084 zero descents; best C 156->128, defect 24->0 | D: none
+[2026-07-12T09:56:24.8551620+03:00] > VERIFY | NEXT: replay both R35 centers with exact descent counts split by Hamming distance; workers=16.
+[2026-07-12T09:57:25.8150686+03:00] OK VERIFY | DID: replayed official fixtures, R35 optimum, hashes, shores, and external P4 assignments | RESULT: official_verification.json allChecksPass=true | D: VERIFY->CHECK
+[2026-07-12T09:57:25.8342736+03:00] OK CHECK | DID: classified fixed vs all-min failures | RESULT: 19 fixed blowup failures repaired; 0 all-min failures in 127 named/stress cuts | D: stall=0
+[2026-07-12T09:57:25.8347376+03:00] OK DECIDE | DID: completed official adversarial wave | RESULT: OFFICIAL_REPORT.md and official_coverage.json; no real counterexample found | D: none
+[2026-07-12T09:57:54.2797923+03:00] OK VERIFY | DID: replayed both R35 Hamming-two gates | RESULT: displayed has 81 R1 descents; defect-6 center has 54 R1 zero repairs | D: none
+[2026-07-12T09:57:54.2797923+03:00] > ATTACK | NEXT: classify all 120 N10 two-row-only failures for column-preserved rectangle repairs; 4096 tuples, workers=1.
+[2026-07-12T09:59:57.5178936+03:00] OK ATTACK | DID: classified 120 N10 two-row-only failures | RESULT: 120/120 have column-preserved rectangle repair | D: none
+[2026-07-12T09:59:57.5178936+03:00] > ATTACK | NEXT: exhaust 24571 Hamming<=2 states around archived C5[3] obligation-score falsifier; workers=16, integers only.
+[2026-07-12T10:02:08.5588371+03:00] FAIL ATTACK | DID: exhausted C5[3] Hamming<=2 neighborhood | RESULT: center C=42, defect=12; 0/24570 corrected descents | D: <=2 theorem dead
+[2026-07-12T10:02:08.5588371+03:00] > ATTACK | NEXT: solve the implicit 27^9 C5[3] collision minimum and nearest strict trade by integer CP-SAT; workers=16.
+[2026-07-12T10:02:11.3484619+03:00] OK CHECK | DID: audited corrected exchange and official adversary reports | RESULT: R35 Cmin=82 flow164/164; 120/120 N10 R2 cases are rectangles | D: none
+[2026-07-12T10:02:11.3484619+03:00] > ATTACK | NEXT: derive universal rectangle-or-single exchange lemma and exact-test its minimal-shore premises.

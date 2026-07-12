@@ -1,0 +1,16 @@
+{
+ "schema": "fiberhunter-capture-general-v1",
+ "shape": "ALL capture shapes (2-commodity latent flow)",
+ "results": [
+  {
+   "split": [
+    9,
+    9
+   ],
+   "status": "FALSIFIER_VERIFIED",
+   "time": 2.2,
+   "attempts": 1
+  }
+ ],
+ "falsifier": null
+}
