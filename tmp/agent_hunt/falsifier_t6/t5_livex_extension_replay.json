@@ -1,0 +1,260 @@
+{
+  "allowExistingExtraBlue": true,
+  "ambientOrder": 25,
+  "canonicalSha256": "8f9418c1ade983ffb838b7dd96b3a6a2348edf5c5156f084e1ab716fb4a89bc3",
+  "frozenOwnerStars": [
+    0,
+    1
+  ],
+  "hit": null,
+  "hitIndex": 0,
+  "iterationLimitPerSplit": 400,
+  "schema": "rooted-tN-ambient-maxcut-extension-v1",
+  "scope": "exact lazy separation; UNKNOWN/limit is not a proof",
+  "sourceCanonicalSha256": "6595501f532577c3475d29e2a3c7e9f318debecd5e1014d0793e1b462d07494f",
+  "splits": [
+    {
+      "iterations": 5,
+      "maxCutCuts": 2,
+      "newLeft": 0,
+      "newRight": 7,
+      "rowPathCuts": 28,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 69,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        },
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 48,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 4,
+      "maxCutCuts": 1,
+      "newLeft": 1,
+      "newRight": 6,
+      "rowPathCuts": 30,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 67,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 4,
+      "maxCutCuts": 1,
+      "newLeft": 2,
+      "newRight": 5,
+      "rowPathCuts": 36,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 65,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 4,
+      "maxCutCuts": 1,
+      "newLeft": 3,
+      "newRight": 4,
+      "rowPathCuts": 37,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 63,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 3,
+      "maxCutCuts": 1,
+      "newLeft": 4,
+      "newRight": 3,
+      "rowPathCuts": 27,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 61,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 3,
+      "maxCutCuts": 1,
+      "newLeft": 5,
+      "newRight": 2,
+      "rowPathCuts": 24,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 59,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 3,
+      "maxCutCuts": 1,
+      "newLeft": 6,
+      "newRight": 1,
+      "rowPathCuts": 22,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 57,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    },
+    {
+      "iterations": 3,
+      "maxCutCuts": 1,
+      "newLeft": 7,
+      "newRight": 0,
+      "rowPathCuts": 21,
+      "separators": [
+        {
+          "badCross": 23,
+          "fixedBlueCross": 2,
+          "potentialVariableCross": 55,
+          "requiredVariableBlueCross": 21,
+          "sigmaBeforeCut": -21,
+          "switch": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16
+          ]
+        }
+      ],
+      "status": "INFEASIBLE"
+    }
+  ],
+  "t": 5,
+  "verdict": "NO_HIT_OR_INFEASIBLE_BY_RECORDED_SPLIT_STATUS",
+  "workers": 8
+}

@@ -167,6 +167,7 @@ def support(rows):
 report = {}
 for st, rows in states.items():
     sup = support(rows)
+    internal = blue - sup          # unselected blue edges = active graph edges
     mx = -10**9
     argmax = None
     for mask in range(256):
@@ -175,14 +176,19 @@ for st, rows in states.items():
         k = kb - ks
         if k > mx:
             mx, argmax = k, mask
-    report[st] = (mx, argmax)
-print("A4 switch-demand max_S kappa(S) per state (support-only extension LP):")
+    # payer check at the argmax: internal capacity must exactly cover the demand
+    ki = sum(1 for e in internal for u, w in [tuple(e)] if ((argmax >> u) ^ (argmax >> w)) & 1)
+    report[st] = (mx, argmax, ki, sorted(names[u] for u in range(8) if (argmax >> u) & 1))
+print("A4 switch-demand max_S kappa_support(S) per state (extension-LP demand):")
+tight = True
 for st in cycle_order:
-    mx, am = report[st]
-    print("   %s : max kappa = %d  (argmax mask %s)" % (st, mx, bin(am)))
-allzero = all(report[st][0] == 0 for st in cycle_order)
-print("A4 %s: rotor is switch-tight (max kappa = 0 in every state) => CheapGeometry"
-      % ("PASS" if allzero else "NOTE"))
-print("         vacuous on the rotor; intrinsic demand CANNOT separate it. The scope gate is")
-print("         the ONLY discriminator here — matches R39's scope-vacuity verdict.")
+    mx, am, ki, sv = report[st]
+    print("   %s : max kappa = %d at S=%s ; internal edges crossing = %d" % (st, mx, sv, ki))
+    tight = tight and (mx == 1 and ki == 1)
+print("A4 %s: every state has intrinsic demand EXACTLY 1 and the unique internal"
+      % ("PASS" if tight else "FAIL"))
+print("         (active-graph) square edge is the UNIQUE payer crossing the argmax switch:")
+print("         kappa_full(S) = kappa_support(S) - |Internal cap delta(S)| = 0 — ZERO SLACK.")
+print("         The rotor sits exactly on the Farkas boundary of the switch-capacity LP;")
+print("         the rotation permutes WHICH internal edge pays. NOT switch-vacuous.")
 print("DONE rotor8")

@@ -1,0 +1,4 @@
+seed 0: best=30 (2N=30)
+seed 1: best=30 (2N=30)
+seed 2: best=30 (2N=30)
+CLIMB N=15 overall best=30 vs 2N=30 -> survives

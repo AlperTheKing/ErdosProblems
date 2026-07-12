@@ -1,0 +1,450 @@
+{
+  "canonicalSha256": "2cd10507ff75b624880c0bae1e0eb8786f842f1cbd19ad19e5c19e793d254f23",
+  "reports": [
+    {
+      "activeNeighbour": 17,
+      "archivedSelectionReplay": {
+        "latentComponentOfOwner": [
+          0,
+          17
+        ],
+        "latentEdges": [
+          [
+            0,
+            17
+          ]
+        ],
+        "profileConsistent": true
+      },
+      "atomsAvailable": 32,
+      "classifierVector": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crossChecks": {
+        "scope_cadical": {
+          "sha": "a8a160d5c81d5f2cdf55cd852ed92d30284288831d5e89800a84bae20b8acd34",
+          "verdict": "PASS_FIXED_CIRCUIT_ACTIVE_SCOPE_UNSAT"
+        },
+        "scope_cpsat": {
+          "sha": "f5c0cbcad47419b0e88faeaf17a754bae9e767176fee3e2f2e8185b86e97190c",
+          "verdict": "NO_ACTIVE_SCOPE_PROFILE_FOR_FIXED_CIRCUIT"
+        },
+        "verification": {
+          "activeComponent": [
+            0,
+            17
+          ],
+          "activeOwner": false,
+          "sha": "48ce163829eeb916ac5fd489b8e3e8464a576d122721ea9557cc29430d91f4f9"
+        }
+      },
+      "deletionSdrAll24": true,
+      "edgesInEveryPairIntersection": [
+        [
+          1,
+          17
+        ]
+      ],
+      "fibers": {
+        "10": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "witnessAtoms": [
+            25,
+            31
+          ],
+          "witnessCount": 2,
+          "witnessRows": [
+            [
+              12,
+              3,
+              10,
+              1,
+              17
+            ],
+            [
+              16,
+              3,
+              10,
+              1,
+              17
+            ]
+          ]
+        },
+        "11": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "witnessAtoms": [
+            29,
+            30
+          ],
+          "witnessCount": 2,
+          "witnessRows": [
+            [
+              14,
+              2,
+              11,
+              1,
+              17
+            ],
+            [
+              15,
+              2,
+              11,
+              1,
+              17
+            ]
+          ]
+        },
+        "13": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "witnessAtoms": [
+            25,
+            31
+          ],
+          "witnessCount": 2,
+          "witnessRows": [
+            [
+              12,
+              3,
+              13,
+              1,
+              17
+            ],
+            [
+              16,
+              3,
+              13,
+              1,
+              17
+            ]
+          ]
+        },
+        "9": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              17
+            ]
+          ],
+          "witnessAtoms": [
+            29,
+            30
+          ],
+          "witnessCount": 2,
+          "witnessRows": [
+            [
+              14,
+              2,
+              9,
+              1,
+              17
+            ],
+            [
+              15,
+              2,
+              9,
+              1,
+              17
+            ]
+          ]
+        }
+      },
+      "hit": "298",
+      "lemmaCooccurRowsChecked": 8,
+      "lemmaOnePair": true,
+      "minMultiplicity": 2,
+      "owner": 0,
+      "ownerNeighbours": [
+        9,
+        10,
+        11,
+        13,
+        17
+      ],
+      "scCertificate": {
+        "1": [
+          9,
+          10,
+          11,
+          13
+        ]
+      },
+      "scHolds": true,
+      "scMissingEdges": [],
+      "sourceCanonicalSha256": "c1d474d7dc295ae99cf93d11f515fc3db4bd622ebf75b125c16dfee7472afec1",
+      "triangleCount": 0,
+      "verdict": "SC_CERTIFICATE_VALID: every profile-consistent selection selects all non-owner x0-edges; latent component = {owner, x0}; intrinsic-F* scope-vacuity PROVED enumeration-free for this circuit",
+      "x0SupportDegree": 2
+    },
+    {
+      "activeNeighbour": 9,
+      "archivedSelectionReplay": {
+        "latentComponentOfOwner": [
+          0,
+          9
+        ],
+        "latentEdges": [
+          [
+            0,
+            9
+          ]
+        ],
+        "profileConsistent": true
+      },
+      "atomsAvailable": 30,
+      "classifierVector": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "crossChecks": {
+        "blanket": {
+          "edges": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "sha": "3720a8c272ab4c8de1923615d22d187c62b9a051d9fd2530d327cfb3ffb96041",
+          "verdict": "PASS_ALL_NONOWNER_TAIL_EDGES_FORCED_SELECTED"
+        },
+        "scope_cadical": {
+          "sha": "c7fbcc70e59246681f448eea3a8c694ffe556ab63384fd53507b071cc010f059",
+          "verdict": "PASS_FIXED_CIRCUIT_ACTIVE_SCOPE_UNSAT"
+        },
+        "scope_cpsat": {
+          "sha": "79471ef086fc5b3c8528c2752d4e5152e37868d4508d61d9858060b9bdefcd7b",
+          "verdict": "NO_ACTIVE_SCOPE_PROFILE_FOR_FIXED_CIRCUIT"
+        },
+        "verification": {
+          "activeComponent": [
+            0,
+            9
+          ],
+          "activeOwner": false,
+          "sha": "d9e7341330eb9b816c7147d726405676d9e685b6f2ff64f46d1df80cae29e1b4"
+        }
+      },
+      "deletionSdrAll24": true,
+      "edgesInEveryPairIntersection": [
+        [
+          1,
+          9
+        ]
+      ],
+      "fibers": {
+        "10": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              9
+            ]
+          ],
+          "witnessAtoms": [
+            10,
+            18,
+            19
+          ],
+          "witnessCount": 3,
+          "witnessRows": [
+            [
+              2,
+              9,
+              1,
+              10,
+              3
+            ],
+            [
+              9,
+              1,
+              10,
+              3,
+              11
+            ],
+            [
+              10,
+              1,
+              9,
+              2,
+              14
+            ]
+          ]
+        },
+        "12": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              9
+            ]
+          ],
+          "witnessAtoms": [
+            10,
+            18,
+            23
+          ],
+          "witnessCount": 3,
+          "witnessRows": [
+            [
+              2,
+              9,
+              1,
+              12,
+              3
+            ],
+            [
+              9,
+              1,
+              12,
+              3,
+              11
+            ],
+            [
+              12,
+              1,
+              9,
+              2,
+              14
+            ]
+          ]
+        },
+        "13": {
+          "commonNeighbourhoodC": [
+            1
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              9
+            ]
+          ],
+          "witnessAtoms": [
+            10,
+            18,
+            25
+          ],
+          "witnessCount": 3,
+          "witnessRows": [
+            [
+              2,
+              9,
+              1,
+              13,
+              3
+            ],
+            [
+              9,
+              1,
+              13,
+              3,
+              11
+            ],
+            [
+              13,
+              1,
+              9,
+              2,
+              14
+            ]
+          ]
+        },
+        "15": {
+          "commonNeighbourhoodC": [
+            2
+          ],
+          "intersectionX0Edges": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "witnessAtoms": [
+            29
+          ],
+          "witnessCount": 1,
+          "witnessRows": [
+            [
+              15,
+              2,
+              9,
+              1,
+              17
+            ]
+          ]
+        }
+      },
+      "hit": "264",
+      "lemmaCooccurRowsChecked": 12,
+      "lemmaOnePair": true,
+      "minMultiplicity": 2,
+      "owner": 0,
+      "ownerNeighbours": [
+        9,
+        10,
+        12,
+        13,
+        15
+      ],
+      "scCertificate": {
+        "1": [
+          10,
+          12,
+          13
+        ],
+        "2": [
+          15
+        ]
+      },
+      "scHolds": true,
+      "scMissingEdges": [],
+      "sourceCanonicalSha256": "6595501f532577c3475d29e2a3c7e9f318debecd5e1014d0793e1b462d07494f",
+      "triangleCount": 0,
+      "verdict": "SC_CERTIFICATE_VALID: every profile-consistent selection selects all non-owner x0-edges; latent component = {owner, x0}; intrinsic-F* scope-vacuity PROVED enumeration-free for this circuit",
+      "x0SupportDegree": 3
+    }
+  ],
+  "schema": "t5-fiber-starvation-check-v1"
+}

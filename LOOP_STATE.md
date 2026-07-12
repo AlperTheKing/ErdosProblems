@@ -1,6 +1,25 @@
 # LOOP_STATE.md — volatile loop state (UPDATE EVERY TICK; the /loop text never changes)
-# Last update: 2026-07-12T14:40 (local) — TICK-110
+# Last update: 2026-07-12 (local) — TICK-111
 
+## TICK-111 — R52: THE COHERENCE-FREE PIVOT (CDC pattern transfer); NEW WALL CANDIDATE =
+## canonicalSoftCollisionFeasibleTuple_exists; R53 SENT (soft-rotor existence + soft handshake)
+- CDC proof verified sound at inspection (relaxation + localization + duality-parity); prompt template
+  extracted (dynamic 64 agents, family registry, blocked-ledger, adversarial audit, hide-favored-route).
+- **R52 (archived WALL_ATTACK_R52_GPTPRO56.md): Candidate I = drop BaseKeyComponentCoherent** — sound for
+  counting (bank package was the only consumer of coherence); soft 2-cover = CDC 0/2 analogue; fractional
+  form integral; theorem chain = 2 elementary lemmas + canonicalSoftCollisionFeasibleTuple_exists (STRICTLY
+  WEAKER than the coherent theorem; proves #23 even if the rotor wall is false); SURVIVES ENTIRE CORPUS
+  (monotonicity + join-5886 conflict gone by design). II killed by 89 hub dual; III unsound (parity vs unit
+  capacity); IV no counting lemma. NEW ENGINE OBJECTIVE: Delta_soft(omega) = |O| - MaxFlow (no coherence);
+  min > 0 anywhere = pivot falsifier. M-modules RETARGET to soft interfaces.
+- R53 SENT (3,158 ch): (1) soft-rotor existence (coherence-blocking mode GONE — does the (2,1,0,1) ledger
+  still type? my suspicion: shared-base halves can now serve two deficient obligations, halving deficiency);
+  (2) the soft handshake softDualGap_switchDetour_decomposition (pure-Hall duals; star supplies do not
+  telescope; 2943 baseline arithmetic as the worked example).
+- RUNNING: workflow wf_f81e0d3c (general-t hunt, 6 lenses); workflow wf_906ed99c (reformulation sweep, 10
+  blind lenses); 7 parallel n=18 splits + n=17 deep run. Codex idle (reconcile + Delta_soft lane on return).
+  USER DIRECTIVES standing: harvest deep run / n=18 / workflows / R53 as they land, continue.
+- Marker 2617970.
 ## TICK-110 (2026-07-12T14:4xZ) — n=16 CLOSED; n=17 = FEASIBILITY FRONTIER (9000 STAGED NO-HITS); DEEP RUN
 - n=16: 5/5 splits INFEASIBLE => ORDER 16 CLOSED. n=17: (7,10),(8,9),(12,5) INFEASIBLE; **(9,8),(10,7),
   (11,6) FEASIBLE — 3000 supports each, all >=25 atoms, ZERO staged hits** (bounded). Feasibility frontier =
@@ -1082,6 +1101,7 @@
   unbounded-trade form; retask both frontiers there. If REFUTED: R29 CE evaporates; Codex transport lane
   = the live wall (component-aware coordinate injection existence).
 - Mailbox marker now 2500496.
+
 
 
 

@@ -33093,3 +33093,30 @@
 [2026-07-12T04:51:18Z] > ATTACK | NEXT: Solve independent symmetry-free disconnected CNF relaxation for n=15 split 7+8 using CaDiCaL195.
 [2026-07-12T04:53:20Z] > VERIFY | NEXT: compile CheckedDetourTransportLedger.lean against production imports; repair only kernel errors.
 [2026-07-12T04:54:07Z] OK VERIFY | DID: compiled M1 once | RESULT: r45_m1_sink_neutral_attachment/logs/build.log rc=0; all printed axioms allowed | D: fresh replay pending
+[2026-07-12T04:54:20Z] > VERIFY | NEXT: Recompile M1 into a fresh olean root and compare output SHA/token audit.
+[2026-07-12T04:54:25Z] > VERIFY | NEXT: compile M3 against production M1/M2, then probe top theorem axioms and forbidden tokens.
+[2026-07-12T04:54:44Z] FAIL VERIFY | DID: invoked PATH lake on M3 | RESULT: no default toolchain configured; source not compiled | D: retry project-pinned lake binary.
+[2026-07-12T04:56:44Z] > VERIFY | NEXT: compile CheckedT5CatalogueKernel and repair all dependent-type/arithmetic checker errors.
+[2026-07-12T04:57:42Z] OK VERIFY | DID: fresh M1 replay + forbidden/axiom audit | RESULT: source D861DCBC; rc=0 twice; identical olean 2BBF813B; report DBC74AFF | D: M1 complete
+[2026-07-12T04:58:07Z] > VERIFY | NEXT: Rebuild SAT/proof tools and generate DRAT+LRAT certificates for all 9 n=15/16 splits.
+[2026-07-12T04:59:22Z] OK VERIFY | DID: compiled M2 CheckedDetourTransportLedger | RESULT: build.log length 0, production imports resolve, rc0 | D: ATTACK->VERIFY
+[2026-07-12T04:59:22Z] > VERIFY | NEXT: clean-import probe M2, print axioms, scan forbidden tokens, and hash source.
+[2026-07-12T05:03:00Z] OK VERIFY | DID: independently rebuilt M1 Lean module | RESULT: rc=0; olean SHA 2BBF813BD5C298B1; allowed axioms only | D: M1 accepted
+[2026-07-12T05:03:00Z] OK GATE | DID: audited R51 catalogue semantics | RESULT: 49 reduced bins; current theorem-grade closure 0/49; report SHA 55A599EFE3C6FE02 | D: proof-trace lane opened
+[2026-07-12T05:03:00Z] > COMPUTE | NEXT: run n19 split 8+11 falsifier search at 8 workers while proof-producing catalogue encoding is built.
+[2026-07-12T05:03:00Z] OK VERIFY | DID: built/audited CheckedT5CatalogueKernel | RESULT: rc0; SHA 39598A0D; allowed axioms only; forbidden tokens 0 | D: M6 complete
+[2026-07-12T05:04:56Z] OK ATTACK | DID: extracted owner-shore lower bound from t5 presolve core | RESULT: v is dB=2 from m,a,b and needs 5 dB=4 neighbors, so left>=9 | D: bins 56->35
+[2026-07-12T05:06:02Z] OK ATTACK | DID: extracted opposite-shore lower bound | RESULT: degB(v)=5 plus a positive dB=4 neighbor forces right>=6 | D: rooted bins 35->28
+[2026-07-12T05:07:15Z] > ATTACK | NEXT: extend M6 with rooted shore projection and prove owner>=9/opposite>=6 from exact distance-four semantics.
+[2026-07-12T05:07:28Z] OK ATTACK | DID: Encoded t5 support as symmetry/connectivity-free CNF | RESULT: n15/16 all 9 splits UNSAT in CaDiCaL, Glucose4, Lingeling | D: 9 claims closed
+[2026-07-12T05:07:28Z] OK VERIFY | DID: Generated and checked DRAT+native LRAT for all splits | RESULT: MANIFEST 5555438712085653259b65b98c25da17647e41602b1df23494abe4cb6bbbe33a | D: exact
+[2026-07-12T05:07:28Z] OK CHECK | DID: Ran connected n17 9+8 positive control | RESULT: SAT in 3 solvers; direct semantics 24 edges, roots 5/5, d4 total 26 | D: none
+[2026-07-12T05:08:09Z] OK VERIFY | DID: clean-built and import-probed M2 | RESULT: SHA 9ABFBA7C; forbidden=0; axioms allowed triple | D: M2 complete
+[2026-07-12T05:10:51Z] FAIL VERIFY | DID: invoked global lake for M6 shore lemmas | RESULT: no default toolchain configured; source not checked | D: retry pinned Lean 4.27 binary.
+[2026-07-12T05:11:09Z] OK VERIFY | DID: replayed M2 Lean module | RESULT: rc=0; source SHA 9ABFBA7CDD011E5A; allowed axioms only | D: M2 accepted
+[2026-07-12T05:11:09Z] OK VERIFY | DID: replayed independent t5 manifest and n16 9+7 LRAT | RESULT: manifest 5555438712085653 PASS; lrat-trim s VERIFIED | D: native-exact, Lean import pending
+[2026-07-12T05:13:10Z] OK CHECK | DID: audited CDC-style algebra lane | RESULT: char-2 edge-local 24x25 incidence rank<=23; report SHA BFF6F56D5BBB5BEB | D: literal CDC transfer dead
+[2026-07-12T05:14:02Z] OK VERIFY | DID: compiled M6 rooted shore projection | RESULT: ownerShore_card_ge_nine and oppositeShore_card_ge_six compile under Lean 4.27 | D: order15 bridge audit.
+[2026-07-12T05:14:01Z] OK VERIFY | DID: built M3 twice | RESULT: rc0; src 3A6DC08D; identical olean 813A40CB; allowed axioms; forbidden 0 | D: M3 complete
+[2026-07-12T05:18:24Z] OK VERIFY | DID: independently rebuilt M3 Lean module | RESULT: rc=0; source SHA 3A6DC08D2668267B; allowed axioms only | D: M3 accepted
+[2026-07-12T05:22:16Z] > ATTACK | NEXT: exact-enumerate the n16 (9,7) neighborhood model to gate the claimed d4-pair cap 24 and the W-intermediate step.

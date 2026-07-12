@@ -61,3 +61,14 @@ After Wave 2 is harvested, the next six agents must be mathematically diverse:
 
 No family receives a second agent in that wave until its first agent returns a
 concrete lemma, construction, equation, or counterexample.
+
+## Wave 3 Result: Global Algebra (2026-07-12T05:13:10Z)
+
+- Exact scoped obstruction: for any characteristic-two field, a 24-by-25
+  edge-local row-incidence matrix whose atom columns have four equally gauged
+  support entries has a nonzero left annihilator, hence rank at most 23.
+- This cannot represent the rank-24 transversal circuit required at 	=5.
+- Status: literal CDC F_2^3 edge-local duality transfer is DEAD; nonlocal
+  algebra remains open.
+- Artifact: 	mp/fanout/wave3_global_algebra/REPORT.md, SHA256
+  BFF6F56D5BBB5BEB68E8BFBD640BDD53855410EDB9C8A0A40CAF866A70AC0863.

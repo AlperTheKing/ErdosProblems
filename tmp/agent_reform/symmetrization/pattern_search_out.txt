@@ -1,0 +1,14 @@
+C5 formula beta(C5,x)=min_i x_i x_{i+1}: 200/200 exact checks PASS
+n=5 reduced patterns (up to iso): 1
+  pattern e=5 [(0, 3), (0, 4), (1, 2), (1, 4), (2, 3)] : float max=0.039939 exact-snap beta=1/25 (=1/25) support=[0, 1, 2, 3, 4]
+n=6 reduced patterns (up to iso): 0
+  ... n=7 mask 500000/2097152, found 0
+  ... n=7 mask 1000000/2097152, found 0
+  ... n=7 mask 1500000/2097152, found 0
+  ... n=7 mask 2000000/2097152, found 0
+n=7 reduced patterns (up to iso): 0
+Wagner-V8(=Andrasfai3): n=8 e=12 uniform beta=1/32 (=0.031250, 1/25=0.04); search max float=0.032628 exact-snap=19523435783444616177/598365147816231192482 support=[0, 1, 2, 3, 4, 5, 6, 7]
+Petersen: n=10 e=15 uniform beta=3/100 (=0.030000, 1/25=0.04); search max float=0.029984 exact-snap=26262816628211402909485816/876626653956891836177379605 support=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+C11(1,4)(=Andrasfai4): n=11 e=22 uniform beta=4/121 (=0.033058, 1/25=0.04); search max float=0.032928 exact-snap=19787616726955/600896680081636 support=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Groetzsch: n=11 e=20 uniform beta=4/121 (=0.033058, 1/25=0.04); search max float=0.033990 exact-snap=4545774893748752276208066100/133775171620060702082834063307 support=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+PATTERN SEARCH DONE

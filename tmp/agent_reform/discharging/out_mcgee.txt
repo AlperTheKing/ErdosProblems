@@ -1,0 +1,4 @@
+mcgee24: N=24 e=36 maxcut=32 beta=4 25beta=100 N^2=576 conj=OK cuts=1
+  r=1: ALL
+  r=2: ALL
+  r=3: ALL

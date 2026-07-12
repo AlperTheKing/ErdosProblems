@@ -1,0 +1,4 @@
+C5blow(5,5,5,5,5): N=25 e=125 maxcut=100 beta=25 25beta=625 N^2=625 conj=OK cuts=12+
+  r=1: NONE | viol S(|10|) sum_m=50 ball=20 need 25*50<=50*20 i.e. 1250<=1000 defect50x=250
+  r=2: ALL
+  r=3: ALL

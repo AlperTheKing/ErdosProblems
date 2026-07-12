@@ -64,30 +64,33 @@ variable {D : CheckedCollisionDefectTrade.Data
   State Obligation SourceBase Comp}
 variable {oldState newState : State}
 
-abbrev Ledger :=
+abbrev Ledger
+    (D : CheckedCollisionDefectTrade.Data
+      State Obligation SourceBase Comp)
+    (oldState newState : State) :=
   CheckedDetourTransportLedger D oldState newState
 
 /-- The old assignment viewed at its original state. -/
-def oldPhysicalKey (L : Ledger) (d : Obligation)
+def oldPhysicalKey (L : Ledger D oldState newState) (d : Obligation)
     (hd : d ∈ L.oldOptimal.matched) :
     StateIndexedPhysicalKey State SourceBase :=
   ⟨oldState, L.oldOptimal.assign ⟨d, hd⟩⟩
 
 /-- The same old physical key transported to the new state.  This does not
 claim that the key remains graph-realized; that fact is checked separately. -/
-def transportedPhysicalKey (L : Ledger) (d : Obligation)
+def transportedPhysicalKey (L : Ledger D oldState newState) (d : Obligation)
     (hd : d ∈ L.oldOptimal.matched) :
     StateIndexedPhysicalKey State SourceBase :=
   ⟨newState, L.oldOptimal.assign ⟨d, hd⟩⟩
 
 @[simp] theorem transportedPhysicalKey_physical
-    (L : Ledger) (d : Obligation) (hd : d ∈ L.oldOptimal.matched) :
+    (L : Ledger D oldState newState) (d : Obligation) (hd : d ∈ L.oldOptimal.matched) :
     (L.transportedPhysicalKey d hd).physical =
       (L.oldPhysicalKey d hd).physical := rfl
 
 /-- The old assigned physical key remains a legal source for the same
 obligation in the new state. -/
-def SourcePersists (L : Ledger) (d : Obligation) : Prop :=
+def SourcePersists (L : Ledger D oldState newState) (d : Obligation) : Prop :=
   ∃ hd : d ∈ L.oldOptimal.matched,
     D.sourceRealized newState d (L.oldOptimal.assign ⟨d, hd⟩)
 
@@ -96,52 +99,54 @@ unchanged. -/
 def ComponentPersists (d : Obligation) : Prop :=
   D.component newState d = D.component oldState d
 
-noncomputable def expectedPersistObligation (L : Ledger) :
+noncomputable def expectedPersistObligation (_L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact D.obligations oldState ∩ D.obligations newState
 
-noncomputable def expectedPersistSource (L : Ledger) :
+noncomputable def expectedPersistSource (L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact L.oldOptimal.matched.filter L.SourcePersists
 
-noncomputable def expectedCarry (L : Ledger) : Finset Obligation := by
+noncomputable def expectedCarry (L : Ledger D oldState newState) : Finset Obligation := by
   classical
   exact L.oldOptimal.matched.filter fun d =>
-    d ∈ D.obligations newState ∧ L.SourcePersists d ∧ ComponentPersists d
+    d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+      ComponentPersists (D := D) (oldState := oldState)
+        (newState := newState) d
 
-noncomputable def expectedBorn (L : Ledger) : Finset Obligation := by
+noncomputable def expectedBorn (_L : Ledger D oldState newState) : Finset Obligation := by
   classical
   exact D.obligations newState \ D.obligations oldState
 
-noncomputable def expectedDeadMatched (L : Ledger) :
+noncomputable def expectedDeadMatched (L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact L.oldOptimal.matched \ D.obligations newState
 
-noncomputable def expectedDeadObligation (L : Ledger) :
+noncomputable def expectedDeadObligation (_L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact D.obligations oldState \ D.obligations newState
 
-noncomputable def expectedDeadUnmatched (L : Ledger) :
+noncomputable def expectedDeadUnmatched (L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact L.expectedDeadObligation \ L.expectedDeadMatched
 
-noncomputable def expectedPersistentMatched (L : Ledger) :
+noncomputable def expectedPersistentMatched (L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact L.oldOptimal.matched ∩ D.obligations newState
 
-noncomputable def expectedBrokenLive (L : Ledger) :
+noncomputable def expectedBrokenLive (L : Ledger D oldState newState) :
     Finset Obligation := by
   classical
   exact L.expectedPersistentMatched \ L.expectedCarry
 
 /-- The four reflected audit groups in the archived R42 specification. -/
-structure Checked (L : Ledger) : Prop where
+structure Checked (L : Ledger D oldState newState) : Prop where
   optimality :
     D.collisionDefect oldState = L.oldOptimal.unmatchedCount ∧
       D.collisionDefect newState = L.newOptimal.unmatchedCount
@@ -157,61 +162,81 @@ structure Checked (L : Ledger) : Prop where
 
 /-- Kernel-reflected checker.  It checks only a supplied finite ledger; it
 does not search for states, matchings, or graph sources. -/
-noncomputable def check (L : Ledger) : Bool := by
+noncomputable def check (L : Ledger D oldState newState) : Bool := by
   classical
   exact decide L.Checked
 
-theorem check_eq_true_iff (L : Ledger) :
+theorem check_eq_true_iff (L : Ledger D oldState newState) :
     L.check = true ↔ L.Checked := by
   classical
   simp [check]
 
-theorem carry_mem_oldMatched (L : Ledger) (h : L.Checked)
+theorem carry_mem_oldMatched (L : Ledger D oldState newState) (h : L.Checked)
     {d : Obligation} (hd : d ∈ L.carry) :
     d ∈ L.oldOptimal.matched := by
   rw [h.carry_partition.1] at hd
-  simpa [expectedCarry] using hd.1
+  have hmem : d ∈ L.oldOptimal.matched ∧
+      d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+        ComponentPersists (D := D) (oldState := oldState)
+          (newState := newState) d := by
+    simpa [expectedCarry] using hd
+  exact hmem.1
 
-theorem carry_mem_newObligations (L : Ledger) (h : L.Checked)
+theorem carry_mem_newObligations (L : Ledger D oldState newState) (h : L.Checked)
     {d : Obligation} (hd : d ∈ L.carry) :
     d ∈ D.obligations newState := by
   rw [h.carry_partition.1] at hd
-  simpa [expectedCarry] using hd.2.1
+  have hmem : d ∈ L.oldOptimal.matched ∧
+      d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+        ComponentPersists (D := D) (oldState := oldState)
+          (newState := newState) d := by
+    simpa [expectedCarry] using hd
+  exact hmem.2.1
 
-theorem carry_source_persists (L : Ledger) (h : L.Checked)
+theorem carry_source_persists (L : Ledger D oldState newState) (h : L.Checked)
     {d : Obligation} (hd : d ∈ L.carry) :
     L.SourcePersists d := by
   rw [h.carry_partition.1] at hd
-  simpa [expectedCarry] using hd.2.2.1
+  have hmem : d ∈ L.oldOptimal.matched ∧
+      d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+        ComponentPersists (D := D) (oldState := oldState)
+          (newState := newState) d := by
+    simpa [expectedCarry] using hd
+  exact hmem.2.2.1
 
-theorem carry_component_persists (L : Ledger) (h : L.Checked)
+theorem carry_component_persists (L : Ledger D oldState newState) (h : L.Checked)
     {d : Obligation} (hd : d ∈ L.carry) :
     ComponentPersists (D := D) (oldState := oldState)
       (newState := newState) d := by
   rw [h.carry_partition.1] at hd
-  simpa [expectedCarry] using hd.2.2.2
+  have hmem : d ∈ L.oldOptimal.matched ∧
+      d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+        ComponentPersists (D := D) (oldState := oldState)
+          (newState := newState) d := by
+    simpa [expectedCarry] using hd
+  exact hmem.2.2.2
 
 /-- Every carried obligation keeps one literal physical key, remains realized
 at both states, and keeps its base-component destination. -/
-def EveryCarryPreservesPhysicalKey (L : Ledger) : Prop :=
-  ∀ d (hd : d ∈ L.carry),
+def EveryCarryPreservesPhysicalKey (L : Ledger D oldState newState) : Prop :=
+  ∀ d (_hd : d ∈ L.carry),
     ∃ hold : d ∈ L.oldOptimal.matched,
       D.sourceRealized oldState d (L.oldOptimal.assign ⟨d, hold⟩) ∧
       D.sourceRealized newState d (L.oldOptimal.assign ⟨d, hold⟩) ∧
       ComponentPersists (D := D) (oldState := oldState)
         (newState := newState) d
 
-theorem everyCarryPreservesPhysicalKey (L : Ledger) (h : L.Checked) :
+theorem everyCarryPreservesPhysicalKey (L : Ledger D oldState newState) (h : L.Checked) :
     L.EveryCarryPreservesPhysicalKey := by
   intro d hd
   let hold := L.carry_mem_oldMatched h hd
   refine ⟨hold, L.oldOptimal.source_realized ⟨d, hold⟩, ?_,
     L.carry_component_persists h hd⟩
   rcases L.carry_source_persists h hd with ⟨hold', hsource⟩
-  simpa only [Subsingleton.elim hold' hold] using hsource
+  simpa only using hsource
 
 /-- The inherited old physical-key injection on the carry domain. -/
-noncomputable def carryAssign (L : Ledger) (h : L.Checked) :
+noncomputable def carryAssign (L : Ledger D oldState newState) (h : L.Checked) :
     {d // d ∈ L.carry} ↪ (SourceBase × Fin 2) where
   toFun d := L.oldOptimal.assign
     ⟨d.1, L.carry_mem_oldMatched h d.2⟩
@@ -222,18 +247,19 @@ noncomputable def carryAssign (L : Ledger) (h : L.Checked) :
           {x // x ∈ L.oldOptimal.matched}) =
         ⟨e.1, L.carry_mem_oldMatched h e.2⟩ :=
       L.oldOptimal.assign.injective hkey
-    exact Subtype.ext (congrArg Subtype.val hold)
+    apply Subtype.ext
+    exact congrArg
+      (fun z : {x // x ∈ L.oldOptimal.matched} => z.1) hold
 
-theorem carryAssign_source_realized (L : Ledger) (h : L.Checked)
+theorem carryAssign_source_realized (L : Ledger D oldState newState) (h : L.Checked)
     (d : {x // x ∈ L.carry}) :
     D.sourceRealized newState d.1 (L.carryAssign h d) := by
   rcases L.carry_source_persists h d.2 with ⟨hold, hsource⟩
-  simpa only [carryAssign, Subsingleton.elim hold
-    (L.carry_mem_oldMatched h d.2)] using hsource
+  simpa only [carryAssign] using hsource
 
 /-- Base-component coherence survives transport because both the physical
 base key and every carried obligation's component label survive. -/
-theorem carryAssign_base_component_coherent (L : Ledger) (h : L.Checked) :
+theorem carryAssign_base_component_coherent (L : Ledger D oldState newState) (h : L.Checked) :
     BaseKeyComponentCoherent (L.carryAssign h)
       (fun d => D.component newState d.1) := by
   intro d e hbase
@@ -246,7 +272,7 @@ theorem carryAssign_base_component_coherent (L : Ledger) (h : L.Checked) :
 
 /-- The old matching restricted to physically persistent, component-coherent
 edges is a valid coherent matching at the new state. -/
-noncomputable def carryMatching (L : Ledger) (h : L.Checked) :
+noncomputable def carryMatching (L : Ledger D oldState newState) (h : L.Checked) :
     CoherentPartialMatching D newState where
   matched := L.carry
   matched_subset := fun _ hd => L.carry_mem_newObligations h hd
@@ -257,30 +283,36 @@ noncomputable def carryMatching (L : Ledger) (h : L.Checked) :
 private theorem card_sdiff_add_card_of_subset
     {alpha : Type*} [DecidableEq alpha] {s t : Finset alpha}
     (h : t ⊆ s) : (s \ t).card + t.card = s.card := by
-  rw [Finset.card_sdiff, Finset.inter_eq_right.mpr h]
+  rw [Finset.card_sdiff, Finset.inter_eq_left.mpr h]
   exact Nat.sub_add_cancel (Finset.card_le_card h)
 
 private theorem expectedDeadMatched_subset_expectedDeadObligation
-    (L : Ledger) : L.expectedDeadMatched ⊆ L.expectedDeadObligation := by
+    (L : Ledger D oldState newState) : L.expectedDeadMatched ⊆ L.expectedDeadObligation := by
   intro d hd
   simp only [expectedDeadMatched, expectedDeadObligation,
     Finset.mem_sdiff] at hd ⊢
   exact ⟨L.oldOptimal.matched_subset hd.1, hd.2⟩
 
 private theorem expectedCarry_subset_expectedPersistentMatched
-    (L : Ledger) : L.expectedCarry ⊆ L.expectedPersistentMatched := by
+    (L : Ledger D oldState newState) : L.expectedCarry ⊆ L.expectedPersistentMatched := by
   intro d hd
-  simp only [expectedCarry, expectedPersistentMatched, Finset.mem_filter,
-    Finset.mem_inter] at hd ⊢
-  exact ⟨hd.1, hd.2.1⟩
+  have hmem : d ∈ L.oldOptimal.matched ∧
+      d ∈ D.obligations newState ∧ L.SourcePersists d ∧
+        ComponentPersists (D := D) (oldState := oldState)
+          (newState := newState) d := by
+    simpa [expectedCarry] using hd
+  simpa [expectedPersistentMatched] using And.intro hmem.1 hmem.2.1
 
-private theorem oldObligation_card (L : Ledger) (h : L.Checked) :
+private theorem oldObligation_card (L : Ledger D oldState newState) (h : L.Checked) :
     (D.obligations oldState).card =
       L.persistObligation.card + L.expectedDeadMatched.card +
         L.deadUnmatched.card := by
   have hpOld : L.expectedPersistObligation ⊆ D.obligations oldState := by
     intro d hd
-    simpa [expectedPersistObligation] using hd.1
+    have hmem : d ∈ D.obligations oldState ∧
+        d ∈ D.obligations newState := by
+      simpa [expectedPersistObligation] using hd
+    exact hmem.1
   have hOldSplit := card_sdiff_add_card_of_subset hpOld
   have hOldDiff :
       D.obligations oldState \ L.expectedPersistObligation =
@@ -290,16 +322,21 @@ private theorem oldObligation_card (L : Ledger) (h : L.Checked) :
   rw [hOldDiff] at hOldSplit
   have hDeadSplit := card_sdiff_add_card_of_subset
     (L.expectedDeadMatched_subset_expectedDeadObligation)
-  rw [← h.obligation_turnover.2.2] at hDeadSplit
-  rw [h.obligation_turnover.1, h.obligation_turnover.2.2]
+  change L.expectedDeadUnmatched.card + L.expectedDeadMatched.card =
+    L.expectedDeadObligation.card at hDeadSplit
+  have hpCard := congrArg Finset.card h.obligation_turnover.1
+  have hdeadCard := congrArg Finset.card h.obligation_turnover.2.2
   omega
 
-private theorem newObligation_card (L : Ledger) (h : L.Checked) :
+private theorem newObligation_card (L : Ledger D oldState newState) (h : L.Checked) :
     (D.obligations newState).card =
       L.persistObligation.card + L.born.card := by
   have hpNew : L.expectedPersistObligation ⊆ D.obligations newState := by
     intro d hd
-    simpa [expectedPersistObligation] using hd.2
+    have hmem : d ∈ D.obligations oldState ∧
+        d ∈ D.obligations newState := by
+      simpa [expectedPersistObligation] using hd
+    exact hmem.2
   have hNewSplit := card_sdiff_add_card_of_subset hpNew
   have hNewDiff :
       D.obligations newState \ L.expectedPersistObligation =
@@ -307,15 +344,19 @@ private theorem newObligation_card (L : Ledger) (h : L.Checked) :
     ext d
     simp [expectedPersistObligation, expectedBorn]
   rw [hNewDiff] at hNewSplit
-  rw [h.obligation_turnover.1, h.obligation_turnover.2.1]
+  have hpCard := congrArg Finset.card h.obligation_turnover.1
+  have hbornCard := congrArg Finset.card h.obligation_turnover.2.1
   omega
 
-private theorem oldMatched_card (L : Ledger) (h : L.Checked) :
+private theorem oldMatched_card (L : Ledger D oldState newState) (h : L.Checked) :
     L.oldOptimal.matched.card =
       L.carry.card + L.expectedDeadMatched.card + L.brokenLive.card := by
   have hpOld : L.expectedPersistentMatched ⊆ L.oldOptimal.matched := by
     intro d hd
-    simpa [expectedPersistentMatched] using hd.1
+    have hmem : d ∈ L.oldOptimal.matched ∧
+        d ∈ D.obligations newState := by
+      simpa [expectedPersistentMatched] using hd
+    exact hmem.1
   have hOldSplit := card_sdiff_add_card_of_subset hpOld
   have hOldDiff :
       L.oldOptimal.matched \ L.expectedPersistentMatched =
@@ -325,36 +366,43 @@ private theorem oldMatched_card (L : Ledger) (h : L.Checked) :
   rw [hOldDiff] at hOldSplit
   have hCarrySplit := card_sdiff_add_card_of_subset
     (L.expectedCarry_subset_expectedPersistentMatched)
-  rw [← h.carry_partition.2] at hCarrySplit
-  rw [h.carry_partition.1, h.carry_partition.2]
+  change L.expectedBrokenLive.card + L.expectedCarry.card =
+    L.expectedPersistentMatched.card at hCarrySplit
+  have hcarryCard := congrArg Finset.card h.carry_partition.1
+  have hbrokenCard := congrArg Finset.card h.carry_partition.2
   omega
 
 theorem carry_card_le_newOptimal_matched_card
-    (L : Ledger) (h : L.Checked) :
+    (L : Ledger D oldState newState) (h : L.Checked) :
     L.carry.card ≤ L.newOptimal.matched.card := by
   have hminimum := D.collisionDefect_le_unmatchedCount (L.carryMatching h)
   rw [h.optimality.2] at hminimum
   rw [CoherentPartialMatching.unmatchedCount_eq_card_sub_matched,
     CoherentPartialMatching.unmatchedCount_eq_card_sub_matched] at hminimum
-  have hcarry := Finset.card_le_card (L.carryMatching h).matched_subset
+  change (D.obligations newState).card - L.newOptimal.matched.card ≤
+    (D.obligations newState).card - L.carry.card at hminimum
+  have hcarryRaw := Finset.card_le_card (L.carryMatching h).matched_subset
+  have hcarry : L.carry.card ≤ (D.obligations newState).card := by
+    simpa [carryMatching] using hcarryRaw
   have hnew := Finset.card_le_card L.newOptimal.matched_subset
   change L.carry.card ≤ L.newOptimal.matched.card
   omega
 
 /-- Matches gained after retaining every carry edge.  This includes newly
 free keys, rematching, and coherent relabeling, exactly as in R42. -/
-def reoptimizedGain (L : Ledger) : Nat :=
+def reoptimizedGain (L : Ledger D oldState newState) : Nat :=
   L.newOptimal.matched.card - L.carry.card
 
-private theorem newMatched_card (L : Ledger) (h : L.Checked) :
+private theorem newMatched_card (L : Ledger D oldState newState) (h : L.Checked) :
     L.newOptimal.matched.card = L.carry.card + L.reoptimizedGain := by
+  have hle := L.carry_card_le_newOptimal_matched_card h
   unfold reoptimizedGain
   omega
 
 /-- The exact signed R42 transport identity.  `expectedDeadMatched` cancels
 between obligation and matched-edge turnover, leaving precisely the four
 public ledger channels `B + L - U - A_reopt`. -/
-theorem defect_delta (L : Ledger) (h : L.Checked) :
+theorem defect_delta (L : Ledger D oldState newState) (h : L.Checked) :
     (D.collisionDefect newState : Int) -
         (D.collisionDefect oldState : Int) =
       (L.born.card : Int) + (L.brokenLive.card : Int) -
@@ -389,7 +437,7 @@ theorem defect_delta (L : Ledger) (h : L.Checked) :
 /-- Semantic output of a successful checker.  The existential matching keeps
 all graph/source realization and base-component coherence inside the production
 `CoherentPartialMatching` type. -/
-structure Sound (L : Ledger) : Prop where
+structure Sound (L : Ledger D oldState newState) : Prop where
   exact_ledger : L.Checked
   physical_key_turnover : L.EveryCarryPreservesPhysicalKey
   coherent_carry_exists :
@@ -400,7 +448,7 @@ structure Sound (L : Ledger) : Prop where
       (L.born.card : Int) + (L.brokenLive.card : Int) -
         (L.deadUnmatched.card : Int) - (L.reoptimizedGain : Int)
 
-theorem sound_of_check_eq_true (L : Ledger) (hcheck : L.check = true) :
+theorem sound_of_check_eq_true (L : Ledger D oldState newState) (hcheck : L.check = true) :
     L.Sound := by
   have h := L.check_eq_true_iff.mp hcheck
   exact
@@ -409,7 +457,7 @@ theorem sound_of_check_eq_true (L : Ledger) (hcheck : L.check = true) :
       coherent_carry_exists := ⟨L.carryMatching h, rfl⟩
       defect_delta := L.defect_delta h }
 
-theorem defect_delta_of_check_eq_true (L : Ledger)
+theorem defect_delta_of_check_eq_true (L : Ledger D oldState newState)
     (hcheck : L.check = true) :
     (D.collisionDefect newState : Int) -
         (D.collisionDefect oldState : Int) =

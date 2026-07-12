@@ -1,0 +1,8 @@
+  N=13 it=216 new best score=17 (2N=26) beta=4
+seed 0: best=17 (2N=26)
+seed 1: best=16 (2N=26)
+  N=13 it=33 new best score=17 (2N=26) beta=4
+seed 2: best=17 (2N=26)
+  N=13 it=586 new best score=17 (2N=26) beta=4
+seed 3: best=17 (2N=26)
+CLIMB N=13 overall best=17 vs 2N=26 -> survives
