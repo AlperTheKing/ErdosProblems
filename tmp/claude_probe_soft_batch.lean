@@ -1,0 +1,19 @@
+import Erdos23Delta0.Gamma.CheckedSoftCollisionTwoCover
+import Erdos23Delta0.Gamma.SoftEdgeCapGraphAdapter
+import Erdos23Delta0.Gamma.MinimumCollisionGlobalHallReduction
+import Erdos23Delta0.Gamma.CheckedBalancedDeficiencyRotor
+import Erdos23Delta0.Gamma.CheckedT5CatalogueKernel
+
+open Erdos23Delta0.Gamma.CheckedSoftCollisionTwoCover in
+#print axioms collision_add_active_le_free
+open Erdos23Delta0.Gamma.CheckedSoftCollisionTwoCover in
+#print axioms residual_nonneg_of_fractionalCollisionFlowWithEdgeCaps
+#print axioms Erdos23Delta0.Gamma.SoftEdgeCapGraphAdapter.collisionHalf_card_eq_two_mul_collisionMass
+open Erdos23Delta0.Gamma.MinimumCollisionGlobalHallReduction in
+#print axioms integralGroupedCapFlow_nonempty_iff_hall
+open Erdos23Delta0.Gamma.MinimumCollisionGlobalHallReduction in
+#print axioms hallDefect_eq_zero_iff_flow
+#print axioms Erdos23Delta0.Gamma.CheckedBalancedDeficiencyRotor.ledger_balanced
+#print axioms Erdos23Delta0.Gamma.CheckedT5CatalogueKernel.RootedT5OwnerShoreData.ownerShore_card_ge_nine
+open Erdos23Delta0.Gamma.CheckedT5CatalogueKernel in
+#print axioms supportOrder_le_twentyOne

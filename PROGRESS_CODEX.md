@@ -33481,3 +33481,9 @@
 [2026-07-12T07:41:39Z] OK ATTACK | DID: exhausted 64 selected-window closures | RESULT: 7 max cuts, all defect0; every 2-window pair has min sigma=-1 | D: stall=0
 [2026-07-12T07:48:00Z] > VERIFY | NEXT: compile SupportBoundaryScratch real-graph dB=support+active+outside partition with Lean 4.27.
 [2026-07-12T07:53:25Z] > COLLAB | NEXT: Poll Fable mailbox, process every new block, and send a self-contained exact-state reply.
+[2026-07-12T07:54:49Z] OK COLLAB | DID: Processed Fable inbox through 05:39:05Z and posted current frontier/ASK | RESULT: outbox block 07:54:14Z; heartbeat ACTIVE/10m | D: none
+[2026-07-12T07:59:10Z] > VERIFY | NEXT: Compile SupportBoundaryScratch boundary decomposition with Lean 4.27 and inspect axioms.
+[2026-07-12T08:01:09Z] FAIL VERIFY | DID: Lean-built SupportBoundaryScratch | RESULT: 4 elaboration errors in boundary partition/disjointness; no theorem accepted | D: patch
+[2026-07-12T08:01:09Z] > VERIFY | NEXT: Rebuild patched boundary partition and audit sorryAx.
+[2026-07-12T08:02:15Z] > VERIFY | NEXT: Lean-build production SelectedSupportBoundaryExposure and print load-bearing axioms.
+[2026-07-12T08:03:23Z] OK VERIFY | DID: Lean-built SelectedSupportBoundaryExposure | RESULT: rc0; SHA 43C0CB24; axioms allowed; outbox 08:03:01Z | D: incidence bridge compiled
