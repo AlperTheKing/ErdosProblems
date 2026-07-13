@@ -34389,3 +34389,39 @@
 [2026-07-13T02:16:44Z] > SELECT | NEXT: Select #424 for exact recursive factorization and modular-density surfaces.
 [2026-07-13T02:16:44Z] OK SELECT | DID: Selected #424 | RESULT: official statement and A005244 identified | D: enter GATE
 [2026-07-13T02:16:44Z] > GATE | NEXT: Launch 64-agent blind portfolio and exact literature/computation gate.
+[2026-07-13T02:22:50Z] OK GATE | DID: Initialized #424 literature/state and two generators | RESULT: problems/424/ created | D: enter ATTACK
+[2026-07-13T02:22:50Z] > ATTACK | NEXT: Cross-check independent heap and divisor generators through 100000.
+[2026-07-13T02:24:58Z] OK ATTACK | DID: Cross-checked generators to 100000 | RESULT: 39843 members; exact match and mod3 pass | D: none
+[2026-07-13T02:24:58Z] > ATTACK | NEXT: Compile exact C++ divisor census and run through 10000000.
+[2026-07-13T02:26:31Z] OK ATTACK | DID: Exact C++ census to 10000000 | RESULT: A(X)=4952270, max gap 21, depth 22 | D: none
+[2026-07-13T02:26:31Z] > ATTACK | NEXT: Extend exact divisor census to 100000000 for scale behavior.
+[2026-07-13T02:35:39Z] > SELECT | NEXT: Focus #424 on the affine {2,3,5} subsystem and audit its exact recursion.
+[2026-07-13T02:35:39Z] OK SELECT | DID: Read #424 state and affine census | RESULT: S(10^9)=187749502 in affine_235_1000000000.json | D: enter GATE
+[2026-07-13T02:35:39Z] > GATE | NEXT: Check prior art for affine-semigroup orbit density and exact word-collision growth.
+[2026-07-13T02:39:22Z] OK GATE | DID: Audited 2026 affine-orbit theorem | RESULT: arXiv:2507.06875 treats exact covers; supercritical collisions remain open | D: enter PLAN
+[2026-07-13T02:39:22Z] > PLAN | NEXT: Test semigroup relations and weighted distinct-map growth before selecting a theorem route.
+[2026-07-13T02:43:55Z] OK PLAN | DID: Deduplicated affine maps through length 14 | RESULT: first relation at length 6; Z_14(1)=1.500928819011 | D: frontier=collision growth
+[2026-07-13T02:43:55Z] > ATTACK | NEXT: Audit Klarner's density algorithm and derive an exact collision-aware renewal criterion.
+[2026-07-13T02:43:45Z] OK ATTACK | DID: Exact census to 100000000 | RESULT: A(X)=51899129, max gap 21, depth 25 | D: affine orbit focus
+[2026-07-13T02:43:45Z] OK GATE | DID: Primary/modern literature audit | RESULT: no prior #424 lower bound; affine-orbit theorems isolated | D: novelty survives
+[2026-07-13T02:44:01Z] > SELECT | NEXT: Focus #424 via finite affine-composition exact covers; A04 gives a theorem and fixed D gives a finite search.
+[2026-07-13T02:44:01Z] OK SELECT | DID: Selected focused #424 composition-cover attack | RESULT: D has 20 specified A-elements | D: SELECT -> GATE
+[2026-07-13T02:44:01Z] > GATE | NEXT: Audit A04 exact-cover hypotheses and #424 state for novelty and certificate requirements.
+[2026-07-13T02:46:34Z] OK GATE | DID: Checked A04, arXiv:2507.06875 Thm 7, and exact-phrase searches | RESULT: no #424 composition-cover result found | D: GATE -> PLAN
+[2026-07-13T02:46:34Z] > PLAN | NEXT: Derive periodic-domain certificate equations; frontier is exact partition by D-word maps or a finite-D obstruction.
+[2026-07-13T05:47:02+03:00] > SELECT | NEXT: Fix #424 and inspect recursion, fanout artifacts, and registered novelty gate for a residue-complement density attack.
+[2026-07-13T05:48:19+03:00] OK SELECT | DID: Inspected #424 state and wave2 files | RESULT: B06 paths absent; B01/B02 are affine lanes; registered goal is null | D: SELECT -> GATE
+[2026-07-13T05:48:19+03:00] > GATE | NEXT: Search current primary/indexed sources for a published complement-sieve or positive-density proof for #424.
+[2026-07-13T05:51:37+03:00] OK GATE | DID: Searched official page, OEIS, web, and arXiv-indexed results | RESULT: erdosproblems.com/424 is OPEN, edited 2026-03-31, with 0 claimed solutions | D: GATE -> PLAN
+[2026-07-13T05:51:37+03:00] > PLAN | NEXT: Read affine lanes and derive a finite vector complement recurrence with collision states and exact rational closure conditions.
+[2026-07-13T05:53:36+03:00] OK PLAN | DID: Derived periodic residue-core lemma and finite base reduction | RESULT: criterion Q_d(r) subset R for d quotient states; frontier is nonempty exact core | D: PLAN -> ATTACK
+[2026-07-13T05:53:36+03:00] > ATTACK | NEXT: Implement and run greatest-fixed-point searches over smooth moduli using verified A-divisor multipliers and exact quotient states.
+[2026-07-13T05:56:18+03:00] > ATTACK | NEXT: Run search_periodic_core.py on M=30,90,270,630,1890,5670,13230,39690 with all exact A-divisors and no base mask.
+[2026-07-13T02:49:18Z] OK PLAN | DID: Reduced certificates to periodic invariance, disjoint images, and exact reciprocal-slope sum | RESULT: finite modular checks suffice | D: PLAN -> ATTACK
+[2026-07-13T02:49:18Z] > ATTACK | NEXT: Implement exact word generation, progression/finite-union cover search, and independent certificate replay in wave2/B05.
+[2026-07-13T02:52:32Z] OK ATTACK | DID: Implemented exact modular search and independent verifier | RESULT: problems/424/compute/wave2/B05 has 3 Python files | D: none
+[2026-07-13T02:52:32Z] > ATTACK | NEXT: Run 4 unit tests, then search master=2160, depth=7, q<=48 and residue unions q<=10 at 2000000 nodes/case.
+[2026-07-13T02:54:53Z] FAIL ATTACK | DID: Passed 4 tests; stopped master=2160 search after 122 s | RESULT: nothing; first case exceeded practical branching | D: none
+[2026-07-13T02:54:53Z] > ATTACK | NEXT: Measure candidate conflicts by modulus and add arithmetic obstruction pruning before relaunch.
+[2026-07-13T02:56:15Z] OK ATTACK | DID: Measured master=2160 model and added CP-SAT backend | RESULT: 1058 maps; q=1 has 14776 incidences | D: none
+[2026-07-13T02:56:15Z] > ATTACK | NEXT: Re-run tests and exact CP-SAT search with master=2160, depth=7, q<=48, union q<=10, workers=16.

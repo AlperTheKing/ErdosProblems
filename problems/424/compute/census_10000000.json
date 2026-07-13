@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer ascending divisor recursion",
+  "limit": 10000000,
+  "count": 4952270,
+  "density_numerator": 4952270,
+  "density_denominator": 10000000,
+  "maximum_depth": 22,
+  "maximum_gap": 21,
+  "maximum_gap_endpoints": [173, 194],
+  "checkpoints": [
+    [10, 4],
+    [100, 23],
+    [1000, 250],
+    [10000, 3207],
+    [100000, 39843],
+    [1000000, 457599],
+    [10000000, 4952270]
+  ]
+}

@@ -44,12 +44,13 @@ def generated_up_to(limit: int) -> list[int]:
         assert value not in accepted
         assert not values or values[-1] < value
 
-        old_values = values
-        values = old_values + [value]
+        old_count = len(values)
+        values.append(value)
         accepted.add(value)
 
         # Pair value only with older values. Thus x != value by construction.
-        for x in old_values:
+        for index in range(old_count):
+            x = values[index]
             assert x != value
             candidate = x * value - 1
             if candidate > limit:

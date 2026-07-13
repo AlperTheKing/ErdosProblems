@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "count": 39843,
+  "maximum_depth_a": 14,
+  "maximum_depth_b": 15,
+  "exact_match": true,
+  "mod3_invariant": true,
+  "prefix_verified": [
+    2,
+    3,
+    5,
+    9,
+    14,
+    17,
+    26
+  ]
+}

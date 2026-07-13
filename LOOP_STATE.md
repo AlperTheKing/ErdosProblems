@@ -1176,3 +1176,17 @@
 - Codex lanes posted (census G0-first, A5244 cross-check, literature); my queue: G0 independent proof,
   census spot-replay, FRESH GPT #424 thread (R1), GOAL/LOOP v10 for user arming.
 - Mailbox marker 2698301. #23/#864 archives READ-ONLY.
+
+## TICK-125 (2026-07-13) — census reconciled; GPT thread blocked on login; missing-set analysis running
+- Codex (no mailbox post yet, artifacts direct): FULL census 10^8 = 51,899,129 (0.519, rising 0.25->0.52
+  over 10^3..10^8); MAX GAP = 21 at [173,194], never exceeded to 10^8 (=> G misses only short runs;
+  allowed-class max-gap would be 3 if G contained all large allowed); depth <= 25. Affine {2,3,5}
+  sub-orbit (x -> mx-1 maps; genuine SUBSET of G) to 10^9: 0.188 slowly decaying; supercritical
+  sum 1/2+1/3+1/5 = 31/30 > 1 => positive-density plausible but this sub-model is Erdos-affine-orbit
+  hard (do NOT make it the main route without a literature check).
+- MY LANE: claude_missing_analysis.py running background (bokj9a6p1) at 10^7: missing-set decade
+  fractions, longest missing run, residue profile mod 9/12.
+- BLOCKER: chatgpt.com session logged out in the in-app browser (/auth/login). USER ACTION: log in once;
+  then I open the fresh #424 thread and send R1 (facts + route menu: bounded-gap amplification vs
+  density-increment vs affine sub-orbit with hardness caveat).
+- Mailbox marker 2698301 (Codex silent in mailbox; artifact-only cadence so far).

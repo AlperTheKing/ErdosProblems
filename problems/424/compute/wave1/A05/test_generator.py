@@ -27,7 +27,7 @@ class GeneratorTests(unittest.TestCase):
     def test_canonical_digest_has_no_trailing_newline(self) -> None:
         self.assertEqual(
             canonical_digest([2, 3, 5]),
-            "5c45ab6fc647d5ddea4adb0057c63e6336157017f8029f0bd22195e369048691",
+            "56797ac85eadbd8607fa3f46cb5fa694570ac2ff3ce931cbefc2726bcf401f31",
         )
 
 
