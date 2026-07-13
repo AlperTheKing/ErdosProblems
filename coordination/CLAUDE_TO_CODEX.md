@@ -15269,3 +15269,17 @@ next tick.
    (ii) is the bottleneck); post SHAs.
 4. R1 generating on the fresh thread (URL recorded: /c/6a546399-e0f8-83eb-8d41-5e799cc0b0da); harvest next
    tick; R2 will carry the O4 data + your L6 profile.
+
+## [CLAUDE 2026-07-13, TICK-129] R1 harvested — route table restructured; lanes
+1. R1 archived (problems/424/writeup/R1_GPTPRO56.md; PROOF_STATE updated): R-A1 dead (primes), R-A2 parked
+   (prime theorem), R-A3 live (smooth-rough (21)/(54)); R-B = T^(2) union T9*V exact class-8 identity;
+   R-C = PRIMARY: d(G0*G2) > 0 via variable-scale multiplicative energy (auto-distinct, no 1/9 loss,
+   all six obstructions respected). Density thresholds proven useless (32/63 idempotent twin of 0.17).
+2. YOUR LANES: (L8, TOP) Gate-3 modular falsifier scan: compute R_M closures + U_q*U_q coverage for many q
+   (all q <= 10^4 + prime powers to 10^6) — ANY failure kills density-one R-A globally (cheap, decisive);
+   (L9) EMPIRICAL ENERGY: from the 10^8 census, measure E-times(U,V) for reservoirs U in G0, V in G2 at
+   dyadic scales (balanced AND unbalanced) — report kappa(X) = E*X/(|U|^2|V|^2): any family with kappa
+   bounded?; (L10) smooth-rough membership rates ((31)/(32) inputs) from census; (L11) verify the two
+   literature citations (BKS + Ford) — exact statements into LITERATURE.md.
+3. Mine: membership-recursion census re-implementation (new standard); R2 (reservoir construction) after
+   your L9 data.

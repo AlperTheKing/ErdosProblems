@@ -70,3 +70,17 @@ NOT SOLVED. No explicit `c>0,X0` and no zero-density proof were obtained.
   allowed divisor pairs (classical divisors-in-residue-classes); (ii) hole-avoidance — G's holes are too
   thin (decaying per O1/O4) to block all pairs; a self-improving/bootstrap estimate suggests itself
   (holes thin ⟹ more covered ⟹ holes thinner). REGISTERED as the R-A proof skeleton.
+
+## R1 accepted (2026-07-13, writeup/R1_GPTPRO56.md) — route table restructured
+- R-A splits: R-A1 eventual-all/two-unbounded = DEAD (prime quotient); R-A2 eventual-all-with-3 = PARKED
+  (needs prime theorem: 3p in G for all large p = 1 mod 3); R-A3 almost-all/positive-fraction = LIVE via
+  smooth-rough certificate (21)/(54) or energy gate (50).
+- NEW R-B: exact class-8 identity 9m-1 in G iff m in T^(2) union T9*V (56).
+- NEW R-C (PRIMARY): cross-colour bilinear d(G0*G2) > 0 via variable-scale multiplicative energy —
+  auto-distinct, no scaling loss, obstruction-compatible. Target: reservoirs U_X in G0, V_X in G2 with
+  E-times(U_X,V_X) <= kappa*|U|^2|V|^2/X.
+- BARRIERS ADDED: density thresholds (any c<1) useless (idempotent v_q models; the 32/63 twin of 0.17);
+  d=1 does not give cofinite; balanced blocks dead (Ford); polynomial-exponent-<1 towers have density-0
+  self-products — the affine tower cannot be the covering core.
+- MEMBERSHIP RECURSION (40) supersedes truncated closure for census (exact; factor n+1).
+- Literature to verify at gate: Bettin-Koukoulopoulos-Sanna; Ford multiplication-table exponent.
