@@ -84,3 +84,38 @@ NOT SOLVED. No explicit `c>0,X0` and no zero-density proof were obtained.
   self-products — the affine tower cannot be the covering core.
 - MEMBERSHIP RECURSION (40) supersedes truncated closure for census (exact; factor n+1).
 - Literature to verify at gate: Bettin-Koukoulopoulos-Sanna; Ford multiplication-table exponent.
+
+## 2026-07-13 Claude tick: Gate-3 ALL-PASS + first L9 energy table (both my exact computations)
+
+**(G3) Gate-3 modular falsifier scan — NO modular obstruction found; saturation structure.**
+compute/claude_gate3_modular_scan.py (SHA 06c7529f1fb697de4023606cf8f24d8bfad705e8328f5060238e3ea91efe8d6b),
+q in 2..120 and {125,128,169,243,256,289,343,512}: for EVERY scanned q, |R_3q| = 2q exactly
+(the mod-3q closure of {2,3} under rs-1 saturates to ALL classes not == 1 mod 3), hence
+U_q = Z/q entirely and U_q*U_q = Z/q trivially. VERDICT: density-one/cofinite R-A forms
+SURVIVE Gate-3 at every scanned modulus; the ONLY congruence obstruction visible in this
+family is the mod-3 one (G1). (Pass proves nothing per R1 (46); the saturation fact itself
+is a finite-check lemma candidate per M: R_M = {r : r mod 3 != 1} for 3|M.)
+
+**(E1) First multiplicative-energy table for R-C reservoirs — energy is DIAGONAL-DOMINATED.**
+compute/claude_rc_energy_probe.py (SHA 9462e017bf46fc5b08a1267987b4fa4c037daebdc4892a2cfa666fb5780d5258),
+B=10^6 proven closure; U = G0 cap (Y/2,Y], V = G2 cap (Z/2,Z] (thinned only where flagged):
+
+| Y | Z | \|U\| | \|V\| | thin | E | E/(\|U\|\|V\|) | kappa=EX/(\|U\|^2\|V\|^2) |
+|---|---|-----|-----|------|---|-----------|-------|
+| 10^3 | 10^3 | 57 | 74 | 1 | 4254 | 1.0085 | 239.1 |
+| 10^4 | 10^4 | 712 | 999 | 1 | 747772 | 1.0513 | 147.8 |
+| 10^5 | 10^5 | 8781 | 12253 | 1 | 121003357 | 1.1246 | 104.5 |
+| 10^6 | 10^6 | 99959 | 3903 | 35 | 392531799 | 1.0061 | 2578.9* |
+| 10^3 | 10^6 | 57 | 136590 | 1 | 8108390 | 1.0415 | 133.8 |
+| 10^4 | 10^6 | 712 | 136590 | 1 | 106256268 | 1.0926 | 112.3 |
+
+(*thin=35 inflates kappa by ~35 exactly because E ~ diagonal; the invariant number is the ratio.)
+FACTS: (i) E/(|U||V|) in [1.006, 1.125] across ALL shapes tested — products of G0-window x
+G2-window are nearly all DISTINCT at reachable scales (near-Sidon); (ii) balanced full-window
+kappa DECREASES 239 -> 148 -> 105 (10^3 -> 10^5) because window densities of G0,G2 are still
+rising; kappa ~ 4/(alpha0*alpha2) * ratio if window densities converge. (iii) CIRCULARITY
+WARNING (mine): full-window reservoirs presuppose positive window density of G0,G2 — close to
+the conjecture itself; unconditional tower supply is only X^0.517 and dies by tower thinness
+(52)-(53). So R-C needs either (a) an unconditional reservoir family with |U||V| >> X/polylog
++ provable near-diagonal energy, or (b) a bootstrap exploiting G0*G2-1 SUBSET-OF G2
+(a in G0, b in G2 => ab-1 == 2 mod 3), i.e. G2 self-expansion. This dichotomy = R2 question.
