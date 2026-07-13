@@ -229,7 +229,7 @@ positive-excess matching rows: 8013
 maximum color excess:          24
 maximum T_F:                   144
 Hall deficits:                 0
-decision SHA-256:              a170de24cf8daa660b12dd6b647871f174f4883492f056e1ec3560916df9bc0f
+decision SHA-256:              df7e55fd8d919d3f143fbc226dc4affddbcbaac27349fc4f243f3534c4f61d46
 ```
 
 The `52,832` matching calls include `25,578` automatic-hole translations

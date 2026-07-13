@@ -34377,3 +34377,10 @@
 [2026-07-13T02:01:00Z] > VERIFY | NEXT: Validate all P116 JSON, compile all scripts, rerun independent retained-row checks, and finalize wave6 report.
 [2026-07-13T02:05:00Z] FAIL ATTACK | DID: Full P86 translation gate | RESULT: P124 mod failure: chamber 74 rows/rank73; exact check found 8-row +/-1 dependency | D: P124 dead
 [2026-07-13T02:05:00Z] > VERIFY | NEXT: Fix sparse-rank elimination bug, verify P124 dependency over Q, and rerun dense gates.
+[2026-07-13T02:06:54Z] OK VERIFY | DID: Ran standalone P122 audit on all 20 P110 seeds | RESULT: 52,832 calls, 0 deficits, SHA df7e55fd8d919d3f... | D: none
+[2026-07-13T02:06:55Z] > VERIFY | NEXT: Recompile corrected P122 audit and check the note's counts, hash, and theorem references.
+[2026-07-13T02:07:25Z] OK VERIFY | DID: Compiled all p116 scripts, parsed 19 JSONs, reran two independent verifiers and final assertions | RESULT: P116_FINAL_ASSERTIONS_OK | D: none
+[2026-07-13T02:07:26Z] OK ATTACK | DID: Finalized exact BC108 adversarial report | RESULT: problems/864/fanout/wave6/P116_bc108_falsifier_search.md; no falsifier in declared domains | D: BC108 alive
+[2026-07-13T02:07:50Z] OK VERIFY | DID: Recompiled P122 audit and replayed seed 0 | RESULT: py_compile PASS; 1,738 gate shifts, 0 deficits | D: none
+[2026-07-13T02:07:51Z] > DECIDE | NEXT: Deliver the P122 reserve-overlap reduction and exact live-audit boundary.
+[2026-07-13T02:07:52Z] OK DECIDE | DID: Completed requested P122 artifact | RESULT: problems/864/fanout/wave6/P122_live_color_difference_hall.md | D: sharper reduction

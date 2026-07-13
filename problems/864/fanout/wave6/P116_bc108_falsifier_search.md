@@ -198,11 +198,24 @@ aad17fb6006e51d44e8d739ec684f285af27dae14756f382d114f17925f8f6a5  exhaustive_w31
 353671b5ef5ab1848281cf302e2a91c17a309d23b70e7c275dd1a6461d879866  archive_mutation_search.json
 41c52b97d4e4a5d5532a126132eb4021400434816ee41d15c0015eb6782a3ad9  p88_hole_subsets.json
 f44fb03fe868ed30eff9d76c0fde4ed6da8ff0f42a8e06f7a61a3163f5b3edca  p106_hole_repair.json
+3caccc6cec961a4a9d307af99d03d7e49b62e66459379af3554c314f1674195f  bc108_adversarial_search.json
+aba345eb946536f85dcf686d8259533dd6e516fe06d6994f0b1d22bcf48ee27c  independent_verification.json
+4bffad9ee2686e10534eff05407b67fa9e97ee1b014624cd800b80fde54d3bf6  external_verification.json
 ```
 
-The per-parent CP and parallel-rerun hashes are recorded by
-`external_verification.json`.  `independent_verification.json` records the
-artifact hashes and the independently recomputed retained rows.
+The five formerly unresolved parallel CP artifacts have SHA-256 hashes
+
+```text
+070338dd2d990ddf0b14fc671b0041d384366802eb28361ad93be950f62b7867  parent 174, b=1
+c75cedaeda29f96c7f9f116d3cbd52444a9b44a3f8254e7e4f776741565678a7  parent 174, b=2
+838416f90b7b5941279f968a2109563e91998ac1c8315fa7268f15d765ca4ace  parent 2486, b=1
+3e01137e88a6302a8fef3790fd97f1a0e817684455b720e1a22d5c7325ee365c  parent 2486, b=2
+ad583d1feb0b63ad9cecdd97e3b601f93adcf3e600563ffee55ccda4fde6433f  parent 2500, b=1
+```
+
+The first-pass per-parent hashes are recorded by `external_verification.json`.
+`independent_verification.json` records the primary artifact hashes and the
+independently recomputed retained rows.
 
 ## Reproduction
 

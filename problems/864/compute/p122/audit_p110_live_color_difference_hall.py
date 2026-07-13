@@ -64,7 +64,7 @@ def scan(max_seeds: int | None) -> dict[str, object]:
         "arithmetic": "exact Python integers, bitset hole gate, augmenting-path matching",
         "source": "problems/864/compute/p110/dimension_falsifiers.json failures",
         "seeds": len(seeds),
-        "positive_translations": 0,
+        "candidate_positive_translations": 0,
         "b1_gate_rows": 0,
         "b2_gate_rows": 0,
         "union_gate_rows": 0,
@@ -82,6 +82,9 @@ def scan(max_seeds: int | None) -> dict[str, object]:
         h0 = int(seed["h"])
         p = len(source)
         delta0 = (3 * p * p - p + 2) // 2 - h0
+        result["candidate_positive_translations"] = int(
+            result["candidate_positive_translations"]
+        ) + delta0
         sum_mask, difference_mask = support_masks(source)
         seed_rows = seed_b1 = seed_b2 = seed_positive = 0
 
@@ -115,7 +118,7 @@ def scan(max_seeds: int | None) -> dict[str, object]:
             seed_b1 += gate_b1
             seed_b2 += gate_b2
             seed_positive += int(row["positive_color_excess"]) > 0
-            result["positive_translations"] = int(result["positive_translations"]) + 1
+            result["union_gate_rows"] = int(result["union_gate_rows"]) + 1
             result["b1_gate_rows"] = int(result["b1_gate_rows"]) + gate_b1
             result["b2_gate_rows"] = int(result["b2_gate_rows"]) + gate_b2
             result["matching_calls"] = int(result["matching_calls"]) + 1

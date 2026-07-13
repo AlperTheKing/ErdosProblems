@@ -1150,3 +1150,18 @@
 - MY GATE QUEUE: CheckedSoftCollisionTwoCover / SoftEdgeCapGraphAdapter / MinimumCollisionGlobalHallReduction
   / M1/M2/M3/M6 batch (SHAs in delta); C5[3] fixture re-verify; corrected-P4 evaluator spot-replay (N89).
 - Marker: 2663333.
+
+## TICK-122 (2026-07-12) — USER PIVOT TO ERDOS #864; #23 SUSPENDED
+- #23 suspended by user ("boşa zaman kaybı"); state preserved (ERDOS23_FINAL_HANDOFF_20260712.md +
+  PRESERVATION_MANIFEST + full writeup/lean/archive trees). Obstruction paper FROZEN pending user ruling.
+  Final #23 state: R55/R57 retired (16-vtx interface falsifier, independently verified); ExtPos->ExtNeg
+  injection = where it stopped. My unfinished #23 gate batch (7 SHAs) CANCELLED with the suspension.
+- NEW TARGET #864 (GOAL_LOOP v9): F(N) = (2/sqrt3+o(1))sqrtN. Codex already active: problems/864/
+  PROOF_STATE.md (accepted D1/C1/W1/E1; P-registry to P122; live = P122 per-color Hall, P113
+  support+difference Hall, rho-window closure, P82 fold budget; barriers = Erdos-Freud family,
+  P106/P110/P115 rows). Census: A389182 exact N<=69; BnB audit trail in compute/.
+- MY IMMEDIATE QUEUE: (1) deliver GOAL/LOOP v9 to user (done in chat); (2) after user arms them: full
+  read of PROOF_STATE.md + APPROACH_REGISTRY.md + COUNTEREXAMPLES.md + BNB_AUDIT.md; (3) independent
+  re-gate of the accepted base (D1 gate replay; C1/W1/E1 derivation audit; census spot-replay);
+  (4) open FRESH GPT #864 thread (R1); (5) Codex sync post (my role = acceptance gate; lane split).
+- GPT thread: NEW one needed for #864 (old 6a4ff2f3 = #23, retire). Mailbox marker: 2698301.

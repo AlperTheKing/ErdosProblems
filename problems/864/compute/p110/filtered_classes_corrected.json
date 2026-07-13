@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "field": "GF(1000003)",
+  "systems": 20,
+  "class_rows": 60,
+  "support_failures": 33,
+  "unweighted_failures": 23,
+  "original_weighted_failures": 0,
+  "minimum_weighted_failures": 0,
+  "maximum_same_base": 8,
+  "records": [
+    {
+      "sha256": "078af682f632957904e896735f4c25c54445feb1659cc7cc75c50b07107aca89",
+      "p": 104,
+      "h": 9821,
+      "C_S": 579,
+      "T_F": 1104,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 469,
+          "ambient_dimension": 995,
+          "support_rank": 464,
+          "unweighted_rank": 469,
+          "original_weighted_rank": 469,
+          "minimum_weighted_rank": 469,
+          "maximum_same_base": 5
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 384,
+          "ambient_dimension": 995,
+          "support_rank": 379,
+          "unweighted_rank": 384,
+          "original_weighted_rank": 384,
+          "minimum_weighted_rank": 384,
+          "maximum_same_base": 5
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 251,
+          "ambient_dimension": 995,
+          "support_rank": 251,
+          "unweighted_rank": 251,
+          "original_weighted_rank": 251,
+          "minimum_weighted_rank": 251,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "40aa27830d6a4b0ebcf39fadaa8e869b4b766d8ab9e661bc1918c171b5838405",
+      "p": 126,
+      "h": 15667,
+      "C_S": 651,
+      "T_F": 1190,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 548,
+          "ambient_dimension": 1155,
+          "support_rank": 535,
+          "unweighted_rank": 547,
+          "original_weighted_rank": 548,
+          "minimum_weighted_rank": 548,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 355,
+          "ambient_dimension": 1155,
+          "support_rank": 354,
+          "unweighted_rank": 354,
+          "original_weighted_rank": 355,
+          "minimum_weighted_rank": 355,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 287,
+          "ambient_dimension": 1155,
+          "support_rank": 287,
+          "unweighted_rank": 287,
+          "original_weighted_rank": 287,
+          "minimum_weighted_rank": 287,
+          "maximum_same_base": 4
+        }
+      ]
+    },
+    {
+      "sha256": "861788c845f3d9eb9fe05f82a02e5d0dcafc27ce022640463fd5ffc070082b9a",
+      "p": 128,
+      "h": 15290,
+      "C_S": 716,
+      "T_F": 1386,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 568,
+          "ambient_dimension": 1228,
+          "support_rank": 568,
+          "unweighted_rank": 568,
+          "original_weighted_rank": 568,
+          "minimum_weighted_rank": 568,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 479,
+          "ambient_dimension": 1228,
+          "support_rank": 479,
+          "unweighted_rank": 479,
+          "original_weighted_rank": 479,
+          "minimum_weighted_rank": 479,
+          "maximum_same_base": 5
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 339,
+          "ambient_dimension": 1228,
+          "support_rank": 339,
+          "unweighted_rank": 339,
+          "original_weighted_rank": 339,
+          "minimum_weighted_rank": 339,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "e9c369fb43c3c32d2843c6a1aa48f9fab0de15989cb6b845c416966dc99be394",
+      "p": 128,
+      "h": 15290,
+      "C_S": 716,
+      "T_F": 1343,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 570,
+          "ambient_dimension": 1228,
+          "support_rank": 552,
+          "unweighted_rank": 569,
+          "original_weighted_rank": 570,
+          "minimum_weighted_rank": 570,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 478,
+          "ambient_dimension": 1228,
+          "support_rank": 475,
+          "unweighted_rank": 476,
+          "original_weighted_rank": 478,
+          "minimum_weighted_rank": 478,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 295,
+          "ambient_dimension": 1228,
+          "support_rank": 295,
+          "unweighted_rank": 295,
+          "original_weighted_rank": 295,
+          "minimum_weighted_rank": 295,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "2c79a787e4448fe4df46b066c183bad8706e57d762d81d401583fa857444c950",
+      "p": 129,
+      "h": 15580,
+      "C_S": 778,
+      "T_F": 1345,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 528,
+          "ambient_dimension": 1294,
+          "support_rank": 528,
+          "unweighted_rank": 528,
+          "original_weighted_rank": 528,
+          "minimum_weighted_rank": 528,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 469,
+          "ambient_dimension": 1294,
+          "support_rank": 469,
+          "unweighted_rank": 469,
+          "original_weighted_rank": 469,
+          "minimum_weighted_rank": 469,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 348,
+          "ambient_dimension": 1294,
+          "support_rank": 348,
+          "unweighted_rank": 348,
+          "original_weighted_rank": 348,
+          "minimum_weighted_rank": 348,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "94ab476d35fa914a638964f7188120c8a16ade714e023525ad42b54c6f02cc3a",
+      "p": 129,
+      "h": 15580,
+      "C_S": 778,
+      "T_F": 1842,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 799,
+          "ambient_dimension": 1294,
+          "support_rank": 687,
+          "unweighted_rank": 797,
+          "original_weighted_rank": 799,
+          "minimum_weighted_rank": 799,
+          "maximum_same_base": 8
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 604,
+          "ambient_dimension": 1294,
+          "support_rank": 551,
+          "unweighted_rank": 602,
+          "original_weighted_rank": 604,
+          "minimum_weighted_rank": 604,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 439,
+          "ambient_dimension": 1294,
+          "support_rank": 438,
+          "unweighted_rank": 438,
+          "original_weighted_rank": 439,
+          "minimum_weighted_rank": 439,
+          "maximum_same_base": 7
+        }
+      ]
+    },
+    {
+      "sha256": "1471b63c5b67196d22633c8ba96a008146d246aa4a70d43e14c0c6d89b514889",
+      "p": 138,
+      "h": 17562,
+      "C_S": 882,
+      "T_F": 1963,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 775,
+          "ambient_dimension": 1434,
+          "support_rank": 736,
+          "unweighted_rank": 774,
+          "original_weighted_rank": 775,
+          "minimum_weighted_rank": 775,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 689,
+          "ambient_dimension": 1434,
+          "support_rank": 646,
+          "unweighted_rank": 686,
+          "original_weighted_rank": 689,
+          "minimum_weighted_rank": 689,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 499,
+          "ambient_dimension": 1434,
+          "support_rank": 499,
+          "unweighted_rank": 499,
+          "original_weighted_rank": 499,
+          "minimum_weighted_rank": 499,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "dd94222ca7c633fa0373d27174f8d9da7d07351fe2809745a541b8c0217cc171",
+      "p": 138,
+      "h": 17562,
+      "C_S": 882,
+      "T_F": 1911,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 769,
+          "ambient_dimension": 1434,
+          "support_rank": 705,
+          "unweighted_rank": 767,
+          "original_weighted_rank": 769,
+          "minimum_weighted_rank": 769,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 669,
+          "ambient_dimension": 1434,
+          "support_rank": 641,
+          "unweighted_rank": 669,
+          "original_weighted_rank": 669,
+          "minimum_weighted_rank": 669,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 473,
+          "ambient_dimension": 1434,
+          "support_rank": 473,
+          "unweighted_rank": 473,
+          "original_weighted_rank": 473,
+          "minimum_weighted_rank": 473,
+          "maximum_same_base": 6
+        }
+      ]
+    },
+    {
+      "sha256": "6b70ba6cf338f22444870e8c300d22efa9fe79fc8d64b432203b6083d779c51b",
+      "p": 140,
+      "h": 18930,
+      "C_S": 786,
+      "T_F": 1448,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 573,
+          "ambient_dimension": 1346,
+          "support_rank": 573,
+          "unweighted_rank": 573,
+          "original_weighted_rank": 573,
+          "minimum_weighted_rank": 573,
+          "maximum_same_base": 5
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 489,
+          "ambient_dimension": 1346,
+          "support_rank": 489,
+          "unweighted_rank": 489,
+          "original_weighted_rank": 489,
+          "minimum_weighted_rank": 489,
+          "maximum_same_base": 5
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 386,
+          "ambient_dimension": 1346,
+          "support_rank": 386,
+          "unweighted_rank": 386,
+          "original_weighted_rank": 386,
+          "minimum_weighted_rank": 386,
+          "maximum_same_base": 4
+        }
+      ]
+    },
+    {
+      "sha256": "7432b6c7309fa71143d88a51bd5c30905dee6b9cfdb5e1e413402d8f69922ba2",
+      "p": 140,
+      "h": 18930,
+      "C_S": 786,
+      "T_F": 1592,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 672,
+          "ambient_dimension": 1346,
+          "support_rank": 630,
+          "unweighted_rank": 672,
+          "original_weighted_rank": 672,
+          "minimum_weighted_rank": 672,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 537,
+          "ambient_dimension": 1346,
+          "support_rank": 529,
+          "unweighted_rank": 534,
+          "original_weighted_rank": 537,
+          "minimum_weighted_rank": 537,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 383,
+          "ambient_dimension": 1346,
+          "support_rank": 383,
+          "unweighted_rank": 383,
+          "original_weighted_rank": 383,
+          "minimum_weighted_rank": 383,
+          "maximum_same_base": 4
+        }
+      ]
+    },
+    {
+      "sha256": "0846b1772e15d24604f66d1425b4f06bca6615b2fdf1675bf032d24961a6da88",
+      "p": 150,
+      "h": 21528,
+      "C_S": 935,
+      "T_F": 1816,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 775,
+          "ambient_dimension": 1535,
+          "support_rank": 757,
+          "unweighted_rank": 774,
+          "original_weighted_rank": 775,
+          "minimum_weighted_rank": 775,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 589,
+          "ambient_dimension": 1535,
+          "support_rank": 589,
+          "unweighted_rank": 589,
+          "original_weighted_rank": 589,
+          "minimum_weighted_rank": 589,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 452,
+          "ambient_dimension": 1535,
+          "support_rank": 452,
+          "unweighted_rank": 452,
+          "original_weighted_rank": 452,
+          "minimum_weighted_rank": 452,
+          "maximum_same_base": 6
+        }
+      ]
+    },
+    {
+      "sha256": "caa294e9ed1a7e91db72f10853f4a4ac9c2a60ac2b46ec275fab1dbb293ec3bf",
+      "p": 150,
+      "h": 21528,
+      "C_S": 935,
+      "T_F": 1950,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 848,
+          "ambient_dimension": 1535,
+          "support_rank": 768,
+          "unweighted_rank": 847,
+          "original_weighted_rank": 848,
+          "minimum_weighted_rank": 848,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 612,
+          "ambient_dimension": 1535,
+          "support_rank": 606,
+          "unweighted_rank": 611,
+          "original_weighted_rank": 612,
+          "minimum_weighted_rank": 612,
+          "maximum_same_base": 8
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 490,
+          "ambient_dimension": 1535,
+          "support_rank": 490,
+          "unweighted_rank": 490,
+          "original_weighted_rank": 490,
+          "minimum_weighted_rank": 490,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "59d53387f18aaf8824dddbafec0dce97d2191b96d4dd625133d6eab082b51841",
+      "p": 152,
+      "h": 22278,
+      "C_S": 948,
+      "T_F": 1850,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 711,
+          "ambient_dimension": 1556,
+          "support_rank": 711,
+          "unweighted_rank": 711,
+          "original_weighted_rank": 711,
+          "minimum_weighted_rank": 711,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 711,
+          "ambient_dimension": 1556,
+          "support_rank": 661,
+          "unweighted_rank": 710,
+          "original_weighted_rank": 711,
+          "minimum_weighted_rank": 711,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 428,
+          "ambient_dimension": 1556,
+          "support_rank": 428,
+          "unweighted_rank": 428,
+          "original_weighted_rank": 428,
+          "minimum_weighted_rank": 428,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "a6ccdb66746cffb64f8f14ef06bcfa6d51b393a7a5af797365600265e7dd46da",
+      "p": 152,
+      "h": 22278,
+      "C_S": 948,
+      "T_F": 1864,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 823,
+          "ambient_dimension": 1556,
+          "support_rank": 789,
+          "unweighted_rank": 823,
+          "original_weighted_rank": 823,
+          "minimum_weighted_rank": 823,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 606,
+          "ambient_dimension": 1556,
+          "support_rank": 597,
+          "unweighted_rank": 606,
+          "original_weighted_rank": 606,
+          "minimum_weighted_rank": 606,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 435,
+          "ambient_dimension": 1556,
+          "support_rank": 435,
+          "unweighted_rank": 435,
+          "original_weighted_rank": 435,
+          "minimum_weighted_rank": 435,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "a071602d93e82e9e83f864a7028218a9318eea9f2639daa5c0d50ae1f9288e7d",
+      "p": 158,
+      "h": 24521,
+      "C_S": 974,
+      "T_F": 1989,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 902,
+          "ambient_dimension": 1606,
+          "support_rank": 813,
+          "unweighted_rank": 898,
+          "original_weighted_rank": 902,
+          "minimum_weighted_rank": 902,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 632,
+          "ambient_dimension": 1606,
+          "support_rank": 631,
+          "unweighted_rank": 631,
+          "original_weighted_rank": 632,
+          "minimum_weighted_rank": 632,
+          "maximum_same_base": 8
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 455,
+          "ambient_dimension": 1606,
+          "support_rank": 455,
+          "unweighted_rank": 455,
+          "original_weighted_rank": 455,
+          "minimum_weighted_rank": 455,
+          "maximum_same_base": 5
+        }
+      ]
+    },
+    {
+      "sha256": "d7d6ab2a38e4e8988e04e4fe97c1c242f2e0844c83c9416cf7d4f3a9e75efe90",
+      "p": 158,
+      "h": 24521,
+      "C_S": 974,
+      "T_F": 1931,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 729,
+          "ambient_dimension": 1606,
+          "support_rank": 727,
+          "unweighted_rank": 727,
+          "original_weighted_rank": 729,
+          "minimum_weighted_rank": 729,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 682,
+          "ambient_dimension": 1606,
+          "support_rank": 682,
+          "unweighted_rank": 682,
+          "original_weighted_rank": 682,
+          "minimum_weighted_rank": 682,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 520,
+          "ambient_dimension": 1606,
+          "support_rank": 519,
+          "unweighted_rank": 519,
+          "original_weighted_rank": 520,
+          "minimum_weighted_rank": 520,
+          "maximum_same_base": 8
+        }
+      ]
+    },
+    {
+      "sha256": "0054acce488f1aebdbb36202c492a33c0a9bfb69a74b82be1eb2d4917f944f3b",
+      "p": 164,
+      "h": 26009,
+      "C_S": 1075,
+      "T_F": 2221,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 925,
+          "ambient_dimension": 1731,
+          "support_rank": 869,
+          "unweighted_rank": 925,
+          "original_weighted_rank": 925,
+          "minimum_weighted_rank": 925,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 779,
+          "ambient_dimension": 1731,
+          "support_rank": 761,
+          "unweighted_rank": 779,
+          "original_weighted_rank": 779,
+          "minimum_weighted_rank": 779,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 517,
+          "ambient_dimension": 1731,
+          "support_rank": 517,
+          "unweighted_rank": 517,
+          "original_weighted_rank": 517,
+          "minimum_weighted_rank": 517,
+          "maximum_same_base": 6
+        }
+      ]
+    },
+    {
+      "sha256": "2bbcf629e403294e0544cd8b2ce49569d1e7bd4f66d42269f76117a3b4081cfd",
+      "p": 164,
+      "h": 26009,
+      "C_S": 1075,
+      "T_F": 2390,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 934,
+          "ambient_dimension": 1731,
+          "support_rank": 889,
+          "unweighted_rank": 934,
+          "original_weighted_rank": 934,
+          "minimum_weighted_rank": 934,
+          "maximum_same_base": 8
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 842,
+          "ambient_dimension": 1731,
+          "support_rank": 758,
+          "unweighted_rank": 842,
+          "original_weighted_rank": 842,
+          "minimum_weighted_rank": 842,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 614,
+          "ambient_dimension": 1731,
+          "support_rank": 614,
+          "unweighted_rank": 614,
+          "original_weighted_rank": 614,
+          "minimum_weighted_rank": 614,
+          "maximum_same_base": 8
+        }
+      ]
+    },
+    {
+      "sha256": "22007ce240d79664a5db4d1659cf0967a91b9bfd72b1d60d54593b25d02a9adf",
+      "p": 168,
+      "h": 27262,
+      "C_S": 1159,
+      "T_F": 2659,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 1100,
+          "ambient_dimension": 1831,
+          "support_rank": 959,
+          "unweighted_rank": 1093,
+          "original_weighted_rank": 1100,
+          "minimum_weighted_rank": 1100,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 897,
+          "ambient_dimension": 1831,
+          "support_rank": 841,
+          "unweighted_rank": 896,
+          "original_weighted_rank": 897,
+          "minimum_weighted_rank": 897,
+          "maximum_same_base": 6
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 662,
+          "ambient_dimension": 1831,
+          "support_rank": 662,
+          "unweighted_rank": 662,
+          "original_weighted_rank": 662,
+          "minimum_weighted_rank": 662,
+          "maximum_same_base": 8
+        }
+      ]
+    },
+    {
+      "sha256": "ba2dd01f79fa2c47023f93203dd45adee0973dfc5b3b2645dc79437f60aeea3e",
+      "p": 168,
+      "h": 27262,
+      "C_S": 1159,
+      "T_F": 2696,
+      "classes": [
+        {
+          "minimum_role": 0,
+          "triangles": 1100,
+          "ambient_dimension": 1831,
+          "support_rank": 969,
+          "unweighted_rank": 1097,
+          "original_weighted_rank": 1100,
+          "minimum_weighted_rank": 1100,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 1,
+          "triangles": 917,
+          "ambient_dimension": 1831,
+          "support_rank": 849,
+          "unweighted_rank": 915,
+          "original_weighted_rank": 917,
+          "minimum_weighted_rank": 917,
+          "maximum_same_base": 7
+        },
+        {
+          "minimum_role": 2,
+          "triangles": 679,
+          "ambient_dimension": 1831,
+          "support_rank": 679,
+          "unweighted_rank": 679,
+          "original_weighted_rank": 679,
+          "minimum_weighted_rank": 679,
+          "maximum_same_base": 7
+        }
+      ]
+    }
+  ]
+}
