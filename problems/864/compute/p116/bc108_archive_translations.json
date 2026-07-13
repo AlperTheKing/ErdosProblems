@@ -1,0 +1,162 @@
+{
+  "BC108_falsifier": null,
+  "archive_manifest": [
+    {
+      "bytes": 20726641,
+      "mark_arrays": 192,
+      "path": "problems/864/compute/p46/carry_statistics.json",
+      "sha256": "0c1a800d20b9084ac9c90397b68d4525b9d28745331c4ebedf9f820c2a43eef7",
+      "sidon_orientations_accepted": 192
+    },
+    {
+      "bytes": 22406,
+      "mark_arrays": 1,
+      "path": "problems/864/compute/p53/counterexample_p25_h494.json",
+      "sha256": "58378276242a18a132989c825046f024188a19f74cf6c0bc4c9034c0bd84111b",
+      "sidon_orientations_accepted": 1
+    },
+    {
+      "bytes": 23270,
+      "mark_arrays": 1,
+      "path": "problems/864/compute/p53/counterexample_p26_h494.json",
+      "sha256": "c0228716055886e0a09c2ddec1f8cc31bf3bc0ddf37b21c548a8df5a8745e73d",
+      "sidon_orientations_accepted": 1
+    },
+    {
+      "bytes": 382471,
+      "mark_arrays": 13,
+      "path": "problems/864/compute/p53/dense_optimal_rulers_scan.json",
+      "sha256": "ebba8a78de96fb667776ace5dce614c1c85ccf257594af0b277113ab1fd63bcb",
+      "sidon_orientations_accepted": 13
+    },
+    {
+      "bytes": 7000,
+      "mark_arrays": 10,
+      "path": "problems/864/compute/p54/audit_delta_positive_part.json",
+      "sha256": "9f66ddc43efa24907d22d6131b85b5ac8c618da59b0c692727453b0cbf46caaf",
+      "sidon_orientations_accepted": 10
+    },
+    {
+      "bytes": 315311,
+      "mark_arrays": 260,
+      "path": "problems/864/compute/p57/fold_repair_translation_scan.json",
+      "sha256": "728196130c4e0d6e5bfed6dac860fc5ccc17004850c218a76a20d2d59413f758",
+      "sidon_orientations_accepted": 260
+    },
+    {
+      "bytes": 3915,
+      "mark_arrays": 6,
+      "path": "problems/864/compute/p58/singer_q13_scan.json",
+      "sha256": "ddbaaed4df29c382ee3410896a611ab69ae58e46ff090d9ea5bc359e236a75dc",
+      "sidon_orientations_accepted": 6
+    },
+    {
+      "bytes": 176111,
+      "mark_arrays": 10,
+      "path": "problems/864/compute/p60/audit_results.json",
+      "sha256": "73ecdd6523771e05900e43727b66f639c5ee0fbe64c5b98642f05fde195d290a",
+      "sidon_orientations_accepted": 10
+    },
+    {
+      "bytes": 10961927,
+      "mark_arrays": 2348,
+      "path": "problems/864/compute/p65/dense_subset_optimization.json",
+      "sha256": "d0e20ce34bf5f9765d1b085a8ac813dadf7a2b8fbf6c3d770dbf9518452f3a3e",
+      "sidon_orientations_accepted": 2348
+    },
+    {
+      "bytes": 854641,
+      "mark_arrays": 220,
+      "path": "problems/864/compute/p65/parent_subset_optimization.json",
+      "sha256": "6520f5c689dca87857014275b1dd73c705f417585332d986b0953673ec9cdc06",
+      "sidon_orientations_accepted": 220
+    },
+    {
+      "bytes": 24855,
+      "mark_arrays": 21,
+      "path": "problems/864/compute/p65/hole_restricted_folds.json",
+      "sha256": "c4950b0992e427e78632b35b72a7ba992cce33fba31aadc8c2125fef46838da8",
+      "sidon_orientations_accepted": 21
+    },
+    {
+      "bytes": 14167,
+      "mark_arrays": 11,
+      "path": "problems/864/compute/p69/audit_results.json",
+      "sha256": "b5b19c62b80da0e28504ec8e2e40cf8c6f7aa1c01ab8d7e3a6893847b62bc5c4",
+      "sidon_orientations_accepted": 11
+    },
+    {
+      "bytes": 303830,
+      "mark_arrays": 4,
+      "path": "problems/864/compute/p79/global_shift_bound_audit.json",
+      "sha256": "ce07bc232cc9e024a19bd415851950667dcdbc6757b492323d728a032c8cb7fc",
+      "sidon_orientations_accepted": 4
+    },
+    {
+      "bytes": 33010,
+      "mark_arrays": 3,
+      "path": "problems/864/compute/p79/named_witness_audit.json",
+      "sha256": "e890b58adca6c8f2ac3c96a19168b6caa0e13491e944faba69d92819022b3b62",
+      "sidon_orientations_accepted": 3
+    },
+    {
+      "bytes": 161282,
+      "mark_arrays": 18,
+      "path": "problems/864/compute/p79/outer_codegree_audit.json",
+      "sha256": "75b7d6d8987ec49e70d177cebb7d94595525f435011f77390895fca0a45f1c44",
+      "sidon_orientations_accepted": 18
+    }
+  ],
+  "arithmetic": "exact Python integers; exact augmenting-path capacitated matching",
+  "candidates": {
+    "BC108": "sum_u max(t_u-n_u,0) <= p",
+    "difference_Hall": "d_u copies of each color match to distinct values in D_u"
+  },
+  "complete_width_interval": [
+    31,
+    40
+  ],
+  "difference_Hall_falsifier": null,
+  "lanes": {
+    "archive_translations": {
+      "bases": 2450,
+      "best_row": {
+        "B": [
+          3,
+          12,
+          13,
+          25,
+          31,
+          33,
+          36
+        ],
+        "BC108_margin": -7,
+        "C_S": 3,
+        "T_F": 0,
+        "b": 1,
+        "delta": 34,
+        "demand": {},
+        "difference_hall_deficit": 0,
+        "difference_hall_matching": 0,
+        "exposed_differences": 0,
+        "h": 37,
+        "p": 7,
+        "positive_color_excess": 0,
+        "source": "problems/864/compute/p46/carry_statistics.json/p20/reports/31/B[kind=endpoint,source_id=endpoint-8644c4fc07c7] | problems/864/compute/p57/fold_repair_translation_scan.json/reports/29/best/Z | problems/864/compute/p57/fold_repair_translation_scan.json/reports/29/best_scale/Z",
+        "transform": "gamma=3",
+        "width": 33
+      },
+      "candidates": 1607216,
+      "definition": "all P86 archived oriented Sidon bases of width >= 31; all positive-defect folded translations; b=1,2",
+      "domain_sha256": "12c3fe125412745a3953fb52f79de7b0cf2a3ca2cae1e8185fc560d1d08e727b",
+      "first_BC108_failure": null,
+      "first_difference_hall_failure": null,
+      "literal_holes": 312887,
+      "live_rows": 312887,
+      "live_rows_sha256": "8ac96510f297093a6dc9b38bda3160a9dc5a8584538a59be7b7ec9e7f92c0691",
+      "positive_excess_rows": 17048,
+      "triangle_rows": 239020
+    }
+  },
+  "schema_version": 1
+}
