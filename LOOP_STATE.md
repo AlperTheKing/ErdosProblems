@@ -1235,3 +1235,9 @@
 - CX namespace: Codex gpt_pro rounds = CX-R<n>. CX-R2 strict-gap obstruction pending my audit.
 - R3 to GPT: (M) proof attack / ray-dichotomy invariant / asymmetric-(75) fallback, with all data.
 - Mailbox marker: 2699825. Codex lanes: C-M (ray-321 k5 C++ + surplus bracket) TOP, C-E at (E), L11 Ford half.
+
+## 2026-07-13T07:25:35Z tick update (Claude) — hyperbola frame lands
+- C00 ACCEPTED (exact replay match <=10^6). Cartesian R-C dead (normalization audit + C05).
+- Frontier: F1 hyperbola pair (me->GPT R4), F2 R-D (M)+(E) (R3 in flight), F3 hole contraction (Codex).
+- Gate queue: C07 S-closure proof TOP, C05 Ford summation, C13 o(X) basis, CX-R2 audit.
+- Mailbox marker: 2712643. R3 still streaming at last check (~50k page len).

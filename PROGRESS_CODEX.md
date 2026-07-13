@@ -34655,5 +34655,41 @@
 [2026-07-13T10:13:08.1575639+03:00] > ATTACK | NEXT: Build and run all-event rank-majorization audit through X=10000000, depths 0..63, offset=5.
 [2026-07-13T10:14:02+03:00] OK VERIFY | DID: replayed C19 collision-language tests | RESULT: 11/11 pass; >=(D-6)(D-5)/2 indecomposable 25-block states, finite witness-respecting language dead | D: C09 finite-language shortcut dead
 [2026-07-13T10:14:12+03:00] > ATTACK | NEXT: launch C24 derivation-rank/matching discovery lane for the grounded C16 contraction after closure-only falsifier
+[2026-07-13T10:14:56+03:00] OK SELECT | DID: Took lane C24 on problem 424 | RESULT: target is grounded C16 contraction after C22 X=362 closure-only falsifier | D: SELECT->GATE
+[2026-07-13T10:14:56+03:00] > GATE | NEXT: Read proof state, C16 result_1e9.json, and C22 SAT report to fix definitions and prior obstructions.
 [2026-07-13T10:14:50+03:00] OK ATTACK | DID: Replayed C22 by descending witness ranks | RESULT: 1496 grounded, 1384 ungrounded; grounded excess=-515 | D: rank gate mandatory
 [2026-07-13T10:14:50+03:00] > VERIFY | NEXT: Run C17 exact small-case tests for ranks, healing, weighted charge, and Hall witnesses.
+[2026-07-13T10:15:13+03:00] OK VERIFY | DID: Ran C17 independent exact oracle | RESULT: 3/3 pass through X=2000; Hall deficit at X=54 reproduced | D: none
+[2026-07-13T10:15:13+03:00] > ATTACK | NEXT: Launch rank-aware all-factor census at X=100000000 with exact rational gates.
+[2026-07-13T10:16:00+03:00] OK VERIFY | DID: Replayed C20 twice and ran independent oracles | RESULT: byte-identical JSON; 180 endpoint bits and 166667 arithmetic cases passed | D: none
+[2026-07-13T10:16:00+03:00] > CHECK | NEXT: Classify the proved low-multiplicity lemma and exact transfer falsifiers against the C20 deliverable.
+[2026-07-13T10:16:15+03:00] OK ATTACK | DID: Ran rank-aware census to X=100000000 | RESULT: hard=3368726, healed=5948614, max rank=20, direct max=101/80 | D: none
+[2026-07-13T10:16:15+03:00] > ATTACK | NEXT: Launch exact rank-aware all-factor census at X=1000000000; one process, integer gates.
+[2026-07-13T10:16:17+03:00] OK GATE | DID: Audited PROOF_STATE, C16 result_1e9, and C22 SAT report | RESULT: true G passes to 1e9; closure-only first excess 1 at X=362 | D: GATE->PLAN
+[2026-07-13T10:16:17+03:00] > PLAN | NEXT: Recover exact hole definitions, then test derivation-ranked factor-choice graphs and extract their first Hall deficits.
+[2026-07-13T10:16:20+03:00] OK CHECK | DID: Classified C20 output | RESULT: Lemma 2 is new target-scale fact; r=258133 and r=1732597 falsify pointwise transfer | D: stall=0
+[2026-07-13T10:16:20+03:00] > DECIDE | NEXT: Decide whether the proved lemma, weaker density gate, and exact obstruction complete the assigned C20 lane.
+[2026-07-13T10:16:40+03:00] OK DECIDE | DID: Closed assigned C20 lane | RESULT: C20 proves low-A=o(R/log z), gives SR-R+, and records exact blockers; SR-R open | D: deliverable complete
+[2026-07-13T10:17:32.7445172+03:00] FAIL ATTACK | DID: Audited rank switches through X=10000000 | RESULT: strict first fails X=362,d=2; offset-5 max excess=12080 | D: fixed-depth switch DEAD
+[2026-07-13T10:17:32.7445172+03:00] > ATTACK | NEXT: Test additive-one peeling inequality for every hard event and depth 0..63 through X=100000000.
+[2026-07-13T10:17:52+03:00] > ATTACK | NEXT: launch C25 multiseed-sieve lane to prove hard reducible holes o(X), an alternate closure of C16 avoiding exact Hall matching
+[2026-07-13T10:18:09.1212064+03:00] OK ATTACK | DID: Audited rank majorization through X=100000000 | RESULT: max H<=d-Q<=d excess=1 at X=362,d=2 | D: additive-one survives
+[2026-07-13T10:18:09.1212064+03:00] > ATTACK | NEXT: Run additive-one rank audit at every hard event, depths 0..63, through X=1000000000.
+[2026-07-13T10:18:48+03:00] OK SELECT | DID: Selected #424 C25 hard-hole sieve | RESULT: C16 defines H as even reducible non-seed3 holes | D: SELECT -> GATE
+[2026-07-13T10:18:48+03:00] > GATE | NEXT: Audit repository and cited sources for an existing theorem H(X)=o(X).
+[2026-07-13T10:19:08+03:00] OK ATTACK | DID: Ran C17 rank census to X=1000000000 | RESULT: hard=29010146, healed=55583430, surplus=26573284, max rank=23 | D: none
+[2026-07-13T10:19:08+03:00] > VERIFY | NEXT: Referee the exact identities and isolate the weakest rank-grounded residual lemma implying density.
+[2026-07-13T10:19:24+03:00] OK VERIFY | DID: rebuilt/replayed C20 shifted-sifted auditor | RESULT: 1,389,436 candidates; replay SHA matches 9FE98846...; exact blockers r=258133,1732597 | D: pointwise SR-R transfer dead
+[2026-07-13T10:20:25+03:00] OK PLAN | DID: Defined descending grounded Horn ranks | RESULT: death(n)=1+max_pairs min missing-endpoint death | D: frontier=stage contraction
+[2026-07-13T10:20:25+03:00] > ATTACK | NEXT: Implement and run exact stage/rank gates for true G through X=200000.
+[2026-07-13T10:20:38+03:00] OK GATE | DID: Checked official page and local C18-C22 | RESULT: #424 open; no listed partial solution; no finite H recurrence | D: GATE -> PLAN
+[2026-07-13T10:20:38+03:00] > PLAN | NEXT: Derive disjoint fixed-multiplier parent types and their normalized transition matrix.
+[2026-07-13T10:22:38+03:00] OK PLAN | DID: Reduced C16 target to hard holes versus healed seed-2 parents | RESULT: odd+hard<=Mhalf iff hard<=healed | D: PLAN->ATTACK
+[2026-07-13T10:22:38+03:00] > ATTACK | NEXT: Implement C24 exact least-closure/rank oracle and scan healed-factor gate at every cutoff through X=1000000.
+[2026-07-13T10:22:38+03:00] OK VERIFY | DID: Refereed seed partition and grounding | RESULT: exact M=E+Mhalf+S+H-Q; grounded closure iff every member has finite rank | D: frontier
+[2026-07-13T10:22:38+03:00] > ATTACK | NEXT: Add and run all-cutoff Q8/Q9 rank-truncated healing gates through X=1000000000.
+[2026-07-13T10:23:55+03:00] OK VERIFY | DID: Recompiled C17 and ran independent rank-cap oracle | RESULT: 3/3 tests pass through X=2000 | D: none
+[2026-07-13T10:23:55+03:00] > ATTACK | NEXT: Scan Q8/Q9 contraction at every event through X=1000000000; one process, exact ranks.
+[2026-07-13T10:24:27+03:00] > ATTACK | NEXT: launch C26 exact aggregated cross-k energy probe for Fable R-D gate (E), including all cross-block collisions
+[2026-07-13T10:25:02+03:00] OK ATTACK | DID: Scanned C24 healed-factor gate through X=1000000 | RESULT: first hard 54 has only 5*11; holes 11 and 21 give no healed neighbor | D: gate DEAD
+[2026-07-13T10:25:02+03:00] > VERIFY | NEXT: Brute-force the least closure through 54 and cross-check the X=1000000 census against C16.

@@ -61,6 +61,7 @@ struct Observation {
     bool no_two_mod_three_prime = false;
     bool exceptional_square = false;
     bool fixed_11_prime_block = false;
+    bool even_square = false;
 };
 
 struct Stats {
@@ -75,6 +76,7 @@ struct Stats {
     std::uint64_t unique_blocked = 0;
     std::uint64_t multi_blocked = 0;
     std::uint64_t fixed_11_prime_block = 0;
+    std::uint64_t even_square_splitless = 0;
 
     Bounds harmonic;
     Bounds present_harmonic;
@@ -85,6 +87,7 @@ struct Stats {
     Bounds unique_blocked_harmonic;
     Bounds multi_blocked_harmonic;
     Bounds fixed_11_prime_block_harmonic;
+    Bounds even_square_splitless_harmonic;
     Bounds arithmetic_pair_mass;
     Bounds hole_endpoint_mass;
     Bounds witness_first_moment;
@@ -149,6 +152,10 @@ struct Stats {
             ++fixed_11_prime_block;
             fixed_11_prime_block_harmonic.add(1, s);
         }
+        if (row.even_square) {
+            ++even_square_splitless;
+            even_square_splitless_harmonic.add(1, s);
+        }
     }
 
     void merge(const Stats& other) {
@@ -163,6 +170,7 @@ struct Stats {
         unique_blocked += other.unique_blocked;
         multi_blocked += other.multi_blocked;
         fixed_11_prime_block += other.fixed_11_prime_block;
+        even_square_splitless += other.even_square_splitless;
         harmonic.merge(other.harmonic);
         present_harmonic.merge(other.present_harmonic);
         missing_harmonic.merge(other.missing_harmonic);
@@ -172,6 +180,7 @@ struct Stats {
         unique_blocked_harmonic.merge(other.unique_blocked_harmonic);
         multi_blocked_harmonic.merge(other.multi_blocked_harmonic);
         fixed_11_prime_block_harmonic.merge(other.fixed_11_prime_block_harmonic);
+        even_square_splitless_harmonic.merge(other.even_square_splitless_harmonic);
         arithmetic_pair_mass.merge(other.arithmetic_pair_mass);
         hole_endpoint_mass.merge(other.hole_endpoint_mass);
         witness_first_moment.merge(other.witness_first_moment);
@@ -245,6 +254,7 @@ void write_stats(std::ostream& out, const Stats& row) {
         << ",\"unique_pair_blocked\":" << row.unique_blocked
         << ",\"multi_pair_blocked\":" << row.multi_blocked
         << ",\"fixed_11_times_G2_prime\":" << row.fixed_11_prime_block
+        << ",\"even_square_splitless\":" << row.even_square_splitless
         << "},\"harmonic_bounds\":{";
     out << "\"H\":"; write_bounds(out, row.harmonic);
     out << ",\"present\":"; write_bounds(out, row.present_harmonic);
@@ -256,6 +266,8 @@ void write_stats(std::ostream& out, const Stats& row) {
     out << ",\"multi_pair_blocked\":"; write_bounds(out, row.multi_blocked_harmonic);
     out << ",\"fixed_11_times_G2_prime\":";
     write_bounds(out, row.fixed_11_prime_block_harmonic);
+    out << ",\"even_square_splitless\":";
+    write_bounds(out, row.even_square_splitless_harmonic);
     out << ",\"arithmetic_pair_mass\":";
     write_bounds(out, row.arithmetic_pair_mass);
     out << ",\"hole_endpoint_mass\":";
@@ -362,6 +374,13 @@ int main(int argc, char** argv) {
         const auto p = spf[n];
         largest_prime_factor[n] = std::max(p, largest_prime_factor[n / p]);
     }
+    std::vector<std::uint8_t> even_square(
+        static_cast<std::size_t>(limit) + 1,
+        0
+    );
+    for (std::uint64_t root = 2; root * root <= limit; root += 2) {
+        even_square[root * root] = 1;
+    }
 
     std::vector<std::uint32_t> y_values;
     for (const std::uint32_t value :
@@ -419,6 +438,7 @@ int main(int argc, char** argv) {
         }
 
         Observation observation;
+        observation.even_square = even_square[s] != 0;
         observation.shifted_prime =
             factorization.size() == 1 && factorization[0].exponent == 1;
         observation.no_two_mod_three_prime = std::all_of(
@@ -493,6 +513,9 @@ int main(int argc, char** argv) {
         if ((observation.arithmetic_pairs == 0) != splitless_characterization) {
             throw std::runtime_error("splitless characterization failed");
         }
+        if (observation.even_square && observation.arithmetic_pairs != 0) {
+            throw std::runtime_error("even-square counterfamily failed");
+        }
         if (observation.hole_endpoints <
                 observation.arithmetic_pairs - observation.witness_pairs ||
             observation.hole_endpoints >
@@ -557,6 +580,7 @@ int main(int argc, char** argv) {
         << "\"K(s)=0 iff 3s+1 has no 2mod3 prime divisor or equals p^2 with p=2mod3\","
         << "\"K-R <= hole_endpoints <= 2(K-R) pointwise\","
         << "\"D2=tau(N1)(tau(N2)-1_{N2 square})/2 pointwise\","
+        << "\"every even square s has K(s)=0 pointwise\","
         << "\"#2mod3 divisors = 2K plus the excluded equal-square indicator\"],";
     out << "\"rows\":[";
     bool first_row = true;

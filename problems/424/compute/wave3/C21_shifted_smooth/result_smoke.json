@@ -1,10 +1,10 @@
 {
   "C21_analyzer": {
     "compiler_version": "g++.EXE (Rev5, Built by MSYS2 project) 16.1.0",
-    "script_sha256": "6720437b6c270882c0d94a7a8ec7a8faa9cea5d2e12135904b7774ec85c678e1",
-    "source_sha256": "a4e5957fd73ad1cd6a55cae74426d33ebbe74c518e61ed1c9084dfb317e44b7f",
-    "stderr": "",
-    "stdout": "smooth_limit=1000 G_bitmap_bytes=3002 rows=14 elapsed_seconds=0.0003085"
+    "row_count": 14,
+    "script_sha256": "3ae7f95eb7b19d878ed8599d9f74e7235559f607bb392cac36c773abfc58b132",
+    "source_sha256": "739b12c4f051ba4bd12a937aa5ec2dbc5d2b7139dcf575dfacc2404e9419d7ce",
+    "stderr": ""
   },
   "G_builder": {
     "accepted_prefix_checks": [
@@ -36,6 +36,7 @@
       "K(s)=0 iff 3s+1 has no 2mod3 prime divisor or equals p^2 with p=2mod3",
       "K-R <= hole_endpoints <= 2(K-R) pointwise",
       "D2=tau(N1)(tau(N2)-1_{N2 square})/2 pointwise",
+      "every even square s has K(s)=0 pointwise",
       "#2mod3 divisors = 2K plus the excluded equal-square indicator"
     ],
     "bin_labels": [
@@ -911,6 +912,7 @@
           "T_missing": 8,
           "T_present": 1,
           "blocked": 1,
+          "even_square_splitless": 4,
           "exceptional_p2_square": 1,
           "fixed_11_times_G2_prime": 0,
           "multi_pair_blocked": 0,
@@ -935,6 +937,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1953125000000000",
             "upper_numerator": "1953125000000000"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "332031250000000000",
+            "upper_numerator": "332031250000000000"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -1193,6 +1200,7 @@
           "T_missing": 28,
           "T_present": 11,
           "blocked": 4,
+          "even_square_splitless": 8,
           "exceptional_p2_square": 2,
           "fixed_11_times_G2_prime": 1,
           "multi_pair_blocked": 0,
@@ -1217,6 +1225,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "82971643518518517",
             "upper_numerator": "82971643518518520"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "371576003086419751",
+            "upper_numerator": "371576003086419755"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -1475,6 +1488,7 @@
           "T_missing": 71,
           "T_present": 14,
           "blocked": 19,
+          "even_square_splitless": 11,
           "exceptional_p2_square": 3,
           "fixed_11_times_G2_prime": 3,
           "multi_pair_blocked": 5,
@@ -1499,6 +1513,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "464506365740740733",
             "upper_numerator": "464506365740740747"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "385187114197530862",
+            "upper_numerator": "385187114197530867"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -1757,6 +1776,7 @@
           "T_missing": 114,
           "T_present": 26,
           "blocked": 37,
+          "even_square_splitless": 13,
           "exceptional_p2_square": 5,
           "fixed_11_times_G2_prime": 4,
           "multi_pair_blocked": 9,
@@ -1781,6 +1801,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "744313644472339186",
             "upper_numerator": "744313644472339218"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "391564665217939024",
+            "upper_numerator": "391564665217939031"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -2039,6 +2064,7 @@
           "T_missing": 153,
           "T_present": 38,
           "blocked": 51,
+          "even_square_splitless": 14,
           "exceptional_p2_square": 6,
           "fixed_11_times_G2_prime": 4,
           "multi_pair_blocked": 15,
@@ -2063,6 +2089,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "810278862515479301",
             "upper_numerator": "810278862515479347"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "393630780920418362",
+            "upper_numerator": "393630780920418370"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -2321,6 +2352,7 @@
           "T_missing": 224,
           "T_present": 62,
           "blocked": 85,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 7,
           "fixed_11_times_G2_prime": 6,
           "multi_pair_blocked": 32,
@@ -2345,6 +2377,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1029564337866655805",
             "upper_numerator": "1029564337866655885"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -2603,6 +2640,7 @@
           "T_missing": 298,
           "T_present": 103,
           "blocked": 120,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 8,
           "multi_pair_blocked": 39,
@@ -2627,6 +2665,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1238317834222623566",
             "upper_numerator": "1238317834222623681"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -2885,6 +2928,7 @@
           "T_missing": 387,
           "T_present": 141,
           "blocked": 174,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 10,
           "multi_pair_blocked": 59,
@@ -2909,6 +2953,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1500030028756641715",
             "upper_numerator": "1500030028756641884"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -3167,6 +3216,7 @@
           "T_missing": 436,
           "T_present": 170,
           "blocked": 199,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 11,
           "multi_pair_blocked": 68,
@@ -3191,6 +3241,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1615461021995350515",
             "upper_numerator": "1615461021995350709"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -3449,6 +3504,7 @@
           "T_missing": 474,
           "T_present": 190,
           "blocked": 220,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 13,
           "multi_pair_blocked": 80,
@@ -3473,6 +3529,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1676384554457761977",
             "upper_numerator": "1676384554457762192"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -3731,6 +3792,7 @@
           "T_missing": 518,
           "T_present": 224,
           "blocked": 243,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 13,
           "multi_pair_blocked": 91,
@@ -3755,6 +3817,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1745871003281651594",
             "upper_numerator": "1745871003281651832"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -4013,6 +4080,7 @@
           "T_missing": 571,
           "T_present": 260,
           "blocked": 274,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 15,
           "multi_pair_blocked": 105,
@@ -4037,6 +4105,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1833425578782699441",
             "upper_numerator": "1833425578782699710"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -4295,6 +4368,7 @@
           "T_missing": 627,
           "T_present": 300,
           "blocked": 305,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 16,
           "multi_pair_blocked": 120,
@@ -4319,6 +4393,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1898401990020639474",
             "upper_numerator": "1898401990020639774"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",
@@ -4577,6 +4656,7 @@
           "T_missing": 654,
           "T_present": 345,
           "blocked": 332,
+          "even_square_splitless": 15,
           "exceptional_p2_square": 8,
           "fixed_11_times_G2_prime": 16,
           "multi_pair_blocked": 136,
@@ -4601,6 +4681,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "1934964647358292516",
             "upper_numerator": "1934964647358292843"
+          },
+          "even_square_splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "395110070861246764",
+            "upper_numerator": "395110070861246773"
           },
           "fixed_11_times_G2_prime": {
             "denominator": "1000000000000000000",

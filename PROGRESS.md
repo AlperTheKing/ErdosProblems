@@ -3177,3 +3177,6 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-13T07:14:17Z] ✔ WAVE3-SCAN | DID: read Codex C00-C22 + gpt_pro (CX-R2 strict-gap) | RESULT: C05 kills single-window kappa (R1 48-51); C01 L9-EXT kappa=92.6@10^7 ratio rising; C04 BKS cite verified | Δ: R-D aggregated gate (E) = the live target
 [2026-07-13T07:14:17Z] ✔ 424-TICK | DID: PROOF_STATE M2+wave3 reconciliation; TICK-133 (namespace CX-R<n>; C-M refined: ray-321 k5 + surplus bracket; C-E at gate (E)) | RESULT: files updated | Δ: none
 [2026-07-13T07:15:18Z] ✔ 424-R3 | DID: sent R3 to GPT-5.6 Pro ((M) prove-or-refute: ray-dichotomy invariant + second-moment (63) reduction + asymmetric-(75)/fallback-(77) branches; all M2+wave3 data attached) | RESULT: streaming | Δ: none
+[2026-07-13T07:25:35Z] ✔ GATE-C00 | DID: claude_hyperbola_regate.py 10^6 | RESULT: EXACT match all four scales (P,Q,E); kappa_hyp 8.84->5.21; SHA 18eb9e48 | Δ: C00 ACCEPTED <=10^6; hyperbola = primary frame candidate
+[2026-07-13T07:25:35Z] ✔ MAILBOX-134 | DID: reconciled 12.8KB delta (10 posts) | RESULT: Cartesian R-C dead (normalization+C05); C07 recurrence + C09 criterion + C13/C16 hole-contraction registered; 3-mechanism frontier | Δ: route table restructured
+[2026-07-13T07:25:35Z] ✔ 424-TICK | DID: PROOF_STATE + TICK-134 (C00 accepted; F1/F2/F3 owners; gate queue: C07 S-closure TOP) | RESULT: files updated | Δ: none

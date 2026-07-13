@@ -66,6 +66,15 @@ struct Snapshot {
     std::vector<ShellRow> shells;
 };
 
+struct RankCapAudit {
+    std::uint16_t cap;
+    std::uint64_t healed;
+    std::uint32_t first_failure_x;
+    std::uint32_t last_failure_x;
+    std::uint64_t maximum_excess;
+    std::uint32_t maximum_excess_x;
+};
+
 bool is_allowed(std::uint32_t value) {
     return value >= 2 && value % 3 != 1;
 }
@@ -125,6 +134,21 @@ std::string to_string(const cpp_int& value) {
 
 void ensure_size(std::vector<std::uint64_t>& values, std::size_t index) {
     if (values.size() <= index) values.resize(index + 1, 0);
+}
+
+void observe_rank_cap(
+    RankCapAudit& audit,
+    std::uint32_t x,
+    std::uint64_t hard_reducible
+) {
+    if (hard_reducible <= audit.healed) return;
+    const std::uint64_t excess = hard_reducible - audit.healed;
+    if (audit.first_failure_x == 0) audit.first_failure_x = x;
+    audit.last_failure_x = x;
+    if (excess > audit.maximum_excess) {
+        audit.maximum_excess = excess;
+        audit.maximum_excess_x = x;
+    }
 }
 
 Snapshot make_snapshot(
@@ -427,6 +451,10 @@ int main(int argc, char** argv) {
     std::uint64_t seed2_healed = 0;
     std::vector<std::uint64_t> rank_histogram{2};
     std::vector<std::uint64_t> healing_rank_histogram{0};
+    std::vector<RankCapAudit> rank_cap_audits{
+        RankCapAudit{8, 0, 0, 0, 0, 0},
+        RankCapAudit{9, 0, 0, 0, 0, 0},
+    };
 
     std::vector<std::uint32_t> checkpoints{32, 100, 362};
     for (std::uint64_t value = 1000; value <= limit; value *= 10) {
@@ -466,6 +494,7 @@ int main(int argc, char** argv) {
     for (std::uint32_t n = 2; n <= limit; ++n) {
         pairs.clear();
         std::uint16_t best_rank = kNoRank;
+        bool rank_cap_event = false;
         if (n >= 4) {
             const std::uint32_t product = n + 1;
             std::uint32_t remaining = product;
@@ -515,6 +544,10 @@ int main(int argc, char** argv) {
                     ++seed2_healed;
                     ensure_size(healing_rank_histogram, best_rank);
                     ++healing_rank_histogram[best_rank];
+                    for (RankCapAudit& audit : rank_cap_audits) {
+                        if (best_rank <= audit.cap) ++audit.healed;
+                    }
+                    rank_cap_event = true;
                 }
             }
         }
@@ -533,6 +566,7 @@ int main(int argc, char** argv) {
                         ++seed3_even_reducible;
                     } else {
                         ++hard_reducible;
+                        rank_cap_event = true;
                     }
                 }
                 const std::size_t pair_count = pairs.size();
@@ -574,6 +608,12 @@ int main(int argc, char** argv) {
                         ++forced_seed_load[left];
                     }
                 }
+            }
+        }
+
+        if (rank_cap_event) {
+            for (RankCapAudit& audit : rank_cap_audits) {
+                observe_rank_cap(audit, n, hard_reducible);
             }
         }
 
@@ -653,6 +693,18 @@ int main(int argc, char** argv) {
     out << "  \"schema_version\":1,\n";
     out << "  \"arithmetic\":\"integer gates; reciprocal sums reduced exactly\",\n";
     out << "  \"rank_definition\":\"seeds rank 0; minimum 1+max factor ranks over generated witness pairs\",\n";
+    out << "  \"rank_cap_healing_audit\":[\n";
+    for (std::size_t index = 0; index < rank_cap_audits.size(); ++index) {
+        const RankCapAudit& audit = rank_cap_audits[index];
+        out << "    {\"cap\":" << audit.cap
+            << ",\"healed\":" << audit.healed
+            << ",\"first_failure_X\":" << audit.first_failure_x
+            << ",\"last_failure_X\":" << audit.last_failure_x
+            << ",\"maximum_excess\":" << audit.maximum_excess
+            << ",\"maximum_excess_X\":" << audit.maximum_excess_x << "}"
+            << (index + 1 == rank_cap_audits.size() ? "\n" : ",\n");
+    }
+    out << "  ],\n";
     out << "  \"limit\":" << limit << ",\n";
     out << "  \"weight_scale\":" << kWeightScale << ",\n";
     out << "  \"maximum_admissible_pair_count_on_reducible_hole\":"

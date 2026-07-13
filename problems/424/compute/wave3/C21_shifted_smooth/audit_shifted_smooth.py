@@ -336,7 +336,7 @@ def main() -> None:
                 "source_sha256": analyzer_compile["source_sha256"],
                 "script_sha256": sha256_path(Path(__file__).resolve()),
                 "compiler_version": analyzer_compile["compiler_version"],
-                "stdout": completed.stdout.strip(),
+                "row_count": len(raw["rows"]),
                 "stderr": completed.stderr.strip(),
             },
             "audit": raw,

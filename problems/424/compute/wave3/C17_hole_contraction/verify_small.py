@@ -48,6 +48,17 @@ def naive_census(limit: int) -> dict:
     seed2_healed = 0
     rank_histogram = [2]
     healing_rank_histogram = [0]
+    rank_cap_audits = {
+        cap: {
+            "cap": cap,
+            "healed": 0,
+            "first_failure_X": 0,
+            "last_failure_X": 0,
+            "maximum_excess": 0,
+            "maximum_excess_X": 0,
+        }
+        for cap in (8, 9)
+    }
 
     for n in range(2, limit + 1):
         pairs = admissible_pairs(n)
@@ -69,6 +80,9 @@ def naive_census(limit: int) -> dict:
                 while len(healing_rank_histogram) <= rank[n]:
                     healing_rank_histogram.append(0)
                 healing_rank_histogram[rank[n]] += 1
+                for cap, audit in rank_cap_audits.items():
+                    if rank[n] <= cap:
+                        audit["healed"] += 1
 
         missing_prefix[n] = missing_prefix[n - 1]
         if allowed(n) and not member[n]:
@@ -93,6 +107,17 @@ def naive_census(limit: int) -> dict:
                 fixed_charge_num += missing_incidences * (
                     (WEIGHT_SCALE + pair_count - 1) // pair_count
                 )
+
+        for audit in rank_cap_audits.values():
+            excess = hard_reducible - audit["healed"]
+            if excess <= 0:
+                continue
+            if not audit["first_failure_X"]:
+                audit["first_failure_X"] = n
+            audit["last_failure_X"] = n
+            if excess > audit["maximum_excess"]:
+                audit["maximum_excess"] = excess
+                audit["maximum_excess_X"] = n
 
         reducible = missing_prefix[n] - splitless
         half_missing = missing_prefix[(n + 1) // 2]
@@ -125,6 +150,7 @@ def naive_census(limit: int) -> dict:
         "seed2_healed": seed2_healed,
         "rank_histogram": rank_histogram,
         "healing_rank_histogram": healing_rank_histogram,
+        "rank_cap_audits": list(rank_cap_audits.values()),
     }
 
 
@@ -213,6 +239,9 @@ class C17Verifier(unittest.TestCase):
         self.assertEqual(
             endpoint["healing_rank_histogram"],
             expected["healing_rank_histogram"],
+        )
+        self.assertEqual(
+            actual["rank_cap_healing_audit"], expected["rank_cap_audits"]
         )
 
         direct, direct_x = expected["max_direct"]

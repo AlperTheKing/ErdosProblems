@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "closure": "least set generated in increasing order from seeds 2,3 by distinct allowed factors",
+  "generation_rank": "seeds rank 0; minimum 1+max(parent ranks) over witness pairs",
+  "obstruction_rank": "splitless rank 0; 1+max over pairs of the least missing-endpoint rank",
+  "gate": "every hard hole has a direct missing factor q with generated 2q-1",
+  "counts": {
+    "generated": 457599,
+    "allowed_missing": 209067,
+    "splitless": 108651,
+    "reducible": 100416,
+    "hard": 45583,
+    "gate_pass_hard": 4336,
+    "gate_fail_hard": 41247
+  },
+  "first_hard": 54,
+  "first_failure": {
+    "n": 54,
+    "product": 55,
+    "admissible_pairs": [
+      {
+        "left": 5,
+        "right": 11,
+        "endpoints": [
+          {
+            "value": 5,
+            "generated": true,
+            "generation_rank": 1,
+            "obstruction_rank": null,
+            "seed2_child": 9,
+            "seed2_child_generated": true
+          },
+          {
+            "value": 11,
+            "generated": false,
+            "generation_rank": null,
+            "obstruction_rank": 1,
+            "seed2_child": 21,
+            "seed2_child_generated": false
+          }
+        ]
+      }
+    ],
+    "healed_missing_neighbors": [],
+    "obstruction_rank": 2,
+    "obstruction_chain": [
+      {
+        "value": 54,
+        "obstruction_rank": 2,
+        "chosen_missing_parent": 11
+      },
+      {
+        "value": 11,
+        "obstruction_rank": 1,
+        "chosen_missing_parent": 6
+      },
+      {
+        "value": 6,
+        "obstruction_rank": 0,
+        "chosen_missing_parent": 0
+      }
+    ],
+    "present_factor_trees": [
+      {
+        "value": 5,
+        "rank": 1,
+        "left": {
+          "value": 2,
+          "rank": 0,
+          "seed": true
+        },
+        "right": {
+          "value": 3,
+          "rank": 0,
+          "seed": true
+        }
+      }
+    ]
+  },
+  "first_matching_hall_witness": {
+    "cutoff": 54,
+    "left_set": [
+      54
+    ],
+    "neighbor_set": [],
+    "hall_deficit": 1
+  },
+  "failure_sample": [
+    {
+      "n": 54,
+      "product": 55,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 11,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 54,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 74,
+      "product": 75,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 15,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 15,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 29,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 74,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 15
+        },
+        {
+          "value": 15,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 8
+        },
+        {
+          "value": 8,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 114,
+      "product": 115,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 23,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 23,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 45,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 114,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 23
+        },
+        {
+          "value": 23,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 8
+        },
+        {
+          "value": 8,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 144,
+      "product": 145,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 29,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 29,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 2,
+              "seed2_child": 57,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 3,
+      "obstruction_chain": [
+        {
+          "value": 144,
+          "obstruction_rank": 3,
+          "chosen_missing_parent": 29
+        },
+        {
+          "value": 29,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 15
+        },
+        {
+          "value": 15,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 8
+        },
+        {
+          "value": 8,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 186,
+      "product": 187,
+      "admissible_pairs": [
+        {
+          "left": 11,
+          "right": 17,
+          "endpoints": [
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            },
+            {
+              "value": 17,
+              "generated": true,
+              "generation_rank": 3,
+              "obstruction_rank": null,
+              "seed2_child": 33,
+              "seed2_child_generated": true
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 186,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 17,
+          "rank": 3,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 9,
+            "rank": 2,
+            "left": {
+              "value": 2,
+              "rank": 0,
+              "seed": true
+            },
+            "right": {
+              "value": 5,
+              "rank": 1,
+              "left": {
+                "value": 2,
+                "rank": 0,
+                "seed": true
+              },
+              "right": {
+                "value": 3,
+                "rank": 0,
+                "seed": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "n": 234,
+      "product": 235,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 47,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 47,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 93,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 234,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 47
+        },
+        {
+          "value": 47,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 252,
+      "product": 253,
+      "admissible_pairs": [
+        {
+          "left": 11,
+          "right": 23,
+          "endpoints": [
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            },
+            {
+              "value": 23,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 45,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 252,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": []
+    },
+    {
+      "n": 294,
+      "product": 295,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 59,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 59,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 117,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 294,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 59
+        },
+        {
+          "value": 59,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 12
+        },
+        {
+          "value": 12,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 318,
+      "product": 319,
+      "admissible_pairs": [
+        {
+          "left": 11,
+          "right": 29,
+          "endpoints": [
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            },
+            {
+              "value": 29,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 2,
+              "seed2_child": 57,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 318,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": []
+    },
+    {
+      "n": 354,
+      "product": 355,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 71,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 71,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 141,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 354,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 71
+        },
+        {
+          "value": 71,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 362,
+      "product": 363,
+      "admissible_pairs": [
+        {
+          "left": 11,
+          "right": 33,
+          "endpoints": [
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            },
+            {
+              "value": 33,
+              "generated": true,
+              "generation_rank": 4,
+              "obstruction_rank": null,
+              "seed2_child": 65,
+              "seed2_child_generated": true
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 362,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 33,
+          "rank": 4,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 17,
+            "rank": 3,
+            "left": {
+              "value": 2,
+              "rank": 0,
+              "seed": true
+            },
+            "right": {
+              "value": 9,
+              "rank": 2,
+              "left": {
+                "value": 2,
+                "rank": 0,
+                "seed": true
+              },
+              "right": {
+                "value": 5,
+                "rank": 1,
+                "left": {
+                  "value": 2,
+                  "rank": 0,
+                  "seed": true
+                },
+                "right": {
+                  "value": 3,
+                  "rank": 0,
+                  "seed": true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "n": 390,
+      "product": 391,
+      "admissible_pairs": [
+        {
+          "left": 17,
+          "right": 23,
+          "endpoints": [
+            {
+              "value": 17,
+              "generated": true,
+              "generation_rank": 3,
+              "obstruction_rank": null,
+              "seed2_child": 33,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 23,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 45,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 390,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 23
+        },
+        {
+          "value": 23,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 8
+        },
+        {
+          "value": 8,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 17,
+          "rank": 3,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 9,
+            "rank": 2,
+            "left": {
+              "value": 2,
+              "rank": 0,
+              "seed": true
+            },
+            "right": {
+              "value": 5,
+              "rank": 1,
+              "left": {
+                "value": 2,
+                "rank": 0,
+                "seed": true
+              },
+              "right": {
+                "value": 3,
+                "rank": 0,
+                "seed": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "n": 414,
+      "product": 415,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 83,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 83,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 165,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 414,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 83
+        },
+        {
+          "value": 83,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 444,
+      "product": 445,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 89,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 89,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 3,
+              "seed2_child": 177,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 4,
+      "obstruction_chain": [
+        {
+          "value": 444,
+          "obstruction_rank": 4,
+          "chosen_missing_parent": 89
+        },
+        {
+          "value": 89,
+          "obstruction_rank": 3,
+          "chosen_missing_parent": 45
+        },
+        {
+          "value": 45,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 23
+        },
+        {
+          "value": 23,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 8
+        },
+        {
+          "value": 8,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    },
+    {
+      "n": 450,
+      "product": 451,
+      "admissible_pairs": [
+        {
+          "left": 11,
+          "right": 41,
+          "endpoints": [
+            {
+              "value": 11,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 1,
+              "seed2_child": 21,
+              "seed2_child_generated": false
+            },
+            {
+              "value": 41,
+              "generated": true,
+              "generation_rank": 3,
+              "obstruction_rank": null,
+              "seed2_child": 81,
+              "seed2_child_generated": true
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 2,
+      "obstruction_chain": [
+        {
+          "value": 450,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 41,
+          "rank": 3,
+          "left": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 14,
+            "rank": 2,
+            "left": {
+              "value": 3,
+              "rank": 0,
+              "seed": true
+            },
+            "right": {
+              "value": 5,
+              "rank": 1,
+              "left": {
+                "value": 2,
+                "rank": 0,
+                "seed": true
+              },
+              "right": {
+                "value": 3,
+                "rank": 0,
+                "seed": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "n": 474,
+      "product": 475,
+      "admissible_pairs": [
+        {
+          "left": 5,
+          "right": 95,
+          "endpoints": [
+            {
+              "value": 5,
+              "generated": true,
+              "generation_rank": 1,
+              "obstruction_rank": null,
+              "seed2_child": 9,
+              "seed2_child_generated": true
+            },
+            {
+              "value": 95,
+              "generated": false,
+              "generation_rank": null,
+              "obstruction_rank": 3,
+              "seed2_child": 189,
+              "seed2_child_generated": false
+            }
+          ]
+        }
+      ],
+      "healed_missing_neighbors": [],
+      "obstruction_rank": 4,
+      "obstruction_chain": [
+        {
+          "value": 474,
+          "obstruction_rank": 4,
+          "chosen_missing_parent": 95
+        },
+        {
+          "value": 95,
+          "obstruction_rank": 3,
+          "chosen_missing_parent": 32
+        },
+        {
+          "value": 32,
+          "obstruction_rank": 2,
+          "chosen_missing_parent": 11
+        },
+        {
+          "value": 11,
+          "obstruction_rank": 1,
+          "chosen_missing_parent": 6
+        },
+        {
+          "value": 6,
+          "obstruction_rank": 0,
+          "chosen_missing_parent": 0
+        }
+      ],
+      "present_factor_trees": [
+        {
+          "value": 5,
+          "rank": 1,
+          "left": {
+            "value": 2,
+            "rank": 0,
+            "seed": true
+          },
+          "right": {
+            "value": 3,
+            "rank": 0,
+            "seed": true
+          }
+        }
+      ]
+    }
+  ],
+  "member_bitmap_sha256": "569056ee7b16336bbf9eaa0b0fcfc77376048f12d7157da440333207b8a2e365",
+  "elapsed_seconds": 5.170703300005698
+}

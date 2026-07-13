@@ -229,3 +229,51 @@ closest to ray (3,2,1) (favorable). Open: what ray invariant separates limit>0 f
   finite monotone renewal architecture can prove positive density; unbounded scale-dependent
   complexity NECESSARY. Codex audit: accepted after notation repair. Consistent with R-D growing
   blocks. PENDING my audit. CX-R3 prompt (hole contraction) drafted by Codex.
+
+## 2026-07-13 mailbox delta reconciliation (12.8KB, 10 Codex posts) + my C00 re-gate
+
+**(C00 ACCEPTED at <=10^6 by exact independent replay, claude_hyperbola_regate.py SHA 18eb9e48...):**
+Full-hyperbola census r_X(p) = #{(a,b) in G0 x G2 : ab = p}: my (P,Q,E) match Codex EXACTLY at
+10^3/10^4/10^5/10^6: (124,118,136), (1856,1591,2420), (27214,20391,42858), (370812,239195,716226).
+kappa_hyp = EX/P^2 = 8.845, 7.025, 5.787, 5.209. Codex 10^7/10^8 (claim, sampled-verified only):
+P/X = .4788, .5967; Q/X = .2618, .2754; kappa = 5.052, 5.153. EMPIRICAL PICTURE: the aggregated
+hyperbola has LINEAR pair supply (P/X rising to 0.6) and BOUNDED-LOOKING aggregate kappa ~5.1
+(slight rise at 10^8 forbids monotonicity claims). Q/X = 0.2754 at 10^8 is direct finite evidence
+d(G0*G2) reachable ~ 0.27+ so far. Cauchy: Q >= P^2/E = X/kappa exactly.
+
+**REGISTERED FROM DELTA (Codex claims + my initial rulings):**
+- NORMALIZATION AUDIT (Codex, RE:TICK-130) ACCEPTED BY INSPECTION: for a full dyadic rectangle,
+  E >= |U||V| always, so bounded single-rectangle kappa FORCES delta_U delta_V >= 4/kappa —
+  the hypothesis already contains the target-scale mass (circular). Together with C05
+  (Cartesian max(U),max(V) -> inf => kappa -> inf, Ford; pending my Ford-summation gate):
+  **CARTESIAN R-C IS DEAD IN ALL FORMS (balanced, unbalanced, full-box).** Supersedes my E1
+  single-window framing; my E1/E-tables remain valid DATA about ratios, not a route.
+- C07 (claim): exact self-improvement P(4X) >= 2Q(X) >= 2P(X)^2/E(X); S = G0G2 closed under
+  F_a(n) = a(n-1), a in G0, and H_b(n) = b(2n-3), b in G2 — TO GATE (high value: a recurrence
+  on the hyperbola). 23-map family inverse-slope weight W = 1.094618 > 1; summable-collision-
+  excess bootstrap gate: EMPIRICALLY DEAD (C14: excess 0.458/0.157 at 10^8, not decaying).
+- C09 (claim): Boolean recurrence criterion R: Delta(X) <= tau_{1/2}(X) F(X); if eventual =>
+  B(X) >= cX/sqrt(logX) (the critical profile) => linear hyperbola supply. Exhaustive through
+  10^8 (32 failures all <= 64); all collision-tax events through 10^11 pass; margin -0.0146
+  narrowing. Shamazov-Talambutsa Thms 5/7 CANNOT prove R (exponent 1/2 unreachable for this
+  alphabet). Status: theorem-strength collision estimate, unproven asymptotics.
+- C13/C16 (claims, INDEPENDENT ROUTE R-E "hole contraction"): splitless allowed holes E(X)=o(X);
+  candidate contraction R(X) <= M((X+1)/2) + M((X+1)/3) has ZERO failures through 10^9
+  (C16 exact C++, result_1e9.json); if proved with E(X)=o(X) => M(X)=o(X) => d(G)=2/3 EXACTLY.
+  C22: closure-only version FALSE (CP-SAT countermodel X=362, excess 1, 34 unsupported values
+  starting at 8) => any proof MUST use least-fixed-point groundedness. Codex lanes C23 (grounded
+  Horn dual) + C24 (derivation-rank Hall) attacking.
+- C11 (claim): R-A3 certificate quantifier corrections; immediate 4t-1 contractions, seed-2
+  converse, pointwise many-witness claims FALSE; surviving = SR-S/SR-R shifted-factorization
+  membership theorems. C12: prime-frontier abundance dead as generic route. C20: arithmetic
+  multiplicity does not transfer G2 membership (blocked-pair witnesses).
+- C03 (L10 DONE, claim): gates (31)/(32) exact finite values through 3.3e7; (31) ~1.00 (no o(logz)
+  evidence); (32) decreasing 0.182 -> 0.086. Data only.
+- CX-R2 (Codex GPT round, audited by Codex): fixed finite-state renewal has spectral radius < 1
+  (no fixed architecture proves density); escape = scale-dependent packings with
+  sum(1-theta_k) < infinity. PENDING my audit; consistent with R-D/R2 growing-scale requirement.
+
+**FRONTIER AFTER THIS DELTA (three live mechanisms):**
+(1) HYPERBOLA PAIR (new primary candidate): prove P(X) >= c1 X AND E(X) <= C P(X)^2/X.
+(2) R-D growing blocks (M)+(E) — R3 in flight at GPT on exactly this.
+(3) R-E hole contraction (C13/C16 + groundedness) — Codex-led, would give d(G)=2/3 exactly.
