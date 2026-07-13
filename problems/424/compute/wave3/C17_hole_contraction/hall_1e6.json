@@ -1,0 +1,24 @@
+{
+  "schema_version":1,
+  "graph":"odd holes use forced seed-2 parent; hard holes use every missing endpoint",
+  "limit":1000000,
+  "left_count":90329,
+  "odd_left_count":44746,
+  "hard_left_count":45583,
+  "excluded_seed3_count":10087,
+  "splitless_count":108651,
+  "edge_count":132483,
+  "maximum_hard_degree":14,
+  "matching_size":46856,
+  "perfect":false,
+  "matching_fnv1a64":"13929875534772600976",
+  "hall_witness":{
+    "left_count":48662,
+    "neighbor_count":5189,
+    "deficit":43473,
+    "fnv1a64":"17219303224363657590",
+    "left_sample":[21,29,45,54,57,74,93,114,117,141,144,165,174,177,186,189,213,225,234,245,252,281,285,294,309,318,353,354,357,362,369,381],
+    "neighbor_sample":[11,15,23,29,35,47,59,71,83,89,95,107,113,119,123,141,143,155,177,179,185,191,203,213,215,221,227,231,245,263,269,275]
+  },
+  "elapsed_seconds":0.0600471
+}

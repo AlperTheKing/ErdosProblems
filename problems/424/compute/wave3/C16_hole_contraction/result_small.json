@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "algorithm": "independent Python divisor recursion via generator_b",
+  "limit": 100000,
+  "missing": 26823,
+  "splitless": 11928,
+  "reducible": 14895,
+  "odd_seed2": 7741,
+  "even_seed3": 2046,
+  "hard": 5108,
+  "healed": 6783,
+  "forced_hard_fiber_11": 350,
+  "first_injective_failure": 32,
+  "first_hard": 54,
+  "all_cutoff_seed_partition": true,
+  "all_cutoff_two_scale": true,
+  "local_falsifier": {
+    "n": 54,
+    "unique_admissible_pair": [
+      5,
+      11
+    ],
+    "missing_endpoint": 11,
+    "endpoint_seed2_child": 21,
+    "endpoint_child_is_missing": true,
+    "direct_half": 27,
+    "direct_half_is_generated": true
+  }
+}

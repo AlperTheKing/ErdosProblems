@@ -1,0 +1,303 @@
+{
+  "compile": {
+    "compiler_version": "g++.EXE (Rev5, Built by MSYS2 project) 16.1.0",
+    "helper_source_sha256": "d219dd8bbf150305befa46408d6e31662f5891e2176fd6c583caa04e5f3c7fd7"
+  },
+  "helper": {
+    "count": 51899129,
+    "limit": 100000000
+  },
+  "limit": 100000000,
+  "low_falsifiers": {
+    "one_G2_witness_T_member": {
+      "3r+1": 52,
+      "G2_witness_pairs": [
+        [
+          2,
+          26
+        ]
+      ],
+      "T(r)": true,
+      "r": 17
+    },
+    "one_arithmetic_pair_rough_miss": {
+      "3r+1": 58,
+      "G(2)": true,
+      "G(29)": false,
+      "T(r)": false,
+      "factor_pairs": [
+        [
+          2,
+          29
+        ]
+      ],
+      "r": 19
+    },
+    "seed2_reverse_falsifier": {
+      "G(h)": false,
+      "G2_witness_pairs": [
+        [
+          5,
+          14
+        ]
+      ],
+      "T(r)": true,
+      "all_factor_pairs_of_3r+1": [
+        [
+          2,
+          35
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "h=(3r+1)/2": 35,
+      "r": 23
+    }
+  },
+  "method": "exact C03 well-founded G bitmap; audited integer triples; integer/Fraction C11 audits",
+  "rows": [
+    {
+      "X": 1000000,
+      "certificate_21_full": {
+        "E_high_smooth_part": 161964,
+        "E_rough_membership": 37286,
+        "E_smooth_membership": 484718,
+        "certified_T2_count": 316031,
+        "partition_check": 1000000,
+        "singleton_n=1": 1
+      },
+      "gate31": {
+        "H_z(y)": {
+          "denominator": 151200,
+          "numerator": 554363,
+          "text": "554363/151200"
+        },
+        "W_minus_3_child_weight": {
+          "denominator": 2400,
+          "numerator": 3581,
+          "text": "3581/2400"
+        },
+        "W_minus_4_child_weight": {
+          "denominator": 16800,
+          "numerator": 21547,
+          "text": "21547/16800"
+        },
+        "W_missing": {
+          "denominator": 16800,
+          "numerator": 35627,
+          "text": "35627/16800"
+        },
+        "affine_4t_minus_1_recursive_children": [
+          7,
+          15
+        ],
+        "affine_child_weight": {
+          "denominator": 105,
+          "numerator": 22,
+          "text": "22/105"
+        }
+      },
+      "integer_parameters": {
+        "L": 5,
+        "y": 41,
+        "z": 9
+      },
+      "rough_candidate_prefixes": {
+        "C03_window_right_floor_X_over_L": {
+          "M_minus_3_recursive_children": 5650,
+          "M_minus_4_recursive_children": 5563,
+          "R": 200000,
+          "T_miss_count": 5911,
+          "rough_count": 45714,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 87,
+          "seed2_reverse_failure_count": 6560,
+          "seed2_unresolved_count": 12471,
+          "true_seed2_implication_violations": 0
+        },
+        "full_X": {
+          "M_minus_3_recursive_children": 19716,
+          "M_minus_4_recursive_children": 19571,
+          "R": 1000000,
+          "T_miss_count": 20151,
+          "rough_count": 228570,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 145,
+          "seed2_reverse_failure_count": 29968,
+          "seed2_unresolved_count": 50119,
+          "true_seed2_implication_violations": 0
+        }
+      },
+      "window_certificate_for_C03_cutoffs": {
+        "E_ambient_s_outside_[L,y]_or_r=1": 638177,
+        "E_rough_membership": 8453,
+        "E_smooth_membership": 313271,
+        "certified_T2_count": 40099,
+        "partition_check": 1000000
+      }
+    },
+    {
+      "X": 10000000,
+      "certificate_21_full": {
+        "E_high_smooth_part": 1688750,
+        "E_rough_membership": 227390,
+        "E_smooth_membership": 4847398,
+        "certified_T2_count": 3236461,
+        "partition_check": 10000000,
+        "singleton_n=1": 1
+      },
+      "gate31": {
+        "H_z(y)": {
+          "denominator": 3880800,
+          "numerator": 15522383,
+          "text": "15522383/3880800"
+        },
+        "W_minus_3_child_weight": {
+          "denominator": 11642400,
+          "numerator": 19206389,
+          "text": "19206389/11642400"
+        },
+        "W_minus_4_child_weight": {
+          "denominator": 11642400,
+          "numerator": 16555349,
+          "text": "16555349/11642400"
+        },
+        "W_missing": {
+          "denominator": 11642400,
+          "numerator": 27159509,
+          "text": "27159509/11642400"
+        },
+        "affine_4t_minus_1_recursive_children": [
+          7,
+          15,
+          55
+        ],
+        "affine_child_weight": {
+          "denominator": 1155,
+          "numerator": 263,
+          "text": "263/1155"
+        }
+      },
+      "integer_parameters": {
+        "L": 5,
+        "y": 55,
+        "z": 11
+      },
+      "rough_candidate_prefixes": {
+        "C03_window_right_floor_X_over_L": {
+          "M_minus_3_recursive_children": 30579,
+          "M_minus_4_recursive_children": 30419,
+          "R": 2000000,
+          "T_miss_count": 31059,
+          "rough_count": 415584,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 160,
+          "seed2_reverse_failure_count": 52261,
+          "seed2_unresolved_count": 83320,
+          "true_seed2_implication_violations": 0
+        },
+        "full_X": {
+          "M_minus_3_recursive_children": 112932,
+          "M_minus_4_recursive_children": 112725,
+          "R": 10000000,
+          "T_miss_count": 113553,
+          "rough_count": 2077920,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 207,
+          "seed2_reverse_failure_count": 240504,
+          "seed2_unresolved_count": 354057,
+          "true_seed2_implication_violations": 0
+        }
+      },
+      "window_certificate_for_C03_cutoffs": {
+        "E_ambient_s_outside_[L,y]_or_r=1": 6017787,
+        "E_rough_membership": 67163,
+        "E_smooth_membership": 3288929,
+        "certified_T2_count": 626121,
+        "partition_check": 10000000
+      }
+    },
+    {
+      "X": 33333333,
+      "certificate_21_full": {
+        "E_high_smooth_part": 5171866,
+        "E_rough_membership": 604091,
+        "E_smooth_membership": 16615290,
+        "certified_T2_count": 10942085,
+        "partition_check": 33333333,
+        "singleton_n=1": 1
+      },
+      "gate31": {
+        "H_z(y)": {
+          "denominator": 2587200,
+          "numerator": 10519067,
+          "text": "10519067/2587200"
+        },
+        "W_minus_3_child_weight": {
+          "denominator": 23284800,
+          "numerator": 38841283,
+          "text": "38841283/23284800"
+        },
+        "W_minus_4_child_weight": {
+          "denominator": 23284800,
+          "numerator": 33169603,
+          "text": "33169603/23284800"
+        },
+        "W_missing": {
+          "denominator": 23284800,
+          "numerator": 55856323,
+          "text": "55856323/23284800"
+        },
+        "affine_4t_minus_1_recursive_children": [
+          7,
+          15,
+          55,
+          63
+        ],
+        "affine_child_weight": {
+          "denominator": 3465,
+          "numerator": 844,
+          "text": "844/3465"
+        }
+      },
+      "integer_parameters": {
+        "L": 5,
+        "y": 64,
+        "z": 11
+      },
+      "rough_candidate_prefixes": {
+        "C03_window_right_floor_X_over_L": {
+          "M_minus_3_recursive_children": 81097,
+          "M_minus_4_recursive_children": 80901,
+          "R": 6666666,
+          "T_miss_count": 81685,
+          "rough_count": 1385280,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 196,
+          "seed2_reverse_failure_count": 163456,
+          "seed2_unresolved_count": 245141,
+          "true_seed2_implication_violations": 0
+        },
+        "full_X": {
+          "M_minus_3_recursive_children": 308143,
+          "M_minus_4_recursive_children": 307885,
+          "R": 33333333,
+          "T_miss_count": 308917,
+          "rough_count": 6926406,
+          "rough_missing_4t_minus_1_children_with_rough_parent": 258,
+          "seed2_reverse_failure_count": 760554,
+          "seed2_unresolved_count": 1069471,
+          "true_seed2_implication_violations": 0
+        }
+      },
+      "window_certificate_for_C03_cutoffs": {
+        "E_ambient_s_outside_[L,y]_or_r=1": 19601916,
+        "E_rough_membership": 171416,
+        "E_smooth_membership": 11420454,
+        "certified_T2_count": 2139547,
+        "partition_check": 33333333
+      }
+    }
+  ]
+}

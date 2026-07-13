@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "limit": 100000000,
+  "definitions": "G0=G cap 3N; G2=G cap 2(mod3); pairs=(a,b) with a in G0,b in G2,ab<=X; energy=sum_p r(p)^2",
+  "g0_count_to_limit": 22524589,
+  "g2_count_to_limit": 29374540,
+  "seconds": {"spf": 0.747103, "membership": 33.8729, "products": 0.920048, "scan": 0.115703},
+  "checkpoints": [
+    {"X": 1000, "pairs": 124, "distinct_products": 118, "energy": "136", "pair_density": 0.124, "product_density": 0.118, "energy_per_pair": 1.09677419354839, "kappa": 8.84495317377732},
+    {"X": 10000, "pairs": 1856, "distinct_products": 1591, "energy": "2420", "pair_density": 0.1856, "product_density": 0.1591, "energy_per_pair": 1.30387931034483, "kappa": 7.02521180142687},
+    {"X": 100000, "pairs": 27214, "distinct_products": 20391, "energy": "42858", "pair_density": 0.27214, "product_density": 0.20391, "energy_per_pair": 1.57485117953994, "kappa": 5.78691548298649},
+    {"X": 1000000, "pairs": 370812, "distinct_products": 239195, "energy": "716226", "pair_density": 0.370812, "product_density": 0.239195, "energy_per_pair": 1.93150707096858, "kappa": 5.2088580492772},
+    {"X": 10000000, "pairs": 4787694, "distinct_products": 2617884, "energy": "11580502", "pair_density": 0.4787694, "product_density": 0.2617884, "energy_per_pair": 2.41880579669461, "kappa": 5.05213114433506},
+    {"X": 100000000, "pairs": 59668569, "distinct_products": 27544559, "energy": "183463965", "pair_density": 0.59668569, "product_density": 0.27544559, "energy_per_pair": 3.07471702564209, "kappa": 5.15299273498933}
+  ]
+}

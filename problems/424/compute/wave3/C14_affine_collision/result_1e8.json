@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer, complete unthinned support and all 23 labeled maps",
+  "limit": 100000000,
+  "threads_used": 1,
+  "closure_limit": 50000000,
+  "closure_count_to_closure_limit": 25642593,
+  "relevant_g0_count": 11080688,
+  "relevant_g2_count": 9652622,
+  "cross_color_pair_count_to_limit": 59668569,
+  "W": {"numerator": "12246282477409697", "denominator": "11187720423079200"},
+  "collision_threshold_1_minus_1_over_W": {"numerator": "1058562054330497", "denominator": "12246282477409697"},
+  "maps": [
+    {"kind": "F", "operand": 3, "slope": 3, "subtract": 3},
+    {"kind": "F", "operand": 9, "slope": 9, "subtract": 9},
+    {"kind": "F", "operand": 27, "slope": 27, "subtract": 27},
+    {"kind": "F", "operand": 33, "slope": 33, "subtract": 33},
+    {"kind": "F", "operand": 51, "slope": 51, "subtract": 51},
+    {"kind": "F", "operand": 69, "slope": 69, "subtract": 69},
+    {"kind": "F", "operand": 81, "slope": 81, "subtract": 81},
+    {"kind": "F", "operand": 84, "slope": 84, "subtract": 84},
+    {"kind": "F", "operand": 87, "slope": 87, "subtract": 87},
+    {"kind": "F", "operand": 99, "slope": 99, "subtract": 99},
+    {"kind": "H", "operand": 2, "slope": 4, "subtract": 6},
+    {"kind": "H", "operand": 5, "slope": 10, "subtract": 15},
+    {"kind": "H", "operand": 14, "slope": 28, "subtract": 42},
+    {"kind": "H", "operand": 17, "slope": 34, "subtract": 51},
+    {"kind": "H", "operand": 26, "slope": 52, "subtract": 78},
+    {"kind": "H", "operand": 41, "slope": 82, "subtract": 123},
+    {"kind": "H", "operand": 44, "slope": 88, "subtract": 132},
+    {"kind": "H", "operand": 50, "slope": 100, "subtract": 150},
+    {"kind": "H", "operand": 53, "slope": 106, "subtract": 159},
+    {"kind": "H", "operand": 65, "slope": 130, "subtract": 195},
+    {"kind": "H", "operand": 77, "slope": 154, "subtract": 231},
+    {"kind": "H", "operand": 80, "slope": 160, "subtract": 240},
+    {"kind": "H", "operand": 98, "slope": 196, "subtract": 294}
+  ],
+  "checks": {"C07_rows_through_1e5": true, "stream_mass_equals_parent_formula_at_every_checkpoint": true, "distinct_input_sentinels_8_24_absent": true},
+  "milliseconds": {"closure": 3525, "support": 565, "affine_merge": 669},
+  "checkpoints": [
+    {
+      "X": 1000, "Q": 118, "parent_mass_M": 113, "union_U": 93, "collision_tax_Delta": 20, "affine_energy_sum_r2": "153",
+      "affine_energy_over_M": {"numerator": "153", "denominator": "113", "decimal_15_truncated": "1.353982300884955"},
+      "affine_energy_over_M_minus_W": {"numerator": "327891304783821839", "denominator": "1264212407807949600", "decimal_15_truncated": "0.259364093216234"},
+      "Delta_over_M": {"numerator": "20", "denominator": "113", "decimal_15_truncated": "0.176991150442477"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "125308137408847779", "denominator": "1383829919947295761", "decimal_15_truncated": "0.090551689627884"}
+    },
+    {
+      "X": 10000, "Q": 1591, "parent_mass_M": 1350, "union_U": 1188, "collision_tax_Delta": 162, "affine_energy_sum_r2": "1688",
+      "affine_energy_over_M": {"numerator": "844", "denominator": "675", "decimal_15_truncated": "1.250370370370370"},
+      "affine_energy_over_M_minus_W": {"numerator": "1742511651595999", "denominator": "11187720423079200", "decimal_15_truncated": "0.155752162701649"},
+      "Delta_over_M": {"numerator": "3", "denominator": "25", "decimal_15_truncated": "0.120000000000000"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "10274796073966666", "denominator": "306157061935242425", "decimal_15_truncated": "0.033560539185406"}
+    },
+    {
+      "X": 100000, "Q": 20391, "parent_mass_M": 17905, "union_U": 15367, "collision_tax_Delta": 2538, "affine_energy_sum_r2": "23265",
+      "affine_energy_over_M": {"numerator": "4653", "denominator": "3581", "decimal_15_truncated": "1.299357721306897"},
+      "affine_energy_over_M_minus_W": {"numerator": "8202525576983392643", "denominator": "40063226835046615200", "decimal_15_truncated": "0.204739513638176"},
+      "Delta_over_M": {"numerator": "2538", "denominator": "17905", "decimal_15_truncated": "0.141748115051661"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "12127511344878262201", "denominator": "219269687758020624785", "decimal_15_truncated": "0.055308654237068"}
+    },
+    {
+      "X": 1000000, "Q": 239195, "parent_mass_M": 224762, "union_U": 183463, "collision_tax_Delta": 41299, "affine_energy_sum_r2": "314390",
+      "affine_energy_over_M": {"numerator": "157195", "denominator": "112381", "decimal_15_truncated": "1.398768475098103"},
+      "affine_energy_over_M_minus_W": {"numerator": "9326932702735504523", "denominator": "30665541679660087200", "decimal_15_truncated": "0.304150267429382"},
+      "Delta_over_M": {"numerator": "41299", "denominator": "224762", "decimal_15_truncated": "0.183745472989206"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "267834695579111909689", "denominator": "2752498942187558317114", "decimal_15_truncated": "0.097306012174612"}
+    },
+    {
+      "X": 10000000, "Q": 2617884, "parent_mass_M": 2615707, "union_U": 2042399, "collision_tax_Delta": 573308, "affine_energy_sum_r2": "3893053",
+      "affine_energy_over_M": {"numerator": "3893053", "denominator": "2615707", "decimal_15_truncated": "1.488336805307322"},
+      "affine_energy_over_M_minus_W": {"numerator": "11521701756091862486821", "denominator": "29263798624691224994400", "decimal_15_truncated": "0.393718597638601"},
+      "Delta_over_M": {"numerator": "573308", "denominator": "2615707", "decimal_15_truncated": "0.219178982967128"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "4252003539112137251297", "denominator": "32032686800137886310779", "decimal_15_truncated": "0.132739522152535"}
+    },
+    {
+      "X": 100000000, "Q": 27544559, "parent_mass_M": 28619857, "union_U": 21651987, "collision_tax_Delta": 6967870, "affine_energy_sum_r2": "44430313",
+      "affine_energy_over_M": {"numerator": "44430313", "denominator": "28619857", "decimal_15_truncated": "1.552429594599302"},
+      "affine_energy_over_M_minus_W": {"numerator": "1231824091334706060809", "denominator": "2690680324911816837600", "decimal_15_truncated": "0.457811386930581"},
+      "Delta_over_M": {"numerator": "995410", "denominator": "4088551", "decimal_15_truncated": "0.243462781802159"},
+      "Delta_over_M_minus_1_minus_1_over_W": {"numerator": "7862087095043378650923", "denominator": "50069550469295894079047", "decimal_15_truncated": "0.157023320987565"}
+    }
+  ]
+}

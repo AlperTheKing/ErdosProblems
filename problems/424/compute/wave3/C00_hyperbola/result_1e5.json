@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "definitions": "G0=G cap 3N; G2=G cap 2(mod3); pairs=(a,b) with a in G0,b in G2,ab<=X; energy=sum_p r(p)^2",
+  "g0_count_to_limit": 16510,
+  "g2_count_to_limit": 23333,
+  "seconds": {"spf": 0.0001691, "membership": 0.0190611, "products": 0.0004068, "scan": 0.0001065},
+  "checkpoints": [
+    {"X": 1000, "pairs": 124, "distinct_products": 118, "energy": "136", "pair_density": 0.124, "product_density": 0.118, "energy_per_pair": 1.09677419354839, "kappa": 8.84495317377732},
+    {"X": 10000, "pairs": 1856, "distinct_products": 1591, "energy": "2420", "pair_density": 0.1856, "product_density": 0.1591, "energy_per_pair": 1.30387931034483, "kappa": 7.02521180142687},
+    {"X": 100000, "pairs": 27214, "distinct_products": 20391, "energy": "42858", "pair_density": 0.27214, "product_density": 0.20391, "energy_per_pair": 1.57485117953994, "kappa": 5.78691548298649}
+  ]
+}

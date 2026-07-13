@@ -1,0 +1,17 @@
+{
+  "schema_version":1,
+  "graph":"odd holes use forced seed-2 parent; hard holes use every missing endpoint",
+  "limit":53,
+  "left_count":9,
+  "odd_left_count":9,
+  "hard_left_count":0,
+  "excluded_seed3_count":1,
+  "splitless_count":11,
+  "edge_count":9,
+  "maximum_hard_degree":0,
+  "matching_size":9,
+  "perfect":true,
+  "matching_fnv1a64":"7231463003835885489",
+  "hall_witness":null,
+  "elapsed_seconds":1.43e-05
+}

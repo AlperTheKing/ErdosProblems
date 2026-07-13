@@ -1,0 +1,68 @@
+{
+  "schema_version":1,
+  "definitions":"A(r)=# distinct pairs 2<=a<b, ab=3r+1, a=b=2 (mod 3); witness requires a,b in G2",
+  "membership_limit":19999998,
+  "G_count_through_membership_limit":10069774,
+  "G_count_through_10000000":4952270,
+  "analyzed_distinct_candidates":1389436,
+  "exact_checks":{
+    "D2_at_least_tau_over_3_every_candidate":true,
+    "A_at_least_tau_over_6_minus_half_every_candidate":true,
+    "A_at_least_Omega_minus_2_over_6_every_candidate":true,
+    "every_T_miss_has_at_least_one_missing_endpoint_per_pair":true,
+    "strict_divisor_majority_implies_T_every_candidate":true,
+    "T_iff_nonempty_G2_witness_every_candidate":true,
+    "reference_G_count_through_10000000_matched":true,
+    "distinct_input_sentinels_4_8_24_absent":true
+  },
+  "rows":[
+{
+      "R":200000,
+      "z":9,
+      "P_z":210,
+      "rough_count":45714,
+      "T_member_count":39803,
+      "T_miss_count":5911,
+      "strict_divisor_majority_certificates":29391,
+      "maximum_admissible_pairs_all":30,
+      "counts_with_admissible_pairs_below":{"1":0,"2":8306,"4":27027,"8":41014,"16":45363,"32":45714,"64":45714,"128":45714,"256":45714},
+      "miss_counts_with_admissible_pairs_below":{"1":0,"2":1907,"4":4731,"8":5798,"16":5910,"32":5911,"64":5911,"128":5911,"256":5911},
+      "first_miss_with_at_least":{"1":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"2":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"4":{"r":293,"3r_plus_1":880,"Omega":6,"tau":20,"residue_two_divisors":10,"generated_residue_two_divisors":4,"admissible_pairs":5,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":1,"factorization":[{"prime":2,"exponent":4},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"8":{"r":4693,"3r_plus_1":14080,"Omega":10,"tau":36,"residue_two_divisors":18,"generated_residue_two_divisors":4,"admissible_pairs":9,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":5,"factorization":[{"prime":2,"exponent":8},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"16":{"r":190549,"3r_plus_1":571648,"Omega":11,"tau":72,"residue_two_divisors":36,"generated_residue_two_divisors":9,"admissible_pairs":18,"pairs_with_at_least_one_G_endpoint":9,"pairs_with_both_endpoints_missing":9,"factorization":[{"prime":2,"exponent":8},{"prime":7,"exponent":1},{"prime":11,"exponent":1},{"prime":29,"exponent":1}]}},
+      "maximum_pair_miss":{"r":190549,"3r_plus_1":571648,"Omega":11,"tau":72,"residue_two_divisors":36,"generated_residue_two_divisors":9,"admissible_pairs":18,"pairs_with_at_least_one_G_endpoint":9,"pairs_with_both_endpoints_missing":9,"factorization":[{"prime":2,"exponent":8},{"prime":7,"exponent":1},{"prime":11,"exponent":1},{"prime":29,"exponent":1}],"blocked_pairs":[{"a":2,"b":285824,"a_in_G":true,"b_in_G":false},{"a":8,"b":71456,"a_in_G":false,"b_in_G":true},{"a":11,"b":51968,"a_in_G":false,"b_in_G":true},{"a":14,"b":40832,"a_in_G":true,"b_in_G":false},{"a":29,"b":19712,"a_in_G":false,"b_in_G":false},{"a":32,"b":17864,"a_in_G":false,"b_in_G":true},{"a":44,"b":12992,"a_in_G":true,"b_in_G":false},{"a":56,"b":10208,"a_in_G":false,"b_in_G":true},{"a":77,"b":7424,"a_in_G":true,"b_in_G":false},{"a":116,"b":4928,"a_in_G":false,"b_in_G":false},{"a":128,"b":4466,"a_in_G":false,"b_in_G":false},{"a":176,"b":3248,"a_in_G":false,"b_in_G":false},{"a":203,"b":2816,"a_in_G":false,"b_in_G":false},{"a":224,"b":2552,"a_in_G":false,"b_in_G":false},{"a":308,"b":1856,"a_in_G":false,"b_in_G":false},{"a":464,"b":1232,"a_in_G":false,"b_in_G":true},{"a":638,"b":896,"a_in_G":false,"b_in_G":false},{"a":704,"b":812,"a_in_G":false,"b_in_G":false}]},
+      "misses_with_every_pair_covered":3894,
+      "maximum_fully_covered_miss":{"r":35821,"3r_plus_1":107464,"Omega":6,"tau":32,"residue_two_divisors":16,"generated_residue_two_divisors":8,"admissible_pairs":8,"pairs_with_at_least_one_G_endpoint":8,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":7,"exponent":1},{"prime":19,"exponent":1},{"prime":101,"exponent":1}],"blocked_pairs":[{"a":2,"b":53732,"a_in_G":true,"b_in_G":false},{"a":8,"b":13433,"a_in_G":false,"b_in_G":true},{"a":14,"b":7676,"a_in_G":true,"b_in_G":false},{"a":38,"b":2828,"a_in_G":false,"b_in_G":true},{"a":56,"b":1919,"a_in_G":false,"b_in_G":true},{"a":101,"b":1064,"a_in_G":true,"b_in_G":false},{"a":152,"b":707,"a_in_G":true,"b_in_G":false},{"a":266,"b":404,"a_in_G":false,"b_in_G":true}]}
+    },
+{
+      "R":2000000,
+      "z":11,
+      "P_z":2310,
+      "rough_count":415584,
+      "T_member_count":384525,
+      "T_miss_count":31059,
+      "strict_divisor_majority_certificates":310368,
+      "maximum_admissible_pairs_all":54,
+      "counts_with_admissible_pairs_below":{"1":0,"2":62138,"4":215020,"8":350393,"16":405845,"32":415257,"64":415584,"128":415584,"256":415584},
+      "miss_counts_with_admissible_pairs_below":{"1":0,"2":9517,"4":24572,"8":30502,"16":31055,"32":31059,"64":31059,"128":31059,"256":31059},
+      "first_miss_with_at_least":{"1":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"2":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"4":{"r":293,"3r_plus_1":880,"Omega":6,"tau":20,"residue_two_divisors":10,"generated_residue_two_divisors":4,"admissible_pairs":5,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":1,"factorization":[{"prime":2,"exponent":4},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"8":{"r":4693,"3r_plus_1":14080,"Omega":10,"tau":36,"residue_two_divisors":18,"generated_residue_two_divisors":4,"admissible_pairs":9,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":5,"factorization":[{"prime":2,"exponent":8},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"16":{"r":190549,"3r_plus_1":571648,"Omega":11,"tau":72,"residue_two_divisors":36,"generated_residue_two_divisors":9,"admissible_pairs":18,"pairs_with_at_least_one_G_endpoint":9,"pairs_with_both_endpoints_missing":9,"factorization":[{"prime":2,"exponent":8},{"prime":7,"exponent":1},{"prime":11,"exponent":1},{"prime":29,"exponent":1}]}},
+      "maximum_pair_miss":{"r":258133,"3r_plus_1":774400,"Omega":12,"tau":81,"residue_two_divisors":40,"generated_residue_two_divisors":12,"admissible_pairs":20,"pairs_with_at_least_one_G_endpoint":12,"pairs_with_both_endpoints_missing":8,"factorization":[{"prime":2,"exponent":8},{"prime":5,"exponent":2},{"prime":11,"exponent":2}],"blocked_pairs":[{"a":2,"b":387200,"a_in_G":true,"b_in_G":false},{"a":5,"b":154880,"a_in_G":true,"b_in_G":false},{"a":8,"b":96800,"a_in_G":false,"b_in_G":true},{"a":11,"b":70400,"a_in_G":false,"b_in_G":false},{"a":20,"b":38720,"a_in_G":false,"b_in_G":false},{"a":32,"b":24200,"a_in_G":false,"b_in_G":true},{"a":44,"b":17600,"a_in_G":true,"b_in_G":false},{"a":50,"b":15488,"a_in_G":true,"b_in_G":false},{"a":80,"b":9680,"a_in_G":true,"b_in_G":false},{"a":110,"b":7040,"a_in_G":false,"b_in_G":false},{"a":128,"b":6050,"a_in_G":false,"b_in_G":false},{"a":176,"b":4400,"a_in_G":false,"b_in_G":true},{"a":200,"b":3872,"a_in_G":false,"b_in_G":false},{"a":242,"b":3200,"a_in_G":true,"b_in_G":false},{"a":275,"b":2816,"a_in_G":false,"b_in_G":false},{"a":320,"b":2420,"a_in_G":false,"b_in_G":true},{"a":440,"b":1760,"a_in_G":false,"b_in_G":false},{"a":605,"b":1280,"a_in_G":true,"b_in_G":false},{"a":704,"b":1100,"a_in_G":false,"b_in_G":false},{"a":800,"b":968,"a_in_G":true,"b_in_G":false}]},
+      "misses_with_every_pair_covered":21743,
+      "maximum_fully_covered_miss":{"r":1732597,"3r_plus_1":5197792,"Omega":8,"tau":48,"residue_two_divisors":24,"generated_residue_two_divisors":12,"admissible_pairs":12,"pairs_with_at_least_one_G_endpoint":12,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":5},{"prime":19,"exponent":1},{"prime":83,"exponent":1},{"prime":103,"exponent":1}],"blocked_pairs":[{"a":2,"b":2598896,"a_in_G":true,"b_in_G":false},{"a":8,"b":649724,"a_in_G":false,"b_in_G":true},{"a":32,"b":162431,"a_in_G":false,"b_in_G":true},{"a":38,"b":136784,"a_in_G":false,"b_in_G":true},{"a":83,"b":62624,"a_in_G":false,"b_in_G":true},{"a":152,"b":34196,"a_in_G":true,"b_in_G":false},{"a":206,"b":25232,"a_in_G":true,"b_in_G":false},{"a":332,"b":15656,"a_in_G":false,"b_in_G":true},{"a":608,"b":8549,"a_in_G":false,"b_in_G":true},{"a":824,"b":6308,"a_in_G":false,"b_in_G":true},{"a":1328,"b":3914,"a_in_G":false,"b_in_G":true},{"a":1577,"b":3296,"a_in_G":true,"b_in_G":false}]}
+    },
+{
+      "R":6666666,
+      "z":11,
+      "P_z":2310,
+      "rough_count":1385280,
+      "T_member_count":1303595,
+      "T_miss_count":81685,
+      "strict_divisor_majority_certificates":1099131,
+      "maximum_admissible_pairs_all":72,
+      "counts_with_admissible_pairs_below":{"1":0,"2":189953,"4":675752,"8":1132687,"16":1339500,"32":1382511,"64":1385274,"128":1385280,"256":1385280},
+      "miss_counts_with_admissible_pairs_below":{"1":0,"2":24737,"4":64731,"8":80378,"16":81674,"32":81685,"64":81685,"128":81685,"256":81685},
+      "first_miss_with_at_least":{"1":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"2":{"r":13,"3r_plus_1":40,"Omega":4,"tau":8,"residue_two_divisors":4,"generated_residue_two_divisors":2,"admissible_pairs":2,"pairs_with_at_least_one_G_endpoint":2,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":3},{"prime":5,"exponent":1}]},"4":{"r":293,"3r_plus_1":880,"Omega":6,"tau":20,"residue_two_divisors":10,"generated_residue_two_divisors":4,"admissible_pairs":5,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":1,"factorization":[{"prime":2,"exponent":4},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"8":{"r":4693,"3r_plus_1":14080,"Omega":10,"tau":36,"residue_two_divisors":18,"generated_residue_two_divisors":4,"admissible_pairs":9,"pairs_with_at_least_one_G_endpoint":4,"pairs_with_both_endpoints_missing":5,"factorization":[{"prime":2,"exponent":8},{"prime":5,"exponent":1},{"prime":11,"exponent":1}]},"16":{"r":190549,"3r_plus_1":571648,"Omega":11,"tau":72,"residue_two_divisors":36,"generated_residue_two_divisors":9,"admissible_pairs":18,"pairs_with_at_least_one_G_endpoint":9,"pairs_with_both_endpoints_missing":9,"factorization":[{"prime":2,"exponent":8},{"prime":7,"exponent":1},{"prime":11,"exponent":1},{"prime":29,"exponent":1}]}},
+      "maximum_pair_miss":{"r":258133,"3r_plus_1":774400,"Omega":12,"tau":81,"residue_two_divisors":40,"generated_residue_two_divisors":12,"admissible_pairs":20,"pairs_with_at_least_one_G_endpoint":12,"pairs_with_both_endpoints_missing":8,"factorization":[{"prime":2,"exponent":8},{"prime":5,"exponent":2},{"prime":11,"exponent":2}],"blocked_pairs":[{"a":2,"b":387200,"a_in_G":true,"b_in_G":false},{"a":5,"b":154880,"a_in_G":true,"b_in_G":false},{"a":8,"b":96800,"a_in_G":false,"b_in_G":true},{"a":11,"b":70400,"a_in_G":false,"b_in_G":false},{"a":20,"b":38720,"a_in_G":false,"b_in_G":false},{"a":32,"b":24200,"a_in_G":false,"b_in_G":true},{"a":44,"b":17600,"a_in_G":true,"b_in_G":false},{"a":50,"b":15488,"a_in_G":true,"b_in_G":false},{"a":80,"b":9680,"a_in_G":true,"b_in_G":false},{"a":110,"b":7040,"a_in_G":false,"b_in_G":false},{"a":128,"b":6050,"a_in_G":false,"b_in_G":false},{"a":176,"b":4400,"a_in_G":false,"b_in_G":true},{"a":200,"b":3872,"a_in_G":false,"b_in_G":false},{"a":242,"b":3200,"a_in_G":true,"b_in_G":false},{"a":275,"b":2816,"a_in_G":false,"b_in_G":false},{"a":320,"b":2420,"a_in_G":false,"b_in_G":true},{"a":440,"b":1760,"a_in_G":false,"b_in_G":false},{"a":605,"b":1280,"a_in_G":true,"b_in_G":false},{"a":704,"b":1100,"a_in_G":false,"b_in_G":false},{"a":800,"b":968,"a_in_G":true,"b_in_G":false}]},
+      "misses_with_every_pair_covered":59636,
+      "maximum_fully_covered_miss":{"r":1732597,"3r_plus_1":5197792,"Omega":8,"tau":48,"residue_two_divisors":24,"generated_residue_two_divisors":12,"admissible_pairs":12,"pairs_with_at_least_one_G_endpoint":12,"pairs_with_both_endpoints_missing":0,"factorization":[{"prime":2,"exponent":5},{"prime":19,"exponent":1},{"prime":83,"exponent":1},{"prime":103,"exponent":1}],"blocked_pairs":[{"a":2,"b":2598896,"a_in_G":true,"b_in_G":false},{"a":8,"b":649724,"a_in_G":false,"b_in_G":true},{"a":32,"b":162431,"a_in_G":false,"b_in_G":true},{"a":38,"b":136784,"a_in_G":false,"b_in_G":true},{"a":83,"b":62624,"a_in_G":false,"b_in_G":true},{"a":152,"b":34196,"a_in_G":true,"b_in_G":false},{"a":206,"b":25232,"a_in_G":true,"b_in_G":false},{"a":332,"b":15656,"a_in_G":false,"b_in_G":true},{"a":608,"b":8549,"a_in_G":false,"b_in_G":true},{"a":824,"b":6308,"a_in_G":false,"b_in_G":true},{"a":1328,"b":3914,"a_in_G":false,"b_in_G":true},{"a":1577,"b":3296,"a_in_G":true,"b_in_G":false}]}
+    }
+  ]
+}

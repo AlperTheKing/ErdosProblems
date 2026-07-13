@@ -119,3 +119,68 @@ the conjecture itself; unconditional tower supply is only X^0.517 and dies by to
 (52)-(53). So R-C needs either (a) an unconditional reservoir family with |U||V| >> X/polylog
 + provable near-diagonal energy, or (b) a bootstrap exploiting G0*G2-1 SUBSET-OF G2
 (a in G0, b in G2 => ab-1 == 2 mod 3), i.e. G2 self-expansion. This dichotomy = R2 question.
+
+## Wave-3 energy correction (2026-07-13)
+- C05 proves that every Cartesian reservoir U_X x V_X with max(U_X)max(V_X)<=X and both maxima unbounded has kappa_X -> infinity, via Ford divisor-in-interval bounds and dyadic decomposition. Independent source/range audit requested from Fable.
+- Therefore the original Cartesian R-C target is retired, including balanced and unbalanced dyadic boxes.
+- Surviving R-C criterion: for every sufficiently large X, find a correlated edge set E_X subset {(a,b) in G0 x G2 : ab<=X} with M_X=|E_X| and sum_n R_X(n)^2 <= K M_X^2/X. This implies lower density at least 1/K.
+- The full hyperbola edge set is empirically compatible: exact kappa values at X=10^3,...,10^8 are 8.845, 7.025, 5.787, 5.209, 5.052, 5.153. This is data, not an asymptotic theorem.
+- Exact frontier: prove P(X)>=cX and E(X)<=C P(X)^2/X for full hyperbola pairs, or construct a selected correlated family satisfying those two inequalities.
+
+## Wave-3 narrowed frontiers (2026-07-13)
+
+- C10 proves that existential multi-star selection is equivalent to positive density of G0*G2: choose one edge per represented product. It is not a weaker bridge.
+- The minimal noncircular R-C target is the canonical full-annular incidence condition liminf 2^(-K) sum_(k<=K) M_k^2/E_k > 0.
+- C14 exact census shows the 23-map affine collision excess worsens through 10^8; the zero/summable-excess bootstrap has no supporting finite trend.
+- C13 proves the splitless allowed-hole count E(X)=o(X). It reduces density 2/3 to an eventual aggregate contraction M(X)-E(X)<=lambda M(floor((X+1)/2)) with lambda<2. Pointwise charging is false.
+- C09 proves an exact fixed-subsystem recurrence criterion Delta(X)<=tau_(1/2)(X)F(X). The criterion passes all tested event cutoffs through 10^11 after X=64, but no asymptotic proof is known.
+
+
+## C11/C12 corrections (2026-07-13)
+
+- The full smooth/rough certificate requires rough cutoffs through X. The shorter X/L range is valid only for the windowed certificate with all ambient exceptions restored.
+- Immediate 4t-1 contraction, seed-2 converse, and pointwise many-witness mechanisms are exactly false. The surviving R-A3 targets are the shifted smooth/sifted G2-factorization statements SR-S and SR-R in C11.
+- Prime-frontier abundance is not forced by closure growth: a composite-only internal family attains the accepted exponent, and generic prime-seeded full closures can be O(X^epsilon). Fixed one-step cofactors face a growing modular avoidance problem.
+
+
+## 2026-07-13 R2 ACCEPTED (archive: writeup/R2_GPTPRO56.md; gate header inside)
+
+**ROUTE TABLE RESTRUCTURED BY R2 (verdict: case (c) for the old R-C framing):**
+- (R-C EQUIVALENCE, verified exact): (1/18) d(G) <= d(G0*G2) <= d(G). R-C was not a weaker
+  intermediate target; it IS the conjecture up to constants. Kept as the FRAME, no longer a route.
+- SCALAR BOOTSTRAP KILLED (verified): B(CX) >= f(delta)X needs f(delta) > C*delta; constant-dilation
+  top-window expansion uses finitely many multipliers (dead by obstruction); correct invariant =
+  the full dyadic profile via the multiscale convolution bootstrap (40)-(43); critical profile
+  delta_j ~ c/sqrt(j), i.e. X/sqrt(logX).
+- NEW BARRIERS (verified unless noted): hyperbolic pair-mass N_X = o(X) kills ALL energy routes
+  (15); tower pair count o(X) (18); bounded-depth product closures sublinear ((19)-(21), re-derive
+  before use); reciprocal-summable x zero-density stays zero-density (22)-(24); T9*B circular (27).
+  theta = log6/log30 = 0.5268025545 (corrected from 0.517; B07 recheck at gate).
+- **R-D = NEW PRIMARY: growing-block common-slope affine-offset reservoir.** Exact objects:
+  L2(t)=2t, L3(t)=3t+1, L5(t)=5t+3; offsets D_{a,b,c} with exact recursion (48)/(60);
+  blocks H_k = 8Q^k + D_{15k,10k,6k} + 1 SUBSET G; color-split reservoirs (57)-(59).
+  TWO FINITE GATES: (M) D_k >= c Q^k/sqrt(k); (E) global cross-k energy E_K <= C_E N_K.
+  THEOREM (arithmetic verified): (M)+(E) => d(G0*G2) >= c^2/(3888 C_E Q) > 0 => d(G) > 0.
+  Falsifiers: (64) liminf sqrt(k) D_k/Q^k = 0; (73) limsup E_K/N_K = infinity.
+  Weaker asymmetric gate (75) survives symmetric (M) failure.
+- FALLBACK: canonical smooth-rough cross-cover (77) (no energy input; refines R1 (21)).
+- LITERATURE TO VERIFY (L11): Shamazov-Talambutsa orbit bound x/(logx)^((n-1)/2) under
+  sum 1/a_i = 1 + freeness; Kolpakov-Talambutsa Thm 3 (sum 1/a_i > 1 => not free).
+
+**(M1) FIRST (M)-GATE DATA (mine, claude_rd_offset_mass_probe.py SHA 62ce87da...):**
+Exact D_{a,b,c} + word-multiplicity second moment E^off on two supercritical rays:
+ray (3,2,1) (M=360^k, n=6k): sqrt(n)D/M = 0.4082, 0.3493, 0.3222 (k=1..3); E^off/W = 1.0, 1.120, 1.305.
+ray (2,1,1) (M=60^k, n=4k):  sqrt(n)D/M = 0.4000, 0.3213, 0.2761, 0.2458 (k=1..4).
+All W validated against multinomials; CS floor W^2/E^off <= D everywhere (D within 1.13x of floor
+=> near-uniform multiplicities on support). Normalized sequence DECAYING with local exponent
+~0.32-0.40 in n and drifting — INCONCLUSIVE at n <= 18 letters; deep points k=4 (360^4=1.7e10)
+and k=5,6 (60^k) running. NOTE: these small rays are NOT the canonical (15,10,6) ray; they probe
+the same mechanism at reachable scale.
+
+**(40)-AUDIT: membership-recursion DP vs truncated closure: EXACT bitmap match at 10^6 AND 10^7**
+(claude_membership_recursion_census.py SHA 411948d8...; 10^7: both |G|=4952270, same SHA-256).
+
+**(M1-deep) ray (3,2,1) k=4 (claude_rd_offset_mass_deep.py SHA ba85e7a0..., bool DP, M=16796160000):**
+D_4 = 1054111467, sqrt(n)D/M = 0.3075. Sequence 0.4082, 0.3493, 0.3222, 0.3075 with decrements
+-0.0589, -0.0271, -0.0147 (ratios 0.46, 0.54) => geometric-looking convergence to ~0.29-0.30 > 0.
+FIRST EMPIRICAL SUPPORT FOR GATE (M) on a supercritical ray. Ray (2,1,1) k=5,6 still running.

@@ -1,0 +1,34 @@
+{
+  "schema_version":1,
+  "arithmetic":"exact ascending divisor recursion",
+  "limit":100000000,
+  "generated_count":51899129,
+  "missing_allowed_count":14767537,
+  "splitless_missing_count":9395726,
+  "injective_contraction":{
+    "formula":"M(X) <= E(X) + M(floor((X+1)/2))",
+    "tested_every_integer_cutoff_through":100000000,
+    "first_failure":{"X":32,"M":13,"E":7,"half_argument":16,"M_half":5,"excess":1},
+    "failure_cutoff_count":160641,
+    "last_failure_X":163150,
+    "maximum_excess":{"X":57302,"M":16404,"E":7010,"M_half":8830,"excess":564},
+    "maximum_required_coefficient":{"X":362,"numerator":101,"denominator":80}
+  },
+  "forced_fiber_11":{
+    "description":"p in G prime gives unique split 11*p and missing output 11*p-1",
+    "count":278970,
+    "first_generated_prime":2,
+    "last_generated_prime":9090857,
+    "last_output":99999426
+  },
+  "checkpoints":[
+    {"X":100,"generated":23,"missing":43,"splitless_missing":19,"missing_at_floor_Xplus1_over_2":21,"injective_excess":3,"forced_fiber_11":3},
+    {"X":1000,"generated":250,"missing":416,"splitless_missing":156,"missing_at_floor_Xplus1_over_2":214,"injective_excess":46,"forced_fiber_11":6},
+    {"X":10000,"generated":3207,"missing":3459,"splitless_missing":1344,"missing_at_floor_Xplus1_over_2":1837,"injective_excess":278,"forced_fiber_11":40},
+    {"X":100000,"generated":39843,"missing":26823,"splitless_missing":11928,"missing_at_floor_Xplus1_over_2":14524,"injective_excess":371,"forced_fiber_11":352},
+    {"X":1000000,"generated":457599,"missing":209067,"splitless_missing":108651,"missing_at_floor_Xplus1_over_2":112283,"injective_excess":-11867,"forced_fiber_11":3353},
+    {"X":10000000,"generated":4952270,"missing":1714396,"splitless_missing":1004961,"missing_at_floor_Xplus1_over_2":904635,"injective_excess":-195200,"forced_fiber_11":31030},
+    {"X":100000000,"generated":51899129,"missing":14767537,"splitless_missing":9395726,"missing_at_floor_Xplus1_over_2":7690740,"injective_excess":-2318929,"forced_fiber_11":278970}
+  ],
+  "elapsed_seconds":9.37947
+}

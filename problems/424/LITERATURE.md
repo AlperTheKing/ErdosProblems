@@ -64,3 +64,12 @@ named result exists.
 The modulo-3 obstruction is prior art. The sprint’s quantitative polynomial
 lower bound, periodic-decoder obstruction, and exact affine-collision analysis
 require broader prior-art review before any novelty claim.
+
+## 2026-07-13: Primary-source audit of BKS and Ford
+
+Full audit: `fanout/wave3/C04_literature_bks_ford.md`.
+
+- Bettin--Koukoulopoulos--Sanna, Theorem 1, requires global natural density one for both factors and concludes density one for their product. It does not apply to `G0` or `G2`. Their Theorem 2 is an infimum-over-sets statement; it does not say every positive-density set has zero-density product. DOI: 10.1112/blms.12506; arXiv:2006.13356.
+- Their Lemmas 2.1 and 2.2 do justify the ambient smooth/rough factorization used in R1, but provide no membership of either factor in `G`.
+- Ford, Annals 168 (2008), Corollary 3, proves an order of magnitude `asymp`, not `sim`, for the multiplication table: `N^2 / ((log N)^delta (log log N)^(3/2))`, with `delta=0.086071...`. DOI: 10.4007/annals.2008.168.367; arXiv:math/0401223.
+- Ford excludes every fixed comparable-factor regime from supplying positive density. It does not exclude the full hyperbola, fixed-multiplier channels, or scale-varying unbalanced products. The exponent delta predates Ford; Ford supplies the sharpened order including the log-log factor.

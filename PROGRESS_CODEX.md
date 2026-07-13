@@ -34512,3 +34512,136 @@
 [2026-07-13T08:33:00+03:00] OK GATE | DID: Read Fable mailbox through TICK-130 and posted 24h lane split | RESULT: claimed L9-EXT/L10/L11; R-C proof remains Fable-owned | D: enter PLAN
 [2026-07-13T08:33:00+03:00] > PLAN | NEXT: Extend exact multiplicative-energy tables, smooth-rough rates, and literature gates in parallel.
 [2026-07-13T08:33:33+03:00] > ATTACK | NEXT: launch L9-EXT/L10/L11 and R-C audit lanes after fixing energy normalization; GPT-Pro gets one R-C lemma.
+[2026-07-13T08:42:00+03:00] > VERIFY | NEXT: audit R-C single-rectangle energy gate for circular density content and notify Fable with exact normalization.
+[2026-07-13T08:45:45+03:00] OK VERIFY | DID: proved diagonal-energy normalization and sent Fable | RESULT: CODEX_TO_CLAUDE.md 08:45 entry | D: single-rectangle R-C is circular
+[2026-07-13T08:51:00+03:00] > ATTACK | NEXT: build exact G0xG2 hyperbola pair/product census through 1e8 to separate pair supply from collision loss.
+[2026-07-13T08:58:00+03:00] OK ATTACK | DID: exact G0xG2 hyperbola census to 1e8 + independent 1e4 check | RESULT: C00_hyperbola_census.md, P/X=.5967,Q/X=.2754 | D: R-C aggregate survives
+[2026-07-13T09:00:00+03:00] > GATE | NEXT: integrate primary-source BKS/Ford audit and correct R1 attribution/scope.
+[2026-07-13T09:00:30+03:00] OK GATE | DID: integrated BKS/Ford primary-source audit | RESULT: LITERATURE.md + C04_literature_bks_ford.md | D: R1 scope corrected
+[2026-07-13T09:05:00+03:00] > ATTACK | NEXT: exact-search full-G block slopes M for near-complete affine intercept sets C(M), a scale-dependent renewal certificate.
+[2026-07-13T09:09:00+03:00] FAIL ATTACK | DID: exact fixed-slope intercept search M<=10000 | RESULT: C08_intercept_blocks.md; only M=2 has M-1 maps, best M>2 coverage=.5 | D: park near-cover block route
+[2026-07-13T09:00:46.3269566+03:00] > VERIFY | NEXT: Sync Fable TICKs and transmit the exact Ford/C05 obstruction plus surviving correlated-hyperbola frontier.
+[2026-07-13T09:01:57.0068478+03:00] OK VERIFY | DID: Sent C05/C01/C02 to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md records Cartesian kill and correlated frontier | D: R-C narrowed
+[2026-07-13T09:02:37.0289181+03:00] > PLAN | NEXT: Retire Cartesian R-C in registries and state the correlated-hyperbola criterion as the sole energy frontier.
+[2026-07-13T09:03:22.2841092+03:00] OK PLAN | DID: Updated #424 proof and route registries | RESULT: Cartesian R-C DEAD; correlated-hyperbola criterion recorded | D: frontier replaced
+[2026-07-13T09:06:21.2067861+03:00] OK VERIFY | DID: Harvested and audited GPT-Pro R1 once | RESULT: problems/424/gpt_pro/R1_audit.md; exact multi-star lemma accepted | D: no closure construction
+[2026-07-13T09:08:49.5745168+03:00] OK ATTACK | DID: Integrated exact L10 census | RESULT: C03 gate31 ratios ~1; gate32 drops 0.18249 to 0.085589; sent Fable | D: R-A3 remains unproved
+[2026-07-13T09:10:07.8706666+03:00] > ATTACK | NEXT: Launch four disjoint falsifier-first lanes on multi-star, smooth/rough, prime-frontier, and non-energy alternatives.
+[2026-07-13T09:11:19.2769664+03:00] OK ATTACK | DID: Launched C10-C13 exact lanes | RESULT: agents Laplace,Darwin,Harvey,Avicenna on audit,smooth/rough,prime,missing-charge | D: none
+[2026-07-13T09:14:54.0601864+03:00] > ATTACK | NEXT: GPT-Pro R2 to prove or obstruct a finite-star renewal theorem for V under maps v->dv-1.
+[2026-07-13T09:18:44.6917464+03:00] OK ATTACK | DID: Integrated C07 exact support recursion | RESULT: P(4X)>=2Q(X); zero-excess affine gate falsified through 1e5; sent Fable | D: new affine frontier
+[2026-07-13T09:27:04.5854255+03:00] > ATTACK | NEXT: Test a modular collision-tax induction for the fixed affine subsystem using exact residue closures mod 30^a.
+[2026-07-13T09:31:17.0756175+03:00] FAIL ATTACK | DID: Exact modular collision-tax gate mod 30^1..30^4 | RESULT: C15 alpha=0.026642 at 810000 needs c>0.79926 | D: scalar modular gate DEAD
+[2026-07-13T09:35:45+03:00] OK VERIFY | DID: Integrated C10/C13/C14 audits and notified Fable | RESULT: multistar iff density; affine gate worsens | D: frontier=C13/R-A3/R-C
+[2026-07-13T09:36:00+03:00] OK ATTACK | DID: Completed C09 recurrence scan | RESULT: R holds at all tested events through 1e11; 32 failures all X<=64 | D: C09 survives
+[2026-07-13T09:36:10+03:00] > ATTACK | NEXT: Exact-test C13 hole contraction and sharpen C15 direct child-mask gate while GPT-Pro R2 runs.
+[2026-07-13T09:37:30+03:00] OK ATTACK | DID: Launched C16 proof and C17 red-team lanes on C13 contraction | RESULT: agents Heisenberg/Pasteur own disjoint artifacts | D: none
+[2026-07-13T09:38:20+03:00] > SELECT | NEXT: Audit Erdos 424 C13 via the exact all-factor-pair missing-value recurrence and a rational dual obstruction.
+[2026-07-13T09:37:41.8472972+03:00] > SELECT | NEXT: Select assigned Erdos 424 C16 aggregate hole-contraction lane for exact testing.
+[2026-07-13T09:38:02.4209851+03:00] OK SELECT | DID: Selected assigned Erdos 424 C16 lane | RESULT: C13 leaves AC unproved after exact census to 1e8 | D: frontier=AC
+[2026-07-13T09:38:02.4209851+03:00] > GATE | NEXT: Audit local literature and wave3 claims for any prior aggregate hole-contraction theorem.
+[2026-07-13T09:40:05+03:00] OK SELECT | DID: Selected Erdos 424 C17 all-factor-pair red team | RESULT: C13 AC is unproved and exact-testable | D: frontier=AC dual
+[2026-07-13T09:40:06+03:00] > GATE | NEXT: Check official status and primary literature for a prior missing-value contraction theorem.
+[2026-07-13T09:40:35+03:00] OK GATE | DID: Checked official 424 page, Green P63, OEIS, and local audit | RESULT: official page has no partial solution; edited 2026-03-31 | D: none
+[2026-07-13T09:40:36+03:00] > PLAN | NEXT: Derive the exact all-pair demand graph and its rational Hall dual, then choose the strongest noncircular density gate.
+[2026-07-13T09:41:58.3101721+03:00] OK GATE | DID: Audited local literature and wave3 claims | RESULT: C13(AC) remains explicitly unproved; LITERATURE verdict open | D: none
+[2026-07-13T09:41:58.3101721+03:00] > PLAN | NEXT: Partition reducible holes by seed-2/3 ancestry and isolate the even seedless frontier.
+[2026-07-13T09:41:58.3101721+03:00] OK PLAN | DID: Built C16 lemma tree | RESULT: frontier=contract even reducible holes outside T2(A) union T3(A) | D: frontier refined
+[2026-07-13T09:41:58.3101721+03:00] > ATTACK | NEXT: Build exact all-cutoff audit to test seed-partition multiscale inequalities through 1e8.
+[2026-07-13T09:42:00+03:00] OK ATTACK | DID: Launched C18/C19 fixed-orbit collision recurrence lanes | RESULT: agents Fermat/Gauss own exact pair-state artifacts | D: none
+[2026-07-13T09:44:20+03:00] > VERIFY | NEXT: Rebuild C12 exact frontier census and audit its composite-family and cofactor claims.
+[2026-07-13T09:44:43+03:00] > SELECT | NEXT: Select Erdos 424 C18: immediate-parent collisions admit exact arithmetic pair equations.
+[2026-07-13T09:44:43+03:00] OK SELECT | DID: Read AGENTS, C09, and B04 targets | RESULT: C09(R) is unproved; C18 file absent | D: frontier=pair-state closure
+[2026-07-13T09:44:43+03:00] > GATE | NEXT: Check official status and cited affine-orbit literature for a prior finite collision recurrence.
+[2026-07-13T09:46:21.4687591+03:00] OK ATTACK | DID: Built C16 exact audit with g++ -O3 C++20 | RESULT: hole_contraction.exe compiled with -Wall -Wextra | D: none
+[2026-07-13T09:46:21.4687591+03:00] > ATTACK | NEXT: Run exact C16 seed-partition inequality audit at every cutoff through X=1000000.
+[2026-07-13T09:46:50+03:00] OK PLAN | DID: Derived reciprocal all-pair charge and dyadic prefix envelope | RESULT: exact weighted recurrence stated for C17 | D: frontier=coefficient
+[2026-07-13T09:46:51+03:00] > ATTACK | NEXT: Implement integer-only all-pair loads and scan direct and multiscale coefficients through exact cutoffs.
+[2026-07-13T09:47:10+03:00] OK GATE | DID: Checked official 424 page and Shamazov--Talambutsa | RESULT: 424 OPEN; no listed partial solution or pair recurrence | D: none
+[2026-07-13T09:47:10+03:00] > PLAN | NEXT: Derive primitive relation transitions, test finite closure, then prove the first surviving lemma or obstruction.
+[2026-07-13T09:47:10+03:00] OK PLAN | DID: Built C18 lemma tree | RESULT: frontier=finite closure of Ax-By=c under paired inverse maps | D: frontier refined
+[2026-07-13T09:47:10+03:00] > ATTACK | NEXT: Enumerate exact primitive pair-state transitions from P23, P25, P35 through depth 12 with all 9 map pairs.
+[2026-07-13T09:47:13.5171770+03:00] OK ATTACK | DID: Audited every cutoff X<=1000000 | RESULT: 0 failures for R<=Mhalf+Mthird and odd+hard<=Mhalf | D: candidate survives
+[2026-07-13T09:47:13.5171770+03:00] > ATTACK | NEXT: Run identical exact C16 audit at every cutoff through X=100000000.
+[2026-07-13T09:45:20+03:00] OK VERIFY | DID: Rebuilt C12 at 1e8 | RESULT: all semantic JSON fields match; 2,730,169 generated primes, |F|=715,317 | D: prime-frontier route blocked
+[2026-07-13T09:45:30+03:00] OK VERIFY | DID: Replayed C11 exact smooth/rough auditor | RESULT: six partitions exact; full/window quantifier mismatch corrected | D: simple contractions DEAD
+[2026-07-13T09:45:40+03:00] > ATTACK | NEXT: Launch weighted shifted-G2 theorem and adversarial sieve lanes from corrected C11 certificate.
+[2026-07-13T09:47:10+03:00] OK ATTACK | DID: Launched C20/C21 shifted smooth-rough proof and red-team lanes | RESULT: agents Archimedes/Lovelace own disjoint artifacts | D: none
+[2026-07-13T09:48:50.0683637+03:00] OK ATTACK | DID: Audited every cutoff X<=100000000 | RESULT: 0 failures for C16 two-scale and seed-partition inequalities | D: finite survivor
+[2026-07-13T09:48:50.0683637+03:00] > ATTACK | NEXT: Enumerate X=10000 hard holes, factor states, and healed seed-2 parents to seek an exact injection.
+[2026-07-13T09:50:10+03:00] > SELECT | NEXT: Select assigned Erdos 424 C20 shifted-sifted factorization lane and isolate an exact-testable SR-R frontier.
+[2026-07-13T09:49:32+03:00] FAIL ATTACK | DID: Ran relation_states.py --depth 12 --largest 20; stopped after 40 s | RESULT: no output before BFS completion | D: depth reduced
+[2026-07-13T09:49:32+03:00] > ATTACK | NEXT: Enumerate the same exact pair-state graph through depth 6 to obtain bounded closure falsifiers.
+[2026-07-13T09:50:15+03:00] OK SELECT | DID: Selected Erdos 424 C20 shifted-sifted lane | RESULT: C11 (35) makes SR-R exact-testable via all G2 divisor pairs | D: frontier=SR-R
+[2026-07-13T09:50:15+03:00] > GATE | NEXT: Check official status and primary shifted-product sieve literature for an existing SR-R theorem.
+[2026-07-13T09:50:25+03:00] OK ATTACK | DID: Compiled C17 exact all-pair audit with g++ -O3 C++20 | RESULT: hole_contraction_redteam.exe built without warnings | D: none
+[2026-07-13T09:50:26+03:00] > ATTACK | NEXT: Run hole_contraction_redteam LIMIT=1000000 and exact-scan every cutoff plus dyadic load snapshots.
+[2026-07-13T09:50:15+03:00] OK ATTACK | DID: Ran exact relation BFS through depth 6 | RESULT: 9,046 states; level counts 3,11,50,154,616,1838,6374 | D: naive finite closure DEAD
+[2026-07-13T09:50:15+03:00] > ATTACK | NEXT: Enumerate B through 1e7 and attach exact orbit witnesses to root and descendant relation states.
+[2026-07-13T09:51:43+03:00] OK ATTACK | DID: Enumerated B and pair witnesses through 1e7 | RESULT: all 11 live root branches populated; P23 overlap t=547; P235 first t=12839 | D: pair counts non-disjoint
+[2026-07-13T09:51:43+03:00] > ATTACK | NEXT: Extend exact orbit witness census to 1e8 and test repeated P35 (5,3) parent-chain depth.
+[2026-07-13T09:53:43+03:00] OK ATTACK | DID: Extended orbit census through 1e8 | RESULT: C=19,072,023; repeated P35 (5,3) depth 5 at t=2,217,448 | D: active depth raised
+[2026-07-13T09:53:43+03:00] > ATTACK | NEXT: Enumerate canonical affine-tuple transitions for all pair roots through depth 6 and P235 through depth 4.
+[2026-07-13T09:54:05+03:00] OK GATE | DID: Checked #424, Ford 2008, and Kim-Yip-Yoo 2023 | RESULT: #424 OPEN; cited theorems do not control recursive G2 membership | D: none
+[2026-07-13T09:54:05+03:00] > PLAN | NEXT: Prove low arithmetic-pair exceptions negligible, then exact-test transfer from many admissible pairs to one G2 pair.
+[2026-07-13T09:50:30+03:00] OK VERIFY | DID: Corrected C15 triple-overlap to 6t,10t,15t | RESULT: exact 30beta=26929/33750 at M=810000; scalar gate still DEAD | D: none
+[2026-07-13T09:54:25.5745175+03:00] OK ATTACK | DID: Enumerated X=10000 hard/healed events | RESULT: 518 hard, 593 healed; first hard=54 | D: local rule tested
+[2026-07-13T09:54:25.5745175+03:00] FAIL ATTACK | DID: Abandoned factor-endpoint-to-healed charge | RESULT: 55=5*11 unique; 11,21 missing, so n=54 has no healed endpoint | D: local route DEAD
+[2026-07-13T09:54:25.5745175+03:00] > ATTACK | NEXT: Prove exact hard-versus-healing reduction and independently replay all X<=100000.
+[2026-07-13T09:54:50+03:00] OK PLAN | DID: Derived divisor-character lemma A(3r+1)>=(Omega(3r+1)-2)/6 | RESULT: low A reduces to Landau almost-prime bound | D: frontier=G2 transfer
+[2026-07-13T09:54:50+03:00] > ATTACK | NEXT: Build exact C20 all-factor-pair audit for z=9,11 and R up to 6666666 to falsify multiplicity transfer.
+[2026-07-13T09:56:00+03:00] OK ATTACK | DID: Ran C17 all-pair audit with LIMIT=1000000 | RESULT: max direct=101/80 at X=362; no lambda=2 failure | D: scale-max gate fails
+[2026-07-13T09:56:01+03:00] > ATTACK | NEXT: Run exact capacity-one Hall flow at LIMIT=1000000 with odd forced parents and all hard-factor endpoints.
+[2026-07-13T09:56:05+03:00] OK ATTACK | DID: Enumerated tuple states: pairs depth 6, P235 depth 4 | RESULT: totals P23=3415,P25=4072,P35=4136,P235=257 | D: finite tuple closure DEAD
+[2026-07-13T09:56:05+03:00] > ATTACK | NEXT: Prove the tuple transition lemma, infinite P35 branch, and overlap obstruction; derive any valid counting consequence.
+[2026-07-13T09:56:35.5055215+03:00] OK ATTACK | DID: Independent Python replay of every X<=100000 | RESULT: hard=5108, healed=6783, forced-11 hard fiber=350 | D: reduction verified
+[2026-07-13T09:56:35.5055215+03:00] > ATTACK | NEXT: Re-run C16 X=100000000 audit with forced hard-fiber and healing counters enabled.
+[2026-07-13T09:56:50+03:00] FAIL ATTACK | DID: Ran C17 Hall LIMIT=1000000 | RESULT: seed-3 assertion failed when quotient was forbidden mod 3 | D: classifier fixed
+[2026-07-13T09:56:51+03:00] > ATTACK | NEXT: Re-run corrected exact Hall flow at LIMIT=1000000 with admissible seed-3 classification.
+[2026-07-13T09:55:20+03:00] OK ATTACK | DID: Harvested GPT-Pro R2 once after completion | RESULT: R2_finite_state_strict_gap_raw.md, 11213 chars | D: fixed-state renewal DEAD
+[2026-07-13T09:57:00+03:00] OK VERIFY | DID: Repaired notation and audited R2 theorem | RESULT: problems/424/gpt_pro/R2_audit.md; scale-dependent summable-loss escape exact | D: frontier narrowed
+[2026-07-13T09:58:12+03:00] > VERIFY | NEXT: Run 7 exact transition, overlap, depth-chain, and P235 witness unit tests.
+[2026-07-13T09:58:29+03:00] OK VERIFY | DID: Ran python -m unittest -v test_pair_states.py | RESULT: 7/7 tests passed in 0.030 s | D: computations certified
+[2026-07-13T09:58:29+03:00] > ATTACK | NEXT: Write C18 proof note with exact recurrence lemma, falsifiers, and stated limitation on R_alpha.
+[2026-07-13T09:59:10+03:00] FAIL ATTACK | DID: Exact Hall flow at X=54 | RESULT: S={21,54}, N(S)={11}; matching 9/10 | D: all-factor capacity-one route DEAD
+[2026-07-13T09:59:11+03:00] > ATTACK | NEXT: Run C17 reciprocal and fixed-point all-pair scan with LIMIT=100000000 and exact dyadic envelopes.
+[2026-07-13T10:00:20+03:00] > ATTACK | NEXT: GPT-Pro R3 prove/falsify exact hole contraction R<=Mhalf+Mthird; wait for full response.
+[2026-07-13T09:59:30+03:00] OK ATTACK | DID: Scanned 1389436 rough candidates through R=6666666 | RESULT: r=258133 is 11-rough, T-missing, with 20 blocked pairs | D: raw multiplicity DEAD
+[2026-07-13T09:59:30+03:00] > ATTACK | NEXT: Exact-test sharpness of the half-missing-divisor obstruction on every scanned rough miss.
+[2026-07-13T10:01:00+03:00] > ATTACK | NEXT: Run C16 every-cutoff hole inequalities through X=1e9 with exact integer recurrence.
+[2026-07-13T10:03:00+03:00] > ATTACK | NEXT: Red-team C16 contraction on all single-extra-seed closures through 5000 to test universality.
+[2026-07-13T10:00:53.3493409+03:00] OK ATTACK | DID: Proved C16 seed partition and exact two-scale reduction | RESULT: C16_hole_contraction_proof.md Lemma 1, Corollary 2 | D: frontier=HC
+[2026-07-13T10:00:53.3493409+03:00] > VERIFY | NEXT: Referee-check C16 identities, compile warnings, hashes, and independent X=100000 replay.
+[2026-07-13T10:01:25+03:00] OK ATTACK | DID: Ran C17 all-pair LIMIT=100000000 | RESULT: direct max=101/80; canonical max=15232220827/10334765056 | D: lambda<2 survives
+[2026-07-13T10:01:26+03:00] > ATTACK | NEXT: Extend exact C17 every-cutoff and all-factor-pair scan to LIMIT=1000000000.
+[2026-07-13T10:03:58+03:00] OK ATTACK | DID: audited C16 contraction at every cutoff through 1e9 | RESULT: 0 two-scale and 0 seed-partition failures; JSON problems/424/compute/wave3/C16_hole_contraction/result_1e9.json | D: none
+[2026-07-13T10:03:54+03:00] OK ATTACK | DID: Wrote C18 recurrence and obstruction proof | RESULT: problems/424/fanout/wave3/C18_pair_state_recurrence.md | D: new exact lemma+falsifier
+[2026-07-13T10:03:54+03:00] > VERIFY | NEXT: Re-run unit tests, compile Python, and referee-check formulas against C09 definitions and exact outputs.
+[2026-07-13T10:05:03.5599802+03:00] OK VERIFY | DID: Ran g++ -Werror, Python replay, and audited X=1e9 artifact | RESULT: HC/two-scale failures=0 through 1e9 | D: none
+[2026-07-13T10:05:03.5599802+03:00] > CHECK | NEXT: Check whether C16 produced a verifiable new lemma, falsifier, or obstruction.
+[2026-07-13T10:05:40+03:00] OK ATTACK | DID: Ran C17 LIMIT=1000000000 | RESULT: direct max=101/80; canonical max=15232220827/10334765056 | D: lambda<2 survives
+[2026-07-13T10:05:41+03:00] > VERIFY | NEXT: Run python -m unittest -v C17 verify_small.py with naive exact census and independent matching.
+[2026-07-13T10:06:15+03:00] FAIL VERIFY | DID: Ran C17 verify_small.py | RESULT: linker denied LocalAppData temp output | D: temp moved into C17
+[2026-07-13T10:06:16+03:00] > VERIFY | NEXT: Re-run 3 C17 exact tests with workspace-local compiler outputs.
+[2026-07-13T10:06:45+03:00] > ATTACK | NEXT: run exact C22 CP-SAT over all finite closed supersets at cutoffs 100..5000 to falsify or certify universal contraction
+[2026-07-13T10:07:15+03:00] FAIL VERIFY | DID: Retried C17 tests | RESULT: linker denied Python-created workspace temp directory | D: tests use prebuilt executables
+[2026-07-13T10:07:16+03:00] > VERIFY | NEXT: Re-run 3 C17 tests using prebuilt executables and flat JSON fixtures.
+[2026-07-13T10:07:29+03:00] OK VERIFY | DID: Referee-audited note; ran Python compile and 9 exact tests | RESULT: 9/9 pass in 0.162 s; Lean has no toolchain | D: none
+[2026-07-13T10:07:29+03:00] > CHECK | NEXT: Decide whether the exact recurrence lemma and closure falsifiers are verifiable new facts.
+[2026-07-13T10:07:29+03:00] OK CHECK | DID: Checked C18 deliverables against C09 frontier | RESULT: Lemma 1, Proposition 2, and t=547 falsifier are exact | D: stall=0
+[2026-07-13T10:07:29+03:00] > DECIDE | NEXT: Re-run novelty gate and confirm the C18 write-up states the strongest proved outcome without an R_alpha claim.
+[2026-07-13T10:08:01+03:00] FAIL ATTACK | DID: optimized universal C22 closure model at X=5000 | RESULT: exact closed countermodel excess=43 (R=105,Mhalf=41,Mthird=21), result_5000.json | D: closure-only proof dead; minimal generation required
+[2026-07-13T10:07:59+03:00] OK DECIDE | DID: Rechecked official status and exact-phrase prior art; finalized C18 note | RESULT: no prior pair recurrence found; artifact states no R_alpha | D: lane complete
+[2026-07-13T10:09:25+03:00] OK VERIFY | DID: Ran 3 independent C17 exact tests | RESULT: 3/3 pass; Hall dual {21,54}->{11} | D: none
+[2026-07-13T10:09:26+03:00] FAIL ATTACK | DID: Audited C22 closure-only SAT model | RESULT: X=5000 excess=43 for an ungrounded closed superset | D: closure-only route DEAD
+[2026-07-13T10:09:27+03:00] > ATTACK | NEXT: Add exact derivation ranks and rank-grounded seed-2 healing counts to the C17 recurrence audit.
+[2026-07-13T10:09:54+03:00] OK VERIFY | DID: replayed C18 pair-state recurrence tests | RESULT: 9/9 pass; t=547 exact branch-overlap forces triple state; C18_pair_state_recurrence.md | D: finite pair-state shortcut dead
+[2026-07-13T10:10:05+03:00] > ATTACK | NEXT: launch C23 independent grounded-Horn proof lane for the C16 two-scale contraction, using C22 minimal countermodel as guardrail
+[2026-07-13T10:10:10.3865805+03:00] OK CHECK | DID: Checked C16 cycle output | RESULT: Lemma 1 reduction and Propositions 3-4 are verifiable new facts | D: stall=0
+[2026-07-13T10:10:10.3865805+03:00] > DECIDE | NEXT: Decide contraction status against C22 universal-closure falsifier.
+[2026-07-13T10:10:10.3865805+03:00] FAIL DECIDE | DID: Audited C22 OPTIMAL model X=5000 | RESULT: closure-only two-scale excess=43 | D: HC proof incomplete
+[2026-07-13T10:10:10.3865805+03:00] > PLAN | NEXT: Replace closure-only charging by grounded derivation and nonmembership proof ranks.
+[2026-07-13T10:10:10.3865805+03:00] OK PLAN | DID: Refined C16 frontier after C22 | RESULT: seek rank-decreasing switch from each hard hole to distinct Q capacity | D: frontier=rank switch
+[2026-07-13T10:10:10.3865805+03:00] > ATTACK | NEXT: Compute exact generation/obstruction depths and test depth-majorized H-to-Q charging through X=100000.
+[2026-07-13T10:10:30+03:00] OK ATTACK | DID: Tested half-divisor blocker on 81685 largest-row misses | RESULT: r=1732597 has 12 pairs, exactly one G2 endpoint each | D: half gate sharp
+[2026-07-13T10:10:30+03:00] > VERIFY | NEXT: Recompile C20, reproduce JSON, independently audit formulas and referee the uniform Landau reduction.

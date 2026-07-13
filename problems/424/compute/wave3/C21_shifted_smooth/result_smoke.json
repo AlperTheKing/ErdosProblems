@@ -1,0 +1,4485 @@
+{
+  "C21_analyzer": {
+    "compiler_version": "g++.EXE (Rev5, Built by MSYS2 project) 16.1.0",
+    "script_sha256": "e5b88382aa3a800bc4b8ef162e785ddd4bf0207933e4e17178049f16cfb1704d",
+    "source_sha256": "2370a6d0eb0cfe4d15e9cf8251ef4ad65d63d3beebda5e8aadb0cf77863098b4",
+    "stderr": "",
+    "stdout": "smooth_limit=1000 G_bitmap_bytes=3002 rows=14 elapsed_seconds=0.0002916"
+  },
+  "G_builder": {
+    "accepted_prefix_checks": [
+      {
+        "bound": 10,
+        "count": 4,
+        "sha256": null
+      },
+      {
+        "bound": 100,
+        "count": 23,
+        "sha256": null
+      },
+      {
+        "bound": 1000,
+        "count": 250,
+        "sha256": null
+      }
+    ],
+    "bitmap_sha256": "3551d024e1eb593e2dd194c177b62e816bc90c69bc91fa5bcf3c6613833d0a84",
+    "compiler_version": "g++.EXE (Rev5, Built by MSYS2 project) 16.1.0",
+    "count_through_G_limit": 845,
+    "source_sha256": "d219dd8bbf150305befa46408d6e31662f5891e2176fd6c583caa04e5f3c7fd7"
+  },
+  "audit": {
+    "G_bitmap_bytes": 3002,
+    "assertions": [
+      "T(s) iff witness_pairs(s)>0 for every analyzed s",
+      "K(s)=0 iff 3s+1 has no 2mod3 prime divisor or equals p^2 with p=2mod3",
+      "K-R <= hole_endpoints <= 2(K-R) pointwise",
+      "#2mod3 divisors = 2K plus the excluded equal-square indicator"
+    ],
+    "bin_labels": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5-7",
+      "8-15",
+      "16+"
+    ],
+    "examples": {
+      "fixed_11_times_G2_prime": [
+        {
+          "3s_plus_1": 22,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 7,
+          "pairs": [
+            [
+              2,
+              11,
+              true,
+              false
+            ]
+          ],
+          "s": 7,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 55,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 3,
+          "pairs": [
+            [
+              5,
+              11,
+              true,
+              false
+            ]
+          ],
+          "s": 18,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 187,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 31,
+          "pairs": [
+            [
+              11,
+              17,
+              false,
+              true
+            ]
+          ],
+          "s": 62,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 451,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              11,
+              41,
+              false,
+              true
+            ]
+          ],
+          "s": 150,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 583,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 97,
+          "pairs": [
+            [
+              11,
+              53,
+              false,
+              true
+            ]
+          ],
+          "s": 194,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 1111,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 37,
+          "pairs": [
+            [
+              11,
+              101,
+              false,
+              true
+            ]
+          ],
+          "s": 370,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 1441,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              11,
+              131,
+              false,
+              true
+            ]
+          ],
+          "s": 480,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 1639,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 13,
+          "pairs": [
+            [
+              11,
+              149,
+              false,
+              true
+            ]
+          ],
+          "s": 546,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 1837,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 17,
+          "pairs": [
+            [
+              11,
+              167,
+              false,
+              true
+            ]
+          ],
+          "s": 612,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 2167,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 19,
+          "pairs": [
+            [
+              11,
+              197,
+              false,
+              true
+            ]
+          ],
+          "s": 722,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 2563,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 61,
+          "pairs": [
+            [
+              11,
+              233,
+              false,
+              true
+            ]
+          ],
+          "s": 854,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 2629,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 73,
+          "pairs": [
+            [
+              11,
+              239,
+              false,
+              true
+            ]
+          ],
+          "s": 876,
+          "witness_pairs": 0
+        }
+      ],
+      "multi_pair_blocked": [
+        {
+          "3s_plus_1": 40,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 13,
+          "pairs": [
+            [
+              2,
+              20,
+              true,
+              false
+            ],
+            [
+              5,
+              8,
+              true,
+              false
+            ]
+          ],
+          "s": 13,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 112,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 37,
+          "pairs": [
+            [
+              2,
+              56,
+              true,
+              false
+            ],
+            [
+              8,
+              14,
+              false,
+              true
+            ]
+          ],
+          "s": 37,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 136,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              2,
+              68,
+              true,
+              false
+            ],
+            [
+              8,
+              17,
+              false,
+              true
+            ]
+          ],
+          "s": 45,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 184,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 3,
+          "largest_prime_factor": 61,
+          "pairs": [
+            [
+              2,
+              92,
+              true,
+              false
+            ],
+            [
+              8,
+              23,
+              false,
+              false
+            ]
+          ],
+          "s": 61,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 190,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 7,
+          "pairs": [
+            [
+              2,
+              95,
+              true,
+              false
+            ],
+            [
+              5,
+              38,
+              true,
+              false
+            ]
+          ],
+          "s": 63,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 208,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 23,
+          "pairs": [
+            [
+              2,
+              104,
+              true,
+              false
+            ],
+            [
+              8,
+              26,
+              false,
+              true
+            ]
+          ],
+          "s": 69,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 232,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 3,
+          "largest_prime_factor": 11,
+          "pairs": [
+            [
+              2,
+              116,
+              true,
+              false
+            ],
+            [
+              8,
+              29,
+              false,
+              false
+            ]
+          ],
+          "s": 77,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 256,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 3,
+          "largest_prime_factor": 17,
+          "pairs": [
+            [
+              2,
+              128,
+              true,
+              false
+            ],
+            [
+              8,
+              32,
+              false,
+              false
+            ]
+          ],
+          "s": 85,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 280,
+          "arithmetic_pairs": 4,
+          "hole_endpoints": 5,
+          "largest_prime_factor": 31,
+          "pairs": [
+            [
+              2,
+              140,
+              true,
+              false
+            ],
+            [
+              5,
+              56,
+              true,
+              false
+            ],
+            [
+              8,
+              35,
+              false,
+              false
+            ],
+            [
+              14,
+              20,
+              true,
+              false
+            ]
+          ],
+          "s": 93,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 286,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 19,
+          "pairs": [
+            [
+              2,
+              143,
+              true,
+              false
+            ],
+            [
+              11,
+              26,
+              false,
+              true
+            ]
+          ],
+          "s": 95,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 352,
+          "arithmetic_pairs": 3,
+          "hole_endpoints": 4,
+          "largest_prime_factor": 13,
+          "pairs": [
+            [
+              2,
+              176,
+              true,
+              false
+            ],
+            [
+              8,
+              44,
+              false,
+              true
+            ],
+            [
+              11,
+              32,
+              false,
+              false
+            ]
+          ],
+          "s": 117,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 370,
+          "arithmetic_pairs": 2,
+          "hole_endpoints": 2,
+          "largest_prime_factor": 41,
+          "pairs": [
+            [
+              2,
+              185,
+              true,
+              false
+            ],
+            [
+              5,
+              74,
+              true,
+              false
+            ]
+          ],
+          "s": 123,
+          "witness_pairs": 0
+        }
+      ],
+      "splitless": [
+        {
+          "3s_plus_1": 7,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 2,
+          "pairs": [],
+          "s": 2,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 13,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 2,
+          "pairs": [],
+          "s": 4,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 19,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 3,
+          "pairs": [],
+          "s": 6,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 25,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 2,
+          "pairs": [],
+          "s": 8,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 31,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 5,
+          "pairs": [],
+          "s": 10,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 37,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 3,
+          "pairs": [],
+          "s": 12,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 43,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 7,
+          "pairs": [],
+          "s": 14,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 49,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 2,
+          "pairs": [],
+          "s": 16,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 61,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 5,
+          "pairs": [],
+          "s": 20,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 67,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 11,
+          "pairs": [],
+          "s": 22,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 73,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 3,
+          "pairs": [],
+          "s": 24,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 79,
+          "arithmetic_pairs": 0,
+          "hole_endpoints": 0,
+          "largest_prime_factor": 13,
+          "pairs": [],
+          "s": 26,
+          "witness_pairs": 0
+        }
+      ],
+      "unique_pair_blocked": [
+        {
+          "3s_plus_1": 16,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              2,
+              8,
+              true,
+              false
+            ]
+          ],
+          "s": 5,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 22,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 7,
+          "pairs": [
+            [
+              2,
+              11,
+              true,
+              false
+            ]
+          ],
+          "s": 7,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 46,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              2,
+              23,
+              true,
+              false
+            ]
+          ],
+          "s": 15,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 55,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 3,
+          "pairs": [
+            [
+              5,
+              11,
+              true,
+              false
+            ]
+          ],
+          "s": 18,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 58,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 19,
+          "pairs": [
+            [
+              2,
+              29,
+              true,
+              false
+            ]
+          ],
+          "s": 19,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 64,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 7,
+          "pairs": [
+            [
+              2,
+              32,
+              true,
+              false
+            ]
+          ],
+          "s": 21,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 76,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 5,
+          "pairs": [
+            [
+              2,
+              38,
+              true,
+              false
+            ]
+          ],
+          "s": 25,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 94,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 31,
+          "pairs": [
+            [
+              2,
+              47,
+              true,
+              false
+            ]
+          ],
+          "s": 31,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 115,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 19,
+          "pairs": [
+            [
+              5,
+              23,
+              true,
+              false
+            ]
+          ],
+          "s": 38,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 118,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 13,
+          "pairs": [
+            [
+              2,
+              59,
+              true,
+              false
+            ]
+          ],
+          "s": 39,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 124,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 41,
+          "pairs": [
+            [
+              2,
+              62,
+              true,
+              false
+            ]
+          ],
+          "s": 41,
+          "witness_pairs": 0
+        },
+        {
+          "3s_plus_1": 142,
+          "arithmetic_pairs": 1,
+          "hole_endpoints": 1,
+          "largest_prime_factor": 47,
+          "pairs": [
+            [
+              2,
+              71,
+              true,
+              false
+            ]
+          ],
+          "s": 47,
+          "witness_pairs": 0
+        }
+      ]
+    },
+    "fixed_point_denominator": "1000000000000000000",
+    "rows": [
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.007827788649706",
+            "denominator": "511",
+            "numerator": "4"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.992172211350294",
+            "denominator": "511",
+            "numerator": "507"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.007827788649706",
+              "denominator": "511",
+              "numerator": "4"
+            },
+            "upper": {
+              "decimal": "0.007827788649706",
+              "denominator": "511",
+              "numerator": "4"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.992172211350294",
+              "denominator": "511",
+              "numerator": "507"
+            },
+            "upper": {
+              "decimal": "0.992172211350294",
+              "denominator": "511",
+              "numerator": "507"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.001956947162427",
+              "denominator": "511",
+              "numerator": "1"
+            },
+            "upper": {
+              "decimal": "0.001956947162427",
+              "denominator": "511",
+              "numerator": "1"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.990215264187867",
+              "denominator": "511",
+              "numerator": "506"
+            },
+            "upper": {
+              "decimal": "0.990215264187867",
+              "denominator": "511",
+              "numerator": "506"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 8,
+          "T_present": 1,
+          "blocked": 1,
+          "exceptional_p2_square": 1,
+          "fixed_11_times_G2_prime": 0,
+          "multi_pair_blocked": 0,
+          "no_2mod3_prime": 6,
+          "shifted_prime": 5,
+          "smooth": 9,
+          "splitless": 7,
+          "unique_pair_blocked": 1
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "998046875000000000",
+            "upper_numerator": "998046875000000000"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1953125000000000",
+            "upper_numerator": "1953125000000000"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "0",
+            "upper_numerator": "0"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "990234375000000000",
+            "upper_numerator": "990234375000000000"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1953125000000000",
+            "upper_numerator": "1953125000000000"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1953125000000000",
+            "upper_numerator": "1953125000000000"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "0",
+            "upper_numerator": "0"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7812500000000000",
+            "upper_numerator": "7812500000000000"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "800781250000000000",
+            "upper_numerator": "800781250000000000"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "988281250000000000",
+            "upper_numerator": "988281250000000000"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1953125000000000",
+            "upper_numerator": "1953125000000000"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7812500000000000",
+            "upper_numerator": "7812500000000000"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7812500000000000",
+            "upper_numerator": "7812500000000000"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "988281250000000000",
+              "upper_numerator": "988281250000000000"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1953125000000000",
+              "upper_numerator": "1953125000000000"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            8,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "990234375000000000",
+              "upper_numerator": "990234375000000000"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "7812500000000000",
+              "upper_numerator": "7812500000000000"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 2
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.262858436279417",
+            "denominator": "207882883303243604337037809553412347",
+            "numerator": "54643769634347124083983731848878805"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.737141563720583",
+            "denominator": "207882883303243604337037809553412347",
+            "numerator": "153239113668896480253054077704533542"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.262858436279417",
+              "denominator": "1988535772462277107",
+              "numerator": "522703403635116595"
+            },
+            "upper": {
+              "decimal": "0.262858436279417",
+              "denominator": "1988535772462277077",
+              "numerator": "522703403635116605"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.737141563720583",
+              "denominator": "1988535772462277107",
+              "numerator": "1465832368827160482"
+            },
+            "upper": {
+              "decimal": "0.737141563720583",
+              "denominator": "1988535772462277077",
+              "numerator": "1465832368827160502"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.041724994172863",
+              "denominator": "1988535772462277107",
+              "numerator": "82971643518518517"
+            },
+            "upper": {
+              "decimal": "0.041724994172863",
+              "denominator": "1988535772462277077",
+              "numerator": "82971643518518520"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.695416569547720",
+              "denominator": "1988535772462277107",
+              "numerator": "1382860725308641965"
+            },
+            "upper": {
+              "decimal": "0.695416569547720",
+              "denominator": "152964290189405929",
+              "numerator": "106373901946818614"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 28,
+          "T_present": 11,
+          "blocked": 4,
+          "exceptional_p2_square": 2,
+          "fixed_11_times_G2_prime": 1,
+          "multi_pair_blocked": 0,
+          "no_2mod3_prime": 22,
+          "shifted_prime": 18,
+          "smooth": 39,
+          "splitless": 24,
+          "unique_pair_blocked": 4
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1988535772462277077",
+            "upper_numerator": "1988535772462277107"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "82971643518518517",
+            "upper_numerator": "82971643518518520"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "55555555555555555",
+            "upper_numerator": "55555555555555556"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1465832368827160482",
+            "upper_numerator": "1465832368827160502"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "82971643518518517",
+            "upper_numerator": "82971643518518520"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "87601273148148147",
+            "upper_numerator": "87601273148148150"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "0",
+            "upper_numerator": "0"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "522703403635116595",
+            "upper_numerator": "522703403635116605"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1166232638888888881",
+            "upper_numerator": "1166232638888888894"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1382860725308641965",
+            "upper_numerator": "1382860725308641982"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "82971643518518517",
+            "upper_numerator": "82971643518518520"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "522703403635116595",
+            "upper_numerator": "522703403635116605"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "522703403635116595",
+            "upper_numerator": "522703403635116605"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            24,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1382860725308641965",
+              "upper_numerator": "1382860725308641982"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "82971643518518517",
+              "upper_numerator": "82971643518518520"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            28,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1465832368827160482",
+              "upper_numerator": "1465832368827160502"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "522703403635116595",
+              "upper_numerator": "522703403635116605"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 3
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.195059690571612",
+            "denominator": "1435284185447049052151094752245545828",
+            "numerator": "279966089095629334907056596804725281"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.804940309428388",
+            "denominator": "1435284185447049052151094752245545828",
+            "numerator": "1155318096351419717244038155440820547"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.195059690571612",
+              "denominator": "2712596420610425268",
+              "numerator": "529118218449931409"
+            },
+            "upper": {
+              "decimal": "0.195059690571612",
+              "denominator": "2712596420610425211",
+              "numerator": "529118218449931421"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.804940309428388",
+              "denominator": "1356298210305212634",
+              "numerator": "1091739101080246901"
+            },
+            "upper": {
+              "decimal": "0.804940309428388",
+              "denominator": "2712596420610425211",
+              "numerator": "2183478202160493847"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.171240499401754",
+              "denominator": "66160888307571348",
+              "numerator": "11329423554652213"
+            },
+            "upper": {
+              "decimal": "0.171240499401754",
+              "denominator": "2712596420610425211",
+              "numerator": "464506365740740747"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.633699810026634",
+              "denominator": "2712596420610425268",
+              "numerator": "1718971836419753069"
+            },
+            "upper": {
+              "decimal": "0.633699810026634",
+              "denominator": "904198806870141737",
+              "numerator": "572990612139917700"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 71,
+          "T_present": 14,
+          "blocked": 19,
+          "exceptional_p2_square": 3,
+          "fixed_11_times_G2_prime": 3,
+          "multi_pair_blocked": 5,
+          "no_2mod3_prime": 49,
+          "shifted_prime": 34,
+          "smooth": 85,
+          "splitless": 52,
+          "unique_pair_blocked": 14
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2712596420610425211",
+            "upper_numerator": "2712596420610425268"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "464506365740740733",
+            "upper_numerator": "464506365740740747"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "64305555555555554",
+            "upper_numerator": "64305555555555557"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2183478202160493802",
+            "upper_numerator": "2183478202160493847"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "508308834876543202",
+            "upper_numerator": "508308834876543216"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "527419945987654314",
+            "upper_numerator": "527419945987654328"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "41333333333333331",
+            "upper_numerator": "41333333333333335"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "529118218449931409",
+            "upper_numerator": "529118218449931421"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1404510416666666654",
+            "upper_numerator": "1404510416666666675"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1718971836419753069",
+            "upper_numerator": "1718971836419753100"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "423173032407407402",
+            "upper_numerator": "423173032407407412"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "529118218449931409",
+            "upper_numerator": "529118218449931421"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "529118218449931409",
+            "upper_numerator": "529118218449931421"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            52,
+            14,
+            4,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1718971836419753069",
+              "upper_numerator": "1718971836419753100"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "423173032407407402",
+              "upper_numerator": "423173032407407412"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "38864197530864196",
+              "upper_numerator": "38864197530864199"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2469135802469135",
+              "upper_numerator": "2469135802469136"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            71,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2183478202160493802",
+              "upper_numerator": "2183478202160493847"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "529118218449931409",
+              "upper_numerator": "529118218449931421"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 5
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.191532687147088",
+            "denominator": "129693996417733757178544342806830494",
+            "numerator": "24840639640733355574699398313438969"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.808467312852912",
+            "denominator": "129693996417733757178544342806830494",
+            "numerator": "104853356777000401603844944493391525"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.191532687147088",
+              "denominator": "822883748977067326",
+              "numerator": "157609135651247563"
+            },
+            "upper": {
+              "decimal": "0.191532687147088",
+              "denominator": "822883748977067298",
+              "numerator": "157609135651247569"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.808467312852912",
+              "denominator": "822883748977067326",
+              "numerator": "665274613325819735"
+            },
+            "upper": {
+              "decimal": "0.808467312852912",
+              "denominator": "274294582992355766",
+              "numerator": "221758204441939919"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.226129646319301",
+              "denominator": "1645767497954134652",
+              "numerator": "372156822236169593"
+            },
+            "upper": {
+              "decimal": "0.226129646319301",
+              "denominator": "548589165984711532",
+              "numerator": "124052274078723203"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.582337666533611",
+              "denominator": "1645767497954134652",
+              "numerator": "958392404415469877"
+            },
+            "upper": {
+              "decimal": "0.582337666533611",
+              "denominator": "548589165984711532",
+              "numerator": "319464134805156635"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 114,
+          "T_present": 26,
+          "blocked": 37,
+          "exceptional_p2_square": 5,
+          "fixed_11_times_G2_prime": 4,
+          "multi_pair_blocked": 9,
+          "no_2mod3_prime": 72,
+          "shifted_prime": 52,
+          "smooth": 140,
+          "splitless": 77,
+          "unique_pair_blocked": 28
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3291534995908269192",
+            "upper_numerator": "3291534995908269304"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "744313644472339186",
+            "upper_numerator": "744313644472339218"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "207162698412698411",
+            "upper_numerator": "207162698412698415"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2661098453303278940",
+            "upper_numerator": "2661098453303279028"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "812948565107259821",
+            "upper_numerator": "812948565107259853"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "856456429628729786",
+            "upper_numerator": "856456429628729818"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "66165784832451496",
+            "upper_numerator": "66165784832451504"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "630436542604990252",
+            "upper_numerator": "630436542604990276"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1568763298374905497",
+            "upper_numerator": "1568763298374905536"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1916784808830939754",
+            "upper_numerator": "1916784808830939810"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "678147859639887690",
+            "upper_numerator": "678147859639887714"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "630436542604990252",
+            "upper_numerator": "630436542604990276"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "630436542604990252",
+            "upper_numerator": "630436542604990276"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            77,
+            28,
+            8,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1916784808830939754",
+              "upper_numerator": "1916784808830939810"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "678147859639887690",
+              "upper_numerator": "678147859639887714"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "63696649029982361",
+              "upper_numerator": "63696649029982368"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2469135802469135",
+              "upper_numerator": "2469135802469136"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            114,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2661098453303278940",
+              "upper_numerator": "2661098453303279028"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "630436542604990252",
+              "upper_numerator": "630436542604990276"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 7
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.216355292785245",
+            "denominator": "2918626980428196550038195293260977906",
+            "numerator": "631460394881457234504866546026118089"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.783644707214755",
+            "denominator": "2918626980428196550038195293260977906",
+            "numerator": "2287166585546739315533328747234859817"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.216355292785245",
+              "denominator": "3672869809983884274",
+              "numerator": "794644823101149533"
+            },
+            "upper": {
+              "decimal": "0.216355292785245",
+              "denominator": "3672869809983884111",
+              "numerator": "794644823101149569"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.783644707214755",
+              "denominator": "612144968330647379",
+              "numerator": "479704164480455763"
+            },
+            "upper": {
+              "decimal": "0.783644707214755",
+              "denominator": "3672869809983884111",
+              "numerator": "2878224986882734705"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.220611920496859",
+              "denominator": "3672869809983884274",
+              "numerator": "810278862515479301"
+            },
+            "upper": {
+              "decimal": "0.220611920496859",
+              "denominator": "3672869809983884111",
+              "numerator": "810278862515479347"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.563032786717896",
+              "denominator": "3672869809983884274",
+              "numerator": "2067946124367255277"
+            },
+            "upper": {
+              "decimal": "0.563032786717896",
+              "denominator": "3672869809983884111",
+              "numerator": "2067946124367255358"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 153,
+          "T_present": 38,
+          "blocked": 51,
+          "exceptional_p2_square": 6,
+          "fixed_11_times_G2_prime": 4,
+          "multi_pair_blocked": 15,
+          "no_2mod3_prime": 96,
+          "shifted_prime": 68,
+          "smooth": 191,
+          "splitless": 102,
+          "unique_pair_blocked": 36
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3672869809983884111",
+            "upper_numerator": "3672869809983884274"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "810278862515479301",
+            "upper_numerator": "810278862515479347"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "207162698412698411",
+            "upper_numerator": "207162698412698415"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2878224986882734578",
+            "upper_numerator": "2878224986882734705"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "910426311026564176",
+            "upper_numerator": "910426311026564222"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "974064045677904270",
+            "upper_numerator": "974064045677904316"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "97678312708615733",
+            "upper_numerator": "97678312708615747"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "794644823101149533",
+            "upper_numerator": "794644823101149569"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1676629159365766479",
+            "upper_numerator": "1676629159365766534"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2067946124367255277",
+            "upper_numerator": "2067946124367255358"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "712600549806863568",
+            "upper_numerator": "712600549806863600"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "794644823101149533",
+            "upper_numerator": "794644823101149569"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "794644823101149533",
+            "upper_numerator": "794644823101149569"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            102,
+            36,
+            14,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2067946124367255277",
+              "upper_numerator": "2067946124367255358"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "712600549806863568",
+              "upper_numerator": "712600549806863600"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "95209176906146598",
+              "upper_numerator": "95209176906146611"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2469135802469135",
+              "upper_numerator": "2469135802469136"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            153,
+            38,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2878224986882734578",
+              "upper_numerator": "2878224986882734705"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "794644823101149533",
+              "upper_numerator": "794644823101149569"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 11
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.225170281376372",
+            "denominator": "4196874611646893806415139853996003234",
+            "numerator": "945011437205881461404066656663155625"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.774829718623628",
+            "denominator": "4196874611646893806415139853996003234",
+            "numerator": "3251863174441012345011073197332847609"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.226777809490541",
+              "denominator": "4255596508683172289",
+              "numerator": "965074854314765664"
+            },
+            "upper": {
+              "decimal": "0.226777809490541",
+              "denominator": "4255596508683172031",
+              "numerator": "965074854314765724"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.773222190509459",
+              "denominator": "46764796798716179",
+              "numerator": "36159578619433037"
+            },
+            "upper": {
+              "decimal": "0.773222190509459",
+              "denominator": "4255596508683172031",
+              "numerator": "3290521654368406565"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.241931850391812",
+              "denominator": "4255596508683172289",
+              "numerator": "1029564337866655805"
+            },
+            "upper": {
+              "decimal": "0.241931850391812",
+              "denominator": "4255596508683172031",
+              "numerator": "1029564337866655885"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.531290340117646",
+              "denominator": "4255596508683172289",
+              "numerator": "2260957316501750562"
+            },
+            "upper": {
+              "decimal": "0.531290340117646",
+              "denominator": "4255596508683172031",
+              "numerator": "2260957316501750680"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 224,
+          "T_present": 62,
+          "blocked": 85,
+          "exceptional_p2_square": 7,
+          "fixed_11_times_G2_prime": 6,
+          "multi_pair_blocked": 32,
+          "no_2mod3_prime": 132,
+          "shifted_prime": 95,
+          "smooth": 286,
+          "splitless": 139,
+          "unique_pair_blocked": 53
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4255596508683172031",
+            "upper_numerator": "4255596508683172289"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1029564337866655805",
+            "upper_numerator": "1029564337866655885"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "210628187172304817",
+            "upper_numerator": "210628187172304823"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3290521654368406367",
+            "upper_numerator": "3290521654368406565"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1274255369874136071",
+            "upper_numerator": "1274255369874136151"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1379096137394233015",
+            "upper_numerator": "1379096137394233095"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "231321946481531981",
+            "upper_numerator": "231321946481532012"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "965074854314765664",
+            "upper_numerator": "965074854314765724"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1841154512720305341",
+            "upper_numerator": "1841154512720305423"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2260957316501750562",
+            "upper_numerator": "2260957316501750680"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "798242391385123824",
+            "upper_numerator": "798242391385123873"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "972116987407318925",
+            "upper_numerator": "972116987407318985"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "986201253592425446",
+            "upper_numerator": "986201253592425506"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            139,
+            53,
+            29,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2260957316501750562",
+              "upper_numerator": "2260957316501750680"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "798242391385123824",
+              "upper_numerator": "798242391385123873"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "217952860955583711",
+              "upper_numerator": "217952860955583739"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "13369085525948270",
+              "upper_numerator": "13369085525948273"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            224,
+            59,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "3290521654368406367",
+              "upper_numerator": "3290521654368406565"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "958032721222212405",
+              "upper_numerator": "958032721222212462"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "7042133092553259",
+              "upper_numerator": "7042133092553262"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 17
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.238796646037721",
+            "denominator": "306866739064459664165201784735719845",
+            "numerator": "73278748069125541358017263554141644"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.761203353962279",
+            "denominator": "306866739064459664165201784735719845",
+            "numerator": "233587990995334122807184521181578201"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.242054611898219",
+              "denominator": "4806322612791759535",
+              "numerator": "1163392554696941873"
+            },
+            "upper": {
+              "decimal": "0.242054611898219",
+              "denominator": "2403161306395879581",
+              "numerator": "581696277348470987"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.757945388101781",
+              "denominator": "4806322612791759535",
+              "numerator": "3642930058094817289"
+            },
+            "upper": {
+              "decimal": "0.757945388101781",
+              "denominator": "178011948621917006",
+              "numerator": "134923335484993243"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.257643511263041",
+              "denominator": "4806322612791759535",
+              "numerator": "1238317834222623566"
+            },
+            "upper": {
+              "decimal": "0.257643511263041",
+              "denominator": "178011948621917006",
+              "numerator": "45863623489726803"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.500301876838740",
+              "denominator": "4806322612791759535",
+              "numerator": "2404612223872193723"
+            },
+            "upper": {
+              "decimal": "0.500301876838740",
+              "denominator": "89005974310958503",
+              "numerator": "44529855997633220"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 298,
+          "T_present": 103,
+          "blocked": 120,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 8,
+          "multi_pair_blocked": 39,
+          "no_2mod3_prime": 170,
+          "shifted_prime": 118,
+          "smooth": 401,
+          "splitless": 178,
+          "unique_pair_blocked": 81
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4806322612791759162",
+            "upper_numerator": "4806322612791759535"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1238317834222623566",
+            "upper_numerator": "1238317834222623681"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "213100185245290484",
+            "upper_numerator": "213100185245290492"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3642930058094817289",
+            "upper_numerator": "3642930058094817561"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1516783709300299225",
+            "upper_numerator": "1516783709300299340"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1636001225864235043",
+            "upper_numerator": "1636001225864235158"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "265096789551727373",
+            "upper_numerator": "265096789551727411"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1163392554696941873",
+            "upper_numerator": "1163392554696941974"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1945067259224155663",
+            "upper_numerator": "1945067259224155768"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2404612223872193723",
+            "upper_numerator": "2404612223872193880"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "973221044670896193",
+            "upper_numerator": "973221044670896270"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1179956021770890106",
+            "upper_numerator": "1179956021770890207"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1213082955918786572",
+            "upper_numerator": "1213082955918786673"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            178,
+            81,
+            36,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2404612223872193723",
+              "upper_numerator": "2404612223872193880"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "973221044670896193",
+              "upper_numerator": "973221044670896270"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "251727704025779103",
+              "upper_numerator": "251727704025779138"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "13369085525948270",
+              "upper_numerator": "13369085525948273"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            298,
+            97,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "3642930058094817289",
+              "upper_numerator": "3642930058094817561"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1146829087622993643",
+              "upper_numerator": "1146829087622993738"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "16563467073948230",
+              "upper_numerator": "16563467073948236"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 29
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.233003515136015",
+            "denominator": "118029485476112804508679762518203265",
+            "numerator": "27501285005629482541816713641022529"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.766996484863985",
+            "denominator": "118029485476112804508679762518203265",
+            "numerator": "90528200470483321966863048877180736"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.241038837010156",
+              "denominator": "5298917672545535205",
+              "numerator": "1277244953202938137"
+            },
+            "upper": {
+              "decimal": "0.241038837010156",
+              "denominator": "5298917672545534705",
+              "numerator": "1277244953202938276"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.758961162989844",
+              "denominator": "1766305890848511735",
+              "numerator": "1340557573114198856"
+            },
+            "upper": {
+              "decimal": "0.758961162989844",
+              "denominator": "5298917672545534705",
+              "numerator": "4021672719342596929"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.283082342744919",
+              "denominator": "1059783534509107041",
+              "numerator": "300006005751328343"
+            },
+            "upper": {
+              "decimal": "0.283082342744919",
+              "denominator": "5298917672545534705",
+              "numerator": "1500030028756641884"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.475878820244925",
+              "denominator": "5298917672545535205",
+              "numerator": "2521642690585954853"
+            },
+            "upper": {
+              "decimal": "0.475878820244925",
+              "denominator": "1163318918231731",
+              "numerator": "553598834376719"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 387,
+          "T_present": 141,
+          "blocked": 174,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 10,
+          "multi_pair_blocked": 59,
+          "no_2mod3_prime": 205,
+          "shifted_prime": 141,
+          "smooth": 528,
+          "splitless": 213,
+          "unique_pair_blocked": 115
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5298917672545534705",
+            "upper_numerator": "5298917672545535205"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1500030028756641715",
+            "upper_numerator": "1500030028756641884"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "231931920206057702",
+            "upper_numerator": "231931920206057712"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4021672719342596568",
+            "upper_numerator": "4021672719342596929"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1888607703485704305",
+            "upper_numerator": "1888607703485704474"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2051723510123853002",
+            "upper_numerator": "2051723510123853171"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "347354714979409627",
+            "upper_numerator": "347354714979409685"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1277244953202938137",
+            "upper_numerator": "1277244953202938276"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2015718083182471638",
+            "upper_numerator": "2015718083182471766"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2521642690585954853",
+            "upper_numerator": "2521642690585955045"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1152675313777232088",
+            "upper_numerator": "1152675313777232199"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1326680911282093816",
+            "upper_numerator": "1326680911282093955"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1425552827440405173",
+            "upper_numerator": "1425552827440405312"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            213,
+            115,
+            52,
+            5,
+            2,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2521642690585954853",
+              "upper_numerator": "2521642690585955045"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1152675313777232088",
+              "upper_numerator": "1152675313777232199"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "318582236271069651",
+              "upper_numerator": "318582236271069702"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "16321997667027017",
+              "upper_numerator": "16321997667027022"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "12450481041312959",
+              "upper_numerator": "12450481041312961"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            387,
+            128,
+            13,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4021672719342596568",
+              "upper_numerator": "4021672719342596929"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1227808995123782464",
+              "upper_numerator": "1227808995123782590"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "49435958079155673",
+              "upper_numerator": "49435958079155686"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 47
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.237022250894098",
+            "denominator": "8511545568494827614411350753811318215",
+            "numerator": "2017425689232326860156323811800588544"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.762977749105902",
+            "denominator": "8511545568494827614411350753811318215",
+            "numerator": "6494119879262500754255026942010729671"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.245293033992535",
+              "denominator": "1114382563929673823",
+              "numerator": "273350280134689749"
+            },
+            "upper": {
+              "decimal": "0.245293033992535",
+              "denominator": "5571912819648368537",
+              "numerator": "1366751400673448913"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.754706966007465",
+              "denominator": "5571912819648369115",
+              "numerator": "4205161418974919792"
+            },
+            "upper": {
+              "decimal": "0.754706966007465",
+              "denominator": "5571912819648368537",
+              "numerator": "4205161418974920202"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.289929342810015",
+              "denominator": "1114382563929673823",
+              "numerator": "323092204399070103"
+            },
+            "upper": {
+              "decimal": "0.289929342810015",
+              "denominator": "5571912819648368537",
+              "numerator": "1615461021995350709"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.464777623197450",
+              "denominator": "5571912819648369115",
+              "numerator": "2589700396979569277"
+            },
+            "upper": {
+              "decimal": "0.464777623197450",
+              "denominator": "5571912819648368537",
+              "numerator": "2589700396979569493"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 436,
+          "T_present": 170,
+          "blocked": 199,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 11,
+          "multi_pair_blocked": 68,
+          "no_2mod3_prime": 229,
+          "shifted_prime": 153,
+          "smooth": 606,
+          "splitless": 237,
+          "unique_pair_blocked": 131
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5571912819648368537",
+            "upper_numerator": "5571912819648369115"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1615461021995350515",
+            "upper_numerator": "1615461021995350709"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "233102880393411331",
+            "upper_numerator": "233102880393411342"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4205161418974919792",
+            "upper_numerator": "4205161418974920202"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2065028773403457354",
+            "upper_numerator": "2065028773403457548"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2268523990363509368",
+            "upper_numerator": "2268523990363509562"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "388096303595715908",
+            "upper_numerator": "388096303595715975"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1366751400673448745",
+            "upper_numerator": "1366751400673448913"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2049582891519109493",
+            "upper_numerator": "2049582891519109633"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2589700396979569277",
+            "upper_numerator": "2589700396979569493"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1227364718399634607",
+            "upper_numerator": "1227364718399634734"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1420361112264175888",
+            "upper_numerator": "1420361112264176056"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1527580535445630173",
+            "upper_numerator": "1527580535445630341"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            237,
+            131,
+            57,
+            7,
+            4,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2589700396979569277",
+              "upper_numerator": "2589700396979569493"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1227364718399634607",
+              "upper_numerator": "1227364718399634734"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "345902368667436054",
+              "upper_numerator": "345902368667436110"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "22916422044168814",
+              "upper_numerator": "22916422044168821"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "19277512884111040",
+              "upper_numerator": "19277512884111044"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            436,
+            155,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4205161418974919792",
+              "upper_numerator": "4205161418974920202"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1313141689082721609",
+              "upper_numerator": "1313141689082721762"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "53609711590727136",
+              "upper_numerator": "53609711590727151"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 71
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.241241306217235",
+            "denominator": "3193635479232465886599989406179697326",
+            "numerator": "770436794591744704226168166137152227"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.758758693782765",
+            "denominator": "3193635479232465886599989406179697326",
+            "numerator": "2423198684640721182373821240042545099"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.251592453347122",
+              "denominator": "5756272279164112413",
+              "numerator": "1448234664848930153"
+            },
+            "upper": {
+              "decimal": "0.251592453347122",
+              "denominator": "5756272279164111777",
+              "numerator": "1448234664848930341"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.748407546652878",
+              "denominator": "5756272279164112413",
+              "numerator": "4308037614315181624"
+            },
+            "upper": {
+              "decimal": "0.748407546652878",
+              "denominator": "5756272279164111777",
+              "numerator": "4308037614315182072"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.291227459918070",
+              "denominator": "1918757426388037471",
+              "numerator": "558794851485920659"
+            },
+            "upper": {
+              "decimal": "0.291227459918070",
+              "denominator": "5756272279164111777",
+              "numerator": "1676384554457762192"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.457180086734808",
+              "denominator": "5756272279164112413",
+              "numerator": "2631653059857419647"
+            },
+            "upper": {
+              "decimal": "0.457180086734808",
+              "denominator": "1918757426388037259",
+              "numerator": "877217686619139960"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 474,
+          "T_present": 190,
+          "blocked": 220,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 13,
+          "multi_pair_blocked": 80,
+          "no_2mod3_prime": 246,
+          "shifted_prime": 165,
+          "smooth": 664,
+          "splitless": 254,
+          "unique_pair_blocked": 140
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5756272279164111777",
+            "upper_numerator": "5756272279164112413"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1676384554457761977",
+            "upper_numerator": "1676384554457762192"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "239399072080084587",
+            "upper_numerator": "239399072080084600"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4308037614315181624",
+            "upper_numerator": "4308037614315182072"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2158228991694205011",
+            "upper_numerator": "2158228991694205226"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2373102658171598159",
+            "upper_numerator": "2373102658171598374"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "414893570113131998",
+            "upper_numerator": "414893570113132077"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1448234664848930153",
+            "upper_numerator": "1448234664848930341"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2082542180699936269",
+            "upper_numerator": "2082542180699936421"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2631653059857419647",
+            "upper_numerator": "2631653059857419880"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1261490984344629979",
+            "upper_numerator": "1261490984344630115"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1520299438852502541",
+            "upper_numerator": "1520299438852502729"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1664428986859647318",
+            "upper_numerator": "1664428986859647506"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            254,
+            140,
+            65,
+            11,
+            4,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2631653059857419647",
+              "upper_numerator": "2631653059857419880"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1261490984344629979",
+              "upper_numerator": "1261490984344630115"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "367220215873932044",
+              "upper_numerator": "367220215873932108"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "28395841355088914",
+              "upper_numerator": "28395841355088925"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "19277512884111040",
+              "upper_numerator": "19277512884111044"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            474,
+            171,
+            19,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4308037614315181624",
+              "upper_numerator": "4308037614315182072"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1376169890845357773",
+              "upper_numerator": "1376169890845357942"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "72064774003572380",
+              "upper_numerator": "72064774003572399"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 97
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.249136286765214",
+            "denominator": "10672401343459860385902253037239345332",
+            "numerator": "2658882441577669408906573537448212129"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.750863713234786",
+            "denominator": "10672401343459860385902253037239345332",
+            "numerator": "8013518901882190976995679499791133203"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.259749616095876",
+              "denominator": "5982423769668986292",
+              "numerator": "1553932277494364617"
+            },
+            "upper": {
+              "decimal": "0.259749616095876",
+              "denominator": "5982423769668985578",
+              "numerator": "1553932277494364839"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.740250383904124",
+              "denominator": "5982423769668986292",
+              "numerator": "4428491492174620961"
+            },
+            "upper": {
+              "decimal": "0.740250383904124",
+              "denominator": "5982423769668985578",
+              "numerator": "4428491492174621453"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.291833389024237",
+              "denominator": "2991211884834493146",
+              "numerator": "872935501640825797"
+            },
+            "upper": {
+              "decimal": "0.291833389024237",
+              "denominator": "332356876092721421",
+              "numerator": "96992833515647324"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.448416994879887",
+              "denominator": "1994141256556328764",
+              "numerator": "894206829630989789"
+            },
+            "upper": {
+              "decimal": "0.448416994879887",
+              "denominator": "5982423769668985578",
+              "numerator": "2682620488892969621"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 518,
+          "T_present": 224,
+          "blocked": 243,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 13,
+          "multi_pair_blocked": 91,
+          "no_2mod3_prime": 267,
+          "shifted_prime": 181,
+          "smooth": 742,
+          "splitless": 275,
+          "unique_pair_blocked": 152
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5982423769668985578",
+            "upper_numerator": "5982423769668986292"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1745871003281651594",
+            "upper_numerator": "1745871003281651832"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "239399072080084587",
+            "upper_numerator": "239399072080084600"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4428491492174620961",
+            "upper_numerator": "4428491492174621453"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2288909798869817748",
+            "upper_numerator": "2288909798869817986"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2526552040880842649",
+            "upper_numerator": "2526552040880842887"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "455520804087640727",
+            "upper_numerator": "455520804087640817"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1553932277494364617",
+            "upper_numerator": "1553932277494364839"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2121178282182532035",
+            "upper_numerator": "2121178282182532203"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2682620488892969367",
+            "upper_numerator": "2682620488892969621"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1290350199194010867",
+            "upper_numerator": "1290350199194011015"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1630607997520455377",
+            "upper_numerator": "1630607997520455599"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1783959437572636899",
+            "upper_numerator": "1783959437572637121"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            275,
+            152,
+            72,
+            15,
+            4,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2682620488892969367",
+              "upper_numerator": "2682620488892969621"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1290350199194010867",
+              "upper_numerator": "1290350199194011015"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "387280325471226392",
+              "upper_numerator": "387280325471226463"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "48962965732303295",
+              "upper_numerator": "48962965732303310"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "19277512884111040",
+              "upper_numerator": "19277512884111044"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            518,
+            203,
+            21,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4428491492174620961",
+              "upper_numerator": "4428491492174621453"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1477256557468273865",
+              "upper_numerator": "1477256557468274066"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "76675720026090752",
+              "upper_numerator": "76675720026090773"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 149
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.254608905316265",
+            "denominator": "5804524979698886333984041923902501377",
+            "numerator": "1477883750962048074984018335143604498"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.745391094683735",
+            "denominator": "5804524979698886333984041923902501377",
+            "numerator": "4326641228736838259000023588758896879"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.264951286198358",
+              "denominator": "6199474900303571191",
+              "numerator": "1642558848589866354"
+            },
+            "upper": {
+              "decimal": "0.264951286198358",
+              "denominator": "1549868725075892597",
+              "numerator": "410639712147466653"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.735048713801642",
+              "denominator": "6199474900303571191",
+              "numerator": "4556916051713704034"
+            },
+            "upper": {
+              "decimal": "0.735048713801642",
+              "denominator": "6199474900303570388",
+              "numerator": "4556916051713704579"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.295738850187606",
+              "denominator": "6199474900303571191",
+              "numerator": "1833425578782699441"
+            },
+            "upper": {
+              "decimal": "0.295738850187606",
+              "denominator": "3099737450151785194",
+              "numerator": "916712789391349855"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.439309863614037",
+              "denominator": "6199474900303571191",
+              "numerator": "2723490472931004593"
+            },
+            "upper": {
+              "decimal": "0.439309863614037",
+              "denominator": "6199474900303570388",
+              "numerator": "2723490472931004869"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 571,
+          "T_present": 260,
+          "blocked": 274,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 15,
+          "multi_pair_blocked": 105,
+          "no_2mod3_prime": 289,
+          "shifted_prime": 192,
+          "smooth": 831,
+          "splitless": 297,
+          "unique_pair_blocked": 169
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6199474900303570388",
+            "upper_numerator": "6199474900303571191"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1833425578782699441",
+            "upper_numerator": "1833425578782699710"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "242452675077859939",
+            "upper_numerator": "242452675077859954"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4556916051713704034",
+            "upper_numerator": "4556916051713704579"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2433583414487343557",
+            "upper_numerator": "2433583414487343826"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2704914904110734024",
+            "upper_numerator": "2704914904110734293"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "497427482059150919",
+            "upper_numerator": "497427482059151023"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1642558848589866354",
+            "upper_numerator": "1642558848589866612"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2141317431707090738",
+            "upper_numerator": "2141317431707090917"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2723490472931004593",
+            "upper_numerator": "2723490472931004869"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1335998096723548522",
+            "upper_numerator": "1335998096723548687"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1719234568615957114",
+            "upper_numerator": "1719234568615957372"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1872586008668138636",
+            "upper_numerator": "1872586008668138894"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            297,
+            169,
+            82,
+            18,
+            5,
+            0,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2723490472931004593",
+              "upper_numerator": "2723490472931004869"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1335998096723548522",
+              "upper_numerator": "1335998096723548687"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "415649683173815729",
+              "upper_numerator": "415649683173815810"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "60825244125177249",
+              "upper_numerator": "60825244125177267"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "20952554760157941",
+              "upper_numerator": "20952554760157946"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            571,
+            239,
+            21,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4556916051713704034",
+              "upper_numerator": "4556916051713704579"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1565883128563775602",
+              "upper_numerator": "1565883128563775839"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "76675720026090752",
+              "upper_numerator": "76675720026090773"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 251
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.259237434785562",
+            "denominator": "6368586454196562141064604206763745747",
+            "numerator": "1650976015595997207778395321788019200"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.740762565214438",
+            "denominator": "6368586454196562141064604206763745747",
+            "numerator": "4717610438600564933286208884975726547"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.270655783444687",
+              "denominator": "6386088357784502971",
+              "numerator": "1728431747623159773"
+            },
+            "upper": {
+              "decimal": "0.270655783444687",
+              "denominator": "6386088357784502072",
+              "numerator": "1728431747623160071"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.729344216555313",
+              "denominator": "6386088357784502971",
+              "numerator": "4657656610161342299"
+            },
+            "upper": {
+              "decimal": "0.729344216555313",
+              "denominator": "1596522089446125518",
+              "numerator": "1164414152540335725"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.297271488219628",
+              "denominator": "6386088357784502971",
+              "numerator": "1898401990020639474"
+            },
+            "upper": {
+              "decimal": "0.297271488219628",
+              "denominator": "3193044178892251036",
+              "numerator": "949200995010319887"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.432072728335685",
+              "denominator": "6386088357784502971",
+              "numerator": "2759254620140702825"
+            },
+            "upper": {
+              "decimal": "0.432072728335685",
+              "denominator": "3193044178892251036",
+              "numerator": "1379627310070351563"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 627,
+          "T_present": 300,
+          "blocked": 305,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 16,
+          "multi_pair_blocked": 120,
+          "no_2mod3_prime": 314,
+          "shifted_prime": 208,
+          "smooth": 927,
+          "splitless": 322,
+          "unique_pair_blocked": 185
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6386088357784502072",
+            "upper_numerator": "6386088357784502971"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1898401990020639474",
+            "upper_numerator": "1898401990020639774"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "244029962144105995",
+            "upper_numerator": "244029962144106011"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4657656610161342299",
+            "upper_numerator": "4657656610161342900"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2558424752629112896",
+            "upper_numerator": "2558424752629113196"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2849181565658920085",
+            "upper_numerator": "2849181565658920385"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "533334698644638777",
+            "upper_numerator": "533334698644638896"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1728431747623159773",
+            "upper_numerator": "1728431747623160071"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2165690353637981434",
+            "upper_numerator": "2165690353637981629"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2759254620140702825",
+            "upper_numerator": "2759254620140703126"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1365067291376000697",
+            "upper_numerator": "1365067291376000878"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1817127411931258720",
+            "upper_numerator": "1817127411931259018"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1994518740547456616",
+            "upper_numerator": "1994518740547456914"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            322,
+            185,
+            91,
+            23,
+            5,
+            1,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2759254620140702825",
+              "upper_numerator": "2759254620140703126"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1365067291376000697",
+              "upper_numerator": "1365067291376000878"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "434425128007515051",
+              "upper_numerator": "434425128007515141"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "74544046593689335",
+              "upper_numerator": "74544046593689358"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "20952554760157941",
+              "upper_numerator": "20952554760157946"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "3412969283276450",
+              "upper_numerator": "3412969283276451"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            627,
+            274,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4657656610161342299",
+              "upper_numerator": "4657656610161342900"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1639736083315060837",
+              "upper_numerator": "1639736083315061109"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "88695664308098936",
+              "upper_numerator": "88695664308098962"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 503
+      },
+      {
+        "certified_ratios": {
+          "Cauchy_covered_over_H_lower": {
+            "decimal": "0.263125480490713",
+            "denominator": "801610196308644929039641751746622976",
+            "numerator": "210924068069967143012971978318287473"
+          },
+          "Cauchy_missing_over_H_upper": {
+            "decimal": "0.736874519509287",
+            "denominator": "801610196308644929039641751746622976",
+            "numerator": "590686128238677786026669773428335503"
+          },
+          "actual_covered_over_H": {
+            "lower": {
+              "decimal": "0.276194532604738",
+              "denominator": "6485470860550345417",
+              "numerator": "1791251593051349105"
+            },
+            "upper": {
+              "decimal": "0.276194532604738",
+              "denominator": "3242735430275172223",
+              "numerator": "895625796525674724"
+            }
+          },
+          "actual_missing_over_H": {
+            "lower": {
+              "decimal": "0.723805467395262",
+              "denominator": "6485470860550345417",
+              "numerator": "4694219267498995341"
+            },
+            "upper": {
+              "decimal": "0.723805467395262",
+              "denominator": "926495837221477778",
+              "numerator": "670602752499856567"
+            }
+          },
+          "blocked_over_H": {
+            "lower": {
+              "decimal": "0.298353764740236",
+              "denominator": "6485470860550345417",
+              "numerator": "1934964647358292516"
+            },
+            "upper": {
+              "decimal": "0.298353764740236",
+              "denominator": "6485470860550344446",
+              "numerator": "1934964647358292843"
+            }
+          },
+          "splitless_over_H": {
+            "lower": {
+              "decimal": "0.425451702655026",
+              "denominator": "6485470860550345417",
+              "numerator": "2759254620140702825"
+            },
+            "upper": {
+              "decimal": "0.425451702655026",
+              "denominator": "3242735430275172223",
+              "numerator": "1379627310070351563"
+            }
+          }
+        },
+        "counts": {
+          "T_missing": 654,
+          "T_present": 345,
+          "blocked": 332,
+          "exceptional_p2_square": 8,
+          "fixed_11_times_G2_prime": 16,
+          "multi_pair_blocked": 136,
+          "no_2mod3_prime": 314,
+          "shifted_prime": 208,
+          "smooth": 999,
+          "splitless": 322,
+          "unique_pair_blocked": 196
+        },
+        "harmonic_bounds": {
+          "H": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6485470860550344446",
+            "upper_numerator": "6485470860550345417"
+          },
+          "blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1934964647358292516",
+            "upper_numerator": "1934964647358292843"
+          },
+          "fixed_11_times_G2_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "244029962144105995",
+            "upper_numerator": "244029962144106011"
+          },
+          "missing": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4694219267498995341",
+            "upper_numerator": "4694219267498995969"
+          },
+          "missing_arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2635656419281597861",
+            "upper_numerator": "2635656419281598188"
+          },
+          "missing_hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2948149361542575835",
+            "upper_numerator": "2948149361542576162"
+          },
+          "multi_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "555075795129216860",
+            "upper_numerator": "555075795129216995"
+          },
+          "present": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1791251593051349105",
+            "upper_numerator": "1791251593051349448"
+          },
+          "shifted_prime": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2165690353637981434",
+            "upper_numerator": "2165690353637981629"
+          },
+          "splitless": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2759254620140702825",
+            "upper_numerator": "2759254620140703126"
+          },
+          "unique_pair_blocked": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1379888852229075656",
+            "upper_numerator": "1379888852229075848"
+          },
+          "witness_first_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1893596883496971071",
+            "upper_numerator": "1893596883496971414"
+          },
+          "witness_second_moment": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2101215722074891433",
+            "upper_numerator": "2101215722074891776"
+          }
+        },
+        "multiplicity_bins": {
+          "labels": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5-7",
+            "8-15",
+            "16+"
+          ],
+          "missing_arithmetic_pair_counts": [
+            322,
+            196,
+            100,
+            25,
+            8,
+            3,
+            0,
+            0
+          ],
+          "missing_arithmetic_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "2759254620140702825",
+              "upper_numerator": "2759254620140703126"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1379888852229075656",
+              "upper_numerator": "1379888852229075848"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "446373007428236381",
+              "upper_numerator": "446373007428236480"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "77377909860785944",
+              "upper_numerator": "77377909860785969"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "25736566587281157",
+              "upper_numerator": "25736566587281165"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "5588311252913378",
+              "upper_numerator": "5588311252913381"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ],
+          "witness_pair_counts": [
+            654,
+            310,
+            34,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "witness_pair_harmonic": [
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "4694219267498995341",
+              "upper_numerator": "4694219267498995969"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1690370431449065366",
+              "upper_numerator": "1690370431449065674"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "99417032758945526",
+              "upper_numerator": "99417032758945560"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "1464128843338213",
+              "upper_numerator": "1464128843338214"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            },
+            {
+              "denominator": "1000000000000000000",
+              "lower_numerator": "0",
+              "upper_numerator": "0"
+            }
+          ]
+        },
+        "y": 1000,
+        "z": 997
+      }
+    ],
+    "schema_version": 1,
+    "smooth_limit": 1000
+  },
+  "method": "exact C03 well-founded G bitmap; exact SPF factorization of every 3s+1; integer counts and directed denominator-1e18 bounds",
+  "parameters": {
+    "G_limit": 3001,
+    "smooth_limit": 1000
+  }
+}

@@ -3168,3 +3168,8 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-13T05:27:17Z] ✔ 424-TICK | DID: PROOF_STATE +G3+E1; TICK-130 posted (L8 closed, L9-EXT TOP, L10/L11) | RESULT: PROOF_STATE.md, CLAUDE_TO_CODEX.md | Δ: none
 [2026-07-13T05:37:36Z] ✔ CODEX-SYNC | DID: read 24H-REOPEN post (marker 2698301->2699825); posted TICK-131 (split confirmed + L9 conventions + no-thinning ask) | RESULT: CLAUDE_TO_CODEX.md | Δ: Codex active, owns L9-EXT/L10/L11
 [2026-07-13T05:37:36Z] ✔ GATE40 | DID: claude_membership_recursion_census.py 10^6 (SPF-DP vs worklist closure) | RESULT: EXACT bitmap match, |G|=457599, SHA 569056ee; script 411948d8 | Δ: both generators cross-validated; 10^7 run bg
+[2026-07-13T07:09:53Z] ✔ 424-R2 | DID: harvested R2 (53m39s reply, 3 slices) | RESULT: writeup/R2_GPTPRO56.md — R-C EQUIV to conjecture (18-sandwich); scalar bootstrap dead; R-D two-gate (M)+(E) reduction | Δ: PRIMARY = R-D
+[2026-07-13T07:09:53Z] ✔ RD-M1 | DID: claude_rd_offset_mass_probe.py rays (3,2,1)k3/(2,1,1)k4 | RESULT: sqrt(n)D/M 0.408->0.322 / 0.400->0.246, W==multinomial all, SHA 62ce87da | Δ: (M) inconclusive, deep k bg
+[2026-07-13T07:09:53Z] ✔ GATE40-10e7 | DID: read bg DP run | RESULT: 10^7 EXACT bitmap match, both |G|=4952270 | Δ: (40) audited two scales
+[2026-07-13T07:09:53Z] ✔ 424-TICK | DID: PROOF_STATE R2 acceptance + TICK-132 (Codex: C-M TOP, C-E, L11 critical) | RESULT: files updated | Δ: none
+[2026-07-13T07:10:55Z] ✔ RD-M1-DEEP | DID: ray(3,2,1) k=4 bool DP (M=1.68e10) | RESULT: sqrt(n)D/M=0.3075; seq .4082/.3493/.3222/.3075, decrements halving => apparent limit ~0.29-0.30 | Δ: (M) empirically HOLDS on ray 321

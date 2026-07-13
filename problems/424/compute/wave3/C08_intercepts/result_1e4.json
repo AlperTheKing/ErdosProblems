@@ -1,0 +1,251 @@
+{
+  "schema": 1,
+  "limit": 10000,
+  "definition": "all nonempty G-word maps F(x)=M*x-C",
+  "best": [
+    {
+      "M": 2,
+      "maps": 1,
+      "missing": 0,
+      "mass_num": 1,
+      "mass_den": 2,
+      "coverage": 1.0
+    },
+    {
+      "M": 3,
+      "maps": 1,
+      "missing": 1,
+      "mass_num": 1,
+      "mass_den": 3,
+      "coverage": 0.5
+    },
+    {
+      "M": 6,
+      "maps": 2,
+      "missing": 3,
+      "mass_num": 2,
+      "mass_den": 6,
+      "coverage": 0.4
+    },
+    {
+      "M": 4,
+      "maps": 1,
+      "missing": 2,
+      "mass_num": 1,
+      "mass_den": 4,
+      "coverage": 0.3333333333333333
+    },
+    {
+      "M": 12,
+      "maps": 3,
+      "missing": 8,
+      "mass_num": 3,
+      "mass_den": 12,
+      "coverage": 0.2727272727272727
+    },
+    {
+      "M": 9,
+      "maps": 2,
+      "missing": 6,
+      "mass_num": 2,
+      "mass_den": 9,
+      "coverage": 0.25
+    },
+    {
+      "M": 5,
+      "maps": 1,
+      "missing": 3,
+      "mass_num": 1,
+      "mass_den": 5,
+      "coverage": 0.25
+    },
+    {
+      "M": 18,
+      "maps": 4,
+      "missing": 13,
+      "mass_num": 4,
+      "mass_den": 18,
+      "coverage": 0.23529411764705882
+    },
+    {
+      "M": 10,
+      "maps": 2,
+      "missing": 7,
+      "mass_num": 2,
+      "mass_den": 10,
+      "coverage": 0.2222222222222222
+    },
+    {
+      "M": 30,
+      "maps": 6,
+      "missing": 23,
+      "mass_num": 6,
+      "mass_den": 30,
+      "coverage": 0.20689655172413793
+    },
+    {
+      "M": 60,
+      "maps": 12,
+      "missing": 47,
+      "mass_num": 12,
+      "mass_den": 60,
+      "coverage": 0.2033898305084746
+    },
+    {
+      "M": 36,
+      "maps": 7,
+      "missing": 28,
+      "mass_num": 7,
+      "mass_den": 36,
+      "coverage": 0.2
+    },
+    {
+      "M": 180,
+      "maps": 35,
+      "missing": 144,
+      "mass_num": 35,
+      "mass_den": 180,
+      "coverage": 0.19553072625698323
+    },
+    {
+      "M": 540,
+      "maps": 100,
+      "missing": 439,
+      "mass_num": 100,
+      "mass_den": 540,
+      "coverage": 0.18552875695732837
+    },
+    {
+      "M": 1080,
+      "maps": 200,
+      "missing": 879,
+      "mass_num": 200,
+      "mass_den": 1080,
+      "coverage": 0.18535681186283595
+    },
+    {
+      "M": 360,
+      "maps": 66,
+      "missing": 293,
+      "mass_num": 66,
+      "mass_den": 360,
+      "coverage": 0.18384401114206128
+    },
+    {
+      "M": 90,
+      "maps": 16,
+      "missing": 73,
+      "mass_num": 16,
+      "mass_den": 90,
+      "coverage": 0.1797752808988764
+    },
+    {
+      "M": 3240,
+      "maps": 576,
+      "missing": 2663,
+      "mass_num": 576,
+      "mass_den": 3240,
+      "coverage": 0.1778326644025934
+    },
+    {
+      "M": 6480,
+      "maps": 1132,
+      "missing": 5347,
+      "mass_num": 1132,
+      "mass_den": 6480,
+      "coverage": 0.1747183207285075
+    },
+    {
+      "M": 24,
+      "maps": 4,
+      "missing": 19,
+      "mass_num": 4,
+      "mass_den": 24,
+      "coverage": 0.17391304347826086
+    },
+    {
+      "M": 2160,
+      "maps": 374,
+      "missing": 1785,
+      "mass_num": 374,
+      "mass_den": 2160,
+      "coverage": 0.1732283464566929
+    },
+    {
+      "M": 54,
+      "maps": 9,
+      "missing": 44,
+      "mass_num": 9,
+      "mass_den": 54,
+      "coverage": 0.16981132075471697
+    },
+    {
+      "M": 120,
+      "maps": 20,
+      "missing": 99,
+      "mass_num": 20,
+      "mass_den": 120,
+      "coverage": 0.16806722689075632
+    },
+    {
+      "M": 1620,
+      "maps": 269,
+      "missing": 1350,
+      "mass_num": 269,
+      "mass_den": 1620,
+      "coverage": 0.16615194564546015
+    },
+    {
+      "M": 9720,
+      "maps": 1573,
+      "missing": 8146,
+      "mass_num": 1573,
+      "mass_den": 9720,
+      "coverage": 0.1618479267414343
+    },
+    {
+      "M": 720,
+      "maps": 116,
+      "missing": 603,
+      "mass_num": 116,
+      "mass_den": 720,
+      "coverage": 0.16133518776077885
+    },
+    {
+      "M": 108,
+      "maps": 17,
+      "missing": 90,
+      "mass_num": 17,
+      "mass_den": 108,
+      "coverage": 0.1588785046728972
+    },
+    {
+      "M": 5400,
+      "maps": 853,
+      "missing": 4546,
+      "mass_num": 853,
+      "mass_den": 5400,
+      "coverage": 0.15799222078162622
+    },
+    {
+      "M": 20,
+      "maps": 3,
+      "missing": 16,
+      "mass_num": 3,
+      "mass_den": 20,
+      "coverage": 0.15789473684210525
+    },
+    {
+      "M": 270,
+      "maps": 42,
+      "missing": 227,
+      "mass_num": 42,
+      "mass_den": 270,
+      "coverage": 0.15613382899628253
+    }
+  ],
+  "perfect_M_minus_1": [
+    2
+  ],
+  "at_least_half_count": 2
+}
