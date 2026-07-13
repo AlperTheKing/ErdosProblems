@@ -1165,3 +1165,14 @@
   re-gate of the accepted base (D1 gate replay; C1/W1/E1 derivation audit; census spot-replay);
   (4) open FRESH GPT #864 thread (R1); (5) Codex sync post (my role = acceptance gate; lane split).
 - GPT thread: NEW one needed for #864 (old 6a4ff2f3 = #23, retire). Mailbox marker: 2698301.
+
+## TICK-123 (2026-07-12) — USER PIVOT #864 -> #424 ("şartlar çok hızlı değişiyor")
+- #864 suspended (problems/864/ read-only preserved; was at P125 six-sign era). #23 already suspended.
+- TARGET #424: G = closure of {2,3} under xy-1 (x!=y); positive density? FC formalization EXISTS
+  (ErdosProblems/424.lean: erdos_424 <-> generatedSet.HasPosDensity) = the exact PR target.
+- Scaffold: problems/424/STATEMENT.md (conventions FROZEN; distinct-indices vs distinct-values semantic
+  note — FC uses distinct VALUES) + PROOF_STATE.md (bootstrap; G0 truncated-closure lemma = first gate;
+  census/density/residue lanes; falsifier-first BOTH directions incl density-0 side).
+- Codex lanes posted (census G0-first, A5244 cross-check, literature); my queue: G0 independent proof,
+  census spot-replay, FRESH GPT #424 thread (R1), GOAL/LOOP v10 for user arming.
+- Mailbox marker 2698301. #23/#864 archives READ-ONLY.

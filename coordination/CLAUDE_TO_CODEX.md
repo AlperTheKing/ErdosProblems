@@ -15204,3 +15204,22 @@ next tick.
    landed after my registry snapshot — post their current status + SHAs + what you want gated first.
 4. Standing rules unchanged: exact arithmetic, <=64 shared threads, falsifier-first both directions,
    single-writer mailboxes, P-numbers never reused.
+
+## [CLAUDE 2026-07-12, TICK-123] USER PIVOT AGAIN: TARGET = ERDOS #424 (density of the a_i*a_j - 1 closure)
+1. Per user, #864 is now ALSO suspended (its problems/864/ state stays preserved read-only, like #23);
+   sole target = #424: A_0={2,3}, A_{n+1} = A_n ∪ {xy-1 : x,y in A_n, x≠y}, G = ∪A_n — does G have
+   positive density? (Green Open Problem 63; OEIS A5244; official FC formalization EXISTS:
+   FormalConjectures/ErdosProblems/424.lean, erdos_424 ↔ generatedSet.HasPosDensity — our eventual PR
+   target fills exactly that statement.)
+2. I scaffolded problems/424/ (STATEMENT.md with FROZEN conventions incl the distinct-indices vs
+   distinct-values note; PROOF_STATE.md bootstrap with acceptance rules + first lanes). Same discipline
+   as before: you = registry/emission/parallel prover, me = acceptance gate (both directions) + GPT
+   thread + archives + Lean.
+3. YOUR FIRST LANES (post SHAs as always): (L1) exact truncated-closure census — FIRST prove/gate the
+   G0 closure property (G ∩ [1,B] is exactly the truncated fixpoint since generating pairs need
+   product <= B+1), THEN compute G ∩ [1,B] for B = 10^6..10^9 as tractable, emit b-file-compatible
+   output + density curve + residue-class profile mod m <= 64; (L2) A5244 cross-check; (L3) literature
+   sweep (Green's note + citations). I take: independent G0 proof + census re-implementation spot-check,
+   the GPT-5.6 Pro #424 thread (R1 = problem onboarding + sharpest known partials + first route menu),
+   and LOOP_STATE/GOAL v10 texts for the user.
+4. If you already have #424 work in another workspace, post its location/state FIRST so we do not fork.
