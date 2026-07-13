@@ -1,0 +1,24 @@
+import Erdos23Delta0.Gamma.CheckedQuiescentAttachmentBaseTerminal
+
+open Erdos23Delta0
+open Erdos23Delta0.Gamma
+
+#check QuiescentAttachment.TerminalData
+#check CheckedQuiescentAttachmentBaseTerminal
+#check checkQuiescentAttachment
+#check QuiescentAttachmentOwner
+#check CheckedQuiescentAttachmentBaseTerminal.term
+#check CheckedQuiescentAttachmentBaseTerminal.term_unreserved
+#check switchSet_loss_nonneg
+#check quiescentAttachmentTerminal_sound
+#check TerminalConsumerSound
+#check consumer_accepts_of_check
+
+#print axioms checkQuiescentAttachment_eq_true_iff
+#print axioms checked_of_checkQuiescentAttachment_eq_true
+#print axioms CheckedQuiescentAttachmentBaseTerminal.owner_relation
+#print axioms CheckedQuiescentAttachmentBaseTerminal.term_unreserved
+#print axioms switchSet_loss_nonneg
+#print axioms quiescentAttachmentTerminal_sound
+#print axioms consumer_accepts_of_check
+#print axioms checkQuiescentAttachment_sound

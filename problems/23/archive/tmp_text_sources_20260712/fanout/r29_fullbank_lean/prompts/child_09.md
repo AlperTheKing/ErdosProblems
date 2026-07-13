@@ -1,0 +1,1 @@
+Act as an adversarial referee. Independently inspect the production chain for circularity, vacuity, wrong quantifier order, or confusion between relaxed cover existence and real graph-derived existence. Focus on whether a checked matching alone actually yields FullBankGlobalPackage. Give the strongest precise objection and the minimal theorem that would resolve it.

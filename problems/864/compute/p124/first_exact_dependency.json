@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Python integers and Fraction Gaussian elimination",
+  "p": 140,
+  "h": 20285,
+  "C_S": 617,
+  "T_F": 856,
+  "signs": [
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "chamber_rows": 74,
+  "rank_before_first_dependency": 37,
+  "dependency_terms": 8,
+  "maximum_absolute_coefficient": 1,
+  "coefficients_by_local_row": {
+    "37": 1,
+    "9": -1,
+    "7": 1,
+    "8": 1,
+    "35": -1,
+    "34": 1,
+    "36": -1,
+    "6": -1
+  },
+  "triangle_fold_ids": {
+    "37": [
+      123,
+      133,
+      464
+    ],
+    "9": [
+      14,
+      24,
+      464
+    ],
+    "7": [
+      13,
+      24,
+      366
+    ],
+    "8": [
+      14,
+      21,
+      293
+    ],
+    "35": [
+      121,
+      133,
+      366
+    ],
+    "34": [
+      121,
+      132,
+      383
+    ],
+    "36": [
+      123,
+      132,
+      293
+    ],
+    "6": [
+      13,
+      21,
+      383
+    ]
+  },
+  "exact_zero_verified": true
+}

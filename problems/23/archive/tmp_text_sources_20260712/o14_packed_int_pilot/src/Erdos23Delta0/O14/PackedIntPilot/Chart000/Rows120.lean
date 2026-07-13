@@ -1,0 +1,544 @@
+/- Generated temporary packed-integer pilot; not a production payload. -/
+import Erdos23Delta0.O14.PackedIntPilot.Chart000.Weights
+
+namespace Erdos23Delta0
+namespace O14
+namespace PackedIntPilot
+namespace Chart000
+namespace Rows120
+
+open SparseConePackedInt
+open PolyCert
+open Chart000.Weights
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 1000000
+
+def row07680 : Row :=
+  { scalePred := 17324
+    target := (1823332436071920095522189585987109122437660453717039397475770143029451155429872822519327085865480656488461486742344768714354670756861983509079585255140303580939553569591928228587350519508349816586142766049924242110410065597786641013368796633614899915655989486183907359152191780765959424569546557153873054276253384060472426224307651065247453758661316429269655038722048000000 : Int)
+    terms := (TermTree.leaf { weightId := 179, coeff := (1260 : Int) }) }
+
+theorem row07680_checked : checkRow weightCount weights row07680 = true := by decide
+
+def row07681 : Row :=
+  { scalePred := 5774
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 155, coeff := (420 : Int) }) }
+
+theorem row07681_checked : checkRow weightCount weights row07681 = true := by decide
+
+def row07682 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 438, coeff := (-4 : Int) }) }
+
+theorem row07682_checked : checkRow weightCount weights row07682 = true := by decide
+
+def row07683 : Row :=
+  { scalePred := 5774
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 155, coeff := (420 : Int) }) }
+
+theorem row07683_checked : checkRow weightCount weights row07683 = true := by decide
+
+def row07684 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 438, coeff := (-2 : Int) }) }
+
+theorem row07684_checked : checkRow weightCount weights row07684 = true := by decide
+
+def row07685 : Row :=
+  { scalePred := 17324
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 313, coeff := (1890 : Int) }) }
+
+theorem row07685_checked : checkRow weightCount weights row07685 = true := by decide
+
+def row07686 : Row :=
+  { scalePred := 11549
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07686_checked : checkRow weightCount weights row07686 = true := by decide
+
+def row07687 : Row :=
+  { scalePred := 9239
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 342, coeff := (1008 : Int) }) }
+
+theorem row07687_checked : checkRow weightCount weights row07687 = true := by decide
+
+def row07688 : Row :=
+  { scalePred := 5774
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (630 : Int) }) }
+
+theorem row07688_checked : checkRow weightCount weights row07688 = true := by decide
+
+def row07689 : Row :=
+  { scalePred := 92399
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 176, coeff := (5040 : Int) }) }
+
+theorem row07689_checked : checkRow weightCount weights row07689 = true := by decide
+
+def row07690 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 575, coeff := (-6 : Int) }) }
+
+theorem row07690_checked : checkRow weightCount weights row07690 = true := by decide
+
+def row07691 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 517, coeff := (-6 : Int) }) }
+
+theorem row07691_checked : checkRow weightCount weights row07691 = true := by decide
+
+def row07692 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 457, coeff := (-6 : Int) }) }
+
+theorem row07692_checked : checkRow weightCount weights row07692 = true := by decide
+
+def row07693 : Row :=
+  { scalePred := 23099
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07693_checked : checkRow weightCount weights row07693 = true := by decide
+
+def row07694 : Row :=
+  { scalePred := 5774
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07694_checked : checkRow weightCount weights row07694 = true := by decide
+
+def row07695 : Row :=
+  { scalePred := 23099
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07695_checked : checkRow weightCount weights row07695 = true := by decide
+
+def row07696 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 431, coeff := (-6 : Int) }) }
+
+theorem row07696_checked : checkRow weightCount weights row07696 = true := by decide
+
+def row07697 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 559, coeff := (-6 : Int) }) }
+
+theorem row07697_checked : checkRow weightCount weights row07697 = true := by decide
+
+def row07698 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 440, coeff := (-6 : Int) }) }
+
+theorem row07698_checked : checkRow weightCount weights row07698 = true := by decide
+
+def row07699 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 382, coeff := (-6 : Int) }) }
+
+theorem row07699_checked : checkRow weightCount weights row07699 = true := by decide
+
+def row07700 : Row :=
+  { scalePred := 11549
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (630 : Int) }) }
+
+theorem row07700_checked : checkRow weightCount weights row07700 = true := by decide
+
+def row07701 : Row :=
+  { scalePred := 5774
+    target := (1823332436071920095522189585987109122437660453717039397475770143029451155429872822519327085865480656488461486742344768714354670756861983509079585255140303580939553569591928228587350519508349816586142766049924242110410065597786641013368796633614899915655989486183907359152191780765959424569546557153873054276253384060472426224307651065247453758661316429269655038722048000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (1260 : Int) }) }
+
+theorem row07701_checked : checkRow weightCount weights row07701 = true := by decide
+
+def row07702 : Row :=
+  { scalePred := 11549
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (630 : Int) }) }
+
+theorem row07702_checked : checkRow weightCount weights row07702 = true := by decide
+
+def row07703 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 566, coeff := (-6 : Int) }) }
+
+theorem row07703_checked : checkRow weightCount weights row07703 = true := by decide
+
+def row07704 : Row :=
+  { scalePred := 92399
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 176, coeff := (5040 : Int) }) }
+
+theorem row07704_checked : checkRow weightCount weights row07704 = true := by decide
+
+def row07705 : Row :=
+  { scalePred := 415799
+    target := (10028328398395560525372042722929100173407132495443716686116735786661981354864300523856298972260143610686538177082896227928950689162740909299937718903271669695167544632755605257230427857295923991223785213274583331607255360787826525573528381484881949536107942174011490475337054794212776835132506064346301798519393612332598344233692080858860995672637240360983102712971264000000 : Int)
+    terms := (TermTree.leaf { weightId := 176, coeff := (15120 : Int) }) }
+
+theorem row07705_checked : checkRow weightCount weights row07705 = true := by decide
+
+def row07706 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 575, coeff := (-3 : Int) }) }
+
+theorem row07706_checked : checkRow weightCount weights row07706 = true := by decide
+
+def row07707 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 517, coeff := (-3 : Int) }) }
+
+theorem row07707_checked : checkRow weightCount weights row07707 = true := by decide
+
+def row07708 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 457, coeff := (-3 : Int) }) }
+
+theorem row07708_checked : checkRow weightCount weights row07708 = true := by decide
+
+def row07709 : Row :=
+  { scalePred := 17324
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07709_checked : checkRow weightCount weights row07709 = true := by decide
+
+def row07710 : Row :=
+  { scalePred := 6929
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07710_checked : checkRow weightCount weights row07710 = true := by decide
+
+def row07711 : Row :=
+  { scalePred := 17324
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 136, coeff := (1260 : Int) }) }
+
+theorem row07711_checked : checkRow weightCount weights row07711 = true := by decide
+
+def row07712 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 431, coeff := (-3 : Int) }) }
+
+theorem row07712_checked : checkRow weightCount weights row07712 = true := by decide
+
+def row07713 : Row :=
+  { scalePred := 5543
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 289, coeff := (1008 : Int) }) }
+
+theorem row07713_checked : checkRow weightCount weights row07713 = true := by decide
+
+def row07714 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 559, coeff := (-3 : Int) }) }
+
+theorem row07714_checked : checkRow weightCount weights row07714 = true := by decide
+
+def row07715 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 440, coeff := (-3 : Int) }) }
+
+theorem row07715_checked : checkRow weightCount weights row07715 = true := by decide
+
+def row07716 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 382, coeff := (-3 : Int) }) }
+
+theorem row07716_checked : checkRow weightCount weights row07716 = true := by decide
+
+def row07717 : Row :=
+  { scalePred := 17324
+    target := (1823332436071920095522189585987109122437660453717039397475770143029451155429872822519327085865480656488461486742344768714354670756861983509079585255140303580939553569591928228587350519508349816586142766049924242110410065597786641013368796633614899915655989486183907359152191780765959424569546557153873054276253384060472426224307651065247453758661316429269655038722048000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (1260 : Int) }) }
+
+theorem row07717_checked : checkRow weightCount weights row07717 = true := by decide
+
+def row07718 : Row :=
+  { scalePred := 3464
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (630 : Int) }) }
+
+theorem row07718_checked : checkRow weightCount weights row07718 = true := by decide
+
+def row07719 : Row :=
+  { scalePred := 17324
+    target := (1823332436071920095522189585987109122437660453717039397475770143029451155429872822519327085865480656488461486742344768714354670756861983509079585255140303580939553569591928228587350519508349816586142766049924242110410065597786641013368796633614899915655989486183907359152191780765959424569546557153873054276253384060472426224307651065247453758661316429269655038722048000000 : Int)
+    terms := (TermTree.leaf { weightId := 137, coeff := (1260 : Int) }) }
+
+theorem row07719_checked : checkRow weightCount weights row07719 = true := by decide
+
+def row07720 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 566, coeff := (-3 : Int) }) }
+
+theorem row07720_checked : checkRow weightCount weights row07720 = true := by decide
+
+def row07721 : Row :=
+  { scalePred := 138599
+    target := (11851660834467480620894232308916209295844792949160756083592505929691432510294173346375626058125624267174999663825240996643305359919602892809017304158411973276107098202347533485817778376804273807809927979324507573717665426385613166586897178118496849451763931660195397834489246574978736259702052621500174852795646996393070770457999731924108449431298556790252757751693312000000 : Int)
+    terms := (TermTree.leaf { weightId := 153, coeff := (15120 : Int) }) }
+
+theorem row07721_checked : checkRow weightCount weights row07721 = true := by decide
+
+def row07722 : Row :=
+  { scalePred := 11549
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07722_checked : checkRow weightCount weights row07722 = true := by decide
+
+def row07723 : Row :=
+  { scalePred := 277199
+    target := (11851660834467480620894232308916209295844792949160756083592505929691432510294173346375626058125624267174999663825240996643305359919602892809017304158411973276107098202347533485817778376804273807809927979324507573717665426385613166586897178118496849451763931660195397834489246574978736259702052621500174852795646996393070770457999731924108449431298556790252757751693312000000 : Int)
+    terms := (TermTree.leaf { weightId := 153, coeff := (15120 : Int) }) }
+
+theorem row07723_checked : checkRow weightCount weights row07723 = true := by decide
+
+def row07724 : Row :=
+  { scalePred := 277199
+    target := (11851660834467480620894232308916209295844792949160756083592505929691432510294173346375626058125624267174999663825240996643305359919602892809017304158411973276107098202347533485817778376804273807809927979324507573717665426385613166586897178118496849451763931660195397834489246574978736259702052621500174852795646996393070770457999731924108449431298556790252757751693312000000 : Int)
+    terms := (TermTree.leaf { weightId := 153, coeff := (15120 : Int) }) }
+
+theorem row07724_checked : checkRow weightCount weights row07724 = true := by decide
+
+def row07725 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 576, coeff := (-6 : Int) }) }
+
+theorem row07725_checked : checkRow weightCount weights row07725 = true := by decide
+
+def row07726 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 649, coeff := (-6 : Int) }) }
+
+theorem row07726_checked : checkRow weightCount weights row07726 = true := by decide
+
+def row07727 : Row :=
+  { scalePred := 23099
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07727_checked : checkRow weightCount weights row07727 = true := by decide
+
+def row07728 : Row :=
+  { scalePred := 5774
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07728_checked : checkRow weightCount weights row07728 = true := by decide
+
+def row07729 : Row :=
+  { scalePred := 23099
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07729_checked : checkRow weightCount weights row07729 = true := by decide
+
+def row07730 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 538, coeff := (-6 : Int) }) }
+
+theorem row07730_checked : checkRow weightCount weights row07730 = true := by decide
+
+def row07731 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 664, coeff := (-4 : Int) }) }
+
+theorem row07731_checked : checkRow weightCount weights row07731 = true := by decide
+
+def row07732 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 576, coeff := (-3 : Int) }) }
+
+theorem row07732_checked : checkRow weightCount weights row07732 = true := by decide
+
+def row07733 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 649, coeff := (-3 : Int) }) }
+
+theorem row07733_checked : checkRow weightCount weights row07733 = true := by decide
+
+def row07734 : Row :=
+  { scalePred := 17324
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07734_checked : checkRow weightCount weights row07734 = true := by decide
+
+def row07735 : Row :=
+  { scalePred := 6929
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07735_checked : checkRow weightCount weights row07735 = true := by decide
+
+def row07736 : Row :=
+  { scalePred := 17324
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 113, coeff := (1260 : Int) }) }
+
+theorem row07736_checked : checkRow weightCount weights row07736 = true := by decide
+
+def row07737 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 538, coeff := (-3 : Int) }) }
+
+theorem row07737_checked : checkRow weightCount weights row07737 = true := by decide
+
+def row07738 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 664, coeff := (-6 : Int) }) }
+
+theorem row07738_checked : checkRow weightCount weights row07738 = true := by decide
+
+def row07739 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 461, coeff := (-6 : Int) }) }
+
+theorem row07739_checked : checkRow weightCount weights row07739 = true := by decide
+
+def row07740 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 664, coeff := (-3 : Int) }) }
+
+theorem row07740_checked : checkRow weightCount weights row07740 = true := by decide
+
+def row07741 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 461, coeff := (-3 : Int) }) }
+
+theorem row07741_checked : checkRow weightCount weights row07741 = true := by decide
+
+def row07742 : Row :=
+  { scalePred := 54
+    target := (0 : Int)
+    terms := (TermTree.leaf { weightId := 364, coeff := (-3 : Int) }) }
+
+theorem row07742_checked : checkRow weightCount weights row07742 = true := by decide
+
+def row07743 : Row :=
+  { scalePred := 2309
+    target := (911666218035960047761094792993554561218830226858519698737885071514725577714936411259663542932740328244230743371172384357177335378430991754539792627570151790469776784795964114293675259754174908293071383024962121055205032798893320506684398316807449957827994743091953679576095890382979712284773278576936527138126692030236213112153825532623726879330658214634827519361024000000 : Int)
+    terms := (TermTree.leaf { weightId := 87, coeff := (420 : Int) }) }
+
+theorem row07743_checked : checkRow weightCount weights row07743 = true := by decide
+
+def nfRows : List NFRow := [
+  { row := row07680, factor := 138600, pows := [(0, 3), (3, 1), (5, 1), (6, 2), (8, 4)] },
+  { row := row07681, factor := 46200, pows := [(0, 3), (3, 1), (6, 4), (8, 3)] },
+  { row := row07682, factor := 138600, pows := [(0, 3), (3, 1), (6, 4), (8, 2), (9, 1)] },
+  { row := row07683, factor := 46200, pows := [(0, 3), (3, 1), (6, 3), (8, 4)] },
+  { row := row07684, factor := 277200, pows := [(0, 3), (3, 1), (6, 3), (8, 2), (9, 2)] },
+  { row := row07685, factor := 138600, pows := [(0, 3), (4, 4), (5, 1), (6, 2), (8, 1)] },
+  { row := row07686, factor := 46200, pows := [(0, 3), (4, 4), (5, 1), (8, 3)] },
+  { row := row07687, factor := 46200, pows := [(0, 3), (4, 4), (6, 3), (8, 1)] },
+  { row := row07688, factor := 46200, pows := [(0, 3), (4, 4), (6, 1), (8, 3)] },
+  { row := row07689, factor := 554400, pows := [(0, 3), (4, 3), (5, 2), (6, 1), (8, 1), (9, 1)] },
+  { row := row07690, factor := 554400, pows := [(0, 3), (4, 3), (5, 1), (6, 1), (7, 2), (8, 1)] },
+  { row := row07691, factor := 554400, pows := [(0, 3), (4, 3), (5, 1), (6, 1), (8, 1), (9, 2)] },
+  { row := row07692, factor := 277200, pows := [(0, 3), (4, 3), (5, 1), (7, 2), (8, 2)] },
+  { row := row07693, factor := 184800, pows := [(0, 3), (4, 3), (5, 1), (7, 1), (8, 3)] },
+  { row := row07694, factor := 46200, pows := [(0, 3), (4, 3), (5, 1), (8, 4)] },
+  { row := row07695, factor := 184800, pows := [(0, 3), (4, 3), (5, 1), (8, 3), (9, 1)] },
+  { row := row07696, factor := 277200, pows := [(0, 3), (4, 3), (5, 1), (8, 2), (9, 2)] },
+  { row := row07697, factor := 277200, pows := [(0, 3), (4, 3), (6, 2), (7, 2), (8, 1)] },
+  { row := row07698, factor := 277200, pows := [(0, 3), (4, 3), (6, 2), (8, 1), (9, 2)] },
+  { row := row07699, factor := 277200, pows := [(0, 3), (4, 3), (6, 1), (7, 2), (8, 2)] },
+  { row := row07700, factor := 184800, pows := [(0, 3), (4, 3), (6, 1), (7, 1), (8, 3)] },
+  { row := row07701, factor := 46200, pows := [(0, 3), (4, 3), (6, 1), (8, 4)] },
+  { row := row07702, factor := 184800, pows := [(0, 3), (4, 3), (6, 1), (8, 3), (9, 1)] },
+  { row := row07703, factor := 277200, pows := [(0, 3), (4, 3), (6, 1), (8, 2), (9, 2)] },
+  { row := row07704, factor := 554400, pows := [(0, 3), (4, 2), (5, 3), (6, 1), (7, 1), (8, 1)] },
+  { row := row07705, factor := 831600, pows := [(0, 3), (4, 2), (5, 2), (6, 2), (7, 1), (8, 1)] },
+  { row := row07706, factor := 554400, pows := [(0, 3), (4, 2), (5, 1), (6, 1), (7, 3), (8, 1)] },
+  { row := row07707, factor := 554400, pows := [(0, 3), (4, 2), (5, 1), (6, 1), (8, 1), (9, 3)] },
+  { row := row07708, factor := 277200, pows := [(0, 3), (4, 2), (5, 1), (7, 3), (8, 2)] },
+  { row := row07709, factor := 138600, pows := [(0, 3), (4, 2), (5, 1), (7, 1), (8, 4)] },
+  { row := row07710, factor := 27720, pows := [(0, 3), (4, 2), (5, 1), (8, 5)] },
+  { row := row07711, factor := 138600, pows := [(0, 3), (4, 2), (5, 1), (8, 4), (9, 1)] },
+  { row := row07712, factor := 277200, pows := [(0, 3), (4, 2), (5, 1), (8, 2), (9, 3)] },
+  { row := row07713, factor := 27720, pows := [(0, 3), (4, 2), (6, 5), (8, 1)] },
+  { row := row07714, factor := 277200, pows := [(0, 3), (4, 2), (6, 2), (7, 3), (8, 1)] },
+  { row := row07715, factor := 277200, pows := [(0, 3), (4, 2), (6, 2), (8, 1), (9, 3)] },
+  { row := row07716, factor := 277200, pows := [(0, 3), (4, 2), (6, 1), (7, 3), (8, 2)] },
+  { row := row07717, factor := 138600, pows := [(0, 3), (4, 2), (6, 1), (7, 1), (8, 4)] },
+  { row := row07718, factor := 27720, pows := [(0, 3), (4, 2), (6, 1), (8, 5)] },
+  { row := row07719, factor := 138600, pows := [(0, 3), (4, 2), (6, 1), (8, 4), (9, 1)] },
+  { row := row07720, factor := 277200, pows := [(0, 3), (4, 2), (6, 1), (8, 2), (9, 3)] },
+  { row := row07721, factor := 138600, pows := [(0, 3), (4, 1), (5, 4), (6, 1), (8, 2)] },
+  { row := row07722, factor := 46200, pows := [(0, 3), (4, 1), (5, 4), (8, 3)] },
+  { row := row07723, factor := 554400, pows := [(0, 3), (4, 1), (5, 3), (6, 1), (7, 1), (8, 2)] },
+  { row := row07724, factor := 554400, pows := [(0, 3), (4, 1), (5, 3), (6, 1), (8, 2), (9, 1)] },
+  { row := row07725, factor := 554400, pows := [(0, 3), (4, 1), (5, 3), (6, 1), (8, 1), (9, 2)] },
+  { row := row07726, factor := 277200, pows := [(0, 3), (4, 1), (5, 3), (7, 2), (8, 2)] },
+  { row := row07727, factor := 184800, pows := [(0, 3), (4, 1), (5, 3), (7, 1), (8, 3)] },
+  { row := row07728, factor := 46200, pows := [(0, 3), (4, 1), (5, 3), (8, 4)] },
+  { row := row07729, factor := 184800, pows := [(0, 3), (4, 1), (5, 3), (8, 3), (9, 1)] },
+  { row := row07730, factor := 277200, pows := [(0, 3), (4, 1), (5, 3), (8, 2), (9, 2)] },
+  { row := row07731, factor := 831600, pows := [(0, 3), (4, 1), (5, 2), (6, 2), (7, 2), (8, 1)] },
+  { row := row07732, factor := 554400, pows := [(0, 3), (4, 1), (5, 2), (6, 1), (8, 1), (9, 3)] },
+  { row := row07733, factor := 277200, pows := [(0, 3), (4, 1), (5, 2), (7, 3), (8, 2)] },
+  { row := row07734, factor := 138600, pows := [(0, 3), (4, 1), (5, 2), (7, 1), (8, 4)] },
+  { row := row07735, factor := 27720, pows := [(0, 3), (4, 1), (5, 2), (8, 5)] },
+  { row := row07736, factor := 138600, pows := [(0, 3), (4, 1), (5, 2), (8, 4), (9, 1)] },
+  { row := row07737, factor := 277200, pows := [(0, 3), (4, 1), (5, 2), (8, 2), (9, 3)] },
+  { row := row07738, factor := 554400, pows := [(0, 3), (4, 1), (5, 1), (6, 3), (7, 2), (8, 1)] },
+  { row := row07739, factor := 554400, pows := [(0, 3), (4, 1), (5, 1), (6, 3), (8, 1), (9, 2)] },
+  { row := row07740, factor := 554400, pows := [(0, 3), (4, 1), (5, 1), (6, 2), (7, 3), (8, 1)] },
+  { row := row07741, factor := 554400, pows := [(0, 3), (4, 1), (5, 1), (6, 2), (8, 1), (9, 3)] },
+  { row := row07742, factor := 554400, pows := [(0, 3), (4, 1), (5, 1), (6, 1), (7, 3), (8, 2)] },
+  { row := row07743, factor := 55440, pows := [(0, 3), (4, 1), (5, 1), (6, 1), (8, 5)] }
+]
+
+theorem rows_checked : checkRows weightCount weights nfRows = true := by
+  simp [checkRows, nfRows, row07680_checked, row07681_checked, row07682_checked, row07683_checked, row07684_checked, row07685_checked, row07686_checked, row07687_checked, row07688_checked, row07689_checked, row07690_checked, row07691_checked, row07692_checked, row07693_checked, row07694_checked, row07695_checked, row07696_checked, row07697_checked, row07698_checked, row07699_checked, row07700_checked, row07701_checked, row07702_checked, row07703_checked, row07704_checked, row07705_checked, row07706_checked, row07707_checked, row07708_checked, row07709_checked, row07710_checked, row07711_checked, row07712_checked, row07713_checked, row07714_checked, row07715_checked, row07716_checked, row07717_checked, row07718_checked, row07719_checked, row07720_checked, row07721_checked, row07722_checked, row07723_checked, row07724_checked, row07725_checked, row07726_checked, row07727_checked, row07728_checked, row07729_checked, row07730_checked, row07731_checked, row07732_checked, row07733_checked, row07734_checked, row07735_checked, row07736_checked, row07737_checked, row07738_checked, row07739_checked, row07740_checked, row07741_checked, row07742_checked, row07743_checked]
+
+def baseTerms : NF := base weightDenom weights nfRows
+
+theorem hbaseTerms : NF.allCoeffNonneg baseTerms = true := by
+  exact base_allCoeffNonneg_of_checkRows weightDenom_pos rows_checked
+
+end Rows120
+end Chart000
+end PackedIntPilot
+end O14
+end Erdos23Delta0

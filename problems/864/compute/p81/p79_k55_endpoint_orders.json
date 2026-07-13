@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "source": "problems/864/compute/p79/outer_codegree_audit.json",
+  "source_id": "singer-e82f2d6a63ca",
+  "left": [
+    7469,
+    7994,
+    10098,
+    10243,
+    10294
+  ],
+  "right": [
+    28303,
+    28483,
+    28494,
+    29656,
+    29724
+  ],
+  "matrices": {
+    "inner_low": [
+      [
+        14056,
+        15259,
+        18479,
+        17453,
+        13941
+      ],
+      [
+        16989,
+        18559,
+        8573,
+        21433,
+        18609
+      ],
+      [
+        16696,
+        14123,
+        11835,
+        18559,
+        13682
+      ],
+      [
+        15548,
+        11072,
+        13998,
+        17193,
+        11115
+      ],
+      [
+        10294,
+        14990,
+        13941,
+        17082,
+        14056
+      ]
+    ],
+    "inner_high": [
+      [
+        22969,
+        23992,
+        27201,
+        25013,
+        21433
+      ],
+      [
+        26427,
+        27817,
+        17820,
+        29518,
+        26626
+      ],
+      [
+        28238,
+        25485,
+        23186,
+        28748,
+        23803
+      ],
+      [
+        27235,
+        22579,
+        25494,
+        27527,
+        21381
+      ],
+      [
+        22032,
+        26548,
+        25488,
+        27467,
+        24373
+      ]
+    ]
+  },
+  "tests": {
+    "inner_low": {
+      "row_monotone_triples": [
+        {
+          "left_vertex": 7469,
+          "count": 3,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                28494
+              ],
+              "direction": "increasing",
+              "values": [
+                14056,
+                15259,
+                18479
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                14056,
+                15259,
+                17453
+              ]
+            },
+            {
+              "columns": [
+                28494,
+                29656,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                18479,
+                17453,
+                13941
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 7994,
+          "count": 2,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                16989,
+                18559,
+                21433
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28483,
+                29724
+              ],
+              "direction": "increasing",
+              "values": [
+                16989,
+                18559,
+                18609
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10098,
+          "count": 2,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                28494
+              ],
+              "direction": "decreasing",
+              "values": [
+                16696,
+                14123,
+                11835
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28483,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                16696,
+                14123,
+                13682
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10243,
+          "count": 2,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28494,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                15548,
+                13998,
+                11115
+              ]
+            },
+            {
+              "columns": [
+                28483,
+                28494,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                11072,
+                13998,
+                17193
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10294,
+          "count": 3,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                10294,
+                14990,
+                17082
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28494,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                10294,
+                13941,
+                17082
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28494,
+                29724
+              ],
+              "direction": "increasing",
+              "values": [
+                10294,
+                13941,
+                14056
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_triples_on_at_least_three_rows": [
+        {
+          "columns": [
+            28303,
+            28483,
+            29656
+          ],
+          "direction": "increasing",
+          "rows": [
+            7469,
+            7994,
+            10294
+          ]
+        }
+      ],
+      "aligned_3x3_count": 0,
+      "aligned_3x3_examples": []
+    },
+    "inner_high": {
+      "row_monotone_triples": [
+        {
+          "left_vertex": 7469,
+          "count": 3,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                28494
+              ],
+              "direction": "increasing",
+              "values": [
+                22969,
+                23992,
+                27201
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                22969,
+                23992,
+                25013
+              ]
+            },
+            {
+              "columns": [
+                28494,
+                29656,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                27201,
+                25013,
+                21433
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 7994,
+          "count": 1,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                26427,
+                27817,
+                29518
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10098,
+          "count": 2,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                28494
+              ],
+              "direction": "decreasing",
+              "values": [
+                28238,
+                25485,
+                23186
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28483,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                28238,
+                25485,
+                23803
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10243,
+          "count": 3,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                27235,
+                22579,
+                21381
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28494,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                27235,
+                25494,
+                21381
+              ]
+            },
+            {
+              "columns": [
+                28483,
+                28494,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                22579,
+                25494,
+                27527
+              ]
+            }
+          ]
+        },
+        {
+          "left_vertex": 10294,
+          "count": 3,
+          "witnesses": [
+            {
+              "columns": [
+                28303,
+                28483,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                22032,
+                26548,
+                27467
+              ]
+            },
+            {
+              "columns": [
+                28303,
+                28494,
+                29656
+              ],
+              "direction": "increasing",
+              "values": [
+                22032,
+                25488,
+                27467
+              ]
+            },
+            {
+              "columns": [
+                28483,
+                28494,
+                29724
+              ],
+              "direction": "decreasing",
+              "values": [
+                26548,
+                25488,
+                24373
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_triples_on_at_least_three_rows": [
+        {
+          "columns": [
+            28303,
+            28483,
+            29656
+          ],
+          "direction": "increasing",
+          "rows": [
+            7469,
+            7994,
+            10294
+          ]
+        }
+      ],
+      "aligned_3x3_count": 0,
+      "aligned_3x3_examples": []
+    },
+    "same_shape_aligned_for_both_endpoints_among_first_20": []
+  }
+}

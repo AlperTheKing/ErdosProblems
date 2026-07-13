@@ -1,0 +1,1338 @@
+{
+  "arithmetic": "integer",
+  "central_interval_graph": {
+    "all_edges_distinct": true,
+    "crossing_edge_pairs_in_mark_order": 323,
+    "degree_sequence": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7
+    ],
+    "edges": 51,
+    "vertices": 26
+  },
+  "checks": {
+    "expected_positive_difference_support": 325,
+    "expected_unordered_sum_support": 351,
+    "minus_b_in_3B_minus_B_witness_xyzw": {
+      "-1": [
+        1,
+        1,
+        201,
+        204
+      ],
+      "-2": [
+        1,
+        1,
+        315,
+        319
+      ]
+    },
+    "minus_b_not_in_3B_minus_B": {
+      "-1": false,
+      "-2": false
+    },
+    "positive_difference_support": 325,
+    "unordered_sum_support": 351
+  },
+  "claim": {
+    "C_S": 51,
+    "C_S_minus_bound": 2,
+    "holds": false,
+    "two_p_minus_three": 49
+  },
+  "collision_type_counts": {
+    "high_diagonal": 8,
+    "low_diagonal": 7,
+    "off_diagonal": 36
+  },
+  "collisions": [
+    {
+      "central_interval": [
+        2,
+        111
+      ],
+      "central_length": 109,
+      "high_pair": [
+        111,
+        387
+      ],
+      "high_sum": 498,
+      "low_pair": [
+        2,
+        2
+      ],
+      "low_sum": 4,
+      "outer_interval": [
+        2,
+        387
+      ],
+      "outer_length": 385,
+      "type": "low_diagonal",
+      "wrap_length": 109
+    },
+    {
+      "central_interval": [
+        34,
+        186
+      ],
+      "central_length": 152,
+      "high_pair": [
+        186,
+        344
+      ],
+      "high_sum": 530,
+      "low_pair": [
+        2,
+        34
+      ],
+      "low_sum": 36,
+      "outer_interval": [
+        2,
+        344
+      ],
+      "outer_length": 342,
+      "type": "off_diagonal",
+      "wrap_length": 152
+    },
+    {
+      "central_interval": [
+        34,
+        105
+      ],
+      "central_length": 71,
+      "high_pair": [
+        105,
+        457
+      ],
+      "high_sum": 562,
+      "low_pair": [
+        34,
+        34
+      ],
+      "low_sum": 68,
+      "outer_interval": [
+        34,
+        457
+      ],
+      "outer_length": 423,
+      "type": "low_diagonal",
+      "wrap_length": 71
+    },
+    {
+      "central_interval": [
+        105,
+        125
+      ],
+      "central_length": 20,
+      "high_pair": [
+        125,
+        476
+      ],
+      "high_sum": 601,
+      "low_pair": [
+        2,
+        105
+      ],
+      "low_sum": 107,
+      "outer_interval": [
+        2,
+        476
+      ],
+      "outer_length": 474,
+      "type": "off_diagonal",
+      "wrap_length": 20
+    },
+    {
+      "central_interval": [
+        111,
+        250
+      ],
+      "central_length": 139,
+      "high_pair": [
+        250,
+        357
+      ],
+      "high_sum": 607,
+      "low_pair": [
+        2,
+        111
+      ],
+      "low_sum": 113,
+      "outer_interval": [
+        2,
+        357
+      ],
+      "outer_length": 355,
+      "type": "off_diagonal",
+      "wrap_length": 139
+    },
+    {
+      "central_interval": [
+        125,
+        164
+      ],
+      "central_length": 39,
+      "high_pair": [
+        164,
+        457
+      ],
+      "high_sum": 621,
+      "low_pair": [
+        2,
+        125
+      ],
+      "low_sum": 127,
+      "outer_interval": [
+        2,
+        457
+      ],
+      "outer_length": 455,
+      "type": "off_diagonal",
+      "wrap_length": 39
+    },
+    {
+      "central_interval": [
+        111,
+        252
+      ],
+      "central_length": 141,
+      "high_pair": [
+        252,
+        387
+      ],
+      "high_sum": 639,
+      "low_pair": [
+        34,
+        111
+      ],
+      "low_sum": 145,
+      "outer_interval": [
+        34,
+        387
+      ],
+      "outer_length": 353,
+      "type": "off_diagonal",
+      "wrap_length": 141
+    },
+    {
+      "central_interval": [
+        164,
+        315
+      ],
+      "central_length": 151,
+      "high_pair": [
+        315,
+        344
+      ],
+      "high_sum": 659,
+      "low_pair": [
+        1,
+        164
+      ],
+      "low_sum": 165,
+      "outer_interval": [
+        1,
+        344
+      ],
+      "outer_length": 343,
+      "type": "off_diagonal",
+      "wrap_length": 151
+    },
+    {
+      "central_interval": [
+        84,
+        186
+      ],
+      "central_length": 102,
+      "high_pair": [
+        186,
+        476
+      ],
+      "high_sum": 662,
+      "low_pair": [
+        84,
+        84
+      ],
+      "low_sum": 168,
+      "outer_interval": [
+        84,
+        476
+      ],
+      "outer_length": 392,
+      "type": "low_diagonal",
+      "wrap_length": 102
+    },
+    {
+      "central_interval": [
+        186,
+        250
+      ],
+      "central_length": 64,
+      "high_pair": [
+        250,
+        431
+      ],
+      "high_sum": 681,
+      "low_pair": [
+        1,
+        186
+      ],
+      "low_sum": 187,
+      "outer_interval": [
+        1,
+        431
+      ],
+      "outer_length": 430,
+      "type": "off_diagonal",
+      "wrap_length": 64
+    },
+    {
+      "central_interval": [
+        105,
+        252
+      ],
+      "central_length": 147,
+      "high_pair": [
+        252,
+        431
+      ],
+      "high_sum": 683,
+      "low_pair": [
+        84,
+        105
+      ],
+      "low_sum": 189,
+      "outer_interval": [
+        84,
+        431
+      ],
+      "outer_length": 347,
+      "type": "off_diagonal",
+      "wrap_length": 147
+    },
+    {
+      "central_interval": [
+        111,
+        201
+      ],
+      "central_length": 90,
+      "high_pair": [
+        201,
+        488
+      ],
+      "high_sum": 689,
+      "low_pair": [
+        84,
+        111
+      ],
+      "low_sum": 195,
+      "outer_interval": [
+        84,
+        488
+      ],
+      "outer_length": 404,
+      "type": "off_diagonal",
+      "wrap_length": 90
+    },
+    {
+      "central_interval": [
+        164,
+        204
+      ],
+      "central_length": 40,
+      "high_pair": [
+        204,
+        488
+      ],
+      "high_sum": 692,
+      "low_pair": [
+        34,
+        164
+      ],
+      "low_sum": 198,
+      "outer_interval": [
+        34,
+        488
+      ],
+      "outer_length": 454,
+      "type": "off_diagonal",
+      "wrap_length": 40
+    },
+    {
+      "central_interval": [
+        201,
+        204
+      ],
+      "central_length": 3,
+      "high_pair": [
+        204,
+        493
+      ],
+      "high_sum": 697,
+      "low_pair": [
+        2,
+        201
+      ],
+      "low_sum": 203,
+      "outer_interval": [
+        2,
+        493
+      ],
+      "outer_length": 491,
+      "type": "off_diagonal",
+      "wrap_length": 3
+    },
+    {
+      "central_interval": [
+        204,
+        259
+      ],
+      "central_length": 55,
+      "high_pair": [
+        259,
+        441
+      ],
+      "high_sum": 700,
+      "low_pair": [
+        2,
+        204
+      ],
+      "low_sum": 206,
+      "outer_interval": [
+        2,
+        441
+      ],
+      "outer_length": 439,
+      "type": "off_diagonal",
+      "wrap_length": 55
+    },
+    {
+      "central_interval": [
+        186,
+        357
+      ],
+      "central_length": 171,
+      "high_pair": [
+        357,
+        357
+      ],
+      "high_sum": 714,
+      "low_pair": [
+        34,
+        186
+      ],
+      "low_sum": 220,
+      "outer_interval": [
+        34,
+        357
+      ],
+      "outer_length": 323,
+      "type": "high_diagonal",
+      "wrap_length": 171
+    },
+    {
+      "central_interval": [
+        111,
+        259
+      ],
+      "central_length": 148,
+      "high_pair": [
+        259,
+        457
+      ],
+      "high_sum": 716,
+      "low_pair": [
+        111,
+        111
+      ],
+      "low_sum": 222,
+      "outer_interval": [
+        111,
+        457
+      ],
+      "outer_length": 346,
+      "type": "low_diagonal",
+      "wrap_length": 148
+    },
+    {
+      "central_interval": [
+        125,
+        259
+      ],
+      "central_length": 134,
+      "high_pair": [
+        259,
+        465
+      ],
+      "high_sum": 724,
+      "low_pair": [
+        105,
+        125
+      ],
+      "low_sum": 230,
+      "outer_interval": [
+        105,
+        465
+      ],
+      "outer_length": 360,
+      "type": "off_diagonal",
+      "wrap_length": 134
+    },
+    {
+      "central_interval": [
+        125,
+        357
+      ],
+      "central_length": 232,
+      "high_pair": [
+        357,
+        387
+      ],
+      "high_sum": 744,
+      "low_pair": [
+        125,
+        125
+      ],
+      "low_sum": 250,
+      "outer_interval": [
+        125,
+        387
+      ],
+      "outer_length": 262,
+      "type": "low_diagonal",
+      "wrap_length": 232
+    },
+    {
+      "central_interval": [
+        250,
+        252
+      ],
+      "central_length": 2,
+      "high_pair": [
+        252,
+        493
+      ],
+      "high_sum": 745,
+      "low_pair": [
+        1,
+        250
+      ],
+      "low_sum": 251,
+      "outer_interval": [
+        1,
+        493
+      ],
+      "outer_length": 492,
+      "type": "off_diagonal",
+      "wrap_length": 2
+    },
+    {
+      "central_interval": [
+        250,
+        315
+      ],
+      "central_length": 65,
+      "high_pair": [
+        315,
+        431
+      ],
+      "high_sum": 746,
+      "low_pair": [
+        2,
+        250
+      ],
+      "low_sum": 252,
+      "outer_interval": [
+        2,
+        431
+      ],
+      "outer_length": 429,
+      "type": "off_diagonal",
+      "wrap_length": 65
+    },
+    {
+      "central_interval": [
+        252,
+        259
+      ],
+      "central_length": 7,
+      "high_pair": [
+        259,
+        488
+      ],
+      "high_sum": 747,
+      "low_pair": [
+        1,
+        252
+      ],
+      "low_sum": 253,
+      "outer_interval": [
+        1,
+        488
+      ],
+      "outer_length": 487,
+      "type": "off_diagonal",
+      "wrap_length": 7
+    },
+    {
+      "central_interval": [
+        252,
+        315
+      ],
+      "central_length": 63,
+      "high_pair": [
+        315,
+        465
+      ],
+      "high_sum": 780,
+      "low_pair": [
+        34,
+        252
+      ],
+      "low_sum": 286,
+      "outer_interval": [
+        34,
+        465
+      ],
+      "outer_length": 431,
+      "type": "off_diagonal",
+      "wrap_length": 63
+    },
+    {
+      "central_interval": [
+        186,
+        344
+      ],
+      "central_length": 158,
+      "high_pair": [
+        344,
+        441
+      ],
+      "high_sum": 785,
+      "low_pair": [
+        105,
+        186
+      ],
+      "low_sum": 291,
+      "outer_interval": [
+        105,
+        441
+      ],
+      "outer_length": 336,
+      "type": "off_diagonal",
+      "wrap_length": 158
+    },
+    {
+      "central_interval": [
+        186,
+        315
+      ],
+      "central_length": 129,
+      "high_pair": [
+        315,
+        476
+      ],
+      "high_sum": 791,
+      "low_pair": [
+        111,
+        186
+      ],
+      "low_sum": 297,
+      "outer_interval": [
+        111,
+        476
+      ],
+      "outer_length": 365,
+      "type": "off_diagonal",
+      "wrap_length": 129
+    },
+    {
+      "central_interval": [
+        204,
+        315
+      ],
+      "central_length": 111,
+      "high_pair": [
+        315,
+        488
+      ],
+      "high_sum": 803,
+      "low_pair": [
+        105,
+        204
+      ],
+      "low_sum": 309,
+      "outer_interval": [
+        105,
+        488
+      ],
+      "outer_length": 383,
+      "type": "off_diagonal",
+      "wrap_length": 111
+    },
+    {
+      "central_interval": [
+        204,
+        344
+      ],
+      "central_length": 140,
+      "high_pair": [
+        344,
+        465
+      ],
+      "high_sum": 809,
+      "low_pair": [
+        111,
+        204
+      ],
+      "low_sum": 315,
+      "outer_interval": [
+        111,
+        465
+      ],
+      "outer_length": 354,
+      "type": "off_diagonal",
+      "wrap_length": 140
+    },
+    {
+      "central_interval": [
+        319,
+        357
+      ],
+      "central_length": 38,
+      "high_pair": [
+        357,
+        457
+      ],
+      "high_sum": 814,
+      "low_pair": [
+        1,
+        319
+      ],
+      "low_sum": 320,
+      "outer_interval": [
+        1,
+        457
+      ],
+      "outer_length": 456,
+      "type": "off_diagonal",
+      "wrap_length": 38
+    },
+    {
+      "central_interval": [
+        201,
+        344
+      ],
+      "central_length": 143,
+      "high_pair": [
+        344,
+        476
+      ],
+      "high_sum": 820,
+      "low_pair": [
+        125,
+        201
+      ],
+      "low_sum": 326,
+      "outer_interval": [
+        125,
+        476
+      ],
+      "outer_length": 351,
+      "type": "off_diagonal",
+      "wrap_length": 143
+    },
+    {
+      "central_interval": [
+        164,
+        357
+      ],
+      "central_length": 193,
+      "high_pair": [
+        357,
+        465
+      ],
+      "high_sum": 822,
+      "low_pair": [
+        164,
+        164
+      ],
+      "low_sum": 328,
+      "outer_interval": [
+        164,
+        465
+      ],
+      "outer_length": 301,
+      "type": "low_diagonal",
+      "wrap_length": 193
+    },
+    {
+      "central_interval": [
+        250,
+        387
+      ],
+      "central_length": 137,
+      "high_pair": [
+        387,
+        441
+      ],
+      "high_sum": 828,
+      "low_pair": [
+        84,
+        250
+      ],
+      "low_sum": 334,
+      "outer_interval": [
+        84,
+        441
+      ],
+      "outer_length": 357,
+      "type": "off_diagonal",
+      "wrap_length": 137
+    },
+    {
+      "central_interval": [
+        259,
+        344
+      ],
+      "central_length": 85,
+      "high_pair": [
+        344,
+        493
+      ],
+      "high_sum": 837,
+      "low_pair": [
+        84,
+        259
+      ],
+      "low_sum": 343,
+      "outer_interval": [
+        84,
+        493
+      ],
+      "outer_length": 409,
+      "type": "off_diagonal",
+      "wrap_length": 85
+    },
+    {
+      "central_interval": [
+        186,
+        387
+      ],
+      "central_length": 201,
+      "high_pair": [
+        387,
+        457
+      ],
+      "high_sum": 844,
+      "low_pair": [
+        164,
+        186
+      ],
+      "low_sum": 350,
+      "outer_interval": [
+        164,
+        457
+      ],
+      "outer_length": 293,
+      "type": "off_diagonal",
+      "wrap_length": 201
+    },
+    {
+      "central_interval": [
+        357,
+        387
+      ],
+      "central_length": 30,
+      "high_pair": [
+        387,
+        465
+      ],
+      "high_sum": 852,
+      "low_pair": [
+        1,
+        357
+      ],
+      "low_sum": 358,
+      "outer_interval": [
+        1,
+        465
+      ],
+      "outer_length": 464,
+      "type": "off_diagonal",
+      "wrap_length": 30
+    },
+    {
+      "central_interval": [
+        204,
+        431
+      ],
+      "central_length": 227,
+      "high_pair": [
+        431,
+        431
+      ],
+      "high_sum": 862,
+      "low_pair": [
+        164,
+        204
+      ],
+      "low_sum": 368,
+      "outer_interval": [
+        164,
+        431
+      ],
+      "outer_length": 267,
+      "type": "high_diagonal",
+      "wrap_length": 227
+    },
+    {
+      "central_interval": [
+        344,
+        431
+      ],
+      "central_length": 87,
+      "high_pair": [
+        431,
+        441
+      ],
+      "high_sum": 872,
+      "low_pair": [
+        34,
+        344
+      ],
+      "low_sum": 378,
+      "outer_interval": [
+        34,
+        441
+      ],
+      "outer_length": 407,
+      "type": "off_diagonal",
+      "wrap_length": 87
+    },
+    {
+      "central_interval": [
+        387,
+        441
+      ],
+      "central_length": 54,
+      "high_pair": [
+        441,
+        441
+      ],
+      "high_sum": 882,
+      "low_pair": [
+        1,
+        387
+      ],
+      "low_sum": 388,
+      "outer_interval": [
+        1,
+        441
+      ],
+      "outer_length": 440,
+      "type": "high_diagonal",
+      "wrap_length": 54
+    },
+    {
+      "central_interval": [
+        201,
+        431
+      ],
+      "central_length": 230,
+      "high_pair": [
+        431,
+        465
+      ],
+      "high_sum": 896,
+      "low_pair": [
+        201,
+        201
+      ],
+      "low_sum": 402,
+      "outer_interval": [
+        201,
+        465
+      ],
+      "outer_length": 264,
+      "type": "low_diagonal",
+      "wrap_length": 230
+    },
+    {
+      "central_interval": [
+        315,
+        457
+      ],
+      "central_length": 142,
+      "high_pair": [
+        457,
+        457
+      ],
+      "high_sum": 914,
+      "low_pair": [
+        105,
+        315
+      ],
+      "low_sum": 420,
+      "outer_interval": [
+        105,
+        457
+      ],
+      "outer_length": 352,
+      "type": "high_diagonal",
+      "wrap_length": 142
+    },
+    {
+      "central_interval": [
+        259,
+        441
+      ],
+      "central_length": 182,
+      "high_pair": [
+        441,
+        476
+      ],
+      "high_sum": 917,
+      "low_pair": [
+        164,
+        259
+      ],
+      "low_sum": 423,
+      "outer_interval": [
+        164,
+        476
+      ],
+      "outer_length": 312,
+      "type": "off_diagonal",
+      "wrap_length": 182
+    },
+    {
+      "central_interval": [
+        344,
+        457
+      ],
+      "central_length": 113,
+      "high_pair": [
+        457,
+        465
+      ],
+      "high_sum": 922,
+      "low_pair": [
+        84,
+        344
+      ],
+      "low_sum": 428,
+      "outer_interval": [
+        84,
+        465
+      ],
+      "outer_length": 381,
+      "type": "off_diagonal",
+      "wrap_length": 113
+    },
+    {
+      "central_interval": [
+        319,
+        431
+      ],
+      "central_length": 112,
+      "high_pair": [
+        431,
+        493
+      ],
+      "high_sum": 924,
+      "low_pair": [
+        111,
+        319
+      ],
+      "low_sum": 430,
+      "outer_interval": [
+        111,
+        493
+      ],
+      "outer_length": 382,
+      "type": "off_diagonal",
+      "wrap_length": 112
+    },
+    {
+      "central_interval": [
+        250,
+        465
+      ],
+      "central_length": 215,
+      "high_pair": [
+        465,
+        465
+      ],
+      "high_sum": 930,
+      "low_pair": [
+        186,
+        250
+      ],
+      "low_sum": 436,
+      "outer_interval": [
+        186,
+        465
+      ],
+      "outer_length": 279,
+      "type": "high_diagonal",
+      "wrap_length": 215
+    },
+    {
+      "central_interval": [
+        315,
+        441
+      ],
+      "central_length": 126,
+      "high_pair": [
+        441,
+        493
+      ],
+      "high_sum": 934,
+      "low_pair": [
+        125,
+        315
+      ],
+      "low_sum": 440,
+      "outer_interval": [
+        125,
+        493
+      ],
+      "outer_length": 368,
+      "type": "off_diagonal",
+      "wrap_length": 126
+    },
+    {
+      "central_interval": [
+        250,
+        457
+      ],
+      "central_length": 207,
+      "high_pair": [
+        457,
+        488
+      ],
+      "high_sum": 945,
+      "low_pair": [
+        201,
+        250
+      ],
+      "low_sum": 451,
+      "outer_interval": [
+        201,
+        488
+      ],
+      "outer_length": 287,
+      "type": "off_diagonal",
+      "wrap_length": 207
+    },
+    {
+      "central_interval": [
+        252,
+        457
+      ],
+      "central_length": 205,
+      "high_pair": [
+        457,
+        493
+      ],
+      "high_sum": 950,
+      "low_pair": [
+        204,
+        252
+      ],
+      "low_sum": 456,
+      "outer_interval": [
+        204,
+        493
+      ],
+      "outer_length": 289,
+      "type": "off_diagonal",
+      "wrap_length": 205
+    },
+    {
+      "central_interval": [
+        457,
+        476
+      ],
+      "central_length": 19,
+      "high_pair": [
+        476,
+        476
+      ],
+      "high_sum": 952,
+      "low_pair": [
+        1,
+        457
+      ],
+      "low_sum": 458,
+      "outer_interval": [
+        1,
+        476
+      ],
+      "outer_length": 475,
+      "type": "high_diagonal",
+      "wrap_length": 19
+    },
+    {
+      "central_interval": [
+        457,
+        465
+      ],
+      "central_length": 8,
+      "high_pair": [
+        465,
+        488
+      ],
+      "high_sum": 953,
+      "low_pair": [
+        2,
+        457
+      ],
+      "low_sum": 459,
+      "outer_interval": [
+        2,
+        488
+      ],
+      "outer_length": 486,
+      "type": "off_diagonal",
+      "wrap_length": 8
+    },
+    {
+      "central_interval": [
+        441,
+        476
+      ],
+      "central_length": 35,
+      "high_pair": [
+        476,
+        493
+      ],
+      "high_sum": 969,
+      "low_pair": [
+        34,
+        441
+      ],
+      "low_sum": 475,
+      "outer_interval": [
+        34,
+        493
+      ],
+      "outer_length": 459,
+      "type": "off_diagonal",
+      "wrap_length": 35
+    },
+    {
+      "central_interval": [
+        357,
+        488
+      ],
+      "central_length": 131,
+      "high_pair": [
+        488,
+        488
+      ],
+      "high_sum": 976,
+      "low_pair": [
+        125,
+        357
+      ],
+      "low_sum": 482,
+      "outer_interval": [
+        125,
+        488
+      ],
+      "outer_length": 363,
+      "type": "high_diagonal",
+      "wrap_length": 131
+    },
+    {
+      "central_interval": [
+        387,
+        493
+      ],
+      "central_length": 106,
+      "high_pair": [
+        493,
+        493
+      ],
+      "high_sum": 986,
+      "low_pair": [
+        105,
+        387
+      ],
+      "low_sum": 492,
+      "outer_interval": [
+        105,
+        493
+      ],
+      "outer_length": 388,
+      "type": "high_diagonal",
+      "wrap_length": 106
+    }
+  ],
+  "hypotheses": {
+    "B": [
+      1,
+      2,
+      34,
+      84,
+      105,
+      111,
+      125,
+      164,
+      186,
+      201,
+      204,
+      250,
+      252,
+      259,
+      315,
+      319,
+      344,
+      357,
+      387,
+      431,
+      441,
+      457,
+      465,
+      476,
+      488,
+      493
+    ],
+    "B_subset": [
+      0,
+      493
+    ],
+    "h": 494,
+    "max_B": 493,
+    "p": 26,
+    "sidon_including_diagonals": true
+  },
+  "schema_version": 1,
+  "sha256": "85bb95a8526a0cb86a88a378c580cde99b497cc86306ad664f1ad283c16184ca"
+}

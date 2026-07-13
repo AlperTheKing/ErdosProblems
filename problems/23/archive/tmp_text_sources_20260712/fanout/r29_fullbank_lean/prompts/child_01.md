@@ -1,0 +1,1 @@
+Map the exact definition and theorem dependency chain beginning at CheckedTransferMatching (including every source pattern presently encoded) and ending at FullBankGlobalPackage / its final soundness theorem. Produce a machine-readable table of nodes and edges, marking which edges are proved and which require a provider hypothesis.

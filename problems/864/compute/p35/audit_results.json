@@ -1,0 +1,173 @@
+{
+  "scope": "exact decomposition and numerical Fourier-algebra audit",
+  "moduli": [
+    {
+      "v": 3,
+      "checked_d": 3,
+      "interval_bound": 2.0,
+      "max_interval_norm": 1.3333333333333333,
+      "diagonal_hyperplane_norm": 1.0,
+      "max_tetrahedron_bound_ratio": 0.014226276183019885,
+      "max_diagonal_bound_ratio": 0.010416666666666666,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 2,
+          "norm": 1.8209633514265453
+        },
+        "diagonal": {
+          "d": 2,
+          "norm": 1.3333333333333333
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 5,
+      "checked_d": 5,
+      "interval_bound": 2.5,
+      "max_interval_norm": 1.6,
+      "diagonal_hyperplane_norm": 1.0,
+      "max_tetrahedron_bound_ratio": 0.007951247113310139,
+      "max_diagonal_bound_ratio": 0.0051272360457164145,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 4,
+          "norm": 3.1059559036367728
+        },
+        "diagonal": {
+          "d": 4,
+          "norm": 2.0028265803579743
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 7,
+      "checked_d": 7,
+      "interval_bound": 2.833333333333333,
+      "max_interval_norm": 1.7142857142857142,
+      "diagonal_hyperplane_norm": 1.0000000000000002,
+      "max_tetrahedron_bound_ratio": 0.005631217230070888,
+      "max_diagonal_bound_ratio": 0.003380720437277132,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 6,
+          "norm": 4.112923458146479
+        },
+        "diagonal": {
+          "d": 6,
+          "norm": 2.4692076018060667
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 9,
+      "checked_d": 9,
+      "interval_bound": 3.0833333333333335,
+      "max_interval_norm": 1.835282329587474,
+      "diagonal_hyperplane_norm": 1.0000000000000002,
+      "max_tetrahedron_bound_ratio": 0.0044414202140516,
+      "max_diagonal_bound_ratio": 0.002538927864364938,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 8,
+          "norm": 4.9509010471663615
+        },
+        "diagonal": {
+          "d": 8,
+          "norm": 2.8301714353881198
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 11,
+      "checked_d": 11,
+      "interval_bound": 3.283333333333333,
+      "max_interval_norm": 1.9139407606058674,
+      "diagonal_hyperplane_norm": 1.0,
+      "max_tetrahedron_bound_ratio": 0.003717220273430885,
+      "max_diagonal_bound_ratio": 0.0020481535948959338,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 10,
+          "norm": 5.67352753984062
+        },
+        "diagonal": {
+          "d": 10,
+          "norm": 3.126060596818088
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 13,
+      "checked_d": 13,
+      "interval_bound": 3.45,
+      "max_interval_norm": 1.9812015788290176,
+      "diagonal_hyperplane_norm": 1.0000000000000004,
+      "max_tetrahedron_bound_ratio": 0.0032283990968847587,
+      "max_diagonal_bound_ratio": 0.0017276282968731642,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 12,
+          "norm": 6.3116467432638155
+        },
+        "diagonal": {
+          "d": 12,
+          "norm": 3.377581019661385
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    },
+    {
+      "v": 15,
+      "checked_d": 15,
+      "interval_bound": 3.592857142857143,
+      "max_interval_norm": 2.027760524333249,
+      "diagonal_hyperplane_norm": 1.0000000000000004,
+      "max_tetrahedron_bound_ratio": 0.002874963445711635,
+      "max_diagonal_bound_ratio": 0.0015019601002301923,
+      "max_diagonal_over_tetrahedron": 1.0,
+      "witnesses": {
+        "tetrahedron": {
+          "d": 14,
+          "norm": 6.8848116774646595
+        },
+        "diagonal": {
+          "d": 14,
+          "norm": 3.5968152751908113
+        },
+        "diagonal_over_tetrahedron": {
+          "d": 1,
+          "ratio": 1.0
+        }
+      }
+    }
+  ]
+}

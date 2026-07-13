@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\cdc_wave1_exchange\c5_3_exchange_gate.py", line 134, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\cdc_wave1_exchange\c5_3_exchange_gate.py", line 89, in main
+    with ProcessPoolExecutor(max_workers=args.workers) as executor:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\process.py", line 747, in __init__
+    self._executor_manager_thread_wakeup = _ThreadWakeup()
+                                           ^^^^^^^^^^^^^^^
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\process.py", line 71, in __init__
+    self._reader, self._writer = mp.Pipe(duplex=False)
+                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\context.py", line 63, in Pipe
+    return Pipe(duplex)
+           ^^^^^^^^^^^^
+  File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 575, in Pipe
+    h2 = _winapi.CreateFile(
+         ^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied

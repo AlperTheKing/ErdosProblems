@@ -1,0 +1,1 @@
+Perform an exact semantic diff between the auxiliary ActiveScoped Matching/Available relation and the production CheckedTransferMatching/FullBank relations. Enumerate source classes, reservations, capacities, ownership predicates, and sinks present on each side. Conclude exactly why the R29 defect 28 does or does not transfer as a falsifier at the type/interface level.

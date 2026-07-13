@@ -1,0 +1,1 @@
+Try to formulate and kernel-prove a precise interface-level impossibility theorem: e.g. the current auxiliary ActiveScoped certificate cannot imply the production FullBank provider because required source/sink fields are absent. Use small abstract types/countermodels only if they faithfully instantiate the exact Lean signatures. Do not overclaim graph-level impossibility.

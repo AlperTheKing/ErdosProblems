@@ -1,0 +1,38 @@
+{
+  "exact_solver": "OR-Tools CP-SAT",
+  "result": {
+    "status": "FEASIBLE",
+    "bound": 250,
+    "maximum": 63,
+    "common": {
+      "u01": 28,
+      "u02": 0,
+      "u10": 12,
+      "u11": 41,
+      "u12": 17,
+      "u20": 2,
+      "u21": 8,
+      "u22": 60
+    },
+    "left_private": 42,
+    "right_private": 63,
+    "x": 70,
+    "y": 77,
+    "labels": [
+      0,
+      2,
+      8,
+      12,
+      17,
+      28,
+      41,
+      42,
+      60,
+      63
+    ],
+    "pair_sums": 55,
+    "wall_time_seconds": 300.287151,
+    "branches": 170,
+    "conflicts": 50
+  }
+}

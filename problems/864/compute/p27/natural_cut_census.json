@@ -1,0 +1,505 @@
+{
+  "records": [
+    {
+      "cuts": 38,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 29,
+        "one_third": 16,
+        "three_tenths": 24,
+        "two_fifths": 10
+      },
+      "max_failure_cut_bases": [
+        341
+      ],
+      "max_failure_d": 785,
+      "max_failure_d_over_v": "785/1407",
+      "min_cut_max_failure_d": 238,
+      "min_cut_max_failure_d_over_v": "34/201",
+      "q": 37,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 1407
+    },
+    {
+      "cuts": 42,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 30,
+        "one_third": 19,
+        "three_tenths": 25,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        699
+      ],
+      "max_failure_d": 985,
+      "max_failure_d_over_v": "985/1723",
+      "min_cut_max_failure_d": 224,
+      "min_cut_max_failure_d_over_v": "224/1723",
+      "q": 41,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 1723
+    },
+    {
+      "cuts": 44,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 13,
+        "three_tenths": 18,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        961
+      ],
+      "max_failure_d": 1061,
+      "max_failure_d_over_v": "1061/1893",
+      "min_cut_max_failure_d": 218,
+      "min_cut_max_failure_d_over_v": "218/1893",
+      "q": 43,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 1893
+    },
+    {
+      "cuts": 48,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 34,
+        "one_third": 14,
+        "three_tenths": 20,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        167
+      ],
+      "max_failure_d": 1167,
+      "max_failure_d_over_v": "1167/2257",
+      "min_cut_max_failure_d": 339,
+      "min_cut_max_failure_d_over_v": "339/2257",
+      "q": 47,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 2257
+    },
+    {
+      "cuts": 50,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 30,
+        "one_third": 20,
+        "three_tenths": 24,
+        "two_fifths": 6
+      },
+      "max_failure_cut_bases": [
+        2391
+      ],
+      "max_failure_d": 1181,
+      "max_failure_d_over_v": "1181/2451",
+      "min_cut_max_failure_d": 297,
+      "min_cut_max_failure_d_over_v": "99/817",
+      "q": 49,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 2451
+    },
+    {
+      "cuts": 54,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 36,
+        "one_third": 21,
+        "three_tenths": 29,
+        "two_fifths": 4
+      },
+      "max_failure_cut_bases": [
+        1330
+      ],
+      "max_failure_d": 1331,
+      "max_failure_d_over_v": "1331/2863",
+      "min_cut_max_failure_d": 304,
+      "min_cut_max_failure_d_over_v": "304/2863",
+      "q": 53,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 2863
+    },
+    {
+      "cuts": 60,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 40,
+        "one_third": 16,
+        "three_tenths": 24,
+        "two_fifths": 1
+      },
+      "max_failure_cut_bases": [
+        807
+      ],
+      "max_failure_d": 1567,
+      "max_failure_d_over_v": "1567/3541",
+      "min_cut_max_failure_d": 313,
+      "min_cut_max_failure_d_over_v": "313/3541",
+      "q": 59,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 3541
+    },
+    {
+      "cuts": 62,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 39,
+        "one_third": 17,
+        "three_tenths": 24,
+        "two_fifths": 2
+      },
+      "max_failure_cut_bases": [
+        3566
+      ],
+      "max_failure_d": 1592,
+      "max_failure_d_over_v": "1592/3783",
+      "min_cut_max_failure_d": 496,
+      "min_cut_max_failure_d_over_v": "496/3783",
+      "q": 61,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 3783
+    },
+    {
+      "cuts": 65,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 38,
+        "one_third": 14,
+        "three_tenths": 17,
+        "two_fifths": 5
+      },
+      "max_failure_cut_bases": [
+        977
+      ],
+      "max_failure_d": 1848,
+      "max_failure_d_over_v": "616/1387",
+      "min_cut_max_failure_d": 505,
+      "min_cut_max_failure_d_over_v": "505/4161",
+      "q": 64,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 4161
+    },
+    {
+      "cuts": 68,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 40,
+        "one_third": 12,
+        "three_tenths": 26,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        1485
+      ],
+      "max_failure_d": 1764,
+      "max_failure_d_over_v": "12/31",
+      "min_cut_max_failure_d": 351,
+      "min_cut_max_failure_d_over_v": "117/1519",
+      "q": 67,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 4557
+    },
+    {
+      "cuts": 72,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 25,
+        "one_third": 12,
+        "three_tenths": 14,
+        "two_fifths": 7
+      },
+      "max_failure_cut_bases": [
+        1910
+      ],
+      "max_failure_d": 2460,
+      "max_failure_d_over_v": "2460/5113",
+      "min_cut_max_failure_d": 690,
+      "min_cut_max_failure_d_over_v": "690/5113",
+      "q": 71,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 5113
+    },
+    {
+      "cuts": 74,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 9,
+        "three_tenths": 14,
+        "two_fifths": 5
+      },
+      "max_failure_cut_bases": [
+        626
+      ],
+      "max_failure_d": 2323,
+      "max_failure_d_over_v": "2323/5403",
+      "min_cut_max_failure_d": 625,
+      "min_cut_max_failure_d_over_v": "625/5403",
+      "q": 73,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 5403
+    },
+    {
+      "cuts": 80,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 34,
+        "one_third": 9,
+        "three_tenths": 19,
+        "two_fifths": 1
+      },
+      "max_failure_cut_bases": [
+        218
+      ],
+      "max_failure_d": 2632,
+      "max_failure_d_over_v": "376/903",
+      "min_cut_max_failure_d": 562,
+      "min_cut_max_failure_d_over_v": "562/6321",
+      "q": 79,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 6321
+    },
+    {
+      "cuts": 82,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 38,
+        "one_third": 10,
+        "three_tenths": 17,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        5398
+      ],
+      "max_failure_d": 2594,
+      "max_failure_d_over_v": "2594/6643",
+      "min_cut_max_failure_d": 562,
+      "min_cut_max_failure_d_over_v": "562/6643",
+      "q": 81,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 6643
+    },
+    {
+      "cuts": 84,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 31,
+        "one_third": 7,
+        "three_tenths": 13,
+        "two_fifths": 2
+      },
+      "max_failure_cut_bases": [
+        6313
+      ],
+      "max_failure_d": 3243,
+      "max_failure_d_over_v": "3243/6973",
+      "min_cut_max_failure_d": 948,
+      "min_cut_max_failure_d_over_v": "948/6973",
+      "q": 83,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 6973
+    },
+    {
+      "cuts": 90,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 37,
+        "one_third": 9,
+        "three_tenths": 16,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        5062
+      ],
+      "max_failure_d": 3061,
+      "max_failure_d_over_v": "3061/8011",
+      "min_cut_max_failure_d": 750,
+      "min_cut_max_failure_d_over_v": "750/8011",
+      "q": 89,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 8011
+    },
+    {
+      "cuts": 98,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 31,
+        "one_third": 2,
+        "three_tenths": 9,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        2593
+      ],
+      "max_failure_d": 3286,
+      "max_failure_d_over_v": "3286/9507",
+      "min_cut_max_failure_d": 905,
+      "min_cut_max_failure_d_over_v": "905/9507",
+      "q": 97,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 9507
+    },
+    {
+      "cuts": 102,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 26,
+        "one_third": 5,
+        "three_tenths": 10,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        172
+      ],
+      "max_failure_d": 3866,
+      "max_failure_d_over_v": "3866/10303",
+      "min_cut_max_failure_d": 1343,
+      "min_cut_max_failure_d_over_v": "1343/10303",
+      "q": 101,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 10303
+    },
+    {
+      "cuts": 104,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 0,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        6540
+      ],
+      "max_failure_d": 3478,
+      "max_failure_d_over_v": "3478/10713",
+      "min_cut_max_failure_d": 976,
+      "min_cut_max_failure_d_over_v": "976/10713",
+      "q": 103,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 10713
+    },
+    {
+      "cuts": 108,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 33,
+        "one_third": 2,
+        "three_tenths": 7,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        4648
+      ],
+      "max_failure_d": 4267,
+      "max_failure_d_over_v": "4267/11557",
+      "min_cut_max_failure_d": 1193,
+      "min_cut_max_failure_d_over_v": "1193/11557",
+      "q": 107,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 11557
+    },
+    {
+      "cuts": 110,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 25,
+        "one_third": 3,
+        "three_tenths": 6,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        3382
+      ],
+      "max_failure_d": 4069,
+      "max_failure_d_over_v": "4069/11991",
+      "min_cut_max_failure_d": 1323,
+      "min_cut_max_failure_d_over_v": "63/571",
+      "q": 109,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 11991
+    },
+    {
+      "cuts": 114,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 22,
+        "one_third": 4,
+        "three_tenths": 7,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        11272
+      ],
+      "max_failure_d": 5070,
+      "max_failure_d_over_v": "390/991",
+      "min_cut_max_failure_d": 1318,
+      "min_cut_max_failure_d_over_v": "1318/12883",
+      "q": 113,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 12883
+    },
+    {
+      "cuts": 122,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 20,
+        "one_third": 1,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        2430
+      ],
+      "max_failure_d": 5485,
+      "max_failure_d_over_v": "5485/14763",
+      "min_cut_max_failure_d": 916,
+      "min_cut_max_failure_d_over_v": "916/14763",
+      "q": 121,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 14763
+    },
+    {
+      "cuts": 126,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 21,
+        "one_third": 1,
+        "three_tenths": 1,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        3058
+      ],
+      "max_failure_d": 5486,
+      "max_failure_d_over_v": "5486/15751",
+      "min_cut_max_failure_d": 1574,
+      "min_cut_max_failure_d_over_v": "1574/15751",
+      "q": 125,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 15751
+    },
+    {
+      "cuts": 128,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 13,
+        "one_third": 1,
+        "three_tenths": 5,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        14360
+      ],
+      "max_failure_d": 5452,
+      "max_failure_d_over_v": "5452/16257",
+      "min_cut_max_failure_d": 1715,
+      "min_cut_max_failure_d_over_v": "1715/16257",
+      "q": 127,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 16257
+    },
+    {
+      "cuts": 129,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 18,
+        "one_third": 0,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        11637
+      ],
+      "max_failure_d": 5268,
+      "max_failure_d_over_v": "5268/16513",
+      "min_cut_max_failure_d": 1684,
+      "min_cut_max_failure_d_over_v": "1684/16513",
+      "q": 128,
+      "source": "natural_records_with_residues.jsonl",
+      "v": 16513
+    }
+  ],
+  "summary": {
+    "cuts": 2154,
+    "largest_max_failure_ratio": "985/1723",
+    "largest_q": 128,
+    "largest_q_max_failure_ratio": "5268/16513",
+    "records": 26
+  }
+}

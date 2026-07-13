@@ -1,0 +1,213 @@
+{
+  "exact_arithmetic": "integers",
+  "candidate": "For actual balanced block partitions at distinct sums x,y, |B_x intersect B_y| <= q_x+q_y+1",
+  "exhaustive": {
+    "max_width": 18,
+    "endpoint_sidon_rulers": 1339,
+    "valid_pairs": 6783,
+    "column_pairs": 1623,
+    "maximum_vertex_excess": 0,
+    "maximum_cycle_rank": 0,
+    "double_edge_failures": 0,
+    "plus_one_failures": 0,
+    "pseudoforest_failures": 0,
+    "largest_excess_profile": {
+      "Z": [
+        0,
+        1,
+        10,
+        12,
+        18
+      ],
+      "G": 3,
+      "K": 15,
+      "x": 11,
+      "y": 13,
+      "left_blocks": 1,
+      "right_blocks": 1,
+      "common_marks": [
+        0,
+        1
+      ],
+      "edges": 2,
+      "simple_edges": 1,
+      "double_edges": 1,
+      "active_vertices": 2,
+      "components": 1,
+      "cycle_rank": 0,
+      "vertex_excess": 0,
+      "incidences": [
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "left": [
+        [
+          0,
+          1,
+          10
+        ]
+      ],
+      "right": [
+        [
+          0,
+          1,
+          12
+        ]
+      ]
+    }
+  },
+  "p59": {
+    "name": "p59",
+    "p": 8,
+    "W": 58,
+    "G": 15,
+    "K": 43,
+    "columns": 16,
+    "column_pairs": 120,
+    "balanced_blocks": 21,
+    "balanced_incidence": 55,
+    "maximum_common_marks": 5,
+    "maximum_vertex_excess": 1,
+    "maximum_cycle_rank": 1,
+    "maximum_double_edges": 1,
+    "double_edge_failures": 0,
+    "plus_one_failures": 0,
+    "pseudoforest_failures": 0,
+    "largest_excess_profile": {
+      "x": 39,
+      "y": 42,
+      "left_blocks": 2,
+      "right_blocks": 2,
+      "common_marks": [
+        0,
+        7,
+        9,
+        12,
+        30
+      ],
+      "edges": 5,
+      "simple_edges": 4,
+      "double_edges": 1,
+      "active_vertices": 4,
+      "components": 1,
+      "cycle_rank": 1,
+      "vertex_excess": 1,
+      "incidences": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "left": [
+        [
+          0,
+          9,
+          30
+        ],
+        [
+          7,
+          12,
+          20
+        ]
+      ],
+      "right": [
+        [
+          0,
+          12,
+          30
+        ],
+        [
+          7,
+          9,
+          26
+        ]
+      ]
+    }
+  },
+  "q128": {
+    "name": "q128",
+    "p": 128,
+    "W": 15445,
+    "G": 11815,
+    "K": 3630,
+    "columns": 198,
+    "column_pairs": 19503,
+    "balanced_blocks": 201,
+    "balanced_incidence": 589,
+    "maximum_common_marks": 3,
+    "maximum_vertex_excess": 0,
+    "maximum_cycle_rank": 0,
+    "maximum_double_edges": 1,
+    "double_edge_failures": 0,
+    "plus_one_failures": 0,
+    "pseudoforest_failures": 0,
+    "largest_excess_profile": {
+      "x": 916,
+      "y": 3059,
+      "left_blocks": 1,
+      "right_blocks": 2,
+      "common_marks": [
+        0,
+        422,
+        494
+      ],
+      "edges": 3,
+      "simple_edges": 2,
+      "double_edges": 1,
+      "active_vertices": 3,
+      "components": 1,
+      "cycle_rank": 0,
+      "vertex_excess": 0,
+      "incidences": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "left": [
+        [
+          0,
+          422,
+          494
+        ]
+      ],
+      "right": [
+        [
+          0,
+          422,
+          2637
+        ],
+        [
+          494,
+          684,
+          1881
+        ]
+      ]
+    }
+  }
+}

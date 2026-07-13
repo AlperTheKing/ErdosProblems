@@ -1,0 +1,451 @@
+{
+  "records": [
+    {
+      "cuts": 38,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 29,
+        "one_third": 16,
+        "three_tenths": 24,
+        "two_fifths": 10
+      },
+      "max_failure_cut_bases": [
+        341
+      ],
+      "max_failure_d": 785,
+      "max_failure_d_over_v": "785/1407",
+      "min_cut_max_failure_d": 238,
+      "q": 37,
+      "v": 1407
+    },
+    {
+      "cuts": 42,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 30,
+        "one_third": 19,
+        "three_tenths": 25,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        699
+      ],
+      "max_failure_d": 985,
+      "max_failure_d_over_v": "985/1723",
+      "min_cut_max_failure_d": 224,
+      "q": 41,
+      "v": 1723
+    },
+    {
+      "cuts": 44,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 13,
+        "three_tenths": 18,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        961
+      ],
+      "max_failure_d": 1061,
+      "max_failure_d_over_v": "1061/1893",
+      "min_cut_max_failure_d": 218,
+      "q": 43,
+      "v": 1893
+    },
+    {
+      "cuts": 48,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 34,
+        "one_third": 14,
+        "three_tenths": 20,
+        "two_fifths": 9
+      },
+      "max_failure_cut_bases": [
+        167
+      ],
+      "max_failure_d": 1167,
+      "max_failure_d_over_v": "1167/2257",
+      "min_cut_max_failure_d": 339,
+      "q": 47,
+      "v": 2257
+    },
+    {
+      "cuts": 50,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 30,
+        "one_third": 20,
+        "three_tenths": 24,
+        "two_fifths": 6
+      },
+      "max_failure_cut_bases": [
+        2391
+      ],
+      "max_failure_d": 1181,
+      "max_failure_d_over_v": "1181/2451",
+      "min_cut_max_failure_d": 297,
+      "q": 49,
+      "v": 2451
+    },
+    {
+      "cuts": 54,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 36,
+        "one_third": 21,
+        "three_tenths": 29,
+        "two_fifths": 4
+      },
+      "max_failure_cut_bases": [
+        1330
+      ],
+      "max_failure_d": 1331,
+      "max_failure_d_over_v": "1331/2863",
+      "min_cut_max_failure_d": 304,
+      "q": 53,
+      "v": 2863
+    },
+    {
+      "cuts": 60,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 40,
+        "one_third": 16,
+        "three_tenths": 24,
+        "two_fifths": 1
+      },
+      "max_failure_cut_bases": [
+        807
+      ],
+      "max_failure_d": 1567,
+      "max_failure_d_over_v": "1567/3541",
+      "min_cut_max_failure_d": 313,
+      "q": 59,
+      "v": 3541
+    },
+    {
+      "cuts": 62,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 39,
+        "one_third": 17,
+        "three_tenths": 24,
+        "two_fifths": 2
+      },
+      "max_failure_cut_bases": [
+        3566
+      ],
+      "max_failure_d": 1592,
+      "max_failure_d_over_v": "1592/3783",
+      "min_cut_max_failure_d": 496,
+      "q": 61,
+      "v": 3783
+    },
+    {
+      "cuts": 65,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 38,
+        "one_third": 14,
+        "three_tenths": 17,
+        "two_fifths": 5
+      },
+      "max_failure_cut_bases": [
+        977
+      ],
+      "max_failure_d": 1848,
+      "max_failure_d_over_v": "616/1387",
+      "min_cut_max_failure_d": 505,
+      "q": 64,
+      "v": 4161
+    },
+    {
+      "cuts": 68,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 40,
+        "one_third": 12,
+        "three_tenths": 26,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        1485
+      ],
+      "max_failure_d": 1764,
+      "max_failure_d_over_v": "12/31",
+      "min_cut_max_failure_d": 351,
+      "q": 67,
+      "v": 4557
+    },
+    {
+      "cuts": 72,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 25,
+        "one_third": 12,
+        "three_tenths": 14,
+        "two_fifths": 7
+      },
+      "max_failure_cut_bases": [
+        1910
+      ],
+      "max_failure_d": 2460,
+      "max_failure_d_over_v": "2460/5113",
+      "min_cut_max_failure_d": 690,
+      "q": 71,
+      "v": 5113
+    },
+    {
+      "cuts": 74,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 9,
+        "three_tenths": 14,
+        "two_fifths": 5
+      },
+      "max_failure_cut_bases": [
+        626
+      ],
+      "max_failure_d": 2323,
+      "max_failure_d_over_v": "2323/5403",
+      "min_cut_max_failure_d": 625,
+      "q": 73,
+      "v": 5403
+    },
+    {
+      "cuts": 80,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 34,
+        "one_third": 9,
+        "three_tenths": 19,
+        "two_fifths": 1
+      },
+      "max_failure_cut_bases": [
+        218
+      ],
+      "max_failure_d": 2632,
+      "max_failure_d_over_v": "376/903",
+      "min_cut_max_failure_d": 562,
+      "q": 79,
+      "v": 6321
+    },
+    {
+      "cuts": 82,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 38,
+        "one_third": 10,
+        "three_tenths": 17,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        5398
+      ],
+      "max_failure_d": 2594,
+      "max_failure_d_over_v": "2594/6643",
+      "min_cut_max_failure_d": 562,
+      "q": 81,
+      "v": 6643
+    },
+    {
+      "cuts": 84,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 31,
+        "one_third": 7,
+        "three_tenths": 13,
+        "two_fifths": 2
+      },
+      "max_failure_cut_bases": [
+        6313
+      ],
+      "max_failure_d": 3243,
+      "max_failure_d_over_v": "3243/6973",
+      "min_cut_max_failure_d": 948,
+      "q": 83,
+      "v": 6973
+    },
+    {
+      "cuts": 90,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 37,
+        "one_third": 9,
+        "three_tenths": 16,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        5062
+      ],
+      "max_failure_d": 3061,
+      "max_failure_d_over_v": "3061/8011",
+      "min_cut_max_failure_d": 750,
+      "q": 89,
+      "v": 8011
+    },
+    {
+      "cuts": 98,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 31,
+        "one_third": 2,
+        "three_tenths": 9,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        2593
+      ],
+      "max_failure_d": 3286,
+      "max_failure_d_over_v": "3286/9507",
+      "min_cut_max_failure_d": 905,
+      "q": 97,
+      "v": 9507
+    },
+    {
+      "cuts": 102,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 26,
+        "one_third": 5,
+        "three_tenths": 10,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        172
+      ],
+      "max_failure_d": 3866,
+      "max_failure_d_over_v": "3866/10303",
+      "min_cut_max_failure_d": 1343,
+      "q": 101,
+      "v": 10303
+    },
+    {
+      "cuts": 104,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 32,
+        "one_third": 0,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        6540
+      ],
+      "max_failure_d": 3478,
+      "max_failure_d_over_v": "3478/10713",
+      "min_cut_max_failure_d": 976,
+      "q": 103,
+      "v": 10713
+    },
+    {
+      "cuts": 108,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 33,
+        "one_third": 2,
+        "three_tenths": 7,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        4648
+      ],
+      "max_failure_d": 4267,
+      "max_failure_d_over_v": "4267/11557",
+      "min_cut_max_failure_d": 1193,
+      "q": 107,
+      "v": 11557
+    },
+    {
+      "cuts": 110,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 25,
+        "one_third": 3,
+        "three_tenths": 6,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        3382
+      ],
+      "max_failure_d": 4069,
+      "max_failure_d_over_v": "4069/11991",
+      "min_cut_max_failure_d": 1323,
+      "q": 109,
+      "v": 11991
+    },
+    {
+      "cuts": 114,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 22,
+        "one_third": 4,
+        "three_tenths": 7,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        11272
+      ],
+      "max_failure_d": 5070,
+      "max_failure_d_over_v": "390/991",
+      "min_cut_max_failure_d": 1318,
+      "q": 113,
+      "v": 12883
+    },
+    {
+      "cuts": 122,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 20,
+        "one_third": 1,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        2430
+      ],
+      "max_failure_d": 5485,
+      "max_failure_d_over_v": "5485/14763",
+      "min_cut_max_failure_d": 916,
+      "q": 121,
+      "v": 14763
+    },
+    {
+      "cuts": 126,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 21,
+        "one_third": 1,
+        "three_tenths": 1,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        3058
+      ],
+      "max_failure_d": 5486,
+      "max_failure_d_over_v": "5486/15751",
+      "min_cut_max_failure_d": 1574,
+      "q": 125,
+      "v": 15751
+    },
+    {
+      "cuts": 128,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 13,
+        "one_third": 1,
+        "three_tenths": 5,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        14360
+      ],
+      "max_failure_d": 5452,
+      "max_failure_d_over_v": "5452/16257",
+      "min_cut_max_failure_d": 1715,
+      "q": 127,
+      "v": 16257
+    },
+    {
+      "cuts": 129,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 18,
+        "one_third": 0,
+        "three_tenths": 4,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        11637
+      ],
+      "max_failure_d": 5268,
+      "max_failure_d_over_v": "5268/16513",
+      "min_cut_max_failure_d": 1684,
+      "q": 128,
+      "v": 16513
+    }
+  ],
+  "summary": {
+    "all_fft_census_fields_match_exact_bitsets": true,
+    "cuts": 2154,
+    "records": 26
+  }
+}

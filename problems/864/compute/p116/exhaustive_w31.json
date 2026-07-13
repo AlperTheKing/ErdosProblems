@@ -1,0 +1,1985 @@
+{
+  "arithmetic": "exact Python integers",
+  "candidate": "sum_u max(0,t_u-n_u) <= p",
+  "domain": {
+    "max_width": 31,
+    "min_width": 31,
+    "orientations": "all endpoint-normalized Sidon rulers",
+    "parity_lifts": "B -> 2B+1, h -> 2h, b=1 whenever lifted delta>0",
+    "phases": [
+      1,
+      2
+    ],
+    "translations": "all gamma with direct delta>0"
+  },
+  "result": {
+    "aggregate_decision_sha256": "ae7af7670767baf4a86d608dcf102be405ad1e249e3f69ad0b1f525087939b6a",
+    "direct_bc108_failures": 0,
+    "direct_literal_holes": 126225,
+    "direct_positive_candidates": 270796,
+    "direct_triangle_rows": 402,
+    "failure": null,
+    "parity_failure": null,
+    "parity_lift_bc108_failures": 0,
+    "parity_lift_candidates": 135398,
+    "parity_lift_positive_defect": 3432,
+    "parity_lift_triangle_rows": 378,
+    "parity_worst": {
+      "B": [
+        1,
+        13,
+        41,
+        45,
+        55,
+        61,
+        63
+      ],
+      "C_S": 6,
+      "T_F": 3,
+      "b": 1,
+      "bc108_residual": -7,
+      "colors": [
+        {
+          "excess": 0,
+          "n_u": 2,
+          "t_u": 1,
+          "u": 45
+        },
+        {
+          "excess": 0,
+          "n_u": 2,
+          "t_u": 2,
+          "u": 55
+        },
+        {
+          "excess": 0,
+          "n_u": 1,
+          "t_u": 0,
+          "u": 61
+        },
+        {
+          "excess": 0,
+          "n_u": 1,
+          "t_u": 0,
+          "u": 63
+        }
+      ],
+      "delta": 7,
+      "h": 64,
+      "literal_hole": true,
+      "p": 7,
+      "positive_color_excess": 0,
+      "source": "w=31/first=6/gamma=0/q2-parity"
+    },
+    "rulers": 8266,
+    "shards": [
+      {
+        "decision_sha256": "81f8352c24d5e3d93c7c861e39320cab8ca6d4633cff75521ef81f77c2f75878",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 17212,
+        "direct_positive_candidates": 43160,
+        "direct_triangle_rows": 54,
+        "failure": null,
+        "first_internal_mark": 1,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 21580,
+        "parity_lift_positive_defect": 736,
+        "parity_lift_triangle_rows": 68,
+        "parity_worst": {
+          "B": [
+            1,
+            3,
+            11,
+            39,
+            43,
+            57,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 3
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 11
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 39
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 2,
+              "u": 43
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 57
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=1/gamma=0/q2-parity"
+        },
+        "rulers": 1124,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            1,
+            20,
+            26,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 1
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 26
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=1/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "f5bc8015fad724786091c19b12d63f104ef44a6e5b785c9ecbfa7502e31ae3af",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 19461,
+        "direct_positive_candidates": 45532,
+        "direct_triangle_rows": 79,
+        "failure": null,
+        "first_internal_mark": 2,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 22766,
+        "parity_lift_positive_defect": 808,
+        "parity_lift_triangle_rows": 86,
+        "parity_worst": {
+          "B": [
+            1,
+            5,
+            17,
+            35,
+            41,
+            43,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 3,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 35
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 41
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 43
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=2/gamma=0/q2-parity"
+        },
+        "rulers": 1167,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            2,
+            21,
+            27,
+            31
+          ],
+          "C_S": 0,
+          "T_F": 0,
+          "b": 1,
+          "bc108_residual": -5,
+          "colors": [],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=2/gamma=0/b=1"
+        }
+      },
+      {
+        "decision_sha256": "16dd8163503dc7a83ee17926e9bbb29be6043cb342a62621dea92b65f29c9222",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 14020,
+        "direct_positive_candidates": 31800,
+        "direct_triangle_rows": 50,
+        "failure": null,
+        "first_internal_mark": 3,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 15900,
+        "parity_lift_positive_defect": 512,
+        "parity_lift_triangle_rows": 44,
+        "parity_worst": {
+          "B": [
+            1,
+            7,
+            29,
+            39,
+            43,
+            55,
+            63
+          ],
+          "C_S": 5,
+          "T_F": 1,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 29
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 39
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 55
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=3/gamma=0/q2-parity"
+        },
+        "rulers": 860,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            3,
+            24,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=3/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "a3eaa30216eaac8cb5f673fdc16ff4d779da2705ec3506850fbec9f6b2a3d965",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 14016,
+        "direct_positive_candidates": 30896,
+        "direct_triangle_rows": 82,
+        "failure": null,
+        "first_internal_mark": 4,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 15448,
+        "parity_lift_positive_defect": 432,
+        "parity_lift_triangle_rows": 58,
+        "parity_worst": {
+          "B": [
+            1,
+            9,
+            39,
+            41,
+            53,
+            59,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 41
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 53
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 59
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=4/gamma=0/q2-parity"
+        },
+        "rulers": 858,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            4,
+            23,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=4/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "1b09ff6ccb0b00c854a291546997f45f8f78d739d1f1ace6eb275d1acff96bb4",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 10034,
+        "direct_positive_candidates": 21494,
+        "direct_triangle_rows": 36,
+        "failure": null,
+        "first_internal_mark": 5,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 10747,
+        "parity_lift_positive_defect": 276,
+        "parity_lift_triangle_rows": 33,
+        "parity_worst": {
+          "B": [
+            1,
+            11,
+            33,
+            49,
+            57,
+            61,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 1,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 33
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 49
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 57
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 61
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=5/gamma=0/q2-parity"
+        },
+        "rulers": 630,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            5,
+            27,
+            30,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 5
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=5/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "5531d0dfd85f086e51422d08f222e5d3efba43284a89f975653700c403e88b49",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 9770,
+        "direct_positive_candidates": 20190,
+        "direct_triangle_rows": 44,
+        "failure": null,
+        "first_internal_mark": 6,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 10095,
+        "parity_lift_positive_defect": 228,
+        "parity_lift_triangle_rows": 24,
+        "parity_worst": {
+          "B": [
+            1,
+            13,
+            41,
+            45,
+            55,
+            61,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 3,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 45
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 2,
+              "u": 55
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 61
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=6/gamma=0/q2-parity"
+        },
+        "rulers": 608,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            6,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=6/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "82bfa23b6eb8d02dd6f6c4aac6e3b3869da5becb5067fbb03631d626c3ff6228",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 7928,
+        "direct_positive_candidates": 15710,
+        "direct_triangle_rows": 9,
+        "failure": null,
+        "first_internal_mark": 7,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 7855,
+        "parity_lift_positive_defect": 180,
+        "parity_lift_triangle_rows": 22,
+        "parity_worst": {
+          "B": [
+            1,
+            15,
+            17,
+            41,
+            53,
+            59,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 17
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 41
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 53
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 59
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=7/gamma=0/q2-parity"
+        },
+        "rulers": 483,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            7,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=7/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "2f71c4626b519b652ee8a79c1ad200a8a18c92e140f2b3568c761aeacaf1b457",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 6853,
+        "direct_positive_candidates": 13744,
+        "direct_triangle_rows": 17,
+        "failure": null,
+        "first_internal_mark": 8,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 6872,
+        "parity_lift_positive_defect": 96,
+        "parity_lift_triangle_rows": 11,
+        "parity_worst": {
+          "B": [
+            5,
+            21,
+            41,
+            55,
+            59,
+            65,
+            67
+          ],
+          "C_S": 4,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 55
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 65
+            }
+          ],
+          "delta": 3,
+          "h": 68,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=8/gamma=2/q2-parity"
+        },
+        "rulers": 453,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            8,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=8/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "1299e61b6464ba069d660ddf10985e424f05be00ab8492fb47772f589ed3f946",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 4807,
+        "direct_positive_candidates": 9250,
+        "direct_triangle_rows": 7,
+        "failure": null,
+        "first_internal_mark": 9,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 4625,
+        "parity_lift_positive_defect": 60,
+        "parity_lift_triangle_rows": 13,
+        "parity_worst": {
+          "B": [
+            3,
+            21,
+            29,
+            49,
+            59,
+            61,
+            65
+          ],
+          "C_S": 6,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 29
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 49
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 59
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 65
+            }
+          ],
+          "delta": 5,
+          "h": 66,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=9/gamma=1/q2-parity"
+        },
+        "rulers": 324,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            9,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=9/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "3ca5938a1ee46506a0c6cad30a7e50ddf940efe25d1170c9abdc16457075af29",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 5102,
+        "direct_positive_candidates": 9478,
+        "direct_triangle_rows": 14,
+        "failure": null,
+        "first_internal_mark": 10,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 4739,
+        "parity_lift_positive_defect": 52,
+        "parity_lift_triangle_rows": 14,
+        "parity_worst": {
+          "B": [
+            1,
+            21,
+            33,
+            49,
+            57,
+            59,
+            63
+          ],
+          "C_S": 6,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 33
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 49
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 57
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 59
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=10/gamma=0/q2-parity"
+        },
+        "rulers": 334,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            10,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=10/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "3786cd966c1496e941ffd7e5fe5722cd2cd82437d140ba794149aac93e106de8",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 2554,
+        "direct_positive_candidates": 4824,
+        "direct_triangle_rows": 5,
+        "failure": null,
+        "first_internal_mark": 11,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 2412,
+        "parity_lift_positive_defect": 16,
+        "parity_lift_triangle_rows": 3,
+        "parity_worst": {
+          "B": [
+            1,
+            23,
+            33,
+            49,
+            57,
+            61,
+            63
+          ],
+          "C_S": 7,
+          "T_F": 2,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 33
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 49
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 57
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 61
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=11/gamma=0/q2-parity"
+        },
+        "rulers": 201,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            11,
+            27,
+            30,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 27
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=11/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "b80503c2e4350297051e7d8012efe4d35ddf8ee303b1887dc222f1711ee478cd",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 3008,
+        "direct_positive_candidates": 5442,
+        "direct_triangle_rows": 3,
+        "failure": null,
+        "first_internal_mark": 12,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 2721,
+        "parity_lift_positive_defect": 12,
+        "parity_lift_triangle_rows": 1,
+        "parity_worst": {
+          "B": [
+            3,
+            27,
+            31,
+            43,
+            57,
+            63,
+            65
+          ],
+          "C_S": 5,
+          "T_F": 1,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 43
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 57
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 63
+            }
+          ],
+          "delta": 5,
+          "h": 66,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=12/gamma=1/q2-parity"
+        },
+        "rulers": 219,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            12,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=12/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "875bc2d19e9ea0be6b5598e8274f9387ed7809a83cad21796f46150f007381f5",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 2144,
+        "direct_positive_candidates": 3748,
+        "direct_triangle_rows": 2,
+        "failure": null,
+        "first_internal_mark": 13,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 1874,
+        "parity_lift_positive_defect": 8,
+        "parity_lift_triangle_rows": 1,
+        "parity_worst": {
+          "B": [
+            3,
+            29,
+            41,
+            49,
+            59,
+            63,
+            65
+          ],
+          "C_S": 4,
+          "T_F": 1,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 49
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 59
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 5,
+          "h": 66,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=13/gamma=1/q2-parity"
+        },
+        "rulers": 158,
+        "width": 31,
+        "worst": {
+          "B": [
+            1,
+            14,
+            24,
+            29,
+            32
+          ],
+          "C_S": 3,
+          "T_F": 1,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 24
+            },
+            {
+              "excess": 0,
+              "n_u": 2,
+              "t_u": 1,
+              "u": 29
+            }
+          ],
+          "delta": 3,
+          "h": 33,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=13/gamma=1/b=2"
+        }
+      },
+      {
+        "decision_sha256": "0c9ab8d2509e9cbc9abb3ed96b78ce48a4b1dd80f48816af41126f5faf7f115b",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 2566,
+        "direct_positive_candidates": 4312,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 14,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 2156,
+        "parity_lift_positive_defect": 16,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": {
+          "B": [
+            1,
+            29,
+            39,
+            43,
+            55,
+            61,
+            63
+          ],
+          "C_S": 4,
+          "T_F": 0,
+          "b": 1,
+          "bc108_residual": -7,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 39
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 43
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 61
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 63
+            }
+          ],
+          "delta": 7,
+          "h": 64,
+          "literal_hole": true,
+          "p": 7,
+          "positive_color_excess": 0,
+          "source": "w=31/first=14/gamma=0/q2-parity"
+        },
+        "rulers": 175,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            14,
+            26,
+            27,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 27
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=14/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "02bd0ae5715347a7b5079debcfe7178c7a49431ef7e12b652b1f3b2309317ee7",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 1450,
+        "direct_positive_candidates": 2400,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 15,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 1200,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 113,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            15,
+            27,
+            28,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 28
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=15/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "4002bf9880270e4beae81cad6217c726b523b215c5f2f4d4b4cddc37f03cbe15",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 2252,
+        "direct_positive_candidates": 3616,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 16,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 1808,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 163,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            16,
+            27,
+            30,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 16
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=16/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "bcd442cc6201c0f51e806fb9ee35b125550285a8d21b53c7c31be713b1c80b77",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 1284,
+        "direct_positive_candidates": 2064,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 17,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 1032,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 103,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            17,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=17/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "3aa32e5ede8eb5ff5505dec7af9e838aa65340746146f54911b30dd1f9691228",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 912,
+        "direct_positive_candidates": 1504,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 18,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 752,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 89,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            18,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=18/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "41353c59aae39c50a777828d24ddd183037bc717f00b0b701dcaa76636a97d28",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 494,
+        "direct_positive_candidates": 832,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 19,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 416,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 59,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            19,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=19/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "979121f568b5096dbe55087b98224303939a74a5957f82afc08755951ddd87a9",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 214,
+        "direct_positive_candidates": 400,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 20,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 200,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 45,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            20,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=20/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "f1de2beabdddf873bc33455d4f15795fba96a86f139156cbcf7302219fb2538a",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 58,
+        "direct_positive_candidates": 128,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 21,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 64,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 25,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            21,
+            27,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=21/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "0c53d5e39e28e54d655a8bffb954a2cedf7763ee8f04a7f205f702df06e8cf92",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 54,
+        "direct_positive_candidates": 144,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 22,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 72,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 27,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            22,
+            27,
+            30,
+            31
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 27
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=22/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "105f3931c90136356744a2a6be1966b1008c66a387dcdb49164067d036dc52f0",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 16,
+        "direct_positive_candidates": 64,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 23,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 32,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 15,
+        "width": 31,
+        "worst": {
+          "B": [
+            0,
+            23,
+            26,
+            30,
+            31
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 2,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 31
+            }
+          ],
+          "delta": 4,
+          "h": 32,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=23/gamma=0/b=2"
+        }
+      },
+      {
+        "decision_sha256": "a7435e25051eae6e75b47be396c72fb8a4c83c84b590760f55a2f6c147f81473",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 12,
+        "direct_positive_candidates": 48,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 24,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 24,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 13,
+        "width": 31,
+        "worst": {
+          "B": [
+            1,
+            25,
+            27,
+            31,
+            32
+          ],
+          "C_S": 1,
+          "T_F": 0,
+          "b": 1,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 27
+            }
+          ],
+          "delta": 3,
+          "h": 33,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=24/gamma=1/b=1"
+        }
+      },
+      {
+        "decision_sha256": "0b16476566dba3fd8b5f02cb3c1fa16e4343de8850e379afc047a2a4cc85168e",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 4,
+        "direct_positive_candidates": 16,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 25,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 8,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 7,
+        "width": 31,
+        "worst": {
+          "B": [
+            3,
+            28,
+            30,
+            33,
+            34
+          ],
+          "C_S": 2,
+          "T_F": 0,
+          "b": 1,
+          "bc108_residual": -5,
+          "colors": [
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 33
+            },
+            {
+              "excess": 0,
+              "n_u": 1,
+              "t_u": 0,
+              "u": 34
+            }
+          ],
+          "delta": 1,
+          "h": 35,
+          "literal_hole": true,
+          "p": 5,
+          "positive_color_excess": 0,
+          "source": "w=31/first=25/gamma=3/b=1"
+        }
+      },
+      {
+        "decision_sha256": "7f35e014367a5334c05e3d6c010a923326b53b64dbc245f937c3311ec67c7593",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 0,
+        "direct_positive_candidates": 0,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 26,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 0,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 5,
+        "width": 31,
+        "worst": null
+      },
+      {
+        "decision_sha256": "a7c276a4c7e0218f59bc57adcdec58c5d04cdab6e7a17b30fa247da731ddd30f",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 0,
+        "direct_positive_candidates": 0,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 27,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 0,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 3,
+        "width": 31,
+        "worst": null
+      },
+      {
+        "decision_sha256": "4aab4eec782dc97dbc25c81555a19399c4eec348f472469edcb6c83e37461a00",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 0,
+        "direct_positive_candidates": 0,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 28,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 0,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 3,
+        "width": 31,
+        "worst": null
+      },
+      {
+        "decision_sha256": "cf9854af1dcc934dff339aee7d64bd3d0502e9fb93d7dfd3e637bcd181436f18",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 0,
+        "direct_positive_candidates": 0,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 29,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 0,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 1,
+        "width": 31,
+        "worst": null
+      },
+      {
+        "decision_sha256": "29d8c6b7bf1b689e5dee8eb97144d07a232bf64833aa5517fa23b1766b444473",
+        "direct_bc108_failures": 0,
+        "direct_literal_holes": 0,
+        "direct_positive_candidates": 0,
+        "direct_triangle_rows": 0,
+        "failure": null,
+        "first_internal_mark": 30,
+        "parity_failure": null,
+        "parity_lift_bc108_failures": 0,
+        "parity_lift_candidates": 0,
+        "parity_lift_positive_defect": 0,
+        "parity_lift_triangle_rows": 0,
+        "parity_worst": null,
+        "rulers": 1,
+        "width": 31,
+        "worst": null
+      }
+    ],
+    "worst": {
+      "B": [
+        1,
+        14,
+        24,
+        29,
+        32
+      ],
+      "C_S": 3,
+      "T_F": 1,
+      "b": 2,
+      "bc108_residual": -5,
+      "colors": [
+        {
+          "excess": 0,
+          "n_u": 1,
+          "t_u": 0,
+          "u": 24
+        },
+        {
+          "excess": 0,
+          "n_u": 2,
+          "t_u": 1,
+          "u": 29
+        }
+      ],
+      "delta": 3,
+      "h": 33,
+      "literal_hole": true,
+      "p": 5,
+      "positive_color_excess": 0,
+      "source": "w=31/first=13/gamma=1/b=2"
+    }
+  },
+  "schema_version": 1,
+  "source_manifest": {
+    "bc108_core.py": "3ba742ed9d46dbac9d56143d9be9a20ac4b1fc49eb15da0e7870f03839b84131",
+    "search_bc108.py": "f72e6eaaf631493b490aba73ea5e4c5c084ff69280b8042f7e5670122f4e23c3"
+  }
+}

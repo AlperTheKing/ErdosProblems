@@ -1,0 +1,80 @@
+{
+  "E": [
+    16,
+    18,
+    26,
+    38,
+    42,
+    56,
+    104
+  ],
+  "E_intersection_3E": [],
+  "G": 16,
+  "K": 28,
+  "M": 104,
+  "W": 44,
+  "Z": [
+    0,
+    1,
+    5,
+    11,
+    13,
+    20,
+    44
+  ],
+  "claim_falsified": "every low equal-three-sum collision in a valid pair contains a repeated summand",
+  "cross_intersection": [],
+  "exhaustive_search": {
+    "balanced_sidon_prefixes": 197528,
+    "max_width": 44,
+    "p": 7,
+    "sidon_seven_point_rulers": 37928,
+    "sidon_six_point_prefixes": 1026960,
+    "six_point_candidates": 6129150
+  },
+  "minimality_order": [
+    "p",
+    "W",
+    "Z lexicographic",
+    "G"
+  ],
+  "minimality_reason_p": "two all-distinct representations use six disjoint marks, and W cannot occur in a sum x<W, so p is at least 7",
+  "p": 7,
+  "pair_sum_count": 28,
+  "partitions": [
+    [
+      0,
+      5,
+      20
+    ],
+    [
+      1,
+      11,
+      13
+    ]
+  ],
+  "positive_difference_count": 21,
+  "profile": {
+    "all_equal": 0,
+    "balanced_support_size": 6,
+    "correction": 0,
+    "distinct": 2,
+    "doubles": 0,
+    "representations": 2,
+    "sum": 25,
+    "support_size": 6,
+    "triples": [
+      [
+        0,
+        5,
+        20
+      ],
+      [
+        1,
+        11,
+        13
+      ]
+    ]
+  },
+  "sum": 25
+}

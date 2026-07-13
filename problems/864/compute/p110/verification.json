@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "arithmetic": "independent exact Python integers",
+  "smallest_failure": {
+    "sha256": "078af682f632957904e896735f4c25c54445feb1659cc7cc75c50b07107aca89",
+    "p": 104,
+    "h": 9821,
+    "delta": 6352,
+    "C_S": 579,
+    "T_F": 1104,
+    "ambient_dimension": 995,
+    "dimension_excess": 109,
+    "minimum_classes": [
+      469,
+      384,
+      251
+    ],
+    "maximum_same_base": 5,
+    "V_1": 314,
+    "V_2": 315
+  },
+  "strongest_failure": {
+    "sha256": "ba2dd01f79fa2c47023f93203dd45adee0973dfc5b3b2645dc79437f60aeea3e",
+    "p": 168,
+    "h": 27262,
+    "delta": 14991,
+    "C_S": 1159,
+    "T_F": 2696,
+    "ambient_dimension": 1831,
+    "dimension_excess": 865,
+    "minimum_classes": [
+      1100,
+      917,
+      679
+    ],
+    "maximum_same_base": 7,
+    "V_1": 649,
+    "V_2": 633
+  },
+  "smallest_q2_literal_hole_lift": {
+    "p": 104,
+    "h": 19642,
+    "delta": -3469,
+    "C_S": 579,
+    "T_F": 1104,
+    "ambient_dimension": 995,
+    "dimension_excess": 109,
+    "V_1": 0,
+    "literal_hole_b1": true
+  },
+  "strongest_q2_literal_hole_lift": {
+    "p": 168,
+    "h": 54524,
+    "delta": -12271,
+    "C_S": 1159,
+    "T_F": 2696,
+    "ambient_dimension": 1831,
+    "dimension_excess": 865,
+    "V_1": 0,
+    "literal_hole_b1": true
+  },
+  "status": "PASS"
+}

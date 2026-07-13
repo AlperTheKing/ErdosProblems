@@ -1,0 +1,2390 @@
+{
+  "records": [
+    {
+      "p": 5,
+      "rules": {
+        "1/2": {
+          "carry_hole": true,
+          "center": 48,
+          "center_over_size2": "3",
+          "e": 3,
+          "r": 2,
+          "t": 8
+        },
+        "2/3": {
+          "carry_hole": true,
+          "center": 52,
+          "center_over_size2": "13/4",
+          "e": 2,
+          "r": 3,
+          "t": 12
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 52,
+          "center_over_size2": "13/4",
+          "e": 2,
+          "r": 3,
+          "t": 12
+        },
+        "3/5": {
+          "carry_hole": true,
+          "center": 52,
+          "center_over_size2": "13/4",
+          "e": 2,
+          "r": 3,
+          "t": 12
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 56,
+          "center_over_size2": "7/2",
+          "e": 1,
+          "r": 4,
+          "t": 16
+        }
+      }
+    },
+    {
+      "p": 7,
+      "rules": {
+        "1/2": {
+          "carry_hole": true,
+          "center": 102,
+          "center_over_size2": "17/6",
+          "e": 6,
+          "r": 3,
+          "t": 18
+        },
+        "2/3": {
+          "carry_hole": true,
+          "center": 108,
+          "center_over_size2": "3",
+          "e": 1,
+          "r": 4,
+          "t": 24
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 114,
+          "center_over_size2": "19/6",
+          "e": 3,
+          "r": 5,
+          "t": 30
+        },
+        "3/5": {
+          "carry_hole": true,
+          "center": 108,
+          "center_over_size2": "3",
+          "e": 1,
+          "r": 4,
+          "t": 24
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 114,
+          "center_over_size2": "19/6",
+          "e": 3,
+          "r": 5,
+          "t": 30
+        }
+      }
+    },
+    {
+      "p": 11,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 270,
+          "center_over_size2": "27/10",
+          "e": 4,
+          "r": 5,
+          "t": 50
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 290,
+          "center_over_size2": "29/10",
+          "e": 10,
+          "r": 7,
+          "t": 70
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 300,
+          "center_over_size2": "3",
+          "e": 2,
+          "r": 8,
+          "t": 80
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 280,
+          "center_over_size2": "14/5",
+          "e": 7,
+          "r": 6,
+          "t": 60
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 300,
+          "center_over_size2": "3",
+          "e": 2,
+          "r": 8,
+          "t": 80
+        }
+      }
+    },
+    {
+      "p": 13,
+      "rules": {
+        "1/2": {
+          "carry_hole": true,
+          "center": 384,
+          "center_over_size2": "8/3",
+          "e": 8,
+          "r": 6,
+          "t": 72
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 408,
+          "center_over_size2": "17/6",
+          "e": 2,
+          "r": 8,
+          "t": 96
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 420,
+          "center_over_size2": "35/12",
+          "e": 12,
+          "r": 9,
+          "t": 108
+        },
+        "3/5": {
+          "carry_hole": true,
+          "center": 396,
+          "center_over_size2": "11/4",
+          "e": 5,
+          "r": 7,
+          "t": 84
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 432,
+          "center_over_size2": "3",
+          "e": 9,
+          "r": 10,
+          "t": 120
+        }
+      }
+    },
+    {
+      "p": 17,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 672,
+          "center_over_size2": "21/8",
+          "e": 2,
+          "r": 8,
+          "t": 128
+        },
+        "2/3": {
+          "carry_hole": true,
+          "center": 720,
+          "center_over_size2": "45/16",
+          "e": 7,
+          "r": 11,
+          "t": 176
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 736,
+          "center_over_size2": "23/8",
+          "e": 3,
+          "r": 12,
+          "t": 192
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 704,
+          "center_over_size2": "11/4",
+          "e": 11,
+          "r": 10,
+          "t": 160
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 752,
+          "center_over_size2": "47/16",
+          "e": 16,
+          "r": 13,
+          "t": 208
+        }
+      }
+    },
+    {
+      "p": 19,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 846,
+          "center_over_size2": "47/18",
+          "e": 7,
+          "r": 9,
+          "t": 162
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 900,
+          "center_over_size2": "25/9",
+          "e": 3,
+          "r": 12,
+          "t": 216
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 936,
+          "center_over_size2": "26/9",
+          "e": 13,
+          "r": 14,
+          "t": 252
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 882,
+          "center_over_size2": "49/18",
+          "e": 17,
+          "r": 11,
+          "t": 198
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 954,
+          "center_over_size2": "53/18",
+          "e": 18,
+          "r": 15,
+          "t": 270
+        }
+      }
+    },
+    {
+      "p": 23,
+      "rules": {
+        "1/2": {
+          "carry_hole": true,
+          "center": 1254,
+          "center_over_size2": "57/22",
+          "e": 20,
+          "r": 11,
+          "t": 242
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 1342,
+          "center_over_size2": "61/22",
+          "e": 21,
+          "r": 15,
+          "t": 330
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 1386,
+          "center_over_size2": "63/22",
+          "e": 10,
+          "r": 17,
+          "t": 374
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 1298,
+          "center_over_size2": "59/22",
+          "e": 9,
+          "r": 13,
+          "t": 286
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 1408,
+          "center_over_size2": "32/11",
+          "e": 16,
+          "r": 18,
+          "t": 396
+        }
+      }
+    },
+    {
+      "p": 29,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 2016,
+          "center_over_size2": "18/7",
+          "e": 18,
+          "r": 14,
+          "t": 392
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 2156,
+          "center_over_size2": "11/4",
+          "e": 12,
+          "r": 19,
+          "t": 532
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 2212,
+          "center_over_size2": "79/28",
+          "e": 27,
+          "r": 21,
+          "t": 588
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 2100,
+          "center_over_size2": "75/28",
+          "e": 26,
+          "r": 17,
+          "t": 476
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 2268,
+          "center_over_size2": "81/28",
+          "e": 13,
+          "r": 23,
+          "t": 644
+        }
+      }
+    },
+    {
+      "p": 31,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 2310,
+          "center_over_size2": "77/30",
+          "e": 27,
+          "r": 15,
+          "t": 450
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 2460,
+          "center_over_size2": "41/15",
+          "e": 5,
+          "r": 20,
+          "t": 600
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 2550,
+          "center_over_size2": "17/6",
+          "e": 29,
+          "r": 23,
+          "t": 690
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 2400,
+          "center_over_size2": "8/3",
+          "e": 20,
+          "r": 18,
+          "t": 540
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 2580,
+          "center_over_size2": "43/15",
+          "e": 6,
+          "r": 24,
+          "t": 720
+        }
+      }
+    },
+    {
+      "p": 37,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 3312,
+          "center_over_size2": "23/9",
+          "e": 23,
+          "r": 18,
+          "t": 648
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 3528,
+          "center_over_size2": "49/18",
+          "e": 6,
+          "r": 24,
+          "t": 864
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 3636,
+          "center_over_size2": "101/36",
+          "e": 16,
+          "r": 27,
+          "t": 972
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 3456,
+          "center_over_size2": "8/3",
+          "e": 24,
+          "r": 22,
+          "t": 792
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 3708,
+          "center_over_size2": "103/36",
+          "e": 35,
+          "r": 29,
+          "t": 1044
+        }
+      }
+    },
+    {
+      "p": 41,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 4080,
+          "center_over_size2": "51/20",
+          "e": 5,
+          "r": 20,
+          "t": 800
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 4360,
+          "center_over_size2": "109/40",
+          "e": 17,
+          "r": 27,
+          "t": 1080
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 4480,
+          "center_over_size2": "14/5",
+          "e": 28,
+          "r": 30,
+          "t": 1200
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 4240,
+          "center_over_size2": "53/20",
+          "e": 6,
+          "r": 24,
+          "t": 960
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 4560,
+          "center_over_size2": "57/20",
+          "e": 8,
+          "r": 32,
+          "t": 1280
+        }
+      }
+    },
+    {
+      "p": 43,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 4494,
+          "center_over_size2": "107/42",
+          "e": 16,
+          "r": 21,
+          "t": 882
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 4788,
+          "center_over_size2": "19/7",
+          "e": 7,
+          "r": 28,
+          "t": 1176
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 4956,
+          "center_over_size2": "59/21",
+          "e": 8,
+          "r": 32,
+          "t": 1344
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 4662,
+          "center_over_size2": "37/14",
+          "e": 17,
+          "r": 25,
+          "t": 1050
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 5040,
+          "center_over_size2": "20/7",
+          "e": 30,
+          "r": 34,
+          "t": 1428
+        }
+      }
+    },
+    {
+      "p": 47,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 5382,
+          "center_over_size2": "117/46",
+          "e": 41,
+          "r": 23,
+          "t": 1058
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 5750,
+          "center_over_size2": "125/46",
+          "e": 43,
+          "r": 31,
+          "t": 1426
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 5934,
+          "center_over_size2": "129/46",
+          "e": 44,
+          "r": 35,
+          "t": 1610
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 5612,
+          "center_over_size2": "61/23",
+          "e": 7,
+          "r": 28,
+          "t": 1288
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 6026,
+          "center_over_size2": "131/46",
+          "e": 21,
+          "r": 37,
+          "t": 1702
+        }
+      }
+    },
+    {
+      "p": 53,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 6864,
+          "center_over_size2": "33/13",
+          "e": 33,
+          "r": 26,
+          "t": 1352
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 7332,
+          "center_over_size2": "141/52",
+          "e": 22,
+          "r": 35,
+          "t": 1820
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 7540,
+          "center_over_size2": "145/52",
+          "e": 23,
+          "r": 39,
+          "t": 2028
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 7124,
+          "center_over_size2": "137/52",
+          "e": 21,
+          "r": 31,
+          "t": 1612
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 7696,
+          "center_over_size2": "37/13",
+          "e": 37,
+          "r": 42,
+          "t": 2184
+        }
+      }
+    },
+    {
+      "p": 59,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 8526,
+          "center_over_size2": "147/58",
+          "e": 22,
+          "r": 29,
+          "t": 1682
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 9106,
+          "center_over_size2": "157/58",
+          "e": 54,
+          "r": 39,
+          "t": 2262
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 9396,
+          "center_over_size2": "81/29",
+          "e": 11,
+          "r": 44,
+          "t": 2552
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 8874,
+          "center_over_size2": "153/58",
+          "e": 53,
+          "r": 35,
+          "t": 2030
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 9570,
+          "center_over_size2": "165/58",
+          "e": 56,
+          "r": 47,
+          "t": 2726
+        }
+      }
+    },
+    {
+      "p": 61,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 9120,
+          "center_over_size2": "38/15",
+          "e": 38,
+          "r": 30,
+          "t": 1800
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 9720,
+          "center_over_size2": "27/10",
+          "e": 10,
+          "r": 40,
+          "t": 2400
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 10020,
+          "center_over_size2": "167/60",
+          "e": 57,
+          "r": 45,
+          "t": 2700
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 9480,
+          "center_over_size2": "79/30",
+          "e": 9,
+          "r": 36,
+          "t": 2160
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 10200,
+          "center_over_size2": "17/6",
+          "e": 12,
+          "r": 48,
+          "t": 2880
+        }
+      }
+    },
+    {
+      "p": 67,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 11022,
+          "center_over_size2": "167/66",
+          "e": 25,
+          "r": 33,
+          "t": 2178
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 11748,
+          "center_over_size2": "89/33",
+          "e": 11,
+          "r": 44,
+          "t": 2904
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 12144,
+          "center_over_size2": "92/33",
+          "e": 46,
+          "r": 50,
+          "t": 3300
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 11484,
+          "center_over_size2": "29/11",
+          "e": 10,
+          "r": 40,
+          "t": 2640
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 12342,
+          "center_over_size2": "17/6",
+          "e": 30,
+          "r": 53,
+          "t": 3498
+        }
+      }
+    },
+    {
+      "p": 71,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 12390,
+          "center_over_size2": "177/70",
+          "e": 62,
+          "r": 35,
+          "t": 2450
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 13230,
+          "center_over_size2": "27/10",
+          "e": 65,
+          "r": 47,
+          "t": 3290
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 13650,
+          "center_over_size2": "39/14",
+          "e": 31,
+          "r": 53,
+          "t": 3710
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 12880,
+          "center_over_size2": "92/35",
+          "e": 46,
+          "r": 42,
+          "t": 2940
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 13860,
+          "center_over_size2": "99/35",
+          "e": 14,
+          "r": 56,
+          "t": 3920
+        }
+      }
+    },
+    {
+      "p": 73,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 13104,
+          "center_over_size2": "91/36",
+          "e": 9,
+          "r": 36,
+          "t": 2592
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 13968,
+          "center_over_size2": "97/36",
+          "e": 12,
+          "r": 48,
+          "t": 3456
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 14400,
+          "center_over_size2": "25/9",
+          "e": 50,
+          "r": 54,
+          "t": 3888
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 13608,
+          "center_over_size2": "21/8",
+          "e": 29,
+          "r": 43,
+          "t": 3096
+        },
+        "4/5": {
+          "carry_hole": true,
+          "center": 14688,
+          "center_over_size2": "17/6",
+          "e": 51,
+          "r": 58,
+          "t": 4176
+        }
+      }
+    },
+    {
+      "p": 79,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 15366,
+          "center_over_size2": "197/78",
+          "e": 69,
+          "r": 39,
+          "t": 3042
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 16380,
+          "center_over_size2": "35/13",
+          "e": 13,
+          "r": 52,
+          "t": 4056
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 16926,
+          "center_over_size2": "217/78",
+          "e": 74,
+          "r": 59,
+          "t": 4602
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 15990,
+          "center_over_size2": "205/78",
+          "e": 71,
+          "r": 47,
+          "t": 3666
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 17238,
+          "center_over_size2": "17/6",
+          "e": 75,
+          "r": 63,
+          "t": 4914
+        }
+      }
+    },
+    {
+      "p": 83,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 16974,
+          "center_over_size2": "207/82",
+          "e": 31,
+          "r": 41,
+          "t": 3362
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 18122,
+          "center_over_size2": "221/82",
+          "e": 76,
+          "r": 55,
+          "t": 4510
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 18696,
+          "center_over_size2": "114/41",
+          "e": 57,
+          "r": 62,
+          "t": 5084
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 17630,
+          "center_over_size2": "215/82",
+          "e": 33,
+          "r": 49,
+          "t": 4018
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 19024,
+          "center_over_size2": "116/41",
+          "e": 58,
+          "r": 66,
+          "t": 5412
+        }
+      }
+    },
+    {
+      "p": 89,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 19536,
+          "center_over_size2": "111/44",
+          "e": 11,
+          "r": 44,
+          "t": 3872
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 20856,
+          "center_over_size2": "237/88",
+          "e": 37,
+          "r": 59,
+          "t": 5192
+        },
+        "3/4": {
+          "carry_hole": true,
+          "center": 21472,
+          "center_over_size2": "61/22",
+          "e": 61,
+          "r": 66,
+          "t": 5808
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 20328,
+          "center_over_size2": "21/8",
+          "e": 80,
+          "r": 53,
+          "t": 4664
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 21912,
+          "center_over_size2": "249/88",
+          "e": 40,
+          "r": 71,
+          "t": 6248
+        }
+      }
+    },
+    {
+      "p": 97,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 23232,
+          "center_over_size2": "121/48",
+          "e": 12,
+          "r": 48,
+          "t": 4608
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 24768,
+          "center_over_size2": "43/16",
+          "e": 16,
+          "r": 64,
+          "t": 6144
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 25536,
+          "center_over_size2": "133/48",
+          "e": 18,
+          "r": 72,
+          "t": 6912
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 24192,
+          "center_over_size2": "21/8",
+          "e": 63,
+          "r": 58,
+          "t": 5568
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 26016,
+          "center_over_size2": "271/96",
+          "e": 92,
+          "r": 77,
+          "t": 7392
+        }
+      }
+    },
+    {
+      "p": 101,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 25200,
+          "center_over_size2": "63/25",
+          "e": 63,
+          "r": 50,
+          "t": 5000
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 26900,
+          "center_over_size2": "269/100",
+          "e": 42,
+          "r": 67,
+          "t": 6700
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 27700,
+          "center_over_size2": "277/100",
+          "e": 44,
+          "r": 75,
+          "t": 7500
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 26200,
+          "center_over_size2": "131/50",
+          "e": 15,
+          "r": 60,
+          "t": 6000
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 28200,
+          "center_over_size2": "141/50",
+          "e": 20,
+          "r": 80,
+          "t": 8000
+        }
+      }
+    },
+    {
+      "p": 103,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 26214,
+          "center_over_size2": "257/102",
+          "e": 90,
+          "r": 51,
+          "t": 5202
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 27948,
+          "center_over_size2": "137/51",
+          "e": 17,
+          "r": 68,
+          "t": 6936
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 28866,
+          "center_over_size2": "283/102",
+          "e": 45,
+          "r": 77,
+          "t": 7854
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 27234,
+          "center_over_size2": "89/34",
+          "e": 41,
+          "r": 61,
+          "t": 6222
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 29376,
+          "center_over_size2": "48/17",
+          "e": 72,
+          "r": 82,
+          "t": 8364
+        }
+      }
+    },
+    {
+      "p": 107,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 28302,
+          "center_over_size2": "267/106",
+          "e": 40,
+          "r": 53,
+          "t": 5618
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 30210,
+          "center_over_size2": "285/106",
+          "e": 98,
+          "r": 71,
+          "t": 7526
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 31164,
+          "center_over_size2": "147/53",
+          "e": 20,
+          "r": 80,
+          "t": 8480
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 29468,
+          "center_over_size2": "139/53",
+          "e": 16,
+          "r": 64,
+          "t": 6784
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 31694,
+          "center_over_size2": "299/106",
+          "e": 48,
+          "r": 85,
+          "t": 9010
+        }
+      }
+    },
+    {
+      "p": 109,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 29376,
+          "center_over_size2": "68/27",
+          "e": 68,
+          "r": 54,
+          "t": 5832
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 31320,
+          "center_over_size2": "145/54",
+          "e": 18,
+          "r": 72,
+          "t": 7776
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 32292,
+          "center_over_size2": "299/108",
+          "e": 102,
+          "r": 81,
+          "t": 8748
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 30564,
+          "center_over_size2": "283/108",
+          "e": 98,
+          "r": 65,
+          "t": 7020
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 32940,
+          "center_over_size2": "305/108",
+          "e": 49,
+          "r": 87,
+          "t": 9396
+        }
+      }
+    },
+    {
+      "p": 113,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 31584,
+          "center_over_size2": "141/56",
+          "e": 14,
+          "r": 56,
+          "t": 6272
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 33712,
+          "center_over_size2": "43/16",
+          "e": 47,
+          "r": 75,
+          "t": 8400
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 34720,
+          "center_over_size2": "155/56",
+          "e": 21,
+          "r": 84,
+          "t": 9408
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 32816,
+          "center_over_size2": "293/112",
+          "e": 45,
+          "r": 67,
+          "t": 7504
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 35392,
+          "center_over_size2": "79/28",
+          "e": 79,
+          "r": 90,
+          "t": 10080
+        }
+      }
+    },
+    {
+      "p": 127,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 39942,
+          "center_over_size2": "317/126",
+          "e": 111,
+          "r": 63,
+          "t": 7938
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 42588,
+          "center_over_size2": "169/63",
+          "e": 21,
+          "r": 84,
+          "t": 10584
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 43974,
+          "center_over_size2": "349/126",
+          "e": 119,
+          "r": 95,
+          "t": 11970
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 41580,
+          "center_over_size2": "55/21",
+          "e": 19,
+          "r": 76,
+          "t": 9576
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 44730,
+          "center_over_size2": "355/126",
+          "e": 57,
+          "r": 101,
+          "t": 12726
+        }
+      }
+    },
+    {
+      "p": 131,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 42510,
+          "center_over_size2": "327/130",
+          "e": 49,
+          "r": 65,
+          "t": 8450
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 45370,
+          "center_over_size2": "349/130",
+          "e": 120,
+          "r": 87,
+          "t": 11310
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 46800,
+          "center_over_size2": "36/13",
+          "e": 90,
+          "r": 98,
+          "t": 12740
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 44200,
+          "center_over_size2": "34/13",
+          "e": 85,
+          "r": 78,
+          "t": 10140
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 47580,
+          "center_over_size2": "183/65",
+          "e": 26,
+          "r": 104,
+          "t": 13520
+        }
+      }
+    },
+    {
+      "p": 137,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 46512,
+          "center_over_size2": "171/68",
+          "e": 17,
+          "r": 68,
+          "t": 9248
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 49640,
+          "center_over_size2": "365/136",
+          "e": 57,
+          "r": 91,
+          "t": 12376
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 51136,
+          "center_over_size2": "47/17",
+          "e": 94,
+          "r": 102,
+          "t": 13872
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 48416,
+          "center_over_size2": "89/34",
+          "e": 89,
+          "r": 82,
+          "t": 11152
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 52088,
+          "center_over_size2": "383/136",
+          "e": 130,
+          "r": 109,
+          "t": 14824
+        }
+      }
+    },
+    {
+      "p": 139,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 47886,
+          "center_over_size2": "347/138",
+          "e": 52,
+          "r": 69,
+          "t": 9522
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 51060,
+          "center_over_size2": "185/69",
+          "e": 23,
+          "r": 92,
+          "t": 12696
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 52716,
+          "center_over_size2": "191/69",
+          "e": 26,
+          "r": 104,
+          "t": 14352
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 49818,
+          "center_over_size2": "361/138",
+          "e": 125,
+          "r": 83,
+          "t": 11454
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 53682,
+          "center_over_size2": "389/138",
+          "e": 132,
+          "r": 111,
+          "t": 15318
+        }
+      }
+    },
+    {
+      "p": 149,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 55056,
+          "center_over_size2": "93/37",
+          "e": 93,
+          "r": 74,
+          "t": 10952
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 58756,
+          "center_over_size2": "397/148",
+          "e": 62,
+          "r": 99,
+          "t": 14652
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 60532,
+          "center_over_size2": "409/148",
+          "e": 65,
+          "r": 111,
+          "t": 16428
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 57276,
+          "center_over_size2": "387/148",
+          "e": 134,
+          "r": 89,
+          "t": 13172
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 61716,
+          "center_over_size2": "417/148",
+          "e": 67,
+          "r": 119,
+          "t": 17612
+        }
+      }
+    },
+    {
+      "p": 151,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 56550,
+          "center_over_size2": "377/150",
+          "e": 132,
+          "r": 75,
+          "t": 11250
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 60300,
+          "center_over_size2": "67/25",
+          "e": 25,
+          "r": 100,
+          "t": 15000
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 62250,
+          "center_over_size2": "83/30",
+          "e": 66,
+          "r": 113,
+          "t": 16950
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 58800,
+          "center_over_size2": "196/75",
+          "e": 98,
+          "r": 90,
+          "t": 13500
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 63300,
+          "center_over_size2": "211/75",
+          "e": 30,
+          "r": 120,
+          "t": 18000
+        }
+      }
+    },
+    {
+      "p": 157,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 61152,
+          "center_over_size2": "98/39",
+          "e": 98,
+          "r": 78,
+          "t": 12168
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 65208,
+          "center_over_size2": "209/78",
+          "e": 26,
+          "r": 104,
+          "t": 16224
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 67236,
+          "center_over_size2": "431/156",
+          "e": 147,
+          "r": 117,
+          "t": 18252
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 63648,
+          "center_over_size2": "34/13",
+          "e": 102,
+          "r": 94,
+          "t": 14664
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 68484,
+          "center_over_size2": "439/156",
+          "e": 149,
+          "r": 125,
+          "t": 19500
+        }
+      }
+    },
+    {
+      "p": 163,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 65934,
+          "center_over_size2": "407/162",
+          "e": 61,
+          "r": 81,
+          "t": 13122
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 70308,
+          "center_over_size2": "217/81",
+          "e": 27,
+          "r": 108,
+          "t": 17496
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 72576,
+          "center_over_size2": "224/81",
+          "e": 112,
+          "r": 122,
+          "t": 19764
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 68526,
+          "center_over_size2": "47/18",
+          "e": 65,
+          "r": 97,
+          "t": 15714
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 73872,
+          "center_over_size2": "76/27",
+          "e": 114,
+          "r": 130,
+          "t": 21060
+        }
+      }
+    },
+    {
+      "p": 167,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 69222,
+          "center_over_size2": "417/166",
+          "e": 146,
+          "r": 83,
+          "t": 13778
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 73870,
+          "center_over_size2": "445/166",
+          "e": 153,
+          "r": 111,
+          "t": 18426
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 76194,
+          "center_over_size2": "459/166",
+          "e": 73,
+          "r": 125,
+          "t": 20750
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 72044,
+          "center_over_size2": "217/83",
+          "e": 25,
+          "r": 100,
+          "t": 16600
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 77522,
+          "center_over_size2": "467/166",
+          "e": 75,
+          "r": 133,
+          "t": 22078
+        }
+      }
+    },
+    {
+      "p": 173,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 74304,
+          "center_over_size2": "108/43",
+          "e": 108,
+          "r": 86,
+          "t": 14792
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 79292,
+          "center_over_size2": "461/172",
+          "e": 72,
+          "r": 115,
+          "t": 19780
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 81700,
+          "center_over_size2": "475/172",
+          "e": 162,
+          "r": 129,
+          "t": 22188
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 77228,
+          "center_over_size2": "449/172",
+          "e": 69,
+          "r": 103,
+          "t": 17716
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 83248,
+          "center_over_size2": "121/43",
+          "e": 121,
+          "r": 138,
+          "t": 23736
+        }
+      }
+    },
+    {
+      "p": 179,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 79566,
+          "center_over_size2": "447/178",
+          "e": 67,
+          "r": 89,
+          "t": 15842
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 84906,
+          "center_over_size2": "477/178",
+          "e": 164,
+          "r": 119,
+          "t": 21182
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 87576,
+          "center_over_size2": "246/89",
+          "e": 123,
+          "r": 134,
+          "t": 23852
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 82770,
+          "center_over_size2": "465/178",
+          "e": 161,
+          "r": 107,
+          "t": 19046
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 89178,
+          "center_over_size2": "501/178",
+          "e": 170,
+          "r": 143,
+          "t": 25454
+        }
+      }
+    },
+    {
+      "p": 181,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 81360,
+          "center_over_size2": "113/45",
+          "e": 113,
+          "r": 90,
+          "t": 16200
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 86760,
+          "center_over_size2": "241/90",
+          "e": 30,
+          "r": 120,
+          "t": 21600
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 89460,
+          "center_over_size2": "497/180",
+          "e": 79,
+          "r": 135,
+          "t": 24300
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 84600,
+          "center_over_size2": "47/18",
+          "e": 27,
+          "r": 108,
+          "t": 19440
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 91080,
+          "center_over_size2": "253/90",
+          "e": 36,
+          "r": 144,
+          "t": 25920
+        }
+      }
+    },
+    {
+      "p": 191,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 90630,
+          "center_over_size2": "477/190",
+          "e": 167,
+          "r": 95,
+          "t": 18050
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 96710,
+          "center_over_size2": "509/190",
+          "e": 175,
+          "r": 127,
+          "t": 24130
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 99750,
+          "center_over_size2": "105/38",
+          "e": 179,
+          "r": 143,
+          "t": 27170
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 94240,
+          "center_over_size2": "248/95",
+          "e": 124,
+          "r": 114,
+          "t": 21660
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 101460,
+          "center_over_size2": "267/95",
+          "e": 38,
+          "r": 152,
+          "t": 28880
+        }
+      }
+    },
+    {
+      "p": 193,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 92544,
+          "center_over_size2": "241/96",
+          "e": 24,
+          "r": 96,
+          "t": 18432
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 98688,
+          "center_over_size2": "257/96",
+          "e": 32,
+          "r": 128,
+          "t": 24576
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 101760,
+          "center_over_size2": "265/96",
+          "e": 36,
+          "r": 144,
+          "t": 27648
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 96192,
+          "center_over_size2": "167/64",
+          "e": 77,
+          "r": 115,
+          "t": 22080
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 103680,
+          "center_over_size2": "45/16",
+          "e": 135,
+          "r": 154,
+          "t": 29568
+        }
+      }
+    },
+    {
+      "p": 197,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 96432,
+          "center_over_size2": "123/49",
+          "e": 123,
+          "r": 98,
+          "t": 19208
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 102900,
+          "center_over_size2": "75/28",
+          "e": 82,
+          "r": 131,
+          "t": 25676
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 106036,
+          "center_over_size2": "541/196",
+          "e": 86,
+          "r": 147,
+          "t": 28812
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 100352,
+          "center_over_size2": "128/49",
+          "e": 128,
+          "r": 118,
+          "t": 23128
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 107996,
+          "center_over_size2": "551/196",
+          "e": 187,
+          "r": 157,
+          "t": 30772
+        }
+      }
+    },
+    {
+      "p": 199,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 98406,
+          "center_over_size2": "497/198",
+          "e": 174,
+          "r": 99,
+          "t": 19602
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 104940,
+          "center_over_size2": "265/99",
+          "e": 33,
+          "r": 132,
+          "t": 26136
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 108306,
+          "center_over_size2": "547/198",
+          "e": 87,
+          "r": 149,
+          "t": 29502
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 102366,
+          "center_over_size2": "47/18",
+          "e": 179,
+          "r": 119,
+          "t": 23562
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 110286,
+          "center_over_size2": "557/198",
+          "e": 189,
+          "r": 159,
+          "t": 31482
+        }
+      }
+    },
+    {
+      "p": 211,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 110670,
+          "center_over_size2": "527/210",
+          "e": 79,
+          "r": 105,
+          "t": 22050
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 118020,
+          "center_over_size2": "281/105",
+          "e": 35,
+          "r": 140,
+          "t": 29400
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 121800,
+          "center_over_size2": "58/21",
+          "e": 145,
+          "r": 158,
+          "t": 33180
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 115080,
+          "center_over_size2": "274/105",
+          "e": 137,
+          "r": 126,
+          "t": 26460
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 123900,
+          "center_over_size2": "59/21",
+          "e": 42,
+          "r": 168,
+          "t": 35280
+        }
+      }
+    },
+    {
+      "p": 223,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 123654,
+          "center_over_size2": "557/222",
+          "e": 195,
+          "r": 111,
+          "t": 24642
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 131868,
+          "center_over_size2": "99/37",
+          "e": 37,
+          "r": 148,
+          "t": 32856
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 136086,
+          "center_over_size2": "613/222",
+          "e": 209,
+          "r": 167,
+          "t": 37074
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 128538,
+          "center_over_size2": "193/74",
+          "e": 89,
+          "r": 133,
+          "t": 29526
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 138528,
+          "center_over_size2": "104/37",
+          "e": 156,
+          "r": 178,
+          "t": 39516
+        }
+      }
+    },
+    {
+      "p": 227,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 128142,
+          "center_over_size2": "567/226",
+          "e": 85,
+          "r": 113,
+          "t": 25538
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 136730,
+          "center_over_size2": "605/226",
+          "e": 208,
+          "r": 151,
+          "t": 34126
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 141024,
+          "center_over_size2": "312/113",
+          "e": 156,
+          "r": 170,
+          "t": 38420
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 133340,
+          "center_over_size2": "295/113",
+          "e": 34,
+          "r": 136,
+          "t": 30736
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 143510,
+          "center_over_size2": "635/226",
+          "e": 102,
+          "r": 181,
+          "t": 40906
+        }
+      }
+    },
+    {
+      "p": 229,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 130416,
+          "center_over_size2": "143/57",
+          "e": 143,
+          "r": 114,
+          "t": 25992
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 139080,
+          "center_over_size2": "305/114",
+          "e": 38,
+          "r": 152,
+          "t": 34656
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 143412,
+          "center_over_size2": "629/228",
+          "e": 100,
+          "r": 171,
+          "t": 38988
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 135660,
+          "center_over_size2": "595/228",
+          "e": 206,
+          "r": 137,
+          "t": 31236
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 146148,
+          "center_over_size2": "641/228",
+          "e": 103,
+          "r": 183,
+          "t": 41724
+        }
+      }
+    },
+    {
+      "p": 233,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 135024,
+          "center_over_size2": "291/116",
+          "e": 29,
+          "r": 116,
+          "t": 26912
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 144072,
+          "center_over_size2": "621/232",
+          "e": 97,
+          "r": 155,
+          "t": 35960
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 148480,
+          "center_over_size2": "80/29",
+          "e": 160,
+          "r": 174,
+          "t": 40368
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 140360,
+          "center_over_size2": "605/232",
+          "e": 93,
+          "r": 139,
+          "t": 32248
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 151264,
+          "center_over_size2": "163/58",
+          "e": 163,
+          "r": 186,
+          "t": 43152
+        }
+      }
+    },
+    {
+      "p": 239,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 142086,
+          "center_over_size2": "597/238",
+          "e": 209,
+          "r": 119,
+          "t": 28322
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 151606,
+          "center_over_size2": "91/34",
+          "e": 219,
+          "r": 159,
+          "t": 37842
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 156366,
+          "center_over_size2": "657/238",
+          "e": 224,
+          "r": 179,
+          "t": 42602
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 147798,
+          "center_over_size2": "621/238",
+          "e": 215,
+          "r": 143,
+          "t": 34034
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 159222,
+          "center_over_size2": "669/238",
+          "e": 227,
+          "r": 191,
+          "t": 45458
+        }
+      }
+    },
+    {
+      "p": 241,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 144480,
+          "center_over_size2": "301/120",
+          "e": 30,
+          "r": 120,
+          "t": 28800
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 154080,
+          "center_over_size2": "107/40",
+          "e": 40,
+          "r": 160,
+          "t": 38400
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 158880,
+          "center_over_size2": "331/120",
+          "e": 45,
+          "r": 180,
+          "t": 43200
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 150240,
+          "center_over_size2": "313/120",
+          "e": 36,
+          "r": 144,
+          "t": 34560
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 161760,
+          "center_over_size2": "337/120",
+          "e": 48,
+          "r": 192,
+          "t": 46080
+        }
+      }
+    },
+    {
+      "p": 251,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 156750,
+          "center_over_size2": "627/250",
+          "e": 94,
+          "r": 125,
+          "t": 31250
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 167250,
+          "center_over_size2": "669/250",
+          "e": 230,
+          "r": 167,
+          "t": 41750
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 172500,
+          "center_over_size2": "69/25",
+          "e": 47,
+          "r": 188,
+          "t": 47000
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 163000,
+          "center_over_size2": "326/125",
+          "e": 163,
+          "r": 150,
+          "t": 37500
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 175500,
+          "center_over_size2": "351/125",
+          "e": 50,
+          "r": 200,
+          "t": 50000
+        }
+      }
+    },
+    {
+      "p": 257,
+      "rules": {
+        "1/2": {
+          "carry_hole": false,
+          "center": 164352,
+          "center_over_size2": "321/128",
+          "e": 32,
+          "r": 128,
+          "t": 32768
+        },
+        "2/3": {
+          "carry_hole": false,
+          "center": 175360,
+          "center_over_size2": "685/256",
+          "e": 107,
+          "r": 171,
+          "t": 43776
+        },
+        "3/4": {
+          "carry_hole": false,
+          "center": 180736,
+          "center_over_size2": "353/128",
+          "e": 48,
+          "r": 192,
+          "t": 49152
+        },
+        "3/5": {
+          "carry_hole": false,
+          "center": 171008,
+          "center_over_size2": "167/64",
+          "e": 167,
+          "r": 154,
+          "t": 39424
+        },
+        "4/5": {
+          "carry_hole": false,
+          "center": 184064,
+          "center_over_size2": "719/256",
+          "e": 244,
+          "r": 205,
+          "t": 52480
+        }
+      }
+    }
+  ],
+  "rule": "r=floor(alpha*p), e=r/4 mod p, t=(p-1)r"
+}

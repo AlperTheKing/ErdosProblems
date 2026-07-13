@@ -1,0 +1,11 @@
+{
+  "max_width": 30,
+  "literal_holes": 464981,
+  "failures": 0,
+  "minimum_slacks": {
+    "prefix": 0,
+    "suffix": 0,
+    "total": 0
+  },
+  "witnesses": {}
+}

@@ -1,0 +1,699 @@
+{
+  "arithmetic": "exact integers and finite fields",
+  "parameters": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11,
+    13,
+    16,
+    17,
+    19
+  ],
+  "rows": [
+    {
+      "q": 3,
+      "p": 3,
+      "modulus": 8,
+      "delta_at_natural_modulus": 5,
+      "unit_classes": 2,
+      "distinct_lifts": 3,
+      "valid_lifts": 2,
+      "zero_fold_valid_lifts": 2,
+      "collision_histogram": {
+        "0,0": 3
+      },
+      "first_valid": {
+        "width": 6,
+        "gamma": 1,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          5,
+          6
+        ],
+        "unit": 1,
+        "base": 1,
+        "cut_gap": 2
+      },
+      "first_zero_fold_valid": {
+        "width": 6,
+        "gamma": 1,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          5,
+          6
+        ],
+        "unit": 1,
+        "base": 1,
+        "cut_gap": 2
+      }
+    },
+    {
+      "q": 4,
+      "p": 4,
+      "modulus": 15,
+      "delta_at_natural_modulus": 8,
+      "unit_classes": 4,
+      "distinct_lifts": 8,
+      "valid_lifts": 6,
+      "zero_fold_valid_lifts": 6,
+      "collision_histogram": {
+        "0,0": 8
+      },
+      "first_valid": {
+        "width": 14,
+        "gamma": 0,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          8,
+          12,
+          14
+        ],
+        "unit": 1,
+        "base": 4,
+        "cut_gap": 1
+      },
+      "first_zero_fold_valid": {
+        "width": 14,
+        "gamma": 0,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          8,
+          12,
+          14
+        ],
+        "unit": 1,
+        "base": 4,
+        "cut_gap": 1
+      }
+    },
+    {
+      "q": 5,
+      "p": 5,
+      "modulus": 24,
+      "delta_at_natural_modulus": 12,
+      "unit_classes": 4,
+      "distinct_lifts": 10,
+      "valid_lifts": 4,
+      "zero_fold_valid_lifts": 4,
+      "collision_histogram": {
+        "0,0": 10
+      },
+      "first_valid": {
+        "width": 11,
+        "gamma": 12,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          1,
+          4,
+          9,
+          11
+        ],
+        "unit": 1,
+        "base": 16,
+        "cut_gap": 13
+      },
+      "first_zero_fold_valid": {
+        "width": 11,
+        "gamma": 12,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          1,
+          4,
+          9,
+          11
+        ],
+        "unit": 1,
+        "base": 16,
+        "cut_gap": 13
+      }
+    },
+    {
+      "q": 7,
+      "p": 7,
+      "modulus": 48,
+      "delta_at_natural_modulus": 23,
+      "unit_classes": 8,
+      "distinct_lifts": 42,
+      "valid_lifts": 8,
+      "zero_fold_valid_lifts": 8,
+      "collision_histogram": {
+        "0,0": 42
+      },
+      "first_valid": {
+        "width": 34,
+        "gamma": 13,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          11,
+          21,
+          28,
+          30,
+          33,
+          34
+        ],
+        "unit": 1,
+        "base": 1,
+        "cut_gap": 14
+      },
+      "first_zero_fold_valid": {
+        "width": 34,
+        "gamma": 13,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          11,
+          21,
+          28,
+          30,
+          33,
+          34
+        ],
+        "unit": 1,
+        "base": 1,
+        "cut_gap": 14
+      }
+    },
+    {
+      "q": 8,
+      "p": 8,
+      "modulus": 63,
+      "delta_at_natural_modulus": 30,
+      "unit_classes": 18,
+      "distinct_lifts": 48,
+      "valid_lifts": 11,
+      "zero_fold_valid_lifts": 11,
+      "collision_histogram": {
+        "0,0": 48
+      },
+      "first_valid": {
+        "width": 62,
+        "gamma": 0,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          10,
+          34,
+          40,
+          42,
+          47,
+          59,
+          62
+        ],
+        "unit": 1,
+        "base": 24,
+        "cut_gap": 1
+      },
+      "first_zero_fold_valid": {
+        "width": 62,
+        "gamma": 0,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          10,
+          34,
+          40,
+          42,
+          47,
+          59,
+          62
+        ],
+        "unit": 1,
+        "base": 24,
+        "cut_gap": 1
+      }
+    },
+    {
+      "q": 9,
+      "p": 9,
+      "modulus": 80,
+      "delta_at_natural_modulus": 38,
+      "unit_classes": 16,
+      "distinct_lifts": 54,
+      "valid_lifts": 6,
+      "zero_fold_valid_lifts": 6,
+      "collision_histogram": {
+        "0,0": 54
+      },
+      "first_valid": {
+        "width": 52,
+        "gamma": 27,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          14,
+          15,
+          17,
+          23,
+          36,
+          41,
+          48,
+          52
+        ],
+        "unit": 7,
+        "base": 51,
+        "cut_gap": 28
+      },
+      "first_zero_fold_valid": {
+        "width": 52,
+        "gamma": 27,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1,
+          2
+        ],
+        "points": [
+          0,
+          14,
+          15,
+          17,
+          23,
+          36,
+          41,
+          48,
+          52
+        ],
+        "unit": 7,
+        "base": 51,
+        "cut_gap": 28
+      }
+    },
+    {
+      "q": 11,
+      "p": 11,
+      "modulus": 120,
+      "delta_at_natural_modulus": 57,
+      "unit_classes": 16,
+      "distinct_lifts": 132,
+      "valid_lifts": 10,
+      "zero_fold_valid_lifts": 10,
+      "collision_histogram": {
+        "0,0": 132
+      },
+      "first_valid": {
+        "width": 82,
+        "gamma": 37,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          3,
+          5,
+          16,
+          33,
+          37,
+          47,
+          55,
+          56,
+          62,
+          82
+        ],
+        "unit": 7,
+        "base": 90,
+        "cut_gap": 38
+      },
+      "first_zero_fold_valid": {
+        "width": 82,
+        "gamma": 37,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          3,
+          5,
+          16,
+          33,
+          37,
+          47,
+          55,
+          56,
+          62,
+          82
+        ],
+        "unit": 7,
+        "base": 90,
+        "cut_gap": 38
+      }
+    },
+    {
+      "q": 13,
+      "p": 13,
+      "modulus": 168,
+      "delta_at_natural_modulus": 80,
+      "unit_classes": 24,
+      "distinct_lifts": 208,
+      "valid_lifts": 6,
+      "zero_fold_valid_lifts": 6,
+      "collision_histogram": {
+        "0,0": 208
+      },
+      "first_valid": {
+        "width": 141,
+        "gamma": 26,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          17,
+          35,
+          37,
+          78,
+          83,
+          109,
+          116,
+          117,
+          128,
+          132,
+          138,
+          141
+        ],
+        "unit": 11,
+        "base": 144,
+        "cut_gap": 27
+      },
+      "first_zero_fold_valid": {
+        "width": 141,
+        "gamma": 26,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          17,
+          35,
+          37,
+          78,
+          83,
+          109,
+          116,
+          117,
+          128,
+          132,
+          138,
+          141
+        ],
+        "unit": 11,
+        "base": 144,
+        "cut_gap": 27
+      }
+    },
+    {
+      "q": 16,
+      "p": 16,
+      "modulus": 255,
+      "delta_at_natural_modulus": 122,
+      "unit_classes": 64,
+      "distinct_lifts": 256,
+      "valid_lifts": 3,
+      "zero_fold_valid_lifts": 3,
+      "collision_histogram": {
+        "0,0": 256
+      },
+      "first_valid": {
+        "width": 197,
+        "gamma": 57,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          21,
+          48,
+          60,
+          63,
+          70,
+          86,
+          88,
+          117,
+          141,
+          147,
+          152,
+          160,
+          161,
+          193,
+          197
+        ],
+        "unit": 1,
+        "base": 208,
+        "cut_gap": 58
+      },
+      "first_zero_fold_valid": {
+        "width": 197,
+        "gamma": 57,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          21,
+          48,
+          60,
+          63,
+          70,
+          86,
+          88,
+          117,
+          141,
+          147,
+          152,
+          160,
+          161,
+          193,
+          197
+        ],
+        "unit": 1,
+        "base": 208,
+        "cut_gap": 58
+      }
+    },
+    {
+      "q": 17,
+      "p": 17,
+      "modulus": 288,
+      "delta_at_natural_modulus": 138,
+      "unit_classes": 48,
+      "distinct_lifts": 578,
+      "valid_lifts": 2,
+      "zero_fold_valid_lifts": 2,
+      "collision_histogram": {
+        "0,0": 578
+      },
+      "first_valid": {
+        "width": 225,
+        "gamma": 62,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          32,
+          39,
+          58,
+          60,
+          70,
+          113,
+          119,
+          143,
+          146,
+          154,
+          159,
+          163,
+          188,
+          210,
+          211,
+          225
+        ],
+        "unit": 61,
+        "base": 29,
+        "cut_gap": 63
+      },
+      "first_zero_fold_valid": {
+        "width": 225,
+        "gamma": 62,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          32,
+          39,
+          58,
+          60,
+          70,
+          113,
+          119,
+          143,
+          146,
+          154,
+          159,
+          163,
+          188,
+          210,
+          211,
+          225
+        ],
+        "unit": 61,
+        "base": 29,
+        "cut_gap": 63
+      }
+    },
+    {
+      "q": 19,
+      "p": 19,
+      "modulus": 360,
+      "delta_at_natural_modulus": 173,
+      "unit_classes": 48,
+      "distinct_lifts": 684,
+      "valid_lifts": 1,
+      "zero_fold_valid_lifts": 1,
+      "collision_histogram": {
+        "0,0": 684
+      },
+      "first_valid": {
+        "width": 293,
+        "gamma": 66,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          17,
+          59,
+          86,
+          88,
+          109,
+          110,
+          114,
+          124,
+          163,
+          171,
+          182,
+          215,
+          227,
+          245,
+          252,
+          258,
+          261,
+          293
+        ],
+        "unit": 113,
+        "base": 4,
+        "cut_gap": 67
+      },
+      "first_zero_fold_valid": {
+        "width": 293,
+        "gamma": 66,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          17,
+          59,
+          86,
+          88,
+          109,
+          110,
+          114,
+          124,
+          163,
+          171,
+          182,
+          215,
+          227,
+          245,
+          252,
+          258,
+          261,
+          293
+        ],
+        "unit": 113,
+        "base": 4,
+        "cut_gap": 67
+      }
+    }
+  ]
+}

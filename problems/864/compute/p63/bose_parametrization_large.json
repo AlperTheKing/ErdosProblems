@@ -1,0 +1,109 @@
+{
+  "arithmetic": "exact finite fields and integers",
+  "records": [
+    {
+      "q": 16,
+      "b": 1,
+      "unit": 1,
+      "base": 208,
+      "gamma": 57,
+      "translation_c": 104,
+      "target_exponent": 46,
+      "scalar_pairs": 15,
+      "identity_pairs": 1,
+      "solution_count": 257,
+      "predicted_count": 257
+    },
+    {
+      "q": 16,
+      "b": 2,
+      "unit": 53,
+      "base": 27,
+      "gamma": 71,
+      "translation_c": 44,
+      "target_exponent": 210,
+      "scalar_pairs": 15,
+      "identity_pairs": 1,
+      "solution_count": 257,
+      "predicted_count": 257
+    },
+    {
+      "q": 17,
+      "b": 1,
+      "unit": 61,
+      "base": 29,
+      "gamma": 62,
+      "translation_c": 33,
+      "target_exponent": 65,
+      "scalar_pairs": 16,
+      "identity_pairs": 2,
+      "solution_count": 307,
+      "predicted_count": 307
+    },
+    {
+      "q": 17,
+      "b": 2,
+      "unit": 127,
+      "base": 93,
+      "gamma": 88,
+      "translation_c": 283,
+      "target_exponent": 152,
+      "scalar_pairs": 16,
+      "identity_pairs": 1,
+      "solution_count": 290,
+      "predicted_count": 290
+    },
+    {
+      "q": 19,
+      "b": 1,
+      "unit": 113,
+      "base": 4,
+      "gamma": 66,
+      "translation_c": 62,
+      "target_exponent": 155,
+      "scalar_pairs": 18,
+      "identity_pairs": 2,
+      "solution_count": 381,
+      "predicted_count": 381
+    },
+    {
+      "q": 19,
+      "b": 2,
+      "unit": 53,
+      "base": 325,
+      "gamma": 76,
+      "translation_c": 111,
+      "target_exponent": 152,
+      "scalar_pairs": 18,
+      "identity_pairs": 1,
+      "solution_count": 362,
+      "predicted_count": 362
+    },
+    {
+      "q": 23,
+      "b": 1,
+      "unit": 103,
+      "base": 521,
+      "gamma": 85,
+      "translation_c": 92,
+      "target_exponent": 193,
+      "scalar_pairs": 22,
+      "identity_pairs": 2,
+      "solution_count": 553,
+      "predicted_count": 553
+    },
+    {
+      "q": 23,
+      "b": 2,
+      "unit": 251,
+      "base": 91,
+      "gamma": 139,
+      "translation_c": 48,
+      "target_exponent": 170,
+      "scalar_pairs": 22,
+      "identity_pairs": 1,
+      "solution_count": 530,
+      "predicted_count": 530
+    }
+  ]
+}

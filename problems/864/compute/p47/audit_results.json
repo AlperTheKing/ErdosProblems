@@ -1,0 +1,468 @@
+{
+  "generic_all_circle_family": [
+    {
+      "ambient_slots": 14,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 6,
+        "3": 1
+      },
+      "l1": 9,
+      "l2_squared": 15,
+      "left_is_palindromic": true,
+      "left_support": 7,
+      "max_frequency": 13,
+      "max_frequency_over_p_squared": "13/9",
+      "p": 3,
+      "q": 7,
+      "right_is_x_times_left": true,
+      "right_support": 7,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 26,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 12,
+        "4": 1
+      },
+      "l1": 16,
+      "l2_squared": 28,
+      "left_is_palindromic": true,
+      "left_support": 13,
+      "max_frequency": 25,
+      "max_frequency_over_p_squared": "25/16",
+      "p": 4,
+      "q": 13,
+      "right_is_x_times_left": true,
+      "right_support": 13,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 62,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 30,
+        "6": 1
+      },
+      "l1": 36,
+      "l2_squared": 66,
+      "left_is_palindromic": true,
+      "left_support": 31,
+      "max_frequency": 61,
+      "max_frequency_over_p_squared": "61/36",
+      "p": 6,
+      "q": 31,
+      "right_is_x_times_left": true,
+      "right_support": 31,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 182,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 90,
+        "10": 1
+      },
+      "l1": 100,
+      "l2_squared": 190,
+      "left_is_palindromic": true,
+      "left_support": 91,
+      "max_frequency": 181,
+      "max_frequency_over_p_squared": "181/100",
+      "p": 10,
+      "q": 91,
+      "right_is_x_times_left": true,
+      "right_support": 91,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 4902,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 2450,
+        "50": 1
+      },
+      "l1": 2500,
+      "l2_squared": 4950,
+      "left_is_palindromic": true,
+      "left_support": 2451,
+      "max_frequency": 4901,
+      "max_frequency_over_p_squared": "4901/2500",
+      "p": 50,
+      "q": 2451,
+      "right_is_x_times_left": true,
+      "right_support": 2451,
+      "supports_partition_every_slot": true
+    }
+  ],
+  "nontrivial_zero_flip_family": [
+    {
+      "ambient_slots": 18,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 3,
+        "2": 3,
+        "3": 3
+      },
+      "factorization": "U*V versus shifted U*V#",
+      "left_support": 9,
+      "max_frequency": 17,
+      "max_frequency_over_p_squared": "17/9",
+      "monomial_translate": false,
+      "p": 3,
+      "right_support": 9,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 32,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4
+      },
+      "factorization": "U*V versus shifted U*V#",
+      "left_support": 16,
+      "max_frequency": 31,
+      "max_frequency_over_p_squared": "31/16",
+      "monomial_translate": false,
+      "p": 4,
+      "right_support": 16,
+      "supports_partition_every_slot": true
+    },
+    {
+      "ambient_slots": 200,
+      "aperiodic_autocorrelation_equal": true,
+      "coefficient_profile": {
+        "1": 10,
+        "10": 10,
+        "2": 10,
+        "3": 10,
+        "4": 10,
+        "5": 10,
+        "6": 10,
+        "7": 10,
+        "8": 10,
+        "9": 10
+      },
+      "factorization": "U*V versus shifted U*V#",
+      "left_support": 100,
+      "max_frequency": 199,
+      "max_frequency_over_p_squared": "199/100",
+      "monomial_translate": false,
+      "p": 10,
+      "right_support": 100,
+      "supports_partition_every_slot": true
+    }
+  ],
+  "p3_exact_profile_partner": {
+    "aperiodic_autocorrelation_equal": true,
+    "difference_profile": {
+      "1": 6,
+      "3": 1
+    },
+    "endpoint": 14,
+    "factorization": "U*V versus shifted U*V#",
+    "left_is_self_reciprocal": false,
+    "p": 3,
+    "sum_profile": {
+      "1": 3,
+      "2": 3
+    },
+    "supports_disjoint": true
+  },
+  "signed_rulers": [
+    {
+      "G": 6,
+      "L": 30,
+      "W": 12,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 20,
+        "5": 1
+      },
+      "difference_range": [
+        -12,
+        12
+      ],
+      "difference_support": 21,
+      "l1": 25,
+      "l2_squared": 45,
+      "overlap_moments_degrees_0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "p": 5,
+      "sum_profile": {
+        "1": 5,
+        "2": 10
+      },
+      "sum_range": [
+        6,
+        30
+      ],
+      "sum_support": 15,
+      "zero_coefficients": {
+        "difference": 5,
+        "sum": 0
+      }
+    },
+    {
+      "G": 18,
+      "L": 116,
+      "W": 49,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 72,
+        "9": 1
+      },
+      "difference_range": [
+        -49,
+        49
+      ],
+      "difference_support": 73,
+      "l1": 81,
+      "l2_squared": 153,
+      "overlap_moments_degrees_0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "p": 9,
+      "sum_profile": {
+        "1": 9,
+        "2": 36
+      },
+      "sum_range": [
+        18,
+        116
+      ],
+      "sum_support": 45,
+      "zero_coefficients": {
+        "difference": 9,
+        "sum": 0
+      }
+    },
+    {
+      "G": 42,
+      "L": 152,
+      "W": 55,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 90,
+        "10": 1
+      },
+      "difference_range": [
+        -55,
+        55
+      ],
+      "difference_support": 91,
+      "l1": 100,
+      "l2_squared": 190,
+      "overlap_moments_degrees_0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "p": 10,
+      "sum_profile": {
+        "1": 10,
+        "2": 45
+      },
+      "sum_range": [
+        42,
+        152
+      ],
+      "sum_support": 55,
+      "zero_coefficients": {
+        "difference": 10,
+        "sum": 0
+      }
+    },
+    {
+      "G": 23,
+      "L": 191,
+      "W": 84,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 110,
+        "11": 1
+      },
+      "difference_range": [
+        -84,
+        84
+      ],
+      "difference_support": 111,
+      "l1": 121,
+      "l2_squared": 231,
+      "overlap_moments_degrees_0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "p": 11,
+      "sum_profile": {
+        "1": 11,
+        "2": 55
+      },
+      "sum_range": [
+        23,
+        191
+      ],
+      "sum_support": 66,
+      "zero_coefficients": {
+        "difference": 11,
+        "sum": 0
+      }
+    },
+    {
+      "G": 24,
+      "L": 238,
+      "W": 107,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 132,
+        "12": 1
+      },
+      "difference_range": [
+        -107,
+        107
+      ],
+      "difference_support": 133,
+      "l1": 144,
+      "l2_squared": 276,
+      "overlap_moments_degrees_0_to_5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "p": 12,
+      "sum_profile": {
+        "1": 12,
+        "2": 66
+      },
+      "sum_range": [
+        24,
+        238
+      ],
+      "sum_support": 78,
+      "zero_coefficients": {
+        "difference": 12,
+        "sum": 0
+      }
+    }
+  ],
+  "singer_cyclic_models": [
+    {
+      "aperiodic_autocorrelation_equal_after_reduction": false,
+      "cyclic_profiles": {
+        "difference": {
+          "1": 6,
+          "3": 1
+        },
+        "sum": {
+          "1": 3,
+          "2": 3
+        }
+      },
+      "cyclic_supports_disjoint": true,
+      "first_aperiodic_mismatch": {
+        "lag": -2,
+        "left": 8,
+        "right": 9
+      },
+      "modulus": 14,
+      "ordinary_unreduced_pair": {
+        "G": 7,
+        "L": 27,
+        "L_over_p_squared": "3",
+        "W": 10,
+        "aperiodic_autocorrelation_equal": true,
+        "supports_disjoint": true
+      },
+      "p": 3,
+      "periodic_autocorrelation_equal": true,
+      "q": 7
+    },
+    {
+      "aperiodic_autocorrelation_equal_after_reduction": false,
+      "cyclic_profiles": {
+        "difference": {
+          "1": 12,
+          "4": 1
+        },
+        "sum": {
+          "1": 4,
+          "2": 6
+        }
+      },
+      "cyclic_supports_disjoint": true,
+      "first_aperiodic_mismatch": {
+        "lag": -4,
+        "left": 14,
+        "right": 11
+      },
+      "modulus": 26,
+      "ordinary_unreduced_pair": {
+        "G": 13,
+        "L": 57,
+        "L_over_p_squared": "57/16",
+        "W": 22,
+        "aperiodic_autocorrelation_equal": true,
+        "supports_disjoint": true
+      },
+      "p": 4,
+      "periodic_autocorrelation_equal": true,
+      "q": 13
+    },
+    {
+      "aperiodic_autocorrelation_equal_after_reduction": false,
+      "cyclic_profiles": {
+        "difference": {
+          "1": 30,
+          "6": 1
+        },
+        "sum": {
+          "1": 6,
+          "2": 15
+        }
+      },
+      "cyclic_supports_disjoint": true,
+      "first_aperiodic_mismatch": {
+        "lag": -2,
+        "left": 35,
+        "right": 41
+      },
+      "modulus": 62,
+      "ordinary_unreduced_pair": {
+        "G": 31,
+        "L": 127,
+        "L_over_p_squared": "127/36",
+        "W": 48,
+        "aperiodic_autocorrelation_equal": true,
+        "supports_disjoint": true
+      },
+      "p": 6,
+      "periodic_autocorrelation_equal": true,
+      "q": 31
+    }
+  ]
+}

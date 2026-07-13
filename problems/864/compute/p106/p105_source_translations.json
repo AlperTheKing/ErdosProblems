@@ -1,0 +1,21 @@
+{
+  "source_p": 57,
+  "source_width": 3285,
+  "positive_defect_translations": 1560,
+  "phase_rows": 3120,
+  "literal_holes": 372,
+  "scalar_failures": 0,
+  "RM97_failures": 0,
+  "minimum_scalar_slack_row": {
+    "gamma": 255,
+    "b": 1,
+    "delta": 1305,
+    "C_S": 0,
+    "T_F": 0,
+    "V_b": 0,
+    "slot_minus_interval": 0,
+    "matched": 0,
+    "literal_hole": false
+  },
+  "first_RM97_failure": null
+}

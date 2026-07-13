@@ -1,0 +1,21 @@
+{
+  "arbitrary_selector_choices": "680^676",
+  "collision_half_per_hub": 6650,
+  "demanded_active_degree_per_hub": 1,
+  "hit_need_per_hub": 1,
+  "identity": "3 * (2 * (3 * 675 + 52 * 25) + 1) = 19953",
+  "pair_excess_per_hub": {
+    "52_leaves": 1300,
+    "self_and_other_hubs": 2025,
+    "total": 3325
+  },
+  "residual_capacity_per_hub": 0,
+  "row_count_per_hub": 676,
+  "selector_hub_occurrences": 0,
+  "selector_rows_enumerated": 0,
+  "shore_collision_half": 19950,
+  "shore_demand": 19953,
+  "shore_hit_need": 3,
+  "traffic_rows": 676
+}
+result_sha256 d7d657519b922e2a9e7ef7c6f8cdefef33b5df35c5a7febc065595f61eda44e8

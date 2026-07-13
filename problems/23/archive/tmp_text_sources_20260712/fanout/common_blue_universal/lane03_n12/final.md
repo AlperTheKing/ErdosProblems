@@ -1,0 +1,1 @@
+Unable to execute the lane: the Windows sandbox rejected all `apply_patch` writes, including inside both `lane03_n12` and a new `lane03_n12_light` sibling. No census or flow results were produced or claimed. Existing production files and lane artifacts were not modified.

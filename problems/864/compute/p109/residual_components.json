@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Python integers",
+  "candidate": "T_F(component) <= C_S(component) + V_b(component) for canonical residual-interval overlap components",
+  "positive_defect_literal_holes": {
+    "rows": 464981,
+    "triangle_rows": 1037,
+    "failures": 304,
+    "maximum_residual": 0,
+    "first_failure": {
+      "B": [
+        8,
+        10,
+        15,
+        23,
+        24,
+        27
+      ],
+      "h": 28,
+      "b": 2,
+      "delta": 24,
+      "C_S": 3,
+      "T_F": 1,
+      "V_b": 0,
+      "component_count": 2,
+      "cross_component_triangle_count": 1,
+      "first_cross_component_triangle": {
+        "fold_ids": [
+          0,
+          2,
+          1
+        ],
+        "component_ids": [
+          0,
+          1
+        ],
+        "folds": [
+          [
+            8,
+            10,
+            23,
+            23
+          ],
+          [
+            8,
+            15,
+            24,
+            27
+          ],
+          [
+            10,
+            10,
+            24,
+            24
+          ]
+        ],
+        "intervals": [
+          [
+            3,
+            3
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "worst": {
+        "component": 1,
+        "left": 3,
+        "right": 3,
+        "folds": 1,
+        "triangles": 0,
+        "V_b": 0,
+        "residual": -1
+      }
+    }
+  },
+  "P88_positive_defect_translations": {
+    "rows": 4170,
+    "failures": 0,
+    "maximum_residual": 0,
+    "first_failure": null
+  }
+}

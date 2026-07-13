@@ -1,0 +1,5037 @@
+{
+  "canonicalPayloadSha256": "0db220001c6af794e5c46f9174a86a2b7f86e0bd492bd29ea1115a7342dd49d0",
+  "defectHistogram": {
+    "14": 6,
+    "16": 30,
+    "22": 24,
+    "24": 16,
+    "6": 57,
+    "8": 81
+  },
+  "failures": [
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        1,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        2,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        3,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        4,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        5,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        6,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        7,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        8,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        9,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        10,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        11,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        12,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        13,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        14,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        15,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        16,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        17,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 298,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        18,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        19,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        20,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        21,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        22,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        23,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        24,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        25,
+        44
+      ]
+    },
+    {
+      "defect": 14,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 306,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        26,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        27,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        28,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        29,
+        44
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        30,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        0
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        1
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        2
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        3
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        4
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        5
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 318,
+      "hammingDistance": 1,
+      "maximumFlow": 312,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        6
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        7
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        8
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        9
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        10
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        11
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        12
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        13
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        14
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        15
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        16
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        17
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        18
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        19
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        20
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 296,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        21
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        22
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        23
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        24
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        25
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        26
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        27
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        28
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        29
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        30
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        31
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        32
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        33
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 296,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        34
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        35
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        36
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        37
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        38
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        39
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        40
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        41
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        42
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        43
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 312,
+      "hammingDistance": 0,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        32,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        33,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        34,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        35,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        36,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        37,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        38,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        39,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        40,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 298,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        41,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        42,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        43,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        44,
+        44
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 24,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 290,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        19,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        23,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        27,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 298,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        31,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        32,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        34,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        35,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 314,
+      "hammingDistance": 1,
+      "maximumFlow": 292,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        36,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 294,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        37,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 22,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 298,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 316,
+      "hammingDistance": 1,
+      "maximumFlow": 300,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        41,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 16,
+      "globalDemand": 320,
+      "hammingDistance": 1,
+      "maximumFlow": 304,
+      "shoreOwners": [
+        6,
+        8
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 322,
+      "hammingDistance": 1,
+      "maximumFlow": 316,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        43,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 6,
+      "globalDemand": 330,
+      "hammingDistance": 1,
+      "maximumFlow": 324,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        44,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 288,
+      "hammingDistance": 1,
+      "maximumFlow": 280,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 296,
+      "hammingDistance": 1,
+      "maximumFlow": 288,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    },
+    {
+      "defect": 8,
+      "globalDemand": 284,
+      "hammingDistance": 1,
+      "maximumFlow": 276,
+      "shoreOwners": [
+        6
+      ],
+      "state": [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        31,
+        44
+      ]
+    }
+  ],
+  "globalGraphMinimumStatus": "unavailable; full row product not exhausted",
+  "minimumDefect": 6,
+  "minimumState": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    31,
+    44
+  ],
+  "rowFamilySizes": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    45,
+    45,
+    45
+  ],
+  "schema": "R53_R35_N24_HAMMING_LE_ONE_V1",
+  "statesExhausted": 214
+}

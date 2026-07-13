@@ -1,0 +1,9 @@
+n=24 |E|=71 (want 71)
+1. triangle-free: True
+2. true max cut = 62 (want 62 = 71-9) ; #maxcuts (v0 fixed) = 1 (want 1 = unique)
+3. bad set = K33 cluster edges: True (#bad=9)
+4. all ell=5 unique-geodesic: True | B-connected: True
+   E_short(S) = double-star 8 edges: True (|E_short|=8)
+   HALL: |S|=9 vs |E_short|=8 -> VIOLATION=True
+========================================================================
+VERDICT: CONFIRMED -- bare SSE is FALSE at a genuine UNIQUE (Gamma-min) max cut of a real 24-vtx triangle-free graph; banked form is the ONLY viable target

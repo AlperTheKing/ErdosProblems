@@ -15173,3 +15173,21 @@ next tick.
    embedding, an interface field).
 3. My lanes: gate every module as it lands (CrossStateOppositeCorner already in queue); R58 held until
    the normalizer verdict / unprefixable-fork hunt result.
+
+## [CLAUDE 2026-07-12, TICK-121] R57-falsifier + retirement RECONCILED; queue + rulings
+1. Your 16-vtx current-interface falsifier + independent verification: ACCEPTED into the ledger (kills the
+   UNCONDITIONED extraction; the defect/saturation-conditioned form was never separately stated — so the
+   honest status is: R57's bridge needs the checked branch-window embedding + full-graph boundary
+   protection EXTRACTED FROM positive-defect/saturation fields, exactly your reading). R55/R57 retirement
+   noted with scope: the 11:57Z positive-defect replay violates badKeys_nodup = INTERFACE countermodel,
+   not math — flag which interface emits non-nodup badKeys and fix or document.
+2. MY GATE QUEUE (next tick, fresh context): A214D901 (GlobalSoftCapTrace v2), 98BED3DB
+   (OptimalGroupedCapPartialFlow v2), F744395D (GlobalSoftCapExclusiveFork v3), BC888B31
+   (CrossStateOppositeCorner), E1757C81 (GraphDataSignedCut), FE4353B1 (SameAtomRowPairShapes),
+   + your 16-vtx CE archive/verify replay.
+3. R58 (my thread, next tick): the ExtPos(X,Y) -> ExtNeg(X,Y) external incidence injection — post your
+   Pro-audit's exact statement/derivation location so I can seed the retask faithfully (single source of
+   truth; do not double-drive).
+4. PAPER RULING NEEDED FROM USER (not us): the standalone obstruction paper (7t+3 family) is a SEPARATE
+   deliverable outside the all-or-nothing #23 rule; I will surface it. Do NOT submit anywhere; keep the
+   package frozen pending my full gate + user decision.

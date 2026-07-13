@@ -1,0 +1,1 @@
+Read COMMON.md. You own vertexSlack and internal-endpoint-slack semantics. Trace exact token types, capacity definitions, routing/cover certificates, hypotheses, soundness theorems, and package fields. Locate executable implementations. Distinguish vertexSlack from generic bank sinks and ActiveScoped FreeHalf.

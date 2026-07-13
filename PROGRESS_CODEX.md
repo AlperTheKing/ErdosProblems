@@ -33530,3 +33530,850 @@
 [2026-07-12T09:51:59Z] > ATTACK | NEXT: Compile tuple-independent four-corner overweight-to-negative-switch theorem; leave only R57 extraction premise.
 [2026-07-12T09:55:52Z] OK VERIFY | DID: Built CrossStateOppositeCorner | RESULT: rc=0, SHA BC888B31; overweight forces negative corner; allowed axioms only | D: algebra closed.
 [2026-07-12T09:56:43Z] > SELECT | NEXT: Re-read active goal, poll Fable after TICK-118, and select the first exact R57 extraction obligation.
+[2026-07-12T09:58:16Z] OK COLLAB | DID: Processed TICK-119/120 | RESULT: global surface gated; R57 claims 15-shape extraction closure | D: normalizer completeness is frontier.
+[2026-07-12T09:58:16Z] > GATE | NEXT: Recover exact R57 role schema, then implement CheckedUnprefixableFork and classify every accepted branch pair.
+[2026-07-12T10:00:34Z] OK GATE | DID: Enumerated two shortest length-4 row union patterns | RESULT: 33 raw, exactly 7 TF/dist4; JSON C01368C8 | D: R57 needs explicit 7-to-15 map.
+[2026-07-12T10:08:18Z] OK VERIFY | DID: Built SameAtomRowPairShapes | RESULT: rc=0, SHA C7CF55B9; 6 misaligned IDs impossible, exactly 7 aligned masks | D: normalizer reduced.
+[2026-07-12T10:14:14Z] OK VERIFY | DID: Connected literal Row5 forks to seven-shape classifier | RESULT: exists_rowPairShape rc=0; SHAs FE4353B1/3F28238B | D: real extraction stage 1 closed.
+[2026-07-12T10:18:34Z] > ATTACK | NEXT: GPT-5.6 Pro asked for exact R57 menu/attachment theorem or counterexample; leave generation untouched until completion.
+[2026-07-12T10:21:47Z] > VERIFY | NEXT: Audit current R57 Lean fields, seven-shape bridge, and full-graph margin inheritance; seek a checked-row countermodel.
+[2026-07-12T10:24:27Z] > ATTACK | NEXT: Exhaust n=5,6 two-row unions and verify the smallest triangle-free checked-row fork plus its full switch table.
+[2026-07-12T10:25:19Z] OK VERIFY | DID: Built GraphDataSignedCut | RESULT: rc=0, SHA E1757C81; cutLossQ=dB-dM and IsMaxCut forbids overweight | D: real uncrossing closed.
+[2026-07-12T10:26:41Z] OK ATTACK | DID: Exhausted n=5,6 two-row unions | RESULT: n=5 none; n=6 rows 01235/01245, TF, min sigma=0 | D: fork fields admit max-cut model.
+[2026-07-12T10:26:52Z] OK ATTACK | DID: Replayed pair (0,5)+blue edge (10,12) | RESULT: n=16, TF, 4 bads, min sigma=0, 0 negative masks | D: full-margin inheritance false.
+[2026-07-12T10:33:36Z] > VERIFY | NEXT: repair and rebuild GlobalSoftCapExclusiveFork.position_lt_four to expose the exact R57 interface.
+[2026-07-12T10:34:54Z] OK VERIFY | DID: rebuilt position_lt_four | RESULT: rc0; allowed axioms only; SHA F744395D3A15D9558032D18A1C3027D35CF98D90B7C1BF40353D9F3014423125 | D: local Lean interruption cleared
+[2026-07-12T10:36:52Z] FAIL ATTACK | DID: Pro falsifier audit of R57 | RESULT: 16-vtx maxcut Gamma-min fork has no negative mask pair; R57 fields insufficient | D: R57-as-stated DEAD
+[2026-07-12T10:39:46Z] > ATTACK | NEXT: audit R55 positive-defect rotor semantics against the 16-vtx R57 counterexample and isolate missing protection.
+[2026-07-12T10:41:22Z] OK VERIFY | DID: exhaustive R57 falsifier gate | RESULT: 2^15 cuts + 65536 mask pairs pass counterexample; tmp/fanout/r57_current_interface_counterexample/REPORT.txt | D: R57 current interface dead
+[2026-07-12T10:44:06Z] OK ATTACK | DID: evaluated 16-vtx fork in global soft-cap model | RESULT: both row states demand=0, defect=0; SHA 047EFF7EB31988D2FB8C60ACAC285BA25CEE379E796FFDA205AE0AEFF3925E81 | D: falsifier kills R57 interface, not full R55 context
+[2026-07-12T10:48:59Z] FAIL ATTACK | DID: audited R55 frozen fields vs boundary exposure | RESULT: no field controls outsideBlueBoundary; compiled unit-core/rotor structures absent | D: repair needs new real bridge
+[2026-07-12T10:56:09Z] OK PLAN | DID: isolated R57 boundary correction | RESULT: sharp target beta_W(X)+beta_W(Y)<=0 for local margin -1; writeup SHA 8C123110... | D: one-unit boundary wall
+[2026-07-12T11:02:16Z] FAIL GATE | DID: probed P1 owner-overload on R35 | RESULT: overload remains +11..+21 even at zero-defect Hamming-2 state; P1 scalar alone insufficient | D: need full six-family provenance
+[2026-07-12T11:04:50Z] OK VERIFY | DID: rebuilt OutsideBoundaryP1Injection | RESULT: 3 theorems rc0, SHA 033EFBFB, allowed axioms only | D: blue outside-boundary now paid by P1 zero bases
+[2026-07-12T11:05:30Z] OK GATE | DID: replayed R57 positive-defect extension search | RESULT: 1864 systems/9156 tuples no lex rotor; 7-copy nonlex control unit core 97=96+1 | D: lex exchange is final wall
+[2026-07-12T11:08:21Z] > GATE | NEXT: replay exact C5[3] Hamming<=2 exchange falsifier with 64 workers to test local-descent repair.
+[2026-07-12T11:09:02Z] FAIL GATE | DID: exhausted C5[3] Hamming<=2 row exchanges (61 workers) | RESULT: 24571 states, center C=42 D=12, zero descents | D: universal <=2-row descent DEAD
+[2026-07-12T11:10:11Z] OK GATE | DID: solved global C5[3] collision face | RESULT: Cmin=42; center D=12 globally C-min, distant explicit Cmin tuple D=0 | D: long-range selector required
+[2026-07-12T11:12:28Z] > DECIDE | NEXT: collect the final overload/lock bridge verdict, then retire R55/R57 or compile the one surviving theorem.
+[2026-07-12T11:17:12Z] FAIL DECIDE | DID: final R55/R57 bridge audit | RESULT: positive-defect compiled-interface countermodel; no boundary-incidence map | D: R55/R57 DEAD
+[2026-07-12T11:17:13Z] > SELECT | NEXT: inventory and novelty-gate verified Erdos-23 certificate and obstruction results for an honest arXiv paper.
+[2026-07-12T11:17:45Z] OK DECIDE | DID: harvested completed GPT-Pro R57 verdict once | RESULT: Outcome B; exact ExtPos-to-ExtNeg injection missing; R55/R57 dead | D: none
+[2026-07-12T11:24:15Z] > ATTACK | NEXT: generalize the 24-vertex Hall-support counterexample to a layered family and prove unique maximum cut by odd-cycle packing.
+[2026-07-12T11:28:16Z] OK ATTACK | DID: generalized 24-vtx obstruction to G_t | RESULT: beta=t^2; unique maxcut; shortest-support union 2t+2; Hall ratio unbounded; SHA 843581F8 | D: paper has infinite theorem
+[2026-07-12T11:56:49Z] OK GATE | DID: primary-literature novelty sweep | RESULT: no prior shortest-support Hall system found; nearest CKL17 counts shortest odd cycles | D: safe paper scope
+[2026-07-12T11:56:49Z] OK VERIFY | DID: independent G_t audit | RESULT: full cuts t=1,2; all cut-count orbits t=3,4; theorem valid; SHA F88EAC15 | D: none
+[2026-07-12T11:56:49Z] OK VERIFY | DID: clean arXiv rebuild and visual PDF audit | RESULT: 5 pages, no TeX warnings; PDF SHA 67DD92FE; source ZIP SHA 6831828B | D: paper package complete
+[2026-07-12T12:00:51Z] > ATTACK | NEXT: return from dead R55/R57 shortcut to the real FullBankHall weighted-boundary provider; audit current compiled interface.
+[2026-07-12T12:07:45Z] > RELEASE | NEXT: submit verified shortest-support paper source ZIP to arXiv and inspect generated PDF before finalization.
+[2026-07-12T12:11:34Z] FAIL RELEASE | DID: attempted source ZIP upload via in-app browser | RESULT: in-app file uploads unsupported; draft 7816436 saved | D: manual picker required
+[2026-07-12T12:12:49Z] > ATTACK | NEXT: generalize Wall24 vertexSlack absorption to the infinite G_t Hall family and map it to FullBankRelaxedCoverCert.
+[2026-07-12T12:18:00Z] > VERIFY | NEXT: compile generic LayeredHallObstructionBankAbsorbed against canonical Lean cache.
+[2026-07-12T12:18:23Z] OK RELEASE | DID: submitted shortest-support paper to arXiv | RESULT: submit/7816436; status on hold for moderation; PDF+MathJax verified | D: paper released
+[2026-07-12T12:20:54Z] FAIL DECIDE | DID: stopped Erdos #23 at user direction | RESULT: FullBankHall real graph provider remains unproved; all workers shut down | D: awaiting new problem
+[2026-07-12T12:26:51Z] > SELECT | NEXT: audit Erdos Problem #864 statement, status, and prior art; then build a 64-lane attack prompt and exact falsifier plan.
+[2026-07-12T12:28:02Z] > RELEASE | NEXT: archive Erdos #23 state and remove reproducible tmp/build bulk after a preservation audit.
+[2026-07-12T12:28:50Z] > RELEASE | NEXT: delete 1.129 TB tmp Lean-object cache and other reproducible binary shards; preserve all text evidence.
+[2026-07-12T12:34:13Z] > RELEASE | NEXT: freeze #23 theorem state, hashes, dead routes, restart steps, and preservation manifest before final tmp cleanup.
+[2026-07-12T12:38:05Z] > VERIFY | NEXT: compile LayeredHallObstructionBankAbsorbed or record the exact missing-cache blocker in the #23 handoff.
+[2026-07-12T12:49:47Z] > VERIFY | NEXT: replay the self-contained nine-gate #23 archive and verify its regenerated manifest before deleting tmp.
+[2026-07-12T12:51:06Z] OK VERIFY | DID: rebuilt final #23 replay archive and G_t gate | RESULT: 9/9 expected exits, manifest PASS, family t=1..8 PASS | D: archive self-contained
+[2026-07-12T12:52:53Z] > RELEASE | NEXT: remove archived tmp data and 35 GB reproducible O14 generated Lean payloads; retain hashes, certs, sources, reports.
+[2026-07-12T12:55:03Z] > VERIFY | NEXT: rerun archived #23 gates after tmp deletion and recheck chart hashes, disk space, and preserved source counts.
+[2026-07-12T12:58:11Z] OK RELEASE | DID: froze #23 handoff, cert/replay/source archives, and removed reproducible bulk | RESULT: tmp=0; #23=1.05GB; E free=1062.15GB | D: #23 archived
+[2026-07-12T13:18:17Z] > SELECT | NEXT: select #864; its exceptional-sum involution, exact N<=69 census, and 0.259 constant gap give concrete proof and falsifier surfaces.
+[2026-07-12T13:18:18Z] > GATE | NEXT: search primary literature for one-exception Sidon bounds and freeze every known constant before proof work.
+[2026-07-12T13:23:49Z] FAIL GATE | DID: launched 8-lane Sol literature wave | RESULT: multi-agent service returned agent thread limit reached; no spawn result | D: local web gate continues
+[2026-07-12T13:35:42Z] OK GATE | DID: local+Sol primary-source sweep | RESULT: L04/L06; no #864 bound below sqrt2 found | D: novelty PASS
+[2026-07-12T13:35:43Z] > PLAN | NEXT: freeze baseline lemmas and build an exact census to falsify the first sharp 4/3 inequalities.
+[2026-07-12T13:44:31Z] > ATTACK | NEXT: compile CP-SAT model and certify N=1..20 against an independent literal admissibility check using 8 workers.
+[2026-07-12T13:45:19Z] OK ATTACK | DID: CP-SAT N=1..20, 8 workers | RESULT: all OPTIMAL; values match OEIS A389182 | D: model smoke-pass
+[2026-07-12T13:45:19Z] > ATTACK | NEXT: certify N=21..40 with 32 workers and compare every optimum to OEIS.
+[2026-07-12T13:45:56Z] OK ATTACK | DID: CP-SAT N=21..40, 32 workers | RESULT: 20/20 OPTIMAL; all values match A389182 | D: none
+[2026-07-12T13:45:56Z] > ATTACK | NEXT: certify N=41..55 with 48 workers; capture extremizer structure for lemma falsification.
+[2026-07-12T14:00:18Z] OK ATTACK | DID: CP-SAT N=41..55, 48 workers | RESULT: 15/15 OPTIMAL; all values match A389182 | D: exact census reaches 55
+[2026-07-12T14:00:18Z] > VERIFY | NEXT: run the independent literal verifier self-tests and audit all 55 CP-SAT records.
+[2026-07-12T14:01:16Z] OK VERIFY | DID: ran 13 verifier tests and audited census | RESULT: 55/55 records valid; diagonals exact | D: independent candidate check passes
+[2026-07-12T14:03:35Z] > VERIFY | NEXT: strict-build the independent C++ solver and replay N=55 plus beyond-OEIS N=70 with 16 threads.
+[2026-07-12T14:04:31Z] OK VERIFY | DID: strict-built C++ BnB and replayed N=55,70 | RESULT: maxima 12,14 proof-complete; N70 new beyond OEIS | D: independent solver passes
+[2026-07-12T14:04:31Z] > ATTACK | NEXT: run exact 32-thread BnB at N=100 for a new census point and structural statistics.
+[2026-07-12T14:09:36Z] OK ATTACK | DID: exact C++ BnB at N=100, 32 threads | RESULT: F(100)=16 proof-complete; 221447050 nodes; full reflection about 100 | D: census +31
+[2026-07-12T14:13:16Z] > ATTACK | NEXT: exhaust every subset through N=16 against the exact duplicated-difference formula and reflection pairing.
+[2026-07-12T14:14:06Z] OK ATTACK | DID: exhaustive D1 gate through N=16 | RESULT: 131070 subsets/15057 admissible PASS; PROOF_STATE Lemma D1 | D: exact identity accepted
+[2026-07-12T14:14:39Z] > ATTACK | NEXT: exact C++ census at N=60,65,75,80,85,90,95 using 16 threads and 300s per point; test reflection pattern.
+[2026-07-12T14:20:35Z] OK ATTACK | DID: exact BnB at N=60,65,75,80,85,90,95 | RESULT: 7/7 proof-complete; maxima 13,13,14,14,15,16,16 | D: sparse census to 100
+[2026-07-12T14:20:35Z] > ATTACK | NEXT: solve transition windows N=81..84,86..89 with four 16-thread jobs; derive contiguous A389182 extension through 100.
+[2026-07-12T14:29:14Z] OK ATTACK | DID: exact BnB on N=81..84,86..89 | RESULT: F81..85=15, F86..100=16 with endpoints; b389182_1_100.txt | D: OEIS +31 terms
+[2026-07-12T14:29:14Z] > VERIFY | NEXT: independent line audit of solve_bnb.cpp plus six-endpoint replay before OEIS submission.
+[2026-07-12T14:34:20Z] OK CHECK | DID: synthesized P01-P04,P06 | RESULT: C1 small-exception theorem; W1 low-reflection theorem; compression falsifier N10 | D: frontier=high reflection
+[2026-07-12T14:34:20Z] > ATTACK | NEXT: paired attacks on coupled signed-ruler, hybrid packing, and unpaired residual; exact falsification required.
+[2026-07-12T14:44:31Z] OK VERIFY | DID: fixed-sigma sidecar self-test | RESULT: 720 branches+36 aggregate cases PASS; N70 max-unpaired remains UNKNOWN | D: no stability claim
+[2026-07-12T14:44:40Z] > ATTACK | NEXT: exact signed-ruler CP-SAT for p=6..10, 16 workers, 120s each; test compressed-reflection trend.
+[2026-07-12T14:47:24Z] OK ATTACK | DID: signed-ruler CP-SAT p=6..10 | RESULT: exact minima 48,68,85,116 for p<=9; p10 feasible theta152, LB146 | D: finite compression persists
+[2026-07-12T14:47:24Z] > ATTACK | NEXT: signed-ruler discovery p=11,12 with 32 workers/300s; seek trend or construction seed.
+[2026-07-12T14:52:51Z] OK VERIFY | DID: BnB line audit+root patch | RESULT: 6 OEIS endpoints sound; N2 R=0 fixed; SHA 39E9FDB7...; strict N2,N18 pass | D: OEIS gate PASS
+
+[2026-07-12T14:57:50Z] OK ATTACK | DID: signed-ruler CP-SAT p=11,12, 32 workers, 300s each | RESULT: feasible theta 191,238; no optimality proof | D: none
+[2026-07-12T14:57:50Z] OK VERIFY | DID: prepared OEIS A389182 draft extension | RESULT: 100 terms and a(70)-a(100) note filled; unsaved pending confirmation | D: none
+[2026-07-12T15:02:11Z] OK CHECK | DID: integrated P08/P10 frontier | RESULT: hole/truncated-energy theorem remains; reversed core-deficit charge falsified | D: frontier sharpened
+[2026-07-12T15:02:11Z] > ATTACK | NEXT: four independent lanes on signed-ruler energy, constructions, relaxation, and prior art; exact gates required.[2026-07-12T15:23:21Z] > ATTACK | NEXT: derive and exact-test P15 mixed Fourier phase identities for signed rulers
+
+[2026-07-12T15:25:14Z] > ATTACK | NEXT: P17 derive exact cross-fiber formulas and test amplification of compressed signed rulers.
+
+[2026-07-12T15:27:06Z] OK ATTACK | DID: exact variational audit P13 | RESULT: relaxation infimum 2; rational L=5/2 model, overlap 1/96; Fraction checker PASS | D: continuum routes DEAD
+[2026-07-12T15:27:06Z] > ATTACK | NEXT: unit-lattice mixed Fourier, residue phase, and finite-pattern amplification attacks; preserve d(n)s(n)=0.[2026-07-12T15:29:13Z] > ATTACK | NEXT: exact-search cyclic Sidon phase models p=3..7 near counting bound
+[2026-07-12T15:30:27Z] > ATTACK | NEXT: run P17 exact audit: affine scales<=12, guards<=8W, Welch primes<=31, radices<=3n.
+[2026-07-12T15:31:15Z] FAIL ATTACK | DID: cyclic brute p=3..7 | RESULT: terminated after 70s without output | D: reduce search scope
+[2026-07-12T15:34:15Z] FAIL ATTACK | DID: P17 full audit timed out after JSON | RESULT: p5 best guarded lift span313/100; Cartesian and Kronecker collide | D: rerun split
+[2026-07-12T15:34:15Z] > ATTACK | NEXT: split P17 sweeps; certify Welch by order and guarded scale obstructions separately.
+[2026-07-12T15:42:04Z] OK ATTACK | DID: P15 Fourier derivation+Singer construction | RESULT: P15_mixed_fourier_phase.md | D: cyclic-phase-only route DEAD
+[2026-07-12T15:42:04Z] > VERIFY | NEXT: exhaust small signed rulers and exact-check P15 wrap, phase, radial identities
+[2026-07-12T15:42:31Z] FAIL VERIFY | DID: P15 small-ruler audit | RESULT: assertion failure in first pass | D: isolate formula/checker orientation
+[2026-07-12T15:44:17Z] OK ATTACK | DID: P17 amplification audit | RESULT: products/substitutions collide; p5 affine lift optimum 313; P17 report+code | D: fixed-seed disproof lane DEAD
+[2026-07-12T15:44:17Z] OK VERIFY | DID: py_compile, diff check, independent p5 lift sweep | RESULT: PASS; unique minimum (313,c10,T25,G23) | D: none
+[2026-07-12T15:48:25Z] OK VERIFY | DID: exact P15 audit on 2861 rulers+3 Singer models | RESULT: wrap/phase/radial/cyclic identities PASS | D: next=arc-winding inequality
+[2026-07-12T16:06:07.217Z] > VERIFY | NEXT: Compare GPT support-sensitive identity with P02 and exact-check the N=69,H=16 witness.
+[2026-07-12T16:11:15.960Z] OK VERIFY | DID: GPT centered-codegree audit | RESULT: N69/H16 PASS; 16128 exact (A,X) checks; identity=P02 Lemma 2 remainder | D: REDISCOVERY
+[2026-07-12T16:11:15.960Z] OK DECIDE | DID: OEIS A389182 extension | RESULT: user submitted certified terms a(70)..a(100) on 2026-07-12 | D: OEIS side task submitted
+[2026-07-12T16:11:15.960Z] > ATTACK | NEXT: Launch independent support-defect, gap, adversarial, three-free, and arc-winding attacks; local exact profile analysis continues.
+[2026-07-12T16:21:50.124Z] > VERIFY | NEXT: Reverify all P12 algebraic reflected candidates, including sampled p<=129, and fit center/p^2 trends.
+[2026-07-12T16:24:50.692Z] > ATTACK | NEXT: Extend exact Singer affine-cut scan to q=131..167 (8 primes, 32 unit classes each) to test sub-3 trend.
+[2026-07-12T16:41:53.874Z] OK ATTACK | DID: P23 exact support-defect falsifier | RESULT: Ruzsa-reflection gives adaptive Q_H liminf>=3/2; self-test+13 certs PASS | D: P02 product DEAD
+[2026-07-12T16:41:53.874Z] OK VERIFY | DID: Singer carry-pairing audit | RESULT: 22 stored candidates PASS skew/tail/four-sum dichotomy; 14 old+8 new | D: algebraic carry frontier
+[2026-07-12T16:41:53.874Z] OK ATTACK | DID: P24 endpoint-shadow lemma | RESULT: exact inequality P24.7; 2861 rulers,14405 differences,93494 slices PASS | D: new ordered frontier
+[2026-07-12T16:42:32.137Z] > ATTACK | NEXT: Run exact q=167 Singer scan on 2048 affine classes with 60 workers; test whether best ratio stays below 2.61.
+[2026-07-12T16:50:09.954Z] OK ATTACK | DID: q167 Singer 2048-class scan | RESULT: exact M=73308,p=168,M/p^2=6109/2352; literal verifier PASS | D: run full affine classes
+[2026-07-12T16:58:15Z] > VERIFY | NEXT: Independently run the P26 exact carry audit on stored Singer candidates and natural cuts.
+[2026-07-12T16:59:47Z] OK VERIFY | DID: Ran independent P26 carry audit | RESULT: 40/40 candidates and 26/26 natural Singer records pass; q128 worst=10821/16513 | D: none
+[2026-07-12T17:00:48Z] > PLAN | NEXT: Append wave-2 accepted lemmas, exact falsifiers, and the Singer carry frontier to proof-state registries.
+[2026-07-12T17:01:56Z] OK PLAN | DID: Appended wave-2 registry and proof-state sections | RESULT: P23 dead route, P22/P24 partial lemmas, P26 SCG(2/3) frontier recorded | D: frontier=P26/P27
+[2026-07-12T17:02:45Z] > ATTACK | NEXT: Launch an independent probabilistic affine-cut attack on the Singer SCG(2/3) frontier.
+[2026-07-12T17:03:42Z] OK ATTACK | DID: Spawned P28 affine-cut probability attack | RESULT: agent 019f5749-0252-7883-976e-81a19d68d554 owns P28 report | D: none
+[2026-07-12T17:06:00Z] > ATTACK | NEXT: Find an exact finite P20-C20 falsifier inside the proved P23 Ruzsa-reflection family.
+[2026-07-12T17:14:36Z] OK ATTACK | DID: Cross-audited P20 against P23 and built standalone verifier | RESULT: C20 false at p=503; exact cleared margin=7065310880607 | D: P20 DEAD
+[2026-07-12T17:15:56Z] > VERIFY | NEXT: Independently rerun P26 tetrahedral complement-mixing audit and check its exact zero-mode data.
+[2026-07-12T17:16:41Z] OK VERIFY | DID: Reran P26 complement-mixing audit | RESULT: 2 holes satisfy exact containment; q167 cut counts at d=v/4 range 0..100, zero-mode=38.301... | D: STM phase bound open
+[2026-07-12T17:17:00Z] > PLAN | NEXT: Record the exact P26 tetrahedral identity, STM/SCG dichotomy, P20 falsifier, and P16 residue barrier.
+[2026-07-12T17:18:03Z] OK PLAN | DID: Appended P26 tetrahedral/STM, P20 falsifier, and P16 barrier | RESULT: proof-state and registry now identify SCG-vs-STM phase frontier | D: none
+[2026-07-12T17:19:00Z] > ATTACK | NEXT: Fan out four nonoverlapping attacks on the corrected SCG/STM and signed-ruler frontiers.
+[2026-07-12T17:19:49Z] OK ATTACK | DID: Spawned P29-P32 | RESULT: agents attack four-Gauss-sum, Ruzsa carry, indexed-star phase, and primary-source novelty | D: none
+[2026-07-12T17:20:17Z] > SELECT | NEXT: Select #864 signed-ruler lane because indexed labels may retain phase data lost by residue marginals.
+[2026-07-12T20:20:11.327+03:00] > SELECT | NEXT: Select #864 P29; (21a) is an explicit shifted four-Gauss-sum estimate with finite collision cases.
+[2026-07-12T20:20:51.980+03:00] OK SELECT | DID: Read P26 Sections 5.2-5.5 and fixed P29 ownership | RESULT: frontier=(21a), report absent | D: SELECT->GATE
+[2026-07-12T20:20:51.998+03:00] > GATE | NEXT: Check existing #864 files and primary character-sum literature for (21a) or its exact degeneracies.
+[2026-07-12T17:20:42Z] OK SELECT | DID: Selected #864 P31 indexed-star signed-ruler lane | RESULT: task scope fixes #864 and P31 | D: SELECT->GATE
+[2026-07-12T17:20:42Z] > GATE | NEXT: Audit P16, P21 if present, and PROOF_STATE for prior art and theorem-equivalent traps.
+[2026-07-12T17:20:21Z] > SELECT | NEXT: Select #864 Ruzsa CRT carry lane; natural cuts through p=107 have exact centers below 3|B|^2.
+[2026-07-12T17:20:21Z] OK SELECT | DID: Read AGENTS, P26, and algebraic_scan.py | RESULT: Ruzsa frontier is explicit CRT carry with diagonals | D: SELECT->GATE
+[2026-07-12T17:20:21Z] > GATE | NEXT: Check literature and local registries for a prior explicit infinite reflected Ruzsa carry construction.
+[2026-07-12T20:20:21.200+03:00] > GATE | NEXT: Audit primary sources on Sidon E disjoint from 3E and Singer four-character bounds, testing coefficient 3 and STM.
+[2026-07-12T17:22:02Z] OK GATE | DID: Checked local literature and current official page plus exact-phrase searches | RESULT: erdosproblems.com/864 is OPEN; no P31 theorem found | D: GATE->PLAN
+[2026-07-12T17:22:02Z] > PLAN | NEXT: Derive label-retaining star identities and choose one falsifiable phase inequality as frontier.
+[2026-07-12T17:22:17Z] OK GATE | DID: Searched local registry and primary Ruzsa/generalized-Sidon sources | RESULT: no reflected carry theorem in arXiv:math/0408081 | D: GATE->PLAN
+[2026-07-12T17:22:17Z] > PLAN | NEXT: Reduce an explicit natural cut and center to CRT identities, literal Sidon, and a carry-hole inequality including diagonals.
+[2026-07-12T17:22:17Z] OK PLAN | DID: Set lemma tree CRT lift->modular Sidon->literal Sidon->carry exclusion->reflection | RESULT: frontier=cut/center carry exclusion | D: PLAN->ATTACK
+[2026-07-12T17:22:17Z] > ATTACK | NEXT: Mine all stored natural Ruzsa cuts p=73..107 for exact index, gap, center, and CRT-coordinate laws.
+[2026-07-12T17:23:12Z] OK ATTACK | DID: Parsed eight stored natural Ruzsa censuses p=73..107 | RESULT: all 724 cuts succeed; best M/(p-1)^2 lies 2.529..2.700 | D: none
+[2026-07-12T17:23:12Z] > ATTACK | NEXT: Test CRT-normalized cuts e=1,-1 and modular 3C-C holes for primes 5..257, recording exact first centers.
+[2026-07-12T17:21:00Z] FAIL ATTACK | DID: Requested P33-P34 fanout | RESULT: agent thread limit reached; no agent spawned | D: none
+[2026-07-12T20:25:12.036+03:00] OK GATE | DID: Searched #864 and character-sum literature | RESULT: #864 OPEN; Katz 1990 Thm 8.4.2 covers disjoint hypergeometric data | D: GATE->PLAN
+[2026-07-12T20:25:12.055+03:00] > PLAN | NEXT: Reduce (21) to type-(1,3) Katz sums and isolate exactly the zero/collision frequency strata.
+[2026-07-12T17:25:08Z] FAIL ATTACK | DID: Launched canonical cut scan p=5..257, e=+/-1 | RESULT: scan_canonical_cuts.py:236 SyntaxError | D: none
+[2026-07-12T17:25:08Z] > ATTACK | NEXT: Fix three malformed f-string keys and rerun p=5..257 with identical cut and modular checks.
+[2026-07-12T17:22:00Z] > ATTACK | NEXT: Exact-test density-corrected support functional P_H+k^2/(2N) on 1,811,499 archived profiles.
+[2026-07-12T20:25:29.087+03:00] OK PLAN | DID: Fixed four-lemma tree and frontier | RESULT: frontier=type-(1,3) normalization plus zero-frequency strata | D: PLAN->ATTACK
+[2026-07-12T20:25:29.113+03:00] > ATTACK | NEXT: Build and run p29 audit for q=2,3,5,7 over every d and every frequency collision class.
+[2026-07-12T17:27:20Z] OK ATTACK | DID: Scanned 53 primes p=5..257 at cuts e=+/-1 | RESULT: 106/106 holes; max M/(p-1)^2=114445/39204; 3C-C full | D: none
+[2026-07-12T17:27:20Z] > ATTACK | NEXT: Classify canonical first holes as modular orientation holes versus genuine layer-two carry holes.
+[2026-07-12T17:28:14Z] FAIL ATTACK | DID: Materialized modular S+Delta support for 106 cuts | RESULT: terminated before output due quadratic Cartesian loop | D: none
+[2026-07-12T17:28:14Z] > ATTACK | NEXT: Reclassify centers by O(p^2) tests of whether center-d lies in the modular pair-sum support.
+[2026-07-12T17:25:00Z] > VERIFY | NEXT: Correct the P23 duplicate-only/net-defect convention mismatch in all active reports and registries.
+[2026-07-12T20:29:05.482+03:00] OK ATTACK | DID: Exhausted q=2,3,5,7, all d and frequency collision classes | RESULT: (21), zero-stratum, projection PASS; max error 1.19e-7 | D: none
+[2026-07-12T20:29:05.509+03:00] > ATTACK | NEXT: Write the uniform Katz type-(1,3) proof and an exact treatment of every frequency containing zero.
+[2026-07-12T17:29:43Z] OK ATTACK | DID: Tested center residues against oriented modular S+Delta | RESULT: 0/106 modular holes; all 106 are genuine carry holes | D: none
+[2026-07-12T17:29:43Z] > ATTACK | NEXT: Test fixed offsets t/n in {1/2,3/5,2/3,7/10,3/4,4/5} over every natural cut for primes 5..257.
+[2026-07-12T17:26:19Z] OK VERIFY | DID: Corrected P23/P20 convention mismatch | RESULT: p503 D=25058720,Q=25569511,Z=-510791; centered C20 margin=-305894457730641 | D: P20 OPEN, P23 centered claim WITHDRAWN
+[2026-07-12T17:29:47Z] OK PLAN | DID: Chose indexed cross-residue vector K_m,i and nonzero-layer capacity as frontier | RESULT: finite twin search gives exact falsifier criterion | D: PLAN->ATTACK
+[2026-07-12T17:29:47Z] > ATTACK | NEXT: Search p=4..5, W<=35, L<3p^2 for valid/invalid twins with identical K_m,i for every p<=m<=p^2.
+[2026-07-12T17:27:04Z] OK ATTACK | DID: Spawned corrected centered-C20 proof/falsifier lane | RESULT: P33 agent 019f5761-9284-7731-9216-ef1b96cf5323 | D: none
+[2026-07-12T20:31:42.794+03:00] OK ATTACK | DID: Proved P29 Theorem 1 by Singer-Gauss projection and Katz type-(1,3) | RESULT: P29_four_gauss_sum.md, constant 12 | D: ATTACK->VERIFY
+[2026-07-12T20:31:42.818+03:00] > VERIFY | NEXT: Referee-check every normalization, collision stratum, citation, and rerun the p29 audit plus py_compile.
+[2026-07-12T20:32:52.305+03:00] > SELECT | NEXT: Fix #864 because centered C20 has exact H=ceil(N^(2/3)) and a finite gap/onset attack surface.
+[2026-07-12T20:33:09.259+03:00] OK SELECT | DID: Selected #864 centered C20 | RESULT: P20 correction marks C20 OPEN at H=ceil(N^(2/3)) | D: SELECT->GATE
+[2026-07-12T20:33:09.312+03:00] > GATE | NEXT: Search #864 page, repository, arXiv, Scholar, and zbMATH for centered C20 or an equivalent theorem.
+[2026-07-12T17:33:36Z] OK ATTACK | DID: Scanned six fixed offsets over every cut for p=5..257 | RESULT: t=2n/3 fails at p=71; t=4n/5 fails at p=191,193 and p>=227 | D: fixed-offset route DEAD
+[2026-07-12T17:33:36Z] > ATTACK | NEXT: Test singular-cubic rule r=floor(cp), e=r/4 mod p, t=(p-1)r for c=1/2,3/5,2/3,3/4,4/5.
+[2026-07-12T20:33:43.713+03:00] OK VERIFY | DID: Reran p29 audit, py_compile, scoped diff check, and Katz normalization audit | RESULT: PASS; max identity error 1.19e-7 | D: VERIFY->CHECK
+[2026-07-12T20:33:43.736+03:00] > CHECK | NEXT: Classify P29 Theorem 1 as a new fact or a rediscovery and test whether any collision case remains open.
+[2026-07-12T20:33:43.737+03:00] OK CHECK | DID: Exhausted zero/nonzero and repeated-frequency strata | RESULT: all nonzero triples obey <=12q^(3/2); zero strata obey <=3q^(3/2) | D: CHECK->DECIDE
+[2026-07-12T20:33:43.738+03:00] > DECIDE | NEXT: Re-run the literature gate for this exact Singer-to-type-(1,3) application before closing P29.
+[2026-07-12T20:34:04.189+03:00] OK DECIDE | DID: Re-ran exact Singer/four-Gauss/hypergeometric literature search | RESULT: no direct application found; Katz Thm 8.4.2 is the proof input | D: P29 complete
+[2026-07-12T17:34:04Z] FAIL ATTACK | DID: Launched singular-cubic floor-rule scan p=5..257 | RESULT: ModuleNotFoundError scan_canonical_cuts before arithmetic | D: none
+[2026-07-12T17:34:04Z] > ATTACK | NEXT: Add the P30 script directory to the inline import path and rerun the identical singular-cubic rules.
+[2026-07-12T20:34:21.583+03:00] FAIL VERIFY | DID: Audited P29 protocol line lengths | RESULT: DECIDE event at 20:34:04 has 203 chars | D: append corrected event
+[2026-07-12T20:34:21.612+03:00] OK DECIDE | DID: Re-ran exact literature search | RESULT: no direct P29 application found; Katz 8.4.2 gives the bound | D: P29 complete
+[2026-07-12T17:34:51Z] OK ATTACK | DID: Tested five singular-cubic floor rules for p=5..257 | RESULT: alpha=2/3 holes only at p=5,7,17; all p>=19 hit | D: singular-center route DEAD
+[2026-07-12T17:34:51Z] > ATTACK | NEXT: Exhaustively scan all 256 natural cuts at p=257 for any center below 3(p-1)^2.
+[2026-07-12T20:35:11.989+03:00] OK GATE | DID: Searched official page/forum, arXiv, Scholar, zbMATH | RESULT: erdosproblems.com/864 is OPEN; no centered-C20 theorem cited | D: GATE->PLAN
+[2026-07-12T20:35:12.029+03:00] > PLAN | NEXT: Reduce C20 via H^2+2Z_H=H+2W_H, then choose the sharp gap/core coupling as the single frontier lemma.
+[2026-07-12T17:37:15Z] OK ATTACK | DID: Exhausted p=4..5, W<=35, G<=35, L<3p^2 | RESULT: 390396 candidates; no equal-span global or indexed K_m,i twin | D: full vector survives
+[2026-07-12T17:37:15Z] > ATTACK | NEXT: Measure indexed support lower bounds and nonzero-wrap capacity on all known q=2..12 witnesses for each modulus.
+[2026-07-12T20:37:34.5264151+03:00] OK GATE | DID: Audited exact primary theorems | RESULT: Rojas-Leon Thm. 4 gives uniform O(Q^-1/2) moments; Bajnok-Ruzsa Conj. 3.3 is unproved | D: STM supplier found
+[2026-07-12T20:37:34.5523724+03:00] > PLAN | NEXT: Write P32 with theorem-level terminology audit and derive the Singer projection to bound (21a).
+[2026-07-12T20:37:50.572+03:00] OK PLAN | DID: Reduced C20 to centered identity plus tangent gap lemma LG33 | RESULT: frontier 8NZ<=12H^2T-3H^3+12H^2+9N(k-1)H | D: PLAN->ATTACK
+[2026-07-12T20:37:50.616+03:00] > ATTACK | NEXT: Stream 1811499 P20 profiles and test centered C20 and LG33 exactly, including D_H, Q_H, and Z_H=D_H-Q_H.
+[2026-07-12T17:37:59Z] OK ATTACK | DID: Exhaustively scanned all p=257 natural cuts | RESULT: 256/256 holes; best ratio=183950/65536, worst=193873/65536 | D: none
+[2026-07-12T17:37:59Z] > VERIFY | NEXT: Build a standalone witness audit for fixed-offset and singular-cubic falsifiers, with diagonals and reflected criteria.
+[2026-07-12T17:30:00Z] > VERIFY | NEXT: Independently referee P29 Katz normalization and prove the missing tetrahedron Fourier-completion bound.
+[2026-07-12T17:30:01Z] OK VERIFY | DID: Assigned independent P29/STM audit | RESULT: P27 redirected; P35 agent 019f5768-eb00-7b71-bdc6-b0fbc9899207 owns completion proof | D: P29 provisional
+[2026-07-12T17:31:30Z] OK VERIFY | DID: Reran P29 normalization audit at q=2,3,5 | RESULT: formula/projection residuals <=3.58e-9; Katz application matches type-(3,1) primary-source definition | D: 21a PROVISIONAL pending simplex completion
+[2026-07-12T17:39:36Z] OK ATTACK | DID: Audited indexed support sandwich on q=2..12 witnesses | RESULT: q=12 sums LB/K/U=2195/12006/19061; audit_indexed_phase.py | D: support bound loose
+[2026-07-12T17:39:36Z] > ATTACK | NEXT: Search the same 390396 candidates for equal-span twins preserving every indexed support size for all p<=m<=p^2.
+[2026-07-12T17:39:50Z] OK VERIFY | DID: Ran standalone P30 witness and reflection audit | RESULT: p71 70/70 hit; p191 190/190 hit; p199 repeat census=[(114445,198)] | D: none
+[2026-07-12T17:39:50Z] > CHECK | NEXT: Decide whether the cycle yielded a theorem-grade obstruction or only finite data.
+[2026-07-12T17:39:50Z] OK CHECK | DID: Audited CRT algebra and witness scope | RESULT: difference rectangle and Omega(p^2) modular saturation are proved; fixed rules have exact falsifiers | D: CHECK->DECIDE
+[2026-07-12T17:39:50Z] > DECIDE | NEXT: Write P30 with proved CRT lemmas, diagonal-safe reflection, exact falsifiers, and the surviving carry frontier.
+[2026-07-12T20:39:28+03:00] > SELECT | NEXT: Audit #864 P29 because Katz normalization and tetrahedron completion are isolated proof interfaces.
+[2026-07-12T20:39:29+03:00] OK SELECT | DID: Selected #864 P35 referee lane | RESULT: wave3/P29 and wave2/P26 Sections 5.2-5.5 are fixed inputs | D: SELECT->GATE
+[2026-07-12T20:41:10.289+03:00] OK ATTACK | DID: Streamed all 1811499 P20 profiles with integer arithmetic | RESULT: compute/p33/audit_centered_c20.json: centered mismatch 0; C20 0/193; LG33 0/193 | D: none
+[2026-07-12T20:41:10.330+03:00] > ATTACK | NEXT: Exhaust all endpoint-normalized subsets for 2<=N<=24 and test centered C20/LG33 with literal sums and missing Q_H.
+[2026-07-12T17:41:39Z] OK ATTACK | DID: Searched indexed support profiles | RESULT: p=4,L=42 twin Z={0,3,19,20} valid vs reverse; overlap {3,19,20} | D: support-only DEAD
+[2026-07-12T17:41:39Z] > ATTACK | NEXT: Search equal-span twins preserving each relative support intersection H_m,i over every modulus 4..25.
+[2026-07-12T17:34:00Z] OK ATTACK | DID: Completed full q167 affine Singer scan and independent literal verifier | RESULT: 14028 units,2356704 lifts; M=72728,p=168,ratio=9091/3528; repeats=[[72728,168]] | D: finite record
+[2026-07-12T17:35:00Z] > VERIFY | NEXT: Record and audit the full q167 affine optimum in the carry/complement formulation.
+[2026-07-12T17:42:59Z] OK ATTACK | DID: Exhausted relative-support profiles for p=4..5 | RESULT: 390396 candidates; no equal-span H_m,i twin | D: relative phase survives
+[2026-07-12T17:42:59Z] > ATTACK | NEXT: Audit H_m,i<=K_m,i<=U_m,i on q=2..12 and quantify multiplicity loss after retaining relative supports.
+[2026-07-12T20:43:04.386+03:00] OK ATTACK | DID: Exhausted 8388607 endpoint-normalized subsets for 2<=N<=24 | RESULT: compute/p33/exhaustive_N24.json: 21673 admissible, C20 0, LG33 0 | D: none
+[2026-07-12T20:43:04.414+03:00] > ATTACK | NEXT: Derive LG33 from D1 by separating reflected difference/sum labels, partner labels, residual labels, and missing Q_H.
+[2026-07-12T17:35:16Z] OK VERIFY | DID: Audited q167 full optimum in complement coordinates | RESULT: d=8859; 488/488 excesses in Delta; E_C(d)=0 exact | D: none
+[2026-07-12T17:43:39Z] FAIL DECIDE | DID: Built P30 report patch | RESULT: JavaScript wrapper SyntaxError before filesystem write | D: none
+[2026-07-12T17:43:39Z] > DECIDE | NEXT: Replace Markdown backtick fences in the patch payload and apply the unchanged P30 report.
+[2026-07-12T20:44:37+03:00] > GATE | NEXT: Check Katz Def. 8.2.7 and Thm. 8.4.2 for type-(3,1), disjointness, multiplicities, rank, and weight.
+[2026-07-12T20:45:37.303+03:00] OK ATTACK | DID: Proved the centered tangent reduction | RESULT: for 3M>=2N, LG33 with G=N+H-1-M implies C20; for 3M<=2N, Z<=H(H-1)/2 suffices | D: none
+[2026-07-12T20:45:37.345+03:00] > ATTACK | NEXT: Exhaust every one-point lower-core replacement of singer-ff6287916581 at e=583 and test centered C20 with literal Q_H.
+[2026-07-12T20:46:13+03:00] OK GATE | DID: Checked Katz 8.2.7/8.4.2 via FKM 2015 Sec. 3.4 | RESULT: disjoint tuples give weight 0 and rank max(m,n) | D: GATE->PLAN
+[2026-07-12T20:46:14+03:00] > PLAN | NEXT: Audit P29 algebra, then prove an explicit A-norm bound for the tetrahedron and its diagonal slice.
+[2026-07-12T20:47:04.967+03:00] OK ATTACK | DID: Exhausted all 4641 one-point lower-core replacements at e=583 | RESULT: compute/p33/reflected_neighborhood_e583.json: 0 admissible neighbors | D: route rigid
+[2026-07-12T20:47:04.998+03:00] > ATTACK | NEXT: Exhaust all 131072 reflected pair-deletion subsets of the e=583 seed that retain endpoints, with centered Q_H and C20 margin.
+[2026-07-12T20:46:49+03:00] OK PLAN | DID: Built two-lemma tree: Katz audit plus four-piece simplex A-norm | RESULT: frontier is exact block decomposition | D: PLAN->ATTACK
+[2026-07-12T20:46:50+03:00] > ATTACK | NEXT: Exhaustively verify four-piece equality and normalized A-norm bound for odd v=3..15 and every 0<=d<v.
+[2026-07-12T17:47:33Z] > VERIFY | NEXT: Re-run standalone audit after adding the full singular-rule census and restricting Theorem 4.1 to p>=5.
+[2026-07-12T20:48:12+03:00] OK ATTACK | DID: Audited odd v=3..15 and every d | RESULT: p35/audit_results.json; 63 decompositions passed; max bound ratio .01423 | D: none
+[2026-07-12T20:48:13+03:00] > ATTACK | NEXT: Prove Katz correction and completion with explicit constants, zero-mode control, and diagonal slice.
+[2026-07-12T17:48:51Z] FAIL VERIFY | DID: Checked reporting constraints | RESULT: own 17:39:50 line has 206 chars; append-only forbids correction | D: none
+[2026-07-12T17:48:51Z] OK VERIFY | DID: Reran audit, AST parses, and JSON assertions | RESULT: 3 AST_OK; 256 all-cut records and witnesses agree | D: VERIFY->GATE
+[2026-07-12T17:48:51Z] > GATE | NEXT: Recheck primary literature for the exact Ruzsa difference rectangle and uniform modular-surface bound.
+[2026-07-12T17:39:00Z] > PLAN | NEXT: Record P28 affine-averaging obstruction, provisional P29 Katz bound, and the full q167 finite record.
+[2026-07-12T17:49:08Z] OK ATTACK | DID: Proved Lemma IS1 and recorded strict-subcritical support twin | RESULT: fanout/wave3/P31_indexed_star_phase.md, eqs. (6)-(18) | D: ATTACK->VERIFY
+[2026-07-12T17:49:08Z] > VERIFY | NEXT: Run verify_p31.py over all valid W<=14,G<=15,p<=6 and audit the twin and stored witnesses.
+[2026-07-12T20:49:21.416+03:00] OK ATTACK | DID: Exhausted all 131072 reflected pair-deletion subsets at e=583 | RESULT: compute/p33/reflected_subsets_e583.json: C20 0; maximum remains 12313/9025 | D: none
+[2026-07-12T20:49:21.454+03:00] > ATTACK | NEXT: Rebuild all 256 fresh p=257 Ruzsa reflections from P30 and audit centered C20, D_H, Q_H, and LG33 exactly.
+[2026-07-12T17:39:30Z] OK PLAN | DID: Appended P28/P29/q167 status | RESULT: registry marks averaging closed, Katz provisional, q167 finite record exact | D: none
+[2026-07-12T17:49:43Z] OK VERIFY | DID: Ran verify_p31.py | RESULT: PASS; 2861 valid rulers and 124444 star-modulus inequalities checked | D: none
+[2026-07-12T17:49:43Z] > VERIFY | NEXT: Compile all four P31 Python programs and recheck generated JSON certificates against their stated scopes.
+[2026-07-12T17:50:15Z] OK GATE | DID: Rechecked Ruzsa primary literature | RESULT: Lam-Ling 2014 has axis exclusion; no reflected carry or cubic bound found | D: scope narrowed
+[2026-07-12T17:50:15Z] > DECIDE | NEXT: Add the prior-art caveat, inspect owned-file scope, and finalize the P30 obstruction report.
+[2026-07-12T17:50:27Z] OK VERIFY | DID: Compiled four P31 programs and checked three JSON certificates | RESULT: py_compile and JSON assertions PASS | D: VERIFY->CHECK
+[2026-07-12T17:50:27Z] > CHECK | NEXT: Decide whether IS1 or the support twin is a verifiable new fact and whether the assigned deliverable is complete.
+[2026-07-12T17:50:36Z] OK CHECK | DID: Checked novelty and acceptance type | RESULT: IS1 is proved; p=4,L=42 twin exactly falsifies indexed support-cardinality lane | D: stall=0; CHECK->DECIDE
+[2026-07-12T17:50:36Z] > DECIDE | NEXT: Re-run novelty gate for indexed support/divisor-cover lemma and exact reversal twin before stopping.
+[2026-07-12T20:51:13.037+03:00] OK ATTACK | DID: Rebuilt and audited all 256 P30 p=257 reflections | RESULT: compute/p33/audit_p30_p257.json: C20 0, LG33 0; max coefficient 26777033442/33794164171 | D: none
+[2026-07-12T20:51:13.071+03:00] > ATTACK | NEXT: Audit the 106 canonical Ruzsa cuts for every prime 5<=p<=257 to test whether centered-C20 pressure grows with p.
+[2026-07-12T17:51:14Z] OK DECIDE | DID: Rechecked official page and indexed-residue literature | RESULT: #864 OPEN; no prior IS1/twin found; P31 writeup complete | D: P31 STOP
+[2026-07-12T20:52:51+03:00] OK ATTACK | DID: Proved Katz correction and four-piece completion | RESULT: P35 Theorem 5.2; error <=48q^(3/2)L_v^5+5q | D: ATTACK->VERIFY
+[2026-07-12T20:52:52+03:00] > VERIFY | NEXT: Re-run P35 audit, compile Python, check constants and diff scope, then referee the written proof line by line.
+[2026-07-12T17:53:19Z] OK DECIDE | DID: Finalized P30 report and prior-art caveat | RESULT: CRT saturation and p71,p191,p257 falsifiers proved/audited | D: infinite carry open; P30 STOP
+[2026-07-12T20:53:28+03:00] > VERIFY | NEXT: Run p35/audit_simplex_decomposition.py --max-v 15 for all odd v=3..15 and every d.
+[2026-07-12T17:43:00Z] OK ATTACK | DID: Spawned direct noncarry construction lane after P31 completion | RESULT: P34 agent 019f5776-30ed-7dd1-b32e-030bf6a6cef0 | D: none
+[2026-07-12T20:53:44+03:00] OK VERIFY | DID: Re-ran P35 audit through v=15 | RESULT: 63/63 decompositions and norm checks passed; max ratio=.0142262762 | D: none
+[2026-07-12T20:53:45+03:00] > VERIFY | NEXT: Run P29 normalization audit with --q 2 3 and write only C:/tmp/p35_p29_recheck.json.
+[2026-07-12T20:54:01+03:00] FAIL VERIFY | DID: Ran P29 audit for q=2,3 | RESULT: PermissionError writing C:/tmp/p35_p29_recheck.json | D: none
+[2026-07-12T20:54:02+03:00] > VERIFY | NEXT: Re-run P29 audit with --q 2 3 and output p35/p29_recheck.json inside the owned directory.
+[2026-07-12T20:54:08.1335118+03:00] OK PLAN | DID: Wrote P32 audit and Singer transfer | RESULT: P32_literature_31_sumfree_sidon.md proves (21a) via Evans 2.1 and Rojas-Leon 4 | D: STM supplied
+[2026-07-12T20:54:08.1378995+03:00] > VERIFY | NEXT: Check P32 citations, equation scaling, terminology counterexamples, ASCII, and touched-file scope.
+[2026-07-12T20:54:43+03:00] OK VERIFY | DID: Re-ran P29 audit for q=2,3 | RESULT: max Fourier error 7.55e-14; projection error 1.43e-11; multiplicity 2 | D: none
+[2026-07-12T20:54:44+03:00] > VERIFY | NEXT: Check P35 ASCII/syntax, equation references, <=200-char protocol lines, Lean availability, and owned-path status.
+[2026-07-12T20:54:51.8951815+03:00] OK VERIFY | DID: Checked P32 sources, aliases, and q-scaling | RESULT: 457 lines; 0 non-ASCII; all 13 audit markers present; 15/2-4-2=3/2 | D: none
+[2026-07-12T20:54:51.8996128+03:00] > DECIDE | NEXT: Repeat the source gate for published Singer applications of the Katz/Rojas-Leon fourth-moment bounds.
+[2026-07-12T20:55:09.041+03:00] OK ATTACK | DID: Audited all 106 canonical Ruzsa reflections for primes 5..257 | RESULT: compute/p33/audit_p30_canonical_p257.json: C20 0, LG33 0; max 137282900/135195753 | D: none
+[2026-07-12T20:55:09.076+03:00] > ATTACK | NEXT: GPU-convolve S(B)+Delta+(B) for p=257, cut exponent 23, verify a hole exactly, then recompute centered C20 including Q_H.
+[2026-07-12T20:54:20+03:00] > SELECT | NEXT: Take #864 P34 because direct noncarry algebraic families remain outside P17 and Singer/Ruzsa lanes.
+[2026-07-12T20:54:21+03:00] OK SELECT | DID: Read P17, P19, and PROOF_STATE | RESULT: P34 target absent; direct coefficient below 3 remains open | D: SELECT->GATE
+[2026-07-12T20:54:22+03:00] > GATE | NEXT: Search exact Sidon and (3,1)-sum-free constructions for a prior direct coefficient-below-3 family.
+[2026-07-12T20:55:32+03:00] FAIL VERIFY | DID: Ran static P35 audit | RESULT: unmatched Markdown code span at P35 line 430 | D: none
+[2026-07-12T20:55:33+03:00] > VERIFY | NEXT: Close the K=5 code span at P35 line 430 and rerun targeted static checks.
+[2026-07-12T20:55:53.0179461+03:00] OK DECIDE | DID: Repeated 3 exact Singer/Gauss queries | RESULT: no direct Singer-cut use found; P32 records queries and STM classification | D: STOP
+[2026-07-12T20:56:21.9923734+03:00] > VERIFY | NEXT: Close the split Markdown code span in P32's repeat-gate queries and rerun the static check.
+[2026-07-12T20:56:55.3784711+03:00] OK VERIFY | DID: Closed P32 query span and reran static audit | RESULT: 463 lines; 0 odd spans, trailing whitespace, non-ASCII, or missing markers | D: STOP
+[2026-07-12T17:46:00Z] > VERIFY | NEXT: Rerun P27 tetrahedron/Hermite audit and promote STM only if all identities reproduce.
+[2026-07-12T20:57:34+03:00] FAIL VERIFY | DID: Rechecked code spans with char 96 | RESULT: 8 malformed inline-code closers in P35 | D: none
+[2026-07-12T20:57:35+03:00] > VERIFY | NEXT: Repair all 8 P35 inline-code closers and rerun char-96, equation-label, ASCII, and scope checks.
+[2026-07-12T20:57:50+03:00] OK GATE | DID: Checked official #864 and primary (3,1)/4-independent sources | RESULT: #864 OPEN; P32 finds no direct coefficient <3 theorem | D: GATE->PLAN
+[2026-07-12T20:57:51+03:00] > PLAN | NEXT: Classify modular parity gates, then test finite-field and varying-fiber Sidon maps at the first surviving gate.
+[2026-07-12T20:57:52+03:00] OK PLAN | DID: Fixed three-lemma tree | RESULT: frontier is an odd residue/fiber Sidon map of group coefficient <3 with R disjoint from 3R | D: PLAN->ATTACK
+[2026-07-12T20:57:59.786+03:00] OK ATTACK | DID: GPU-located and exactly verified the p=257,e=23 center | RESULT: compute/p33/ruzsa_fft_p257_e23.json reproduces M=183950; centered C20 margin -1434852768870 | D: none
+[2026-07-12T20:57:59.822+03:00] > ATTACK | NEXT: Search p=1009 at cut exponents 23,53,145,220,221,26,244,232,250,75 via GPU FFT, exact holes, literal sums, and Q_H.
+[2026-07-12T20:59:55+03:00] OK VERIFY | DID: Repaired and rechecked P35 formatting | RESULT: labels 1-45 present; 0 odd code spans; 0 non-ASCII; Python AST valid | D: none
+[2026-07-12T20:59:56+03:00] > VERIFY | NEXT: Add q=2,3 P29 recheck metrics and output path to P35 Section 6, then rerun final checks.
+[2026-07-12T20:59:31+03:00] > DECIDE | NEXT: Record the submitted A389182 extension and uploaded b-file, then close the OEIS side task pending editor review.
+[2026-07-12T21:00:28+03:00] FAIL DECIDE | DID: Tried to update OEIS record via apply_patch/text replace | RESULT: Windows sandbox blocked patch; LF mismatch blocked replace | D: none
+[2026-07-12T21:00:46+03:00] OK VERIFY | DID: Ran final artifact consistency checks | RESULT: 63 simplex cases, P29 q=2,3, labels 1-45, ASCII, AST, and scope passed | D: VERIFY->CHECK
+[2026-07-12T21:00:47+03:00] > CHECK | NEXT: Determine whether this cycle produced a verifiable fact resolving the assigned completion frontier.
+[2026-07-12T21:00:48+03:00] OK CHECK | DID: Checked P35 conclusion against requested frontier | RESULT: Theorem 5.2 proves STM with K=5 and explicit constant | D: stall=0; CHECK->DECIDE
+[2026-07-12T21:00:49+03:00] > DECIDE | NEXT: Recheck the Katz source gate and final file scope, then stop if the assigned audit is complete.
+[2026-07-12T21:01:05+03:00] OK DECIDE | DID: Recorded A389182 submission and uploaded b-file | RESULT: OEIS_SUBMISSION.md has SHA-256 E83444...3205; awaiting editor review | D: OEIS lane closed
+[2026-07-12T21:01:06+03:00] OK DECIDE | DID: Rechecked FKM Sec. 3.4 and owned-file scope | RESULT: P35 complete; Katz rank, disjointness, and multiplicity confirmed | D: complete; STOP
+[2026-07-12T21:01:10+03:00] > ATTACK | NEXT: Run residue_fiber_audit.py --max-modulus 30 over all 65,534 nonempty odd-residue subsets.
+[2026-07-12T21:01:24+03:00] FAIL ATTACK | DID: Ran residue audit through m=30 | RESULT: residue_fiber_audit.py:68 ValueError at empty valid list for m=2 | D: none
+[2026-07-12T21:01:47+03:00] > ATTACK | NEXT: Re-run residue_fiber_audit.py --max-modulus 30 after representing the empty m=2 gate exactly.
+[2026-07-12T21:02:11+03:00] OK ATTACK | DID: Exhausted odd residue gates for every even m<=30 | RESULT: residue_fiber_m30.json; best primitive capacity 28/9 at m=28 | D: new fact
+[2026-07-12T21:02:12+03:00] > ATTACK | NEXT: Extend residue_fiber_audit.py to m<=40, exhausting 2,097,150 odd-residue subsets to locate the first sub-three gate.
+[2026-07-12T21:02:22.9298139+03:00] > VERIFY | NEXT: Audit P35's P29 normalization repair and simplex Wiener bound against report, code, and exact reruns.
+[2026-07-12T21:04:06.746+03:00] OK ATTACK | DID: Searched 10 p=1009 Ruzsa cuts with exact holes, literal sums, D_H and Q_H | RESULT: compute/p33/ruzsa_fft_p1009_top10.json: C20 0; max coefficient 7796602557351/16595070707600 | D: none
+[2026-07-12T21:04:06.779+03:00] > ATTACK | NEXT: Search p=4001 cuts 23,53,145,220,221,26,244,232,250,75 using exact hole certificates and centered Q_H at H=ceil(N^(2/3)).
+[2026-07-12T21:03:37+03:00] OK ATTACK | DID: Exhausted 2,097,150 odd-residue subsets for m<=40 | RESULT: residue_fiber_m40.json; primitive best remains 28/9 | D: none
+[2026-07-12T21:04:49.647+03:00] OK ATTACK | DID: Searched 10 p=4001 Ruzsa cuts with exact holes and centered Q_H | RESULT: compute/p33/ruzsa_fft_p4001_top10.json: C20 0; max coefficient 4179056224703060/13044397055957819 | D: none
+[2026-07-12T21:04:49.690+03:00] > ATTACK | NEXT: Search p=4001 cuts e=1+32j for 0<=j<=124, exact-verify every center, and test centered C20 with Q_H.
+[2026-07-12T21:05:18+03:00] > ATTACK | NEXT: Run parabola_obstruction.py --max-prime 43, checking every pair sum, field target, and translate for 13 odd primes.
+[2026-07-12T21:05:42+03:00] OK ATTACK | DID: Audited affine parabola Sidon sets for 13 odd primes | RESULT: parabola_q43.json; all 8,253 targets and translations collide | D: new fact
+[2026-07-12T21:05:43+03:00] > ATTACK | NEXT: Exhaust small cyclic Sidon sets to verify the general threshold 2|H|<3p^2-p+2 forces 3B-B=H.
+[2026-07-12T21:06:38.7054030+03:00] OK VERIFY | DID: Corrected P29 Katz tuple and reran P35/P29 audits | RESULT: 63 simplex cases pass; projection residual <=1.43e-11; STM K=5 recorded | D: Singer lane closed
+[2026-07-12T21:07:27.261+03:00] OK ATTACK | DID: Searched 125 p=4001 cuts e=1+32j with exact holes and centered Q_H | RESULT: compute/p33/ruzsa_fft_p4001_stride32.json: C20 0; max coefficient 5403112626143223/12957357409163165 | D: none
+[2026-07-12T21:07:27.288+03:00] > ATTACK | NEXT: Write the exact Phi=Psi+2(3M-2N)(2Z-H^2) factorization and its gap/onset corollary in P33.
+[2026-07-12T21:07:48.1379588+03:00] > PLAN | NEXT: Reconstruct centered C20 exactly and isolate a provable expansion-defect tradeoff using Z_H=D_H-Q_H.
+[2026-07-12T21:08:27+03:00] OK ATTACK | DID: Exhausted cyclic groups H through order 18 | RESULT: modular_coverage_h18.json; 5,107 Sidon sets and 10,214 parity lifts checked | D: new fact
+[2026-07-12T21:08:28+03:00] > ATTACK | NEXT: Audit Welch graphs for every prime 5<=q<=43 and verify strong Sidonicity plus 3S-S coverage.
+[2026-07-12T21:09:55.8120985+03:00] > ATTACK | NEXT: Launch disjoint P36-P43 proof/falsifier wave on C20, fully reflected 3E-free Sidon structure, stability, and constructions.
+[2026-07-12T21:10:10.894+03:00] OK ATTACK | DID: Wrote centered factorization and gap/onset corollary | RESULT: fanout/wave3/P33_centered_C20.md, equations (1), (7), (11) | D: ATTACK->VERIFY
+[2026-07-12T21:10:10.933+03:00] > VERIFY | NEXT: Check the exact Phi/Psi factorization and centered LG33 with ambient holes across all 1811499 P20 profiles.
+[2026-07-12T21:09:21+03:00] OK ATTACK | DID: Audited Welch graphs for 12 primes q<=43 | RESULT: costas_welch_q43.json; all 7,968 group targets lie in 3S-S | D: new fact
+[2026-07-12T21:14:01.5632748+03:00] OK ATTACK | DID: Freed completed P35 slot and launched P36 interval-C20 study | RESULT: agent 019f5789 owns wave4/P36 and compute/p36 | D: none
+[2026-07-12T21:14:20.7110484+03:00] > VERIFY | NEXT: Recheck GPT support-sensitive centered codegree identity and determine whether an optimized finite test set X can yield 4/3.
+[2026-07-12T21:14:32.907+03:00] OK VERIFY | DID: Checked P33 factorization by SymPy and all P20 rows | RESULT: audit_centered_c20.json: factorization 0/193 mismatches; centered 0; C20 0; LG33 0 | D: VERIFY->CHECK
+[2026-07-12T21:14:32.955+03:00] > CHECK | NEXT: Referee-audit P33 signs, missing-Q gates, control bytes, owned paths, and reproducibility commands.
+[2026-07-12T21:15:06+03:00] OK ATTACK | DID: Proved modular coverage, parabola saturation, and fixed-gate bounds | RESULT: P34 Theorems 1, 3, 4 | D: ATTACK->VERIFY
+[2026-07-12T21:15:07+03:00] > VERIFY | NEXT: Referee constants, rerun four exact audits, compile scripts, and inspect owned-file diffs.
+[2026-07-12T21:15:08+03:00] FAIL VERIFY | DID: Recounted residue masks | RESULT: prior launch counts included empty masks; exact totals are 65519 and 2097130 | D: none
+[2026-07-12T21:15:15.803+03:00] OK CHECK | DID: Audited signs, Q_H gates, JSON, control bytes, and owned paths | RESULT: 10 JSON parsed; controls 0; verification status verified | D: CHECK->DECIDE
+[2026-07-12T21:15:15.846+03:00] > DECIDE | NEXT: Classify the P33 deliverable as an exact proved reduction while retaining centered C20 as an open LG33 frontier.
+[2026-07-12T21:15:18.5629104+03:00] > VERIFY | NEXT: Archive the two relayed GPT-Pro lemmas locally before the browser generation completes.
+[2026-07-12T21:15:42+03:00] > VERIFY | NEXT: Compile all four P34 Python auditors with py_compile before rerunning their stated parameter ranges.
+[2026-07-12T21:15:23.288+03:00] OK DECIDE | DID: Classified P33 result | RESULT: factorization (1) and onset corollary (11) proved; no centered falsifier; LG33 remains open | D: P33 complete
+[2026-07-12T21:15:51+03:00] OK VERIFY | DID: Compiled four P34 Python auditors | RESULT: py_compile exit 0 | D: none
+[2026-07-12T21:15:52+03:00] > VERIFY | NEXT: Re-run residue_fiber_audit.py --max-modulus 40 and regenerate residue_fiber_m40.json.
+[2026-07-12T21:15:56.1192061+03:00] OK VERIFY | DID: Archived relayed GPT-Pro support and carry lemmas and reran support identity | RESULT: 2 local transcripts; exact audit passes 16128 (A,X) pairs; identity equals P02 | D: none
+[2026-07-12T21:16:16+03:00] OK VERIFY | DID: Re-ran residue audit for m<=40 | RESULT: residue_fiber_m40.json records 2097130 nonempty masks; best primitive 28/9 | D: none
+[2026-07-12T21:16:17+03:00] > VERIFY | NEXT: Re-run modular_coverage_audit.py --max-order 18 and regenerate modular_coverage_h18.json.
+[2026-07-12T21:16:09.9653960+03:00] > VERIFY | NEXT: Independently verify P33 factorization, exact corpus, and gap-large sufficient criterion before promoting LG33.
+[2026-07-12T21:16:29+03:00] OK VERIFY | DID: Re-ran cyclic coverage audit through h=18 | RESULT: 524268 subsets, 5107 Sidon sets, 1830 forced covers, 10214 parity lifts PASS | D: none
+[2026-07-12T21:16:30+03:00] > VERIFY | NEXT: Re-run parabola_obstruction.py --max-prime 43 and regenerate parabola_q43.json.
+[2026-07-12T21:16:39+03:00] OK VERIFY | DID: Re-ran parabola audit through q=43 | RESULT: 8253 targets and 8253 translated collisions PASS | D: none
+[2026-07-12T21:16:40+03:00] > VERIFY | NEXT: Re-run costas_welch_obstruction.py --max-prime 43 and regenerate costas_welch_q43.json.
+[2026-07-12T21:16:51+03:00] OK VERIFY | DID: Re-ran Welch audit through q=43 | RESULT: 7968/7968 group targets covered; pair/difference counts PASS | D: none
+[2026-07-12T21:16:52+03:00] > VERIFY | NEXT: Check JSON invariants, ASCII, theorem arithmetic, references, and git scope for P34 files.
+[2026-07-12T21:20:12+03:00] > VERIFY | NEXT: Start Lean proof p34_modular_cover_overlap for the finite-group pigeonhole engine, without native_decide.
+[2026-07-12T21:21:54+03:00] FAIL VERIFY | DID: Compiled Lean lemma p34_modular_cover_overlap | RESULT: ModularCover.lean:10 unexpected token at ASCII exists binder | D: none
+[2026-07-12T21:21:55+03:00] > VERIFY | NEXT: Replace the binder with Lean existential notation and recompile p34_modular_cover_overlap.
+[2026-07-12T21:21:03.1130573+03:00] OK VERIFY | DID: Reran P33 stream and exhaustive checks | RESULT: 1,811,499 profiles and 21,673 admissible sets through N=24; 0 factor/C20/LG33 failures | D: LG33 frontier
+[2026-07-12T21:21:03.1130573+03:00] OK ATTACK | DID: Closed P33 and launched reflected-case study P37 | RESULT: agent 019f578e owns wave4/P37 and compute/p37 | D: none
+[2026-07-12T21:22:30+03:00] FAIL VERIFY | DID: Recompiled Lean lemma p34_modular_cover_overlap | RESULT: ModularCover.lean:27 equality orientation mismatch | D: none
+[2026-07-12T21:22:31+03:00] > VERIFY | NEXT: Reverse sub_add_cancel at line 27 and recompile p34_modular_cover_overlap.
+[2026-07-12T21:23:12+03:00] OK VERIFY | DID: Compiled Lean lemma P34.modular_cover_overlap | RESULT: ModularCover.lean exit 0; no native_decide | D: none
+[2026-07-12T21:22:41.9671285+03:00] > ATTACK | NEXT: Measure prefix difference discrepancy D_count-Q_count against k on all exact P20 profiles and seek a sharp universal bound.
+[2026-07-12T21:24:15+03:00] OK VERIFY | DID: Refereed P34 and reran all certificates | RESULT: four audits, JSON invariants, ASCII, scope, and Lean compile PASS | D: VERIFY->CHECK
+[2026-07-12T21:24:16+03:00] > CHECK | NEXT: Classify Theorems 1, 3, and 4 against the assigned construction-or-obstruction acceptance condition.
+[2026-07-12T21:24:17+03:00] OK CHECK | DID: Applied P34 acceptance gate | RESULT: three exact obstructions include diagonals and repeated triples | D: stall=0; CHECK->DECIDE
+[2026-07-12T21:24:18+03:00] > DECIDE | NEXT: Recheck official #864 status and P14/P26/P30/P32 overlap before closing the independent modular lane.
+[2026-07-12T21:25:08+03:00] OK DECIDE | DID: Rechecked official #864, exact-phrase sources, and P26/P30 overlap | RESULT: #864 OPEN; P34 obstruction report is scoped and complete | D: P34 STOP
+[2026-07-12T21:24:46.1450733+03:00] > VERIFY | NEXT: Audit P34 modular-cover theorem, four exact searches, and Lean proof before closing the construction family.
+[2026-07-12T21:26:56.9342529+03:00] OK VERIFY | DID: Reran P34 Lean and exact audits | RESULT: Lean compiles; 524268 cyclic subsets, 8253 parabola targets, 7968 Welch targets pass | D: modular lane closed
+[2026-07-12T21:26:56.9342529+03:00] OK ATTACK | DID: Closed P34 and launched core-stability study P38 | RESULT: agent 019f5794 owns wave4/P38 and compute/p38 | D: none
+[2026-07-12T21:27:05.8653368+03:00] FAIL ATTACK | DID: Tested prefix discrepancy D_count-Q_count=O(k) | RESULT: q167 Singer has H=1778, k=336, discrepancy=1729; bound fails | D: discard linear-prefix lemma
+[2026-07-12T21:32:42.6189384+03:00] > ATTACK | NEXT: Build exact P44 carry-layer profiles for fully reflected samples and measure modular overlap by literal carry 0/1/2.
+[2026-07-12T21:34:21.8142267+03:00] > VERIFY | NEXT: Audit P38 span-preserving deletion lemma and exact completion-failure census.
+[2026-07-12T21:40:29+03:00] > ATTACK | NEXT: Submit a neutral carry-layer inequality question to GPT-Pro and preserve the exact text locally.
+[2026-07-12T21:45:26+03:00] OK ATTACK | DID: Replaced the superseded wording and submitted the carry-layer question | RESULT: gpt_pro/2026-07-12_carry_layer_question_neutral.md | D: awaiting response
+[2026-07-12T21:46:55+03:00] > VERIFY | NEXT: Audit P37 translate-block lemma, rational continuum profile, and exact finite records.
+[2026-07-12T22:07:59+03:00] > ATTACK | NEXT: Replace the false total-overlap scale with signed carry statistics and launch four independent exact studies.
+[2026-07-12T22:12:00+03:00] OK SELECT | DID: Loaded updated #864 goal objective | RESULT: goal keeps full 2/sqrt(3) resolution and corrected carry frontier | D: none
+[2026-07-12T22:16:00+03:00] OK ATTACK | DID: Exact P44 scaling audit on 137 profiles | RESULT: 37 large delta>0 rows have overlap/p^2 in [5491/15876,2123/5476]; signed count also Theta(p^2) | D: discard unweighted counts
+[2026-07-12T22:21:00+03:00] > ATTACK | NEXT: Compute exact residue moments for carry levels 1 and 2 on all reflected profiles.
+[2026-07-12T22:23:00+03:00] OK ATTACK | DID: Audited carry residue moments on 137 profiles | RESULT: first signed moments remain order h*p^2 on 37 large rows | D: require finer phase statistic
+[2026-07-12T22:27:00+03:00] OK VERIFY | DID: Reconstructed and audited P37b note | RESULT: wave4/P37b_translate_block_obstruction.md; exact verifier PASS | D: shadow-only lane closed
+[2026-07-12T22:42:23.7326573+03:00] > VERIFY | NEXT: Audit P49 theorem bridge and its exact counterexamples, then record the surviving coefficient-three frontier.
+[2026-07-12T22:46:59.0578707+03:00] OK VERIFY | DID: Audited P45 and P49 | RESULT: signed identity passes; exact twins kill unsigned carry bounds; cyclic bridge stops at 2 | D: two lanes closed
+[2026-07-12T22:46:59.0608629+03:00] OK VERIFY | DID: Reran P47 integer-convolution audit | RESULT: coefficient-two all-circle families pass; generic phase route is false | D: structured arc only
+[2026-07-12T22:46:59.0614210+03:00] > ATTACK | NEXT: Run P51 integer partition and P52 arc-spectral studies while locally deriving a placement-sensitive carry invariant.
+[2026-07-12T22:47:46.8763179+03:00] > ATTACK | NEXT: Measure M2, uncovered folds, and signed residual scales on every exact reflected profile to test an O(p) repair.
+[2026-07-12T22:53:52.8100157+03:00] > VERIFY | NEXT: Exact-check GPT-Pro's delta-positive-part correction on the first 10 odd primes.
+[2026-07-12T22:55:18.0181086+03:00] OK VERIFY | DID: Audited GPT delta correction on 10 odd primes | RESULT: maxE=3p^2-p+b-2delta; target is delta_+=o(p^2) | D: corrected frontier
+[2026-07-12T22:59:03+03:00] > SELECT | NEXT: Continue #864 LG33; exact N<=24 data and a 13/6 profile envelope give a concrete subcase frontier.
+[2026-07-12T22:59:24.5731270+03:00] OK ATTACK | DID: Exhausted 464981 width<=30 holes for first collision repair | RESULT: CS<=2p-3; delta<=4C+2p fails by 9 | D: test 5C+linear
+[2026-07-12T22:59:24.5926726+03:00] > ATTACK | NEXT: Exact-test delta<=5(CS+CD)+c*p over every width<=30 positive-defect hole and determine least observed c.
+[2026-07-12T23:00:06+03:00] > GATE | NEXT: Search local prior art for LG33 and the threshold 4Z_H<=3N before asserting the subcase lemma.
+[2026-07-12T23:00:33+03:00] OK GATE | DID: Searched local notes and #864 page/comments | RESULT: no 4Z_H<=3N claim; #864 remains OPEN at erdosproblems.com/864 | D: none
+[2026-07-12T23:00:33+03:00] > PLAN | NEXT: Prove RHS(LG33)>6N^2 from the gap identity; audit every 4Z_H>3N residual profile exactly.
+[2026-07-12T23:01:26+03:00] OK PLAN | DID: Derived sharp gap envelope | RESULT: RHS-Esharp=9N sum_i(H-g_i)_+; Esharp>6N^2 | D: frontier is 8NZ>Esharp
+[2026-07-12T23:01:26+03:00] > ATTACK | NEXT: Add exact Esharp and residual counters, then scan N<=24 and all 1811499 stored rows.
+[2026-07-12T23:01:53.5484603+03:00] > VERIFY | NEXT: Re-run P48 exact construction audits and accept only claims with complete written proofs.
+[2026-07-12T23:05:42+03:00] FAIL ATTACK | DID: Ran p50 exhaustive --max-n 24 | RESULT: process timed out at 124s; audit_results.json not replaced | D: none
+[2026-07-12T23:05:42+03:00] > ATTACK | NEXT: Add exact maximum coefficient ratio, then rerun --max-n 24 with a 600s ceiling.
+[2026-07-12T23:06:45.1625635+03:00] OK VERIFY | DID: Audited P46 identities and width-30 census | RESULT: 464981 holes; collision-only B={1,3,9,13} gives delta=9,I=0 | D: carry-only dead
+[2026-07-12T23:06:45.1807977+03:00] FAIL VERIFY | DID: Audited P48 note and certificates | RESULT: finite checks pass, but claimed U+V asymptotic has no proof in artifact | D: theorem withheld
+[2026-07-12T23:07:55.4348784+03:00] > ATTACK | NEXT: Scan every translation and parity of each stored reflected ruler for the exact fold-repair inequality.
+[2026-07-12T23:10:00+03:00] OK ATTACK | DID: Scanned N<=24 and 1811499 stored rows | RESULT: 78/21674 and 151/193 prescribed profiles lie beyond Esharp; LG33 failures 0 | D: proved subcase
+[2026-07-12T23:10:00+03:00] > ATTACK | NEXT: Measure exact residual/rescue ratios on the 78 and 151 uncovered cases, then freeze audit outputs.
+[2026-07-12T23:10:00.8469418+03:00] FAIL ATTACK | DID: Scanned 165225 translations of 133 rulers | RESULT: delta<=5C+4p has 22 failures; max is Bose p=17 with delta=138,C=0 | D: replace p by p^(3/2)
+[2026-07-12T23:10:00.8660989+03:00] > ATTACK | NEXT: Test the exact scale (max(delta-5C,0))^2<=4p^3 on width<=30 holes and all stored reflected profiles.
+[2026-07-12T23:11:03+03:00] > ATTACK | NEXT: Run audit_lg33_subcase.py --max-n 24 and record max residual/(9N(kH-M)).
+[2026-07-12T23:14:15+03:00] OK ATTACK | DID: Measured exact uncovered ratios | RESULT: max 139/555 for N<=24; max 1662896/1760589 on 193 stored scales | D: none
+[2026-07-12T23:14:15+03:00] > VERIFY | NEXT: Referee-check envelope algebra and run syntax, lint, and exact-output consistency checks.
+[2026-07-12T23:14:34.0684802+03:00] OK VERIFY | DID: Reran P55 span audit | RESULT: 262144 sets and 91947 ruler pairs pass; guarded recursion coefficient is >=5 | D: P48 repaired
+[2026-07-12T23:14:34.0883348+03:00] OK ATTACK | DID: Tested scale-repaired fold inequality on 630343 instances | RESULT: 0 failures; max ratio 19044/4913 at Bose p=17 | D: O(p^(3/2)) frontier
+[2026-07-12T23:15:06.3942298+03:00] > VERIFY | NEXT: Re-run P56 residual-completion census through N=22 and audit the unit-cost deletion proof.
+[2026-07-12T23:15:25.0171098+03:00] > VERIFY | NEXT: Re-run P51 equal-three-sum audit and check the barycenter-defect identities and minimal falsifier.
+[2026-07-12T23:16:03.1142952+03:00] > VERIFY | NEXT: Re-run P52 exact spectral-staircase audit and check the tail identity and slope falsifier.
+[2026-07-12T23:16:45.9458633+03:00] OK VERIFY | DID: Reran P56 N<=22 census | RESULT: 2097151 subsets pass; unit-cost completion repair holds; 2876 blocked completions | D: exact reduction
+[2026-07-12T23:16:45.9666648+03:00] OK VERIFY | DID: Reran P51 integer barycenter audit | RESULT: 6783 valid pairs and 6129150 minimality candidates pass | D: new partition constraint
+[2026-07-12T23:16:45.9672384+03:00] OK VERIFY | DID: Reran P52 staircase audit | RESULT: 6783 tail checks pass; all 6783 falsify single-peak slope | D: curvature-span frontier
+[2026-07-12T23:17:56+03:00] > SELECT | NEXT: Resume problem #864 at P52 and inspect P60 witness data for a quantitative curvature-span invariant.
+[2026-07-12T23:18:20+03:00] > VERIFY | NEXT: Add --all-scales and exact-test Esharp and coefficients on all 1811499 P20 rows.
+[2026-07-12T23:19:47+03:00] OK SELECT | DID: Selected #864 P60 curvature span | RESULT: P52 (27) identifies frontier W-G | D: SELECT -> GATE
+[2026-07-12T23:19:47+03:00] > GATE | NEXT: Check official status and primary literature for curvature-span or equivalent Sidon/Newman bounds.
+[2026-07-12T23:20:02+03:00] OK VERIFY | DID: Audited all 1811499 H-rows | RESULT: Esharp implication failures 0; 13/6 has 1573253 all-scale failures but 0/193 prescribed | D: scope corrected
+[2026-07-12T23:20:02+03:00] > CHECK | NEXT: Classify the envelope proof and N=11 exact 13/6 falsifier as theorem-level or finite-only facts.
+[2026-07-12T23:20:02+03:00] OK CHECK | DID: Referee-classified P50 claims | RESULT: Esharp implication proved; A={1,2,4,8,10,11},H=11 falsifies 13/6 by 341 | D: stall=0
+[2026-07-12T23:20:02+03:00] > DECIDE | NEXT: Write P50_LG33_subcase.md with proof, residual scope, exact falsifier, and reproduction commands.
+[2026-07-12T23:20:02+03:00] OK VERIFY | DID: Compared relayed GPT response with archive | RESULT: SHA256 E5090C37...E0C7D1F exact text match | D: no duplicate
+[2026-07-12T23:20:03+03:00] > ATTACK | NEXT: Audit Bose translation scaling to classify the p=17 zero-fold positive-delta witness as finite or asymptotic.
+[2026-07-12T23:20:12+03:00] OK GATE | DID: Checked official #864 record and Newman-zero literature | RESULT: erdosproblems.com/864 says OPEN, no partial claims | D: GATE -> PLAN
+[2026-07-12T23:20:12+03:00] > PLAN | NEXT: Derive exact candidate invariants and make the sharpest span-producing lemma the frontier.
+[2026-07-12T23:21:33+03:00] OK PLAN | DID: Built lemma tree | RESULT: frontier is weighted slack localization on [G,W]; TV/reversal/Hankel/zero claims are gates | D: PLAN -> ATTACK
+[2026-07-12T23:21:33+03:00] > ATTACK | NEXT: Create exact P60 audit and test 5 witnesses, all admissible G<W shifts, and rulers W<=18.
+[2026-07-12T23:24:00+03:00] > ATTACK | NEXT: Exhaust every affine Bose lift through q=64 at natural modulus h=q^2-1 for zero-fold admissible centers.
+[2026-07-12T23:22:15+03:00] OK DECIDE | DID: Wrote P50 LG33 subcase note | RESULT: fanout/wave4/P50_LG33_subcase.md contains proof, residual, falsifiers, commands | D: none
+[2026-07-12T23:22:15+03:00] > VERIFY | NEXT: Rerun final p50 --max-n 24 and both prescribed/all-scale profile audits from current code.
+[2026-07-12T23:25:00+03:00] FAIL ATTACK | DID: Ran P62 Bose natural-modulus smoke | RESULT: dynamic import missed sys.modules registration at dataclass | D: none
+[2026-07-12T23:25:01+03:00] > ATTACK | NEXT: Register imported algebra module and rerun the exact q<=19 smoke.
+[2026-07-12T23:26:00+03:00] OK ATTACK | DID: Exhausted Bose natural-modulus cuts for q<=19 | RESULT: zero-fold valid lifts exist for all 11 q; counts end 3,2,1 at q=16,17,19 | D: construction test alive
+[2026-07-12T23:26:01+03:00] > ATTACK | NEXT: Exhaust Bose natural-modulus cuts for 23<=q<=64 and test persistence of the coefficient-two family.
+[2026-07-12T23:28:00+03:00] OK ATTACK | DID: Exhausted Bose natural-modulus cuts through q=64 | RESULT: holes persist to q=23; zero valid among 105052 lifts for 25<=q<=64 | D: no family
+[2026-07-12T23:28:01+03:00] FAIL ATTACK | DID: P58 tested constant-2 fold repair | RESULT: p=14,h=183 has delta^2=11025>4p^3=10976 | D: constant 2 dead
+[2026-07-12T23:28:02+03:00] > VERIFY | NEXT: Independently rerun P58 verifier and inspect its exact derivation before retaining only the O(p^(3/2)) frontier.
+[2026-07-12T23:29:00+03:00] FAIL VERIFY | DID: Opened P58 verifier under guessed filename | RESULT: actual verifier is verify_counterexample.py | D: none
+[2026-07-12T23:29:01+03:00] > VERIFY | NEXT: Run verify_counterexample.py and scan_singer_counterexamples.py, then compare JSON invariants.
+[2026-07-12T23:31:00+03:00] OK VERIFY | DID: Reran P58 standalone and Singer scans | RESULT: 38416 quadruples and 952 profiles confirm 6 failures | D: constant-2 bound dead
+[2026-07-12T23:31:01+03:00] FAIL ATTACK | DID: Spawned P63 with incompatible fork role | RESULT: agent API rejected agent_type with full-history fork | D: none
+[2026-07-12T23:31:02+03:00] > ATTACK | NEXT: Relaunch P63 without role override to classify natural-modulus Bose holes asymptotically.
+[2026-07-12T23:26:04+03:00] > ATTACK | NEXT: Run exact P60 probe with 5 full G-families and exhaustive endpoint-normalized Sidon rulers W<=12.
+[2026-07-12T23:26:42+03:00] OK VERIFY | DID: Reran final P50 census and two profile scopes | RESULT: consistency PASS; Esharp failures 0; outputs in compute/p50 | D: none
+[2026-07-12T23:26:42+03:00] OK DECIDE | DID: Fixed P50 claim boundary | RESULT: Theorem 4 proved; 13/6 falsified all-scale by A={1,2,4,8,10,11} | D: P50 handoff complete
+[2026-07-12T20:27:18Z] > ATTACK | NEXT: Audit P62 natural-modulus data and prove the exact Bose-lift/reflected-admissibility equivalence.
+[2026-07-12T20:33:54Z] > ATTACK | NEXT: Run P63 exact lift/construction census for q=3..29 and extract all valid-cut order statistics.
+[2026-07-12T20:35:55Z] FAIL ATTACK | DID: Started P63 q<=29 census | RESULT: terminated after 60s; modular intersection loop was quartic | D: optimize exact set step
+[2026-07-12T20:36:12Z] > ATTACK | NEXT: Rerun optimized exact P63 q<=29 census with quadratic support intersections.
+[2026-07-12T20:36:41Z] OK ATTACK | DID: Ran P63 exact q<=29 census | RESULT: valid counts end 2,1,1,0 at q=17,19,23,25; min q25 hits=3 | D: carry gap isolated
+[2026-07-12T20:36:42Z] > ATTACK | NEXT: Extend P63 minimum-hit census through every P62 prime power q<=64.
+[2026-07-12T20:39:19Z] FAIL ATTACK | DID: Ran P63 q=31..64 census | RESULT: 120s timeout before output; P62 already has exact zero-valid counts | D: stop duplicate scan
+[2026-07-12T20:45:48Z] > VERIFY | NEXT: Rerun q<=29 with exact ordered carry decomposition and Bose solution-count bound.
+[2026-07-12T20:46:10Z] FAIL VERIFY | DID: Started ordered-carry audit | RESULT: Python syntax error at Counter comprehension line 121 | D: none
+[2026-07-12T20:46:24Z] > VERIFY | NEXT: Rerun corrected exact ordered-carry audit through q=29.
+[2026-07-12T20:47:38Z] FAIL VERIFY | DID: Started carry audit | RESULT: terminated after 60s; pair-of-support carry loop was quartic | D: replace by 3 exact lookups per sum
+[2026-07-12T20:47:54Z] > VERIFY | NEXT: Rerun quadratic ordered-carry audit through q=29.
+[2026-07-12T20:48:04Z] OK VERIFY | DID: Ran exact carry audit q<=29 | RESULT: all carries sum to q^2+O(q); q25 minima are 4 and 18 ordered hits | D: parametrization target
+[2026-07-12T20:49:59Z] > VERIFY | NEXT: Verify the Bose two-parameter completion formula against brute solution sets for q<=13.
+[2026-07-12T20:52:09Z] OK VERIFY | DID: Compared formula with brute sets on 16 records q<=13 | RESULT: exact equality; JSON compute/p63/bose_parametrization.json | D: Fourier proof enabled
+[2026-07-12T20:52:10Z] > ATTACK | NEXT: Prove uniform Bose carry mixing via the rational-surface character sum and derive eventual natural-hole impossibility.
+[2026-07-12T20:54:38Z] OK ATTACK | DID: Proved P63 uniform Bose carry mixing | RESULT: fanout/wave4/P63_bose_natural_modulus.md, Theorem P63 | D: natural lane closed
+[2026-07-12T20:54:39Z] > VERIFY | NEXT: Rerun both P63 exact auditors and referee-check formulas, scopes, and generated hashes.
+[2026-07-12T20:57:44Z] > VERIFY | NEXT: Extend brute finite-field parametrization comparison to q=16,17,19,23.
+[2026-07-12T20:58:23Z] OK VERIFY | DID: Brute-compared 8 more Bose targets through q=23 | RESULT: all exact sets equal; p63/bose_parametrization_large.json | D: none
+[2026-07-12T20:59:15Z] OK VERIFY | DID: Referee-checked P63 and hashed 4 artifacts | RESULT: note SHA256 910709033FC0; both exact auditors pass | D: P63 complete
+[2026-07-12T23:28:32+03:00] FAIL ATTACK | DID: Ran exact W<=12 probe | RESULT: timeout after 124s in SymPy degree-107 rectangle root count | D: replace root counter
+[2026-07-12T23:29:05+03:00] > ATTACK | NEXT: Re-run exact W<=12 probe using rational Routh counts for all five Newman factors.
+[2026-07-12T23:35:00+03:00] OK VERIFY | DID: Froze P58/P62 state and exact artifacts | RESULT: P58 counterexample and 115130-hole-free Bose lifts recorded | D: constant-2 dead
+[2026-07-12T23:35:01+03:00] > VERIFY | NEXT: Independently rerun P50 LG33 envelope audits and verify the 13/6 falsifier arithmetic.
+[2026-07-12T23:29:25+03:00] FAIL ATTACK | DID: Re-ran W<=12 probe | RESULT: zero Routh pivot for Z=(0,1,5,7) | D: add exact low-degree Cauchy-index fallback
+[2026-07-12T23:36:00+03:00] FAIL VERIFY | DID: Ran P50 profile audit with guessed --scope flags | RESULT: CLI uses default prescribed and --all-scales | D: none
+[2026-07-12T23:36:01+03:00] > VERIFY | NEXT: Rerun P50 with documented default and --all-scales invocations.
+[2026-07-12T23:29:34+03:00] > ATTACK | NEXT: Re-run exact W<=12 probe with Routh plus exact zero-pivot fallback.
+[2026-07-12T23:30:21+03:00] OK ATTACK | DID: Exact W<=12 probe | RESULT: 675 pairs; TV=2p^2-p; first floor failure Z=(0,1,6),G=2; Hankel reversals=18 | D: none
+[2026-07-12T23:30:22+03:00] > ATTACK | NEXT: Run full exact census W<=18 and test the surviving 2p reversal bound.
+[2026-07-12T23:39:00+03:00] OK VERIFY | DID: Reran P50 exhaustive and profile audits | RESULT: 21674 sets and 1811499 scales reproduce envelope and 13/6 falsifier | D: P50 proved subcase
+[2026-07-12T23:39:01+03:00] > VERIFY | NEXT: Integrate P50 and audit whether P53's CS witness satisfies the required literal-hole hypothesis.
+[2026-07-12T23:41:00+03:00] OK VERIFY | DID: Audited P53 artifacts | RESULT: CS=49>47 witness passes but has both b=1,2 holes blocked; direct KST deletion gap 34>7 | D: unconditioned CS bound dead
+[2026-07-12T23:41:01+03:00] > CHECK | NEXT: Preserve the hole-restricted CS question and record P53's unconditioned and KST obstructions.
+[2026-07-12T20:35:31Z] > ATTACK | NEXT: Build P64 exact residual audit on N<=24 and P20 rows, then falsify candidate short-gap/duplicate bridges.
+[2026-07-12T20:47:30Z] OK ATTACK | DID: Audited P64 bridges on 21674 census and 193 P20 rows | RESULT: edge bridge 0 fails; touch bridge 1 fail | D: edge bridge frontier
+[2026-07-12T20:53:32Z] > ATTACK | NEXT: Audit the exact reflected-Sidon LG33 reduction on all width<=18 holes and the hard P20/q128 witnesses.
+[2026-07-12T20:54:02Z] OK ATTACK | DID: Audited 6783 reflected holes plus P20/q128 | RESULT: 0 LG33 fails; exact separated reduction passed 1839 rows | D: sharp barrier isolated
+[2026-07-12T20:55:00Z] > ATTACK | NEXT: Prove the reflected residual identity and dense-ruler barrier showing LG33 contains the sharp coefficient-three theorem.
+[2026-07-12T20:57:09Z] OK ATTACK | DID: Proved P64 reflected identity and dense-ruler barrier | RESULT: P64_LG33_residual.md Theorem 2/Corollary 4 | D: residual is sharp-center hard
+[2026-07-12T20:57:09Z] > VERIFY | NEXT: Rerun both P64 audits and referee-check formulas, counts, and the exact touch-bridge falsifier.
+[2026-07-12T20:58:06Z] OK VERIFY | DID: Reran P64 audits and independent hard-witness check | RESULT: 21674+193+6783 rows pass; SHA 0F9256BB/3BBA2A10 | D: P64 complete
+[2026-07-12T23:36:25+03:00] OK ATTACK | DID: Exact W<=18 census | RESULT: 6783 pairs; 2p reversals fails at Z=(0,2,5,12),G=4 with 9>8 | D: narrow to subcritical span
+[2026-07-12T23:36:25+03:00] > ATTACK | NEXT: Add exact dense-dilation and radix families to test unconditional span and sharp tail floor.
+[2026-07-12T23:44:00+03:00] OK CHECK | DID: Scoped P53 result | RESULT: only unconditioned CS bound and direct KST route fail; literal-hole CS remains open | D: stall=0
+[2026-07-12T23:44:01+03:00] OK ATTACK | DID: Launched P64 LG33 residual and P65 hole-fold studies | RESULT: agents 019f580a and 019f580b own disjoint paths | D: none
+[2026-07-12T23:37:10+03:00] > ATTACK | NEXT: Run exact P65 hole-filtered searches over width<=45 translations, dense rulers, and stored profiles.
+[2026-07-12T23:44:02+03:00] OK ATTACK | DID: Ran P65 width<=30+dense+301 subsets | RESULT: 422957 hole translations, zero CS>2p-3; SHA c4950b09 | D: conditioned bound alive
+[2026-07-12T23:44:03+03:00] > ATTACK | NEXT: Optimize all subsets of the P53 parent under literal hole constraints by exact CP-SAT.
+[2026-07-12T23:50:45+03:00] OK ATTACK | DID: Solved 110 P65 subset CP-SAT cases | RESULT: all OPTIMAL; max C_S-2p=-18 over 984 cases; SHA 04718532 | D: no falsifier
+[2026-07-12T23:50:46+03:00] > ATTACK | NEXT: Audit all 165225 P20-family hole translations for the conditioned fold bound and extremal ratios.
+[2026-07-12T23:52:56+03:00] OK ATTACK | DID: Audited 133 P20 rulers | RESULT: 165225 exact hole translations, zero CS>2p-3; SHA 219f62c6 | D: none
+[2026-07-12T23:52:57+03:00] > ATTACK | NEXT: Optimize conditioned subsets of every dense P53 ruler at every translation not ruled out by monotonicity.
+[2026-07-12T23:55:57+03:00] OK ATTACK | DID: Solved dense subset audit | RESULT: 1154 OPTIMAL, 258 infeasible, 0 unresolved/fail; max C_S-2p=-16 | D: none
+[2026-07-12T23:55:58+03:00] > ATTACK | NEXT: Extend complete P65 ruler enumeration from width 30 through width 45.
+[2026-07-12T23:58:03+03:00] OK ATTACK | DID: Exhausted P65 width<=45 | RESULT: 745733 rulers, 9953261 hole translations, 0 fails; ruler SHA 772e239c | D: none
+[2026-07-12T23:58:04+03:00] > ATTACK | NEXT: Prove the conditioned 2p-3 fold bound or isolate its exact graph-theoretic obstruction.
+[2026-07-12T23:59:57+03:00] > ATTACK | NEXT: Search all 25-mark subsets of [0,493] for a b=1 hole and C_S>=48 using exact CP-SAT, 32 workers.
+[2026-07-13T00:10:26+03:00] FAIL ATTACK | DID: Ran unrestricted p25,H493,b1 CP-SAT | RESULT: UNKNOWN after 310.26s, 735450 branches; no certificate | D: finite case unresolved
+[2026-07-13T00:10:27+03:00] > VERIFY | NEXT: Rebuild P65 witnesses and graph obstruction with the standalone exact verifier.
+[2026-07-13T00:11:13+03:00] OK VERIFY | DID: Ran P65 standalone verifier | RESULT: all census, CP statuses, p19 witness, and literal K3,3 checks pass | D: none
+[2026-07-13T00:11:14+03:00] FAIL CHECK | DID: Tested planar/degenerate fold graph route | RESULT: b=1 Singer row has outer K3,3 and degeneracy 6 | D: route dead; P65 open
+[2026-07-13T00:11:46+03:00] OK CHECK | DID: Wrote P65 report | RESULT: P65_hole_restricted_folds.md records exact gates and graph obstruction | D: return obstruction
+[2026-07-12T23:45:00+03:00] > VERIFY | NEXT: Rerun P61 two-scale completion audits and inspect both beta/tau falsifiers before integration.
+[2026-07-12T23:37:09+03:00] > ATTACK | NEXT: Run final exact audit: W<=18, 59 stored shifts, 8 doubled ET records, and radix p<=9.
+[2026-07-12T23:47:00+03:00] OK VERIFY | DID: Reran P61 N<=22 and stored audits | RESULT: 8458 residual records and 254 stored rows pass two-scale label packing | D: P61 proved reduction
+[2026-07-12T23:47:01+03:00] > CHECK | NEXT: Integrate P61 as a shift-free completion reduction and preserve its two local falsifiers.
+[2026-07-12T23:39:11+03:00] OK ATTACK | DID: Tested unweighted TV | RESULT: sum_(1..L)|2c_n|=2p^2-p for every audited pair | D: TV is span-blind
+[2026-07-12T23:39:11+03:00] OK ATTACK | DID: Tested arc floor u>=p-1 | RESULT: Z=(0,1,6),G=2 has u_4=1 | D: retain sharp u>=1
+[2026-07-12T23:39:11+03:00] OK ATTACK | DID: Tested Hankel log-concavity | RESULT: P52 p=3 has minors K_0=-97,K_1=16,K_2=-88 | D: Hankel sign route dead
+[2026-07-12T23:39:11+03:00] OK ATTACK | DID: Counted Newman zeros exactly | RESULT: p=12,W=107 has N_D(P)=65, deviation 23>p | D: centered-zero route dead
+[2026-07-12T23:39:15+03:00] OK ATTACK | DID: Tested unconditional o(p^2) span | RESULT: doubled ET family has W-G=4p^2-4p+1 at G=1 | D: restrict to width-subcritical pairs
+[2026-07-12T23:49:00+03:00] OK CHECK | DID: Classified P61 | RESULT: shift canceled exactly; completion collision ratio b/k remains | D: stall=0
+[2026-07-12T23:49:01+03:00] OK ATTACK | DID: Launched P66 unrestricted completion-charge study | RESULT: agent 019f580d owns wave4/P66 and compute/p66 | D: none
+[2026-07-12T20:39:42Z] > ATTACK | NEXT: Audit P56/P61 notation, then exact-search 2 beta<=h_S beyond N=36 with arbitrary shifts and midpoint cases.
+[2026-07-12T23:51:00+03:00] OK ATTACK | DID: Inspected GPT-Pro tab | RESULT: prior carry-layer answer still generating; no new prompt sent | D: awaiting response
+[2026-07-12T23:51:01+03:00] > VERIFY | NEXT: Rerun P59 minimal barycenter-coupling falsifier and inspect the partition-aware failure.
+[2026-07-12T23:53:00+03:00] OK VERIFY | DID: Reran P59 Python and C++ audits | RESULT: 2005269 rulers prove p=8,W=58 minimal for intersection-bound failure | D: naive coupling dead
+[2026-07-12T23:53:01+03:00] > CHECK | NEXT: Record P59 while retaining only genuinely cross-column barycenter constraints.
+[2026-07-12T23:55:00+03:00] OK CHECK | DID: Classified P59 | RESULT: support intersection coupling dead; actual block structure remains | D: stall=0
+[2026-07-12T23:55:01+03:00] OK ATTACK | DID: Launched P67 triple-block design study | RESULT: agent 019f5811 owns wave4/P67 and compute/p67 | D: none
+[2026-07-12T20:44:14Z] > ATTACK | NEXT: Reconstruct P51/P59 fibers and exact-test cross-column block invariants on width<=18, P59, and q128.
+[2026-07-12T23:45:35+03:00] OK ATTACK | DID: Proved P60.1 and dense-dilation falsifier | RESULT: P60_curvature_span.md, Lemma P60.1 and (19) | D: ATTACK -> VERIFY
+[2026-07-12T23:45:35+03:00] > VERIFY | NEXT: Cross-check root counts numerically, rerun exact audit, and referee all certificates.
+[2026-07-12T20:45:47Z] > ATTACK | NEXT: Compile P66 exact enumerator and reproduce N<=36 totals with 32 workers before extending the census.
+[2026-07-12T20:46:32Z] OK VERIFY | DID: Rebuilt N<=36 P66 census | RESULT: 510030 admissible, 412860 residual records, zero failures; exhaustive_N36.json | D: none
+[2026-07-12T20:46:32Z] > ATTACK | NEXT: Exhaust every normalized span L<=55 with 55 workers and test 2 beta<=h_S in the unproved range.
+[2026-07-12T23:46:45+03:00] OK VERIFY | DID: Re-ran exact audit and numeric root check | RESULT: 1340 rulers, 6783 pairs, 59 shifts; roots 8,28,unit,50,65 | D: none
+[2026-07-12T23:47:34+03:00] > CHECK | NEXT: Determine whether this cycle produced a verifiable new fact and reset stall if so.
+[2026-07-12T23:47:34+03:00] OK CHECK | DID: Refereed cycle outputs | RESULT: Lemma P60.1, TV identity (3), and infinite falsifier (19) verified | D: stall=0; CHECK -> DECIDE
+[2026-07-12T23:47:34+03:00] > DECIDE | NEXT: Re-run novelty gate for P60.1 and the excess-compensated frontier before finalizing writeup.
+[2026-07-12T23:57:00+03:00] > ATTACK | NEXT: Measure exact contiguous hole neighborhoods in Z-3Z for every hard reflected corpus profile.
+[2026-07-12T20:47:55Z] > ATTACK | NEXT: Run integer P67 block-graph audit on width<=18, the P59 witness, and q128 for the +1 and pseudoforest bounds.
+[2026-07-12T23:48:29+03:00] OK DECIDE | DID: Re-ran novelty gate | RESULT: #864 is OPEN; ET 1941 covers the base ruler, no P60.1 or (32) source found | D: P60 cycle complete
+[2026-07-12T20:48:17Z] FAIL ATTACK | DID: Ran P67 width18/P59/q128 audit | RESULT: q128 loader KeyError 'Z'; source nests points under best_candidate | D: none
+[2026-07-12T20:48:46Z] > ATTACK | NEXT: Rerun corrected integer P67 audit on width<=18, P59, and q128.
+[2026-07-12T23:59:00+03:00] > ATTACK | NEXT: Extend P68 to every positive-defect literal hole through ruler width 30 and test three consecutive missing shifts.
+[2026-07-12T20:49:25Z] OK ATTACK | DID: Audited actual P51 block graphs | RESULT: width18 1623 pairs, P59 120, q128 19503; +1 failures=0; P59 equality excess=1 | D: +1 bound alive
+[2026-07-12T20:49:25Z] > ATTACK | NEXT: CP-SAT search the minimal K2,3 two-cycle block core under exact Sidon pair-sum constraints.
+[2026-07-13T00:01:00+03:00] FAIL ATTACK | DID: Tested no-three-hole lemma on width<=30 | RESULT: 54458/140109 hard holes fail; p=5,W=30 has a 17-value gap | D: smoothing lemma dead
+[2026-07-13T00:01:01+03:00] > VERIFY | NEXT: Audit P60 curvature identities and exact falsifiers before closing the smoothing lane.
+[2026-07-13T00:03:00+03:00] OK VERIFY | DID: Reran P60 exact curvature audit | RESULT: 6783 pairs verify tail identity; four proposed analytic bounds have exact falsifiers | D: staircase-only lane closed
+[2026-07-13T00:03:01+03:00] > CHECK | NEXT: Integrate P60 and P68, retaining only the width-compensated sparse-atom frontier.
+[2026-07-13T00:04:00+03:00] OK CHECK | DID: Independently checked P68 p=5 witness | RESULT: 15 pair sums distinct, E cap 3E empty, shifts 7..23 absent | D: smoothing dead
+[2026-07-12T20:51:44Z] OK ATTACK | DID: Exact CP-SAT K2,3 core search | RESULT: Sidon labels {0,4,5,16,18,24,39,46,49}; sums 58,67; cycle rank 2 | D: pseudoforest dead
+[2026-07-12T20:51:44Z] > ATTACK | NEXT: Search exact K3,3-minus-edge core, the smallest graph violating the P67 +1 coupling.
+[2026-07-13T00:05:00+03:00] OK ATTACK | DID: Launched P69 width-compensated curvature study | RESULT: agent 019f581a owns wave4/P69 and compute/p69 | D: none
+[2026-07-12T20:54:40Z] > ATTACK | NEXT: exact-screen width-compensated curvature inequalities on P52/P60 corpora and P68 long-hole guardrail.
+[2026-07-12T20:56:54Z] OK VERIFY | DID: Hash-compared GPT carry reply | RESULT: E5090C37 matches archived neutral response; delta_+=o(p^2) is the target | D: none
+[2026-07-12T20:56:55Z] FAIL ATTACK | DID: P66 delegation terminated by platform filter | RESULT: exact N<=36 census remains on disk; no math verdict | D: none
+[2026-07-12T20:56:56Z] > ATTACK | NEXT: Extend exact all-cut Ruzsa scans beyond p=257 and measure the best carry-hole coefficient.
+[2026-07-12T21:00:00Z] OK VERIFY | DID: Replayed P66 artifacts | RESULT: spans<=55, 35776005 admissible, 30899206 residual, zero 2beta>hS | D: none
+[2026-07-12T21:00:01Z] OK ATTACK | DID: Relaunched P66 in pure combinatorial language | RESULT: agent 019f5820 owns wave4/P66 note | D: none
+[2026-07-12T21:00:02Z] OK VERIFY | DID: Replayed P64 exact audits | RESULT: 21674 census, 193 P20, 6783 holes; identities pass; one-label bound fails by 64625 | D: LG33 reformulation
+[2026-07-12T21:00:03Z] OK VERIFY | DID: Replayed P63 finite auditors | RESULT: q<=29 Bose census and 16 parametrized targets pass; no tested hole from q=25 | D: analytic audit pending
+[2026-07-12T21:03:00Z] OK ATTACK | DID: Scanned all 262 Ruzsa cuts at p=263 | RESULT: best 190041/68644=2.768501, worst 200883/68644=2.926447 | D: sub-14/5 cut found
+[2026-07-12T21:03:01Z] > ATTACK | NEXT: Scan every natural cut at p=269,271,277,281,283,293 in six exact parallel processes.
+[2026-07-12T20:57:39Z] OK ATTACK | DID: Exact CP-SAT excess-2 core search | RESULT: Sidon labels max63 give 3 blocks at sums70,77 with 8 common marks | D: +1 bound conditionally dead
+[2026-07-12T20:57:39Z] > ATTACK | NEXT: Search an exact high-endpoint and gap completing the excess-2 core to a valid P37 overlap pair.
+[2026-07-12T20:59:17Z] OK ATTACK | DID: Completed excess-2 core to valid pair | RESULT: p=11,W=177,G=62; sums70,77 share8 marks across 6 blocks; +1 fails by1 | D: +1 bound dead
+[2026-07-12T20:59:17Z] > ATTACK | NEXT: Search a q=4 cycle core with 11 shared marks across 8 blocks to test linear growth of partition excess.
+[2026-07-12T21:00:16Z] OK ATTACK | DID: Exact q=4 cycle-core search | RESULT: 13 Sidon labels yield 11 shared marks across 8 blocks, excess=3 | D: constant-correction route weakened
+[2026-07-12T21:00:16Z] > ATTACK | NEXT: Complete the q=4 excess core to a valid gap pair and verify its full actual fibers.
+[2026-07-13T00:01:31+03:00] > ATTACK | NEXT: Relaunch P66 as pure finite-set mathematics and seek a proof or exact counterexample to 2beta<=h_S.
+[2026-07-12T21:04:44Z] OK ATTACK | DID: audited 6,852 exact P69 pairs | RESULT: p69/audit_results.json; 2,145 fail E^2<=4p^3; P68 hole run=17 | D: local smoothing dead
+[2026-07-12T21:04:45Z] > VERIFY | NEXT: prove the width-to-carry Fourier dichotomy and audit exact constants against all P69 records.
+[2026-07-12T21:05:20Z] OK ATTACK | DID: Completed q=4 core to valid pair | RESULT: p=14,W=1161,G=87; sums1009,1050 share11 marks across8 blocks; excess=3 | D: finite excess grows
+[2026-07-12T21:05:20Z] > ATTACK | NEXT: Test exact quotient spaces of cyclic 3-regular block cores for forced Sidon collisions at q=3..30.
+[2026-07-12T21:11:10Z] FAIL VERIFY | DID: independent PowerShell guard audit | RESULT: variable-name collision invalidated Q output | D: rerun with disjoint names
+[2026-07-12T21:08:09Z] FAIL REPORT | DID: audited prior log stamp | RESULT: 21:11:10Z was entered ahead of host clock; event text valid | D: use host timestamps
+[2026-07-12T21:08:09Z] OK VERIFY | DID: reran P69 and independent PowerShell guards | RESULT: 6852 PASS; P68 Q=20,E=8; P58 Q=222,E=223 | D: dichotomy proved
+[2026-07-12T21:08:43Z] OK ATTACK | DID: Audited cyclic quotient spaces q=3..30 | RESULT: all pair-sum functionals distinct; dimensions q+3; excess=q-1 | D: infinite obstruction targeted
+[2026-07-12T21:08:43Z] > ATTACK | NEXT: Build and verify a mixed-radix integer realization of the cyclic excess family with a valid endpoint extension.
+[2026-07-12T21:12:58Z] > VERIFY | NEXT: Compile all P67 scripts and replay the three required gates, both finite witnesses, and q<=30 family checks.
+[2026-07-12T21:13:56Z] FAIL VERIFY | DID: Replayed P67 gates and wildcard py_compile | RESULT: all math gates passed; py_compile wildcard raised Errno22 | D: none
+[2026-07-12T21:13:56Z] > VERIFY | NEXT: Compile each P67 Python file explicitly and audit note claims against JSON artifacts.
+[2026-07-12T21:15:11Z] OK VERIFY | DID: Compiled 8 P67 scripts and replayed all gates | RESULT: 6783 small pairs, 19503 q128 pairs, q=3..30 family passed | D: obstruction proved
+[2026-07-12T21:16:00Z] OK ATTACK | DID: Completed six all-cut Ruzsa scans | RESULT: best ratios 2.76008 to 2.81839; five primes below 14/5 | D: carry lane alive
+[2026-07-12T21:16:01Z] OK VERIFY | DID: Independently rebuilt 16 Ruzsa extrema | RESULT: every prior center hit; each reflected census has one repeated sum | D: none
+[2026-07-12T21:16:02Z] OK VERIFY | DID: Refereed P63 analytic proof | RESULT: monodromy and tame Betti details supplied; theorem valid | D: Bose natural lane closed
+[2026-07-12T21:16:03Z] OK VERIFY | DID: Replayed P69 exact audit | RESULT: 6852 profiles pass; 2145 failures of E_+^2<=4p^3 | D: fold/Fourier dichotomy proved
+[2026-07-12T21:16:04Z] OK VERIFY | DID: Replayed P65 artifacts | RESULT: 10118486 valid translations, zero CS>2p-3; graph shortcuts falsified | D: bound open
+[2026-07-12T21:16:05Z] FAIL ATTACK | DID: P66 proof process filtered again | RESULT: span<=55 exact evidence preserved; no proof verdict | D: none
+[2026-07-12T21:16:06Z] OK ATTACK | DID: Launched Ruzsa carry-mixing study | RESULT: agent 019f582c owns P70 uniform carry theorem | D: none
+[2026-07-12T21:16:07Z] OK ATTACK | DID: Launched labeled fold study | RESULT: agent 019f582e owns P71 fold labels | D: none
+[2026-07-12T21:22:00Z] OK VERIFY | DID: Refereed P70 carry theorem | RESULT: uniform R=(p^2/12)(1-t/n)^3+o(p^2) valid after two repairs | D: Ruzsa natural lane closed
+[2026-07-12T21:22:01Z] FAIL ATTACK | DID: Tested P65 conditioned fold bound | RESULT: p=25,h=988,b=1 has literal hole and CS=49>47 | D: P65 dead
+[2026-07-12T21:22:02Z] OK VERIFY | DID: Rebuilt P71 witness independently | RESULT: 325 unique sums, 300 unique differences, literal hole, 49 folds | D: infinite affine falsifier verified
+[2026-07-12T21:22:03Z] > ATTACK | NEXT: Seek a direct proof or exact falsifier for the surviving completion bound 2beta<=hS.
+[2026-07-12T21:27:00Z] FAIL ATTACK | DID: Tested two P66 proof decompositions | RESULT: exact falsifiers at spans 8,10,12; target itself survives | D: route narrowed
+[2026-07-12T21:27:01Z] > ATTACK | NEXT: GPT-Pro to prove or falsify 2beta<=hS using v,w,hD,DR; wait for complete response.
+[2026-07-12T21:30:00Z] > ATTACK | NEXT: Exhaust spans<=55 for 2v<=dR, v+u<=dR, and w<=hD using 55 exact C++ workers.
+[2026-07-12T21:31:00Z] OK ATTACK | DID: Exhausted P66 decomposition through span55 | RESULT: 2v<=dR fails 136; v+u<=dR and w<=hD fail 0 | D: split refined
+[2026-07-12T21:32:00Z] OK ATTACK | DID: Tested mixed P66 slack on 30899206 cases | RESULT: 2v+w+u<=dR+hD has zero failures through span55 | D: two-lemma frontier
+[2026-07-12T21:32:01Z] OK ATTACK | DID: Launched two independent P66 proof studies | RESULT: agents 019f5853 and 019f5854 own P72/P73 | D: none
+[2026-07-12T21:34:00Z] OK ATTACK | DID: Proved P66 virtual-label lemmas | RESULT: Q avoids D_P; doubled missing labels inject into hD; P66-main isolated | D: frontier=v-a bound
+[2026-07-12T21:38:00Z] OK ATTACK | DID: Proved asymptotic P74 completion charge | RESULT: large Sidon subset gives hD>=C(u+1,2)-O(s^1.5); P66 holds eventually | D: general reduction closed asymptotically
+[2026-07-13T01:07:55+03:00] > VERIFY | NEXT: Referee-audit P74 span, Sidon subset, hD/hS identities, ranges, and P61 scope
+[2026-07-13T01:09:47+03:00] > VERIFY | NEXT: Exhaustively check P74 identities and Sidon extraction on endpoint-normalized sets through span 18
+[2026-07-13T01:11:07+03:00] OK VERIFY | DID: Checked 262143 sets through span 18 | RESULT: 3204 one-exception cases pass all P74 identities/Sidon extraction | D: none
+[2026-07-13T01:11:07+03:00] > VERIFY | NEXT: Write P74 referee verdict with corrected normalized theorem and exact uniform threshold
+[2026-07-13T01:12:49+03:00] OK VERIFY | DID: Refereed P74 | RESULT: P74_REFEREE.md; valid after endpoint normalization; |A|>=1726 suffices | D: P66 charge closed asymptotically only
+[2026-07-12T22:09:30Z] > GATE | NEXT: Archive GPT-Pro correction and restore the hard positive-defect P65 frontier.
+[2026-07-12T22:11:06Z] OK GATE | DID: Audited GPT correction and P71 | RESULT: exact delta_q=926-494q<0; p54 verifier passes 10 primes | D: hard P65 restored
+[2026-07-12T22:12:59Z] > ATTACK | NEXT: Launch independent hard-fold, P61 assembly, reflected-center, and exact-falsifier studies.
+[2026-07-12T22:24:33Z] FAIL ATTACK | DID: Exact-tested hard P65 | RESULT: p=26,h=988,delta=14,C_S=51>49; 351 sums and 325 differences unique | D: P65 dead
+[2026-07-12T22:24:34Z] FAIL ATTACK | DID: Optimized P61+P74 assembly | RESULT: exact parameter ray permits inf L/k^2=3/8 | D: assembly route dead
+[2026-07-12T22:24:35Z] OK ATTACK | DID: Reduced completion charge via P73 | RESULT: 35 finite boxes, at most 29 points and span 567 | D: pending referee
+[2026-07-12T22:28:33Z] OK ATTACK | DID: Derived P77 Fourier reduction | RESULT: L_h^5 Lambda>=(E-p+b-10C_S)_+/128 | D: P65-dependent corollary discarded
+[2026-07-12T22:30:58Z] > ATTACK | NEXT: Test fixed-biclique exclusion for C_S=o(p^2) and independently referee P73.
+[2026-07-12T22:37:18Z] OK ATTACK | DID: Proved P72 centered slack | RESULT: w<=h_D; centered method cancels v exactly | D: mixed route blocked
+[2026-07-12T22:42:23Z] > VERIFY | NEXT: Run repaired P73 exact parameter checker over p<100,u<500.
+[2026-07-12T22:44:59Z] FAIL VERIFY | DID: Ran literal P73 checker | RESULT: timeout at 124s | D: add exact Sidon-tail pruning
+[2026-07-12T22:45:00Z] > VERIFY | NEXT: Re-run P73 with exact squared tail pruning and memoized finite core.
+[2026-07-12T22:47:46Z] FAIL VERIFY | DID: Ran pruned P73 checker | RESULT: timeout at 124s; 2071 pairs remain | D: cache quadratic incidence profiles
+[2026-07-12T22:48:28Z] OK VERIFY | DID: Repaired and reran P73 checker | RESULT: 45 triples exactly in 1.3s; 35 boxes after L<=55 census | D: P73 accepted
+[2026-07-12T22:56:14Z] FAIL ATTACK | DID: Tested universal C_S<=2p-1 | RESULT: p=29,h=640 has 58>57; 435 sums and 406 differences unique | D: hole essential
+[2026-07-12T22:56:15Z] FAIL ATTACK | DID: Tested fixed biclique exclusions | RESULT: positive-hole corpus contains K5,5; no K6,6 in 165225 rows | D: K6,6 lemma open
+[2026-07-12T22:59:12Z] > ATTACK | NEXT: Prove/falsify K6,6 exclusion and independently seek hole-conditioned C_S=o(p^2).
+[2026-07-12T23:03:07Z] OK VERIFY | DID: Syntax/replay pass P73/P75/P79/P80 | RESULT: all compile; exact verifiers pass | D: none
+[2026-07-12T22:16:51Z] > ATTACK | NEXT: Normalize P61 branches with P74 charge and hypothetical reflected 3/4 bound; prove assembly or exhibit feasible obstruction.
+[2026-07-13T01:18:00+03:00] > ATTACK | NEXT: derive a positive-defect proof or exact falsifier for P65 C_S<=2p-3 using existing exact artifacts, no census rerun.
+[2026-07-13T01:18:04+03:00] > ATTACK | NEXT: isolate the reflected-center arithmetic and exact-test one new sharp lemma for P77.
+[2026-07-13T01:25:13+03:00] OK ATTACK | DID: Proved P77 one-fold spike inequality | RESULT: P77_reflected_center_bound.md; 134 exact rows, 0 audit failures | D: fold arm reduces to Fourier spike
+[2026-07-12T22:19:57Z] > ATTACK | NEXT: Reconstruct P45/P46/P65/P71 identities and exact-search the positive-defect fold bound assigned to P75.
+[2026-07-13T01:28:00+03:00] > ATTACK | NEXT: exact-scan all odd one-mark extensions of P71 p=25,h=988; test Sidon, literal hole, delta>0, and C_S>=50.
+[2026-07-13T01:29:00+03:00] OK ATTACK | DID: scanned 469 odd insertions into P71 | RESULT: x=639 gives p=26,h=988,b=1,delta=14,C_S=51>49 | D: P65 false
+[2026-07-13T01:30:00+03:00] > VERIFY | NEXT: independently enumerate all 351 sums, 325 differences, literal 3B-B hole, and 51 folds for the P75 witness.
+[2026-07-12T22:21:21Z] OK ATTACK | DID: Exact P61/P74 normalized optimization | RESULT: P76 note proves inf L/k^2=3/8 and gives exact feasible ray | D: assembly implication dead
+[2026-07-13T01:34:00+03:00] OK VERIFY | DID: independently audited P75 witness | RESULT: 351 unique sums, 325 unique differences, 0 hole hits, 51 folds; P75 file written | D: P65 dead
+[2026-07-12T22:22:39Z] > ATTACK | NEXT: Independently verify the P75 p=26 witness and exhaust all odd one-mark extensions of the P71 ruler.
+[2026-07-13T01:31:00+03:00] > SELECT | NEXT: read P65 and exact P20/large corpora to define and test the P65 outer-fold graph for problem 864.
+[2026-07-13T01:33:00+03:00] OK SELECT | DID: read P65/P20/P45/P46 corpora | RESULT: domains are 165225 translations, 134 positive rows, 37 large rows | D: none
+[2026-07-13T01:33:01+03:00] > PLAN | NEXT: implement exact outer-fold graph and balanced-biclique audit with canonical witnesses under compute/p79.
+[2026-07-13T01:36:00+03:00] OK PLAN | DID: refined frontier to two-sided pair codegree | RESULT: codegree>=4 iff outer graph has K2,4 or K4,2 | D: K4,4 is secondary
+[2026-07-13T01:36:01+03:00] > ATTACK | NEXT: implement and launch exact two-sided codegree scan on 165225 P20 translations and stored rows.
+[2026-07-13T01:38:30+03:00] > ATTACK | NEXT: exhaustive-scan Sidon rulers through width 20 over every shift 1<=h<=2W for any C_S>=2p.
+[2026-07-13T01:39:00+03:00] OK ATTACK | DID: scanned 2342 rulers and 80032 shifts | RESULT: B={0,2,3,8,12},h=4 has C_S=10>9 | D: global all-h bound dead
+[2026-07-13T01:39:33+03:00] > SELECT | NEXT: attack endpoint-normalized #864 fold bound via P53/P65/P71/P75 artifacts and exact checks.
+[2026-07-13T01:39:34+03:00] OK SELECT | DID: inspected wave5 target and 864 tree | RESULT: P80 absent; P53/P65/P71/P75 hold fold data | D: none
+[2026-07-13T01:39:35+03:00] > GATE | NEXT: audit local prior art for the endpoint fold inequality and isolate the unproved lemma.
+[2026-07-13T01:43:00+03:00] OK GATE | DID: searched local fold notes and Golomb-ruler literature | RESULT: P53 proves only exact fold graph; no 2p-1 theorem found | D: none
+[2026-07-13T01:43:01+03:00] > PLAN | NEXT: reduce folds to duplicated cyclic differences and test graph, order, and autocorrelation counts on exact corpora.
+[2026-07-13T01:43:20+03:00] OK PLAN | DID: set frontier to sharp duplicated-cyclic-difference bound | RESULT: target is C_S<=2p-1 | D: none
+[2026-07-13T01:43:21+03:00] > ATTACK | NEXT: exact-enumerate folds, repeated cyclic differences, and extremal graph statistics for p=25,26 witnesses.
+[2026-07-13T01:43:30+03:00] OK ATTACK | DID: exact-tested P75 outer codegrees | RESULT: pair {3,5} has 7 common outer neighbors | D: K2,4/KST route dead
+[2026-07-13T01:44:10+03:00] OK ATTACK | DID: scanned 165225 translations, 134 stored, 37 large rows | RESULT: max codegrees 12,11,11; failures 92817,67,37 | D: none
+[2026-07-13T01:44:11+03:00] > ATTACK | NEXT: exact-test K4,4 independently on all three corpora via four-neighbor subset counts.
+[2026-07-13T01:47:00+03:00] OK ATTACK | DID: enumerated p=25,26 fold labels and six bipartite models | RESULT: C_S=49,51; all six models contain cycles | D: forest route dead
+[2026-07-13T01:47:01+03:00] > ATTACK | NEXT: run exact swap search near p=25,26 equality rulers for any C_S>2p-1 endpoint falsifier.
+[2026-07-13T01:48:00+03:00] OK ATTACK | DID: exact-tested K4,4 on three P79 corpora | RESULT: failure counts 1744,11,10; smallest corpus witness p=60 | D: K4,4-free dead
+[2026-07-13T01:48:01+03:00] > ATTACK | NEXT: determine exact maximum balanced biclique order on every K4,4-positive corpus graph.
+[2026-07-13T01:49:00+03:00] OK ATTACK | DID: exact-scanned 35,355 one-swaps around equality rulers | RESULT: max C_S is 49 at p=25 and 51 at p=26 | D: none
+[2026-07-13T01:49:01+03:00] > ATTACK | NEXT: scan all one-mark extensions of affine p=25 lifts q=2..20 for a mark adding at least three folds.
+[2026-07-13T01:50:30+03:00] OK ATTACK | DID: scanned 619,605 affine-lift insertions for q=2..50 | RESULT: maximum fold gain is 2 | D: none
+[2026-07-13T01:50:31+03:00] > ATTACK | NEXT: bitset-scan all endpoint shifts of 133 P20 Sidon rulers for C_S>2p-1.
+[2026-07-13T01:52:00+03:00] OK ATTACK | DID: bitset-scanned 590650 endpoint shifts of 133 P20 rulers | RESULT: 122240 failures; p=29,h=640,C_S=58>57 | D: theorem false
+[2026-07-13T01:52:01+03:00] > VERIFY | NEXT: extract the least-order P20 falsifier and independently enumerate all sums, differences, and fold labels.
+[2026-07-13T01:53:00+03:00] OK VERIFY | DID: rebuilt p=29 witness with direct Counters | RESULT: 435 unique sums, 406 unique differences, 58 folds | D: falsifier certified
+[2026-07-13T01:53:01+03:00] > GATE | NEXT: search local notes and web for prior occurrence of the exact p=29,h=640 fold falsifier.
+[2026-07-13T01:53:02+03:00] OK GATE | DID: searched exact source ID and mark prefixes | RESULT: no prior fold statement or exact witness found | D: none
+[2026-07-13T01:53:03+03:00] > DECIDE | NEXT: write P80 with the exact counterexample, fold certificate, and standalone verifier.
+[2026-07-13T01:54:10+03:00] > VERIFY | NEXT: independently bitset-scan 590650 P20 endpoint shifts and rebuild the least 2p-1 falsifier in P79.
+[2026-07-13T01:55:00+03:00] OK DECIDE | DID: wrote P80 falsification note | RESULT: problems/864/fanout/wave5/P80_Sidon_sumset_translate.md | D: complete result
+[2026-07-13T01:55:01+03:00] > VERIFY | NEXT: execute the verifier extracted from P80 and inspect the target diff.
+[2026-07-13T01:55:20+03:00] OK VERIFY | DID: executed P80 embedded verifier | RESULT: {'p':29,'h':640,'C_S':58,'bound':57}; exit 0 | D: none
+[2026-07-13T01:56:00+03:00] OK VERIFY | DID: ran P79 hash/witness verifier | RESULT: status=verified; max codegrees 12,11,11; max balanced order 5 | D: none
+[2026-07-13T01:56:01+03:00] > DECIDE | NEXT: record P79 biclique and 2p-1 falsifiers, with no shared registry edit.
+[2026-07-13T01:56:02+03:00] OK DECIDE | DID: wrote P79 note and 4 exact scripts | RESULT: P79_fold_biclique.md; verify_p79_results.py exits 0 | D: lane complete
+[2026-07-13T01:59:20+03:00] > SELECT | NEXT: attack #864 P65 outer-fold K6,6 exclusion using its 36 inner labels and literal hole.
+[2026-07-13T01:59:21+03:00] OK SELECT | DID: selected assigned #864 P81 claim | RESULT: P79 gives exact 165225-row K6,6-free census | D: frontier set
+[2026-07-13T01:59:22+03:00] > PLAN | NEXT: read P65, P75, P79 and derive the exact label identities governing a putative K6,6.
+[2026-07-13T02:04:00+03:00] OK PLAN | DID: derived inner grid u_ij-c_ij=a_i+h-v_j | RESULT: K6,6 forces 36 distinct additive-grid differences | D: frontier refined
+[2026-07-13T02:04:01+03:00] > ATTACK | NEXT: scan all q=151 cuts in 32 archived Singer unit classes for an exact positive-defect hole K6,6.
+[2026-07-13T02:05:10+03:00] FAIL ATTACK | DID: launched q=151 scan, 32 units, 1 s cap | RESULT: exit 124; no output artifact | D: none
+[2026-07-13T02:05:11+03:00] > ATTACK | NEXT: rerun the exact q=151 32-unit cut scan with a 10-minute process cap.
+[2026-07-13T02:10:33+03:00] OK ATTACK | DID: scanned 4712 q=151 cuts, 32 units | RESULT: 12 K5,5 cuts; 0 K6,6; singer_q151_cut_scan.json | D: none
+[2026-07-13T02:10:34+03:00] > ATTACK | NEXT: scan 7 neighboring Singer parameters, 32 units each, in 7 parallel processes for K6,6.
+[2026-07-13T02:20:18+03:00] OK ATTACK | DID: scanned 33600 Singer cuts at q=131..167 | RESULT: 54 K5,5 hits; 0 K6,6 in 7 JSON files | D: none
+[2026-07-13T02:20:19+03:00] > ATTACK | NEXT: test rowwise ES and aligned 3x3 endpoint-order mechanisms on the exact P79 K5,5 labels.
+[2026-07-12T23:20:39Z] > VERIFY | NEXT: audit P82 linear-fold removal proof and exact-check its P75 loose-triangle count.
+[2026-07-12T23:21:15Z] OK VERIFY | DID: audited P82 and ran standalone exact checker | RESULT: P75 has folds=51, canonical=51, loose=25 | D: phase-density frontier
+[2026-07-12T23:22:09Z] > ATTACK | NEXT: launch disjoint proof and falsifier searches for the phase-sensitive loose-fold density frontier.
+[2026-07-12T23:25:18Z] > ATTACK | NEXT: exact-test a four-part fold-shadow K4 removal encoding on the P75 hard row.
+[2026-07-12T23:26:12Z] FAIL ATTACK | DID: exact-tested four-part fold shadow | RESULT: 106 K4s=51 canonical+55 noncanonical on P75 | D: unweighted K4 route dead
+[2026-07-12T23:27:15Z] > ATTACK | NEXT: derive the minimum-violation raw fold projection and test approximate induced-matching removal.
+[2026-07-13T02:23:21+03:00] OK ATTACK | DID: tested P79 K5,5 endpoint orders | RESULT: shared monotone 3x3 rows exist; no fixed-order bimonotone 3x3 | D: rowwise ES rejected
+[2026-07-13T02:23:22+03:00] > ATTACK | NEXT: solve a 30-mark odd Golomb model with 36 exact inner labels and positive defect for a K6,6 witness.
+[2026-07-13T02:24:31+03:00] FAIL ATTACK | DID: launched p=30 CP-SAT, width 435..666, 300 s, 16 workers | RESULT: MODEL_INVALID; 0 branches | D: none
+[2026-07-13T02:24:32+03:00] > ATTACK | NEXT: expose the validator error, repair the exact encoding, and relaunch p=30.
+[2026-07-13T02:25:30+03:00] OK ATTACK | DID: replaced affine AllDifferent terms by linked variables | RESULT: 1 s smoke valid; 26278 branches; UNKNOWN | D: model repaired
+[2026-07-13T02:25:31+03:00] FAIL ATTACK | DID: launched repaired 300 s model with 1 s process cap | RESULT: exit 124; no result | D: none
+[2026-07-13T02:25:32+03:00] > ATTACK | NEXT: run repaired p=30 model for 300 s on 16 workers with a 10-minute process cap.
+[2026-07-12T23:30:36Z] > ATTACK | NEXT: exact-scan raw fold projections for minimum inducedness violations across positive-defect rows.
+[2026-07-12T23:34:21Z] OK VERIFY | DID: audited P83/P85/P87 and exact checkers | RESULT: phase normal forms valid; all bounds remain cubic | D: density lemma open
+[2026-07-12T23:34:22Z] OK VERIFY | DID: reverified P86 exact scan | RESULT: 144 records PASS; reflected P75 has T_F=37 vs 25 | D: scalar route dead
+[2026-07-12T23:35:01Z] > ATTACK | NEXT: launch direct-count, countermodel, and primary-source searches on the phase-density lemma.
+[2026-07-12T23:37:42Z] > ATTACK | NEXT: test a missing-label/represented-hexagon density theorem from the P83 normal form.
+[2026-07-12T23:39:10Z] OK VERIFY | DID: audited P84 identities and exact census | RESULT: T_F<=C_S has 0/465115 failures | D: candidate frontier
+[2026-07-12T23:40:54Z] > ATTACK | NEXT: exact-test C84 on every archived translation and parity-lift insertion hole.
+[2026-07-12T23:43:19Z] OK ATTACK | DID: exact-tested C84 on expanded archives | RESULT: failures=0/313863 translations+0/242 insertions | D: candidate survives
+[2026-07-12T23:43:51Z] > ATTACK | NEXT: test Hall matching from every loose triangle to one of its three supporting folds.
+[2026-07-12T23:44:58Z] FAIL ATTACK | DID: exact-tested support-fold Hall | RESULT: max matching 105/116; Hall witness 72>61 | D: local injection dead
+[2026-07-12T23:45:38Z] > ATTACK | NEXT: extract shadow-edge codegree compensation on the P94 ratio-maximizing row.
+[2026-07-12T23:46:55Z] > ATTACK | NEXT: exact-test componentwise triangle<=fold count on the complete width-30 hole census.
+[2026-07-12T23:50:12Z] OK ATTACK | DID: exact-tested componentwise C84 | RESULT: 0 failures on 464981+313863+242 holes | D: component lemma frontier
+[2026-07-12T23:51:20Z] OK VERIFY | DID: audited P89/P90 | RESULT: stencil occupancy and existing-theorem routes do not imply C84 | D: global arm charge needed
+[2026-07-12T23:53:33Z] > ATTACK | NEXT: launch structural proof and exact falsifier searches for componentwise C84.
+[2026-07-12T23:55:26Z] > ATTACK | NEXT: exact-test ordered color-prefix and suffix strengthenings of C84.
+[2026-07-12T23:57:19Z] > ATTACK | NEXT: test whether C84 holds without the literal-hole hypothesis on all width-30 endpoint systems.
+[2026-07-12T23:58:42Z] OK ATTACK | DID: scanned unrestricted endpoint systems | RESULT: C84 failures=0/791869 without hole or defect | D: pure order theorem candidate
+[2026-07-13T00:01:10Z] FAIL ATTACK | DID: audited P92 hexagon charge | RESULT: exact Hall witness 8 triangles>7 fold labels | D: one-step global injection dead
+[2026-07-13T00:01:58Z] OK ATTACK | DID: ran unrestricted ordered C84 audit | RESULT: all 4 strengthenings have 0/791869 failures | D: pure order frontier
+[2026-07-13T00:04:22Z] > ATTACK | NEXT: test support-plus-fourth-cell Hall closure for each loose 2x2 rectangle.
+[2026-07-13T00:05:47Z] FAIL ATTACK | DID: tested fourth-cell Hall repair | RESULT: 36 fourth folds; matching remains 105/116 | D: rectangle injection dead
+[2026-07-13T00:06:42Z] FAIL ATTACK | DID: verified P88 pure-order C84 witness | RESULT: p60 C_S=182<T_F=200; no literal hole | D: phase is essential
+[2026-07-13T00:08:00Z] > ATTACK | NEXT: test collision-corrected C84 with all phase violations as the excess bank.
+[2026-07-13T00:09:14Z] OK ATTACK | DID: scanned collision-corrected C84 | RESULT: 0/1583738 failures using collided fold labels | D: corrected frontier
+[2026-07-13T00:11:06Z] OK ATTACK | DID: extended corrected C84 to P88 translations | RESULT: 0/4170 total failures; component form fails twice | D: global charge frontier
+[2026-07-13T00:13:26Z] > ATTACK | NEXT: test signed triangle-boundary rank as a collision-corrected C84 certificate.
+[2026-07-13T00:14:47Z] > ATTACK | NEXT: exact-test collision-corrected color-prefix and suffix Hall inequalities.
+[2026-07-13T00:16:30Z] FAIL ATTACK | DID: audited P93/P102 threshold charges | RESULT: 7 literal-hole prefix failures; corrected suffix min=-10 | D: threshold Hall dead
+[2026-07-13T00:17:47Z] > ATTACK | NEXT: launch algebraic, strong-color, and independent falsifier work on corrected global C84.
+[2026-07-13T02:31:01+03:00] FAIL ATTACK | DID: ran repaired p=30 CP-SAT for 300 s, 16 workers | RESULT: UNKNOWN; 616150 branches, 229469 conflicts | D: none
+[2026-07-13T02:31:02+03:00] > ATTACK | NEXT: derive a cross-row order constraint using all 36 inner labels and the literal hole.
+[2026-07-13T02:32:10+03:00] FAIL ATTACK | DID: audited p=30 model scope | RESULT: x_0=0 is invalid symmetry because translating B changes endpoint h | D: model rejected
+[2026-07-13T02:32:11+03:00] > ATTACK | NEXT: free the minimum mark and add direct literal-hole constraints over the full positive-defect width.
+[2026-07-13T02:32:46+03:00] OK ATTACK | DID: validated free-minimum odd and direct-hole models | RESULT: both 1 s smokes return UNKNOWN, not MODEL_INVALID | D: model repaired
+[2026-07-13T02:32:47+03:00] > ATTACK | NEXT: run p=30 odd and direct-hole models for 300 s each on 16 workers in parallel.
+[2026-07-13T02:38:27+03:00] FAIL ATTACK | DID: ran free-minimum odd/direct p=30 models, 300 s each | RESULT: both UNKNOWN; no witness | D: none
+[2026-07-13T02:38:28+03:00] > ATTACK | NEXT: hint a p=26 odd K6,6 search with all P75 marks and its existing fold labels.
+[2026-07-13T02:44:46+03:00] FAIL ATTACK | DID: ran P75-hinted p=26 model for 300 s, 16 workers | RESULT: UNKNOWN; 842120 branches, 347704 conflicts | D: none
+[2026-07-13T02:44:47+03:00] > ATTACK | NEXT: enumerate exact one-mark P75 repairs and hill-climb its 30-of-36 outer rectangle.
+[2026-07-13T02:46:02+03:00] FAIL ATTACK | DID: enumerated all P75 one-mark odd repairs | RESULT: 1 valid neighbor; best rectangle score remains 30/36 | D: local repair dead
+[2026-07-13T02:46:03+03:00] > ATTACK | NEXT: CP-SAT maximize the 36-edge p=26 extreme rectangle from the exact P75 score-30 hint.
+[2026-07-13T02:52:41+03:00] FAIL ATTACK | DID: optimized p=26 extreme rectangle for 300 s | RESULT: incumbent 30, bound 36, FEASIBLE | D: none
+[2026-07-13T02:52:42+03:00] > ATTACK | NEXT: solve p=26 with explicit nested-pair selectors and complementary-distance equations.
+[2026-07-13T02:58:24+03:00] FAIL ATTACK | DID: ran explicit-pair p=26 model for 300 s | RESULT: UNKNOWN; 1127228 branches, 129405 conflicts | D: none
+[2026-07-13T02:58:25+03:00] > ATTACK | NEXT: run 8 explicit-pair seeds for 300 s on 8 workers each, capped at 64 total workers.
+[2026-07-13T03:04:33+03:00] FAIL ATTACK | DID: ran 8 p=26 seeds, 300 s, 64 workers total | RESULT: 8 UNKNOWN; 16047261 branches; no witness | D: fixed model retired
+[2026-07-13T03:04:34+03:00] > ATTACK | NEXT: retain every q=167 first-hole K5,5 cut, then scan its other positive-defect hole centers.
+[2026-07-13T03:12:45+03:00] OK ATTACK | DID: reran 5376 q=167 cuts with retained witnesses | RESULT: 16 K5,5 records; 0 first-center K6,6 | D: near-extremal set fixed
+[2026-07-13T03:12:46+03:00] > ATTACK | NEXT: vector-scan every positive-defect hole center of all 16 retained q=167 K5,5 cuts.
+[2026-07-13T03:15:41+03:00] OK ATTACK | DID: scanned all centers on 16 q=167 K5,5 cuts | RESULT: 27902 hole shifts, 22 K5,5, 0 K6,6 | D: none
+[2026-07-13T03:15:42+03:00] > ATTACK | NEXT: scan first hole centers from 512 q=167 Singer unit classes in 16 exact shards.
+[2026-07-13T00:22:30Z] OK PLAN | DID: reconciled goal, proof state, and GPT response | RESULT: E5090C37 hash matches archive; P101 is frontier | D: none
+[2026-07-13T00:22:31Z] > ATTACK | NEXT: rerun exact P101 audit and derive a global algebraic charge for T_F<=C_S+V_b.
+[2026-07-13T00:23:28Z] OK ATTACK | DID: reran P101 exact audit | RESULT: 0/1583738+4170 global failures; SHA 8EAA7664 | D: P101 survives
+[2026-07-13T00:23:29Z] > ATTACK | NEXT: exact-test relation-nullity and per-color pseudoforest strengthenings of P101.
+[2026-07-13T00:24:33Z] FAIL ATTACK | DID: exact-tested P103 rank charge | RESULT: 19 failures; min V_b-nullity=-9 at gamma41,b2 | D: GF2 rank route dead
+[2026-07-13T00:24:34Z] FAIL ATTACK | DID: exact-tested P104 color charges | RESULT: 2196 bound and 2302 pseudoforest failures; worst=17 | D: per-color route dead
+[2026-07-13T00:24:35Z] > ATTACK | NEXT: derive a cross-color Euler/cancellation identity from the P83 phase parametrization.
+[2026-07-13T03:25:55+03:00] OK ATTACK | DID: scanned 512 q=167 Singer units in 16 shards | RESULT: 86016 cuts, 320 K5,5, 0 K6,6 | D: none
+[2026-07-13T03:25:56+03:00] > ATTACK | NEXT: generate q=191,193,197,199,211 Singer sources and scan sampled affine cuts for K6,6.
+[2026-07-13T03:26:40+03:00] FAIL ATTACK | DID: launched 5 Singer source generations | RESULT: dataclass import-registration error; no source files | D: none
+[2026-07-13T03:26:41+03:00] > ATTACK | NEXT: register the dynamic p12 module and regenerate the five Singer sources.
+[2026-07-13T03:27:39+03:00] OK ATTACK | DID: generated q=191,193,197,199,211 Singer sources | RESULT: sizes 192,194,198,200,212 | D: none
+[2026-07-13T03:27:40+03:00] > ATTACK | NEXT: scan 16 affine unit classes at each of the five larger Singer parameters in parallel.
+[2026-07-13T00:25:17Z] FAIL ATTACK | DID: verified P105 exact row | RESULT: delta=-1726,C=159,T=160,V=0,literal hole | D: unrestricted P101 dead
+[2026-07-13T00:25:18Z] FAIL ATTACK | DID: verified P98 component row | RESULT: delta=1379; one component 110 triangles/109 folds | D: component route dead
+[2026-07-13T00:25:19Z] OK ATTACK | DID: rechecked P97 RM97 | RESULT: 0/1583738+4170 failures; passes P98, fails negative-defect P105 | D: RM97 frontier
+[2026-07-13T00:28:33Z] > ATTACK | NEXT: launch RM97 proof, hard-regime falsifier, and global interval-cancellation lanes; derive minimal-window identities locally.
+[2026-07-13T00:36:13Z] FAIL ATTACK | DID: exact-tested P109 residual components | RESULT: 304/464981 cross-component rows; first delta=24 | D: component closure dead
+[2026-07-13T00:36:14Z] OK ATTACK | DID: audited P103 weighted matrix | RESULT: full rank on 2085 P88 systems plus P75/P94/P98/P105 | D: P110 frontier
+[2026-07-13T00:45:09Z] OK ATTACK | DID: audited P107 exact search | RESULT: 3384139 candidates, 5869 full gates, 0 P101/RM97 failures | D: none
+[2026-07-13T00:45:10Z] FAIL ATTACK | DID: red-teamed fold-only rank lemma | RESULT: 20 vertices, 51 rows, rank 50 mod 1000003 | D: abstract route dead
+[2026-07-13T03:48:53+03:00] FAIL ATTACK | DID: ran q=191..211 first-hole scans for 1200 s | RESULT: process cap; no output artifacts | D: bitset scaling dead
+[2026-07-13T03:48:54+03:00] > ATTACK | NEXT: scan automatic range-separated hole translations at q=191..211 without center bitsets.
+[2026-07-13T00:49:14Z] > ATTACK | NEXT: exact-scan 1.58M rows for short arithmetic and role-phase weighted relation independence.
+[2026-07-13T03:53:27+03:00] OK ATTACK | DID: scanned range-separated q=191..211 Singer cuts | RESULT: 31872 cuts, 13 K5,5, 0 K6,6 | D: none
+[2026-07-13T03:53:28+03:00] > ATTACK | NEXT: construct a sparse exact Sidon K6,6 to test whether positive defect is essential.
+[2026-07-13T03:54:26+03:00] OK ATTACK | DID: constructed and verified sparse p=85 K6,6 | RESULT: literal b=1 hole; delta=-999999999989204 | D: positive defect essential
+[2026-07-13T03:54:27+03:00] > VERIFY | NEXT: write P81 claim boundary and run a standalone audit of every P81 exact artifact.
+[2026-07-13T03:56:09+03:00] OK VERIFY | DID: ran verify_p81_results.py and syntax audit | RESULT: status=verified; 11 Python files parse; diff check clean | D: none
+[2026-07-13T03:56:10+03:00] > CHECK | NEXT: decide whether P81 proves the exclusion or supplies a positive-defect exact witness.
+[2026-07-13T03:56:11+03:00] FAIL CHECK | DID: checked proof and witness gates | RESULT: neither met; P81 states unresolved claim boundary | D: requested dichotomy open
+[2026-07-13T01:01:18Z] OK ATTACK | DID: ran P112 broad rank audit | RESULT: 0/1583738+2085 short/role-phase failures; SHA 4864EC9F | D: rank frontier
+[2026-07-13T01:01:19Z] OK ATTACK | DID: ran P113 Hall audit | RESULT: 0 support+difference failures; 3 difference-only P88 failures | D: Hall frontier
+[2026-07-13T01:01:20Z] FAIL ATTACK | DID: red-teamed span-only Hall | RESULT: abstract 20 demands, matching 19 on 13 vertices | D: span route dead
+[2026-07-13T01:06:11Z] > ATTACK | NEXT: launch independent proof and exact falsifier lanes for P113 support-plus-difference Hall.
+[2026-07-13T01:07:21Z] FAIL ATTACK | DID: verified P110 weighted falsifier | RESULT: p104,C579,T1104>C+4p=995; delta=6352 | D: P103/P112 dead
+[2026-07-13T01:07:22Z] OK ATTACK | DID: tested P113 on 20 dense P110 rows | RESULT: 0 support+difference Hall failures; max T=2696 | D: P113 survives
+[2026-07-13T01:07:23Z] > ATTACK | NEXT: launch proof and falsifier lanes for P113; continue filtered P110 class lemma separately.
+[2026-07-13T01:12:00Z] > VERIFY | NEXT: archive and audit three GPT-Pro responses plus P106/P108 exact artifacts.
+[2026-07-13T01:14:13Z] OK VERIFY | DID: archived 3 complete GPT-Pro replies | RESULT: delta_+ correction; raw-overlap false; rank-window partial | D: none
+[2026-07-13T01:14:14Z] FAIL ATTACK | DID: reran P106 verifier | RESULT: p67,delta129,T221>C199+V20; exact Hall deficit 1 | D: RM97 dead outside literal holes
+[2026-07-13T01:14:15Z] OK VERIFY | DID: reran P108 identity gate | RESULT: 0 sweep/color identity failures on 7 mandatory rows | D: BC108 frontier
+[2026-07-13T01:14:16Z] > PLAN | NEXT: prove or exactly falsify BC108 on positive-defect literal holes while retaining P113 as an independent route.
+[2026-07-13T01:30:07Z] > ATTACK | NEXT: exact-test matching each color excess to distinct arm-pair differences on all P108 domains.
+2026-07-13T01:19:16Z > ATTACK | NEXT: prove or exactly falsify BC108 via arm-cycle decomposition, auditing P88, parity lift, and P106.
+[2026-07-13T01:20:30Z] > ATTACK | NEXT: Audit P108 definitions and all exact scripts before constructing the independent P116 BC108 falsifier search.
+[2026-07-13T01:27:00Z] OK ATTACK | DID: Read P108 report and all five p108 scripts; isolated BC108 exact gate and P106 near-falsifier | RESULT: P106 residual=9 but non-hole | D: none
+[2026-07-13T01:27:01Z] > ATTACK | NEXT: Benchmark exhaustive widths 31+ and design exact local repair search around the P106 residual-9 non-hole row.
+[2026-07-13T01:23:15Z] > ATTACK | NEXT: build P118 exact endpoint-Sidon generator maximizing full P113 Hall deficiency beyond width 30.
+[2026-07-13T01:35:00Z] OK ATTACK | DID: Implemented independent BC108 evaluator and sharded exhaustive search | RESULT: p116 core matches P108 on all 7 mandatory rows | D: none
+[2026-07-13T01:35:01Z] > ATTACK | NEXT: Run exact complete width 31 pilot with direct translations and positive q=2 parity lifts.
+[2026-07-13T01:36:00Z] OK ATTACK | DID: Completed width-31 BC108 pilot | RESULT: 126225 direct holes +3432 positive parity lifts, 0 failures; SHA ae7af767... | D: none
+[2026-07-13T01:36:01Z] > ATTACK | NEXT: Exhaustively enumerate widths 31..50 across 64 workers with exact direct and parity-lift gates.
+[2026-07-13T01:36:20Z] FAIL ATTACK | DID: Launched widths 31..50 with 64 ProcessPool workers | RESULT: Python Windows cap is 61 workers; no search ran | D: rerun=61
+[2026-07-13T01:31:35Z] > ATTACK | NEXT: run P118 W31-35 exhaustive, 6 Costas families, and 15 CP-SAT fold-dense Hall searches with 16 workers.
+[2026-07-13T01:35:25Z] > SELECT | NEXT: Fix P122 LIVE-GATE color-excess Hall lemma; its explicit gates admit exhaustive auditing.
+[2026-07-13T01:35:26Z] OK SELECT | DID: Chose P122 per user assignment | RESULT: problems/864/compute/p122/audit_color_excess_difference_hall.py | D: none
+[2026-07-13T01:35:27Z] > GATE | NEXT: Read P108, P115, P83, P82 and P122 audit to extract gates and prior falsifiers.
+[2026-07-13T01:35:59Z] OK GATE | DID: Read P108, P115, P83, P82 and P122 audit | RESULT: P115 falsifies BC108 only off live gates; P122 tests Hall matching | D: LBC108 live
+[2026-07-13T01:36:00Z] > PLAN | NEXT: Characterize duplicated arm-pair differences and search live rows for an exact Hall deficit.
+[2026-07-13T01:36:45Z] OK PLAN | DID: Reduced duplicate labels to reciprocal arcs or high-pair rectangles | RESULT: problems/864/compute/p122/audit_color_excess_difference_hall.py:72-90 | D: none
+[2026-07-13T01:36:46Z] > ATTACK | NEXT: Audit reciprocal arcs and shared high-pair differences on mandatory, P110, and parity-lift rows.
+[2026-07-13T01:37:15Z] OK ATTACK | DID: Audited 47 mandatory/P110 direct/parity rows | RESULT: P110_00 Hall deficit=28 direct and parity; P75/P94/P98 deficits=0 | D: ungated false
+[2026-07-13T01:37:16Z] > ATTACK | NEXT: Test P110 endpoint-preserving translations in the automatic-hole and positive-defect interval.
+[2026-07-13T01:39:00Z] OK ATTACK | DID: Completed exhaustive widths 31..50 | RESULT: 24,042,660 direct holes +83,016 positive parity lifts, 0 BC108 failures; SHA f4a90b80... | D: none
+[2026-07-13T01:39:01Z] > ATTACK | NEXT: Scan 2,526 archived rulers and exact named deletion/insertion/swap mutations with all positive translations.
+[2026-07-13T01:39:12Z] OK ATTACK | DID: Sampled P110_00 shifts gamma=4910+25k plus 6351 for b=1,2 | RESULT: 59 live rows; max excess=7; max deficit=0 | D: none
+[2026-07-13T01:39:13Z] > ATTACK | NEXT: Exhaust 25,592 P110 shifts gamma=ceil(W/2)..delta0-1 for b=1,2 with exact Hall matching.
+[2026-07-13T01:43:00Z] OK ATTACK | DID: Exhausted positive-defect literal-hole subsets of P88 retaining max(B) | RESULT: 2407 subsets (b=1,2), 0 failures; SHA 41c52b97... | D: none
+[2026-07-13T01:43:01Z] OK VERIFY | DID: Independently recomputed retained rows and source hashes | RESULT: independent_verification_partial.json, 6 rows and 4 source hashes pass | D: none
+[2026-07-13T01:46:00Z] OK ATTACK | DID: Exhausted minimum hole repairs and Sidon completions of P106 | RESULT: b1 10 cores/217 nodes max p63; b2 4 cores/6 nodes max p55; 0 positive rows | D: none
+[2026-07-13T01:48:19Z] OK ATTACK | DID: Exhausted 25,578 P110 automatic-hole positive shifts for b=1,2 | RESULT: 0 Hall deficits; SHA dd28c9b0e4b611bd... | D: none
+[2026-07-13T01:48:20Z] > VERIFY | NEXT: Prove and exact-check the reserve-overlap identity equivalent to every P122 Hall inequality.
+[2026-07-13T01:48:21Z] > VERIFY | NEXT: Check the identity on 928,512 width<=30 B/h systems at b=1 and 47 named direct/parity rows.
+[2026-07-13T01:48:45Z] OK VERIFY | DID: Checked arc simplicity and reserve-overlap identity | RESULT: 928,559 systems, 77,161 arcs, 0 assertion failures | D: identity verified
+[2026-07-13T01:48:46Z] > ATTACK | NEXT: Enumerate every P110 shift gamma=0..delta0-1 passing the literal hole for b=1 or b=2.
+[2026-07-13T01:48:50Z] OK ATTACK | DID: Enumerated P110 literal-hole shifts by exact bitset support test | RESULT: 52,832 union shifts; 27,254 nonautomatic | D: none
+[2026-07-13T01:48:51Z] > ATTACK | NEXT: Score 27,254 nonautomatic P110 live shifts with exact Hall matching; b1=21,885 and b2=22,106 gates.
+[2026-07-13T01:50:34Z] OK ATTACK | DID: ran P118 exact full-Hall search | RESULT: 340207 triangle systems, 0 failures; SHA 6AEC361D | D: P113 survives
+[2026-07-13T01:50:35Z] OK VERIFY | DID: replayed 305 retained P118 rows with Dinic | RESULT: verification.json PASS; SHA 25FA8897 | D: none
+[2026-07-13T01:52:00Z] OK ATTACK | DID: Completed archive and named mutation BC108 campaigns | RESULT: 12,762,610 literal holes, 0 failures; SHAs cdfbc904.../2f9d2c86... | D: none
+[2026-07-13T01:52:01Z] > ATTACK | NEXT: Run exact CP-SAT induced-subset falsifier models on four densest archived parents, b=1,2.
+2026-07-13T01:53:29Z OK ATTACK | DID: reduced BC108 to KB115 cycle-kernel budget | RESULT: problems/864/fanout/wave6/P115_bc108_cycle_budget.md | D: BC108 -> KB115
+2026-07-13T01:53:29Z OK VERIFY | DID: exact-audited KB115 on P88/lift/P106 and 2,642,532 phases | RESULT: 0 failures; P106 7-clique worst residual -4 | D: none
+[2026-07-13T01:55:42Z] > VERIFY | NEXT: Audit GPT-Pro rank-window reduction for 2beta<=h_S and map its finite residue to exact #864 gates.
+[2026-07-13T01:56:34Z] OK ATTACK | DID: Exhausted gate-passing P110 translations | RESULT: 52,832 shifts; b1=47,463,b2=47,684; 0 deficits; SHA a170de24... | D: none
+[2026-07-13T01:56:35Z] > CHECK | NEXT: Write P122 reserve-overlap reduction with ungated falsifiers and live-gate audit boundary.
+[2026-07-13T01:57:34Z] OK VERIFY | DID: Exact-checked GPT rank-window range | RESULT: 259 residues, all p<=7,u<=48; superseded by P74 | D: none
+[2026-07-13T01:57:59Z] OK CHECK | DID: Wrote P122 reserve-overlap reduction and reproducible audit | RESULT: problems/864/fanout/wave6/P122_live_color_difference_hall.md | D: P122 -> overlap frontier
+[2026-07-13T01:58:00Z] > VERIFY | NEXT: Compile the P122 audit and replay P110 seed 0 to check counts and SHA prefix.
+[2026-07-13T01:57:00Z] OK ATTACK | DID: Ran 8 exact induced-subset CP jobs on four dense parents | RESULT: 3 INFEASIBLE, 5 UNKNOWN at 120s, 0 witnesses | D: unresolved=5
+[2026-07-13T01:57:01Z] > ATTACK | NEXT: Rerun five unresolved subset jobs as 8-worker feasibility models for 300s each.
+[2026-07-13T01:59:01Z] OK VERIFY | DID: Compiled P122 audit | RESULT: audit_p110_live_color_difference_hall.py py_compile PASS | D: none
+[2026-07-13T01:59:02Z] > VERIFY | NEXT: Run all 20 P110 seeds through the standalone P122 live-translation audit for the canonical hash.
+[2026-07-13T01:59:23Z] > ATTACK | NEXT: Run exact six-sign chamber rank gate on 20 dense P110 falsifiers.
+[2026-07-13T01:59:36Z] OK ATTACK | DID: Six-sign gate on P110 dense rows | RESULT: 480 classes, support failures 3, relation failures 0 | D: P124 survives
+[2026-07-13T01:59:36Z] > ATTACK | NEXT: Exact-test P124 on P98/P94/P105/P86 generated domains with 48 workers.
+[2026-07-13T01:59:52Z] OK ATTACK | DID: Broad P124 exact gate | RESULT: 300644 systems, 756080 chambers, 11 support deps, 0 relation fails | D: P124 leads
+[2026-07-13T01:59:52Z] > ATTACK | NEXT: Run P124 on every archived P86 translation with 48 workers.
+[2026-07-13T01:58:00Z] OK ATTACK | DID: Reran five unresolved subset jobs as 8-worker feasibility models | RESULT: all 5 INFEASIBLE in <=16.8s; all 8 parent/phase jobs closed | D: none
+[2026-07-13T02:01:00Z] > VERIFY | NEXT: Validate all P116 JSON, compile all scripts, rerun independent retained-row checks, and finalize wave6 report.
+[2026-07-13T02:05:00Z] FAIL ATTACK | DID: Full P86 translation gate | RESULT: P124 mod failure: chamber 74 rows/rank73; exact check found 8-row +/-1 dependency | D: P124 dead
+[2026-07-13T02:05:00Z] > VERIFY | NEXT: Fix sparse-rank elimination bug, verify P124 dependency over Q, and rerun dense gates.

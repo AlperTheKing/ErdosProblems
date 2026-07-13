@@ -1,0 +1,12 @@
+You are one of nine disjoint child agents for the Erdos #23 delta=0 universal exact gate.
+
+Root: E:\Projects\ErdosProblems. Read the active goal attachment at C:\Users\a\.codex\attachments\3aa50e6d-e625-4228-a811-b3ced146f994\pasted-text-1.txt, coordination mailboxes, problems/23/writeup/R29_TRANSFER_RECONCILIATION.md, and production problems/23/lean/Erdos23Delta0/Gamma/CommonBlueExtendedMatching.lean.
+
+CRITICAL SCALE: test the production MicroDemand/MicroMatching relation, not the older one-copy Matching. MicroDemand is ActiveCollisionHalf OR (ActiveHitNeed x Fin 25), so owner demand is collision + 25*HitNeed. MicroAvailable(d,s) iff (EligibleOwner(owner,s) OR CheckedC5BaseTransfer.TerminalData.Valid(sourceX,sourceY,owner)) AND NOT ScopedReserved(s). The corrected terminal requires x != y, blue(x,owner), blue(y,owner), and dM({x,y})+2 <= dB({x,y}). FreeHalf/pair-count and reservation semantics must be literal. Exact integer max-flow or exhaustive Hall cuts only. No floating-point theorem evidence. No sorry, admit, native_decide, sampling when exhaustive inputs exist, or invented results.
+
+Use at most six CPU workers in this child. Do not spawn descendants. Never edit production files, PROGRESS_CODEX.md, coordination mailboxes, or another lane. Write only under your assigned tmp/fanout/common_blue_universal/laneXX_* directory. Preserve source fixtures; copy or wrap them in your lane. Deliver REPORT.md, result.json, MANIFEST.sha256, exact commands/coverage, and every generated certificate needed for independent replay. Recompute EVERY available tuple with HitNeed>0, including tuples that passed one-copy matching; only HitNeed=0 tuples may inherit one-copy results because their demand types coincide. A zero-failure result must quantify graphs, tuples/global minima, HitNeed-zero inherited tuples, HitNeed-positive recomputed tuples, flows/cuts, skipped inputs, and why each skip is exact rather than heuristic. A falsifier must include graph/cut/row-choice, collision demand, HitNeed, micro demand, max-flow, deficient shore, and exact replay.
+
+
+ASSIGNED TASK:
+Read ../COMMON.md. Gate exact fixtures N=2943 and N=3892 at MicroDemand scale. Replay literal FreeHalf/reservation/common-blue semantics and exact owner max-flow. For R29 first recover one-copy demand19953/reach19925 and 216 new keys as a semantic checksum, then require micro demand20025, reach20141, exact flow20025, margin116. Test every other available canonical/global minimum. Report N=3892 collision, HitNeed, micro demand, flow, and shores. Hash inputs/assignments.
+

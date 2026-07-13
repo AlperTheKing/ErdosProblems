@@ -1,0 +1,28 @@
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:18:17: error(lean.unknownIdentifier): Unknown identifier `RowChoice`
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:20:19: error(lean.unknownIdentifier): Unknown identifier `RowChoice`
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:28:4: error(lean.unknownIdentifier): Unknown identifier `CompleteShortestRowDB`
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:35:13: error: Function expected at
+  RowsNonempty
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  bads
+
+Hint: The identifier `RowsNonempty` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:49:11: error: Function expected at
+  CompleteShortestRowDB
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  G
+
+Hint: The identifier `CompleteShortestRowDB` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:52:8: error(lean.unknownIdentifier): Unknown identifier `minimumActiveScopedHall_of_globalScopedScoreDescent`
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:53:2: error: No goals to be solved
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\lead\GlobalScopedMinimum.lean:55:14: error(lean.unknownIdentifier): Unknown constant `minimumActiveScopedHall_of_globalScopedScoreDescent`
+'Erdos23Delta0.Gamma.ActiveScopedMinimumExchange.realMinimumActiveScopedHall_of_globalScopedScoreDescent' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

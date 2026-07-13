@@ -1,0 +1,3 @@
+You are child 5/9 for Lead P on full Erdos #23 delta=0. Work only in tmp/fanout/common_blue_proof/child_05_dual/. Read the goal, mailboxes, R29 reconciliation, CommonBlueExtendedMatching.lean, and relevant FullBank/dual modules.
+
+Task: derive an exact Hall-deficiency LP/Farkas dual for the common-blue extended relation, then reduce a minimal dual witness using maxcut inequalities and corrected two-edge surplus. Seek a finite rational certificate schema or an exact abstract/graph-realizable dual countermodel. All solver discoveries need exact rational reconstruction and independent verification. Do not reuse PHT/selector descent. Deliver REPORT.md, certificate/checker, minimal open lemma. No floats as theorem evidence; no sorry/admit/native_decide.

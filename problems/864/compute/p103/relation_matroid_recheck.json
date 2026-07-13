@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "field": "GF(2)",
+  "relation_vector": "incidence vector of the three supporting folds",
+  "candidate": "triangle-relation nullity <= V_b",
+  "width_scan": {
+    "rows": 1583738,
+    "nonzero_triangle_rows": 6132,
+    "matroid_failures": 0,
+    "scalar_failures": 0,
+    "minimum_matroid_slack": 0,
+    "minimum_matroid_slack_witness": {
+      "width": 1,
+      "ruler": [
+        0,
+        1
+      ],
+      "gamma": 0,
+      "b": 2,
+      "C_S": 1,
+      "T_F": 0,
+      "rank_gf2": 0,
+      "nullity_gf2": 0,
+      "V_b": 0,
+      "matroid_slack": 0,
+      "scalar_slack": 1
+    },
+    "first_matroid_failure": null,
+    "first_scalar_failure": null
+  },
+  "P88_positive_defect_translations": {
+    "rows": 4170,
+    "nonzero_triangle_rows": 4080,
+    "matroid_failures": 19,
+    "scalar_failures": 0,
+    "minimum_matroid_slack": -9,
+    "minimum_matroid_slack_witness": {
+      "gamma": 41,
+      "b": 2,
+      "C_S": 181,
+      "T_F": 232,
+      "rank_gf2": 160,
+      "nullity_gf2": 72,
+      "V_b": 63,
+      "matroid_slack": -9,
+      "scalar_slack": 12
+    },
+    "first_matroid_failure": {
+      "gamma": 41,
+      "b": 2,
+      "C_S": 181,
+      "T_F": 232,
+      "rank_gf2": 160,
+      "nullity_gf2": 72,
+      "V_b": 63,
+      "matroid_slack": -9,
+      "scalar_slack": 12
+    },
+    "first_scalar_failure": null
+  }
+}

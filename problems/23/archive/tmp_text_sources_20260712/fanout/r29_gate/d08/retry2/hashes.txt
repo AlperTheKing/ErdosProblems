@@ -1,0 +1,5 @@
+485bc5b66f2fee5ca6cc9f3d1c19d57cfe2f9ad3ea83c8f4ab80b8cb196164ec  audit_retry2.py
+fdc088cd4a4f074dd9b5e74320b9aaeaa9ded7e66d85ebfe1255ccf6c50592ff  certificate.json
+fc4f3ab94bed810669976b1fdb21743fdd4ebe57eea15ef52afcfc2165e2fb1f  canonical-instance-bytes
+7abcf1fef228f90fd79de71271474e31dc108f489e3ac7a5aaa67d88eb083e9d  ../prompt.txt
+5d29b1d6e35957405c53176fab1fb21660d727cb334a1e20462eb5ebe36678f6  ../../lead/r29_lead_gate.py (untrusted comparison input only)

@@ -1,0 +1,200 @@
+{
+  "arithmetic": "integer/rational",
+  "exhaustive": {
+    "max_N": 20,
+    "class_counts": {
+      "difference_two": 16349,
+      "coherent": 6365,
+      "admissible": 6365
+    },
+    "failure_counts": {
+      "0": {
+        "difference_two": 8308,
+        "coherent": 902,
+        "admissible": 902
+      },
+      "1": {
+        "difference_two": 20,
+        "coherent": 0,
+        "admissible": 0
+      },
+      "2": {
+        "difference_two": 0,
+        "coherent": 0,
+        "admissible": 0
+      }
+    },
+    "first_failure": {
+      "0": {
+        "difference_two": {
+          "A": [
+            0,
+            1,
+            2
+          ],
+          "N": 3,
+          "k": 3,
+          "H": 3,
+          "M": 5,
+          "G": 0,
+          "W": 5,
+          "D": 2,
+          "Q": 0,
+          "Z": 2,
+          "S": 13,
+          "max_interval_degree": 3,
+          "c20_margin": -231,
+          "lg33_margin": -141,
+          "lg33_domain": 1,
+          "ig0_margin": 12,
+          "ig1_margin": -6,
+          "ig2_margin": -24,
+          "duplicate_centers": [
+            2
+          ],
+          "repeated_sums": [
+            2
+          ]
+        },
+        "coherent": {
+          "A": [
+            0,
+            1,
+            2
+          ],
+          "N": 3,
+          "k": 3,
+          "H": 3,
+          "M": 5,
+          "G": 0,
+          "W": 5,
+          "D": 2,
+          "Q": 0,
+          "Z": 2,
+          "S": 13,
+          "max_interval_degree": 3,
+          "c20_margin": -231,
+          "lg33_margin": -141,
+          "lg33_domain": 1,
+          "ig0_margin": 12,
+          "ig1_margin": -6,
+          "ig2_margin": -24,
+          "duplicate_centers": [
+            2
+          ],
+          "repeated_sums": [
+            2
+          ]
+        },
+        "admissible": {
+          "A": [
+            0,
+            1,
+            2
+          ],
+          "N": 3,
+          "k": 3,
+          "H": 3,
+          "M": 5,
+          "G": 0,
+          "W": 5,
+          "D": 2,
+          "Q": 0,
+          "Z": 2,
+          "S": 13,
+          "max_interval_degree": 3,
+          "c20_margin": -231,
+          "lg33_margin": -141,
+          "lg33_domain": 1,
+          "ig0_margin": 12,
+          "ig1_margin": -6,
+          "ig2_margin": -24,
+          "duplicate_centers": [
+            2
+          ],
+          "repeated_sums": [
+            2
+          ]
+        }
+      },
+      "1": {
+        "difference_two": {
+          "A": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            11,
+            18
+          ],
+          "N": 19,
+          "k": 7,
+          "H": 8,
+          "M": 26,
+          "G": 0,
+          "W": 56,
+          "D": 28,
+          "Q": 0,
+          "Z": 28,
+          "S": 120,
+          "max_interval_degree": 5,
+          "c20_margin": -3824,
+          "lg33_margin": -3184,
+          "lg33_domain": 1,
+          "ig0_margin": 1064,
+          "ig1_margin": 152,
+          "ig2_margin": -760,
+          "duplicate_centers": [
+            6,
+            10,
+            11,
+            12,
+            14,
+            18
+          ],
+          "repeated_sums": [
+            6,
+            10,
+            11,
+            12,
+            14,
+            18
+          ]
+        },
+        "coherent": null,
+        "admissible": null
+      },
+      "2": {
+        "difference_two": null,
+        "coherent": null,
+        "admissible": null
+      }
+    }
+  },
+  "implication_relaxation": {
+    "max_N": 10000,
+    "checked_N_k_parameters": 1323300,
+    "failure_count": 180853,
+    "first_failure": {
+      "N": 97,
+      "H": 22,
+      "k": 10,
+      "G": "97/22",
+      "active_bound": "IG2",
+      "S_capacity": 946,
+      "margin_numerator": 472,
+      "margin_denominator": 1
+    },
+    "worst_margin": {
+      "N": 9995,
+      "H": 465,
+      "k": 43,
+      "G": "352547638/129735",
+      "active_bound": "IG2",
+      "S_capacity": 431647,
+      "margin_numerator": 4265771114863,
+      "margin_denominator": 43245
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "relation": "MicroDemand = ActiveCollisionHalf OR (ActiveHitNeed x Fin 25)",
+  "status": "ABSENT_MATCHING_INPUTS",
+  "passes": 0,
+  "failures": 0,
+  "skipped": 2,
+  "sources": {
+    "n311_structural_gate": {
+      "path": "problems\\23\\writeup\\_claude_r20_311_gate.py",
+      "sha256": "0d4a2b93a351059f2754060cb105a03a876bd89fa618f82f138674348330b69d"
+    },
+    "n2928_spec": {
+      "path": "problems\\23\\writeup\\WALL_ATTACK_R28_GPTPRO56.md",
+      "sha256": "819d6a3bb2da534beb7ac86f8b50e9ab936942893671bca12c61e027069e42b9"
+    },
+    "n2928_followup": {
+      "path": "problems\\23\\writeup\\WALL_ATTACK_R29_GPTPRO56.md",
+      "sha256": "fff06d97f2e574fe2d66b9cea4f3bc4244037a92eb8ed5bd363eca73c8591b04"
+    },
+    "production_relation": {
+      "path": "problems\\23\\lean\\Erdos23Delta0\\Gamma\\CommonBlueExtendedMatching.lean",
+      "sha256": "71308be7d0802fbaa04f64282334e88f3a3088b90efad78b86e834c10cb63116"
+    }
+  },
+  "fixtures": [
+    {
+      "n": 311,
+      "graph_certificate_replayed": true,
+      "structural_replay_rc": 0,
+      "reported_graphs": 1,
+      "available_complete_row_choices": 0,
+      "hitneed_positive_recomputed": 0,
+      "hitneed_zero_inherited": 0,
+      "micro_flows": 0,
+      "hall_cuts": 0,
+      "skip_exact_reason": "The available script constructs the graph and checks aggregate row multiplicities (28 unique core atoms; 64 attachment atoms each with 4096 rows), but emits no complete RowChoice/canonical/global-minimum tuple. MicroDemand, ScopedReserved, and FreeHalf are tuple-dependent."
+    },
+    {
+      "n": 2928,
+      "graph_certificate_replayed": false,
+      "reported_graphs": 1,
+      "available_complete_row_choices": 0,
+      "hitneed_positive_recomputed": 0,
+      "hitneed_zero_inherited": 0,
+      "micro_flows": 0,
+      "hall_cuts": 0,
+      "skip_exact_reason": "Only R28/R29 prose specs are present locally; no executable constructor, serialized edge/cut payload, complete RowChoice, or max-cut/Gamma certificate was found. Absent data is not a pass."
+    }
+  ]
+}

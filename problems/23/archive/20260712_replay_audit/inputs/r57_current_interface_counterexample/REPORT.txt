@@ -1,0 +1,6 @@
+vertices=16 edges=17 triangles=0
+maxcut=16 maxcut_orbits=1 connected_maxcuts=1
+min_connected_maxcut_gamma=25 displayed_gamma=25
+shortest_st_distance=4 shortest_rows=2 shape=(False, False, False)
+min_switch_loss=0 row_union_pair_count=65536 min_pair_margin=0
+PASS_R57_CURRENT_INTERFACE_COUNTEREXAMPLE

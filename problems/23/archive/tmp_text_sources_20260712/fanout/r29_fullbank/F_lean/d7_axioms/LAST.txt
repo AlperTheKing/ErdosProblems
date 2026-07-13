@@ -1,0 +1,3 @@
+Audit complete. Report written to [REPORT.md](E:\Projects\ErdosProblems\tmp\fanout\r29_fullbank\F_lean\d7_axioms\REPORT.md).
+
+Key result: 0 forbidden findings; all 13 load-bearing theorems use only `propext`, `Classical.choice`, and `Quot.sound`. No shared logs were touched and no agents were spawned.

@@ -1,0 +1,234 @@
+{
+  "counts": {
+    "admissible": {
+      "bare_gap_failures": 2191,
+      "c20_failures": 0,
+      "lg33_failures": 0,
+      "sets": 99961
+    },
+    "nu2": {
+      "bare_gap_failures": 39825,
+      "c20_failures": 0,
+      "lg33_failures": 0,
+      "sets": 212595
+    }
+  },
+  "integer_arithmetic_only": true,
+  "max_N": 21,
+  "maxima": {
+    "admissible": {
+      "bare_gap": {
+        "margin": 1092,
+        "witness": {
+          "A": [
+            1,
+            5,
+            6,
+            8,
+            14,
+            16,
+            17,
+            21
+          ],
+          "D_H": 26,
+          "H": 8,
+          "M_H": 28,
+          "N": 21,
+          "Q_H": 0,
+          "W_H": 54,
+          "Z_H": 26,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 1092,
+          "c20_cleared_margin": -6456,
+          "degree_histogram": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "gap_overlap": 36,
+          "k": 8,
+          "lg33_cleared_margin": -5448,
+          "max_degree": 4
+        }
+      },
+      "c20": {
+        "margin": -11,
+        "witness": {
+          "A": [
+            1
+          ],
+          "D_H": 0,
+          "H": 1,
+          "M_H": 1,
+          "N": 1,
+          "Q_H": 0,
+          "W_H": 0,
+          "Z_H": 0,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 0,
+          "c20_cleared_margin": -11,
+          "degree_histogram": [
+            [
+              1,
+              1
+            ]
+          ],
+          "gap_overlap": 0,
+          "k": 1,
+          "lg33_cleared_margin": -9,
+          "max_degree": 1
+        }
+      },
+      "lg33": {
+        "margin": -9,
+        "witness": {
+          "A": [
+            1
+          ],
+          "D_H": 0,
+          "H": 1,
+          "M_H": 1,
+          "N": 1,
+          "Q_H": 0,
+          "W_H": 0,
+          "Z_H": 0,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 0,
+          "c20_cleared_margin": -11,
+          "degree_histogram": [
+            [
+              1,
+              1
+            ]
+          ],
+          "gap_overlap": 0,
+          "k": 1,
+          "lg33_cleared_margin": -9,
+          "max_degree": 1
+        }
+      }
+    },
+    "nu2": {
+      "bare_gap": {
+        "margin": 1176,
+        "witness": {
+          "A": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            14,
+            16,
+            21
+          ],
+          "D_H": 28,
+          "H": 8,
+          "M_H": 28,
+          "N": 21,
+          "Q_H": 0,
+          "W_H": 56,
+          "Z_H": 28,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 1176,
+          "c20_cleared_margin": -5784,
+          "degree_histogram": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              13
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "gap_overlap": 36,
+          "k": 8,
+          "lg33_cleared_margin": -5112,
+          "max_degree": 5
+        }
+      },
+      "c20": {
+        "margin": -11,
+        "witness": {
+          "A": [
+            1
+          ],
+          "D_H": 0,
+          "H": 1,
+          "M_H": 1,
+          "N": 1,
+          "Q_H": 0,
+          "W_H": 0,
+          "Z_H": 0,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 0,
+          "c20_cleared_margin": -11,
+          "degree_histogram": [
+            [
+              1,
+              1
+            ]
+          ],
+          "gap_overlap": 0,
+          "k": 1,
+          "lg33_cleared_margin": -9,
+          "max_degree": 1
+        }
+      },
+      "lg33": {
+        "margin": -9,
+        "witness": {
+          "A": [
+            1
+          ],
+          "D_H": 0,
+          "H": 1,
+          "M_H": 1,
+          "N": 1,
+          "Q_H": 0,
+          "W_H": 0,
+          "Z_H": 0,
+          "ambient_holes": 0,
+          "bare_gap_cleared_margin": 0,
+          "c20_cleared_margin": -11,
+          "degree_histogram": [
+            [
+              1,
+              1
+            ]
+          ],
+          "gap_overlap": 0,
+          "k": 1,
+          "lg33_cleared_margin": -9,
+          "max_degree": 1
+        }
+      }
+    }
+  }
+}

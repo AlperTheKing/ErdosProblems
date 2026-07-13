@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "field": "GF(1000003)",
+  "vector": "support incidence plus L1,L2,d*L1,d*L2 in four mark blocks",
+  "conditional_consequence": "full row rank implies T_F <= C_S + 4p",
+  "named_rows": {
+    "P75": {
+      "p": 26,
+      "C_S": 51,
+      "T_F": 25,
+      "ambient_dimension": 155,
+      "weighted_rank": 25,
+      "weighted_nullity": 0
+    },
+    "P94_translation_maximum": {
+      "p": 104,
+      "C_S": 142,
+      "T_F": 116,
+      "ambient_dimension": 558,
+      "weighted_rank": 116,
+      "weighted_nullity": 0
+    },
+    "P94_insertion_maximum": {
+      "p": 26,
+      "C_S": 51,
+      "T_F": 37,
+      "ambient_dimension": 155,
+      "weighted_rank": 37,
+      "weighted_nullity": 0
+    }
+  },
+  "P88_positive_defect_translations": {
+    "fold_systems": 2085,
+    "represented_b_rows": 4170,
+    "support_dependent_systems": 640,
+    "weighted_rank_failures": 0,
+    "minimum_rank_slack": 0,
+    "minimum_rank_slack_row": {
+      "gamma": 0,
+      "p": 60,
+      "C_S": 182,
+      "T_F": 200,
+      "ambient_dimension": 422,
+      "weighted_rank": 200,
+      "weighted_nullity": 0
+    },
+    "first_failure": null
+  }
+}

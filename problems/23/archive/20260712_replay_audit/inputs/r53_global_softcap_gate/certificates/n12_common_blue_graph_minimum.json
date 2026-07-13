@@ -1,0 +1,1793 @@
+{
+  "activeEdgeLoads": {},
+  "assignments": [
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "source": [
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "source": [
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "source": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "source": [
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        0,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "source": [
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "source": [
+        0,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "source": [
+        6,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        2,
+        2,
+        1
+      ],
+      "source": [
+        6,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        0,
+        6,
+        0,
+        0
+      ],
+      "source": [
+        6,
+        11,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        0,
+        6,
+        0,
+        1
+      ],
+      "source": [
+        6,
+        11,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        0,
+        7,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        8,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        0,
+        7,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        8,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "source": [
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        8,
+        0,
+        1
+      ],
+      "source": [
+        9,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        10,
+        6,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        10,
+        6,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        1,
+        0
+      ],
+      "source": [
+        10,
+        9,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        1,
+        1
+      ],
+      "source": [
+        10,
+        9,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        2,
+        0
+      ],
+      "source": [
+        10,
+        11,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        9,
+        2,
+        1
+      ],
+      "source": [
+        10,
+        11,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        11,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        0,
+        11,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "source": [
+        1,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "source": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "source": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "source": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "source": [
+        2,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "source": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "source": [
+        2,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "source": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        6,
+        0,
+        0
+      ],
+      "source": [
+        2,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        2,
+        6,
+        0,
+        1
+      ],
+      "source": [
+        2,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        7,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        7,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        2,
+        8,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        7,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        2,
+        8,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        7,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        1,
+        0
+      ],
+      "source": [
+        10,
+        7,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        1,
+        1
+      ],
+      "source": [
+        10,
+        7,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        2,
+        0
+      ],
+      "source": [
+        10,
+        8,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        2,
+        9,
+        2,
+        1
+      ],
+      "source": [
+        10,
+        8,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        2,
+        11,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        6,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P3_rowCompanion"
+      ],
+      "obligation": [
+        2,
+        11,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        6,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        6,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        6,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        6,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        6,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        6,
+        0,
+        0
+      ],
+      "source": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        6,
+        0,
+        1
+      ],
+      "source": [
+        6,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        6,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        6,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        6,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        7,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        7,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        7,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        7,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        7,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        8,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        8,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        8,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        8,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        8,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        1,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        1,
+        0
+      ],
+      "source": [
+        1,
+        10,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        1,
+        1
+      ],
+      "source": [
+        1,
+        10,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        2,
+        0
+      ],
+      "source": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        0,
+        2,
+        1
+      ],
+      "source": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        2,
+        1,
+        0
+      ],
+      "source": [
+        3,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P4_outsideAttachment"
+      ],
+      "obligation": [
+        9,
+        2,
+        1,
+        1
+      ],
+      "source": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        2,
+        2,
+        0
+      ],
+      "source": [
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        2,
+        2,
+        1
+      ],
+      "source": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        6,
+        0,
+        0
+      ],
+      "source": [
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        6,
+        0,
+        1
+      ],
+      "source": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        7,
+        0,
+        0
+      ],
+      "source": [
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        7,
+        0,
+        1
+      ],
+      "source": [
+        5,
+        0,
+        1
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        8,
+        0,
+        0
+      ],
+      "source": [
+        5,
+        2,
+        0
+      ]
+    },
+    {
+      "families": [
+        "commonBlue"
+      ],
+      "obligation": [
+        9,
+        8,
+        0,
+        1
+      ],
+      "source": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        9,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        9,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        1,
+        0
+      ],
+      "source": [
+        9,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        1,
+        1
+      ],
+      "source": [
+        9,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        2,
+        0
+      ],
+      "source": [
+        9,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        9,
+        2,
+        1
+      ],
+      "source": [
+        9,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        11,
+        0,
+        0
+      ],
+      "source": [
+        9,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        9,
+        11,
+        0,
+        1
+      ],
+      "source": [
+        9,
+        5,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        1,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        0,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        1,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        2,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        3,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        2,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        3,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        9,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        4,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        9,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        4,
+        1
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        11,
+        0,
+        0
+      ],
+      "source": [
+        11,
+        5,
+        0
+      ]
+    },
+    {
+      "families": [
+        "P1_sameFirst"
+      ],
+      "obligation": [
+        11,
+        11,
+        0,
+        1
+      ],
+      "source": [
+        11,
+        5,
+        1
+      ]
+    }
+  ],
+  "canonicalPayloadSha256": "23d2b34934badc98256b9b0275c8415498cc32f7248ed44d87d25d4ee3ec251b",
+  "checks": {
+    "activeEdgeCapacityTwo": true,
+    "actualFreeHalfSinks": true,
+    "allGlobalDemandAssigned": true,
+    "eligible": true,
+    "unitKeyCapacity": true
+  },
+  "fixture": "n12_common_blue_graph_minimum",
+  "model": {
+    "activeEdgeAggregateCapacity": 2,
+    "arithmetic": "Python integers; integral layered max flow",
+    "cappedEdgeScope": "all activeEdges",
+    "demand": "all global CollisionHalf identities",
+    "fixedReservations": false,
+    "keyCapacity": 1,
+    "relations": [
+      "P1_sameFirst",
+      "P2_commonBad",
+      "P3_rowCompanion",
+      "P4_outsideAttachment",
+      "P5_quiescentAttachment",
+      "commonBlue"
+    ],
+    "sink": "actual FreeHalf(sourceX,sourceY,half)"
+  },
+  "rowsSha256": "6025f544172ed4df65802a910d420304a7bc2eaa7137446f6b9dc2653f69b7b2",
+  "schema": "R53_GLOBAL_FREEHALF_ASSIGNMENT_V1"
+}

@@ -1,0 +1,1 @@
+Draft the smallest sorry-free Lean bridge lemmas (standalone probes only) that convert a checked transfer matching or checked source assignment into the next FullBank package layer using only existing APIs. Prefer wrappers/composition lemmas. Build and axiom-audit every probe. If blocked, isolate the exact unprovable premise as a named hypothesis.

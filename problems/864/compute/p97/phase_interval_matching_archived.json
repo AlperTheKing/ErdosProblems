@@ -1,0 +1,12 @@
+{
+  "translations": {
+    "literal_holes": 313863,
+    "matching_failures": 0,
+    "first_failure": null
+  },
+  "insertions": {
+    "literal_holes": 242,
+    "matching_failures": 0,
+    "first_failure": null
+  }
+}

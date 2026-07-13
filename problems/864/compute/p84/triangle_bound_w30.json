@@ -1,0 +1,65 @@
+{
+  "max_width": 30,
+  "sidon_rulers": 29952,
+  "positive_defect_candidates": 919484,
+  "admissible_holes": 464981,
+  "nonzero_triangle_rows": 1037,
+  "T_F_gt_C_S_failures": 0,
+  "max_T_F_minus_C_S": {
+    "value": 0,
+    "witness": {
+      "p": 2,
+      "width": 1,
+      "gamma": 1,
+      "h": 3,
+      "b": 1,
+      "B": [
+        1,
+        2
+      ],
+      "C_S": 0,
+      "T_F": 0
+    }
+  },
+  "max_T_F_over_C_S": {
+    "numerator": 1,
+    "denominator": 2,
+    "witness": {
+      "p": 6,
+      "width": 25,
+      "gamma": 3,
+      "h": 29,
+      "b": 1,
+      "B": [
+        3,
+        11,
+        14,
+        23,
+        27,
+        28
+      ],
+      "C_S": 4,
+      "T_F": 2
+    }
+  },
+  "max_T_F": {
+    "value": 2,
+    "witness": {
+      "p": 6,
+      "width": 25,
+      "gamma": 3,
+      "h": 29,
+      "b": 1,
+      "B": [
+        3,
+        11,
+        14,
+        23,
+        27,
+        28
+      ],
+      "C_S": 4,
+      "T_F": 2
+    }
+  }
+}

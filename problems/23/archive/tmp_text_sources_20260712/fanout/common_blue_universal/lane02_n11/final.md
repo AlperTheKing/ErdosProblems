@@ -1,0 +1,1 @@
+Blocked by lane filesystem permissions: `apply_patch` cannot create files in `lane02_n11`, despite the directory being assigned to this task. Therefore I could not safely produce the required `REPORT.md`, `result.json`, replay script, or manifest without violating the edit protocol. No production or coordination files were modified.

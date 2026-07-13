@@ -1,0 +1,40 @@
+{
+  "exact_solver": "OR-Tools CP-SAT",
+  "result": {
+    "status": "OPTIMAL",
+    "bound": 160,
+    "maximum": 49,
+    "A": [
+      4,
+      5,
+      49
+    ],
+    "B": [
+      24,
+      16,
+      18
+    ],
+    "C": [
+      39,
+      46,
+      0
+    ],
+    "x": 58,
+    "y": 67,
+    "labels": [
+      0,
+      4,
+      5,
+      16,
+      18,
+      24,
+      39,
+      46,
+      49
+    ],
+    "pair_sums": 45,
+    "wall_time_seconds": 62.2001768,
+    "branches": 6,
+    "conflicts": 4
+  }
+}

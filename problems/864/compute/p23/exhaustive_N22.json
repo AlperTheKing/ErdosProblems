@@ -1,0 +1,170 @@
+{
+  "H_values": [
+    5,
+    6,
+    7
+  ],
+  "admissible_endpoint_normalized_sets": 3302,
+  "ambient_n": 22,
+  "best_by_H": [
+    {
+      "A": [
+        0,
+        2,
+        5,
+        6,
+        15,
+        16,
+        19,
+        21
+      ],
+      "H": 5,
+      "metric": {
+        "H": 5,
+        "M_H": 22,
+        "M_H_over_N": "1/1",
+        "M_H_over_N_decimal": "1.000000000000",
+        "Z_H": 10,
+        "Z_H_over_H2": "2/5",
+        "Z_H_over_H2_decimal": "0.400000000000",
+        "ambient_thickening_size": 26,
+        "coupled_product": "9/5",
+        "coupled_product_decimal": "1.800000000000",
+        "margin_over_4_3": 770,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 4
+      },
+      "product": "9/5"
+    },
+    {
+      "A": [
+        0,
+        2,
+        5,
+        6,
+        15,
+        16,
+        19,
+        21
+      ],
+      "H": 6,
+      "metric": {
+        "H": 6,
+        "M_H": 24,
+        "M_H_over_N": "12/11",
+        "M_H_over_N_decimal": "1.090909090909",
+        "Z_H": 15,
+        "Z_H_over_H2": "5/12",
+        "Z_H_over_H2_decimal": "0.416666666667",
+        "ambient_thickening_size": 27,
+        "coupled_product": "2/1",
+        "coupled_product_decimal": "2.000000000000",
+        "margin_over_4_3": 1584,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 3
+      },
+      "product": "2/1"
+    },
+    {
+      "A": [
+        0,
+        2,
+        5,
+        6,
+        15,
+        16,
+        19,
+        21
+      ],
+      "H": 7,
+      "metric": {
+        "H": 7,
+        "M_H": 26,
+        "M_H_over_N": "13/11",
+        "M_H_over_N_decimal": "1.181818181818",
+        "Z_H": 21,
+        "Z_H_over_H2": "3/7",
+        "Z_H_over_H2_decimal": "0.428571428571",
+        "ambient_thickening_size": 28,
+        "coupled_product": "169/77",
+        "coupled_product_decimal": "2.194805194805",
+        "margin_over_4_3": 2786,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 2
+      },
+      "product": "169/77"
+    }
+  ],
+  "best_minimax": {
+    "A": [
+      0,
+      2,
+      5,
+      6,
+      15,
+      16,
+      19,
+      21
+    ],
+    "A_sha256": "2748078789036669c72c8797ac73a24fc1fbc489000f535f7da442cbff8ce37d",
+    "metrics": [
+      {
+        "H": 5,
+        "M_H": 22,
+        "M_H_over_N": "1/1",
+        "M_H_over_N_decimal": "1.000000000000",
+        "Z_H": 10,
+        "Z_H_over_H2": "2/5",
+        "Z_H_over_H2_decimal": "0.400000000000",
+        "ambient_thickening_size": 26,
+        "coupled_product": "9/5",
+        "coupled_product_decimal": "1.800000000000",
+        "margin_over_4_3": 770,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 4
+      },
+      {
+        "H": 6,
+        "M_H": 24,
+        "M_H_over_N": "12/11",
+        "M_H_over_N_decimal": "1.090909090909",
+        "Z_H": 15,
+        "Z_H_over_H2": "5/12",
+        "Z_H_over_H2_decimal": "0.416666666667",
+        "ambient_thickening_size": 27,
+        "coupled_product": "2/1",
+        "coupled_product_decimal": "2.000000000000",
+        "margin_over_4_3": 1584,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 3
+      },
+      {
+        "H": 7,
+        "M_H": 26,
+        "M_H_over_N": "13/11",
+        "M_H_over_N_decimal": "1.181818181818",
+        "Z_H": 21,
+        "Z_H_over_H2": "3/7",
+        "Z_H_over_H2_decimal": "0.428571428571",
+        "ambient_thickening_size": 28,
+        "coupled_product": "169/77",
+        "coupled_product_decimal": "2.194805194805",
+        "margin_over_4_3": 2786,
+        "product_eq_4_3": false,
+        "product_gt_4_3": true,
+        "support_holes": 2
+      }
+    ],
+    "minimum_product": "9/5",
+    "minimum_product_decimal": "1.800000000000"
+  },
+  "domain": "all A subset [0,N-1] with min(A)=0 and max(A)=N-1",
+  "pruned_invalid_additions": 18234,
+  "record_type": "finite_exhaustive_certificate",
+  "total_endpoint_normalized_subsets": 1048576
+}

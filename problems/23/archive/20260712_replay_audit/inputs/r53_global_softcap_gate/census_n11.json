@@ -1,0 +1,79 @@
+{
+  "arithmetic": "Python integers only; exact integral max flow",
+  "canonicalPayloadSha256": "00c1760f5b8d23fb38d71185367e46055519feeeeec139950eb7e6f6b3d8c5a6",
+  "coverage": {
+    "completeForSelectedOrders": true,
+    "countsByOrder": {
+      "11": {
+        "availableTuples": 1035476,
+        "examinedTuples": 64291,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 4016,
+        "positiveTupleFailuresBeforeStop": 4,
+        "skipNoCut": 25598,
+        "skipNotAll5": 957,
+        "tested": 64287,
+        "zeroMinimumGraphs": 64287
+      }
+    },
+    "generatedByOrder": {
+      "11": 90842
+    },
+    "graphStreamSha256ByOrder": {
+      "11": "037314d8c2843a9ee9dbaac0ea638d4af486ad4a4ecaa68c48943c1e950b28d3"
+    },
+    "limitGraphsPerOrder": null,
+    "maxTuplesPerGraph": null,
+    "selectedByOrder": {
+      "11": 90842
+    }
+  },
+  "failedGraphCount": 0,
+  "failures": [],
+  "range": [
+    11,
+    11
+  ],
+  "relationProvenance": {
+    "P1_sameFirst": {
+      "data": "reconstructed",
+      "predicate": "sourceX = owner",
+      "status": "compiled eligibility"
+    },
+    "P2_commonBad": {
+      "data": "reconstructed",
+      "predicate": "sourceX and sourceY are distinct bad neighbours of owner and sigma({sourceX,sourceY}) >= 0",
+      "status": "archival Python relation; no named production Lean disjunct"
+    },
+    "P3_rowCompanion": {
+      "data": "reconstructed",
+      "predicate": "pair(owner,sourceX)>0, pair(owner,sourceY)>0, and sigma({sourceX,sourceY}) >= 0",
+      "status": "compiled eligibility"
+    },
+    "P4_outsideAttachment": {
+      "data": "reconstructed",
+      "predicate": "selected-complement component attachment; no owner/source active-component equality after coherence is dropped",
+      "status": "coherence-free R23 semantics; caller-supplied in production Lean"
+    },
+    "P5_quiescentAttachment": {
+      "data": "reconstructed",
+      "predicate": "quiescent B[V\\A] component attachment",
+      "status": "archival exact semantics; caller-supplied in production Lean"
+    },
+    "commonBlue": {
+      "data": "reconstructed",
+      "predicate": "sourceX and sourceY are blue neighbours of owner and sigma({sourceX,sourceY}) >= 2",
+      "status": "compiled terminal predicate; matching consumer absent"
+    }
+  },
+  "schema": "R53_GLOBAL_FREEHALF_SOFTCAP_CENSUS_V1",
+  "selection": "enumerate row tuples until exact defect zero; if none, exhaust all tuples and report the exact graph minimum",
+  "sourceSha256": {
+    "problems/23/writeup/_codex_r19_global_base_census.py": "b49e9a2add265052605ac412449b9fb12b1b879cc67e254b68189db7b831a737",
+    "problems/23/writeup/_codex_r20_two_row_exchange_gate.py": "73697b12b1e22a30e320fb970415e79fa90d88d1a6db27f42022cf9ffd9c6d83",
+    "problems/23/writeup/_codex_r23_heavy_alltuple_descent_gate.py": "c19c4bbefe518133f834599672f54f4889222c4d234ff08abb0424a8d49286f4",
+    "tmp/fanout/r53_global_softcap_gate/census.py": "71bfac39b3fd3de34b5a687e2cf7e30f7987487336a5b48b1d400c8ce874788e",
+    "tmp/fanout/r53_global_softcap_gate/global_softcap.py": "32c7f9bc0c4d2921d3b1fa5d8557ada0088eee8a024fdb90330023060101ac13"
+  },
+  "workers": 32
+}

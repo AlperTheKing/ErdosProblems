@@ -1,0 +1,147 @@
+{
+  "arithmetic": "Python integers only; exact integral max flow",
+  "canonicalPayloadSha256": "a07974020e50b6b399d59269984186446a3de07e1f204454a272c486cd94a3ba",
+  "coverage": {
+    "completeForSelectedOrders": true,
+    "countsByOrder": {
+      "10": {
+        "availableTuples": 47030,
+        "examinedTuples": 5930,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 564,
+        "positiveTupleFailuresBeforeStop": 241,
+        "skipNoCut": 4032,
+        "skipNotAll5": 111,
+        "tested": 5689,
+        "zeroMinimumGraphs": 5689
+      },
+      "5": {
+        "availableTuples": 1,
+        "examinedTuples": 1,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 1,
+        "positiveTupleFailuresBeforeStop": 0,
+        "skipNoCut": 5,
+        "tested": 1,
+        "zeroMinimumGraphs": 1
+      },
+      "6": {
+        "availableTuples": 3,
+        "examinedTuples": 2,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 1,
+        "positiveTupleFailuresBeforeStop": 0,
+        "skipNoCut": 17,
+        "tested": 2,
+        "zeroMinimumGraphs": 2
+      },
+      "7": {
+        "availableTuples": 29,
+        "examinedTuples": 14,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 5,
+        "positiveTupleFailuresBeforeStop": 0,
+        "skipNoCut": 44,
+        "skipNotAll5": 1,
+        "tested": 14,
+        "zeroMinimumGraphs": 14
+      },
+      "8": {
+        "availableTuples": 257,
+        "examinedTuples": 85,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 18,
+        "positiveTupleFailuresBeforeStop": 2,
+        "skipNoCut": 182,
+        "skipNotAll5": 2,
+        "tested": 83,
+        "zeroMinimumGraphs": 83
+      },
+      "9": {
+        "availableTuples": 2784,
+        "examinedTuples": 632,
+        "failedGraphs": 0,
+        "fullyExhaustedGraphs": 98,
+        "positiveTupleFailuresBeforeStop": 0,
+        "skipNoCut": 730,
+        "skipNotAll5": 18,
+        "tested": 632,
+        "zeroMinimumGraphs": 632
+      }
+    },
+    "generatedByOrder": {
+      "10": 9832,
+      "5": 6,
+      "6": 19,
+      "7": 59,
+      "8": 267,
+      "9": 1380
+    },
+    "graphStreamSha256ByOrder": {
+      "10": "3cd026b347df94832eb9783d1f6f6d0df0b2ae426adb3202900c754ccd891513",
+      "5": "1ec8c4ef287cd3226bf1844cba4fea72bb100ca7adc1b39e1064f1376cd957fe",
+      "6": "d08e7d71643c998c35d56583c2fe5edf0e5dd97265a188b967484358ad31f84f",
+      "7": "48412051078cdabc2229084c09f851dff467993c4970008348c0f45e192b0102",
+      "8": "3d935501b28540c93d164018209f20eff2d60e1efb3e00eff8e3768efb3cd939",
+      "9": "c41b0ba067c3deb4dddd75dcb20a6282077a13f7b10594d166881691d884f47f"
+    },
+    "limitGraphsPerOrder": null,
+    "maxTuplesPerGraph": null,
+    "selectedByOrder": {
+      "10": 9832,
+      "5": 6,
+      "6": 19,
+      "7": 59,
+      "8": 267,
+      "9": 1380
+    }
+  },
+  "failedGraphCount": 0,
+  "failures": [],
+  "range": [
+    5,
+    10
+  ],
+  "relationProvenance": {
+    "P1_sameFirst": {
+      "data": "reconstructed",
+      "predicate": "sourceX = owner",
+      "status": "compiled eligibility"
+    },
+    "P2_commonBad": {
+      "data": "reconstructed",
+      "predicate": "sourceX and sourceY are distinct bad neighbours of owner and sigma({sourceX,sourceY}) >= 0",
+      "status": "archival Python relation; no named production Lean disjunct"
+    },
+    "P3_rowCompanion": {
+      "data": "reconstructed",
+      "predicate": "pair(owner,sourceX)>0, pair(owner,sourceY)>0, and sigma({sourceX,sourceY}) >= 0",
+      "status": "compiled eligibility"
+    },
+    "P4_outsideAttachment": {
+      "data": "reconstructed",
+      "predicate": "selected-complement component attachment; no owner/source active-component equality after coherence is dropped",
+      "status": "coherence-free R23 semantics; caller-supplied in production Lean"
+    },
+    "P5_quiescentAttachment": {
+      "data": "reconstructed",
+      "predicate": "quiescent B[V\\A] component attachment",
+      "status": "archival exact semantics; caller-supplied in production Lean"
+    },
+    "commonBlue": {
+      "data": "reconstructed",
+      "predicate": "sourceX and sourceY are blue neighbours of owner and sigma({sourceX,sourceY}) >= 2",
+      "status": "compiled terminal predicate; matching consumer absent"
+    }
+  },
+  "schema": "R53_GLOBAL_FREEHALF_SOFTCAP_CENSUS_V1",
+  "selection": "enumerate row tuples until exact defect zero; if none, exhaust all tuples and report the exact graph minimum",
+  "sourceSha256": {
+    "problems/23/writeup/_codex_r19_global_base_census.py": "b49e9a2add265052605ac412449b9fb12b1b879cc67e254b68189db7b831a737",
+    "problems/23/writeup/_codex_r20_two_row_exchange_gate.py": "73697b12b1e22a30e320fb970415e79fa90d88d1a6db27f42022cf9ffd9c6d83",
+    "problems/23/writeup/_codex_r23_heavy_alltuple_descent_gate.py": "c19c4bbefe518133f834599672f54f4889222c4d234ff08abb0424a8d49286f4",
+    "tmp/fanout/r53_global_softcap_gate/census.py": "71bfac39b3fd3de34b5a687e2cf7e30f7987487336a5b48b1d400c8ce874788e",
+    "tmp/fanout/r53_global_softcap_gate/global_softcap.py": "32c7f9bc0c4d2921d3b1fa5d8557ada0088eee8a024fdb90330023060101ac13"
+  },
+  "workers": 16
+}

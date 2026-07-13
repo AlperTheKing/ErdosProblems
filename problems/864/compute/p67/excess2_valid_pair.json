@@ -1,0 +1,97 @@
+{
+  "exact_arithmetic": "integers",
+  "result": {
+    "Z": [
+      0,
+      2,
+      8,
+      12,
+      17,
+      28,
+      41,
+      42,
+      60,
+      63,
+      177
+    ],
+    "p": 11,
+    "W": 177,
+    "G": 62,
+    "K": 115,
+    "x": 70,
+    "y": 77,
+    "left_blocks": [
+      [
+        0,
+        28,
+        42
+      ],
+      [
+        2,
+        8,
+        60
+      ],
+      [
+        12,
+        17,
+        41
+      ]
+    ],
+    "right_blocks": [
+      [
+        0,
+        17,
+        60
+      ],
+      [
+        2,
+        12,
+        63
+      ],
+      [
+        8,
+        28,
+        41
+      ]
+    ],
+    "left_support": [
+      0,
+      2,
+      8,
+      12,
+      17,
+      28,
+      41,
+      42,
+      60
+    ],
+    "right_support": [
+      0,
+      2,
+      8,
+      12,
+      17,
+      28,
+      41,
+      60,
+      63
+    ],
+    "intersection": [
+      0,
+      2,
+      8,
+      12,
+      17,
+      28,
+      41,
+      60
+    ],
+    "intersection_size": 8,
+    "block_count_sum": 6,
+    "plus_one_bound": 7,
+    "failure_margin": 1,
+    "pair_sum_count": 66,
+    "positive_difference_count": 55,
+    "cross_intersection": []
+  }
+}

@@ -1,0 +1,3950 @@
+{
+  "prime_max": 257,
+  "prime_min": 5,
+  "records": [
+    {
+      "modulus": 20,
+      "offsets": {
+        "1/2": {
+          "center": 50,
+          "center_over_size2": "25/8",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "2/3": {
+          "center": 53,
+          "center_over_size2": "53/16",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            3,
+            4
+          ]
+        },
+        "3/4": {
+          "center": 55,
+          "center_over_size2": "55/16",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            1,
+            3,
+            4
+          ]
+        },
+        "3/5": {
+          "center": 52,
+          "center_over_size2": "13/4",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "4/5": {
+          "center": 56,
+          "center_over_size2": "7/2",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "7/10": {
+          "center": 54,
+          "center_over_size2": "27/8",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "p": 5,
+      "primitive_root": 2,
+      "size": 4
+    },
+    {
+      "modulus": 42,
+      "offsets": {
+        "1/2": {
+          "center": 105,
+          "center_over_size2": "35/12",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "2/3": {
+          "center": 112,
+          "center_over_size2": "28/9",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        "3/4": {
+          "center": 115,
+          "center_over_size2": "115/36",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "3/5": {
+          "center": 109,
+          "center_over_size2": "109/36",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        "4/5": {
+          "center": 117,
+          "center_over_size2": "13/4",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "7/10": {
+          "center": 113,
+          "center_over_size2": "113/36",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        }
+      },
+      "p": 7,
+      "primitive_root": 3,
+      "size": 6
+    },
+    {
+      "modulus": 110,
+      "offsets": {
+        "1/2": {
+          "center": 275,
+          "center_over_size2": "11/4",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            3,
+            6,
+            9
+          ]
+        },
+        "2/3": {
+          "center": 293,
+          "center_over_size2": "293/100",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "3/4": {
+          "center": 302,
+          "center_over_size2": "151/50",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "3/5": {
+          "center": 286,
+          "center_over_size2": "143/50",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        "4/5": {
+          "center": 308,
+          "center_over_size2": "77/25",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "7/10": {
+          "center": 297,
+          "center_over_size2": "297/100",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      },
+      "p": 11,
+      "primitive_root": 2,
+      "size": 10
+    },
+    {
+      "modulus": 156,
+      "offsets": {
+        "1/2": {
+          "center": 390,
+          "center_over_size2": "65/24",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            1,
+            4,
+            5,
+            8,
+            12
+          ]
+        },
+        "2/3": {
+          "center": 416,
+          "center_over_size2": "26/9",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            4,
+            5,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "3/4": {
+          "center": 429,
+          "center_over_size2": "143/48",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12
+          ]
+        },
+        "3/5": {
+          "center": 405,
+          "center_over_size2": "45/16",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            11,
+            12
+          ]
+        },
+        "4/5": {
+          "center": 436,
+          "center_over_size2": "109/36",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            10,
+            11,
+            12
+          ]
+        },
+        "7/10": {
+          "center": 421,
+          "center_over_size2": "421/144",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            10,
+            11,
+            12
+          ]
+        }
+      },
+      "p": 13,
+      "primitive_root": 2,
+      "size": 12
+    },
+    {
+      "modulus": 272,
+      "offsets": {
+        "1/2": {
+          "center": 680,
+          "center_over_size2": "85/32",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            2,
+            3,
+            5,
+            8,
+            12,
+            13,
+            15,
+            16
+          ]
+        },
+        "2/3": {
+          "center": 725,
+          "center_over_size2": "725/256",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        "3/4": {
+          "center": 748,
+          "center_over_size2": "187/64",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 11,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "3/5": {
+          "center": 707,
+          "center_over_size2": "707/256",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12,
+            13,
+            14
+          ]
+        },
+        "4/5": {
+          "center": 761,
+          "center_over_size2": "761/256",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        "7/10": {
+          "center": 734,
+          "center_over_size2": "367/128",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      },
+      "p": 17,
+      "primitive_root": 3,
+      "size": 16
+    },
+    {
+      "modulus": 342,
+      "offsets": {
+        "1/2": {
+          "center": 855,
+          "center_over_size2": "95/36",
+          "first_hole_exponential": 12,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            12,
+            16,
+            18
+          ]
+        },
+        "2/3": {
+          "center": 912,
+          "center_over_size2": "76/27",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 11,
+          "hole_exponentials": [
+            1,
+            2,
+            4,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            18
+          ]
+        },
+        "3/4": {
+          "center": 940,
+          "center_over_size2": "235/81",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 13,
+          "hole_exponentials": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            11,
+            12,
+            15,
+            16,
+            18
+          ]
+        },
+        "3/5": {
+          "center": 889,
+          "center_over_size2": "889/324",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            4,
+            6,
+            10,
+            12,
+            13,
+            16
+          ]
+        },
+        "4/5": {
+          "center": 957,
+          "center_over_size2": "319/108",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 13,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            15,
+            16,
+            18
+          ]
+        },
+        "7/10": {
+          "center": 923,
+          "center_over_size2": "923/324",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            2,
+            3,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            18
+          ]
+        }
+      },
+      "p": 19,
+      "primitive_root": 2,
+      "size": 18
+    },
+    {
+      "modulus": 506,
+      "offsets": {
+        "1/2": {
+          "center": 1265,
+          "center_over_size2": "115/44",
+          "first_hole_exponential": 6,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            6,
+            14,
+            22
+          ]
+        },
+        "2/3": {
+          "center": 1349,
+          "center_over_size2": "1349/484",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            5,
+            6,
+            7,
+            13,
+            14,
+            20,
+            22
+          ]
+        },
+        "3/4": {
+          "center": 1391,
+          "center_over_size2": "1391/484",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            2,
+            5,
+            6,
+            8,
+            12,
+            14,
+            15,
+            19,
+            20,
+            22
+          ]
+        },
+        "3/5": {
+          "center": 1315,
+          "center_over_size2": "1315/484",
+          "first_hole_exponential": 6,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            6,
+            12,
+            14,
+            20,
+            22
+          ]
+        },
+        "4/5": {
+          "center": 1416,
+          "center_over_size2": "354/121",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 15,
+          "hole_exponentials": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            14,
+            15,
+            16,
+            18,
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        "7/10": {
+          "center": 1366,
+          "center_over_size2": "683/242",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            5,
+            6,
+            7,
+            12,
+            14,
+            15,
+            17,
+            20,
+            22
+          ]
+        }
+      },
+      "p": 23,
+      "primitive_root": 5,
+      "size": 22
+    },
+    {
+      "modulus": 812,
+      "offsets": {
+        "1/2": {
+          "center": 2030,
+          "center_over_size2": "145/56",
+          "first_hole_exponential": 15,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            15,
+            24
+          ]
+        },
+        "2/3": {
+          "center": 2165,
+          "center_over_size2": "2165/784",
+          "first_hole_exponential": 10,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            10,
+            11,
+            15,
+            24,
+            26,
+            27,
+            28
+          ]
+        },
+        "3/4": {
+          "center": 2233,
+          "center_over_size2": "319/112",
+          "first_hole_exponential": 9,
+          "hole_cut_count": 14,
+          "hole_exponentials": [
+            9,
+            10,
+            12,
+            13,
+            15,
+            17,
+            18,
+            19,
+            20,
+            22,
+            23,
+            24,
+            25,
+            26
+          ]
+        },
+        "3/5": {
+          "center": 2111,
+          "center_over_size2": "2111/784",
+          "first_hole_exponential": 10,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            10,
+            15,
+            17,
+            19,
+            21,
+            24,
+            28
+          ]
+        },
+        "4/5": {
+          "center": 2273,
+          "center_over_size2": "2273/784",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 18,
+          "hole_exponentials": [
+            3,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        "7/10": {
+          "center": 2192,
+          "center_over_size2": "137/49",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            8,
+            10,
+            13,
+            15,
+            18,
+            21,
+            24,
+            25
+          ]
+        }
+      },
+      "p": 29,
+      "primitive_root": 2,
+      "size": 28
+    },
+    {
+      "modulus": 930,
+      "offsets": {
+        "1/2": {
+          "center": 2325,
+          "center_over_size2": "31/12",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            8,
+            13,
+            15
+          ]
+        },
+        "2/3": {
+          "center": 2480,
+          "center_over_size2": "124/45",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            3,
+            8,
+            15,
+            27
+          ]
+        },
+        "3/4": {
+          "center": 2557,
+          "center_over_size2": "2557/900",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 11,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            10,
+            13,
+            19,
+            20,
+            22,
+            27
+          ]
+        },
+        "3/5": {
+          "center": 2418,
+          "center_over_size2": "403/150",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            8,
+            11,
+            13
+          ]
+        },
+        "4/5": {
+          "center": 2604,
+          "center_over_size2": "217/75",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 17,
+          "hole_exponentials": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            13,
+            15,
+            16,
+            19,
+            20,
+            22,
+            23,
+            28,
+            29
+          ]
+        },
+        "7/10": {
+          "center": 2511,
+          "center_over_size2": "279/100",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            1,
+            3,
+            8,
+            10,
+            13,
+            19,
+            22
+          ]
+        }
+      },
+      "p": 31,
+      "primitive_root": 3,
+      "size": 30
+    },
+    {
+      "modulus": 1332,
+      "offsets": {
+        "1/2": {
+          "center": 3330,
+          "center_over_size2": "185/72",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            4
+          ]
+        },
+        "2/3": {
+          "center": 3552,
+          "center_over_size2": "74/27",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            1,
+            2,
+            4,
+            8,
+            9,
+            10,
+            17,
+            20,
+            21,
+            22,
+            24,
+            28
+          ]
+        },
+        "3/4": {
+          "center": 3663,
+          "center_over_size2": "407/144",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            4,
+            8,
+            10,
+            20,
+            22,
+            23,
+            24,
+            28,
+            31,
+            32,
+            34,
+            36
+          ]
+        },
+        "3/5": {
+          "center": 3463,
+          "center_over_size2": "3463/1296",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            4,
+            20,
+            28
+          ]
+        },
+        "4/5": {
+          "center": 3729,
+          "center_over_size2": "1243/432",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 18,
+          "hole_exponentials": [
+            1,
+            2,
+            4,
+            8,
+            9,
+            10,
+            12,
+            20,
+            21,
+            22,
+            23,
+            24,
+            27,
+            28,
+            29,
+            31,
+            34,
+            36
+          ]
+        },
+        "7/10": {
+          "center": 3596,
+          "center_over_size2": "899/324",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 13,
+          "hole_exponentials": [
+            1,
+            4,
+            10,
+            15,
+            17,
+            20,
+            21,
+            22,
+            23,
+            28,
+            31,
+            32,
+            34
+          ]
+        }
+      },
+      "p": 37,
+      "primitive_root": 2,
+      "size": 36
+    },
+    {
+      "modulus": 1640,
+      "offsets": {
+        "1/2": {
+          "center": 4100,
+          "center_over_size2": "41/16",
+          "first_hole_exponential": 36,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            36
+          ]
+        },
+        "2/3": {
+          "center": 4373,
+          "center_over_size2": "4373/1600",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            3,
+            5,
+            14,
+            16,
+            20,
+            22,
+            36,
+            39
+          ]
+        },
+        "3/4": {
+          "center": 4510,
+          "center_over_size2": "451/160",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 15,
+          "hole_exponentials": [
+            3,
+            5,
+            8,
+            10,
+            13,
+            16,
+            20,
+            22,
+            23,
+            24,
+            26,
+            33,
+            36,
+            38,
+            39
+          ]
+        },
+        "3/5": {
+          "center": 4264,
+          "center_over_size2": "533/200",
+          "first_hole_exponential": 14,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            14,
+            22,
+            36,
+            39
+          ]
+        },
+        "4/5": {
+          "center": 4592,
+          "center_over_size2": "287/100",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 20,
+          "hole_exponentials": [
+            1,
+            2,
+            4,
+            7,
+            10,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            19,
+            20,
+            21,
+            23,
+            24,
+            36,
+            37,
+            38,
+            39
+          ]
+        },
+        "7/10": {
+          "center": 4428,
+          "center_over_size2": "1107/400",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            3,
+            20,
+            22,
+            24,
+            28,
+            36
+          ]
+        }
+      },
+      "p": 41,
+      "primitive_root": 6,
+      "size": 40
+    },
+    {
+      "modulus": 1806,
+      "offsets": {
+        "1/2": {
+          "center": 4515,
+          "center_over_size2": "215/84",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 4816,
+          "center_over_size2": "172/63",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            3,
+            14,
+            23,
+            24,
+            26,
+            31
+          ]
+        },
+        "3/4": {
+          "center": 4966,
+          "center_over_size2": "2483/882",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 21,
+          "hole_exponentials": [
+            1,
+            3,
+            7,
+            8,
+            9,
+            10,
+            12,
+            14,
+            15,
+            16,
+            19,
+            21,
+            22,
+            23,
+            24,
+            26,
+            29,
+            31,
+            33,
+            34,
+            37
+          ]
+        },
+        "3/5": {
+          "center": 4695,
+          "center_over_size2": "1565/588",
+          "first_hole_exponential": 9,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            9,
+            31,
+            33,
+            34,
+            41
+          ]
+        },
+        "4/5": {
+          "center": 5056,
+          "center_over_size2": "1264/441",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 23,
+          "hole_exponentials": [
+            1,
+            3,
+            7,
+            8,
+            9,
+            10,
+            12,
+            14,
+            16,
+            18,
+            19,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            28,
+            29,
+            31,
+            34,
+            37,
+            39
+          ]
+        },
+        "7/10": {
+          "center": 4876,
+          "center_over_size2": "1219/441",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            3,
+            8,
+            14,
+            22,
+            29,
+            33,
+            34
+          ]
+        }
+      },
+      "p": 43,
+      "primitive_root": 3,
+      "size": 42
+    },
+    {
+      "modulus": 2162,
+      "offsets": {
+        "1/2": {
+          "center": 5405,
+          "center_over_size2": "235/92",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 5765,
+          "center_over_size2": "5765/2116",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            7,
+            18,
+            25,
+            39,
+            40
+          ]
+        },
+        "3/4": {
+          "center": 5945,
+          "center_over_size2": "5945/2116",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 15,
+          "hole_exponentials": [
+            3,
+            4,
+            7,
+            9,
+            10,
+            14,
+            18,
+            21,
+            25,
+            30,
+            38,
+            39,
+            40,
+            41,
+            46
+          ]
+        },
+        "3/5": {
+          "center": 5621,
+          "center_over_size2": "5621/2116",
+          "first_hole_exponential": 18,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            18,
+            32
+          ]
+        },
+        "4/5": {
+          "center": 6053,
+          "center_over_size2": "6053/2116",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 22,
+          "hole_exponentials": [
+            2,
+            4,
+            6,
+            7,
+            9,
+            14,
+            16,
+            18,
+            21,
+            22,
+            25,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            38,
+            39,
+            40,
+            41,
+            46
+          ]
+        },
+        "7/10": {
+          "center": 5837,
+          "center_over_size2": "5837/2116",
+          "first_hole_exponential": 10,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            10,
+            14,
+            19,
+            25,
+            28,
+            38,
+            39,
+            40,
+            43,
+            46
+          ]
+        }
+      },
+      "p": 47,
+      "primitive_root": 5,
+      "size": 46
+    },
+    {
+      "modulus": 2756,
+      "offsets": {
+        "1/2": {
+          "center": 6890,
+          "center_over_size2": "265/104",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 7349,
+          "center_over_size2": "7349/2704",
+          "first_hole_exponential": 23,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            23,
+            27,
+            44,
+            45
+          ]
+        },
+        "3/4": {
+          "center": 7579,
+          "center_over_size2": "583/208",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 15,
+          "hole_exponentials": [
+            7,
+            9,
+            12,
+            17,
+            18,
+            22,
+            25,
+            27,
+            29,
+            40,
+            41,
+            44,
+            48,
+            49,
+            51
+          ]
+        },
+        "3/5": {
+          "center": 7165,
+          "center_over_size2": "7165/2704",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 7716,
+          "center_over_size2": "1929/676",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 22,
+          "hole_exponentials": [
+            3,
+            7,
+            9,
+            10,
+            12,
+            13,
+            16,
+            21,
+            22,
+            23,
+            27,
+            29,
+            30,
+            32,
+            37,
+            41,
+            43,
+            44,
+            45,
+            48,
+            51,
+            52
+          ]
+        },
+        "7/10": {
+          "center": 7441,
+          "center_over_size2": "7441/2704",
+          "first_hole_exponential": 13,
+          "hole_cut_count": 11,
+          "hole_exponentials": [
+            13,
+            16,
+            20,
+            21,
+            22,
+            27,
+            32,
+            35,
+            43,
+            45,
+            51
+          ]
+        }
+      },
+      "p": 53,
+      "primitive_root": 2,
+      "size": 52
+    },
+    {
+      "modulus": 3422,
+      "offsets": {
+        "1/2": {
+          "center": 8555,
+          "center_over_size2": "295/116",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 9125,
+          "center_over_size2": "9125/3364",
+          "first_hole_exponential": 11,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            11,
+            17,
+            31
+          ]
+        },
+        "3/4": {
+          "center": 9410,
+          "center_over_size2": "4705/1682",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            7,
+            11,
+            27,
+            30,
+            31,
+            37,
+            44,
+            45,
+            51,
+            56
+          ]
+        },
+        "3/5": {
+          "center": 8897,
+          "center_over_size2": "8897/3364",
+          "first_hole_exponential": 11,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            11,
+            19,
+            31,
+            37
+          ]
+        },
+        "4/5": {
+          "center": 9581,
+          "center_over_size2": "9581/3364",
+          "first_hole_exponential": 4,
+          "hole_cut_count": 26,
+          "hole_exponentials": [
+            4,
+            7,
+            11,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            22,
+            27,
+            30,
+            31,
+            33,
+            34,
+            36,
+            37,
+            40,
+            42,
+            48,
+            50,
+            51,
+            52,
+            53,
+            54,
+            56
+          ]
+        },
+        "7/10": {
+          "center": 9239,
+          "center_over_size2": "9239/3364",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            7,
+            11,
+            19,
+            26,
+            31,
+            36,
+            51
+          ]
+        }
+      },
+      "p": 59,
+      "primitive_root": 2,
+      "size": 58
+    },
+    {
+      "modulus": 3660,
+      "offsets": {
+        "1/2": {
+          "center": 9150,
+          "center_over_size2": "61/24",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 9760,
+          "center_over_size2": "122/45",
+          "first_hole_exponential": 28,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            28,
+            48,
+            54
+          ]
+        },
+        "3/4": {
+          "center": 10065,
+          "center_over_size2": "671/240",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 14,
+          "hole_exponentials": [
+            7,
+            15,
+            16,
+            17,
+            19,
+            24,
+            28,
+            31,
+            32,
+            44,
+            46,
+            48,
+            53,
+            55
+          ]
+        },
+        "3/5": {
+          "center": 9516,
+          "center_over_size2": "793/300",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 10248,
+          "center_over_size2": "427/150",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 20,
+          "hole_exponentials": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            15,
+            16,
+            22,
+            24,
+            25,
+            28,
+            31,
+            33,
+            38,
+            40,
+            44,
+            46,
+            48,
+            53,
+            59
+          ]
+        },
+        "7/10": {
+          "center": 9882,
+          "center_over_size2": "549/200",
+          "first_hole_exponential": 17,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            17,
+            23,
+            28,
+            48,
+            60
+          ]
+        }
+      },
+      "p": 61,
+      "primitive_root": 2,
+      "size": 60
+    },
+    {
+      "modulus": 4422,
+      "offsets": {
+        "1/2": {
+          "center": 11055,
+          "center_over_size2": "335/132",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 11792,
+          "center_over_size2": "268/99",
+          "first_hole_exponential": 30,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            30,
+            52
+          ]
+        },
+        "3/4": {
+          "center": 12160,
+          "center_over_size2": "3040/1089",
+          "first_hole_exponential": 6,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            6,
+            7,
+            12,
+            27,
+            34,
+            39,
+            42,
+            44,
+            55,
+            61,
+            65,
+            66
+          ]
+        },
+        "3/5": {
+          "center": 11497,
+          "center_over_size2": "11497/4356",
+          "first_hole_exponential": 27,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            27
+          ]
+        },
+        "4/5": {
+          "center": 12381,
+          "center_over_size2": "4127/1452",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 17,
+          "hole_exponentials": [
+            3,
+            5,
+            7,
+            12,
+            16,
+            19,
+            21,
+            24,
+            27,
+            29,
+            30,
+            31,
+            34,
+            37,
+            43,
+            52,
+            62
+          ]
+        },
+        "7/10": {
+          "center": 11939,
+          "center_over_size2": "11939/4356",
+          "first_hole_exponential": 7,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            7,
+            12,
+            27,
+            29,
+            34,
+            65,
+            66
+          ]
+        }
+      },
+      "p": 67,
+      "primitive_root": 2,
+      "size": 66
+    },
+    {
+      "modulus": 4970,
+      "offsets": {
+        "1/2": {
+          "center": 12425,
+          "center_over_size2": "71/28",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 13253,
+          "center_over_size2": "13253/4900",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 13667,
+          "center_over_size2": "13667/4900",
+          "first_hole_exponential": 18,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            18,
+            19,
+            20,
+            23,
+            26,
+            27,
+            31,
+            37,
+            46,
+            58,
+            66,
+            67
+          ]
+        },
+        "3/5": {
+          "center": 12922,
+          "center_over_size2": "923/350",
+          "first_hole_exponential": 63,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            63,
+            67
+          ]
+        },
+        "4/5": {
+          "center": 13916,
+          "center_over_size2": "71/25",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 19,
+          "hole_exponentials": [
+            2,
+            9,
+            15,
+            19,
+            22,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            37,
+            42,
+            46,
+            50,
+            59,
+            63,
+            67,
+            69
+          ]
+        },
+        "7/10": {
+          "center": 13419,
+          "center_over_size2": "1917/700",
+          "first_hole_exponential": 31,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            31
+          ]
+        }
+      },
+      "p": 71,
+      "primitive_root": 7,
+      "size": 70
+    },
+    {
+      "modulus": 5256,
+      "offsets": {
+        "1/2": {
+          "center": 13140,
+          "center_over_size2": "365/144",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 14016,
+          "center_over_size2": "73/27",
+          "first_hole_exponential": 22,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            22
+          ]
+        },
+        "3/4": {
+          "center": 14454,
+          "center_over_size2": "803/288",
+          "first_hole_exponential": 15,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            15,
+            22,
+            27,
+            28,
+            31,
+            38,
+            50,
+            63,
+            67,
+            70
+          ]
+        },
+        "3/5": {
+          "center": 13665,
+          "center_over_size2": "4555/1728",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 14716,
+          "center_over_size2": "3679/1296",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 22,
+          "hole_exponentials": [
+            8,
+            15,
+            16,
+            20,
+            21,
+            23,
+            27,
+            31,
+            33,
+            34,
+            39,
+            41,
+            44,
+            45,
+            48,
+            54,
+            60,
+            63,
+            65,
+            67,
+            68,
+            69
+          ]
+        },
+        "7/10": {
+          "center": 14191,
+          "center_over_size2": "14191/5184",
+          "first_hole_exponential": 72,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            72
+          ]
+        }
+      },
+      "p": 73,
+      "primitive_root": 5,
+      "size": 72
+    },
+    {
+      "modulus": 6162,
+      "offsets": {
+        "1/2": {
+          "center": 15405,
+          "center_over_size2": "395/156",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 16432,
+          "center_over_size2": "316/117",
+          "first_hole_exponential": 53,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            53
+          ]
+        },
+        "3/4": {
+          "center": 16945,
+          "center_over_size2": "16945/6084",
+          "first_hole_exponential": 21,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            21,
+            31,
+            42,
+            45,
+            48,
+            54,
+            60,
+            76
+          ]
+        },
+        "3/5": {
+          "center": 16021,
+          "center_over_size2": "16021/6084",
+          "first_hole_exponential": 65,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            65
+          ]
+        },
+        "4/5": {
+          "center": 17253,
+          "center_over_size2": "1917/676",
+          "first_hole_exponential": 13,
+          "hole_cut_count": 14,
+          "hole_exponentials": [
+            13,
+            14,
+            18,
+            28,
+            33,
+            39,
+            42,
+            45,
+            53,
+            54,
+            55,
+            60,
+            65,
+            72
+          ]
+        },
+        "7/10": {
+          "center": 16637,
+          "center_over_size2": "16637/6084",
+          "first_hole_exponential": 13,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            13,
+            45,
+            54,
+            58,
+            74
+          ]
+        }
+      },
+      "p": 79,
+      "primitive_root": 3,
+      "size": 78
+    },
+    {
+      "modulus": 6806,
+      "offsets": {
+        "1/2": {
+          "center": 17015,
+          "center_over_size2": "415/164",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 18149,
+          "center_over_size2": "18149/6724",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            5
+          ]
+        },
+        "3/4": {
+          "center": 18716,
+          "center_over_size2": "4679/1681",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            5,
+            11,
+            19,
+            24,
+            27,
+            46
+          ]
+        },
+        "3/5": {
+          "center": 17695,
+          "center_over_size2": "17695/6724",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            5
+          ]
+        },
+        "4/5": {
+          "center": 19056,
+          "center_over_size2": "4764/1681",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 13,
+          "hole_exponentials": [
+            5,
+            10,
+            11,
+            20,
+            23,
+            38,
+            46,
+            47,
+            49,
+            52,
+            59,
+            64,
+            79
+          ]
+        },
+        "7/10": {
+          "center": 18376,
+          "center_over_size2": "4594/1681",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            5,
+            10,
+            34,
+            46
+          ]
+        }
+      },
+      "p": 83,
+      "primitive_root": 2,
+      "size": 82
+    },
+    {
+      "modulus": 7832,
+      "offsets": {
+        "1/2": {
+          "center": 19580,
+          "center_over_size2": "445/176",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 20885,
+          "center_over_size2": "20885/7744",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 21538,
+          "center_over_size2": "89/32",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 8,
+          "hole_exponentials": [
+            8,
+            13,
+            16,
+            24,
+            47,
+            61,
+            84,
+            88
+          ]
+        },
+        "3/5": {
+          "center": 20363,
+          "center_over_size2": "20363/7744",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 21929,
+          "center_over_size2": "21929/7744",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 18,
+          "hole_exponentials": [
+            2,
+            8,
+            13,
+            25,
+            33,
+            41,
+            45,
+            46,
+            47,
+            49,
+            61,
+            63,
+            74,
+            78,
+            81,
+            82,
+            86,
+            88
+          ]
+        },
+        "7/10": {
+          "center": 21146,
+          "center_over_size2": "10573/3872",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 89,
+      "primitive_root": 3,
+      "size": 88
+    },
+    {
+      "modulus": 9312,
+      "offsets": {
+        "1/2": {
+          "center": 23280,
+          "center_over_size2": "485/192",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 24832,
+          "center_over_size2": "97/36",
+          "first_hole_exponential": 93,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            93
+          ]
+        },
+        "3/4": {
+          "center": 25608,
+          "center_over_size2": "1067/384",
+          "first_hole_exponential": 10,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            10,
+            31,
+            47,
+            66,
+            83,
+            94
+          ]
+        },
+        "3/5": {
+          "center": 24211,
+          "center_over_size2": "24211/9216",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 26073,
+          "center_over_size2": "2897/1024",
+          "first_hole_exponential": 2,
+          "hole_cut_count": 15,
+          "hole_exponentials": [
+            2,
+            7,
+            9,
+            11,
+            13,
+            16,
+            28,
+            33,
+            47,
+            49,
+            62,
+            73,
+            83,
+            93,
+            96
+          ]
+        },
+        "7/10": {
+          "center": 25142,
+          "center_over_size2": "12571/4608",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 97,
+      "primitive_root": 5,
+      "size": 96
+    },
+    {
+      "modulus": 10100,
+      "offsets": {
+        "1/2": {
+          "center": 25250,
+          "center_over_size2": "101/40",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 26933,
+          "center_over_size2": "26933/10000",
+          "first_hole_exponential": 26,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            26
+          ]
+        },
+        "3/4": {
+          "center": 27775,
+          "center_over_size2": "1111/400",
+          "first_hole_exponential": 24,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            24,
+            26,
+            42,
+            51,
+            77
+          ]
+        },
+        "3/5": {
+          "center": 26260,
+          "center_over_size2": "1313/500",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 28280,
+          "center_over_size2": "707/250",
+          "first_hole_exponential": 17,
+          "hole_cut_count": 14,
+          "hole_exponentials": [
+            17,
+            18,
+            24,
+            26,
+            27,
+            28,
+            42,
+            46,
+            52,
+            55,
+            60,
+            64,
+            67,
+            88
+          ]
+        },
+        "7/10": {
+          "center": 27270,
+          "center_over_size2": "2727/1000",
+          "first_hole_exponential": 58,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            58
+          ]
+        }
+      },
+      "p": 101,
+      "primitive_root": 2,
+      "size": 100
+    },
+    {
+      "modulus": 10506,
+      "offsets": {
+        "1/2": {
+          "center": 26265,
+          "center_over_size2": "515/204",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 28016,
+          "center_over_size2": "412/153",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 28891,
+          "center_over_size2": "28891/10404",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            8,
+            31,
+            63,
+            82,
+            92
+          ]
+        },
+        "3/5": {
+          "center": 27315,
+          "center_over_size2": "3035/1156",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 29416,
+          "center_over_size2": "7354/2601",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 10,
+          "hole_exponentials": [
+            8,
+            10,
+            12,
+            14,
+            21,
+            29,
+            35,
+            63,
+            90,
+            92
+          ]
+        },
+        "7/10": {
+          "center": 28366,
+          "center_over_size2": "14183/5202",
+          "first_hole_exponential": 90,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            90
+          ]
+        }
+      },
+      "p": 103,
+      "primitive_root": 5,
+      "size": 102
+    },
+    {
+      "modulus": 11342,
+      "offsets": {
+        "1/2": {
+          "center": 28355,
+          "center_over_size2": "535/212",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 30245,
+          "center_over_size2": "30245/11236",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 31190,
+          "center_over_size2": "15595/5618",
+          "first_hole_exponential": 51,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            51,
+            106
+          ]
+        },
+        "3/5": {
+          "center": 29489,
+          "center_over_size2": "29489/11236",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 31757,
+          "center_over_size2": "31757/11236",
+          "first_hole_exponential": 3,
+          "hole_cut_count": 17,
+          "hole_exponentials": [
+            3,
+            5,
+            6,
+            7,
+            20,
+            21,
+            33,
+            45,
+            47,
+            49,
+            61,
+            66,
+            68,
+            75,
+            80,
+            95,
+            106
+          ]
+        },
+        "7/10": {
+          "center": 30623,
+          "center_over_size2": "30623/11236",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 107,
+      "primitive_root": 2,
+      "size": 106
+    },
+    {
+      "modulus": 11772,
+      "offsets": {
+        "1/2": {
+          "center": 29430,
+          "center_over_size2": "545/216",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 31392,
+          "center_over_size2": "218/81",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 32373,
+          "center_over_size2": "1199/432",
+          "first_hole_exponential": 17,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            17,
+            38,
+            44,
+            46,
+            49,
+            57
+          ]
+        },
+        "3/5": {
+          "center": 30607,
+          "center_over_size2": "30607/11664",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 32961,
+          "center_over_size2": "10987/3888",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 12,
+          "hole_exponentials": [
+            5,
+            12,
+            21,
+            32,
+            36,
+            46,
+            47,
+            57,
+            69,
+            90,
+            99,
+            105
+          ]
+        },
+        "7/10": {
+          "center": 31784,
+          "center_over_size2": "3973/1458",
+          "first_hole_exponential": 5,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            5
+          ]
+        }
+      },
+      "p": 109,
+      "primitive_root": 6,
+      "size": 108
+    },
+    {
+      "modulus": 12656,
+      "offsets": {
+        "1/2": {
+          "center": 31640,
+          "center_over_size2": "565/224",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 33749,
+          "center_over_size2": "33749/12544",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 34804,
+          "center_over_size2": "1243/448",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            8,
+            45
+          ]
+        },
+        "3/5": {
+          "center": 32905,
+          "center_over_size2": "32905/12544",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 35436,
+          "center_over_size2": "8859/3136",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            8,
+            33,
+            44,
+            45,
+            63,
+            65,
+            103
+          ]
+        },
+        "7/10": {
+          "center": 34171,
+          "center_over_size2": "34171/12544",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 113,
+      "primitive_root": 3,
+      "size": 112
+    },
+    {
+      "modulus": 16002,
+      "offsets": {
+        "1/2": {
+          "center": 40005,
+          "center_over_size2": "635/252",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 42672,
+          "center_over_size2": "508/189",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 44005,
+          "center_over_size2": "44005/15876",
+          "first_hole_exponential": 21,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            21,
+            74
+          ]
+        },
+        "3/5": {
+          "center": 41605,
+          "center_over_size2": "41605/15876",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 44805,
+          "center_over_size2": "14935/5292",
+          "first_hole_exponential": 12,
+          "hole_cut_count": 9,
+          "hole_exponentials": [
+            12,
+            16,
+            51,
+            68,
+            80,
+            94,
+            102,
+            115,
+            117
+          ]
+        },
+        "7/10": {
+          "center": 43205,
+          "center_over_size2": "43205/15876",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 127,
+      "primitive_root": 3,
+      "size": 126
+    },
+    {
+      "modulus": 17030,
+      "offsets": {
+        "1/2": {
+          "center": 42575,
+          "center_over_size2": "131/52",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 45413,
+          "center_over_size2": "45413/16900",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 46832,
+          "center_over_size2": "11708/4225",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 44278,
+          "center_over_size2": "131/50",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 47684,
+          "center_over_size2": "917/325",
+          "first_hole_exponential": 14,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            14,
+            22,
+            33,
+            47,
+            54,
+            118
+          ]
+        },
+        "7/10": {
+          "center": 45981,
+          "center_over_size2": "3537/1300",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 131,
+      "primitive_root": 2,
+      "size": 130
+    },
+    {
+      "modulus": 18632,
+      "offsets": {
+        "1/2": {
+          "center": 46580,
+          "center_over_size2": "685/272",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 49685,
+          "center_over_size2": "49685/18496",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 51238,
+          "center_over_size2": "1507/544",
+          "first_hole_exponential": 108,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            108
+          ]
+        },
+        "3/5": {
+          "center": 48443,
+          "center_over_size2": "48443/18496",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 52169,
+          "center_over_size2": "52169/18496",
+          "first_hole_exponential": 6,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            6,
+            73,
+            92,
+            108
+          ]
+        },
+        "7/10": {
+          "center": 50306,
+          "center_over_size2": "25153/9248",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 137,
+      "primitive_root": 3,
+      "size": 136
+    },
+    {
+      "modulus": 19182,
+      "offsets": {
+        "1/2": {
+          "center": 47955,
+          "center_over_size2": "695/276",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 51152,
+          "center_over_size2": "556/207",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 52750,
+          "center_over_size2": "26375/9522",
+          "first_hole_exponential": 85,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            85
+          ]
+        },
+        "3/5": {
+          "center": 49873,
+          "center_over_size2": "49873/19044",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 53709,
+          "center_over_size2": "17903/6348",
+          "first_hole_exponential": 27,
+          "hole_cut_count": 5,
+          "hole_exponentials": [
+            27,
+            32,
+            97,
+            104,
+            107
+          ]
+        },
+        "7/10": {
+          "center": 51791,
+          "center_over_size2": "51791/19044",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 139,
+      "primitive_root": 2,
+      "size": 138
+    },
+    {
+      "modulus": 22052,
+      "offsets": {
+        "1/2": {
+          "center": 55130,
+          "center_over_size2": "745/296",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 58805,
+          "center_over_size2": "58805/21904",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 60643,
+          "center_over_size2": "1639/592",
+          "first_hole_exponential": 60,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            60,
+            88,
+            93
+          ]
+        },
+        "3/5": {
+          "center": 57335,
+          "center_over_size2": "57335/21904",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 61745,
+          "center_over_size2": "61745/21904",
+          "first_hole_exponential": 14,
+          "hole_cut_count": 6,
+          "hole_exponentials": [
+            14,
+            66,
+            77,
+            88,
+            93,
+            134
+          ]
+        },
+        "7/10": {
+          "center": 59540,
+          "center_over_size2": "14885/5476",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 149,
+      "primitive_root": 2,
+      "size": 148
+    },
+    {
+      "modulus": 22650,
+      "offsets": {
+        "1/2": {
+          "center": 56625,
+          "center_over_size2": "151/60",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 60400,
+          "center_over_size2": "604/225",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 62287,
+          "center_over_size2": "62287/22500",
+          "first_hole_exponential": 61,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            61
+          ]
+        },
+        "3/5": {
+          "center": 58890,
+          "center_over_size2": "1963/750",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 63420,
+          "center_over_size2": "1057/375",
+          "first_hole_exponential": 8,
+          "hole_cut_count": 7,
+          "hole_exponentials": [
+            8,
+            13,
+            18,
+            61,
+            64,
+            90,
+            107
+          ]
+        },
+        "7/10": {
+          "center": 61155,
+          "center_over_size2": "1359/500",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 151,
+      "primitive_root": 6,
+      "size": 150
+    },
+    {
+      "modulus": 24492,
+      "offsets": {
+        "1/2": {
+          "center": 61230,
+          "center_over_size2": "785/312",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 65312,
+          "center_over_size2": "314/117",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 67353,
+          "center_over_size2": "1727/624",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 63679,
+          "center_over_size2": "63679/24336",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 68577,
+          "center_over_size2": "22859/8112",
+          "first_hole_exponential": 1,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            1,
+            12,
+            154
+          ]
+        },
+        "7/10": {
+          "center": 66128,
+          "center_over_size2": "4133/1521",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 157,
+      "primitive_root": 5,
+      "size": 156
+    },
+    {
+      "modulus": 26406,
+      "offsets": {
+        "1/2": {
+          "center": 66015,
+          "center_over_size2": "815/324",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 70416,
+          "center_over_size2": "652/243",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 72616,
+          "center_over_size2": "18154/6561",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 68655,
+          "center_over_size2": "22885/8748",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 73936,
+          "center_over_size2": "18484/6561",
+          "first_hole_exponential": 93,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            93,
+            108,
+            115,
+            133
+          ]
+        },
+        "7/10": {
+          "center": 71296,
+          "center_over_size2": "17824/6561",
+          "first_hole_exponential": 78,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            78
+          ]
+        }
+      },
+      "p": 163,
+      "primitive_root": 2,
+      "size": 162
+    },
+    {
+      "modulus": 27722,
+      "offsets": {
+        "1/2": {
+          "center": 69305,
+          "center_over_size2": "835/332",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 73925,
+          "center_over_size2": "73925/27556",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 76235,
+          "center_over_size2": "76235/27556",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 72077,
+          "center_over_size2": "72077/27556",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 77621,
+          "center_over_size2": "77621/27556",
+          "first_hole_exponential": 9,
+          "hole_cut_count": 3,
+          "hole_exponentials": [
+            9,
+            156,
+            158
+          ]
+        },
+        "7/10": {
+          "center": 74849,
+          "center_over_size2": "74849/27556",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 167,
+      "primitive_root": 5,
+      "size": 166
+    },
+    {
+      "modulus": 29756,
+      "offsets": {
+        "1/2": {
+          "center": 74390,
+          "center_over_size2": "865/344",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 79349,
+          "center_over_size2": "79349/29584",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 81829,
+          "center_over_size2": "1903/688",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 77365,
+          "center_over_size2": "77365/29584",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 83316,
+          "center_over_size2": "20829/7396",
+          "first_hole_exponential": 31,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            31,
+            52
+          ]
+        },
+        "7/10": {
+          "center": 80341,
+          "center_over_size2": "80341/29584",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 173,
+      "primitive_root": 2,
+      "size": 172
+    },
+    {
+      "modulus": 31862,
+      "offsets": {
+        "1/2": {
+          "center": 79655,
+          "center_over_size2": "895/356",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 84965,
+          "center_over_size2": "84965/31684",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 87620,
+          "center_over_size2": "21905/7921",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 82841,
+          "center_over_size2": "82841/31684",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 89213,
+          "center_over_size2": "89213/31684",
+          "first_hole_exponential": 14,
+          "hole_cut_count": 4,
+          "hole_exponentials": [
+            14,
+            76,
+            160,
+            161
+          ]
+        },
+        "7/10": {
+          "center": 86027,
+          "center_over_size2": "86027/31684",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 179,
+      "primitive_root": 2,
+      "size": 178
+    },
+    {
+      "modulus": 32580,
+      "offsets": {
+        "1/2": {
+          "center": 81450,
+          "center_over_size2": "181/72",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 86880,
+          "center_over_size2": "362/135",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 89595,
+          "center_over_size2": "1991/720",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 84708,
+          "center_over_size2": "2353/900",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 91224,
+          "center_over_size2": "1267/450",
+          "first_hole_exponential": 74,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            74,
+            103
+          ]
+        },
+        "7/10": {
+          "center": 87966,
+          "center_over_size2": "543/200",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 181,
+      "primitive_root": 2,
+      "size": 180
+    },
+    {
+      "modulus": 36290,
+      "offsets": {
+        "1/2": {
+          "center": 90725,
+          "center_over_size2": "191/76",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 96773,
+          "center_over_size2": "96773/36100",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 99797,
+          "center_over_size2": "99797/36100",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 94354,
+          "center_over_size2": "2483/950",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 101612,
+          "center_over_size2": "1337/475",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 97983,
+          "center_over_size2": "5157/1900",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 191,
+      "primitive_root": 19,
+      "size": 190
+    },
+    {
+      "modulus": 37056,
+      "offsets": {
+        "1/2": {
+          "center": 92640,
+          "center_over_size2": "965/384",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 98816,
+          "center_over_size2": "193/72",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 101904,
+          "center_over_size2": "2123/768",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 96345,
+          "center_over_size2": "10705/4096",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 103756,
+          "center_over_size2": "25939/9216",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 100051,
+          "center_over_size2": "100051/36864",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 193,
+      "primitive_root": 5,
+      "size": 192
+    },
+    {
+      "modulus": 38612,
+      "offsets": {
+        "1/2": {
+          "center": 96530,
+          "center_over_size2": "985/392",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 102965,
+          "center_over_size2": "102965/38416",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 106183,
+          "center_over_size2": "2167/784",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 100391,
+          "center_over_size2": "100391/38416",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 108113,
+          "center_over_size2": "108113/38416",
+          "first_hole_exponential": 15,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            15,
+            108
+          ]
+        },
+        "7/10": {
+          "center": 104252,
+          "center_over_size2": "26063/9604",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 197,
+      "primitive_root": 2,
+      "size": 196
+    },
+    {
+      "modulus": 39402,
+      "offsets": {
+        "1/2": {
+          "center": 98505,
+          "center_over_size2": "995/396",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 105072,
+          "center_over_size2": "796/297",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 108355,
+          "center_over_size2": "108355/39204",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 102445,
+          "center_over_size2": "102445/39204",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 110325,
+          "center_over_size2": "36775/13068",
+          "first_hole_exponential": 116,
+          "hole_cut_count": 1,
+          "hole_exponentials": [
+            116
+          ]
+        },
+        "7/10": {
+          "center": 106385,
+          "center_over_size2": "106385/39204",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 199,
+      "primitive_root": 3,
+      "size": 198
+    },
+    {
+      "modulus": 44310,
+      "offsets": {
+        "1/2": {
+          "center": 110775,
+          "center_over_size2": "211/84",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 118160,
+          "center_over_size2": "844/315",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 121852,
+          "center_over_size2": "30463/11025",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 115206,
+          "center_over_size2": "2743/1050",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 124068,
+          "center_over_size2": "211/75",
+          "first_hole_exponential": 59,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            59,
+            163
+          ]
+        },
+        "7/10": {
+          "center": 119637,
+          "center_over_size2": "1899/700",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 211,
+      "primitive_root": 2,
+      "size": 210
+    },
+    {
+      "modulus": 49506,
+      "offsets": {
+        "1/2": {
+          "center": 123765,
+          "center_over_size2": "1115/444",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 132016,
+          "center_over_size2": "892/333",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 136141,
+          "center_over_size2": "136141/49284",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 128715,
+          "center_over_size2": "42905/16428",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 138616,
+          "center_over_size2": "34654/12321",
+          "first_hole_exponential": 103,
+          "hole_cut_count": 2,
+          "hole_exponentials": [
+            103,
+            158
+          ]
+        },
+        "7/10": {
+          "center": 133666,
+          "center_over_size2": "66833/24642",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 223,
+      "primitive_root": 3,
+      "size": 222
+    },
+    {
+      "modulus": 51302,
+      "offsets": {
+        "1/2": {
+          "center": 128255,
+          "center_over_size2": "1135/452",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 136805,
+          "center_over_size2": "136805/51076",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 141080,
+          "center_over_size2": "35270/12769",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 133385,
+          "center_over_size2": "133385/51076",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 143645,
+          "center_over_size2": "143645/51076",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 138515,
+          "center_over_size2": "138515/51076",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 227,
+      "primitive_root": 2,
+      "size": 226
+    },
+    {
+      "modulus": 52212,
+      "offsets": {
+        "1/2": {
+          "center": 130530,
+          "center_over_size2": "1145/456",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 139232,
+          "center_over_size2": "458/171",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 143583,
+          "center_over_size2": "2519/912",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 135751,
+          "center_over_size2": "135751/51984",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 146193,
+          "center_over_size2": "48731/17328",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 140972,
+          "center_over_size2": "35243/12996",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 229,
+      "primitive_root": 6,
+      "size": 228
+    },
+    {
+      "modulus": 54056,
+      "offsets": {
+        "1/2": {
+          "center": 135140,
+          "center_over_size2": "1165/464",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 144149,
+          "center_over_size2": "144149/53824",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 148654,
+          "center_over_size2": "2563/928",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 140545,
+          "center_over_size2": "140545/53824",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 151356,
+          "center_over_size2": "37839/13456",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 145951,
+          "center_over_size2": "145951/53824",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 233,
+      "primitive_root": 3,
+      "size": 232
+    },
+    {
+      "modulus": 56882,
+      "offsets": {
+        "1/2": {
+          "center": 142205,
+          "center_over_size2": "1195/476",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 151685,
+          "center_over_size2": "151685/56644",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 156425,
+          "center_over_size2": "156425/56644",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 147893,
+          "center_over_size2": "147893/56644",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 159269,
+          "center_over_size2": "159269/56644",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 153581,
+          "center_over_size2": "153581/56644",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 239,
+      "primitive_root": 7,
+      "size": 238
+    },
+    {
+      "modulus": 57840,
+      "offsets": {
+        "1/2": {
+          "center": 144600,
+          "center_over_size2": "241/96",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 154240,
+          "center_over_size2": "241/90",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 159060,
+          "center_over_size2": "2651/960",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 150384,
+          "center_over_size2": "3133/1200",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 161952,
+          "center_over_size2": "1687/600",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 156168,
+          "center_over_size2": "2169/800",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 241,
+      "primitive_root": 7,
+      "size": 240
+    },
+    {
+      "modulus": 62750,
+      "offsets": {
+        "1/2": {
+          "center": 156875,
+          "center_over_size2": "251/100",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 167333,
+          "center_over_size2": "167333/62500",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 172562,
+          "center_over_size2": "86281/31250",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 163150,
+          "center_over_size2": "3263/1250",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 175700,
+          "center_over_size2": "1757/625",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 169425,
+          "center_over_size2": "6777/2500",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 251,
+      "primitive_root": 6,
+      "size": 250
+    },
+    {
+      "modulus": 65792,
+      "offsets": {
+        "1/2": {
+          "center": 164480,
+          "center_over_size2": "1285/512",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "2/3": {
+          "center": 175445,
+          "center_over_size2": "175445/65536",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/4": {
+          "center": 180928,
+          "center_over_size2": "2827/1024",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "3/5": {
+          "center": 171059,
+          "center_over_size2": "171059/65536",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "4/5": {
+          "center": 184217,
+          "center_over_size2": "184217/65536",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        },
+        "7/10": {
+          "center": 177638,
+          "center_over_size2": "88819/32768",
+          "first_hole_exponential": null,
+          "hole_cut_count": 0,
+          "hole_exponentials": []
+        }
+      },
+      "p": 257,
+      "primitive_root": 3,
+      "size": 256
+    }
+  ]
+}

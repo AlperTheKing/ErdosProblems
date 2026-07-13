@@ -1,0 +1,3 @@
+You are child 6/9 for Lead P on full Erdos #23 delta=0. Work only in tmp/fanout/common_blue_proof/child_06_lean/. Read the goal, mailboxes, R29 reconciliation, CommonBlueExtendedMatching.lean, CompleteShortestRowDB definitions, and maxcut/connected/gamma-min theorem APIs.
+
+Task: audit the exact Lean theorem signature for universal common-blue Hall under the real hypotheses and extract the smallest lemma tree that would compile. Prove any purely logical reductions in a scratch Lean file without sorry/admit/native_decide; run lake env lean and #print axioms. Identify where graph semantics first become genuinely open. Do not edit production. Include exact file:line/API citations and build outputs/hashes.

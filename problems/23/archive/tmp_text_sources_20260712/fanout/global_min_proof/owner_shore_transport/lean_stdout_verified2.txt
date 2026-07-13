@@ -1,0 +1,6 @@
+'Erdos23Delta0.Gamma.ActiveScopedMinimumExchange.scopedObligationScore_lt_of_amortized_banks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.ActiveScopedMinimumExchange.scopedObligationScore_lt_of_transport_credit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

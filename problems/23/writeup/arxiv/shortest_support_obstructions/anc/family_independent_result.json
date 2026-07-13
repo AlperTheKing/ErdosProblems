@@ -1,0 +1,214 @@
+{
+  "full_cut_t": [
+    1,
+    2
+  ],
+  "independence": "standard library only; no project verifier imports",
+  "orbit_cut_t": [
+    3,
+    4
+  ],
+  "results": [
+    {
+      "edges": 11,
+      "full_cut_audit": {
+        "cuts_checked": 1024,
+        "minimizing_cuts": 2,
+        "minimum_bad_edges": 1,
+        "minimum_cut_orbits_mod_complement": 1
+      },
+      "packing": {
+        "cycles": 1,
+        "edge_collisions": 0,
+        "packed_edges": 7,
+        "thin_edges_outside_packing": 4,
+        "wide_edges": 7
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 1,
+        "hall_defect": -3,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 4
+      },
+      "t": 1,
+      "triangles": 0,
+      "vertices": 10
+    },
+    {
+      "edges": 34,
+      "full_cut_audit": {
+        "cuts_checked": 131072,
+        "minimizing_cuts": 2,
+        "minimum_bad_edges": 4,
+        "minimum_cut_orbits_mod_complement": 1
+      },
+      "packing": {
+        "cycles": 4,
+        "edge_collisions": 0,
+        "packed_edges": 28,
+        "thin_edges_outside_packing": 6,
+        "wide_edges": 28
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 4,
+        "hall_defect": -2,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 6
+      },
+      "t": 2,
+      "triangles": 0,
+      "vertices": 17
+    },
+    {
+      "edges": 71,
+      "orbit_cut_audit": {
+        "cut_orbits_checked": 131072,
+        "minimizing_labeled_cuts": 2,
+        "minimizing_orbits": 2,
+        "minimum_bad_edges": 9,
+        "minimum_cut_orbits_mod_complement": 1,
+        "represented_labeled_cuts": 16777216
+      },
+      "packing": {
+        "cycles": 9,
+        "edge_collisions": 0,
+        "packed_edges": 63,
+        "thin_edges_outside_packing": 8,
+        "wide_edges": 63
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 9,
+        "hall_defect": 1,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 8
+      },
+      "t": 3,
+      "triangles": 0,
+      "vertices": 24
+    },
+    {
+      "edges": 122,
+      "orbit_cut_audit": {
+        "cut_orbits_checked": 625000,
+        "minimizing_labeled_cuts": 2,
+        "minimizing_orbits": 2,
+        "minimum_bad_edges": 16,
+        "minimum_cut_orbits_mod_complement": 1,
+        "represented_labeled_cuts": 2147483648
+      },
+      "packing": {
+        "cycles": 16,
+        "edge_collisions": 0,
+        "packed_edges": 112,
+        "thin_edges_outside_packing": 10,
+        "wide_edges": 112
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 16,
+        "hall_defect": 6,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 10
+      },
+      "t": 4,
+      "triangles": 0,
+      "vertices": 31
+    },
+    {
+      "edges": 187,
+      "packing": {
+        "cycles": 25,
+        "edge_collisions": 0,
+        "packed_edges": 175,
+        "thin_edges_outside_packing": 12,
+        "wide_edges": 175
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 25,
+        "hall_defect": 13,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 12
+      },
+      "t": 5,
+      "triangles": 0,
+      "vertices": 38
+    },
+    {
+      "edges": 266,
+      "packing": {
+        "cycles": 36,
+        "edge_collisions": 0,
+        "packed_edges": 252,
+        "thin_edges_outside_packing": 14,
+        "wide_edges": 252
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 36,
+        "hall_defect": 22,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 14
+      },
+      "t": 6,
+      "triangles": 0,
+      "vertices": 45
+    },
+    {
+      "edges": 359,
+      "packing": {
+        "cycles": 49,
+        "edge_collisions": 0,
+        "packed_edges": 343,
+        "thin_edges_outside_packing": 16,
+        "wide_edges": 343
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 49,
+        "hall_defect": 33,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 16
+      },
+      "t": 7,
+      "triangles": 0,
+      "vertices": 52
+    },
+    {
+      "edges": 466,
+      "packing": {
+        "cycles": 64,
+        "edge_collisions": 0,
+        "packed_edges": 448,
+        "thin_edges_outside_packing": 18,
+        "wide_edges": 448
+      },
+      "shortest_support": {
+        "blue_connected": true,
+        "canonical_bad_edges": 64,
+        "hall_defect": 46,
+        "shortest_distance": 4,
+        "shortest_path_count_per_bad_edge": 1,
+        "support_edges": 18
+      },
+      "t": 8,
+      "triangles": 0,
+      "vertices": 59
+    }
+  ],
+  "structural_t_range": [
+    1,
+    8
+  ],
+  "verdict": "PASS"
+}

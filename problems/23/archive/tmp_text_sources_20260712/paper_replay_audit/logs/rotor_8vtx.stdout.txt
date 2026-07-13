@@ -1,0 +1,6 @@
+CLAUDE-GATE=PASS (exhaustive)
+G1 tri-free, blue=cross bipartition, blue-connected | G2 maxcut=8 exhaustive(2^8) = displayed
+G3 families complete: ab={A_m,A_v}, pq={B_x,B_y} (my DFS) | G4 4-state cycle = one-middle swaps in-family
+G5 active graph per state = the single missing square edge, NO bad-containing component => defect 0
+G6 collision mass rotates: 8 halves in every state (pairs {mx},{my},{vy},{vx})
+VERDICT: rotor construction GENUINE; bare rotor NOT a falsifier (vacuous scope); graft question OPEN

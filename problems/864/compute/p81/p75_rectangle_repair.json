@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integers",
+  "domain": "best-improvement one-mark replacements, odd marks in [1,987], endpoint 987",
+  "initial_score": 30,
+  "final_score": 30,
+  "final_missing": [
+    {
+      "outer_edge": [
+        5,
+        931
+      ],
+      "target_inner_difference": 62,
+      "represented_pair": [
+        915,
+        977
+      ],
+      "reason": "representative not nested"
+    },
+    {
+      "outer_edge": [
+        69,
+        953
+      ],
+      "target_inner_difference": 104,
+      "represented_pair": [
+        883,
+        987
+      ],
+      "reason": "representative not nested"
+    },
+    {
+      "outer_edge": [
+        169,
+        915
+      ],
+      "target_inner_difference": 242,
+      "represented_pair": [
+        689,
+        931
+      ],
+      "reason": "representative not nested"
+    },
+    {
+      "outer_edge": [
+        211,
+        953
+      ],
+      "target_inner_difference": 246,
+      "represented_pair": [
+        5,
+        251
+      ],
+      "reason": "representative not nested"
+    },
+    {
+      "outer_edge": [
+        223,
+        883
+      ],
+      "target_inner_difference": 328,
+      "reason": "difference absent"
+    },
+    {
+      "outer_edge": [
+        223,
+        977
+      ],
+      "target_inner_difference": 234,
+      "represented_pair": [
+        169,
+        403
+      ],
+      "reason": "representative not nested"
+    }
+  ],
+  "distinct_valid_neighbors_examined": 1,
+  "path": [
+    {
+      "step": 0,
+      "B": [
+        3,
+        5,
+        69,
+        169,
+        211,
+        223,
+        251,
+        329,
+        373,
+        403,
+        409,
+        501,
+        505,
+        519,
+        631,
+        639,
+        689,
+        715,
+        775,
+        863,
+        883,
+        915,
+        931,
+        953,
+        977,
+        987
+      ],
+      "rectangle_edges": 30,
+      "missing": [
+        {
+          "outer_edge": [
+            5,
+            931
+          ],
+          "target_inner_difference": 62,
+          "represented_pair": [
+            915,
+            977
+          ],
+          "reason": "representative not nested"
+        },
+        {
+          "outer_edge": [
+            69,
+            953
+          ],
+          "target_inner_difference": 104,
+          "represented_pair": [
+            883,
+            987
+          ],
+          "reason": "representative not nested"
+        },
+        {
+          "outer_edge": [
+            169,
+            915
+          ],
+          "target_inner_difference": 242,
+          "represented_pair": [
+            689,
+            931
+          ],
+          "reason": "representative not nested"
+        },
+        {
+          "outer_edge": [
+            211,
+            953
+          ],
+          "target_inner_difference": 246,
+          "represented_pair": [
+            5,
+            251
+          ],
+          "reason": "representative not nested"
+        },
+        {
+          "outer_edge": [
+            223,
+            883
+          ],
+          "target_inner_difference": 328,
+          "reason": "difference absent"
+        },
+        {
+          "outer_edge": [
+            223,
+            977
+          ],
+          "target_inner_difference": 234,
+          "represented_pair": [
+            169,
+            403
+          ],
+          "reason": "representative not nested"
+        }
+      ],
+      "local_maximum": true,
+      "best_neighbor_score": 30
+    }
+  ],
+  "K6_6_found": false,
+  "witness": null,
+  "elapsed_seconds": 0.08465530000103172
+}

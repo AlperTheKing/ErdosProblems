@@ -1,0 +1,7 @@
+import Erdos23Delta0.Gamma.CheckedRowCompanionBaseTransfer
+import Erdos23Delta0.Gamma.FullBankChargeCertProvider
+
+#check CheckedTransferMatching
+#check CheckedOutsideAttachmentBaseTerminal
+#check checkedTransferMatching_to_activeFullBank
+#check checkedMatching_withOutsideAttachment_sound

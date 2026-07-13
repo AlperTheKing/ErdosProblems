@@ -1,0 +1,12 @@
+import Erdos23Delta0.Gamma.CheckedDetourTransportLedger
+
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.check_eq_true_iff
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.everyCarryPreservesPhysicalKey
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.carryAssign_base_component_coherent
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.carryMatching
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.defect_delta
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.sound_of_check_eq_true
+#check @Erdos23Delta0.Gamma.CheckedDetourTransportLedger.defect_delta_of_check_eq_true
+
+#print axioms Erdos23Delta0.Gamma.CheckedDetourTransportLedger.defect_delta_of_check_eq_true

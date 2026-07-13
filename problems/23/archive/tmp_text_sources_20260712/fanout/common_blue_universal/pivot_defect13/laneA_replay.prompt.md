@@ -1,0 +1,1 @@
+Read ../COMMON.md. Reconstruct the fixture independently without importing the dynamic MICRO_FLOW function. Decode graph6, rebuild cut/rows/components/demand and explicit ordered-key integer flow. Export all exact certificates and require 78/65 defect13.

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "field": "GF(1000003)",
+  "candidate": "within each sign chamber of X,Z,R,R+X,R+Z,Z-X, (support,L1,L2) rows are independent",
+  "conditional_consequence": "T_F <= 24(C_S+2p)",
+  "domains": {
+    "embedded": {
+      "systems": 50,
+      "systems_with_triangles": 19,
+      "chambers": 296,
+      "support_dependent_chambers": 0,
+      "relation_failures": 0,
+      "first_failure": null
+    },
+    "p98_subsets": {
+      "systems": 261836,
+      "systems_with_triangles": 2800,
+      "chambers": 3952,
+      "support_dependent_chambers": 0,
+      "relation_failures": 0,
+      "first_failure": null
+    },
+    "p94_deletions": {
+      "systems": 5356,
+      "systems_with_triangles": 5356,
+      "chambers": 127357,
+      "support_dependent_chambers": 0,
+      "relation_failures": 0,
+      "first_failure": null
+    },
+    "p105_translations": {
+      "systems": 1560,
+      "systems_with_triangles": 1557,
+      "chambers": 22838,
+      "support_dependent_chambers": 5,
+      "relation_failures": 0,
+      "first_failure": null
+    },
+    "p105_deletions": {
+      "systems": 29316,
+      "systems_with_triangles": 29316,
+      "chambers": 595029,
+      "support_dependent_chambers": 0,
+      "relation_failures": 0,
+      "first_failure": null
+    },
+    "p86_bases": {
+      "systems": 2526,
+      "systems_with_triangles": 1652,
+      "chambers": 6608,
+      "support_dependent_chambers": 6,
+      "relation_failures": 0,
+      "first_failure": null
+    }
+  }
+}

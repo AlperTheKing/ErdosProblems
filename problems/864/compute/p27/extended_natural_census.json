@@ -1,0 +1,130 @@
+{
+  "records": [
+    {
+      "cuts": 174,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 3,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        11062
+      ],
+      "max_failure_d": 8185,
+      "max_failure_d_over_v": "8185/30103",
+      "min_cut_max_failure_d": 1890,
+      "min_cut_max_failure_d_over_v": "1890/30103",
+      "q": 173,
+      "source": "extended_natural_census.json",
+      "v": 30103
+    },
+    {
+      "cuts": 192,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 0,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        32909
+      ],
+      "max_failure_d": 8595,
+      "max_failure_d_over_v": "8595/36673",
+      "min_cut_max_failure_d": 2996,
+      "min_cut_max_failure_d_over_v": "428/5239",
+      "q": 191,
+      "source": "extended_natural_census.json",
+      "v": 36673
+    },
+    {
+      "cuts": 212,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 0,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        24543
+      ],
+      "max_failure_d": 10911,
+      "max_failure_d_over_v": "3637/14911",
+      "min_cut_max_failure_d": 2485,
+      "min_cut_max_failure_d_over_v": "2485/44733",
+      "q": 211,
+      "source": "extended_natural_census.json",
+      "v": 44733
+    },
+    {
+      "cuts": 234,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 0,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        48075
+      ],
+      "max_failure_d": 13610,
+      "max_failure_d_over_v": "13610/54523",
+      "min_cut_max_failure_d": 4298,
+      "min_cut_max_failure_d_over_v": "614/7789",
+      "q": 233,
+      "source": "extended_natural_census.json",
+      "v": 54523
+    },
+    {
+      "cuts": 252,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 0,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        49975
+      ],
+      "max_failure_d": 15273,
+      "max_failure_d_over_v": "15273/63253",
+      "min_cut_max_failure_d": 5026,
+      "min_cut_max_failure_d_over_v": "5026/63253",
+      "q": 251,
+      "source": "extended_natural_census.json",
+      "v": 63253
+    },
+    {
+      "cuts": 257,
+      "cuts_with_failure_at_or_above": {
+        "one_quarter": 2,
+        "one_third": 0,
+        "three_tenths": 0,
+        "two_fifths": 0
+      },
+      "max_failure_cut_bases": [
+        814
+      ],
+      "max_failure_d": 18972,
+      "max_failure_d_over_v": "6324/21931",
+      "min_cut_max_failure_d": 5811,
+      "min_cut_max_failure_d_over_v": "149/1687",
+      "q": 256,
+      "source": "extended_natural_census.json",
+      "v": 65793
+    }
+  ],
+  "summary": {
+    "cuts": 1321,
+    "parameters": [
+      173,
+      191,
+      211,
+      233,
+      251,
+      256
+    ],
+    "records": 6
+  }
+}

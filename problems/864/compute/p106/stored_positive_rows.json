@@ -1,0 +1,21 @@
+{
+  "json_files_scanned": 18,
+  "distinct_positive_defect_phase_rows": 40,
+  "RM97_failures": 0,
+  "first_failure": null,
+  "closest_row": {
+    "source": "problems/864/compute/p98/cpsat_H31_H32.json",
+    "p": 5,
+    "h": 32,
+    "b": 1,
+    "delta": 4,
+    "C_S": 0,
+    "T_F": 0,
+    "V_b": 0,
+    "intervals": 0,
+    "slots": 0,
+    "matched": 0,
+    "RM97_failure": false,
+    "literal_hole": true
+  }
+}

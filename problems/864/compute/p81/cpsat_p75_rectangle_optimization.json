@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer CP-SAT",
+  "domain": "26 odd marks; six lowest by six highest outer rectangle; positive-defect endpoint range",
+  "P75_hint_score": 30,
+  "status": "FEASIBLE",
+  "objective_value": 30,
+  "best_objective_bound": 36.0,
+  "branches": 5425,
+  "conflicts": 0,
+  "elapsed_seconds": 300.20320640000136,
+  "solution": {
+    "B": [
+      3,
+      5,
+      69,
+      169,
+      211,
+      223,
+      251,
+      329,
+      373,
+      403,
+      409,
+      501,
+      505,
+      519,
+      631,
+      639,
+      689,
+      715,
+      775,
+      863,
+      883,
+      915,
+      931,
+      953,
+      977,
+      987
+    ],
+    "left": [
+      3,
+      5,
+      69,
+      169,
+      211,
+      223
+    ],
+    "right": [
+      883,
+      915,
+      931,
+      953,
+      977,
+      987
+    ],
+    "edges": [
+      {
+        "outer_edge": [
+          3,
+          883
+        ],
+        "inner_edge": [
+          775,
+          883
+        ],
+        "low_sum": 778,
+        "high_sum": 1766
+      },
+      {
+        "outer_edge": [
+          3,
+          915
+        ],
+        "inner_edge": [
+          639,
+          715
+        ],
+        "low_sum": 642,
+        "high_sum": 1630
+      },
+      {
+        "outer_edge": [
+          3,
+          931
+        ],
+        "inner_edge": [
+          715,
+          775
+        ],
+        "low_sum": 718,
+        "high_sum": 1706
+      },
+      {
+        "outer_edge": [
+          3,
+          953
+        ],
+        "inner_edge": [
+          915,
+          953
+        ],
+        "low_sum": 918,
+        "high_sum": 1906
+      },
+      {
+        "outer_edge": [
+          3,
+          977
+        ],
+        "inner_edge": [
+          505,
+          519
+        ],
+        "low_sum": 508,
+        "high_sum": 1496
+      },
+      {
+        "outer_edge": [
+          3,
+          987
+        ],
+        "inner_edge": [
+          501,
+          505
+        ],
+        "low_sum": 504,
+        "high_sum": 1492
+      },
+      {
+        "outer_edge": [
+          5,
+          883
+        ],
+        "inner_edge": [
+          409,
+          519
+        ],
+        "low_sum": 414,
+        "high_sum": 1402
+      },
+      {
+        "outer_edge": [
+          5,
+          915
+        ],
+        "inner_edge": [
+          251,
+          329
+        ],
+        "low_sum": 256,
+        "high_sum": 1244
+      },
+      {
+        "outer_edge": [
+          5,
+          953
+        ],
+        "inner_edge": [
+          211,
+          251
+        ],
+        "low_sum": 216,
+        "high_sum": 1204
+      },
+      {
+        "outer_edge": [
+          5,
+          977
+        ],
+        "inner_edge": [
+          915,
+          931
+        ],
+        "low_sum": 920,
+        "high_sum": 1908
+      },
+      {
+        "outer_edge": [
+          5,
+          987
+        ],
+        "inner_edge": [
+          403,
+          409
+        ],
+        "low_sum": 408,
+        "high_sum": 1396
+      },
+      {
+        "outer_edge": [
+          69,
+          883
+        ],
+        "inner_edge": [
+          689,
+          863
+        ],
+        "low_sum": 758,
+        "high_sum": 1746
+      },
+      {
+        "outer_edge": [
+          69,
+          915
+        ],
+        "inner_edge": [
+          69,
+          211
+        ],
+        "low_sum": 138,
+        "high_sum": 1126
+      },
+      {
+        "outer_edge": [
+          69,
+          931
+        ],
+        "inner_edge": [
+          505,
+          631
+        ],
+        "low_sum": 574,
+        "high_sum": 1562
+      },
+      {
+        "outer_edge": [
+          69,
+          977
+        ],
+        "inner_edge": [
+          329,
+          409
+        ],
+        "low_sum": 398,
+        "high_sum": 1386
+      },
+      {
+        "outer_edge": [
+          69,
+          987
+        ],
+        "inner_edge": [
+          883,
+          953
+        ],
+        "low_sum": 952,
+        "high_sum": 1940
+      },
+      {
+        "outer_edge": [
+          169,
+          883
+        ],
+        "inner_edge": [
+          501,
+          775
+        ],
+        "low_sum": 670,
+        "high_sum": 1658
+      },
+      {
+        "outer_edge": [
+          169,
+          931
+        ],
+        "inner_edge": [
+          689,
+          915
+        ],
+        "low_sum": 858,
+        "high_sum": 1846
+      },
+      {
+        "outer_edge": [
+          169,
+          953
+        ],
+        "inner_edge": [
+          169,
+          373
+        ],
+        "low_sum": 338,
+        "high_sum": 1326
+      },
+      {
+        "outer_edge": [
+          169,
+          977
+        ],
+        "inner_edge": [
+          223,
+          403
+        ],
+        "low_sum": 392,
+        "high_sum": 1380
+      },
+      {
+        "outer_edge": [
+          169,
+          987
+        ],
+        "inner_edge": [
+          519,
+          689
+        ],
+        "low_sum": 688,
+        "high_sum": 1676
+      },
+      {
+        "outer_edge": [
+          211,
+          883
+        ],
+        "inner_edge": [
+          373,
+          689
+        ],
+        "low_sum": 584,
+        "high_sum": 1572
+      },
+      {
+        "outer_edge": [
+          211,
+          915
+        ],
+        "inner_edge": [
+          631,
+          915
+        ],
+        "low_sum": 842,
+        "high_sum": 1830
+      },
+      {
+        "outer_edge": [
+          211,
+          931
+        ],
+        "inner_edge": [
+          251,
+          519
+        ],
+        "low_sum": 462,
+        "high_sum": 1450
+      },
+      {
+        "outer_edge": [
+          211,
+          977
+        ],
+        "inner_edge": [
+          409,
+          631
+        ],
+        "low_sum": 620,
+        "high_sum": 1608
+      },
+      {
+        "outer_edge": [
+          211,
+          987
+        ],
+        "inner_edge": [
+          775,
+          987
+        ],
+        "low_sum": 986,
+        "high_sum": 1974
+      },
+      {
+        "outer_edge": [
+          223,
+          915
+        ],
+        "inner_edge": [
+          223,
+          519
+        ],
+        "low_sum": 446,
+        "high_sum": 1434
+      },
+      {
+        "outer_edge": [
+          223,
+          931
+        ],
+        "inner_edge": [
+          409,
+          689
+        ],
+        "low_sum": 632,
+        "high_sum": 1620
+      },
+      {
+        "outer_edge": [
+          223,
+          953
+        ],
+        "inner_edge": [
+          373,
+          631
+        ],
+        "low_sum": 596,
+        "high_sum": 1584
+      },
+      {
+        "outer_edge": [
+          223,
+          987
+        ],
+        "inner_edge": [
+          639,
+          863
+        ],
+        "low_sum": 862,
+        "high_sum": 1850
+      }
+    ],
+    "missing": [
+      {
+        "outer_edge": [
+          5,
+          931
+        ],
+        "target_inner_difference": 62,
+        "represented_pair": [
+          915,
+          977
+        ]
+      },
+      {
+        "outer_edge": [
+          69,
+          953
+        ],
+        "target_inner_difference": 104,
+        "represented_pair": [
+          883,
+          987
+        ]
+      },
+      {
+        "outer_edge": [
+          169,
+          915
+        ],
+        "target_inner_difference": 242,
+        "represented_pair": [
+          689,
+          931
+        ]
+      },
+      {
+        "outer_edge": [
+          211,
+          953
+        ],
+        "target_inner_difference": 246,
+        "represented_pair": [
+          5,
+          251
+        ]
+      },
+      {
+        "outer_edge": [
+          223,
+          883
+        ],
+        "target_inner_difference": 328,
+        "represented_pair": null
+      },
+      {
+        "outer_edge": [
+          223,
+          977
+        ],
+        "target_inner_difference": 234,
+        "represented_pair": [
+          169,
+          403
+        ]
+      }
+    ],
+    "p": 26,
+    "h": 988,
+    "b": 1,
+    "delta": 14,
+    "sum_count": 351,
+    "difference_count": 325
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "arithmetic": "independent exact Python integer reconstruction",
+  "inputs": [
+    {
+      "path": "problems\\864\\compute\\p98\\transformed_parent.json",
+      "sha256": "eaca3f57f385a52262ea3a3e50a125c6f4a50b84e3884a47ab61260956493671"
+    },
+    {
+      "path": "problems\\864\\compute\\p98\\cpsat_H31_H32.json",
+      "sha256": "8b30f28e76c67a51abd81d2b5703d172b21691c436280a701398d658b4623625"
+    },
+    {
+      "path": "problems\\864\\compute\\p98\\cpsat_H33_H40.json",
+      "sha256": "40cc5fb69baa76e5e0ca06932bf2b51ace8aec20a26701f8d6976bb0bdce2e17"
+    },
+    {
+      "path": "problems\\864\\compute\\p98\\unrestricted_corrected_H31_H40.json",
+      "sha256": "c06a5a29b6a906b2b81eb0f014deab8ea583376522bc6f89145d8d59eb988f54"
+    },
+    {
+      "path": "problems\\864\\compute\\p98\\tight_mutations.json",
+      "sha256": "7f12b2a7e3f578997ffcd410c12ce86efe804ecd1d73c08e80a32766993ffa6f"
+    },
+    {
+      "path": "problems\\864\\compute\\p98\\core_obstruction.json",
+      "sha256": "9e0c5db861f9d05c98fd1f3881d73d4cdcabd83b965579275e9fae1b006faa3b"
+    }
+  ],
+  "retained_rows_checked": 45,
+  "status": "PASS"
+}

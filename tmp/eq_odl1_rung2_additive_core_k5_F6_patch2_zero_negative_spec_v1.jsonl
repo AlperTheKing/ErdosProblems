@@ -1,9 +1,0 @@
-{"type": "meta", "dimension": 2, "terms": 2}
-{"type": "col", "col": 0, "source_col": 14742}
-{"type": "col", "col": 1, "source_col": 15536}
-{"type": "selected_row", "row": 0, "source_row": 9615}
-{"type": "rhs", "row": 0, "value": "0"}
-{"type": "selected_row", "row": 1, "source_row": 17372}
-{"type": "rhs", "row": 1, "value": "0"}
-{"type": "term", "row": 1, "col": 0, "value": "-3/55"}
-{"type": "term", "row": 0, "col": 1, "value": "-2/55"}

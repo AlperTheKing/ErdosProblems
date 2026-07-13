@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer hole bitsets and integer biclique enumeration; NumPy only vectorizes exact integer lookups",
+  "source": "problems/864/compute/p81/singer_q167_cut_scan_with_k55.json",
+  "retained_cuts": 16,
+  "workers": 16,
+  "hole_shifts_scanned": 27902,
+  "K5_5_shifts": 22,
+  "K6_6_found": false,
+  "witness": null,
+  "results": [
+    {
+      "affine_multiplier": 453,
+      "cut_base": 24273,
+      "width": 28040,
+      "hole_shifts_scanned": 1503,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 315,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 1811,
+      "cut_base": 11303,
+      "width": 28044,
+      "hole_shifts_scanned": 951,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 296,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 1811,
+      "cut_base": 14523,
+      "width": 27934,
+      "hole_shifts_scanned": 1660,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 286,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 2263,
+      "cut_base": 20229,
+      "width": 27936,
+      "hole_shifts_scanned": 1791,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 248,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 3168,
+      "cut_base": 19542,
+      "width": 28056,
+      "hole_shifts_scanned": 1434,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 292,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 3621,
+      "cut_base": 13774,
+      "width": 27600,
+      "hole_shifts_scanned": 1959,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 229,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 4978,
+      "cut_base": 9967,
+      "width": 27615,
+      "hole_shifts_scanned": 1735,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 239,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 6336,
+      "cut_base": 20918,
+      "width": 27974,
+      "hole_shifts_scanned": 972,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 293,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 6336,
+      "cut_base": 24880,
+      "width": 28046,
+      "hole_shifts_scanned": 2836,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 364,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 7241,
+      "cut_base": 19313,
+      "width": 27987,
+      "hole_shifts_scanned": 1262,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 293,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 8146,
+      "cut_base": 22845,
+      "width": 28034,
+      "hole_shifts_scanned": 1290,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 301,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 9956,
+      "cut_base": 3638,
+      "width": 28029,
+      "hole_shifts_scanned": 1655,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 258,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 10408,
+      "cut_base": 22887,
+      "width": 27846,
+      "hole_shifts_scanned": 980,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 307,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 13123,
+      "cut_base": 14562,
+      "width": 27209,
+      "hole_shifts_scanned": 2553,
+      "K5_5_shifts": 2,
+      "max_outer_edges": 248,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 13123,
+      "cut_base": 18154,
+      "width": 27719,
+      "hole_shifts_scanned": 2480,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 306,
+      "K6_6_found": false,
+      "witness": null
+    },
+    {
+      "affine_multiplier": 14028,
+      "cut_base": 17824,
+      "width": 27853,
+      "hole_shifts_scanned": 2841,
+      "K5_5_shifts": 1,
+      "max_outer_edges": 285,
+      "K6_6_found": false,
+      "witness": null
+    }
+  ],
+  "elapsed_seconds": 58.225881799997296
+}

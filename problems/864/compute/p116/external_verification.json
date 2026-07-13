@@ -1,0 +1,67 @@
+{
+  "arithmetic": "independent exact Python integers and Edmonds-Karp max flow",
+  "inputs": [
+    {
+      "distinct_retained_rows_checked": 4,
+      "input": "problems\\864\\compute\\p116\\bc108_adversarial_search.json",
+      "input_sha256": "3caccc6cec961a4a9d307af99d03d7e49b62e66459379af3554c314f1674195f",
+      "verified_rows_sha256": "97cfcded1eed35413d1bda0e0c694439fe3ccc9978e040fcea6af629c04d8293"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parent_174.json",
+      "input_sha256": "92c92917a0016e8b7aad411c4fb7aa30cb4aeb6fca4ceea72084268a62fc5041",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parent_2473.json",
+      "input_sha256": "4dc1046a9de9e611e1742164f5e48a01b4402b2d4ba3b79c591589ba7680ea62",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parent_2486.json",
+      "input_sha256": "3570ecc1bf77a58ee5f7a60707c0bf7f438679e4b89f748692909d7717cfb090",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parent_2500.json",
+      "input_sha256": "d01e422a30c39ce94cb1d061ff6b14b1b90804dd43adb98983855a84ac539708",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parallel_174_b1.json",
+      "input_sha256": "070338dd2d990ddf0b14fc671b0041d384366802eb28361ad93be950f62b7867",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parallel_174_b2.json",
+      "input_sha256": "c75cedaeda29f96c7f9f116d3cbd52444a9b44a3f8254e7e4f776741565678a7",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parallel_2486_b1.json",
+      "input_sha256": "838416f90b7b5941279f968a2109563e91998ac1c8315fa7268f15d765ca4ace",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parallel_2486_b2.json",
+      "input_sha256": "3e01137e88a6302a8fef3790fd97f1a0e817684455b720e1a22d5c7325ee365c",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "distinct_retained_rows_checked": 0,
+      "input": "problems\\864\\compute\\p116\\subset_cp_parallel_2500_b1.json",
+      "input_sha256": "ad583d1feb0b63ad9cecdd97e3b601f93adcf3e600563ffee55ccda4fde6433f",
+      "verified_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "schema_version": 1,
+  "status": "PASS"
+}

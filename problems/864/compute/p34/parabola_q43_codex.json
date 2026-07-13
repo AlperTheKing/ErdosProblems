@@ -1,0 +1,86 @@
+{
+  "max_prime": 43,
+  "prime_count": 13,
+  "reports": [
+    {
+      "covered_targets": 9,
+      "pair_sums": 6,
+      "q": 3,
+      "translations_checked": 9
+    },
+    {
+      "covered_targets": 25,
+      "pair_sums": 15,
+      "q": 5,
+      "translations_checked": 25
+    },
+    {
+      "covered_targets": 49,
+      "pair_sums": 28,
+      "q": 7,
+      "translations_checked": 49
+    },
+    {
+      "covered_targets": 121,
+      "pair_sums": 66,
+      "q": 11,
+      "translations_checked": 121
+    },
+    {
+      "covered_targets": 169,
+      "pair_sums": 91,
+      "q": 13,
+      "translations_checked": 169
+    },
+    {
+      "covered_targets": 289,
+      "pair_sums": 153,
+      "q": 17,
+      "translations_checked": 289
+    },
+    {
+      "covered_targets": 361,
+      "pair_sums": 190,
+      "q": 19,
+      "translations_checked": 361
+    },
+    {
+      "covered_targets": 529,
+      "pair_sums": 276,
+      "q": 23,
+      "translations_checked": 529
+    },
+    {
+      "covered_targets": 841,
+      "pair_sums": 435,
+      "q": 29,
+      "translations_checked": 841
+    },
+    {
+      "covered_targets": 961,
+      "pair_sums": 496,
+      "q": 31,
+      "translations_checked": 961
+    },
+    {
+      "covered_targets": 1369,
+      "pair_sums": 703,
+      "q": 37,
+      "translations_checked": 1369
+    },
+    {
+      "covered_targets": 1681,
+      "pair_sums": 861,
+      "q": 41,
+      "translations_checked": 1681
+    },
+    {
+      "covered_targets": 1849,
+      "pair_sums": 946,
+      "q": 43,
+      "translations_checked": 1849
+    }
+  ],
+  "total_targets": 8253,
+  "total_translations": 8253
+}

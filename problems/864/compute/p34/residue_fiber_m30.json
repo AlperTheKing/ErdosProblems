@@ -1,0 +1,1988 @@
+{
+  "global_best_primitive_examples": [
+    {
+      "R": [
+        1,
+        9,
+        15
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        1,
+        11,
+        15
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        3,
+        5,
+        17
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        3,
+        13,
+        17
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        3,
+        5,
+        19
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        5,
+        13,
+        19
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        3,
+        17,
+        19
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    },
+    {
+      "R": [
+        5,
+        17,
+        19
+      ],
+      "balanced_modular_fiber_lower_coefficient": "28/9",
+      "balanced_modular_fiber_lower_float": 3.111111111111111,
+      "coarse_coset_alone_blocks_3R": false,
+      "congruence_gcd": 2,
+      "modulus": 28,
+      "ordered_pair_peak": 2,
+      "pair_support": 5,
+      "primitive_beyond_parity": true,
+      "size": 3
+    }
+  ],
+  "max_modulus": 30,
+  "moduli": [
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [],
+      "maximum_size": 0,
+      "modulus": 2,
+      "primitive_count": 0,
+      "valid_count": 0
+    },
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [
+        {
+          "R": [
+            1
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 4,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        },
+        {
+          "R": [
+            3
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 4,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        }
+      ],
+      "maximum_size": 1,
+      "modulus": 4,
+      "primitive_count": 0,
+      "valid_count": 2
+    },
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [
+        {
+          "R": [
+            1
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 6,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        },
+        {
+          "R": [
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 6,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        }
+      ],
+      "maximum_size": 1,
+      "modulus": 6,
+      "primitive_count": 0,
+      "valid_count": 2
+    },
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 8,
+          "ordered_pair_peak": 2,
+          "pair_support": 2,
+          "primitive_beyond_parity": false,
+          "size": 2
+        },
+        {
+          "R": [
+            3,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 8,
+          "ordered_pair_peak": 2,
+          "pair_support": 2,
+          "primitive_beyond_parity": false,
+          "size": 2
+        }
+      ],
+      "maximum_size": 2,
+      "modulus": 8,
+      "primitive_count": 0,
+      "valid_count": 6
+    },
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [
+        {
+          "R": [
+            1
+          ],
+          "balanced_modular_fiber_lower_coefficient": "5",
+          "balanced_modular_fiber_lower_float": 5.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 10,
+          "modulus": 10,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        },
+        {
+          "R": [
+            3
+          ],
+          "balanced_modular_fiber_lower_coefficient": "5",
+          "balanced_modular_fiber_lower_float": 5.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 10,
+          "modulus": 10,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        },
+        {
+          "R": [
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "5",
+          "balanced_modular_fiber_lower_float": 5.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 10,
+          "modulus": 10,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        },
+        {
+          "R": [
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "5",
+          "balanced_modular_fiber_lower_float": 5.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 10,
+          "modulus": 10,
+          "ordered_pair_peak": 1,
+          "pair_support": 1,
+          "primitive_beyond_parity": false,
+          "size": 1
+        }
+      ],
+      "maximum_size": 1,
+      "modulus": 10,
+      "primitive_count": 0,
+      "valid_count": 4
+    },
+    {
+      "best_primitive_examples": [],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 12,
+          "ordered_pair_peak": 3,
+          "pair_support": 3,
+          "primitive_beyond_parity": false,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            7,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 12,
+          "ordered_pair_peak": 3,
+          "pair_support": 3,
+          "primitive_beyond_parity": false,
+          "size": 3
+        }
+      ],
+      "maximum_size": 3,
+      "modulus": 12,
+      "primitive_count": 0,
+      "valid_count": 16
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            9,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            3,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            5,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            3,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            9,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            3,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            5,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "7/2",
+          "balanced_modular_fiber_lower_float": 3.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 14,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        }
+      ],
+      "maximum_size": 2,
+      "modulus": 14,
+      "primitive_count": 6,
+      "valid_count": 12
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 16,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 16,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            11,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 16,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            9,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 16,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5,
+            9,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 16,
+          "ordered_pair_peak": 4,
+          "pair_support": 4,
+          "primitive_beyond_parity": false,
+          "size": 4
+        },
+        {
+          "R": [
+            3,
+            7,
+            11,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 16,
+          "ordered_pair_peak": 4,
+          "pair_support": 4,
+          "primitive_beyond_parity": false,
+          "size": 4
+        }
+      ],
+      "maximum_size": 4,
+      "modulus": 16,
+      "primitive_count": 4,
+      "valid_count": 34
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            1,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            3,
+            5
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            3,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            11,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            1,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        },
+        {
+          "R": [
+            7,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "9/2",
+          "balanced_modular_fiber_lower_float": 4.5,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 18,
+          "ordered_pair_peak": 2,
+          "pair_support": 3,
+          "primitive_beyond_parity": true,
+          "size": 2
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            7,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 18,
+          "ordered_pair_peak": 3,
+          "pair_support": 3,
+          "primitive_beyond_parity": false,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 18,
+          "ordered_pair_peak": 3,
+          "pair_support": 3,
+          "primitive_beyond_parity": false,
+          "size": 3
+        }
+      ],
+      "maximum_size": 3,
+      "modulus": 18,
+      "primitive_count": 12,
+      "valid_count": 28
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 20,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            9,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 20,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            13,
+            15,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 20,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            11,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 20,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5,
+            9,
+            13,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 20,
+          "ordered_pair_peak": 5,
+          "pair_support": 5,
+          "primitive_beyond_parity": false,
+          "size": 5
+        },
+        {
+          "R": [
+            3,
+            7,
+            11,
+            15,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 20,
+          "ordered_pair_peak": 5,
+          "pair_support": 5,
+          "primitive_beyond_parity": false,
+          "size": 5
+        }
+      ],
+      "maximum_size": 5,
+      "modulus": 20,
+      "primitive_count": 12,
+      "valid_count": 78
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            7,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            13,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            9,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            5,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            7,
+            9,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            15,
+            17,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            13,
+            21
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            7,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            13,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            9,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            5,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            7,
+            9,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            15,
+            17,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            13,
+            21
+          ],
+          "balanced_modular_fiber_lower_coefficient": "11/3",
+          "balanced_modular_fiber_lower_float": 3.6666666666666665,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 22,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_size": 3,
+      "modulus": 22,
+      "primitive_count": 40,
+      "valid_count": 50
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            7,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            15,
+            17,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            21
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            17,
+            19,
+            21
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            13,
+            23
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            9,
+            13,
+            23
+          ],
+          "balanced_modular_fiber_lower_coefficient": "4",
+          "balanced_modular_fiber_lower_float": 4.0,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 24,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5,
+            9,
+            13,
+            17,
+            21
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 24,
+          "ordered_pair_peak": 6,
+          "pair_support": 6,
+          "primitive_beyond_parity": false,
+          "size": 6
+        },
+        {
+          "R": [
+            3,
+            7,
+            11,
+            15,
+            19,
+            23
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 24,
+          "ordered_pair_peak": 6,
+          "pair_support": 6,
+          "primitive_beyond_parity": false,
+          "size": 6
+        }
+      ],
+      "maximum_size": 6,
+      "modulus": 24,
+      "primitive_count": 20,
+      "valid_count": 164
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            7,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            5,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            7,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            15,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            3,
+            5,
+            7
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            7,
+            9
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            5,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            7,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            15,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "13/3",
+          "balanced_modular_fiber_lower_float": 4.333333333333333,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 26,
+          "ordered_pair_peak": 3,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_size": 3,
+      "modulus": 26,
+      "primitive_count": 72,
+      "valid_count": 84
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            1,
+            9,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            15
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            5,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            13,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            5,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            13,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            17,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            17,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "28/9",
+          "balanced_modular_fiber_lower_float": 3.111111111111111,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 28,
+          "ordered_pair_peak": 2,
+          "pair_support": 5,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            5,
+            9,
+            13,
+            17,
+            21,
+            25
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 28,
+          "ordered_pair_peak": 7,
+          "pair_support": 7,
+          "primitive_beyond_parity": false,
+          "size": 7
+        },
+        {
+          "R": [
+            3,
+            7,
+            11,
+            15,
+            19,
+            23,
+            27
+          ],
+          "balanced_modular_fiber_lower_coefficient": "2",
+          "balanced_modular_fiber_lower_float": 2.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 4,
+          "modulus": 28,
+          "ordered_pair_peak": 7,
+          "pair_support": 7,
+          "primitive_beyond_parity": false,
+          "size": 7
+        }
+      ],
+      "maximum_size": 7,
+      "modulus": 28,
+      "primitive_count": 72,
+      "valid_count": 332
+    },
+    {
+      "best_primitive_examples": [
+        {
+          "R": [
+            1,
+            7,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            7,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            9,
+            11
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            5,
+            7,
+            13
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            3,
+            5,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            7,
+            9,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            11,
+            17
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        },
+        {
+          "R": [
+            1,
+            5,
+            19
+          ],
+          "balanced_modular_fiber_lower_coefficient": "10/3",
+          "balanced_modular_fiber_lower_float": 3.3333333333333335,
+          "coarse_coset_alone_blocks_3R": false,
+          "congruence_gcd": 2,
+          "modulus": 30,
+          "ordered_pair_peak": 2,
+          "pair_support": 6,
+          "primitive_beyond_parity": true,
+          "size": 3
+        }
+      ],
+      "maximum_examples": [
+        {
+          "R": [
+            1,
+            7,
+            13,
+            19,
+            25
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 30,
+          "ordered_pair_peak": 5,
+          "pair_support": 5,
+          "primitive_beyond_parity": false,
+          "size": 5
+        },
+        {
+          "R": [
+            5,
+            11,
+            17,
+            23,
+            29
+          ],
+          "balanced_modular_fiber_lower_coefficient": "3",
+          "balanced_modular_fiber_lower_float": 3.0,
+          "coarse_coset_alone_blocks_3R": true,
+          "congruence_gcd": 6,
+          "modulus": 30,
+          "ordered_pair_peak": 5,
+          "pair_support": 5,
+          "primitive_beyond_parity": false,
+          "size": 5
+        }
+      ],
+      "maximum_size": 5,
+      "modulus": 30,
+      "primitive_count": 104,
+      "valid_count": 186
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+import Erdos23Delta0.O14.PackedIntPilot.Chart107.Cone
+
+#print axioms Erdos23Delta0.O14.SparseConePackedInt.residualRat_nonneg_of_checkRow
+#print axioms Erdos23Delta0.O14.SparseConePackedInt.coreODLGoal_of_packedRows
+#print axioms Erdos23Delta0.O14.PackedIntPilot.Chart107.Cone.coreODLGoal_of_packedInt

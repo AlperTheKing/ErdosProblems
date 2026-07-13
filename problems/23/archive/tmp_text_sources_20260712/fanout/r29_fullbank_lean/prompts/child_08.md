@@ -1,0 +1,1 @@
+Reconstruct the honest Lean build DAG for the candidate chain around CheckedTransferMatching, typed sources, EndpointReserveHall, active-component flow, FullBank interface, and LengthSurplusCharge. Compile the smallest relevant target(s), run forbidden-token greps, and #print axioms for load-bearing theorems. Report stale/broken imports or unreachable modules.

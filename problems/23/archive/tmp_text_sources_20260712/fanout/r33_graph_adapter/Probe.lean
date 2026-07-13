@@ -1,0 +1,23 @@
+import Erdos23Delta0.Gamma.CheckedCollisionDefectTrade
+import Erdos23Delta0.Gamma.ActiveScopedMinimumExchange
+
+#check List.ofFn_eq_map
+#check List.mem_ofFn'
+#check List.getElem?_eq_getElem
+#check List.get?_eq_getElem?
+#check List.get?_eq_some_iff
+#check List.get?_eq_some
+#check List.get_eq_getElem
+#check List.get_mem
+#check List.length_filter_le
+#check Finset.equivFinOfCardEq
+#check Equiv.ofBijective
+#check Fintype.card_congr
+#check Fintype.ofEquiv
+#check Finset.mem_filter
+#check SimpleGraph.Reachable
+#check Finset.univ.filter
+#check List.Nodup.get_inj_iff
+#check List.Nodup.get_injective
+#check List.get_inj_iff
+#check List.get_eq_get_iff

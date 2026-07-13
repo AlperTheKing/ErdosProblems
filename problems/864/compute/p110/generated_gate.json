@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "field": "GF(1000003)",
+  "weighted_vector": "support,L1,L2,dL1,dL2",
+  "domains": {
+    "embedded": {
+      "systems": 50,
+      "with_triangles": 19,
+      "support_dependent": 15,
+      "unweighted_dependent": 11,
+      "dimension_failures": 0,
+      "weighted_failures": 0,
+      "maximum_T_F": 200,
+      "maximum_same_minimum_fold": 4,
+      "maximum_dimension_excess": 0,
+      "smallest_dimension_failure": null,
+      "strongest_dimension_failure": null,
+      "first_weighted_failure": null
+    },
+    "p98_subsets": {
+      "systems": 261836,
+      "with_triangles": 2800,
+      "support_dependent": 16,
+      "unweighted_dependent": 0,
+      "dimension_failures": 0,
+      "weighted_failures": 0,
+      "maximum_T_F": 8,
+      "maximum_same_minimum_fold": 1,
+      "maximum_dimension_excess": 0,
+      "smallest_dimension_failure": null,
+      "strongest_dimension_failure": null,
+      "first_weighted_failure": null
+    },
+    "p94_deletions": {
+      "systems": 5356,
+      "with_triangles": 5356,
+      "support_dependent": 5311,
+      "unweighted_dependent": 2926,
+      "dimension_failures": 0,
+      "weighted_failures": 0,
+      "maximum_T_F": 116,
+      "maximum_same_minimum_fold": 4,
+      "maximum_dimension_excess": 0,
+      "smallest_dimension_failure": null,
+      "strongest_dimension_failure": null,
+      "first_weighted_failure": null
+    },
+    "p105_translations": {
+      "systems": 1560,
+      "with_triangles": 1557,
+      "support_dependent": 308,
+      "unweighted_dependent": 7,
+      "dimension_failures": 0,
+      "weighted_failures": 0,
+      "maximum_T_F": 160,
+      "maximum_same_minimum_fold": 5,
+      "maximum_dimension_excess": 0,
+      "smallest_dimension_failure": null,
+      "strongest_dimension_failure": null,
+      "first_weighted_failure": null
+    },
+    "p105_deletions": {
+      "systems": 29316,
+      "with_triangles": 29316,
+      "support_dependent": 14928,
+      "unweighted_dependent": 4089,
+      "dimension_failures": 0,
+      "weighted_failures": 0,
+      "maximum_T_F": 148,
+      "maximum_same_minimum_fold": 3,
+      "maximum_dimension_excess": 0,
+      "smallest_dimension_failure": null,
+      "strongest_dimension_failure": null,
+      "first_weighted_failure": null
+    }
+  }
+}

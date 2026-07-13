@@ -1,0 +1,39 @@
+{
+  "N": 24,
+  "H": 9,
+  "objective_name": "c20",
+  "status": "OPTIMAL",
+  "workers": 16,
+  "time_limit_seconds": 60.0,
+  "wall_seconds": 0.24178630000096746,
+  "conflicts": 0,
+  "branches": 0,
+  "finite_optimum_certified": true,
+  "A": [
+    0,
+    8,
+    17,
+    18,
+    20,
+    22,
+    23
+  ],
+  "k": 7,
+  "M": 32,
+  "G": 0,
+  "W": 59,
+  "D": 25,
+  "Q": 2,
+  "Z": 23,
+  "S": 127,
+  "max_interval_degree": 5,
+  "c20_margin": -9393,
+  "lg33_margin": -6033,
+  "lg33_domain": 1,
+  "repeated_sums": [
+    40
+  ],
+  "objective": -9393,
+  "is_falsifier": false,
+  "diagnostic_best_bound": -9393.0
+}

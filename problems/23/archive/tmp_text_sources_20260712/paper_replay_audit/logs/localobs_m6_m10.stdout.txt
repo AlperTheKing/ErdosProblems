@@ -1,0 +1,9 @@
+m=6: candidate graphs (>= m dist-4 pairs) = 0, footprints with witness = 0, atom-sets = 0
+m=7: candidate graphs (>= m dist-4 pairs) = 0, footprints with witness = 0, atom-sets = 0
+m=8: candidate graphs (>= m dist-4 pairs) = 0, footprints with witness = 0, atom-sets = 0
+m=9: candidate graphs (>= m dist-4 pairs) = 1, footprints with witness = 1, atom-sets = 1
+   witness: ('H???FaM', 9, [(0, 7), (1, 7), (2, 7), (3, 7), (0, 8), (4, 8), (5, 8), (6, 8)], [(1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (3, 6)])
+m=10: candidate graphs (>= m dist-4 pairs) = 9, footprints with witness = 3, atom-sets = 56
+   witness: ('I????B_fo', 10, [(0, 8), (1, 8), (2, 8), (0, 9), (3, 9), (4, 9), (5, 9), (6, 9), (7, 9)], [(1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7)])
+   witness: ('I????Bobo', 10, [(0, 8), (1, 8), (2, 8), (3, 8), (0, 9), (4, 9), (5, 9), (6, 9), (7, 9)], [(1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 5)])
+   witness: ('I????Bobo', 10, [(0, 8), (1, 8), (2, 8), (3, 8), (0, 9), (4, 9), (5, 9), (6, 9), (7, 9)], [(1, 4), (1, 5), (1, 6), (1, 7), (2, 4), (2, 5), (2, 6), (2, 7), (3, 4), (3, 6)])

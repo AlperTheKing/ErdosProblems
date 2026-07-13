@@ -1,0 +1,13 @@
+{
+  "width_30_unrestricted": {
+    "rows": 1583738,
+    "triangle_rows": 6132,
+    "matching_failures": 0,
+    "first_failure": null
+  },
+  "P88_positive_defect_translations": {
+    "rows": 4170,
+    "matching_failures": 0,
+    "first_failure": null
+  }
+}

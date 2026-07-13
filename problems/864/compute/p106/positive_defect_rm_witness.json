@@ -1,0 +1,10 @@
+{
+  "seed_p": 65,
+  "h": 6572,
+  "individually_admissible_insertions": 0,
+  "one_mark_rows_audited": 0,
+  "one_mark_failure_preserving": 0,
+  "compatible_failure_preserving_pairs_audited": 0,
+  "best_one_mark_row": null,
+  "positive_defect_RM97_witness": null
+}

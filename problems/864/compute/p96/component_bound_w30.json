@@ -1,0 +1,19 @@
+{
+  "max_width": 30,
+  "literal_holes": 464981,
+  "nonzero_triangle_rows": 1037,
+  "failures": 0,
+  "maximum_component_excess": 0,
+  "witness": {
+    "B": [
+      1,
+      2
+    ],
+    "p": 2,
+    "h": 3,
+    "b": 1,
+    "C_S": 0,
+    "T_F": 0,
+    "max_component_excess": 0
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "P83_triangles_checked": 160,
+  "minimal_Hall_window": [
+    -1444,
+    4688
+  ],
+  "Hall_deficit": 1,
+  "fold_equations_total": 159,
+  "fold_equations_used_by_closure": 156,
+  "variables_marks_plus_h": 58,
+  "modular_primes": [
+    1000003,
+    1000033
+  ],
+  "full_ranks": [
+    56,
+    56
+  ],
+  "closure_ranks": [
+    56,
+    56
+  ],
+  "exact_rational_rank": 56,
+  "exact_rational_nullity": 2,
+  "source_difference_gcd": 1,
+  "source_h": 3286,
+  "source_p": 57,
+  "positive_defect_baseline": 4846,
+  "affine_scale_rows": [
+    {
+      "scale": 1,
+      "h": 3286,
+      "delta": 1560,
+      "V_b": 68
+    },
+    {
+      "scale": 2,
+      "h": 6572,
+      "delta": -1726,
+      "V_b": 0
+    },
+    {
+      "scale": 3,
+      "h": 9858,
+      "delta": -5012,
+      "V_b": 0
+    },
+    {
+      "scale": 4,
+      "h": 13144,
+      "delta": -8298,
+      "V_b": 0
+    }
+  ]
+}

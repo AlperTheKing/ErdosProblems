@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "p_min": 4,
+    "p_max": 5,
+    "max_width": 35,
+    "max_gap": 35,
+    "strict_subcritical": "gap + 2*width < 3*p^2",
+    "moduli": "p..p^2"
+  },
+  "sidon_rulers": 28160,
+  "candidates": 390396,
+  "twins": {},
+  "missing": [
+    "global",
+    "indexed_full",
+    "indexed_off"
+  ]
+}

@@ -1,7 +1,0 @@
-{
-  "rc": 1,
-  "ms": 22828,
-  "stdout": "'Erdos23Delta0.O14.ChunkedCone.Witness.sound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos23Delta0.O14.ChunkedCone.chartSound_of_chartWitnesses' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-  "stderr": "failed to write 'E:\\Projects\\ErdosProblems\\tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\ChunkedConeWitness.olean': 13 Permission denied\n",
-  "out": "E:\\Projects\\ErdosProblems\\tmp\\claude_lean_o_base_v1\\Erdos23Delta0\\O14\\ChunkedConeWitness.olean"
-}

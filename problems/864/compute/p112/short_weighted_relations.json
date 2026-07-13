@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field": "GF(1000003)",
+  "short_matrix": "S,L1,dL1 in C_S+2p columns",
+  "role_x_matrix": "role-separated incidence plus d times X-role incidence in 4C_S columns",
+  "width_scan": {
+    "rows": 1583738,
+    "triangle_rows": 6132,
+    "short_failures": 0,
+    "role_x_failures": 0,
+    "first_short_failure": null,
+    "first_role_x_failure": null
+  },
+  "P88_scan": {
+    "rows": 2085,
+    "triangle_rows": 2040,
+    "short_failures": 0,
+    "role_x_failures": 0,
+    "first_short_failure": null,
+    "first_role_x_failure": null
+  }
+}

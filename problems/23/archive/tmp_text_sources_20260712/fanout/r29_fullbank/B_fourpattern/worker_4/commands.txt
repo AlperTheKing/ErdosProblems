@@ -1,0 +1,3 @@
+cd E:\Projects\ErdosProblems\tmp\fanout\r29_fullbank\B_fourpattern\worker_4
+python verifier_b.py
+Get-FileHash verifier_b.py,certificate_b.json -Algorithm SHA256

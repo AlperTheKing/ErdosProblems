@@ -1,0 +1,1016 @@
+{
+  "admissible_c20_failure_count": 0,
+  "arithmetic": "integer/rational",
+  "c20_failure_count": 2,
+  "construction": "Bose-Chowla fold by two followed by largest-gap cut",
+  "records": [
+    {
+      "A": [
+        1,
+        2,
+        4,
+        7,
+        11,
+        15,
+        17,
+        22,
+        36,
+        44,
+        45
+      ],
+      "D_H": 77,
+      "H": 13,
+      "M_H": 56,
+      "N": 45,
+      "Q_H": 1,
+      "W_H": 154,
+      "Z_H": 76,
+      "admissible": false,
+      "ambient_holes": 1,
+      "bare_gap_cleared_margin": 6333,
+      "c20_cleared_margin": -25407,
+      "c20_excess": "-941/1690",
+      "c20_lhs": "5992/2535",
+      "c20_rhs": "1139/390",
+      "coefficient_two_cleared_margin": -16905,
+      "cut_start": 55,
+      "degree_histogram": [
+        [
+          1,
+          15
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "field": {
+        "base_prime": 11,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          0,
+          1
+        ],
+        "primitive": [
+          4,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          8,
+          2
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          19,
+          2
+        ],
+        [
+          22,
+          2
+        ],
+        [
+          24,
+          2
+        ],
+        [
+          26,
+          2
+        ],
+        [
+          37,
+          2
+        ],
+        [
+          46,
+          2
+        ],
+        [
+          47,
+          2
+        ],
+        [
+          51,
+          2
+        ]
+      ],
+      "folded_modulus": 60,
+      "gap_overlap": 87,
+      "k": 11,
+      "largest_cyclic_gap": 16,
+      "lg33_cleared_margin": -22755,
+      "max_degree": 5,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 120,
+      "q": 11,
+      "repeated_sum_value_count": 10
+    },
+    {
+      "A": [
+        1,
+        3,
+        17,
+        20,
+        29,
+        50,
+        52,
+        65,
+        73,
+        74,
+        79,
+        98,
+        104,
+        108,
+        111,
+        115,
+        116,
+        126,
+        142
+      ],
+      "D_H": 370,
+      "H": 28,
+      "M_H": 169,
+      "N": 142,
+      "Q_H": 8,
+      "W_H": 740,
+      "Z_H": 362,
+      "admissible": false,
+      "ambient_holes": 0,
+      "bare_gap_cleared_margin": 102808,
+      "c20_cleared_margin": -203192,
+      "c20_excess": "-25399/83496",
+      "c20_lhs": "63713/27832",
+      "c20_rhs": "15467/5964",
+      "coefficient_two_cleared_margin": -104864,
+      "cut_start": 74,
+      "degree_histogram": [
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          40
+        ],
+        [
+          3,
+          46
+        ],
+        [
+          4,
+          37
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          16
+        ]
+      ],
+      "field": {
+        "base_prime": 19,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          0,
+          1
+        ],
+        "primitive": [
+          3,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          53,
+          2
+        ],
+        [
+          82,
+          2
+        ],
+        [
+          94,
+          2
+        ],
+        [
+          99,
+          2
+        ],
+        [
+          102,
+          2
+        ],
+        [
+          115,
+          2
+        ],
+        [
+          117,
+          2
+        ],
+        [
+          118,
+          2
+        ],
+        [
+          124,
+          2
+        ],
+        [
+          125,
+          2
+        ]
+      ],
+      "folded_modulus": 180,
+      "gap_overlap": 363,
+      "k": 19,
+      "largest_cyclic_gap": 39,
+      "lg33_cleared_margin": -176432,
+      "max_degree": 6,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 360,
+      "q": 19,
+      "repeated_sum_value_count": 35
+    },
+    {
+      "A": [
+        1,
+        16,
+        25,
+        32,
+        58,
+        85,
+        119,
+        124,
+        125,
+        148,
+        169,
+        171,
+        191,
+        204,
+        229,
+        266,
+        274,
+        283,
+        286,
+        291,
+        301,
+        302,
+        305,
+        312,
+        342,
+        354,
+        356,
+        360,
+        390,
+        403,
+        431
+      ],
+      "D_H": 1619,
+      "H": 58,
+      "M_H": 488,
+      "N": 431,
+      "Q_H": 26,
+      "W_H": 3246,
+      "Z_H": 1593,
+      "admissible": false,
+      "ambient_holes": 0,
+      "bare_gap_cleared_margin": 1373166,
+      "c20_cleared_margin": -926140,
+      "c20_excess": "-231535/2174826",
+      "c20_lhs": "799100/362471",
+      "c20_rhs": "173315/74994",
+      "coefficient_two_cleared_margin": 38112,
+      "cut_start": 122,
+      "degree_histogram": [
+        [
+          1,
+          50
+        ],
+        [
+          2,
+          89
+        ],
+        [
+          3,
+          87
+        ],
+        [
+          4,
+          147
+        ],
+        [
+          5,
+          52
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          12
+        ]
+      ],
+      "field": {
+        "base_prime": 31,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          0,
+          1
+        ],
+        "primitive": [
+          4,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          149,
+          2
+        ],
+        [
+          170,
+          2
+        ],
+        [
+          229,
+          2
+        ],
+        [
+          249,
+          2
+        ],
+        [
+          254,
+          2
+        ],
+        [
+          267,
+          2
+        ],
+        [
+          287,
+          2
+        ],
+        [
+          290,
+          2
+        ],
+        [
+          296,
+          2
+        ],
+        [
+          299,
+          2
+        ]
+      ],
+      "folded_modulus": 480,
+      "gap_overlap": 1310,
+      "k": 31,
+      "largest_cyclic_gap": 50,
+      "lg33_cleared_margin": -711828,
+      "max_degree": 9,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 960,
+      "q": 31,
+      "repeated_sum_value_count": 86
+    },
+    {
+      "A": [
+        1,
+        5,
+        8,
+        19,
+        40,
+        90,
+        148,
+        170,
+        209,
+        235,
+        242,
+        243,
+        244,
+        303,
+        334,
+        349,
+        355,
+        358,
+        380,
+        403,
+        431,
+        458,
+        505,
+        515,
+        521,
+        541,
+        555,
+        606,
+        608,
+        625,
+        636,
+        648,
+        672,
+        677,
+        685,
+        689,
+        704,
+        714,
+        734,
+        747,
+        752,
+        790,
+        806
+      ],
+      "D_H": 3698,
+      "H": 87,
+      "M_H": 892,
+      "N": 806,
+      "Q_H": 43,
+      "W_H": 7396,
+      "Z_H": 3655,
+      "admissible": false,
+      "ambient_holes": 0,
+      "bare_gap_cleared_margin": 5891860,
+      "c20_cleared_margin": -1605147,
+      "c20_excess": "-535049/12201228",
+      "c20_lhs": "6636034/3050307",
+      "c20_rhs": "311255/140244",
+      "coefficient_two_cleared_margin": 1891129,
+      "cut_start": 254,
+      "degree_histogram": [
+        [
+          1,
+          44
+        ],
+        [
+          2,
+          147
+        ],
+        [
+          3,
+          127
+        ],
+        [
+          4,
+          150
+        ],
+        [
+          5,
+          273
+        ],
+        [
+          6,
+          56
+        ],
+        [
+          7,
+          50
+        ],
+        [
+          8,
+          34
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "field": {
+        "base_prime": 43,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          0,
+          1
+        ],
+        "primitive": [
+          2,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          210,
+          2
+        ],
+        [
+          243,
+          2
+        ],
+        [
+          249,
+          2
+        ],
+        [
+          357,
+          2
+        ],
+        [
+          363,
+          2
+        ],
+        [
+          374,
+          2
+        ],
+        [
+          439,
+          2
+        ],
+        [
+          451,
+          2
+        ],
+        [
+          470,
+          2
+        ],
+        [
+          477,
+          2
+        ]
+      ],
+      "folded_modulus": 924,
+      "gap_overlap": 2849,
+      "k": 43,
+      "largest_cyclic_gap": 119,
+      "lg33_cleared_margin": -1053995,
+      "max_degree": 9,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 1848,
+      "q": 43,
+      "repeated_sum_value_count": 164
+    },
+    {
+      "A": [
+        1,
+        18,
+        27,
+        40,
+        115,
+        133,
+        220,
+        237,
+        247,
+        262,
+        298,
+        313,
+        398,
+        424,
+        444,
+        446,
+        453,
+        476,
+        603,
+        684,
+        689,
+        738,
+        742,
+        749,
+        776,
+        790,
+        806,
+        814,
+        826,
+        845,
+        885,
+        906,
+        909,
+        934,
+        965,
+        966,
+        979,
+        1008,
+        1075,
+        1077,
+        1078,
+        1083,
+        1149,
+        1160,
+        1193,
+        1233,
+        1283,
+        1287,
+        1324,
+        1330,
+        1432,
+        1545,
+        1561,
+        1580,
+        1598,
+        1608,
+        1643,
+        1666,
+        1687,
+        1699,
+        1733
+      ],
+      "D_H": 10319,
+      "H": 145,
+      "M_H": 1877,
+      "N": 1733,
+      "Q_H": 104,
+      "W_H": 20655,
+      "Z_H": 10215,
+      "admissible": false,
+      "ambient_holes": 0,
+      "bare_gap_cleared_margin": 35405190,
+      "c20_cleared_margin": 12244085,
+      "c20_excess": "2448817/43723590",
+      "c20_lhs": "15562207/7287265",
+      "c20_rhs": "627065/301542",
+      "coefficient_two_cleared_margin": 29897535,
+      "cut_start": 956,
+      "degree_histogram": [
+        [
+          1,
+          189
+        ],
+        [
+          2,
+          111
+        ],
+        [
+          3,
+          219
+        ],
+        [
+          4,
+          338
+        ],
+        [
+          5,
+          365
+        ],
+        [
+          6,
+          270
+        ],
+        [
+          7,
+          176
+        ],
+        [
+          8,
+          136
+        ],
+        [
+          9,
+          70
+        ],
+        [
+          10,
+          3
+        ]
+      ],
+      "field": {
+        "base_prime": 61,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          5,
+          1
+        ],
+        "primitive": [
+          6,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          238,
+          2
+        ],
+        [
+          248,
+          2
+        ],
+        [
+          353,
+          2
+        ],
+        [
+          425,
+          2
+        ],
+        [
+          464,
+          2
+        ],
+        [
+          471,
+          2
+        ],
+        [
+          484,
+          2
+        ],
+        [
+          494,
+          2
+        ],
+        [
+          560,
+          2
+        ],
+        [
+          690,
+          2
+        ]
+      ],
+      "folded_modulus": 1860,
+      "gap_overlap": 6968,
+      "k": 61,
+      "largest_cyclic_gap": 128,
+      "lg33_cleared_margin": 14820435,
+      "max_degree": 10,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 3720,
+      "q": 61,
+      "repeated_sum_value_count": 325
+    },
+    {
+      "A": [
+        1,
+        88,
+        110,
+        113,
+        188,
+        242,
+        350,
+        408,
+        418,
+        442,
+        454,
+        569,
+        637,
+        664,
+        675,
+        765,
+        768,
+        783,
+        890,
+        922,
+        923,
+        933,
+        1061,
+        1150,
+        1171,
+        1178,
+        1230,
+        1243,
+        1320,
+        1396,
+        1454,
+        1561,
+        1601,
+        1617,
+        1621,
+        1672,
+        1777,
+        1908,
+        1952,
+        2021,
+        2072,
+        2139,
+        2202,
+        2220,
+        2251,
+        2264,
+        2265,
+        2286,
+        2294,
+        2334,
+        2336,
+        2391,
+        2410,
+        2471,
+        2477,
+        2568,
+        2634,
+        2713,
+        2822,
+        2836,
+        2869,
+        2886,
+        2895,
+        2911,
+        2918,
+        2923,
+        3006,
+        3059,
+        3097,
+        3158,
+        3178,
+        3195,
+        3197,
+        3257,
+        3291,
+        3330,
+        3339,
+        3375,
+        3460,
+        3663,
+        3667,
+        3694,
+        3933,
+        4057,
+        4083,
+        4160,
+        4206,
+        4258,
+        4263,
+        4373,
+        4451,
+        4459,
+        4573,
+        4602,
+        4637,
+        4643,
+        4667,
+        4690,
+        4796,
+        4811,
+        4852
+      ],
+      "D_H": 40735,
+      "H": 287,
+      "M_H": 5138,
+      "N": 4852,
+      "Q_H": 268,
+      "W_H": 81508,
+      "Z_H": 40467,
+      "admissible": false,
+      "ambient_holes": 0,
+      "bare_gap_cleared_margin": 392691768,
+      "c20_cleared_margin": 371039053,
+      "c20_excess": "1292819/8355144",
+      "c20_lhs": "208823/99466",
+      "c20_rhs": "16248313/8355144",
+      "coefficient_two_cleared_margin": 526679153,
+      "cut_start": 2005,
+      "degree_histogram": [
+        [
+          1,
+          205
+        ],
+        [
+          2,
+          130
+        ],
+        [
+          3,
+          650
+        ],
+        [
+          4,
+          632
+        ],
+        [
+          5,
+          933
+        ],
+        [
+          6,
+          1000
+        ],
+        [
+          7,
+          562
+        ],
+        [
+          8,
+          347
+        ],
+        [
+          9,
+          367
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          11,
+          130
+        ],
+        [
+          12,
+          40
+        ],
+        [
+          13,
+          12
+        ]
+      ],
+      "field": {
+        "base_prime": 101,
+        "extension_degree": 2,
+        "irreducible_low_first": [
+          1,
+          1,
+          1
+        ],
+        "primitive": [
+          19,
+          1
+        ]
+      },
+      "first_repeated_sums": [
+        [
+          878,
+          2
+        ],
+        [
+          896,
+          2
+        ],
+        [
+          987,
+          2
+        ],
+        [
+          1010,
+          2
+        ],
+        [
+          1011,
+          2
+        ],
+        [
+          1025,
+          2
+        ],
+        [
+          1118,
+          2
+        ],
+        [
+          1244,
+          2
+        ],
+        [
+          1331,
+          2
+        ],
+        [
+          1340,
+          2
+        ]
+      ],
+      "folded_modulus": 5100,
+      "gap_overlap": 23849,
+      "k": 101,
+      "largest_cyclic_gap": 249,
+      "lg33_cleared_margin": 387426753,
+      "max_degree": 13,
+      "max_unordered_sum_multiplicity": 2,
+      "modular_max_difference_multiplicity": 2,
+      "ordinary_max_difference_multiplicity": 2,
+      "original_modulus": 10200,
+      "q": 101,
+      "repeated_sum_value_count": 908
+    }
+  ]
+}

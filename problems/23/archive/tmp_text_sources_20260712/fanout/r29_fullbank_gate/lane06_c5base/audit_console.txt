@@ -1,0 +1,470 @@
+{
+  "all_anchor_scope": {
+    "active_edges": 1370,
+    "active_vertices": 19,
+    "changed_selector_rows": 676,
+    "demanded_active_edges": 18,
+    "hit_need_total": 3,
+    "hub_shore_demand": 19953,
+    "owners": {
+      "0": {
+        "bad_neighbors": 0,
+        "collision": 6650,
+        "companions": 55,
+        "demand": 6651,
+        "hit_need": 1
+      },
+      "1": {
+        "bad_neighbors": 0,
+        "collision": 6650,
+        "companions": 55,
+        "demand": 6651,
+        "hit_need": 1
+      },
+      "2": {
+        "bad_neighbors": 0,
+        "collision": 6650,
+        "companions": 55,
+        "demand": 6651,
+        "hit_need": 1
+      }
+    },
+    "selected_vertices": 2127
+  },
+  "arithmetic": "integer only",
+  "assertions": {
+    "active_edges_1370": true,
+    "active_vertices_19": true,
+    "all_rows_valid": true,
+    "archived_gate_full_shore_surplus_912572": true,
+    "archived_gate_outside_912600": true,
+    "archived_gate_total_932525": true,
+    "bad_1383": true,
+    "blue_7039": true,
+    "canonical_sha": true,
+    "common_bad_zero": true,
+    "demanded_active_edges_18": true,
+    "existing_cut_certificate_exact_record_equality": true,
+    "full_shore_defect_28": true,
+    "n_2943": true,
+    "outside_attachment_zero": true,
+    "owner_demands_6651": true,
+    "row_companion_2600": true,
+    "same_first_17325": true,
+    "selected_2127": true,
+    "total_unique_19925": true,
+    "triangle_free": true
+  },
+  "cage_validation": {
+    "bad": 1383,
+    "bad_uncut_displayed_cut": 1383,
+    "blue": 7039,
+    "blue_crossing_displayed_cut": 7039,
+    "edges": 8422,
+    "lead_canonical_payload_sha256": "fc4f3ab94bed810669976b1fdb21743fdd4ebe57eea15ef52afcfc2165e2fb1f",
+    "n": 2943,
+    "owner_incidence_sha256": "7f3c69376e074adefe505f709643bdf14a9a5c5b18e9816d8b88e24d7b59f087",
+    "row_count": 1383,
+    "triangles": 0,
+    "valid_length5_bad_endpoint_blue_path_rows": 1383
+  },
+  "conversion_semantics": {
+    "abstract_capacity_fields_counted_as_supply": false,
+    "full_checked_matching_exists_under_four_patterns": false,
+    "hub_hit_need_units": 3,
+    "production_tokens_constructed_by_this_gate": 0,
+    "writeup_only": "collision match cancels; HitNeed match would create one c5Base token from its matched FreeHalf key"
+  },
+  "existing_cut_certificate_comparison": {
+    "computed_sources": 19925,
+    "exact_record_equality": true,
+    "extra_in_recorded": 0,
+    "missing_from_recorded": 0,
+    "owner_mask_mismatches": 0,
+    "reason_mask_mismatches": 0,
+    "recorded_sources": 19925
+  },
+  "outside_attachment_diagnostic": {
+    "archived_gate_ordered_pair_loss_histogram": {
+      "8": 1368900
+    },
+    "attachment_sizes_histogram": {
+      "2": 28,
+      "4": 676
+    },
+    "checked_component_pair_losses_prose_component_scoped": {},
+    "component_sizes_histogram": {
+      "1": 676,
+      "5": 28
+    },
+    "eligible_components_r23_gate_without_component_equality": {
+      "0": 676,
+      "1": 676,
+      "2": 676
+    },
+    "eligible_components_with_prose_component_equality": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "eligible_vertices_r23_gate_without_component_equality": {
+      "0": 676,
+      "1": 676,
+      "2": 676
+    },
+    "eligible_vertices_with_prose_component_equality": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "outside_blue_components": 704,
+    "outside_vertices": 816,
+    "selected_vertices": 2127
+  },
+  "schema": "R29 all-anchor exact c5Base/FreeHalf diagnostic audit v1",
+  "script_sha256": "95f0396926892a8401db31e837ed160af29d912593527d81481b0bf36305c496",
+  "source_capacity_archived_r23_gate": {
+    "class_order": [
+      "sameFirst",
+      "commonBad",
+      "rowCompanion",
+      "outsideAttachment"
+    ],
+    "final_source_histogram_by_owner_mask": {
+      "1": 5775,
+      "2": 5775,
+      "4": 5775,
+      "7": 915200
+    },
+    "final_unique_slots": 932525,
+    "incremental_capacity": {
+      "commonBad": {
+        "cumulative_unique_slots": 17325,
+        "new_unique_slots": 0,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        "sum_per_owner_double_counting_shared_slots": 0,
+        "unique_slots_before_prior_class_dedup": 0
+      },
+      "outsideAttachment": {
+        "cumulative_unique_slots": 932525,
+        "new_unique_slots": 912600,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 912600,
+          "1": 912600,
+          "2": 912600
+        },
+        "sum_per_owner_double_counting_shared_slots": 2737800,
+        "unique_slots_before_prior_class_dedup": 912600
+      },
+      "rowCompanion": {
+        "cumulative_unique_slots": 19925,
+        "new_unique_slots": 2600,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 2600,
+          "1": 2600,
+          "2": 2600
+        },
+        "sum_per_owner_double_counting_shared_slots": 7800,
+        "unique_slots_before_prior_class_dedup": 2600
+      },
+      "sameFirst": {
+        "cumulative_unique_slots": 17325,
+        "new_unique_slots": 17325,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 5775,
+          "1": 5775,
+          "2": 5775
+        },
+        "sum_per_owner_double_counting_shared_slots": 17325,
+        "unique_slots_before_prior_class_dedup": 17325
+      }
+    },
+    "maximum_deficiency_cut": {
+      "defect": 0,
+      "demand": 0,
+      "neighborhood": 0,
+      "shore": [],
+      "shore_mask": 0
+    },
+    "pairwise_source_overlap": {
+      "commonBad&outsideAttachment": 0,
+      "commonBad&rowCompanion": 0,
+      "rowCompanion&outsideAttachment": 0,
+      "sameFirst&commonBad": 0,
+      "sameFirst&outsideAttachment": 0,
+      "sameFirst&rowCompanion": 0
+    },
+    "shore_cuts": [
+      {
+        "defect": 0,
+        "demand": 0,
+        "neighborhood": 0,
+        "shore": [],
+        "shore_mask": 0
+      },
+      {
+        "defect": -914324,
+        "demand": 6651,
+        "neighborhood": 920975,
+        "shore": [
+          0
+        ],
+        "shore_mask": 1
+      },
+      {
+        "defect": -914324,
+        "demand": 6651,
+        "neighborhood": 920975,
+        "shore": [
+          1
+        ],
+        "shore_mask": 2
+      },
+      {
+        "defect": -913448,
+        "demand": 13302,
+        "neighborhood": 926750,
+        "shore": [
+          0,
+          1
+        ],
+        "shore_mask": 3
+      },
+      {
+        "defect": -914324,
+        "demand": 6651,
+        "neighborhood": 920975,
+        "shore": [
+          2
+        ],
+        "shore_mask": 4
+      },
+      {
+        "defect": -913448,
+        "demand": 13302,
+        "neighborhood": 926750,
+        "shore": [
+          0,
+          2
+        ],
+        "shore_mask": 5
+      },
+      {
+        "defect": -913448,
+        "demand": 13302,
+        "neighborhood": 926750,
+        "shore": [
+          1,
+          2
+        ],
+        "shore_mask": 6
+      },
+      {
+        "defect": -912572,
+        "demand": 19953,
+        "neighborhood": 932525,
+        "shore": [
+          0,
+          1,
+          2
+        ],
+        "shore_mask": 7
+      }
+    ]
+  },
+  "source_capacity_prose_component_scoped": {
+    "class_order": [
+      "sameFirst",
+      "commonBad",
+      "rowCompanion",
+      "outsideAttachment"
+    ],
+    "final_source_histogram_by_owner_mask": {
+      "1": 5775,
+      "2": 5775,
+      "4": 5775,
+      "7": 2600
+    },
+    "final_unique_slots": 19925,
+    "incremental_capacity": {
+      "commonBad": {
+        "cumulative_unique_slots": 17325,
+        "new_unique_slots": 0,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        "sum_per_owner_double_counting_shared_slots": 0,
+        "unique_slots_before_prior_class_dedup": 0
+      },
+      "outsideAttachment": {
+        "cumulative_unique_slots": 19925,
+        "new_unique_slots": 0,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        "sum_per_owner_double_counting_shared_slots": 0,
+        "unique_slots_before_prior_class_dedup": 0
+      },
+      "rowCompanion": {
+        "cumulative_unique_slots": 19925,
+        "new_unique_slots": 2600,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 2600,
+          "1": 2600,
+          "2": 2600
+        },
+        "sum_per_owner_double_counting_shared_slots": 7800,
+        "unique_slots_before_prior_class_dedup": 2600
+      },
+      "sameFirst": {
+        "cumulative_unique_slots": 17325,
+        "new_unique_slots": 17325,
+        "overlap_with_prior_classes": 0,
+        "per_owner_eligible_slots": {
+          "0": 5775,
+          "1": 5775,
+          "2": 5775
+        },
+        "sum_per_owner_double_counting_shared_slots": 17325,
+        "unique_slots_before_prior_class_dedup": 17325
+      }
+    },
+    "maximum_deficiency_cut": {
+      "defect": 28,
+      "demand": 19953,
+      "neighborhood": 19925,
+      "shore": [
+        0,
+        1,
+        2
+      ],
+      "shore_mask": 7
+    },
+    "pairwise_source_overlap": {
+      "commonBad&outsideAttachment": 0,
+      "commonBad&rowCompanion": 0,
+      "rowCompanion&outsideAttachment": 0,
+      "sameFirst&commonBad": 0,
+      "sameFirst&outsideAttachment": 0,
+      "sameFirst&rowCompanion": 0
+    },
+    "shore_cuts": [
+      {
+        "defect": 0,
+        "demand": 0,
+        "neighborhood": 0,
+        "shore": [],
+        "shore_mask": 0
+      },
+      {
+        "defect": -1724,
+        "demand": 6651,
+        "neighborhood": 8375,
+        "shore": [
+          0
+        ],
+        "shore_mask": 1
+      },
+      {
+        "defect": -1724,
+        "demand": 6651,
+        "neighborhood": 8375,
+        "shore": [
+          1
+        ],
+        "shore_mask": 2
+      },
+      {
+        "defect": -848,
+        "demand": 13302,
+        "neighborhood": 14150,
+        "shore": [
+          0,
+          1
+        ],
+        "shore_mask": 3
+      },
+      {
+        "defect": -1724,
+        "demand": 6651,
+        "neighborhood": 8375,
+        "shore": [
+          2
+        ],
+        "shore_mask": 4
+      },
+      {
+        "defect": -848,
+        "demand": 13302,
+        "neighborhood": 14150,
+        "shore": [
+          0,
+          2
+        ],
+        "shore_mask": 5
+      },
+      {
+        "defect": -848,
+        "demand": 13302,
+        "neighborhood": 14150,
+        "shore": [
+          1,
+          2
+        ],
+        "shore_mask": 6
+      },
+      {
+        "defect": 28,
+        "demand": 19953,
+        "neighborhood": 19925,
+        "shore": [
+          0,
+          1,
+          2
+        ],
+        "shore_mask": 7
+      }
+    ]
+  },
+  "source_sha256": {
+    "checked_c5": "12451978d18a455b312ef292aa249f7f6d5a1c950e3112ec03a0d4ed86d17ee0",
+    "checked_row": "84b632c5329ea1205729ff0b95ab124fc573f119f17c50d4aa2f02ac9afdf09a",
+    "common_contract": "ce98df7cf9d517cb1b5b94cf7a8c55b862834446f3c7fafda8e4d9968b69506a",
+    "cut_certificate": "dd1f1a2cff0886e6eaf8ed6487d7a5f308e51446b2ffbc284d6caac3f797e1ce",
+    "ell5_hall": "0ac01cf28b2e7dc6770da7f71b147cedec47671a4c672e1434fd7dc372f1bae1",
+    "ell5_interface": "8d02d032507152301ee7bc01b0a64b7614dfc0c754152be343aa3a3a3a9dd104",
+    "fullbank_ledger": "f4806742bdff61e0e3a15637c25d796b0abf0803936aaabc82a77de2a1da40cd",
+    "fullbank_sinks": "ec03183e2dd9c1ee5578d589558e5400d9d4c8260a056fbbc5da483b8614a4f6",
+    "goal": "e91a2f03bc6774d622d9610b24394a0b4338f6543d7bf19e4464ff5d450e014b",
+    "lead": "5d29b1d6e35957405c53176fab1fb21660d727cb334a1e20462eb5ebe36678f6",
+    "owner_hall": "a0912540f653945eed1eddbc74b191ea2a6ab90ccd075b1395cab552ff574dc0",
+    "r19": "bfb75636d5e11b7f3d251cb20a64a5227f5b870938f1d1b715f38d400903adfc",
+    "r20": "cc4f42d19203a91ca4663a67c51cb1cb01273c442eaee733bf9dce94bb3b29f5",
+    "r23": "45e6533b1cb670ebb8476998bee9904ad0ec8f8943c2753b78a677827358c9d3",
+    "r23_full_gate": "26838f666e3c567d8396a89ec4e6540fb1b1fa321eaa434b12f18710a113ace1",
+    "r23_gate": "6147ac4c7b501f8ab46597ef210838e1138f0b7cb15910a4712dc5efac844cec",
+    "r29_writeup": "5508cfcbcfe4d5072b52acecdf0ab8dccbec5cbe2a30c8e0997f6b01dd95ad42",
+    "typed_sources": "6ab920d11b983848a46d95e9477a4bf4b1b948992a3aef5f158aff4dc1820fbd"
+  },
+  "status": {
+    "archived_r23_python_gate_relation": "PASS",
+    "implemented_production_c5base_absorption": "UNDEFINED",
+    "prose_component_scoped_four_pattern_relation": "FAIL",
+    "reason": "compiled terminal checkers and abstract ledgers do not construct a graph-derived c5Base token family or transfer-to-bank adapter"
+  }
+}

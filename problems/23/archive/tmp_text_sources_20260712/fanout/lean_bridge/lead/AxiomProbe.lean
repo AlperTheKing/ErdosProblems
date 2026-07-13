@@ -1,0 +1,8 @@
+import GlobalDescentInterface
+
+open Erdos23Delta0 Gamma
+open Erdos23Delta0.Gamma.ActiveScopedMinimumExchange
+
+#print axioms globalDescent_iff_everyMinimizerHasMatching
+#print axioms minimumActiveScopedHall_of_globalDescent
+#print axioms realMinimumActiveScopedHall_of_globalDescent

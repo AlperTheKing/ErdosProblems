@@ -1,4 +1,5 @@
 import Erdos23Delta0.Gamma.GlobalSoftCapTrace
+import Erdos23Delta0.Gamma.SameAtomRowPairShapes
 
 /-!
 # Same-atom exclusive forks in the global soft-cap trace
@@ -31,7 +32,7 @@ structure CheckedSameAtomExclusiveFork
   rightRow : Row5
   left_mem : leftRow ∈ (bads.get atom).rows
   right_mem : rightRow ∈ (bads.get atom).rows
-  rows_distinct : leftRow ≠ rightRow
+  row_vertices_distinct : leftRow.verts ≠ rightRow.verts
   position : Nat
   position_pos : 0 < position
   position_lt_five : position < 5
@@ -75,6 +76,36 @@ theorem right_checked (hchecked : AllBadsChecked G c bads) :
   simp only [Bool.and_eq_true] at hb
   exact List.all_eq_true.mp hb.2 F.rightRow F.right_mem
 
+/-- The literal same-atom fork instantiates one of the seven universal checked
+row-pair intersection shapes. -/
+theorem exists_rowPairShape (hchecked : AllBadsChecked G c bads) :
+    ∃ P : SameAtomRowPairShapes.Pair (G := G) (c := c),
+      F.leftRow.verts =
+        [P.leftEndpoint.1, P.left1.1, P.left2.1, P.left3.1,
+          P.rightEndpoint.1] ∧
+      F.rightRow.verts =
+        [P.leftEndpoint.1, P.right1.1, P.right2.1, P.right3.1,
+          P.rightEndpoint.1] :=
+  SameAtomRowPairShapes.Pair.exists_pair_of_checked_rows
+    (F.left_checked hchecked) (F.right_checked hchecked)
+    F.row_vertices_distinct
+/-- The first divergence of two rows with the same checked endpoints is at
+one of the three internal positions, never at the common final endpoint. -/
+theorem position_lt_four (hchecked : AllBadsChecked G c bads) :
+    F.position < 4 := by
+  by_contra hnot
+  have hpos : F.position = 4 := by
+    have hbound := F.position_lt_five
+    omega
+  obtain ⟨P, hleft, hright⟩ := F.exists_rowPairShape hchecked
+  have hl := F.left_at_divergence
+  have hr := F.right_at_divergence
+  rw [hpos, hleft] at hl
+  rw [hpos, hright] at hr
+  simp at hl hr
+  apply F.first_divergence
+  apply Fin.ext
+  exact hl.symm.trans hr
 private theorem adjb_of_blueb {u v : Nat}
     (h : blueb G c u v = true) : adjb G u v = true := by
   unfold blueb at h
@@ -186,6 +217,8 @@ theorem exists_distinct_matched_of_fork_bothHalvesUsed
 
 end Payload
 
+#print axioms CheckedSameAtomExclusiveFork.exists_rowPairShape
+#print axioms CheckedSameAtomExclusiveFork.position_lt_four
 #print axioms CheckedSameAtomExclusiveFork.divergent_not_adjacent
 #print axioms CheckedSameAtomExclusiveFork.divergenceBase_not_active
 #print axioms Payload.exists_distinct_matched_of_fork_bothHalvesUsed

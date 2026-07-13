@@ -1,0 +1,25 @@
+{
+  "canonicalPayloadSha256": "572de1c48504daf92bdd72d78015d2a8b76944f39a4b07fa4c2c80a68a44e2cc",
+  "defectHistogram": {
+    "0": 2400
+  },
+  "failureCount": 0,
+  "failures": [],
+  "familySizes": [
+    6,
+    5,
+    8,
+    10
+  ],
+  "g6": "K??E@cyjFgWk",
+  "minimumChoice": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "minimumDefect": 0,
+  "minimumTupleIndex": 0,
+  "schema": "R53_N12_COMMON_BLUE_ALL_TUPLES_V1",
+  "tuples": 2400
+}

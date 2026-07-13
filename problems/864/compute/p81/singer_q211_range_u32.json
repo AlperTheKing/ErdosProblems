@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integers",
+  "domain": "Singer cyclic cuts at gamma=floor(width/2)+1",
+  "source": "problems/864/compute/p81/singer_q211_source.jsonl",
+  "p": 212,
+  "unit_classes_scanned": 32,
+  "distinct_cuts_scanned": 6784,
+  "positive_defect_cuts": 6784,
+  "K5_5_cuts": 4,
+  "max_outer_edges": 434,
+  "K6_6_found": false,
+  "witness": null,
+  "elapsed_seconds": 187.89536489999955
+}

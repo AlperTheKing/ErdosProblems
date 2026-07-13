@@ -1,0 +1,36 @@
+{
+  "csv": "problems/864/compute/p12/affine_obstruction_table.csv",
+  "inputs": [
+    {
+      "bytes": 10578,
+      "path": "problems/864/compute/p12/bose_exhaustive_large.jsonl",
+      "sha256": "be4547e72525404e15fd1dfd24d303956feec7637e20b92be15bcbde15904348"
+    },
+    {
+      "bytes": 16760,
+      "path": "problems/864/compute/p12/bose_exhaustive_xlarge.jsonl",
+      "sha256": "7eda1b712c792e4f12a09319fea6238de1e72e511346b406f0339a03336cf306"
+    },
+    {
+      "bytes": 5185,
+      "path": "problems/864/compute/p12/singer_exhaustive_large.jsonl",
+      "sha256": "f347f883bfefadf4a5520d2bd3c5888a357c484dcd264d774f6d1dfc0eda4172"
+    },
+    {
+      "bytes": 7737,
+      "path": "problems/864/compute/p12/singer_exhaustive_xlarge.jsonl",
+      "sha256": "e518a34954cda101e8524a63c25add4705ff8ab86a84d81ae6c4adcbce1ca900"
+    },
+    {
+      "bytes": 9727,
+      "path": "problems/864/compute/p12/ruzsa_exhaustive_large.jsonl",
+      "sha256": "a0902ecddbec7d4adcc6bd3e744cde70afb19aa292b8e402f6122c1426c80ea0"
+    },
+    {
+      "bytes": 11265,
+      "path": "problems/864/compute/p12/ruzsa_exhaustive_xlarge.jsonl",
+      "sha256": "02291b1b364c382047b2d446deb0e8aaad5760cf55af3f733cdb3e2bc457f6f9"
+    }
+  ],
+  "verified_records": 35
+}

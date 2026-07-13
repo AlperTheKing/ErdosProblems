@@ -1,0 +1,181 @@
+{
+  "arithmetic": "exact integers and fractions",
+  "verified": [
+    {
+      "center": 183950,
+      "cuts": 256,
+      "e": 23,
+      "kind": "best",
+      "numerator_gap_below_3": 12658,
+      "p": 257,
+      "ratio": "91975/32768",
+      "source": "problems\\864\\compute\\p30\\all_cuts_p257.json",
+      "span": 65657
+    },
+    {
+      "center": 193873,
+      "cuts": 256,
+      "e": 120,
+      "kind": "worst",
+      "numerator_gap_below_3": 2735,
+      "p": 257,
+      "ratio": "193873/65536",
+      "source": "problems\\864\\compute\\p30\\all_cuts_p257.json",
+      "span": 65656
+    },
+    {
+      "center": 190041,
+      "cuts": 262,
+      "e": 167,
+      "kind": "best",
+      "numerator_gap_below_3": 15891,
+      "p": 263,
+      "ratio": "190041/68644",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p263.json",
+      "span": 68458
+    },
+    {
+      "center": 200883,
+      "cuts": 262,
+      "e": 217,
+      "kind": "worst",
+      "numerator_gap_below_3": 5049,
+      "p": 263,
+      "ratio": "200883/68644",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p263.json",
+      "span": 68802
+    },
+    {
+      "center": 198430,
+      "cuts": 268,
+      "e": 202,
+      "kind": "best",
+      "numerator_gap_below_3": 17042,
+      "p": 269,
+      "ratio": "99215/35912",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p269.json",
+      "span": 71300
+    },
+    {
+      "center": 209956,
+      "cuts": 268,
+      "e": 39,
+      "kind": "worst",
+      "numerator_gap_below_3": 5516,
+      "p": 269,
+      "ratio": "52489/17956",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p269.json",
+      "span": 71997
+    },
+    {
+      "center": 201210,
+      "cuts": 270,
+      "e": 255,
+      "kind": "best",
+      "numerator_gap_below_3": 17490,
+      "p": 271,
+      "ratio": "6707/2430",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p271.json",
+      "span": 73135
+    },
+    {
+      "center": 214637,
+      "cuts": 270,
+      "e": 33,
+      "kind": "worst",
+      "numerator_gap_below_3": 4063,
+      "p": 271,
+      "ratio": "214637/72900",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p271.json",
+      "span": 73060
+    },
+    {
+      "center": 212600,
+      "cuts": 276,
+      "e": 175,
+      "kind": "best",
+      "numerator_gap_below_3": 15928,
+      "p": 277,
+      "ratio": "26575/9522",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p277.json",
+      "span": 75358
+    },
+    {
+      "center": 222752,
+      "cuts": 276,
+      "e": 14,
+      "kind": "worst",
+      "numerator_gap_below_3": 5776,
+      "p": 277,
+      "ratio": "13922/4761",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p277.json",
+      "span": 76296
+    },
+    {
+      "center": 219402,
+      "cuts": 280,
+      "e": 273,
+      "kind": "best",
+      "numerator_gap_below_3": 15798,
+      "p": 281,
+      "ratio": "109701/39200",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p281.json",
+      "span": 78413
+    },
+    {
+      "center": 231066,
+      "cuts": 280,
+      "e": 209,
+      "kind": "worst",
+      "numerator_gap_below_3": 4134,
+      "p": 281,
+      "ratio": "115533/39200",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p281.json",
+      "span": 78545
+    },
+    {
+      "center": 224130,
+      "cuts": 282,
+      "e": 20,
+      "kind": "best",
+      "numerator_gap_below_3": 14442,
+      "p": 283,
+      "ratio": "37355/13254",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p283.json",
+      "span": 79003
+    },
+    {
+      "center": 234686,
+      "cuts": 282,
+      "e": 211,
+      "kind": "worst",
+      "numerator_gap_below_3": 3886,
+      "p": 283,
+      "ratio": "117343/39762",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p283.json",
+      "span": 79785
+    },
+    {
+      "center": 239055,
+      "cuts": 292,
+      "e": 212,
+      "kind": "best",
+      "numerator_gap_below_3": 16737,
+      "p": 293,
+      "ratio": "239055/85264",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p293.json",
+      "span": 84423
+    },
+    {
+      "center": 250891,
+      "cuts": 292,
+      "e": 186,
+      "kind": "worst",
+      "numerator_gap_below_3": 4901,
+      "p": 293,
+      "ratio": "250891/85264",
+      "source": "problems\\864\\compute\\p70\\all_cuts_p293.json",
+      "span": 85530
+    }
+  ]
+}

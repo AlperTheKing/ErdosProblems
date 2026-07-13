@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Python integers",
+  "inequality": "T_F <= C_S + number of folds whose low sum plus b is a represented positive difference",
+  "width_30_unrestricted": {
+    "rows": 1583738,
+    "total_failures": 0,
+    "component_failures": 0,
+    "max_total_residual": 0,
+    "max_component_residual": 0
+  },
+  "P88_positive_defect_translations": {
+    "rows": 4170,
+    "total_failures": 0,
+    "component_failures": 2,
+    "worst_total": {
+      "gamma": 255,
+      "b": 1,
+      "C_S": 0,
+      "T_F": 0,
+      "collided_fold_labels": 0,
+      "total_residual": 0,
+      "max_component_residual": 0
+    },
+    "worst_component": {
+      "gamma": 41,
+      "b": 2,
+      "C_S": 181,
+      "T_F": 232,
+      "collided_fold_labels": 63,
+      "total_residual": -12,
+      "max_component_residual": 12
+    }
+  }
+}

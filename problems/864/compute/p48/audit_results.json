@@ -1,0 +1,2240 @@
+{
+  "conventions": {
+    "diagonal_pair_sums": true,
+    "repeated_triple_summands": true,
+    "arithmetic": "exact integers; decimals are display-only"
+  },
+  "tensor": {
+    "full_cartesian_products": 400,
+    "separable_carry_assignments": 243,
+    "sample": {
+      "X": [
+        0,
+        1
+      ],
+      "Y": [
+        0,
+        1
+      ],
+      "radix": 5,
+      "product": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "collision": {
+        "sum": 6,
+        "first_indices": [
+          0,
+          3
+        ],
+        "second_indices": [
+          1,
+          2
+        ],
+        "first_pair": [
+          0,
+          6
+        ],
+        "second_pair": [
+          1,
+          5
+        ],
+        "uses_diagonal": false
+      }
+    }
+  },
+  "costas_composition": {
+    "costas_counts": {
+      "2": 2,
+      "3": 4,
+      "4": 12
+    },
+    "compositions_checked": 324,
+    "sample": {
+      "pi": [
+        0,
+        1
+      ],
+      "tau": [
+        0,
+        1
+      ],
+      "rho": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "collision": {
+        "sum": 12,
+        "first_indices": [
+          0,
+          2
+        ],
+        "second_indices": [
+          1,
+          1
+        ],
+        "first_pair": [
+          0,
+          12
+        ],
+        "second_pair": [
+          6,
+          6
+        ],
+        "uses_diagonal": true
+      }
+    }
+  },
+  "separated_unions": {
+    "max_span": 9,
+    "normalized_sidon_rulers": 75,
+    "difference_disjoint_pairs": 868,
+    "joint_lag_inequalities": 5252,
+    "best_finite_guarded_union": {
+      "X": [
+        0,
+        1
+      ],
+      "Y": [
+        0,
+        2
+      ],
+      "G": 3,
+      "T": 7,
+      "Z": [
+        0,
+        1,
+        7,
+        9
+      ],
+      "E": [
+        3,
+        5,
+        17,
+        21
+      ],
+      "ratio": {
+        "numerator": 21,
+        "denominator": 16,
+        "decimal": 1.3125
+      }
+    },
+    "strict_guard_falsifiers": [
+      {
+        "label": "G=max(X)",
+        "Z": [
+          0,
+          2,
+          9,
+          10
+        ],
+        "E": [
+          2,
+          6,
+          20,
+          22
+        ],
+        "witness": {
+          "target": 6,
+          "summands": [
+            2,
+            2,
+            2
+          ],
+          "repeated_summand": true
+        }
+      },
+      {
+        "label": "G=max(Y)",
+        "Z": [
+          0,
+          1,
+          6,
+          8
+        ],
+        "E": [
+          2,
+          4,
+          14,
+          18
+        ],
+        "witness": {
+          "target": 18,
+          "summands": [
+            2,
+            2,
+            14
+          ],
+          "repeated_summand": true
+        }
+      },
+      {
+        "label": "T=G+3max(X)",
+        "Z": [
+          0,
+          1,
+          6,
+          8
+        ],
+        "E": [
+          3,
+          5,
+          15,
+          19
+        ],
+        "witness": {
+          "target": 15,
+          "summands": [
+            5,
+            5,
+            5
+          ],
+          "repeated_summand": true
+        }
+      }
+    ]
+  },
+  "parabola_carries": {
+    "max_prime": 43,
+    "rows": [
+      {
+        "p": 3,
+        "compact_sidon": true,
+        "compact_collision": null,
+        "carry_free_W": 8,
+        "carry_free_lower_ratio": {
+          "numerator": 17,
+          "denominator": 9,
+          "decimal": 1.8888888888888888
+        },
+        "affine_step_survivors": 7,
+        "best_step_survivor": {
+          "a": 0,
+          "b": 0,
+          "G": 2,
+          "W": 5,
+          "M": 12,
+          "ratio": {
+            "numerator": 4,
+            "denominator": 3,
+            "decimal": 1.3333333333333333
+          },
+          "ruler": [
+            0,
+            4,
+            5
+          ]
+        }
+      },
+      {
+        "p": 5,
+        "compact_sidon": true,
+        "compact_collision": null,
+        "carry_free_W": 43,
+        "carry_free_lower_ratio": {
+          "numerator": 87,
+          "denominator": 25,
+          "decimal": 3.48
+        },
+        "affine_step_survivors": 14,
+        "best_step_survivor": {
+          "a": 0,
+          "b": 0,
+          "G": 12,
+          "W": 23,
+          "M": 58,
+          "ratio": {
+            "numerator": 58,
+            "denominator": 25,
+            "decimal": 2.32
+          },
+          "ruler": [
+            0,
+            6,
+            9,
+            22,
+            23
+          ]
+        }
+      },
+      {
+        "p": 7,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 26,
+          "first_indices": [
+            1,
+            4
+          ],
+          "second_indices": [
+            2,
+            2
+          ],
+          "first_pair": [
+            8,
+            18
+          ],
+          "second_pair": [
+            13,
+            13
+          ],
+          "uses_diagonal": true
+        },
+        "carry_free_W": 61,
+        "carry_free_lower_ratio": {
+          "numerator": 123,
+          "denominator": 49,
+          "decimal": 2.510204081632653
+        },
+        "affine_step_survivors": 2,
+        "best_step_survivor": {
+          "a": 5,
+          "b": 4,
+          "G": 4,
+          "W": 61,
+          "M": 126,
+          "ratio": {
+            "numerator": 18,
+            "denominator": 7,
+            "decimal": 2.5714285714285716
+          },
+          "ruler": [
+            0,
+            15,
+            31,
+            39,
+            41,
+            44,
+            61
+          ]
+        }
+      },
+      {
+        "p": 11,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 59,
+          "first_indices": [
+            0,
+            7
+          ],
+          "second_indices": [
+            2,
+            3
+          ],
+          "first_pair": [
+            0,
+            59
+          ],
+          "second_pair": [
+            21,
+            38
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 206,
+        "carry_free_lower_ratio": {
+          "numerator": 413,
+          "denominator": 121,
+          "decimal": 3.4132231404958677
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 13,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 68,
+          "first_indices": [
+            1,
+            5
+          ],
+          "second_indices": [
+            2,
+            3
+          ],
+          "first_pair": [
+            14,
+            54
+          ],
+          "second_pair": [
+            25,
+            43
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 320,
+        "carry_free_lower_ratio": {
+          "numerator": 641,
+          "denominator": 169,
+          "decimal": 3.7928994082840237
+        },
+        "affine_step_survivors": 1,
+        "best_step_survivor": {
+          "a": 12,
+          "b": 11,
+          "G": 21,
+          "W": 268,
+          "M": 557,
+          "ratio": {
+            "numerator": 557,
+            "denominator": 169,
+            "decimal": 3.2958579881656807
+          },
+          "ruler": [
+            0,
+            27,
+            80,
+            95,
+            159,
+            165,
+            168,
+            206,
+            214,
+            226,
+            228,
+            257,
+            268
+          ]
+        }
+      },
+      {
+        "p": 17,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 174,
+          "first_indices": [
+            1,
+            9
+          ],
+          "second_indices": [
+            2,
+            7
+          ],
+          "first_pair": [
+            18,
+            156
+          ],
+          "second_pair": [
+            33,
+            141
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 557,
+        "carry_free_lower_ratio": {
+          "numerator": 1115,
+          "denominator": 289,
+          "decimal": 3.858131487889273
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 19,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 141,
+          "first_indices": [
+            0,
+            9
+          ],
+          "second_indices": [
+            2,
+            5
+          ],
+          "first_pair": [
+            0,
+            141
+          ],
+          "second_pair": [
+            37,
+            104
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 659,
+        "carry_free_lower_ratio": {
+          "numerator": 1319,
+          "denominator": 361,
+          "decimal": 3.6537396121883656
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 23,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 109,
+          "first_indices": [
+            1,
+            6
+          ],
+          "second_indices": [
+            2,
+            4
+          ],
+          "first_pair": [
+            24,
+            85
+          ],
+          "second_pair": [
+            45,
+            64
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 843,
+        "carry_free_lower_ratio": {
+          "numerator": 1687,
+          "denominator": 529,
+          "decimal": 3.1890359168241966
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 29,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 239,
+          "first_indices": [
+            1,
+            9
+          ],
+          "second_indices": [
+            2,
+            7
+          ],
+          "first_pair": [
+            30,
+            209
+          ],
+          "second_pair": [
+            57,
+            182
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 1641,
+        "carry_free_lower_ratio": {
+          "numerator": 3283,
+          "denominator": 841,
+          "decimal": 3.9036860879904873
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 31,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 324,
+          "first_indices": [
+            0,
+            15
+          ],
+          "second_indices": [
+            2,
+            11
+          ],
+          "first_pair": [
+            0,
+            324
+          ],
+          "second_pair": [
+            61,
+            263
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 1756,
+        "carry_free_lower_ratio": {
+          "numerator": 3513,
+          "denominator": 961,
+          "decimal": 3.655567117585848
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 37,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 1045,
+          "first_indices": [
+            1,
+            25
+          ],
+          "second_indices": [
+            2,
+            23
+          ],
+          "first_pair": [
+            38,
+            1007
+          ],
+          "second_pair": [
+            73,
+            972
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 2695,
+        "carry_free_lower_ratio": {
+          "numerator": 5391,
+          "denominator": 1369,
+          "decimal": 3.93791088385683
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 41,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 1372,
+          "first_indices": [
+            0,
+            31
+          ],
+          "second_indices": [
+            2,
+            27
+          ],
+          "first_pair": [
+            0,
+            1372
+          ],
+          "second_pair": [
+            81,
+            1291
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 3312,
+        "carry_free_lower_ratio": {
+          "numerator": 6625,
+          "denominator": 1681,
+          "decimal": 3.941106484235574
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      },
+      {
+        "p": 43,
+        "compact_sidon": false,
+        "compact_collision": {
+          "sum": 579,
+          "first_indices": [
+            0,
+            13
+          ],
+          "second_indices": [
+            2,
+            11
+          ],
+          "first_pair": [
+            0,
+            579
+          ],
+          "second_pair": [
+            85,
+            494
+          ],
+          "uses_diagonal": false
+        },
+        "carry_free_W": 3553,
+        "carry_free_lower_ratio": {
+          "numerator": 7107,
+          "denominator": 1849,
+          "decimal": 3.8436992969172525
+        },
+        "affine_step_survivors": 0,
+        "best_step_survivor": null
+      }
+    ]
+  },
+  "bose": {
+    "max_prime": 13,
+    "rows": [
+      {
+        "p": 3,
+        "modulus": 8,
+        "residues": [
+          1,
+          6,
+          7
+        ],
+        "affine_cuts": 12,
+        "best_affine_cut": {
+          "G": 4,
+          "W": 3,
+          "M": 10,
+          "ratio": {
+            "numerator": 10,
+            "denominator": 9,
+            "decimal": 1.1111111111111112
+          },
+          "ruler": [
+            0,
+            1,
+            3
+          ],
+          "unit": 1,
+          "cut": 6
+        },
+        "ternary_height_scan": {
+          "placements": 9,
+          "best": {
+            "G": 4,
+            "W": 3,
+            "M": 10,
+            "ratio": {
+              "numerator": 10,
+              "denominator": 9,
+              "decimal": 1.1111111111111112
+            },
+            "ruler": [
+              0,
+              1,
+              3
+            ],
+            "heights": [
+              0,
+              -1,
+              -1
+            ]
+          }
+        }
+      },
+      {
+        "p": 5,
+        "modulus": 24,
+        "residues": [
+          1,
+          3,
+          4,
+          8,
+          17
+        ],
+        "affine_cuts": 40,
+        "best_affine_cut": {
+          "G": 12,
+          "W": 11,
+          "M": 34,
+          "ratio": {
+            "numerator": 34,
+            "denominator": 25,
+            "decimal": 1.36
+          },
+          "ruler": [
+            0,
+            2,
+            7,
+            10,
+            11
+          ],
+          "unit": 7,
+          "cut": 21
+        },
+        "ternary_height_scan": {
+          "placements": 81,
+          "best": {
+            "G": 6,
+            "W": 15,
+            "M": 36,
+            "ratio": {
+              "numerator": 36,
+              "denominator": 25,
+              "decimal": 1.44
+            },
+            "ruler": [
+              0,
+              8,
+              10,
+              11,
+              15
+            ],
+            "heights": [
+              0,
+              0,
+              0,
+              0,
+              -1
+            ]
+          }
+        }
+      },
+      {
+        "p": 7,
+        "modulus": 48,
+        "residues": [
+          1,
+          6,
+          18,
+          20,
+          21,
+          27,
+          31
+        ],
+        "affine_cuts": 112,
+        "best_affine_cut": {
+          "G": 16,
+          "W": 29,
+          "M": 74,
+          "ratio": {
+            "numerator": 74,
+            "denominator": 49,
+            "decimal": 1.510204081632653
+          },
+          "ruler": [
+            0,
+            9,
+            12,
+            22,
+            23,
+            27,
+            29
+          ],
+          "unit": 5,
+          "cut": 30
+        },
+        "ternary_height_scan": {
+          "placements": 729,
+          "best": {
+            "G": 18,
+            "W": 30,
+            "M": 78,
+            "ratio": {
+              "numerator": 78,
+              "denominator": 49,
+              "decimal": 1.5918367346938775
+            },
+            "ruler": [
+              0,
+              5,
+              17,
+              19,
+              20,
+              26,
+              30
+            ],
+            "heights": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "p": 11,
+        "modulus": 120,
+        "residues": [
+          1,
+          6,
+          7,
+          14,
+          17,
+          45,
+          71,
+          75,
+          92,
+          94,
+          112
+        ],
+        "affine_cuts": 352,
+        "best_affine_cut": {
+          "G": 50,
+          "W": 74,
+          "M": 198,
+          "ratio": {
+            "numerator": 18,
+            "denominator": 11,
+            "decimal": 1.6363636363636365
+          },
+          "ruler": [
+            0,
+            6,
+            16,
+            31,
+            33,
+            44,
+            51,
+            65,
+            70,
+            73,
+            74
+          ],
+          "unit": 61,
+          "cut": 61
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 13,
+        "modulus": 168,
+        "residues": [
+          1,
+          17,
+          21,
+          22,
+          34,
+          40,
+          97,
+          100,
+          108,
+          135,
+          137,
+          144,
+          159
+        ],
+        "affine_cuts": 624,
+        "best_affine_cut": {
+          "G": 55,
+          "W": 117,
+          "M": 289,
+          "ratio": {
+            "numerator": 289,
+            "denominator": 169,
+            "decimal": 1.7100591715976332
+          },
+          "ruler": [
+            0,
+            20,
+            32,
+            39,
+            49,
+            50,
+            65,
+            73,
+            86,
+            108,
+            111,
+            113,
+            117
+          ],
+          "unit": 101,
+          "cut": 156
+        },
+        "ternary_height_scan": null
+      }
+    ]
+  },
+  "ruzsa": {
+    "max_prime": 43,
+    "rows": [
+      {
+        "p": 5,
+        "points": 4,
+        "modulus": 20,
+        "natural_cuts": 4,
+        "best_natural_cut": {
+          "G": 8,
+          "W": 9,
+          "M": 26,
+          "ratio": {
+            "numerator": 13,
+            "denominator": 8,
+            "decimal": 1.625
+          },
+          "ruler": [
+            0,
+            2,
+            3,
+            9
+          ],
+          "cut": 14
+        },
+        "worst_natural_cut": {
+          "G": 3,
+          "W": 19,
+          "M": 41,
+          "ratio": {
+            "numerator": 41,
+            "denominator": 16,
+            "decimal": 2.5625
+          },
+          "ruler": [
+            0,
+            6,
+            17,
+            19
+          ],
+          "cut": 17
+        },
+        "ternary_height_scan": {
+          "placements": 27,
+          "best": {
+            "G": 8,
+            "W": 9,
+            "M": 26,
+            "ratio": {
+              "numerator": 13,
+              "denominator": 8,
+              "decimal": 1.625
+            },
+            "ruler": [
+              0,
+              2,
+              3,
+              9
+            ],
+            "heights": [
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      },
+      {
+        "p": 7,
+        "points": 6,
+        "modulus": 42,
+        "natural_cuts": 6,
+        "best_natural_cut": {
+          "G": 14,
+          "W": 20,
+          "M": 54,
+          "ratio": {
+            "numerator": 3,
+            "denominator": 2,
+            "decimal": 1.5
+          },
+          "ruler": [
+            0,
+            4,
+            9,
+            17,
+            19,
+            20
+          ],
+          "cut": 27
+        },
+        "worst_natural_cut": {
+          "G": 20,
+          "W": 37,
+          "M": 94,
+          "ratio": {
+            "numerator": 47,
+            "denominator": 18,
+            "decimal": 2.611111111111111
+          },
+          "ruler": [
+            0,
+            8,
+            10,
+            11,
+            33,
+            37
+          ],
+          "cut": 36
+        },
+        "ternary_height_scan": {
+          "placements": 243,
+          "best": {
+            "G": 14,
+            "W": 20,
+            "M": 54,
+            "ratio": {
+              "numerator": 3,
+              "denominator": 2,
+              "decimal": 1.5
+            },
+            "ruler": [
+              0,
+              4,
+              9,
+              17,
+              19,
+              20
+            ],
+            "heights": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          }
+        }
+      },
+      {
+        "p": 11,
+        "points": 10,
+        "modulus": 110,
+        "natural_cuts": 10,
+        "best_natural_cut": {
+          "G": 32,
+          "W": 78,
+          "M": 188,
+          "ratio": {
+            "numerator": 47,
+            "denominator": 25,
+            "decimal": 1.88
+          },
+          "ruler": [
+            0,
+            19,
+            24,
+            26,
+            47,
+            53,
+            61,
+            62,
+            65,
+            78
+          ],
+          "cut": 39
+        },
+        "worst_natural_cut": {
+          "G": 82,
+          "W": 104,
+          "M": 290,
+          "ratio": {
+            "numerator": 29,
+            "denominator": 10,
+            "decimal": 2.9
+          },
+          "ruler": [
+            0,
+            8,
+            9,
+            12,
+            25,
+            57,
+            76,
+            81,
+            83,
+            104
+          ],
+          "cut": 92
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 13,
+        "points": 12,
+        "modulus": 156,
+        "natural_cuts": 12,
+        "best_natural_cut": {
+          "G": 39,
+          "W": 115,
+          "M": 269,
+          "ratio": {
+            "numerator": 269,
+            "denominator": 144,
+            "decimal": 1.8680555555555556
+          },
+          "ruler": [
+            0,
+            2,
+            33,
+            42,
+            58,
+            77,
+            87,
+            88,
+            92,
+            95,
+            109,
+            115
+          ],
+          "cut": 57
+        },
+        "worst_natural_cut": {
+          "G": 125,
+          "W": 155,
+          "M": 435,
+          "ratio": {
+            "numerator": 145,
+            "denominator": 48,
+            "decimal": 3.0208333333333335
+          },
+          "ruler": [
+            0,
+            4,
+            7,
+            21,
+            27,
+            68,
+            70,
+            101,
+            110,
+            126,
+            145,
+            155
+          ],
+          "cut": 145
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 17,
+        "points": 16,
+        "modulus": 272,
+        "natural_cuts": 16,
+        "best_natural_cut": {
+          "G": 70,
+          "W": 239,
+          "M": 548,
+          "ratio": {
+            "numerator": 137,
+            "denominator": 64,
+            "decimal": 2.140625
+          },
+          "ruler": [
+            0,
+            57,
+            59,
+            65,
+            77,
+            84,
+            87,
+            88,
+            126,
+            131,
+            140,
+            166,
+            181,
+            202,
+            226,
+            239
+          ],
+          "cut": 75
+        },
+        "worst_natural_cut": {
+          "G": 192,
+          "W": 269,
+          "M": 730,
+          "ratio": {
+            "numerator": 365,
+            "denominator": 128,
+            "decimal": 2.8515625
+          },
+          "ruler": [
+            0,
+            1,
+            39,
+            44,
+            53,
+            79,
+            94,
+            115,
+            139,
+            152,
+            185,
+            242,
+            244,
+            250,
+            262,
+            269
+          ],
+          "cut": 162
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 19,
+        "points": 18,
+        "modulus": 342,
+        "natural_cuts": 18,
+        "best_natural_cut": {
+          "G": 64,
+          "W": 302,
+          "M": 668,
+          "ratio": {
+            "numerator": 167,
+            "denominator": 81,
+            "decimal": 2.0617283950617282
+          },
+          "ruler": [
+            0,
+            39,
+            100,
+            113,
+            128,
+            159,
+            163,
+            173,
+            184,
+            193,
+            196,
+            225,
+            251,
+            278,
+            294,
+            295,
+            300,
+            302
+          ],
+          "cut": 30
+        },
+        "worst_natural_cut": {
+          "G": 248,
+          "W": 331,
+          "M": 910,
+          "ratio": {
+            "numerator": 455,
+            "denominator": 162,
+            "decimal": 2.808641975308642
+          },
+          "ruler": [
+            0,
+            9,
+            12,
+            41,
+            67,
+            94,
+            110,
+            111,
+            116,
+            118,
+            158,
+            197,
+            258,
+            271,
+            286,
+            317,
+            321,
+            331
+          ],
+          "cut": 214
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 23,
+        "points": 22,
+        "modulus": 506,
+        "natural_cuts": 22,
+        "best_natural_cut": {
+          "G": 241,
+          "W": 392,
+          "M": 1025,
+          "ratio": {
+            "numerator": 1025,
+            "denominator": 484,
+            "decimal": 2.1177685950413223
+          },
+          "ruler": [
+            0,
+            6,
+            21,
+            100,
+            107,
+            108,
+            118,
+            127,
+            163,
+            168,
+            180,
+            211,
+            244,
+            258,
+            293,
+            296,
+            309,
+            333,
+            335,
+            363,
+            367,
+            392
+          ],
+          "cut": 175
+        },
+        "worst_natural_cut": {
+          "G": 356,
+          "W": 499,
+          "M": 1354,
+          "ratio": {
+            "numerator": 677,
+            "denominator": 242,
+            "decimal": 2.7975206611570247
+          },
+          "ruler": [
+            0,
+            1,
+            11,
+            20,
+            56,
+            61,
+            73,
+            104,
+            137,
+            151,
+            186,
+            189,
+            202,
+            226,
+            228,
+            256,
+            260,
+            285,
+            399,
+            405,
+            420,
+            499
+          ],
+          "cut": 282
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 29,
+        "points": 28,
+        "modulus": 812,
+        "natural_cuts": 28,
+        "best_natural_cut": {
+          "G": 471,
+          "W": 607,
+          "M": 1685,
+          "ratio": {
+            "numerator": 1685,
+            "denominator": 784,
+            "decimal": 2.149234693877551
+          },
+          "ruler": [
+            0,
+            9,
+            24,
+            54,
+            71,
+            117,
+            128,
+            135,
+            178,
+            213,
+            264,
+            272,
+            312,
+            316,
+            354,
+            385,
+            395,
+            421,
+            422,
+            434,
+            455,
+            487,
+            510,
+            582,
+            585,
+            587,
+            601,
+            607
+          ],
+          "cut": 363
+        },
+        "worst_natural_cut": {
+          "G": 595,
+          "W": 811,
+          "M": 2217,
+          "ratio": {
+            "numerator": 2217,
+            "denominator": 784,
+            "decimal": 2.8278061224489797
+          },
+          "ruler": [
+            0,
+            12,
+            33,
+            65,
+            88,
+            160,
+            163,
+            165,
+            179,
+            185,
+            390,
+            399,
+            414,
+            444,
+            461,
+            507,
+            518,
+            525,
+            568,
+            603,
+            654,
+            662,
+            702,
+            706,
+            744,
+            775,
+            785,
+            811
+          ],
+          "cut": 785
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 31,
+        "points": 30,
+        "modulus": 930,
+        "natural_cuts": 30,
+        "best_natural_cut": {
+          "G": 330,
+          "W": 855,
+          "M": 2040,
+          "ratio": {
+            "numerator": 34,
+            "denominator": 15,
+            "decimal": 2.2666666666666666
+          },
+          "ruler": [
+            0,
+            74,
+            84,
+            103,
+            265,
+            267,
+            280,
+            334,
+            346,
+            362,
+            395,
+            399,
+            402,
+            438,
+            472,
+            516,
+            571,
+            603,
+            617,
+            623,
+            628,
+            711,
+            719,
+            728,
+            746,
+            769,
+            770,
+            791,
+            817,
+            855
+          ],
+          "cut": 797
+        },
+        "worst_natural_cut": {
+          "G": 781,
+          "W": 922,
+          "M": 2625,
+          "ratio": {
+            "numerator": 35,
+            "denominator": 12,
+            "decimal": 2.9166666666666665
+          },
+          "ruler": [
+            0,
+            9,
+            27,
+            50,
+            51,
+            72,
+            98,
+            136,
+            211,
+            285,
+            295,
+            314,
+            476,
+            478,
+            491,
+            545,
+            557,
+            573,
+            606,
+            610,
+            613,
+            649,
+            683,
+            727,
+            782,
+            814,
+            828,
+            834,
+            839,
+            922
+          ],
+          "cut": 586
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 37,
+        "points": 36,
+        "modulus": 1332,
+        "natural_cuts": 36,
+        "best_natural_cut": {
+          "G": 632,
+          "W": 1255,
+          "M": 3142,
+          "ratio": {
+            "numerator": 1571,
+            "denominator": 648,
+            "decimal": 2.424382716049383
+          },
+          "ruler": [
+            0,
+            147,
+            151,
+            192,
+            210,
+            297,
+            307,
+            346,
+            470,
+            491,
+            524,
+            546,
+            553,
+            613,
+            644,
+            656,
+            659,
+            712,
+            717,
+            725,
+            744,
+            782,
+            796,
+            826,
+            846,
+            874,
+            921,
+            1001,
+            1007,
+            1097,
+            1204,
+            1213,
+            1215,
+            1238,
+            1239,
+            1255
+          ],
+          "cut": 58
+        },
+        "worst_natural_cut": {
+          "G": 1118,
+          "W": 1320,
+          "M": 3758,
+          "ratio": {
+            "numerator": 1879,
+            "denominator": 648,
+            "decimal": 2.8996913580246915
+          },
+          "ruler": [
+            0,
+            3,
+            56,
+            61,
+            69,
+            88,
+            126,
+            140,
+            170,
+            190,
+            218,
+            265,
+            345,
+            351,
+            441,
+            548,
+            557,
+            559,
+            582,
+            583,
+            599,
+            676,
+            823,
+            827,
+            868,
+            886,
+            973,
+            983,
+            1022,
+            1146,
+            1167,
+            1200,
+            1222,
+            1229,
+            1289,
+            1320
+          ],
+          "cut": 714
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 41,
+        "points": 40,
+        "modulus": 1640,
+        "natural_cuts": 40,
+        "best_natural_cut": {
+          "G": 1018,
+          "W": 1318,
+          "M": 3654,
+          "ratio": {
+            "numerator": 1827,
+            "denominator": 800,
+            "decimal": 2.28375
+          },
+          "ruler": [
+            0,
+            27,
+            44,
+            50,
+            62,
+            183,
+            213,
+            274,
+            312,
+            345,
+            391,
+            420,
+            469,
+            483,
+            485,
+            488,
+            522,
+            578,
+            588,
+            635,
+            689,
+            704,
+            776,
+            777,
+            819,
+            931,
+            956,
+            967,
+            1015,
+            1037,
+            1041,
+            1092,
+            1101,
+            1159,
+            1190,
+            1266,
+            1273,
+            1286,
+            1294,
+            1318
+          ],
+          "cut": 282
+        },
+        "worst_natural_cut": {
+          "G": 1304,
+          "W": 1626,
+          "M": 4556,
+          "ratio": {
+            "numerator": 1139,
+            "denominator": 400,
+            "decimal": 2.8475
+          },
+          "ruler": [
+            0,
+            2,
+            5,
+            39,
+            95,
+            105,
+            152,
+            206,
+            221,
+            293,
+            294,
+            336,
+            448,
+            473,
+            484,
+            532,
+            554,
+            558,
+            609,
+            618,
+            676,
+            707,
+            783,
+            790,
+            803,
+            811,
+            835,
+            1157,
+            1184,
+            1201,
+            1207,
+            1219,
+            1340,
+            1370,
+            1431,
+            1469,
+            1502,
+            1548,
+            1577,
+            1626
+          ],
+          "cut": 765
+        },
+        "ternary_height_scan": null
+      },
+      {
+        "p": 43,
+        "points": 42,
+        "modulus": 1806,
+        "natural_cuts": 42,
+        "best_natural_cut": {
+          "G": 947,
+          "W": 1701,
+          "M": 4349,
+          "ratio": {
+            "numerator": 4349,
+            "denominator": 1764,
+            "decimal": 2.4654195011337867
+          },
+          "ruler": [
+            0,
+            112,
+            182,
+            188,
+            200,
+            222,
+            328,
+            331,
+            385,
+            393,
+            506,
+            552,
+            591,
+            641,
+            668,
+            670,
+            685,
+            689,
+            705,
+            736,
+            760,
+            785,
+            792,
+            859,
+            912,
+            917,
+            940,
+            950,
+            1051,
+            1181,
+            1207,
+            1285,
+            1354,
+            1367,
+            1368,
+            1427,
+            1563,
+            1593,
+            1604,
+            1656,
+            1665,
+            1701
+          ],
+          "cut": 160
+        },
+        "worst_natural_cut": {
+          "G": 1594,
+          "W": 1804,
+          "M": 5202,
+          "ratio": {
+            "numerator": 289,
+            "denominator": 98,
+            "decimal": 2.9489795918367347
+          },
+          "ruler": [
+            0,
+            15,
+            19,
+            35,
+            66,
+            90,
+            115,
+            122,
+            189,
+            242,
+            247,
+            270,
+            280,
+            381,
+            511,
+            537,
+            615,
+            684,
+            697,
+            698,
+            757,
+            893,
+            923,
+            934,
+            986,
+            995,
+            1031,
+            1136,
+            1248,
+            1318,
+            1324,
+            1336,
+            1358,
+            1464,
+            1467,
+            1521,
+            1529,
+            1642,
+            1688,
+            1727,
+            1777,
+            1804
+          ],
+          "cut": 830
+        },
+        "ternary_height_scan": null
+      }
+    ]
+  },
+  "welch": {
+    "max_prime": 31,
+    "radix_flattenings": 1460,
+    "sidon_flattenings": 616,
+    "rows": [
+      {
+        "q": 5,
+        "points": 4,
+        "best": {
+          "G": 4,
+          "W": 8,
+          "M": 20,
+          "ratio": {
+            "numerator": 5,
+            "denominator": 4,
+            "decimal": 1.25
+          },
+          "ruler": [
+            0,
+            5,
+            7,
+            8
+          ],
+          "shift": 1,
+          "radix": 3,
+          "orientation": 1
+        }
+      },
+      {
+        "q": 7,
+        "points": 6,
+        "best": {
+          "G": 23,
+          "W": 22,
+          "M": 67,
+          "ratio": {
+            "numerator": 67,
+            "denominator": 36,
+            "decimal": 1.8611111111111112
+          },
+          "ruler": [
+            0,
+            1,
+            5,
+            13,
+            19,
+            22
+          ],
+          "shift": 1,
+          "radix": 5,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 11,
+        "points": 10,
+        "best": {
+          "G": 25,
+          "W": 94,
+          "M": 213,
+          "ratio": {
+            "numerator": 213,
+            "denominator": 100,
+            "decimal": 2.13
+          },
+          "ruler": [
+            0,
+            13,
+            18,
+            29,
+            41,
+            55,
+            62,
+            77,
+            86,
+            94
+          ],
+          "shift": 8,
+          "radix": 10,
+          "orientation": 1
+        }
+      },
+      {
+        "q": 13,
+        "points": 12,
+        "best": {
+          "G": 8,
+          "W": 247,
+          "M": 502,
+          "ratio": {
+            "numerator": 251,
+            "denominator": 72,
+            "decimal": 3.486111111111111
+          },
+          "ruler": [
+            0,
+            24,
+            50,
+            71,
+            89,
+            120,
+            137,
+            164,
+            180,
+            205,
+            225,
+            247
+          ],
+          "shift": 6,
+          "radix": 23,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 17,
+        "points": 16,
+        "best": {
+          "G": 18,
+          "W": 457,
+          "M": 932,
+          "ratio": {
+            "numerator": 233,
+            "denominator": 64,
+            "decimal": 3.640625
+          },
+          "ruler": [
+            0,
+            29,
+            63,
+            89,
+            113,
+            154,
+            181,
+            211,
+            234,
+            266,
+            301,
+            338,
+            360,
+            396,
+            424,
+            457
+          ],
+          "shift": 2,
+          "radix": 31,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 19,
+        "points": 18,
+        "best": {
+          "G": 17,
+          "W": 586,
+          "M": 1189,
+          "ratio": {
+            "numerator": 1189,
+            "denominator": 324,
+            "decimal": 3.669753086419753
+          },
+          "ruler": [
+            0,
+            36,
+            65,
+            107,
+            138,
+            171,
+            198,
+            248,
+            270,
+            314,
+            344,
+            382,
+            407,
+            444,
+            483,
+            511,
+            552,
+            586
+          ],
+          "shift": 4,
+          "radix": 35,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 23,
+        "points": 22,
+        "best": {
+          "G": 65,
+          "W": 914,
+          "M": 1893,
+          "ratio": {
+            "numerator": 1893,
+            "denominator": 484,
+            "decimal": 3.9111570247933884
+          },
+          "ruler": [
+            0,
+            45,
+            102,
+            133,
+            173,
+            211,
+            255,
+            307,
+            354,
+            390,
+            439,
+            471,
+            530,
+            558,
+            619,
+            653,
+            695,
+            743,
+            789,
+            822,
+            873,
+            914
+          ],
+          "shift": 18,
+          "radix": 43,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 29,
+        "points": 28,
+        "best": {
+          "G": 292,
+          "W": 1471,
+          "M": 3234,
+          "ratio": {
+            "numerator": 33,
+            "denominator": 8,
+            "decimal": 4.125
+          },
+          "ruler": [
+            0,
+            56,
+            115,
+            167,
+            214,
+            281,
+            342,
+            388,
+            450,
+            490,
+            547,
+            612,
+            650,
+            728,
+            769,
+            829,
+            873,
+            946,
+            999,
+            1041,
+            1089,
+            1153,
+            1202,
+            1273,
+            1308,
+            1366,
+            1417,
+            1471
+          ],
+          "shift": 14,
+          "radix": 55,
+          "orientation": 0
+        }
+      },
+      {
+        "q": 31,
+        "points": 30,
+        "best": {
+          "G": 336,
+          "W": 1725,
+          "M": 3786,
+          "ratio": {
+            "numerator": 631,
+            "denominator": 150,
+            "decimal": 4.206666666666667
+          },
+          "ruler": [
+            0,
+            54,
+            121,
+            168,
+            230,
+            295,
+            358,
+            402,
+            482,
+            524,
+            593,
+            649,
+            701,
+            772,
+            831,
+            876,
+            937,
+            1016,
+            1054,
+            1118,
+            1199,
+            1247,
+            1317,
+            1363,
+            1420,
+            1475,
+            1533,
+            1606,
+            1659,
+            1725
+          ],
+          "shift": 3,
+          "radix": 60,
+          "orientation": 0
+        }
+      }
+    ]
+  }
+}

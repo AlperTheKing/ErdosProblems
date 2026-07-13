@@ -1,0 +1,40 @@
+COMMAND: python check.py
+EXIT: 0
+{
+  "altering_selector_choices": 0,
+  "hub_pair_support_sizes": {
+    "0": 55,
+    "1": 55,
+    "2": 55
+  },
+  "n": 2943,
+  "reservations": {
+    "0": [
+      0,
+      55
+    ],
+    "1": [
+      1,
+      2929
+    ],
+    "2": [
+      2,
+      2930
+    ]
+  },
+  "rowCompanion_total": 2600,
+  "sameFirst_per_owner": {
+    "0": 5775,
+    "1": 5775,
+    "2": 5775
+  },
+  "sameFirst_total": 17325,
+  "selector_enumeration_sha256": "b0e8ecd0492067f26f1da5c411cd36d1c222321c230548561df8384767c41d78",
+  "selector_families": 676,
+  "selector_family_shapes": {
+    "676_anchor_4_local": 676
+  },
+  "selector_rows_checked": 459680,
+  "selector_rows_touching_hubs": 0,
+  "total_reach": 19925
+}

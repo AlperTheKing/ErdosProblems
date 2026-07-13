@@ -1,0 +1,92 @@
+{
+  "all_cut_scan_first_record": [
+    {
+      "cuts": 168,
+      "d": 7014,
+      "d_over_modulus": "7014/28057",
+      "maximum": 100,
+      "mean": 47.964285714285715,
+      "minimum": 0,
+      "quadratic_proposed_main": 219.179687778451,
+      "tetrahedral_zero_mode": 38.301195948130406,
+      "zero_cuts": 1
+    },
+    {
+      "cuts": 168,
+      "d": 9352,
+      "d_over_modulus": "9352/28057",
+      "maximum": 178,
+      "mean": 105.01190476190476,
+      "minimum": 6,
+      "quadratic_proposed_main": 389.6527782728018,
+      "tetrahedral_zero_mode": 89.99590745639966,
+      "zero_cuts": 0
+    },
+    {
+      "cuts": 168,
+      "d": 14028,
+      "d_over_modulus": "14028/28057",
+      "maximum": 535,
+      "mean": 333.88690476190476,
+      "minimum": 91,
+      "quadratic_proposed_main": 876.718751113804,
+      "tetrahedral_zero_mode": 301.0631857006732,
+      "zero_cuts": 0
+    },
+    {
+      "cuts": 168,
+      "d": 18704,
+      "d_over_modulus": "18704/28057",
+      "maximum": 1048,
+      "mean": 753.7857142857143,
+      "minimum": 323,
+      "quadratic_proposed_main": 1558.6111130912072,
+      "tetrahedral_zero_mode": 710.4635886257006,
+      "zero_cuts": 0
+    }
+  ],
+  "hole_audits": [
+    {
+      "center": 73386,
+      "cut_base": 407,
+      "d": 10065,
+      "d_over_modulus": "10065/28057",
+      "literal_hole_iff_containment": true,
+      "low_unordered_pairs": 473,
+      "missing_diagonal": 0,
+      "missing_ordered": 0,
+      "missing_unordered": 0,
+      "modulus": 28057,
+      "multiplier": 9828,
+      "p": 168,
+      "parameter": 167,
+      "quadratic_proposed_main": "101304225/224456",
+      "quadratic_proposed_main_decimal": 451.3322210143636,
+      "span": 27697,
+      "tetrahedral_count": 0,
+      "tetrahedral_zero_mode": "69390894703344254208/619676360048172001",
+      "tetrahedral_zero_mode_decimal": 111.97925106897735
+    },
+    {
+      "center": 74962,
+      "cut_base": 7432,
+      "d": 7617,
+      "d_over_modulus": "7617/28057",
+      "literal_hole_iff_containment": true,
+      "low_unordered_pairs": 371,
+      "missing_diagonal": 0,
+      "missing_ordered": 0,
+      "missing_unordered": 0,
+      "modulus": 28057,
+      "multiplier": 13576,
+      "p": 168,
+      "parameter": 167,
+      "quadratic_proposed_main": "58018689/224456",
+      "quadratic_proposed_main_decimal": 258.48580122607547,
+      "span": 27261,
+      "tetrahedral_count": 0,
+      "tetrahedral_zero_mode": "30313093021139545344/619676360048172001",
+      "tetrahedral_zero_mode_decimal": 48.91762051207357
+    }
+  ]
+}

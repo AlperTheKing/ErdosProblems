@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer CP-SAT",
+  "domain": "26 odd marks, positive defect, K6,6 on the six lowest and six highest marks",
+  "encoding": "explicit nested pair selector with complementary distance sum",
+  "P75_hinted_edges": 30,
+  "parameters": {
+    "seconds": 300.0,
+    "workers": 16
+  },
+  "status": "UNKNOWN",
+  "branches": 1127228,
+  "conflicts": 129405,
+  "elapsed_seconds": 300.21744079999917,
+  "witness": null
+}

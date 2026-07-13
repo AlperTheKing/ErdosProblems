@@ -1,0 +1,33 @@
+PASS I-path spec 0-9-18-1-10-19-2-11-20-3-12-21-4
+PASS N core+locks = 167
+PASS N = 311
+PASS |E| = 1451 (disjoint blue/bad)
+PASS (1) triangle-free
+PASS (2a) lock parity consistent (endpoints same side)
+PASS (2) displayed cut = all 1359 blue, 0 bad
+PASS (3a) attachment maxcut = 1152 (exact enumeration 684k configs)
+PASS (3b) gadget edges disjoint + partition core with 39 non-gadget blue
+PASS (3c) core maxcut = 207 (upper: 39+28*6 odd-cycle; displayed attains)
+PASS (3d) attachment glued ONLY at v=9 (maxcut additive)
+PASS (3) maxcut = 207+1152 = 1359 = displayed
+PASS (4a) every bad edge blue-dist exactly 4
+PASS (4) Gamma displayed = 92*25 = 2300 (min: dist even by parity, dist 2 = triangle => >=4)
+PASS (5a) all 28 core atom rows UNIQUE
+PASS (5b) each attachment atom has 64*64 = 4096 shortest rows
+PASS (5c) ALL attachment rows pass v=9 (unique dist-2/2 middle)
+PASS (6a) deg_I(9) = 2, nbrs {0,18}
+PASS (6b) d_bad(9) = 2, nbrs {5,13}
+PASS (6c) core rows through 9 = atoms a_5..a_9 (five)
+PASS (6d) T(9) = 5*(5+64) = 345; T-N = 34
+PASS (7a) E[sum_z n(9,z)] = T(9) = 345
+PASS (7) IDENTITY E[F_9]-E[C_9] = N-T(9) = -34 (exact)
+PASS (8a) (5,13) permanently Free (no common row)
+PASS (8) BASE-ONLY HALL GAP = 66 units of K (= 2(T-N)+deg_I-2*dbad*(dbad-1))
+PASS (9a) every attachment row has exactly ONE P0 vertex; core rows none
+PASS (9b) switch S={x,z} in P0: |B cut dS| = 128, |Hbad cut dS| = 16, loss = 112 >= 0
+PASS (9c) both x,z row-companions of 9 (their atoms' rows all pass 9)
+PASS (9) repair: 56 ordered Free P0-pairs, 33 pairs x 2 halves = 66 covers gap 66
+
+N=311 |E|=1451 |B|=1359 |Hbad|=92 maxcut=1359 Gamma=2300 T(9)=345 gap=66
+VERDICT: 311-CE FULLY VERIFIED -- base-only transfer Hall-completeness FALSE; rowCompanion repairs
+gate script SHA-256: 0d4a2b93a351059f2754060cb105a03a876bd89fa618f82f138674348330b69d

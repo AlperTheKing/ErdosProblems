@@ -1,0 +1,5787 @@
+{
+  "arithmetic": "integer only",
+  "domain": "all A subset [0,N-1] with endpoints included, 2 <= N <= 22",
+  "total_subset_count": 2097151,
+  "admissible_count": 11969,
+  "repeated_exception_with_residual_count": 8458,
+  "collision_free_completion_count": 5582,
+  "blocked_completion_count": 2876,
+  "same_span_completion_count": 2136,
+  "same_span_blocked_count": 982,
+  "first_blocked": {
+    "A": [
+      0,
+      2,
+      3,
+      6
+    ],
+    "N": 7,
+    "span": 6,
+    "k": 4,
+    "sigma": 6,
+    "exceptional_multiplicity": 2,
+    "core": [
+      0,
+      3,
+      6
+    ],
+    "residual": [
+      2
+    ],
+    "p": 1,
+    "delta": 1,
+    "c": 3,
+    "u": 1,
+    "core_sum_support": 5,
+    "residual_sum_labels": 4,
+    "core_difference_support": 2,
+    "residual_difference_labels": 3,
+    "virtual_pair_count": 1,
+    "virtual_distinct_labels": 1,
+    "virtual_new_labels": 0,
+    "virtual_collisions": [
+      {
+        "label": 2,
+        "virtual_residual_pairs": [
+          [
+            2,
+            2
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "beta": 1,
+    "collision_free_completion": false,
+    "completion": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "completion_repeated_sums": [
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "completion_span": 6,
+    "reflection_shift": 0,
+    "same_span_completion": true,
+    "repair_deleted_residual_count": 1,
+    "repair_deleted_residual": [
+      2
+    ],
+    "repaired": [
+      0,
+      3,
+      6
+    ],
+    "repaired_pair_count": 1,
+    "repaired_size": 3,
+    "orbit_total": 6,
+    "completion_difference_support": 5
+  },
+  "first_same_span_blocked": {
+    "A": [
+      0,
+      2,
+      3,
+      6
+    ],
+    "N": 7,
+    "span": 6,
+    "k": 4,
+    "sigma": 6,
+    "exceptional_multiplicity": 2,
+    "core": [
+      0,
+      3,
+      6
+    ],
+    "residual": [
+      2
+    ],
+    "p": 1,
+    "delta": 1,
+    "c": 3,
+    "u": 1,
+    "core_sum_support": 5,
+    "residual_sum_labels": 4,
+    "core_difference_support": 2,
+    "residual_difference_labels": 3,
+    "virtual_pair_count": 1,
+    "virtual_distinct_labels": 1,
+    "virtual_new_labels": 0,
+    "virtual_collisions": [
+      {
+        "label": 2,
+        "virtual_residual_pairs": [
+          [
+            2,
+            2
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "beta": 1,
+    "collision_free_completion": false,
+    "completion": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "completion_repeated_sums": [
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "completion_span": 6,
+    "reflection_shift": 0,
+    "same_span_completion": true,
+    "repair_deleted_residual_count": 1,
+    "repair_deleted_residual": [
+      2
+    ],
+    "repaired": [
+      0,
+      3,
+      6
+    ],
+    "repaired_pair_count": 1,
+    "repaired_size": 3,
+    "orbit_total": 6,
+    "completion_difference_support": 5
+  },
+  "largest_beta": {
+    "A": [
+      0,
+      2,
+      6,
+      11,
+      18,
+      19,
+      21
+    ],
+    "N": 22,
+    "span": 21,
+    "k": 7,
+    "sigma": 21,
+    "exceptional_multiplicity": 2,
+    "core": [
+      0,
+      2,
+      19,
+      21
+    ],
+    "residual": [
+      6,
+      11,
+      18
+    ],
+    "p": 2,
+    "delta": 0,
+    "c": 4,
+    "u": 3,
+    "core_sum_support": 9,
+    "residual_sum_labels": 18,
+    "core_difference_support": 4,
+    "residual_difference_labels": 15,
+    "virtual_pair_count": 6,
+    "virtual_distinct_labels": 6,
+    "virtual_new_labels": 0,
+    "virtual_collisions": [
+      {
+        "label": 1,
+        "virtual_residual_pairs": [
+          [
+            11,
+            11
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            18,
+            19
+          ]
+        ]
+      },
+      {
+        "label": 3,
+        "virtual_residual_pairs": [
+          [
+            6,
+            18
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            18,
+            21
+          ]
+        ]
+      },
+      {
+        "label": 4,
+        "virtual_residual_pairs": [
+          [
+            6,
+            11
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      {
+        "label": 8,
+        "virtual_residual_pairs": [
+          [
+            11,
+            18
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            11,
+            19
+          ]
+        ]
+      },
+      {
+        "label": 9,
+        "virtual_residual_pairs": [
+          [
+            6,
+            6
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            2,
+            11
+          ]
+        ]
+      },
+      {
+        "label": 15,
+        "virtual_residual_pairs": [
+          [
+            18,
+            18
+          ]
+        ],
+        "A_difference_pairs": [
+          [
+            6,
+            21
+          ]
+        ]
+      }
+    ],
+    "beta": 6,
+    "collision_free_completion": false,
+    "completion": [
+      0,
+      2,
+      3,
+      6,
+      10,
+      11,
+      15,
+      18,
+      19,
+      21
+    ],
+    "completion_repeated_sums": [
+      [
+        6,
+        2
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        13,
+        2
+      ],
+      [
+        17,
+        2
+      ],
+      [
+        18,
+        2
+      ],
+      [
+        20,
+        2
+      ],
+      [
+        21,
+        5
+      ],
+      [
+        22,
+        2
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        25,
+        2
+      ],
+      [
+        29,
+        2
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        36,
+        2
+      ]
+    ],
+    "completion_span": 21,
+    "reflection_shift": 0,
+    "same_span_completion": true,
+    "repair_deleted_residual_count": 3,
+    "repair_deleted_residual": [
+      6,
+      11,
+      18
+    ],
+    "repaired": [
+      0,
+      2,
+      19,
+      21
+    ],
+    "repaired_pair_count": 2,
+    "repaired_size": 4,
+    "orbit_total": 25,
+    "completion_difference_support": 19
+  },
+  "verified_identities": [
+    "all sums touching R are unique and avoid P+P",
+    "all positive differences touching R are unique and avoid D+(P)",
+    "folded P+R sums equal the P-R difference labels",
+    "D+(A union (sigma-A)) = D+(A) union {|r_i+r_j-sigma|}",
+    "completion is admissible iff the virtual labels are new and injective",
+    "orbit deficit beta equals the designated-pair repair bound",
+    "deleting at most beta residual reflection-pairs repairs completion",
+    "completion span = span(A)+|sigma-min(A)-max(A)|"
+  ],
+  "by_N": [
+    {
+      "N": 2,
+      "total_endpoint_normalized_subsets": 1,
+      "admissible_count": 1,
+      "repeated_exception_with_residual_count": 0,
+      "collision_free_completion_count": 0,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": null
+    },
+    {
+      "N": 3,
+      "total_endpoint_normalized_subsets": 2,
+      "admissible_count": 2,
+      "repeated_exception_with_residual_count": 0,
+      "collision_free_completion_count": 0,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": null
+    },
+    {
+      "N": 4,
+      "total_endpoint_normalized_subsets": 4,
+      "admissible_count": 3,
+      "repeated_exception_with_residual_count": 0,
+      "collision_free_completion_count": 0,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": null
+    },
+    {
+      "N": 5,
+      "total_endpoint_normalized_subsets": 8,
+      "admissible_count": 5,
+      "repeated_exception_with_residual_count": 0,
+      "collision_free_completion_count": 0,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": null
+    },
+    {
+      "N": 6,
+      "total_endpoint_normalized_subsets": 16,
+      "admissible_count": 11,
+      "repeated_exception_with_residual_count": 4,
+      "collision_free_completion_count": 4,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": {
+        "A": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "N": 6,
+        "span": 5,
+        "k": 4,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          3,
+          4,
+          5
+        ],
+        "residual": [
+          0
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [],
+        "beta": 0,
+        "collision_free_completion": true,
+        "completion": [
+          0,
+          3,
+          4,
+          5,
+          8
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            3
+          ]
+        ],
+        "completion_span": 8,
+        "reflection_shift": 3,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 0,
+        "repair_deleted_residual": [],
+        "repaired": [
+          0,
+          3,
+          4,
+          5,
+          8
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 6,
+        "completion_difference_support": 6
+      }
+    },
+    {
+      "N": 7,
+      "total_endpoint_normalized_subsets": 32,
+      "admissible_count": 16,
+      "repeated_exception_with_residual_count": 6,
+      "collision_free_completion_count": 4,
+      "blocked_completion_count": 2,
+      "same_span_completion_count": 4,
+      "same_span_blocked_count": 2,
+      "first_blocked": {
+        "A": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "N": 7,
+        "span": 6,
+        "k": 4,
+        "sigma": 6,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          3,
+          6
+        ],
+        "residual": [
+          2
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                2,
+                2
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                2
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        "completion_repeated_sums": [
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "completion_span": 6,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          2
+        ],
+        "repaired": [
+          0,
+          3,
+          6
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "N": 7,
+        "span": 6,
+        "k": 4,
+        "sigma": 6,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          3,
+          6
+        ],
+        "residual": [
+          2
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                2,
+                2
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                2
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        "completion_repeated_sums": [
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "completion_span": 6,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          2
+        ],
+        "repaired": [
+          0,
+          3,
+          6
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          3,
+          4,
+          6
+        ],
+        "N": 7,
+        "span": 6,
+        "k": 4,
+        "sigma": 6,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          3,
+          6
+        ],
+        "residual": [
+          4
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                4,
+                4
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                4,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        "completion_repeated_sums": [
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "completion_span": 6,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          4
+        ],
+        "repaired": [
+          0,
+          3,
+          6
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      }
+    },
+    {
+      "N": 8,
+      "total_endpoint_normalized_subsets": 64,
+      "admissible_count": 22,
+      "repeated_exception_with_residual_count": 6,
+      "collision_free_completion_count": 6,
+      "blocked_completion_count": 0,
+      "same_span_completion_count": 0,
+      "same_span_blocked_count": 0,
+      "first_blocked": null,
+      "first_same_span_blocked": null,
+      "largest_beta": {
+        "A": [
+          0,
+          5,
+          6,
+          7
+        ],
+        "N": 8,
+        "span": 7,
+        "k": 4,
+        "sigma": 12,
+        "exceptional_multiplicity": 2,
+        "core": [
+          5,
+          6,
+          7
+        ],
+        "residual": [
+          0
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [],
+        "beta": 0,
+        "collision_free_completion": true,
+        "completion": [
+          0,
+          5,
+          6,
+          7,
+          12
+        ],
+        "completion_repeated_sums": [
+          [
+            12,
+            3
+          ]
+        ],
+        "completion_span": 12,
+        "reflection_shift": 5,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 0,
+        "repair_deleted_residual": [],
+        "repaired": [
+          0,
+          5,
+          6,
+          7,
+          12
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 6,
+        "completion_difference_support": 6
+      }
+    },
+    {
+      "N": 9,
+      "total_endpoint_normalized_subsets": 128,
+      "admissible_count": 33,
+      "repeated_exception_with_residual_count": 12,
+      "collision_free_completion_count": 10,
+      "blocked_completion_count": 2,
+      "same_span_completion_count": 6,
+      "same_span_blocked_count": 2,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          7,
+          8
+        ],
+        "N": 9,
+        "span": 8,
+        "k": 5,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "residual": [
+          3
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                3,
+                3
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                3
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "completion_span": 8,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          3
+        ],
+        "repaired": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          7,
+          8
+        ],
+        "N": 9,
+        "span": 8,
+        "k": 5,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "residual": [
+          3
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                3,
+                3
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                3
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "completion_span": 8,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          3
+        ],
+        "repaired": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          1,
+          5,
+          7,
+          8
+        ],
+        "N": 9,
+        "span": 8,
+        "k": 5,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "residual": [
+          5
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                7
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "completion_span": 8,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          5
+        ],
+        "repaired": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      }
+    },
+    {
+      "N": 10,
+      "total_endpoint_normalized_subsets": 256,
+      "admissible_count": 56,
+      "repeated_exception_with_residual_count": 26,
+      "collision_free_completion_count": 20,
+      "blocked_completion_count": 6,
+      "same_span_completion_count": 4,
+      "same_span_blocked_count": 4,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          8,
+          9
+        ],
+        "N": 10,
+        "span": 9,
+        "k": 5,
+        "sigma": 9,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "residual": [
+          3
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                3,
+                3
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                3
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          6,
+          8,
+          9
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "completion_span": 9,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          3
+        ],
+        "repaired": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          8,
+          9
+        ],
+        "N": 10,
+        "span": 9,
+        "k": 5,
+        "sigma": 9,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "residual": [
+          3
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                3,
+                3
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                3
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          6,
+          8,
+          9
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "completion_span": 9,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          3
+        ],
+        "repaired": [
+          0,
+          1,
+          8,
+          9
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          2,
+          5,
+          8,
+          9
+        ],
+        "N": 10,
+        "span": 9,
+        "k": 5,
+        "sigma": 10,
+        "exceptional_multiplicity": 2,
+        "core": [
+          2,
+          5,
+          8
+        ],
+        "residual": [
+          0,
+          9
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                0,
+                9
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                9
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                9,
+                9
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                8
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          2,
+          5,
+          8,
+          9,
+          10
+        ],
+        "completion_repeated_sums": [
+          [
+            2,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "completion_span": 10,
+        "reflection_shift": 1,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          9
+        ],
+        "repaired": [
+          2,
+          5,
+          8
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      }
+    },
+    {
+      "N": 11,
+      "total_endpoint_normalized_subsets": 512,
+      "admissible_count": 87,
+      "repeated_exception_with_residual_count": 50,
+      "collision_free_completion_count": 40,
+      "blocked_completion_count": 10,
+      "same_span_completion_count": 24,
+      "same_span_blocked_count": 4,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          6,
+          10
+        ],
+        "N": 11,
+        "span": 10,
+        "k": 5,
+        "sigma": 6,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          3,
+          6
+        ],
+        "residual": [
+          1,
+          10
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                1,
+                1
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                10
+              ]
+            ]
+          },
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                1,
+                10
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          -4,
+          0,
+          1,
+          3,
+          5,
+          6,
+          10
+        ],
+        "completion_repeated_sums": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ]
+        ],
+        "completion_span": 14,
+        "reflection_shift": 4,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          1
+        ],
+        "repaired": [
+          -4,
+          0,
+          3,
+          6,
+          10
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          5,
+          7,
+          10
+        ],
+        "N": 11,
+        "span": 10,
+        "k": 5,
+        "sigma": 10,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          5,
+          10
+        ],
+        "residual": [
+          1,
+          7
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                1,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                7
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                7,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                5
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          9,
+          10
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            14,
+            2
+          ]
+        ],
+        "completion_span": 10,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          1,
+          7
+        ],
+        "repaired": [
+          0,
+          5,
+          10
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          4,
+          7,
+          9,
+          10
+        ],
+        "N": 11,
+        "span": 10,
+        "k": 5,
+        "sigma": 14,
+        "exceptional_multiplicity": 2,
+        "core": [
+          4,
+          7,
+          10
+        ],
+        "residual": [
+          0,
+          9
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                9,
+                9
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                0,
+                9
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                4,
+                9
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          5,
+          7,
+          9,
+          10,
+          14
+        ],
+        "completion_repeated_sums": [
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            19,
+            2
+          ]
+        ],
+        "completion_span": 14,
+        "reflection_shift": 4,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          9
+        ],
+        "repaired": [
+          4,
+          7,
+          10
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      }
+    },
+    {
+      "N": 12,
+      "total_endpoint_normalized_subsets": 1024,
+      "admissible_count": 131,
+      "repeated_exception_with_residual_count": 78,
+      "collision_free_completion_count": 56,
+      "blocked_completion_count": 22,
+      "same_span_completion_count": 16,
+      "same_span_blocked_count": 4,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          3,
+          5,
+          11
+        ],
+        "N": 12,
+        "span": 11,
+        "k": 5,
+        "sigma": 6,
+        "exceptional_multiplicity": 2,
+        "core": [
+          1,
+          3,
+          5
+        ],
+        "residual": [
+          0,
+          11
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                0,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                5
+              ]
+            ]
+          },
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                0,
+                0
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                11
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          -5,
+          0,
+          1,
+          3,
+          5,
+          6,
+          11
+        ],
+        "completion_repeated_sums": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "completion_span": 16,
+        "reflection_shift": 5,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          0
+        ],
+        "repaired": [
+          -5,
+          1,
+          3,
+          5,
+          11
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          4,
+          10,
+          11
+        ],
+        "N": 12,
+        "span": 11,
+        "k": 5,
+        "sigma": 11,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "residual": [
+          4
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                4,
+                4
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                4
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          4,
+          7,
+          10,
+          11
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            14,
+            2
+          ]
+        ],
+        "completion_span": 11,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          4
+        ],
+        "repaired": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          6,
+          8,
+          10,
+          11
+        ],
+        "N": 12,
+        "span": 11,
+        "k": 5,
+        "sigma": 16,
+        "exceptional_multiplicity": 2,
+        "core": [
+          6,
+          8,
+          10
+        ],
+        "residual": [
+          0,
+          11
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                0,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                11
+              ]
+            ]
+          },
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                11,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          5,
+          6,
+          8,
+          10,
+          11,
+          16
+        ],
+        "completion_repeated_sums": [
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            21,
+            2
+          ],
+          [
+            22,
+            2
+          ]
+        ],
+        "completion_span": 16,
+        "reflection_shift": 5,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          11
+        ],
+        "repaired": [
+          6,
+          8,
+          10
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      }
+    },
+    {
+      "N": 13,
+      "total_endpoint_normalized_subsets": 2048,
+      "admissible_count": 172,
+      "repeated_exception_with_residual_count": 102,
+      "collision_free_completion_count": 70,
+      "blocked_completion_count": 32,
+      "same_span_completion_count": 40,
+      "same_span_blocked_count": 22,
+      "first_blocked": {
+        "A": [
+          0,
+          4,
+          6,
+          12
+        ],
+        "N": 13,
+        "span": 12,
+        "k": 4,
+        "sigma": 12,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          6,
+          12
+        ],
+        "residual": [
+          4
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                4,
+                4
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                4
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          6,
+          8,
+          12
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "completion_span": 12,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          4
+        ],
+        "repaired": [
+          0,
+          6,
+          12
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          4,
+          6,
+          12
+        ],
+        "N": 13,
+        "span": 12,
+        "k": 4,
+        "sigma": 12,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          6,
+          12
+        ],
+        "residual": [
+          4
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                4,
+                4
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                4
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          6,
+          8,
+          12
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "completion_span": 12,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          4
+        ],
+        "repaired": [
+          0,
+          6,
+          12
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          5,
+          6,
+          8,
+          12
+        ],
+        "N": 13,
+        "span": 12,
+        "k": 5,
+        "sigma": 12,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          6,
+          12
+        ],
+        "residual": [
+          5,
+          8
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                5,
+                8
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                6
+              ]
+            ]
+          },
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                8
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                8,
+                8
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                12
+              ]
+            ]
+          }
+        ],
+        "beta": 3,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          12
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "completion_span": 12,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          5,
+          8
+        ],
+        "repaired": [
+          0,
+          6,
+          12
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 9
+      }
+    },
+    {
+      "N": 14,
+      "total_endpoint_normalized_subsets": 4096,
+      "admissible_count": 256,
+      "repeated_exception_with_residual_count": 154,
+      "collision_free_completion_count": 128,
+      "blocked_completion_count": 26,
+      "same_span_completion_count": 32,
+      "same_span_blocked_count": 4,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          2,
+          5,
+          13
+        ],
+        "N": 14,
+        "span": 13,
+        "k": 5,
+        "sigma": 2,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          2
+        ],
+        "residual": [
+          5,
+          13
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                13
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -11,
+          -3,
+          0,
+          1,
+          2,
+          5,
+          13
+        ],
+        "completion_repeated_sums": [
+          [
+            -6,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "completion_span": 24,
+        "reflection_shift": 11,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          5
+        ],
+        "repaired": [
+          -11,
+          0,
+          1,
+          2,
+          13
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          2,
+          5,
+          11,
+          13
+        ],
+        "N": 14,
+        "span": 13,
+        "k": 5,
+        "sigma": 13,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          2,
+          11,
+          13
+        ],
+        "residual": [
+          5
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                2,
+                5
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          5,
+          8,
+          11,
+          13
+        ],
+        "completion_repeated_sums": [
+          [
+            10,
+            2
+          ],
+          [
+            13,
+            3
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "completion_span": 13,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          5
+        ],
+        "repaired": [
+          0,
+          2,
+          11,
+          13
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          8,
+          9,
+          10,
+          13
+        ],
+        "N": 14,
+        "span": 13,
+        "k": 5,
+        "sigma": 18,
+        "exceptional_multiplicity": 2,
+        "core": [
+          8,
+          9,
+          10
+        ],
+        "residual": [
+          0,
+          13
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                0,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                13
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                13,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                8
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          5,
+          8,
+          9,
+          10,
+          13,
+          18
+        ],
+        "completion_repeated_sums": [
+          [
+            10,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            26,
+            2
+          ]
+        ],
+        "completion_span": 18,
+        "reflection_shift": 5,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          13
+        ],
+        "repaired": [
+          8,
+          9,
+          10
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      }
+    },
+    {
+      "N": 15,
+      "total_endpoint_normalized_subsets": 8192,
+      "admissible_count": 338,
+      "repeated_exception_with_residual_count": 212,
+      "collision_free_completion_count": 154,
+      "blocked_completion_count": 58,
+      "same_span_completion_count": 90,
+      "same_span_blocked_count": 30,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          4,
+          8,
+          14
+        ],
+        "N": 15,
+        "span": 14,
+        "k": 5,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          4,
+          8
+        ],
+        "residual": [
+          1,
+          14
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                1,
+                1
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                14
+              ]
+            ]
+          },
+          {
+            "label": 7,
+            "virtual_residual_pairs": [
+              [
+                1,
+                14
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                8
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          -6,
+          0,
+          1,
+          4,
+          7,
+          8,
+          14
+        ],
+        "completion_repeated_sums": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            2
+          ]
+        ],
+        "completion_span": 20,
+        "reflection_shift": 6,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          1
+        ],
+        "repaired": [
+          -6,
+          0,
+          4,
+          8,
+          14
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          5,
+          7,
+          14
+        ],
+        "N": 15,
+        "span": 14,
+        "k": 5,
+        "sigma": 14,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          7,
+          14
+        ],
+        "residual": [
+          1,
+          5
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                5
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          5,
+          7,
+          9,
+          13,
+          14
+        ],
+        "completion_repeated_sums": [
+          [
+            10,
+            2
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "completion_span": 14,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          5
+        ],
+        "repaired": [
+          0,
+          1,
+          7,
+          13,
+          14
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          7,
+          8,
+          10,
+          14
+        ],
+        "N": 15,
+        "span": 14,
+        "k": 5,
+        "sigma": 14,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          7,
+          14
+        ],
+        "residual": [
+          8,
+          10
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                8,
+                8
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                10
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                8,
+                10
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                10,
+                14
+              ]
+            ]
+          },
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                10,
+                10
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                14
+              ]
+            ]
+          }
+        ],
+        "beta": 3,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          10,
+          14
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            20,
+            2
+          ]
+        ],
+        "completion_span": 14,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          8,
+          10
+        ],
+        "repaired": [
+          0,
+          7,
+          14
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 12,
+        "completion_difference_support": 9
+      }
+    },
+    {
+      "N": 16,
+      "total_endpoint_normalized_subsets": 16384,
+      "admissible_count": 498,
+      "repeated_exception_with_residual_count": 320,
+      "collision_free_completion_count": 242,
+      "blocked_completion_count": 78,
+      "same_span_completion_count": 68,
+      "same_span_blocked_count": 32,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          4,
+          7,
+          15
+        ],
+        "N": 16,
+        "span": 15,
+        "k": 5,
+        "sigma": 8,
+        "exceptional_multiplicity": 2,
+        "core": [
+          1,
+          4,
+          7
+        ],
+        "residual": [
+          0,
+          15
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 7,
+            "virtual_residual_pairs": [
+              [
+                0,
+                15
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                7
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                0,
+                0
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                7,
+                15
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          -7,
+          0,
+          1,
+          4,
+          7,
+          8,
+          15
+        ],
+        "completion_repeated_sums": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "completion_span": 22,
+        "reflection_shift": 7,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          0
+        ],
+        "repaired": [
+          -7,
+          1,
+          4,
+          7,
+          15
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          5,
+          14,
+          15
+        ],
+        "N": 16,
+        "span": 15,
+        "k": 5,
+        "sigma": 15,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          14,
+          15
+        ],
+        "residual": [
+          5
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                5
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          5,
+          10,
+          14,
+          15
+        ],
+        "completion_repeated_sums": [
+          [
+            10,
+            2
+          ],
+          [
+            15,
+            3
+          ],
+          [
+            20,
+            2
+          ]
+        ],
+        "completion_span": 15,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          5
+        ],
+        "repaired": [
+          0,
+          1,
+          14,
+          15
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          3,
+          5,
+          11,
+          12,
+          15
+        ],
+        "N": 16,
+        "span": 15,
+        "k": 6,
+        "sigma": 15,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          3,
+          12,
+          15
+        ],
+        "residual": [
+          5,
+          11
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 2,
+        "core_sum_support": 9,
+        "residual_sum_labels": 11,
+        "core_difference_support": 4,
+        "residual_difference_labels": 9,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                5,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                11,
+                12
+              ]
+            ]
+          },
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                5,
+                5
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                5
+              ]
+            ]
+          },
+          {
+            "label": 7,
+            "virtual_residual_pairs": [
+              [
+                11,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                5,
+                12
+              ]
+            ]
+          }
+        ],
+        "beta": 3,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          15
+        ],
+        "completion_repeated_sums": [
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            22,
+            2
+          ]
+        ],
+        "completion_span": 15,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          5,
+          11
+        ],
+        "repaired": [
+          0,
+          3,
+          12,
+          15
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 16,
+        "completion_difference_support": 13
+      }
+    },
+    {
+      "N": 17,
+      "total_endpoint_normalized_subsets": 32768,
+      "admissible_count": 657,
+      "repeated_exception_with_residual_count": 438,
+      "collision_free_completion_count": 298,
+      "blocked_completion_count": 140,
+      "same_span_completion_count": 160,
+      "same_span_blocked_count": 56,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          2,
+          6,
+          16
+        ],
+        "N": 17,
+        "span": 16,
+        "k": 5,
+        "sigma": 2,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          2
+        ],
+        "residual": [
+          6,
+          16
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                6,
+                6
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                16
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -14,
+          -4,
+          0,
+          1,
+          2,
+          6,
+          16
+        ],
+        "completion_repeated_sums": [
+          [
+            -8,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "completion_span": 30,
+        "reflection_shift": 14,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          6
+        ],
+        "repaired": [
+          -14,
+          0,
+          1,
+          2,
+          16
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          8,
+          14,
+          16
+        ],
+        "N": 17,
+        "span": 16,
+        "k": 5,
+        "sigma": 16,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          8,
+          16
+        ],
+        "residual": [
+          1,
+          14
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 1,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                1,
+                14
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          {
+            "label": 14,
+            "virtual_residual_pairs": [
+              [
+                1,
+                1
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                14
+              ]
+            ]
+          }
+        ],
+        "beta": 2,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          2,
+          8,
+          14,
+          15,
+          16
+        ],
+        "completion_repeated_sums": [
+          [
+            2,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            30,
+            2
+          ]
+        ],
+        "completion_span": 16,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          1
+        ],
+        "repaired": [
+          0,
+          2,
+          8,
+          14,
+          16
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 10
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          16
+        ],
+        "N": 17,
+        "span": 16,
+        "k": 6,
+        "sigma": 10,
+        "exceptional_multiplicity": 2,
+        "core": [
+          4,
+          5,
+          6
+        ],
+        "residual": [
+          0,
+          13,
+          16
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 3,
+        "core_sum_support": 5,
+        "residual_sum_labels": 15,
+        "core_difference_support": 2,
+        "residual_difference_labels": 12,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                0,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                13,
+                16
+              ]
+            ]
+          },
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                0,
+                16
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                6
+              ]
+            ]
+          },
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                0,
+                0
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                16
+              ]
+            ]
+          },
+          {
+            "label": 16,
+            "virtual_residual_pairs": [
+              [
+                13,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                16
+              ]
+            ]
+          }
+        ],
+        "beta": 4,
+        "collision_free_completion": false,
+        "completion": [
+          -6,
+          -3,
+          0,
+          4,
+          5,
+          6,
+          10,
+          13,
+          16
+        ],
+        "completion_repeated_sums": [
+          [
+            -6,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            26,
+            2
+          ]
+        ],
+        "completion_span": 22,
+        "reflection_shift": 6,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          13
+        ],
+        "repaired": [
+          -6,
+          4,
+          5,
+          6,
+          16
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 20,
+        "completion_difference_support": 16
+      }
+    },
+    {
+      "N": 18,
+      "total_endpoint_normalized_subsets": 65536,
+      "admissible_count": 946,
+      "repeated_exception_with_residual_count": 640,
+      "collision_free_completion_count": 426,
+      "blocked_completion_count": 214,
+      "same_span_completion_count": 128,
+      "same_span_blocked_count": 60,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          5,
+          10,
+          17
+        ],
+        "N": 18,
+        "span": 17,
+        "k": 5,
+        "sigma": 10,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          5,
+          10
+        ],
+        "residual": [
+          1,
+          17
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 2,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                17
+              ]
+            ],
+            "A_difference_pairs": []
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -7,
+          0,
+          1,
+          5,
+          9,
+          10,
+          17
+        ],
+        "completion_repeated_sums": [
+          [
+            2,
+            2
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "completion_span": 24,
+        "reflection_shift": 7,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          1
+        ],
+        "repaired": [
+          -7,
+          0,
+          5,
+          10,
+          17
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          6,
+          16,
+          17
+        ],
+        "N": 18,
+        "span": 17,
+        "k": 5,
+        "sigma": 17,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          16,
+          17
+        ],
+        "residual": [
+          6
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                6,
+                6
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          6,
+          11,
+          16,
+          17
+        ],
+        "completion_repeated_sums": [
+          [
+            12,
+            2
+          ],
+          [
+            17,
+            3
+          ],
+          [
+            22,
+            2
+          ]
+        ],
+        "completion_span": 17,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          6
+        ],
+        "repaired": [
+          0,
+          1,
+          16,
+          17
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          6,
+          10,
+          14,
+          15,
+          17
+        ],
+        "N": 18,
+        "span": 17,
+        "k": 6,
+        "sigma": 20,
+        "exceptional_multiplicity": 2,
+        "core": [
+          6,
+          10,
+          14
+        ],
+        "residual": [
+          0,
+          15,
+          17
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 3,
+        "core_sum_support": 5,
+        "residual_sum_labels": 15,
+        "core_difference_support": 2,
+        "residual_difference_labels": 12,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                0,
+                17
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                14,
+                17
+              ]
+            ]
+          },
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                0,
+                15
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                10,
+                15
+              ]
+            ]
+          },
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                15,
+                15
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                10
+              ]
+            ]
+          },
+          {
+            "label": 14,
+            "virtual_residual_pairs": [
+              [
+                17,
+                17
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                14
+              ]
+            ]
+          }
+        ],
+        "beta": 4,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          3,
+          5,
+          6,
+          10,
+          14,
+          15,
+          17,
+          20
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            20,
+            5
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            34,
+            2
+          ]
+        ],
+        "completion_span": 20,
+        "reflection_shift": 3,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 3,
+        "repair_deleted_residual": [
+          0,
+          15,
+          17
+        ],
+        "repaired": [
+          6,
+          10,
+          14
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 20,
+        "completion_difference_support": 16
+      }
+    },
+    {
+      "N": 19,
+      "total_endpoint_normalized_subsets": 131072,
+      "admissible_count": 1310,
+      "repeated_exception_with_residual_count": 960,
+      "collision_free_completion_count": 576,
+      "blocked_completion_count": 384,
+      "same_span_completion_count": 326,
+      "same_span_blocked_count": 192,
+      "first_blocked": {
+        "A": [
+          0,
+          6,
+          9,
+          18
+        ],
+        "N": 19,
+        "span": 18,
+        "k": 4,
+        "sigma": 18,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          9,
+          18
+        ],
+        "residual": [
+          6
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                6,
+                6
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          6,
+          9,
+          12,
+          18
+        ],
+        "completion_repeated_sums": [
+          [
+            12,
+            2
+          ],
+          [
+            18,
+            3
+          ],
+          [
+            24,
+            2
+          ]
+        ],
+        "completion_span": 18,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          6
+        ],
+        "repaired": [
+          0,
+          9,
+          18
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          6,
+          9,
+          18
+        ],
+        "N": 19,
+        "span": 18,
+        "k": 4,
+        "sigma": 18,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          9,
+          18
+        ],
+        "residual": [
+          6
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 1,
+        "core_sum_support": 5,
+        "residual_sum_labels": 4,
+        "core_difference_support": 2,
+        "residual_difference_labels": 3,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                6,
+                6
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                6
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          6,
+          9,
+          12,
+          18
+        ],
+        "completion_repeated_sums": [
+          [
+            12,
+            2
+          ],
+          [
+            18,
+            3
+          ],
+          [
+            24,
+            2
+          ]
+        ],
+        "completion_span": 18,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          6
+        ],
+        "repaired": [
+          0,
+          9,
+          18
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 6,
+        "completion_difference_support": 5
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          8,
+          11,
+          13,
+          17,
+          18
+        ],
+        "N": 19,
+        "span": 18,
+        "k": 6,
+        "sigma": 26,
+        "exceptional_multiplicity": 2,
+        "core": [
+          8,
+          13,
+          18
+        ],
+        "residual": [
+          0,
+          11,
+          17
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 3,
+        "core_sum_support": 5,
+        "residual_sum_labels": 15,
+        "core_difference_support": 2,
+        "residual_difference_labels": 12,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                11,
+                17
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                11,
+                13
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                11,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                13,
+                17
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                17,
+                17
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          {
+            "label": 9,
+            "virtual_residual_pairs": [
+              [
+                0,
+                17
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                8,
+                17
+              ]
+            ]
+          }
+        ],
+        "beta": 4,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          8,
+          9,
+          11,
+          13,
+          15,
+          17,
+          18,
+          26
+        ],
+        "completion_repeated_sums": [
+          [
+            17,
+            2
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            22,
+            2
+          ],
+          [
+            24,
+            2
+          ],
+          [
+            26,
+            5
+          ],
+          [
+            28,
+            2
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            34,
+            2
+          ],
+          [
+            35,
+            2
+          ]
+        ],
+        "completion_span": 26,
+        "reflection_shift": 8,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 3,
+        "repair_deleted_residual": [
+          0,
+          11,
+          17
+        ],
+        "repaired": [
+          8,
+          13,
+          18
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 20,
+        "completion_difference_support": 16
+      }
+    },
+    {
+      "N": 20,
+      "total_endpoint_normalized_subsets": 262144,
+      "admissible_count": 1821,
+      "repeated_exception_with_residual_count": 1316,
+      "collision_free_completion_count": 838,
+      "blocked_completion_count": 478,
+      "same_span_completion_count": 268,
+      "same_span_blocked_count": 118,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          2,
+          7,
+          19
+        ],
+        "N": 20,
+        "span": 19,
+        "k": 5,
+        "sigma": 2,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          2
+        ],
+        "residual": [
+          7,
+          19
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 12,
+            "virtual_residual_pairs": [
+              [
+                7,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                7,
+                19
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -17,
+          -5,
+          0,
+          1,
+          2,
+          7,
+          19
+        ],
+        "completion_repeated_sums": [
+          [
+            -10,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            14,
+            2
+          ]
+        ],
+        "completion_span": 36,
+        "reflection_shift": 17,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          7
+        ],
+        "repaired": [
+          -17,
+          0,
+          1,
+          2,
+          19
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          2,
+          7,
+          17,
+          19
+        ],
+        "N": 20,
+        "span": 19,
+        "k": 5,
+        "sigma": 19,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          2,
+          17,
+          19
+        ],
+        "residual": [
+          7
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 5,
+            "virtual_residual_pairs": [
+              [
+                7,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                2,
+                7
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          7,
+          12,
+          17,
+          19
+        ],
+        "completion_repeated_sums": [
+          [
+            14,
+            2
+          ],
+          [
+            19,
+            3
+          ],
+          [
+            24,
+            2
+          ]
+        ],
+        "completion_span": 19,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          7
+        ],
+        "repaired": [
+          0,
+          2,
+          17,
+          19
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          10,
+          11,
+          14,
+          17,
+          19
+        ],
+        "N": 20,
+        "span": 19,
+        "k": 6,
+        "sigma": 28,
+        "exceptional_multiplicity": 2,
+        "core": [
+          11,
+          14,
+          17
+        ],
+        "residual": [
+          0,
+          10,
+          19
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 3,
+        "core_sum_support": 5,
+        "residual_sum_labels": 15,
+        "core_difference_support": 2,
+        "residual_difference_labels": 12,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                10,
+                19
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                10,
+                11
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                10,
+                10
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                11,
+                19
+              ]
+            ]
+          },
+          {
+            "label": 9,
+            "virtual_residual_pairs": [
+              [
+                0,
+                19
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                10,
+                19
+              ]
+            ]
+          },
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                19,
+                19
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                10
+              ]
+            ]
+          }
+        ],
+        "beta": 4,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          9,
+          10,
+          11,
+          14,
+          17,
+          18,
+          19,
+          28
+        ],
+        "completion_repeated_sums": [
+          [
+            18,
+            2
+          ],
+          [
+            19,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            27,
+            2
+          ],
+          [
+            28,
+            5
+          ],
+          [
+            29,
+            2
+          ],
+          [
+            36,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            38,
+            2
+          ]
+        ],
+        "completion_span": 28,
+        "reflection_shift": 9,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 3,
+        "repair_deleted_residual": [
+          0,
+          10,
+          19
+        ],
+        "repaired": [
+          11,
+          14,
+          17
+        ],
+        "repaired_pair_count": 1,
+        "repaired_size": 3,
+        "orbit_total": 20,
+        "completion_difference_support": 16
+      }
+    },
+    {
+      "N": 21,
+      "total_endpoint_normalized_subsets": 524288,
+      "admissible_count": 2302,
+      "repeated_exception_with_residual_count": 1704,
+      "collision_free_completion_count": 1118,
+      "blocked_completion_count": 586,
+      "same_span_completion_count": 550,
+      "same_span_blocked_count": 186,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          5,
+          9,
+          20
+        ],
+        "N": 21,
+        "span": 20,
+        "k": 5,
+        "sigma": 10,
+        "exceptional_multiplicity": 2,
+        "core": [
+          1,
+          5,
+          9
+        ],
+        "residual": [
+          0,
+          20
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 2,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "A_difference_pairs": []
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -10,
+          0,
+          1,
+          5,
+          9,
+          10,
+          20
+        ],
+        "completion_repeated_sums": [
+          [
+            0,
+            2
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            20,
+            2
+          ]
+        ],
+        "completion_span": 30,
+        "reflection_shift": 10,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          0
+        ],
+        "repaired": [
+          -10,
+          1,
+          5,
+          9,
+          20
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          7,
+          10,
+          20
+        ],
+        "N": 21,
+        "span": 20,
+        "k": 5,
+        "sigma": 20,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          10,
+          20
+        ],
+        "residual": [
+          1,
+          7
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 3,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 6,
+            "virtual_residual_pairs": [
+              [
+                7,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                1,
+                7
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          7,
+          10,
+          13,
+          19,
+          20
+        ],
+        "completion_repeated_sums": [
+          [
+            14,
+            2
+          ],
+          [
+            20,
+            4
+          ],
+          [
+            26,
+            2
+          ]
+        ],
+        "completion_span": 20,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          7
+        ],
+        "repaired": [
+          0,
+          1,
+          10,
+          19,
+          20
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          9,
+          12,
+          13,
+          15,
+          20
+        ],
+        "N": 21,
+        "span": 20,
+        "k": 6,
+        "sigma": 24,
+        "exceptional_multiplicity": 2,
+        "core": [
+          9,
+          12,
+          15
+        ],
+        "residual": [
+          0,
+          13,
+          20
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 3,
+        "core_sum_support": 5,
+        "residual_sum_labels": 15,
+        "core_difference_support": 2,
+        "residual_difference_labels": 12,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 2,
+            "virtual_residual_pairs": [
+              [
+                13,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                13,
+                15
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                0,
+                20
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                9,
+                13
+              ]
+            ]
+          },
+          {
+            "label": 9,
+            "virtual_residual_pairs": [
+              [
+                13,
+                20
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                9
+              ]
+            ]
+          },
+          {
+            "label": 11,
+            "virtual_residual_pairs": [
+              [
+                0,
+                13
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                9,
+                20
+              ]
+            ]
+          }
+        ],
+        "beta": 4,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          4,
+          9,
+          11,
+          12,
+          13,
+          15,
+          20,
+          24
+        ],
+        "completion_repeated_sums": [
+          [
+            13,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            22,
+            2
+          ],
+          [
+            24,
+            5
+          ],
+          [
+            26,
+            2
+          ],
+          [
+            28,
+            2
+          ],
+          [
+            33,
+            2
+          ],
+          [
+            35,
+            2
+          ]
+        ],
+        "completion_span": 24,
+        "reflection_shift": 4,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 2,
+        "repair_deleted_residual": [
+          0,
+          13
+        ],
+        "repaired": [
+          4,
+          9,
+          12,
+          15,
+          20
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 20,
+        "completion_difference_support": 16
+      }
+    },
+    {
+      "N": 22,
+      "total_endpoint_normalized_subsets": 1048576,
+      "admissible_count": 3302,
+      "repeated_exception_with_residual_count": 2430,
+      "collision_free_completion_count": 1592,
+      "blocked_completion_count": 838,
+      "same_span_completion_count": 420,
+      "same_span_blocked_count": 266,
+      "first_blocked": {
+        "A": [
+          0,
+          1,
+          6,
+          12,
+          21
+        ],
+        "N": 22,
+        "span": 21,
+        "k": 5,
+        "sigma": 12,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          6,
+          12
+        ],
+        "residual": [
+          1,
+          21
+        ],
+        "p": 1,
+        "delta": 1,
+        "c": 3,
+        "u": 2,
+        "core_sum_support": 5,
+        "residual_sum_labels": 9,
+        "core_difference_support": 2,
+        "residual_difference_labels": 7,
+        "virtual_pair_count": 3,
+        "virtual_distinct_labels": 2,
+        "virtual_new_labels": 2,
+        "virtual_collisions": [
+          {
+            "label": 10,
+            "virtual_residual_pairs": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                21
+              ]
+            ],
+            "A_difference_pairs": []
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          -9,
+          0,
+          1,
+          6,
+          11,
+          12,
+          21
+        ],
+        "completion_repeated_sums": [
+          [
+            2,
+            2
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            22,
+            2
+          ]
+        ],
+        "completion_span": 30,
+        "reflection_shift": 9,
+        "same_span_completion": false,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          1
+        ],
+        "repaired": [
+          -9,
+          0,
+          6,
+          12,
+          21
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 5,
+        "orbit_total": 12,
+        "completion_difference_support": 11
+      },
+      "first_same_span_blocked": {
+        "A": [
+          0,
+          1,
+          7,
+          20,
+          21
+        ],
+        "N": 22,
+        "span": 21,
+        "k": 5,
+        "sigma": 21,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          1,
+          20,
+          21
+        ],
+        "residual": [
+          7
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 1,
+        "core_sum_support": 9,
+        "residual_sum_labels": 5,
+        "core_difference_support": 4,
+        "residual_difference_labels": 4,
+        "virtual_pair_count": 1,
+        "virtual_distinct_labels": 1,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 7,
+            "virtual_residual_pairs": [
+              [
+                7,
+                7
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                0,
+                7
+              ]
+            ]
+          }
+        ],
+        "beta": 1,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          1,
+          7,
+          14,
+          20,
+          21
+        ],
+        "completion_repeated_sums": [
+          [
+            14,
+            2
+          ],
+          [
+            21,
+            3
+          ],
+          [
+            28,
+            2
+          ]
+        ],
+        "completion_span": 21,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 1,
+        "repair_deleted_residual": [
+          7
+        ],
+        "repaired": [
+          0,
+          1,
+          20,
+          21
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 9,
+        "completion_difference_support": 8
+      },
+      "largest_beta": {
+        "A": [
+          0,
+          2,
+          6,
+          11,
+          18,
+          19,
+          21
+        ],
+        "N": 22,
+        "span": 21,
+        "k": 7,
+        "sigma": 21,
+        "exceptional_multiplicity": 2,
+        "core": [
+          0,
+          2,
+          19,
+          21
+        ],
+        "residual": [
+          6,
+          11,
+          18
+        ],
+        "p": 2,
+        "delta": 0,
+        "c": 4,
+        "u": 3,
+        "core_sum_support": 9,
+        "residual_sum_labels": 18,
+        "core_difference_support": 4,
+        "residual_difference_labels": 15,
+        "virtual_pair_count": 6,
+        "virtual_distinct_labels": 6,
+        "virtual_new_labels": 0,
+        "virtual_collisions": [
+          {
+            "label": 1,
+            "virtual_residual_pairs": [
+              [
+                11,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                18,
+                19
+              ]
+            ]
+          },
+          {
+            "label": 3,
+            "virtual_residual_pairs": [
+              [
+                6,
+                18
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                18,
+                21
+              ]
+            ]
+          },
+          {
+            "label": 4,
+            "virtual_residual_pairs": [
+              [
+                6,
+                11
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                2,
+                6
+              ]
+            ]
+          },
+          {
+            "label": 8,
+            "virtual_residual_pairs": [
+              [
+                11,
+                18
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                11,
+                19
+              ]
+            ]
+          },
+          {
+            "label": 9,
+            "virtual_residual_pairs": [
+              [
+                6,
+                6
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                2,
+                11
+              ]
+            ]
+          },
+          {
+            "label": 15,
+            "virtual_residual_pairs": [
+              [
+                18,
+                18
+              ]
+            ],
+            "A_difference_pairs": [
+              [
+                6,
+                21
+              ]
+            ]
+          }
+        ],
+        "beta": 6,
+        "collision_free_completion": false,
+        "completion": [
+          0,
+          2,
+          3,
+          6,
+          10,
+          11,
+          15,
+          18,
+          19,
+          21
+        ],
+        "completion_repeated_sums": [
+          [
+            6,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            18,
+            2
+          ],
+          [
+            20,
+            2
+          ],
+          [
+            21,
+            5
+          ],
+          [
+            22,
+            2
+          ],
+          [
+            24,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            29,
+            2
+          ],
+          [
+            30,
+            2
+          ],
+          [
+            36,
+            2
+          ]
+        ],
+        "completion_span": 21,
+        "reflection_shift": 0,
+        "same_span_completion": true,
+        "repair_deleted_residual_count": 3,
+        "repair_deleted_residual": [
+          6,
+          11,
+          18
+        ],
+        "repaired": [
+          0,
+          2,
+          19,
+          21
+        ],
+        "repaired_pair_count": 2,
+        "repaired_size": 4,
+        "orbit_total": 25,
+        "completion_difference_support": 19
+      }
+    }
+  ]
+}

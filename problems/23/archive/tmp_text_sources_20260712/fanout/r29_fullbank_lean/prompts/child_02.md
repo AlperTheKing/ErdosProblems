@@ -1,0 +1,1 @@
+Audit FullBankGlobalPackage and all related package/certificate structures field by field. Identify the first field that cannot currently be constructed from a real finite triangle-free graph and selected shortest-row data. State its exact Lean type and all upstream hypotheses needed to build it.

@@ -1,0 +1,6305 @@
+{
+  "arithmetic": "integer and Fraction",
+  "report_count": 137,
+  "large_subcritical_count": 37,
+  "signed_count_extrema": {
+    "minimum": {
+      "sample_id": "singer-natural-fb93340eb02a",
+      "kind": "reflected-singer-natural",
+      "p": 104,
+      "b": 2,
+      "h": 14154,
+      "max_E": 28308,
+      "delta": 2019,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2737,
+          "sum_sum_coordinate": 45475026,
+          "sum_difference_coordinate": -6741002,
+          "sum_residue": 16006398,
+          "sum_centered_residue": -6721228,
+          "sum_abs_centered_residue": 21258880,
+          "sum_square_centered_residue": 209800502000
+        },
+        "2": {
+          "count": 1355,
+          "sum_sum_coordinate": 31842316,
+          "sum_difference_coordinate": 6512314,
+          "sum_residue": 12663646,
+          "sum_centered_residue": 6151332,
+          "sum_abs_centered_residue": 7347960,
+          "sum_square_centered_residue": 58136539144
+        }
+      },
+      "signed_count": 1382,
+      "signed_residue_moment": 3342752,
+      "signed_centered_moment": -12872560,
+      "signed_count_over_p2": "691/5408",
+      "signed_residue_moment_over_hp2": "14923/683436",
+      "signed_centered_moment_over_hp2": "-804535/9568104"
+    },
+    "maximum": {
+      "sample_id": "singer-natural-5c113afa2918",
+      "kind": "reflected-singer-natural",
+      "p": 74,
+      "b": 1,
+      "h": 6760,
+      "max_E": 13519,
+      "delta": 1418,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1821,
+          "sum_sum_coordinate": 13747008,
+          "sum_difference_coordinate": -1438869,
+          "sum_residue": 5344328,
+          "sum_centered_residue": -1619483,
+          "sum_abs_centered_residue": 7402891,
+          "sum_square_centered_residue": 36062758981
+        },
+        "2": {
+          "count": 436,
+          "sum_sum_coordinate": 4805293,
+          "sum_difference_coordinate": 1088991,
+          "sum_residue": 1857933,
+          "sum_centered_residue": 768942,
+          "sum_abs_centered_residue": 1009796,
+          "sum_square_centered_residue": 3469757108
+        }
+      },
+      "signed_count": 1385,
+      "signed_residue_moment": 3486395,
+      "signed_centered_moment": -2388425,
+      "signed_count_over_p2": "1385/5476",
+      "signed_residue_moment_over_hp2": "697279/7403552",
+      "signed_centered_moment_over_hp2": "-36745/569504"
+    }
+  },
+  "signed_residue_moment_extrema": {
+    "minimum": {
+      "sample_id": "singer-natural-fb93340eb02a",
+      "kind": "reflected-singer-natural",
+      "p": 104,
+      "b": 2,
+      "h": 14154,
+      "max_E": 28308,
+      "delta": 2019,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2737,
+          "sum_sum_coordinate": 45475026,
+          "sum_difference_coordinate": -6741002,
+          "sum_residue": 16006398,
+          "sum_centered_residue": -6721228,
+          "sum_abs_centered_residue": 21258880,
+          "sum_square_centered_residue": 209800502000
+        },
+        "2": {
+          "count": 1355,
+          "sum_sum_coordinate": 31842316,
+          "sum_difference_coordinate": 6512314,
+          "sum_residue": 12663646,
+          "sum_centered_residue": 6151332,
+          "sum_abs_centered_residue": 7347960,
+          "sum_square_centered_residue": 58136539144
+        }
+      },
+      "signed_count": 1382,
+      "signed_residue_moment": 3342752,
+      "signed_centered_moment": -12872560,
+      "signed_count_over_p2": "691/5408",
+      "signed_residue_moment_over_hp2": "14923/683436",
+      "signed_centered_moment_over_hp2": "-804535/9568104"
+    },
+    "maximum": {
+      "sample_id": "singer-natural-5c113afa2918",
+      "kind": "reflected-singer-natural",
+      "p": 74,
+      "b": 1,
+      "h": 6760,
+      "max_E": 13519,
+      "delta": 1418,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1821,
+          "sum_sum_coordinate": 13747008,
+          "sum_difference_coordinate": -1438869,
+          "sum_residue": 5344328,
+          "sum_centered_residue": -1619483,
+          "sum_abs_centered_residue": 7402891,
+          "sum_square_centered_residue": 36062758981
+        },
+        "2": {
+          "count": 436,
+          "sum_sum_coordinate": 4805293,
+          "sum_difference_coordinate": 1088991,
+          "sum_residue": 1857933,
+          "sum_centered_residue": 768942,
+          "sum_abs_centered_residue": 1009796,
+          "sum_square_centered_residue": 3469757108
+        }
+      },
+      "signed_count": 1385,
+      "signed_residue_moment": 3486395,
+      "signed_centered_moment": -2388425,
+      "signed_count_over_p2": "1385/5476",
+      "signed_residue_moment_over_hp2": "697279/7403552",
+      "signed_centered_moment_over_hp2": "-36745/569504"
+    }
+  },
+  "signed_centered_moment_extrema": {
+    "minimum": {
+      "sample_id": "ruzsa-natural-73ab28188113",
+      "kind": "reflected-ruzsa-natural",
+      "p": 102,
+      "b": 1,
+      "h": 13342,
+      "max_E": 26683,
+      "delta": 2214,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2720,
+          "sum_sum_coordinate": 42567221,
+          "sum_difference_coordinate": -6279701,
+          "sum_residue": 14415601,
+          "sum_centered_residue": -7456318,
+          "sum_abs_centered_residue": 20415934,
+          "sum_square_centered_residue": 192227494248
+        },
+        "2": {
+          "count": 1249,
+          "sum_sum_coordinate": 27777501,
+          "sum_difference_coordinate": 5549566,
+          "sum_residue": 11113343,
+          "sum_centered_residue": 5563777,
+          "sum_abs_centered_residue": 6763313,
+          "sum_square_centered_residue": 53294648321
+        }
+      },
+      "signed_count": 1471,
+      "signed_residue_moment": 3302258,
+      "signed_centered_moment": -13020095,
+      "signed_count_over_p2": "1471/10404",
+      "signed_residue_moment_over_hp2": "1651129/69405084",
+      "signed_centered_moment_over_hp2": "-13020095/138810168"
+    },
+    "maximum": {
+      "sample_id": "ruzsa-natural-1d3b6cab5f17",
+      "kind": "reflected-ruzsa-natural",
+      "p": 72,
+      "b": 1,
+      "h": 6720,
+      "max_E": 13439,
+      "delta": 1021,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1571,
+          "sum_sum_coordinate": 11751547,
+          "sum_difference_coordinate": -1195998,
+          "sum_residue": 4749307,
+          "sum_centered_residue": -1056935,
+          "sum_abs_centered_residue": 6420339,
+          "sum_square_centered_residue": 31412305083
+        },
+        "2": {
+          "count": 437,
+          "sum_sum_coordinate": 4789426,
+          "sum_difference_coordinate": 1083417,
+          "sum_residue": 1852786,
+          "sum_centered_residue": 769369,
+          "sum_abs_centered_residue": 1064769,
+          "sum_square_centered_residue": 4002118029
+        }
+      },
+      "signed_count": 1134,
+      "signed_residue_moment": 2896521,
+      "signed_centered_moment": -1826304,
+      "signed_count_over_p2": "7/32",
+      "signed_residue_moment_over_hp2": "965507/11612160",
+      "signed_centered_moment_over_hp2": "-1189/22680"
+    }
+  },
+  "reports": [
+    {
+      "sample_id": "census-e8866fffe77f",
+      "kind": "census",
+      "p": 2,
+      "b": 2,
+      "h": 2,
+      "max_E": 4,
+      "delta": 4,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2,
+          "sum_sum_coordinate": 1,
+          "sum_difference_coordinate": -1,
+          "sum_residue": 1,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 2,
+          "sum_square_centered_residue": 4
+        },
+        "2": {
+          "count": 2,
+          "sum_sum_coordinate": 3,
+          "sum_difference_coordinate": 1,
+          "sum_residue": 1,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 2,
+          "sum_square_centered_residue": 4
+        }
+      },
+      "signed_count": 0,
+      "signed_residue_moment": 0,
+      "signed_centered_moment": 0,
+      "signed_count_over_p2": "0",
+      "signed_residue_moment_over_hp2": "0",
+      "signed_centered_moment_over_hp2": "0"
+    },
+    {
+      "sample_id": "bose-9cf01aec4c76",
+      "kind": "reflected-bose",
+      "p": 3,
+      "b": 2,
+      "h": 5,
+      "max_E": 10,
+      "delta": 8,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4,
+          "sum_sum_coordinate": 17,
+          "sum_difference_coordinate": -5,
+          "sum_residue": 7,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 10,
+          "sum_square_centered_residue": 36
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 26,
+          "sum_difference_coordinate": 6,
+          "sum_residue": 6,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 8,
+          "sum_square_centered_residue": 20
+        }
+      },
+      "signed_count": 0,
+      "signed_residue_moment": 1,
+      "signed_centered_moment": 2,
+      "signed_count_over_p2": "0",
+      "signed_residue_moment_over_hp2": "1/45",
+      "signed_centered_moment_over_hp2": "2/45"
+    },
+    {
+      "sample_id": "census-8f051a8ac9d4",
+      "kind": "census",
+      "p": 3,
+      "b": 1,
+      "h": 6,
+      "max_E": 11,
+      "delta": 7,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 5,
+          "sum_sum_coordinate": 30,
+          "sum_difference_coordinate": -5,
+          "sum_residue": 12,
+          "sum_centered_residue": -1,
+          "sum_abs_centered_residue": 17,
+          "sum_square_centered_residue": 69
+        },
+        "2": {
+          "count": 2,
+          "sum_sum_coordinate": 18,
+          "sum_difference_coordinate": 4,
+          "sum_residue": 6,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 4,
+          "sum_square_centered_residue": 10
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": 6,
+      "signed_centered_moment": -3,
+      "signed_count_over_p2": "1/3",
+      "signed_residue_moment_over_hp2": "1/9",
+      "signed_centered_moment_over_hp2": "-1/18"
+    },
+    {
+      "sample_id": "census-bf1d1a862e24",
+      "kind": "census",
+      "p": 3,
+      "b": 2,
+      "h": 5,
+      "max_E": 10,
+      "delta": 8,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 5,
+          "sum_sum_coordinate": 20,
+          "sum_difference_coordinate": -5,
+          "sum_residue": 10,
+          "sum_centered_residue": 5,
+          "sum_abs_centered_residue": 13,
+          "sum_square_centered_residue": 45
+        },
+        "2": {
+          "count": 3,
+          "sum_sum_coordinate": 19,
+          "sum_difference_coordinate": 5,
+          "sum_residue": 9,
+          "sum_centered_residue": 9,
+          "sum_abs_centered_residue": 9,
+          "sum_square_centered_residue": 35
+        }
+      },
+      "signed_count": 2,
+      "signed_residue_moment": 1,
+      "signed_centered_moment": -4,
+      "signed_count_over_p2": "2/9",
+      "signed_residue_moment_over_hp2": "1/45",
+      "signed_centered_moment_over_hp2": "-4/45"
+    },
+    {
+      "sample_id": "bose-fabe4def6586",
+      "kind": "reflected-bose",
+      "p": 4,
+      "b": 1,
+      "h": 10,
+      "max_E": 19,
+      "delta": 13,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 6,
+          "sum_sum_coordinate": 72,
+          "sum_difference_coordinate": -18,
+          "sum_residue": 22,
+          "sum_centered_residue": -10,
+          "sum_abs_centered_residue": 32,
+          "sum_square_centered_residue": 214
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 78,
+          "sum_difference_coordinate": 17,
+          "sum_residue": 28,
+          "sum_centered_residue": 11,
+          "sum_abs_centered_residue": 21,
+          "sum_square_centered_residue": 109
+        }
+      },
+      "signed_count": 1,
+      "signed_residue_moment": -6,
+      "signed_centered_moment": -21,
+      "signed_count_over_p2": "1/16",
+      "signed_residue_moment_over_hp2": "-3/80",
+      "signed_centered_moment_over_hp2": "-21/160"
+    },
+    {
+      "sample_id": "census-0260c8912dce",
+      "kind": "census",
+      "p": 4,
+      "b": 2,
+      "h": 10,
+      "max_E": 20,
+      "delta": 13,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 8,
+          "sum_sum_coordinate": 68,
+          "sum_difference_coordinate": -4,
+          "sum_residue": 38,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 320
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 56,
+          "sum_difference_coordinate": 16,
+          "sum_residue": 16,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 16,
+          "sum_square_centered_residue": 104
+        }
+      },
+      "signed_count": 4,
+      "signed_residue_moment": 22,
+      "signed_centered_moment": 12,
+      "signed_count_over_p2": "1/4",
+      "signed_residue_moment_over_hp2": "11/80",
+      "signed_centered_moment_over_hp2": "3/40"
+    },
+    {
+      "sample_id": "census-1ed568c10715",
+      "kind": "census",
+      "p": 4,
+      "b": 2,
+      "h": 10,
+      "max_E": 20,
+      "delta": 13,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 8,
+          "sum_sum_coordinate": 68,
+          "sum_difference_coordinate": -4,
+          "sum_residue": 38,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 320
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 56,
+          "sum_difference_coordinate": 16,
+          "sum_residue": 16,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 16,
+          "sum_square_centered_residue": 104
+        }
+      },
+      "signed_count": 4,
+      "signed_residue_moment": 22,
+      "signed_centered_moment": 12,
+      "signed_count_over_p2": "1/4",
+      "signed_residue_moment_over_hp2": "11/80",
+      "signed_centered_moment_over_hp2": "3/40"
+    },
+    {
+      "sample_id": "census-75c5cb1615ea",
+      "kind": "census",
+      "p": 4,
+      "b": 2,
+      "h": 11,
+      "max_E": 22,
+      "delta": 12,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 8,
+          "sum_sum_coordinate": 81,
+          "sum_difference_coordinate": -9,
+          "sum_residue": 48,
+          "sum_centered_residue": 24,
+          "sum_abs_centered_residue": 48,
+          "sum_square_centered_residue": 360
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 63,
+          "sum_difference_coordinate": 17,
+          "sum_residue": 19,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 18,
+          "sum_square_centered_residue": 116
+        }
+      },
+      "signed_count": 4,
+      "signed_residue_moment": 29,
+      "signed_centered_moment": 22,
+      "signed_count_over_p2": "1/4",
+      "signed_residue_moment_over_hp2": "29/176",
+      "signed_centered_moment_over_hp2": "1/8"
+    },
+    {
+      "sample_id": "census-bfffd23d0efd",
+      "kind": "census",
+      "p": 4,
+      "b": 1,
+      "h": 10,
+      "max_E": 19,
+      "delta": 13,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 8,
+          "sum_sum_coordinate": 81,
+          "sum_difference_coordinate": -9,
+          "sum_residue": 31,
+          "sum_centered_residue": -10,
+          "sum_abs_centered_residue": 40,
+          "sum_square_centered_residue": 248
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 61,
+          "sum_difference_coordinate": 15,
+          "sum_residue": 21,
+          "sum_centered_residue": 6,
+          "sum_abs_centered_residue": 14,
+          "sum_square_centered_residue": 68
+        }
+      },
+      "signed_count": 4,
+      "signed_residue_moment": 10,
+      "signed_centered_moment": -16,
+      "signed_count_over_p2": "1/4",
+      "signed_residue_moment_over_hp2": "1/16",
+      "signed_centered_moment_over_hp2": "-1/10"
+    },
+    {
+      "sample_id": "ruzsa-77b51f76e6b6",
+      "kind": "reflected-ruzsa",
+      "p": 4,
+      "b": 2,
+      "h": 11,
+      "max_E": 22,
+      "delta": 12,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 7,
+          "sum_sum_coordinate": 79,
+          "sum_difference_coordinate": -16,
+          "sum_residue": 35,
+          "sum_centered_residue": 7,
+          "sum_abs_centered_residue": 37,
+          "sum_square_centered_residue": 263
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 80,
+          "sum_difference_coordinate": 20,
+          "sum_residue": 25,
+          "sum_centered_residue": 5,
+          "sum_abs_centered_residue": 29,
+          "sum_square_centered_residue": 205
+        }
+      },
+      "signed_count": 2,
+      "signed_residue_moment": 10,
+      "signed_centered_moment": 2,
+      "signed_count_over_p2": "1/8",
+      "signed_residue_moment_over_hp2": "5/88",
+      "signed_centered_moment_over_hp2": "1/88"
+    },
+    {
+      "sample_id": "singer-67abc1a85a6d",
+      "kind": "reflected-singer",
+      "p": 4,
+      "b": 1,
+      "h": 10,
+      "max_E": 19,
+      "delta": 13,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 7,
+          "sum_sum_coordinate": 74,
+          "sum_difference_coordinate": -11,
+          "sum_residue": 24,
+          "sum_centered_residue": -15,
+          "sum_abs_centered_residue": 35,
+          "sum_square_centered_residue": 223
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 78,
+          "sum_difference_coordinate": 17,
+          "sum_residue": 28,
+          "sum_centered_residue": 11,
+          "sum_abs_centered_residue": 19,
+          "sum_square_centered_residue": 93
+        }
+      },
+      "signed_count": 2,
+      "signed_residue_moment": -4,
+      "signed_centered_moment": -26,
+      "signed_count_over_p2": "1/8",
+      "signed_residue_moment_over_hp2": "-1/40",
+      "signed_centered_moment_over_hp2": "-13/80"
+    },
+    {
+      "sample_id": "subset-d51364259bc3",
+      "kind": "generated-subset",
+      "p": 4,
+      "b": 2,
+      "h": 27,
+      "max_E": 54,
+      "delta": -4,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "2": {
+          "count": 4,
+          "sum_sum_coordinate": 160,
+          "sum_difference_coordinate": 48,
+          "sum_residue": 52,
+          "sum_centered_residue": 4,
+          "sum_abs_centered_residue": 52,
+          "sum_square_centered_residue": 1084
+        }
+      },
+      "signed_count": -4,
+      "signed_residue_moment": -52,
+      "signed_centered_moment": -4,
+      "signed_count_over_p2": "-1/4",
+      "signed_residue_moment_over_hp2": "-13/108",
+      "signed_centered_moment_over_hp2": "-1/108"
+    },
+    {
+      "sample_id": "bose-a33bda8a8585",
+      "kind": "reflected-bose",
+      "p": 5,
+      "b": 2,
+      "h": 17,
+      "max_E": 34,
+      "delta": 19,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 9,
+          "sum_sum_coordinate": 161,
+          "sum_difference_coordinate": -26,
+          "sum_residue": 59,
+          "sum_centered_residue": -17,
+          "sum_abs_centered_residue": 71,
+          "sum_square_centered_residue": 737
+        },
+        "2": {
+          "count": 9,
+          "sum_sum_coordinate": 238,
+          "sum_difference_coordinate": 50,
+          "sum_residue": 85,
+          "sum_centered_residue": 35,
+          "sum_abs_centered_residue": 67,
+          "sum_square_centered_residue": 673
+        }
+      },
+      "signed_count": 0,
+      "signed_residue_moment": -26,
+      "signed_centered_moment": -52,
+      "signed_count_over_p2": "0",
+      "signed_residue_moment_over_hp2": "-26/425",
+      "signed_centered_moment_over_hp2": "-52/425"
+    },
+    {
+      "sample_id": "census-317bca294cf4",
+      "kind": "census",
+      "p": 5,
+      "b": 1,
+      "h": 17,
+      "max_E": 33,
+      "delta": 19,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 13,
+          "sum_sum_coordinate": 229,
+          "sum_difference_coordinate": -21,
+          "sum_residue": 110,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 112,
+          "sum_square_centered_residue": 1272
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 118,
+          "sum_difference_coordinate": 47,
+          "sum_residue": 33,
+          "sum_centered_residue": -14,
+          "sum_abs_centered_residue": 30,
+          "sum_square_centered_residue": 316
+        }
+      },
+      "signed_count": 8,
+      "signed_residue_moment": 77,
+      "signed_centered_moment": 26,
+      "signed_count_over_p2": "8/25",
+      "signed_residue_moment_over_hp2": "77/425",
+      "signed_centered_moment_over_hp2": "26/425"
+    },
+    {
+      "sample_id": "census-6637bb182e31",
+      "kind": "census",
+      "p": 5,
+      "b": 1,
+      "h": 17,
+      "max_E": 33,
+      "delta": 19,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 13,
+          "sum_sum_coordinate": 229,
+          "sum_difference_coordinate": -21,
+          "sum_residue": 110,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 112,
+          "sum_square_centered_residue": 1272
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 118,
+          "sum_difference_coordinate": 47,
+          "sum_residue": 33,
+          "sum_centered_residue": -14,
+          "sum_abs_centered_residue": 30,
+          "sum_square_centered_residue": 316
+        }
+      },
+      "signed_count": 8,
+      "signed_residue_moment": 77,
+      "signed_centered_moment": 26,
+      "signed_count_over_p2": "8/25",
+      "signed_residue_moment_over_hp2": "77/425",
+      "signed_centered_moment_over_hp2": "26/425"
+    },
+    {
+      "sample_id": "census-6b8869cc76b4",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 15,
+      "max_E": 30,
+      "delta": 21,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 11,
+          "sum_sum_coordinate": 176,
+          "sum_difference_coordinate": -33,
+          "sum_residue": 71,
+          "sum_centered_residue": -1,
+          "sum_abs_centered_residue": 81,
+          "sum_square_centered_residue": 779
+        },
+        "2": {
+          "count": 9,
+          "sum_sum_coordinate": 202,
+          "sum_difference_coordinate": 50,
+          "sum_residue": 67,
+          "sum_centered_residue": 17,
+          "sum_abs_centered_residue": 73,
+          "sum_square_centered_residue": 681
+        }
+      },
+      "signed_count": 2,
+      "signed_residue_moment": 4,
+      "signed_centered_moment": -18,
+      "signed_count_over_p2": "2/25",
+      "signed_residue_moment_over_hp2": "4/375",
+      "signed_centered_moment_over_hp2": "-6/125"
+    },
+    {
+      "sample_id": "census-988cb42117bb",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 16,
+      "max_E": 32,
+      "delta": 20,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 11,
+          "sum_sum_coordinate": 181,
+          "sum_difference_coordinate": -27,
+          "sum_residue": 69,
+          "sum_centered_residue": -16,
+          "sum_abs_centered_residue": 84,
+          "sum_square_centered_residue": 920
+        },
+        "2": {
+          "count": 8,
+          "sum_sum_coordinate": 192,
+          "sum_difference_coordinate": 48,
+          "sum_residue": 64,
+          "sum_centered_residue": 16,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 384
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": 5,
+      "signed_centered_moment": -32,
+      "signed_count_over_p2": "3/25",
+      "signed_residue_moment_over_hp2": "1/80",
+      "signed_centered_moment_over_hp2": "-2/25"
+    },
+    {
+      "sample_id": "census-b8df54ec8d2b",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 17,
+      "max_E": 34,
+      "delta": 19,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 9,
+          "sum_sum_coordinate": 159,
+          "sum_difference_coordinate": -24,
+          "sum_residue": 57,
+          "sum_centered_residue": -21,
+          "sum_abs_centered_residue": 79,
+          "sum_square_centered_residue": 929
+        },
+        "2": {
+          "count": 6,
+          "sum_sum_coordinate": 148,
+          "sum_difference_coordinate": 44,
+          "sum_residue": 46,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 510
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": 11,
+      "signed_centered_moment": -23,
+      "signed_count_over_p2": "3/25",
+      "signed_residue_moment_over_hp2": "11/425",
+      "signed_centered_moment_over_hp2": "-23/425"
+    },
+    {
+      "sample_id": "census-d6dd29caa591",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 18,
+      "max_E": 36,
+      "delta": 18,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 13,
+          "sum_sum_coordinate": 216,
+          "sum_difference_coordinate": -8,
+          "sum_residue": 108,
+          "sum_centered_residue": 8,
+          "sum_abs_centered_residue": 124,
+          "sum_square_centered_residue": 1512
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 131,
+          "sum_difference_coordinate": 39,
+          "sum_residue": 41,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 34,
+          "sum_square_centered_residue": 396
+        }
+      },
+      "signed_count": 8,
+      "signed_residue_moment": 67,
+      "signed_centered_moment": 6,
+      "signed_count_over_p2": "8/25",
+      "signed_residue_moment_over_hp2": "67/450",
+      "signed_centered_moment_over_hp2": "1/75"
+    },
+    {
+      "sample_id": "census-e70abd9fd924",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 17,
+      "max_E": 34,
+      "delta": 19,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 9,
+          "sum_sum_coordinate": 159,
+          "sum_difference_coordinate": -24,
+          "sum_residue": 57,
+          "sum_centered_residue": -21,
+          "sum_abs_centered_residue": 79,
+          "sum_square_centered_residue": 929
+        },
+        "2": {
+          "count": 6,
+          "sum_sum_coordinate": 148,
+          "sum_difference_coordinate": 44,
+          "sum_residue": 46,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 510
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": 11,
+      "signed_centered_moment": -23,
+      "signed_count_over_p2": "3/25",
+      "signed_residue_moment_over_hp2": "11/425",
+      "signed_centered_moment_over_hp2": "-23/425"
+    },
+    {
+      "sample_id": "census-f25d865fcaf2",
+      "kind": "census",
+      "p": 5,
+      "b": 2,
+      "h": 15,
+      "max_E": 30,
+      "delta": 21,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 11,
+          "sum_sum_coordinate": 176,
+          "sum_difference_coordinate": -33,
+          "sum_residue": 71,
+          "sum_centered_residue": -1,
+          "sum_abs_centered_residue": 81,
+          "sum_square_centered_residue": 779
+        },
+        "2": {
+          "count": 9,
+          "sum_sum_coordinate": 202,
+          "sum_difference_coordinate": 50,
+          "sum_residue": 67,
+          "sum_centered_residue": 17,
+          "sum_abs_centered_residue": 73,
+          "sum_square_centered_residue": 681
+        }
+      },
+      "signed_count": 2,
+      "signed_residue_moment": 4,
+      "signed_centered_moment": -18,
+      "signed_count_over_p2": "2/25",
+      "signed_residue_moment_over_hp2": "4/375",
+      "signed_centered_moment_over_hp2": "-6/125"
+    },
+    {
+      "sample_id": "singer-f83c354ed0d8",
+      "kind": "reflected-singer",
+      "p": 5,
+      "b": 2,
+      "h": 16,
+      "max_E": 32,
+      "delta": 20,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 12,
+          "sum_sum_coordinate": 198,
+          "sum_difference_coordinate": -30,
+          "sum_residue": 86,
+          "sum_centered_residue": 4,
+          "sum_abs_centered_residue": 96,
+          "sum_square_centered_residue": 1080
+        },
+        "2": {
+          "count": 7,
+          "sum_sum_coordinate": 169,
+          "sum_difference_coordinate": 41,
+          "sum_residue": 57,
+          "sum_centered_residue": 16,
+          "sum_abs_centered_residue": 44,
+          "sum_square_centered_residue": 416
+        }
+      },
+      "signed_count": 5,
+      "signed_residue_moment": 29,
+      "signed_centered_moment": -12,
+      "signed_count_over_p2": "1/5",
+      "signed_residue_moment_over_hp2": "29/400",
+      "signed_centered_moment_over_hp2": "-3/100"
+    },
+    {
+      "sample_id": "census-1b266714fb23",
+      "kind": "census",
+      "p": 6,
+      "b": 2,
+      "h": 25,
+      "max_E": 50,
+      "delta": 27,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 17,
+          "sum_sum_coordinate": 414,
+          "sum_difference_coordinate": -23,
+          "sum_residue": 214,
+          "sum_centered_residue": 37,
+          "sum_abs_centered_residue": 233,
+          "sum_square_centered_residue": 4113
+        },
+        "2": {
+          "count": 8,
+          "sum_sum_coordinate": 300,
+          "sum_difference_coordinate": 84,
+          "sum_residue": 100,
+          "sum_centered_residue": 16,
+          "sum_abs_centered_residue": 76,
+          "sum_square_centered_residue": 1112
+        }
+      },
+      "signed_count": 9,
+      "signed_residue_moment": 114,
+      "signed_centered_moment": 21,
+      "signed_count_over_p2": "1/4",
+      "signed_residue_moment_over_hp2": "19/150",
+      "signed_centered_moment_over_hp2": "7/300"
+    },
+    {
+      "sample_id": "census-3413c97ff865",
+      "kind": "census",
+      "p": 6,
+      "b": 2,
+      "h": 24,
+      "max_E": 48,
+      "delta": 28,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 17,
+          "sum_sum_coordinate": 444,
+          "sum_difference_coordinate": -70,
+          "sum_residue": 180,
+          "sum_centered_residue": -14,
+          "sum_abs_centered_residue": 198,
+          "sum_square_centered_residue": 3180
+        },
+        "2": {
+          "count": 10,
+          "sum_sum_coordinate": 371,
+          "sum_difference_coordinate": 89,
+          "sum_residue": 131,
+          "sum_centered_residue": 42,
+          "sum_abs_centered_residue": 98,
+          "sum_square_centered_residue": 1524
+        }
+      },
+      "signed_count": 7,
+      "signed_residue_moment": 49,
+      "signed_centered_moment": -56,
+      "signed_count_over_p2": "7/36",
+      "signed_residue_moment_over_hp2": "49/864",
+      "signed_centered_moment_over_hp2": "-7/108"
+    },
+    {
+      "sample_id": "census-4bda45061f60",
+      "kind": "census",
+      "p": 6,
+      "b": 1,
+      "h": 27,
+      "max_E": 53,
+      "delta": 25,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 17,
+          "sum_sum_coordinate": 502,
+          "sum_difference_coordinate": -60,
+          "sum_residue": 205,
+          "sum_centered_residue": -32,
+          "sum_abs_centered_residue": 240,
+          "sum_square_centered_residue": 4224
+        },
+        "2": {
+          "count": 6,
+          "sum_sum_coordinate": 262,
+          "sum_difference_coordinate": 56,
+          "sum_residue": 100,
+          "sum_centered_residue": 44,
+          "sum_abs_centered_residue": 60,
+          "sum_square_centered_residue": 952
+        }
+      },
+      "signed_count": 11,
+      "signed_residue_moment": 105,
+      "signed_centered_moment": -76,
+      "signed_count_over_p2": "11/36",
+      "signed_residue_moment_over_hp2": "35/324",
+      "signed_centered_moment_over_hp2": "-19/243"
+    },
+    {
+      "sample_id": "census-8a53b821bf39",
+      "kind": "census",
+      "p": 6,
+      "b": 2,
+      "h": 26,
+      "max_E": 52,
+      "delta": 26,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 16,
+          "sum_sum_coordinate": 447,
+          "sum_difference_coordinate": -63,
+          "sum_residue": 239,
+          "sum_centered_residue": 94,
+          "sum_abs_centered_residue": 202,
+          "sum_square_centered_residue": 3628
+        },
+        "2": {
+          "count": 9,
+          "sum_sum_coordinate": 348,
+          "sum_difference_coordinate": 102,
+          "sum_residue": 114,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 104,
+          "sum_square_centered_residue": 1664
+        }
+      },
+      "signed_count": 7,
+      "signed_residue_moment": 125,
+      "signed_centered_moment": 82,
+      "signed_count_over_p2": "7/36",
+      "signed_residue_moment_over_hp2": "125/936",
+      "signed_centered_moment_over_hp2": "41/468"
+    },
+    {
+      "sample_id": "census-a5bc2145c59c",
+      "kind": "census",
+      "p": 6,
+      "b": 2,
+      "h": 27,
+      "max_E": 54,
+      "delta": 25,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 18,
+          "sum_sum_coordinate": 474,
+          "sum_difference_coordinate": -24,
+          "sum_residue": 231,
+          "sum_centered_residue": 12,
+          "sum_abs_centered_residue": 272,
+          "sum_square_centered_residue": 5322
+        },
+        "2": {
+          "count": 6,
+          "sum_sum_coordinate": 238,
+          "sum_difference_coordinate": 74,
+          "sum_residue": 76,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 64,
+          "sum_square_centered_residue": 1158
+        }
+      },
+      "signed_count": 12,
+      "signed_residue_moment": 155,
+      "signed_centered_moment": 10,
+      "signed_count_over_p2": "1/3",
+      "signed_residue_moment_over_hp2": "155/972",
+      "signed_centered_moment_over_hp2": "5/486"
+    },
+    {
+      "sample_id": "census-bb5a0a317194",
+      "kind": "census",
+      "p": 6,
+      "b": 1,
+      "h": 26,
+      "max_E": 51,
+      "delta": 26,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 11,
+          "sum_sum_coordinate": 326,
+          "sum_difference_coordinate": -51,
+          "sum_residue": 144,
+          "sum_centered_residue": 13,
+          "sum_abs_centered_residue": 159,
+          "sum_square_centered_residue": 3211
+        },
+        "2": {
+          "count": 6,
+          "sum_sum_coordinate": 243,
+          "sum_difference_coordinate": 63,
+          "sum_residue": 87,
+          "sum_centered_residue": 24,
+          "sum_abs_centered_residue": 50,
+          "sum_square_centered_residue": 790
+        }
+      },
+      "signed_count": 5,
+      "signed_residue_moment": 57,
+      "signed_centered_moment": -11,
+      "signed_count_over_p2": "5/36",
+      "signed_residue_moment_over_hp2": "19/312",
+      "signed_centered_moment_over_hp2": "-11/936"
+    },
+    {
+      "sample_id": "census-cb2cf7873d05",
+      "kind": "census",
+      "p": 6,
+      "b": 1,
+      "h": 25,
+      "max_E": 49,
+      "delta": 27,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 17,
+          "sum_sum_coordinate": 431,
+          "sum_difference_coordinate": -23,
+          "sum_residue": 206,
+          "sum_centered_residue": 4,
+          "sum_abs_centered_residue": 244,
+          "sum_square_centered_residue": 4208
+        },
+        "2": {
+          "count": 5,
+          "sum_sum_coordinate": 195,
+          "sum_difference_coordinate": 50,
+          "sum_residue": 70,
+          "sum_centered_residue": 20,
+          "sum_abs_centered_residue": 72,
+          "sum_square_centered_residue": 1144
+        }
+      },
+      "signed_count": 12,
+      "signed_residue_moment": 136,
+      "signed_centered_moment": -16,
+      "signed_count_over_p2": "1/3",
+      "signed_residue_moment_over_hp2": "34/225",
+      "signed_centered_moment_over_hp2": "-4/225"
+    },
+    {
+      "sample_id": "ruzsa-207ae923bd93",
+      "kind": "reflected-ruzsa",
+      "p": 6,
+      "b": 2,
+      "h": 27,
+      "max_E": 54,
+      "delta": 25,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 13,
+          "sum_sum_coordinate": 376,
+          "sum_difference_coordinate": -51,
+          "sum_residue": 160,
+          "sum_centered_residue": -5,
+          "sum_abs_centered_residue": 141,
+          "sum_square_centered_residue": 2309
+        },
+        "2": {
+          "count": 10,
+          "sum_sum_coordinate": 427,
+          "sum_difference_coordinate": 93,
+          "sum_residue": 157,
+          "sum_centered_residue": 64,
+          "sum_abs_centered_residue": 152,
+          "sum_square_centered_residue": 2778
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": 3,
+      "signed_centered_moment": -69,
+      "signed_count_over_p2": "1/12",
+      "signed_residue_moment_over_hp2": "1/324",
+      "signed_centered_moment_over_hp2": "-23/324"
+    },
+    {
+      "sample_id": "singer-3ab7abe67b2b",
+      "kind": "reflected-singer",
+      "p": 6,
+      "b": 2,
+      "h": 24,
+      "max_E": 48,
+      "delta": 28,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 15,
+          "sum_sum_coordinate": 404,
+          "sum_difference_coordinate": -74,
+          "sum_residue": 140,
+          "sum_centered_residue": -50,
+          "sum_abs_centered_residue": 166,
+          "sum_square_centered_residue": 2628
+        },
+        "2": {
+          "count": 12,
+          "sum_sum_coordinate": 453,
+          "sum_difference_coordinate": 99,
+          "sum_residue": 165,
+          "sum_centered_residue": 66,
+          "sum_abs_centered_residue": 122,
+          "sum_square_centered_residue": 1852
+        }
+      },
+      "signed_count": 3,
+      "signed_residue_moment": -25,
+      "signed_centered_moment": -116,
+      "signed_count_over_p2": "1/12",
+      "signed_residue_moment_over_hp2": "-25/864",
+      "signed_centered_moment_over_hp2": "-29/216"
+    },
+    {
+      "sample_id": "bose-5b7e89d024f3",
+      "kind": "reflected-bose",
+      "p": 7,
+      "b": 2,
+      "h": 38,
+      "max_E": 76,
+      "delta": 33,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 20,
+          "sum_sum_coordinate": 812,
+          "sum_difference_coordinate": -92,
+          "sum_residue": 356,
+          "sum_centered_residue": -8,
+          "sum_abs_centered_residue": 420,
+          "sum_square_centered_residue": 11224
+        },
+        "2": {
+          "count": 11,
+          "sum_sum_coordinate": 656,
+          "sum_difference_coordinate": 158,
+          "sum_residue": 238,
+          "sum_centered_residue": 80,
+          "sum_abs_centered_residue": 160,
+          "sum_square_centered_residue": 3488
+        }
+      },
+      "signed_count": 9,
+      "signed_residue_moment": 118,
+      "signed_centered_moment": -88,
+      "signed_count_over_p2": "9/49",
+      "signed_residue_moment_over_hp2": "59/931",
+      "signed_centered_moment_over_hp2": "-44/931"
+    },
+    {
+      "sample_id": "endpoint-2663c93f8867",
+      "kind": "endpoint",
+      "p": 7,
+      "b": 2,
+      "h": 34,
+      "max_E": 68,
+      "delta": 37,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 21,
+          "sum_sum_coordinate": 776,
+          "sum_difference_coordinate": -104,
+          "sum_residue": 368,
+          "sum_centered_residue": 64,
+          "sum_abs_centered_residue": 356,
+          "sum_square_centered_residue": 8568
+        },
+        "2": {
+          "count": 13,
+          "sum_sum_coordinate": 666,
+          "sum_difference_coordinate": 192,
+          "sum_residue": 224,
+          "sum_centered_residue": 32,
+          "sum_abs_centered_residue": 176,
+          "sum_square_centered_residue": 3400
+        }
+      },
+      "signed_count": 8,
+      "signed_residue_moment": 144,
+      "signed_centered_moment": 32,
+      "signed_count_over_p2": "8/49",
+      "signed_residue_moment_over_hp2": "72/833",
+      "signed_centered_moment_over_hp2": "16/833"
+    },
+    {
+      "sample_id": "endpoint-8644c4fc07c7",
+      "kind": "endpoint",
+      "p": 7,
+      "b": 1,
+      "h": 37,
+      "max_E": 73,
+      "delta": 34,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 22,
+          "sum_sum_coordinate": 869,
+          "sum_difference_coordinate": -77,
+          "sum_residue": 388,
+          "sum_centered_residue": -16,
+          "sum_abs_centered_residue": 428,
+          "sum_square_centered_residue": 10600
+        },
+        "2": {
+          "count": 9,
+          "sum_sum_coordinate": 513,
+          "sum_difference_coordinate": 144,
+          "sum_residue": 180,
+          "sum_centered_residue": 36,
+          "sum_abs_centered_residue": 168,
+          "sum_square_centered_residue": 3616
+        }
+      },
+      "signed_count": 13,
+      "signed_residue_moment": 208,
+      "signed_centered_moment": -52,
+      "signed_count_over_p2": "13/49",
+      "signed_residue_moment_over_hp2": "208/1813",
+      "signed_centered_moment_over_hp2": "-52/1813"
+    },
+    {
+      "sample_id": "bose-c8ad7c38d14a",
+      "kind": "reflected-bose",
+      "p": 8,
+      "b": 2,
+      "h": 50,
+      "max_E": 100,
+      "delta": 43,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 25,
+          "sum_sum_coordinate": 1327,
+          "sum_difference_coordinate": -127,
+          "sum_residue": 527,
+          "sum_centered_residue": -146,
+          "sum_abs_centered_residue": 658,
+          "sum_square_centered_residue": 22724
+        },
+        "2": {
+          "count": 15,
+          "sum_sum_coordinate": 1187,
+          "sum_difference_coordinate": 283,
+          "sum_residue": 437,
+          "sum_centered_residue": 154,
+          "sum_abs_centered_residue": 286,
+          "sum_square_centered_residue": 9140
+        }
+      },
+      "signed_count": 10,
+      "signed_residue_moment": 90,
+      "signed_centered_moment": -300,
+      "signed_count_over_p2": "5/32",
+      "signed_residue_moment_over_hp2": "9/320",
+      "signed_centered_moment_over_hp2": "-3/32"
+    },
+    {
+      "sample_id": "endpoint-880e26f89ced",
+      "kind": "endpoint",
+      "p": 8,
+      "b": 1,
+      "h": 43,
+      "max_E": 85,
+      "delta": 50,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 22,
+          "sum_sum_coordinate": 1048,
+          "sum_difference_coordinate": -124,
+          "sum_residue": 403,
+          "sum_centered_residue": -118,
+          "sum_abs_centered_residue": 534,
+          "sum_square_centered_residue": 15956
+        },
+        "2": {
+          "count": 15,
+          "sum_sum_coordinate": 1022,
+          "sum_difference_coordinate": 253,
+          "sum_residue": 377,
+          "sum_centered_residue": 124,
+          "sum_abs_centered_residue": 352,
+          "sum_square_centered_residue": 10096
+        }
+      },
+      "signed_count": 7,
+      "signed_residue_moment": 26,
+      "signed_centered_moment": -242,
+      "signed_count_over_p2": "7/64",
+      "signed_residue_moment_over_hp2": "13/1376",
+      "signed_centered_moment_over_hp2": "-121/1376"
+    },
+    {
+      "sample_id": "endpoint-f7f10f003a55",
+      "kind": "endpoint",
+      "p": 8,
+      "b": 2,
+      "h": 49,
+      "max_E": 98,
+      "delta": 44,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 25,
+          "sum_sum_coordinate": 1353,
+          "sum_difference_coordinate": -178,
+          "sum_residue": 520,
+          "sum_centered_residue": -135,
+          "sum_abs_centered_residue": 625,
+          "sum_square_centered_residue": 20105
+        },
+        "2": {
+          "count": 13,
+          "sum_sum_coordinate": 1031,
+          "sum_difference_coordinate": 217,
+          "sum_residue": 394,
+          "sum_centered_residue": 177,
+          "sum_abs_centered_residue": 291,
+          "sum_square_centered_residue": 9533
+        }
+      },
+      "signed_count": 12,
+      "signed_residue_moment": 126,
+      "signed_centered_moment": -312,
+      "signed_count_over_p2": "3/16",
+      "signed_residue_moment_over_hp2": "9/224",
+      "signed_centered_moment_over_hp2": "-39/392"
+    },
+    {
+      "sample_id": "singer-69760f8ce829",
+      "kind": "reflected-singer",
+      "p": 8,
+      "b": 1,
+      "h": 48,
+      "max_E": 95,
+      "delta": 45,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 27,
+          "sum_sum_coordinate": 1402,
+          "sum_difference_coordinate": -133,
+          "sum_residue": 634,
+          "sum_centered_residue": -1,
+          "sum_abs_centered_residue": 723,
+          "sum_square_centered_residue": 24363
+        },
+        "2": {
+          "count": 10,
+          "sum_sum_coordinate": 770,
+          "sum_difference_coordinate": 180,
+          "sum_residue": 290,
+          "sum_centered_residue": 110,
+          "sum_abs_centered_residue": 198,
+          "sum_square_centered_residue": 5938
+        }
+      },
+      "signed_count": 17,
+      "signed_residue_moment": 344,
+      "signed_centered_moment": -111,
+      "signed_count_over_p2": "17/64",
+      "signed_residue_moment_over_hp2": "43/384",
+      "signed_centered_moment_over_hp2": "-37/1024"
+    },
+    {
+      "sample_id": "bose-c7f95b61beaa",
+      "kind": "reflected-bose",
+      "p": 9,
+      "b": 2,
+      "h": 66,
+      "max_E": 132,
+      "delta": 52,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 32,
+          "sum_sum_coordinate": 2279,
+          "sum_difference_coordinate": -231,
+          "sum_residue": 1025,
+          "sum_centered_residue": 2,
+          "sum_abs_centered_residue": 1066,
+          "sum_square_centered_residue": 48260
+        },
+        "2": {
+          "count": 16,
+          "sum_sum_coordinate": 1664,
+          "sum_difference_coordinate": 416,
+          "sum_residue": 608,
+          "sum_centered_residue": 192,
+          "sum_abs_centered_residue": 432,
+          "sum_square_centered_residue": 17248
+        }
+      },
+      "signed_count": 16,
+      "signed_residue_moment": 417,
+      "signed_centered_moment": -190,
+      "signed_count_over_p2": "16/81",
+      "signed_residue_moment_over_hp2": "139/1782",
+      "signed_centered_moment_over_hp2": "-95/2673"
+    },
+    {
+      "sample_id": "singer-21cb7821dcf5",
+      "kind": "reflected-singer",
+      "p": 9,
+      "b": 2,
+      "h": 61,
+      "max_E": 122,
+      "delta": 57,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 31,
+          "sum_sum_coordinate": 2165,
+          "sum_difference_coordinate": -336,
+          "sum_residue": 884,
+          "sum_centered_residue": -61,
+          "sum_abs_centered_residue": 979,
+          "sum_square_centered_residue": 40343
+        },
+        "2": {
+          "count": 19,
+          "sum_sum_coordinate": 1867,
+          "sum_difference_coordinate": 413,
+          "sum_residue": 708,
+          "sum_centered_residue": 295,
+          "sum_abs_centered_residue": 455,
+          "sum_square_centered_residue": 16147
+        }
+      },
+      "signed_count": 12,
+      "signed_residue_moment": 176,
+      "signed_centered_moment": -356,
+      "signed_count_over_p2": "4/27",
+      "signed_residue_moment_over_hp2": "176/4941",
+      "signed_centered_moment_over_hp2": "-356/4941"
+    },
+    {
+      "sample_id": "ruzsa-9ae6e664df02",
+      "kind": "reflected-ruzsa",
+      "p": 10,
+      "b": 2,
+      "h": 94,
+      "max_E": 188,
+      "delta": 52,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 38,
+          "sum_sum_coordinate": 4040,
+          "sum_difference_coordinate": -544,
+          "sum_residue": 1690,
+          "sum_centered_residue": -116,
+          "sum_abs_centered_residue": 1744,
+          "sum_square_centered_residue": 105408
+        },
+        "2": {
+          "count": 19,
+          "sum_sum_coordinate": 2805,
+          "sum_difference_coordinate": 729,
+          "sum_residue": 1019,
+          "sum_centered_residue": 290,
+          "sum_abs_centered_residue": 670,
+          "sum_square_centered_residue": 33844
+        }
+      },
+      "signed_count": 19,
+      "signed_residue_moment": 671,
+      "signed_centered_moment": -406,
+      "signed_count_over_p2": "19/100",
+      "signed_residue_moment_over_hp2": "671/9400",
+      "signed_centered_moment_over_hp2": "-203/4700"
+    },
+    {
+      "sample_id": "singer-1b3dbd6e6335",
+      "kind": "reflected-singer",
+      "p": 10,
+      "b": 2,
+      "h": 76,
+      "max_E": 152,
+      "delta": 70,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 41,
+          "sum_sum_coordinate": 3628,
+          "sum_difference_coordinate": -594,
+          "sum_residue": 1500,
+          "sum_centered_residue": -34,
+          "sum_abs_centered_residue": 1474,
+          "sum_square_centered_residue": 71276
+        },
+        "2": {
+          "count": 27,
+          "sum_sum_coordinate": 3311,
+          "sum_difference_coordinate": 739,
+          "sum_residue": 1259,
+          "sum_centered_residue": 520,
+          "sum_abs_centered_residue": 900,
+          "sum_square_centered_residue": 42312
+        }
+      },
+      "signed_count": 14,
+      "signed_residue_moment": 241,
+      "signed_centered_moment": -554,
+      "signed_count_over_p2": "7/50",
+      "signed_residue_moment_over_hp2": "241/7600",
+      "signed_centered_moment_over_hp2": "-277/3800"
+    },
+    {
+      "sample_id": "bose-7e6b8225d032",
+      "kind": "reflected-bose",
+      "p": 11,
+      "b": 2,
+      "h": 99,
+      "max_E": 198,
+      "delta": 78,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 43,
+          "sum_sum_coordinate": 4900,
+          "sum_difference_coordinate": -729,
+          "sum_residue": 1930,
+          "sum_centered_residue": -311,
+          "sum_abs_centered_residue": 2075,
+          "sum_square_centered_residue": 132139
+        },
+        "2": {
+          "count": 29,
+          "sum_sum_coordinate": 4720,
+          "sum_difference_coordinate": 964,
+          "sum_residue": 1849,
+          "sum_centered_residue": 885,
+          "sum_abs_centered_residue": 1379,
+          "sum_square_centered_residue": 89701
+        }
+      },
+      "signed_count": 14,
+      "signed_residue_moment": 81,
+      "signed_centered_moment": -1196,
+      "signed_count_over_p2": "14/121",
+      "signed_residue_moment_over_hp2": "9/1331",
+      "signed_centered_moment_over_hp2": "-1196/11979"
+    },
+    {
+      "sample_id": "ruzsa-c83dce616b99",
+      "kind": "reflected-ruzsa",
+      "p": 12,
+      "b": 1,
+      "h": 135,
+      "max_E": 269,
+      "delta": 76,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 43,
+          "sum_sum_coordinate": 6761,
+          "sum_difference_coordinate": -999,
+          "sum_residue": 2981,
+          "sum_centered_residue": 200,
+          "sum_abs_centered_residue": 3228,
+          "sum_square_centered_residue": 305336
+        },
+        "2": {
+          "count": 23,
+          "sum_sum_coordinate": 5058,
+          "sum_difference_coordinate": 1129,
+          "sum_residue": 1953,
+          "sum_centered_residue": 824,
+          "sum_abs_centered_residue": 1204,
+          "sum_square_centered_residue": 92048
+        }
+      },
+      "signed_count": 20,
+      "signed_residue_moment": 1028,
+      "signed_centered_moment": -624,
+      "signed_count_over_p2": "5/36",
+      "signed_residue_moment_over_hp2": "257/4860",
+      "signed_centered_moment_over_hp2": "-13/405"
+    },
+    {
+      "sample_id": "singer-74c13fbcb0a9",
+      "kind": "reflected-singer",
+      "p": 12,
+      "b": 1,
+      "h": 116,
+      "max_E": 231,
+      "delta": 95,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 55,
+          "sum_sum_coordinate": 7322,
+          "sum_difference_coordinate": -997,
+          "sum_residue": 2914,
+          "sum_centered_residue": -497,
+          "sum_abs_centered_residue": 3257,
+          "sum_square_centered_residue": 260879
+        },
+        "2": {
+          "count": 31,
+          "sum_sum_coordinate": 5818,
+          "sum_difference_coordinate": 1343,
+          "sum_residue": 2222,
+          "sum_centered_residue": 879,
+          "sum_abs_centered_residue": 1503,
+          "sum_square_centered_residue": 108495
+        }
+      },
+      "signed_count": 24,
+      "signed_residue_moment": 692,
+      "signed_centered_moment": -1376,
+      "signed_count_over_p2": "1/6",
+      "signed_residue_moment_over_hp2": "173/4176",
+      "signed_centered_moment_over_hp2": "-43/522"
+    },
+    {
+      "sample_id": "bose-7db1b84a1ac7",
+      "kind": "reflected-bose",
+      "p": 13,
+      "b": 1,
+      "h": 150,
+      "max_E": 299,
+      "delta": 98,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 69,
+          "sum_sum_coordinate": 11640,
+          "sum_difference_coordinate": -1359,
+          "sum_residue": 5190,
+          "sum_centered_residue": 99,
+          "sum_abs_centered_residue": 5509,
+          "sum_square_centered_residue": 550645
+        },
+        "2": {
+          "count": 23,
+          "sum_sum_coordinate": 5577,
+          "sum_difference_coordinate": 1300,
+          "sum_residue": 2127,
+          "sum_centered_residue": 827,
+          "sum_abs_centered_residue": 1341,
+          "sum_square_centered_residue": 114463
+        }
+      },
+      "signed_count": 46,
+      "signed_residue_moment": 3063,
+      "signed_centered_moment": -728,
+      "signed_count_over_p2": "46/169",
+      "signed_residue_moment_over_hp2": "1021/8450",
+      "signed_centered_moment_over_hp2": "-28/975"
+    },
+    {
+      "sample_id": "singer-ba11c5f99fd1",
+      "kind": "reflected-singer",
+      "p": 14,
+      "b": 1,
+      "h": 164,
+      "max_E": 327,
+      "delta": 124,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 73,
+          "sum_sum_coordinate": 14190,
+          "sum_difference_coordinate": -2291,
+          "sum_residue": 5498,
+          "sum_centered_residue": -903,
+          "sum_abs_centered_residue": 6029,
+          "sum_square_centered_residue": 686113
+        },
+        "2": {
+          "count": 37,
+          "sum_sum_coordinate": 10078,
+          "sum_difference_coordinate": 2021,
+          "sum_residue": 4010,
+          "sum_centered_residue": 1989,
+          "sum_abs_centered_residue": 2697,
+          "sum_square_centered_residue": 288765
+        }
+      },
+      "signed_count": 36,
+      "signed_residue_moment": 1488,
+      "signed_centered_moment": -2892,
+      "signed_count_over_p2": "9/49",
+      "signed_residue_moment_over_hp2": "93/2009",
+      "signed_centered_moment_over_hp2": "-723/8036"
+    },
+    {
+      "sample_id": "bose-53758e59db3a",
+      "kind": "reflected-bose",
+      "p": 16,
+      "b": 2,
+      "h": 241,
+      "max_E": 482,
+      "delta": 136,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 89,
+          "sum_sum_coordinate": 24324,
+          "sum_difference_coordinate": -3053,
+          "sum_residue": 9382,
+          "sum_centered_residue": -2507,
+          "sum_abs_centered_residue": 11949,
+          "sum_square_centered_residue": 2035113
+        },
+        "2": {
+          "count": 47,
+          "sum_sum_coordinate": 18038,
+          "sum_difference_coordinate": 4522,
+          "sum_residue": 6711,
+          "sum_centered_residue": 2189,
+          "sum_abs_centered_residue": 4255,
+          "sum_square_centered_residue": 554431
+        }
+      },
+      "signed_count": 42,
+      "signed_residue_moment": 2671,
+      "signed_centered_moment": -4696,
+      "signed_count_over_p2": "21/128",
+      "signed_residue_moment_over_hp2": "2671/61696",
+      "signed_centered_moment_over_hp2": "-587/7712"
+    },
+    {
+      "sample_id": "ruzsa-668c9594bba0",
+      "kind": "reflected-ruzsa",
+      "p": 16,
+      "b": 1,
+      "h": 247,
+      "max_E": 493,
+      "delta": 130,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 82,
+          "sum_sum_coordinate": 23969,
+          "sum_difference_coordinate": -3797,
+          "sum_residue": 9396,
+          "sum_centered_residue": -1380,
+          "sum_abs_centered_residue": 10048,
+          "sum_square_centered_residue": 1655848
+        },
+        "2": {
+          "count": 50,
+          "sum_sum_coordinate": 20543,
+          "sum_difference_coordinate": 4107,
+          "sum_residue": 8193,
+          "sum_centered_residue": 4086,
+          "sum_abs_centered_residue": 5462,
+          "sum_square_centered_residue": 889324
+        }
+      },
+      "signed_count": 32,
+      "signed_residue_moment": 1203,
+      "signed_centered_moment": -5466,
+      "signed_count_over_p2": "1/8",
+      "signed_residue_moment_over_hp2": "1203/63232",
+      "signed_centered_moment_over_hp2": "-2733/31616"
+    },
+    {
+      "sample_id": "bose-71543acf2124",
+      "kind": "reflected-bose",
+      "p": 17,
+      "b": 1,
+      "h": 268,
+      "max_E": 535,
+      "delta": 158,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 110,
+          "sum_sum_coordinate": 33935,
+          "sum_difference_coordinate": -4565,
+          "sum_residue": 12763,
+          "sum_centered_residue": -3844,
+          "sum_abs_centered_residue": 15630,
+          "sum_square_centered_residue": 2843526
+        },
+        "2": {
+          "count": 47,
+          "sum_sum_coordinate": 20302,
+          "sum_difference_coordinate": 4843,
+          "sum_residue": 7706,
+          "sum_centered_residue": 2863,
+          "sum_abs_centered_residue": 4929,
+          "sum_square_centered_residue": 747911
+        }
+      },
+      "signed_count": 63,
+      "signed_residue_moment": 5057,
+      "signed_centered_moment": -6707,
+      "signed_count_over_p2": "63/289",
+      "signed_residue_moment_over_hp2": "5057/77452",
+      "signed_centered_moment_over_hp2": "-6707/77452"
+    },
+    {
+      "sample_id": "singer-b1e5078be297",
+      "kind": "reflected-singer",
+      "p": 17,
+      "b": 2,
+      "h": 263,
+      "max_E": 526,
+      "delta": 163,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 104,
+          "sum_sum_coordinate": 31097,
+          "sum_difference_coordinate": -3953,
+          "sum_residue": 11898,
+          "sum_centered_residue": -3348,
+          "sum_abs_centered_residue": 15092,
+          "sum_square_centered_residue": 2785456
+        },
+        "2": {
+          "count": 52,
+          "sum_sum_coordinate": 21748,
+          "sum_difference_coordinate": 5500,
+          "sum_residue": 8072,
+          "sum_centered_residue": 2572,
+          "sum_abs_centered_residue": 5238,
+          "sum_square_centered_residue": 809220
+        }
+      },
+      "signed_count": 52,
+      "signed_residue_moment": 3826,
+      "signed_centered_moment": -5920,
+      "signed_count_over_p2": "52/289",
+      "signed_residue_moment_over_hp2": "3826/76007",
+      "signed_centered_moment_over_hp2": "-5920/76007"
+    },
+    {
+      "sample_id": "ruzsa-b303884089ad",
+      "kind": "reflected-ruzsa",
+      "p": 18,
+      "b": 2,
+      "h": 333,
+      "max_E": 666,
+      "delta": 145,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 85,
+          "sum_sum_coordinate": 33801,
+          "sum_difference_coordinate": -5666,
+          "sum_residue": 12156,
+          "sum_centered_residue": -3823,
+          "sum_abs_centered_residue": 14911,
+          "sum_square_centered_residue": 3354645
+        },
+        "2": {
+          "count": 72,
+          "sum_sum_coordinate": 39802,
+          "sum_difference_coordinate": 8006,
+          "sum_residue": 15826,
+          "sum_centered_residue": 7820,
+          "sum_abs_centered_residue": 10948,
+          "sum_square_centered_residue": 2339728
+        }
+      },
+      "signed_count": 13,
+      "signed_residue_moment": -3670,
+      "signed_centered_moment": -11643,
+      "signed_count_over_p2": "13/324",
+      "signed_residue_moment_over_hp2": "-1835/53946",
+      "signed_centered_moment_over_hp2": "-3881/35964"
+    },
+    {
+      "sample_id": "singer-ff6287916581",
+      "kind": "reflected-singer",
+      "p": 18,
+      "b": 1,
+      "h": 291,
+      "max_E": 581,
+      "delta": 187,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 116,
+          "sum_sum_coordinate": 39670,
+          "sum_difference_coordinate": -6030,
+          "sum_residue": 15226,
+          "sum_centered_residue": -3188,
+          "sum_abs_centered_residue": 17112,
+          "sum_square_centered_residue": 3442456
+        },
+        "2": {
+          "count": 59,
+          "sum_sum_coordinate": 28398,
+          "sum_difference_coordinate": 5881,
+          "sum_residue": 11229,
+          "sum_centered_residue": 5348,
+          "sum_abs_centered_residue": 7656,
+          "sum_square_centered_residue": 1419280
+        }
+      },
+      "signed_count": 57,
+      "signed_residue_moment": 3997,
+      "signed_centered_moment": -8536,
+      "signed_count_over_p2": "19/108",
+      "signed_residue_moment_over_hp2": "3997/94284",
+      "signed_centered_moment_over_hp2": "-22/243"
+    },
+    {
+      "sample_id": "bose-96cb20f2075b",
+      "kind": "reflected-bose",
+      "p": 19,
+      "b": 2,
+      "h": 331,
+      "max_E": 662,
+      "delta": 202,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 128,
+          "sum_sum_coordinate": 48765,
+          "sum_difference_coordinate": -6653,
+          "sum_residue": 18975,
+          "sum_centered_residue": -4162,
+          "sum_abs_centered_residue": 21762,
+          "sum_square_centered_residue": 4921208
+        },
+        "2": {
+          "count": 70,
+          "sum_sum_coordinate": 37526,
+          "sum_difference_coordinate": 8674,
+          "sum_residue": 14356,
+          "sum_centered_residue": 5682,
+          "sum_abs_centered_residue": 9916,
+          "sum_square_centered_residue": 2069526
+        }
+      },
+      "signed_count": 58,
+      "signed_residue_moment": 4619,
+      "signed_centered_moment": -9844,
+      "signed_count_over_p2": "58/361",
+      "signed_residue_moment_over_hp2": "4619/119491",
+      "signed_centered_moment_over_hp2": "-9844/119491"
+    },
+    {
+      "sample_id": "singer-cdc2af0ca853",
+      "kind": "reflected-singer",
+      "p": 20,
+      "b": 2,
+      "h": 374,
+      "max_E": 748,
+      "delta": 217,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 147,
+          "sum_sum_coordinate": 64115,
+          "sum_difference_coordinate": -9431,
+          "sum_residue": 24471,
+          "sum_centered_residue": -5742,
+          "sum_abs_centered_residue": 28118,
+          "sum_square_centered_residue": 7058948
+        },
+        "2": {
+          "count": 75,
+          "sum_sum_coordinate": 45991,
+          "sum_difference_coordinate": 9959,
+          "sum_residue": 17941,
+          "sum_centered_residue": 7982,
+          "sum_abs_centered_residue": 11698,
+          "sum_square_centered_residue": 2596244
+        }
+      },
+      "signed_count": 72,
+      "signed_residue_moment": 6530,
+      "signed_centered_moment": -13724,
+      "signed_count_over_p2": "9/50",
+      "signed_residue_moment_over_hp2": "653/14960",
+      "signed_centered_moment_over_hp2": "-3431/37400"
+    },
+    {
+      "sample_id": "ruzsa-5abe3e2fa98d",
+      "kind": "reflected-ruzsa",
+      "p": 22,
+      "b": 1,
+      "h": 510,
+      "max_E": 1019,
+      "delta": 206,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 156,
+          "sum_sum_coordinate": 90337,
+          "sum_difference_coordinate": -10933,
+          "sum_residue": 34237,
+          "sum_centered_residue": -10930,
+          "sum_abs_centered_residue": 43364,
+          "sum_square_centered_residue": 15496572
+        },
+        "2": {
+          "count": 68,
+          "sum_sum_coordinate": 56194,
+          "sum_difference_coordinate": 13098,
+          "sum_residue": 21514,
+          "sum_centered_residue": 8416,
+          "sum_abs_centered_residue": 14292,
+          "sum_square_centered_residue": 4420836
+        }
+      },
+      "signed_count": 88,
+      "signed_residue_moment": 12723,
+      "signed_centered_moment": -19346,
+      "signed_count_over_p2": "2/11",
+      "signed_residue_moment_over_hp2": "4241/82280",
+      "signed_centered_moment_over_hp2": "-569/7260"
+    },
+    {
+      "sample_id": "bose-902f7f69afd9",
+      "kind": "reflected-bose",
+      "p": 23,
+      "b": 1,
+      "h": 534,
+      "max_E": 1067,
+      "delta": 249,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 179,
+          "sum_sum_coordinate": 108743,
+          "sum_difference_coordinate": -13336,
+          "sum_residue": 39857,
+          "sum_centered_residue": -15693,
+          "sum_abs_centered_residue": 51171,
+          "sum_square_centered_residue": 18629923
+        },
+        "2": {
+          "count": 71,
+          "sum_sum_coordinate": 62695,
+          "sum_difference_coordinate": 13062,
+          "sum_residue": 24781,
+          "sum_centered_residue": 11719,
+          "sum_abs_centered_residue": 15835,
+          "sum_square_centered_residue": 4926615
+        }
+      },
+      "signed_count": 108,
+      "signed_residue_moment": 15076,
+      "signed_centered_moment": -27412,
+      "signed_count_over_p2": "108/529",
+      "signed_residue_moment_over_hp2": "7538/141243",
+      "signed_centered_moment_over_hp2": "-154/1587"
+    },
+    {
+      "sample_id": "singer-5e5c056bea06",
+      "kind": "reflected-singer",
+      "p": 24,
+      "b": 1,
+      "h": 551,
+      "max_E": 1101,
+      "delta": 302,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 217,
+          "sum_sum_coordinate": 135015,
+          "sum_difference_coordinate": -15665,
+          "sum_residue": 54569,
+          "sum_centered_residue": -10212,
+          "sum_abs_centered_residue": 66472,
+          "sum_square_centered_residue": 25319896
+        },
+        "2": {
+          "count": 76,
+          "sum_sum_coordinate": 67882,
+          "sum_difference_coordinate": 15794,
+          "sum_residue": 26006,
+          "sum_centered_residue": 10212,
+          "sum_abs_centered_residue": 16200,
+          "sum_square_centered_residue": 4938816
+        }
+      },
+      "signed_count": 141,
+      "signed_residue_moment": 28563,
+      "signed_centered_moment": -20424,
+      "signed_count_over_p2": "47/192",
+      "signed_residue_moment_over_hp2": "9521/105792",
+      "signed_centered_moment_over_hp2": "-851/13224"
+    },
+    {
+      "sample_id": "bose-08a3a6203aa5",
+      "kind": "reflected-bose",
+      "p": 25,
+      "b": 2,
+      "h": 637,
+      "max_E": 1274,
+      "delta": 289,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 213,
+          "sum_sum_coordinate": 158636,
+          "sum_difference_coordinate": -23381,
+          "sum_residue": 59264,
+          "sum_centered_residue": -16727,
+          "sum_abs_centered_residue": 71207,
+          "sum_square_centered_residue": 30398989
+        },
+        "2": {
+          "count": 105,
+          "sum_sum_coordinate": 110246,
+          "sum_difference_coordinate": 23314,
+          "sum_residue": 43361,
+          "sum_centered_residue": 20047,
+          "sum_abs_centered_residue": 27267,
+          "sum_square_centered_residue": 10313033
+        }
+      },
+      "signed_count": 108,
+      "signed_residue_moment": 15903,
+      "signed_centered_moment": -36774,
+      "signed_count_over_p2": "108/625",
+      "signed_residue_moment_over_hp2": "15903/398125",
+      "signed_centered_moment_over_hp2": "-36774/398125"
+    },
+    {
+      "sample_id": "singer-52b4ae593193",
+      "kind": "reflected-singer",
+      "p": 26,
+      "b": 1,
+      "h": 659,
+      "max_E": 1317,
+      "delta": 343,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 230,
+          "sum_sum_coordinate": 175366,
+          "sum_difference_coordinate": -24026,
+          "sum_residue": 65972,
+          "sum_centered_residue": -19396,
+          "sum_abs_centered_residue": 80604,
+          "sum_square_centered_residue": 36456896
+        },
+        "2": {
+          "count": 107,
+          "sum_sum_coordinate": 117071,
+          "sum_difference_coordinate": 23848,
+          "sum_residue": 46558,
+          "sum_centered_residue": 22710,
+          "sum_abs_centered_residue": 30034,
+          "sum_square_centered_residue": 12298524
+        }
+      },
+      "signed_count": 123,
+      "signed_residue_moment": 19414,
+      "signed_centered_moment": -42106,
+      "signed_count_over_p2": "123/676",
+      "signed_residue_moment_over_hp2": "9707/222742",
+      "signed_centered_moment_over_hp2": "-21053/222742"
+    },
+    {
+      "sample_id": "bose-e3149afd6ad7",
+      "kind": "reflected-bose",
+      "p": 27,
+      "b": 2,
+      "h": 749,
+      "max_E": 1498,
+      "delta": 332,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 246,
+          "sum_sum_coordinate": 215270,
+          "sum_difference_coordinate": -31508,
+          "sum_residue": 79701,
+          "sum_centered_residue": -24360,
+          "sum_abs_centered_residue": 97938,
+          "sum_square_centered_residue": 49303766
+        },
+        "2": {
+          "count": 127,
+          "sum_sum_coordinate": 154524,
+          "sum_difference_coordinate": 35468,
+          "sum_residue": 59401,
+          "sum_centered_residue": 23933,
+          "sum_abs_centered_residue": 37541,
+          "sum_square_centered_residue": 15842983
+        }
+      },
+      "signed_count": 119,
+      "signed_residue_moment": 20300,
+      "signed_centered_moment": -48293,
+      "signed_count_over_p2": "119/729",
+      "signed_residue_moment_over_hp2": "2900/78003",
+      "signed_centered_moment_over_hp2": "-6899/78003"
+    },
+    {
+      "sample_id": "ruzsa-ebbf0771a425",
+      "kind": "reflected-ruzsa",
+      "p": 28,
+      "b": 2,
+      "h": 827,
+      "max_E": 1654,
+      "delta": 336,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 231,
+          "sum_sum_coordinate": 222046,
+          "sum_difference_coordinate": -31471,
+          "sum_residue": 82283,
+          "sum_centered_residue": -26009,
+          "sum_abs_centered_residue": 103907,
+          "sum_square_centered_residue": 59110607
+        },
+        "2": {
+          "count": 134,
+          "sum_sum_coordinate": 180656,
+          "sum_difference_coordinate": 40712,
+          "sum_residue": 69838,
+          "sum_centered_residue": 29126,
+          "sum_abs_centered_residue": 43550,
+          "sum_square_centered_residue": 21149902
+        }
+      },
+      "signed_count": 97,
+      "signed_residue_moment": 12445,
+      "signed_centered_moment": -55135,
+      "signed_count_over_p2": "97/784",
+      "signed_residue_moment_over_hp2": "12445/648368",
+      "signed_centered_moment_over_hp2": "-55135/648368"
+    },
+    {
+      "sample_id": "singer-934535997501",
+      "kind": "reflected-singer",
+      "p": 28,
+      "b": 1,
+      "h": 784,
+      "max_E": 1567,
+      "delta": 379,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 261,
+          "sum_sum_coordinate": 236734,
+          "sum_difference_coordinate": -32371,
+          "sum_residue": 86206,
+          "sum_centered_residue": -31951,
+          "sum_abs_centered_residue": 112285,
+          "sum_square_centered_residue": 61406661
+        },
+        "2": {
+          "count": 118,
+          "sum_sum_coordinate": 152272,
+          "sum_difference_coordinate": 32634,
+          "sum_residue": 59760,
+          "sum_centered_residue": 27126,
+          "sum_abs_centered_residue": 37236,
+          "sum_square_centered_residue": 16926582
+        }
+      },
+      "signed_count": 143,
+      "signed_residue_moment": 26446,
+      "signed_centered_moment": -59077,
+      "signed_count_over_p2": "143/784",
+      "signed_residue_moment_over_hp2": "1889/43904",
+      "signed_centered_moment_over_hp2": "-59077/614656"
+    },
+    {
+      "sample_id": "bose-22e836643a82",
+      "kind": "reflected-bose",
+      "p": 29,
+      "b": 2,
+      "h": 871,
+      "max_E": 1742,
+      "delta": 377,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 263,
+          "sum_sum_coordinate": 265640,
+          "sum_difference_coordinate": -37093,
+          "sum_residue": 96666,
+          "sum_centered_residue": -35215,
+          "sum_abs_centered_residue": 127397,
+          "sum_square_centered_residue": 76977679
+        },
+        "2": {
+          "count": 133,
+          "sum_sum_coordinate": 190333,
+          "sum_difference_coordinate": 41087,
+          "sum_residue": 74490,
+          "sum_centered_residue": 33403,
+          "sum_abs_centered_residue": 47439,
+          "sum_square_centered_residue": 23905869
+        }
+      },
+      "signed_count": 130,
+      "signed_residue_moment": 22176,
+      "signed_centered_moment": -68618,
+      "signed_count_over_p2": "130/841",
+      "signed_residue_moment_over_hp2": "22176/732511",
+      "signed_centered_moment_over_hp2": "-68618/732511"
+    },
+    {
+      "sample_id": "ruzsa-1b8423bccc25",
+      "kind": "reflected-ruzsa",
+      "p": 30,
+      "b": 2,
+      "h": 1010,
+      "max_E": 2020,
+      "delta": 326,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 285,
+          "sum_sum_coordinate": 328014,
+          "sum_difference_coordinate": -40734,
+          "sum_residue": 120964,
+          "sum_centered_residue": -45352,
+          "sum_abs_centered_residue": 161488,
+          "sum_square_centered_residue": 114278032
+        },
+        "2": {
+          "count": 118,
+          "sum_sum_coordinate": 195956,
+          "sum_difference_coordinate": 42168,
+          "sum_residue": 76776,
+          "sum_centered_residue": 34608,
+          "sum_abs_centered_residue": 46388,
+          "sum_square_centered_residue": 27025448
+        }
+      },
+      "signed_count": 167,
+      "signed_residue_moment": 44188,
+      "signed_centered_moment": -79960,
+      "signed_count_over_p2": "167/900",
+      "signed_residue_moment_over_hp2": "11047/227250",
+      "signed_centered_moment_over_hp2": "-1999/22725"
+    },
+    {
+      "sample_id": "singer-42ebc8b4bde7",
+      "kind": "reflected-singer",
+      "p": 30,
+      "b": 2,
+      "h": 919,
+      "max_E": 1838,
+      "delta": 417,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 297,
+          "sum_sum_coordinate": 314716,
+          "sum_difference_coordinate": -42367,
+          "sum_residue": 118050,
+          "sum_centered_residue": -36249,
+          "sum_abs_centered_residue": 148967,
+          "sum_square_centered_residue": 94453385
+        },
+        "2": {
+          "count": 147,
+          "sum_sum_coordinate": 219837,
+          "sum_difference_coordinate": 50055,
+          "sum_residue": 84744,
+          "sum_centered_residue": 34689,
+          "sum_abs_centered_residue": 53673,
+          "sum_square_centered_residue": 27849075
+        }
+      },
+      "signed_count": 150,
+      "signed_residue_moment": 33306,
+      "signed_centered_moment": -70938,
+      "signed_count_over_p2": "1/6",
+      "signed_residue_moment_over_hp2": "5551/137850",
+      "signed_centered_moment_over_hp2": "-3941/45950"
+    },
+    {
+      "sample_id": "bose-fcf58fd07414",
+      "kind": "reflected-bose",
+      "p": 31,
+      "b": 1,
+      "h": 1018,
+      "max_E": 2035,
+      "delta": 409,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 301,
+          "sum_sum_coordinate": 341772,
+          "sum_difference_coordinate": -35655,
+          "sum_residue": 133082,
+          "sum_centered_residue": -39953,
+          "sum_abs_centered_residue": 177019,
+          "sum_square_centered_residue": 126037389
+        },
+        "2": {
+          "count": 118,
+          "sum_sum_coordinate": 196676,
+          "sum_difference_coordinate": 43454,
+          "sum_residue": 76552,
+          "sum_centered_residue": 33098,
+          "sum_abs_centered_residue": 47642,
+          "sum_square_centered_residue": 28196518
+        }
+      },
+      "signed_count": 183,
+      "signed_residue_moment": 56530,
+      "signed_centered_moment": -73051,
+      "signed_count_over_p2": "183/961",
+      "signed_residue_moment_over_hp2": "28265/489149",
+      "signed_centered_moment_over_hp2": "-73051/978298"
+    },
+    {
+      "sample_id": "bose-9e2838ea9f99",
+      "kind": "reflected-bose",
+      "p": 32,
+      "b": 2,
+      "h": 1079,
+      "max_E": 2158,
+      "delta": 442,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 318,
+          "sum_sum_coordinate": 396272,
+          "sum_difference_coordinate": -53786,
+          "sum_residue": 145944,
+          "sum_centered_residue": -50598,
+          "sum_abs_centered_residue": 186960,
+          "sum_square_centered_residue": 138542046
+        },
+        "2": {
+          "count": 168,
+          "sum_sum_coordinate": 297194,
+          "sum_difference_coordinate": 65014,
+          "sum_residue": 115922,
+          "sum_centered_residue": 50908,
+          "sum_abs_centered_residue": 72414,
+          "sum_square_centered_residue": 45162752
+        }
+      },
+      "signed_count": 150,
+      "signed_residue_moment": 30022,
+      "signed_centered_moment": -101506,
+      "signed_count_over_p2": "75/512",
+      "signed_residue_moment_over_hp2": "15011/552448",
+      "signed_centered_moment_over_hp2": "-50753/552448"
+    },
+    {
+      "sample_id": "singer-597b7f1d0a50",
+      "kind": "reflected-singer",
+      "p": 32,
+      "b": 1,
+      "h": 1039,
+      "max_E": 2077,
+      "delta": 482,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 329,
+          "sum_sum_coordinate": 396976,
+          "sum_difference_coordinate": -55474,
+          "sum_residue": 145538,
+          "sum_centered_residue": -50426,
+          "sum_abs_centered_residue": 190158,
+          "sum_square_centered_residue": 136719820
+        },
+        "2": {
+          "count": 153,
+          "sum_sum_coordinate": 261513,
+          "sum_difference_coordinate": 56268,
+          "sum_residue": 102546,
+          "sum_centered_residue": 46278,
+          "sum_abs_centered_residue": 65734,
+          "sum_square_centered_residue": 40220924
+        }
+      },
+      "signed_count": 176,
+      "signed_residue_moment": 42992,
+      "signed_centered_moment": -96704,
+      "signed_count_over_p2": "11/64",
+      "signed_residue_moment_over_hp2": "2687/66496",
+      "signed_centered_moment_over_hp2": "-1511/16624"
+    },
+    {
+      "sample_id": "singer-169854b2e9c0",
+      "kind": "reflected-singer",
+      "p": 33,
+      "b": 2,
+      "h": 1137,
+      "max_E": 2274,
+      "delta": 481,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 357,
+          "sum_sum_coordinate": 463817,
+          "sum_difference_coordinate": -58622,
+          "sum_residue": 170471,
+          "sum_centered_residue": -64253,
+          "sum_abs_centered_residue": 226683,
+          "sum_square_centered_residue": 178388157
+        },
+        "2": {
+          "count": 167,
+          "sum_sum_coordinate": 309436,
+          "sum_difference_coordinate": 69988,
+          "sum_residue": 119557,
+          "sum_centered_residue": 49569,
+          "sum_abs_centered_residue": 72433,
+          "sum_square_centered_residue": 44915479
+        }
+      },
+      "signed_count": 190,
+      "signed_residue_moment": 50914,
+      "signed_centered_moment": -113822,
+      "signed_count_over_p2": "190/1089",
+      "signed_residue_moment_over_hp2": "50914/1238193",
+      "signed_centered_moment_over_hp2": "-113822/1238193"
+    },
+    {
+      "sample_id": "ruzsa-83acc1ade36f",
+      "kind": "reflected-ruzsa",
+      "p": 36,
+      "b": 2,
+      "h": 1432,
+      "max_E": 2864,
+      "delta": 495,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 425,
+          "sum_sum_coordinate": 687939,
+          "sum_difference_coordinate": -80189,
+          "sum_residue": 266931,
+          "sum_centered_residue": -73888,
+          "sum_abs_centered_residue": 347976,
+          "sum_square_centered_residue": 349462456
+        },
+        "2": {
+          "count": 160,
+          "sum_sum_coordinate": 371645,
+          "sum_difference_coordinate": 86275,
+          "sum_residue": 142525,
+          "sum_centered_residue": 56250,
+          "sum_abs_centered_residue": 85070,
+          "sum_square_centered_residue": 67299316
+        }
+      },
+      "signed_count": 265,
+      "signed_residue_moment": 124406,
+      "signed_centered_moment": -130138,
+      "signed_count_over_p2": "265/1296",
+      "signed_residue_moment_over_hp2": "62203/927936",
+      "signed_centered_moment_over_hp2": "-65069/927936"
+    },
+    {
+      "sample_id": "bose-db91fe3e5517",
+      "kind": "reflected-bose",
+      "p": 37,
+      "b": 1,
+      "h": 1467,
+      "max_E": 2933,
+      "delta": 569,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 434,
+          "sum_sum_coordinate": 728392,
+          "sum_difference_coordinate": -92148,
+          "sum_residue": 272155,
+          "sum_centered_residue": -91934,
+          "sum_abs_centered_residue": 359662,
+          "sum_square_centered_residue": 369269132
+        },
+        "2": {
+          "count": 175,
+          "sum_sum_coordinate": 423276,
+          "sum_difference_coordinate": 89999,
+          "sum_residue": 166551,
+          "sum_centered_residue": 76552,
+          "sum_abs_centered_residue": 105392,
+          "sum_square_centered_residue": 91521688
+        }
+      },
+      "signed_count": 259,
+      "signed_residue_moment": 105604,
+      "signed_centered_moment": -168486,
+      "signed_count_over_p2": "7/37",
+      "signed_residue_moment_over_hp2": "105604/2008323",
+      "signed_centered_moment_over_hp2": "-56162/669441"
+    },
+    {
+      "sample_id": "singer-natural-e328d22f644e",
+      "kind": "reflected-singer-natural",
+      "p": 38,
+      "b": 1,
+      "h": 1662,
+      "max_E": 3323,
+      "delta": 486,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 455,
+          "sum_sum_coordinate": 869819,
+          "sum_difference_coordinate": -114064,
+          "sum_residue": 313049,
+          "sum_centered_residue": -129657,
+          "sum_abs_centered_residue": 425853,
+          "sum_square_centered_residue": 492420415
+        },
+        "2": {
+          "count": 176,
+          "sum_sum_coordinate": 477051,
+          "sum_difference_coordinate": 107797,
+          "sum_residue": 184539,
+          "sum_centered_residue": 76742,
+          "sum_abs_centered_residue": 109562,
+          "sum_square_centered_residue": 96700272
+        }
+      },
+      "signed_count": 279,
+      "signed_residue_moment": 128510,
+      "signed_centered_moment": -206399,
+      "signed_count_over_p2": "279/1444",
+      "signed_residue_moment_over_hp2": "64255/1199964",
+      "signed_centered_moment_over_hp2": "-206399/2399928"
+    },
+    {
+      "sample_id": "ruzsa-428b85afe7fd",
+      "kind": "reflected-ruzsa",
+      "p": 40,
+      "b": 2,
+      "h": 1827,
+      "max_E": 3654,
+      "delta": 554,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 494,
+          "sum_sum_coordinate": 1041834,
+          "sum_difference_coordinate": -140284,
+          "sum_residue": 382287,
+          "sum_centered_residue": -136976,
+          "sum_abs_centered_residue": 507022,
+          "sum_square_centered_residue": 649052206
+        },
+        "2": {
+          "count": 217,
+          "sum_sum_coordinate": 651734,
+          "sum_difference_coordinate": 140750,
+          "sum_residue": 255275,
+          "sum_centered_residue": 114525,
+          "sum_abs_centered_residue": 152745,
+          "sum_square_centered_residue": 159658001
+        }
+      },
+      "signed_count": 277,
+      "signed_residue_moment": 127012,
+      "signed_centered_moment": -251501,
+      "signed_count_over_p2": "277/1600",
+      "signed_residue_moment_over_hp2": "31753/730800",
+      "signed_centered_moment_over_hp2": "-251501/2923200"
+    },
+    {
+      "sample_id": "bose-0abbacd0c052",
+      "kind": "reflected-bose",
+      "p": 41,
+      "b": 1,
+      "h": 1838,
+      "max_E": 3675,
+      "delta": 664,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 544,
+          "sum_sum_coordinate": 1159799,
+          "sum_difference_coordinate": -160471,
+          "sum_residue": 433789,
+          "sum_centered_residue": -131750,
+          "sum_abs_centered_residue": 552308,
+          "sum_square_centered_residue": 704268832
+        },
+        "2": {
+          "count": 218,
+          "sum_sum_coordinate": 662739,
+          "sum_difference_coordinate": 138411,
+          "sum_residue": 262055,
+          "sum_centered_residue": 123644,
+          "sum_abs_centered_residue": 167084,
+          "sum_square_centered_residue": 183813034
+        }
+      },
+      "signed_count": 326,
+      "signed_residue_moment": 171734,
+      "signed_centered_moment": -255394,
+      "signed_count_over_p2": "326/1681",
+      "signed_residue_moment_over_hp2": "85867/1544839",
+      "signed_centered_moment_over_hp2": "-127697/1544839"
+    },
+    {
+      "sample_id": "ruzsa-da2d02833ef1",
+      "kind": "reflected-ruzsa",
+      "p": 42,
+      "b": 2,
+      "h": 1983,
+      "max_E": 3966,
+      "delta": 643,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 567,
+          "sum_sum_coordinate": 1270605,
+          "sum_difference_coordinate": -147378,
+          "sum_residue": 497235,
+          "sum_centered_residue": -128757,
+          "sum_abs_centered_residue": 634235,
+          "sum_square_centered_residue": 889507631
+        },
+        "2": {
+          "count": 224,
+          "sum_sum_coordinate": 723165,
+          "sum_difference_coordinate": 164771,
+          "sum_residue": 278973,
+          "sum_centered_residue": 114202,
+          "sum_abs_centered_residue": 173894,
+          "sum_square_centered_residue": 204271096
+        }
+      },
+      "signed_count": 343,
+      "signed_residue_moment": 218262,
+      "signed_centered_moment": -242959,
+      "signed_count_over_p2": "7/36",
+      "signed_residue_moment_over_hp2": "36377/583002",
+      "signed_centered_moment_over_hp2": "-242959/3498012"
+    },
+    {
+      "sample_id": "singer-natural-af5f6ce7a13b",
+      "kind": "reflected-singer-natural",
+      "p": 42,
+      "b": 1,
+      "h": 2028,
+      "max_E": 4055,
+      "delta": 598,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 557,
+          "sum_sum_coordinate": 1302633,
+          "sum_difference_coordinate": -173594,
+          "sum_residue": 456957,
+          "sum_centered_residue": -215125,
+          "sum_abs_centered_residue": 633469,
+          "sum_square_centered_residue": 898515077
+        },
+        "2": {
+          "count": 207,
+          "sum_sum_coordinate": 686005,
+          "sum_difference_coordinate": 153380,
+          "sum_residue": 266209,
+          "sum_centered_residue": 112829,
+          "sum_abs_centered_residue": 154349,
+          "sum_square_centered_residue": 166659847
+        }
+      },
+      "signed_count": 350,
+      "signed_residue_moment": 190748,
+      "signed_centered_moment": -327954,
+      "signed_count_over_p2": "25/126",
+      "signed_residue_moment_over_hp2": "47687/894348",
+      "signed_centered_moment_over_hp2": "-54659/596232"
+    },
+    {
+      "sample_id": "bose-63cdfbebb615",
+      "kind": "reflected-bose",
+      "p": 43,
+      "b": 2,
+      "h": 2041,
+      "max_E": 4082,
+      "delta": 712,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 577,
+          "sum_sum_coordinate": 1358474,
+          "sum_difference_coordinate": -181971,
+          "sum_residue": 505336,
+          "sum_centered_residue": -165831,
+          "sum_abs_centered_residue": 662691,
+          "sum_square_centered_residue": 944486769
+        },
+        "2": {
+          "count": 256,
+          "sum_sum_coordinate": 860103,
+          "sum_difference_coordinate": 184377,
+          "sum_residue": 337607,
+          "sum_centered_residue": 153230,
+          "sum_abs_centered_residue": 210398,
+          "sum_square_centered_residue": 248307352
+        }
+      },
+      "signed_count": 321,
+      "signed_residue_moment": 167729,
+      "signed_centered_moment": -319061,
+      "signed_count_over_p2": "321/1849",
+      "signed_residue_moment_over_hp2": "167729/3773809",
+      "signed_centered_moment_over_hp2": "-319061/3773809"
+    },
+    {
+      "sample_id": "singer-natural-02f7f91658ec",
+      "kind": "reflected-singer-natural",
+      "p": 44,
+      "b": 2,
+      "h": 2235,
+      "max_E": 4470,
+      "delta": 648,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 637,
+          "sum_sum_coordinate": 1601980,
+          "sum_difference_coordinate": -179559,
+          "sum_residue": 623050,
+          "sum_centered_residue": -176321,
+          "sum_abs_centered_residue": 842977,
+          "sum_square_centered_residue": 1348556869
+        },
+        "2": {
+          "count": 209,
+          "sum_sum_coordinate": 754502,
+          "sum_difference_coordinate": 179310,
+          "sum_residue": 287387,
+          "sum_centered_residue": 108077,
+          "sum_abs_centered_residue": 162787,
+          "sum_square_centered_residue": 187404617
+        }
+      },
+      "signed_count": 428,
+      "signed_residue_moment": 335663,
+      "signed_centered_moment": -284398,
+      "signed_count_over_p2": "107/484",
+      "signed_residue_moment_over_hp2": "335663/4326960",
+      "signed_centered_moment_over_hp2": "-142199/2163480"
+    },
+    {
+      "sample_id": "ruzsa-9ab2ac138632",
+      "kind": "reflected-ruzsa",
+      "p": 46,
+      "b": 2,
+      "h": 2462,
+      "max_E": 4924,
+      "delta": 690,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 597,
+          "sum_sum_coordinate": 1697095,
+          "sum_difference_coordinate": -228475,
+          "sum_residue": 628587,
+          "sum_centered_residue": -211446,
+          "sum_abs_centered_residue": 813954,
+          "sum_square_centered_residue": 1396980628
+        },
+        "2": {
+          "count": 292,
+          "sum_sum_coordinate": 1172086,
+          "sum_difference_coordinate": 265138,
+          "sum_residue": 453182,
+          "sum_centered_residue": 188044,
+          "sum_abs_centered_residue": 278384,
+          "sum_square_centered_residue": 387770608
+        }
+      },
+      "signed_count": 305,
+      "signed_residue_moment": 175405,
+      "signed_centered_moment": -399490,
+      "signed_count_over_p2": "305/2116",
+      "signed_residue_moment_over_hp2": "175405/5209592",
+      "signed_centered_moment_over_hp2": "-199745/2604796"
+    },
+    {
+      "sample_id": "bose-7b5a4f7cbcb1",
+      "kind": "reflected-bose",
+      "p": 47,
+      "b": 2,
+      "h": 2469,
+      "max_E": 4938,
+      "delta": 822,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 680,
+          "sum_sum_coordinate": 1915083,
+          "sum_difference_coordinate": -237523,
+          "sum_residue": 732432,
+          "sum_centered_residue": -212696,
+          "sum_abs_centered_residue": 940198,
+          "sum_square_centered_residue": 1623073616
+        },
+        "2": {
+          "count": 299,
+          "sum_sum_coordinate": 1203515,
+          "sum_difference_coordinate": 272349,
+          "sum_residue": 465284,
+          "sum_centered_residue": 192935,
+          "sum_abs_centered_residue": 287283,
+          "sum_square_centered_residue": 393288507
+        }
+      },
+      "signed_count": 381,
+      "signed_residue_moment": 267148,
+      "signed_centered_moment": -405631,
+      "signed_count_over_p2": "381/2209",
+      "signed_residue_moment_over_hp2": "5684/116043",
+      "signed_centered_moment_over_hp2": "-405631/5454021"
+    },
+    {
+      "sample_id": "singer-natural-5a2a744fda47",
+      "kind": "reflected-singer-natural",
+      "p": 48,
+      "b": 1,
+      "h": 2739,
+      "max_E": 5477,
+      "delta": 694,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 680,
+          "sum_sum_coordinate": 2142700,
+          "sum_difference_coordinate": -280860,
+          "sum_residue": 732115,
+          "sum_centered_residue": -397610,
+          "sum_abs_centered_residue": 1049634,
+          "sum_square_centered_residue": 2026298156
+        },
+        "2": {
+          "count": 271,
+          "sum_sum_coordinate": 1223367,
+          "sum_difference_coordinate": 260900,
+          "sum_residue": 481098,
+          "sum_centered_residue": 220198,
+          "sum_abs_centered_residue": 290618,
+          "sum_square_centered_residue": 454884516
+        }
+      },
+      "signed_count": 409,
+      "signed_residue_moment": 251017,
+      "signed_centered_moment": -617808,
+      "signed_count_over_p2": "409/2304",
+      "signed_residue_moment_over_hp2": "251017/6310656",
+      "signed_centered_moment_over_hp2": "-12871/131472"
+    },
+    {
+      "sample_id": "bose-d1abf4bf7a7c",
+      "kind": "reflected-bose",
+      "p": 49,
+      "b": 1,
+      "h": 2758,
+      "max_E": 5515,
+      "delta": 820,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 752,
+          "sum_sum_coordinate": 2388689,
+          "sum_difference_coordinate": -315425,
+          "sum_residue": 863515,
+          "sum_centered_residue": -346234,
+          "sum_abs_centered_residue": 1163178,
+          "sum_square_centered_residue": 2234151264
+        },
+        "2": {
+          "count": 296,
+          "sum_sum_coordinate": 1334949,
+          "sum_difference_coordinate": 297491,
+          "sum_residue": 518581,
+          "sum_centered_residue": 221090,
+          "sum_abs_centered_residue": 302276,
+          "sum_square_centered_residue": 453360272
+        }
+      },
+      "signed_count": 456,
+      "signed_residue_moment": 344934,
+      "signed_centered_moment": -567324,
+      "signed_count_over_p2": "456/2401",
+      "signed_residue_moment_over_hp2": "172467/3310979",
+      "signed_centered_moment_over_hp2": "-283662/3310979"
+    },
+    {
+      "sample_id": "singer-natural-1544182544c2",
+      "kind": "reflected-singer-natural",
+      "p": 50,
+      "b": 2,
+      "h": 3044,
+      "max_E": 6088,
+      "delta": 682,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 783,
+          "sum_sum_coordinate": 2643485,
+          "sum_difference_coordinate": -261599,
+          "sum_residue": 1094089,
+          "sum_centered_residue": -193708,
+          "sum_abs_centered_residue": 1443868,
+          "sum_square_centered_residue": 3206296752
+        },
+        "2": {
+          "count": 250,
+          "sum_sum_coordinate": 1239802,
+          "sum_difference_coordinate": 281698,
+          "sum_residue": 478802,
+          "sum_centered_residue": 197104,
+          "sum_abs_centered_residue": 277440,
+          "sum_square_centered_residue": 486306784
+        }
+      },
+      "signed_count": 533,
+      "signed_residue_moment": 615287,
+      "signed_centered_moment": -390812,
+      "signed_count_over_p2": "533/2500",
+      "signed_residue_moment_over_hp2": "615287/7610000",
+      "signed_centered_moment_over_hp2": "-97703/1902500"
+    },
+    {
+      "sample_id": "ruzsa-98e354f8996a",
+      "kind": "reflected-ruzsa",
+      "p": 52,
+      "b": 1,
+      "h": 3260,
+      "max_E": 6519,
+      "delta": 771,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 763,
+          "sum_sum_coordinate": 2900250,
+          "sum_difference_coordinate": -413633,
+          "sum_residue": 1019230,
+          "sum_centered_residue": -448157,
+          "sum_abs_centered_residue": 1393619,
+          "sum_square_centered_residue": 3180337307
+        },
+        "2": {
+          "count": 321,
+          "sum_sum_coordinate": 1737078,
+          "sum_difference_coordinate": 355521,
+          "sum_residue": 690618,
+          "sum_centered_residue": 335097,
+          "sum_abs_centered_residue": 413673,
+          "sum_square_centered_residue": 758745281
+        }
+      },
+      "signed_count": 442,
+      "signed_residue_moment": 328612,
+      "signed_centered_moment": -783254,
+      "signed_count_over_p2": "17/104",
+      "signed_residue_moment_over_hp2": "82153/2203760",
+      "signed_centered_moment_over_hp2": "-391627/4407520"
+    },
+    {
+      "sample_id": "bose-bef5be76717b",
+      "kind": "reflected-bose",
+      "p": 53,
+      "b": 2,
+      "h": 3218,
+      "max_E": 6436,
+      "delta": 970,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 793,
+          "sum_sum_coordinate": 2970383,
+          "sum_difference_coordinate": -420095,
+          "sum_residue": 1055673,
+          "sum_centered_residue": -438942,
+          "sum_abs_centered_residue": 1424298,
+          "sum_square_centered_residue": 3216905172
+        },
+        "2": {
+          "count": 408,
+          "sum_sum_coordinate": 2169233,
+          "sum_difference_coordinate": 455839,
+          "sum_residue": 856289,
+          "sum_centered_residue": 400450,
+          "sum_abs_centered_residue": 537778,
+          "sum_square_centered_residue": 1032341164
+        }
+      },
+      "signed_count": 385,
+      "signed_residue_moment": 199384,
+      "signed_centered_moment": -839392,
+      "signed_count_over_p2": "385/2809",
+      "signed_residue_moment_over_hp2": "99692/4519681",
+      "signed_centered_moment_over_hp2": "-419696/4519681"
+    },
+    {
+      "sample_id": "singer-natural-148e8da771ac",
+      "kind": "reflected-singer-natural",
+      "p": 54,
+      "b": 1,
+      "h": 3550,
+      "max_E": 7099,
+      "delta": 798,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 760,
+          "sum_sum_coordinate": 3154387,
+          "sum_difference_coordinate": -457147,
+          "sum_residue": 1098937,
+          "sum_centered_residue": -499366,
+          "sum_abs_centered_residue": 1495030,
+          "sum_square_centered_residue": 3691899344
+        },
+        "2": {
+          "count": 376,
+          "sum_sum_coordinate": 2203600,
+          "sum_difference_coordinate": 465624,
+          "sum_residue": 868800,
+          "sum_centered_residue": 403176,
+          "sum_abs_centered_residue": 501406,
+          "sum_square_centered_residue": 978260288
+        }
+      },
+      "signed_count": 384,
+      "signed_residue_moment": 230137,
+      "signed_centered_moment": -902542,
+      "signed_count_over_p2": "32/243",
+      "signed_residue_moment_over_hp2": "230137/10351800",
+      "signed_centered_moment_over_hp2": "-451271/5175900"
+    },
+    {
+      "sample_id": "ruzsa-6d3426b6f8ef",
+      "kind": "reflected-ruzsa",
+      "p": 58,
+      "b": 1,
+      "h": 4020,
+      "max_E": 8039,
+      "delta": 998,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1027,
+          "sum_sum_coordinate": 4700843,
+          "sum_difference_coordinate": -573330,
+          "sum_residue": 1750163,
+          "sum_centered_residue": -627187,
+          "sum_abs_centered_residue": 2402929,
+          "sum_square_centered_residue": 6874007275
+        },
+        "2": {
+          "count": 357,
+          "sum_sum_coordinate": 2356064,
+          "sum_difference_coordinate": 513859,
+          "sum_residue": 920924,
+          "sum_centered_residue": 407065,
+          "sum_abs_centered_residue": 525145,
+          "sum_square_centered_residue": 1160878741
+        }
+      },
+      "signed_count": 670,
+      "signed_residue_moment": 829239,
+      "signed_centered_moment": -1034252,
+      "signed_count_over_p2": "335/1682",
+      "signed_residue_moment_over_hp2": "276413/4507760",
+      "signed_centered_moment_over_hp2": "-258563/3380820"
+    },
+    {
+      "sample_id": "bose-b1896cd8e75f",
+      "kind": "reflected-bose",
+      "p": 59,
+      "b": 1,
+      "h": 4064,
+      "max_E": 8127,
+      "delta": 1129,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1114,
+          "sum_sum_coordinate": 5168902,
+          "sum_difference_coordinate": -642720,
+          "sum_residue": 1946150,
+          "sum_centered_residue": -633882,
+          "sum_abs_centered_residue": 2560412,
+          "sum_square_centered_residue": 7318139834
+        },
+        "2": {
+          "count": 383,
+          "sum_sum_coordinate": 2549497,
+          "sum_difference_coordinate": 563144,
+          "sum_residue": 992985,
+          "sum_centered_residue": 429841,
+          "sum_abs_centered_residue": 587871,
+          "sum_square_centered_residue": 1315511415
+        }
+      },
+      "signed_count": 731,
+      "signed_residue_moment": 953165,
+      "signed_centered_moment": -1063723,
+      "signed_count_over_p2": "731/3481",
+      "signed_residue_moment_over_hp2": "953165/14146784",
+      "signed_centered_moment_over_hp2": "-1063723/14146784"
+    },
+    {
+      "sample_id": "ruzsa-a35297546151",
+      "kind": "reflected-ruzsa",
+      "p": 60,
+      "b": 2,
+      "h": 4305,
+      "max_E": 8610,
+      "delta": 1066,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1154,
+          "sum_sum_coordinate": 5630122,
+          "sum_difference_coordinate": -664460,
+          "sum_residue": 2151682,
+          "sum_centered_residue": -662298,
+          "sum_abs_centered_residue": 2847824,
+          "sum_square_centered_residue": 8655958914
+        },
+        "2": {
+          "count": 399,
+          "sum_sum_coordinate": 2804688,
+          "sum_difference_coordinate": 629904,
+          "sum_residue": 1086993,
+          "sum_centered_residue": 457089,
+          "sum_abs_centered_residue": 618487,
+          "sum_square_centered_residue": 1458720711
+        }
+      },
+      "signed_count": 755,
+      "signed_residue_moment": 1064689,
+      "signed_centered_moment": -1119387,
+      "signed_count_over_p2": "151/720",
+      "signed_residue_moment_over_hp2": "1064689/15498000",
+      "signed_centered_moment_over_hp2": "-373129/5166000"
+    },
+    {
+      "sample_id": "singer-natural-aaccd2fd8048",
+      "kind": "reflected-singer-natural",
+      "p": 60,
+      "b": 1,
+      "h": 4455,
+      "max_E": 8909,
+      "delta": 916,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 902,
+          "sum_sum_coordinate": 4832390,
+          "sum_difference_coordinate": -814882,
+          "sum_residue": 1673795,
+          "sum_centered_residue": -669918,
+          "sum_abs_centered_residue": 2077018,
+          "sum_square_centered_residue": 6277352172
+        },
+        "2": {
+          "count": 575,
+          "sum_sum_coordinate": 4309574,
+          "sum_difference_coordinate": 813101,
+          "sum_residue": 1747949,
+          "sum_centered_residue": 934848,
+          "sum_abs_centered_residue": 1131892,
+          "sum_square_centered_residue": 3148073800
+        }
+      },
+      "signed_count": 327,
+      "signed_residue_moment": -74154,
+      "signed_centered_moment": -1604766,
+      "signed_count_over_p2": "109/1200",
+      "signed_residue_moment_over_hp2": "-12359/2673000",
+      "signed_centered_moment_over_hp2": "-267461/2673000"
+    },
+    {
+      "sample_id": "bose-366ae31d5182",
+      "kind": "reflected-bose",
+      "p": 61,
+      "b": 2,
+      "h": 4374,
+      "max_E": 8748,
+      "delta": 1178,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1105,
+          "sum_sum_coordinate": 5560519,
+          "sum_difference_coordinate": -729459,
+          "sum_residue": 2017579,
+          "sum_centered_residue": -795902,
+          "sum_abs_centered_residue": 2758518,
+          "sum_square_centered_residue": 8519555860
+        },
+        "2": {
+          "count": 466,
+          "sum_sum_coordinate": 3351484,
+          "sum_difference_coordinate": 724152,
+          "sum_residue": 1313200,
+          "sum_centered_residue": 589048,
+          "sum_abs_centered_residue": 764244,
+          "sum_square_centered_residue": 1839790008
+        }
+      },
+      "signed_count": 639,
+      "signed_residue_moment": 704379,
+      "signed_centered_moment": -1384950,
+      "signed_count_over_p2": "639/3721",
+      "signed_residue_moment_over_hp2": "234793/5425218",
+      "signed_centered_moment_over_hp2": "-230825/2712609"
+    },
+    {
+      "sample_id": "singer-natural-1f62b4e77b9e",
+      "kind": "reflected-singer-natural",
+      "p": 62,
+      "b": 1,
+      "h": 4807,
+      "max_E": 9613,
+      "delta": 929,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1057,
+          "sum_sum_coordinate": 5880255,
+          "sum_difference_coordinate": -800313,
+          "sum_residue": 2001006,
+          "sum_centered_residue": -1077930,
+          "sum_abs_centered_residue": 2946890,
+          "sum_square_centered_residue": 10093511996
+        },
+        "2": {
+          "count": 435,
+          "sum_sum_coordinate": 3462317,
+          "sum_difference_coordinate": 719338,
+          "sum_residue": 1371272,
+          "sum_centered_residue": 651934,
+          "sum_abs_centered_residue": 827638,
+          "sum_square_centered_residue": 2261768892
+        }
+      },
+      "signed_count": 622,
+      "signed_residue_moment": 629734,
+      "signed_centered_moment": -1729864,
+      "signed_count_over_p2": "311/1922",
+      "signed_residue_moment_over_hp2": "10157/298034",
+      "signed_centered_moment_over_hp2": "-432466/4619527"
+    },
+    {
+      "sample_id": "bose-71299c7b60ef",
+      "kind": "reflected-bose",
+      "p": 64,
+      "b": 1,
+      "h": 4833,
+      "max_E": 9665,
+      "delta": 1280,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1264,
+          "sum_sum_coordinate": 7014868,
+          "sum_difference_coordinate": -907220,
+          "sum_residue": 2583007,
+          "sum_centered_residue": -941634,
+          "sum_abs_centered_residue": 3451270,
+          "sum_square_centered_residue": 11687608916
+        },
+        "2": {
+          "count": 458,
+          "sum_sum_coordinate": 3646096,
+          "sum_difference_coordinate": 780474,
+          "sum_residue": 1432582,
+          "sum_centered_residue": 652108,
+          "sum_abs_centered_residue": 824864,
+          "sum_square_centered_residue": 2176134616
+        }
+      },
+      "signed_count": 806,
+      "signed_residue_moment": 1150425,
+      "signed_centered_moment": -1593742,
+      "signed_count_over_p2": "403/2048",
+      "signed_residue_moment_over_hp2": "127825/2199552",
+      "signed_centered_moment_over_hp2": "-796871/9897984"
+    },
+    {
+      "sample_id": "singer-natural-4791894da2c7",
+      "kind": "reflected-singer-natural",
+      "p": 65,
+      "b": 1,
+      "h": 5245,
+      "max_E": 10489,
+      "delta": 1061,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1204,
+          "sum_sum_coordinate": 7293109,
+          "sum_difference_coordinate": -979333,
+          "sum_residue": 2598834,
+          "sum_centered_residue": -1116108,
+          "sum_abs_centered_residue": 3638768,
+          "sum_square_centered_residue": 13436225280
+        },
+        "2": {
+          "count": 451,
+          "sum_sum_coordinate": 3874485,
+          "sum_difference_coordinate": 856054,
+          "sum_residue": 1508990,
+          "sum_centered_residue": 652936,
+          "sum_abs_centered_residue": 867536,
+          "sum_square_centered_residue": 2424203064
+        }
+      },
+      "signed_count": 753,
+      "signed_residue_moment": 1089844,
+      "signed_centered_moment": -1769044,
+      "signed_count_over_p2": "753/4225",
+      "signed_residue_moment_over_hp2": "1089844/22160125",
+      "signed_centered_moment_over_hp2": "-1769044/22160125"
+    },
+    {
+      "sample_id": "ruzsa-9981d1ffe574",
+      "kind": "reflected-ruzsa",
+      "p": 66,
+      "b": 2,
+      "h": 5340,
+      "max_E": 10680,
+      "delta": 1162,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1247,
+          "sum_sum_coordinate": 7760980,
+          "sum_difference_coordinate": -1104494,
+          "sum_residue": 2730700,
+          "sum_centered_residue": -1195086,
+          "sum_abs_centered_residue": 3696382,
+          "sum_square_centered_residue": 13726321764
+        },
+        "2": {
+          "count": 555,
+          "sum_sum_coordinate": 4854367,
+          "sum_difference_coordinate": 1071923,
+          "sum_residue": 1890667,
+          "sum_centered_residue": 818744,
+          "sum_abs_centered_residue": 1092572,
+          "sum_square_centered_residue": 3139285344
+        }
+      },
+      "signed_count": 692,
+      "signed_residue_moment": 840033,
+      "signed_centered_moment": -2013830,
+      "signed_count_over_p2": "173/1089",
+      "signed_residue_moment_over_hp2": "93337/2584560",
+      "signed_centered_moment_over_hp2": "-201383/2326104"
+    },
+    {
+      "sample_id": "singer-natural-525988e0cd5b",
+      "kind": "reflected-singer-natural",
+      "p": 68,
+      "b": 2,
+      "h": 5820,
+      "max_E": 11640,
+      "delta": 1083,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1376,
+          "sum_sum_coordinate": 9175011,
+          "sum_difference_coordinate": -1169443,
+          "sum_residue": 3261891,
+          "sum_centered_residue": -1481786,
+          "sum_abs_centered_residue": 4675774,
+          "sum_square_centered_residue": 19461997764
+        },
+        "2": {
+          "count": 477,
+          "sum_sum_coordinate": 4541355,
+          "sum_difference_coordinate": 1009971,
+          "sum_residue": 1765215,
+          "sum_centered_residue": 755244,
+          "sum_abs_centered_residue": 1025936,
+          "sum_square_centered_residue": 3259147936
+        }
+      },
+      "signed_count": 899,
+      "signed_residue_moment": 1496676,
+      "signed_centered_moment": -2237030,
+      "signed_count_over_p2": "899/4624",
+      "signed_residue_moment_over_hp2": "124723/2242640",
+      "signed_centered_moment_over_hp2": "-13159/158304"
+    },
+    {
+      "sample_id": "ruzsa-8cc36a434761",
+      "kind": "reflected-ruzsa",
+      "p": 70,
+      "b": 1,
+      "h": 6001,
+      "max_E": 12001,
+      "delta": 1315,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1506,
+          "sum_sum_coordinate": 10267380,
+          "sum_difference_coordinate": -1231380,
+          "sum_residue": 3882316,
+          "sum_centered_residue": -1271368,
+          "sum_abs_centered_residue": 5243120,
+          "sum_square_centered_residue": 22443583264
+        },
+        "2": {
+          "count": 490,
+          "sum_sum_coordinate": 4792271,
+          "sum_difference_coordinate": 1088219,
+          "sum_residue": 1851781,
+          "sum_centered_residue": 763562,
+          "sum_abs_centered_residue": 1045406,
+          "sum_square_centered_residue": 3294045276
+        }
+      },
+      "signed_count": 1016,
+      "signed_residue_moment": 2030535,
+      "signed_centered_moment": -2034930,
+      "signed_count_over_p2": "254/1225",
+      "signed_residue_moment_over_hp2": "406107/5880980",
+      "signed_centered_moment_over_hp2": "-203493/2940490"
+    },
+    {
+      "sample_id": "ruzsa-natural-1d3b6cab5f17",
+      "kind": "reflected-ruzsa-natural",
+      "p": 72,
+      "b": 1,
+      "h": 6720,
+      "max_E": 13439,
+      "delta": 1021,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1571,
+          "sum_sum_coordinate": 11751547,
+          "sum_difference_coordinate": -1195998,
+          "sum_residue": 4749307,
+          "sum_centered_residue": -1056935,
+          "sum_abs_centered_residue": 6420339,
+          "sum_square_centered_residue": 31412305083
+        },
+        "2": {
+          "count": 437,
+          "sum_sum_coordinate": 4789426,
+          "sum_difference_coordinate": 1083417,
+          "sum_residue": 1852786,
+          "sum_centered_residue": 769369,
+          "sum_abs_centered_residue": 1064769,
+          "sum_square_centered_residue": 4002118029
+        }
+      },
+      "signed_count": 1134,
+      "signed_residue_moment": 2896521,
+      "signed_centered_moment": -1826304,
+      "signed_count_over_p2": "7/32",
+      "signed_residue_moment_over_hp2": "965507/11612160",
+      "signed_centered_moment_over_hp2": "-1189/22680"
+    },
+    {
+      "sample_id": "singer-natural-7549c5dd10d9",
+      "kind": "reflected-singer-natural",
+      "p": 72,
+      "b": 1,
+      "h": 6379,
+      "max_E": 12757,
+      "delta": 1362,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1529,
+          "sum_sum_coordinate": 11158318,
+          "sum_difference_coordinate": -1406356,
+          "sum_residue": 4052112,
+          "sum_centered_residue": -1647738,
+          "sum_abs_centered_residue": 5635586,
+          "sum_square_centered_residue": 25488525484
+        },
+        "2": {
+          "count": 530,
+          "sum_sum_coordinate": 5518260,
+          "sum_difference_coordinate": 1242950,
+          "sum_residue": 2137390,
+          "sum_centered_residue": 894440,
+          "sum_abs_centered_residue": 1190700,
+          "sum_square_centered_residue": 3913327064
+        }
+      },
+      "signed_count": 999,
+      "signed_residue_moment": 1914722,
+      "signed_centered_moment": -2542178,
+      "signed_count_over_p2": "37/192",
+      "signed_residue_moment_over_hp2": "957361/16534368",
+      "signed_centered_moment_over_hp2": "-1271089/16534368"
+    },
+    {
+      "sample_id": "singer-natural-5c113afa2918",
+      "kind": "reflected-singer-natural",
+      "p": 74,
+      "b": 1,
+      "h": 6760,
+      "max_E": 13519,
+      "delta": 1418,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1821,
+          "sum_sum_coordinate": 13747008,
+          "sum_difference_coordinate": -1438869,
+          "sum_residue": 5344328,
+          "sum_centered_residue": -1619483,
+          "sum_abs_centered_residue": 7402891,
+          "sum_square_centered_residue": 36062758981
+        },
+        "2": {
+          "count": 436,
+          "sum_sum_coordinate": 4805293,
+          "sum_difference_coordinate": 1088991,
+          "sum_residue": 1857933,
+          "sum_centered_residue": 768942,
+          "sum_abs_centered_residue": 1009796,
+          "sum_square_centered_residue": 3469757108
+        }
+      },
+      "signed_count": 1385,
+      "signed_residue_moment": 3486395,
+      "signed_centered_moment": -2388425,
+      "signed_count_over_p2": "1385/5476",
+      "signed_residue_moment_over_hp2": "697279/7403552",
+      "signed_centered_moment_over_hp2": "-36745/569504"
+    },
+    {
+      "sample_id": "ruzsa-natural-f6c164c32bb2",
+      "kind": "reflected-ruzsa-natural",
+      "p": 78,
+      "b": 1,
+      "h": 7740,
+      "max_E": 15479,
+      "delta": 1348,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1707,
+          "sum_sum_coordinate": 15462506,
+          "sum_difference_coordinate": -2252033,
+          "sum_residue": 5292146,
+          "sum_centered_residue": -2626181,
+          "sum_abs_centered_residue": 7352115,
+          "sum_square_centered_residue": 40023482475
+        },
+        "2": {
+          "count": 707,
+          "sum_sum_coordinate": 9090510,
+          "sum_difference_coordinate": 1853143,
+          "sum_residue": 3618330,
+          "sum_centered_residue": 1765187,
+          "sum_abs_centered_residue": 2181779,
+          "sum_square_centered_residue": 9661938027
+        }
+      },
+      "signed_count": 1000,
+      "signed_residue_moment": 1673816,
+      "signed_centered_moment": -4391368,
+      "signed_count_over_p2": "250/1521",
+      "signed_residue_moment_over_hp2": "209227/5886270",
+      "signed_centered_moment_over_hp2": "-548921/5886270"
+    },
+    {
+      "sample_id": "singer-natural-716a599aec75",
+      "kind": "reflected-singer-natural",
+      "p": 80,
+      "b": 1,
+      "h": 8045,
+      "max_E": 16089,
+      "delta": 1516,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2056,
+          "sum_sum_coordinate": 18441244,
+          "sum_difference_coordinate": -1902780,
+          "sum_residue": 7065614,
+          "sum_centered_residue": -2407236,
+          "sum_abs_centered_residue": 10046380,
+          "sum_square_centered_residue": 58766405336
+        },
+        "2": {
+          "count": 489,
+          "sum_sum_coordinate": 6390615,
+          "sum_difference_coordinate": 1476906,
+          "sum_residue": 2456610,
+          "sum_centered_residue": 979704,
+          "sum_abs_centered_residue": 1367812,
+          "sum_square_centered_residue": 5731176216
+        }
+      },
+      "signed_count": 1567,
+      "signed_residue_moment": 4609004,
+      "signed_centered_moment": -3386940,
+      "signed_count_over_p2": "1567/6400",
+      "signed_residue_moment_over_hp2": "1152251/12872000",
+      "signed_centered_moment_over_hp2": "-169347/2574400"
+    },
+    {
+      "sample_id": "ruzsa-natural-f35fe1ec4ff4",
+      "kind": "reflected-ruzsa-natural",
+      "p": 82,
+      "b": 2,
+      "h": 8502,
+      "max_E": 17004,
+      "delta": 1544,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2001,
+          "sum_sum_coordinate": 19264056,
+          "sum_difference_coordinate": -2255556,
+          "sum_residue": 7097694,
+          "sum_centered_residue": -2813112,
+          "sum_abs_centered_residue": 10150440,
+          "sum_square_centered_residue": 62278377400
+        },
+        "2": {
+          "count": 626,
+          "sum_sum_coordinate": 8706389,
+          "sum_difference_coordinate": 1936863,
+          "sum_residue": 3384137,
+          "sum_centered_residue": 1447274,
+          "sum_abs_centered_residue": 1887446,
+          "sum_square_centered_residue": 8540698892
+        }
+      },
+      "signed_count": 1375,
+      "signed_residue_moment": 3713557,
+      "signed_centered_moment": -4260386,
+      "signed_count_over_p2": "1375/6724",
+      "signed_residue_moment_over_hp2": "3713557/57167448",
+      "signed_centered_moment_over_hp2": "-163861/2198748"
+    },
+    {
+      "sample_id": "singer-natural-e82a40689d12",
+      "kind": "reflected-singer-natural",
+      "p": 82,
+      "b": 1,
+      "h": 8566,
+      "max_E": 17131,
+      "delta": 1480,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1989,
+          "sum_sum_coordinate": 19268584,
+          "sum_difference_coordinate": -2232799,
+          "sum_residue": 7156260,
+          "sum_centered_residue": -2723265,
+          "sum_abs_centered_residue": 10348639,
+          "sum_square_centered_residue": 64949463045
+        },
+        "2": {
+          "count": 558,
+          "sum_sum_coordinate": 7842796,
+          "sum_difference_coordinate": 1716302,
+          "sum_residue": 3062968,
+          "sum_centered_residue": 1346666,
+          "sum_abs_centered_residue": 1741470,
+          "sum_square_centered_residue": 8347833726
+        }
+      },
+      "signed_count": 1431,
+      "signed_residue_moment": 4093292,
+      "signed_centered_moment": -4069931,
+      "signed_count_over_p2": "1431/6724",
+      "signed_residue_moment_over_hp2": "1023323/14399446",
+      "signed_centered_moment_over_hp2": "-4069931/57597784"
+    },
+    {
+      "sample_id": "singer-a725bf4f22fd",
+      "kind": "reflected-singer",
+      "p": 84,
+      "b": 1,
+      "h": 8652,
+      "max_E": 17303,
+      "delta": 1891,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2296,
+          "sum_sum_coordinate": 22081076,
+          "sum_difference_coordinate": -2218380,
+          "sum_residue": 8497436,
+          "sum_centered_residue": -2867824,
+          "sum_abs_centered_residue": 11976454,
+          "sum_square_centered_residue": 74640202384
+        },
+        "2": {
+          "count": 561,
+          "sum_sum_coordinate": 7824567,
+          "sum_difference_coordinate": 1882416,
+          "sum_residue": 2970795,
+          "sum_centered_residue": 1088379,
+          "sum_abs_centered_residue": 1602137,
+          "sum_square_centered_residue": 6906397353
+        }
+      },
+      "signed_count": 1735,
+      "signed_residue_moment": 5526641,
+      "signed_centered_moment": -3956203,
+      "signed_count_over_p2": "1735/7056",
+      "signed_residue_moment_over_hp2": "5526641/61048512",
+      "signed_centered_moment_over_hp2": "-3956203/61048512"
+    },
+    {
+      "sample_id": "singer-natural-032edad1f86e",
+      "kind": "reflected-singer-natural",
+      "p": 84,
+      "b": 1,
+      "h": 8743,
+      "max_E": 17485,
+      "delta": 1800,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1937,
+          "sum_sum_coordinate": 19762210,
+          "sum_difference_coordinate": -2828956,
+          "sum_residue": 6883771,
+          "sum_centered_residue": -3165712,
+          "sum_abs_centered_residue": 9657204,
+          "sum_square_centered_residue": 59732847768
+        },
+        "2": {
+          "count": 816,
+          "sum_sum_coordinate": 11888874,
+          "sum_difference_coordinate": 2378886,
+          "sum_residue": 4754586,
+          "sum_centered_residue": 2375700,
+          "sum_abs_centered_residue": 2842884,
+          "sum_square_centered_residue": 14380474832
+        }
+      },
+      "signed_count": 1121,
+      "signed_residue_moment": 2129185,
+      "signed_centered_moment": -5541412,
+      "signed_count_over_p2": "1121/7056",
+      "signed_residue_moment_over_hp2": "2129185/61690608",
+      "signed_centered_moment_over_hp2": "-1385353/15422652"
+    },
+    {
+      "sample_id": "subset-2cf6ddf40ccd",
+      "kind": "generated-subset",
+      "p": 86,
+      "b": 1,
+      "h": 21924,
+      "max_E": 43847,
+      "delta": -10872,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 915,
+          "sum_sum_coordinate": 23311681,
+          "sum_difference_coordinate": -3252136,
+          "sum_residue": 7877185,
+          "sum_centered_residue": -4305175,
+          "sum_abs_centered_residue": 11440881,
+          "sum_square_centered_residue": 177934373771
+        },
+        "2": {
+          "count": 328,
+          "sum_sum_coordinate": 11942941,
+          "sum_difference_coordinate": 2438875,
+          "sum_residue": 4751869,
+          "sum_centered_residue": 2312994,
+          "sum_abs_centered_residue": 2695828,
+          "sum_square_centered_residue": 32153279536
+        }
+      },
+      "signed_count": 587,
+      "signed_residue_moment": 3125316,
+      "signed_centered_moment": -6618169,
+      "signed_count_over_p2": "587/7396",
+      "signed_residue_moment_over_hp2": "260443/13512492",
+      "signed_centered_moment_over_hp2": "-6618169/162149904"
+    },
+    {
+      "sample_id": "ruzsa-natural-072b67b5cbf0",
+      "kind": "reflected-ruzsa-natural",
+      "p": 88,
+      "b": 2,
+      "h": 10219,
+      "max_E": 20438,
+      "delta": 1354,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2304,
+          "sum_sum_coordinate": 26759815,
+          "sum_difference_coordinate": -3219847,
+          "sum_residue": 9632771,
+          "sum_centered_residue": -4274426,
+          "sum_abs_centered_residue": 13781576,
+          "sum_square_centered_residue": 100721810424
+        },
+        "2": {
+          "count": 673,
+          "sum_sum_coordinate": 11093468,
+          "sum_difference_coordinate": 2659960,
+          "sum_residue": 4216081,
+          "sum_centered_residue": 1556121,
+          "sum_abs_centered_residue": 2214909,
+          "sum_square_centered_residue": 10849937969
+        }
+      },
+      "signed_count": 1631,
+      "signed_residue_moment": 5416690,
+      "signed_centered_moment": -5830547,
+      "signed_count_over_p2": "1631/7744",
+      "signed_residue_moment_over_hp2": "2708345/39567968",
+      "signed_centered_moment_over_hp2": "-5830547/79135936"
+    },
+    {
+      "sample_id": "singer-natural-9b6198435dcb",
+      "kind": "reflected-singer-natural",
+      "p": 90,
+      "b": 1,
+      "h": 10309,
+      "max_E": 20617,
+      "delta": 1797,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2474,
+          "sum_sum_coordinate": 28645748,
+          "sum_difference_coordinate": -3143756,
+          "sum_residue": 10780251,
+          "sum_centered_residue": -3941490,
+          "sum_abs_centered_residue": 15516898,
+          "sum_square_centered_residue": 116490700740
+        },
+        "2": {
+          "count": 680,
+          "sum_sum_coordinate": 11454480,
+          "sum_difference_coordinate": 2565080,
+          "sum_residue": 4444360,
+          "sum_centered_residue": 1879280,
+          "sum_abs_centered_residue": 2442892,
+          "sum_square_centered_residue": 13287788856
+        }
+      },
+      "signed_count": 1794,
+      "signed_residue_moment": 6335891,
+      "signed_centered_moment": -5820770,
+      "signed_count_over_p2": "299/1350",
+      "signed_residue_moment_over_hp2": "6335891/83502900",
+      "signed_centered_moment_over_hp2": "-582077/8350290"
+    },
+    {
+      "sample_id": "ruzsa-natural-03677d3cabaa",
+      "kind": "reflected-ruzsa-natural",
+      "p": 96,
+      "b": 1,
+      "h": 11910,
+      "max_E": 23819,
+      "delta": 1867,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2725,
+          "sum_sum_coordinate": 36895755,
+          "sum_difference_coordinate": -4443730,
+          "sum_residue": 13409235,
+          "sum_centered_residue": -5633555,
+          "sum_abs_centered_residue": 19269515,
+          "sum_square_centered_residue": 164875869453
+        },
+        "2": {
+          "count": 825,
+          "sum_sum_coordinate": 16143607,
+          "sum_difference_coordinate": 3507068,
+          "sum_residue": 6317857,
+          "sum_centered_residue": 2810789,
+          "sum_abs_centered_residue": 3511179,
+          "sum_square_centered_residue": 22804896857
+        }
+      },
+      "signed_count": 1900,
+      "signed_residue_moment": 7091378,
+      "signed_centered_moment": -8444344,
+      "signed_count_over_p2": "475/2304",
+      "signed_residue_moment_over_hp2": "3545689/54881280",
+      "signed_centered_moment_over_hp2": "-1055543/13720320"
+    },
+    {
+      "sample_id": "singer-30c72c7ef34e",
+      "kind": "reflected-singer",
+      "p": 98,
+      "b": 2,
+      "h": 11812,
+      "max_E": 23624,
+      "delta": 2546,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2738,
+          "sum_sum_coordinate": 37961550,
+          "sum_difference_coordinate": -5625770,
+          "sum_residue": 13345342,
+          "sum_centered_residue": -5645096,
+          "sum_abs_centered_residue": 17895536,
+          "sum_square_centered_residue": 147493461000
+        },
+        "2": {
+          "count": 1217,
+          "sum_sum_coordinate": 23851016,
+          "sum_difference_coordinate": 4896958,
+          "sum_residue": 9475812,
+          "sum_centered_residue": 4578854,
+          "sum_abs_centered_residue": 5658098,
+          "sum_square_centered_residue": 38074756060
+        }
+      },
+      "signed_count": 1521,
+      "signed_residue_moment": 3869530,
+      "signed_centered_moment": -10223950,
+      "signed_count_over_p2": "1521/9604",
+      "signed_residue_moment_over_hp2": "39485/1157576",
+      "signed_centered_moment_over_hp2": "-5111975/56721224"
+    },
+    {
+      "sample_id": "singer-natural-f17a5965ef98",
+      "kind": "reflected-singer-natural",
+      "p": 98,
+      "b": 2,
+      "h": 12502,
+      "max_E": 25004,
+      "delta": 1856,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2609,
+          "sum_sum_coordinate": 38012340,
+          "sum_difference_coordinate": -5399840,
+          "sum_residue": 13258380,
+          "sum_centered_residue": -6095740,
+          "sum_abs_centered_residue": 18165140,
+          "sum_square_centered_residue": 158792658288
+        },
+        "2": {
+          "count": 1112,
+          "sum_sum_coordinate": 22871270,
+          "sum_difference_coordinate": 4930954,
+          "sum_residue": 8969046,
+          "sum_centered_residue": 4038092,
+          "sum_abs_centered_residue": 5112640,
+          "sum_square_centered_residue": 34526318432
+        }
+      },
+      "signed_count": 1497,
+      "signed_residue_moment": 4289334,
+      "signed_centered_moment": -10133832,
+      "signed_count_over_p2": "1497/9604",
+      "signed_residue_moment_over_hp2": "306381/8576372",
+      "signed_centered_moment_over_hp2": "-1266729/15008651"
+    },
+    {
+      "sample_id": "ruzsa-natural-68ea4faa8a24",
+      "kind": "reflected-ruzsa-natural",
+      "p": 100,
+      "b": 2,
+      "h": 13042,
+      "max_E": 26084,
+      "delta": 1909,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2961,
+          "sum_sum_coordinate": 43253984,
+          "sum_difference_coordinate": -4642544,
+          "sum_residue": 15839700,
+          "sum_centered_residue": -6932040,
+          "sum_abs_centered_residue": 23456928,
+          "sum_square_centered_residue": 221658194240
+        },
+        "2": {
+          "count": 793,
+          "sum_sum_coordinate": 16685250,
+          "sum_difference_coordinate": 3997776,
+          "sum_residue": 6342944,
+          "sum_centered_residue": 2345168,
+          "sum_abs_centered_residue": 3212940,
+          "sum_square_centered_residue": 19411315176
+        }
+      },
+      "signed_count": 2168,
+      "signed_residue_moment": 9496756,
+      "signed_centered_moment": -9277208,
+      "signed_count_over_p2": "271/1250",
+      "signed_residue_moment_over_hp2": "2374189/32605000",
+      "signed_centered_moment_over_hp2": "-1159651/16302500"
+    },
+    {
+      "sample_id": "ruzsa-natural-73ab28188113",
+      "kind": "reflected-ruzsa-natural",
+      "p": 102,
+      "b": 1,
+      "h": 13342,
+      "max_E": 26683,
+      "delta": 2214,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2720,
+          "sum_sum_coordinate": 42567221,
+          "sum_difference_coordinate": -6279701,
+          "sum_residue": 14415601,
+          "sum_centered_residue": -7456318,
+          "sum_abs_centered_residue": 20415934,
+          "sum_square_centered_residue": 192227494248
+        },
+        "2": {
+          "count": 1249,
+          "sum_sum_coordinate": 27777501,
+          "sum_difference_coordinate": 5549566,
+          "sum_residue": 11113343,
+          "sum_centered_residue": 5563777,
+          "sum_abs_centered_residue": 6763313,
+          "sum_square_centered_residue": 53294648321
+        }
+      },
+      "signed_count": 1471,
+      "signed_residue_moment": 3302258,
+      "signed_centered_moment": -13020095,
+      "signed_count_over_p2": "1471/10404",
+      "signed_residue_moment_over_hp2": "1651129/69405084",
+      "signed_centered_moment_over_hp2": "-13020095/138810168"
+    },
+    {
+      "sample_id": "singer-natural-a0f7ec19574b",
+      "kind": "reflected-singer-natural",
+      "p": 102,
+      "b": 2,
+      "h": 13401,
+      "max_E": 26802,
+      "delta": 2155,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3143,
+          "sum_sum_coordinate": 47935278,
+          "sum_difference_coordinate": -5822221,
+          "sum_residue": 17300592,
+          "sum_centered_residue": -7511873,
+          "sum_abs_centered_residue": 25032533,
+          "sum_square_centered_residue": 241017701103
+        },
+        "2": {
+          "count": 941,
+          "sum_sum_coordinate": 20489653,
+          "sum_difference_coordinate": 4729147,
+          "sum_residue": 7879312,
+          "sum_centered_residue": 3150165,
+          "sum_abs_centered_residue": 4127863,
+          "sum_square_centered_residue": 27230017437
+        }
+      },
+      "signed_count": 2202,
+      "signed_residue_moment": 9421280,
+      "signed_centered_moment": -10662038,
+      "signed_count_over_p2": "367/1734",
+      "signed_residue_moment_over_hp2": "2355320/34856001",
+      "signed_centered_moment_over_hp2": "-5331019/69712002"
+    },
+    {
+      "sample_id": "singer-natural-fb93340eb02a",
+      "kind": "reflected-singer-natural",
+      "p": 104,
+      "b": 2,
+      "h": 14154,
+      "max_E": 28308,
+      "delta": 2019,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 2737,
+          "sum_sum_coordinate": 45475026,
+          "sum_difference_coordinate": -6741002,
+          "sum_residue": 16006398,
+          "sum_centered_residue": -6721228,
+          "sum_abs_centered_residue": 21258880,
+          "sum_square_centered_residue": 209800502000
+        },
+        "2": {
+          "count": 1355,
+          "sum_sum_coordinate": 31842316,
+          "sum_difference_coordinate": 6512314,
+          "sum_residue": 12663646,
+          "sum_centered_residue": 6151332,
+          "sum_abs_centered_residue": 7347960,
+          "sum_square_centered_residue": 58136539144
+        }
+      },
+      "signed_count": 1382,
+      "signed_residue_moment": 3342752,
+      "signed_centered_moment": -12872560,
+      "signed_count_over_p2": "691/5408",
+      "signed_residue_moment_over_hp2": "14923/683436",
+      "signed_centered_moment_over_hp2": "-804535/9568104"
+    },
+    {
+      "sample_id": "ruzsa-natural-740b7484b1a8",
+      "kind": "reflected-ruzsa-natural",
+      "p": 106,
+      "b": 1,
+      "h": 15166,
+      "max_E": 30331,
+      "delta": 1636,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3227,
+          "sum_sum_coordinate": 55076330,
+          "sum_difference_coordinate": -6138875,
+          "sum_residue": 20649510,
+          "sum_centered_residue": -7638435,
+          "sum_abs_centered_residue": 30055067,
+          "sum_square_centered_residue": 334498966571
+        },
+        "2": {
+          "count": 915,
+          "sum_sum_coordinate": 22796346,
+          "sum_difference_coordinate": 4956519,
+          "sum_residue": 8919456,
+          "sum_centered_residue": 3962937,
+          "sum_abs_centered_residue": 5030103,
+          "sum_square_centered_residue": 41578073003
+        }
+      },
+      "signed_count": 2312,
+      "signed_residue_moment": 11730054,
+      "signed_centered_moment": -11601372,
+      "signed_count_over_p2": "578/2809",
+      "signed_residue_moment_over_hp2": "5865027/85202588",
+      "signed_centered_moment_over_hp2": "-2900343/42601294"
+    },
+    {
+      "sample_id": "singer-natural-5537c41b1c05",
+      "kind": "reflected-singer-natural",
+      "p": 108,
+      "b": 2,
+      "h": 15057,
+      "max_E": 30114,
+      "delta": 2386,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3393,
+          "sum_sum_coordinate": 58309386,
+          "sum_difference_coordinate": -7227771,
+          "sum_residue": 21103539,
+          "sum_centered_residue": -8874537,
+          "sum_abs_centered_residue": 30675039,
+          "sum_square_centered_residue": 335481594777
+        },
+        "2": {
+          "count": 1116,
+          "sum_sum_coordinate": 27637752,
+          "sum_difference_coordinate": 5967240,
+          "sum_residue": 10834140,
+          "sum_centered_residue": 4866900,
+          "sum_abs_centered_residue": 6104962,
+          "sum_square_centered_residue": 50359189332
+        }
+      },
+      "signed_count": 2277,
+      "signed_residue_moment": 10269399,
+      "signed_centered_moment": -13741437,
+      "signed_count_over_p2": "253/1296",
+      "signed_residue_moment_over_hp2": "489019/8363088",
+      "signed_centered_moment_over_hp2": "-4580479/58541616"
+    },
+    {
+      "sample_id": "singer-natural-012692581ca2",
+      "kind": "reflected-singer-natural",
+      "p": 110,
+      "b": 2,
+      "h": 15675,
+      "max_E": 31350,
+      "delta": 2421,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3298,
+          "sum_sum_coordinate": 59915647,
+          "sum_difference_coordinate": -8226093,
+          "sum_residue": 20884897,
+          "sum_centered_residue": -9919760,
+          "sum_abs_centered_residue": 30013316,
+          "sum_square_centered_residue": 334916415754
+        },
+        "2": {
+          "count": 1332,
+          "sum_sum_coordinate": 34535690,
+          "sum_difference_coordinate": 7219846,
+          "sum_residue": 13656590,
+          "sum_centered_residue": 6436744,
+          "sum_abs_centered_residue": 7992862,
+          "sum_square_centered_residue": 70118353764
+        }
+      },
+      "signed_count": 1966,
+      "signed_residue_moment": 7228307,
+      "signed_centered_moment": -16356504,
+      "signed_count_over_p2": "983/6050",
+      "signed_residue_moment_over_hp2": "7228307/189667500",
+      "signed_centered_moment_over_hp2": "-1363042/15805625"
+    },
+    {
+      "sample_id": "subset-e0047bdfaf72",
+      "kind": "generated-subset",
+      "p": 112,
+      "b": 2,
+      "h": 37481,
+      "max_E": 74962,
+      "delta": -18720,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 1691,
+          "sum_sum_coordinate": 72167451,
+          "sum_difference_coordinate": -8790462,
+          "sum_residue": 26815441,
+          "sum_centered_residue": -9746107,
+          "sum_abs_centered_residue": 38072559,
+          "sum_square_centered_residue": 1039319880995
+        },
+        "2": {
+          "count": 512,
+          "sum_sum_coordinate": 31454563,
+          "sum_difference_coordinate": 6924957,
+          "sum_residue": 12264291,
+          "sum_centered_residue": 5339334,
+          "sum_abs_centered_residue": 6774430,
+          "sum_square_centered_residue": 134632513200
+        }
+      },
+      "signed_count": 1179,
+      "signed_residue_moment": 14551150,
+      "signed_centered_moment": -15085441,
+      "signed_count_over_p2": "1179/12544",
+      "signed_residue_moment_over_hp2": "7275575/235080832",
+      "signed_centered_moment_over_hp2": "-2155063/67165952"
+    },
+    {
+      "sample_id": "singer-913e7a5d56d7",
+      "kind": "reflected-singer",
+      "p": 114,
+      "b": 1,
+      "h": 16443,
+      "max_E": 32885,
+      "delta": 2995,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3648,
+          "sum_sum_coordinate": 69540288,
+          "sum_difference_coordinate": -9559872,
+          "sum_residue": 24683784,
+          "sum_centered_residue": -10612848,
+          "sum_abs_centered_residue": 34065860,
+          "sum_square_centered_residue": 394564998600
+        },
+        "2": {
+          "count": 1439,
+          "sum_sum_coordinate": 39024646,
+          "sum_difference_coordinate": 8296869,
+          "sum_residue": 15363169,
+          "sum_centered_residue": 7066300,
+          "sum_abs_centered_residue": 8829800,
+          "sum_square_centered_residue": 78366941696
+        }
+      },
+      "signed_count": 2209,
+      "signed_residue_moment": 9320615,
+      "signed_centered_moment": -17679148,
+      "signed_count_over_p2": "2209/12996",
+      "signed_residue_moment_over_hp2": "9320615/213693228",
+      "signed_centered_moment_over_hp2": "-4419787/53423307"
+    },
+    {
+      "sample_id": "singer-natural-ed34e332ba3a",
+      "kind": "reflected-singer-natural",
+      "p": 114,
+      "b": 1,
+      "h": 16720,
+      "max_E": 33439,
+      "delta": 2718,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 3766,
+          "sum_sum_coordinate": 71749777,
+          "sum_difference_coordinate": -8786023,
+          "sum_residue": 25953697,
+          "sum_centered_residue": -11056360,
+          "sum_abs_centered_residue": 37417378,
+          "sum_square_centered_residue": 449019584782
+        },
+        "2": {
+          "count": 1141,
+          "sum_sum_coordinate": 31288184,
+          "sum_difference_coordinate": 6865715,
+          "sum_residue": 12210664,
+          "sum_centered_residue": 5344949,
+          "sum_abs_centered_residue": 6565229,
+          "sum_square_centered_residue": 55449775573
+        }
+      },
+      "signed_count": 2625,
+      "signed_residue_moment": 13743033,
+      "signed_centered_moment": -16401309,
+      "signed_count_over_p2": "875/4332",
+      "signed_residue_moment_over_hp2": "4581011/72431040",
+      "signed_centered_moment_over_hp2": "-5467103/72431040"
+    },
+    {
+      "sample_id": "singer-natural-7270f9d3002f",
+      "kind": "reflected-singer-natural",
+      "p": 122,
+      "b": 2,
+      "h": 19338,
+      "max_E": 38676,
+      "delta": 2928,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4062,
+          "sum_sum_coordinate": 90257934,
+          "sum_difference_coordinate": -11715102,
+          "sum_residue": 32011878,
+          "sum_centered_residue": -14519076,
+          "sum_abs_centered_residue": 45749492,
+          "sum_square_centered_residue": 630829144224
+        },
+        "2": {
+          "count": 1509,
+          "sum_sum_coordinate": 47818939,
+          "sum_difference_coordinate": 10540127,
+          "sum_residue": 18637897,
+          "sum_centered_residue": 8097770,
+          "sum_abs_centered_residue": 10201834,
+          "sum_square_centered_residue": 99785151780
+        }
+      },
+      "signed_count": 2553,
+      "signed_residue_moment": 13373981,
+      "signed_centered_moment": -22616846,
+      "signed_count_over_p2": "2553/14884",
+      "signed_residue_moment_over_hp2": "13373981/287826792",
+      "signed_centered_moment_over_hp2": "-11308423/143913396"
+    },
+    {
+      "sample_id": "singer-natural-c65fb70a532e",
+      "kind": "reflected-singer-natural",
+      "p": 126,
+      "b": 1,
+      "h": 20799,
+      "max_E": 41597,
+      "delta": 2953,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4092,
+          "sum_sum_coordinate": 100056105,
+          "sum_difference_coordinate": -14950689,
+          "sum_residue": 34560054,
+          "sum_centered_residue": -15985308,
+          "sum_abs_centered_residue": 46984960,
+          "sum_square_centered_residue": 681835922016
+        },
+        "2": {
+          "count": 1827,
+          "sum_sum_coordinate": 63187695,
+          "sum_difference_coordinate": 12810024,
+          "sum_residue": 25187922,
+          "sum_centered_residue": 12377898,
+          "sum_abs_centered_residue": 14710222,
+          "sum_square_centered_residue": 172419819892
+        }
+      },
+      "signed_count": 2265,
+      "signed_residue_moment": 9372132,
+      "signed_centered_moment": -28363206,
+      "signed_count_over_p2": "755/5292",
+      "signed_residue_moment_over_hp2": "1771/62397",
+      "signed_centered_moment_over_hp2": "-4727201/55034154"
+    },
+    {
+      "sample_id": "singer-6747b00be3c1",
+      "kind": "reflected-singer",
+      "p": 128,
+      "b": 1,
+      "h": 21004,
+      "max_E": 42007,
+      "delta": 3509,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4711,
+          "sum_sum_coordinate": 113862411,
+          "sum_difference_coordinate": -14917278,
+          "sum_residue": 39928331,
+          "sum_centered_residue": -19088471,
+          "sum_abs_centered_residue": 57847933,
+          "sum_square_centered_residue": 867461190207
+        },
+        "2": {
+          "count": 1649,
+          "sum_sum_coordinate": 57114832,
+          "sum_difference_coordinate": 12154711,
+          "sum_residue": 22479236,
+          "sum_centered_residue": 10324525,
+          "sum_abs_centered_residue": 12673975,
+          "sum_square_centered_residue": 145999600425
+        }
+      },
+      "signed_count": 3062,
+      "signed_residue_moment": 17449095,
+      "signed_centered_moment": -29412996,
+      "signed_count_over_p2": "1531/8192",
+      "signed_residue_moment_over_hp2": "17449095/344129536",
+      "signed_centered_moment_over_hp2": "-7353249/86032384"
+    },
+    {
+      "sample_id": "singer-natural-0fede779a8bf",
+      "kind": "reflected-singer-natural",
+      "p": 128,
+      "b": 1,
+      "h": 21341,
+      "max_E": 42681,
+      "delta": 3172,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4709,
+          "sum_sum_coordinate": 114997048,
+          "sum_difference_coordinate": -14506988,
+          "sum_residue": 41648031,
+          "sum_centered_residue": -17193998,
+          "sum_abs_centered_residue": 59975818,
+          "sum_square_centered_residue": 926868306732
+        },
+        "2": {
+          "count": 1520,
+          "sum_sum_coordinate": 53508461,
+          "sum_difference_coordinate": 11366659,
+          "sum_residue": 21070141,
+          "sum_centered_residue": 9703482,
+          "sum_abs_centered_residue": 12086182,
+          "sum_square_centered_residue": 143644150340
+        }
+      },
+      "signed_count": 3189,
+      "signed_residue_moment": 20577890,
+      "signed_centered_moment": -26897480,
+      "signed_count_over_p2": "3189/16384",
+      "signed_residue_moment_over_hp2": "10288945/174825472",
+      "signed_centered_moment_over_hp2": "-3362185/43706368"
+    },
+    {
+      "sample_id": "singer-61ed86e11f2c",
+      "kind": "reflected-singer",
+      "p": 129,
+      "b": 2,
+      "h": 21421,
+      "max_E": 42842,
+      "delta": 3477,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4421,
+          "sum_sum_coordinate": 111120022,
+          "sum_difference_coordinate": -16426623,
+          "sum_residue": 38181517,
+          "sum_centered_residue": -18330365,
+          "sum_abs_centered_residue": 52849015,
+          "sum_square_centered_residue": 794961300205
+        },
+        "2": {
+          "count": 2051,
+          "sum_sum_coordinate": 72870424,
+          "sum_difference_coordinate": 14994416,
+          "sum_residue": 28935953,
+          "sum_centered_residue": 13941537,
+          "sum_abs_centered_residue": 16884265,
+          "sum_square_centered_residue": 201584659307
+        }
+      },
+      "signed_count": 2370,
+      "signed_residue_moment": 9245564,
+      "signed_centered_moment": -32271902,
+      "signed_count_over_p2": "790/5547",
+      "signed_residue_moment_over_hp2": "298244/11498931",
+      "signed_centered_moment_over_hp2": "-32271902/356466861"
+    },
+    {
+      "sample_id": "singer-natural-47d4915923de",
+      "kind": "reflected-singer-natural",
+      "p": 129,
+      "b": 1,
+      "h": 21924,
+      "max_E": 43847,
+      "delta": 2974,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4511,
+          "sum_sum_coordinate": 114383231,
+          "sum_difference_coordinate": -15488578,
+          "sum_residue": 39710087,
+          "sum_centered_residue": -19474479,
+          "sum_abs_centered_residue": 56844219,
+          "sum_square_centered_residue": 883245890775
+        },
+        "2": {
+          "count": 1687,
+          "sum_sum_coordinate": 60800878,
+          "sum_difference_coordinate": 13169011,
+          "sum_residue": 23815090,
+          "sum_centered_residue": 10646079,
+          "sum_abs_centered_residue": 12956213,
+          "sum_square_centered_residue": 146727793991
+        }
+      },
+      "signed_count": 2824,
+      "signed_residue_moment": 15894997,
+      "signed_centered_moment": -30120558,
+      "signed_count_over_p2": "2824/16641",
+      "signed_residue_moment_over_hp2": "15894997/364837284",
+      "signed_centered_moment_over_hp2": "-5020093/60806214"
+    },
+    {
+      "sample_id": "singer-cc63e3f7e632",
+      "kind": "reflected-singer",
+      "p": 132,
+      "b": 2,
+      "h": 22464,
+      "max_E": 44928,
+      "delta": 3607,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 4962,
+          "sum_sum_coordinate": 128246112,
+          "sum_difference_coordinate": -16789668,
+          "sum_residue": 45556128,
+          "sum_centered_residue": -20344188,
+          "sum_abs_centered_residue": 65239756,
+          "sum_square_centered_residue": 1047762294360
+        },
+        "2": {
+          "count": 1755,
+          "sum_sum_coordinate": 64620313,
+          "sum_difference_coordinate": 14224817,
+          "sum_residue": 25195993,
+          "sum_centered_residue": 10971176,
+          "sum_abs_centered_residue": 13833372,
+          "sum_square_centered_residue": 161360498736
+        }
+      },
+      "signed_count": 3207,
+      "signed_residue_moment": 20360135,
+      "signed_centered_moment": -31315364,
+      "signed_count_over_p2": "1069/5808",
+      "signed_residue_moment_over_hp2": "20360135/391412736",
+      "signed_centered_moment_over_hp2": "-7828841/97853184"
+    },
+    {
+      "sample_id": "singer-4123045bf705",
+      "kind": "reflected-singer",
+      "p": 138,
+      "b": 1,
+      "h": 24473,
+      "max_E": 48945,
+      "delta": 4025,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 5532,
+          "sum_sum_coordinate": 154180951,
+          "sum_difference_coordinate": -18801847,
+          "sum_residue": 56191059,
+          "sum_centered_residue": -22996986,
+          "sum_abs_centered_residue": 81250222,
+          "sum_square_centered_residue": 1439515445116
+        },
+        "2": {
+          "count": 1713,
+          "sum_sum_coordinate": 68858141,
+          "sum_difference_coordinate": 14984644,
+          "sum_residue": 26935892,
+          "sum_centered_residue": 11951248,
+          "sum_abs_centered_residue": 15000772,
+          "sum_square_centered_residue": 196155802664
+        }
+      },
+      "signed_count": 3819,
+      "signed_residue_moment": 29255167,
+      "signed_centered_moment": -34948234,
+      "signed_count_over_p2": "1273/6348",
+      "signed_residue_moment_over_hp2": "29255167/466063812",
+      "signed_centered_moment_over_hp2": "-17474117/233031906"
+    },
+    {
+      "sample_id": "singer-75c69b67a8ed",
+      "kind": "reflected-singer",
+      "p": 140,
+      "b": 1,
+      "h": 25263,
+      "max_E": 50525,
+      "delta": 4068,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 5638,
+          "sum_sum_coordinate": 163997354,
+          "sum_difference_coordinate": -21570198,
+          "sum_residue": 57210653,
+          "sum_centered_residue": -28005850,
+          "sum_abs_centered_residue": 83014198,
+          "sum_square_centered_residue": 1495048562196
+        },
+        "2": {
+          "count": 1855,
+          "sum_sum_coordinate": 77115596,
+          "sum_difference_coordinate": 16608279,
+          "sum_residue": 30252731,
+          "sum_centered_residue": 13644452,
+          "sum_abs_centered_residue": 16517508,
+          "sum_square_centered_residue": 219149152592
+        }
+      },
+      "signed_count": 3783,
+      "signed_residue_moment": 26957922,
+      "signed_centered_moment": -41650302,
+      "signed_count_over_p2": "3783/19600",
+      "signed_residue_moment_over_hp2": "4492987/82525800",
+      "signed_centered_moment_over_hp2": "-6941717/82525800"
+    },
+    {
+      "sample_id": "singer-d80a2cca169c",
+      "kind": "reflected-singer",
+      "p": 150,
+      "b": 1,
+      "h": 29521,
+      "max_E": 59041,
+      "delta": 4155,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 6751,
+          "sum_sum_coordinate": 226398431,
+          "sum_difference_coordinate": -27108911,
+          "sum_residue": 82099783,
+          "sum_centered_residue": -35089954,
+          "sum_abs_centered_residue": 119450206,
+          "sum_square_centered_residue": 2542599207700
+        },
+        "2": {
+          "count": 1874,
+          "sum_sum_coordinate": 90704843,
+          "sum_difference_coordinate": 19937991,
+          "sum_residue": 35382489,
+          "sum_centered_residue": 15444498,
+          "sum_abs_centered_residue": 19546346,
+          "sum_square_centered_residue": 304923019740
+        }
+      },
+      "signed_count": 4877,
+      "signed_residue_moment": 46717294,
+      "signed_centered_moment": -50534452,
+      "signed_count_over_p2": "4877/22500",
+      "signed_residue_moment_over_hp2": "23358647/332111250",
+      "signed_centered_moment_over_hp2": "-12633613/166055625"
+    },
+    {
+      "sample_id": "singer-e82f2d6a63ca",
+      "kind": "reflected-singer",
+      "p": 152,
+      "b": 1,
+      "h": 29747,
+      "max_E": 59493,
+      "delta": 4834,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 6347,
+          "sum_sum_coordinate": 219209522,
+          "sum_difference_coordinate": -30411660,
+          "sum_residue": 76483416,
+          "sum_centered_residue": -35831030,
+          "sum_abs_centered_residue": 108369022,
+          "sum_square_centered_residue": 2292388277436
+        },
+        "2": {
+          "count": 2515,
+          "sum_sum_coordinate": 123857050,
+          "sum_difference_coordinate": 25767845,
+          "sum_residue": 49043345,
+          "sum_centered_residue": 23275500,
+          "sum_abs_centered_residue": 28508980,
+          "sum_square_centered_residue": 472056954592
+        }
+      },
+      "signed_count": 3832,
+      "signed_residue_moment": 27440071,
+      "signed_centered_moment": -59106530,
+      "signed_count_over_p2": "479/2888",
+      "signed_residue_moment_over_hp2": "27440071/687274688",
+      "signed_centered_moment_over_hp2": "-81865/951904"
+    },
+    {
+      "sample_id": "singer-e5774d86af10",
+      "kind": "reflected-singer",
+      "p": 158,
+      "b": 2,
+      "h": 32604,
+      "max_E": 65208,
+      "delta": 4764,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 6972,
+          "sum_sum_coordinate": 260911172,
+          "sum_difference_coordinate": -33610028,
+          "sum_residue": 91761620,
+          "sum_centered_residue": -43777904,
+          "sum_abs_centered_residue": 134131636,
+          "sum_square_centered_residue": 3138493802264
+        },
+        "2": {
+          "count": 2389,
+          "sum_sum_coordinate": 128139640,
+          "sum_difference_coordinate": 27637494,
+          "sum_residue": 50248684,
+          "sum_centered_residue": 22611190,
+          "sum_abs_centered_residue": 27947290,
+          "sum_square_centered_residue": 483596472364
+        }
+      },
+      "signed_count": 4583,
+      "signed_residue_moment": 41512936,
+      "signed_centered_moment": -66389094,
+      "signed_count_over_p2": "4583/24964",
+      "signed_residue_moment_over_hp2": "5189117/101740782",
+      "signed_centered_moment_over_hp2": "-11064849/135654376"
+    },
+    {
+      "sample_id": "singer-442f9f248c7f",
+      "kind": "reflected-singer",
+      "p": 164,
+      "b": 1,
+      "h": 35347,
+      "max_E": 70693,
+      "delta": 4916,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 7575,
+          "sum_sum_coordinate": 307658218,
+          "sum_difference_coordinate": -39912268,
+          "sum_residue": 106816564,
+          "sum_centered_residue": -54112822,
+          "sum_abs_centered_residue": 157973458,
+          "sum_square_centered_residue": 4004169816556
+        },
+        "2": {
+          "count": 2479,
+          "sum_sum_coordinate": 144104090,
+          "sum_difference_coordinate": 31143857,
+          "sum_residue": 56478877,
+          "sum_centered_residue": 25335020,
+          "sum_abs_centered_residue": 30660348,
+          "sum_square_centered_residue": 559622248560
+        }
+      },
+      "signed_count": 5096,
+      "signed_residue_moment": 50337687,
+      "signed_centered_moment": -79447842,
+      "signed_count_over_p2": "637/3362",
+      "signed_residue_moment_over_hp2": "50337687/950692912",
+      "signed_centered_moment_over_hp2": "-39723921/475346456"
+    },
+    {
+      "sample_id": "singer-801ada713888",
+      "kind": "reflected-singer",
+      "p": 168,
+      "b": 2,
+      "h": 37481,
+      "max_E": 74962,
+      "delta": 4772,
+      "levels": {
+        "0": {
+          "count": 0,
+          "sum_sum_coordinate": 0,
+          "sum_difference_coordinate": 0,
+          "sum_residue": 0,
+          "sum_centered_residue": 0,
+          "sum_abs_centered_residue": 0,
+          "sum_square_centered_residue": 0
+        },
+        "1": {
+          "count": 8208,
+          "sum_sum_coordinate": 351279855,
+          "sum_difference_coordinate": -43652223,
+          "sum_residue": 126393855,
+          "sum_centered_residue": -54839922,
+          "sum_abs_centered_residue": 184272730,
+          "sum_square_centered_residue": 5005334491192
+        },
+        "2": {
+          "count": 2474,
+          "sum_sum_coordinate": 152610686,
+          "sum_difference_coordinate": 32840354,
+          "sum_residue": 59882692,
+          "sum_centered_residue": 27042338,
+          "sum_abs_centered_residue": 33117534,
+          "sum_square_centered_residue": 664203054010
+        }
+      },
+      "signed_count": 5734,
+      "signed_residue_moment": 66511163,
+      "signed_centered_moment": -81882260,
+      "signed_count_over_p2": "2867/14112",
+      "signed_residue_moment_over_hp2": "1797599/28590912",
+      "signed_centered_moment_over_hp2": "-20470565/264465936"
+    }
+  ]
+}

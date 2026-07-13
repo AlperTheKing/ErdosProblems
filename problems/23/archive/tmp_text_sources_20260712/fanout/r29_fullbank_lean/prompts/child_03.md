@@ -1,0 +1,1 @@
+Search all production Lean modules for real graph-derived provider theorems feeding the FullBank wall. Build a reverse call graph from final Branch-B/full theorem surfaces to graph semantics. Report the unique earliest missing theorem, or prove there is more than one independent gap.

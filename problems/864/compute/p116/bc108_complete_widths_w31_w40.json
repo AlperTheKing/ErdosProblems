@@ -1,0 +1,53 @@
+{
+  "BC108_falsifier": null,
+  "arithmetic": "exact Python integers; exact augmenting-path capacitated matching",
+  "candidates": {
+    "BC108": "sum_u max(t_u-n_u,0) <= p",
+    "difference_Hall": "d_u copies of each color match to distinct values in D_u"
+  },
+  "complete_width_interval": [
+    31,
+    40
+  ],
+  "difference_Hall_falsifier": null,
+  "lanes": {
+    "complete_widths": {
+      "bases": 240382,
+      "best_row": {
+        "B": [
+          1,
+          14,
+          24,
+          29,
+          32
+        ],
+        "BC108_margin": -5,
+        "C_S": 3,
+        "T_F": 1,
+        "b": 2,
+        "delta": 3,
+        "demand": {},
+        "difference_hall_deficit": 0,
+        "difference_hall_matching": 0,
+        "exposed_differences": 1,
+        "h": 33,
+        "p": 5,
+        "positive_color_excess": 0,
+        "source": "complete-width",
+        "transform": "width=31; ruler=0,3,8,18,31; gamma=1",
+        "width": 31
+      },
+      "candidates": 8387660,
+      "definition": "all endpoint-normalized integer Sidon rulers of widths 31..40; all positive-defect translations; b=1,2",
+      "domain_sha256": "a6cd5f38e7d288f0a783bc7e7eb9588755418eff67749ac872d1dcab0db967dc",
+      "first_BC108_failure": null,
+      "first_difference_hall_failure": null,
+      "literal_holes": 3479796,
+      "live_rows": 3479796,
+      "live_rows_sha256": "530bb93f4f675a677c424858890e2282b087bf814d05369a901922c913f748c3",
+      "positive_excess_rows": 0,
+      "triangle_rows": 16691
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,1 @@
+Determine the repo Lean toolchain/build command and minimal import module needed for a namespaced probe of FullBankRelaxedCoverCert and FullBankGlobalPackage.Checked. Run read-only builds/checks as useful. Write only tmp/fanout/r29_fullbank/F_lean/d6_build/REPORT.md with exact commands/results. Do not edit production/shared logs or spawn agents.

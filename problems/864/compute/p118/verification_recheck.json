@@ -1,0 +1,10 @@
+{
+  "arithmetic": "exact Python integers",
+  "falsifiers_checked": 0,
+  "input": "problems\\864\\compute\\p118\\p113_falsifier_search.json",
+  "input_sha256": "6aec361dec4ff5bb2421f3862b71e5a893ac96143cee9be5966f07817cebc338",
+  "matching_algorithm": "independent Dinic max flow",
+  "retained_rows_checked": 305,
+  "schema_version": 1,
+  "status": "PASS"
+}

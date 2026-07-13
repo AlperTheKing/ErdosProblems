@@ -1,0 +1,14 @@
+{
+  "archive_core_hole_free_b1": 0,
+  "archive_core_hole_free_b2": 0,
+  "archive_oriented_bases": 2526,
+  "archive_overfull_components": 80,
+  "archive_positive_defect_endpoint_bases_with_overfull_component": 80,
+  "arithmetic": "exact Python integers",
+  "p88_core_hole_free_b1": 0,
+  "p88_core_hole_free_b2": 0,
+  "p88_last_overfull_gamma": 633,
+  "p88_overfull_components": 250,
+  "p88_overfull_rows": 250,
+  "p88_positive_defect_translations": 2085
+}

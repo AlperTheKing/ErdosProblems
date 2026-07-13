@@ -1,0 +1,8 @@
+{
+  "arithmetic": "exact Python integers",
+  "input": "problems\\864\\compute\\p86\\dense_loose_scan.json",
+  "input_sha256": "7dd733ba25ea062aea8f843324e148744ff6e0ece1c596679db87e1ba2a8dd80",
+  "records_checked": 144,
+  "schema_version": 1,
+  "status": "PASS"
+}

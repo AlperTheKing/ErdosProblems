@@ -1,0 +1,42 @@
+{
+  "N": 64,
+  "H": 16,
+  "objective_name": "lg33",
+  "status": "FEASIBLE",
+  "workers": 32,
+  "time_limit_seconds": 120.0,
+  "wall_seconds": 120.63692780000565,
+  "conflicts": 0,
+  "branches": 0,
+  "finite_optimum_certified": false,
+  "A": [
+    0,
+    16,
+    23,
+    24,
+    26,
+    28,
+    29,
+    36,
+    52,
+    63
+  ],
+  "k": 10,
+  "M": 79,
+  "G": 0,
+  "W": 193,
+  "D": 83,
+  "Q": 10,
+  "Z": 73,
+  "S": 402,
+  "max_interval_degree": 6,
+  "c20_margin": -60332,
+  "lg33_margin": -36352,
+  "lg33_domain": 1,
+  "repeated_sums": [
+    52
+  ],
+  "objective": -36352,
+  "is_falsifier": false,
+  "diagnostic_best_bound": 9216.0
+}

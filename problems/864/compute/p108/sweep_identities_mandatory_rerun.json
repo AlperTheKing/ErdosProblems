@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Python integers",
+  "rows": {
+    "P75": {
+      "p": 26,
+      "h": 988,
+      "b": 1,
+      "delta": 14,
+      "C_S": 51,
+      "T_F": 25,
+      "V_b": 0,
+      "literal_hole": true,
+      "RM_defect": 0,
+      "upper_matching_defect": 0,
+      "windows": 1081,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 0,
+      "maximum_full_window": [
+        -166,
+        -166
+      ],
+      "maximum_upper_window_deficit": 0,
+      "maximum_upper_window": [
+        -166,
+        -166
+      ],
+      "ordinary_slots_checked": 102
+    },
+    "P94": {
+      "p": 104,
+      "h": 14484,
+      "b": 1,
+      "delta": 1689,
+      "C_S": 142,
+      "T_F": 116,
+      "V_b": 0,
+      "literal_hole": true,
+      "RM_defect": 0,
+      "upper_matching_defect": 0,
+      "windows": 14196,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 0,
+      "maximum_full_window": [
+        -338,
+        -338
+      ],
+      "maximum_upper_window_deficit": 0,
+      "maximum_upper_window": [
+        -338,
+        -338
+      ],
+      "ordinary_slots_checked": 284
+    },
+    "P98": {
+      "p": 103,
+      "h": 14484,
+      "b": 1,
+      "delta": 1379,
+      "C_S": 132,
+      "T_F": 110,
+      "V_b": 0,
+      "literal_hole": true,
+      "RM_defect": 0,
+      "upper_matching_defect": 0,
+      "windows": 13203,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 0,
+      "maximum_full_window": [
+        -338,
+        -338
+      ],
+      "maximum_upper_window_deficit": 0,
+      "maximum_upper_window": [
+        -338,
+        -338
+      ],
+      "ordinary_slots_checked": 264
+    },
+    "P105": {
+      "p": 57,
+      "h": 6572,
+      "b": 1,
+      "delta": -1726,
+      "C_S": 159,
+      "T_F": 160,
+      "V_b": 0,
+      "literal_hole": true,
+      "RM_defect": 1,
+      "upper_matching_defect": 13,
+      "windows": 20910,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 1,
+      "maximum_full_window": [
+        -1444,
+        4688
+      ],
+      "maximum_upper_window_deficit": 13,
+      "maximum_upper_window": [
+        -1444,
+        3672
+      ],
+      "ordinary_slots_checked": 318
+    },
+    "P88_b1": {
+      "p": 60,
+      "h": 3286,
+      "b": 1,
+      "delta": 2085,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 77,
+      "literal_hole": false,
+      "RM_defect": 0,
+      "upper_matching_defect": 34,
+      "windows": 30628,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 0,
+      "maximum_full_window": [
+        -722,
+        -722
+      ],
+      "maximum_upper_window_deficit": 34,
+      "maximum_upper_window": [
+        -722,
+        1836
+      ],
+      "ordinary_slots_checked": 364
+    },
+    "P88_b2": {
+      "p": 60,
+      "h": 3286,
+      "b": 2,
+      "delta": 2085,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 74,
+      "literal_hole": false,
+      "RM_defect": 0,
+      "upper_matching_defect": 34,
+      "windows": 30628,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 0,
+      "maximum_full_window": [
+        -723,
+        -723
+      ],
+      "maximum_upper_window_deficit": 34,
+      "maximum_upper_window": [
+        -723,
+        1835
+      ],
+      "ordinary_slots_checked": 364
+    },
+    "P88_q2_literal_hole": {
+      "p": 60,
+      "h": 6572,
+      "b": 1,
+      "delta": -1201,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 0,
+      "literal_hole": true,
+      "RM_defect": 18,
+      "upper_matching_defect": 34,
+      "windows": 30628,
+      "full_sweep_identity_failures": 0,
+      "upper_color_identity_failures": 0,
+      "maximum_full_window_deficit": 18,
+      "maximum_full_window": [
+        -1444,
+        4730
+      ],
+      "maximum_upper_window_deficit": 34,
+      "maximum_upper_window": [
+        -1444,
+        3672
+      ],
+      "ordinary_slots_checked": 364
+    }
+  }
+}

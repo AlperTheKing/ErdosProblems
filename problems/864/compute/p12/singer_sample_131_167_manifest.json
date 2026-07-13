@@ -1,0 +1,46 @@
+{
+  "csv": "problems/864/compute/p12/singer_sample_131_167_recheck.csv",
+  "inputs": [
+    {
+      "bytes": 4347,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q131.jsonl",
+      "sha256": "b0fd04e9e184d6a017e61e21fe787ed66121f9fdf8aa7960da9ce9b440d8c9cb"
+    },
+    {
+      "bytes": 4543,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q137.jsonl",
+      "sha256": "7d9a4d026eb4761fcdcf5ed7eceaef38572797d0b1ab46475d83a82dd66ae36a"
+    },
+    {
+      "bytes": 4597,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q139.jsonl",
+      "sha256": "cd03e63089f6604f991e6aeffe8485abd86d0f01801da1c4209d7b50cc10271d"
+    },
+    {
+      "bytes": 4911,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q149.jsonl",
+      "sha256": "dbda1f3e39a76688d8122875033ee95415e407263ffa41976cface151af1e4b1"
+    },
+    {
+      "bytes": 4963,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q151.jsonl",
+      "sha256": "7dc2af098ee628b61f16e2f00a64755d75c837f22598034165da7c1ba7739ced"
+    },
+    {
+      "bytes": 5132,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q157.jsonl",
+      "sha256": "29ee72ee432d0dac6f9f22ba49634b46d317875ff373a8a726c5b95545815a37"
+    },
+    {
+      "bytes": 5319,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q163.jsonl",
+      "sha256": "39b2891a3007ac8e41a665e6798a6c1f8b1887a4b3745164e0d96ef077777301"
+    },
+    {
+      "bytes": 5448,
+      "path": "E:/Projects/ErdosProblems/problems/864/compute/p12/singer_sample_q167.jsonl",
+      "sha256": "d3704175f8fa85f5a5d6f96ca8e365c6fe599c2316fcfa29d9c2e686e692a94e"
+    }
+  ],
+  "verified_records": 8
+}

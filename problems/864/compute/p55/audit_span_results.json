@@ -1,0 +1,401 @@
+{
+  "parameters": {
+    "max_span": 18,
+    "gate_span": 9
+  },
+  "conventions": {
+    "integer_sets": true,
+    "endpoint_normalized": "minima are 0 and displayed spans are attained",
+    "pair_sums": "unordered i <= j, including diagonals",
+    "differences": "positive j > i only; zero is excluded",
+    "triple_sums": "unordered i <= j <= k, including repetitions"
+  },
+  "enumeration": {
+    "endpoint_normalized_candidates": 262144,
+    "strong_sidon_rulers": 1341,
+    "off_diagonal_sidon_but_not_diagonal_sidon": 2355
+  },
+  "validity_gate": {
+    "ordered_ruler_pairs": 5776,
+    "difference_disjoint_pairs": 1019,
+    "sidon_iff_difference_disjoint_checked": true,
+    "three_sum_free_for_every_guarded_pair_checked": true,
+    "strict_guard_examples": [
+      {
+        "label": "G_equals_U",
+        "E": [
+          2,
+          6,
+          20,
+          22
+        ],
+        "target": 6,
+        "summands": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "label": "G_equals_V",
+        "E": [
+          2,
+          4,
+          14,
+          18
+        ],
+        "target": 18,
+        "summands": [
+          2,
+          2,
+          14
+        ]
+      },
+      {
+        "label": "T_equals_G_plus_3U",
+        "E": [
+          3,
+          5,
+          15,
+          19
+        ],
+        "target": 15,
+        "summands": [
+          5,
+          5,
+          5
+        ]
+      }
+    ]
+  },
+  "hypothesis_audit": {
+    "cross_disjointness_alone_is_insufficient": true,
+    "falsifier_family": "X={0,1}, Y={0,2,...,2(q-1)}",
+    "checked_falsifier_instances": [
+      {
+        "q": 8,
+        "X": [
+          0,
+          1
+        ],
+        "Y_formula": "{0,2,...,2(q-1)}",
+        "U_plus_V": 15,
+        "p": 10,
+        "ratio": {
+          "numerator": 3,
+          "denominator": 20,
+          "decimal": 0.15
+        }
+      },
+      {
+        "q": 16,
+        "X": [
+          0,
+          1
+        ],
+        "Y_formula": "{0,2,...,2(q-1)}",
+        "U_plus_V": 31,
+        "p": 18,
+        "ratio": {
+          "numerator": 31,
+          "denominator": 324,
+          "decimal": 0.09567901234567901
+        }
+      },
+      {
+        "q": 32,
+        "X": [
+          0,
+          1
+        ],
+        "Y_formula": "{0,2,...,2(q-1)}",
+        "U_plus_V": 63,
+        "p": 34,
+        "ratio": {
+          "numerator": 63,
+          "denominator": 1156,
+          "decimal": 0.054498269896193774
+        }
+      },
+      {
+        "q": 64,
+        "X": [
+          0,
+          1
+        ],
+        "Y_formula": "{0,2,...,2(q-1)}",
+        "U_plus_V": 127,
+        "p": 66,
+        "ratio": {
+          "numerator": 127,
+          "denominator": 4356,
+          "decimal": 0.029155188246097336
+        }
+      }
+    ],
+    "unbalanced_strong_sidon_branch_checks": [
+      {
+        "p": 9,
+        "X": "{0,1}",
+        "Y_formula": "{2(2^i-1): 0 <= i < p-2}",
+        "U_plus_V": 127,
+        "exact_lag_bound": {
+          "numerator": 20,
+          "denominator": 1,
+          "decimal": 20.0
+        },
+        "uniform_bound": {
+          "numerator": 12,
+          "denominator": 1,
+          "decimal": 12.0
+        }
+      },
+      {
+        "p": 16,
+        "X": "{0,1}",
+        "Y_formula": "{2(2^i-1): 0 <= i < p-2}",
+        "U_plus_V": 16383,
+        "exact_lag_bound": {
+          "numerator": 1081,
+          "denominator": 10,
+          "decimal": 108.1
+        },
+        "uniform_bound": {
+          "numerator": 361,
+          "denominator": 5,
+          "decimal": 72.2
+        }
+      },
+      {
+        "p": 25,
+        "X": "{0,1}",
+        "Y_formula": "{2(2^i-1): 0 <= i < p-2}",
+        "U_plus_V": 8388607,
+        "exact_lag_bound": {
+          "numerator": 1010,
+          "denominator": 3,
+          "decimal": 336.6666666666667
+        },
+        "uniform_bound": {
+          "numerator": 1445,
+          "denominator": 6,
+          "decimal": 240.83333333333334
+        }
+      },
+      {
+        "p": 36,
+        "X": "{0,1}",
+        "Y_formula": "{2(2^i-1): 0 <= i < p-2}",
+        "U_plus_V": 17179869183,
+        "exact_lag_bound": {
+          "numerator": 5612,
+          "denominator": 7,
+          "decimal": 801.7142857142857
+        },
+        "uniform_bound": {
+          "numerator": 8427,
+          "denominator": 14,
+          "decimal": 601.9285714285714
+        }
+      }
+    ]
+  },
+  "span_audit": {
+    "ordered_difference_disjoint_pairs": 91947,
+    "pairs_with_p_at_least_9": 72,
+    "lag_cases": {
+      "joint": 72,
+      "one_large_component": 0
+    },
+    "minimum_uniform_bound_slack": {
+      "numerator": 19,
+      "denominator": 1,
+      "decimal": 19.0
+    },
+    "minimum_uniform_bound_slack_witness": {
+      "X": [
+        0,
+        2,
+        6,
+        13
+      ],
+      "Y": [
+        0,
+        1,
+        10,
+        15,
+        18
+      ],
+      "U_plus_V": 31,
+      "p": 9,
+      "ratio": {
+        "numerator": 31,
+        "denominator": 81,
+        "decimal": 0.38271604938271603
+      }
+    },
+    "minimum_span_sum_by_p_in_search_box": [
+      {
+        "X": [
+          0
+        ],
+        "Y": [
+          0
+        ],
+        "U_plus_V": 0,
+        "p": 2,
+        "ratio": {
+          "numerator": 0,
+          "denominator": 1,
+          "decimal": 0.0
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0
+        ],
+        "Y": [
+          0,
+          1
+        ],
+        "U_plus_V": 1,
+        "p": 3,
+        "ratio": {
+          "numerator": 1,
+          "denominator": 9,
+          "decimal": 0.1111111111111111
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0
+        ],
+        "Y": [
+          0,
+          1,
+          3
+        ],
+        "U_plus_V": 3,
+        "p": 4,
+        "ratio": {
+          "numerator": 3,
+          "denominator": 16,
+          "decimal": 0.1875
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0
+        ],
+        "Y": [
+          0,
+          1,
+          4,
+          6
+        ],
+        "U_plus_V": 6,
+        "p": 5,
+        "ratio": {
+          "numerator": 6,
+          "denominator": 25,
+          "decimal": 0.24
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0,
+          1
+        ],
+        "Y": [
+          0,
+          2,
+          5,
+          9
+        ],
+        "U_plus_V": 10,
+        "p": 6,
+        "ratio": {
+          "numerator": 5,
+          "denominator": 18,
+          "decimal": 0.2777777777777778
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0,
+          1
+        ],
+        "Y": [
+          0,
+          2,
+          6,
+          9,
+          14
+        ],
+        "U_plus_V": 15,
+        "p": 7,
+        "ratio": {
+          "numerator": 15,
+          "denominator": 49,
+          "decimal": 0.30612244897959184
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0,
+          1,
+          5
+        ],
+        "Y": [
+          0,
+          2,
+          8,
+          11,
+          18
+        ],
+        "U_plus_V": 23,
+        "p": 8,
+        "ratio": {
+          "numerator": 23,
+          "denominator": 64,
+          "decimal": 0.359375
+        },
+        "search_box": "U,V <= 18"
+      },
+      {
+        "X": [
+          0,
+          2,
+          6,
+          13
+        ],
+        "Y": [
+          0,
+          1,
+          10,
+          15,
+          18
+        ],
+        "U_plus_V": 31,
+        "p": 9,
+        "ratio": {
+          "numerator": 31,
+          "denominator": 81,
+          "decimal": 0.38271604938271603
+        },
+        "search_box": "U,V <= 18",
+        "uniform_lower_bound": {
+          "numerator": 12,
+          "denominator": 1,
+          "decimal": 12.0
+        }
+      }
+    ]
+  }
+}

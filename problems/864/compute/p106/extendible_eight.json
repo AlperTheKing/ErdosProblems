@@ -1,0 +1,32 @@
+{
+  "status": "OPTIMAL",
+  "solutions_audited": 4,
+  "RM97_eight_addition_witnesses": 4,
+  "maximum_admissible_next_insertions": 0,
+  "maximum_extension_row": {
+    "additions": [
+      657,
+      938,
+      2556,
+      2645,
+      3542,
+      5390,
+      5631,
+      6398
+    ],
+    "admissible_next": [],
+    "C_S": 191,
+    "T_F": 205,
+    "V_b": 7,
+    "intervals": 396,
+    "slots": 389,
+    "matched": 369,
+    "RM97_failure": true,
+    "literal_hole": false
+  },
+  "compatible_p67_completions_audited": 0,
+  "positive_defect_RM97_witness": null,
+  "wall_time_seconds": 11.899948100000001,
+  "branches": 51392,
+  "conflicts": 8037
+}

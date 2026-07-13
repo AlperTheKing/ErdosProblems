@@ -1,0 +1,450 @@
+{
+  "candidate": {
+    "consequence": "G >= W, since 2t_G=-1 and 2t_W=2",
+    "name": "single-peak autocorrelation slope",
+    "statement": "s_n=H_n-H_{n+1} is unimodal for the structured staircase R"
+  },
+  "exhaustive": {
+    "all_valid_pairs_fail_single_peak_candidate": true,
+    "by_p": {
+      "2": {
+        "candidate_failures": 153,
+        "sidon_rulers": 18,
+        "valid_pairs": 153
+      },
+      "3": {
+        "candidate_failures": 1309,
+        "sidon_rulers": 144,
+        "valid_pairs": 1309
+      },
+      "4": {
+        "candidate_failures": 3484,
+        "sidon_rulers": 548,
+        "valid_pairs": 3484
+      },
+      "5": {
+        "candidate_failures": 1823,
+        "sidon_rulers": 614,
+        "valid_pairs": 1823
+      },
+      "6": {
+        "candidate_failures": 14,
+        "sidon_rulers": 16,
+        "valid_pairs": 14
+      }
+    },
+    "endpoint_normalized_sidon_rulers": 1340,
+    "lexicographically_smallest_p_ge_3_counterexample": {
+      "G": 2,
+      "L": 10,
+      "R_l2_squared": 44,
+      "R_sum": 20,
+      "W": 4,
+      "aperiodic_autocorrelation_equal": true,
+      "certificate": {
+        "A_terms": [
+          [
+            -4,
+            1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "B_terms": [
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            1
+          ]
+        ],
+        "P_exponents": [
+          0,
+          3,
+          4
+        ],
+        "Q_terms": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            9,
+            -1
+          ],
+          [
+            10,
+            -1
+          ]
+        ],
+        "R_coefficients": [
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2,
+          2,
+          1
+        ],
+        "Z": [
+          0,
+          3,
+          4
+        ],
+        "toeplitz_gram": [
+          [
+            3,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            3
+          ]
+        ],
+        "twice_H_coefficients_nonnegative_lags": [
+          44,
+          41,
+          36,
+          32,
+          26,
+          18,
+          12,
+          8,
+          4,
+          1,
+          0
+        ],
+        "twice_curvature_nonnegative_lags": [
+          6,
+          2,
+          -1,
+          2,
+          2,
+          -2,
+          -2,
+          0,
+          -1,
+          -2,
+          -1
+        ],
+        "twice_slope": [
+          3,
+          5,
+          4,
+          6,
+          8,
+          6,
+          4,
+          4,
+          3,
+          1
+        ]
+      },
+      "difference_profile": {
+        "1": 6,
+        "3": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 40,
+      "fejer_effective_length": "100/11",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 2,
+        "later_increase_at_curvature_index": 3
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 3,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 3,
+        "2": 3
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "2": 4,
+        "5": 2
+      }
+    },
+    "max_width": 18,
+    "minimum_twice_tail_slack": 1,
+    "single_peak_slope_candidate_failures": 6783,
+    "tail_domination_checks": 6783,
+    "valid_pairs_with_1_le_G_lt_W": 6783,
+    "valid_pairs_with_p_ge_3": 6630
+  },
+  "stored_witnesses": [
+    {
+      "G": 6,
+      "L": 30,
+      "R_l2_squared": 386,
+      "R_sum": 102,
+      "W": 12,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 20,
+        "5": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 1176,
+      "fejer_effective_length": "5202/193",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 6,
+        "later_increase_at_curvature_index": 7
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 5,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 5,
+        "2": 10
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "4": 8,
+        "9": 2
+      }
+    },
+    {
+      "G": 18,
+      "L": 116,
+      "R_l2_squared": 4604,
+      "R_sum": 688,
+      "W": 49,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 72,
+        "9": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 60720,
+      "fejer_effective_length": "118336/1151",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 18,
+        "later_increase_at_curvature_index": 19
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 9,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 9,
+        "2": 36
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "17": 2,
+        "8": 16
+      }
+    },
+    {
+      "G": 42,
+      "L": 152,
+      "R_l2_squared": 8002,
+      "R_sum": 1022,
+      "W": 55,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 90,
+        "10": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 171820,
+      "fejer_effective_length": "522242/4001",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 42,
+        "later_increase_at_curvature_index": 43
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 10,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 10,
+        "2": 45
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "19": 2,
+        "9": 18
+      }
+    },
+    {
+      "G": 23,
+      "L": 191,
+      "R_l2_squared": 11245,
+      "R_sum": 1379,
+      "W": 84,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 110,
+        "11": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 246154,
+      "fejer_effective_length": "1901641/11245",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 23,
+        "later_increase_at_curvature_index": 24
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 11,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 11,
+        "2": 55
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "10": 20,
+        "21": 2
+      }
+    },
+    {
+      "G": 24,
+      "L": 238,
+      "R_l2_squared": 16372,
+      "R_sum": 1840,
+      "W": 107,
+      "aperiodic_autocorrelation_equal": true,
+      "difference_profile": {
+        "1": 132,
+        "12": 1
+      },
+      "endpoint_curvatures_twice": {
+        "at_G": -1,
+        "at_W": 2
+      },
+      "fejer_bound_slack": 510936,
+      "fejer_effective_length": "846400/4093",
+      "first_slope_backtrack": {
+        "decrease_at_curvature_index": 24,
+        "later_increase_at_curvature_index": 25
+      },
+      "minimum_twice_tail_slack": 1,
+      "p": 12,
+      "single_peak_slope_candidate": false,
+      "sum_profile": {
+        "1": 12,
+        "2": 66
+      },
+      "tail_domination_holds": true,
+      "toeplitz_gram_blocks": "((p-1)I+J) direct-sum ((p-1)I+J)",
+      "toeplitz_gram_spectrum": {
+        "11": 22,
+        "23": 2
+      }
+    }
+  ]
+}

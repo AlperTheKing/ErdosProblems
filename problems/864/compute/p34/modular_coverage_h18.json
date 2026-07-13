@@ -1,0 +1,117 @@
+{
+  "forced_coverage_subsets": 1830,
+  "max_order": 18,
+  "parity_lifts_checked": 10214,
+  "per_order": [
+    {
+      "forced_coverage_subsets": 1,
+      "order": 1,
+      "strong_sidon_subsets": 1,
+      "subsets": 1
+    },
+    {
+      "forced_coverage_subsets": 0,
+      "order": 2,
+      "strong_sidon_subsets": 2,
+      "subsets": 3
+    },
+    {
+      "forced_coverage_subsets": 3,
+      "order": 3,
+      "strong_sidon_subsets": 6,
+      "subsets": 7
+    },
+    {
+      "forced_coverage_subsets": 4,
+      "order": 4,
+      "strong_sidon_subsets": 8,
+      "subsets": 15
+    },
+    {
+      "forced_coverage_subsets": 10,
+      "order": 5,
+      "strong_sidon_subsets": 15,
+      "subsets": 31
+    },
+    {
+      "forced_coverage_subsets": 0,
+      "order": 6,
+      "strong_sidon_subsets": 18,
+      "subsets": 63
+    },
+    {
+      "forced_coverage_subsets": 14,
+      "order": 7,
+      "strong_sidon_subsets": 42,
+      "subsets": 127
+    },
+    {
+      "forced_coverage_subsets": 16,
+      "order": 8,
+      "strong_sidon_subsets": 48,
+      "subsets": 255
+    },
+    {
+      "forced_coverage_subsets": 54,
+      "order": 9,
+      "strong_sidon_subsets": 99,
+      "subsets": 511
+    },
+    {
+      "forced_coverage_subsets": 40,
+      "order": 10,
+      "strong_sidon_subsets": 90,
+      "subsets": 1023
+    },
+    {
+      "forced_coverage_subsets": 110,
+      "order": 11,
+      "strong_sidon_subsets": 176,
+      "subsets": 2047
+    },
+    {
+      "forced_coverage_subsets": 120,
+      "order": 12,
+      "strong_sidon_subsets": 192,
+      "subsets": 4095
+    },
+    {
+      "forced_coverage_subsets": 52,
+      "order": 13,
+      "strong_sidon_subsets": 351,
+      "subsets": 8191
+    },
+    {
+      "forced_coverage_subsets": 28,
+      "order": 14,
+      "strong_sidon_subsets": 322,
+      "subsets": 16383
+    },
+    {
+      "forced_coverage_subsets": 210,
+      "order": 15,
+      "strong_sidon_subsets": 690,
+      "subsets": 32767
+    },
+    {
+      "forced_coverage_subsets": 192,
+      "order": 16,
+      "strong_sidon_subsets": 672,
+      "subsets": 65535
+    },
+    {
+      "forced_coverage_subsets": 544,
+      "order": 17,
+      "strong_sidon_subsets": 1241,
+      "subsets": 131071
+    },
+    {
+      "forced_coverage_subsets": 432,
+      "order": 18,
+      "strong_sidon_subsets": 1134,
+      "subsets": 262143
+    }
+  ],
+  "strong_sidon_subsets": 5107,
+  "total_nonempty_subsets": 524268
+}

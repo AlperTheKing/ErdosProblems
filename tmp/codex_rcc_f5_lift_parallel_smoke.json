@@ -1,9 +1,0 @@
-{
-  "nF": 6,
-  "cores": 20,
-  "workers": 4,
-  "counts": {
-    "no-lift": 20
-  },
-  "realized": []
-}

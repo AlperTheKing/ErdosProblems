@@ -1,0 +1,371 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,enumitem,microtype,tikz}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\bip}{\operatorname{bip}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\mc}{\operatorname{MaxCut}}
+
+\title{Shortest-geodesic supports in triangle-free maximum cuts:\\
+an infinite Hall obstruction and the first minimal footprints}
+\author{Alper Ferudun\\\texttt{alper@mercurycodelab.com}}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fix a cut of a triangle-free graph, write \(B\) for its crossing edges and
+\(M\) for its monochromatic edges, and associate to each \(xy\in M\) the
+\(B\)-edges lying on shortest \(x\)-\(y\) paths. A natural local approach
+to triangle-free bipartization asks whether these supports satisfy Hall
+expansion. We show that they need not, even when the cut is the unique
+maximum cut and every bad edge has a unique shortest geodesic.
+
+For every \(t\ge1\), we construct a triangle-free graph \(G_t\) on
+\(7t+3\) vertices with a unique maximum cut and \(\bip(G_t)=t^2\).
+Its \(t^2\) bad edges all have cut-distance four, but their support union
+has only \(2t+2\) edges. Thus Hall expansion fails for \(t\ge3\), with an
+unbounded ratio. An explicit packing of \(t^2\) edge-disjoint \(7\)-cycles
+certifies the maximum cut and its uniqueness. We also derive the finite
+footprint forced by a minimal Hall violation. Exact enumeration gives no
+footprint with at most eight atoms, one footprint with nine atoms, and
+three footprint isomorphism classes with ten atoms. The graph \(G_3\)
+realizes the unique nine-atom obstruction. The family theorem is
+combinatorial; the finite classification is computer-assisted and has two
+independent exact verifiers. These results do not resolve the Erdos
+\(n^2/25\) conjecture.
+\end{abstract}
+
+\section{Introduction}
+
+For a finite graph \(G\), let
+\[
+ \bip(G)=|E(G)|-\mc(G)
+\]
+be its edge-deletion distance to bipartiteness. Erdos, Faudree, Pach and
+Spencer asked whether every triangle-free \(N\)-vertex graph satisfies
+\[
+ \bip(G)\le N^2/25. \tag{1}\label{eq:erdos}
+\]
+The balanced blow-up of \(C_5\) shows that the constant would be sharp.
+See \cite{EFPS88,EGS92,BCL21} for the problem and the strongest general
+bounds. The conjectured value is known for \(N=5n\), \(1\le n\le40\),
+by an exact certificate \cite{Ferudun26}.
+
+We study a local packing principle suggested by a fixed maximum cut.
+Let \(B\) be the crossing subgraph and \(M\) the edges left monochromatic.
+For \(xy\in M\), the endpoints lie on the same shore. If \(B\) is
+connected, then \(d_B(x,y)\) is even; triangle-freeness excludes distance
+two. The first case is therefore \(d_B(x,y)=4\). One may try to assign a
+distinct shortest-path edge to every such bad edge by Hall's theorem.
+
+Our main theorem says that this principle fails by an arbitrarily large
+factor even under unique maximum-cut and unique-geodesic hypotheses. The
+use of shortest odd cycles in max-cut estimates has precedents, notably
+\cite{CKL17}, but the full shortest-geodesic support incidence system
+considered here appears to be different.
+
+\section{Supports and minimal violations}
+
+Fix a cut \(V(G)=V_0\mathbin{\dot\cup}V_1\), and set
+\[
+ B=\{xy\in E(G):x\in V_0,\ y\in V_1\},\qquad M=E(G)\setminus B.
+\]
+Assume that \(B\) is connected.
+
+\begin{definition}
+For \(e=xy\in M\), define
+\[
+ \supp_B(e)=\{f\in B:f\text{ lies on a shortest }x\text{-}y
+ \text{ path in }B\}.
+\]
+For \(\mathcal S\subseteq M\), let
+\(\supp_B(\mathcal S)=\bigcup_{e\in\mathcal S}\supp_B(e)\).
+The length-five bad edges have \emph{support Hall expansion} when
+\[
+ |\supp_B(\mathcal S)|\ge|\mathcal S| \tag{2}\label{eq:hall}
+\]
+for every \(\mathcal S\subseteq\{xy\in M:d_B(x,y)=4\}\).
+\end{definition}
+
+Condition \eqref{eq:hall} is Hall's condition for the incidence graph
+between bad edges and the crossing edges in their shortest supports.
+
+\begin{proposition}[Support-size gap]\label{prop:gap}
+If \(B\) is bipartite and \(d_B(x,y)=4\), then
+\[
+ |\supp_B(xy)|=4\quad\text{or}\quad|\supp_B(xy)|\ge6.
+\]
+\end{proposition}
+
+\begin{proof}
+If the shortest path is unique, its four edges form the support. Otherwise
+choose two distinct shortest paths \(P,Q\). Their nonempty symmetric
+difference is an even-degree subgraph and contains a cycle. Since \(B\) is
+bipartite, this cycle has at least four edges. Hence
+\[
+ |E(P)\cup E(Q)|
+ =\frac{4+4+|E(P)\triangle E(Q)|}{2}\ge6.
+\]
+\end{proof}
+
+\begin{lemma}[Minimal footprint]\label{lem:minimal}
+Let \(G\) be triangle-free, and let \(\mathcal S\) be inclusion-minimal
+with
+\[
+ |\supp_B(\mathcal S)|<|\mathcal S|=m.
+\]
+Writing \(F=\supp_B(\mathcal S)\), we have:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(F\) is connected and bipartite, with \(|E(F)|=m-1\);
+\item every edge of \(F\) belongs to at least two atom supports;
+\item every \(xy\in\mathcal S\) has distance four in \(F\), and its
+support is the union of all length-four \(F\)-geodesics from \(x\) to \(y\);
+\item the graph \((V(F),\mathcal S)\) is triangle-free.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For every \(e\in\mathcal S\), minimality gives
+\[
+ |\supp_B(\mathcal S\setminus\{e\})|\ge m-1.
+\]
+This set is contained in \(F\), while \(|E(F)|<m\). Hence
+\(|E(F)|=m-1\) and removing any atom leaves the whole support union.
+This proves (ii).
+
+Every atom support is connected. If \(F\) had several components, the
+atoms partitioned among them, and one component would itself contain more
+atoms than support edges, contradicting minimality. Thus \(F\) is
+connected. It is bipartite because \(F\subseteq B\).
+
+A shortest \(B\)-path for an atom lies in \(F\), so its \(F\)-distance is
+at most four. The distance is even, and distance two would make a triangle
+with the bad edge. Thus the distance is four. Every length-four path in
+\(F\) is also a shortest path in \(B\), proving (iii). Finally,
+\(\mathcal S\subseteq E(G)\), proving (iv).
+\end{proof}
+
+\section{An infinite Hall obstruction}
+
+Let \(L,A,B,C,D,E,R\) be seven disjoint independent sets of size \(t\),
+and let \(u,w,v\) be three further vertices. Define \(G_t\) by adding
+all edges between consecutive classes in
+\[
+ L-A-B-C-D-E-R,
+\]
+all edges of \(L-R\), and the thin channel
+\[
+ L-u-w-v-R,
+\]
+where \(L-u\) and \(v-R\) are complete blocks. Then
+\[
+ |V(G_t)|=7t+3,\qquad |E(G_t)|=7t^2+2t+2.
+\]
+The graph is triangle-free: neither channel has a chord, and no vertex
+outside \(L\cup R\) is adjacent to both terminal classes.
+
+\begin{theorem}\label{thm:family}
+For every \(t\ge1\), \(G_t\) has a unique maximum cut up to global
+complementation, and
+\[
+ \bip(G_t)=t^2,\qquad \mc(G_t)=6t^2+2t+2.
+\]
+The bad edges are exactly \(L-R\).
+\end{theorem}
+
+\begin{proof}
+Index each large class by \(\mathbb Z_t\). For every
+\((i,j)\in\mathbb Z_t^2\), form the \(7\)-cycle
+\[
+ L_iA_jB_{i+j}C_iD_jE_{i+j}R_jL_i. \tag{3}
+\]
+These \(t^2\) cycles are edge-disjoint. On the six wide-channel blocks,
+their edge labels are
+\[
+ (i,j),\ (j,i+j),\ (i+j,i),\ (i,j),\ (j,i+j),\ (i+j,j),
+\]
+and each map is a bijection of \(\mathbb Z_t^2\). Their closing
+\(L_iR_j\) edges are also distinct.
+
+Every cut leaves a monochromatic edge on each packed odd cycle, so it has
+at least \(t^2\) bad edges. Conversely, put \(L,B,D,R,w\) on one shore
+and \(A,C,E,u,v\) on the other. Exactly the \(L-R\) edges are bad.
+
+For uniqueness, a maximum cut has exactly one bad edge in each packed
+cycle and no bad edge outside the packing. The outside edges are the thin
+channel. Since all \(L_i u,uw,wv,vR_j\) cross, all vertices in \(L\cup R\)
+lie on one shore and \(u,v\) on the other. Thus all \(t^2\) edges of
+\(L-R\) are bad, and every remaining edge crosses. This determines the
+cut up to complementation.
+\end{proof}
+
+\begin{corollary}\label{cor:hall}
+In the unique maximum cut of \(G_t\), every bad edge \(L_iR_j\) has the
+unique shortest \(B\)-geodesic
+\[
+ L_i-u-w-v-R_j,
+\]
+and
+\[
+ |\supp_B(M)|=2t+2.
+\]
+Thus \eqref{eq:hall} fails for \(t\ge3\), and
+\[
+ \frac{|M|}{|\supp_B(M)|}=\frac{t^2}{2t+2}\longrightarrow\infty.
+\]
+\end{corollary}
+
+\begin{proof}
+After deleting \(L-R\), the thin channel has length four and the wide
+channel has length six. The thin internal vertices are singletons, so the
+length-four path is unique. The support union consists of the \(t\) edges
+\(L-u\), the two edges \(uw,wv\), and the \(t\) edges \(v-R\).
+\end{proof}
+
+The maximum cut is unique and therefore automatically minimizes every
+secondary tie-break among maximum cuts. In particular,
+\[
+ \Gamma(B,M)=\sum_{xy\in M}(d_B(x,y)+1)^2=25t^2.
+\]
+The graphs \(G_t\) are not counterexamples to \eqref{eq:erdos}, since
+\(t^2<(7t+3)^2/25\).
+
+\section{Exact classification of the first footprints}
+
+\begin{definition}
+An \(m\)-footprint obstruction is a pair \((F,\mathcal A)\) such that:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \(F\) is connected and bipartite with \(m-1\) edges;
+\item \(\mathcal A\) is a set of \(m\) distinct distance-four pairs in \(F\);
+\item the graph \((V(F),\mathcal A)\) is triangle-free;
+\item the geodesic supports \(P_F(a)\) cover \(E(F)\), and every edge of
+\(F\) lies in at least two supports.
+\end{enumerate}
+\end{definition}
+
+Lemma~\ref{lem:minimal} sends every graph-level minimal Hall violation to
+an \(m\)-footprint obstruction.
+
+\begin{theorem}[Computer-assisted]\label{thm:classification}
+No \(m\)-footprint obstruction exists for \(m\le8\). For \(m=9\), there
+is exactly one footprint isomorphism class and its atom set is forced:
+\[
+ \{l_1,l_2,l_3\}-u-w-v-\{r_1,r_2,r_3\},
+ \qquad
+ \mathcal A=\{l_ir_j:1\le i,j\le3\}. \tag{4}
+\]
+For \(m=10\), there are exactly three footprint isomorphism classes.
+\end{theorem}
+
+The cases \(m\le6\) have a short direct proof. A minimal violation has
+\(m-1\) support edges. Every atom support has at least four edges, so
+\(m\ge5\). At \(m=5\), the footprint is a four-edge path and determines
+only one distance-four pair. At \(m=6\), Proposition~\ref{prop:gap}
+forces each support to be one of the at most \(\binom54=5\) four-edge
+subsets of a five-edge footprint; a path edge set determines its endpoint
+pair.
+
+For \(7\le m\le10\), the proof is exhaustive. Using \texttt{geng} from
+nauty/Traces \cite{McKayPiperno14}, we generated one representative of
+every connected bipartite graph with \(m-1\) edges and between \(5\) and
+\(m\) vertices. Breadth-first search listed every distance-four pair and
+its full geodesic support. We then enumerated every \(m\)-element set of
+pairs and tested conditions (c) and (d). Table~\ref{tab:counts} gives the
+exact output. A second, independently written analysis program reproduced
+the table.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c@{\quad}r@{\quad}r@{\quad}r}
+\toprule
+\(m\) & distance-filtered footprints & valid footprint classes
+& admissible atom subsets\\
+\midrule
+6&0&0&0\\
+7&0&0&0\\
+8&0&0&0\\
+9&1&1&1\\
+10&9&3&56\\
+\bottomrule
+\end{tabular}
+\caption{Exact footprint enumeration. The final column counts subsets on
+canonical footprint representatives, before quotienting those subsets by
+footprint automorphisms.}
+\label{tab:counts}
+\end{table}
+
+The graph6 label in (4) is \texttt{H???FaM}. The ten-atom footprint labels
+are \texttt{I????B\_fo}, \texttt{I????Bobo}, and
+\texttt{I???E?wh\_}. Consequently, every graph-level minimal violation has
+at least nine atoms, and the nine-atom footprint is uniquely determined.
+The graph \(G_3\) realizes it. More generally, choosing three vertices
+from each of \(L\) and \(R\) in any \(G_t\), \(t\ge3\), yields the same
+minimal subsystem.
+
+\section{Interpretation and reproducibility}
+
+The wide channel in \(G_t\) certifies maximum-cut optimality by packing
+odd cycles, while the thin channel forces all bad edges to share the same
+two central support edges. Thus the resources certifying cut optimality
+and the resources offered by shortest supports can live on different
+channels.
+
+This rules out bare shortest-support Hall expansion, not stronger banked
+inequalities that also use vertex slack, longer geodesics, or cut-boundary
+capacity. It also gives no stronger numerical upper bound on \(\bip(G)\).
+
+The ancillary archive contains two family verifiers, two footprint enumerators, a command-level README, and a SHA-256 manifest. The family theorem is independent of computation.
+The classification uses integer arithmetic throughout and relies on
+nauty/Traces only for complete unlabeled graph generation.
+
+\begin{thebibliography}{9}
+\bibitem{BCL21}
+J.~Balogh, F.~C.~Clemen and B.~Lidicky,
+\emph{Max cuts in triangle-free graphs},
+Combinatorica 43 (2023), 1059--1079;
+\href{https://arxiv.org/abs/2103.14179}{arXiv:2103.14179}.
+
+\bibitem{CKL17}
+S.~M.~Cioaba, J.~H.~Koolen and W.~Li,
+\emph{Max-cut and extendability of matchings in distance-regular graphs},
+European J. Combin. 62 (2017), 232--244;
+\href{https://arxiv.org/abs/1507.06254}{arXiv:1507.06254}.
+
+\bibitem{EFPS88}
+P.~Erdos, R.~Faudree, J.~Pach and J.~H.~Spencer,
+\emph{How to make a graph bipartite},
+J. Combin. Theory Ser. B 45 (1988), 86--98,
+\href{https://doi.org/10.1016/0095-8956(88)90057-3}{doi:10.1016/0095-8956(88)90057-3}.
+
+\bibitem{EGS92}
+P.~Erdos, E.~Gyori and M.~Simonovits,
+\emph{How many edges should be deleted to make a triangle-free graph
+bipartite?},
+in \emph{Sets, Graphs and Numbers}, Colloq. Math. Soc. Janos Bolyai 60,
+North-Holland, 1992, 239--263.
+
+\bibitem{Ferudun26}
+A.~Ferudun,
+\emph{The Erdos \(n^2/25\) max-cut conjecture for small multiples of five,
+via a per-root-MaxCut envelope and blow-up integrality},
+\href{https://arxiv.org/abs/2606.28041}{arXiv:2606.28041}, 2026.
+
+\bibitem{McKayPiperno14}
+B.~D.~McKay and A.~Piperno,
+\emph{Practical graph isomorphism, II},
+J. Symbolic Comput. 60 (2014), 94--112,
+\href{https://doi.org/10.1016/j.jsc.2013.09.003}{doi:10.1016/j.jsc.2013.09.003}.
+\end{thebibliography}
+\end{document}
+
+
+

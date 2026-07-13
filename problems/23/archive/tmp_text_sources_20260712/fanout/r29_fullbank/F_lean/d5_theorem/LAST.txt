@@ -1,0 +1,1 @@
+Created [REPORT.md](E:/Projects/ErdosProblems/tmp/fanout/r29_fullbank/F_lean/d5_theorem/REPORT.md) with three exact probe candidates and signature audit. No production files, shared logs, or other files were edited.

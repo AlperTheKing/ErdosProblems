@@ -1,0 +1,65 @@
+{
+  "arithmetic": "integer",
+  "small_holes": {
+    "max_width": 18,
+    "sidon_rulers": 1340,
+    "literal_holes": 6783,
+    "separated_rows": 1837,
+    "lg33_failures": 0,
+    "maximum_lg33_margin": {
+      "label": "small",
+      "p": 2,
+      "W": 2,
+      "center": 5,
+      "N": 6,
+      "H": 4,
+      "central_gap": 1,
+      "internal_excess_E": 0,
+      "D_base": 2,
+      "lg33_margin": -504,
+      "edge_bridge_margin": -486,
+      "touch_bridge_margin": -474,
+      "separated": false,
+      "B": [
+        0,
+        2
+      ]
+    }
+  },
+  "hard_P20": {
+    "label": "ruzsa-9ab2ac138632",
+    "p": 46,
+    "W": 2127,
+    "center": 4924,
+    "N": 4925,
+    "H": 290,
+    "central_gap": 670,
+    "internal_excess_E": 0,
+    "D_base": 39066,
+    "lg33_margin": -53731150,
+    "edge_bridge_margin": -53731150,
+    "touch_bridge_margin": 64625,
+    "separated": true,
+    "lg33_slack_formula": 53731150,
+    "exact_gap_bound_lhs": 676164000,
+    "exact_gap_bound_rhs": 622432850
+  },
+  "bose_q128": {
+    "label": "bose-q128",
+    "p": 128,
+    "W": 15445,
+    "center": 42705,
+    "N": 42706,
+    "H": 1222,
+    "central_gap": 11815,
+    "internal_excess_E": 0,
+    "D_base": 739424,
+    "lg33_margin": -53766916732,
+    "edge_bridge_margin": -53766916732,
+    "touch_bridge_margin": -47798795938,
+    "separated": true,
+    "lg33_slack_formula": 53766916732,
+    "exact_gap_bound_lhs": 211717805520,
+    "exact_gap_bound_rhs": 157950888788
+  }
+}

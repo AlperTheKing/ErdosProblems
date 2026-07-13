@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integers",
+  "domain": "all cyclic cuts from the selected deterministic Singer unit classes; first positive-defect literal-hole center per cut",
+  "source": "problems/864/compute/p12/singer_sample_q131.jsonl",
+  "modulus": 17293,
+  "p": 132,
+  "unit_limit": 32,
+  "unit_classes_scanned": 32,
+  "distinct_cuts_scanned": 4224,
+  "positive_hole_cuts": 4224,
+  "K5_5_cuts": 2,
+  "max_outer_edges": 259,
+  "max_left_degree": 21,
+  "K6_6_found": false,
+  "witness": null,
+  "elapsed_seconds": 148.64868340000066
+}

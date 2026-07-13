@@ -1,0 +1,19 @@
+import Erdos23Delta0.Gamma.CheckedT5CatalogueKernel
+
+open Erdos23Delta0
+open Erdos23Delta0.Gamma
+open Erdos23Delta0.Gamma.CheckedT5CatalogueKernel
+
+#check RootedT5OwnerShoreData.ownerShore_card_ge_nine
+#check RootedT5OwnerShoreData.oppositeShore_card_ge_six
+#check RootedT5AtomPairCover.atom_card_le
+#check no_order15_rootedT5
+#check no_order16_rootedT5
+#check supportOrder_le_twentyOne
+#print axioms RootedT5OwnerShoreData.ownerShore_card_ge_nine
+#print axioms RootedT5OwnerShoreData.oppositeShore_card_ge_six
+#print axioms RootedT5AtomPairCover.atom_card_le
+#print axioms no_order15_rootedT5
+#print axioms no_order16_rootedT5
+#print axioms supportOrder_le_twentyOne
+

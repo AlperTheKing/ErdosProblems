@@ -1,0 +1,127 @@
+{
+  "max_prime": 43,
+  "prime_count": 12,
+  "reports": [
+    {
+      "covered_targets": 20,
+      "differences": 13,
+      "generator": 2,
+      "order": 20,
+      "pair_sums": 10,
+      "q": 5,
+      "size": 4,
+      "threshold_margin_twice": 6
+    },
+    {
+      "covered_targets": 42,
+      "differences": 31,
+      "generator": 3,
+      "order": 42,
+      "pair_sums": 21,
+      "q": 7,
+      "size": 6,
+      "threshold_margin_twice": 20
+    },
+    {
+      "covered_targets": 110,
+      "differences": 91,
+      "generator": 2,
+      "order": 110,
+      "pair_sums": 55,
+      "q": 11,
+      "size": 10,
+      "threshold_margin_twice": 72
+    },
+    {
+      "covered_targets": 156,
+      "differences": 133,
+      "generator": 2,
+      "order": 156,
+      "pair_sums": 78,
+      "q": 13,
+      "size": 12,
+      "threshold_margin_twice": 110
+    },
+    {
+      "covered_targets": 272,
+      "differences": 241,
+      "generator": 3,
+      "order": 272,
+      "pair_sums": 136,
+      "q": 17,
+      "size": 16,
+      "threshold_margin_twice": 210
+    },
+    {
+      "covered_targets": 342,
+      "differences": 307,
+      "generator": 2,
+      "order": 342,
+      "pair_sums": 171,
+      "q": 19,
+      "size": 18,
+      "threshold_margin_twice": 272
+    },
+    {
+      "covered_targets": 506,
+      "differences": 463,
+      "generator": 5,
+      "order": 506,
+      "pair_sums": 253,
+      "q": 23,
+      "size": 22,
+      "threshold_margin_twice": 420
+    },
+    {
+      "covered_targets": 812,
+      "differences": 757,
+      "generator": 2,
+      "order": 812,
+      "pair_sums": 406,
+      "q": 29,
+      "size": 28,
+      "threshold_margin_twice": 702
+    },
+    {
+      "covered_targets": 930,
+      "differences": 871,
+      "generator": 3,
+      "order": 930,
+      "pair_sums": 465,
+      "q": 31,
+      "size": 30,
+      "threshold_margin_twice": 812
+    },
+    {
+      "covered_targets": 1332,
+      "differences": 1261,
+      "generator": 2,
+      "order": 1332,
+      "pair_sums": 666,
+      "q": 37,
+      "size": 36,
+      "threshold_margin_twice": 1190
+    },
+    {
+      "covered_targets": 1640,
+      "differences": 1561,
+      "generator": 6,
+      "order": 1640,
+      "pair_sums": 820,
+      "q": 41,
+      "size": 40,
+      "threshold_margin_twice": 1482
+    },
+    {
+      "covered_targets": 1806,
+      "differences": 1723,
+      "generator": 3,
+      "order": 1806,
+      "pair_sums": 903,
+      "q": 43,
+      "size": 42,
+      "threshold_margin_twice": 1640
+    }
+  ],
+  "total_targets": 7968
+}

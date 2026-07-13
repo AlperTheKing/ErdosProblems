@@ -1,0 +1,43 @@
+{
+  "N": 64,
+  "H": 16,
+  "objective_name": "c20",
+  "status": "FEASIBLE",
+  "workers": 32,
+  "time_limit_seconds": 120.0,
+  "wall_seconds": 120.74492700000701,
+  "conflicts": 0,
+  "branches": 0,
+  "finite_optimum_certified": false,
+  "A": [
+    0,
+    2,
+    5,
+    6,
+    13,
+    14,
+    17,
+    19,
+    37,
+    53,
+    63
+  ],
+  "k": 11,
+  "M": 77,
+  "G": 2,
+  "W": 217,
+  "D": 97,
+  "Q": 0,
+  "Z": 97,
+  "S": 450,
+  "max_interval_degree": 6,
+  "c20_margin": -52196,
+  "lg33_margin": -39424,
+  "lg33_domain": 1,
+  "repeated_sums": [
+    19
+  ],
+  "objective": -52196,
+  "is_falsifier": false,
+  "diagnostic_best_bound": 11824.000000000007
+}

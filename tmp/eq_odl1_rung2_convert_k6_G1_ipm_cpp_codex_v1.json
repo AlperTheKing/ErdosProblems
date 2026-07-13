@@ -1,9 +1,0 @@
-{
-  "core": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_core_k6_G1_ipm_cpp_codex_v1.jsonl",
-  "core_solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_core_solution_k6_G1_ipm_cpp_codex_v1.jsonl",
-  "dimension": 2981,
-  "schema": "eq_odl1_rung2_core_to_source_solution_v1",
-  "solution_negative_count": 0,
-  "source_records": 1946,
-  "source_solution": "E:\\Projects\\ErdosProblems\\tmp\\eq_odl1_rung2_source_solution_k6_G1_ipm_cpp_codex_v1.jsonl"
-}

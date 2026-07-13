@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "base_p": 60,
+  "h": 6572,
+  "individually_admissible_candidates": 168,
+  "pair_constraints": 11788,
+  "solver_iterations": 1,
+  "lazy_cuts": 0,
+  "valid_seven_mark_extensions_audited": 0,
+  "statuses": [
+    "INFEASIBLE"
+  ],
+  "positive_defect_RM97_witness": null,
+  "best_nonwitness": null
+}

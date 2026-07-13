@@ -1,0 +1,54 @@
+{
+  "arithmetic": "integers_only",
+  "assertions": {
+    "dedup_prohibits_39850": true,
+    "no_independent_provider_tokens_found": true,
+    "pattern_overlap_is_zero": true,
+    "reach_is_19925": true,
+    "rowCompanion_additional_is_2600": true,
+    "sameFirst_is_17325": true
+  },
+  "c5base_accounting_scaled_units": {
+    "FreeHalf_reach_if_relabelled_c5Base": 19925,
+    "additional_independent_base_density": 0,
+    "compiled_concrete_R29_tokens_without_provider": 0,
+    "conditional_emitted_tokens_if_partial_matching_covers_all_HitNeed": 3,
+    "double_count_removed": 19925,
+    "forbidden_naive_sum": 39850,
+    "strongest_combined_after_source_key_dedup": 19925
+  },
+  "canonical_source_key": [
+    "ordered_source_x",
+    "ordered_source_y",
+    "half_bit"
+  ],
+  "input_sha256": {
+    "r29_lead_gate.py": "5d29b1d6e35957405c53176fab1fb21660d727cb334a1e20462eb5ebe36678f6",
+    "rebuild_owner_hall.py": "a0912540f653945eed1eddbc74b191ea2a6ab90ccd075b1395cab552ff574dc0"
+  },
+  "instance": {
+    "n": 2943,
+    "shore": [
+      0,
+      1,
+      2
+    ]
+  },
+  "provider_assumptions": [
+    "The lead build() incidence is the canonical reconstructed R29 N=2943 instance.",
+    "A FreeHalf/c5Base adapter uses the ordered triple (x,y,half) as BaseKey/sourceId.",
+    "Each admitted key has capacity one scaled unit (the prose 1/(2K) unit).",
+    "Incidence to shore owners is the owner mask rebuilt by owner_sources.",
+    "Any independent base-density provider must export concrete keys disjoint from all FreeHalf keys.",
+    "No outsideAttachment checker/provider and no concrete R29 full-bank c5Base ledger are compiled."
+  ],
+  "reach": {
+    "commonBad_additional_keys": 0,
+    "deduplicated_FreeHalf_keys": 19925,
+    "outsideAttachment_additional_keys": 0,
+    "overlap_sameFirst_rowCompanion": 0,
+    "rowCompanion_additional_keys": 2600,
+    "sameFirst_keys": 17325
+  },
+  "schema": "r29-c5base-source-key-audit-v1"
+}

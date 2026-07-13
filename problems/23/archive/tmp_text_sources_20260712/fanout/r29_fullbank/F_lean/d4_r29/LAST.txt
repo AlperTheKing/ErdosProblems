@@ -1,0 +1,5 @@
+Audit complete. Wrote only:
+
+[REPORT.md](E:\Projects\ErdosProblems\tmp\fanout\r29_fullbank\F_lean\d4_r29\REPORT.md)
+
+Conclusion: the tuple falsifies the specific active-scoped owner-Hall inequality, exactly `19925 < 19953` with defect `28`. It does not falsify `FullBankRelaxedCoverCert` and is logically silent about `FullBankGlobalPackage.Checked` without a missing exact incidence/capacity adapter.

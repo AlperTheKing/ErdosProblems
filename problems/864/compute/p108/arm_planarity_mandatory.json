@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact graph construction; NetworkX Boyer-Myrvold planarity",
+  "rows": {
+    "P75": {
+      "p": 26,
+      "h": 988,
+      "b": 1,
+      "delta": 14,
+      "C_S": 51,
+      "T_F": 25,
+      "V_b": 0,
+      "literal_hole": true,
+      "active_colors": 9,
+      "nonplanar_colors": 0,
+      "maximum_directed_minus_6n": -11,
+      "worst_color": {
+        "u": 931,
+        "vertices": 2,
+        "directed_arcs": 1,
+        "simple_edges": 1,
+        "digons": 0,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": []
+    },
+    "P94": {
+      "p": 104,
+      "h": 14484,
+      "b": 1,
+      "delta": 1689,
+      "C_S": 142,
+      "T_F": 116,
+      "V_b": 0,
+      "literal_hole": true,
+      "active_colors": 29,
+      "nonplanar_colors": 0,
+      "maximum_directed_minus_6n": -10,
+      "worst_color": {
+        "u": 11459,
+        "vertices": 2,
+        "directed_arcs": 2,
+        "simple_edges": 1,
+        "digons": 1,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": []
+    },
+    "P98": {
+      "p": 103,
+      "h": 14484,
+      "b": 1,
+      "delta": 1379,
+      "C_S": 132,
+      "T_F": 110,
+      "V_b": 0,
+      "literal_hole": true,
+      "active_colors": 28,
+      "nonplanar_colors": 0,
+      "maximum_directed_minus_6n": -10,
+      "worst_color": {
+        "u": 11459,
+        "vertices": 2,
+        "directed_arcs": 2,
+        "simple_edges": 1,
+        "digons": 1,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": []
+    },
+    "P105": {
+      "p": 57,
+      "h": 6572,
+      "b": 1,
+      "delta": -1726,
+      "C_S": 159,
+      "T_F": 160,
+      "V_b": 0,
+      "literal_hole": true,
+      "active_colors": 34,
+      "nonplanar_colors": 0,
+      "maximum_directed_minus_6n": -10,
+      "worst_color": {
+        "u": 2899,
+        "vertices": 4,
+        "directed_arcs": 8,
+        "simple_edges": 5,
+        "digons": 3,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": []
+    },
+    "P88_b1": {
+      "p": 60,
+      "h": 3286,
+      "b": 1,
+      "delta": 2085,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 77,
+      "literal_hole": false,
+      "active_colors": 36,
+      "nonplanar_colors": 1,
+      "maximum_directed_minus_6n": -11,
+      "worst_color": {
+        "u": 2057,
+        "vertices": 6,
+        "directed_arcs": 14,
+        "simple_edges": 11,
+        "digons": 3,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": [
+        {
+          "u": 2173,
+          "vertices": 8,
+          "directed_arcs": 19,
+          "simple_edges": 16,
+          "digons": 3,
+          "planar": false,
+          "kuratowski_nodes": [
+            40,
+            44,
+            52,
+            72,
+            80,
+            92,
+            96
+          ],
+          "kuratowski_edges": [
+            [
+              40,
+              52
+            ],
+            [
+              40,
+              92
+            ],
+            [
+              44,
+              52
+            ],
+            [
+              44,
+              72
+            ],
+            [
+              44,
+              80
+            ],
+            [
+              52,
+              96
+            ],
+            [
+              72,
+              92
+            ],
+            [
+              72,
+              96
+            ],
+            [
+              80,
+              92
+            ],
+            [
+              80,
+              96
+            ]
+          ]
+        }
+      ]
+    },
+    "P88_b2": {
+      "p": 60,
+      "h": 3286,
+      "b": 2,
+      "delta": 2085,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 74,
+      "literal_hole": false,
+      "active_colors": 36,
+      "nonplanar_colors": 1,
+      "maximum_directed_minus_6n": -11,
+      "worst_color": {
+        "u": 2057,
+        "vertices": 6,
+        "directed_arcs": 14,
+        "simple_edges": 11,
+        "digons": 3,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": [
+        {
+          "u": 2173,
+          "vertices": 8,
+          "directed_arcs": 19,
+          "simple_edges": 16,
+          "digons": 3,
+          "planar": false,
+          "kuratowski_nodes": [
+            40,
+            44,
+            52,
+            72,
+            80,
+            92,
+            96
+          ],
+          "kuratowski_edges": [
+            [
+              40,
+              52
+            ],
+            [
+              40,
+              92
+            ],
+            [
+              44,
+              52
+            ],
+            [
+              44,
+              72
+            ],
+            [
+              44,
+              80
+            ],
+            [
+              52,
+              96
+            ],
+            [
+              72,
+              92
+            ],
+            [
+              72,
+              96
+            ],
+            [
+              80,
+              92
+            ],
+            [
+              80,
+              96
+            ]
+          ]
+        }
+      ]
+    },
+    "P88_q2_literal_hole": {
+      "p": 60,
+      "h": 6572,
+      "b": 1,
+      "delta": -1201,
+      "C_S": 182,
+      "T_F": 200,
+      "V_b": 0,
+      "literal_hole": true,
+      "active_colors": 36,
+      "nonplanar_colors": 1,
+      "maximum_directed_minus_6n": -11,
+      "worst_color": {
+        "u": 4115,
+        "vertices": 6,
+        "directed_arcs": 14,
+        "simple_edges": 11,
+        "digons": 3,
+        "planar": true,
+        "kuratowski_nodes": [],
+        "kuratowski_edges": []
+      },
+      "nonplanar_rows": [
+        {
+          "u": 4347,
+          "vertices": 8,
+          "directed_arcs": 19,
+          "simple_edges": 16,
+          "digons": 3,
+          "planar": false,
+          "kuratowski_nodes": [
+            40,
+            44,
+            52,
+            72,
+            80,
+            92,
+            96
+          ],
+          "kuratowski_edges": [
+            [
+              40,
+              52
+            ],
+            [
+              40,
+              92
+            ],
+            [
+              44,
+              52
+            ],
+            [
+              44,
+              72
+            ],
+            [
+              44,
+              80
+            ],
+            [
+              52,
+              96
+            ],
+            [
+              72,
+              92
+            ],
+            [
+              72,
+              96
+            ],
+            [
+              80,
+              92
+            ],
+            [
+              80,
+              96
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

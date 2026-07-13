@@ -1,0 +1,1 @@
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\owner_shore_transport\AmortizedOwnerShore.lean:1:0: error: object file 'E:\Projects\ErdosProblems\problems\23\lean\Erdos23Delta0\Gamma\ActiveScopedVariationReduction.olean' of module Erdos23Delta0.Gamma.ActiveScopedVariationReduction does not exist

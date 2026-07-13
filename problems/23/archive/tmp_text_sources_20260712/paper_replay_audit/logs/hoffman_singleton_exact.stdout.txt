@@ -1,0 +1,6 @@
+PASS  HoSi constructed: n=50 e=175 7-regular, A^2+A-6I-J=0 exactly (=> triangle-free, girth 5)
+PASS  (A-2I)(A+3I) = J exactly => lambda_min = -3 => maxcut <= 50*(7+3)/4 = 125 => beta >= 175-125 = 50 (EXACT rational)
+      rank_F2(A) = 22 (report claims 22); rank_F2(A+I) = 29
+      min uncut over im(A)   = 50  (2^22 cuts enumerated)
+      min uncut over im(A+I) = SKIP(rank>24)
+PASS  HoSi fam = 50 with exact sandwich 50 <= fam; report claim fam=50 <= 100 = n^2/25 CONFIRMED (fam = beta = 50, family achieves the spectral optimum)

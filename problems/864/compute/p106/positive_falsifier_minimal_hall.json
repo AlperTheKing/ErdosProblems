@@ -1,0 +1,7175 @@
+{
+  "B": [
+    1,
+    128,
+    245,
+    327,
+    657,
+    703,
+    958,
+    977,
+    999,
+    1057,
+    1107,
+    1363,
+    1675,
+    1677,
+    1841,
+    1883,
+    1916,
+    2103,
+    2141,
+    2235,
+    2645,
+    2681,
+    2829,
+    2899,
+    3041,
+    3217,
+    3227,
+    3235,
+    3272,
+    3431,
+    3707,
+    3733,
+    3851,
+    4115,
+    4149,
+    4307,
+    4347,
+    4481,
+    4641,
+    4761,
+    4778,
+    4951,
+    5043,
+    5129,
+    5193,
+    5197,
+    5309,
+    5577,
+    5631,
+    5679,
+    5803,
+    5901,
+    5917,
+    5924,
+    6053,
+    6141,
+    6153,
+    6263,
+    6341,
+    6369,
+    6401,
+    6425,
+    6431,
+    6445,
+    6497,
+    6510,
+    6571
+  ],
+  "p": 67,
+  "h": 6572,
+  "b": 1,
+  "delta": 129,
+  "C_S": 199,
+  "T_F": 221,
+  "V_b": 20,
+  "intervals": 420,
+  "slots": 418,
+  "deficient_windows": 15,
+  "minimal_deficient_windows": [
+    {
+      "J": [
+        -1444,
+        4730
+      ],
+      "deficit": 1,
+      "contained_intervals": 411,
+      "contained_canonical": 191,
+      "contained_loose": 220,
+      "slots_in_J": 410,
+      "slot_kind_counts": {
+        "L": 199,
+        "U": 191,
+        "V": 20
+      },
+      "crossing_fold_intervals": 8,
+      "strictly_containing_fold_intervals": 0,
+      "base_transfer_counts": {
+        "base_crosses": 5,
+        "base_inside": 215
+      },
+      "distinct_support_folds": 179,
+      "maximum_support_multiplicity": 11,
+      "base_relations": [
+        {
+          "triangle": 0,
+          "base": 5,
+          "R": 1016,
+          "loose_interval": [
+            777,
+            4688
+          ],
+          "base_interval": [
+            1793,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1106,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 1,
+          "base": 6,
+          "R": 220,
+          "loose_interval": [
+            774,
+            4688
+          ],
+          "base_interval": [
+            994,
+            4468
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1109,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 2,
+          "base": 6,
+          "R": -1328,
+          "loose_interval": [
+            2322,
+            3140
+          ],
+          "base_interval": [
+            994,
+            4468
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1109,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 3,
+          "base": 7,
+          "R": -1536,
+          "loose_interval": [
+            1676,
+            3672
+          ],
+          "base_interval": [
+            140,
+            5208
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1223,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 4,
+          "base": 7,
+          "R": -1872,
+          "loose_interval": [
+            2012,
+            3336
+          ],
+          "base_interval": [
+            140,
+            5208
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1223,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 5,
+          "base": 10,
+          "R": 840,
+          "loose_interval": [
+            538,
+            4730
+          ],
+          "base_interval": [
+            1378,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1303,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 6,
+          "base": 10,
+          "R": -1170,
+          "loose_interval": [
+            2548,
+            2720
+          ],
+          "base_interval": [
+            1378,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1303,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 7,
+          "base": 11,
+          "R": 336,
+          "loose_interval": [
+            1594,
+            3672
+          ],
+          "base_interval": [
+            1930,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1305,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 8,
+          "base": 11,
+          "R": 18,
+          "loose_interval": [
+            1912,
+            3354
+          ],
+          "base_interval": [
+            1930,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1305,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 9,
+          "base": 12,
+          "R": -2464,
+          "loose_interval": [
+            2224,
+            2982
+          ],
+          "base_interval": [
+            518,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1365,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 10,
+          "base": 15,
+          "R": -1364,
+          "loose_interval": [
+            1364,
+            3530
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 11,
+          "base": 15,
+          "R": -2174,
+          "loose_interval": [
+            2174,
+            2720
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 12,
+          "base": 15,
+          "R": -2804,
+          "loose_interval": [
+            2090,
+            2804
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 13,
+          "base": 16,
+          "R": -1016,
+          "loose_interval": [
+            1218,
+            3672
+          ],
+          "base_interval": [
+            202,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1681,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 14,
+          "base": 16,
+          "R": -1334,
+          "loose_interval": [
+            1536,
+            3354
+          ],
+          "base_interval": [
+            202,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1681,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 15,
+          "base": 17,
+          "R": -840,
+          "loose_interval": [
+            966,
+            3890
+          ],
+          "base_interval": [
+            126,
+            4730
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1715,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 16,
+          "base": 17,
+          "R": -1590,
+          "loose_interval": [
+            1716,
+            3140
+          ],
+          "base_interval": [
+            126,
+            4730
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1715,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 17,
+          "base": 18,
+          "R": 1170,
+          "loose_interval": [
+            920,
+            3890
+          ],
+          "base_interval": [
+            2090,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 18,
+          "base": 18,
+          "R": 420,
+          "loose_interval": [
+            1670,
+            3140
+          ],
+          "base_interval": [
+            2090,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 19,
+          "base": 19,
+          "R": 1548,
+          "loose_interval": [
+            72,
+            4688
+          ],
+          "base_interval": [
+            1620,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1811,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 20,
+          "base": 20,
+          "R": -214,
+          "loose_interval": [
+            1588,
+            3140
+          ],
+          "base_interval": [
+            1374,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1843,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 21,
+          "base": 20,
+          "R": -1130,
+          "loose_interval": [
+            2224,
+            2504
+          ],
+          "base_interval": [
+            1374,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1843,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 22,
+          "base": 21,
+          "R": 298,
+          "loose_interval": [
+            1966,
+            2720
+          ],
+          "base_interval": [
+            2264,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 23,
+          "base": 21,
+          "R": -332,
+          "loose_interval": [
+            2090,
+            2596
+          ],
+          "base_interval": [
+            2264,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 24,
+          "base": 22,
+          "R": 810,
+          "loose_interval": [
+            1120,
+            3530
+          ],
+          "base_interval": [
+            1930,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1921,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 25,
+          "base": 22,
+          "R": 144,
+          "loose_interval": [
+            1786,
+            2864
+          ],
+          "base_interval": [
+            1930,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1921,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 26,
+          "base": 23,
+          "R": 834,
+          "loose_interval": [
+            976,
+            3672
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 27,
+          "base": 23,
+          "R": 692,
+          "loose_interval": [
+            1118,
+            3530
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 28,
+          "base": 23,
+          "R": -614,
+          "loose_interval": [
+            2224,
+            2424
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 29,
+          "base": 26,
+          "R": -664,
+          "loose_interval": [
+            894,
+            3672
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 30,
+          "base": 26,
+          "R": -992,
+          "loose_interval": [
+            1222,
+            3344
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 31,
+          "base": 26,
+          "R": -1498,
+          "loose_interval": [
+            1728,
+            2838
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 32,
+          "base": 26,
+          "R": -2112,
+          "loose_interval": [
+            2224,
+            2342
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 33,
+          "base": 27,
+          "R": -420,
+          "loose_interval": [
+            1794,
+            2720
+          ],
+          "base_interval": [
+            1374,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2057,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 34,
+          "base": 28,
+          "R": 258,
+          "loose_interval": [
+            -184,
+            4688
+          ],
+          "base_interval": [
+            74,
+            4430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2067,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 35,
+          "base": 28,
+          "R": -1974,
+          "loose_interval": [
+            2048,
+            2456
+          ],
+          "base_interval": [
+            74,
+            4430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2067,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 36,
+          "base": 29,
+          "R": 808,
+          "loose_interval": [
+            812,
+            3672
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 37,
+          "base": 29,
+          "R": -26,
+          "loose_interval": [
+            1646,
+            2838
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 38,
+          "base": 29,
+          "R": -640,
+          "loose_interval": [
+            2224,
+            2260
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 39,
+          "base": 30,
+          "R": 532,
+          "loose_interval": [
+            730,
+            3672
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 40,
+          "base": 30,
+          "R": 214,
+          "loose_interval": [
+            1048,
+            3354
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 41,
+          "base": 30,
+          "R": -302,
+          "loose_interval": [
+            1564,
+            2838
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 42,
+          "base": 30,
+          "R": -916,
+          "loose_interval": [
+            2178,
+            2224
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 44,
+          "base": 33,
+          "R": -774,
+          "loose_interval": [
+            2090,
+            2148
+          ],
+          "base_interval": [
+            1374,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2333,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 45,
+          "base": 34,
+          "R": -506,
+          "loose_interval": [
+            1398,
+            2838
+          ],
+          "base_interval": [
+            892,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 46,
+          "base": 36,
+          "R": 142,
+          "loose_interval": [
+            512,
+            3672
+          ],
+          "base_interval": [
+            654,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2387,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 47,
+          "base": 36,
+          "R": -666,
+          "loose_interval": [
+            1320,
+            2864
+          ],
+          "base_interval": [
+            654,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2387,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 48,
+          "base": 37,
+          "R": -318,
+          "loose_interval": [
+            748,
+            3354
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 49,
+          "base": 37,
+          "R": -1862,
+          "loose_interval": [
+            1810,
+            2292
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 50,
+          "base": 37,
+          "R": -2294,
+          "loose_interval": [
+            1378,
+            2724
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 51,
+          "base": 39,
+          "R": -336,
+          "loose_interval": [
+            754,
+            3336
+          ],
+          "base_interval": [
+            418,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2481,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 52,
+          "base": 39,
+          "R": -808,
+          "loose_interval": [
+            1226,
+            2864
+          ],
+          "base_interval": [
+            418,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2481,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 53,
+          "base": 40,
+          "R": -572,
+          "loose_interval": [
+            718,
+            3354
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 54,
+          "base": 40,
+          "R": -786,
+          "loose_interval": [
+            932,
+            3140
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 55,
+          "base": 40,
+          "R": -1062,
+          "loose_interval": [
+            1208,
+            2864
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 56,
+          "base": 40,
+          "R": -1088,
+          "loose_interval": [
+            1234,
+            2838
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 57,
+          "base": 41,
+          "R": -1026,
+          "loose_interval": [
+            1166,
+            2864
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 58,
+          "base": 41,
+          "R": -1434,
+          "loose_interval": [
+            1574,
+            2456
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 59,
+          "base": 41,
+          "R": -1800,
+          "loose_interval": [
+            1940,
+            2090
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 60,
+          "base": 42,
+          "R": 318,
+          "loose_interval": [
+            336,
+            3672
+          ],
+          "base_interval": [
+            654,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 61,
+          "base": 42,
+          "R": -18,
+          "loose_interval": [
+            672,
+            3336
+          ],
+          "base_interval": [
+            654,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 62,
+          "base": 43,
+          "R": 1434,
+          "loose_interval": [
+            94,
+            3890
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 63,
+          "base": 43,
+          "R": 408,
+          "loose_interval": [
+            1120,
+            2864
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 64,
+          "base": 43,
+          "R": 264,
+          "loose_interval": [
+            1264,
+            2720
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 65,
+          "base": 45,
+          "R": -1022,
+          "loose_interval": [
+            1168,
+            2720
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 66,
+          "base": 45,
+          "R": -2214,
+          "loose_interval": [
+            1528,
+            2360
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 67,
+          "base": 45,
+          "R": -2364,
+          "loose_interval": [
+            1378,
+            2510
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 68,
+          "base": 48,
+          "R": 204,
+          "loose_interval": [
+            466,
+            3344
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 69,
+          "base": 48,
+          "R": -684,
+          "loose_interval": [
+            1354,
+            2456
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 70,
+          "base": 48,
+          "R": -1050,
+          "loose_interval": [
+            1720,
+            2090
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 71,
+          "base": 49,
+          "R": -490,
+          "loose_interval": [
+            908,
+            2864
+          ],
+          "base_interval": [
+            418,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2799,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 72,
+          "base": 50,
+          "R": 1130,
+          "loose_interval": [
+            398,
+            3354
+          ],
+          "base_interval": [
+            1528,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 73,
+          "base": 50,
+          "R": 614,
+          "loose_interval": [
+            914,
+            2838
+          ],
+          "base_interval": [
+            1528,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 74,
+          "base": 51,
+          "R": 294,
+          "loose_interval": [
+            1516,
+            2224
+          ],
+          "base_interval": [
+            1810,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2831,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 75,
+          "base": 51,
+          "R": 160,
+          "loose_interval": [
+            1650,
+            2090
+          ],
+          "base_interval": [
+            1810,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2831,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 76,
+          "base": 52,
+          "R": 302,
+          "loose_interval": [
+            590,
+            3140
+          ],
+          "base_interval": [
+            892,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 77,
+          "base": 52,
+          "R": -614,
+          "loose_interval": [
+            1506,
+            2224
+          ],
+          "base_interval": [
+            892,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 78,
+          "base": 53,
+          "R": -843,
+          "loose_interval": [
+            1273,
+            2456
+          ],
+          "base_interval": [
+            430,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2842,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 79,
+          "base": 54,
+          "R": 366,
+          "loose_interval": [
+            1254,
+            2456
+          ],
+          "base_interval": [
+            1620,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2861,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 80,
+          "base": 56,
+          "R": -1910,
+          "loose_interval": [
+            1620,
+            2050
+          ],
+          "base_interval": [
+            140,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2901,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 81,
+          "base": 56,
+          "R": -2762,
+          "loose_interval": [
+            768,
+            2902
+          ],
+          "base_interval": [
+            140,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2901,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 82,
+          "base": 57,
+          "R": -498,
+          "loose_interval": [
+            806,
+            2838
+          ],
+          "base_interval": [
+            308,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2927,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 83,
+          "base": 57,
+          "R": -616,
+          "loose_interval": [
+            924,
+            2720
+          ],
+          "base_interval": [
+            308,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2927,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 84,
+          "base": 58,
+          "R": 808,
+          "loose_interval": [
+            -40,
+            3672
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 85,
+          "base": 58,
+          "R": 490,
+          "loose_interval": [
+            278,
+            3354
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 86,
+          "base": 58,
+          "R": -408,
+          "loose_interval": [
+            1176,
+            2456
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 87,
+          "base": 58,
+          "R": -934,
+          "loose_interval": [
+            1702,
+            1930
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 88,
+          "base": 59,
+          "R": 614,
+          "loose_interval": [
+            760,
+            2838
+          ],
+          "base_interval": [
+            1374,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2973,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 89,
+          "base": 59,
+          "R": -1332,
+          "loose_interval": [
+            892,
+            2706
+          ],
+          "base_interval": [
+            1374,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2973,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 90,
+          "base": 60,
+          "R": 1440,
+          "loose_interval": [
+            2,
+            3530
+          ],
+          "base_interval": [
+            1442,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3039,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 91,
+          "base": 60,
+          "R": 774,
+          "loose_interval": [
+            668,
+            2864
+          ],
+          "base_interval": [
+            1442,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3039,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 92,
+          "base": 61,
+          "R": -1306,
+          "loose_interval": [
+            1306,
+            2224
+          ],
+          "base_interval": [
+            0,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3041,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 93,
+          "base": 62,
+          "R": -888,
+          "loose_interval": [
+            1034,
+            2456
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 94,
+          "base": 62,
+          "R": -1120,
+          "loose_interval": [
+            1266,
+            2224
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 95,
+          "base": 62,
+          "R": -1254,
+          "loose_interval": [
+            1400,
+            2090
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 96,
+          "base": 63,
+          "R": 1246,
+          "loose_interval": [
+            132,
+            3336
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 97,
+          "base": 63,
+          "R": 1050,
+          "loose_interval": [
+            328,
+            3140
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 98,
+          "base": 63,
+          "R": 366,
+          "loose_interval": [
+            1012,
+            2456
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 99,
+          "base": 63,
+          "R": 134,
+          "loose_interval": [
+            1244,
+            2224
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 100,
+          "base": 65,
+          "R": -1406,
+          "loose_interval": [
+            1480,
+            1930
+          ],
+          "base_interval": [
+            74,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3161,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 101,
+          "base": 65,
+          "R": -1808,
+          "loose_interval": [
+            1528,
+            1882
+          ],
+          "base_interval": [
+            74,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3161,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 102,
+          "base": 66,
+          "R": 1742,
+          "loose_interval": [
+            -300,
+            3672
+          ],
+          "base_interval": [
+            1442,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3199,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 103,
+          "base": 66,
+          "R": 1600,
+          "loose_interval": [
+            -158,
+            3530
+          ],
+          "base_interval": [
+            1442,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3199,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 104,
+          "base": 67,
+          "R": -1209,
+          "loose_interval": [
+            1270,
+            2090
+          ],
+          "base_interval": [
+            61,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3211,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 105,
+          "base": 67,
+          "R": -1771,
+          "loose_interval": [
+            1528,
+            1832
+          ],
+          "base_interval": [
+            61,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3211,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 106,
+          "base": 68,
+          "R": -562,
+          "loose_interval": [
+            1528,
+            1824
+          ],
+          "base_interval": [
+            1262,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3219,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 107,
+          "base": 70,
+          "R": -1050,
+          "loose_interval": [
+            1252,
+            2090
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 108,
+          "base": 70,
+          "R": -1612,
+          "loose_interval": [
+            1528,
+            1814
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 109,
+          "base": 70,
+          "R": -1762,
+          "loose_interval": [
+            1378,
+            1964
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 110,
+          "base": 70,
+          "R": -3014,
+          "loose_interval": [
+            126,
+            3216
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 111,
+          "base": 71,
+          "R": -880,
+          "loose_interval": [
+            880,
+            2456
+          ],
+          "base_interval": [
+            0,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3235,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 112,
+          "base": 74,
+          "R": -496,
+          "loose_interval": [
+            914,
+            2224
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 113,
+          "base": 74,
+          "R": -1342,
+          "loose_interval": [
+            1378,
+            1760
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 114,
+          "base": 74,
+          "R": -1952,
+          "loose_interval": [
+            768,
+            2370
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 115,
+          "base": 75,
+          "R": 366,
+          "loose_interval": [
+            628,
+            2456
+          ],
+          "base_interval": [
+            994,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3487,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 116,
+          "base": 76,
+          "R": 666,
+          "loose_interval": [
+            -464,
+            3530
+          ],
+          "base_interval": [
+            202,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3505,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 117,
+          "base": 76,
+          "R": -1054,
+          "loose_interval": [
+            1256,
+            1810
+          ],
+          "base_interval": [
+            202,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3505,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 118,
+          "base": 77,
+          "R": -408,
+          "loose_interval": [
+            554,
+            2456
+          ],
+          "base_interval": [
+            146,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3561,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 119,
+          "base": 78,
+          "R": -1028,
+          "loose_interval": [
+            1198,
+            1810
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 120,
+          "base": 78,
+          "R": -1460,
+          "loose_interval": [
+            1378,
+            1630
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 121,
+          "base": 78,
+          "R": -1946,
+          "loose_interval": [
+            892,
+            2116
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 122,
+          "base": 79,
+          "R": -574,
+          "loose_interval": [
+            648,
+            2264
+          ],
+          "base_interval": [
+            74,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3659,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 123,
+          "base": 80,
+          "R": 496,
+          "loose_interval": [
+            174,
+            2720
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 124,
+          "base": 80,
+          "R": -782,
+          "loose_interval": [
+            1442,
+            1452
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 125,
+          "base": 80,
+          "R": -1706,
+          "loose_interval": [
+            518,
+            2376
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 126,
+          "base": 81,
+          "R": 616,
+          "loose_interval": [
+            -446,
+            3336
+          ],
+          "base_interval": [
+            170,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3681,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 127,
+          "base": 81,
+          "R": 118,
+          "loose_interval": [
+            52,
+            2838
+          ],
+          "base_interval": [
+            170,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3681,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 128,
+          "base": 82,
+          "R": -264,
+          "loose_interval": [
+            390,
+            2456
+          ],
+          "base_interval": [
+            126,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3725,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 129,
+          "base": 84,
+          "R": 928,
+          "loose_interval": [
+            334,
+            2456
+          ],
+          "base_interval": [
+            1262,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3781,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 130,
+          "base": 85,
+          "R": 574,
+          "loose_interval": [
+            -56,
+            2838
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 131,
+          "base": 85,
+          "R": -736,
+          "loose_interval": [
+            1254,
+            1528
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 132,
+          "base": 85,
+          "R": -886,
+          "loose_interval": [
+            1378,
+            1404
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 133,
+          "base": 86,
+          "R": -232,
+          "loose_interval": [
+            540,
+            2224
+          ],
+          "base_interval": [
+            308,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3807,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 134,
+          "base": 86,
+          "R": -366,
+          "loose_interval": [
+            674,
+            2090
+          ],
+          "base_interval": [
+            308,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3807,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 135,
+          "base": 87,
+          "R": 1486,
+          "loose_interval": [
+            -112,
+            2864
+          ],
+          "base_interval": [
+            1374,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 136,
+          "base": 88,
+          "R": 232,
+          "loose_interval": [
+            286,
+            2456
+          ],
+          "base_interval": [
+            518,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3829,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 137,
+          "base": 88,
+          "R": -134,
+          "loose_interval": [
+            652,
+            2090
+          ],
+          "base_interval": [
+            518,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3829,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 138,
+          "base": 89,
+          "R": 1080,
+          "loose_interval": [
+            -650,
+            3344
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 139,
+          "base": 89,
+          "R": -822,
+          "loose_interval": [
+            1252,
+            1442
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 140,
+          "base": 89,
+          "R": -1496,
+          "loose_interval": [
+            768,
+            1926
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 141,
+          "base": 90,
+          "R": 684,
+          "loose_interval": [
+            -454,
+            3140
+          ],
+          "base_interval": [
+            230,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 142,
+          "base": 90,
+          "R": -366,
+          "loose_interval": [
+            596,
+            2090
+          ],
+          "base_interval": [
+            230,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 143,
+          "base": 91,
+          "R": 408,
+          "loose_interval": [
+            -206,
+            2864
+          ],
+          "base_interval": [
+            202,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3913,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 144,
+          "base": 92,
+          "R": 1762,
+          "loose_interval": [
+            -500,
+            3140
+          ],
+          "base_interval": [
+            1262,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3931,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 145,
+          "base": 92,
+          "R": 1078,
+          "loose_interval": [
+            184,
+            2456
+          ],
+          "base_interval": [
+            1262,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3931,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 146,
+          "base": 94,
+          "R": 1910,
+          "loose_interval": [
+            -916,
+            3530
+          ],
+          "base_interval": [
+            994,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3957,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 147,
+          "base": 95,
+          "R": -980,
+          "loose_interval": [
+            1150,
+            1442
+          ],
+          "base_interval": [
+            170,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3979,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 148,
+          "base": 97,
+          "R": -198,
+          "loose_interval": [
+            338,
+            2224
+          ],
+          "base_interval": [
+            140,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4009,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 149,
+          "base": 98,
+          "R": -1809,
+          "loose_interval": [
+            647,
+            1883
+          ],
+          "base_interval": [
+            74,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4041,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 150,
+          "base": 99,
+          "R": 192,
+          "loose_interval": [
+            38,
+            2456
+          ],
+          "base_interval": [
+            230,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4077,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 151,
+          "base": 101,
+          "R": 1278,
+          "loose_interval": [
+            -284,
+            2720
+          ],
+          "base_interval": [
+            994,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4135,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 152,
+          "base": 101,
+          "R": -64,
+          "loose_interval": [
+            1058,
+            1378
+          ],
+          "base_interval": [
+            994,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4135,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 153,
+          "base": 103,
+          "R": -760,
+          "loose_interval": [
+            768,
+            1652
+          ],
+          "base_interval": [
+            892,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4151,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 154,
+          "base": 106,
+          "R": -280,
+          "loose_interval": [
+            426,
+            1810
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 155,
+          "base": 106,
+          "R": -562,
+          "loose_interval": [
+            708,
+            1528
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 156,
+          "base": 106,
+          "R": -712,
+          "loose_interval": [
+            858,
+            1378
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 157,
+          "base": 107,
+          "R": 1028,
+          "loose_interval": [
+            -610,
+            2838
+          ],
+          "base_interval": [
+            418,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4343,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 158,
+          "base": 107,
+          "R": -432,
+          "loose_interval": [
+            850,
+            1378
+          ],
+          "base_interval": [
+            418,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4343,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 159,
+          "base": 108,
+          "R": 782,
+          "loose_interval": [
+            -14,
+            2224
+          ],
+          "base_interval": [
+            768,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4361,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 160,
+          "base": 108,
+          "R": -1296,
+          "loose_interval": [
+            146,
+            2064
+          ],
+          "base_interval": [
+            768,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4361,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 161,
+          "base": 109,
+          "R": -556,
+          "loose_interval": [
+            786,
+            1374
+          ],
+          "base_interval": [
+            230,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4411,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 162,
+          "base": 109,
+          "R": -1260,
+          "loose_interval": [
+            670,
+            1490
+          ],
+          "base_interval": [
+            230,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4411,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 163,
+          "base": 111,
+          "R": 1342,
+          "loose_interval": [
+            -672,
+            2720
+          ],
+          "base_interval": [
+            670,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4523,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 164,
+          "base": 111,
+          "R": 886,
+          "loose_interval": [
+            -216,
+            2264
+          ],
+          "base_interval": [
+            670,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4523,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 165,
+          "base": 112,
+          "R": 64,
+          "loose_interval": [
+            590,
+            1442
+          ],
+          "base_interval": [
+            654,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4539,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 166,
+          "base": 113,
+          "R": 280,
+          "loose_interval": [
+            -110,
+            2090
+          ],
+          "base_interval": [
+            170,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4591,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 167,
+          "base": 114,
+          "R": -1392,
+          "loose_interval": [
+            418,
+            1518
+          ],
+          "base_interval": [
+            126,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4635,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 168,
+          "base": 115,
+          "R": -92,
+          "loose_interval": [
+            400,
+            1528
+          ],
+          "base_interval": [
+            308,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4643,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 169,
+          "base": 115,
+          "R": -1494,
+          "loose_interval": [
+            126,
+            1802
+          ],
+          "base_interval": [
+            308,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4643,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 170,
+          "base": 116,
+          "R": -384,
+          "loose_interval": [
+            902,
+            994
+          ],
+          "base_interval": [
+            518,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4675,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 171,
+          "base": 117,
+          "R": -226,
+          "loose_interval": [
+            768,
+            1118
+          ],
+          "base_interval": [
+            892,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4685,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 172,
+          "base": 119,
+          "R": -531,
+          "loose_interval": [
+            592,
+            1262
+          ],
+          "base_interval": [
+            61,
+            1793
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4717,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 173,
+          "base": 119,
+          "R": -1139,
+          "loose_interval": [
+            654,
+            1200
+          ],
+          "base_interval": [
+            61,
+            1793
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4717,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 174,
+          "base": 120,
+          "R": 604,
+          "loose_interval": [
+            -402,
+            2224
+          ],
+          "base_interval": [
+            202,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4749,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 175,
+          "base": 121,
+          "R": 242,
+          "loose_interval": [
+            188,
+            1620
+          ],
+          "base_interval": [
+            430,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4763,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 176,
+          "base": 123,
+          "R": 266,
+          "loose_interval": [
+            252,
+            1528
+          ],
+          "base_interval": [
+            518,
+            1262
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4791,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 177,
+          "base": 124,
+          "R": -102,
+          "loose_interval": [
+            870,
+            892
+          ],
+          "base_interval": [
+            768,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4809,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 178,
+          "base": 124,
+          "R": -576,
+          "loose_interval": [
+            418,
+            1344
+          ],
+          "base_interval": [
+            768,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4809,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 179,
+          "base": 125,
+          "R": 894,
+          "loose_interval": [
+            -692,
+            2422
+          ],
+          "base_interval": [
+            202,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 180,
+          "base": 125,
+          "R": -86,
+          "loose_interval": [
+            288,
+            1442
+          ],
+          "base_interval": [
+            202,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 181,
+          "base": 129,
+          "R": -222,
+          "loose_interval": [
+            670,
+            990
+          ],
+          "base_interval": [
+            768,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4911,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 182,
+          "base": 129,
+          "R": -238,
+          "loose_interval": [
+            654,
+            1006
+          ],
+          "base_interval": [
+            768,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4911,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 183,
+          "base": 133,
+          "R": 178,
+          "loose_interval": [
+            -52,
+            1620
+          ],
+          "base_interval": [
+            126,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5003,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 184,
+          "base": 134,
+          "R": 4,
+          "loose_interval": [
+            142,
+            1378
+          ],
+          "base_interval": [
+            146,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5051,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 185,
+          "base": 134,
+          "R": -944,
+          "loose_interval": [
+            430,
+            1090
+          ],
+          "base_interval": [
+            146,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5051,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 186,
+          "base": 135,
+          "R": -686,
+          "loose_interval": [
+            308,
+            1204
+          ],
+          "base_interval": [
+            518,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5059,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 187,
+          "base": 136,
+          "R": -704,
+          "loose_interval": [
+            670,
+            830
+          ],
+          "base_interval": [
+            126,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5071,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 188,
+          "base": 137,
+          "R": 962,
+          "loose_interval": [
+            -760,
+            2224
+          ],
+          "base_interval": [
+            202,
+            1262
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5107,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 189,
+          "base": 138,
+          "R": 432,
+          "loose_interval": [
+            -358,
+            1810
+          ],
+          "base_interval": [
+            74,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5119,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 190,
+          "base": 140,
+          "R": -98,
+          "loose_interval": [
+            670,
+            752
+          ],
+          "base_interval": [
+            654,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5149,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 191,
+          "base": 150,
+          "R": -98,
+          "loose_interval": [
+            516,
+            670
+          ],
+          "base_interval": [
+            418,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5385,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 192,
+          "base": 152,
+          "R": 1706,
+          "loose_interval": [
+            -1188,
+            2224
+          ],
+          "base_interval": [
+            518,
+            518
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5535,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 193,
+          "base": 152,
+          "R": 924,
+          "loose_interval": [
+            -406,
+            1442
+          ],
+          "base_interval": [
+            518,
+            518
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5535,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 194,
+          "base": 153,
+          "R": 370,
+          "loose_interval": [
+            -230,
+            1262
+          ],
+          "base_interval": [
+            140,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5539,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 195,
+          "base": 154,
+          "R": 494,
+          "loose_interval": [
+            -264,
+            1262
+          ],
+          "base_interval": [
+            230,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5573,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 196,
+          "base": 157,
+          "R": 1140,
+          "loose_interval": [
+            -910,
+            1810
+          ],
+          "base_interval": [
+            230,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5671,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 197,
+          "base": 157,
+          "R": -252,
+          "loose_interval": [
+            418,
+            482
+          ],
+          "base_interval": [
+            230,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5671,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 198,
+          "base": 158,
+          "R": -7,
+          "loose_interval": [
+            237,
+            647
+          ],
+          "base_interval": [
+            230,
+            654
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5687,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 199,
+          "base": 159,
+          "R": 950,
+          "loose_interval": [
+            -748,
+            1620
+          ],
+          "base_interval": [
+            202,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5699,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 200,
+          "base": 159,
+          "R": 858,
+          "loose_interval": [
+            -656,
+            1528
+          ],
+          "base_interval": [
+            202,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5699,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 201,
+          "base": 160,
+          "R": 944,
+          "loose_interval": [
+            -514,
+            1374
+          ],
+          "base_interval": [
+            430,
+            430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5711,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 202,
+          "base": 161,
+          "R": 224,
+          "loose_interval": [
+            194,
+            654
+          ],
+          "base_interval": [
+            418,
+            430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5723,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 203,
+          "base": 163,
+          "R": -110,
+          "loose_interval": [
+            308,
+            528
+          ],
+          "base_interval": [
+            418,
+            418
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5735,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 204,
+          "base": 166,
+          "R": 347,
+          "loose_interval": [
+            -201,
+            994
+          ],
+          "base_interval": [
+            146,
+            647
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5778,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 205,
+          "base": 167,
+          "R": 1570,
+          "loose_interval": [
+            -1444,
+            2224
+          ],
+          "base_interval": [
+            126,
+            654
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5791,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 206,
+          "base": 169,
+          "R": 858,
+          "loose_interval": [
+            -784,
+            1528
+          ],
+          "base_interval": [
+            74,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5827,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 207,
+          "base": 169,
+          "R": 98,
+          "loose_interval": [
+            -24,
+            768
+          ],
+          "base_interval": [
+            74,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5827,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 208,
+          "base": 177,
+          "R": 1134,
+          "loose_interval": [
+            -826,
+            1442
+          ],
+          "base_interval": [
+            308,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5955,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 209,
+          "base": 178,
+          "R": 252,
+          "loose_interval": [
+            -82,
+            670
+          ],
+          "base_interval": [
+            170,
+            418
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5983,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 210,
+          "base": 181,
+          "R": 460,
+          "loose_interval": [
+            -230,
+            768
+          ],
+          "base_interval": [
+            230,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6033,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 211,
+          "base": 185,
+          "R": 1070,
+          "loose_interval": [
+            -996,
+            1378
+          ],
+          "base_interval": [
+            74,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6189,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 212,
+          "base": 185,
+          "R": 686,
+          "loose_interval": [
+            -612,
+            994
+          ],
+          "base_interval": [
+            74,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6189,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 213,
+          "base": 187,
+          "R": 1208,
+          "loose_interval": [
+            -1038,
+            1378
+          ],
+          "base_interval": [
+            170,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6231,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 214,
+          "base": 187,
+          "R": 138,
+          "loose_interval": [
+            32,
+            308
+          ],
+          "base_interval": [
+            170,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6231,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 215,
+          "base": 188,
+          "R": 500,
+          "loose_interval": [
+            -354,
+            670
+          ],
+          "base_interval": [
+            146,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6255,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 216,
+          "base": 189,
+          "R": 598,
+          "loose_interval": [
+            -458,
+            768
+          ],
+          "base_interval": [
+            140,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6261,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 217,
+          "base": 190,
+          "R": 628,
+          "loose_interval": [
+            -488,
+            768
+          ],
+          "base_interval": [
+            140,
+            140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6291,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 218,
+          "base": 193,
+          "R": 1402,
+          "loose_interval": [
+            -1276,
+            1528
+          ],
+          "base_interval": [
+            126,
+            126
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6319,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 219,
+          "base": 193,
+          "R": 544,
+          "loose_interval": [
+            -418,
+            670
+          ],
+          "base_interval": [
+            126,
+            126
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6319,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 220,
+          "base": 197,
+          "R": 707,
+          "loose_interval": [
+            -646,
+            768
+          ],
+          "base_interval": [
+            61,
+            61
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6449,
+          "base_phase_collided": false
+        }
+      ]
+    },
+    {
+      "J": [
+        -1276,
+        4894
+      ],
+      "deficit": 1,
+      "contained_intervals": 413,
+      "contained_canonical": 193,
+      "contained_loose": 220,
+      "slots_in_J": 412,
+      "slot_kind_counts": {
+        "L": 199,
+        "U": 193,
+        "V": 20
+      },
+      "crossing_fold_intervals": 6,
+      "strictly_containing_fold_intervals": 0,
+      "base_transfer_counts": {
+        "base_crosses": 2,
+        "base_inside": 218
+      },
+      "distinct_support_folds": 180,
+      "maximum_support_multiplicity": 11,
+      "base_relations": [
+        {
+          "triangle": 0,
+          "base": 5,
+          "R": 1016,
+          "loose_interval": [
+            777,
+            4688
+          ],
+          "base_interval": [
+            1793,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1106,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 1,
+          "base": 6,
+          "R": 220,
+          "loose_interval": [
+            774,
+            4688
+          ],
+          "base_interval": [
+            994,
+            4468
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1109,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 2,
+          "base": 6,
+          "R": -1328,
+          "loose_interval": [
+            2322,
+            3140
+          ],
+          "base_interval": [
+            994,
+            4468
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1109,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 3,
+          "base": 7,
+          "R": -1536,
+          "loose_interval": [
+            1676,
+            3672
+          ],
+          "base_interval": [
+            140,
+            5208
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1223,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 4,
+          "base": 7,
+          "R": -1872,
+          "loose_interval": [
+            2012,
+            3336
+          ],
+          "base_interval": [
+            140,
+            5208
+          ],
+          "relation": "base_crosses",
+          "base_phase_label": 1223,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 5,
+          "base": 10,
+          "R": 840,
+          "loose_interval": [
+            538,
+            4730
+          ],
+          "base_interval": [
+            1378,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1303,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 6,
+          "base": 10,
+          "R": -1170,
+          "loose_interval": [
+            2548,
+            2720
+          ],
+          "base_interval": [
+            1378,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1303,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 7,
+          "base": 11,
+          "R": 336,
+          "loose_interval": [
+            1594,
+            3672
+          ],
+          "base_interval": [
+            1930,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1305,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 8,
+          "base": 11,
+          "R": 18,
+          "loose_interval": [
+            1912,
+            3354
+          ],
+          "base_interval": [
+            1930,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1305,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 9,
+          "base": 12,
+          "R": -2464,
+          "loose_interval": [
+            2224,
+            2982
+          ],
+          "base_interval": [
+            518,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1365,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 10,
+          "base": 15,
+          "R": -1364,
+          "loose_interval": [
+            1364,
+            3530
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 11,
+          "base": 15,
+          "R": -2174,
+          "loose_interval": [
+            2174,
+            2720
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 12,
+          "base": 15,
+          "R": -2804,
+          "loose_interval": [
+            2090,
+            2804
+          ],
+          "base_interval": [
+            0,
+            4894
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 13,
+          "base": 16,
+          "R": -1016,
+          "loose_interval": [
+            1218,
+            3672
+          ],
+          "base_interval": [
+            202,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1681,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 14,
+          "base": 16,
+          "R": -1334,
+          "loose_interval": [
+            1536,
+            3354
+          ],
+          "base_interval": [
+            202,
+            4688
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1681,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 15,
+          "base": 17,
+          "R": -840,
+          "loose_interval": [
+            966,
+            3890
+          ],
+          "base_interval": [
+            126,
+            4730
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1715,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 16,
+          "base": 17,
+          "R": -1590,
+          "loose_interval": [
+            1716,
+            3140
+          ],
+          "base_interval": [
+            126,
+            4730
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1715,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 17,
+          "base": 18,
+          "R": 1170,
+          "loose_interval": [
+            920,
+            3890
+          ],
+          "base_interval": [
+            2090,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 18,
+          "base": 18,
+          "R": 420,
+          "loose_interval": [
+            1670,
+            3140
+          ],
+          "base_interval": [
+            2090,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 19,
+          "base": 19,
+          "R": 1548,
+          "loose_interval": [
+            72,
+            4688
+          ],
+          "base_interval": [
+            1620,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1811,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 20,
+          "base": 20,
+          "R": -214,
+          "loose_interval": [
+            1588,
+            3140
+          ],
+          "base_interval": [
+            1374,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1843,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 21,
+          "base": 20,
+          "R": -1130,
+          "loose_interval": [
+            2224,
+            2504
+          ],
+          "base_interval": [
+            1374,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1843,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 22,
+          "base": 21,
+          "R": 298,
+          "loose_interval": [
+            1966,
+            2720
+          ],
+          "base_interval": [
+            2264,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 23,
+          "base": 21,
+          "R": -332,
+          "loose_interval": [
+            2090,
+            2596
+          ],
+          "base_interval": [
+            2264,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 24,
+          "base": 22,
+          "R": 810,
+          "loose_interval": [
+            1120,
+            3530
+          ],
+          "base_interval": [
+            1930,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1921,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 25,
+          "base": 22,
+          "R": 144,
+          "loose_interval": [
+            1786,
+            2864
+          ],
+          "base_interval": [
+            1930,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1921,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 26,
+          "base": 23,
+          "R": 834,
+          "loose_interval": [
+            976,
+            3672
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 27,
+          "base": 23,
+          "R": 692,
+          "loose_interval": [
+            1118,
+            3530
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 28,
+          "base": 23,
+          "R": -614,
+          "loose_interval": [
+            2224,
+            2424
+          ],
+          "base_interval": [
+            1810,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 1923,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 29,
+          "base": 26,
+          "R": -664,
+          "loose_interval": [
+            894,
+            3672
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 30,
+          "base": 26,
+          "R": -992,
+          "loose_interval": [
+            1222,
+            3344
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 31,
+          "base": 26,
+          "R": -1498,
+          "loose_interval": [
+            1728,
+            2838
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 32,
+          "base": 26,
+          "R": -2112,
+          "loose_interval": [
+            2224,
+            2342
+          ],
+          "base_interval": [
+            230,
+            4336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2005,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 33,
+          "base": 27,
+          "R": -420,
+          "loose_interval": [
+            1794,
+            2720
+          ],
+          "base_interval": [
+            1374,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2057,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 34,
+          "base": 28,
+          "R": 258,
+          "loose_interval": [
+            -184,
+            4688
+          ],
+          "base_interval": [
+            74,
+            4430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2067,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 35,
+          "base": 28,
+          "R": -1974,
+          "loose_interval": [
+            2048,
+            2456
+          ],
+          "base_interval": [
+            74,
+            4430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2067,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 36,
+          "base": 29,
+          "R": 808,
+          "loose_interval": [
+            812,
+            3672
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 37,
+          "base": 29,
+          "R": -26,
+          "loose_interval": [
+            1646,
+            2838
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 38,
+          "base": 29,
+          "R": -640,
+          "loose_interval": [
+            2224,
+            2260
+          ],
+          "base_interval": [
+            1620,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2087,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 39,
+          "base": 30,
+          "R": 532,
+          "loose_interval": [
+            730,
+            3672
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 40,
+          "base": 30,
+          "R": 214,
+          "loose_interval": [
+            1048,
+            3354
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 41,
+          "base": 30,
+          "R": -302,
+          "loose_interval": [
+            1564,
+            2838
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 42,
+          "base": 30,
+          "R": -916,
+          "loose_interval": [
+            2178,
+            2224
+          ],
+          "base_interval": [
+            1262,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2169,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 43,
+          "base": 33,
+          "R": 2030,
+          "loose_interval": [
+            -656,
+            4894
+          ],
+          "base_interval": [
+            1374,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2333,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 44,
+          "base": 33,
+          "R": -774,
+          "loose_interval": [
+            2090,
+            2148
+          ],
+          "base_interval": [
+            1374,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2333,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 45,
+          "base": 34,
+          "R": -506,
+          "loose_interval": [
+            1398,
+            2838
+          ],
+          "base_interval": [
+            892,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 46,
+          "base": 36,
+          "R": 142,
+          "loose_interval": [
+            512,
+            3672
+          ],
+          "base_interval": [
+            654,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2387,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 47,
+          "base": 36,
+          "R": -666,
+          "loose_interval": [
+            1320,
+            2864
+          ],
+          "base_interval": [
+            654,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2387,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 48,
+          "base": 37,
+          "R": -318,
+          "loose_interval": [
+            748,
+            3354
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 49,
+          "base": 37,
+          "R": -1862,
+          "loose_interval": [
+            1810,
+            2292
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 50,
+          "base": 37,
+          "R": -2294,
+          "loose_interval": [
+            1378,
+            2724
+          ],
+          "base_interval": [
+            430,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2469,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 51,
+          "base": 39,
+          "R": -336,
+          "loose_interval": [
+            754,
+            3336
+          ],
+          "base_interval": [
+            418,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2481,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 52,
+          "base": 39,
+          "R": -808,
+          "loose_interval": [
+            1226,
+            2864
+          ],
+          "base_interval": [
+            418,
+            3672
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2481,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 53,
+          "base": 40,
+          "R": -572,
+          "loose_interval": [
+            718,
+            3354
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 54,
+          "base": 40,
+          "R": -786,
+          "loose_interval": [
+            932,
+            3140
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 55,
+          "base": 40,
+          "R": -1062,
+          "loose_interval": [
+            1208,
+            2864
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 56,
+          "base": 40,
+          "R": -1088,
+          "loose_interval": [
+            1234,
+            2838
+          ],
+          "base_interval": [
+            146,
+            3926
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2499,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 57,
+          "base": 41,
+          "R": -1026,
+          "loose_interval": [
+            1166,
+            2864
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 58,
+          "base": 41,
+          "R": -1434,
+          "loose_interval": [
+            1574,
+            2456
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 59,
+          "base": 41,
+          "R": -1800,
+          "loose_interval": [
+            1940,
+            2090
+          ],
+          "base_interval": [
+            140,
+            3890
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2541,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 60,
+          "base": 42,
+          "R": 318,
+          "loose_interval": [
+            336,
+            3672
+          ],
+          "base_interval": [
+            654,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 61,
+          "base": 42,
+          "R": -18,
+          "loose_interval": [
+            672,
+            3336
+          ],
+          "base_interval": [
+            654,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 62,
+          "base": 43,
+          "R": 1434,
+          "loose_interval": [
+            94,
+            3890
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 63,
+          "base": 43,
+          "R": 408,
+          "loose_interval": [
+            1120,
+            2864
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 64,
+          "base": 43,
+          "R": 264,
+          "loose_interval": [
+            1264,
+            2720
+          ],
+          "base_interval": [
+            1528,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2587,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 65,
+          "base": 45,
+          "R": -1022,
+          "loose_interval": [
+            1168,
+            2720
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 66,
+          "base": 45,
+          "R": -2214,
+          "loose_interval": [
+            1528,
+            2360
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 67,
+          "base": 45,
+          "R": -2364,
+          "loose_interval": [
+            1378,
+            2510
+          ],
+          "base_interval": [
+            146,
+            3742
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2683,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 68,
+          "base": 48,
+          "R": 204,
+          "loose_interval": [
+            466,
+            3344
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 69,
+          "base": 48,
+          "R": -684,
+          "loose_interval": [
+            1354,
+            2456
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 70,
+          "base": 48,
+          "R": -1050,
+          "loose_interval": [
+            1720,
+            2090
+          ],
+          "base_interval": [
+            670,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2761,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 71,
+          "base": 49,
+          "R": -490,
+          "loose_interval": [
+            908,
+            2864
+          ],
+          "base_interval": [
+            418,
+            3354
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2799,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 72,
+          "base": 50,
+          "R": 1130,
+          "loose_interval": [
+            398,
+            3354
+          ],
+          "base_interval": [
+            1528,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 73,
+          "base": 50,
+          "R": 614,
+          "loose_interval": [
+            914,
+            2838
+          ],
+          "base_interval": [
+            1528,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 74,
+          "base": 51,
+          "R": 294,
+          "loose_interval": [
+            1516,
+            2224
+          ],
+          "base_interval": [
+            1810,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2831,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 75,
+          "base": 51,
+          "R": 160,
+          "loose_interval": [
+            1650,
+            2090
+          ],
+          "base_interval": [
+            1810,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2831,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 76,
+          "base": 52,
+          "R": 302,
+          "loose_interval": [
+            590,
+            3140
+          ],
+          "base_interval": [
+            892,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 77,
+          "base": 52,
+          "R": -614,
+          "loose_interval": [
+            1506,
+            2224
+          ],
+          "base_interval": [
+            892,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 78,
+          "base": 53,
+          "R": -843,
+          "loose_interval": [
+            1273,
+            2456
+          ],
+          "base_interval": [
+            430,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2842,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 79,
+          "base": 54,
+          "R": 366,
+          "loose_interval": [
+            1254,
+            2456
+          ],
+          "base_interval": [
+            1620,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2861,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 80,
+          "base": 56,
+          "R": -1910,
+          "loose_interval": [
+            1620,
+            2050
+          ],
+          "base_interval": [
+            140,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2901,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 81,
+          "base": 56,
+          "R": -2762,
+          "loose_interval": [
+            768,
+            2902
+          ],
+          "base_interval": [
+            140,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2901,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 82,
+          "base": 57,
+          "R": -498,
+          "loose_interval": [
+            806,
+            2838
+          ],
+          "base_interval": [
+            308,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2927,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 83,
+          "base": 57,
+          "R": -616,
+          "loose_interval": [
+            924,
+            2720
+          ],
+          "base_interval": [
+            308,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2927,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 84,
+          "base": 58,
+          "R": 808,
+          "loose_interval": [
+            -40,
+            3672
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 85,
+          "base": 58,
+          "R": 490,
+          "loose_interval": [
+            278,
+            3354
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 86,
+          "base": 58,
+          "R": -408,
+          "loose_interval": [
+            1176,
+            2456
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 87,
+          "base": 58,
+          "R": -934,
+          "loose_interval": [
+            1702,
+            1930
+          ],
+          "base_interval": [
+            768,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2939,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 88,
+          "base": 59,
+          "R": 614,
+          "loose_interval": [
+            760,
+            2838
+          ],
+          "base_interval": [
+            1374,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2973,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 89,
+          "base": 59,
+          "R": -1332,
+          "loose_interval": [
+            892,
+            2706
+          ],
+          "base_interval": [
+            1374,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 2973,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 90,
+          "base": 60,
+          "R": 1440,
+          "loose_interval": [
+            2,
+            3530
+          ],
+          "base_interval": [
+            1442,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3039,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 91,
+          "base": 60,
+          "R": 774,
+          "loose_interval": [
+            668,
+            2864
+          ],
+          "base_interval": [
+            1442,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3039,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 92,
+          "base": 61,
+          "R": -1306,
+          "loose_interval": [
+            1306,
+            2224
+          ],
+          "base_interval": [
+            0,
+            3530
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3041,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 93,
+          "base": 62,
+          "R": -888,
+          "loose_interval": [
+            1034,
+            2456
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 94,
+          "base": 62,
+          "R": -1120,
+          "loose_interval": [
+            1266,
+            2224
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 95,
+          "base": 62,
+          "R": -1254,
+          "loose_interval": [
+            1400,
+            2090
+          ],
+          "base_interval": [
+            146,
+            3344
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3081,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 96,
+          "base": 63,
+          "R": 1246,
+          "loose_interval": [
+            132,
+            3336
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 97,
+          "base": 63,
+          "R": 1050,
+          "loose_interval": [
+            328,
+            3140
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 98,
+          "base": 63,
+          "R": 366,
+          "loose_interval": [
+            1012,
+            2456
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 99,
+          "base": 63,
+          "R": 134,
+          "loose_interval": [
+            1244,
+            2224
+          ],
+          "base_interval": [
+            1378,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3103,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 100,
+          "base": 65,
+          "R": -1406,
+          "loose_interval": [
+            1480,
+            1930
+          ],
+          "base_interval": [
+            74,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3161,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 101,
+          "base": 65,
+          "R": -1808,
+          "loose_interval": [
+            1528,
+            1882
+          ],
+          "base_interval": [
+            74,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3161,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 102,
+          "base": 66,
+          "R": 1742,
+          "loose_interval": [
+            -300,
+            3672
+          ],
+          "base_interval": [
+            1442,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3199,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 103,
+          "base": 66,
+          "R": 1600,
+          "loose_interval": [
+            -158,
+            3530
+          ],
+          "base_interval": [
+            1442,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3199,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 104,
+          "base": 67,
+          "R": -1209,
+          "loose_interval": [
+            1270,
+            2090
+          ],
+          "base_interval": [
+            61,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3211,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 105,
+          "base": 67,
+          "R": -1771,
+          "loose_interval": [
+            1528,
+            1832
+          ],
+          "base_interval": [
+            61,
+            3299
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3211,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 106,
+          "base": 68,
+          "R": -562,
+          "loose_interval": [
+            1528,
+            1824
+          ],
+          "base_interval": [
+            1262,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3219,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 107,
+          "base": 70,
+          "R": -1050,
+          "loose_interval": [
+            1252,
+            2090
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 108,
+          "base": 70,
+          "R": -1612,
+          "loose_interval": [
+            1528,
+            1814
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 109,
+          "base": 70,
+          "R": -1762,
+          "loose_interval": [
+            1378,
+            1964
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 110,
+          "base": 70,
+          "R": -3014,
+          "loose_interval": [
+            126,
+            3216
+          ],
+          "base_interval": [
+            202,
+            3140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3229,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 111,
+          "base": 71,
+          "R": -880,
+          "loose_interval": [
+            880,
+            2456
+          ],
+          "base_interval": [
+            0,
+            3336
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3235,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 112,
+          "base": 74,
+          "R": -496,
+          "loose_interval": [
+            914,
+            2224
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 113,
+          "base": 74,
+          "R": -1342,
+          "loose_interval": [
+            1378,
+            1760
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 114,
+          "base": 74,
+          "R": -1952,
+          "loose_interval": [
+            768,
+            2370
+          ],
+          "base_interval": [
+            418,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3433,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 115,
+          "base": 75,
+          "R": 366,
+          "loose_interval": [
+            628,
+            2456
+          ],
+          "base_interval": [
+            994,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3487,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 116,
+          "base": 76,
+          "R": 666,
+          "loose_interval": [
+            -464,
+            3530
+          ],
+          "base_interval": [
+            202,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3505,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 117,
+          "base": 76,
+          "R": -1054,
+          "loose_interval": [
+            1256,
+            1810
+          ],
+          "base_interval": [
+            202,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3505,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 118,
+          "base": 77,
+          "R": -408,
+          "loose_interval": [
+            554,
+            2456
+          ],
+          "base_interval": [
+            146,
+            2864
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3561,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 119,
+          "base": 78,
+          "R": -1028,
+          "loose_interval": [
+            1198,
+            1810
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 120,
+          "base": 78,
+          "R": -1460,
+          "loose_interval": [
+            1378,
+            1630
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 121,
+          "base": 78,
+          "R": -1946,
+          "loose_interval": [
+            892,
+            2116
+          ],
+          "base_interval": [
+            170,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3563,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 122,
+          "base": 79,
+          "R": -574,
+          "loose_interval": [
+            648,
+            2264
+          ],
+          "base_interval": [
+            74,
+            2838
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3659,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 123,
+          "base": 80,
+          "R": 496,
+          "loose_interval": [
+            174,
+            2720
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 124,
+          "base": 80,
+          "R": -782,
+          "loose_interval": [
+            1442,
+            1452
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 125,
+          "base": 80,
+          "R": -1706,
+          "loose_interval": [
+            518,
+            2376
+          ],
+          "base_interval": [
+            670,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3677,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 126,
+          "base": 81,
+          "R": 616,
+          "loose_interval": [
+            -446,
+            3336
+          ],
+          "base_interval": [
+            170,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3681,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 127,
+          "base": 81,
+          "R": 118,
+          "loose_interval": [
+            52,
+            2838
+          ],
+          "base_interval": [
+            170,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3681,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 128,
+          "base": 82,
+          "R": -264,
+          "loose_interval": [
+            390,
+            2456
+          ],
+          "base_interval": [
+            126,
+            2720
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3725,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 129,
+          "base": 84,
+          "R": 928,
+          "loose_interval": [
+            334,
+            2456
+          ],
+          "base_interval": [
+            1262,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3781,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 130,
+          "base": 85,
+          "R": 574,
+          "loose_interval": [
+            -56,
+            2838
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 131,
+          "base": 85,
+          "R": -736,
+          "loose_interval": [
+            1254,
+            1528
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 132,
+          "base": 85,
+          "R": -886,
+          "loose_interval": [
+            1378,
+            1404
+          ],
+          "base_interval": [
+            518,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3789,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 133,
+          "base": 86,
+          "R": -232,
+          "loose_interval": [
+            540,
+            2224
+          ],
+          "base_interval": [
+            308,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3807,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 134,
+          "base": 86,
+          "R": -366,
+          "loose_interval": [
+            674,
+            2090
+          ],
+          "base_interval": [
+            308,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3807,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 135,
+          "base": 87,
+          "R": 1486,
+          "loose_interval": [
+            -112,
+            2864
+          ],
+          "base_interval": [
+            1374,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3819,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 136,
+          "base": 88,
+          "R": 232,
+          "loose_interval": [
+            286,
+            2456
+          ],
+          "base_interval": [
+            518,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3829,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 137,
+          "base": 88,
+          "R": -134,
+          "loose_interval": [
+            652,
+            2090
+          ],
+          "base_interval": [
+            518,
+            2224
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3829,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 138,
+          "base": 89,
+          "R": 1080,
+          "loose_interval": [
+            -650,
+            3344
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 139,
+          "base": 89,
+          "R": -822,
+          "loose_interval": [
+            1252,
+            1442
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 140,
+          "base": 89,
+          "R": -1496,
+          "loose_interval": [
+            768,
+            1926
+          ],
+          "base_interval": [
+            430,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3877,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 141,
+          "base": 90,
+          "R": 684,
+          "loose_interval": [
+            -454,
+            3140
+          ],
+          "base_interval": [
+            230,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 142,
+          "base": 90,
+          "R": -366,
+          "loose_interval": [
+            596,
+            2090
+          ],
+          "base_interval": [
+            230,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3885,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 143,
+          "base": 91,
+          "R": 408,
+          "loose_interval": [
+            -206,
+            2864
+          ],
+          "base_interval": [
+            202,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3913,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 144,
+          "base": 92,
+          "R": 1762,
+          "loose_interval": [
+            -500,
+            3140
+          ],
+          "base_interval": [
+            1262,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3931,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 145,
+          "base": 92,
+          "R": 1078,
+          "loose_interval": [
+            184,
+            2456
+          ],
+          "base_interval": [
+            1262,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3931,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 146,
+          "base": 94,
+          "R": 1910,
+          "loose_interval": [
+            -916,
+            3530
+          ],
+          "base_interval": [
+            994,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3957,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 147,
+          "base": 95,
+          "R": -980,
+          "loose_interval": [
+            1150,
+            1442
+          ],
+          "base_interval": [
+            170,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 3979,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 148,
+          "base": 97,
+          "R": -198,
+          "loose_interval": [
+            338,
+            2224
+          ],
+          "base_interval": [
+            140,
+            2422
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4009,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 149,
+          "base": 98,
+          "R": -1809,
+          "loose_interval": [
+            647,
+            1883
+          ],
+          "base_interval": [
+            74,
+            2456
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4041,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 150,
+          "base": 99,
+          "R": 192,
+          "loose_interval": [
+            38,
+            2456
+          ],
+          "base_interval": [
+            230,
+            2264
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4077,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 151,
+          "base": 101,
+          "R": 1278,
+          "loose_interval": [
+            -284,
+            2720
+          ],
+          "base_interval": [
+            994,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4135,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 152,
+          "base": 101,
+          "R": -64,
+          "loose_interval": [
+            1058,
+            1378
+          ],
+          "base_interval": [
+            994,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4135,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 153,
+          "base": 103,
+          "R": -760,
+          "loose_interval": [
+            768,
+            1652
+          ],
+          "base_interval": [
+            892,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4151,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 154,
+          "base": 106,
+          "R": -280,
+          "loose_interval": [
+            426,
+            1810
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 155,
+          "base": 106,
+          "R": -562,
+          "loose_interval": [
+            708,
+            1528
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 156,
+          "base": 106,
+          "R": -712,
+          "loose_interval": [
+            858,
+            1378
+          ],
+          "base_interval": [
+            146,
+            2090
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4335,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 157,
+          "base": 107,
+          "R": 1028,
+          "loose_interval": [
+            -610,
+            2838
+          ],
+          "base_interval": [
+            418,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4343,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 158,
+          "base": 107,
+          "R": -432,
+          "loose_interval": [
+            850,
+            1378
+          ],
+          "base_interval": [
+            418,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4343,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 159,
+          "base": 108,
+          "R": 782,
+          "loose_interval": [
+            -14,
+            2224
+          ],
+          "base_interval": [
+            768,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4361,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 160,
+          "base": 108,
+          "R": -1296,
+          "loose_interval": [
+            146,
+            2064
+          ],
+          "base_interval": [
+            768,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4361,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 161,
+          "base": 109,
+          "R": -556,
+          "loose_interval": [
+            786,
+            1374
+          ],
+          "base_interval": [
+            230,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4411,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 162,
+          "base": 109,
+          "R": -1260,
+          "loose_interval": [
+            670,
+            1490
+          ],
+          "base_interval": [
+            230,
+            1930
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4411,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 163,
+          "base": 111,
+          "R": 1342,
+          "loose_interval": [
+            -672,
+            2720
+          ],
+          "base_interval": [
+            670,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4523,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 164,
+          "base": 111,
+          "R": 886,
+          "loose_interval": [
+            -216,
+            2264
+          ],
+          "base_interval": [
+            670,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4523,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 165,
+          "base": 112,
+          "R": 64,
+          "loose_interval": [
+            590,
+            1442
+          ],
+          "base_interval": [
+            654,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4539,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 166,
+          "base": 113,
+          "R": 280,
+          "loose_interval": [
+            -110,
+            2090
+          ],
+          "base_interval": [
+            170,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4591,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 167,
+          "base": 114,
+          "R": -1392,
+          "loose_interval": [
+            418,
+            1518
+          ],
+          "base_interval": [
+            126,
+            1810
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4635,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 168,
+          "base": 115,
+          "R": -92,
+          "loose_interval": [
+            400,
+            1528
+          ],
+          "base_interval": [
+            308,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4643,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 169,
+          "base": 115,
+          "R": -1494,
+          "loose_interval": [
+            126,
+            1802
+          ],
+          "base_interval": [
+            308,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4643,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 170,
+          "base": 116,
+          "R": -384,
+          "loose_interval": [
+            902,
+            994
+          ],
+          "base_interval": [
+            518,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4675,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 171,
+          "base": 117,
+          "R": -226,
+          "loose_interval": [
+            768,
+            1118
+          ],
+          "base_interval": [
+            892,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4685,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 172,
+          "base": 119,
+          "R": -531,
+          "loose_interval": [
+            592,
+            1262
+          ],
+          "base_interval": [
+            61,
+            1793
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4717,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 173,
+          "base": 119,
+          "R": -1139,
+          "loose_interval": [
+            654,
+            1200
+          ],
+          "base_interval": [
+            61,
+            1793
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4717,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 174,
+          "base": 120,
+          "R": 604,
+          "loose_interval": [
+            -402,
+            2224
+          ],
+          "base_interval": [
+            202,
+            1620
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4749,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 175,
+          "base": 121,
+          "R": 242,
+          "loose_interval": [
+            188,
+            1620
+          ],
+          "base_interval": [
+            430,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4763,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 176,
+          "base": 123,
+          "R": 266,
+          "loose_interval": [
+            252,
+            1528
+          ],
+          "base_interval": [
+            518,
+            1262
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4791,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 177,
+          "base": 124,
+          "R": -102,
+          "loose_interval": [
+            870,
+            892
+          ],
+          "base_interval": [
+            768,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4809,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 178,
+          "base": 124,
+          "R": -576,
+          "loose_interval": [
+            418,
+            1344
+          ],
+          "base_interval": [
+            768,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4809,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 179,
+          "base": 125,
+          "R": 894,
+          "loose_interval": [
+            -692,
+            2422
+          ],
+          "base_interval": [
+            202,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 180,
+          "base": 125,
+          "R": -86,
+          "loose_interval": [
+            288,
+            1442
+          ],
+          "base_interval": [
+            202,
+            1528
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4841,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 181,
+          "base": 129,
+          "R": -222,
+          "loose_interval": [
+            670,
+            990
+          ],
+          "base_interval": [
+            768,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4911,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 182,
+          "base": 129,
+          "R": -238,
+          "loose_interval": [
+            654,
+            1006
+          ],
+          "base_interval": [
+            768,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 4911,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 183,
+          "base": 133,
+          "R": 178,
+          "loose_interval": [
+            -52,
+            1620
+          ],
+          "base_interval": [
+            126,
+            1442
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5003,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 184,
+          "base": 134,
+          "R": 4,
+          "loose_interval": [
+            142,
+            1378
+          ],
+          "base_interval": [
+            146,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5051,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 185,
+          "base": 134,
+          "R": -944,
+          "loose_interval": [
+            430,
+            1090
+          ],
+          "base_interval": [
+            146,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5051,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 186,
+          "base": 135,
+          "R": -686,
+          "loose_interval": [
+            308,
+            1204
+          ],
+          "base_interval": [
+            518,
+            994
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5059,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 187,
+          "base": 136,
+          "R": -704,
+          "loose_interval": [
+            670,
+            830
+          ],
+          "base_interval": [
+            126,
+            1374
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5071,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 188,
+          "base": 137,
+          "R": 962,
+          "loose_interval": [
+            -760,
+            2224
+          ],
+          "base_interval": [
+            202,
+            1262
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5107,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 189,
+          "base": 138,
+          "R": 432,
+          "loose_interval": [
+            -358,
+            1810
+          ],
+          "base_interval": [
+            74,
+            1378
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5119,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 190,
+          "base": 140,
+          "R": -98,
+          "loose_interval": [
+            670,
+            752
+          ],
+          "base_interval": [
+            654,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5149,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 191,
+          "base": 150,
+          "R": -98,
+          "loose_interval": [
+            516,
+            670
+          ],
+          "base_interval": [
+            418,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5385,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 192,
+          "base": 152,
+          "R": 1706,
+          "loose_interval": [
+            -1188,
+            2224
+          ],
+          "base_interval": [
+            518,
+            518
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5535,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 193,
+          "base": 152,
+          "R": 924,
+          "loose_interval": [
+            -406,
+            1442
+          ],
+          "base_interval": [
+            518,
+            518
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5535,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 194,
+          "base": 153,
+          "R": 370,
+          "loose_interval": [
+            -230,
+            1262
+          ],
+          "base_interval": [
+            140,
+            892
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5539,
+          "base_phase_collided": true
+        },
+        {
+          "triangle": 195,
+          "base": 154,
+          "R": 494,
+          "loose_interval": [
+            -264,
+            1262
+          ],
+          "base_interval": [
+            230,
+            768
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5573,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 196,
+          "base": 157,
+          "R": 1140,
+          "loose_interval": [
+            -910,
+            1810
+          ],
+          "base_interval": [
+            230,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5671,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 197,
+          "base": 157,
+          "R": -252,
+          "loose_interval": [
+            418,
+            482
+          ],
+          "base_interval": [
+            230,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5671,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 198,
+          "base": 158,
+          "R": -7,
+          "loose_interval": [
+            237,
+            647
+          ],
+          "base_interval": [
+            230,
+            654
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5687,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 199,
+          "base": 159,
+          "R": 950,
+          "loose_interval": [
+            -748,
+            1620
+          ],
+          "base_interval": [
+            202,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5699,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 200,
+          "base": 159,
+          "R": 858,
+          "loose_interval": [
+            -656,
+            1528
+          ],
+          "base_interval": [
+            202,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5699,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 201,
+          "base": 160,
+          "R": 944,
+          "loose_interval": [
+            -514,
+            1374
+          ],
+          "base_interval": [
+            430,
+            430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5711,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 202,
+          "base": 161,
+          "R": 224,
+          "loose_interval": [
+            194,
+            654
+          ],
+          "base_interval": [
+            418,
+            430
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5723,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 203,
+          "base": 163,
+          "R": -110,
+          "loose_interval": [
+            308,
+            528
+          ],
+          "base_interval": [
+            418,
+            418
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5735,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 204,
+          "base": 166,
+          "R": 347,
+          "loose_interval": [
+            -201,
+            994
+          ],
+          "base_interval": [
+            146,
+            647
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5778,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 206,
+          "base": 169,
+          "R": 858,
+          "loose_interval": [
+            -784,
+            1528
+          ],
+          "base_interval": [
+            74,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5827,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 207,
+          "base": 169,
+          "R": 98,
+          "loose_interval": [
+            -24,
+            768
+          ],
+          "base_interval": [
+            74,
+            670
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5827,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 208,
+          "base": 177,
+          "R": 1134,
+          "loose_interval": [
+            -826,
+            1442
+          ],
+          "base_interval": [
+            308,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5955,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 209,
+          "base": 178,
+          "R": 252,
+          "loose_interval": [
+            -82,
+            670
+          ],
+          "base_interval": [
+            170,
+            418
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 5983,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 210,
+          "base": 181,
+          "R": 460,
+          "loose_interval": [
+            -230,
+            768
+          ],
+          "base_interval": [
+            230,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6033,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 211,
+          "base": 185,
+          "R": 1070,
+          "loose_interval": [
+            -996,
+            1378
+          ],
+          "base_interval": [
+            74,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6189,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 212,
+          "base": 185,
+          "R": 686,
+          "loose_interval": [
+            -612,
+            994
+          ],
+          "base_interval": [
+            74,
+            308
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6189,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 213,
+          "base": 187,
+          "R": 1208,
+          "loose_interval": [
+            -1038,
+            1378
+          ],
+          "base_interval": [
+            170,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6231,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 214,
+          "base": 187,
+          "R": 138,
+          "loose_interval": [
+            32,
+            308
+          ],
+          "base_interval": [
+            170,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6231,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 215,
+          "base": 188,
+          "R": 500,
+          "loose_interval": [
+            -354,
+            670
+          ],
+          "base_interval": [
+            146,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6255,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 216,
+          "base": 189,
+          "R": 598,
+          "loose_interval": [
+            -458,
+            768
+          ],
+          "base_interval": [
+            140,
+            170
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6261,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 217,
+          "base": 190,
+          "R": 628,
+          "loose_interval": [
+            -488,
+            768
+          ],
+          "base_interval": [
+            140,
+            140
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6291,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 218,
+          "base": 193,
+          "R": 1402,
+          "loose_interval": [
+            -1276,
+            1528
+          ],
+          "base_interval": [
+            126,
+            126
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6319,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 219,
+          "base": 193,
+          "R": 544,
+          "loose_interval": [
+            -418,
+            670
+          ],
+          "base_interval": [
+            126,
+            126
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6319,
+          "base_phase_collided": false
+        },
+        {
+          "triangle": 220,
+          "base": 197,
+          "R": 707,
+          "loose_interval": [
+            -646,
+            768
+          ],
+          "base_interval": [
+            61,
+            61
+          ],
+          "relation": "base_inside",
+          "base_phase_label": 6449,
+          "base_phase_collided": false
+        }
+      ]
+    }
+  ]
+}

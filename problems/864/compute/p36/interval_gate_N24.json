@@ -1,0 +1,32 @@
+{
+  "arithmetic": "integer",
+  "domain": "endpoint-normalized subsets of [0,N-1], 2 <= N <= 24",
+  "total_sets": 8388607,
+  "class_counts": {
+    "difference_two": 73973,
+    "coherent": 21673,
+    "admissible": 21673
+  },
+  "c20_failure_counts": {
+    "difference_two": 0,
+    "coherent": 0,
+    "admissible": 0
+  },
+  "lg33_failure_counts": {
+    "difference_two": 0,
+    "coherent": 0,
+    "admissible": 0
+  },
+  "first_c20_failure": {
+    "difference_two": null,
+    "coherent": null,
+    "admissible": null
+  },
+  "first_lg33_failure": {
+    "difference_two": null,
+    "coherent": null,
+    "admissible": null
+  },
+  "coherent_admissible_equivalence_failure_count": 0,
+  "first_equivalence_failure": []
+}

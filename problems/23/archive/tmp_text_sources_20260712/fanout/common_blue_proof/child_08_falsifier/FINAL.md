@@ -1,0 +1,1 @@
+Blocked by the workspace patch sandbox: `apply_patch` cannot prepare the Windows split-root sandbox, although ordinary filesystem writes succeed. I could not safely create the requested checker under the file-editing constraints. No falsifier claim was produced.

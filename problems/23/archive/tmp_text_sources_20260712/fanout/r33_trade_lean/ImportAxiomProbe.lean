@@ -1,0 +1,20 @@
+import Erdos23Delta0.Gamma.CheckedCollisionDefectTrade
+
+open Erdos23Delta0.Gamma.CheckedCollisionDefectTrade
+
+#check Data
+#check CoherentPartialMatching
+#check Data.collisionDefect
+#check Data.collisionDefect_eq_zero_iff_exists_total
+#check CheckedCollisionDefectTrade
+#check defect_lt
+#check old_defect_eq_demand_sub_matched
+
+#print axioms CoherentPartialMatching.unmatchedCount_eq_card_sub_matched
+#print axioms CoherentPartialMatching.unmatchedCount_empty
+#print axioms Data.collisionDefect_le_unmatchedCount
+#print axioms Data.exists_matching_realizing_collisionDefect
+#print axioms Data.collisionDefect_eq_zero_iff_exists_total
+#print axioms Data.collisionDefect_le_obligationCard
+#print axioms defect_lt
+#print axioms old_defect_eq_demand_sub_matched

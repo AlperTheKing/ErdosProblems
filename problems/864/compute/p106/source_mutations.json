@@ -1,0 +1,27 @@
+{
+  "source_p": 57,
+  "source_h": 3286,
+  "direct_deletions": 55,
+  "individually_admissible_insertions": [
+    328,
+    1322,
+    2815
+  ],
+  "positive_defect_phase_rows": 116,
+  "RM97_failures": 0,
+  "first_failure": null,
+  "closest_row": {
+    "transform": "delete 3215",
+    "p": 56,
+    "h": 3286,
+    "b": 2,
+    "delta": 1391,
+    "C_S": 148,
+    "T_F": 147,
+    "V_b": 53,
+    "intervals": 295,
+    "slots": 349,
+    "matched": 295,
+    "failure": false
+  }
+}

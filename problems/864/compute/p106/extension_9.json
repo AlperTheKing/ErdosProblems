@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "arithmetic": "CP-SAT exact Sidon extension constraints; exact integer RM97 audit",
+  "base_p": 57,
+  "h": 6572,
+  "candidate_insertions": 256,
+  "requested_additions": 9,
+  "status": "INFEASIBLE",
+  "solutions_audited": 0,
+  "RM97_witness": null,
+  "best_nonwitness": null,
+  "wall_time_seconds": 7.3413051000000005,
+  "branches": 31560,
+  "conflicts": 4084
+}

@@ -1,0 +1,6 @@
+import Erdos23Delta0.Gamma.Pattern5StaticOwnership
+
+#print axioms Erdos23Delta0.Gamma.Pattern5StaticOwnership.sourceComponentOf_assigned
+#print axioms Erdos23Delta0.Gamma.Pattern5StaticOwnership.exists_sourceComponent_iff_baseKeyComponentCoherent
+#print axioms Erdos23Delta0.Gamma.Pattern5StaticOwnership.CoherentMicroAssignment.source_component
+#print axioms Erdos23Delta0.Gamma.Pattern5StaticOwnership.CoherentMicroAssignment.toResidualData

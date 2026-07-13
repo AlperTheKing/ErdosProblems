@@ -1,0 +1,55 @@
+{
+  "rows": 1587908,
+  "bound_failures": 2196,
+  "pseudoforest_failures": 2302,
+  "worst_bound": [
+    17,
+    {
+      "domain": "P88",
+      "gamma": 41
+    },
+    2,
+    {
+      "folds": 181,
+      "worst_bound": [
+        17,
+        2421,
+        9,
+        38,
+        3
+      ],
+      "worst_pseudoforest": [
+        17,
+        2421,
+        9,
+        38,
+        3
+      ]
+    }
+  ],
+  "worst_pseudoforest": [
+    17,
+    {
+      "domain": "P88",
+      "gamma": 41
+    },
+    2,
+    {
+      "folds": 181,
+      "worst_bound": [
+        17,
+        2421,
+        9,
+        38,
+        3
+      ],
+      "worst_pseudoforest": [
+        17,
+        2421,
+        9,
+        38,
+        3
+      ]
+    }
+  ]
+}

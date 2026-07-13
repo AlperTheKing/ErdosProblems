@@ -1,0 +1,27 @@
+{
+  "arithmetic": "independent exact Python integers",
+  "artifacts": [
+    {
+      "bytes": 1196742,
+      "independent_rows_checked": 2,
+      "path": "problems\\864\\compute\\p116\\exhaustive_w31_50.json",
+      "sha256": "aad17fb6006e51d44e8d739ec684f285af27dae14756f382d114f17925f8f6a5",
+      "source_hashes_checked": 2
+    },
+    {
+      "bytes": 34065,
+      "independent_rows_checked": 4,
+      "path": "problems\\864\\compute\\p116\\p88_hole_subsets.json",
+      "sha256": "41c52b97d4e4a5d5532a126132eb4021400434816ee41d15c0015eb6782a3ad9",
+      "source_hashes_checked": 2
+    },
+    {
+      "bytes": 4711,
+      "independent_rows_checked": 0,
+      "path": "problems\\864\\compute\\p116\\p106_hole_repair.json",
+      "sha256": "f44fb03fe868ed30eff9d76c0fde4ed6da8ff0f42a8e06f7a61a3163f5b3edca",
+      "source_hashes_checked": 2
+    }
+  ],
+  "schema_version": 1
+}

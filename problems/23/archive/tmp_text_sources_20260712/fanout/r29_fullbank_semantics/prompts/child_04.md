@@ -1,0 +1,1 @@
+Read COMMON.md. You own Door/boundary routing semantics. Find all Door token/source/sink types, capacities, ownership/eligibility predicates, boundary-own-Door routing, and their place in FullBank packages. Trace executable scripts/exporters implementing Doors. State what R29 ActiveScoped matching omits.

@@ -1,0 +1,212 @@
+{
+  "arithmetic": "integer only",
+  "finite_falsifier": {
+    "A": [
+      0,
+      5,
+      9,
+      13,
+      15,
+      16
+    ],
+    "sigma": 18,
+    "core": [
+      5,
+      9,
+      13
+    ],
+    "residual": [
+      0,
+      15,
+      16
+    ],
+    "density_gate": {
+      "left": 216,
+      "right": 187
+    },
+    "span_transfer_margin4": 49,
+    "completion": [
+      0,
+      2,
+      3,
+      5,
+      9,
+      13,
+      15,
+      16,
+      18
+    ],
+    "completion_repeated_sums": {
+      "5": 2,
+      "15": 2,
+      "16": 2,
+      "18": 5,
+      "20": 2,
+      "21": 2,
+      "31": 2
+    }
+  },
+  "deletion": {
+    "host": [
+      0,
+      1,
+      3,
+      8,
+      12,
+      18,
+      22,
+      27,
+      29,
+      30
+    ],
+    "sigma": 30,
+    "all_descendants_checked": 32,
+    "core_formula_descendants_checked": 26,
+    "span_preserving_descendant": [
+      0,
+      1,
+      3,
+      8,
+      12,
+      29,
+      30
+    ],
+    "core": [
+      0,
+      1,
+      29,
+      30
+    ],
+    "residual": [
+      3,
+      8,
+      12
+    ],
+    "density_gate": {
+      "left": 147,
+      "right": 124
+    }
+  },
+  "midpoint": {
+    "host": [
+      1,
+      2,
+      4,
+      6,
+      7
+    ],
+    "descendant": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "sigma": 8,
+    "core": [
+      1,
+      4,
+      7
+    ],
+    "residual": [
+      2
+    ]
+  },
+  "arbitrary_size_span_obstruction": {
+    "families_checked": 10,
+    "rows": [
+      {
+        "pair_count": 3,
+        "broken_count": 1,
+        "k": 5,
+        "c": 4,
+        "u": 1,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 27
+      },
+      {
+        "pair_count": 4,
+        "broken_count": 2,
+        "k": 6,
+        "c": 4,
+        "u": 2,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 60
+      },
+      {
+        "pair_count": 5,
+        "broken_count": 2,
+        "k": 8,
+        "c": 6,
+        "u": 2,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 84
+      },
+      {
+        "pair_count": 6,
+        "broken_count": 3,
+        "k": 9,
+        "c": 6,
+        "u": 3,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 135
+      },
+      {
+        "pair_count": 7,
+        "broken_count": 3,
+        "k": 11,
+        "c": 8,
+        "u": 3,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 171
+      },
+      {
+        "pair_count": 8,
+        "broken_count": 4,
+        "k": 12,
+        "c": 8,
+        "u": 4,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 240
+      },
+      {
+        "pair_count": 9,
+        "broken_count": 4,
+        "k": 14,
+        "c": 10,
+        "u": 4,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 288
+      },
+      {
+        "pair_count": 10,
+        "broken_count": 5,
+        "k": 15,
+        "c": 10,
+        "u": 5,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 375
+      },
+      {
+        "pair_count": 11,
+        "broken_count": 5,
+        "k": 17,
+        "c": 12,
+        "u": 5,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 435
+      },
+      {
+        "pair_count": 12,
+        "broken_count": 6,
+        "k": 18,
+        "c": 12,
+        "u": 6,
+        "span_difference": 0,
+        "transfer_rhs_times_4": 540
+      }
+    ]
+  },
+  "algebra": {
+    "integer_parameter_rows_checked": 4284
+  }
+}

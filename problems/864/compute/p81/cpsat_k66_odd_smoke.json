@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer CP-SAT",
+  "model": {
+    "p": 30,
+    "mode": "odd",
+    "scaled_width_min": 435,
+    "scaled_width_max": 666,
+    "left_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "right_indices": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "all_positive_differences_distinct": true,
+    "all_actual_marks_odd": true,
+    "literal_hole_encoding": "parity",
+    "explicit_inner_labels": 36
+  },
+  "parameters": {
+    "seconds": 1.0,
+    "workers": 1,
+    "random_seed": 86481
+  },
+  "status": "UNKNOWN",
+  "elapsed_seconds": 1.0040984000006574,
+  "branches": 27565,
+  "conflicts": 887,
+  "wall_time": 1.0021988000000002,
+  "witness": null
+}

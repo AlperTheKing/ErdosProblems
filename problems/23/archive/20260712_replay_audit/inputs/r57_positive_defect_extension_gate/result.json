@@ -1,0 +1,1142 @@
+{
+  "arithmetic": {
+    "floatingPoint": false,
+    "kind": "exact integers",
+    "randomized": false,
+    "rationalOptimum": "equal by integral finite grouped network"
+  },
+  "baseGraph": {
+    "badEdges": 1,
+    "bareFirstFailedRotorField": "positiveUnitDefect (no obligations and no unmatched root)",
+    "bareSoftcap": {
+      "bothHalvesSaturableLexStates": 0,
+      "collisionMinimum": 0,
+      "defectMinimumOnCollisionFace": 0,
+      "firstDivergenceFreeLexStates": 2,
+      "lexFaceStates": 2,
+      "metricHistogram": {
+        "0,0": 2
+      },
+      "positivePayloadLexStates": 0,
+      "rotorCandidateLexStates": 0,
+      "rowTuples": 2
+    },
+    "blueConnected": true,
+    "blueEdges": 16,
+    "completeShortestRows": [
+      [
+        "s",
+        "a1",
+        "a2",
+        "a3",
+        "t"
+      ],
+      [
+        "s",
+        "b1",
+        "b2",
+        "b3",
+        "t"
+      ]
+    ],
+    "cut": {
+      "connectedMaximumCutOrbits": 1,
+      "displayedGamma": 25,
+      "displayedIsGammaMinimal": true,
+      "displayedIsMaximum": true,
+      "displayedValue": 16,
+      "maximum": 16,
+      "maximumCutOrbits": 1,
+      "minimumConnectedMaximumGamma": 25,
+      "normalizedCuts": 32768
+    },
+    "fork": {
+      "alignedInternalSharingMask": [
+        0,
+        0,
+        0
+      ],
+      "commonPredecessor": "s",
+      "firstDivergencePosition": 1,
+      "leftVertex": "a1",
+      "rightVertex": "b1"
+    },
+    "shortestSTDistance": 4,
+    "triangleFree": true,
+    "vertices": 16
+  },
+  "duplicateAtomControl": {
+    "firstPositiveNonLexState": {
+      "choice": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "collisionUnits": 129,
+      "copies": 7,
+      "globalDefect": 28,
+      "isLexMinimum": false,
+      "unitCore": {
+        "activeReachedGroupCounts": {},
+        "bothHalvesMatched": true,
+        "directReachedCapacity": 96,
+        "forkKeysReached": true,
+        "globalDefect": 28,
+        "leastUnmatchedRoot": [
+          3,
+          4,
+          3,
+          0
+        ],
+        "noSimultaneous": true,
+        "obligationCount": 97,
+        "positiveUnitDefect": true,
+        "rawReachedSourceKeys": 96,
+        "residualSinkUnreachable": true,
+        "sourceCapacity": 96,
+        "successorObligations": [
+          [
+            2,
+            4,
+            3,
+            0
+          ],
+          [
+            2,
+            4,
+            3,
+            1
+          ]
+        ],
+        "successorSinkClosed": true,
+        "successorsInUnitCore": true
+      }
+    },
+    "meaning": "repeat the same s-t BadEdgeData row family; this supplies collision multiplicity but violates the simple one-atom-per-bad-edge interpretation",
+    "records": [
+      {
+        "copies": 1,
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 0,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 2,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "0,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "copies": 2,
+        "summary": {
+          "bothHalvesSaturableLexStates": 2,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 2,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "25,0": 2,
+            "4,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 4
+        }
+      },
+      {
+        "copies": 3,
+        "summary": {
+          "bothHalvesSaturableLexStates": 6,
+          "collisionMinimum": 29,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 6,
+          "lexFaceStates": 6,
+          "metricHistogram": {
+            "29,0": 6,
+            "50,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 8
+        }
+      },
+      {
+        "copies": 4,
+        "summary": {
+          "bothHalvesSaturableLexStates": 14,
+          "collisionMinimum": 54,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 14,
+          "lexFaceStates": 14,
+          "metricHistogram": {
+            "54,0": 14,
+            "75,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 16
+        }
+      },
+      {
+        "copies": 5,
+        "summary": {
+          "bothHalvesSaturableLexStates": 30,
+          "collisionMinimum": 79,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 30,
+          "lexFaceStates": 30,
+          "metricHistogram": {
+            "100,0": 2,
+            "79,0": 30
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 32
+        }
+      },
+      {
+        "copies": 6,
+        "summary": {
+          "bothHalvesSaturableLexStates": 62,
+          "collisionMinimum": 104,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 62,
+          "lexFaceStates": 62,
+          "metricHistogram": {
+            "104,0": 62,
+            "125,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 64
+        }
+      },
+      {
+        "copies": 7,
+        "summary": {
+          "bothHalvesSaturableLexStates": 112,
+          "collisionMinimum": 129,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 112,
+          "lexFaceStates": 112,
+          "metricHistogram": {
+            "129,0": 112,
+            "129,28": 14,
+            "150,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 128
+        }
+      },
+      {
+        "copies": 8,
+        "summary": {
+          "bothHalvesSaturableLexStates": 182,
+          "collisionMinimum": 154,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 182,
+          "lexFaceStates": 182,
+          "metricHistogram": {
+            "154,0": 182,
+            "154,28": 56,
+            "154,58": 16,
+            "175,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 256
+        }
+      }
+    ],
+    "status": "RELAXED_CONTROL_NOT_A_SIMPLE_GRAPH_EXTENSION",
+    "verdict": "SATURATION_AND_LOCAL_UNIT_CORE_DO_NOT_REPAIR_LEX_DEFECT_ZERO"
+  },
+  "fixedBlueExtensions": {
+    "aggregate": {
+      "canonicalRecordSha256": "2F87122289F71AB0538C7A9BC947D4186404C57D046257996ED2D104C16E8FAD",
+      "lexMetricHistogram": {
+        "0,0": 2,
+        "1,0": 12,
+        "4,0": 12,
+        "9,0": 1
+      },
+      "rotorCandidateLexStates": 0,
+      "rowTuples": 60,
+      "systems": 27,
+      "systemsWithPositiveLexDefect": 0,
+      "systemsWithSaturableLexFork": 12
+    },
+    "allSingletonsGammaMinimal": true,
+    "candidateBadAtoms": 27,
+    "largerSubsetsExcluded": "yes: every pair already violates maximum-cut optimality, and adding same-shore bad edges cannot repair that violating cut",
+    "maximumCutTriangleFreePairs": 0,
+    "maximumCutTriangleFreeSingletons": 27,
+    "rawPairs": 351,
+    "rawSingletons": 27,
+    "records": [
+      {
+        "addedBad": [
+          "s",
+          "a3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "s",
+          "b3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "t",
+          "a1'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "t",
+          "b1'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a1",
+          "b3"
+        ],
+        "completeRows": 2,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "16,0": 2,
+            "4,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 4
+        }
+      },
+      {
+        "addedBad": [
+          "a1",
+          "t'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a1",
+          "b2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 0,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a2",
+          "b2"
+        ],
+        "completeRows": 2,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 9,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 9,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 2,
+          "lexFaceStates": 4,
+          "metricHistogram": {
+            "9,0": 4
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 4
+        }
+      },
+      {
+        "addedBad": [
+          "a2",
+          "b1'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 0,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a2",
+          "b3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a3",
+          "b1"
+        ],
+        "completeRows": 2,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "16,0": 2,
+            "4,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 4
+        }
+      },
+      {
+        "addedBad": [
+          "a3",
+          "s'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a3",
+          "b2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b1",
+          "t'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b1",
+          "a2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 0,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b2",
+          "a1'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 0,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b2",
+          "a3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b3",
+          "s'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 14,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "16,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b3",
+          "a2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 10,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "4,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "s'",
+          "a2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "s'",
+          "b2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 1,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "t'",
+          "a2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "t'",
+          "b2'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 1,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "1,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a1'",
+          "a3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 0,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "0,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a1'",
+          "b1'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 9,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 0,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "4,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "a3'",
+          "b3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 9,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 4,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 2,
+          "lexFaceStates": 2,
+          "metricHistogram": {
+            "4,0": 2
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      },
+      {
+        "addedBad": [
+          "b1'",
+          "b3'"
+        ],
+        "completeRows": 1,
+        "cut": {
+          "displayedGamma": 50,
+          "displayedIsGammaMinimal": true,
+          "maximumCutOrbits": 11,
+          "minimumConnectedMaximumGamma": 50
+        },
+        "summary": {
+          "bothHalvesSaturableLexStates": 0,
+          "collisionMinimum": 0,
+          "defectMinimumOnCollisionFace": 0,
+          "firstDivergenceFreeLexStates": 1,
+          "lexFaceStates": 1,
+          "metricHistogram": {
+            "0,0": 1,
+            "9,0": 1
+          },
+          "positivePayloadLexStates": 0,
+          "rotorCandidateLexStates": 0,
+          "rowTuples": 2
+        }
+      }
+    ],
+    "universe": "all additional simple bad edges on the fixed 16-vertex blue graph whose endpoints share the displayed shore and have blue distance four",
+    "verdict": "NO_POSITIVE_UNIT_DEFECT_ROTOR_ON_FIXED_BLUE_GRAPH"
+  },
+  "inputs": {
+    "checkGate": "tmp\\fanout\\r57_positive_defect_extension_gate\\check_gate.py",
+    "checkGateSha256": "323AA8AA45C4F51D1E829D0E38E81D28E644E99D90C1DA2580D82E03D12B3DFA",
+    "counterexampleWriteup": "problems\\23\\writeup\\WALL_ATTACK_R57_CURRENT_INTERFACE_COUNTEREXAMPLE.md",
+    "globalSoftcap": "tmp\\fanout\\r53_global_softcap_gate\\global_softcap.py",
+    "globalSoftcapSha256": "32C7F9BC0C4D2921D3B1FA5D8557ADA0088EEE8A024FDB90330023060101AC13"
+  },
+  "model": {
+    "activeUndirectedEdgeGroupCapacity": 2,
+    "auditOrder": "lexicographic (owner, other, copy, half)",
+    "demand": "every global CollisionHalf",
+    "forkDivergenceOrderedBase": [
+      "a1",
+      "b1"
+    ],
+    "literalKeyCapacity": 1,
+    "noSimultaneous": "one selected row per bad atom; the fork rows are distinct",
+    "positiveUnitDefect": "least-unmatched-root residual closure has obligationCount = grouped sourceCapacity + 1",
+    "relations": [
+      "P1_sameFirst",
+      "P2_commonBad",
+      "P3_rowCompanion",
+      "P4_outsideAttachment",
+      "P5_quiescentAttachment",
+      "commonBlue"
+    ],
+    "sinkCheck": "full residual BFS closure under every successor arc",
+    "successorCheck": "the two forced divergence keys map by reverse flow to distinct matched obligations inside the same residual core"
+  },
+  "oneBlueEdgeExtensions": {
+    "aggregateByAddedBadAtoms": {
+      "1": {
+        "canonicalRecordSha256": "FB2908F2841F74AC4AD180D706137F8FC7362A7E5143F98D2867BCAC3E627641",
+        "lexMetricHistogram": {
+          "0,0": 116,
+          "1,0": 628,
+          "4,0": 340,
+          "9,0": 8
+        },
+        "rotorCandidateLexStates": 0,
+        "rowTuples": 3832,
+        "systems": 1092,
+        "systemsWithPositiveLexDefect": 0,
+        "systemsWithSaturableLexFork": 547
+      },
+      "2": {
+        "canonicalRecordSha256": "00ABEEA9B7E0B87BFE30FACCB0C19FA78C0321E70D1BC150B9D195E5820209E9",
+        "lexMetricHistogram": {
+          "2,0": 48,
+          "3,0": 116,
+          "4,0": 16,
+          "5,0": 232,
+          "6,0": 222,
+          "8,0": 102,
+          "9,0": 36
+        },
+        "rotorCandidateLexStates": 0,
+        "rowTuples": 5324,
+        "systems": 772,
+        "systemsWithPositiveLexDefect": 0,
+        "systemsWithSaturableLexFork": 556
+      }
+    },
+    "largerSubsetsExcluded": "yes: no valid triple exists, and a violating triple remains violating after more same-shore bad edges are added",
+    "legalBlueAdditions": 42,
+    "maximumCutTriangleFreeBadSubsets": {
+      "1": 1092,
+      "2": 772,
+      "3": 0
+    },
+    "rawBadSubsets": {
+      "1": 1092,
+      "2": 13672,
+      "3": 109744
+    },
+    "universe": "one additional cross-shore blue edge on the same 16 vertices, preserving triangle-freeness and blue distance d(s,t)=4, followed by every maximum-cut-compatible distance-four bad-atom subset",
+    "verdict": "NO_POSITIVE_UNIT_DEFECT_ROTOR_WITH_ONE_ADDED_BLUE_EDGE"
+  },
+  "onePrivateLeafExtensions": {
+    "aggregateByAddedBadAtoms": {
+      "1": {
+        "canonicalRecordSha256": "1FE8F6E0B2CEDA409FE05285E2F60035D8D0F55FC83962E444FCFB2C8CC6EE09",
+        "lexMetricHistogram": {
+          "0,0": 48,
+          "1,0": 224,
+          "4,0": 208,
+          "9,0": 16
+        },
+        "rotorCandidateLexStates": 0,
+        "rowTuples": 1088,
+        "systems": 496,
+        "systemsWithPositiveLexDefect": 0,
+        "systemsWithSaturableLexFork": 212
+      },
+      "2": {
+        "canonicalRecordSha256": "2DEA219907CB5C002BFE477FD752FBA627F7B8DC39012C91904DB02B17E610AE",
+        "lexMetricHistogram": {
+          "2,0": 8,
+          "3,0": 16
+        },
+        "rotorCandidateLexStates": 0,
+        "rowTuples": 48,
+        "systems": 24,
+        "systemsWithPositiveLexDefect": 0,
+        "systemsWithSaturableLexFork": 24
+      }
+    },
+    "attachments": 16,
+    "largerSubsetsExcluded": "yes: no valid triple exists",
+    "maximumCutTriangleFreeBadSubsets": {
+      "1": 496,
+      "2": 24,
+      "3": 0
+    },
+    "rawBadSubsets": {
+      "1": 496,
+      "2": 7440,
+      "3": 71920
+    },
+    "universe": "one new degree-one blue vertex attached to any base vertex, placed opposite its parent, followed by every maximum-cut-compatible distance-four bad-atom subset",
+    "verdict": "NO_POSITIVE_UNIT_DEFECT_ROTOR_WITH_ONE_PRIVATE_LEAF"
+  },
+  "schema": "R57_POSITIVE_DEFECT_EXTENSION_GATE_V1",
+  "scopeBoundary": "not searched: extensions with two or more non-pendant blue-edge edits, or new vertices of blue degree at least two",
+  "status": "PASS",
+  "verdict": "NO_ROTOR_IN_EXHAUSTED_MINIMAL_EXTENSION_CLASSES"
+}

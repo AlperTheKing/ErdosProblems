@@ -1,0 +1,1 @@
+Blocked by the externally managed `child_05` worker: its directory is ownership-guarded against root edits, and the worker has not emitted `REPORT.md` or scripts after repeated polling. No files were modified outside `child_05`.

@@ -1,9 +1,0 @@
-{
-  "core": "tmp\\eq_odl1_rung2_core_k4_G3_ipm_basis_codex_v2.jsonl",
-  "core_solution": "tmp\\eq_odl1_rung2_core_solution_k4_G3_ipm_cpp_codex_v2.jsonl",
-  "dimension": 3893,
-  "schema": "eq_odl1_rung2_core_to_source_solution_v1",
-  "solution_negative_count": 0,
-  "source_records": 2383,
-  "source_solution": "tmp\\eq_odl1_rung2_source_solution_k4_G3_ipm_cpp_codex_v2.jsonl"
-}

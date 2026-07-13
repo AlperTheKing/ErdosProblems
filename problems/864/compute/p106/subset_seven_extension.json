@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "candidate_pool": 2401,
+  "subset_size": 300,
+  "trials_requested": 30,
+  "trial_rows": [
+    {
+      "trial": 0,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 1,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 2,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 3,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 4,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 5,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 6,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 7,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 8,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 9,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 10,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 11,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 12,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 13,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 14,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 15,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 16,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 17,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 18,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 19,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 20,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 21,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 22,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 23,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 24,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 25,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 26,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 27,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 28,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    },
+    {
+      "trial": 29,
+      "status": "INFEASIBLE",
+      "lazy_cuts": 0,
+      "found_extension": false
+    }
+  ],
+  "positive_defect_RM97_witness": null
+}

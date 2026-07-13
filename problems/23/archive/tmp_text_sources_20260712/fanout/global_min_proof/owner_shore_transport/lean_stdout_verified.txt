@@ -1,0 +1,11 @@
+E:\Projects\ErdosProblems\tmp\fanout\global_min_proof\owner_shore_transport\AmortizedOwnerShore.lean:44:4: error: mod_cast has type
+  scopedCollisionScore G c eta + activationCost < scopedCollisionScore G c omega + activationCost
+but is expected to have type
+  scopedCollisionScore G c eta < scopedCollisionScore G c omega
+'Erdos23Delta0.Gamma.ActiveScopedMinimumExchange.scopedObligationScore_lt_of_amortized_banks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos23Delta0.Gamma.ActiveScopedMinimumExchange.scopedObligationScore_lt_of_transport_credit' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

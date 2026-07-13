@@ -1,0 +1,1408 @@
+{
+  "arithmetic": "integers only",
+  "exhaustive_small": {
+    "actual_incidence": 20134,
+    "all_distinct_collision_targets": 0,
+    "barycentric_integer_capacity": 20134,
+    "collision_targets": 89,
+    "endpoint_sidon_rulers": 1340,
+    "first_collision": {
+      "G": 1,
+      "Z": [
+        0,
+        3,
+        9,
+        11
+      ],
+      "profile": {
+        "all_equal": 1,
+        "balanced_support_size": 1,
+        "correction": -9,
+        "distinct": 0,
+        "doubles": 1,
+        "representations": 2,
+        "sum": 9,
+        "support_size": 3,
+        "triples": [
+          [
+            0,
+            0,
+            9
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      }
+    },
+    "max_width": 18,
+    "maximum_representations": 2,
+    "maximum_support_size": 4,
+    "old_p_minus_1_capacity": 41719,
+    "represented_targets": 13747,
+    "strict_capacity_reduction_cases": 6630,
+    "subset_masks_checked": 16551,
+    "triple_representations": 13836,
+    "valid_overlap_pairs": 6783
+  },
+  "lemma": "P51.1 integer barycenter-defect and capacity lemma",
+  "parameters": {
+    "falsifier_max_width": 44,
+    "small_max_width": 18
+  },
+  "smallest_all_distinct_falsifier": {
+    "E": [
+      16,
+      18,
+      26,
+      38,
+      42,
+      56,
+      104
+    ],
+    "E_intersection_3E": [],
+    "G": 16,
+    "K": 28,
+    "M": 104,
+    "W": 44,
+    "Z": [
+      0,
+      1,
+      5,
+      11,
+      13,
+      20,
+      44
+    ],
+    "claim_falsified": "every low equal-three-sum collision in a valid pair contains a repeated summand",
+    "cross_intersection": [],
+    "exhaustive_search": {
+      "balanced_sidon_prefixes": 197528,
+      "max_width": 44,
+      "p": 7,
+      "sidon_seven_point_rulers": 37928,
+      "sidon_six_point_prefixes": 1026960,
+      "six_point_candidates": 6129150
+    },
+    "minimality_order": [
+      "p",
+      "W",
+      "Z lexicographic",
+      "G"
+    ],
+    "minimality_reason_p": "two all-distinct representations use six disjoint marks, and W cannot occur in a sum x<W, so p is at least 7",
+    "p": 7,
+    "pair_sum_count": 28,
+    "partitions": [
+      [
+        0,
+        5,
+        20
+      ],
+      [
+        1,
+        11,
+        13
+      ]
+    ],
+    "positive_difference_count": 21,
+    "profile": {
+      "all_equal": 0,
+      "balanced_support_size": 6,
+      "correction": 0,
+      "distinct": 2,
+      "doubles": 0,
+      "representations": 2,
+      "sum": 25,
+      "support_size": 6,
+      "triples": [
+        [
+          0,
+          5,
+          20
+        ],
+        [
+          1,
+          11,
+          13
+        ]
+      ]
+    },
+    "sum": 25
+  },
+  "status": "PASS",
+  "stored_bose_q128": {
+    "G": 11815,
+    "K": 3630,
+    "M": 42705,
+    "W": 15445,
+    "Z": [
+      0,
+      422,
+      494,
+      684,
+      872,
+      893,
+      1114,
+      1352,
+      1664,
+      1722,
+      1737,
+      1881,
+      2176,
+      2261,
+      2562,
+      2637,
+      2679,
+      3121,
+      3180,
+      3426,
+      3597,
+      3644,
+      3764,
+      3842,
+      3970,
+      4221,
+      4337,
+      4367,
+      4568,
+      4655,
+      4782,
+      4916,
+      4978,
+      5026,
+      5238,
+      5245,
+      5415,
+      5424,
+      5960,
+      6017,
+      6167,
+      6208,
+      6251,
+      6400,
+      6438,
+      6766,
+      6970,
+      7110,
+      7135,
+      7248,
+      7253,
+      7276,
+      7745,
+      7956,
+      7992,
+      8087,
+      8181,
+      8302,
+      8421,
+      8577,
+      8606,
+      8833,
+      9026,
+      9335,
+      9458,
+      9567,
+      9627,
+      9666,
+      9730,
+      10029,
+      10136,
+      10203,
+      10234,
+      10258,
+      10364,
+      10457,
+      10725,
+      10849,
+      10945,
+      10964,
+      11128,
+      11230,
+      11300,
+      11369,
+      11383,
+      11723,
+      11741,
+      11896,
+      12048,
+      12258,
+      12474,
+      12578,
+      12610,
+      12813,
+      12862,
+      12874,
+      12927,
+      13227,
+      13309,
+      13360,
+      13395,
+      13693,
+      13769,
+      13874,
+      13982,
+      14034,
+      14050,
+      14176,
+      14182,
+      14425,
+      14682,
+      14736,
+      14762,
+      14770,
+      14833,
+      14836,
+      15086,
+      15113,
+      15126,
+      15130,
+      15163,
+      15288,
+      15308,
+      15310,
+      15389,
+      15399,
+      15400,
+      15445
+    ],
+    "actual_incidence": 791,
+    "all_distinct_collision_targets": 3,
+    "balanced_actual_incidence": 589,
+    "barycentric_balanced_capacity": 1483,
+    "barycentric_integer_capacity": 1685,
+    "beta_maximum": 12,
+    "beta_maximum_examples": [
+      {
+        "capacity": 12,
+        "subset": [
+          0,
+          422,
+          494,
+          684,
+          872,
+          893,
+          1114,
+          1352,
+          1664,
+          1722,
+          2261,
+          2562
+        ],
+        "sum": 3510
+      },
+      {
+        "capacity": 12,
+        "subset": [
+          0,
+          422,
+          494,
+          684,
+          872,
+          893,
+          1114,
+          1664,
+          1722,
+          1737,
+          1881,
+          2637
+        ],
+        "sum": 3530
+      },
+      {
+        "capacity": 12,
+        "subset": [
+          0,
+          422,
+          494,
+          684,
+          872,
+          893,
+          1114,
+          1352,
+          1722,
+          1881,
+          2176,
+          2562
+        ],
+        "sum": 3543
+      },
+      {
+        "capacity": 12,
+        "subset": [
+          0,
+          422,
+          494,
+          684,
+          872,
+          893,
+          1114,
+          1352,
+          1737,
+          1881,
+          2261,
+          2562
+        ],
+        "sum": 3568
+      },
+      {
+        "capacity": 12,
+        "subset": [
+          0,
+          422,
+          494,
+          684,
+          872,
+          893,
+          1114,
+          1352,
+          1737,
+          1881,
+          2176,
+          2679
+        ],
+        "sum": 3576
+      }
+    ],
+    "collision_examples": [
+      {
+        "all_equal": 0,
+        "balanced_support_size": 6,
+        "correction": 0,
+        "distinct": 2,
+        "doubles": 0,
+        "representations": 2,
+        "sum": 2670,
+        "support_size": 6,
+        "triples": [
+          [
+            0,
+            494,
+            2176
+          ],
+          [
+            684,
+            872,
+            1114
+          ]
+        ]
+      },
+      {
+        "all_equal": 0,
+        "balanced_support_size": 6,
+        "correction": 0,
+        "distinct": 2,
+        "doubles": 0,
+        "representations": 2,
+        "sum": 3016,
+        "support_size": 6,
+        "triples": [
+          [
+            0,
+            1352,
+            1664
+          ],
+          [
+            422,
+            872,
+            1722
+          ]
+        ]
+      },
+      {
+        "all_equal": 0,
+        "balanced_support_size": 6,
+        "correction": 0,
+        "distinct": 2,
+        "doubles": 0,
+        "representations": 2,
+        "sum": 3059,
+        "support_size": 6,
+        "triples": [
+          [
+            0,
+            422,
+            2637
+          ],
+          [
+            494,
+            684,
+            1881
+          ]
+        ]
+      },
+      {
+        "all_equal": 0,
+        "balanced_support_size": 3,
+        "correction": -221,
+        "distinct": 1,
+        "doubles": 1,
+        "representations": 2,
+        "sum": 2900,
+        "support_size": 5,
+        "triples": [
+          [
+            494,
+            684,
+            1722
+          ],
+          [
+            893,
+            893,
+            1114
+          ]
+        ]
+      },
+      {
+        "all_equal": 0,
+        "balanced_support_size": 3,
+        "correction": 480,
+        "distinct": 1,
+        "doubles": 1,
+        "representations": 2,
+        "sum": 3576,
+        "support_size": 5,
+        "triples": [
+          [
+            422,
+            893,
+            2261
+          ],
+          [
+            872,
+            1352,
+            1352
+          ]
+        ]
+      }
+    ],
+    "collision_targets": 18,
+    "double_incidence": 202,
+    "double_representations": 101,
+    "low_marks": 21,
+    "maximum_representations": 2,
+    "maximum_support_size": 6,
+    "name": "stored_bose_q128",
+    "old_p_minus_1_capacity": 36068,
+    "p": 128,
+    "represented_targets": 284,
+    "strict_capacity_reduction": 34383,
+    "subset_masks_checked": 2097151,
+    "triple_representations": 302
+  },
+  "stored_degree_sharpness": {
+    "G": 1,
+    "K": 10,
+    "M": 23,
+    "W": 11,
+    "Z": [
+      0,
+      3,
+      9,
+      11
+    ],
+    "actual_incidence": 8,
+    "all_distinct_collision_targets": 0,
+    "balanced_actual_incidence": 2,
+    "barycentric_balanced_capacity": 2,
+    "barycentric_integer_capacity": 8,
+    "beta_maximum": 1,
+    "beta_maximum_examples": [
+      {
+        "capacity": 1,
+        "subset": [
+          0
+        ],
+        "sum": 0
+      },
+      {
+        "capacity": 1,
+        "subset": [
+          3
+        ],
+        "sum": 9
+      }
+    ],
+    "collision_examples": [
+      {
+        "all_equal": 1,
+        "balanced_support_size": 1,
+        "correction": -9,
+        "distinct": 0,
+        "doubles": 1,
+        "representations": 2,
+        "sum": 9,
+        "support_size": 3,
+        "triples": [
+          [
+            0,
+            0,
+            9
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      }
+    ],
+    "collision_targets": 1,
+    "double_incidence": 6,
+    "double_representations": 3,
+    "low_marks": 3,
+    "maximum_representations": 2,
+    "maximum_support_size": 3,
+    "name": "stored_degree_sharpness",
+    "old_p_minus_1_capacity": 12,
+    "p": 4,
+    "represented_targets": 4,
+    "strict_capacity_reduction": 4,
+    "subset_masks_checked": 7,
+    "triple_representations": 5
+  },
+  "stored_finite_witnesses": [
+    {
+      "G": 2,
+      "K": -1,
+      "M": 4,
+      "W": 1,
+      "Z": [
+        0,
+        1
+      ],
+      "actual_incidence": 0,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 0,
+      "barycentric_balanced_capacity": 0,
+      "barycentric_integer_capacity": 0,
+      "beta_maximum": 0,
+      "beta_maximum_examples": [],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 0,
+      "double_representations": 0,
+      "low_marks": 0,
+      "maximum_representations": 0,
+      "maximum_support_size": 0,
+      "name": "stored_q2",
+      "old_p_minus_1_capacity": 0,
+      "p": 2,
+      "represented_targets": 0,
+      "strict_capacity_reduction": 0,
+      "subset_masks_checked": 0,
+      "triple_representations": 0
+    },
+    {
+      "G": 4,
+      "K": -1,
+      "M": 10,
+      "W": 3,
+      "Z": [
+        0,
+        2,
+        3
+      ],
+      "actual_incidence": 0,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 0,
+      "barycentric_balanced_capacity": 0,
+      "barycentric_integer_capacity": 0,
+      "beta_maximum": 0,
+      "beta_maximum_examples": [],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 0,
+      "double_representations": 0,
+      "low_marks": 0,
+      "maximum_representations": 0,
+      "maximum_support_size": 0,
+      "name": "stored_q3",
+      "old_p_minus_1_capacity": 0,
+      "p": 3,
+      "represented_targets": 0,
+      "strict_capacity_reduction": 0,
+      "subset_masks_checked": 0,
+      "triple_representations": 0
+    },
+    {
+      "G": 7,
+      "K": -1,
+      "M": 19,
+      "W": 6,
+      "Z": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "actual_incidence": 0,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 0,
+      "barycentric_balanced_capacity": 0,
+      "barycentric_integer_capacity": 0,
+      "beta_maximum": 0,
+      "beta_maximum_examples": [],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 0,
+      "double_representations": 0,
+      "low_marks": 0,
+      "maximum_representations": 0,
+      "maximum_support_size": 0,
+      "name": "stored_q4",
+      "old_p_minus_1_capacity": 0,
+      "p": 4,
+      "represented_targets": 0,
+      "strict_capacity_reduction": 0,
+      "subset_masks_checked": 0,
+      "triple_representations": 0
+    },
+    {
+      "G": 6,
+      "K": 6,
+      "M": 30,
+      "W": 12,
+      "Z": [
+        0,
+        4,
+        9,
+        11,
+        12
+      ],
+      "actual_incidence": 3,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 1,
+      "barycentric_balanced_capacity": 1,
+      "barycentric_integer_capacity": 3,
+      "beta_maximum": 1,
+      "beta_maximum_examples": [
+        {
+          "capacity": 1,
+          "subset": [
+            0
+          ],
+          "sum": 0
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 2,
+      "double_representations": 1,
+      "low_marks": 2,
+      "maximum_representations": 1,
+      "maximum_support_size": 2,
+      "name": "stored_q5",
+      "old_p_minus_1_capacity": 8,
+      "p": 5,
+      "represented_targets": 2,
+      "strict_capacity_reduction": 5,
+      "subset_masks_checked": 3,
+      "triple_representations": 2
+    },
+    {
+      "G": 12,
+      "K": 6,
+      "M": 48,
+      "W": 18,
+      "Z": [
+        0,
+        4,
+        10,
+        15,
+        17,
+        18
+      ],
+      "actual_incidence": 3,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 1,
+      "barycentric_balanced_capacity": 1,
+      "barycentric_integer_capacity": 3,
+      "beta_maximum": 1,
+      "beta_maximum_examples": [
+        {
+          "capacity": 1,
+          "subset": [
+            0
+          ],
+          "sum": 0
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 2,
+      "double_representations": 1,
+      "low_marks": 2,
+      "maximum_representations": 1,
+      "maximum_support_size": 2,
+      "name": "stored_q6",
+      "old_p_minus_1_capacity": 10,
+      "p": 6,
+      "represented_targets": 2,
+      "strict_capacity_reduction": 7,
+      "subset_masks_checked": 3,
+      "triple_representations": 2
+    },
+    {
+      "G": 12,
+      "K": 16,
+      "M": 68,
+      "W": 28,
+      "Z": [
+        0,
+        2,
+        13,
+        19,
+        20,
+        23,
+        28
+      ],
+      "actual_incidence": 11,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 5,
+      "barycentric_balanced_capacity": 5,
+      "barycentric_integer_capacity": 11,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            2,
+            13
+          ],
+          "sum": 15
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 6,
+      "double_representations": 3,
+      "low_marks": 3,
+      "maximum_representations": 1,
+      "maximum_support_size": 3,
+      "name": "stored_q7",
+      "old_p_minus_1_capacity": 36,
+      "p": 7,
+      "represented_targets": 6,
+      "strict_capacity_reduction": 25,
+      "subset_masks_checked": 7,
+      "triple_representations": 6
+    },
+    {
+      "G": 11,
+      "K": 26,
+      "M": 85,
+      "W": 37,
+      "Z": [
+        0,
+        4,
+        9,
+        21,
+        27,
+        34,
+        35,
+        37
+      ],
+      "actual_incidence": 22,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 8,
+      "barycentric_balanced_capacity": 8,
+      "barycentric_integer_capacity": 22,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            4,
+            9
+          ],
+          "sum": 13
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            4,
+            21
+          ],
+          "sum": 25
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 14,
+      "double_representations": 7,
+      "low_marks": 4,
+      "maximum_representations": 1,
+      "maximum_support_size": 3,
+      "name": "stored_q8",
+      "old_p_minus_1_capacity": 77,
+      "p": 8,
+      "represented_targets": 11,
+      "strict_capacity_reduction": 55,
+      "subset_masks_checked": 15,
+      "triple_representations": 11
+    },
+    {
+      "G": 18,
+      "K": 31,
+      "M": 116,
+      "W": 49,
+      "Z": [
+        0,
+        6,
+        13,
+        29,
+        34,
+        38,
+        46,
+        48,
+        49
+      ],
+      "actual_incidence": 17,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 5,
+      "barycentric_balanced_capacity": 5,
+      "barycentric_integer_capacity": 17,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            6,
+            13
+          ],
+          "sum": 19
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 12,
+      "double_representations": 6,
+      "low_marks": 4,
+      "maximum_representations": 1,
+      "maximum_support_size": 3,
+      "name": "stored_q9",
+      "old_p_minus_1_capacity": 72,
+      "p": 9,
+      "represented_targets": 9,
+      "strict_capacity_reduction": 55,
+      "subset_masks_checked": 15,
+      "triple_representations": 9
+    },
+    {
+      "G": 10,
+      "K": 61,
+      "M": 152,
+      "W": 71,
+      "Z": [
+        0,
+        9,
+        24,
+        41,
+        45,
+        57,
+        63,
+        68,
+        70,
+        71
+      ],
+      "actual_incidence": 31,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 11,
+      "barycentric_balanced_capacity": 11,
+      "barycentric_integer_capacity": 31,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            9,
+            24
+          ],
+          "sum": 33
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            9,
+            41
+          ],
+          "sum": 50
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            9,
+            45
+          ],
+          "sum": 54
+        }
+      ],
+      "collision_examples": [
+        {
+          "all_equal": 0,
+          "balanced_support_size": 0,
+          "correction": -42,
+          "distinct": 0,
+          "doubles": 2,
+          "representations": 2,
+          "sum": 57,
+          "support_size": 4,
+          "triples": [
+            [
+              0,
+              0,
+              57
+            ],
+            [
+              9,
+              24,
+              24
+            ]
+          ]
+        }
+      ],
+      "collision_targets": 1,
+      "double_incidence": 20,
+      "double_representations": 10,
+      "low_marks": 6,
+      "maximum_representations": 2,
+      "maximum_support_size": 4,
+      "name": "stored_q10",
+      "old_p_minus_1_capacity": 126,
+      "p": 10,
+      "represented_targets": 14,
+      "strict_capacity_reduction": 95,
+      "subset_masks_checked": 63,
+      "triple_representations": 15
+    },
+    {
+      "G": 23,
+      "K": 61,
+      "M": 191,
+      "W": 84,
+      "Z": [
+        0,
+        15,
+        22,
+        34,
+        43,
+        54,
+        70,
+        78,
+        80,
+        83,
+        84
+      ],
+      "actual_incidence": 32,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 14,
+      "barycentric_balanced_capacity": 14,
+      "barycentric_integer_capacity": 32,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            15,
+            22
+          ],
+          "sum": 37
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            15,
+            34
+          ],
+          "sum": 49
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            22,
+            34
+          ],
+          "sum": 56
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            15,
+            43
+          ],
+          "sum": 58
+        }
+      ],
+      "collision_examples": [],
+      "collision_targets": 0,
+      "double_incidence": 18,
+      "double_representations": 9,
+      "low_marks": 6,
+      "maximum_representations": 1,
+      "maximum_support_size": 3,
+      "name": "stored_q11",
+      "old_p_minus_1_capacity": 150,
+      "p": 11,
+      "represented_targets": 15,
+      "strict_capacity_reduction": 118,
+      "subset_masks_checked": 63,
+      "triple_representations": 15
+    },
+    {
+      "G": 26,
+      "K": 81,
+      "M": 240,
+      "W": 107,
+      "Z": [
+        0,
+        11,
+        20,
+        38,
+        54,
+        71,
+        78,
+        93,
+        101,
+        103,
+        106,
+        107
+      ],
+      "actual_incidence": 49,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 21,
+      "barycentric_balanced_capacity": 21,
+      "barycentric_integer_capacity": 49,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            11,
+            20
+          ],
+          "sum": 31
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            11,
+            38
+          ],
+          "sum": 49
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            20,
+            38
+          ],
+          "sum": 58
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            11,
+            54
+          ],
+          "sum": 65
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            11,
+            20,
+            38
+          ],
+          "sum": 69
+        }
+      ],
+      "collision_examples": [
+        {
+          "all_equal": 0,
+          "balanced_support_size": 0,
+          "correction": -5,
+          "distinct": 0,
+          "doubles": 2,
+          "representations": 2,
+          "sum": 76,
+          "support_size": 4,
+          "triples": [
+            [
+              0,
+              38,
+              38
+            ],
+            [
+              11,
+              11,
+              54
+            ]
+          ]
+        },
+        {
+          "all_equal": 0,
+          "balanced_support_size": 0,
+          "correction": -96,
+          "distinct": 0,
+          "doubles": 2,
+          "representations": 2,
+          "sum": 78,
+          "support_size": 4,
+          "triples": [
+            [
+              0,
+              0,
+              78
+            ],
+            [
+              20,
+              20,
+              38
+            ]
+          ]
+        },
+        {
+          "all_equal": 1,
+          "balanced_support_size": 1,
+          "correction": -27,
+          "distinct": 0,
+          "doubles": 1,
+          "representations": 2,
+          "sum": 60,
+          "support_size": 3,
+          "triples": [
+            [
+              11,
+              11,
+              38
+            ],
+            [
+              20,
+              20,
+              20
+            ]
+          ]
+        }
+      ],
+      "collision_targets": 3,
+      "double_incidence": 28,
+      "double_representations": 14,
+      "low_marks": 7,
+      "maximum_representations": 2,
+      "maximum_support_size": 4,
+      "name": "stored_q12",
+      "old_p_minus_1_capacity": 220,
+      "p": 12,
+      "represented_targets": 20,
+      "strict_capacity_reduction": 171,
+      "subset_masks_checked": 127,
+      "triple_representations": 23
+    },
+    {
+      "G": 25,
+      "K": 110,
+      "M": 295,
+      "W": 135,
+      "Z": [
+        0,
+        18,
+        37,
+        48,
+        64,
+        90,
+        100,
+        114,
+        122,
+        129,
+        131,
+        134,
+        135
+      ],
+      "actual_incidence": 49,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 23,
+      "barycentric_balanced_capacity": 23,
+      "barycentric_integer_capacity": 49,
+      "beta_maximum": 3,
+      "beta_maximum_examples": [
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            18,
+            37
+          ],
+          "sum": 55
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            18,
+            48
+          ],
+          "sum": 66
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            18,
+            64
+          ],
+          "sum": 82
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            37,
+            48
+          ],
+          "sum": 85
+        },
+        {
+          "capacity": 3,
+          "subset": [
+            0,
+            37,
+            64
+          ],
+          "sum": 101
+        }
+      ],
+      "collision_examples": [
+        {
+          "all_equal": 0,
+          "balanced_support_size": 0,
+          "correction": -146,
+          "distinct": 0,
+          "doubles": 2,
+          "representations": 2,
+          "sum": 100,
+          "support_size": 4,
+          "triples": [
+            [
+              0,
+              0,
+              100
+            ],
+            [
+              18,
+              18,
+              64
+            ]
+          ]
+        }
+      ],
+      "collision_targets": 1,
+      "double_incidence": 26,
+      "double_representations": 13,
+      "low_marks": 7,
+      "maximum_representations": 2,
+      "maximum_support_size": 4,
+      "name": "stored_q13",
+      "old_p_minus_1_capacity": 252,
+      "p": 13,
+      "represented_targets": 21,
+      "strict_capacity_reduction": 203,
+      "subset_masks_checked": 127,
+      "triple_representations": 22
+    },
+    {
+      "G": 43,
+      "K": 114,
+      "M": 357,
+      "W": 157,
+      "Z": [
+        0,
+        17,
+        33,
+        62,
+        82,
+        100,
+        106,
+        121,
+        134,
+        146,
+        148,
+        153,
+        156,
+        157
+      ],
+      "actual_incidence": 40,
+      "all_distinct_collision_targets": 0,
+      "balanced_actual_incidence": 18,
+      "barycentric_balanced_capacity": 18,
+      "barycentric_integer_capacity": 40,
+      "beta_maximum": 4,
+      "beta_maximum_examples": [
+        {
+          "capacity": 4,
+          "subset": [
+            0,
+            17,
+            33,
+            82
+          ],
+          "sum": 99
+        }
+      ],
+      "collision_examples": [
+        {
+          "all_equal": 1,
+          "balanced_support_size": 4,
+          "correction": 0,
+          "distinct": 1,
+          "doubles": 0,
+          "representations": 2,
+          "sum": 99,
+          "support_size": 4,
+          "triples": [
+            [
+              0,
+              17,
+              82
+            ],
+            [
+              33,
+              33,
+              33
+            ]
+          ]
+        }
+      ],
+      "collision_targets": 1,
+      "double_incidence": 22,
+      "double_representations": 11,
+      "low_marks": 7,
+      "maximum_representations": 2,
+      "maximum_support_size": 4,
+      "name": "stored_q14",
+      "old_p_minus_1_capacity": 234,
+      "p": 14,
+      "represented_targets": 18,
+      "strict_capacity_reduction": 194,
+      "subset_masks_checked": 127,
+      "triple_representations": 19
+    }
+  ]
+}

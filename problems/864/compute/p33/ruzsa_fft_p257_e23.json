@@ -1,0 +1,116 @@
+{
+  "arithmetic": "FFT candidate location; exact integer acceptance",
+  "device": "cuda",
+  "record_count": 1,
+  "c20_failure_count": 0,
+  "strongest": {
+    "p": 257,
+    "primitive_root": 3,
+    "modulus": 65792,
+    "cut_exponent": 23,
+    "base_index": 28,
+    "cut_base": 1308,
+    "size": 256,
+    "span": 65657,
+    "lower_sha256": "388a2609fb9b96f254c17c0c266c4e6925b95de91cc3628877b1ba2051d364e5",
+    "sum_support": 32896,
+    "difference_support": 32640,
+    "fft_length": 262144,
+    "fft_tolerance": 64.0,
+    "fft_value_at_center": -0.00146484375,
+    "fft_candidates_checked": 5437,
+    "center": 183950,
+    "center_over_size2": "183950/65536",
+    "exact_hole": true,
+    "literal_admissibility": {
+      "checked": true,
+      "admissible": true,
+      "repeated_sums": [
+        [
+          183950,
+          256
+        ]
+      ],
+      "expected_repeated_sums": [
+        [
+          183950,
+          256
+        ]
+      ]
+    },
+    "metrics": {
+      "N": 183951,
+      "k": 512,
+      "H": 3235,
+      "M": 137784,
+      "D": 5142305,
+      "Q": 88690,
+      "Z": 5053615,
+      "weighted_pair_overlap": 10284610,
+      "T": 49401,
+      "required_coefficient": "26777033442/33794164171",
+      "required_coefficient_decimal": 0.7923567307807052,
+      "required_coefficient_numerator": 26777033442,
+      "required_coefficient_denominator": 33794164171,
+      "c20_margin6": -1434852768870,
+      "lg33_margin": -1402311023370,
+      "c20_fails": false
+    }
+  },
+  "records": [
+    {
+      "p": 257,
+      "primitive_root": 3,
+      "modulus": 65792,
+      "cut_exponent": 23,
+      "base_index": 28,
+      "cut_base": 1308,
+      "size": 256,
+      "span": 65657,
+      "lower_sha256": "388a2609fb9b96f254c17c0c266c4e6925b95de91cc3628877b1ba2051d364e5",
+      "sum_support": 32896,
+      "difference_support": 32640,
+      "fft_length": 262144,
+      "fft_tolerance": 64.0,
+      "fft_value_at_center": -0.00146484375,
+      "fft_candidates_checked": 5437,
+      "center": 183950,
+      "center_over_size2": "183950/65536",
+      "exact_hole": true,
+      "literal_admissibility": {
+        "checked": true,
+        "admissible": true,
+        "repeated_sums": [
+          [
+            183950,
+            256
+          ]
+        ],
+        "expected_repeated_sums": [
+          [
+            183950,
+            256
+          ]
+        ]
+      },
+      "metrics": {
+        "N": 183951,
+        "k": 512,
+        "H": 3235,
+        "M": 137784,
+        "D": 5142305,
+        "Q": 88690,
+        "Z": 5053615,
+        "weighted_pair_overlap": 10284610,
+        "T": 49401,
+        "required_coefficient": "26777033442/33794164171",
+        "required_coefficient_decimal": 0.7923567307807052,
+        "required_coefficient_numerator": 26777033442,
+        "required_coefficient_denominator": 33794164171,
+        "c20_margin6": -1434852768870,
+        "lg33_margin": -1402311023370,
+        "c20_fails": false
+      }
+    }
+  ]
+}

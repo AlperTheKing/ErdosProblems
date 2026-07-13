@@ -1,0 +1,68 @@
+{
+  "schema": "R53_GLOBAL_FREEHALF_N89_COUNTEREXAMPLE_V1",
+  "scope": "archived counterexample to strict-P4 only; the corrected coherence-free P4 model passes 776/776",
+  "fixture": {
+    "order": 89,
+    "blueEdges": 125,
+    "badEdges": 20,
+    "rows": 20,
+    "completeShortestRowFamilySizes": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "rowDatabaseSingleton": true,
+    "activeEdges": 0,
+    "activeVertices": 0,
+    "residual": 7421
+  },
+  "archivedStrictP4Model": {
+    "demand": "all global CollisionHalf identities",
+    "sink": "actual FreeHalf triples only",
+    "families": [
+      "P1_sameFirst",
+      "P2_commonBad",
+      "P3_rowCompanion",
+      "P4_strictOutsideAttachment",
+      "P5_quiescentAttachment",
+      "commonBlue"
+    ],
+    "unitKeyCapacity": 1,
+    "activeEdgeAggregateCapacity": 2,
+    "fixedReservations": false,
+    "arithmetic": "integers only"
+  },
+  "primal": {
+    "globalCollisionHalfDemand": 776,
+    "activeOnlyCollisionHalfDemand": 0,
+    "inactiveCollisionHalfDemand": 776,
+    "actualFreeHalfCount": 15464,
+    "sixFamilyReachableFreeHalfKeys": 13692,
+    "maximumFlow": 774,
+    "defect": 2
+  },
+  "dual": {
+    "shoreOwners": [0, 1, 2],
+    "shoreDemand": 528,
+    "directKeyCapacity": 526,
+    "activeEdgeGroupCapacity": 0,
+    "shoreCapacity": 526,
+    "gap": 2
+  },
+  "familyAudit": {
+    "P1_sameFirst": {"halfKeys": 1912, "ownerHalfArcs": 1912},
+    "P2_commonBad": {"halfKeys": 64, "ownerHalfArcs": 280},
+    "P3_rowCompanion": {"halfKeys": 64, "ownerHalfArcs": 472},
+    "P4_strictOutsideAttachment": {"halfKeys": 11704, "ownerHalfArcs": 105336},
+    "P5_quiescentAttachment": {"halfKeys": 0, "ownerHalfArcs": 0},
+    "commonBlue": {"halfKeys": 456, "ownerHalfArcs": 456}
+  },
+  "dataAvailability": {
+    "allSixFamiliesReconstructed": true,
+    "missingRelationData": [],
+    "negativeVerdict": true,
+    "negativeVerdictFor": "archived strict-P4 model only",
+    "correctedCoherenceFreeVerdict": "flow 776/776, defect 0"
+  },
+  "sourceSha256": {
+    "problems/23/writeup/_claude_r22_89_gate.py": "80191648ac38b353df13cf3ca700cecb86b6f683e80584eea2296f841a7df5d4",
+    "tmp/fanout/p5_fixtures/gate.py": "e50054ec3ec6e9ad91191b20f65cae3d52dc7b888dd6a77e4fad5c1fe78d466f",
+    "tmp/fanout/r53_global_softcap_gate/global_softcap.py": "b4e1b379f53a1297f95ec30eb38b796f3906949a1b6f462a07ae627667fe9652"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact Python integers",
+  "scope": "all endpoint translations gamma=0..width-1 of every integer Sidon ruler of width at most 30; no defect or hole filter",
+  "rows": 791869,
+  "T_F_gt_C_S_failures": 0,
+  "component_failures": 0,
+  "prefix_failures": 0,
+  "suffix_failures": 0,
+  "max_T_F_minus_C_S": 0,
+  "max_component_excess": 0,
+  "min_prefix_slack": 0,
+  "min_suffix_slack": 0,
+  "first_failure": null
+}

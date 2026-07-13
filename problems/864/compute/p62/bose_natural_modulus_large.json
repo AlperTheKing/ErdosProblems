@@ -1,0 +1,319 @@
+{
+  "arithmetic": "exact integers and finite fields",
+  "parameters": [
+    23,
+    25,
+    27,
+    29,
+    31,
+    32,
+    37,
+    41,
+    43,
+    47,
+    49,
+    53,
+    59,
+    61,
+    64
+  ],
+  "rows": [
+    {
+      "q": 23,
+      "p": 23,
+      "modulus": 528,
+      "delta_at_natural_modulus": 255,
+      "unit_classes": 80,
+      "distinct_lifts": 1380,
+      "valid_lifts": 1,
+      "zero_fold_valid_lifts": 1,
+      "collision_histogram": {
+        "0,0": 1380
+      },
+      "first_valid": {
+        "width": 442,
+        "gamma": 85,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          50,
+          78,
+          110,
+          139,
+          169,
+          173,
+          190,
+          204,
+          243,
+          244,
+          256,
+          301,
+          311,
+          320,
+          357,
+          393,
+          399,
+          401,
+          404,
+          419,
+          426,
+          442
+        ],
+        "unit": 103,
+        "base": 521,
+        "cut_gap": 86
+      },
+      "first_zero_fold_valid": {
+        "width": 442,
+        "gamma": 85,
+        "sum_collisions": 0,
+        "difference_collisions": 0,
+        "valid_b": [
+          1
+        ],
+        "points": [
+          0,
+          50,
+          78,
+          110,
+          139,
+          169,
+          173,
+          190,
+          204,
+          243,
+          244,
+          256,
+          301,
+          311,
+          320,
+          357,
+          393,
+          399,
+          401,
+          404,
+          419,
+          426,
+          442
+        ],
+        "unit": 103,
+        "base": 521,
+        "cut_gap": 86
+      }
+    },
+    {
+      "q": 25,
+      "p": 25,
+      "modulus": 624,
+      "delta_at_natural_modulus": 302,
+      "unit_classes": 96,
+      "distinct_lifts": 1000,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 1000
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 27,
+      "p": 27,
+      "modulus": 728,
+      "delta_at_natural_modulus": 353,
+      "unit_classes": 144,
+      "distinct_lifts": 1188,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 1188
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 29,
+      "p": 29,
+      "modulus": 840,
+      "delta_at_natural_modulus": 408,
+      "unit_classes": 96,
+      "distinct_lifts": 2088,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 2088
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 31,
+      "p": 31,
+      "modulus": 960,
+      "delta_at_natural_modulus": 467,
+      "unit_classes": 128,
+      "distinct_lifts": 2852,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 2852
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 32,
+      "p": 32,
+      "modulus": 1023,
+      "delta_at_natural_modulus": 498,
+      "unit_classes": 300,
+      "distinct_lifts": 1920,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 1920
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 37,
+      "p": 37,
+      "modulus": 1368,
+      "delta_at_natural_modulus": 668,
+      "unit_classes": 216,
+      "distinct_lifts": 5772,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 5772
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 41,
+      "p": 41,
+      "modulus": 1680,
+      "delta_at_natural_modulus": 822,
+      "unit_classes": 192,
+      "distinct_lifts": 5904,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 5904
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 43,
+      "p": 43,
+      "modulus": 1848,
+      "delta_at_natural_modulus": 905,
+      "unit_classes": 240,
+      "distinct_lifts": 7568,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 7568
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 47,
+      "p": 47,
+      "modulus": 2208,
+      "delta_at_natural_modulus": 1083,
+      "unit_classes": 352,
+      "distinct_lifts": 12408,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 12408
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 49,
+      "p": 49,
+      "modulus": 2400,
+      "delta_at_natural_modulus": 1178,
+      "unit_classes": 320,
+      "distinct_lifts": 6958,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 6958
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 53,
+      "p": 53,
+      "modulus": 2808,
+      "delta_at_natural_modulus": 1380,
+      "unit_classes": 432,
+      "distinct_lifts": 16960,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 16960
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 59,
+      "p": 59,
+      "modulus": 3480,
+      "delta_at_natural_modulus": 1713,
+      "unit_classes": 448,
+      "distinct_lifts": 19824,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 19824
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 61,
+      "p": 61,
+      "modulus": 3720,
+      "delta_at_natural_modulus": 1832,
+      "unit_classes": 480,
+      "distinct_lifts": 21472,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 21472
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    },
+    {
+      "q": 64,
+      "p": 64,
+      "modulus": 4095,
+      "delta_at_natural_modulus": 2018,
+      "unit_classes": 864,
+      "distinct_lifts": 9216,
+      "valid_lifts": 0,
+      "zero_fold_valid_lifts": 0,
+      "collision_histogram": {
+        "0,0": 9216
+      },
+      "first_valid": null,
+      "first_zero_fold_valid": null
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+import Erdos23Delta0.Gamma.ActiveScopedCoordinateTransport
+
+open Erdos23Delta0
+open Erdos23Delta0.Gamma
+
+#print axioms ActiveScopedMinimumExchange.globalDescent_iff_everyMinimizerHasMatching
+#print axioms ActiveScopedMinimumExchange.hitNeedUnits_new_le_old_of_not_touchesChangedRows
+#print axioms ActiveScopedMinimumExchange.realMinimumActiveScopedHall_of_componentAwareCoordinateTransport

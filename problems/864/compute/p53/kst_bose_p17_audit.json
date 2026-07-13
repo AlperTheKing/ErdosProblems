@@ -1,0 +1,1145 @@
+{
+  "arithmetic": "exact integers",
+  "carry_graphs": {
+    "1": {
+      "endpoint_projection_graphs_nonzero": {
+        "difference_pair": {
+          "K22_witness": {
+            "common_right_vertices": [
+              128,
+              132,
+              156,
+              181,
+              190,
+              191
+            ],
+            "left_vertices": [
+              80,
+              87
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 94,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "left_pairs_with_codegree_at_least_two": 93,
+          "left_wedges": 255,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 6,
+          "relations": 94,
+          "right_degrees": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            4,
+            5,
+            6,
+            6,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            11
+          ],
+          "right_wedges": 287
+        },
+        "sum_high__difference_left": {
+          "K22_witness": {
+            "common_right_vertices": [
+              80,
+              87,
+              128,
+              132,
+              148,
+              156,
+              181,
+              190
+            ],
+            "left_vertices": [
+              241,
+              247
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 94,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8,
+            9,
+            9
+          ],
+          "left_pairs_with_codegree_at_least_two": 57,
+          "left_wedges": 278,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 8,
+          "relations": 94,
+          "right_degrees": [
+            0,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "right_wedges": 255
+        },
+        "sum_high__difference_right": {
+          "K22_witness": {
+            "common_right_vertices": [
+              190,
+              191,
+              268,
+              273
+            ],
+            "left_vertices": [
+              156,
+              241
+            ]
+          },
+          "duplicate_relations": 29,
+          "edges": 65,
+          "is_injective": false,
+          "left_degrees": [
+            0,
+            0,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            6
+          ],
+          "left_pairs_with_codegree_at_least_two": 39,
+          "left_wedges": 120,
+          "maximum_edge_multiplicity": 2,
+          "maximum_left_codegree": 4,
+          "relations": 94,
+          "right_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            7,
+            7
+          ],
+          "right_wedges": 124
+        },
+        "sum_low__difference_left": {
+          "K22_witness": {
+            "common_right_vertices": [
+              87,
+              117,
+              128,
+              132,
+              148,
+              156,
+              190,
+              191,
+              203,
+              241,
+              268,
+              270,
+              273
+            ],
+            "left_vertices": [
+              80,
+              87
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 94,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            9,
+            11,
+            13,
+            13,
+            14,
+            15
+          ],
+          "left_pairs_with_codegree_at_least_two": 41,
+          "left_wedges": 485,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 13,
+          "relations": 94,
+          "right_degrees": [
+            0,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "right_wedges": 255
+        },
+        "sum_low__difference_right": {
+          "K22_witness": {
+            "common_right_vertices": [
+              128,
+              132,
+              156,
+              181,
+              190,
+              191
+            ],
+            "left_vertices": [
+              80,
+              87
+            ]
+          },
+          "duplicate_relations": 30,
+          "edges": 64,
+          "is_injective": false,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            5,
+            7,
+            7,
+            7,
+            8,
+            8,
+            8,
+            8
+          ],
+          "left_pairs_with_codegree_at_least_two": 37,
+          "left_wedges": 189,
+          "maximum_edge_multiplicity": 2,
+          "maximum_left_codegree": 6,
+          "relations": 94,
+          "right_degrees": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4,
+            4,
+            5,
+            6,
+            6,
+            7,
+            8
+          ],
+          "right_wedges": 123
+        },
+        "sum_pair": {
+          "K22_witness": {
+            "common_right_vertices": [
+              87,
+              117,
+              128,
+              132,
+              148,
+              156,
+              190,
+              191,
+              203,
+              241,
+              247,
+              268,
+              270,
+              273
+            ],
+            "left_vertices": [
+              80,
+              87
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 94,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            5,
+            8,
+            9,
+            11,
+            13,
+            13,
+            14,
+            15
+          ],
+          "left_pairs_with_codegree_at_least_two": 41,
+          "left_wedges": 485,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 14,
+          "relations": 94,
+          "right_degrees": [
+            0,
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            8,
+            8,
+            8,
+            9,
+            9
+          ],
+          "right_wedges": 278
+        }
+      },
+      "expanded_difference_edge_graph": {
+        "K22_witness": {
+          "common_right_vertices": [
+            128,
+            132,
+            156,
+            181,
+            190,
+            191
+          ],
+          "left_vertices": [
+            80,
+            87
+          ]
+        },
+        "edges": 94,
+        "left_degrees": [
+          0,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          6,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "left_pairs_with_codegree_at_least_two": 93,
+        "left_wedges": 255,
+        "maximum_C4_free_subgraph": {
+          "C4_count": 294,
+          "maximum_edges": 60,
+          "minimum_edge_deletions": 34,
+          "status": "OPTIMAL",
+          "wall_time_seconds": 3.0351299000000003
+        },
+        "maximum_left_codegree": 6,
+        "right_degrees": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          5,
+          6,
+          6,
+          6,
+          6,
+          8,
+          9,
+          9,
+          10,
+          11
+        ],
+        "right_wedges": 287
+      },
+      "nonzero_difference_edge_graph": {
+        "K22_witness": {
+          "common_right_vertices": [
+            128,
+            132,
+            156,
+            181,
+            190,
+            191
+          ],
+          "left_vertices": [
+            80,
+            87
+          ]
+        },
+        "edges": 94,
+        "left_degrees": [
+          0,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          6,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "left_pairs_with_codegree_at_least_two": 93,
+        "left_wedges": 255,
+        "maximum_left_codegree": 6,
+        "right_degrees": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          5,
+          6,
+          6,
+          6,
+          6,
+          8,
+          9,
+          9,
+          10,
+          11
+        ],
+        "right_wedges": 287
+      },
+      "support_pairs_Uk": 94,
+      "target": 286,
+      "zero_difference_active": false
+    },
+    "2": {
+      "endpoint_projection_graphs_nonzero": {
+        "difference_pair": {
+          "K22_witness": {
+            "common_right_vertices": [
+              80,
+              117,
+              128,
+              148,
+              181
+            ],
+            "left_vertices": [
+              273,
+              287
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 50,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            16
+          ],
+          "left_pairs_with_codegree_at_least_two": 20,
+          "left_wedges": 165,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 5,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            6,
+            7,
+            7
+          ],
+          "right_wedges": 87
+        },
+        "sum_high__difference_left": {
+          "K22_witness": {
+            "common_right_vertices": [
+              181,
+              190,
+              191,
+              241,
+              270,
+              273
+            ],
+            "left_vertices": [
+              270,
+              273
+            ]
+          },
+          "duplicate_relations": 15,
+          "edges": 35,
+          "is_injective": false,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "left_pairs_with_codegree_at_least_two": 11,
+          "left_wedges": 95,
+          "maximum_edge_multiplicity": 16,
+          "maximum_left_codegree": 6,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5
+          ],
+          "right_wedges": 45
+        },
+        "sum_high__difference_right": {
+          "K22_witness": {
+            "common_right_vertices": [
+              80,
+              117,
+              128,
+              148,
+              181
+            ],
+            "left_vertices": [
+              273,
+              287
+            ]
+          },
+          "duplicate_relations": 11,
+          "edges": 39,
+          "is_injective": false,
+          "left_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            16
+          ],
+          "left_pairs_with_codegree_at_least_two": 10,
+          "left_wedges": 153,
+          "maximum_edge_multiplicity": 2,
+          "maximum_left_codegree": 5,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5
+          ],
+          "right_wedges": 43
+        },
+        "sum_low__difference_left": {
+          "K22_witness": {
+            "common_right_vertices": [
+              191,
+              203,
+              268,
+              273,
+              287
+            ],
+            "left_vertices": [
+              190,
+              241
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 50,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            6,
+            6
+          ],
+          "left_pairs_with_codegree_at_least_two": 27,
+          "left_wedges": 82,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 5,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            16
+          ],
+          "right_wedges": 165
+        },
+        "sum_low__difference_right": {
+          "K22_witness": {
+            "common_right_vertices": [
+              117,
+              203
+            ],
+            "left_vertices": [
+              203,
+              241
+            ]
+          },
+          "duplicate_relations": 10,
+          "edges": 40,
+          "is_injective": false,
+          "left_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+          ],
+          "left_pairs_with_codegree_at_least_two": 2,
+          "left_wedges": 43,
+          "maximum_edge_multiplicity": 2,
+          "maximum_left_codegree": 2,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5
+          ],
+          "right_wedges": 47
+        },
+        "sum_pair": {
+          "K22_witness": {
+            "common_right_vertices": [
+              241,
+              247,
+              268,
+              270,
+              273,
+              287
+            ],
+            "left_vertices": [
+              191,
+              241
+            ]
+          },
+          "duplicate_relations": 0,
+          "edges": 50,
+          "is_injective": true,
+          "left_degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            6,
+            6
+          ],
+          "left_pairs_with_codegree_at_least_two": 51,
+          "left_wedges": 82,
+          "maximum_edge_multiplicity": 1,
+          "maximum_left_codegree": 6,
+          "relations": 50,
+          "right_degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            16
+          ],
+          "right_wedges": 215
+        }
+      },
+      "expanded_difference_edge_graph": {
+        "K22_witness": {
+          "common_right_vertices": [
+            80,
+            117,
+            128,
+            148,
+            181,
+            273
+          ],
+          "left_vertices": [
+            273,
+            287
+          ]
+        },
+        "edges": 67,
+        "left_degrees": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          17
+        ],
+        "left_pairs_with_codegree_at_least_two": 26,
+        "left_wedges": 215,
+        "maximum_C4_free_subgraph": {
+          "C4_count": 102,
+          "maximum_edges": 50,
+          "minimum_edge_deletions": 17,
+          "status": "OPTIMAL",
+          "wall_time_seconds": 0.0938736
+        },
+        "maximum_left_codegree": 6,
+        "right_degrees": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          7,
+          8,
+          8
+        ],
+        "right_wedges": 137
+      },
+      "nonzero_difference_edge_graph": {
+        "K22_witness": {
+          "common_right_vertices": [
+            80,
+            117,
+            128,
+            148,
+            181
+          ],
+          "left_vertices": [
+            273,
+            287
+          ]
+        },
+        "edges": 50,
+        "left_degrees": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          16
+        ],
+        "left_pairs_with_codegree_at_least_two": 20,
+        "left_wedges": 165,
+        "maximum_left_codegree": 5,
+        "right_degrees": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          6,
+          7,
+          7
+        ],
+        "right_wedges": 87
+      },
+      "support_pairs_Uk": 51,
+      "target": 574,
+      "zero_difference_active": true
+    }
+  },
+  "explicit_carry1_K22": {
+    "edges": [
+      {
+        "complementary_sum": 334,
+        "difference": -48,
+        "left": 80,
+        "right": 128,
+        "sum_pair": [
+          87,
+          247
+        ]
+      },
+      {
+        "complementary_sum": 338,
+        "difference": -52,
+        "left": 80,
+        "right": 132,
+        "sum_pair": [
+          148,
+          190
+        ]
+      },
+      {
+        "complementary_sum": 327,
+        "difference": -41,
+        "left": 87,
+        "right": 128,
+        "sum_pair": [
+          80,
+          247
+        ]
+      },
+      {
+        "complementary_sum": 331,
+        "difference": -45,
+        "left": 87,
+        "right": 132,
+        "sum_pair": [
+          128,
+          203
+        ]
+      }
+    ],
+    "left_vertices": [
+      80,
+      87
+    ],
+    "right_vertices": [
+      128,
+      132
+    ]
+  },
+  "fold_repair": {
+    "C_D": 0,
+    "C_S": 0,
+    "U1_plus_U2": 145,
+    "delta": 138,
+    "four_p_cubed": 19652,
+    "missed_both_H0": 7,
+    "modular_overlap_I": 145,
+    "ratio_denominator": 4913,
+    "ratio_numerator": 19044,
+    "residual": 138,
+    "residual_squared": 19044
+  },
+  "profile": {
+    "B": [
+      80,
+      87,
+      117,
+      128,
+      132,
+      148,
+      156,
+      181,
+      190,
+      191,
+      203,
+      241,
+      247,
+      268,
+      270,
+      273,
+      287
+    ],
+    "Z": [
+      0,
+      7,
+      37,
+      48,
+      52,
+      68,
+      76,
+      101,
+      110,
+      111,
+      123,
+      161,
+      167,
+      188,
+      190,
+      193,
+      207
+    ],
+    "b": 2,
+    "gamma": 80,
+    "h": 288,
+    "minus_b_not_in_3B_minus_B": true,
+    "p": 17,
+    "sidon_including_diagonals": true
+  },
+  "schema_version": 1,
+  "verdict": "The direct difference-edge carry graph and every fixed obvious endpoint projection fail the codegree-one/C4-free KST premise, already when C_S=C_D=0."
+}

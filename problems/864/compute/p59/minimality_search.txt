@@ -1,0 +1,17 @@
+FOUND
+width=58
+Z=0,7,9,12,20,26,30,58
+G=15
+K=43
+x=37
+y=39
+A_x_mask=63
+A_y_mask=95
+intersection_mask=31
+b_x=6
+b_y=6
+q_parameter_x=2
+q_parameter_y=2
+intersection=5
+endpoint_sidon_rulers_scanned=2005269
+admissible_gaps_on_rulers_with_static_violations=1234661

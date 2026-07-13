@@ -1,0 +1,247 @@
+{
+  "arithmetic": "integer exhaustive",
+  "by_width": [
+    {
+      "normalized_rulers": 1,
+      "translations": 1,
+      "width": 1
+    },
+    {
+      "normalized_rulers": 1,
+      "translations": 2,
+      "width": 2
+    },
+    {
+      "normalized_rulers": 3,
+      "translations": 9,
+      "width": 3
+    },
+    {
+      "normalized_rulers": 3,
+      "translations": 12,
+      "width": 4
+    },
+    {
+      "normalized_rulers": 5,
+      "translations": 25,
+      "width": 5
+    },
+    {
+      "normalized_rulers": 7,
+      "translations": 42,
+      "width": 6
+    },
+    {
+      "normalized_rulers": 13,
+      "translations": 91,
+      "width": 7
+    },
+    {
+      "normalized_rulers": 15,
+      "translations": 120,
+      "width": 8
+    },
+    {
+      "normalized_rulers": 27,
+      "translations": 243,
+      "width": 9
+    },
+    {
+      "normalized_rulers": 25,
+      "translations": 250,
+      "width": 10
+    },
+    {
+      "normalized_rulers": 45,
+      "translations": 495,
+      "width": 11
+    },
+    {
+      "normalized_rulers": 59,
+      "translations": 708,
+      "width": 12
+    },
+    {
+      "normalized_rulers": 89,
+      "translations": 1157,
+      "width": 13
+    },
+    {
+      "normalized_rulers": 103,
+      "translations": 1442,
+      "width": 14
+    },
+    {
+      "normalized_rulers": 163,
+      "translations": 2445,
+      "width": 15
+    },
+    {
+      "normalized_rulers": 187,
+      "translations": 2992,
+      "width": 16
+    },
+    {
+      "normalized_rulers": 281,
+      "translations": 4777,
+      "width": 17
+    },
+    {
+      "normalized_rulers": 313,
+      "translations": 5634,
+      "width": 18
+    },
+    {
+      "normalized_rulers": 469,
+      "translations": 8911,
+      "width": 19
+    },
+    {
+      "normalized_rulers": 533,
+      "translations": 10660,
+      "width": 20
+    },
+    {
+      "normalized_rulers": 835,
+      "translations": 17535,
+      "width": 21
+    },
+    {
+      "normalized_rulers": 873,
+      "translations": 19206,
+      "width": 22
+    },
+    {
+      "normalized_rulers": 1319,
+      "translations": 30337,
+      "width": 23
+    },
+    {
+      "normalized_rulers": 1551,
+      "translations": 37224,
+      "width": 24
+    },
+    {
+      "normalized_rulers": 2093,
+      "translations": 52325,
+      "width": 25
+    },
+    {
+      "normalized_rulers": 2347,
+      "translations": 61022,
+      "width": 26
+    },
+    {
+      "normalized_rulers": 3477,
+      "translations": 93879,
+      "width": 27
+    },
+    {
+      "normalized_rulers": 3881,
+      "translations": 108668,
+      "width": 28
+    },
+    {
+      "normalized_rulers": 5363,
+      "translations": 155527,
+      "width": 29
+    },
+    {
+      "normalized_rulers": 5871,
+      "translations": 176130,
+      "width": 30
+    },
+    {
+      "normalized_rulers": 8267,
+      "translations": 256277,
+      "width": 31
+    },
+    {
+      "normalized_rulers": 9443,
+      "translations": 302176,
+      "width": 32
+    },
+    {
+      "normalized_rulers": 12887,
+      "translations": 425271,
+      "width": 33
+    },
+    {
+      "normalized_rulers": 14069,
+      "translations": 478346,
+      "width": 34
+    },
+    {
+      "normalized_rulers": 19229,
+      "translations": 673015,
+      "width": 35
+    },
+    {
+      "normalized_rulers": 22113,
+      "translations": 796068,
+      "width": 36
+    },
+    {
+      "normalized_rulers": 29359,
+      "translations": 1086283,
+      "width": 37
+    },
+    {
+      "normalized_rulers": 32229,
+      "translations": 1224702,
+      "width": 38
+    },
+    {
+      "normalized_rulers": 44127,
+      "translations": 1720953,
+      "width": 39
+    },
+    {
+      "normalized_rulers": 48659,
+      "translations": 1946360,
+      "width": 40
+    },
+    {
+      "normalized_rulers": 64789,
+      "translations": 2656349,
+      "width": 41
+    },
+    {
+      "normalized_rulers": 71167,
+      "translations": 2989014,
+      "width": 42
+    },
+    {
+      "normalized_rulers": 94625,
+      "translations": 4068875,
+      "width": 43
+    },
+    {
+      "normalized_rulers": 105699,
+      "translations": 4650756,
+      "width": 44
+    },
+    {
+      "normalized_rulers": 139119,
+      "translations": 6260355,
+      "width": 45
+    }
+  ],
+  "domain": "all normalized Sidon rulers of width <= 45, and all translations gamma with 0 <= gamma < width",
+  "elapsed_seconds": 95.51947960000052,
+  "maximum_slack": {
+    "B": [
+      44,
+      89
+    ],
+    "C_S": 1,
+    "C_S_minus_bound": 0,
+    "h": 90,
+    "p": 2
+  },
+  "normalized_rulers": 745733,
+  "ruler_sha256": "772e239cc1a5d1a02f7f2d9a63f5e53fab579cb472834c14446d3bd97e2e9e53",
+  "schema_version": 1,
+  "smallest_failure": null,
+  "translations": 30326669
+}

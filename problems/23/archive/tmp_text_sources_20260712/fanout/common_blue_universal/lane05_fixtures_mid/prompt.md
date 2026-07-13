@@ -1,0 +1,1 @@
+Read ../COMMON.md. Gate exact fixtures N=311 and N=2928 at MicroDemand scale, including every available canonical/global minimum row choice. Replay graph validity and max-cut/Gamma certificates, then run collision+25*HitNeed literal MicroMatching exact max-flow. Distinguish absent data from a pass and hash every input.

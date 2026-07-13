@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "arithmetic": "integer enumeration; modular rank plus two explicit rational null vectors",
+  "B": [
+    1,
+    128,
+    245,
+    327,
+    657,
+    703,
+    958,
+    977,
+    999,
+    1057,
+    1107,
+    1363,
+    1675,
+    1677,
+    1841,
+    1883,
+    1916,
+    2103,
+    2141,
+    2235,
+    2645,
+    2681,
+    2829,
+    2899,
+    3041,
+    3217,
+    3227,
+    3235,
+    3272,
+    3431,
+    3707,
+    3733,
+    3851,
+    4115,
+    4149,
+    4307,
+    4347,
+    4481,
+    4641,
+    4761,
+    4778,
+    4951,
+    5043,
+    5129,
+    5193,
+    5197,
+    5309,
+    5577,
+    5631,
+    5679,
+    5803,
+    5901,
+    5917,
+    5924,
+    6053,
+    6141,
+    6153,
+    6263,
+    6341,
+    6369,
+    6401,
+    6425,
+    6431,
+    6445,
+    6497,
+    6510,
+    6571
+  ],
+  "additions_to_lifted_P88": [
+    128,
+    958,
+    1916,
+    3272,
+    4778,
+    5924,
+    6510
+  ],
+  "sha256": "e9c01faaddc25c8df00bb49adfdcba99d8f73282d925c1c15ec48976b1c6726b",
+  "unique_pair_sums": 2278,
+  "literal_hole": false,
+  "literal_hole_intersection_size": 124,
+  "p": 67,
+  "h": 6572,
+  "b": 1,
+  "delta": 129,
+  "C_S": 199,
+  "T_F": 221,
+  "V_b": 20,
+  "intervals": 420,
+  "slots": 418,
+  "scalar_excess": 2,
+  "corrected_scalar_inequality": "T_F <= C_S + V_b",
+  "corrected_scalar_left": 221,
+  "corrected_scalar_right": 219,
+  "independent_P97_matcher_rejects": true,
+  "minimal_Hall_windows": [
+    [
+      -1444,
+      4730
+    ],
+    [
+      -1276,
+      4894
+    ]
+  ],
+  "minimal_Hall_window": [
+    -1444,
+    4730
+  ],
+  "minimal_Hall_window_intervals": 411,
+  "minimal_Hall_window_slots": 410,
+  "minimal_Hall_window_deficit": 1,
+  "minimal_Hall_window_canonical": 191,
+  "minimal_Hall_window_loose": 220,
+  "minimal_Hall_window_slot_kinds": {
+    "L": 199,
+    "U": 191,
+    "V": 20
+  },
+  "minimal_Hall_window_crossing_folds": 8,
+  "minimal_Hall_window_base_transfers": {
+    "base_crosses": 5,
+    "base_inside": 215
+  },
+  "P83_triangles_checked": 221,
+  "collision_certificates": [
+    {
+      "fold_id": 2,
+      "fold": [
+        128,
+        703,
+        958,
+        6445
+      ],
+      "phase_label": 832,
+      "difference_pair": [
+        5309,
+        6141
+      ],
+      "extra_slot_L": 126
+    },
+    {
+      "fold_id": 5,
+      "fold": [
+        128,
+        977,
+        2899,
+        4778
+      ],
+      "phase_label": 1106,
+      "difference_pair": [
+        1,
+        1107
+      ],
+      "extra_slot_L": 1793
+    },
+    {
+      "fold_id": 8,
+      "fold": [
+        128,
+        1107,
+        1883,
+        5924
+      ],
+      "phase_label": 1236,
+      "difference_pair": [
+        999,
+        2235
+      ],
+      "extra_slot_L": 647
+    },
+    {
+      "fold_id": 14,
+      "fold": [
+        657,
+        958,
+        1677,
+        6510
+      ],
+      "phase_label": 1616,
+      "difference_pair": [
+        2235,
+        3851
+      ],
+      "extra_slot_L": 61
+    },
+    {
+      "fold_id": 22,
+      "fold": [
+        245,
+        1675,
+        3851,
+        4641
+      ],
+      "phase_label": 1921,
+      "difference_pair": [
+        3272,
+        5193
+      ],
+      "extra_slot_L": 1930
+    },
+    {
+      "fold_id": 31,
+      "fold": [
+        1107,
+        1107,
+        2645,
+        6141
+      ],
+      "phase_label": 2215,
+      "difference_pair": [
+        1057,
+        3272
+      ],
+      "extra_slot_L": 430
+    },
+    {
+      "fold_id": 44,
+      "fold": [
+        703,
+        1916,
+        2681,
+        6510
+      ],
+      "phase_label": 2620,
+      "difference_pair": [
+        2141,
+        4761
+      ],
+      "extra_slot_L": 61
+    },
+    {
+      "fold_id": 63,
+      "fold": [
+        999,
+        2103,
+        4481,
+        5193
+      ],
+      "phase_label": 3103,
+      "difference_pair": [
+        1675,
+        4778
+      ],
+      "extra_slot_L": 1378
+    },
+    {
+      "fold_id": 72,
+      "fold": [
+        657,
+        2645,
+        3733,
+        6141
+      ],
+      "phase_label": 3303,
+      "difference_pair": [
+        128,
+        3431
+      ],
+      "extra_slot_L": 430
+    },
+    {
+      "fold_id": 81,
+      "fold": [
+        999,
+        2681,
+        3851,
+        6401
+      ],
+      "phase_label": 3681,
+      "difference_pair": [
+        2829,
+        6510
+      ],
+      "extra_slot_L": 170
+    },
+    {
+      "fold_id": 88,
+      "fold": [
+        999,
+        2829,
+        4347,
+        6053
+      ],
+      "phase_label": 3829,
+      "difference_pair": [
+        2681,
+        6510
+      ],
+      "extra_slot_L": 518
+    },
+    {
+      "fold_id": 96,
+      "fold": [
+        1883,
+        2103,
+        4641,
+        5917
+      ],
+      "phase_label": 3987,
+      "difference_pair": [
+        128,
+        4115
+      ],
+      "extra_slot_L": 654
+    },
+    {
+      "fold_id": 98,
+      "fold": [
+        999,
+        3041,
+        4115,
+        6497
+      ],
+      "phase_label": 4041,
+      "difference_pair": [
+        1883,
+        5924
+      ],
+      "extra_slot_L": 74
+    },
+    {
+      "fold_id": 105,
+      "fold": [
+        1057,
+        3217,
+        5043,
+        5803
+      ],
+      "phase_label": 4275,
+      "difference_pair": [
+        2235,
+        6510
+      ],
+      "extra_slot_L": 768
+    },
+    {
+      "fold_id": 131,
+      "fold": [
+        1107,
+        3851,
+        5129,
+        6401
+      ],
+      "phase_label": 4959,
+      "difference_pair": [
+        958,
+        5917
+      ],
+      "extra_slot_L": 170
+    },
+    {
+      "fold_id": 141,
+      "fold": [
+        1883,
+        3272,
+        5803,
+        5924
+      ],
+      "phase_label": 5156,
+      "difference_pair": [
+        1107,
+        6263
+      ],
+      "extra_slot_L": 647
+    },
+    {
+      "fold_id": 142,
+      "fold": [
+        2141,
+        3041,
+        5309,
+        6445
+      ],
+      "phase_label": 5183,
+      "difference_pair": [
+        958,
+        6141
+      ],
+      "extra_slot_L": 126
+    },
+    {
+      "fold_id": 149,
+      "fold": [
+        1675,
+        3707,
+        5901,
+        6053
+      ],
+      "phase_label": 5383,
+      "difference_pair": [
+        958,
+        6341
+      ],
+      "extra_slot_L": 518
+    },
+    {
+      "fold_id": 153,
+      "fold": [
+        1057,
+        4481,
+        5679,
+        6431
+      ],
+      "phase_label": 5539,
+      "difference_pair": [
+        958,
+        6497
+      ],
+      "extra_slot_L": 140
+    },
+    {
+      "fold_id": 180,
+      "fold": [
+        703,
+        5309,
+        6153,
+        6431
+      ],
+      "phase_label": 6013,
+      "difference_pair": [
+        128,
+        6141
+      ],
+      "extra_slot_L": 140
+    }
+  ],
+  "closure_fold_equations": 193,
+  "variables_marks_plus_h": 68,
+  "modular_primes": [
+    1000003,
+    1000033
+  ],
+  "full_ranks": [
+    66,
+    66
+  ],
+  "closure_ranks": [
+    66,
+    66
+  ],
+  "exact_rational_rank": 66,
+  "exact_rational_nullity": 2,
+  "difference_gcd": 1,
+  "parent_row": {
+    "p": 60,
+    "h": 6572,
+    "b": 1,
+    "delta": -1201,
+    "C_S": 182,
+    "T_F": 200,
+    "V_b": 0,
+    "intervals": 382,
+    "slots": 364,
+    "scalar_excess": 18
+  },
+  "affine_scale_rows": [
+    {
+      "p": 67,
+      "h": 6572,
+      "b": 1,
+      "delta": 129,
+      "C_S": 199,
+      "T_F": 221,
+      "V_b": 20,
+      "intervals": 420,
+      "slots": 418,
+      "scalar_excess": 2
+    },
+    {
+      "p": 67,
+      "h": 13144,
+      "b": 1,
+      "delta": -6443,
+      "C_S": 199,
+      "T_F": 221,
+      "V_b": 0,
+      "intervals": 420,
+      "slots": 398,
+      "scalar_excess": 22
+    },
+    {
+      "p": 67,
+      "h": 19716,
+      "b": 1,
+      "delta": -13015,
+      "C_S": 199,
+      "T_F": 221,
+      "V_b": 0,
+      "intervals": 420,
+      "slots": 398,
+      "scalar_excess": 22
+    }
+  ]
+}

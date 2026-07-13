@@ -1,0 +1,152 @@
+{
+  "all_jobs_complete": true,
+  "arithmetic": "CP-SAT Boolean feasibility; exact Python integer audit of every solution",
+  "domain": "all endpoint-normalized sets B subset [0,H], 31<=H<=32, b in {1,2}, under Sidon, positive-defect, literal-hole gates",
+  "failures": 0,
+  "jobs": [
+    {
+      "H": 31,
+      "b": 1,
+      "best": {
+        "B": [
+          3,
+          23,
+          25,
+          26,
+          31
+        ],
+        "C_S": 0,
+        "T_F": 0,
+        "b": 1,
+        "delta": 4,
+        "h": 32,
+        "maximum_component_excess": 0,
+        "maximum_component_folds": 0,
+        "maximum_component_triangles": 0,
+        "p": 5
+      },
+      "branches": 164142,
+      "complete": true,
+      "conflicts": 3862,
+      "failures": 0,
+      "h": 32,
+      "hole_constraints": 1041,
+      "largest_tight": null,
+      "minimum_p": 5,
+      "nonzero_triangle_rows": 20,
+      "solutions": 5871,
+      "status": "OPTIMAL",
+      "tight_rows": 0,
+      "wall_time_seconds": 1.5873882000000001
+    },
+    {
+      "H": 31,
+      "b": 2,
+      "best": {
+        "B": [
+          10,
+          11,
+          18,
+          28,
+          31
+        ],
+        "C_S": 0,
+        "T_F": 0,
+        "b": 2,
+        "delta": 4,
+        "h": 32,
+        "maximum_component_excess": 0,
+        "maximum_component_folds": 0,
+        "maximum_component_triangles": 0,
+        "p": 5
+      },
+      "branches": 202865,
+      "complete": true,
+      "conflicts": 4678,
+      "failures": 0,
+      "h": 32,
+      "hole_constraints": 950,
+      "largest_tight": null,
+      "minimum_p": 5,
+      "nonzero_triangle_rows": 32,
+      "solutions": 8014,
+      "status": "OPTIMAL",
+      "tight_rows": 0,
+      "wall_time_seconds": 2.2274291
+    },
+    {
+      "H": 32,
+      "b": 1,
+      "best": {
+        "B": [
+          4,
+          22,
+          24,
+          25,
+          32
+        ],
+        "C_S": 0,
+        "T_F": 0,
+        "b": 1,
+        "delta": 3,
+        "h": 33,
+        "maximum_component_excess": 0,
+        "maximum_component_folds": 0,
+        "maximum_component_triangles": 0,
+        "p": 5
+      },
+      "branches": 228296,
+      "complete": true,
+      "conflicts": 4823,
+      "failures": 0,
+      "h": 33,
+      "hole_constraints": 1137,
+      "largest_tight": null,
+      "minimum_p": 5,
+      "nonzero_triangle_rows": 7,
+      "solutions": 9150,
+      "status": "OPTIMAL",
+      "tight_rows": 0,
+      "wall_time_seconds": 3.7919401
+    },
+    {
+      "H": 32,
+      "b": 2,
+      "best": {
+        "B": [
+          0,
+          17,
+          22,
+          29,
+          32
+        ],
+        "C_S": 0,
+        "T_F": 0,
+        "b": 2,
+        "delta": 3,
+        "h": 33,
+        "maximum_component_excess": 0,
+        "maximum_component_folds": 0,
+        "maximum_component_triangles": 0,
+        "p": 5
+      },
+      "branches": 223370,
+      "complete": true,
+      "conflicts": 4295,
+      "failures": 0,
+      "h": 33,
+      "hole_constraints": 1041,
+      "largest_tight": null,
+      "minimum_p": 5,
+      "nonzero_triangle_rows": 9,
+      "solutions": 8805,
+      "status": "OPTIMAL",
+      "tight_rows": 0,
+      "wall_time_seconds": 3.2201791
+    }
+  ],
+  "schema_version": 1,
+  "solutions": 31840,
+  "tight_rows": 0,
+  "workers": 4
+}

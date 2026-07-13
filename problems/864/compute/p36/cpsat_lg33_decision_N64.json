@@ -1,0 +1,12 @@
+{
+  "N": 64,
+  "H": 16,
+  "target": "lg33_margin >= 1",
+  "status": "INFEASIBLE",
+  "workers": 32,
+  "time_limit_seconds": 180.0,
+  "wall_seconds": 72.34613279999758,
+  "conflicts": 697201,
+  "branches": 1858408,
+  "no_falsifier_certified": true
+}

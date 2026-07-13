@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integer CP-SAT",
+  "p": 25,
+  "H": 493,
+  "h": 494,
+  "b": 1,
+  "delta": 432,
+  "target_C_S": 48,
+  "pair_variables_including_diagonals": 122265,
+  "hole_constraints": 121771,
+  "status": "UNKNOWN",
+  "wall_time_seconds": 310.26150440000004,
+  "branches": 735450,
+  "conflicts": 77453
+}
