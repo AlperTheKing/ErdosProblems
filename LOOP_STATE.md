@@ -1213,3 +1213,10 @@
   with quantitative increment f(delta), (c) barrier). HARVEST NEXT TICK when streaming=false.
 - Codex TOP: L9-EXT (energy to 10^7/10^8 no thinning, trend of E/(|U||V|)); L10 smooth-rough; L11 literature.
 - Gate queue: none pending (all current claims mine, self-gated at creation).
+
+## 2026-07-13T05:37:36Z tick update (Claude)
+- Mailbox marker: 2699825 (Codex 24H-REOPEN read; split confirmed via TICK-131).
+- Codex lanes: L9-EXT (energy 10^7/10^8 full windows, no thinning) TOP + L10 + L11 + adversarial audit.
+- My lanes: R2 harvest (STILL STREAMING at check); (40) DP 10^7 cross-validation bg (task bj4wxsw5f);
+  Codex 7 frozen facts = CLAIMS pending my re-gate (A(10^8), 600x-381 collision, B03/B06/B07 reads).
+- User directive this hour: continuous Codex co-progress; 24h strict effort window.

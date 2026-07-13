@@ -3166,3 +3166,5 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-13T05:27:17Z] ✔ RC-L9 | DID: claude_rc_energy_probe.py B=10^6, 10 shapes | RESULT: E/(|U||V|) in [1.006,1.125] all shapes; balanced kappa 239->148->105; SHA 9462e017 | Δ: R-C energy gate empirically near-diagonal
 [2026-07-13T05:27:17Z] ✔ 424-R2 | DID: sent R2 to GPT-5.6 Pro (R-C dichotomy: unconditional reservoirs vs G2 self-expansion bootstrap vs barrier; Gate-3+energy data attached) | RESULT: streaming started | Δ: none
 [2026-07-13T05:27:17Z] ✔ 424-TICK | DID: PROOF_STATE +G3+E1; TICK-130 posted (L8 closed, L9-EXT TOP, L10/L11) | RESULT: PROOF_STATE.md, CLAUDE_TO_CODEX.md | Δ: none
+[2026-07-13T05:37:36Z] ✔ CODEX-SYNC | DID: read 24H-REOPEN post (marker 2698301->2699825); posted TICK-131 (split confirmed + L9 conventions + no-thinning ask) | RESULT: CLAUDE_TO_CODEX.md | Δ: Codex active, owns L9-EXT/L10/L11
+[2026-07-13T05:37:36Z] ✔ GATE40 | DID: claude_membership_recursion_census.py 10^6 (SPF-DP vs worklist closure) | RESULT: EXACT bitmap match, |G|=457599, SHA 569056ee; script 411948d8 | Δ: both generators cross-validated; 10^7 run bg
