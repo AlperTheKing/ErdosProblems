@@ -9,8 +9,8 @@
 static std::vector<std::uint8_t> closure(std::uint64_t modulus) {
     std::vector<std::uint8_t> seen(modulus, 0);
     std::queue<std::uint64_t> pending;
-    for (std::uint64_t seed : {1ULL, 2ULL, 4ULL}) {
-        const auto residue = seed % modulus;
+    for (std::uint64_t root : {9ULL, 14ULL}) {
+        const auto residue = root % modulus;
         if (!seen[residue]) {
             seen[residue] = 1;
             pending.push(residue);
@@ -19,15 +19,17 @@ static std::vector<std::uint8_t> closure(std::uint64_t modulus) {
     while (!pending.empty()) {
         const auto x = pending.front();
         pending.pop();
-        for (const auto y : std::array<std::uint64_t, 3>{
-                 2 * x, (3 * x + 1) % modulus, (5 * x + 3) % modulus}) {
-            const auto residue = y % modulus;
+        for (const auto residue : std::array<std::uint64_t, 3>{
+                 (2 * x + modulus - 1) % modulus,
+                 (3 * x + modulus - 1) % modulus,
+                 (5 * x + modulus - 1) % modulus}) {
             if (!seen[residue]) {
                 seen[residue] = 1;
                 pending.push(residue);
             }
         }
     }
+    for (std::uint64_t seed : {2ULL, 3ULL, 5ULL}) seen[seed % modulus] = 1;
     return seen;
 }
 

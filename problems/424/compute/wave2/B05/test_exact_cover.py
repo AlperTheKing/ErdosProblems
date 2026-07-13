@@ -12,6 +12,7 @@ from search_exact_cover import (
     exact_cover,
     exact_cover_cp_sat,
     generate_affines,
+    passes_outer_image_obstruction,
     progression_candidates,
 )
 
@@ -53,6 +54,11 @@ class ExactCoverTests(unittest.TestCase):
         candidates = progression_candidates([affine], 2, 1, 6)
         self.assertEqual(len(candidates), 1)
         self.assertEqual(candidates[0].mask, class_mask(3, 6, 6))
+
+    def test_outer_image_obstruction(self) -> None:
+        self.assertFalse(passes_outer_image_obstruction(1, (0,)))
+        self.assertTrue(passes_outer_image_obstruction(6, (0, 1, 2, 4)))
+        self.assertFalse(passes_outer_image_obstruction(6, (3,)))
 
 
 if __name__ == "__main__":

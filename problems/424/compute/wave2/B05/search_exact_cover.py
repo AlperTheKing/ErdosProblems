@@ -268,6 +268,16 @@ def seed_for_domain(q: int, residues: set[int]) -> tuple[int, int, int] | None:
     return None
 
 
+def passes_outer_image_obstruction(q: int, residues: Iterable[int]) -> bool:
+    """Necessary condition for a periodic domain covered by nonempty D-words.
+
+    Every word image lies in g_d(Z) for its last letter d.  Dirichlet's
+    theorem shows that qZ+r is contained in the finite union of these images
+    only if one d in D divides both q and r+2.
+    """
+    return all(any(q % d == 0 and (residue + 2) % d == 0 for d in D) for residue in residues)
+
+
 def certificate(
     q: int,
     residues: tuple[int, ...],
@@ -298,10 +308,14 @@ def search_progressions(args: argparse.Namespace, affines: list[Affine]) -> dict
     total_nodes = 0
     cases = 0
     truncated = 0
+    obstructed = 0
     for q in range(1, args.q_max + 1):
         for residue in range(q):
             seed = seed_for_domain(q, {residue})
             if seed is None:
+                continue
+            if not passes_outer_image_obstruction(q, (residue,)):
+                obstructed += 1
                 continue
             cases += 1
             candidates = progression_candidates(affines, q, residue, args.master)
@@ -317,7 +331,7 @@ def search_progressions(args: argparse.Namespace, affines: list[Affine]) -> dict
                 return certificate(q, (residue,), result, seed)
     print(
         f"NO_CERT mode=progression cases={cases} nodes={total_nodes} "
-        f"truncated={truncated}"
+        f"truncated={truncated} outer_obstructed={obstructed}"
     )
     return None
 
@@ -326,11 +340,15 @@ def search_unions(args: argparse.Namespace, affines: list[Affine]) -> dict | Non
     total_nodes = 0
     cases = 0
     truncated = 0
+    obstructed = 0
     for q in range(2, args.union_q_max + 1):
         for residue_mask in range(1, 1 << q):
             residues = tuple(i for i in range(q) if residue_mask >> i & 1)
             seed = seed_for_domain(q, set(residues))
             if seed is None:
+                continue
+            if not passes_outer_image_obstruction(q, residues):
+                obstructed += 1
                 continue
             cases += 1
             target, candidates = union_candidates(affines, q, residues, args.master)
@@ -345,7 +363,7 @@ def search_unions(args: argparse.Namespace, affines: list[Affine]) -> dict | Non
                 return certificate(q, residues, result, seed)
     print(
         f"NO_CERT mode=union cases={cases} nodes={total_nodes} "
-        f"truncated={truncated}"
+        f"truncated={truncated} outer_obstructed={obstructed}"
     )
     return None
 

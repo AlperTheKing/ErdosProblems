@@ -34417,6 +34417,26 @@
 [2026-07-13T05:53:36+03:00] OK PLAN | DID: Derived periodic residue-core lemma and finite base reduction | RESULT: criterion Q_d(r) subset R for d quotient states; frontier is nonempty exact core | D: PLAN -> ATTACK
 [2026-07-13T05:53:36+03:00] > ATTACK | NEXT: Implement and run greatest-fixed-point searches over smooth moduli using verified A-divisor multipliers and exact quotient states.
 [2026-07-13T05:56:18+03:00] > ATTACK | NEXT: Run search_periodic_core.py on M=30,90,270,630,1890,5670,13230,39690 with all exact A-divisors and no base mask.
+[2026-07-13T05:58:21+03:00] OK ATTACK | DID: Ran exact quotient-state core search on 8 moduli | RESULT: every core empty; M=39690 used 19 A-divisors and emptied in 10 passes | D: periodic-class lemma dead
+[2026-07-13T05:58:21+03:00] > ATTACK | NEXT: Census fixed alphabets D=A intersect [2,K] for K=5,20,100,1000 through N=1e6, retaining exact membership and gap data.
+[2026-07-13T05:59:41+03:00] OK ATTACK | DID: Ran fixed-alphabet census to N=1e6 | RESULT: densities K=5:.197450,K=20:.343572,K=100:.424869,K=1000:.457599; gaps 459,44,24,21 | D: none
+[2026-07-13T05:59:41+03:00] > ATTACK | NEXT: Run exact D={2,3,5} parent-mask census at N=1e6 and compute each overlap-state frequency.
+[2026-07-13T06:04:06+03:00] OK ATTACK | DID: Ran D={2,3,5} mask census at N=1e6 | RESULT: masks 3:3286,5:3058,6:1738,7:3; 8088 excess representations | D: none
+[2026-07-13T06:04:06+03:00] > ATTACK | NEXT: Search all 6 priorities for D={2,3,5}, sieve m=30, state Q=900, 100 exact-residue transfer iterations.
+[2026-07-13T06:04:29+03:00] OK ATTACK | DID: Tested all D={2,3,5} priorities at m=30,Q=900 | RESULT: best order 5,2,3 has Collatz interval [0.867968390532199,.200] | D: routing subcritical
+[2026-07-13T06:04:29+03:00] > ATTACK | NEXT: Refine D={2,3,5} sieve to m=900,Q=27000 across all 6 priorities and 100 transfer iterations.
+[2026-07-13T06:04:55+03:00] OK ATTACK | DID: Refined canonical routing to m=900,Q=27000 | RESULT: best Collatz interval [0.923242468361577,.748], still below 1 | D: none
+[2026-07-13T06:04:55+03:00] FAIL ATTACK | DID: Abandoned supercritical disjoint routing | RESULT: disjoint residue images inject into target residue mass, forcing transfer radius at most 1 | D: frontier -> overlap second moment
+[2026-07-13T06:04:55+03:00] > GATE | NEXT: Search primary affine-semigroup literature for a supercritical-orbit or collision-moment theorem applicable to f_d(n)=dn-1.
+[2026-07-13T06:10:09+03:00] OK GATE | DID: Searched primary affine-orbit/IFS literature and audited B01-B03 | RESULT: only exact-cover positive-density theorem found; B01 census falls through 1e11 | D: GATE -> ATTACK
+[2026-07-13T06:10:09+03:00] > ATTACK | NEXT: Build exact C++ census for D=A intersect [2,100] and test density/max gap through N=1e8 with 23 fixed multipliers.
+[2026-07-13T06:11:58+03:00] OK ATTACK | DID: Ran 23-multiplier exact subclosure to N=1e8 | RESULT: count=45233066; density=.45233066; max gap=24 at (89259,89283) | D: frontier -> bounded-gap descent
+[2026-07-13T06:11:58+03:00] > ATTACK | NEXT: Run the same exact 23-multiplier recurrence to N=1e9 and test whether any gap exceeds 24.
+[2026-07-13T06:12:41+03:00] FAIL ATTACK | DID: Started N=1e9 fixed-alphabet census | RESULT: interrupted before output; nothing | D: none
+[2026-07-13T06:12:41+03:00] > DECIDE | NEXT: Write B06 audit with NOT SOLVED verdict, exact N=1e8 result, and periodic residue-core falsifier.
+[2026-07-13T06:14:49+03:00] OK DECIDE | DID: Wrote B06 complement-sieve audit | RESULT: problems/424/fanout/wave2/B06_complement_sieve.md states NOT SOLVED and proves periodic-core falsifier | D: DECIDE -> VERIFY
+[2026-07-13T06:14:49+03:00] > VERIFY | NEXT: Syntax-check B06 Python, run targeted diff check, and confirm no interrupted census process remains.
+[2026-07-13T06:15:41+03:00] OK VERIFY | DID: Compiled 3 Python files, replayed M=30 core, checked whitespace/processes | RESULT: core=0/30; no census process; no B06 trailing whitespace | D: none
 [2026-07-13T02:49:18Z] OK PLAN | DID: Reduced certificates to periodic invariance, disjoint images, and exact reciprocal-slope sum | RESULT: finite modular checks suffice | D: PLAN -> ATTACK
 [2026-07-13T02:49:18Z] > ATTACK | NEXT: Implement exact word generation, progression/finite-union cover search, and independent certificate replay in wave2/B05.
 [2026-07-13T02:52:32Z] OK ATTACK | DID: Implemented exact modular search and independent verifier | RESULT: problems/424/compute/wave2/B05 has 3 Python files | D: none
@@ -34425,3 +34445,64 @@
 [2026-07-13T02:54:53Z] > ATTACK | NEXT: Measure candidate conflicts by modulus and add arithmetic obstruction pruning before relaunch.
 [2026-07-13T02:56:15Z] OK ATTACK | DID: Measured master=2160 model and added CP-SAT backend | RESULT: 1058 maps; q=1 has 14776 incidences | D: none
 [2026-07-13T02:56:15Z] > ATTACK | NEXT: Re-run tests and exact CP-SAT search with master=2160, depth=7, q<=48, union q<=10, workers=16.
+[2026-07-13T05:58:52+03:00] > SELECT | NEXT: Select #424 nonlinear bootstrap from arbitrary generated multipliers; exclude fixed {2,3,5} affine subsystem.
+[2026-07-13T06:00:14+03:00] OK SELECT | DID: Read #424 statement, proof state, literature, and affine red-team reports | RESULT: frontier is overlap control for unions bA-1 | D: SELECT -> GATE
+[2026-07-13T06:00:14+03:00] > GATE | NEXT: Verify current open status and search literature for nonlinear product/fanout lower bounds for A005244.
+[2026-07-13T06:03:00+03:00] OK GATE | DID: Checked official #424, OEIS A005244, and exact-phrase searches | RESULT: #424 open; official page has 0 comments and no partial solution | D: GATE -> PLAN
+[2026-07-13T06:03:00+03:00] > PLAN | NEXT: Prove equal-slope block lower bound, then test all-multiplier fanout collision control as the frontier lemma.
+[2026-07-13T06:03:00+03:00] OK PLAN | DID: Reduced bootstrap to balanced-word intercept injectivity and product-collision control | RESULT: six {2,3,5} permutations give slopes 30 and digits 9,10,13,16,19,21 | D: PLAN -> ATTACK
+[2026-07-13T06:03:00+03:00] > ATTACK | NEXT: Enumerate balanced {2,3,5} words for k<=6 and measure exact intercept collisions and induced exponents.
+[2026-07-13T06:07:52+03:00] OK ATTACK | DID: Enumerated balanced blocks through k=6 | RESULT: k=3 has 1663/1680 intercepts; words 322255 and 255232 both give 600x-381 | D: injective-block route dead
+[2026-07-13T06:07:52+03:00] > ATTACK | NEXT: Prove a polynomial-growth, zero-density restricted closure from seeds {9,10} as an exact dynamic-multiplier counterexample.
+[2026-07-13T06:09:58+03:00] OK ATTACK | DID: Proved target power lower bound and {9,10} bootstrap counterexample | RESULT: problems/424/fanout/wave2/B07_nonlinear_bootstrap.md | D: ATTACK -> VERIFY
+[2026-07-13T06:09:58+03:00] > VERIFY | NEXT: Replay affine coefficients, exponent inequalities, floor constants, distinctness, and report/log invariants.
+[2026-07-13T03:00:02Z] OK ATTACK | DID: Completed CP-SAT master=2160 search | RESULT: 1019 progression and 2024 union cases INFEASIBLE; 0 UNKNOWN | D: bounded obstruction
+[2026-07-13T03:00:02Z] > ATTACK | NEXT: Add the Dirichlet outer-image filter and relaunch a larger exact search.
+[2026-07-13T05:57:30+03:00] FAIL ATTACK | DID: Red-teamed affine {2,3,5} subsystem | RESULT: B(1e11)=18222202754; modular occupancy falls through 30^7 | D: fixed alphabet dead
+[2026-07-13T05:59:00+03:00] FAIL ATTACK | DID: Exhausted finite residue-decodable block automata | RESULT: B03 proves rho<1 for class; 384 mod-30 selectors empty | D: automaton class dead
+[2026-07-13T03:01:03Z] OK ATTACK | DID: Added and tested Dirichlet outer-image obstruction | RESULT: 5 tests pass; master=12960 gives 6296 maps at depth 9 | D: none
+[2026-07-13T03:01:03Z] > ATTACK | NEXT: Search master=12960, depth=9 progressions q<=120, then unions q<=12, with exact CP-SAT and 16 workers.
+[2026-07-13T06:01:18+03:00] > GATE | NEXT: Audit #424 literature and local wave1/wave2 results for nonlinear factor-sieve density claims.
+[2026-07-13T06:01:54+03:00] OK GATE | DID: Searched current problem page, forum, OEIS, and web | RESULT: erdosproblems.com/424 says open, no claimed partial solutions | D: GATE -> PLAN
+[2026-07-13T06:01:54+03:00] > PLAN | NEXT: Derive a factor-sieve lemma for products of two A-elements and isolate the exceptional overlap term.
+[2026-07-13T03:02:47Z] OK ATTACK | DID: Searched master=12960 depth=9 progressions q<=120 | RESULT: 2272 INFEASIBLE, 0 UNKNOWN, 3451 outer-obstructed | D: none
+[2026-07-13T03:02:47Z] > ATTACK | NEXT: Search all safely seeded residue unions q<=12 at master=12960, depth=9, with CP-SAT and 16 workers.
+[2026-07-13T03:03:02Z] OK ATTACK | DID: Derived exact normal-form Dirichlet criterion | RESULT: relation 255232=322255 gives map 600x-381 | D: frontier=orbit-relative collisions
+[2026-07-13T03:03:02Z] > VERIFY | NEXT: Implement B04 exact relation census and test the renewal certificate on all words through depth 12.
+[2026-07-13T06:07:42+03:00] OK PLAN | DID: Derived A_2-divisor descent and incidence inequality for allowed complement C | RESULT: frontier is lower-bounding A_2 divisors of n+1 on C | D: PLAN -> ATTACK
+[2026-07-13T06:07:42+03:00] > ATTACK | NEXT: Census C through 2000000 by exact SPF recursion; measure A_2-divisor descent and mod-3-sifted exceptions for z=10,100,1000,10000.
+[2026-07-13T06:08:50+03:00] OK ATTACK | DID: Ran exact SPF census X=2000000 at 4 cutoffs | RESULT: |C|=391539; z=10000 has 204654 incidences but 264580 zero-divisor cases | D: none
+[2026-07-13T06:08:50+03:00] > ATTACK | NEXT: Classify all C<=2000000 by existence of any A_2 divisor of n+1 and isolate the mod-3-prime-factor obstruction.
+[2026-07-13T06:10:24+03:00] OK ATTACK | DID: Classified every C<=2000000 by all A_2 divisors | RESULT: 240770/391539 have none; 157337 have n+1 supported on primes 1 mod 3 | D: obstruction
+[2026-07-13T06:10:24+03:00] > ATTACK | NEXT: Count exact blind family n+1=s or 3s through 2000000 and verify it is contained in C with zero A_2 incidence.
+[2026-07-13T06:11:04+03:00] FAIL ATTACK | DID: Tested blind-family containment through 2000000 | RESULT: assertion failed; test included seed n=2 with n+1=3 | D: none
+[2026-07-13T06:11:04+03:00] > ATTACK | NEXT: Re-run the exact blind-family test on n>=4, excluding the seed boundary, and print the first counterexample if any.
+[2026-07-13T06:12:25+03:00] OK VERIFY | DID: Replayed affine coefficients and bounds | RESULT: collision=(600,381); theta=0.9517757<1 | D: VERIFY -> CHECK
+[2026-07-13T06:12:25+03:00] > CHECK | NEXT: Classify whether B07 meets the requested cX-or-obstruction deliverable.
+[2026-07-13T06:12:25+03:00] OK CHECK | DID: Audited theorem scope | RESULT: exact {9,10} counterexample; #424 remains open | D: CHECK -> DECIDE
+[2026-07-13T06:12:25+03:00] > DECIDE | NEXT: Return the report, unsolved status, and exact falsifier.
+[2026-07-13T06:12:25+03:00] OK DECIDE | DID: Finalized B07 report | RESULT: problems/424/fanout/wave2/B07_nonlinear_bootstrap.md | D: task complete; #424 open
+[2026-07-13T03:13:00Z] FAIL ATTACK | DID: Stopped master=12960 depth=9 union q<=12 search at audit deadline | RESULT: nothing | D: no claim from interrupted run
+[2026-07-13T03:13:00Z] > VERIFY | NEXT: Write the exact outer-image obstruction and bounded-search audit, then run the 5 B05 tests.
+[2026-07-13T06:13:17+03:00] OK ATTACK | DID: Re-ran blind-family check for n>=4 | RESULT: X=2000000 has 211850 cases: 157337 of s-1 and 54513 of 3s-1 | D: exact obstruction
+[2026-07-13T06:13:17+03:00] > VERIFY | NEXT: Write and referee-check the descent lemma, Selberg-Delange obstruction, boundary falsifier, and exact census in B08 report.
+[2026-07-13T03:13:52Z] OK VERIFY | DID: Ran B04 exact relation and automaton tests | RESULT: 6 tests pass; depth-12 rules have A^50*1 >= 1.0220714566*1 | D: no density verdict
+[2026-07-13T03:13:52Z] FAIL CHECK | DID: Audited affine renewal lane | RESULT: 255232=322255=600x-381 falsifies distinct-word counting | D: #424 remains open
+[2026-07-13T03:13:52Z] OK DECIDE | DID: Wrote B04 audit | RESULT: problems/424/fanout/wave2/B04_affine_renewal.md | D: task complete; not solved
+[2026-07-13T03:14:29Z] OK VERIFY | DID: Ran B05 tests and diff check | RESULT: 5 tests pass; no whitespace errors | D: VERIFY -> CHECK
+[2026-07-13T03:14:29Z] OK CHECK | DID: Audited exact-cover scope | RESULT: Proposition 3.1 is unbounded; bounded searches found no certificate | D: CHECK -> DECIDE
+[2026-07-13T03:14:29Z] > DECIDE | NEXT: Return B05 report with explicit open status, falsifier, and interrupted-run caveat.
+[2026-07-13T03:14:29Z] OK DECIDE | DID: Finalized B05 audit | RESULT: problems/424/fanout/wave2/B05_exact_cover_compositions.md | D: task complete; #424 open
+[2026-07-13T06:14:57+03:00] OK VERIFY | DID: Referee-checked both proofs, boundary, count formula, and diff | RESULT: B08 exists; git diff --check exits 0 | D: VERIFY -> CHECK
+[2026-07-13T06:14:57+03:00] > CHECK | NEXT: Decide whether Lemmas 1-2 settle density or only give a quantified factor-sieve obstruction.
+[2026-07-13T06:14:57+03:00] OK CHECK | DID: Compared result with positive-density goal | RESULT: C(X)>=((4kappa/3)+o(1))X/sqrt(log X); no upper bound below 2X/3 | D: CHECK -> DECIDE
+[2026-07-13T06:14:57+03:00] > DECIDE | NEXT: Return B08 exact descent lemma and obstruction with #424 explicitly open.
+[2026-07-13T06:14:57+03:00] OK DECIDE | DID: Finalized B08 report | RESULT: problems/424/fanout/wave2/B08_nonlinear_factor_sieve.md | D: task complete; #424 open
+[2026-07-13T06:16:30+03:00] OK ATTACK | DID: Proved six-digit block lower bound | RESULT: A(X)>=(1/6)(X/9)^(log 6/log 30) for X>=9 | D: new exact lower bound
+[2026-07-13T06:16:30+03:00] FAIL ATTACK | DID: Audited periodic covers and nonlinear bootstraps | RESULT: B03/B05/B07/B08 give exact route obstructions | D: frontier=seed-specific product expansion
+[2026-07-13T06:16:30+03:00] > VERIFY | NEXT: Replay focused exact unit-test suites and freeze sprint dossier.
+[2026-07-13T06:17:30+03:00] OK VERIFY | DID: Replayed B01-B05 focused suites | RESULT: 23/23 Python tests pass | D: none
+[2026-07-13T06:17:30+03:00] > DECIDE | NEXT: Freeze one-hour result as NOT SOLVED with exact lower bound and route obstructions.
+[2026-07-13T06:17:30+03:00] FAIL DECIDE | DID: Closed #424 one-hour sprint | RESULT: problems/424/SPRINT_RESULT.md; no cX or zero-density proof | D: problem remains open
+[2026-07-13T06:25:00+03:00] OK VERIFY | DID: Audited all sprint deliverables and agent shutdown | RESULT: 8 required artifacts nonempty; 9/9 agents closed; 23/23 tests pass | D: none
+[2026-07-13T06:25:00+03:00] OK DECIDE | DID: Completed strict #424 sprint objective | RESULT: NOT SOLVED dossier meets T+60 protocol | D: stop
