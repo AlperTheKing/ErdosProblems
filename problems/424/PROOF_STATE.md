@@ -184,3 +184,48 @@ the same mechanism at reachable scale.
 D_4 = 1054111467, sqrt(n)D/M = 0.3075. Sequence 0.4082, 0.3493, 0.3222, 0.3075 with decrements
 -0.0589, -0.0271, -0.0147 (ratios 0.46, 0.54) => geometric-looking convergence to ~0.29-0.30 > 0.
 FIRST EMPIRICAL SUPPORT FOR GATE (M) on a supercritical ray. Ray (2,1,1) k=5,6 still running.
+
+## C16/C22 contraction frontier (2026-07-13)
+
+- Let M(X) count allowed holes, E(X) splitless holes, and R(X)=M(X)-E(X) reducible holes. Exact every-cutoff computation gives R(X)<=M(floor((X+1)/2))+M(floor((X+1)/3)) for every X<=10^9, with zero failures. At 10^9: M=131390048, E=88550127, R=42839921.
+- The stronger partition inequality `odd_seed2 + hard <= Mhalf` also has zero failures through 10^9. Together with the proved E(X)=o(X), either contraction would force M(X)=o(X) by a limsup argument.
+- C22 proves that the two-scale inequality does not follow from forward closure alone. Exact CP-SAT finds the first closed-superset countermodel at X=362, with excess 1. It contains unsupported members such as 8. Therefore a proof for the actual set must use least/grounded generation from seeds 2 and 3. See `fanout/wave3/C22_universal_contraction_sat.md`.
+
+## C18 affine pair-state verdict (2026-07-13)
+
+- The exact inverse-parent recurrence has 11 live pair transitions, while the triple P235 has one transition. Literal primitive pair states do not close finitely: repeated `(5,3)` transitions yield infinitely many states.
+- At t=547, two first-parent branches overlap exactly, so summing pair branches already requires a triple correction. The nine independent tests pass. Hence a finite pair-state recurrence is not a route without a new quotient or summable infinite-state weights.
+
+## 2026-07-13 (M2) two-ray deep data + Codex WAVE3 reconciliation
+
+**(M2) DEEP (M)-GATE DATA (mine, claude_rd_offset_mass_deep.py SHA ba85e7a0...):**
+ray (3,2,1), n=6k: sqrt(n)D/M = 0.4082, 0.3493, 0.3222, 0.3075 (k=1..4; D_4 = 1054111467 at
+  M=1.68e10). Local log-log exponent SHRINKING: -0.225, -0.200, -0.162 => consistent with a
+  POSITIVE limit ~0.28-0.30. Surplus (word entropy - slope rate) = 0.0304 per letter.
+ray (2,1,1), n=4k: sqrt(n)D/M = 0.4000, 0.3213, 0.2761, 0.2458, 0.2235, 0.2059 (k=1..6;
+  D_6 = 1961050980 at M=4.67e10). Local exponent GROWING: -0.32, -0.38, -0.40, -0.43, -0.45 =>
+  consistent with decay to 0 (exponent drifting toward -1/2). Surplus = 0.0161 per letter.
+VERDICT: (M) is RAY-DEPENDENT in the data; the canonical ray (15,10,6)/31 has surplus 0.0327,
+closest to ray (3,2,1) (favorable). Open: what ray invariant separates limit>0 from limit=0.
+
+**CODEX WAVE3 RECEIVED (C00-C22 + gpt_pro/) — registered as CLAIMS, initial audit notes:**
+- C01 (L9-EXT DONE): full unthinned energy grid to B=10^7; largest case 1.26e10 products:
+  E/(|U||V|) = 1.1709, kappa = 92.62. Ratio RISING with scale (1.006 -> 1.125 -> 1.171).
+- C05 (RED-TEAM, MAJOR): claims single-Cartesian-window bounded-kappa target is IMPOSSIBLE:
+  min(Y,Z) -> infinity forces X*E/(|U|^2|V|^2) -> infinity, via Ford divisor-in-interval
+  (rectangular multiplication-table thinness). KILLS R1 (48)-(51)/(58)-(61) AS STATED (single
+  window). Does NOT touch R-D aggregated reservoirs (non-Cartesian union over k) — R2's move to
+  aggregation was already forced by its (16). PENDING my re-derivation of the Ford step.
+- C04 (L11 partial DONE): BKS citation VERIFIED to primary source: Bettin-Koukoulopoulos-Sanna,
+  Bull. LMS 53 (2021) 1407-1413, DOI 10.1112/blms.12506, arXiv:2006.13356. Ford part in file.
+- C14: 23-map affine support collision census to 10^8; both C07 zero-excess gates still fail;
+  excesses ~0.458 and ~0.157 with no decay (context: Codex-internal C07 framework).
+- C19: exact collision language for the {2,3,5} orbit: smallest collision morphisms 15t-2,
+  600t-98, 400t-51; the 25-channel block monoid NOT finitely generated (depth-d indecomposables
+  >= d-6). Directly relevant to R-D E^off collision control.
+- CX-GPT (gpt_pro/, Codex-owned INDEPENDENT GPT-Pro rounds; NAMESPACE: their R<n> = CX-R<n> here):
+  CX-R2 "finite-state strict-gap theorem": ANY fixed finite congruence partition + finite affine
+  word family + fixed fractional packing has density-transfer spectral radius < 1 => no fixed
+  finite monotone renewal architecture can prove positive density; unbounded scale-dependent
+  complexity NECESSARY. Codex audit: accepted after notation repair. Consistent with R-D growing
+  blocks. PENDING my audit. CX-R3 prompt (hole contraction) drafted by Codex.

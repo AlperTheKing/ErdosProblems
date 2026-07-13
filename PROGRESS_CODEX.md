@@ -34645,3 +34645,15 @@
 [2026-07-13T10:10:10.3865805+03:00] > ATTACK | NEXT: Compute exact generation/obstruction depths and test depth-majorized H-to-Q charging through X=100000.
 [2026-07-13T10:10:30+03:00] OK ATTACK | DID: Tested half-divisor blocker on 81685 largest-row misses | RESULT: r=1732597 has 12 pairs, exactly one G2 endpoint each | D: half gate sharp
 [2026-07-13T10:10:30+03:00] > VERIFY | NEXT: Recompile C20, reproduce JSON, independently audit formulas and referee the uniform Landau reduction.
+[2026-07-13T10:11:20+03:00] > SELECT | NEXT: Own #424 C23 and isolate the grounded two-scale hole contraction.
+[2026-07-13T10:11:20+03:00] OK SELECT | DID: Read AGENTS.md and #424 proof state | RESULT: contraction is outside accepted results | D: SELECT->GATE
+[2026-07-13T10:11:20+03:00] > GATE | NEXT: Audit C16 exact target and C22 closure-only countermodel before choosing a grounded lemma.
+[2026-07-13T10:13:00+03:00] > ATTACK | NEXT: Replay C22 result_5000.json by exact descending ranks and extract its grounded core.
+[2026-07-13T10:13:00+03:00] OK GATE | DID: Audited C16 and C22 | RESULT: HC is unproved; closure-only first excess is 1 at X=362 | D: GATE->PLAN
+[2026-07-13T10:13:00+03:00] > PLAN | NEXT: Form rank-sensitive Horn dual and exact-test matching and prefix-majorization lemmas.
+[2026-07-13T10:13:08.1575639+03:00] OK ATTACK | DID: Computed exact G/M proof depths through X=100000 | RESULT: H<=d <= Q<=d for all d at endpoint; child-depth offset 5 fits | D: rank candidate
+[2026-07-13T10:13:08.1575639+03:00] > ATTACK | NEXT: Build and run all-event rank-majorization audit through X=10000000, depths 0..63, offset=5.
+[2026-07-13T10:14:02+03:00] OK VERIFY | DID: replayed C19 collision-language tests | RESULT: 11/11 pass; >=(D-6)(D-5)/2 indecomposable 25-block states, finite witness-respecting language dead | D: C09 finite-language shortcut dead
+[2026-07-13T10:14:12+03:00] > ATTACK | NEXT: launch C24 derivation-rank/matching discovery lane for the grounded C16 contraction after closure-only falsifier
+[2026-07-13T10:14:50+03:00] OK ATTACK | DID: Replayed C22 by descending witness ranks | RESULT: 1496 grounded, 1384 ungrounded; grounded excess=-515 | D: rank gate mandatory
+[2026-07-13T10:14:50+03:00] > VERIFY | NEXT: Run C17 exact small-case tests for ranks, healing, weighted charge, and Hall witnesses.

@@ -200,6 +200,10 @@ def enrich_row(row: dict[str, object]) -> None:
     if k_lower > holes_lower or k_upper > holes_upper:
         raise AssertionError("aggregated blocker inequality failed")
 
+    all_holes_lower, all_holes_upper = parse_bounds(
+        harmonic["hole_endpoint_mass"]
+    )
+
     first_lower, _ = parse_bounds(harmonic["witness_first_moment"])
     _, second_upper = parse_bounds(harmonic["witness_second_moment"])
     if second_upper == 0:
@@ -230,6 +234,10 @@ def enrich_row(row: dict[str, object]) -> None:
         "blocked_over_H": interval_record(
             blocked_lower / h_upper,
             blocked_upper / h_lower,
+        ),
+        "all_hole_endpoint_mass_over_H": interval_record(
+            all_holes_lower / h_upper,
+            all_holes_upper / h_lower,
         ),
         "Cauchy_covered_over_H_lower": fraction_record(moment_coverage_lower),
         "Cauchy_missing_over_H_upper": fraction_record(moment_missing_upper),

@@ -1,6 +1,6 @@
 {
   "schema_version":1,
-  "definitions":"A(r)=# distinct pairs 2<=a<b, ab=3r+1, a=b=2 (mod 3); witness requires a,b in G2",
+  "definitions":"A(r)=# distinct pairs 2<=a<b, ab=3r+1, a congruent b congruent 2 (mod 3); witness requires a,b in G2",
   "membership_limit":19999998,
   "G_count_through_membership_limit":10069774,
   "G_count_through_10000000":4952270,

@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "source": "problems/424/compute/wave3/C22_universal_contraction_sat/result_5000.json",
+  "source_sha256": "2203EB637EFC1D66F03F77A2CFEEFA88DA70C3D58F37CFF89478616C7500A41B",
+  "limit": 5000,
+  "forward_closed": true,
+  "grounded": false,
+  "certificate_member_count": 2880,
+  "grounded_member_count": 1496,
+  "ungrounded_member_count": 1384,
+  "locally_unsupported_member_count": 427,
+  "first_ungrounded_members": [
+    18,
+    20,
+    21,
+    30,
+    32,
+    35,
+    38,
+    39,
+    45,
+    48,
+    56,
+    57,
+    59,
+    60,
+    62,
+    63,
+    66,
+    68,
+    72,
+    74,
+    75,
+    78,
+    86,
+    89,
+    90,
+    92,
+    93,
+    95,
+    96,
+    102,
+    104,
+    108
+  ],
+  "first_locally_unsupported_members": [
+    18,
+    20,
+    21,
+    30,
+    32,
+    38,
+    45,
+    48,
+    56,
+    57,
+    60,
+    66,
+    68,
+    72,
+    74,
+    78,
+    86,
+    90,
+    92,
+    93,
+    96,
+    102,
+    108,
+    110,
+    120,
+    126,
+    128,
+    132,
+    138,
+    140,
+    144,
+    146
+  ],
+  "certificate_contraction": {
+    "member_count": 2880,
+    "hole_count": 453,
+    "R": 105,
+    "Mhalf": 41,
+    "Mthird": 21,
+    "excess": 43
+  },
+  "grounded_core_contraction": {
+    "member_count": 1496,
+    "hole_count": 1837,
+    "R": 1136,
+    "Mhalf": 977,
+    "Mthird": 674,
+    "excess": -515
+  },
+  "grounded_rank_histogram": [
+    2,
+    1,
+    2,
+    7,
+    53,
+    279,
+    460,
+    403,
+    233,
+    47,
+    9
+  ],
+  "grounded_witness_sample": [
+    {
+      "n": 5,
+      "left": 2,
+      "right": 3,
+      "rank": 1
+    },
+    {
+      "n": 9,
+      "left": 2,
+      "right": 5,
+      "rank": 2
+    },
+    {
+      "n": 14,
+      "left": 3,
+      "right": 5,
+      "rank": 2
+    },
+    {
+      "n": 17,
+      "left": 2,
+      "right": 9,
+      "rank": 3
+    },
+    {
+      "n": 26,
+      "left": 3,
+      "right": 9,
+      "rank": 3
+    },
+    {
+      "n": 27,
+      "left": 2,
+      "right": 14,
+      "rank": 3
+    },
+    {
+      "n": 33,
+      "left": 2,
+      "right": 17,
+      "rank": 4
+    },
+    {
+      "n": 41,
+      "left": 3,
+      "right": 14,
+      "rank": 3
+    },
+    {
+      "n": 44,
+      "left": 5,
+      "right": 9,
+      "rank": 3
+    },
+    {
+      "n": 50,
+      "left": 3,
+      "right": 17,
+      "rank": 4
+    },
+    {
+      "n": 51,
+      "left": 2,
+      "right": 26,
+      "rank": 4
+    },
+    {
+      "n": 53,
+      "left": 2,
+      "right": 27,
+      "rank": 4
+    },
+    {
+      "n": 65,
+      "left": 2,
+      "right": 33,
+      "rank": 5
+    },
+    {
+      "n": 69,
+      "left": 5,
+      "right": 14,
+      "rank": 3
+    },
+    {
+      "n": 77,
+      "left": 3,
+      "right": 26,
+      "rank": 4
+    },
+    {
+      "n": 80,
+      "left": 3,
+      "right": 27,
+      "rank": 4
+    },
+    {
+      "n": 81,
+      "left": 2,
+      "right": 41,
+      "rank": 4
+    },
+    {
+      "n": 84,
+      "left": 5,
+      "right": 17,
+      "rank": 4
+    },
+    {
+      "n": 87,
+      "left": 2,
+      "right": 44,
+      "rank": 4
+    },
+    {
+      "n": 98,
+      "left": 3,
+      "right": 33,
+      "rank": 5
+    },
+    {
+      "n": 99,
+      "left": 2,
+      "right": 50,
+      "rank": 5
+    },
+    {
+      "n": 101,
+      "left": 2,
+      "right": 51,
+      "rank": 5
+    },
+    {
+      "n": 105,
+      "left": 2,
+      "right": 53,
+      "rank": 5
+    },
+    {
+      "n": 122,
+      "left": 3,
+      "right": 41,
+      "rank": 4
+    },
+    {
+      "n": 125,
+      "left": 9,
+      "right": 14,
+      "rank": 3
+    },
+    {
+      "n": 129,
+      "left": 5,
+      "right": 26,
+      "rank": 4
+    },
+    {
+      "n": 131,
+      "left": 3,
+      "right": 44,
+      "rank": 4
+    },
+    {
+      "n": 134,
+      "left": 5,
+      "right": 27,
+      "rank": 4
+    },
+    {
+      "n": 137,
+      "left": 2,
+      "right": 69,
+      "rank": 4
+    },
+    {
+      "n": 149,
+      "left": 3,
+      "right": 50,
+      "rank": 5
+    },
+    {
+      "n": 152,
+      "left": 9,
+      "right": 17,
+      "rank": 4
+    },
+    {
+      "n": 153,
+      "left": 2,
+      "right": 77,
+      "rank": 5
+    }
+  ]
+}

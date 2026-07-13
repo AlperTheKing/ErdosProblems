@@ -395,6 +395,10 @@ int main(int argc, char** argv) {
     }
 
     std::vector<std::uint8_t> member(static_cast<std::size_t>(limit) + 1, 0);
+    std::vector<std::uint16_t> rank(
+        static_cast<std::size_t>(limit) + 1,
+        kNoRank
+    );
     std::vector<std::uint32_t> missing_prefix(
         static_cast<std::size_t>(limit) + 1,
         0
@@ -413,8 +417,16 @@ int main(int argc, char** argv) {
 
     member[2] = 1;
     member[3] = 1;
+    rank[2] = 0;
+    rank[3] = 0;
     std::uint64_t generated = 2;
     std::uint64_t splitless = 0;
+    std::uint64_t odd_reducible = 0;
+    std::uint64_t seed3_even_reducible = 0;
+    std::uint64_t hard_reducible = 0;
+    std::uint64_t seed2_healed = 0;
+    std::vector<std::uint64_t> rank_histogram{2};
+    std::vector<std::uint64_t> healing_rank_histogram{0};
 
     std::vector<std::uint32_t> checkpoints{32, 100, 362};
     for (std::uint64_t value = 1000; value <= limit; value *= 10) {
@@ -453,6 +465,7 @@ int main(int argc, char** argv) {
 
     for (std::uint32_t n = 2; n <= limit; ++n) {
         pairs.clear();
+        std::uint16_t best_rank = kNoRank;
         if (n >= 4) {
             const std::uint32_t product = n + 1;
             std::uint32_t remaining = product;
@@ -477,9 +490,31 @@ int main(int argc, char** argv) {
                 if (left >= right) continue;
                 if (!is_allowed(left) || !is_allowed(right)) continue;
                 pairs.emplace_back(left, right);
-                if (!member[n] && member[left] && member[right]) {
-                    member[n] = 1;
-                    ++generated;
+                if (member[left] && member[right]) {
+                    if (rank[left] == kNoRank || rank[right] == kNoRank) {
+                        throw std::runtime_error("generated factor has no rank");
+                    }
+                    const std::uint16_t candidate = static_cast<std::uint16_t>(
+                        1 + std::max(rank[left], rank[right])
+                    );
+                    best_rank = std::min(best_rank, candidate);
+                }
+            }
+        }
+
+        if (best_rank != kNoRank) {
+            member[n] = 1;
+            rank[n] = best_rank;
+            ++generated;
+            ensure_size(rank_histogram, best_rank);
+            ++rank_histogram[best_rank];
+
+            if ((n & 1U) != 0) {
+                const std::uint32_t parent = (n + 1) / 2;
+                if (is_allowed(parent) && !member[parent]) {
+                    ++seed2_healed;
+                    ensure_size(healing_rank_histogram, best_rank);
+                    ++healing_rank_histogram[best_rank];
                 }
             }
         }
@@ -490,6 +525,16 @@ int main(int argc, char** argv) {
             if (pairs.empty()) {
                 ++splitless;
             } else {
+                if ((n & 1U) != 0) {
+                    ++odd_reducible;
+                } else {
+                    const std::uint32_t parent3 = (n + 1) / 3;
+                    if ((n + 1) % 3 == 0 && is_allowed(parent3) && parent3 != 3) {
+                        ++seed3_even_reducible;
+                    } else {
+                        ++hard_reducible;
+                    }
+                }
                 const std::size_t pair_count = pairs.size();
                 maximum_pair_count = std::max<std::uint32_t>(
                     maximum_pair_count,
@@ -563,18 +608,35 @@ int main(int argc, char** argv) {
                 n,
                 generated,
                 splitless,
+                odd_reducible,
+                seed3_even_reducible,
+                hard_reducible,
+                seed2_healed,
                 member,
                 spf,
                 missing_prefix,
                 load_num,
                 forced_seed_load,
-                reciprocal_incidences
+                reciprocal_incidences,
+                rank_histogram,
+                healing_rank_histogram
             ));
             ++next_checkpoint;
         }
     }
 
     const std::uint64_t direct_gcd = std::gcd(maximum_direct_num, maximum_direct_den);
+    if (std::accumulate(rank_histogram.begin(), rank_histogram.end(), 0ULL) !=
+        generated) {
+        throw std::runtime_error("rank histogram does not cover generated set");
+    }
+    if (std::accumulate(
+            healing_rank_histogram.begin(),
+            healing_rank_histogram.end(),
+            0ULL
+        ) != seed2_healed) {
+        throw std::runtime_error("healing rank histogram mismatch");
+    }
     maximum_direct_num /= direct_gcd;
     maximum_direct_den /= direct_gcd;
     const std::uint64_t fixed_gcd =
@@ -590,6 +652,7 @@ int main(int argc, char** argv) {
     out << "{\n";
     out << "  \"schema_version\":1,\n";
     out << "  \"arithmetic\":\"integer gates; reciprocal sums reduced exactly\",\n";
+    out << "  \"rank_definition\":\"seeds rank 0; minimum 1+max factor ranks over generated witness pairs\",\n";
     out << "  \"limit\":" << limit << ",\n";
     out << "  \"weight_scale\":" << kWeightScale << ",\n";
     out << "  \"maximum_admissible_pair_count_on_reducible_hole\":"

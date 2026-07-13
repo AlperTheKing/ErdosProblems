@@ -2,8 +2,8 @@
 """Exact collision-language census for the {2,3,5} affine orbit.
 
 Words are in application order.  For example, ``53`` means first apply
-T_5 and then T_3.  Every equality tested by this module is an integer
-equality; floating point is used only for optional JSON display values.
+T_5 and then T_3.  Every equality and census quantity in this module uses
+integer or rational arithmetic.
 """
 
 from __future__ import annotations

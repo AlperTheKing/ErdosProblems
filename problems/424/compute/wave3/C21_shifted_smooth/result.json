@@ -1,10 +1,10 @@
 {
   "C21_analyzer": {
     "compiler_version": "g++.EXE (Rev5, Built by MSYS2 project) 16.1.0",
-    "script_sha256": "43daf7c5dbb267cbc7edcdc1909e98b7fcf64a67f8ad095623649c9e7f02d1cf",
-    "source_sha256": "2370a6d0eb0cfe4d15e9cf8251ef4ad65d63d3beebda5e8aadb0cf77863098b4",
+    "script_sha256": "6720437b6c270882c0d94a7a8ec7a8faa9cea5d2e12135904b7774ec85c678e1",
+    "source_sha256": "a4e5957fd73ad1cd6a55cae74426d33ebbe74c518e61ed1c9084dfb317e44b7f",
     "stderr": "",
-    "stdout": "smooth_limit=10000000 G_bitmap_bytes=30000002 rows=70 elapsed_seconds=0.609695"
+    "stdout": "smooth_limit=10000000 G_bitmap_bytes=30000002 rows=70 elapsed_seconds=0.675809"
   },
   "G_builder": {
     "accepted_prefix_checks": [
@@ -55,6 +55,7 @@
       "T(s) iff witness_pairs(s)>0 for every analyzed s",
       "K(s)=0 iff 3s+1 has no 2mod3 prime divisor or equals p^2 with p=2mod3",
       "K-R <= hole_endpoints <= 2(K-R) pointwise",
+      "D2=tau(N1)(tau(N2)-1_{N2 square})/2 pointwise",
       "#2mod3 divisors = 2K plus the excluded equal-square indicator"
     ],
     "bin_labels": [
@@ -889,6 +890,18 @@
               "numerator": "507"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.017612524461840",
+              "denominator": "511",
+              "numerator": "9"
+            },
+            "upper": {
+              "decimal": "0.017612524461840",
+              "denominator": "511",
+              "numerator": "9"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.001956947162427",
@@ -933,6 +946,11 @@
             "lower_numerator": "998046875000000000",
             "upper_numerator": "998046875000000000"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17578125000000000",
+            "upper_numerator": "17578125000000000"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1953125000000000",
@@ -942,6 +960,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "0",
             "upper_numerator": "0"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17578125000000000",
+            "upper_numerator": "17578125000000000"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -1149,6 +1172,18 @@
               "numerator": "1465832368827160502"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.053980170219761",
+              "denominator": "1988535772462277107",
+              "numerator": "107341499485596706"
+            },
+            "upper": {
+              "decimal": "0.053980170219761",
+              "denominator": "104659777498014583",
+              "numerator": "5649552604505090"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.041724994172863",
@@ -1193,6 +1228,11 @@
             "lower_numerator": "1988535772462277077",
             "upper_numerator": "1988535772462277107"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "617602773491083672",
+            "upper_numerator": "617602773491083685"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "82971643518518517",
@@ -1202,6 +1242,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "55555555555555555",
             "upper_numerator": "55555555555555556"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "107341499485596706",
+            "upper_numerator": "107341499485596710"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -1409,6 +1454,18 @@
               "numerator": "2183478202160493847"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.202300706494928",
+              "denominator": "2712596420610425268",
+              "numerator": "548760172325102873"
+            },
+            "upper": {
+              "decimal": "0.202300706494928",
+              "denominator": "2712596420610425211",
+              "numerator": "548760172325102888"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.171240499401754",
@@ -1453,6 +1510,11 @@
             "lower_numerator": "2712596420610425211",
             "upper_numerator": "2712596420610425268"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1050954779663923171",
+            "upper_numerator": "1050954779663923197"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "464506365740740733",
@@ -1462,6 +1524,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "64305555555555554",
             "upper_numerator": "64305555555555557"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "548760172325102873",
+            "upper_numerator": "548760172325102888"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -1669,6 +1736,18 @@
               "numerator": "221758204441939919"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.276871861969218",
+              "denominator": "1645767497954134652",
+              "numerator": "455666711526982919"
+            },
+            "upper": {
+              "decimal": "0.276871861969218",
+              "denominator": "274294582992355766",
+              "numerator": "75944451921163823"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.226129646319301",
@@ -1713,6 +1792,11 @@
             "lower_numerator": "3291534995908269192",
             "upper_numerator": "3291534995908269304"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1479111732656760506",
+            "upper_numerator": "1479111732656760562"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "744313644472339186",
@@ -1722,6 +1806,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "207162698412698411",
             "upper_numerator": "207162698412698415"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "911333423053965838",
+            "upper_numerator": "911333423053965876"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -1929,6 +2018,18 @@
               "numerator": "2878224986882734705"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.295522480579733",
+              "denominator": "3672869809983884274",
+              "numerator": "1085415597092849825"
+            },
+            "upper": {
+              "decimal": "0.295522480579733",
+              "denominator": "3672869809983884111",
+              "numerator": "1085415597092849884"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.220611920496859",
@@ -1973,6 +2074,11 @@
             "lower_numerator": "3672869809983884111",
             "upper_numerator": "3672869809983884274"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1793143365205709062",
+            "upper_numerator": "1793143365205709144"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "810278862515479301",
@@ -1982,6 +2088,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "207162698412698411",
             "upper_numerator": "207162698412698415"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1085415597092849825",
+            "upper_numerator": "1085415597092849884"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -2189,6 +2300,18 @@
               "numerator": "3290521654368406565"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.367102156079971",
+              "denominator": "4255596508683172289",
+              "numerator": "1562238653743989274"
+            },
+            "upper": {
+              "decimal": "0.367102156079971",
+              "denominator": "4255596508683172031",
+              "numerator": "1562238653743989377"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.241931850391812",
@@ -2233,6 +2356,11 @@
             "lower_numerator": "4255596508683172031",
             "upper_numerator": "4255596508683172289"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2393662146309089366",
+            "upper_numerator": "2393662146309089506"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1029564337866655805",
@@ -2242,6 +2370,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "210628187172304817",
             "upper_numerator": "210628187172304823"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1562238653743989274",
+            "upper_numerator": "1562238653743989377"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -2449,6 +2582,18 @@
               "numerator": "134923335484993243"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.426810332596599",
+              "denominator": "4806322612791759535",
+              "numerator": "2051388152932205247"
+            },
+            "upper": {
+              "decimal": "0.426810332596599",
+              "denominator": "4806322612791759162",
+              "numerator": "2051388152932205407"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.257643511263041",
@@ -2493,6 +2638,11 @@
             "lower_numerator": "4806322612791759162",
             "upper_numerator": "4806322612791759535"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3016339002848367268",
+            "upper_numerator": "3016339002848367484"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1238317834222623566",
@@ -2502,6 +2652,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "213100185245290484",
             "upper_numerator": "213100185245290492"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2051388152932205247",
+            "upper_numerator": "2051388152932205407"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -2709,6 +2864,18 @@
               "numerator": "4021672719342596929"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.482775187240972",
+              "denominator": "588768630282837245",
+              "numerator": "284242885726407301"
+            },
+            "upper": {
+              "decimal": "0.482775187240972",
+              "denominator": "5298917672545534705",
+              "numerator": "2558185971537665942"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.283082342744919",
@@ -2753,6 +2920,11 @@
             "lower_numerator": "5298917672545534705",
             "upper_numerator": "5298917672545535205"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3604580822895537009",
+            "upper_numerator": "3604580822895537317"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1500030028756641715",
@@ -2762,6 +2934,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "231931920206057702",
             "upper_numerator": "231931920206057712"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2558185971537665709",
+            "upper_numerator": "2558185971537665942"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -2969,6 +3146,18 @@
               "numerator": "4205161418974920202"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.517865070181902",
+              "denominator": "5571912819648369115",
+              "numerator": "2885499023394641137"
+            },
+            "upper": {
+              "decimal": "0.517865070181902",
+              "denominator": "5571912819648368537",
+              "numerator": "2885499023394641409"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.289929342810015",
@@ -3013,6 +3202,11 @@
             "lower_numerator": "5571912819648368537",
             "upper_numerator": "5571912819648369115"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3950573021710862991",
+            "upper_numerator": "3950573021710863353"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1615461021995350515",
@@ -3022,6 +3216,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "233102880393411331",
             "upper_numerator": "233102880393411342"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2885499023394641137",
+            "upper_numerator": "2885499023394641409"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -3229,6 +3428,18 @@
               "numerator": "4308037614315182072"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.535504116949457",
+              "denominator": "5756272279164112413",
+              "numerator": "3082507503774417047"
+            },
+            "upper": {
+              "decimal": "0.535504116949457",
+              "denominator": "1918757426388037259",
+              "numerator": "1027502501258139117"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.291227459918070",
@@ -3273,6 +3484,11 @@
             "lower_numerator": "5756272279164111777",
             "upper_numerator": "5756272279164112413"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4208833830472204261",
+            "upper_numerator": "4208833830472204664"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1676384554457761977",
@@ -3282,6 +3498,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "239399072080084587",
             "upper_numerator": "239399072080084600"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3082507503774417047",
+            "upper_numerator": "3082507503774417351"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -3489,6 +3710,18 @@
               "numerator": "4428491492174621453"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.560526341343086",
+              "denominator": "498535314139082191",
+              "numerator": "279442175664705599"
+            },
+            "upper": {
+              "decimal": "0.560526341343086",
+              "denominator": "664713752185442842",
+              "numerator": "372589567552940837"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.291833389024237",
@@ -3533,6 +3766,11 @@
             "lower_numerator": "5982423769668985578",
             "upper_numerator": "5982423769668986292"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4528572755730230182",
+            "upper_numerator": "4528572755730230642"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1745871003281651594",
@@ -3542,6 +3780,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "239399072080084587",
             "upper_numerator": "239399072080084600"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3353306107976467188",
+            "upper_numerator": "3353306107976467533"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -3749,6 +3992,18 @@
               "numerator": "4556916051713704579"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.592932119417412",
+              "denominator": "6199474900303571191",
+              "numerator": "3675867791912043603"
+            },
+            "upper": {
+              "decimal": "0.592932119417412",
+              "denominator": "1549868725075892597",
+              "numerator": "918966947978011001"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.295738850187606",
@@ -3793,6 +4048,11 @@
             "lower_numerator": "6199474900303570388",
             "upper_numerator": "6199474900303571191"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4872569418637452081",
+            "upper_numerator": "4872569418637452608"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1833425578782699441",
@@ -3802,6 +4062,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "242452675077859939",
             "upper_numerator": "242452675077859954"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3675867791912043603",
+            "upper_numerator": "3675867791912044004"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -4009,6 +4274,18 @@
               "numerator": "1164414152540335725"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.617864083592766",
+              "denominator": "6386088357784502971",
+              "numerator": "3945734630924955605"
+            },
+            "upper": {
+              "decimal": "0.617864083592766",
+              "denominator": "6386088357784502072",
+              "numerator": "3945734630924956063"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.297271488219628",
@@ -4053,6 +4330,11 @@
             "lower_numerator": "6386088357784502072",
             "upper_numerator": "6386088357784502971"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5195387581753348918",
+            "upper_numerator": "5195387581753349516"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1898401990020639474",
@@ -4062,6 +4344,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "244029962144105995",
             "upper_numerator": "244029962144106011"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3945734630924955605",
+            "upper_numerator": "3945734630924956063"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -4269,6 +4556,18 @@
               "numerator": "670602752499856567"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.641268106333350",
+              "denominator": "6485470860550345417",
+              "numerator": "4158925617425241060"
+            },
+            "upper": {
+              "decimal": "0.641268106333350",
+              "denominator": "463247918610738889",
+              "numerator": "297066115530374398"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.298353764740236",
@@ -4313,6 +4612,11 @@
             "lower_numerator": "6485470860550344446",
             "upper_numerator": "6485470860550345417"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5434156803956954029",
+            "upper_numerator": "5434156803956954699"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1934964647358292516",
@@ -4322,6 +4626,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "244029962144105995",
             "upper_numerator": "244029962144106011"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4158925617425241060",
+            "upper_numerator": "4158925617425241572"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -4529,6 +4838,18 @@
               "numerator": "8123"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.017580271029178",
+              "denominator": "8191",
+              "numerator": "144"
+            },
+            "upper": {
+              "decimal": "0.017580271029178",
+              "denominator": "8191",
+              "numerator": "144"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.001953363447686",
@@ -4573,6 +4894,11 @@
             "lower_numerator": "999877929687500000",
             "upper_numerator": "999877929687500000"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "18066406250000000",
+            "upper_numerator": "18066406250000000"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1953125000000000",
@@ -4582,6 +4908,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "0",
             "upper_numerator": "0"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17578125000000000",
+            "upper_numerator": "17578125000000000"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -4789,6 +5120,18 @@
               "numerator": "491065163852928293"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.055944263747085",
+              "denominator": "1998549873155530811",
+              "numerator": "111807401215515920"
+            },
+            "upper": {
+              "decimal": "0.055944263747085",
+              "denominator": "666183291051843586",
+              "numerator": "37269133738505311"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.042435997127209",
@@ -4833,6 +5176,11 @@
             "lower_numerator": "1998549873155530758",
             "upper_numerator": "1998549873155530811"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "624988762312338046",
+            "upper_numerator": "624988762312338071"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "84810456675811609",
@@ -4842,6 +5190,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "56206597222222221",
             "upper_numerator": "56206597222222223"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "111807401215515920",
+            "upper_numerator": "111807401215515933"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -5049,6 +5402,18 @@
               "numerator": "1104986387111696980"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.206615955516474",
+              "denominator": "2744179666108205741",
+              "numerator": "566991303821825919"
+            },
+            "upper": {
+              "decimal": "0.206615955516474",
+              "denominator": "2744179666108205614",
+              "numerator": "566991303821825961"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.172680020344147",
@@ -5093,6 +5458,11 @@
             "lower_numerator": "2744179666108205614",
             "upper_numerator": "2744179666108205741"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1072551564095602772",
+            "upper_numerator": "1072551564095602832"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "473865000571559193",
@@ -5102,6 +5472,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "65685763888888886",
             "upper_numerator": "65685763888888892"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "566991303821825919",
+            "upper_numerator": "566991303821825961"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -5309,6 +5684,18 @@
               "numerator": "2716622151677932573"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.286452622703352",
+              "denominator": "3359899484368979944",
+              "numerator": "962452019317134197"
+            },
+            "upper": {
+              "decimal": "0.286452622703352",
+              "denominator": "1679949742184489827",
+              "numerator": "481226009658567152"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.228293487936852",
@@ -5353,6 +5740,11 @@
             "lower_numerator": "3359899484368979654",
             "upper_numerator": "3359899484368979944"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1534331840892850562",
+            "upper_numerator": "1534331840892850711"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "767043172403826131",
@@ -5362,6 +5754,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "209633501714177730",
             "upper_numerator": "209633501714177740"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "962452019317134197",
+            "upper_numerator": "962452019317134304"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -5569,6 +5966,18 @@
               "numerator": "2962368640374111475"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.308296564071971",
+              "denominator": "3783953604147870697",
+              "numerator": "1166579894766538407"
+            },
+            "upper": {
+              "decimal": "0.308296564071971",
+              "denominator": "3783953604147870223",
+              "numerator": "1166579894766538584"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.222424255525551",
@@ -5613,6 +6022,11 @@
             "lower_numerator": "3783953604147870223",
             "upper_numerator": "3783953604147870697"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1885570994733618910",
+            "upper_numerator": "1885570994733619155"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "841643063345816618",
@@ -5622,6 +6036,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "209633501714177730",
             "upper_numerator": "209633501714177740"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1166579894766538407",
+            "upper_numerator": "1166579894766538584"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -5829,6 +6248,18 @@
               "numerator": "3444792738678723133"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.387970613313304",
+              "denominator": "4469519916070027963",
+              "numerator": "1734042383053715329"
+            },
+            "upper": {
+              "decimal": "0.387970613313304",
+              "denominator": "4469519916070027066",
+              "numerator": "1734042383053715689"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.243566494631925",
@@ -5873,6 +6304,11 @@
             "lower_numerator": "4469519916070027066",
             "upper_numerator": "4469519916070027963"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2590051072770203970",
+            "upper_numerator": "2590051072770204461"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1088625298644751932",
@@ -5882,6 +6318,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "214157186877127928",
             "upper_numerator": "214157186877127944"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1734042383053715329",
+            "upper_numerator": "1734042383053715689"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -6089,6 +6530,18 @@
               "numerator": "974499338545269658"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.460313396975470",
+              "denominator": "5174699453984052145",
+              "numerator": "2381983483990507326"
+            },
+            "upper": {
+              "decimal": "0.460313396975470",
+              "denominator": "5174699453984050612",
+              "numerator": "2381983483990507981"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.258637157190165",
@@ -6133,6 +6586,11 @@
             "lower_numerator": "5174699453984050612",
             "upper_numerator": "5174699453984052145"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3398969032376507428",
+            "upper_numerator": "3398969032376508319"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1338369556091936128",
@@ -6142,6 +6600,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "218564349989873393",
             "upper_numerator": "218564349989873418"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2381983483990507326",
+            "upper_numerator": "2381983483990507981"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -6349,6 +6812,18 @@
               "numerator": "1471190659080870370"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.533568540064541",
+              "denominator": "5883144763552009998",
+              "numerator": "3139060962476797373"
+            },
+            "upper": {
+              "decimal": "0.533568540064542",
+              "denominator": "1961048254517335861",
+              "numerator": "1046353654158932828"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.282609779378252",
@@ -6393,6 +6868,11 @@
             "lower_numerator": "5883144763552007583",
             "upper_numerator": "5883144763552009998"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4276070419030356297",
+            "upper_numerator": "4276070419030357775"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1662634243677753860",
@@ -6402,6 +6882,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "240113470648725004",
             "upper_numerator": "240113470648725041"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3139060962476797373",
+            "upper_numerator": "3139060962476798484"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -6609,6 +7094,18 @@
               "numerator": "4698229349609126806"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.583504272571921",
+              "denominator": "6325442473344699493",
+              "numerator": "3690922709104532498"
+            },
+            "upper": {
+              "decimal": "0.583504272571922",
+              "denominator": "6325442473344696389",
+              "numerator": "3690922709104533986"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.288813126408981",
@@ -6653,6 +7150,11 @@
             "lower_numerator": "6325442473344696389",
             "upper_numerator": "6325442473344699493"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4875932617500991206",
+            "upper_numerator": "4875932617500993159"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1826870816646840127",
@@ -6662,6 +7164,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "242081105494988742",
             "upper_numerator": "242081105494988785"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3690922709104532498",
+            "upper_numerator": "3690922709104533986"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -6869,6 +7376,18 @@
               "numerator": "4879697219950211465"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.612020053339992",
+              "denominator": "2214403146702932534",
+              "numerator": "1355259131961374665"
+            },
+            "upper": {
+              "decimal": "0.612020053339993",
+              "denominator": "6643209440108793934",
+              "numerator": "4065777395884125791"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.290057610164427",
@@ -6913,6 +7432,11 @@
             "lower_numerator": "6643209440108793934",
             "upper_numerator": "6643209440108797602"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5339350527785288472",
+            "upper_numerator": "5339350527785290822"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1926913454019721104",
@@ -6922,6 +7446,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "250151186540245483",
             "upper_numerator": "250151186540245534"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4065777395884123995",
+            "upper_numerator": "4065777395884125791"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -7129,6 +7658,18 @@
               "numerator": "5112078669861180509"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.652453349398022",
+              "denominator": "7062764494133851449",
+              "numerator": "4608124350207059116"
+            },
+            "upper": {
+              "decimal": "0.652453349398023",
+              "denominator": "2354254831377948983",
+              "numerator": "1536041450069020457"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.290549048228370",
@@ -7173,6 +7714,11 @@
             "lower_numerator": "7062764494133846949",
             "upper_numerator": "7062764494133851449"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5964776454906329913",
+            "upper_numerator": "5964776454906332862"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2052079501631716995",
@@ -7182,6 +7728,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "251235551274034962",
             "upper_numerator": "251235551274035018"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4608124350207059116",
+            "upper_numerator": "4608124350207061371"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -7389,6 +7940,18 @@
               "numerator": "2683115938723785414"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.699072261442121",
+              "denominator": "7501928868116438914",
+              "numerator": "5244390379012091715"
+            },
+            "upper": {
+              "decimal": "0.699072261442122",
+              "denominator": "7501928868116433454",
+              "numerator": "5244390379012094515"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.293946662860007",
@@ -7433,6 +7996,11 @@
             "lower_numerator": "7501928868116433454",
             "upper_numerator": "7501928868116438914"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6666136739544834326",
+            "upper_numerator": "6666136739544837980"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2205166955795974945",
@@ -7442,6 +8010,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "257451269564535688",
             "upper_numerator": "257451269564535758"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5244390379012091715",
+            "upper_numerator": "5244390379012094515"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -7649,6 +8222,18 @@
               "numerator": "5613701421106322977"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.741404155265249",
+              "denominator": "7951538785490333473",
+              "numerator": "5895303896315326209"
+            },
+            "upper": {
+              "decimal": "0.741404155265250",
+              "denominator": "120477860386217074",
+              "numerator": "89322786307808025"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.295542345590226",
@@ -7693,6 +8278,11 @@
             "lower_numerator": "7951538785490326884",
             "upper_numerator": "7951538785490333473"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7417514510843145331",
+            "upper_numerator": "7417514510843149819"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2350016423715467975",
@@ -7702,6 +8292,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "261442492448144396",
             "upper_numerator": "261442492448144477"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5895303896315326209",
+            "upper_numerator": "5895303896315329650"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -7909,6 +8504,18 @@
               "numerator": "2889866781567006731"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.771782519390185",
+              "denominator": "4135958081606552514",
+              "numerator": "3192060148314500603"
+            },
+            "upper": {
+              "decimal": "0.771782519390186",
+              "denominator": "4135958081606548739",
+              "numerator": "3192060148314502599"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.296068147036681",
@@ -7953,6 +8560,11 @@
             "lower_numerator": "8271916163213097478",
             "upper_numerator": "8271916163213105028"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7985480055567782178",
+            "upper_numerator": "7985480055567787381"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2449050890885278746",
@@ -7962,6 +8574,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "264170102313166463",
             "upper_numerator": "264170102313166554"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6384120296629001206",
+            "upper_numerator": "6384120296629005198"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -8169,6 +8786,18 @@
               "numerator": "21663"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.017578393224994",
+              "denominator": "21845",
+              "numerator": "384"
+            },
+            "upper": {
+              "decimal": "0.017578393224994",
+              "denominator": "21845",
+              "numerator": "384"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.001953154802777",
@@ -8213,6 +8842,11 @@
             "lower_numerator": "999984741210937500",
             "upper_numerator": "999984741210937500"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "18096923828125000",
+            "upper_numerator": "18096923828125000"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1953125000000000",
@@ -8222,6 +8856,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "0",
             "upper_numerator": "0"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17578125000000000",
+            "upper_numerator": "17578125000000000"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -8429,6 +9068,18 @@
               "numerator": "1473972233925045987"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.056104371862743",
+              "denominator": "1999824160215208622",
+              "numerator": "112198878344812135"
+            },
+            "upper": {
+              "decimal": "0.056104371862743",
+              "denominator": "1999824160215208538",
+              "numerator": "112198878344812157"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.042475136106768",
@@ -8473,6 +9124,11 @@
             "lower_numerator": "1999824160215208538",
             "upper_numerator": "1999824160215208622"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "625995126597719669",
+            "upper_numerator": "625995126597719711"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "84942803394744189",
@@ -8482,6 +9138,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "56206597222222221",
             "upper_numerator": "56206597222222223"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "112198878344812135",
+            "upper_numerator": "112198878344812157"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -8689,6 +9350,18 @@
               "numerator": "14564130708143104"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.207323460966614",
+              "denominator": "916394915082672595",
+              "numerator": "189990165407145959"
+            },
+            "upper": {
+              "decimal": "0.207323460966614",
+              "denominator": "2749184745248017544",
+              "numerator": "569970496221437957"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.172806956890139",
@@ -8733,6 +9406,11 @@
             "lower_numerator": "2749184745248017544",
             "upper_numerator": "2749184745248017785"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1076450799164504739",
+            "upper_numerator": "1076450799164504853"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "475078249755102722",
@@ -8742,6 +9420,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "65857990397805209",
             "upper_numerator": "65857990397805217"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "569970496221437877",
+            "upper_numerator": "569970496221437957"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -8949,6 +9632,18 @@
               "numerator": "2725815619954705893"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.288112131424832",
+              "denominator": "1686272458885029906",
+              "numerator": "485835552292358573"
+            },
+            "upper": {
+              "decimal": "0.288112131424832",
+              "denominator": "3372544917770059190",
+              "numerator": "971671104584717379"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.228296818636368",
@@ -8993,6 +9688,11 @@
             "lower_numerator": "3372544917770059190",
             "upper_numerator": "3372544917770059812"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1545461051204452120",
+            "upper_numerator": "1545461051204452440"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "769941275435156271",
@@ -9002,6 +9702,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "209964599231460549",
             "upper_numerator": "209964599231460566"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "971671104584717146",
+            "upper_numerator": "971671104584717379"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -9209,6 +9914,18 @@
               "numerator": "2979070254385549309"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.310995659067006",
+              "denominator": "1269089808262012111",
+              "numerator": "394681421335664274"
+            },
+            "upper": {
+              "decimal": "0.310995659067006",
+              "denominator": "3807269424786035208",
+              "numerator": "1184044264006993241"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.222492565807846",
@@ -9253,6 +9970,11 @@
             "lower_numerator": "3807269424786035208",
             "upper_numerator": "3807269424786036333"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1906972767435364600",
+            "upper_numerator": "1906972767435365188"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "847089143042408521",
@@ -9262,6 +9984,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "209964599231460549",
             "upper_numerator": "209964599231460566"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1184044264006992822",
+            "upper_numerator": "1184044264006993241"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -9469,6 +10196,18 @@
               "numerator": "1740994484084885289"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.394372648409019",
+              "denominator": "4524036627568212315",
+              "numerator": "1784156306313483169"
+            },
+            "upper": {
+              "decimal": "0.394372648409020",
+              "denominator": "4524036627568209808",
+              "numerator": "1784156306313484195"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.243508552379181",
@@ -9513,6 +10252,11 @@
             "lower_numerator": "4524036627568209808",
             "upper_numerator": "4524036627568212315"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2648951790487221860",
+            "upper_numerator": "2648951790487223252"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1101641610089529233",
@@ -9522,6 +10266,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "214851095200400116",
             "upper_numerator": "214851095200400153"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1784156306313483169",
+            "upper_numerator": "1784156306313484195"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -9729,6 +10478,18 @@
               "numerator": "1986063184596033043"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.471984392336678",
+              "denominator": "5289924994238290772",
+              "numerator": "2496762033912163251"
+            },
+            "upper": {
+              "decimal": "0.471984392336679",
+              "denominator": "2644962497119142843",
+              "numerator": "1248381016956082722"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.258124792026820",
@@ -9773,6 +10534,11 @@
             "lower_numerator": "5289924994238285686",
             "upper_numerator": "5289924994238290772"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3537021108811099609",
+            "upper_numerator": "3537021108811102611"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1365460788975235370",
@@ -9782,6 +10548,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "220085975253454693",
             "upper_numerator": "220085975253454769"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2496762033912163251",
+            "upper_numerator": "2496762033912165444"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -9989,6 +10760,18 @@
               "numerator": "2274527437508321547"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.554371133285958",
+              "denominator": "6106006419813642179",
+              "numerator": "3384993698803426740"
+            },
+            "upper": {
+              "decimal": "0.554371133285960",
+              "denominator": "1526501604953408153",
+              "numerator": "846248424700857791"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.280690591180266",
@@ -10033,6 +10816,11 @@
             "lower_numerator": "6106006419813632612",
             "upper_numerator": "6106006419813642179"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4573952872814546890",
+            "upper_numerator": "4573952872814552832"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1713898551727990154",
@@ -10042,6 +10830,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "242682508357208918",
             "upper_numerator": "242682508357209047"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3384993698803426740",
+            "upper_numerator": "3384993698803431164"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -10249,6 +11042,18 @@
               "numerator": "2443500713091627901"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.611749195386637",
+              "denominator": "6646801193346851016",
+              "numerator": "4066175281924874095"
+            },
+            "upper": {
+              "decimal": "0.611749195386639",
+              "denominator": "6646801193346837334",
+              "numerator": "4066175281924880643"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.285814773186783",
@@ -10293,6 +11098,11 @@
             "lower_numerator": "6646801193346837334",
             "upper_numerator": "6646801193346851016"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5332384478116312439",
+            "upper_numerator": "5332384478116321193"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1899753975494071680",
@@ -10302,6 +11112,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "245942506107935638",
             "upper_numerator": "245942506107935813"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4066175281924874095",
+            "upper_numerator": "4066175281924880643"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -10509,6 +11324,18 @@
               "numerator": "5115809134708684751"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.646646867731137",
+              "denominator": "7052815463066911625",
+              "numerator": "4560681027877943764"
+            },
+            "upper": {
+              "decimal": "0.646646867731139",
+              "denominator": "7052815463066894255",
+              "numerator": "4560681027877952244"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.286395192439923",
@@ -10553,6 +11380,11 @@
             "lower_numerator": "7052815463066894255",
             "upper_numerator": "7052815463066911625"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5941458681597841647",
+            "upper_numerator": "5941458681597852954"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2019892441788313634",
@@ -10562,6 +11394,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "254867950409781298",
             "upper_numerator": "254867950409781513"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4560681027877943764",
+            "upper_numerator": "4560681027877952244"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -10769,6 +11606,18 @@
               "numerator": "5424707916150277166"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.697290251802921",
+              "denominator": "7620340547795937254",
+              "numerator": "5313589179396638063"
+            },
+            "upper": {
+              "decimal": "0.697290251802925",
+              "denominator": "2540113515931971255",
+              "numerator": "1771196393132216602"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.285826152332905",
@@ -10813,6 +11662,11 @@
             "lower_numerator": "7620340547795913765",
             "upper_numerator": "7620340547795937254"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6824068853809602693",
+            "upper_numerator": "6824068853809618319"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2178092618242933824",
@@ -10822,6 +11676,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "258048921143538502",
             "upper_numerator": "258048921143538787"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5313589179396638063",
+            "upper_numerator": "5313589179396649806"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -11029,6 +11888,18 @@
               "numerator": "2889649031582469617"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.757462921849380",
+              "denominator": "1180635391493018601",
+              "numerator": "894287533279088561"
+            },
+            "upper": {
+              "decimal": "0.757462921849385",
+              "denominator": "4132223870225549113",
+              "numerator": "3130006366476818184"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.287380176672882",
@@ -11073,6 +11944,11 @@
             "lower_numerator": "8264447740451098226",
             "upper_numerator": "8264447740451130207"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7906468792529622622",
+            "upper_numerator": "7906468792529644369"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2375038451754643721",
@@ -11082,6 +11958,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "266483757279290676",
             "upper_numerator": "266483757279291059"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6260012732953619927",
+            "upper_numerator": "6260012732953636368"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -11289,6 +12170,18 @@
               "numerator": "683502139856869694"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.817298800490789",
+              "denominator": "8977689287143633723",
+              "numerator": "7337454685561499665"
+            },
+            "upper": {
+              "decimal": "0.817298800490796",
+              "denominator": "8977689287143590375",
+              "numerator": "7337454685561522583"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.287056929692319",
@@ -11333,6 +12226,11 @@
             "lower_numerator": "8977689287143590375",
             "upper_numerator": "8977689287143633723"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "9176816429610983049",
+            "upper_numerator": "9176816429611013281"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2577107922499078068",
@@ -11342,6 +12240,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "273045435173185222",
             "upper_numerator": "273045435173185722"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7337454685561499665",
+            "upper_numerator": "7337454685561522583"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -11549,6 +12452,18 @@
               "numerator": "6425466724566900923"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.860641643891732",
+              "denominator": "4763295879805816770",
+              "numerator": "4099490796338794081"
+            },
+            "upper": {
+              "decimal": "0.860641643891740",
+              "denominator": "9526591759611580289",
+              "numerator": "8198981592677616761"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.286132831765842",
@@ -11593,6 +12508,11 @@
             "lower_numerator": "9526591759611580289",
             "upper_numerator": "9526591759611633540"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "10199411862782285669",
+            "upper_numerator": "10199411862782323327"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2725870677254812926",
@@ -11602,6 +12522,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "278215782712924488",
             "upper_numerator": "278215782712925096"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "8198981592677588162",
+            "upper_numerator": "8198981592677616761"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -11809,6 +12734,18 @@
               "numerator": "47222137451171875"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.017589602641301",
+              "denominator": "999998092651367188",
+              "numerator": "17589569091796875"
+            },
+            "upper": {
+              "decimal": "0.017589602641301",
+              "denominator": "333332697550455729",
+              "numerator": "5863189697265625"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.001960758134381",
@@ -11853,6 +12790,11 @@
             "lower_numerator": "999998092651367187",
             "upper_numerator": "999998092651367188"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "18108367919921875",
+            "upper_numerator": "18108367919921875"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1960754394531250",
@@ -11862,6 +12804,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "7629394531250",
             "upper_numerator": "7629394531250"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17589569091796875",
+            "upper_numerator": "17589569091796875"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -12069,6 +13016,18 @@
               "numerator": "245680771941108775"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.056146096232073",
+              "denominator": "222219927385407155",
+              "numerator": "12476781427665442"
+            },
+            "upper": {
+              "decimal": "0.056146096232073",
+              "denominator": "999989673234332136",
+              "numerator": "56145516424494505"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.042483560703026",
@@ -12113,6 +13072,11 @@
             "lower_numerator": "1999979346468664272",
             "upper_numerator": "1999979346468664395"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "626125794225654235",
+            "upper_numerator": "626125794225654293"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "84966243970499577",
@@ -12122,6 +13086,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "56214226616753471",
             "upper_numerator": "56214226616753473"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "112291032848988978",
+            "upper_numerator": "112291032848989010"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -12329,6 +13298,18 @@
               "numerator": "2214271905446348313"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.207446701895048",
+              "denominator": "2749889738595909475",
+              "numerator": "570455556846757202"
+            },
+            "upper": {
+              "decimal": "0.207446701895048",
+              "denominator": "2749889738595909067",
+              "numerator": "570455556846757338"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.172806402847287",
@@ -12373,6 +13354,11 @@
             "lower_numerator": "2749889738595909067",
             "upper_numerator": "2749889738595909475"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1077037453547422867",
+            "upper_numerator": "1077037453547423057"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "475198553953424208",
@@ -12382,6 +13368,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "65874015362117488",
             "upper_numerator": "65874015362117499"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "570455556846757202",
+            "upper_numerator": "570455556846757338"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -12589,6 +13580,18 @@
               "numerator": "2727265333966774001"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.288389202071297",
+              "denominator": "421828175618851194",
+              "numerator": "121650690977911409"
+            },
+            "upper": {
+              "decimal": "0.288389202071297",
+              "denominator": "54429442015335619",
+              "numerator": "15696863351988576"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.228283863068956",
@@ -12633,6 +13636,11 @@
             "lower_numerator": "3374625404950808378",
             "upper_numerator": "3374625404950809552"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1547437814867230942",
+            "upper_numerator": "1547437814867231552"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "770372523852810857",
@@ -12642,6 +13650,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "210008861851379285",
             "upper_numerator": "210008861851379313"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "973205527823291272",
+            "upper_numerator": "973205527823291712"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -12849,6 +13862,18 @@
               "numerator": "2981978515003864257"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.311559233348546",
+              "denominator": "635268958451398435",
+              "numerator": "197923909665247318"
+            },
+            "upper": {
+              "decimal": "0.311559233348547",
+              "denominator": "3811613750708388277",
+              "numerator": "1187543457991484794"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.222465295120558",
@@ -12893,6 +13918,11 @@
             "lower_numerator": "3811613750708388277",
             "upper_numerator": "3811613750708390610"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1911509884914975182",
+            "upper_numerator": "1911509884914976426"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "847951777936917722",
@@ -12902,6 +13932,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "210008861851379285",
             "upper_numerator": "210008861851379313"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1187543457991483908",
+            "upper_numerator": "1187543457991484794"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -13109,6 +14144,18 @@
               "numerator": "3489923476601615476"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.395720607411670",
+              "denominator": "1512106060405703625",
+              "numerator": "598371528694612127"
+            },
+            "upper": {
+              "decimal": "0.395720607411671",
+              "denominator": "4536318181217104795",
+              "numerator": "1795114586083838906"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.243405852735602",
@@ -13153,6 +14200,11 @@
             "lower_numerator": "4536318181217104795",
             "upper_numerator": "4536318181217110875"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2663223900607603638",
+            "upper_numerator": "2663223900607607070"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1104166395179164691",
@@ -13162,6 +14214,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "215009546552604725",
             "upper_numerator": "215009546552604803"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1795114586083836381",
+            "upper_numerator": "1795114586083838906"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -13369,6 +14426,18 @@
               "numerator": "798211127395019906"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.475023164370702",
+              "denominator": "5321365754619463973",
+              "numerator": "2527771999533227305"
+            },
+            "upper": {
+              "decimal": "0.475023164370705",
+              "denominator": "5321365754619449375",
+              "numerator": "2527771999533233622"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.257746845963854",
@@ -13413,6 +14482,11 @@
             "lower_numerator": "5321365754619449375",
             "upper_numerator": "5321365754619463973"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3578289660841414486",
+            "upper_numerator": "3578289660841423160"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1371565239473232297",
@@ -13422,6 +14496,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "220555974750488937",
             "upper_numerator": "220555974750489141"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2527771999533227305",
+            "upper_numerator": "2527771999533233622"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -13629,6 +14708,18 @@
               "numerator": "4590534871602946371"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.561049519906595",
+              "denominator": "6179739510575109124",
+              "numerator": "3467139885555983591"
+            },
+            "upper": {
+              "decimal": "0.561049519906601",
+              "denominator": "6179739510575076347",
+              "numerator": "3467139885555998754"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.279628347689788",
@@ -13673,6 +14764,11 @@
             "lower_numerator": "6179739510575076347",
             "upper_numerator": "6179739510575109124"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4683583744356990256",
+            "upper_numerator": "4683583744357010847"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1728030348495418469",
@@ -13682,6 +14778,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "243661168393732610",
             "upper_numerator": "243661168393733034"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3467139885555983591",
+            "upper_numerator": "3467139885555998754"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -13889,6 +14990,18 @@
               "numerator": "4952010814785510345"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.622125354118981",
+              "denominator": "6767122431453894999",
+              "numerator": "4209998439034756073"
+            },
+            "upper": {
+              "decimal": "0.622125354118990",
+              "denominator": "6767122431453842572",
+              "numerator": "4209998439034781169"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.284074743043145",
@@ -13933,6 +15046,11 @@
             "lower_numerator": "6767122431453842572",
             "upper_numerator": "6767122431453894999"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5523627203635488069",
+            "upper_numerator": "5523627203635522002"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1922368565856769291",
@@ -13942,6 +15060,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "247535139443268458",
             "upper_numerator": "247535139443269126"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4209998439034756073",
+            "upper_numerator": "4209998439034781169"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -14149,6 +15272,18 @@
               "numerator": "5203821725564364721"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.660713490193345",
+              "denominator": "7220305785972287317",
+              "numerator": "4770553436112950438"
+            },
+            "upper": {
+              "decimal": "0.660713490193356",
+              "denominator": "656391435088383195",
+              "numerator": "433686676010271434"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.284092116916220",
@@ -14193,6 +15328,11 @@
             "lower_numerator": "7220305785972215145",
             "upper_numerator": "7220305785972287317"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6220493557703173291",
+            "upper_numerator": "6220493557703220925"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2051231955519299568",
@@ -14202,6 +15342,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "257026494785315270",
             "upper_numerator": "257026494785316168"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4770553436112950438",
+            "upper_numerator": "4770553436112985774"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -14409,6 +15554,18 @@
               "numerator": "5553300020746873961"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.717753088736656",
+              "denominator": "7874823154870117477",
+              "numerator": "5652178642662964724"
+            },
+            "upper": {
+              "decimal": "0.717753088736673",
+              "denominator": "7874823154870008745",
+              "numerator": "5652178642663019566"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.282526643400307",
@@ -14453,6 +15610,11 @@
             "lower_numerator": "7874823154870008745",
             "upper_numerator": "7874823154870117477"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7273644858599981681",
+            "upper_numerator": "7273644858600055243"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2224847353316467402",
@@ -14462,6 +15624,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "261221358910205662",
             "upper_numerator": "261221358910206983"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5652178642662964724",
+            "upper_numerator": "5652178642663019566"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -14669,6 +15836,18 @@
               "numerator": "2984185488752323328"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.786335506854054",
+              "denominator": "8652963268309454759",
+              "numerator": "6804132257375625493"
+            },
+            "upper": {
+              "decimal": "0.786335506854079",
+              "denominator": "8652963268309289510",
+              "numerator": "6804132257375711101"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.282584093255036",
@@ -14713,6 +15892,11 @@
             "lower_numerator": "8652963268309289510",
             "upper_numerator": "8652963268309454759"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "8629543416022997186",
+            "upper_numerator": "8629543416023111679"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2445189779144362613",
@@ -14722,6 +15906,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "271115165665494388",
             "upper_numerator": "271115165665496326"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6804132257375625493",
+            "upper_numerator": "6804132257375711101"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -14929,6 +16118,18 @@
               "numerator": "6431571530820445109"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.858016872696406",
+              "denominator": "870407499447029907",
+              "numerator": "746824320647039615"
+            },
+            "upper": {
+              "decimal": "0.858016872696443",
+              "denominator": "563204852583357453",
+              "numerator": "483239266301033509"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.280218187570682",
@@ -14973,6 +16174,11 @@
             "lower_numerator": "9574482493917076701",
             "upper_numerator": "9574482493917328977"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "10343129360998706934",
+            "upper_numerator": "10343129360998885534"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2682944131372737925",
@@ -14982,6 +16188,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "279931227723088919",
             "upper_numerator": "279931227723091787"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "8215067527117435765",
+            "upper_numerator": "8215067527117569653"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -15189,6 +16400,18 @@
               "numerator": "3397167191936573231"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.913939558302055",
+              "denominator": "5170670160432057505",
+              "numerator": "4725680002550891758"
+            },
+            "upper": {
+              "decimal": "0.913939558302104",
+              "denominator": "1034134032086377081",
+              "numerator": "945136000510196974"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.277288115822539",
@@ -15233,6 +16456,11 @@
             "lower_numerator": "10341340320863770810",
             "upper_numerator": "10341340320864115010"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "11864219570079346977",
+            "upper_numerator": "11864219570079594800"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2867530772652066129",
@@ -15242,6 +16470,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "287328161686227860",
             "upper_numerator": "287328161686231685"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "9451360005101783516",
+            "upper_numerator": "9451360005101969740"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -15449,6 +16682,18 @@
               "numerator": "991666555404663088"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.017590048025852",
+              "denominator": "166666646798451742",
+              "numerator": "2931674321492513"
+            },
+            "upper": {
+              "decimal": "0.017590048025852",
+              "denominator": "999999880790710447",
+              "numerator": "17590045928955079"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.001961231465486",
@@ -15493,6 +16738,11 @@
             "lower_numerator": "999999880790710447",
             "upper_numerator": "999999880790710452"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "18108963966369628",
+            "upper_numerator": "18108963966369630"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1961231231689453",
@@ -15502,6 +16752,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "7629394531250",
             "upper_numerator": "7629394531250"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "17590045928955078",
+            "upper_numerator": "17590045928955079"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -15709,6 +16964,18 @@
               "numerator": "210585111256575643"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.056152149140520",
+              "denominator": "666665879169856021",
+              "numerator": "37434721874041646"
+            },
+            "upper": {
+              "decimal": "0.056152149140520",
+              "denominator": "333332939584927982",
+              "numerator": "18717360937020831"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.042484441080924",
@@ -15753,6 +17020,11 @@
             "lower_numerator": "1999997637509567892",
             "upper_numerator": "1999997637509568063"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "626147479460759697",
+            "upper_numerator": "626147479460759781"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "84968781792763190",
@@ -15762,6 +17034,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "56214226616753471",
             "upper_numerator": "56214226616753473"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "112304165622124938",
+            "upper_numerator": "112304165622124986"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -15969,6 +17246,18 @@
               "numerator": "2214338013186897391"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.207460647605425",
+              "denominator": "549997129011663916",
+              "numerator": "114102760565884151"
+            },
+            "upper": {
+              "decimal": "0.207460647605425",
+              "denominator": "2749985645058318939",
+              "numerator": "570513802829420975"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.172805698622048",
@@ -16013,6 +17302,11 @@
             "lower_numerator": "2749985645058318939",
             "upper_numerator": "2749985645058319580"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1077127725725262697",
+            "upper_numerator": "1077127725725263001"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "475213190594906242",
@@ -16022,6 +17316,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "65874770485684421",
             "upper_numerator": "65874770485684435"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "570513802829420755",
+            "upper_numerator": "570513802829420975"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -16229,6 +17528,18 @@
               "numerator": "2727476722483185914"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.288435047120974",
+              "denominator": "3374945797358160295",
+              "numerator": "973452650091733793"
+            },
+            "upper": {
+              "decimal": "0.288435047120974",
+              "denominator": "3374945797358158267",
+              "numerator": "973452650091734586"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.228281343235975",
@@ -16273,6 +17584,11 @@
             "lower_numerator": "3374945797358158267",
             "upper_numerator": "3374945797358160295"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1547790038634645563",
+            "upper_numerator": "1547790038634646643"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "770437159969528825",
@@ -16282,6 +17598,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "210015650195574505",
             "upper_numerator": "210015650195574553"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "973452650091733793",
+            "upper_numerator": "973452650091734586"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -16489,6 +17810,18 @@
               "numerator": "994152931097091424"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.311651178354374",
+              "denominator": "3812358842612460622",
+              "numerator": "1188126125609891785"
+            },
+            "upper": {
+              "decimal": "0.311651178354375",
+              "denominator": "3812358842612456229",
+              "numerator": "1188126125609893460"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.222455699105782",
@@ -16533,6 +17866,11 @@
             "lower_numerator": "3812358842612456229",
             "upper_numerator": "3812358842612460622"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1912360849817649088",
+            "upper_numerator": "1912360849817651441"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "848080951575466190",
@@ -16542,6 +17880,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "210015650195574505",
             "upper_numerator": "210015650195574553"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1188126125609891785",
+            "upper_numerator": "1188126125609893460"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -16749,6 +18092,18 @@
               "numerator": "3491465774724082692"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.395993999379014",
+              "denominator": "4538816814842090721",
+              "numerator": "1797344222958038414"
+            },
+            "upper": {
+              "decimal": "0.395993999379017",
+              "denominator": "4538816814842077459",
+              "numerator": "1797344222958043904"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.243373904239304",
@@ -16793,6 +18148,11 @@
             "lower_numerator": "4538816814842077459",
             "upper_numerator": "4538816814842090721"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2666422123246420971",
+            "upper_numerator": "2666422123246428530"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1104629568855123146",
@@ -16802,6 +18162,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "215039413781988158",
             "upper_numerator": "215039413781988321"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "1797344222958038414",
+            "upper_numerator": "1797344222958043904"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -17009,6 +18374,18 @@
               "numerator": "3995441657157895174"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.475744971337463",
+              "denominator": "5329052396003902307",
+              "numerator": "2535269879392717485"
+            },
+            "upper": {
+              "decimal": "0.475744971337470",
+              "denominator": "5329052396003864807",
+              "numerator": "2535269879392733671"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.257624856394528",
@@ -17053,6 +18430,11 @@
             "lower_numerator": "5329052396003864807",
             "upper_numerator": "5329052396003902307"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3589285627659586711",
+            "upper_numerator": "3589285627659609242"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1372896358239418796",
@@ -17062,6 +18444,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "220648767151114803",
             "upper_numerator": "220648767151115281"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "2535269879392717485",
+            "upper_numerator": "2535269879392733671"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -17269,6 +18656,18 @@
               "numerator": "4602150734687987811"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.562983835797358",
+              "denominator": "6201665236447543667",
+              "numerator": "3491437283146369231"
+            },
+            "upper": {
+              "decimal": "0.562983835797375",
+              "denominator": "6201665236447443106",
+              "numerator": "3491437283146415683"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.279235915448717",
@@ -17313,6 +18712,11 @@
             "lower_numerator": "6201665236447443106",
             "upper_numerator": "6201665236447543667"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4719227159343139423",
+            "upper_numerator": "4719227159343203413"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1731727669605915217",
@@ -17322,6 +18726,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "243925837796171868",
             "upper_numerator": "243925837796173104"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "3491437283146369231",
+            "upper_numerator": "3491437283146415683"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -17529,6 +18938,18 @@
               "numerator": "4972555055102661249"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.625544405321446",
+              "denominator": "425474354519452171",
+              "numerator": "266153102077396620"
+            },
+            "upper": {
+              "decimal": "0.625544405321475",
+              "denominator": "6807589672311054211",
+              "numerator": "4258449633238432254"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.283368450638474",
@@ -17573,6 +18994,11 @@
             "lower_numerator": "6807589672311054211",
             "upper_numerator": "6807589672311234736"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5594553262781176121",
+            "upper_numerator": "5594553262781294427"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "1929056138025310062",
@@ -17582,6 +19008,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "248017340399960345",
             "upper_numerator": "248017340399962506"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4258449633238345920",
+            "upper_numerator": "4258449633238432254"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -17789,6 +19220,18 @@
               "numerator": "5233918890623320292"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.665734789495406",
+              "denominator": "7281661905235040024",
+              "numerator": "4847655655658363785"
+            },
+            "upper": {
+              "decimal": "0.665734789495448",
+              "denominator": "7281661905234770269",
+              "numerator": "4847655655658495849"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.283057147460179",
@@ -17833,6 +19276,11 @@
             "lower_numerator": "7281661905234770269",
             "upper_numerator": "7281661905235040024"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "6333427360325171763",
+            "upper_numerator": "6333427360325352232"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2061126447665279792",
@@ -17842,6 +19290,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "257737285721242027",
             "upper_numerator": "257737285721245180"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "4847655655658363785",
+            "upper_numerator": "4847655655658495849"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -18049,6 +19502,18 @@
               "numerator": "5602626711286077884"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.725905069212533",
+              "denominator": "3989796950308448027",
+              "numerator": "2896213831357605151"
+            },
+            "upper": {
+              "decimal": "0.725905069212602",
+              "denominator": "7979593900616442519",
+              "numerator": "5792427662715438955"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.280883256892055",
@@ -18093,6 +19558,11 @@
             "lower_numerator": "7979593900616442519",
             "upper_numerator": "7979593900616896054"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7478456989898056327",
+            "upper_numerator": "7478456989898367155"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2241334323481248722",
@@ -18102,6 +19572,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "262404134215214343",
             "upper_numerator": "262404134215219505"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "5792427662715210302",
+            "upper_numerator": "5792427662715438955"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -18309,6 +19784,18 @@
               "numerator": "6050229487749422467"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.799602428281112",
+              "denominator": "8835486702256109777",
+              "numerator": "7064876622169461349"
+            },
+            "upper": {
+              "decimal": "0.799602428281229",
+              "denominator": "1262212386036475609",
+              "numerator": "1009268088881409523"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.279889008288227",
@@ -18353,6 +19840,11 @@
             "lower_numerator": "8835486702255329263",
             "upper_numerator": "8835486702256109777"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "9010133775725941603",
+            "upper_numerator": "9010133775726489815"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2472955610838283464",
@@ -18362,6 +19854,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "273099818484608992",
             "upper_numerator": "273099818484617572"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "7064876622169461349",
+            "upper_numerator": "7064876622169866661"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -18569,6 +20066,18 @@
               "numerator": "177504206283172349"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.879315267530800",
+              "denominator": "9893015518029636151",
+              "numerator": "8699079586922581899"
+            },
+            "upper": {
+              "decimal": "0.879315267530993",
+              "denominator": "9893015518028280107",
+              "numerator": "8699079586923306930"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.275936211894513",
@@ -18613,6 +20122,11 @@
             "lower_numerator": "9893015518028280107",
             "upper_numerator": "9893015518029636151"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "11049289701406088608",
+            "upper_numerator": "11049289701407064016"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2729841226258735861",
@@ -18622,6 +20136,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "283314409267858887",
             "upper_numerator": "283314409267873332"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "8699079586922581899",
+            "upper_numerator": "8699079586923306930"
           },
           "missing": {
             "denominator": "1000000000000000000",
@@ -18829,6 +20348,18 @@
               "numerator": "6991875317679503895"
             }
           },
+          "all_hole_endpoint_mass_over_H": {
+            "lower": {
+              "decimal": "0.943191874780739",
+              "denominator": "10818525572597142449",
+              "numerator": "10203945417181267524"
+            },
+            "upper": {
+              "decimal": "0.943191874781018",
+              "denominator": "10818525572595114218",
+              "numerator": "10203945417182371939"
+            }
+          },
           "blocked_over_H": {
             "lower": {
               "decimal": "0.271429864375080",
@@ -18873,6 +20404,11 @@
             "lower_numerator": "10818525572595114218",
             "upper_numerator": "10818525572597142449"
           },
+          "arithmetic_pair_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "12961551726987893772",
+            "upper_numerator": "12961551726989375571"
+          },
           "blocked": {
             "denominator": "1000000000000000000",
             "lower_numerator": "2936470928908376761",
@@ -18882,6 +20418,11 @@
             "denominator": "1000000000000000000",
             "lower_numerator": "292295454519645205",
             "upper_numerator": "292295454519666271"
+          },
+          "hole_endpoint_mass": {
+            "denominator": "1000000000000000000",
+            "lower_numerator": "10203945417181267524",
+            "upper_numerator": "10203945417182371939"
           },
           "missing": {
             "denominator": "1000000000000000000",

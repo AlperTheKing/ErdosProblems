@@ -28,8 +28,11 @@ def admissible_pairs(n: int) -> list[tuple[int, int]]:
 
 def naive_census(limit: int) -> dict:
     member = [False] * (limit + 1)
+    rank = [None] * (limit + 1)
     member[2] = True
     member[3] = True
+    rank[2] = 0
+    rank[3] = 0
     pairs_by_n = [[] for _ in range(limit + 1)]
     missing_prefix = [0] * (limit + 1)
     splitless = 0
@@ -39,12 +42,33 @@ def naive_census(limit: int) -> dict:
     max_fixed = (Fraction(0), 0)
     first_direct_two = 0
     first_fixed_two = 0
+    odd_reducible = 0
+    seed3_even_reducible = 0
+    hard_reducible = 0
+    seed2_healed = 0
+    rank_histogram = [2]
+    healing_rank_histogram = [0]
 
     for n in range(2, limit + 1):
         pairs = admissible_pairs(n)
         pairs_by_n[n] = pairs
-        if any(member[left] and member[right] for left, right in pairs):
+        witness_ranks = [
+            1 + max(rank[left], rank[right])
+            for left, right in pairs
+            if member[left] and member[right]
+        ]
+        if witness_ranks:
             member[n] = True
+            rank[n] = min(witness_ranks)
+            while len(rank_histogram) <= rank[n]:
+                rank_histogram.append(0)
+            rank_histogram[rank[n]] += 1
+            parent2 = (n + 1) // 2
+            if n % 2 and allowed(parent2) and not member[parent2]:
+                seed2_healed += 1
+                while len(healing_rank_histogram) <= rank[n]:
+                    healing_rank_histogram.append(0)
+                healing_rank_histogram[rank[n]] += 1
 
         missing_prefix[n] = missing_prefix[n - 1]
         if allowed(n) and not member[n]:
@@ -52,6 +76,14 @@ def naive_census(limit: int) -> dict:
             if not pairs:
                 splitless += 1
             else:
+                if n % 2:
+                    odd_reducible += 1
+                else:
+                    parent3 = (n + 1) // 3
+                    if (n + 1) % 3 == 0 and allowed(parent3) and parent3 != 3:
+                        seed3_even_reducible += 1
+                    else:
+                        hard_reducible += 1
                 missing_incidences = sum(
                     (not member[left]) + (not member[right])
                     for left, right in pairs
@@ -87,6 +119,12 @@ def naive_census(limit: int) -> dict:
         "max_fixed": max_fixed,
         "first_direct_two": first_direct_two,
         "first_fixed_two": first_fixed_two,
+        "odd_reducible": odd_reducible,
+        "seed3_even_reducible": seed3_even_reducible,
+        "hard_reducible": hard_reducible,
+        "seed2_healed": seed2_healed,
+        "rank_histogram": rank_histogram,
+        "healing_rank_histogram": healing_rank_histogram,
     }
 
 
@@ -165,6 +203,17 @@ class C17Verifier(unittest.TestCase):
             endpoint["missing"], expected["missing_prefix"][limit]
         )
         self.assertEqual(endpoint["splitless_missing"], expected["splitless"])
+        self.assertEqual(endpoint["odd_reducible"], expected["odd_reducible"])
+        self.assertEqual(
+            endpoint["seed3_even_reducible"], expected["seed3_even_reducible"]
+        )
+        self.assertEqual(endpoint["hard_reducible"], expected["hard_reducible"])
+        self.assertEqual(endpoint["seed2_healed"], expected["seed2_healed"])
+        self.assertEqual(endpoint["rank_histogram"], expected["rank_histogram"])
+        self.assertEqual(
+            endpoint["healing_rank_histogram"],
+            expected["healing_rank_histogram"],
+        )
 
         direct, direct_x = expected["max_direct"]
         self.assertEqual(

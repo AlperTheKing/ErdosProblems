@@ -85,6 +85,8 @@ struct Stats {
     Bounds unique_blocked_harmonic;
     Bounds multi_blocked_harmonic;
     Bounds fixed_11_prime_block_harmonic;
+    Bounds arithmetic_pair_mass;
+    Bounds hole_endpoint_mass;
     Bounds witness_first_moment;
     Bounds witness_second_moment;
     Bounds missing_arithmetic_pair_mass;
@@ -98,6 +100,8 @@ struct Stats {
     void add(std::uint32_t s, const Observation& row) {
         ++total;
         harmonic.add(1, s);
+        arithmetic_pair_mass.add(row.arithmetic_pairs, s);
+        hole_endpoint_mass.add(row.hole_endpoints, s);
         witness_first_moment.add(row.witness_pairs, s);
         witness_second_moment.add(
             static_cast<std::uint64_t>(row.witness_pairs) * row.witness_pairs,
@@ -168,6 +172,8 @@ struct Stats {
         unique_blocked_harmonic.merge(other.unique_blocked_harmonic);
         multi_blocked_harmonic.merge(other.multi_blocked_harmonic);
         fixed_11_prime_block_harmonic.merge(other.fixed_11_prime_block_harmonic);
+        arithmetic_pair_mass.merge(other.arithmetic_pair_mass);
+        hole_endpoint_mass.merge(other.hole_endpoint_mass);
         witness_first_moment.merge(other.witness_first_moment);
         witness_second_moment.merge(other.witness_second_moment);
         missing_arithmetic_pair_mass.merge(other.missing_arithmetic_pair_mass);
@@ -250,6 +256,10 @@ void write_stats(std::ostream& out, const Stats& row) {
     out << ",\"multi_pair_blocked\":"; write_bounds(out, row.multi_blocked_harmonic);
     out << ",\"fixed_11_times_G2_prime\":";
     write_bounds(out, row.fixed_11_prime_block_harmonic);
+    out << ",\"arithmetic_pair_mass\":";
+    write_bounds(out, row.arithmetic_pair_mass);
+    out << ",\"hole_endpoint_mass\":";
+    write_bounds(out, row.hole_endpoint_mass);
     out << ",\"witness_first_moment\":";
     write_bounds(out, row.witness_first_moment);
     out << ",\"witness_second_moment\":";
@@ -420,6 +430,22 @@ int main(int argc, char** argv) {
             factorization[0].exponent == 2 &&
             factorization[0].prime % 3 == 2;
 
+        std::uint64_t tau_one_mod_three = 1;
+        std::uint64_t tau_two_mod_three = 1;
+        bool two_mod_three_part_is_square = true;
+        for (const auto& item : factorization) {
+            if (item.prime % 3 == 1) {
+                tau_one_mod_three *= item.exponent + 1;
+            } else if (item.prime % 3 == 2) {
+                tau_two_mod_three *= item.exponent + 1;
+                if ((item.exponent & 1U) != 0) {
+                    two_mod_three_part_is_square = false;
+                }
+            } else {
+                throw std::runtime_error("3 divides 3s+1");
+            }
+        }
+
         std::uint32_t two_mod_three_divisors = 0;
         bool equal_two_mod_three_square = false;
         std::vector<PairRecord> pair_records;
@@ -456,6 +482,11 @@ int main(int argc, char** argv) {
             2 * observation.arithmetic_pairs +
                 (equal_two_mod_three_square ? 1U : 0U)) {
             throw std::runtime_error("divisor involution identity failed");
+        }
+        const auto character_formula = tau_one_mod_three *
+            (tau_two_mod_three - (two_mod_three_part_is_square ? 1U : 0U)) / 2;
+        if (two_mod_three_divisors != character_formula) {
+            throw std::runtime_error("residue-2 divisor character formula failed");
         }
         const bool splitless_characterization =
             observation.no_two_mod_three_prime || observation.exceptional_square;
@@ -525,6 +556,7 @@ int main(int argc, char** argv) {
         << "\"T(s) iff witness_pairs(s)>0 for every analyzed s\","
         << "\"K(s)=0 iff 3s+1 has no 2mod3 prime divisor or equals p^2 with p=2mod3\","
         << "\"K-R <= hole_endpoints <= 2(K-R) pointwise\","
+        << "\"D2=tau(N1)(tau(N2)-1_{N2 square})/2 pointwise\","
         << "\"#2mod3 divisors = 2K plus the excluded equal-square indicator\"],";
     out << "\"rows\":[";
     bool first_row = true;

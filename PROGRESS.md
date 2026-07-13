@@ -3173,3 +3173,7 @@ _switch_minc.py, GPT_DUAL_CERTIFICATE_PLAN.md.
 [2026-07-13T07:09:53Z] ✔ GATE40-10e7 | DID: read bg DP run | RESULT: 10^7 EXACT bitmap match, both |G|=4952270 | Δ: (40) audited two scales
 [2026-07-13T07:09:53Z] ✔ 424-TICK | DID: PROOF_STATE R2 acceptance + TICK-132 (Codex: C-M TOP, C-E, L11 critical) | RESULT: files updated | Δ: none
 [2026-07-13T07:10:55Z] ✔ RD-M1-DEEP | DID: ray(3,2,1) k=4 bool DP (M=1.68e10) | RESULT: sqrt(n)D/M=0.3075; seq .4082/.3493/.3222/.3075, decrements halving => apparent limit ~0.29-0.30 | Δ: (M) empirically HOLDS on ray 321
+[2026-07-13T07:14:17Z] ✔ RD-M2 | DID: ray(2,1,1) k=5,6 bool DP | RESULT: sqrt(n)D/M .2235/.2059, local exponent ->0.45 (decay); ray dichotomy vs (3,2,1) ~0.30 stabilizing | Δ: (M) ray-dependent; canonical surplus favors (3,2,1)-like
+[2026-07-13T07:14:17Z] ✔ WAVE3-SCAN | DID: read Codex C00-C22 + gpt_pro (CX-R2 strict-gap) | RESULT: C05 kills single-window kappa (R1 48-51); C01 L9-EXT kappa=92.6@10^7 ratio rising; C04 BKS cite verified | Δ: R-D aggregated gate (E) = the live target
+[2026-07-13T07:14:17Z] ✔ 424-TICK | DID: PROOF_STATE M2+wave3 reconciliation; TICK-133 (namespace CX-R<n>; C-M refined: ray-321 k5 + surplus bracket; C-E at gate (E)) | RESULT: files updated | Δ: none
+[2026-07-13T07:15:18Z] ✔ 424-R3 | DID: sent R3 to GPT-5.6 Pro ((M) prove-or-refute: ray-dichotomy invariant + second-moment (63) reduction + asymmetric-(75)/fallback-(77) branches; all M2+wave3 data attached) | RESULT: streaming | Δ: none

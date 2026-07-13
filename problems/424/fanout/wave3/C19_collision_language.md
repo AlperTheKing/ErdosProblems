@@ -258,8 +258,16 @@ R_{\min}=\frac12+\frac1{2\cdot3^b}-\frac1{2^a3^b},
 R_{\max}=1-\frac{1+3^{-b}}{2^{a+1}}.                    \tag{13}
 \]
 
-For every nonempty multiset, direct subtraction gives
-\(R_{\max}<2R_{\min}\).  But a `25` block requires
+For every nonempty multiset,
+
+\[
+2R_{\min}-R_{\max}
+=2^{-a-1}+3^{-b}(1-3\cdot2^{-a-1})>0;                  \tag{13a}
+\]
+
+for \(a=0\) this is \((1-3^{-b})/2>0\), and for \(a\ge1\) both terms
+in the first display are positive.  Thus \(R_{\max}<2R_{\min}\).  But a
+`25` block requires
 
 \[
 \frac{C_v}{C_u}=\frac52,

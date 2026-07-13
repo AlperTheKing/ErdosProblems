@@ -307,3 +307,15 @@ The run matched the independent reference count
 $|G\cap[1,10^7]|=4,952,270$ and checked 1,389,436 distinct rough
 candidates. All arithmetic in the assertions and output is integer-exact.
 The finite tables are not extrapolated to an asymptotic claim.
+
+A second run produced byte-identical JSON. The independent pre-existing
+Python divisor-recursion generator was run through 2,598,896 and matched all
+180 endpoint membership bits across the 90 pairs in the six retained
+falsifier records.
+An independent factorization loop also checked (1) and (2) for all 166,667
+even integers $m\equiv1\pmod3$ through $10^6$.
+
+~~~text
+shifted_sifted_audit.cpp  ab575f189b7a7498a7a370b383c99afe9b14a8fb951d1a35908f2146a3858341
+result.json               9fe98846d60dabda234daff4eb81349a5f6fd211d80f99bc851d3ff0b9148e14
+~~~
