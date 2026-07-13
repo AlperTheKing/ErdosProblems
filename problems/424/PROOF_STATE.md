@@ -56,3 +56,17 @@ NOT SOLVED. No explicit `c>0,X0` and no zero-density proof were obtained.
   a ≠ b, a,b ∈ G (e.g. both ≡ 0 mod 3). Reduces the density question to a MULTIPLICATIVE-BASIS statement
   for G ∩ 3Z (Erdős-multiplication-table flavored). If one full residue class ⊆ G eventually, d(G) ≥ 1/9 > 0
   answers the problem; then bootstrap other classes.
+
+## R-A covering gate (2026-07-13, claude_ra_covering_gate.py SHA 179cc21f…, B=10^6; accepted as data)
+- IDENTITY CHECK: covered(n) [∃ a≠b ∈ G, ab = n+1] is EXACTLY membership n ∈ G for n ≥ 4 (definition of
+  the closure) — gate numbers agree with the missing-set analysis (class-8 missing 7.9% @10^6 vs 3.87%
+  @10^7 ✓ consistent decay).
+- **O4: class-8 (mod 9) missing fraction HALVES per decade**: 44% / 27.9% / 14.9% / 7.0% (decades up to
+  10^6), 3.9% @10^7 — geometric-ish (ratios 0.63, 0.53, 0.47, ~0.55), FASTER than 1/log. Class 5 similar
+  but slower (50/35/20/9.9%).
+- Structural reading of "uncovered": n+1 = 9m is uncovered iff EVERY divisor pair (a,b) with the allowed
+  sign pattern (both ≡ 0 mod 3, or a ≡ 2 mod 3 with b ≡ 0 mod 9) has a G-hole. Divisors ≡ 1 mod 3 are
+  PERMANENTLY unusable (G1). So R-A's target theorem splits: (i) arithmetic supply — a.e. 9m has "many"
+  allowed divisor pairs (classical divisors-in-residue-classes); (ii) hole-avoidance — G's holes are too
+  thin (decaying per O1/O4) to block all pairs; a self-improving/bootstrap estimate suggests itself
+  (holes thin ⟹ more covered ⟹ holes thinner). REGISTERED as the R-A proof skeleton.
