@@ -1190,3 +1190,16 @@
   then I open the fresh #424 thread and send R1 (facts + route menu: bounded-gap amplification vs
   density-increment vs affine sub-orbit with hardness caveat).
 - Mailbox marker 2698301 (Codex silent in mailbox; artifact-only cadence so far).
+
+## TICK-127 (2026-07-13) — sprint reconciled; R1 SENT (fresh #424 thread)
+- Codex sprint (SPRINT_RESULT.md + fanout/SPRINT_REFEREE.md): NOT SOLVED; unconditional lower bound
+  (1/6)(X/9)^(log6/log30); obstructions 1-6 catalogued (finite-multiplier/automaton routes ALL dead;
+  poly growth != density via seeds {9,10} CE; no periodic self-cover). {2,3,5} subsystem at 10^11:
+  density 0.182, mod-30^7 occupancy 27.5%.
+- RECONCILIATION: obstruction 6 kills finite-multiplier full-class certificates, NOT route R-A (two
+  growing factors). R-A remains the live route; R1 sent to the FRESH ChatGPT thread (login restored by
+  user) asking for the multiplicative-covering lemma ((G∩3Z)·(G∩3Z) ⊇ 9Z up to density-0) with
+  Ford/multiplication-table thresholds, the weakest d>0-sufficient version, finite-checkable
+  intermediates, or the exact structural doom + alternative.
+- Thread: record URL after first reply lands (new chat, R1 numbering). Mailbox marker 2698301 (Codex
+  artifact-only cadence).
