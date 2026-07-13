@@ -15223,3 +15223,18 @@ next tick.
    the GPT-5.6 Pro #424 thread (R1 = problem onboarding + sharpest known partials + first route menu),
    and LOOP_STATE/GOAL v10 texts for the user.
 4. If you already have #424 work in another workspace, post its location/state FIRST so we do not fork.
+
+## [CLAUDE 2026-07-12, TICK-124] #424 bootstrap DONE — G1 mod-3 obstruction + rising density
+1. G0 truncated-closure lemma proved + exact census run (claude_g0_census.py SHA a058ae46…, B=10^6):
+   density 0.4576 and RISING (0.250/0.321/0.398/0.458 at 10^3..10^6); first terms match A5244.
+2. **G1 (trivial, accepted): class 1 mod 3 is EMPTY** ({0,2} mod 3 closed under xy−1; start ⊆ {0,2}) ⟹
+   d(G) ≤ 2/3. No other congruence obstruction mod 2,4,6,8,12. WORKING CONJECTURE: d(G) = 2/3
+   (G ⊇ all large n ≢ 1 mod 3) — answer YES with density exactly 2/3.
+3. YOUR LANES UPDATE: (L1) census to B = 10^8 (then 10^9 if RAM permits — bitset + sorted-pool scan;
+   independent implementation, not my script) + density curve + gap statistics (largest missing n ≢ 1
+   mod 3 per decade — does the missing set thin out?); (L2) A5244 b-file cross-check; (L3) literature;
+   (L4) NEW: hunt small COMPLETE structures inside G — an arithmetic progression a+dZ ∩ [x0,∞) ⊆ G or an
+   interval of allowed residues fully inside G would be the amplification seed (once G ⊇ AP, products
+   xy−1 over the AP cover…); report the longest runs of consecutive allowed-class integers in G per decade.
+4. Mine: FRESH GPT #424 thread (R1: onboarding + the 2/3 conjecture + amplification route menu) next tick;
+   GOAL/LOOP v10 texts ready for the user on request.

@@ -33,3 +33,13 @@ Acceptance rules (same discipline as #23/#864):
 - Sidon-type obstruction on the other side: could G be so product-structured
   that it stays at density 0 (like {2^k}-generated sets)? The -1 shift breaks
   pure multiplicativity — quantify how.
+
+## Bootstrap results (2026-07-12, Claude census claude_g0_census.py SHA a058ae46…)
+- G0 truncated-closure lemma PROVED (generation trees stay in [1,B]; algorithm exact).
+- Census B=10^6: |G ∩ [1,B]| = 457,599 (density 0.4576); counts 250 / 3,207 / 39,843 / 457,599 at
+  10^3..10^6 — density RISING (0.250 → 0.321 → 0.398 → 0.458). First 25 terms match A5244 shape.
+- **G1 (accepted, trivial): G ⊆ {n : n ≢ 1 mod 3}.** {0,2} mod 3 closed under xy−1 (0·x−1≡2; 2·2−1≡0);
+  start {2,3} ⊆ {0,2} ⟹ class 1 mod 3 EMPTY (census: 0 elements ≡ 1 mod 3). Hence d(G) ≤ 2/3.
+- Natural conjecture (working): d(G) = 2/3 — G contains all sufficiently large n ≢ 1 (mod 3)?
+  Within-allowed-classes fill = 0.686 at B=10^6 and rising.
+- No other congruence obstruction visible mod 2,4,6,8,12 (all classes ≢ 1 mod 3 populated).
