@@ -1,0 +1,115 @@
+{
+  "canonicalSha256": "d176ce66d83c6206e33b88c3726cf9a6197c49fd61fd60f2cda5469af0e3443c",
+  "extensionCanonicalSha256": "2bf166b7fa6f3da5a6b4229e7bb1758256bf4d7a92a7d5a121eab78dcfd15311",
+  "schema": "rooted-t5-ambient-extension-independent-sat-v1",
+  "sourceCanonicalSha256": "ff1c120948e914d5a2f1eaccc9b99ce626d43866e0a74a17550a3b567bf5b062",
+  "splits": [
+    {
+      "cnfClauses": 5829,
+      "cnfVariables": 960,
+      "newLeft": 0,
+      "newRight": 7,
+      "pathClauses": 35,
+      "requiredCross": [
+        20,
+        20
+      ],
+      "separatorCount": 2,
+      "variables": 120,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 5821,
+      "cnfVariables": 966,
+      "newLeft": 1,
+      "newRight": 6,
+      "pathClauses": 34,
+      "requiredCross": [
+        20,
+        20
+      ],
+      "separatorCount": 2,
+      "variables": 126,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 3195,
+      "cnfVariables": 562,
+      "newLeft": 2,
+      "newRight": 5,
+      "pathClauses": 33,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 130,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 3116,
+      "cnfVariables": 556,
+      "newLeft": 3,
+      "newRight": 4,
+      "pathClauses": 32,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 132,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 3038,
+      "cnfVariables": 548,
+      "newLeft": 4,
+      "newRight": 3,
+      "pathClauses": 31,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 132,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 2961,
+      "cnfVariables": 538,
+      "newLeft": 5,
+      "newRight": 2,
+      "pathClauses": 30,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 130,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 2885,
+      "cnfVariables": 526,
+      "newLeft": 6,
+      "newRight": 1,
+      "pathClauses": 29,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 126,
+      "verdict": "UNSAT"
+    },
+    {
+      "cnfClauses": 2810,
+      "cnfVariables": 512,
+      "newLeft": 7,
+      "newRight": 0,
+      "pathClauses": 28,
+      "requiredCross": [
+        20
+      ],
+      "separatorCount": 1,
+      "variables": 120,
+      "verdict": "UNSAT"
+    }
+  ],
+  "verdict": "PASS_ALL_EIGHT_SPLITS_UNSAT"
+}

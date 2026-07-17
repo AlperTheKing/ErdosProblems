@@ -1,0 +1,265 @@
+% ------------------------------------------------------------------
+% Section: Support circuits
+% Paper:   rotor_window_closures (Erdos #23 series, companion to
+%          "Shortest-geodesic supports in triangle-free maximum cuts")
+% Drafted from archive sources:
+%   problems/23/writeup/WALL_ATTACK_R44_GPTPRO56.md  (section 1)
+%   problems/23/writeup/arxiv/shortest_support_obstructions/main.tex
+% Assumes the companion preamble: amsthm environments theorem /
+% proposition / lemma / corollary / definition / remark numbered by
+% section, and the macros \supp, \bip, \mc.
+% Bibliography keys used (add at assembly):
+%   Ferudun26supports : A. Ferudun, "Shortest-geodesic supports in
+%     triangle-free maximum cuts: an infinite Hall obstruction and the
+%     first minimal footprints", 2026 (the companion paper).
+%   EdmondsFulkerson65 : J. Edmonds and D. R. Fulkerson, "Transversals
+%     and matroid partition", J. Res. Nat. Bur. Standards Sect. B 69B
+%     (1965), 147--153.
+% ------------------------------------------------------------------
+
+\section{Support circuits}\label{sec:support-circuits}
+
+Fix a cut \(V(G)=V_0\mathbin{\dot\cup}V_1\) of a triangle-free graph
+\(G\), write \(B\) for the crossing edges and \(M=E(G)\setminus B\) for
+the monochromatic edges, and for \(xy\in M\) with \(d_B(x,y)=4\) let
+\(\supp_B(xy)\subseteq B\) be the set of edges lying on shortest
+\(x\)-\(y\) paths in \(B\), as in the companion paper
+\cite{Ferudun26supports}. A failure of the Hall condition
+\(|\supp_B(\mathcal S)|\ge|\mathcal S|\) localizes to an
+inclusion-minimal violating family, and the Minimal footprint lemma of
+\cite{Ferudun26supports} lists the graph-level constraints such a family
+must satisfy. In this section we isolate the part of that lemma that
+depends on inclusion-minimality alone. It is a statement about abstract
+finite set systems; no graph structure enters. Besides recovering the
+counting and multiplicity clauses of the footprint lemma, the abstract
+form yields two further constraints used repeatedly in later sections:
+connectivity of the atom--edge incidence graph, and a family of perfect
+systems of distinct representatives obtained by deleting any single
+atom. All proofs are elementary and complete.
+
+\subsection{The abstract identity}
+
+Let \(A\) be a finite index set, whose elements we call \emph{atoms},
+and let \(\mathcal F=(F_a)_{a\in A}\) be a family of finite sets. For
+\(S\subseteq A\) write
+\[
+ F(S)=\bigcup_{a\in S}F_a,
+ \qquad
+ F^{*}=F(A).
+\]
+In the intended application the atoms are bad edges \(xy\in M\) with
+\(d_B(x,y)=4\) and \(F_a=\supp_B(a)\), but nothing below uses this.
+
+\begin{definition}\label{def:circuit}
+The family \(\mathcal F\) is \emph{deficient} if \(|F^{*}|<|A|\). It is
+a \emph{support circuit} if it is deficient and every proper subfamily
+satisfies the Hall condition:
+\[
+ |F(S)|\ge|S|
+ \qquad\text{for every } S\subsetneq A.
+\]
+\end{definition}
+
+Support circuits are exactly the inclusion-minimal deficient families:
+a deficient proper subfamily is precisely a violation of the displayed
+condition.
+
+\begin{theorem}[Circuit identity]\label{thm:circuit}
+Let \(\mathcal F=(F_a)_{a\in A}\) be a support circuit with
+\(m=|A|\ge2\). Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(|F^{*}|=m-1\);
+\item \(F(A\setminus\{a\})=F^{*}\) for every \(a\in A\);
+\item every \(f\in F^{*}\) lies in at least two of the sets \(F_a\);
+\item the bipartite incidence graph on \(A\mathbin{\dot\cup}F^{*}\),
+with \(a\) adjacent to \(f\) when \(f\in F_a\), is connected;
+\item for every \(a\in A\) there is a bijection
+\(\varphi_a\colon A\setminus\{a\}\to F^{*}\) with
+\(\varphi_a(b)\in F_b\) for all \(b\neq a\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i), (ii). Fix \(a\in A\). The proper subfamily \(A\setminus\{a\}\)
+satisfies the Hall condition, so
+\[
+ m-1\le|F(A\setminus\{a\})|\le|F^{*}|\le m-1,
+\]
+the last inequality by deficiency and integrality. Equality holds
+throughout; in particular \(|F^{*}|=m-1\), and
+\(F(A\setminus\{a\})\) is a subset of \(F^{*}\) of full cardinality,
+hence equal to it.
+
+(iii). Let \(f\in F^{*}\), say \(f\in F_a\). By (ii),
+\(f\in F(A\setminus\{a\})\), so \(f\in F_b\) for some \(b\neq a\).
+
+(iv). Since \(m\ge2\), every singleton \(\{a\}\) is a proper subfamily,
+so \(|F_a|\ge1\); and every \(f\in F^{*}\) lies in some \(F_a\). Hence
+every connected component of the incidence graph contains at least one
+atom. Suppose there are two or more components. Splitting the
+components into two nonempty groups partitions \(A\) into nonempty sets
+\(A_1,A_2\) with \(F(A_1)\cap F(A_2)=\emptyset\): an element in both
+unions would be adjacent to atoms in distinct components. Both \(A_i\)
+are proper subfamilies, so
+\[
+ |F^{*}|=|F(A_1)|+|F(A_2)|\ge|A_1|+|A_2|=m,
+\]
+contradicting (i).
+
+(v). Every \(S\subseteq A\setminus\{a\}\) is a proper subfamily of
+\(A\), so \(|F(S)|\ge|S|\). By Hall's theorem \cite{Hall35} the family
+\((F_b)_{b\in A\setminus\{a\}}\) has a system of distinct
+representatives: an injection \(\varphi_a\) with
+\(\varphi_a(b)\in F_b\). Its image is a subset of \(F^{*}\) of size
+\(m-1=|F^{*}|\), so \(\varphi_a\) is a bijection onto \(F^{*}\).
+\end{proof}
+
+\begin{remark}\label{rem:intrinsic}
+The identity in (i) is intrinsic to the circuit: if a support circuit
+\(A\) sits inside a larger ambient family \(\mathcal M\), then
+\(|F^{*}|=|A|-1\), not \(|\mathcal M|-1\). All counting in later
+sections is against the circuit size \(m\).
+\end{remark}
+
+\begin{remark}
+The hypothesis \(m\ge2\) only excludes the degenerate circuit
+\(A=\{a\}\), \(F_a=\emptyset\), for which (i), (ii) still hold
+trivially. In the geodesic application \(m\ge5\)
+(Corollary~\ref{cor:sizes}).
+\end{remark}
+
+Clause (v) says more than the existence of a matching: after deleting
+\emph{any} one atom, the remaining \(m-1\) atoms match onto \emph{all}
+of \(F^{*}\), each atom represented inside its own set. This rigidity
+is the main tool of the window analyses in later sections. It also
+identifies support circuits in classical terms.
+
+\begin{corollary}\label{cor:sdr}
+A family \((F_a)_{a\in A}\) is a support circuit if and only if it has
+no system of distinct representatives while every proper subfamily has
+one.
+\end{corollary}
+
+\begin{proof}
+By Hall's theorem, a finite family has a system of distinct
+representatives if and only if all of its subfamilies satisfy the Hall
+condition.
+
+Let \(A\) be a support circuit. Deficiency is a violation of the Hall
+condition at \(S=A\), so \(A\) has no system of distinct
+representatives. Every subfamily of a proper subfamily of \(A\) is
+itself a proper subfamily of \(A\) and hence satisfies the Hall
+condition, so every proper subfamily has a system of distinct
+representatives.
+
+Conversely, suppose \(A\) has no system of distinct representatives
+while every proper subfamily has one. Some \(S\subseteq A\) violates
+the Hall condition; \(S\) cannot be proper, since a proper subfamily
+has a system of distinct representatives and therefore satisfies
+\(|F(S)|\ge|S|\). Hence \(A\) itself is deficient, and every proper
+subfamily satisfies the Hall condition.
+\end{proof}
+
+\begin{remark}\label{rem:matroid}
+The subfamilies of an ambient family \(\mathcal M\) admitting systems
+of distinct representatives are the independent sets of a matroid, the
+transversal matroid induced by \((F_a)_{a\in\mathcal M}\)
+\cite{EdmondsFulkerson65}. Corollary~\ref{cor:sdr} says that the
+support circuits inside \(\mathcal M\) are exactly the circuits of this
+matroid, and Theorem~\ref{thm:circuit}(v) computes the rank of a
+circuit deleted by one element: the deletion matchings are perfect onto
+the ground union \(F^{*}\).
+\end{remark}
+
+\subsection{The graph form}
+
+Specializing to shortest-geodesic supports recovers the Minimal
+footprint lemma of \cite{Ferudun26supports} and extends it by the two
+new clauses. We restate the full result in the paper's setting; the
+genuinely graph-level clauses (c), (d) have the same short proofs as in
+\cite{Ferudun26supports} and are included for completeness.
+
+\begin{corollary}[Graph support circuits]\label{cor:graph}
+Let \(G\) be triangle-free with a fixed cut, let \(B\) be connected,
+and let \(\mathcal A\subseteq\{xy\in M:d_B(x,y)=4\}\) be
+inclusion-minimal with
+\[
+ |\supp_B(\mathcal A)|<|\mathcal A|=m.
+\]
+Write \(F=\supp_B(\mathcal A)\), viewed as the subgraph it spans. Then:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \(|E(F)|=m-1\), and \(F\) is connected and bipartite;
+\item every edge of \(F\) lies in at least two atom supports, and
+\(\supp_B(\mathcal A\setminus\{a\})=E(F)\) for every
+\(a\in\mathcal A\);
+\item every \(xy\in\mathcal A\) satisfies \(d_F(x,y)=4\), and
+\(\supp_B(xy)\) is the union of all length-four \(x\)-\(y\) paths in
+\(F\);
+\item the graph \((V(F),\mathcal A)\) is triangle-free;
+\item for every \(a\in\mathcal A\) there is a bijection from
+\(\mathcal A\setminus\{a\}\) onto \(E(F)\) assigning to each atom an
+edge of its own support.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+The family \((\supp_B(a))_{a\in\mathcal A}\) is a support circuit, and
+every support is nonempty because \(d_B(x,y)=4\), so \(m\ge2\) and
+Theorem~\ref{thm:circuit} applies with \(F^{*}=E(F)\).
+
+(a) The count is Theorem~\ref{thm:circuit}(i), and \(F\subseteq B\) is
+bipartite. For connectivity: each support \(\supp_B(xy)\) is a
+connected edge set, being a union of \(x\)-\(y\) paths that all contain
+\(x\). If two atoms are adjacent to a common edge \(f\) in the
+incidence graph, their supports share the edge \(f\) and hence their
+union is connected. Walking along paths of the incidence graph, which
+is connected by Theorem~\ref{thm:circuit}(iv), connects all supports,
+and every edge of \(F\) lies in some support.
+
+(b) Theorem~\ref{thm:circuit}(iii) and (ii).
+
+(c) The edges of any shortest \(x\)-\(y\) path in \(B\) lie in
+\(\supp_B(xy)\subseteq E(F)\), so \(d_F(x,y)\le4\). Since
+\(F\subseteq B\) and \(x,y\) lie on the same shore, every \(x\)-\(y\)
+walk in \(F\) has even length, and \(d_F(x,y)=2\) would give a common
+neighbour forming a triangle with the edge \(xy\). Hence
+\(d_F(x,y)=4\). A length-four \(x\)-\(y\) path in \(F\) is a
+length-four \(x\)-\(y\) path in \(B\), hence shortest, hence contained
+in \(\supp_B(xy)\); conversely every shortest \(x\)-\(y\) path in \(B\)
+lies in \(\supp_B(xy)\subseteq E(F)\) and has length
+\(4=d_F(x,y)\), so it is one of the length-four \(F\)-paths.
+
+(d) \(\mathcal A\subseteq E(G)\) and \(G\) is triangle-free; the
+endpoints of atoms lie in \(V(F)\) by (c).
+
+(e) Theorem~\ref{thm:circuit}(v).
+\end{proof}
+
+\begin{corollary}[First sizes]\label{cor:sizes}
+In the setting of Corollary~\textup{\ref{cor:graph}}, \(m\ge5\), and
+the average multiplicity of a support edge satisfies
+\[
+ \frac{1}{|E(F)|}\sum_{a\in\mathcal A}|\supp_B(a)|
+ \;\ge\;\frac{4m}{m-1}\;>\;4.
+\]
+\end{corollary}
+
+\begin{proof}
+Each support contains the four edges of a shortest path, so
+\(4\le|\supp_B(a)|\le|E(F)|=m-1\), giving \(m\ge5\); and
+\(\sum_a|\supp_B(a)|\ge4m\) with \(|E(F)|=m-1\).
+\end{proof}
+
+\begin{remark}
+Corollary~\ref{cor:graph}(a)--(d) recovers the Minimal footprint lemma
+of \cite{Ferudun26supports}, where it feeds the exact classification of
+the footprints with \(m\le10\); clause (e), the incidence connectivity
+behind (a), and the deletion-union identity in (b) (which occurs in the
+proof, but not the statement, of the companion lemma) are the
+additional structure carried by the circuit form. Sharper counts are
+derived in later sections for \emph{selected} supports, in which each
+atom retains a single geodesic; these depend on
+the owner--profile apparatus. The
+results of this section constrain the geometry of a minimal Hall
+violation; they give no upper bound on \(\bip(G)\).
+\end{remark}

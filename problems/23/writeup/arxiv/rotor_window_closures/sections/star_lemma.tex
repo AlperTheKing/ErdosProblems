@@ -1,0 +1,236 @@
+% Section: A star lemma at cut-tight vertices
+% Sources: problems/23/writeup/WALL_ATTACK_R41_GPTPRO56.md (sections 1-3);
+%          problems/23/lean/Erdos23Delta0/Gamma/SingletonPairSigma.lean;
+%          problems/23/lean/Erdos23Delta0/Gamma/CutTightStarPigeonhole.lean.
+% Claims manifest: star_lemma_claims.md (same directory).
+
+\section{A star lemma at cut-tight vertices}\label{sec:starlemma}
+
+This section records a self-contained fact about maximum cuts of
+triangle-free graphs. It uses only triangle-freeness and maximality of
+the cut, and is independent of the support and Hall systems studied in
+the rest of the paper.
+
+Throughout the section, \(G\) is a finite simple graph with a fixed cut
+\(V(G)=V_0\mathbin{\dot\cup}V_1\), \(B\) is the set of crossing edges,
+and \(M=E(G)\setminus B\) is the set of monochromatic edges. The cut is
+a \emph{maximum cut} when \(|M|\) is least over all cuts of \(G\), so
+that \(|M|=\bip(G)\).
+
+\begin{definition}[Switch loss; cut-tight vertices]\label{def:switchloss}
+For \(S\subseteq V(G)\), let \(\partial_BS\) (respectively
+\(\partial_MS\)) be the set of edges of \(B\) (respectively \(M\)) with
+exactly one endpoint in \(S\), and define the \emph{switch loss}
+\[
+ \sigma(S)=|\partial_BS|-|\partial_MS|.
+\]
+For a vertex \(v\), write \(\sigma(v)=\sigma(\{v\})=d_B(v)-d_M(v)\),
+where \(d_B(v)\) and \(d_M(v)\) count the crossing and monochromatic
+edges at \(v\). We call \(v\) \emph{cut-tight} if \(\sigma(v)\le1\),
+and we write \(N_B(v)\) for the set of neighbours joined to \(v\) by an
+edge of \(B\), so \(|N_B(v)|=d_B(v)\).
+\end{definition}
+
+\begin{lemma}[Switch identity]\label{lem:switchloss}
+Exchanging the shores of the vertices of a set \(S\subseteq V(G)\)
+produces a cut with exactly \(|M|+\sigma(S)\) monochromatic edges.
+Consequently, at a maximum cut,
+\[
+ \sigma(S)\ge0\quad\text{for every }S\subseteq V(G),
+\]
+and in particular \(\sigma(v)\ge0\) for every vertex \(v\).
+\end{lemma}
+
+\begin{proof}
+An edge changes its crossing status under the switch if and only if
+exactly one of its endpoints lies in \(S\); all other edges keep their
+status. The new monochromatic set is therefore
+\((M\setminus\partial_MS)\cup\partial_BS\), of size
+\(|M|-|\partial_MS|+|\partial_BS|=|M|+\sigma(S)\). A maximum cut
+minimizes the monochromatic count, so \(\sigma(S)\ge0\).
+\end{proof}
+
+\begin{lemma}[Additivity on a nonedge]\label{lem:nonedgeadd}
+If \(x\ne y\) and \(xy\notin E(G)\), then for any cut
+\[
+ \sigma(\{x,y\})=\sigma(x)+\sigma(y).
+\]
+\end{lemma}
+
+\begin{proof}
+Since \(xy\notin E(G)\), no edge is incident to both \(x\) and \(y\).
+Hence an edge has exactly one endpoint in \(\{x,y\}\) if and only if it
+is incident to exactly one of \(x,y\), and
+\(\partial_B\{x,y\}=\partial_B\{x\}\mathbin{\dot\cup}\partial_B\{y\}\),
+\(\partial_M\{x,y\}=\partial_M\{x\}\mathbin{\dot\cup}\partial_M\{y\}\).
+Subtract.
+\end{proof}
+
+\begin{lemma}[Star inequality]\label{lem:starineq}
+Let \(G\) be triangle-free, fix any cut, and let \(v\) be a vertex with
+\(k=d_B(v)\). Then
+\[
+ \sigma(\{v\}\cup N_B(v))
+  =\sigma(v)+\sum_{a\in N_B(v)}\sigma(a)-2k,
+\]
+and hence, at a maximum cut,
+\begin{equation}\label{eq:starineq}
+ \sum_{a\in N_B(v)}\sigma(a)\;\ge\;2\,d_B(v)-\sigma(v).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set \(S=\{v\}\cup N_B(v)\). If two vertices \(a,a'\in N_B(v)\) were
+adjacent, then \(va,va',aa'\) would form a triangle; so \(N_B(v)\) is
+independent. An edge of \(G\) with both endpoints in \(S\) therefore
+joins \(v\) to some \(a\in N_B(v)\), and since \(G\) is simple this
+edge is the crossing edge \(va\) itself. Thus the edges of \(G\) inside
+\(S\) are exactly the \(k\) crossing star edges, and no monochromatic
+edge has both endpoints in \(S\). Summing degrees over \(S\) counts
+each internal edge twice and each boundary edge once:
+\[
+ |\partial_BS|=\sum_{u\in S}d_B(u)-2k,
+ \qquad
+ |\partial_MS|=\sum_{u\in S}d_M(u).
+\]
+Subtracting gives the identity, and Lemma~\ref{lem:switchloss} gives
+\eqref{eq:starineq} at a maximum cut.
+\end{proof}
+
+At a cut-tight vertex, \eqref{eq:starineq} reads
+\(\sum_{a\in N_B(v)}\sigma(a)\ge2k-1\): the \(k\) crossing neighbours
+carry average switch loss at least \(2-1/k\). Two immediate
+consequences:
+
+\begin{corollary}\label{cor:badendpoint}
+At a maximum cut, every cut-tight vertex satisfies
+\(d_M(v)\ge d_B(v)-1\). In particular, a cut-tight vertex with
+\(d_B(v)\ge2\) is an endpoint of a monochromatic edge.
+\end{corollary}
+
+\begin{proof}
+\(d_B(v)-d_M(v)=\sigma(v)\le1\).
+\end{proof}
+
+\begin{corollary}\label{cor:losstwoneighbour}
+At a maximum cut of a triangle-free graph, every cut-tight vertex \(v\)
+with \(d_B(v)\ge2\) has a crossing neighbour \(a\in N_B(v)\) with
+\(\sigma(a)\ge2\).
+\end{corollary}
+
+\begin{proof}
+Write \(k=d_B(v)\ge2\). If every \(a\in N_B(v)\) had \(\sigma(a)\le1\),
+then \(\sum_{a\in N_B(v)}\sigma(a)\le k\le2k-2<2k-1\), contradicting
+\eqref{eq:starineq} with \(\sigma(v)\le1\).
+\end{proof}
+
+A single high-loss neighbour already pairs with the whole star:
+
+\begin{proposition}[Pair threshold]\label{prop:pairthreshold}
+Let \(G\) be triangle-free with a maximum cut, and let \(x,y\) be
+distinct crossing neighbours of a common vertex. If \(\sigma(x)\ge2\),
+then \(xy\notin E(G)\) and
+\[
+ \sigma(\{x,y\})=\sigma(x)+\sigma(y)\ge2.
+\]
+\end{proposition}
+
+\begin{proof}
+Nonadjacency is triangle-freeness, as in the proof of
+Lemma~\ref{lem:starineq}. By Lemma~\ref{lem:nonedgeadd},
+\(\sigma(\{x,y\})=\sigma(x)+\sigma(y)\), and \(\sigma(y)\ge0\) by
+Lemma~\ref{lem:switchloss}.
+\end{proof}
+
+The main statement refines Corollary~\ref{cor:losstwoneighbour}: the
+combined loss of two neighbours can be forced \emph{relative to any
+prescribed neighbour}. The arithmetic is a pigeonhole, which we isolate
+in the form in which it has been formally verified.
+
+\begin{lemma}[Star pigeonhole]\label{lem:starpigeon}
+Let \(A\) be a finite set with \(|A|\ge2\), let
+\(\ell\colon A\to\mathbb Z_{\ge0}\), and let \(s\in\{0,1\}\) satisfy
+\[
+ 2|A|\;\le\;s+\sum_{a\in A}\ell(a).
+\]
+Then for every \(x\in A\) there exists \(y\in A\setminus\{x\}\) with
+\(\ell(x)+\ell(y)\ge2\).
+\end{lemma}
+
+\begin{proof}
+Suppose \(\ell(x)+\ell(y)\le1\) for every \(y\in A\setminus\{x\}\).
+Since \(|A|\ge2\), some \(y_0\in A\setminus\{x\}\) exists; from
+\(\ell(x)+\ell(y_0)\le1\) and \(\ell\ge0\) we get \(\ell(x)\le1\), and
+likewise \(\ell(y)\le1\) for every \(y\in A\setminus\{x\}\). Hence
+\(\sum_{a\in A}\ell(a)\le|A|\) and
+\(2|A|\le s+|A|\le1+|A|\), so \(|A|\le1\), a contradiction.
+\end{proof}
+
+\begin{theorem}[Star lemma at cut-tight vertices]\label{thm:starlemma}
+Let \(G\) be triangle-free, fix a maximum cut, and let \(v\) be a
+cut-tight vertex with \(d_B(v)\ge2\). Then for every \(x\in N_B(v)\)
+there exists \(y\in N_B(v)\setminus\{x\}\) with \(xy\notin E(G)\) and
+\[
+ \sigma(\{x,y\})=\sigma(x)+\sigma(y)\ge2.
+\]
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{lem:starpigeon} with \(A=N_B(v)\), \(\ell=\sigma\)
+restricted to \(A\) (nonnegative by Lemma~\ref{lem:switchloss}), and
+\(s=\sigma(v)\in\{0,1\}\); hypothesis \eqref{eq:starineq} is the star
+inequality. This yields \(y\in N_B(v)\setminus\{x\}\) with
+\(\sigma(x)+\sigma(y)\ge2\). Since \(x\) and \(y\) are distinct
+crossing neighbours of \(v\) and \(G\) is triangle-free, \(xy\notin
+E(G)\), and Lemma~\ref{lem:nonedgeadd} gives
+\(\sigma(\{x,y\})=\sigma(x)+\sigma(y)\).
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:starlemma} is a necessary condition satisfied by every
+maximum cut of every triangle-free graph. By itself it yields no upper
+bound on \(\bip(G)\) and no progress on the Erd\H os \(N^2/25\)
+conjecture; in this paper it serves only as a local production
+threshold: inside the crossing star of any cut-tight vertex, every
+neighbour can be paired to a nonadjacent partner whose joint switch
+loss meets the threshold two.
+\end{remark}
+
+\begin{remark}[Formalization]\label{rem:leanstar}
+Four ingredients of this section are verified in Lean~4, in the
+development \texttt{Erdos23Delta0} accompanying this project. There,
+graphs are literal edge lists with executable adjacency, cuts are side
+assignments, and a maximum cut is a side assignment minimizing the
+monochromatic count over all side assignments.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item Singleton nonnegativity (the vertex case of
+Lemma~\ref{lem:switchloss}):
+\texttt{singleton\_sigma\_nonneg\_of\_isMaxCut} in the module
+\texttt{Erdos23Delta0.Gamma.SingletonPairSigma}; the general-set
+inequality \(\sigma(S)\ge0\) is
+\texttt{sigmaNonneg\_of\_badCount\_min} in
+\texttt{Erdos23Delta0.CertGraph}.
+\item Additivity on a nonedge (Lemma~\ref{lem:nonedgeadd}):
+\texttt{sigma\_pair\_eq\_add\_singletons\_of\_nonadjacent} in
+\texttt{Erdos23Delta0.Gamma.SingletonPairSigma}, with the crossing and
+monochromatic boundary counts added separately
+(\texttt{dB\_pair\_eq\_add\_singletons\_of\_nonadjacent},
+\texttt{dM\_pair\_eq\_add\_singletons\_of\_nonadjacent}).
+\item The pair threshold (Proposition~\ref{prop:pairthreshold}):
+\texttt{nonadjacent\_of\_common\_blue},
+\texttt{two\_le\_sigma\_pair\_of\_two\_le\_left}, and their combination
+\texttt{common\_blue\_pair\_two\_le\_of\_left\_loss}, all in
+\texttt{Erdos23Delta0.Gamma.SingletonPairSigma}.
+\item The pigeonhole (Lemma~\ref{lem:starpigeon}):
+\texttt{exists\_other\_with\_two\_le\_loss\_sum} in
+\texttt{Erdos23Delta0.Gamma.CutTightStarPigeonhole}, stated over an
+abstract finite neighbour set with \(\mathbb N\)-valued losses and the
+star inequality as a hypothesis (the formal statement does not even
+require the prescribed element to lie in the set).
+\end{enumerate}
+The geometric step, the star identity of Lemma~\ref{lem:starineq}, is
+proved above but is not among the formalized statements; consequently
+Theorem~\ref{thm:starlemma} as a single graph-level statement is proved
+here on paper, with its arithmetic core and all pair manipulations
+machine-checked.
+\end{remark}

@@ -1,0 +1,59 @@
+{
+  "canonicalSha256": "79db75b95e8401064f1b6159bb980ee0149f0fb3a602a607306a7f0e501a5d49",
+  "circuitCount": 576,
+  "schema": "r42-t4-cross-outer-exclusion-v1",
+  "sourceCanonicalSha256": "302e04ef5ff14c78cbe9dc5800ac0226e730ed0baca123585dc6469a82d66652",
+  "supportOwnerTypeCount": 4,
+  "totalLiveCrossOuterCandidates": 0,
+  "types": [
+    {
+      "circuitCount": 180,
+      "commonBlue": [
+        0,
+        2
+      ],
+      "graph6": "N?????????W?m?h_?N_",
+      "liveCrossOuterCandidates": [],
+      "m": 13,
+      "n": 15,
+      "v": 12
+    },
+    {
+      "circuitCount": 190,
+      "commonBlue": [
+        5,
+        10
+      ],
+      "graph6": "N???????C?W?m?@q?f?",
+      "liveCrossOuterCandidates": [],
+      "m": 14,
+      "n": 15,
+      "v": 13
+    },
+    {
+      "circuitCount": 190,
+      "commonBlue": [
+        5,
+        10
+      ],
+      "graph6": "N???????C?[?e?@q?f?",
+      "liveCrossOuterCandidates": [],
+      "m": 14,
+      "n": 15,
+      "v": 13
+    },
+    {
+      "circuitCount": 16,
+      "commonBlue": [
+        6,
+        9
+      ],
+      "graph6": "N??????_A?C?f?OsCU?",
+      "liveCrossOuterCandidates": [],
+      "m": 14,
+      "n": 15,
+      "v": 13
+    }
+  ],
+  "verdict": "PASS_NO_LIVE_MIDDLE_SWAP_GEOMETRY"
+}

@@ -1,0 +1,769 @@
+% Section: Partial results at twenty-five atoms (t=5) and two certified
+% near-misses.
+%
+% Sources: WALL_ATTACK_R47/R48/R49/R50 archives, LOOP_STATE TICK-109/110,
+% PROGRESS ledger 2026-07-12.  Every computer-assisted claim carries its
+% verifier and SHA-256 prefix; see the accompanying claims manifest
+% t5_partial_claims.md.
+%
+% Assumes the companion-paper preamble: amsthm environments theorem/
+% proposition/lemma/corollary/definition/remark, booktabs, enumitem.
+
+\section{Partial results at twenty-five atoms, and two certified
+near-misses}\label{sec:t5partial}
+
+At parameter \(t\) the configurations of this paper live in support
+circuits with \(t^2\) atoms on \(t^2-1\) support edges. The cases
+\(t=3\) and \(t=4\) (nine and sixteen atoms) are closed earlier in the
+paper. This section collects what is known at \(t=5\): twenty-five
+atoms on twenty-four support edges. The results are partial. We prove
+two structural theorems by hand (an order window and a selected-support
+bound), report an exact machine exclusion of support orders fifteen and
+sixteen, and present two eighteen-vertex circuits that pass every local
+test and are excluded only by explicit certificates. Orders seventeen
+through twenty-one remain open, and nothing in this section touches the
+Erd\H{o}s \(n^2/25\) conjecture itself.
+
+\subsection{Support circuits, selections, and owners}
+
+Recall the footprint objects. A cut \(V(G)=V_0\mathbin{\dot\cup}V_1\)
+of a triangle-free graph has crossing edges \(B\) and monochromatic
+edges \(M\); each \(xy\in M\) with \(d_B(x,y)=4\) carries the support
+\(\operatorname{supp}_B(xy)\subseteq B\) of its shortest geodesics. An
+inclusion-minimal family of bad edges violating Hall's condition
+projects, by the footprint lemma of the companion classification
+paper, to the following abstract object. All bipartite graphs below
+come with a fixed bipartition into two \emph{classes}.
+
+\begin{definition}\label{def:t5circuit}
+Let \(t\ge3\). A \emph{support circuit at parameter \(t\)} is a pair
+\((F,\mathcal A)\) where \(F\) is a finite connected bipartite graph
+with \(|E(F)|=t^2-1\), and \(\mathcal A\) is a set of \(t^2\) unordered
+pairs of vertices of \(F\), the \emph{atoms}, such that:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item every atom \(\{x,y\}\) joins two vertices of a common class with
+\(d_F(x,y)=4\); writing \(R(a)\) for the set of length-four
+\(x\)--\(y\) geodesics of \(F\) (the \emph{rows} of \(a\)) and
+\(P(a)\) for the union of their edge sets, the sets \(P(a)\) cover
+\(E(F)\) and every edge of \(F\) lies in at least two of them;
+\item the \emph{atom graph} \((V(F),\mathcal A)\) is triangle-free;
+\item every proper subfamily \(\mathcal A'\subsetneq\mathcal A\) admits
+distinct representatives: an injection \(a\mapsto e_a\in P(a)\).
+\end{enumerate}
+\end{definition}
+
+By Hall's theorem, condition (c) together with
+\(|E(F)|=|\mathcal A|-1\) says exactly that the supports violate
+Hall's condition with defect one while every proper subfamily
+satisfies it: support circuits are the inclusion-minimal Hall
+violations, at \(m=t^2\) atoms. At \(t=3\) the unique support circuit
+is the nine-atom double star of the companion classification
+\cite{Ferudun26supports}. Note
+that the graphs \(G_t\) of \cite{Ferudun26supports} are themselves
+\emph{not} support circuits for
+\(t\ge4\): their violation has defect far exceeding one, and the
+nine-atom circuit arises among their minimal subsystems
+\cite{Ferudun26supports}.
+
+\begin{definition}\label{def:selection}
+A \emph{selection} \(\omega\) assigns to each atom \(a\) one row
+\(\omega(a)\in R(a)\). The \emph{selected} edge set is
+\(S_\omega=\bigcup_{a}E(\omega(a))\), and \(L_\omega=E(F)\setminus
+S_\omega\) is the \emph{latent} edge set.
+\end{definition}
+
+\begin{definition}\label{def:owner}
+Let \((F,\mathcal A)\) be a support circuit at parameter \(t\), let
+\(v\) be a vertex with
+\(\deg_F(v)=\deg_{\mathcal A}(v)=t\), and let \(x_0\in N_F(v)\). A
+selection \(\omega\) \emph{realizes a covered rotating owner at
+\((v,x_0)\)} if
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item the only selected rows containing \(v\) are the rows of the
+\(t\) atoms at \(v\);
+\item \(vx_0\notin S_\omega\) (the \emph{active} edge);
+\item every other edge at \(v\) lies in \(S_\omega\);
+\item for every \(y\in N_F(v)\setminus\{x_0\}\), some selected row
+contains both \(x_0\) and \(y\).
+\end{enumerate}
+The pairs \(\{x_0,y\}\), \(y\in N_F(v)\setminus\{x_0\}\), are the
+\emph{star pairs}; condition (iv) is the \emph{covered star}.
+\end{definition}
+
+\begin{definition}\label{def:live}
+Let \(\omega\) realize a covered rotating owner at \((v,x_0)\). The
+\emph{tail} is the connected component of \(x_0\) in the latent graph
+\((V(F),L_\omega)\) with the vertex \(v\) deleted. The owner is
+\emph{live} if the tail contains a vertex \(b\) with
+\(\{v,b\}\in\mathcal A\), or both members of some atom; otherwise it
+is \emph{dead}.
+\end{definition}
+
+\begin{definition}\label{def:rotor}
+A \emph{rotor core} in \((F,\mathcal A)\) consists of an atom
+\(\{a,b\}\), two further vertices \(v\neq m\) in the class of \(a\),
+and vertices \(x,y\) in the opposite class, such that both
+\((a,x,v,y,b)\) and \((a,x,m,y,b)\) are rows of \(\{a,b\}\). A
+\emph{balanced rotor at parameter \(t\)} is a support circuit at
+parameter \(t\) carrying a rotor core whose middle vertices \(v,m\)
+both satisfy \(\deg_F=\deg_{\mathcal A}=t\), at least one of which
+admits a selection realizing a \emph{live} covered rotating owner.
+\end{definition}
+
+The full rotor object of the programme carries additional bookkeeping
+on top of Definition~\ref{def:rotor}; every such object contains the
+data listed here, so all exclusions below apply to it a fortiori.
+
+We record four elementary lemmas. Throughout,
+\((F,\mathcal A)\) is a support circuit at parameter \(t\) and
+\(v,x_0\) are as in Definition~\ref{def:owner}.
+
+\begin{lemma}[Tightness]\label{lem:tight}
+A selection satisfying \textup{(i)} exists if and only if every atom
+not at \(v\) has a row avoiding \(v\). If some atom not at \(v\) has
+all of its rows through \(v\), then every selection has at least
+\(t+1\) selected rows through \(v\).
+\end{lemma}
+
+\begin{proof}
+Every row of an atom at \(v\) is a geodesic from \(v\), so it contains
+\(v\); this gives \(t\) selected rows through \(v\) under any
+selection. If every atom not at \(v\) has a \(v\)-avoiding row, choose
+such rows for all of them; (i) holds. Conversely an atom not at \(v\)
+all of whose rows contain \(v\) contributes a \((t+1)\)-st selected
+row through \(v\) under every selection.
+\end{proof}
+
+\begin{lemma}[Positions]\label{lem:positions}
+Let \(\omega\) satisfy \textup{(i)} and \textup{(ii)}. Then no
+selected row of an atom at \(v\) contains \(x_0\), and every selected
+row containing \(x_0\) avoids \(v\).
+\end{lemma}
+
+\begin{proof}
+A row of an atom at \(v\) is a geodesic \((v,q_1,q_2,q_3,q_4)\), so
+\(d_F(v,q_k)=k\). The vertex \(x_0\) lies in the class opposite
+\(v\), hence could only be \(q_1\) or \(q_3\). As \(q_1\) it would put
+the edge \(vx_0\) into \(S_\omega\), against (ii); as \(q_3\) it would
+force \(d_F(v,x_0)=3\), against \(vx_0\in E(F)\). For the second
+statement, a selected row through \(v\) is a row of an atom at \(v\)
+by (i), and therefore omits \(x_0\).
+\end{proof}
+
+\begin{lemma}[Step surjection]\label{lem:steps}
+Let \(\omega\) satisfy \textup{(i)}--\textup{(iii)}. Then the selected
+row of each atom at \(v\) has \(v\) as an endpoint and its first edge
+is \(vy\) for some \(y\neq x_0\); the resulting map from the \(t\)
+atoms at \(v\) to the \(t-1\) edges \(vy\) is surjective, taking one
+value twice and every other value once.
+\end{lemma}
+
+\begin{proof}
+A row of an atom at \(v\) contains \(v\) exactly once, as an endpoint,
+so its unique edge at \(v\) is its first edge, and (ii) rules out
+\(vx_0\). Conversely each edge \(vy\), \(y\neq x_0\), is selected by
+(iii); a selected row using \(vy\) contains \(v\), is a row of an atom
+at \(v\) by (i), and has \(vy\) as its first edge. So the map is onto,
+and \(t\) atoms mapping onto \(t-1\) edges with every fibre nonempty
+forces fibre sizes \((2,1,\dots,1)\).
+\end{proof}
+
+\begin{lemma}[Parity]\label{lem:parity}
+Let \(Q\) be a row of some atom with \(v\notin Q\). Then \(Q\)
+contains at most one star pair.
+\end{lemma}
+
+\begin{proof}
+Two star pairs contained in \(Q\) would give three distinct vertices
+of \(N_F(v)\) on \(Q\). All of \(N_F(v)\) lies in the class opposite
+\(v\), and the vertices of the path \(Q=(q_0,\dots,q_4)\) alternate
+classes, so members of \(N_F(v)\) occupy positions of a single parity;
+three of them must occupy positions \(0,2,4\). Then \(q_0,q_4\in
+N_F(v)\) are the endpoints of the atom of \(Q\), and
+\(q_0\,v\,q_4\) is a path in \(F\), so \(d_F(q_0,q_4)\le2\),
+contradicting the atom distance four.
+\end{proof}
+
+\begin{corollary}[Coverage; order upper bound]\label{cor:coverage}
+Let \(\omega\) realize a covered rotating owner at \((v,x_0)\), with
+\(t=5\). Then there are four pairwise distinct atoms
+\(a_1,\dots,a_4\), none at \(v\), whose selected rows
+\(Q_i=\omega(a_i)\) satisfy \(v\notin Q_i\) and
+\(\{x_0,y_i\}\subseteq Q_i\), one for each star pair. On \(Q_i\) the
+vertices \(x_0\) and \(y_i\) have a common neighbour \(q_i\), and the
+four \(4\)-cycles \(v\,x_0\,q_i\,y_i\) are linearly independent in the
+cycle space of \(F\). Consequently the cycle rank of \(F\) is at least
+four and
+\[
+|V(F)|\;\le\;24-4+1\;=\;21 .
+\]
+\end{corollary}
+
+\begin{proof}
+By (iv) each star pair lies on a selected row, which avoids \(v\) by
+Lemma~\ref{lem:positions}; a row avoiding \(v\) is not a row of an atom
+at \(v\). Each atom contributes one selected row, and by
+Lemma~\ref{lem:parity} that row contains at most one star pair, so the
+four star pairs are covered by four distinct atoms. On \(Q_i\) the
+vertices \(x_0,y_i\) occupy positions of equal parity; positions
+\(\{0,4\}\) are impossible (the endpoints of \(Q_i\) form the atom
+\(a_i\), and two neighbours of \(v\) are at distance at most two), so
+the positions differ by two and there is a common row-neighbour
+\(q_i\neq v\). The cycle \(C_i=v\,x_0\,q_i\,y_i\) uses the edges
+\(vx_0,\,x_0q_i,\,q_iy_i,\,y_iv\) of \(F\). Each \(C_i\) contains
+\(vy_i\), while \(C_j\) for \(j\neq i\) meets \(v\) only in
+\(vx_0,vy_j\); so each cycle owns a private edge and the four are
+independent. For a connected graph the cycle rank is
+\(|E|-|V|+1\).
+\end{proof}
+
+\subsection{The order window \texorpdfstring{\(15\le|V(F)|\le21\)}{15..21}}
+
+Fix \(t=5\), a support circuit \((F,\mathcal A)\), and a selection
+\(\omega\) realizing a covered rotating owner at \((v,x_0)\). Write
+\[
+K=\{v\}\cup N_F(v)\cup N_{\mathcal A}(v),\qquad |K|=11,
+\]
+where \(N_{\mathcal A}(v)\) is the set of five atom-partners of
+\(v\) (they lie in the class of \(v\) and are distinct from \(v\);
+\(N_F(v)\) lies in the opposite class). Vertices outside \(K\) are
+\emph{external}.
+
+\begin{lemma}[Endpoint trichotomy]\label{lem:trichotomy}
+Let \(Q\) be a covering row for the star pair \(\{x_0,y\}\), that is,
+a row of some atom with \(v\notin Q\supseteq\{x_0,y\}\). Then every
+vertex of \(Q\) in the class of \(v\) that is adjacent on \(Q\) to a
+member of \(N_F(v)\) is external, and exactly one of the following
+holds.
+\begin{enumerate}[label=\textup{(\Roman*)}]
+\item \(x_0\) and \(y\) are interior on \(Q\); then the atom of \(Q\)
+joins two external vertices of the class of \(v\), and \(Q\) contains
+three external vertices of that class.
+\item One of \(x_0,y\) is an endpoint of \(Q\); then the other
+endpoint of \(Q\) is an external vertex of the class opposite \(v\),
+and \(Q\) contains two external vertices of the class of \(v\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A vertex \(w\) of \(Q\) in the class of \(v\), adjacent on \(Q\) to
+some \(z\in N_F(v)\), satisfies \(d_F(v,w)\le2\); it is not \(v\)
+because \(v\notin Q\), and not in \(N_{\mathcal A}(v)\) because atoms
+have distance four. So \(w\) is external. As in
+Lemma~\ref{lem:parity}, \(x_0\) and \(y\) occupy positions of equal
+parity on \(Q=(q_0,\dots,q_4)\), and not \(\{0,4\}\); so the positions
+are \(\{1,3\}\) (case I) or \(\{0,2\}\), \(\{2,4\}\) (case II).
+
+Case I: positions \(0,2,4\) lie in the class of \(v\), and each of
+\(q_0,q_2,q_4\) is adjacent on \(Q\) to \(q_1\) or \(q_3\), i.e.\ to a
+member of \(N_F(v)\); all three are external, and the atom of \(Q\) is
+\(\{q_0,q_4\}\).
+
+Case II, say positions \(\{0,2\}\): now \(q_1,q_3\) lie in the class
+of \(v\) and each is adjacent on \(Q\) to \(q_0\) or \(q_2\), members
+of \(N_F(v)\); both are external. The atom of \(Q\) is
+\(\{q_0,q_4\}\) with \(q_0\in\{x_0,y\}\subseteq N_F(v)\). If \(q_4\in
+N_F(v)\) then \(d_F(q_0,q_4)\le2\), against the atom distance; and
+\(q_4\) lies in the class opposite \(v\), whose part of \(K\) is
+exactly \(N_F(v)\). So \(q_4\) is external.
+\end{proof}
+
+\begin{theorem}[Order lower bound]\label{thm:order15}
+Let \((F,\mathcal A)\) be a support circuit at \(t=5\) admitting a
+selection that realizes a covered rotating owner. Then
+\(|V(F)|\ge15\). Together with Corollary~\ref{cor:coverage},
+\[
+15\;\le\;|V(F)|\;\le\;21 .
+\]
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:coverage} there are four covering rows belonging
+to four distinct atoms. By Lemma~\ref{lem:trichotomy} each covering
+row contributes at least two external vertices in the class of \(v\);
+a row of type I contributes three, and if all four rows are of type
+II, their atoms have external endpoints in the opposite class, so at
+least one external vertex lies there. In either case there are at
+least three external vertices and \(|V(F)|\ge11+3=14\).
+
+Suppose \(|V(F)|=14\), so there are exactly three external vertices.
+
+\emph{Case 1: some covering row has type I.} Its three external
+vertices lie in the class of \(v\) and exhaust the external supply, so
+no external vertex lies in the opposite class, and by
+Lemma~\ref{lem:trichotomy} no covering row has type II. Hence all four
+covering atoms have type I: four \emph{distinct} atoms, each a pair of
+external vertices of the class of \(v\). But only three such vertices
+exist, admitting at most \(\binom32=3\) pairs. Contradiction.
+
+\emph{Case 2: all four covering rows have type II.} Then at least two
+external vertices lie in the class of \(v\) and at least one in the
+opposite class; with three externals in total this forces exactly
+\(2+1\), and the classes of \(F\) have sizes
+\[
+\underbrace{1+5+2}_{\text{class of }v}=8,
+\qquad
+\underbrace{5+1}_{\text{opposite class}}=6 .
+\]
+Atoms join vertices of a common class and the atom graph is
+triangle-free, so by Mantel's theorem
+\[
+25=|\mathcal A|\;\le\;\Bigl\lfloor\tfrac{8^2}{4}\Bigr\rfloor
++\Bigl\lfloor\tfrac{6^2}{4}\Bigr\rfloor=16+9=25 .
+\]
+Equality forces the atom graph induced on the class of \(v\) to be the
+unique extremal graph \(K_{4,4}\), in which every vertex has
+atom-degree four. But \(\deg_{\mathcal A}(v)=5\). Contradiction.
+\end{proof}
+
+\subsection{The selected-support bound}
+
+\begin{theorem}\label{thm:selected}
+Let \(t\ge3\), let \((F,\mathcal A)\) be a support circuit at
+parameter \(t\), and let \(\omega\) realize a covered rotating owner
+at \((v,x_0)\). Then
+\[
+|S_\omega|\;\ge\;3t-1,
+\qquad\text{hence}\qquad
+|L_\omega|\;\le\;(t^2-1)-(3t-1)\;=\;t(t-3).
+\]
+\end{theorem}
+
+\begin{proof}
+Write \(Y=N_F(v)\setminus\{x_0\}\), \(|Y|=t-1\), and let
+\(b_1,\dots,b_t\) be the atom-partners of \(v\). We exhibit \(3t-1\)
+distinct selected edges.
+
+\emph{Star edges.} The \(t-1\) edges \(vy\), \(y\in Y\), are selected
+by (iii).
+
+\emph{Second edges.} For each \(y\in Y\) pick, by
+Lemma~\ref{lem:steps}, a selected row \(\rho^y\) of an atom at \(v\)
+with first edge \(vy\), and let \(\sigma(y)\) be its second edge,
+joining \(y\) to a vertex of the class of \(v\). Distinct \(y\) give
+distinct edges \(\sigma(y)\): they have distinct endpoints in the
+class opposite \(v\). This yields \(t-1\) selected edges not incident
+with \(v\) (a row of an atom at \(v\) meets \(v\) only in its first
+edge).
+
+\emph{Last edges.} For each \(j\) let \(\tau(b_j)\) be the last edge
+of the selected row of the atom \(\{v,b_j\}\), joining \(b_j\) to a
+vertex \(q_j\) of the opposite class. The \(b_j\) are pairwise
+distinct, so these are \(t\) distinct selected edges, again not
+incident with \(v\).
+
+\emph{Distinctness.} The star edges meet \(v\); the others do not. If
+\(\sigma(y)=\tau(b_j)\) for some \(y,j\), then matching endpoints by
+class gives \(q_j=y\in N_F(v)\) and \(b_j\) adjacent to \(y\), whence
+\(d_F(v,b_j)\le2\), contradicting the atom distance four. So the three
+families are pairwise disjoint: \(3t-2\) selected edges so far. None
+of them contains \(x_0\): the star edges have endpoints
+\(v\) and \(y\neq x_0\); each \(\sigma(y)\) joins \(y\neq x_0\) to the
+class of \(v\); each \(\tau(b_j)\) joins \(b_j\) to \(q_j\), and
+\(q_j\neq x_0\) because rows of atoms at \(v\) avoid \(x_0\)
+(Lemma~\ref{lem:positions}).
+
+\emph{One more edge at \(x_0\).} By (iv) some selected row \(P\)
+contains \(x_0\) (any covered star pair supplies one); by
+Lemma~\ref{lem:positions} \(v\notin P\), so \(P\) has an edge at
+\(x_0\) different from \(vx_0\). It is selected, contains \(x_0\), and
+therefore differs from all \(3t-2\) edges above. Hence
+\(|S_\omega|\ge3t-1\), and the latent bound follows from
+\(|E(F)|=t^2-1\).
+\end{proof}
+
+\begin{corollary}\label{cor:latent}
+For \(t=5\): at least \(14\) of the \(24\) support edges are selected,
+at most \(10\) are latent, and, since \(vx_0\in L_\omega\) while every
+other edge at \(v\) is selected, the tail of
+Definition~\ref{def:live} spans at most \(9\) latent edges.
+\end{corollary}
+
+\begin{remark}\label{rem:t3}
+At \(t=3\) Theorem~\ref{thm:selected} gives \(|L_\omega|\le0\), while
+(ii) forces \(vx_0\in L_\omega\). So no covered rotating owner exists
+at nine atoms at all --- consistent with the unique nine-atom circuit,
+in which no vertex has support- and atom-degree both equal to three.
+At \(t=4\) the latent budget is \(4\); at \(t=5\) it is \(10\). The
+budget \(t(t-3)\) grows quadratically, so the tail mechanism exploited
+below is specific to small \(t\).
+\end{remark}
+
+\begin{remark}
+Lemmas~\ref{lem:tight}--\ref{lem:parity} convert the existence of a
+covered rotating owner at \((v,x_0)\) into a finite test on the row
+database of the circuit: every atom off \(v\) needs a \(v\)-avoiding
+row; every atom at \(v\) needs a row whose first edge avoids
+\(x_0\); the atom-to-first-edge relation needs a matching covering the
+\(t-1\) non-active star edges; and, by Lemma~\ref{lem:parity}, the
+covered star needs \(t-1\) \emph{distinct} atoms, one covering row
+each, so the pair-to-atom coverage relation needs a matching
+saturating the star pairs. Conversely, choosing rows along such
+matchings (arbitrary \(v\)-avoiding rows elsewhere) realizes the
+owner, so the four conditions are exactly equivalent to realizability.
+This four-part test is what the enumeration below implements.
+\end{remark}
+
+\subsection{Exact exclusion of support orders fifteen and sixteen}
+
+The machine layer works with a relaxation. A balanced rotor
+(Definition~\ref{def:rotor}) whose support has \(n\) vertices, with
+\(p\) of them in the class of the owners, satisfies the following
+finite constraint system \((R_{p,n-p})\):
+\begin{enumerate}[label=\textup{(R\arabic*)}]
+\item \(F\) is connected and bipartite with classes of sizes
+\(p\) and \(n-p\) and \(|E(F)|=24\);
+\item there are vertices \(v,m,a,b\) in the first class and \(x,y\) in
+the second with \((a,x,v,y,b)\) and \((a,x,m,y,b)\) paths in \(F\);
+\item \(\deg_F(v)=\deg_F(m)=5\);
+\item every vertex of \(F\) has positive degree;
+\item \(d_F(a,b)=4\);
+\item \(v\) and \(m\) each have at least five vertices of their own
+class at distance exactly four;
+\item at least \(25\) same-class pairs of \(V(F)\) are at distance
+exactly four.
+\end{enumerate}
+Indeed (R2), (R3) restate the rotor core and owner degrees, (R5) holds
+because \(\{a,b\}\) is an atom, (R6) because
+\(\deg_{\mathcal A}(v)=\deg_{\mathcal A}(m)=5\) and atoms are
+same-class distance-four pairs, and (R7) because the \(25\) atoms are
+distinct such pairs.
+
+\begin{lemma}\label{lem:shores}
+In a balanced rotor at \(t=5\), the class of the owners has at least
+seven vertices and the opposite class at least five.
+\end{lemma}
+
+\begin{proof}
+The owner class contains \(v\), \(m\), and the five atom-partners of
+\(v\); these are seven distinct vertices, since \(d_F(v,m)=2\) (via
+\(x\)) while atom-partners of \(v\) are at distance four. The opposite
+class contains \(N_F(v)\), of size five.
+\end{proof}
+
+So at order \(n\) the owner-class size \(p\) ranges over
+\(7\le p\le n-5\): four splits at \(n=15\), five at \(n=16\), six at
+\(n=17\).
+
+\begin{proposition}[Computer-assisted]\label{prop:orders1516}
+For \(n=15\) and every split
+\((p,n-p)\in\{(7,8),(8,7),(9,6),(10,5)\}\), and for \(n=16\) and every
+split \((p,n-p)\in\{(7,9),(8,8),(9,7),(10,6),(11,5)\}\), the
+constraint system \((R_{p,n-p})\) is infeasible. Consequently no
+balanced rotor at \(t=5\) has a support of order \(15\) or \(16\), and
+with Theorem~\ref{thm:order15} the support order of a balanced rotor
+at \(t=5\) lies in \(\{17,\dots,21\}\).
+\end{proposition}
+
+The nine infeasibility certificates were produced by the Boolean
+constraint model \texttt{rooted\_t5\_support\_cp\_sat.py} (OR-Tools
+CP-SAT; integer and Boolean arithmetic only; the symmetry breaking
+sorts the degrees of the non-distinguished vertices, which any
+solution can be relabelled to satisfy). Each verdict is a completed
+infeasibility proof, not a time-out. Artifact SHA-256 prefixes:
+\texttt{14ac9d93}, \texttt{8d194613}, \texttt{66e0813c},
+\texttt{5721cbc5} (order \(15\), splits as listed) and
+\texttt{8dff49ea}, \texttt{bd0c0320}, \texttt{cc5462d6},
+\texttt{b5037e11}, \texttt{9f9401d0} (order \(16\)). Unlike the
+certificates of the next subsection, these nine rest on a single
+solver and have not been independently replayed; we flag this
+honestly.
+
+\subsection{Two certified near-misses at order eighteen}
+
+The enumeration at order eighteen produced two support graphs whose
+circuits pass \emph{every} local test of this section. We print them
+in graph6 form; vertices \(0\)--\(8\) form the owner class and
+\(9\)--\(17\) the opposite class, with
+\(v=0\), \(m=1\), \(a=2\), \(b=3\), \(x=9\) in the labelling of
+\textup{(R2)}:
+\[
+\begin{array}{ll}
+\text{circuit } \#298: &
+\texttt{Q??????wE\_[?EGs?D\_@A?C\_B???}\\[2pt]
+\text{circuit } \#264: &
+\texttt{Q??????wE\_Bws?s?DCD??@?@???}
+\end{array}
+\]
+The following facts are immediate from the printed strings: each graph
+has \(18\) vertices, \(24\) edges, classes of sizes \(9+9\), is
+connected and bipartite, satisfies
+\(\deg_F(0)=\deg_F(1)=5\) and \(d_F(2,3)=4\), and carries the rotor
+core of \textup{(R2)}. The same-class distance-four supply is \(32\)
+pairs in \(\#298\) and \(30\) pairs in \(\#264\), from which the
+twenty-five atoms are drawn.
+
+\begin{proposition}[Computer-assisted]\label{prop:hits}
+For each of the two graphs above there is a set \(\mathcal A\) of
+twenty-five of its same-class distance-four pairs and a selection
+\(\omega\) such that \((F,\mathcal A)\) is a support circuit at
+\(t=5\) --- in particular the atom graph is triangle-free --- and
+\(\omega\) realizes a covered rotating owner at \((v,x_0)\), with
+\(v=0\) and \(x_0=17\) for \(\#298\), and \(v=0\) and \(x_0=x=9\) for
+\(\#264\). In \(\#264\) the active edge is the core edge \(vx\)
+itself.
+\end{proposition}
+
+The primary search and an independent exact replay
+(\texttt{verify\_t5\_local\_classifier\_hit.py}, exact graph
+operations and integer bipartite matching, no floating point) agree.
+Artifact prefixes: \texttt{c1d474d7} (\(\#298\) hit) with verification
+artifact \texttt{48ce1638}, and \texttt{6595501f} (\(\#264\) hit) with
+verification artifact \texttt{d9e73413}; the verifier script itself
+has SHA-256 prefix \texttt{017d1e44}.
+Proposition~\ref{prop:hits} is a negative structural datum: it shows
+that no purely local argument --- circuit axioms, covered rotating
+owner, triangle-freeness of the atom graph --- can close twenty-five
+atoms, since all of these conditions are simultaneously realizable.
+Both circuits are nevertheless excluded, by the two certificate layers
+that follow. Throughout, \emph{the} circuit \(\#298\) (respectively
+\(\#264\)) refers to the exhibited witness of
+Proposition~\ref{prop:hits}: the atom set and selection of the pinned
+rebuild shipped in the ancillary files
+(\texttt{anc/t5\_artifacts/}), over which the mechanical certificates
+and the ambient exclusions below quantify. The by-hand proof of
+Proposition~\ref{prop:dead} is independent of this choice: it applies
+verbatim to every twenty-five-atom circuit on the printed graphs at
+the recorded pairs.
+
+\begin{proposition}[Dead owners]\label{prop:dead}
+In both circuits, every selection realizing the covered rotating owner
+at the recorded pair \((v,x_0)\) leaves the owner dead.
+\end{proposition}
+
+\begin{proof}
+\emph{Circuit \(\#298\), \((v,x_0)=(0,17)\).} From the printed string,
+\(\deg_F(17)=2\) with \(N_F(17)=\{0,1\}\). Let \(\omega\) realize the
+owner. Each covering row for a star pair \(\{17,y\}\) contains \(17\)
+and avoids \(0\) (Lemma~\ref{lem:positions}), so its edges at \(17\)
+lie in \(\{\{1,17\}\}\); hence the edge \(\{1,17\}\) is selected. In
+the latent graph minus \(v\), the vertex \(17\) is therefore isolated:
+the tail is \(\{17\}\). Since \(17\) lies in the class opposite
+\(v\), it is not an atom-partner of \(v\), and no atom lies inside a
+single vertex. The owner is dead. Moreover
+\(N_F(0)=N_F(1)=\{9,10,11,13,17\}\), so the transposition of \(0\) and
+\(1\) is an automorphism of \(F\) and the same argument disposes of
+the mirror profile at \((1,17)\).
+
+\emph{Circuit \(\#264\), \((v,x_0)=(0,9)\).} From the printed string,
+\(\deg_F(9)=3\) with \(N_F(9)=\{0,1,2\}\), and
+\(N_F(0)=\{9,10,12,13,15\}\), so the star pairs are \(\{9,y\}\) with
+\(y\in\{10,12,13,15\}\). Exhaustive inspection of the full geodesic
+database of \(F\) (a finite check on the printed graph) shows:
+\begin{enumerate}[label=\textup{(f\arabic*)}]
+\item every row of \emph{any} same-class distance-four pair that
+contains \(9\) and one of \(10,12,13,15\) and avoids \(0\) uses the
+edge \(\{1,9\}\) (the pairs \(\{9,10\},\{9,12\},\{9,13\}\) each have
+exactly three such rows, \(\{9,15\}\) exactly one);
+\item the unique such row through \(9\) and \(15\) is
+\((15,2,9,1,17)\), a row of the pair \(\{15,17\}\), and it uses the
+edge \(\{2,9\}\) as well.
+\end{enumerate}
+Let \(\omega\) realize the owner. Covering rows avoid \(0\)
+(Lemma~\ref{lem:positions}), so by (f1) the edge \(\{1,9\}\) is
+selected, and by (f2) the covering row for \(\{9,15\}\) must be
+\((15,2,9,1,17)\) --- in particular \(\{15,17\}\in\mathcal A\) --- so
+\(\{2,9\}\) is selected too. Thus both edges at \(9\) other than the
+active edge \(\{0,9\}\) are selected, the tail is \(\{9\}\), and the
+owner is dead as before.
+\end{proof}
+
+The database facts (f1), (f2) are also certified mechanically:
+per-edge unsatisfiability of the alternative
+(\texttt{verify\_t5\_tail\_blanket\_unsat.py}, artifact
+\texttt{3720a8c2}). Independently of Proposition~\ref{prop:dead}, the
+full statement ``over all admissible row selections, no atom has both
+endpoints in the latent component of the owner'' was checked as a
+monolithic constraint system twice per circuit, by CP-SAT infeasibility
+and by a CaDiCaL replay of a CNF encoding (for \(\#298\): \(1680\)
+variables, \(5239\) clauses); artifact prefixes \texttt{f5c0cbca} and
+\texttt{a8a160d5} (\(\#298\)), \texttt{79471ef0} and \texttt{c7fbcc70}
+(\(\#264\)). These
+certificates are \emph{intrinsic}: they quantify over selections of
+rows of the circuit itself. Graph-level realizations, whose ambient
+crossing graph could a priori supply further structure, are addressed
+by the second layer.
+
+\begin{proposition}[Computer-assisted; ambient exclusion of
+\(\#264\)]\label{prop:extension}
+There is no triangle-free graph \(H\) on at most \(25\) vertices with
+a two-colouring of \(V(H)\) extending the classes of circuit
+\(\#264\) such that: the crossing edges of \(H\) contain \(E(F)\); the
+monochromatic edges of \(H\) are exactly the \(25\) atoms; for every
+atom \(\{x,y\}\) the distance of \(x,y\) in the crossing graph of
+\(H\) is four and every length-four crossing geodesic is a row of the
+circuit; and the two-colouring is a maximum cut of \(H\). The eight
+constraint systems (one for each assignment of \(k\in\{0,\dots,7\}\)
+added vertices to the owner class, unused vertices being permitted to
+be isolated) are all infeasible.
+\end{proposition}
+
+The primary run (\texttt{extend\_t5\_hit\_maxcut.py}) separates the
+maximum-cut switch inequalities exactly and lazily; an independent SAT
+replay (\texttt{verify\_t5\_maxcut\_extension\_unsat.py}) reproduces
+all eight infeasibilities from the unrestricted crossing-edge domain.
+The obstruction is finite and explicit. The vertex set
+\(S=\{4,5,6,7,8,11,14,16\}\) of the circuit is crossed by \(23\)
+atoms and only \(2\) support edges, so switching \(S\) forces any
+row-preserving maximum-cut extension to add at least \(21\) crossing
+edges on the boundary of \(S\); exact counting of addable,
+row-preserving edges gives capacities
+\(21,19,17,15,13,11,9,7\) across the eight assignments, killing seven
+of them outright, and the single assignment with capacity \(21\) is
+killed jointly by a second switch (joint demand \(42\) against joint
+capacity \(28\)).
+
+\begin{proposition}[Computer-assisted; ambient exclusion of
+\(\#298\)]\label{prop:298extension}
+There is no triangle-free graph \(H\) on at most \(25\) vertices with
+a two-colouring of \(V(H)\) extending the classes of circuit
+\(\#298\) such that: the crossing edges of \(H\) contain \(E(F)\); the
+monochromatic edges of \(H\) are exactly the \(25\) atoms; for every
+atom \(\{x,y\}\) the distance of \(x,y\) in the crossing graph of
+\(H\) is four and every length-four crossing geodesic is a row of the
+circuit; and the two-colouring is a maximum cut of \(H\). The eight
+constraint systems (one for each assignment of \(k\in\{0,\dots,7\}\)
+added vertices to the owner class, unused vertices being permitted to
+be isolated) are all infeasible.
+\end{proposition}
+
+The same two verifiers as for \(\#264\) agree on all eight
+infeasibilities. Here the displayed two-colouring already fails to be
+a maximum cut of the bare graph \((V(F),E(F)\cup\mathcal A)\): the
+vertex set \(S=\{4,5,6,7,8,12,14,15,16\}\) of the circuit is crossed
+by \(24\) of the \(25\) atoms and only \(4\) support edges, so
+switching \(S\) forces any row-preserving maximum-cut extension to add
+at least \(20\) crossing edges on the boundary of \(S\). Unlike for
+\(\#264\), this demand alone kills no assignment; the infeasibilities
+are joint with the row-preservation clauses and, at
+\(k\in\{0,1\}\), a second switch. The certificate chain for
+\(\#298\) is included in the ancillary files
+(\texttt{anc/t5\_artifacts/298\_extension/}).
+
+\subsection{Status of orders seventeen through twenty-one}
+
+\begin{proposition}[Computer-assisted]\label{prop:order17}
+At order \(17\), the systems \((R_{7,10})\), \((R_{8,9})\) and
+\((R_{12,5})\) are infeasible (artifact prefixes \texttt{4d450ca0},
+\texttt{f76b9d64}, \texttt{325012ec}, in the split order listed, the
+mapping being fixed by the bit-exact regeneration in the ancillary
+files; single-solver certificates, as
+in Proposition~\ref{prop:orders1516}). The systems \((R_{9,8})\),
+\((R_{10,7})\), \((R_{11,6})\) are feasible.
+\end{proposition}
+
+Feasibility of a support relaxation is not existence of a rotor: at
+each of the three feasible splits a staged search of \(3{,}000\)
+support graphs produced no circuit realizing a live covered rotating
+owner (artifacts \texttt{95dbc901}, \texttt{d612c59e},
+\texttt{31d82c62}), and at order \(18\) the first \(350\) supports at
+split \((9,9)\) were likewise all rejected at the live-owner gate.
+These are bounded searches and prove nothing beyond the instances
+examined. Orders \(19\)--\(21\) have not been examined. The honest
+summary is:
+
+\begin{itemize}[leftmargin=2em]
+\item orders \(\le14\): impossible for any covered rotating owner
+(Theorem~\ref{thm:order15}), by hand;
+\item orders \(15\), \(16\): impossible for balanced rotors
+(Proposition~\ref{prop:orders1516}), computer-assisted;
+\item order \(17\): open; owner-class size restricted to
+\(\{9,10,11\}\) (Proposition~\ref{prop:order17});
+\item order \(18\): open; the only circuits found so far that pass all
+local tests are \(\#298\) and \(\#264\), and both are excluded by
+certificates (Propositions~\ref{prop:dead}, \ref{prop:extension}
+and~\ref{prop:298extension});
+\item orders \(19\)--\(21\): open and unexamined; order \(22\) and
+beyond: impossible (Corollary~\ref{cor:coverage}).
+\end{itemize}
+
+All evidence is consistent with the following statement, which we can
+neither prove nor refute.
+
+\begin{definition}
+Say that a support circuit at \(t=5\) is \emph{scope-vacuous} if every
+selection realizing a covered rotating owner, at every pair
+\((v,x_0)\), leaves the owner dead.
+\end{definition}
+
+\noindent\textbf{Open question.}
+\emph{Is every support circuit at twenty-five atoms scope-vacuous?
+In particular, is there no balanced rotor at \(t=5\)?}
+
+\medskip
+
+A positive answer would close the parameter \(t=5\) of the programme
+in the same sense as the finite closures at \(t=3\) and \(t=4\); by
+Remark~\ref{rem:t3} it would still be one more finite base case, not a
+statement for all \(t\). A negative answer --- a live covered rotating
+owner on a triangle-free \(25\)-atom circuit of order \(17\)--\(21\),
+surviving an ambient extension test --- would refute the rotor route
+in its present form. Neither outcome, we stress, resolves the Erd\H{o}s inequality
+\(\operatorname{bip}(G)\le N^2/25\): the results of this section
+constrain one local proof strategy and produce no new bound on
+\(\operatorname{bip}(G)\).
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+fact & verifier(s) & artifact SHA-256 prefixes\\
+\midrule
+order 15, 4 splits & \texttt{rooted\_t5\_support\_cp\_sat.py} &
+\texttt{14ac9d93} \texttt{8d194613} \texttt{66e0813c}
+\texttt{5721cbc5}\\
+order 16, 5 splits & \texttt{rooted\_t5\_support\_cp\_sat.py} &
+\texttt{8dff49ea} \texttt{bd0c0320} \texttt{cc5462d6}
+\texttt{b5037e11} \texttt{9f9401d0}\\
+order 17, 3 splits & \texttt{rooted\_t5\_support\_cp\_sat.py} &
+\texttt{4d450ca0} \texttt{f76b9d64} \texttt{325012ec}\\
+\(\#298\) circuit + owner & primary +
+\texttt{verify\_t5\_local\_classifier\_hit.py} &
+\texttt{c1d474d7}, verification \texttt{48ce1638}\\
+\(\#264\) circuit + owner & primary +
+\texttt{verify\_t5\_local\_classifier\_hit.py} &
+\texttt{6595501f}, verification \texttt{d9e73413}\\
+\(\#298\) all-row dead owner & CP-SAT +
+\texttt{verify\_t5\_active\_scope\_unsat.py} &
+\texttt{f5c0cbca}, \texttt{a8a160d5}\\
+\(\#264\) all-row dead owner & CP-SAT + CaDiCaL replay &
+\texttt{79471ef0}, \texttt{c7fbcc70}\\
+\(\#264\) facts (f1), (f2) &
+\texttt{verify\_t5\_tail\_blanket\_unsat.py} &
+\texttt{3720a8c2}\\
+\(\#264\) ambient exclusion & \texttt{extend\_t5\_hit\_maxcut.py} +
+\texttt{verify\_t5\_maxcut\_extension\_unsat.py} & eight
+infeasibilities, replayed\\
+\(\#298\) ambient exclusion & \texttt{extend\_t5\_hit\_maxcut.py} +
+\texttt{verify\_t5\_maxcut\_extension\_unsat.py} &
+source \texttt{ff1c1209}, extension \texttt{2bf166b7}, replay
+\texttt{d176ce66}\\
+\bottomrule
+\end{tabular}
+\caption{Computer-assisted certificates of this section. Primary
+searches use OR-Tools CP-SAT; independent replays use exact graph
+operations (NetworkX) or CaDiCaL via PySAT. All arithmetic is integer
+or Boolean. The printed prefixes are prefixes of each artifact's
+embedded canonical payload hash. The historical artifacts were session
+records of the programme ledger; on 2026-07-17 the set was regenerated
+from the archived scripts and is shipped in the ancillary files
+(\texttt{anc/t5\_artifacts/}, with a per-artifact record). The twelve
+split certificates regenerate bit-exactly to the twelve listed hashes.
+The circuit-level artifacts depend on a solver-nondeterministic
+enumeration order and do not replay byte-exactly; both circuits were
+instead rebuilt on the printed support graphs at the recorded
+\((v,x_0)\) pairs (\texttt{rebuild\_t5\_local\_classifier\_hit.py})
+and every downstream verdict was reproduced --- in particular the
+\(\#298\) scope certificate reproduces at exactly \(1680\) variables
+and \(5239\) clauses. The historical prefixes are retained above as
+the session record. In an independent adversarial
+review pass (2026-07-17), the twelve infeasibility and three
+feasibility verdicts of
+Propositions~\ref{prop:orders1516} and~\ref{prop:order17} were re-run
+from the archived model, the two hits of Proposition~\ref{prop:hits}
+were re-derived with an independently written constraint encoding, and
+the finite facts of Proposition~\ref{prop:dead} were re-verified by
+exhaustive geodesic enumeration.}
+\label{tab:t5artifacts}
+\end{table}

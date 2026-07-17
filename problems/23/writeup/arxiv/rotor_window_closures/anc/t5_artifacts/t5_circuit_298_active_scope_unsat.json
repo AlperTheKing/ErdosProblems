@@ -1,0 +1,10 @@
+{
+  "canonicalSha256": "b108ada887c93da5003d9950718b85347de62635932eb5bc973bfbbc51ddeb92",
+  "clauses": 5239,
+  "satisfiable": false,
+  "schema": "t5-active-scope-cadical-replay-v1",
+  "solver": "CaDiCaL195",
+  "sourceCanonicalSha256": "ff1c120948e914d5a2f1eaccc9b99ce626d43866e0a74a17550a3b567bf5b062",
+  "variables": 1680,
+  "verdict": "PASS_FIXED_CIRCUIT_ACTIVE_SCOPE_UNSAT"
+}

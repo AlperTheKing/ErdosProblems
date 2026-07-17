@@ -1,0 +1,323 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,enumitem,microtype,tikz}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\bip}{\operatorname{bip}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\mc}{\operatorname{MaxCut}}
+
+\title{Balanced deficiency rotors in shortest-support Hall systems\\
+of triangle-free maximum cuts}
+\author{Alper Ferudun\\\texttt{alper@mercurycodelab.com}}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fix a maximum cut of a triangle-free graph, write \(B\) for its
+crossing edges and \(M\) for its monochromatic edges, and associate to
+each \(xy\in M\) with \(d_B(x,y)=4\) the crossing edges on its shortest
+geodesics. The companion note \cite{Ferudun26supports} showed that the
+resulting supports can violate Hall's condition by an unbounded factor
+and classified the minimal violating footprints with at most ten atoms;
+the unique nine-atom footprint found there is the smallest object
+studied here. This paper treats the dynamic side of the same system.
+We prove an abstract circuit identity for inclusion-minimal Hall
+violations (support union one edge smaller than the atom set, with a
+perfect system of distinct representatives after deleting any atom), a
+star lemma at cut-tight vertices whose arithmetic core is
+kernel-checked in Lean~4, and an eight-vertex example, the neutral
+square rotor, on which geodesic-collision repair provably never
+terminates even though Hall expansion holds with room to spare. We then
+close the two smallest rotor windows of the associated transport
+strategy: nine-atom support circuits carry no balanced rotor (two
+independent proofs, with kernel-checked finite cores), and at sixteen
+atoms no covered two-owner window exists (an exhaustive, dually
+verified census of \(153{,}978\) support graphs). At twenty-five atoms
+the results are partial: support orders \(15\) and \(16\) are excluded
+by machine certificates, the admissible order window is
+\(15\)--\(21\), and two eighteen-vertex circuits that pass every local
+test are excluded only by explicit certificates; orders \(17\) and
+\(19\)--\(21\) remain open. All computer-assisted claims carry named
+verifiers and SHA-256 hashes. These results constrain one local proof
+strategy; they yield no upper bound on \(\bip(G)\) and do not resolve
+the Erd\H{o}s \(n^2/25\) conjecture.
+\end{abstract}
+
+\section{Introduction}
+
+For a finite graph \(G\), let \(\bip(G)=|E(G)|-\mc(G)\) be its
+edge-deletion distance to bipartiteness. Erd\H{o}s, Faudree, Pach and
+Spencer \cite{EFPS88} asked whether every triangle-free \(N\)-vertex
+graph satisfies \(\bip(G)\le N^2/25\); the balanced blow-up of \(C_5\)
+shows that the constant would be sharp. See \cite{EGS92,BCL21} for the
+strongest general bounds, and \cite{Ferudun26} for an exact certificate
+of the conjectured value at \(N=5n\), \(1\le n\le40\). Nothing in the
+present paper improves any of these bounds.
+
+The companion note \cite{Ferudun26supports} introduced the
+shortest-geodesic support system of a fixed cut: each monochromatic
+(\emph{bad}) edge \(xy\) with \(d_B(x,y)=4\) is charged to the crossing
+edges on its shortest \(x\)--\(y\) paths, and one asks when these
+supports admit a system of distinct representatives, i.e.\ satisfy
+Hall's condition. The note constructed triangle-free graphs with unique
+maximum cuts on which the Hall condition fails by an unbounded factor,
+and classified the minimal violating footprints exactly: none with at
+most eight atoms, a unique nine-atom footprint (a double star whose
+atom set is a \(K_{3,3}\)), and three ten-atom classes.
+
+This paper is the dynamic companion to that static classification. If
+supports fail Hall expansion, a natural repair strategy selects one
+geodesic per bad edge and locally re-routes colliding selections by
+\emph{detour moves}; the terminal objects such a transport strategy
+must exclude are configurations in which a locally deficient pattern
+survives every move by merely rotating --- \emph{balanced rotors}. Our
+results are of two kinds.
+
+\emph{Structures.} Section~\ref{sec:support-circuits} isolates the
+part of the companion's footprint lemma that depends on
+inclusion-minimality alone: a support circuit on \(m\) atoms has
+exactly \(m-1\) support edges, every edge lies in at least two
+supports, the atom--edge incidence graph is connected, and deleting any
+single atom leaves a perfect system of distinct representatives; in
+classical terms, support circuits are circuits of a transversal
+matroid. The nine-atom footprint of \cite{Ferudun26supports} is
+exactly the \(t=3\) instance of these circuits, at \(t^2\) atoms on
+\(t^2-1\) support edges. Section~\ref{sec:starlemma} proves an
+independent local fact about maximum cuts of triangle-free graphs, the
+star lemma at cut-tight vertices, whose arithmetic core and pair
+manipulations are kernel-checked in Lean~4.
+Section~\ref{sec:rotor8} constructs an eight-vertex \emph{neutral
+square rotor}: a triangle-free graph with a maximum cut on which every
+bad edge has two geodesics and Hall expansion holds strictly, yet no
+selection is collision-free and the repair walk never terminates ---
+its four states form a single orbit of a cut-preserving automorphism.
+
+\emph{Closures.} Section~\ref{sec:t3closure} proves, in two
+independent ways, that nine-atom support circuits carry no balanced
+rotor: a shape-independent support-edge count, and a coverage-emptiness
+argument on the unique nine-atom footprint of
+\cite{Ferudun26supports}; both have kernel-checked Lean~4 cores.
+Section~\ref{sec:t4} isolates the first surviving window beyond nine
+atoms --- sixteen atoms with two rotating owners of width four, left a
+margin of exactly one support edge by the by-hand crossover bounds ---
+and closes it by an exhaustive census of all \(153{,}978\) connected
+bipartite graphs with fifteen edges, verified along two acceptance
+paths. Section~\ref{sec:t5partial} collects the partial state of the
+twenty-five-atom window: an order window \(15\le|V(F)|\le21\) proved by
+hand, machine exclusion of orders \(15\) and \(16\), two certified
+eighteen-vertex near-misses, and an explicit open question. The
+closures at \(t=3,4\) are complete; \(t=5\) is not.
+
+Every computer-assisted claim names its verifier and the SHA-256 hash
+of the artifact or source it rests on, with single-solver certificates
+flagged as such; Section~\ref{sec:repro} aggregates the verification
+record, and the ancillary files contain the verifier scripts and the
+cited Lean~4 sources. We stress the scope honestly: the theorems below
+constrain one local proof strategy for the \(N^2/25\) conjecture ---
+they eliminate specific repair mechanisms, at specific window sizes ---
+and they produce no new upper bound on \(\bip(G)\) and no progress on
+the conjecture itself.
+
+\input{sections/support_circuits}
+
+\input{sections/star_lemma}
+
+\input{sections/claude_eight_vertex_rotor}
+
+\input{sections/claude_t3_no_balanced_rotor}
+
+\input{sections/sixteen_atom_closure}
+
+\input{sections/t5_partial}
+
+\section{Reproducibility}\label{sec:repro}
+
+The ancillary archive (\texttt{anc/}) contains every verifier script
+named in this paper, the production sources of every cited Lean~4
+module, a command-level \texttt{README}, and a \texttt{SHA256SUMS}
+manifest; the hashes below are SHA-256 and match that manifest. The
+Lean modules belong to the development \texttt{Erdos23Delta0}; the
+declarations cited in
+Sections~\ref{sec:starlemma},~\ref{sec:t3closure} and~\ref{sec:t4}
+compile without \texttt{sorry} or \texttt{native\_decide}, with axioms
+within \(\{\texttt{propext},\texttt{Classical.choice},
+\texttt{Quot.sound}\}\); for \texttt{LiveMiddleSwapCrossOuter.lean}
+this axiom audit is attested twice: by the acceptance ledger of the
+source archive and by a fresh rebuild of its five-module import chain
+with a kernel \texttt{\#print axioms} probe, which reports axioms
+exactly \(\{\texttt{propext},\texttt{Quot.sound}\}\)
+(\texttt{anc/lean\_axiom\_probe/}, verdict \texttt{PASS\_AXIOM\_PROBE};
+Proposition~\ref{prop:t4:swapgeometry}).
+
+\subsection*{Lean 4 sources (\texttt{anc/lean/})}
+
+{\small\ttfamily\begin{tabular}{l}
+SingletonPairSigma.lean\\
+\quad e4060bcc9b8b92dc0f65d7c4022bf2d02a7e172c9210e3e5ee10b6e273383793\\
+CutTightStarPigeonhole.lean\\
+\quad dd6da23c53e426f1ef10a7a1165508b2d519d562f99227b24bf19c823d860758\\
+R43SupportIncidence.lean\\
+\quad 6664967000f45660bd82c9ea9304942257248fbca5bb88482c45f6397d184cea\\
+BadStarCoverFreeness.lean\\
+\quad afd944ea407a6fb29a9e005c4827b7e8af9e12edc7dcc532a9bd523e083ae253\\
+K33BadStarPairCountZero.lean\\
+\quad 354565234093e4e25b7a4f296b985a43a1809b438f0633c7c97f7fe422e33233\\
+CutTightActiveRotorIncidence.lean\\
+\quad 0814a665869737b86a93b44b7e42c55690b81058e221891c36b26fc168b688f1\\
+SaturatedRotorSupportPersistence.lean\\
+\quad b4438520f7a7ac7dee4d8ff3587cd85bfa3312ee286649001d3fe6cbea82e18d\\
+R44K2TailOverlap.lean\\
+\quad 12dfb92724f36beac1f11eba529023f0445893ca6e60376b09b2403c0e64066a\\
+LiveMiddleSwapCrossOuter.lean\\
+\quad 3dff7897f65112f4f8177b84ab28f631c85bc6f50f7f5d920ed06f033b7f9275
+\end{tabular}}
+
+\subsection*{Verifier scripts (\texttt{anc/})}
+
+Eight-vertex rotor (Section~\ref{sec:rotor8}); exhaustive, rerun for
+this paper with verdict \texttt{CLAUDE-GATE=PASS (exhaustive)}:
+
+{\small\ttfamily\begin{tabular}{l}
+\_claude\_r39\_8vtx\_rotor\_gate.py\\
+\quad 6d74bcbd1bab12948c5e1a498f62a7185b03743a2b701ec5aeba6f54b01b2aeb
+\end{tabular}}
+
+\medskip
+Sixteen-atom census (Section~\ref{sec:t4}); primary pipeline, second
+acceptance path, and the abstract-circuit pair:
+
+{\small\ttfamily\begin{tabular}{l}
+enumerate\_t4\_support\_graphs.py\\
+\quad 540cbdb90faba872a359285be9cea7b622410cffdde44316443cf7b4f4fd96d1\\
+enumerate\_t4\_atom\_circuits.py\\
+\quad 7ec51265a3b4b3e8c9fa016561259795086bc05464e692d4179f28afe57702b5\\
+enumerate\_t4\_profile\_transitions.py\\
+\quad c88318342312b12c70c52e638650450d4b21352c1724a9bf9ab97ec08c88d749\\
+verify\_t4\_support\_census.py\\
+\quad 430b71893833040f2da8de1e1aa447d280e8845218e4ed411e0e0a4c635de88a\\
+verify\_t4\_atom\_census.py\\
+\quad 535861568f27112e437546e64242f6ad03f410342b15cb5ff5f1d3b18f979e6a\\
+verify\_t4\_profile\_exclusion.py\\
+\quad 0a3c0c02b240183ea87b2acf733b62e8966d7907f845fa289daacc381c587450\\
+verify\_t4\_cross\_outer\_exclusion.py\\
+\quad 657873636f1e509b9c2c7e0da2b36a2a3231dfd85d330b9d2ff28254fae1ea31\\
+search\_t4\_support\_circuit.py\\
+\quad e0f19a43e6f7e922fc55e743fdb3bc4a1e02a37a5cc90fafea38aff1b0cb35cd\\
+verify\_t4\_support\_circuit.py\\
+\quad 4b4458a497001c1696ee512e0cb1ec4e51b859e91bd7bfab441e56040f821f42
+\end{tabular}}
+
+\medskip
+The five canonical JSON artifacts of the census are included in
+\texttt{anc/t4\_artifacts/} and carry the embedded
+canonical hashes printed in the verification record of
+Section~\ref{sec:t4}; the entire pipeline, all five artifacts, and the
+\texttt{geng} counts of Table~\ref{tab:t4:geng} were regenerated
+bit-exactly from the archived scripts on 2026-07-17.
+
+\medskip
+Twenty-five-atom certificates (Section~\ref{sec:t5partial}):
+
+{\small\ttfamily\begin{tabular}{l}
+rooted\_t5\_support\_cp\_sat.py\\
+\quad dfd060bd1955e7fda6982958f40fdb70a1504a49827a7dd1efaa77e89df03053\\
+verify\_t5\_local\_classifier\_hit.py\\
+\quad 017d1e44e6dbacab39b82d99c451e9154afa7dfc560a0c478a28d8b778153aa6\\
+verify\_t5\_active\_scope\_unsat.py\\
+\quad 7a042c06edf61fe35a561e1302e6656e0a09118bfba2052f811fd0e1eb7ca154\\
+verify\_t5\_tail\_blanket\_unsat.py\\
+\quad 566f218709b3c5d32cb0e15a4ff8e985ce30479535ca264c319456ac2d59b311\\
+extend\_t5\_hit\_maxcut.py\\
+\quad b0e362ac457171eb16e01260cd9af868cdc25e2fa20cac6445730c74c09934a2\\
+verify\_t5\_maxcut\_extension\_unsat.py\\
+\quad ebbf48bfc7b7ad14fc5a594b92c9be5132cb7fbb015c0c1ad1880ba380c1128e\\
+rebuild\_t5\_local\_classifier\_hit.py\\
+\quad 34859ea68026b2f860115af71e66884685d834cbf10eb7d321f1ed4ee2a151a1\\
+check\_t5\_active\_scope\_profile.py\\
+\quad 11a4126ddfca0cc786423cf7b618b42ab2f983970e46f1cb5ac3abf7cd677221
+\end{tabular}}
+
+\medskip
+The \(t=5\) certificate \emph{artifacts} cited by SHA-256 prefix in
+Table~\ref{tab:t5artifacts} were regenerated from the archived scripts
+on 2026-07-17 and are shipped under \texttt{anc/t5\_artifacts/}
+together with a regeneration record
+(\texttt{NOTES\_t5\_regeneration.md}): the twelve split-infeasibility
+certificates regenerate bit-exactly to the cited hashes, and the
+circuit-level certificates were rebuilt on the two printed support
+graphs with identical verdicts, the historical prefixes remaining as
+the session record. In an independent adversarial
+review pass on 2026-07-17, the twelve infeasibility and three
+feasibility split verdicts were re-run from the archived model, both
+circuit hits were re-derived with an independently written constraint
+encoding, and the finite facts behind Proposition~\ref{prop:dead} were
+re-verified by exhaustive geodesic enumeration. The nine
+order-\(15\)/\(16\) certificates and the three order-\(17\)
+certificates are single-solver (OR-Tools CP-SAT) results, as flagged
+in the text. Graph generation throughout uses \texttt{geng} from
+nauty/Traces \cite{McKayPiperno14}; no floating-point arithmetic is
+used on any acceptance path.
+
+\begin{thebibliography}{99}
+\bibitem{BCL21}
+J.~Balogh, F.~C.~Clemen and B.~Lidicky,
+\emph{Max cuts in triangle-free graphs},
+Combinatorica 43 (2023), 1059--1079;
+\href{https://arxiv.org/abs/2103.14179}{arXiv:2103.14179}.
+
+\bibitem{EdmondsFulkerson65}
+J.~Edmonds and D.~R.~Fulkerson,
+\emph{Transversals and matroid partition},
+J. Res. Nat. Bur. Standards Sect. B 69B (1965), 147--153.
+
+\bibitem{EFPS88}
+P.~Erdos, R.~Faudree, J.~Pach and J.~H.~Spencer,
+\emph{How to make a graph bipartite},
+J. Combin. Theory Ser. B 45 (1988), 86--98,
+\href{https://doi.org/10.1016/0095-8956(88)90057-3}{doi:10.1016/0095-8956(88)90057-3}.
+
+\bibitem{EGS92}
+P.~Erdos, E.~Gyori and M.~Simonovits,
+\emph{How many edges should be deleted to make a triangle-free graph
+bipartite?},
+in \emph{Sets, Graphs and Numbers}, Colloq. Math. Soc. Janos Bolyai 60,
+North-Holland, 1992, 239--263.
+
+\bibitem{Ferudun26}
+A.~Ferudun,
+\emph{The Erdos \(n^2/25\) max-cut conjecture for small multiples of five,
+via a per-root-MaxCut envelope and blow-up integrality},
+\href{https://arxiv.org/abs/2606.28041}{arXiv:2606.28041}, 2026.
+
+\bibitem{Ferudun26supports}
+A.~Ferudun,
+\emph{Shortest-geodesic supports in triangle-free maximum cuts: an
+infinite Hall obstruction and the first minimal footprints},
+preprint, 2026. Companion note to the present paper.
+
+\bibitem{Hall35}
+P.~Hall,
+\emph{On representatives of subsets},
+J. London Math. Soc. 10 (1935), 26--30.
+
+\bibitem{Mantel07}
+W.~Mantel,
+\emph{Problem 28},
+Wiskundige Opgaven 10 (1907), 60--61.
+
+\bibitem{McKayPiperno14}
+B.~D.~McKay and A.~Piperno,
+\emph{Practical graph isomorphism, II},
+J. Symbolic Comput. 60 (2014), 94--112,
+\href{https://doi.org/10.1016/j.jsc.2013.09.003}{doi:10.1016/j.jsc.2013.09.003}.
+\end{thebibliography}
+\end{document}

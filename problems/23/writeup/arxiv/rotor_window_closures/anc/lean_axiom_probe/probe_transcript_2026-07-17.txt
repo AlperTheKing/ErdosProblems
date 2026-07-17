@@ -1,0 +1,73 @@
+Axiom probe transcript — live_middle_swap_has_cross_outer
+Date: 2026-07-17 (assembly follow-up, CLAIMS_LEDGER open TODO 2)
+
+== Environment ==
+Lean:    version 4.27.0, x86_64-w64-windows-gnu, commit db93fe1608548721853390a10cd40580fe7d22ae, Release
+Mathlib: rev a3a10db0e9d66acbebf76c5e6a135066525ac900 (prebuilt olean cache, 7523 oleans)
+Lake workspace: formal-conjectures checkout (lean-toolchain leanprover/lean4:v4.27.0)
+Source root: problems/23/lean (bare source tree, no lakefile; compiled out-of-tree)
+Threads: 8 (lean --threads=8)
+
+== Transitive import chain (linear, 5 modules; SHA-256 of sources compiled) ==
+93150a508e19f634d93596b75e9950dc0d0cb72a393efdecb2efda97969bbd31  Erdos23Delta0/CertGraph.lean            (imports Mathlib)
+12451978d18a455b312ef292aa249f7f6d5a1c950e3112ec03a0d4ed86d17ee0  Erdos23Delta0/Gamma/CheckedC5BaseTransfer.lean
+84b632c5329ea1205729ff0b95ab124fc573f119f17c50d4aa2f02ac9afdf09a  Erdos23Delta0/Gamma/CheckedRowCompanionBaseTransfer.lean
+e4d216fce19e96416be0842f5410bab0cf8fee9af933ff1160a3b77a3a67b11a  Erdos23Delta0/Gamma/MinimumDemandRowSelection.lean
+3dff7897f65112f4f8177b84ab28f631c85bc6f50f7f5d920ed06f033b7f9275  Erdos23Delta0/Gamma/LiveMiddleSwapCrossOuter.lean
+The last hash equals the archived copy anc/lean/LiveMiddleSwapCrossOuter.lean
+(byte-identical; verified again inside the script run below).
+
+== Commands ==
+Per module, from the Lake workspace directory, with LEAN_PATH set to the
+out-of-tree olean output directory:
+  lake env lean --threads=8 --root=<source root> -o <out>/Erdos23Delta0/<M>.olean <source root>/Erdos23Delta0/<M>.lean *> <log>
+then the probe (probe_live_middle_swap.lean, in this directory):
+  lake env lean --threads=8 probe_live_middle_swap.lean *> probe.log
+Honest-exit acceptance per step: $LASTEXITCODE -eq 0 AND no 'error'/'sorry'
+token in the log; final acceptance: axiom set within
+{propext, Classical.choice, Quot.sound}.
+
+== Run 1 (manual, module by module) ==
+CertGraph                          exit=0  51.9 s  (log empty)
+Gamma/CheckedC5BaseTransfer        exit=0  21.7 s
+Gamma/CheckedRowCompanionBaseTransfer exit=0 19.6 s
+Gamma/MinimumDemandRowSelection    exit=0  19.5 s
+Gamma/LiveMiddleSwapCrossOuter     exit=0  20.6 s
+Non-empty logs contain only the modules' own in-file `#print axioms` info
+output, no error/sorry tokens, e.g. (LiveMiddleSwapCrossOuter log, in full):
+  'Erdos23Delta0.Gamma.LiveMiddleSwapCrossOuter.live_middle_swap_has_cross_outer' depends on axioms: [propext, Quot.sound]
+Probe file (fresh process, imports the compiled olean):
+  exit=0
+  'Erdos23Delta0.Gamma.LiveMiddleSwapCrossOuter.live_middle_swap_has_cross_outer' depends on axioms: [propext, Quot.sound]
+
+== Run 2 (end-to-end rerun of the archived script rebuild_and_probe.ps1,
+   fresh output directory) ==
+SHA256(production LiveMiddleSwapCrossOuter.lean) = 3dff7897f65112f4f8177b84ab28f631c85bc6f50f7f5d920ed06f033b7f9275
+SHA256(archived   LiveMiddleSwapCrossOuter.lean) = 3dff7897f65112f4f8177b84ab28f631c85bc6f50f7f5d920ed06f033b7f9275
+module=CertGraph exit=0 seconds=37.1
+module=Gamma\CheckedC5BaseTransfer exit=0 seconds=18.2
+module=Gamma\CheckedRowCompanionBaseTransfer exit=0 seconds=18.3
+module=Gamma\MinimumDemandRowSelection exit=0 seconds=20.4
+module=Gamma\LiveMiddleSwapCrossOuter exit=0 seconds=26.2
+'Erdos23Delta0.Gamma.LiveMiddleSwapCrossOuter.live_middle_swap_has_cross_outer' depends on axioms: [propext, Quot.sound]
+probe exit=0
+axioms = [propext, Quot.sound]
+PASS_AXIOM_PROBE
+script exit code: 0
+
+== Negative control (mutated copy, not archived) ==
+A copy of LiveMiddleSwapCrossOuter.lean with the theorem's proof replaced by
+`sorry` was compiled identically. Plain exit code stayed 0 (Lean treats sorry
+as a warning), which is exactly why exit-code-only checks are rejected; the
+log contained
+  warning: declaration uses 'sorry'
+  ... depends on axioms: [propext, sorryAx, Quot.sound]
+so the script's log grep (FAIL_ERROR_TOKEN_IN_LOG) and the axiom-set gate
+(FAIL_AXIOM_OUT_OF_SET: sorryAx) each independently reject it.
+
+== Verdict ==
+PASS_AXIOM_PROBE. live_middle_swap_has_cross_outer compiles from source with
+axioms exactly [propext, Quot.sound], a subset of the accepted set
+{propext, Classical.choice, Quot.sound}. No sorry, no native_decide, no
+extra axioms. The former single-source acceptance-ledger attestation is now
+replayed: dual attestation holds.

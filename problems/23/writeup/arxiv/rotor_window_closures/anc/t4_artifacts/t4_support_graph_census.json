@@ -1,0 +1,1186 @@
+{
+  "byN": {
+    "10": {
+      "graphs": 496,
+      "graphsWithOwnerEmbedding": 0,
+      "ownerEmbeddings": 0
+    },
+    "11": {
+      "graphs": 3675,
+      "graphsWithOwnerEmbedding": 0,
+      "ownerEmbeddings": 0
+    },
+    "12": {
+      "graphs": 15285,
+      "graphsWithOwnerEmbedding": 1,
+      "ownerEmbeddings": 1
+    },
+    "13": {
+      "graphs": 36337,
+      "graphsWithOwnerEmbedding": 11,
+      "ownerEmbeddings": 11
+    },
+    "14": {
+      "graphs": 52909,
+      "graphsWithOwnerEmbedding": 13,
+      "ownerEmbeddings": 13
+    },
+    "15": {
+      "graphs": 45244,
+      "graphsWithOwnerEmbedding": 9,
+      "ownerEmbeddings": 9
+    },
+    "8": {
+      "graphs": 2,
+      "graphsWithOwnerEmbedding": 0,
+      "ownerEmbeddings": 0
+    },
+    "9": {
+      "graphs": 30,
+      "graphsWithOwnerEmbedding": 0,
+      "ownerEmbeddings": 0
+    }
+  },
+  "candidates": [
+    {
+      "graph6": "K????B?{F_@{",
+      "n": 12,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dist4M": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "dist4V": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "m": 10,
+          "v": 9
+        }
+      ]
+    },
+    {
+      "graph6": "L??????_F_]?B{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dist4M": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L??????o@ofA`w",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            2,
+            3,
+            4,
+            9
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L??????oDoN?@{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            2,
+            3,
+            4
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L??????oDoV?@{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L??????oDo]?@{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L??????oF_\\?@{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L????A?ODoN?@{",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7
+          ],
+          "commonBlue": [
+            2,
+            3,
+            4
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            9
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L????A?ODoV?Pw",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            5,
+            6,
+            7
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "dist4M": [
+            1,
+            5,
+            6,
+            7
+          ],
+          "dist4V": [
+            1,
+            5,
+            6,
+            7
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L????A?OF_]?Bw",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "dist4M": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "dist4V": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "m": 11,
+          "v": 10
+        }
+      ]
+    },
+    {
+      "graph6": "L????A?oDo?{@w",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "L????A?wCo?{@w",
+      "n": 13,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????C?]?y?@}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????E?F@LA_{?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            2,
+            3,
+            10
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????E?V?\\??}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            2,
+            3
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????E?V?l??}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????E?V?x??}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            2
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M???????E?]?r??}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            1
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_A?V?\\??}?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            2,
+            3
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            10
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_A?V?l?O{?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3
+          ],
+          "dist4M": [
+            1,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            1,
+            6,
+            7,
+            8
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_A?V?{?@{?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            2,
+            3
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_A?]?y?@{?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "commonBlue": [
+            0,
+            1,
+            2
+          ],
+          "dist4M": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "dist4V": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "m": 12,
+          "v": 11
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_E?V?@s@k?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            6,
+            9
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "M??????_F?R?@s@k?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            6,
+            9
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "M????A?O@?R_OwGw?",
+      "n": 14,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            3,
+            4,
+            5
+          ],
+          "commonBlue": [
+            6,
+            7,
+            8
+          ],
+          "dist4M": [
+            3,
+            4,
+            5,
+            9
+          ],
+          "dist4V": [
+            3,
+            4,
+            5,
+            10
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N?????????O?{?r??^_",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "commonBlue": [
+            0,
+            1
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N?????????W?M@H`ON?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "commonBlue": [
+            2,
+            11
+          ],
+          "dist4M": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "dist4V": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N?????????W?m?h_?N_",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "commonBlue": [
+            0,
+            2
+          ],
+          "dist4M": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "dist4V": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N???????C?G?m?h_GN?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            2
+          ],
+          "dist4M": [
+            1,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            1,
+            7,
+            8,
+            9
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N???????C?G?m?x??^?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            2
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N???????C?G?{?r??^?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "commonBlue": [
+            0,
+            1
+          ],
+          "dist4M": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "dist4V": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "m": 13,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "graph6": "N???????C?W?m?@q?f?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            10
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 14,
+          "v": 13
+        }
+      ]
+    },
+    {
+      "graph6": "N???????C?[?e?@q?f?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "commonBlue": [
+            5,
+            10
+          ],
+          "dist4M": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dist4V": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "m": 14,
+          "v": 13
+        }
+      ]
+    },
+    {
+      "graph6": "N??????_A?C?f?OsCU?",
+      "n": 15,
+      "ownerEmbeddings": [
+        {
+          "commonBadCandidates": [
+            3,
+            4,
+            5
+          ],
+          "commonBlue": [
+            6,
+            9
+          ],
+          "dist4M": [
+            3,
+            4,
+            5,
+            10
+          ],
+          "dist4V": [
+            3,
+            4,
+            5,
+            11
+          ],
+          "m": 14,
+          "v": 13
+        }
+      ]
+    }
+  ],
+  "canonicalSha256": "40f16a84559ace4827e366f152026f2b7868bdaed31ff9afb36184a29b48046d",
+  "edges": 15,
+  "filter": "connected bipartite; deg(v)=deg(m)=4; same shore; at least two common neighbors; each has >=4 same-shore distance-4 vertices; common distance-4 vertex exists",
+  "geng": "tools/nauty2_8_9/geng.exe",
+  "schema": "T4_SUPPORT_GRAPH_CENSUS_V1",
+  "scope": "support-graph first pass; no atom-set or maxcut conclusion",
+  "totals": {
+    "graphs": 153978,
+    "graphsWithOwnerEmbedding": 34,
+    "ownerEmbeddings": 34
+  },
+  "vertexRange": [
+    8,
+    15
+  ],
+  "workers": 8
+}

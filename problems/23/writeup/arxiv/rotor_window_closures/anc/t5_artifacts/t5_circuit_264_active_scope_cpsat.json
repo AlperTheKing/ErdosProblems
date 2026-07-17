@@ -1,0 +1,10 @@
+{
+  "activeNeighbour": 9,
+  "canonicalSha256": "bc3bc3327083c1051764b9ca95afc8987a52b6291a6efcb08ea118570003d4c3",
+  "owner": 0,
+  "schema": "t5-active-scope-profile-gate-v1",
+  "scopeWitness": null,
+  "sourceCanonicalSha256": "78db4d23ee89523dca89eda6b233771dc843dc4b9e881029c477607e704cd6be",
+  "status": "INFEASIBLE",
+  "verdict": "NO_ACTIVE_SCOPE_PROFILE_FOR_FIXED_CIRCUIT"
+}

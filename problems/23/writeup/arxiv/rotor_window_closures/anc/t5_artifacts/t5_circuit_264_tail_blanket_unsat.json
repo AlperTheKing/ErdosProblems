@@ -1,0 +1,34 @@
+{
+  "activeNeighbour": 9,
+  "activeNeighbourhood": [
+    0,
+    1,
+    2
+  ],
+  "canonicalSha256": "77676e8075918fc81d2c23c11619972c7748de40a0e486d8bcccd47a2fa30d77",
+  "owner": 0,
+  "schema": "t5-live-tail-blanket-cadical-v1",
+  "solver": "CaDiCaL195",
+  "sourceCanonicalSha256": "78db4d23ee89523dca89eda6b233771dc843dc4b9e881029c477607e704cd6be",
+  "tests": [
+    {
+      "clauses": 856,
+      "edge": [
+        1,
+        9
+      ],
+      "satisfiableWhenAbsent": false,
+      "variables": 456
+    },
+    {
+      "clauses": 861,
+      "edge": [
+        2,
+        9
+      ],
+      "satisfiableWhenAbsent": false,
+      "variables": 456
+    }
+  ],
+  "verdict": "PASS_ALL_NONOWNER_TAIL_EDGES_FORCED_SELECTED"
+}

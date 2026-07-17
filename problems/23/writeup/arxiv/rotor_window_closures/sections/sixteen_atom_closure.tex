@@ -1,0 +1,560 @@
+% ============================================================
+% sections/sixteen_atom_closure.tex
+% "The sixteen-atom closure (t = 4)"
+% for problems/23/writeup/arxiv/rotor_window_closures
+%
+% Conventions match the companion paper
+% problems/23/writeup/arxiv/shortest_support_obstructions/main.tex:
+% 11pt article; amsmath, amssymb, amsthm, booktabs, enumitem;
+% plain-style theorem/proposition/lemma/corollary and
+% definition-style definition/remark, numbered by section;
+% macros \bip, \supp, \mc as in the companion.
+%
+% Bibliography keys used by this section (assembler: provide these):
+%   SSO            the companion paper (shortest-geodesic supports in
+%                  triangle-free maximum cuts, arXiv 2026)
+%   McKayPiperno14 B. D. McKay and A. Piperno, Practical graph
+%                  isomorphism II, J. Symbolic Comput. 60 (2014), 94-112
+%   Mantel07       W. Mantel, Problem 28, Wiskundige Opgaven 10 (1907),
+%                  60-61
+% ============================================================
+
+\section{The sixteen-atom closure}\label{sec:t4}
+
+The classification of the companion paper \cite{Ferudun26supports} stops at ten atoms.
+This section treats the first structured window beyond it: support
+circuits with sixteen atoms carrying two \emph{rotating owners} of width
+four. We first prove, by hand, the crossover bounds that isolate this
+window and leave it a margin of exactly one support edge; we then close
+the window by an exhaustive computation with two independent verifiers.
+The closure eliminates one local repair mechanism for Hall expansion.
+It does not resolve the Erdos \(n^2/25\) conjecture.
+
+\subsection{Support circuits}\label{subsec:t4:circuits}
+
+Throughout this section \(F\) is a connected bipartite graph with parts
+\(X\) and \(Y\), and \(\mathcal A\) is a set of \(m\) distinct
+\emph{atoms}: pairs \(\{p,q\}\) of vertices of \(F\) with
+\(d_F(p,q)=4\). Both endpoints of an atom lie in one part. A \emph{row}
+of an atom \(a\) is a four-edge \(F\)-geodesic between its endpoints,
+written as a vertex sequence \((p_0,p_1,p_2,p_3,p_4)\); the support
+\(P_F(a)\) is the union of the edge sets of all rows of \(a\). An
+\(m\)-footprint obstruction is defined as in the companion paper: \(F\)
+has \(m-1\) edges, the graph \((V(F),\mathcal A)\) is triangle-free, the
+supports cover \(E(F)\), and every edge of \(F\) lies in at least two
+supports.
+
+\begin{definition}\label{def:t4:circuit}
+A \emph{support circuit} is an \(m\)-footprint obstruction
+\((F,\mathcal A)\) such that, in addition, for every \(a\in\mathcal A\)
+the family \(\{P_F(b):b\in\mathcal A\setminus\{a\}\}\) admits a system
+of distinct representatives that uses every edge of \(F\) exactly once.
+\end{definition}
+
+The name records that \(\mathcal A\) is a circuit of the transversal
+matroid of the support incidence system: deleting any one atom restores
+a perfect matching onto the support edges.
+
+\begin{lemma}[Transfer]\label{lem:t4:transfer}
+Let \(G\) be triangle-free with a cut \((V_0,V_1)\), crossing graph
+\(B\) connected, and let \(\mathcal S\subseteq M\) be inclusion-minimal
+with \(|\supp_B(\mathcal S)|<|\mathcal S|=m\). Put
+\(F=\supp_B(\mathcal S)\). Then \((F,\mathcal S)\) is an \(m\)-atom
+support circuit, and its atom--edge incidence graph is connected.
+\end{lemma}
+
+\begin{proof}
+The minimal-footprint lemma of the companion paper \cite{Ferudun26supports} gives all
+conditions of an \(m\)-footprint obstruction, with every atom at
+\(F\)-distance four and its support equal to the union of its
+length-four \(F\)-geodesics. For the representatives, fix
+\(a\in\mathcal S\). By minimality every subfamily of
+\(\mathcal S\setminus\{a\}\) satisfies Hall's condition inside \(F\), so
+by Hall's theorem \(\mathcal S\setminus\{a\}\) has a system of distinct
+representatives in \(E(F)\); since
+\(|\mathcal S\setminus\{a\}|=m-1=|E(F)|\), the system uses every edge.
+For connectivity, split the incidence graph into components with atom
+classes \(\mathcal A_i\) and edge classes \(F_i\). Every edge lies in
+some support, so every component contains an atom, and every support is
+contained in the component of its atom. If there were at least two
+components, then from \(\sum_i|F_i|=m-1<\sum_i|\mathcal A_i|\) some
+component would satisfy \(|F_i|<|\mathcal A_i|\), and \(\mathcal A_i\)
+would be a proper support-deficient subfamily, contradicting
+minimality.
+\end{proof}
+
+\begin{lemma}\label{lem:t4:induced}
+Every row is an induced path of \(F\): if \(u,w\) lie on a row \(R\)
+and \(uw\in E(F)\), then \(uw\in E(R)\).
+\end{lemma}
+
+\begin{proof}
+A chord between positions \(i<j\) of \(R\), \(j-i\ge2\), yields a walk
+of length \(i+1+(4-j)\le3\) between the endpoints of \(R\)'s atom,
+contradicting distance four.
+\end{proof}
+
+\begin{definition}\label{def:t4:selection}
+A \emph{selection} \(\sigma\) chooses one row \(\sigma(a)\) for each
+atom \(a\in\mathcal A\); its \emph{selected support}
+\(\supp(\sigma)\) is the union of the edge sets of the chosen rows.
+Given \(\sigma\), the star of a vertex \(v\) is
+\emph{\(\sigma\)-covered} if there is a neighbour \(x_0\) of \(v\)
+in \(F\) (the \emph{active} neighbour) such that
+\(vx_0\notin\supp(\sigma)\) and, for every other \(F\)-neighbour
+\(y\) of \(v\), some chosen row contains both \(x_0\) and \(y\).
+\end{definition}
+
+\begin{definition}\label{def:t4:rotating}
+Let \((F,\mathcal A)\) be a support circuit. A \emph{rotating family of
+width \(t\)} is a set of \(k\) distinct vertices
+\(v_1,\dots,v_k\), all in one part of \(F\), such that every \(v_i\)
+has at least \(t\) neighbours in \(F\) and is an endpoint of at least
+\(t\) atoms, and every two \(v_i,v_j\) have a common \(F\)-neighbour.
+Its members are called \emph{owners}.
+\end{definition}
+
+The window \((t,k)\) arises from a local strategy that tries to repair
+failed Hall expansion by re-routing supports around \(k\) designated
+vertices whose stars rotate between selections. Whatever the merits of
+that strategy, its combinatorial footprint is precise: a
+\(t^2\)-atom support circuit carrying a rotating family of \(k\) owners
+of width \(t\) whose stars are covered by a common selection. The
+statements below concern only this footprint.
+
+\subsection{Crossover bounds}\label{subsec:t4:crossover}
+
+\begin{theorem}\label{thm:t4:crossover}
+Let \((F,\mathcal A)\) be an \(m\)-atom support circuit carrying a
+rotating family \(v_1,\dots,v_k\) of width \(t\ge2\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \(|E(F)|\ge kt+t\); equivalently \(m\ge kt+t+1\).
+\item If \(k=2\) and the star of \(v_1\) is \(\sigma\)-covered for some
+selection \(\sigma\), then \(|E(F)|\ge3t+2\); equivalently
+\(m\ge3t+3\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Say the owners lie in \(X\).
+
+(i) Distinct vertices of one part are never adjacent in \(F\), so the
+\(F\)-stars of the owners are pairwise disjoint edge sets, and they
+contribute at least \(kt\) edges. Now fix \(v=v_1\) and distinct
+atom-partners \(b_1,\dots,b_t\) of \(v\); each satisfies
+\(d_F(v,b_j)=4\), so \(b_j\) is not an owner: an owner \(v_l\ne v\) has
+a common neighbour with \(v\) and hence \(d_F(v,v_l)=2\). For each
+\(j\) choose a row \(R_j\) of the atom \(\{v,b_j\}\) and let \(f_j\) be
+its terminal edge at \(b_j\), with endpoints \(b_j\in X\) and
+\(q_j\in Y\). The \(f_j\) are pairwise distinct, since their
+\(X\)-endpoints \(b_j\) are distinct; and none is incident with an
+owner, since \(q_j\in Y\) while the owners lie in \(X\), and
+\(b_j\) is not an owner. This gives \(t\) further edges, hence
+\(|E(F)|\ge kt+t\), and \(m-1=|E(F)|\) finishes (i).
+
+(ii) Keep the \(2t\) owner-incident edges and the \(t\) terminal edges
+from (i), taken at \(v=v_1\). Let \(x_0\) be the active neighbour and
+let \(y\ne x_0\) be any other \(F\)-neighbour of \(v\) (it exists since
+\(t\ge2\)). By coverage some chosen row \(Q\) contains \(x_0\) and
+\(y\). First, \(v\notin Q\): otherwise \(v\) and \(x_0\) both lie on
+the induced path \(Q\) (Lemma~\ref{lem:t4:induced}) and
+\(vx_0\in E(F)\), so \(vx_0\) would be an edge of \(Q\subseteq
+\supp(\sigma)\), contradicting the choice of \(x_0\). Hence no edge of
+\(Q\) is incident with \(v\), and at most two of the four edges of
+\(Q\) are incident with \(v_2\), so at least two edges of \(Q\) are
+incident with no owner.
+
+It remains to show that no edge of \(Q\) equals a terminal edge
+\(f_j\). Suppose \(f_j\in E(Q)\); then \(b_j\in V(Q)\). The vertices
+\(x_0,y\) are \(F\)-neighbours of \(v\in X\), so \(x_0,y\in Y\), while
+\(b_j\in X\). If the atom of \(Q\) lies in \(X\), the \(Y\)-vertices of
+\(Q\) are its two internal odd positions, so \(\{x_0,y\}\) is exactly
+that pair, and every \(X\)-vertex of \(Q\) --- in particular \(b_j\)
+--- has all its \(Q\)-neighbours in \(\{x_0,y\}\). If the atom of
+\(Q\) lies in \(Y\), then \(b_j\) occupies an internal odd position and
+its two \(Q\)-neighbours lie in the three \(Y\)-positions, which
+include \(x_0\) and \(y\); by pigeonhole \(b_j\) is again
+\(Q\)-adjacent to \(x_0\) or \(y\). Either way \(F\) contains an edge
+from \(b_j\) to a neighbour of \(v\), so \(d_F(v,b_j)\le2\),
+contradicting \(d_F(v,b_j)=4\). Thus the two owner-free edges of \(Q\)
+are new, and \(|E(F)|\ge2t+t+2=3t+2\).
+\end{proof}
+
+\begin{corollary}[Crossover table]\label{cor:t4:table}
+Let \((F,\mathcal A)\) be a support circuit with \(m=t^2\) atoms,
+\(t\ge3\), carrying a rotating family of \(k\ge2\) owners of width
+\(t\) whose stars include one covered star when \(k=2\). Then:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \(k\ge t-1\) is impossible; in particular no such family exists
+for \(t=3\);
+\item for \(k=2\), necessarily \(t\ge4\);
+\item at \(t=4\) the only surviving pair is \((t,k)=(4,2)\), and its
+margin is a single edge: the bound \(3t+2=14\) against the budget
+\(t^2-1=15\).
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(a) If \(k\ge t-1\) then \(kt+t\ge t^2>t^2-1=|E(F)|\), contradicting
+Theorem~\ref{thm:t4:crossover}(i); for \(t=3\) this excludes every
+\(k\ge2\). (b) \(3t+2\le t^2-1\) fails for \(t=3\) (\(11>8\)) and holds
+first at \(t=4\) (\(14\le15\)). (c) At \(t=4\), part (a) kills
+\(k\ge3\) (\(kt+t\ge16>15\)).
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c@{\quad}c@{\quad}c@{\quad}c}
+\toprule
+\(t\) & budget \(t^2-1\) & \(k=2\) bound \(3t+2\) & \(k=3\) bound \(4t\)\\
+\midrule
+3 & 8  & 11 (excluded) & 12 (excluded)\\
+4 & 15 & 14 (margin 1) & 16 (excluded)\\
+5 & 24 & 17 (margin 7) & 20 (margin 4)\\
+6 & 35 & 20 (margin 15) & 24 (margin 11)\\
+\bottomrule
+\end{tabular}
+\caption{The crossover bounds of Theorem~\ref{thm:t4:crossover} against
+the edge budget of a \(t^2\)-atom support circuit. All families with
+\(k\ge t-1\) are excluded outright. The first surviving window is
+\((t,k)=(4,2)\), with margin exactly one.}
+\label{tab:t4:crossover}
+\end{table}
+
+\subsection{The two-owner window at \texorpdfstring{\(t=4\)}{t=4}}
+\label{subsec:t4:window}
+
+\begin{definition}\label{def:t4:window}
+A \emph{two-owner window} is a triple \((F,\mathcal A,\{v,m\})\), where
+\((F,\mathcal A)\) is a \(16\)-atom support circuit and \(v\ne m\) are
+vertices in one part of \(F\) such that
+\(\deg_F(v)=\deg_F(m)=4\), \(v\) and \(m\) have at least two common
+\(F\)-neighbours, and each of \(v,m\) is an endpoint of exactly four
+atoms. The window is \emph{covered} if a single selection
+\(\sigma\)-covers the stars of both owners.
+\end{definition}
+
+The exact degree and atom counts in Definition~\ref{def:t4:window}
+reflect the graph-level states behind the window, in which each owner
+has exactly four crossing and four monochromatic neighbours. That the
+\emph{full} crossing star of a covered owner is forced into the support
+union --- so that \(\deg_F=4\) rather than \(\deg_F\le4\) --- is the
+content of the next lemma.
+
+\begin{lemma}[Star absorption]\label{lem:t4:absorption}
+In the setting of Lemma~\textup{\ref{lem:t4:transfer}}, let \(v\) be a
+vertex with exactly four \(B\)-neighbours, let \(\sigma\) select one
+\(B\)-geodesic row for each atom of \(\mathcal S\), and suppose there
+is a \(B\)-neighbour \(x_0\) of \(v\) with
+\(vx_0\notin\supp(\sigma)\) such that each pair \(\{x_0,y\}\), for the
+other three \(B\)-neighbours \(y\) of \(v\), lies on a common chosen
+row. Then all four \(B\)-star edges of \(v\) belong to
+\(F=\supp_B(\mathcal S)\), and \(\deg_F(v)=4\).
+\end{lemma}
+
+\begin{proof}
+Fix \(y\) and a chosen row \(Q\) containing \(x_0\) and \(y\). As in
+Theorem~\ref{thm:t4:crossover}(ii), \(v\notin Q\): rows are induced
+(Lemma~\ref{lem:t4:induced} applies verbatim to \(B\)-geodesics), and
+\(v\in Q\) would force the non-selected edge \(vx_0\) into \(Q\). The
+vertices \(x_0,y\) lie in the shore opposite \(v\), hence at even
+distance along \(Q\); distance four would make \(\{x_0,y\}\) the atom
+of \(Q\), impossible because \(d_B(x_0,y)=2\) through \(v\). So
+\(x_0,y\) lie at \(Q\)-distance two, with a middle vertex
+\(q\ne v\). Replacing \(q\) by \(v\) turns \(Q\) into another
+four-edge \(B\)-path with the same endpoints --- a path because
+\(v\notin Q\) --- hence another row of the same atom. Its edges
+\(vx_0\) and \(vy\) therefore lie in the complete support of that atom,
+which is contained in \(F\).
+\end{proof}
+
+\begin{proposition}[The \(K_{2,3}\) core]\label{prop:t4:core}
+In every two-owner window \((F,\mathcal A,\{v,m\})\) the owners share
+an atom-partner: there is a vertex \(b\) with
+\(\{v,b\},\{m,b\}\in\mathcal A\). Consequently, if \(x,y\) are two
+common neighbours of the owners, the window contains the mixed
+\(K_{2,3}\) core on \(\{v,m\}\cup\{x,y,b\}\): the four support edges
+\(vx,vy,mx,my\) and the two atoms \(\{v,b\},\{m,b\}\).
+\end{proposition}
+
+\begin{proof}
+The two owner stars are disjoint and contribute eight of the fifteen
+edges. As in Theorem~\ref{thm:t4:crossover}(i), each owner has four
+distinct terminal edges, none incident with an owner; so the eight star
+edges and the terminal edges of \(v\) and of \(m\) would number
+\(8+4+4=16>15\) if the two terminal families were disjoint. Hence some
+terminal edge of \(v\) equals one of \(m\); equal edges have equal
+endpoints in the owners' part, so the corresponding atom-partners
+coincide.
+\end{proof}
+
+The finite incidence core of Proposition~\ref{prop:t4:core} is
+kernel-checked in Lean~4 as
+\texttt{K2TailIncidence.exists\_common\_tail\_of\_support\_card\_le\_fifteen}
+(module \texttt{R44K2TailOverlap.lean}, source SHA-256 prefix
+\texttt{12DFB927}), compiling with axioms exactly \texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound}. It is a structural
+reduction, not by itself an exclusion.
+
+\begin{lemma}[Vertex range]\label{lem:t4:vertexrange}
+Every two-owner window satisfies \(8\le|V(F)|\le15\). If some
+selection covers the star of one owner, then \(|V(F)|\le14\).
+\end{lemma}
+
+\begin{proof}
+Lower bound: \((V(F),\mathcal A)\) is triangle-free with \(16\) edges,
+so \(16\le|V(F)|^2/4\) by Mantel's theorem \cite{Mantel07}, giving
+\(|V(F)|\ge8\). Upper bound: \(F\) is connected with \(15\) edges, so
+\(|V(F)|\le16\) with equality only for a tree; but two common
+neighbours \(x,y\) of the owners give the four-cycle \(v\)-\(x\)-\(m\)-\(y\),
+so \(F\) is not a tree and \(|V(F)|\le15\).
+
+Now suppose \(|V(F)|=15\) and the star of \(v\) is \(\sigma\)-covered,
+with active neighbour \(x_0\) and other neighbours \(y_1,y_2,y_3\).
+A connected graph with equally many vertices and edges contains exactly
+one cycle. For each \(i\) take a chosen row \(Q_i\) containing \(x_0\)
+and \(y_i\). Exactly as in Lemma~\ref{lem:t4:absorption} (whose
+argument is purely about \(F\)-geodesics): \(v\notin Q_i\); the pair
+\(x_0,y_i\) cannot lie at \(Q_i\)-distance four, since that would make
+\(\{x_0,y_i\}\) the atom of \(Q_i\) while \(v\) is a common
+\(F\)-neighbour, so \(d_F(x_0,y_i)=2\ne4\); hence \(x_0,y_i\) lie at
+\(Q_i\)-distance two with middle \(q_i\ne v\). Then
+\[
+ C_i\;=\;v\hbox{-}x_0\hbox{-}q_i\hbox{-}y_i\hbox{-}v
+\]
+is a four-cycle of \(F\), using the star edges \(vx_0,vy_i\) and two
+edges of \(Q_i\). For \(i\ne j\) the cycles differ: \(y_i\in C_i\),
+while \(y_i\notin\{v,x_0,q_j,y_j\}\) (the middles \(q_j\) lie in the
+owners' part, the \(y\)'s in the other). Three distinct cycles
+contradict unicyclicity, so \(|V(F)|\le14\).
+\end{proof}
+
+\subsection{The census}\label{subsec:t4:census}
+
+The closure now rests on one exhaustive computation.
+
+\begin{theorem}[Computer-assisted]\label{thm:t4:census}
+Up to isomorphism there are exactly \(153{,}978\) connected bipartite
+graphs with \(15\) edges and between \(8\) and \(15\) vertices
+\textup{(}Table~\textup{\ref{tab:t4:geng}}\textup{)}. Of these, exactly
+\(34\) admit two same-part degree-four vertices \(v,m\) with at least
+two common neighbours, at least four same-part vertices at distance
+four from each, and a common same-part vertex at distance four from
+both; each of the \(34\) admits exactly one such pair. These
+embeddings extend to exactly \(576\) two-owner windows
+\((F,\mathcal A,\{v,m\})\), through \(74{,}920\) atom completions, of
+which \(2{,}299\) have a triangle-free atom graph, \(862\) satisfy
+support coverage and edge multiplicity at least two, and \(576\)
+satisfy all sixteen deletion representative systems. Furthermore:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item all \(576\) windows have \(|V(F)|=15\), on exactly four
+isomorphism types of \(F\); in particular no two-owner window has at
+most \(14\) support vertices;
+\item in every window, at least eight atoms have every row through
+\(v\), and at least eight have every row through \(m\); over the
+\(576\) windows the number of such atoms has distribution
+\(\{8{:}255,\ 9{:}193,\ 10{:}101,\ 11{:}26,\ 12{:}1\}\), identically
+for \(v\) and \(m\);
+\item no complete row family of any atom of any window contains a
+\emph{middle swap}: two rows \((a,x,v,y,b)\) and \((a,x,m,y,b)\)
+differing precisely in the middle vertex, one through each owner.
+\end{enumerate}
+\end{theorem}
+
+The reduction to a finite computation is complete for two-owner
+windows: \(F\) is connected, bipartite, with fifteen edges and, by
+Lemma~\ref{lem:t4:vertexrange}, between \(8\) and \(15\) vertices; the
+degree, common-neighbour and atom-count conditions are part of
+Definition~\ref{def:t4:window}; the four atom-partners of each owner
+are same-part vertices at distance four; and the common distance-four
+vertex exists by Proposition~\ref{prop:t4:core}. The computation
+generated all candidate graphs with \texttt{geng} from nauty/Traces
+\cite{McKayPiperno14} (\texttt{geng -c -b \(n\) 15:15},
+\(8\le n\le15\)), located the owner embeddings (the filter is invariant
+under swapping the two colour classes), enumerated all admissible
+sixteen-atom completions, and tested the circuit conditions with exact
+integer arithmetic. Every
+complete row family of every surviving window was then reconstructed
+and every pair of rows in every family was tested for the middle-swap
+pattern; the row-selection products of the \(576\) windows comprise
+\(16{,}288\) selections in total.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c@{\quad}r@{\qquad}c@{\quad}r}
+\toprule
+\(n\) & graphs & \(n\) & graphs\\
+\midrule
+8  & 2      & 12 & 15{,}285\\
+9  & 30     & 13 & 36{,}337\\
+10 & 496    & 14 & 52{,}909\\
+11 & 3{,}675 & 15 & 45{,}244\\
+\bottomrule
+\end{tabular}
+\caption{Connected bipartite graphs with \(15\) edges, by vertex count:
+the census ground set, \(153{,}978\) graphs in total. The counts were
+produced by \texttt{geng}, reproduced independently by the
+NetworkX-based verifier, and replayed once more for this paper.}
+\label{tab:t4:geng}
+\end{table}
+
+\begin{corollary}[The sixteen-atom closure]\label{cor:t4:closure}
+There is no covered two-owner window. Consequently, in a triangle-free
+graph with a cut whose crossing graph is connected, no inclusion-minimal
+support-deficient family of sixteen bad edges admits two same-shore
+vertices of crossing degree four, with at least two common crossing
+neighbours and exactly four atoms each, whose stars are simultaneously covered
+by one selection of shortest rows. The window \((t,k)=(4,2)\) of
+Table~\textup{\ref{tab:t4:crossover}} is empty.
+\end{corollary}
+
+\begin{proof}
+Suppose \((F,\mathcal A,\{v,m\})\) is a covered two-owner window. By
+Lemma~\ref{lem:t4:vertexrange} it has at most \(14\) support vertices;
+by Theorem~\ref{thm:t4:census}(i) no two-owner window --- covered or
+not --- has fewer than \(15\). For the graph-level statement, transfer
+by Lemma~\ref{lem:t4:transfer}: the minimal family induces a
+\(16\)-atom support circuit whose atoms, rows and supports coincide
+with the graph-level ones, and Lemma~\ref{lem:t4:absorption} forces
+each covered owner's full crossing star into \(F\), so
+\(\deg_F(v)=\deg_F(m)=4\) and the selection covers both stars inside
+\((F,\mathcal A)\).
+\end{proof}
+
+Two features of Theorem~\ref{thm:t4:census} make the closure robust.
+First, parts (ii) and (iii) exclude the window a second time, at
+\(|V(F)|=15\), independently of the covered-star analysis: the
+re-routing mechanism that motivates the window both prescribes a
+routing load of four atoms through each owner --- against the forced
+load of at least eight in (ii) --- and requires at least one middle
+swap in some complete row family, against (iii). Part (iii) is
+quantified over every pair of rows of every family of every window,
+with no side conditions. Second, the middle-swap exclusion has a
+row-free confirmation:
+
+\begin{proposition}\label{prop:t4:swapgeometry}
+If two rows of one atom form a middle swap \((a,x,v,y,b)\),
+\((a,x,m,y,b)\), then \(x,y\) are distinct common neighbours of \(v\)
+and \(m\), \(a\) is a neighbour of \(x\) outside \(\{v,m\}\), \(b\) is
+a neighbour of \(y\) outside \(\{v,m\}\), and \(\{a,b\}\) is a
+distance-four pair witnessed by both displayed paths. This implication
+is kernel-checked in Lean~4
+\textup{(}\texttt{LiveMiddleSwapCrossOuter.lean}, theorem
+\texttt{live\_middle\_swap\_has\_cross\_outer}, source SHA-256 prefix
+\texttt{3DFF7897}; axioms exactly \texttt{propext},
+\texttt{Quot.sound}, attested by both the acceptance record and a
+fresh rebuild-and-probe at assembly,
+\texttt{anc/lean\_axiom\_probe/}\textup{)}. Exhausting all ordered choices of
+\((x,y,a,b)\) over the four support types of the \(576\) windows
+\textup{(}multiplicities \(180,190,190,16\)\textup{)} yields zero such
+configurations \textup{(}artifact SHA-256 prefix \texttt{79db75b9},
+verdict \texttt{PASS\_NO\_LIVE\_MIDDLE\_SWAP\_GEOMETRY}\textup{)}, so
+Theorem~\textup{\ref{thm:t4:census}(iii)} follows again without
+enumerating rows.
+\end{proposition}
+
+\begin{remark}[An independent catalogue and a tight near-miss]
+\label{rem:t4:nearmiss}
+A second, independently designed session enumeration attacked the same
+window by vertex count and reported: no owner distance-four profile at
+\(|V(F)|\in\{10,11\}\); at most ten same-part distance-four pairs at
+\(|V(F)|=12\) (short of sixteen); \(280\) candidate graphs at
+\(|V(F)|=13\) with no sixteen-atom circuit carrying four owner-star
+atoms at each owner; and \(455\) candidate graphs at \(|V(F)|=14\) with
+no simultaneously covered owner stars. In that route, distance-four
+pairs within one part are certified by the exact criterion
+\((Q_L)_{uv}=0<(Q_L^2)_{uv}\), where \(Q_L=A_HA_H^{\mathsf T}\) and
+\(A_H\) is the biadjacency matrix. This catalogue is a single
+implementation and we use it only as corroboration; the proof of
+Corollary~\ref{cor:t4:closure} rests on the dual-verified census. The
+catalogue also exhibited a tight near-miss at \(|V(F)|=14\) (checker
+SHA-256 prefix \texttt{4644e5ab}), whose archived invariants we record:
+parts \(\{0,\dots,6\}\) and \(\{7,\dots,13\}\); fifteen support edges
+and sixteen atoms; owners \(0\) and \(1\) sharing the two support
+neighbours \(7,8\) and the three atom-partners \(3,5,6\); shared
+terminal edges \(\{3,13\},\{5,13\},\{6,13\}\); the remaining edge
+budget spent on \(\{2,11\}\) and \(\{4,9\}\); a complete row database
+of \(864\) selections, none of which covers both owner stars. The
+recorded failure is local: the common neighbours \(7,8\) lie on no
+geodesic row of the relevant families, and every alternative row
+passes through an owner and thus absorbs the would-be active edge.
+The full edge and atom lists of this configuration were
+session-internal and are not reproduced here.
+\end{remark}
+
+\begin{remark}[Why geometry is load-bearing]\label{rem:t4:abstract}
+The census cannot be replaced by support-cardinality reasoning. There
+is an abstract sixteen-atom, fifteen-edge transversal circuit with
+four-element supports --- artifact SHA-256 prefix \texttt{5b386cd9},
+independently re-verified --- realizing the forced tail overlap of
+Proposition~\ref{prop:t4:core}, edge multiplicity at least two, full
+deficiency one, and Hall's condition on all \(65{,}534\) proper atom
+subsets. Its supports have not been realized as geodesics of any one
+graph, and no census window realizes them.
+Any proof of Corollary~\ref{cor:t4:closure} must therefore use the
+geodesic geometry, as the census does.
+\end{remark}
+
+\subsection*{Verification record}
+
+The census has two acceptance paths with no shared code beyond the
+\texttt{geng} generator. The primary
+enumeration (three programs, eight workers) emitted three canonical
+JSON artifacts with embedded canonical SHA-256 hashes, listed first
+below; the remaining two JSON artifacts belong to the verification
+path, and the two Lean sources are hashed alongside:
+\begin{center}
+\small\ttfamily
+\begin{tabular}{l}
+t4\_support\_graph\_census.json\\
+\quad 40f16a84559ace4827e366f152026f2b7868bdaed31ff9afb36184a29b48046d\\
+t4\_atom\_circuit\_census.json\\
+\quad 302e04ef5ff14c78cbe9dc5800ac0226e730ed0baca123585dc6469a82d66652\\
+t4\_profile\_transition\_census.json\\
+\quad b464682b4142a9db2396dc39ac9a0ffd8ff638aba1b9270734667c8f0a543114\\
+t4\_cross\_outer\_exclusion.json\\
+\quad 79db75b95e8401064f1b6159bb980ee0149f0fb3a602a607306a7f0e501a5d49\\
+t4\_support\_circuit\_hit.json (Remark \ref{rem:t4:abstract})\\
+\quad 5b386cd90b795bf1e6f8f174e21aa559e37c9f682e5dff373dae6bf74f3b9641\\
+LiveMiddleSwapCrossOuter.lean\\
+\quad 3DFF7897F65112F4F8177B84AB28F631C85BC6F50F7F5D920ED06F033B7F9275\\
+R44K2TailOverlap.lean\\
+\quad 12DFB92724F36BEAC1F11EBA529023F0445893CA6E60376B09B2403C0E64066A
+\end{tabular}
+\end{center}
+Three independently written verifiers replayed the pipeline:
+\texttt{verify\_t4\_support\_census.py} re-ran \texttt{geng} without
+residue splitting and reproduced, via
+\texttt{networkx.from\_graph6\_bytes} and NetworkX bipartitions and
+distances, all \(153{,}978\) graphs, the \(34\) owner embeddings, and
+the complete candidate payload
+(\texttt{PASS\_INDEPENDENT\_NETWORKX\_SUPPORT\_CENSUS});
+\texttt{verify\_t4\_atom\_census.py} reproduced every stage count and
+the same \(576\) windows using \texttt{networkx.all\_shortest\_paths}
+and NetworkX bipartite matching
+(\texttt{PASS\_INDEPENDENT\_NETWORKX\_ATOM\_CENSUS}); and
+\texttt{verify\_t4\_profile\_exclusion.py} reconstructed every complete
+row family with its own graph6 decoder and breadth-first search,
+recomputed both canonical hashes, and confirmed the forced-through
+histograms of Theorem~\ref{thm:t4:census}(ii) and the absence of raw
+middle swaps (\texttt{PASS\_T4\_RAW\_MIDDLE\_SWAP\_EXCLUSION}); this
+last verifier was replayed once more during the audit of the session
+record, with matching histograms. Neither acceptance path uses
+floating-point arithmetic; the two paths use different graph6
+decoders, shortest-path engines, and matching algorithms. The
+\texttt{geng} counts of Table~\ref{tab:t4:geng} were additionally
+re-generated for this paper. The Lean modules named above cover only
+the two finite implications indicated; the census itself is not
+kernel-checked, and its formal replay remains open.
+
+\begin{remark}[Scope]\label{rem:t4:scope}
+The sixteen-atom closure eliminates a single structured window. It
+neither improves the general bounds on \(\bip(G)\) for triangle-free
+\(G\) nor resolves the Erdos \(n^2/25\) conjecture. The neighbouring
+windows \((t,k)=(5,2)\) and \((5,3)\), where
+Table~\ref{tab:t4:crossover} leaves margins seven and four, are open;
+the unrooted analogue of the census is infeasible there (the graph
+count at \(24\) edges already exceeds \(1.9\times10^8\) at sixteen
+vertices), so a rooted generation or a structural argument would be
+required.
+\end{remark}

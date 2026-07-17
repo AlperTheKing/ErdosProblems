@@ -1,0 +1,30 @@
+{
+  "canonicalSha256": "6e558ca82247c10ef8ec36924b71ddc6a0a7851b1a0f8f743fb6617a4e60cb30",
+  "circuitStatuses": {
+    "INFEASIBLE": 1
+  },
+  "classifierActiveMinDegree": 0,
+  "classifierActiveRightIndex": null,
+  "hit": null,
+  "left": 10,
+  "localClassifier": "v",
+  "ownerBadDegree": 5,
+  "ownerRowCount": null,
+  "requireActiveScope": true,
+  "requireBadTriangleFree": true,
+  "requireDeletionSdr": true,
+  "requireLiveTransitionProfile": false,
+  "requireSharedBadNeighbour": false,
+  "requireTwoOwnerProfile": false,
+  "right": 7,
+  "schema": "rooted-t5-support-circuit-search-v1",
+  "scope": "falsifier search; a no-hit is not a proof",
+  "selectedAtomCount": 25,
+  "supportLimit": 1,
+  "supportMinMultiplicity": 2,
+  "supportTerminalStatus": "LIMIT_REACHED",
+  "supportsSolved": 1,
+  "supportsWithAtLeast25Atoms": 1,
+  "verdict": "NO_HIT_WITHIN_EXPLICIT_LIMIT",
+  "workers": 8
+}

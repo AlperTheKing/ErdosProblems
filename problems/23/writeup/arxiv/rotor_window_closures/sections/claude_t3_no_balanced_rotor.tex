@@ -1,0 +1,374 @@
+% ------------------------------------------------------------------
+% Section: No balanced rotor on nine-atom circuits (t=3)
+% Drafted by: Claude (Fable 5), 2026-07-17
+% Sources (all claims trace to these; see claude_t3_no_balanced_rotor_claims.md):
+%   problems/23/writeup/WALL_ATTACK_R43_GPTPRO56.md         (secs. 1-2, 5-7)
+%   problems/23/writeup/WALL_ATTACK_R42_GPTPRO56.md         (secs. 9-10, owner conditions)
+%   problems/23/writeup/WALL_ATTACK_R41_GPTPRO56.md         (sec. 7, window parameters)
+%   problems/23/writeup/WALL_ATTACK_R48_GPTPRO56.md         (secs. 1-4, profile conditions)
+%   problems/23/archive/tmp_text_sources_20260712/fanout/
+%     r42_graph_specific_exclusion/REPORT.md                (four-star lemma; bad-star
+%       vertex-cover freeness; shape-independent t=3 closure; axiom audits)
+%   problems/23/lean/Erdos23Delta0/Gamma/R43SupportIncidence.lean      (SHA-256 66649670...)
+%   problems/23/lean/Erdos23Delta0/Gamma/BadStarCoverFreeness.lean     (SHA-256 afd944ea...)
+%   problems/23/lean/Erdos23Delta0/Gamma/K33BadStarPairCountZero.lean  (SHA-256 35456523...)
+%   problems/23/lean/Erdos23Delta0/Gamma/CutTightActiveRotorIncidence.lean (SHA-256 0814a665...)
+% Cross-section dependencies (labels defined in sibling sections):
+%   sec:rotor8, def:rotor8-selection   (claude_eight_vertex_rotor.tex)
+%   cor:graph                          (support_circuits.tex)
+%   def:switchloss, cor:badendpoint    (star_lemma.tex)
+% Bibliography keys used: Ferudun26supports (as in support_circuits.tex).
+% Assumes the companion preamble: amsthm environments, enumitem, \supp, \bip.
+% ------------------------------------------------------------------
+
+\section{No balanced rotor on nine-atom circuits
+(\texorpdfstring{\(t=3\)}{t=3})}\label{sec:t3closure}
+
+Section~\ref{sec:rotor8} exhibited a two-atom configuration, far from
+any Hall violation, on which the local repair walk rotates forever.
+This section treats the corresponding question on an actual support
+circuit. The motivation is a defect-transport strategy for excluding
+support circuits: one tries to show that some quantity strictly
+decreases along detour moves, and the terminal objects such a strategy
+must exclude are cyclic families of detour moves along which a locally
+deficient vertex configuration merely rotates --- here with at most
+three owners, the engine-relevant range on nine atoms
+(Remark~\ref{rem:t3-fourowners}). We call these
+\emph{balanced rotors} and define them precisely below. In the window
+parametrization of the transport analysis, where a circuit of \(t^2\)
+atoms carries rotating vertices with \(t\) crossing and \(t\)
+monochromatic neighbours, the smallest case is \(t=3\): nine atoms and,
+by the circuit identity, eight support edges. We give two independent
+proofs that no balanced rotor exists on a nine-atom support circuit.
+The first counts support edges and is insensitive to the shape of the
+circuit; the second shows that on the unique nine-atom footprint the
+coverage condition that any rotation needs is unsatisfiable. Both have
+kernel-checked Lean counterparts (Remark~\ref{rem:t3-lean}).
+
+Throughout the section, \(G\) is a finite triangle-free graph with a
+fixed cut \(V(G)=V_0\mathbin{\dot\cup}V_1\), \(B\) is the crossing
+subgraph, assumed connected, \(M=E(G)\setminus B\), and
+\((F,\mathcal A)\) is a support circuit in the graph form of
+Corollary~\ref{cor:graph}: \(\mathcal A\subseteq\{xy\in
+M:d_B(x,y)=4\}\) is inclusion-minimal with
+\(|\supp_B(\mathcal A)|<|\mathcal A|\), and
+\(F=\supp_B(\mathcal A)\) is viewed as the bipartite subgraph it spans,
+so that \(|E(F)|=|\mathcal A|-1\) and every \(B\)-geodesic of an atom
+lies in \(F\). As in Definition~\ref{def:rotor8-selection}, a
+\emph{selection} \(\omega\) assigns to each atom one of its
+\(B\)-geodesics; \(S_\omega\subseteq E(F)\) denotes the union of the
+selected edge sets, and a \emph{detour move} replaces the selected
+geodesic of a single atom by a different geodesic of the same atom.
+Maximality of the cut is not used in this section, except in the
+motivational Remark~\ref{rem:t3-fourowners}.
+
+\subsection{Rotating owners and balanced rotors}
+
+\begin{definition}[Rotating owner profile; covered star]\label{def:t3-profile}
+Let \(\omega\) be a selection. A vertex \(v\) has the \emph{rotating
+owner profile} at \(\omega\) if:
+\begin{enumerate}[label=\textup{(P\arabic*)}]
+\item \(d_B(v)=d_M(v)=3\), and the three monochromatic edges at \(v\)
+are atoms of \(\mathcal A\);
+\item writing \(N_B(v)=\{x,y_1,y_2\}\), exactly one of the three
+crossing edges at \(v\) lies outside \(S_\omega\); label the notation
+so that this edge is \(vx\) (the \emph{active} edge), so
+\(vy_1,vy_2\in S_\omega\);
+\item (\emph{covered star}) for each \(i\in\{1,2\}\) some selected
+geodesic contains both \(x\) and \(y_i\) but not \(v\).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}\label{rem:t3-profile-scope}
+The definition keeps only the conditions used in the proofs below. In
+the transport engine, a rotor state satisfies strictly stronger local
+conditions (prescribed counts of selected geodesics through the owner
+and two exact matching conditions), and its transitions carry an
+exactly balanced deficiency ledger, which is the origin of the name
+\emph{balanced} in Definition~\ref{def:t3-rotor}. Excluding the weaker
+object above therefore suffices. Requiring in (P3) that the covering
+geodesic avoid \(v\) also costs nothing: if a selected geodesic
+\(w_0w_1w_2w_3w_4\) contained both \(v\) and \(x\), then, positions of
+\(v\) and \(x\) having opposite parity because \(vx\in B\), either they
+are adjacent on the geodesic, making \(vx\) a selected edge and
+contradicting (P2), or they sit at positions \(\{0,3\}\) or
+\(\{1,4\}\), and the chord \(vx\) yields a \(B\)-path of length two
+between the atom endpoints, contradicting \(d_B(w_0,w_4)=4\).
+\end{remark}
+
+\begin{definition}[Balanced rotor]\label{def:t3-rotor}
+A \emph{balanced rotor} on \((F,\mathcal A)\) consists of
+\(k\in\{2,3\}\) distinct vertices \(v_1,\dots,v_k\) (the
+\emph{rotating owners}) together with selections
+\(\omega_1,\dots,\omega_k\) such that, with indices modulo \(k\):
+\begin{enumerate}[label=\textup{(R\arabic*)}]
+\item \(v_i\) has the rotating owner profile at \(\omega_i\);
+\item \(\omega_{i+1}\) is obtained from \(\omega_i\) by a single detour
+move replacing a selected geodesic of the form
+\(a\,x\,v_{i+1}\,y\,b\) by the geodesic \(a\,x\,v_i\,y\,b\) of the same
+atom \(ab\in\mathcal A\).
+\end{enumerate}
+\end{definition}
+
+Condition (R2) says that consecutive owners occur as the two middle
+vertices of a pair of geodesics of one atom that agree elsewhere; this
+is exactly the one-atom detour move of the repair walk, as on the
+four-state rotor of Section~\ref{sec:rotor8}.
+
+\begin{remark}[Why two or three owners]\label{rem:t3-fourowners}
+A nontrivial rotation needs at least two owners, and the engine's
+four-owner configuration is excluded on nine atoms by a separate count,
+which we record for orientation; it is the only place in this section
+where maximality of the cut enters. In that configuration the four
+rotating vertices are the corners of a crossing four-cycle, each is
+cut-tight in the sense of Definition~\ref{def:switchloss}, and each has
+at least four crossing neighbours. The four monochromatic stars are
+pairwise disjoint: adjacent corners are joined by crossing edges, while
+opposite corners lie on one shore and have common crossing neighbours,
+so an edge between them would close a triangle.
+Corollary~\ref{cor:badendpoint} gives \(d_M\ge d_B-1\ge3\) at each
+corner, whence \(|M|\ge12>9\). The finite core of this count is
+kernel-checked (Remark~\ref{rem:t3-lean}).
+Definition~\ref{def:t3-rotor} therefore fixes \(k\in\{2,3\}\).
+\end{remark}
+
+\subsection{First closure: the support-edge count}
+
+\begin{lemma}[Owner degree in the support graph]\label{lem:t3-ownerdeg}
+Let \(\omega\) be a selection and let \(v\) have the rotating owner
+profile at \(\omega\). Then all three crossing edges
+\(vx,vy_1,vy_2\) are edges of \(F\); in particular \(v\in V(F)\) and
+\(\deg_F(v)\ge3\).
+\end{lemma}
+
+\begin{proof}
+The edges \(vy_1,vy_2\) lie in \(S_\omega\subseteq E(F)\) by (P2). For
+\(vx\), take the covering geodesic of (P3) with \(i=1\): a selected
+geodesic \(Q=w_0w_1w_2w_3w_4\) of some atom \(ab\in\mathcal A\) with
+\(x,y_1\in V(Q)\) and \(v\notin V(Q)\). The vertices \(x,y_1\in
+N_B(v)\) lie on the shore opposite \(v\), and the positions of \(Q\)
+alternate shores, with \(w_0=a\) and \(w_4=b\) on one shore. If \(a,b\)
+lie on the shore of \(v\), then \(x\) and \(y_1\) occupy the two odd
+positions \(w_1,w_3\). If \(a,b\) lie opposite \(v\), then \(x,y_1\)
+occupy even positions; they cannot be \(\{w_0,w_4\}\), since then
+\(xy_1=ab\in M\) and \(vx,vy_1\in B\) would form a triangle. In every
+case \(x\) and \(y_1\) occur at distance two along \(Q\), separated by
+a middle vertex \(w\), and \(w\ne v\) because \(v\notin V(Q)\).
+Replacing \(w\) by \(v\) in \(Q\) yields a walk from \(a\) to \(b\) of
+length four whose two new edges \(vx,vy_1\) lie in \(B\) and whose
+vertices are distinct; it is therefore a \(B\)-geodesic of \(ab\),
+since \(d_B(a,b)=4\). Its edges lie in
+\(\supp_B(ab)\subseteq E(F)\) by the definition of the support. Hence
+\(vx\in E(F)\). The three edges are distinct because \(x,y_1,y_2\)
+are.
+\end{proof}
+
+\begin{lemma}[One shore, pairwise nonadjacent]\label{lem:t3-disjoint}
+Let \(v_1,\dots,v_k\), \(\omega_1,\dots,\omega_k\) be a balanced rotor
+on \((F,\mathcal A)\). Then all rotating owners lie on one shore, any
+two of them are nonadjacent in \(G\), and no edge of \(F\) is incident
+to two owners. In particular, the sets of \(F\)-edges incident to the
+several owners are pairwise disjoint.
+\end{lemma}
+
+\begin{proof}
+Consider the move (R2) from \(\omega_i\) to \(\omega_{i+1}\), at an
+atom \(ab\). Both geodesics \(a\,x\,v_{i+1}\,y\,b\) and
+\(a\,x\,v_i\,y\,b\) are five-vertex alternating paths whose endpoints
+\(a,b\), being the endpoints of a monochromatic edge, lie on one shore;
+the middle position therefore lies on the endpoint shore as well.
+Hence \(v_i\) and \(v_{i+1}\) lie on a common shore, and around the
+cycle of moves all owners lie on one shore. Consequently
+\(v_iv_{i+1}\notin B\); and if \(v_iv_{i+1}\in M\), then, since
+\(xv_i,xv_{i+1}\in B\) by the two displayed geodesics, the vertices
+\(x,v_i,v_{i+1}\) would form a triangle in \(G\). So consecutive
+owners are nonadjacent. For \(k\le3\) every pair of owners is
+consecutive in the cyclic order, so no two owners are adjacent, and an
+edge of \(G\) incident to two owners would be exactly such an edge.
+\end{proof}
+
+\begin{theorem}[First closure: support-edge counting]\label{thm:t3-counting}
+A nine-atom support circuit carries no balanced rotor.
+\end{theorem}
+
+\begin{proof}
+Suppose \((F,\mathcal A)\) with \(|\mathcal A|=9\) carries a balanced
+rotor; by Corollary~\ref{cor:graph}(a), \(|E(F)|=8\). Each owner
+\(v_i\) has at least three incident edges in \(F\)
+(Lemma~\ref{lem:t3-ownerdeg}, applied at \(\omega_i\); note that
+\(E(F)\) does not depend on the selection), and the incident sets of
+distinct owners are disjoint (Lemma~\ref{lem:t3-disjoint}).
+
+If \(k=3\), the three disjoint triples already give
+\(|E(F)|\ge9>8\), a contradiction.
+
+If \(k=2\), write \(v=v_1\), \(m=v_2\). The two incident triples give
+six edges of \(F\), and we exhibit three further edges of \(F\)
+incident to neither owner. By (P1) at \(v\), the three monochromatic
+edges \(vb_1,vb_2,vb_3\) at \(v\) are atoms; the vertices
+\(b_1,b_2,b_3\) are distinct, lie on the shore of \(v\), and none
+equals \(m\), since \(vm\notin E(G)\) by
+Lemma~\ref{lem:t3-disjoint} while \(vb_i\in M\). By
+Corollary~\ref{cor:graph}(c), \(d_F(v,b_i)=4\); choose an
+\(F\)-geodesic \(P_i\) from \(v\) to \(b_i\) for each \(i\). Two cases.
+
+\emph{Some \(v\)--\(b_i\) geodesic in \(F\) avoids \(m\).} Choose
+\(P_i\) to be such a geodesic. Its last three edges are three distinct
+edges of \(F\); none is incident to \(v\), which occurs only at the
+first position of the path, and none is incident to \(m\), which does
+not occur at all.
+
+\emph{Every \(v\)--\(b_i\) geodesic in \(F\) contains \(m\), for each
+\(i\).} Fix any choice of \(P_i=v\,p_i\,h_i\,q_i\,b_i\). Since \(m\)
+lies on the shore of \(v\), it occupies an even position of \(P_i\);
+it is neither position \(0\) (which is \(v\ne m\)) nor position \(4\)
+(which is \(b_i\ne m\)), so \(m=h_i\) for every \(i\). The three final
+edges \(q_ib_i\) then avoid both owners: \(q_i\), at an odd position,
+lies opposite the shore of \(v\) and \(m\), and \(b_i\notin\{v,m\}\).
+They are pairwise distinct because each has exactly one endpoint,
+namely \(b_i\), on the shore of \(v\), and the \(b_i\) are distinct.
+
+In either case \(E(F)\) contains three edges of \(F\) meeting neither
+\(v\) nor \(m\), disjoint from the six incident edges. Hence
+\(|E(F)|\ge3+3+3=9>8\), a contradiction.
+\end{proof}
+
+\subsection{Second closure: coverage emptiness on the nine-atom
+footprint}
+
+The second proof does not count support edges. It shows that on the
+unique nine-atom footprint the covered-star clause (P3) can never be
+satisfied, at any vertex and any selection. The row-level statement is
+general.
+
+\begin{theorem}[Row exclusion at a closed star]\label{thm:t3-emptystar}
+Let \((F,\mathcal A)\) be a support circuit and let \(z\) be a vertex
+such that every atom of \(\mathcal A\) has both endpoints on the shore
+of \(z\), and every atom has at least one endpoint in
+\(\{z\}\cup N_M(z)\), where \(N_M(z)\) is the set of monochromatic
+neighbours of \(z\). Let \(\omega\) be a selection and let
+\(x,s\in N_B(z)\) be distinct with \(zx\notin S_\omega\). Then no
+selected geodesic of \(\omega\) contains both \(x\) and \(s\).
+\end{theorem}
+
+\begin{proof}
+Suppose the selected geodesic \(Q=a\,q_1\,q_2\,q_3\,b\) of an atom
+\(ab\in\mathcal A\) contains both \(x\) and \(s\). The endpoints
+\(a,b\) lie on the shore of \(z\) by hypothesis, so the even positions
+\(a,q_2,b\) of \(Q\) lie on the shore of \(z\), while
+\(x,s\in N_B(z)\) lie on the opposite shore. Hence
+\(\{x,s\}=\{q_1,q_3\}\). By the second hypothesis applied to \(ab\),
+one of the following holds.
+
+\emph{\(z=a\).} If \(x=q_1\), then \(zx=aq_1\in E(Q)\subseteq
+S_\omega\), contradicting \(zx\notin S_\omega\). If \(x=q_3\), then
+\(zx\in B\) and \(a\,q_3\,b\) is a \(B\)-path of length two,
+contradicting \(d_B(a,b)=4\).
+
+\emph{\(z=b\).} Symmetric, exchanging \(q_1\) and \(q_3\).
+
+\emph{\(za\in M\).} The vertex \(q_1\) is one of \(x,s\), so
+\(zq_1\in B\); also \(aq_1\in E(Q)\subseteq B\) and \(za\in M\). Then
+\(z,a,q_1\) form a triangle in \(G\), a contradiction.
+
+\emph{\(zb\in M\).} Symmetric, with the triangle \(z,b,q_3\).
+\end{proof}
+
+\begin{corollary}[Second closure: coverage emptiness]\label{cor:t3-second}
+No vertex of a nine-atom support circuit has the rotating owner
+profile at any selection. In particular, a nine-atom support circuit
+carries no balanced rotor.
+\end{corollary}
+
+\begin{proof}
+By the exact footprint classification of the companion paper
+\cite{Ferudun26supports}, a nine-atom support circuit has, up to
+isomorphism, the support graph
+\[
+ \{l_1,l_2,l_3\}-c_1-c_2-c_3-\{r_1,r_2,r_3\},
+ \qquad
+ \mathcal A=\{l_ir_j:1\le i,j\le3\},
+\]
+the double star whose atom set is a \(K_{3,3}\) on the six vertices
+\(l_i,r_j\). Every atom is monochromatic, so its endpoints share a
+shore, and since the atom graph \(K_{3,3}\) is connected, all six
+vertices \(l_i,r_j\) lie on one shore.
+
+Suppose a vertex \(z\) has the rotating owner profile at a selection
+\(\omega\). By (P1) the three monochromatic edges at \(z\) are atoms,
+so \(z\) is an endpoint of atoms; say \(z=l_i\) (the case \(z=r_j\) is
+symmetric). Then every atom \(l_ar_b\) has the endpoint
+\(r_b\in N_M(z)\), because \(l_ir_b\in\mathcal A\subseteq M\); and
+every atom has both endpoints on the shore of \(z\). Thus
+Theorem~\ref{thm:t3-emptystar} applies to \(z\): since
+\(zx\notin S_\omega\) by (P2), no selected geodesic contains both
+\(x\) and \(y_1\). This contradicts (P3).
+\end{proof}
+
+\begin{remark}[Independence of the two closures]\label{rem:t3-independent}
+Theorem~\ref{thm:t3-counting} uses no classification and applies to
+every nine-atom circuit shape, whatever its footprint; it does not use
+coverage emptiness. Corollary~\ref{cor:t3-second} counts nothing, but
+consumes the footprint classification of \cite{Ferudun26supports},
+which is computer-assisted with two independent exact verifiers.
+Either result alone excludes balanced rotors on nine atoms; the second
+is in one respect stronger, excluding even a single profiled vertex
+rather than only a cyclic family.
+\end{remark}
+
+\begin{remark}[Formalization]\label{rem:t3-lean}
+Both closures are verified in Lean~4 in the development
+\texttt{Erdos23Delta0} accompanying this project, in the following
+division of labour. All named declarations compile with axioms exactly
+\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}; none
+uses \texttt{sorry} or \texttt{native\_decide}.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For Theorem~\ref{thm:t3-counting}, the finite counting core is
+the module \texttt{Erdos23Delta0.Gamma.R43SupportIncidence} (source
+SHA-256 prefix \texttt{66649670}). Abstract carriers package an
+eight-edge support set together with, per owner, a three-element
+incident subset with explicit distinctness witnesses, the pairwise
+disjointness facts, and, for two owners, the external triple; the
+kernel-checked theorems
+\texttt{fullyCoveredLiveStar\_fullSupportDegree\_ge\_three},
+\texttt{twoRotatingOwners\_force\_nine\_supportEdges},
+\texttt{threeRotatingOwners\_force\_nine\_supportEdges}, and
+\texttt{no\_t3\_balancedDeficiencyRotor} derive the contradiction
+\(9\le|E(F)|=8\). The graph-level inputs, namely
+Lemmas~\ref{lem:t3-ownerdeg} and~\ref{lem:t3-disjoint} and the
+two-case argument in the proof of Theorem~\ref{thm:t3-counting}, are
+proved on paper above and enter the formal statement as hypotheses of
+the carriers.
+\item For Theorem~\ref{thm:t3-emptystar}, the formalization is at
+graph level, over the development's literal edge-list graphs, explicit
+five-vertex checked rows, and executable pair counts. The row-local
+statement is \texttt{bad\_star\_cover\_row\_impossible} in
+\texttt{Erdos23Delta0.Gamma.BadStarCoverFreeness} (SHA-256 prefix
+\texttt{afd944ea}); its endpoint cases use the checked-row inducedness
+lemma \texttt{checkedRow\_blue\_cooccur\_implies\_pathEdge} of
+\texttt{Erdos23Delta0.Gamma.SaturatedRotorSupportPersistence}. The
+selection-level statement, with the closed-star hypotheses of
+Theorem~\ref{thm:t3-emptystar} as a structure and the conclusion that
+the production pair count of \(x,s\) vanishes, is
+\texttt{pairCount\_eq\_zero\_of\_closedBadStar} in
+\texttt{Erdos23Delta0.Gamma.K33BadStarPairCountZero} (SHA-256 prefix
+\texttt{35456523}).
+\item The disjoint-star count of Remark~\ref{rem:t3-fourowners} has
+its finite core in
+\texttt{Erdos23Delta0.Gamma.CutTightActiveRotorIncidence} (SHA-256
+prefix \texttt{0814a665}): \texttt{twelve\_le\_ambient\_card} and
+\texttt{not\_ambient\_card\_nine}.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Scope]\label{rem:t3-scope}
+Both theorems close only the nine-atom window. At the next window,
+sixteen atoms and \(|E(F)|=15\), the analogous counts give two owners
+of support degree at least \(t=4\) plus an external family of size
+\(t\), in total \(3t=12\le15\) edges, and no contradiction results;
+the exclusion of larger windows requires different arguments and is
+not addressed in this section. As with the static obstructions of the
+companion paper, these results constrain proof strategies: they yield
+no upper bound on \(\bip(G)\) and have no bearing on the truth of the
+Erd\H{o}s \(n^2/25\) conjecture.
+\end{remark}

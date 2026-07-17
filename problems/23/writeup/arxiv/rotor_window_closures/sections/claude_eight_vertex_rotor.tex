@@ -1,0 +1,266 @@
+% ------------------------------------------------------------------
+% Section: An eight-vertex neutral square rotor
+% Drafted by: Claude (Fable 5), 2026-07-17
+% Sources (all claims trace to these; see claude_eight_vertex_rotor_claims.md):
+%   problems/23/writeup/WALL_ATTACK_R39_GPTPRO56.md   (secs. 4-5)
+%   problems/23/writeup/_claude_r39_8vtx_rotor_gate.py (exhaustive verifier,
+%     SHA-256 6d74bcbd1bab12948c5e1a498f62a7185b03743a2b701ec5aeba6f54b01b2aeb)
+% Assumes the host preamble of the companion paper (amsthm environments
+% theorem/proposition/lemma/corollary/definition/remark, booktabs,
+% \bip, \supp, \mc as in shortest_support_obstructions/main.tex).
+% ------------------------------------------------------------------
+
+\section{An eight-vertex neutral square rotor}\label{sec:rotor8}
+
+As before, we fix a cut \(V(G)=V_0\mathbin{\dot\cup}V_1\) of a
+triangle-free graph \(G\), write \(B\) for the crossing edges and \(M\)
+for the monochromatic (\emph{bad}) edges, and for \(e=xy\in M\) with
+\(d_B(x,y)=4\) let \(\supp_B(e)\) be the set of crossing edges lying on
+shortest \(x\)-\(y\) paths in \(B\).
+
+The obstructions considered so far are static: sets of bad edges whose
+support union is too small. This section records a complementary,
+dynamic phenomenon on eight vertices. In the example, support Hall
+expansion holds with room to spare and every bad edge even has two
+geodesics; yet no choice of one geodesic per bad edge yields
+vertex-disjoint paths, and the natural local repair walk, which replaces
+a colliding geodesic by an alternative geodesic of the same bad edge,
+never terminates: the states form a four-cycle and every state carries a
+collision. Every statement in this section is an
+elementary finite check, proved in full below; all of them have in
+addition been verified exhaustively by machine
+(Remark~\ref{rem:rotor8-verification}).
+
+\begin{definition}[The rotor graph]\label{def:rotor8}
+Let \(R\) be the graph on the eight vertices \(a,b,p,q,x,y,m,v\) with
+the ten edges
+\[
+ ax,\ yb,\ pm,\ vq,\qquad xm,\ my,\ yv,\ vx,\qquad ab,\ pq,
+\]
+equipped with the cut \(V_0=\{x,y,p,q\}\), \(V_1=\{m,v,a,b\}\).
+The first eight edges cross the cut, so
+\(B=\{ax,yb,pm,vq,xm,my,yv,vx\}\) and \(M=\{ab,pq\}\).
+The four edges \(xm,my,yv,vx\) form a four-cycle of \(B\), the
+\emph{square}; the pendant edges attach \(a,b\) to the opposite corners
+\(x,y\) and \(p,q\) to the opposite corners \(m,v\).
+\end{definition}
+
+\begin{proposition}\label{prop:rotor8-maxcut}
+\(R\) is triangle-free, \(B\) is connected, and the cut of
+Definition~\ref{def:rotor8} is a maximum cut:
+\[
+ \mc(R)=8,\qquad \bip(R)=2,
+\]
+with bad edges exactly \(ab\) and \(pq\).
+\end{proposition}
+
+\begin{proof}
+\(B\) is bipartite between \(V_0\) and \(V_1\), so a triangle of \(R\)
+must use \(ab\) or \(pq\); these two edges are vertex-disjoint, so it
+uses exactly one. But \(N(a)\cap N(b)=\{x,b\}\cap\{y,a\}=\emptyset\)
+and \(N(p)\cap N(q)=\{m,q\}\cap\{v,p\}=\emptyset\). Connectivity of
+\(B\) is clear: every vertex reaches the square by at most one pendant
+edge.
+
+For the maximum cut, consider the four pentagons
+\[
+ C_1=axmyba,\quad C_2=axvyba,\quad C_3=pmxvqp,\quad C_4=pmyvqp.
+\]
+Every edge of \(R\) lies in exactly two of them: \(ab,ax,yb\) in
+\(C_1,C_2\); \(pq,pm,vq\) in \(C_3,C_4\); and the square edges
+\(xm\in C_1,C_3\); \(my\in C_1,C_4\); \(yv\in C_2,C_4\);
+\(vx\in C_2,C_3\). A cut crosses at most four edges of a five-cycle,
+so for every cut, counting crossing edges once per containing pentagon,
+\[
+ 2\cdot|\{\text{crossing edges}\}|
+ =\sum_{i=1}^{4}|\{\text{crossing edges on }C_i\}|\le 4\cdot4=16 .
+\]
+Hence \(\mc(R)\le8\). The displayed cut crosses all eight edges of
+\(B\), so \(\mc(R)=8\) and \(\bip(R)=2\).
+\end{proof}
+
+\begin{lemma}[Geodesic families]\label{lem:rotor8-geodesics}
+In the fixed cut, both bad edges have \(B\)-distance four. Each has
+exactly two \(B\)-geodesics,
+\[
+ A_m=a\,x\,m\,y\,b,\quad A_v=a\,x\,v\,y\,b \qquad\text{for } ab,
+\]
+\[
+ B_x=p\,m\,x\,v\,q,\quad B_y=p\,m\,y\,v\,q \qquad\text{for } pq.
+\]
+Consequently \(|\supp_B(ab)|=|\supp_B(pq)|=6\) and
+\(\supp_B(M)=B\), so the support Hall condition holds strictly for
+every nonempty subset of \(M\).
+\end{lemma}
+
+\begin{proof}
+The vertices \(a,b,p,q\) have unique \(B\)-neighbours \(x,y,m,v\)
+respectively. There is no \(a\)-\(b\) path in \(B\) of length at most
+three: length two needs a common neighbour, and
+\(N_B(a)\cap N_B(b)=\{x\}\cap\{y\}=\emptyset\); length three needs
+\(w\in N_B(x)\cap N_B(b)=\{a,m,v\}\cap\{y\}=\emptyset\). A length-four
+path must run \(a\,x\,w\,y\,b\) with
+\(w\in N_B(x)\cap N_B(y)\setminus\{a,b\}=\{m,v\}\), giving exactly
+\(A_m\) and \(A_v\). Symmetrically, an \(p\)-\(q\) geodesic runs
+\(p\,m\,w\,v\,q\) with \(w\in N_B(m)\cap N_B(v)\setminus\{p,q\}
+=\{x,y\}\), giving \(B_x\) and \(B_y\). The two geodesics of \(ab\)
+share the edges \(ax,yb\), so their union has six edges; likewise for
+\(pq\) with \(pm,vq\). The two six-edge supports together cover all
+eight edges of \(B\).
+\end{proof}
+
+\begin{definition}[Selections, detour moves, owners]\label{def:rotor8-selection}
+Let \((V_0,V_1)\) be a cut in which every bad edge has \(B\)-distance
+four. A \emph{selection} \(\omega\) assigns to each bad edge one of its
+\(B\)-geodesics; its \emph{selected support}
+\(S_\omega\subseteq B\) is the union of the chosen edge sets. A
+\emph{detour move} at a bad edge \(e\) replaces \(\omega(e)\) by a
+different geodesic of \(e\), leaving all other choices unchanged. A
+vertex lying on the selected geodesics of two distinct bad edges is an
+\emph{owner} of \(\omega\); the selection is \emph{disjoint} if it has
+no owners, that is, if the selected geodesics are pairwise
+vertex-disjoint.
+\end{definition}
+
+A disjoint selection upgrades the edge-counting resource measured by
+\(\supp_B\) to a packing of vertex-disjoint odd-cycle witnesses, one
+per bad edge. A natural way to look for one is local repair: while two
+selected geodesics share a vertex, apply a detour move to one of them.
+The rotor graph shows that this repair loop need not terminate, even
+when every bad edge offers a spare geodesic.
+
+\begin{theorem}[The four-state rotor]\label{thm:rotor8-states}
+In \(R\) with the fixed maximum cut there are exactly four selections,
+\[
+ \omega_{m,x}=\{A_m,B_x\},\quad
+ \omega_{m,y}=\{A_m,B_y\},\quad
+ \omega_{v,y}=\{A_v,B_y\},\quad
+ \omega_{v,x}=\{A_v,B_x\},
+\]
+and the following hold.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The state graph on the four selections, with an edge for each
+detour move, is the four-cycle
+\(\omega_{m,x}\,\omega_{m,y}\,\omega_{v,y}\,\omega_{v,x}\).
+\item In the state \(\omega_{u,z}\) the two selected geodesics
+intersect exactly in \(\{u,z\}\), which spans an edge of the square;
+each of the four square edges arises as the owner pair of exactly one
+state. In particular, no selection is disjoint.
+\item In every state \(|S_\omega|=7\): exactly one crossing edge is
+unselected, namely the square edge vertex-disjoint from the owner pair.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:rotor8-geodesics} each bad edge has exactly two
+geodesics, so the selections are the four listed pairs, and a detour
+move toggles exactly one of the two coordinates
+\((A_m\leftrightarrow A_v\ \text{or}\ B_x\leftrightarrow B_y)\). Two
+states are joined by a move iff they differ in exactly one coordinate,
+which is the stated four-cycle; this proves (i). Parts (ii) and (iii)
+are read off from the vertex and edge sets of the geodesics:
+\begin{center}
+\begin{tabular}{c@{\qquad}c@{\qquad}c@{\qquad}c}
+\toprule
+state & selected geodesics & owner pair & unselected \(B\)-edge\\
+\midrule
+\(\omega_{m,x}\) & \(A_m,B_x\) & \(\{m,x\}\) & \(yv\)\\
+\(\omega_{m,y}\) & \(A_m,B_y\) & \(\{m,y\}\) & \(vx\)\\
+\(\omega_{v,y}\) & \(A_v,B_y\) & \(\{v,y\}\) & \(xm\)\\
+\(\omega_{v,x}\) & \(A_v,B_x\) & \(\{v,x\}\) & \(my\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+For instance
+\(V(A_m)\cap V(B_x)=\{a,x,m,y,b\}\cap\{p,m,x,v,q\}=\{m,x\}\) and
+\(E(A_m)\cup E(B_x)=\{ax,xm,my,yb\}\cup\{pm,mx,xv,vq\}
+=B\setminus\{yv\}\); the other three rows are identical checks.
+\end{proof}
+
+Thus every state has exactly one colliding pair of geodesics, sharing
+two adjacent vertices, and every detour move merely slides this
+collision to an adjacent edge of the square. The following automorphism
+shows that the four states are genuinely indistinguishable: no
+isomorphism-invariant tie-break distinguishes them.
+
+\begin{proposition}[Neutrality]\label{prop:rotor8-neutral}
+The permutation \(\sigma=(x\,m\,y\,v)(a\,p\,b\,q)\) is an automorphism
+of \(R\) of order four. It exchanges the two shores, hence preserves
+the cut, \(B\), and \(M\); it maps geodesics cyclically,
+\[
+ A_m\longmapsto B_y\longmapsto A_v\longmapsto B_x\longmapsto A_m ,
+\]
+and it advances the rotor by one step:
+\[
+ \sigma\,\omega_{m,x}=\omega_{m,y},\quad
+ \sigma\,\omega_{m,y}=\omega_{v,y},\quad
+ \sigma\,\omega_{v,y}=\omega_{v,x},\quad
+ \sigma\,\omega_{v,x}=\omega_{m,x}.
+\]
+In particular the four states form a single orbit of a cut-preserving
+automorphism: the collision pattern rotates around the square and never
+shrinks or grows.
+\end{proposition}
+
+\begin{proof}
+Direct check on the ten edges:
+\(\sigma\) maps
+\(ax,yb,pm,vq\) to \(pm,vq,yb,ax\);
+the square edges \(xm,my,yv,vx\) to \(my,yv,vx,xm\);
+and \(ab,pq\) to \(pq,ab\). Also
+\(\sigma(V_0)=\{m,v,b,a\}=V_1\). Applying \(\sigma\) vertexwise to the
+paths of Lemma~\ref{lem:rotor8-geodesics},
+\(\sigma(A_m)=p\,m\,y\,v\,q=B_y\),
+\(\sigma(B_y)=b\,y\,v\,x\,a=A_v\) (reversed),
+\(\sigma(A_v)=p\,m\,x\,v\,q=B_x\), and
+\(\sigma(B_x)=b\,y\,m\,x\,a=A_m\) (reversed). The action on states
+follows by applying \(\sigma\) to each coordinate.
+\end{proof}
+
+We call \(R\), with its fixed maximum cut, a \emph{neutral square
+rotor}: \emph{square} because the owner pair and the unselected
+crossing edge travel around a fixed four-cycle of \(B\), and
+\emph{neutral} because an order-four cut-preserving automorphism makes
+all states of the repair walk equivalent.
+
+\begin{remark}[What the rotor does and does not show]\label{rem:rotor8-scope}
+The rotor is not a Hall violation, let alone a support circuit: a
+support circuit has support union one edge smaller than its atom set,
+whereas here \(|M|=2\), \(|\supp_B(M)|=8\), and even each single
+selected support has seven edges. Moreover the unselected crossing edge
+of each state has both endpoints on the square, which meets no bad
+edge. What the example eliminates is any argument that upgrades support
+abundance to a disjoint system of geodesic representatives, or that
+assumes collision repair by detour moves terminates: on \(R\) all four
+selections carry the same single collision, and the repair walk never
+terminates. Triangle-freeness, maximum-cut optimality, and a
+spare geodesic at every bad edge do not preclude this. Whether a rotor
+can be embedded in a larger triangle-free graph, keeping the cut
+maximum, so that the rotating collision couples to a genuine support
+deficiency, is open; no such graph is known. Finally,
+\(\bip(R)=2<8^2/25\): as with the static obstructions, the example
+constrains proof strategies and has no bearing on the truth of the
+Erd\H{o}s \(n^2/25\) conjecture.
+\end{remark}
+
+\begin{remark}[Verification]\label{rem:rotor8-verification}
+All proofs above are complete and elementary. Independently, every
+numbered statement of this section is machine-verified by two
+exhaustive scripts included in the ancillary archive. The first
+(\texttt{\_claude\_r39\_8vtx\_rotor\_gate.py}, SHA-256 prefix
+\texttt{6d74bcbd}) checks triangle-freeness, bipartiteness and
+connectivity of \(B\); \(\mc(R)=8\) by enumeration of all \(2^8\)
+cuts; completeness of the two geodesic families by exhaustive search
+over four-edge crossing paths; and, for each of the four states, the
+selected support, the unselected edge, the owner pair, and the
+one-coordinate structure of the four detour transitions. The second
+(\texttt{verify\_rotor8\_automorphism.py}, SHA-256 prefix
+\texttt{756cc65a}) checks the automorphism of
+Proposition~\ref{prop:rotor8-neutral}: that \(\sigma\) preserves
+adjacency on all vertex pairs, has order exactly four, exchanges the
+shores and fixes \(B\) and \(M\) setwise, and---after recomputing
+\(d_B=4\) by breadth-first search and re-enumerating the geodesic
+families and the four selections from scratch---maps the geodesics and
+the states in the stated four-cycles, in particular acting
+transitively on the states.
+\end{remark}

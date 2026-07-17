@@ -1,0 +1,3 @@
+import Erdos23Delta0.Gamma.LiveMiddleSwapCrossOuter
+
+#print axioms Erdos23Delta0.Gamma.LiveMiddleSwapCrossOuter.live_middle_swap_has_cross_outer
