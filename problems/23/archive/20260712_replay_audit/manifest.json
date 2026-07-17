@@ -1,6 +1,6 @@
 {
   "audit_artifacts": {
-    "REPORT.md": "B225BCB558519E162ED5B1229D62D585D0307FFB3EC747E440BF30AAEDF69581",
+    "REPORT.md": "9682E88EB8E0E3C20CAB5001CEDD0816C2BD981255D90103C83BF846DDEC2793",
     "finalize_audit_v2.py": "4479DEB088D02BD88AAF5BACB2EB7C52CA7C670E4A6BF4403AE1DA8A9A618061",
     "r57_positive_defect_interface_countermodel.py": "79B483FF0D68F5030E44C92C23BEB9AC885CF00786F19EC041897B046C573271",
     "r57_positive_defect_interface_countermodel_v2.py": "A2016D0D38E5A4731525EE046406C5C050444B1219526A5F3817D6E80877FA48",
@@ -24,13 +24,13 @@
         "10"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 0.377399,
+      "elapsed_seconds": 0.521191,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:20.477043Z",
+      "finished_utc": "2026-07-17T05:48:05.387253Z",
       "id": "localobs_m6_m10",
       "key_output": [
         "m=6: candidate graphs (>= m dist-4 pairs) = 0, footprints with witness = 0, atom-sets = 0",
@@ -41,7 +41,7 @@
       ],
       "script": "problems/23/writeup/_claude_v3_localobs_recheck.py",
       "script_sha256": "F5FC925962D21B1EACB557BF732718257A7C44EC897FC3B3B924A4F72E90112C",
-      "started_utc": "2026-07-12T12:55:20.099044Z",
+      "started_utc": "2026-07-17T05:48:04.865153Z",
       "stderr": "logs\\localobs_m6_m10.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\localobs_m6_m10.stdout.txt",
@@ -61,13 +61,13 @@
         "10"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 5.170125,
+      "elapsed_seconds": 5.816756,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:25.648911Z",
+      "finished_utc": "2026-07-17T05:48:11.207357Z",
       "id": "census_n5_n10",
       "key_output": [
         "n=5 done graphs_cum=6 maxcuts_cum=10",
@@ -83,7 +83,7 @@
       ],
       "script": "problems/23/writeup/_claude_v3_census_recheck.py",
       "script_sha256": "A0CC90035F562D2C5E562EAC06E5AC197C13415F488BD027F79F3A1F873066DB",
-      "started_utc": "2026-07-12T12:55:20.478043Z",
+      "started_utc": "2026-07-17T05:48:05.389251Z",
       "stderr": "logs\\census_n5_n10.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\census_n5_n10.stdout.txt",
@@ -98,20 +98,20 @@
         "E:\\Projects\\ErdosProblems\\problems\\23\\writeup\\_claude_verify_24vtx_ce.py"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 2.462602,
+      "elapsed_seconds": 2.710382,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:28.114041Z",
+      "finished_utc": "2026-07-17T05:48:13.920357Z",
       "id": "counterexample_24vtx",
       "key_output": [
         "VERDICT: CONFIRMED -- bare SSE is FALSE at a genuine UNIQUE (Gamma-min) max cut of a real 24-vtx triangle-free graph; banked form is the ONLY viable target"
       ],
       "script": "problems/23/writeup/_claude_verify_24vtx_ce.py",
       "script_sha256": "038B2C575CC3620A38D9EAFAFF86677DFF93058CB9C11CC07CF9528A4D65AF96",
-      "started_utc": "2026-07-12T12:55:25.650909Z",
+      "started_utc": "2026-07-17T05:48:11.209357Z",
       "stderr": "logs\\counterexample_24vtx.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\counterexample_24vtx.stdout.txt",
@@ -126,13 +126,13 @@
         "E:\\Projects\\ErdosProblems\\problems\\23\\writeup\\_claude_r39_8vtx_rotor_gate.py"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 0.024326,
+      "elapsed_seconds": 0.043328,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:28.141041Z",
+      "finished_utc": "2026-07-17T05:48:13.965871Z",
       "id": "rotor_8vtx",
       "key_output": [
         "CLAUDE-GATE=PASS (exhaustive)",
@@ -140,7 +140,7 @@
       ],
       "script": "problems/23/writeup/_claude_r39_8vtx_rotor_gate.py",
       "script_sha256": "6D74BCBD1BAB12948C5E1A498F62A7185B03743A2B701EC5AEBA6F54B01B2AEB",
-      "started_utc": "2026-07-12T12:55:28.116041Z",
+      "started_utc": "2026-07-17T05:48:13.922359Z",
       "stderr": "logs\\rotor_8vtx.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\rotor_8vtx.stdout.txt",
@@ -155,20 +155,20 @@
         "E:\\Projects\\ErdosProblems\\problems\\23\\archive\\20260712_replay_audit\\inputs\\r57_current_interface_counterexample\\verify.py"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 0.480905,
+      "elapsed_seconds": 0.508602,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:28.623219Z",
+      "finished_utc": "2026-07-17T05:48:14.477379Z",
       "id": "r57_interface_counterexample_16vtx",
       "key_output": [
         "PASS_R57_CURRENT_INTERFACE_COUNTEREXAMPLE"
       ],
       "script": "problems/23/archive/20260712_replay_audit/inputs/r57_current_interface_counterexample/verify.py",
       "script_sha256": "699624663CEA009669BFDCC25B6D329953CFC69617B32F4DD016BF1591EDB617",
-      "started_utc": "2026-07-12T12:55:28.142043Z",
+      "started_utc": "2026-07-17T05:48:13.968375Z",
       "stderr": "logs\\r57_interface_counterexample_16vtx.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\r57_interface_counterexample_16vtx.stdout.txt",
@@ -183,20 +183,20 @@
         "E:\\Projects\\ErdosProblems\\problems\\23\\archive\\20260712_replay_audit\\r57_positive_defect_interface_countermodel_v2.py"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 1.000747,
+      "elapsed_seconds": 1.07943,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:56:04.155276Z",
+      "finished_utc": "2026-07-17T05:50:01.987775Z",
       "id": "r57_positive_defect_interface_countermodel",
       "key_output": [
         "{\"arithmetic\":\"Python integers; exact integral grouped max flow\",\"collisionMinimum\":179,\"defectMinimumOnCollisionFace\":50,\"displayedChoice\":[0,0,0,0,1,1,1,1,1],\"displayedDemand\":358,\"displayedGlobalDefect\":50,\"displayedMaximumFlow\":308,\"internalActive\":0,\"lexMinimalStates\":420,\"lexStatesSaturatingBothForkHalves\":420,\"orderTimesOwnerCardinality\":112,\"ownerSet\":[\"s\",\"t\",\"a1\",\"a2\",\"a3\",\"b1\",\"b2\"],\"p1GroupedCapacity\":142,\"p1GroupedDemand\":318,\"rowTuplesExhausted\":512,\"schema\":\"R57_POSITIVE_DEFECT_INTERFACE_COUNTERMODEL_REPLAY_V1\",\"scope\":\"compiled interface only; nine copies violate CompleteShortestRowDB.badKeys_nodup\",\"shoreCollision\":159,\"shoreSelectedLoad\":200,\"shoreZero\":71,\"unitCore\":{\"activeReachedGroupCounts\":{},\"bothHalvesMatched\":true,\"directReachedCapacity\":292,\"forkKeysReached\":true,\"globalDefect\":50,\"leastUnmatchedRoot\":[4,3,1,0],\"noSimultaneous\":true,\"obligationCount\":293,\"positiveUnitDefect\":true,\"rawReachedSourceKeys\":292,\"residualSinkUnreachable\":true,\"sourceCapacity\":292,\"successorObligations\":[[2,3,2,0],[2,3,2,1]],\"successorSinkClosed\":true,\"successorsInUnitCore\":true},\"verdict\":\"PASS_R57_POSITIVE_DEFECT_COMPILED_INTERFACE_COUNTERMODEL\"}"
       ],
       "script": "problems/23/archive/20260712_replay_audit/r57_positive_defect_interface_countermodel_v2.py",
       "script_sha256": "A2016D0D38E5A4731525EE046406C5C050444B1219526A5F3817D6E80877FA48",
-      "started_utc": "2026-07-12T12:56:03.153612Z",
+      "started_utc": "2026-07-17T05:50:00.907804Z",
       "stderr": "logs\\r57_positive_defect_interface_countermodel.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\r57_positive_defect_interface_countermodel.stdout.txt",
@@ -216,35 +216,24 @@
         "61"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 0.10901,
+      "elapsed_seconds": 4.44431,
       "exit_code": 1,
       "expected_exit": true,
       "expected_exit_codes": [
         1
       ],
-      "finished_utc": "2026-07-12T12:55:28.734241Z",
+      "finished_utc": "2026-07-17T05:48:18.924508Z",
       "id": "c5_3_two_row_exchange",
       "key_output": [
-        "self._executor_manager_thread_wakeup = _ThreadWakeup()",
-        "^^^^^^^^^^^^^^^",
-        "File \"C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\process.py\", line 71, in __init__",
-        "self._reader, self._writer = mp.Pipe(duplex=False)",
-        "^^^^^^^^^^^^^^^^^^^^^",
-        "File \"C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\multiprocessing\\context.py\", line 63, in Pipe",
-        "return Pipe(duplex)",
-        "^^^^^^^^^^^^",
-        "File \"C:\\Users\\a\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\multiprocessing\\connection.py\", line 575, in Pipe",
-        "h2 = _winapi.CreateFile(",
-        "^^^^^^^^^^^^^^^^^^^",
-        "PermissionError: [WinError 5] Access is denied"
+        "{\"arithmetic\":\"Python integers only; exact integral Dinic max flow\",\"bestDecomposition\":null,\"bestDescent\":null,\"center\":{\"collisionUnits\":42,\"flowDefect\":12,\"maximumFlow\":72,\"state\":[12,16,11,1,5,6,26,18,22]},\"defectHistogram\":{\"8\":27,\"10\":54,\"12\":550,\"14\":1638,\"16\":4644,\"18\":6858,\"20\":7290,\"22\":3150,\"24\":360},\"descentCount\":0,\"descentDistanceHistogram\":{},\"distanceHistogram\":{\"0\":1,\"1\":234,\"2\":24336},\"graphCheck\":{\"badEdges\":9,\"familySize\":27,\"minimumBadEdges\":9,\"triangleFree\":true},\"schema\":\"CDC_WAVE1_C5_3_CORRECTED_EXCHANGE_V1\",\"statesExhausted\":24571,\"verdict\":\"NO_TWO_ROW_EXCHANGE\",\"zeroDescentCount\":0}"
       ],
       "script": "problems/23/archive/20260712_replay_audit/inputs/cdc_wave1_exchange/c5_3_exchange_gate.py",
       "script_sha256": "61DE802DEB65BCBCD743D6AF8AA25EB98FEB6C6DF44A7FC5EB68A7A926D5D9FD",
-      "started_utc": "2026-07-12T12:55:28.625219Z",
+      "started_utc": "2026-07-17T05:48:14.479379Z",
       "stderr": "logs\\c5_3_two_row_exchange.stderr.txt",
-      "stderr_sha256": "C7079519B9751161440126FDD13484F1BA92BBAD606CBF4D796070C09ED1A84A",
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\c5_3_two_row_exchange.stdout.txt",
-      "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      "stdout_sha256": "F61241DC420D97D3385478642A3FB5892642BD1CE3E0448CA12FD993C1EC32AA"
     },
     {
       "args": [
@@ -260,24 +249,24 @@
         "64"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 20.981289,
+      "elapsed_seconds": 42.724455,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:49.717711Z",
+      "finished_utc": "2026-07-17T05:49:01.652152Z",
       "id": "c5_3_global_collision_minimum",
       "key_output": [
-        "{\"arithmetic\":\"integer CP-SAT plus exact integral Dinic max flow\",\"capacityObstructionOnEntireOptimalFace\":{\"activeEdges\":0,\"actualFlowDefect\":0,\"branches\":9460,\"choice\":[18,11,1,5,22,12,16,6,26],\"collisionUnits\":42,\"conflicts\":689,\"globalCollisionHalfDemand\":84,\"groupedCapacityUpperBound\":84,\"maximumFlow\":84,\"minimumUnselectedPlusActive\":0,\"predictedDefectLowerBound\":0,\"status\":\"OPTIMAL\",\"unselectedVertices\":0},\"globalMinimum\":{\"branches\":156,\"choice\":[2,25,12,24,14,1,13,0,26],\"collisionUnits\":42,\"conflicts\":0,\"flowDefect\":12,\"hammingFromWitness\":9,\"maximumFlow\":72,\"status\":\"OPTIMAL\"},\"graphCheck\":{\"badEdges\":9,\"familySize\":27,\"minimumBadEdges\":9,\"triangleFree\":true},\"nearestGlobalMinimum\":{\"branches\":464,\"choice\":[12,16,11,1,5,6,26,18,22],\"collisionUnits\":42,\"conflicts\":0,\"flowDefect\":12,\"hammingFromWitness\":0,\"maximumFlow\":72,\"status\":\"OPTIMAL\"},\"nearestStrictCollisionDescent\":{\"branches\":2327570,\"collisionUpperBound\":41,\"conflicts\":293547,\"meaning\":\"the witness is globally collision-minimal\",\"status\":\"INFEASIBLE\"},\"schema\":\"CDC_WAVE1_C5_3_GLOBAL_COLLISION_MIN_V1\",\"selectorVerdict\":\"PASS_EXPLICIT_GLOBAL_MINIMUM\",\"witness\":{\"choice\":[12,16,11,1,5,6,26,18,22],\"collisionUnits\":42,\"flowDefect\":12,\"maximumFlow\":72}}"
+        "{\"arithmetic\":\"integer CP-SAT plus exact integral Dinic max flow\",\"capacityObstructionOnEntireOptimalFace\":{\"activeEdges\":0,\"actualFlowDefect\":0,\"branches\":9051,\"choice\":[2,19,9,21,14,4,16,6,26],\"collisionUnits\":42,\"conflicts\":524,\"globalCollisionHalfDemand\":84,\"groupedCapacityUpperBound\":84,\"maximumFlow\":84,\"minimumUnselectedPlusActive\":0,\"predictedDefectLowerBound\":0,\"status\":\"OPTIMAL\",\"unselectedVertices\":0},\"globalMinimum\":{\"branches\":0,\"choice\":[2,25,12,24,14,1,13,0,26],\"collisionUnits\":42,\"conflicts\":0,\"flowDefect\":12,\"hammingFromWitness\":9,\"maximumFlow\":72,\"status\":\"OPTIMAL\"},\"graphCheck\":{\"badEdges\":9,\"familySize\":27,\"minimumBadEdges\":9,\"triangleFree\":true},\"nearestGlobalMinimum\":{\"branches\":473,\"choice\":[12,16,11,1,5,6,26,18,22],\"collisionUnits\":42,\"conflicts\":0,\"flowDefect\":12,\"hammingFromWitness\":0,\"maximumFlow\":72,\"status\":\"OPTIMAL\"},\"nearestStrictCollisionDescent\":{\"branches\":54122,\"collisionUpperBound\":41,\"conflicts\":3522,\"meaning\":\"the witness is globally collision-minimal\",\"status\":\"INFEASIBLE\"},\"schema\":\"CDC_WAVE1_C5_3_GLOBAL_COLLISION_MIN_V1\",\"selectorVerdict\":\"PASS_EXPLICIT_GLOBAL_MINIMUM\",\"witness\":{\"choice\":[12,16,11,1,5,6,26,18,22],\"collisionUnits\":42,\"flowDefect\":12,\"maximumFlow\":72}}"
       ],
       "script": "problems/23/archive/20260712_replay_audit/inputs/cdc_wave1_exchange/c5_3_global_min_gate.py",
       "script_sha256": "849E5F85BF135627497DAFC791CDD3585ABB6AF3AF2A1F7A22890307D266CD11",
-      "started_utc": "2026-07-12T12:55:28.736240Z",
+      "started_utc": "2026-07-17T05:48:18.926508Z",
       "stderr": "logs\\c5_3_global_collision_minimum.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\c5_3_global_collision_minimum.stdout.txt",
-      "stdout_sha256": "BAD346F4FB14C7737FF3B6A0D2F01BE3C0F94A287BDF9BE7F87330F97F6E7F3F"
+      "stdout_sha256": "CC3C3EE79417D712A4951D1E79A0E8B4A620EEE4E84C1C481AB5E43CA6141D44"
     },
     {
       "args": [],
@@ -288,13 +277,13 @@
         "E:\\Projects\\ErdosProblems\\problems\\23\\archive\\20260712_replay_audit\\inputs\\agent_reform_audit_1\\b_hosi.py"
       ],
       "cwd": "E:\\Projects\\ErdosProblems",
-      "elapsed_seconds": 5.002132,
+      "elapsed_seconds": 5.652016,
       "exit_code": 0,
       "expected_exit": true,
       "expected_exit_codes": [
         0
       ],
-      "finished_utc": "2026-07-12T12:55:54.722409Z",
+      "finished_utc": "2026-07-17T05:49:07.306416Z",
       "id": "hoffman_singleton_exact",
       "key_output": [
         "PASS  HoSi constructed: n=50 e=175 7-regular, A^2+A-6I-J=0 exactly (=> triangle-free, girth 5)",
@@ -303,7 +292,7 @@
       ],
       "script": "problems/23/archive/20260712_replay_audit/inputs/agent_reform_audit_1/b_hosi.py",
       "script_sha256": "1BE533264252422A1AE9005165B3F5B2501B6624C10318FC6850E6E514552723",
-      "started_utc": "2026-07-12T12:55:49.719711Z",
+      "started_utc": "2026-07-17T05:49:01.653151Z",
       "stderr": "logs\\hoffman_singleton_exact.stderr.txt",
       "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
       "stdout": "logs\\hoffman_singleton_exact.stdout.txt",
@@ -312,6 +301,6 @@
   ],
   "schema": "ERDOS23_OBSTRUCTION_PAPER_REPLAY_AUDIT_V1",
   "unexpected_exit_ids": [],
-  "updated_utc": "2026-07-12T12:56:04.156276Z",
+  "updated_utc": "2026-07-17T05:50:01.988775Z",
   "workspace": "E:\\Projects\\ErdosProblems"
 }

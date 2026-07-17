@@ -1,6 +1,6 @@
 # Reproducibility audit: Erdős #23 obstruction-paper candidates
 
-Generated: `2026-07-12T12:56:04.156276Z`  
+Generated: `2026-07-17T05:50:01.988775Z`  
 Workspace: `E:\Projects\ErdosProblems`  
 Python: `3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]`  
 Platform: `Windows-11-10.0.26200-SP0`  
@@ -19,15 +19,15 @@ interface countermodel, not a graph counterexample: it violates
 
 | Replay | Exit | Status | Seconds | Input SHA-256 |
 |---|---:|---|---:|---|
-| `localobs_m6_m10` | 0 | PASS | 0.377 | `F5FC925962D21B1EACB557BF732718257A7C44EC897FC3B3B924A4F72E90112C` |
-| `census_n5_n10` | 0 | PASS | 5.170 | `A0CC90035F562D2C5E562EAC06E5AC197C13415F488BD027F79F3A1F873066DB` |
-| `counterexample_24vtx` | 0 | PASS | 2.463 | `038B2C575CC3620A38D9EAFAFF86677DFF93058CB9C11CC07CF9528A4D65AF96` |
-| `rotor_8vtx` | 0 | PASS | 0.024 | `6D74BCBD1BAB12948C5E1A498F62A7185B03743A2B701EC5AEBA6F54B01B2AEB` |
-| `r57_interface_counterexample_16vtx` | 0 | PASS | 0.481 | `699624663CEA009669BFDCC25B6D329953CFC69617B32F4DD016BF1591EDB617` |
-| `r57_positive_defect_interface_countermodel` | 0 | PASS | 1.001 | `A2016D0D38E5A4731525EE046406C5C050444B1219526A5F3817D6E80877FA48` |
-| `c5_3_two_row_exchange` | 1 | PASS | 0.109 | `61DE802DEB65BCBCD743D6AF8AA25EB98FEB6C6DF44A7FC5EB68A7A926D5D9FD` |
-| `c5_3_global_collision_minimum` | 0 | PASS | 20.981 | `849E5F85BF135627497DAFC791CDD3585ABB6AF3AF2A1F7A22890307D266CD11` |
-| `hoffman_singleton_exact` | 0 | PASS | 5.002 | `1BE533264252422A1AE9005165B3F5B2501B6624C10318FC6850E6E514552723` |
+| `localobs_m6_m10` | 0 | PASS | 0.521 | `F5FC925962D21B1EACB557BF732718257A7C44EC897FC3B3B924A4F72E90112C` |
+| `census_n5_n10` | 0 | PASS | 5.817 | `A0CC90035F562D2C5E562EAC06E5AC197C13415F488BD027F79F3A1F873066DB` |
+| `counterexample_24vtx` | 0 | PASS | 2.710 | `038B2C575CC3620A38D9EAFAFF86677DFF93058CB9C11CC07CF9528A4D65AF96` |
+| `rotor_8vtx` | 0 | PASS | 0.043 | `6D74BCBD1BAB12948C5E1A498F62A7185B03743A2B701EC5AEBA6F54B01B2AEB` |
+| `r57_interface_counterexample_16vtx` | 0 | PASS | 0.509 | `699624663CEA009669BFDCC25B6D329953CFC69617B32F4DD016BF1591EDB617` |
+| `r57_positive_defect_interface_countermodel` | 0 | PASS | 1.079 | `A2016D0D38E5A4731525EE046406C5C050444B1219526A5F3817D6E80877FA48` |
+| `c5_3_two_row_exchange` | 1 | PASS | 4.444 | `61DE802DEB65BCBCD743D6AF8AA25EB98FEB6C6DF44A7FC5EB68A7A926D5D9FD` |
+| `c5_3_global_collision_minimum` | 0 | PASS | 42.724 | `849E5F85BF135627497DAFC791CDD3585ABB6AF3AF2A1F7A22890307D266CD11` |
+| `hoffman_singleton_exact` | 0 | PASS | 5.652 | `1BE533264252422A1AE9005165B3F5B2501B6624C10318FC6850E6E514552723` |
 
 ## Main exact outcomes
 
@@ -62,7 +62,7 @@ Claim: Independent exact footprint enumeration for m=6,...,10.
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\writeup\_claude_v3_localobs_recheck.py 10
 ```
 
-Exit code: `0` (expected: 0); runtime: `0.377399 s`.
+Exit code: `0` (expected: 0); runtime: `0.521191 s`.
 
 Input SHA-256: `F5FC925962D21B1EACB557BF732718257A7C44EC897FC3B3B924A4F72E90112C`  
 stdout SHA-256: `EAED3743354C6D9884A2E936ADF723BCADBC733448FA908175D37A4FF879C4E9`  
@@ -86,7 +86,7 @@ Claim: Independent exact census of connected triangle-free graphs and maximum cu
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\writeup\_claude_v3_census_recheck.py 5 10
 ```
 
-Exit code: `0` (expected: 0); runtime: `5.170125 s`.
+Exit code: `0` (expected: 0); runtime: `5.816756 s`.
 
 Input SHA-256: `A0CC90035F562D2C5E562EAC06E5AC197C13415F488BD027F79F3A1F873066DB`  
 stdout SHA-256: `9F397E04E61A0522A301C620E151C54487F80A8EAB68291A6A4E0F0E5CC25B3B`  
@@ -115,7 +115,7 @@ Claim: Exact 24-vertex counterexample to bare shortest-support expansion.
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\writeup\_claude_verify_24vtx_ce.py
 ```
 
-Exit code: `0` (expected: 0); runtime: `2.462602 s`.
+Exit code: `0` (expected: 0); runtime: `2.710382 s`.
 
 Input SHA-256: `038B2C575CC3620A38D9EAFAFF86677DFF93058CB9C11CC07CF9528A4D65AF96`  
 stdout SHA-256: `A17DC9F05A3089CAC9E2D84906915EC32434A3A9874E0C29A7CE0E922BC04ED7`  
@@ -135,7 +135,7 @@ Claim: Exact 8-vertex neutral rotor verification.
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\writeup\_claude_r39_8vtx_rotor_gate.py
 ```
 
-Exit code: `0` (expected: 0); runtime: `0.024326 s`.
+Exit code: `0` (expected: 0); runtime: `0.043328 s`.
 
 Input SHA-256: `6D74BCBD1BAB12948C5E1A498F62A7185B03743A2B701EC5AEBA6F54B01B2AEB`  
 stdout SHA-256: `FFD0BD66668B155FDC5BC2E1CDB7BDF8F45952A52BC377DADFA2353E163C587F`  
@@ -156,7 +156,7 @@ Claim: Exact 16-vertex R57 current-interface counterexample.
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\r57_current_interface_counterexample\verify.py
 ```
 
-Exit code: `0` (expected: 0); runtime: `0.480905 s`.
+Exit code: `0` (expected: 0); runtime: `0.508602 s`.
 
 Input SHA-256: `699624663CEA009669BFDCC25B6D329953CFC69617B32F4DD016BF1591EDB617`  
 stdout SHA-256: `1C1E5DCFFD503D8D329404ED67A1292804C0581F7E67C9BD504957B7E5E7CCEC`  
@@ -176,7 +176,7 @@ Claim: Exact nine-copy positive-defect countermodel to the compiled R55/R57 inte
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\r57_positive_defect_interface_countermodel_v2.py
 ```
 
-Exit code: `0` (expected: 0); runtime: `1.000747 s`.
+Exit code: `0` (expected: 0); runtime: `1.079430 s`.
 
 Input SHA-256: `A2016D0D38E5A4731525EE046406C5C050444B1219526A5F3817D6E80877FA48`  
 stdout SHA-256: `B3888121C979C048C2DE86953D08F532072B95DDAF64C627AD48A48ADD4E1C11`  
@@ -196,27 +196,16 @@ Claim: Exhaustive Hamming-distance-at-most-two exchange obstruction on balanced 
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\cdc_wave1_exchange\c5_3_exchange_gate.py --workers 61
 ```
 
-Exit code: `1` (expected: 1); runtime: `0.109010 s`.
+Exit code: `1` (expected: 1); runtime: `4.444310 s`.
 
 Input SHA-256: `61DE802DEB65BCBCD743D6AF8AA25EB98FEB6C6DF44A7FC5EB68A7A926D5D9FD`  
-stdout SHA-256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`  
-stderr SHA-256: `C7079519B9751161440126FDD13484F1BA92BBAD606CBF4D796070C09ED1A84A`
+stdout SHA-256: `F61241DC420D97D3385478642A3FB5892642BD1CE3E0448CA12FD993C1EC32AA`  
+stderr SHA-256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
 
 Key output:
 
 ```text
-self._executor_manager_thread_wakeup = _ThreadWakeup()
-^^^^^^^^^^^^^^^
-File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\process.py", line 71, in __init__
-self._reader, self._writer = mp.Pipe(duplex=False)
-^^^^^^^^^^^^^^^^^^^^^
-File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\context.py", line 63, in Pipe
-return Pipe(duplex)
-^^^^^^^^^^^^
-File "C:\Users\a\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 575, in Pipe
-h2 = _winapi.CreateFile(
-^^^^^^^^^^^^^^^^^^^
-PermissionError: [WinError 5] Access is denied
+{"arithmetic":"Python integers only; exact integral Dinic max flow","bestDecomposition":null,"bestDescent":null,"center":{"collisionUnits":42,"flowDefect":12,"maximumFlow":72,"state":[12,16,11,1,5,6,26,18,22]},"defectHistogram":{"8":27,"10":54,"12":550,"14":1638,"16":4644,"18":6858,"20":7290,"22":3150,"24":360},"descentCount":0,"descentDistanceHistogram":{},"distanceHistogram":{"0":1,"1":234,"2":24336},"graphCheck":{"badEdges":9,"familySize":27,"minimumBadEdges":9,"triangleFree":true},"schema":"CDC_WAVE1_C5_3_CORRECTED_EXCHANGE_V1","statesExhausted":24571,"verdict":"NO_TWO_ROW_EXCHANGE","zeroDescentCount":0}
 ```
 
 ### c5_3_global_collision_minimum
@@ -227,16 +216,16 @@ Claim: Exact global collision-face optimization on balanced C5[3].
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\cdc_wave1_exchange\c5_3_global_min_gate.py --workers 64
 ```
 
-Exit code: `0` (expected: 0); runtime: `20.981289 s`.
+Exit code: `0` (expected: 0); runtime: `42.724455 s`.
 
 Input SHA-256: `849E5F85BF135627497DAFC791CDD3585ABB6AF3AF2A1F7A22890307D266CD11`  
-stdout SHA-256: `BAD346F4FB14C7737FF3B6A0D2F01BE3C0F94A287BDF9BE7F87330F97F6E7F3F`  
+stdout SHA-256: `CC3C3EE79417D712A4951D1E79A0E8B4A620EEE4E84C1C481AB5E43CA6141D44`  
 stderr SHA-256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
 
 Key output:
 
 ```text
-{"arithmetic":"integer CP-SAT plus exact integral Dinic max flow","capacityObstructionOnEntireOptimalFace":{"activeEdges":0,"actualFlowDefect":0,"branches":9460,"choice":[18,11,1,5,22,12,16,6,26],"collisionUnits":42,"conflicts":689,"globalCollisionHalfDemand":84,"groupedCapacityUpperBound":84,"maximumFlow":84,"minimumUnselectedPlusActive":0,"predictedDefectLowerBound":0,"status":"OPTIMAL","unselectedVertices":0},"globalMinimum":{"branches":156,"choice":[2,25,12,24,14,1,13,0,26],"collisionUnits":42,"conflicts":0,"flowDefect":12,"hammingFromWitness":9,"maximumFlow":72,"status":"OPTIMAL"},"graphCheck":{"badEdges":9,"familySize":27,"minimumBadEdges":9,"triangleFree":true},"nearestGlobalMinimum":{"branches":464,"choice":[12,16,11,1,5,6,26,18,22],"collisionUnits":42,"conflicts":0,"flowDefect":12,"hammingFromWitness":0,"maximumFlow":72,"status":"OPTIMAL"},"nearestStrictCollisionDescent":{"branches":2327570,"collisionUpperBound":41,"conflicts":293547,"meaning":"the witness is globally collision-minimal","status":"INFEASIBLE"},"schema":"CDC_WAVE1_C5_3_GLOBAL_COLLISION_MIN_V1","selectorVerdict":"PASS_EXPLICIT_GLOBAL_MINIMUM","witness":{"choice":[12,16,11,1,5,6,26,18,22],"collisionUnits":42,"flowDefect":12,"maximumFlow":72}}
+{"arithmetic":"integer CP-SAT plus exact integral Dinic max flow","capacityObstructionOnEntireOptimalFace":{"activeEdges":0,"actualFlowDefect":0,"branches":9051,"choice":[2,19,9,21,14,4,16,6,26],"collisionUnits":42,"conflicts":524,"globalCollisionHalfDemand":84,"groupedCapacityUpperBound":84,"maximumFlow":84,"minimumUnselectedPlusActive":0,"predictedDefectLowerBound":0,"status":"OPTIMAL","unselectedVertices":0},"globalMinimum":{"branches":0,"choice":[2,25,12,24,14,1,13,0,26],"collisionUnits":42,"conflicts":0,"flowDefect":12,"hammingFromWitness":9,"maximumFlow":72,"status":"OPTIMAL"},"graphCheck":{"badEdges":9,"familySize":27,"minimumBadEdges":9,"triangleFree":true},"nearestGlobalMinimum":{"branches":473,"choice":[12,16,11,1,5,6,26,18,22],"collisionUnits":42,"conflicts":0,"flowDefect":12,"hammingFromWitness":0,"maximumFlow":72,"status":"OPTIMAL"},"nearestStrictCollisionDescent":{"branches":54122,"collisionUpperBound":41,"conflicts":3522,"meaning":"the witness is globally collision-minimal","status":"INFEASIBLE"},"schema":"CDC_WAVE1_C5_3_GLOBAL_COLLISION_MIN_V1","selectorVerdict":"PASS_EXPLICIT_GLOBAL_MINIMUM","witness":{"choice":[12,16,11,1,5,6,26,18,22],"collisionUnits":42,"flowDefect":12,"maximumFlow":72}}
 ```
 
 ### hoffman_singleton_exact
@@ -247,7 +236,7 @@ Claim: Exact Hoffman-Singleton construction, spectral lower bound, and matching 
 C:\Users\a\AppData\Local\Programs\Python\Python312\python.exe -B E:\Projects\ErdosProblems\problems\23\archive\20260712_replay_audit\inputs\agent_reform_audit_1\b_hosi.py
 ```
 
-Exit code: `0` (expected: 0); runtime: `5.002132 s`.
+Exit code: `0` (expected: 0); runtime: `5.652016 s`.
 
 Input SHA-256: `1BE533264252422A1AE9005165B3F5B2501B6624C10318FC6850E6E514552723`  
 stdout SHA-256: `DE6A5FA212EF01725C5BBF5DFDC79969030D618A8BA9364EA34CF7DD239182EF`  
