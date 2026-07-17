@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 26,
+      "allowed_values": 17,
+      "hard_shapes": 0,
+      "variables": 53,
+      "inequalities": 103,
+      "minimum_f_plus_q": 0.0,
+      "maximum_relaxed_H_minus_Q": 0.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 54,
+      "allowed_values": 36,
+      "hard_shapes": 1,
+      "variables": 123,
+      "inequalities": 276,
+      "minimum_f_plus_q": 1.0,
+      "maximum_relaxed_H_minus_Q": 0.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 74,
+      "allowed_values": 49,
+      "hard_shapes": 2,
+      "variables": 171,
+      "inequalities": 396,
+      "minimum_f_plus_q": 2.0,
+      "maximum_relaxed_H_minus_Q": 0.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 100,
+      "allowed_values": 66,
+      "hard_shapes": 3,
+      "variables": 237,
+      "inequalities": 568,
+      "minimum_f_plus_q": 4.0,
+      "maximum_relaxed_H_minus_Q": -1.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 186,
+      "allowed_values": 124,
+      "hard_shapes": 8,
+      "variables": 470,
+      "inequalities": 1196,
+      "minimum_f_plus_q": 8.0,
+      "maximum_relaxed_H_minus_Q": 0.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 362,
+      "allowed_values": 241,
+      "hard_shapes": 19,
+      "variables": 969,
+      "inequalities": 2611,
+      "minimum_f_plus_q": 19.0,
+      "maximum_relaxed_H_minus_Q": 0.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 500,
+      "allowed_values": 333,
+      "hard_shapes": 27,
+      "variables": 1372,
+      "inequalities": 3776,
+      "minimum_f_plus_q": 33.0,
+      "maximum_relaxed_H_minus_Q": -6.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 1000,
+      "allowed_values": 666,
+      "hard_shapes": 66,
+      "variables": 2902,
+      "inequalities": 8356,
+      "minimum_f_plus_q": 70.0,
+      "maximum_relaxed_H_minus_Q": -4.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 2000,
+      "allowed_values": 1333,
+      "hard_shapes": 147,
+      "variables": 6120,
+      "inequalities": 18302,
+      "minimum_f_plus_q": 152.0,
+      "maximum_relaxed_H_minus_Q": -5.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ]
+}

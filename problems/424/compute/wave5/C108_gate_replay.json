@@ -1,0 +1,69 @@
+{
+  "C104_reference_replay": {
+    "classification_digest_match": true,
+    "hard_sources_match": true,
+    "limit": 100000000,
+    "maximum_pair_count_match": true,
+    "threshold_bins_checked": 19,
+    "threshold_counts_match": true
+  },
+  "arithmetic": "exact integers and Fraction only",
+  "independent_small_replay": {
+    "bins_checked": 12,
+    "hard_sources_match": true,
+    "limit": 1000000,
+    "moving_sqrt_sums_match": true,
+    "threshold_counts_match": true,
+    "weighted_sums_match": true
+  },
+  "inputs": {
+    "C104_reducible_root_census_100000000.raw.json": "B9D453A70C4187A40F8E3F4CAA75FA7CAA3AE3546A4C8AB72EF57FBA8F88E571",
+    "C108_token_gate_1000000.json": "BFA9FA98F91EB50798CDA317EC26EC8D3A0D1C2A20B06DEDCF6508A9DDB5DB19",
+    "C108_weighted_token_gate_1000000.json": "F16584753EBD2605D07AD0EEAADBCC132589C9513E38EF9E7A55D5BAC992E383",
+    "C108_weighted_token_gate_100000000.json": "CAFAAD4A37141B20121B601E74936E9F5586203D7315012052A84E1C684B8FD2",
+    "C108_weighted_token_gate_3000000000.json": "96791721CE773A145DDBE69B6AFED16503CFFD9E0715A27F2904D44E268133A7"
+  },
+  "large_gate_replay": {
+    "C104_BIN_holds": true,
+    "all_failure_fields_null": true,
+    "bins_checked": 24,
+    "classification_fnv1a64": "6b2d96f7618ce698",
+    "hard_sources": 81206966,
+    "layer_cake_identities_hold": true,
+    "limit": 3000000000,
+    "maximum_C104_BIN_location": {
+      "D": 15,
+      "capacity": 32,
+      "count": 2,
+      "j": 5
+    },
+    "maximum_C104_BIN_ratio": {
+      "denominator": 16,
+      "numerator": 15
+    },
+    "maximum_half_tail_C_squared": {
+      "denominator": 4096,
+      "numerator": 275
+    },
+    "maximum_half_tail_location": {
+      "D": 11,
+      "capacity": 128,
+      "count": 10,
+      "j": 7
+    },
+    "maximum_moving_token_mass_bin": 7,
+    "maximum_moving_token_mass_ratio": {
+      "denominator": 128,
+      "numerator": 43
+    },
+    "maximum_pair_count": 18,
+    "maximum_weighted_mass_bin": 7,
+    "maximum_weighted_mass_ratio": {
+      "denominator": 128,
+      "numerator": 127
+    },
+    "moving_sqrt_deadline_holds": true,
+    "thresholds_checked": 350
+  },
+  "schema": "C108-c104-bin-gate-replay-v1"
+}

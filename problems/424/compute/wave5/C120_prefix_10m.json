@@ -1,0 +1,1429 @@
+{
+  "definitions": {
+    "basin_ratio_bounds": "sum floor(2^64/(q-1))/2^64 and ceil(2^64/(q-1))/2^64",
+    "canonical_blocker": "left endpoint if missing, otherwise right endpoint",
+    "deterministic_descent": "at each nonstructural root use the admissible pair with smallest lower endpoint and its canonical blocker",
+    "seed_root": "1+(p-1)/2^v2(p-1)",
+    "source_leaf_incidence": "one incidence per distinct terminal leaf per source"
+  },
+  "exactness": {
+    "arithmetic": "integers only",
+    "closure": "ascending least-fixed-point reconstruction",
+    "factor_pairs": "full SPF divisor enumeration",
+    "floating_point_acceptance": false
+  },
+  "extremes": {
+    "maximum_d_minus_distinct_leaves": {
+      "d": 12,
+      "distinct_seed_roots": 12,
+      "distinct_structural_leaves": 8,
+      "h": 9672354,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 65536,
+        "rhs": 1728
+      },
+      "maximum_descent_depth": 2,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 5,
+      "pairs": [
+        {
+          "canonical_blocker": 1934471,
+          "descent_depth": 1,
+          "pair": [
+            5,
+            1934471
+          ],
+          "root_state": "hard",
+          "seed_root": 967236,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            879305
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 35,
+          "descent_depth": 0,
+          "pair": [
+            35,
+            276353
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 18,
+          "structural_leaf": 18
+        },
+        {
+          "canonical_blocker": 125615,
+          "descent_depth": 2,
+          "pair": [
+            77,
+            125615
+          ],
+          "root_state": "hard",
+          "seed_root": 62808,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 185,
+          "descent_depth": 0,
+          "pair": [
+            185,
+            52283
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 24,
+          "structural_leaf": 24
+        },
+        {
+          "canonical_blocker": 245,
+          "descent_depth": 1,
+          "pair": [
+            245,
+            39479
+          ],
+          "root_state": "other_hole",
+          "seed_root": 62,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 23765,
+          "descent_depth": 0,
+          "pair": [
+            407,
+            23765
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 5942,
+          "structural_leaf": 5942
+        },
+        {
+          "canonical_blocker": 19943,
+          "descent_depth": 0,
+          "pair": [
+            485,
+            19943
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 9972,
+          "structural_leaf": 9972
+        },
+        {
+          "canonical_blocker": 539,
+          "descent_depth": 0,
+          "pair": [
+            539,
+            17945
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 270,
+          "structural_leaf": 270
+        },
+        {
+          "canonical_blocker": 1067,
+          "descent_depth": 2,
+          "pair": [
+            1067,
+            9065
+          ],
+          "root_state": "hard",
+          "seed_root": 534,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1295,
+          "descent_depth": 1,
+          "pair": [
+            1295,
+            7469
+          ],
+          "root_state": "hard",
+          "seed_root": 648,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 3395,
+          "descent_depth": 0,
+          "pair": [
+            2849,
+            3395
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 1698,
+          "structural_leaf": 1698
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          270,
+          1
+        ],
+        [
+          534,
+          1
+        ],
+        [
+          648,
+          1
+        ],
+        [
+          1698,
+          1
+        ],
+        [
+          5942,
+          1
+        ],
+        [
+          9972,
+          1
+        ],
+        [
+          62808,
+          1
+        ],
+        [
+          967236,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          270,
+          1
+        ],
+        [
+          1698,
+          1
+        ],
+        [
+          5942,
+          1
+        ],
+        [
+          9972,
+          1
+        ]
+      ]
+    },
+    "maximum_descent_depth": {
+      "d": 4,
+      "distinct_seed_roots": 4,
+      "distinct_structural_leaves": 4,
+      "h": 2642114,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 20736,
+        "rhs": 64
+      },
+      "maximum_descent_depth": 5,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 1,
+      "pairs": [
+        {
+          "canonical_blocker": 528423,
+          "descent_depth": 5,
+          "pair": [
+            5,
+            528423
+          ],
+          "root_state": "other_hole",
+          "seed_root": 264212,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            176141
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 35,
+          "descent_depth": 0,
+          "pair": [
+            35,
+            75489
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 18,
+          "structural_leaf": 18
+        },
+        {
+          "canonical_blocker": 25163,
+          "descent_depth": 0,
+          "pair": [
+            105,
+            25163
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 12582,
+          "structural_leaf": 12582
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          12582,
+          1
+        ],
+        [
+          264212,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          12582,
+          1
+        ]
+      ]
+    },
+    "maximum_same_seed_root": {
+      "d": 4,
+      "distinct_seed_roots": 2,
+      "distinct_structural_leaves": 2,
+      "h": 7948500,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 10000,
+        "rhs": 64
+      },
+      "maximum_descent_depth": 0,
+      "maximum_same_seed_root": 3,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            722591
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 23,
+          "descent_depth": 0,
+          "pair": [
+            23,
+            345587
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 12,
+          "structural_leaf": 12
+        },
+        {
+          "canonical_blocker": 89,
+          "descent_depth": 0,
+          "pair": [
+            89,
+            89309
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 12,
+          "structural_leaf": 12
+        },
+        {
+          "canonical_blocker": 353,
+          "descent_depth": 0,
+          "pair": [
+            353,
+            22517
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 12,
+          "structural_leaf": 12
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          12,
+          3
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          12,
+          3
+        ]
+      ]
+    },
+    "maximum_same_structural_leaf": {
+      "d": 12,
+      "distinct_seed_roots": 12,
+      "distinct_structural_leaves": 8,
+      "h": 9672354,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 65536,
+        "rhs": 1728
+      },
+      "maximum_descent_depth": 2,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 5,
+      "pairs": [
+        {
+          "canonical_blocker": 1934471,
+          "descent_depth": 1,
+          "pair": [
+            5,
+            1934471
+          ],
+          "root_state": "hard",
+          "seed_root": 967236,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            879305
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 35,
+          "descent_depth": 0,
+          "pair": [
+            35,
+            276353
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 18,
+          "structural_leaf": 18
+        },
+        {
+          "canonical_blocker": 125615,
+          "descent_depth": 2,
+          "pair": [
+            77,
+            125615
+          ],
+          "root_state": "hard",
+          "seed_root": 62808,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 185,
+          "descent_depth": 0,
+          "pair": [
+            185,
+            52283
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 24,
+          "structural_leaf": 24
+        },
+        {
+          "canonical_blocker": 245,
+          "descent_depth": 1,
+          "pair": [
+            245,
+            39479
+          ],
+          "root_state": "other_hole",
+          "seed_root": 62,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 23765,
+          "descent_depth": 0,
+          "pair": [
+            407,
+            23765
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 5942,
+          "structural_leaf": 5942
+        },
+        {
+          "canonical_blocker": 19943,
+          "descent_depth": 0,
+          "pair": [
+            485,
+            19943
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 9972,
+          "structural_leaf": 9972
+        },
+        {
+          "canonical_blocker": 539,
+          "descent_depth": 0,
+          "pair": [
+            539,
+            17945
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 270,
+          "structural_leaf": 270
+        },
+        {
+          "canonical_blocker": 1067,
+          "descent_depth": 2,
+          "pair": [
+            1067,
+            9065
+          ],
+          "root_state": "hard",
+          "seed_root": 534,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1295,
+          "descent_depth": 1,
+          "pair": [
+            1295,
+            7469
+          ],
+          "root_state": "hard",
+          "seed_root": 648,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 3395,
+          "descent_depth": 0,
+          "pair": [
+            2849,
+            3395
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 1698,
+          "structural_leaf": 1698
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          270,
+          1
+        ],
+        [
+          534,
+          1
+        ],
+        [
+          648,
+          1
+        ],
+        [
+          1698,
+          1
+        ],
+        [
+          5942,
+          1
+        ],
+        [
+          9972,
+          1
+        ],
+        [
+          62808,
+          1
+        ],
+        [
+          967236,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          270,
+          1
+        ],
+        [
+          1698,
+          1
+        ],
+        [
+          5942,
+          1
+        ],
+        [
+          9972,
+          1
+        ]
+      ]
+    }
+  },
+  "largest_normalized_leaf_capacities": [
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 1012970,
+      "leaf": 36,
+      "source_count": 28942
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999941,
+      "leaf": 999942,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999905,
+      "leaf": 999906,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999851,
+      "leaf": 999852,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999839,
+      "leaf": 999840,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999815,
+      "leaf": 999816,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999707,
+      "leaf": 999708,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999677,
+      "leaf": 999678,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999629,
+      "leaf": 999630,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999611,
+      "leaf": 999612,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999545,
+      "leaf": 999546,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999461,
+      "leaf": 999462,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999449,
+      "leaf": 999450,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999221,
+      "leaf": 999222,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999185,
+      "leaf": 999186,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999131,
+      "leaf": 999132,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 999005,
+      "leaf": 999006,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998891,
+      "leaf": 998892,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998807,
+      "leaf": 998808,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998801,
+      "leaf": 998802,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998771,
+      "leaf": 998772,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998747,
+      "leaf": 998748,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998735,
+      "leaf": 998736,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998621,
+      "leaf": 998622,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998339,
+      "leaf": 998340,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998327,
+      "leaf": 998328,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998291,
+      "leaf": 998292,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998278,
+      "leaf": 499140,
+      "source_count": 2
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998261,
+      "leaf": 998262,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998195,
+      "leaf": 998196,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998177,
+      "leaf": 998178,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 10000001,
+      "capacity_numerator": 998141,
+      "leaf": 998142,
+      "source_count": 1
+    }
+  ],
+  "largest_observed_leaf_basin_ratios": [
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 33165157373431831575,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 16582578686715923655,
+      "leaf": 6,
+      "observed_root_count": 3147
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 15596841772675217047,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 31193683545350449159,
+      "leaf": 24,
+      "observed_root_count": 655
+    },
+    {
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 1921747107379029557,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30747953718064490655,
+      "leaf": 12,
+      "observed_root_count": 1613
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 3729783360130689225,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 3729783360130690905,
+      "leaf": 36,
+      "observed_root_count": 384
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 14332434357498247405,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 28664868714996506823,
+      "leaf": 42,
+      "observed_root_count": 293
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6912153920236101061,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13824307840472206203,
+      "leaf": 8,
+      "observed_root_count": 1166
+    },
+    {
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 1725750943519201777,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13806007548153619467,
+      "leaf": 90,
+      "observed_root_count": 118
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 13453851745309346083,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13453851745309348467,
+      "leaf": 150,
+      "observed_root_count": 32
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 13377257278106243587,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6688628639053124853,
+      "leaf": 30,
+      "observed_root_count": 422
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26640631862304257469,
+      "fixed64_upper_ratio_denominator": 1152921504606846976,
+      "fixed64_upper_ratio_numerator": 1665039491394016857,
+      "leaf": 372,
+      "observed_root_count": 33
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6568395254776313335,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 26273581019105263757,
+      "leaf": 948,
+      "observed_root_count": 11
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26223595249572657475,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 26223595249572675515,
+      "leaf": 2256,
+      "observed_root_count": 8
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6512705890890978065,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6512705890890978347,
+      "leaf": 48,
+      "observed_root_count": 24
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26024532042003872797,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6506133010500973759,
+      "leaf": 2472,
+      "observed_root_count": 9
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12926443071548962161,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25852886143097937467,
+      "leaf": 240,
+      "observed_root_count": 55
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12868385878561911595,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12868385878561920015,
+      "leaf": 2106,
+      "observed_root_count": 8
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6363759045635509555,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25455036182542048569,
+      "leaf": 132,
+      "observed_root_count": 79
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25450982895413172853,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6362745723853294139,
+      "leaf": 162,
+      "observed_root_count": 23
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6357714257828801035,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25430857031315216005,
+      "leaf": 792,
+      "observed_root_count": 15
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12707678964856702705,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25415357929713446835,
+      "leaf": 8286,
+      "observed_root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25414644278896942091,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12707322139448474763,
+      "leaf": 1488,
+      "observed_root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25414537953662518575,
+      "fixed64_upper_ratio_denominator": 1152921504606846976,
+      "fixed64_upper_ratio_numerator": 1588408622103907825,
+      "leaf": 1326,
+      "observed_root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6340902723521680791,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12681805447043375077,
+      "leaf": 2700,
+      "observed_root_count": 10
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 3169778711923212555,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25358229695385706805,
+      "leaf": 336,
+      "observed_root_count": 19
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25308396411093099843,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12654198205546553425,
+      "leaf": 540,
+      "observed_root_count": 13
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12613459297188132445,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6306729648594069053,
+      "leaf": 630,
+      "observed_root_count": 18
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24958739802662532055,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6239684950665635495,
+      "leaf": 1986,
+      "observed_root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24881555827822161099,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24881555827822208947,
+      "leaf": 5982,
+      "observed_root_count": 8
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24820911557049820329,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12410455778524918881,
+      "leaf": 1938,
+      "observed_root_count": 9
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12374640871433648607,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24749281742867359219,
+      "leaf": 12402,
+      "observed_root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24688867280715206861,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12344433640357604895,
+      "leaf": 102,
+      "observed_root_count": 29
+    },
+    {
+      "fixed64_lower_ratio_denominator": 576460752303423488,
+      "fixed64_lower_ratio_numerator": 770023276982908025,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24640744863453063125,
+      "leaf": 276,
+      "observed_root_count": 23
+    }
+  ],
+  "largest_observed_one_step_incoming_ratios": [
+    {
+      "child_root": 6,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 3039928649157243935,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 6079857298314494115,
+      "observed_parent_count": 2498
+    },
+    {
+      "child_root": 12,
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 1332834638942998213,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 1332834638942999929,
+      "observed_parent_count": 1248
+    },
+    {
+      "child_root": 24,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10510731776103415665,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 1313841472012928341,
+      "observed_parent_count": 481
+    },
+    {
+      "child_root": 36,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10011897378494653565,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10011897378494664835,
+      "observed_parent_count": 322
+    },
+    {
+      "child_root": 42,
+      "fixed64_lower_ratio_denominator": 576460752303423488,
+      "fixed64_lower_ratio_numerator": 262449612629792029,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 8398387604153353989,
+      "observed_parent_count": 221
+    },
+    {
+      "child_root": 90,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 8002005145408122597,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 8002005145408131141,
+      "observed_parent_count": 96
+    },
+    {
+      "child_root": 54,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7802285001373388375,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7802285001373397173,
+      "observed_parent_count": 166
+    },
+    {
+      "child_root": 8,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7602960183705132435,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 950370022963142411,
+      "observed_parent_count": 979
+    },
+    {
+      "child_root": 948,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7589877703832728053,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7589877703832733735,
+      "observed_parent_count": 6
+    },
+    {
+      "child_root": 372,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7471162090486851869,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3735581045243430201,
+      "observed_parent_count": 23
+    },
+    {
+      "child_root": 30,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3668222223729584503,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7336444447459179243,
+      "observed_parent_count": 353
+    },
+    {
+      "child_root": 414,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3666543592817434875,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3666543592817438179,
+      "observed_parent_count": 16
+    },
+    {
+      "child_root": 2472,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7239634215270724407,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7239634215270739233,
+      "observed_parent_count": 6
+    },
+    {
+      "child_root": 3648,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7224638631783659541,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7224638631783674129,
+      "observed_parent_count": 4
+    },
+    {
+      "child_root": 2256,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7172264960492464195,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3586132480246237735,
+      "observed_parent_count": 5
+    },
+    {
+      "child_root": 150,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7005081247006297941,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3502540623503150237,
+      "observed_parent_count": 17
+    },
+    {
+      "child_root": 792,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6779304496386974405,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3389652248193491553,
+      "observed_parent_count": 11
+    },
+    {
+      "child_root": 132,
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 835678580965132471,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 835678580965133519,
+      "observed_parent_count": 64
+    },
+    {
+      "child_root": 240,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3317217283418961939,
+      "fixed64_upper_ratio_denominator": 576460752303423488,
+      "fixed64_upper_ratio_numerator": 207326080213685405,
+      "observed_parent_count": 38
+    },
+    {
+      "child_root": 2106,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3273546281564813515,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3273546281564817725,
+      "observed_parent_count": 4
+    },
+    {
+      "child_root": 162,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6531429154079729473,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3265714577039865783,
+      "observed_parent_count": 13
+    },
+    {
+      "child_root": 1986,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6511995728952980935,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6511995728952988875,
+      "observed_parent_count": 4
+    },
+    {
+      "child_root": 8286,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6456216324092237155,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3228108162046131005,
+      "observed_parent_count": 3
+    },
+    {
+      "child_root": 1494,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6455560868700255611,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3227780434350130045,
+      "observed_parent_count": 3
+    },
+    {
+      "child_root": 1488,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3227778821493879561,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6455557642987763583,
+      "observed_parent_count": 3
+    },
+    {
+      "child_root": 1326,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 403466219230473375,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6455459507687577975,
+      "observed_parent_count": 3
+    },
+    {
+      "child_root": 336,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3218540386471674045,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3218540386471676055,
+      "observed_parent_count": 12
+    },
+    {
+      "child_root": 48,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3215538011265772373,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6431076022531544887,
+      "observed_parent_count": 3
+    },
+    {
+      "child_root": 86,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6420070201007152715,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6420070201007153735,
+      "observed_parent_count": 12
+    },
+    {
+      "child_root": 530,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6405456373950998561,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6405456373951001735,
+      "observed_parent_count": 6
+    },
+    {
+      "child_root": 12402,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3151268834578876777,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3151268834578901579,
+      "observed_parent_count": 4
+    },
+    {
+      "child_root": 540,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6295395596320458243,
+      "fixed64_upper_ratio_denominator": 288230376151711744,
+      "fixed64_upper_ratio_numerator": 98365556192507219,
+      "observed_parent_count": 7
+    }
+  ],
+  "limit": 10000000,
+  "minimum_distinct_leaves_by_d": [
+    {
+      "d": 1,
+      "first_h": 54,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 2,
+      "first_h": 1694,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 3,
+      "first_h": 57672,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 4,
+      "first_h": 754242,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 5,
+      "first_h": 7832934,
+      "minimum_leaves": 2
+    },
+    {
+      "d": 6,
+      "first_h": 756074,
+      "minimum_leaves": 3
+    },
+    {
+      "d": 7,
+      "first_h": 2562174,
+      "minimum_leaves": 7
+    },
+    {
+      "d": 8,
+      "first_h": 7051538,
+      "minimum_leaves": 4
+    },
+    {
+      "d": 9,
+      "first_h": 2963274,
+      "minimum_leaves": 6
+    },
+    {
+      "d": 12,
+      "first_h": 9672354,
+      "minimum_leaves": 8
+    }
+  ],
+  "mode": "prefix",
+  "schema": "C120-same-root-capacity-v1",
+  "totals": {
+    "descent_memo_entries": 31297,
+    "distinct_terminal_leaves": 19389,
+    "hard_sources": 392961,
+    "leaf_power_3_4_B8_falsifiers": 0,
+    "maximum_d": 12
+  }
+}

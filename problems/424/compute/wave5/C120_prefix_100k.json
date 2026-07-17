@@ -1,0 +1,684 @@
+{
+  "definitions": {
+    "canonical_blocker": "left endpoint if missing, otherwise right endpoint",
+    "deterministic_descent": "at each nonstructural root use the admissible pair with smallest lower endpoint and its canonical blocker",
+    "seed_root": "1+(p-1)/2^v2(p-1)",
+    "source_leaf_incidence": "one incidence per distinct terminal leaf per source"
+  },
+  "exactness": {
+    "arithmetic": "integers only",
+    "closure": "ascending least-fixed-point reconstruction",
+    "factor_pairs": "full SPF divisor enumeration",
+    "floating_point_acceptance": false
+  },
+  "extremes": {
+    "maximum_d_minus_distinct_leaves": {
+      "d": 6,
+      "distinct_seed_roots": 6,
+      "distinct_structural_leaves": 4,
+      "h": 66296,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 20736,
+        "rhs": 216
+      },
+      "maximum_descent_depth": 1,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            6027
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 2009,
+          "descent_depth": 1,
+          "pair": [
+            33,
+            2009
+          ],
+          "root_state": "hard",
+          "seed_root": 252,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1617,
+          "descent_depth": 0,
+          "pair": [
+            41,
+            1617
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 102,
+          "structural_leaf": 102
+        },
+        {
+          "canonical_blocker": 861,
+          "descent_depth": 0,
+          "pair": [
+            77,
+            861
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 216,
+          "structural_leaf": 216
+        },
+        {
+          "canonical_blocker": 123,
+          "descent_depth": 1,
+          "pair": [
+            123,
+            539
+          ],
+          "root_state": "other_hole",
+          "seed_root": 62,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 231,
+          "descent_depth": 1,
+          "pair": [
+            231,
+            287
+          ],
+          "root_state": "other_hole",
+          "seed_root": 116,
+          "structural_leaf": 20
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          102,
+          1
+        ],
+        [
+          116,
+          1
+        ],
+        [
+          216,
+          1
+        ],
+        [
+          252,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          3
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          102,
+          1
+        ],
+        [
+          216,
+          1
+        ]
+      ]
+    },
+    "maximum_descent_depth": {
+      "d": 4,
+      "distinct_seed_roots": 4,
+      "distinct_structural_leaves": 3,
+      "h": 44894,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 14641,
+        "rhs": 64
+      },
+      "maximum_descent_depth": 3,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 2,
+      "pairs": [
+        {
+          "canonical_blocker": 8979,
+          "descent_depth": 3,
+          "pair": [
+            5,
+            8979
+          ],
+          "root_state": "other_hole",
+          "seed_root": 4490,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            2993
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 1095,
+          "descent_depth": 1,
+          "pair": [
+            41,
+            1095
+          ],
+          "root_state": "other_hole",
+          "seed_root": 548,
+          "structural_leaf": 92
+        },
+        {
+          "canonical_blocker": 123,
+          "descent_depth": 1,
+          "pair": [
+            123,
+            365
+          ],
+          "root_state": "other_hole",
+          "seed_root": 62,
+          "structural_leaf": 6
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          4490,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          92,
+          1
+        ]
+      ]
+    },
+    "maximum_same_seed_root": {
+      "d": 4,
+      "distinct_seed_roots": 3,
+      "distinct_structural_leaves": 3,
+      "h": 8264,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 14641,
+        "rhs": 64
+      },
+      "maximum_descent_depth": 1,
+      "maximum_same_seed_root": 2,
+      "maximum_same_structural_leaf": 2,
+      "pairs": [
+        {
+          "canonical_blocker": 1653,
+          "descent_depth": 1,
+          "pair": [
+            5,
+            1653
+          ],
+          "root_state": "hard",
+          "seed_root": 414,
+          "structural_leaf": 42
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            551
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 29,
+          "descent_depth": 0,
+          "pair": [
+            29,
+            285
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 95,
+          "descent_depth": 0,
+          "pair": [
+            87,
+            95
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 48,
+          "structural_leaf": 48
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          2
+        ],
+        [
+          48,
+          1
+        ],
+        [
+          414,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          8,
+          2
+        ],
+        [
+          42,
+          1
+        ],
+        [
+          48,
+          1
+        ]
+      ]
+    },
+    "maximum_same_structural_leaf": {
+      "d": 6,
+      "distinct_seed_roots": 6,
+      "distinct_structural_leaves": 4,
+      "h": 66296,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 20736,
+        "rhs": 216
+      },
+      "maximum_descent_depth": 1,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            6027
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 2009,
+          "descent_depth": 1,
+          "pair": [
+            33,
+            2009
+          ],
+          "root_state": "hard",
+          "seed_root": 252,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1617,
+          "descent_depth": 0,
+          "pair": [
+            41,
+            1617
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 102,
+          "structural_leaf": 102
+        },
+        {
+          "canonical_blocker": 861,
+          "descent_depth": 0,
+          "pair": [
+            77,
+            861
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 216,
+          "structural_leaf": 216
+        },
+        {
+          "canonical_blocker": 123,
+          "descent_depth": 1,
+          "pair": [
+            123,
+            539
+          ],
+          "root_state": "other_hole",
+          "seed_root": 62,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 231,
+          "descent_depth": 1,
+          "pair": [
+            231,
+            287
+          ],
+          "root_state": "other_hole",
+          "seed_root": 116,
+          "structural_leaf": 20
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          62,
+          1
+        ],
+        [
+          102,
+          1
+        ],
+        [
+          116,
+          1
+        ],
+        [
+          216,
+          1
+        ],
+        [
+          252,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          3
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          102,
+          1
+        ],
+        [
+          216,
+          1
+        ]
+      ]
+    }
+  },
+  "largest_normalized_leaf_capacities": [
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 13020,
+      "leaf": 36,
+      "source_count": 372
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 11506,
+      "leaf": 12,
+      "source_count": 1046
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 11339,
+      "leaf": 24,
+      "source_count": 493
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9989,
+      "leaf": 9990,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9971,
+      "leaf": 9972,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9963,
+      "leaf": 42,
+      "source_count": 243
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9941,
+      "leaf": 9942,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9905,
+      "leaf": 9906,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9898,
+      "leaf": 4950,
+      "source_count": 2
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9881,
+      "leaf": 9882,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9869,
+      "leaf": 9870,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9857,
+      "leaf": 9858,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9815,
+      "leaf": 9816,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9779,
+      "leaf": 9780,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9767,
+      "leaf": 9768,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9761,
+      "leaf": 9762,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9731,
+      "leaf": 9732,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9707,
+      "leaf": 9708,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9641,
+      "leaf": 9642,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9629,
+      "leaf": 9630,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9617,
+      "leaf": 9618,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9581,
+      "leaf": 9582,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9575,
+      "leaf": 9576,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9538,
+      "leaf": 4770,
+      "source_count": 2
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9527,
+      "leaf": 9528,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9455,
+      "leaf": 9456,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9449,
+      "leaf": 9450,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9419,
+      "leaf": 9420,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9401,
+      "leaf": 9402,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9371,
+      "leaf": 9372,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9356,
+      "leaf": 2340,
+      "source_count": 4
+    },
+    {
+      "capacity_denominator": 100001,
+      "capacity_numerator": 9347,
+      "leaf": 9348,
+      "source_count": 1
+    }
+  ],
+  "limit": 100000,
+  "minimum_distinct_leaves_by_d": [
+    {
+      "d": 1,
+      "first_h": 54,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 2,
+      "first_h": 1694,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 3,
+      "first_h": 57672,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 4,
+      "first_h": 21674,
+      "minimum_leaves": 2
+    },
+    {
+      "d": 6,
+      "first_h": 66296,
+      "minimum_leaves": 4
+    },
+    {
+      "d": 8,
+      "first_h": 84314,
+      "minimum_leaves": 8
+    }
+  ],
+  "mode": "prefix",
+  "schema": "C120-same-root-capacity-v1",
+  "totals": {
+    "descent_memo_entries": 972,
+    "distinct_terminal_leaves": 593,
+    "hard_sources": 5108,
+    "leaf_power_3_4_B8_falsifiers": 0,
+    "maximum_d": 8
+  }
+}

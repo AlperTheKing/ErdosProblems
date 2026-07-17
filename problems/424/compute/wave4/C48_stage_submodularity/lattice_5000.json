@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "limit": 5000,
+  "rank_tests": {
+    "B_d_nonincreasing_failure": {
+      "X": 74,
+      "d": 2,
+      "B_previous": -1,
+      "B_current": 0
+    },
+    "positive_rank_descent_d_ge_3_failure": null,
+    "rank_maxima": [
+      {
+        "d": 0,
+        "maximum": 0,
+        "first_X": 41
+      },
+      {
+        "d": 1,
+        "maximum": 0,
+        "first_X": 41
+      },
+      {
+        "d": 2,
+        "maximum": 1,
+        "first_X": 362
+      },
+      {
+        "d": 3,
+        "maximum": 0,
+        "first_X": 54
+      },
+      {
+        "d": 4,
+        "maximum": 0,
+        "first_X": 54
+      },
+      {
+        "d": 5,
+        "maximum": 0,
+        "first_X": 54
+      },
+      {
+        "d": 6,
+        "maximum": 0,
+        "first_X": 54
+      },
+      {
+        "d": 7,
+        "maximum": 0,
+        "first_X": 54
+      }
+    ]
+  },
+  "local_death_indicator_submodularity_failure": {
+    "n": 164,
+    "pairs": [
+      [
+        5,
+        33
+      ],
+      [
+        11,
+        15
+      ]
+    ],
+    "D1": [
+      5
+    ],
+    "D2": [
+      11
+    ],
+    "values": {
+      "u_D1": 0,
+      "u_D2": 0,
+      "u_union": 1,
+      "u_intersection": 0
+    }
+  },
+  "signed_one_step_lattice_tests": {
+    "submodularity_failure": null,
+    "supermodularity_failure": {
+      "X": 54,
+      "D1": [
+        5
+      ],
+      "D2": [
+        11
+      ],
+      "lhs": 1,
+      "rhs": 0
+    }
+  }
+}

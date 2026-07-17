@@ -1,0 +1,24 @@
+{
+  "schema_version":1,
+  "limit":362,
+  "generation_offset":5,
+  "maximum_generation_depth":6,
+  "maximum_obstruction_depth":5,
+  "hard_total":12,
+  "healed_total":12,
+  "depth_majorization":{"failure_events":1,"first_X":362,"first_depth":2,"maximum_excess":1,"maximum_excess_X":362,"maximum_excess_depth":2},
+  "depth_majorization_plus_one":{"failure_events":0,"first_X":0,"first_depth":0,"maximum_excess":0,"maximum_excess_X":0,"maximum_excess_depth":0},
+  "depth_majorization_offset_one":{"failure_events":0,"first_X":0,"first_depth":0,"maximum_excess":0,"maximum_excess_X":0,"maximum_excess_depth":0},
+  "grounded_majorization":{"failure_events":1,"first_X":362,"first_depth":2,"maximum_excess":1,"maximum_excess_X":362,"maximum_excess_depth":2},
+  "greedy_dominance_matching":{"rule":"largest available target rank <= source rank + offset","rank_offset":0,"matched":11,"unmatched":1,"first_unmatched_X":362,"first_unmatched_depth":2,"last_unmatched_X":362,"last_unmatched_depth":2,"remaining_targets":1,"unmatched_prefix":[{"X":362,"depth":2}]},
+  "greedy_dominance_matching_offset_one":{"rule":"largest available target rank <= source rank + offset","rank_offset":1,"matched":12,"unmatched":0,"first_unmatched_X":0,"first_unmatched_depth":0,"last_unmatched_X":0,"last_unmatched_depth":0,"remaining_targets":0,"unmatched_prefix":[]},
+  "depth_rows":[
+    {"depth":0,"hard_exact":0,"healed_exact":4,"hard_le_depth":0,"healed_le_depth":4,"grounded_target":4,"greedy_matched_target_rank":4,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":4,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":1,"hard_exact":0,"healed_exact":4,"hard_le_depth":0,"healed_le_depth":8,"grounded_target":8,"greedy_matched_target_rank":4,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":4,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":2,"hard_exact":11,"healed_exact":2,"hard_le_depth":11,"healed_le_depth":10,"grounded_target":10,"greedy_matched_target_rank":2,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":2,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":3,"hard_exact":1,"healed_exact":2,"hard_le_depth":12,"healed_le_depth":12,"grounded_target":12,"greedy_matched_target_rank":1,"greedy_remaining_target_rank":1,"greedy_offset_one_matched_target_rank":2,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":4,"hard_exact":0,"healed_exact":0,"hard_le_depth":12,"healed_le_depth":12,"grounded_target":12,"greedy_matched_target_rank":0,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":0,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":5,"hard_exact":0,"healed_exact":0,"hard_le_depth":12,"healed_le_depth":12,"grounded_target":12,"greedy_matched_target_rank":0,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":0,"greedy_offset_one_remaining_target_rank":0},
+    {"depth":6,"hard_exact":0,"healed_exact":0,"hard_le_depth":12,"healed_le_depth":12,"grounded_target":12,"greedy_matched_target_rank":0,"greedy_remaining_target_rank":0,"greedy_offset_one_matched_target_rank":0,"greedy_offset_one_remaining_target_rank":0}
+  ]
+}

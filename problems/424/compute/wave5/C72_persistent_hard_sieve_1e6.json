@@ -1,0 +1,349 @@
+{
+  "limit": 1000000,
+  "definitions_source": "problems/424/fanout/wave5/C67_weak_scb.py",
+  "checked_every_cutoff": [
+    2,
+    1000000
+  ],
+  "hard_residues_mod_9": [
+    0,
+    2,
+    3,
+    6
+  ],
+  "fresh_shell_lower_bound_first_failure": null,
+  "scalar_AH_le_splitless_upper_shell_first_failure": null,
+  "max_scalar_ratio": {
+    "numerator": 656,
+    "denominator": 1033,
+    "cutoff": 16620
+  },
+  "factor3_map": {
+    "depth_by_hard_residue": {
+      "0,3": 0,
+      "2": 1,
+      "6": 2
+    },
+    "globally_distinct_images_checked": 3672,
+    "active_mature_at_limit": 2102,
+    "active_image_types_at_limit": {
+      "hard": 420,
+      "seed3": 337,
+      "splitless": 1345
+    }
+  },
+  "fixed_generated_divisors": [
+    3,
+    5,
+    9,
+    17,
+    27,
+    33
+  ],
+  "first_persistent_divisibility_witness": {
+    "3": {
+      "root": 54,
+      "depth": 0,
+      "parent": 54,
+      "child": 107,
+      "divisor": 3,
+      "image": 36,
+      "image_type": "splitless",
+      "image_pairs": [],
+      "active_until_exclusive": 849
+    },
+    "5": {
+      "root": 450,
+      "depth": 0,
+      "parent": 450,
+      "child": 899,
+      "divisor": 5,
+      "image": 180,
+      "image_type": "splitless",
+      "image_pairs": [],
+      "active_until_exclusive": 57473
+    },
+    "9": {
+      "root": 54,
+      "depth": 0,
+      "parent": 54,
+      "child": 107,
+      "divisor": 9,
+      "image": 12,
+      "image_type": "splitless",
+      "image_pairs": [],
+      "active_until_exclusive": 849
+    },
+    "17": {
+      "root": 884,
+      "depth": 0,
+      "parent": 884,
+      "child": 1767,
+      "divisor": 17,
+      "image": 104,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          21
+        ]
+      ],
+      "active_until_exclusive": 3533
+    },
+    "27": {
+      "root": 648,
+      "depth": 0,
+      "parent": 648,
+      "child": 1295,
+      "divisor": 27,
+      "image": 48,
+      "image_type": "splitless",
+      "image_pairs": [],
+      "active_until_exclusive": 2589
+    },
+    "33": {
+      "root": 924,
+      "depth": 0,
+      "parent": 924,
+      "child": 1847,
+      "divisor": 33,
+      "image": 56,
+      "image_type": "splitless",
+      "image_pairs": [],
+      "active_until_exclusive": 7385
+    }
+  },
+  "first_nonsplitless_fixed_divisor_image": {
+    "3": {
+      "root": 174,
+      "depth": 0,
+      "parent": 174,
+      "child": 347,
+      "divisor": 3,
+      "image": 116,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          39
+        ]
+      ],
+      "active_until_exclusive": 1385
+    },
+    "5": {
+      "root": 1110,
+      "depth": 0,
+      "parent": 1110,
+      "child": 2219,
+      "divisor": 5,
+      "image": 444,
+      "image_type": "hard",
+      "image_pairs": [
+        [
+          5,
+          89
+        ]
+      ],
+      "active_until_exclusive": 4437
+    },
+    "9": {
+      "root": 144,
+      "depth": 0,
+      "parent": 144,
+      "child": 287,
+      "divisor": 9,
+      "image": 32,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          11
+        ]
+      ],
+      "active_until_exclusive": 573
+    },
+    "17": {
+      "root": 884,
+      "depth": 0,
+      "parent": 884,
+      "child": 1767,
+      "divisor": 17,
+      "image": 104,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          21
+        ]
+      ],
+      "active_until_exclusive": 3533
+    },
+    "27": {
+      "root": 1404,
+      "depth": 0,
+      "parent": 1404,
+      "child": 2807,
+      "divisor": 27,
+      "image": 104,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          21
+        ]
+      ],
+      "active_until_exclusive": 5613
+    },
+    "33": {
+      "root": 3102,
+      "depth": 0,
+      "parent": 3102,
+      "child": 6203,
+      "divisor": 33,
+      "image": 188,
+      "image_type": "seed3",
+      "image_pairs": [
+        [
+          3,
+          63
+        ],
+        [
+          9,
+          21
+        ]
+      ],
+      "active_until_exclusive": 24809
+    }
+  },
+  "first_collision_for_least_depth_then_divisor_map": {
+    "cutoff": 2819,
+    "image": 564,
+    "first": {
+      "root": 846,
+      "depth": 0,
+      "parent": 846,
+      "child": 1691,
+      "divisor": 3,
+      "image": 564,
+      "image_type": "hard",
+      "image_pairs": [
+        [
+          5,
+          113
+        ]
+      ],
+      "active_until_exclusive": 6761
+    },
+    "second": {
+      "root": 1410,
+      "depth": 0,
+      "parent": 1410,
+      "child": 2819,
+      "divisor": 5,
+      "image": 564,
+      "image_type": "hard",
+      "image_pairs": [
+        [
+          5,
+          113
+        ]
+      ],
+      "active_until_exclusive": 11273
+    }
+  },
+  "checkpoints": [
+    {
+      "cutoff": 74,
+      "hard": 2,
+      "persistent_hard": 2,
+      "factor3_mature_persistent": 0,
+      "factor3_fresh_remainder": 2,
+      "hard_fresh_shell": 2,
+      "splitless_upper_shell": 7
+    },
+    {
+      "cutoff": 186,
+      "hard": 6,
+      "persistent_hard": 6,
+      "factor3_mature_persistent": 1,
+      "factor3_fresh_remainder": 5,
+      "hard_fresh_shell": 4,
+      "splitless_upper_shell": 16
+    },
+    {
+      "cutoff": 318,
+      "hard": 10,
+      "persistent_hard": 9,
+      "factor3_mature_persistent": 2,
+      "factor3_fresh_remainder": 7,
+      "hard_fresh_shell": 6,
+      "splitless_upper_shell": 26
+    },
+    {
+      "cutoff": 539,
+      "hard": 20,
+      "persistent_hard": 19,
+      "factor3_mature_persistent": 5,
+      "factor3_fresh_remainder": 14,
+      "hard_fresh_shell": 12,
+      "splitless_upper_shell": 42
+    },
+    {
+      "cutoff": 1000,
+      "hard": 41,
+      "persistent_hard": 34,
+      "factor3_mature_persistent": 7,
+      "factor3_fresh_remainder": 27,
+      "hard_fresh_shell": 23,
+      "splitless_upper_shell": 72
+    },
+    {
+      "cutoff": 5000,
+      "hard": 253,
+      "persistent_hard": 196,
+      "factor3_mature_persistent": 36,
+      "factor3_fresh_remainder": 160,
+      "hard_fresh_shell": 134,
+      "splitless_upper_shell": 335
+    },
+    {
+      "cutoff": 10000,
+      "hard": 518,
+      "persistent_hard": 391,
+      "factor3_mature_persistent": 67,
+      "factor3_fresh_remainder": 324,
+      "hard_fresh_shell": 265,
+      "splitless_upper_shell": 643
+    },
+    {
+      "cutoff": 100000,
+      "hard": 5108,
+      "persistent_hard": 3386,
+      "factor3_mature_persistent": 444,
+      "factor3_fresh_remainder": 2942,
+      "hard_fresh_shell": 2483,
+      "splitless_upper_shell": 5772
+    },
+    {
+      "cutoff": 1000000,
+      "hard": 45583,
+      "persistent_hard": 27056,
+      "factor3_mature_persistent": 2102,
+      "factor3_fresh_remainder": 24954,
+      "hard_fresh_shell": 21815,
+      "splitless_upper_shell": 52890
+    }
+  ]
+}

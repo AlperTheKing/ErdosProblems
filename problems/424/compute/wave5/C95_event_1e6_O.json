@@ -1,0 +1,3217 @@
+{
+  "critical_event_neighborhoods": [
+    {
+      "X": 186,
+      "events": [
+        {
+          "kind": "hard_birth",
+          "root": 186,
+          "sign": -1,
+          "time": 186
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "F": "D(X)+A_H(floor(X/4))-A_H(X)",
+    "G": "7*A_H(floor(X/4))-2*D(X)"
+  },
+  "endpoint": {
+    "A_H": 27056,
+    "A_H_floor_X_over_4": 7783,
+    "D": 44271
+  },
+  "event_counts": {
+    "hard_birth": 45583,
+    "hard_death": 18527,
+    "splitless_heal": 44271
+  },
+  "greedy_event_pairing": {
+    "pair_samples": [
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 54,
+          "sign": -1,
+          "time": 54
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 6,
+          "sign": 1,
+          "time": 41
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 74,
+          "sign": -1,
+          "time": 74
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 18,
+          "sign": 1,
+          "time": 69
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 114,
+          "sign": -1,
+          "time": 114
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 20,
+          "sign": 1,
+          "time": 77
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 144,
+          "sign": -1,
+          "time": 144
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 66,
+          "sign": 1,
+          "time": 131
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 174,
+          "sign": -1,
+          "time": 174
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 38,
+          "sign": 1,
+          "time": 149
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 234,
+          "sign": -1,
+          "time": 234
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 54,
+          "sign": 1,
+          "time": 216
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 252,
+          "sign": -1,
+          "time": 252
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 110,
+          "sign": 1,
+          "time": 219
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 294,
+          "sign": -1,
+          "time": 294
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 30,
+          "sign": 1,
+          "time": 233
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 318,
+          "sign": -1,
+          "time": 318
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 60,
+          "sign": 1,
+          "time": 237
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 354,
+          "sign": -1,
+          "time": 354
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 120,
+          "sign": 1,
+          "time": 239
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 362,
+          "sign": -1,
+          "time": 362
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 126,
+          "sign": 1,
+          "time": 251
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 390,
+          "sign": -1,
+          "time": 390
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 74,
+          "sign": 1,
+          "time": 293
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 414,
+          "sign": -1,
+          "time": 414
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 74,
+          "sign": 1,
+          "time": 296
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 444,
+          "sign": -1,
+          "time": 444
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 182,
+          "sign": 1,
+          "time": 363
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 450,
+          "sign": -1,
+          "time": 450
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 92,
+          "sign": 1,
+          "time": 365
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 474,
+          "sign": -1,
+          "time": 474
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 48,
+          "sign": 1,
+          "time": 377
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 492,
+          "sign": -1,
+          "time": 492
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 198,
+          "sign": 1,
+          "time": 395
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 516,
+          "sign": -1,
+          "time": 516
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 200,
+          "sign": 1,
+          "time": 399
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 534,
+          "sign": -1,
+          "time": 534
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 210,
+          "sign": 1,
+          "time": 419
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 564,
+          "sign": -1,
+          "time": 564
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 56,
+          "sign": 1,
+          "time": 441
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 582,
+          "sign": -1,
+          "time": 582
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 8,
+          "sign": 1,
+          "time": 449
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 594,
+          "sign": -1,
+          "time": 594
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 228,
+          "sign": 1,
+          "time": 455
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 614,
+          "sign": -1,
+          "time": 614
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 114,
+          "sign": 1,
+          "time": 456
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 648,
+          "sign": -1,
+          "time": 648
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 246,
+          "sign": 1,
+          "time": 491
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 666,
+          "sign": -1,
+          "time": 666
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 144,
+          "sign": 1,
+          "time": 573
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 704,
+          "sign": -1,
+          "time": 704
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 144,
+          "sign": 1,
+          "time": 576
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 714,
+          "sign": -1,
+          "time": 714
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 146,
+          "sign": 1,
+          "time": 581
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 758,
+          "sign": -1,
+          "time": 758
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 306,
+          "sign": 1,
+          "time": 611
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 774,
+          "sign": -1,
+          "time": 774
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 308,
+          "sign": 1,
+          "time": 615
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 780,
+          "sign": -1,
+          "time": 780
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 78,
+          "sign": 1,
+          "time": 617
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 798,
+          "sign": -1,
+          "time": 798
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 168,
+          "sign": 1,
+          "time": 669
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 846,
+          "sign": -1,
+          "time": 846
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 174,
+          "sign": 1,
+          "time": 696
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 884,
+          "sign": -1,
+          "time": 884
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 90,
+          "sign": 1,
+          "time": 713
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 894,
+          "sign": -1,
+          "time": 894
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 360,
+          "sign": 1,
+          "time": 719
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 912,
+          "sign": -1,
+          "time": 912
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 186,
+          "sign": 1,
+          "time": 741
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 924,
+          "sign": -1,
+          "time": 924
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 186,
+          "sign": 1,
+          "time": 744
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 942,
+          "sign": -1,
+          "time": 942
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 378,
+          "sign": 1,
+          "time": 755
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 954,
+          "sign": -1,
+          "time": 954
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 380,
+          "sign": 1,
+          "time": 759
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 956,
+          "sign": -1,
+          "time": 956
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 96,
+          "sign": 1,
+          "time": 761
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 978,
+          "sign": -1,
+          "time": 978
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 390,
+          "sign": 1,
+          "time": 779
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1002,
+          "sign": -1,
+          "time": 1002
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 396,
+          "sign": 1,
+          "time": 791
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1014,
+          "sign": -1,
+          "time": 1014
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 54,
+          "sign": 1,
+          "time": 849
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1064,
+          "sign": -1,
+          "time": 1064
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 108,
+          "sign": 1,
+          "time": 857
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1074,
+          "sign": -1,
+          "time": 1074
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 444,
+          "sign": 1,
+          "time": 887
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1080,
+          "sign": -1,
+          "time": 1080
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 114,
+          "sign": 1,
+          "time": 905
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1110,
+          "sign": -1,
+          "time": 1110
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 234,
+          "sign": 1,
+          "time": 936
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1134,
+          "sign": -1,
+          "time": 1134
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 236,
+          "sign": 1,
+          "time": 941
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1154,
+          "sign": -1,
+          "time": 1154
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 486,
+          "sign": 1,
+          "time": 971
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 74,
+          "sign": -1,
+          "time": 1172
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 252,
+          "sign": 1,
+          "time": 1008
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1176,
+          "sign": -1,
+          "time": 1176
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 510,
+          "sign": 1,
+          "time": 1019
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1188,
+          "sign": -1,
+          "time": 1188
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 258,
+          "sign": 1,
+          "time": 1029
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1206,
+          "sign": -1,
+          "time": 1206
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 516,
+          "sign": 1,
+          "time": 1031
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1218,
+          "sign": -1,
+          "time": 1218
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 270,
+          "sign": 1,
+          "time": 1077
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1224,
+          "sign": -1,
+          "time": 1224
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 138,
+          "sign": 1,
+          "time": 1097
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1242,
+          "sign": -1,
+          "time": 1242
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 552,
+          "sign": 1,
+          "time": 1103
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1314,
+          "sign": -1,
+          "time": 1314
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 36,
+          "sign": 1,
+          "time": 1121
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1344,
+          "sign": -1,
+          "time": 1344
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 288,
+          "sign": 1,
+          "time": 1149
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1356,
+          "sign": -1,
+          "time": 1356
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 576,
+          "sign": 1,
+          "time": 1151
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1362,
+          "sign": -1,
+          "time": 1362
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 290,
+          "sign": 1,
+          "time": 1157
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1374,
+          "sign": -1,
+          "time": 1374
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 588,
+          "sign": 1,
+          "time": 1175
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1404,
+          "sign": -1,
+          "time": 1404
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 294,
+          "sign": 1,
+          "time": 1176
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1410,
+          "sign": -1,
+          "time": 1410
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 594,
+          "sign": 1,
+          "time": 1187
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1424,
+          "sign": -1,
+          "time": 1424
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 606,
+          "sign": 1,
+          "time": 1211
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1434,
+          "sign": -1,
+          "time": 1434
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 318,
+          "sign": 1,
+          "time": 1269
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1440,
+          "sign": -1,
+          "time": 1440
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 318,
+          "sign": 1,
+          "time": 1272
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1494,
+          "sign": -1,
+          "time": 1494
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 650,
+          "sign": 1,
+          "time": 1299
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1506,
+          "sign": -1,
+          "time": 1506
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 326,
+          "sign": 1,
+          "time": 1301
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1512,
+          "sign": -1,
+          "time": 1512
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 660,
+          "sign": 1,
+          "time": 1319
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1536,
+          "sign": -1,
+          "time": 1536
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 686,
+          "sign": 1,
+          "time": 1371
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1550,
+          "sign": -1,
+          "time": 1550
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 174,
+          "sign": 1,
+          "time": 1385
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1554,
+          "sign": -1,
+          "time": 1554
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 354,
+          "sign": 1,
+          "time": 1413
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1572,
+          "sign": -1,
+          "time": 1572
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 354,
+          "sign": 1,
+          "time": 1416
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1586,
+          "sign": -1,
+          "time": 1586
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 714,
+          "sign": 1,
+          "time": 1427
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1614,
+          "sign": -1,
+          "time": 1614
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 362,
+          "sign": 1,
+          "time": 1445
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1632,
+          "sign": -1,
+          "time": 1632
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 362,
+          "sign": 1,
+          "time": 1448
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1638,
+          "sign": -1,
+          "time": 1638
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 726,
+          "sign": 1,
+          "time": 1451
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1644,
+          "sign": -1,
+          "time": 1644
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 738,
+          "sign": 1,
+          "time": 1475
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1674,
+          "sign": -1,
+          "time": 1674
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 740,
+          "sign": 1,
+          "time": 1479
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1694,
+          "sign": -1,
+          "time": 1694
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 750,
+          "sign": 1,
+          "time": 1499
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1704,
+          "sign": -1,
+          "time": 1704
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 756,
+          "sign": 1,
+          "time": 1511
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1710,
+          "sign": -1,
+          "time": 1710
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 390,
+          "sign": 1,
+          "time": 1560
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1734,
+          "sign": -1,
+          "time": 1734
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 786,
+          "sign": 1,
+          "time": 1571
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1764,
+          "sign": -1,
+          "time": 1764
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 810,
+          "sign": 1,
+          "time": 1619
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1770,
+          "sign": -1,
+          "time": 1770
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 414,
+          "sign": 1,
+          "time": 1656
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1794,
+          "sign": -1,
+          "time": 1794
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 840,
+          "sign": 1,
+          "time": 1679
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1818,
+          "sign": -1,
+          "time": 1818
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 438,
+          "sign": 1,
+          "time": 1749
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1836,
+          "sign": -1,
+          "time": 1836
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 876,
+          "sign": 1,
+          "time": 1751
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1854,
+          "sign": -1,
+          "time": 1854
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 222,
+          "sign": 1,
+          "time": 1769
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1874,
+          "sign": -1,
+          "time": 1874
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 444,
+          "sign": 1,
+          "time": 1776
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1902,
+          "sign": -1,
+          "time": 1902
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 450,
+          "sign": 1,
+          "time": 1800
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1908,
+          "sign": -1,
+          "time": 1908
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 902,
+          "sign": 1,
+          "time": 1803
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1914,
+          "sign": -1,
+          "time": 1914
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 452,
+          "sign": 1,
+          "time": 1805
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1920,
+          "sign": -1,
+          "time": 1920
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 918,
+          "sign": 1,
+          "time": 1835
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1926,
+          "sign": -1,
+          "time": 1926
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 920,
+          "sign": 1,
+          "time": 1839
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1946,
+          "sign": -1,
+          "time": 1946
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 930,
+          "sign": 1,
+          "time": 1859
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 1968,
+          "sign": -1,
+          "time": 1968
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 468,
+          "sign": 1,
+          "time": 1869
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2000,
+          "sign": -1,
+          "time": 2000
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 936,
+          "sign": 1,
+          "time": 1871
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2022,
+          "sign": -1,
+          "time": 2022
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 938,
+          "sign": 1,
+          "time": 1875
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2046,
+          "sign": -1,
+          "time": 2046
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 470,
+          "sign": 1,
+          "time": 1877
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2058,
+          "sign": -1,
+          "time": 2058
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 474,
+          "sign": 1,
+          "time": 1896
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2064,
+          "sign": -1,
+          "time": 2064
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 480,
+          "sign": 1,
+          "time": 1917
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2100,
+          "sign": -1,
+          "time": 2100
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 960,
+          "sign": 1,
+          "time": 1919
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2154,
+          "sign": -1,
+          "time": 2154
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 966,
+          "sign": 1,
+          "time": 1931
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2166,
+          "sign": -1,
+          "time": 2166
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 492,
+          "sign": 1,
+          "time": 1968
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2214,
+          "sign": -1,
+          "time": 2214
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1010,
+          "sign": 1,
+          "time": 2019
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2232,
+          "sign": -1,
+          "time": 2232
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1026,
+          "sign": 1,
+          "time": 2051
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2234,
+          "sign": -1,
+          "time": 2234
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 516,
+          "sign": 1,
+          "time": 2064
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 144,
+          "sign": -1,
+          "time": 2292
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1038,
+          "sign": 1,
+          "time": 2075
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2298,
+          "sign": -1,
+          "time": 2298
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 522,
+          "sign": 1,
+          "time": 2085
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2322,
+          "sign": -1,
+          "time": 2322
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1064,
+          "sign": 1,
+          "time": 2127
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2334,
+          "sign": -1,
+          "time": 2334
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 534,
+          "sign": 1,
+          "time": 2136
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2342,
+          "sign": -1,
+          "time": 2342
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1074,
+          "sign": 1,
+          "time": 2147
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2394,
+          "sign": -1,
+          "time": 2394
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1080,
+          "sign": 1,
+          "time": 2159
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2396,
+          "sign": -1,
+          "time": 2396
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 272,
+          "sign": 1,
+          "time": 2169
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2406,
+          "sign": -1,
+          "time": 2406
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1092,
+          "sign": 1,
+          "time": 2183
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2418,
+          "sign": -1,
+          "time": 2418
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1100,
+          "sign": 1,
+          "time": 2199
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2430,
+          "sign": -1,
+          "time": 2430
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 558,
+          "sign": 1,
+          "time": 2229
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2460,
+          "sign": -1,
+          "time": 2460
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1116,
+          "sign": 1,
+          "time": 2231
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2490,
+          "sign": -1,
+          "time": 2490
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1122,
+          "sign": 1,
+          "time": 2243
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2496,
+          "sign": -1,
+          "time": 2496
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 564,
+          "sign": 1,
+          "time": 2253
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2514,
+          "sign": -1,
+          "time": 2514
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1128,
+          "sign": 1,
+          "time": 2255
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2522,
+          "sign": -1,
+          "time": 2522
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 564,
+          "sign": 1,
+          "time": 2256
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2544,
+          "sign": -1,
+          "time": 2544
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1134,
+          "sign": 1,
+          "time": 2267
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2562,
+          "sign": -1,
+          "time": 2562
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 570,
+          "sign": 1,
+          "time": 2277
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2574,
+          "sign": -1,
+          "time": 2574
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1146,
+          "sign": 1,
+          "time": 2291
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2580,
+          "sign": -1,
+          "time": 2580
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 578,
+          "sign": 1,
+          "time": 2309
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2598,
+          "sign": -1,
+          "time": 2598
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 582,
+          "sign": 1,
+          "time": 2328
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2628,
+          "sign": -1,
+          "time": 2628
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1170,
+          "sign": 1,
+          "time": 2339
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2684,
+          "sign": -1,
+          "time": 2684
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 294,
+          "sign": 1,
+          "time": 2345
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2694,
+          "sign": -1,
+          "time": 2694
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1188,
+          "sign": 1,
+          "time": 2375
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2738,
+          "sign": -1,
+          "time": 2738
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 594,
+          "sign": 1,
+          "time": 2376
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2754,
+          "sign": -1,
+          "time": 2754
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1190,
+          "sign": 1,
+          "time": 2379
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2760,
+          "sign": -1,
+          "time": 2760
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 596,
+          "sign": 1,
+          "time": 2381
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2772,
+          "sign": -1,
+          "time": 2772
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1200,
+          "sign": 1,
+          "time": 2399
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2774,
+          "sign": -1,
+          "time": 2774
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1206,
+          "sign": 1,
+          "time": 2411
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2784,
+          "sign": -1,
+          "time": 2784
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 614,
+          "sign": 1,
+          "time": 2453
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2814,
+          "sign": -1,
+          "time": 2814
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 614,
+          "sign": 1,
+          "time": 2456
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2826,
+          "sign": -1,
+          "time": 2826
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 618,
+          "sign": 1,
+          "time": 2469
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2844,
+          "sign": -1,
+          "time": 2844
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1260,
+          "sign": 1,
+          "time": 2519
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2874,
+          "sign": -1,
+          "time": 2874
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 648,
+          "sign": 1,
+          "time": 2589
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2892,
+          "sign": -1,
+          "time": 2892
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1296,
+          "sign": 1,
+          "time": 2591
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2910,
+          "sign": -1,
+          "time": 2910
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 648,
+          "sign": 1,
+          "time": 2592
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2928,
+          "sign": -1,
+          "time": 2928
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 42,
+          "sign": 1,
+          "time": 2625
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2934,
+          "sign": -1,
+          "time": 2934
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 330,
+          "sign": 1,
+          "time": 2633
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2936,
+          "sign": -1,
+          "time": 2936
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1320,
+          "sign": 1,
+          "time": 2639
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2958,
+          "sign": -1,
+          "time": 2958
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1332,
+          "sign": 1,
+          "time": 2663
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 186,
+          "sign": -1,
+          "time": 2964
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 666,
+          "sign": 1,
+          "time": 2664
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 2994,
+          "sign": -1,
+          "time": 2994
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 668,
+          "sign": 1,
+          "time": 2669
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3008,
+          "sign": -1,
+          "time": 3008
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 672,
+          "sign": 1,
+          "time": 2685
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3012,
+          "sign": -1,
+          "time": 3012
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1350,
+          "sign": 1,
+          "time": 2699
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3042,
+          "sign": -1,
+          "time": 3042
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1362,
+          "sign": 1,
+          "time": 2723
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3090,
+          "sign": -1,
+          "time": 3090
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 342,
+          "sign": 1,
+          "time": 2729
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3102,
+          "sign": -1,
+          "time": 3102
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 690,
+          "sign": 1,
+          "time": 2757
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3114,
+          "sign": -1,
+          "time": 3114
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1386,
+          "sign": 1,
+          "time": 2771
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 390,
+          "sign": -1,
+          "time": 3116
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 704,
+          "sign": 1,
+          "time": 2813
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3126,
+          "sign": -1,
+          "time": 3126
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 704,
+          "sign": 1,
+          "time": 2816
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3150,
+          "sign": -1,
+          "time": 3150
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1416,
+          "sign": 1,
+          "time": 2831
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3174,
+          "sign": -1,
+          "time": 3174
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1428,
+          "sign": 1,
+          "time": 2855
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3222,
+          "sign": -1,
+          "time": 3222
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 714,
+          "sign": 1,
+          "time": 2856
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3224,
+          "sign": -1,
+          "time": 3224
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1442,
+          "sign": 1,
+          "time": 2883
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3242,
+          "sign": -1,
+          "time": 3242
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 722,
+          "sign": 1,
+          "time": 2885
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3246,
+          "sign": -1,
+          "time": 3246
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1458,
+          "sign": 1,
+          "time": 2915
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3276,
+          "sign": -1,
+          "time": 3276
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1460,
+          "sign": 1,
+          "time": 2919
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3288,
+          "sign": -1,
+          "time": 3288
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 366,
+          "sign": 1,
+          "time": 2921
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3294,
+          "sign": -1,
+          "time": 3294
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 732,
+          "sign": 1,
+          "time": 2925
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3336,
+          "sign": -1,
+          "time": 3336
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1470,
+          "sign": 1,
+          "time": 2939
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3354,
+          "sign": -1,
+          "time": 3354
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1476,
+          "sign": 1,
+          "time": 2951
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3384,
+          "sign": -1,
+          "time": 3384
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1506,
+          "sign": 1,
+          "time": 3011
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 54,
+          "sign": -1,
+          "time": 3396
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 758,
+          "sign": 1,
+          "time": 3032
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3402,
+          "sign": -1,
+          "time": 3402
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1518,
+          "sign": 1,
+          "time": 3035
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3404,
+          "sign": -1,
+          "time": 3404
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1548,
+          "sign": 1,
+          "time": 3095
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3414,
+          "sign": -1,
+          "time": 3414
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 774,
+          "sign": 1,
+          "time": 3096
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3420,
+          "sign": -1,
+          "time": 3420
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1550,
+          "sign": 1,
+          "time": 3099
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3426,
+          "sign": -1,
+          "time": 3426
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 776,
+          "sign": 1,
+          "time": 3101
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3450,
+          "sign": -1,
+          "time": 3450
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1560,
+          "sign": 1,
+          "time": 3119
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3474,
+          "sign": -1,
+          "time": 3474
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 780,
+          "sign": 1,
+          "time": 3120
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3486,
+          "sign": -1,
+          "time": 3486
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1566,
+          "sign": 1,
+          "time": 3131
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3530,
+          "sign": -1,
+          "time": 3530
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1586,
+          "sign": 1,
+          "time": 3171
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3534,
+          "sign": -1,
+          "time": 3534
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 798,
+          "sign": 1,
+          "time": 3192
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 444,
+          "sign": -1,
+          "time": 3548
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 102,
+          "sign": 1,
+          "time": 3233
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3584,
+          "sign": -1,
+          "time": 3584
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 816,
+          "sign": 1,
+          "time": 3261
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3618,
+          "sign": -1,
+          "time": 3618
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1632,
+          "sign": 1,
+          "time": 3263
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3620,
+          "sign": -1,
+          "time": 3620
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1640,
+          "sign": 1,
+          "time": 3279
+        }
+      },
+      {
+        "negative": {
+          "kind": "scaled_hard_death",
+          "root": 114,
+          "sign": -1,
+          "time": 3620
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1656,
+          "sign": 1,
+          "time": 3311
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3648,
+          "sign": -1,
+          "time": 3648
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 830,
+          "sign": 1,
+          "time": 3317
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3654,
+          "sign": -1,
+          "time": 3654
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 420,
+          "sign": 1,
+          "time": 3353
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3684,
+          "sign": -1,
+          "time": 3684
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1686,
+          "sign": 1,
+          "time": 3371
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3702,
+          "sign": -1,
+          "time": 3702
+        },
+        "positive": {
+          "kind": "scaled_hard_birth",
+          "root": 846,
+          "sign": 1,
+          "time": 3384
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3714,
+          "sign": -1,
+          "time": 3714
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1694,
+          "sign": 1,
+          "time": 3387
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3728,
+          "sign": -1,
+          "time": 3728
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 848,
+          "sign": 1,
+          "time": 3389
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3744,
+          "sign": -1,
+          "time": 3744
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 426,
+          "sign": 1,
+          "time": 3401
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3750,
+          "sign": -1,
+          "time": 3750
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 852,
+          "sign": 1,
+          "time": 3405
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3756,
+          "sign": -1,
+          "time": 3756
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1710,
+          "sign": 1,
+          "time": 3419
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3762,
+          "sign": -1,
+          "time": 3762
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1722,
+          "sign": 1,
+          "time": 3443
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3798,
+          "sign": -1,
+          "time": 3798
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 432,
+          "sign": 1,
+          "time": 3449
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3816,
+          "sign": -1,
+          "time": 3816
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1728,
+          "sign": 1,
+          "time": 3455
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3840,
+          "sign": -1,
+          "time": 3840
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1730,
+          "sign": 1,
+          "time": 3459
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3858,
+          "sign": -1,
+          "time": 3858
+        },
+        "positive": {
+          "kind": "hard_death",
+          "root": 1734,
+          "sign": 1,
+          "time": 3467
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3882,
+          "sign": -1,
+          "time": 3882
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 218,
+          "sign": 1,
+          "time": 3473
+        }
+      },
+      {
+        "negative": {
+          "kind": "hard_birth",
+          "root": 3900,
+          "sign": -1,
+          "time": 3900
+        },
+        "positive": {
+          "kind": "splitless_heal",
+          "root": 1740,
+          "sign": 1,
+          "time": 3479
+        }
+      }
+    ],
+    "remaining_positive_count": 24999,
+    "unmatched_negative_count": 1,
+    "unmatched_negative_first": [
+      {
+        "kind": "hard_birth",
+        "root": 186,
+        "sign": -1,
+        "time": 186
+      }
+    ]
+  },
+  "limit": 1000000,
+  "maximum_G": 0,
+  "maximum_G_rows": [
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 2,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 3,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 4,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 5,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 6,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 7,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 8,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 9,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 10,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 11,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 12,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 13,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 14,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 15,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 16,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 17,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 18,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 19,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 20,
+      "local_events": []
+    },
+    {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "F": 0,
+      "G": 0,
+      "X": 21,
+      "local_events": []
+    }
+  ],
+  "minimum_F": -1,
+  "minimum_F_rows": [
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 186,
+      "local_events": [
+        {
+          "kind": "hard_birth",
+          "root": 186,
+          "sign": -1,
+          "time": 186
+        }
+      ]
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 187,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 188,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 189,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 190,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 191,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 192,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 193,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 194,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 195,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 196,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 197,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 198,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 199,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 200,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 201,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 202,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 203,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 204,
+      "local_events": []
+    },
+    {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "F": -1,
+      "G": -10,
+      "X": 205,
+      "local_events": []
+    }
+  ]
+}

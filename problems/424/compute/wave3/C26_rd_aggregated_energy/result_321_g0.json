@@ -1,0 +1,20 @@
+{
+  "schema": "C26-rd-aggregated-energy-v1",
+  "ray": [3, 2, 1],
+  "base_Q": "360",
+  "kmax": 3,
+  "tie_policy": "g0",
+  "max_pairs": "400000000",
+  "checks": {"pair_sets_disjoint_across_k": true, "offset_recursion": true, "residue_constraints": true},
+  "blocks": [
+    {"k": 1, "counts": [3, 2, 1], "M": "360", "W": "60", "D": "60", "offset_min": "23", "offset_max": "248", "offset_fnv1a64_le": "dbe7bc98d2324fbc", "offset_sum": "7761", "offset_sum_sq": "1258605", "H_G0": "24", "H_G2": "36", "selected_color": "G2", "U_size": "36", "V_size": "36", "U_min": "5811", "U_max": "6249", "V_min": "2906", "V_max": "3125"},
+    {"k": 2, "counts": [6, 4, 2], "M": "129600", "W": "13860", "D": "13068", "offset_min": "1018", "offset_max": "95872", "offset_fnv1a64_le": "5814728b927c2d62", "offset_sum": "600565449", "offset_sum_sq": "36246671808849", "H_G0": "5289", "H_G2": "7779", "selected_color": "G2", "U_size": "7779", "V_size": "7779", "U_min": "2075637", "U_max": "2265345", "V_min": "1037819", "V_max": "1132673"},
+    {"k": 3, "counts": [9, 6, 3], "M": "46656000", "W": "4084080", "D": "3542949", "offset_min": "45593", "offset_max": "34898432", "offset_fnv1a64_le": "e528de65b8f31e81", "offset_sum": "58279492111992", "offset_sum_sq": "1277989486413970520292", "H_G0": "1431609", "H_G2": "2111340", "selected_color": "G2", "U_size": "2111340", "V_size": "2111340", "U_min": "746587287", "U_max": "816292353", "V_min": "373293644", "V_max": "408146177"}
+  ],
+  "energies": [
+    {"K": 2, "I": [1, 1], "source_k": [1], "block_pairs": ["1296"], "N": "1296", "status": "computed", "distinct_products": "1295", "product_min": "16886766", "product_max": "19528125", "E": "1298", "E_over_N": {"numerator": "649", "denominator": "648", "decimal": "1.001543209877"}, "within_collision_pairs": "1", "cross_collision_pairs": "0", "max_r": "2", "matrix": [["1298"]], "multiplicity_histogram": [{"r": "1", "products": "1294"}, {"r": "2", "products": "1"}]},
+    {"K": 3, "I": [1, 2], "source_k": [1, 2], "block_pairs": ["280044", "280044"], "N": "560088", "status": "computed", "distinct_products": "558665", "product_min": "6030766209", "product_max": "7079203125", "E": "562936", "E_over_N": {"numerator": "70367", "denominator": "70011", "decimal": "1.005084915228"}, "within_collision_pairs": "323", "cross_collision_pairs": "1101", "max_r": "3", "matrix": [["280306", "1101"], ["1101", "280428"]], "multiplicity_histogram": [{"r": "1", "products": "557243"}, {"r": "2", "products": "1421"}, {"r": "3", "products": "1"}]},
+    {"K": 4, "I": [1, 3], "source_k": [1, 2, 3], "block_pairs": ["76008240", "60512841", "76008240"], "N": "212529321", "status": "computed", "distinct_products": "211876871", "product_min": "2154135515703", "product_max": "2565895117185", "E": "213839845", "E_over_N": {"numerator": "213839845", "denominator": "212529321", "decimal": "1.006166320928"}, "within_collision_pairs": "102162", "cross_collision_pairs": "553100", "max_r": "4", "matrix": [["76063652", "172778", "177717"], ["172778", "60587875", "202605"], ["177717", "202605", "76082118"]], "multiplicity_histogram": [{"r": "1", "products": "211227178"}, {"r": "2", "products": "646991"}, {"r": "3", "products": "2647"}, {"r": "4", "products": "55"}]},
+    {"K": 5, "I": [2, 3], "source_k": [2, 3], "block_pairs": ["16424113860", "16424113860"], "N": "32848227720", "status": "skipped_pair_cap"}
+  ]
+}

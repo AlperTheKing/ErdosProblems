@@ -1,0 +1,40 @@
+We are attacking Erdős Problem 273. I need one concrete mathematical object, not a research plan.
+
+Reduction. An affirmative solution is equivalent to two covering systems A and B of Z whose half-modulus sets are disjoint, where every half-modulus d satisfies that 2d+1 is prime. A known exact half-cover is
+
+H0 = { 0 (mod 2), 0 (mod 3), 1 (mod 5), 1 (mod 6), 5 (mod 9),
+       8 (mod 15), 11 (mod 18), 17 (mod 20), 5 (mod 30),
+       35 (mod 36), 89 (mod 90) }.
+
+One way to remove a collision at a parent half-modulus d is a quotient refinement. If distinct congruences b_j (mod q_j) cover Z and every 2*d*q_j+1 is prime, then any parent fiber a (mod d) is covered by the children
+
+    a + d*b_j  (mod d*q_j).
+
+The child half-moduli d*q_j are distinct. We need such refinements for parent moduli in H0, while avoiding all half-moduli already used on the other side.
+
+Verified positive example away from H0: for d=105525 the quotient system
+
+    0 (mod 2), 0 (mod 3), 1 (mod 4), 5 (mod 6), 7 (mod 12)
+
+covers Z, and all five numbers 2*d*q+1 are prime. This gadget is exact but does not yet refine any H0 parent.
+
+Verified negative restricted searches: for d=3 no quotient cover exists with q dividing 420. For d=15, period 13860 is impossible. For d=90, periods 49140, 196560, and 393120 are impossible by exact capacity certificates; a smooth-support census leaves many larger periods. These are only restricted failures, so please escape them using non-smooth quotient moduli or a different residue tree.
+
+Question: Find an explicit quotient-refinement gadget for at least one parent
+
+    d in {2,3,5,6,9,15,18,20,30,36,90},
+
+preferably d=90 or another large parent. Return a finite parseable list
+
+    [(b_1,q_1),...,(b_k,q_k)]
+
+such that:
+
+1. the q_j are pairwise distinct positive integers;
+2. the congruences b_j (mod q_j) cover every integer;
+3. every 2*d*q_j+1 is prime;
+4. every child d*q_j avoids H0;
+5. provide an exact human-checkable covering tree/table over the true LCM;
+6. provide primality witnesses or enough exact factorization data for deterministic checking.
+
+You may use arbitrary prime support and a recursive CRT tree; do not restrict all q_j to divisors of 420, 13860, 49140, 196560, or 393120. Do not answer with “use SAT/ILP”, reciprocal-mass heuristics, or an uninstantiated lemma. If you cannot complete a full gadget, give one explicit finite CRT subtree with exact q_j, residues, successor primes, and its precisely stated uncovered fibers, so it can be extended and exact-tested.

@@ -1,0 +1,1130 @@
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN
+ODD-GIRTH
+WIEBKE BEDENKNECHT, GUILHERME OLIVEIRA MOTA, CHRISTIAN REIHER,
+AND MATHIAS SCHACHT
+Abstract. Erdős conjectured that everyn-vertex triangle-free graph contains a subset
+of tn{2u vertices that spans at mostn2{50 edges. Extending a recent result of Norin and
+Yepremyan, we conﬁrm this conjecture for graphs homomorphic to so-called Andrásfai
+graphs. As a consequence, Erdős’ conjecture holds for every triangle-free graphG with
+minimum degreeδpGqą 10n{29 and ifχpGqď 3 the degree condition can be relaxed to
+δpGqą n{3. In fact, we obtain a more general result for graphs of higher odd-girth.
+§1. Introduction
+We say ann-vertex graphG ispα,βq-dense if every subset oftαnu vertices spans more
+than βn2 edges. GivenαPp 0, 1s, Erdős, Faudree, Rousseau, and Schelp [8] asked for the
+minimumβ“βpαq such that everypα,βq-dense graph contains a triangle. For example,
+Mantel’s theorem asserts thatβp1q“ 1{4. More generally, Erdős et al. conjectured that
+for αě 17{30 the balanced complete bipartite graph gives the best lower bound for the
+function βpαq, which leads to
+βpαq“ 1
+4p2α´ 1q. (1.1)
+The same authors veriﬁed this conjecture forαě 0.648 and the best result in this direction
+is due to Krivelevich [12], who veriﬁed it for everyαě 3{5.
+We say a graphG is a blow-up of some graphF, if there exists a graph homomorphism
+ϕ : GÑF with the propertytx,yuP EpGq if and only iftϕpxq,ϕpyquP EpFq. Moreover,
+a blow-up isbalanced if the preimagesϕ´1pvq of all verticesvPVpFq have the same size.
+Forαă 17{30 balanced blow-ups of the 5-cycle yield a better lower bound forβpαq and
+Erdős et al. conjectured
+βpαq“ 1
+25p5α´ 2q (1.2)
+for α P r53{120, 17{30s. For α ă 53{120 it is known that balanced blow-ups of the
+Andrásfai graphF3 (see Figure 1) lead to a better bound. The special caseβp1{2q“ 1{50
+was considered before by Erdős [6] (see also [7] for a monetary bounty for this problem).
+The second author was supported by FAPESP (Proc. 2013/11431-2, 2013/20733-2) and partially
+by CNPq (Proc. 459335/2014-6). The collaboration of the authors was supported by CAPES/DAAD
+PROBRAL (Proc. 430/15) and by FAPESP (Proc. 2013/03447-6).
+1
+arXiv:1609.05712v2  [math.CO]  4 Mar 2019
+
+2 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+Conjecture 1.1 (Erdős). Everyp1{2, 1{50q-dense graph contains a triangle.
+Currently, the best known upper bound onβp1{2q is 1{36 and was obtained by Krivele-
+vich [12]. Besides the balanced blow-up of the5-cycle, Simonovits (see, e.g., [7]) noted that
+balanced blow-ups of the Petersen graph yield the same lower bound for Conjecture 1.1
+and, more generally, for (1.2) in the corresponding range.
+Conjecture 1.1 asserts that every triangle-freen-vertex graphG contains a subset oftn{2u
+vertices that spans at mostn2{50 edges. Our ﬁrst result (see Theorem 1.2 below) veriﬁes
+this for graphsG that are homomorpic to a triangle-free graph from a special class.
+1.1. Andrásfai graphs. A well studied family of triangle-free graphs, which appear in the
+lower bound constructions for the functionβpαq above, are the so-calledAndrásfai graphs.
+Those graphs already appeared in the work of Erdős [5] and Andrásfai [1,2]. Andrásfai
+graphs are contained in several interesting graph classes. For example, they are special
+circulant graphs, they appear as ﬁnite subgraphs of 2-dimensional Borsuk graphs, and can
+be described as the complement of an appropriate power of a cycle. For our purposes it is
+convenient to deﬁne them as follows.
+For an integerdě 1 the Andrásfai graphFd is thed-regular graph with vertex set
+VpFdq“t v1,...,v 3d´1u,
+wheretvi,vju forms an edge if
+dď|i´j|ď 2d´ 1. (1.3)
+Note thatF1“K2 and F2“C5 (see Figure 1). It is easy to check that Andrásfai graphs
+are triangle-free and balanced blow-ups of these graphs play a prominent rôle in connection
+with extremal problems for triangle-free graphs (see, e.g., [1–5,9,10,15]).
+v1
+v2
+v3v4
+v5
+v1
+v2
+v3
+v4
+v5
+v6
+v7
+v8
+v1
+v2
+v3
+v4
+v5
+v6v7
+v8
+v9
+v10
+v11
+Figure 1. Andrásfai graphsF2, F3, andF4.
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 3
+Our ﬁrst result validates Conjecture 1.1 (stated in the contrapositive) for graphs homo-
+morphic to some Andrásfai graph.
+Theorem 1.2. If a graph G is homomorphic to an Andrásfai graph Fd for some inte-
+ger dě 1, then G is not p1{2, 1{50q-dense.
+SinceFd is homomorphic toFd1 if and only ifd1ěd, Theorem 1.2 extends recent work of
+Norin and Yepremyan [14], who obtained such a result forn-vertex graphsG homomorphic
+to F5 with the additional minimum degree assumptionδpGqě 5n{14.
+Owing to the work of Chen, Jin, and Koh [4], which asserts that every triangle-free
+3-chromaticn-vertex graphG with minimum degreeδpGqą n{3 is homomorphic to some
+Andrásfai graph, we deduce from Theorem 1.2 that Conjecture 1.1 holds for all such
+graphs G. Similarly, combining Theorem 1.2 with a result of Jin [10], which asserts that
+triangle-free graphsG with δpGqą 10n{29 are homomorphic toF9, implies Conjecture 1.1
+for those graphs as well. We summarise these direct consequences of Theorem 1.2 in the
+following corollary.
+Corollary 1.3. LetG be a triangle-free graph on n vertices.
+(a) If δpGqą 10n{29, then G is not p1{2, 1{50q-dense.
+(b) If δpGqą n{3 and χpGqď 3, then G is not p1{2, 1{50q-dense.
+We remark that part (a) slightly improves earlier results of Krivelevich [12] and of Norin
+and Yepremyan [14] (see also [11] where an average degree condition was considered).
+1.2. Generalised Andrásfai graphs of higher odd-girth. We consider the following
+straightforward variation of Andrásfai graphs ofodd-girth at least 2k` 1, i.e., graphs
+without odd cycles of length at most2k´ 1. For integerskě 2 and dě 1 let Fk
+d be the
+d-regular graph with vertex set
+VpFk
+dq“t v1,...,v p2k´1qpd´1q`2u,
+wheretvi,vju forms an edge if
+pk´ 1qpd´ 1q` 1ď|i´j|ď kpd´ 1q` 1. (1.4)
+In particular, fork“ 2 we recover the deﬁnition of the Andrásfai graphs from(1.3) and
+for generalkě 2 we haveFk
+1 “ K2, Fk
+2 “ C2k`1 and for everydě 2 the graphFk
+d has
+odd-girth 2k` 1 (see Figure 2).
+Our main result generalises Theorem 1.2 for graphs of odd-girth at least2k` 1. In
+fact, the constant 1
+2p2k`1q2 appearing in Theorem 1.4 is best possible as balanced blow-ups
+of C2k`1 show. One can attain this bound by takingk mutually independent parts of the
+
+4 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+v1
+v2
+v3
+v4v5
+v6
+v7
+v1
+v2
+v3
+v4
+v5
+v6
+v7
+v8
+v9
+v10
+v11
+v12
+v1 v2
+v3
+v4
+v5
+v6
+v7
+v8
+v9v10
+v11
+v12
+v13
+v14
+v15
+v16
+v17
+Figure 2. Generalised Andrásfai graphsF 3
+2, F 3
+3, andF 3
+4 of odd-girth 7.
+blow-up completely and the missingn{2´kn{p2k` 1q vertices from one part, which has
+only edges to one of the parts that we already chose.
+Theorem 1.4. If a graph G is homomorphic to a generalised Andrásfai graph Fk
+d for some
+integerskě 2 and dě 1, then G is not p 1
+2, 1
+2p2k`1q2q-dense.
+Analogous to the relation between Conjecture 1.1 and Theorem 1.2 one may wonder if
+everyp 1
+2, 1
+2p2k`1q2q-dense graph contains an odd cycle of length at most2k´ 1. Letzter and
+Snyder [13] showed that a graphG on n vertices withδpGqą n
+5 and odd-girth at least 7 is
+homomorphic toF 3
+k, for somek. Therefore combining this result with Theorem 1.4 we get
+the following.
+Corollary 1.5. Let G be a graph with odd-girth at least 7 on n vertices. If δpGq ąn
+5 ,
+then G is not p 1
+2, 1
+98q-dense.
+A similar question for even holes is not interesting, because every dense graph contains
+a 4-cycle.
+For k “ 2 Theorem 1.4 reduces to Theorem 1.2 and the rest of this work concerns
+the proof of Theorem 1.4. The proof is given in Section 3 and makes use of a geometric
+representation of graphs homomorphic to generalised Andrásfai graphs, which we introduce
+in Section 2.
+§2. A geometric characterisation of generalised Andrásfai graphs
+We consider graphsG that are homomorphic to some generalised Andrásfai graphFk
+d.
+For the proof of Theorem 1.4 it will be convenient to work with a geometric representation
+of such graphsG. In fact, already the original deﬁnitions of Andráfai graphs in [1,5] were
+geometric. In that representation we will arrange the vertices ofG on the unit circleR{Z
+and edges between two verticesx and y may only appear depending on their angle with
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 5
+respect to the centre of the circle (see Lemma 2.1). For the proof of Theorem 1.4 it suﬃces
+to consider edge maximal graphsG that are homomorphic toFk
+d for some integerskě 2
+and dě 1. In other words, we may assumeG is a blow-up ofFk
+d.
+v1
+v2
+v3v4
+v5
+´ε ε
+1{32{3
+o
+Figure 3. A copy ofF2“C5 and a representation of a blow-up on the unit circle.
+For example, letG be a blow-up ofF2“C5. One can distribute the vertices ofF2 equally
+spaced on the unit circle (see Figure 3). Then we place all vertices ofG that correspond
+to the blow-up class ofvi into a smallε-ball aroundvi on the unit circle (cf. green arcs
+in Figure 3). For a suﬃciently smallε, all vertices in anε-ball aroundvi have the same
+neighbours and they can be characterised by having their smaller angle with respect to the
+centre bigger than120˝ (cf. red and blue lines in Figure 3). The following lemma states
+this fact for blow-ups of generalised Andrásfai graphs.
+Lemma 2.1. IfG is a blow-up of a generalised Andrásfai graph Fk
+d for some integers kě 2
+and dě 1, then the vertices of G can be arranged on the unit circle R{Z with centre o such
+that
+tx,yuP EpGq ðñ ?xoyą k´ 1
+2k´ 1¨360˝, (2.1)
+where ?xoy denotes the smaller angle between x and y with respect to o.
+We remark that conversely every graphG“pV,Eq with V Ď R{Z satisfying (2.1) is a
+blow-up ofFk
+d for some appropriatedě 1. However, since this direction is not utilised
+here, we omit the formal proof of this observation.
+Proof of Lemma 2.1. For integerskě 2 and dě 1 let G be a blow-up of the generalised
+Andrásfai graphFk
+d (deﬁned in(1.4)) signiﬁed by some graph homomorphismϕ : GÑFk
+d
+and letm“p 2k´ 1qpd´ 1q` 2 be the number of vertices ofFk
+d. Set
+ε“ 1
+2p2k´ 1qm.
+
+6 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+ForiPrms we arrange the vertices ofG that are contained inϕ´1pviq in theε-ball around
+the point i´1
+m . Owing to the symmetry it suﬃces to check that(2.1) holds for an arbitrary
+vertexxPϕ´1pv1qĎ VpGq.
+By deﬁnition ofFk
+d the neighbourhood ofv1 is
+Npv1q“t vpk´1qpd´1q`2,...,v kpd´1q`2u.
+Note that the choice ofε gives
+`pk´1qpd´1q`1
+m ´ε, kpd´1q`1
+m `ε
+˘
+“
+`k´1
+2k´1`ε, k
+2k´1´ε
+˘
+and, consequently, all neighboursy of x are placed in the intervalp k´1
+2k´1`ε, k
+2k´1´εq.
+SincexPϕ´1pv1q itself is placed inp´ε,εq, this implies the forward direction of(2.1). The
+converse direction follows from the observation
+`i´1
+m ´ε, i´1
+m `ε
+˘
+X
+`k´1
+2k´1´ε, k
+2k´1`ε
+˘
+“ ∅
+for everyiPrms ∖tpk´ 1qpd´ 1q` 2,...,k pd´ 1q` 2u. □
+We close this section with a few useful estimates on the number of vertices contained
+in intervals ofR{Z for geometric representations of blow-upsG of generalised Andrásfai
+graphs. LetV be the set of points of the unit circle that are identiﬁed with the vertices
+of G. For an intervalIĎ R{Z, we writeλpIq for the number of vertices ofG contained
+in I, i.e.,
+λpIq“| V XI|. (2.2)
+This deﬁnes expressions such asλ
+`
+ra,bs
+˘
+, λ
+`
+ra,bq
+˘
+, etc.
+Since subsets oftn{2u vertices are of special interest, we denote for everyξP R{Z byzξ
+the vertex fromV with the property
+λ
+`
+rξ,zξs
+˘
+“ tn{2u. (2.3)
+In the proof of Theorem 1.4 we shall use the following lemma and, since the proof will be
+carried out by contradiction, the graphsG that we shall consider also satisfy the density
+assumption for parts (iv) and (v).
+Lemma 2.2. For integers kě 2 and dě 1 let G“pV,Eq be a blow-up of the generalised
+Andrásfai graph Fk
+d having a geometric representation with V Ď R{Z satisfying (2.1)
+and|V|“ n. Then the following holds for every interval IĎ R{Z:
+(i) IfI has length at most k´1
+2k´1, then VXI is an independent set in G andλpIqď αpGq.
+(ii) If I has length at most 1
+2k´1, then λpIqďp 2k´ 3qαpGq´p k´ 2qn.
+(iii) If I has length at least 1
+2k´1, then λpIqě n´ 2αpGq.
+If in addition G isp 1
+2, 1
+2p2k`1q2q-dense and 2p2k`1q| n, then the following holds for ξP R{Z:
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 7
+(iv) If λ
+`
+rξ,ξ ` k´1
+2k´1s
+˘
+“αpGq, then λ
+`
+rξ,zξ´ k´1
+2k´1q
+˘
+ą 2αpGq´ 2k´1
+2k`1n.
+(v) We have λ
+`
+pξ´ 1
+2k´1,ξ ` 1
+2k´1q
+˘
+ą 4
+2k`1n´ 2λ
+`
+pξ` k´1
+2k´1,ξ ´ k´1
+2k´1q
+˘
+.
+Proof. Part (i) follows directly from the deﬁnition of the geometric representation in(2.1).
+For part (ii) we note that
+p2k´ 3q k´ 1
+2k´ 1“pk´ 2q` 1
+2k´ 1.
+Consequently, there exist2k´ 3 consecutive intervals of lengthk´1
+2k´1 that wrapk´ 2 times
+around R{Z in such a way that onlyI is coveredk´ 1 times. Therefore, (i) yields
+p2k´ 3qαpGqěp k´ 2qn`λpIq
+and the desired estimate follows.
+Part (iii) is also a consequence of (i) and the observation that there are two intervals of
+length at most k´1
+2k´1 that together withI cover R{Z once.
+In the proofs of parts (iv) and (v) we make use of the inequality
+λ
+`
+rξ,zξ´ k´1
+2k´1q
+˘
+ą 2n
+2k` 1´ 2λ
+`
+pξ` k´1
+2k´1,zξs
+˘
+, (2.4)
+which we show ﬁrst. For that we note that (2.1) implies
+eG
+`
+rξ,zξsX V
+˘
+ďλ
+`
+rξ,zξ´ k´1
+2k´1q
+˘
+¨λ
+`
+pξ` k´1
+2k´1,zξs
+˘
+.
+Hence, the additional assumption thatG isp 1
+2, 1
+2p2k`1q2q-dense combined with the simplest
+case of the inequality between the arithmetic and geometric mean yields
+ˆ n
+2k` 1
+˙2
+ă 2eG
+`
+rξ,zξsX V
+˘
+ď 1
+4
+´
+λ
+`
+rξ,zξ´ k´1
+2k´1q
+˘
+` 2λ
+`
+pξ` k´1
+2k´1,zξs
+˘¯2
+,
+which establishes (2.4).
+The remaining parts (iv) and (v) follow from(2.4). In fact, for (iv) the additional
+assumption λ
+`
+rξ,ξ ` k´1
+2k´1s
+˘
+“αpGq yields λ
+`
+pξ` k´1
+2k´1,zξs
+˘
+“n{2´αpGq and, hence, (iv)
+follows from (2.4).
+For the proof of (v) we will apply(2.4) twice. First we apply it for the givenξP R{Z
+and, since by (i) we also havezξPpξ` k´1
+2k´1,ξ ` k
+2k´1q, we obtain
+λ
+`
+rξ,ξ ` 1
+2k´1q
+˘
+ěλ
+`
+rξ,zξ´ k´1
+2k´1q
+˘ (2.4)
+ą 2n
+2k` 1´ 2λ
+`
+pξ` k´1
+2k´1,zξs
+˘
+. (2.5)
+The second symmetric application of (2.4) in´R{Z to´ξ yields
+λ
+`
+pξ´ 1
+2k´1,ξs
+˘ (2.4)
+ą 2n
+2k` 1´ 2λ
+`
+rz1
+ξ,ξ ´ k´1
+2k´1q
+˘
+, (2.6)
+for z1
+ξPpzξ,ξq with λ
+`
+rz1
+ξ,ξs
+˘
+“n{2. Consequently, ifξRV then summing the inequali-
+ties (2.5) and (2.6) yields part (v). However, ifξPV then still the same conclusion follows,
+
+8 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+sincep2k` 1q| n implies that the right-hand sides of(2.5) and (2.6) are integers and both
+inequalities are strict. □
+§3. Blow-ups of generalised Andrásfai graphs
+In this section we establish Theorem 1.4. For that it suﬃces to show that blow-upsG
+of generalised Andrásfai graphsFk
+d are notp 1
+2, 1
+2p2k`1q2q-dense and we will appeal to the
+geometric representation from Lemma 2.1 of such graphs. The strategy of our proofs is
+that we try to ﬁnd an interval of consecutive vertices spanning few edges. To this end we
+distinguish two cases depending on the independence numberαpGq and start with the case
+that αpGq is not too large.
+Proposition 3.1. If G is a blow-up of a generalised Andrásfai graph Fk
+d for some integers
+kě 2 and dě 1 with|VpGq|“ n and αpGqă k
+2k`1n, then G is not p 1
+2, 1
+2p2k`1q2q-dense.
+Proof. Let G be a blow-up ofFk
+d with|VpGq|“ n and αpGqă k
+2k`1n. Without loss of
+generality we may assume thatn is divisible by2p2k` 1q. This follows from the observation,
+that a graphG isp 1
+2, 1
+2p2k`1q2q-dense if and only if the balanced blow-up ofG obtained by
+replacing each vertex by2p2k` 1q vertices isp 1
+2, 1
+2p2k`1q2q-dense.
+Suppose for the sake of contradiction thatG isp 1
+2, 1
+2p2k`1q2q-dense. From now on consider
+the geometric representation ofG given by Lemma 2.1. LetV be the set of points of the
+unit circle that are identiﬁed with the vertices ofG. Recall that in(2.2) we deﬁnedλpIq as
+the number of vertices contained in an intervalIĎ R{Z. It will sometimes be convenient
+to count vertices on the boundary of an interval only with weight1{2. For that we write
+terms likeλpxa,byq, λpxa,bqq, where the brackets “x” or “y” mark that the left or right
+end-point of the respective interval is only counted1{2 if it is a vertex. Also recall that for
+ξP R{Z we deﬁnedzξPV in (2.3). Since by our assumptionαpGqă n{2, we infer from
+part (i) of Lemma 2.2 that
+zξP
+`
+ξ` k´1
+2k´1,ξ ` k
+2k´1
+˘
+, (3.1)
+which yields together with Lemma 2.2(i) that
+ÿ
+xPVXrξ,zξ´ k´1
+2k´1q
+ˇˇNGpxqXp x,zξs
+ˇˇ“eG
+`
+rξ,zξsX V
+˘
+. (3.2)
+Moreover, part (ii) of Lemma 2.2 applied to intervalsrx` k´1
+2k´1,x` k
+2k´1s combined with
+the assumptionαpGqă k
+2k`1n leads to
+λ
+`
+xx` k´1
+2k´1,x ` k
+2k´1y
+˘
+ďλ
+`
+rx` k´1
+2k´1,x ` k
+2k´1s
+˘
+ďp 2k´ 3qαpGq´p k´ 2qnăp 2k´ 3q k
+2k` 1n´pk´ 2qn“ 2
+2k` 1n
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 9
+for every vertexxPV. Consequently,
+ÿ
+xPV
+´
+λ
+`
+xx´ k´1
+2k´1,xy
+˘
+`λ
+`
+xx,x ` k´1
+2k´1y
+˘¯
+“
+ÿ
+xPV
+´
+λ
+`
+xx,x ` 1y
+˘
+´λ
+`
+xx` k´1
+2k´1,x ` k
+2k´1y
+˘¯
+ąn2´ 2
+2k` 1n2“ 2k´ 1
+2k` 1n2
+and by symmetry we may assume that
+ÿ
+xPV
+λ
+`
+xx,x ` k´1
+2k´1y
+˘
+ą 1
+2¨2k´ 1
+2k` 1n2. (3.3)
+In view of(3.3) the following claim seems a bit surprising and, in fact, it will lead to the
+desired contradiction. For a simpler notation we set
+Vξ“V Xrξ,zξ´ k´1
+2k´1q (3.4)
+for ξP R{Z.
+Claim 3.2. For every ξP R{Z we have
+ÿ
+xPVξ
+´
+λ
+`
+xx,x ` k´1
+2k´1y
+˘
+´ 1
+2¨2k´ 1
+2k` 1n
+¯
+ă 0.
+Proof of Claim 3.2. Fix someξP R{Z. Since we assume thatG isp 1
+2, 1
+2p2k`1q2q-dense, we
+have
+ÿ
+xPVξ
+λ
+`
+px` k´1
+2k´1,zξs
+˘
+“
+ÿ
+xPVξ
+ˇˇNGpxqXp x,zξs
+ˇˇ (3.2)
+“ eG
+`
+rξ,zξsX V
+˘
+ą n2
+2p2k` 1q2.
+Therefore,
+ÿ
+xPVξ
+λ
+`
+xx,x ` k´1
+2k´1s
+˘
+“
+ÿ
+xPVξ
+´
+λ
+`
+xx,zξs
+˘
+´λ
+`
+px` k´1
+2k´1,zξs
+˘¯
+ă
+ÿ
+xPVξ
+λ
+`
+xx,zξs
+˘
+´ n2
+2p2k` 1q2
+“
+ÿ
+xPVξ
+´
+λ
+`
+rξ,zξs
+˘
+´λ
+`
+rξ,xy
+˘¯
+´ n2
+2p2k` 1q2
+(2.3)
+“ |Vξ|¨n
+2´ n2
+2p2k` 1q2´
+ÿ
+xPVξ
+λ
+`
+rξ,xy
+˘
+. (3.5)
+We observe
+ÿ
+xPVξ
+λ
+`
+rξ,xy
+˘
+“
+|Vξ|ÿ
+i“1
+pi´ 1
+2q“ |Vξ|2
+2 (3.6)
+
+10 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+and combining (3.5) and (3.6) yields
+ÿ
+xPVξ
+´
+λ
+`
+xx,x ` k´1
+2k´1s
+˘
+´ 1
+2¨2k´ 1
+2k` 1n
+¯
+ă|Vξ|¨
+ˆn
+2´ 1
+2¨2k´ 1
+2k` 1n
+˙
+´ n2
+2p2k` 1q2´|Vξ|2
+2
+“´ 1
+2
+ˆ
+|Vξ|´ n
+2k` 1
+˙2
+ď 0,
+which establishes the claim. □
+Now setV˚“
+␣
+ξP R{Z : ξ` k´1
+2k´1PV
+(
+. Starting with an arbitraryxp0qP V˚ we deﬁne
+recursively a sequence of members ofV˚ by putting
+xpi` 1q“ zxpiq´ k´1
+2k´1
+for every i P N. Since V˚ is ﬁnite, this sequence is eventually periodic and thus we
+could have chosenxp0q such thatxpmq“ xp0q holds for somemě 2. LetwP N denote
+the number of times we wind around the circle when reachingxpmq from xp0q by this
+construction. By Claim 3.2 we know that
+m´1ÿ
+i“0
+ÿ
+xPVxpiq
+´
+λ
+`
+xx,x ` k´1
+2k´1y
+˘
+´ 1
+2¨2k´ 1
+2k` 1n
+¯
+ă 0.
+On the other hand, (3.3) yields
+m´1ÿ
+i“0
+ÿ
+xPVxpiq
+´
+λ
+`
+xx,x ` k´1
+2k´1y
+˘
+´ 1
+2¨2k´ 1
+2k` 1n
+¯ (3.4)
+“ w¨
+ÿ
+xPV
+´
+λ
+`
+xx,x ` k´1
+2k´1y
+˘
+´ 1
+2¨2k´ 1
+2k` 1n
+¯
+(3.3)
+ą w¨
+ˆ 1
+2¨2k´ 1
+2k` 1n2´ 1
+2¨2k´ 1
+2k` 1n2
+˙
+“ 0,
+which is a contradiction and concludes the proof of Proposition 3.1. □
+It is left to consider the case whenG contains a large independent set.
+Proposition 3.3. If G is a blow-up of a generalised Andrásfai graph Fk
+d for some integers
+kě 2 and dě 1 with|VpGq|“ n and αpGqě k
+2k`1n, then G is not p 1
+2, 1
+2p2k`1q2q-dense.
+Proof. Similarly as in the proof of Proposition 3.1 we consider the geometric representation
+of ann-vertex graphG that is a blow-up of a generalised Andrásfai graphFk
+d and identify
+the vertex set ofG with some setV Ď R{Z so that(2.1) holds. Again we may assume
+without loss of generality thatn is divisible by2p2k` 1q and we suppose for a contradiction
+that G isp 1
+2, 1
+2p2k`1q2q-dense. In particular,αpGqă n{2 and the additional assumptions for
+parts (iv) and (v) of Lemma 2.2 are satisﬁed.
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 11
+Observe that every independent set ofG is contained in some interval of R{Z of
+length k´1
+2k´1. Therefore, without loss of generality we may assume thatr0, k´1
+2k´1s contains a
+maximum independent set, i.e.,
+λ
+`
+r0, k´1
+2k´1s
+˘
+“αpGqě k
+2k` 1n.
+Recall that in(2.3) we deﬁned a pointz0 with λ
+`
+r0,z 0s
+˘
+“ n{2. Let the vertexz1 be
+deﬁned similarly byλ
+`
+rz1, k´1
+2k´1s
+˘
+“n{2. Then we have
+λ
+`
+pz0,z1q
+˘
+“n´λ
+`
+rz1, 0q
+˘
+´λ
+`
+r0, k´1
+2k´1s
+˘
+´λ
+`
+p k´1
+2k´1,z 0s
+˘
+“n´pn{2´αpGqq´ αpGq´p n{2´αpGqq
+“αpGq
+and since z0, z1 P V the maximality ofαpGq discloses that the intervalrz0,z1s has at
+least the length k´1
+2k´1. Hence there is a closed subintervalrbk,b 0s ofrz0,z1s whose length
+is exactly k´1
+2k´1. We completeb0 and bk to the vertices of a regularp2k´ 1q-gon, i.e., we
+consider the pointsbiP R{Z for iPt 0,..., 2k´ 2u such that the intervalsrbi,bi`1s have
+length 1
+2k´1 (see Figure 4). Notice thatαpGqă n{2 entails
+z0Ppbk´1,bks. (3.7)
+0
+k´1
+2k´1
+b0 b1
+b2
+bk´2
+bk´1bk
+bk`1
+b2k´2 z1
+z0
+Figure 4. Largest independent set ofG is contained in the intervalr0, k´1
+2k´1s
+and the intervalsr0,z 0s,rz1, k´1
+2k´1s containn{2 vertices each. Thebi form a
+regularp2k´ 1q-gon.
+Below we apply Lemma 2.2 to obtain several bounds onλ
+`
+rb1,bk´1s
+˘
+andλ
+`
+rbk`1,b 2k´2s
+˘
+that eventually lead to the desired contradiction. Applying Lemma 2.2 (iv) withξ“ 0
+gives
+λ
+`
+r0,b 1q
+˘
+“λ
+`
+r0,bk´ k´1
+2k´1q
+˘ (3.7)
+ě λ
+`
+r0,z 0´ k´1
+2k´1q
+˘
+ą 2αpGq´ 2k´ 1
+2k` 1n
+
+12 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+and, by symmetry, we also have
+λ
+`
+pbk´1, k´1
+2k´1s
+˘
+ą 2αpGq´ 2k´ 1
+2k` 1n.
+Consequently, we arrive at
+λ
+`
+rb1,bk´1s
+˘
+“λ
+`
+r0, k´1
+2k´1s
+˘
+´λ
+`
+r0,b 1q
+˘
+´λ
+`
+pbk´1, k´1
+2k´1s
+˘
+ăαpGq´ 2
+ˆ
+2αpGq´ 2k´ 1
+2k` 1n
+˙
+“ 4k´ 2
+2k` 1n´ 3αpGq. (3.8)
+In particular, for the casek“ 2 this implies
+0ďλ
+`
+rb1,b 1s
+˘
+ă 6
+5n´ 3αpGq,
+which contradicts our assumptionαpGq ě 2n{5. Similarly, for k “ 3 inequality (3.8)
+combined with Lemma 2.2 (iii) gives
+n´ 2αpGqď λ
+`
+rb1,b 2s
+˘
+ă 10
+7 n´ 3αpGq,
+which again contradicts the assumptionαpGqě 3n{7 of this case. Consequently, for the
+rest of the proof we can assume thatkě 4.
+Next we note that both intervalspbk´1,b 2k´2q andpbk`1,b 1q have length k´1
+2k´1 and, hence,
+Lemma 2.2 (i) implies
+λ
+`
+pbk´1,b 2k´2q
+˘
+`λ
+`
+pbk`1,b 1q
+˘
+ď 2αpGq
+and, therefore,
+λ
+`
+pbk`1,b 2k´2q
+˘
+ď 2αpGq´ λ
+`
+pbk´1,b 1q
+˘
+“ 2αpGq´
+´
+n´λ
+`
+rb1,bk´1s
+˘¯
+. (3.9)
+Finally, below we will verify
+4k´ 5
+2k` 1n´ 2αpGq´ λ
+`
+rb1,bk´1s
+˘
+ăλ
+`
+pbk`1,b 2k´2q
+˘
+. (3.10)
+Before we prove(3.10), we note that using(3.9) as an upper bound for the right-hand side
+of (3.10) leads to
+6k´ 4
+2k` 1n´ 4αpGqă 2λ
+`
+rb1,bk´1s
+˘ (3.8)
+ă 8k´ 4
+2k` 1n´ 6αpGq.
+This inequality contradicts the assumptionαpGqě k
+2k`1 of the proposition and, hence, we
+conclude the proof by establishing (3.10).
+For the proof of inequality(3.10) we appeal to Lemma 2.2 (v) withξ “ bi for every
+i“ 2,...,k ´ 2. We set
+Ii“pbi´ 1
+2k´1,bi` 1
+2k´1q“p bi´1,bi`1q
+
+ON THE LOCAL DENSITY PROBLEM FOR GRAPHS OF GIVEN ODD-GIRTH 13
+and then in view of
+pbi` k´1
+2k´1,bi´ k´1
+2k´1q“p bi`k´1,bi`kq
+part (v) translates to
+λpIiqą 4
+2k` 1n´ 2λ
+`
+pbi`k´1,bi`kq
+˘
+. (3.11)
+Furthermore, we note that for everyiPt 2,...,k ´ 2u we haveIiĎrb1,bk´1s and each of
+the two families
+I0“tIi : i even and 2ďiďk´ 2u and I1“tIi : i odd and 2ďiďk´ 2u
+consists of mutually disjoint intervals. Moreover, we can add the intervalrb1,b 2q to I1
+andpbk´2,bk´1s either to I1 (whenk is even) or toI0 (whenk is odd) and still each family
+consists of mutually disjoint intervals all contained inrb1,bk´1s. As a result we get
+2λ
+`
+rb1,bk´1s
+˘
+ěλ
+`
+rb1,b 2q
+˘
+`
+k´2ÿ
+i“2
+λpIiq` λ
+`
+pbk´2,bk´1s
+˘
+.
+Moreover, using the estimate from Lemma 2.2 (iii) for λ
+`
+rb1,b 2q
+˘
+and λ
+`
+pbk´2,bk´1s
+˘
+and (3.11) for every term in the middle sum, we arrive at
+2λ
+`
+rb1,bk´1s
+˘
+ą
+`
+n´ 2αpGq
+˘
+`
+k´2ÿ
+i“2
+ˆ 4n
+2k` 1´ 2λ
+`
+pbi`k´1,bi`kq
+˘˙
+`
+`
+n´ 2αpGq
+˘
+ě 2n´ 4αpGq`p k´ 3q¨ 4n
+2k` 1´ 2λ
+`
+pbk`1,b 2k´2q
+˘
+“ 8k´ 10
+2k` 1 n´ 4αpGq´ 2λ
+`
+pbk`1,b 2k´2q
+˘
+.
+Rearranging the last inequality gives (3.10) and this concludes the proof. □
+References
+[1] B. Andrásfai,Über ein Extremalproblem der Graphentheorie, Acta Math. Acad. Sci. Hungar.13 (1962),
+443–455 (German). MR0145503Ò1.1, 1.1, 2
+[2] , Graphentheoretische Extremalprobleme, Acta Math. Acad. Sci. Hungar15 (1964), 413–438
+(German). MR0169227Ò1.1, 1.1
+[3] B. Andrásfai, P. Erdős, and V. T. Sós,On the connection between chromatic number, maximal clique
+and minimal degree of a graph, Discrete Math.8 (1974), 205–218. MR0340075Ò1.1
+[4] C. C. Chen, G. P. Jin, and K. M. Koh,Triangle-free graphs with large degree, Combin. Probab.
+Comput. 6 (1997), no. 4, 381–396, DOI10.1017/S0963548397003167. MR1483425Ò1.1, 1.1
+[5] P. Erdős,Remarks on a theorem of Ramsay, Bull. Res. Council Israel. Sect. F7F (1957/1958), 21–24.
+MR0104594Ò1.1, 1.1, 2
+[6] P. Erdős,Problems and results in graph theory and combinatorial analysis, Proceedings of the Fifth
+British Combinatorial Conference (Univ. Aberdeen, Aberdeen, 1975), Utilitas Math., Winnipeg, Man.,
+1976, pp. 169–192. Congressus Numerantium, No. XV. MR0409246Ò1
+
+14 W. BEDENKNECHT, G. O. MOTA, CHR. REIHER, AND M. SCHACHT
+[7] P. Erdős,Some old and new problems in various branches of combinatorics, Discrete Math.165/166
+(1997), 227–231, DOI10.1016/S0012-365X(96)00173-2. Graphs and combinatorics (Marseille, 1995).
+MR1439273Ò1, 1
+[8] P. Erdős, R. J. Faudree, C. C. Rousseau, and R. H. Schelp,A local density condition for triangles,
+Discrete Math. 127 (1994), no. 1-3, 153–161, DOI10.1016/0012-365X(92)00474-6. Graph theory and
+applications (Hakone, 1990). MR1273598Ò1
+[9] R. Häggkvist,Odd cycles of speciﬁed length in nonbipartite graphs, Graph theory (Cambridge, 1981),
+North-HollandMath.Stud.,vol.62,North-Holland,Amsterdam-NewYork,1982,pp.89–99. MR671908
+Ò1.1
+[10] G. P. Jin, Triangle-free four-chromatic graphs, Discrete Math. 145 (1995), no. 1-3, 151–170,
+DOI10.1016/0012-365X(94)00063-O. MR1356592 Ò1.1, 1.1
+[11] P. Keevash and B. Sudakov,Sparse halves in triangle-free graphs, J. Combin. Theory Ser. B96 (2006),
+no. 4, 614–620, DOI10.1016/j.jctb.2005.11.003. MR2232396Ò1.1
+[12] M. Krivelevich,On the edge distribution in triangle-free graphs, J. Combin. Theory Ser. B63 (1995),
+no. 2, 245–260, DOI10.1006/jctb.1995.1018. MR1320169Ò1, 1, 1.1
+[13] S. Letzter and R. Snyder, The homomorphism threshold of tC3,C 5u-free graphs, available at
+arXiv:1610.04932. Submitted.Ò1.2
+[14] S. Norin and L. Yepremyan,Sparse halves in dense triangle-free graphs, J. Combin. Theory Ser. B
+115 (2015), 1–25, DOI10.1016/j.jctb.2015.04.006. MR3383248Ò1.1, 1.1
+[15] D. R. Woodall,The binding number of a graph and its Anderson number, J. Combinatorial Theory
+Ser. B 15 (1973), 225–255. MR0327573Ò1.1
+F achbereich Mathematik, Universität Hamburg, Hamburg, Germany
+E-mail address: Wiebke.Bedenknecht@uni-hamburg.de
+E-mail address: Christian.Reiher@uni-hamburg.de
+E-mail address: schacht@math.uni-hamburg.de
+Instituto de Matemática e Estatística, Universidade de São Paulo, São Paulo, Brazil
+E-mail address: mota@ime.usp.br

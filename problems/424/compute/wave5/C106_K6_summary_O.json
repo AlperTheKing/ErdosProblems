@@ -1,0 +1,101 @@
+{
+  "ray": [
+    2,
+    1,
+    1
+  ],
+  "Q": 60,
+  "layers": [
+    {
+      "k": 1,
+      "D": 12,
+      "rho": 2,
+      "size": 6
+    },
+    {
+      "k": 2,
+      "D": 409,
+      "rho": 2,
+      "size": 233
+    },
+    {
+      "k": 3,
+      "D": 17215,
+      "rho": 2,
+      "size": 9797
+    },
+    {
+      "k": 4,
+      "D": 796473,
+      "rho": 2,
+      "size": 454316
+    }
+  ],
+  "audits": [
+    {
+      "K": 6,
+      "i_range": [
+        2,
+        4
+      ],
+      "channels": [
+        {
+          "i": 2,
+          "j": 4,
+          "edges": 105855628
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "edges": 95981209
+        },
+        {
+          "i": 4,
+          "j": 2,
+          "edges": 105855628
+        }
+      ],
+      "edges": 307692465,
+      "support": 307498017,
+      "max_multiplicity": 4,
+      "multiplicity_histogram": {
+        "1": 307303785,
+        "2": 194018,
+        "3": 212,
+        "4": 2
+      },
+      "light_edge_mass": {
+        "1": {
+          "edge_mass": 307303785,
+          "numerator": 307303785,
+          "denominator": 307692465
+        },
+        "2": {
+          "edge_mass": 307691821,
+          "numerator": 307691821,
+          "denominator": 307692465
+        },
+        "3": {
+          "edge_mass": 307692457,
+          "numerator": 307692457,
+          "denominator": 307692465
+        },
+        "4": {
+          "edge_mass": 307692465,
+          "numerator": 307692465,
+          "denominator": 307692465
+        },
+        "8": {
+          "edge_mass": 307692465,
+          "numerator": 307692465,
+          "denominator": 307692465
+        },
+        "16": {
+          "edge_mass": 307692465,
+          "numerator": 307692465,
+          "denominator": 307692465
+        }
+      }
+    }
+  ]
+}

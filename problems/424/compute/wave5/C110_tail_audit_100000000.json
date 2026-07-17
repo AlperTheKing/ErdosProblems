@@ -1,0 +1,239 @@
+{
+  "all_integrated_C1_pass": true,
+  "all_pointwise_C1_pass": true,
+  "definitions": {
+    "J(D)": "ceil(sqrt(D))",
+    "dyadic_tail_upper": "sum_{j>=J(D)} N_j(X,D)/2^j",
+    "integrated_square_ratio": "D*dyadic_tail_upper^2/(1+floor(log2 X))^2",
+    "pointwise_square_ratio": "max_{j>=J(D)} D*N_j(X,D)^2/2^(2j)",
+    "q_X(r)": "max(d(h)-1) over processed hard sources witnessing r"
+  },
+  "integer_log_bin_count": 27,
+  "largest_integrated_square_ratio": {
+    "denominator": 51298814505517056,
+    "numerator": 110909714393023
+  },
+  "largest_pointwise_square_ratio": {
+    "denominator": 16384,
+    "numerator": 847
+  },
+  "maximum_tested_D": 11,
+  "rows": [
+    {
+      "D": 1,
+      "J_ceil_sqrt_D": 1,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 5527995
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 5699868278390784,
+        "numerator": 3395414302225
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 16384,
+        "numerator": 121
+      },
+      "tail_root_count": 46643
+    },
+    {
+      "D": 2,
+      "J_ceil_sqrt_D": 2,
+      "dyadic_tail_upper": {
+        "denominator": 4194304,
+        "numerator": 2641519
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 6412351813189632,
+        "numerator": 6977622627361
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 8192,
+        "numerator": 121
+      },
+      "tail_root_count": 19608
+    },
+    {
+      "D": 3,
+      "J_ceil_sqrt_D": 2,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 5235611
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 17099604835172352,
+        "numerator": 27411622543321
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 16384,
+        "numerator": 363
+      },
+      "tail_root_count": 16587
+    },
+    {
+      "D": 4,
+      "J_ceil_sqrt_D": 2,
+      "dyadic_tail_upper": {
+        "denominator": 2097152,
+        "numerator": 1135283
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 801543976648704,
+        "numerator": 1288867490089
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 4096,
+        "numerator": 121
+      },
+      "tail_root_count": 3288
+    },
+    {
+      "D": 5,
+      "J_ceil_sqrt_D": 3,
+      "dyadic_tail_upper": {
+        "denominator": 131072,
+        "numerator": 70917
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 1391569403904,
+        "numerator": 2794011605
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 16384,
+        "numerator": 605
+      },
+      "tail_root_count": 3255
+    },
+    {
+      "D": 6,
+      "J_ceil_sqrt_D": 3,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 3980739
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 949978046398464,
+        "numerator": 1760698109569
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 8192,
+        "numerator": 363
+      },
+      "tail_root_count": 1457
+    },
+    {
+      "D": 7,
+      "J_ceil_sqrt_D": 3,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 3980483
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 51298814505517056,
+        "numerator": 110909714393023
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 16384,
+        "numerator": 847
+      },
+      "tail_root_count": 1456
+    },
+    {
+      "D": 8,
+      "J_ceil_sqrt_D": 3,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 2320831
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 6412351813189632,
+        "numerator": 5386256530561
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 32,
+        "numerator": 1
+      },
+      "tail_root_count": 211
+    },
+    {
+      "D": 9,
+      "J_ceil_sqrt_D": 3,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 1980429
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 633318697598976,
+        "numerator": 435788780449
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 256,
+        "numerator": 9
+      },
+      "tail_root_count": 128
+    },
+    {
+      "D": 10,
+      "J_ceil_sqrt_D": 4,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 1774839
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 2849934139195392,
+        "numerator": 1750029708845
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 128,
+        "numerator": 5
+      },
+      "tail_root_count": 114
+    },
+    {
+      "D": 11,
+      "J_ceil_sqrt_D": 4,
+      "dyadic_tail_upper": {
+        "denominator": 8388608,
+        "numerator": 1774839
+      },
+      "integrated_C1_pass": true,
+      "integrated_square_ratio": {
+        "denominator": 5699868278390784,
+        "numerator": 3850065359459
+      },
+      "pointwise_C1_pass": true,
+      "pointwise_square_ratio": {
+        "denominator": 256,
+        "numerator": 11
+      },
+      "tail_root_count": 114
+    }
+  ],
+  "schema": "C110-moving-cutoff-tail-audit-v1",
+  "source": {
+    "classification_fnv1a64": "94633c57cc653c6e",
+    "limit": 100000000,
+    "path": "problems/424/compute/wave5/C110_weighted_gate_100000000.json",
+    "sha256": "cafaad4a37141b20121b601e74936e9f5586203d7315012052a84e1c684b8fd2"
+  }
+}

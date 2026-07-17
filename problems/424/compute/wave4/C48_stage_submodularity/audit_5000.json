@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "limit": 5000,
+  "stage_count_including_fixed_repeat": 11,
+  "stage_mismatches": [],
+  "hard": 253,
+  "targets": 290,
+  "maximum_rank": 7,
+  "modular_identity": {
+    "checks": 4344,
+    "failures": [],
+    "formula": "B_d(X)=sum_{n notin S_(d+1)}(1_KX(n)-1_PX(n))"
+  },
+  "additive_one_failures": [],
+  "strict_failures_sample": [
+    {
+      "X": 362,
+      "d": 2,
+      "excess": 1
+    },
+    {
+      "X": 1002,
+      "d": 2,
+      "excess": 1
+    },
+    {
+      "X": 1014,
+      "d": 2,
+      "excess": 1
+    }
+  ],
+  "candidate_failures": {
+    "B_d_nonincreasing_in_d": {
+      "X": 74,
+      "d": 2,
+      "B_d_minus_1": -1,
+      "B_d": 0
+    },
+    "positive_rank_descent": {
+      "X": 362,
+      "d": 2,
+      "B_d_minus_1": -8,
+      "B_d": 1
+    },
+    "each_exact_layer_nonpositive": {
+      "X": 74,
+      "layer_rank": 2,
+      "layer_H_minus_Q": 1
+    },
+    "death_operator_submodular": {
+      "n": 164,
+      "pairs": [
+        [
+          5,
+          33
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "D1": [
+        5
+      ],
+      "D2": [
+        11
+      ],
+      "u_D1": 0,
+      "u_D2": 0,
+      "u_union": 1,
+      "u_intersection": 0,
+      "violated_inequality": "u(D1)+u(D2)>=u(D1_union_D2)+u(D1_intersection_D2)"
+    }
+  }
+}

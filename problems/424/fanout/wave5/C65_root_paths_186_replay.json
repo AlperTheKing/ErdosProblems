@@ -1,0 +1,187 @@
+{
+  "limit": 186,
+  "hard_checks": 6,
+  "minimum_reserve": 0,
+  "first_failure": null,
+  "tight_count": 6,
+  "tight_sample": [
+    {
+      "root_cutoff": 54,
+      "demand": 1,
+      "flow": 1
+    },
+    {
+      "root_cutoff": 74,
+      "demand": 2,
+      "flow": 2
+    },
+    {
+      "root_cutoff": 114,
+      "demand": 3,
+      "flow": 3
+    },
+    {
+      "root_cutoff": 144,
+      "demand": 4,
+      "flow": 4
+    },
+    {
+      "root_cutoff": 174,
+      "demand": 5,
+      "flow": 5
+    },
+    {
+      "root_cutoff": 186,
+      "demand": 6,
+      "flow": 6
+    }
+  ],
+  "final_demand": 6,
+  "final_flow": 6,
+  "final_reserve": 0,
+  "reverse_augmentations": 0,
+  "first_reverse": null,
+  "maximum_path_length": 5,
+  "maximum_path": {
+    "vertices": [
+      187,
+      48,
+      95,
+      32,
+      63,
+      188
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 186
+  },
+  "splitless_source_paths": 6,
+  "hard_source_paths": 0,
+  "unary_paths": 1,
+  "maximum_unary_edges": 1,
+  "first_hard_source": null,
+  "first_unary_path": {
+    "vertices": [
+      187,
+      48,
+      95,
+      32,
+      63,
+      188
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 186
+  },
+  "diagnostic_paths": [
+    {
+      "vertices": [
+        187,
+        18,
+        35,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        187,
+        66,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    },
+    {
+      "vertices": [
+        187,
+        38,
+        75,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 144
+    },
+    {
+      "vertices": [
+        187,
+        48,
+        95,
+        32,
+        63,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 186
+    }
+  ],
+  "path_certificate": [
+    {
+      "vertices": [
+        187,
+        18,
+        35,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        187,
+        66,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    },
+    {
+      "vertices": [
+        187,
+        20,
+        39,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 114
+    },
+    {
+      "vertices": [
+        187,
+        38,
+        75,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 144
+    },
+    {
+      "vertices": [
+        187,
+        6,
+        11,
+        21,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 174
+    },
+    {
+      "vertices": [
+        187,
+        48,
+        95,
+        32,
+        63,
+        188
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 186
+    }
+  ],
+  "directly_healed_sources": 5,
+  "first_direct_bank_failure": {
+    "root_cutoff": 186,
+    "hard_demand": 6,
+    "direct_sources": 5
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "limit": 1000,
+  "literal_stage_updates": 7,
+  "membership_mismatches": [],
+  "rank_mismatches": [],
+  "hard_count": 41,
+  "target_count": 46,
+  "exact_assertions": {
+    "source_74": {
+      "rank": 2,
+      "critical": [
+        15
+      ],
+      "root_8_boundaries_before": []
+    },
+    "adjacent_114": {
+      "source_rank": 2,
+      "hole_113_rank": 4,
+      "parent_57_rank": 3
+    },
+    "source_174": {
+      "rank": 2,
+      "critical": [
+        35
+      ],
+      "T2_35_member": true,
+      "T3_35_rank": 3
+    },
+    "source_492": {
+      "rank": 3,
+      "critical": [
+        29
+      ],
+      "target_449": {
+        "child": 449,
+        "parent": 225,
+        "rank": 5,
+        "root": 8
+      }
+    },
+    "source_774": {
+      "rank": 2,
+      "critical": [
+        155
+      ],
+      "T2_155_rank": 4,
+      "T3_155_rank": 3
+    }
+  }
+}

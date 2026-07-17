@@ -1,0 +1,111 @@
+{
+  "acceptance": {
+    "alpha_gate": 0.7213475204444817,
+    "exact_recursive_closure": true,
+    "finite_nonfalsification_is_theorem": false,
+    "floating_point_used_for_acceptance": false,
+    "source_divisors_from_explicit_prime_powers": true,
+    "target_3_4_falsifier_iff": "(s+8)^4 < d^3"
+  },
+  "classifier_cache": {
+    "factor_pair_entries": 400598,
+    "factorint_calls": 400598,
+    "state_entries": 400600
+  },
+  "digests": {
+    "evaluated_stream_sha256": "dca470e268ebbafbcd09ba08cd21a73f1768a8630bd473abc0358fc9721e5d7a",
+    "verification_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "evaluation": {
+    "base_prime_power": {
+      "evaluated": 5000,
+      "generated": 5000,
+      "max_d": 40,
+      "min_d": 24
+    }
+  },
+  "extremal_by_d": [],
+  "falsifiers": [],
+  "generation": {
+    "base_multi_plus": {},
+    "base_prime_power": {
+      "accepted": 5000,
+      "offered": 11275,
+      "too_large": 6275
+    },
+    "composite_q": {},
+    "extremal_base_lift": {},
+    "hard_shape_expansion": {},
+    "hard_shape_substitution": {},
+    "prime_power": {},
+    "squarefree": {}
+  },
+  "parameters": {
+    "base_multi_budget": 0,
+    "base_power_budget": 5000,
+    "composite_q_budget": 0,
+    "extremal_lift_budget": 0,
+    "extremal_limit": 16,
+    "max_bits": 75,
+    "max_pairs": 512,
+    "min_d": 20,
+    "min_source": 4000000000,
+    "mutation_budget": 0,
+    "prime_limit": 100000,
+    "prime_power_budget": 0,
+    "progress_every": 500,
+    "seed": 424117,
+    "shape_expansion_budget": 0,
+    "shape_substitution_budget": 0,
+    "squarefree_budget": 0
+  },
+  "prime_pools": {
+    "minus": 4806,
+    "plus": 4784
+  },
+  "schema": "C117-structural-power-falsifier-v1",
+  "self_test": {
+    "known_hard": [
+      {
+        "d": 12,
+        "h": 38624780,
+        "s": 4
+      },
+      {
+        "d": 16,
+        "h": 908368614,
+        "s": 9
+      },
+      {
+        "d": 8,
+        "h": 2067138956,
+        "s": 0
+      },
+      {
+        "d": 16,
+        "h": 2796867114,
+        "s": 8
+      },
+      {
+        "d": 18,
+        "h": 2934744174,
+        "s": 14
+      }
+    ],
+    "recursive_state_entries": 1046,
+    "status": "PASS"
+  },
+  "summary": {
+    "evaluated_candidates": 5000,
+    "hard_candidates": 0,
+    "initial_candidates": 5000,
+    "largest_hard_source": null,
+    "largest_source_tested": 37574230562709158065448,
+    "maximum_hard_d": null,
+    "maximum_hard_deficit": null,
+    "minimum_ratio_B8": null,
+    "mutation_candidates": 0,
+    "target_3_4_falsifiers": 0
+  },
+  "verification_records": []
+}

@@ -1,0 +1,890 @@
+{
+  "exactness": {
+    "arithmetic": "integers only",
+    "closure": "recursive least closure over every admissible factor pair",
+    "engine": "C109_fixed_root_search.py",
+    "engine_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with exact product recheck",
+    "floating_point_acceptance": false,
+    "maximum": "2^64-1",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "first_failure": {
+    "exponent": 5,
+    "generated": true,
+    "p": 161051,
+    "passes_claim_IV": false,
+    "root": 80526,
+    "root_pairs": [],
+    "root_product": 80527,
+    "root_product_factorization": [
+      [
+        80527,
+        1
+      ]
+    ],
+    "root_structural_splitless": true
+  },
+  "odd_power_rows": [
+    {
+      "exponent": 1,
+      "generated": false,
+      "p": 11,
+      "passes_claim_IV": true,
+      "root": 6,
+      "root_pairs": [],
+      "root_product": 7,
+      "root_product_factorization": [
+        [
+          7,
+          1
+        ]
+      ],
+      "root_structural_splitless": true
+    },
+    {
+      "exponent": 3,
+      "generated": false,
+      "p": 1331,
+      "passes_claim_IV": true,
+      "root": 666,
+      "root_pairs": [
+        [
+          23,
+          29
+        ]
+      ],
+      "root_product": 667,
+      "root_product_factorization": [
+        [
+          23,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "root_structural_splitless": false
+    },
+    {
+      "exponent": 5,
+      "generated": true,
+      "p": 161051,
+      "passes_claim_IV": false,
+      "root": 80526,
+      "root_pairs": [],
+      "root_product": 80527,
+      "root_product_factorization": [
+        [
+          80527,
+          1
+        ]
+      ],
+      "root_structural_splitless": true
+    },
+    {
+      "exponent": 7,
+      "generated": false,
+      "p": 19487171,
+      "passes_claim_IV": false,
+      "root": 9743586,
+      "root_pairs": [],
+      "root_product": 9743587,
+      "root_product_factorization": [
+        [
+          7,
+          1
+        ],
+        [
+          1391941,
+          1
+        ]
+      ],
+      "root_structural_splitless": true
+    },
+    {
+      "exponent": 9,
+      "generated": true,
+      "p": 2357947691,
+      "passes_claim_IV": false,
+      "root": 1178973846,
+      "root_pairs": [
+        [
+          461,
+          2557427
+        ],
+        [
+          9437,
+          124931
+        ]
+      ],
+      "root_product": 1178973847,
+      "root_product_factorization": [
+        [
+          271,
+          1
+        ],
+        [
+          461,
+          1
+        ],
+        [
+          9437,
+          1
+        ]
+      ],
+      "root_structural_splitless": false
+    },
+    {
+      "exponent": 11,
+      "generated": true,
+      "p": 285311670611,
+      "passes_claim_IV": false,
+      "root": 142655835306,
+      "root_pairs": [
+        [
+          71,
+          2009237117
+        ],
+        [
+          22541,
+          6328727
+        ]
+      ],
+      "root_product": 142655835307,
+      "root_product_factorization": [
+        [
+          71,
+          1
+        ],
+        [
+          22541,
+          1
+        ],
+        [
+          89137,
+          1
+        ]
+      ],
+      "root_structural_splitless": false
+    },
+    {
+      "exponent": 13,
+      "generated": true,
+      "p": 34522712143931,
+      "passes_claim_IV": false,
+      "root": 17261356071966,
+      "root_pairs": [],
+      "root_product": 17261356071967,
+      "root_product_factorization": [
+        [
+          7,
+          1
+        ],
+        [
+          321469,
+          1
+        ],
+        [
+          7670749,
+          1
+        ]
+      ],
+      "root_structural_splitless": true
+    },
+    {
+      "exponent": 15,
+      "generated": true,
+      "p": 4177248169415651,
+      "passes_claim_IV": false,
+      "root": 2088624084707826,
+      "root_pairs": [
+        [
+          17,
+          122860240276931
+        ],
+        [
+          809,
+          2581735580603
+        ],
+        [
+          1319387,
+          1583026121
+        ],
+        [
+          33265073,
+          62787299
+        ]
+      ],
+      "root_product": 2088624084707827,
+      "root_product_factorization": [
+        [
+          17,
+          1
+        ],
+        [
+          809,
+          1
+        ],
+        [
+          77611,
+          1
+        ],
+        [
+          1956769,
+          1
+        ]
+      ],
+      "root_structural_splitless": false
+    },
+    {
+      "exponent": 17,
+      "generated": true,
+      "p": 505447028499293771,
+      "passes_claim_IV": false,
+      "root": 252723514249646886,
+      "root_pairs": [],
+      "root_product": 252723514249646887,
+      "root_product_factorization": [
+        [
+          97,
+          1
+        ],
+        [
+          2605397054120071,
+          1
+        ]
+      ],
+      "root_structural_splitless": true
+    }
+  ],
+  "schema": "C116-odd-power-search-v1",
+  "source_rows": [
+    {
+      "d": 1,
+      "expected_d": 1,
+      "factorization": [
+        [
+          11,
+          4
+        ]
+      ],
+      "h": 14640,
+      "hard": true,
+      "m": 2,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            }
+          ],
+          "pair": [
+            11,
+            1331
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": true,
+      "product": 14641,
+      "s": 1
+    },
+    {
+      "d": 1,
+      "expected_d": 1,
+      "factorization": [
+        [
+          11,
+          6
+        ]
+      ],
+      "h": 1771560,
+      "hard": true,
+      "m": 3,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            }
+          ],
+          "pair": [
+            11,
+            161051
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": true,
+      "product": 1771561,
+      "s": 1
+    },
+    {
+      "d": 2,
+      "expected_d": 2,
+      "factorization": [
+        [
+          11,
+          8
+        ]
+      ],
+      "h": 214358880,
+      "hard": true,
+      "m": 4,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": false,
+              "root": 9743586,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 19487171
+            }
+          ],
+          "pair": [
+            11,
+            19487171
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            }
+          ],
+          "pair": [
+            1331,
+            161051
+          ],
+          "structural": false
+        }
+      ],
+      "passes_counterfamily_prefix": true,
+      "product": 214358881,
+      "s": 1
+    },
+    {
+      "d": 2,
+      "expected_d": 2,
+      "factorization": [
+        [
+          11,
+          10
+        ]
+      ],
+      "h": 25937424600,
+      "hard": true,
+      "m": 5,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 2357947691
+            }
+          ],
+          "pair": [
+            11,
+            2357947691
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": false,
+              "root": 9743586,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 19487171
+            }
+          ],
+          "pair": [
+            1331,
+            19487171
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": false,
+      "product": 25937424601,
+      "s": 2
+    },
+    {
+      "d": 3,
+      "expected_d": 3,
+      "factorization": [
+        [
+          11,
+          12
+        ]
+      ],
+      "h": 3138428376720,
+      "hard": true,
+      "m": 6,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 285311670611
+            }
+          ],
+          "pair": [
+            11,
+            285311670611
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 2357947691
+            }
+          ],
+          "pair": [
+            1331,
+            2357947691
+          ],
+          "structural": false
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            },
+            {
+              "generated": false,
+              "root": 9743586,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 19487171
+            }
+          ],
+          "pair": [
+            161051,
+            19487171
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": false,
+      "product": 3138428376721,
+      "s": 2
+    },
+    {
+      "d": 3,
+      "expected_d": 3,
+      "factorization": [
+        [
+          11,
+          14
+        ]
+      ],
+      "h": 379749833583240,
+      "hard": false,
+      "m": 7,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 34522712143931
+            }
+          ],
+          "pair": [
+            11,
+            34522712143931
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 285311670611
+            }
+          ],
+          "pair": [
+            1331,
+            285311670611
+          ],
+          "structural": false
+        },
+        {
+          "blocked": false,
+          "endpoints": [
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 2357947691
+            }
+          ],
+          "pair": [
+            161051,
+            2357947691
+          ],
+          "structural": false
+        }
+      ],
+      "passes_counterfamily_prefix": false,
+      "product": 379749833583241,
+      "s": 1
+    },
+    {
+      "d": 4,
+      "expected_d": 4,
+      "factorization": [
+        [
+          11,
+          16
+        ]
+      ],
+      "h": 45949729863572160,
+      "hard": false,
+      "m": 8,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 4177248169415651
+            }
+          ],
+          "pair": [
+            11,
+            4177248169415651
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 34522712143931
+            }
+          ],
+          "pair": [
+            1331,
+            34522712143931
+          ],
+          "structural": false
+        },
+        {
+          "blocked": false,
+          "endpoints": [
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 285311670611
+            }
+          ],
+          "pair": [
+            161051,
+            285311670611
+          ],
+          "structural": false
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 9743586,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 19487171
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 2357947691
+            }
+          ],
+          "pair": [
+            19487171,
+            2357947691
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": false,
+      "product": 45949729863572161,
+      "s": 2
+    },
+    {
+      "d": 4,
+      "expected_d": 4,
+      "factorization": [
+        [
+          11,
+          18
+        ]
+      ],
+      "h": 5559917313492231480,
+      "hard": false,
+      "m": 9,
+      "pairs": [
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 6,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 11
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 505447028499293771
+            }
+          ],
+          "pair": [
+            11,
+            505447028499293771
+          ],
+          "structural": true
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 666,
+              "root_pair_count": 1,
+              "root_structural_splitless": false,
+              "value": 1331
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 4177248169415651
+            }
+          ],
+          "pair": [
+            1331,
+            4177248169415651
+          ],
+          "structural": false
+        },
+        {
+          "blocked": false,
+          "endpoints": [
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 161051
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 34522712143931
+            }
+          ],
+          "pair": [
+            161051,
+            34522712143931
+          ],
+          "structural": false
+        },
+        {
+          "blocked": true,
+          "endpoints": [
+            {
+              "generated": false,
+              "root": 9743586,
+              "root_pair_count": 0,
+              "root_structural_splitless": true,
+              "value": 19487171
+            },
+            {
+              "generated": true,
+              "root": null,
+              "root_pair_count": null,
+              "root_structural_splitless": false,
+              "value": 285311670611
+            }
+          ],
+          "pair": [
+            19487171,
+            285311670611
+          ],
+          "structural": true
+        }
+      ],
+      "passes_counterfamily_prefix": false,
+      "product": 5559917313492231481,
+      "s": 2
+    }
+  ],
+  "status": "FAIL"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version":1,
+  "lane":"Erdos 424 C71",
+  "limit":100000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "definitions":{"allowed":"n>=2 and n mod 3 != 1","admissible_pair":"2<=a<b, a*b=n+1, a and b allowed","generated":"ascending closure from seeds 2 and 3","A_H":"hard roots whose literal seed-2 chain through top_X is all holes","e_plus":"E(X)-E(floor(X/2))","K":"C67 hard holes through X"},
+  "counts":{"allowed":66666666,"generated":51899129,"holes":14767537,"E":9395726,"K":3368726,"A_H":1794586,"e_plus":4606216,"hard_chain_deaths":1574140},
+  "inequalities":{
+    "A_H_le_e_plus":{"checked_cutoffs":99999999,"failure_count":0,"first_failure":null,"max_ratio":{"numerator":656,"denominator":1033,"X":16620,"reduced_numerator":656,"reduced_denominator":1033},"maximum_excess":{"value":0,"X":2,"left":0,"right":0},"endpoint":{"X":100000000,"A_H":1794586,"e_plus":4606216},"verdict":"no_failure_through_limit"},
+    "K_le_e_plus":{"checked_cutoffs":99999999,"failure_count":0,"first_failure":null,"max_ratio":{"numerator":8846,"denominator":9907,"X":175956,"reduced_numerator":8846,"reduced_denominator":9907},"maximum_excess":{"value":0,"X":2,"left":0,"right":0},"endpoint":{"X":100000000,"K":3368726,"e_plus":4606216},"verdict":"no_failure_through_limit"}
+  },
+  "c67_prefix_check":{"through":1000000,"matched":true,"A_H_max_ratio":{"numerator":656,"denominator":1033,"X":16620,"reduced_numerator":656,"reduced_denominator":1033},"K_max_ratio":{"numerator":8846,"denominator":9907,"X":175956,"reduced_numerator":8846,"reduced_denominator":9907}},
+  "checkpoints":[
+    {"X":2,"generated":1,"E":0,"K":0,"A_H":0,"e_plus":0,"hard_chain_deaths":0},
+    {"X":6,"generated":3,"E":1,"K":0,"A_H":0,"e_plus":1,"hard_chain_deaths":0},
+    {"X":10,"generated":4,"E":2,"K":0,"A_H":0,"e_plus":2,"hard_chain_deaths":0},
+    {"X":54,"generated":14,"E":11,"K":1,"A_H":1,"e_plus":5,"hard_chain_deaths":0},
+    {"X":74,"generated":16,"E":15,"K":2,"A_H":2,"e_plus":7,"hard_chain_deaths":0},
+    {"X":100,"generated":23,"E":19,"K":2,"A_H":2,"e_plus":8,"hard_chain_deaths":0},
+    {"X":1000,"generated":250,"E":156,"K":41,"A_H":34,"e_plus":72,"hard_chain_deaths":7},
+    {"X":10000,"generated":3207,"E":1344,"K":518,"A_H":391,"e_plus":643,"hard_chain_deaths":127},
+    {"X":16620,"generated":5647,"E":2161,"K":888,"A_H":656,"e_plus":1033,"hard_chain_deaths":232},
+    {"X":100000,"generated":39843,"E":11928,"K":5108,"A_H":3386,"e_plus":5772,"hard_chain_deaths":1722},
+    {"X":175956,"generated":72991,"E":20462,"K":8846,"A_H":5717,"e_plus":9907,"hard_chain_deaths":3129},
+    {"X":1000000,"generated":457599,"E":108651,"K":45583,"A_H":27056,"e_plus":52890,"hard_chain_deaths":18527},
+    {"X":10000000,"generated":4952270,"E":1004961,"K":392961,"A_H":217560,"e_plus":491201,"hard_chain_deaths":175401},
+    {"X":100000000,"generated":51899129,"E":9395726,"K":3368726,"A_H":1794586,"e_plus":4606216,"hard_chain_deaths":1574140}
+  ],
+  "digests":{"algorithm":"FNV-1a-64 little-endian","classification_2_through_limit":"94633c57cc653c6e","trajectory_X_A_H_e_plus_K":"9c79d743cc71849d"},
+  "resources":{"allocated_core_bytes":200000003,"odd_spf_bytes":100000002,"state_bytes":100000001},
+  "timing_seconds":{"spf":0.317418,"scan":4.544173,"total":4.884347},
+  "compiler":"16.1.0"
+}

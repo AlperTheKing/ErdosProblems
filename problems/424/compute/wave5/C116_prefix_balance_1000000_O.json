@@ -1,0 +1,581 @@
+{
+  "digests": {
+    "algorithm": "FNV-1a-64 little-endian",
+    "classification_2_through_limit": "87339232cc226911",
+    "hard_h_d_s": "54733f51cfed8f93"
+  },
+  "exactness": {
+    "arithmetic": "integers only",
+    "closure": "independent ascending least-fixed-point reconstruction",
+    "factor_pairs": "full SPF divisor enumeration",
+    "floating_point_acceptance": false,
+    "structural_test": "literal empty admissible-pair set, cross-checked against state"
+  },
+  "first_failures": {
+    "E0_le_twice_s": null,
+    "canonical_power": null,
+    "canonical_prefix_balance": null,
+    "canonical_t_le_s": null,
+    "endpoint_imbalance": null,
+    "nonstructural_pairs_le_E1": null,
+    "power_bridge": null
+  },
+  "limit": 1000000,
+  "minimum_canonical_power_slack": {
+    "E0": [],
+    "E0_count": 0,
+    "E1": [
+      371,
+      707,
+      1113,
+      2121
+    ],
+    "E1_count": 4,
+    "canonical_power_slack": 4,
+    "d": 4,
+    "endpoint_imbalance_slack": 4,
+    "h": 112412,
+    "minimum_canonical_prefix_slack": 4,
+    "pairs": [
+      {
+        "canonical_blocker": 2121,
+        "canonical_root": 266,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 53
+          },
+          {
+            "root": 266,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 2121
+          }
+        ],
+        "pair": [
+          53,
+          2121
+        ],
+        "prefix_index": 1,
+        "prefix_slack": 7,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 1113,
+        "canonical_root": 140,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 101
+          },
+          {
+            "root": 140,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 1113
+          }
+        ],
+        "pair": [
+          101,
+          1113
+        ],
+        "prefix_index": 2,
+        "prefix_slack": 6,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 707,
+        "canonical_root": 354,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 159
+          },
+          {
+            "root": 354,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 707
+          }
+        ],
+        "pair": [
+          159,
+          707
+        ],
+        "prefix_index": 3,
+        "prefix_slack": 5,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 371,
+        "canonical_root": 186,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 303
+          },
+          {
+            "root": 186,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 371
+          }
+        ],
+        "pair": [
+          303,
+          371
+        ],
+        "prefix_index": 4,
+        "prefix_slack": 4,
+        "prefix_t": 0
+      }
+    ],
+    "power_bridge_slack": 4,
+    "product": 112413,
+    "s": 0,
+    "t": 0
+  },
+  "minimum_canonical_prefix_slack": {
+    "E0": [],
+    "E0_count": 0,
+    "E1": [
+      371,
+      707,
+      1113,
+      2121
+    ],
+    "E1_count": 4,
+    "canonical_power_slack": 4,
+    "d": 4,
+    "endpoint_imbalance_slack": 4,
+    "h": 112412,
+    "minimum_canonical_prefix_slack": 4,
+    "pairs": [
+      {
+        "canonical_blocker": 2121,
+        "canonical_root": 266,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 53
+          },
+          {
+            "root": 266,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 2121
+          }
+        ],
+        "pair": [
+          53,
+          2121
+        ],
+        "prefix_index": 1,
+        "prefix_slack": 7,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 1113,
+        "canonical_root": 140,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 101
+          },
+          {
+            "root": 140,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 1113
+          }
+        ],
+        "pair": [
+          101,
+          1113
+        ],
+        "prefix_index": 2,
+        "prefix_slack": 6,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 707,
+        "canonical_root": 354,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 159
+          },
+          {
+            "root": 354,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 707
+          }
+        ],
+        "pair": [
+          159,
+          707
+        ],
+        "prefix_index": 3,
+        "prefix_slack": 5,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 371,
+        "canonical_root": 186,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 303
+          },
+          {
+            "root": 186,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 371
+          }
+        ],
+        "pair": [
+          303,
+          371
+        ],
+        "prefix_index": 4,
+        "prefix_slack": 4,
+        "prefix_t": 0
+      }
+    ],
+    "power_bridge_slack": 4,
+    "product": 112413,
+    "s": 0,
+    "t": 0
+  },
+  "minimum_endpoint_imbalance_slack": {
+    "E0": [],
+    "E0_count": 0,
+    "E1": [
+      371,
+      707,
+      1113,
+      2121
+    ],
+    "E1_count": 4,
+    "canonical_power_slack": 4,
+    "d": 4,
+    "endpoint_imbalance_slack": 4,
+    "h": 112412,
+    "minimum_canonical_prefix_slack": 4,
+    "pairs": [
+      {
+        "canonical_blocker": 2121,
+        "canonical_root": 266,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 53
+          },
+          {
+            "root": 266,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 2121
+          }
+        ],
+        "pair": [
+          53,
+          2121
+        ],
+        "prefix_index": 1,
+        "prefix_slack": 7,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 1113,
+        "canonical_root": 140,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 101
+          },
+          {
+            "root": 140,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 1113
+          }
+        ],
+        "pair": [
+          101,
+          1113
+        ],
+        "prefix_index": 2,
+        "prefix_slack": 6,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 707,
+        "canonical_root": 354,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 159
+          },
+          {
+            "root": 354,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 707
+          }
+        ],
+        "pair": [
+          159,
+          707
+        ],
+        "prefix_index": 3,
+        "prefix_slack": 5,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 371,
+        "canonical_root": 186,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 303
+          },
+          {
+            "root": 186,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 371
+          }
+        ],
+        "pair": [
+          303,
+          371
+        ],
+        "prefix_index": 4,
+        "prefix_slack": 4,
+        "prefix_t": 0
+      }
+    ],
+    "power_bridge_slack": 4,
+    "product": 112413,
+    "s": 0,
+    "t": 0
+  },
+  "minimum_power_bridge_slack": {
+    "E0": [],
+    "E0_count": 0,
+    "E1": [
+      371,
+      707,
+      1113,
+      2121
+    ],
+    "E1_count": 4,
+    "canonical_power_slack": 4,
+    "d": 4,
+    "endpoint_imbalance_slack": 4,
+    "h": 112412,
+    "minimum_canonical_prefix_slack": 4,
+    "pairs": [
+      {
+        "canonical_blocker": 2121,
+        "canonical_root": 266,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 53
+          },
+          {
+            "root": 266,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 2121
+          }
+        ],
+        "pair": [
+          53,
+          2121
+        ],
+        "prefix_index": 1,
+        "prefix_slack": 7,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 1113,
+        "canonical_root": 140,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 101
+          },
+          {
+            "root": 140,
+            "root_pair_count": 1,
+            "root_state": "other_hole",
+            "state": "other_hole",
+            "value": 1113
+          }
+        ],
+        "pair": [
+          101,
+          1113
+        ],
+        "prefix_index": 2,
+        "prefix_slack": 6,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 707,
+        "canonical_root": 354,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 159
+          },
+          {
+            "root": 354,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 707
+          }
+        ],
+        "pair": [
+          159,
+          707
+        ],
+        "prefix_index": 3,
+        "prefix_slack": 5,
+        "prefix_t": 0
+      },
+      {
+        "canonical_blocker": 371,
+        "canonical_root": 186,
+        "counted_in_s": false,
+        "counted_in_t": false,
+        "endpoints": [
+          {
+            "root": null,
+            "root_pair_count": null,
+            "root_state": null,
+            "state": "generated",
+            "value": 303
+          },
+          {
+            "root": 186,
+            "root_pair_count": 1,
+            "root_state": "hard",
+            "state": "other_hole",
+            "value": 371
+          }
+        ],
+        "pair": [
+          303,
+          371
+        ],
+        "prefix_index": 4,
+        "prefix_slack": 4,
+        "prefix_t": 0
+      }
+    ],
+    "power_bridge_slack": 4,
+    "product": 112413,
+    "s": 0,
+    "t": 0
+  },
+  "schema": "C116-endpoint-invariant-v2",
+  "totals": {
+    "hard_holes": 45583,
+    "maximum_d": 9
+  }
+}

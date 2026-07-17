@@ -1,0 +1,16 @@
+{
+  "checked": 3186,
+  "first_failure": null,
+  "tight_sample": [
+    {
+      "limit": 362,
+      "root_cutoff": 362,
+      "demand": 12
+    },
+    {
+      "limit": 2000,
+      "root_cutoff": 2000,
+      "demand": 97
+    }
+  ]
+}

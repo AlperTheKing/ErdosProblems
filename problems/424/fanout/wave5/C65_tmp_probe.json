@@ -1,0 +1,3150 @@
+[
+  {
+    "limit": 54,
+    "flow": 1,
+    "hard_holes_in_least_closure_complement": 1,
+    "mincut_hard": 1,
+    "mincut_boundaries": 1,
+    "margin": 0,
+    "unhealed_hard_roots": 1,
+    "healed_splitless_roots": 1,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 10,
+    "samples": {
+      "unhealed_hard": [
+        54
+      ],
+      "healed_splitless": [
+        6
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        18,
+        20,
+        24,
+        30,
+        36,
+        38,
+        42,
+        48
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 21,
+          "witnesses": []
+        }
+      ]
+    }
+  },
+  {
+    "limit": 74,
+    "flow": 2,
+    "hard_holes_in_least_closure_complement": 2,
+    "mincut_hard": 2,
+    "mincut_boundaries": 2,
+    "margin": 0,
+    "unhealed_hard_roots": 2,
+    "healed_splitless_roots": 2,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 13,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        74
+      ],
+      "healed_splitless": [
+        6,
+        18
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        20,
+        24,
+        30,
+        36,
+        38,
+        42,
+        48,
+        56,
+        60,
+        66,
+        72
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 21,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 35,
+          "witnesses": []
+        }
+      ]
+    }
+  },
+  {
+    "limit": 114,
+    "flow": 3,
+    "hard_holes_in_least_closure_complement": 3,
+    "mincut_hard": 3,
+    "mincut_boundaries": 3,
+    "margin": 0,
+    "unhealed_hard_roots": 3,
+    "healed_splitless_roots": 3,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 19,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        74,
+        114
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        30,
+        36,
+        38,
+        42,
+        48,
+        56,
+        60,
+        66,
+        72,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        110
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 21,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 35,
+          "witnesses": []
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 39,
+          "witnesses": []
+        }
+      ]
+    }
+  },
+  {
+    "limit": 144,
+    "flow": 5,
+    "hard_holes_in_least_closure_complement": 4,
+    "mincut_hard": 4,
+    "mincut_boundaries": 5,
+    "margin": 1,
+    "unhealed_hard_roots": 4,
+    "healed_splitless_roots": 5,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 22,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        74,
+        114,
+        144
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20,
+        48,
+        66
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        30,
+        36,
+        38,
+        42,
+        56,
+        60,
+        72,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        110,
+        120,
+        126,
+        128,
+        132,
+        138
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 21,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 35,
+          "witnesses": []
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 39,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 95,
+          "witnesses": [
+            [
+              3,
+              32
+            ]
+          ]
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 186,
+    "flow": 6,
+    "hard_holes_in_least_closure_complement": 6,
+    "mincut_hard": 6,
+    "mincut_boundaries": 6,
+    "margin": 0,
+    "unhealed_hard_roots": 6,
+    "healed_splitless_roots": 6,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 28,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        74,
+        114,
+        144,
+        174,
+        186
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20,
+        38,
+        48,
+        66
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        30,
+        36,
+        42,
+        56,
+        60,
+        72,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        110,
+        120,
+        126,
+        128,
+        132,
+        138,
+        146,
+        150,
+        156,
+        162,
+        168,
+        180,
+        182
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 39,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 75,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 95,
+          "witnesses": [
+            [
+              3,
+              32
+            ]
+          ]
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 318,
+    "flow": 12,
+    "hard_holes_in_least_closure_complement": 10,
+    "mincut_hard": 10,
+    "mincut_boundaries": 12,
+    "margin": 2,
+    "unhealed_hard_roots": 9,
+    "healed_splitless_roots": 10,
+    "healed_seed3_roots": 1,
+    "unhealed_splitless_roots": 46,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        114,
+        144,
+        174,
+        186,
+        234,
+        252,
+        294,
+        318
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20,
+        30,
+        38,
+        60,
+        66,
+        110,
+        120,
+        126
+      ],
+      "healed_seed3": [
+        32
+      ],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        36,
+        42,
+        48,
+        56,
+        72,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        128,
+        132,
+        138,
+        146,
+        150,
+        156,
+        162,
+        168,
+        180,
+        182,
+        192,
+        198,
+        200,
+        210,
+        216,
+        218
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 39,
+          "witnesses": []
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 63,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 75,
+          "witnesses": []
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 119,
+          "witnesses": []
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 362,
+    "flow": 12,
+    "hard_holes_in_least_closure_complement": 12,
+    "mincut_hard": 12,
+    "mincut_boundaries": 12,
+    "margin": 0,
+    "unhealed_hard_roots": 11,
+    "healed_splitless_roots": 10,
+    "healed_seed3_roots": 1,
+    "unhealed_splitless_roots": 52,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        114,
+        144,
+        174,
+        186,
+        234,
+        252,
+        294,
+        318,
+        354,
+        362
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20,
+        30,
+        38,
+        60,
+        66,
+        110,
+        120,
+        126
+      ],
+      "healed_seed3": [
+        32
+      ],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        36,
+        42,
+        48,
+        56,
+        72,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        128,
+        132,
+        138,
+        146,
+        150,
+        156,
+        162,
+        168,
+        180,
+        182,
+        192,
+        198,
+        200,
+        210,
+        216,
+        218
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 63,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 75,
+          "witnesses": []
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 119,
+          "witnesses": []
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 377,
+    "flow": 15,
+    "hard_holes_in_least_closure_complement": 12,
+    "mincut_hard": 11,
+    "mincut_boundaries": 14,
+    "margin": 3,
+    "unhealed_hard_roots": 10,
+    "healed_splitless_roots": 13,
+    "healed_seed3_roots": 0,
+    "unhealed_splitless_roots": 51,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        114,
+        174,
+        186,
+        234,
+        252,
+        294,
+        318,
+        354,
+        362
+      ],
+      "healed_splitless": [
+        6,
+        18,
+        20,
+        30,
+        38,
+        48,
+        60,
+        66,
+        92,
+        110,
+        120,
+        126,
+        182
+      ],
+      "healed_seed3": [],
+      "unhealed_splitless": [
+        8,
+        12,
+        24,
+        36,
+        42,
+        56,
+        72,
+        78,
+        90,
+        96,
+        102,
+        108,
+        128,
+        132,
+        138,
+        146,
+        150,
+        156,
+        162,
+        168,
+        180,
+        192,
+        198,
+        200,
+        210,
+        216,
+        218,
+        222,
+        228,
+        236
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 75,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 95,
+          "witnesses": [
+            [
+              3,
+              32
+            ]
+          ]
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 119,
+          "witnesses": []
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 183,
+          "witnesses": []
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 500,
+    "flow": 24,
+    "hard_holes_in_least_closure_complement": 18,
+    "mincut_hard": 17,
+    "mincut_boundaries": 23,
+    "margin": 6,
+    "unhealed_hard_roots": 16,
+    "healed_splitless_roots": 20,
+    "healed_seed3_roots": 2,
+    "unhealed_splitless_roots": 64,
+    "samples": {
+      "unhealed_hard": [
+        54,
+        114,
+        144,
+        186,
+        234,
+        252,
+        294,
+        318,
+        354,
+        362,
+        390,
+        414,
+        444,
+        450,
+        474,
+        492
+      ],
+      "healed_splitless": [
+        6,
+        8,
+        18,
+        20,
+        30,
+        38,
+        48,
+        56,
+        60,
+        66,
+        92,
+        110,
+        120,
+        126,
+        182,
+        198,
+        200,
+        210,
+        228,
+        246
+      ],
+      "healed_seed3": [
+        32,
+        62
+      ],
+      "unhealed_splitless": [
+        12,
+        24,
+        36,
+        42,
+        72,
+        78,
+        90,
+        96,
+        102,
+        108,
+        128,
+        132,
+        138,
+        146,
+        150,
+        156,
+        162,
+        168,
+        180,
+        192,
+        216,
+        218,
+        222,
+        236,
+        240,
+        258,
+        270,
+        272,
+        276,
+        282
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 8,
+          "kind": "splitless",
+          "child": 57,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 39,
+          "witnesses": []
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 63,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 75,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 189,
+          "witnesses": []
+        },
+        {
+          "root": 56,
+          "kind": "splitless",
+          "child": 111,
+          "witnesses": []
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 119,
+          "witnesses": []
+        },
+        {
+          "root": 62,
+          "kind": "seed3",
+          "child": 123,
+          "witnesses": []
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 183,
+          "witnesses": []
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 198,
+          "kind": "splitless",
+          "child": 395,
+          "witnesses": [
+            [
+              9,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 200,
+          "kind": "splitless",
+          "child": 399,
+          "witnesses": [
+            [
+              5,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 210,
+          "kind": "splitless",
+          "child": 419,
+          "witnesses": [
+            [
+              3,
+              140
+            ],
+            [
+              5,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 228,
+          "kind": "splitless",
+          "child": 455,
+          "witnesses": [
+            [
+              3,
+              152
+            ]
+          ]
+        },
+        {
+          "root": 246,
+          "kind": "splitless",
+          "child": 491,
+          "witnesses": [
+            [
+              3,
+              164
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 1000,
+    "flow": 44,
+    "hard_holes_in_least_closure_complement": 41,
+    "mincut_hard": 38,
+    "mincut_boundaries": 41,
+    "margin": 3,
+    "unhealed_hard_roots": 34,
+    "healed_splitless_roots": 34,
+    "healed_seed3_roots": 3,
+    "unhealed_splitless_roots": 122,
+    "samples": {
+      "unhealed_hard": [
+        174,
+        234,
+        252,
+        294,
+        318,
+        354,
+        362,
+        414,
+        450,
+        474,
+        492,
+        516,
+        534,
+        564,
+        582,
+        594,
+        614,
+        648,
+        666,
+        704,
+        714,
+        758,
+        774,
+        780,
+        798,
+        846,
+        884,
+        894,
+        912,
+        924
+      ],
+      "healed_splitless": [
+        6,
+        8,
+        18,
+        20,
+        30,
+        38,
+        48,
+        56,
+        60,
+        66,
+        78,
+        90,
+        92,
+        96,
+        108,
+        110,
+        120,
+        126,
+        146,
+        168,
+        182,
+        198,
+        200,
+        210,
+        228,
+        236,
+        246,
+        306,
+        308,
+        360
+      ],
+      "healed_seed3": [
+        32,
+        62,
+        116
+      ],
+      "unhealed_splitless": [
+        12,
+        24,
+        36,
+        42,
+        72,
+        102,
+        128,
+        132,
+        138,
+        150,
+        156,
+        162,
+        180,
+        192,
+        216,
+        218,
+        222,
+        240,
+        258,
+        270,
+        272,
+        276,
+        282,
+        288,
+        290,
+        300,
+        312,
+        326,
+        330,
+        336
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 8,
+          "kind": "splitless",
+          "child": 225,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 125,
+          "witnesses": [
+            [
+              9,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 149,
+          "witnesses": [
+            [
+              3,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 189,
+          "witnesses": []
+        },
+        {
+          "root": 56,
+          "kind": "splitless",
+          "child": 221,
+          "witnesses": []
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 237,
+          "witnesses": [
+            [
+              14,
+              17
+            ]
+          ]
+        },
+        {
+          "root": 62,
+          "kind": "seed3",
+          "child": 245,
+          "witnesses": []
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 78,
+          "kind": "splitless",
+          "child": 309,
+          "witnesses": []
+        },
+        {
+          "root": 90,
+          "kind": "splitless",
+          "child": 357,
+          "witnesses": []
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 183,
+          "witnesses": []
+        },
+        {
+          "root": 96,
+          "kind": "splitless",
+          "child": 381,
+          "witnesses": []
+        },
+        {
+          "root": 108,
+          "kind": "splitless",
+          "child": 215,
+          "witnesses": []
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 116,
+          "kind": "seed3",
+          "child": 231,
+          "witnesses": []
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 146,
+          "kind": "splitless",
+          "child": 291,
+          "witnesses": []
+        },
+        {
+          "root": 168,
+          "kind": "splitless",
+          "child": 335,
+          "witnesses": []
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 198,
+          "kind": "splitless",
+          "child": 395,
+          "witnesses": [
+            [
+              9,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 200,
+          "kind": "splitless",
+          "child": 399,
+          "witnesses": [
+            [
+              5,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 210,
+          "kind": "splitless",
+          "child": 419,
+          "witnesses": [
+            [
+              3,
+              140
+            ],
+            [
+              5,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 228,
+          "kind": "splitless",
+          "child": 455,
+          "witnesses": [
+            [
+              3,
+              152
+            ]
+          ]
+        },
+        {
+          "root": 236,
+          "kind": "splitless",
+          "child": 471,
+          "witnesses": []
+        },
+        {
+          "root": 246,
+          "kind": "splitless",
+          "child": 491,
+          "witnesses": [
+            [
+              3,
+              164
+            ]
+          ]
+        },
+        {
+          "root": 306,
+          "kind": "splitless",
+          "child": 611,
+          "witnesses": [
+            [
+              3,
+              204
+            ]
+          ]
+        },
+        {
+          "root": 308,
+          "kind": "splitless",
+          "child": 615,
+          "witnesses": [
+            [
+              14,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 360,
+          "kind": "splitless",
+          "child": 719,
+          "witnesses": [
+            [
+              9,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 378,
+          "kind": "splitless",
+          "child": 755,
+          "witnesses": [
+            [
+              9,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 380,
+          "kind": "splitless",
+          "child": 759,
+          "witnesses": [
+            [
+              5,
+              152
+            ]
+          ]
+        },
+        {
+          "root": 396,
+          "kind": "splitless",
+          "child": 791,
+          "witnesses": [
+            [
+              3,
+              264
+            ]
+          ]
+        },
+        {
+          "root": 486,
+          "kind": "splitless",
+          "child": 971,
+          "witnesses": [
+            [
+              3,
+              324
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 2000,
+    "flow": 97,
+    "hard_holes_in_least_closure_complement": 97,
+    "mincut_hard": 93,
+    "mincut_boundaries": 93,
+    "margin": 0,
+    "unhealed_hard_roots": 82,
+    "healed_splitless_roots": 76,
+    "healed_seed3_roots": 6,
+    "unhealed_splitless_roots": 222,
+    "samples": {
+      "unhealed_hard": [
+        234,
+        252,
+        294,
+        414,
+        450,
+        474,
+        492,
+        564,
+        582,
+        614,
+        648,
+        666,
+        704,
+        758,
+        774,
+        780,
+        798,
+        846,
+        884,
+        894,
+        912,
+        924,
+        942,
+        954,
+        956,
+        978,
+        1002,
+        1014,
+        1064,
+        1074
+      ],
+      "healed_splitless": [
+        6,
+        8,
+        18,
+        20,
+        30,
+        36,
+        38,
+        48,
+        56,
+        60,
+        66,
+        78,
+        90,
+        92,
+        96,
+        108,
+        110,
+        120,
+        126,
+        132,
+        138,
+        146,
+        168,
+        182,
+        198,
+        200,
+        210,
+        222,
+        228,
+        236
+      ],
+      "healed_seed3": [
+        32,
+        62,
+        104,
+        116,
+        212,
+        332
+      ],
+      "unhealed_splitless": [
+        12,
+        24,
+        42,
+        72,
+        102,
+        128,
+        150,
+        156,
+        162,
+        180,
+        192,
+        216,
+        218,
+        240,
+        272,
+        276,
+        282,
+        300,
+        312,
+        330,
+        336,
+        342,
+        348,
+        366,
+        372,
+        398,
+        402,
+        408,
+        416,
+        420
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 8,
+          "kind": "splitless",
+          "child": 225,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 117,
+          "witnesses": []
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 125,
+          "witnesses": [
+            [
+              9,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 36,
+          "kind": "splitless",
+          "child": 561,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 149,
+          "witnesses": [
+            [
+              3,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 189,
+          "witnesses": []
+        },
+        {
+          "root": 56,
+          "kind": "splitless",
+          "child": 221,
+          "witnesses": []
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 119,
+          "witnesses": []
+        },
+        {
+          "root": 62,
+          "kind": "seed3",
+          "child": 489,
+          "witnesses": [
+            [
+              5,
+              98
+            ]
+          ]
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 78,
+          "kind": "splitless",
+          "child": 309,
+          "witnesses": []
+        },
+        {
+          "root": 90,
+          "kind": "splitless",
+          "child": 357,
+          "witnesses": []
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 365,
+          "witnesses": [
+            [
+              3,
+              122
+            ]
+          ]
+        },
+        {
+          "root": 96,
+          "kind": "splitless",
+          "child": 381,
+          "witnesses": []
+        },
+        {
+          "root": 104,
+          "kind": "seed3",
+          "child": 207,
+          "witnesses": []
+        },
+        {
+          "root": 108,
+          "kind": "splitless",
+          "child": 429,
+          "witnesses": []
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 116,
+          "kind": "seed3",
+          "child": 461,
+          "witnesses": [
+            [
+              14,
+              33
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 132,
+          "kind": "splitless",
+          "child": 525,
+          "witnesses": []
+        },
+        {
+          "root": 138,
+          "kind": "splitless",
+          "child": 549,
+          "witnesses": []
+        },
+        {
+          "root": 146,
+          "kind": "splitless",
+          "child": 291,
+          "witnesses": []
+        },
+        {
+          "root": 168,
+          "kind": "splitless",
+          "child": 669,
+          "witnesses": [
+            [
+              5,
+              134
+            ]
+          ]
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 198,
+          "kind": "splitless",
+          "child": 395,
+          "witnesses": [
+            [
+              9,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 200,
+          "kind": "splitless",
+          "child": 399,
+          "witnesses": [
+            [
+              5,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 210,
+          "kind": "splitless",
+          "child": 419,
+          "witnesses": [
+            [
+              5,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 212,
+          "kind": "seed3",
+          "child": 423,
+          "witnesses": []
+        },
+        {
+          "root": 222,
+          "kind": "splitless",
+          "child": 443,
+          "witnesses": []
+        },
+        {
+          "root": 228,
+          "kind": "splitless",
+          "child": 455,
+          "witnesses": [
+            [
+              3,
+              152
+            ]
+          ]
+        },
+        {
+          "root": 236,
+          "kind": "splitless",
+          "child": 471,
+          "witnesses": []
+        },
+        {
+          "root": 246,
+          "kind": "splitless",
+          "child": 491,
+          "witnesses": [
+            [
+              3,
+              164
+            ]
+          ]
+        },
+        {
+          "root": 258,
+          "kind": "splitless",
+          "child": 515,
+          "witnesses": []
+        },
+        {
+          "root": 270,
+          "kind": "splitless",
+          "child": 539,
+          "witnesses": []
+        },
+        {
+          "root": 288,
+          "kind": "splitless",
+          "child": 575,
+          "witnesses": []
+        },
+        {
+          "root": 290,
+          "kind": "splitless",
+          "child": 579,
+          "witnesses": []
+        }
+      ]
+    }
+  },
+  {
+    "limit": 5000,
+    "flow": 274,
+    "hard_holes_in_least_closure_complement": 253,
+    "mincut_hard": 226,
+    "mincut_boundaries": 247,
+    "margin": 21,
+    "unhealed_hard_roots": 195,
+    "healed_splitless_roots": 199,
+    "healed_seed3_roots": 17,
+    "unhealed_splitless_roots": 502,
+    "samples": {
+      "unhealed_hard": [
+        414,
+        450,
+        474,
+        582,
+        666,
+        758,
+        774,
+        780,
+        798,
+        846,
+        894,
+        912,
+        924,
+        942,
+        954,
+        1002,
+        1014,
+        1176,
+        1224,
+        1242,
+        1314,
+        1356,
+        1374,
+        1404,
+        1410,
+        1424,
+        1434,
+        1440,
+        1494,
+        1512
+      ],
+      "healed_splitless": [
+        6,
+        8,
+        18,
+        20,
+        30,
+        36,
+        38,
+        42,
+        48,
+        56,
+        60,
+        66,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        110,
+        120,
+        126,
+        138,
+        146,
+        168,
+        182,
+        198,
+        200,
+        210,
+        218,
+        222
+      ],
+      "healed_seed3": [
+        32,
+        62,
+        68,
+        104,
+        116,
+        140,
+        176,
+        188,
+        212,
+        266,
+        278,
+        284,
+        332,
+        350,
+        440,
+        512,
+        638
+      ],
+      "unhealed_splitless": [
+        12,
+        24,
+        72,
+        128,
+        132,
+        150,
+        156,
+        162,
+        180,
+        192,
+        216,
+        240,
+        276,
+        300,
+        312,
+        336,
+        348,
+        372,
+        398,
+        402,
+        408,
+        416,
+        488,
+        506,
+        528,
+        540,
+        612,
+        630,
+        636,
+        642
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 8,
+          "kind": "splitless",
+          "child": 449,
+          "witnesses": [
+            [
+              9,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 233,
+          "witnesses": [
+            [
+              9,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 125,
+          "witnesses": [
+            [
+              9,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 36,
+          "kind": "splitless",
+          "child": 561,
+          "witnesses": []
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 149,
+          "witnesses": [
+            [
+              3,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 42,
+          "kind": "splitless",
+          "child": 657,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 189,
+          "witnesses": []
+        },
+        {
+          "root": 56,
+          "kind": "splitless",
+          "child": 441,
+          "witnesses": [
+            [
+              17,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 237,
+          "witnesses": [
+            [
+              14,
+              17
+            ]
+          ]
+        },
+        {
+          "root": 62,
+          "kind": "seed3",
+          "child": 489,
+          "witnesses": [
+            [
+              5,
+              98
+            ]
+          ]
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 68,
+          "kind": "seed3",
+          "child": 1073,
+          "witnesses": []
+        },
+        {
+          "root": 78,
+          "kind": "splitless",
+          "child": 617,
+          "witnesses": [
+            [
+              3,
+              206
+            ]
+          ]
+        },
+        {
+          "root": 90,
+          "kind": "splitless",
+          "child": 713,
+          "witnesses": [
+            [
+              14,
+              51
+            ]
+          ]
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 365,
+          "witnesses": [
+            [
+              3,
+              122
+            ]
+          ]
+        },
+        {
+          "root": 96,
+          "kind": "splitless",
+          "child": 381,
+          "witnesses": []
+        },
+        {
+          "root": 102,
+          "kind": "splitless",
+          "child": 1617,
+          "witnesses": []
+        },
+        {
+          "root": 104,
+          "kind": "seed3",
+          "child": 207,
+          "witnesses": []
+        },
+        {
+          "root": 108,
+          "kind": "splitless",
+          "child": 429,
+          "witnesses": []
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 116,
+          "kind": "seed3",
+          "child": 231,
+          "witnesses": []
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 138,
+          "kind": "splitless",
+          "child": 549,
+          "witnesses": []
+        },
+        {
+          "root": 140,
+          "kind": "seed3",
+          "child": 1113,
+          "witnesses": []
+        },
+        {
+          "root": 146,
+          "kind": "splitless",
+          "child": 291,
+          "witnesses": []
+        },
+        {
+          "root": 168,
+          "kind": "splitless",
+          "child": 669,
+          "witnesses": [
+            [
+              5,
+              134
+            ]
+          ]
+        },
+        {
+          "root": 176,
+          "kind": "seed3",
+          "child": 701,
+          "witnesses": [
+            [
+              26,
+              27
+            ]
+          ]
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 188,
+          "kind": "seed3",
+          "child": 1497,
+          "witnesses": []
+        },
+        {
+          "root": 198,
+          "kind": "splitless",
+          "child": 395,
+          "witnesses": [
+            [
+              9,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 200,
+          "kind": "splitless",
+          "child": 399,
+          "witnesses": [
+            [
+              5,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 210,
+          "kind": "splitless",
+          "child": 419,
+          "witnesses": [
+            [
+              5,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 212,
+          "kind": "seed3",
+          "child": 1689,
+          "witnesses": [
+            [
+              5,
+              338
+            ],
+            [
+              26,
+              65
+            ]
+          ]
+        },
+        {
+          "root": 218,
+          "kind": "splitless",
+          "child": 1737,
+          "witnesses": []
+        },
+        {
+          "root": 222,
+          "kind": "splitless",
+          "child": 885,
+          "witnesses": []
+        },
+        {
+          "root": 228,
+          "kind": "splitless",
+          "child": 455,
+          "witnesses": [
+            [
+              3,
+              152
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "limit": 10000,
+    "flow": 560,
+    "hard_holes_in_least_closure_complement": 518,
+    "mincut_hard": 455,
+    "mincut_boundaries": 497,
+    "margin": 42,
+    "unhealed_hard_roots": 388,
+    "healed_splitless_roots": 398,
+    "healed_seed3_roots": 32,
+    "unhealed_splitless_roots": 946,
+    "samples": {
+      "unhealed_hard": [
+        450,
+        582,
+        666,
+        774,
+        798,
+        912,
+        954,
+        1242,
+        1314,
+        1344,
+        1356,
+        1410,
+        1434,
+        1440,
+        1494,
+        1512,
+        1536,
+        1644,
+        1674,
+        1704,
+        1770,
+        1836,
+        1854,
+        1902,
+        1920,
+        2022,
+        2058,
+        2154,
+        2166,
+        2232
+      ],
+      "healed_splitless": [
+        6,
+        8,
+        12,
+        18,
+        20,
+        24,
+        30,
+        36,
+        38,
+        42,
+        48,
+        56,
+        60,
+        66,
+        78,
+        90,
+        92,
+        96,
+        102,
+        108,
+        110,
+        120,
+        126,
+        138,
+        146,
+        156,
+        162,
+        168,
+        182,
+        198
+      ],
+      "healed_seed3": [
+        32,
+        62,
+        68,
+        86,
+        104,
+        116,
+        140,
+        176,
+        188,
+        212,
+        266,
+        278,
+        284,
+        332,
+        338,
+        350,
+        356,
+        422,
+        428,
+        440,
+        512,
+        530,
+        638,
+        734,
+        836,
+        860,
+        896,
+        932,
+        1052,
+        1070
+      ],
+      "unhealed_splitless": [
+        72,
+        128,
+        132,
+        150,
+        180,
+        192,
+        276,
+        300,
+        336,
+        348,
+        372,
+        398,
+        402,
+        408,
+        416,
+        506,
+        528,
+        540,
+        612,
+        630,
+        642,
+        702,
+        762,
+        768,
+        792,
+        812,
+        822,
+        882,
+        972,
+        990
+      ],
+      "healed_details": [
+        {
+          "root": 6,
+          "kind": "splitless",
+          "child": 41,
+          "witnesses": [
+            [
+              3,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 8,
+          "kind": "splitless",
+          "child": 449,
+          "witnesses": [
+            [
+              9,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 12,
+          "kind": "splitless",
+          "child": 2817,
+          "witnesses": []
+        },
+        {
+          "root": 18,
+          "kind": "splitless",
+          "child": 69,
+          "witnesses": [
+            [
+              5,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 20,
+          "kind": "splitless",
+          "child": 77,
+          "witnesses": [
+            [
+              3,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 24,
+          "kind": "splitless",
+          "child": 2945,
+          "witnesses": []
+        },
+        {
+          "root": 30,
+          "kind": "splitless",
+          "child": 233,
+          "witnesses": [
+            [
+              9,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 32,
+          "kind": "seed3",
+          "child": 125,
+          "witnesses": [
+            [
+              9,
+              14
+            ]
+          ]
+        },
+        {
+          "root": 36,
+          "kind": "splitless",
+          "child": 1121,
+          "witnesses": [
+            [
+              3,
+              374
+            ]
+          ]
+        },
+        {
+          "root": 38,
+          "kind": "splitless",
+          "child": 149,
+          "witnesses": [
+            [
+              3,
+              50
+            ]
+          ]
+        },
+        {
+          "root": 42,
+          "kind": "splitless",
+          "child": 657,
+          "witnesses": []
+        },
+        {
+          "root": 48,
+          "kind": "splitless",
+          "child": 377,
+          "witnesses": [
+            [
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "root": 56,
+          "kind": "splitless",
+          "child": 441,
+          "witnesses": [
+            [
+              17,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 60,
+          "kind": "splitless",
+          "child": 237,
+          "witnesses": [
+            [
+              14,
+              17
+            ]
+          ]
+        },
+        {
+          "root": 62,
+          "kind": "seed3",
+          "child": 489,
+          "witnesses": [
+            [
+              5,
+              98
+            ]
+          ]
+        },
+        {
+          "root": 66,
+          "kind": "splitless",
+          "child": 131,
+          "witnesses": [
+            [
+              3,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 68,
+          "kind": "seed3",
+          "child": 2145,
+          "witnesses": []
+        },
+        {
+          "root": 78,
+          "kind": "splitless",
+          "child": 617,
+          "witnesses": [
+            [
+              3,
+              206
+            ]
+          ]
+        },
+        {
+          "root": 86,
+          "kind": "seed3",
+          "child": 2721,
+          "witnesses": []
+        },
+        {
+          "root": 90,
+          "kind": "splitless",
+          "child": 713,
+          "witnesses": [
+            [
+              14,
+              51
+            ]
+          ]
+        },
+        {
+          "root": 92,
+          "kind": "splitless",
+          "child": 365,
+          "witnesses": [
+            [
+              3,
+              122
+            ]
+          ]
+        },
+        {
+          "root": 96,
+          "kind": "splitless",
+          "child": 761,
+          "witnesses": [
+            [
+              3,
+              254
+            ]
+          ]
+        },
+        {
+          "root": 102,
+          "kind": "splitless",
+          "child": 1617,
+          "witnesses": []
+        },
+        {
+          "root": 104,
+          "kind": "seed3",
+          "child": 825,
+          "witnesses": []
+        },
+        {
+          "root": 108,
+          "kind": "splitless",
+          "child": 857,
+          "witnesses": [
+            [
+              26,
+              33
+            ]
+          ]
+        },
+        {
+          "root": 110,
+          "kind": "splitless",
+          "child": 219,
+          "witnesses": [
+            [
+              5,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 116,
+          "kind": "seed3",
+          "child": 461,
+          "witnesses": [
+            [
+              14,
+              33
+            ]
+          ]
+        },
+        {
+          "root": 120,
+          "kind": "splitless",
+          "child": 239,
+          "witnesses": [
+            [
+              3,
+              80
+            ]
+          ]
+        },
+        {
+          "root": 126,
+          "kind": "splitless",
+          "child": 251,
+          "witnesses": [
+            [
+              3,
+              84
+            ]
+          ]
+        },
+        {
+          "root": 138,
+          "kind": "splitless",
+          "child": 1097,
+          "witnesses": [
+            [
+              9,
+              122
+            ]
+          ]
+        },
+        {
+          "root": 140,
+          "kind": "seed3",
+          "child": 1113,
+          "witnesses": []
+        },
+        {
+          "root": 146,
+          "kind": "splitless",
+          "child": 581,
+          "witnesses": [
+            [
+              3,
+              194
+            ]
+          ]
+        },
+        {
+          "root": 156,
+          "kind": "splitless",
+          "child": 621,
+          "witnesses": []
+        },
+        {
+          "root": 162,
+          "kind": "splitless",
+          "child": 2577,
+          "witnesses": []
+        },
+        {
+          "root": 168,
+          "kind": "splitless",
+          "child": 669,
+          "witnesses": [
+            [
+              5,
+              134
+            ]
+          ]
+        },
+        {
+          "root": 176,
+          "kind": "seed3",
+          "child": 701,
+          "witnesses": [
+            [
+              26,
+              27
+            ]
+          ]
+        },
+        {
+          "root": 182,
+          "kind": "splitless",
+          "child": 363,
+          "witnesses": [
+            [
+              14,
+              26
+            ]
+          ]
+        },
+        {
+          "root": 188,
+          "kind": "seed3",
+          "child": 1497,
+          "witnesses": []
+        },
+        {
+          "root": 198,
+          "kind": "splitless",
+          "child": 395,
+          "witnesses": [
+            [
+              9,
+              44
+            ]
+          ]
+        },
+        {
+          "root": 200,
+          "kind": "splitless",
+          "child": 399,
+          "witnesses": [
+            [
+              5,
+              80
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

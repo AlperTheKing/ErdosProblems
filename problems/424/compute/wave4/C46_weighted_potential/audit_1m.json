@@ -1,0 +1,1396 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "algorithm": "SPF divisors plus increasing least-grounded recursion",
+  "hard": 45583,
+  "targets": 67537,
+  "r3_exits": 9351,
+  "splitless": 108651,
+  "maximum_rank": 14,
+  "maximum_target_ordinal_in_component": 32,
+  "rank_histogram_hard": {
+    "2": 18500,
+    "3": 4141,
+    "4": 8696,
+    "5": 4243,
+    "6": 4114,
+    "7": 2373,
+    "8": 1606,
+    "9": 997,
+    "10": 527,
+    "11": 264,
+    "12": 99,
+    "13": 22,
+    "14": 1
+  },
+  "rank_histogram_target": {
+    "0": 34760,
+    "1": 3225,
+    "2": 7296,
+    "3": 3561,
+    "4": 5007,
+    "5": 3448,
+    "6": 3185,
+    "7": 2326,
+    "8": 1819,
+    "9": 1310,
+    "10": 811,
+    "11": 504,
+    "12": 239,
+    "13": 45,
+    "14": 1
+  },
+  "candidate_audits": [
+    {
+      "name": "rank_abel_t=1/2",
+      "cleared_denominator": 16384,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -544449918,
+      "terminal_deficit": "-272224959/8192"
+    },
+    {
+      "name": "rank_abel_t=2/3",
+      "cleared_denominator": 4782969,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -147632318814,
+      "terminal_deficit": "-49210772938/1594323"
+    },
+    {
+      "name": "rank_abel_t=3/4",
+      "cleared_denominator": 268435456,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -7833014511764,
+      "terminal_deficit": "-1958253627941/67108864"
+    },
+    {
+      "name": "rank_abel_t=9/10",
+      "cleared_denominator": 100000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -2519113668204949670,
+      "terminal_deficit": "-251911366820494967/10000000000000"
+    },
+    {
+      "name": "rank_abel_t=99/100",
+      "cleared_denominator": 10000000000000000000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -222892963535636958376890490387700,
+      "terminal_deficit": "-2228929635356369583768904903877/100000000000000000000000000"
+    },
+    {
+      "name": "rank_abel_t=999/1000",
+      "cleared_denominator": 1000000000000000000000000000000000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -21987573190488322431069601247420738286438977000,
+      "terminal_deficit": "-21987573190488322431069601247420738286438977/1000000000000000000000000000000000000000"
+    },
+    {
+      "name": "first_two_component_exits_alpha=0/1",
+      "cleared_denominator": 1,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 10514,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 1,
+        "deficit": "1"
+      },
+      "maximum_positive": {
+        "X": 6192,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 18,
+        "deficit": "18"
+      },
+      "terminal_deficit_numerator": -17389,
+      "terminal_deficit": "-17389"
+    },
+    {
+      "name": "first_two_component_exits_alpha=1/2",
+      "cleared_denominator": 2,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1/2",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 6213,
+        "kind": "target",
+        "event_rank": 6,
+        "deficit_numerator": 1,
+        "deficit": "1/2"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 11,
+        "deficit": "11/2"
+      },
+      "terminal_deficit_numerator": -38044,
+      "terminal_deficit": "-19022"
+    },
+    {
+      "name": "first_two_component_exits_alpha=3/4",
+      "cleared_denominator": 4,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1/4",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2100,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 2,
+        "deficit": "1/2"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 9,
+        "deficit": "9/4"
+      },
+      "terminal_deficit_numerator": -79354,
+      "terminal_deficit": "-39677/2"
+    },
+    {
+      "name": "first_two_component_exits_alpha=1/1",
+      "cleared_denominator": 1,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -20655,
+      "terminal_deficit": "-20655"
+    },
+    {
+      "name": "canonical_component_exit_weight=2^(1-ordinal)",
+      "cleared_denominator": 2147483648,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1073741824,
+        "deficit": "1/2",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2169,
+        "kind": "target",
+        "event_rank": 4,
+        "deficit_numerator": 2147483648,
+        "deficit": "1"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 10737418240,
+        "deficit": "5"
+      },
+      "terminal_deficit_numerator": -41300636024829,
+      "terminal_deficit": "-41300636024829/2147483648"
+    },
+    {
+      "name": "combined_rank_1/2_and_geometric_component",
+      "cleared_denominator": 35184372088832,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -1166338414088988346,
+      "terminal_deficit": "-583169207044494173/17592186044416"
+    },
+    {
+      "name": "combined_rank_9/10_and_geometric_component",
+      "cleared_denominator": 214748364800000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -5122847849039761567905931378,
+      "terminal_deficit": "-2561423924519880783952965689/107374182400000000000000"
+    },
+    {
+      "name": "combined_rank_19/20_and_geometric_component",
+      "cleared_denominator": 3518437208883200000000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 663885120851148800000000000,
+        "deficit": "3019/16000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 663885120851148800000000000,
+        "deficit": "3019/16000"
+      },
+      "maximum_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 663885120851148800000000000,
+        "deficit": "3019/16000"
+      },
+      "terminal_deficit_numerator": -76371157598033946194784924202828,
+      "terminal_deficit": "-19092789399508486548696231050707/879609302220800000000000000"
+    },
+    {
+      "name": "combined_rank_99/100_and_geometric_component",
+      "cleared_denominator": 21474836480000000000000000000000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 9353354291445760000000000000000000000,
+        "deficit": "871099/2000000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2166,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 13972498186219447910400000000000000000,
+        "deficit": "65064514923/100000000000"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 77017174327825950310400000000000000000,
+        "deficit": "358639165423/100000000000"
+      },
+      "terminal_deficit_numerator": -424231254503620021636354450988589366314428,
+      "terminal_deficit": "-106057813625905005409088612747147341578607/5368709120000000000000000000000000000"
+    },
+    {
+      "name": "combined_rank_999/1000_and_geometric_component",
+      "cleared_denominator": 2147483648000000000000000000000000000000000000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1059794990374322176000000000000000000000000000000000,
+        "deficit": "987010999/2000000000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2169,
+        "kind": "target",
+        "event_rank": 4,
+        "deficit_numerator": 1863267673281624212231946240000000000000000000000000,
+        "deficit": "173530324667843451/200000000000000000"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 10430682661903966077703946240000000000000000000000000,
+        "deficit": "971433023168143451/200000000000000000"
+      },
+      "terminal_deficit_numerator": -41414287521323166936654255336534416853222246591047559928,
+      "terminal_deficit": "-5176785940165395867081781917066802106652780823880944991/268435456000000000000000000000000000000000000000000"
+    }
+  ],
+  "r3_global_transport": {
+    "definition": "odd generated x maps to 3x-1; even generated x maps to 3x/2 when that value is generated, otherwise 3x-1 is a Q terminal",
+    "r3_roots": 9351,
+    "terminated_within_limit": 2545,
+    "active_at_limit": 6806,
+    "root_partition_identity": true,
+    "state_collision": null,
+    "terminal_children_distinct": true,
+    "first_terminals": [
+      {
+        "start": 44,
+        "child": 131,
+        "parent": 66,
+        "path": [
+          44
+        ]
+      },
+      {
+        "start": 134,
+        "child": 1805,
+        "parent": 903,
+        "path": [
+          134,
+          201,
+          602
+        ]
+      },
+      {
+        "start": 368,
+        "child": 1103,
+        "parent": 552,
+        "path": [
+          368
+        ]
+      },
+      {
+        "start": 404,
+        "child": 1211,
+        "parent": 606,
+        "path": [
+          404
+        ]
+      },
+      {
+        "start": 494,
+        "child": 29993,
+        "parent": 14997,
+        "path": [
+          494,
+          741,
+          2222,
+          3333,
+          9998
+        ]
+      },
+      {
+        "start": 620,
+        "child": 1859,
+        "parent": 930,
+        "path": [
+          620
+        ]
+      },
+      {
+        "start": 644,
+        "child": 1931,
+        "parent": 966,
+        "path": [
+          644
+        ]
+      },
+      {
+        "start": 692,
+        "child": 2075,
+        "parent": 1038,
+        "path": [
+          692
+        ]
+      },
+      {
+        "start": 764,
+        "child": 2291,
+        "parent": 1146,
+        "path": [
+          764
+        ]
+      },
+      {
+        "start": 1004,
+        "child": 3011,
+        "parent": 1506,
+        "path": [
+          1004
+        ]
+      },
+      {
+        "start": 1106,
+        "child": 3317,
+        "parent": 1659,
+        "path": [
+          1106
+        ]
+      },
+      {
+        "start": 1124,
+        "child": 3371,
+        "parent": 1686,
+        "path": [
+          1124
+        ]
+      },
+      {
+        "start": 1214,
+        "child": 3641,
+        "parent": 1821,
+        "path": [
+          1214
+        ]
+      },
+      {
+        "start": 1304,
+        "child": 3911,
+        "parent": 1956,
+        "path": [
+          1304
+        ]
+      },
+      {
+        "start": 1340,
+        "child": 4019,
+        "parent": 2010,
+        "path": [
+          1340
+        ]
+      },
+      {
+        "start": 1484,
+        "child": 6677,
+        "parent": 3339,
+        "path": [
+          1484,
+          2226
+        ]
+      },
+      {
+        "start": 1574,
+        "child": 95603,
+        "parent": 47802,
+        "path": [
+          1574,
+          2361,
+          7082,
+          10623,
+          31868
+        ]
+      },
+      {
+        "start": 1664,
+        "child": 4991,
+        "parent": 2496,
+        "path": [
+          1664
+        ]
+      },
+      {
+        "start": 1682,
+        "child": 5045,
+        "parent": 2523,
+        "path": [
+          1682
+        ]
+      },
+      {
+        "start": 1724,
+        "child": 5171,
+        "parent": 2586,
+        "path": [
+          1724
+        ]
+      }
+    ],
+    "first_active": [
+      {
+        "start": 1934,
+        "state": 792944,
+        "next": 1189416,
+        "prospective_terminal_child": 2378831,
+        "path": [
+          1934,
+          2901,
+          8702,
+          13053,
+          39158,
+          58737,
+          176210,
+          264315,
+          792944
+        ]
+      },
+      {
+        "start": 5534,
+        "state": 504260,
+        "next": 756390,
+        "prospective_terminal_child": 1512779,
+        "path": [
+          5534,
+          8301,
+          24902,
+          37353,
+          112058,
+          168087,
+          504260
+        ]
+      },
+      {
+        "start": 6836,
+        "state": 934370,
+        "next": 1401555,
+        "prospective_terminal_child": 2803109,
+        "path": [
+          6836,
+          10254,
+          15381,
+          46142,
+          69213,
+          207638,
+          311457,
+          934370
+        ]
+      },
+      {
+        "start": 9716,
+        "state": 442677,
+        "next": 1328030,
+        "path": [
+          9716,
+          14574,
+          21861,
+          65582,
+          98373,
+          295118,
+          442677
+        ]
+      },
+      {
+        "start": 9926,
+        "state": 452241,
+        "next": 1356722,
+        "path": [
+          9926,
+          14889,
+          44666,
+          66999,
+          200996,
+          301494,
+          452241
+        ]
+      },
+      {
+        "start": 10286,
+        "state": 937286,
+        "next": 1405929,
+        "prospective_terminal_child": 2811857,
+        "path": [
+          10286,
+          15429,
+          46286,
+          69429,
+          208286,
+          312429,
+          937286
+        ]
+      },
+      {
+        "start": 11606,
+        "state": 352524,
+        "next": 528786,
+        "prospective_terminal_child": 1057571,
+        "path": [
+          11606,
+          17409,
+          52226,
+          78339,
+          235016,
+          352524
+        ]
+      },
+      {
+        "start": 13724,
+        "state": 937938,
+        "next": 1406907,
+        "prospective_terminal_child": 2813813,
+        "path": [
+          13724,
+          20586,
+          30879,
+          92636,
+          138954,
+          208431,
+          625292,
+          937938
+        ]
+      },
+      {
+        "start": 14804,
+        "state": 674499,
+        "next": 2023496,
+        "path": [
+          14804,
+          22206,
+          33309,
+          99926,
+          149889,
+          449666,
+          674499
+        ]
+      },
+      {
+        "start": 15614,
+        "state": 474267,
+        "next": 1422800,
+        "path": [
+          15614,
+          23421,
+          70262,
+          105393,
+          316178,
+          474267
+        ]
+      },
+      {
+        "start": 15758,
+        "state": 478641,
+        "next": 1435922,
+        "path": [
+          15758,
+          23637,
+          70910,
+          106365,
+          319094,
+          478641
+        ]
+      },
+      {
+        "start": 16694,
+        "state": 338048,
+        "next": 507072,
+        "prospective_terminal_child": 1014143,
+        "path": [
+          16694,
+          25041,
+          75122,
+          112683,
+          338048
+        ]
+      },
+      {
+        "start": 16862,
+        "state": 512175,
+        "next": 1536524,
+        "path": [
+          16862,
+          25293,
+          75878,
+          113817,
+          341450,
+          512175
+        ]
+      },
+      {
+        "start": 16934,
+        "state": 342908,
+        "next": 514362,
+        "prospective_terminal_child": 1028723,
+        "path": [
+          16934,
+          25401,
+          76202,
+          114303,
+          342908
+        ]
+      },
+      {
+        "start": 17270,
+        "state": 524568,
+        "next": 786852,
+        "prospective_terminal_child": 1573703,
+        "path": [
+          17270,
+          25905,
+          77714,
+          116571,
+          349712,
+          524568
+        ]
+      },
+      {
+        "start": 17414,
+        "state": 352628,
+        "next": 528942,
+        "prospective_terminal_child": 1057883,
+        "path": [
+          17414,
+          26121,
+          78362,
+          117543,
+          352628
+        ]
+      },
+      {
+        "start": 17924,
+        "state": 816654,
+        "next": 1224981,
+        "prospective_terminal_child": 2449961,
+        "path": [
+          17924,
+          26886,
+          40329,
+          120986,
+          181479,
+          544436,
+          816654
+        ]
+      },
+      {
+        "start": 18134,
+        "state": 367208,
+        "next": 550812,
+        "prospective_terminal_child": 1101623,
+        "path": [
+          18134,
+          27201,
+          81602,
+          122403,
+          367208
+        ]
+      },
+      {
+        "start": 18422,
+        "state": 373040,
+        "next": 559560,
+        "prospective_terminal_child": 1119119,
+        "path": [
+          18422,
+          27633,
+          82898,
+          124347,
+          373040
+        ]
+      },
+      {
+        "start": 19142,
+        "state": 387620,
+        "next": 581430,
+        "prospective_terminal_child": 1162859,
+        "path": [
+          19142,
+          28713,
+          86138,
+          129207,
+          387620
+        ]
+      }
+    ]
+  }
+}

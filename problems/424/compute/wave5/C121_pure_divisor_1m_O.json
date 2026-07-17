@@ -1,0 +1,863 @@
+{
+  "exactness": "integer SPF enumeration; no closure membership used",
+  "first_failure_2forced_ge_d_minus_8": {
+    "at_least_one_structural": 9,
+    "d": 12,
+    "forced_both_structural": 1,
+    "h": 237404,
+    "one_forced_slack": -3,
+    "pairs": [
+      {
+        "pair": [
+          5,
+          47481
+        ],
+        "roots": [
+          2,
+          5936
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          15,
+          15827
+        ],
+        "roots": [
+          8,
+          7914
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          17,
+          13965
+        ],
+        "roots": [
+          2,
+          3492
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          35,
+          6783
+        ],
+        "roots": [
+          18,
+          3392
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          51,
+          4655
+        ],
+        "roots": [
+          26,
+          2328
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          95,
+          2499
+        ],
+        "roots": [
+          48,
+          1250
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          105,
+          2261
+        ],
+        "roots": [
+          14,
+          566
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          119,
+          1995
+        ],
+        "roots": [
+          60,
+          998
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          245,
+          969
+        ],
+        "roots": [
+          62,
+          122
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          285,
+          833
+        ],
+        "roots": [
+          72,
+          14
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          323,
+          735
+        ],
+        "roots": [
+          162,
+          368
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          357,
+          665
+        ],
+        "roots": [
+          90,
+          84
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      }
+    ],
+    "product": 237405,
+    "two_forced_slack": -2
+  },
+  "first_failure_forced_ge_d_minus_8": {
+    "at_least_one_structural": 10,
+    "d": 12,
+    "forced_both_structural": 3,
+    "h": 98174,
+    "one_forced_slack": -1,
+    "pairs": [
+      {
+        "pair": [
+          5,
+          19635
+        ],
+        "roots": [
+          2,
+          9818
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          11,
+          8925
+        ],
+        "roots": [
+          6,
+          2232
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          15,
+          6545
+        ],
+        "roots": [
+          8,
+          410
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          17,
+          5775
+        ],
+        "roots": [
+          2,
+          2888
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          33,
+          2975
+        ],
+        "roots": [
+          2,
+          1488
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          35,
+          2805
+        ],
+        "roots": [
+          18,
+          702
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          51,
+          1925
+        ],
+        "roots": [
+          26,
+          482
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          77,
+          1275
+        ],
+        "roots": [
+          20,
+          638
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          105,
+          935
+        ],
+        "roots": [
+          14,
+          468
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          119,
+          825
+        ],
+        "roots": [
+          60,
+          104
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          231,
+          425
+        ],
+        "roots": [
+          116,
+          54
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          275,
+          357
+        ],
+        "roots": [
+          138,
+          90
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      }
+    ],
+    "product": 98175,
+    "two_forced_slack": 2
+  },
+  "limit_h": 1000000,
+  "maximum_d": 18,
+  "minimum_one_forced_slack": {
+    "at_least_one_structural": 15,
+    "d": 18,
+    "forced_both_structural": 2,
+    "h": 687224,
+    "one_forced_slack": -8,
+    "pairs": [
+      {
+        "pair": [
+          5,
+          137445
+        ],
+        "roots": [
+          2,
+          34362
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          11,
+          62475
+        ],
+        "roots": [
+          6,
+          31238
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          15,
+          45815
+        ],
+        "roots": [
+          8,
+          22908
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          17,
+          40425
+        ],
+        "roots": [
+          2,
+          5054
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          33,
+          20825
+        ],
+        "roots": [
+          2,
+          2604
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          35,
+          19635
+        ],
+        "roots": [
+          18,
+          9818
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          51,
+          13475
+        ],
+        "roots": [
+          26,
+          6738
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          77,
+          8925
+        ],
+        "roots": [
+          20,
+          2232
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          105,
+          6545
+        ],
+        "roots": [
+          14,
+          410
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          119,
+          5775
+        ],
+        "roots": [
+          60,
+          2888
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          231,
+          2975
+        ],
+        "roots": [
+          116,
+          1488
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          245,
+          2805
+        ],
+        "roots": [
+          62,
+          702
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          275,
+          2499
+        ],
+        "roots": [
+          138,
+          1250
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          357,
+          1925
+        ],
+        "roots": [
+          90,
+          482
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          425,
+          1617
+        ],
+        "roots": [
+          54,
+          102
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          539,
+          1275
+        ],
+        "roots": [
+          270,
+          638
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          735,
+          935
+        ],
+        "roots": [
+          368,
+          468
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          825,
+          833
+        ],
+        "roots": [
+          104,
+          14
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      }
+    ],
+    "product": 687225,
+    "two_forced_slack": -6
+  },
+  "minimum_two_forced_slack": {
+    "at_least_one_structural": 14,
+    "d": 16,
+    "forced_both_structural": 1,
+    "h": 580124,
+    "one_forced_slack": -7,
+    "pairs": [
+      {
+        "pair": [
+          5,
+          116025
+        ],
+        "roots": [
+          2,
+          14504
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          15,
+          38675
+        ],
+        "roots": [
+          8,
+          19338
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          17,
+          34125
+        ],
+        "roots": [
+          2,
+          8532
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          35,
+          16575
+        ],
+        "roots": [
+          18,
+          8288
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          51,
+          11375
+        ],
+        "roots": [
+          26,
+          5688
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          65,
+          8925
+        ],
+        "roots": [
+          2,
+          2232
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          105,
+          5525
+        ],
+        "roots": [
+          14,
+          1382
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          119,
+          4875
+        ],
+        "roots": [
+          60,
+          2438
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          125,
+          4641
+        ],
+        "roots": [
+          32,
+          146
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          195,
+          2975
+        ],
+        "roots": [
+          98,
+          1488
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          221,
+          2625
+        ],
+        "roots": [
+          56,
+          42
+        ],
+        "structural": [
+          true,
+          true
+        ]
+      },
+      {
+        "pair": [
+          357,
+          1625
+        ],
+        "roots": [
+          90,
+          204
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          375,
+          1547
+        ],
+        "roots": [
+          188,
+          774
+        ],
+        "structural": [
+          false,
+          false
+        ]
+      },
+      {
+        "pair": [
+          425,
+          1365
+        ],
+        "roots": [
+          54,
+          342
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      },
+      {
+        "pair": [
+          455,
+          1275
+        ],
+        "roots": [
+          228,
+          638
+        ],
+        "structural": [
+          true,
+          false
+        ]
+      },
+      {
+        "pair": [
+          663,
+          875
+        ],
+        "roots": [
+          332,
+          438
+        ],
+        "structural": [
+          false,
+          true
+        ]
+      }
+    ],
+    "product": 580125,
+    "two_forced_slack": -6
+  },
+  "schema": "C121-pure-divisor-relaxation-v1",
+  "tested_products_with_pairs": 113571
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":5000,
+  "forest":"odd holes use T2 parent; 3-easy even holes use T3 parent; splitless and hard holes are roots",
+  "maximum_obstruction_rank":8,
+  "hard_total":253,
+  "healed_seed2_exits_total":290,
+  "splitless_roots":701,
+  "hard_roots":253,
+  "exits_from_splitless_components":222,
+  "exits_from_hard_components":68,
+  "decomposition_failures":0,
+  "cap_audits":[
+    {"cap":1,"selected_exits":250,"rank_prefix":{"maximum_excess":12,"maximum_X":2064,"maximum_rank":6,"strict_failure_events":7480,"plus_one_failure_events":5944,"first_plus_one_X":1002,"first_plus_one_rank":3,"first_plus_one_H":35,"first_plus_one_Q":33}},
+    {"cap":2,"selected_exits":277,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}},
+    {"cap":3,"selected_exits":288,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}},
+    {"cap":8,"selected_exits":290,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}}
+  ]
+}

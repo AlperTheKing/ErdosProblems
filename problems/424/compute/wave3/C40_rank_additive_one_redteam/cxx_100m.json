@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":100000000,
+  "pair_enumerator":"explicit allowed products a<b",
+  "admissible_pair_count":380416996,
+  "hard_total":3368726,
+  "target_total":5948614,
+  "maximum_obstruction_rank":20,
+  "true_child_coordinate_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"positive_tests":3,"plus_one_failures":0,"first_positive_X":362,"first_positive_rank":2,"last_positive_X":1014,"last_positive_rank":2},
+  "parent_coordinate_prefix":{"maximum_excess":0,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0},
+  "exact_rank_layers":{"maximum_excess":668807,"maximum_X":99999972,"maximum_rank":2,"positive_tests":29602717,"plus_one_failures":29582237,"first_positive_X":74,"first_positive_rank":2,"last_positive_X":99999972,"last_positive_rank":11},
+  "target_rank_offset_one":{"maximum_excess":0,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0},
+  "missing_endpoint_chain_local":{"direct_first_zero":54,"direct_zero_count":3218791,"two_step_first_zero":74,"two_step_zero_count":1182776,"any_arrived_boundary_first_zero":74,"any_arrived_boundary_zero_count":1123563},
+  "unique_split_fiber":{"largest_parent":11,"size":308779},
+  "parity_audit":{"hard_event_parity":0,"target_child_parity":1,"same_coordinate_ties":0,"target_parent_can_equal_seed_2":false},
+  "distinctness_audit":{"first_square_leak_membership_difference":8,"square_leak_hard_total":863325,"square_leak_target_total":5066882,"square_leak_prefix":{"maximum_excess":-2,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0}},
+  "hard_rank_histogram":{"2":1249101,"3":284490,"4":650453,"5":326973,"6":349861,"7":211752,"8":137369,"9":78225,"10":42113,"11":22577,"12":9478,"13":4179,"14":1412,"15":535,"16":152,"17":48,"18":8},
+  "target_rank_histogram":{"0":3728933,"1":217991,"2":580294,"3":228071,"4":357745,"5":221522,"6":219570,"7":149115,"8":102170,"9":64064,"10":37414,"11":21705,"12":10930,"13":5365,"14":2355,"15":916,"16":332,"17":103,"18":17,"19":2}
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "limit": 20000,
+    "hard_count": 1864,
+    "exact_dual_objective": 2009,
+    "exact_margin": 145,
+    "nonzero_row": 5581,
+    "nonzero_lower": 5246,
+    "nonzero_upper": 1274
+  },
+  {
+    "limit": 50000,
+    "hard_count": 4955,
+    "exact_dual_objective": 5465,
+    "exact_margin": 510,
+    "nonzero_row": 14152,
+    "nonzero_lower": 13032,
+    "nonzero_upper": 3055
+  }
+]

@@ -1,0 +1,685 @@
+{
+  "ballot_minima": {
+    "F": {
+      "A_H": 6,
+      "A_H_quarter": 0,
+      "B3": 1,
+      "D": 5,
+      "F": -1,
+      "X": 186,
+      "root_boundary_margin": 0,
+      "seed3_quarter_margin": -1
+    },
+    "root_boundary_margin": {
+      "A_H": 0,
+      "A_H_quarter": 0,
+      "B3": 0,
+      "D": 0,
+      "F": 0,
+      "X": 4,
+      "root_boundary_margin": 0,
+      "seed3_quarter_margin": 0
+    },
+    "seed3_quarter_margin": {
+      "A_H": 142,
+      "A_H_quarter": 28,
+      "B3": 36,
+      "D": 139,
+      "F": 25,
+      "X": 3620,
+      "root_boundary_margin": 33,
+      "seed3_quarter_margin": -8
+    }
+  },
+  "classification_sha256": "4ECBEA379DF3413BC1D640A3F67AB2359D86E89A43A771CD699BE57F1720BEA1",
+  "counts": {
+    "A_H": 3386,
+    "B3": 782,
+    "D": 4279,
+    "hard_births": 5108,
+    "seed3_image_types": {
+      "hard": 191,
+      "seed3": 120,
+      "splitless": 471
+    }
+  },
+  "exact_integer_acceptance": true,
+  "first_40_seed3_events": [
+    {
+      "cofactor": 11,
+      "cofactor_root": 6,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          9,
+          14
+        ]
+      ],
+      "healing_time": 125,
+      "seed3_root": 32
+    },
+    {
+      "cofactor": 39,
+      "cofactor_root": 20,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          33
+        ]
+      ],
+      "healing_time": 461,
+      "seed3_root": 116
+    },
+    {
+      "cofactor": 21,
+      "cofactor_root": 6,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          5,
+          98
+        ]
+      ],
+      "healing_time": 489,
+      "seed3_root": 62
+    },
+    {
+      "cofactor": 117,
+      "cofactor_root": 30,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          50
+        ]
+      ],
+      "healing_time": 699,
+      "seed3_root": 350
+    },
+    {
+      "cofactor": 59,
+      "cofactor_root": 30,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          27
+        ]
+      ],
+      "healing_time": 701,
+      "seed3_root": 176
+    },
+    {
+      "cofactor": 95,
+      "cofactor_root": 48,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          81
+        ]
+      ],
+      "healing_time": 1133,
+      "seed3_root": 284
+    },
+    {
+      "cofactor": 191,
+      "cofactor_root": 96,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          44
+        ]
+      ],
+      "healing_time": 1143,
+      "seed3_root": 572
+    },
+    {
+      "cofactor": 111,
+      "cofactor_root": 56,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          51
+        ]
+      ],
+      "healing_time": 1325,
+      "seed3_root": 332
+    },
+    {
+      "cofactor": 113,
+      "cofactor_root": 8,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          27,
+          50
+        ]
+      ],
+      "healing_time": 1349,
+      "seed3_root": 338
+    },
+    {
+      "cofactor": 227,
+      "cofactor_root": 114,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          17,
+          80
+        ]
+      ],
+      "healing_time": 1359,
+      "seed3_root": 680
+    },
+    {
+      "cofactor": 119,
+      "cofactor_root": 60,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          9,
+          158
+        ]
+      ],
+      "healing_time": 1421,
+      "seed3_root": 356
+    },
+    {
+      "cofactor": 35,
+      "cofactor_root": 18,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          33,
+          50
+        ]
+      ],
+      "healing_time": 1649,
+      "seed3_root": 104
+    },
+    {
+      "cofactor": 71,
+      "cofactor_root": 36,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          65
+        ]
+      ],
+      "healing_time": 1689,
+      "seed3_root": 212
+    },
+    {
+      "cofactor": 285,
+      "cofactor_root": 72,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          122
+        ]
+      ],
+      "healing_time": 1707,
+      "seed3_root": 854
+    },
+    {
+      "cofactor": 287,
+      "cofactor_root": 144,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          5,
+          344
+        ]
+      ],
+      "healing_time": 1719,
+      "seed3_root": 860
+    },
+    {
+      "cofactor": 155,
+      "cofactor_root": 78,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          9,
+          206
+        ]
+      ],
+      "healing_time": 1853,
+      "seed3_root": 464
+    },
+    {
+      "cofactor": 347,
+      "cofactor_root": 174,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          26,
+          80
+        ]
+      ],
+      "healing_time": 2079,
+      "seed3_root": 1040
+    },
+    {
+      "cofactor": 179,
+      "cofactor_root": 90,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          153
+        ]
+      ],
+      "healing_time": 2141,
+      "seed3_root": 536
+    },
+    {
+      "cofactor": 47,
+      "cofactor_root": 24,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          159
+        ]
+      ],
+      "healing_time": 2225,
+      "seed3_root": 140
+    },
+    {
+      "cofactor": 189,
+      "cofactor_root": 48,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          87
+        ]
+      ],
+      "healing_time": 2261,
+      "seed3_root": 566
+    },
+    {
+      "cofactor": 383,
+      "cofactor_root": 192,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          164
+        ]
+      ],
+      "healing_time": 2295,
+      "seed3_root": 1148
+    },
+    {
+      "cofactor": 425,
+      "cofactor_root": 54,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          26,
+          98
+        ]
+      ],
+      "healing_time": 2547,
+      "seed3_root": 1274
+    },
+    {
+      "cofactor": 213,
+      "cofactor_root": 54,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          50,
+          51
+        ]
+      ],
+      "healing_time": 2549,
+      "seed3_root": 638
+    },
+    {
+      "cofactor": 431,
+      "cofactor_root": 216,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          17,
+          152
+        ]
+      ],
+      "healing_time": 2583,
+      "seed3_root": 1292
+    },
+    {
+      "cofactor": 221,
+      "cofactor_root": 56,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          27,
+          98
+        ]
+      ],
+      "healing_time": 2645,
+      "seed3_root": 662
+    },
+    {
+      "cofactor": 453,
+      "cofactor_root": 114,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          14,
+          194
+        ]
+      ],
+      "healing_time": 2715,
+      "seed3_root": 1358
+    },
+    {
+      "cofactor": 467,
+      "cofactor_root": 234,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          5,
+          560
+        ]
+      ],
+      "healing_time": 2799,
+      "seed3_root": 1400
+    },
+    {
+      "cofactor": 63,
+      "cofactor_root": 32,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "seed3",
+      "generating_pairs": [
+        [
+          3,
+          998
+        ]
+      ],
+      "healing_time": 2993,
+      "seed3_root": 188
+    },
+    {
+      "cofactor": 537,
+      "cofactor_root": 68,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "seed3",
+      "generating_pairs": [
+        [
+          5,
+          644
+        ],
+        [
+          14,
+          230
+        ]
+      ],
+      "healing_time": 3219,
+      "seed3_root": 1610
+    },
+    {
+      "cofactor": 275,
+      "cofactor_root": 138,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          27,
+          122
+        ]
+      ],
+      "healing_time": 3293,
+      "seed3_root": 824
+    },
+    {
+      "cofactor": 281,
+      "cofactor_root": 36,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          9,
+          374
+        ]
+      ],
+      "healing_time": 3365,
+      "seed3_root": 842
+    },
+    {
+      "cofactor": 291,
+      "cofactor_root": 146,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          249
+        ]
+      ],
+      "healing_time": 3485,
+      "seed3_root": 872
+    },
+    {
+      "cofactor": 147,
+      "cofactor_root": 74,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          14,
+          251
+        ]
+      ],
+      "healing_time": 3513,
+      "seed3_root": 440
+    },
+    {
+      "cofactor": 587,
+      "cofactor_root": 294,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          44,
+          80
+        ]
+      ],
+      "healing_time": 3519,
+      "seed3_root": 1760
+    },
+    {
+      "cofactor": 597,
+      "cofactor_root": 150,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          5,
+          716
+        ]
+      ],
+      "healing_time": 3579,
+      "seed3_root": 1790
+    },
+    {
+      "cofactor": 299,
+      "cofactor_root": 150,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          3,
+          1194
+        ]
+      ],
+      "healing_time": 3581,
+      "seed3_root": 896
+    },
+    {
+      "cofactor": 659,
+      "cofactor_root": 330,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          26,
+          152
+        ]
+      ],
+      "healing_time": 3951,
+      "seed3_root": 1976
+    },
+    {
+      "cofactor": 171,
+      "cofactor_root": 86,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "seed3",
+      "generating_pairs": [
+        [
+          5,
+          818
+        ]
+      ],
+      "healing_time": 4089,
+      "seed3_root": 512
+    },
+    {
+      "cofactor": 705,
+      "cofactor_root": 12,
+      "cofactor_root_state_at_quarter": "not_persistent_hard",
+      "cofactor_root_type": "splitless",
+      "generating_pairs": [
+        [
+          14,
+          302
+        ]
+      ],
+      "healing_time": 4227,
+      "seed3_root": 2114
+    },
+    {
+      "cofactor": 707,
+      "cofactor_root": 354,
+      "cofactor_root_state_at_quarter": "persistent_hard",
+      "cofactor_root_type": "hard",
+      "generating_pairs": [
+        [
+          53,
+          80
+        ]
+      ],
+      "healing_time": 4239,
+      "seed3_root": 2120
+    }
+  ],
+  "first_cofactor_root_fibre_collision": {
+    "cofactor_root": 6,
+    "healing_times": [
+      125,
+      489
+    ],
+    "seed3_roots": [
+      32,
+      62
+    ]
+  },
+  "first_nonhard_cofactor_root": {
+    "cofactor": 11,
+    "cofactor_root": 6,
+    "cofactor_root_state_at_quarter": "not_persistent_hard",
+    "cofactor_root_type": "splitless",
+    "generating_pairs": [
+      [
+        9,
+        14
+      ]
+    ],
+    "healing_time": 125,
+    "seed3_root": 32
+  },
+  "first_quarter_cofactor_root_failure": {
+    "cofactor": 11,
+    "cofactor_root": 6,
+    "cofactor_root_state_at_quarter": "not_persistent_hard",
+    "cofactor_root_type": "splitless",
+    "generating_pairs": [
+      [
+        9,
+        14
+      ]
+    ],
+    "healing_time": 125,
+    "seed3_root": 32
+  },
+  "limit": 100000,
+  "maximum_cofactor_root_fibre": {
+    "cofactor_root": 12,
+    "multiplicity": 7,
+    "seed3_roots": [
+      2114,
+      266,
+      68,
+      530,
+      8450,
+      4226,
+      1058
+    ]
+  },
+  "schema": "C101-seed3-global-audit-v1",
+  "typed_ballot_minima": {
+    "nonthree": {
+      "A_H": 220,
+      "A_H_quarter": 47,
+      "D": 167,
+      "F": -6,
+      "X": 6192,
+      "signature": "nonthree"
+    },
+    "three": {
+      "A_H": 1,
+      "A_H_quarter": 0,
+      "D": 0,
+      "F": -1,
+      "X": 74,
+      "signature": "three"
+    }
+  }
+}

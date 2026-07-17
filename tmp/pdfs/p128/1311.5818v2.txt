@@ -1,0 +1,1662 @@
+--- PAGE 1 ---
+Sparse halves in dense triangle-free graphs
+Sergey Norin∗1 and Liana Yepremyan†2
+1Department of Mathematics and Statistics, McGill University
+2School of Computer Science, McGill University
+Abstract
+Erd˝ os [3] conjectured that every triangle-free graph G on n vertices contains
+a set of ⌊n/2⌋ vertices that spans at most n2/50 edges. Krivelevich proved
+the conjecture for graphs with minimum degree at least 2
+5n [9]. In [8] Keevash
+and Sudakov improved this result to graphs with average degree at least 2
+5n.
+We strengthen these results by showing that the conjecture holds for graphs
+with minimum degree at least 5
+14n and for graphs with average degree at least(2
+5−γ
+)
+n for some absolute γ > 0. Moreover, we show that the conjecture is
+true for graphs which are close to the Petersen graph in edit distance.
+Keywords: Triangle-free graph, sparse half, minimum degree, Petersen graph, edit dis-
+tance, blowup
+1. Introduction
+In this paper we consider the edge distribution in triangle-free graphs. A fundamental
+result in extremal graph theory, Tur´ an’s theorem implies that if a graphG onn vertices
+has more than (1− 1/r)
+(n
+2
+)
+edges, then G has Kr+1 as a subgraph. One can consider
+the following generalization of this problem that was ﬁrst studied by Erd˝ os, Faudree,
+Rousseau and Schelp [5] in 1990. Fix α∈ (0, 1], and suppose that every set of αn
+vertices in G induces more than βn2 edges. What is the smallest β := β(α,r ) that
+forcesG to contain Kr+1?
+In particular, one of Erd˝ os’s old and favorite conjectures says that β( 1
+2, 2) = 1
+50 [3];
+he ﬁrst proposed this in 1975 and oﬀered a $250 prize for its solution later, in [4]. It is
+easy to check that the bound 1/50 is tight. It is achieved on the uniform blowup of C5
+which is obtained from the 5-cycle by replacing each vertex i by an independent set Vi
+of size n/5 (for simplicity assume n is divisible by 5) and each edge ij by a complete
+bipartite graph joining Vi and Vj. The blowup of the Petersen graph also achieves this
+bound tightly, see Figure 1.
+Conjecture 1.1 (Erd˝ os). Any triangle-free graph G on n vertices contains a set of
+⌊n/2⌋ vertices that spans at most n2/50 edges.
+1
+arXiv:1311.5818v2  [math.CO]  10 Feb 2015
+
+--- PAGE 2 ---
+v10 v7
+v9
+v6
+v8
+v3
+v5 v2
+v4
+v1
+Figure 1: A sparse half in the uniform blowup of Petersen graph.
+In [9] Krivelevich proved that the conjecture holds if 1/50 is replaced by 1/36. He
+also showed that it is true for triangle-free graphs with minimum degree 2
+5n. In Section 3
+we improve this result by proving the following theorem.
+Theorem 1.1. Every triangle-free graph on n vertices with minimum degree at least
+5
+14n contains a set of ⌊n/2⌋ vertices that spans at most n2/50 edges.
+Our proof of Theorem 1.1 is mainly based on the structural characterization of the
+graphs with minimum degree at least 5
+14n, established by Jin, Chen and Koh in [2, 7].
+We also use some averaging arguments similar to the ones used in [8, 9].
+Keevash and Sudakov [8] improved Krivelevich’s result of [9] showing that the
+conjecture holds for graphs with average degree 2
+5n. In Section 5 we extend their result
+as follows.
+Theorem 1.2. There exists γ > 0 such that every triangle-free graph on n vertices
+with at least ( 1
+5−γ)n2 edges contains a set of ⌊n/2⌋ vertices that spans at most n2/50
+edges.
+Finally, we study the validity of the conjecture in the neighborhood of the known
+extremal examples, in the following sense. In the uniform blowup of the Petersen graph
+every set of⌊n/2⌋ has at leastn2/50 edges (see Figure 1). To the best of our knowledge,
+the uniform blowups of the Petersen graph and C5, as deﬁned in the beginning of the
+introduction, are the only known examples for which Conjecture 1.1 is tight. In Section 4
+we develop a set of tools which allow us to prove the Conjecture 1.1 for the classes of
+graphs which are close to a ﬁxed graph in edit distance. In Section 6 we use these
+tools to verify the conjecture for graphs which are close to the Petersen graph, while
+Theorem 1.2 shows that it also holds for graphs close to the 5-cycle. These results can
+∗snorine@gmail.com
+†liana.yepremyan@mail.mcgill.ca
+2
+
+--- PAGE 3 ---
+be considered as a proof of a local version of Conjecture 1.1, in the spirit of recent
+results of Lov´ asz [10] and Razborov [12, 13]. Lov´ asz [10] proved Sidorenko’s conjecture
+locally in the neighborhood of the conjectured extremal example with respect to the
+cut-norm (and consequently, with respect to the edit distance). Razborov proved that
+the Caccetta-H¨ aggkvist conjecture [12] and the Tur´ an’s(3, 4)-problem [13] hold locally
+in the neighborhood of families of the known examples in a slightly diﬀerent sense, as
+he additionally forbade certain induced subconﬁgurations.
+2. Notation and Preliminary Results
+For a graphG, we let v(G) :=|V (G)| and e(G) :=|E(G)|. Denote by NG(v) the neigh-
+borhood of a vertex v∈ V (G) and by dG(v) the degree of v (i.e. dG(v) :=|NG(v)|).
+Whenever there is no ambiguity, we will use N(v) and d(v) for shorter notation. The
+maximum and the minimum degrees are denoted by ∆(G) and δ(G), respectively.
+A graph G is called triangle-free if it does not contain a triangle, it is maximal
+triangle-free if adding any edge creates a triangle. We say that G contains a sparse half
+if there exists a set of⌊n/2⌋ vertices inG that spans at mostn2/50 edges. Conjecture 1.1
+says that there must exist a sparse half in every triangle-free graph.
+We say that ω : V (G)→ (0, 1) is a weight function on G if ∑
+v∈V (G)ω(v) = 1. A
+pair (G,ω ), where ω is a weight function on G is called a weighted graph. The weight
+ω(e) of an edge e = (u,v ) in (G,ω ) is deﬁned as ω(u)·ω(v). For a set X of vertices
+or edges in G let ω(X) := ∑
+x∈Xω(x). The degree of a vertex v in a weighted graph
+(G,ω ) is deﬁned as ω(N(v)). The minimum degree of the weighted graph (G,ω ) is
+denoted by δ(G,ω ).
+We call a real function s : V (G) → R+ a half of G if s (v) ≤ ω(v) for every
+v∈ V (G), and s (V (G)) := ∑
+v∈V (G) s(v) = 1/2. For every edge e = (u,v ), we deﬁne
+s(e) := s(u)s(v). Let s be a half of G, if s (E(G)) := ∑
+e∈E(G) s(e)≤ 1
+50 then s is called
+a sparse half.
+There is a natural way of associating a weighted graph to a graph G of order n;
+that is, we can assign to each vertex v∈ V (G) weight equal to 1
+n. For each graph G,
+the corresponding weighted graph deﬁned as above, is called uniformly weighted G; we
+denote it by (G,ωu).
+Lemma 2.1. If (G,ωu) has a sparse half, then so does G.
+Proof. We claim that, if (G,ωu) has a sparse half, then it has a sparse half s such that
+s(v) = 0 or s(v) = 1
+n for all v∈V (G) except for possibly one vertex.
+Indeed, let us choose a sparse half s of G such that the number of vertices v∈V (G)
+such that either s (v) = 0 or s(v) = 1
+n is maximum. We show that there exists at most
+one vertex u such that 0< s(u)< 1
+n.
+Suppose not and there exist u,v∈V (G) such that 0< s(u), s(v)< 1
+n. We deﬁne a
+new half s′ :V (G)→ R+. Let s′ be the same as s on all vertices of G, except u and v.
+Without loss of generality, suppose s (N(u))≤ s(N(v)). Let δ = min{s(u), 1
+n− s(v)}
+and deﬁne s′(u) = s(u)−δ and s′(v) = s(v) +δ. We will show that s ′ is a sparse half.
+3
+
+--- PAGE 4 ---
+Suppose that u and v are adjacent, then
+s′(E(G)) = s(E(G))−
+∑
+x∈N (u)
+x̸=v
+δs(x) +
+∑
+y∈N (v)
+y̸=u
+δs(y) + s′(u)s′(v)− s(u)s(v)
+= s(E(G))−
+∑
+x∈N (u)
+x̸=v
+δs(x) +
+∑
+y∈N (v)
+y̸=u
+δs(y)−δs(v) +δs(u)−δ2
+= s(E(G))−δ (s(N(u))− s(N(v)))−δ2 < s(E(G)).
+The calculation in the case when u and v are non-adjacent is similar.
+It follows that s′ contradicts the choice of s. Hence for all vertices v∈V (G) except
+maybe one vertex either s (v) = 0 or s(v) = 1
+n. Let
+S ={v∈V (G)| s(v) = 1/n}.
+It follows from the previous observation that|S|≥⌊ n/2⌋. It is easy to see that e(G[S])≤
+n2s(E(G))≤n2/50, whereG[S] is deﬁned to be the subgraph ofG induced by the vertex
+set S. This shows that S ia a sparse half in G, as desired.
+Lemma 2.1 allows us to work with weighted graphs, which proves to be convenient.
+We prove that every weighted triangle-free graph with minimum degree at least 5/14
+contains a sparse half. Our proof uses structural characterization of these graphs found
+by Jin, Chen and Koh in [2, 7]. To state their result we need a few additional deﬁnitions.
+A mapping ϕ :V (G)→V (H) for graphs G and H is a homomorphism from G to
+H, if it is edge-preserving, that is, for any pair of adjacent vertices u,v ∈ V (G), ϕ(u)
+andϕ(v) are adjacent in H. We say that G is ofH-type if there exists a homomorphism
+from G to H. Let ϕ be a surjective homomorphism and ω be a weight function on G.
+We deﬁne a weight function ωϕ onH in the following way. For every vertex v∈V (H),
+let ωϕ(v) := ω(ϕ−1(v)). The next lemma shows that a sparse half in a homomorphic
+image of a graph G can be lifted to a sparse half in the graph G.
+Lemma 2.2. Let G,H be graphs and ϕ : V (G)→ V (H) be a surjective homomor-
+phism. Then for any weight function ω, if (H,ωϕ) has a sparse half, then so does
+(G,ω ).
+Proof. Let sH be a sparse half on (H,ωϕ). Deﬁne
+sG(v) := ω(v)
+ωϕ(ϕ(v))sH(ϕ(v))
+for every v∈V (G). It is easy to check that s G is a sparse half of G.
+Now let us introduce a family of graphs that plays a key role in our results. For an
+integer d≥ 1, let Fd be the graph with
+V (Fd) ={v1,v 2,...,v 3d−1},
+such that the vertex vj has neighbors vj+d,...,v j+2d−1 (all indices larger than 3d− 1
+are taken modulo 3d− 1). It is easy to see that F1 =K2, F2 =C5 and F3 is a M¨ obius
+4
+
+--- PAGE 5 ---
+v1
+v2
+v3
+v4v5
+v6
+v7
+v8
+Figure 2: The M¨ obius ladderF3
+ladder (see Figure 2). Clearly, if a graph is of Fd-type, it is of Fk-type, for all k > d.
+These graphs were ﬁrst introduced by Woodall [14]. In 1973 he conjectured that if the
+binding number of a graph G is at least 3/2 then G contains a triangle. Graphs Fd are
+in the family of graphs constructed by Woodall to explain that 3/2 in his conjecture is
+the least possible. Let us state some general properties of these graphs that we will use
+implicitly or explicitly throughout the paper. These can be easily checked.
+Fact 2.3. For every d ≥ 1, Fd is triangle-free, 3-colorable and the only maximum
+independent sets are vertex neighborhoods, in particular, α(Fd) =d.
+In 1974 Andrasfai, Erd˝ os and Sos [1] showed that every triangle-free graph G of
+order n with δ(G) > 2n/5 is bipartite (in other words, F1-type). In a similar spirit,
+H¨ aggkvist [6] proved that every triangle-free graphG of order n withδ(G)> 3n/8 is of
+F2-type (i.e. C5-type). In 1995 Jin [7] improved H¨ aggkvist’s result as following.
+Theorem 2.4 (Jin, [7]). Every triangle-free graph G of order n with minimum degree
+δ(G)> 10n/29 is of F9-type.
+Note that the results of Andrasfai, Erd˝ os and Sos [1], H¨ aggkvist [6] and Jin [7]
+are sharp. In [2] the authors extended all the results mentioned above and proved the
+following stronger statement.
+Theorem 2.5 (Chen, Jin, Koh, [2]) . Let d≥ 1, G be a triangle-free graph of order n
+with χ(G)≤ 3 and δ(G)>
+⌊
+(d+1)n
+3d+2
+⌋
+, then G is of Fd-type.
+For our purposes, we use the following statement which follows from Theorem 2.4,
+Theorem 2.5 and Fact 2.3.
+Corollary 2.6 (Chen, Jin, Koh [2], [7]) . Every triangle-free graph G of order n with
+δ(G)≥ 5
+14n is of F5-type.
+To use Lemma 2.1 and Corollary 2.6 together we need to make sure that the homo-
+morphism in the statement of Corollary 2.6 is surjective. Fortunately, this is not diﬃcult
+if we allow ourselves to change the target graph.
+5
+
+--- PAGE 6 ---
+Lemma 2.7. Let ϕ be a homomorphism from graph G to Fd, d≥ 2. Then either ϕ is
+surjective or there exists a homomorphism ϕ′ from G to Fd−1.
+Proof. Suppose ϕ is a homomorphism from graph G to Fd that is not surjective. Let
+Vi =ϕ−1(vi) for alli = 1, 2,..., 3d− 1. Without loss of generality suppose V1 is empty.
+Deﬁne a mapping ϕ′ :V (G)→V (Fd−1) as follows,
+ϕ′(v) =
+
+
+
+vi−1, if v∈Vi and 2≤i≤d− 1,
+vd−1, if v∈Vd∪Vd+1,
+vi−2, if v∈Vi and d + 2≤i≤ 2d− 2,
+v2d−3, if v∈V2d−1∪V2d,
+vi−3, if v∈Vi and 2d + 1≤i≤ 3d− 1.
+It is easy to check that ϕ′ is a homomorphism from G to Fd−1.
+In the next section we show that for 1≤ d≤ 4 the weighted graph (Fd,ω ) with
+minimum degree at least 5/14, has a sparse half for any weight function ω. In particular,
+if ϕ : V (G)→ Fd is a surjective homomorphism, then the weighted graph (Fd,ωϕ)
+has a sparse half. By Lemma 2.1 this implies that graph G has a sparse half. Hence
+Theorem 1.1 will follow from the results of the next section.
+3. Weighted triangle-free graphs with minimum de-
+gree≥ 5
+14
+Theorem 3.1. For all 1≤d≤ 5, if (Fd,ω ) is a weighted graph with minimum degree
+at least 5/14, then it has a sparse half.
+Proof. The argument is separated into cases based on the value of d.
+d=1: Suppose V (F1) ={v1,v 2} then since ω(v1) +ω(v2) = 1 , either ω(v1)≥ 1
+2 or
+ω(v2)≥ 1
+2, therefore v1 orv2 supports a sparse half in (F1,ω ).
+d=2: LetV (F2) ={v1,v 2,...,v 5}. If any two consecutive vertices together have total
+weight at least 1/2, then they induce an independent set, which means that they support
+a sparse half.
+Now suppose that no two consecutive vertices have total weight at least 1/2, then
+any three consecutive vertices have total weight at least 1/2. We deﬁne the following
+halves si for each i = 1, 2,..., 5 on the vertices of the graph and prove that there is at
+least one sparse half among them.
+si(v) =
+
+
+
+ω(v), if v =vi orv =vi+1,
+1
+2− (ω(vi) +ω(vi+1)), if v =vi+2,
+0, otherwise.
+6
+
+--- PAGE 7 ---
+v3
+v2
+v1
+0
+v5
+0
+v4
+Figure 3: A sparse half in uniformly weighted C5
+Note that
+si(E(G)) =ω(vi) (1/2− (ω(vi) +ω(vi+1))). (1)
+Summing up the equations (1) over all i = 1,..., 5, we get
+5∑
+i=1
+si(E(G)) = 1/2−
+5∑
+i=1
+ω(vi) (ω(vi) +ω(vi+1))
+= 1
+2− 1
+2
+5∑
+i=1
+(ω(vi) +ω(vi+1))2
+≤ 1
+2− 1
+2· 5· 4
+25 = 1
+10,
+using Jensen’s inequality for the function x2. Thus one of the functions s i is a sparse
+half. Note that the proof above did not use the minimum degree condition, while we
+use it in the other two cases.
+d=3: LetF3 ={v1,v 2,...,v 8}. As the minimum degree of (F3,ω ) is at least 5/14, we
+have
+ω(vj) +ω(vj+1) +ω(vj+2)≥δ(F3,ω )≥ 5/14, (2)
+for all j = 1, 2,..., 8. Summing these inequalities for j = i,i + 3 and j = i + 6, we
+obtain ω(vj)≥ 1/14 forj = 1, 2,..., 8.
+As in the case of d = 2, if there exist three consecutive vertices of total weight at
+least 1/2, then we are done, since they induce an independent set. Suppose not, then
+every ﬁve consecutive vertices have total weight more than 1/2. We deﬁne the following
+halves si, for each i = 1, 2,..., 8 on the vertices of the graph and prove that there is at
+least one sparse half among them.
+si(v) =
+
+
+
+ω(v), if v =vi+1,vi+2,vi+3
+1
+2
+(1
+2− (ω(vi+1) +ω(vi+2) +ω(vi+3))
+)
+, if v =vi orv =vi+4,
+0, otherwise.
+Claim 3.2. For each i = 1, 2,..., 8, si is a half.
+7
+
+--- PAGE 8 ---
+Proof. It suﬃces to show that
+1
+2
+(1
+2− (ω(vi+1) +ω(vi+2) +ω(vi+3))
+)
+≤ω(vi),
+1
+2
+(1
+2− (ω(vi+1) +ω(vi+2) +ω(vi+3))
+)
+≤ω(vi+4).
+By symmetry it suﬃces to prove the ﬁrst inequality. By (2) we get that
+1
+2
+(1
+2− (ω(vi+1) +ω(vi+2) +ω(vi+3))
+)
+≤ 1
+2·
+(1
+2− 5
+14
+)
+= 1
+14≤ω(vi).
+This ﬁnishes the proof of the claim.
+We relegate the proof of the following lemma, which ensures that one of the halves
+si is sparse, to the Appendix.
+Lemma 3.3. Let 1/14≤ xi≤ 1 for i = 1, 2,..., 8. If ∑8
+i=1xi = 1 and xi +xi+1 +
+xi+2≥ 5/14 for every i, then there exists i such that
+1
+2
+(1
+2− (xi +xi+1 +xi+2)
+)
+(xi +xi+2) + 1
+4
+(1
+2− (xi +xi+1 +xi+2)
+)2
+≤ 1
+50. (3)
+d=4: LetF4 ={v1,v 2,...,v 11}. The minimum degree condition gives us the following
+inequality
+ω(vi) +ω(vi+1) +ω(vi+2) +ω(vi+3)≥ 5/14, (4)
+for all i = 1, 2,..., 11. It follows, as in the case d = 3, ω(vi)≥ 1/14 for all i. We may
+assume that no four consecutive vertices have total weight at least 1/2, otherwise, we
+are done - these four vertices induce an independent set. Therefore, we can assume that
+ω(vi) +ω(vi+1) +··· +ω(vi+6)> 1/2,
+for all i = 1, 2,..., 11. This allows us to deﬁne halves s i in the following way:
+si(v) =
+
+
+
+ω(v), if v =vi+1,vi+2,vi+3,vi+4,
+1
+2
+(1
+2− (ω(vi+1) +ω(vi+2) +ω(vi+3) +ω(vi+4))
+)
+, if v =vi orv =vi+5,
+0, otherwise.
+As in the previous case, it is easy to verify that each s i is a half, and the following
+lemma proved in the Appendix implies that at least one of these halves is sparse.
+Lemma 3.4. Suppose x1,x 2,...,x 11 are reals such that 1/14 ≤ xi ≤ 1 for each
+i = 1, 2,..., 11 and ∑11
+i=1xi = 1. If xi +xi+1 +xi+2 +xi+3≥ 5/14 for every i, then
+there exists i such that
+1
+2
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)
+(xi+1 +xi+4)
++ 1
+4
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)2
+≤ 1/50.
+8
+
+--- PAGE 9 ---
+d=5: Let F5 = {v1,v 2,...,v 14}. As in the previous cases, the minimum degree
+condition gives us ω(vi) ≥ 1
+14 for every i = 1, 2,..., 14. But on the other hand,∑14
+i=1ω(vi) = 1, hence ω(vi) = 1/14, for each i = 1, 2,..., 14. Deﬁne
+s(v) =
+{
+ω(v), if v =v1,v 2,v 3,v 4,v 5,v 6,v 7
+0, otherwise.
+It is easy to check that s is a half. In fact, it is a sparse half. Indeed, s (E(G)) = 3
+142≤
+1
+50.
+Proof of Theorem 1.1. LetG be a triangle-free graph onn vertices with minimum degree
+≥ 5n/14. By Lemma 2.1 it suﬃces to prove that the uniformly weighted graph (G,ω )
+has a sparse half. By Theorem 2.6 and Lemma 2.7, the graph G admits a surjective
+homomorphismϕ toFd for 1≤d≤ 5. Clearly, (Fd,ωϕ) has minimum degree≥ 5/14 and
+thus has a sparse half by Theorem 3.1. Theorem 1.1 now follows from Lemma 2.2.
+4. Uniform sparse halves, balanced weights and dis-
+turbed subgraphs
+The purpose of this section is to develop a set of tools, that, under fairly general cir-
+cumstances, allow us to show that graphs “close” to a ﬁxed graph have sparse halves. A
+number of technical deﬁnitions will be necessary. We start by a variant of the deﬁnition
+of edit distance (see e.g. [11]).
+Deﬁnition 4.1. Given graphs G and H of orders n and k respectively, we say that G
+can be ε-approximated by H, if there exists a partition V ={V1,V 2,...,V k} of V (G)
+such that
+⏐⏐⏐|Vi|− n
+k
+⏐⏐⏐≤εn, for all i = 1, 2,...k, and e(G△HV)≤εn2,
+whereHV is a graph on vertex set V (G) with adjacency deﬁned as follows. Each HV[Vi]
+is an independent set, (Vi,Vj) induces a complete bipartite graph in HV ifvivj∈E(H)
+and an empty graph, otherwise.
+We will also need a stronger notion of distance deﬁned as follows.
+Deﬁnition 4.2. Given a graph G and F ⊆ E(G), we say that D ⊆ V (G) is an
+ε-covering set for F , if|D|≤ εv(G) and every edge in F has at least one end in D.
+Deﬁnition 4.3. We say that the graph G is an ε-disturbed subgraph of G′ for some
+0<ε< 1, if the following conditions hold:
+1. V (G) =V (G′),
+2. there exists an ε-covering set for E(G)\E(G′) in G,
+3.|NG(v)\NG′(v)|≤ εv(G′) for every vertex v∈V (G′).
+9
+
+--- PAGE 10 ---
+Note that if G is an ε-disturbed subgraph of some graph G′, it does not imply that
+G is a subgraph of G′, as one might expect. However, from our deﬁnition, it follows
+thatG is not ”far” from some subgraph of G′ and that is why we use ε-disturbed term.
+For a graph H, letN (H) be the set of neighborhoods of vertices of H andI(H) be
+the set of maximum independent sets of H. Let I∗(H) =I(H)\N (H). We construct
+a graph H∗ as follows. Let V (H∗) =V (H)∪I∗(H),H be an induced subgraph of H∗,
+and let every I∈I∗(H) be adjacent to every v∈I and no other vertex of H∗. We say
+that a weighted graph (H∗,ω ) isε-balanced if|ω(v)− 1/v(H)|≤ ε for everyv∈V (H)
+and ω(v)≤ ε for every v∈ V (H∗)\V (H). We are now ready for our ﬁrst technical
+result.
+Theorem 4.4. Let H be a maximal triangle-free graph. For every ε >0 there exists
+δ >0 such that ifG is a triangle-free graph which can beδ-approximated byH then there
+exists a graph G′ and a homomorphism ϕ from G′ to H∗ with the following properties.
+(i) G is an ε-disturbed subgraph of G′,
+(ii) (H∗,ωϕ) is ε-balanced, where ω is the uniform weight function deﬁned on G,
+(iii) ϕ is a strong homomorphism, that is, uv̸∈E(G′) implies ϕ(u)ϕ(v)̸∈E(H∗) for
+every pair of vertices u,v∈V (G′).
+Proof. We assume thatV (H) ={1, 2,...,k }. We show that δ >0 satisﬁes the theorem
+if (k + 2)
+√
+δ≤ min(ε, 1/k). LetV = (V1,V 2,...,V k) be the partition of V (G), and the
+graphHV be as in Deﬁnition 4.1. Let n := v(G),F :=E(G)△E(HV) andJ be the set
+of all vertices of G incident to at least
+√
+δn edges inF . We have 1
+2
+√
+δn|J|≤| F|≤ δn2.
+It follows that|J|≤ 2
+√
+δn.
+We deﬁne a map ϕ :V (G)→V (H∗), as follows. If v∈Vi\J for some i∈V (H)
+then ϕ(v) :=i. Now consider v∈J and let
+I0(v) :={i∈V (G)||N(v)∩Vi|>
+√
+δn}.
+Then I0(v) is independent, as otherwise there exist i,j ∈ [k], such that ij∈ E(H),
+|N(v)∩Vi| >
+√
+δn and|N(v)∩Vj| >
+√
+δn. As G is triangle-free it follows that
+e(HV△G) > εn2, contradicting the choice of V. Let I(v) be a maximal independent
+set containing I0(v), chosen arbitrarily. Deﬁne ϕ(v) := i, if I(v) = NH(i) for some
+i∈V (H), and ϕ(v) :=I(v), otherwise.
+Let G′ be the graph with V (G′) =V (G) and the vertices uv∈E(G′) if and only if
+ϕ(u)ϕ(v)∈E(H∗). Then ϕ is a strong homomorphism from G′ to H∗. For i∈V (H)
+we have Vi\J⊆ ϕ−1(i)⊆ Vi∪J and, therefore,||ϕ−1(i)|/n− 1/k|≤ δ + 2
+√
+δ. For
+I∈V (H∗)\V (H) we have|ϕ−1(I)|≤| J|≤ 2
+√
+δn. Thus (ii) holds, as ε≥δ + 2
+√
+δ.
+It remains to verify (i). We will show that J is an ε-covering set for F′ :=E(G)\
+E(G′) for δ suﬃciently small. First, we show that every edge of F′ has an end in J.
+Indeed suppose thatuv∈E(G) for someu∈Vi,v∈Vj withi,j ∈V (H) not necessarily
+distinct and ij̸∈ E(H). Then there exists h∈ V (H) adjacent to both i and j, as H
+is maximally triangle-free. It follows that both v and u have at least (1/k−δ−
+√
+δ)n
+neighbors in Vh and share a common neighbor if 2(1/k−δ−
+√
+δ)> 1/k. Thus our ﬁrst
+claim holds, as δ +
+√
+δ <1/k.
+10
+
+--- PAGE 11 ---
+Consider nowv∈J and letN′(v) be the set of neighbors of v inV (G)\V (J) joined
+to v by edges of F′. Then |N′(v)∩Vi|≤
+√
+δn for every i∈ V (H) by the choice of
+ϕ(v). It follows that |N′(v)|≤ k
+√
+δn. Therefore v is incident to at most (k + 2)
+√
+δn
+edges in F , as|J|≤ 2
+√
+δn. ThusJ is an ε-covering set for F′, as (k + 2)
+√
+δn≤ε.
+We say that H is entwined ifI∗(H) is intersecting. Note that, using Fact 2.3, one
+can see that Fd is entwined for every d≥ 1, asI∗(Fd) is empty. It is routine to check
+that the Petersen graph is entwined. We say that a graph G of order n is c-maximal
+triangle-free if it is triangle-free and adding any new edge to G creates at least cn
+triangles. For a weighted graph (G,ω ), we say that it is c-maximal triangle-free if G is
+triangle-free and adding any new edge to G creates triangles of total weight at least c.
+Lemma 4.5. Let H be an entwined maximal triangle-free graph, and let 0 < ε <
+1/v(H). If (H∗,ω ) is ε-balanced then it is (1/v(H)−ε)-maximal triangle-free.
+Deﬁnition 4.6. For a weighted graph (G,ω ) we call a distribution s deﬁned on the set
+of halves of (G,ω ) a c-uniform sparse half for some 0<c ≤ 1, if
+1. for every edge e∈E(G), E [s(e)]≥cω (e),
+2. E [s(E(G))]≤ 1
+50.
+Whenever we refer to c-uniform sparse halves in unweighted graphs, they are under-
+stood as the c-uniform sparse halves in the corresponding uniformly weighted graphs.
+Theorem 4.7. Let 0<c< 1 be real, G′ be a c-maximal triangle-free graph and G be
+a triangle-free c2
+2(1+c)-disturbed subgraph of G′. If G′ has a c-uniform sparse half then G
+has a sparse half.
+Proof. Let ε = c2
+2(1+c), F := E(G)−E(G′) and let M be a maximal matching in F .
+Suppose|M| = δn for some 0≤ δ≤ 1/2. Since G is an ε-disturbed subgraph of G′,
+it has an ε-covering set for F . Let D be the minimum one. By the choice of M every
+edge of F has at least one end in V (M). It follows that |D|≤| V (M)| = 2|M|. By the
+third condition in the deﬁnition of ε-disturbed subgraph,|F|≤ εn|D|≤ 2δεn2.
+Let F′ :=E(G′)\E(G). For an edge e∈M, let T (e) be the set of edges e′∈F′,
+such that the only vertex of V (M) that e′ is incident to, is an end of e. Let u,v be the
+ends of e. By the c-maximality of G′, we have |NG′(u)∩NG′(v)|≥ cn for every pair
+of vertices u,v ∈ V (G′) non-adjacent in G′. Since e∈ E(G) and G is triangle-free,
+for every vertex w∈ NG′(u)∩NG′(v), either uw∈ F′ or vw∈ F′. It follows that
+|Te|≥| NG′(u)∩NG′(v)|−| V (M)|≥ (c− 2δ)n. Thus |F′|≥ (c− 2δ)n·δn.
+Let s be a c-uniform sparse half in the graph G′. Then
+E [s(E(G))− s(E(G′))] = E [s(F )− s(F′)]
+= E [s(F )]− E [s(F′)],
+by linearity of the expectation. We have
+E [s(F′)] =
+∑
+e∈F ′
+E [s(e)]≥
+∑
+e∈F ′
+cω (e) =c
+∑
+e∈F ′
+1
+n2≥ c|F′|
+n2 .
+11
+
+--- PAGE 12 ---
+On the other hand,
+E [s(F )] =
+∑
+e∈F
+E [s(e)]≤
+∑
+e∈F
+ω(e) =|F|
+n2.
+Finally, note that δ≤ε, since every edge in M has at least one of its ends in D. Hence,
+E [s(E(G))− s(E(G′))]≤|F|
+n2 − c|F′|
+n2 ≤ 2δε−c(c− 2δ)δ
+=δ(2δc + 2ε−c2)≤ 0,
+where the last inequality holds, as 2δc + 2ε−c2≤ 2(1 +c)ε−c2 = 0 . Therefore,
+E [s(E(G))]≤ E [s(E(G′))]≤ 1
+50, and the graph G has a sparse half by Lemma 2.1.
+We are now ready to prove the main result of this section.
+Theorem 4.8. Let H be an entwined maximal triangle-free graph. Suppose that there
+exists α> 0 such that, if (H∗,ω ) is α-balanced, then (H∗,ω ) has an α-uniform sparse
+half. Then there exists δ > 0 such that every triangle-free graph G which can be
+δ-approximated by H has a sparse half.
+Proof. Let ε := min
+(
+1
+3v(H)2, α2
+2(1+α)
+)
+, and let δ be chosen so that there exist ϕ and
+G′ satisfying the conclusion of Theorem 4.4. The weighted graph (H∗,ωϕ) has an α-
+uniform sparse half, as ε≤ α. Therefore, the graph G′ has an α-uniform sparse half.
+By Lemma 4.5, the graph (H∗,ωϕ) is (1/v(H)− ε)-triangle-free. Therefore, the graph
+G′ is ε-triangle-free, because ϕ is a strong homomorphism. Let c := min(α, 1/2v(H)).
+Then ε≤ c2/(2(1 +c)) and c≤ 1/v(H)−ε, by the choice of ε. It follows that the
+conditions of Theorem 4.7 are satisﬁed for G′ and G. Thus G has a sparse half, as
+desired.
+5. Triangle-free graphs with at least (1/5−γ)n2 edges
+In order to establish the conjecture for the triangle-free graphs with average degree(2
+5−γ
+)
+n we separate the cases when the graphs under consideration are close in the
+sense of Deﬁnition 4.1 to the blowup of C5 and when they are not. In the second case,
+we use the main result of Keevash and Sudakov from [8]. Note that this statement
+follows from their proof method but it is not explicitly stated as such in [8].
+Theorem 5.1. LetG be a triangle-free graph onn vertices such that one of the following
+conditions holds
+(a) either 1
+n
+∑
+v∈V (G)d2(v)≥
+(2
+5n
+)2
+and ∆(G)<
+(2
+5 + 1
+135
+)
+n, or
+(b) ∆(G)≥
+(2
+5 + 1
+135
+)
+n and 1
+n
+∑
+v∈V (G)d(v)≥
+(2
+5− 1
+125
+)
+n.
+Then G has a sparse half.
+The next theorem represents the main technical step in the proof of Theorem 1.2.
+12
+
+--- PAGE 13 ---
+Theorem 5.2. For every ε> 0 there exists δ >0 such that the following holds. If G is
+a triangle-free graph with v (G) =n and e(G)≥ ( 1
+5−δ)n2 then either
+(i) G can be ε-approximated by C5,
+(ii) or at least δn vertices of G have degree at least
+(2
+5 +δ
+)
+n,
+(iii) or there exists an F ⊆ E(G) with|F| ≤εn2 such that the graph G−F is
+bipartite.
+The proof of Theorem 5.2 uses the following technical lemmas.
+Lemma 5.3. Forδ >0 let G be a graph with v (G) =n and e(G)≥ ( 1
+5−δ)n2. Then
+either
+(1) at least δn vertices have degree at least ( 2
+5 +δ)n,
+(2) or at most 2
+√
+δn vertices have degree at most ( 2
+5− 2
+√
+δ)n.
+Proof. Suppose that the outcome (1) does not hold. Let tn be the number of vertices
+that have degree at most ( 2
+5− 2
+√
+δ)n. Then
+2
+(1
+5−δ
+)
+n2≤ 2e(G) =
+∑
+v∈V
+d(v)
+=
+∑
+v∈V
+d(v)≤( 2
+5−2
+√
+δ)n
+d(v) +
+∑
+v∈V
+( 2
+5−2
+√
+δ)n<d(v)<( 2
+5 +δ)n
+d(v) +
+∑
+v∈V
+d(v)≥( 2
+5 +δ)n
+d(v)
+<tn
+(2
+5− 2
+√
+δ
+)
+n + (1−t)n
+(2
+5 +δ
+)
+n +δn2
+=
+(2
+5−
+√
+δt + 2δ−tδ
+)
+n2.
+Thus−2δ <2δ− 2t
+√
+δ−δt, and
+t< 4δ
+2
+√
+δ +δ
+< 2
+√
+δ,
+as desired.
+Lemma 5.4. Let H be a graph on n vertices with minimum degree at least
+(2
+5−δ
+)
+n.
+Let ϕ be a surjective homomorphism from H to C5. Then
+(1
+5− 3δ
+)
+n≤|ϕ−1(v)|≤
+(1
+5 + 2δ
+)
+n, (5)
+for every v∈V (C5).
+13
+
+--- PAGE 14 ---
+Proof. Let the vertices of C5 be labelled v1,v 2,...,v 5 such that the neighbors of vi
+are vi+2 and vi+3. Deﬁne Vi := ϕ−1(vi) for i = 1, 2,..., 5. By the minimum degree
+condition on H, we have
+|Vi| +|Vi+1|≥
+(2
+5−δ
+)
+n (6)
+|Vi+2| +|Vi+3|≥
+(2
+5−δ
+)
+n (7)
+|Vi+4| +|Vi|≥
+(2
+5−δ
+)
+n, (8)
+therefore
+|Vi| +
+(2
+5−δ
+)
+n +
+(2
+5−δ
+)
+n≤|Vi| + (|Vi+1| +|Vi+2|) + (|Vi+3| +|Vi+4|)≤n,
+which gives us the desired upper bound.
+For the lower bound summing inequalities (6)-(8) we get
+n +|Vi|≥
+5∑
+j=1
+|Vj| +|Vi|≥ 3
+(2
+5−δ
+)
+n,
+which gives us |Vi|≥
+(1
+5− 3δ
+)
+n, as desired.
+Proof of Theorem 5.2. We show that δ := (ε/40)2 satisﬁes the theorem for ε≤ 1. We
+apply Lemma 5.3. The ﬁrst outcome of Lemma 5.3 corresponds to the outcome (ii)
+of the theorem. Therefore we assume that the second outcome holds: There exists
+|S|≤ ε
+20n such that every vertex in V (G)\S has degree at least
+(2
+5− ε
+20
+)
+n in G. It
+follows that G′ :=G−S has the minimum degree at least
+(2
+5− ε
+10
+)
+n.
+Since
+(2
+5− ε
+10
+)
+n≥ 3
+8|V (G′)|, Theorem 2.5 implies that there exists a homomorphism
+ϕ fromG′ toC5. Let V (C5) ={v1,v 2,...,v 5} andVi =ϕ−1(vi) for eachi = 1, 2,..., 5.
+If the homomorphism ϕ is not surjective then by Lemma 2.7 the graph G′ is bipartite
+and therefore the graph G∗ = (V (G),E (G′)) is also bipartite. We have e (G)− e(G′)≤
+|S|n≤εn2. Thus outcome (iii) holds. Hence we can suppose that the homomorphism
+ϕ is surjective. Applying Lemma 5.4 to the graph G′ with δ = ε
+10, we get that
+(1
+5− 2ε
+5
+)
+n≤|Vi|≤
+(1
+5 + ε
+5
+)
+n. (9)
+LetV := (V1∪S,V 2,...,V 5) be a partition of V (G). From (9) we have
+⏐⏐|Vi|− n
+5
+⏐⏐≤εn.
+Let HV be as in Deﬁnition 4.1. Then
+e(G△HV)≤|S|n + e(HV)− e(G′)≤ ε
+20n2 + n2
+5 − 1
+2
+(2
+5− ε
+10
+)(
+1− ε
+20
+)
+n2
+≤εn2.
+Thus outcome (i) holds.
+14
+
+--- PAGE 15 ---
+If outcome (i) of Theorem 5.2 holds, our goal is to apply Theorem 4.8. To do that
+we need to ensure that a c-balanced weighting ofC5 has ac-uniform sparse half for some
+c> 0.
+Theorem 5.5. Any (1/50)-balanced weighted graph (C5,ω ) has a (1/30)-uniform sparse
+half.
+Proof. Let δ := 1/50, V (C5) = {v1,v 2,...,v 5} and E(C5) = {vivi+2}5
+i=1, as in the
+proof of Theorem 3.1. We deﬁne a distribution on the set of halves of the graph
+C5. Recall the halves s i, 1≤ i≤ 5 that we have deﬁned earlier in the proof of the
+Theorem 3.1.
+Let the probability mass of the distribution s be 1
+5 on every s i, i = 1, 2,..., 5. We
+show that s is a 1
+30-uniform sparse half. Let us begin by showing that E [s(e)])≥ 1
+30ω(e)
+for every e∈E(C5). Let e = (vi,vi+2), then
+E [s(e)] = 1
+5·ω(vi)
+(1
+2− (ω(vi) +ω(vi+1))
+)
+.
+Hence,
+E [s(e)]≥ 1
+5
+(1
+5−δ
+) (1
+2− 2
+(1
+5 +δ
+))
+= 1
+5·
+(1
+5−δ
+) ( 1
+10− 2δ
+)
+.
+On the other hand,
+ω(e) =ω(vi)·ω(vi+2)≤
+(1
+5 +δ
+)2
+.
+Thus it suﬃces to show that
+1
+5
+(1
+5−δ
+) ( 1
+10− 2δ
+)
+≥ 1
+30
+(1
+5 +δ
+)2
+,
+which can be easily veriﬁed. It is shown in the proof of Theorem 3.1 that E [s(E(G))]≤
+1
+50. Thus, s is a 1
+30-uniform sparse half of G, as claimed.
+We need a ﬁnal technical lemma.
+Lemma 5.6. For every δ >0 there exists γ >0 such that if G is a graph on n vertices
+with at least
+(1
+5−γ
+)
+n2 edges and at least δn vertices of degree at least ( 2
+5 +δ)n then
+1
+n
+∑
+v∈V (G)
+d2(v)≥
+(2
+5n
+)2
+.
+Proof. Suppose that G contains αn vertices of degree at most 2
+5n and βn vertices of
+degree at least
+(2
+5 +δ
+)
+n. We may assume that the average degree of G is less than 2
+5n,
+as otherwise lemma clearly holds. Thus,
+2
+5n> (1−α−β) 2
+5n +β
+(2
+5 +δ
+)
+n,
+15
+
+--- PAGE 16 ---
+hence α> 5
+2βδ≥ 5
+2δ2. We have
+n
+∑
+v∈V (G)
+d2(v)−
+
+ ∑
+v∈V (G)
+d(v)
+
+
+2
+= 1
+2
+∑
+u̸=v
+(d(u)−d(v))2
+≥αδ
+(2
+5 +δ− 2
+5
+)2
+n4 > 5
+2δ5n4.
+Hence
+1
+n
+∑
+v∈V (G)
+d2(v)≥ 1
+n2
+
+ ∑
+v∈V (G)
+d(v)
+
+
+2
++ 5
+2δ5n2≥ 4
+(1
+5−γ
+)2
+n2 + 5
+2δ5n2
+≥ 4
+25n2 +
+(5
+2δ5− 8
+5γ
+)
+n2≥ 4
+25n2,
+if we choose γ = 25
+16δ5.
+Proof of Theorem 1.2. By Theorem 5.5, α = 1/50 satisﬁes the conditions in the state-
+ment of Theorem 4.8 for H := C5. Thus by Theorem 4.8 there exists 0 < ε≤ 1/50
+such that every triangle-free graph G that can be ε-approximated by C5 has a sparse
+half. Let δ be such that Theorem 5.2 holds, and ﬁnally let γ be such that Lemma 5.6
+holds. We show that Theorem 1.2 holds for this choice of γ.
+We distinguish cases based on the outcome of Theorem 5.2 applied to G.
+Case (i): If G can be ε-approximated by C5 then the theorem holds by the choice of
+ε.
+Case (ii): Now suppose that at least δn vertices of G have degree at least
+(2
+5 +δ
+)
+n.
+If ∆(G)≥
+(2
+5 + 1
+135
+)
+n then Theorem 5.1 (b) implies that there is a sparse half in G.
+Therefore we assume that ∆(G)<
+(2
+5 + 1
+135
+)
+n. By Lemma 5.6 and the choice of γ we
+have 1
+n
+∑
+v∈V (G)d2(v)≥
+(2
+5n
+)2
+. Hence Theorem 5.1 (a) implies that there is a sparse
+half in G.
+Case (iii): Lastly, suppose there exists an F⊆ E(G) with|F|≤ εn2 such that the
+graph G′ = (V (G),E (G)\F ) is bipartite with bipartition (U,V ). Then either |U|≥ n
+2
+or|V|≥ n
+2 . Without loss of generality suppose |U|≥ n
+2 . The set U is independent in
+G′, while in G it might not be, but e (G[U])≤| F|≤ εn2≤ n2
+50 . Hence U supports a
+sparse half in graph G.
+6. Neighbourhood of the Petersen Graph
+The uniform blowup of the Petersen graph P , is an extremal example for Conjecture 1.1,
+that is every set of ⌊n/2⌋ vertices spans at least n2/50 edges. Here we show that the
+Conjecture 1.1 holds for any graph that is close to a uniform blowup of Petersen graph
+in the sense of Deﬁnition 4.1. By Theorem 4.8 it is enough to show that suﬃciently
+balanced blowups of P∗ (see Figure 4) have uniform sparse halves.
+Lemma 6.1. Let the weighted graph (P∗,ω ) be (1/500)-balanced. Then it has a 1
+80-
+uniform sparse half.
+16
+
+--- PAGE 17 ---
+v10 v7
+v9
+v6
+v8
+v3
+v5 v2
+v4
+v1
+w1
+w5
+w4
+w3
+w2
+Figure 4: The graph P∗.
+17
+
+--- PAGE 18 ---
+Proof. Let δ := 1/500 and the vertices of P∗ be labeled as in Figure 4, where V :=
+V (P ) ={v1,v 2,...,v 10} and W := V (P∗)\V (P ) ={w1,w 2,...,w 5}. We deﬁne a
+collection{si,j}i∈[5],j∈[4] of halves of (P∗,ω ). Fix i∈ [5] and consider the vertex wi. Let
+Mi := V\N(wi) and not that Mi induces a matching of size three. Choose vertices
+{vi1,vi2,vi3}⊆ V (Mi) such that they are independent and there exist unique wij̸=wi
+such that every v∈V (Mi)\{vi1,vi2,vi3} is adjacent to wij. Note that for every i there
+exist four such choices of {vi1,vi2,vi3}, ﬁx one of them and assign
+si,j(wq) =
+
+
+
+ω(wq), if q =i,
+1
+4ω(wq), if q =ij,
+0, otherwise.
+and
+si,j(vk) =
+
+
+
+0, if vk /∈V (Mi)
+ω(vk), if k =j1,j 2,j 3,
+1
+3
+(1
+2− (ω(vi1) +ω(vi2) +ω(vi3) +ω(wi) + 1
+4ω(wij))
+)
+, otherwise.
+It is easy to check that every s i,j is a half. Let s be a distribution concentrated on
+{si,j}i∈[5],j∈[4] with each of the halves having the same probability 1/20. We show that
+s is a (1/80)-uniform sparse half for ω.
+First, we show that E [s(e)]≥ 1
+80·ω(e) for every edge e∈E(P∗). It can be routinely
+checked that for our choice of δ one has
+1
+3
+(1
+2− (ω(vi1) +ω(vi2) +ω(vi3) +ω(wi) + 1
+4ω(wij))
+)
+≥ 1
+3ω(vk), (10)
+for every vk∈ V (Mi)\{vi1,vi2,vi3}. If both ends v,v′ of e∈ E(P∗) lie in V then,
+using (10), we have
+E [s(e)]≥ 4
+20· 1
+3ω(v)ω(v′) = 1
+15ω(e)≥ 1
+80ω(e).
+If e joins v∈V and w∈W then
+E [s(e)]≥ 3
+20· 1
+4ω(wi)· 1
+3ω(vj) = 1
+80ω(e)
+It remains to prove that E [s(E(G))]≤ 1
+50. Note that,
+si,j(E(G)) =
+(1
+2− (ω(vi1) +ω(vi2) +ω(vi3) +ω(wi) + 1
+4ω(wij))
+)
+×
+×
+(1
+4ω(wij) + 1
+3 (ω(vi1) +ω(vi2) +ω(vi3))
+)
+.
+We ﬁnish the proof using the following technical lemma, the proof of which is included
+in the appendix.
+18
+
+--- PAGE 19 ---
+Lemma 6.2. Suppose given are x1,x 2,...,x 10,y 1,y 2,...y 5 reals and
+L(yi) ={xi+1,xi+2,xi+4,xi+5,xi+8,xi+9},
+for each 1≤i≤ 5 such that 0≤xi≤ 1 , 0≤yj≤ 1 and ∑10
+i=1xi + ∑5
+j=1yj = 1. If
+there exists some 0<δ ≤ 1
+90 such that xi≥ 1
+10−δ for each i = 1, 2,..., 10 then
+∑
+i̸=j
+xi,j1 ,xi,j2 ,xi,j3
+∈L(yi)∩L(yj )
+(1
+2−xi,j1−xi,j2−xi,j3−yi− 1
+4yj
+) (1
+4yj + 1
+3
+(
+xi,j1 +xi,j2 +xi,j3
+))
+≤ 2
+5.
+(11)
+It is easy to see that E [s(E(G))]≤ 1
+50. follows from Lemma 6.2 applied with xi :=
+ω(vi) and yj :=ω(wj). Thus s is a 1/80-uniform sparse half, as claimed.
+As promised, Lemma 6.1 implies the main theorem of this section.
+Theorem 6.3. There exists δ > 0 such that any triangle-free graph G on n vertices
+which can be δ-approximated by the Petersen graph has a sparse half.
+Proof. The theorem follows from Theorem 4.8, as the Petersen graph satisﬁes the re-
+quirements of that theorem with α = 1/500 by Lemma 6.1.
+References
+[1] B. Andr´ asfai, P. Erd˝ os, and V. T. Sos, On the connection between chromatic
+number, maximal clique and minimal degree of a graph , Discrete Math. (1974),
+no. 8, 205–218.
+[2] C.C. Chen, G.P. Jin, and K.M. Koh, Triangle-free graphs with large degree , Com-
+binatorics, Probability and Computing (1997), no. 6, 381–396.
+[3] P. Erd˝ os,Problems and results in graph theory and combinatorial analysis , Proceed-
+ings of the Fifth British Combinatorial Conference (1975), no. 15(1976), 169–192.
+[4] P. Erd˝ os,Some old and new problems in various branches of combinatorics , Graphs
+and Combinatorics, Discrete Math (1995,1997), 165/166 , 227–231.
+[5] P. Erd˝ os, R. Faudree, C. Rousseau, and R. Schelp, A local density condition for
+triangles, Discrete Math (1994), no. 127, 153–161.
+[6] R. H¨ aggkvist, Odd cycles of speciﬁed length in non-bipartite graphs , Annals of
+Discrete Mathematics 13 (1982), 89–100.
+[7] G.P. Jin, Triangle-free chromatic grpahs , Discrete Mathematics (1995), no. 145,
+151–170.
+[8] P. Keevash and B. Sudakov, Sparse halves in triangle-free graphs , Journal of Com-
+binatorial Theory (2006), no. 96, 614–620.
+19
+
+--- PAGE 20 ---
+[9] M. Krivelevich, On the edge distribution in triangle-free graphs , J. Comb. Theory,
+Ser. B 63 (1995), no. 2, 245–260.
+[10] L. Lov´ asz,Subgraph densities in signed graphons and the local Simonovits-Sidorenko
+conjecture, The Electronic Journal of Combinatorics [electronic only] 18 (2011),
+no. 1, Research Paper P127, 21 p., electronic only (eng).
+[11] L. Lov´ asz and B. Szegedy,Testing properties of graphs and functions , Israel Journal
+of Mathematics (2010), no. 178, 113–156.
+[12] A. A. Razborov, On the Caccetta-H¨ aggkvist Conjecture with Forbidden Subgraphs,
+J. Graph Theory 74 (2013), 236–248.
+[13] A.A. Razborov, On Tur´ an’s (3,4)-problem with forbidden subgraphs, Mathematical
+Notes 95 (2014), no. 1-2, 245–252.
+[14] D.R. Woodall, The binding number of a graph and its Anderson number , J. Combin.
+Theory (1973), 225–255.
+7. Appendix
+Proof of Lemma 3.3
+Suppose the Lemma is false. Then for each i = 1, 2,..., 8
+1
+2
+(1
+2−xi−xi+1−xi+2
+)
+(xi +xi+2) + 1
+4
+(1
+2−xi−xi+1−xi+2
+)2
+> 1
+50. (12)
+Summing up these inequalities over all i = 1, 2,..., 8 we get that
+8
+50 <
+8∑
+i=1
+1
+2
+(1
+2−xi−xi+1−xi+2
+)
+(xi +xi+2) +
+8∑
+i=1
+1
+4
+(1
+2−xi−xi+1−xi+2
+)2
+= 1
+2
+8∑
+i=1
+xi−
+8∑
+i=1
+(xi +xi+1 +xi+2)xi + 1
+4· 1
+4· 8− 1
+4
+8∑
+i=1
+(xi +xi+1 +xi+2)
++ 1
+4
+8∑
+i=1
+(xi +xi+1 +xi+2)2
+= 1
+2−
+8∑
+i=1
+(xi +xi+1 +xi+2)xi + 1
+2− 3
+4 + 1
+4
+8∑
+i=1
+(xi +xi+1 +xi+2)2
+= 1
+4− 1
+4
+8∑
+i=1
+xi
+2− 1
+2
+8∑
+i=1
+xixi+2. (13)
+20
+
+--- PAGE 21 ---
+Let us ﬁnd the maximum value under the conditions of the lemma. To ﬁnd the
+maximum value of the expression in (13), we need to ﬁnd the minimum value of
+S := 1
+4
+8∑
+i=1
+xi
+2 + 1
+2
+8∑
+i=1
+xixi+2.
+Claim 7.1. For every 1≤i≤ 8
+xi+1 +xi+2 +xi+3 < 0.394
+Proof. By inequality (12)
+1
+2
+(1
+2− (xi+1 +xi+2 +xi+3)
+)
+(xi+1 +xi+3) + 1
+4
+(1
+2− (xi+1 +xi+2 +xi+3)
+)2
+> 1
+50.
+Let α =xi+1 +xi+2 +xi+3. Then xi+1 +xi+3 =α−xi+2≤α− 1
+14. Therefore
+1
+2
+(1
+2−α
+) (
+α− 1
+14
+)
++ 1
+4
+(1
+2−α
+)2
+=−α2
+4 + α
+28 + 5
+112 > 1
+50,
+which reduces to the inequality
+α2
+4 − α
+28− 69
+2800 < 0.
+This quadratic inequality gives us the desired α< 0.393412 bound.
+It is easy to check that the following claim is true.
+Claim 7.2.
+S≥ 1
+2
+4∑
+i=1
+zi
+2 +
+4∑
+i=1
+zizi+2,
+where zi = (xi +xi+4)/2 for all 1≤i≤ 4.
+Claim 7.3. For every 1≤i≤ 4, zi > 0.106.
+Proof. For every 1≤i≤ 4 we have
+1 = (xi +xi+4) + (xi+1 +xi+2 +xi+3) + (xi+5 +xi+6 +xi+7)
+(7.1)
+< 2zi + 2· 0.394,
+thereforezi > 0.106.
+Let β =z1 +z3. Then
+S
+(7.2)
+≥ 1
+2(z1 +z3)2 + 1
+2(z2 +z4)2 +z1z3 +z2z4
+= 1
+2β2 + 1
+2
+(1
+2−β
+)2
++z1z3 +z2z4
+(7.3)
+≥ 1
+2β2 + 1
+2
+(1
+2−β
+)2
++ 0.106· (β− 0.106) + 0.106
+(1
+2−β− 0.106
+)
+=β2− 1
+2β + 0.155528
+> 0.093
+21
+
+--- PAGE 22 ---
+The last two inequalities hold because for ﬁxed β the expression z1z3 +z2z4 achieves
+its minimum value when z1 = z2 = 0.106, z3 = β− 0.106 and z4 = 1
+2−β− 0.106.
+The expression β2− 1
+2β + 0.155528 achieves its minimum for β = 1
+4. It follows from the
+inequality above that
+1
+4− 1
+4
+8∑
+i=1
+xi
+2− 1
+2
+8∑
+i=1
+xixi+2 = 1
+4−S < 8
+50,
+a contradiction that ﬁnishes the proof of the lemma.
+Proof of Lemma 3.4
+Suppose the lemma is false. Then for all 1≤i≤ 11 we have
+1
+2
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)
+(xi+1 +xi+4)
++ 1
+4
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)2
+> 1/50.
+Summing these inequalities for 1≤i≤ 11 we obtain
+11
+50 <
+11∑
+i=1
+1
+2
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)
+(xi+1 +xi+4)
++
+11∑
+i=1
+1
+4
+(1
+2− (xi+1 +xi+2 +xi+3 +xi+4)
+)2
+= 1
+4
+11∑
+i=1
+(xi+1 +xi+4)−
+11∑
+i=1
+(xi+1 +xi+2 +xi+3 +xi+4)xi+1
++ 11
+16− 1
+4
+11∑
+i=1
+(xi+1 +xi+2 +xi+3 +xi+4) + 1
+4
+11∑
+i=1
+(xi+1 +xi+2 +xi+3 +xi+4)2
+= 3
+16−
+11∑
+i=1
+(xi+1 +xi+2 +xi+3 +xi+4)xi+1 + 1
+4
+11∑
+i=1
+(xi+1 +xi+2 +xi+3 +xi+4)2
+= 3
+16 + 1
+2
+11∑
+i=1
+xi(xi+1−xi+3)
+≤ 3
+16 + 1
+2
+( 11∑
+i=1
+xixi+1− 11
+196
+)
+. (14)
+We claim that
+f(x1,...,x 11) :=
+11∑
+i=1
+xixi+1≤ 77
+784.
+Indeed, consider any pair (xi,xj), such that j̸= i± 1, let α = xi +xj is ﬁxed. Note
+thatf is linear as a function of (xi,xj). Therefore f(xi,xj) achieves its maximum value
+22
+
+--- PAGE 23 ---
+on the region R :={0≤xi≤ 1/14 for 1≤ 1≤ 14, ∑11
+i=1xi = 1}, when xi = 1
+14 and
+xj = α− 1
+14, or when xj = 1
+14 and xi = α− 1
+14. Thus f attains its maximum on R
+when all variables are equal 1
+14 except possibly two of them whose indices are consecutive,
+without loss of generality, sayx10 andx11. It is easy to see that the maximum is achieved
+forx10 =x11 = 5
+28 and is equal to 77
+784, as claimed.
+Thus (14) implies
+11
+50 < 3
+16 + 1
+2
+( 11∑
+i=1
+xixi+1− 11
+196
+)
+≤ 3
+16 + 1
+2·
+( 77
+784− 11
+196
+)
+= 327
+1568 < 11
+50,
+a contradiction that ﬁnishes the proof.
+Proof of Lemma 6.2
+Let Y := ∑5
+i=1yi. Summing inequalities (11) over all i,j such that i ̸= j and
+xi,j1,xi,j2,xi,j3∈L(yi)∩L(yj). We get
+∑
+i̸=j
+(1
+2− (xi,j1 +xi,j2 +xi,j3 +yi + 1
+4yj)
+) (1
+4yj + 1
+3
+(
+xi,j1 +xi,j2 +xi,j3
+))
+= 1
+8
+∑
+i̸=j
+yj− 1
+4
+∑
+i̸=j
+yj
+(
+xi,j1 +xi,j2 +xi,j3
+)
++ 1
+6
+∑
+i̸=j
+(xi,j1 +xi,j2 +xi,j3)
+− 1
+3
+∑
+i̸=j
+(
+xi,j1 +xi,j2 +xi,j3
+)2
+− 1
+3
+∑
+i̸=j
+(
+yi + 1
+4yj
+)(
+xi,j1 +xi,j2 +xi,j3
+)
+− 1
+4
+∑
+i̸=j
+yj
+(
+yi + 1
+4yj
+)
+≤ 1
+2Y− 3Y
+( 1
+10−δ
+)
++ (1−Y )− 36(1−Y )2
+60 − 5Y
+( 1
+10−δ
+)
+= 2
+5− Y
+10− 3
+5Y 2 + 8δY
+≤ 2
+5,
+since δ≤ 1
+90.
+23

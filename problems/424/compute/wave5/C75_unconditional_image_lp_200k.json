@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 50000,
+      "allowed_values": 33333,
+      "hard_shapes": 4955,
+      "variables": 189013,
+      "inequalities": 638909,
+      "minimum_f_plus_q": 5581.0,
+      "maximum_relaxed_H_minus_Q": -626.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 100000,
+      "allowed_values": 66666,
+      "hard_shapes": 10294,
+      "variables": 393483,
+      "inequalities": 1355489,
+      "minimum_f_plus_q": 11849.0,
+      "maximum_relaxed_H_minus_Q": -1555.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "limit": 200000,
+      "allowed_values": 133333,
+      "hard_shapes": 21294,
+      "variables": 817814,
+      "inequalities": 2865919,
+      "minimum_f_plus_q": 24782.0,
+      "maximum_relaxed_H_minus_Q": -3488.0,
+      "fractional_variable_count": 64,
+      "fractional_variables_first_40": [
+        {
+          "name": "s_1647",
+          "value": 0.5
+        },
+        {
+          "name": "s_4940",
+          "value": 0.5
+        },
+        {
+          "name": "s_4941",
+          "value": 0.5
+        },
+        {
+          "name": "s_43920",
+          "value": 0.5
+        },
+        {
+          "name": "s_44468",
+          "value": 0.5
+        },
+        {
+          "name": "f_4940",
+          "value": 0.5
+        },
+        {
+          "name": "f_44468",
+          "value": 0.5
+        },
+        {
+          "name": "f_87839",
+          "value": 0.5
+        },
+        {
+          "name": "f_88935",
+          "value": 0.5
+        },
+        {
+          "name": "f_131759",
+          "value": 0.5
+        },
+        {
+          "name": "f_133403",
+          "value": 0.5
+        },
+        {
+          "name": "w_3293_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_4940_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_8234_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_9879_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_9881_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_14819_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_14822_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_14822_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_23057_4",
+          "value": 0.5
+        },
+        {
+          "name": "w_24699_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_24704_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_27998_2",
+          "value": 0.5
+        },
+        {
+          "name": "w_42821_5",
+          "value": 0.5
+        },
+        {
+          "name": "w_44459_4",
+          "value": 0.5
+        },
+        {
+          "name": "w_44468_1",
+          "value": 0.5
+        },
+        {
+          "name": "w_44468_2",
+          "value": 0.5
+        },
+        {
+          "name": "w_54350_4",
+          "value": 0.5
+        },
+        {
+          "name": "w_67526_3",
+          "value": 0.5
+        },
+        {
+          "name": "w_69159_3",
+          "value": 0.5
+        },
+        {
+          "name": "w_69173_4",
+          "value": 0.5
+        },
+        {
+          "name": "w_72467_10",
+          "value": 0.5
+        },
+        {
+          "name": "w_82349_10",
+          "value": 0.5
+        },
+        {
+          "name": "w_83979_2",
+          "value": 0.5
+        },
+        {
+          "name": "w_83996_2",
+          "value": 0.5
+        },
+        {
+          "name": "w_83996_4",
+          "value": 0.5
+        },
+        {
+          "name": "w_87290_3",
+          "value": 0.5
+        },
+        {
+          "name": "w_87839_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_88935_0",
+          "value": 0.5
+        },
+        {
+          "name": "w_107054_7",
+          "value": 0.5
+        }
+      ],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ]
+}

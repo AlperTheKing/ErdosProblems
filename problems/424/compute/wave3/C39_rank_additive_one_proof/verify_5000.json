@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "limit": 5000,
+  "algorithm": "trial divisors plus literal descending stages",
+  "generated": 1496,
+  "hard": 253,
+  "targets": 290,
+  "stages_to_fixpoint": 10,
+  "rank_histogram_hard": {
+    "2": 147,
+    "3": 26,
+    "4": 35,
+    "5": 26,
+    "6": 15,
+    "7": 4
+  },
+  "rank_histogram_target": {
+    "0": 112,
+    "1": 33,
+    "2": 37,
+    "3": 29,
+    "4": 33,
+    "5": 21,
+    "6": 17,
+    "7": 8
+  },
+  "forest_failures": [],
+  "stage_mismatches": [],
+  "potential_identity_mismatches": [],
+  "full_unmatched": [
+    [
+      362,
+      2
+    ]
+  ],
+  "one_boundary_unmatched_prefix": [
+    [
+      186,
+      2
+    ],
+    [
+      362,
+      2
+    ],
+    [
+      954,
+      2
+    ],
+    [
+      1002,
+      2
+    ],
+    [
+      1614,
+      4
+    ],
+    [
+      1638,
+      2
+    ],
+    [
+      1644,
+      4
+    ],
+    [
+      1674,
+      2
+    ],
+    [
+      1704,
+      6
+    ],
+    [
+      1710,
+      2
+    ],
+    [
+      1734,
+      4
+    ],
+    [
+      2046,
+      2
+    ]
+  ],
+  "one_boundary_unmatched_count": 12,
+  "two_boundary_unmatched": [
+    [
+      362,
+      2
+    ]
+  ],
+  "component_8_target_prefix": [
+    {
+      "child": 449,
+      "parent": 225,
+      "rank": 5,
+      "ordinal": 1
+    },
+    {
+      "child": 1349,
+      "parent": 675,
+      "rank": 6,
+      "ordinal": 2
+    },
+    {
+      "child": 4089,
+      "parent": 2045,
+      "rank": 7,
+      "ordinal": 3
+    }
+  ],
+  "global_credits_at_74_rank_le_2": [
+    {
+      "child": 41,
+      "parent": 21,
+      "rank": 2,
+      "root": 6
+    },
+    {
+      "child": 69,
+      "parent": 35,
+      "rank": 1,
+      "root": 18
+    }
+  ],
+  "assertions": {
+    "forest_decomposition": true,
+    "literal_stages_match": true,
+    "full_unmatched_is_362": true,
+    "two_boundary_unmatched_is_362": true,
+    "source_74_has_no_local_arrived_credit": true,
+    "source_74_global_credits_are_41_69": true,
+    "rank_filtered_potential_identity": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version":1,
+  "limit":10000000,
+  "rank_definition":"splitless=0; reducible=1+max_pairs min_missing_rank",
+  "forest_definition":"each reducible hole chooses a missing endpoint of rank exactly one lower",
+  "allowed":6666666,
+  "generated":4952270,
+  "holes":1714396,
+  "splitless":1004961,
+  "hard":392961,
+  "healed":637270,
+  "maximum_obstruction_rank":17,
+  "scalar":{
+    "H_minus_Q":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null},
+    "H_minus_E":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null},
+    "H_minus_Q_minus_E":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null}
+  },
+  "global_rank_filtered":{
+    "same_rank_H_minus_Q":{"maximum_deficit":1,"maximum_witness":{"X":362,"rank":2,"root":null,"H":11,"Q":10,"deficit":1},"first_positive":{"X":362,"rank":2,"root":null,"H":11,"Q":10,"deficit":1},"first_over_one":null},
+    "same_rank_H_minus_Q_minus_E":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null},
+    "offset_0":{"maximum_deficit":1,"maximum_witness":{"X":362,"rank":2,"root":null,"H":11,"Q":10,"deficit":1},"first_positive":{"X":362,"rank":2,"root":null,"H":11,"Q":10,"deficit":1},"first_over_one":null},
+    "offset_1":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null},
+    "offset_2":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null},
+    "exact_layer_H_minus_Q_minus_E":{"maximum_deficit":0,"maximum_witness":null,"first_positive":null,"first_over_one":null}
+  },
+  "singleton_leaf_6_gate":{
+    "source_rule":"all lower-rank obstruction leaves equal 6",
+    "target_rule":"healed parent shadow contains 6, plus C copies of E=6",
+    "hard_sources":39603,
+    "healed_targets":238937,
+    "required_bank_capacity":{"maximum_deficit":1,"maximum_witness":{"X":362,"rank":null,"root":6,"H":4,"Q":3,"deficit":1},"first_positive":{"X":362,"rank":null,"root":6,"H":4,"Q":3,"deficit":1},"first_over_one":null}
+  },
+  "component_policies":[
+    {"name":"minimum_critical_endpoint","component_count":1004961,"unranked_bank_capacity":{"maximum_deficit":70762,"maximum_witness":{"X":9999866,"rank":null,"root":6,"H":0,"Q":0,"deficit":70762},"first_positive":{"X":74,"rank":null,"root":8,"H":0,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":null,"root":8,"H":0,"Q":0,"deficit":2}},"rank_filtered_bank_capacity":{"offset_0":{"maximum_deficit":72215,"maximum_witness":{"X":9999852,"rank":8,"root":6,"H":202266,"Q":130051,"deficit":72215},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_1":{"maximum_deficit":70762,"maximum_witness":{"X":9999866,"rank":16,"root":6,"H":209267,"Q":138505,"deficit":70762},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_2":{"maximum_deficit":70762,"maximum_witness":{"X":9999866,"rank":16,"root":6,"H":209267,"Q":138505,"deficit":70762},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}}}},
+    {"name":"minimum_critical_root","component_count":1004961,"unranked_bank_capacity":{"maximum_deficit":77400,"maximum_witness":{"X":9999866,"rank":null,"root":6,"H":0,"Q":0,"deficit":77400},"first_positive":{"X":74,"rank":null,"root":8,"H":0,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":null,"root":8,"H":0,"Q":0,"deficit":2}},"rank_filtered_bank_capacity":{"offset_0":{"maximum_deficit":79159,"maximum_witness":{"X":9999852,"rank":8,"root":6,"H":225835,"Q":146676,"deficit":79159},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_1":{"maximum_deficit":77400,"maximum_witness":{"X":9999866,"rank":16,"root":6,"H":233452,"Q":156052,"deficit":77400},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_2":{"maximum_deficit":77400,"maximum_witness":{"X":9999866,"rank":16,"root":6,"H":233452,"Q":156052,"deficit":77400},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}}}},
+    {"name":"minimum_current_component_balance","component_count":1004961,"unranked_bank_capacity":{"maximum_deficit":54727,"maximum_witness":{"X":9999792,"rank":null,"root":8,"H":0,"Q":0,"deficit":54727},"first_positive":{"X":74,"rank":null,"root":8,"H":0,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":null,"root":8,"H":0,"Q":0,"deficit":2}},"rank_filtered_bank_capacity":{"offset_0":{"maximum_deficit":56551,"maximum_witness":{"X":9999792,"rank":9,"root":8,"H":145991,"Q":89440,"deficit":56551},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_1":{"maximum_deficit":54727,"maximum_witness":{"X":9999792,"rank":16,"root":8,"H":151422,"Q":96695,"deficit":54727},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}},"offset_2":{"maximum_deficit":54727,"maximum_witness":{"X":9999792,"rank":16,"root":8,"H":151422,"Q":96695,"deficit":54727},"first_positive":{"X":74,"rank":2,"root":8,"H":1,"Q":0,"deficit":1},"first_over_one":{"X":144,"rank":3,"root":8,"H":3,"Q":1,"deficit":2}}}}
+  ],
+  "snapshots":[
+    {"X":100,"H":2,"Q":3,"E":19,"H-Q-E":-20,"H-E":-17,"leaf_6_required_capacity":0,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":1,"rank_offset_0":1,"rank_offset_1":1,"rank_offset_2":1},{"name":"minimum_critical_root","unranked":1,"rank_offset_0":1,"rank_offset_1":1,"rank_offset_2":1},{"name":"minimum_current_component_balance","unranked":1,"rank_offset_0":1,"rank_offset_1":1,"rank_offset_2":1}]},
+    {"X":1000,"H":41,"Q":46,"E":156,"H-Q-E":-161,"H-E":-115,"leaf_6_required_capacity":1,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":16,"rank_offset_0":17,"rank_offset_1":16,"rank_offset_2":16},{"name":"minimum_critical_root","unranked":17,"rank_offset_0":18,"rank_offset_1":17,"rank_offset_2":17},{"name":"minimum_current_component_balance","unranked":12,"rank_offset_0":14,"rank_offset_1":12,"rank_offset_2":12}]},
+    {"X":10000,"H":518,"Q":593,"E":1344,"H-Q-E":-1419,"H-E":-826,"leaf_6_required_capacity":1,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":113,"rank_offset_0":128,"rank_offset_1":113,"rank_offset_2":113},{"name":"minimum_critical_root","unranked":122,"rank_offset_0":143,"rank_offset_1":122,"rank_offset_2":122},{"name":"minimum_current_component_balance","unranked":89,"rank_offset_0":104,"rank_offset_1":89,"rank_offset_2":89}]},
+    {"X":100000,"H":5108,"Q":6783,"E":11928,"H-Q-E":-13603,"H-E":-6820,"leaf_6_required_capacity":1,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":830,"rank_offset_0":998,"rank_offset_1":830,"rank_offset_2":830},{"name":"minimum_critical_root","unranked":880,"rank_offset_0":1086,"rank_offset_1":880,"rank_offset_2":880},{"name":"minimum_current_component_balance","unranked":671,"rank_offset_0":773,"rank_offset_1":671,"rank_offset_2":671}]},
+    {"X":1000000,"H":45583,"Q":67537,"E":108651,"H-Q-E":-130605,"H-E":-63068,"leaf_6_required_capacity":1,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":7680,"rank_offset_0":8292,"rank_offset_1":7680,"rank_offset_2":7680},{"name":"minimum_critical_root","unranked":8298,"rank_offset_0":9053,"rank_offset_1":8298,"rank_offset_2":8298},{"name":"minimum_current_component_balance","unranked":5794,"rank_offset_0":6264,"rank_offset_1":5794,"rank_offset_2":5794}]},
+    {"X":10000000,"H":392961,"Q":637270,"E":1004961,"H-Q-E":-1249270,"H-E":-612000,"leaf_6_required_capacity":1,"policy_maxima":[{"name":"minimum_critical_endpoint","unranked":70762,"rank_offset_0":72215,"rank_offset_1":70762,"rank_offset_2":70762},{"name":"minimum_critical_root","unranked":77400,"rank_offset_0":79159,"rank_offset_1":77400,"rank_offset_2":77400},{"name":"minimum_current_component_balance","unranked":54727,"rank_offset_0":56551,"rank_offset_1":54727,"rank_offset_2":54727}]}
+  ]
+}

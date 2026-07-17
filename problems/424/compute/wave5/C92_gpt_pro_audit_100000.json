@@ -1,0 +1,71 @@
+{
+  "schema": "C92-gpt-pro-audit-v1",
+  "limit": 100000,
+  "exact_integer_acceptance": true,
+  "one_eighth_descent_census": {
+    "persistent_hard_roots": 3386,
+    "checked_factor_pairs": 5162,
+    "checked_hole_endpoints": 6533,
+    "failures": 0,
+    "closest_witness": {
+      "hard_root": 2394,
+      "factor_pair": [
+        5,
+        479
+      ],
+      "hole_factor": 479,
+      "descent_path": [
+        240
+      ],
+      "eight_terminal_minus_root": -474
+    },
+    "trajectory_sha256": "50AD6DBAC11A45D9B2BACF21CAAF5FA52A1286EA03F5ACC48D8037CFC1C30FE2"
+  },
+  "local_obstructions": {
+    "late_splitless_at_X_114": {
+      "sources": [
+        74,
+        114
+      ],
+      "terminal_splitless_roots": [
+        8,
+        12
+      ],
+      "crossing_times": [
+        449,
+        5633
+      ],
+      "A_H_floor_X_over_4": 0,
+      "conclusion": "Neither natural terminal descent lands in D(114) or A_H(28); one dummy cannot pay both sources."
+    },
+    "early_hard_crossing_at_X_3858": {
+      "source": 3858,
+      "blocked_factor": 227,
+      "terminal_hard_root": 114,
+      "terminal_crossing_time": 905,
+      "quarter_cutoff": 964,
+      "certificate_top": 905,
+      "conclusion": "The unique terminal root lies in neither D(3858) nor A_H(964)."
+    },
+    "seed_root_loop": {
+      "factor_pair": [
+        11,
+        41
+      ],
+      "common_seed_root": 6
+    },
+    "descendant_charge_II_at_X_296": {
+      "sources_at_quarter_cutoff": [
+        54,
+        74
+      ],
+      "terminal_roots": [
+        6,
+        8
+      ],
+      "terminal_roots_healed_by_296": [
+        6
+      ]
+    }
+  }
+}

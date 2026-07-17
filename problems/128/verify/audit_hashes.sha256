@@ -1,0 +1,4 @@
+fb8bbfaf5d81a6cbd6e869624d21fded74bd63263eb4cc53ecabf22d0ad13cbc  problems/128/verify/audit_verify.py
+044962512ec6845be1cee76c80c9d2fbfb44d4407eef280514848679c0871116  problems/128/verify/audit_selftest.py
+5b1371bb3dfbf68303a5764ed9f900a47d50c337b28f03761079a1c4cc723f2a  problems/128/verify/audit_test.log
+0a02bd24be78cf64e58cd957bc894f7c94f5c505d79a885278de22aecc30c5a2  problems/128/ADVERSARIAL_AUDIT.md

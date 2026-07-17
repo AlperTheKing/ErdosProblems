@@ -1,0 +1,69 @@
+{
+  "A_H": [
+    54,
+    74,
+    114,
+    144,
+    174,
+    186
+  ],
+  "A_H_quarter": [],
+  "D": [
+    6,
+    18,
+    20,
+    38,
+    66
+  ],
+  "cutoff": 186,
+  "factor_local_bank_neighborhoods": {
+    "54": [
+      6
+    ],
+    "74": [],
+    "114": [],
+    "144": [],
+    "174": [
+      18
+    ],
+    "186": [
+      6
+    ]
+  },
+  "global_scalar_defect": 1,
+  "hall_deficit": 4,
+  "hall_witness_sources": [
+    54,
+    74,
+    114,
+    144,
+    174,
+    186
+  ],
+  "hall_witness_targets": [
+    6,
+    18
+  ],
+  "missing_endpoint_root_neighborhoods": {
+    "54": [
+      6
+    ],
+    "74": [
+      8
+    ],
+    "114": [
+      12
+    ],
+    "144": [
+      8
+    ],
+    "174": [
+      18
+    ],
+    "186": [
+      6
+    ]
+  },
+  "quarter": 46,
+  "schema": "C95-factor-local-obstruction-v1"
+}

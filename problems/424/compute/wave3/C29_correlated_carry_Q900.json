@@ -1,0 +1,70 @@
+{
+  "canonical_alpha": [
+    "30/31",
+    "30/31",
+    "30/31"
+  ],
+  "results": [
+    {
+      "certificate": {
+        "exact_at_most_one": false,
+        "lambda_denominator": "72605062862",
+        "lambda_float": 1.6192155836081534,
+        "lambda_numerator": "117563249235",
+        "max_action": 1,
+        "max_state": 1,
+        "potential": null,
+        "potential_sha256": "e9121f6c52881a433cb4659ac3ceb8cd5c8280f7ed9f98b05c8bc6d0ca4c7a95"
+      },
+      "distinct_actions": 93,
+      "exact_action_checks": 73335,
+      "lp_lower": 1.6192154164341521,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "lp_upper": 1.6192154164342347,
+      "modulus": 30,
+      "reachable_states": 22
+    },
+    {
+      "certificate": {
+        "exact_at_most_one": false,
+        "lambda_denominator": "139506483929",
+        "lambda_float": 1.549683564744041,
+        "lambda_numerator": "216190905320",
+        "max_action": 2,
+        "max_state": 1,
+        "potential": null,
+        "potential_sha256": "4321e6022d43433ae54aeadbdd0b70906f7ed7539ef126f7c3263fb90c4113f5"
+      },
+      "distinct_actions": 448,
+      "exact_action_checks": 70668,
+      "lp_lower": 1.5496834046251342,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "lp_upper": 1.5496834046252168,
+      "modulus": 150,
+      "reachable_states": 106
+    },
+    {
+      "certificate": {
+        "exact_at_most_one": false,
+        "lambda_denominator": "387500000",
+        "lambda_float": 1.349219790967742,
+        "lambda_numerator": "522822669",
+        "max_action": 1,
+        "max_state": 234,
+        "potential": null,
+        "potential_sha256": "d33cdadbe3afa640e18d2a2513a9ee923edd7bb89851bc3576cf26d3f491bf22"
+      },
+      "distinct_actions": 2014,
+      "exact_action_checks": 58008,
+      "lp_lower": 1.3492197900041178,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "lp_upper": 1.3492197900042004,
+      "modulus": 900,
+      "reachable_states": 522
+    }
+  ],
+  "script_sha256": "1f582e8b6f9115f8708def129a8c9f1866dc48cfc7983fe885e38df3b8a9a191"
+}

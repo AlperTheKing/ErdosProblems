@@ -1,0 +1,59 @@
+{
+  "schema": "C92-event-obstruction-v1",
+  "limit": 100000,
+  "exact_integer_acceptance": true,
+  "event_form": {
+    "statement": "H_birth(X)-H_birth(floor(X/4)) <= D(X)+H_death(X)-H_death(floor(X/4))+1",
+    "algebraic_equivalence_failures": 0,
+    "inequality_failures": 0
+  },
+  "scale_quarter_lower_failures": 0,
+  "local_capacity_one_obstruction": {
+    "cutoff": 450,
+    "persistent_hard_roots": [
+      54,
+      186,
+      450
+    ],
+    "unique_admissible_pairs": {
+      "54": [
+        5,
+        11
+      ],
+      "186": [
+        11,
+        17
+      ],
+      "450": [
+        11,
+        41
+      ]
+    },
+    "forced_missing_endpoint": 11,
+    "common_seed_root": 6,
+    "common_seed_root_first_generated_descendant": 41,
+    "visible_hole_chains": {
+      "54": [
+        54,
+        107,
+        213,
+        425
+      ],
+      "186": [
+        186,
+        371
+      ],
+      "450": [
+        450
+      ]
+    },
+    "conclusion": "Any capacity-one charge using only a hard root's missing factor seed root sends all three sources to the same target."
+  },
+  "endpoint": {
+    "A_H": 3386,
+    "D": 4279,
+    "hard_births": 5108,
+    "hard_deaths": 1722
+  },
+  "event_trajectory_sha256": "2271DFFCD540459204680073C423DEC9002D22D53F7EF19763F1CE4DE675E9B4"
+}

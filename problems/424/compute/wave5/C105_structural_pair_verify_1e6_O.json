@@ -1,0 +1,1208 @@
+{
+  "claim_check": {
+    "checks": {
+      "digests": true,
+      "exact_by_d": true,
+      "limit": true,
+      "summary": true
+    },
+    "status": "PASS"
+  },
+  "digests": {
+    "algorithm": "FNV-1a-64 little-endian",
+    "classification_2_through_limit": "87339232cc226911",
+    "hard_h_d_s": "54733f51cfed8f93"
+  },
+  "exact_by_d": [
+    {
+      "count": 25427,
+      "d": 1,
+      "first_zero_s_h": 534,
+      "last_zero_s_h": 999846,
+      "maximum_deficit": 1,
+      "maximum_deficit_h": 534,
+      "minimum_s": 0,
+      "minimum_s_h": 534,
+      "zero_s_count": 3737
+    },
+    {
+      "count": 17117,
+      "d": 2,
+      "first_zero_s_h": 11576,
+      "last_zero_s_h": 996330,
+      "maximum_deficit": 2,
+      "maximum_deficit_h": 11576,
+      "minimum_s": 0,
+      "minimum_s_h": 11576,
+      "zero_s_count": 586
+    },
+    {
+      "count": 842,
+      "d": 3,
+      "first_zero_s_h": 516312,
+      "last_zero_s_h": 986418,
+      "maximum_deficit": 3,
+      "maximum_deficit_h": 516312,
+      "minimum_s": 0,
+      "minimum_s_h": 516312,
+      "zero_s_count": 3
+    },
+    {
+      "count": 2034,
+      "d": 4,
+      "first_zero_s_h": 112412,
+      "last_zero_s_h": 890642,
+      "maximum_deficit": 4,
+      "maximum_deficit_h": 112412,
+      "minimum_s": 0,
+      "minimum_s_h": 112412,
+      "zero_s_count": 4
+    },
+    {
+      "count": 6,
+      "d": 5,
+      "first_zero_s_h": null,
+      "last_zero_s_h": null,
+      "maximum_deficit": 1,
+      "maximum_deficit_h": 199374,
+      "minimum_s": 4,
+      "minimum_s_h": 199374,
+      "zero_s_count": 0
+    },
+    {
+      "count": 130,
+      "d": 6,
+      "first_zero_s_h": null,
+      "last_zero_s_h": null,
+      "maximum_deficit": 5,
+      "maximum_deficit_h": 756074,
+      "minimum_s": 1,
+      "minimum_s_h": 756074,
+      "zero_s_count": 0
+    },
+    {
+      "count": 24,
+      "d": 8,
+      "first_zero_s_h": null,
+      "last_zero_s_h": null,
+      "maximum_deficit": 4,
+      "maximum_deficit_h": 512264,
+      "minimum_s": 4,
+      "minimum_s_h": 512264,
+      "zero_s_count": 0
+    },
+    {
+      "count": 3,
+      "d": 9,
+      "first_zero_s_h": null,
+      "last_zero_s_h": null,
+      "maximum_deficit": 3,
+      "maximum_deficit_h": 552474,
+      "minimum_s": 6,
+      "minimum_s_h": 552474,
+      "zero_s_count": 0
+    }
+  ],
+  "exact_integer_acceptance": true,
+  "limit": 1000000,
+  "schema": "C105-independent-python-v1",
+  "summary": {
+    "hard_holes": 45583,
+    "largest_d_with_s_zero": 4,
+    "largest_d_with_s_zero_h": 112412,
+    "largest_deficit_d_minus_s": 5,
+    "largest_deficit_h": 756074,
+    "largest_deficit_h_d": 6,
+    "largest_deficit_h_s": 1,
+    "maximum_d": 9,
+    "zero_s_count": 4330
+  },
+  "witnesses": [
+    {
+      "d": 1,
+      "h": 54,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            6
+          ],
+          "pair": [
+            5,
+            11
+          ],
+          "structural": true
+        }
+      ],
+      "s": 1
+    },
+    {
+      "d": 1,
+      "h": 534,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            54
+          ],
+          "pair": [
+            5,
+            107
+          ],
+          "structural": false
+        }
+      ],
+      "s": 0
+    },
+    {
+      "d": 2,
+      "h": 594,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            60
+          ],
+          "pair": [
+            5,
+            119
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            18
+          ],
+          "pair": [
+            17,
+            35
+          ],
+          "structural": true
+        }
+      ],
+      "s": 2
+    },
+    {
+      "d": 2,
+      "h": 614,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            62
+          ],
+          "pair": [
+            5,
+            123
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            8,
+            null
+          ],
+          "pair": [
+            15,
+            41
+          ],
+          "structural": true
+        }
+      ],
+      "s": 1
+    },
+    {
+      "d": 4,
+      "h": 1154,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            116
+          ],
+          "pair": [
+            5,
+            231
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            6,
+            null
+          ],
+          "pair": [
+            11,
+            105
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            8,
+            null
+          ],
+          "pair": [
+            15,
+            77
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            18
+          ],
+          "pair": [
+            33,
+            35
+          ],
+          "structural": true
+        }
+      ],
+      "s": 3
+    },
+    {
+      "d": 3,
+      "h": 2694,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            270
+          ],
+          "pair": [
+            5,
+            539
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            6,
+            62
+          ],
+          "pair": [
+            11,
+            245
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            18,
+            null
+          ],
+          "pair": [
+            35,
+            77
+          ],
+          "structural": true
+        }
+      ],
+      "s": 3
+    },
+    {
+      "d": 3,
+      "h": 5634,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            564
+          ],
+          "pair": [
+            5,
+            1127
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            12,
+            62
+          ],
+          "pair": [
+            23,
+            245
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            18,
+            null
+          ],
+          "pair": [
+            35,
+            161
+          ],
+          "structural": true
+        }
+      ],
+      "s": 2
+    },
+    {
+      "d": 4,
+      "h": 9470,
+      "pairs": [
+        {
+          "missing_roots": [
+            6,
+            216
+          ],
+          "pair": [
+            11,
+            861
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            144
+          ],
+          "pair": [
+            33,
+            287
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            116
+          ],
+          "pair": [
+            41,
+            231
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            62
+          ],
+          "pair": [
+            77,
+            123
+          ],
+          "structural": false
+        }
+      ],
+      "s": 1
+    },
+    {
+      "d": 3,
+      "h": 10044,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            252
+          ],
+          "pair": [
+            5,
+            2009
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            18,
+            144
+          ],
+          "pair": [
+            35,
+            287
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            62
+          ],
+          "pair": [
+            41,
+            245
+          ],
+          "structural": false
+        }
+      ],
+      "s": 1
+    },
+    {
+      "d": 2,
+      "h": 11576,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            86
+          ],
+          "pair": [
+            17,
+            681
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            114
+          ],
+          "pair": [
+            51,
+            227
+          ],
+          "structural": false
+        }
+      ],
+      "s": 0
+    },
+    {
+      "d": 6,
+      "h": 14024,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            702
+          ],
+          "pair": [
+            5,
+            2805
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            6,
+            638
+          ],
+          "pair": [
+            11,
+            1275
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            8,
+            468
+          ],
+          "pair": [
+            15,
+            935
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            104
+          ],
+          "pair": [
+            17,
+            825
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            54
+          ],
+          "pair": [
+            33,
+            425
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            138
+          ],
+          "pair": [
+            51,
+            275
+          ],
+          "structural": true
+        }
+      ],
+      "s": 4
+    },
+    {
+      "d": 8,
+      "h": 84314,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            8432
+          ],
+          "pair": [
+            5,
+            16863
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            6,
+            null
+          ],
+          "pair": [
+            11,
+            7665
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            8,
+            1406
+          ],
+          "pair": [
+            15,
+            5621
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            1278
+          ],
+          "pair": [
+            33,
+            2555
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            18,
+            null
+          ],
+          "pair": [
+            35,
+            2409
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            548
+          ],
+          "pair": [
+            77,
+            1095
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            402
+          ],
+          "pair": [
+            105,
+            803
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            116,
+            null
+          ],
+          "pair": [
+            231,
+            365
+          ],
+          "structural": false
+        }
+      ],
+      "s": 5
+    },
+    {
+      "d": 6,
+      "h": 100554,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            10056
+          ],
+          "pair": [
+            5,
+            20111
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            2958
+          ],
+          "pair": [
+            17,
+            5915
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            18,
+            null
+          ],
+          "pair": [
+            35,
+            2873
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            774
+          ],
+          "pair": [
+            65,
+            1547
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            60,
+            212
+          ],
+          "pair": [
+            119,
+            845
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            56,
+            null
+          ],
+          "pair": [
+            221,
+            455
+          ],
+          "structural": true
+        }
+      ],
+      "s": 3
+    },
+    {
+      "d": 4,
+      "h": 112412,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            266
+          ],
+          "pair": [
+            53,
+            2121
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            140
+          ],
+          "pair": [
+            101,
+            1113
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            354
+          ],
+          "pair": [
+            159,
+            707
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            186
+          ],
+          "pair": [
+            303,
+            371
+          ],
+          "structural": false
+        }
+      ],
+      "s": 0
+    },
+    {
+      "d": 6,
+      "h": 138620,
+      "pairs": [
+        {
+          "missing_roots": [
+            12,
+            null
+          ],
+          "pair": [
+            23,
+            6027
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            846
+          ],
+          "pair": [
+            41,
+            3381
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            252
+          ],
+          "pair": [
+            69,
+            2009
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            62,
+            564
+          ],
+          "pair": [
+            123,
+            1127
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            216
+          ],
+          "pair": [
+            161,
+            861
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            144,
+            null
+          ],
+          "pair": [
+            287,
+            483
+          ],
+          "structural": false
+        }
+      ],
+      "s": 2
+    },
+    {
+      "d": 5,
+      "h": 199374,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            19938
+          ],
+          "pair": [
+            5,
+            39875
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            6,
+            null
+          ],
+          "pair": [
+            11,
+            18125
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            8,
+            null
+          ],
+          "pair": [
+            29,
+            6875
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            798
+          ],
+          "pair": [
+            125,
+            1595
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            138,
+            null
+          ],
+          "pair": [
+            275,
+            725
+          ],
+          "structural": true
+        }
+      ],
+      "s": 4
+    },
+    {
+      "d": 8,
+      "h": 512264,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            25614
+          ],
+          "pair": [
+            5,
+            102453
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            8,
+            null
+          ],
+          "pair": [
+            15,
+            34151
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            986
+          ],
+          "pair": [
+            65,
+            7881
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            36,
+            null
+          ],
+          "pair": [
+            71,
+            7215
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            24,
+            null
+          ],
+          "pair": [
+            185,
+            2769
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            1314
+          ],
+          "pair": [
+            195,
+            2627
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            54,
+            null
+          ],
+          "pair": [
+            213,
+            2405
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            278,
+            462
+          ],
+          "pair": [
+            555,
+            923
+          ],
+          "structural": true
+        }
+      ],
+      "s": 4
+    },
+    {
+      "d": 3,
+      "h": 516312,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            788
+          ],
+          "pair": [
+            41,
+            12593
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            252
+          ],
+          "pair": [
+            257,
+            2009
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            144,
+            null
+          ],
+          "pair": [
+            287,
+            1799
+          ],
+          "structural": false
+        }
+      ],
+      "s": 0
+    },
+    {
+      "d": 9,
+      "h": 552474,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            55248
+          ],
+          "pair": [
+            5,
+            110495
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            6,
+            null
+          ],
+          "pair": [
+            11,
+            50225
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            18,
+            null
+          ],
+          "pair": [
+            35,
+            15785
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            6738
+          ],
+          "pair": [
+            41,
+            13475
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            3588
+          ],
+          "pair": [
+            77,
+            7175
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            62,
+            null
+          ],
+          "pair": [
+            245,
+            2255
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            138,
+            252
+          ],
+          "pair": [
+            275,
+            2009
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            144,
+            null
+          ],
+          "pair": [
+            287,
+            1925
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            270,
+            null
+          ],
+          "pair": [
+            539,
+            1025
+          ],
+          "structural": true
+        }
+      ],
+      "s": 6
+    },
+    {
+      "d": 6,
+      "h": 756074,
+      "pairs": [
+        {
+          "missing_roots": [
+            null,
+            75608
+          ],
+          "pair": [
+            5,
+            151215
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            8,
+            null
+          ],
+          "pair": [
+            15,
+            50405
+          ],
+          "structural": true
+        },
+        {
+          "missing_roots": [
+            null,
+            22238
+          ],
+          "pair": [
+            17,
+            44475
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            1854
+          ],
+          "pair": [
+            51,
+            14825
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            54,
+            null
+          ],
+          "pair": [
+            425,
+            1779
+          ],
+          "structural": false
+        },
+        {
+          "missing_roots": [
+            null,
+            638
+          ],
+          "pair": [
+            593,
+            1275
+          ],
+          "structural": false
+        }
+      ],
+      "s": 1
+    }
+  ]
+}

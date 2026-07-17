@@ -1,0 +1,80 @@
+{
+  "cutoffs": [
+    54,
+    74,
+    100,
+    200,
+    362,
+    500,
+    1000,
+    2000
+  ],
+  "rows": [
+    {
+      "limit": 54,
+      "holes": 22,
+      "chains": 13,
+      "root_prefixes_checked": 13,
+      "minimum_objective": 0,
+      "minimum_root_bound": 54
+    },
+    {
+      "limit": 74,
+      "holes": 33,
+      "chains": 20,
+      "root_prefixes_checked": 20,
+      "minimum_objective": 0,
+      "minimum_root_bound": 74
+    },
+    {
+      "limit": 100,
+      "holes": 43,
+      "chains": 25,
+      "root_prefixes_checked": 25,
+      "minimum_objective": 1,
+      "minimum_root_bound": 6
+    },
+    {
+      "limit": 200,
+      "holes": 90,
+      "chains": 53,
+      "root_prefixes_checked": 53,
+      "minimum_objective": 0,
+      "minimum_root_bound": 186
+    },
+    {
+      "limit": 362,
+      "holes": 163,
+      "chains": 95,
+      "root_prefixes_checked": 95,
+      "minimum_objective": 0,
+      "minimum_root_bound": 362
+    },
+    {
+      "limit": 500,
+      "holes": 214,
+      "chains": 127,
+      "root_prefixes_checked": 127,
+      "minimum_objective": 1,
+      "minimum_root_bound": 6
+    },
+    {
+      "limit": 1000,
+      "holes": 416,
+      "chains": 248,
+      "root_prefixes_checked": 248,
+      "minimum_objective": 1,
+      "minimum_root_bound": 6
+    },
+    {
+      "limit": 2000,
+      "holes": 803,
+      "chains": 489,
+      "root_prefixes_checked": 489,
+      "minimum_objective": 0,
+      "minimum_root_bound": 2000
+    }
+  ],
+  "first_falsifier": null,
+  "verdict": "no falsifier"
+}

@@ -1,0 +1,118 @@
+{
+  "classification_sha256": "4ECBEA379DF3413BC1D640A3F67AB2359D86E89A43A771CD699BE57F1720BEA1",
+  "exact_integer_acceptance": true,
+  "first_type_preserving_one_exception_failure": {
+    "X": 186,
+    "required_exceptions": 2,
+    "rows": [
+      {
+        "A_H": 5,
+        "A_H_quarter": 0,
+        "D": 3,
+        "F": -2,
+        "X": 186,
+        "signature": "nonthree"
+      },
+      {
+        "A_H": 1,
+        "A_H_quarter": 0,
+        "D": 2,
+        "F": 1,
+        "X": 186,
+        "signature": "three"
+      }
+    ]
+  },
+  "first_typewise_plus_one_failure": {
+    "A_H": 5,
+    "A_H_quarter": 0,
+    "D": 3,
+    "F": -2,
+    "X": 186,
+    "signature": "nonthree"
+  },
+  "limit": 100000,
+  "minimum_by_type": {
+    "nonthree": {
+      "A_H": 220,
+      "A_H_quarter": 47,
+      "D": 167,
+      "F": -6,
+      "X": 6192,
+      "signature": "nonthree"
+    },
+    "three": {
+      "A_H": 1,
+      "A_H_quarter": 0,
+      "D": 0,
+      "F": -1,
+      "X": 74,
+      "signature": "three"
+    }
+  },
+  "schema": "C101-type-ballot-independent-v1",
+  "total_minimum": {
+    "A_H": 6,
+    "A_H_quarter": 0,
+    "D": 5,
+    "F": -1,
+    "X": 186
+  },
+  "witness_186": {
+    "X": 186,
+    "healed_splitless": {
+      "nonthree": [
+        6,
+        18,
+        66
+      ],
+      "three": [
+        20,
+        38
+      ]
+    },
+    "persistent_hard": {
+      "nonthree": [
+        54,
+        114,
+        144,
+        174,
+        186
+      ],
+      "three": [
+        74
+      ]
+    },
+    "quarter": 46,
+    "quarter_persistent_hard": {
+      "nonthree": [],
+      "three": []
+    },
+    "rows": [
+      {
+        "A_H": 5,
+        "A_H_quarter": 0,
+        "D": 3,
+        "F": -2,
+        "X": 186,
+        "signature": "nonthree"
+      },
+      {
+        "A_H": 1,
+        "A_H_quarter": 0,
+        "D": 2,
+        "F": 1,
+        "X": 186,
+        "signature": "three"
+      }
+    ],
+    "total": {
+      "A_H": 6,
+      "A_H_quarter": 0,
+      "D": 5,
+      "F": -1,
+      "X": 186
+    },
+    "type_preserving_required_exceptions": 2
+  }
+}

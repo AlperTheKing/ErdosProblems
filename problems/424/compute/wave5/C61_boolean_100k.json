@@ -1,0 +1,24 @@
+[
+  {
+    "limit": 100000,
+    "status": "INFEASIBLE",
+    "exact_conclusion": "NO_BOOLEAN_COUNTEREXAMPLE",
+    "wall_seconds": 2.0263205000010203,
+    "solver_wall_seconds": 0.2465669,
+    "workers": 16,
+    "value_count": 66666,
+    "boolean_variables": 54736,
+    "pair_count": 226818,
+    "active_closure_rows": 133706,
+    "skipped_zero_antecedent": 93112,
+    "implications": 45210,
+    "ternary_clauses": 88495,
+    "forced_outputs": 1,
+    "splitless_count": 11928,
+    "hard_count": 10294,
+    "seed2_edges": 33333,
+    "conflicts": 0,
+    "branches": 0,
+    "deterministic_time": 0.0
+  }
+]

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 54,
+      "hard_shapes": 1,
+      "exact_dual_objective": [
+        1,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 19,
+      "nonzero_lower_multipliers": 19,
+      "nonzero_upper_multipliers": 6,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 74,
+      "hard_shapes": 2,
+      "exact_dual_objective": [
+        2,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 26,
+      "nonzero_lower_multipliers": 24,
+      "nonzero_upper_multipliers": 8,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 186,
+      "hard_shapes": 8,
+      "exact_dual_objective": [
+        8,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 68,
+      "nonzero_lower_multipliers": 58,
+      "nonzero_upper_multipliers": 18,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 362,
+      "hard_shapes": 19,
+      "exact_dual_objective": [
+        19,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 128,
+      "nonzero_lower_multipliers": 112,
+      "nonzero_upper_multipliers": 33,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 500,
+      "hard_shapes": 27,
+      "exact_dual_objective": [
+        33,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -6,
+        1
+      ],
+      "nonzero_inequality_multipliers": 211,
+      "nonzero_lower_multipliers": 136,
+      "nonzero_upper_multipliers": 45,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 1000,
+      "hard_shapes": 66,
+      "exact_dual_objective": [
+        70,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -4,
+        1
+      ],
+      "nonzero_inequality_multipliers": 393,
+      "nonzero_lower_multipliers": 284,
+      "nonzero_upper_multipliers": 85,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 2000,
+      "hard_shapes": 147,
+      "exact_dual_objective": [
+        152,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -5,
+        1
+      ],
+      "nonzero_inequality_multipliers": 828,
+      "nonzero_lower_multipliers": 554,
+      "nonzero_upper_multipliers": 156,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    }
+  ]
+}

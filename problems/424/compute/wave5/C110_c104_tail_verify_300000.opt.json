@@ -1,0 +1,10 @@
+{
+  "classification_exact_match": true,
+  "first_failures_exact_match": true,
+  "input": "C110_c104_tail_gate_300000.json",
+  "input_sha256": "CC6FE657B24CDA0FDA9430B2B5D36A62691A1F63760F258680792FB3B7C95D66",
+  "limit": 300000,
+  "schema": "C110-c104-tail-independent-verifier-v1",
+  "target_blocker_profiles_exact_match": true,
+  "threshold_loads_exact_match": true
+}

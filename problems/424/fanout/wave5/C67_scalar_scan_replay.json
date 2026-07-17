@@ -1,0 +1,101 @@
+{
+  "probes": [
+    {
+      "limit": 74,
+      "holes": 33,
+      "hard_roots": 2,
+      "splitless_roots": 15,
+      "seed3_roots": 3,
+      "max_unhealed_hard_minus_splitless": -5,
+      "max_unhealed_hard_minus_nonhard": -5,
+      "max_11_unhealed_hard_minus_5_splitless": -13,
+      "max_2_unhealed_hard_minus_splitless": -3,
+      "actual_unhealed_hard": 2,
+      "actual_unhealed_splitless": 13,
+      "missing_upper_shell": 18,
+      "splitless_upper_shell": 7,
+      "actual_unhealed_hard_over_missing_upper_shell": {
+        "numerator": 2,
+        "denominator": 18
+      },
+      "hard_vs_splitless_witness": {
+        "hard_in_S": 2,
+        "seed_boundaries": 8,
+        "unhealed_hard": 2,
+        "unhealed_splitless": 7,
+        "unhealed_seed3": 0,
+        "healed_hard": 0,
+        "healed_splitless": 8,
+        "healed_seed3": 0
+      },
+      "hard_vs_nonhard_witness": {
+        "hard_in_S": 2,
+        "seed_boundaries": 8,
+        "unhealed_hard": 2,
+        "unhealed_splitless": 7,
+        "unhealed_seed3": 0,
+        "healed_hard": 0,
+        "healed_splitless": 8,
+        "healed_seed3": 0
+      },
+      "weighted_11_to_5_witness": {
+        "hard_in_S": 2,
+        "seed_boundaries": 8,
+        "unhealed_hard": 2,
+        "unhealed_splitless": 7,
+        "unhealed_seed3": 0,
+        "healed_hard": 0,
+        "healed_splitless": 8,
+        "healed_seed3": 0
+      },
+      "weighted_2_to_1_witness": {
+        "hard_in_S": 2,
+        "seed_boundaries": 8,
+        "unhealed_hard": 2,
+        "unhealed_splitless": 7,
+        "unhealed_seed3": 0,
+        "healed_hard": 0,
+        "healed_splitless": 8,
+        "healed_seed3": 0
+      },
+      "hard_vs_splitless_source_side_sample": [
+        6,
+        8,
+        11,
+        12,
+        15,
+        18,
+        20,
+        24,
+        30,
+        36,
+        38,
+        42,
+        48,
+        54,
+        56,
+        60,
+        66,
+        72,
+        74
+      ],
+      "weighted_11_to_5_source_side_if_positive": [],
+      "weighted_2_to_1_source_side_if_positive": []
+    }
+  ],
+  "scalar_terminal_scan": {
+    "searched_through": 1000000,
+    "first_unhealed_hard_gt_upper_shell_splitless": null,
+    "first_all_hard_gt_upper_shell_splitless": null,
+    "max_unhealed_hard_ratio": {
+      "numerator": 656,
+      "denominator": 1033,
+      "limit": 16620
+    },
+    "max_all_hard_ratio": {
+      "numerator": 8846,
+      "denominator": 9907,
+      "limit": 175956
+    }
+  }
+}

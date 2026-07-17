@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "trial_limit": 10000,
+  "literal_stage_limit": 500,
+  "literal_nontrivial_stages": 6,
+  "trial_counts": {
+    "generated": 3207,
+    "holes": 3459,
+    "splitless": 1344,
+    "hard": 518,
+    "healed": 593,
+    "maximum_rank": 9
+  },
+  "prefix_audits": {
+    "rank_H_minus_Q": 1,
+    "rank_H_minus_Q_minus_E": 0,
+    "H_minus_Q_minus_E": 0,
+    "H_minus_E": 0
+  },
+  "expanded_failures": {
+    "1": 1536,
+    "2": 6000,
+    "3": null,
+    "4": null
+  },
+  "cpp_failures": {
+    "1": 1536,
+    "2": 6000,
+    "3": 35300,
+    "4": 111620
+  },
+  "C40_failure_X": 3236496,
+  "C1000000_matched": 392961,
+  "cross_counts_1e7": {
+    "generated": 4952270,
+    "holes": 1714396,
+    "splitless": 1004961,
+    "hard": 392961,
+    "healed": 637270
+  },
+  "status": "PASS"
+}

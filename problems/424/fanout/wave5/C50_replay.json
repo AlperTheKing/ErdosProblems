@@ -1,0 +1,1363 @@
+{
+  "algorithm": "SPF divisors and increasing least-grounded recursion",
+  "component_root_charge": {
+    "first_collision": {
+      "chains": [
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            134,
+            201,
+            602
+          ],
+          "root": 12,
+          "source_parent": 45,
+          "start": 134,
+          "terminal_child": 1805,
+          "terminal_parent": 903
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            404
+          ],
+          "root": 12,
+          "source_parent": 135,
+          "start": 404,
+          "terminal_child": 1211,
+          "terminal_parent": 606
+        }
+      ],
+      "cutoff": 404,
+      "root": 12,
+      "starts": [
+        134,
+        404
+      ]
+    },
+    "first_hard_root": {
+      "frontier_kind": null,
+      "frontier_next": null,
+      "frontier_state": null,
+      "leaf": 12,
+      "path": [
+        2078
+      ],
+      "root": 174,
+      "source_parent": 693,
+      "start": 2078,
+      "terminal_child": 6233,
+      "terminal_parent": 3117
+    },
+    "maximum_active_fiber": {
+      "cutoff": 48698,
+      "multiplicity": 10,
+      "root": 8,
+      "sample_chains": [
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            4058,
+            6087,
+            18260
+          ],
+          "root": 8,
+          "source_parent": 1353,
+          "start": 4058,
+          "terminal_child": 54779,
+          "terminal_parent": 27390
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 20,
+          "path": [
+            12176,
+            18264
+          ],
+          "root": 8,
+          "source_parent": 4059,
+          "start": 12176,
+          "terminal_child": 54791,
+          "terminal_parent": 27396
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            18404
+          ],
+          "root": 8,
+          "source_parent": 6135,
+          "start": 18404,
+          "terminal_child": 55211,
+          "terminal_parent": 27606
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            24494
+          ],
+          "root": 8,
+          "source_parent": 8165,
+          "start": 24494,
+          "terminal_child": 73481,
+          "terminal_parent": 36741
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            36764
+          ],
+          "root": 8,
+          "source_parent": 12255,
+          "start": 36764,
+          "terminal_child": 110291,
+          "terminal_parent": 55146
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            36800
+          ],
+          "root": 8,
+          "source_parent": 12267,
+          "start": 36800,
+          "terminal_child": 110399,
+          "terminal_parent": 55200
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            48464
+          ],
+          "root": 8,
+          "source_parent": 16155,
+          "start": 48464,
+          "terminal_child": 145391,
+          "terminal_parent": 72696
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            48554
+          ],
+          "root": 8,
+          "source_parent": 16185,
+          "start": 48554,
+          "terminal_child": 145661,
+          "terminal_parent": 72831
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            48680,
+            73020,
+            109530,
+            164295,
+            492884
+          ],
+          "root": 8,
+          "source_parent": 16227,
+          "start": 48680,
+          "terminal_child": 1478651,
+          "terminal_parent": 739326
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            48698,
+            73047,
+            219140
+          ],
+          "root": 8,
+          "source_parent": 16233,
+          "start": 48698,
+          "terminal_child": 657419,
+          "terminal_parent": 328710
+        }
+      ],
+      "sample_starts": [
+        4058,
+        12176,
+        18404,
+        24494,
+        36764,
+        36800,
+        48464,
+        48554,
+        48680,
+        48698
+      ],
+      "sample_truncated": false
+    },
+    "number_of_images": 55402
+  },
+  "distinct_input_rule": "every admissible pair satisfies 2<=a<b",
+  "final_frontier": {
+    "active": 46287,
+    "frontier_interval": "(10000000/3,10000000]",
+    "frontier_type_counts": {
+      "even_parent_outside": 23543,
+      "even_target_outside": 13235,
+      "odd": 9509
+    },
+    "largest_known_terminal_ratio": {
+      "chain": {
+        "frontier_kind": "even_target_outside",
+        "frontier_next": 6306996,
+        "frontier_state": 4204664,
+        "leaf": 6,
+        "path": [
+          6836,
+          10254,
+          15381,
+          46142,
+          69213,
+          207638,
+          311457,
+          934370,
+          1401555,
+          4204664
+        ],
+        "root": 1140,
+        "source_parent": 2279,
+        "start": 6836,
+        "terminal_child": 12613991,
+        "terminal_parent": 6306996
+      },
+      "denominator": 6836,
+      "numerator": 12613991
+    },
+    "minimum_frontier_state": 3333344,
+    "smallest_active_start": {
+      "frontier_kind": "even_target_outside",
+      "frontier_next": 6306996,
+      "frontier_state": 4204664,
+      "leaf": 6,
+      "path": [
+        6836,
+        10254,
+        15381,
+        46142,
+        69213,
+        207638,
+        311457,
+        934370,
+        1401555,
+        4204664
+      ],
+      "root": 1140,
+      "source_parent": 2279,
+      "start": 6836,
+      "terminal_child": 12613991,
+      "terminal_parent": 6306996
+    },
+    "smallest_unresolved_start": {
+      "frontier_kind": "odd",
+      "frontier_next": 26892602,
+      "frontier_state": 8964201,
+      "leaf": 6,
+      "path": [
+        9716,
+        14574,
+        21861,
+        65582,
+        98373,
+        295118,
+        442677,
+        1328030,
+        1992045,
+        5976134,
+        8964201
+      ],
+      "root": 1620,
+      "source_parent": 3239,
+      "start": 9716,
+      "terminal_child": null,
+      "terminal_parent": null
+    },
+    "unresolved_terminal_ratio_lower_bound": {
+      "denominator": 9716,
+      "numerator": 10000000,
+      "strict": true
+    }
+  },
+  "fixed_dilation_terminal_charge": {
+    "1230": {
+      "exact_tests_until_failure": 22,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 38,
+          "path": [
+            1934,
+            2901,
+            8702,
+            13053,
+            39158,
+            58737,
+            176210,
+            264315,
+            792944
+          ],
+          "root": 162,
+          "source_parent": 645,
+          "start": 1934,
+          "terminal_child": 2378831,
+          "terminal_parent": 1189416
+        },
+        "cutoff": 1934,
+        "dilation": 1230,
+        "horizon": 2378820
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "1845": {
+      "exact_tests_until_failure": 100,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 6306996,
+          "frontier_state": 4204664,
+          "leaf": 6,
+          "path": [
+            6836,
+            10254,
+            15381,
+            46142,
+            69213,
+            207638,
+            311457,
+            934370,
+            1401555,
+            4204664
+          ],
+          "root": 1140,
+          "source_parent": 2279,
+          "start": 6836,
+          "terminal_child": 12613991,
+          "terminal_parent": 6306996
+        },
+        "cutoff": 6836,
+        "dilation": 1845,
+        "horizon": 12612420
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "2187": {
+      "exact_tests_until_failure": 30647,
+      "first_certified_failure": null,
+      "unresolved_earlier_starts": 33052
+    },
+    "243": {
+      "exact_tests_until_failure": 22,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 38,
+          "path": [
+            1934,
+            2901,
+            8702,
+            13053,
+            39158,
+            58737,
+            176210,
+            264315,
+            792944
+          ],
+          "root": 162,
+          "source_parent": 645,
+          "start": 1934,
+          "terminal_child": 2378831,
+          "terminal_parent": 1189416
+        },
+        "cutoff": 1934,
+        "dilation": 243,
+        "horizon": 469962
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "27": {
+      "exact_tests_until_failure": 5,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 6,
+          "path": [
+            494,
+            741,
+            2222,
+            3333,
+            9998
+          ],
+          "root": 42,
+          "source_parent": 165,
+          "start": 494,
+          "terminal_child": 29993,
+          "terminal_parent": 14997
+        },
+        "cutoff": 494,
+        "dilation": 27,
+        "horizon": 13338
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "3": {
+      "exact_tests_until_failure": 2,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            134,
+            201,
+            602
+          ],
+          "root": 12,
+          "source_parent": 45,
+          "start": 134,
+          "terminal_child": 1805,
+          "terminal_parent": 903
+        },
+        "cutoff": 134,
+        "dilation": 3,
+        "horizon": 402
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "729": {
+      "exact_tests_until_failure": 22,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 38,
+          "path": [
+            1934,
+            2901,
+            8702,
+            13053,
+            39158,
+            58737,
+            176210,
+            264315,
+            792944
+          ],
+          "root": 162,
+          "source_parent": 645,
+          "start": 1934,
+          "terminal_child": 2378831,
+          "terminal_parent": 1189416
+        },
+        "cutoff": 1934,
+        "dilation": 729,
+        "horizon": 1409886
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "81": {
+      "exact_tests_until_failure": 22,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 38,
+          "path": [
+            1934,
+            2901,
+            8702,
+            13053,
+            39158,
+            58737,
+            176210,
+            264315,
+            792944
+          ],
+          "root": 162,
+          "source_parent": 645,
+          "start": 1934,
+          "terminal_child": 2378831,
+          "terminal_parent": 1189416
+        },
+        "cutoff": 1934,
+        "dilation": 81,
+        "horizon": 156654
+      },
+      "unresolved_earlier_starts": 0
+    },
+    "9": {
+      "exact_tests_until_failure": 2,
+      "first_certified_failure": {
+        "chain": {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            134,
+            201,
+            602
+          ],
+          "root": 12,
+          "source_parent": 45,
+          "start": 134,
+          "terminal_child": 1805,
+          "terminal_parent": 903
+        },
+        "cutoff": 134,
+        "dilation": 9,
+        "horizon": 1206
+      },
+      "unresolved_earlier_starts": 0
+    }
+  },
+  "immediate_Q_charge": {
+    "first_failure": {
+      "candidate_Q_child": 29,
+      "frontier_kind": null,
+      "frontier_next": null,
+      "frontier_state": null,
+      "leaf": 8,
+      "path": [
+        44
+      ],
+      "root": 8,
+      "source_parent": 15,
+      "start": 44,
+      "terminal_child": 131,
+      "terminal_parent": 66
+    },
+    "rule": "start 3q-1 maps to 2q-1 when that child is generated"
+  },
+  "least_blocker_leaf_charge": {
+    "first_collision": {
+      "chains": [
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            134,
+            201,
+            602
+          ],
+          "root": 12,
+          "source_parent": 45,
+          "start": 134,
+          "terminal_child": 1805,
+          "terminal_parent": 903
+        },
+        {
+          "frontier_kind": null,
+          "frontier_next": null,
+          "frontier_state": null,
+          "leaf": 8,
+          "path": [
+            404
+          ],
+          "root": 12,
+          "source_parent": 135,
+          "start": 404,
+          "terminal_child": 1211,
+          "terminal_parent": 606
+        }
+      ],
+      "cutoff": 404,
+      "leaf": 8,
+      "starts": [
+        134,
+        404
+      ]
+    },
+    "maximum_active_fiber": {
+      "cutoff": 9999212,
+      "leaf": 6,
+      "multiplicity": 26523,
+      "sample_chains": [
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 6306996,
+          "frontier_state": 4204664,
+          "leaf": 6,
+          "path": [
+            6836,
+            10254,
+            15381,
+            46142,
+            69213,
+            207638,
+            311457,
+            934370,
+            1401555,
+            4204664
+          ],
+          "root": 1140,
+          "source_parent": 2279,
+          "start": 6836,
+          "terminal_child": 12613991,
+          "terminal_parent": 6306996
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 26892602,
+          "frontier_state": 8964201,
+          "leaf": 6,
+          "path": [
+            9716,
+            14574,
+            21861,
+            65582,
+            98373,
+            295118,
+            442677,
+            1328030,
+            1992045,
+            5976134,
+            8964201
+          ],
+          "root": 1620,
+          "source_parent": 3239,
+          "start": 9716,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 16537238,
+          "frontier_state": 5512413,
+          "leaf": 6,
+          "path": [
+            17924,
+            26886,
+            40329,
+            120986,
+            181479,
+            544436,
+            816654,
+            1224981,
+            3674942,
+            5512413
+          ],
+          "root": 2988,
+          "source_parent": 5975,
+          "start": 17924,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 13006610,
+          "frontier_state": 4335537,
+          "leaf": 6,
+          "path": [
+            21146,
+            31719,
+            95156,
+            142734,
+            214101,
+            642302,
+            963453,
+            2890358,
+            4335537
+          ],
+          "root": 882,
+          "source_parent": 7049,
+          "start": 21146,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_parent_outside",
+          "frontier_next": 14298294,
+          "frontier_state": 9532196,
+          "leaf": 6,
+          "path": [
+            23246,
+            34869,
+            104606,
+            156909,
+            470726,
+            706089,
+            2118266,
+            3177399,
+            9532196
+          ],
+          "root": 1938,
+          "source_parent": 7749,
+          "start": 23246,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 14844500,
+          "frontier_state": 4948167,
+          "leaf": 6,
+          "path": [
+            24134,
+            36201,
+            108602,
+            162903,
+            488708,
+            733062,
+            1099593,
+            3298778,
+            4948167
+          ],
+          "root": 336,
+          "source_parent": 8045,
+          "start": 24134,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 12702878,
+          "frontier_state": 4234293,
+          "leaf": 6,
+          "path": [
+            27536,
+            41304,
+            61956,
+            92934,
+            139401,
+            418202,
+            627303,
+            1881908,
+            2822862,
+            4234293
+          ],
+          "root": 4590,
+          "source_parent": 9179,
+          "start": 27536,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 5755170,
+          "frontier_state": 3836780,
+          "leaf": 6,
+          "path": [
+            28070,
+            42105,
+            126314,
+            189471,
+            568412,
+            852618,
+            1278927,
+            3836780
+          ],
+          "root": 2340,
+          "source_parent": 9357,
+          "start": 28070,
+          "terminal_child": 11510339,
+          "terminal_parent": 5755170
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 19096028,
+          "frontier_state": 6365343,
+          "leaf": 6,
+          "path": [
+            31046,
+            46569,
+            139706,
+            209559,
+            628676,
+            943014,
+            1414521,
+            4243562,
+            6365343
+          ],
+          "root": 432,
+          "source_parent": 10349,
+          "start": 31046,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 20646062,
+          "frontier_state": 6882021,
+          "leaf": 6,
+          "path": [
+            33566,
+            50349,
+            151046,
+            226569,
+            679706,
+            1019559,
+            3058676,
+            4588014,
+            6882021
+          ],
+          "root": 234,
+          "source_parent": 11189,
+          "start": 33566,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 13783724,
+          "frontier_state": 4594575,
+          "leaf": 6,
+          "path": [
+            33614,
+            50421,
+            151262,
+            226893,
+            680678,
+            1021017,
+            3063050,
+            4594575
+          ],
+          "root": 2802,
+          "source_parent": 11205,
+          "start": 33614,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 5086650,
+          "frontier_state": 3391100,
+          "leaf": 6,
+          "path": [
+            37214,
+            55821,
+            167462,
+            251193,
+            753578,
+            1130367,
+            3391100
+          ],
+          "root": 3102,
+          "source_parent": 12405,
+          "start": 37214,
+          "terminal_child": 10173299,
+          "terminal_parent": 5086650
+        },
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 7644738,
+          "frontier_state": 5096492,
+          "leaf": 6,
+          "path": [
+            37286,
+            55929,
+            167786,
+            251679,
+            755036,
+            1132554,
+            1698831,
+            5096492
+          ],
+          "root": 3108,
+          "source_parent": 12429,
+          "start": 37286,
+          "terminal_child": 15289475,
+          "terminal_parent": 7644738
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 22982246,
+          "frontier_state": 7660749,
+          "leaf": 6,
+          "path": [
+            37364,
+            56046,
+            84069,
+            252206,
+            378309,
+            1134926,
+            1702389,
+            5107166,
+            7660749
+          ],
+          "root": 6228,
+          "source_parent": 12455,
+          "start": 37364,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 17602226,
+          "frontier_state": 5867409,
+          "leaf": 6,
+          "path": [
+            42926,
+            64389,
+            193166,
+            289749,
+            869246,
+            1303869,
+            3911606,
+            5867409
+          ],
+          "root": 150,
+          "source_parent": 14309,
+          "start": 42926,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 6464460,
+          "frontier_state": 4309640,
+          "leaf": 6,
+          "path": [
+            47294,
+            70941,
+            212822,
+            319233,
+            957698,
+            1436547,
+            4309640
+          ],
+          "root": 3942,
+          "source_parent": 15765,
+          "start": 47294,
+          "terminal_child": 12928919,
+          "terminal_parent": 6464460
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 19806722,
+          "frontier_state": 6602241,
+          "leaf": 6,
+          "path": [
+            48302,
+            72453,
+            217358,
+            326037,
+            978110,
+            1467165,
+            4401494,
+            6602241
+          ],
+          "root": 4026,
+          "source_parent": 16101,
+          "start": 48302,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "odd",
+          "frontier_next": 20279114,
+          "frontier_state": 6759705,
+          "leaf": 6,
+          "path": [
+            49454,
+            74181,
+            222542,
+            333813,
+            1001438,
+            1502157,
+            4506470,
+            6759705
+          ],
+          "root": 4122,
+          "source_parent": 16485,
+          "start": 49454,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_parent_outside",
+          "frontier_next": 10405278,
+          "frontier_state": 6936852,
+          "leaf": 6,
+          "path": [
+            50750,
+            76125,
+            228374,
+            342561,
+            1027682,
+            1541523,
+            4624568,
+            6936852
+          ],
+          "root": 4230,
+          "source_parent": 16917,
+          "start": 50750,
+          "terminal_child": null,
+          "terminal_parent": null
+        },
+        {
+          "frontier_kind": "even_target_outside",
+          "frontier_next": 6976218,
+          "frontier_state": 4650812,
+          "leaf": 6,
+          "path": [
+            51038,
+            76557,
+            229670,
+            344505,
+            1033514,
+            1550271,
+            4650812
+          ],
+          "root": 4254,
+          "source_parent": 17013,
+          "start": 51038,
+          "terminal_child": 13952435,
+          "terminal_parent": 6976218
+        }
+      ],
+      "sample_starts": [
+        6836,
+        9716,
+        17924,
+        21146,
+        23246,
+        24134,
+        27536,
+        28070,
+        31046,
+        33566,
+        33614,
+        37214,
+        37286,
+        37364,
+        42926,
+        47294,
+        48302,
+        49454,
+        50750,
+        51038
+      ],
+      "sample_truncated": true
+    },
+    "number_of_images": 3511
+  },
+  "limit": 10000000,
+  "schema_version": 1,
+  "sweep": {
+    "audits": {
+      "A<=E(floor((X+1)/27))": {
+        "first_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "last_failure": {
+          "A": 46287,
+          "E_27th": 41788,
+          "E_ninth": 120256,
+          "E_third": 347166,
+          "Q": 637270,
+          "R3": 63699,
+          "T": 17412,
+          "cutoff": 10000000,
+          "excess": 4499,
+          "fresh": 38080,
+          "lhs": 46287,
+          "rhs": 41788
+        },
+        "maximum_excess": {
+          "A": 31880,
+          "E_27th": 27081,
+          "E_ninth": 77802,
+          "E_third": 224309,
+          "Q": 410774,
+          "R3": 43843,
+          "T": 11963,
+          "cutoff": 6362504,
+          "excess": 4799,
+          "fresh": 26266,
+          "lhs": 31880,
+          "rhs": 27081
+        }
+      },
+      "A<=E(floor((X+1)/3))": {
+        "first_failure": null,
+        "last_failure": null,
+        "maximum_excess": null
+      },
+      "A<=E(floor((X+1)/9))": {
+        "first_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "last_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 52,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "maximum_excess": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        }
+      },
+      "A<=Q-T (equiv R3<=Q)": {
+        "first_failure": null,
+        "last_failure": null,
+        "maximum_excess": null
+      },
+      "R3<=E(floor((X+1)/27))": {
+        "first_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "last_failure": {
+          "A": 46287,
+          "E_27th": 41788,
+          "E_ninth": 120256,
+          "E_third": 347166,
+          "Q": 637270,
+          "R3": 63699,
+          "T": 17412,
+          "cutoff": 10000000,
+          "excess": 21911,
+          "fresh": 38080,
+          "lhs": 63699,
+          "rhs": 41788
+        },
+        "maximum_excess": {
+          "A": 46288,
+          "E_27th": 41785,
+          "E_ninth": 120250,
+          "E_third": 347148,
+          "Q": 637235,
+          "R3": 63699,
+          "T": 17411,
+          "cutoff": 9999464,
+          "excess": 21914,
+          "fresh": 38082,
+          "lhs": 63699,
+          "rhs": 41785
+        }
+      },
+      "R3<=E(floor((X+1)/3))": {
+        "first_failure": null,
+        "last_failure": null,
+        "maximum_excess": null
+      },
+      "R3<=E(floor((X+1)/9))": {
+        "first_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "last_failure": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 52,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        },
+        "maximum_excess": {
+          "A": 1,
+          "E_27th": 0,
+          "E_ninth": 0,
+          "E_third": 3,
+          "Q": 1,
+          "R3": 1,
+          "T": 0,
+          "cutoff": 44,
+          "excess": 1,
+          "fresh": 1,
+          "lhs": 1,
+          "rhs": 0
+        }
+      },
+      "fresh_R3_top_third<=A": {
+        "first_failure": null,
+        "last_failure": null,
+        "maximum_excess": null
+      }
+    },
+    "checkpoints": [
+      {
+        "A": 1,
+        "E": 19,
+        "E_27th": 0,
+        "E_ninth": 2,
+        "E_third": 7,
+        "Q": 3,
+        "R3": 1,
+        "T": 0,
+        "X": 100,
+        "fresh": 1
+      },
+      {
+        "A": 8,
+        "E": 156,
+        "E_27th": 8,
+        "E_ninth": 22,
+        "E_third": 58,
+        "Q": 46,
+        "R3": 9,
+        "T": 1,
+        "X": 1000,
+        "fresh": 7
+      },
+      {
+        "A": 109,
+        "E": 1344,
+        "E_27th": 63,
+        "E_ninth": 173,
+        "E_third": 479,
+        "Q": 593,
+        "R3": 138,
+        "T": 29,
+        "X": 10000,
+        "fresh": 98
+      },
+      {
+        "A": 885,
+        "E": 11928,
+        "E_27th": 530,
+        "E_ninth": 1481,
+        "E_third": 4185,
+        "Q": 6783,
+        "R3": 1231,
+        "T": 346,
+        "X": 100000,
+        "fresh": 794
+      },
+      {
+        "A": 6806,
+        "E": 108651,
+        "E_27th": 4628,
+        "E_ninth": 13191,
+        "E_third": 37781,
+        "Q": 67537,
+        "R3": 9351,
+        "T": 2545,
+        "X": 1000000,
+        "fresh": 5741
+      },
+      {
+        "A": 46287,
+        "E": 1004961,
+        "E_27th": 41788,
+        "E_ninth": 120256,
+        "E_third": 347166,
+        "Q": 637270,
+        "R3": 63699,
+        "T": 17412,
+        "X": 10000000,
+        "fresh": 38080
+      }
+    ]
+  },
+  "transport_checks": {
+    "state_collisions": 0,
+    "terminal_children_distinct": true,
+    "visited_states": 96269
+  }
+}

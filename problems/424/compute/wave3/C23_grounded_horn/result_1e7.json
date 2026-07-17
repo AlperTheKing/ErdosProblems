@@ -1,0 +1,2212 @@
+{
+  "schema_version": 1,
+  "limit": 10000000,
+  "approximants": "S_0=all allowed; S_(k+1)=seeds union supported outputs in S_k",
+  "death_rank_recurrence": "splitless=1; hole=1+max_pairs min(death of missing endpoints)",
+  "allowed": 6666666,
+  "generated": 4952270,
+  "holes": 1714396,
+  "splitless_holes": 1004961,
+  "reducible_holes": 709435,
+  "hard_holes": 392961,
+  "final_healed_parents": 637270,
+  "maximum_death_rank": 18,
+  "maximum_generation_rank": 19,
+  "maximum_pair_count": {
+    "count": 168,
+    "value": 8648639
+  },
+  "terminal_gate": {
+    "stage": 18,
+    "H": 392961,
+    "Q": 637270,
+    "terminal_surplus": 244309,
+    "minimum_surplus": 0,
+    "minimum_X": 2,
+    "first_failure": null
+  },
+  "stagewise_gate": {
+    "passed": true,
+    "first_failed_stage": null,
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 513760,
+        "terminal_surplus": 513760,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 482849,
+        "terminal_surplus": 482849,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 150067,
+        "Q": 560979,
+        "terminal_surplus": 410912,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 4,
+        "H": 184227,
+        "Q": 564089,
+        "terminal_surplus": 379862,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 260661,
+        "Q": 599001,
+        "terminal_surplus": 338340,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 298599,
+        "Q": 608893,
+        "terminal_surplus": 310294,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 337425,
+        "Q": 622453,
+        "terminal_surplus": 285028,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 360443,
+        "Q": 628673,
+        "terminal_surplus": 268230,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 375143,
+        "Q": 632663,
+        "terminal_surplus": 257520,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 383804,
+        "Q": 635048,
+        "terminal_surplus": 251244,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 388609,
+        "Q": 636340,
+        "terminal_surplus": 247731,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 391199,
+        "Q": 637146,
+        "terminal_surplus": 245947,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 392295,
+        "Q": 637385,
+        "terminal_surplus": 245090,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 392774,
+        "Q": 637488,
+        "terminal_surplus": 244714,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 392910,
+        "Q": 637373,
+        "terminal_surplus": 244463,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 392953,
+        "Q": 637315,
+        "terminal_surplus": 244362,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 17,
+        "H": 392961,
+        "Q": 637277,
+        "terminal_surplus": 244316,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 18,
+        "H": 392961,
+        "Q": 637270,
+        "terminal_surplus": 244309,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "terminal_rank_filtered_gate": {
+    "passed": false,
+    "first_failed_stage": {
+      "stage": 3,
+      "H": 150067,
+      "Q": 460335,
+      "terminal_surplus": 310268,
+      "minimum_surplus": -1,
+      "minimum_X": 362,
+      "first_failure": {
+        "X": 362,
+        "surplus": -1,
+        "event": "H",
+        "rank": 3,
+        "H": 11,
+        "Q": 10
+      }
+    },
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 367975,
+        "terminal_surplus": 367975,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 394316,
+        "terminal_surplus": 394316,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 150067,
+        "Q": 460335,
+        "terminal_surplus": 310268,
+        "minimum_surplus": -1,
+        "minimum_X": 362,
+        "first_failure": {
+          "X": 362,
+          "surplus": -1,
+          "event": "H",
+          "rank": 3,
+          "H": 11,
+          "Q": 10
+        }
+      },
+      {
+        "stage": 4,
+        "H": 184227,
+        "Q": 488709,
+        "terminal_surplus": 304482,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 260661,
+        "Q": 531021,
+        "terminal_surplus": 270360,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 298599,
+        "Q": 558672,
+        "terminal_surplus": 260073,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 337425,
+        "Q": 585010,
+        "terminal_surplus": 247585,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 360443,
+        "Q": 603286,
+        "terminal_surplus": 242843,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 375143,
+        "Q": 616302,
+        "terminal_surplus": 241159,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 383804,
+        "Q": 624987,
+        "terminal_surplus": 241183,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 388609,
+        "Q": 630601,
+        "terminal_surplus": 241992,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 391199,
+        "Q": 634100,
+        "terminal_surplus": 242901,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 392295,
+        "Q": 635923,
+        "terminal_surplus": 243628,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 392774,
+        "Q": 636839,
+        "terminal_surplus": 244065,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 392910,
+        "Q": 637158,
+        "terminal_surplus": 244248,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 392953,
+        "Q": 637254,
+        "terminal_surplus": 244301,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 17,
+        "H": 392961,
+        "Q": 637269,
+        "terminal_surplus": 244308,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 18,
+        "H": 392961,
+        "Q": 637270,
+        "terminal_surplus": 244309,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "stage_exact_layer_gate": {
+    "passed": true,
+    "first_failed_stage": null,
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 513760,
+        "terminal_surplus": 513760,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 482849,
+        "terminal_surplus": 482849,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 150067,
+        "Q": 560979,
+        "terminal_surplus": 410912,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 4,
+        "H": 34160,
+        "Q": 564089,
+        "terminal_surplus": 529929,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 76434,
+        "Q": 599001,
+        "terminal_surplus": 522567,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 37938,
+        "Q": 608893,
+        "terminal_surplus": 570955,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 38826,
+        "Q": 622453,
+        "terminal_surplus": 583627,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 23018,
+        "Q": 628673,
+        "terminal_surplus": 605655,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 14700,
+        "Q": 632663,
+        "terminal_surplus": 617963,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 8661,
+        "Q": 635048,
+        "terminal_surplus": 626387,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 4805,
+        "Q": 636340,
+        "terminal_surplus": 631535,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 2590,
+        "Q": 637146,
+        "terminal_surplus": 634556,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 1096,
+        "Q": 637385,
+        "terminal_surplus": 636289,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 479,
+        "Q": 637488,
+        "terminal_surplus": 637009,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 136,
+        "Q": 637373,
+        "terminal_surplus": 637237,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 43,
+        "Q": 637315,
+        "terminal_surplus": 637272,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 17,
+        "H": 8,
+        "Q": 637277,
+        "terminal_surplus": 637269,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 18,
+        "H": 0,
+        "Q": 637270,
+        "terminal_surplus": 637270,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "terminal_exact_layer_gate": {
+    "passed": false,
+    "first_failed_stage": {
+      "stage": 3,
+      "H": 150067,
+      "Q": 66019,
+      "terminal_surplus": -84048,
+      "minimum_surplus": -84048,
+      "minimum_X": 9999846,
+      "first_failure": {
+        "X": 74,
+        "surplus": -1,
+        "event": "H",
+        "rank": 3,
+        "H": 2,
+        "Q": 1
+      }
+    },
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 367975,
+        "terminal_surplus": 367975,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 26341,
+        "terminal_surplus": 26341,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 150067,
+        "Q": 66019,
+        "terminal_surplus": -84048,
+        "minimum_surplus": -84048,
+        "minimum_X": 9999846,
+        "first_failure": {
+          "X": 74,
+          "surplus": -1,
+          "event": "H",
+          "rank": 3,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 4,
+        "H": 34160,
+        "Q": 28374,
+        "terminal_surplus": -5786,
+        "minimum_surplus": -5786,
+        "minimum_X": 9999750,
+        "first_failure": {
+          "X": 3294,
+          "surplus": -1,
+          "event": "H",
+          "rank": 4,
+          "H": 19,
+          "Q": 18
+        }
+      },
+      {
+        "stage": 5,
+        "H": 76434,
+        "Q": 42312,
+        "terminal_surplus": -34122,
+        "minimum_surplus": -34124,
+        "minimum_X": 9999060,
+        "first_failure": {
+          "X": 474,
+          "surplus": -1,
+          "event": "H",
+          "rank": 5,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 6,
+        "H": 37938,
+        "Q": 27651,
+        "terminal_surplus": -10287,
+        "minimum_surplus": -10288,
+        "minimum_X": 9999792,
+        "first_failure": {
+          "X": 924,
+          "surplus": -1,
+          "event": "H",
+          "rank": 6,
+          "H": 4,
+          "Q": 3
+        }
+      },
+      {
+        "stage": 7,
+        "H": 38826,
+        "Q": 26338,
+        "terminal_surplus": -12488,
+        "minimum_surplus": -12492,
+        "minimum_X": 9995136,
+        "first_failure": {
+          "X": 1224,
+          "surplus": -1,
+          "event": "H",
+          "rank": 7,
+          "H": 1,
+          "Q": 0
+        }
+      },
+      {
+        "stage": 8,
+        "H": 23018,
+        "Q": 18276,
+        "terminal_surplus": -4742,
+        "minimum_surplus": -4742,
+        "minimum_X": 9994236,
+        "first_failure": {
+          "X": 3404,
+          "surplus": -1,
+          "event": "H",
+          "rank": 8,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 9,
+        "H": 14700,
+        "Q": 13016,
+        "terminal_surplus": -1684,
+        "minimum_surplus": -1697,
+        "minimum_X": 9870482,
+        "first_failure": {
+          "X": 2967018,
+          "surplus": -1,
+          "event": "H",
+          "rank": 9,
+          "H": 4491,
+          "Q": 4490
+        }
+      },
+      {
+        "stage": 10,
+        "H": 8661,
+        "Q": 8685,
+        "terminal_surplus": 24,
+        "minimum_surplus": -4,
+        "minimum_X": 22124,
+        "first_failure": {
+          "X": 14664,
+          "surplus": -1,
+          "event": "H",
+          "rank": 10,
+          "H": 3,
+          "Q": 2
+        }
+      },
+      {
+        "stage": 11,
+        "H": 4805,
+        "Q": 5614,
+        "terminal_surplus": 809,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 2590,
+        "Q": 3499,
+        "terminal_surplus": 909,
+        "minimum_surplus": -4,
+        "minimum_X": 146784,
+        "first_failure": {
+          "X": 88004,
+          "surplus": -1,
+          "event": "H",
+          "rank": 12,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 13,
+        "H": 1096,
+        "Q": 1823,
+        "terminal_surplus": 727,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 479,
+        "Q": 916,
+        "terminal_surplus": 437,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 136,
+        "Q": 319,
+        "terminal_surplus": 183,
+        "minimum_surplus": -1,
+        "minimum_X": 1014804,
+        "first_failure": {
+          "X": 1014804,
+          "surplus": -1,
+          "event": "H",
+          "rank": 15,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 16,
+        "H": 43,
+        "Q": 96,
+        "terminal_surplus": 53,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 17,
+        "H": 8,
+        "Q": 15,
+        "terminal_surplus": 7,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 18,
+        "H": 0,
+        "Q": 1,
+        "terminal_surplus": 1,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "chain_threshold_transition_gate": {
+    "identity": "boundary c stays or moves to 2c-1; removed even roots create boundary 2r-1",
+    "passed": true,
+    "rows": [
+      {
+        "from_stage": 0,
+        "to_stage": 1,
+        "removed_odd_thresholds": 0,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 1004961,
+        "terminal_slack": 513760,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 0,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": null,
+          "last_tight_event_X": null
+        }
+      },
+      {
+        "from_stage": 1,
+        "to_stage": 2,
+        "removed_odd_thresholds": 67692,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 0,
+        "terminal_slack": 482849,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 482849,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": null,
+          "last_tight_event_X": null
+        }
+      },
+      {
+        "from_stage": 2,
+        "to_stage": 3,
+        "removed_odd_thresholds": 12694,
+        "removed_hard_roots": 150067,
+        "removed_nonhard_roots": 6667,
+        "terminal_slack": 410912,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 407075,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 54
+        }
+      },
+      {
+        "from_stage": 3,
+        "to_stage": 4,
+        "removed_odd_thresholds": 39595,
+        "removed_hard_roots": 34160,
+        "removed_nonhard_roots": 3104,
+        "terminal_slack": 379862,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 377999,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 74
+        }
+      },
+      {
+        "from_stage": 4,
+        "to_stage": 5,
+        "removed_odd_thresholds": 24714,
+        "removed_hard_roots": 76434,
+        "removed_nonhard_roots": 8201,
+        "terminal_slack": 338340,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 333296,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 186
+        }
+      },
+      {
+        "from_stage": 5,
+        "to_stage": 6,
+        "removed_odd_thresholds": 31996,
+        "removed_hard_roots": 37938,
+        "removed_nonhard_roots": 5161,
+        "terminal_slack": 310294,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 307074,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 6,
+        "to_stage": 7,
+        "removed_odd_thresholds": 25395,
+        "removed_hard_roots": 38826,
+        "removed_nonhard_roots": 6730,
+        "terminal_slack": 285028,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 280862,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 7,
+        "to_stage": 8,
+        "removed_odd_thresholds": 21537,
+        "removed_hard_roots": 23018,
+        "removed_nonhard_roots": 5466,
+        "terminal_slack": 268230,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 264850,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 8,
+        "to_stage": 9,
+        "removed_odd_thresholds": 15767,
+        "removed_hard_roots": 14700,
+        "removed_nonhard_roots": 4568,
+        "terminal_slack": 257520,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 254695,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 9,
+        "to_stage": 10,
+        "removed_odd_thresholds": 11063,
+        "removed_hard_roots": 8661,
+        "removed_nonhard_roots": 3305,
+        "terminal_slack": 251244,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 249104,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 10,
+        "to_stage": 11,
+        "removed_odd_thresholds": 7460,
+        "removed_hard_roots": 4805,
+        "removed_nonhard_roots": 2387,
+        "terminal_slack": 247731,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 246182,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 11,
+        "to_stage": 12,
+        "removed_odd_thresholds": 4611,
+        "removed_hard_roots": 2590,
+        "removed_nonhard_roots": 1647,
+        "terminal_slack": 245947,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244843,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 12,
+        "to_stage": 13,
+        "removed_odd_thresholds": 2624,
+        "removed_hard_roots": 1096,
+        "removed_nonhard_roots": 1002,
+        "terminal_slack": 245090,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244443,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 13,
+        "to_stage": 14,
+        "removed_odd_thresholds": 1318,
+        "removed_hard_roots": 479,
+        "removed_nonhard_roots": 526,
+        "terminal_slack": 244714,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244363,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 14,
+        "to_stage": 15,
+        "removed_odd_thresholds": 619,
+        "removed_hard_roots": 136,
+        "removed_nonhard_roots": 243,
+        "terminal_slack": 244463,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244355,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 15,
+        "to_stage": 16,
+        "removed_odd_thresholds": 212,
+        "removed_hard_roots": 43,
+        "removed_nonhard_roots": 83,
+        "terminal_slack": 244362,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244325,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 16,
+        "to_stage": 17,
+        "removed_odd_thresholds": 60,
+        "removed_hard_roots": 8,
+        "removed_nonhard_roots": 16,
+        "terminal_slack": 244316,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244312,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 17,
+        "to_stage": 18,
+        "removed_odd_thresholds": 8,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 3,
+        "terminal_slack": 244309,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 244309,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      }
+    ]
+  },
+  "death_histogram": {
+    "1": 1004961,
+    "2": 67692,
+    "3": 169428,
+    "4": 76859,
+    "5": 109349,
+    "6": 75095,
+    "7": 70951,
+    "8": 50021,
+    "9": 35035,
+    "10": 23029,
+    "11": 14652,
+    "12": 8848,
+    "13": 4722,
+    "14": 2323,
+    "15": 998,
+    "16": 338,
+    "17": 84,
+    "18": 11
+  },
+  "hard_death_histogram": {
+    "3": 150067,
+    "4": 34160,
+    "5": 76434,
+    "6": 37938,
+    "7": 38826,
+    "8": 23018,
+    "9": 14700,
+    "10": 8661,
+    "11": 4805,
+    "12": 2590,
+    "13": 1096,
+    "14": 479,
+    "15": 136,
+    "16": 43,
+    "17": 8
+  },
+  "final_q_parent_death_histogram": {
+    "1": 367975,
+    "2": 26341,
+    "3": 66019,
+    "4": 28374,
+    "5": 42312,
+    "6": 27651,
+    "7": 26338,
+    "8": 18276,
+    "9": 13016,
+    "10": 8685,
+    "11": 5614,
+    "12": 3499,
+    "13": 1823,
+    "14": 916,
+    "15": 319,
+    "16": 96,
+    "17": 15,
+    "18": 1
+  },
+  "final_q_child_generation_histogram": {
+    "3": 3,
+    "4": 17,
+    "5": 758,
+    "6": 26296,
+    "7": 160725,
+    "8": 203407,
+    "9": 141724,
+    "10": 64482,
+    "11": 25975,
+    "12": 9382,
+    "13": 3221,
+    "14": 955,
+    "15": 257,
+    "16": 49,
+    "17": 19
+  },
+  "hard_sample": [
+    {
+      "value": 54,
+      "death_rank": 3
+    },
+    {
+      "value": 74,
+      "death_rank": 3
+    },
+    {
+      "value": 114,
+      "death_rank": 3
+    },
+    {
+      "value": 144,
+      "death_rank": 4
+    },
+    {
+      "value": 174,
+      "death_rank": 3
+    },
+    {
+      "value": 186,
+      "death_rank": 3
+    },
+    {
+      "value": 234,
+      "death_rank": 3
+    },
+    {
+      "value": 252,
+      "death_rank": 3
+    },
+    {
+      "value": 294,
+      "death_rank": 3
+    },
+    {
+      "value": 318,
+      "death_rank": 3
+    },
+    {
+      "value": 354,
+      "death_rank": 3
+    },
+    {
+      "value": 362,
+      "death_rank": 3
+    },
+    {
+      "value": 390,
+      "death_rank": 3
+    },
+    {
+      "value": 414,
+      "death_rank": 3
+    },
+    {
+      "value": 444,
+      "death_rank": 5
+    },
+    {
+      "value": 450,
+      "death_rank": 3
+    },
+    {
+      "value": 474,
+      "death_rank": 5
+    },
+    {
+      "value": 492,
+      "death_rank": 4
+    },
+    {
+      "value": 516,
+      "death_rank": 3
+    },
+    {
+      "value": 534,
+      "death_rank": 5
+    },
+    {
+      "value": 564,
+      "death_rank": 6
+    },
+    {
+      "value": 582,
+      "death_rank": 3
+    },
+    {
+      "value": 594,
+      "death_rank": 3
+    },
+    {
+      "value": 614,
+      "death_rank": 6
+    },
+    {
+      "value": 648,
+      "death_rank": 3
+    },
+    {
+      "value": 666,
+      "death_rank": 3
+    },
+    {
+      "value": 704,
+      "death_rank": 4
+    },
+    {
+      "value": 714,
+      "death_rank": 3
+    },
+    {
+      "value": 758,
+      "death_rank": 3
+    },
+    {
+      "value": 774,
+      "death_rank": 3
+    },
+    {
+      "value": 780,
+      "death_rank": 3
+    },
+    {
+      "value": 798,
+      "death_rank": 3
+    },
+    {
+      "value": 846,
+      "death_rank": 3
+    },
+    {
+      "value": 884,
+      "death_rank": 6
+    },
+    {
+      "value": 894,
+      "death_rank": 3
+    },
+    {
+      "value": 912,
+      "death_rank": 3
+    },
+    {
+      "value": 924,
+      "death_rank": 6
+    },
+    {
+      "value": 942,
+      "death_rank": 3
+    },
+    {
+      "value": 954,
+      "death_rank": 3
+    },
+    {
+      "value": 956,
+      "death_rank": 4
+    },
+    {
+      "value": 978,
+      "death_rank": 3
+    },
+    {
+      "value": 1002,
+      "death_rank": 3
+    },
+    {
+      "value": 1014,
+      "death_rank": 5
+    },
+    {
+      "value": 1064,
+      "death_rank": 6
+    },
+    {
+      "value": 1074,
+      "death_rank": 3
+    },
+    {
+      "value": 1080,
+      "death_rank": 3
+    },
+    {
+      "value": 1110,
+      "death_rank": 3
+    },
+    {
+      "value": 1134,
+      "death_rank": 5
+    },
+    {
+      "value": 1154,
+      "death_rank": 5
+    },
+    {
+      "value": 1176,
+      "death_rank": 3
+    },
+    {
+      "value": 1188,
+      "death_rank": 4
+    },
+    {
+      "value": 1206,
+      "death_rank": 3
+    },
+    {
+      "value": 1218,
+      "death_rank": 3
+    },
+    {
+      "value": 1224,
+      "death_rank": 7
+    },
+    {
+      "value": 1242,
+      "death_rank": 3
+    },
+    {
+      "value": 1314,
+      "death_rank": 3
+    },
+    {
+      "value": 1344,
+      "death_rank": 6
+    },
+    {
+      "value": 1356,
+      "death_rank": 3
+    },
+    {
+      "value": 1362,
+      "death_rank": 3
+    },
+    {
+      "value": 1374,
+      "death_rank": 3
+    },
+    {
+      "value": 1404,
+      "death_rank": 5
+    },
+    {
+      "value": 1410,
+      "death_rank": 3
+    },
+    {
+      "value": 1424,
+      "death_rank": 4
+    },
+    {
+      "value": 1434,
+      "death_rank": 6
+    }
+  ],
+  "final_q_sample": [
+    {
+      "parent": 21,
+      "child": 41,
+      "parent_death_rank": 3,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 35,
+      "child": 69,
+      "parent_death_rank": 2,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 39,
+      "child": 77,
+      "parent_death_rank": 2,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 63,
+      "child": 125,
+      "parent_death_rank": 4,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 66,
+      "child": 131,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 75,
+      "child": 149,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 110,
+      "child": 219,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 117,
+      "child": 233,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 119,
+      "child": 237,
+      "parent_death_rank": 2,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 120,
+      "child": 239,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 126,
+      "child": 251,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 147,
+      "child": 293,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 182,
+      "child": 363,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 183,
+      "child": 365,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 189,
+      "child": 377,
+      "parent_death_rank": 5,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 198,
+      "child": 395,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 200,
+      "child": 399,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 210,
+      "child": 419,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 221,
+      "child": 441,
+      "parent_death_rank": 4,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 225,
+      "child": 449,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 228,
+      "child": 455,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 231,
+      "child": 461,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 245,
+      "child": 489,
+      "parent_death_rank": 6,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 246,
+      "child": 491,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 287,
+      "child": 573,
+      "parent_death_rank": 5,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 291,
+      "child": 581,
+      "parent_death_rank": 2,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 306,
+      "child": 611,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 308,
+      "child": 615,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 309,
+      "child": 617,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 335,
+      "child": 669,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 350,
+      "child": 699,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 351,
+      "child": 701,
+      "parent_death_rank": 4,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 357,
+      "child": 713,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 360,
+      "child": 719,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 371,
+      "child": 741,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 378,
+      "child": 755,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 380,
+      "child": 759,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 381,
+      "child": 761,
+      "parent_death_rank": 3,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 390,
+      "child": 779,
+      "parent_death_rank": 3,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 396,
+      "child": 791,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 425,
+      "child": 849,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 429,
+      "child": 857,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 444,
+      "child": 887,
+      "parent_death_rank": 5,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 453,
+      "child": 905,
+      "parent_death_rank": 5,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 471,
+      "child": 941,
+      "parent_death_rank": 2,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 486,
+      "child": 971,
+      "parent_death_rank": 1,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 510,
+      "child": 1019,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 515,
+      "child": 1029,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 516,
+      "child": 1031,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 539,
+      "child": 1077,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 549,
+      "child": 1097,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 552,
+      "child": 1103,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 561,
+      "child": 1121,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 567,
+      "child": 1133,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 572,
+      "child": 1143,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 575,
+      "child": 1149,
+      "parent_death_rank": 2,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 576,
+      "child": 1151,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 579,
+      "child": 1157,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 588,
+      "child": 1175,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 594,
+      "child": 1187,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 606,
+      "child": 1211,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 635,
+      "child": 1269,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 650,
+      "child": 1299,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 651,
+      "child": 1301,
+      "parent_death_rank": 2,
+      "child_generation_rank": 6
+    }
+  ],
+  "transient_q_sample": [
+    {
+      "parent": 6,
+      "child": 11,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 8,
+      "child": 15,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 11,
+      "child": 21,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 12,
+      "child": 23,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 15,
+      "child": 29,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 18,
+      "child": 35,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 20,
+      "child": 39,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 23,
+      "child": 45,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 24,
+      "child": 47,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 29,
+      "child": 57,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 30,
+      "child": 59,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 32,
+      "child": 63,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 36,
+      "child": 71,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 38,
+      "child": 75,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 42,
+      "child": 83,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 45,
+      "child": 89,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 47,
+      "child": 93,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 48,
+      "child": 95,
+      "parent_death_rank": 1,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 54,
+      "child": 107,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 56,
+      "child": 111,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 57,
+      "child": 113,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 59,
+      "child": 117,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 60,
+      "child": 119,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 62,
+      "child": 123,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 68,
+      "child": 135,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 71,
+      "child": 141,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 72,
+      "child": 143,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 74,
+      "child": 147,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 78,
+      "child": 155,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 83,
+      "child": 165,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 86,
+      "child": 171,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 89,
+      "child": 177,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 90,
+      "child": 179,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 92,
+      "child": 183,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 93,
+      "child": 185,
+      "parent_death_rank": 3,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 95,
+      "child": 189,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 96,
+      "child": 191,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 102,
+      "child": 203,
+      "parent_death_rank": 1,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 104,
+      "child": 207,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 107,
+      "child": 213,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 108,
+      "child": 215,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 111,
+      "child": 221,
+      "parent_death_rank": 2,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 113,
+      "child": 225,
+      "parent_death_rank": 5,
+      "child_death_rank": 6
+    },
+    {
+      "parent": 114,
+      "child": 227,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 116,
+      "child": 231,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 123,
+      "child": 245,
+      "parent_death_rank": 5,
+      "child_death_rank": 6
+    },
+    {
+      "parent": 128,
+      "child": 255,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 132,
+      "child": 263,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 135,
+      "child": 269,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 138,
+      "child": 275,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 140,
+      "child": 279,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 141,
+      "child": 281,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 143,
+      "child": 285,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    }
+  ],
+  "elapsed_seconds": 104.2564185999945
+}

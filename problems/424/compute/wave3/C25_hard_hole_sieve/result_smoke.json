@@ -1,0 +1,16 @@
+{
+  "schema_version":1,
+  "limit":100000,
+  "multipliers":{"D2":[5,17,41,53,77],"D0":[33,69],"priority":[5,17,33,41,53,69,77],"primitive_eligible_through_10000":{"count":699,"first":[5,17,33,41,53,69,77,87,101,131,137,149,161,167,173,197,209,233,239,249,251,257,267,293,317,321,377,389,401,407,419,437,449,461,473,491,497,521,573,581,593,611,617,641,647,653,701,713,719,761,767,773,789,791,797,807,821,857,881,887,929,941,953,971]}},
+  "spectral":{"a":0.315068710829518604,"b":0.0447957839262187088,"gate":0.0127304175574822737,"rho":0.999214644481743992},
+  "counts":{"M0":16823,"M2":10000,"E":11928,"O0":3589,"O2":4152,"S":2046,"H0":4388,"H2":720,"H":5108},
+  "sieve":{"residual0":2746,"residual2":272,"forced11":350,"forced11_residual":346,"assigned0":{"5":1006,"17":312,"41":138,"53":107,"77":79},"assigned2":{"5":165,"17":31,"33":145,"41":28,"53":12,"69":67}},
+  "recurrences":{"H0_le_D2O2":{"source_events":4388,"failure_events":4382,"first_failure":252,"source_at_first_failure":7,"capacity_at_first_failure":6,"maximum_excess":2383,"maximum_excess_X":99978,"source_at_max":4388,"capacity_at_max":2005},"H2_le_D2O0_plus_D0O2":{"source_events":720,"failure_events":0,"first_failure":0,"source_at_first_failure":0,"capacity_at_first_failure":0,"maximum_excess":0,"maximum_excess_X":74,"source_at_max":1,"capacity_at_max":1},"combined":{"source_events":5108,"failure_events":4084,"first_failure":18938,"source_at_first_failure":1006,"capacity_at_first_failure":1005,"maximum_excess":901,"maximum_excess_X":99912,"source_at_max":5106,"capacity_at_max":4205}},
+  "checkpoints":[
+    {"X":100,"M0":23,"M2":20,"E":19,"O0":8,"O2":10,"S":4,"H0":1,"H2":1,"residual0":0,"residual2":0,"capacity0":1,"capacity2":1},
+    {"X":1000,"M0":230,"M2":186,"E":156,"O0":80,"O2":88,"S":51,"H0":34,"H2":7,"residual0":8,"residual2":0,"capacity0":27,"capacity2":31},
+    {"X":10000,"M0":2019,"M2":1440,"E":1344,"O0":586,"O2":658,"S":353,"H0":437,"H2":81,"residual0":202,"residual2":10,"capacity0":268,"capacity2":299},
+    {"X":100000,"M0":16823,"M2":10000,"E":11928,"O0":3589,"O2":4152,"S":2046,"H0":4388,"H2":720,"residual0":2746,"residual2":272,"capacity0":2005,"capacity2":2202}
+  ],
+  "elapsed_seconds":0.00719160000000000025
+}

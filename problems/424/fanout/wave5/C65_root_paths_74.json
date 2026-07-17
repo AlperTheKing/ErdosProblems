@@ -1,0 +1,90 @@
+{
+  "limit": 74,
+  "hard_checks": 2,
+  "minimum_reserve": 0,
+  "first_failure": null,
+  "tight_count": 2,
+  "tight_sample": [
+    {
+      "root_cutoff": 54,
+      "demand": 1,
+      "flow": 1
+    },
+    {
+      "root_cutoff": 74,
+      "demand": 2,
+      "flow": 2
+    }
+  ],
+  "final_demand": 2,
+  "final_flow": 2,
+  "final_reserve": 0,
+  "reverse_augmentations": 0,
+  "first_reverse": null,
+  "maximum_path_length": 4,
+  "maximum_path": {
+    "vertices": [
+      75,
+      6,
+      11,
+      21,
+      76
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 74
+  },
+  "splitless_source_paths": 2,
+  "hard_source_paths": 0,
+  "unary_paths": 0,
+  "maximum_unary_edges": 0,
+  "first_hard_source": null,
+  "first_unary_path": null,
+  "diagnostic_paths": [
+    {
+      "vertices": [
+        75,
+        18,
+        35,
+        76
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        75,
+        6,
+        11,
+        21,
+        76
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    }
+  ],
+  "path_certificate": [
+    {
+      "vertices": [
+        75,
+        18,
+        35,
+        76
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        75,
+        6,
+        11,
+        21,
+        76
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    }
+  ],
+  "directly_healed_sources": 2,
+  "first_direct_bank_failure": null
+}

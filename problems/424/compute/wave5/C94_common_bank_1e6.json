@@ -1,0 +1,482 @@
+{
+  "all_cutoff_three_quarter_gate": {
+    "last_failure": null,
+    "maximum_deficit": {
+      "A_H": 0,
+      "D": 0,
+      "X": 2,
+      "value": 0
+    },
+    "minimum_positive_D_over_A_H": {
+      "X": 186,
+      "denominator": 6,
+      "numerator": 5
+    }
+  },
+  "counts": {
+    "A_H": 27056,
+    "D": 44271,
+    "generated": 457599,
+    "hard": 45583,
+    "holes": 209067,
+    "persistent_splitless": 64380,
+    "splitless": 108651
+  },
+  "definitions": {
+    "A_H": "hard roots whose literal seed-2 chain through X consists entirely of holes",
+    "D": "structural splitless roots whose literal seed-2 chain has a generated member at most X"
+  },
+  "depth_one_min_factor_histogram": {
+    "101": 78,
+    "105": 95,
+    "122": 93,
+    "129": 68,
+    "131": 76,
+    "134": 103,
+    "14": 2222,
+    "149": 57,
+    "152": 264,
+    "158": 89,
+    "159": 93,
+    "164": 133,
+    "17": 437,
+    "194": 76,
+    "195": 61,
+    "204": 157,
+    "206": 61,
+    "26": 924,
+    "264": 90,
+    "27": 333,
+    "296": 128,
+    "3": 13938,
+    "33": 739,
+    "344": 78,
+    "368": 77,
+    "384": 156,
+    "41": 335,
+    "44": 1235,
+    "5": 5290,
+    "50": 160,
+    "51": 467,
+    "53": 137,
+    "65": 78,
+    "69": 318,
+    "80": 415,
+    "81": 159,
+    "84": 320,
+    "87": 154,
+    "9": 3059,
+    "98": 58
+  },
+  "first_death_min_factor_histogram": {
+    "101": 103,
+    "105": 96,
+    "122": 142,
+    "129": 78,
+    "131": 100,
+    "134": 175,
+    "14": 3402,
+    "149": 79,
+    "152": 264,
+    "158": 148,
+    "159": 96,
+    "164": 133,
+    "17": 741,
+    "194": 107,
+    "204": 157,
+    "206": 103,
+    "254": 61,
+    "26": 1304,
+    "264": 90,
+    "27": 382,
+    "296": 128,
+    "3": 18079,
+    "33": 794,
+    "344": 78,
+    "368": 77,
+    "384": 156,
+    "41": 427,
+    "44": 1235,
+    "5": 7158,
+    "50": 327,
+    "51": 490,
+    "53": 202,
+    "65": 88,
+    "69": 333,
+    "80": 415,
+    "81": 167,
+    "84": 320,
+    "87": 164,
+    "9": 3341,
+    "98": 80
+  },
+  "healed_splitless_residue_mod_9": {
+    "0": 12094,
+    "2": 10995,
+    "3": 12226,
+    "6": 8955,
+    "8": 1
+  },
+  "healed_splitless_types": {
+    "semigroup_1mod3": 33214,
+    "square_3": 1,
+    "square_p2mod3": 61,
+    "three_times_semigroup": 10995
+  },
+  "healing_depths": {
+    "1": 34760,
+    "2": 6909,
+    "3": 2159,
+    "4": 232,
+    "5": 144,
+    "6": 31,
+    "7": 26,
+    "8": 6,
+    "9": 4
+  },
+  "limit": 1000000,
+  "persistent_hard_residue_mod_9": {
+    "0": 8046,
+    "2": 3165,
+    "3": 6983,
+    "6": 8862
+  },
+  "quarter_scale_gates": {
+    "local_shadow_probe": {
+      "A_H_floor_cutoff_over_4": 0,
+      "complete_splitless_shadow": [
+        8
+      ],
+      "cutoff": 186,
+      "factor_descent": [
+        74,
+        15,
+        8
+      ],
+      "shadow_chain": [
+        8,
+        15,
+        29,
+        57,
+        113
+      ],
+      "shadow_healed_by_cutoff": false,
+      "source": 74,
+      "source_chain": [
+        74,
+        147
+      ]
+    },
+    "maximum_additive_defect": {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "X": 186,
+      "value": 1
+    },
+    "maximum_weighted_defect": {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "X": 2,
+      "value": 0
+    },
+    "power_of_ten_samples": [
+      {
+        "A_H": 0,
+        "A_H_floor_X_over_4": 0,
+        "D": 0,
+        "X": 10,
+        "additive_defect": 0,
+        "weighted_defect": 0
+      },
+      {
+        "A_H": 2,
+        "A_H_floor_X_over_4": 0,
+        "D": 3,
+        "X": 100,
+        "additive_defect": -1,
+        "weighted_defect": -6
+      },
+      {
+        "A_H": 34,
+        "A_H_floor_X_over_4": 7,
+        "D": 34,
+        "X": 1000,
+        "additive_defect": -7,
+        "weighted_defect": -19
+      },
+      {
+        "A_H": 391,
+        "A_H_floor_X_over_4": 96,
+        "D": 374,
+        "X": 10000,
+        "additive_defect": -79,
+        "weighted_defect": -76
+      },
+      {
+        "A_H": 3386,
+        "A_H_floor_X_over_4": 943,
+        "D": 4279,
+        "X": 100000,
+        "additive_defect": -1836,
+        "weighted_defect": -1957
+      },
+      {
+        "A_H": 27056,
+        "A_H_floor_X_over_4": 7783,
+        "D": 44271,
+        "X": 1000000,
+        "additive_defect": -24998,
+        "weighted_defect": -34061
+      }
+    ]
+  },
+  "ratios": {
+    "D_minus_A_H": 17215,
+    "D_over_A_H": {
+      "denominator": 27056,
+      "numerator": 44271
+    },
+    "four_D_minus_three_A_H": 95916
+  },
+  "samples": {
+    "deepest_persistent_splitless_roots": [
+      2340
+    ],
+    "first_deepest_persistent_splitless_chain": [
+      2340,
+      4679,
+      9357,
+      18713,
+      37425,
+      74849,
+      149697,
+      299393,
+      598785
+    ],
+    "healed_splitless_first": [
+      {
+        "death": 41,
+        "depth": 3,
+        "root": 6
+      },
+      {
+        "death": 449,
+        "depth": 6,
+        "root": 8
+      },
+      {
+        "death": 5633,
+        "depth": 9,
+        "root": 12
+      },
+      {
+        "death": 69,
+        "depth": 2,
+        "root": 18
+      },
+      {
+        "death": 77,
+        "depth": 2,
+        "root": 20
+      },
+      {
+        "death": 5889,
+        "depth": 8,
+        "root": 24
+      },
+      {
+        "death": 233,
+        "depth": 3,
+        "root": 30
+      },
+      {
+        "death": 1121,
+        "depth": 5,
+        "root": 36
+      },
+      {
+        "death": 149,
+        "depth": 2,
+        "root": 38
+      },
+      {
+        "death": 2625,
+        "depth": 6,
+        "root": 42
+      },
+      {
+        "death": 377,
+        "depth": 3,
+        "root": 48
+      },
+      {
+        "death": 441,
+        "depth": 3,
+        "root": 56
+      },
+      {
+        "death": 237,
+        "depth": 2,
+        "root": 60
+      },
+      {
+        "death": 131,
+        "depth": 1,
+        "root": 66
+      },
+      {
+        "death": 18177,
+        "depth": 8,
+        "root": 72
+      },
+      {
+        "death": 617,
+        "depth": 3,
+        "root": 78
+      },
+      {
+        "death": 713,
+        "depth": 3,
+        "root": 90
+      },
+      {
+        "death": 365,
+        "depth": 2,
+        "root": 92
+      },
+      {
+        "death": 761,
+        "depth": 3,
+        "root": 96
+      },
+      {
+        "death": 3233,
+        "depth": 5,
+        "root": 102
+      },
+      {
+        "death": 857,
+        "depth": 3,
+        "root": 108
+      },
+      {
+        "death": 219,
+        "depth": 1,
+        "root": 110
+      },
+      {
+        "death": 239,
+        "depth": 1,
+        "root": 120
+      },
+      {
+        "death": 251,
+        "depth": 1,
+        "root": 126
+      },
+      {
+        "death": 65025,
+        "depth": 9,
+        "root": 128
+      },
+      {
+        "death": 33537,
+        "depth": 8,
+        "root": 132
+      },
+      {
+        "death": 1097,
+        "depth": 3,
+        "root": 138
+      },
+      {
+        "death": 581,
+        "depth": 2,
+        "root": 146
+      },
+      {
+        "death": 19073,
+        "depth": 7,
+        "root": 150
+      },
+      {
+        "death": 9921,
+        "depth": 6,
+        "root": 156
+      }
+    ],
+    "maximum_persistent_splitless_depth": 8,
+    "persistent_hard_first": [
+      9192,
+      9474,
+      14514,
+      16122,
+      16812,
+      16872,
+      18870,
+      19458,
+      20052,
+      21102,
+      22242,
+      22332,
+      23112,
+      25572,
+      26742,
+      28212,
+      30378,
+      33780,
+      33792,
+      34086,
+      34308,
+      35766,
+      35820,
+      36114,
+      36990,
+      37194,
+      37350,
+      37424,
+      38234,
+      38466
+    ],
+    "persistent_splitless_first": [
+      2340,
+      4902,
+      6228,
+      6396,
+      7332,
+      7956,
+      7962,
+      8400,
+      9312,
+      10830,
+      10956,
+      13410,
+      13812,
+      13872,
+      14220,
+      15192,
+      16148,
+      18492,
+      19038,
+      20252,
+      22998,
+      23168,
+      24102,
+      24642,
+      24858,
+      25182,
+      26262,
+      27102,
+      28530,
+      29262
+    ]
+  },
+  "splitless_types": {
+    "semigroup_1mod3": 80586,
+    "square_3": 1,
+    "square_p2mod3": 86,
+    "three_times_semigroup": 27978
+  }
+}

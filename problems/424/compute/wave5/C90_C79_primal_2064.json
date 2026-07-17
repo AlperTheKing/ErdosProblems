@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 2064,
+      "hard_shapes": 154,
+      "splitless_values": 305,
+      "variables": 2064,
+      "inequalities": 3578,
+      "minimum_boundary_minus_hard": -1.0,
+      "maximum_fractional_hard_minus_boundary": 1.0,
+      "fractional_variable_count": 0,
+      "fractional_variables_first_40": [],
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ]
+}

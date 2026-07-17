@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "limit": 5000,
+  "algorithm": "trial divisors plus literal descending approximants",
+  "generated": 1496,
+  "hard_total": 253,
+  "target_total": 290,
+  "splitless_roots": 701,
+  "maximum_rank": 8,
+  "rank_histogram_hard": {
+    "2": 147,
+    "3": 26,
+    "4": 35,
+    "5": 26,
+    "6": 15,
+    "7": 4
+  },
+  "rank_histogram_targets": {
+    "0": 112,
+    "1": 33,
+    "2": 37,
+    "3": 29,
+    "4": 33,
+    "5": 21,
+    "6": 17,
+    "7": 8
+  },
+  "forest_failures": [],
+  "literal_stage_audit": {
+    "transitions_to_fixpoint": 10,
+    "mismatches": []
+  },
+  "euler_audit": {
+    "identity": "H_d-Q2_d=M_d(X)-E(X)-M_d(floor((X+1)/2))-O_d(floor((X+1)/3))+R3_d+A2_d+A3_d",
+    "prefix_rank_pairs_checked": 45000,
+    "first_mismatch": null
+  },
+  "prefix_audits": {
+    "1": {
+      "maximum_excess": 12,
+      "maximum_X": 2064,
+      "maximum_rank": 6,
+      "first_plus_one": {
+        "X": 1002,
+        "rank": 3,
+        "H": 35,
+        "Q": 33,
+        "excess": 2
+      },
+      "strict_events": [
+        {
+          "X": 186,
+          "rank": 3,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 186,
+          "rank": 4,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 186,
+          "rank": 5,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 186,
+          "rank": 6,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 186,
+          "rank": 7,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 186,
+          "rank": 8,
+          "H": 6,
+          "Q": 5
+        },
+        {
+          "X": 362,
+          "rank": 2,
+          "H": 11,
+          "Q": 10
+        },
+        {
+          "X": 362,
+          "rank": 3,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 362,
+          "rank": 4,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 362,
+          "rank": 5,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 362,
+          "rank": 6,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 362,
+          "rank": 7,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 362,
+          "rank": 8,
+          "H": 12,
+          "Q": 11
+        },
+        {
+          "X": 956,
+          "rank": 3,
+          "H": 33,
+          "Q": 32
+        },
+        {
+          "X": 978,
+          "rank": 3,
+          "H": 34,
+          "Q": 33
+        },
+        {
+          "X": 1002,
+          "rank": 2,
+          "H": 31,
+          "Q": 30
+        },
+        {
+          "X": 1002,
+          "rank": 3,
+          "H": 35,
+          "Q": 33
+        },
+        {
+          "X": 1002,
+          "rank": 5,
+          "H": 42,
+          "Q": 41
+        },
+        {
+          "X": 1002,
+          "rank": 6,
+          "H": 42,
+          "Q": 41
+        },
+        {
+          "X": 1002,
+          "rank": 7,
+          "H": 42,
+          "Q": 41
+        }
+      ]
+    },
+    "2": {
+      "maximum_excess": 1,
+      "maximum_X": 362,
+      "maximum_rank": 2,
+      "first_plus_one": null,
+      "strict_events": [
+        {
+          "X": 362,
+          "rank": 2,
+          "H": 11,
+          "Q": 10
+        },
+        {
+          "X": 1002,
+          "rank": 2,
+          "H": 31,
+          "Q": 30
+        },
+        {
+          "X": 1014,
+          "rank": 2,
+          "H": 31,
+          "Q": 30
+        }
+      ]
+    }
+  },
+  "cap1_counterexample": {
+    "X": 1002,
+    "rank": 3,
+    "H": 35,
+    "Q": 33,
+    "excess": 2,
+    "hard": [
+      {
+        "value": 54,
+        "rank": 2
+      },
+      {
+        "value": 74,
+        "rank": 2
+      },
+      {
+        "value": 114,
+        "rank": 2
+      },
+      {
+        "value": 144,
+        "rank": 3
+      },
+      {
+        "value": 174,
+        "rank": 2
+      },
+      {
+        "value": 186,
+        "rank": 2
+      },
+      {
+        "value": 234,
+        "rank": 2
+      },
+      {
+        "value": 252,
+        "rank": 2
+      },
+      {
+        "value": 294,
+        "rank": 2
+      },
+      {
+        "value": 318,
+        "rank": 2
+      },
+      {
+        "value": 354,
+        "rank": 2
+      },
+      {
+        "value": 362,
+        "rank": 2
+      },
+      {
+        "value": 390,
+        "rank": 2
+      },
+      {
+        "value": 414,
+        "rank": 2
+      },
+      {
+        "value": 450,
+        "rank": 2
+      },
+      {
+        "value": 492,
+        "rank": 3
+      },
+      {
+        "value": 516,
+        "rank": 2
+      },
+      {
+        "value": 582,
+        "rank": 2
+      },
+      {
+        "value": 594,
+        "rank": 2
+      },
+      {
+        "value": 648,
+        "rank": 2
+      },
+      {
+        "value": 666,
+        "rank": 2
+      },
+      {
+        "value": 704,
+        "rank": 3
+      },
+      {
+        "value": 714,
+        "rank": 2
+      },
+      {
+        "value": 758,
+        "rank": 2
+      },
+      {
+        "value": 774,
+        "rank": 2
+      },
+      {
+        "value": 780,
+        "rank": 2
+      },
+      {
+        "value": 798,
+        "rank": 2
+      },
+      {
+        "value": 846,
+        "rank": 2
+      },
+      {
+        "value": 894,
+        "rank": 2
+      },
+      {
+        "value": 912,
+        "rank": 2
+      },
+      {
+        "value": 942,
+        "rank": 2
+      },
+      {
+        "value": 954,
+        "rank": 2
+      },
+      {
+        "value": 956,
+        "rank": 3
+      },
+      {
+        "value": 978,
+        "rank": 2
+      },
+      {
+        "value": 1002,
+        "rank": 2
+      }
+    ],
+    "first_component_exits": [
+      {
+        "child": 41,
+        "parent": 21,
+        "rank": 2,
+        "root": 6,
+        "ordinal": 1
+      },
+      {
+        "child": 69,
+        "parent": 35,
+        "rank": 1,
+        "root": 18,
+        "ordinal": 1
+      },
+      {
+        "child": 77,
+        "parent": 39,
+        "rank": 1,
+        "root": 20,
+        "ordinal": 1
+      },
+      {
+        "child": 131,
+        "parent": 66,
+        "rank": 0,
+        "root": 66,
+        "ordinal": 1
+      },
+      {
+        "child": 149,
+        "parent": 75,
+        "rank": 1,
+        "root": 38,
+        "ordinal": 1
+      },
+      {
+        "child": 219,
+        "parent": 110,
+        "rank": 0,
+        "root": 110,
+        "ordinal": 1
+      },
+      {
+        "child": 233,
+        "parent": 117,
+        "rank": 2,
+        "root": 30,
+        "ordinal": 1
+      },
+      {
+        "child": 237,
+        "parent": 119,
+        "rank": 1,
+        "root": 60,
+        "ordinal": 1
+      },
+      {
+        "child": 239,
+        "parent": 120,
+        "rank": 0,
+        "root": 120,
+        "ordinal": 1
+      },
+      {
+        "child": 251,
+        "parent": 126,
+        "rank": 0,
+        "root": 126,
+        "ordinal": 1
+      },
+      {
+        "child": 293,
+        "parent": 147,
+        "rank": 3,
+        "root": 74,
+        "ordinal": 1
+      },
+      {
+        "child": 363,
+        "parent": 182,
+        "rank": 0,
+        "root": 182,
+        "ordinal": 1
+      },
+      {
+        "child": 365,
+        "parent": 183,
+        "rank": 1,
+        "root": 92,
+        "ordinal": 1
+      },
+      {
+        "child": 395,
+        "parent": 198,
+        "rank": 0,
+        "root": 198,
+        "ordinal": 1
+      },
+      {
+        "child": 399,
+        "parent": 200,
+        "rank": 0,
+        "root": 200,
+        "ordinal": 1
+      },
+      {
+        "child": 419,
+        "parent": 210,
+        "rank": 0,
+        "root": 210,
+        "ordinal": 1
+      },
+      {
+        "child": 441,
+        "parent": 221,
+        "rank": 3,
+        "root": 56,
+        "ordinal": 1
+      },
+      {
+        "child": 455,
+        "parent": 228,
+        "rank": 0,
+        "root": 228,
+        "ordinal": 1
+      },
+      {
+        "child": 491,
+        "parent": 246,
+        "rank": 0,
+        "root": 246,
+        "ordinal": 1
+      },
+      {
+        "child": 581,
+        "parent": 291,
+        "rank": 1,
+        "root": 146,
+        "ordinal": 1
+      },
+      {
+        "child": 611,
+        "parent": 306,
+        "rank": 0,
+        "root": 306,
+        "ordinal": 1
+      },
+      {
+        "child": 615,
+        "parent": 308,
+        "rank": 0,
+        "root": 308,
+        "ordinal": 1
+      },
+      {
+        "child": 669,
+        "parent": 335,
+        "rank": 1,
+        "root": 168,
+        "ordinal": 1
+      },
+      {
+        "child": 713,
+        "parent": 357,
+        "rank": 2,
+        "root": 90,
+        "ordinal": 1
+      },
+      {
+        "child": 719,
+        "parent": 360,
+        "rank": 0,
+        "root": 360,
+        "ordinal": 1
+      },
+      {
+        "child": 741,
+        "parent": 371,
+        "rank": 3,
+        "root": 186,
+        "ordinal": 1
+      },
+      {
+        "child": 755,
+        "parent": 378,
+        "rank": 0,
+        "root": 378,
+        "ordinal": 1
+      },
+      {
+        "child": 759,
+        "parent": 380,
+        "rank": 0,
+        "root": 380,
+        "ordinal": 1
+      },
+      {
+        "child": 761,
+        "parent": 381,
+        "rank": 2,
+        "root": 96,
+        "ordinal": 1
+      },
+      {
+        "child": 779,
+        "parent": 390,
+        "rank": 2,
+        "root": 390,
+        "ordinal": 1
+      },
+      {
+        "child": 791,
+        "parent": 396,
+        "rank": 0,
+        "root": 396,
+        "ordinal": 1
+      },
+      {
+        "child": 941,
+        "parent": 471,
+        "rank": 1,
+        "root": 236,
+        "ordinal": 1
+      },
+      {
+        "child": 971,
+        "parent": 486,
+        "rank": 0,
+        "root": 486,
+        "ordinal": 1
+      }
+    ],
+    "excluded_later_component_exits": [
+      {
+        "child": 125,
+        "parent": 63,
+        "rank": 3,
+        "root": 6,
+        "ordinal": 2
+      },
+      {
+        "child": 461,
+        "parent": 231,
+        "rank": 3,
+        "root": 20,
+        "ordinal": 2
+      },
+      {
+        "child": 699,
+        "parent": 350,
+        "rank": 3,
+        "root": 30,
+        "ordinal": 2
+      },
+      {
+        "child": 701,
+        "parent": 351,
+        "rank": 3,
+        "root": 30,
+        "ordinal": 3
+      }
+    ]
+  },
+  "cpp_cross_check": {
+    "requested": true,
+    "expected": {
+      "hard_total": 253,
+      "target_total": 290,
+      "splitless_roots": 701,
+      "cap1_max": 12,
+      "cap1_first": {
+        "X": 1002,
+        "rank": 3,
+        "H": 35,
+        "Q": 33,
+        "excess": 2
+      },
+      "cap2_max": 1
+    },
+    "observed": {
+      "hard_total": 253,
+      "target_total": 290,
+      "splitless_roots": 701,
+      "cap1_max": 12,
+      "cap1_first": {
+        "X": 1002,
+        "rank": 3,
+        "H": 35,
+        "Q": 33,
+        "excess": 2
+      },
+      "cap2_max": 1
+    },
+    "equal": true
+  },
+  "assertions": {
+    "forest_parent_and_rank": true,
+    "literal_stages": true,
+    "euler_identity": true,
+    "cap1_first_failure_is_1002_rank3": true,
+    "cap2_has_no_plus_one_failure": true,
+    "cpp_cross_check": true
+  }
+}

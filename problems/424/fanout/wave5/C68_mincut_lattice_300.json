@@ -1,0 +1,884 @@
+{
+  "lattice_counterexample": {
+    "hole_vertices": [
+      4,
+      5,
+      7
+    ],
+    "capacities": [
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        5,
+        11,
+        1
+      ],
+      [
+        7,
+        4,
+        4
+      ],
+      [
+        10,
+        4,
+        1
+      ],
+      [
+        10,
+        5,
+        4
+      ]
+    ],
+    "max_flow": 1,
+    "canonical_shore": [
+      4,
+      5,
+      7
+    ],
+    "cut_capacity": 1,
+    "all_minimum_shores": [
+      [
+        4,
+        5,
+        7
+      ]
+    ],
+    "canonical_is_unique_minimum_shore": true,
+    "all_mandatory_nodes_inside": true,
+    "all_infinite_unary_arcs_internal": true,
+    "hard_truncated_roots": [
+      4
+    ],
+    "nonhard_exiting_roots": [
+      5
+    ],
+    "rank_holds": false,
+    "first_rank_violation": {
+      "index": 0,
+      "hard_root": 4,
+      "nonhard_root": 5
+    },
+    "violating_prefix_raw_removal": [
+      4,
+      7
+    ],
+    "reverse_unary_saturation": [
+      4,
+      7
+    ],
+    "saturation_hits_mandatory_node": false,
+    "raw_removal_capacity_delta": 1,
+    "raw_removal_unary_violations": []
+  },
+  "arithmetic_profiles": [
+    {
+      "limit": 300,
+      "max_flow": 12,
+      "canonical_shore": [
+        6,
+        8,
+        11,
+        12,
+        15,
+        18,
+        20,
+        21,
+        23,
+        24,
+        29,
+        30,
+        32,
+        35,
+        36,
+        38,
+        42,
+        45,
+        47,
+        48,
+        54,
+        56,
+        57,
+        59,
+        60,
+        62,
+        66,
+        68,
+        71,
+        72,
+        74,
+        78,
+        83,
+        89,
+        90,
+        92,
+        93,
+        95,
+        96,
+        102,
+        107,
+        108,
+        110,
+        111,
+        113,
+        114,
+        120,
+        123,
+        126,
+        128,
+        132,
+        135,
+        138,
+        141,
+        143,
+        144,
+        146,
+        150,
+        155,
+        156,
+        162,
+        165,
+        168,
+        174,
+        177,
+        179,
+        180,
+        182,
+        183,
+        185,
+        186,
+        189,
+        191,
+        192,
+        198,
+        200,
+        203,
+        210,
+        213,
+        215,
+        216,
+        218,
+        221,
+        222,
+        225,
+        227,
+        228,
+        234,
+        236,
+        240,
+        245,
+        246,
+        252,
+        255,
+        258,
+        263,
+        269,
+        270,
+        272,
+        275,
+        276,
+        281,
+        282,
+        285,
+        287,
+        288,
+        290,
+        291,
+        294,
+        299,
+        300
+      ],
+      "canonical_rank": {
+        "hard_truncated": [
+          54,
+          114,
+          144,
+          174,
+          186,
+          234,
+          252,
+          294
+        ],
+        "nonhard_exiting": [
+          6,
+          18,
+          20,
+          30,
+          32,
+          38,
+          60,
+          66,
+          110,
+          120,
+          126
+        ],
+        "holds": true,
+        "first_violation": null
+      },
+      "lattice": {
+        "residual_sccs": 51,
+        "forced_sccs": 31,
+        "forbidden_sccs": 1,
+        "eligible_sccs": 19,
+        "enumeration_complete": true,
+        "minimum_shores": 221184,
+        "canonical_is_intersection": true,
+        "alternative_rank_failures": []
+      },
+      "prefix_toggles": [
+        {
+          "threshold": 6,
+          "raw_nodes": 3,
+          "saturated_nodes": 27,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -1,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 8,
+          "raw_nodes": 9,
+          "saturated_nodes": 45,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -1,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 12,
+          "raw_nodes": 14,
+          "saturated_nodes": 50,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -1,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 18,
+          "raw_nodes": 16,
+          "saturated_nodes": 51,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -2,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 20,
+          "raw_nodes": 17,
+          "saturated_nodes": 53,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -3,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 24,
+          "raw_nodes": 21,
+          "saturated_nodes": 57,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -3,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 30,
+          "raw_nodes": 23,
+          "saturated_nodes": 58,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 32,
+          "raw_nodes": 24,
+          "saturated_nodes": 58,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 36,
+          "raw_nodes": 28,
+          "saturated_nodes": 59,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 38,
+          "raw_nodes": 29,
+          "saturated_nodes": 60,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 42,
+          "raw_nodes": 32,
+          "saturated_nodes": 61,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 48,
+          "raw_nodes": 35,
+          "saturated_nodes": 63,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 54,
+          "raw_nodes": 38,
+          "saturated_nodes": 63,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 56,
+          "raw_nodes": 41,
+          "saturated_nodes": 64,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 60,
+          "raw_nodes": 42,
+          "saturated_nodes": 65,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 62,
+          "raw_nodes": 45,
+          "saturated_nodes": 65,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 66,
+          "raw_nodes": 46,
+          "saturated_nodes": 66,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 68,
+          "raw_nodes": 49,
+          "saturated_nodes": 66,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 72,
+          "raw_nodes": 52,
+          "saturated_nodes": 67,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 74,
+          "raw_nodes": 53,
+          "saturated_nodes": 67,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 78,
+          "raw_nodes": 55,
+          "saturated_nodes": 68,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 90,
+          "raw_nodes": 57,
+          "saturated_nodes": 69,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 92,
+          "raw_nodes": 59,
+          "saturated_nodes": 72,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 96,
+          "raw_nodes": 61,
+          "saturated_nodes": 74,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 102,
+          "raw_nodes": 63,
+          "saturated_nodes": 75,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 108,
+          "raw_nodes": 65,
+          "saturated_nodes": 76,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 110,
+          "raw_nodes": 66,
+          "saturated_nodes": 77,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 114,
+          "raw_nodes": 68,
+          "saturated_nodes": 77,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 120,
+          "raw_nodes": 69,
+          "saturated_nodes": 78,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 126,
+          "raw_nodes": 70,
+          "saturated_nodes": 79,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -9,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 128,
+          "raw_nodes": 72,
+          "saturated_nodes": 81,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -9,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 132,
+          "raw_nodes": 74,
+          "saturated_nodes": 82,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -9,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 138,
+          "raw_nodes": 76,
+          "saturated_nodes": 83,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -9,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 144,
+          "raw_nodes": 78,
+          "saturated_nodes": 83,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 146,
+          "raw_nodes": 80,
+          "saturated_nodes": 85,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 150,
+          "raw_nodes": 82,
+          "saturated_nodes": 86,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 156,
+          "raw_nodes": 83,
+          "saturated_nodes": 87,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 162,
+          "raw_nodes": 84,
+          "saturated_nodes": 88,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 168,
+          "raw_nodes": 85,
+          "saturated_nodes": 89,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -8,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 174,
+          "raw_nodes": 86,
+          "saturated_nodes": 89,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 180,
+          "raw_nodes": 87,
+          "saturated_nodes": 90,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 182,
+          "raw_nodes": 88,
+          "saturated_nodes": 91,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -7,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 186,
+          "raw_nodes": 89,
+          "saturated_nodes": 91,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 192,
+          "raw_nodes": 90,
+          "saturated_nodes": 92,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 198,
+          "raw_nodes": 91,
+          "saturated_nodes": 93,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 200,
+          "raw_nodes": 92,
+          "saturated_nodes": 94,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 210,
+          "raw_nodes": 93,
+          "saturated_nodes": 95,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 216,
+          "raw_nodes": 94,
+          "saturated_nodes": 96,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 218,
+          "raw_nodes": 95,
+          "saturated_nodes": 97,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 222,
+          "raw_nodes": 96,
+          "saturated_nodes": 98,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 228,
+          "raw_nodes": 97,
+          "saturated_nodes": 99,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -6,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 234,
+          "raw_nodes": 98,
+          "saturated_nodes": 99,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 236,
+          "raw_nodes": 99,
+          "saturated_nodes": 100,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 240,
+          "raw_nodes": 100,
+          "saturated_nodes": 101,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 246,
+          "raw_nodes": 101,
+          "saturated_nodes": 102,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -5,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 252,
+          "raw_nodes": 102,
+          "saturated_nodes": 103,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 258,
+          "raw_nodes": 103,
+          "saturated_nodes": 104,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 270,
+          "raw_nodes": 104,
+          "saturated_nodes": 105,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 272,
+          "raw_nodes": 105,
+          "saturated_nodes": 106,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 276,
+          "raw_nodes": 106,
+          "saturated_nodes": 107,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 282,
+          "raw_nodes": 107,
+          "saturated_nodes": 108,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 288,
+          "raw_nodes": 108,
+          "saturated_nodes": 109,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 290,
+          "raw_nodes": 109,
+          "saturated_nodes": 110,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -4,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 294,
+          "raw_nodes": 110,
+          "saturated_nodes": 110,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -3,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        },
+        {
+          "threshold": 300,
+          "raw_nodes": 111,
+          "saturated_nodes": 111,
+          "hits_splitless": true,
+          "raw_hard_truncated_minus_nonhard_exiting": -3,
+          "closure_verified": true,
+          "capacity_delta": null,
+          "capacity_nonincreasing": false
+        }
+      ]
+    }
+  ]
+}

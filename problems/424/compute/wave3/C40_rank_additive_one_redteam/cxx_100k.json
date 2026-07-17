@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":100000,
+  "pair_enumerator":"explicit allowed products a<b",
+  "admissible_pair_count":226818,
+  "hard_total":5108,
+  "target_total":6783,
+  "maximum_obstruction_rank":12,
+  "true_child_coordinate_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"positive_tests":3,"plus_one_failures":0,"first_positive_X":362,"first_positive_rank":2,"last_positive_X":1014,"last_positive_rank":2},
+  "parent_coordinate_prefix":{"maximum_excess":0,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0},
+  "exact_rank_layers":{"maximum_excess":1576,"maximum_X":99780,"maximum_rank":2,"positive_tests":21653,"plus_one_failures":20895,"first_positive_X":74,"first_positive_rank":2,"last_positive_X":99978,"last_positive_rank":6},
+  "target_rank_offset_one":{"maximum_excess":0,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0},
+  "missing_endpoint_chain_local":{"direct_first_zero":54,"direct_zero_count":4583,"two_step_first_zero":74,"two_step_zero_count":1964,"any_arrived_boundary_first_zero":74,"any_arrived_boundary_zero_count":1878},
+  "unique_split_fiber":{"largest_parent":11,"size":395},
+  "parity_audit":{"hard_event_parity":0,"target_child_parity":1,"same_coordinate_ties":0,"target_parent_can_equal_seed_2":false},
+  "distinctness_audit":{"first_square_leak_membership_difference":8,"square_leak_hard_total":1620,"square_leak_target_total":6604,"square_leak_prefix":{"maximum_excess":-2,"maximum_X":54,"maximum_rank":0,"positive_tests":0,"plus_one_failures":0,"first_positive_X":0,"first_positive_rank":0,"last_positive_X":0,"last_positive_rank":0}},
+  "hard_rank_histogram":{"2":2323,"3":491,"4":899,"5":447,"6":424,"7":243,"8":156,"9":94,"10":28,"11":3},
+  "target_rank_histogram":{"0":3037,"1":407,"2":749,"3":469,"4":585,"5":409,"6":386,"7":314,"8":216,"9":141,"10":64,"11":6}
+}

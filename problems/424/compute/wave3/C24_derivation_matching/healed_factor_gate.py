@@ -12,6 +12,7 @@ from pathlib import Path
 
 
 NO_RANK = 65535
+MAX_RANK_OFFSET = 8
 
 
 def is_allowed(value: int) -> bool:
@@ -135,6 +136,84 @@ def main() -> None:
     first_hard = 0
     first_failure: dict[str, object] | None = None
     failure_sample: list[dict[str, object]] = []
+    hard_rank_counts: list[int] = []
+    healed_rank_counts: list[int] = []
+    hard_ranked_values: list[tuple[int, int]] = []
+    healed_ranked_values: list[tuple[int, int]] = []
+    rank_hall_audits = [
+        {
+            "offset": offset,
+            "event_cutoffs_checked": 0,
+            "failure_events": 0,
+            "first_failure": None,
+            "maximum_excess": 0,
+            "maximum_excess_cutoff": 0,
+            "maximum_excess_depth": 0,
+        }
+        for offset in range(MAX_RANK_OFFSET + 1)
+    ]
+
+    def increment_rank(histogram: list[int], depth: int) -> None:
+        if depth >= len(histogram):
+            histogram.extend([0] * (depth + 1 - len(histogram)))
+        histogram[depth] += 1
+
+    def observe_rank_hall(cutoff: int) -> None:
+        depth_count = max(len(hard_rank_counts), len(healed_rank_counts))
+        hard_prefix = []
+        healed_prefix = []
+        running = 0
+        for depth in range(depth_count):
+            running += hard_rank_counts[depth] if depth < len(hard_rank_counts) else 0
+            hard_prefix.append(running)
+        running = 0
+        for depth in range(depth_count + MAX_RANK_OFFSET):
+            running += (
+                healed_rank_counts[depth]
+                if depth < len(healed_rank_counts)
+                else 0
+            )
+            healed_prefix.append(running)
+
+        for audit in rank_hall_audits:
+            audit["event_cutoffs_checked"] += 1
+            offset = audit["offset"]
+            excess = 0
+            excess_depth = 0
+            for depth, hard_total in enumerate(hard_prefix):
+                candidate = hard_total - healed_prefix[depth + offset]
+                if candidate > excess:
+                    excess = candidate
+                    excess_depth = depth
+            if excess <= 0:
+                continue
+            audit["failure_events"] += 1
+            if audit["first_failure"] is None:
+                left_values = [
+                    value
+                    for value, depth in hard_ranked_values
+                    if depth <= excess_depth
+                ]
+                right_values = [
+                    value
+                    for value, depth in healed_ranked_values
+                    if depth <= excess_depth + offset
+                ]
+                if len(left_values) - len(right_values) != excess:
+                    raise AssertionError("rank Hall witness count mismatch")
+                audit["first_failure"] = {
+                    "cutoff": cutoff,
+                    "depth": excess_depth,
+                    "excess": excess,
+                    "left_count": len(left_values),
+                    "neighbor_count": len(right_values),
+                    "left_values": left_values,
+                    "neighbor_values": right_values,
+                }
+            if excess > audit["maximum_excess"]:
+                audit["maximum_excess"] = excess
+                audit["maximum_excess_cutoff"] = cutoff
+                audit["maximum_excess_depth"] = excess_depth
 
     for n in range(4, limit + 1):
         pairs = proper_allowed_pairs(n + 1, spf)
@@ -154,6 +233,14 @@ def main() -> None:
             generation_rank[n] = best_rank
             witness_left[n], witness_right[n] = best_pair
             generated_count += 1
+            if n % 2:
+                parent = (n + 1) // 2
+                if is_allowed(parent) and not member[parent]:
+                    increment_rank(healed_rank_counts, obstruction_rank[parent])
+                    healed_ranked_values.append(
+                        (parent, obstruction_rank[parent])
+                    )
+                    observe_rank_hall(n)
             continue
 
         if not is_allowed(n):
@@ -201,6 +288,9 @@ def main() -> None:
         hard_count += 1
         if first_hard == 0:
             first_hard = n
+        increment_rank(hard_rank_counts, obstruction_rank[n])
+        hard_ranked_values.append((n, obstruction_rank[n]))
+        observe_rank_hall(n)
 
         pair_rows = []
         healed_neighbors: set[int] = set()
@@ -267,6 +357,30 @@ def main() -> None:
     if first_failure is None:
         matching_witness = None
     else:
+        cutoff = int(first_failure["n"])
+        half = (cutoff + 1) // 2
+        half_holes = [
+            value
+            for value in range(2, half + 1)
+            if is_allowed(value) and not member[value]
+        ]
+        healed_capacity = [
+            value for value in half_holes if member[2 * value - 1]
+        ]
+        odd_reducible = [
+            2 * value - 1
+            for value in half_holes
+            if not member[2 * value - 1]
+        ]
+        first_failure["cutoff_capacity"] = {
+            "half": half,
+            "half_holes": half_holes,
+            "odd_reducible_holes": odd_reducible,
+            "healed_holes": healed_capacity,
+            "identity": (
+                f"M({half})={len(odd_reducible)}+{len(healed_capacity)}"
+            ),
+        }
         matching_witness = {
             "cutoff": first_failure["n"],
             "left_set": [first_failure["n"]],
@@ -275,6 +389,11 @@ def main() -> None:
         }
 
     bitmap_sha256 = hashlib.sha256(member).hexdigest()
+    surviving_offsets = [
+        audit["offset"]
+        for audit in rank_hall_audits
+        if audit["failure_events"] == 0
+    ]
     result = {
         "schema_version": 1,
         "limit": limit,
@@ -303,6 +422,17 @@ def main() -> None:
         "first_hard": first_hard,
         "first_failure": first_failure,
         "first_matching_hall_witness": matching_witness,
+        "rank_hall_relation": (
+            "hard hole of obstruction rank r is adjacent to every healed hole "
+            "of obstruction rank at most r+offset; nested Hall is equivalent to "
+            "H(<=d)<=Q(<=d+offset) for every d"
+        ),
+        "rank_hall_audits": rank_hall_audits,
+        "smallest_surviving_rank_offset": (
+            surviving_offsets[0] if surviving_offsets else None
+        ),
+        "hard_rank_histogram": hard_rank_counts,
+        "healed_rank_histogram": healed_rank_counts,
         "failure_sample": failure_sample,
         "member_bitmap_sha256": bitmap_sha256,
         "elapsed_seconds": time.perf_counter() - started,

@@ -1,0 +1,473 @@
+{
+  "artifacts": [
+    {
+      "classified_at_or_above_min_d": 5000,
+      "evaluated_candidates": 5000,
+      "evaluated_stream_sha256": "dca470e268ebbafbcd09ba08cd21a73f1768a8630bd473abc0358fc9721e5d7a",
+      "file": "C117_base_powers_5k.json",
+      "hard_candidates": 0,
+      "largest_source_tested": 37574230562709158065448,
+      "parameters": {
+        "base_multi_budget": 0,
+        "base_power_budget": 5000,
+        "composite_q_budget": 0,
+        "extremal_lift_budget": 0,
+        "extremal_limit": 16,
+        "max_bits": 75,
+        "max_pairs": 512,
+        "min_d": 20,
+        "min_source": 4000000000,
+        "mutation_budget": 0,
+        "prime_limit": 100000,
+        "prime_power_budget": 0,
+        "progress_every": 500,
+        "seed": 424117,
+        "shape_expansion_budget": 0,
+        "shape_substitution_budget": 0,
+        "squarefree_budget": 0
+      },
+      "sha256": "41bc38c3f6ebc400c46a19f42e0527ef8440a46927327167fa3b3e9fcfc42f9d",
+      "target_3_4_falsifiers": 0
+    },
+    {
+      "classified_at_or_above_min_d": 1500,
+      "evaluated_candidates": 1500,
+      "evaluated_stream_sha256": "f8e235fc51edfe611e319b3992fb8123382a8eaa92c55b10bfe664963c8b55a6",
+      "file": "C117_focused.json",
+      "hard_candidates": 0,
+      "largest_source_tested": 8642908561266374604,
+      "parameters": {
+        "base_multi_budget": 0,
+        "base_power_budget": 0,
+        "composite_q_budget": 0,
+        "extremal_lift_budget": 0,
+        "extremal_limit": 16,
+        "max_bits": 63,
+        "max_pairs": 512,
+        "min_d": 8,
+        "min_source": 4000000000,
+        "mutation_budget": 200,
+        "prime_limit": 1000,
+        "prime_power_budget": 0,
+        "progress_every": 250,
+        "seed": 424117,
+        "shape_expansion_budget": 1000,
+        "shape_substitution_budget": 500,
+        "squarefree_budget": 0
+      },
+      "sha256": "0bece99057f23fccf0f129f6833d83ecb2073cd08f8b7c911e7537f9dc959e38",
+      "target_3_4_falsifiers": 0
+    },
+    {
+      "classified_at_or_above_min_d": 20319,
+      "evaluated_candidates": 26000,
+      "evaluated_stream_sha256": "63670b50d607353782a505a6e24fb849d8bff478055dca25fe1a9cf86b3d969e",
+      "file": "C117_diverse_26k.json",
+      "hard_candidates": 0,
+      "largest_source_tested": 4721584507441840041852,
+      "parameters": {
+        "base_multi_budget": 5000,
+        "base_power_budget": 0,
+        "composite_q_budget": 5000,
+        "extremal_lift_budget": 0,
+        "extremal_limit": 24,
+        "fiber_sweep_budget": 0,
+        "max_bits": 72,
+        "max_pairs": 512,
+        "min_d": 12,
+        "min_source": 4000000000,
+        "mutation_budget": 0,
+        "prime_limit": 5000,
+        "prime_power_budget": 8000,
+        "progress_every": 1000,
+        "seed": 424117,
+        "shape_expansion_budget": 0,
+        "shape_substitution_budget": 0,
+        "slot_sweep_budget": 0,
+        "squarefree_budget": 8000
+      },
+      "sha256": "af05fa817d8da6f92c51cfc4d743c9dc19df47a5af201e617e3c72ab20eded95",
+      "target_3_4_falsifiers": 0
+    },
+    {
+      "classified_at_or_above_min_d": 100000,
+      "evaluated_candidates": 100000,
+      "evaluated_stream_sha256": "d009817b6c0c8d96d66d721f717d818452e2596832a6570eca3ac6d89c7533e8",
+      "file": "C117_slot_sweep_100k.json",
+      "hard_candidates": 8,
+      "largest_source_tested": 1782870115185196331634,
+      "parameters": {
+        "base_multi_budget": 0,
+        "base_power_budget": 0,
+        "composite_q_budget": 0,
+        "extremal_lift_budget": 0,
+        "extremal_limit": 64,
+        "fiber_sweep_budget": 0,
+        "max_bits": 80,
+        "max_pairs": 512,
+        "min_d": 8,
+        "min_source": 4000000000,
+        "mutation_budget": 0,
+        "prime_limit": 1000000,
+        "prime_power_budget": 0,
+        "progress_every": 5000,
+        "seed": 424117,
+        "shape_expansion_budget": 0,
+        "shape_substitution_budget": 0,
+        "slot_sweep_budget": 100000,
+        "squarefree_budget": 0
+      },
+      "sha256": "6fec457130cadcd970850204bd68fd8f40515495e05291cf8ffc5b0e69159ca1",
+      "target_3_4_falsifiers": 0
+    },
+    {
+      "classified_at_or_above_min_d": 30000,
+      "evaluated_candidates": 30000,
+      "evaluated_stream_sha256": "9e8033d55ab04ae12229aae8f6fa7edcde8fd4d330b42c9706e1e2f8f2f607fd",
+      "file": "C117_cross_seed_fiber_30k.json",
+      "hard_candidates": 0,
+      "largest_source_tested": 63046033713844708450824,
+      "parameters": {
+        "base_multi_budget": 0,
+        "base_power_budget": 0,
+        "composite_q_budget": 0,
+        "extremal_lift_budget": 0,
+        "extremal_limit": 24,
+        "fiber_sweep_budget": 30000,
+        "max_bits": 80,
+        "max_pairs": 512,
+        "min_d": 12,
+        "min_source": 4000000000,
+        "mutation_budget": 0,
+        "prime_limit": 100000,
+        "prime_power_budget": 0,
+        "progress_every": 1000,
+        "seed": 424117,
+        "shape_expansion_budget": 0,
+        "shape_substitution_budget": 0,
+        "slot_sweep_budget": 0,
+        "squarefree_budget": 0
+      },
+      "sha256": "35f9118540a3bfd5df1eced80dc3852f14bc929167bdeabdeeef0eb8ab737629",
+      "target_3_4_falsifiers": 0
+    },
+    {
+      "classified_at_or_above_min_d": 30000,
+      "evaluated_candidates": 30000,
+      "evaluated_stream_sha256": "d9d9419383760bc9d9a196112e2a60997130bbbfe4cc68562e13b724f0fcf9d9",
+      "file": "C117_second_generation_fiber_30k.json",
+      "hard_candidates": 0,
+      "largest_source_tested": 132131012341607575950114,
+      "parameters": {
+        "base_multi_budget": 0,
+        "base_power_budget": 0,
+        "composite_q_budget": 0,
+        "extra_seed_claim": "problems/424/compute/wave5/C117_slot_sweep_100k.json",
+        "extremal_lift_budget": 0,
+        "extremal_limit": 32,
+        "fiber_sweep_budget": 30000,
+        "max_bits": 85,
+        "max_pairs": 512,
+        "min_d": 24,
+        "min_source": 4000000000,
+        "mutation_budget": 0,
+        "prime_limit": 100000,
+        "prime_power_budget": 0,
+        "progress_every": 1000,
+        "seed": 424117,
+        "shape_expansion_budget": 0,
+        "shape_substitution_budget": 0,
+        "slot_sweep_budget": 0,
+        "squarefree_budget": 0
+      },
+      "sha256": "e476aadff4a08e975c8eb32c4e54bf6ab04b49878be0c45cc192b16b6555b51d",
+      "target_3_4_falsifiers": 0
+    }
+  ],
+  "baseline_self_test": [
+    {
+      "d": 12,
+      "h": 38624780,
+      "s": 4
+    },
+    {
+      "d": 16,
+      "h": 908368614,
+      "s": 9
+    },
+    {
+      "d": 8,
+      "h": 2067138956,
+      "s": 0
+    },
+    {
+      "d": 16,
+      "h": 2796867114,
+      "s": 8
+    },
+    {
+      "d": 18,
+      "h": 2934744174,
+      "s": 14
+    }
+  ],
+  "family_rows": [
+    {
+      "artifact": "C117_base_powers_5k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 5000,
+      "evaluated": 5000,
+      "family": "base_prime_power",
+      "max_d": 40,
+      "min_d": 24,
+      "states": {
+        "generated": 5000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_focused.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 1000,
+      "evaluated": 1000,
+      "family": "hard_shape_expansion",
+      "max_d": 72,
+      "min_d": 12,
+      "states": {
+        "generated": 1000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_focused.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 500,
+      "evaluated": 500,
+      "family": "hard_shape_substitution",
+      "max_d": 18,
+      "min_d": 8,
+      "states": {
+        "generated": 500,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_diverse_26k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 5000,
+      "evaluated": 5000,
+      "family": "base_multi_plus",
+      "max_d": 128,
+      "min_d": 32,
+      "states": {
+        "generated": 5000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_diverse_26k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 5000,
+      "evaluated": 5000,
+      "family": "composite_q",
+      "max_d": 64,
+      "min_d": 16,
+      "states": {
+        "generated": 5000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_diverse_26k.json",
+      "below_min_d": 5681,
+      "classified_at_or_above_min_d": 2319,
+      "evaluated": 8000,
+      "family": "prime_power",
+      "max_d": 96,
+      "min_d": 1,
+      "states": {
+        "generated": 2319,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_diverse_26k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 8000,
+      "evaluated": 8000,
+      "family": "squarefree",
+      "max_d": 32,
+      "min_d": 16,
+      "states": {
+        "generated": 8000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_slot_sweep_100k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 100000,
+      "evaluated": 100000,
+      "family": "hard_slot_sweep",
+      "max_d": 18,
+      "min_d": 8,
+      "states": {
+        "generated": 99992,
+        "hard": 8,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_cross_seed_fiber_30k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 30000,
+      "evaluated": 30000,
+      "family": "cross_seed_fiber",
+      "max_d": 72,
+      "min_d": 24,
+      "states": {
+        "generated": 30000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    },
+    {
+      "artifact": "C117_second_generation_fiber_30k.json",
+      "below_min_d": 0,
+      "classified_at_or_above_min_d": 30000,
+      "evaluated": 30000,
+      "family": "cross_seed_fiber",
+      "max_d": 72,
+      "min_d": 24,
+      "states": {
+        "generated": 30000,
+        "hard": 0,
+        "other_hole": 0,
+        "structural_splitless": 0
+      }
+    }
+  ],
+  "implementation_sha256": {
+    "C117_build_manifest.py": "ea33d574725b637e0ff600fb92934ab0a52270ff6efe8f1bd6703dd7a130a7de",
+    "C117_structural_power_falsifier.py": "ac8fe1c311006301d1acf8a91f6cc1172a46cd5d210759b4fc7071774df35c3d",
+    "C117_structural_power_verify.py": "7ba782c14c315317c9b5a25db50001ce25756416d1b89acf3f2dcb8ae34018dc"
+  },
+  "observed_structural_pattern": {
+    "best_d16_source": {
+      "d": 16,
+      "h": 158020616214,
+      "missing_root_states": {
+        "hard": 4,
+        "other_hole": 3,
+        "structural_splitless": 9
+      },
+      "pair_types": {
+        "generated+other_hole": 16
+      },
+      "s": 9
+    },
+    "divisor_raising_sources_classified": 86319,
+    "divisor_raising_sources_generated": 86319,
+    "hard_survivors_all_from_fixed_d_slot_substitution": true,
+    "proof_obligation_not_claim": "Explain why divisor-raising creates a generated-generated pair, or why a hard survivor has only a bounded set of nonstructural blocker roots."
+  },
+  "schema": "C117-aggregate-manifest-v1",
+  "scope": {
+    "alpha_gate": 0.7213475204444817,
+    "candidate_evaluations_are_globally_deduplicated": false,
+    "finite_nonfalsification_is_theorem": false,
+    "primary_ratio": "log(s+8)/log(d)",
+    "target_3_4_falsifier_iff": "(s+8)^4 < d^3"
+  },
+  "sparse_extremal_table": [
+    {
+      "d": 8,
+      "hard_count": 5,
+      "maximum_deficit": 8,
+      "minimum_s": 0,
+      "ratio_B8": 1.0,
+      "representative_N": 4751710743,
+      "representative_h": 4751710742,
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 4096,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 7,
+          "other_hole": 9
+        },
+        "missing_root_states": {
+          "hard": 5,
+          "other_hole": 4
+        },
+        "nonstructural_pairs": 8,
+        "pair_types": {
+          "generated+other_hole": 7,
+          "other_hole+other_hole": 1
+        },
+        "structural_pairs": 0
+      },
+      "template": "base=2067138956:slot=2213^1->5087^1"
+    },
+    {
+      "d": 16,
+      "hard_count": 3,
+      "maximum_deficit": 7,
+      "minimum_s": 9,
+      "ratio_B8": 1.021865710312585,
+      "representative_N": 158020616215,
+      "representative_h": 158020616214,
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 83521,
+        "rhs": 4096
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 16,
+          "other_hole": 16
+        },
+        "missing_root_states": {
+          "hard": 4,
+          "other_hole": 3,
+          "structural_splitless": 9
+        },
+        "nonstructural_pairs": 7,
+        "pair_types": {
+          "generated+other_hole": 16
+        },
+        "structural_pairs": 9
+      },
+      "template": "base=908368614:slot=179^1->31139^1"
+    }
+  ],
+  "totals": {
+    "below_run_min_d_not_closure_classified": 5681,
+    "candidate_evaluations_not_deduplicated": 192500,
+    "closure_classified_at_or_above_run_threshold": 186819,
+    "generated": 186811,
+    "hard": 8,
+    "independently_replayable_distinct_hard_records": 8,
+    "maximum_d_tested": 128,
+    "maximum_source_tested": 132131012341607575950114,
+    "target_3_4_falsifiers": 0
+  }
+}

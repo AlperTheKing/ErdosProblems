@@ -1,0 +1,281 @@
+{
+  "limit": 377,
+  "hard_checks": 12,
+  "minimum_reserve": 0,
+  "first_failure": null,
+  "tight_count": 12,
+  "tight_sample": [
+    {
+      "root_cutoff": 54,
+      "demand": 1,
+      "flow": 1
+    },
+    {
+      "root_cutoff": 74,
+      "demand": 2,
+      "flow": 2
+    },
+    {
+      "root_cutoff": 114,
+      "demand": 3,
+      "flow": 3
+    },
+    {
+      "root_cutoff": 144,
+      "demand": 4,
+      "flow": 4
+    },
+    {
+      "root_cutoff": 174,
+      "demand": 5,
+      "flow": 5
+    },
+    {
+      "root_cutoff": 186,
+      "demand": 6,
+      "flow": 6
+    },
+    {
+      "root_cutoff": 234,
+      "demand": 7,
+      "flow": 7
+    },
+    {
+      "root_cutoff": 252,
+      "demand": 8,
+      "flow": 8
+    },
+    {
+      "root_cutoff": 294,
+      "demand": 9,
+      "flow": 9
+    },
+    {
+      "root_cutoff": 318,
+      "demand": 10,
+      "flow": 10
+    },
+    {
+      "root_cutoff": 354,
+      "demand": 11,
+      "flow": 11
+    },
+    {
+      "root_cutoff": 362,
+      "demand": 12,
+      "flow": 12
+    }
+  ],
+  "final_demand": 12,
+  "final_flow": 12,
+  "final_reserve": 0,
+  "reverse_augmentations": 0,
+  "first_reverse": null,
+  "maximum_path_length": 4,
+  "maximum_path": {
+    "vertices": [
+      378,
+      6,
+      11,
+      21,
+      379
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 362
+  },
+  "splitless_source_paths": 11,
+  "hard_source_paths": 1,
+  "unary_paths": 0,
+  "maximum_unary_edges": 0,
+  "first_hard_source": {
+    "vertices": [
+      378,
+      74,
+      147,
+      379
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 354
+  },
+  "first_unary_path": null,
+  "diagnostic_paths": [
+    {
+      "vertices": [
+        378,
+        18,
+        35,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        378,
+        66,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    },
+    {
+      "vertices": [
+        378,
+        120,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 144
+    },
+    {
+      "vertices": [
+        378,
+        182,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 186
+    },
+    {
+      "vertices": [
+        378,
+        92,
+        183,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 318
+    },
+    {
+      "vertices": [
+        378,
+        6,
+        11,
+        21,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 362
+    }
+  ],
+  "path_certificate": [
+    {
+      "vertices": [
+        378,
+        18,
+        35,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        378,
+        66,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    },
+    {
+      "vertices": [
+        378,
+        110,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 114
+    },
+    {
+      "vertices": [
+        378,
+        120,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 144
+    },
+    {
+      "vertices": [
+        378,
+        126,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 174
+    },
+    {
+      "vertices": [
+        378,
+        182,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 186
+    },
+    {
+      "vertices": [
+        378,
+        20,
+        39,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 234
+    },
+    {
+      "vertices": [
+        378,
+        38,
+        75,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 252
+    },
+    {
+      "vertices": [
+        378,
+        60,
+        119,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 294
+    },
+    {
+      "vertices": [
+        378,
+        92,
+        183,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 318
+    },
+    {
+      "vertices": [
+        378,
+        74,
+        147,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 354
+    },
+    {
+      "vertices": [
+        378,
+        6,
+        11,
+        21,
+        379
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 362
+    }
+  ],
+  "directly_healed_sources": 14,
+  "first_direct_bank_failure": null
+}

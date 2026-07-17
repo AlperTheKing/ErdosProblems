@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "arithmetic_one_step": {
+    "event_limit": 2000,
+    "first_submodularity_failure": {
+      "X": 164,
+      "D1": [
+        15
+      ],
+      "D2": [
+        33
+      ],
+      "mixed_difference": -1,
+      "last_node": 164,
+      "last_kind": "hard"
+    },
+    "first_supermodularity_failure": {
+      "X": 33,
+      "D1": [
+        6
+      ],
+      "D2": [
+        9
+      ],
+      "mixed_difference": 1,
+      "last_node": 17,
+      "last_kind": "terminal-parent"
+    },
+    "direct_replay": {
+      "sub": {
+        "f_D1": 0,
+        "f_D2": -1,
+        "f_union": 1,
+        "f_empty": -1,
+        "mixed_difference": -1
+      },
+      "super": {
+        "f_D1": 0,
+        "f_D2": 0,
+        "f_union": -1,
+        "f_empty": 0,
+        "mixed_difference": 1
+      }
+    },
+    "sub_witness_pairs": [
+      [
+        5,
+        33
+      ],
+      [
+        11,
+        15
+      ]
+    ],
+    "checked_all_empty_base_singleton_pairs": true
+  },
+  "finite_horn_obstruction": {
+    "nodes_in_topological_order": [
+      "s2",
+      "s3",
+      "p",
+      "g5",
+      "g9",
+      "q",
+      "tq",
+      "h1",
+      "h2"
+    ],
+    "seeds": [
+      "s2",
+      "s3"
+    ],
+    "clauses": {
+      "s2": [],
+      "s3": [],
+      "p": [],
+      "g5": [
+        [
+          "s2",
+          "s3"
+        ]
+      ],
+      "g9": [
+        [
+          "s2",
+          "g5"
+        ]
+      ],
+      "q": [
+        [
+          "s2",
+          "p"
+        ]
+      ],
+      "tq": [
+        [
+          "s2",
+          "q"
+        ]
+      ],
+      "h1": [
+        [
+          "g5",
+          "q"
+        ]
+      ],
+      "h2": [
+        [
+          "g9",
+          "q"
+        ]
+      ]
+    },
+    "descending_stages": [
+      [
+        "s2",
+        "s3",
+        "p",
+        "g5",
+        "g9",
+        "q",
+        "tq",
+        "h1",
+        "h2"
+      ],
+      [
+        "s2",
+        "s3",
+        "g5",
+        "g9",
+        "q",
+        "tq",
+        "h1",
+        "h2"
+      ],
+      [
+        "s2",
+        "s3",
+        "g5",
+        "g9",
+        "tq",
+        "h1",
+        "h2"
+      ],
+      [
+        "s2",
+        "s3",
+        "g5",
+        "g9"
+      ],
+      [
+        "s2",
+        "s3",
+        "g5",
+        "g9"
+      ]
+    ],
+    "fixed_point_G": [
+      "s2",
+      "s3",
+      "g5",
+      "g9"
+    ],
+    "ranks": {
+      "p": 0,
+      "q": 1,
+      "tq": 2,
+      "h1": 2,
+      "h2": 2
+    },
+    "hard_nodes": [
+      "h1",
+      "h2"
+    ],
+    "seed2_edges": {
+      "p": "q",
+      "q": "tq"
+    },
+    "terminal_targets": [],
+    "rank_prefix_d_2": {
+      "H": 2,
+      "Q": 0,
+      "excess": 2
+    },
+    "properties": {
+      "all_parents_precede_outputs": true,
+      "hard_ranks_at_least_two": true,
+      "seed2_chain_rank_strict": true
+    }
+  }
+}

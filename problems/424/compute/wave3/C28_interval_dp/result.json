@@ -1,0 +1,63 @@
+{
+  "algorithm": "exact packed residue-split interval-envelope DP",
+  "state": [15, 10, 5],
+  "modulus": 6046617600000,
+  "word_count": 465817912560,
+  "support_count": 330159210305,
+  "support_over_modulus": "0.054602297043722427560161899439448593540957509864689",
+  "support_over_words": "0.70877310941208945767038237830705374023498243122177",
+  "sqrt_30_support_over_modulus": "0.29906909782444419004899396496937428896842594558619",
+  "reachable_min": 92264843,
+  "reachable_max": 4534479454208,
+  "full_runs": [
+    {
+      "tile_bits": 1073741824,
+      "tiles": 5632,
+      "threads": 64,
+      "support_count": 330159210305,
+      "seconds": 193.149440,
+      "peak_bytes_per_worker_bound": 272909440,
+      "peak_bytes_all_workers_bound": 17466204160
+    },
+    {
+      "tile_bits": 67108864,
+      "tiles": 90102,
+      "threads": 64,
+      "support_count": 330159210305,
+      "seconds": 290.218861,
+      "peak_bytes_per_worker_bound": 17056896,
+      "peak_bytes_all_workers_bound": 1091641344
+    }
+  ],
+  "support_bounded_run": {
+    "tile_bits": 1073741824,
+    "tile_begin": 0,
+    "tile_end": 4224,
+    "tiles": 4224,
+    "threads": 64,
+    "support_count": 330159210305,
+    "seconds": 179.510390,
+    "peak_bytes_per_worker_bound": 272909440,
+    "peak_bytes_all_workers_bound": 17466204160
+  },
+  "known_exact_counts": [
+    {"k": 1, "state": [3, 2, 1], "modulus": 360, "support_count": 60},
+    {"k": 2, "state": [6, 4, 2], "modulus": 129600, "support_count": 13068},
+    {"k": 3, "state": [9, 6, 3], "modulus": 46656000, "support_count": 3542949},
+    {"k": 4, "state": [12, 8, 4], "modulus": 16796160000, "support_count": 1054111467}
+  ],
+  "literal_oracle": {
+    "states": 105,
+    "comparisons": 110,
+    "terminal_tile_widths": [1, 7, 65, 1000, 65537],
+    "status": "all passed"
+  },
+  "sha256": {
+    "packed_tiled_dp.cpp": "2B7C7CD59795BCF78CCC103D6534E0C962FE04BA7B315E1E84D2D2E20275E2ED",
+    "packed_tiled_dp.full_run_exe": "01A506F25856E89CC006728B0CA662A61CE498CCACB7F6BA5D3C408080E0C942",
+    "packed_tiled_dp.current_rebuild_exe": "CCC7022E8965915219C25873D5AB50F00C0CBD5B51661D0303E3297BA69F7A8B",
+    "estimate_pullbacks.py": "6DF10D39456708A6326BD823F55E1370188A2F446DFB32CC7312A704A9343F78",
+    "verify_small.py": "5BC237DE6654119E7BF49A731368A5C6E7D9392C58DFF1A2E81FE05C0F262E0D"
+  },
+  "acceptance": "exact integer equality only"
+}

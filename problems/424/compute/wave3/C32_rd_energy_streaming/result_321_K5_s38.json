@@ -1,0 +1,13 @@
+{
+  "schema": "C32-rd-energy-stream-v1",
+  "ray": [3, 2, 1],
+  "base_Q": "360",
+  "kmax": 3,
+  "tie_policy": "g0",
+  "blocks": [
+    {"k": 1, "counts": [3, 2, 1], "M": "360", "W": "60", "D": "60", "offset_fnv1a64_le": "dbe7bc98d2324fbc", "H_G0": "24", "H_G2": "36", "selected_color": "G2", "U_size": "36", "V_size": "36"},
+    {"k": 2, "counts": [6, 4, 2], "M": "129600", "W": "13860", "D": "13068", "offset_fnv1a64_le": "5814728b927c2d62", "H_G0": "5289", "H_G2": "7779", "selected_color": "G2", "U_size": "7779", "V_size": "7779"},
+    {"k": 3, "counts": [9, 6, 3], "M": "46656000", "W": "4084080", "D": "3542949", "offset_fnv1a64_le": "e528de65b8f31e81", "H_G0": "1431609", "H_G2": "2111340", "selected_color": "G2", "U_size": "2111340", "V_size": "2111340"}
+  ],
+  "energy": {"K": 5, "bucket_shift": 38, "bucket_first": "2818", "bucket_last": "3363", "nonempty_buckets": "546", "peak_bucket_values": "128443745", "source_k": [2, 3], "source_pairs": ["16424113860", "16424113860"], "N": "32848227720", "distinct_products": "32790241278", "E": "32964715932", "E_over_N": {"numerator": "2747059661", "denominator": "2737352310", "decimal": "1.003546255615"}, "within_collision_pairs": "22494442", "cross_collision_pairs": "35749664", "max_r": "6", "matrix": [["16445373288", "35749664"], ["35749664", "16447843316"]], "multiplicity_histogram": [{"r": "1", "products": "32732509822"}, {"r": "2", "products": "57479103"}, {"r": "3", "products": "249764"}, {"r": "4", "products": "2546"}, {"r": "5", "products": "42"}, {"r": "6", "products": "1"}]}
+}

@@ -1,0 +1,219 @@
+{
+  "arithmetic": "exact integers only",
+  "cache": {
+    "factor_pair_entries": 2833828,
+    "state_entries": 2833830
+  },
+  "closest_row": {
+    "d": 8,
+    "failure": null,
+    "h": 1144041382262,
+    "minimum_single_source_slack": {
+      "bin_source_roots": [
+        10862,
+        11976
+      ],
+      "index": 2,
+      "j": 13,
+      "lhs": 3,
+      "rhs": 3784,
+      "root": 11976,
+      "slack": 3781
+    },
+    "q": 1224767,
+    "reducible_roots": [
+      140,
+      836,
+      10862,
+      11976,
+      17964,
+      155682,
+      612384,
+      78997472
+    ],
+    "s": 0
+  },
+  "eligible_primes": 293118,
+  "first_C108_MOVE_PACK_failure": null,
+  "hard_count": 6,
+  "hard_rows": [
+    {
+      "d": 8,
+      "failure": null,
+      "h": 1144041382262,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 1224767,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        612384,
+        78997472
+      ],
+      "s": 0
+    },
+    {
+      "d": 8,
+      "failure": null,
+      "h": 1508476205612,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 1614917,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        403730,
+        52081074
+      ],
+      "s": 0
+    },
+    {
+      "d": 8,
+      "failure": null,
+      "h": 1564213296242,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 1674587,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        837294,
+        108010862
+      ],
+      "s": 0
+    },
+    {
+      "d": 8,
+      "failure": null,
+      "h": 3169576015202,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 3393227,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        1696614,
+        218863142
+      ],
+      "s": 0
+    },
+    {
+      "d": 8,
+      "failure": null,
+      "h": 4525424880482,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 4844747,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        2422374,
+        312486182
+      ],
+      "s": 0
+    },
+    {
+      "d": 8,
+      "failure": null,
+      "h": 4649172991202,
+      "minimum_single_source_slack": {
+        "bin_source_roots": [
+          10862,
+          11976
+        ],
+        "index": 2,
+        "j": 13,
+        "lhs": 3,
+        "rhs": 3784,
+        "root": 11976,
+        "slack": 3781
+      },
+      "q": 4977227,
+      "reducible_roots": [
+        140,
+        836,
+        10862,
+        11976,
+        17964,
+        155682,
+        2488614,
+        321031142
+      ],
+      "s": 0
+    }
+  ],
+  "prime_limit": 10000000,
+  "prime_start": 1000001,
+  "primes_tested": 586081,
+  "schema": "C113-single-source-c105-family-v1"
+}

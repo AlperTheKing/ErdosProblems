@@ -1,0 +1,226 @@
+{
+  "limit": 100000,
+  "hard_checks": 5108,
+  "minimum_reserve": 0,
+  "first_failure": null,
+  "tight_count": 5108,
+  "tight_sample": [
+    {
+      "root_cutoff": 54,
+      "demand": 1,
+      "flow": 1
+    },
+    {
+      "root_cutoff": 74,
+      "demand": 2,
+      "flow": 2
+    },
+    {
+      "root_cutoff": 114,
+      "demand": 3,
+      "flow": 3
+    },
+    {
+      "root_cutoff": 144,
+      "demand": 4,
+      "flow": 4
+    },
+    {
+      "root_cutoff": 174,
+      "demand": 5,
+      "flow": 5
+    },
+    {
+      "root_cutoff": 186,
+      "demand": 6,
+      "flow": 6
+    },
+    {
+      "root_cutoff": 234,
+      "demand": 7,
+      "flow": 7
+    },
+    {
+      "root_cutoff": 252,
+      "demand": 8,
+      "flow": 8
+    },
+    {
+      "root_cutoff": 294,
+      "demand": 9,
+      "flow": 9
+    },
+    {
+      "root_cutoff": 318,
+      "demand": 10,
+      "flow": 10
+    },
+    {
+      "root_cutoff": 354,
+      "demand": 11,
+      "flow": 11
+    },
+    {
+      "root_cutoff": 362,
+      "demand": 12,
+      "flow": 12
+    },
+    {
+      "root_cutoff": 390,
+      "demand": 13,
+      "flow": 13
+    },
+    {
+      "root_cutoff": 414,
+      "demand": 14,
+      "flow": 14
+    },
+    {
+      "root_cutoff": 444,
+      "demand": 15,
+      "flow": 15
+    },
+    {
+      "root_cutoff": 450,
+      "demand": 16,
+      "flow": 16
+    },
+    {
+      "root_cutoff": 474,
+      "demand": 17,
+      "flow": 17
+    },
+    {
+      "root_cutoff": 492,
+      "demand": 18,
+      "flow": 18
+    },
+    {
+      "root_cutoff": 516,
+      "demand": 19,
+      "flow": 19
+    },
+    {
+      "root_cutoff": 534,
+      "demand": 20,
+      "flow": 20
+    }
+  ],
+  "final_demand": 5108,
+  "final_flow": 5108,
+  "final_reserve": 0,
+  "reverse_augmentations": 0,
+  "first_reverse": null,
+  "maximum_path_length": 3,
+  "maximum_path": {
+    "vertices": [
+      100001,
+      18,
+      35,
+      100002
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 54
+  },
+  "splitless_source_paths": 3853,
+  "hard_source_paths": 1255,
+  "unary_paths": 2,
+  "maximum_unary_edges": 1,
+  "first_hard_source": {
+    "vertices": [
+      100001,
+      390,
+      100002
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 534
+  },
+  "first_unary_path": {
+    "vertices": [
+      100001,
+      1154,
+      231,
+      100002
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 99414
+  },
+  "diagnostic_paths": [
+    {
+      "vertices": [
+        100001,
+        18,
+        35,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    },
+    {
+      "vertices": [
+        100001,
+        66,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 74
+    },
+    {
+      "vertices": [
+        100001,
+        120,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 144
+    },
+    {
+      "vertices": [
+        100001,
+        182,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 186
+    },
+    {
+      "vertices": [
+        100001,
+        228,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 318
+    },
+    {
+      "vertices": [
+        100001,
+        306,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 362
+    },
+    {
+      "vertices": [
+        100001,
+        4086,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 4146
+    },
+    {
+      "vertices": [
+        100001,
+        1710,
+        100002
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 4806
+    }
+  ],
+  "path_certificate": null,
+  "directly_healed_sources": 6001,
+  "first_direct_bank_failure": null
+}

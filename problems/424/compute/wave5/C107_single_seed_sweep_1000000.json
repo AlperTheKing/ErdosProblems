@@ -1,0 +1,36 @@
+{
+  "schema": "C107-single-seed-sweep-v1",
+  "acceptance": "exact integer",
+  "limit": 1000000,
+  "threads": 64,
+  "seed_systems": 666665,
+  "failures": 0,
+  "tight_systems": 20,
+  "minimum_slack": 0,
+  "worst": {"seed": 3, "root": 2, "k": 1, "required": 1, "required_at": 186},
+  "tight": [
+    {"seed": 3, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 5, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 9, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 17, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 33, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 65, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 66, "root": 66, "k": 2, "required": 2, "required_at": 186},
+    {"seed": 129, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 257, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 513, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 1025, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 2049, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 4097, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 8193, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 16385, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 32769, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 65537, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 131073, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 262145, "root": 2, "k": 1, "required": 1, "required_at": 186},
+    {"seed": 524289, "root": 2, "k": 1, "required": 1, "required_at": 186}
+  ],
+  "failure_rows": [
+
+  ]
+}

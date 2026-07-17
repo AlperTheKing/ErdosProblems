@@ -1,0 +1,50 @@
+{
+  "canonical_alpha": [
+    "30/31",
+    "30/31",
+    "30/31"
+  ],
+  "results": [
+    {
+      "certificate": {
+        "exact_at_most_one": false,
+        "lambda_denominator": "2817361685",
+        "lambda_float": 1.3192640567907772,
+        "lambda_numerator": "3716844006",
+        "max_action": 1,
+        "max_state": 544,
+        "potential": null,
+        "potential_sha256": "c27745a479440814638cf11f9732a840d080c468c2c3cc06384ed75854a8af70"
+      },
+      "distinct_actions": 9827,
+      "exact_action_checks": 56853,
+      "lp_lower": 1.3192640563264773,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "lp_upper": 1.3192640563265596,
+      "modulus": 4500,
+      "reachable_states": 2558
+    },
+    {
+      "certificate": {
+        "exact_at_most_one": false,
+        "lambda_denominator": "3100000000",
+        "lambda_float": 1.3086246222580644,
+        "lambda_numerator": "4056736329",
+        "max_action": 1,
+        "max_state": 7025,
+        "potential": null,
+        "potential_sha256": "529b2d2f98e5354c2fb6ce282af0e71630b5478b84236ecc36327302c2323902"
+      },
+      "distinct_actions": 48948,
+      "exact_action_checks": 56646,
+      "lp_lower": 1.3086246214751807,
+      "lp_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "lp_status": 0,
+      "lp_upper": 1.3086246214752633,
+      "modulus": 22500,
+      "reachable_states": 12744
+    }
+  ],
+  "script_sha256": "1f582e8b6f9115f8708def129a8c9f1866dc48cfc7983fe885e38df3b8a9a191"
+}

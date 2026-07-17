@@ -277,3 +277,543 @@ d(G0*G2) reachable ~ 0.27+ so far. Cauchy: Q >= P^2/E = X/kappa exactly.
 (1) HYPERBOLA PAIR (new primary candidate): prove P(X) >= c1 X AND E(X) <= C P(X)^2/X.
 (2) R-D growing blocks (M)+(E) — R3 in flight at GPT on exactly this.
 (3) R-E hole contraction (C13/C16 + groundedness) — Codex-led, would give d(G)=2/3 exactly.
+
+## C78 image-boundary checkpoint (2026-07-13)
+
+- The exact shell identity rewrites the C23 image inequality as: every
+  image-realizable blocker cut has at least as many healed nonhard roots as
+  unhealed hard roots.
+- Four stronger local mechanisms are false: immediate matching at `54`,
+  transitive local matching at `74`, direct banks at `186`, and rank-two
+  dominance at `362`.
+- The audit replays byte-identically under `python -O`.  A full image scan of
+  all `66` hard cutoffs through `1000` has no violation.  This is finite
+  evidence, not a uniform proof.
+- Report: `fanout/wave5/C78_image_boundary_audit.md`.
+
+## C88 tight-face backbone (2026-07-13)
+
+- At each tight cutoff `54,74,186,362`, all zero-slack image optimizers have
+  an identical full healed/unhealed shell pattern.
+- The source is not rigid: `13,21,47,89` source variables remain free.
+  Hence only the shell skeleton, not the source, is canonical in this finite
+  gate.
+- Exact Boolean fixing tests replay byte-identically.  Report:
+  `fanout/wave5/C88_tight_backbone.md`.
+
+## C89 grounded optimality obstruction (2026-07-13)
+
+- The strengthening that `G` minimizes image slack is false first at `704`:
+  the exact image optimum is `H-Q=-4`, while `G` has `-5`.
+- Through `5000`, the optimizer-grounded gap reaches `4`; C23 itself still
+  has no finite failure in this scan.
+- Report: `fanout/wave5/C89_grounded_optimality.md`.
+
+## C80-C82 global-reserve checkpoint (2026-07-13)
+
+- C80: blocker-local least-counterexample induction is false already at
+  `X=74`; hard roots `54,74` both reach only healed root `6`, while the
+  second required reserve is the unrelated root `18`.  This obstruction
+  also occurs in the canonical grounded prefix.  C23 itself remains tight.
+- C81: an exact CP-SAT gate plus solver-free replay proves the C23 image
+  inequality at every one of the `878` hard cutoffs through `10000`.
+  Equality occurs only at `54,74,114,186,204,362`; this is finite only.
+- C82: every C56/C79 dual has base-row load at least
+  `K_X >= floor((X-24)/30)`.  Exact minimum base loads at
+  `54,74,186,362,2000` are `1,3,13,35,310`.  Hence fixed-window,
+  append-only, or eventually frozen local dual recurrences are impossible;
+  a proof must update old coefficients globally with the cutoff.
+- Independent `python -O` replays reproduced all C80-C82 JSON outputs
+  byte-for-byte.  C79 acceptance assertions were replaced by explicit
+  exceptions; the hardened exact replay output is unchanged.
+
+## C83 arithmetic-feature obstruction (2026-07-13)
+
+- At `X=186`, the grounded image has six unhealed hard roots
+  `{54,74,114,144,174,186}` and six healed nonhard roots
+  `{6,18,20,32,38,66}`, so the C23 shell inequality itself is tight.
+- Under the full cut-independent local signature, roots `48` and `66` have
+  the same feature class, but only `66` is healed.  Therefore that class is
+  unusable by every sound static feature block.  The remaining five sound
+  singleton target classes have capacity `5` against hard demand `6`.
+- This is an exact real-valued Hall obstruction to the entire specified
+  feature-symmetric static-potential family.  It does not falsify C23 and
+  does not exclude root-specific or cut-adaptive global transport.
+- The original solver-free replay is byte-identical under `python -O`.
+  Independent standard-library verifier
+  `compute/wave5/C83_feature_potential_independent.py` reconstructs the
+  closure, image, ranks, classes, and deficit from definitions; canonical
+  result SHA-256 is `5B4C3616BE7A47031A2491F04F5DAE3F08C0C6CE98B1DDE1F89BF64E194594DE`.
+
+## C84 global flow-to-dual bridge (2026-07-13)
+
+- Every full integral C65 arithmetic flow gives an exact zero-objective C79
+  dual.  Descending grounding recursively revises all old closure-row
+  multipliers, so this bridge is compatible with C82's unbounded base load.
+- At `X=1710`, an exact 81-path packing yields a coefficientwise integer
+  dual with `alpha_5=269`.  Optimized replays verify the packing and dual;
+  the dual JSON is byte-identical with SHA-256 `67EE097E...`.
+- The canonical ambient-online shortest-path recursion is false at `1710`:
+  it stops at `80/81`.  This does not falsify full-flow existence because
+  the alternative 81-path packing is exact.
+- The live frontier is therefore a uniform max-flow/Hall theorem for the
+  arithmetic network, not a monotone greedy construction.
+
+## C86 valuation-separated product obstruction (2026-07-13)
+
+- The exact support maps `F_a(n)=a(n-1)` and `H_b(n)=b(2n-3)` give a valid
+  collision-free recurrence when channels occupy distinct output
+  2-adic valuations.
+- A probability-weight dual proves uniformly that every profile-free scheme
+  of this type has renewal capacity at most `23/45<1`.  The proof permits
+  infinitely many channels and arbitrary source-valuation assignments.
+- The finite `10^6` census has best exact inverse-slope load
+  `6388439/17054400` and image coverage `79079/239195`.
+- All acceptance `assert`s were replaced with explicit exceptions.  Normal
+  and optimized hardened outputs are byte-identical.  Thus a product route
+  must use richer profile information or controlled valuation overlap.
+
+## C87 root-specific Horn obstruction (2026-07-13)
+
+- A universal implication from hard root `h` to nonhard target `r` has an
+  exact solver-free characterization: `top(r)` must be grounded, and every
+  minimal pair-source `cl(G union {a,b})` generating `r` must support
+  `top(h)`.  Necessity uses those minimal sources; sufficiency uses closure
+  and image monotonicity.  Distinct inputs and cutoff locality are explicit.
+- At `X=2000`, the resulting graph has `83` hard roots, `207` targets, and
+  `6032` edges.  Its exact maximum matching is `82`; a Hall witness has
+  `80` hard roots and exactly `79` neighbors.
+- A second implementation enumerates rules by input pairs and computes
+  closure by a trigger worklist.  It reproduces all adjacency data and the
+  Hall witness.  Normal and optimized output SHA-256 is `7E1F5A6D...`;
+  canonical summary SHA-256 is `A8A7F975...`.
+- Therefore even cutoff-dependent, exact-root static universal transport is
+  insufficient.  This does not falsify C23; viable transport must adapt to
+  the source cut or use the global arithmetic flow of C84.
+
+## C85: capacitated root pooling; unit capacity is false
+
+For each fixed pair threshold `D`, every hard hole with at least `D+1`
+admissible factor pairs satisfies Hall after root `r` is given capacity
+
+`ceil(b_X(r)/(D+1))`, where
+`b_X(r)=sum_{p in C_X(r)} floor((X+1)/p)` over missing odd nodes on the
+seed-2 chain rooted at `r`.  The proof is an exact divisor-incidence count.
+Consequently every fixed finite set of roots traps only `o(X)` hard holes.
+
+Capacity one is false.  The first local collapse is `6140`, whose two
+admissible pairs expose missing endpoints `23` and `89` on the same root-12
+chain.  With at least six pairs per source, the first global Hall failure is
+at `X=4361928`: an exact set of 48 hard holes has complete neighborhood of
+47 roots.  Both integer augmenting-path computations replay byte-identically
+under normal Python and `python -O`; JSON SHA-256 values begin `0854516C`
+and `C612FF06`.  Thus C85 removes fixed-root traps but does not prove a
+coefficient below `4/3`.
+
+## C90: full arithmetic flow and C56/C79 are false
+
+The exact max-flow/min-cut characterization is proved: full flow at cutoff
+`X` is equivalent to `Q_X(U)>=|K_X cap U|` for every hole set `U` containing
+all structural splitless holes and closed under all generated-factor unary
+arcs.  In seed-chain coordinates this is `|T(U)|<=N(U)`.
+
+The statement first fails at `X=2064`.  A verified source side has 97 selected
+hard shapes and 96 seed exits; the corresponding network has demand 101 and
+an exact minimum cut of capacity 100.  The same Boolean set satisfies every
+C79 subadditivity row and has objective excess one, so the relaxed C56/C79
+inequality itself is false.  Normal and `python -O` replays are byte-identical
+(local log hashes `6202B289...` and `A45BB685...`).  This does not falsify the
+more structured one-step-image inequality or C91's common-bank reduction.
+
+## C91-C94 common-bank checkpoint (2026-07-13)
+
+- C91 proves conditionally that `A_H(X) <= c D(X)+o(X)` for any fixed
+  `c<4/3` implies the uniform cut contraction and hence generated-set density
+  `2/3`.
+- C93 independently scanned every event cutoff through `10^9`.  The exact
+  minimum positive ratio is `D/A_H=5/6` at `X=186`; there is no failure of
+  `6D>=5A_H`.  Two C++ runs are byte-identical, and an independent Python
+  reconstruction agrees through `10^6`.  This is finite evidence only.
+- C94 proves that because `0<=D(X)<=E(X)=o(X)`, every comparison
+  `D(X)>=alpha A_H(X)-o(X)` with fixed `alpha>0` is equivalent to
+  `A_H(X)=o(X)` and therefore to the full density theorem.  Thus the healed
+  bank is not an already-positive reservoir.
+- C92 found, with zero failures through `10^9`, the sharper exact candidates
+  `A_H(X)<=D(X)+A_H(floor(X/4))+1` and
+  `2D(X)>=7A_H(floor(X/4))`.  Together they imply
+  `A_H(X)<=(9/7)D(X)+1`, enough for C91.  Neither quarter inequality is
+  proved; they are the active arithmetic frontier.
+- C96 proves that either quarter inequality with an arbitrary `o(X)` error is
+  already equivalent to `A_H=o(X)`.  The canonical prime-square shadow cannot
+  prove the fourfold statement: `54` maps to splitless root `24`, whose chain
+  is unhealed through `216` and first heals only at `5889`.  Independent
+  normal/optimized verification is byte-identical (SHA-256 `5BDB8911...E08B6`).
+- C94's finalized analytic audit gives the exponent obstruction to the
+  existing C55+C85 combination: the structural-bank reciprocal mass is
+  `Omega(sqrt(log X))`, while C55's proved `omega_2` count only permits pair
+  thresholds `(log X)^c` for `c<(log 2)/2<1/2`.  A possible escape is a new
+  admissible-pair lower bound using all prime-power blocks, not only
+  `2 mod 3` prime factors; this is under exact audit and is not yet a theorem.
+
+## C92/C95/C97/C98 quarter-frontier audit (2026-07-13)
+
+- C92's optimized exact scan now reaches every cutoff through `4*10^9` with
+  no failure of `6D>=5A_H` or either quarter inequality.  The artifact SHA-256
+  is `3391E75C...47CCC80E`; an independent direct-factor replay through
+  `10^5` is byte-identical to the checked-in verifier output.  This remains
+  finite evidence only.
+- C95 proves the exact event identity
+  `D(X)+A_H(floor(X/4))-A_H(X)=D(X)+|Lost_X|-|Fresh_X|`.
+  The minimum through `10^9` is `-1`, first at `X=186`.  Factor-local Hall
+  already has deficit four there, and the infinite `11p-1` star rules out
+  unit charging to a source's own critical chain even with same-family
+  quarter tokens.
+- C97 broadens source ancestry to every missing-factor derivation leaf.  Its
+  first exact Hall failure is `X=114`: sources `54,74,114` see only healed
+  leaf `6`, while the scalar bank is `{6,18,20}`.  Thus the required payment
+  is genuinely nonlocal even after all derivation leaves are exposed.
+- C98 proves a nested-neighborhood Hall equivalence for the lower-quarter
+  inequality, with seven source slots and two healed-root slots.  This is an
+  exact reformulation, not a proof; support-local capacity fails at `54`,
+  every downward-only family fails at `174`, and the `Y=2064` instance uses
+  609 of 618 available slots.
+- C85 coverage warning: the structural splitless bank does not contain every
+  direct witness root.  The hard hole `534` has unique pair `535=5*107`; `5`
+  is generated, while `107` lies on the hard root-`54` seed chain.  Therefore
+  applying C85 Corollary 2 with only structural roots controls a proper
+  subset of hard holes, not `A_H` or all hard holes.
+
+## C99 all-prime sieve and residual-basin frontier (2026-07-13)
+
+- For a hard hole with `h+1=3^epsilon R`, C99 proves the exact formula for
+  residue-compatible factor pairs and the uniform lower bound
+  `d(h)>=2^(omega(R)-2)`, including squarefull minus-prime factors.
+- Hence, for every fixed `c<log 2`, the hard holes with
+  `d(h)<=(log X)^c` are `O_c(X/log log X)=o(X)`.
+- The structural splitless bank has reciprocal mass
+  `Theta(sqrt(log X))`, so the exponents overlap for
+  `1/2<c<log 2`.  This would close the sieve if high-pair hard holes were
+  structurally trapped.
+- That trapping is false.  The first direct failure is hard `534`, with
+  `535=5*107` and non-splitless witness root `54`.  At `X=10^6`, `c=0.6`,
+  151 high-pair hard holes have a non-splitless C85 witness root.
+- Naive recursive shadow descent loses one logarithmic power; its exponent
+  gap is `3/2-2 log 2=0.1137...`.  The remaining analytic target is an
+  aggregate reciprocal-mass bound for non-splitless witness-root basins,
+  not a pointwise structural-root capture lemma.
+- Report SHA-256 `43AB890A...CC0DC0AD`; verifier SHA-256
+  `B4BE979F...D2179BA6`.  Exact replay through `10^4` found zero formula or
+  lower-bound failures and reproduced the first trap failure at `534`.
+
+## C101 cross-type obstruction (2026-07-13)
+
+- Partitioning persistent hard roots and healed splitless roots by
+  `1_{3 divides r+1}` does not support a separate one-exception ballot.
+- The first failure is exact at `X=186`: the nondivisible type has margin
+  `-2`, the divisible type has margin `+1`, while the untyped quarter margin
+  is `-1` and the candidate upper-quarter inequality is tight.
+- Thus any proof of the untyped quarter gate must transfer capacity across
+  these arithmetic types.  Source-independent matching within each type is
+  already insufficient; this does not falsify the untyped inequality.
+- Normal and optimized exact replays through `10^5` are byte-identical,
+  SHA-256 `8B0E7363...A479A2C1`.
+
+## C102 scale-varying light decoder (2026-07-13)
+
+- C102 constructs explicit color-separated generated blocks `U_k,V_k` and
+  central cross-scale edge families of size
+  `N_K=sum_i |U_i||V_{K-i}|`, respecting distinct inputs.
+- If `N_K>=c0 Q^K` and a fixed fraction `eta` of its edges lie on products
+  of multiplicity at most a fixed `L`, then the retained products form an
+  explicit subset of `G` with lower density at least
+  `c0*eta/(972*L*Q)`.
+- The two gates are not proved.  Exact experiments retain
+  `60,512,829/60,512,841` edges at multiplicity at most two in the largest
+  `(3,2,1)` row.  This is finite evidence only.
+- This decoder is scale-varying and truncates the collision tail, so it is
+  not killed by fixed automata, one Cartesian window, or bounded full-energy
+  obstructions.  Its averaged support and truncated-collision gates are the
+  live affine frontier.
+
+## C103 zero-density obstruction audit (2026-07-13)
+
+- Licensed affine-spine derivation-tree counts are superlinear at explicit
+  cutoffs `X_m=9Q^m`: the ratio is at least
+  `(31/30)^(31m)/(9(31m+1)^2)`.
+- The direct root recurrence is supercritical for every exponent at most
+  one because `1/2+1/3+1/5=31/30>1`; the residue-envelope product table
+  already has size `2X/3+o(X)`.
+- Hence unquotiented tree counts, bounded-multiplicity encodings, plain
+  renewal, and residue-envelope multiplication cannot prove zero density.
+  A negative proof would need a global collision quotient or an independent
+  sparse-sequence sieve.
+- The independent exact verifier reproduces `A(10^8)=51,899,129`; normal
+  and optimized checks of the `10^5` probe and entropy certificate pass.
+
+## GPT-Pro R8: quarter inequality is history-sensitive (2026-07-13)
+
+- For the least closure seeded by `{2,3,66}`, the exact cutoff `X=186` has
+  six persistent hard roots, four healed structural roots, and no persistent
+  hard root through `floor(186/4)=46`; the quarter inequality fails by one.
+- For the actual closure seeded by `{2,3}`, the only difference relevant to
+  the count is that `66` is a structural hole whose chain enters at `131`.
+  This supplies the fifth bank event and makes the actual inequality tight.
+- Therefore closure, residues, the hard/splitless taxonomy, and the fact that
+  hard cofactors lie below the quarter scale do not formally imply the gate.
+  Any proof for the actual set must use global two-seed derivation history.
+- A separate exact normal/optimized verifier reconstructs the complete
+  three-seed prefix and all three counts; verifier SHA-256
+  `6F7A1FEB...F29DA`.
+
+## C104 reducible-root dyadic census (2026-07-13)
+
+- For threshold `D`, let `R_{X,D}` be the non-splitless witness-root union of
+  hard sources `h<=X` with `d(h)>=D+1`.  The exact eventwise scan found no
+  failure through `10^8`, for every `1<=D<=15`, of
+  `D*|{r in R_{X,D}:2^j<=r-1<2^(j+1)}|<=2^j`.
+- If this dyadic-bin inequality holds universally, then
+  `Sigma_D(X)<= (1+floor(log_2 X))/D`.  Taking
+  `D=floor((log X)^c)` with `1/2<c<log 2` supplies the missing C99
+  reciprocal-mass estimate and closes the positive-density proof.
+- The stronger `D^2` bin bound and a constant global reciprocal budget are
+  exactly false.  Thus C104-BIN, not either strengthening, is the current
+  residual-basin frontier.
+- An independent Python implementation through `300000` is byte-identical
+  under normal and optimized execution, SHA-256
+  `672157C5905B31FC79AA2E28CC014256EA03005F9B58D0AC1185CAE28C91C28C`;
+  all 11 manifest entries pass a separate hash audit.
+- A fixed-root diagnostic prevents treating C104-BIN as a routine packing
+  fact.  For root `54`, the maximum witnessed source pair count rises through
+  `1,2,3,6,8,9,12`, reaching `12` at source `7634274`; roots `62,68,534`
+  show similar growth.  Universal C104-BIN therefore requires a genuine
+  uniform bound on these staircases or a global packing mechanism.
+- A one-implementation exact extension to `X=10^9`, with thresholds through
+  `D=63`, still finds no C104-BIN failure and has maximum `d(h)=16`.
+  However the stronger integrated load
+  `sum_r(max_d(r)-1)<=2^j` reaches `119/128` in bin `j=7`, up from
+  `101/128` at `10^8`.  That tempting sufficient strengthening is therefore
+  near its finite capacity and is not accepted as a proof route.
+- The final one-implementation falsification pass at `X=4*10^9`, again with
+  thresholds through `D=63`, finds no C104-BIN failure.  The maximum source
+  pair count is `18`; its only threshold-18 source activates four roots in
+  bins `9,14,15`, not the saturated low bin.  The integrated-load maximum
+  remains `127/128`.  Endpoint extension is stopped; these rows are finite
+  evidence and have no theorem status.
+
+### Weaker sufficient dyadic tail
+
+- Full C104-BIN is stronger than the C99 sieve needs.  Suppose for some
+  constants `C` and `alpha>0` one has uniformly
+  `|R_{X,D} cap {2^j<=r-1<2^(j+1)}| <= C*2^j/D^alpha`.
+  Then summing `1/(r-1)` over dyadic bins gives
+  `Sigma_D(X) <= C(1+log_2 X)/D^alpha`.
+- C85 divides this mass by another factor `D`.  With
+  `D=floor((log X)^c)`, the residual term is
+  `O(log X/(log X)^(c(alpha+1)))`, hence `o(1)` whenever
+  `c(alpha+1)>1`.
+- C99 permits every fixed `c<log 2`.  Therefore any
+  `alpha>1/log(2)-1=0.442695...` closes the route.  In particular the
+  square-root tail `alpha=1/2` suffices by choosing
+  `2/3<c<log 2`.  This is the current weakened basin frontier.
+- The power tail need only hold for bins `j>=J(D)`, where `J(D)=o(D)`.
+  The unrestricted reciprocal mass of the first `J(D)` bins is at most
+  `O(J(D))`, so C85 makes their contribution `O(J(D)/D)=o(1)`.
+  Consequently unbounded witness loads at any fixed finite set of roots do
+  not obstruct the weakened route.
+
+## C106 affine-decoder collision normal form (2026-07-13)
+
+- C102's conditional decoder, distinct-input handling, scale bounds, and
+  density constant are correct.  Gate T remains unproved and unfalsified.
+- Every product collision has the unique coprime-swap form
+  `(u,u',v,v')=(ga,gb,bc,ac)`.  An exact cross-scale collision preserves all
+  `2,3,5`-adic factor valuations, so channel recovery by size or those
+  valuations is false.
+- At the first three-channel block `K=6`, exactly `307691821` of
+  `307692465` labelled edges have multiplicity at most two; the maximum is
+  four.  This is finite evidence.  Gate T is now the bounded-degree-mass
+  problem in the scale-annular coprime-swap graph.
+
+## C100 affine support obstructions (2026-07-13)
+
+- Gate A is not implied by the known finite data, the capacity bound, the
+  majority bound, and concatenation supermultiplicativity.  An exact scalar
+  continuation satisfies all of them while
+  `N_K/360^K <= 225(K+1)/(K+300)^2 -> 0`; a concrete rank-two
+  concatenation language has the same `O(1/K)` behavior.
+- The exact affine identity `T_322255=T_255232=600x-381` tensors into
+  `8^k` distinct canonical-type words in one fibre.  Since
+  `8*30^31>31^31`, this rigorously falsifies C29's uniform max-fibre
+  local-limit estimate at the required scale.
+- This does not falsify C102 Gate A after quotienting words by their affine
+  value.  It proves that Gate A needs a quotient-level rank-one/support
+  mechanism; word-level renewal and non-tensoring overlap assumptions are
+  insufficient.
+
+## C105 structural-pair fraction audit (2026-07-13)
+
+- The exact census through `4*10^9` contains `106360959` hard holes and has
+  maximum observed deficit `d(h)-s(h)=8` between allowed factor pairs and
+  structural factor-pair mass.
+- A rigorously parameterized `d=8,s=0` template recurs at finite points up
+  to `h=918066571382`.  This kills direct per-pair positivity and requires
+  any lower bound to retain an additive exceptional term.
+- The finite data support the possible target `s(h)>=d(h)-8`, but neither
+  that inequality nor a fixed positive fraction is proved.  C105 therefore
+  does not close the C99 basin step.
+- All 13 C105 manifest hashes pass an independent audit.  The independent
+  Python checker agrees at `10^6` normally and under `python -O`.
+
+## GPT-Pro R9 Gate-T dispersion lemma (2026-07-13)
+
+- For every product value `z`, the full labelled fibre injects into the
+  divisors of `z/(2^v2(z)3^v3(z))`.  Hence each fibre is subexponential
+  uniformly in the total scale.
+- The 60 distinct one-block offsets from permutations of `(2,2,2,3,3,5)`
+  concatenate injectively in base 360.  Consequently
+  `N_K >= (|I_K|/4)60^K`.
+- For every fixed `delta in (0,1)`, any at most
+  `60^((1-delta)K)` product values carry at most
+  `(4A_delta/|I_K|)60^(-delta K/2)` of the labelled edge mass.
+- This proves exponential dispersion of collisions and rules out bounded,
+  polynomial, or sub-`60^K` concentration mechanisms.  It does not prove
+  fixed-`L` Gate T: exponentially many medium fibres remain possible.
+- The finite 60-block and labelled-divisor kernels pass an independent exact
+  normal/optimized verifier, source SHA `C44A58C3...E773`, output SHA
+  `6645D34A...6B2E`.  Full audit: `fanout/wave5/R9_gateT_dispersion_audit.md`.
+
+## C107 seed-sensitive quarter correction (2026-07-13)
+
+- The literal arbitrary-nonempty-seed inequality is false at the smallest
+  possible cutoff: `S={2}, X=74` gives `A_H=2`, `D=0`, and
+  `A_H(floor(X/4))=0`, so its right side is one.
+- Under the intended hypothesis `{2,3} subset S`, the natural correction is
+  the number of occupied `U`-roots among the seeds.  The corrected statement
+  has no finite failure in C107's enumerated systems, but remains unproved.
+- The naive componentwise Euler induction is false: adding seed 668 lowers
+  the uncorrected margin by two at `X=8012` by simultaneously suppressing
+  roots 668 and 1002.
+- All eight recorded principal hashes and the normal/optimized independent
+  verification equality pass a local audit.  C107 changes the necessary
+  formulation but does not prove the actual two-seed upper-quarter gate.
+
+## C108/C110 moving-tail convergence (2026-07-13)
+
+- The square-root pointwise tail
+  `D*N_j(X,D)^2<=2^(2j)` for `j>=ceil(sqrt(D))` is sufficient for C99,
+  using any fixed `2/3<c<log 2`.  It has no exact failure through
+  `X=3*10^9`, with maximum tested ratio `275/4096`, but is unproved.
+- The strictly weaker sufficient frontier is the integrated Carleson bound
+  `sum_{j>=J(D)} N_j/2^j <= C(1+log_2 X)/sqrt(D)`, with
+  `J(D)=ceil(sqrt(D))`.  Equivalently for `C=1`, its squared exact gate is
+  `D*(sum N_j/2^j)^2 <= (1+floor(log_2 X))^2`.
+- C108 isolates a stronger nested Hall gate with capped weights
+  `min(ceil(sqrt(q_X(r))),j)`.  It has no deadline failure through `3*10^9`
+  and maximum token mass `43/128`, but no token injection is proved.
+- A direct source-local square-root argument is false at `h=1154`: it has
+  `d=4` but only one reducible witness root.  Therefore the proof must pool
+  structural and reducible roots or use global root-upgrade capacity.
+- Both C110 manifests pass independent hash audits (`25/25` and `16/16`),
+  and all nine C108 reported hashes pass.  Normal/optimized replays agree.
+
+## C111 divisor-moment anticlustering audit (2026-07-13)
+
+- For every `K>=2` and integers `q,T>=1`, the labelled edge tail obeys
+  `T^q M_K(T) <= 972|I_K|360^K J_K^(2(2^q-1))`.
+- After the exact `N_K >= |I_K|60^K/4` normalization, optimizing
+  `q=floor(log_2(K/(log K)^3))` makes the edge mass above
+  `exp((((log 2)(log 6))+epsilon)K/log K)` exponentially small.
+- This is stronger than the pointwise R9 divisor bound, but it leaves the
+  entire fixed-to-subexponential medium-fibre regime.  Fixed-`L` Gate T is
+  still open.
+- Independent normal/optimized Python outputs have SHA `867B732D...1FE7F`;
+  an independently rebuilt 32-thread C++ census is byte-identical with SHA
+  `D3A443E8...D0DC`.  Full audit: `fanout/wave5/C111_gateT_anticlustering_audit.md`.
+- The proposed bounded-suffix decoder is exactly false: 30 collision pairs
+  retain common six-letter suffixes on both factors.
+
+## C112 weakened structural-incidence frontier (2026-07-13)
+
+- If every high-pair hard source has at least `L` structural pairs, then
+  `H_high(X) <= (X+1)W_E(X)/L`; the proof counts distinct factor endpoints
+  and sums their seed-root geometric series.
+- Consequently any uniform `s(h)>=A d(h)^alpha-B` with
+  `alpha>1/(2 log 2)` closes C99.  In particular
+  `s(h)>=d(h)^(3/4)-8` is sufficient and strictly weaker than `d(h)-8`.
+- Neither power bound is proved.  Exact independent searches agree that all
+  39,229 prime lifts of the recurrent `d=8,s=0` base through prime `10^6`
+  are generated, so this direct multiplicative falsifier fails finitely.
+- Normal/optimized replay output SHA is `7A864A14...E1F1`.  Full audit:
+  `fanout/wave5/C112_structural_deficit_audit.md`.
+
+## C114 selected-square layer-cake frontier (2026-07-13)
+
+- The exact square-layer identity implies that, for
+  `m=floor((log X)^(c/2))` and `2/3<c<log 2`, the single condition
+  `B_m(X)=o(m^3)` suffices to make the C99 residual-root term `o(1)`.
+- This condition is strictly weaker than the integrated Carleson target but
+  remains unproved.  It is a sufficient frontier, not a density theorem.
+- Source-local charging is dead at the exact hard source `h=77317236`,
+  where `d=4,A=2,M=1` and therefore `AM<d-1`.
+- Independent normal/-O probes and layer-cake checks have SHAs
+  `EB4B0608...A9EC` and `51E9F90B...9A1A`; a rebuilt C++ scan through `10^9`
+  is byte-identical with SHA `D468AECD...F030`.  Full audit:
+  `fanout/wave5/C114_integrated_carleson_audit.md`.
+
+## C109 fixed-root growth audit (2026-07-13)
+
+- Root `54` reaches witnessed `d=16` at `h=1559219514`; root `62` reaches
+  `d=16` at `h=298274514`.  Thus fixed reducible roots carry substantially
+  more load than earlier scans showed.
+- A one-root C104-BIN violation in their bin requires `d>=34`; neither the
+  complete `4e9` prefix nor targeted 64-bit families reach it.
+- An independently rebuilt full bin scan through `4e9` is byte-identical,
+  with `106360959` hard sources and no C104-BIN failure.  The independently
+  rebuilt record scan agrees in every mathematical field (timings differ).
+- The 21-entry manifest and normal/-O record verifier pass.  C104-BIN and
+  fixed-root unboundedness both remain open.  Full audit:
+  `fanout/wave5/C109_fixed_root_growth_audit.md`.
+
+## C117 structural-power falsifier audit (2026-07-13)
+
+- Six sparse-template lanes made 192,500 declared evaluations and 186,819
+  exact recursive classifications.  They found eight hard survivors, no
+  counterexample to `(s+8)^4>=d^3`, maximum tested `d=128`, and largest
+  tested source `132131012341607575950114`.
+- Every one of 86,319 classified divisor-raising sources is generated.  All
+  hard survivors preserve the divisor shape under a prime-slot substitution;
+  the best `d=16` survivor has `s=9` and seven nonstructural blocker roots.
+- All six artifact hashes pass.  Independent normal/optimized replay and a
+  rebuilt manifest are byte-identical, with SHAs `0DB3E133...9CC1` and
+  `4FB5E1CF...1FCE`.  This is finite falsification evidence only; the C112
+  power antecedent remains open.  Full audit:
+  `fanout/wave5/C117_structural_power_falsifier_audit.md`.
+
+## C119 atomic coprime-swap obstruction (2026-07-13)
+
+- AO1 is false at `K=3`:
+  `2131353*8825=2144475*8771=18809190225`, with reduced swap factors
+  `8771=7^2*179` and `8825=5^2*353`.
+- The fibre has exactly those two representations, so the non-atomic swap
+  cannot be decomposed through a third atomic representation.  The complete
+  `K<=4` census contains 61,074,225 labelled edges and reproduces C111's
+  `K=4` multiplicity histogram.
+- Two C++ runs are byte-identical; independent Python normal/-O replays are
+  byte-identical.  Full audit:
+  `fanout/wave5/C119_fixed_L_gate_audit.md`.
+- This falsifies only atomic prime ownership.  Fixed-`L` Gate T remains open.
+
+## C121 pure-divisor structural relaxation (2026-07-13)
+
+- The closure-free relaxation `2*forced_both_structural>=d(h)-8` is false,
+  even after excluding the easy factor-3 shape.  Its first exact failure below
+  `10^6` is `h=237404`, with `d=12` and only one pair having structural roots
+  at both endpoints.
+- This value is generated (`237405=17*13965`) and therefore is not an actual
+  hard hole.  An explicit derivation tree is recorded in
+  `fanout/wave5/C121_pure_divisor_relaxation.md`.
+- Hence C116 cannot be reduced to a theorem about complementary divisors and
+  seed roots alone; a proof must use the absence of every generated factor
+  pair, i.e. two-seed derivation history.
+- The normal and optimized exact outputs are byte-identical, SHA-256
+  `BA233A0A...2C26F4`.

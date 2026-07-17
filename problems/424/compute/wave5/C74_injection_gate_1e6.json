@@ -1,0 +1,1226 @@
+{
+  "counts": {
+    "generated": 457599,
+    "hard": 45583,
+    "splitless": 108651
+  },
+  "grouped_kernel_probes": [
+    {
+      "X": 5000,
+      "core_one_demand": 155,
+      "divisibility_edges": 310,
+      "feasible": true,
+      "hard_count": 253,
+      "nontrivial_core_count": 23,
+      "nontrivial_core_demand": 98,
+      "nontrivial_core_flow": 98,
+      "upper_splitless_count": 335
+    },
+    {
+      "X": 10000,
+      "core_one_demand": 307,
+      "divisibility_edges": 682,
+      "feasible": true,
+      "hard_count": 518,
+      "nontrivial_core_count": 44,
+      "nontrivial_core_demand": 211,
+      "nontrivial_core_flow": 211,
+      "upper_splitless_count": 643
+    },
+    {
+      "X": 20000,
+      "core_one_demand": 608,
+      "divisibility_edges": 1447,
+      "feasible": true,
+      "hard_count": 1063,
+      "nontrivial_core_count": 77,
+      "nontrivial_core_demand": 455,
+      "nontrivial_core_flow": 455,
+      "upper_splitless_count": 1237
+    },
+    {
+      "X": 50000,
+      "core_one_demand": 1469,
+      "divisibility_edges": 3835,
+      "feasible": true,
+      "hard_count": 2625,
+      "nontrivial_core_count": 157,
+      "nontrivial_core_demand": 1156,
+      "nontrivial_core_flow": 1156,
+      "upper_splitless_count": 2966
+    },
+    {
+      "X": 100000,
+      "core_one_demand": 2833,
+      "divisibility_edges": 7954,
+      "feasible": true,
+      "hard_count": 5108,
+      "nontrivial_core_count": 264,
+      "nontrivial_core_demand": 2275,
+      "nontrivial_core_flow": 2275,
+      "upper_splitless_count": 5772
+    },
+    {
+      "X": 200000,
+      "core_one_demand": 5441,
+      "divisibility_edges": 16543,
+      "feasible": true,
+      "hard_count": 9937,
+      "nontrivial_core_count": 481,
+      "nontrivial_core_demand": 4496,
+      "nontrivial_core_flow": 4496,
+      "upper_splitless_count": 11223
+    },
+    {
+      "X": 500000,
+      "core_one_demand": 12808,
+      "divisibility_edges": 43280,
+      "feasible": true,
+      "hard_count": 23768,
+      "nontrivial_core_count": 1018,
+      "nontrivial_core_demand": 10960,
+      "nontrivial_core_flow": 10960,
+      "upper_splitless_count": 27095
+    },
+    {
+      "X": 1000000,
+      "core_one_demand": 24442,
+      "divisibility_edges": 89196,
+      "feasible": true,
+      "hard_count": 45583,
+      "nontrivial_core_count": 1767,
+      "nontrivial_core_demand": 21141,
+      "nontrivial_core_flow": 21141,
+      "upper_splitless_count": 52890
+    }
+  ],
+  "hall_failures": {
+    "factor_local_union": {
+      "X": 114,
+      "hall_adjacency": {
+        "114": [
+          90
+        ],
+        "54": [
+          90
+        ]
+      },
+      "hall_neighbor_count": 1,
+      "hall_neighbors": [
+        {
+          "e": 90,
+          "factorization": [
+            [
+              7,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "successor": 91
+        }
+      ],
+      "hall_source_count": 2,
+      "hall_sources": [
+        {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        },
+        {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              23,
+              1
+            ]
+          ],
+          "h": 114,
+          "p2_primes": [
+            5,
+            23
+          ],
+          "pairs": [
+            [
+              5,
+              23
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            8,
+            12
+          ],
+          "successor": 115
+        }
+      ],
+      "hard_count": 3,
+      "matching_size": 2,
+      "relation": "factor_local_union",
+      "upper_splitless": [
+        {
+          "e": 60,
+          "factorization": [
+            [
+              61,
+              1
+            ]
+          ],
+          "successor": 61
+        },
+        {
+          "e": 66,
+          "factorization": [
+            [
+              67,
+              1
+            ]
+          ],
+          "successor": 67
+        },
+        {
+          "e": 72,
+          "factorization": [
+            [
+              73,
+              1
+            ]
+          ],
+          "successor": 73
+        },
+        {
+          "e": 78,
+          "factorization": [
+            [
+              79,
+              1
+            ]
+          ],
+          "successor": 79
+        },
+        {
+          "e": 90,
+          "factorization": [
+            [
+              7,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "successor": 91
+        },
+        {
+          "e": 92,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              31,
+              1
+            ]
+          ],
+          "successor": 93
+        },
+        {
+          "e": 96,
+          "factorization": [
+            [
+              97,
+              1
+            ]
+          ],
+          "successor": 97
+        },
+        {
+          "e": 102,
+          "factorization": [
+            [
+              103,
+              1
+            ]
+          ],
+          "successor": 103
+        },
+        {
+          "e": 108,
+          "factorization": [
+            [
+              109,
+              1
+            ]
+          ],
+          "successor": 109
+        },
+        {
+          "e": 110,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              37,
+              1
+            ]
+          ],
+          "successor": 111
+        }
+      ],
+      "upper_splitless_count": 10
+    },
+    "full_prime_free_kernel_replacement": null,
+    "obstruction_leaf_multiple": {
+      "X": 74,
+      "hall_adjacency": {
+        "74": []
+      },
+      "hall_neighbor_count": 0,
+      "hall_neighbors": [],
+      "hall_source_count": 1,
+      "hall_sources": [
+        {
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "h": 74,
+          "p2_primes": [
+            5
+          ],
+          "pairs": [
+            [
+              5,
+              15
+            ]
+          ],
+          "prime_free_kernel": 3,
+          "rank": 2,
+          "shadow": [
+            8
+          ],
+          "successor": 75
+        }
+      ],
+      "hard_count": 2,
+      "matching_size": 1,
+      "relation": "obstruction_leaf_multiple",
+      "upper_splitless": [
+        {
+          "e": 38,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "successor": 39
+        },
+        {
+          "e": 42,
+          "factorization": [
+            [
+              43,
+              1
+            ]
+          ],
+          "successor": 43
+        },
+        {
+          "e": 48,
+          "factorization": [
+            [
+              7,
+              2
+            ]
+          ],
+          "successor": 49
+        },
+        {
+          "e": 56,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              19,
+              1
+            ]
+          ],
+          "successor": 57
+        },
+        {
+          "e": 60,
+          "factorization": [
+            [
+              61,
+              1
+            ]
+          ],
+          "successor": 61
+        },
+        {
+          "e": 66,
+          "factorization": [
+            [
+              67,
+              1
+            ]
+          ],
+          "successor": 67
+        },
+        {
+          "e": 72,
+          "factorization": [
+            [
+              73,
+              1
+            ]
+          ],
+          "successor": 73
+        }
+      ],
+      "upper_splitless_count": 7
+    },
+    "prime_free_kernel_multiple": {
+      "X": 54,
+      "hall_adjacency": {
+        "54": []
+      },
+      "hall_neighbor_count": 0,
+      "hall_neighbors": [],
+      "hall_source_count": 1,
+      "hall_sources": [
+        {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        }
+      ],
+      "hard_count": 1,
+      "matching_size": 0,
+      "relation": "prime_free_kernel_multiple",
+      "upper_splitless": [
+        {
+          "e": 30,
+          "factorization": [
+            [
+              31,
+              1
+            ]
+          ],
+          "successor": 31
+        },
+        {
+          "e": 36,
+          "factorization": [
+            [
+              37,
+              1
+            ]
+          ],
+          "successor": 37
+        },
+        {
+          "e": 38,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "successor": 39
+        },
+        {
+          "e": 42,
+          "factorization": [
+            [
+              43,
+              1
+            ]
+          ],
+          "successor": 43
+        },
+        {
+          "e": 48,
+          "factorization": [
+            [
+              7,
+              2
+            ]
+          ],
+          "successor": 49
+        }
+      ],
+      "upper_splitless_count": 5
+    },
+    "prime_square": {
+      "X": 54,
+      "hall_adjacency": {
+        "54": []
+      },
+      "hall_neighbor_count": 0,
+      "hall_neighbors": [],
+      "hall_source_count": 1,
+      "hall_sources": [
+        {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        }
+      ],
+      "hard_count": 1,
+      "matching_size": 0,
+      "relation": "prime_square",
+      "upper_splitless": [
+        {
+          "e": 30,
+          "factorization": [
+            [
+              31,
+              1
+            ]
+          ],
+          "successor": 31
+        },
+        {
+          "e": 36,
+          "factorization": [
+            [
+              37,
+              1
+            ]
+          ],
+          "successor": 37
+        },
+        {
+          "e": 38,
+          "factorization": [
+            [
+              3,
+              1
+            ],
+            [
+              13,
+              1
+            ]
+          ],
+          "successor": 39
+        },
+        {
+          "e": 42,
+          "factorization": [
+            [
+              43,
+              1
+            ]
+          ],
+          "successor": 43
+        },
+        {
+          "e": 48,
+          "factorization": [
+            [
+              7,
+              2
+            ]
+          ],
+          "successor": 49
+        }
+      ],
+      "upper_splitless_count": 5
+    }
+  },
+  "hall_target_count": 298,
+  "map_audits": {
+    "least_p2_prime_square": {
+      "distinct_targets": 6,
+      "first_collision": {
+        "X": 74,
+        "sources": [
+          {
+            "factorization": [
+              [
+                5,
+                1
+              ],
+              [
+                11,
+                1
+              ]
+            ],
+            "h": 54,
+            "p2_primes": [
+              5,
+              11
+            ],
+            "pairs": [
+              [
+                5,
+                11
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 2,
+            "shadow": [
+              6
+            ],
+            "successor": 55
+          },
+          {
+            "factorization": [
+              [
+                3,
+                1
+              ],
+              [
+                5,
+                2
+              ]
+            ],
+            "h": 74,
+            "p2_primes": [
+              5
+            ],
+            "pairs": [
+              [
+                5,
+                15
+              ]
+            ],
+            "prime_free_kernel": 3,
+            "rank": 2,
+            "shadow": [
+              8
+            ],
+            "successor": 75
+          }
+        ],
+        "target": {
+          "e": 24,
+          "factorization": [
+            [
+              5,
+              2
+            ]
+          ],
+          "successor": 25
+        }
+      },
+      "first_fixed_map_expiry": {
+        "X": 240,
+        "check": "120 <= floor(240/2)",
+        "expired_target": {
+          "e": 120,
+          "factorization": [
+            [
+              11,
+              2
+            ]
+          ],
+          "successor": 121
+        },
+        "source": {
+          "factorization": [
+            [
+              11,
+              1
+            ],
+            [
+              17,
+              1
+            ]
+          ],
+          "h": 186,
+          "p2_primes": [
+            11,
+            17
+          ],
+          "pairs": [
+            [
+              11,
+              17
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 187
+        }
+      },
+      "first_invalid_target": null,
+      "first_outside_source_upper_half": {
+        "X": 54,
+        "source": {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        },
+        "target": {
+          "e": 24,
+          "factorization": [
+            [
+              5,
+              2
+            ]
+          ],
+          "successor": 25
+        }
+      },
+      "map": "least_p2_prime_square",
+      "mapped_hard_holes": 97
+    },
+    "paired_lower_p2_free": {
+      "distinct_targets": 81,
+      "first_collision": {
+        "X": 450,
+        "sources": [
+          {
+            "factorization": [
+              [
+                5,
+                1
+              ],
+              [
+                89,
+                1
+              ]
+            ],
+            "h": 444,
+            "p2_primes": [
+              5,
+              89
+            ],
+            "pairs": [
+              [
+                5,
+                89
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 4,
+            "shadow": [
+              6,
+              8,
+              12,
+              18,
+              30
+            ],
+            "successor": 445
+          },
+          {
+            "factorization": [
+              [
+                11,
+                1
+              ],
+              [
+                41,
+                1
+              ]
+            ],
+            "h": 450,
+            "p2_primes": [
+              11,
+              41
+            ],
+            "pairs": [
+              [
+                11,
+                41
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 2,
+            "shadow": [
+              6
+            ],
+            "successor": 451
+          }
+        ],
+        "target": {
+          "e": 438,
+          "factorization": [
+            [
+              439,
+              1
+            ]
+          ],
+          "successor": 439
+        }
+      },
+      "first_fixed_map_expiry": {
+        "X": 96,
+        "check": "48 <= floor(96/2)",
+        "expired_target": {
+          "e": 48,
+          "factorization": [
+            [
+              7,
+              2
+            ]
+          ],
+          "successor": 49
+        },
+        "source": {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        }
+      },
+      "first_invalid_target": null,
+      "first_outside_source_upper_half": null,
+      "map": "paired_lower_p2_free",
+      "mapped_hard_holes": 97
+    },
+    "paired_lower_prime_1mod3": {
+      "distinct_targets": 81,
+      "first_collision": {
+        "X": 450,
+        "sources": [
+          {
+            "factorization": [
+              [
+                5,
+                1
+              ],
+              [
+                89,
+                1
+              ]
+            ],
+            "h": 444,
+            "p2_primes": [
+              5,
+              89
+            ],
+            "pairs": [
+              [
+                5,
+                89
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 4,
+            "shadow": [
+              6,
+              8,
+              12,
+              18,
+              30
+            ],
+            "successor": 445
+          },
+          {
+            "factorization": [
+              [
+                11,
+                1
+              ],
+              [
+                41,
+                1
+              ]
+            ],
+            "h": 450,
+            "p2_primes": [
+              11,
+              41
+            ],
+            "pairs": [
+              [
+                11,
+                41
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 2,
+            "shadow": [
+              6
+            ],
+            "successor": 451
+          }
+        ],
+        "target": {
+          "e": 438,
+          "factorization": [
+            [
+              439,
+              1
+            ]
+          ],
+          "successor": 439
+        }
+      },
+      "first_fixed_map_expiry": {
+        "X": 84,
+        "check": "42 <= floor(84/2)",
+        "expired_target": {
+          "e": 42,
+          "factorization": [
+            [
+              43,
+              1
+            ]
+          ],
+          "successor": 43
+        },
+        "source": {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        }
+      },
+      "first_invalid_target": null,
+      "first_outside_source_upper_half": null,
+      "map": "paired_lower_prime_1mod3",
+      "mapped_hard_holes": 97
+    },
+    "whole_p2_part_lower_p2_free": {
+      "distinct_targets": 83,
+      "first_collision": {
+        "X": 450,
+        "sources": [
+          {
+            "factorization": [
+              [
+                5,
+                1
+              ],
+              [
+                89,
+                1
+              ]
+            ],
+            "h": 444,
+            "p2_primes": [
+              5,
+              89
+            ],
+            "pairs": [
+              [
+                5,
+                89
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 4,
+            "shadow": [
+              6,
+              8,
+              12,
+              18,
+              30
+            ],
+            "successor": 445
+          },
+          {
+            "factorization": [
+              [
+                11,
+                1
+              ],
+              [
+                41,
+                1
+              ]
+            ],
+            "h": 450,
+            "p2_primes": [
+              11,
+              41
+            ],
+            "pairs": [
+              [
+                11,
+                41
+              ]
+            ],
+            "prime_free_kernel": 1,
+            "rank": 2,
+            "shadow": [
+              6
+            ],
+            "successor": 451
+          }
+        ],
+        "target": {
+          "e": 438,
+          "factorization": [
+            [
+              439,
+              1
+            ]
+          ],
+          "successor": 439
+        }
+      },
+      "first_fixed_map_expiry": {
+        "X": 96,
+        "check": "48 <= floor(96/2)",
+        "expired_target": {
+          "e": 48,
+          "factorization": [
+            [
+              7,
+              2
+            ]
+          ],
+          "successor": 49
+        },
+        "source": {
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ]
+          ],
+          "h": 54,
+          "p2_primes": [
+            5,
+            11
+          ],
+          "pairs": [
+            [
+              5,
+              11
+            ]
+          ],
+          "prime_free_kernel": 1,
+          "rank": 2,
+          "shadow": [
+            6
+          ],
+          "successor": 55
+        }
+      },
+      "first_invalid_target": null,
+      "first_outside_source_upper_half": null,
+      "map": "whole_p2_part_lower_p2_free",
+      "mapped_hard_holes": 97
+    }
+  },
+  "parameters": {
+    "hall_limit": 2000,
+    "limit": 1000000
+  },
+  "payload_sha256_before_hash_field": "f7a88d21dbc340c50f6d3bb50b8f31ecf66101738dabbe8dee4a2c23605c6ebd",
+  "predicate_audits": {
+    "hard_characterization_failures": [],
+    "splitless_characterization_failures": [],
+    "square_target_lemma_failures": []
+  },
+  "scalar_inequality": {
+    "checked_cutoffs": 999999,
+    "endpoint": {
+      "K": 45583,
+      "X": 1000000,
+      "e_plus": 52890
+    },
+    "first_failure": null,
+    "maximum_ratio": {
+      "K": 8846,
+      "X": 175956,
+      "e_plus": 9907
+    },
+    "minimum_slack": {
+      "X": 2,
+      "value": 0
+    }
+  },
+  "semigroup_count_audit": {
+    "checked_Y": 1000000,
+    "endpoint": {
+      "Y": 1000000,
+      "pure_1mod3_in_upper_half": 39264,
+      "pure_2mod3_even_omega_through_Y": 41762
+    },
+    "first_failure": {
+      "Y": 26989,
+      "excess": 1,
+      "pure_1mod3_in_upper_half": 1214,
+      "pure_2mod3_even_omega_through_Y": 1215
+    },
+    "maximum_excess": {
+      "Y": 995569,
+      "left": 41600,
+      "right": 39091,
+      "value": 2509
+    }
+  }
+}

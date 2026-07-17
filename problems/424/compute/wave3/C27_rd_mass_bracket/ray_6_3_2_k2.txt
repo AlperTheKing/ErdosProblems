@@ -1,0 +1,4 @@
+ray (6,3,2) bool-only, k=1..2, final M=1866240000
+  k=1: M=43200  D=4359  D/M=0.100903  sqrt(n)*D/M=0.3347
+  k=2: M=1866240000  D=108277936  D/M=0.058019  sqrt(n)*D/M=0.2721
+script SHA-256: ba85e7a0c15ed27275033ef52ce656c55bede1a7bb5bee7a9870237da19adc9a

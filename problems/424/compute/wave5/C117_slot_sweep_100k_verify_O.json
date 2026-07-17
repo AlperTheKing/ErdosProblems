@@ -1,0 +1,211 @@
+{
+  "cache": {
+    "pair_entries": 1189,
+    "state_entries": 1191
+  },
+  "claim_schema": "C117-structural-power-falsifier-v1",
+  "extremal_table_checks": [
+    {
+      "N": 4751710743,
+      "d": 8,
+      "record_matches": true,
+      "record_present": true
+    },
+    {
+      "N": 158020616215,
+      "d": 16,
+      "record_matches": true,
+      "record_present": true
+    }
+  ],
+  "falsifier_accounting": true,
+  "independence": {
+    "imports_search_implementation": false,
+    "recursive_closure": true,
+    "seed_root": "iterative (p+1)/2",
+    "source_divisors": "sympy.divisors",
+    "source_factorization": "sympy.factorint"
+  },
+  "record_replays": [
+    {
+      "N": 4751710743,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 8,
+      "h": 4751710742,
+      "s": 0,
+      "shape": "3R",
+      "status": "PASS"
+    },
+    {
+      "N": 9963927363,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 8,
+      "h": 9963927362,
+      "s": 0,
+      "shape": "3R",
+      "status": "PASS"
+    },
+    {
+      "N": 11140879503,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 8,
+      "h": 11140879502,
+      "s": 0,
+      "shape": "3R",
+      "status": "PASS"
+    },
+    {
+      "N": 36193146483,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 8,
+      "h": 36193146482,
+      "s": 0,
+      "shape": "3R",
+      "status": "PASS"
+    },
+    {
+      "N": 158020616215,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 16,
+      "h": 158020616214,
+      "s": 9,
+      "shape": "R",
+      "status": "PASS"
+    },
+    {
+      "N": 64666710955,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 16,
+      "h": 64666710954,
+      "s": 11,
+      "shape": "R",
+      "status": "PASS"
+    },
+    {
+      "N": 23561762455,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 16,
+      "h": 23561762454,
+      "s": 12,
+      "shape": "R",
+      "status": "PASS"
+    },
+    {
+      "N": 4762919811,
+      "checks": {
+        "all_pairs_distinct_allowed": true,
+        "all_pairs_multiply": true,
+        "d": true,
+        "deficit": true,
+        "endpoints_and_roots": true,
+        "factor_product": true,
+        "factorization": true,
+        "hardness": true,
+        "s": true,
+        "shape": true,
+        "target_3_4": true,
+        "taxonomy": true
+      },
+      "d": 8,
+      "h": 4762919810,
+      "s": 2,
+      "shape": "3R",
+      "status": "PASS"
+    }
+  ],
+  "records_replayed": 8,
+  "schema": "C117-structural-power-verify-v1",
+  "status": "PASS",
+  "verification_records_digest_matches": true
+}

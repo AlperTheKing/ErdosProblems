@@ -1,0 +1,3403 @@
+{
+  "schema_version": 1,
+  "stop": 2000,
+  "tested": 147,
+  "all_pass": true,
+  "first_failure": null,
+  "results": [
+    {
+      "limit": 54,
+      "lp_minimum": 1,
+      "boundary_count": 7,
+      "lower_gate_count": 4,
+      "upper_gate_count": 1,
+      "dropped_nonzero_row_count": 0,
+      "clean_dual_objective": 1,
+      "required": 1,
+      "passes": true,
+      "bound_count": 27,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 74,
+      "lp_minimum": 2,
+      "boundary_count": 10,
+      "lower_gate_count": 6,
+      "upper_gate_count": 1,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 2,
+      "required": 2,
+      "passes": true,
+      "bound_count": 34,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 84,
+      "lp_minimum": 4,
+      "boundary_count": 13,
+      "lower_gate_count": 8,
+      "upper_gate_count": 1,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 4,
+      "required": 3,
+      "passes": true,
+      "bound_count": 40,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 114,
+      "lp_minimum": 4,
+      "boundary_count": 15,
+      "lower_gate_count": 10,
+      "upper_gate_count": 2,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 4,
+      "required": 4,
+      "passes": true,
+      "bound_count": 53,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 144,
+      "lp_minimum": 6,
+      "boundary_count": 19,
+      "lower_gate_count": 14,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 6,
+      "required": 5,
+      "passes": true,
+      "bound_count": 66,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 164,
+      "lp_minimum": 8,
+      "boundary_count": 21,
+      "lower_gate_count": 15,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 0,
+      "clean_dual_objective": 8,
+      "required": 6,
+      "passes": true,
+      "bound_count": 73,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 174,
+      "lp_minimum": 8,
+      "boundary_count": 21,
+      "lower_gate_count": 16,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 8,
+      "required": 7,
+      "passes": true,
+      "bound_count": 78,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 186,
+      "lp_minimum": 8,
+      "boundary_count": 24,
+      "lower_gate_count": 16,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 8,
+      "required": 8,
+      "passes": true,
+      "bound_count": 84,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 204,
+      "lp_minimum": 9,
+      "boundary_count": 26,
+      "lower_gate_count": 17,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 9,
+      "required": 9,
+      "passes": true,
+      "bound_count": 93,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 234,
+      "lp_minimum": 11,
+      "boundary_count": 30,
+      "lower_gate_count": 20,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 11,
+      "required": 10,
+      "passes": true,
+      "bound_count": 102,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 252,
+      "lp_minimum": 14,
+      "boundary_count": 33,
+      "lower_gate_count": 23,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 14,
+      "required": 11,
+      "passes": true,
+      "bound_count": 109,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 254,
+      "lp_minimum": 15,
+      "boundary_count": 33,
+      "lower_gate_count": 24,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 15,
+      "required": 12,
+      "passes": true,
+      "bound_count": 110,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 264,
+      "lp_minimum": 16,
+      "boundary_count": 35,
+      "lower_gate_count": 25,
+      "upper_gate_count": 3,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 16,
+      "required": 13,
+      "passes": true,
+      "bound_count": 117,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 294,
+      "lp_minimum": 17,
+      "boundary_count": 38,
+      "lower_gate_count": 26,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 1,
+      "clean_dual_objective": 17,
+      "required": 14,
+      "passes": true,
+      "bound_count": 129,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 318,
+      "lp_minimum": 17,
+      "boundary_count": 39,
+      "lower_gate_count": 27,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 17,
+      "required": 15,
+      "passes": true,
+      "bound_count": 141,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 324,
+      "lp_minimum": 18,
+      "boundary_count": 40,
+      "lower_gate_count": 28,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 18,
+      "required": 16,
+      "passes": true,
+      "bound_count": 145,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 344,
+      "lp_minimum": 19,
+      "boundary_count": 41,
+      "lower_gate_count": 29,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 19,
+      "required": 17,
+      "passes": true,
+      "bound_count": 153,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 354,
+      "lp_minimum": 19,
+      "boundary_count": 42,
+      "lower_gate_count": 29,
+      "upper_gate_count": 5,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 19,
+      "required": 18,
+      "passes": true,
+      "bound_count": 157,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 362,
+      "lp_minimum": 19,
+      "boundary_count": 43,
+      "lower_gate_count": 30,
+      "upper_gate_count": 5,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 19,
+      "required": 19,
+      "passes": true,
+      "bound_count": 161,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 384,
+      "lp_minimum": 23,
+      "boundary_count": 48,
+      "lower_gate_count": 34,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 23,
+      "required": 20,
+      "passes": true,
+      "bound_count": 168,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 390,
+      "lp_minimum": 23,
+      "boundary_count": 48,
+      "lower_gate_count": 35,
+      "upper_gate_count": 4,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 23,
+      "required": 21,
+      "passes": true,
+      "bound_count": 170,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 414,
+      "lp_minimum": 25,
+      "boundary_count": 50,
+      "lower_gate_count": 38,
+      "upper_gate_count": 5,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 25,
+      "required": 22,
+      "passes": true,
+      "bound_count": 179,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 434,
+      "lp_minimum": 27,
+      "boundary_count": 52,
+      "lower_gate_count": 40,
+      "upper_gate_count": 5,
+      "dropped_nonzero_row_count": 2,
+      "clean_dual_objective": 27,
+      "required": 23,
+      "passes": true,
+      "bound_count": 187,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 444,
+      "lp_minimum": 28,
+      "boundary_count": 56,
+      "lower_gate_count": 42,
+      "upper_gate_count": 6,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 28,
+      "required": 24,
+      "passes": true,
+      "bound_count": 191,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 450,
+      "lp_minimum": 29,
+      "boundary_count": 59,
+      "lower_gate_count": 44,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 29,
+      "required": 25,
+      "passes": true,
+      "bound_count": 189,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 474,
+      "lp_minimum": 31,
+      "boundary_count": 63,
+      "lower_gate_count": 47,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 4,
+      "clean_dual_objective": 31,
+      "required": 26,
+      "passes": true,
+      "bound_count": 196,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 492,
+      "lp_minimum": 33,
+      "boundary_count": 68,
+      "lower_gate_count": 51,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 4,
+      "clean_dual_objective": 33,
+      "required": 27,
+      "passes": true,
+      "bound_count": 201,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 504,
+      "lp_minimum": 34,
+      "boundary_count": 68,
+      "lower_gate_count": 52,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 4,
+      "clean_dual_objective": 34,
+      "required": 28,
+      "passes": true,
+      "bound_count": 206,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 516,
+      "lp_minimum": 34,
+      "boundary_count": 69,
+      "lower_gate_count": 52,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 34,
+      "required": 29,
+      "passes": true,
+      "bound_count": 212,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 524,
+      "lp_minimum": 35,
+      "boundary_count": 69,
+      "lower_gate_count": 53,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 35,
+      "required": 30,
+      "passes": true,
+      "bound_count": 215,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 534,
+      "lp_minimum": 35,
+      "boundary_count": 69,
+      "lower_gate_count": 54,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 35,
+      "required": 31,
+      "passes": true,
+      "bound_count": 220,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 560,
+      "lp_minimum": 36,
+      "boundary_count": 72,
+      "lower_gate_count": 55,
+      "upper_gate_count": 11,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 36,
+      "required": 32,
+      "passes": true,
+      "bound_count": 231,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 564,
+      "lp_minimum": 36,
+      "boundary_count": 71,
+      "lower_gate_count": 56,
+      "upper_gate_count": 11,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 36,
+      "required": 33,
+      "passes": true,
+      "bound_count": 236,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 582,
+      "lp_minimum": 38,
+      "boundary_count": 74,
+      "lower_gate_count": 61,
+      "upper_gate_count": 12,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 38,
+      "required": 34,
+      "passes": true,
+      "bound_count": 241,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 594,
+      "lp_minimum": 38,
+      "boundary_count": 74,
+      "lower_gate_count": 60,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 38,
+      "required": 35,
+      "passes": true,
+      "bound_count": 247,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 614,
+      "lp_minimum": 39,
+      "boundary_count": 74,
+      "lower_gate_count": 62,
+      "upper_gate_count": 11,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 39,
+      "required": 36,
+      "passes": true,
+      "bound_count": 256,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 624,
+      "lp_minimum": 42,
+      "boundary_count": 78,
+      "lower_gate_count": 64,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 3,
+      "clean_dual_objective": 42,
+      "required": 37,
+      "passes": true,
+      "bound_count": 261,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 648,
+      "lp_minimum": 42,
+      "boundary_count": 78,
+      "lower_gate_count": 64,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 4,
+      "clean_dual_objective": 42,
+      "required": 38,
+      "passes": true,
+      "bound_count": 270,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 654,
+      "lp_minimum": 43,
+      "boundary_count": 79,
+      "lower_gate_count": 65,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 5,
+      "clean_dual_objective": 43,
+      "required": 39,
+      "passes": true,
+      "bound_count": 274,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 666,
+      "lp_minimum": 43,
+      "boundary_count": 80,
+      "lower_gate_count": 65,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 43,
+      "required": 40,
+      "passes": true,
+      "bound_count": 280,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 684,
+      "lp_minimum": 45,
+      "boundary_count": 83,
+      "lower_gate_count": 68,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 45,
+      "required": 41,
+      "passes": true,
+      "bound_count": 287,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 696,
+      "lp_minimum": 46,
+      "boundary_count": 84,
+      "lower_gate_count": 68,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 46,
+      "required": 42,
+      "passes": true,
+      "bound_count": 293,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 704,
+      "lp_minimum": 47,
+      "boundary_count": 88,
+      "lower_gate_count": 71,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 47,
+      "required": 43,
+      "passes": true,
+      "bound_count": 291,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 714,
+      "lp_minimum": 48,
+      "boundary_count": 90,
+      "lower_gate_count": 71,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 48,
+      "required": 44,
+      "passes": true,
+      "bound_count": 294,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 744,
+      "lp_minimum": 51,
+      "boundary_count": 95,
+      "lower_gate_count": 73,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 51,
+      "required": 45,
+      "passes": true,
+      "bound_count": 305,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 758,
+      "lp_minimum": 52,
+      "boundary_count": 96,
+      "lower_gate_count": 74,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 6,
+      "clean_dual_objective": 52,
+      "required": 46,
+      "passes": true,
+      "bound_count": 310,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 774,
+      "lp_minimum": 54,
+      "boundary_count": 100,
+      "lower_gate_count": 76,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 7,
+      "clean_dual_objective": 54,
+      "required": 47,
+      "passes": true,
+      "bound_count": 315,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 780,
+      "lp_minimum": 55,
+      "boundary_count": 100,
+      "lower_gate_count": 77,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 55,
+      "required": 48,
+      "passes": true,
+      "bound_count": 318,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 794,
+      "lp_minimum": 57,
+      "boundary_count": 101,
+      "lower_gate_count": 79,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 57,
+      "required": 49,
+      "passes": true,
+      "bound_count": 324,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 798,
+      "lp_minimum": 57,
+      "boundary_count": 103,
+      "lower_gate_count": 79,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 57,
+      "required": 50,
+      "passes": true,
+      "bound_count": 327,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 804,
+      "lp_minimum": 58,
+      "boundary_count": 103,
+      "lower_gate_count": 81,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 58,
+      "required": 51,
+      "passes": true,
+      "bound_count": 331,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 834,
+      "lp_minimum": 59,
+      "boundary_count": 105,
+      "lower_gate_count": 83,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 59,
+      "required": 52,
+      "passes": true,
+      "bound_count": 343,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 846,
+      "lp_minimum": 59,
+      "boundary_count": 107,
+      "lower_gate_count": 82,
+      "upper_gate_count": 7,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 59,
+      "required": 53,
+      "passes": true,
+      "bound_count": 349,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 864,
+      "lp_minimum": 62,
+      "boundary_count": 112,
+      "lower_gate_count": 87,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 62,
+      "required": 54,
+      "passes": true,
+      "bound_count": 351,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 866,
+      "lp_minimum": 63,
+      "boundary_count": 112,
+      "lower_gate_count": 88,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 63,
+      "required": 55,
+      "passes": true,
+      "bound_count": 351,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 884,
+      "lp_minimum": 63,
+      "boundary_count": 113,
+      "lower_gate_count": 88,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 7,
+      "clean_dual_objective": 63,
+      "required": 56,
+      "passes": true,
+      "bound_count": 359,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 894,
+      "lp_minimum": 64,
+      "boundary_count": 114,
+      "lower_gate_count": 87,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 7,
+      "clean_dual_objective": 64,
+      "required": 57,
+      "passes": true,
+      "bound_count": 365,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 900,
+      "lp_minimum": 65,
+      "boundary_count": 113,
+      "lower_gate_count": 90,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 7,
+      "clean_dual_objective": 65,
+      "required": 58,
+      "passes": true,
+      "bound_count": 366,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 912,
+      "lp_minimum": 66,
+      "boundary_count": 118,
+      "lower_gate_count": 89,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 66,
+      "required": 59,
+      "passes": true,
+      "bound_count": 371,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 924,
+      "lp_minimum": 66,
+      "boundary_count": 119,
+      "lower_gate_count": 90,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 9,
+      "clean_dual_objective": 66,
+      "required": 60,
+      "passes": true,
+      "bound_count": 377,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 942,
+      "lp_minimum": 67,
+      "boundary_count": 122,
+      "lower_gate_count": 92,
+      "upper_gate_count": 8,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 67,
+      "required": 61,
+      "passes": true,
+      "bound_count": 385,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 954,
+      "lp_minimum": 67,
+      "boundary_count": 122,
+      "lower_gate_count": 92,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 67,
+      "required": 62,
+      "passes": true,
+      "bound_count": 391,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 956,
+      "lp_minimum": 67,
+      "boundary_count": 121,
+      "lower_gate_count": 93,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 67,
+      "required": 63,
+      "passes": true,
+      "bound_count": 392,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 974,
+      "lp_minimum": 69,
+      "boundary_count": 123,
+      "lower_gate_count": 95,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 8,
+      "clean_dual_objective": 69,
+      "required": 64,
+      "passes": true,
+      "bound_count": 401,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 978,
+      "lp_minimum": 69,
+      "boundary_count": 124,
+      "lower_gate_count": 96,
+      "upper_gate_count": 11,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 69,
+      "required": 65,
+      "passes": true,
+      "bound_count": 404,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 984,
+      "lp_minimum": 70,
+      "boundary_count": 124,
+      "lower_gate_count": 96,
+      "upper_gate_count": 9,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 70,
+      "required": 66,
+      "passes": true,
+      "bound_count": 408,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1002,
+      "lp_minimum": 70,
+      "boundary_count": 124,
+      "lower_gate_count": 98,
+      "upper_gate_count": 12,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 70,
+      "required": 67,
+      "passes": true,
+      "bound_count": 416,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1014,
+      "lp_minimum": 70,
+      "boundary_count": 125,
+      "lower_gate_count": 98,
+      "upper_gate_count": 12,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 70,
+      "required": 68,
+      "passes": true,
+      "bound_count": 422,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1044,
+      "lp_minimum": 74,
+      "boundary_count": 129,
+      "lower_gate_count": 101,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 9,
+      "clean_dual_objective": 74,
+      "required": 69,
+      "passes": true,
+      "bound_count": 432,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1064,
+      "lp_minimum": 74,
+      "boundary_count": 130,
+      "lower_gate_count": 101,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 9,
+      "clean_dual_objective": 74,
+      "required": 70,
+      "passes": true,
+      "bound_count": 440,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1074,
+      "lp_minimum": 74,
+      "boundary_count": 130,
+      "lower_gate_count": 102,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 74,
+      "required": 71,
+      "passes": true,
+      "bound_count": 445,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1080,
+      "lp_minimum": 75,
+      "boundary_count": 132,
+      "lower_gate_count": 103,
+      "upper_gate_count": 10,
+      "dropped_nonzero_row_count": 11,
+      "clean_dual_objective": 75,
+      "required": 72,
+      "passes": true,
+      "bound_count": 447,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1104,
+      "lp_minimum": 78,
+      "boundary_count": 137,
+      "lower_gate_count": 107,
+      "upper_gate_count": 11,
+      "dropped_nonzero_row_count": 11,
+      "clean_dual_objective": 78,
+      "required": 73,
+      "passes": true,
+      "bound_count": 454,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1110,
+      "lp_minimum": 78,
+      "boundary_count": 137,
+      "lower_gate_count": 108,
+      "upper_gate_count": 12,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 78,
+      "required": 74,
+      "passes": true,
+      "bound_count": 456,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1134,
+      "lp_minimum": 80,
+      "boundary_count": 141,
+      "lower_gate_count": 112,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 80,
+      "required": 75,
+      "passes": true,
+      "bound_count": 463,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1154,
+      "lp_minimum": 83,
+      "boundary_count": 146,
+      "lower_gate_count": 114,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 83,
+      "required": 76,
+      "passes": true,
+      "bound_count": 468,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1164,
+      "lp_minimum": 85,
+      "boundary_count": 147,
+      "lower_gate_count": 117,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 85,
+      "required": 77,
+      "passes": true,
+      "bound_count": 473,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1172,
+      "lp_minimum": 86,
+      "boundary_count": 147,
+      "lower_gate_count": 120,
+      "upper_gate_count": 15,
+      "dropped_nonzero_row_count": 10,
+      "clean_dual_objective": 86,
+      "required": 78,
+      "passes": true,
+      "bound_count": 474,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1176,
+      "lp_minimum": 87,
+      "boundary_count": 149,
+      "lower_gate_count": 118,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 11,
+      "clean_dual_objective": 87,
+      "required": 79,
+      "passes": true,
+      "bound_count": 478,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1188,
+      "lp_minimum": 88,
+      "boundary_count": 149,
+      "lower_gate_count": 121,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 11,
+      "clean_dual_objective": 88,
+      "required": 80,
+      "passes": true,
+      "bound_count": 481,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1194,
+      "lp_minimum": 89,
+      "boundary_count": 150,
+      "lower_gate_count": 123,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 89,
+      "required": 81,
+      "passes": true,
+      "bound_count": 485,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1206,
+      "lp_minimum": 89,
+      "boundary_count": 151,
+      "lower_gate_count": 125,
+      "upper_gate_count": 15,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 89,
+      "required": 82,
+      "passes": true,
+      "bound_count": 490,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1218,
+      "lp_minimum": 90,
+      "boundary_count": 153,
+      "lower_gate_count": 125,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 90,
+      "required": 83,
+      "passes": true,
+      "bound_count": 496,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1224,
+      "lp_minimum": 90,
+      "boundary_count": 154,
+      "lower_gate_count": 126,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 13,
+      "clean_dual_objective": 90,
+      "required": 84,
+      "passes": true,
+      "bound_count": 500,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1242,
+      "lp_minimum": 90,
+      "boundary_count": 154,
+      "lower_gate_count": 128,
+      "upper_gate_count": 15,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 90,
+      "required": 85,
+      "passes": true,
+      "bound_count": 507,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1244,
+      "lp_minimum": 91,
+      "boundary_count": 154,
+      "lower_gate_count": 128,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 91,
+      "required": 86,
+      "passes": true,
+      "bound_count": 508,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1254,
+      "lp_minimum": 92,
+      "boundary_count": 154,
+      "lower_gate_count": 130,
+      "upper_gate_count": 15,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 92,
+      "required": 87,
+      "passes": true,
+      "bound_count": 513,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1284,
+      "lp_minimum": 94,
+      "boundary_count": 160,
+      "lower_gate_count": 131,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 13,
+      "clean_dual_objective": 94,
+      "required": 88,
+      "passes": true,
+      "bound_count": 526,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1308,
+      "lp_minimum": 97,
+      "boundary_count": 162,
+      "lower_gate_count": 135,
+      "upper_gate_count": 13,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 97,
+      "required": 89,
+      "passes": true,
+      "bound_count": 533,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1314,
+      "lp_minimum": 97,
+      "boundary_count": 162,
+      "lower_gate_count": 137,
+      "upper_gate_count": 16,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 97,
+      "required": 90,
+      "passes": true,
+      "bound_count": 535,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1334,
+      "lp_minimum": 100,
+      "boundary_count": 164,
+      "lower_gate_count": 141,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 100,
+      "required": 91,
+      "passes": true,
+      "bound_count": 539,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1344,
+      "lp_minimum": 100,
+      "boundary_count": 166,
+      "lower_gate_count": 141,
+      "upper_gate_count": 16,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 100,
+      "required": 92,
+      "passes": true,
+      "bound_count": 547,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1352,
+      "lp_minimum": 102,
+      "boundary_count": 170,
+      "lower_gate_count": 143,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 12,
+      "clean_dual_objective": 102,
+      "required": 93,
+      "passes": true,
+      "bound_count": 544,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1356,
+      "lp_minimum": 102,
+      "boundary_count": 171,
+      "lower_gate_count": 143,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 13,
+      "clean_dual_objective": 102,
+      "required": 94,
+      "passes": true,
+      "bound_count": 548,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1362,
+      "lp_minimum": 103,
+      "boundary_count": 174,
+      "lower_gate_count": 143,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 103,
+      "required": 95,
+      "passes": true,
+      "bound_count": 548,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1374,
+      "lp_minimum": 104,
+      "boundary_count": 175,
+      "lower_gate_count": 145,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 104,
+      "required": 96,
+      "passes": true,
+      "bound_count": 552,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1404,
+      "lp_minimum": 105,
+      "boundary_count": 178,
+      "lower_gate_count": 145,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 105,
+      "required": 97,
+      "passes": true,
+      "bound_count": 565,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1410,
+      "lp_minimum": 105,
+      "boundary_count": 178,
+      "lower_gate_count": 146,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 105,
+      "required": 98,
+      "passes": true,
+      "bound_count": 567,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1424,
+      "lp_minimum": 107,
+      "boundary_count": 188,
+      "lower_gate_count": 146,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 107,
+      "required": 99,
+      "passes": true,
+      "bound_count": 566,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1434,
+      "lp_minimum": 108,
+      "boundary_count": 188,
+      "lower_gate_count": 148,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 108,
+      "required": 100,
+      "passes": true,
+      "bound_count": 569,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1440,
+      "lp_minimum": 108,
+      "boundary_count": 188,
+      "lower_gate_count": 148,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 108,
+      "required": 101,
+      "passes": true,
+      "bound_count": 573,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1464,
+      "lp_minimum": 111,
+      "boundary_count": 192,
+      "lower_gate_count": 151,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 111,
+      "required": 102,
+      "passes": true,
+      "bound_count": 583,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1478,
+      "lp_minimum": 113,
+      "boundary_count": 193,
+      "lower_gate_count": 154,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 113,
+      "required": 103,
+      "passes": true,
+      "bound_count": 586,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1494,
+      "lp_minimum": 114,
+      "boundary_count": 194,
+      "lower_gate_count": 155,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 114,
+      "required": 104,
+      "passes": true,
+      "bound_count": 593,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1506,
+      "lp_minimum": 115,
+      "boundary_count": 195,
+      "lower_gate_count": 156,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 115,
+      "required": 105,
+      "passes": true,
+      "bound_count": 599,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1512,
+      "lp_minimum": 116,
+      "boundary_count": 196,
+      "lower_gate_count": 157,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 116,
+      "required": 106,
+      "passes": true,
+      "bound_count": 602,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1514,
+      "lp_minimum": 117,
+      "boundary_count": 196,
+      "lower_gate_count": 158,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 117,
+      "required": 107,
+      "passes": true,
+      "bound_count": 603,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1524,
+      "lp_minimum": 118,
+      "boundary_count": 197,
+      "lower_gate_count": 159,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 118,
+      "required": 108,
+      "passes": true,
+      "bound_count": 610,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1536,
+      "lp_minimum": 118,
+      "boundary_count": 198,
+      "lower_gate_count": 160,
+      "upper_gate_count": 17,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 118,
+      "required": 109,
+      "passes": true,
+      "bound_count": 615,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1550,
+      "lp_minimum": 118,
+      "boundary_count": 198,
+      "lower_gate_count": 161,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 118,
+      "required": 110,
+      "passes": true,
+      "bound_count": 620,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1554,
+      "lp_minimum": 118,
+      "boundary_count": 199,
+      "lower_gate_count": 161,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 118,
+      "required": 111,
+      "passes": true,
+      "bound_count": 624,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1572,
+      "lp_minimum": 119,
+      "boundary_count": 200,
+      "lower_gate_count": 162,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 15,
+      "clean_dual_objective": 119,
+      "required": 112,
+      "passes": true,
+      "bound_count": 633,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1584,
+      "lp_minimum": 120,
+      "boundary_count": 201,
+      "lower_gate_count": 163,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 15,
+      "clean_dual_objective": 120,
+      "required": 113,
+      "passes": true,
+      "bound_count": 638,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 2
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1586,
+      "lp_minimum": 120,
+      "boundary_count": 201,
+      "lower_gate_count": 164,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 15,
+      "clean_dual_objective": 120,
+      "required": 114,
+      "passes": true,
+      "bound_count": 638,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1604,
+      "lp_minimum": 121,
+      "boundary_count": 202,
+      "lower_gate_count": 163,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 121,
+      "required": 115,
+      "passes": true,
+      "bound_count": 646,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 4
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1614,
+      "lp_minimum": 121,
+      "boundary_count": 201,
+      "lower_gate_count": 164,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 14,
+      "clean_dual_objective": 121,
+      "required": 116,
+      "passes": true,
+      "bound_count": 650,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1632,
+      "lp_minimum": 122,
+      "boundary_count": 204,
+      "lower_gate_count": 165,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 16,
+      "clean_dual_objective": 122,
+      "required": 117,
+      "passes": true,
+      "bound_count": 660,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1638,
+      "lp_minimum": 122,
+      "boundary_count": 204,
+      "lower_gate_count": 166,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 16,
+      "clean_dual_objective": 122,
+      "required": 118,
+      "passes": true,
+      "bound_count": 661,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1644,
+      "lp_minimum": 122,
+      "boundary_count": 205,
+      "lower_gate_count": 166,
+      "upper_gate_count": 18,
+      "dropped_nonzero_row_count": 16,
+      "clean_dual_objective": 122,
+      "required": 119,
+      "passes": true,
+      "bound_count": 665,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1674,
+      "lp_minimum": 123,
+      "boundary_count": 211,
+      "lower_gate_count": 168,
+      "upper_gate_count": 19,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 123,
+      "required": 120,
+      "passes": true,
+      "bound_count": 674,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 5
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1694,
+      "lp_minimum": 125,
+      "boundary_count": 214,
+      "lower_gate_count": 172,
+      "upper_gate_count": 20,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 125,
+      "required": 121,
+      "passes": true,
+      "bound_count": 677,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1704,
+      "lp_minimum": 125,
+      "boundary_count": 216,
+      "lower_gate_count": 171,
+      "upper_gate_count": 20,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 125,
+      "required": 122,
+      "passes": true,
+      "bound_count": 685,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1710,
+      "lp_minimum": 126,
+      "boundary_count": 220,
+      "lower_gate_count": 175,
+      "upper_gate_count": 22,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 126,
+      "required": 123,
+      "passes": true,
+      "bound_count": 680,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1716,
+      "lp_minimum": 127,
+      "boundary_count": 221,
+      "lower_gate_count": 177,
+      "upper_gate_count": 22,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 127,
+      "required": 124,
+      "passes": true,
+      "bound_count": 683,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1734,
+      "lp_minimum": 128,
+      "boundary_count": 220,
+      "lower_gate_count": 182,
+      "upper_gate_count": 24,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 128,
+      "required": 125,
+      "passes": true,
+      "bound_count": 689,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1748,
+      "lp_minimum": 129,
+      "boundary_count": 221,
+      "lower_gate_count": 182,
+      "upper_gate_count": 24,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 129,
+      "required": 126,
+      "passes": true,
+      "bound_count": 695,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1764,
+      "lp_minimum": 131,
+      "boundary_count": 225,
+      "lower_gate_count": 184,
+      "upper_gate_count": 25,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 131,
+      "required": 127,
+      "passes": true,
+      "bound_count": 701,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1770,
+      "lp_minimum": 132,
+      "boundary_count": 226,
+      "lower_gate_count": 189,
+      "upper_gate_count": 27,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 132,
+      "required": 128,
+      "passes": true,
+      "bound_count": 702,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 7
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1784,
+      "lp_minimum": 133,
+      "boundary_count": 228,
+      "lower_gate_count": 186,
+      "upper_gate_count": 25,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 133,
+      "required": 129,
+      "passes": true,
+      "bound_count": 707,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1794,
+      "lp_minimum": 133,
+      "boundary_count": 228,
+      "lower_gate_count": 187,
+      "upper_gate_count": 26,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 133,
+      "required": 130,
+      "passes": true,
+      "bound_count": 712,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 6
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1818,
+      "lp_minimum": 135,
+      "boundary_count": 230,
+      "lower_gate_count": 192,
+      "upper_gate_count": 27,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 135,
+      "required": 131,
+      "passes": true,
+      "bound_count": 721,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 7
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1824,
+      "lp_minimum": 136,
+      "boundary_count": 228,
+      "lower_gate_count": 194,
+      "upper_gate_count": 27,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 136,
+      "required": 132,
+      "passes": true,
+      "bound_count": 725,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 7
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1836,
+      "lp_minimum": 137,
+      "boundary_count": 231,
+      "lower_gate_count": 194,
+      "upper_gate_count": 27,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 137,
+      "required": 133,
+      "passes": true,
+      "bound_count": 728,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 7
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1854,
+      "lp_minimum": 139,
+      "boundary_count": 234,
+      "lower_gate_count": 197,
+      "upper_gate_count": 29,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 139,
+      "required": 134,
+      "passes": true,
+      "bound_count": 732,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 8
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1874,
+      "lp_minimum": 142,
+      "boundary_count": 237,
+      "lower_gate_count": 200,
+      "upper_gate_count": 29,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 142,
+      "required": 135,
+      "passes": true,
+      "bound_count": 739,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 8
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1884,
+      "lp_minimum": 145,
+      "boundary_count": 239,
+      "lower_gate_count": 203,
+      "upper_gate_count": 29,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 145,
+      "required": 136,
+      "passes": true,
+      "bound_count": 743,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 8
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1902,
+      "lp_minimum": 145,
+      "boundary_count": 240,
+      "lower_gate_count": 204,
+      "upper_gate_count": 29,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 145,
+      "required": 137,
+      "passes": true,
+      "bound_count": 750,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1908,
+      "lp_minimum": 145,
+      "boundary_count": 240,
+      "lower_gate_count": 204,
+      "upper_gate_count": 29,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 145,
+      "required": 138,
+      "passes": true,
+      "bound_count": 753,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1914,
+      "lp_minimum": 145,
+      "boundary_count": 240,
+      "lower_gate_count": 205,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 145,
+      "required": 139,
+      "passes": true,
+      "bound_count": 756,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1920,
+      "lp_minimum": 147,
+      "boundary_count": 242,
+      "lower_gate_count": 209,
+      "upper_gate_count": 31,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 147,
+      "required": 140,
+      "passes": true,
+      "bound_count": 757,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        }
+      ]
+    },
+    {
+      "limit": 1926,
+      "lp_minimum": 147,
+      "boundary_count": 239,
+      "lower_gate_count": 210,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 147,
+      "required": 141,
+      "passes": true,
+      "bound_count": 761,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1944,
+      "lp_minimum": 149,
+      "boundary_count": 241,
+      "lower_gate_count": 213,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 149,
+      "required": 142,
+      "passes": true,
+      "bound_count": 770,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1946,
+      "lp_minimum": 149,
+      "boundary_count": 242,
+      "lower_gate_count": 211,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 149,
+      "required": 143,
+      "passes": true,
+      "bound_count": 770,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1964,
+      "lp_minimum": 150,
+      "boundary_count": 242,
+      "lower_gate_count": 212,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 17,
+      "clean_dual_objective": 150,
+      "required": 144,
+      "passes": true,
+      "bound_count": 777,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1968,
+      "lp_minimum": 150,
+      "boundary_count": 242,
+      "lower_gate_count": 212,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 150,
+      "required": 145,
+      "passes": true,
+      "bound_count": 780,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 1974,
+      "lp_minimum": 151,
+      "boundary_count": 243,
+      "lower_gate_count": 214,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 151,
+      "required": 146,
+      "passes": true,
+      "bound_count": 781,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 9
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    },
+    {
+      "limit": 2000,
+      "lp_minimum": 151,
+      "boundary_count": 245,
+      "lower_gate_count": 215,
+      "upper_gate_count": 30,
+      "dropped_nonzero_row_count": 18,
+      "clean_dual_objective": 151,
+      "required": 147,
+      "passes": true,
+      "bound_count": 796,
+      "nonunit_nonground_bounds": [
+        {
+          "name": "s_11",
+          "multiplier": 8
+        },
+        {
+          "name": "s_23",
+          "multiplier": 3
+        },
+        {
+          "name": "s_29",
+          "multiplier": 2
+        },
+        {
+          "name": "s_47",
+          "multiplier": 2
+        },
+        {
+          "name": "s_83",
+          "multiplier": 2
+        }
+      ]
+    }
+  ]
+}

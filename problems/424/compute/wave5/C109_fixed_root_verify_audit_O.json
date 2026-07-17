@@ -1,0 +1,173 @@
+{
+  "audited_records": [
+    {
+      "d": 1,
+      "h": 534,
+      "root": 54,
+      "witness_endpoints": [
+        107
+      ]
+    },
+    {
+      "d": 2,
+      "h": 1064,
+      "root": 54,
+      "witness_endpoints": [
+        213
+      ]
+    },
+    {
+      "d": 3,
+      "h": 4674,
+      "root": 54,
+      "witness_endpoints": [
+        425
+      ]
+    },
+    {
+      "d": 6,
+      "h": 14024,
+      "root": 54,
+      "witness_endpoints": [
+        425
+      ]
+    },
+    {
+      "d": 8,
+      "h": 512264,
+      "root": 54,
+      "witness_endpoints": [
+        213
+      ]
+    },
+    {
+      "d": 9,
+      "h": 1182774,
+      "root": 54,
+      "witness_endpoints": [
+        425
+      ]
+    },
+    {
+      "d": 12,
+      "h": 7634274,
+      "root": 54,
+      "witness_endpoints": [
+        425
+      ]
+    },
+    {
+      "d": 16,
+      "h": 1559219514,
+      "root": 54,
+      "witness_endpoints": [
+        107
+      ]
+    },
+    {
+      "d": 2,
+      "h": 614,
+      "root": 62,
+      "witness_endpoints": [
+        123
+      ]
+    },
+    {
+      "d": 3,
+      "h": 2694,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    },
+    {
+      "d": 4,
+      "h": 9470,
+      "root": 62,
+      "witness_endpoints": [
+        123
+      ]
+    },
+    {
+      "d": 6,
+      "h": 65414,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    },
+    {
+      "d": 8,
+      "h": 241814,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    },
+    {
+      "d": 9,
+      "h": 552474,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    },
+    {
+      "d": 12,
+      "h": 2778054,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    },
+    {
+      "d": 16,
+      "h": 298274514,
+      "root": 62,
+      "witness_endpoints": [
+        245
+      ]
+    }
+  ],
+  "chain_checks": {
+    "root_54_missing_then_generated": [
+      107,
+      213,
+      425,
+      849
+    ],
+    "root_62_missing_then_generated": [
+      123,
+      245,
+      489
+    ]
+  },
+  "exact_recursive_records_audited": 16,
+  "global_cross_checks": {
+    "C104_1e8_classification_digest_match": true,
+    "C104_BIN_no_failure_through_4e9": true,
+    "C105_4e9_classification_digest_match": true,
+    "C105_4e9_hard_count_match": true
+  },
+  "input_sha256": {
+    "C109_bin_failure_scan_100000000.json": "5C1DD9FE5C8A7ABAE6BAFF48EBEE89B2F1E0DF01FB0ADEAB02BFED4FF440C879",
+    "C109_bin_failure_scan_4000000000.json": "4D5620B38BE41B24AB20FC1C6728FA33F849D18DF871A1ACB3C197CD7918AE67",
+    "C109_fixed_root_records_100000000.json": "5CD71889B48321FA8571823A1CB8CF91C781D068F447FB6BE428F74AAE412169",
+    "C109_fixed_root_records_4000000000.json": "F49AAF75C1E25B63943FF9F27042BC406C19DE8E021A7DF65FD4A91093129974"
+  },
+  "oracle_cache": {
+    "factorizations": {
+      "currsize": 874,
+      "hits": 1,
+      "maxsize": null,
+      "misses": 874
+    },
+    "generated": {
+      "currsize": 861,
+      "hits": 2345,
+      "maxsize": null,
+      "misses": 861
+    }
+  },
+  "schema": "C109-fixed-root-independent-audit-v1"
+}

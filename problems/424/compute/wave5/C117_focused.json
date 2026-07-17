@@ -1,0 +1,123 @@
+{
+  "acceptance": {
+    "alpha_gate": 0.7213475204444817,
+    "exact_recursive_closure": true,
+    "finite_nonfalsification_is_theorem": false,
+    "floating_point_used_for_acceptance": false,
+    "source_divisors_from_explicit_prime_powers": true,
+    "target_3_4_falsifier_iff": "(s+8)^4 < d^3"
+  },
+  "classifier_cache": {
+    "factor_pair_entries": 52804,
+    "factorint_calls": 52804,
+    "state_entries": 52806
+  },
+  "digests": {
+    "evaluated_stream_sha256": "f8e235fc51edfe611e319b3992fb8123382a8eaa92c55b10bfe664963c8b55a6",
+    "verification_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "evaluation": {
+    "hard_shape_expansion": {
+      "evaluated": 1000,
+      "generated": 1000,
+      "max_d": 72,
+      "min_d": 12
+    },
+    "hard_shape_substitution": {
+      "evaluated": 500,
+      "generated": 500,
+      "max_d": 18,
+      "min_d": 8
+    }
+  },
+  "extremal_by_d": [],
+  "falsifiers": [],
+  "generation": {
+    "base_multi_plus": {},
+    "base_prime_power": {},
+    "composite_q": {},
+    "extremal_base_lift": {},
+    "hard_shape_expansion": {
+      "accepted": 1000,
+      "offered": 1186,
+      "too_large": 180,
+      "too_small": 6
+    },
+    "hard_shape_substitution": {
+      "accepted": 500,
+      "duplicate": 10,
+      "offered": 657,
+      "too_small": 147
+    },
+    "prime_power": {},
+    "squarefree": {}
+  },
+  "parameters": {
+    "base_multi_budget": 0,
+    "base_power_budget": 0,
+    "composite_q_budget": 0,
+    "extremal_lift_budget": 0,
+    "extremal_limit": 16,
+    "max_bits": 63,
+    "max_pairs": 512,
+    "min_d": 8,
+    "min_source": 4000000000,
+    "mutation_budget": 200,
+    "prime_limit": 1000,
+    "prime_power_budget": 0,
+    "progress_every": 250,
+    "seed": 424117,
+    "shape_expansion_budget": 1000,
+    "shape_substitution_budget": 500,
+    "squarefree_budget": 0
+  },
+  "prime_pools": {
+    "minus": 86,
+    "plus": 80
+  },
+  "schema": "C117-structural-power-falsifier-v1",
+  "self_test": {
+    "known_hard": [
+      {
+        "d": 12,
+        "h": 38624780,
+        "s": 4
+      },
+      {
+        "d": 16,
+        "h": 908368614,
+        "s": 9
+      },
+      {
+        "d": 8,
+        "h": 2067138956,
+        "s": 0
+      },
+      {
+        "d": 16,
+        "h": 2796867114,
+        "s": 8
+      },
+      {
+        "d": 18,
+        "h": 2934744174,
+        "s": 14
+      }
+    ],
+    "recursive_state_entries": 1046,
+    "status": "PASS"
+  },
+  "summary": {
+    "evaluated_candidates": 1500,
+    "hard_candidates": 0,
+    "initial_candidates": 1500,
+    "largest_hard_source": null,
+    "largest_source_tested": 8642908561266374604,
+    "maximum_hard_d": null,
+    "maximum_hard_deficit": null,
+    "minimum_ratio_B8": null,
+    "mutation_candidates": 0,
+    "target_3_4_falsifiers": 0
+  },
+  "verification_records": []
+}

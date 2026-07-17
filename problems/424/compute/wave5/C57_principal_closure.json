@@ -1,0 +1,242 @@
+[
+  {
+    "limit": 54,
+    "generated": 14,
+    "reducible_holes": 11,
+    "base_objective": {
+      "total": 1,
+      "hard_members": 0,
+      "boundary": 1
+    },
+    "best_principal": [
+      0,
+      21,
+      1
+    ],
+    "negative_principal_count": 0,
+    "best_pair": [
+      0,
+      21,
+      32,
+      2
+    ],
+    "best_random": [
+      0,
+      [
+        21,
+        32
+      ],
+      2
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 100,
+    "generated": 23,
+    "reducible_holes": 24,
+    "base_objective": {
+      "total": 4,
+      "hard_members": 1,
+      "boundary": 3
+    },
+    "best_principal": [
+      0,
+      21,
+      2
+    ],
+    "negative_principal_count": 0,
+    "best_pair": [
+      0,
+      21,
+      35,
+      3
+    ],
+    "best_random": [
+      0,
+      [
+        21,
+        39
+      ],
+      3
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 200,
+    "generated": 43,
+    "reducible_holes": 53,
+    "base_objective": {
+      "total": 8,
+      "hard_members": 2,
+      "boundary": 6
+    },
+    "best_principal": [
+      0,
+      32,
+      5
+    ],
+    "negative_principal_count": 0,
+    "best_pair": [
+      0,
+      32,
+      39,
+      7
+    ],
+    "best_random": [
+      0,
+      [
+        75,
+        86,
+        104,
+        176
+      ],
+      5
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 500,
+    "generated": 119,
+    "reducible_holes": 130,
+    "base_objective": {
+      "total": 33,
+      "hard_members": 9,
+      "boundary": 24
+    },
+    "best_principal": [
+      0,
+      39,
+      5
+    ],
+    "negative_principal_count": 0,
+    "best_pair": [
+      0,
+      39,
+      57,
+      12
+    ],
+    "best_random": [
+      0,
+      [
+        188,
+        225
+      ],
+      3
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 1000,
+    "generated": 250,
+    "reducible_holes": 260,
+    "base_objective": {
+      "total": 71,
+      "hard_members": 25,
+      "boundary": 46
+    },
+    "best_principal": [
+      -1,
+      117,
+      2
+    ],
+    "negative_principal_count": 2,
+    "best_pair": null,
+    "best_random": [
+      -1,
+      [
+        291,
+        350,
+        440
+      ],
+      5
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 2000,
+    "generated": 530,
+    "reducible_holes": 505,
+    "base_objective": {
+      "total": 152,
+      "hard_members": 50,
+      "boundary": 102
+    },
+    "best_principal": [
+      -1,
+      338,
+      2
+    ],
+    "negative_principal_count": 5,
+    "best_pair": null,
+    "best_random": [
+      -1,
+      [
+        351,
+        680,
+        1058
+      ],
+      4
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 5000,
+    "generated": 1496,
+    "reducible_holes": 1136,
+    "base_objective": {
+      "total": 447,
+      "hard_members": 157,
+      "boundary": 290
+    },
+    "best_principal": [
+      -1,
+      207,
+      8
+    ],
+    "negative_principal_count": 20,
+    "best_pair": null,
+    "best_random": [
+      -2,
+      [
+        413,
+        425,
+        1743
+      ],
+      11
+    ],
+    "random_trials": 5000
+  },
+  {
+    "limit": 10000,
+    "generated": 3207,
+    "reducible_holes": 2115,
+    "base_objective": {
+      "total": 953,
+      "hard_members": 360,
+      "boundary": 593
+    },
+    "best_principal": [
+      -1,
+      453,
+      2
+    ],
+    "negative_principal_count": 43,
+    "best_pair": null,
+    "best_random": [
+      -1,
+      [
+        1317,
+        2721,
+        4298,
+        5102,
+        5108,
+        6116,
+        7730,
+        8420,
+        9350
+      ],
+      13
+    ],
+    "random_trials": 5000
+  }
+]

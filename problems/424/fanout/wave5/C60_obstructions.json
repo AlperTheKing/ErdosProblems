@@ -1,0 +1,218 @@
+{
+  "exact_slices": [
+    {
+      "limit": 328,
+      "verified": {
+        "limit": 328,
+        "hard_count": 16,
+        "exact_dual_objective": 18,
+        "exact_margin": 2,
+        "nonzero_row": 72,
+        "nonzero_lower": 96,
+        "nonzero_upper": 21
+      },
+      "q21": [
+        [
+          "q_ge_difference_21",
+          -1
+        ]
+      ],
+      "closure188": [],
+      "multi_closure_outputs": {},
+      "max_closure_weight": 36
+    },
+    {
+      "limit": 329,
+      "verified": {
+        "limit": 329,
+        "hard_count": 16,
+        "exact_dual_objective": 18,
+        "exact_margin": 2,
+        "nonzero_row": 72,
+        "nonzero_lower": 97,
+        "nonzero_upper": 21
+      },
+      "q21": [],
+      "closure188": [],
+      "multi_closure_outputs": {},
+      "max_closure_weight": 37
+    },
+    {
+      "limit": 634,
+      "verified": {
+        "limit": 634,
+        "hard_count": 37,
+        "exact_dual_objective": 42,
+        "exact_margin": 5,
+        "nonzero_row": 150,
+        "nonzero_lower": 175,
+        "nonzero_upper": 43
+      },
+      "q21": [],
+      "closure188": [
+        [
+          "closure_188_9_21",
+          1
+        ]
+      ],
+      "multi_closure_outputs": {},
+      "max_closure_weight": 99
+    },
+    {
+      "limit": 635,
+      "verified": {
+        "limit": 635,
+        "hard_count": 37,
+        "exact_dual_objective": 42,
+        "exact_margin": 5,
+        "nonzero_row": 150,
+        "nonzero_lower": 177,
+        "nonzero_upper": 43
+      },
+      "q21": [
+        [
+          "q_ge_difference_21",
+          -1
+        ]
+      ],
+      "closure188": [
+        [
+          "closure_188_3_63",
+          1
+        ]
+      ],
+      "multi_closure_outputs": {},
+      "max_closure_weight": 98
+    },
+    {
+      "limit": 1017,
+      "verified": {
+        "limit": 1017,
+        "hard_count": 68,
+        "exact_dual_objective": 69,
+        "exact_margin": 1,
+        "nonzero_row": 247,
+        "nonzero_lower": 285,
+        "nonzero_upper": 69
+      },
+      "q21": [],
+      "closure188": [
+        [
+          "closure_188_3_63",
+          1
+        ],
+        [
+          "closure_188_9_21",
+          1
+        ]
+      ],
+      "multi_closure_outputs": {
+        "188": [
+          [
+            "closure_188_3_63",
+            1
+          ],
+          [
+            "closure_188_9_21",
+            1
+          ]
+        ]
+      },
+      "max_closure_weight": 171
+    }
+  ],
+  "first_boundary_deletion": {
+    "from": 328,
+    "to": 329,
+    "removed": [
+      "q_ge_difference_21"
+    ]
+  },
+  "first_selector_switch": {
+    "from": 634,
+    "to": 635,
+    "switches": [
+      [
+        188,
+        [
+          9,
+          21
+        ],
+        [
+          3,
+          63
+        ]
+      ]
+    ]
+  },
+  "first_multi_selector_limit": 1017,
+  "multi_selector_cutoffs_through_2000": [
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022
+  ],
+  "maximum_expanded_dual_backreach": {
+    "from": 1988,
+    "to": 1989,
+    "oldest_label": 2,
+    "backreach": 1987,
+    "changed_count": 11
+  },
+  "maximum_closure_weight_through_2000": 403,
+  "first_incremental_reroute": {
+    "length": 6,
+    "vertices": [
+      2001,
+      144,
+      287,
+      32,
+      95,
+      189,
+      2002
+    ],
+    "kinds": [
+      "hard:144",
+      "seed:144->287",
+      "unary:287->32",
+      "reverse:unary:95->32",
+      "seed:95->189",
+      "seed:189->377"
+    ],
+    "reverse_edges": 1,
+    "oldest_edge": 95,
+    "cutoff": 377
+  },
+  "longest_incremental_path": {
+    "length": 9,
+    "vertices": [
+      2001,
+      398,
+      795,
+      1589,
+      530,
+      1059,
+      212,
+      423,
+      845,
+      2002
+    ],
+    "kinds": [
+      "splitless:398",
+      "seed:398->795",
+      "seed:795->1589",
+      "unary:1589->530",
+      "seed:530->1059",
+      "unary:1059->212",
+      "seed:212->423",
+      "seed:423->845",
+      "seed:845->1689"
+    ],
+    "reverse_edges": 0,
+    "oldest_edge": 398,
+    "cutoff": 1689
+  },
+  "maximum_incremental_reverse_edges": 1
+}

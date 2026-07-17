@@ -1,0 +1,114 @@
+{
+  "distinct_witness_root_histogram": {
+    "1": 161,
+    "2": 107,
+    "3": 47,
+    "4": 5,
+    "5": 1
+  },
+  "first_many_pair_single_root": {
+    "endpoints": [
+      23,
+      89
+    ],
+    "h": 6140,
+    "pairs": [
+      [
+        23,
+        267
+      ],
+      [
+        69,
+        89
+      ]
+    ],
+    "root": 12
+  },
+  "first_root_collision": {
+    "endpoints": [
+      15,
+      113
+    ],
+    "h": 1694,
+    "pairs": [
+      [
+        5,
+        339
+      ],
+      [
+        15,
+        113
+      ]
+    ],
+    "root": 8
+  },
+  "first_root_count_below_pair_count": {
+    "h": 6140,
+    "pair_count": 2,
+    "pairs": [
+      [
+        23,
+        267
+      ],
+      [
+        69,
+        89
+      ]
+    ],
+    "root_count": 1,
+    "roots": [
+      12
+    ]
+  },
+  "hard_count": 321,
+  "healed_root_count": 355,
+  "limit": 6140,
+  "max_missing_endpoints_on_one_root_for_one_hard_hole": {
+    "endpoints": [
+      15,
+      113
+    ],
+    "h": 1694,
+    "pairs": [
+      [
+        5,
+        339
+      ],
+      [
+        15,
+        113
+      ]
+    ],
+    "root": 8,
+    "value": 2
+  },
+  "minimum_distinct_root_to_pair_ratio": {
+    "h": 6140,
+    "pairs": 2,
+    "roots": 1
+  },
+  "pair_count_histogram": {
+    "1": 220,
+    "2": 96,
+    "3": 3,
+    "4": 2
+  },
+  "root_type_profile_histogram": {
+    "(('hard', 1), ('seed3', 1), ('splitless', 1))": 2,
+    "(('hard', 1), ('seed3', 1), ('splitless', 2))": 1,
+    "(('hard', 1), ('splitless', 1))": 16,
+    "(('hard', 1), ('splitless', 2))": 6,
+    "(('hard', 1), ('splitless', 3))": 1,
+    "(('hard', 1),)": 16,
+    "(('seed3', 1), ('splitless', 1))": 11,
+    "(('seed3', 1), ('splitless', 2))": 13,
+    "(('seed3', 1), ('splitless', 3))": 2,
+    "(('seed3', 1),)": 9,
+    "(('seed3', 2), ('splitless', 3))": 1,
+    "(('splitless', 1),)": 136,
+    "(('splitless', 2),)": 80,
+    "(('splitless', 3),)": 26,
+    "(('splitless', 4),)": 1
+  },
+  "unhealed_root_count": 1051
+}

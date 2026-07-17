@@ -76,7 +76,37 @@
           "seed": true
         }
       }
-    ]
+    ],
+    "cutoff_capacity": {
+      "half": 27,
+      "half_holes": [
+        6,
+        8,
+        11,
+        12,
+        15,
+        18,
+        20,
+        21,
+        23,
+        24
+      ],
+      "odd_reducible_holes": [
+        11,
+        15,
+        21,
+        23,
+        29,
+        35,
+        39,
+        45,
+        47
+      ],
+      "healed_holes": [
+        21
+      ],
+      "identity": "M(27)=9+1"
+    }
   },
   "first_matching_hall_witness": {
     "cutoff": 54,
@@ -86,6 +116,156 @@
     "neighbor_set": [],
     "hall_deficit": 1
   },
+  "rank_hall_relation": "hard hole of obstruction rank r is adjacent to every healed hole of obstruction rank at most r+offset; nested Hall is equivalent to H(<=d)<=Q(<=d+offset) for every d",
+  "rank_hall_audits": [
+    {
+      "offset": 0,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 3,
+      "first_failure": {
+        "cutoff": 362,
+        "depth": 2,
+        "excess": 1,
+        "left_count": 11,
+        "neighbor_count": 10,
+        "left_values": [
+          54,
+          74,
+          114,
+          174,
+          186,
+          234,
+          252,
+          294,
+          318,
+          354,
+          362
+        ],
+        "neighbor_values": [
+          21,
+          35,
+          39,
+          66,
+          75,
+          110,
+          117,
+          119,
+          120,
+          126
+        ]
+      },
+      "maximum_excess": 1,
+      "maximum_excess_cutoff": 362,
+      "maximum_excess_depth": 2
+    },
+    {
+      "offset": 1,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 2,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 3,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 4,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 5,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 6,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 7,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    },
+    {
+      "offset": 8,
+      "event_cutoffs_checked": 113120,
+      "failure_events": 0,
+      "first_failure": null,
+      "maximum_excess": 0,
+      "maximum_excess_cutoff": 0,
+      "maximum_excess_depth": 0
+    }
+  ],
+  "smallest_surviving_rank_offset": 1,
+  "hard_rank_histogram": [
+    0,
+    0,
+    18500,
+    4141,
+    8696,
+    4243,
+    4114,
+    2373,
+    1606,
+    997,
+    527,
+    264,
+    99,
+    22,
+    1
+  ],
+  "healed_rank_histogram": [
+    34760,
+    3225,
+    7296,
+    3561,
+    5007,
+    3448,
+    3185,
+    2326,
+    1819,
+    1310,
+    811,
+    504,
+    239,
+    45,
+    1
+  ],
   "failure_sample": [
     {
       "n": 54,
@@ -148,7 +328,37 @@
             "seed": true
           }
         }
-      ]
+      ],
+      "cutoff_capacity": {
+        "half": 27,
+        "half_holes": [
+          6,
+          8,
+          11,
+          12,
+          15,
+          18,
+          20,
+          21,
+          23,
+          24
+        ],
+        "odd_reducible_holes": [
+          11,
+          15,
+          21,
+          23,
+          29,
+          35,
+          39,
+          45,
+          47
+        ],
+        "healed_holes": [
+          21
+        ],
+        "identity": "M(27)=9+1"
+      }
     },
     {
       "n": 74,
@@ -1173,5 +1383,5 @@
     }
   ],
   "member_bitmap_sha256": "569056ee7b16336bbf9eaa0b0fcfc77376048f12d7157da440333207b8a2e365",
-  "elapsed_seconds": 5.170703300005698
+  "elapsed_seconds": 6.406572199994116
 }

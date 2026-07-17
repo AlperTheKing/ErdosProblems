@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "limit": 10000,
+  "workers": 64,
+  "time_limit_seconds": 600.0,
+  "assumption": "prefix_counterexample",
+  "source_closed": true,
+  "status": "UNKNOWN",
+  "wall_time_seconds": 605.8906206,
+  "branches": 26158,
+  "conflicts": 11750,
+  "best_objective_bound": 0.0
+}

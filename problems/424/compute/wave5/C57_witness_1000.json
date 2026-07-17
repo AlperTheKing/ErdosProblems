@@ -1,0 +1,35 @@
+[
+  {
+    "limit": 1000,
+    "generated": 250,
+    "reducible_holes": 260,
+    "base_objective": {
+      "total": 71,
+      "hard_members": 25,
+      "boundary": 46
+    },
+    "best_principal": [
+      -1,
+      117,
+      2
+    ],
+    "best_principal_details": {
+      "added_members": [
+        117,
+        350
+      ],
+      "added_hard_members": [],
+      "gained_boundaries": [
+        117
+      ],
+      "lost_boundaries": [
+        233,
+        699
+      ]
+    },
+    "negative_principal_count": 2,
+    "best_pair": null,
+    "best_random": null,
+    "random_trials": 0
+  }
+]

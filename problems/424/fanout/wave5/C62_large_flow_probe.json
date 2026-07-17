@@ -1,0 +1,47 @@
+[
+  {
+    "limit": 200000,
+    "hard_count": 21294,
+    "hard_holes": 9937,
+    "generated_hard": 11357,
+    "splitless": 23151,
+    "unary_arcs": 59806,
+    "seed_arcs": 26823,
+    "network_edges": 119717,
+    "exact_max_flow": 12967,
+    "reserve": 3030,
+    "predicted_c56_objective": 24324,
+    "saved_c56_objective": null,
+    "objective_match": true
+  },
+  {
+    "limit": 500000,
+    "hard_count": 55350,
+    "hard_holes": 23768,
+    "generated_hard": 31582,
+    "splitless": 55761,
+    "unary_arcs": 129803,
+    "seed_arcs": 60453,
+    "network_edges": 269785,
+    "exact_max_flow": 32457,
+    "reserve": 8689,
+    "predicted_c56_objective": 64039,
+    "saved_c56_objective": null,
+    "objective_match": true
+  },
+  {
+    "limit": 1000000,
+    "hard_count": 113571,
+    "hard_holes": 45583,
+    "generated_hard": 67988,
+    "splitless": 108651,
+    "unary_arcs": 231182,
+    "seed_arcs": 112283,
+    "network_edges": 497699,
+    "exact_max_flow": 64649,
+    "reserve": 19066,
+    "predicted_c56_objective": 132637,
+    "saved_c56_objective": null,
+    "objective_match": true
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "arithmetic": "exact ascending divisor recursion",
+  "distinct_input_rule": "only 2 <= a < b is admitted",
+  "kernel_sha256": "a88d15117037b053e974f96a317bdc5c986da04505181d078040ec8da5b2a547",
+  "result": {
+    "admissible_pair_buckets": [
+      {
+        "count": 25427,
+        "hi": 1,
+        "lo": 1
+      },
+      {
+        "count": 17117,
+        "hi": 2,
+        "lo": 2
+      },
+      {
+        "count": 2876,
+        "hi": 4,
+        "lo": 3
+      },
+      {
+        "count": 160,
+        "hi": 8,
+        "lo": 5
+      },
+      {
+        "count": 3,
+        "hi": 16,
+        "lo": 9
+      }
+    ],
+    "elapsed_seconds": 0.0681412,
+    "forced_11_prime_star": {
+      "all": 4411,
+      "all_top_half": 2044,
+      "generated_cofactor": 3351,
+      "generated_cofactor_top_half": 1645
+    },
+    "generated": 457599,
+    "hard": 45583,
+    "hard_all_hole": 7083,
+    "hard_mixed": 38500,
+    "hard_unique_pair": 25427,
+    "healed_targets": 67537,
+    "limit": 1000000,
+    "maximum_admissible_pairs": 9,
+    "maximum_missing_endpoints": 14,
+    "maximum_obstruction_rank": 15,
+    "minimum_critical_endpoint_fiber": {
+      "count": 7043,
+      "factor": 11,
+      "factor_11_count": 7043,
+      "factor_11_top_half": 3246,
+      "predecessor": 6
+    },
+    "minimum_missing_factor_fiber": {
+      "count": 10622,
+      "factor": 11,
+      "factor_11_count": 10622,
+      "predecessor": 6
+    },
+    "missing_endpoint_buckets": [
+      {
+        "count": 19297,
+        "hi": 1,
+        "lo": 1
+      },
+      {
+        "count": 16327,
+        "hi": 2,
+        "lo": 2
+      },
+      {
+        "count": 8467,
+        "hi": 4,
+        "lo": 3
+      },
+      {
+        "count": 1464,
+        "hi": 8,
+        "lo": 5
+      },
+      {
+        "count": 28,
+        "hi": 16,
+        "lo": 9
+      }
+    ],
+    "singleton_shadow_6_gate": {
+      "hard_at_maximum": 4,
+      "hard_shadow_only_6": 4791,
+      "healed_at_maximum": 3,
+      "healed_shadow_contains_6": 29179,
+      "maximum_X": 362,
+      "maximum_deficit": 1
+    },
+    "unique_mixed_blocker_11": {
+      "count": 3735,
+      "top_half": 1825
+    }
+  },
+  "schema_version": 1
+}

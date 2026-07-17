@@ -1,0 +1,88 @@
+{
+  "limit": 10000000000,
+  "threads": 32,
+  "orbit_count": 1849014105,
+  "image_sizes": {"2": 928854714, "3": 620716978, "5": 373804719},
+  "triple_intersection": 44956,
+  "collision_tax": 74362308,
+  "pair_audits": {
+    "23": {
+      "intersection": 30224698,
+      "failures": 107,
+      "first_failure": 24,
+      "last_failure": 130,
+      "worst_x": 76,
+      "worst_excess": "36",
+      "worst_intersection": 1,
+      "worst_left_size": 8,
+      "worst_right_size": 5,
+      "min_margin_after_5000_x": 5000,
+      "min_margin_after_5000": "115600"
+    },
+    "25": {
+      "intersection": 27715788,
+      "failures": 2945,
+      "first_failure": 24,
+      "last_failure": 4103,
+      "worst_x": 3853,
+      "worst_excess": "4193",
+      "worst_intersection": 17,
+      "worst_left_size": 393,
+      "worst_right_size": 156,
+      "min_margin_after_5000_x": 5173,
+      "min_margin_after_5000": "8407"
+    },
+    "35": {
+      "intersection": 16466778,
+      "failures": 319,
+      "first_failure": 24,
+      "last_failure": 383,
+      "worst_x": 203,
+      "worst_excess": "91",
+      "worst_intersection": 1,
+      "worst_left_size": 14,
+      "worst_right_size": 8,
+      "min_margin_after_5000_x": 5629,
+      "min_margin_after_5000": "7985"
+    }
+  },
+  "residue_30_pair_audits": {
+    "23": {
+      "failures": 1,
+      "worst_residue": 23,
+      "worst_intersection": 5936384,
+      "worst_left_size": 65883845,
+      "worst_right_size": 23912167,
+      "worst_capacity": 333333333,
+      "worst_excess": "403369160445757"
+    },
+    "25": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    },
+    "35": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    }
+  },
+  "quadratic_tax_audit": {
+    "inequality": "X*Delta(X) <= 3*C(X)^2",
+    "failures": 0,
+    "first_failure": 0,
+    "last_failure": 0,
+    "worst_x": 0,
+    "worst_excess": "0"
+  },
+  "generation_seconds": 1.431781,
+  "audit_seconds": 73.540532
+}

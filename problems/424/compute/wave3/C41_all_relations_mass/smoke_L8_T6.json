@@ -1,0 +1,642 @@
+{
+  "Q": 30233088000000,
+  "automaton": {
+    "root_state": 0,
+    "safe_states": 62,
+    "trie_states": 76
+  },
+  "canonical_counts": [
+    15,
+    10,
+    6
+  ],
+  "maps": {
+    "2": "2t",
+    "3": "3t+1",
+    "5": "5t+3"
+  },
+  "max_relation_length": 8,
+  "minimal_relation_sides": 14,
+  "minimal_sides": [
+    "232552",
+    "552223",
+    "2223352",
+    "3222552",
+    "5252223",
+    "5322223",
+    "22232352",
+    "23255352",
+    "32233552",
+    "32322552",
+    "52352223",
+    "53222223",
+    "55323223",
+    "55532223"
+  ],
+  "minimal_sides_sha256": "94e3aa6cc2613704fa782b515f063baf883c7d0aa377b80a8f64322a2959145c",
+  "numeric_pressure": {
+    "canonical_base_per_k": 64699466875819.484,
+    "central_states": [
+      6,
+      16,
+      12,
+      22,
+      27,
+      17,
+      18,
+      41,
+      3,
+      13,
+      11,
+      46,
+      19,
+      7,
+      37,
+      28,
+      42,
+      23,
+      32,
+      8
+    ],
+    "iterations": 57,
+    "lambda": 2.0357410666213025,
+    "message": "Optimization terminated successfully.",
+    "ratio_to_Q": 2.1400217826184176,
+    "success": true,
+    "theta_3": -0.42963815282852735,
+    "theta_5": -0.9112892071477665
+  },
+  "orientation": "outermost-first",
+  "relation_fibers_sha256": "1a3eef0edf54f8205bbab25fb225866b44ab6df0f64f7e3c8baddac76e394206",
+  "relation_levels": [
+    {
+      "accepted_words": 3,
+      "affine_classes": 3,
+      "collision_excess": 0,
+      "formal_words": 3,
+      "length": 1,
+      "maximum_fiber": 1,
+      "new_minimal_sides": 0,
+      "relation_fibers": 0,
+      "relation_pairs": 0,
+      "relation_side_words": 0,
+      "singleton_words": 3
+    },
+    {
+      "accepted_words": 9,
+      "affine_classes": 9,
+      "collision_excess": 0,
+      "formal_words": 9,
+      "length": 2,
+      "maximum_fiber": 1,
+      "new_minimal_sides": 0,
+      "relation_fibers": 0,
+      "relation_pairs": 0,
+      "relation_side_words": 0,
+      "singleton_words": 9
+    },
+    {
+      "accepted_words": 27,
+      "affine_classes": 27,
+      "collision_excess": 0,
+      "formal_words": 27,
+      "length": 3,
+      "maximum_fiber": 1,
+      "new_minimal_sides": 0,
+      "relation_fibers": 0,
+      "relation_pairs": 0,
+      "relation_side_words": 0,
+      "singleton_words": 27
+    },
+    {
+      "accepted_words": 81,
+      "affine_classes": 81,
+      "collision_excess": 0,
+      "formal_words": 81,
+      "length": 4,
+      "maximum_fiber": 1,
+      "new_minimal_sides": 0,
+      "relation_fibers": 0,
+      "relation_pairs": 0,
+      "relation_side_words": 0,
+      "singleton_words": 81
+    },
+    {
+      "accepted_words": 243,
+      "affine_classes": 243,
+      "collision_excess": 0,
+      "formal_words": 243,
+      "length": 5,
+      "maximum_fiber": 1,
+      "new_minimal_sides": 0,
+      "relation_fibers": 0,
+      "relation_pairs": 0,
+      "relation_side_words": 0,
+      "singleton_words": 243
+    },
+    {
+      "accepted_words": 727,
+      "affine_classes": 728,
+      "collision_excess": 1,
+      "formal_words": 729,
+      "length": 6,
+      "maximum_fiber": 2,
+      "new_minimal_sides": 2,
+      "relation_fibers": 1,
+      "relation_pairs": 1,
+      "relation_side_words": 2,
+      "singleton_words": 727
+    },
+    {
+      "accepted_words": 2171,
+      "affine_classes": 2179,
+      "collision_excess": 8,
+      "formal_words": 2187,
+      "length": 7,
+      "maximum_fiber": 2,
+      "new_minimal_sides": 4,
+      "relation_fibers": 8,
+      "relation_pairs": 8,
+      "relation_side_words": 16,
+      "singleton_words": 2171
+    },
+    {
+      "accepted_words": 6475,
+      "affine_classes": 6518,
+      "collision_excess": 43,
+      "formal_words": 6561,
+      "length": 8,
+      "maximum_fiber": 2,
+      "new_minimal_sides": 8,
+      "relation_fibers": 43,
+      "relation_pairs": 43,
+      "relation_side_words": 86,
+      "singleton_words": 6475
+    }
+  ],
+  "reset_codes": [
+    {
+      "macro": {
+        "Q_power": "763651218448269648270668004277728185400950784000000000000000000000000000000000000",
+        "canonical_k": 6,
+        "coefficient": "0",
+        "coefficient_dp_layer_sizes": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "difference": "-763651218448269648270668004277728185400950784000000000000000000000000000000000000",
+        "exceeds_Q_power": false,
+        "log_ratio": null,
+        "target_counts": [
+          90,
+          60,
+          36
+        ],
+        "token_factors": 31
+      },
+      "reset_letter": "2",
+      "start_label": "2",
+      "start_state": 1,
+      "token_content_types": 0,
+      "token_dp_layer_sizes": [
+        1,
+        3,
+        9,
+        27,
+        71,
+        158
+      ],
+      "token_length": 6,
+      "token_polynomial": [],
+      "token_words": 0
+    },
+    {
+      "macro": {
+        "Q_power": "763651218448269648270668004277728185400950784000000000000000000000000000000000000",
+        "canonical_k": 6,
+        "coefficient": "0",
+        "coefficient_dp_layer_sizes": [
+          1,
+          14,
+          42,
+          85,
+          143,
+          216,
+          304,
+          407,
+          525,
+          658,
+          796,
+          912,
+          991,
+          1033,
+          1038,
+          1006,
+          937,
+          846,
+          754,
+          661,
+          567,
+          475,
+          391,
+          315,
+          247,
+          187,
+          135,
+          91,
+          55,
+          27,
+          7,
+          0
+        ],
+        "difference": "-763651218448269648270668004277728185400950784000000000000000000000000000000000000",
+        "exceeds_Q_power": false,
+        "log_ratio": null,
+        "target_counts": [
+          90,
+          60,
+          36
+        ],
+        "token_factors": 31
+      },
+      "reset_letter": "3",
+      "start_label": "3",
+      "start_state": 16,
+      "token_content_types": 14,
+      "token_dp_layer_sizes": [
+        1,
+        3,
+        9,
+        26,
+        70,
+        158
+      ],
+      "token_length": 6,
+      "token_polynomial": [
+        {
+          "counts": [
+            0,
+            2,
+            4
+          ],
+          "multiplicity": 1
+        },
+        {
+          "counts": [
+            0,
+            3,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            0,
+            4,
+            2
+          ],
+          "multiplicity": 6
+        },
+        {
+          "counts": [
+            0,
+            5,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            0,
+            6,
+            0
+          ],
+          "multiplicity": 1
+        },
+        {
+          "counts": [
+            1,
+            2,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            1,
+            3,
+            2
+          ],
+          "multiplicity": 12
+        },
+        {
+          "counts": [
+            1,
+            4,
+            1
+          ],
+          "multiplicity": 12
+        },
+        {
+          "counts": [
+            1,
+            5,
+            0
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            2,
+            2,
+            2
+          ],
+          "multiplicity": 6
+        },
+        {
+          "counts": [
+            2,
+            3,
+            1
+          ],
+          "multiplicity": 11
+        },
+        {
+          "counts": [
+            2,
+            4,
+            0
+          ],
+          "multiplicity": 5
+        },
+        {
+          "counts": [
+            3,
+            2,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "counts": [
+            3,
+            3,
+            0
+          ],
+          "multiplicity": 2
+        }
+      ],
+      "token_words": 75
+    },
+    {
+      "macro": {
+        "Q_power": "763651218448269648270668004277728185400950784000000000000000000000000000000000000",
+        "canonical_k": 6,
+        "coefficient": "4603511130190769448428956560329139249132858285",
+        "coefficient_dp_layer_sizes": [
+          1,
+          19,
+          60,
+          124,
+          211,
+          321,
+          454,
+          610,
+          773,
+          910,
+          1026,
+          1131,
+          1225,
+          1293,
+          1325,
+          1321,
+          1281,
+          1220,
+          1159,
+          1083,
+          982,
+          856,
+          720,
+          595,
+          481,
+          378,
+          286,
+          205,
+          135,
+          76,
+          28,
+          1
+        ],
+        "difference": "-763651218448269648270668004277728180797439653809230551571043439670860750867141715",
+        "exceeds_Q_power": false,
+        "log_ratio": -81.0965999318673,
+        "target_counts": [
+          90,
+          60,
+          36
+        ],
+        "token_factors": 31
+      },
+      "reset_letter": "5",
+      "start_label": "5",
+      "start_state": 6,
+      "token_content_types": 19,
+      "token_dp_layer_sizes": [
+        1,
+        3,
+        9,
+        27,
+        71,
+        157
+      ],
+      "token_length": 6,
+      "token_polynomial": [
+        {
+          "counts": [
+            0,
+            1,
+            5
+          ],
+          "multiplicity": 1
+        },
+        {
+          "counts": [
+            0,
+            2,
+            4
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            0,
+            3,
+            3
+          ],
+          "multiplicity": 6
+        },
+        {
+          "counts": [
+            0,
+            4,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            0,
+            5,
+            1
+          ],
+          "multiplicity": 1
+        },
+        {
+          "counts": [
+            1,
+            1,
+            4
+          ],
+          "multiplicity": 4
+        },
+        {
+          "counts": [
+            1,
+            2,
+            3
+          ],
+          "multiplicity": 13
+        },
+        {
+          "counts": [
+            1,
+            3,
+            2
+          ],
+          "multiplicity": 14
+        },
+        {
+          "counts": [
+            1,
+            4,
+            1
+          ],
+          "multiplicity": 5
+        },
+        {
+          "counts": [
+            2,
+            0,
+            4
+          ],
+          "multiplicity": 1
+        },
+        {
+          "counts": [
+            2,
+            1,
+            3
+          ],
+          "multiplicity": 9
+        },
+        {
+          "counts": [
+            2,
+            2,
+            2
+          ],
+          "multiplicity": 17
+        },
+        {
+          "counts": [
+            2,
+            3,
+            1
+          ],
+          "multiplicity": 8
+        },
+        {
+          "counts": [
+            3,
+            0,
+            3
+          ],
+          "multiplicity": 3
+        },
+        {
+          "counts": [
+            3,
+            1,
+            2
+          ],
+          "multiplicity": 8
+        },
+        {
+          "counts": [
+            3,
+            2,
+            1
+          ],
+          "multiplicity": 5
+        },
+        {
+          "counts": [
+            4,
+            0,
+            2
+          ],
+          "multiplicity": 3
+        },
+        {
+          "counts": [
+            4,
+            1,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "counts": [
+            5,
+            0,
+            1
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "token_words": 110
+    }
+  ],
+  "schema_version": 1,
+  "script_sha256": "535afdad4a12278d5e3e02644223c526267027972deff812823999f1b72fcda2"
+}

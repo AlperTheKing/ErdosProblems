@@ -1,0 +1,23 @@
+{
+  "schema":"C92-common-bank-ratio-v1",
+  "limit":1000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "definitions":{"A_H":"persistent hard roots at cutoff X","D":"splitless roots whose seed-2 chain has reached a generated value by X"},
+  "audit":{"checked_cutoffs_with_positive_A_H":999947,"failure_count_6D_lt_5A_H":0,"first_failure_X":null,"minimum_margin_6D_minus_5A_H":0,"minimum_margin_X":186,"scale_quarter_upper":{"statement":"A_H(X)<=D(X)+A_H(floor(X/4))+1","failure_count":0,"minimum_margin":0,"minimum_margin_X":186},"scale_quarter_lower":{"statement":"2D(X)>=7A_H(floor(X/4))","failure_count":0,"minimum_margin":0,"minimum_margin_X":2},"minimum_ratio":{"D":5,"A_H":6,"reduced_numerator":5,"reduced_denominator":6,"X":186}},
+  "endpoint":{"A_H":27056,"D":44271,"hard_births":45583,"hard_deaths":18527,"splitless_births":108651,"splitless_deaths":44271},
+  "checkpoints":[
+    {"X":54,"A_H":1,"D":1,"margin_6D_minus_5A_H":1},
+    {"X":74,"A_H":2,"D":2,"margin_6D_minus_5A_H":2},
+    {"X":114,"A_H":3,"D":3,"margin_6D_minus_5A_H":3},
+    {"X":186,"A_H":6,"D":5,"margin_6D_minus_5A_H":0},
+    {"X":204,"A_H":6,"D":5,"margin_6D_minus_5A_H":0},
+    {"X":362,"A_H":11,"D":10,"margin_6D_minus_5A_H":5},
+    {"X":1000,"A_H":34,"D":34,"margin_6D_minus_5A_H":34},
+    {"X":10000,"A_H":391,"D":374,"margin_6D_minus_5A_H":289},
+    {"X":100000,"A_H":3386,"D":4279,"margin_6D_minus_5A_H":8744},
+    {"X":1000000,"A_H":27056,"D":44271,"margin_6D_minus_5A_H":130346}
+  ],
+  "digests":{"algorithm":"FNV-1a-64 little-endian","classification_2_through_limit":"87339232cc226911","trajectory_X_A_H_D":"0460640dad88bd6b"},
+  "timing_seconds":0.035733
+}

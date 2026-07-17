@@ -1,0 +1,406 @@
+{
+  "direct_integer_checks": 1000001,
+  "first_equality_values": [
+    28,
+    58,
+    88,
+    118,
+    148,
+    178,
+    208,
+    238,
+    268,
+    298,
+    328,
+    358,
+    388,
+    418,
+    448,
+    478,
+    508,
+    538,
+    568,
+    598
+  ],
+  "multiplicity_check": {
+    "endpoint_checks": 87491,
+    "equalities": 1,
+    "largest_exact_to_bound_ratio": 1.0,
+    "largest_ratio_fraction": "1/1",
+    "largest_subprobability": 1.0,
+    "near_canonical_rows": [
+      {
+        "counts": [
+          1,
+          0,
+          0
+        ],
+        "length": 1,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 0.967741935483871
+      },
+      {
+        "counts": [
+          1,
+          1,
+          0
+        ],
+        "length": 2,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 1.3244455839082057
+      },
+      {
+        "counts": [
+          1,
+          1,
+          1
+        ],
+        "length": 3,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 1.5697818738665934
+      },
+      {
+        "counts": [
+          2,
+          1,
+          1
+        ],
+        "length": 4,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 1.7541561047339476
+      },
+      {
+        "counts": [
+          2,
+          2,
+          1
+        ],
+        "length": 5,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 1.8979414322571035
+      },
+      {
+        "counts": [
+          3,
+          2,
+          1
+        ],
+        "length": 6,
+        "max_multiplicity": 1,
+        "sqrt_n_maxR_over_(31/30)^n": 2.0120232295565392
+      },
+      {
+        "counts": [
+          4,
+          2,
+          1
+        ],
+        "length": 7,
+        "max_multiplicity": 2,
+        "sqrt_n_maxR_over_(31/30)^n": 4.20625833223519
+      },
+      {
+        "counts": [
+          4,
+          3,
+          1
+        ],
+        "length": 8,
+        "max_multiplicity": 2,
+        "sqrt_n_maxR_over_(31/30)^n": 4.351625131655457
+      },
+      {
+        "counts": [
+          4,
+          3,
+          2
+        ],
+        "length": 9,
+        "max_multiplicity": 2,
+        "sqrt_n_maxR_over_(31/30)^n": 4.466705283544901
+      },
+      {
+        "counts": [
+          5,
+          3,
+          2
+        ],
+        "length": 10,
+        "max_multiplicity": 3,
+        "sqrt_n_maxR_over_(31/30)^n": 6.834659193246826
+      }
+    ],
+    "subprobability_checks": 53722
+  },
+  "potential": "d+28/59",
+  "residue_rows": [
+    {
+      "branches": [
+        2
+      ],
+      "residue": 0,
+      "slack_at_residue": "28/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [
+        3
+      ],
+      "residue": 1,
+      "slack_at_residue": "1857/1829",
+      "slack_intercept": "618/1829",
+      "slack_slope": "21/31"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 2,
+      "slack_at_residue": "1916/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [
+        5
+      ],
+      "residue": 3,
+      "slack_at_residue": "5515/1829",
+      "slack_intercept": "1090/1829",
+      "slack_slope": "25/31"
+    },
+    {
+      "branches": [
+        2,
+        3
+      ],
+      "residue": 4,
+      "slack_at_residue": "1194/1829",
+      "slack_intercept": "-222/1829",
+      "slack_slope": "6/31"
+    },
+    {
+      "branches": [],
+      "residue": 5,
+      "slack_at_residue": "323/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 6,
+      "slack_at_residue": "5692/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [
+        3
+      ],
+      "residue": 7,
+      "slack_at_residue": "9291/1829",
+      "slack_intercept": "618/1829",
+      "slack_slope": "21/31"
+    },
+    {
+      "branches": [
+        2,
+        5
+      ],
+      "residue": 8,
+      "slack_at_residue": "4970/1829",
+      "slack_intercept": "250/1829",
+      "slack_slope": "10/31"
+    },
+    {
+      "branches": [],
+      "residue": 9,
+      "slack_at_residue": "559/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2,
+        3
+      ],
+      "residue": 10,
+      "slack_at_residue": "3318/1829",
+      "slack_intercept": "-222/1829",
+      "slack_slope": "6/31"
+    },
+    {
+      "branches": [],
+      "residue": 11,
+      "slack_at_residue": "677/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 12,
+      "slack_at_residue": "11356/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [
+        3,
+        5
+      ],
+      "residue": 13,
+      "slack_at_residue": "12345/1829",
+      "slack_intercept": "840/1829",
+      "slack_slope": "15/31"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 14,
+      "slack_at_residue": "13244/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [],
+      "residue": 15,
+      "slack_at_residue": "913/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2,
+        3
+      ],
+      "residue": 16,
+      "slack_at_residue": "5442/1829",
+      "slack_intercept": "-222/1829",
+      "slack_slope": "6/31"
+    },
+    {
+      "branches": [],
+      "residue": 17,
+      "slack_at_residue": "1031/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2,
+        5
+      ],
+      "residue": 18,
+      "slack_at_residue": "10870/1829",
+      "slack_intercept": "250/1829",
+      "slack_slope": "10/31"
+    },
+    {
+      "branches": [
+        3
+      ],
+      "residue": 19,
+      "slack_at_residue": "24159/1829",
+      "slack_intercept": "618/1829",
+      "slack_slope": "21/31"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 20,
+      "slack_at_residue": "18908/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [],
+      "residue": 21,
+      "slack_at_residue": "1267/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2,
+        3
+      ],
+      "residue": 22,
+      "slack_at_residue": "7566/1829",
+      "slack_intercept": "-222/1829",
+      "slack_slope": "6/31"
+    },
+    {
+      "branches": [
+        5
+      ],
+      "residue": 23,
+      "slack_at_residue": "35015/1829",
+      "slack_intercept": "1090/1829",
+      "slack_slope": "25/31"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 24,
+      "slack_at_residue": "22684/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [
+        3
+      ],
+      "residue": 25,
+      "slack_at_residue": "31593/1829",
+      "slack_intercept": "618/1829",
+      "slack_slope": "21/31"
+    },
+    {
+      "branches": [
+        2
+      ],
+      "residue": 26,
+      "slack_at_residue": "24572/1829",
+      "slack_intercept": "28/1829",
+      "slack_slope": "16/31"
+    },
+    {
+      "branches": [],
+      "residue": 27,
+      "slack_at_residue": "1621/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    },
+    {
+      "branches": [
+        2,
+        3,
+        5
+      ],
+      "residue": 28,
+      "slack_at_residue": "0/1",
+      "slack_intercept": "0/1",
+      "slack_slope": "0/1"
+    },
+    {
+      "branches": [],
+      "residue": 29,
+      "slack_at_residue": "1739/59",
+      "slack_intercept": "28/59",
+      "slack_slope": "1/1"
+    }
+  ],
+  "script_sha256": "2b35811b59f804c51e6e317d7ff0b746c54d76cb5c7f792d918624b43f9f2b6e",
+  "symbolic_equalities": [
+    28
+  ],
+  "weight": "30/31"
+}

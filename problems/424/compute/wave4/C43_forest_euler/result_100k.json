@@ -1,0 +1,2854 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "exact_census": {
+    "holes": 26823,
+    "hard": 5108,
+    "targets": 6783,
+    "maximum_rank": 12
+  },
+  "critical_seed2_sibling": {
+    "claim": "each hard h has critical p with T2(p) healed or rho(T2(p))=rho(h)",
+    "first_failure": {
+      "hard": 774,
+      "hard_rank": 2,
+      "critical_choices": [
+        {
+          "parent": 155,
+          "parent_rank": 1,
+          "seed2_child": 309,
+          "status": "hole",
+          "child_rank": 4
+        }
+      ]
+    },
+    "first_nonunit_critical_jump": {
+      "hard": 774,
+      "hard_rank": 2,
+      "parent": 155,
+      "parent_rank": 1,
+      "seed2_child": 309,
+      "child_rank": 4,
+      "jump": 3
+    },
+    "choice_histogram": {
+      "healed": 400,
+      "unit_hole": 5493,
+      "larger_jump_hole": 99
+    }
+  },
+  "component_models": [
+    {
+      "model": "canonical_min",
+      "claim": "sum_C max(H_C_le_d(X)-Q_C_le_d(X),0) <= 1",
+      "first_failure": {
+        "X": 114,
+        "d": 2,
+        "global_excess": 0,
+        "positive_sum": 2,
+        "positive_count": 2,
+        "components": 22,
+        "positive_components": [
+          {
+            "anchor": 8,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          }
+        ],
+        "snapshot": [
+          {
+            "anchor": 6,
+            "hard_events": [
+              {
+                "n": 54,
+                "rank": 2,
+                "parent_edges": [
+                  11
+                ],
+                "critical": [
+                  11
+                ]
+              }
+            ],
+            "target_events": [
+              {
+                "child": 41,
+                "parent": 21,
+                "rank": 2
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 6,
+                "rank": 0
+              },
+              {
+                "n": 11,
+                "rank": 1
+              },
+              {
+                "n": 21,
+                "rank": 2
+              },
+              {
+                "n": 32,
+                "rank": 2
+              },
+              {
+                "n": 54,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 1,
+            "deficit": 0
+          },
+          {
+            "anchor": 8,
+            "hard_events": [
+              {
+                "n": 74,
+                "rank": 2,
+                "parent_edges": [
+                  15
+                ],
+                "critical": [
+                  15
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 8,
+                "rank": 0
+              },
+              {
+                "n": 15,
+                "rank": 1
+              },
+              {
+                "n": 29,
+                "rank": 2
+              },
+              {
+                "n": 74,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard_events": [
+              {
+                "n": 114,
+                "rank": 2,
+                "parent_edges": [
+                  23
+                ],
+                "critical": [
+                  23
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 12,
+                "rank": 0
+              },
+              {
+                "n": 23,
+                "rank": 1
+              },
+              {
+                "n": 45,
+                "rank": 2
+              },
+              {
+                "n": 68,
+                "rank": 2
+              },
+              {
+                "n": 114,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 18,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 69,
+                "parent": 35,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 18,
+                "rank": 0
+              },
+              {
+                "n": 35,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          },
+          {
+            "anchor": 20,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 77,
+                "parent": 39,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 20,
+                "rank": 0
+              },
+              {
+                "n": 39,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          }
+        ]
+      },
+      "maximum_global_excess": 1,
+      "maximum_positive_component_sum": 2625,
+      "maximum_positive_component_count": 125,
+      "by_rank": [
+        {
+          "d": 0,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 1,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 2,
+          "maximum_global_excess": 1,
+          "maximum_positive_component_sum": 1657,
+          "maximum_positive_component_count": 59,
+          "first_component_failure": {
+            "X": 114,
+            "d": 2,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ],
+            "snapshot": [
+              {
+                "anchor": 6,
+                "hard_events": [
+                  {
+                    "n": 54,
+                    "rank": 2,
+                    "parent_edges": [
+                      11
+                    ],
+                    "critical": [
+                      11
+                    ]
+                  }
+                ],
+                "target_events": [
+                  {
+                    "child": 41,
+                    "parent": 21,
+                    "rank": 2
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 6,
+                    "rank": 0
+                  },
+                  {
+                    "n": 11,
+                    "rank": 1
+                  },
+                  {
+                    "n": 21,
+                    "rank": 2
+                  },
+                  {
+                    "n": 32,
+                    "rank": 2
+                  },
+                  {
+                    "n": 54,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 1,
+                "deficit": 0
+              },
+              {
+                "anchor": 8,
+                "hard_events": [
+                  {
+                    "n": 74,
+                    "rank": 2,
+                    "parent_edges": [
+                      15
+                    ],
+                    "critical": [
+                      15
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 8,
+                    "rank": 0
+                  },
+                  {
+                    "n": 15,
+                    "rank": 1
+                  },
+                  {
+                    "n": 29,
+                    "rank": 2
+                  },
+                  {
+                    "n": 74,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard_events": [
+                  {
+                    "n": 114,
+                    "rank": 2,
+                    "parent_edges": [
+                      23
+                    ],
+                    "critical": [
+                      23
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 12,
+                    "rank": 0
+                  },
+                  {
+                    "n": 23,
+                    "rank": 1
+                  },
+                  {
+                    "n": 45,
+                    "rank": 2
+                  },
+                  {
+                    "n": 68,
+                    "rank": 2
+                  },
+                  {
+                    "n": 114,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 18,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 69,
+                    "parent": 35,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 18,
+                    "rank": 0
+                  },
+                  {
+                    "n": 35,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              },
+              {
+                "anchor": 20,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 77,
+                    "parent": 39,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 20,
+                    "rank": 0
+                  },
+                  {
+                    "n": 39,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              }
+            ]
+          }
+        },
+        {
+          "d": 3,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 1878,
+          "maximum_positive_component_count": 65,
+          "first_component_failure": {
+            "X": 114,
+            "d": 3,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 4,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2327,
+          "maximum_positive_component_count": 90,
+          "first_component_failure": {
+            "X": 114,
+            "d": 4,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 5,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2487,
+          "maximum_positive_component_count": 102,
+          "first_component_failure": {
+            "X": 114,
+            "d": 5,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 6,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2618,
+          "maximum_positive_component_count": 115,
+          "first_component_failure": {
+            "X": 114,
+            "d": 6,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 7,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2625,
+          "maximum_positive_component_count": 122,
+          "first_component_failure": {
+            "X": 114,
+            "d": 7,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 8,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2598,
+          "maximum_positive_component_count": 124,
+          "first_component_failure": {
+            "X": 114,
+            "d": 8,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 9,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2567,
+          "maximum_positive_component_count": 125,
+          "first_component_failure": {
+            "X": 114,
+            "d": 9,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 10,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2541,
+          "maximum_positive_component_count": 124,
+          "first_component_failure": {
+            "X": 114,
+            "d": 10,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 11,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2539,
+          "maximum_positive_component_count": 124,
+          "first_component_failure": {
+            "X": 114,
+            "d": 11,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 12,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2539,
+          "maximum_positive_component_count": 124,
+          "first_component_failure": {
+            "X": 114,
+            "d": 12,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "model": "canonical_max",
+      "claim": "sum_C max(H_C_le_d(X)-Q_C_le_d(X),0) <= 1",
+      "first_failure": {
+        "X": 114,
+        "d": 2,
+        "global_excess": 0,
+        "positive_sum": 2,
+        "positive_count": 2,
+        "components": 22,
+        "positive_components": [
+          {
+            "anchor": 8,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          }
+        ],
+        "snapshot": [
+          {
+            "anchor": 6,
+            "hard_events": [
+              {
+                "n": 54,
+                "rank": 2,
+                "parent_edges": [
+                  11
+                ],
+                "critical": [
+                  11
+                ]
+              }
+            ],
+            "target_events": [
+              {
+                "child": 41,
+                "parent": 21,
+                "rank": 2
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 6,
+                "rank": 0
+              },
+              {
+                "n": 11,
+                "rank": 1
+              },
+              {
+                "n": 21,
+                "rank": 2
+              },
+              {
+                "n": 32,
+                "rank": 2
+              },
+              {
+                "n": 54,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 1,
+            "deficit": 0
+          },
+          {
+            "anchor": 8,
+            "hard_events": [
+              {
+                "n": 74,
+                "rank": 2,
+                "parent_edges": [
+                  15
+                ],
+                "critical": [
+                  15
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 8,
+                "rank": 0
+              },
+              {
+                "n": 15,
+                "rank": 1
+              },
+              {
+                "n": 29,
+                "rank": 2
+              },
+              {
+                "n": 74,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard_events": [
+              {
+                "n": 114,
+                "rank": 2,
+                "parent_edges": [
+                  23
+                ],
+                "critical": [
+                  23
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 12,
+                "rank": 0
+              },
+              {
+                "n": 23,
+                "rank": 1
+              },
+              {
+                "n": 45,
+                "rank": 2
+              },
+              {
+                "n": 68,
+                "rank": 2
+              },
+              {
+                "n": 114,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 18,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 69,
+                "parent": 35,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 18,
+                "rank": 0
+              },
+              {
+                "n": 35,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          },
+          {
+            "anchor": 20,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 77,
+                "parent": 39,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 20,
+                "rank": 0
+              },
+              {
+                "n": 39,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          }
+        ]
+      },
+      "maximum_global_excess": 1,
+      "maximum_positive_component_sum": 2541,
+      "maximum_positive_component_count": 155,
+      "by_rank": [
+        {
+          "d": 0,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 1,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 2,
+          "maximum_global_excess": 1,
+          "maximum_positive_component_sum": 1602,
+          "maximum_positive_component_count": 95,
+          "first_component_failure": {
+            "X": 114,
+            "d": 2,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ],
+            "snapshot": [
+              {
+                "anchor": 6,
+                "hard_events": [
+                  {
+                    "n": 54,
+                    "rank": 2,
+                    "parent_edges": [
+                      11
+                    ],
+                    "critical": [
+                      11
+                    ]
+                  }
+                ],
+                "target_events": [
+                  {
+                    "child": 41,
+                    "parent": 21,
+                    "rank": 2
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 6,
+                    "rank": 0
+                  },
+                  {
+                    "n": 11,
+                    "rank": 1
+                  },
+                  {
+                    "n": 21,
+                    "rank": 2
+                  },
+                  {
+                    "n": 32,
+                    "rank": 2
+                  },
+                  {
+                    "n": 54,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 1,
+                "deficit": 0
+              },
+              {
+                "anchor": 8,
+                "hard_events": [
+                  {
+                    "n": 74,
+                    "rank": 2,
+                    "parent_edges": [
+                      15
+                    ],
+                    "critical": [
+                      15
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 8,
+                    "rank": 0
+                  },
+                  {
+                    "n": 15,
+                    "rank": 1
+                  },
+                  {
+                    "n": 29,
+                    "rank": 2
+                  },
+                  {
+                    "n": 74,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard_events": [
+                  {
+                    "n": 114,
+                    "rank": 2,
+                    "parent_edges": [
+                      23
+                    ],
+                    "critical": [
+                      23
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 12,
+                    "rank": 0
+                  },
+                  {
+                    "n": 23,
+                    "rank": 1
+                  },
+                  {
+                    "n": 45,
+                    "rank": 2
+                  },
+                  {
+                    "n": 68,
+                    "rank": 2
+                  },
+                  {
+                    "n": 114,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 18,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 69,
+                    "parent": 35,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 18,
+                    "rank": 0
+                  },
+                  {
+                    "n": 35,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              },
+              {
+                "anchor": 20,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 77,
+                    "parent": 39,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 20,
+                    "rank": 0
+                  },
+                  {
+                    "n": 39,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              }
+            ]
+          }
+        },
+        {
+          "d": 3,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 1813,
+          "maximum_positive_component_count": 96,
+          "first_component_failure": {
+            "X": 114,
+            "d": 3,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 4,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2251,
+          "maximum_positive_component_count": 128,
+          "first_component_failure": {
+            "X": 114,
+            "d": 4,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 5,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2408,
+          "maximum_positive_component_count": 140,
+          "first_component_failure": {
+            "X": 114,
+            "d": 5,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 6,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2538,
+          "maximum_positive_component_count": 152,
+          "first_component_failure": {
+            "X": 114,
+            "d": 6,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 7,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2541,
+          "maximum_positive_component_count": 155,
+          "first_component_failure": {
+            "X": 114,
+            "d": 7,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 8,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2512,
+          "maximum_positive_component_count": 155,
+          "first_component_failure": {
+            "X": 114,
+            "d": 8,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 9,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2479,
+          "maximum_positive_component_count": 152,
+          "first_component_failure": {
+            "X": 114,
+            "d": 9,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 10,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2453,
+          "maximum_positive_component_count": 151,
+          "first_component_failure": {
+            "X": 114,
+            "d": 10,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 11,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2451,
+          "maximum_positive_component_count": 151,
+          "first_component_failure": {
+            "X": 114,
+            "d": 11,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 12,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2451,
+          "maximum_positive_component_count": 151,
+          "first_component_failure": {
+            "X": 114,
+            "d": 12,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "model": "all_critical",
+      "claim": "sum_C max(H_C_le_d(X)-Q_C_le_d(X),0) <= 1",
+      "first_failure": {
+        "X": 114,
+        "d": 2,
+        "global_excess": 0,
+        "positive_sum": 2,
+        "positive_count": 2,
+        "components": 22,
+        "positive_components": [
+          {
+            "anchor": 8,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          }
+        ],
+        "snapshot": [
+          {
+            "anchor": 6,
+            "hard_events": [
+              {
+                "n": 54,
+                "rank": 2,
+                "parent_edges": [
+                  11
+                ],
+                "critical": [
+                  11
+                ]
+              }
+            ],
+            "target_events": [
+              {
+                "child": 41,
+                "parent": 21,
+                "rank": 2
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 6,
+                "rank": 0
+              },
+              {
+                "n": 11,
+                "rank": 1
+              },
+              {
+                "n": 21,
+                "rank": 2
+              },
+              {
+                "n": 32,
+                "rank": 2
+              },
+              {
+                "n": 54,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 1,
+            "deficit": 0
+          },
+          {
+            "anchor": 8,
+            "hard_events": [
+              {
+                "n": 74,
+                "rank": 2,
+                "parent_edges": [
+                  15
+                ],
+                "critical": [
+                  15
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 8,
+                "rank": 0
+              },
+              {
+                "n": 15,
+                "rank": 1
+              },
+              {
+                "n": 29,
+                "rank": 2
+              },
+              {
+                "n": 74,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard_events": [
+              {
+                "n": 114,
+                "rank": 2,
+                "parent_edges": [
+                  23
+                ],
+                "critical": [
+                  23
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 12,
+                "rank": 0
+              },
+              {
+                "n": 23,
+                "rank": 1
+              },
+              {
+                "n": 45,
+                "rank": 2
+              },
+              {
+                "n": 68,
+                "rank": 2
+              },
+              {
+                "n": 114,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 18,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 69,
+                "parent": 35,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 18,
+                "rank": 0
+              },
+              {
+                "n": 35,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          },
+          {
+            "anchor": 20,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 77,
+                "parent": 39,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 20,
+                "rank": 0
+              },
+              {
+                "n": 39,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          }
+        ]
+      },
+      "maximum_global_excess": 1,
+      "maximum_positive_component_sum": 2490,
+      "maximum_positive_component_count": 74,
+      "by_rank": [
+        {
+          "d": 0,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 1,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 2,
+          "maximum_global_excess": 1,
+          "maximum_positive_component_sum": 1588,
+          "maximum_positive_component_count": 21,
+          "first_component_failure": {
+            "X": 114,
+            "d": 2,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ],
+            "snapshot": [
+              {
+                "anchor": 6,
+                "hard_events": [
+                  {
+                    "n": 54,
+                    "rank": 2,
+                    "parent_edges": [
+                      11
+                    ],
+                    "critical": [
+                      11
+                    ]
+                  }
+                ],
+                "target_events": [
+                  {
+                    "child": 41,
+                    "parent": 21,
+                    "rank": 2
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 6,
+                    "rank": 0
+                  },
+                  {
+                    "n": 11,
+                    "rank": 1
+                  },
+                  {
+                    "n": 21,
+                    "rank": 2
+                  },
+                  {
+                    "n": 32,
+                    "rank": 2
+                  },
+                  {
+                    "n": 54,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 1,
+                "deficit": 0
+              },
+              {
+                "anchor": 8,
+                "hard_events": [
+                  {
+                    "n": 74,
+                    "rank": 2,
+                    "parent_edges": [
+                      15
+                    ],
+                    "critical": [
+                      15
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 8,
+                    "rank": 0
+                  },
+                  {
+                    "n": 15,
+                    "rank": 1
+                  },
+                  {
+                    "n": 29,
+                    "rank": 2
+                  },
+                  {
+                    "n": 74,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard_events": [
+                  {
+                    "n": 114,
+                    "rank": 2,
+                    "parent_edges": [
+                      23
+                    ],
+                    "critical": [
+                      23
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 12,
+                    "rank": 0
+                  },
+                  {
+                    "n": 23,
+                    "rank": 1
+                  },
+                  {
+                    "n": 45,
+                    "rank": 2
+                  },
+                  {
+                    "n": 68,
+                    "rank": 2
+                  },
+                  {
+                    "n": 114,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 18,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 69,
+                    "parent": 35,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 18,
+                    "rank": 0
+                  },
+                  {
+                    "n": 35,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              },
+              {
+                "anchor": 20,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 77,
+                    "parent": 39,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 20,
+                    "rank": 0
+                  },
+                  {
+                    "n": 39,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              }
+            ]
+          }
+        },
+        {
+          "d": 3,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 1794,
+          "maximum_positive_component_count": 24,
+          "first_component_failure": {
+            "X": 114,
+            "d": 3,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 4,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2218,
+          "maximum_positive_component_count": 52,
+          "first_component_failure": {
+            "X": 114,
+            "d": 4,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 5,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2369,
+          "maximum_positive_component_count": 61,
+          "first_component_failure": {
+            "X": 114,
+            "d": 5,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 6,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2490,
+          "maximum_positive_component_count": 67,
+          "first_component_failure": {
+            "X": 114,
+            "d": 6,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 7,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2487,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 7,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 8,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2455,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 8,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 9,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2420,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 9,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 10,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2393,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 10,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 11,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2391,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 11,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 12,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2391,
+          "maximum_positive_component_count": 74,
+          "first_component_failure": {
+            "X": 114,
+            "d": 12,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "model": "all_lower_blockers",
+      "claim": "sum_C max(H_C_le_d(X)-Q_C_le_d(X),0) <= 1",
+      "first_failure": {
+        "X": 114,
+        "d": 2,
+        "global_excess": 0,
+        "positive_sum": 2,
+        "positive_count": 2,
+        "components": 22,
+        "positive_components": [
+          {
+            "anchor": 8,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard": 1,
+            "exits": 0,
+            "deficit": 1
+          }
+        ],
+        "snapshot": [
+          {
+            "anchor": 6,
+            "hard_events": [
+              {
+                "n": 54,
+                "rank": 2,
+                "parent_edges": [
+                  11
+                ],
+                "critical": [
+                  11
+                ]
+              }
+            ],
+            "target_events": [
+              {
+                "child": 41,
+                "parent": 21,
+                "rank": 2
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 6,
+                "rank": 0
+              },
+              {
+                "n": 11,
+                "rank": 1
+              },
+              {
+                "n": 21,
+                "rank": 2
+              },
+              {
+                "n": 32,
+                "rank": 2
+              },
+              {
+                "n": 54,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 1,
+            "deficit": 0
+          },
+          {
+            "anchor": 8,
+            "hard_events": [
+              {
+                "n": 74,
+                "rank": 2,
+                "parent_edges": [
+                  15
+                ],
+                "critical": [
+                  15
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 8,
+                "rank": 0
+              },
+              {
+                "n": 15,
+                "rank": 1
+              },
+              {
+                "n": 29,
+                "rank": 2
+              },
+              {
+                "n": 74,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 12,
+            "hard_events": [
+              {
+                "n": 114,
+                "rank": 2,
+                "parent_edges": [
+                  23
+                ],
+                "critical": [
+                  23
+                ]
+              }
+            ],
+            "target_events": [],
+            "hole_members": [
+              {
+                "n": 12,
+                "rank": 0
+              },
+              {
+                "n": 23,
+                "rank": 1
+              },
+              {
+                "n": 45,
+                "rank": 2
+              },
+              {
+                "n": 68,
+                "rank": 2
+              },
+              {
+                "n": 114,
+                "rank": 2
+              }
+            ],
+            "hard_count": 1,
+            "exit_count": 0,
+            "deficit": 1
+          },
+          {
+            "anchor": 18,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 69,
+                "parent": 35,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 18,
+                "rank": 0
+              },
+              {
+                "n": 35,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          },
+          {
+            "anchor": 20,
+            "hard_events": [],
+            "target_events": [
+              {
+                "child": 77,
+                "parent": 39,
+                "rank": 1
+              }
+            ],
+            "hole_members": [
+              {
+                "n": 20,
+                "rank": 0
+              },
+              {
+                "n": 39,
+                "rank": 1
+              }
+            ],
+            "hard_count": 0,
+            "exit_count": 1,
+            "deficit": -1
+          }
+        ]
+      },
+      "maximum_global_excess": 1,
+      "maximum_positive_component_sum": 2373,
+      "maximum_positive_component_count": 34,
+      "by_rank": [
+        {
+          "d": 0,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 1,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 0,
+          "maximum_positive_component_count": 0,
+          "first_component_failure": null
+        },
+        {
+          "d": 2,
+          "maximum_global_excess": 1,
+          "maximum_positive_component_sum": 1588,
+          "maximum_positive_component_count": 21,
+          "first_component_failure": {
+            "X": 114,
+            "d": 2,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ],
+            "snapshot": [
+              {
+                "anchor": 6,
+                "hard_events": [
+                  {
+                    "n": 54,
+                    "rank": 2,
+                    "parent_edges": [
+                      11
+                    ],
+                    "critical": [
+                      11
+                    ]
+                  }
+                ],
+                "target_events": [
+                  {
+                    "child": 41,
+                    "parent": 21,
+                    "rank": 2
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 6,
+                    "rank": 0
+                  },
+                  {
+                    "n": 11,
+                    "rank": 1
+                  },
+                  {
+                    "n": 21,
+                    "rank": 2
+                  },
+                  {
+                    "n": 32,
+                    "rank": 2
+                  },
+                  {
+                    "n": 54,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 1,
+                "deficit": 0
+              },
+              {
+                "anchor": 8,
+                "hard_events": [
+                  {
+                    "n": 74,
+                    "rank": 2,
+                    "parent_edges": [
+                      15
+                    ],
+                    "critical": [
+                      15
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 8,
+                    "rank": 0
+                  },
+                  {
+                    "n": 15,
+                    "rank": 1
+                  },
+                  {
+                    "n": 29,
+                    "rank": 2
+                  },
+                  {
+                    "n": 74,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard_events": [
+                  {
+                    "n": 114,
+                    "rank": 2,
+                    "parent_edges": [
+                      23
+                    ],
+                    "critical": [
+                      23
+                    ]
+                  }
+                ],
+                "target_events": [],
+                "hole_members": [
+                  {
+                    "n": 12,
+                    "rank": 0
+                  },
+                  {
+                    "n": 23,
+                    "rank": 1
+                  },
+                  {
+                    "n": 45,
+                    "rank": 2
+                  },
+                  {
+                    "n": 68,
+                    "rank": 2
+                  },
+                  {
+                    "n": 114,
+                    "rank": 2
+                  }
+                ],
+                "hard_count": 1,
+                "exit_count": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 18,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 69,
+                    "parent": 35,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 18,
+                    "rank": 0
+                  },
+                  {
+                    "n": 35,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              },
+              {
+                "anchor": 20,
+                "hard_events": [],
+                "target_events": [
+                  {
+                    "child": 77,
+                    "parent": 39,
+                    "rank": 1
+                  }
+                ],
+                "hole_members": [
+                  {
+                    "n": 20,
+                    "rank": 0
+                  },
+                  {
+                    "n": 39,
+                    "rank": 1
+                  }
+                ],
+                "hard_count": 0,
+                "exit_count": 1,
+                "deficit": -1
+              }
+            ]
+          }
+        },
+        {
+          "d": 3,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 1784,
+          "maximum_positive_component_count": 18,
+          "first_component_failure": {
+            "X": 114,
+            "d": 3,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 4,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2167,
+          "maximum_positive_component_count": 26,
+          "first_component_failure": {
+            "X": 114,
+            "d": 4,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 5,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2290,
+          "maximum_positive_component_count": 29,
+          "first_component_failure": {
+            "X": 114,
+            "d": 5,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 6,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2373,
+          "maximum_positive_component_count": 34,
+          "first_component_failure": {
+            "X": 114,
+            "d": 6,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 7,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2344,
+          "maximum_positive_component_count": 30,
+          "first_component_failure": {
+            "X": 114,
+            "d": 7,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 8,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2295,
+          "maximum_positive_component_count": 26,
+          "first_component_failure": {
+            "X": 114,
+            "d": 8,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 9,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2254,
+          "maximum_positive_component_count": 27,
+          "first_component_failure": {
+            "X": 114,
+            "d": 9,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 10,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2222,
+          "maximum_positive_component_count": 28,
+          "first_component_failure": {
+            "X": 114,
+            "d": 10,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 11,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2220,
+          "maximum_positive_component_count": 28,
+          "first_component_failure": {
+            "X": 114,
+            "d": 11,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        },
+        {
+          "d": 12,
+          "maximum_global_excess": 0,
+          "maximum_positive_component_sum": 2220,
+          "maximum_positive_component_count": 28,
+          "first_component_failure": {
+            "X": 114,
+            "d": 12,
+            "global_excess": 0,
+            "positive_sum": 2,
+            "positive_count": 2,
+            "components": 22,
+            "positive_components": [
+              {
+                "anchor": 8,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              },
+              {
+                "anchor": 12,
+                "hard": 1,
+                "exits": 0,
+                "deficit": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

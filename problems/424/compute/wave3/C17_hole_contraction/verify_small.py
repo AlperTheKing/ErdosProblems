@@ -1,6 +1,7 @@
 import json
 import math
 import subprocess
+import sys
 import unittest
 from fractions import Fraction
 from pathlib import Path
@@ -8,6 +9,10 @@ from pathlib import Path
 
 WEIGHT_SCALE = 1 << 30
 ROOT = Path(__file__).resolve().parent
+REPO_ROOT = ROOT.parents[4]
+C22_RESULT = Path(
+    "problems/424/compute/wave3/C22_universal_contraction_sat/result_5000.json"
+)
 
 
 def allowed(value: int) -> bool:
@@ -41,6 +46,7 @@ def naive_census(limit: int) -> dict:
     max_direct = (Fraction(0), 0)
     max_fixed = (Fraction(0), 0)
     first_direct_two = 0
+    first_two_scale_failure = 0
     first_fixed_two = 0
     odd_reducible = 0
     seed3_even_reducible = 0
@@ -132,6 +138,9 @@ def naive_census(limit: int) -> dict:
                 first_direct_two = n
             if not first_fixed_two and fixed >= 2:
                 first_fixed_two = n
+        third_missing = missing_prefix[(n + 1) // 3]
+        if not first_two_scale_failure and reducible > half_missing + third_missing:
+            first_two_scale_failure = n
 
     return {
         "member": member,
@@ -143,6 +152,7 @@ def naive_census(limit: int) -> dict:
         "max_direct": max_direct,
         "max_fixed": max_fixed,
         "first_direct_two": first_direct_two,
+        "first_two_scale_failure": first_two_scale_failure,
         "first_fixed_two": first_fixed_two,
         "odd_reducible": odd_reducible,
         "seed3_even_reducible": seed3_even_reducible,
@@ -208,6 +218,7 @@ class C17Verifier(unittest.TestCase):
             ROOT / "_verify_weighted.json",
             ROOT / "_verify_hall54.json",
             ROOT / "_verify_hall2000.json",
+            ROOT / "_verify_grounding5000.json",
         ]
 
     @classmethod
@@ -235,6 +246,16 @@ class C17Verifier(unittest.TestCase):
         )
         self.assertEqual(endpoint["hard_reducible"], expected["hard_reducible"])
         self.assertEqual(endpoint["seed2_healed"], expected["seed2_healed"])
+        self.assertEqual(
+            endpoint["missing_at_third"],
+            expected["missing_prefix"][(limit + 1) // 3],
+        )
+        self.assertEqual(
+            endpoint["two_scale_excess"],
+            endpoint["reducible_missing"]
+            - endpoint["missing_at_half"]
+            - endpoint["missing_at_third"],
+        )
         self.assertEqual(endpoint["rank_histogram"], expected["rank_histogram"])
         self.assertEqual(
             endpoint["healing_rank_histogram"],
@@ -259,6 +280,10 @@ class C17Verifier(unittest.TestCase):
             fixed,
         )
         self.assertEqual(actual["first_lambda_two_failure_X"], 0)
+        self.assertEqual(
+            actual["first_two_scale_failure_X"],
+            expected["first_two_scale_failure"],
+        )
         self.assertEqual(actual["first_fixed_point_lambda_two_failure_X"], 0)
 
         reciprocal = endpoint["reciprocal_all_pair_charge"]
@@ -297,6 +322,27 @@ class C17Verifier(unittest.TestCase):
         self.assertEqual(actual["left_count"], len(outputs))
         self.assertEqual(actual["edge_count"], sum(map(len, graph)))
         self.assertEqual(actual["matching_size"], kuhn_matching(graph))
+
+    def test_c22_grounding_replay(self) -> None:
+        output = self.outputs[3]
+        subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "grounding_audit.py"),
+                str(C22_RESULT),
+                str(output),
+            ],
+            cwd=REPO_ROOT,
+            check=True,
+        )
+        actual = json.loads(output.read_text(encoding="ascii"))
+        committed = json.loads(
+            (ROOT / "grounding_5000.json").read_text(encoding="ascii")
+        )
+        self.assertEqual(actual, committed)
+        self.assertFalse(actual["grounded"])
+        self.assertEqual(actual["ungrounded_member_count"], 1384)
+        self.assertEqual(actual["grounded_core_contraction"]["excess"], -515)
 
 
 if __name__ == "__main__":

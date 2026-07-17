@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "hard_count": 5108,
+  "target_count": 6783,
+  "decomposition_failures": [],
+  "target_event_root_kind_histogram": {
+    "splitless": 4857,
+    "hard_hole": 1926
+  },
+  "target_component_root_kind_histogram": {
+    "splitless": 4317,
+    "hard_hole": 1738
+  },
+  "all_target_greedy_unmatched": [
+    {
+      "source": 362,
+      "rank": 2
+    }
+  ],
+  "all_target_greedy_unmatched_count": 1,
+  "splitless_component_greedy_unmatched": [
+    {
+      "source": 362,
+      "rank": 2
+    },
+    {
+      "source": 954,
+      "rank": 2
+    },
+    {
+      "source": 1002,
+      "rank": 2
+    },
+    {
+      "source": 1014,
+      "rank": 4
+    },
+    {
+      "source": 1410,
+      "rank": 2
+    },
+    {
+      "source": 1424,
+      "rank": 3
+    },
+    {
+      "source": 1440,
+      "rank": 2
+    },
+    {
+      "source": 1554,
+      "rank": 5
+    },
+    {
+      "source": 1586,
+      "rank": 2
+    },
+    {
+      "source": 1614,
+      "rank": 4
+    },
+    {
+      "source": 1638,
+      "rank": 2
+    },
+    {
+      "source": 1644,
+      "rank": 4
+    },
+    {
+      "source": 1674,
+      "rank": 2
+    },
+    {
+      "source": 2166,
+      "rank": 2
+    },
+    {
+      "source": 2580,
+      "rank": 3
+    },
+    {
+      "source": 2628,
+      "rank": 2
+    },
+    {
+      "source": 3174,
+      "rank": 4
+    },
+    {
+      "source": 3222,
+      "rank": 2
+    },
+    {
+      "source": 3224,
+      "rank": 3
+    },
+    {
+      "source": 3242,
+      "rank": 2
+    }
+  ],
+  "splitless_component_greedy_unmatched_count": 310,
+  "first_splitless_boundary_greedy_unmatched": [
+    {
+      "source": 186,
+      "rank": 2
+    },
+    {
+      "source": 362,
+      "rank": 2
+    },
+    {
+      "source": 666,
+      "rank": 2
+    },
+    {
+      "source": 894,
+      "rank": 2
+    },
+    {
+      "source": 912,
+      "rank": 2
+    },
+    {
+      "source": 954,
+      "rank": 2
+    },
+    {
+      "source": 956,
+      "rank": 3
+    },
+    {
+      "source": 1002,
+      "rank": 2
+    },
+    {
+      "source": 1014,
+      "rank": 4
+    },
+    {
+      "source": 1242,
+      "rank": 2
+    },
+    {
+      "source": 1362,
+      "rank": 2
+    },
+    {
+      "source": 1404,
+      "rank": 4
+    },
+    {
+      "source": 1410,
+      "rank": 2
+    },
+    {
+      "source": 1424,
+      "rank": 3
+    },
+    {
+      "source": 1434,
+      "rank": 5
+    },
+    {
+      "source": 1440,
+      "rank": 2
+    },
+    {
+      "source": 1554,
+      "rank": 5
+    },
+    {
+      "source": 1586,
+      "rank": 2
+    },
+    {
+      "source": 1614,
+      "rank": 4
+    },
+    {
+      "source": 1638,
+      "rank": 2
+    }
+  ],
+  "first_splitless_boundary_greedy_unmatched_count": 798,
+  "first_boundary_each_component_greedy_unmatched": [
+    {
+      "source": 186,
+      "rank": 2
+    },
+    {
+      "source": 362,
+      "rank": 2
+    },
+    {
+      "source": 954,
+      "rank": 2
+    },
+    {
+      "source": 1002,
+      "rank": 2
+    },
+    {
+      "source": 1614,
+      "rank": 4
+    },
+    {
+      "source": 1638,
+      "rank": 2
+    },
+    {
+      "source": 1644,
+      "rank": 4
+    },
+    {
+      "source": 1674,
+      "rank": 2
+    },
+    {
+      "source": 1704,
+      "rank": 6
+    },
+    {
+      "source": 1710,
+      "rank": 2
+    },
+    {
+      "source": 1734,
+      "rank": 4
+    },
+    {
+      "source": 2046,
+      "rank": 2
+    },
+    {
+      "source": 6000,
+      "rank": 6
+    },
+    {
+      "source": 6060,
+      "rank": 3
+    },
+    {
+      "source": 6068,
+      "rank": 3
+    },
+    {
+      "source": 6102,
+      "rank": 2
+    },
+    {
+      "source": 6114,
+      "rank": 2
+    },
+    {
+      "source": 6126,
+      "rank": 2
+    },
+    {
+      "source": 6192,
+      "rank": 2
+    },
+    {
+      "source": 6354,
+      "rank": 2
+    }
+  ],
+  "first_boundary_each_component_greedy_unmatched_count": 20,
+  "first_k_boundaries_each_component": {
+    "1": {
+      "count": 20,
+      "prefix": [
+        {
+          "source": 186,
+          "rank": 2
+        },
+        {
+          "source": 362,
+          "rank": 2
+        },
+        {
+          "source": 954,
+          "rank": 2
+        },
+        {
+          "source": 1002,
+          "rank": 2
+        },
+        {
+          "source": 1614,
+          "rank": 4
+        },
+        {
+          "source": 1638,
+          "rank": 2
+        },
+        {
+          "source": 1644,
+          "rank": 4
+        },
+        {
+          "source": 1674,
+          "rank": 2
+        },
+        {
+          "source": 1704,
+          "rank": 6
+        },
+        {
+          "source": 1710,
+          "rank": 2
+        },
+        {
+          "source": 1734,
+          "rank": 4
+        },
+        {
+          "source": 2046,
+          "rank": 2
+        },
+        {
+          "source": 6000,
+          "rank": 6
+        },
+        {
+          "source": 6060,
+          "rank": 3
+        },
+        {
+          "source": 6068,
+          "rank": 3
+        },
+        {
+          "source": 6102,
+          "rank": 2
+        },
+        {
+          "source": 6114,
+          "rank": 2
+        },
+        {
+          "source": 6126,
+          "rank": 2
+        },
+        {
+          "source": 6192,
+          "rank": 2
+        },
+        {
+          "source": 6354,
+          "rank": 2
+        }
+      ]
+    },
+    "2": {
+      "count": 1,
+      "prefix": [
+        {
+          "source": 362,
+          "rank": 2
+        }
+      ]
+    },
+    "3": {
+      "count": 1,
+      "prefix": [
+        {
+          "source": 362,
+          "rank": 2
+        }
+      ]
+    },
+    "4": {
+      "count": 1,
+      "prefix": [
+        {
+          "source": 362,
+          "rank": 2
+        }
+      ]
+    },
+    "8": {
+      "count": 1,
+      "prefix": [
+        {
+          "source": 362,
+          "rank": 2
+        }
+      ]
+    }
+  },
+  "hard_sources_paid_by_own_component_before_arrival": [],
+  "hard_sources_paid_by_own_component_count": 0,
+  "multi_target_components": [
+    {
+      "root": 6,
+      "kind": "splitless",
+      "targets": 8,
+      "min_child": 41,
+      "min_rank": 2,
+      "max_rank": 10
+    },
+    {
+      "root": 8,
+      "kind": "splitless",
+      "targets": 26,
+      "min_child": 449,
+      "min_rank": 5,
+      "max_rank": 11
+    },
+    {
+      "root": 12,
+      "kind": "splitless",
+      "targets": 20,
+      "min_child": 3219,
+      "min_rank": 6,
+      "max_rank": 10
+    },
+    {
+      "root": 18,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 69,
+      "min_rank": 1,
+      "max_rank": 9
+    },
+    {
+      "root": 20,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 77,
+      "min_rank": 1,
+      "max_rank": 3
+    },
+    {
+      "root": 24,
+      "kind": "splitless",
+      "targets": 15,
+      "min_child": 2225,
+      "min_rank": 5,
+      "max_rank": 10
+    },
+    {
+      "root": 30,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 233,
+      "min_rank": 2,
+      "max_rank": 7
+    },
+    {
+      "root": 36,
+      "kind": "splitless",
+      "targets": 9,
+      "min_child": 1121,
+      "min_rank": 4,
+      "max_rank": 10
+    },
+    {
+      "root": 38,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 149,
+      "min_rank": 1,
+      "max_rank": 8
+    },
+    {
+      "root": 42,
+      "kind": "splitless",
+      "targets": 8,
+      "min_child": 2625,
+      "min_rank": 5,
+      "max_rank": 9
+    },
+    {
+      "root": 48,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 377,
+      "min_rank": 4,
+      "max_rank": 7
+    },
+    {
+      "root": 54,
+      "kind": "hard_hole",
+      "targets": 10,
+      "min_child": 849,
+      "min_rank": 5,
+      "max_rank": 10
+    },
+    {
+      "root": 56,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 441,
+      "min_rank": 3,
+      "max_rank": 5
+    },
+    {
+      "root": 60,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 237,
+      "min_rank": 1,
+      "max_rank": 4
+    },
+    {
+      "root": 72,
+      "kind": "splitless",
+      "targets": 8,
+      "min_child": 1707,
+      "min_rank": 5,
+      "max_rank": 8
+    },
+    {
+      "root": 74,
+      "kind": "hard_hole",
+      "targets": 3,
+      "min_child": 293,
+      "min_rank": 3,
+      "max_rank": 7
+    },
+    {
+      "root": 78,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 617,
+      "min_rank": 4,
+      "max_rank": 9
+    },
+    {
+      "root": 90,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 713,
+      "min_rank": 2,
+      "max_rank": 8
+    },
+    {
+      "root": 92,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 365,
+      "min_rank": 1,
+      "max_rank": 6
+    },
+    {
+      "root": 96,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 761,
+      "min_rank": 2,
+      "max_rank": 6
+    },
+    {
+      "root": 102,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 3233,
+      "min_rank": 6,
+      "max_rank": 9
+    },
+    {
+      "root": 108,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 857,
+      "min_rank": 4,
+      "max_rank": 8
+    },
+    {
+      "root": 114,
+      "kind": "hard_hole",
+      "targets": 3,
+      "min_child": 905,
+      "min_rank": 4,
+      "max_rank": 5
+    },
+    {
+      "root": 128,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 6099,
+      "min_rank": 7,
+      "max_rank": 11
+    },
+    {
+      "root": 132,
+      "kind": "splitless",
+      "targets": 6,
+      "min_child": 6291,
+      "min_rank": 5,
+      "max_rank": 9
+    },
+    {
+      "root": 138,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 1097,
+      "min_rank": 2,
+      "max_rank": 7
+    },
+    {
+      "root": 144,
+      "kind": "hard_hole",
+      "targets": 2,
+      "min_child": 573,
+      "min_rank": 4,
+      "max_rank": 5
+    },
+    {
+      "root": 146,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 581,
+      "min_rank": 1,
+      "max_rank": 3
+    },
+    {
+      "root": 150,
+      "kind": "splitless",
+      "targets": 6,
+      "min_child": 3579,
+      "min_rank": 3,
+      "max_rank": 8
+    },
+    {
+      "root": 156,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 7449,
+      "min_rank": 7,
+      "max_rank": 10
+    },
+    {
+      "root": 162,
+      "kind": "splitless",
+      "targets": 5,
+      "min_child": 5153,
+      "min_rank": 4,
+      "max_rank": 8
+    },
+    {
+      "root": 174,
+      "kind": "hard_hole",
+      "targets": 2,
+      "min_child": 1385,
+      "min_rank": 4,
+      "max_rank": 4
+    },
+    {
+      "root": 180,
+      "kind": "splitless",
+      "targets": 6,
+      "min_child": 22913,
+      "min_rank": 6,
+      "max_rank": 8
+    },
+    {
+      "root": 186,
+      "kind": "hard_hole",
+      "targets": 2,
+      "min_child": 741,
+      "min_rank": 3,
+      "max_rank": 5
+    },
+    {
+      "root": 192,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 2295,
+      "min_rank": 2,
+      "max_rank": 8
+    },
+    {
+      "root": 216,
+      "kind": "splitless",
+      "targets": 8,
+      "min_child": 2583,
+      "min_rank": 5,
+      "max_rank": 9
+    },
+    {
+      "root": 218,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 3473,
+      "min_rank": 4,
+      "max_rank": 5
+    },
+    {
+      "root": 222,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 1769,
+      "min_rank": 2,
+      "max_rank": 7
+    },
+    {
+      "root": 234,
+      "kind": "hard_hole",
+      "targets": 3,
+      "min_child": 2799,
+      "min_rank": 4,
+      "max_rank": 7
+    },
+    {
+      "root": 236,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 941,
+      "min_rank": 1,
+      "max_rank": 4
+    },
+    {
+      "root": 240,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 7649,
+      "min_rank": 7,
+      "max_rank": 9
+    },
+    {
+      "root": 252,
+      "kind": "hard_hole",
+      "targets": 4,
+      "min_child": 4017,
+      "min_rank": 5,
+      "max_rank": 9
+    },
+    {
+      "root": 258,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 1029,
+      "min_rank": 1,
+      "max_rank": 6
+    },
+    {
+      "root": 270,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 1077,
+      "min_rank": 1,
+      "max_rank": 7
+    },
+    {
+      "root": 272,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 2169,
+      "min_rank": 4,
+      "max_rank": 6
+    },
+    {
+      "root": 276,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 6603,
+      "min_rank": 3,
+      "max_rank": 10
+    },
+    {
+      "root": 282,
+      "kind": "splitless",
+      "targets": 4,
+      "min_child": 4497,
+      "min_rank": 7,
+      "max_rank": 9
+    },
+    {
+      "root": 290,
+      "kind": "splitless",
+      "targets": 2,
+      "min_child": 1157,
+      "min_rank": 3,
+      "max_rank": 5
+    },
+    {
+      "root": 294,
+      "kind": "hard_hole",
+      "targets": 2,
+      "min_child": 2345,
+      "min_rank": 4,
+      "max_rank": 4
+    },
+    {
+      "root": 300,
+      "kind": "splitless",
+      "targets": 3,
+      "min_child": 7181,
+      "min_rank": 3,
+      "max_rank": 8
+    }
+  ]
+}

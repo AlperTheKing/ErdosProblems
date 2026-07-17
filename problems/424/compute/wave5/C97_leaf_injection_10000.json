@@ -1,0 +1,204 @@
+{
+  "audit": {
+    "first_failure": {
+      "X": 114,
+      "deficit_after_exception": 1,
+      "eligible_healed_leaves": {
+        "114": [],
+        "54": [
+          6
+        ],
+        "74": []
+      },
+      "floor_X_over_4": 28,
+      "healed_splitless_roots": [
+        6,
+        18,
+        20
+      ],
+      "leaf_support": {
+        "114": [
+          8,
+          12
+        ],
+        "54": [
+          6
+        ],
+        "74": [
+          8
+        ]
+      },
+      "matching_number": 1,
+      "maximum_matching": [
+        {
+          "source": 54,
+          "target": 6
+        }
+      ],
+      "singleton_exception_capacity": 1,
+      "source_count": 3,
+      "total_leaf_local_capacity": 2,
+      "young_persistent_hard_roots": [
+        54,
+        74,
+        114
+      ]
+    },
+    "integer_cutoffs_checked_through_first_failure": 113,
+    "no_earlier_failure": true
+  },
+  "definitions": {
+    "exception": "one unlabelled unit target",
+    "source": "hard roots h with floor(X/4)<h<=X whose literal chain is ungenerated through X",
+    "target": "structural splitless leaf e in the complete missing-factor support of h whose chain has healed by X"
+  },
+  "exact_integer_acceptance": true,
+  "healed_bank_certificates_at_114": {
+    "18": {
+      "chain_through_first_generation": [
+        18,
+        35,
+        69
+      ],
+      "first_generated_chain_member": 69,
+      "first_generation_pairs": [
+        [
+          5,
+          14
+        ]
+      ],
+      "in_any_source_leaf_support": false
+    },
+    "20": {
+      "chain_through_first_generation": [
+        20,
+        39,
+        77
+      ],
+      "first_generated_chain_member": 77,
+      "first_generation_pairs": [
+        [
+          3,
+          26
+        ]
+      ],
+      "in_any_source_leaf_support": false
+    },
+    "6": {
+      "chain_through_first_generation": [
+        6,
+        11,
+        21,
+        41
+      ],
+      "first_generated_chain_member": 41,
+      "first_generation_pairs": [
+        [
+          3,
+          14
+        ]
+      ],
+      "in_any_source_leaf_support": true
+    }
+  },
+  "leaf_certificates": {
+    "12": {
+      "chain_through_first_generation": [
+        12,
+        23,
+        45,
+        89,
+        177,
+        353,
+        705,
+        1409,
+        2817,
+        5633
+      ],
+      "first_generated_chain_member": 5633,
+      "first_generation_pairs": [
+        [
+          9,
+          626
+        ]
+      ]
+    },
+    "6": {
+      "chain_through_first_generation": [
+        6,
+        11,
+        21,
+        41
+      ],
+      "first_generated_chain_member": 41,
+      "first_generation_pairs": [
+        [
+          3,
+          14
+        ]
+      ]
+    },
+    "8": {
+      "chain_through_first_generation": [
+        8,
+        15,
+        29,
+        57,
+        113,
+        225,
+        449
+      ],
+      "first_generated_chain_member": 449,
+      "first_generation_pairs": [
+        [
+          9,
+          50
+        ]
+      ]
+    }
+  },
+  "limit": 10000,
+  "scalar_gate_at_114": {
+    "A_H_114": 3,
+    "A_H_floor_114_over_4": 0,
+    "D_114": 3,
+    "right_minus_left_with_plus_one": 1
+  },
+  "schema": "C97-healed-leaf-hall-v1",
+  "source_certificates": {
+    "114": {
+      "admissible_pairs": [
+        [
+          5,
+          23
+        ]
+      ],
+      "complete_missing_factor_leaf_support": [
+        8,
+        12
+      ]
+    },
+    "54": {
+      "admissible_pairs": [
+        [
+          5,
+          11
+        ]
+      ],
+      "complete_missing_factor_leaf_support": [
+        6
+      ]
+    },
+    "74": {
+      "admissible_pairs": [
+        [
+          5,
+          15
+        ]
+      ],
+      "complete_missing_factor_leaf_support": [
+        8
+      ]
+    }
+  }
+}

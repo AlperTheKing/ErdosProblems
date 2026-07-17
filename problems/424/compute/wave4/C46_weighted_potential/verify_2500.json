@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "limit": 2500,
+  "algorithm": "trial divisors plus literal descending stages",
+  "stages_to_fixpoint": 9,
+  "stage_mismatches": [],
+  "witness_X": 186,
+  "hard_events": [
+    {
+      "source": 54,
+      "rank": 2
+    },
+    {
+      "source": 74,
+      "rank": 2
+    },
+    {
+      "source": 114,
+      "rank": 2
+    },
+    {
+      "source": 144,
+      "rank": 3
+    },
+    {
+      "source": 174,
+      "rank": 2
+    },
+    {
+      "source": 186,
+      "rank": 2
+    }
+  ],
+  "target_events": [
+    {
+      "child": 41,
+      "parent": 21,
+      "rank": 2,
+      "root": 6,
+      "ordinal": 1
+    },
+    {
+      "child": 69,
+      "parent": 35,
+      "rank": 1,
+      "root": 18,
+      "ordinal": 1
+    },
+    {
+      "child": 77,
+      "parent": 39,
+      "rank": 1,
+      "root": 20,
+      "ordinal": 1
+    },
+    {
+      "child": 125,
+      "parent": 63,
+      "rank": 3,
+      "root": 6,
+      "ordinal": 2
+    },
+    {
+      "child": 131,
+      "parent": 66,
+      "rank": 0,
+      "root": 66,
+      "ordinal": 1
+    },
+    {
+      "child": 149,
+      "parent": 75,
+      "rank": 1,
+      "root": 38,
+      "ordinal": 1
+    }
+  ],
+  "potential": {
+    "rank_parameter": "19/20",
+    "target_component_weight": "2^(1-ordinal)",
+    "hard_mass": "42959/8000",
+    "target_mass": "82899/16000",
+    "deficit": "3019/16000",
+    "one_minus_t_boundary": "1/20",
+    "deficit_over_boundary": "2219/16000",
+    "exact_deficit_polynomial": "t^3/2 + 4*t^2 - 3*t - 1",
+    "polynomial_at_917_over_1000": "-3792787/2000000000",
+    "polynomial_at_918_over_1000": "926579/250000000"
+  },
+  "additive_one_falsifier": {
+    "rank_parameter": "99/100",
+    "target_component_weight": "2^(1-ordinal)",
+    "first_over_one_X": 1644,
+    "first_over_one_deficit": "2070022193351/2000000000000",
+    "maximum_X_through_limit": 2064,
+    "maximum_deficit_through_limit": "358639165423/100000000000",
+    "witness_X": 2064,
+    "hard_count": 101,
+    "target_count": 104,
+    "coefficient_by_rank": [
+      "-44",
+      "-14",
+      "109/2",
+      "-5/4",
+      "2",
+      "11/4",
+      "5"
+    ],
+    "deficit": "358639165423/100000000000",
+    "deficit_over_one": "258639165423/100000000000"
+  },
+  "r3_transport_example": {
+    "r3_parent": 15,
+    "r3_child": 44,
+    "bridge_parent": 66,
+    "q_child": 131,
+    "checks": {
+      "15_is_hole": true,
+      "44_is_generated": true,
+      "66_is_hole": true,
+      "131_is_generated": true,
+      "131_is_target": true,
+      "identities": true
+    }
+  },
+  "assertions": {
+    "literal_stages_match_increasing_ground": true,
+    "hard_ledger_at_186": true,
+    "target_ledger_at_186": true,
+    "geometric_rank_deficit_is_3019_over_16000": true,
+    "deficit_exceeds_one_minus_t_by_2219_over_16000": true,
+    "threshold_is_between_917_and_918_over_1000": true,
+    "additive_one_fails_first_at_1644": true,
+    "maximum_through_limit_is_at_2064": true,
+    "additive_witness_coefficients_are_exact": true,
+    "r3_bridge_is_exact": true
+  }
+}

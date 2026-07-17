@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":100000000,
+  "construction":"G plus even reducible nonhard Q-parent roots in (floor((X+1)/3),floor((X+1)/2)]",
+  "first_failure":0,
+  "minimum_residual":0,
+  "minimum_X":2,
+  "elapsed_seconds":11.3016,
+  "failure_parent_sample":[],
+  "snapshots":[
+    {"X":100,"H":2,"Q":3,"R":0,"Q_minus_H_minus_R":1},
+    {"X":1000,"H":41,"Q":46,"R":1,"Q_minus_H_minus_R":4},
+    {"X":10000,"H":518,"Q":593,"R":12,"Q_minus_H_minus_R":63},
+    {"X":100000,"H":5108,"Q":6783,"R":120,"Q_minus_H_minus_R":1555},
+    {"X":1000000,"H":45583,"Q":67537,"R":741,"Q_minus_H_minus_R":21213},
+    {"X":10000000,"H":392961,"Q":637270,"R":4152,"Q_minus_H_minus_R":240157},
+    {"X":100000000,"H":3368726,"Q":5948614,"R":25463,"Q_minus_H_minus_R":2554425}
+  ]
+}

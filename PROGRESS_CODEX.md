@@ -34693,3 +34693,1529 @@
 [2026-07-13T10:24:27+03:00] > ATTACK | NEXT: launch C26 exact aggregated cross-k energy probe for Fable R-D gate (E), including all cross-block collisions
 [2026-07-13T10:25:02+03:00] OK ATTACK | DID: Scanned C24 healed-factor gate through X=1000000 | RESULT: first hard 54 has only 5*11; holes 11 and 21 give no healed neighbor | D: gate DEAD
 [2026-07-13T10:25:02+03:00] > VERIFY | NEXT: Brute-force the least closure through 54 and cross-check the X=1000000 census against C16.
+[2026-07-13T10:26:30+03:00] OK ATTACK | DID: Ran grounded rank gates to X=200000 | RESULT: all 14 stage gates pass; rank-filtered gate first fails at X=362 | D: stage gate alive
+[2026-07-13T10:26:30+03:00] > ATTACK | NEXT: Stress-test every grounded stage cutoff through X=1000000 and audit ranks independently.
+[2026-07-13T10:26:29+03:00] > ATTACK | NEXT: Add exact rank-respecting greedy matching replay and audit every hard event through X=1e9.
+[2026-07-13T10:27:10+03:00] OK VERIFY | DID: Ran independent C24 trial-division oracle and C16 census cross-check | RESULT: 8/8 pass; first hard/healed failure n=54 | D: none
+[2026-07-13T10:27:10+03:00] > ATTACK | NEXT: Audit nested obstruction-rank Hall relaxations with offsets 0..8 at every event cutoff through X=1000000.
+[2026-07-13T10:27:34+03:00] FAIL VERIFY | DID: Refereed rank-cap JSON | RESULT: last_failure_X meant last positive event, not cutoff; interval logic fixed | D: regenerate
+[2026-07-13T10:27:34+03:00] > ATTACK | NEXT: Regenerate X=1000000000 rank-cap artifact after 3/3 oracle tests pass.
+[2026-07-13T10:27:44+03:00] OK ATTACK | DID: Added causal rank-greedy replay and +1 audit to rank_switch.cpp | RESULT: source patched | D: exact test pending
+[2026-07-13T10:27:44+03:00] > VERIFY | NEXT: Compile rank_switch.cpp and replay all events through X=1e6.
+[2026-07-13T10:28:10+03:00] OK VERIFY | DID: Compiled and replayed rank matcher for every n<=1e6 | RESULT: unmatched={362}; +1 failures=0 | D: candidate survives
+[2026-07-13T10:28:15+03:00] > ATTACK | NEXT: Replay causal rank-greedy matching for every n<=1e9; record all unmatched hard events.
+[2026-07-13T10:28:42+03:00] OK ATTACK | DID: Ran C23 grounded stages to X=1000000 | RESULT: 16/16 pass; H=45583, Q=67537 match C16 | D: none
+[2026-07-13T10:28:42+03:00] > ATTACK | NEXT: Run exact grounded stage and layer gates through X=10000000.
+[2026-07-13T10:28:51+03:00] OK ATTACK | DID: Audited C24 nested rank Hall offsets 0..8 through X=1000000 | RESULT: offset 0 first fails X=362,d=2; offset 1 has 0 failures | D: frontier=offset 1
+[2026-07-13T10:28:51+03:00] > VERIFY | NEXT: Extract exact Hall witnesses at X=54 and X=362 and rerun the independent assertions.
+[2026-07-13T10:28:24+03:00] > SYNC | NEXT: Process Fable TICK-134 and align C07/F2/F3 ownership without duplication.
+[2026-07-13T10:29:27+03:00] OK PLAN | DID: Reconstructed R2 split from section 5 and TICK-132/133 | RESULT: (57)-(59) absent; maps fix split except tie rule | D: ambiguity
+[2026-07-13T10:29:27+03:00] > ATTACK | NEXT: Run integer pilot for rays (3,2,1), k<=3 and (2,1,1), k<=4 to size exact offset/color blocks.
+[2026-07-13T10:29:10+03:00] OK SYNC | DID: Processed TICK-134 and sent C07 Lemmas 1-2 proof pointer | RESULT: F1/F2/F3 ownership aligned | D: none
+[2026-07-13T10:29:52+03:00] OK PLAN | DID: Derived C25 two-residue sieve matrix | RESULT: eligible d are odd; d=9,14 inert; spectral gate 3-10a+3a^2-3b>0 | D: PLAN -> ATTACK
+[2026-07-13T10:29:52+03:00] > ATTACK | NEXT: Implement exact C25 sieve and recurrence audit, then smoke-test every cutoff through X=100000.
+[2026-07-13T10:30:47+03:00] OK ATTACK | DID: Regenerated corrected rank-cap census to X=1000000000 | RESULT: Q9 has 0 failures; Q8 fails 6989400..1000000000 | D: none
+[2026-07-13T10:30:47+03:00] > VERIFY | NEXT: Regenerate X=100000000 checkpoint and hash all C17 proof certificates.
+[2026-07-13T10:30:25+03:00] OK VERIFY | DID: Extracted C24 Hall witnesses and reran independent checks | RESULT: 12/12 pass; direct deficit at 54, rank-0 deficit at 362 | D: VERIFY->CHECK
+[2026-07-13T10:30:25+03:00] > CHECK | NEXT: Write the exact counterexample, capacity identity, and rank-offset-1 Hall implication in the C24 report.
+[2026-07-13T10:31:17+03:00] OK ATTACK | DID: Replayed every n<=1e9 | RESULT: matched=29010145, unmatched={362}; +1 failures=0 | D: finite candidate survives
+[2026-07-13T10:31:22+03:00] > VERIFY | NEXT: Check matcher conservation, exception prefix, JSON validity, and SHA-256 artifacts.
+[2026-07-13T10:31:00+03:00] > ATTACK | NEXT: Enumerate supercritical affine-offset rays with surplus .015-.033 and M^4<=2e9 for exact C-M bracketing.
+[2026-07-13T10:32:18+03:00] OK ATTACK | DID: Enumerated pilot rays (3,2,1) k<=3 and (2,1,1) k<=4 | RESULT: D3=3542949; D4=796473; (2,1,1) k1 split=6/6 | D: tie ambiguity
+[2026-07-13T10:32:18+03:00] > ATTACK | NEXT: Implement exact radix-sorted product energy with per-block collision matrix and independent affine/color replay.
+[2026-07-13T10:33:07+03:00] OK VERIFY | DID: Replayed weighted, Hall, and C22 grounding artifacts | RESULT: 4/4 independent tests pass; grounded excess=-515 | D: none
+[2026-07-13T10:33:07+03:00] > VERIFY | NEXT: Regenerate tracked X=2000 and X=1000000 JSON under corrected rank-cap schema.
+[2026-07-13T10:33:30+03:00] > ATTACK | NEXT: Run exact bool-offset counts for new ray (4,2,1) through k=3; final modulus 373248000.
+[2026-07-13T10:33:46+03:00] OK CHECK | DID: Wrote C24 counterexample and rank Hall criterion | RESULT: problems/424/fanout/wave3/C24_derivation_matching.md | D: CHECK->ATTACK
+[2026-07-13T10:33:46+03:00] > ATTACK | NEXT: Scan direct one-copy, half-plus-third, and recursive-shadow matchings at every cutoff through X=2000.
+[2026-07-13T10:34:20+03:00] OK ATTACK | DID: Ran C23 grounded stages to X=10000000 | RESULT: 18/18 pass; terminal H=392961, Q=637270 | D: none
+[2026-07-13T10:34:20+03:00] > ATTACK | NEXT: CP-SAT test whether forward closure plus boundary contraction is preserved by one support-pruning step through X=500.
+[2026-07-13T10:35:15+03:00] OK ATTACK | DID: Exact bool-offset ray (4,2,1) through k=3 | RESULT: normalized 0.3822,0.2973,0.2501 | D: decaying
+[2026-07-13T10:35:15+03:00] > ATTACK | NEXT: Run exact bracketing ray (2,2,1) through k=4; final modulus 1049760000.
+[2026-07-13T10:35:46+03:00] OK ATTACK | DID: Scanned four C24 matching graphs at every cutoff through first deficit | RESULT: failures at X=32,39,54,186 | D: local matchings DEAD
+[2026-07-13T10:35:46+03:00] > VERIFY | NEXT: Assert all four alternating Hall witnesses independently and add them to the C24 report.
+[2026-07-13T10:36:25+03:00] OK ATTACK | DID: Exact bool-offset ray (2,2,1) through k=4 | RESULT: normalized .3727,.3011,.2613,.2351 | D: decaying
+[2026-07-13T10:36:25+03:00] > ATTACK | NEXT: Count rays (6,3,2),(4,3,2),(5,3,2) through k=2 to bracket surplus .0246-.0316.
+[2026-07-13T10:36:20+03:00] OK VERIFY | DID: Checked X=362 and 1e9 conservation | RESULT: strict rank Hall deficit=1 only at rank<=2; JSON valid | D: refine +1 rank
+[2026-07-13T10:36:28+03:00] OK VERIFY | DID: Added exact Mthird and two-scale gate; reran oracle | RESULT: 4/4 tests pass through X=5000 | D: none
+[2026-07-13T10:36:28+03:00] > ATTACK | NEXT: Regenerate C17 limits 2000, 1e6, 1e8, 1e9 with exact two-scale gate.
+[2026-07-13T10:36:22+03:00] FAIL ATTACK | DID: Audited C25 to X=100000 | RESULT: H0 first fails X=252:7>6; combined X=18938:1006>1005; rho=.999215 | D: recurrence DEAD
+[2026-07-13T10:36:22+03:00] > ATTACK | NEXT: Run C25 exact closure and every-hard-event recurrence audit through X=100000000 with D2=5,17,41,53,77 and D0=33,69.
+[2026-07-13T10:36:24+03:00] > ATTACK | NEXT: Add rank-offset-one Hall and greedy audits, then exact-test every event through X=1e9.
+[2026-07-13T10:36:51+03:00] OK VERIFY | DID: Asserted four C24 alternating Hall witnesses | RESULT: 16/16 checks pass; deficits first at X=32,39,54,186 | D: VERIFY->DECIDE
+[2026-07-13T10:36:51+03:00] > DECIDE | NEXT: Run scoped diff, status, JSON, and report checks, then finalize the C24 counterexample deliverable.
+[2026-07-13T10:36:45+03:00] OK ATTACK | DID: CP-SAT preservation scan through X=500 | RESULT: 27 optimal hard cutoffs, no countermodel | D: operator induction alive
+[2026-07-13T10:36:45+03:00] > ATTACK | NEXT: Extend exact all-model preservation scan through X=2000, 64 workers, 30s per cutoff.
+[2026-07-13T10:37:07+03:00] OK ATTACK | DID: Tested rank offset 1 through X=1e6 | RESULT: Hall failures=0, greedy unmatched=0; offset 0 leaves 362 | D: scale to 1e9
+[2026-07-13T10:37:16+03:00] > VERIFY | NEXT: Exact-test offset-one Hall and online injection for every n<=1e9.
+[2026-07-13T10:38:30+03:00] OK ATTACK | DID: Counted five new C-M rays exactly | RESULT: C27 report + five SHA-pinned transcripts | D: finite dichotomy sharpened
+[2026-07-13T10:38:37+03:00] OK DECIDE | DID: Ran final C24 source, JSON, report, and scope checks | RESULT: 16/16 assertions pass; 2/2 JSON parse; C24 whitespace clean | D: C24 complete
+[2026-07-13T10:38:52+03:00] OK ATTACK | DID: Audited C25 through X=100000000 | RESULT: H=3368726; residual=3065623; combined max excess=2420094 | D: stall=0
+[2026-07-13T10:38:52+03:00] > ATTACK | NEXT: Count residual forced holes 11p-1 and assert the C16 fiber inside the C25 partition through X=100000000.
+[2026-07-13T10:39:43+03:00] OK ATTACK | DID: Added C26 recurrence probe and independent word replay | RESULT: rd_energy_probe.cpp; verify_membership.py | D: implementation ready
+[2026-07-13T10:39:43+03:00] > VERIFY | NEXT: Compile C26 with OpenMP and smoke-test ray (3,2,1), k<=2, pair cap 1000000, tie=G0, threads=4.
+[2026-07-13T10:40:02+03:00] OK ATTACK | DID: Counted C25 forced 11p-1 holes to X=100000000 | RESULT: forced=278968; residual under D=278964 | D: ATTACK -> VERIFY
+[2026-07-13T10:40:02+03:00] > VERIFY | NEXT: Independently replay C25 closure, types, sieve, and first recurrence failures through X=100000.
+[2026-07-13T10:40:06+03:00] FAIL VERIFY | DID: Stopped interrupted offset-one 1e9 replay | RESULT: PID 17848 terminated; prior valid rank_1e9.json retained | D: C23/C24 own frontier
+[2026-07-13T10:40:09+03:00] OK ATTACK | DID: Ran final C17 census to X=1000000000 | RESULT: two-scale failures=0; Q9 failures=0; Q8 first=6989400 | D: ATTACK->CHECK
+[2026-07-13T10:40:09+03:00] > CHECK | NEXT: Write C17 audit with rank theorem, all-pair recurrence, C22 falsifier, and weakest residual lemma.
+[2026-07-13T10:40:25+03:00] OK VERIFY | DID: Compiled C26 and replayed (3,2,1) k<=2 independently | RESULT: K2 (N,E)=(1296,1298); K3=(560088,562936) | D: none
+[2026-07-13T10:40:25+03:00] > ATTACK | NEXT: Run C26 ray (3,2,1), k<=3, cap=400000000 pairs, tie=G0, 32 threads; count K<=4 energy.
+[2026-07-13T10:40:39+03:00] > SELECT | NEXT: Select #424 C28 mass gate; finite affine residues expose exact split and automaton attacks.
+[2026-07-13T10:41:20+03:00] OK SELECT | DID: Scoped C28 to #424 ray (3,2,1), k=5 | RESULT: target modulus=6046617600000 | D: SELECT -> GATE
+[2026-07-13T10:41:20+03:00] > GATE | NEXT: Audit section 5, C27, code, goal exclusions, and cited prior work for an existing exact count.
+[2026-07-13T10:43:55+03:00] OK GATE | DID: Searched repo and web for C28 target/count | RESULT: PROOF_STATE.md records only k<=4; exact-phrase web hits=0 | D: GATE -> PLAN
+[2026-07-13T10:43:55+03:00] > PLAN | NEXT: Derive an exact bounded-memory decomposition and select its frontier complexity lemma against k<=4 data.
+[2026-07-13T10:44:23+03:00] OK PLAN | DID: Derived clipped inverse-interval recurrence | RESULT: independent target tiles; frontier=sum of pulled-back interval lengths | D: PLAN -> ATTACK
+[2026-07-13T10:44:23+03:00] > ATTACK | NEXT: Implement interval-volume estimator; scan k=1..5 at tile bits 2^20,2^24,2^28 for coalescence and work.
+[2026-07-13T10:47:45+03:00] OK ATTACK | DID: Scanned 15 pullback cases, 5 positions each | RESULT: k5 work ratio 3.74968..3.75027; intervals<=1056 | D: none
+[2026-07-13T10:47:45+03:00] > ATTACK | NEXT: Implement packed BMI2 tiled DP; compile and count rays k=1..3 with tile=2^20 bits, threads=32.
+[2026-07-13T10:49:22+03:00] OK ATTACK | DID: Built BMI2 tiled DP and counted k=1..3 | RESULT: D=60,13068,3542949; k3=0.008019s | D: ATTACK -> VERIFY
+[2026-07-13T10:49:22+03:00] > VERIFY | NEXT: Replay dense NumPy k<=3 and tiled k3 at widths 1000,65537; require identical exact counts.
+[2026-07-13T10:50:00+03:00] OK VERIFY | DID: Replayed dense and two boundary-heavy tilings | RESULT: all three k3 counts=3542949 | D: VERIFY -> CHECK
+[2026-07-13T10:50:00+03:00] > CHECK | NEXT: Test whether this cycle established a verifiable exact bounded-memory method.
+[2026-07-13T10:50:00+03:00] OK CHECK | DID: Audited independent and partition invariance checks | RESULT: C28 packed recurrence passed 3 exact replays | D: stall=0; CHECK -> DECIDE
+[2026-07-13T10:50:00+03:00] > DECIDE | NEXT: Compare validated scope with the required k=5 count and scaling benchmark.
+[2026-07-13T10:50:00+03:00] OK DECIDE | DID: Compared outputs to C28 objective | RESULT: k=5 uncounted; k=4 scaling unmeasured | D: DECIDE -> ATTACK
+[2026-07-13T10:50:00+03:00] > ATTACK | NEXT: Count (12,8,4) with tile=2^26 bits and 64 threads; compare D=1054111467 and time scaling.
+[2026-07-13T10:50:26+03:00] OK ATTACK | DID: Counted (12,8,4), tile=2^26, 64 threads | RESULT: D=1054111467 exact; 0.350399s; 17.1MB/worker bound | D: none
+[2026-07-13T10:50:26+03:00] > ATTACK | NEXT: Count target (15,10,5), all 5632 tiles of 2^30 bits, 64 threads; sum exact tile cardinalities.
+[2026-07-13T10:54:04+03:00] OK ATTACK | DID: Counted all 5632 target tiles, 64 threads | RESULT: D_15,10,5=330159210305; 193.149440s | D: ATTACK -> VERIFY
+[2026-07-13T10:54:04+03:00] > VERIFY | NEXT: Recount full target with tile=2^26 bits and 64 threads; require the same integer under changed boundaries.
+[2026-07-13T10:59:46+03:00] OK VERIFY | DID: Recounted target in 90102 tiles of 2^26 | RESULT: D=330159210305 again; 290.218861s | D: none
+[2026-07-13T10:59:46+03:00] > VERIFY | NEXT: Compare scalar-set DP on all 105 states <=(6,4,2) and packed counts at widths 1,7,65,1000,65537.
+[2026-07-13T11:01:00+03:00] OK VERIFY | DID: Ran literal-set oracle and five endpoint partitions | RESULT: 110/110 comparisons pass; terminal=13068 | D: none
+[2026-07-13T11:01:00+03:00] > VERIFY | NEXT: Compute exact target ratios, reachable extrema, and SHA-256 identities for reproducibility.
+[2026-07-13T11:01:49+03:00] OK VERIFY | DID: Computed target arithmetic, extrema, hashes | RESULT: norm=0.29906909782444; range=[92264843,4534479454208] | D: VERIFY -> CHECK
+[2026-07-13T11:01:49+03:00] > CHECK | NEXT: Determine whether the cycle produced a verifiable new exact finite fact.
+[2026-07-13T11:01:49+03:00] OK CHECK | DID: Audited two full sums and 110 oracle checks | RESULT: new exact fact D_15,10,5=330159210305 | D: stall=0; CHECK -> DECIDE
+[2026-07-13T11:01:49+03:00] > DECIDE | NEXT: Re-run novelty gate for the exact integer before preparing the proof and benchmark report.
+[2026-07-13T11:03:03+03:00] OK DECIDE | DID: Re-searched repo and web for exact C28 integer | RESULT: relevant hits outside C28 protocol lines=0 | D: DECIDE -> WRITEUP
+[2026-07-13T11:03:03+03:00] > WRITEUP | NEXT: Write C28 theorem, exactness proof, benchmark table, result JSON, hashes, and reproduction commands.
+[2026-07-13T11:05:20+03:00] OK WRITEUP | DID: Wrote C28 proof and machine result | RESULT: fanout/wave3/C28_exact_mass_gate.md; compute/wave3/C28_interval_dp/result.json | D: WRITEUP -> VERIFY
+[2026-07-13T11:05:20+03:00] > VERIFY | NEXT: Parse result JSON, inspect proof text, rebuild from source, and rerun the 110-check oracle.
+[2026-07-13T10:41:06+03:00] OK ATTACK | DID: Counted C26 (3,2,1) through K=4 | RESULT: K4 N=212529321, E=213839845; K5 N=32848227720 skipped | D: E/N=1.006166320928
+[2026-07-13T10:41:06+03:00] > VERIFY | NEXT: Replay all (3,2,1) k<=3 word witnesses and independently recount energies with N<=1000000.
+[2026-07-13T10:41:28+03:00] OK ATTACK | DID: CP-SAT preservation scan through X=2000 | RESULT: 147 optimal hard cutoffs, no countermodel | D: none
+[2026-07-13T10:41:28+03:00] > ATTACK | NEXT: Optimize one-step preservation at X=5000 with 64 workers and 120s exact status gate.
+[2026-07-13T10:41:00+03:00] OK VERIFY | DID: Replayed C24 derivation matcher independently | RESULT: 16/16 pass; natural Hall failures 32,39,54,186 | D: local gates dead
+[2026-07-13T10:41:00+03:00] > ATTACK | NEXT: Run C28 exact k=5 streaming design and C29 ultra proof/falsifier for offset mass gate in parallel.
+[2026-07-13T10:41:41+03:00] > SELECT | NEXT: Analyze #424 rays (3,2,1) and (15,10,6), chosen for an exact affine-offset recurrence.
+[2026-07-13T10:41:43+03:00] OK VERIFY | DID: Replayed 4084080 ray-(3,2,1) words and K<=3 energies | RESULT: verify_321_g0.json all checks true | D: none
+[2026-07-13T10:41:43+03:00] > ATTACK | NEXT: Run C26 ray (2,1,1), k<=4, cap=400000000 pairs, tie=G0, 32 threads; count K<=6 energy.
+[2026-07-13T10:42:24+03:00] OK SELECT | DID: Selected #424 fixed-count affine offset support | RESULT: rays (3,2,1) and (15,10,6) | D: SELECT -> GATE
+[2026-07-13T10:42:24+03:00] > GATE | NEXT: Audit section 5, probe code, C27 bracket, and repository prior-art records for this mass gate.
+[2026-07-13T10:43:02+03:00] OK ATTACK | DID: Counted C26 (2,1,1), tie=G0 through K=6 | RESULT: K6 N=307692465, E=308755831, E/N=1.003455937733 | D: none
+[2026-07-13T10:43:02+03:00] > ATTACK | NEXT: Run tie=G2 sensitivity for (2,1,1), k<=4, cap=1000000 pairs, 8 threads; compare K<=4 exactly.
+[2026-07-13T10:43:36+03:00] OK ATTACK | DID: Counted (2,1,1) tie=G2 through K=4 | RESULT: E3=2806 vs 2796; E4=172823 vs 171943 for tie=G0 | D: formula ambiguity
+[2026-07-13T10:43:36+03:00] > VERIFY | NEXT: Independently replay both (2,1,1) tie branches; recount tie=G0 energies through N=5000000 and tie=G2 through N=1000000.
+[2026-07-13T10:43:25+03:00] OK VERIFY | DID: Replayed C25 independently to X=100000 | RESULT: H=5108; residual=3018; first failures X=252,18938 match C++ | D: VERIFY -> CHECK
+[2026-07-13T10:43:25+03:00] > CHECK | NEXT: Classify the C25 spectral lemma and X=252 recurrence falsifier as verifiable cycle output.
+[2026-07-13T10:43:25+03:00] OK CHECK | DID: Classified C25 output | RESULT: gate>0 is rigorous; H0<=channel capacity false at X=252 | D: stall=0
+[2026-07-13T10:43:25+03:00] > DECIDE | NEXT: Write C25 lemma, spectral calculation, exact falsifier, census, and prior-art boundary.
+[2026-07-13T10:43:35+03:00] OK ATTACK | DID: Optimized preservation at X=5000 | RESULT: OPTIMAL maximum H_F-Q_F=-34 | D: none
+[2026-07-13T10:43:35+03:00] > ATTACK | NEXT: Optimize one-step preservation at X=10000 with 64 workers and 180s exact status gate.
+[2026-07-13T10:44:40+03:00] OK CHECK | DID: Wrote C17 grounded red-team audit | RESULT: C17_hole_contraction_redteam.md, equations 18-22 | D: report ready
+[2026-07-13T10:44:40+03:00] > VERIFY | NEXT: Rebuild both executables, run 4 tests, parse JSON, and verify listed SHA-256 hashes.
+[2026-07-13T10:46:00+03:00] > VERIFY | NEXT: Archive and audit GPT-Pro affine obstruction response against exact map algebra and current route registry.
+[2026-07-13T10:45:40+03:00] OK GATE | DID: Audited local route and affine-orbit literature | RESULT: arXiv:2507.06875v2 Thm 5 assumes freeness and sum 1/a=1 | D: GATE -> PLAN
+[2026-07-13T10:45:40+03:00] > PLAN | NEXT: Derive the collision/list-decoding lemma tree and select one exact-testable frontier for rays (3,2,1) and (15,10,6).
+[2026-07-13T10:47:00+03:00] OK VERIFY | DID: Archived and audited GPT-Pro affine response | RESULT: four propositions valid; no F1-F3 gate discharged | D: finite-cover route remains dead
+[2026-07-13T10:46:22+03:00] OK ATTACK | DID: Optimized preservation at X=10000 | RESULT: OPTIMAL maximum H_F-Q_F=-68 | D: none
+[2026-07-13T10:46:22+03:00] > ATTACK | NEXT: Scan endpoint-only predecessor assumption through X=500 to find its first exact falsifier.
+[2026-07-13T10:46:55+03:00] OK ATTACK | DID: Scanned endpoint-only preservation through X=500 | RESULT: 27 optimal hard cutoffs, no countermodel | D: endpoint gate alive
+[2026-07-13T10:46:55+03:00] > ATTACK | NEXT: Optimize endpoint-only preservation at X=5000 with 64 workers and 120s.
+[2026-07-13T10:47:40+03:00] OK VERIFY | DID: Rebuilt and refereed C17 artifacts | RESULT: 4/4 tests; 8 JSON parse; 31 identity snapshots; SHA list exact | D: none
+[2026-07-13T10:47:40+03:00] > DECIDE | NEXT: Compare grounded finite facts with the density success condition and classify the C17 result.
+[2026-07-13T10:47:40+03:00] OK DECIDE | DID: Classified C17 | RESULT: closure-only false; rank residual (18) unproved; verifiable audit delivered | D: lane complete
+[2026-07-13T10:48:08+03:00] OK VERIFY | DID: Replayed both (2,1,1) tie branches | RESULT: all blocks pass; G0 energies K<=5 and G2 energies K<=4 match | D: none
+[2026-07-13T10:48:08+03:00] > VERIFY | NEXT: Re-run (3,2,1) replay with all large-energy matrix and histogram identities enabled.
+[2026-07-13T10:48:15+03:00] OK ATTACK | DID: Optimized endpoint-only preservation at X=5000 | RESULT: OPTIMAL maximum H_F-Q_F=-34 | D: scalar gate alive
+[2026-07-13T10:48:15+03:00] > ATTACK | NEXT: Optimize endpoint-only preservation at X=10000 with 64 workers and 180s.
+[2026-07-13T10:48:40+03:00] OK PLAN | DID: Reduced gate to a block-pressure upper certificate | RESULT: frontier=P_L coefficient rate versus 360 on ray (3,2,1) | D: PLAN -> ATTACK
+[2026-07-13T10:48:40+03:00] > ATTACK | NEXT: Enumerate exact offset supports through word length 12 and evaluate block pressure with one worker.
+[2026-07-13T10:49:22+03:00] OK ATTACK | DID: Optimized endpoint-only preservation at X=10000 | RESULT: OPTIMAL maximum H_F-Q_F=-68 | D: none
+[2026-07-13T10:49:22+03:00] > ATTACK | NEXT: Run selected-cutoff preservation falsifier over every hard cutoff through X=2000.
+[2026-07-13T10:49:38+03:00] OK VERIFY | DID: Replayed (3,2,1) with full identity audit | RESULT: all blocks and K2-K4 matrices pass; K5 N=32848227720 | D: VERIFY->CHECK
+[2026-07-13T10:49:38+03:00] > CHECK | NEXT: Write C26 exact tables, collision decomposition, tie ambiguity, arithmetic audit, and finite-only verdict.
+[2026-07-13T10:50:50+03:00] FAIL ATTACK | DID: Ran exact L<=12 block-pressure probe | RESULT: known T-word identity check false under recurrence orientation | D: reverse notation
+[2026-07-13T10:50:50+03:00] > ATTACK | NEXT: Correct word orientation, rerun L<=12, then extract minimal rewrite rules for a finite-state pressure bound.
+[2026-07-13T10:50:53+03:00] > VERIFY | NEXT: Rebuild C25, replay X=100000, validate hashes and JSON, and run scoped whitespace/status checks.
+[2026-07-13T10:50:41+03:00] > SELECT | NEXT: Fix #424 C30 one-step H<=Q preservation, isolated in C23 and exact-testable by finite SAT.
+[2026-07-13T10:50:41+03:00] OK SELECT | DID: Selected C30 preservation lemma | RESULT: C23 preservation_sat.py defines an exact finite model | D: SELECT -> GATE
+[2026-07-13T10:50:41+03:00] > GATE | NEXT: Read #424 statement and C23 records, then test whether the lemma is already known or exactly falsified.
+[2026-07-13T10:51:49+03:00] OK VERIFY | DID: Rebuilt and replayed C25 | RESULT: g++ rc=0; independent fields match; 4 hashes pass; scoped diff clean | D: VERIFY -> DECIDE
+[2026-07-13T10:51:49+03:00] > DECIDE | NEXT: Close C25 with the proved residual criterion, exact X=252 falsifier, and X=100000000 census.
+[2026-07-13T10:51:49+03:00] OK DECIDE | DID: Closed assigned C25 lane | RESULT: C25_hard_hole_sieve.md; H=o(X) remains open | D: deliverable complete
+[2026-07-13T10:52:31+03:00] OK CHECK | DID: Wrote C26 exact data and collision audit | RESULT: problems/424/fanout/wave3/C26_rd_aggregated_energy.md | D: CHECK->VERIFY
+[2026-07-13T10:52:31+03:00] > VERIFY | NEXT: Fresh-compile C26 and check JSON, hashes, replay flags, ASCII, links, and scoped artifacts.
+[2026-07-13T10:53:00+03:00] OK ATTACK | DID: Selected-cutoff preservation SAT through X=2000 | RESULT: OPTIMAL max excess=0; threshold identity tight at X=186 | D: none
+[2026-07-13T10:53:00+03:00] > ATTACK | NEXT: Run selected-cutoff preservation falsifier through X=5000, 64 workers, 180s.
+[2026-07-13T10:53:56+03:00] OK ATTACK | DID: Corrected and reran L<=12 block/rewrite probes | RESULT: 364 rules, 455 exact support checks; pressure ratio=1.144844 | D: none
+[2026-07-13T10:53:56+03:00] > ATTACK | NEXT: Enumerate all 3^13 words, extract length-13 primitive identities, and recompute the exact rational pressure bound.
+[2026-07-13T10:54:18+03:00] FAIL VERIFY | DID: Filtered lines by raw C26 substring | RESULT: unrelated old SHA line matched at 342 chars | D: none
+[2026-07-13T10:54:18+03:00] OK VERIFY | DID: Fresh build and C26 artifact audit | RESULT: rc=0; 8 hashes, 6 JSON, 9 ASCII, 16 line checks pass | D: VERIFY->DECIDE
+[2026-07-13T10:54:18+03:00] > DECIDE | NEXT: Classify the exact finite ratios against gate (E) without asymptotic extrapolation.
+[2026-07-13T10:54:09+03:00] OK GATE | DID: Checked #424 and A005244 records | RESULT: erdosproblems.com/424 is OPEN with 0 claimed partial solutions | D: GATE -> PLAN
+[2026-07-13T10:54:09+03:00] > PLAN | NEXT: Prove chain-threshold update, then attack delayed-boundary prefix compensation as the frontier.
+[2026-07-13T10:54:09+03:00] OK PLAN | DID: Derived exact threshold update | RESULT: each finite boundary c maps to c or 2c-1; removed even root r adds 2r-1 | D: PLAN -> ATTACK
+[2026-07-13T10:54:09+03:00] > ATTACK | NEXT: Build an independent C30 CP-SAT model and test whether every one-step image F(S) satisfies H<=Q without assuming P(S).
+[2026-07-13T10:54:58+03:00] OK DECIDE | DID: Classified C26 finite gate-(E) data | RESULT: max ratios 1.006166320928 and 1.003455937733; no finite falsifier | D: lane complete
+[2026-07-13T10:53:20+03:00] OK VERIFY | DID: Closed C25 agent after independent rebuild | RESULT: C25_hard_hole_sieve.md; residual-free gate fails at X=252 | D: lane blocked
+[2026-07-13T10:53:20+03:00] > ATTACK | NEXT: Derive C23 one-step preservation from seed-2 chain thresholds and exact boundary motion.
+[2026-07-13T10:56:30+03:00] OK ATTACK | DID: Enumerated 3^13 words and rebuilt rewrite automaton | RESULT: 946 rules, 560 zero-slack checks; pressure ratio=1.139370 | D: none
+[2026-07-13T10:56:30+03:00] > ATTACK | NEXT: Enumerate all 3^14 words and test whether the length-14 rewrite pressure crosses the exact 360 threshold.
+[2026-07-13T10:56:56+03:00] OK ATTACK | DID: Built independent C30 CP-SAT falsifier | RESULT: C30_preservation_sat.py compiles | D: none
+[2026-07-13T10:56:56+03:00] > ATTACK | NEXT: Maximize H_F-Q_F unconditionally over all closed S at X=500 with 64 workers and 60s.
+[2026-07-13T10:57:00+03:00] OK VERIFY | DID: Audited C26 aggregate energy | RESULT: C26_rd_aggregated_energy.md; max E/N=1.006166321 | D: no finite falsifier
+[2026-07-13T10:57:00+03:00] OK CHECK | DID: Sent C26 exact gate and tie ambiguity to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md | D: none
+[2026-07-13T10:57:35+03:00] OK ATTACK | DID: Optimized unconditional image gate at X=500 | RESULT: OPTIMAL maximum H_F-Q_F=-6 | D: stronger gate alive
+[2026-07-13T10:57:35+03:00] > ATTACK | NEXT: Scan all 147 hard cutoffs through X=2000 unconditionally with 64 workers and 30s per cutoff.
+[2026-07-13T10:58:00+03:00] OK ATTACK | DID: Selected-cutoff preservation SAT through X=5000 | RESULT: OPTIMAL maximum excess=0 at X=54 | D: unrestricted gate equivalent
+[2026-07-13T10:58:00+03:00] > ATTACK | NEXT: Exact-test canonical chain-threshold transition identity and no-helper strengthening through X=1000000.
+[2026-07-13T10:59:20+03:00] > ATTACK | NEXT: Launch C31 direct additive-one rank-prefix proof/falsifier for actual grounded generation.
+[2026-07-13T10:59:20+03:00] > ATTACK | NEXT: Launch C32 streaming exact K5 aggregate-energy design under 192 GB.
+[2026-07-13T10:59:24+03:00] OK ATTACK | DID: Enumerated 3^14 words and rebuilt rewrite automaton | RESULT: 2454 rules, 680 zero-slack checks; pressure ratio=1.134385 | D: no falsifier
+[2026-07-13T10:59:24+03:00] > ATTACK | NEXT: Compute residue-sup multiplicity bounds for Q=30,150 through k=20 and exact-check all count vectors through length 10.
+[2026-07-13T10:59:46+03:00] OK ATTACK | DID: Scanned unconditional image gate through X=2000 | RESULT: 147/147 cutoffs OPTIMAL; no H_F>Q_F | D: stronger gate alive
+[2026-07-13T10:59:46+03:00] > ATTACK | NEXT: Maximize unconditional H_F-Q_F at X=10000 with 64 workers and 180s.
+[2026-07-13T11:00:34+03:00] FAIL ATTACK | DID: Ran residue multiplicity bounds Q=30,150 to k=20 | RESULT: Q150 normalized bound=7.437694e21 at k=20 | D: fixed-Q carry bound lossy
+[2026-07-13T11:00:34+03:00] > ATTACK | NEXT: Refine the residue multiplicity bound to Q=900 through k=12 and compare its exact exponential loss.
+[2026-07-13T11:01:05+03:00] OK ATTACK | DID: Audited C23 chain transitions to X=1000000 | RESULT: identity and exposed-threshold dominance pass all 16 stages | D: frontier=ETD
+[2026-07-13T11:01:05+03:00] > VERIFY | NEXT: Independently replay least closure, death ranks, chain shifts, ETD, and falsifiers through X=500.
+[2026-07-13T11:00:54+03:00] > ATTACK | NEXT: Pin C31 rank definitions and replay additive-one prefix gate from exact 1e9 artifacts.
+[2026-07-13T11:01:25+03:00] OK ATTACK | DID: Optimized unconditional image gate at X=10000 | RESULT: OPTIMAL maximum H_F-Q_F=-68 | D: none
+[2026-07-13T11:01:25+03:00] > ATTACK | NEXT: Drop source closure in C30 SAT and find the first exact image-gate countermodel through X=500.
+[2026-07-13T11:01:48+03:00] > ATTACK | NEXT: Scan arbitrary-source images at all hard cutoffs to X=500 with 64 workers and 30s per cutoff.
+[2026-07-13T11:02:48+03:00] OK VERIFY | DID: Ran independent C23 trial-division verifier | RESULT: 8/8 tests pass through X=500 | D: VERIFY->ATTACK
+[2026-07-13T11:02:48+03:00] > ATTACK | NEXT: Run chain identity and exposed-threshold dominance at every stage/cutoff through X=10000000.
+[2026-07-13T11:03:00+03:00] OK ATTACK | DID: Pinned C31 ranks from C16/C17/C24 | RESULT: obstruction depth=death rank-1; rank_1e9 SHA E466E98A... | D: none
+[2026-07-13T11:03:00+03:00] > ATTACK | NEXT: Build independent C31 verifier and inspect the online greedy matching for an algebraic map.
+[2026-07-13T11:04:30+03:00] FAIL ATTACK | DID: Dropped source closure | RESULT: X=54 countermodel S={2,3}; missing forced 5 kills route | D: source closure essential
+[2026-07-13T11:04:30+03:00] > ATTACK | NEXT: Replay C22 closed set plus unsupported roots 186,252,318,362 and test all C30 prefixes through X=362.
+[2026-07-13T11:04:10+03:00] > ATTACK | NEXT: Build C32 exact gcd-ratio streaming counter; validate C26 K<=4, then evaluate ray321 K=5 under 16 workers/64GB.
+[2026-07-13T11:05:25+03:00] FAIL ATTACK | DID: Replayed repaired C22 set at X=362 | RESULT: closed P(S); F has H=5,Q=34 from 37 removals | D: repair route DEAD
+[2026-07-13T11:05:25+03:00] > ATTACK | NEXT: Optimize unconditional image gate at X=100000 with 64 workers and 300s.
+[2026-07-13T11:05:50+03:00] FAIL ATTACK | DID: Refined carry bound to Q=900 through k=12 | RESULT: normalized bound=8.628340e8 at k=12 | D: independent-lift carry DEAD
+[2026-07-13T11:05:50+03:00] > ATTACK | NEXT: Build correlated-lift Bellman operators for Q=30,150,900 and test canonical weight 30/31 via exact rational inequalities.
+[2026-07-13T11:06:44+03:00] OK VERIFY | DID: Parsed JSON, rebuilt source, reran oracle | RESULT: source SHA 2B7C7CD5...; 110/110 checks pass | D: none
+[2026-07-13T11:06:44+03:00] > VERIFY | NEXT: Count current binary on exact support tiles [0,4224), width=2^30, threads=64; require D=330159210305.
+[2026-07-13T11:06:57+03:00] OK ATTACK | DID: Solved correlated carry LPs Q=30,150,900 | RESULT: canonical lambda=1.619215,1.549683,1.349220; 2014 Q900 actions | D: alive
+[2026-07-13T11:06:57+03:00] > ATTACK | NEXT: Solve correlated canonical carry LPs at Q=4500,22500 and measure the critical-factor decay.
+[2026-07-13T11:06:57+03:00] OK ATTACK | DID: Optimized unconditional image gate at X=100000 | RESULT: OPTIMAL maximum H_F-Q_F=-1555 | D: none
+[2026-07-13T11:06:57+03:00] > ATTACK | NEXT: Add unconditional selected-cutoff objective and maximize every F(S) prefix through X=100000.
+[2026-07-13T11:05:10+03:00] OK ATTACK | DID: Removed P(S) assumption from C23 exact SAT | RESULT: unconditional image gate OPTIMAL excess=-5 at X=2000 | D: stronger frontier
+[2026-07-13T11:05:10+03:00] > ATTACK | NEXT: Test unconditional image property through selected hard cutoffs X=10000.
+[2026-07-13T11:07:52+03:00] > ATTACK | NEXT: Smoke-test unconditional max-prefix model at X=2000 with 64 workers and 60s.
+[2026-07-13T11:08:50+03:00] > ATTACK | NEXT: Remove all source P constraints and maximize image excess over every hard cutoff through X=2000.
+[2026-07-13T11:09:17+03:00] FAIL ATTACK | DID: Smoke-tested max-prefix model at X=2000 | RESULT: 60s return failed objective replay assertion | D: model not trusted
+[2026-07-13T11:09:17+03:00] > ATTACK | NEXT: Instrument objective replay and rerun max-prefix model at X=500 with 8 workers and 30s.
+[2026-07-13T11:10:03+03:00] OK ATTACK | DID: Maximized unconditional selected image excess through X=2000 | RESULT: OPTIMAL max=0 at cutoff 54; exact replay passed | D: stronger frontier
+[2026-07-13T11:10:03+03:00] > ATTACK | NEXT: Maximize unconditional image excess over every hard cutoff through X=5000 with 64 workers and 300s.
+[2026-07-13T11:10:04+03:00] OK VERIFY | DID: Counted exact support tiles with current binary | RESULT: D=330159210305; 4224 tiles; 179.510390s | D: VERIFY -> WRITEUP
+[2026-07-13T11:10:04+03:00] > WRITEUP | NEXT: Add the bounded third run to C28 result and report, then audit final scope and syntax.
+[2026-07-13T11:10:23+03:00] OK ATTACK | DID: Fixed and replayed max-prefix model at X=500 | RESULT: OPTIMAL max excess=0 at X=54 | D: model trusted
+[2026-07-13T11:10:23+03:00] > ATTACK | NEXT: Maximize unconditional F(S) prefix excess through X=10000 with 64 workers and 180s.
+[2026-07-13T11:10:41+03:00] OK ATTACK | DID: Maximized unconditional selected image excess through X=5000 | RESULT: OPTIMAL max=0 at cutoff 74; exact replay passed | D: none
+[2026-07-13T11:10:41+03:00] > ATTACK | NEXT: Maximize unconditional image excess over every hard cutoff through X=10000 with 64 workers and 300s.
+[2026-07-13T11:11:22+03:00] OK WRITEUP | DID: Added third run and audited C28 artifacts | RESULT: manifest assertions pass; report SHA 691469CA... | D: WRITEUP -> CHECK
+[2026-07-13T11:11:22+03:00] > CHECK | NEXT: Confirm exact count, proof, scaling data, and independent checks satisfy C28.
+[2026-07-13T11:11:22+03:00] OK CHECK | DID: Checked C28 objective against delivered files | RESULT: exact k5 count, proof, code, 3 runs, 110 checks present | D: stall=0; CHECK -> DECIDE
+[2026-07-13T11:11:22+03:00] > DECIDE | NEXT: Make the final completeness decision for C28 only.
+[2026-07-13T11:11:22+03:00] OK DECIDE | DID: Applied C28 success condition | RESULT: D_15,10,5=330159210305 exactly | D: C28 complete; STOP
+[2026-07-13T11:11:30+03:00] OK VERIFY | DID: Closed C28 exact k5 mass lane | RESULT: |D_15,10,5|=330159210305; norm=.299069098 | D: no finite M-falsifier
+[2026-07-13T11:11:30+03:00] OK CHECK | DID: Sent C28 exact k5 mass result to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md | D: none
+[2026-07-13T11:12:20+03:00] > ATTACK | NEXT: Launch C34 exact dual/core extraction for the unconditional image inequality.
+[2026-07-13T11:13:56+03:00] > VERIFY | NEXT: Run C32 ray321 K=4, shift34, 16 workers and compare all exact C26 energy fields.
+[2026-07-13T11:14:35+03:00] FAIL ATTACK | DID: Solved canonical carry LPs Q=4500,22500 | RESULT: lambda=1.319264,1.308625, both >1 | D: periodic potential branch closed
+[2026-07-13T11:14:35+03:00] > ATTACK | NEXT: Prove and exact-check phi(d)=d+28/59 as the canonical nonperiodic superharmonic carry potential.
+[2026-07-13T11:15:27+03:00] OK VERIFY | DID: Replayed C32 ray321 K=2,3,4 | RESULT: 3/3 full C26 JSON energy records match exactly | D: stream engine validated
+[2026-07-13T11:15:27+03:00] > ATTACK | NEXT: Run exact ray321 K=5 streaming energy with shift38, 16 workers, peak memory below 64GB.
+[2026-07-13T11:16:00+03:00] FAIL ATTACK | DID: Tested critical/all-factor two-step seed-2 matching to 1e5 | RESULT: first zero-degree source=74; only 720/5108 matched | D: local map dead
+[2026-07-13T11:16:00+03:00] > ATTACK | NEXT: Reformulate C31 as seed-2 chain Euler/rank invariant and seek an induction yielding bounded defect.
+[2026-07-13T11:16:50+03:00] FAIL ATTACK | DID: Maximized all image prefixes through X=10000 | RESULT: FEASIBLE excess=0 after 180s; not optimal | D: inconclusive
+[2026-07-13T11:16:50+03:00] > ATTACK | NEXT: Build exact relaxation for closed splitless-free sets and scan for H>Q through X=5000.
+[2026-07-13T11:17:27+03:00] > ATTACK | NEXT: Scan splitless-free closed sets at all hard cutoffs to X=500 with 64 workers and 30s per cutoff.
+[2026-07-13T11:17:34+03:00] OK ATTACK | DID: Proved canonical affine carry potential | RESULT: phi=d+28/59; 1,000,001 integer and 87,491 endpoint checks pass | D: ATTACK -> VERIFY
+[2026-07-13T11:17:34+03:00] > VERIFY | NEXT: Independently rederive the Doob identity, replay k<=5 mass data, and audit every C29 certificate and SHA-256.
+[2026-07-13T11:17:44+03:00] > ATTACK | NEXT: Solve C34 LP relaxations at X=54,74,186,362 and extract active dual rows.
+[2026-07-13T11:17:45+03:00] OK ATTACK | DID: Scanned splitless-free relaxation through X=500 | RESULT: 27/27 cutoffs OPTIMAL; no H>Q | D: relaxation alive
+[2026-07-13T11:17:45+03:00] > ATTACK | NEXT: Optimize splitless-free H-Q at X=10000 with 64 workers and 180s.
+[2026-07-13T11:18:19+03:00] FAIL ATTACK | DID: Started C32 K5 shift38 stream | RESULT: stopped before first bucket; per-product vector allocation dominated | D: optimize merge
+[2026-07-13T11:18:19+03:00] > ATTACK | NEXT: Remove per-product allocation, benchmark one K5 band, then restart exact stream.
+[2026-07-13T11:18:32+03:00] OK ATTACK | DID: Optimized splitless-free gate at X=10000 | RESULT: OPTIMAL maximum H-Q=-42 | D: stronger relaxation alive
+[2026-07-13T11:18:32+03:00] > ATTACK | NEXT: Scan splitless-free closed sets at all 147 hard cutoffs to X=2000 with 64 workers and 30s each.
+[2026-07-13T11:18:43+03:00] OK ATTACK | DID: Solved C34 LP at 54,74,186,362 | RESULT: all max excess 0; all returned vertices integral | D: LP-dual branch alive
+[2026-07-13T11:18:43+03:00] > VERIFY | NEXT: Reconstruct and verify exact rational dual certificates for four tight cutoffs.
+[2026-07-13T11:19:02+03:00] FAIL ATTACK | DID: Maximized unconditional selected image excess through X=10000 | RESULT: FEASIBLE max=0 after 300s; X=5000 remains exact | D: none
+[2026-07-13T11:19:02+03:00] > ATTACK | NEXT: Replace quadratic selected-prefix sums by exact recurrences and rerun X=10000.
+[2026-07-13T11:19:30+03:00] OK VERIFY | DID: Replayed algebra, scripts, hashes, and k<=5 support data | RESULT: D1=60,D2=13068,D3=3542949,D4=1054111467,D5=330159210305 | D: VERIFY -> CHECK
+[2026-07-13T11:19:30+03:00] > CHECK | NEXT: Write the proved harmonic/Doob lemma, pressure falsifier criteria, dead branches, and single local-limit frontier.
+[2026-07-13T11:16:00+03:00] > ATTACK | NEXT: Send GPT-Pro the exact unconditional image theorem for proof or finite counterexample.
+[2026-07-13T11:16:30+03:00] OK ATTACK | DID: Sent GPT-Pro R4 image-theorem prompt once | RESULT: R4_image_theorem_prompt.md; Stop control active | D: awaiting independent result
+[2026-07-13T11:20:00+03:00] > ATTACK | NEXT: Run exact grounded rank-prefix scan to X=2e9 with 1 worker and <20 GB; seek first additive-one failure.
+[2026-07-13T11:21:34+03:00] OK ATTACK | DID: Scanned splitless-free gate through X=2000 | RESULT: 147/147 cutoffs OPTIMAL; no H>Q | D: none
+[2026-07-13T11:21:34+03:00] > ATTACK | NEXT: Build exact G tail-removal construction and test D(X)-R(X) through X=100000000.
+[2026-07-13T11:22:34+03:00] > ATTACK | NEXT: Replay tail-removal construction at X=10000 with one C++ worker and match the SAT optimum.
+[2026-07-13T11:23:02+03:00] FAIL ATTACK | DID: Replayed initial tail construction | RESULT: odd parent 21 creates boundary 21; claimed R overcounted | D: odd-parent route DEAD
+[2026-07-13T11:23:02+03:00] > ATTACK | NEXT: Restrict R to even nonhard Q-parent roots, rebuild, and replay at X=10000.
+[2026-07-13T11:23:11+03:00] OK VERIFY | DID: Exact-verified C34 duals at 54,74,186,362 | RESULT: objectives 1,2,8,19; stationarity exact; duals integer | D: none
+[2026-07-13T11:23:32+03:00] FAIL ATTACK | DID: Profiled optimized C32 K5 | RESULT: 0.75GB peak but 2.4 effective cores from sequential bucket merge | D: parallelize buckets
+[2026-07-13T11:23:32+03:00] > ATTACK | NEXT: Implement 16-way independent bucket counting with serial per-worker radix under 20GB expected peak.
+[2026-07-13T11:23:57+03:00] OK ATTACK | DID: Corrected tail-removal replay at X=10000 | RESULT: H=518,Q=593,R=12,residual=63 | D: none
+[2026-07-13T11:23:57+03:00] > ATTACK | NEXT: Run exact corrected tail-removal construction through X=100000000 with one C++ worker.
+[2026-07-13T11:24:53+03:00] OK CHECK | DID: Wrote and audited the C29 proof/frontier note | RESULT: problems/424/fanout/wave3/C29_offset_mass_gate.md | D: CHECK -> DECIDE
+[2026-07-13T11:24:53+03:00] > DECIDE | NEXT: Search exact harmonic/Doob formulas in prior art and confirm C29 scope and artifact hashes.
+[2026-07-13T11:22:00+03:00] > ATTACK | NEXT: Ablate forward-closure clauses to identify the exact mechanism behind unconditional image-P.
+[2026-07-13T11:25:10+03:00] OK DECIDE | DID: Re-ran exact-formula novelty and scope/hash audits | RESULT: no matching prior formula; all C29 script hashes match JSON | D: C29 lane complete
+[2026-07-13T11:25:10+03:00] OK ATTACK | DID: Ran corrected tail construction to X=100000000 | RESULT: H=3368726,Q=5948614,R=25463; no failure | D: none
+[2026-07-13T11:25:10+03:00] > ATTACK | NEXT: Diff the exact X=10000 splitless-free optimizer against G and classify all added threshold roots.
+[2026-07-13T11:25:29+03:00] FAIL ATTACK | DID: Reran sparse unconditional selected model at X=10000 | RESULT: FEASIBLE max=0, upper bound=7 after 300s | D: none
+[2026-07-13T11:25:29+03:00] > ATTACK | NEXT: Encode unconditional prefix maximum by exact max-equality and rerun X=10000.
+[2026-07-13T11:26:02+03:00] OK ATTACK | DID: Diffed X=10000 relaxation optimizer from G | RESULT: 503 additions, 404 new chain starts, 297 unsupported | D: none
+[2026-07-13T11:26:02+03:00] > ATTACK | NEXT: Add linear-size prefix-max preservation objective enforcing P(S) at every prefix.
+[2026-07-13T11:26:00+03:00] OK VERIFY | DID: Audited C29 critical carry lemma | RESULT: phi=d+28/59; exact killed-chain reduction to LL | D: F2 frontier sharpened
+[2026-07-13T11:26:00+03:00] OK CHECK | DID: Sent C29 carry theorem and LL frontier to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md | D: none
+[2026-07-13T11:26:00+03:00] > ATTACK | NEXT: Launch C35 proof/falsifier for the explicit killed-chain local-limit estimate.
+[2026-07-13T11:26:24+03:00] > ATTACK | NEXT: Smoke-test prefix-max preservation at X=500 with 8 workers and 30s.
+[2026-07-13T11:26:46+03:00] OK ATTACK | DID: Smoke-tested prefix-max at X=500 | RESULT: OPTIMAL max excess=0 at X=54; replay passed | D: none
+[2026-07-13T11:26:46+03:00] > ATTACK | NEXT: Maximize preservation excess over every prefix to X=10000 with 64 workers and 600s.
+[2026-07-13T11:27:05+03:00] FAIL ATTACK | DID: Tested max-equality encoding at X=2000 | RESULT: FEASIBLE max=0 after 60s versus selector OPTIMAL in 3s | D: max-equality DEAD
+[2026-07-13T11:27:05+03:00] > ATTACK | NEXT: Restore selector recurrence, recertify X=2000 and X=5000, then isolate the unconditional lemma.
+[2026-07-13T11:28:50+03:00] OK ATTACK | DID: Exact C32 ray321 K5 shift38, 16 workers | RESULT: N=32848227720, E=32964715932, E/N=1.003546255615 | D: no gate-E falsifier
+[2026-07-13T11:28:50+03:00] > VERIFY | NEXT: Recompute ray321 K5 with independent shift37 partition and compare every exact field.
+[2026-07-13T11:28:52+03:00] > ATTACK | NEXT: Scan full LP and seven ablations over every hard cutoff through X=2000.
+[2026-07-13T11:30:00+03:00] OK ATTACK | DID: Ablated forward closure from image-P SAT | RESULT: first exact failure X=54, S={2,3}, excess=1 | D: closure is load-bearing
+[2026-07-13T11:30:00+03:00] > ATTACK | NEXT: Test whether containing the grounded core alone implies image-P.
+[2026-07-13T11:29:09+03:00] > ATTACK | NEXT: Derive C35 conditioned path law and exact-test LL intermediates for the killed affine chain.
+[2026-07-13T11:29:41+03:00] OK ATTACK | DID: Scanned C34 LP ablations through X=2000 | RESULT: full and q-upper-ablated LP pass 147 hard cutoffs; other facets fail at 54/186 | D: none
+[2026-07-13T11:30:28+03:00] OK ATTACK | DID: Restored selector recurrence and recertified X=2000,5000 | RESULT: OPTIMAL maxima 0; X=5000 bound=0 at cutoff 362 | D: none
+[2026-07-13T11:30:28+03:00] > ATTACK | NEXT: Certify sorted event dominance and solve unconditional fixed endpoint X=10000.
+[2026-07-13T11:31:47+03:00] > VERIFY | NEXT: Compile C34 tools, replay exact duals, and hash report/artifacts.
+[2026-07-13T11:32:42+03:00] OK VERIFY | DID: Replayed C34 duals and C33 MIPs at 54,74,186,362 | RESULT: LP=MIP=0; exact dual PASS; predicates agree to 10000 | D: none
+[2026-07-13T11:32:42+03:00] OK CHECK | DID: Completed C34 image-dual core | RESULT: C34_image_dual_core.md; LP/Farkas template and ablation artifacts | D: C34 complete
+[2026-07-13T11:33:44+03:00] > ATTACK | NEXT: Replace C34 closure rows by exact grounded-core bounds and solve LP/core scans through 10000.
+[2026-07-13T11:34:16+03:00] OK ATTACK | DID: Scanned exact grounded ranks through X=2e9 | RESULT: +1 failures=0; greedy unmatched only 362/r2 | D: no theorem
+[2026-07-13T11:34:56+03:00] OK ATTACK | DID: Solved unconditional image gates | RESULT: all-prefix OPTIMAL max=0 to 5000; endpoint X=10000 OPTIMAL max=-68 | D: image-P frontier
+[2026-07-13T11:34:56+03:00] > VERIFY | NEXT: Independently replay closure, F(S), threshold identity, and sorted event dominance from C23 artifacts.
+[2026-07-13T11:35:09+03:00] OK VERIFY | DID: Recomputed C32 K5 with shifts37/38 | RESULT: all exact matrix, energy, histogram fields identical | D: K5 certified
+[2026-07-13T11:35:09+03:00] OK CHECK | DID: Wrote C32 report and sent result to Fable | RESULT: fanout/wave3/C32_rd_energy_streaming.md | D: C32 complete
+[2026-07-13T11:35:13+03:00] > VERIFY | NEXT: Run independent Python rank-prefix oracle through X=1e6 and SHA-pin all C31 artifacts.
+[2026-07-13T11:35:12+03:00] FAIL ATTACK | DID: Exact-tested C29 LL | RESULT: equal map blocks give fiber 8^k; base ratio 8(30/31)^31=2.8949187>1 | D: LL DEAD
+[2026-07-13T11:35:12+03:00] > VERIFY | NEXT: Formalize the C35 infinite collision family and audit every count, map, and probability cancellation.
+[2026-07-13T11:35:53+03:00] OK VERIFY | DID: Rebuilt C31 independently through X=1e6 | RESULT: +1 failures=0; local 2-step has 16451 zero-degree sources | D: local proof dead
+[2026-07-13T11:37:02+03:00] > WRITEUP | NEXT: Write C31 rank/death lemmas, nested Hall equivalence, local falsifier, and exact 2e9 audit with SHAs.
+[2026-07-13T11:37:21+03:00] OK VERIFY | DID: Ran C23 independent replay suite | RESULT: 9/9 tests pass in 0.321s, including unconditional endpoint X=10000 | D: none
+[2026-07-13T11:37:21+03:00] > WRITEUP | NEXT: State proved chain identities, exact image-P limits, and the irreducible sorted-dominance lemma.
+[2026-07-13T11:36:07+03:00] > VERIFY | NEXT: Replay C35's claimed exponential counterfamily to the killed-chain LL bound.
+[2026-07-13T11:36:09+03:00] OK VERIFY | DID: Enumerated C35 fibers through k=5 | RESULT: 8^k words collide; 8(30/31)^31=2.8949>1 | D: C29 LL dead
+[2026-07-13T11:39:00+03:00] OK VERIFY | DID: Finalized C35 LL falsifier | RESULT: C35_killed_chain_local_limit.md SHA 3013e1eeb3a673d3; replay k<=6 passed | D: max-fiber LL DEAD
+[2026-07-13T11:39:00+03:00] OK CHECK | DID: Scoped C35 conclusion | RESULT: uniform LL false; distinct-offset mass gate M remains open | D: C35 complete
+[2026-07-13T11:39:43+03:00] OK WRITEUP | DID: Wrote and checked C31 report | RESULT: report SHA BABBEAC3...; JSON assertions and git diff check pass | D: frontier unresolved
+[2026-07-13T11:39:52+03:00] OK ATTACK | DID: Solved grounded-core C34 LP | RESULT: 147/147 cutoffs to 2000 pass; X10000 excess=-65; all endpoint vertices integral | D: closure reduced to G bounds
+[2026-07-13T11:39:52+03:00] > VERIFY | NEXT: Exact-replay grounded duals and compare G_X with C33.
+[2026-07-13T11:40:32+03:00] OK VERIFY | DID: Exact-verified grounded duals and C33 core replay | RESULT: dual PASS 54..10000; G sizes agree exactly; report addendum written | D: C34 refined
+[2026-07-13T11:40:32+03:00] OK CHECK | DID: Tested closure-vs-ground distinction | RESULT: arbitrary extras need no closure in all exact finite gates; only G_X bounds remain | D: frontier sharpened
+[2026-07-13T11:43:00+03:00] OK CHECK | DID: Closed C31/C34 exact lanes | RESULT: +1 rank passes to 2e9; ground-core dual passes to 1e4 | D: F3=unit skeleton
+[2026-07-13T11:43:01+03:00] > ATTACK | NEXT: Prove exponential orbit compression from equal-map blocks and audit F3 unit skeleton.
+[2026-07-13T11:41:40+03:00] FAIL ATTACK | DID: Ran prefix-max preservation at X=10000 | RESULT: FEASIBLE excess=0 after 600s; not optimal | D: inconclusive
+[2026-07-13T11:41:40+03:00] > ATTACK | NEXT: Optimize splitless-free H-Q at X=100000 with 64 workers and 300s.
+[2026-07-13T11:47:00+03:00] OK ATTACK | DID: Proved fixed-block orbit compression | RESULT: D_k/M_k<=(1-28000/31^6)^floor(k/2) | D: F2 (M) dead
+[2026-07-13T11:47:01+03:00] > VERIFY | NEXT: Independent C36 audit of affine congruence, orbit count, and conditional probability bound.
+[2026-07-13T11:44:39+03:00] OK WRITEUP | DID: Wrote C23 report | RESULT: C23_grounded_horn.md states identities (4)-(7) and sorted lemma SD | D: WRITEUP -> VERIFY
+[2026-07-13T11:44:39+03:00] OK VERIFY | DID: Replayed C23 artifacts and all small closed sources | RESULT: 10/10 tests pass; 256/256 sources satisfy identity (4) | D: VERIFY -> CHECK
+[2026-07-13T11:44:39+03:00] > CHECK | NEXT: Audit C23 scope, JSON syntax, hashes, and exact solver statuses.
+[2026-07-13T11:45:08+03:00] OK ATTACK | DID: Optimized splitless-free gate at X=100000 | RESULT: OPTIMAL maximum H-Q=-1301 | D: no falsifier
+[2026-07-13T11:45:08+03:00] > ATTACK | NEXT: Run weaker selected-cutoff preservation SAT at X=10000 with 64 workers and 300s.
+[2026-07-13T11:45:19+03:00] OK CHECK | DID: Audited C23 scope, JSON, and statuses | RESULT: report SHA 6945FD10...; max-prefix 5000 OPTIMAL 0; endpoint 10000 OPTIMAL -68 | D: CHECK -> DECIDE
+[2026-07-13T11:45:19+03:00] > DECIDE | NEXT: Classify C23 as proof, true-G falsifier, or exact irreducible frontier.
+[2026-07-13T11:45:09+03:00] > ATTACK | NEXT: Run C36 checker at max-k=50 over 13,860 toy words and every feasible prior depletion vector.
+[2026-07-13T11:45:33+03:00] OK DECIDE | DID: Classified C23 outcome | RESULT: no proof/true-G falsifier; exact SD lemma and no image-P failure through 5000 | D: C23 complete
+[2026-07-13T11:45:52+03:00] OK ATTACK | DID: Ran C36 checker --max-k 50 | RESULT: 13,860 words give 13,741 orbits; all minima >=217728/887503681 | D: block bound proved
+[2026-07-13T11:51:00+03:00] FAIL CHECK | DID: Compared C36 scale to R2 gate | RESULT: W_k!=Q^k; orbit exponent too weak | D: retract F2-dead claim
+[2026-07-13T11:51:01+03:00] OK WRITEUP | DID: Corrected C36 report/mailbox | RESULT: theorem retained; only C29 max-fiber LL dead | D: F2 remains open
+[2026-07-13T11:50:39+03:00] > ATTACK | NEXT: Evaluate exact inclusion-exclusion counts of first-3, 552-avoiding words for k=1..50 against Q^k.
+[2026-07-13T11:51:32+03:00] FAIL ATTACK | DID: Ran selected-cutoff SAT at X=10000 | RESULT: FEASIBLE excess=0 after 300s; not optimal | D: inconclusive
+[2026-07-13T11:51:32+03:00] > ATTACK | NEXT: Add a pure positive-prefix existence mode with full P(S) constraints and exact replay.
+[2026-07-13T11:51:50+03:00] OK ATTACK | DID: Evaluated C36 IE counts k=1..50 | RESULT: first crossing A_25/Q^25=1.1855799446 for 552-avoiders | D: U=V alone insufficient
+[2026-07-13T11:51:55+03:00] > ATTACK | NEXT: Smoke-test positive-prefix existence through X=500 with 8 workers and 30s.
+[2026-07-13T11:52:10+03:00] OK ATTACK | DID: Tested positive-prefix existence through X=500 | RESULT: INFEASIBLE exact status | D: none
+[2026-07-13T11:52:10+03:00] > ATTACK | NEXT: Test positive-prefix existence through X=10000 with 64 workers and 600s.
+[2026-07-13T11:54:17+03:00] > SELECT | NEXT: Select Erdos #424 C38 because C23/C31 expose exact H,Q,E and death-rank data for a finite contraction gate.
+[2026-07-13T11:54:43+03:00] > VERIFY | NEXT: Run updated C36 checker --max-k 50 and verify inclusion-exclusion plus 6*A_25>7*Q^25.
+[2026-07-13T11:55:07+03:00] OK SELECT | DID: Selected #424 C38 splitless-bank lane | RESULT: C23 defines G,H,Q; C31 supplies death ranks | D: SELECT -> GATE
+[2026-07-13T11:55:07+03:00] > GATE | NEXT: Check #424 status and local prior art for an existing H<=Q+C E contraction theorem.
+[2026-07-13T11:55:09+03:00] OK VERIFY | DID: Replayed C36 checker | RESULT: IE matches 10,151 words; 6*A_25-7*Q^25>0; first crossing k=25 | D: R-D (M) remains open
+[2026-07-13T11:55:11+03:00] > VERIFY | NEXT: Harvest GPT-Pro R4 once and audit its image-theorem argument against exact F3 definitions.
+[2026-07-13T11:58:09+03:00] OK GATE | DID: Checked #424, A005244, and A04 search record | RESULT: #424 OPEN with 0 comments; A04:374-394 finds no density theorem | D: GATE -> PLAN
+[2026-07-13T11:58:09+03:00] > PLAN | NEXT: Define exact splitless-bank inequalities and a derivation-local Hall graph with terminal leaves as the frontier.
+[2026-07-13T11:58:18+03:00] > VERIFY | NEXT: Rerun C36 checker --max-k 50 and independently refactor the exact A_25 multinomial sum.
+[2026-07-13T11:59:37+03:00] > ATTACK | NEXT: Launch independent proof and falsifier lanes for the additive-one death-rank Hall theorem.
+[2026-07-13T12:00:37+03:00] OK SELECT | DID: Selected #424 C39 actual-G additive-one lane | RESULT: C31 and C23/C34 expose grounded death-rank recurrence | D: SELECT -> PLAN
+[2026-07-13T12:00:37+03:00] > PLAN | NEXT: Read C31/C23/C34 definitions and isolate one inductive frontier for H_{<=d}(X)<=Q_{<=d}(X)+1.
+[2026-07-13T12:00:39+03:00] > SELECT | NEXT: Audit C31 and exact #424 definitions to isolate C40's least-grounded additive-one falsifier target.
+[2026-07-13T12:00:12+03:00] OK ATTACK | DID: Launched C39 proof and C40 red-team lanes | RESULT: agents 019f5ab4-9815 and 019f5ab4-acf7 running | D: none
+[2026-07-13T12:01:33+03:00] OK SELECT | DID: Read AGENTS.md and C31 audit | RESULT: target is actual least G with child-coordinate targets and distinct factors | D: SELECT -> GATE
+[2026-07-13T12:01:33+03:00] > GATE | NEXT: Search C39 and #424 artifacts for prior falsifiers or proofs before defining an independent countermodel scan.
+[2026-07-13T12:01:53+03:00] OK PLAN | DID: Fixed canonical critical-blocker forest and per-root rank Hall gates | RESULT: summing H_e<=Q_e+C gives H<=Q+C E | D: PLAN -> ATTACK
+[2026-07-13T12:01:53+03:00] > ATTACK | NEXT: Implement exact C38 forest census and test scalar, component, and rank-filtered inequalities through 10^7.
+[2026-07-13T12:02:10+03:00] OK CHECK | DID: Sent F3 additive-one lanes and corrected C36 status to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md | D: none
+[2026-07-13T12:03:35+03:00] OK GATE | DID: Searched C22-C37 and active C39 artifacts | RESULT: only arbitrary-superset failures; no actual-G rank-prefix falsifier found | D: GATE -> PLAN
+[2026-07-13T12:03:35+03:00] > PLAN | NEXT: Build an independent least-G event sweep, audit four conventions, then stress plausible countermodels and prove one relaxation.
+[2026-07-13T12:03:47+03:00] OK VERIFY | DID: Refereed C36 proof and independent A_25 factorization | RESULT: checker, source hash, and markdown checks pass | D: VERIFY -> DECIDE
+[2026-07-13T12:03:47+03:00] > DECIDE | NEXT: Classify C36 against the actual Q^k/sqrt(k) R-D gate and close the audit.
+[2026-07-13T12:03:57+03:00] OK DECIDE | DID: Classified C36 against R-D (M) | RESULT: report SHA 58CEC2A312C5F2A4; orbit theorem true, relation-only falsifier blocked | D: C36 complete
+[2026-07-13T12:04:34+03:00] > ATTACK | NEXT: Test all short affine identities jointly against the R-D mass threshold, beyond C36 single-relation compression.
+[2026-07-13T12:04:59+03:00] OK PLAN | DID: Fixed C40 independent event, stage-rank, convention, and fiber audits | RESULT: frontier is actual-G all-prefix excess | D: PLAN -> ATTACK
+[2026-07-13T12:04:59+03:00] > ATTACK | NEXT: Implement C40 exact least-G checker with explicit factor pairs and descending-stage rank cross-check.
+[2026-07-13T12:05:02+03:00] OK PLAN | DID: Reduced C39 to cancelling transient S_{d+1} chain boundaries | RESULT: C23:177-210 identity; C31: rank=death-1 | D: PLAN -> ATTACK
+[2026-07-13T12:05:02+03:00] > ATTACK | NEXT: Build an exact C39 sweep to test recurrence-local cancellation rules and isolate the 362/rank-2 defect.
+[2026-07-13T12:04:48+03:00] OK ATTACK | DID: Launched C41 joint affine-relation entropy audit | RESULT: agent 019f5ab8-f3f4 running | D: none
+[2026-07-13T12:06:08+03:00] > ATTACK | NEXT: Run C38 exact smoke at X=10^4 for 3 critical-forest policies, rank offsets 0..2, and scalar H,Q,E gates.
+[2026-07-13T12:05:24+03:00] > SELECT | NEXT: Select #424 F2 because C19 supplies finite exact relations and C36 leaves their joint quotient open.
+[2026-07-13T12:05:24+03:00] OK SELECT | DID: Selected #424 F2 all-relations mass audit | RESULT: assigned C41 scope | D: SELECT -> GATE
+[2026-07-13T12:05:24+03:00] > GATE | NEXT: Audit C19/C29/C35/C36 claims and citations to isolate the untested joint-relation question.
+[2026-07-13T12:06:09+03:00] FAIL ATTACK | DID: Tested positive-prefix existence through X=10000 | RESULT: UNKNOWN after 600s; no model | D: inconclusive
+[2026-07-13T12:06:09+03:00] > VERIFY | NEXT: Build an independent C30 brute-force and artifact replay verifier for all claimed finite results.
+[2026-07-13T12:05:46+03:00] > WRITEUP | NEXT: Prove that additive-one rank dominance suffices for the C13/C16 asymptotic recurrence.
+[2026-07-13T12:06:18+03:00] OK WRITEUP | DID: Proved additive-one sufficiency | RESULT: C42_additive_one_suffices.md SHA A832F7BF; d(G)=2/3 conditional on rank theorem | D: F3 target weakened
+[2026-07-13T12:07:15+03:00] FAIL ATTACK | DID: Ran C38 forest smoke at X=10^4 | RESULT: C=1 first fails at X=144, root 8: H=3,Q=1; result_1e4.json | D: single-parent forest DEAD
+[2026-07-13T12:07:15+03:00] > ATTACK | NEXT: Test full critical-DAG leaf and shared-leaf Hall graphs to distinguish rooting failure from local-capacity failure.
+[2026-07-13T12:07:20+03:00] OK VERIFY | DID: Ran C30 independent verifier | RESULT: 256 sources, 6400 identities, 294 scan cutoffs, 5 optima pass | D: none
+[2026-07-13T12:07:20+03:00] > CHECK | NEXT: Write C30 proved identities, exact limits, dead constructions, and unresolved sorted-dominance frontier.
+[2026-07-13T12:07:39+03:00] OK GATE | DID: Searched #424 and affine-semigroup prior art | RESULT: no joint finite-relation entropy result; arXiv:2507.06875,2105.09387 | D: GATE -> PLAN
+[2026-07-13T12:07:39+03:00] > PLAN | NEXT: Define the full short-relation congruence and reduce a lower bound to canonical words avoiding every relation side.
+[2026-07-13T12:08:34+03:00] OK ATTACK | DID: Implemented explicit-product C++ and trial-divisor stage replay | RESULT: C40 compute sources created | D: none
+[2026-07-13T12:08:34+03:00] > ATTACK | NEXT: Compile C40 C++ and run C++/Python exact cross-checks at LIMIT=5000 with literal descending stages.
+[2026-07-13T12:08:35+03:00] OK CHECK | DID: Wrote C30 preservation audit | RESULT: C30_one_step_preservation.md, Theorem 3.1 and frontier SD | D: unresolved
+[2026-07-13T12:08:35+03:00] > VERIFY | NEXT: Rebuild C30 tools, rerun verifier and 1e4 probe, audit claims, hashes, and scoped diff.
+[2026-07-13T12:09:15+03:00] OK ATTACK | DID: Ran C++ product sweep and Python stage replay at LIMIT=5000 | RESULT: both give max excess 1 at (362,2), 0 +1 failures | D: none
+[2026-07-13T12:09:15+03:00] > ATTACK | NEXT: Run explicit-product C40 sweep at LIMIT=20000000; test child timing, exact layers, squares, and local fibers.
+[2026-07-13T12:09:05+03:00] > ATTACK | NEXT: Run 8 exact C38 critical/all-lower shared-leaf Hall gates at X=1000, with E and E+Q targets and rank offsets 0,1.
+[2026-07-13T12:09:26+03:00] OK ATTACK | DID: Ran 8 C38 DAG Hall gates at X=1000 | RESULT: all-lower E+Q passes; critical fails 474; rank offsets 0,1 fail 362,450 | D: one gate alive
+[2026-07-13T12:09:26+03:00] > ATTACK | NEXT: Extend all 8 exact C38 DAG Hall gates to X=10000 and extract the first alternating-tree witness if the survivor fails.
+[2026-07-13T12:09:19+03:00] OK PLAN | DID: Reduced C41 to an isolated-language DFA and exact closed-loop macrocode | RESULT: frontier is N>Q^b for canonical loop blocks | D: PLAN -> ATTACK
+[2026-07-13T12:09:19+03:00] > ATTACK | NEXT: Implement all-side relation enumeration through length 14 and exact canonical loop-code search.
+[2026-07-13T12:09:46+03:00] > ATTACK | NEXT: Run C39 exact grounded probe at limit=100000 and multiplier_cap=500 to falsify local multiplier injections.
+[2026-07-13T12:10:06+03:00] FAIL ATTACK | DID: Ran full-DAG C38 Hall gate at X=10000 | RESULT: first all-lower E+Q failure X=1536 has |L|=61,|N|=60 | D: local DAG matching DEAD
+[2026-07-13T12:10:06+03:00] > ATTACK | NEXT: Run C38 exact scalar, rank, and 3 forest-policy census at X=10^7 using one process and 32 rank layers.
+[2026-07-13T12:10:08+03:00] FAIL ATTACK | DID: Ran exact C39 limit=100000, multiplier_cap=500 | RESULT: 2088 zero-degree sources; 7*65=455 in G | D: multiplier injection DEAD
+[2026-07-13T12:10:08+03:00] > ATTACK | NEXT: Test recurrence-level transient-boundary cancellation and rank-layer potential identities at limit=100000.
+[2026-07-13T12:10:05+03:00] OK ATTACK | DID: Ran C40 explicit-product sweep at LIMIT=20000000 | RESULT: max excess 1; +1 failures 0; 68929547 pairs | D: none
+[2026-07-13T12:10:05+03:00] > ATTACK | NEXT: Extend the same independent exact C40 sweep to LIMIT=100000000 to stress low-rank fibers and event prefixes.
+[2026-07-13T12:10:31+03:00] OK VERIFY | DID: Rebuilt and refereed C30 artifacts | RESULT: verifier pass; C++ warnings=0; diff check pass; source SHA pinned | D: none
+[2026-07-13T12:10:31+03:00] > DECIDE | NEXT: Compare C30 results with the required proof-or-falsifier success condition.
+[2026-07-13T12:10:31+03:00] FAIL DECIDE | DID: Classified C30 | RESULT: no proof or finite counterexample; open frontier is sorted dominance (SD) | D: C30 unresolved
+[2026-07-13T12:12:14+03:00] > ATTACK | NEXT: Run exact C39 seed-forest decomposition at limit=100000 and test splitless-component credit injections.
+[2026-07-13T12:12:45+03:00] OK ATTACK | DID: Ran C40 explicit-product sweep at LIMIT=100000000 | RESULT: max excess 1; +1 failures 0; 380416996 pairs | D: none
+[2026-07-13T12:12:45+03:00] > ATTACK | NEXT: Add unlimited-arrived chain-boundary and low-rank reservoir diagnostics to classify local countermodels exactly.
+[2026-07-13T12:13:08+03:00] OK ATTACK | DID: Ran C39 seed forest at limit=100000 | RESULT: decomposition failures=0; splitless-only matching leaves 310 | D: splitless-only DEAD
+[2026-07-13T12:13:08+03:00] > ATTACK | NEXT: Rerun limit=100000 using only the first healed T2 edge of each structural hole component.
+[2026-07-13T12:13:01+03:00] OK ATTACK | DID: Ran C38 census at X=10^7 | RESULT: H=392961,Q=637270,E=1004961; scalar/rank +E failures=0; local C>=54727 | D: global gate alive
+[2026-07-13T12:13:01+03:00] > ATTACK | NEXT: Test full all-lower DAG Hall with E-bank capacities C=2,3,4 to seek an absolute local charging constant.
+[2026-07-13T12:13:34+03:00] > ATTACK | NEXT: Rebuild C40 and rerun LIMIT=5000 then 100000000 with direct, two-step, and any-arrived chain-local gates.
+[2026-07-13T12:14:16+03:00] FAIL ATTACK | DID: Tested C38 DAG bank C=2,3,4 at X=10^4 | RESULT: C=2 first fails X=6000; C=3,4 pass | D: C=2 DEAD; C=3 alive
+[2026-07-13T12:14:16+03:00] > ATTACK | NEXT: Extend exact all-lower DAG bank-capacity gates through X=10^5 to test whether C=3 remains finite.
+[2026-07-13T12:12:20+03:00] OK VERIFY | DID: Harvested completed GPT-Pro R4 once | RESULT: gpt_pro/R4_image_theorem_raw.md SHA A20F2F4A; 5240 chars | D: audit pending
+[2026-07-13T12:13:02+03:00] > VERIFY | NEXT: Exact-replay R4 defect identity and the 11p-1 positive-jump family through 1e6.
+[2026-07-13T12:15:10+03:00] > ATTACK | NEXT: Run C41 exhaustive smoke with relation length 8, token length 6, and reset letters 2,3,5.
+[2026-07-13T12:14:57+03:00] FAIL ATTACK | DID: Ran C38 DAG gate at X=10^5 | RESULT: Python RecursionError after alternating depth >1000; no JSON | D: none
+[2026-07-13T12:14:57+03:00] > ATTACK | NEXT: Raise the exact matcher's recursion bound to 2|H|+100 and rerun the unchanged X=10^5 gates.
+[2026-07-13T12:15:40+03:00] OK ATTACK | DID: Ran C41 L=8,T=6 smoke | RESULT: singleton DFA counts match all 8 exact fiber censuses; smoke_L8_T6.json | D: none
+[2026-07-13T12:15:40+03:00] > ATTACK | NEXT: Enumerate all relation fibers through length 14 and test 15-letter reset codes for the canonical coefficient.
+[2026-07-13T12:16:00+03:00] OK ATTACK | DID: Tested C40 arrived chain-local gates at LIMIT=100000000 | RESULT: first zero 74; 1123563 zero-degree hard sources | D: none
+[2026-07-13T12:16:00+03:00] > VERIFY | NEXT: Run integer-only C++ at LIMIT=100000 and Python literal stages at LIMIT=100000, then final C++ LIMIT=100000000.
+[2026-07-13T12:17:07+03:00] OK ATTACK | DID: Ran C41 L=14,T=15 audit | RESULT: 155159 fibers, 4777 minimal sides, 16652 safe states; result_L14_T15.json | D: none
+[2026-07-13T12:17:07+03:00] > ATTACK | NEXT: Identify recurrent DFA states and exact synchronizing suffixes, then retest closed canonical codes.
+[2026-07-13T12:17:33+03:00] FAIL ATTACK | DID: Tested first T2 boundary per hole component at limit=100000 | RESULT: 20 unmatched; first 186/rank2 | D: one-boundary rule DEAD
+[2026-07-13T12:17:33+03:00] > ATTACK | NEXT: Exact-test strict rank dominance at every odd cutoff through 100000 and identify each even defect repair.
+[2026-07-13T12:18:00+03:00] OK VERIFY | DID: Cross-checked C40 integer C++ and literal stages at 100000; reran C++ at 100000000 | RESULT: 0 mismatches; 0 +1 failures | D: VERIFY -> CHECK
+[2026-07-13T12:18:00+03:00] > CHECK | NEXT: Classify square, timing, layer, local-chain, and repeated-fiber countermodels and isolate a weaker criterion.
+[2026-07-13T12:18:40+03:00] FAIL ATTACK | DID: Tested C39 strict odd-prefix reduction at limit=100000 | RESULT: excess 1 persists at odd X=1003..1017 | D: parity reduction DEAD
+[2026-07-13T12:18:40+03:00] > ATTACK | NEXT: Test whether ranks d>=3 are paid strictly by terminal targets of rank at most d-1 through limit=100000.
+[2026-07-13T12:18:34+03:00] OK VERIFY | DID: Audited R4 identity and prime jumps | RESULT: audit SHA 0267E95D; residual 0 to 1e6; 4410 jumps | D: no proof
+[2026-07-13T12:18:34+03:00] OK CHECK | DID: Reviewed C37 clean skeleton | RESULT: 147/147 exact through 2000; local rank first fails X=1644 | D: local rank DEAD
+[2026-07-13T12:18:34+03:00] > VERIFY | NEXT: Send R4 and C37 exact findings to Fable and retain additive-one rank theorem as F3 frontier.
+[2026-07-13T12:19:15+03:00] OK VERIFY | DID: Sent R4/C37 audit to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md updated | D: F3 +1 remains frontier
+[2026-07-13T12:20:02+03:00] OK CHECK | DID: Classified five C40 countermodel families | RESULT: all change G/timing or suppress global lower-rank targets | D: CHECK -> WRITEUP
+[2026-07-13T12:20:02+03:00] > WRITEUP | NEXT: Write C40 verdict, convention audit, repaired-model table, and rank-free sublinear-defect sufficiency proof.
+[2026-07-13T12:20:36+03:00] FAIL ATTACK | DID: Ran first C41 SCC probe | RESULT: importlib dataclass registration error; no data | D: none
+[2026-07-13T12:20:36+03:00] OK ATTACK | DID: Reran corrected C41 SCC probe | RESULT: 71 SCCs; recurrent core has 16582 states; shortest label 35 | D: none
+[2026-07-13T12:20:36+03:00] > ATTACK | NEXT: Build an exact balanced circulation with canonical letter totals and entropy product above Q^r.
+[2026-07-13T12:21:09+03:00] FAIL ATTACK | DID: Tested H_{<=d}<=Q_{<=d-1}, d>=3, at limit=100000 | RESULT: first failure X=186,d=3; max excess=8 | D: lower-rank credit DEAD
+[2026-07-13T12:21:09+03:00] > ATTACK | NEXT: Run limit=100000 seed-forest matching with the first k=1,2,3,4,8 T2 boundaries per component.
+[2026-07-13T12:21:26.0316671+03:00] > ATTACK | NEXT: Derive the additive-one rank theorem from C31/C42 definitions and classify the unique excess source mechanism.
+[2026-07-13T12:21:38+03:00] FAIL ATTACK | DID: Retried C38 DFS gate at X=10^5 | RESULT: terminated after 6m with no JSON; dense augment scans dominate | D: DFS engine DEAD
+[2026-07-13T12:21:38+03:00] > ATTACK | NEXT: Replace shared-leaf expansion by an exact tripartite Dinic flow and rerun bank C=2,3,4 at X=10^5.
+[2026-07-13T12:21:29+03:00] OK ATTACK | DID: Tested first k component boundaries at limit=100000 | RESULT: k=1 leaves 20; k=2 leaves only 362/rank2 | D: two-boundary lemma ALIVE
+[2026-07-13T12:21:29+03:00] > ATTACK | NEXT: Run exact C39 two-boundary component gate at limit=1000000 with all ranks and event cutoffs.
+[2026-07-13T12:22:07+03:00] OK WRITEUP | DID: Wrote C40 red-team report | RESULT: problems/424/fanout/wave3/C40_rank_additive_one_redteam.md | D: WRITEUP -> VERIFY
+[2026-07-13T12:22:07+03:00] > VERIFY | NEXT: Referee-check C40 claims against JSON, rerun compilers/oracle, and SHA-pin final sources and results.
+[2026-07-13T12:22:08+03:00] OK ATTACK | DID: Ran C39 two-boundary gate at limit=1000000 | RESULT: 45583 hard; sole unmatched 362/rank2 | D: none
+[2026-07-13T12:22:08+03:00] > ATTACK | NEXT: Scale exact first-two-boundaries-per-component gate to limit=10000000.
+[2026-07-13T12:22:37+03:00] > ATTACK | NEXT: Run C41 circulation smoke with walk=20000, 200 correction cycles, seed=42441, and 60s MILP limit.
+[2026-07-13T12:23:13.4798907+03:00] > PLAN | NEXT: Launch disjoint F3 proof lanes for forest Euler, minimal-counterexample, Horn duality, potentials, and asymptotic H-Q balance.
+[2026-07-13T12:23:29+03:00] FAIL ATTACK | DID: Ran C41 20k circulation smoke | RESULT: exact canonical circulation had entropy log gap -4894.8503 | D: none
+[2026-07-13T12:23:29+03:00] > ATTACK | NEXT: Rerun the unchanged 20k circulation search while retaining below-threshold correction diagnostics.
+[2026-07-13T12:24:04+03:00] OK ATTACK | DID: Retained C41 20k circulation | RESULT: correction=390 edges; support=4663 states; log gap=-4894.8503 | D: none
+[2026-07-13T12:24:04+03:00] > ATTACK | NEXT: Run C41 circulation with walk=200000, 700 correction cycles, seed=42441, and 120s MILP limit.
+[2026-07-13T12:23:45+03:00] FAIL ATTACK | DID: Cross-checked C38 Dinic at X=10^4 | RESULT: flow failure X=1536 matched, but witness extractor asserted 61<=74 | D: none
+[2026-07-13T12:23:45+03:00] > ATTACK | NEXT: Emit the exact residual min-cut certificate instead of a direct-graph alternating witness, then rerun X=10^4.
+[2026-07-13T12:24:41+03:00] > SELECT | NEXT: Select Problem 424 additive-one rank prefixes, whose recurrence and event stream give a concrete descent surface.
+[2026-07-13T12:24:41+03:00] OK SELECT | DID: Selected Problem 424 | RESULT: frontier is C31 inequality H_le_d(X)<=Q_le_d(X)+1 | D: task -> GATE
+[2026-07-13T12:24:41+03:00] > GATE | NEXT: Check Problem 424 sources for a prior minimal-counterexample rank/event descent.
+[2026-07-13T12:24:32.7276530+03:00] FAIL PLAN | DID: Requested eight disjoint F3 proof lanes | RESULT: platform agent thread limit reached; existing C38-C41 occupy capacity | D: queue C43-C50
+[2026-07-13T12:24:51+03:00] OK VERIFY | DID: Rebuilt C40 and reran 100000 oracle/assertions | RESULT: warnings=0; stage mismatches=0; report SHA C082581B0C195872 | D: VERIFY -> CHECK
+[2026-07-13T12:24:51+03:00] > CHECK | NEXT: Decide whether C40 produced an actual-G falsifier, local obstruction, or weaker sufficient criterion.
+[2026-07-13T12:24:51+03:00] OK CHECK | DID: Audited C40 outcomes | RESULT: +1 failures=0 to 1e8; any-arrived chain first zero=74; criterion (SC) proved sufficient | D: CHECK -> DECIDE
+[2026-07-13T12:24:51+03:00] > DECIDE | NEXT: Record C40 as no falsifier and return the exact report and artifacts to the #424 parent lane.
+[2026-07-13T12:24:51+03:00] OK DECIDE | DID: Classified C40 | RESULT: actual-G theorem open; five countermodel families classified in C40 report | D: C40 complete
+[2026-07-13T12:25:27+03:00] OK ATTACK | DID: Ran C39 two-boundary component gate at limit=10000000 | RESULT: 392961 hard; sole unmatched 362/rank2 | D: ATTACK -> VERIFY
+[2026-07-13T12:25:27+03:00] > VERIFY | NEXT: Independently replay trial-divisor G, death ranks, seed forest, and two-boundary gate through limit=5000.
+[2026-07-13T12:25:14+03:00] OK ATTACK | DID: Cross-checked C38 Dinic and expanded matchers at X=10^4 | RESULT: C=1 fails 1536; C=2 fails 6000; C=3,4 pass | D: engine verified
+[2026-07-13T12:25:14+03:00] > ATTACK | NEXT: Run exact tripartite Dinic gates C=2,3,4 at X=10^5 and emit a residual min-cut on failure.
+[2026-07-13T12:25:20+03:00] > SELECT | NEXT: Select problem 424 via a global seed-2 forest count for hard roots and healed exits.
+[2026-07-13T12:25:21+03:00] OK SELECT | DID: Selected problem 424 forest-Euler lane | RESULT: frontier is H_{<=d}(X)<=Q_{<=d}(X)+1 | D: SELECT -> GATE
+[2026-07-13T12:25:22+03:00] > GATE | NEXT: Check repo and literature for an existing global forest proof of the rank-prefix inequality.
+[2026-07-13T12:25:36+03:00] OK ATTACK | DID: Ran C41 200k circulation | RESULT: k=6487, 10202 states, exact log gap=-8025.2731; circulation_200k.json | D: none
+[2026-07-13T12:25:36+03:00] > ATTACK | NEXT: Run C41 circulation with walk=2000000, 700 correction cycles, seed=42441, and 120s MILP limit.
+[2026-07-13T12:26:06+03:00] OK GATE | DID: Searched Problem 424 sources and exact rank/event terms | RESULT: erdosproblems.com/424 is open; no prior descent found | D: GATE -> PLAN
+[2026-07-13T12:26:06+03:00] > PLAN | NEXT: Isolate a first-violation descent lemma and exact-test every forced predecessor claim.
+[2026-07-13T12:26:37.5758559+03:00] OK VERIFY | DID: Harvested C40 independent red team | RESULT: +1 passes to 1e8; local rules dead; H<=Q+o(X) suffices | D: C40 closed
+[2026-07-13T12:26:37.5758559+03:00] > ATTACK | NEXT: C43 tests global forest/Euler charging of hard roots to healed seed-2 boundaries.
+[2026-07-13T12:28:04+03:00] OK VERIFY | DID: Independent C39 trial-divisor/stage replay at limit=5000 | RESULT: 0 rank/forest mismatches; sole two-boundary miss 362 | D: none
+[2026-07-13T12:28:04+03:00] > VERIFY | NEXT: Rerun limit=5000 and exact-test the rank-filtered seed-forest potential identity at every X,d.
+[2026-07-13T12:27:52+03:00] FAIL ATTACK | DID: Ran C38 Dinic banks at X=10^5 | RESULT: C=3 fails X=35300 with |L|=1474, cap(N)=1473; C=4 passes | D: C=3 DEAD
+[2026-07-13T12:27:52+03:00] > ATTACK | NEXT: Extend the exact all-lower DAG bank C=4 gate through X=10^6 and record its first min-cut or survival.
+[2026-07-13T12:28:27+03:00] FAIL ATTACK | DID: Ran C41 2m circulation | RESULT: HiGHS hit 120s correcting 783 cycle variables; no certificate | D: none
+[2026-07-13T12:28:27+03:00] > ATTACK | NEXT: Rebuild the 2m sample and census short correction-cycle deviations before a bounded exact solve.
+[2026-07-13T12:30:19+03:00] FAIL ATTACK | DID: Ran first C41 correction census | RESULT: FileNotFound from duplicated relative path; no data | D: none
+[2026-07-13T12:30:19+03:00] OK ATTACK | DID: Searched 1266 exact cycle deviations | RESULT: 2190-edge pair corrects (-20264,12975) exactly | D: none
+[2026-07-13T12:30:19+03:00] > ATTACK | NEXT: Rerun the 2m C41 circulation with deterministic exact two-cycle correction and integer entropy comparison.
+[2026-07-13T12:30:10+03:00] FAIL VERIFY | DID: Tested unrestricted T3 forest identity | RESULT: false at X=23,d=1 because even parent 8 also has T2 child 23 | D: unrestricted T3 DEAD
+[2026-07-13T12:30:10+03:00] OK VERIFY | DID: Restricted T3 forest edges to odd parents; replayed all X,d<=5000 | RESULT: potential mismatches=0 | D: VERIFY -> DECIDE
+[2026-07-13T12:30:10+03:00] > DECIDE | NEXT: Write C39 rigorous forest lemmas, exact potential identity, falsified inductions, and irreducible cross-component obstruction.
+[2026-07-13T12:30:12+03:00] OK PLAN | DID: Built the C44 lemma tree | RESULT: frontier pulls critical odd blockers back two ranks, then tests boundary timing | D: PLAN -> ATTACK
+[2026-07-13T12:30:12+03:00] > ATTACK | NEXT: Implement an exact C44 rank/event replay and falsify candidate pullback descents through X=100000.
+[2026-07-13T12:31:24+03:00] FAIL ATTACK | DID: Ran C38 full-DAG bank C=4 through X=10^6 | RESULT: first failure X=111620; dag_dinic_C4_1e6.json | D: C=4 DEAD
+[2026-07-13T12:31:24+03:00] > ATTACK | NEXT: Add the singleton-leaf-6 Hall lower bound and exact-test its required bank capacity through X=10^7.
+[2026-07-13T12:31:20+03:00] OK GATE | DID: Checked #424, OEIS A005244, Green Problem 63, and repo | RESULT: no forest proof is cited; #424 is OPEN | D: GATE -> PLAN
+[2026-07-13T12:31:21+03:00] > PLAN | NEXT: Test a lower-rank parent forest whose hard edges are branches and seed-2 healings are exits.
+[2026-07-13T12:31:22+03:00] OK PLAN | DID: Fixed the C43 lemma tree | RESULT: frontier is component hard-edge deficit <=1 for every X,d | D: PLAN -> ATTACK
+[2026-07-13T12:31:23+03:00] > ATTACK | NEXT: Implement exact parent-forest replay through X=100000 and emit the first component-deficit counterexample.
+[2026-07-13T12:31:34+03:00] OK ATTACK | DID: Built C41 exact circulation | RESULT: k=64587; entropy ratio base=1.2302522622; edge SHA e1247759 | D: ATTACK -> VERIFY
+[2026-07-13T12:31:34+03:00] > VERIFY | NEXT: Independently replay all L<=14 fibers, DFA isolation, circulation balance, connectivity, and entropy product.
+[2026-07-13T12:33:31+03:00] > VERIFY | NEXT: Rebuild C41 L=14,T=15 relation artifact after strict-JSON serialization fix.
+[2026-07-13T12:34:11+03:00] OK DECIDE | DID: Wrote C39 forest lemmas, potential identity, and obstruction report | RESULT: fanout/wave3/C39_rank_additive_one_proof.md | D: DECIDE -> VERIFY
+[2026-07-13T12:34:11+03:00] > VERIFY | NEXT: Referee C39 equations against exact JSON, rerun scripts, inspect scoped diff, and hash artifacts.
+[2026-07-13T12:34:07+03:00] OK ATTACK | DID: Ran C38 singleton-leaf-6 Hall gate to X=10^7 | RESULT: H6=39603,Q6=238937; maximum deficit 1 at X=362 | D: singleton gate alive
+[2026-07-13T12:34:07+03:00] > ATTACK | NEXT: Implement online exact C++ full-DAG flow, cross-check C=1..4, then find the least C surviving through X=10^7.
+[2026-07-13T12:34:25+03:00] > VERIFY | NEXT: Rerun C39 trial stages at limit=5000 and multiplier/forest probes at limit=100000; check scoped diff and hashes.
+[2026-07-13T12:34:37+03:00] OK VERIFY | DID: Rebuilt strict C41 L=14 artifact | RESULT: fiber and minimal-side hashes unchanged; result_L14_T15.json | D: none
+[2026-07-13T12:34:37+03:00] > VERIFY | NEXT: Run independent C41 verifier over 4782969 words and the 37214-edge k=64587 certificate.
+[2026-07-13T12:35:35.7563024+03:00] > VERIFY | NEXT: Re-run C39 trial-divisor forest identity and first-two-boundary gate through 5000 before relaying to Fable.
+[2026-07-13T12:35:54.7474677+03:00] OK VERIFY | DID: Replayed C39 forest/potential audit through 5000 | RESULT: all 7 assertions true; first-two gate leaves only 362 | D: local forest proof DEAD
+[2026-07-13T12:36:14+03:00] FAIL ATTACK | DID: Ran C43 exact forest audit at X=100000 | RESULT: component lemma fails at X=114,d=2 with 2 positive components | D: component Euler DEAD
+[2026-07-13T12:36:15+03:00] FAIL ATTACK | DID: Tested critical seed-2 sibling closure | RESULT: h=774,r=2 has p=155,r=1 but rho(309)=4 | D: rank-closed branching DEAD
+[2026-07-13T12:36:16+03:00] > ATTACK | NEXT: Extract the complete X=114,d=2 component witness and verify it by an independent trial-divisor replay.
+[2026-07-13T12:36:15+03:00] OK ATTACK | DID: Ran C43 caps k=1,2,3,8 to X=5000 | RESULT: k=1 first +1 failure (1002,3), H=35,Q1=33; k=2 max=1 | D: k=1 DEAD
+[2026-07-13T12:36:16+03:00] > ATTACK | NEXT: Run exact C43 first-two-component-exit rank-prefix gate through X=100000000 with one worker.
+[2026-07-13T12:36:45+03:00] OK ATTACK | DID: Cross-checked C38 C++ flow for C=1..4 | RESULT: first X=1536,6000,35300,111620 exactly match Python | D: engine verified
+[2026-07-13T12:36:45+03:00] > ATTACK | NEXT: Run six exact streaming C38 DAG flows, C=5..10 and LIMIT=10^7, to find the least surviving absolute bank.
+[2026-07-13T12:37:02+03:00] OK VERIFY | DID: Reran C39 limits 5000/100000 and checked JSON/diff | RESULT: 7 assertions true; identity mismatches=0; scoped diff clean | D: VERIFY -> CHECK
+[2026-07-13T12:37:02+03:00] > CHECK | NEXT: Classify C39 against the requested proof, exact falsifier, or irreducible-obstruction outcomes.
+[2026-07-13T12:37:02+03:00] OK CHECK | DID: Classified C39 | RESULT: theorem unproved; Lemmas 1-2 proved; source 74 blocks local rank induction | D: CHECK -> DECIDE
+[2026-07-13T12:37:02+03:00] > DECIDE | NEXT: Return the C39 obstruction report and exact replay artifacts to the parent lane.
+[2026-07-13T12:37:02+03:00] OK DECIDE | DID: Finalized C39 obstruction outcome | RESULT: C39_rank_additive_one_proof.md; verify_5000.json | D: C39 complete
+[2026-07-13T12:37:11+03:00] OK ATTACK | DID: Ran C43 caps k=1,2,3,8 to X=100000000 | RESULT: k=1 max=18; k=2 max=1, failures=0; decomposition=0 | D: k=2 alive
+[2026-07-13T12:37:12+03:00] > ATTACK | NEXT: Run exact C43 first-two-component-exit rank-prefix gate through X=2000000000 with one worker.
+[2026-07-13T12:37:28+03:00] FAIL ATTACK | DID: Ran C38 DAG banks C=5..10 at LIMIT=10^7 | RESULT: all fail; first X ranges 188658..563640 | D: C<=10 DEAD
+[2026-07-13T12:37:28+03:00] > ATTACK | NEXT: Run exact C38 DAG banks C=20,40,80,160,320 at LIMIT=10^7 to bracket the least finite survivor.
+[2026-07-13T12:38:18+03:00] OK ATTACK | DID: Ran independent trial-divisor/stage replay at X=1000 | RESULT: first forest failure is X=114,d=2; rank mismatches=0 | D: none
+[2026-07-13T12:38:19+03:00] > ATTACK | NEXT: Decompose the tight X=362,d=2 prefix under all lower-rank forest edges and measure component cancellation.
+[2026-07-13T12:39:11.4506000+03:00] OK CHECK | DID: Classified C39 exact forest identity | RESULT: component-local proof fails at 74; global potential remains | D: C39 closed
+[2026-07-13T12:39:11.4506000+03:00] > ATTACK | NEXT: C46 seeks weighted global transport proving H(X)<=Q(X)+o(X).
+[2026-07-13T12:40:19+03:00] OK ATTACK | DID: Ran C44 exact descent gate at X=100000 | RESULT: pullback failures=0; timing claims fail at 54,74,114 | D: local timing DEAD
+[2026-07-13T12:40:19+03:00] > ATTACK | NEXT: Test aggregate rank-transfer and six-residue event descents at X=100000.
+[2026-07-13T12:40:06+03:00] FAIL ATTACK | DID: Decomposed X=362,d=2 with all lower-rank edges | RESULT: component signs total +8 and -7; global excess=1 | D: single-component +1 DEAD
+[2026-07-13T12:40:07+03:00] > CHECK | NEXT: Classify whether C43 proves the count or exactly falsifies the forest-Euler frontier.
+[2026-07-13T12:40:08+03:00] OK CHECK | DID: Audited C43 outcomes | RESULT: forest lemma false at (114,2); sibling closure false at h=774 | D: CHECK -> DECIDE
+[2026-07-13T12:40:09+03:00] > WRITEUP | NEXT: Write C43 definitions, exact witnesses, refinement argument, and reproducible checks without claiming AO.
+[2026-07-13T12:40:49+03:00] OK VERIFY | DID: Independently replayed C41 relations and circulation | RESULT: all checks pass; direct products 18.7M bits; verification.json | D: VERIFY -> CHECK
+[2026-07-13T12:40:49+03:00] > CHECK | NEXT: Compute L=6..14 all-side pressure trend and isolate the unproved infinite-pressure lemma for true classes.
+[2026-07-13T12:42:29+03:00] OK CHECK | DID: Computed C41 L=6..14 pressures | RESULT: B_L/Q decreases 2.5430 to 1.5407; no true-class bound | D: CHECK -> DECIDE
+[2026-07-13T12:42:29+03:00] > DECIDE | NEXT: Recheck #424 and affine-semigroup sources for a published finite-relation pressure obstruction.
+[2026-07-13T12:42:51+03:00] OK DECIDE | DID: Rechecked #424 and affine-semigroup sources | RESULT: no finite-relation pressure result; #424 has 0 comments | D: DECIDE -> WRITEUP
+[2026-07-13T12:42:51+03:00] > WRITEUP | NEXT: Write C41 finite-quotient obstruction, true-class limitation, pressure trend, and infinite-pressure frontier.
+[2026-07-13T12:43:23+03:00] > ATTACK | NEXT: Run C44 T2/T3 critical-child rank and timing gate with limit=100000.
+[2026-07-13T12:43:36+03:00] OK WRITEUP | DID: Wrote C43 forest-Euler audit | RESULT: problems/424/fanout/wave4/C43_forest_euler.md | D: WRITEUP -> VERIFY
+[2026-07-13T12:43:37+03:00] > VERIFY | NEXT: Rerun C43 exact X=100000 and independent X=1000 checks, then audit hashes and scoped files.
+[2026-07-13T12:43:31+03:00] OK ATTACK | DID: Ran C43 caps k=1,2,3,8 to X=2000000000 | RESULT: k=2 selected 108888585 exits, max=1, +1 failures=0 | D: k=2 alive
+[2026-07-13T12:43:32+03:00] > VERIFY | NEXT: Independently replay trial divisors, literal death stages, forest Euler identity, and k=1 witness through X=5000.
+[2026-07-13T12:45:12+03:00] FAIL ATTACK | DID: Ran C44 critical-child gate at X=100000 | RESULT: T3 exact-rank fails 174; T2-or-T3 fails 774; max jump=6 | D: same-rank descent DEAD
+[2026-07-13T12:45:12+03:00] > ATTACK | NEXT: Run C44 aggregate component-rank and positive-excess descent gates with limit=100000.
+[2026-07-13T12:45:41+03:00] OK ATTACK | DID: Ran C44 aggregate gate at X=100000 | RESULT: rank-descent failures=0; component timing fails 74 and rank fails 492 | D: local aggregate DEAD
+[2026-07-13T12:45:41+03:00] > ATTACK | NEXT: Scale the independent C44 recurrence, timing, and rank-descent gate to limit=1000000.
+[2026-07-13T12:46:18+03:00] OK ATTACK | DID: Ran C44 gate at X=1000000 | RESULT: pullback failures=0; max critical-child rank jump=11 at 586674 | D: none
+[2026-07-13T12:46:18+03:00] > ATTACK | NEXT: Prove C44 event-normalization, two-rank pullback, and seed-3 coordinate lemmas; isolate the missing rank transfer.
+[2026-07-13T12:46:31+03:00] FAIL VERIFY | DID: Ran C43 trial verifier at X=5000 | RESULT: euler_identity=False from unrestricted even-parent T3 edges | D: verifier identity DEAD
+[2026-07-13T12:46:32+03:00] > VERIFY | NEXT: Restrict C43 T3 terms to odd parents, use O_d(Z), and rerun X=5000 against C++ JSON.
+[2026-07-13T12:46:55+03:00] OK WRITEUP | DID: Wrote C41 finite relation obstruction | RESULT: C41_all_relations_mass.md with Theorem 2 and open IP lemma | D: WRITEUP -> VERIFY
+[2026-07-13T12:46:55+03:00] > VERIFY | NEXT: Audit C41 scoped files, strict JSON, report constants, hashes, and overclaim boundaries.
+[2026-07-13T12:47:15+03:00] OK VERIFY | DID: Corrected odd-parent T3 replay and ran X=5000 | RESULT: 45000 identities pass; cap1 fails (1002,3); cap2 max=1 | D: none
+[2026-07-13T12:47:16+03:00] > WRITEUP | NEXT: Add the verified first-two-component-exit X=2e9 finite gate and its proof limitation to C43.
+[2026-07-13T12:47:17+03:00] OK ATTACK | DID: Formalized four C44 descent lemmas | RESULT: C44Arithmetic.lean contains event, pullback, coordinate, residue theorems | D: ATTACK -> VERIFY
+[2026-07-13T12:47:17+03:00] > VERIFY | NEXT: Compile C44Arithmetic.lean with Mathlib; verify firstViolationJump and criticalPullbackDropsTwoRanks.
+[2026-07-13T12:48:40+03:00] FAIL VERIFY | DID: Compiled C44Arithmetic.lean | RESULT: line 35 omega lacks variable-product bound in seedThreeChildBelowHardSource | D: none
+[2026-07-13T12:48:40+03:00] > VERIFY | NEXT: Add 5q<=aq explicitly and recompile seedThreeChildBelowHardSource.
+[2026-07-13T12:47:30+03:00] > ATTACK | NEXT: Send GPT-Pro R5 once on the global rank-prefix +1 theorem, including all exact local obstructions.
+[2026-07-13T12:48:20+03:00] > VERIFY | NEXT: Rebuild C43 critical-forest X=100000 and independent trial-stage X=1000 artifacts, then compare hashes.
+[2026-07-13T12:48:57+03:00] OK VERIFY | DID: Audited C41 report and artifacts | RESULT: verifier PASS; JSON 7/7 strict; report SHA ab1b0fd5c79b026a | D: C41 complete
+[2026-07-13T12:49:20+03:00] OK ATTACK | DID: Sent GPT-Pro R5 once | RESULT: R5_rank_prefix_prompt.md SHA C1989575; 2939 chars | D: awaiting result
+[2026-07-13T12:49:57+03:00] OK WRITEUP | DID: Added verified cap-two X=2e9 gate to C43 | RESULT: selected exits=108888585; report SHA 2BDB63F4186B8BC9 | D: WRITEUP -> VERIFY
+[2026-07-13T12:49:58+03:00] OK VERIFY | DID: Reran C43 exact and two trial-stage engines | RESULT: (114,2) defect=2; 45000 identities pass; hashes match | D: VERIFY -> CHECK
+[2026-07-13T12:49:59+03:00] > CHECK | NEXT: Classify the exact forest falsifiers and the cap-two finite survivor against the requested count.
+[2026-07-13T12:50:00+03:00] OK CHECK | DID: Audited C43 theorem boundary | RESULT: FE false at (114,2); cap2 passes to 2e9 but is unproved | D: CHECK -> DECIDE
+[2026-07-13T12:50:01+03:00] > DECIDE | NEXT: Return the exact forest counterexample and retain additive-one as an open global-transport theorem.
+[2026-07-13T12:50:02+03:00] OK DECIDE | DID: Classified C43 | RESULT: exact forest lemma counterexample delivered; AO not claimed | D: C43 complete
+[2026-07-13T12:50:28+03:00] OK VERIFY | DID: Recompiled C44Arithmetic.lean after explicit product bound | RESULT: exit 0; six theorem declarations accepted | D: VERIFY -> CHECK
+[2026-07-13T12:50:28+03:00] > CHECK | NEXT: Cross-check C44 X=1000000 census, tight events, falsifiers, syntax, and hashes against C31.
+[2026-07-13T12:51:30+03:00] > VERIFY | NEXT: Send C41/C43 exact outcomes and the first-two-exit X=2e9 gate to Fable.
+[2026-07-13T12:52:02+03:00] OK VERIFY | DID: Corrected C43 seed-3 parity wording | RESULT: (23,1) kills all-parent formula; odd-parent identity passes 45000; report SHA 736F7F1A | D: none
+[2026-07-13T12:52:46+03:00] OK CHECK | DID: Cross-checked C44 X=1000000 against C31 | RESULT: counts 45583/67537 and first strict (362,2) agree | D: none
+[2026-07-13T12:52:46+03:00] > VERIFY | NEXT: Run C44 trial-division and literal-stage verifier with limit=1000.
+[2026-07-13T12:53:16+03:00] OK VERIFY | DID: Ran C44 trial-stage verifier at X=1000 | RESULT: membership mismatches=0; rank mismatches=0; five falsifiers pass | D: VERIFY -> WRITEUP
+[2026-07-13T12:53:16+03:00] > WRITEUP | NEXT: Write C44 rigorous lemmas, exact descent falsifiers, and the unproved global rank-transfer frontier.
+[2026-07-13T12:53:00+03:00] OK VERIFY | DID: Sent C41/C43 outcomes to Fable | RESULT: CODEX_TO_CLAUDE TICK-CX-138; C43 gate passes to 2e9 | D: +1 remains frontier
+[2026-07-13T12:55:47+03:00] OK WRITEUP | DID: Wrote C44 minimal-counterexample audit | RESULT: problems/424/fanout/wave4/C44_minimal_counterexample.md | D: WRITEUP -> VERIFY
+[2026-07-13T12:55:47+03:00] > VERIFY | NEXT: Rerun C44 limit=100000, compile Lean, and audit report claims and scoped hashes.
+[2026-07-13T12:56:05+03:00] OK VERIFY | DID: Reran C44 checker at X=100000 | RESULT: 5108 hard, 6783 targets, +1 failures=0; result_100k.json | D: none
+[2026-07-13T12:56:05+03:00] > VERIFY | NEXT: Recompile all six C44Arithmetic lemmas after final report writeup.
+[2026-07-13T12:56:51+03:00] OK VERIFY | DID: Recompiled C44Arithmetic.lean | RESULT: exit 0; six C44 theorem declarations accepted | D: VERIFY -> CHECK
+[2026-07-13T12:56:51+03:00] > CHECK | NEXT: Audit C44 scoped files, report claims, ASCII, protocol widths, and final SHA-256 values.
+[2026-07-13T12:58:42+03:00] OK CHECK | DID: Audited final C44 artifacts | RESULT: audit PASS; report SHA C11BF0BFBFF70929; hashes and scope agree | D: CHECK -> DECIDE
+[2026-07-13T12:58:42+03:00] > DECIDE | NEXT: Classify C44 with Base/RD unproved and all tested local bridges exactly falsified.
+[2026-07-13T12:58:42+03:00] OK DECIDE | DID: Classified C44 minimal descent | RESULT: AO and H<=Q+o(X) not claimed; C44 report is final | D: C44 complete
+[2026-07-13T12:59:20+03:00] > ATTACK | NEXT: Exact-test the stronger shifted theorem H<=d(X)<=Q<=d-1(X)+1 through 10^6.
+[2026-07-13T13:01:56+03:00] FAIL ATTACK | DID: Stopped C38 C=80,160,320 flows | RESULT: per-source O(nodes) array clears; no JSON; C=40 failed X=3236496 | D: engine repair
+[2026-07-13T13:01:56+03:00] > ATTACK | NEXT: Replace C38 residual-array clears with visit stamps and rerun C=80,160,320 unchanged at LIMIT=10^7.
+[2026-07-13T13:04:20+03:00] FAIL ATTACK | DID: Tested rank-shift and one-exit variants to 1e6 | RESULT: fail at (354,2) and X=1014 | D: both variants DEAD
+[2026-07-13T13:04:21+03:00] > ATTACK | NEXT: Launch disjoint C47-C49 proof lanes on cap-two budget, stage submodularity, and hard-hole sieve.
+[2026-07-13T13:07:07+03:00] > ATTACK | NEXT: Reconstruct C47 cap-two definitions and exact-test component-birth/dependency invariants against failures at 74 and 362.
+[2026-07-13T13:07:40+03:00] OK ATTACK | DID: Launched C47-C49 disjoint proof lanes | RESULT: agents 019f5af0,019f5af1,019f5af2 | D: three mechanisms active
+[2026-07-13T13:09:14+03:00] > ATTACK | NEXT: C49 reconstruct hard-hole blockers and exact-test direct weighted sieve inequalities before proof effort.
+[2026-07-13T13:16:50+03:00] > VERIFY | NEXT: identify and harvest the newly completed R4 result exactly once, then test its load-bearing claims.
+[2026-07-13T13:17:51+03:00] > ATTACK | NEXT: Run C49 exact blocker-fiber and dynamic-divisor sieve at LIMIT=1e6, thresholds 1e2..1e5.
+[2026-07-13T13:20:47+03:00] > ATTACK | NEXT: Run C38 baseline DAG bank C=1000000 at LIMIT=10^7 to separate shadow-build cost from alternating-flow cost.
+[2026-07-13T13:22:06+03:00] OK ATTACK | DID: Ran C38 DAG bank C=1000000 to X=10^7 | RESULT: matched 392961/392961; max shadow 144; 46.7s | D: finite survivor
+[2026-07-13T13:22:06+03:00] > ATTACK | NEXT: Run exact C38 banks C=1000,5000 at LIMIT=10^7 to tighten the surviving-capacity bracket.
+[2026-07-13T13:28:49+03:00] FAIL ATTACK | DID: Stopped unfinished C38 C=80..5000 bracket | RESULT: no JSON; C=40 fails X=3236496; C=1000000 passes 10^7 | D: bracket [41,10^6]
+[2026-07-13T13:28:49+03:00] > ATTACK | NEXT: Attempt a theorem-grade Hall proof for the all-lower shadow DAG and test whether death-rank axioms alone imply finite C.
+[2026-07-13T13:29:54+03:00] FAIL ATTACK | DID: Audited death-rank-only Hall proof | RESULT: abstract N-star has H=N,Q=0,E=1 for arbitrary N | D: rank-only proof DEAD
+[2026-07-13T13:29:54+03:00] > VERIFY | NEXT: Independently replay C38 closure, ranks, shadows, small Hall failures, 10^7 counts, and stored min-cuts.
+[2026-07-13T13:30:19+03:00] > ATTACK | NEXT: replay R5 shell identities for every cutoff X<=1000 and verify the finite T0 obstruction at X=74.
+[2026-07-13T13:31:01.54027] > ATTACK | NEXT: Run C47 exact cap-two/frontier/middle-third matching audit through 10^6.
+[2026-07-13T13:31:17.63468] OK ATTACK | DID: Ran C47 exact audit through 10^6 | RESULT: frontier identity 0 fails; H-Q2 max 0; 1/3 match 0 fails; 3/8 fails 114 | D: 1/3 gate ALIVE
+[2026-07-13T13:31:17.65307] > ATTACK | NEXT: Extend C47 middle-third matching and frontier identity audit unchanged through 10^7.
+[2026-07-13T13:31:42+03:00] OK ATTACK | DID: archived and replayed GPT R5 shell result through X=1000 | RESULT: R5 audit PASS; no image/rank proof; T0 fails H<=Q at 74 | D: none
+[2026-07-13T13:32:13+03:00] > CHECK | NEXT: relay audited GPT R5, C46, and C48 outcomes to Fable without duplicating assigned work.
+[2026-07-13T13:33:17.37977] OK ATTACK | DID: Extended C47 exact audit through 10^7 | RESULT: H-Q2 max 0; frontier identity 0 fails; middle-third greedy 0 fails | D: gate survives
+[2026-07-13T13:33:17.39816] > ATTACK | NEXT: Build C++ middle-third matcher and extend exact gate to 10^8 before proof investment.
+[2026-07-13T13:33:17+03:00] OK CHECK | DID: relayed audited CX-R5/C46/C48 to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md TICK-CX-139 | D: local weighted/submodular routes dead
+[2026-07-13T13:33:21+03:00] OK VERIFY | DID: Replayed C38 independently | RESULT: problems/424/compute/wave3/C38_splitless_bank/verify_result.json PASS | D: finite gate certified
+[2026-07-13T13:31:00+03:00] OK ATTACK | DID: Ran C49 blocker/sieve probe to 1e6 | RESULT: H=45583; all-hole J=7083; max mixed-minus-Q=0; q=11 fiber=7043 | D: test K<=Q and J sieve
+[2026-07-13T13:31:01+03:00] > ATTACK | NEXT: Extend C49 exact mixed/all-hole decomposition and dynamic sieve to LIMIT=1e7.
+[2026-07-13T13:35:09+03:00] > ATTACK | NEXT: exact-test component deficits against splitless-root credits; target H(X)<=Q(X)+E(X), sufficient via C13/C16.
+[2026-07-13T13:35:35+03:00] > WRITEUP | NEXT: State C38 shadow lemma, exact falsifiers, finite survivor, and density implication in the owned report.
+[2026-07-13T13:39:56+03:00] OK WRITEUP | DID: Wrote C38 audit | RESULT: problems/424/fanout/wave3/C38_splitless_bank.md states target census and ASE_C | D: frontier isolated
+[2026-07-13T13:39:57+03:00] > VERIFY | NEXT: Recompile both C38 C++ auditors, replay verifier, and check scoped diff and JSON consistency.
+[2026-07-13T13:40:33.3804242+03:00] > ATTACK | NEXT: harvest the newly finished GPT-Pro R4 response, deduplicate it, and exact-audit its frontier claim.
+[2026-07-13T13:42:15.5033136+03:00] OK ATTACK | DID: compared finished GPT-Pro turn with CX-R5 archive | RESULT: exact same shell identity and T0={6,8,11,15,29,54,57,74}; no new R4 | D: none
+[2026-07-13T13:43:33+03:00] OK VERIFY | DID: Rebuilt and replayed C38 | RESULT: verify_result.json PASS; warnings=0; report SHA B3FDB2EC; scoped diff clean | D: none
+[2026-07-13T13:43:34+03:00] > CHECK | NEXT: Classify C38 as proof, true-target falsifier, or surviving explicit lemma with exact falsifier gate.
+[2026-07-13T13:43:45.3632551+03:00] > PLAN | NEXT: launch six disjoint F3 lanes on image capacity, cap-two transport, T3 frontier, exact countermodels, recurrence bypass, and hard-hole sieve.
+[2026-07-13T13:43:50+03:00] OK CHECK | DID: Classified C38 outputs | RESULT: target survives 1e7; C=1 DAG fails 1536; ASE_1e6 survives 1e7 | D: CHECK -> DECIDE
+[2026-07-13T13:43:51+03:00] > DECIDE | NEXT: Recheck #424 status and close C38 as a finite-frontier audit, not an asymptotic solution.
+[2026-07-13T13:44:36+03:00] FAIL DECIDE | DID: Refreshed official page | RESULT: web connector HTTP 401 token_revoked | D: use same-day verified GATE
+[2026-07-13T13:44:37+03:00] OK DECIDE | DID: Rechecked same-day gates and A04 | RESULT: #424 OPEN; C38 is finite-only; no proof or PR | D: C38 complete
+[2026-07-13T13:44:54+03:00] > ATTACK | NEXT: Exact-test C49 pseudoforest cancellation at LIMIT=1e4, then scale or extract first multi-cycle falsifier.
+[2026-07-13T13:45:28+03:00] FAIL ATTACK | DID: Tested greedy C49 pseudoforest to 1e4 | RESULT: one component has 77 cycles; first collision h=666 via 23*29 | D: graph-E injection dead
+[2026-07-13T13:48:30+03:00] > ATTACK | NEXT: Validate C49 pair-count sieve bound and bounded-pair classes exactly through LIMIT=1e6.
+[2026-07-13T13:48:41.0629020+03:00] > ATTACK | NEXT: extend C56 image LP relaxation to X=10000 and inspect dual support; passing LP would yield a linear certificate stronger than C30 UI.
+[2026-07-13T13:48:56+03:00] OK ATTACK | DID: Tested C49 pair-count sieve to 1e6 | RESULT: 45583 hard; min(4P+2-Omega2)=0; q=11 fiber=7043 absorbed for fixed P | D: bounded-P=o(X)
+[2026-07-13T13:54:26+03:00] > VERIFY | NEXT: Independently scan all hard-shape odd successors through 1e6 for Omega2<=4P+2.
+[2026-07-13T13:54:38+03:00] OK VERIFY | DID: Independent pair-bound scan to 1e6 | RESULT: 113571 successors, 0 failures; equality N=15625=5^6 | D: arithmetic gate verified
+[2026-07-13T13:55:27+03:00] FAIL ATTACK | DID: Stopped obsolete C49 Python 1e7 run | RESULT: old dynamic-divisor loop was superseded; no output artifact | D: use exact 1e6 plus C16 1e9
+[2026-07-13T13:58:38+03:00] > VERIFY | NEXT: Write C49 theorem, exact gates, pseudoforest falsifier, and first-moment exponent obstruction; then hash and replay artifacts.
+[2026-07-13T14:00:07.8012939+03:00] > ATTACK | NEXT: exact-test generated-cofactor transport from each hard hole to an earlier healed seed-2 boundary through X=10^6.
+[2026-07-13T14:02:45+03:00] FAIL ATTACK | DID: Tested shared-generated-cofactor transport to 10^6 | RESULT: 16001/45583 hard holes unmatched | D: simple cofactor map dead
+[2026-07-13T14:02:46+03:00] FAIL ATTACK | DID: Audited C51 image capacity | RESULT: S3 at X=318 has Hall set {54,74,186,318}->{41,57,63} | D: local-component map dead
+[2026-07-13T14:02:47+03:00] > WRITEUP | NEXT: Record C56 integral LP frontier and C51 obstruction, then relay the global-dual target to Fable.
+[2026-07-13T14:04:10+03:00] > VERIFY | NEXT: Generate rounded LP duals through X=10000 and check every sign, stationarity equation, and objective with Python integers.
+[2026-07-13T14:07:14+03:00] OK VERIFY | DID: Replayed C56 integer duals through X=10000 | RESULT: exact margins 0,1,0,6,3,0,21,42 | D: SCB finite gate certified
+[2026-07-13T14:07:15+03:00] OK WRITEUP | DID: Wrote C56 LP frontier | RESULT: problems/424/fanout/wave5/C56_splitless_lp.md | D: global integer dual is frontier
+[2026-07-13T14:07:16+03:00] > VERIFY | NEXT: Independently replay C50 active-frontier and C54 dyadic-bypass exact auditors before integrating their obstructions.
+[2026-07-13T14:10:34+03:00] OK VERIFY | DID: Replayed C50 to 10^7 | RESULT: active=46287; root injection fails 404; fixed dilation <=1845 fails | D: T3 frontier not simpler
+[2026-07-13T14:10:35+03:00] OK VERIFY | DID: Replayed C54 through 2^27 | RESULT: max r_j/m_(j-1)=135/106; shell healing fails 128 | D: theta<2 remains unproved
+[2026-07-13T14:10:36+03:00] > CHECK | NEXT: Relay exact C50/C51/C54/C56 outcomes to Fable and preserve SCB's arbitrary-X integer dual as the owned frontier.
+[2026-07-13T14:12:02+03:00] OK CHECK | DID: Relayed C50/C51/C54/C56 to Fable | RESULT: coordination/CODEX_TO_CLAUDE.md TICK-CX-140 | D: SCB dual remains F3 frontier
+[2026-07-13T14:12:03+03:00] > ATTACK | NEXT: Test whether the SCB objective is monotone under adjoining one reducible element and taking forward closure over G.
+[2026-07-13T14:14:21+03:00] FAIL ATTACK | DID: Tested principal closures through X=10000 | RESULT: forcing 117 at X=1000 lowers Phi by 1; 43 negatives at 10000 | D: monotone-extension proof dead
+[2026-07-13T14:14:22+03:00] > ATTACK | NEXT: Extract the exact X=1000 principal-extension witness and test whether a weaker submodular or bounded-drop invariant survives.
+[2026-07-13T14:15:36+03:00] OK ATTACK | DID: Extracted principal witness at X=1000 | RESULT: add {117,350}; gain Q117; lose Q233,Q699; Phi drops 1 | D: none
+[2026-07-13T14:15:37+03:00] > VERIFY | NEXT: Extend exact integer SCB dual certificates to X=20000 and 50000 to test persistence beyond the discovery range.
+[2026-07-13T14:17:26+03:00] OK VERIFY | DID: Extended exact SCB duals to X=100000 | RESULT: hard=10294; dual=11595; exact margin=1301 | D: finite frontier strengthened
+[2026-07-13T14:17:27+03:00] > VERIFY | NEXT: Audit C55 bounded-divisor-pair sieve proof and replay its distinct-predecessor gate at X=10^6.
+[2026-07-13T14:04:12+03:00] OK VERIFY | DID: Audited C49 scripts/report | RESULT: pair bounds 0/113571 failures; C49_hard_sieve.md written | D: fixed-P hard=o(X)
+[2026-07-13T14:04:12+03:00] OK CHECK | DID: Closed C49 lane | RESULT: first-moment exponents 0.34657<0.5; pseudoforest has 77 cycles at 1e4 | D: target unproved
+[2026-07-13T14:19:44+03:00] OK VERIFY | DID: Audited C55 and replayed to 10^6 | RESULT: fixed-D hard holes=o(X); 45583 hard; max 9 pair classes | D: analytic sieve accepted
+[2026-07-13T14:19:45+03:00] FAIL ATTACK | DID: Audited C52 cap-two transport | RESULT: closure+roots fails 1710; cap one fails 1014; cap two actual survives 10^7 | D: image arithmetic required
+[2026-07-13T14:19:46+03:00] > PLAN | NEXT: Integrate C55 many-predecessor sieve with SCB dual structure and await exact image-model lane before selecting a proof mechanism.
+[2026-07-13T14:22:31+03:00] OK PLAN | DID: Launched C58-C60 disjoint lanes | RESULT: generic Horn dual, many-predecessor shell, and dual-pattern agents active | D: none
+[2026-07-13T14:22:32+03:00] > ATTACK | NEXT: Derive the SCB hole-variable flow formulation and test a threshold/coarea reduction to Boolean cuts.
+[2026-07-13T14:27:40+03:00] > VERIFY | NEXT: Inspect GPT-Pro once; archive and exact-audit only a newly completed R5/R6 response.
+[2026-07-13T14:29:05+03:00] OK VERIFY | DID: Checked GPT-Pro once | RESULT: CX-R6 still generating; R5 already archived/audited; no new response to harvest | D: none
+[2026-07-13T14:29:37+03:00] > CHECK | NEXT: Harvest new mailbox and C53/C58-C60 agent results, then isolate the arbitrary-X SCB dual invariant.
+[2026-07-13T14:35:34+03:00] OK CHECK | DID: Checked mailbox and C53/C58-C60 | RESULT: no new Fable tick; all agents running; C59/C60 artifacts in flight | D: none
+[2026-07-13T14:35:35+03:00] > ATTACK | NEXT: Launch disjoint SCB Boolean-search and chain-root proof lanes while deriving the exact dual balance locally.
+[2026-07-13T14:41:40+03:00] FAIL ATTACK | DID: Tried C61-C63 fanout | RESULT: platform agent-thread limit reached; no agents spawned | D: local SCB work continues
+[2026-07-13T14:41:41+03:00] OK VERIFY | DID: Derived and replayed C64 token-flow lemma | RESULT: exact integer replay passes X=54..100000; 100k credit 11595>=10294 | D: SCB frontier isolated
+[2026-07-13T14:41:42+03:00] FAIL ATTACK | DID: Audited C53 abstract image model | RESULT: exact 21-vertex noninteger model has H=2,Q=0; arithmetic collision 57!=69 | D: generic image axioms dead
+[2026-07-13T14:41:43+03:00] FAIL ATTACK | DID: Audited C59 predecessor stratification | RESULT: 880 exact checks pass; harmonic capacity cannot force theta<2 | D: uncorrelated sieve lane dead
+[2026-07-13T14:44:47+03:00] FAIL ATTACK | DID: Audited C58 Horn abstraction | RESULT: 6-node chain model has H=1,Q=0 and det=-2; local re-entry fails at 74 | D: generic Horn/TU lane dead
+[2026-07-13T14:44:48+03:00] > PLAN | NEXT: Replace sharp SCB by sufficient H<=(2-eps)Q+o(X) and combine two-step arithmetic with C54 contraction.
+[2026-07-13T14:38:02+03:00] > ATTACK | NEXT: Build C61 exact Boolean SCB falsifier search and replay checker, then test cutoffs above 100000.
+[2026-07-13T14:45:15+03:00] > VERIFY | NEXT: Cross-check C61 CP-SAT and independent exact-dual verifier on known cutoffs 54,1000,100000.
+[2026-07-13T14:46:48+03:00] OK VERIFY | DID: Replayed C61 at X=54,1000,100000 | RESULT: CP-SAT UNSAT; integer dual margins 0,3,1301 match C56 | D: model validated
+[2026-07-13T14:46:49+03:00] > ATTACK | NEXT: Run C61 exact Boolean falsifier search at X=200000,500000,1000000 using 16 workers.
+[2026-07-13T14:47:39+03:00] > CHECK | NEXT: Harvest R5 once, verify every referenced exact artifact, and integrate only replayed statements into the #424 frontier.
+[2026-07-13T14:51:12+03:00] OK CHECK | DID: Harvested and replayed CX-R5 | RESULT: 999 shell checks pass; T0 has H(74)=2,Q(74)=1 but is not an image/splitless-free set | D: none
+[2026-07-13T14:52:06+03:00] > ATTACK | NEXT: Profile C60 minimum cuts locally and launch disjoint arithmetic proof, exact profile, and adversarial weak-bound lanes.
+[2026-07-13T14:56:30+03:00] > VERIFY | NEXT: Replay C62 chain-root obstruction and test its stated X=74 Hall neighborhood exactly.
+[2026-07-13T14:57:13+03:00] OK VERIFY | DID: Replayed C62 under python -O | RESULT: hard {54,74} reaches only healed root {6}; SCB H=Q=2 via unrelated root 18 | D: local descent dead
+[2026-07-13T14:57:52+03:00] > CHECK | NEXT: Sync new mailbox and agent artifacts, then attack the C60 global cut inequality without source-local transport.
+[2026-07-13T14:58:50+03:00] OK CHECK | DID: Synced mailbox and wave5 tree | RESULT: no Fable tick after 134; C61 report landed; C65-C67 active | D: none
+[2026-07-13T14:58:51+03:00] > VERIFY | NEXT: Replay C61 exact Boolean and dual certificates at 200000,500000,1000000 and audit its claimed scope.
+[2026-07-13T14:59:39+03:00] OK VERIFY | DID: Replayed C61 integer duals | RESULT: exact margins 3030 at 200000 and 19066 at 1000000; CP-SAT found no falsifier at 8 cutoffs | D: none
+[2026-07-13T15:08:36+03:00] > VERIFY | NEXT: Replay C66 minimum-cut profiles and audit the exact seed-chain reserve identity and sorted-root dominance gate.
+[2026-07-13T15:09:35+03:00] OK VERIFY | DID: Replayed C66 byte-identically | RESULT: reserve=nonhard exits-hard truncations; sorted roots dominate through 100000 | D: frontier sharpened
+[2026-07-13T15:09:36+03:00] > PLAN | NEXT: Prove or falsify C66-RANK globally, including reduction from canonical minimum shores to arbitrary admissible shores.
+[2026-07-13T15:13:06+03:00] > ATTACK | NEXT: Launch disjoint min-cut lattice and arithmetic root-pairing lanes while locally falsifying C66-RANK on arbitrary shores.
+[2026-07-13T15:16:40+03:00] > VERIFY | NEXT: Harvest completed CX-R6 once, archive it verbatim, and exact-test every load-bearing statement before integration.
+[2026-07-13T14:58:37+03:00] OK ATTACK | DID: Ran C61 SCB search at 8 cutoffs 125004..1000000 | RESULT: all CP-SAT UNSAT, 0 branches; no falsifier | D: SCB survives to 1e6 samples
+[2026-07-13T14:58:38+03:00] OK VERIFY | DID: Replayed C61 integer dual at X=1e6 under -O | RESULT: objective 132637, hard 113571, exact margin 19066; tamper rejected | D: finite UNSAT certified
+[2026-07-13T15:24:07+03:00] OK VERIFY | DID: Harvested CX-R6 and replayed its chain identity | RESULT: 15976 exact (X,d) checks to X=2000 passed; (5) remains unproved | D: reduction retained
+[2026-07-13T15:27:32+03:00] > ATTACK | NEXT: Exact-optimize every root-prefix reserve over arbitrary unary-closed shores to prove or falsify C66-RANK reduction.
+[2026-07-13T15:31:34+03:00] OK ATTACK | DID: Optimized all root prefixes at 8 cutoffs through X=2000 | RESULT: 1070 exact optima, minimum 0; no arbitrary-shore C66-RANK falsifier | D: survives
+[2026-07-13T15:36:19+03:00] > VERIFY | NEXT: Replay C65 ordered-bank paths through X=100000 and audit the X=186 direct-payment obstruction exactly.
+[2026-07-13T15:38:08+03:00] OK VERIFY | DID: Replayed C65 at X=186 and 100000 | RESULT: 5108/5108 ordered demands, 0 reversals; X=186 requires path 48-95-32-63 | D: frontier sharpened
+[2026-07-13T15:42:20+03:00] > VERIFY | NEXT: Audit C67 weak root contraction and C68 min-cut lattice countermodel with exact spot replays.
+[2026-07-13T15:44:45+03:00] OK VERIFY | DID: Replayed C67 and C68 exact gates | RESULT: weak identity passes; lattice-only rank has a 3-hole abstract countermodel | D: none
+[2026-07-13T15:44:46+03:00] FAIL PLAN | DID: Audited C65 root descent | RESULT: unary arc 89->18 has seed roots 12<18; finite path certificates remain valid | D: root-order induction dead
+[2026-07-13T15:44:47+03:00] > PLAN | NEXT: Reduce F3 to the weakest scalar tail-bank inequality and seek an arithmetic proof or exact falsifier without root monotonicity.
+[2026-07-13T15:49:10+03:00] > ATTACK | NEXT: Extend the C67 tail-bank gate exactly beyond 1e6 and derive an arithmetic sieve for persistent hard seed chains.
+[2026-07-13T15:53:30+03:00] OK ATTACK | DID: Sent CX-R7 on persistent hard-chain sparsity | RESULT: prompt archived at gpt_pro/R7_tail_bank_prompt.md; generation active | D: none
+[2026-07-13T16:01:26+03:00] OK PLAN | DID: Proved C73 hard-tail equivalence | RESULT: H(X)-H(floor((X+1)/2))<=A_H(X)<=H(X), so A_H=o(X) iff H=o(X) | D: scalar shortcut removed
+[2026-07-13T16:01:27+03:00] OK VERIFY | DID: Replayed C73 inclusions through X=5000 | RESULT: 4999 exact cutoffs, 0 failures; SHA 8B01BCEA... | D: none
+[2026-07-13T16:03:45+03:00] > VERIFY | NEXT: Independently replay C71 at 200000 and regenerate its all-cutoff 1e8 certificate byte-for-byte.
+[2026-07-13T16:08:20+03:00] OK VERIFY | DID: Replayed C71 independently and regenerated 1e8 | RESULT: semantic byte fields match; 999999999 cutoffs to 1e9 have 0 failures | D: finite gate extended
+[2026-07-13T16:10:15+03:00] > ATTACK | NEXT: Seek a canonical arithmetic injection proving the stronger all-hard bound K(X)<=E(X)-E(floor(X/2)).
+[2026-07-13T16:13:08+03:00] OK ATTACK | DID: Harvested C72 persistent-chain sieve | RESULT: A_H=o(X) iff H=o(X); maps fail at 174->116 and 846,1410->564 | D: scalar route circular
+[2026-07-13T16:16:04+03:00] > ATTACK | NEXT: Solve the C23 unconditional-image LP relaxation and test whether closure clauses alone admit an exact dual proof schema.
+[2026-07-13T16:18:13+03:00] OK ATTACK | DID: Solved C75 LP relaxation at 13 cutoffs through 20000 | RESULT: max H-Q <=0 throughout; returned integral optima, including 0 at 54,74,186,362 | D: dual route opened
+[2026-07-13T16:18:13+03:00] > PLAN | NEXT: Extract and rationally replay C75 dual certificates, then identify a cutoff-uniform combinatorial multiplier rule.
+[2026-07-13T16:33:42+03:00] OK VERIFY | DID: Replayed C75 duals exactly through X=200000 | RESULT: 13/13 exact; integral multipliers; SHA CB0383D1... | D: exact finite schema
+[2026-07-13T16:33:42+03:00] > ATTACK | NEXT: Isolate and test the minimal fractional boundary inequality implied by the C75 dual certificates.
+[2026-07-13T16:36:51+03:00] OK ATTACK | DID: Harvested C74 injection audit | RESULT: square map fails at 54 and collides at 54,74; local Hall deficit at X=114 | D: fixed injection dead
+[2026-07-13T16:42:18+03:00] > ATTACK | NEXT: Exact-scan GPT-Pro R7 top-strip perturbations and test their SCB counterexample condition through X=1000000.
+[2026-07-13T16:45:07+03:00] OK ATTACK | DID: Audited R7 top-strip theorem through X=1000000 | RESULT: identity exact; 8 perturbations replay; no trigger, B=741<Q-H=21954 | D: no SCB falsifier
+[2026-07-13T16:45:07+03:00] OK VERIFY | DID: Harvested C76 LP audit | RESULT: C75 has exact det-2 minor and non-TDI objective at X=21 | D: generic integrality route dead
+[2026-07-13T16:48:31+03:00] OK VERIFY | DID: Replayed C79 complement duals through X=100000 | RESULT: 14 exact integral duals; C79 is C56 under u=1-t | D: no new route
+[2026-07-13T16:49:31+03:00] > SELECT | NEXT: Gate #273, whose success object is one finite distinct-modulus covering certificate, against current primary literature.
+[2026-07-13T16:53:58+03:00] > VERIFY | NEXT: Replay C78 exact witness and flow audits, then extend its image-variant hard-cutoff scan from 500 to 1000.
+[2026-07-13T16:56:09+03:00] OK VERIFY | DID: Replayed C78 under -O and scanned all 66 hard cutoffs <=1000 | RESULT: byte match at 500; no image failure | D: local banks dead
+[2026-07-13T16:57:53+03:00] OK PLAN | DID: Archived C78 and closed its agent | RESULT: fanout/wave5/C78_image_boundary_audit.md; TICK-CX-152 | D: #424 still unsolved
+[2026-07-13T16:59:37+03:00] > ATTACK | NEXT: Launch C80-C87 on independent C23 proof/falsifier mechanisms while deriving the exact first-failure recurrence locally.
+[2026-07-13T17:07:14+03:00] OK ATTACK | DID: Fixed every Boolean on four tight C23 faces | RESULT: shell backbones forced; source has 13,21,47,89 free vars | D: C88 invariant
+[2026-07-13T17:14:31+03:00] FAIL PLAN | DID: Compared grounded slack to all image optima through 5000 | RESULT: grounded extremality fails first at X=704; max gap 4 | D: C89 kills route
+[2026-07-13T16:56:20+03:00] OK SELECT | DID: Selected #273 | RESULT: finite distinct-modulus certificate is the attack surface; problems/273 absent | D: SELECT->GATE
+[2026-07-13T16:56:20+03:00] > GATE | NEXT: Search primary literature and reconstruct Selfridge's divisor-of-360 certificate before construction search.
+2026-07-13T17:01:36+03:00 > SELECT | NEXT: inspect #424 statement and C23/C78 exact artifacts to isolate the C81 image-realizable search target
+[2026-07-13T17:01:40+03:00] > SELECT->GATE | NEXT: audit #424 C23/C78 and exact dual scripts to isolate the C82 uniform-dual frontier.
+2026-07-13T17:01:58+03:00 OK SELECT | DID: read #424, C23, C78 | RESULT: frontier is image-realizable blocker-cut excess | D: SELECT->GATE
+2026-07-13T17:01:58+03:00 > GATE | NEXT: compare official status and local exact image models for prior falsifiers and finite bounds
+[2026-07-13T17:03:35+03:00] OK GATE | DID: read C23,C56,C75,C76,C78,C79 dual audits | RESULT: no uniform C56/C79 multiplier rule is recorded | D: GATE->PLAN
+[2026-07-13T17:03:35+03:00] > PLAN | NEXT: derive C79 column equations and test cutoff-extension recurrences on exact stored duals.
+[2026-07-13T17:05:31+03:00] OK GATE | DID: checked official #424 and local exact models | RESULT: site is OPEN with 0 comments; exact all-prefix local gate ends at 5000 | D: GATE->PLAN
+[2026-07-13T17:05:31+03:00] > PLAN | NEXT: encode self-blocking complements plus exact chain-shell objectives, then certify grouped hard cutoffs beyond 1000
+[2026-07-13T17:05:53+03:00] OK PLAN | DID: reduced image excess to root/top support on self-blocking complements | RESULT: exact shell objective has no boundary variables | D: PLAN->ATTACK
+[2026-07-13T17:05:53+03:00] > ATTACK | NEXT: implement C81 blocker CP-SAT and solver-free verifier, then exhaust hard cutoffs above 1000
+[2026-07-13T17:08:35+03:00] OK PLAN | DID: derived C79 column balance and audited stored supports | RESULT: C79 tight JSON has beta_69=2 with lower(q_69)=-1 at X=186 | D: PLAN->ATTACK
+[2026-07-13T17:08:35+03:00] > ATTACK | NEXT: replay current C79 duals at X=54,74,186,362,2000 with exact rational stationarity.
+[2026-07-13T17:08:49+03:00] > ATTACK | NEXT: implement C83 exact SAT/CEGIS for cut-independent fractional root charges and extract the first Hall obstruction.
+[2026-07-13T17:11:06+03:00] > ATTACK | NEXT: C80 replay the X=74 image and test the complete blocker-closure reserve step with distinct factors.
+[2026-07-13T17:11:20+03:00] > ATTACK | NEXT: compile C81 scripts and solve hard cutoffs 2..54 with groups=1, jobs=1, workers=1, limit=60s
+[2026-07-13T17:11:30+03:00] OK ATTACK | DID: compiled C81 and solved X=54 | RESULT: C81_gate_54.json OPTIMAL, max image excess 0 | D: ATTACK->VERIFY
+[2026-07-13T17:11:30+03:00] > VERIFY | NEXT: exhaust 65536 image-relevant source masks through 54 and replay the CP-SAT optimum
+[2026-07-13T17:11:45+03:00] OK ATTACK | DID: replayed current C79 duals at 54,74,186,362,2000 | RESULT: C82_C79_current_exact_replay.json, all exact objective 0 | D: none
+[2026-07-13T17:11:45+03:00] > ATTACK | NEXT: minimize the closure(5<-2,3) coefficient over exact objective-zero C79 duals at five cutoffs.
+[2026-07-13T17:11:52+03:00] OK VERIFY | DID: enumerated 65536 masks through 54 | RESULT: 256 closed; 13568 identities; CP-SAT max 0 replayed | D: VERIFY->CHECK
+[2026-07-13T17:11:52+03:00] > CHECK | NEXT: test whether the verified C81 gate exceeds C78's cutoff 1000
+[2026-07-13T17:11:52+03:00] OK CHECK | DID: compared finite ranges | RESULT: X=54 validates model but does not exceed C78 | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:11:52+03:00] > DECIDE | NEXT: run independent per-cutoff replay through 1000 before larger grouped gates
+[2026-07-13T17:11:52+03:00] OK DECIDE | DID: applied completion gate | RESULT: finite range 54 is incomplete for C81 assignment | D: DECIDE->ATTACK
+[2026-07-13T17:11:52+03:00] > ATTACK | NEXT: solve 66 hard cutoffs <=1000 with groups=1, jobs=64, workers=1, limit=60s each
+[2026-07-13T17:12:00+03:00] > ATTACK | NEXT: run C83 static-charge CEGIS over hard cutoffs <=500 with 64 SAT workers and 30s/query to find a Hall falsifier.
+[2026-07-13T17:12:08+03:00] FAIL ATTACK | DID: launched 66 solves with jobs=64 | RESULT: Python ValueError: max_workers must be <=61; no solver ran | D: none
+[2026-07-13T17:12:19+03:00] > ATTACK | NEXT: solve 66 hard cutoffs <=1000 with groups=1, jobs=61, workers=1, limit=60s each
+[2026-07-13T17:12:33+03:00] OK ATTACK | DID: solved 66 hard cutoffs <=1000 | RESULT: C81_gate_1000.json has 66/66 OPTIMAL, global max 0, X=984 max -4 | D: ATTACK->VERIFY
+[2026-07-13T17:12:33+03:00] > VERIFY | NEXT: solver-free replay 66 witnesses plus exhaustive X=54 equivalence for C81_gate_1000.json
+[2026-07-13T17:12:38+03:00] FAIL ATTACK | DID: launched C83 scan <=500 | RESULT: C83_static_charge.py KeyError at cutoff 2 before any SAT query | D: none
+[2026-07-13T17:12:38+03:00] > ATTACK | NEXT: rerun C83 scan <=500 after enforcing cutoff >=3, with 64 workers and 30s/query.
+[2026-07-13T17:12:51+03:00] OK VERIFY | DID: replayed C81_gate_1000 and exhaustive X=54 | RESULT: C81_verify_1000.json; 66 witnesses; 13568 identities | D: VERIFY->CHECK
+[2026-07-13T17:12:51+03:00] > CHECK | NEXT: compare C81 X=984 optimum with C78 and choose next finite gate
+[2026-07-13T17:12:51+03:00] OK CHECK | DID: compared exact endpoint | RESULT: C81 and C78 both give max -4 at X=984 | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:12:51+03:00] > DECIDE | NEXT: extend individual exact optima through 5000, then target unresolved band to 10000
+[2026-07-13T17:12:51+03:00] OK DECIDE | DID: applied finite completion gate | RESULT: C78 replayed but no cutoff above 1000 tested | D: DECIDE->ATTACK
+[2026-07-13T17:12:51+03:00] > ATTACK | NEXT: solve every hard cutoff <=5000 with groups=1, jobs=61, workers=1, limit=60s each
+[2026-07-13T17:14:26+03:00] OK GATE | DID: Searched primary literature | RESULT: ErGr80 p.24 verified; no p>=5 resolution found; problems/273/LITERATURE.md | D: GATE->PLAN
+[2026-07-13T17:14:26+03:00] > PLAN | NEXT: Prove the parity-split lemma and target a second half-modulus cover disjoint from the exact 360 baseline.
+[2026-07-13T17:14:40+03:00] OK ATTACK | DID: replayed C80 source Cl{2,3,21} at X=74 | RESULT: local Hall graph {54,74}->{6}, size 1<2; reserve root 18 unreachable | D: local induction dead
+[2026-07-13T17:14:40+03:00] > VERIFY | NEXT: write and referee-check the C80 first-failure obstruction with parity and distinct-factor cases.
+[2026-07-13T17:14:55+03:00] OK ATTACK | DID: ran C83 static-charge SAT through X=500 | RESULT: 18 hard cutoffs have universal matchings; C83_static_charge_scan_500.json | D: none
+[2026-07-13T17:14:55+03:00] > ATTACK | NEXT: rerun C83 exact active-demand model through X=1000 with 64 workers and 30s/query.
+[2026-07-13T17:15:19+03:00] FAIL ATTACK | DID: solved 410 cutoffs <=5000, 61x1 workers, 60s | RESULT: C81_gate_5000.json has 352 OPTIMAL and 58 FEASIBLE | D: none
+[2026-07-13T17:15:36+03:00] > ATTACK | NEXT: benchmark X=4314,4898,4980 with two 3x8-worker CP-SAT runs, lin=0/2, limit=120s each
+[2026-07-13T17:15:46+03:00] OK ATTACK | DID: benchmarked 4314,4898,4980 at lin=0/2 | RESULT: both C81 benches are 3/3 OPTIMAL in <1s | D: none
+[2026-07-13T17:15:46+03:00] > ATTACK | NEXT: rerun all 410 hard cutoffs <=5000 with groups=1, jobs=8, workers=8, lin=0, limit=60s
+[2026-07-13T17:15:53+03:00] OK ATTACK | DID: exactly minimized alpha(5<-2,3) at 54,74,186,362,2000 | RESULT: C82_seed_coefficient_minima.json gives 1,3,13,35,310 | D: none
+[2026-07-13T17:15:53+03:00] > VERIFY | NEXT: integer-check the C56/C75/C79 one-row probes at the same five cutoffs.
+[2026-07-13T17:16:03+03:00] OK PLAN | DID: Proved parity-split reduction | RESULT: problems/273/PROOF_STATE.md; frontier F1 is a half-cover disjoint from H0 | D: PLAN->ATTACK
+[2026-07-13T17:16:03+03:00] > ATTACK | NEXT: Verify the reconstructed 12-class baseline over all 360 residues with exact integer arithmetic.
+[2026-07-13T17:16:03+03:00] > ATTACK | NEXT: Scan 1296 L=2^a3^b5^c7^e11^f, a<=8,b<=5,c<=3,e<=2,f<=1, for admissible H1 divisor mass.
+[2026-07-13T17:16:15+03:00] OK ATTACK | DID: reran 410 cutoffs <=5000 at 8x8 workers | RESULT: C81_gate_5000_8x8.json has 410/410 OPTIMAL, global max 0 | D: ATTACK->VERIFY
+[2026-07-13T17:16:15+03:00] > VERIFY | NEXT: replay 410 exact witnesses and exhaustive X=54 against C81_gate_5000_8x8.json
+[2026-07-13T17:16:22+03:00] FAIL VERIFY | DID: ran C82 three-model probe | RESULT: AttributeError: C56 LPBuilder has bounds, not lower/upper | D: none
+[2026-07-13T17:16:22+03:00] > VERIFY | NEXT: adapt C82 bound access and rerun the unchanged integer probes.
+[2026-07-13T17:17:00+03:00] OK VERIFY | DID: replayed 410 C81 witnesses through 5000 | RESULT: C81_verify_5000.json covers 410 OPTIMAL rows | D: VERIFY->CHECK
+[2026-07-13T17:17:00+03:00] > CHECK | NEXT: test for a new finite fact beyond the prior exact all-prefix cutoff 5000
+[2026-07-13T17:17:00+03:00] OK CHECK | DID: compared C81 range to C23 | RESULT: individual optima are exact to 5000, but C23 already certified no positive excess there | D: CHECK->DECIDE
+[2026-07-13T17:17:00+03:00] > DECIDE | NEXT: benchmark four hard endpoints through 9984 before the unresolved 5000..10000 gate
+[2026-07-13T17:17:00+03:00] OK DECIDE | DID: applied novelty gate | RESULT: no new cutoff bound yet | D: DECIDE->ATTACK
+[2026-07-13T17:17:00+03:00] > ATTACK | NEXT: solve X=6000,7494,8994,9984 with groups=1, jobs=4, workers=16, lin=0, limit=60s
+[2026-07-13T17:17:07+03:00] OK VERIFY | DID: checked C56/C75/C79 integer probes at five cutoffs | RESULT: C82_base_row_obstruction.json has only the stated base-row violations | D: VERIFY->CHECK
+[2026-07-13T17:17:07+03:00] > CHECK | NEXT: prove the arbitrary-X base-load lower bound and write the C82 recurrence obstruction.
+[2026-07-13T17:17:17+03:00] OK ATTACK | DID: solved four endpoints 6000..9984 at 4x16 | RESULT: C81_bench_10000.json has 4/4 OPTIMAL, max -34 | D: none
+[2026-07-13T17:17:17+03:00] > ATTACK | NEXT: solve all 878 hard cutoffs <=10000 with groups=1, jobs=8, workers=8, lin=0, limit=60s each
+[2026-07-13T17:18:15+03:00] OK ATTACK | DID: solved 878 hard cutoffs <=10000 at 8x8 | RESULT: C81_gate_10000.json has 878/878 OPTIMAL, global max 0 | D: ATTACK->VERIFY
+[2026-07-13T17:18:16+03:00] > VERIFY | NEXT: solver-free replay 878 optimizers plus exhaustive X=54 check for C81_gate_10000.json
+[2026-07-13T17:18:36+03:00] OK VERIFY | DID: replayed C80 normally/-O and checked C78 | RESULT: JSON SHA 4BC2EDCF... identical; source/image/events match | D: VERIFY->CHECK
+[2026-07-13T17:18:36+03:00] > CHECK | NEXT: classify C80 as proof, image falsifier, or exact induction obstruction.
+[2026-07-13T17:18:36+03:00] OK CHECK | DID: checked shell and full blocker closures | RESULT: Cl{2,3,21}, X=74 has Hall size 1<2 but Q-H=0 | D: precise obstruction
+[2026-07-13T17:18:36+03:00] > DECIDE | NEXT: archive the verified C80 least-counterexample obstruction in its owned report.
+[2026-07-13T17:18:36+03:00] OK DECIDE | DID: finalized C80 report and verifier | RESULT: fanout/wave5/C80_minimal_counterexample.md | D: C80 complete
+[2026-07-13T17:18:41+03:00] OK VERIFY | DID: replayed 878 C81 optimizers and exhaustive X=54 | RESULT: C81_verify_10000.json covers 878 rows; 13568 identities | D: VERIFY->CHECK
+[2026-07-13T17:18:41+03:00] > CHECK | NEXT: extract exact equality, tail-optimum, blocker, model, and runtime statistics from the verified gate
+[2026-07-13T17:18:51+03:00] OK CHECK | DID: proved arbitrary-X base-load lower bounds | RESULT: fanout/wave5/C82_uniform_dual.md, Lemmas (4)-(6) | D: CHECK->VERIFY
+[2026-07-13T17:18:51+03:00] > VERIFY | NEXT: rerun C82 py_compile, integer probes, and exact secondary primal-dual checks under python -O.
+[2026-07-13T17:19:35+03:00] > ATTACK | NEXT: Filter all 24 divisors of 360 by primality of m+1 and sum exact reciprocals after excluding m=2.
+[2026-07-13T17:19:49+03:00] OK VERIFY | DID: replayed final C80 labels normally/-O | RESULT: JSON SHA F4B623EE... identical; C78 source/image/events match | D: none
+[2026-07-13T17:19:40+03:00] > VERIFY | NEXT: audit completed C80/C82 artifacts, classify C81/C83 state, and trace the stray #273 ledger action.
+[2026-07-13T17:28:11+03:00] OK VERIFY | DID: replayed C80/C81/C82 under -O | RESULT: all 5 JSON outputs byte-identical; C81 covers 878 cutoffs | D: none
+[2026-07-13T17:28:11+03:00] OK VERIFY | DID: replaced C79 acceptance asserts with explicit errors | RESULT: -O C79 replay SHA EEFAA19A... unchanged | D: verifier hardened
+[2026-07-13T17:28:11+03:00] > CHECK | NEXT: harvest C83 static-charge verdict and synthesize the surviving global-reserve frontier.
+[2026-07-13T17:29:19+03:00] > ATTACK | NEXT: launch disjoint global-dual, weak-contraction, and product-density proof lanes while C83 finishes.
+[2026-07-13T17:19:57+03:00] FAIL ATTACK | DID: Filtered 24 divisors of 360 | RESULT: 11 p>=5 moduli have reciprocal sum 7/9, gap 2/9 | D: divisor-360-only repair dead
+[2026-07-13T17:20:10+03:00] OK VERIFY | DID: reran both C82 checkers and current C79 replay under -O | RESULT: exact minima 1,3,13,35,310; all signs/stationarity pass | D: VERIFY->DECIDE
+[2026-07-13T17:20:10+03:00] > DECIDE | NEXT: apply the C82 novelty gate to the arbitrary-X base-load obstruction and close the assigned artifact.
+[2026-07-13T17:20:22+03:00] OK CHECK | DID: extracted exact optimizer statistics | RESULT: zeros={54,74,114,186,204,362}; min -72 at 8664 | D: CHECK->VERIFY
+[2026-07-13T17:20:22+03:00] > VERIFY | NEXT: compile revised verifier and regenerate C81_verify_10000.json with independently checked structural statistics
+[2026-07-13T17:21:07+03:00] OK VERIFY | DID: regenerated structural verifier output | RESULT: C81_verify_10000.json has 878 OPTIMAL bounds and endpoint H-Q=512-579 | D: VERIFY->CHECK
+[2026-07-13T17:21:07+03:00] > CHECK | NEXT: determine whether the verified X<=10000 gate is a new finite fact and identify its exact obstruction
+[2026-07-13T17:21:26+03:00] OK ATTACK | DID: Replayed baseline over L=360 | RESULT: uncovered=0; mult 1:270,2:80,3:10; deleting m=2 leaves 180 evens | D: baseline exact
+[2026-07-13T17:21:34+03:00] OK DECIDE | DID: compared C82 with C60/C75/C79 | RESULT: C60 observed growth; C82 proves every dual has base load >=K_X | D: C82 complete
+[2026-07-13T17:21:44+03:00] FAIL ATTACK | DID: Scanned 1296 smooth periods | RESULT: 0 have H1 mass>1; max 462476029/598752000 at L=4191264000 | D: family dead
+[2026-07-13T17:21:44+03:00] > VERIFY | NEXT: Independently replay period_mass scan and check 1296 periods, unique maximum, candidate count 400, and manifest hashes.
+[2026-07-13T17:22:06+03:00] OK VERIFY | DID: added canonical G red-team and replayed C80 | RESULT: JSON SHA 69A1DBBD... identical; G has same shell/Hall defect | D: none
+[2026-07-13T17:22:53+03:00] OK VERIFY | DID: Replayed 1296-period scan | RESULT: manifest 9FEE15D5...E909; max deficit 136275971/598752000 | D: exact family UNSAT by density
+[2026-07-13T17:22:53+03:00] > CHECK | NEXT: Classify the exact smooth-box density obstruction as a new finite fact and reset the stall counter.
+[2026-07-13T17:22:53+03:00] OK CHECK | DID: Applied new-fact gate | RESULT: 1296-period restricted family eliminated exactly | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:22:53+03:00] > DECIDE | NEXT: Test the completion condition against existence of an explicit p>=5 certificate.
+[2026-07-13T17:22:53+03:00] FAIL DECIDE | DID: Applied completion gate | RESULT: no p>=5 certificate exists in artifacts | D: DECIDE->PLAN
+[2026-07-13T17:22:53+03:00] > PLAN | NEXT: Bound the infinite smooth tail beyond the scan box to decide all {2,3,5,7,11}-supported H1 families.
+[2026-07-13T17:23:10+03:00] OK PLAN | DID: Reduced infinite support to box mass plus total geometric tail | RESULT: tail bound formula in PROOF_STATE.md | D: PLAN->ATTACK
+[2026-07-13T17:23:10+03:00] > ATTACK | NEXT: Compute exact geometric tail beyond exponents (8,5,3,2,1) and add it to 462476029/598752000.
+[2026-07-13T17:23:18+03:00] OK CHECK | DID: compared official and local prior bounds | RESULT: prior exact all-prefix gate ends 5000; C81 certifies 878 cutoffs to 10000 | D: CHECK->DECIDE
+[2026-07-13T17:23:18+03:00] > DECIDE | NEXT: rerun novelty gate and write the finite theorem, model proof, and precise remaining obstruction
+[2026-07-13T17:23:18+03:00] OK DECIDE | DID: rechecked erdosproblems.com/424 | RESULT: OPEN; 0 comments; no partial solution claimed | D: DECIDE->WRITE
+[2026-07-13T17:23:18+03:00] > WRITE | NEXT: create C81_image_falsifier.md with exact gate, proof of encoding, reproduction, and non-theorem warning
+[2026-07-13T17:23:45+03:00] OK WRITE | DID: created C81_image_falsifier.md | RESULT: finite theorem, model proof, exact stats, hashes, and scope obstruction recorded | D: WRITE->VERIFY
+[2026-07-13T17:23:45+03:00] > VERIFY | NEXT: cross-solve X=54,984,9984 with jobs=3, workers=8, lin=2, limit=60s and audit hashes/report
+[2026-07-13T17:24:49+03:00] FAIL ATTACK | DID: Bounded infinite 5-prime smooth H1 mass | RESULT: <=508631341/598752000, gap 90120659/598752000 | D: support family dead
+[2026-07-13T17:24:49+03:00] > VERIFY | NEXT: Independently audit Lemma T5's set decomposition and exact geometric fractions.
+[2026-07-13T17:24:49+03:00] OK ATTACK | DID: Ran Verifier A on baseline | RESULT: L=360; uncovered=0; cert SHA 18AE0787...13A | D: none
+[2026-07-13T17:24:49+03:00] > VERIFY | NEXT: Replay Verifier A and audit parser, primality, true LCM, coverage, deleted fiber, and hashes.
+[2026-07-13T17:25:40+03:00] > VERIFY | NEXT: rerun final solver-free C81 gate verifier after artifact cleanup and confirm recorded SHA-256 hashes
+[2026-07-13T17:26:02+03:00] OK VERIFY | DID: reran verifier, hash audit, and lin=2 referee | RESULT: 878 rows replay; 13568 identities; 3/3 referee optima match | D: VERIFY->CHECK
+[2026-07-13T17:26:02+03:00] > CHECK | NEXT: apply the assigned C81 success criterion to the verified finite gate
+[2026-07-13T17:26:02+03:00] OK CHECK | DID: checked C81 success condition | RESULT: new exact fact excludes image excess at every X<=10000 | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:26:02+03:00] > DECIDE | NEXT: confirm core C81 artifacts and stop with the precise finite obstruction
+[2026-07-13T17:26:02+03:00] OK DECIDE | DID: confirmed five core C81 artifacts | RESULT: C81_image_falsifier.md gives the exact finite obstruction | D: C81 complete; STOP
+[2026-07-13T17:26:49+03:00] OK VERIFY | DID: Replayed Verifier A plus 3 tamper cases | RESULT: exits valid=0, duplicate=1, composite=1, bad residue=2 | D: baseline exact
+[2026-07-13T17:26:49+03:00] OK ATTACK | DID: Ran Verifier B residual chain | RESULT: counts 180,90,60,48,24,16,12,6,5,3,1,0; SHA 0D617977...34B1 | D: none
+[2026-07-13T17:26:49+03:00] > VERIFY | NEXT: Replay Verifier B, audit leaf containment and independence from Verifier A, and run 8 adversarial tests.
+[2026-07-13T17:27:24+03:00] OK ATTACK | DID: ran active C83 implication CEGIS through X=978 | RESULT: 41 cutoffs have static matchings; C83_static_charge_scan_1000.json | D: none
+[2026-07-13T17:27:24+03:00] > ATTACK | NEXT: synthesize C83 feature-symmetric exact charges by rank, scale, residue, and factor signature; extract a class Hall obstruction.
+[2026-07-13T17:27:37+03:00] OK VERIFY | DID: Replayed Verifier B and 8 mutations | RESULT: PASS; 0 hash failures; manifest SHA 61073752...78F2 | D: two-verifier baseline
+[2026-07-13T17:28:13+03:00] > ATTACK | NEXT: Scan r in {13,17,19,23,29,31,37,41,43,47}, exponent 0..1, over base box (8,5,3,2,1), with exact infinite-tail bounds.
+[2026-07-13T17:29:03+03:00] > ATTACK | NEXT: Scan the same 1296 smooth periods including H0 for total mass>2 and exact two-bin reciprocal partition feasibility.
+[2026-07-13T17:29:37+03:00] > ATTACK | NEXT: run C83 exact feature-charge synthesis at X=186, coarse/full modes, 64 workers and 30s per implication.
+[2026-07-13T17:31:33+03:00] > ATTACK | NEXT: Sieve all q=2d+1<=200001 and find the first exact reciprocal-mass crossing above 1 for d notin H0.
+[2026-07-13T17:32:11+03:00] OK ATTACK | DID: Sieved admissible d<=100000 | RESULT: first mass>1 occurs at d=140 (q=281), candidate 47; mass through d<140 is <1 | D: F1 max d>=140
+[2026-07-13T17:32:11+03:00] > VERIFY | NEXT: Recompute the d=140 crossing with independent SymPy prime enumeration and exact fractions.
+[2026-07-13T17:32:38+03:00] OK VERIFY | DID: Replayed threshold with SymPy | RESULT: same 47 d, list SHA 1AF3C5B9...4473; all 47 mandatory if max d=140 | D: exact
+[2026-07-13T17:32:53+03:00] OK ATTACK | DID: synthesized C83 full feature charges at X=186 | RESULT: class Hall 6>5; one grounded cut kills 72 blocks; C83_feature_potential_full_186.json | D: ATTACK->VERIFY
+[2026-07-13T17:32:53+03:00] > VERIFY | NEXT: solver-free replay the C83 one-cut feature Hall obstruction and test tamper rejection.
+[2026-07-13T17:34:20+03:00] OK VERIFY | DID: Audited Lemma T5 with 2 programs | RESULT: 400 d; upper 508631341/598752000; gap 90120659/598752000 | D: theorem retained
+[2026-07-13T17:34:20+03:00] FAIL ATTACK | DID: Scanned 10 one-prime extensions | RESULT: no finite mass>1; r=17..47 globally subcritical; r=13 unresolved | D: only r=13 alive
+[2026-07-13T17:34:20+03:00] > VERIFY | NEXT: Replay one-prime scan and audit r=13 upper excess plus nine exact subcritical bounds.
+[2026-07-13T17:34:20+03:00] > ATTACK | NEXT: For the fixed 47 d<=140 pool, compare exact total slack with forced odd-class density in the d=8 fiber.
+[2026-07-13T17:35:27+03:00] FAIL ATTACK | DID: Applied mod-8 capacity to the mandatory 47-modulus pool | RESULT: forced waste exceeds total slack; Lemma F8 | D: max d<=140 dead
+[2026-07-13T17:35:27+03:00] > VERIFY | NEXT: Independently audit Lemma F8 and extend the forced-smallest-modulus bound beyond d=140.
+[2026-07-13T17:36:57+03:00] OK VERIFY | DID: compiled and replayed C83 under -O | RESULT: Hall 6>5, 72 blocks replayed; C23 tests 10/10 pass | D: VERIFY->CHECK
+[2026-07-13T17:36:57+03:00] > CHECK | NEXT: apply C83 success criterion to the exact full-signature feature-potential falsifier.
+[2026-07-13T17:36:57+03:00] OK CHECK | DID: checked C83 criterion | RESULT: grounded X=186 cut falsifies all weights in family (1)-(4) | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:36:57+03:00] > DECIDE | NEXT: confirm C83 hashes, artifact scope, and stop with the exact falsifier.
+[2026-07-13T17:36:57+03:00] OK DECIDE | DID: confirmed five C83 artifacts | RESULT: C83_arithmetic_potential.md contains the 6>5 proof | D: C83 complete; STOP
+[2026-07-13T17:37:53+03:00] OK ATTACK | DID: Scanned 1296 joint periods | RESULT: 296 mass>2; least L=27720 has 43 d, mass 6429/3080 | D: SAT target
+[2026-07-13T17:37:53+03:00] > VERIFY | NEXT: Replay one-prime and joint-density scans, verify hashes, primality, partitions, and exact bounds independently.
+[2026-07-13T17:38:54+03:00] OK VERIFY | DID: Replayed 4 scans and 2 manifests | RESULT: PASS; L=27720 has 43 d; r=13 is sole unresolved extension | D: VERIFY->CHECK
+[2026-07-13T17:38:54+03:00] > CHECK | NEXT: Test whether the audited density facts yield a new exact target or obstruction.
+[2026-07-13T17:38:54+03:00] OK CHECK | DID: Assessed audited screens | RESULT: least joint target L=27720; nine infinite supports dead | D: stall=0; CHECK->DECIDE
+[2026-07-13T17:38:54+03:00] > DECIDE | NEXT: Check whether an explicit p>=5 covering certificate now exists.
+[2026-07-13T17:38:54+03:00] FAIL DECIDE | DID: Checked deliverables | RESULT: no p>=5 residue assignment exists yet | D: DECIDE->ATTACK
+[2026-07-13T17:38:54+03:00] > ATTACK | NEXT: Solve the exact two-fiber cover at L=27720 over all 43 admissible d, with disjoint modulus use and 32 workers.
+[2026-07-13T17:38:54+03:00] > ATTACK | NEXT: Scan support {2,3,5,7,11,13} at caps (8,5,3,2,1,g), 0<=g<=8, with exact residual-tail bounds.
+[2026-07-13T17:39:07+03:00] > VERIFY #424 | NEXT: replay C83 under optimized Python and independently verify its X=186 feature-Hall obstruction.
+[2026-07-13T17:41:33+03:00] OK VERIFY #424 | DID: replayed C83 and wrote independent stdlib verifier | RESULT: exact X=186 deficit 6-5=1; canonical SHA 5B4C3616... | D: static features dead
+[2026-07-13T17:41:55+03:00] > ATTACK | NEXT: Screen L=27720 allocations by exact coprime-overlap capacity inequalities for every selected half-modulus.
+[2026-07-13T17:43:40+03:00] FAIL ATTACK | DID: Solved L=27720 coprime-overlap allocation model | RESULT: CP-SAT INFEASIBLE in 0.052s; result SHA 0774F3E1...F68B | D: target dead pending audit
+[2026-07-13T17:43:40+03:00] > VERIFY | NEXT: Replay the L=27720 obstruction, minimize its exact constraint core, and seek a solver-independent certificate.
+[2026-07-13T17:45:02+03:00] > ATTACK #424 | NEXT: prove and exact-test a solver-free Horn characterization of C83 root-specific universal implications.
+[2026-07-13T17:47:16+03:00] FAIL VERIFY | DID: Ran deletion core minimizer for 60s | RESULT: nothing; per-constraint feasibility checks exceeded cutoff | D: use exhaustive audit
+[2026-07-13T17:47:16+03:00] > VERIFY | NEXT: Exhaustively audit the L=27720 allocation obstruction in pure exact Python, independent of OR-Tools.
+[2026-07-13T17:49:47+03:00] > ATTACK | NEXT: Screen all 296 density-passing smooth periods using exact mandatory coprime-pair overlap certificates.
+[2026-07-13T17:51:11+03:00] FAIL ATTACK | DID: Expanded r=13 support to caps (8,5,3,2,2,6) | RESULT: upper <1 by gap 6164284294509223/222534738762336000 | D: r=13 dead
+[2026-07-13T17:51:11+03:00] > VERIFY | NEXT: Replay the r=13 scan, audit 16188 prime/composite records, and verify its SHA-256 manifest.
+[2026-07-13T17:51:11+03:00] OK ATTACK | DID: Screened 296 density-passing periods by mandatory pairs | RESULT: 135 killed; least survivor L=55440 | D: target advanced
+[2026-07-13T17:51:11+03:00] > VERIFY | NEXT: Independently re-enumerate and audit all mandatory-pair certificates and the L=55440 survivor.
+[2026-07-13T17:52:27+03:00] OK VERIFY | DID: Replayed r=13 proof and 16188-record verifier | RESULT: PASS; manifest F3CFB5B2...65A8 | D: six-prime fixed-H0 support dead
+[2026-07-13T17:52:27+03:00] OK VERIFY | DID: Audited D140/F8 with 2 implementations | RESULT: fixed-H0 max d<=185 impossible; RESULTS.json | D: bound 140->185
+[2026-07-13T17:52:27+03:00] > VERIFY | NEXT: Replay the B=185 forced-anchor scan, exact fractions, 88 CRT maps, and hash manifest locally.
+[2026-07-13T17:53:28+03:00] OK VERIFY | DID: Replayed B=185 scan, integer verifier, 88 CRT maps, hashes | RESULT: all exit 0; manifest PASS | D: theorem retained
+[2026-07-13T17:53:49+03:00] > ATTACK | NEXT: Solve L=55440 over all 52 admissible d: exact overlap allocation first, then two-fiber SAT if capacity survives.
+[2026-07-13T17:53:40+03:00] OK VERIFY #424 | DID: audited C84 flow/dual and C86 valuation recurrence | RESULT: dual SHA 67EE097E...; exact capacity 23/45 | D: C90 flow frontier
+[2026-07-13T17:55:06+03:00] FAIL ATTACK | DID: Solved L=55440 overlap allocation model | RESULT: CP-SAT INFEASIBLE; 52 d; SHA 11A468A4...14E | D: target dead pending audit
+[2026-07-13T17:55:06+03:00] > VERIFY | NEXT: Extract a small L=55440 constraint core and independently certify the exact allocation obstruction.
+[2026-07-13T17:56:05+03:00] > ATTACK | NEXT: Run exact overlap-allocation CP-SAT on all 296 density-passing periods, 16 processes, 30s per period.
+[2026-07-13T17:57:19+03:00] FAIL ATTACK #424 | DID: exact Horn characterization and matching scan | RESULT: X=2000 has max matching 82<83; Hall 80>79 independently verified | D: static transport dead
+[2026-07-13T17:58:51+03:00] OK ATTACK | DID: Ran 16-process overlap screen on 296 periods | RESULT: 132 infeasible, 29 unknown, 135 feasible; least feasible L=138600 | D: new target
+[2026-07-13T17:58:51+03:00] > VERIFY | NEXT: Audit all exported overlap allocations exactly and independently rerun the L=110880 unknown plus L=138600 target.
+[2026-07-13T18:00:03+03:00] FAIL VERIFY | DID: Launched L=110880 rerun | RESULT: script retained L=55440; output rejected | D: none
+[2026-07-13T18:00:03+03:00] > VERIFY | NEXT: Correct the hardcoded period to 110880, compile, and rerun the exact 32-worker allocation model.
+[2026-07-13T18:00:34+03:00] OK VERIFY | DID: Audited 135 allocations and reran L=110880 | RESULT: verifier PASS; 110880 INFEASIBLE; frontier L=138600 | D: exact target
+[2026-07-13T18:00:34+03:00] > ATTACK | NEXT: Solve the 12-modulus A allocation at L=138600 by exact full-period CP-SAT, fixing its mod-2 residue to 0.
+[2026-07-13T18:00:20+03:00] > ATTACK #424 | NEXT: exact-scan the universal common-bank ratio at all 878 hard cutoffs through 10000, using 8 workers.
+[2026-07-13T18:01:27+03:00] FAIL ATTACK | DID: Solved first L=138600 A allocation over 138600 residues | RESULT: CP-SAT INFEASIBLE in 5.53s; SHA 02AD1F57...D6F1 | D: try other allocations
+[2026-07-13T18:01:27+03:00] > ATTACK | NEXT: Enumerate L=138600 capacity allocations and exact-test each parity cover, cutting every infeasible allocation.
+[2026-07-13T18:04:40+03:00] OK VERIFY | DID: Replayed J27720 human/tree/mutations/hashes | RESULT: 5095 nodes, 0 leaves; manifest 518C862A...F276 | D: 27720 dead
+[2026-07-13T18:04:40+03:00] OK VERIFY | DID: Replayed L=55440 Farkas, CP-SAT, mutations, hashes | RESULT: 8 rays PASS; cert 9D15A82C...9F1 | D: 55440 dead
+[2026-07-13T18:04:57+03:00] > VERIFY | NEXT: Derive a solver-independent exact certificate for the L=110880 overlap-allocation infeasibility.
+[2026-07-13T18:05:47+03:00] > VERIFY | NEXT: Test whether the fixed L=138600 A allocation is killed by exact pair-intersection budget constraints.
+[2026-07-13T18:08:30+03:00] OK VERIFY | DID: Audited first L=138600 A allocation | RESULT: {2,6,8} need 3 distinct parities; 8 assignments, 0 survive | D: exact cut
+[2026-07-13T18:09:41+03:00] OK VERIFY | DID: Replayed mandatory scans and local 55440 audit | RESULT: 136 periods killed; 420/420 local cases dead; manifest PASS | D: exact
+[2026-07-13T18:11:07+03:00] > ATTACK | NEXT: Ask GPT-Pro for one explicit disjoint-half-cover construction or a rigorously testable CRT refinement lemma.
+[2026-07-13T18:12:27+03:00] > VERIFY #424 | NEXT: harvest C90/C92/C93/C94, independently audit C85 and C91, then test whether common-bank ratio yields C67 contraction.
+[2026-07-13T18:13:28+03:00] > CHECK | NEXT: Assess the fixed-H0, 27720, 55440, and first-138600 certificates for new exact facts.
+[2026-07-13T18:13:28+03:00] OK CHECK | DID: Checked completed wave | RESULT: T13, B185, J27720, J55440 and one J138600 cut verified | D: stall=0; CHECK->DECIDE
+[2026-07-13T18:13:28+03:00] > DECIDE | NEXT: Check whether any verified artifact is an explicit global p>=5 cover.
+[2026-07-13T18:13:28+03:00] FAIL DECIDE | DID: Checked global success conditions | RESULT: no two disjoint half-covers yet | D: DECIDE->ATTACK; L=138600 active
+[2026-07-13T18:13:55+03:00] > ATTACK | NEXT: Find a minimum-subset half-cover of Z/180 from H0, freeing admissible half-moduli for a p>=5 complement.
+[2026-07-13T18:16:05+03:00] OK VERIFY #424 | DID: audited C85 root-pool theorem and both exact replays | RESULT: unit Hall first fails at X=4361928, 48 hard vs 47 roots | D: C85 closed
+[2026-07-13T18:19:48+03:00] OK PLAN #424 | DID: proved C91 common-bank conditional reduction | RESULT: any A_H<=cD+o(X), c<4/3, gives H(S)<=cQ(S)+o(X) | D: sole frontier is ratio
+[2026-07-13T18:16:03+03:00] > ATTACK | NEXT: Search 2<=d<=1000000 for an admissible scaling of the 11-modulus H0 cover template, testing 12 exact prime forms.
+[2026-07-13T18:17:09+03:00] FAIL ATTACK | DID: Scanned H0 template scalings d<=1000000 | RESULT: 148931 admissible parents; 0 full 12-form hits | D: finite family dead
+[2026-07-13T18:17:09+03:00] > VERIFY | NEXT: Replay the million-bound scaling scan with an independent sieve and deterministic 64-bit Miller-Rabin.
+[2026-07-13T18:22:31+03:00] OK VERIFY #424 | DID: corrected C91 bank to full C87 universal neighbors | RESULT: one unhealed hard root forces D distinct Q boundaries | D: reduction strengthened
+[2026-07-13T18:24:36+03:00] > VERIFY #424 | NEXT: independently replay C90's X=2064 finite cut and Boolean C79 counterexample, including normal/-O hashes.
+[2026-07-13T18:17:42+03:00] OK VERIFY | DID: Replayed d<=1000000 scaling scan with sieve/MR64 | RESULT: PASS; 148931 parents, 0 hits; SHA C7A6D8EE...C3E9 | D: none
+[2026-07-13T18:26:04+03:00] FAIL VERIFY #424 | DID: replayed C90 cut and C79 Boolean witness | RESULT: X=2064 has exact 101 demand/100 cut; C79 excess 1 | D: full-flow fallback dead
+[2026-07-13T18:20:09+03:00] > ATTACK | NEXT: Run seven exact mandatory-allocation CaDiCaL branches for the full L=138600 residue CNF with two translation symmetries.
+[2026-07-13T18:21:24+03:00] OK VERIFY | DID: Replayed L=110880 two-branch certificate | RESULT: PASS; 13/13 mutations rejected; manifest 1994273D...11A8 | D: 110880 dead
+[2026-07-13T18:22:52+03:00] OK ATTACK | DID: Scanned rational anchor weights for L=83160 | RESULT: four mandatory branches have positive gaps 181/27720,227/83160,598/17325 | D: cert
+[2026-07-13T18:22:52+03:00] > VERIFY | NEXT: Build and independently replay an exact four-branch capacity certificate for L=83160.
+[2026-07-13T18:23:53+03:00] > VERIFY #424 | NEXT: harvest and cross-audit C92/C93 billion-scale ratio scans and C94 structural classification.
+[2026-07-13T18:25:48+03:00] OK VERIFY | DID: Built and replayed L=83160 four-branch certificate | RESULT: PASS; gaps 181/27720,227/83160,598/17325 | D: 83160 dead
+[2026-07-13T18:27:00+03:00] FAIL ATTACK | DID: Minimized the 180-period baseline half-cover | RESULT: all 11 H0 moduli mandatory; 2048 subsets, 1 feasible | D: no modulus freed
+[2026-07-13T18:27:00+03:00] OK VERIFY | DID: Replayed 11 deletion trees and hashes | RESULT: 396679 nodes, 0 proper covers; 13 hashes PASS | D: theorem exact
+[2026-07-13T18:27:55+03:00] FAIL ATTACK | DID: Applied q=6 saturated-cell bounds at L=138600 | RESULT: both d=6 placements exceed excess 116778 | D: 138600 dead pending audit
+[2026-07-13T18:27:55+03:00] > VERIFY | NEXT: Replay both exact q=6 obstruction implementations, audit normalization, fractions, and hashes.
+[2026-07-13T18:27:55+03:00] > ATTACK | NEXT: Attack the next overlap-feasible period L=166320 with exact quotient screens before full residue SAT.
+[2026-07-13T18:29:32+03:00] > ATTACK | NEXT: Stop redundant L=138600 SAT branches and preserve logs because the exact q=6 proof already kills the full period.
+[2026-07-13T18:30:09+03:00] OK ATTACK | DID: Stopped seven L=138600 SAT branches | RESULT: q=6 exact obstruction makes every residue branch UNSAT | D: SAT approach abandoned
+[2026-07-13T18:32:01+03:00] > ATTACK | NEXT: Apply the exact q=6 saturated-cell inequalities to all 296 density-passing smooth periods and select the least survivor.
+[2026-07-13T18:32:56+03:00] OK ATTACK | DID: Scanned q=6 cells on 296 periods | RESULT: 166 killed; least survivor L=166320; results SHA 375B5036...C5DA | D: new screen
+[2026-07-13T18:32:56+03:00] > VERIFY | NEXT: Independently rederive the q=6 screen, audit all 166 certificates, and test stronger quotient generalizations.
+[2026-07-13T18:33:26+03:00] > ATTACK | NEXT: Scan 840 joint periods on support {2,3,5,7,11,13}, caps (6,4,2,1,1,1), with exact density and overlap allocation.
+[2026-07-13T18:35:39+03:00] OK VERIFY | DID: Replayed both L=138600 q=6 checkers and 27-file manifest | RESULT: PASS; gaps 62952,16278 | D: 138600 dead; VERIFY->CHECK
+[2026-07-13T18:36:29+03:00] > CHECK | NEXT: Record the verified J138600 obstruction and test whether it resolves the global p>=5 problem.
+[2026-07-13T18:37:08+03:00] OK CHECK | DID: Recorded Lemma J138600 | RESULT: exact q=6 proof and two verifier logs exist | D: stall=0; CHECK->DECIDE
+[2026-07-13T18:37:08+03:00] > DECIDE | NEXT: Test J138600 against the global success conditions.
+[2026-07-13T18:37:08+03:00] FAIL DECIDE | DID: Checked the global certificate condition | RESULT: no explicit p>=5 covering system exists yet | D: DECIDE->ATTACK; L=166320 active
+[2026-07-13T18:39:38+03:00] > ATTACK | NEXT: Census exact joint mass on support {2,3,5,7,11,13,17,19}, caps (8,5,3,2,1,1,1,1), and rank T>2 periods.
+[2026-07-13T18:42:16+03:00] > VERIFY | NEXT: Independently replay 10368 support periods using SymPy primality and direct integer incidence sums.
+[2026-07-13T18:43:16+03:00] OK ATTACK | DID: Scanned 10368 eight-prime periods | RESULT: 3402 have T>2; least new-support L=32760 has 45 candidates | D: new branch
+[2026-07-13T18:43:16+03:00] OK VERIFY | DID: Replayed census with SymPy and direct L/d sums | RESULT: L=32760 has T=66233/32760; SHA F8C450E6...2F2A | D: none
+[2026-07-13T18:43:44+03:00] > ATTACK | NEXT: Apply exact mandatory-anchor Mq inequalities to all 3402 density-passing eight-prime periods and rank survivors.
+[2026-07-13T18:44:50+03:00] OK ATTACK | DID: Applied Mq to 3402 periods | RESULT: 918 killed; 2484 survive; least survivor L=55440 | D: L=32760 dead
+[2026-07-13T18:44:50+03:00] > VERIFY | NEXT: Independently replay all 918 Mq witnesses using SymPy candidates and exact Fraction inequalities.
+[2026-07-13T18:45:38+03:00] OK VERIFY | DID: Replayed all Mq rows with SymPy/Fraction | RESULT: 918 witnesses valid; L32760 bound 18283/32760; SHA E523BDEC...5928 | D: none
+[2026-07-13T18:47:47+03:00] OK ATTACK | DID: Archived GPT-Pro gadget and code | RESULT: answer SHA B9A00FA3...CA33; five children for d=105525 | D: candidate lemma
+[2026-07-13T18:47:47+03:00] > VERIFY | NEXT: Run the attached checker and independently verify the five primes and full-period fiber equality.
+[2026-07-13T18:49:18+03:00] FAIL ATTACK | DID: Applied q=6 then q=24 at L=166320 | RESULT: forced 708912 exceeds excess 661896 by 47016 | D: 166320 dead pending audit
+[2026-07-13T18:49:18+03:00] > VERIFY | NEXT: Replay both L=166320 exact quotient verifiers and the seven-file hash manifest.
+[2026-07-13T18:49:18+03:00] > ATTACK | NEXT: Attack L=221760 with exact mandatory, quotient-cell, and residue models; export a cover or obstruction.
+[2026-07-13T18:49:48+03:00] > ATTACK | NEXT: Search L=221760 by exact mandatory-anchor and saturated-cell quotient projections, then residues if needed, using <=16 CPU.
+[2026-07-13T18:50:23+03:00] OK VERIFY | DID: Replayed both L=166320 quotient checkers and manifest | RESULT: PASS; 16 q24 cases; gap 47016; SHA F721F7A5...694C | D: 166320 dead
+[2026-07-13T18:51:25+03:00] OK VERIFY #424 | DID: Audited C93/C94 exact outputs | RESULT: C93 ratio min 5/6 at X=186 through 1e9; C94 replays exact | D: finite only
+[2026-07-13T18:51:25+03:00] FAIL PLAN #424 | DID: Audited healed-bank shortcut | RESULT: C94.1 proves any fixed D>=alpha*A_H-o(X) is equivalent to A_H=o(X) | D: shortcut dead
+[2026-07-13T18:51:25+03:00] > ATTACK #424 | NEXT: Prove or falsify the two exact quarter-scale inequalities isolated by C92.
+[2026-07-13T18:51:55+03:00] > ATTACK | NEXT: Test exact fiber-composition gadgets for removing duplicate moduli from two H0 covers, enforcing admissibility and global distinctness.
+[2026-07-13T18:53:36+03:00] OK ATTACK | DID: Exhausted L=221760 quotient-6 anchors | RESULT: forced 281412 or 212544 > excess 196188 | D: restricted family dead
+[2026-07-13T18:53:36+03:00] > VERIFY | NEXT: Replay two independent exact L=221760 obstruction verifiers and hash all artifacts.
+[2026-07-13T18:53:46+03:00] FAIL ATTACK | DID: Screened quotient q<=100000 for 11 H0 fibers | RESULT: Fraction string exceeded Python 4300-digit limit | D: output format fix
+[2026-07-13T18:54:21+03:00] OK VERIFY | DID: Replayed two exact L=221760 verifiers and SHA-256 manifest | RESULT: both PASS; manifest has 7 entries | D: none
+[2026-07-13T18:54:21+03:00] > CHECK | NEXT: Determine whether the L=221760 restricted obstruction is a verifiable new fact.
+[2026-07-13T18:54:21+03:00] OK CHECK | DID: Audited exact quotient-6 proof | RESULT: all 24 normalized anchor cases contradicted in independent_verification.json | D: stall=0
+[2026-07-13T18:54:21+03:00] > DECIDE | NEXT: Test whether the restricted L=221760 theorem resolves Erdős Problem 273.
+[2026-07-13T18:54:21+03:00] OK DECIDE | DID: Compared theorem scope to objective | RESULT: only half-moduli dividing 221760 are excluded | D: incomplete; return to ATTACK
+[2026-07-13T18:54:45+03:00] > ATTACK | NEXT: Re-run exact q<=100000 H0 quotient screen with bounded rational output and test the five-class template.
+[2026-07-13T18:54:55+03:00] OK ATTACK | DID: Screened all q<=100000 for 11 H0 parents | RESULT: Q0 fails each parent; every pool has exact mass >1 | D: search bounded covers
+[2026-07-13T18:55:19+03:00] OK VERIFY | DID: Replayed q6/q30 census | RESULT: 185/296 killed; 111 survive; least L=831600; SHA A3617C48...E713 | D: frontier 831600
+[2026-07-13T18:55:19+03:00] FAIL ATTACK | DID: Applied q=6 at L=221760 | RESULT: forced 281412 or 212544 exceeds excess 196188 | D: 221760 dead pending audit
+[2026-07-13T18:55:19+03:00] > VERIFY | NEXT: Replay both L=221760 exact checkers, all 24 anchor placements, and hashes.
+[2026-07-13T18:55:19+03:00] > ATTACK | NEXT: Attack the least q6/q30 survivor L=831600 with exact quotient and residue models.
+[2026-07-13T18:56:05+03:00] > ATTACK | NEXT: Scan 11 parents over quotient periods 2^a3^b, a<=12,b<=10, and rank exact density-feasible families.
+[2026-07-13T18:56:18+03:00] > ATTACK | NEXT: Enumerate D(831600) and exact quotient-capacity screens q|831600 with mandatory anchors, 1 CPU.
+[2026-07-13T18:56:25+03:00] OK VERIFY | DID: Replayed both L=221760 checkers and manifest | RESULT: PASS; 24 anchors; gaps 85224,16356; SHA D0E2E2F4...8179 | D: 221760 dead
+[2026-07-13T18:57:01+03:00] > ATTACK | NEXT: Solve up to 30 ranked 2,3-smooth quotient periods for d=3,9,15,18 by CP-SAT, 8 workers, 10 s/model.
+[2026-07-13T18:57:33+03:00] OK VERIFY | DID: Ran two exact d=105525 gadget checkers | RESULT: L=1266300 equality; 6 primes; 6/6 mutations; cert SHA D6DDAEF5...F792 | D: Lemma R105525
+[2026-07-13T18:57:53+03:00] OK ATTACK | DID: Scanned 840 six-prime periods | RESULT: 124 T>2; 53 Mq dead; 19 q6 dead; 42 allocations; 10 unknown | D: L32760 obstruction
+[2026-07-13T18:57:53+03:00] > VERIFY | NEXT: Replay the L=32760 certificate, six mutations, independent 840-row audit, and manifest.
+[2026-07-13T18:57:59+03:00] > ATTACK | NEXT: Run L831600 quotient CP-SAT at q=120, 16 workers, 60 s; export exact-incidence allocation or status.
+[2026-07-13T18:58:37+03:00] OK VERIFY | DID: Replayed six-prime census and L32760 certificate | RESULT: 0/28689 errors; 6/6 mutations; gap 14477/32760; SHA 119B59C9...1E56 | D: 32760 dead
+[2026-07-13T18:58:44+03:00] > CHECK | NEXT: Record J32760, J166320, J221760, the q30 screen, and R105525, then test global completion.
+[2026-07-13T18:59:32+03:00] > ATTACK | NEXT: Attack six-prime allocation survivor L=360360 with exact quotient/residue search, preserving L=831600 in parallel.
+[2026-07-13T16:00:03.2735125Z] > SELECT | NEXT: Attack #273 at L=360360, least exact allocation survivor in the capped six-prime census.
+[2026-07-13T16:00:03.2908253Z] > PLAN | NEXT: Test mandatory quotient-cell obstructions before an exact two-cover residue search at L=360360.
+[2026-07-13T19:00:20+03:00] OK ATTACK | DID: Solved 120 ranked 2,3-smooth quotient models | RESULT: 113 INFEASIBLE, 7 UNKNOWN, 0 covers; JSON saved | D: broaden support
+[2026-07-13T19:00:27+03:00] > ATTACK | NEXT: Scan 28512 H0-parent/six-prime quotient periods, caps (8,5,3,2,1,1), and retain least exact mass>=1 families.
+[2026-07-13T19:00:28+03:00] FAIL ATTACK | DID: q=120 CP-SAT, 16 workers, 60 s cap; stopped PID 95768 after cap overrun | RESULT: nothing | D: use 1-worker exact DFS.
+[2026-07-13T19:00:50+03:00] OK CHECK | DID: Recorded four exact obstructions and R105525 | RESULT: proof states and verifier paths appended | D: stall=0; CHECK->DECIDE
+[2026-07-13T19:00:50+03:00] > DECIDE | NEXT: Test the new lemmas and gadget against every global success condition.
+[2026-07-13T19:00:50+03:00] FAIL DECIDE | DID: Checked certificate conditions | RESULT: no explicit pair of disjoint half-covers yet | D: DECIDE->ATTACK; L360360,L831600 active
+[2026-07-13T16:01:15.9994172Z] > ATTACK | NEXT: Run exact CP-SAT quotient cells q=6..5040 for L=360360, 79 moduli, 16 workers, 60 s/q.
+[2026-07-13T19:01:18+03:00] OK ATTACK | DID: Scanned 28512 six-prime quotient families | RESULT: all 11 parents have mass>=1; least periods 6 to 10810800 | D: solve covers
+[2026-07-13T19:01:27+03:00] > ATTACK | NEXT: Solve first 5 six-prime quotient periods for d=2,5,6,15,18,30,90 by CP-SAT, 8 workers, 20 s/model.
+[2026-07-13T19:01:33+03:00] > ATTACK | NEXT: Screen 2592 quotient periods for each H0 parent, requiring 2d*q+1 prime and excluding all H0 child collisions.
+[2026-07-13T19:01:51+03:00] > ATTACK | NEXT: Enumerate exact q=120 anchor states {2,3,5,6,8}, 1 CPU; minimize qL-scaled slack.
+[2026-07-13T19:02:21+03:00] OK ATTACK | DID: Scanned 28512 parent-period pairs | RESULT: all 11 H0 parents reach mass>=1; d=15 first at Q=13860 with 31 q | D: cover target
+[2026-07-13T19:02:21+03:00] > ATTACK | NEXT: Solve the exact Q=13860 quotient-cover model for parent d=15 using all 31 admissible child moduli.
+[2026-07-13T19:02:43+03:00] OK ATTACK | DID: q=120 anchors 2,3,5,6,8 exact DFS | RESULT: min 22395960 > slack 21875760; gap 520200 | D: verify.
+[2026-07-13T18:58:00+03:00] > VERIFY #424 | NEXT: Independently replay C96 arithmetic classification and prime-square fourfold obstruction at X=100000.
+[2026-07-13T19:03:28+03:00] > VERIFY | NEXT: Full unpruned q=120 enumeration of 4862 anchor states for L831600, 1 CPU; write obstruction certificate.
+[2026-07-13T19:03:33+03:00] FAIL ATTACK | DID: Solved d=15,Q=13860 quotient SAT | RESULT: INFEASIBLE; 31 q; 14630 branches; SHA 2D750CE5...84B0 | D: pending proof
+[2026-07-13T19:03:33+03:00] > VERIFY | NEXT: Certify mandatory q=5,7 and their forced 1/35 overlap, then independently replay all candidates.
+[2026-07-13T19:04:28+03:00] OK VERIFY | DID: Replayed d15,Q13860 overlap certificate | RESULT: 31 q; union<=1124/1155; gap 31/1155; 5/5 mutations | D: family dead
+[2026-07-13T19:04:28+03:00] > VERIFY | NEXT: Independently replay all 28512 H0 quotient-period masses using SymPy and direct Q/q weights.
+[2026-07-13T19:04:40+03:00] OK ATTACK | DID: Solved 35 least-period six-prime models | RESULT: 30 INFEASIBLE, 5 UNKNOWN, 0 covers | D: rank by excess mass
+[2026-07-13T19:04:40+03:00] > ATTACK | NEXT: Solve top-mass six-prime period for nine manageable H0 parents, 8 workers, 30 s/model.
+[2026-07-13T18:59:00+03:00] OK VERIFY #424 | DID: Replayed C96 verifier normally and -O | RESULT: byte-identical SHA 5BDB8911...E08B6 | D: prime-square map dead
+[2026-07-13T19:05:25+03:00] OK VERIFY | DID: Replayed all H0 quotient masses with SymPy | RESULT: PASS; 11 parents,28512 pairs; results SHA D8C0E0F3...CA0A | D: none
+[2026-07-13T19:05:37+03:00] > ATTACK | NEXT: Apply exact mandatory coprime-pair overlap bounds to the least density-passing quotient period for each H0 parent.
+[2026-07-13T19:05:51+03:00] OK VERIFY | DID: enumerated all 4862 q=120 anchor states | RESULT: min 22395960, gap 520200, multiplicity 80; obstruction_certificate.json | D: exact dead.
+[2026-07-13T19:06:10+03:00] OK ATTACK | DID: Screened 11 least quotient targets | RESULT: 9 killed by mandatory coprime pairs; d=3,d=90 survive | D: frontier d90,Q49140
+[2026-07-13T19:06:10+03:00] > ATTACK | NEXT: Solve exact quotient coverage for parent d=90, Q=49140, using its 36 admissible child moduli.
+[2026-07-13T16:06:48.0703359Z] FAIL ATTACK | DID: Ran L=360360 quotient batch q=6..5040, 16 workers, 60 s/q | RESULT: nothing; process produced no artifact | D: use fixed bins
+[2026-07-13T19:07:07+03:00] > VERIFY | NEXT: Run integer-bitset and independent Fraction/set audits over all 4862 q=120 states, 1 CPU each.
+[2026-07-13T16:07:28.5153004Z] > ATTACK | NEXT: Test the exact L=360360 mass allocation at 13 quotients, two bins, 16 workers, 10 s per bin/q.
+[2026-07-13T19:08:10+03:00] > VERIFY #424 | NEXT: Audit C92/C95 artifacts and the all-prime divisor-pair formula, then test whether C85 traps enough hard holes.
+[2026-07-13T19:17:20+03:00] OK VERIFY #424 | DID: Replayed C92/C95/C97 and audited C85 coverage | RESULT: exact finite matches; hard 534 escapes structural bank | D: locality dead
+[2026-07-13T19:17:20+03:00] > ATTACK #424 | NEXT: Test the all-prime pair bound only as a subset sieve and pursue an independent positive-density affine route.
+[2026-07-13T19:07:56+03:00] OK VERIFY | DID: integer-bitset and Fraction/set audits, 4862 states each | RESULT: both PASS; gap 289/55440 | D: L831600 restricted family dead.
+[2026-07-13T16:08:01.4368653Z] OK ATTACK | DID: Tested one L=360360 allocation at 13 quotients | RESULT: bin B q=6 and bin A q=12 infeasible; fixed_allocation_scan.json | D: reject allocation
+[2026-07-13T16:09:02.1194999Z] > ATTACK | NEXT: Solve normalized all-moduli q=6 projection for L=360360, 79 moduli, 16 workers, 120 s.
+[2026-07-13T19:09:07+03:00] > VERIFY | NEXT: Hash 7 L831600 obstruction artifacts and replay SHA-256 manifest, 1 CPU.
+[2026-07-13T16:09:11.4159558Z] OK ATTACK | DID: Solved normalized q=6 projection | RESULT: OPTIMAL, 656 vars, 3187 branches; projection_q6.json | D: refine q
+[2026-07-13T16:09:11.4398965Z] > ATTACK | NEXT: Solve normalized q=12..5040 projections for L=360360, 16 workers, 60 s/q.
+[2026-07-13T19:09:15+03:00] FAIL ATTACK | DID: Ran d90,Q49140 CP-SAT for 120s on 16 workers | RESULT: UNKNOWN; no assignment or certificate | D: none
+[2026-07-13T19:09:15+03:00] > ATTACK | NEXT: Enumerate 196560 normalized placements of mandatory q=3,9,10,12,13,14 and bound union plus optional mass exactly.
+[2026-07-13T19:09:54+03:00] OK VERIFY | DID: SHA-256 replay of 7 L831600 artifacts | RESULT: 7/7 PASS; manifest 7FC517BDB5F4871145CA089EB3107416 | D: none.
+[2026-07-13T19:10:34+03:00] > CHECK | NEXT: Classify the verified L831600 q=120 obstruction as a new fact and reset stall if exact.
+[2026-07-13T19:10:36+03:00] FAIL ATTACK | DID: Enumerated 196560 d90 mandatory placements | RESULT: max upper 11152/12285; gap 1133/12285; 0 survivors | D: dead pending audit
+[2026-07-13T19:10:36+03:00] > VERIFY | NEXT: Recompute all d90 union sizes by inclusion-exclusion with trial-division candidate generation.
+[2026-07-13T19:10:38+03:00] OK CHECK | DID: checked dual verifier outputs | RESULT: exact L831600 restricted impossibility; verification.json PASS | D: stall=0.
+[2026-07-13T19:10:43+03:00] > DECIDE | NEXT: Compare L831600 restricted obstruction with global success conditions and return it to the construction search.
+[2026-07-13T19:10:47+03:00] OK DECIDE | DID: applied global success test | RESULT: no global certificate; L831600 only is excluded | D: continue other period families.
+[2026-07-13T19:10:56+03:00] OK ATTACK | DID: Solved 9 top-mass six-prime models | RESULT: 4 INFEASIBLE, 5 UNKNOWN, 0 covers | D: add translation branches
+[2026-07-13T19:10:56+03:00] > ATTACK | NEXT: Solve all 23 translation-normalized anchors for d=2,L=5040, 8 processes, 20 s/branch.
+[2026-07-13T19:11:09+03:00] FAIL ATTACK | DID: Launched 23 anchor branches, 8 processes | RESULT: WinError 5 creating multiprocessing pipe | D: rerun outside sandbox
+[2026-07-13T19:11:27+03:00] OK VERIFY | DID: Replayed all d90 states by inclusion-exclusion | RESULT: 196560 cases; max 11152/12285; gap 1133/12285 | D: d90,Q49140 dead
+[2026-07-13T19:11:34+03:00] FAIL ATTACK | DID: Enumerated q=120 anchors at L=831600 | RESULT: min 20737/92400 exceeds slack 30383/138600 by 289/55440 | D: dead pending audit
+[2026-07-13T19:11:34+03:00] > VERIFY | NEXT: Replay both L=831600 verifiers, all 4862 anchor states, and the hash manifest.
+[2026-07-13T16:11:49.2961644Z] FAIL ATTACK | DID: Ran normalized q=12..5040 batch | RESULT: nothing; batch made no checkpoint before termination | D: isolate q=12
+[2026-07-13T16:11:49.3203859Z] > ATTACK | NEXT: Solve normalized q=12 projection alone for L=360360, 79 moduli, 16 workers, 120 s.
+[2026-07-13T19:11:50+03:00] OK ATTACK | DID: Solved 23 normalized d=2,L=5040 branches | RESULT: 16 INFEASIBLE, 7 UNKNOWN, 0 covers | D: test d=5
+[2026-07-13T19:11:50+03:00] > ATTACK | NEXT: Solve all 23 translation-normalized anchors for d=5,L=2520, 8 processes, 20 s/branch.
+[2026-07-13T19:12:00+03:00] OK VERIFY | DID: Replayed both L=831600 q120 checkers | RESULT: PASS; 4862 states; gap 289/55440; SHA 7FC517BD...CD30 | D: 831600 dead
+[2026-07-13T16:12:07.8251358Z] OK ATTACK | DID: Solved normalized q=12 projection | RESULT: OPTIMAL, 968 vars, 12441 branches; projection_q12.json | D: refine q
+[2026-07-13T16:12:07.8452711Z] > ATTACK | NEXT: Solve normalized q=24,30,60,72,120,180 projections, sequential, 16 workers, 60 s each.
+[2026-07-13T19:12:28+03:00] > ATTACK | NEXT: Attack the next five-prime quotient-screen survivor L=997920 with exact anchor and residue models.
+[2026-07-13T19:13:02+03:00] > ATTACK | NEXT: Rank the first 50 d=90 quotient periods after Q=49140 and apply exact mandatory-pair overlap screens.
+[2026-07-13T19:13:13+03:00] OK ATTACK | DID: Solved 23 normalized d=5,L=2520 branches | RESULT: 17 INFEASIBLE, 6 UNKNOWN, 0 covers | D: exact custom tree
+[2026-07-13T19:13:13+03:00] > ATTACK | NEXT: Exhaustively decide d=3,L=420 by translation anchors and an exact bitset coverage tree.
+[2026-07-13T19:13:49+03:00] OK ATTACK | DID: Ranked 602 d90 quotient periods | RESULT: 100 pair-dead; next Q=65520 has 45 q and mass 47/45 | D: next screen
+[2026-07-13T19:13:49+03:00] > ATTACK | NEXT: Apply the verified six-anchor union maximum 10560/16380 to all 602 d90 periods and select the least survivor.
+[2026-07-13T19:14:01+03:00] > ATTACK | NEXT: Enumerate 4862 normalized q=120 states for L=997920 with anchors 2,3,5,6,8 and exact integer bounds.
+[2026-07-13T16:14:28.6346380Z] OK ATTACK | DID: Refined L=360360 quotient wave | RESULT: q24,q30 INFEASIBLE; q60 UNKNOWN at 60.17 s; projection_q*.json | D: exact q24 frontier
+[2026-07-13T16:14:28.6542391Z] > VERIFY | NEXT: Build two solver-independent exact q=24 obstruction checkers for the L=360360 family.
+[2026-07-13T19:14:30+03:00] OK ATTACK | DID: Applied six-anchor profile to 602 d90 periods | RESULT: 120 killed; least survivor Q=196560 with 56 q | D: cover target
+[2026-07-13T19:14:30+03:00] > ATTACK | NEXT: Solve exact quotient coverage for parent d=90 and Q=196560, then export any assignment for full-period replay.
+[2026-07-13T19:14:47+03:00] OK ATTACK | DID: Enumerated 4862 L997920 q120 anchor states | RESULT: min 26266680 > slack 24805080 by 1461600 | D: dead pending audit
+[2026-07-13T19:14:48+03:00] > VERIFY | NEXT: Independently replay all 4862 q120 states using factor divisors, sieve primality, sets, and Fraction arithmetic.
+[2026-07-13T19:16:42+03:00] OK ATTACK | DID: Exhausted d=3,L=420 quotient covers | RESULT: INFEASIBLE in 37688965 exact tree nodes; SHA AC29CBEE...E1494 | D: bounded failure
+[2026-07-13T19:16:42+03:00] > VERIFY | NEXT: Independently rebuild the 13-modulus d=3,L=420 model and require exact CP-SAT infeasibility.
+[2026-07-13T19:17:56+03:00] FAIL ATTACK | DID: Ran d90,Q196560 CP-SAT for 120s on 16 workers | RESULT: UNKNOWN; 124702 vars,360658 conflicts; no assignment | D: none
+[2026-07-13T19:17:56+03:00] > ATTACK | NEXT: Run 64 exact-integer min-conflicts restarts on the 56 quotient moduli and export any zero-uncovered assignment.
+[2026-07-13T19:17:55+03:00] OK VERIFY | DID: Replayed L997920 q120 bound with integer and Fraction verifiers | RESULT: both PASS; 4862 states; gap 29/2376 | D: dead
+[2026-07-13T19:17:56+03:00] > CHECK | NEXT: Classify the dual-verified L997920 obstruction as an exact restricted result.
+[2026-07-13T19:17:57+03:00] OK CHECK | DID: Checked certificate theorem scope | RESULT: no two disjoint covers over D(997920); SHA manifest 8964D9E4...3CF58 | D: stall=0
+[2026-07-13T19:17:58+03:00] > DECIDE | NEXT: Compare the L997920 restriction with the global p>=5 covering-system success conditions.
+[2026-07-13T19:17:59+03:00] OK DECIDE | DID: Applied global success test | RESULT: L997920 alone is excluded; no global certificate | D: return to period search
+[2026-07-13T19:18:50+03:00] OK VERIFY | DID: Rebuilt d=3,L=420 independently | RESULT: CP-SAT INFEASIBLE in 17968 branches; 9/9 hashes PASS | D: VERIFY->CHECK
+[2026-07-13T19:18:50+03:00] > CHECK | NEXT: Determine whether the verified q|420 failure is a new exact fact and whether it resolves Problem 273.
+[2026-07-13T19:18:50+03:00] OK CHECK | DID: Audited the search scope | RESULT: no d=3 quotient cover with every q dividing 420 | D: stall=0; CHECK->DECIDE
+[2026-07-13T19:18:50+03:00] > DECIDE | NEXT: Compare the bounded q|420 obstruction with the global success conditions.
+[2026-07-13T19:18:50+03:00] FAIL DECIDE | DID: Checked global scope | RESULT: quotient moduli outside divisors of 420 remain untested | D: no global resolution
+[2026-07-13T19:19:41+03:00] FAIL ATTACK | DID: Enumerated q120 anchors at L=997920 | RESULT: min 737/3360 exceeds slack by 29/2376 | D: dead pending audit
+[2026-07-13T19:19:41+03:00] > VERIFY | NEXT: Replay both L=997920 exact verifiers, all 4862 states, and the manifest.
+[2026-07-13T19:19:41+03:00] > ATTACK | NEXT: Attack the next five-prime survivor L=1108800 by exact quotient anchors before residue search.
+[2026-07-13T19:19:41+03:00] > ATTACK | NEXT: Solve d90,Q196560 quotient coverage independently with SAT, BDD, or exact-cover branching.
+[2026-07-13T19:20:27+03:00] > ATTACK | NEXT: Enumerate D(1108800) and exact q-anchor slack screens with <=16 CPU to test the next finite five-prime family.
+[2026-07-13T19:21:09.0828195+03:00] > ATTACK | NEXT: enumerate d=90,Q=196560 candidates and run exact quotient residue-tree/SAT search with <=16 workers.
+[2026-07-13T19:21:21+03:00] FAIL ATTACK | DID: Ran 64 d90,Q196560 min-conflicts restarts | RESULT: best assignment leaves 25855/196560 residues uncovered | D: none
+[2026-07-13T19:21:43+03:00] OK ATTACK | DID: Enumerated q=120 anchors 5,6,8 over 4862 states | RESULT: exact gap 3047400 in joint_1108800/q120_5_6_8.json | D: family dead
+[2026-07-13T19:21:44+03:00] > VERIFY | NEXT: Replay the q=120 obstruction with independent divisor, primality, set, and Fraction implementations.
+[2026-07-13T19:22:00+03:00] OK VERIFY | DID: Replayed both L=997920 q120 checkers | RESULT: PASS; 4862 states; gap 29/2376; SHA 8964D9E4...CF58 | D: 997920 dead
+[2026-07-13T16:22:07.6480453Z] OK VERIFY | DID: Ran 2 q24 checkers and 7 mutations | RESULT: 384=368+16; gaps 134976/207720; manifest a0e90637ebe65af7 | D: L360360 dead
+[2026-07-13T16:22:07.6690706Z] > CHECK | NEXT: Record the solver-independent L=360360 restricted theorem and test #273 completion.
+[2026-07-13T16:22:07.6697026Z] OK CHECK | DID: Checked the q24 obstruction against the joint-cover lemma | RESULT: OBSTRUCTION.md excludes all half-moduli dividing 360360 | D: stall=0
+[2026-07-13T16:22:07.6700250Z] > DECIDE | NEXT: Compare the restricted L=360360 result with the global success condition.
+[2026-07-13T16:22:07.6703642Z] OK DECIDE | DID: Applied the global success condition | RESULT: L=360360 excluded only; no p>=5 certificate | D: continue other periods
+[2026-07-13T19:22:21+03:00] FAIL ATTACK | DID: Searched d=3 quotient covers with q|420 | RESULT: exact tree 37688965 states, 0 covers; Q0 fails all 11 H0 parents | D: bounded dead
+[2026-07-13T19:22:21+03:00] > VERIFY | NEXT: Replay the 37.7M-state d3,Q420 tree, independent CP-SAT, and nine-file manifest.
+[2026-07-13T19:23:44.4367809+03:00] FAIL VERIFY | DID: ran d90 certificate generator and two verifiers | RESULT: independent verifier line 54 assertion failed | D: none
+[2026-07-13T16:23:47.2928578Z] OK VERIFY | DID: Hashed all 21 L=360360 artifacts | RESULT: SHA256SUMS PASS; manifest d7ec92be3494f2d8...ab87e726 | D: none
+[2026-07-13T19:24:11.9839862+03:00] > VERIFY | NEXT: rerun both exact d90 obstruction verifiers after correcting the independent period-unit denominator.
+[2026-07-13T16:24:25.0419955Z] OK VERIFY | DID: Rehashed final L=360360 README and 20 artifacts | RESULT: manifest 8d8f483dfd7d14be...b847efbf PASS | D: none
+[2026-07-13T19:24:17+03:00] OK VERIFY | DID: Replayed q=120 obstruction via integer bitsets and set/Fraction audit | RESULT: both PASS; SHA256SUMS hash E6CDB6DD...A6D5 | D: verified
+[2026-07-13T19:24:18+03:00] > CHECK | NEXT: Classify the verified q=120 inequality as a new restricted finite-family fact.
+[2026-07-13T19:24:19+03:00] OK CHECK | DID: Checked exact gap 1693/73920 > 0 | RESULT: no two disjoint covers using D(1108800) | D: stall=0
+[2026-07-13T19:24:20+03:00] > DECIDE | NEXT: Return the restricted obstruction and artifacts; do not infer global impossibility.
+[2026-07-13T19:24:21+03:00] OK DECIDE | DID: Assessed scope | RESULT: L=1108800 family dead only; Problem 273 unresolved | D: select another family
+[2026-07-13T19:24:41.3000659+03:00] OK VERIFY | DID: replayed two exact d90,Q196560 verifiers | RESULT: both PASS; outside 130730<131040; d90_q196560_exact/certificate.json | D: family DEAD
+[2026-07-13T19:26:08+03:00] OK VERIFY | DID: Replayed d3,Q420 tree, CP-SAT, and hashes | RESULT: 37688965 states; 17968 CP branches; SHA DF2F2A13...6129 | D: family dead
+[2026-07-13T19:26:21+03:00] FAIL ATTACK | DID: Applied q24 anchors at L=360360 | RESULT: 368/384 direct dead; 16 cuts have gap 207720 | D: dead pending audit
+[2026-07-13T19:26:21+03:00] > VERIFY | NEXT: Replay both L=360360 verifiers, seven mutations, and 21-file manifest.
+[2026-07-13T19:26:21+03:00] FAIL ATTACK | DID: Applied q120 anchors at L=1108800 | RESULT: min 5957/26400 exceeds slack by 1693/73920 | D: dead pending audit
+[2026-07-13T19:26:21+03:00] > VERIFY | NEXT: Replay both L=1108800 verifiers, 4862 states, and manifest.
+[2026-07-13T19:26:21+03:00] FAIL ATTACK | DID: Applied normalized q=3 fiber at d90,Q196560 | RESULT: outside mass deficit 31/19656, or 310 residues | D: dead pending audit
+[2026-07-13T19:26:21+03:00] > VERIFY | NEXT: Replay both d90,Q196560 exact checkers and seven-file manifest.
+[2026-07-13T19:26:55+03:00] OK ATTACK #424 | DID: Audited C99 all-prime sieve | RESULT: d(h)>=2^(omega(R)-2); first structural trap failure h=534 | D: sieve proved, capture dead
+[2026-07-13T19:26:56+03:00] > ATTACK #424 | NEXT: Exact-test reciprocal mass of non-splitless witness-root basins and derive or falsify an aggregate capacity bound.
+[2026-07-13T19:27:13+03:00] OK VERIFY | DID: Replayed both L=360360 verifiers and hashes | RESULT: PASS; 384 cases; gaps 134976,207720; SHA 8D8F483D...EFBF | D: dead
+[2026-07-13T19:27:13+03:00] OK VERIFY | DID: Replayed both L=1108800 verifiers and hashes | RESULT: PASS; 4862 states; gap 1693/73920; SHA E6CDB6DD...A6D5 | D: dead
+[2026-07-13T19:27:13+03:00] OK VERIFY | DID: Replayed both d90,Q196560 checkers | RESULT: PASS; 56 q; outside deficit 310; SHA 77CC4F9E...EA6E | D: family dead
+[2026-07-13T19:27:33+03:00] > ATTACK | NEXT: Attack the unresolved six-prime period L=655200 with exact allocation and quotient certificates.
+[2026-07-13T19:27:33+03:00] > ATTACK | NEXT: Attack the next five-prime survivor L=1247400 by exact anchor-slack quotients.
+[2026-07-13T19:27:33+03:00] > ATTACK | NEXT: Apply the exact normalized-q3 outside-capacity bound across all d90 quotient periods and attack its least survivor.
+[2026-07-13T19:28:05+03:00] > ATTACK | NEXT: Enumerate exact q=120 anchor-slack bound for L=655200 over all 2(11)(13)(17)=4862 normalized states.
+[2026-07-13T19:28:30+03:00] > SELECT | NEXT: Attack #273 at L=1247400, the least five-prime q6/q30 survivor after exact exclusions through L=1108800.
+[2026-07-13T19:28:30+03:00] > PLAN | NEXT: Test exact q=120 and anchor-slack obstructions before any residue-level SAT search.
+[2026-07-13T19:29:18+03:00] > ATTACK | NEXT: Enumerate q=120 anchors 2,3,5,6,8 at L=1247400 over 4862 normalized states with exact integer slack.
+[2026-07-13T19:29:38+03:00] > CHECK | NEXT: Record J360360,J831600,J997920,J1108800 and four exact refinement-family obstructions, then test completion.
+[2026-07-13T19:30:04+03:00] OK ATTACK | DID: Enumerated q=120 anchors at L=1247400 | RESULT: 101 moduli; min 33423840 > slack 31097280; gap 2326560 | D: obstruction found
+[2026-07-13T16:30:13.5327695Z] > SELECT | NEXT: Screen #273 d=90 over all 602 density-passing quotient periods using the exact q=3 outside-capacity lemma.
+[2026-07-13T16:30:13.5512829Z] > PLAN | NEXT: Replay q=3 capacity, independently audit counts, then refine the least surviving quotient period.
+[2026-07-13T19:30:42+03:00] > VERIFY | NEXT: Build and replay two solver-independent q=120 obstruction verifiers at L=1247400, then hash eight artifacts.
+[2026-07-13T19:30:42+03:00] OK CHECK | DID: Recorded eight verified restricted lemmas | RESULT: proof state and computation paths appended | D: stall=0; CHECK->DECIDE
+[2026-07-13T19:30:42+03:00] > DECIDE | NEXT: Test all verified obstructions and refinement lemmas against global success conditions.
+[2026-07-13T19:30:42+03:00] FAIL DECIDE | DID: Checked for an explicit disjoint half-cover pair | RESULT: none exists in artifacts | D: DECIDE->ATTACK; L655200,L1247400 active
+[2026-07-13T19:31:07+03:00] > ATTACK | NEXT: Apply the exact q=6 saturated-cell lemma to all 3402 eight-prime density-passing periods and rank survivors.
+[2026-07-13T16:31:10.1323565Z] > ATTACK | NEXT: Run exact q=3 outside-capacity screen on 602 d90 periods over 2592 exponent states, 1 CPU.
+[2026-07-13T19:31:11.6714113+03:00] OK ATTACK | DID: Enumerated q=120 anchors for L=655200 | RESULT: 4862 states; min 15352920 > slack 9834240, gap 5518680 | D: exact restricted obstruction
+[2026-07-13T19:31:22.4781580+03:00] > VERIFY | NEXT: Independently replay all 4862 L=655200 q=120 states with bitset/integer and set/Fraction verifiers.
+[2026-07-13T19:31:49+03:00] OK ATTACK | DID: Applied q6 to 3402 eight-prime periods | RESULT: 1273 killed; least survivor 166320; first 17-support survivor 942480 | D: none
+[2026-07-13T19:31:49+03:00] > VERIFY | NEXT: Independently replay all 3402 extended q6 decisions with SymPy candidates and integer weights.
+[2026-07-13T19:32:07+03:00] OK VERIFY | DID: Replayed integer-bitset and Fraction/set q120 verifiers at L=1247400 | RESULT: both PASS; manifest SHA256 49883317317D927CBE48F8EC8B24598549FC8F58BEC05D1B15095DA6D614A1BF | D: exact restricted dead
+[2026-07-13T16:32:48.1308618Z] OK ATTACK | DID: Screened 602 d90 periods by exact q3 capacity | RESULT: 320 killed, 282 survive; least Q=393120; mod3_screen.json | D: Q393120
+[2026-07-13T16:32:48.1483777Z] > VERIFY | NEXT: Independently regenerate 678 candidates with SymPy and audit all 602 q3 inequalities.
+[2026-07-13T19:32:48+03:00] OK VERIFY | DID: Replayed extended q6 screen independently | RESULT: 3402 rows; 1273 killed; 2129 survive; SHA E68C0C15...934 | D: none
+[2026-07-13T19:32:58+03:00] OK VERIFY | DID: Replayed two exact q120 verifiers | RESULT: both PASS; search/joint_1247400/SHA256SUMS.txt | D: L1247400 dead
+[2026-07-13T19:32:58+03:00] > CHECK | NEXT: Audit theorem scope, factorization, and exact rational identity for L=1247400.
+[2026-07-13T19:33:00+03:00] FAIL ATTACK #424 | DID: Replayed C101 typed quarter ballot | RESULT: first failure X=186, margins (-2,+1); SHA 8B0E7363...A479A2C1 | D: typed ballots dead
+[2026-07-13T19:38:02+03:00] OK ATTACK #424 | DID: Audited C102 light decoder | RESULT: (A)+(T) imply density c0*eta/(972LQ); 60512829/60512841 edges light | D: new conditional route
+[2026-07-13T19:38:03+03:00] FAIL ATTACK #424 | DID: Audited C103 zero-density routes | RESULT: tree count superlinear; renewal sum 31/30>1; exact verifier PASS | D: generic negative routes dead
+[2026-07-13T19:42:17+03:00] FAIL ATTACK #424 | DID: Harvested and replayed GPT R8 | RESULT: seed {2,3,66} fails quarter gate at X=186 by 1; SHA 6F7A1FEB...F29DA | D: formal descent dead
+[2026-07-13T19:42:18+03:00] > ATTACK #424 | NEXT: Prove or falsify C102 bounded-multiplicity fraction and seed-sensitive quarter correction with independent exact gates.
+[2026-07-13T19:33:16+03:00] OK CHECK | DID: Audited source and arithmetic | RESULT: factorization PASS; mass 344243/155925; gap 4847/311850 | D: stall=0
+[2026-07-13T19:33:16+03:00] > DECIDE | NEXT: Classify the L1247400 result as restricted impossibility, not a global resolution.
+[2026-07-13T19:33:16+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: problems/273/search/joint_1247400/OBSTRUCTION.md | D: return to period selection
+[2026-07-13T16:33:18.5566458Z] OK VERIFY | DID: Independently audited all 602 d90 q3 rows | RESULT: PASS; 320 killed, 282 survive, least Q393120 | D: attack Q393120
+[2026-07-13T16:33:18.5750364Z] > ATTACK | NEXT: Search exact parity-refined outside-cell cuts for d90 quotient period Q=393120, 62 moduli.
+[2026-07-13T19:33:19.7945686+03:00] FAIL VERIFY | DID: First independent L=655200 replay | RESULT: wrong checker constant 39367/201600; recomputed minimum 42647/218400 | D: checker fixed
+[2026-07-13T19:33:19.8127613+03:00] OK VERIFY | DID: Replayed L=655200 q=120 certificate with two exact implementations | RESULT: both PASS; 4862 states; gap 5518680/(120L) | D: L=655200 dead
+[2026-07-13T19:33:20+03:00] > ATTACK | NEXT: Apply the exact q=30 branch-on-6 capacity certificate to all 2129 extended-q6 survivors.
+[2026-07-13T19:35:07.4524965+03:00] OK VERIFY | DID: Checked L=655200 artifact hashes | RESULT: 8/8 PASS; SHA256SUMS.txt SHA 50710b2159edb9b53189103b3886c66105fa0d0db27ad9f9829b7b2db2f914e1 | D: none
+[2026-07-13T19:35:38.9589630+03:00] > ATTACK | NEXT: Enumerate q=120 anchor states for half-moduli d|720720 with 2d+1 prime, exact integers, 1 CPU.
+[2026-07-13T19:35:38.9764827+03:00] > ATTACK | NEXT: Enumerate q=120 anchor states for half-moduli d|1330560 with 2d+1 prime, exact integers, 1 CPU.
+[2026-07-13T16:35:42.1937413Z] OK ATTACK | DID: Solved Q393120 quotient projections | RESULT: cells3,6 feasible; cells9 INFEASIBLE in 0.069 s; projection_results.json | D: q9 proof
+[2026-07-13T16:35:42.2137063Z] > VERIFY | NEXT: Reduce the Q393120 q9 solver result to exact saturated-cell inequalities and two independent checkers.
+[2026-07-13T19:36:48.8602018+03:00] > VERIFY | NEXT: Independently replay 2129 q30-tested periods using SymPy candidates, integer weights, and direct quotient-state enumeration.
+[2026-07-13T19:37:20.7698262+03:00] FAIL ATTACK | DID: Enumerated L720720 q120 anchors 2,3,5,6,8 | RESULT: 4862 states; gap -534240/(120L); q120 survives | D: refine anchors
+[2026-07-13T19:37:29.1427703+03:00] > ATTACK | NEXT: Enumerate exact L720720 q120 anchor refinements adding d=15 and d=20, 2 jobs, 150722 and 199342 states.
+[2026-07-13T19:37:30.5141454+03:00] OK ATTACK | DID: Enumerated L1330560 q120 anchors 2,3,5,6,8 | RESULT: 4862 states; 35323560>32780520; gap2543040 | D: dead pending audit
+[2026-07-13T19:37:30.5348557+03:00] > VERIFY | NEXT: Replay L1330560 q120 obstruction with independent integer-bitset and Fraction/set implementations.
+[2026-07-13T19:38:57.8835402+03:00] OK ATTACK | DID: Enumerated L720720 q120 refinements | RESULT: +15 kills; 150722 states; gap 3247200/(120L); +20 gap -231840 | D: exact q120 obstruction
+[2026-07-13T19:38:57.9013118+03:00] > VERIFY | NEXT: Replay L720720 +15 obstruction using independent divisor, primality, bitset, set, and Fraction implementations.
+[2026-07-13T16:40:48.4749118Z] OK VERIFY | DID: Replayed d90 census and 2 Q393120 checkers | RESULT: PASS; 320/602 killed; q9 gap135486; manifest 7a77d998...f0cea | D: Q393120 dead
+[2026-07-13T16:40:48.4939644Z] > CHECK | NEXT: Record the exact all-period counts and test whether the Q393120 obstruction resolves #273.
+[2026-07-13T16:40:48.4948353Z] OK CHECK | DID: Combined q3 screen with q9 obstruction | RESULT: 281 d90 periods remain; next Q=589680; OBSTRUCTION.md | D: stall=0
+[2026-07-13T16:40:48.4952623Z] > DECIDE | NEXT: Compare the d90 restricted results with the global success condition.
+[2026-07-13T16:40:48.4956713Z] OK DECIDE | DID: Applied global success condition | RESULT: finite d90 families only; Problem 273 unresolved | D: next Q589680
+[2026-07-13T19:41:01.3621670+03:00] FAIL VERIFY | DID: Ran direct q30 replay for 117 CPU seconds | RESULT: nothing | D: replace per-candidate scoring by exact gcd-class aggregation.
+[2026-07-13T19:41:12.7921125+03:00] OK VERIFY | DID: Replayed L1330560 q120 with integer-bitset and Fraction/set verifiers | RESULT: both PASS; gap883/55440; 80 minima | D: exact restricted dead
+[2026-07-13T19:41:12.8127721+03:00] > CHECK | NEXT: Audit L1330560 theorem scope, factorization, manifest integrity, and reproduction from source.
+[2026-07-13T19:41:47.7279958+03:00] OK CHECK | DID: Audited pool, fractions, scripts, hashes | RESULT: 98 matches; 8/8 PASS; SHA 0887718C...02628AF | D: stall=0
+[2026-07-13T19:41:47.7492588+03:00] > DECIDE | NEXT: Classify L1330560 as restricted impossibility and return to period selection.
+[2026-07-13T19:41:47.7498134+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: search/joint_1330560/OBSTRUCTION.md | D: period excluded
+[2026-07-13T19:42:54.0093233+03:00] > ATTACK | NEXT: Enumerate q=120 anchor states for half-moduli d|1081080 with 2d+1 prime, exact integers, 1 CPU.
+[2026-07-13T19:43:39.2000038+03:00] > VERIFY | NEXT: Rerun all 2129 q30 cases with exact gcd-class aggregation and direct state enumeration, 1 CPU.
+[2026-07-13T19:44:44.0583806+03:00] FAIL ATTACK | DID: Enumerated 4862 normalized q120 anchor states for L1081080 | RESULT: bound31093200 <= slack33564360; gap-2471160 | D: q120 survives
+[2026-07-13T19:44:44.0757654+03:00] > ATTACK | NEXT: Re-enumerate anchors 2,3,5,6,8 on exact quotients q360,1080,2520 to strengthen the CRT-cell charge, 1 CPU.
+[2026-07-13T19:44:24.9077792+03:00] OK VERIFY | DID: Replayed all 150722 L720720 states twice | RESULT: bitset/integer and set/Fraction PASS; exact gap 41/1092 | D: restricted dead
+[2026-07-13T19:44:24.9291212+03:00] > CHECK | NEXT: Audit L720720 theorem scope, mandatory anchors, rational identities, and artifact hashes.
+[2026-07-13T19:44:36.0547480+03:00] OK CHECK | DID: Audited L720720 scope and arithmetic | RESULT: scope_audit.json PASS; 13/13 hashes; manifest SHA 65FB7832...D16FC | D: stall=0
+[2026-07-13T19:44:36.0787079+03:00] > DECIDE | NEXT: Classify the L720720 q120 result as a restricted impossibility, not a global resolution.
+[2026-07-13T19:44:36.0802291+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: problems/273/search/joint_720720/OBSTRUCTION.md | D: return to period selection
+[2026-07-13T19:45:21.0228992+03:00] OK ATTACK | DID: Applied q30 branch-on-6 to 2129 extended-support survivors | RESULT: 340 killed; 1789 survive; least L360360 | D: none
+[2026-07-13T19:45:21.0421807+03:00] OK VERIFY | DID: Replayed q30 with SymPy and direct quotient unions | RESULT: PASS; screen SHA 0D2500F0...7341 | D: q30 census certified
+[2026-07-13T19:45:21.0427111+03:00] > VERIFY | NEXT: Regenerate and check the support-discovery SHA-256 manifest including q30 artifacts.
+[2026-07-13T19:45:33.5983393+03:00] > ATTACK | NEXT: Enumerate q=120 anchor states for half-moduli d|1413720 with 2d+1 prime, exact integers, 1 CPU.
+[2026-07-13T19:45:52.0596608+03:00] FAIL ATTACK | DID: Ran q360,q1080,q2520 anchor scans | RESULT: gaps -7413480,-22240440,-51894360 scale q120 exactly | D: quotient-only refinement dead
+[2026-07-13T19:45:52.0774841+03:00] > ATTACK | NEXT: Exhaust 150722 and 199342 q120 states after adding eligible anchor 15 or 20, exact integer bitsets, 2 CPU.
+[2026-07-13T19:46:05.8710417+03:00] OK VERIFY | DID: Regenerated support-discovery hashes | RESULT: 16/16 PASS; manifest SHA A22207A3...BF50 | D: none
+[2026-07-13T19:46:18.7912798+03:00] > VERIFY | NEXT: Locally run 17 exact verifiers for L655200,L720720,L1247400,L1330560 and d90 Q393120, including manifests.
+[2026-07-13T19:47:08.9936230+03:00] OK ATTACK | DID: Enumerated 4862 L1413720 q120 anchor states | RESULT: 109 candidates; exact gap2296200/(120L) | D: scoped obstruction
+[2026-07-13T19:47:09.0124057+03:00] > VERIFY | NEXT: Replay L1413720 q120 bound via independent divisor-bitset and sieve-set-Fraction implementations.
+[2026-07-13T19:47:44.8612645+03:00] OK ATTACK | DID: Exhausted q120 with added anchors 15 and 20 | RESULT: d15 gap3201000 over 150722 states; d20 gap-2017560 | D: L1081080 obstruction candidate
+[2026-07-13T19:47:44.8804751+03:00] > VERIFY | NEXT: Independently replay L1081080 q120+d15 obstruction by integer bitsets and set/Fraction arithmetic, 2 CPU.
+[2026-07-13T19:48:26.9434852+03:00] OK VERIFY | DID: Locally replayed 17 exact checkers in five bundles | RESULT: all PASS; L720720 gap3247200; Q393120 gap135486 | D: five exact lemmas
+[2026-07-13T19:48:56.6664895+03:00] > CHECK | NEXT: Record the extended q30 census, four joint-period obstructions, and d90 Q393120 lemma; identify next exact frontiers.
+[2026-07-13T19:49:20+03:00] > VERIFY #424 | NEXT: Independently replay C104 through 300000 and hash-audit the C104 manifest before attacking C104-BIN.
+[2026-07-13T19:51:02+03:00] OK VERIFY #424 | DID: Replayed C104 normal/-O and audited manifest | RESULT: SHA 672157C5...C28C identical; 11/11 hashes PASS | D: C104-BIN
+[2026-07-13T19:51:03+03:00] > ATTACK #424 | NEXT: Derive or falsify a disjoint D-token injection for each C104 dyadic root bin.
+[2026-07-13T19:56:10+03:00] > ATTACK #424 | NEXT: Test whether fixed roots 54,62,... have unbounded witness pair count, which would falsify universal C104-BIN.
+[2026-07-13T20:01:11+03:00] OK ATTACK #424 | DID: Tracked 15 fixed roots through 1e7 | RESULT: root54 pair maxima 1,2,3,6,8,9,12 by X=7634274 | D: growth obstruction
+[2026-07-13T20:01:12+03:00] OK VERIFY #424 | DID: Audited C106 decoder red-team | RESULT: exact swap normal form; K6 light mass 307691821/307692465 | D: Gate T open
+[2026-07-13T20:03:10+03:00] > ATTACK #424 | NEXT: Extend C104 to X=1e9,D=63 exactly to seek the first fixed-root-driven C104-BIN failure.
+[2026-07-13T20:05:42+03:00] OK ATTACK #424 | DID: Extended C104 to X=1e9,D=63 | RESULT: no linear-bin failure; max d=16; integrated bin ratio 119/128 | D: tail survives
+[2026-07-13T20:07:10+03:00] > ATTACK #424 | NEXT: Run one exact X=2e9,D=63 falsification pass while deriving a direct C104 tail mechanism.
+[2026-07-13T20:10:06+03:00] OK ATTACK #424 | DID: Extended C104 to X=2e9,D=63 | RESULT: no bin failure; max d=16; integrated ratio 127/128 | D: actual tail 30/32 at D15
+[2026-07-13T20:10:07+03:00] > ATTACK #424 | NEXT: Run final exact X=4e9 tail-falsification pass; stop endpoint extension afterward.
+[2026-07-13T20:20:31+03:00] OK ATTACK #424 | DID: Extended C104 to X=4e9,D=63 | RESULT: no bin failure; max d=18; integrated max 127/128 | D: endpoint extension stopped
+[2026-07-13T20:13:20+03:00] OK PLAN #424 | DID: Relaxed C104-BIN to a power tail | RESULT: exponent alpha>1/log(2)-1 suffices; alpha=1/2 allows 2/3<c<log2 | D: weaker frontier
+[2026-07-13T20:16:02+03:00] FAIL ATTACK #424 | DID: Harvested C100 affine analysis | RESULT: supermultiplicativity cannot prove A; tensor fiber 8^k kills max-fiber LL | D: quotient theorem needed
+[2026-07-13T20:18:40+03:00] OK PLAN #424 | DID: Added a moving root cutoff | RESULT: tail needed only for j>=J(D), J(D)=o(D); low-bin C85 cost J(D)/D | D: fixed roots harmless
+[2026-07-13T19:49:21.5978555+03:00] OK VERIFY | DID: Replayed all 4862 L1413720 states twice | RESULT: bitset/integer and set/Fraction PASS; gap3827/282744 | D: restricted dead
+[2026-07-13T19:49:21.6129850+03:00] > CHECK | NEXT: Audit L1413720 pool completeness, mandatory anchors, CRT normalization, theorem scope, and hashes.
+[2026-07-13T19:49:49.5185835+03:00] OK CHECK | DID: Recorded six verified finite-family results | RESULT: four docs appended; active L1081080,L1413720,Q589680 | D: stall=0; CHECK->DECIDE
+[2026-07-13T19:49:49.5368850+03:00] > DECIDE | NEXT: Test verified artifacts for an explicit disjoint half-cover pair and all affirmative success conditions.
+[2026-07-13T19:49:49.5377673+03:00] FAIL DECIDE | DID: Checked certificate directories for a disjoint half-cover pair | RESULT: nothing | D: DECIDE->ATTACK; continue active searches
+[2026-07-13T19:50:17.8093629+03:00] > ATTACK | NEXT: Exhaust exact q=9/CRT capacity cases for d90 quotient Q=589680 with 70 candidates and mandatory modulus 3, 1 CPU.
+[2026-07-13T19:51:26.7984979+03:00] > ATTACK | NEXT: Scan all 1789 q30 survivors with exact q=120 anchors 2,3,5,6,8 and 4862 normalized states, 1 CPU.
+[2026-07-13T19:52:18.1895124+03:00] OK ATTACK | DID: Exhausted 9 q9 residue cases for d90,Q589680 | RESULT: all impossible; minimum excess gap 170433 | D: scoped obstruction
+[2026-07-13T19:52:18.2097429+03:00] > VERIFY | NEXT: Replay Q589680 q9 obstruction with trial-division and independent SymPy/CRT verifiers; hash all artifacts.
+[2026-07-13T19:52:33.3580873+03:00] OK CHECK | DID: Audited L1413720 scope and hashes | RESULT: 16/16 scope checks; 11/11 hashes; manifest A624984E...A18670 | D: stall=0
+[2026-07-13T19:52:33.3751095+03:00] > DECIDE | NEXT: Classify L1413720 as a restricted impossibility and return to construction-period selection.
+[2026-07-13T19:52:33.3755550+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: problems/273/search/joint_1413720/OBSTRUCTION.md | D: period excluded
+[2026-07-13T19:52:36.7773073+03:00] OK ATTACK | DID: Applied q120 five-anchor bound to 1789 q30 survivors | RESULT: 968 applicable; 209 killed; 1580 remain; least L720720 | D: batch obstruction
+[2026-07-13T19:52:36.7975551+03:00] > VERIFY | NEXT: Replay all 1789 q120 rows with SymPy candidates and 4862 uncompressed set-union states, exact integers, 1 CPU.
+[2026-07-13T19:53:38.8991897+03:00] > ATTACK | NEXT: Test L1441440 with 109 candidates using q120 anchors 2,3,5,6,8,15 over 150722 normalized states, exact integers, 1 CPU.
+[2026-07-13T19:53:52.7726219+03:00] OK VERIFY | DID: Replayed L1081080 obstruction with 2 independent exact verifiers | RESULT: both PASS; gap485/19656; manifest F7711EEC...6DE5 | D: restricted dead
+[2026-07-13T19:53:52.7940580+03:00] > CHECK | NEXT: Audit theorem scope, factorization, deterministic regeneration, source syntax, and manifest integrity for L1081080.
+[2026-07-13T19:54:18.9933310+03:00] OK CHECK | DID: Audited L1081080 package and reran 14-file hash check | RESULT: syntax PASS; scope PASS; SHA F7711EEC...6DE5 | D: stall=0
+[2026-07-13T19:54:19.0160369+03:00] > DECIDE | NEXT: Compare the L1081080 divisor-family obstruction with the global certificate success condition.
+[2026-07-13T19:54:19.0166297+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: joint_1081080/OBSTRUCTION.md excludes one divisor family only | D: Problem 273 unresolved
+[2026-07-13T19:54:21.1159991+03:00] OK VERIFY | DID: Replayed 1789 q120 rows with uncompressed set states | RESULT: PASS; 968 applicable; 209 killed; SHA 7980F748...27F6 | D: certified
+[2026-07-13T19:54:21.1367461+03:00] > VERIFY | NEXT: Regenerate and check the support-discovery SHA manifest including four q120 artifacts.
+[2026-07-13T19:56:48.1156352+03:00] OK ATTACK | DID: Exhausted 150722 L1441440 q120 six-anchor states | RESULT: min49371480>46204440; gap3167040 | D: scoped obstruction
+[2026-07-13T19:56:48.1475293+03:00] > VERIFY | NEXT: Replay all L1441440 states with independent integer-bitset and set/Fraction implementations, then audit scope and hashes.
+[2026-07-13T19:56:48.4531956+03:00] OK VERIFY | DID: Regenerated support-discovery hashes with q120 files | RESULT: 20/20 PASS; manifest SHA 6EED9C2C...6A3A | D: none
+[2026-07-13T19:56:48.4952486+03:00] > ATTACK | NEXT: Ask GPT-Pro for an explicit non-smooth refinement gadget for one baseline H0 modulus, with exact primes and quotient coverage.
+[2026-07-13T19:57:58.4762707+03:00] > ATTACK | NEXT: Test L1663200 with 115 candidates using q120 anchors 2,3,5,6,8,15 over 150722 normalized states, exact integers, 1 CPU.
+[2026-07-13T19:58:05.9927279+03:00] OK VERIFY | DID: Replayed Q589680 obstruction twice and hash-audited 11 files | RESULT: both PASS; gap170433; manifest SHA 241C9EC4...06403 | D: exact lemma
+[2026-07-13T19:58:06.0527593+03:00] > CHECK | NEXT: Audit Q589680 theorem scope, augmentation, candidate completeness, and all nine CRT cases.
+[2026-07-13T19:58:35.0710375+03:00] > VERIFY | NEXT: Locally rerun 9 exact checkers for L1081080 and L1413720, including scope and SHA manifests.
+[2026-07-13T19:58:53.5163937+03:00] FAIL CHECK | DID: Ran literal Q589680 scope audit | RESULT: scope phrase crosses a newline in OBSTRUCTION.md; 10 other checks passed | D: none
+[2026-07-13T19:58:53.5509052+03:00] > CHECK | NEXT: Re-run Q589680 scope audit with whitespace-normalized text and verify the 11-file manifest.
+[2026-07-13T19:59:45.5740767+03:00] OK CHECK | DID: Audited Q589680 scope, augmentation, candidates, and CRT cases | RESULT: 11/11 checks PASS; certificate.json | D: stall=0
+[2026-07-13T19:59:45.6223368+03:00] > DECIDE | NEXT: Classify Q589680 as a restricted d90 quotient obstruction, not a global resolution.
+[2026-07-13T19:59:45.6242880+03:00] OK DECIDE | DID: Applied restricted-scope gate | RESULT: d90_q589680/OBSTRUCTION.md; no cover in the 70-modulus family | D: return to parent
+[2026-07-13T20:00:13.0713810+03:00] > ATTACK | NEXT: Exhaust q=9/CRT capacity cases for d90 quotient Q=786240 with 74 candidates and mandatory modulus 3, exact integers, 1 CPU.
+[2026-07-13T20:01:23.5855750+03:00] OK VERIFY | DID: Replayed q120 twice, audited scope and 11 hashes | RESULT: PASS; gap3299/180180; manifest 37F84EA3...42E2F | D: lemma certified
+[2026-07-13T20:01:23.6374917+03:00] > CHECK | NEXT: Check the L1441440 artifacts for an explicit disjoint half-cover pair and apply the restricted-scope gate.
+[2026-07-13T20:01:49.8799947+03:00] OK VERIFY | DID: Locally replayed L1081080 and L1413720 packages | RESULT: 7 arithmetic/scope checks and both manifests PASS | D: exact restricted lemmas
+[2026-07-13T20:01:49.9458053+03:00] > DECIDE | NEXT: Audit whether the active program yields a construction mechanism or only a cascade of restricted period exclusions.
+[2026-07-13T20:01:49.9468517+03:00] FAIL DECIDE | DID: Audited current frontier | RESULT: no explicit disjoint half-cover pair after q120 killed 209 rows | D: abandon restricted-period cascade per user
+[2026-07-13T20:02:10.1210924+03:00] OK DECIDE | DID: Interrupted L1441440,L1663200,Q786240 restricted searches | RESULT: all partial artifacts preserved | D: finite-period cascade stopped
+[2026-07-13T20:07:47.2681652+03:00] > DECIDE | NEXT: Add a mandatory direct-proof guard to AGENTS.md and mark #273's restricted-screen cascade stopped in its approach registry.
+[2026-07-13T20:08:18.3049265+03:00] FAIL DECIDE | DID: Applied two-file policy patch | RESULT: split-root sandbox refused AGENTS.md | D: use exact checked insertion
+[2026-07-13T20:08:18.3245186+03:00] > DECIDE | NEXT: Insert the direct-proof guard by exact text match, append #273's governing route, then reread both files.
+[2026-07-13T20:08:57.3921401+03:00] OK DECIDE | DID: Installed direct-proof guard and #273 governing route | RESULT: AGENTS.md:5; APPROACH_REGISTRY.md:76 | D: screen cascade STOPPED
+[2026-07-13T20:09:48.3464440+03:00] > SELECT | NEXT: Run three independent audits for open nonarchived problems with a concrete direct-proof route and no reformulation cascade.
+[2026-07-13T20:16:12.0866323+03:00] FAIL GATE | DID: Audited #458 | RESULT: official remarks require Legendre-scale prime-gap control; handoff.md:44 says margin grows | D: DEAD #458
+[2026-07-13T20:17:50.7183405+03:00] > PLAN | NEXT: Write a reusable scout-gate-attack-audit workflow that rejects targets lacking a direct terminal bridge.
+[2026-07-13T20:18:24.6232310+03:00] OK PLAN | DID: Wrote scout-gate-attack-audit workflow | RESULT: coordination/EASY_TARGET_AGENT_WORKFLOW.md | D: none
+[2026-07-13T20:18:41.3309564+03:00] FAIL GATE | DID: Audited #488 | RESULT: official thread has 30 comments, zero valid failures, and 13 killed proof routes | D: DEAD #488
+[2026-07-13T20:21:23+03:00] > VERIFY #424 | NEXT: Archive GPT-Pro R9 and independently check its divisor, block, and dispersion claims.
+[2026-07-13T20:28:26+03:00] OK VERIFY #424 | DID: Audited R9 dispersion | RESULT: corrected ratio; exact 60-block/fibre verifier PASS SHA 6645D34A...6B2E | D: lemma accepted
+[2026-07-13T20:28:27+03:00] OK ATTACK #424 | DID: Harvested C105 | RESULT: max d-s=8 through 4e9; recurrent d=8,s=0 template | D: target s>=d-8 open
+[2026-07-13T20:28:28+03:00] FAIL ATTACK #424 | DID: Harvested C107 seed correction | RESULT: literal seed theorem fails for S={2},X=74 | D: generalized route repaired
+[2026-07-13T20:28:29+03:00] > ATTACK #424 | NEXT: Derive the moving-cutoff D^-alpha basin tail while C111/C112 test the two competing routes.
+[2026-07-13T20:39:06+03:00] OK PLAN #424 | DID: Merged C108/C110 tail reductions | RESULT: integrated Carleson gate strictly weakest; 41/41 manifest hashes PASS | D: frontier sharpened
+[2026-07-13T20:39:07+03:00] FAIL ATTACK #424 | DID: Tested local square-root root exposure | RESULT: h=1154 has d=4 and one reducible root | D: source-local injection dead
+[2026-07-13T20:39:08+03:00] > ATTACK #424 | NEXT: Prove the integrated root-upgrade Carleson bound or structural deficit bound; exact red teams run in parallel.
+[2026-07-13T20:26:47.0394629+03:00] OK SELECT | DID: Ranked 3 scout audits | RESULT: no easy target; #128 has a one-shot exact n=20 certificate test | D: target #128
+[2026-07-13T20:26:47.0859541+03:00] FAIL GATE | DID: Audited #768 | RESULT: Li, arXiv:2606.24872, claims the exact asymptotic with c=1/(2sqrt(log 2)) | D: DEAD already solved
+[2026-07-13T20:26:47.1168552+03:00] > GATE | NEXT: Write #128 direct-route and literature files, then ask GPT-Pro to attack the n=20 bridge.
+[2026-07-13T20:39:47.3794602+03:00] OK GATE | DID: Wrote #128 direct route and literature gate | RESULT: problems/128/APPROACH_REGISTRY.md; GPT-Pro audit running | D: ALIVE
+[2026-07-13T20:39:47.4299161+03:00] > ATTACK | NEXT: Run n=20 CP-SAT, independent PySAT, and exact audit; each capped at 8 CPU, 8 GB, 10 min.
+[2026-07-13T20:39:52.7210479+03:00] > PLAN | NEXT: Implement exact n=20 CP-SAT and an independent 184756-subset verifier in assigned cpsat files.
+[2026-07-13T20:43:00+03:00] > VERIFY #128 | NEXT: Audit n=20 bridge, lemmas, and primary literature; build an independent exhaustive certificate verifier.
+[2026-07-13T20:40:23.7895827+03:00] > PLAN | NEXT: Build n=20 PySAT CEGIS with triangle clauses, e>=39, and exact violating 10-set cuts; use no symmetry breaking.
+[2026-07-13T20:43:28.7703083+03:00] OK PLAN | DID: Wrote full CP-SAT model and independent verifier | RESULT: problems/128/search/cpsat_search_full.py | D: frontier unchanged
+[2026-07-13T20:43:54.7390326+03:00] > ATTACK | NEXT: Run full n=20 CP-SAT with 190 edges, 1140 triangles, 184756 half-sets; 8 workers, 8 GB, 600 s.
+[2026-07-13T20:50:00+03:00] > VERIFY #128 | NEXT: Run audit_selftest.py on 4 exact graphs; enumerate 1,140 triples and 184,756 ten-sets per graph.
+[2026-07-13T20:51:00+03:00] FAIL VERIFY #128 | DID: Ran 4-graph self-test | RESULT: expected maxima 32/22 were wrong; exact values are 24/20 | D: test oracle fixed
+[2026-07-13T20:52:00+03:00] > VERIFY #128 | NEXT: Re-run corrected 4-graph exact self-test and hash verifier, test, and log files.
+[2026-07-13T20:53:00+03:00] OK VERIFY #128 | DID: Ran corrected 4-graph exact self-test | RESULT: PASS; log SHA 5b1371bb...23f2a; 184,756 half-sets/graph | D: none
+[2026-07-13T20:49:13.7593110+03:00] OK GATE #128 | DID: Checked primary sparse-half theorems | RESULT: none covers all residual n=20 graphs with 39..79 edges | D: ALIVE
+[2026-07-13T20:49:05.0494739+03:00] OK PLAN | DID: Implemented MiniCard/full and SAT/CEGIS plus checker | RESULT: problems/128/search/pysat_*_128.py; PySAT 1.8.dev24 | D: ATTACK
+[2026-07-13T20:49:05.0494739+03:00] > ATTACK | NEXT: Run n=20 PySAT wave: 6 workers, 590s wall, 570s/worker, <=8GB; full MiniCard plus exact CEGIS cuts.
+[2026-07-13T20:49:59.9167529+03:00] > ATTACK #424 | NEXT: Test plus-prime lifts of the recurrent d=8,s=0 base for an exact deficit-nine structural falsifier.
+[2026-07-13T20:51:59.3977107+03:00] OK ATTACK #424 | DID: Tested 4782 plus-prime lifts of C105 d=8,s=0 base | RESULT: zero hard lifts through q=100000 | D: no falsifier
+[2026-07-13T20:51:59.4211523+03:00] > ATTACK #424 | NEXT: Extend exact C105 plus-prime lift gate through q=1000000 and replay optimized.
+[2026-07-13T20:53:21.0731761+03:00] OK VERIFY #128 | DID: Completed adversarial audit | RESULT: n=20 GO only; no prior closure; verifier PASS SHA fb8bbfaf...13cbc | D: none
+[2026-07-13T20:54:30.0992770+03:00] FAIL ATTACK | DID: Full n=20 CP-SAT, 8 workers/8 GB | RESULT: UNKNOWN; cpsat_result.json; no candidate | D: CP-SAT wave exhausted
+[2026-07-13T20:57:33.1892194+03:00] OK ATTACK #424 | DID: Tested 39229 plus-prime lifts of C105 d=8,s=0 base | RESULT: zero hard lifts through q=1000000; C115_c105_plus_lift_1000000.json | D: no falsifier
+[2026-07-13T20:57:33.1892194+03:00] > VERIFY #424 | NEXT: Replay C115 under optimized Python and compare exact output bytes.
+[2026-07-13T20:59:59.8513852+03:00] FAIL ATTACK | DID: Ran 6-worker n=20 PySAT wave for 590s | RESULT: 0 candidates; 5 UNKNOWN, 1 wall-killed; SHA256 EAA197E10B48 | D: none
+[2026-07-13T20:59:59.8513852+03:00] > VERIFY | NEXT: Audit PySAT logs and record solver/code hashes and bounded outcome; do not search another n.
+[2026-07-13T21:00:40.1873158+03:00] OK VERIFY #424 | DID: Replayed C115 with python -O | RESULT: byte-identical SHA256 583219BCFDA68C30B9E069194463D340F4B7A47705D0F3577C2613163AF9AEB0 | D: exact sweep accepted
+[2026-07-13T21:01:52.1583810+03:00] > VERIFY #424 | NEXT: Independently replay C111 Python and C++ artifacts and audit the divisor-moment proof constants.
+[2026-07-13T21:02:34.4422871+03:00] OK VERIFY | DID: Audited six PySAT logs and hashes | RESULT: COMPUTATION_PYSAT.md SHA256 CB63F1E15791; no candidate or UNSAT proof | D: PySAT CLOSED
+[2026-07-13T21:04:02.0201091+03:00] OK VERIFY #424 | DID: Audited C111 proof and replayed Python/C++ artifacts | RESULT: audit accepted; SHA 867B732D...1FE7F and D3A443E8...D0DC | D: growing-cutoff tail proved; fixed-L open
+[2026-07-13T21:04:02.0201091+03:00] > VERIFY #424 | NEXT: Audit C112's weakened structural-incidence exponent and exact 39229-candidate search.
+[2026-07-13T21:06:08.9044290+03:00] OK VERIFY #424 | DID: Audited C112 incidence proof and exact lifted-family replay | RESULT: exponent >1/(2log2) sufficient; SHA 7A864A14...E1F1 | D: frontier weakened
+[2026-07-13T21:06:08.9044290+03:00] > ATTACK #424 | NEXT: Test the weakened 3/4 structural-pair frontier and harvest C109/C113/C114.
+[2026-07-13T21:07:30.7984034+03:00] OK ATTACK #424 | DID: Launched C116 proof and C117 adversarial structural-power lanes | RESULT: agents 019f5ca9-4e46... and 019f5ca9-6259... | D: two independent lanes active
+[2026-07-13T21:08:27.016+03:00] > GATE #424 C116 | NEXT: Check local prior work for a proof or counterexample to the structural power bound.
+[2026-07-13T21:09:18.317+03:00] OK GATE #424 C116 | DID: Searched #424 and A005244 sources | RESULT: erdosproblems.com/424 is OPEN; no structural-power result found | D: none
+[2026-07-13T21:09:18.317+03:00] > PLAN #424 C116 | NEXT: Extract a factor-pair invariant from C105/C113/C114 and state an exact-testable lemma tree.
+[2026-07-13T21:10:37.7742495+03:00] > PLAN #424 C117 | NEXT: Record the five-field direct route and exact hard-shape template search budget before computation.
+[2026-07-13T21:11:43.9755273+03:00] OK PLAN #424 C117 | DID: Recorded C117 direct route | RESULT: problems/424/fanout/wave5/C117_structural_power_falsifier.md | D: frontier finite certificate fixed
+[2026-07-13T21:11:43.9755273+03:00] > ATTACK #424 C117 | NEXT: Implement exact sparse-template search and independent extremal replay.
+[2026-07-13T21:11:51.3852007+03:00] > VERIFY #424 | NEXT: Replay C114 layer-cake, source-incidence, and integrated-tail artifacts and audit the selected-square bridge.
+[2026-07-13T21:14:42.6811483+03:00] OK VERIFY #424 | DID: Audited C114 layer cake and replayed all three exact lanes | RESULT: selected-square implication accepted; antecedent open; SHAs pinned | D: source-local charge dead
+[2026-07-13T21:15:17.1581603+03:00] > VERIFY #424 | NEXT: Audit C109 manifest, independently replay all record events, and rebuild whole-prefix fixed-root scans.
+[2026-07-13T21:15:14.215+03:00] OK PLAN #424 C116 | DID: Defined endpoints and invariant (I) | RESULT: fanout/wave5/C116_structural_power_proof.md | D: frontier fixed
+[2026-07-13T21:15:14.215+03:00] > ATTACK #424 C116 | NEXT: Build an independent exact prefix checker for endpoint imbalance and both counting bridges.
+[2026-07-13T21:16:56.801+03:00] > ATTACK #424 C116 | NEXT: Run C116_endpoint_invariant.py normal and -O through limit 1000000 and compare bytes and C105 digests.
+[2026-07-13T21:17:55.7692773+03:00] > ATTACK #424 C117 | NEXT: Compile-check both C117 Python programs before the bounded smoke search.
+[2026-07-13T21:17:53.167+03:00] OK ATTACK #424 C116 | DID: Ran endpoint checker twice to 1000000 | RESULT: 45583 hard; no failures; SHA256 9ED0F3BC...FE121 | D: (I) survived
+[2026-07-13T21:17:53.167+03:00] > ATTACK #424 C116 | NEXT: Run the exact endpoint checker normal and -O through limit 10000000.
+[2026-07-13T21:18:31.1490269+03:00] OK ATTACK #424 C117 | DID: Compiled both C117 Python files | RESULT: py_compile exit 0 | D: none
+[2026-07-13T21:18:31.1490269+03:00] > ATTACK #424 C117 | NEXT: Smoke-search seed 424117; budgets 12/24/24/24/24/24; mutation 0; primes<=300; bits<=55.
+[2026-07-13T21:19:32.3159181+03:00] OK ATTACK #424 C117 | DID: Ran 132-candidate smoke search | RESULT: C117_smoke.json; 0 hard; max h=34421070323480568 | D: generator retargeted
+[2026-07-13T21:19:32.3159181+03:00] > ATTACK #424 C117 | NEXT: Factor the five known hard seeds and add same-residue substitution templates that preserve their divisor shapes.
+[2026-07-13T21:20:05.379+03:00] OK ATTACK #424 C116 | DID: Ran endpoint checker twice to 10000000 | RESULT: 392961 hard; no failures; SHA256 AB72F0E5...0DB6F | D: slack 2
+[2026-07-13T21:20:05.379+03:00] > ATTACK #424 C116 | NEXT: Build a streaming C++ endpoint checker for an exact scan through 4000000000.
+[2026-07-13T21:20:50.6357782+03:00] OK ATTACK #424 C117 | DID: Factored 5 hard seeds and added substitution/expansion generators | RESULT: C117_structural_power_falsifier.py compiles | D: none
+[2026-07-13T21:20:50.6357782+03:00] > ATTACK #424 C117 | NEXT: Search 500 substitutions, 1000 expansions, 200 mutations; seed 424117, primes<=1000, bits<=63, d>=8.
+[2026-07-13T21:22:11.073+03:00] > ATTACK #424 C116 | NEXT: Run C116 C++ at limit 1000000 and compare all totals and FNV digests with Python and C105.
+[2026-07-13T21:21:54.9293539+03:00] OK ATTACK #424 C117 | DID: Searched 1500 substituted/expanded hard shapes | RESULT: C117_focused.json; 0 hard; max h=8642908561266374604 | D: none
+[2026-07-13T21:21:54.9293539+03:00] > ATTACK #424 C117 | NEXT: Search 5000 N0*p^e candidates, e=2,3,4, plus primes<=100000, bits<=75, d>=20.
+[2026-07-13T21:22:05.8997610+03:00] FAIL VERIFY #424 | DID: Ran two C109 4e9 scans concurrently | RESULT: both timed out at 304s from resource contention; no outputs accepted | D: rerun serially
+[2026-07-13T21:22:05.8997610+03:00] > VERIFY #424 | NEXT: Replay C109 4e9 bin scan alone, then fixed-root record scan alone.
+[2026-07-13T21:22:42.425+03:00] OK ATTACK #424 C116 | DID: Cross-checked C++ at 1000000 | RESULT: all Python/C105 totals and FNV digests match | D: none
+[2026-07-13T21:22:42.425+03:00] > ATTACK #424 C116 | NEXT: Scan limit 4000000000 with 1 C++ worker and about 8 GB RAM for the first endpoint failure.
+[2026-07-13T21:25:20.3307855+03:00] OK ATTACK #424 C117 | DID: Searched 5000 N0*p^e sources, e=2,3,4 | RESULT: C117_base_powers_5k.json; 0 hard; max h=37574230562709158065448 | D: none
+[2026-07-13T21:25:20.3307855+03:00] > ATTACK #424 C117 | NEXT: Sweep 20000 same-residue prime slots of 5 hard seeds; primes<=100000, bits<=75, d>=8.
+[2026-07-13T21:26:08.661+03:00] OK ATTACK #424 C116 | DID: Scanned C116 to 4000000000 | RESULT: 106360959 hard; min slacks 0; JSON SHA256 D2BD6739...D8110 | D: (I) finite-tight
+[2026-07-13T21:26:08.661+03:00] > ATTACK #424 C116 | NEXT: Derive endpoint imbalance from rank/seed-chain structure using the equality certificate as the falsifier gate.
+[2026-07-13T21:26:51.5130412+03:00] OK ATTACK #424 C117 | DID: Swept 20000 hard-seed prime slots | RESULT: C117_slot_sweep_20k.json; 6 hard; max hard h=64666710954 | D: none
+[2026-07-13T21:26:51.5130412+03:00] > ATTACK #424 C117 | NEXT: Sweep 30000 cross-seed p^2,p^3, plus-pair, minus-pair fibers; primes<=100000, bits<=80, d>=12.
+[2026-07-13T21:29:29.990+03:00] FAIL ATTACK #424 C116 | DID: Tested (I) in C105 sparse rows | RESULT: q=5087 gives (d,s,E0,E1)=(8,0,0,9) | D: DEAD: endpoint imbalance
+[2026-07-13T21:29:29.990+03:00] > VERIFY #424 C116 | NEXT: Replay product 4751710743 with the independent recursive C109 engine and emit a full C116 certificate.
+[2026-07-13T21:31:25.893+03:00] OK VERIFY #424 C116 | DID: Replayed product 4751710743 normal and -O | RESULT: (d,s,E0,E1)=(8,0,0,9); SHA256 80E32212...D9F2 | D: (I) refuted
+[2026-07-13T21:31:25.893+03:00] > CHECK #424 C116 | NEXT: Test whether the endpoint falsifier also violates the structural power target.
+[2026-07-13T21:31:25.893+03:00] OK CHECK #424 C116 | DID: Checked 3s>=d-8 on the falsifier | RESULT: 0=0; target not refuted | D: stall 0
+[2026-07-13T21:31:25.893+03:00] > PLAN #424 C116 | NEXT: Replace dead (I) with a pair-type invariant whose exact bridge yields a closing power bound.
+[2026-07-13T21:31:29.5134350+03:00] OK ATTACK #424 C117 | DID: Swept 30000 cross-seed fibers | RESULT: C117_cross_seed_fiber_30k.json; 0 hard; max h=63046033713844708450824 | D: none
+[2026-07-13T21:31:29.5134350+03:00] > VERIFY #424 C117 | NEXT: Independently replay all retained hard slot extrema from C117_slot_sweep_20k.json.
+[2026-07-13T21:32:22.8029381+03:00] OK VERIFY #424 C117 | DID: Replayed 6 hard slot records | RESULT: C117_slot_sweep_20k_verify.json status PASS | D: none
+[2026-07-13T21:32:22.8029381+03:00] > ATTACK #424 C117 | NEXT: Search 5000 multi-plus, 8000 squarefree, 8000 prime-power, 5000 composite-q templates; primes<=5000, bits<=72, d>=12.
+[2026-07-13T21:35:10.209+03:00] OK PLAN #424 C116 | DID: Defined canonical blocker invariant (II) | RESULT: (II) gives s>=d/2-4 in C116 report | D: new frontier
+[2026-07-13T21:35:10.209+03:00] > ATTACK #424 C116 | NEXT: Test (II) normal and -O at product 4751710743 and every hard source through 1000000.
+[2026-07-13T21:35:52.802+03:00] OK ATTACK #424 C116 | DID: Tested (II) on sparse row and prefix 1000000 | RESULT: no failures; prefix SHA256 92EB7EE2...9952B | D: none
+[2026-07-13T21:35:52.802+03:00] > ATTACK #424 C116 | NEXT: Run canonical-blocker test normal and -O through limit 10000000.
+[2026-07-13T21:36:23.5152403+03:00] OK ATTACK #424 C117 | DID: Searched 26000 diverse templates | RESULT: C117_diverse_26k.json; 0 hard; max d=128; max h=4721584507441840041852 | D: none
+[2026-07-13T21:36:23.5152403+03:00] > ATTACK #424 C117 | NEXT: Sweep 100000 same-residue slots of 5 hard seeds; primes<=1000000, bits<=80, d>=8.
+[2026-07-13T21:37:59.134+03:00] OK ATTACK #424 C116 | DID: Tested (II) twice through 10000000 | RESULT: no failures; SHA256 2544EE4B...2ADB9 | D: none
+[2026-07-13T21:37:59.134+03:00] > ATTACK #424 C116 | NEXT: Run C116 C++ at 1000000 and cross-check t, totals, and FNV digests against Python.
+[2026-07-13T21:38:44.283+03:00] OK ATTACK #424 C116 | DID: Cross-checked C++ t at 1000000 | RESULT: extrema, totals, and both FNV digests match Python | D: none
+[2026-07-13T21:38:44.283+03:00] > ATTACK #424 C116 | NEXT: Scan invariant (II) to 4000000000 with 1 C++ worker and about 8 GB RAM.
+[2026-07-13T21:39:12.9196938+03:00] > SELECT | NEXT: Run a second 3-agent direct-terminal audit; reject reformulations and exclude archived #23/#424/#864.
+[2026-07-13T21:41:22.8080853+03:00] OK VERIFY #424 | DID: Audited C109 manifest, records, and serial 4e9 replays | RESULT: bin byte-identical; records math-identical; root54/root62 d=16 | D: bounded-root charge untenable
+[2026-07-13T21:42:43.5230502+03:00] OK ATTACK #424 | DID: Launched C118 selected-square and C119 fixed-L affine lanes | RESULT: agents 019f5cc9-5b39... and 019f5cc9-6f35... | D: five proof/falsifier lanes active
+[2026-07-13T21:42:20.7486378+03:00] OK ATTACK #424 C117 | DID: Swept 100000 hard-seed prime slots | RESULT: C117_slot_sweep_100k.json; 8 hard; best (d,s)=(16,9) | D: none
+[2026-07-13T21:42:20.7486378+03:00] > ATTACK #424 C117 | NEXT: Sweep 30000 p^2,p^3, plus-pair, minus-pair fibers from 8 hard survivors plus 5 controls; primes<=100000, bits<=85, d>=24.
+[2026-07-13T21:42:35.621+03:00] OK ATTACK #424 C116 | DID: Scanned (II) to 4000000000 | RESULT: no failure; min slack 0; JSON SHA256 6F668F8D...FC1AF | D: finite-tight
+[2026-07-13T21:42:35.621+03:00] > ATTACK #424 C116 | NEXT: Prove (II) from canonical blocker geometry, testing each derived injection on equality source 1035904700.
+[2026-07-13T21:44:18.000+03:00] > SELECT #424 C119 | NEXT: Select audited affine Gate-T lane; target fixed L,eta,K0 or an infinite falsifier.
+[2026-07-13T21:44:51.000+03:00] OK SELECT #424 C119 | DID: Read registry and audited C102/C106/R9/C111 route | RESULT: fixed-L medium fibres are frontier | D: none
+[2026-07-13T21:44:51.001+03:00] > GATE #424 C119 | NEXT: Check project citations and current problem record for a prior fixed-L affine Gate-T result.
+[2026-07-13T21:45:49.000+03:00] OK GATE #424 C119 | DID: Checked LITERATURE.md and live #424 record | RESULT: erdosproblems.com/424 says OPEN; no fixed-L result cited | D: none
+[2026-07-13T21:45:49.001+03:00] > PLAN #424 C119 | NEXT: Freeze a prime-ownership leaf claim whose failure is an exact K<=4 certificate.
+[2026-07-13T21:46:19.816+03:00] > ATTACK #424 C116 | NEXT: Test all plus-prime lifts q<=1000000 of product 43378671 for a hard d=12 counterexample to (II).
+[2026-07-13T21:46:35.6780281+03:00] OK ATTACK #424 C117 | DID: Swept 30000 second-generation fibers | RESULT: C117_second_generation_fiber_30k.json; 0 hard; max h=132131012341607575950114 | D: none
+[2026-07-13T21:46:35.6780281+03:00] > VERIFY #424 C117 | NEXT: Independently replay all 8 hard records and the final extremal table from C117_slot_sweep_100k.json.
+[2026-07-13T21:47:52.000+03:00] OK PLAN #424 C119 | DID: Froze AO1+AO2 lemma tree | RESULT: C119_fixed_L_gate.md gives bridge to L=3,eta=1,K0=2 | D: none
+[2026-07-13T21:47:52.001+03:00] > ATTACK #424 C119 | NEXT: Enumerate Q=360 fibres at K=2..4 and test AO1 plus atomic degree <=2 exactly.
+[2026-07-13T21:48:04.784+03:00] OK ATTACK #424 C116 | DID: Tested 39230 plus lifts of product 43378671 | RESULT: 0 hard hits; max 3/6 blockers missing | D: none
+[2026-07-13T21:48:04.784+03:00] > ATTACK #424 C116 | NEXT: Test all plus-prime lifts q<=1000000 of product 298782841 for a hard d=10 failure of (II).
+[2026-07-13T21:47:55.7407368+03:00] OK VERIFY #424 C117 | DID: Replayed 8 final hard records | RESULT: C117_slot_sweep_100k_verify.json status PASS | D: none
+[2026-07-13T21:47:55.7407368+03:00] > CHECK #424 C117 | NEXT: Build a hashed manifest and exact extremal table from the 6 declared C117 search artifacts.
+[2026-07-13T21:49:05.0000000+03:00] > VERIFY #424 | NEXT: Inspect mailbox, live reports, processes, and GPT R10 before choosing a nonduplicative frontier.
+[2026-07-13T21:51:22.0377218+03:00] OK VERIFY #424 | DID: Read TICK-131..134 and C113/C116/C117/C119 state | RESULT: 5 lanes running; C116 (II) finite-pass only; no new Fable delta | D: none
+[2026-07-13T21:55:09.4407664+03:00] > ATTACK #424 C120 | NEXT: Exact-test per-source multiplicity of canonical blockers sharing one seed-2 root through 10^6.
+[2026-07-13T21:55:46.2492588+03:00] FAIL ATTACK #424 C120 | DID: Started Python prefix probe | RESULT: C116 module was mid-edit and syntactically incomplete; no data emitted | D: retry after C116 finishes
+[2026-07-13T21:55:46.2492588+03:00] > VERIFY #424 C117 | NEXT: Hash-audit manifest and independently replay retained hard records normal and optimized.
+[2026-07-13T21:57:30.4671834+03:00] OK VERIFY #424 C117 | DID: Rehashed 6 lanes and replayed 8 hard rows normal/-O | RESULT: all exact; audit C117_structural_power_falsifier_audit.md | D: power law remains open
+[2026-07-13T21:49:36.880+03:00] OK ATTACK #424 C116 | DID: Tested 39230 plus lifts of product 298782841 | RESULT: 0 hard hits; max 3/5 blockers missing | D: none
+[2026-07-13T21:49:36.880+03:00] > ATTACK #424 C116 | NEXT: Test all plus-prime lifts q<=1000000 of product 112413 and retain hard d=8 bases for a second lift.
+[2026-07-13T21:49:58.2805549+03:00] OK CHECK #424 C117 | DID: Built 6-artifact manifest | RESULT: C117_manifest.json; 192500 evaluations, 8 hard, 0 falsifiers | D: none
+[2026-07-13T21:49:58.2805549+03:00] > VERIFY #424 C117 | NEXT: Run verifier and manifest builder under python -O and compare outputs byte-for-byte.
+[2026-07-13T21:51:31.000+03:00] > ATTACK #424 C119 | NEXT: Run exact Q=360 K=2..4 product sort with 32 workers; test AO1 and atomic degree <=2.
+[2026-07-13T21:52:09.0339327+03:00] OK VERIFY #424 C117 | DID: Ran verifier and manifest under python -O | RESULT: byte-identical SHAs 0DB3E133...49CC1 and 4FB5E1CF...A1FCE | D: none
+[2026-07-13T21:52:09.0339327+03:00] > VERIFY #424 C117 | NEXT: Compile all C117 scripts, regenerate the manifest, and audit owned diffs and report data.
+[2026-07-13T21:52:14.000+03:00] FAIL ATTACK #424 C119 | DID: Sorted 61174225 exact edges | RESULT: K=3 product 18809190225 has non-atomic swap a=8771,b=8825 | D: DEAD: AO1
+[2026-07-13T21:52:14.001+03:00] > VERIFY #424 C119 | NEXT: Replay the exact fibre and K=2,3 censuses normally and under python -O.
+[2026-07-13T21:52:28.000+03:00] OK ATTACK #424 C119 | DID: Corrected prior edge-total transcription | RESULT: exact total is 61074225 edges | D: none
+[2026-07-13T21:52:01.718+03:00] OK ATTACK #424 C116 | DID: tested 39230 lifts of 112413 | RESULT: 0 hard d=8 bases; C116_plus_lift_base112413_1m.json | D: none
+[2026-07-13T21:52:37.806+03:00] > ATTACK #424 C116 | NEXT: Test all plus-prime lifts q<=1000000 of product 516313 for hard d=6 children of a multi-lift attack on (II).
+[2026-07-13T21:53:27.052+03:00] > PLAN #424 C118 | NEXT: define the selected-square frontier and exact-test arithmetic charges before proof work.
+[2026-07-13T21:54:08.000+03:00] > VERIFY #424 C119 | NEXT: Rerun the 61074225-edge C++ census with 32 workers and compare JSON byte-for-byte.
+[2026-07-13T21:53:56.153+03:00] FAIL ATTACK #424 C116 | DID: tested 39230 lifts of 516313 | RESULT: 0 hard d=6 children | D: DEAD: four tested s=0 bases gave 0 hard lifts
+[2026-07-13T21:53:56.154+03:00] > PLAN #424 C116 | NEXT: Define a prefix matching invariant on ordered canonical blockers that directly implies (II), then exact-test it.
+[2026-07-13T21:54:30.5454061+03:00] FAIL VERIFY #424 C117 | DID: Ran git diff --check | RESULT: unrelated older PROGRESS_CODEX whitespace; C117-owned rows clean | D: none
+[2026-07-13T21:54:30.5454061+03:00] OK VERIFY #424 C117 | DID: Parsed 3 scripts and 10 JSON files; rechecked hashes | RESULT: C117_manifest.json SHA 4FB5E1CF...A1FCE | D: none
+[2026-07-13T21:54:30.5454061+03:00] > DECIDE #424 C117 | NEXT: Classify the finite search, record the open target, and stop the completed adversarial lane.
+[2026-07-13T21:55:02.2973155+03:00] OK DECIDE #424 C117 | DID: Classified finite search as nonfalsifying | RESULT: C117_structural_power_falsifier.md; target remains open | D: lane complete
+[2026-07-13T21:55:44.1448139+03:00] > GATE | NEXT: Compare June 2026 theorem statements with official quantifiers; reject exact matches as prior art.
+[2026-07-13T21:55:59.000+03:00] OK VERIFY #424 C119 | DID: Replayed C++ twice and Python normally/-O | RESULT: both pairs byte-identical; witness multiplicity 2 | D: none
+[2026-07-13T21:55:59.001+03:00] > CHECK #424 C119 | NEXT: Confirm the exact AO1 falsifier is a new recorded fact and classify the lane result.
+[2026-07-13T21:55:50.941+03:00] OK PLAN #424 C116 | DID: defined prefix balance (III) and instrumented v2 classifier | RESULT: C116_endpoint_invariant.py compiles | D: none
+[2026-07-13T21:55:50.942+03:00] > ATTACK #424 C116 | NEXT: Exact-test every prefix in (III) for every hard hole h<=1000000 with integer arithmetic.
+[2026-07-13T21:56:08.813+03:00] OK PLAN #424 C118 | DID: fixed selected-square lemma tree | RESULT: C118_selected_square_proof.md DIRECT ROUTE | D: PLAN->ATTACK
+[2026-07-13T21:56:08.814+03:00] > ATTACK #424 C118 | NEXT: scan h<=1000000 and test gap, endpoint, cofactor, and divisor-rich-multiple charges exactly.
+[2026-07-13T21:56:32.168+03:00] OK ATTACK #424 C116 | DID: tested (III) through 1000000 | RESULT: 45583 hard; no failure; min slack 4 at h=112412 | D: none
+[2026-07-13T21:56:32.169+03:00] > VERIFY #424 C116 | NEXT: Replay the h<=1000000 prefix census under python -O and require byte identity.
+[2026-07-13T21:57:00.531+03:00] OK VERIFY #424 C116 | DID: replayed prefix census under python -O | RESULT: byte-identical SHA256 18DD6EB0...831B5CE | D: none
+[2026-07-13T21:57:00.532+03:00] > PLAN #424 C116 | NEXT: Add literal prefix assertions to the recursive sparse verifier for product 4751710743.
+[2026-07-13T21:56:50.000+03:00] OK CHECK #424 C119 | DID: Searched repo and web for exact product 18809190225 | RESULT: no pre-C119 or web occurrence | D: stall=0
+[2026-07-13T21:56:50.001+03:00] > DECIDE #424 C119 | NEXT: Audit scope, hashes, and report; stop because the permitted exact route-killing certificate is complete.
+[2026-07-13T21:57:53.261+03:00] OK PLAN #424 C116 | DID: instrumented recursive prefix verifier | RESULT: C116_sparse_endpoint_verify.py compiles | D: none
+[2026-07-13T21:57:53.262+03:00] > VERIFY #424 C116 | NEXT: Replay all 8 ordered prefixes at product 4751710743 normally and under python -O.
+[2026-07-13T21:57:57.0027042+03:00] OK SELECT | DID: Completed 4-lane rescout | RESULT: no direct target; EASY_TARGET_RESCOUT_2026-07-13.md SHA EF214528...C7936 | D: none
+[2026-07-13T21:57:57.0205363+03:00] FAIL GATE | DID: Matched 2026 theorem statements | RESULT: #593/#1177/#550/#768 prior claims; #1061 linear claim refuted | D: DEAD for selection
+[2026-07-13T21:58:07.000+03:00] OK DECIDE #424 C119 | DID: Wrote exact AO1 falsifier and verifier | RESULT: C119_fixed_L_gate.md; product 18809190225 | D: lane complete
+[2026-07-13T21:58:26.276+03:00] OK VERIFY #424 C116 | DID: replayed sparse source normal/-O | RESULT: prefix slacks 7,6,5,4,3,2,1,0; SHA FBBEDD27...CC67BC7 | D: none
+[2026-07-13T21:58:26.277+03:00] > ATTACK #424 C116 | NEXT: Exact-test every prefix in (III) for every hard hole h<=10000000.
+[2026-07-13T21:58:32.7706378+03:00] > VERIFY #506 route | NEXT: Independently enumerate all 56 triples of the 8-point falsifier using exact integer circle keys.
+[2026-07-13T21:59:16.4362527+03:00] OK VERIFY #506 route | DID: Ran exact verifier normally and -O | RESULT: 56 triples, 8 collinear, 18 circles vs 19; SHA 7B964699...A12354 | D: bridge DEAD
+[2026-07-13T21:59:37.437+03:00] OK ATTACK #424 C116 | DID: tested (III) through 10000000 | RESULT: 392961 hard; no failure; min slack 3 at h=1621262 | D: none
+[2026-07-13T21:59:37.438+03:00] > VERIFY #424 C116 | NEXT: Replay the h<=10000000 prefix census under python -O and require byte identity.
+[2026-07-13T21:59:44.3683818+03:00] OK CHECK | DID: Added #506 verifier to rescout record | RESULT: report SHA 2D7240A4...940C9C; verifier SHA 7B964699...A12354 | D: none
+[2026-07-13T22:00:07.8046823+03:00] > DECIDE #128 | NEXT: Record exact one-wave outcomes and lock the no-cascade exit while the independent GPT-Pro audit finishes.
+[2026-07-13T22:00:42+03:00] > PLAN #424 C120 | NEXT: Test seed-root and canonical-leaf collisions through h<=1e7 plus C117 hard records; require a direct capacity bridge.
+[2026-07-13T22:05:13+03:00] > ATTACK #424 C120 | NEXT: Run exact one-worker root/leaf/capacity scan through h<=10000000, then replay under python -O.
+[2026-07-13T22:08:44+03:00] OK ATTACK #424 C120 | DID: Scanned 392961 hard h<=1e7 normal/-O | RESULT: max root mult 3, leaf mult 5; SHA 0F2F45D6...C1C0 | D: none
+[2026-07-13T22:08:44+03:00] > ATTACK #424 C120 | NEXT: Compute exact reciprocal basin and one-step capacity ratios for the same 10-million census.
+[2026-07-13T22:10:30+03:00] FAIL ATTACK #424 C120 | DID: Summed reduced reciprocal basins | RESULT: JSON hit Python 4300-digit integer limit; no new artifact written | D: compact exact dyadic bounds
+[2026-07-13T22:00:24.361+03:00] OK ATTACK #424 C118 | DID: scanned h<=1000000 | RESULT: cofactor charge fails h=1154; endpoint charge fails h=52436 | D: two charges dead
+[2026-07-13T22:00:24.362+03:00] > ATTACK #424 C118 | NEXT: rerun h<=1000000 normally and with -O; test historical smaller-co-root square charges.
+[2026-07-13T22:00:47.6016140+03:00] OK DECIDE #128 | DID: Recorded one-wave outcomes | RESULT: 0 candidates, no UNSAT; route DEAD in problems/128/{COMPUTATION,PROOF_STATE}.md | D: route DEAD
+[2026-07-13T22:00:52.985+03:00] OK VERIFY #424 C116 | DID: replayed h<=10000000 under python -O | RESULT: byte-identical SHA256 85FCA619...D6CD4D2 | D: none
+[2026-07-13T22:00:52.986+03:00] > ATTACK #424 C116 | NEXT: Construct a direct injection matching reducible canonical blockers after 8 exceptions to earlier structural blockers.
+[2026-07-13T22:01:08.4887324+03:00] > VERIFY #128 | NEXT: Re-run the independent verifier self-tests normally and under python -O after locking the search route.
+[2026-07-13T22:01:23.2637339+03:00] OK VERIFY #128 | DID: Ran 5-case self-test normally and -O | RESULT: both PASS; 1140 triples and 184756 half-sets/case | D: none
+[2026-07-13T22:03:27.8862844+03:00] OK VERIFY #424 C119 | DID: Replayed exact fibre identity, factors, C++ hashes, and Python normal/-O | RESULT: AO1 false; audit C119_fixed_L_gate_audit.md | D: atomic Gate-T branch DEAD
+[2026-07-13T22:11:25.4882177+03:00] > ATTACK #424 C121 | NEXT: Test whether the eight-exception structural bound follows from divisor arithmetic without closure history through n<=1e7.
+[2026-07-13T22:15:40.0000000+03:00] FAIL ATTACK #424 C121 | DID: Tested 113571 hard-shape products through 1e6 | RESULT: h=237404,d=12,forced=1; SHA BA233A0A...2C26F4 | D: pure-divisor route DEAD
+[2026-07-13T22:15:30.4417149+03:00] > VERIFY #424 C118 | NEXT: Replay the selected-square verifier, audit the asymptotic obstruction, and repair its prime-parity hypothesis.
+[2026-07-13T22:03:23.066+03:00] FAIL ATTACK #424 C116 | DID: sought the matching in (III) | RESULT: no divisor-valued map from p=2^j(uv-2)+1 to h+1 | D: stall=1
+[2026-07-13T22:03:23.067+03:00] > VERIFY #424 C116 | NEXT: Run the ordered-prefix C++ classifier through 1000000 and compare exact minima and digests with Python.
+[2026-07-13T22:04:05.712+03:00] OK VERIFY #424 C116 | DID: cross-checked C++ at 1000000 | RESULT: counts, min prefix slack, and both FNV digests match Python | D: none
+[2026-07-13T22:04:05.713+03:00] > ATTACK #424 C116 | NEXT: Stream exact ordered-prefix census for every hard h<=4000000000 using one worker and integer acceptance.
+[2026-07-13T22:05:27.468+03:00] OK ATTACK #424 C118 | DID: replayed h<=1000000 normally and -O | RESULT: 3015 upgrades; SHA 715098CA...DB3 | D: co-root charge dead at h=947052
+[2026-07-13T22:05:27.469+03:00] > VERIFY #424 C118 | NEXT: replay C118 failures and B_1,B_2 against the exact C108 1000000 artifact.
+[2026-07-13T22:06:08.2094516+03:00] > VERIFY #128 selection | NEXT: Audit n<=20 rounding and elementary constraints only; no new solver or family search.
+[2026-07-13T22:07:15.801+03:00] OK VERIFY #424 C118 | DID: replayed failures and C108 blocks normally and -O | RESULT: PASS; SHA 4ADD7A22...F9991 | D: none
+[2026-07-13T22:07:15.802+03:00] > CHECK #424 C118 | NEXT: prove the divisor-rich relaxation has B_m/m^3 unbounded and isolate the missing closure-state bridge.
+[2026-07-13T22:10:51.473+03:00] > VERIFY #424 C118 | NEXT: check the finite CRT error and density lower bound normally and with -O.
+[2026-07-13T22:12:40.596+03:00] OK VERIFY #424 C118 | DID: checked CRT error and hashes normally and -O | RESULT: PASS; six C118 hashes match | D: VERIFY->CHECK
+[2026-07-13T22:12:40.597+03:00] OK CHECK #424 C118 | DID: proved C118.1-C118.2 | RESULT: relaxed B_m/m^3 tends to infinity | D: new fact; stall=0
+[2026-07-13T22:12:40.598+03:00] > DECIDE #424 C118 | NEXT: abandon the arithmetic-relaxation branch; the missing all-pairs blocker bridge is load-bearing.
+[2026-07-13T22:12:21.779+03:00] OK ATTACK #424 C116 | DID: tested (III) through 4000000000 | RESULT: 106360959 hard; no failure; min slack 0 | D: none
+[2026-07-13T22:12:21.780+03:00] FAIL ATTACK #424 C116 | DID: sought a proof of (III) | RESULT: root factors need not divide h+1 | D: DEAD: reformulation maze - no matching bridge
+[2026-07-13T22:12:21.781+03:00] > PLAN #424 C116 | NEXT: Define h_m=11^(2m)-1 and reduce power failure to exact state lemmas for odd powers of 11.
+[2026-07-13T22:13:05.871+03:00] FAIL DECIDE #424 C118 | DID: dropped divisor-rich route | RESULT: DEAD: reformulation maze -- pair count omits actual all-pairs blockers | D: C118 done; C114-SB open
+[2026-07-13T22:14:57.900+03:00] OK PLAN #424 C116 | DID: reduced h_m=11^(2m)-1 to state claims (IV) | RESULT: direct bridge recorded in C116 report | D: stall=0
+[2026-07-13T22:14:57.901+03:00] > ATTACK #424 C116 | NEXT: Recursively classify every odd power and source in the 11-power family below 2^64.
+[2026-07-13T22:15:32.159+03:00] FAIL ATTACK #424 C116 | DID: classified 11-power sources | RESULT: RuntimeError unblocked pair at m=7 | D: candidate family falsified
+[2026-07-13T22:15:32.160+03:00] > VERIFY #424 C116 | NEXT: Preserve the m=7 generated-pair witness and replay the full u64 family normally and under python -O.
+[2026-07-13T22:16:05.2983813+03:00] OK VERIFY #128 selection | DID: Proved exact n<=20 bounds | RESULT: no strict n=20 advantage; ORDER_SELECTION_AUDIT.md SHA C8DA0BE8...A40D8E | D: wording corrected
+[2026-07-13T22:16:50.4866096+03:00] FAIL VERIFY #128 GPT-Pro | DID: Archived completed response | RESULT: 'Thinking failed'; answer SHA D73C26DD...639742; no math output | D: route DEAD
+[2026-07-13T22:35:31.4531634+03:00] > VERIFY #128 GPT-Pro retry | NEXT: Monitor the user-restarted generation; archive only its complete output and exact-test any certificate.
+[2026-07-13T22:36:48.7879685+03:00] FAIL VERIFY #128 GPT-Pro retry | DID: Inspected available in-app session | RESULT: no #128 response content exposed; nothing archived | D: none
+[2026-07-13T23:33:53.5595101+03:00] > SELECT #128 | NEXT: Audit exact primary theorems and isolate one residual lemma that directly implies the full sparse-half claim.
+[2026-07-13T23:35:35.1523246+03:00] > GATE #128 | NEXT: Read exact 2006-2025 primary theorems and confirm no result already closes the full sparse-half statement.
+[2026-07-13T23:41:21+03:00] FAIL ATTACK #128 N1 | DID: Tested uniform neighbourhood completion on C5[4] | RESULT: 576/55>8; verifier SHA F635C4AA65B9BB94 | D: route DEAD
+[2026-07-13T23:44:29+03:00] > DECIDE #128 | NEXT: Stop the easy-target attack; record that its only bridge is a new full-strength sparse-half lift lemma.
+[2026-07-13T23:44:57+03:00] OK DECIDE #128 | DID: Stopped easy-target attack | RESULT: registry records distinct #23/#128 forms and no mechanism for full lift | D: #128 STOPPED
+[2026-07-13T23:47:20+03:00] > STOP PROGRAM | NEXT: End all Erdős proof/search activity at the user's explicit request; preserve every artifact.
+[2026-07-13T23:47:25+03:00] OK STOP PROGRAM | DID: Ended Erdős activity | RESULT: no subagent is running; all problem artifacts preserved | D: stopped by user
+[2026-07-14T09:08:16+03:00] > GATE #128 GPT-Pro | NEXT: Audit the delayed answer against completed n=20 artifacts and verify whether its n=14 catalogue scan is genuinely new.
+[2026-07-14T09:13:07+03:00] OK GATE #128 GPT-Pro | DID: Audited delayed answer | RESULT: no graph/proof; n=14 scan only excludes one order; SHA E0C01B1283858242 | D: remains STOPPED

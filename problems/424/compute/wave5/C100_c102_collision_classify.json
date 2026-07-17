@@ -1,0 +1,133 @@
+{
+  "source": "C102_truncated_decoder_verify.offsets",
+  "ray": [
+    2,
+    1,
+    1
+  ],
+  "Q": 60,
+  "k": 2,
+  "selected_residue": 2,
+  "selected_size": 233,
+  "edge_count": 54289,
+  "product_support": 54284,
+  "collision_products": 5,
+  "colliding_edges": 10,
+  "collisions": [
+    {
+      "product": "5265317358",
+      "witnesses": [
+        {
+          "u": 58401,
+          "v": 90158,
+          "left_h": 29201,
+          "right_h": 30053
+        },
+        {
+          "u": 59859,
+          "v": 87962,
+          "left_h": 29930,
+          "right_h": 29321
+        }
+      ],
+      "reduced_u2_over_u1": {
+        "numerator": 739,
+        "denominator": 721
+      },
+      "left_h_difference": 729,
+      "right_h_difference": -732
+    },
+    {
+      "product": "5294792970",
+      "witnesses": [
+        {
+          "u": 57987,
+          "v": 91310,
+          "left_h": 28994,
+          "right_h": 30437
+        },
+        {
+          "u": 60741,
+          "v": 87170,
+          "left_h": 30371,
+          "right_h": 29057
+        }
+      ],
+      "reduced_u2_over_u1": {
+        "numerator": 397,
+        "denominator": 379
+      },
+      "left_h_difference": 1377,
+      "right_h_difference": -1380
+    },
+    {
+      "product": "5478419835",
+      "witnesses": [
+        {
+          "u": 58527,
+          "v": 93605,
+          "left_h": 29264,
+          "right_h": 31202
+        },
+        {
+          "u": 60795,
+          "v": 90113,
+          "left_h": 30398,
+          "right_h": 30038
+        }
+      ],
+      "reduced_u2_over_u1": {
+        "numerator": 965,
+        "denominator": 929
+      },
+      "left_h_difference": 1134,
+      "right_h_difference": -1164
+    },
+    {
+      "product": "5505602700",
+      "witnesses": [
+        {
+          "u": 59649,
+          "v": 92300,
+          "left_h": 29825,
+          "right_h": 30767
+        },
+        {
+          "u": 62835,
+          "v": 87620,
+          "left_h": 31418,
+          "right_h": 29207
+        }
+      ],
+      "reduced_u2_over_u1": {
+        "numerator": 355,
+        "denominator": 337
+      },
+      "left_h_difference": 1593,
+      "right_h_difference": -1560
+    },
+    {
+      "product": "5546592975",
+      "witnesses": [
+        {
+          "u": 58803,
+          "v": 94325,
+          "left_h": 29402,
+          "right_h": 31442
+        },
+        {
+          "u": 62475,
+          "v": 88781,
+          "left_h": 31238,
+          "right_h": 29594
+        }
+      ],
+      "reduced_u2_over_u1": {
+        "numerator": 1225,
+        "denominator": 1153
+      },
+      "left_h_difference": 1836,
+      "right_h_difference": -1848
+    }
+  ]
+}

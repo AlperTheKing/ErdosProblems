@@ -1,0 +1,12 @@
+[
+  {
+    "limit": 100000,
+    "hard_count": 10294,
+    "exact_dual_objective": 11595,
+    "exact_margin": 1301,
+    "nonzero_closure_rows": 31476,
+    "nonzero_lower_bounds": 4304,
+    "nonzero_upper_bounds": 7313,
+    "conclusion": "NO_BOOLEAN_COUNTEREXAMPLE"
+  }
+]

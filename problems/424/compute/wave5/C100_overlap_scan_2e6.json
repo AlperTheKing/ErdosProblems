@@ -1,0 +1,88 @@
+{
+  "limit": 2000000,
+  "threads": 8,
+  "orbit_count": 392659,
+  "image_sizes": {"2": 197449, "3": 131846, "5": 79519},
+  "triple_intersection": 7,
+  "collision_tax": 16157,
+  "pair_audits": {
+    "23": {
+      "intersection": 6588,
+      "failures": 107,
+      "first_failure": 24,
+      "last_failure": 130,
+      "worst_x": 76,
+      "worst_excess": "36",
+      "worst_intersection": 1,
+      "worst_left_size": 8,
+      "worst_right_size": 5,
+      "min_margin_after_5000_x": 5000,
+      "min_margin_after_5000": "115600"
+    },
+    "25": {
+      "intersection": 6053,
+      "failures": 2945,
+      "first_failure": 24,
+      "last_failure": 4103,
+      "worst_x": 3853,
+      "worst_excess": "4193",
+      "worst_intersection": 17,
+      "worst_left_size": 393,
+      "worst_right_size": 156,
+      "min_margin_after_5000_x": 5173,
+      "min_margin_after_5000": "8407"
+    },
+    "35": {
+      "intersection": 3523,
+      "failures": 319,
+      "first_failure": 24,
+      "last_failure": 383,
+      "worst_x": 203,
+      "worst_excess": "91",
+      "worst_intersection": 1,
+      "worst_left_size": 14,
+      "worst_right_size": 8,
+      "min_margin_after_5000_x": 5629,
+      "min_margin_after_5000": "7985"
+    }
+  },
+  "residue_30_pair_audits": {
+    "23": {
+      "failures": 1,
+      "worst_residue": 23,
+      "worst_intersection": 1306,
+      "worst_left_size": 14092,
+      "worst_right_size": 5091,
+      "worst_capacity": 66666,
+      "worst_excess": "15323424"
+    },
+    "25": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    },
+    "35": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    }
+  },
+  "quadratic_tax_audit": {
+    "inequality": "X*Delta(X) <= 3*C(X)^2",
+    "failures": 0,
+    "first_failure": 0,
+    "last_failure": 0,
+    "worst_x": 0,
+    "worst_excess": "0"
+  },
+  "generation_seconds": 0.002358,
+  "audit_seconds": 0.014789
+}

@@ -1,0 +1,13 @@
+{
+  "claim": "problems/424/compute/wave5/C96_ratio_obstruction_1e6.json",
+  "recursive_values_evaluated": 126,
+  "schema": "C96-ratio-obstruction-verifier-v1",
+  "status": "exact_match",
+  "witnesses": {
+    "hard_54": true,
+    "root_16148_persistent_through_1000000": true,
+    "root_2340_persistent_through_1000000": true,
+    "shadow_24_first_heals_at_5889": true,
+    "shadow_24_unhealed_through_216": true
+  }
+}

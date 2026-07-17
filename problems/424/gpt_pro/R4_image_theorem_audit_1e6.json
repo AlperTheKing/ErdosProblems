@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "generated": 457599,
+  "holes": 209067,
+  "splitless": 108651,
+  "reducible": 100416,
+  "hard": 45583,
+  "T2": 67537,
+  "U3": 173672,
+  "max_abs_identity_residual": 0,
+  "max_delta": 0,
+  "first_positive_delta": null,
+  "prime_jump_count": 4410,
+  "first_prime_jumps": [
+    {
+      "p": 17,
+      "n": 186,
+      "delta": -18
+    },
+    {
+      "p": 23,
+      "n": 252,
+      "delta": -26
+    },
+    {
+      "p": 29,
+      "n": 318,
+      "delta": -31
+    },
+    {
+      "p": 41,
+      "n": 450,
+      "delta": -48
+    },
+    {
+      "p": 47,
+      "n": 516,
+      "delta": -54
+    },
+    {
+      "p": 53,
+      "n": 582,
+      "delta": -60
+    },
+    {
+      "p": 59,
+      "n": 648,
+      "delta": -67
+    },
+    {
+      "p": 71,
+      "n": 780,
+      "delta": -84
+    },
+    {
+      "p": 83,
+      "n": 912,
+      "delta": -95
+    },
+    {
+      "p": 89,
+      "n": 978,
+      "delta": -98
+    },
+    {
+      "p": 101,
+      "n": 1110,
+      "delta": -112
+    },
+    {
+      "p": 107,
+      "n": 1176,
+      "delta": -121
+    }
+  ]
+}

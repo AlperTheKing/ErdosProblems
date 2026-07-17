@@ -1,0 +1,2077 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "approximants": "S_0=all allowed; S_(k+1)=seeds union supported outputs in S_k",
+  "death_rank_recurrence": "splitless=1; hole=1+max_pairs min(death of missing endpoints)",
+  "allowed": 666666,
+  "generated": 457599,
+  "holes": 209067,
+  "splitless_holes": 108651,
+  "reducible_holes": 100416,
+  "hard_holes": 45583,
+  "final_healed_parents": 67537,
+  "maximum_death_rank": 16,
+  "maximum_generation_rank": 17,
+  "maximum_pair_count": {
+    "count": 96,
+    "value": 997919
+  },
+  "terminal_gate": {
+    "stage": 16,
+    "H": 45583,
+    "Q": 67537,
+    "terminal_surplus": 21954,
+    "minimum_surplus": 0,
+    "minimum_X": 2,
+    "first_failure": null
+  },
+  "stagewise_gate": {
+    "passed": true,
+    "first_failed_stage": null,
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 55761,
+        "terminal_surplus": 55761,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 51694,
+        "terminal_surplus": 51694,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 18500,
+        "Q": 61395,
+        "terminal_surplus": 42895,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 4,
+        "H": 22641,
+        "Q": 61350,
+        "terminal_surplus": 38709,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 31337,
+        "Q": 65128,
+        "terminal_surplus": 33791,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 35580,
+        "Q": 65724,
+        "terminal_surplus": 30144,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 39694,
+        "Q": 66765,
+        "terminal_surplus": 27071,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 42067,
+        "Q": 67329,
+        "terminal_surplus": 25262,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 43673,
+        "Q": 67656,
+        "terminal_surplus": 23983,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 44670,
+        "Q": 67834,
+        "terminal_surplus": 23164,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 45197,
+        "Q": 67796,
+        "terminal_surplus": 22599,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 45461,
+        "Q": 67793,
+        "terminal_surplus": 22332,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 45560,
+        "Q": 67653,
+        "terminal_surplus": 22093,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 45582,
+        "Q": 67563,
+        "terminal_surplus": 21981,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 45583,
+        "Q": 67540,
+        "terminal_surplus": 21957,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 45583,
+        "Q": 67537,
+        "terminal_surplus": 21954,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "terminal_rank_filtered_gate": {
+    "passed": false,
+    "first_failed_stage": {
+      "stage": 3,
+      "H": 18500,
+      "Q": 45281,
+      "terminal_surplus": 26781,
+      "minimum_surplus": -1,
+      "minimum_X": 362,
+      "first_failure": {
+        "X": 362,
+        "surplus": -1,
+        "event": "H",
+        "rank": 3,
+        "H": 11,
+        "Q": 10
+      }
+    },
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 34760,
+        "terminal_surplus": 34760,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 37985,
+        "terminal_surplus": 37985,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 18500,
+        "Q": 45281,
+        "terminal_surplus": 26781,
+        "minimum_surplus": -1,
+        "minimum_X": 362,
+        "first_failure": {
+          "X": 362,
+          "surplus": -1,
+          "event": "H",
+          "rank": 3,
+          "H": 11,
+          "Q": 10
+        }
+      },
+      {
+        "stage": 4,
+        "H": 22641,
+        "Q": 48842,
+        "terminal_surplus": 26201,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 31337,
+        "Q": 53849,
+        "terminal_surplus": 22512,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 35580,
+        "Q": 57297,
+        "terminal_surplus": 21717,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 39694,
+        "Q": 60482,
+        "terminal_surplus": 20788,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 42067,
+        "Q": 62808,
+        "terminal_surplus": 20741,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 43673,
+        "Q": 64627,
+        "terminal_surplus": 20954,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 44670,
+        "Q": 65937,
+        "terminal_surplus": 21267,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 45197,
+        "Q": 66748,
+        "terminal_surplus": 21551,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 45461,
+        "Q": 67252,
+        "terminal_surplus": 21791,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 45560,
+        "Q": 67491,
+        "terminal_surplus": 21931,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 45582,
+        "Q": 67536,
+        "terminal_surplus": 21954,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 45583,
+        "Q": 67537,
+        "terminal_surplus": 21954,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 45583,
+        "Q": 67537,
+        "terminal_surplus": 21954,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "stage_exact_layer_gate": {
+    "passed": true,
+    "first_failed_stage": null,
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 55761,
+        "terminal_surplus": 55761,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 51694,
+        "terminal_surplus": 51694,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 18500,
+        "Q": 61395,
+        "terminal_surplus": 42895,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 4,
+        "H": 4141,
+        "Q": 61350,
+        "terminal_surplus": 57209,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 5,
+        "H": 8696,
+        "Q": 65128,
+        "terminal_surplus": 56432,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 6,
+        "H": 4243,
+        "Q": 65724,
+        "terminal_surplus": 61481,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 7,
+        "H": 4114,
+        "Q": 66765,
+        "terminal_surplus": 62651,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 8,
+        "H": 2373,
+        "Q": 67329,
+        "terminal_surplus": 64956,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 9,
+        "H": 1606,
+        "Q": 67656,
+        "terminal_surplus": 66050,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 997,
+        "Q": 67834,
+        "terminal_surplus": 66837,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 11,
+        "H": 527,
+        "Q": 67796,
+        "terminal_surplus": 67269,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 264,
+        "Q": 67793,
+        "terminal_surplus": 67529,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 13,
+        "H": 99,
+        "Q": 67653,
+        "terminal_surplus": 67554,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 22,
+        "Q": 67563,
+        "terminal_surplus": 67541,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 1,
+        "Q": 67540,
+        "terminal_surplus": 67539,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 0,
+        "Q": 67537,
+        "terminal_surplus": 67537,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "terminal_exact_layer_gate": {
+    "passed": false,
+    "first_failed_stage": {
+      "stage": 3,
+      "H": 18500,
+      "Q": 7296,
+      "terminal_surplus": -11204,
+      "minimum_surplus": -11206,
+      "minimum_X": 999822,
+      "first_failure": {
+        "X": 74,
+        "surplus": -1,
+        "event": "H",
+        "rank": 3,
+        "H": 2,
+        "Q": 1
+      }
+    },
+    "rows": [
+      {
+        "stage": 1,
+        "H": 0,
+        "Q": 34760,
+        "terminal_surplus": 34760,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 2,
+        "H": 0,
+        "Q": 3225,
+        "terminal_surplus": 3225,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 3,
+        "H": 18500,
+        "Q": 7296,
+        "terminal_surplus": -11204,
+        "minimum_surplus": -11206,
+        "minimum_X": 999822,
+        "first_failure": {
+          "X": 74,
+          "surplus": -1,
+          "event": "H",
+          "rank": 3,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 4,
+        "H": 4141,
+        "Q": 3561,
+        "terminal_surplus": -580,
+        "minimum_surplus": -581,
+        "minimum_X": 999672,
+        "first_failure": {
+          "X": 3294,
+          "surplus": -1,
+          "event": "H",
+          "rank": 4,
+          "H": 19,
+          "Q": 18
+        }
+      },
+      {
+        "stage": 5,
+        "H": 8696,
+        "Q": 5007,
+        "terminal_surplus": -3689,
+        "minimum_surplus": -3691,
+        "minimum_X": 996990,
+        "first_failure": {
+          "X": 474,
+          "surplus": -1,
+          "event": "H",
+          "rank": 5,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 6,
+        "H": 4243,
+        "Q": 3448,
+        "terminal_surplus": -795,
+        "minimum_surplus": -798,
+        "minimum_X": 998796,
+        "first_failure": {
+          "X": 924,
+          "surplus": -1,
+          "event": "H",
+          "rank": 6,
+          "H": 4,
+          "Q": 3
+        }
+      },
+      {
+        "stage": 7,
+        "H": 4114,
+        "Q": 3185,
+        "terminal_surplus": -929,
+        "minimum_surplus": -933,
+        "minimum_X": 992988,
+        "first_failure": {
+          "X": 1224,
+          "surplus": -1,
+          "event": "H",
+          "rank": 7,
+          "H": 1,
+          "Q": 0
+        }
+      },
+      {
+        "stage": 8,
+        "H": 2373,
+        "Q": 2326,
+        "terminal_surplus": -47,
+        "minimum_surplus": -76,
+        "minimum_X": 794814,
+        "first_failure": {
+          "X": 3404,
+          "surplus": -1,
+          "event": "H",
+          "rank": 8,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 9,
+        "H": 1606,
+        "Q": 1819,
+        "terminal_surplus": 213,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 10,
+        "H": 997,
+        "Q": 1310,
+        "terminal_surplus": 313,
+        "minimum_surplus": -4,
+        "minimum_X": 22124,
+        "first_failure": {
+          "X": 14664,
+          "surplus": -1,
+          "event": "H",
+          "rank": 10,
+          "H": 3,
+          "Q": 2
+        }
+      },
+      {
+        "stage": 11,
+        "H": 527,
+        "Q": 811,
+        "terminal_surplus": 284,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 12,
+        "H": 264,
+        "Q": 504,
+        "terminal_surplus": 240,
+        "minimum_surplus": -4,
+        "minimum_X": 146784,
+        "first_failure": {
+          "X": 88004,
+          "surplus": -1,
+          "event": "H",
+          "rank": 12,
+          "H": 2,
+          "Q": 1
+        }
+      },
+      {
+        "stage": 13,
+        "H": 99,
+        "Q": 239,
+        "terminal_surplus": 140,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 14,
+        "H": 22,
+        "Q": 45,
+        "terminal_surplus": 23,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 15,
+        "H": 1,
+        "Q": 1,
+        "terminal_surplus": 0,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      },
+      {
+        "stage": 16,
+        "H": 0,
+        "Q": 0,
+        "terminal_surplus": 0,
+        "minimum_surplus": 0,
+        "minimum_X": 2,
+        "first_failure": null
+      }
+    ]
+  },
+  "chain_threshold_transition_gate": {
+    "identity": "boundary c stays or moves to 2c-1; removed even roots create boundary 2r-1",
+    "passed": true,
+    "rows": [
+      {
+        "from_stage": 0,
+        "to_stage": 1,
+        "removed_odd_thresholds": 0,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 108651,
+        "terminal_slack": 55761,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 0,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": null,
+          "last_tight_event_X": null
+        }
+      },
+      {
+        "from_stage": 1,
+        "to_stage": 2,
+        "removed_odd_thresholds": 9121,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 0,
+        "terminal_slack": 51694,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 51694,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": null,
+          "last_tight_event_X": null
+        }
+      },
+      {
+        "from_stage": 2,
+        "to_stage": 3,
+        "removed_odd_thresholds": 2099,
+        "removed_hard_roots": 18500,
+        "removed_nonhard_roots": 1138,
+        "terminal_slack": 42895,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 42215,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 54
+        }
+      },
+      {
+        "from_stage": 3,
+        "to_stage": 4,
+        "removed_odd_thresholds": 6468,
+        "removed_hard_roots": 4141,
+        "removed_nonhard_roots": 589,
+        "terminal_slack": 38709,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 38329,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 74
+        }
+      },
+      {
+        "from_stage": 4,
+        "to_stage": 5,
+        "removed_odd_thresholds": 4560,
+        "removed_hard_roots": 8696,
+        "removed_nonhard_roots": 1680,
+        "terminal_slack": 33791,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 32693,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 186
+        }
+      },
+      {
+        "from_stage": 5,
+        "to_stage": 6,
+        "removed_odd_thresholds": 5673,
+        "removed_hard_roots": 4243,
+        "removed_nonhard_roots": 1110,
+        "terminal_slack": 30144,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 29431,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 6,
+        "to_stage": 7,
+        "removed_odd_thresholds": 4532,
+        "removed_hard_roots": 4114,
+        "removed_nonhard_roots": 1362,
+        "terminal_slack": 27071,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 26247,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 7,
+        "to_stage": 8,
+        "removed_odd_thresholds": 3722,
+        "removed_hard_roots": 2373,
+        "removed_nonhard_roots": 1140,
+        "terminal_slack": 25262,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 24516,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 8,
+        "to_stage": 9,
+        "removed_odd_thresholds": 3041,
+        "removed_hard_roots": 1606,
+        "removed_nonhard_roots": 1013,
+        "terminal_slack": 23983,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 23345,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 9,
+        "to_stage": 10,
+        "removed_odd_thresholds": 2293,
+        "removed_hard_roots": 997,
+        "removed_nonhard_roots": 809,
+        "terminal_slack": 23164,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 22635,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 10,
+        "to_stage": 11,
+        "removed_odd_thresholds": 1578,
+        "removed_hard_roots": 527,
+        "removed_nonhard_roots": 579,
+        "terminal_slack": 22599,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 22253,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 11,
+        "to_stage": 12,
+        "removed_odd_thresholds": 942,
+        "removed_hard_roots": 264,
+        "removed_nonhard_roots": 380,
+        "terminal_slack": 22332,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 22087,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 12,
+        "to_stage": 13,
+        "removed_odd_thresholds": 527,
+        "removed_hard_roots": 99,
+        "removed_nonhard_roots": 215,
+        "terminal_slack": 22093,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 22007,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 13,
+        "to_stage": 14,
+        "removed_odd_thresholds": 160,
+        "removed_hard_roots": 22,
+        "removed_nonhard_roots": 59,
+        "terminal_slack": 21981,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 21962,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 14,
+        "to_stage": 15,
+        "removed_odd_thresholds": 27,
+        "removed_hard_roots": 1,
+        "removed_nonhard_roots": 13,
+        "terminal_slack": 21957,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 21957,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      },
+      {
+        "from_stage": 15,
+        "to_stage": 16,
+        "removed_odd_thresholds": 3,
+        "removed_hard_roots": 0,
+        "removed_nonhard_roots": 0,
+        "terminal_slack": 21954,
+        "minimum_slack": 0,
+        "minimum_X": 2,
+        "first_failure": null,
+        "no_nonhard_helper": {
+          "inequality": "H_stage(X)+next exposed odd/hard thresholds in (floor((X+1)/2),X] <= Q_stage(X)",
+          "terminal_slack": 21954,
+          "minimum_slack": 0,
+          "minimum_X": 2,
+          "first_failure": null,
+          "first_tight_event_X": 54,
+          "last_tight_event_X": 362
+        }
+      }
+    ]
+  },
+  "death_histogram": {
+    "1": 108651,
+    "2": 9121,
+    "3": 21737,
+    "4": 11198,
+    "5": 14936,
+    "6": 11026,
+    "7": 10008,
+    "8": 7235,
+    "9": 5660,
+    "10": 4099,
+    "11": 2684,
+    "12": 1586,
+    "13": 841,
+    "14": 241,
+    "15": 41,
+    "16": 3
+  },
+  "hard_death_histogram": {
+    "3": 18500,
+    "4": 4141,
+    "5": 8696,
+    "6": 4243,
+    "7": 4114,
+    "8": 2373,
+    "9": 1606,
+    "10": 997,
+    "11": 527,
+    "12": 264,
+    "13": 99,
+    "14": 22,
+    "15": 1
+  },
+  "final_q_parent_death_histogram": {
+    "1": 34760,
+    "2": 3225,
+    "3": 7296,
+    "4": 3561,
+    "5": 5007,
+    "6": 3448,
+    "7": 3185,
+    "8": 2326,
+    "9": 1819,
+    "10": 1310,
+    "11": 811,
+    "12": 504,
+    "13": 239,
+    "14": 45,
+    "15": 1
+  },
+  "final_q_child_generation_histogram": {
+    "3": 3,
+    "4": 17,
+    "5": 657,
+    "6": 7787,
+    "7": 20822,
+    "8": 18422,
+    "9": 11528,
+    "10": 5249,
+    "11": 2076,
+    "12": 728,
+    "13": 197,
+    "14": 43,
+    "15": 8
+  },
+  "hard_sample": [
+    {
+      "value": 54,
+      "death_rank": 3
+    },
+    {
+      "value": 74,
+      "death_rank": 3
+    },
+    {
+      "value": 114,
+      "death_rank": 3
+    },
+    {
+      "value": 144,
+      "death_rank": 4
+    },
+    {
+      "value": 174,
+      "death_rank": 3
+    },
+    {
+      "value": 186,
+      "death_rank": 3
+    },
+    {
+      "value": 234,
+      "death_rank": 3
+    },
+    {
+      "value": 252,
+      "death_rank": 3
+    },
+    {
+      "value": 294,
+      "death_rank": 3
+    },
+    {
+      "value": 318,
+      "death_rank": 3
+    },
+    {
+      "value": 354,
+      "death_rank": 3
+    },
+    {
+      "value": 362,
+      "death_rank": 3
+    },
+    {
+      "value": 390,
+      "death_rank": 3
+    },
+    {
+      "value": 414,
+      "death_rank": 3
+    },
+    {
+      "value": 444,
+      "death_rank": 5
+    },
+    {
+      "value": 450,
+      "death_rank": 3
+    },
+    {
+      "value": 474,
+      "death_rank": 5
+    },
+    {
+      "value": 492,
+      "death_rank": 4
+    },
+    {
+      "value": 516,
+      "death_rank": 3
+    },
+    {
+      "value": 534,
+      "death_rank": 5
+    },
+    {
+      "value": 564,
+      "death_rank": 6
+    },
+    {
+      "value": 582,
+      "death_rank": 3
+    },
+    {
+      "value": 594,
+      "death_rank": 3
+    },
+    {
+      "value": 614,
+      "death_rank": 6
+    },
+    {
+      "value": 648,
+      "death_rank": 3
+    },
+    {
+      "value": 666,
+      "death_rank": 3
+    },
+    {
+      "value": 704,
+      "death_rank": 4
+    },
+    {
+      "value": 714,
+      "death_rank": 3
+    },
+    {
+      "value": 758,
+      "death_rank": 3
+    },
+    {
+      "value": 774,
+      "death_rank": 3
+    },
+    {
+      "value": 780,
+      "death_rank": 3
+    },
+    {
+      "value": 798,
+      "death_rank": 3
+    },
+    {
+      "value": 846,
+      "death_rank": 3
+    },
+    {
+      "value": 884,
+      "death_rank": 6
+    },
+    {
+      "value": 894,
+      "death_rank": 3
+    },
+    {
+      "value": 912,
+      "death_rank": 3
+    },
+    {
+      "value": 924,
+      "death_rank": 6
+    },
+    {
+      "value": 942,
+      "death_rank": 3
+    },
+    {
+      "value": 954,
+      "death_rank": 3
+    },
+    {
+      "value": 956,
+      "death_rank": 4
+    },
+    {
+      "value": 978,
+      "death_rank": 3
+    },
+    {
+      "value": 1002,
+      "death_rank": 3
+    },
+    {
+      "value": 1014,
+      "death_rank": 5
+    },
+    {
+      "value": 1064,
+      "death_rank": 6
+    },
+    {
+      "value": 1074,
+      "death_rank": 3
+    },
+    {
+      "value": 1080,
+      "death_rank": 3
+    },
+    {
+      "value": 1110,
+      "death_rank": 3
+    },
+    {
+      "value": 1134,
+      "death_rank": 5
+    },
+    {
+      "value": 1154,
+      "death_rank": 5
+    },
+    {
+      "value": 1176,
+      "death_rank": 3
+    },
+    {
+      "value": 1188,
+      "death_rank": 4
+    },
+    {
+      "value": 1206,
+      "death_rank": 3
+    },
+    {
+      "value": 1218,
+      "death_rank": 3
+    },
+    {
+      "value": 1224,
+      "death_rank": 7
+    },
+    {
+      "value": 1242,
+      "death_rank": 3
+    },
+    {
+      "value": 1314,
+      "death_rank": 3
+    },
+    {
+      "value": 1344,
+      "death_rank": 6
+    },
+    {
+      "value": 1356,
+      "death_rank": 3
+    },
+    {
+      "value": 1362,
+      "death_rank": 3
+    },
+    {
+      "value": 1374,
+      "death_rank": 3
+    },
+    {
+      "value": 1404,
+      "death_rank": 5
+    },
+    {
+      "value": 1410,
+      "death_rank": 3
+    },
+    {
+      "value": 1424,
+      "death_rank": 4
+    },
+    {
+      "value": 1434,
+      "death_rank": 6
+    }
+  ],
+  "final_q_sample": [
+    {
+      "parent": 21,
+      "child": 41,
+      "parent_death_rank": 3,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 35,
+      "child": 69,
+      "parent_death_rank": 2,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 39,
+      "child": 77,
+      "parent_death_rank": 2,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 63,
+      "child": 125,
+      "parent_death_rank": 4,
+      "child_generation_rank": 3
+    },
+    {
+      "parent": 66,
+      "child": 131,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 75,
+      "child": 149,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 110,
+      "child": 219,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 117,
+      "child": 233,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 119,
+      "child": 237,
+      "parent_death_rank": 2,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 120,
+      "child": 239,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 126,
+      "child": 251,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 147,
+      "child": 293,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 182,
+      "child": 363,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 183,
+      "child": 365,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 189,
+      "child": 377,
+      "parent_death_rank": 5,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 198,
+      "child": 395,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 200,
+      "child": 399,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 210,
+      "child": 419,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 221,
+      "child": 441,
+      "parent_death_rank": 4,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 225,
+      "child": 449,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 228,
+      "child": 455,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 231,
+      "child": 461,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 245,
+      "child": 489,
+      "parent_death_rank": 6,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 246,
+      "child": 491,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 287,
+      "child": 573,
+      "parent_death_rank": 5,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 291,
+      "child": 581,
+      "parent_death_rank": 2,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 306,
+      "child": 611,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 308,
+      "child": 615,
+      "parent_death_rank": 1,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 309,
+      "child": 617,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 335,
+      "child": 669,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 350,
+      "child": 699,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 351,
+      "child": 701,
+      "parent_death_rank": 4,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 357,
+      "child": 713,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 360,
+      "child": 719,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 371,
+      "child": 741,
+      "parent_death_rank": 4,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 378,
+      "child": 755,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 380,
+      "child": 759,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 381,
+      "child": 761,
+      "parent_death_rank": 3,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 390,
+      "child": 779,
+      "parent_death_rank": 3,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 396,
+      "child": 791,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 425,
+      "child": 849,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 429,
+      "child": 857,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 444,
+      "child": 887,
+      "parent_death_rank": 5,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 453,
+      "child": 905,
+      "parent_death_rank": 5,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 471,
+      "child": 941,
+      "parent_death_rank": 2,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 486,
+      "child": 971,
+      "parent_death_rank": 1,
+      "child_generation_rank": 7
+    },
+    {
+      "parent": 510,
+      "child": 1019,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 515,
+      "child": 1029,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 516,
+      "child": 1031,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 539,
+      "child": 1077,
+      "parent_death_rank": 2,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 549,
+      "child": 1097,
+      "parent_death_rank": 3,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 552,
+      "child": 1103,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 561,
+      "child": 1121,
+      "parent_death_rank": 5,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 567,
+      "child": 1133,
+      "parent_death_rank": 6,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 572,
+      "child": 1143,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 575,
+      "child": 1149,
+      "parent_death_rank": 2,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 576,
+      "child": 1151,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 579,
+      "child": 1157,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 588,
+      "child": 1175,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 594,
+      "child": 1187,
+      "parent_death_rank": 3,
+      "child_generation_rank": 4
+    },
+    {
+      "parent": 606,
+      "child": 1211,
+      "parent_death_rank": 1,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 635,
+      "child": 1269,
+      "parent_death_rank": 4,
+      "child_generation_rank": 6
+    },
+    {
+      "parent": 650,
+      "child": 1299,
+      "parent_death_rank": 1,
+      "child_generation_rank": 5
+    },
+    {
+      "parent": 651,
+      "child": 1301,
+      "parent_death_rank": 2,
+      "child_generation_rank": 6
+    }
+  ],
+  "transient_q_sample": [
+    {
+      "parent": 6,
+      "child": 11,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 8,
+      "child": 15,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 11,
+      "child": 21,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 12,
+      "child": 23,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 15,
+      "child": 29,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 18,
+      "child": 35,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 20,
+      "child": 39,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 23,
+      "child": 45,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 24,
+      "child": 47,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 29,
+      "child": 57,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 30,
+      "child": 59,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 32,
+      "child": 63,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 36,
+      "child": 71,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 38,
+      "child": 75,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 42,
+      "child": 83,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 45,
+      "child": 89,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 47,
+      "child": 93,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 48,
+      "child": 95,
+      "parent_death_rank": 1,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 54,
+      "child": 107,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 56,
+      "child": 111,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 57,
+      "child": 113,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 59,
+      "child": 117,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 60,
+      "child": 119,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 62,
+      "child": 123,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 68,
+      "child": 135,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 71,
+      "child": 141,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 72,
+      "child": 143,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 74,
+      "child": 147,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 78,
+      "child": 155,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 83,
+      "child": 165,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    },
+    {
+      "parent": 86,
+      "child": 171,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 89,
+      "child": 177,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 90,
+      "child": 179,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 92,
+      "child": 183,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 93,
+      "child": 185,
+      "parent_death_rank": 3,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 95,
+      "child": 189,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 96,
+      "child": 191,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 102,
+      "child": 203,
+      "parent_death_rank": 1,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 104,
+      "child": 207,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 107,
+      "child": 213,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 108,
+      "child": 215,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 111,
+      "child": 221,
+      "parent_death_rank": 2,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 113,
+      "child": 225,
+      "parent_death_rank": 5,
+      "child_death_rank": 6
+    },
+    {
+      "parent": 114,
+      "child": 227,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 116,
+      "child": 231,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 123,
+      "child": 245,
+      "parent_death_rank": 5,
+      "child_death_rank": 6
+    },
+    {
+      "parent": 128,
+      "child": 255,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 132,
+      "child": 263,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 135,
+      "child": 269,
+      "parent_death_rank": 4,
+      "child_death_rank": 5
+    },
+    {
+      "parent": 138,
+      "child": 275,
+      "parent_death_rank": 1,
+      "child_death_rank": 2
+    },
+    {
+      "parent": 140,
+      "child": 279,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 141,
+      "child": 281,
+      "parent_death_rank": 3,
+      "child_death_rank": 4
+    },
+    {
+      "parent": 143,
+      "child": 285,
+      "parent_death_rank": 2,
+      "child_death_rank": 3
+    }
+  ],
+  "elapsed_seconds": 8.711954099999275
+}

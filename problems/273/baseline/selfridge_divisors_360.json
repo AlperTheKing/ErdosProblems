@@ -1,0 +1,20 @@
+{
+  "schema": "erdos-273-covering-system-v1",
+  "name": "Reconstructed p>=3 divisor-of-360 baseline",
+  "problem": 273,
+  "expected_lcm": 360,
+  "congruences": [
+    {"residue": 0, "modulus": 2},
+    {"residue": 1, "modulus": 4},
+    {"residue": 1, "modulus": 6},
+    {"residue": 3, "modulus": 10},
+    {"residue": 3, "modulus": 12},
+    {"residue": 11, "modulus": 18},
+    {"residue": 17, "modulus": 30},
+    {"residue": 23, "modulus": 36},
+    {"residue": 35, "modulus": 40},
+    {"residue": 11, "modulus": 60},
+    {"residue": 71, "modulus": 72},
+    {"residue": 179, "modulus": 180}
+  ]
+}

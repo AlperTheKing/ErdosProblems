@@ -1,0 +1,26 @@
+{
+  "schema":"C95-quarter-event-census-v1",
+  "limit":1000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "definitions":{"A_H":"hard even roots whose seed-2 top at X is not generated","D":"structural splitless even roots whose seed-2 top at X is generated","event":"a hard birth, hard-chain death, or splitless-chain healing"},
+  "counts":{"allowed":666666,"generated":457599,"hard_roots":45583,"A_H":27056,"hard_chain_deaths":18527,"splitless_values":108651,"splitless_roots":108651,"D":44271,"B_3":4739,"unhealed_splitless_roots":64380},
+  "event_audit":{"event_count":113120,"positive_demand_events":113119,"six_D_lt_five_A_H_count":0,"first_six_D_lt_five_A_H":null,"four_D_le_three_A_H_count":0,"first_four_D_le_three_A_H":null,"minimum_D_over_A_H":{"D":5,"A_H":6,"X":186,"reduced_numerator":5,"reduced_denominator":6}},
+  "quarter_audit":{"additive_identity":"F=D+A_H(floor(X/4))-A_H(X)","minimum_F":{"value":-1,"X":186,"A_H":6,"D":5,"A_H_floor_X_over_4":0},"F_below_minus_one_count":0,"weighted_identity":"G=7*A_H(floor(X/4))-2*D","maximum_G":{"value":0,"X":2,"A_H":0,"D":0,"A_H_floor_X_over_4":0},"G_above_zero_count":0,"direct_identity":"J=7*A_H(X)-9*D(X)","maximum_J":{"value":0,"X":2,"A_H":0,"D":0,"A_H_floor_X_over_4":0},"J_above_seven_count":0,"actual_shell_identity":"A_H-D-B_3","maximum_actual_shell_excess":{"value":0,"X":2,"A_H":0,"D":0,"A_H_floor_X_over_4":0},"seed3_quarter_identity":"B_3-A_H(floor(X/4))","maximum_seed3_minus_quarter":{"value":8,"X":3620,"A_H":142,"D":139,"A_H_floor_X_over_4":28}},
+  "c87_regression_checkpoints":[
+    {"X":2,"A_H":0,"D":0,"hard_roots":0,"splitless_roots":0},
+    {"X":54,"A_H":1,"D":1,"hard_roots":1,"splitless_roots":11},
+    {"X":74,"A_H":2,"D":2,"hard_roots":2,"splitless_roots":15},
+    {"X":186,"A_H":6,"D":5,"hard_roots":6,"splitless_roots":34},
+    {"X":362,"A_H":11,"D":10,"hard_roots":12,"splitless_roots":62},
+    {"X":1000,"A_H":34,"D":34,"hard_roots":41,"splitless_roots":156},
+    {"X":2000,"A_H":83,"D":72,"hard_roots":97,"splitless_roots":298},
+    {"X":5000,"A_H":196,"D":186,"hard_roots":253,"splitless_roots":701},
+    {"X":10000,"A_H":391,"D":374,"hard_roots":518,"splitless_roots":1344},
+    {"X":16620,"A_H":656,"D":657,"hard_roots":888,"splitless_roots":2161},
+    {"X":100000,"A_H":3386,"D":4279,"hard_roots":5108,"splitless_roots":11928},
+    {"X":1000000,"A_H":27056,"D":44271,"hard_roots":45583,"splitless_roots":108651}
+  ],
+  "digests":{"algorithm":"FNV-1a-64 little-endian","classification_2_through_limit":"87339232cc226911","event_X_A_H_D":"0bc68a895534df4b"},
+  "resources":{"allocated_core_bytes":3000007,"odd_spf_bytes":1000002,"state_bytes":1000001}
+}

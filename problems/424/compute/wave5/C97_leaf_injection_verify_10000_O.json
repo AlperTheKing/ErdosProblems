@@ -1,0 +1,20 @@
+{
+  "D_114": [
+    6,
+    18,
+    20
+  ],
+  "claim": "problems/424/compute/wave5/C97_leaf_injection_10000.json",
+  "deficit_after_singleton": 1,
+  "first_failure_X": 114,
+  "integer_cutoffs_checked": 113,
+  "matching_number": 1,
+  "recursive_values_evaluated": 102,
+  "schema": "C97-healed-leaf-hall-verifier-v1",
+  "status": "exact_match",
+  "young_sources": [
+    54,
+    74,
+    114
+  ]
+}

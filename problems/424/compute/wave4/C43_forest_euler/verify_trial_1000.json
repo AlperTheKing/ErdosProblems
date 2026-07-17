@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "limit": 1000,
+  "descending_check": {
+    "updates": 7,
+    "membership_mismatches": [],
+    "rank_mismatches": []
+  },
+  "first_all_lower_component_failure": {
+    "X": 114,
+    "d": 2,
+    "positive_sum": 2,
+    "components": [
+      {
+        "anchor": 6,
+        "hard": [
+          54
+        ],
+        "targets": [
+          {
+            "child": 41,
+            "parent": 21
+          }
+        ],
+        "deficit": 0
+      },
+      {
+        "anchor": 8,
+        "hard": [
+          74
+        ],
+        "targets": [],
+        "deficit": 1
+      },
+      {
+        "anchor": 12,
+        "hard": [
+          114
+        ],
+        "targets": [],
+        "deficit": 1
+      },
+      {
+        "anchor": 18,
+        "hard": [],
+        "targets": [
+          {
+            "child": 69,
+            "parent": 35
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 20,
+        "hard": [],
+        "targets": [
+          {
+            "child": 77,
+            "parent": 39
+          }
+        ],
+        "deficit": -1
+      }
+    ]
+  },
+  "tight_prefix_component_decomposition": {
+    "X": 362,
+    "d": 2,
+    "global_excess": 1,
+    "positive_sum": 8,
+    "negative_sum": -7,
+    "positive_count": 4,
+    "negative_count": 7,
+    "components": [
+      {
+        "anchor": 6,
+        "hard": [
+          54,
+          114,
+          186,
+          252,
+          318,
+          362
+        ],
+        "targets": [
+          {
+            "child": 41,
+            "parent": 21
+          }
+        ],
+        "deficit": 5
+      },
+      {
+        "anchor": 8,
+        "hard": [
+          74
+        ],
+        "targets": [],
+        "deficit": 1
+      },
+      {
+        "anchor": 18,
+        "hard": [
+          174
+        ],
+        "targets": [
+          {
+            "child": 69,
+            "parent": 35
+          }
+        ],
+        "deficit": 0
+      },
+      {
+        "anchor": 20,
+        "hard": [],
+        "targets": [
+          {
+            "child": 77,
+            "parent": 39
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 24,
+        "hard": [
+          234
+        ],
+        "targets": [],
+        "deficit": 1
+      },
+      {
+        "anchor": 30,
+        "hard": [
+          294
+        ],
+        "targets": [
+          {
+            "child": 233,
+            "parent": 117
+          }
+        ],
+        "deficit": 0
+      },
+      {
+        "anchor": 36,
+        "hard": [
+          354
+        ],
+        "targets": [],
+        "deficit": 1
+      },
+      {
+        "anchor": 38,
+        "hard": [],
+        "targets": [
+          {
+            "child": 149,
+            "parent": 75
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 60,
+        "hard": [],
+        "targets": [
+          {
+            "child": 237,
+            "parent": 119
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 66,
+        "hard": [],
+        "targets": [
+          {
+            "child": 131,
+            "parent": 66
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 110,
+        "hard": [],
+        "targets": [
+          {
+            "child": 219,
+            "parent": 110
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 120,
+        "hard": [],
+        "targets": [
+          {
+            "child": 239,
+            "parent": 120
+          }
+        ],
+        "deficit": -1
+      },
+      {
+        "anchor": 126,
+        "hard": [],
+        "targets": [
+          {
+            "child": 251,
+            "parent": 126
+          }
+        ],
+        "deficit": -1
+      }
+    ]
+  },
+  "critical_sibling_witness": {
+    "pairs_774": [
+      [
+        5,
+        155
+      ]
+    ],
+    "rank_155": 1,
+    "member_309": false,
+    "rank_309": 4,
+    "rank_774": 2
+  }
+}

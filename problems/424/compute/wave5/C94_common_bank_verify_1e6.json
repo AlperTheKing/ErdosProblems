@@ -1,0 +1,134 @@
+{
+  "all_cutoff_three_quarter_gate": {
+    "last_failure": null,
+    "maximum_deficit": {
+      "A_H": 0,
+      "D": 0,
+      "X": 2,
+      "value": 0
+    },
+    "minimum_positive_D_over_A_H": {
+      "X": 186,
+      "denominator": 6,
+      "numerator": 5
+    }
+  },
+  "bounded_depth_probe": {
+    "all_holes": true,
+    "chain": [
+      2340,
+      4679,
+      9357,
+      18713,
+      37425,
+      74849,
+      149697,
+      299393,
+      598785
+    ],
+    "root": 2340,
+    "visible_depth": 8
+  },
+  "counts": {
+    "A_H": 27056,
+    "D": 44271,
+    "generated": 457599,
+    "hard": 45583,
+    "holes": 209067,
+    "persistent_splitless": 64380,
+    "splitless": 108651
+  },
+  "expected_comparison": "exact_match",
+  "limit": 1000000,
+  "quarter_scale_gates": {
+    "local_shadow_probe": {
+      "A_H_floor_cutoff_over_4": 0,
+      "complete_splitless_shadow": [
+        8
+      ],
+      "cutoff": 186,
+      "factor_descent": [
+        74,
+        15,
+        8
+      ],
+      "shadow_chain": [
+        8,
+        15,
+        29,
+        57,
+        113
+      ],
+      "shadow_healed_by_cutoff": false,
+      "source": 74,
+      "source_chain": [
+        74,
+        147
+      ]
+    },
+    "maximum_additive_defect": {
+      "A_H": 6,
+      "A_H_floor_X_over_4": 0,
+      "D": 5,
+      "X": 186,
+      "value": 1
+    },
+    "maximum_weighted_defect": {
+      "A_H": 0,
+      "A_H_floor_X_over_4": 0,
+      "D": 0,
+      "X": 2,
+      "value": 0
+    },
+    "power_of_ten_samples": [
+      {
+        "A_H": 0,
+        "A_H_floor_X_over_4": 0,
+        "D": 0,
+        "X": 10,
+        "additive_defect": 0,
+        "weighted_defect": 0
+      },
+      {
+        "A_H": 2,
+        "A_H_floor_X_over_4": 0,
+        "D": 3,
+        "X": 100,
+        "additive_defect": -1,
+        "weighted_defect": -6
+      },
+      {
+        "A_H": 34,
+        "A_H_floor_X_over_4": 7,
+        "D": 34,
+        "X": 1000,
+        "additive_defect": -7,
+        "weighted_defect": -19
+      },
+      {
+        "A_H": 391,
+        "A_H_floor_X_over_4": 96,
+        "D": 374,
+        "X": 10000,
+        "additive_defect": -79,
+        "weighted_defect": -76
+      },
+      {
+        "A_H": 3386,
+        "A_H_floor_X_over_4": 943,
+        "D": 4279,
+        "X": 100000,
+        "additive_defect": -1836,
+        "weighted_defect": -1957
+      },
+      {
+        "A_H": 27056,
+        "A_H_floor_X_over_4": 7783,
+        "D": 44271,
+        "X": 1000000,
+        "additive_defect": -24998,
+        "weighted_defect": -34061
+      }
+    ]
+  }
+}

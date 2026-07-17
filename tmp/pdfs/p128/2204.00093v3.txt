@@ -1,0 +1,448 @@
+--- PAGE 1 ---
+The Spectrum of Triangle-free Graphs
+J´ ozsef Balogh∗ Felix Christian Clemen † Bernard Lidick´ y‡ Sergey Norin§
+Jan Volec¶
+January 5, 2023
+Abstract
+Denote by qn(G) the smallest eigenvalue of the signless Laplacian matrix of ann-vertex graph
+G. Brandt conjectured in 1997 that for regular triangle-free graphs qn(G)≤ 4n
+25 . We prove a
+stronger result: If G is a triangle-free graph then qn(G)≤ 15n
+94 < 4n
+25 . Brandt’s conjecture is a
+subproblem of two famous conjectures of Erd˝ os:
+(1) Sparse-Half-Conjecture: Every n-vertex triangle-free graph has a subset of vertices of
+size⌈ n
+2⌉ spanning at most n2/50 edges.
+(2) Every n-vertex triangle-free graph can be made bipartite by removing at most n2/25
+edges.
+In our proof we use linear algebraic methods to upper bound qn(G) by the ratio between the
+number of induced paths with 3 and 4 vertices. We give an upper bound on this ratio via the
+method of ﬂag algebras.
+1 Introduction
+We prove a result on eigenvalues of triangle-free graphs which is motivated by the following two
+famous conjectures of Erd˝ os.
+Conjecture 1.1 (Erd˝ os’Sparse Half Conjecture [9, 10]). Every triangle-free graph on n vertices
+has a subset of vertices of size ⌈ n
+2⌉ vertices spanning at most n2/50 edges.
+Erd˝ os oﬀered a $250 reward for proving this conjecture. There has been progress on this
+conjecture in various directions [4, 12, 14, 15, 17]. Most recently, Razborov [17] proved that every
+∗Department of Mathematics, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA. E-mail:
+jobal@illinois.edu. Research is partially supported by NSF Grants DMS-1764123, RTG DMS 1937241 and FRG
+DMS-2152488, Arnold O. Beckman Research Award (UIUC Campus Research Board RB 22000), the Langan Scholar
+Fund (UIUC), and the Simons Fellowship.
+† Department of Mathematics, University of Illinois at Urbana-Champaign, Urbana, Illinois 61801, USA, E-mail:
+fclemen2@illinois.edu.
+‡ Iowa State University, Department of Mathematics, Iowa State University, Ames, IA., E-mail: lidicky@
+iastate.edu. Research of this author is partially supported by NSF grants DMS-1855653 and FRG DMS-2152498
+and Scott Hanna fellowship.
+§Department of Mathematics and Statistics, McGill University, Montreal, QC, Canada.sergey.norin@mcgill.ca.
+Research of this author was supported by an NSERC Discovery Grant.
+¶Department of Mathematics, Czech Technical University in Prague, Prague, Czech Republic. jan@ucw.cz. Re-
+search of this author is partially supported by Czech Science Foundation GA ˇCR, grant 23-06815M.
+1
+arXiv:2204.00093v3  [math.CO]  4 Jan 2023
+
+--- PAGE 2 ---
+triangle-free graph on n vertices has an induced subgraph on n/2 vertices with at most (27/1024)n2
+edges.
+For a graph G, denote by D2(G) the minimum number of edges which have to be removed to
+make G bipartite.
+Conjecture 1.2 (Erd˝ os [9]). Let G be a triangle-free graph on n vertices. Then D2(G)≤ n2/25.
+There also has been work on this conjecture [1,3,11,13,18], most recently, Balogh, Clemen and
+Lidick´ y [3] provedD2(G)≤ n2/23.5.
+Brandt [5] found a surprising connection between these two conjectures and the eigenvalues of
+triangle-free graphs. Denote by λn(G)≤ . . .≤ λ1(G) the eigenvalues of the adjacency matrix of an
+n-vertex graph G. Brandt [5] proved that
+D2(G)≥ λ1(G) + λn(G)
+4 · n (1)
+for regular graphs and conjectured the following.
+Conjecture 1.3 (Brandt [5]). Let G be a triangle-free regular n-vertex graph. Then
+λ1(G) + λn(G)≤ 4
+25· n.
+Towards this conjecture, Brandt [5] proved a bound λ1(G)+ λn(G)≤ (3−2
+√
+2)n≈ 0.1715n for
+regular triangle-free graphs, which was very recently shown to hold also in the non-regular setting
+by Csikv´ ari [7]. Brandt also noted thatλ1(GHS )+ λn(GHS ) = 0.14n for the so-called Higman-Sims
+graph GHS , which is the unique strongly regular graph with parameters ( n, d, t, k) = (100, 22, 0, 6).
+Recall that an ( n, d, t, k)-strongly regular graph is an n-vertex d-regular graph, where the number
+of common neighbors of every pair of adjacent vertices is t and the number of common neighbors
+of a non-adjacent pair of vertices is k.
+The value 4 /25 is motivated by the fact that if either of Conjectures 1.1 or 1.2 were true, it
+would imply Conjecture 1.3. As observed by Brandt [5], Conjecture 1.1 implies Conjecture 1.3 by
+applying the following version of the Expander Mixing Lemma for a set S⊂ V (G) of size n/2 with
+e(S)≤ n2/50.
+Lemma 1.4 (Bussemaker-Cvetkovi´ c-Seidel [6], Alon-Chung [2]). Let G be an n-vertex d-regular
+graph. Then, for every S⊆ V (G), we have
+e(S)≥| S|· |S|d + (n−| S|)λn(G)
+2n .
+Given a graph G, denote by Q = A + D the signless Laplacian matrix of G, where D is the
+diagonal matrix of the degrees of G and A is the adjacency matrix of G. Let qn(G)≤ . . .≤ q1(G)
+be the eigenvalues of Q. By considering the signless Laplacian matrix, De Lima, Nikiforov and
+Olivera [8] extended (1) beyond regular graphs as follows.
+Theorem 1.5 (De Lima, Nikiforov and Olivera [8]) . For every n-vertex graph G we have
+D2(G)≥ qn(G)
+4 · n.
+2
+
+--- PAGE 3 ---
+By Theorem 1.5, if Conjecture 1.2 holds then qn(G)≤ 4n
+25 for every triangle-free n-vertex graph
+G. Motivated by this observation De Lima, Nikiforov and Olivera [8] proposed investigating upper
+bounds on qn(G), and proved qn(G)≤ 2n
+9 for n-vertex triangle-free graphs G. Our main result is
+an improvement of this bound, which solves Conjecture 1.3.
+Theorem 1.6. If G is a triangle-free n-vertex graph, then
+qn(G)≤ 15
+94· n < 0.1596n.
+Note that, if G is d-regular, then λ1(G) = d and qn(G) = λn(G) + d = λn(G) + λ1(G). Thus
+Theorem 1.6 implies that λ1(G) + λn(G) < 0.1596n < 4n
+25 for every regular triangle-free n-vertex
+graph G, conﬁrming Conjecture 1.3 in strong form.
+It remains open to determine a sharp upper bound for qn(G)/n for triangle-free n-vertex graph
+G. While we only prove Theorem 1.6 with the constant 15
+94≈ 0.1596, a larger ﬂag algebra com-
+putation yields qn(G) < 0.15467n. Also, one can additionally assume that G is regular and use
+ﬂag algebras to show a slightly stronger bound qn(G) = λ1(G) + λn(G) < 0.15442n. As we believe
+neither of these two bounds are sharp (see Section 3), we omit presenting their proofs.
+2 Proof of Theorem 1.6
+Our proof is based on bounding the ratio between the number of induced paths with 3 and 4 vertices
+in triangle-free graphs. On one hand, we upper bound qn(G) in terms of this ratio in Lemma 2.1
+and Corollary 2.2. On the other hand, Lemma 2.3, which is proved using ﬂag algebras, gives a
+suﬃciently good bound on the ratio.
+For an edge e = xy of a graph G, let mxy be the number of edges uv ∈ E(G) such that
+ux, vy∈ E(G). For a vertex x∈ V (G), let wx to be the number of walks of length two starting in
+x, i.e. wx is the number of edges uv∈ E(G) such that xu∈ E(G).
+Lemma 2.1. If G is an n-vertex triangle-free graph and xy∈ E(G), then
+(deg(x) + deg(y))· qn(G)≤ wx + wy− 2mxy . (2)
+Proof. Deﬁne a vector z = (zv)v∈V (G)∈ RV (G) by
+zv =
+
+
+
++1, if xv∈ E(G),
+−1, if yv∈ E(G),
+0, otherwise.
+The vector z is well-deﬁned since G is triangle-free. Also note that ∥z∥2 = deg(x) + deg(y). Let Q
+be the signless Laplacian matrix of G. We have
+zT Qz =
+∑
+u,v∈V (G)
+Quvzuzv =
+∑
+u∈V (G)
+(zu)2 deg(u) + 2·
+∑
+uv∈E(G)
+zuzv
+= wx + wy + 2·
+∑
+uv∈E(G)
+zuzv = wx + wy− 2mxy,
+3
+
+--- PAGE 4 ---
+where in the last equality we used that G is triangle-free. Since Q is symmetric, qn(G) is upper
+bounded by the Rayleigh-Ritz quotient of z, i.e.
+qn(G)≤ zT Qz
+∥z∥2 = wx + wy− 2mxy
+deg(x) + deg(y) ,
+as desired. □
+A map ϕ : V (H)→ V (G) is a strong homomorphism from a graph H to a graph G if for every
+pair of vertices u, v∈ V (H) we have uv∈ E(H) if and only if ϕ(u)ϕ(v)∈ E(G). Let hom s(H, G)
+denote the number of strong homomorphisms from H to G. Let Pk denote the k-vertex path.
+Summing the bound from Lemma 2.1 over all the edges of G yields the following.
+Corollary 2.2. If G is an n-vertex triangle-free graph, then
+homs(P3, G)· qn(G)≤ homs(P4, G) . (3)
+Proof. First, note that
+∑
+xy∈E(G)
+(deg(x) + deg(y)) =
+∑
+x∈V (G)
+deg2(x) = homs(P3, G), (4)
+where in the last equality we used thatG is triangle-free. Meanwhile, ∑
+xy∈E(G)(wx+wy) is equal to
+the number of walks of length three in G, i.e. the number of maps φ :{1, 2, 3, 4}→ V (G) such that
+{φ(1)φ(2), φ(2)φ(3), φ(3)φ(4)}⊂ E(G). Similarly, the expression 2 ∑
+xy∈E(G) mxy is equal to the
+number of maps φ :{1, 2, 3, 4}→ V (G) such that{φ(1)φ(2), φ(2)φ(3), φ(3)φ(4), φ(4)φ(1)}⊂ E(G).
+It follows that ∑
+xy∈E(G)(wx + wy− 2mxy) counts the maps ψ :{1, 2, 3, 4} →V (G) such that
+{ψ(1)ψ(2), ψ(2)ψ(3), ψ(3)ψ(4)}⊂ E(G) and ψ(4)ψ(1) < E(G), i.e.,
+∑
+xy∈E(G)
+(wx + wy− 2mxy) = homs(P4, G). (5)
+Summing (2) over all xy∈ E(G) and using (4) and (5), we obtain (3). □
+Theorem 1.6 is an immediate consequence of the above corollary and the following lemma which
+is proved using standard, albeit computer-assisted ﬂag-algebra calculation.
+Lemma 2.3. If G is an n-vertex triangle-free graph, then
+homs(P4, G)≤ 15n
+94 · homs(P3, G). (6)
+Proof. Suppose the lemma is false, and let G be an n-vertex triangle-free graph such that
+homs(P4, G) = 15n
+94 · homs(P3, G) + εn4 , (7)
+for some ε > 0. Let G(b) be the b-blowup of G, obtained by replacing every vertex of G by b
+pairwise non-adjacent vertices. Then hom s(Pk, G(b)) = homs(Pk, G)· bk for k = 3, 4. In particular,
+for every b∈ N, the graph G(b) satisﬁes the analogue of (7) as well.
+Let us now reformulate (7) in the ﬂag algebra language [16]. Given a graph H, let p
+(
+, H
+)
+be the probability that a 3-vertex subset of V (H) chosen uniformly at random induces exactly
+4
+
+--- PAGE 5 ---
+F1
+F2
+F3
+F4
+F5
+F6
+F7
+F8
+F9
+F10
+F11
+F12
+Figure 1: The set F of 5-vertex triangle-free graphs with at least 2 edges.
+two edges. Analogously, let p
+(
+, H
+)
+be the probability that a randomly chosen 4-vertex subset
+induces a path of length 3.
+For every ﬁxed ℓ-vertex graph F and a k-vertex graph H, only O(kℓ−1) maps V (F )→ V (H)
+are non-injective. Therefore, hom s(F, H) =| Aut(F)|· p(F, H)·
+(k
+ℓ
+)
++ O(kℓ−1), so in particular every
+k-vertex triangle-free graph H satisﬁes
+homs(P4, H) = k4
+12· p
+(
+, H
+)
++ O
+(
+k3
+)
+and hom s(P3, H) = k3
+3 · p
+(
+, H
+)
++ O
+(
+k2
+)
+.
+Therefore, the fact G(b) satisﬁes (7), after multiplying by 564 /(bn)4 and rearranging, translates to
+lim
+b→∞
+30· p
+(
+, G(b)
+)
+− 47· p
+(
+, G(b)
+)
+=−564ε4.
+In order to derive a contradiction, we present a ﬂag algebra computation proving that an inequality
+30·
+ − 47·
+ ≥ 0 (8)
+asymptotically holds in the theory of triangle-free graphs. To see that, consider the following
+6 ﬂag-algebra expressions, which are all non-negative:
+1)
+(
+13·
+(
+1 32
++
+1 32 +
+1 32
+)
+− 52·
+(
+1 32
++
+1 32 +
+1 32
+)
++ 84·
+1 32
+)2
+2)
+(
+31·
+(
+1
+2 3
++
+1
+2 3
+)
+− 63·
+(
+1
+2 3
++
+1
+2 3
+)
++ 3·
+1
+2 3
+)2
+3)
+(
+94·
+1 − 55·
+1 − 14·
+1 + 58·
+1
+)2
+4)
+1 2 ×
+(
+2·
+1 2 + 10·
+1 2 − 24·
+1 2
+)2
+5)
+1 2 ×
+(
+14·
+1 2 + 19·
+1 2 − 44·
+1 2
+)2
+6)
+1 2 ×
+(
+9·
+1 2 − 14·
+1 2 − 3·
+1 2
+)2
+LetF be the set of all the 5-vertex triangle-free graphs with at least 2 edges. A case analysis
+yields|F| = 12; see Figure 1. Now observe that averaging over all choices of the labelled vertices in
+each of the 6 expressions yields a linear combination of subgraph densities, where every term has
+5
+
+--- PAGE 6 ---
+5 vertices and at least 2 edges. Thus a ﬂag algebra argument yields that the average of the i-th
+expression is equal to the i-th coordinate of M· (vF)T , where vF = (F1, . . . , F12) and
+M = 1
+30×
+
+
+(
+
+507 2028 0 −4056 −3549 0 1248 8112 16224 −13104 0 21168
+0 0 2883 381 961 0 −3906 −4098 3844 63 19845 0
+12100 −23688 −19140 −23620 12172 20184 −37248 17486 47664 2956 86730 −7392
+0 0 6 140 0 0 −48 −100 0 358 −1200 0
+196 0 798 196 −420 2166 762 −1036 −2464 −702 −3080 792
+81 0 −378 81 54 1176 −165 27 −108 −87 −135 279
+.
+On the other hand, another ﬂag algebra argument yields that the left-hand side of (8) is equal to
+3· F1 + 9· F3 + 3· F4− 17
+5 · F5 + 18· F6− 34
+5 · F7− 49
+5 · F8 + 12· F9− 4
+5· F10− 32· F11 + 27· F12.
+A tedious yet straightforward calculation reveals the following coordinate-wise inequality
+( 1
+33 , 12
+209 , 3
+1147 , 231
+163 , 17
+84 , 12
+293
+)
+· M <
+(
+3, 0, 9, 3,−17
+5 , 18,−34
+5 ,−49
+5 , 12,−4
+5 ,−32, 27
+)
+,
+which in turn shows that (8) asymptotically holds in the theory of triangle-free graphs. □
+The ﬂag algebra calculations used in the proof of Lemma 2.3 can be independently veriﬁed by
+a SAGE script, which is available as an ancillary ﬁle of the arXiv version of this manuscript.
+3 Concluding remarks
+As we have already mentioned in the introduction, a signiﬁcantly larger ﬂag algebra computation
+than the one used in our proof yields that qn(G) < 0.15467n for every triangle-free n-vertex graph.
+Similarly, assuming that G is regular allows us to show λ1(G) + λn(G) < 0.15442n. On the other
+hand, our method will be able to get neither of the coeﬃcients below 42 /275 = 0.1527.
+Indeed, consider the Higman-Sims graph GHS . It is edge-transitive so mxy = 21· 6 + 22 for
+every xy∈ E(GHS ), and wx = 222 for every x∈ V (G), where mxy and wx are deﬁned as before
+Lemma 2.1. Therefore,
+wx + wy− 2mxy
+(deg(x) + deg(y))·| V (GHS )| = 2(222− 21· 6− 22)
+2· 22· 100 = 42
+275 ,
+for every xy∈ E(GHS ), and so Lemma 2.1 only yields qn(GHS )≤ 42
+275·| V (GHS )|. However, we
+have qn(GHS ) = λ1(GHS ) + λn(GHS ) = 0.14·| V (GHS )|. It might be that qn(G)≤ 0.14n holds for
+every triangle-free graph G on n vertices.
+Acknowledgements
+We thank anonymous referees for carefully reading the manuscript.
+References
+[1] N. Alon. Bipartite subgraphs. Combinatorica, 16(3):301–311, 1996. doi:10.1007/BF01261315.
+6
+
+--- PAGE 7 ---
+[2] N. Alon and F. R. K. Chung. Explicit construction of linear sized tolerant networks. In
+Proceedings of the First Japan Conference on Graph Theory and Applications (Hakone, 1986) ,
+volume 72, pages 15–19, 1988. doi:10.1016/0012-365X(88)90189-6.
+[3] J. Balogh, F. C. Clemen, and B. Lidick´ y. Max cuts in triangle-free graphs. Trends
+in Mathematics (Extended Abstracts EuroComb 2021) , 14:509–514, 2021. doi:10.1007/
+978-3-030-83823-2_82 .
+[4] W. Bedenknecht, G. O. Mota, C. Reiher, and M. Schacht. On the local density problem for
+graphs of given odd-girth. J. Graph Theory, 90(2):137–149, 2019. doi:10.1002/jgt.22372.
+[5] S. Brandt. The local density of triangle-free graphs. Discrete Math., 183(1-3):17–25, 1998.
+doi:10.1016/S0012-365X(97)00074-5.
+[6] F. C. Bussemaker, D. M. Cvetkovi´ c, and J. J. Seidel. Graphs related to exceptional root
+systems. In Combinatorics (Proc. Fifth Hungarian Colloq., Keszthely, 1976), Vol. I , volume 18
+of Colloq. Math. Soc. J´ anos Bolyai, pages 185–191. North-Holland, Amsterdam-New York,
+1978.
+[7] P. Csikv´ ari. Note on the sum of the smallest and largest eigenvalues of a triangle-free graph,
+2022. arXiv:2205.08873.
+[8] L. de Lima, V. Nikiforov, and C. Oliveira. The clique number and the smallest Q-eigenvalue
+of graphs. Discrete Math., 339(6):1744–1752, 2016. doi:10.1016/j.disc.2016.02.002.
+[9] P. Erd˝ os. Problems and results in graph theory and combinatorial analysis. In Proceedings of
+the Fifth British Combinatorial Conference (Univ. Aberdeen, Aberdeen, 1975) , pages 169–192.
+Congressus Numerantium, No. XV, 1976.
+[10] P. Erd˝ os. Some old and new problems in various branches of combinatorics. Discrete Math.,
+165/166:227–231, 1997. doi:10.1016/S0012-365X(96)00173-2.
+[11] P. Erd˝ os, R. Faudree, J. Pach, and J. Spencer. How to make a graph bipartite. J. Combin.
+Theory Ser. B , 45(1):86–98, 1988. doi:10.1016/0095-8956(88)90057-3.
+[12] P. Erd˝ os, R. J. Faudree, C. C. Rousseau, and R. H. Schelp. A local density condition for
+triangles. Discrete Math., 127:153–161, 1994. Graph theory and applications (Hakone, 1990).
+doi:10.1016/0012-365X(92)00474-6.
+[13] P. Erd˝ os, E. Gy˝ ori, and M. Simonovits. How many edges should be deleted to make a triangle-
+free graph bipartite? In Sets, graphs and numbers (Budapest, 1991) , volume 60 of Colloq.
+Math. Soc. J´ anos Bolyai, pages 239–263. North-Holland, Amsterdam, 1992.
+[14] P. Keevash and B. Sudakov. Sparse halves in triangle-free graphs. J. Combin. Theory Ser. B ,
+96(4):614–620, 2006. doi:10.1016/j.jctb.2005.11.003.
+[15] S. Norin and L. Yepremyan. Sparse halves in dense triangle-free graphs. J. Combin. Theory
+Ser. B, 115:1–25, 2015. doi:10.1016/j.jctb.2015.04.006.
+[16] A. A. Razborov. Flag algebras. J. Symbolic Logic, 72(4):1239–1282, 2007. doi:10.2178/jsl/
+1203350785.
+7
+
+--- PAGE 8 ---
+[17] A. A. Razborov. More about sparse halves in triangle-free graphs. Sbornik: Mathematics ,
+213(1):109–128, 2022. doi:10.1070/sm9615.
+[18] J. B. Shearer. A note on bipartite subgraphs of triangle-free graphs. Random Structures &
+Algorithms, 3(2):223–226, 1992. doi:10.1002/rsa.3240030211.
+8

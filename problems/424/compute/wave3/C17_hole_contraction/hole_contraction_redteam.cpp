@@ -48,6 +48,7 @@ struct Snapshot {
     std::uint64_t hard_reducible;
     std::uint64_t seed2_healed;
     std::uint64_t missing_half;
+    std::uint64_t missing_third;
     std::uint64_t direct_num;
     std::uint64_t direct_den;
     Rational reciprocal_charge;
@@ -73,6 +74,7 @@ struct RankCapAudit {
     std::uint32_t last_failure_x;
     std::uint64_t maximum_excess;
     std::uint32_t maximum_excess_x;
+    bool in_failure;
 };
 
 bool is_allowed(std::uint32_t value) {
@@ -141,10 +143,18 @@ void observe_rank_cap(
     std::uint32_t x,
     std::uint64_t hard_reducible
 ) {
-    if (hard_reducible <= audit.healed) return;
+    if (hard_reducible <= audit.healed) {
+        if (audit.in_failure) {
+            audit.last_failure_x = x - 1;
+            audit.in_failure = false;
+        }
+        return;
+    }
     const std::uint64_t excess = hard_reducible - audit.healed;
-    if (audit.first_failure_x == 0) audit.first_failure_x = x;
-    audit.last_failure_x = x;
+    if (!audit.in_failure) {
+        if (audit.first_failure_x == 0) audit.first_failure_x = x;
+        audit.in_failure = true;
+    }
     if (excess > audit.maximum_excess) {
         audit.maximum_excess = excess;
         audit.maximum_excess_x = x;
@@ -171,6 +181,7 @@ Snapshot make_snapshot(
     const std::uint64_t missing = missing_prefix[x];
     const std::uint64_t reducible = missing - splitless;
     const std::uint32_t half = (x + 1) / 2;
+    const std::uint32_t third = (x + 1) / 3;
     if (reducible != odd_reducible + seed3_even_reducible + hard_reducible) {
         throw std::runtime_error("reducible partition failed");
     }
@@ -289,6 +300,7 @@ Snapshot make_snapshot(
         hard_reducible,
         seed2_healed,
         missing_prefix[half],
+        missing_prefix[third],
         reducible,
         missing_prefix[half],
         incidence_sum(reciprocal_incidences),
@@ -330,6 +342,12 @@ void write_snapshot(std::ostream& out, const Snapshot& row) {
                static_cast<std::int64_t>(row.hard_reducible)
         << ",\n";
     out << "      \"missing_at_half\":" << row.missing_half << ",\n";
+    out << "      \"missing_at_third\":" << row.missing_third << ",\n";
+    out << "      \"two_scale_excess\":"
+        << static_cast<std::int64_t>(row.reducible) -
+               static_cast<std::int64_t>(row.missing_half) -
+               static_cast<std::int64_t>(row.missing_third)
+        << ",\n";
     out << "      \"direct_coefficient\":{\"numerator\":" << row.direct_num
         << ",\"denominator\":" << row.direct_den << "},\n";
     out << "      \"reciprocal_all_pair_charge\":";
@@ -452,8 +470,8 @@ int main(int argc, char** argv) {
     std::vector<std::uint64_t> rank_histogram{2};
     std::vector<std::uint64_t> healing_rank_histogram{0};
     std::vector<RankCapAudit> rank_cap_audits{
-        RankCapAudit{8, 0, 0, 0, 0, 0},
-        RankCapAudit{9, 0, 0, 0, 0, 0},
+        RankCapAudit{8, 0, 0, 0, 0, 0, false},
+        RankCapAudit{9, 0, 0, 0, 0, 0, false},
     };
 
     std::vector<std::uint32_t> checkpoints{32, 100, 362};
@@ -479,6 +497,7 @@ int main(int argc, char** argv) {
     std::uint64_t maximum_direct_den = 1;
     std::uint32_t maximum_direct_x = 0;
     std::uint32_t first_lambda_two_failure = 0;
+    std::uint32_t first_two_scale_failure = 0;
     std::uint64_t fixed_point_charge_num = 0;
     std::uint64_t maximum_fixed_point_num = 0;
     std::uint64_t maximum_fixed_point_den = 1;
@@ -629,6 +648,11 @@ int main(int argc, char** argv) {
             reducible >= 2 * denominator) {
             first_lambda_two_failure = n;
         }
+        const std::uint64_t missing_third = missing_prefix[(n + 1) / 3];
+        if (first_two_scale_failure == 0 &&
+            reducible > denominator + missing_third) {
+            first_two_scale_failure = n;
+        }
         const std::uint64_t fixed_denominator = kWeightScale * denominator;
         if (fixed_denominator > 0 &&
             uint128_t(fixed_point_charge_num) * maximum_fixed_point_den >
@@ -677,6 +701,9 @@ int main(int argc, char** argv) {
         ) != seed2_healed) {
         throw std::runtime_error("healing rank histogram mismatch");
     }
+    for (RankCapAudit& audit : rank_cap_audits) {
+        if (audit.in_failure) audit.last_failure_x = limit;
+    }
     maximum_direct_num /= direct_gcd;
     maximum_direct_den /= direct_gcd;
     const std::uint64_t fixed_gcd =
@@ -713,6 +740,8 @@ int main(int argc, char** argv) {
         << ",\"numerator\":" << maximum_direct_num
         << ",\"denominator\":" << maximum_direct_den << "},\n";
     out << "  \"first_lambda_two_failure_X\":" << first_lambda_two_failure
+        << ",\n";
+    out << "  \"first_two_scale_failure_X\":" << first_two_scale_failure
         << ",\n";
     out << "  \"maximum_fixed_point_coefficient\":{\"X\":"
         << maximum_fixed_point_x << ",\"numerator\":"
@@ -753,6 +782,7 @@ int main(int argc, char** argv) {
               << " max_fixed=" << maximum_fixed_point_num << "/"
               << maximum_fixed_point_den << " at=" << maximum_fixed_point_x
               << " lambda2_failure=" << first_lambda_two_failure
+              << " two_scale_failure=" << first_two_scale_failure
               << " fixed_lambda2_failure=" << first_fixed_point_lambda_two_failure
               << " max_pairs=" << maximum_pair_count
               << " elapsed_seconds=" << elapsed.count() << "\n";

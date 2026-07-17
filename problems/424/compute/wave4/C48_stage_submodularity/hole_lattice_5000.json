@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "limit": 5000,
+  "domain": "empty-base singleton directions D1,D2 contained in actual A\\G",
+  "first_submodularity_failure": {
+    "X": 594,
+    "D1": [
+      35
+    ],
+    "D2": [
+      119
+    ],
+    "mixed_difference": -1,
+    "last_node": 594,
+    "last_kind": "hard",
+    "last_node_pairs": [
+      [
+        5,
+        119
+      ],
+      [
+        17,
+        35
+      ]
+    ]
+  },
+  "first_supermodularity_failure": {
+    "X": 69,
+    "D1": [
+      12
+    ],
+    "D2": [
+      18
+    ],
+    "mixed_difference": 1,
+    "last_node": 35,
+    "last_kind": "terminal-parent",
+    "last_node_pairs": [
+      [
+        2,
+        18
+      ],
+      [
+        3,
+        12
+      ]
+    ]
+  },
+  "exhaustive_for_all_event_cutoffs_through_limit": true
+}

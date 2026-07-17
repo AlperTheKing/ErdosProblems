@@ -7,6 +7,7 @@
 #include <numeric>
 #include <stdexcept>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace {
@@ -59,6 +60,77 @@ void write_audit(std::ostream& out, const Audit& audit) {
         << ",\"maximum_excess_depth\":" << audit.maximum_depth << "}";
 }
 
+struct GreedyAudit {
+    static constexpr std::size_t kStoredUnmatched = 16;
+
+    explicit GreedyAudit(std::uint16_t offset) : rank_offset(offset) {}
+
+    std::uint16_t rank_offset;
+    std::array<std::uint64_t, kMaxDepth + 1> available{};
+    std::array<std::uint64_t, kMaxDepth + 1> matched_by_target_rank{};
+    std::uint64_t matched = 0;
+    std::uint64_t unmatched = 0;
+    std::uint32_t first_unmatched_x = 0;
+    std::uint16_t first_unmatched_depth = 0;
+    std::uint32_t last_unmatched_x = 0;
+    std::uint16_t last_unmatched_depth = 0;
+    std::vector<std::pair<std::uint32_t, std::uint16_t>> unmatched_prefix;
+
+    void add_target(std::uint16_t depth) {
+        ++available[depth];
+    }
+
+    void add_source(std::uint32_t x, std::uint16_t depth) {
+        const auto maximum_target_rank = std::min<std::size_t>(
+            static_cast<std::size_t>(depth) + rank_offset, kMaxDepth
+        );
+        for (std::int32_t rank =
+                 static_cast<std::int32_t>(maximum_target_rank);
+             rank >= 0;
+             --rank) {
+            const auto index = static_cast<std::size_t>(rank);
+            if (available[index] == 0) continue;
+            --available[index];
+            ++matched_by_target_rank[index];
+            ++matched;
+            return;
+        }
+
+        ++unmatched;
+        if (first_unmatched_x == 0) {
+            first_unmatched_x = x;
+            first_unmatched_depth = depth;
+        }
+        last_unmatched_x = x;
+        last_unmatched_depth = depth;
+        if (unmatched_prefix.size() < kStoredUnmatched) {
+            unmatched_prefix.emplace_back(x, depth);
+        }
+    }
+};
+
+void write_greedy_audit(std::ostream& out, const GreedyAudit& audit) {
+    const auto remaining = std::accumulate(
+        audit.available.begin(), audit.available.end(), std::uint64_t{0}
+    );
+    out << "{\"rule\":\"largest available target rank <= source rank + offset\""
+        << ",\"rank_offset\":" << audit.rank_offset
+        << ",\"matched\":" << audit.matched
+        << ",\"unmatched\":" << audit.unmatched
+        << ",\"first_unmatched_X\":" << audit.first_unmatched_x
+        << ",\"first_unmatched_depth\":" << audit.first_unmatched_depth
+        << ",\"last_unmatched_X\":" << audit.last_unmatched_x
+        << ",\"last_unmatched_depth\":" << audit.last_unmatched_depth
+        << ",\"remaining_targets\":" << remaining
+        << ",\"unmatched_prefix\":[";
+    for (std::size_t i = 0; i < audit.unmatched_prefix.size(); ++i) {
+        const auto [x, depth] = audit.unmatched_prefix[i];
+        out << "{\"X\":" << x << ",\"depth\":" << depth << "}"
+            << (i + 1 == audit.unmatched_prefix.size() ? "" : ",");
+    }
+    out << "]}";
+}
+
 }  // namespace
 
 int main(int argc, char** argv) {
@@ -102,7 +174,11 @@ int main(int argc, char** argv) {
     std::array<std::uint64_t, kMaxDepth + 1> healed_cumulative{};
     std::array<std::uint64_t, kMaxDepth + 1> grounded_cumulative{};
     Audit depth_majorization;
+    Audit depth_majorization_plus_one;
+    Audit depth_majorization_offset_one;
     Audit grounded_majorization;
+    GreedyAudit greedy_matching{0};
+    GreedyAudit greedy_matching_offset_one{1};
     std::uint16_t maximum_generation_depth = 0;
     std::uint16_t maximum_obstruction_depth = 0;
     std::uint64_t hard_total = 0;
@@ -184,6 +260,8 @@ int main(int argc, char** argv) {
                     }
                     ++healed_total;
                     ++healed_exact[missing_depth];
+                    greedy_matching.add_target(missing_depth);
+                    greedy_matching_offset_one.add_target(missing_depth);
                     for (std::size_t d = missing_depth; d <= kMaxDepth; ++d) {
                         ++healed_cumulative[d];
                     }
@@ -227,12 +305,23 @@ int main(int argc, char** argv) {
         }
         ++hard_total;
         ++hard_exact[depth];
+        greedy_matching.add_source(n, depth);
+        greedy_matching_offset_one.add_source(n, depth);
         for (std::size_t d = depth; d <= kMaxDepth; ++d) {
             ++hard_cumulative[d];
         }
         for (std::uint16_t d = 0; d <= kMaxDepth; ++d) {
             depth_majorization.observe(
                 n, d, hard_cumulative[d], healed_cumulative[d]
+            );
+            depth_majorization_plus_one.observe(
+                n, d, hard_cumulative[d], healed_cumulative[d] + 1
+            );
+            const auto target_depth = std::min<std::size_t>(
+                static_cast<std::size_t>(d) + 1, kMaxDepth
+            );
+            depth_majorization_offset_one.observe(
+                n, d, hard_cumulative[d], healed_cumulative[target_depth]
             );
             grounded_majorization.observe(
                 n, d, hard_cumulative[d], grounded_cumulative[d]
@@ -259,8 +348,16 @@ int main(int argc, char** argv) {
     out << "  \"healed_total\":" << healed_total << ",\n";
     out << "  \"depth_majorization\":";
     write_audit(out, depth_majorization);
+    out << ",\n  \"depth_majorization_plus_one\":";
+    write_audit(out, depth_majorization_plus_one);
+    out << ",\n  \"depth_majorization_offset_one\":";
+    write_audit(out, depth_majorization_offset_one);
     out << ",\n  \"grounded_majorization\":";
     write_audit(out, grounded_majorization);
+    out << ",\n  \"greedy_dominance_matching\":";
+    write_greedy_audit(out, greedy_matching);
+    out << ",\n  \"greedy_dominance_matching_offset_one\":";
+    write_greedy_audit(out, greedy_matching_offset_one);
     out << ",\n";
     out << "  \"depth_rows\":[\n";
     const auto last_depth = std::max(
@@ -273,6 +370,14 @@ int main(int argc, char** argv) {
             << ",\"hard_le_depth\":" << hard_cumulative[d]
             << ",\"healed_le_depth\":" << healed_cumulative[d]
             << ",\"grounded_target\":" << grounded_cumulative[d]
+            << ",\"greedy_matched_target_rank\":"
+            << greedy_matching.matched_by_target_rank[d]
+            << ",\"greedy_remaining_target_rank\":"
+            << greedy_matching.available[d]
+            << ",\"greedy_offset_one_matched_target_rank\":"
+            << greedy_matching_offset_one.matched_by_target_rank[d]
+            << ",\"greedy_offset_one_remaining_target_rank\":"
+            << greedy_matching_offset_one.available[d]
             << "}" << (d == last_depth ? "\n" : ",\n");
     }
     out << "  ]\n}\n";
@@ -284,7 +389,14 @@ int main(int argc, char** argv) {
               << " hard=" << hard_total
               << " healed=" << healed_total
               << " depth_failures=" << depth_majorization.failure_events
+              << " plus_one_failures="
+              << depth_majorization_plus_one.failure_events
+              << " offset_one_failures="
+              << depth_majorization_offset_one.failure_events
               << " grounded_failures=" << grounded_majorization.failure_events
+              << " greedy_unmatched=" << greedy_matching.unmatched
+              << " greedy_offset_one_unmatched="
+              << greedy_matching_offset_one.unmatched
               << '\n';
     return 0;
 }

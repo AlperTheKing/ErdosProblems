@@ -1,0 +1,3453 @@
+{
+  "C104_BIN_falsifier": null,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with factor primality and product rechecks",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "prime_limit": 100000,
+  "rows": [
+    {
+      "base_d": 6,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 2905865409095,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 83171,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 2079275,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 3964345715,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 60964343,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 1524108575,
+              "missing": true
+            }
+          ],
+          "q": 7561
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 8135731364255,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 232859,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 5821475,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 11099224235,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 170685647,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 4267141175,
+              "missing": true
+            }
+          ],
+          "q": 21169
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 27436427151155,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 785279,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 19631975,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 37430323535,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 575609507,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 14390237675,
+              "missing": true
+            }
+          ],
+          "q": 71389
+        }
+      ],
+      "eligible_plus_primes_tested": 4783,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          733,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 6,
+      "forced_one_hole_blockers": [
+        384322895,
+        11,
+        275,
+        524315,
+        8063,
+        201575
+      ],
+      "h": 1921614474,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 4,
+      "product": 1921614475,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 1422519131363,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 27731,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1321798115,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 746102555,
+              "missing": false
+            }
+          ],
+          "q": 2521
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 3589307494883,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 69971,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 3335167715,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 1882569755,
+              "missing": true
+            }
+          ],
+          "q": 6361
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 4327369781207,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 84359,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 4020971735,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 2269678895,
+              "missing": true
+            }
+          ],
+          "q": 7669
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 9067219326407,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 176759,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 8425217735,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 4755700895,
+              "missing": true
+            }
+          ],
+          "q": 16069
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 9737569476371,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 189827,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 9048103955,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 5107295435,
+              "missing": true
+            }
+          ],
+          "q": 17257
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 10841277299039,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 211343,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 10073664095,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 5686183415,
+              "missing": true
+            }
+          ],
+          "q": 19213
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 12696589835303,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 247511,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 11797611815,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 6659283455,
+              "missing": false
+            }
+          ],
+          "q": 22501
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 564267803,
+              "lifted_value": 34791059929571,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 678227,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 32327689955,
+              "missing": true
+            },
+            {
+              "base_blocker": 295955,
+              "lifted_value": 18247697435,
+              "missing": true
+            }
+          ],
+          "q": 61657
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          5381,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 4,
+      "forced_one_hole_blockers": [
+        564267803,
+        11,
+        524315,
+        295955
+      ],
+      "h": 2821339014,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 2821339015,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 93705262211,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 1991,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 94901015,
+              "missing": false
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 49147835,
+              "missing": true
+            }
+          ],
+          "q": 181
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 1044218308727,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 22187,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1057543355,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 547686095,
+              "missing": true
+            }
+          ],
+          "q": 2017
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 1081493330159,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 22979,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1095294035,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 567236615,
+              "missing": true
+            }
+          ],
+          "q": 2089
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 1715168694503,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 36443,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1737055595,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 899595455,
+              "missing": true
+            }
+          ],
+          "q": 3313
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 4883545516223,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 103763,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 4945863395,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 2561389655,
+              "missing": false
+            }
+          ],
+          "q": 9433
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 9822485855963,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 208703,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 9947828495,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 5151833555,
+              "missing": true
+            }
+          ],
+          "q": 18973
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 14109113320643,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 299783,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 14289156695,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 7400143355,
+              "missing": false
+            }
+          ],
+          "q": 27253
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 517708631,
+              "lifted_value": 15972864392243,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 339383,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 16176690695,
+              "missing": true
+            },
+            {
+              "base_blocker": 271535,
+              "lifted_value": 8377669355,
+              "missing": false
+            }
+          ],
+          "q": 30853
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          4937,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 4,
+      "forced_one_hole_blockers": [
+        517708631,
+        11,
+        524315,
+        271535
+      ],
+      "h": 2588543154,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 2588543155,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 588310896503,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 17831,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 849914615,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 308565455,
+              "missing": true
+            }
+          ],
+          "q": 1621
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 732031510331,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 22187,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1057543355,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 383946035,
+              "missing": false
+            }
+          ],
+          "q": 2017
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 6263097557651,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 189827,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 9048103955,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 3284956235,
+              "missing": true
+            }
+          ],
+          "q": 17257
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 27115652073059,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 821843,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 39173146595,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 14221993115,
+              "missing": true
+            }
+          ],
+          "q": 74713
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 30286215917507,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 917939,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 43753562435,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 15884934395,
+              "missing": true
+            }
+          ],
+          "q": 83449
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 30377674489943,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 920711,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 43885689815,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 15932903855,
+              "missing": false
+            }
+          ],
+          "q": 83701
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 362930843,
+              "lifted_value": 36257154146543,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 1098911,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 52379592815,
+              "missing": true
+            },
+            {
+              "base_blocker": 190355,
+              "lifted_value": 19016654855,
+              "missing": true
+            }
+          ],
+          "q": 99901
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          3461,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 4,
+      "forced_one_hole_blockers": [
+        362930843,
+        11,
+        524315,
+        190355
+      ],
+      "h": 1814654214,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 1814654215,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 100000817279,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 8063,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 384322895,
+              "missing": true
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 52449815,
+              "missing": true
+            }
+          ],
+          "q": 733
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 294818234843,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 23771,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1133044715,
+              "missing": false
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 154630355,
+              "missing": true
+            }
+          ],
+          "q": 2161
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 343931869523,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 27731,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1321798115,
+              "missing": true
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 180390155,
+              "missing": false
+            }
+          ],
+          "q": 2521
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 353754596459,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 28523,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1359548795,
+              "missing": false
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 185542115,
+              "missing": true
+            }
+          ],
+          "q": 2593
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 569854589051,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 45947,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 2190063755,
+              "missing": true
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 298885235,
+              "missing": false
+            }
+          ],
+          "q": 4177
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 1031522755043,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 83171,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 3964345715,
+              "missing": true
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 541027355,
+              "missing": false
+            }
+          ],
+          "q": 7561
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 1178863659083,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 95051,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 4530605915,
+              "missing": false
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 618306755,
+              "missing": true
+            }
+          ],
+          "q": 8641
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 136426763,
+              "lifted_value": 1252534111103,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 100991,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 4813736015,
+              "missing": true
+            },
+            {
+              "base_blocker": 71555,
+              "lifted_value": 656946455,
+              "missing": true
+            }
+          ],
+          "q": 9181
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          1301,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 4,
+      "forced_one_hole_blockers": [
+        136426763,
+        11,
+        524315,
+        71555
+      ],
+      "h": 682133814,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 682133815,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 83575811,
+              "lifted_value": 156537494003,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 982041995,
+              "missing": true
+            },
+            {
+              "base_blocker": 43835,
+              "lifted_value": 82102955,
+              "missing": true
+            }
+          ],
+          "q": 1873
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          797,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 3,
+      "forced_one_hole_blockers": [
+        83575811,
+        524315,
+        43835
+      ],
+      "h": 417879054,
+      "lift_hits": [
+        {
+          "d": 8,
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              797,
+              1
+            ],
+            [
+              1873,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 782687470014,
+          "h_plus_1": 782687470015,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 156537494003,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 78268747002,
+                  "value": 156537494003
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 71153406365,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 71153406365
+                }
+              ]
+            },
+            {
+              "a": 797,
+              "b": 982041995,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 797
+                },
+                {
+                  "generated": false,
+                  "missing_root": 491020998,
+                  "value": 982041995
+                }
+              ]
+            },
+            {
+              "a": 9365,
+              "b": 83575811,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9365
+                },
+                {
+                  "generated": false,
+                  "missing_root": 41787906,
+                  "value": 83575811
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 82102955,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 41051478,
+                  "value": 82102955
+                }
+              ]
+            },
+            {
+              "a": 20603,
+              "b": 37989005,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 20603
+                },
+                {
+                  "generated": false,
+                  "missing_root": 9497252,
+                  "value": 37989005
+                }
+              ]
+            },
+            {
+              "a": 43835,
+              "b": 17855309,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 21918,
+                  "value": 43835
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 17855309
+                }
+              ]
+            },
+            {
+              "a": 524315,
+              "b": 1492781,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 1492781
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        }
+      ],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 417879055,
+      "root": 262158,
+      "two_hole_pairs": [
+        [
+          11,
+          37989005
+        ]
+      ]
+    },
+    {
+      "base_d": 4,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 10591163,
+              "lifted_value": 526179569003,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 546491,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 26048493515,
+              "missing": true
+            },
+            {
+              "base_blocker": 5555,
+              "lifted_value": 275977955,
+              "missing": true
+            }
+          ],
+          "q": 49681
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 4,
+      "forced_one_hole_blockers": [
+        10591163,
+        11,
+        524315,
+        5555
+      ],
+      "h": 52955814,
+      "lift_hits": [
+        {
+          "d": 8,
+          "factorization": [
+            [
+              5,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              101,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              49681,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 2630897845014,
+          "h_plus_1": 2630897845015,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 526179569003,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 263089784502,
+                  "value": 526179569003
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 239172531365,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 239172531365
+                }
+              ]
+            },
+            {
+              "a": 101,
+              "b": 26048493515,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 101
+                },
+                {
+                  "generated": false,
+                  "missing_root": 13024246758,
+                  "value": 26048493515
+                }
+              ]
+            },
+            {
+              "a": 5555,
+              "b": 473608973,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 2778,
+                  "value": 5555
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 473608973
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 275977955,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 137988978,
+                  "value": 275977955
+                }
+              ]
+            },
+            {
+              "a": 248405,
+              "b": 10591163,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 62102,
+                  "value": 248405
+                },
+                {
+                  "generated": false,
+                  "missing_root": 5295582,
+                  "value": 10591163
+                }
+              ]
+            },
+            {
+              "a": 524315,
+              "b": 5017781,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5017781
+                }
+              ]
+            },
+            {
+              "a": 546491,
+              "b": 4814165,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 273246,
+                  "value": 546491
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 4814165
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        }
+      ],
+      "maximum_forced_blockers_remaining_missing": 4,
+      "product": 52955815,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 3,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 384322895,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 8063,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 201575,
+              "missing": true
+            }
+          ],
+          "q": 733
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 849914615,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 17831,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 445775,
+              "missing": true
+            }
+          ],
+          "q": 1621
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 2190063755,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 45947,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 1148675,
+              "missing": true
+            }
+          ],
+          "q": 4177
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 3964345715,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 83171,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 2079275,
+              "missing": true
+            }
+          ],
+          "q": 7561
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 4304101835,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 90299,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 2257475,
+              "missing": true
+            }
+          ],
+          "q": 8209
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 11099224235,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 232859,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 5821475,
+              "missing": true
+            }
+          ],
+          "q": 21169
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 14006026595,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 293843,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 7346075,
+              "missing": true
+            }
+          ],
+          "q": 26713
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 524315,
+              "lifted_value": 15855809915,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 332651,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 8316275,
+              "missing": true
+            }
+          ],
+          "q": 30241
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 3,
+      "forced_one_hole_blockers": [
+        524315,
+        11,
+        275
+      ],
+      "h": 2621574,
+      "lift_hits": [
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              733,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 1921614474,
+          "h_plus_1": 1921614475,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 384322895,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 192161448,
+                  "value": 384322895
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 174692225,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 174692225
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 6987689,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 6987689
+                }
+              ]
+            },
+            {
+              "a": 3665,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 3665
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 8063,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 4032,
+                  "value": 8063
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 201575,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 100788,
+                  "value": 201575
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              1621,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 4249573074,
+          "h_plus_1": 4249573075,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 849914615,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 424957308,
+                  "value": 849914615
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 386324825,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 386324825
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 15452993,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 15452993
+                }
+              ]
+            },
+            {
+              "a": 8105,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 8105
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 445775,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 222888,
+                  "value": 445775
+                }
+              ]
+            },
+            {
+              "a": 17831,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 8916,
+                  "value": 17831
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              4177,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 10950318774,
+          "h_plus_1": 10950318775,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 2190063755,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 1095031878,
+                  "value": 2190063755
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 995483525,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 995483525
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 39819341,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 39819341
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 1148675,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 574338,
+                  "value": 1148675
+                }
+              ]
+            },
+            {
+              "a": 20885,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 20885
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 45947,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 22974,
+                  "value": 45947
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              7561,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 19821728574,
+          "h_plus_1": 19821728575,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 3964345715,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 1982172858,
+                  "value": 3964345715
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 1801975325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 1801975325
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 72079013,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 72079013
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 2079275,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 1039638,
+                  "value": 2079275
+                }
+              ]
+            },
+            {
+              "a": 37805,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 37805
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 83171,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 41586,
+                  "value": 83171
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              8209,
+              1
+            ],
+            [
+              9533,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 21520509174,
+          "h_plus_1": 21520509175,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 4304101835,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 2152050918,
+                  "value": 4304101835
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 1956409925,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 1956409925
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 78256397,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 78256397
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 2257475,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 1128738,
+                  "value": 2257475
+                }
+              ]
+            },
+            {
+              "a": 41045,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 41045
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 90299,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 45150,
+                  "value": 90299
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              21169,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 55496121174,
+          "h_plus_1": 55496121175,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 11099224235,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 5549612118,
+                  "value": 11099224235
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 5045101925,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5045101925
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 201804077,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 201804077
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 5821475,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 2910738,
+                  "value": 5821475
+                }
+              ]
+            },
+            {
+              "a": 105845,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 105845
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 232859,
+              "b": 238325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 116430,
+                  "value": 232859
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              26713,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 70030132974,
+          "h_plus_1": 70030132975,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 14006026595,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 7003013298,
+                  "value": 14006026595
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 6366375725,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 6366375725
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 254655029,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 254655029
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 7346075,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 3673038,
+                  "value": 7346075
+                }
+              ]
+            },
+            {
+              "a": 133565,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 133565
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 293843,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 146922,
+                  "value": 293843
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              30241,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 79279049574,
+          "h_plus_1": 79279049575,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 15855809915,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 7927904958,
+                  "value": 15855809915
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 7207186325,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 7207186325
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 288287453,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 288287453
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 8316275,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 4158138,
+                  "value": 8316275
+                }
+              ]
+            },
+            {
+              "a": 151205,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 151205
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 332651,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 166326,
+                  "value": 332651
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              36901,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 96738739074,
+          "h_plus_1": 96738739075,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 19347747815,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 9673873908,
+                  "value": 19347747815
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 8794430825,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 8794430825
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 351777233,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 351777233
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 10147775,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 5073888,
+                  "value": 10147775
+                }
+              ]
+            },
+            {
+              "a": 184505,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 184505
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 405911,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 202956,
+                  "value": 405911
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              38749,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 101583409674,
+          "h_plus_1": 101583409675,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 20316681935,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 10158340968,
+                  "value": 20316681935
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 9234855425,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9234855425
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 369394217,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 369394217
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 10655975,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 5327988,
+                  "value": 10655975
+                }
+              ]
+            },
+            {
+              "a": 193745,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 193745
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 426239,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 213120,
+                  "value": 426239
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              74713,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 195865732974,
+          "h_plus_1": 195865732975,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 39173146595,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 19586573298,
+                  "value": 39173146595
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 17805975725,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 17805975725
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 712239029,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 712239029
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 20546075,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 10273038,
+                  "value": 20546075
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 821843,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 410922,
+                  "value": 821843
+                }
+              ]
+            },
+            {
+              "a": 373565,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 373565
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              81649,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 214048977174,
+          "h_plus_1": 214048977175,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 42809795435,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 21404897718,
+                  "value": 42809795435
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 19458997925,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 19458997925
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 778359917,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 778359917
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 22453475,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 11226738,
+                  "value": 22453475
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 898139,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 449070,
+                  "value": 898139
+                }
+              ]
+            },
+            {
+              "a": 408245,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 102062,
+                  "value": 408245
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        },
+        {
+          "d": 6,
+          "factorization": [
+            [
+              5,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              9533,
+              1
+            ],
+            [
+              99901,
+              1
+            ]
+          ],
+          "fixed_root": 262158,
+          "fixed_root_witness": true,
+          "h": 261897964074,
+          "h_plus_1": 261897964075,
+          "hard": true,
+          "pairs": [
+            {
+              "a": 5,
+              "b": 52379592815,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 5
+                },
+                {
+                  "generated": false,
+                  "missing_root": 26189796408,
+                  "value": 52379592815
+                }
+              ]
+            },
+            {
+              "a": 11,
+              "b": 23808905825,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 6,
+                  "value": 11
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 23808905825
+                }
+              ]
+            },
+            {
+              "a": 275,
+              "b": 952356233,
+              "endpoints": [
+                {
+                  "generated": false,
+                  "missing_root": 138,
+                  "value": 275
+                },
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 952356233
+                }
+              ]
+            },
+            {
+              "a": 9533,
+              "b": 27472775,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 9533
+                },
+                {
+                  "generated": false,
+                  "missing_root": 13736388,
+                  "value": 27472775
+                }
+              ]
+            },
+            {
+              "a": 238325,
+              "b": 1098911,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 238325
+                },
+                {
+                  "generated": false,
+                  "missing_root": 549456,
+                  "value": 1098911
+                }
+              ]
+            },
+            {
+              "a": 499505,
+              "b": 524315,
+              "endpoints": [
+                {
+                  "generated": true,
+                  "missing_root": null,
+                  "value": 499505
+                },
+                {
+                  "generated": false,
+                  "missing_root": 262158,
+                  "value": 524315
+                }
+              ]
+            }
+          ],
+          "single_root_bin_test": {
+            "dyadic_bin_j": 18,
+            "fails": false,
+            "lhs_D_times_one_root": 262145,
+            "minimum_D_for_failure": 262145,
+            "rhs_2_to_j": 262144,
+            "source_qualifies_at_failure_D": false
+          }
+        }
+      ],
+      "maximum_forced_blockers_remaining_missing": 3,
+      "product": 2621575,
+      "root": 262158,
+      "two_hole_pairs": []
+    }
+  ],
+  "schema": "C110-plus-prime-lift-gate-v1"
+}

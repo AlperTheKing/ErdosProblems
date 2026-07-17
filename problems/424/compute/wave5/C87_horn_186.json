@@ -1,0 +1,276 @@
+{
+  "schema": "C87-horn-implication-v1",
+  "cutoff": 186,
+  "grounded_size": 40,
+  "hard_roots": [
+    54,
+    74,
+    114,
+    144,
+    174,
+    186
+  ],
+  "target_roots": [
+    6,
+    8,
+    12,
+    18,
+    20,
+    24,
+    30,
+    32,
+    36,
+    38,
+    42,
+    48,
+    56,
+    60,
+    62,
+    66,
+    68,
+    72,
+    78,
+    86,
+    90,
+    92
+  ],
+  "edge_count": 32,
+  "common_neighbor_count": 5,
+  "common_neighbors": [
+    6,
+    18,
+    20,
+    38,
+    66
+  ],
+  "adjacency": {
+    "54": [
+      6,
+      18,
+      20,
+      32,
+      38,
+      66
+    ],
+    "74": [
+      6,
+      18,
+      20,
+      38,
+      66
+    ],
+    "114": [
+      6,
+      18,
+      20,
+      38,
+      66
+    ],
+    "144": [
+      6,
+      18,
+      20,
+      38,
+      66
+    ],
+    "174": [
+      6,
+      18,
+      20,
+      38,
+      66
+    ],
+    "186": [
+      6,
+      18,
+      20,
+      32,
+      38,
+      66
+    ]
+  },
+  "target_data": {
+    "6": {
+      "top": 161,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        114,
+        144,
+        147,
+        174,
+        186
+      ]
+    },
+    "8": {
+      "top": 113,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "12": {
+      "top": 177,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "18": {
+      "top": 137,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        114,
+        144,
+        147,
+        174,
+        186
+      ]
+    },
+    "20": {
+      "top": 153,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        114,
+        144,
+        147,
+        174,
+        186
+      ]
+    },
+    "24": {
+      "top": 185,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "30": {
+      "top": 117,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "32": {
+      "top": 125,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        186
+      ]
+    },
+    "36": {
+      "top": 141,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "38": {
+      "top": 149,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        114,
+        144,
+        147,
+        174,
+        186
+      ]
+    },
+    "42": {
+      "top": 165,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "48": {
+      "top": 95,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "56": {
+      "top": 111,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "60": {
+      "top": 119,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "62": {
+      "top": 123,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "66": {
+      "top": 131,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        107,
+        114,
+        144,
+        147,
+        174,
+        186
+      ]
+    },
+    "68": {
+      "top": 135,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "72": {
+      "top": 143,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "78": {
+      "top": 155,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "86": {
+      "top": 171,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "90": {
+      "top": 179,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "92": {
+      "top": 183,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    }
+  },
+  "matching": [
+    [
+      54,
+      32
+    ],
+    [
+      74,
+      66
+    ],
+    [
+      114,
+      38
+    ],
+    [
+      144,
+      20
+    ],
+    [
+      174,
+      18
+    ],
+    [
+      186,
+      6
+    ]
+  ],
+  "matching_size": 6,
+  "hall": {
+    "hard_set": [],
+    "neighbor_set": [],
+    "deficit": 0
+  },
+  "nested_hard_pairs": 15,
+  "incomparable_hard_pairs": []
+}

@@ -1,0 +1,88 @@
+{
+  "limit": 100000000,
+  "threads": 32,
+  "orbit_count": 19072023,
+  "image_sizes": {"2": 9576352, "3": 6412486, "5": 3860436},
+  "triple_intersection": 488,
+  "collision_tax": 777253,
+  "pair_audits": {
+    "23": {
+      "intersection": 317202,
+      "failures": 107,
+      "first_failure": 24,
+      "last_failure": 130,
+      "worst_x": 76,
+      "worst_excess": "36",
+      "worst_intersection": 1,
+      "worst_left_size": 8,
+      "worst_right_size": 5,
+      "min_margin_after_5000_x": 5000,
+      "min_margin_after_5000": "115600"
+    },
+    "25": {
+      "intersection": 288862,
+      "failures": 2945,
+      "first_failure": 24,
+      "last_failure": 4103,
+      "worst_x": 3853,
+      "worst_excess": "4193",
+      "worst_intersection": 17,
+      "worst_left_size": 393,
+      "worst_right_size": 156,
+      "min_margin_after_5000_x": 5173,
+      "min_margin_after_5000": "8407"
+    },
+    "35": {
+      "intersection": 171677,
+      "failures": 319,
+      "first_failure": 24,
+      "last_failure": 383,
+      "worst_x": 203,
+      "worst_excess": "91",
+      "worst_intersection": 1,
+      "worst_left_size": 14,
+      "worst_right_size": 8,
+      "min_margin_after_5000_x": 5629,
+      "min_margin_after_5000": "7985"
+    }
+  },
+  "residue_30_pair_audits": {
+    "23": {
+      "failures": 1,
+      "worst_residue": 23,
+      "worst_intersection": 61996,
+      "worst_left_size": 679318,
+      "worst_right_size": 247099,
+      "worst_capacity": 3333333,
+      "worst_excess": "38794514186"
+    },
+    "25": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    },
+    "35": {
+      "failures": 0,
+      "worst_residue": 0,
+      "worst_intersection": 0,
+      "worst_left_size": 0,
+      "worst_right_size": 0,
+      "worst_capacity": 0,
+      "worst_excess": "0"
+    }
+  },
+  "quadratic_tax_audit": {
+    "inequality": "X*Delta(X) <= 3*C(X)^2",
+    "failures": 0,
+    "first_failure": 0,
+    "last_failure": 0,
+    "worst_x": 0,
+    "worst_excess": "0"
+  },
+  "generation_seconds": 0.022736,
+  "audit_seconds": 0.723366
+}

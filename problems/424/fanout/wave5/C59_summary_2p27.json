@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "source": "problems\\424\\fanout\\wave5\\C59_stratification_2p27.json",
+  "sieve_safe_threshold": "floor(j^(1/3)); 1/3 < log(2)/2",
+  "harmonic_threshold": "j = log_2 X",
+  "first_actual_capacity_gt_j_times_parent": {
+    "j": 22,
+    "X": 4194304
+  },
+  "rows": [
+    {
+      "j": 7,
+      "X": 128,
+      "true_theta": {
+        "numerator": 18,
+        "denominator": 15,
+        "decimal": 1.2
+      },
+      "capacity_over_parent": {
+        "numerator": 16,
+        "denominator": 15
+      },
+      "capacity_over_j_parent": {
+        "numerator": 16,
+        "denominator": 105
+      },
+      "sieve_safe_D_floor_j_cuberoot": 1,
+      "sieve_safe_low_pair_hard": 2,
+      "sieve_safe_theta_upper": {
+        "numerator": 52,
+        "denominator": 30,
+        "decimal": 1.73333
+      },
+      "harmonic_D_j": 7,
+      "harmonic_low_pair_hard": 2,
+      "harmonic_theta_upper": {
+        "numerator": 160,
+        "denominator": 120,
+        "decimal": 1.33333
+      },
+      "ap_hard_shape": 2,
+      "ap_pairs_le_j": 2,
+      "ap_max_pairs": 1
+    },
+    {
+      "j": 8,
+      "X": 256,
+      "true_theta": {
+        "numerator": 35,
+        "denominator": 30,
+        "decimal": 1.16667
+      },
+      "capacity_over_parent": {
+        "numerator": 53,
+        "denominator": 30
+      },
+      "capacity_over_j_parent": {
+        "numerator": 53,
+        "denominator": 240
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 5,
+      "sieve_safe_theta_upper": {
+        "numerator": 158,
+        "denominator": 90,
+        "decimal": 1.75556
+      },
+      "harmonic_D_j": 8,
+      "harmonic_low_pair_hard": 5,
+      "harmonic_theta_upper": {
+        "numerator": 368,
+        "denominator": 270,
+        "decimal": 1.36296
+      },
+      "ap_hard_shape": 4,
+      "ap_pairs_le_j": 4,
+      "ap_max_pairs": 1
+    },
+    {
+      "j": 9,
+      "X": 512,
+      "true_theta": {
+        "numerator": 65,
+        "denominator": 55,
+        "decimal": 1.18182
+      },
+      "capacity_over_parent": {
+        "numerator": 142,
+        "denominator": 55
+      },
+      "capacity_over_j_parent": {
+        "numerator": 142,
+        "denominator": 495
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 10,
+      "sieve_safe_theta_upper": {
+        "numerator": 337,
+        "denominator": 165,
+        "decimal": 2.04242
+      },
+      "harmonic_D_j": 9,
+      "harmonic_low_pair_hard": 10,
+      "harmonic_theta_upper": {
+        "numerator": 792,
+        "denominator": 550,
+        "decimal": 1.44
+      },
+      "ap_hard_shape": 9,
+      "ap_pairs_le_j": 9,
+      "ap_max_pairs": 2
+    },
+    {
+      "j": 10,
+      "X": 1024,
+      "true_theta": {
+        "numerator": 135,
+        "denominator": 106,
+        "decimal": 1.27358
+      },
+      "capacity_over_parent": {
+        "numerator": 366,
+        "denominator": 106
+      },
+      "capacity_over_j_parent": {
+        "numerator": 366,
+        "denominator": 1060
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 25,
+      "sieve_safe_theta_upper": {
+        "numerator": 771,
+        "denominator": 318,
+        "decimal": 2.42453
+      },
+      "harmonic_D_j": 10,
+      "harmonic_low_pair_hard": 25,
+      "harmonic_theta_upper": {
+        "numerator": 1851,
+        "denominator": 1166,
+        "decimal": 1.58748
+      },
+      "ap_hard_shape": 17,
+      "ap_pairs_le_j": 17,
+      "ap_max_pairs": 2
+    },
+    {
+      "j": 11,
+      "X": 2048,
+      "true_theta": {
+        "numerator": 254,
+        "denominator": 208,
+        "decimal": 1.22115
+      },
+      "capacity_over_parent": {
+        "numerator": 901,
+        "denominator": 208
+      },
+      "capacity_over_j_parent": {
+        "numerator": 901,
+        "denominator": 2288
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 55,
+      "sieve_safe_theta_upper": {
+        "numerator": 1660,
+        "denominator": 624,
+        "decimal": 2.66026
+      },
+      "harmonic_D_j": 11,
+      "harmonic_low_pair_hard": 56,
+      "harmonic_theta_upper": {
+        "numerator": 3949,
+        "denominator": 2496,
+        "decimal": 1.58213
+      },
+      "ap_hard_shape": 34,
+      "ap_pairs_le_j": 34,
+      "ap_max_pairs": 2
+    },
+    {
+      "j": 12,
+      "X": 4096,
+      "true_theta": {
+        "numerator": 436,
+        "denominator": 399,
+        "decimal": 1.09273
+      },
+      "capacity_over_parent": {
+        "numerator": 2111,
+        "denominator": 399
+      },
+      "capacity_over_j_parent": {
+        "numerator": 2111,
+        "denominator": 4788
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 102,
+      "sieve_safe_theta_upper": {
+        "numerator": 3416,
+        "denominator": 1197,
+        "decimal": 2.8538
+      },
+      "harmonic_D_j": 12,
+      "harmonic_low_pair_hard": 103,
+      "harmonic_theta_upper": {
+        "numerator": 7779,
+        "denominator": 5187,
+        "decimal": 1.49971
+      },
+      "ap_hard_shape": 68,
+      "ap_pairs_le_j": 68,
+      "ap_max_pairs": 3
+    },
+    {
+      "j": 13,
+      "X": 8192,
+      "true_theta": {
+        "numerator": 808,
+        "denominator": 713,
+        "decimal": 1.13324
+      },
+      "capacity_over_parent": {
+        "numerator": 4777,
+        "denominator": 713
+      },
+      "capacity_over_j_parent": {
+        "numerator": 4777,
+        "denominator": 9269
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 213,
+      "sieve_safe_theta_upper": {
+        "numerator": 7183,
+        "denominator": 2139,
+        "decimal": 3.35811
+      },
+      "harmonic_D_j": 13,
+      "harmonic_low_pair_hard": 219,
+      "harmonic_theta_upper": {
+        "numerator": 16089,
+        "denominator": 9982,
+        "decimal": 1.6118
+      },
+      "ap_hard_shape": 137,
+      "ap_pairs_le_j": 137,
+      "ap_max_pairs": 4
+    },
+    {
+      "j": 14,
+      "X": 16384,
+      "true_theta": {
+        "numerator": 1466,
+        "denominator": 1338,
+        "decimal": 1.09567
+      },
+      "capacity_over_parent": {
+        "numerator": 10679,
+        "denominator": 1338
+      },
+      "capacity_over_j_parent": {
+        "numerator": 10679,
+        "denominator": 18732
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 427,
+      "sieve_safe_theta_upper": {
+        "numerator": 15011,
+        "denominator": 4014,
+        "decimal": 3.73966
+      },
+      "harmonic_D_j": 14,
+      "harmonic_low_pair_hard": 449,
+      "harmonic_theta_upper": {
+        "numerator": 32669,
+        "denominator": 20070,
+        "decimal": 1.62775
+      },
+      "ap_hard_shape": 273,
+      "ap_pairs_le_j": 273,
+      "ap_max_pairs": 4
+    },
+    {
+      "j": 15,
+      "X": 32768,
+      "true_theta": {
+        "numerator": 2616,
+        "denominator": 2491,
+        "decimal": 1.05018
+      },
+      "capacity_over_parent": {
+        "numerator": 23441,
+        "denominator": 2491
+      },
+      "capacity_over_j_parent": {
+        "numerator": 23441,
+        "denominator": 37365
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 801,
+      "sieve_safe_theta_upper": {
+        "numerator": 31157,
+        "denominator": 7473,
+        "decimal": 4.16928
+      },
+      "harmonic_D_j": 15,
+      "harmonic_low_pair_hard": 845,
+      "harmonic_theta_upper": {
+        "numerator": 65297,
+        "denominator": 39856,
+        "decimal": 1.63832
+      },
+      "ap_hard_shape": 546,
+      "ap_pairs_le_j": 546,
+      "ap_max_pairs": 6
+    },
+    {
+      "j": 16,
+      "X": 65536,
+      "true_theta": {
+        "numerator": 4591,
+        "denominator": 4602,
+        "decimal": 0.99761
+      },
+      "capacity_over_parent": {
+        "numerator": 50701,
+        "denominator": 4602
+      },
+      "capacity_over_j_parent": {
+        "numerator": 50701,
+        "denominator": 73632
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 1583,
+      "sieve_safe_theta_upper": {
+        "numerator": 64174,
+        "denominator": 13806,
+        "decimal": 4.64827
+      },
+      "harmonic_D_j": 16,
+      "harmonic_low_pair_hard": 1683,
+      "harmonic_theta_upper": {
+        "numerator": 128748,
+        "denominator": 78234,
+        "decimal": 1.64568
+      },
+      "ap_hard_shape": 1092,
+      "ap_pairs_le_j": 1092,
+      "ap_max_pairs": 6
+    },
+    {
+      "j": 17,
+      "X": 131072,
+      "true_theta": {
+        "numerator": 8133,
+        "denominator": 8441,
+        "decimal": 0.963511
+      },
+      "capacity_over_parent": {
+        "numerator": 108446,
+        "denominator": 8441
+      },
+      "capacity_over_j_parent": {
+        "numerator": 108446,
+        "denominator": 143497
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 3031,
+      "sieve_safe_theta_upper": {
+        "numerator": 132239,
+        "denominator": 25323,
+        "decimal": 5.22209
+      },
+      "harmonic_D_j": 17,
+      "harmonic_low_pair_hard": 3233,
+      "harmonic_theta_upper": {
+        "numerator": 254840,
+        "denominator": 151938,
+        "decimal": 1.67726
+      },
+      "ap_hard_shape": 2185,
+      "ap_pairs_le_j": 2185,
+      "ap_max_pairs": 8
+    },
+    {
+      "j": 18,
+      "X": 262144,
+      "true_theta": {
+        "numerator": 14482,
+        "denominator": 15610,
+        "decimal": 0.927739
+      },
+      "capacity_over_parent": {
+        "numerator": 230063,
+        "denominator": 15610
+      },
+      "capacity_over_j_parent": {
+        "numerator": 230063,
+        "denominator": 280980
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 5808,
+      "sieve_safe_theta_upper": {
+        "numerator": 272258,
+        "denominator": 46830,
+        "decimal": 5.81375
+      },
+      "harmonic_D_j": 18,
+      "harmonic_low_pair_hard": 6225,
+      "harmonic_theta_upper": {
+        "numerator": 505221,
+        "denominator": 296590,
+        "decimal": 1.70343
+      },
+      "ap_hard_shape": 4369,
+      "ap_pairs_le_j": 4369,
+      "ap_max_pairs": 9
+    },
+    {
+      "j": 19,
+      "X": 524288,
+      "true_theta": {
+        "numerator": 25796,
+        "denominator": 29024,
+        "decimal": 0.888782
+      },
+      "capacity_over_parent": {
+        "numerator": 484342,
+        "denominator": 29024
+      },
+      "capacity_over_j_parent": {
+        "numerator": 484342,
+        "denominator": 551456
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 11192,
+      "sieve_safe_theta_upper": {
+        "numerator": 559198,
+        "denominator": 87072,
+        "decimal": 6.42225
+      },
+      "harmonic_D_j": 19,
+      "harmonic_low_pair_hard": 12036,
+      "harmonic_theta_upper": {
+        "numerator": 1000262,
+        "denominator": 580480,
+        "decimal": 1.72316
+      },
+      "ap_hard_shape": 8738,
+      "ap_pairs_le_j": 8738,
+      "ap_max_pairs": 12
+    },
+    {
+      "j": 20,
+      "X": 1048576,
+      "true_theta": {
+        "numerator": 45629,
+        "denominator": 54172,
+        "decimal": 0.842299
+      },
+      "capacity_over_parent": {
+        "numerator": 1013284,
+        "denominator": 54172
+      },
+      "capacity_over_j_parent": {
+        "numerator": 1013284,
+        "denominator": 1083440
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 21220,
+      "sieve_safe_theta_upper": {
+        "numerator": 1145530,
+        "denominator": 162516,
+        "decimal": 7.04872
+      },
+      "harmonic_D_j": 20,
+      "harmonic_low_pair_hard": 22767,
+      "harmonic_theta_upper": {
+        "numerator": 1971493,
+        "denominator": 1137612,
+        "decimal": 1.73301
+      },
+      "ap_hard_shape": 17476,
+      "ap_pairs_le_j": 17476,
+      "ap_max_pairs": 12
+    },
+    {
+      "j": 21,
+      "X": 2097152,
+      "true_theta": {
+        "numerator": 82482,
+        "denominator": 100995,
+        "decimal": 0.816694
+      },
+      "capacity_over_parent": {
+        "numerator": 2108867,
+        "denominator": 100995
+      },
+      "capacity_over_j_parent": {
+        "numerator": 2108867,
+        "denominator": 2120895
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 40617,
+      "sieve_safe_theta_upper": {
+        "numerator": 2347130,
+        "denominator": 302985,
+        "decimal": 7.74669
+      },
+      "harmonic_D_j": 21,
+      "harmonic_low_pair_hard": 43678,
+      "harmonic_theta_upper": {
+        "numerator": 3923471,
+        "denominator": 2221890,
+        "decimal": 1.76583
+      },
+      "ap_hard_shape": 34953,
+      "ap_pairs_le_j": 34953,
+      "ap_max_pairs": 16
+    },
+    {
+      "j": 22,
+      "X": 4194304,
+      "true_theta": {
+        "numerator": 149269,
+        "denominator": 190632,
+        "decimal": 0.783022
+      },
+      "capacity_over_parent": {
+        "numerator": 4371557,
+        "denominator": 190632
+      },
+      "capacity_over_j_parent": {
+        "numerator": 4371557,
+        "denominator": 4193904
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 77504,
+      "sieve_safe_theta_upper": {
+        "numerator": 4802171,
+        "denominator": 571896,
+        "decimal": 8.39693
+      },
+      "harmonic_D_j": 22,
+      "harmonic_low_pair_hard": 83235,
+      "harmonic_theta_upper": {
+        "numerator": 7804744,
+        "denominator": 4384536,
+        "decimal": 1.78006
+      },
+      "ap_hard_shape": 69905,
+      "ap_pairs_le_j": 69905,
+      "ap_max_pairs": 18
+    },
+    {
+      "j": 23,
+      "X": 8388608,
+      "true_theta": {
+        "numerator": 273072,
+        "denominator": 360843,
+        "decimal": 0.756761
+      },
+      "capacity_over_parent": {
+        "numerator": 9030237,
+        "denominator": 360843
+      },
+      "capacity_over_j_parent": {
+        "numerator": 9030237,
+        "denominator": 8299389
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 148120,
+      "sieve_safe_theta_upper": {
+        "numerator": 9817263,
+        "denominator": 1082529,
+        "decimal": 9.06882
+      },
+      "harmonic_D_j": 23,
+      "harmonic_low_pair_hard": 158850,
+      "harmonic_theta_upper": {
+        "numerator": 15583965,
+        "denominator": 8660232,
+        "decimal": 1.79949
+      },
+      "ap_hard_shape": 139810,
+      "ap_pairs_le_j": 139809,
+      "ap_max_pairs": 24
+    },
+    {
+      "j": 24,
+      "X": 16777216,
+      "true_theta": {
+        "numerator": 502102,
+        "denominator": 687297,
+        "decimal": 0.730546
+      },
+      "capacity_over_parent": {
+        "numerator": 18599775,
+        "denominator": 687297
+      },
+      "capacity_over_j_parent": {
+        "numerator": 18599775,
+        "denominator": 16495128
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 283043,
+      "sieve_safe_theta_upper": {
+        "numerator": 20045442,
+        "denominator": 2061891,
+        "decimal": 9.72187
+      },
+      "harmonic_D_j": 24,
+      "harmonic_low_pair_hard": 303256,
+      "harmonic_theta_upper": {
+        "numerator": 31152325,
+        "denominator": 17182425,
+        "decimal": 1.81303
+      },
+      "ap_hard_shape": 279620,
+      "ap_pairs_le_j": 279620,
+      "ap_max_pairs": 24
+    },
+    {
+      "j": 25,
+      "X": 33554432,
+      "true_theta": {
+        "numerator": 928405,
+        "denominator": 1313809,
+        "decimal": 0.706651
+      },
+      "capacity_over_parent": {
+        "numerator": 38218401,
+        "denominator": 1313809
+      },
+      "capacity_over_j_parent": {
+        "numerator": 38218401,
+        "denominator": 32845225
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 541118,
+      "sieve_safe_theta_upper": {
+        "numerator": 40890606,
+        "denominator": 3941427,
+        "decimal": 10.3746
+      },
+      "harmonic_D_j": 25,
+      "harmonic_low_pair_hard": 578788,
+      "harmonic_theta_upper": {
+        "numerator": 62356931,
+        "denominator": 34159034,
+        "decimal": 1.82549
+      },
+      "ap_hard_shape": 559241,
+      "ap_pairs_le_j": 559241,
+      "ap_max_pairs": 24
+    },
+    {
+      "j": 26,
+      "X": 67108864,
+      "true_theta": {
+        "numerator": 1726624,
+        "denominator": 2520255,
+        "decimal": 0.685099
+      },
+      "capacity_over_parent": {
+        "numerator": 78375395,
+        "denominator": 2520255
+      },
+      "capacity_over_j_parent": {
+        "numerator": 78375395,
+        "denominator": 65526630
+      },
+      "sieve_safe_D_floor_j_cuberoot": 2,
+      "sieve_safe_low_pair_hard": 1035831,
+      "sieve_safe_theta_upper": {
+        "numerator": 83344625,
+        "denominator": 7560765,
+        "decimal": 11.0233
+      },
+      "harmonic_D_j": 26,
+      "harmonic_low_pair_hard": 1106045,
+      "harmonic_theta_upper": {
+        "numerator": 124994243,
+        "denominator": 68046885,
+        "decimal": 1.83688
+      },
+      "ap_hard_shape": 1118481,
+      "ap_pairs_le_j": 1118469,
+      "ap_max_pairs": 36
+    },
+    {
+      "j": 27,
+      "X": 134217728,
+      "true_theta": {
+        "numerator": 3223210,
+        "denominator": 4850573,
+        "decimal": 0.664501
+      },
+      "capacity_over_parent": {
+        "numerator": 160453536,
+        "denominator": 4850573
+      },
+      "capacity_over_j_parent": {
+        "numerator": 160453536,
+        "denominator": 130965471
+      },
+      "sieve_safe_D_floor_j_cuberoot": 3,
+      "sieve_safe_low_pair_hard": 2008643,
+      "sieve_safe_theta_upper": {
+        "numerator": 172923924,
+        "denominator": 19402292,
+        "decimal": 8.91255
+      },
+      "harmonic_D_j": 27,
+      "harmonic_low_pair_hard": 2114256,
+      "harmonic_theta_upper": {
+        "numerator": 250703416,
+        "denominator": 135816044,
+        "decimal": 1.8459
+      },
+      "ap_hard_shape": 2236962,
+      "ap_pairs_le_j": 2236896,
+      "ap_max_pairs": 36
+    }
+  ]
+}

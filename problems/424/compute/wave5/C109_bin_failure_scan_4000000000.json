@@ -1,0 +1,12 @@
+{
+  "schema":"C109-first-C104-BIN-failure-v1",
+  "requested_limit":4000000000,
+  "scanned_through":4000000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "hard_count_scanned":106360959,
+  "maximum_pair_count_scanned":18,
+  "first_failure_source_h":null,
+  "failures_at_first_source":[],
+  "classification_digest":"08eb5810482ec820"
+}

@@ -1,0 +1,7 @@
+{
+  "checked_cutoffs": 4999,
+  "first_failure": null,
+  "max_limit": 5000,
+  "maximum_lower_slack": 62,
+  "maximum_upper_slack": 57
+}

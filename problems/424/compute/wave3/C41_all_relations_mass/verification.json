@@ -1,0 +1,37 @@
+{
+  "all_checks_passed": true,
+  "certificate_sha256": "364b3e6597589c20e2f23db738e0f89a33d984ae2ea792c6de136a6d98de9d0e",
+  "circulation_replay": {
+    "balanced_states": 16652,
+    "canonical_k": 64587,
+    "direct_denominator_bits": 18713496,
+    "direct_denominator_sha256": "14840490df926ad1ca36da41ebd5daed1ed4d5cb8f455bf4f3e0b3ff6da21a25",
+    "direct_numerator_bits": 18732804,
+    "direct_numerator_sha256": "d70ef8a33f25672892603d7ebeb2d1878c4221bfadaff458693dd13b92b8f3a6",
+    "direct_product_above_Q": true,
+    "edge_sha256": "e124775933cc8a8e872d1dca4360132e6f9d6a3cbc867327bdcce446feed2413",
+    "letter_counts": [
+      968805,
+      645870,
+      387522
+    ],
+    "prime_exponents_match": true,
+    "reduced_product_above_Q": true,
+    "strongly_connected": true,
+    "support_edges": 37214,
+    "support_states": 15069
+  },
+  "relation_replay": {
+    "fiber_sha256": "0c956c12ef204268551627eda2b7d82be2568d1280fe79a364b593c76319582a",
+    "formal_words_at_max_length": 4782969,
+    "max_length": 14,
+    "minimal_sides": 4777,
+    "minimal_sides_sha256": "1b2772ea53df187bfa23c9bf6a92c72de16e85f93981a8e865432c512add6958",
+    "relation_fibers_at_max_length": 155159,
+    "relation_sides_at_max_length": 319799,
+    "singleton_checks": 14
+  },
+  "relations_sha256": "bf62baa56f5b6ec6f1e10a52a6440bf9d48225b0140f32309c444129e898dc57",
+  "schema_version": 1,
+  "script_sha256": "4bbdd5352261b0f587218e14a9fa3e0c7ccd73c45429a00272b06d8a78220a3f"
+}

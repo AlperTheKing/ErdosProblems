@@ -1,0 +1,438 @@
+{
+  "canonical_grounded_replay": {
+    "boundary_children": [
+      41,
+      69
+    ],
+    "complete_reach": {
+      "54": [
+        6,
+        54
+      ],
+      "74": [
+        6,
+        8,
+        74
+      ]
+    },
+    "hard_holes": [
+      54,
+      74
+    ],
+    "healed_nonhard_roots": [
+      6,
+      18
+    ],
+    "prefix": [
+      2,
+      3,
+      5,
+      9,
+      14,
+      17,
+      26,
+      27,
+      33,
+      41,
+      44,
+      50,
+      51,
+      53,
+      65,
+      69
+    ],
+    "source_definition": "least forward-closed allowed set containing 2,3",
+    "source_equals_image_through_cutoff": true,
+    "unhealed_hard_roots": [
+      54,
+      74
+    ]
+  },
+  "complete_image_hole_reach": {
+    "54": [
+      6,
+      54
+    ],
+    "74": [
+      6,
+      8,
+      74
+    ]
+  },
+  "complete_source_blocker_reach": {
+    "54": [
+      6,
+      54
+    ],
+    "74": [
+      6,
+      8,
+      74
+    ]
+  },
+  "cutoff": 74,
+  "image_hole_trace": {
+    "54": [
+      {
+        "chain_value": 54,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          5,
+          11
+        ],
+        "root": 54
+      },
+      {
+        "chain_value": 11,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          2,
+          6
+        ],
+        "root": 6
+      },
+      {
+        "chain_value": 21,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          2,
+          11
+        ],
+        "root": 6
+      }
+    ],
+    "74": [
+      {
+        "chain_value": 74,
+        "missing_endpoints": [
+          15
+        ],
+        "pair": [
+          5,
+          15
+        ],
+        "root": 74
+      },
+      {
+        "chain_value": 15,
+        "missing_endpoints": [
+          8
+        ],
+        "pair": [
+          2,
+          8
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 29,
+        "missing_endpoints": [
+          15
+        ],
+        "pair": [
+          2,
+          15
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 29,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          5,
+          6
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 57,
+        "missing_endpoints": [
+          29
+        ],
+        "pair": [
+          2,
+          29
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 11,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          2,
+          6
+        ],
+        "root": 6
+      },
+      {
+        "chain_value": 21,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          2,
+          11
+        ],
+        "root": 6
+      }
+    ]
+  },
+  "image_prefix": [
+    2,
+    3,
+    5,
+    9,
+    14,
+    17,
+    26,
+    27,
+    33,
+    41,
+    44,
+    50,
+    51,
+    53,
+    62,
+    65,
+    69
+  ],
+  "least_step": {
+    "at_73": {
+      "Q_minus_H": 1,
+      "boundary_children": [
+        41,
+        69
+      ],
+      "hard_holes": [
+        54
+      ],
+      "healed_nonhard_roots": [
+        6,
+        18
+      ],
+      "unhealed_hard_roots": [
+        54
+      ]
+    },
+    "at_74": {
+      "Q_minus_H": 0,
+      "boundary_children": [
+        41,
+        69
+      ],
+      "hard_holes": [
+        54,
+        74
+      ],
+      "healed_nonhard_roots": [
+        6,
+        18
+      ],
+      "unhealed_hard_roots": [
+        54,
+        74
+      ]
+    }
+  },
+  "local_matching": {
+    "matching": {
+      "54": 6
+    },
+    "required": 2,
+    "size": 1
+  },
+  "parity_and_distinct_factor_audit": {
+    "hard_residues_mod_6": {
+      "54": 0,
+      "74": 2
+    },
+    "hard_shapes": [
+      54,
+      74
+    ],
+    "pairs_54": [
+      [
+        5,
+        11
+      ]
+    ],
+    "pairs_74": [
+      [
+        5,
+        15
+      ]
+    ],
+    "pairs_8": [],
+    "rejected_74_pair": [
+      3,
+      25
+    ],
+    "rejected_74_reason": "25 is 1 modulo 3",
+    "rejected_8_pair": [
+      3,
+      3
+    ],
+    "rejected_8_reason": "equal factors",
+    "seed_2_equal_exception": "2*2-1=3 is excluded and 3 is inserted as a seed"
+  },
+  "reachable_healed_nonhard": {
+    "54": [
+      6
+    ],
+    "74": [
+      6
+    ]
+  },
+  "schema_version": 1,
+  "source_blocker_trace": {
+    "54": [
+      {
+        "chain_value": 54,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          5,
+          11
+        ],
+        "root": 54
+      },
+      {
+        "chain_value": 11,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          2,
+          6
+        ],
+        "root": 6
+      },
+      {
+        "chain_value": 21,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          2,
+          11
+        ],
+        "root": 6
+      }
+    ],
+    "74": [
+      {
+        "chain_value": 74,
+        "missing_endpoints": [
+          15
+        ],
+        "pair": [
+          5,
+          15
+        ],
+        "root": 74
+      },
+      {
+        "chain_value": 15,
+        "missing_endpoints": [
+          8
+        ],
+        "pair": [
+          2,
+          8
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 29,
+        "missing_endpoints": [
+          15
+        ],
+        "pair": [
+          2,
+          15
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 29,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          5,
+          6
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 57,
+        "missing_endpoints": [
+          29
+        ],
+        "pair": [
+          2,
+          29
+        ],
+        "root": 8
+      },
+      {
+        "chain_value": 11,
+        "missing_endpoints": [
+          6
+        ],
+        "pair": [
+          2,
+          6
+        ],
+        "root": 6
+      },
+      {
+        "chain_value": 21,
+        "missing_endpoints": [
+          11
+        ],
+        "pair": [
+          2,
+          11
+        ],
+        "root": 6
+      }
+    ]
+  },
+  "source_definition": "least forward-closed allowed set containing 2,3,21",
+  "source_prefix": [
+    2,
+    3,
+    5,
+    9,
+    14,
+    17,
+    21,
+    26,
+    27,
+    33,
+    41,
+    44,
+    50,
+    51,
+    53,
+    62,
+    65,
+    69
+  ],
+  "unreachable_reserve_root": 18,
+  "unsupported_source_prefix": [
+    21
+  ]
+}

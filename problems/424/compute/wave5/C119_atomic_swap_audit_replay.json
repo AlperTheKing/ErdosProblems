@@ -1,0 +1,15 @@
+{
+  "ray":[3,2,1],
+  "Q":360,
+  "atomic_definition":"omega(a)<=1 and omega(b)<=1",
+  "layers":{"1":{"selected_residue":2,"selected_size":36},"2":{"selected_residue":2,"selected_size":7779}},
+  "summaries":[
+    {"K":2,"edges":1296,"support":1296,"repeated_fibres":0,"repeated_edge_mass":0,"collision_pairs":0,"atomic_pairs":0,"non_atomic_pairs":0,"bilateral_non_atomic_pairs":0,"max_multiplicity":1,"max_atomic_degree":0,"histogram":{"1":1296}},
+    {"K":3,"edges":560088,"support":559577,"repeated_fibres":511,"repeated_edge_mass":1022,"collision_pairs":511,"atomic_pairs":288,"non_atomic_pairs":223,"bilateral_non_atomic_pairs":57,"max_multiplicity":2,"max_atomic_degree":1,"histogram":{"1":559066,"2":511}},
+    {"K":4,"edges":60512841,"support":60496906,"repeated_fibres":15931,"repeated_edge_mass":31866,"collision_pairs":15939,"atomic_pairs":1831,"non_atomic_pairs":14108,"bilateral_non_atomic_pairs":6535,"max_multiplicity":3,"max_atomic_degree":1,"histogram":{"1":60480975,"2":15927,"3":4}}
+  ],
+  "AO1_all_collision_pairs_atomic":false,
+  "AO2_max_atomic_degree_at_most_2":true,
+  "first_non_atomic_witness":{"K":3,"product":18437808543,"multiplicity":2,"pair_indices":[0,1],"fibre":[{"layer":1,"left_index":9,"right_index":105,"left_offset":73,"right_offset":3649,"u":5907,"v":3121349},{"layer":2,"left_index":1043,"right_index":3,"left_offset":14266,"right_offset":43,"u":2102133,"v":8771}],"normal_form":{"g":33,"a":179,"b":63701,"c":49,"factor_a":[[179,1]],"factor_b":[[11,1],[5791,1]]}},
+  "first_bilateral_non_atomic_witness":{"K":3,"product":18809190225,"multiplicity":2,"pair_indices":[0,1],"fibre":[{"layer":2,"left_index":2504,"right_index":7,"left_offset":28876,"right_offset":61,"u":2131353,"v":8825},{"layer":2,"left_index":3065,"right_index":3,"left_offset":35437,"right_offset":43,"u":2144475,"v":8771}],"normal_form":{"g":243,"a":8771,"b":8825,"c":1,"factor_a":[[7,2],[179,1]],"factor_b":[[5,2],[353,1]]}}
+}

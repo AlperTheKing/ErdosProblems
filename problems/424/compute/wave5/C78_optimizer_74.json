@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "limit": 74,
+  "workers": 16,
+  "time_limit_seconds": 120.0,
+  "assumption": "unconditional",
+  "status": "OPTIMAL",
+  "wall_time_seconds": 0.0232839,
+  "branches": 8,
+  "conflicts": 0,
+  "best_objective_bound": -0.0,
+  "objective_excess": 0,
+  "selected_cutoff": 74,
+  "previous_members": [
+    2,
+    3,
+    5,
+    9,
+    14,
+    17,
+    21,
+    26,
+    27,
+    33,
+    41,
+    44,
+    50,
+    51,
+    53,
+    62,
+    65,
+    69
+  ],
+  "previous_hard_holes": [
+    54,
+    74
+  ],
+  "previous_boundary_children": [
+    21,
+    69
+  ],
+  "following_members": [
+    2,
+    3,
+    5,
+    9,
+    14,
+    17,
+    26,
+    27,
+    33,
+    41,
+    44,
+    50,
+    51,
+    53,
+    62,
+    65,
+    69
+  ],
+  "following_hard_holes": [
+    54,
+    74
+  ],
+  "following_boundary_children": [
+    41,
+    69
+  ],
+  "following_first_failure": null,
+  "unsupported_previous_members": [
+    21
+  ],
+  "threshold_shift_identity": {
+    "half": 37,
+    "old_slack_Q_minus_H": 0,
+    "dangerous_moved_boundaries": [],
+    "dangerous_removed_hard_roots": [],
+    "helpful_removed_nonhard_roots": [],
+    "new_slack_Q_minus_H": 0
+  },
+  "sorted_event_dominance": {
+    "credit_keys": [
+      21,
+      41,
+      69
+    ],
+    "demand_keys": [
+      21,
+      54,
+      74
+    ],
+    "first_violation": null
+  }
+}

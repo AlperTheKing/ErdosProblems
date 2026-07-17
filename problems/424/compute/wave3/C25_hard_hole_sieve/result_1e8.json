@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":100000000,
+  "multipliers":{"D2":[5,17,41,53,77],"D0":[33,69],"priority":[5,17,33,41,53,69,77],"primitive_eligible_through_10000":{"count":699,"first":[5,17,33,41,53,69,77,87,101,131,137,149,161,167,173,197,209,233,239,249,251,257,267,293,317,321,377,389,401,407,419,437,449,461,473,491,497,521,573,581,593,611,617,641,647,653,701,713,719,761,767,773,789,791,797,807,821,857,881,887,929,941,953,971]}},
+  "spectral":{"a":0.315068710829518604,"b":0.0447957839262187088,"gate":0.0127304175574822737,"rho":0.999214644481743992},
+  "counts":{"M0":10808744,"M2":3958793,"E":9395726,"O0":729068,"O2":1013058,"S":260959,"H0":3086708,"H2":282018,"H":3368726},
+  "sieve":{"residual0":2822144,"residual2":243479,"forced11":278968,"forced11_residual":278964,"assigned0":{"5":158536,"17":50096,"41":24419,"53":18912,"77":12601},"assigned2":{"5":7350,"17":560,"33":19059,"41":1580,"53":364,"69":9626}},
+  "recurrences":{"H0_le_D2O2":{"source_events":3086708,"failure_events":3086702,"first_failure":252,"source_at_first_failure":7,"capacity_at_first_failure":6,"maximum_excess":2600221,"maximum_excess_X":99999972,"source_at_max":3086708,"capacity_at_max":486487},"H2_le_D2O0_plus_D0O2":{"source_events":282018,"failure_events":0,"first_failure":0,"source_at_first_failure":0,"capacity_at_first_failure":0,"maximum_excess":0,"maximum_excess_X":74,"source_at_max":1,"capacity_at_max":1},"combined":{"source_events":3368726,"failure_events":3367702,"first_failure":18938,"source_at_first_failure":1006,"capacity_at_first_failure":1005,"maximum_excess":2420094,"maximum_excess_X":99999972,"source_at_max":3368726,"capacity_at_max":948632}},
+  "checkpoints":[
+    {"X":100,"M0":23,"M2":20,"E":19,"O0":8,"O2":10,"S":4,"H0":1,"H2":1,"residual0":0,"residual2":0,"capacity0":1,"capacity2":1},
+    {"X":1000,"M0":230,"M2":186,"E":156,"O0":80,"O2":88,"S":51,"H0":34,"H2":7,"residual0":8,"residual2":0,"capacity0":27,"capacity2":31},
+    {"X":10000,"M0":2019,"M2":1440,"E":1344,"O0":586,"O2":658,"S":353,"H0":437,"H2":81,"residual0":202,"residual2":10,"capacity0":268,"capacity2":299},
+    {"X":100000,"M0":16823,"M2":10000,"E":11928,"O0":3589,"O2":4152,"S":2046,"H0":4388,"H2":720,"residual0":2746,"residual2":272,"capacity0":2005,"capacity2":2202},
+    {"X":1000000,"M0":140882,"M2":68185,"E":108651,"O0":20075,"O2":24671,"S":10087,"H0":40135,"H2":5448,"residual0":30517,"residual2":3245,"capacity0":13013,"capacity2":13875},
+    {"X":10000000,"M0":1216064,"M2":498332,"E":1004961,"O0":115146,"O2":152219,"S":49109,"H0":353769,"H2":39192,"residual0":303144,"residual2":29830,"capacity0":78871,"capacity2":79755},
+    {"X":100000000,"M0":10808744,"M2":3958793,"E":9395726,"O0":729068,"O2":1013058,"S":260959,"H0":3086708,"H2":282018,"residual0":2822144,"residual2":243479,"capacity0":486487,"capacity2":462146}
+  ],
+  "elapsed_seconds":10.2853954999999999
+}

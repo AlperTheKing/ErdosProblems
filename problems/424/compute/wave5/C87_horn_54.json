@@ -1,0 +1,74 @@
+{
+  "schema": "C87-horn-implication-v1",
+  "cutoff": 54,
+  "grounded_size": 14,
+  "hard_roots": [
+    54
+  ],
+  "target_roots": [
+    6,
+    8,
+    12,
+    18,
+    20,
+    24
+  ],
+  "edge_count": 1,
+  "common_neighbor_count": 1,
+  "common_neighbors": [
+    6
+  ],
+  "adjacency": {
+    "54": [
+      6
+    ]
+  },
+  "target_data": {
+    "6": {
+      "top": 41,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        54
+      ]
+    },
+    "8": {
+      "top": 29,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "12": {
+      "top": 45,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "18": {
+      "top": 35,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "20": {
+      "top": 39,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "24": {
+      "top": 47,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    }
+  },
+  "matching": [
+    [
+      54,
+      6
+    ]
+  ],
+  "matching_size": 1,
+  "hall": {
+    "hard_set": [],
+    "neighbor_set": [],
+    "deficit": 0
+  },
+  "nested_hard_pairs": 0,
+  "incomparable_hard_pairs": []
+}

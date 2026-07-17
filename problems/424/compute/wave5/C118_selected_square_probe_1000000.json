@@ -1,0 +1,1456 @@
+{
+  "arithmetic": "exact integers and Fraction only",
+  "divisor_rich_multiple_obstruction": {
+    "bin_capacity": 1048576,
+    "certified_pair_lower_bound_per_source": 16,
+    "fixed_multiplier": 623645,
+    "j": 20,
+    "minus_primes": [
+      5,
+      11,
+      17,
+      23,
+      29
+    ],
+    "sample_rows": [
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261577542743
+          ],
+          [
+            11,
+            118898883065
+          ],
+          [
+            17,
+            76934571395
+          ],
+          [
+            935,
+            1398810389
+          ],
+          [
+            23,
+            56864683205
+          ],
+          [
+            1265,
+            1033903331
+          ],
+          [
+            1955,
+            668996273
+          ],
+          [
+            4301,
+            304089215
+          ],
+          [
+            29,
+            45099576335
+          ],
+          [
+            1595,
+            819992297
+          ],
+          [
+            2465,
+            530583251
+          ],
+          [
+            5423,
+            241174205
+          ],
+          [
+            3335,
+            392170229
+          ],
+          [
+            7337,
+            178259195
+          ],
+          [
+            11339,
+            115344185
+          ],
+          [
+            623645,
+            2097167
+          ]
+        ],
+        "endpoint": 2097167,
+        "root": 1048584,
+        "source_plus_1": 1307887713715
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261579039491
+          ],
+          [
+            11,
+            118899563405
+          ],
+          [
+            17,
+            76935011615
+          ],
+          [
+            935,
+            1398818393
+          ],
+          [
+            23,
+            56865008585
+          ],
+          [
+            1265,
+            1033909247
+          ],
+          [
+            1955,
+            669000101
+          ],
+          [
+            4301,
+            304090955
+          ],
+          [
+            29,
+            45099834395
+          ],
+          [
+            1595,
+            819996989
+          ],
+          [
+            2465,
+            530586287
+          ],
+          [
+            5423,
+            241175585
+          ],
+          [
+            3335,
+            392172473
+          ],
+          [
+            7337,
+            178260215
+          ],
+          [
+            11339,
+            115344845
+          ],
+          [
+            623645,
+            2097179
+          ]
+        ],
+        "endpoint": 2097179,
+        "root": 1048590,
+        "source_plus_1": 1307895197455
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261580536239
+          ],
+          [
+            11,
+            118900243745
+          ],
+          [
+            17,
+            76935451835
+          ],
+          [
+            935,
+            1398826397
+          ],
+          [
+            23,
+            56865333965
+          ],
+          [
+            1265,
+            1033915163
+          ],
+          [
+            1955,
+            669003929
+          ],
+          [
+            4301,
+            304092695
+          ],
+          [
+            29,
+            45100092455
+          ],
+          [
+            1595,
+            820001681
+          ],
+          [
+            2465,
+            530589323
+          ],
+          [
+            5423,
+            241176965
+          ],
+          [
+            3335,
+            392174717
+          ],
+          [
+            7337,
+            178261235
+          ],
+          [
+            11339,
+            115345505
+          ],
+          [
+            623645,
+            2097191
+          ]
+        ],
+        "endpoint": 2097191,
+        "root": 1048596,
+        "source_plus_1": 1307902681195
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261582032987
+          ],
+          [
+            11,
+            118900924085
+          ],
+          [
+            17,
+            76935892055
+          ],
+          [
+            935,
+            1398834401
+          ],
+          [
+            23,
+            56865659345
+          ],
+          [
+            1265,
+            1033921079
+          ],
+          [
+            1955,
+            669007757
+          ],
+          [
+            4301,
+            304094435
+          ],
+          [
+            29,
+            45100350515
+          ],
+          [
+            1595,
+            820006373
+          ],
+          [
+            2465,
+            530592359
+          ],
+          [
+            5423,
+            241178345
+          ],
+          [
+            3335,
+            392176961
+          ],
+          [
+            7337,
+            178262255
+          ],
+          [
+            11339,
+            115346165
+          ],
+          [
+            623645,
+            2097203
+          ]
+        ],
+        "endpoint": 2097203,
+        "root": 1048602,
+        "source_plus_1": 1307910164935
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261589516727
+          ],
+          [
+            11,
+            118904325785
+          ],
+          [
+            17,
+            76938093155
+          ],
+          [
+            935,
+            1398874421
+          ],
+          [
+            23,
+            56867286245
+          ],
+          [
+            1265,
+            1033950659
+          ],
+          [
+            1955,
+            669026897
+          ],
+          [
+            4301,
+            304103135
+          ],
+          [
+            29,
+            45101640815
+          ],
+          [
+            1595,
+            820029833
+          ],
+          [
+            2465,
+            530607539
+          ],
+          [
+            5423,
+            241185245
+          ],
+          [
+            3335,
+            392188181
+          ],
+          [
+            7337,
+            178267355
+          ],
+          [
+            11339,
+            115349465
+          ],
+          [
+            623645,
+            2097263
+          ]
+        ],
+        "endpoint": 2097263,
+        "root": 1048632,
+        "source_plus_1": 1307947583635
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261592510223
+          ],
+          [
+            11,
+            118905686465
+          ],
+          [
+            17,
+            76938973595
+          ],
+          [
+            935,
+            1398890429
+          ],
+          [
+            23,
+            56867937005
+          ],
+          [
+            1265,
+            1033962491
+          ],
+          [
+            1955,
+            669034553
+          ],
+          [
+            4301,
+            304106615
+          ],
+          [
+            29,
+            45102156935
+          ],
+          [
+            1595,
+            820039217
+          ],
+          [
+            2465,
+            530613611
+          ],
+          [
+            5423,
+            241188005
+          ],
+          [
+            3335,
+            392192669
+          ],
+          [
+            7337,
+            178269395
+          ],
+          [
+            11339,
+            115350785
+          ],
+          [
+            623645,
+            2097287
+          ]
+        ],
+        "endpoint": 2097287,
+        "root": 1048644,
+        "source_plus_1": 1307962551115
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261594006971
+          ],
+          [
+            11,
+            118906366805
+          ],
+          [
+            17,
+            76939413815
+          ],
+          [
+            935,
+            1398898433
+          ],
+          [
+            23,
+            56868262385
+          ],
+          [
+            1265,
+            1033968407
+          ],
+          [
+            1955,
+            669038381
+          ],
+          [
+            4301,
+            304108355
+          ],
+          [
+            29,
+            45102414995
+          ],
+          [
+            1595,
+            820043909
+          ],
+          [
+            2465,
+            530616647
+          ],
+          [
+            5423,
+            241189385
+          ],
+          [
+            3335,
+            392194913
+          ],
+          [
+            7337,
+            178270415
+          ],
+          [
+            11339,
+            115351445
+          ],
+          [
+            623645,
+            2097299
+          ]
+        ],
+        "endpoint": 2097299,
+        "root": 1048650,
+        "source_plus_1": 1307970034855
+      },
+      {
+        "certified_admissible_pairs": [
+          [
+            5,
+            261595503719
+          ],
+          [
+            11,
+            118907047145
+          ],
+          [
+            17,
+            76939854035
+          ],
+          [
+            935,
+            1398906437
+          ],
+          [
+            23,
+            56868587765
+          ],
+          [
+            1265,
+            1033974323
+          ],
+          [
+            1955,
+            669042209
+          ],
+          [
+            4301,
+            304110095
+          ],
+          [
+            29,
+            45102673055
+          ],
+          [
+            1595,
+            820048601
+          ],
+          [
+            2465,
+            530619683
+          ],
+          [
+            5423,
+            241190765
+          ],
+          [
+            3335,
+            392197157
+          ],
+          [
+            7337,
+            178271435
+          ],
+          [
+            11339,
+            115352105
+          ],
+          [
+            623645,
+            2097311
+          ]
+        ],
+        "endpoint": 2097311,
+        "root": 1048656,
+        "source_plus_1": 1307977518595
+      }
+    ],
+    "scope": "arithmetic superset only; no source is asserted hard or any root missing",
+    "valid_root_count": 110477,
+    "valid_root_density": {
+      "denominator": 1048576,
+      "numerator": 110477
+    }
+  },
+  "prefix": {
+    "all_root_upgrade_events": 3015,
+    "distinct_reducible_roots": 1776,
+    "first_failures": {
+      "all_source_roots_square_ge_q": null,
+      "both_endpoint_and_cofactor_pay_sqrt_2d": {
+        "all_root_count": 4,
+        "chain_exponent": 1,
+        "cofactor": 5,
+        "d": 4,
+        "endpoint": 231,
+        "factorization_h_plus_1": [
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "h": 1154,
+        "historical_co_root_count": 3,
+        "historical_smaller_co_root_count": 3,
+        "j": 6,
+        "new_q": 3,
+        "old_q": 0,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 231,
+                "root": 116,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              5,
+              231
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 15,
+                "root": 8,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              15,
+              77
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 11,
+                "root": 6,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              11,
+              105
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 35,
+                "root": 18,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              33,
+              35
+            ]
+          }
+        ],
+        "q": 3,
+        "reducible_root_count": 1,
+        "root": 116,
+        "source_smaller_root_count": 3,
+        "tau_cofactor": 2,
+        "tau_endpoint": 8,
+        "tau_product": 16,
+        "tau_root_plus_1": 6
+      },
+      "c108_prefix_pays_capped_sqrt_q": null,
+      "chain_exponent_square_ge_q": {
+        "all_root_count": 4,
+        "chain_exponent": 1,
+        "cofactor": 5,
+        "d": 4,
+        "endpoint": 231,
+        "factorization_h_plus_1": [
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "h": 1154,
+        "historical_co_root_count": 3,
+        "historical_smaller_co_root_count": 3,
+        "j": 6,
+        "new_q": 3,
+        "old_q": 0,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 231,
+                "root": 116,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              5,
+              231
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 15,
+                "root": 8,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              15,
+              77
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 11,
+                "root": 6,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              11,
+              105
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 35,
+                "root": 18,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              33,
+              35
+            ]
+          }
+        ],
+        "q": 3,
+        "reducible_root_count": 1,
+        "root": 116,
+        "source_smaller_root_count": 3,
+        "tau_cofactor": 2,
+        "tau_endpoint": 8,
+        "tau_product": 16,
+        "tau_root_plus_1": 6
+      },
+      "cofactor_tau_ge_d": {
+        "all_root_count": 4,
+        "chain_exponent": 1,
+        "cofactor": 5,
+        "d": 4,
+        "endpoint": 231,
+        "factorization_h_plus_1": [
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "h": 1154,
+        "historical_co_root_count": 3,
+        "historical_smaller_co_root_count": 3,
+        "j": 6,
+        "new_q": 3,
+        "old_q": 0,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 231,
+                "root": 116,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              5,
+              231
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 15,
+                "root": 8,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              15,
+              77
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 11,
+                "root": 6,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              11,
+              105
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 35,
+                "root": 18,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              33,
+              35
+            ]
+          }
+        ],
+        "q": 3,
+        "reducible_root_count": 1,
+        "root": 116,
+        "source_smaller_root_count": 3,
+        "tau_cofactor": 2,
+        "tau_endpoint": 8,
+        "tau_product": 16,
+        "tau_root_plus_1": 6
+      },
+      "endpoint_tau_ge_d": {
+        "all_root_count": 5,
+        "chain_exponent": 1,
+        "cofactor": 231,
+        "d": 4,
+        "endpoint": 227,
+        "factorization_h_plus_1": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            227,
+            1
+          ]
+        ],
+        "h": 52436,
+        "historical_co_root_count": 5,
+        "historical_smaller_co_root_count": 3,
+        "j": 6,
+        "new_q": 3,
+        "old_q": 1,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 11,
+                "root": 6,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              11,
+              4767
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 1589,
+                "root": 398,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              33,
+              1589
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 681,
+                "root": 86,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              77,
+              681
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 227,
+                "root": 114,
+                "root_state": 3
+              },
+              {
+                "endpoint": 231,
+                "root": 116,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              227,
+              231
+            ]
+          }
+        ],
+        "q": 3,
+        "reducible_root_count": 3,
+        "root": 114,
+        "source_smaller_root_count": 2,
+        "tau_cofactor": 8,
+        "tau_endpoint": 2,
+        "tau_product": 16,
+        "tau_root_plus_1": 4
+      },
+      "historical_co_roots_square_ge_q": {
+        "all_root_count": 2,
+        "chain_exponent": 2,
+        "cofactor": 17,
+        "d": 3,
+        "endpoint": 55709,
+        "factorization_h_plus_1": [
+          [
+            17,
+            2
+          ],
+          [
+            29,
+            1
+          ],
+          [
+            113,
+            1
+          ]
+        ],
+        "h": 947052,
+        "historical_co_root_count": 1,
+        "historical_smaller_co_root_count": 1,
+        "j": 13,
+        "new_q": 2,
+        "old_q": 0,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 55709,
+                "root": 13928,
+                "root_state": 0
+              }
+            ],
+            "pair": [
+              17,
+              55709
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 29,
+                "root": 8,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              29,
+              32657
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 113,
+                "root": 8,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              113,
+              8381
+            ]
+          }
+        ],
+        "q": 2,
+        "reducible_root_count": 1,
+        "root": 13928,
+        "source_smaller_root_count": 1,
+        "tau_cofactor": 2,
+        "tau_endpoint": 8,
+        "tau_product": 16,
+        "tau_root_plus_1": 4
+      },
+      "historical_smaller_co_roots_square_ge_q": {
+        "all_root_count": 3,
+        "chain_exponent": 1,
+        "cofactor": 17,
+        "d": 3,
+        "endpoint": 3275,
+        "factorization_h_plus_1": [
+          [
+            5,
+            2
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            131,
+            1
+          ]
+        ],
+        "h": 55674,
+        "historical_co_root_count": 2,
+        "historical_smaller_co_root_count": 1,
+        "j": 10,
+        "new_q": 2,
+        "old_q": 0,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 11135,
+                "root": 5568,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              5,
+              11135
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 3275,
+                "root": 1638,
+                "root_state": 3
+              }
+            ],
+            "pair": [
+              17,
+              3275
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 425,
+                "root": 54,
+                "root_state": 3
+              }
+            ],
+            "pair": [
+              131,
+              425
+            ]
+          }
+        ],
+        "q": 2,
+        "reducible_root_count": 2,
+        "root": 1638,
+        "source_smaller_root_count": 1,
+        "tau_cofactor": 2,
+        "tau_endpoint": 6,
+        "tau_product": 12,
+        "tau_root_plus_1": 4
+      },
+      "individual_left_gap_pays_capped_sqrt_q": {
+        "certificate": {
+          "all_root_count": 9,
+          "chain_exponent": 1,
+          "cofactor": 365,
+          "d": 8,
+          "endpoint": 231,
+          "factorization_h_plus_1": [
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              73,
+              1
+            ]
+          ],
+          "h": 84314,
+          "historical_co_root_count": 14,
+          "historical_smaller_co_root_count": 5,
+          "j": 6,
+          "new_q": 7,
+          "old_q": 5,
+          "pairs": [
+            {
+              "missing": [
+                {
+                  "endpoint": 16863,
+                  "root": 8432,
+                  "root_state": 0
+                }
+              ],
+              "pair": [
+                5,
+                16863
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 15,
+                  "root": 8,
+                  "root_state": 2
+                },
+                {
+                  "endpoint": 5621,
+                  "root": 1406,
+                  "root_state": 2
+                }
+              ],
+              "pair": [
+                15,
+                5621
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 35,
+                  "root": 18,
+                  "root_state": 2
+                }
+              ],
+              "pair": [
+                35,
+                2409
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 803,
+                  "root": 402,
+                  "root_state": 2
+                }
+              ],
+              "pair": [
+                105,
+                803
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 11,
+                  "root": 6,
+                  "root_state": 2
+                }
+              ],
+              "pair": [
+                11,
+                7665
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 2555,
+                  "root": 1278,
+                  "root_state": 2
+                }
+              ],
+              "pair": [
+                33,
+                2555
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 1095,
+                  "root": 548,
+                  "root_state": 0
+                }
+              ],
+              "pair": [
+                77,
+                1095
+              ]
+            },
+            {
+              "missing": [
+                {
+                  "endpoint": 231,
+                  "root": 116,
+                  "root_state": 0
+                }
+              ],
+              "pair": [
+                231,
+                365
+              ]
+            }
+          ],
+          "q": 7,
+          "reducible_root_count": 3,
+          "root": 116,
+          "source_smaller_root_count": 3,
+          "tau_cofactor": 4,
+          "tau_endpoint": 8,
+          "tau_product": 32,
+          "tau_root_plus_1": 6
+        },
+        "gap": 2,
+        "j": 6,
+        "limit": 1000000,
+        "previous_root": 114,
+        "q": 7,
+        "root": 116,
+        "weight": 3
+      },
+      "reducible_source_roots_square_ge_q": {
+        "all_root_count": 2,
+        "d": 2,
+        "factorization_h_plus_1": [
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            17,
+            1
+          ]
+        ],
+        "h": 594,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 119,
+                "root": 60,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              5,
+              119
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 35,
+                "root": 18,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              17,
+              35
+            ]
+          }
+        ],
+        "q": 1,
+        "reducible_root_count": 0
+      },
+      "root_shift_tau_square_ge_q": null,
+      "selected_active_gap_pays_m": null,
+      "selected_prefix_pays_m": null,
+      "source_smaller_roots_square_ge_q": {
+        "all_root_count": 4,
+        "chain_exponent": 3,
+        "cofactor": 11,
+        "d": 3,
+        "endpoint": 425,
+        "factorization_h_plus_1": [
+          [
+            5,
+            2
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            17,
+            1
+          ]
+        ],
+        "h": 4674,
+        "historical_co_root_count": 5,
+        "historical_smaller_co_root_count": 3,
+        "j": 5,
+        "new_q": 2,
+        "old_q": 1,
+        "pairs": [
+          {
+            "missing": [
+              {
+                "endpoint": 935,
+                "root": 468,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              5,
+              935
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 11,
+                "root": 6,
+                "root_state": 2
+              },
+              {
+                "endpoint": 425,
+                "root": 54,
+                "root_state": 3
+              }
+            ],
+            "pair": [
+              11,
+              425
+            ]
+          },
+          {
+            "missing": [
+              {
+                "endpoint": 275,
+                "root": 138,
+                "root_state": 2
+              }
+            ],
+            "pair": [
+              17,
+              275
+            ]
+          }
+        ],
+        "q": 2,
+        "reducible_root_count": 1,
+        "root": 54,
+        "source_smaller_root_count": 1,
+        "tau_cofactor": 2,
+        "tau_endpoint": 6,
+        "tau_product": 12,
+        "tau_root_plus_1": 4
+      }
+    },
+    "hard_sources": 45583,
+    "limit": 1000000,
+    "maximum_d": 9,
+    "positive_q_root_upgrade_events": 2239,
+    "square_blocks": [
+      {
+        "B_m": {
+          "denominator": 65536,
+          "numerator": 84203
+        },
+        "B_m_over_m_cubed": {
+          "denominator": 65536,
+          "numerator": 84203
+        },
+        "active_roots": 817,
+        "m": 1
+      },
+      {
+        "B_m": {
+          "denominator": 16384,
+          "numerator": 12559
+        },
+        "B_m_over_m_cubed": {
+          "denominator": 131072,
+          "numerator": 12559
+        },
+        "active_roots": 154,
+        "m": 2
+      }
+    ]
+  },
+  "schema": "C118-selected-square-probe-v1"
+}

@@ -1,0 +1,34 @@
+{
+  "submodularity": {
+    "X": 594,
+    "D1": [
+      35
+    ],
+    "D2": [
+      119
+    ],
+    "D1_is_actual_hole": true,
+    "D2_is_actual_hole": true,
+    "f_D1": -9,
+    "f_D2": -10,
+    "f_union": -8,
+    "f_intersection": -10,
+    "mixed_difference": -1
+  },
+  "supermodularity": {
+    "X": 69,
+    "D1": [
+      12
+    ],
+    "D2": [
+      18
+    ],
+    "D1_is_actual_hole": true,
+    "D2_is_actual_hole": true,
+    "f_D1": 0,
+    "f_D2": 0,
+    "f_union": -1,
+    "f_intersection": 0,
+    "mixed_difference": 1
+  }
+}

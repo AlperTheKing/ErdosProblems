@@ -1,0 +1,133 @@
+{
+  "L_X": 32,
+  "arithmetic": "exact integers and Fraction only",
+  "capped_energy": {
+    "denominator": 67108864,
+    "numerator": 430274845
+  },
+  "endpoint_C_equals_1": true,
+  "full_layer_cake_identity": true,
+  "maximum_endpoint_C_squared": {
+    "denominator": 18446744073709551616,
+    "numerator": 42730031265752943
+  },
+  "maximum_endpoint_location": {
+    "D": 7,
+    "J": 3,
+    "tail": {
+      "denominator": 134217728,
+      "numerator": 78129957
+    }
+  },
+  "maximum_q": 17,
+  "schema": "C114-layercake-square-block-v1",
+  "source_limit": 3000000000,
+  "source_sha256": "96791721CE773A145DDBE69B6AFED16503CFFD9E0715A27F2904D44E268133A7",
+  "square_blocks": [
+    {
+      "D": 4,
+      "block_mass": {
+        "denominator": 33554432,
+        "numerator": 65810027
+      },
+      "block_over_m_cubed": {
+        "denominator": 33554432,
+        "numerator": 65810027
+      },
+      "direct_capped_increment": {
+        "denominator": 33554432,
+        "numerator": 65810027
+      },
+      "endpoint_tail": {
+        "denominator": 268435456,
+        "numerator": 166479637
+      },
+      "m": 1,
+      "monotone_lower_bound": {
+        "denominator": 268435456,
+        "numerator": 499438911
+      },
+      "terms": 3
+    },
+    {
+      "D": 9,
+      "block_mass": {
+        "denominator": 268435456,
+        "numerator": 684009081
+      },
+      "block_over_m_cubed": {
+        "denominator": 2147483648,
+        "numerator": 684009081
+      },
+      "direct_capped_increment": {
+        "denominator": 268435456,
+        "numerator": 684009081
+      },
+      "endpoint_tail": {
+        "denominator": 268435456,
+        "numerator": 98357345
+      },
+      "m": 2,
+      "monotone_lower_bound": {
+        "denominator": 268435456,
+        "numerator": 491786725
+      },
+      "terms": 5
+    },
+    {
+      "D": 16,
+      "block_mass": {
+        "denominator": 134217728,
+        "numerator": 162700245
+      },
+      "block_over_m_cubed": {
+        "denominator": 134217728,
+        "numerator": 6025935
+      },
+      "direct_capped_increment": {
+        "denominator": 134217728,
+        "numerator": 162700245
+      },
+      "endpoint_tail": {
+        "denominator": 32768,
+        "numerator": 131
+      },
+      "m": 3,
+      "monotone_lower_bound": {
+        "denominator": 32768,
+        "numerator": 917
+      },
+      "terms": 7
+    },
+    {
+      "D": 25,
+      "block_mass": {
+        "denominator": 32768,
+        "numerator": 131
+      },
+      "block_over_m_cubed": {
+        "denominator": 2097152,
+        "numerator": 131
+      },
+      "direct_capped_increment": {
+        "denominator": 32768,
+        "numerator": 131
+      },
+      "endpoint_tail": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "m": 4,
+      "monotone_lower_bound": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "terms": 9
+    }
+  ],
+  "sum_of_threshold_tails": {
+    "denominator": 67108864,
+    "numerator": 430274845
+  },
+  "threshold_tails_monotone": true
+}

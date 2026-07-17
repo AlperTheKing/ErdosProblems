@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "limit": 2000,
+  "method": "trial-division least closure; exact augmenting-path maximum matching and alternating-path Hall witness at every cutoff",
+  "generated_count": 530,
+  "reducible_count": 505,
+  "variants": [
+    {
+      "name": "direct missing endpoints, one half-scale copy",
+      "cutoffs_verified_before_failure": 28,
+      "first_failure_cutoff": 32,
+      "left_count": 6,
+      "matching_size": 5,
+      "total_deficit": 1,
+      "hall_witness": {
+        "left_count": 2,
+        "neighbor_count": 1,
+        "deficit": 1,
+        "left_values": [
+          21,
+          32
+        ],
+        "neighbor_values": [
+          {
+            "copy": "half",
+            "hole": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "least missing endpoint, half-plus-third copies",
+      "cutoffs_verified_before_failure": 35,
+      "first_failure_cutoff": 39,
+      "left_count": 8,
+      "matching_size": 7,
+      "total_deficit": 1,
+      "hall_witness": {
+        "left_count": 3,
+        "neighbor_count": 2,
+        "deficit": 1,
+        "left_values": [
+          15,
+          23,
+          39
+        ],
+        "neighbor_values": [
+          {
+            "copy": "half",
+            "hole": 8
+          },
+          {
+            "copy": "third",
+            "hole": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "all direct missing endpoints, half-plus-third copies",
+      "cutoffs_verified_before_failure": 50,
+      "first_failure_cutoff": 54,
+      "left_count": 11,
+      "matching_size": 10,
+      "total_deficit": 1,
+      "hall_witness": {
+        "left_count": 3,
+        "neighbor_count": 2,
+        "deficit": 1,
+        "left_values": [
+          21,
+          32,
+          54
+        ],
+        "neighbor_values": [
+          {
+            "copy": "half",
+            "hole": 11
+          },
+          {
+            "copy": "third",
+            "hole": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "transitive missing-endpoint shadow, half-plus-third copies",
+      "cutoffs_verified_before_failure": 182,
+      "first_failure_cutoff": 186,
+      "left_count": 50,
+      "matching_size": 49,
+      "total_deficit": 1,
+      "hall_witness": {
+        "left_count": 5,
+        "neighbor_count": 4,
+        "deficit": 1,
+        "left_values": [
+          11,
+          21,
+          32,
+          54,
+          186
+        ],
+        "neighbor_values": [
+          {
+            "copy": "half",
+            "hole": 6
+          },
+          {
+            "copy": "half",
+            "hole": 11
+          },
+          {
+            "copy": "third",
+            "hole": 6
+          },
+          {
+            "copy": "third",
+            "hole": 11
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "C26-independent-replay-v1",
+  "input": "result_211_g2.json",
+  "method": "explicit multiset-word witnesses from x=9",
+  "blocks": [
+    {
+      "k": 1,
+      "D": 12,
+      "word_witnesses": 12,
+      "selected_color": "G2",
+      "status": "verified"
+    },
+    {
+      "k": 2,
+      "D": 409,
+      "word_witnesses": 420,
+      "selected_color": "G2",
+      "status": "verified"
+    },
+    {
+      "k": 3,
+      "D": 17215,
+      "word_witnesses": 18480,
+      "selected_color": "G2",
+      "status": "verified"
+    },
+    {
+      "k": 4,
+      "D": 796473,
+      "word_witnesses": 900900,
+      "selected_color": "G2",
+      "status": "verified"
+    }
+  ],
+  "energy_identities": [
+    {
+      "K": 2,
+      "N": 36,
+      "E": 36,
+      "status": "identities-verified"
+    },
+    {
+      "K": 3,
+      "N": 2796,
+      "E": 2806,
+      "status": "identities-verified"
+    },
+    {
+      "K": 4,
+      "N": 171853,
+      "E": 172823,
+      "status": "identities-verified"
+    },
+    {
+      "K": 5,
+      "N": 4565402,
+      "status": "pair-count-verified"
+    },
+    {
+      "K": 6,
+      "N": 307692465,
+      "status": "pair-count-verified"
+    }
+  ],
+  "energies": [
+    {
+      "K": 2,
+      "N": 36,
+      "E": 36,
+      "status": "verified"
+    },
+    {
+      "K": 3,
+      "N": 2796,
+      "E": 2806,
+      "status": "verified"
+    },
+    {
+      "K": 4,
+      "N": 171853,
+      "E": 172823,
+      "status": "verified"
+    }
+  ],
+  "all_membership_and_color_checks": true,
+  "all_energy_identities": true
+}

@@ -1,0 +1,1284 @@
+{
+  "C104_BIN_falsifier": null,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with factor primality and product rechecks",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "prime_limit": 100000,
+  "rows": [
+    {
+      "base_d": 12,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 1526855,
+              "lifted_value": 19849115,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 143,
+              "missing": true
+            },
+            {
+              "base_blocker": 449075,
+              "lifted_value": 5837975,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 299,
+              "missing": true
+            },
+            {
+              "base_blocker": 71,
+              "lifted_value": 923,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 3575,
+              "missing": true
+            },
+            {
+              "base_blocker": 575,
+              "lifted_value": 7475,
+              "missing": true
+            },
+            {
+              "base_blocker": 6035,
+              "lifted_value": 78455,
+              "missing": false
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 25415,
+              "missing": true
+            }
+          ],
+          "q": 13
+        }
+      ],
+      "eligible_plus_primes_tested": 4784,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          71,
+          1
+        ]
+      ],
+      "forced_blocker_count": 9,
+      "forced_one_hole_blockers": [
+        1526855,
+        11,
+        449075,
+        23,
+        71,
+        275,
+        575,
+        6035,
+        1955
+      ],
+      "h": 7634274,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 7,
+      "product": 7634275,
+      "root": 54,
+      "two_hole_pairs": [
+        [
+          425,
+          17963
+        ],
+        [
+          935,
+          8165
+        ],
+        [
+          1775,
+          4301
+        ]
+      ]
+    },
+    {
+      "base_d": 12,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 40559603,
+              "missing": true
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 11929295,
+              "missing": false
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 1679,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 2117,
+              "missing": true
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 2555,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 8687,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 1259615,
+              "missing": false
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 14819,
+              "missing": false
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 243455,
+              "missing": false
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 82271,
+              "missing": true
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 142715,
+              "missing": true
+            }
+          ],
+          "q": 73
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 100565591,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 29578115,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 4163,
+              "missing": true
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 5249,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 6335,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 21539,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 3123155,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 36743,
+              "missing": true
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 603635,
+              "missing": false
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 203987,
+              "missing": false
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 353855,
+              "missing": false
+            }
+          ],
+          "q": 181
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 620617487,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 182534555,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 25691,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 32393,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 39095,
+              "missing": false
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 132923,
+              "missing": false
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 19273835,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 226751,
+              "missing": true
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 3725195,
+              "missing": true
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 1258859,
+              "missing": true
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 2183735,
+              "missing": true
+            }
+          ],
+          "q": 1117
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 2820837047,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 829657955,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 116771,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 147233,
+              "missing": true
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 177695,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 604163,
+              "missing": false
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 87603635,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 1030631,
+              "missing": false
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 16931795,
+              "missing": false
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 5721779,
+              "missing": true
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 9925535,
+              "missing": true
+            }
+          ],
+          "q": 5077
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 3600914891,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 1059092615,
+              "missing": false
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 149063,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 187949,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 226835,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 771239,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 111829655,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 1315643,
+              "missing": true
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 21614135,
+              "missing": true
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 7304087,
+              "missing": false
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 12670355,
+              "missing": true
+            }
+          ],
+          "q": 6481
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 9661519679,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 2841623435,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 399947,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 504281,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 608615,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 2069291,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 300047195,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 3529967,
+              "missing": false
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 57992315,
+              "missing": false
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 19597403,
+              "missing": true
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 33995495,
+              "missing": true
+            }
+          ],
+          "q": 17389
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 13541906903,
+              "missing": false
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 3982913795,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 560579,
+              "missing": true
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 706817,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 853055,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 2900387,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 420556115,
+              "missing": true
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 4947719,
+              "missing": false
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 81283955,
+              "missing": false
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 27468371,
+              "missing": true
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 47649215,
+              "missing": false
+            }
+          ],
+          "q": 24373
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 555611,
+              "lifted_value": 34270642091,
+              "missing": true
+            },
+            {
+              "base_blocker": 163415,
+              "lifted_value": 10079600615,
+              "missing": true
+            },
+            {
+              "base_blocker": 23,
+              "lifted_value": 1418663,
+              "missing": false
+            },
+            {
+              "base_blocker": 29,
+              "lifted_value": 1788749,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 2158835,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 7340039,
+              "missing": true
+            },
+            {
+              "base_blocker": 17255,
+              "lifted_value": 1064305655,
+              "missing": false
+            },
+            {
+              "base_blocker": 203,
+              "lifted_value": 12521243,
+              "missing": true
+            },
+            {
+              "base_blocker": 3335,
+              "lifted_value": 205706135,
+              "missing": true
+            },
+            {
+              "base_blocker": 1127,
+              "lifted_value": 69514487,
+              "missing": false
+            },
+            {
+              "base_blocker": 1955,
+              "lifted_value": 120586355,
+              "missing": false
+            }
+          ],
+          "q": 61681
+        }
+      ],
+      "eligible_plus_primes_tested": 4783,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "forced_blocker_count": 11,
+      "forced_one_hole_blockers": [
+        555611,
+        163415,
+        23,
+        29,
+        35,
+        119,
+        17255,
+        203,
+        3335,
+        1127,
+        1955
+      ],
+      "h": 2778054,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 6,
+      "product": 2778055,
+      "root": 62,
+      "two_hole_pairs": [
+        [
+          245,
+          11339
+        ]
+      ]
+    },
+    {
+      "base_d": 16,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 311843903,
+              "lifted_value": 168707551523,
+              "missing": false
+            },
+            {
+              "base_blocker": 91718795,
+              "lifted_value": 49619868095,
+              "missing": true
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 18935,
+              "missing": true
+            },
+            {
+              "base_blocker": 95,
+              "lifted_value": 51395,
+              "missing": true
+            },
+            {
+              "base_blocker": 107,
+              "lifted_value": 57887,
+              "missing": false
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 64379,
+              "missing": true
+            },
+            {
+              "base_blocker": 323,
+              "lifted_value": 174743,
+              "missing": true
+            },
+            {
+              "base_blocker": 2344691,
+              "lifted_value": 1268477831,
+              "missing": false
+            },
+            {
+              "base_blocker": 749,
+              "lifted_value": 405209,
+              "missing": false
+            },
+            {
+              "base_blocker": 689615,
+              "lifted_value": 373081715,
+              "missing": false
+            },
+            {
+              "base_blocker": 9095,
+              "lifted_value": 4920395,
+              "missing": false
+            },
+            {
+              "base_blocker": 14231,
+              "lifted_value": 7698971,
+              "missing": true
+            },
+            {
+              "base_blocker": 24491,
+              "lifted_value": 13249631,
+              "missing": false
+            }
+          ],
+          "q": 541
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 311843903,
+              "lifted_value": 266002849259,
+              "missing": false
+            },
+            {
+              "base_blocker": 91718795,
+              "lifted_value": 78236132135,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 29855,
+              "missing": true
+            },
+            {
+              "base_blocker": 95,
+              "lifted_value": 81035,
+              "missing": true
+            },
+            {
+              "base_blocker": 107,
+              "lifted_value": 91271,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 101507,
+              "missing": true
+            },
+            {
+              "base_blocker": 323,
+              "lifted_value": 275519,
+              "missing": false
+            },
+            {
+              "base_blocker": 2344691,
+              "lifted_value": 2000021423,
+              "missing": false
+            },
+            {
+              "base_blocker": 749,
+              "lifted_value": 638897,
+              "missing": false
+            },
+            {
+              "base_blocker": 689615,
+              "lifted_value": 588241595,
+              "missing": false
+            },
+            {
+              "base_blocker": 9095,
+              "lifted_value": 7758035,
+              "missing": false
+            },
+            {
+              "base_blocker": 14231,
+              "lifted_value": 12139043,
+              "missing": true
+            },
+            {
+              "base_blocker": 24491,
+              "lifted_value": 20890823,
+              "missing": true
+            }
+          ],
+          "q": 853
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 311843903,
+              "lifted_value": 527951727779,
+              "missing": false
+            },
+            {
+              "base_blocker": 91718795,
+              "lifted_value": 155279919935,
+              "missing": true
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 59255,
+              "missing": true
+            },
+            {
+              "base_blocker": 95,
+              "lifted_value": 160835,
+              "missing": false
+            },
+            {
+              "base_blocker": 107,
+              "lifted_value": 181151,
+              "missing": false
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 201467,
+              "missing": true
+            },
+            {
+              "base_blocker": 323,
+              "lifted_value": 546839,
+              "missing": false
+            },
+            {
+              "base_blocker": 2344691,
+              "lifted_value": 3969561863,
+              "missing": true
+            },
+            {
+              "base_blocker": 749,
+              "lifted_value": 1268057,
+              "missing": false
+            },
+            {
+              "base_blocker": 689615,
+              "lifted_value": 1167518195,
+              "missing": false
+            },
+            {
+              "base_blocker": 9095,
+              "lifted_value": 15397835,
+              "missing": true
+            },
+            {
+              "base_blocker": 14231,
+              "lifted_value": 24093083,
+              "missing": true
+            },
+            {
+              "base_blocker": 24491,
+              "lifted_value": 41463263,
+              "missing": false
+            }
+          ],
+          "q": 1693
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 311843903,
+              "lifted_value": 6320764069907,
+              "missing": false
+            },
+            {
+              "base_blocker": 91718795,
+              "lifted_value": 1859048255855,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 709415,
+              "missing": true
+            },
+            {
+              "base_blocker": 95,
+              "lifted_value": 1925555,
+              "missing": true
+            },
+            {
+              "base_blocker": 107,
+              "lifted_value": 2168783,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 2412011,
+              "missing": true
+            },
+            {
+              "base_blocker": 323,
+              "lifted_value": 6546887,
+              "missing": false
+            },
+            {
+              "base_blocker": 2344691,
+              "lifted_value": 47524541879,
+              "missing": true
+            },
+            {
+              "base_blocker": 749,
+              "lifted_value": 15181481,
+              "missing": false
+            },
+            {
+              "base_blocker": 689615,
+              "lifted_value": 13977806435,
+              "missing": false
+            },
+            {
+              "base_blocker": 9095,
+              "lifted_value": 184346555,
+              "missing": true
+            },
+            {
+              "base_blocker": 14231,
+              "lifted_value": 288448139,
+              "missing": false
+            },
+            {
+              "base_blocker": 24491,
+              "lifted_value": 496408079,
+              "missing": false
+            }
+          ],
+          "q": 20269
+        }
+      ],
+      "eligible_plus_primes_tested": 4782,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          1289,
+          1
+        ]
+      ],
+      "forced_blocker_count": 13,
+      "forced_one_hole_blockers": [
+        311843903,
+        91718795,
+        35,
+        95,
+        107,
+        119,
+        323,
+        2344691,
+        749,
+        689615,
+        9095,
+        14231,
+        24491
+      ],
+      "h": 1559219514,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 6,
+      "product": 1559219515,
+      "root": 54,
+      "two_hole_pairs": [
+        [
+          1289,
+          1209635
+        ],
+        [
+          2033,
+          766955
+        ],
+        [
+          9023,
+          172805
+        ]
+      ]
+    },
+    {
+      "base_d": 16,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 59654903,
+              "lifted_value": 141799704431,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 26147,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 83195,
+              "missing": true
+            },
+            {
+              "base_blocker": 3873695,
+              "lifted_value": 9207773015,
+              "missing": false
+            },
+            {
+              "base_blocker": 245,
+              "lifted_value": 582365,
+              "missing": false
+            },
+            {
+              "base_blocker": 614999,
+              "lifted_value": 1461852623,
+              "missing": true
+            },
+            {
+              "base_blocker": 539,
+              "lifted_value": 1281203,
+              "missing": true
+            },
+            {
+              "base_blocker": 815,
+              "lifted_value": 1937255,
+              "missing": true
+            },
+            {
+              "base_blocker": 1067,
+              "lifted_value": 2536259,
+              "missing": false
+            },
+            {
+              "base_blocker": 1715,
+              "lifted_value": 4076555,
+              "missing": false
+            },
+            {
+              "base_blocker": 166355,
+              "lifted_value": 395425835,
+              "missing": true
+            },
+            {
+              "base_blocker": 3395,
+              "lifted_value": 8069915,
+              "missing": true
+            },
+            {
+              "base_blocker": 79055,
+              "lifted_value": 187913735,
+              "missing": false
+            },
+            {
+              "base_blocker": 52283,
+              "lifted_value": 124276691,
+              "missing": true
+            },
+            {
+              "base_blocker": 23765,
+              "lifted_value": 56489405,
+              "missing": true
+            }
+          ],
+          "q": 2377
+        }
+      ],
+      "eligible_plus_primes_tested": 4781,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          97,
+          1
+        ],
+        [
+          163,
+          1
+        ]
+      ],
+      "forced_blocker_count": 15,
+      "forced_one_hole_blockers": [
+        59654903,
+        11,
+        35,
+        3873695,
+        245,
+        614999,
+        539,
+        815,
+        1067,
+        1715,
+        166355,
+        3395,
+        79055,
+        52283,
+        23765
+      ],
+      "h": 298274514,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 8,
+      "product": 298274515,
+      "root": 62,
+      "two_hole_pairs": [
+        [
+          7469,
+          39935
+        ]
+      ]
+    },
+    {
+      "base_d": 16,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 559373423,
+              "lifted_value": 11237252694647,
+              "missing": false
+            },
+            {
+              "base_blocker": 164521595,
+              "lifted_value": 3305074321955,
+              "missing": false
+            },
+            {
+              "base_blocker": 35,
+              "lifted_value": 703115,
+              "missing": true
+            },
+            {
+              "base_blocker": 107,
+              "lifted_value": 2149523,
+              "missing": true
+            },
+            {
+              "base_blocker": 119,
+              "lifted_value": 2390591,
+              "missing": true
+            },
+            {
+              "base_blocker": 14197295,
+              "lifted_value": 285209459255,
+              "missing": false
+            },
+            {
+              "base_blocker": 749,
+              "lifted_value": 15046661,
+              "missing": false
+            },
+            {
+              "base_blocker": 1115,
+              "lifted_value": 22399235,
+              "missing": true
+            },
+            {
+              "base_blocker": 1379,
+              "lifted_value": 27702731,
+              "missing": true
+            },
+            {
+              "base_blocker": 3791,
+              "lifted_value": 76157399,
+              "missing": false
+            },
+            {
+              "base_blocker": 7805,
+              "lifted_value": 156794645,
+              "missing": false
+            },
+            {
+              "base_blocker": 9095,
+              "lifted_value": 182709455,
+              "missing": true
+            },
+            {
+              "base_blocker": 167027,
+              "lifted_value": 3355405403,
+              "missing": false
+            },
+            {
+              "base_blocker": 23861,
+              "lifted_value": 479343629,
+              "missing": false
+            },
+            {
+              "base_blocker": 105395,
+              "lifted_value": 2117280155,
+              "missing": false
+            },
+            {
+              "base_blocker": 43931,
+              "lifted_value": 882529859,
+              "missing": true
+            }
+          ],
+          "q": 20089
+        }
+      ],
+      "eligible_plus_primes_tested": 4782,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          197,
+          1
+        ],
+        [
+          223,
+          1
+        ]
+      ],
+      "forced_blocker_count": 16,
+      "forced_one_hole_blockers": [
+        559373423,
+        164521595,
+        35,
+        107,
+        119,
+        14197295,
+        749,
+        1115,
+        1379,
+        3791,
+        7805,
+        9095,
+        167027,
+        23861,
+        105395,
+        43931
+      ],
+      "h": 2796867114,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 7,
+      "product": 2796867115,
+      "root": 54,
+      "two_hole_pairs": []
+    }
+  ],
+  "schema": "C110-plus-prime-lift-gate-v1"
+}

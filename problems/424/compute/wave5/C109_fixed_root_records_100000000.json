@@ -1,0 +1,13 @@
+{
+  "schema":"C109-fixed-root-records-v1",
+  "limit":100000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "hard_count":3368726,
+  "roots":[
+    {"root":54,"dyadic_bin":5,"maximum_d":12,"records":[{"h":534,"d":1,"h_plus_1_factorization":[[5,1],[107,1]],"witness_endpoints":[107]},{"h":1064,"d":2,"h_plus_1_factorization":[[3,1],[5,1],[71,1]],"witness_endpoints":[213]},{"h":4674,"d":3,"h_plus_1_factorization":[[5,2],[11,1],[17,1]],"witness_endpoints":[425]},{"h":14024,"d":6,"h_plus_1_factorization":[[3,1],[5,2],[11,1],[17,1]],"witness_endpoints":[425]},{"h":512264,"d":8,"h_plus_1_factorization":[[3,1],[5,1],[13,1],[37,1],[71,1]],"witness_endpoints":[213]},{"h":1182774,"d":9,"h_plus_1_factorization":[[5,2],[11,2],[17,1],[23,1]],"witness_endpoints":[425]},{"h":7634274,"d":12,"h_plus_1_factorization":[[5,2],[11,1],[17,1],[23,1],[71,1]],"witness_endpoints":[425]}]},
+    {"root":62,"dyadic_bin":5,"maximum_d":12,"records":[{"h":614,"d":2,"h_plus_1_factorization":[[3,1],[5,1],[41,1]],"witness_endpoints":[123]},{"h":2694,"d":3,"h_plus_1_factorization":[[5,1],[7,2],[11,1]],"witness_endpoints":[245]},{"h":9470,"d":4,"h_plus_1_factorization":[[3,1],[7,1],[11,1],[41,1]],"witness_endpoints":[123]},{"h":65414,"d":6,"h_plus_1_factorization":[[3,1],[5,1],[7,2],[89,1]],"witness_endpoints":[245]},{"h":241814,"d":8,"h_plus_1_factorization":[[3,1],[5,1],[7,3],[47,1]],"witness_endpoints":[245]},{"h":552474,"d":9,"h_plus_1_factorization":[[5,2],[7,2],[11,1],[41,1]],"witness_endpoints":[245]},{"h":2778054,"d":12,"h_plus_1_factorization":[[5,1],[7,2],[17,1],[23,1],[29,1]],"witness_endpoints":[245]}]}
+  ],
+  "digests":{"generated_2_through_limit":"b0ba9a6104be4eae","fixed_root_record_events":"7b5cf9c9e6dbf98a"},
+  "timing_seconds":{"spf":0.309489,"scan":12.7303}
+}

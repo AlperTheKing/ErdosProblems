@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "limit": 74,
+  "status": "OPTIMAL",
+  "hard_count": 2,
+  "ground_size": 16,
+  "wall_time_seconds": 0.0137578,
+  "branches": 936,
+  "conflicts": 3,
+  "score": 2,
+  "complexity": 9,
+  "boundary_count": 5,
+  "lower_gate_count": 2,
+  "upper_gate_count": 0,
+  "selected_boundary": [
+    11,
+    21,
+    35,
+    41,
+    69
+  ],
+  "selected_lower": [
+    {
+      "node": 41,
+      "pair_index": 1,
+      "parents": [
+        3,
+        14
+      ]
+    },
+    {
+      "node": 69,
+      "pair_index": 1,
+      "parents": [
+        5,
+        14
+      ]
+    }
+  ],
+  "selected_upper": [],
+  "source_penalties": {},
+  "f_penalties": {},
+  "f_residuals": {
+    "6": -1,
+    "18": -1,
+    "54": 1,
+    "74": 1
+  }
+}

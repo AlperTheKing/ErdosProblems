@@ -1,0 +1,11 @@
+[
+  {
+    "limit": 100000,
+    "hard_count": 10294,
+    "exact_dual_objective": 11595,
+    "exact_margin": 1301,
+    "nonzero_row": 28678,
+    "nonzero_lower": 25970,
+    "nonzero_upper": 5966
+  }
+]

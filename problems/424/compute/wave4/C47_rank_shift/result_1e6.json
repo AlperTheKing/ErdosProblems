@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "statement": "H_le_d(X) <= Q_le_d_minus_1(X) + 1",
+  "hard_total": 45583,
+  "target_total": 67537,
+  "maximum_rank": 14,
+  "maximum_excess": 11,
+  "maximum_record": {
+    "X": 6354,
+    "d": 2,
+    "H_le_d": 190,
+    "Q_le_d_minus_1": 179,
+    "excess": 11
+  },
+  "first_strict_failure": {
+    "X": 54,
+    "d": 2,
+    "H_le_d": 1,
+    "Q_le_d_minus_1": 0,
+    "excess": 1
+  },
+  "first_additive_one_failure": {
+    "X": 354,
+    "d": 2,
+    "H_le_d": 10,
+    "Q_le_d_minus_1": 8,
+    "excess": 2
+  },
+  "hard_exact_by_rank": {
+    "2": 18500,
+    "3": 4141,
+    "4": 8696,
+    "5": 4243,
+    "6": 4114,
+    "7": 2373,
+    "8": 1606,
+    "9": 997,
+    "10": 527,
+    "11": 264,
+    "12": 99,
+    "13": 22,
+    "14": 1
+  },
+  "target_exact_by_rank": {
+    "0": 34760,
+    "1": 3225,
+    "2": 7296,
+    "3": 3561,
+    "4": 5007,
+    "5": 3448,
+    "6": 3185,
+    "7": 2326,
+    "8": 1819,
+    "9": 1310,
+    "10": 811,
+    "11": 504,
+    "12": 239,
+    "13": 45,
+    "14": 1
+  }
+}

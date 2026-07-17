@@ -1,0 +1,176 @@
+{
+  "schema": "erdos273.reduced-half-cover.v1",
+  "description": "Selfridge p>=3 baseline as an even leaf plus a sequential cover of the odd coordinate x=2*n+1 modulo 180.",
+  "periods": {
+    "reduced": 180,
+    "full": 360
+  },
+  "coordinate_map": {
+    "even_formula": "x=2*t",
+    "odd_formula": "x=2*n+1"
+  },
+  "even_leaf": {
+    "id": "E",
+    "residue": 0,
+    "modulus": 2
+  },
+  "odd_fiber_chain": [
+    {
+      "id": "R1",
+      "reduced_class": {"residue": 0, "modulus": 2},
+      "lifted_class": {"residue": 1, "modulus": 4},
+      "transition": {
+        "before_count": 180,
+        "removed_count": 90,
+        "after_count": 90,
+        "before_mask": "0xfffffffffffffffffffffffffffffffffffffffffffff",
+        "removed_mask": "0x555555555555555555555555555555555555555555555",
+        "after_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "R2",
+      "reduced_class": {"residue": 0, "modulus": 3},
+      "lifted_class": {"residue": 1, "modulus": 6},
+      "transition": {
+        "before_count": 90,
+        "removed_count": 30,
+        "after_count": 60,
+        "before_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "removed_mask": "0x208208208208208208208208208208208208208208208",
+        "after_mask": "0x8a28a28a28a28a28a28a28a28a28a28a28a28a28a28a2"
+      }
+    },
+    {
+      "id": "R3",
+      "reduced_class": {"residue": 1, "modulus": 5},
+      "lifted_class": {"residue": 3, "modulus": 10},
+      "transition": {
+        "before_count": 60,
+        "removed_count": 12,
+        "after_count": 48,
+        "before_mask": "0x8a28a28a28a28a28a28a28a28a28a28a28a28a28a28a2",
+        "removed_mask": "0x000020080000802000020080000802000020080000802",
+        "after_mask": "0x8a28828228a20a08a28828228a20a08a28828228a20a0"
+      }
+    },
+    {
+      "id": "R4",
+      "reduced_class": {"residue": 1, "modulus": 6},
+      "lifted_class": {"residue": 3, "modulus": 12},
+      "transition": {
+        "before_count": 48,
+        "removed_count": 24,
+        "after_count": 24,
+        "before_mask": "0x8a28828228a20a08a28828228a20a08a28828228a20a0",
+        "removed_mask": "0x082082002082080082082002082080082082002082080",
+        "after_mask": "0x820800820820020820800820820020820800820820020"
+      }
+    },
+    {
+      "id": "R5",
+      "reduced_class": {"residue": 5, "modulus": 9},
+      "lifted_class": {"residue": 11, "modulus": 18},
+      "transition": {
+        "before_count": 24,
+        "removed_count": 8,
+        "after_count": 16,
+        "before_mask": "0x820800820820020820800820820020820800820820020",
+        "removed_mask": "0x000800020000000020000800020000800000000800020",
+        "after_mask": "0x820000800820020800800020800020020800820020000"
+      }
+    },
+    {
+      "id": "R6",
+      "reduced_class": {"residue": 8, "modulus": 15},
+      "lifted_class": {"residue": 17, "modulus": 30},
+      "transition": {
+        "before_count": 16,
+        "removed_count": 4,
+        "after_count": 12,
+        "before_mask": "0x820000800820020800800020800020020800820020000",
+        "removed_mask": "0x020000000800000000000000800000020000000000000",
+        "after_mask": "0x800000800020020800800020000020000800820020000"
+      }
+    },
+    {
+      "id": "R7",
+      "reduced_class": {"residue": 11, "modulus": 18},
+      "lifted_class": {"residue": 23, "modulus": 36},
+      "transition": {
+        "before_count": 12,
+        "removed_count": 6,
+        "after_count": 6,
+        "before_mask": "0x800000800020020800800020000020000800820020000",
+        "removed_mask": "0x000000800020000800000000000020000800020000000",
+        "after_mask": "0x800000000000020000800020000000000000800020000"
+      }
+    },
+    {
+      "id": "R8",
+      "reduced_class": {"residue": 17, "modulus": 20},
+      "lifted_class": {"residue": 35, "modulus": 40},
+      "transition": {
+        "before_count": 6,
+        "removed_count": 1,
+        "after_count": 5,
+        "before_mask": "0x800000000000020000800020000000000000800020000",
+        "removed_mask": "0x000000000000000000000000000000000000000020000",
+        "after_mask": "0x800000000000020000800020000000000000800000000"
+      }
+    },
+    {
+      "id": "R9",
+      "reduced_class": {"residue": 5, "modulus": 30},
+      "lifted_class": {"residue": 11, "modulus": 60},
+      "transition": {
+        "before_count": 5,
+        "removed_count": 2,
+        "after_count": 3,
+        "before_mask": "0x800000000000020000800020000000000000800000000",
+        "removed_mask": "0x000000000000020000000000000000000000800000000",
+        "after_mask": "0x800000000000000000800020000000000000000000000"
+      }
+    },
+    {
+      "id": "R10",
+      "reduced_class": {"residue": 35, "modulus": 36},
+      "lifted_class": {"residue": 71, "modulus": 72},
+      "transition": {
+        "before_count": 3,
+        "removed_count": 2,
+        "after_count": 1,
+        "before_mask": "0x800000000000000000800020000000000000000000000",
+        "removed_mask": "0x800000000000000000800000000000000000000000000",
+        "after_mask": "0x000000000000000000000020000000000000000000000"
+      }
+    },
+    {
+      "id": "R11",
+      "reduced_class": {"residue": 89, "modulus": 90},
+      "lifted_class": {"residue": 179, "modulus": 180},
+      "transition": {
+        "before_count": 1,
+        "removed_count": 1,
+        "after_count": 0,
+        "before_mask": "0x000000000000000000000020000000000000000000000",
+        "removed_mask": "0x000000000000000000000020000000000000000000000",
+        "after_mask": "0x000000000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "prime_trial_certificates": [
+    {"number": 3, "trial_bound": 1, "remainders": []},
+    {"number": 5, "trial_bound": 2, "remainders": [1]},
+    {"number": 7, "trial_bound": 2, "remainders": [1]},
+    {"number": 11, "trial_bound": 3, "remainders": [1, 2]},
+    {"number": 13, "trial_bound": 3, "remainders": [1, 1]},
+    {"number": 19, "trial_bound": 4, "remainders": [1, 1, 3]},
+    {"number": 31, "trial_bound": 5, "remainders": [1, 1, 3, 1]},
+    {"number": 37, "trial_bound": 6, "remainders": [1, 1, 1, 2, 1]},
+    {"number": 41, "trial_bound": 6, "remainders": [1, 2, 1, 1, 5]},
+    {"number": 61, "trial_bound": 7, "remainders": [1, 1, 1, 1, 1, 5]},
+    {"number": 73, "trial_bound": 8, "remainders": [1, 1, 1, 3, 1, 3, 1]},
+    {"number": 181, "trial_bound": 13, "remainders": [1, 1, 1, 1, 1, 6, 5, 1, 1, 5, 1, 12]}
+  ]
+}

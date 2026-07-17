@@ -1,0 +1,329 @@
+{
+  "ray": "ray_2_1_1",
+  "letter_counts": [
+    2,
+    1,
+    1
+  ],
+  "Q": 60,
+  "layers": [
+    {
+      "k": 1,
+      "D": 12,
+      "selected_residue": 2,
+      "selected_size": 6
+    },
+    {
+      "k": 2,
+      "D": 409,
+      "selected_residue": 2,
+      "selected_size": 233
+    }
+  ],
+  "product_audits": [
+    {
+      "K": 2,
+      "i_range": [
+        1,
+        1
+      ],
+      "Q_pow_K": 3600,
+      "edges": 36,
+      "support": 36,
+      "max_multiplicity": 1,
+      "energy": "36",
+      "edges_over_Q_pow_K": {
+        "numerator": "36",
+        "denominator": "3600",
+        "decimal": 0.01
+      },
+      "support_over_Q_pow_K": {
+        "numerator": "36",
+        "denominator": "3600",
+        "decimal": 0.01
+      },
+      "energy_over_edges": {
+        "numerator": "36",
+        "denominator": "36",
+        "decimal": 1.0
+      },
+      "multiplicity_histogram": {
+        "1": 36
+      },
+      "light_decoder": [
+        {
+          "L": 1,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 2,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 4,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 8,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 16,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 32,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 64,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 128,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 256,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 512,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 1024,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 4096,
+          "support": 36,
+          "edge_mass": 36,
+          "edge_fraction": {
+            "numerator": "36",
+            "denominator": "36",
+            "decimal": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "K": 3,
+      "i_range": [
+        1,
+        2
+      ],
+      "Q_pow_K": 216000,
+      "edges": 2796,
+      "support": 2796,
+      "max_multiplicity": 1,
+      "energy": "2796",
+      "edges_over_Q_pow_K": {
+        "numerator": "2796",
+        "denominator": "216000",
+        "decimal": 0.012944444444444444
+      },
+      "support_over_Q_pow_K": {
+        "numerator": "2796",
+        "denominator": "216000",
+        "decimal": 0.012944444444444444
+      },
+      "energy_over_edges": {
+        "numerator": "2796",
+        "denominator": "2796",
+        "decimal": 1.0
+      },
+      "multiplicity_histogram": {
+        "1": 2796
+      },
+      "light_decoder": [
+        {
+          "L": 1,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 2,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 4,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 8,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 16,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 32,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 64,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 128,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 256,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 512,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 1024,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        },
+        {
+          "L": 4096,
+          "support": 2796,
+          "edge_mass": 2796,
+          "edge_fraction": {
+            "numerator": "2796",
+            "denominator": "2796",
+            "decimal": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2194 @@
+--- PAGE 1 ---
+arXiv:2203.15764v1  [math.CO]  29 Mar 2022
+10 Problems for Partitions of Triangle-free Graphs
+J´ ozsef Balogh∗ Felix Christian Clemen † Bernard Lidick´ y‡
+March 30, 2022
+Abstract
+We will state 10 problems, and solve some of them, for partiti ons in triangle-free graphs
+related to Erd˝ os’ Sparse Half Conjecture.
+Among others we prove the following variant of it: For every s uﬃciently large even integer n
+the following holds. Every triangle-free graph on n vertices has a partition V (G) = A ∪ B with
+|A| = |B| = n/ 2 such that e(G[A]) + e(G[B]) ≤ n2/ 16. This result is sharp since the complete
+bipartite graph with class sizes 3 n/ 4 and n/ 4 achieves equality, when n is a multiple of 4.
+Additionally, we discuss similar problems for K4-free graphs.
+1 Introduction
+Erd˝ os’Sparse Half Conjecture [6, 7] states that every triangle-free graph on n vertices has a subset
+of vertices of size n/ 2 spanning at most n2/ 50 edges. He oﬀered a $250 reward for its solution.
+There has been a lot of work on this conjecture [9, 15, 20, 22], with the most recent progress by
+Razborov [22], who proved that every triangle-free graph on n vertices has a subset of vertices of
+size n/ 2 spanning at most (27 / 1024)n2 edges.
+Another related conjecture of Erd˝ os [6] on triangle-free g raphs states that every triangle-free
+graph on n vertices can be made bipartite by removing at most n2/ 25 edges. There also has been
+work on this conjecture [2, 8, 10], with the most recent progr ess by the authors of this paper who
+proved that every triangle-free graph on n vertices can be made bipartite by removing at most
+n2/ 23. 5 edges.
+In this paper we will state various related questions and con jectures on partition problems for
+triangle-free graphs. A vertex k-partition of a graph G is a partition V (G) = A1 ∪ . . . ∪ Ak of
+its vertex set into k classes. A k-partition is balanced if |Ai| = |Aj| for all i, j ∈ [k]. Given a
+vertex-subset A, we denote by e(G[A]) the number of edges in G with both endpoints from A. If
+G is clear from context, we also write e(A). Given two disjoint vertex-subsets A, B we denote by
+∗Department of Mathematics, University of Illinois at Urban a-Champaign, Urbana, Illinois 61801, USA, E-mail:
+jobal@illinois.edu. Research is partially supported by NSF Grant DMS-1764123, NSF RTG grant DMS 1937241,
+Arnold O. Beckman Research Award (UIUC Campus Research Boar d RB 22000), the Langan Scholar Fund (UIUC),
+and the Simons Fellowship.
+†Department of Mathematics, University of Illinois at Urban a-Champaign, Urbana, Illinois 61801, USA, E-mail:
+fclemen2@illinois.edu.
+‡Iowa State University, Department of Mathematics, Iowa Sta te University, Ames, IA., E-mail: lidicky@
+iastate.edu. Research of this author is partially supported by NSF grant DMS-1855653 and Scott Hanna fellowship.
+1
+
+--- PAGE 2 ---
+e(A, B ) the number of edges with one endpoint from A and the other from B. Let
+Db
+k(G) := min
+A1,...,A k
+k∑
+i=1
+e(G[Ai]),
+where the minimum is taken over all balanced k-partitions V (G) = A1 ∪ . . . ∪ Ak. The edges with
+both endpoints from the same set Ai are called class-edges.
+Our ﬁrst result can be interpreted as a combined variant of bo th of Erd˝ os’ conjectures.
+Theorem 1.1. There exists n0 such that for every even integer n ≥ n0 the following holds. Let G
+be a triangle-free graph G on n vertices. Then
+Db
+2(G) ≤ n2
+16 .
+Additionally, if Db
+2(G) = n2
+16 , then G /simequalK 3n
+4 , n
+4
+.
+The problem of ﬁnding a balanced 2-partition with fewest cla ss-edges is known as MAX-
+BISECTION (see e.g. [11, 12]) in computer science. It is NP-c omplete with an easy reduction from
+MAX-CUT, the problem of ﬁnding a 2-partition with fewest cla ss-edges. The MAX-BISECTION
+problem has also received attention in combinatorics, see B ollob´ as-Scott [3], Alon-Bollob´ as-Krivele-
+vich-Sudakov [1], Lee-Loh-Sudakov [17] and many others. On e major diﬀerence compared to many
+other work in this area is that Theorem 1.1 studies Db
+2(G) as a function in the number of vertices
+instead of the number of edges.
+Erd˝ os, Faudree, Rousseau and Schelp [9] proposed to study a n unbalanced version of Erd˝ os’
+Sparse Half Conjecture, see Figure 1(a) for an illustration .
+Conjecture 1.2 (Erd˝ os, Faudree, Rousseau and Schelp [9]). Let G be an n-vertex graph and let α
+be an arbitrary constant, 53/ 120 ≤ α ≤ 1. Further, let
+β >
+{
+(2α − 1)/ 4, when 17/ 30 ≤ α ≤ 1,
+(5α − 2)/ 25 when 53/ 120 ≤ α ≤ 17/ 30.
+If n is suﬃciently large and each ⌊ αn ⌋ -subset of V (G) spans at least βn 2 edges, then G contains a
+triangle.
+α
+β
+53
+120
+17
+30
+0.60.4 1
+(a)
+α
+β
+2 −
+√
+2 0.717 11
+2
+(b)
+Figure 1: Bounds on β from (a) Conjecture 1.2 and (b) Conjecture 1.4.
+2
+
+--- PAGE 3 ---
+The complete balanced bipartite graph achieves equality in the ﬁrst case and the balanced
+C5-blowup achieves equality in the second case. Erd˝ os, Faudr ee, Rousseau and Schelp [9] proved
+Conjecture 1.2 for α ≥ 0. 647 and Krivelevich [16] for α ≥ 0. 6, note that 17 / 30 ≈ 0. 5666, and
+53/ 120 ≈ 0. 4416. Brandt [4] disproved Conjecture 1.2 for α < 0. 474. He [4] observed that the
+Higman-Sims graph is a counterexample in this range. Yet, th e conjecture is believed to be true
+for a wide range of α . We extend the range for which Conjecture 1.2 holds.
+Theorem 1.3. Conjecture 1.2 holds for α ≥ 0. 579.
+Motivated by Conjecture 1.2, we conjecture the following un balanced version of Theorem 1.1,
+see Figure 1(b) for an illustration.
+Conjecture 1.4. Let G be an n-vertex graph and α be an arbitrary constant, 1
+2 ≤ α ≤ 1. Further,
+let
+β >
+{
+(2α − 1)/ 4 for 2 −
+√
+2 ≤ α ≤ 1,
+(1 − α )2/ 4 for 1
+2 ≤ α < 2 −
+√
+2.
+If n is suﬃciently large and for each ⌊ αn ⌋ -subset A of V (G) we have e(A) + e(Ac) ≥ βn 2, then G
+contains a triangle.
+Note that Theorem 1.1 veriﬁes Conjecture 1.4 for α = 1 / 2.1 If Conjecture 1.4 is true, then it
+is best possible. In the ﬁrst case, it is shown by the complete balanced bipartite graph, and in the
+second case by the complete bipartite graph with class sizes ⌊ (n + αn )/ 2⌋ and ⌈ (n − αn )/ 2⌉ . We
+prove Conjecture 1.4 for some range of α .
+Theorem 1.5. Let α ≥ 0. 717. Then Conjecture 1.4 holds.
+Note that Theorem 1.5 strengthens Erd˝ os, Faudree, Roussea u and Schelp’s [9] result on Con-
+jecture 1.2 for α ≥ 0. 717. We also prove a variant of Theorem 1.1 for balanced 3-par titions.
+Theorem 1.6. There exists n0 such that for every integer n ≥ n0 and divisible by 3, the following
+holds. Let G be a triangle-free graph on n vertices. Then
+Db
+3(G) ≤ n2
+36 .
+Additionally, if Db
+3(G) = n2
+36 , then G /simequalK 5n
+6 , n
+6
+or G /simequalK n
+2 , n
+2
+.
+Theorems 1.1, 1.5 and 1.6 can be understood as ℓ 1-norm results in the following sense. Given
+a balanced k-partition V (G) = A1 ∪ . . . ∪ Ak, denote by ( e(Ai)i) the vector containing e(Ai) as
+entrices. Further, for p ≥ 1 and k ≥ 2, we deﬁne
+Db
+k,p (G) = min ∥e(Ai)i∥p,
+where the minimum is taken over all balanced k-partitions V (G) = A1 ∪ . . . ∪ Ak and ∥ · ∥p denotes
+the ℓ p-norm. Note that Db
+k, 1(G) = Db
+k(G).
+1We remark that numerical computations suggest that the proo f of Theorem 1.1 could be extended to solve
+Conjecture 1.4 for α ∈ [0.5, 0.5 + ε] for some small ε > 0.
+3
+
+--- PAGE 4 ---
+Question 1.7. Let p ≥ 1 and k ≥ 2. What is the maximum of Db
+k,p (G) over all n-vertex triangle-
+free graphs G?
+The following results answer this question for the ℓ ∞ -norm and k = 2, 3.
+Theorem 1.8. Let G be a triangle-free graph on n vertices, where n is suﬃciently large and divisible
+by 12. Then there exists a balanced 2-partition such that each class spans at most n2/ 18 edges, i.e.
+Db
+2, ∞ (G) ≤ n2/ 18.
+Note that this theorem is best possible. The complete bipart ite graph with class sizes n/ 3 and
+2n/ 3 has the property that any balanced 2-partition has one of th e parts with at least n2/ 18 edges.
+Theorem 1.9. Let G be a triangle-free graph on n vertices, where n is divisible by 3. Then there
+exists a balanced 3-partition of its vertex set such that the number of edges in e ach class is at most
+n2/ 48 + o(n2), i.e. Db
+3, ∞ (G) ≤ n2/ 48 + o(n2).
+This theorem is best possible up to the o(n2)-error term. The balanced complete bipartite graph
+has the property that each of its balanced 3-partitions has o ne of the parts with at least n2/ 48
+edges.
+Keevash and Sudakov [14] proved the following local density theorem for Kr+1-free graphs.
+Theorem 1.10 (Keevash, Sudakov [14]) . Let r ≥ 2 and let G be a Kr+1-free graph on n vertices.
+If 1 − 1
+2r2 ≤ α ≤ 1 then G contains a set of ⌊ αn ⌋ vertices spanning at most r− 1
+2r (2α − 1)n2 edges.
+They [14] also conjectured that their theorem should hold fo r α ≥ 1 − 1/r when r ≥ 3. Using
+some of their arguments, we extend their result along the lin es of Conjecture 1.4.
+Theorem 1.11. Let r ≥ 1. There exists cr < 1 such that the following holds for cr ≤ α ≤ 1. Let
+n be an integer such that αn is an integer. Then every Kr+1-free graph G on n vertices contains a
+set A of αn vertices such that
+e(A) + e(Ac) ≤ r − 1
+2r (2α − 1)n2.
+Note that both Theorems 1.10 and 1.11 are extensions of Tur´ a n’s theorem [25] and also both
+Theorems are sharp, where equality is achieved by the Tur´ an graph. This is the graph constructed
+by partitioning a set of n vertices into r parts of sizes as equal as possible, and where two vertices
+are adjacent iﬀ they are in diﬀerent parts.
+We further remark that all of our results on Kr+1-free graphs, namely Theorems 1.1, 1.3, 1.5,
+1.6, 1.8, 1.9, 1.11 can be extended to H-free graphs where H has chromatic number r + 1 when
+adding an additional error term of o(n2). This follows form a standard application of Szemer´ edi’s
+Regularity Lemma, for example as done in [14] or [24].
+Some proofs in this paper use ﬂag algebras to describe cuts in graph. This idea comes from
+Naves [19] who proposed it at the Graduate Research Workshop in Combinatorics. It was also used
+by Hu, Lidick´ y, Martins, Norin, and Volec [13] and by the aut hors in [2].
+Our paper is organized as follows. In Section 2 we state vario us conjectures on related questions
+for triangle-free and K4-free graphs. In Section 3 we prove Theorem 1.1, in Section 4 w e prove
+Theorem 1.3, in Section 5 we prove Theorem 1.6, in Section 6 we prove Theorem 1.5, in Section 7 we
+prove our result on Kr+1-free graphs, Theorem 1.11 and ﬁnally in Section 8 we prove Th eorems 1.8
+and 1.9.
+4
+
+--- PAGE 5 ---
+2 Conjectures on related questions
+In this section we state various conjectures and questions o n partition problems for triangle-free
+and K4-free graphs.
+2.1 Triangle-free graphs
+Denote by Dk(G) the minimum number of edges which can be deleted from G to make it k-partite.
+Conjecture 2.1. Let G be a triangle-free graph on n vertices. Then D3(G) ≤ n2/ 121.
+If true, then this conjecture is sharp. Let H be the balanced blow-up of the Gr¨ otzsch graph.
+The Gr¨ otzsch graph, see Figure 2, has 11 vertices and 20 edges and has the fewest v ertices among
+all triangle-free 4-chromatic graphs [5]. A result of Erd˝ o s, Gy˝ ori and Simonovits [10, Theorem 7]
+states that there is a canonicial “edge deletion” achieving the minimum of D3(H). Every canonical
+edge deletion contains at least ( n/ 11)2 edges.
+Figure 2: The Gr¨ otzsch graph.
+All previous problems can be stated for d-regular graphs. While most of them become easier, a
+version of Theorem 1.1 for regular graphs seems to increase t he diﬃculty of the question.
+Question 2.2. What is the maximum of Db
+2(G) over all n-vertex triangle-free regular graphs?
+The balanced C5-blow-up seems to be a reasonable candidate for the extremal example when
+10 divides n.
+2.2 K4-free graphs
+Many of the questions and conjectures stated in this paper ca n be asked for K4-free graphs or more
+generally H-free graphs. In this section we present some conjectures on K4-free graphs.
+A result by Sudakov [24] states that every K4-free graph can be made bipartite by removing
+at most n2/ 9 edges. This is sharp since the balanced complete 3-partite graph needs at least n2/ 9
+edges removed to make it bipartite. Sudakov [24] also conjec tured a generalization of his result.
+Conjecture 2.3 (Sudakov [24]). Fix r ≥ 3. For every n-vertex Kr+1-free graph G, it holds that
+D2(G) ≤
+{ (r− 1)2
+4r2 · n2 r odd, and
+r− 2
+4r · n2 r even.
+5
+
+--- PAGE 6 ---
+The conjecture was veriﬁed for r = 5 by Hu, Lidick´ y, Martins, Norin, and Volec [13] using ﬂag
+algebras. The conjecture for even r seems to be more diﬃcult than for odd r.
+Recently Reiher [23], building up on work of Liu and Ma [18], p roved the corresponding sparse-
+half-version of this theorem: Every K4-free graphs contains a set of size n/ 2 spanning at most n2/ 18
+edges. The following conjecture, if true, were to generaliz e both Sudakov’s and Reiher’s result.
+Conjecture 2.4. Let n be an even integer and G be a K4-free graph on n vertices. Then there
+exists a balanced 2-partition of its vertex set V (G) = A ∪ B such that e(A) + e(B) ≤ n2/ 9.
+If true, Conjecture 2.4 is sharp, because the complete balan ced 3-partite graph satisﬁes e(A) +
+e(B) ≥ n2/ 9 for any balanced 2-partition V = A ∪ B.
+Note that Reiher’s result [23] implies Conjecture 2.4 for re gular graphs. Further, it is also true
+for 3-partite graphs.
+Proposition 2.5. Conjecture 2.4 holds for 3-partite graphs.
+Proof. Let G be an n-vertex 3-partite graph with classes V (G) = V1 ∪ V2 ∪ V3 and |V1| ≥ | V2| ≥ | V3|.
+If |V1| ≥ n/ 2, then consider a balanced 2-partition V = A ∪ B such that A ⊆ V1. Now, e(A) = 0
+and e(B) ≤ n2/ 12 by Tur´ an’s theorem. Thus e(A) + e(B) ≤ n2/ 12. If |V1| ≤ n/ 2, then consider a
+balanced 2-partition V = A ∪ B such that V1 ⊆ A ⊆ V1 ∪ V3 and V2 ⊆ B ⊆ V2 ∪ V3. Now,
+e(A) ≤ | V1|
+(n
+2 − | V1|
+)
+and e(B) ≤ | V2|
+(n
+2 − | V2|
+)
+.
+Since n/ 2 ≥ | V1| ≥ | V2| ≥ | V3|, we have |V1| + |V2| ≥ 2n/ 3. If 5 n/ 12 ≤ | V1| ≤ n/ 2, then
+e(A) ≤ | V1|
+(n
+2 − | V1|
+)
+≤ 5n
+12 · n
+12 = 5n2
+144 and e(B) ≤ | V2|
+(n
+2 − | V2|
+)
+≤ n2
+16 ,
+thus e(A) + e(B) < n 2/ 9. If |V1| ≤ 5n/ 12, then |V2| ≥ 2n/ 3 − | V1| ≥ n/ 4 and therefore
+e(B) ≤ | V2|
+(n
+2 − | V2|
+)
+≤
+(2n
+3 − | V1|
+) ( n
+2 −
+(2n
+3 − | V1|
+))
+= − n2
+9 − | V1|2 + 5n
+6 |V1|,
+because the function f (x) := x(1/ 2 − x) is decreasing for x ≥ 1/ 4. Now,
+e(A) + e(B) ≤ | V1|
+(n
+2 − | V1|
+)
+− n2
+9 − | V1|2 + 5n
+6 |V1| = − n2
+9 − 2|V1|2 + 4n
+3 |V1|
+= n2
+9 − 2
+(
+|V1| − n
+3
+) 2
+≤ n2
+9 ,
+completing the proof of this proposition. □
+Conjecture 2.6. Let n be an even integer and G be a K4-free graph on n vertices. Then there
+exists a balanced 2-partition of G such that each class spans at most n2/ 16 edges.
+Conjecture 2.6, if true, is best possible, because the compl ete 3-partite graph with class sizes
+n/ 2, n/ 4 and n/ 4 has the property that every balanced 2-partition V (G) = A ∪ B satisﬁes
+max{ e(A), e (B)} ≥ n2
+16 .
+6
+
+--- PAGE 7 ---
+Proposition 2.7. Conjecture 2.6 is true for 3-partite graphs.
+Proof. Let G be an n-vertex 3-partite graph with classes V (G) = V1 ∪ V2 ∪ V3. Then there exists
+i ∈ [3] such that |Vi| + |Vj| ≥ n/ 2 and |Vi| + |Vk| ≥ n/ 2 for j /nequalk ∈ [3] \ {i} . Thus, there exists
+a balanced 2-partition V (G) = A ∪ B with Vj ⊆ A ⊆ Vi ∪ Vj and Vk ⊆ B ⊆ Vi ∪ Vk, therefore
+e(A) ≤ n2
+16 and e(B) ≤ n2
+16 . □
+Conjecture 2.8. Let n be an integer divisible by 3 and G be a K4-free graph on n vertices. Then
+there exists a balanced 3-partition of its vertex set into three classes with at most (4/ 81)n2 class-
+edges.
+Conjecture 2.8, if true, is best possible, because the compl ete 3-partite graph with class sizes
+5n/ 9, 2n/ 9 and 2 n/ 9 achieves equality.
+Proposition 2.9. Conjecture 2.8 is true for 3-partite graphs.
+Proof. Any 3-partite graph G with vertex set V contains an independent set I of size n/ 3. The
+graph G[V \I] is 3-partite and since Conjecture 2.4 holds for 3-partite g raphs, there exists a balanced
+2-partition V \I = A ∪ B such that
+e(A) + e(B) ≤
+(
+2n
+3
+) 2
+9 = 4
+81 n2.
+Hence, V = I ∪ A ∪ B is a balanced 3-partition with at most (4 / 81)n2 class-edges. □
+3 Balanced 2-partition: proof of Theorem 1.1
+We start our proof by observing that Razborov’s [21] result o n the Erd˝ os’ Sparse Half Conjecture
+implies Theorem 1.1 for regular graphs.
+Theorem 3.1 (Razborov [21]). Every triangle-free graph on n vertices contains a vertex set of size
+⌊ n
+2 ⌋ that spans at most 27
+1024 n2 edges.
+Theorem 3.1 implies Theorem 1.1 for regular graphs: Take a ve rtex set A of size n/ 2 with
+e(A) ≤ (27/ 1024)n2. For regular graphs, e(Ac) = e(A). Thus,
+e(A) + e(Ac) ≤ 54
+1024 n2 < 1
+16 n2,
+implying Theorem 1.1 for regular graphs. Next we prove Theor em 1.1 for graphs which are almost
+regular with density about 1 / 3. This is a subcase for which the main part of our proof fails. We
+handle it separately ﬁrst.
+Lemma 3.2. Let n be an even integer and G be an n-vertex triangle-free graph such that
+∑
+v∈ V (G)
+(
+deg(v) − n
+3
+) 2
+≤ 10− 4n3. (1)
+Then Db
+2(G) < 1
+16 n2.
+7
+
+--- PAGE 8 ---
+Proof. Let ε = 10 − 4 and G be an n-vertex triangle-free graph such that (1) holds. For S ⊆ V (G)
+with |S| = n/ 2 denote by ¯dS the average degree of the vertices in S, i.e.
+¯dS = 2
+n
+∑
+x∈ S
+deg(x).
+For a vertex set S ⊆ V (G) of size n/ 2 we have
+2e(S) + e(S, S c) =
+∑
+x∈ S
+deg(x) = n
+2
+¯dS. (2)
+By the Cauchy-Schwarz inequality and the condition of this l emma,
+(n
+2
+(
+¯dS − n
+3
+)) 2
+=
+(∑
+x∈ S
+(
+deg(x) − n
+3
+) ) 2
+≤ n
+2
+∑
+x∈ S
+(
+deg(x) − n
+3
+) 2
+≤ ε
+2 n4.
+Thus
+(
+¯dS − n
+3
+) 2
+≤ 2εn 2 which implies
+⏐
+⏐
+⏐ ¯dS − n
+3
+⏐
+⏐
+⏐ ≤
+√
+2εn . Since S was an arbitrary set of size n/ 2,
+we also have
+⏐
+⏐
+⏐ ¯dSc − n
+3
+⏐
+⏐
+⏐ ≤
+√
+2εn . Therefore, using the triangle inequality, we conclude
+⏐
+⏐
+⏐ ¯dS − ¯dSc
+⏐
+⏐
+⏐ ≤
+2
+√
+2εn . Now, by (2) we have
+2e(S) + e(S, S c) = n
+2
+¯dS ≤ n
+2
+(
+¯dSc + 2
+√
+2εn
+)
+= 2e(Sc) + e(S, S c) +
+√
+2εn 2.
+This implies
+e(S) ≤ e(Sc) +
+√ ε
+2 n2. (3)
+By Theorem 3.1 there exists a vertex set X ⊆ V (G) of size n/ 2 with e(X) ≤ 27
+1024 n2. Applying (3)
+for S = X c, we get
+Db
+2(G) ≤ e(X) + e(X c) ≤ 2e(X) +
+√ ε
+2 n2 ≤ 54
+1024 n2 +
+√ ε
+2 n2 ≤ n2
+16 ,
+completing the proof of Lemma 3.2. □
+Next we prove Theorem 1.1 for graphs with independence numbe r at least n/ 2. Recall Mantel’s
+theorem stats that every n-vertex triangle-free graph has at most n2/ 4 edges, equality is achieved
+by K n
+2 , n
+2
+for even n.
+Lemma 3.3. Let n be an even integer and G be an n-vertex triangle-free graph satisfying α (G) ≥ n
+2 .
+Then Db
+2(G) ≤ n2
+16 . Additionally, if Db
+2(G) = n2
+16 , then G /simequalK 3n
+4 , n
+4
+.
+Proof. Let I be an independent set of size n/ 2. By Mantel’s theorem,
+e(I) + e(V \I) = e(V \I) ≤ |V \I|2
+4 = n2
+16 , (4)
+8
+
+--- PAGE 9 ---
+proving the ﬁrst part of this lemma. Let G be an n-vertex triangle-free graph satisfying α (G) ≥ n
+2
+and Db
+2(G) = n2
+16 . We can assume that 4 divides n, as otherwise n2/ 16 is not an integer. Let A be
+an independent set of size n/ 2 and set B := V \A. We have
+e(B) = e(A) + e(B) ≥ Db
+2(G) = n2
+16 ,
+and thus, by Mantel’s Theorem, B spans a complete balanced bipartite graph, i.e. B = B1∪ B2 with
+e(B1) = e(B2) = 0 and e(B1, B 2) = n2
+16 . Since G is triangle-free, no vertex in A can have neighbors
+in both B1 and B2. Therefore, without loss of generality, there exists a part ition A = A1 ∪ A2 such
+that |A1| = |A2| = n/ 4 and e(A1, B 1) = 0. We have
+e(A2, B 2) = e(A1 ∪ B1) + e(A2 ∪ B2) ≥ Db
+2(G) = n2
+16 ,
+and thus A2 ∪ B2 spans a complete bipartite graph by Mantel’s theorem. Since for u ∈ B2 and
+v ∈ B1 ∪ A2, we have uv ∈ E(G) and because G is triangle-free, the set B1 ∪ A2 is independent.
+We conclude
+e(A1, B 2) = e(A1 ∪ B2) + e(A2 ∪ B1) ≥ Db
+2(G) = n2
+16 ,
+and thus A1 ∪ B2 also spans a complete bipartite graph by Mantel’s theorem. W e conclude that G
+is a complete bipartite graph with classes A1 ∪ A2 ∪ B1 and B2, i.e. G /simequalK 3n
+4 , n
+4
+. □
+Lemma 3.4. There exists n0 such that for all n ≥ n0 the following holds. Let G be an n-vertex
+triangle-free graph with α (G) ≤ n/ 2 and
+∑
+v∈ V (G)
+(
+deg(v) − n
+3
+) 2
+≥ 10− 4n3, (5)
+then Db
+2(G) < 1
+16 n2.
+Note that Lemma 3.2 together with Lemma 3.4 implies Theorem 1 .1. We prove Lemma 3.4
+using the method of ﬂag algebras in the next subsection.
+3.1 Introduction to ﬂag algebras
+Razborov invented the method of ﬂag algebra [21] to derive bo unds for parameters in extremal
+combinatorics with assistance by computers on optimizatio n. Flag algebras have been applied in
+various settings such as graphs, hypergraphs, edge-colour ed graphs, oriented graphs, permutations
+and discrete geometry.
+Standard applications of the ﬂag algebra method to graphs pr ovide bounds on densities of
+induced subgraphs. To get bounds, inequalities and equalit ies involving the densities of induced
+subgraphs are combined with the help of semideﬁnite program ming. This step is computer-assisted.
+We give a short introduction to the ﬂag algebra notation in th e setting of graphs.
+Given two graphs H and G, we denote by d(H, G ) the density of H in G, i.e., the probability
+that a uniformly at random chosen |V (H)|-subset in V (G) induces a copy of H. If G is clear from
+9
+
+--- PAGE 10 ---
+context, then, abusing notation, we drop G and just depict H in place of d(H, G ). For example,
+let G be a graph on n vertices, then
+denotes triangle density in G. Every inequality or equality we write in this notation hold s with
+an error term o(1) as n → ∞ , which we omit writting. Let k be an integer and φ be an injective
+function [ k] → V (G). In other words, φ labels k distinct vertices in G. The pair ( G, φ ) is called a
+k-labeled graph.
+Let ( H, φ ′) and ( G, φ ) be two k-labeled graphs. Let X be a uniformly at random chosen
+(|V (H)| − k)-subset of V (G) \ Im(φ ). By d((H, φ ′), (G, φ )) we denote the probability that the
+k-labeled subgraph of G induced by X and the k labeled vertices, i.e., ( G[X ∪ Im(φ )], φ ), is
+isomorphic to ( H, φ ′), where the isomorphism maps φ (i) to φ ′(i) for i ∈ [k]. Again, if ( G, φ ) is clear
+from context, then, abusing notation, we drop it and just dep ict (H, φ ′), where the labeled vertices
+are marked as squares. For example, let G be a graph on n vertices with vertices u and v labeled
+with 1 and 2, respectively. Then,
+1 2
+= |N (u) ∩ N (v)|
+n − 2
+denotes the density of the common neighborhood of u and v in G.
+The linear averaging operator /llbracket. /rrbracketdenotes the average (or expectation) over all possible labe lings.
+Let (H, φ ) be a k-labeled graph. We deﬁne /llbracket(H, φ )/rrbracket= αH , where α is the probability that a random
+injective map φ ′ from [ k] to V (H) gives ( H, φ ′) isomorphic to ( H, φ ). For example
+/hugellbracket
+1 2
+/hugerrbracket
+= 2
+6 .
+Extending /llbracket. /rrbracketto linear combinations of labeled graphs is done by linearit y. The important feature
+of /llbracket. /rrbracketis that if X is a linear combination of labeled ﬂags satisfying X ≥ 0, then /llbracketX/rrbracket≥ 0.
+3.2 Proof of Lemma 3.4
+Suppose G is a triangle-free graph satisfying (5) and Db
+2(G) ≥ 1
+16 n2. Since G is triangle-free, we
+have
+= 0. (6)
+Further, Lemma 3.3 implies ∆ ≤ n/ 2, hence we have
+1
+≤ 1
+2 . (7)
+Next, we ﬁnd a balanced 2-partition based on the adjacencies of an arbitrary, but ﬁxed vertex
+v ∈ V (G). Denote by A ⊂ P (n) the set of all sets A of size n/ 2 containing N (v).
+For every A ∈ A , the 2-partition A ∪ Ac is balanced and therefore we have e(A) +e(Ac) ≥ n2/ 16
+by assumption, see Figure 3 for one such partition A ∪ Ac. If A ∈ A were chosen uniformly at
+10
+
+--- PAGE 11 ---
+v
+N (v)
+A
+Ac
+Figure 3: Possible edges inside 2-partition from Lemma 3.4.
+random, then a vertex in N (v)c is in A with probability
+n
+2 − deg(x)
+n− deg(x) . Since N (v) is triangle-free, there
+are two kinds of edges in A. The ﬁrst kind has one vertex in N (v) and the other in N (v)c. The
+other kind has both vertices in N (v)c. These two kinds of edges are counted by 3-vertex ﬂags in (8).
+Notice the fraction multiplying the 3-vertex ﬂags in (8) cor responds to
+n
+2 − deg(x)
+n− deg(x) . Similar set-up
+appears in other proofs in this paper. By averaging over all A ∈ A , we have
+1(n− 1
+2
+)
+|A|
+∑
+A∈A
+e(A) =
+1
+(
+1
+2 −
+1
+)
+1
++
+1
+
+
+
+
+
+(
+1
+2 −
+1
+)
+1
+
+
+
+
+
+2
+(8)
+and
+1
+(n− 1
+2
+)
+|A|
+∑
+A∈A
+e(Ac) =
+1
+
+
+
+
+
+1
+2
+1
+
+
+
+
+
+2
+.
+Since
+1
+(n− 1
+2
+)
+|A|
+∑
+A∈A
+e(A) + e(Ac) ≥ n2
+16
+(n− 1
+2
+) = 1
+8 + o(1),
+we get
+1
+8 ≤
+1
+(
+1
+2 −
+1
+)
+1
++
+1
+
+
+
+
+
+
+1
+4 +
+(
+1
+2 −
+1
+) 2
+(
+1
+) 2
+
+
+
+
+
+
+. (9)
+Inequality (9) can be rewritten as
+0 ≤
+1
+(1
+2 −
+1
+)
+1
++
+1
+(
+1
+2 −
+1
++
+1
+)
+− 1
+8
+(
+1
+) 2
+. (10)
+The condition (5) stated in ﬂag algebra notation is
+/hugellbracket(
+1
+− 1
+3
+) 2/hugerrbracket
+≥ 10− 4 implying
+/LARGEllbracket
+1
+− 2
+3 1
++ 1
+9
+/LARGErrbracket
+≥ 10− 4.
+11
+
+--- PAGE 12 ---
+Applying the unlabeling operator gives
+1
+3 − 2
+3 + 1
+9 ≥ 10− 4, because
+/LARGEllbracket
+1
+/LARGErrbracket
+= 1
+3 . (11)
+On the other hand, using (7) and (10), computer assisted ﬂag a lgebras calculation gives
+1
+3 − 2
+3 + 1
+9 ≤ 10− 7,
+contradicting (11). The ﬁles needed to perform the correspo nding calculations are available at
+http://lidicky.name/pub/10problems.
+4 Local densities in triangle-free graphs: proof of Theorem 1.3
+The following Lemma due to Erd˝ os, Faudree, Rousseau and Sch elp [9] is helpful.
+Lemma 4.1 (Erd˝ os, Faudree, Rousseau and Schelp [9]) . Let α be ﬁxed, 0. 5 ≤ α ≤ 1 and β >
+(2α − 1)/ 4. Further, let G be an n-vertex graph satisfying α (G) ≥ (1 − α )n. If n is suﬃciently
+large and each ⌊ αn ⌋ -subset of V (G) spans at least βn 2 edges, then G contains a triangle.
+We start by proving Theorem 1.3 for a ﬁnite set of values of α . Our proof follows Krivelevich’s
+proof [16] for the range α ≥ 0. 6. The improvement stems from a ﬂag algebra application.
+Lemma 4.2. Let i ∈ { 0, 1, . . . , 21} , α i = 0. 579 + 0. 0005i and β i = (2α i − 1)/ 4 − 1
+4000 . Further, let
+Gi be an n-vertex graph satisfying α (G) < (1 − α i)n. If n is suﬃciently large and every ⌊ αn ⌋ -subset
+of V (G) spans at least β in2 edges, then G contains a triangle.
+Proof. Let i ∈ { 0, 1, . . . , 21} and Gi be a triangle-free n-vertex graph satisfying α (G) < 1 − α i and
+every ⌊ αn ⌋ -subset of V (G) spans at least β in2 edges. We have
+= 0 and
+1
+≤ 1 − α i. (12)
+By averaging over all ⌊ αn ⌋ -subsets of V (G) containing N (u) for a ﬁxed vertex u, we have
+2β i ≤ 1(n− 1
+2
+)( n− 1
+⌊ αn ⌋
+)
+∑
+A⊆ V (Gi)
+N (u)⊆ A
+|A|=⌊ αn ⌋
+e(A) =
+1
+
+
+
+
+
+α i −
+1
+1
+
+
+
+
+ +
+1
+
+
+
+
+
+α i −
+1
+1
+
+
+
+
+
+2
+,
+implying
+0 ≤
+1
+(
+α i −
+1
+)
+1
++
+1
+(
+α i −
+1
+) 2
+− 2β i
+(
+1
+) 2
+. (13)
+12
+
+--- PAGE 13 ---
+By averaging over all ⌊ αn ⌋ -subsets of V (G) containing N (u) and avoiding N (v) for a ﬁxed edge
+uv, we have
+2β i ≤ 1(n− 2
+2
+)( n− 2
+⌊ αn ⌋
+)
+∑
+A⊆ V (Gi)
+N (u)⊆ A
+N (v)∩ A=∅
+|A|=⌊ αn ⌋
+e(A) =
+1 2
+
+
+
+
+
+α i −
+1 2
+1 2
+
+
+
+
+ +
+1 2
+
+
+
+
+
+α i −
+1 2
+1 2
+
+
+
+
+
+2
+,
+implying
+0 ≤
+1 2
+(
+α i −
+1 2
+)
+1 2
++
+1 2
+(
+α i −
+1 2
+) 2
+− 2β i
+(
+1 2
+) 2
+, (14)
+Applying the method of ﬂag algebras shows there is no suﬃcien tly large graph satisfying all
+three (12), (13) and (14) at the same time, giving a contradic tion. This part of the proof is
+computer assisted. The ﬁles needed to perform the correspon ding calculations are available at
+http://lidicky.name/pub/10problems. □
+Proof of Theorem 1.3. Let 0 . 579 ≤ α < 0. 6 and α i := 0 . 579 + 0. 0005i, β i := (2α − 1)/ 4 − 1
+4000 for
+i ∈ { 0, 1, . . . , 42} . There exists j ∈ { 0, 1, . . . , 41} such that α j ≤ α ≤ α j+1. Let G be a triangle-free
+n-vertex graph. If α (G) ≥ 1 − α then, by Lemma 4.1, there exists a ⌊ αn ⌋ -subset of V (G) spanning
+at most βn 2 edges, where β = (2 α − 1)/ 4. If α (G) ≤ 1 − α ≤ 1 − α j, then by Lemma 4.2 there
+exists A ⊂ V (G) of size |A| = ⌊ α jn⌋ spanning at most β jn2 edges. An arbitrary set B ⊇ A of size
+⌊ αn ⌋ spans at most
+e(B) = e(A) + e(B \A) + e(A, B ) ≤ β jn2 +
+∑
+x∈ B\A
+deg(x) ≤ β jn2 + (⌊ αn ⌋ − ⌊ α jn⌋ ) (1 − α )n
+≤ β jn2 + n2
+4000 ≤ 2α − 1
+4 n2.
+□
+5 Balanced 3-partition: proof of Theorem 1.6
+We start proving Theorem 1.6 for graphs with large independe nce number.
+Lemma 5.1. There exists n0 such that for every n ≥ n0 divisible by three, the following holds. Let
+G be a triangle-free graph with α (G) ≥ n/ 3. Then
+Db
+3(G) ≤ n2
+36 .
+Further, if Db
+3(G) = n2
+36 , then G /simequalK 5n
+6 , n
+6
+or G /simequalK n
+2 , n
+2
+.
+Proof. Let I be an independent set of size n/ 3. By applying Theorem 1.1 to G[V \I], there exists
+a balanced 2-partition V \I = A ∪ B satisfying
+e(A) + e(B) ≤
+(
+2n
+3
+) 2
+16 ≤ n2
+36 .
+13
+
+--- PAGE 14 ---
+Now, V (G) = I ∪ A ∪ B is a balanced partition with at most n2/ 36 class-edges, proving the ﬁrst
+part of this lemma. For the second part, assume that G is an n-vertex triangle-free graph satisfying
+Db
+3(G) = n2/ 36 and α (G) ≥ n/ 3. If 6 does not divide n, then n2/ 36 is not an integer. Therefore,
+n is divisible by 6. Let V1 be an independent set of size n/ 3. Now
+Db
+2(G[V \V1]) = e(V1) + Db
+2(G[V \V1]) ≥ Db
+3(G) ≥ n2
+36 ,
+and therefore by applying Theorem 1.1 to G[V \V1], we have G[V \V1] /simequalK n
+6 , n
+2
+. Hence, there exists
+a partition, V = V1 ∪ V2 ∪ V3 such that |V1| = n/ 3, |V2| = n/ 6, |V3| = n/ 2, the sets V1, V 2 and
+V3 are independent and V2 ∪ V3 spans a complete bipartite graph. We split up V3 = V ′
+3 ∪ V ′′
+3 into
+arbitrary sets of size |V ′
+3| = n/ 3 and |V ′′
+3 | = n/ 6. Now
+Db
+2(G[V \V ′
+3]) = e(V ′
+3) + Db
+2(G[V \V ′
+3]) ≥ Db
+3(G) ≥ n2
+36 ,
+and therefore by applying Theorem 1.1 to G[V \ V ′
+3], we have G[V \ V ′
+3] /simequalK n
+6 , n
+2
+. Let A ∪ B
+with |A| = n/ 6 and |B| = n/ 2 be the classes of the induced copy of K n
+6 , n
+2
+in G[V \ V ′
+3]. Since
+V2 ∪ V ′′
+3 spans a complete bipartite graph we have either A = V ′′
+3 and B = V1 ∪ V2 or A = V2 and
+B = V1 ∪ V ′′
+3 .
+Case 1: A = V ′′
+3 and B = V1 ∪ V2:
+We will observe that G /simequalK n
+2 , n
+2
+with classes U1 = V3 and U2 = V1 ∪ V2. The set U2 is independent
+because every vertex from V ′′
+3 is adjacent to every vertex from U2 and G is triangle-free. Therefore,
+G is a bipartite graph with classes U1 and U2. Towards contradiction, assume that there exists a
+pair u1u2 /nelementE(G) with u1 ∈ U1 and u2 ∈ U2. Now, take a balanced 3-partition W1 ∪ W2 ∪ W3 with
+W1 ⊂ U1 \ { u1} and W2 ⊂ U2 \ {u2} . We have e(W1) = e(W2) = 0 and e(W3) < n 2/ 36, because
+u1u2 /nelementE(G). Hence,
+n2
+36 > e(W1) + e(W2) + e(W3) ≥ D3
+b (G) ≥ n2
+36 ,
+a contradiction. We conclude that G /simequalK n
+2 , n
+2
+.
+Case 2: A = V2 and B = V1 ∪ V ′′
+3 :
+In this case G /simequalK 5n
+6 , n
+6
+with classes U1 = V1 ∪ V ′
+3 ∪ V ′′
+3 and U2 = V2 because every vertex from V2
+is adjacent to every vertex from V1 ∪ V ′
+3 ∪ V ′′
+3 and G is triangle-free. □
+Next, we prove Theorem 1.6 for graphs with small independenc e number.
+Lemma 5.2. There exists n0 such that for every n ≥ n0 divisible by three, the following holds. Let
+G be a triangle-free graph with α (G) ≤ n/ 3. Then there exists ε > 0 such that
+Db
+3(G) <
+( 1
+36 − ε
+)
+n2.
+Proof. We prove this lemma with ε = 10 − 4. Assume that G is a triangle-free n-vertex graph with
+Db
+3(G) ≥
+(
+1
+36 − ε
+)
+n2 and α (G) ≤ n/ 3. Since G is triangle-free, we can assume ∆( G) ≤ α (G) ≤ n/ 3.
+Hence,
+1
+≤ 1
+3 . (15)
+14
+
+--- PAGE 15 ---
+We deﬁne balanced 3-partitions depending on the adjacencie s of an arbitrary ﬁxed vertex x ∈ V .
+Denote by P the set of balanced 3-partitions V = A1 ∪ A2 ∪ A3 such that N (x) ⊆ A1. Now, by
+averaging over all choices of P, we have
+1(n− 1
+2
+)
+|P|
+∑
+(A1,A 2,A 3)∈P
+e(A1) =
+1
+(
+1
+3 −
+1
+)
+(
+1
+) +
+1
+
+
+
+
+
+1
+3 −
+1
+1
+
+
+
+
+
+2
+(16)
+and for each of ℓ ∈ { 2, 3} we have
+1
+(n− 1
+2
+)
+|P|
+∑
+(A1,A 2,A 3)∈P
+e(Aℓ ) =
+1
+
+
+
+
+
+1
+3
+1
+
+
+
+
+
+2
+. (17)
+For every balanced 3-partition V (G) = A1 ∪ A2 ∪ A3 we have (1 / 36 − ε )n2 ≤ Db
+3(G) ≤ e(A1) +
+e(A2) + e(A3) by assumption. Combining this with (16) and (17), we get
+1
+18 − 2ε ≤
+1
+(
+1
+3 −
+1
+)
+(
+1
+) +
+1
+
+
+
+
+
+
+2
+(
+1
+3
+) 2
++
+(
+1
+3 −
+1
+) 2
+(
+1
+) 2
+
+
+
+
+
+
+.
+This can be rewritten as
+0 ≤
+1
+(
+1 − 3
+1
+)
+1
++
+1
+(
+1 − 2
+1
++ 3
+1
+)
+−
+( 1
+18 − 2ε
+)
+3
+(
+1
+) 2
+. (18)
+Other balanced 3-partitions are deﬁned based on the adjacen cies of an edge uv ∈ E(G). Denote
+by P ′ the set of balanced 3-partitions V (G) = A1 ∪ A2 ∪ A3 such that N (u) ⊆ A1 and N (v) ⊆ A2.
+By averaging over all choices of P ′, we get
+1(n− 2
+2
+)
+|P′|
+∑
+(A1,A 2,A 3)∈P ′
+e(A1) =
+1 2
+(
+1
+3 −
+1 2
+)
+1 2
++
+1 2
+
+
+
+
+
+1
+3 −
+1 2
+1 2
+
+
+
+
+
+2
+, (19)
+1
+(n− 2
+2
+)
+|P′|
+∑
+(A1,A 2,A 3)∈P ′
+e(A2) =
+1 2
+(
+1
+3 −
+1 2
+)
+1 2
++
+1 2
+
+
+
+
+
+1
+3 −
+1 2
+1 2
+
+
+
+
+
+2
+(20)
+and
+1
+(n− 2
+2
+)
+|P′|
+∑
+(A1,A 2,A 3)∈P ′
+e(A3) =
+1 2
+
+
+
+
+
+1
+3
+1 2
+
+
+
+
+
+2
+. (21)
+15
+
+--- PAGE 16 ---
+For every balanced 3-partition V (G) = A1 ∪ A2 ∪ A3 we have (1 / 36 − ε )n2 ≤ Db
+3(G) ≤ e(A1) +
+e(A2) + e(A3) by assumption. Combining this with (19), (20) and (21) we ge t
+1
+18 − 2ε ≤
+1 2
+(
+1
+3 −
+1 2
+)
+1 2
++
+1 2
+(
+1
+3 −
+1 2
+)
+1 2
++
+1 2
+1
+9 +
+(
+1
+3 −
+1 2
+) 2
++
+(
+1
+3 −
+1 2
+) 2
+(
+1 2
+) 2 .
+This can be rewritten as
+0 ≤ −
+( 1
+18 − 2ε
+) (
+3
+1 2
+) 2
++
+1 2
+(
+3 − 9
+1 2
+)
+1 2
++
+1 2
+(
+3 − 9
+1 2
+)
+1 2
++
+1 2
+
+ 1 +
+(
+1 − 3
+1 2
+) 2
++
+(
+1 − 3
+1 2
+) 2
+ . (22)
+We deﬁne other balanced 3-partitions based on the adjacenci es of an edge uv ∈ E(G) and an
+independent vertex w. Denote by P ′ the set of balanced 3-partitions V (G) = A1 ∪ A2 ∪ A3 such
+that N (u) ⊆ A1, N (v) \N (w) ⊆ A2, and N (w) \N (u) ⊆ A3. By averaging over all choices of P ′,
+we get 1
+(n− 3
+2 )|P ′ |
+∑
+(A1,A 2,A 3)∈P ′ e(A1) =
+
+
+1
+2
+3 + 1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+
+
+
+
+
+
+
+
+1
+3 −
+1
+2
+3
+−
+1
+2
+3
+1
+2
+3
+
+
+
+
+
+
+
+
+
+2
+.
+(23)
+Similarly we get 1
+(n− 3
+2 )|P ′ |
+∑
+(A1,A 2,A 3)∈P ′ e(A2) =
+
+
+1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+
+
+
+
+
+
+
+
+1
+3 −
+1
+2
+3
+1
+2
+3
+
+
+
+
+
+
+
+
+
+2
+. (24)
+16
+
+--- PAGE 17 ---
+Finally we get 1
+(n− 3
+2 )|P ′ |
+∑
+(A1,A 2,A 3)∈P ′ e(A3) =
+
+
+1
+2
+3 + 1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+
+
+
+
+
+
+
+
+1
+3 −
+1
+2
+3
+−
+1
+2
+3
+1
+2
+3
+
+
+
+
+
+
+
+
+
+2
+.
+(25)
+Multiplying by the denominator and summing up (23), (24), an d (25), and using (1 / 36 − ε )n2 ≤
+Db
+3(G) ≤ e(A1) + e(A2) + e(A3), we get
+0 ≤ −
+( 1
+18 − 2ε
+) 
+
+1
+2
+3
+
+
+2
++
+
+
+1
+2
+3 + 1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+2
++
+
+
+1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+ 1
+3 −
+1
+2
+3
+
+
+2
+(26)
++
+
+
+1
+2
+3 + 1
+2
+3
+
+
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+1
+2
+3
++ 1
+2
+3
+
+ 1
+3 −
+1
+2
+3
+−
+1
+2
+3
+
+
+2
+.
+For ε = 0. 0001, ﬂag algebras calculation can conclude there is no suﬃc iently large graph satis-
+fying all (15), (22), and (26) at the same time. This part of th e proof is computer assisted. The ﬁles
+needed to perform the corresponding calculations are avail able at http://lidicky.name/pub/10problems.
+□
+Lemmas 5.1 and 5.2 together imply Theorem 1.6.
+6 Unbalanced 2-partition: proof of Theorem 1.5
+Let α ﬁxed, 1
+2 ≤ α ≤ 1. For an n-vertex graph G, we denote by Dα (G) the minimum of e(G[A]) +
+e(G[Ac]) over all vertex subsets A of size ⌊ αn ⌋ .
+Lemma 6.1. Let α > 1/ 2. If
+e(G) ≤ − α 2 + 4α − 2
+4(2α − 1) n2 then Dα (G) ≤ 2α − 1
+4 n2 + o(n2).
+Proof. Choose a random set A, where each vertex is included in A with probability 2 α − 1 inde-
+pendently of each other. Then, with high probability,
+|A| = (2α − 1)n + o(n),
+e(A) = (2 α − 1)2e(G) + o(n2) and e(A, A c) = 2(2 α − 1)(2 − 2α )e(G) + o(n2). (27)
+17
+
+--- PAGE 18 ---
+In particular, there exists A ⊆ V of size exactly 2 ⌊ αn ⌋ − n satisfying (27). By Theorem 1.1 there
+exists a balanced 2-partition Ac = A1 ∪ A2 such that
+e(A1) + e(A2) ≤ (2(1 − α ))2
+16 n2 + o(n2) = (1 − α )2
+4 n2 + o(n2).
+Now, by considering the 2-partition ( A ∪ A1) ∪ A2,
+Dα (G) ≤ e(A ∪ A1) + e(A2) = e(A) + e(A, A 1) + e(A1) + e(A2) (28)
+and by considering the 2-partition ( A ∪ A2) ∪ A1,
+Dα (G) ≤ e(A ∪ A2) + e(A1) = e(A) + e(A, A 2) + e(A2) + e(A1). (29)
+Adding up (28) and (29) we get
+2Dα (G) ≤ 2e(A) + e(A, A c) + 2e(A1) + 2e(A2) ≤ 2(2α − 1)2e(G) + 2(2α − 1)(2 − 2α )e(G)
++ (1 − α )2
+2 n2 + o(n2) = (4 α − 2) e(G) + (1 − α )2
+2 n2 + o(n2).
+Thus, by dividing by 2 and using e(G) ≤ − α 2+4α − 2
+4(2α − 1) n2, we get
+Dα (G) ≤ (2α − 1) e(G) + (1 − α )2
+4 n2 + o(n2) ≤ 2α − 1
+4 n2 + o(n2).
+□
+Lemma 6.2. Let α ≥ 0. 717 and G be an n-vertex triangle-free graph. If α (G) ≥ n/ 2, then
+Dα (G) ≤ 2α − 1
+4 n2 + o(n2).
+Proof. Let I be an independent set of size |I| = ⌈ n/ 2⌉ . Assume that there exists an independent
+set I ′ ⊂ V \I of size |I ′| = n − ⌊ αn ⌋ . Take a largest independent set I ′′ ⊆ V \I ′ and note that
+|I ′′| ≥ | I| ≥ n/ 2. Now,
+e(V \I ′) ≤
+∑
+v∈ V \(I ′ ∪ I ′′ )
+|N (v) ∩ (V \I ′)| ≤ (⌊ αn ⌋ − | I ′′|)|I ′′| ≤ 2α − 1
+4 n2,
+implying
+Dα (G) ≤ e(I ′) + e(V \I ′) ≤ 2α − 1
+4 n2.
+Thus, we can assume that there does not exist an independent s et I ′ ⊂ V \I of size |I ′| = n − ⌊ αn ⌋ .
+Let B ⊂ V \I be a largest independent set in V \I. Thus |B| < n − ⌊ αn ⌋ . Since G is triangle-free
+and by the maximality of B, we have deg( v) ≤ | B| for every v ∈ I. Furthermore, for the same
+reason, for every v ∈ V \(I ∪ B), we have |N (v) \I| ≤ | B|. Therefore,
+e(G) = e(I, V \I) + e(V \I) ≤
+∑
+v∈ I
+deg(v) +
+∑
+v∈ V \(I∪ B)
+|N (v) \I| ≤ | I||B| + (n − | I| − | B|)|B|
+= (n − | B|)|B| ≤ α (1 − α )n2 + O(n) ≤ − α 2 + 4α − 2
+4(2α − 1) n2,
+where the last inequality holds for n suﬃciently large and α ≥ 0. 717. By Lemma 6.1, we have
+Dα (G) ≤ 2α − 1
+4 n2 + o(n2), completing the proof of this lemma. □
+18
+
+--- PAGE 19 ---
+Lemma 6.3. Let α ≥ 0. 717 and G be an n-vertex triangle-free graph. If there exists two disjoint
+independent sets each of size n − αn , then Dα (G) ≤ 2α − 1
+4 n2 + o(n2).
+Proof. Towards contradiction, assume that G is an n-vertex triangle-free graph satisfying Dα (G) >
+2α − 1
+4 n2 and containing two disjoint independent sets I1, I 2 each of size n − ⌊ αn ⌋ . Denote A :=
+V \(I1 ∪ I2). Then,
+e(I1, A ) + e(A) ≥ Dα (G) ≥ 2α − 1
+4 n2 and e(I2, A ) + e(A) ≥ Dα (G) ≥ 2α − 1
+4 n2.
+Summing up those two inequalities, we have
+∑
+v∈ A
+deg(v) = 2 e(A) + e(I1, A ) + e(I2, A ) ≥ 2α − 1
+2 n2. (30)
+On the other side,
+∑
+v∈ A
+deg(v) ≤ α (G)|A| = α (G)(2α − 1)n.
+Thus, α (G) ≥ n/ 2. By Lemma 6.2 we have Dα (G) ≤ 2α − 1
+4 n2 + o(n2).
+□
+Proof of Theorem 1.5. By Lemmas 6.2 and 6.3 we can assume that there does not exist an inde-
+pendent set of size n/ 2 and also there do not exist two disjoint independent sets of size n − ⌊ αn ⌋
+each. Let I be a largest independent set in G. If |I| ≤ n − ⌊ αn ⌋ , then
+e(G) = 1
+2
+∑
+v∈ V (G)
+deg(v) ≤ n
+2 (n − ⌊ αn ⌋ ) ≤ − α 2 + 4α − 2
+4(2α − 1) n2,
+where the last inequality holds for α > 2
+3 and n suﬃciently large. By Lemma 6.1 we have Dα (G) ≤
+2α − 1
+4 n2 + o(n2). Thus, we can assume that n − ⌊ αn ⌋ ≤ | I| ≤ n/ 2. Let B ⊆ V \ I be a largest
+independent set in V \ I. We have |B| < n − ⌊ αn ⌋ , because otherwise there were two disjoint
+independent sets each of size n − ⌊ αn ⌋ . Since G is triangle-free and by the maximality of B, we
+have deg(v) ≤ | B| for every v ∈ I. Furthermore, for the same reason, for every v ∈ V \I, we have
+|N (v) ∩ (V \I)| ≤ | B|. Therefore,
+e(G) = e(I, V \I) + e(V \I) ≤
+∑
+v∈ I
+deg(v) +
+∑
+v∈ V \(I∪ B)
+|N (v) ∩ B|
+≤ | I||B| + (n − | I| − | B|)|B| = (n − | B|)|B| ≤ α (1 − α )n2 + o(n2) ≤ − α 2 + 4α − 2
+4(2α − 1) n2,
+where the last inequality holds for n suﬃciently large and α ≥ 0. 717. By Lemma 6.1, we have
+Dα (G) ≤ 2α − 1
+4 n2 + o(n2). □
+7 Clique-free graphs: Proof of Theorem 1.11
+We will make use of the following two lemmas proved by Keevash and Sudakov [14].
+19
+
+--- PAGE 20 ---
+Lemma 7.1 (Keevash, Sudakov [14]) . Let r ≥ 2 and let G be a Kr+1-free graph where the vertex
+set of G is a union of three disjoint sets X, Y and Z such that X is an independent set and Y can
+be covered by a collection of vertex disjoint copies of Kr’s and |X| = xn, |Y | = yn and |Z| = zn.
+Then
+1
+n2 e(H) ≤ r − 1
+2r (x + y + z)2 − ((r − 1)x − z)2
+2r(r − 1) + 1
+n2 e(Z) − r − 2
+2(r − 1) z2.
+Lemma 7.2 (Keevash, Sudakov [14]) . Let r ≥ 2 be an integer and G a Kr+1-free graph with n
+vertices and m edges. Then G contains an independent set of size at least 2(r − 1) m
+n − (r − 2)n.
+The following is a version of Corollary 3.4 from [14] in our se tting.
+Corollary 7.3. Let r ≥ 2 be an integer and k ≥ 1. Then there exists c = c(k, r ) > 0 such that the
+following holds. Fix an arbitrary α , with c ≤ α ≤ 1. Let G be a Kr+1-free graph with n vertices
+such that for every set A of exactly ⌊ αn ⌋ vertices of G we have e(A) +e(Ac) ≥ r− 1
+2r (2α − 1)n2 edges.
+Then G contains an independent set of size at least k(1 − α )n + o(n).
+Proof. Denote m the number of edges of G and let c = c(k, r ) be suﬃciently large. Take a vertex
+subset A of size ⌊ αn ⌋ uniformly at random. Now, for any edge e ∈ E(G) we have
+P(e ∈ E(G[A]) ∪ E(G[Ac])) =
+( n− 2
+⌊ αn ⌋− 2
+)
+( n
+⌊ αn ⌋
+) +
+(n− 2
+⌊ αn ⌋
+)
+( n
+⌊ αn ⌋
+)
+= ⌊ αn ⌋ (⌊ αn ⌋ − 1)
+n(n − 1) + (n − ⌊ αn ⌋ )(n − ⌊ αn ⌋ − 1)
+n(n − 1) ≤ α 2 + (1 − α )2 + o(1).
+Thus there exists a vertex subset A of size exactly ⌊ αn ⌋ such that
+e(A) + e(Ac) ≤ m(α 2 + (1 − α 2) + o(1)),
+implying that
+m ≥ e(A) + e(Ac)
+α 2 + (1 − α 2) + o(n2) ≥ r − 1
+2r
+2α − 1
+α 2 + (1 − α )2 n2 + o(n2).
+By Lemma 7.2 there exists an independent set of size at least
+(
+(r − 1)2
+r
+2α − 1
+α 2 + (1 − α )2 − (r − 2)
+)
+n + o(n).
+Therefore, it suﬃces to show that
+(r − 1)2
+r
+2α − 1
+α 2 + (1 − α )2 − (r − 2) ≥ k(1 − α ). (31)
+Since we chose c suﬃciently large, we have for every α ≥ c
+2α − 1
+α 2 + (1 − α )2 ≥ (r − 2)r + 1
+2
+(r − 1)2 ,
+20
+
+--- PAGE 21 ---
+because f (α ) := 2α − 1
+α 2+(1− α )2 is a non-decreasing continuous function for 0 ≤ α ≤ 1 and f (1) = 1. To
+see this, note that f ′(α ) = 4α (1− α )
+(2α 2− 2α +1)2 ≥ 0. We conclude
+(r − 1)2
+r
+2α − 1
+α 2 + (1 − α )2 − (r − 2) ≥ (r − 2)r + 1
+2
+r − (r − 2) = 1
+2r ≥ k(1 − α ),
+proving (31). □
+First we prove Theorem 1.11 asymptotically and then we will a rgue that this already implies
+the exact version.
+Proposition 7.4. Let r ≥ 1. There exists cr < 1 such that the following holds for every α such
+that cr ≤ α ≤ 1. Let G be a Kr+1-free graph on n vertices, then G contains a set of ⌊ αn ⌋ vertices
+A such that
+e(A) + e(Ac) ≤ r − 1
+2r (2α − 1)n2 + o(n2).
+Proof of Proposition 7.4. Throughout this proof we omit all ﬂoor signs and lower-order error terms
+for readability. Since all rounding errors change the numbe r of edges only by o(n2), we can safely
+ignore them.
+We use induction on r. For r = 1 the statement is trivial. For r = 2, Proposition 7.4 follows
+from Theorem 1.5 with c2 = 0. 74. Now, assume r ≥ 3. Choose a constant kr >
+√
+2 such that
+1 − 1
+(r − 1)(kr −
+√
+2) ≥ cr− 1
+and choose cr = cr(kr, r ) < 1 suﬃciently large. Towards contradiction, we assume that t here exists
+an n-vertex Kr+1-free graph G such that for some α ∈ [cr, 1) and every set A of αn vertices we
+have
+e(A) + e(Ac) > r − 1
+2r (2α − 1)n2. (32)
+By Corollary 7.3, the graph G contains an independent set U of size kr(1 − α )n. Let T be
+the largest subset of V (G) \ U which can be covered by vertex-disjoint cliques of size r. Let
+S = V (G) \ (U ∪ T ) and set t = |T |/n and s = |S|/n . The subgraph G[S] is Kr-free and
+kr(1 − α ) + t + s = 1.
+Let X1 be a subset of U of size ( kr − 1)(1 − α )n, and let Y1 = T, Z 1 = S. Denote by H1 the
+subgraph G[X1 ∪ Y1 ∪ Z1]. Applying Lemma 7.1 to H1, we get
+e(H1)
+n2 ≤ r − 1
+2r ((kr − 1)(1 − α ) + t + s)2 − ((r − 1)(kr − 1)(1 − α ) − s)2
+2r(r − 1) + 1
+n2 e(S) − r − 2
+2(r − 1) s2
+≤ r − 1
+2r α 2 − ((r − 1)(kr − 1)(1 − α ) − s)2
+2r(r − 1) , (33)
+where in the last inequality we used ( kr − 1)(1 − α ) + t + s = α and applied Tur´ an’s theorem to
+G[S]. Since |V (H1)| = αn and U \X1 is an independent set, we have by assumption (32)
+e(H1) = e(H1) + e(U \X1) > r − 1
+2r (2α − 1)n2. (34)
+21
+
+--- PAGE 22 ---
+Combining (33) with (34), we get
+((r − 1)(kr − 1)(1 − α ) − s)2
+2r(r − 1) < r − 1
+2r (1 − α )2,
+implying
+|(r − 1)(kr − 1)(1 − α ) − s| < (r − 1)(1 − α ).
+Thus, we have s < (r − 1)kr(1 − α ). Set
+q =
+{ (1− α )− t
+r if t < (1 − α )
+0 otherwise .
+Note that s ≥ rq, because otherwise U would be an independent set of size at least αn . This is not
+possible, because an independent set I ⊆ U of size exactly αn satisﬁes
+e(I) + e(I c) = e(I c) ≤ r − 1
+2r (1 − α )2 ≤ r − 1
+2r (2α − 1)
+for α ≥ cr, a contradiction.
+Let X2 be a subset of U of size ( kr(1 − α ) − q)n, let Z2 be a subset of S of size ( s − (r − 1)q)n
+and let Y2 be a subset obtained by deleting ( 1− α
+r − q)n disjoint copies of Kr from the set T . Note
+that
+|X2| + |Y2| + |Z2| = (kr(1 − α ) − q)n + (1 − α − qr)n + (s − (r − 1)q)n
+= (kr − 1)(1 − α ) + sn + tn = αn.
+Applying Lemma 7.1 to H2 := G[X2 ∪ Y2 ∪ Z2], we get
+e(H2)
+n2 ≤ r − 1
+2r α 2 − ((r − 1)(kr(1 − α ) − q) − (s − (r − 1)q))2
+2r(r − 1)
++ 1
+n2 e(Z2) − r − 2
+2(r − 1) |Z2|2 = r − 1
+2r α 2 − ((r − 1)kr(1 − α ) − s)2
+2r(r − 1) . (35)
+On the other side,
+r − 1
+2r (2α − 1) < e(H2) + e(V \(X2 ∪ Y2 ∪ Z2))
+n2 ≤ e(H2)
+n2 + r − 1
+2r (1 − α )2,
+we have e(H2)
+n2 > r− 1
+2r (2α − 1 − (1 − α )2). Together with (35), this gives
+((r − 1)kr(1 − α ) − s)2
+2r(r − 1) ≤ r − 1
+r (1 − α )2
+implying
+|(r − 1)kr(1 − α ) − s| ≤
+√
+2(r − 1)(1 − α ).
+22
+
+--- PAGE 23 ---
+Therefore s > (r − 1)(1 − α )(kr −
+√
+2). Set α 1 = s− (1− α )
+s . Since
+α 1 = 1 − 1 − α
+s > 1 − 1
+(r − 1)(kr −
+√
+2) ,
+the induction assumption holds, and G[S] contains a subset Z3 of size ( s − (1 − α ))n such that
+e(Z3) + e(S \Z3) ≤ r − 2
+2(r − 1) (2α 1 − 1)s2 = r − 2
+2(r − 1) ((s − (1 − α ))2 − (1 − α )2). (36)
+Now, let X3 = U and Y3 = T . Again, by applying Lemma 7.1 to H3 = G[X3 ∪ Y3 ∪ Z3], we get
+e(H3)
+n2 ≤ r − 1
+2r α 2 − ((r − 1)kr(1 − α ) − (s − (1 − α )))2
+2r(r − 1) + 1
+n2 e(Z3) − r − 2
+2(r − 1) (s − (1 − α ))2.
+(37)
+By combining (35) with (36) we get
+e(H3) + e(S \Z3)
+n2 ≤ r − 1
+2r α 2 − (((r − 1)kr + 1)(1 − α ) − s)2
+2r(r − 1) + r − 2
+2(r − 1) (1 − α )2. (38)
+On the other side, we have
+e(H3) + e(S \Z3)
+n2 > r − 1
+2r (2α − 1).
+Combining (37) with (38) we obtain
+(((r − 1)kr + 1)(1 − α ) − s)2
+2r(r − 1) < r − 1
+2r (1 − α )2 + r − 2
+2(r − 1) (1 − α )2,
+implying
+(((r − 1)kr + 1)(1 − α ) − s)2
+2r(r − 1) < (1 − α )2
+2r(r − 1) .
+Thus |((r − 1)kr + 1)(1 − α ) − s| < (1 − α ) and therefore s > (r − 1)kr(1 − α ), a contradiction. □
+Proof of Theorem 1.11. Assume, towards contradiction, that there exists a Kr+1-free graph H with
+k vertices such that for every vertex subset A of size αk we have
+e(A) + e(Ac) ≥ r − 1
+2r (2α − 1)k2 + 1.
+Let n be an integer suﬃciently large and divisible by k. Let G be the graph constructed from H by
+replacing every vertex i with an independent set Vi of size n/k , and for every edge { i, j } ∈ E(H)
+by a complete graph between the sets Vi and Vj. Note that G is a Kr+1-free n-vertex graph. Let
+S ⊆ V (G) be a set of size ⌊ αn ⌋ realizing the minimum e(B) + e(Bc) among all sets B ⊆ V (G) of
+size of αn . The following argument justiﬁes that we can assume that S either contains or is disjoint
+from the sets Vi’s for all but one index. Towards contradiction and without l oss of generality,
+assume that
+1 ≤ | S ∩ V1| ≤ | S ∩ V2| < n
+k .
+23
+
+--- PAGE 24 ---
+Deﬁne
+w1 := S ∩ { v ∈ Vℓ : 1ℓ ∈ E(H) for some ℓ ∈ [k] \ {1, 2}} ,
+wC
+1 := Sc ∩ { v ∈ Vℓ : 1ℓ ∈ E(H) for some ℓ ∈ [k] \ {1, 2}} ,
+w2 := S ∩ { v ∈ Vℓ : 2ℓ ∈ E(H) for some ℓ ∈ [k] \ {1, 2}} ,
+wc
+2 := Sc ∩ { v ∈ Vℓ : 2ℓ ∈ E(H) for some ℓ ∈ [k] \ {1, 2}} .
+Let i, j ∈ { 1, 2} with i /nequalj such that |wi| − | wc
+i | ≥ | wj| − | wc
+j |. If 12 /nelementE(H), then moving vertices
+in Vi to Sc and vertices in Vj to S one by one does not increase e(S) + e(Sc). If 12 ∈ E(H), then
+moving min{| S ∩ Vi|, |Sc ∩ Vj|} vertices in Vi to Sc and the same amount of vertices in Vj to S does
+not increase the number of edges in e(S) + e(Sc). This is because
+|E(G[S ∩ (V1 ∪ V2)]) ∪ E(G[Sc ∩ (V1 ∪ V2)])| = |S ∩ V1||S ∩ V2| + |Sc ∩ V1||Sc ∩ V2|,
+which is minimized when
+⏐
+⏐|S ∩ V1| − | S ∩ V2|
+⏐
+⏐ is as large as possible. We conclude that S either is
+disjoint from or contains the sets Vi’s.
+Now, the set S contains αk sets Vi. Denote by I ⊂ [k] the set of indices i such that Vi ⊆ S. We
+have
+eG(S) + eG(Sc) = ( eH (I) + eH(I c)) n2
+k2 ≥
+(r − 1
+2r (2α − 1)k2 + 1
+) n2
+k2 = r − 1
+2r (2α − 1)n2 + n2
+k2 ,
+contradicting Proposition 7.4.
+□
+8 Balanced Cuts with bounded class size
+In this section we prove Theorems 1.8 and 1.9, our two results on balanced partitions with bounded
+class sizes. The following lemma is a well-known fact which c an be proven by a standard proba-
+bilistic argument, we omit the proof.
+Lemma 8.1. Let k, n be integers where k divides n and G be an n-vertex graph. Then there exists
+a balanced k-partition A1 ∪ . . . ∪ Ak such that e(Ai) = e(G)/k 2 + o(n2) for every i ∈ [k].
+Further, we will make use of the following exact version of th e asymptotic result by Erd˝ os,
+Faudree, Rousseau and Schelp [9] on Conjecture 1.2 for α = 3/ 4.
+Lemma 8.2. Let G be an n-vertex triangle-free graph, where n is divisible by 4. Then, there exists
+a set A ⊆ V (G) of size 3n/ 4 such that e(A) ≤ n2/ 8.
+This lemma follows simply from its asymptotic version by the standard argument presented at
+the end of Section 7, we omit the details.
+Proof of Theorem 1.8. By Lemma 8.1 there exists a balanced 2-partition V (G) = A1 ∪ A2 such
+that e(Ai) = e(Gn)/ 4 + o(n2) for i = 1, 2. Hence we can assume that e(G) ≥ (2/ 9 − o(1))n2.
+Since G is triangle-free, for n suﬃciently large, there exists an independent set I of size n/ 3.
+Note that any set B of size n/ 2 containing I spans at most n2/ 18 edges. We apply Lemma 8.2
+on the complement of I: There exists a set C ⊂ I c of size n/ 2, spanning at most n2/ 18 edges.
+The complement of C also has this property, as it contains I. Thus, max { e(C), e (C c)} ≤ n2/ 18,
+completing the proof of Theorem 1.8. □
+24
+
+--- PAGE 25 ---
+Proof of Theorem 1.9. By Lemma 8.1 there exists a balanced 3-partition V (G) = A1 ∪ A2 ∪ A3 such
+that e(Ai) = e(Gn)/ 9 + o(n2) for i = 1, 2, 3. Hence, we can assume that e(Gn) ≥ (3/ 16)n2 + o(n2).
+First, consider the case α (G) ≥ n/ 2. Let I be an independent set of size n/ 2. We apply the
+result of Erd˝ os, Faudree, Rousseau and Schelp [9] on Conjec ture 1.2 on G[I c] for α = 2 / 3: There
+exists a set C ⊂ I c of size n/ 3, spanning at most n2/ 48 + o(n2) edges. Take an arbitrary balanced
+2-partition A ∪ B of V \C such that |A ∩ I| − | B ∩ I| ≤ 1. Since A contains an independent set of
+size n/ 4 + o(n), we have
+e(A) ≤ n
+4 · n
+12 + o(n2) = n2
+48 + o(n2) and similarly e(B) ≤ n2
+48 + o(n2).
+Thus, V (G) = A ∪ B ∪ C is a balanced 3-partition with max { e(A), e (B), e (C)} ≤ n2/ 48 + o(n2).
+Now, assume that α (G) < n/ 2. By a standard application of the Cauchy-Schwartz inequal ity,
+there exists an edge xy satisfying
+deg(x) + deg(y) ≥ 1
+e(G)
+∑
+uv∈ E(G)
+deg(u) + deg(v) = 1
+e(G)
+∑
+v∈ V (G)
+deg(v)2 ≥ 4e(G)
+n ≥ 3n
+4 − o(n).
+Since G is triangle-free, N (x) and N (y) are disjoint independent sets. By α (G) < n/ 2, we get
+n/ 4 − o(n) < |N (x)|, |N (y)| < n
+2 . In particular, there exists two disjoint independent sets I1, I 2
+each of size n/ 4 +o(n). By the result of Erd˝ os, Faudree, Rousseau and Schelp [9] o n Conjecture 1.2
+applied on G[V \(I1 ∪ I2)] for α = 2/ 3: There exists a set C ⊂ V \(I1 ∪ I2) of size n/ 3, spanning at
+most n2/ 48 +o(n2) edges. Take a balanced 3-partition V (G) = A ∪ B ∪ C such that I1 ⊆ A, I 2 ⊆ B.
+This 3-partition has the property max { e(A), e (B), e (C)} ≤ n2/ 48 + o(n2). □
+References
+[1] N. Alon, B. Bollob´ as, M. Krivelevich, and B. Sudakov. Ma ximum cuts and judicious par-
+titions in graphs without short cycles. J. Combin. Theory Ser. B , 88(2):329–346, 2003.
+doi:10.1016/S0095-8956(03)00036-4.
+[2] J. Balogh, F. C. Clemen, and B. Lidick´ y. Max cuts in trian gle-free graphs.
+Trends in Mathematics (Extended Abstracts EuroComb 2021) , 14:509–514, 2021.
+doi:10.1007/978-3-030-83823-2_82 .
+[3] B. Bollob´ as and A. D. Scott. Problems and results on judi cious partitions. volume 21, pages
+414–430. 2002. Random structures and algorithms (Poznan, 2 001). doi:10.1002/rsa.10062.
+[4] S. Brandt. The local density of triangle-free graphs. Discrete Math. , 183(1-3):17–25, 1998.
+doi:10.1016/S0012-365X(97)00074-5.
+[5] V. Chv´ atal. The minimality of the Mycielski graph. In Graphs and combinatorics (Proc.
+Capital Conf., George Washington Univ., Washington, D.C., 1973), pages 243–246. Lecture
+Notes in Math., Vol. 406, 1974.
+[6] P. Erd˝ os. Problems and results in graph theory and combi natorial analysis. In Proceedings of
+the Fifth British Combinatorial Conference (Univ. Aberdee n, Aberdeen, 1975), pages 169–192.
+Congressus Numerantium, No. XV, 1976.
+25
+
+--- PAGE 26 ---
+[7] P. Erd˝ os. Some old and new problems in various branches o f combinatorics. Discrete Math. ,
+165/166:227–231, 1997. doi:10.1016/S0012-365X(96)00173-2.
+[8] P. Erd˝ os, R. Faudree, J. Pach, and J. Spencer. How to make a graph bipartite. J. Combin.
+Theory Ser. B , 45(1):86–98, 1988. doi:10.1016/0095-8956(88)90057-3.
+[9] P. Erd˝ os, R. J. Faudree, C. C. Rousseau, and R. H. Schelp. A local density condition for
+triangles. Discrete Math. , 127:153–161, 1994. Graph theory and applications (Hakone , 1990).
+doi:10.1016/0012-365X(92)00474-6.
+[10] P. Erd˝ os, E. Gy˝ ori, and M. Simonovits. How many edges should be deleted to make a triangle-
+free graph bipartite? In Sets, graphs and numbers (Budapest, 1991) , volume 60 of Colloq.
+Math. Soc. J´ anos Bolyai, pages 239–263. North-Holland, Amsterdam, 1992.
+[11] U. Feige and M. Langberg. The RPR 2 rounding technique for semideﬁnite programs. J. Al-
+gorithms, 60(1):1–23, 2006. doi:10.1016/j.jalgor.2004.11.003.
+[12] A. Frieze and M. Jerrum. Improved approximation algori thms for MAX k-CUT and
+MAX BISECTION. In Integer programming and combinatorial optimization (Cope nhagen,
+1995), volume 920 of Lecture Notes in Comput. Sci. , pages 1–13. Springer, Berlin, 1995.
+doi:10.1007/3-540-59408-6_37 .
+[13] P. Hu, B. Lidick´ y, T. Martins, S. Norin, and J. Volec. La rge multipartite subgraphs in H-
+free graphs. Trends in Mathematics (Extended Abstracts EuroComb 2021) , 14:707–713, 2021.
+doi:10.1007/978-3-030-83823-2_113 .
+[14] P. Keevash and B. Sudakov. Local density in graphs with f orbidden subgraphs. Combin.
+Probab. Comput., 12(2):139–153, 2003. doi:10.1017/S0963548302005539.
+[15] P. Keevash and B. Sudakov. Sparse halves in triangle-fr ee graphs. J. Combin. Theory Ser. B ,
+96(4):614–620, 2006. doi:10.1016/j.jctb.2005.11.003.
+[16] M. Krivelevich. On the edge distribution in triangle-f ree graphs. J. Combin. Theory Ser. B ,
+63(2):245–260, 1995. doi:10.1006/jctb.1995.1018.
+[17] C. Lee, P.-S. Loh, and B. Sudakov. Bisections of graphs. J. Combin. Theory Ser. B , 103(5):599–
+629, 2013. doi:10.1016/j.jctb.2013.06.002.
+[18] X. Liu and J. Ma. Sparse halves in K4-free graphs. arXiv:2007.14623, 2020.
+[19] H. Naves. A problem of Erd˝ os on triangle-free graphs, 2 015.
+[20] S. Norin and L. Yepremyan. Sparse halves in dense triang le-free graphs. J. Combin. Theory
+Ser. B , 115:1–25, 2015. doi:10.1016/j.jctb.2015.04.006.
+[21] A. A. Razborov. Flag algebras. J. Symbolic Logic , 72(4):1239–1282, 2007.
+doi:10.2178/jsl/1203350785.
+[22] A. A. Razborov. More about sparse halves in triangle-fr ee graphs. arXiv:2104.09406, 2021.
+[23] C. Reiher. K4-free graphs have sparse halves. arXiv:2108.07297, 2021.
+26
+
+--- PAGE 27 ---
+[24] B. Sudakov. Making a K4-free graph bipartite. Combinatorica, 27(4):509–518, 2007.
+doi:10.1007/s00493-007-2238-0 .
+[25] P. Tur´ an. Eine Extremalaufgabe aus der Graphentheori e. Mat. Fiz. Lapok , 48:436–452, 1941.
+27

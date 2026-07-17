@@ -1,0 +1,32 @@
+{
+  "arithmetic": "exact integers only",
+  "bins": 24,
+  "boundary_certificates": 726,
+  "first_failures": {
+    "full_cap": null,
+    "linear": {
+      "X": 3000000000,
+      "index": 6,
+      "j": 7,
+      "lhs": 61,
+      "rhs": 60,
+      "root": 188
+    },
+    "moving_sqrt": null
+  },
+  "full_cap_violable_boundary_prefixes": 0,
+  "input_schema": "C113-vulnerable-prefix-scan-v1",
+  "input_sha256": "e49ec8f7c1a750f41732c4d87ef1277d752d79325f41100248def54020e1e87e",
+  "limit": 3000000000,
+  "minimum_moving_sqrt_slack": {
+    "X": 3000000000,
+    "index": 2,
+    "j": 7,
+    "lhs": 4,
+    "rhs": 16,
+    "root": 144,
+    "slack": 12
+  },
+  "schema": "C113-boundary-prefix-replay-v1",
+  "tested_nontrivial_prefixes": 702
+}

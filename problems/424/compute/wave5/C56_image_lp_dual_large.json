@@ -1,0 +1,38 @@
+[
+  {
+    "limit": 2000,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 6120,
+    "constraints": 16971,
+    "hard_count": 147,
+    "objective": 152.0,
+    "fractional_excess": -5.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 5000,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 16327,
+    "constraints": 47603,
+    "hard_count": 410,
+    "objective": 444.0,
+    "fractional_excess": -34.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 10000,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 34215,
+    "constraints": 103069,
+    "hard_count": 878,
+    "objective": 946.0,
+    "fractional_excess": -68.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":2000000000,
+  "forest":"odd holes use T2 parent; 3-easy even holes use T3 parent; splitless and hard holes are roots",
+  "maximum_obstruction_rank":22,
+  "hard_total":55529425,
+  "healed_seed2_exits_total":108981513,
+  "splitless_roots":174193727,
+  "hard_roots":55529425,
+  "exits_from_splitless_components":81853320,
+  "exits_from_hard_components":27128193,
+  "decomposition_failures":0,
+  "cap_audits":[
+    {"cap":1,"selected_exits":107657157,"rank_prefix":{"maximum_excess":18,"maximum_X":6192,"maximum_rank":7,"strict_failure_events":18190,"plus_one_failure_events":16072,"first_plus_one_X":1002,"first_plus_one_rank":3,"first_plus_one_H":35,"first_plus_one_Q":33}},
+    {"cap":2,"selected_exits":108888585,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}},
+    {"cap":3,"selected_exits":108967973,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}},
+    {"cap":8,"selected_exits":108981246,"rank_prefix":{"maximum_excess":1,"maximum_X":362,"maximum_rank":2,"strict_failure_events":3,"plus_one_failure_events":0,"first_plus_one_X":0,"first_plus_one_rank":0,"first_plus_one_H":0,"first_plus_one_Q":0}}
+  ]
+}

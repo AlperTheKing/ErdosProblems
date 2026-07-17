@@ -1,0 +1,41 @@
+We are trying to resolve Erdős Problem 273.  An affirmative solution is a
+finite covering system a_i (mod m_i) of all integers, with pairwise distinct
+moduli, such that every m_i+1 is a prime at least 5.
+
+Every allowed m is even, say m=2d, and 2d+1 is prime.  Splitting by parity
+shows that the problem is equivalent to finding two finite covering systems
+of Z by congruences b (mod d), whose half-modulus sets are disjoint, and for
+every selected d the number 2d+1 is prime.  The two covers lift to even and
+odd residue classes modulo 2d.
+
+One known half-cover is
+
+  0(2), 0(3), 1(5), 1(6), 5(9), 8(15), 11(18), 17(20),
+  5(30), 35(36), 89(90),
+
+but an exact reciprocal-tail proof shows it has no disjoint complementary
+cover whose moduli are supported on {2,3,5,7,11,13}, at arbitrary exponents.
+Joint searches using every admissible divisor of 27720 and 55440 are also
+exactly impossible.  The first smooth period whose single-anchor overlap
+capacity test survives is 138600, but one capacity allocation is already
+residue-infeasible.  These are only restricted failures, not a global
+obstruction.
+
+Can you give one concrete constructive mechanism that materially advances
+the affirmative problem: ideally an explicit pair of disjoint half-covering
+systems, or otherwise a proved CRT/residue-tree refinement lemma with a
+fully specified finite worked instance that can be exact-tested?  A useful
+refinement would replace a parent fiber b (mod d) by finitely many child
+classes with distinct admissible half-moduli e (so 2e+1 is prime), cover the
+entire parent fiber, and avoid a prescribed finite forbidden set of moduli.
+
+Please return one concrete mathematical object, not general strategy:
+
+1. explicit residue/modulus lists with an exact covering derivation; or
+2. a precise proved refinement lemma plus all child moduli/residues in one
+   nontrivial finite instance; or
+3. an exact counterexample that kills a natural proposed refinement rule.
+
+Check distinctness, primality of every 2d+1, and complete coverage.  Do not
+use floating-point density, reciprocal mass alone, or finite-interval testing
+shorter than the true period.

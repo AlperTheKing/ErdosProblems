@@ -1,0 +1,353 @@
+{
+  "projection_audit": {
+    "algebra_exact": true,
+    "boundary_row": "f_(2m-1)-f_m-q_(2m-1) <= 0",
+    "identity": "(f_a-s_a)+(f_b-s_b)+(-w+s_a+s_b)+(w-f_n) = f_a+f_b-f_n <= 1",
+    "image_closure_relations": 367,
+    "limit": 362,
+    "seed_equalities_used": 198,
+    "splitless_image_values_are_fixed_zero": true
+  },
+  "schema_version": 1,
+  "tdi_counterexample": {
+    "dual_inequalities": {
+      "and_right_11_0": [
+        -3,
+        2
+      ],
+      "and_right_21_0": [
+        -1,
+        2
+      ],
+      "boundary_child_11": [
+        -2,
+        1
+      ],
+      "boundary_child_21": [
+        -1,
+        2
+      ],
+      "boundary_parent_21": [
+        -1,
+        2
+      ],
+      "closure_11_2_6": [
+        -3,
+        2
+      ],
+      "support_upper_11": [
+        -3,
+        2
+      ],
+      "support_upper_21": [
+        -1,
+        2
+      ]
+    },
+    "dual_lower_bounds": {
+      "s_2": [
+        3,
+        2
+      ]
+    },
+    "dual_stationarity_exact": true,
+    "exact_integer_optimum": [
+      0,
+      1
+    ],
+    "exact_lp_optimum": [
+      -1,
+      2
+    ],
+    "fractional_primal_nonzero": {
+      "f_11": [
+        1,
+        2
+      ],
+      "f_14": [
+        1,
+        1
+      ],
+      "f_17": [
+        1,
+        1
+      ],
+      "f_2": [
+        1,
+        1
+      ],
+      "f_21": [
+        1,
+        2
+      ],
+      "f_3": [
+        1,
+        1
+      ],
+      "f_5": [
+        1,
+        1
+      ],
+      "f_9": [
+        1,
+        1
+      ],
+      "q_11": [
+        1,
+        2
+      ],
+      "q_21": [
+        1,
+        2
+      ],
+      "s_11": [
+        1,
+        2
+      ],
+      "s_14": [
+        1,
+        1
+      ],
+      "s_17": [
+        1,
+        1
+      ],
+      "s_2": [
+        1,
+        1
+      ],
+      "s_21": [
+        1,
+        2
+      ],
+      "s_3": [
+        1,
+        1
+      ],
+      "s_5": [
+        1,
+        1
+      ],
+      "s_6": [
+        1,
+        2
+      ],
+      "s_9": [
+        1,
+        1
+      ],
+      "w_11_0": [
+        1,
+        2
+      ],
+      "w_14_0": [
+        1,
+        1
+      ],
+      "w_17_0": [
+        1,
+        1
+      ],
+      "w_17_1": [
+        1,
+        2
+      ],
+      "w_21_0": [
+        1,
+        2
+      ],
+      "w_5_0": [
+        1,
+        1
+      ],
+      "w_9_0": [
+        1,
+        1
+      ]
+    },
+    "integral_cases": [
+      {
+        "objective": 0,
+        "s_11": 0,
+        "s_6": 0
+      },
+      {
+        "objective": 1,
+        "s_11": 1,
+        "s_6": 0
+      },
+      {
+        "objective": 0,
+        "s_11": 1,
+        "s_6": 1
+      }
+    ],
+    "limit": 21,
+    "non_tu_minor": {
+      "columns": [
+        "s_6",
+        "s_11",
+        "w_11_0",
+        "f_11",
+        "w_21_0",
+        "f_21",
+        "q_21"
+      ],
+      "determinant": 2,
+      "matrix": [
+        [
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1
+        ]
+      ],
+      "rows": [
+        "closure_11_2_6",
+        "and_right_11_0",
+        "support_upper_11",
+        "and_right_21_0",
+        "support_upper_21",
+        "boundary_parent_21",
+        "boundary_child_21"
+      ]
+    },
+    "objective": {
+      "q_11": -2,
+      "q_21": -1,
+      "s_11": 2
+    },
+    "primal_feasibility_exact": true
+  },
+  "tight_cutoff_dual_replays": [
+    {
+      "dual_stationarity_exact": true,
+      "exact_dual_objective": [
+        1,
+        1
+      ],
+      "exact_primal_objective": [
+        1,
+        1
+      ],
+      "hard_shapes": 1,
+      "limit": 54,
+      "maximum_multiplier_denominator": 1,
+      "nonzero_inequality_multipliers": 19,
+      "nonzero_lower_multipliers": 19,
+      "nonzero_upper_multipliers": 6,
+      "primal_feasibility_exact": true
+    },
+    {
+      "dual_stationarity_exact": true,
+      "exact_dual_objective": [
+        2,
+        1
+      ],
+      "exact_primal_objective": [
+        2,
+        1
+      ],
+      "hard_shapes": 2,
+      "limit": 74,
+      "maximum_multiplier_denominator": 1,
+      "nonzero_inequality_multipliers": 26,
+      "nonzero_lower_multipliers": 24,
+      "nonzero_upper_multipliers": 8,
+      "primal_feasibility_exact": true
+    },
+    {
+      "dual_stationarity_exact": true,
+      "exact_dual_objective": [
+        8,
+        1
+      ],
+      "exact_primal_objective": [
+        8,
+        1
+      ],
+      "hard_shapes": 8,
+      "limit": 186,
+      "maximum_multiplier_denominator": 1,
+      "nonzero_inequality_multipliers": 68,
+      "nonzero_lower_multipliers": 58,
+      "nonzero_upper_multipliers": 18,
+      "primal_feasibility_exact": true
+    },
+    {
+      "dual_stationarity_exact": true,
+      "exact_dual_objective": [
+        19,
+        1
+      ],
+      "exact_primal_objective": [
+        19,
+        1
+      ],
+      "hard_shapes": 19,
+      "limit": 362,
+      "maximum_multiplier_denominator": 1,
+      "nonzero_inequality_multipliers": 128,
+      "nonzero_lower_multipliers": 112,
+      "nonzero_upper_multipliers": 33,
+      "primal_feasibility_exact": true
+    }
+  ]
+}

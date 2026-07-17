@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "verification": {
+    "cutoff": 186,
+    "feature_mode": "full",
+    "hall_hard_count": 6,
+    "hall_neighbor_capacity": 5,
+    "crossing_blocks_replayed": 72,
+    "solver_free_feature_obstruction_verified": true
+  }
+}

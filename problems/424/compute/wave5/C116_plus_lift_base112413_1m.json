@@ -1,0 +1,133 @@
+{
+  "base": {
+    "d": 4,
+    "factorization": [
+      [
+        3,
+        1
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        53,
+        1
+      ],
+      [
+        101,
+        1
+      ]
+    ],
+    "forced_one_hole_blockers": [
+      2121,
+      1113,
+      707,
+      371
+    ],
+    "h": 112412,
+    "pairs": [
+      {
+        "a": 53,
+        "b": 2121,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 53
+          },
+          {
+            "generated": false,
+            "root": 266,
+            "root_structural_splitless": false,
+            "value": 2121
+          }
+        ]
+      },
+      {
+        "a": 101,
+        "b": 1113,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 101
+          },
+          {
+            "generated": false,
+            "root": 140,
+            "root_structural_splitless": false,
+            "value": 1113
+          }
+        ]
+      },
+      {
+        "a": 159,
+        "b": 707,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 159
+          },
+          {
+            "generated": false,
+            "root": 354,
+            "root_structural_splitless": false,
+            "value": 707
+          }
+        ]
+      },
+      {
+        "a": 303,
+        "b": 371,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 303
+          },
+          {
+            "generated": false,
+            "root": 186,
+            "root_structural_splitless": false,
+            "value": 371
+          }
+        ]
+      }
+    ],
+    "product": 112413,
+    "s": 0,
+    "two_hole_pairs": []
+  },
+  "best_primes": [
+    13,
+    61,
+    541,
+    4909,
+    220333
+  ],
+  "deficit_nine_falsifier": null,
+  "eligible_plus_primes_tested": 39230,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with exact product recheck",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "hits": [],
+  "maximum_forced_blockers_remaining_missing": 3,
+  "prime_limit": 1000000,
+  "schema": "C115-c105-plus-lift-v1"
+}

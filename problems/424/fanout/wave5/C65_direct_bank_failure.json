@@ -1,0 +1,25 @@
+{
+  "max_limit": 5000,
+  "checks": 376,
+  "first_failure": {
+    "ambient": 186,
+    "root_cutoff": 186,
+    "hard_demand": 6,
+    "direct_sources": 5,
+    "direct_sources_list": [
+      6,
+      18,
+      20,
+      38,
+      66
+    ],
+    "hard_roots": [
+      54,
+      74,
+      114,
+      144,
+      174,
+      186
+    ]
+  }
+}

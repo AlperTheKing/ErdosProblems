@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "algorithm": "trial divisors plus literal descending approximants",
+  "hard_total": 5108,
+  "target_total": 6783,
+  "rank_histogram_hard": {
+    "2": 2323,
+    "3": 491,
+    "4": 899,
+    "5": 447,
+    "6": 424,
+    "7": 243,
+    "8": 156,
+    "9": 94,
+    "10": 28,
+    "11": 3
+  },
+  "rank_histogram_target": {
+    "0": 3037,
+    "1": 407,
+    "2": 749,
+    "3": 469,
+    "4": 585,
+    "5": 409,
+    "6": 386,
+    "7": 314,
+    "8": 216,
+    "9": 141,
+    "10": 64,
+    "11": 6
+  },
+  "prefix_audit": {
+    "maximum": {
+      "excess": 1,
+      "X": 362,
+      "rank": 2,
+      "H": 11,
+      "Q": 10
+    },
+    "strict_failures": [
+      {
+        "X": 362,
+        "rank": 2,
+        "excess": 1
+      },
+      {
+        "X": 1002,
+        "rank": 2,
+        "excess": 1
+      },
+      {
+        "X": 1014,
+        "rank": 2,
+        "excess": 1
+      }
+    ],
+    "plus_one_failures": []
+  },
+  "descending_stage_audit": {
+    "stages_to_fixpoint": 14,
+    "mismatches": []
+  },
+  "conventions": {
+    "hard_values_all_even": true,
+    "target_events_all_odd": true,
+    "target_parents_distinct_from_seed_2": true,
+    "all_hard_ranks_at_least_two": true,
+    "event_coordinate": "generated child 2q-1",
+    "pairs_strictly_distinct": true,
+    "first_equal_factor_membership_difference": 8,
+    "rank_is_death_stage_minus_one": true
+  },
+  "cpp_cross_check": {
+    "requested": true,
+    "expected": {
+      "hard_total": 5108,
+      "target_total": 6783,
+      "maximum_excess": 1,
+      "maximum_X": 362,
+      "maximum_rank": 2,
+      "plus_one_failures": 0
+    },
+    "observed": {
+      "hard_total": 5108,
+      "target_total": 6783,
+      "maximum_excess": 1,
+      "maximum_X": 362,
+      "maximum_rank": 2,
+      "plus_one_failures": 0
+    },
+    "equal": true
+  }
+}

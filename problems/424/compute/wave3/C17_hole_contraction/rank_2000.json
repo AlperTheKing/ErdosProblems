@@ -2,11 +2,16 @@
   "schema_version":1,
   "arithmetic":"integer gates; reciprocal sums reduced exactly",
   "rank_definition":"seeds rank 0; minimum 1+max factor ranks over generated witness pairs",
+  "rank_cap_healing_audit":[
+    {"cap":8,"healed":102,"first_failure_X":0,"last_failure_X":0,"maximum_excess":0,"maximum_excess_X":0},
+    {"cap":9,"healed":102,"first_failure_X":0,"last_failure_X":0,"maximum_excess":0,"maximum_excess_X":0}
+  ],
   "limit":2000,
   "weight_scale":1073741824,
   "maximum_admissible_pair_count_on_reducible_hole":12,
   "maximum_direct_coefficient":{"X":362,"numerator":101,"denominator":80},
   "first_lambda_two_failure_X":0,
+  "first_two_scale_failure_X":0,
   "maximum_fixed_point_coefficient":{"X":1080,"numerator":15232220827,"denominator":10334765056},
   "first_fixed_point_lambda_two_failure_X":0,
   "pair_count_histogram":[
@@ -35,6 +40,8 @@
       "seed2_healed":0,
       "healing_surplus":0,
       "missing_at_half":5,
+      "missing_at_third":3,
+      "two_scale_excess":-2,
       "direct_coefficient":{"numerator":6,"denominator":5},
       "reciprocal_all_pair_charge":{"numerator":"6","denominator":"1"},
       "fixed_point_charge":{"numerator":6442450944,"denominator":1073741824},
@@ -67,6 +74,8 @@
       "seed2_healed":3,
       "healing_surplus":1,
       "missing_at_half":21,
+      "missing_at_third":13,
+      "two_scale_excess":-10,
       "direct_coefficient":{"numerator":24,"denominator":21},
       "reciprocal_all_pair_charge":{"numerator":"76","denominator":"3"},
       "fixed_point_charge":{"numerator":27201459546,"denominator":1073741824},
@@ -100,6 +109,8 @@
       "seed2_healed":12,
       "healing_surplus":0,
       "missing_at_half":80,
+      "missing_at_third":55,
+      "two_scale_excess":-34,
       "direct_coefficient":{"numerator":101,"denominator":80},
       "reciprocal_all_pair_charge":{"numerator":"4583","denominator":"40"},
       "fixed_point_charge":{"numerator":123023969517,"denominator":1073741824},
@@ -135,6 +146,8 @@
       "seed2_healed":46,
       "healing_surplus":5,
       "missing_at_half":214,
+      "missing_at_third":146,
+      "two_scale_excess":-100,
       "direct_coefficient":{"numerator":260,"denominator":214},
       "reciprocal_all_pair_charge":{"numerator":"4637","denominator":"15"},
       "fixed_point_charge":{"numerator":331929389332,"denominator":1073741824},
@@ -171,6 +184,8 @@
       "seed2_healed":102,
       "healing_surplus":5,
       "missing_at_half":416,
+      "missing_at_third":286,
+      "two_scale_excess":-197,
       "direct_coefficient":{"numerator":505,"denominator":416},
       "reciprocal_all_pair_charge":{"numerator":"1525679","denominator":"2520"},
       "fixed_point_charge":{"numerator":650073552827,"denominator":1073741824},
@@ -197,5 +212,5 @@
       ]
     }
   ],
-  "elapsed_seconds":0.0001626
+  "elapsed_seconds":0.0001653
 }

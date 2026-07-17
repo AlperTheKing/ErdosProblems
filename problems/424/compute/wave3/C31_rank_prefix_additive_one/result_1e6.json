@@ -1,0 +1,2434 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "rank_definition": "splitless hole=0; reducible hole=1+max over admissible pairs of min obstruction depth among missing endpoints",
+  "hard_definition": "even reducible hole outside the admissible nonseed factor-3 class",
+  "target_definition": "event child=2q-1<=X generated, parent q missing; target rank=rank(q)",
+  "hard_total": 45583,
+  "healed_total": 67537,
+  "maximum_rank": 14,
+  "rank_prefix": {
+    "maximum_excess": 1,
+    "maximum_event": {
+      "X": 362,
+      "rank": 2,
+      "H": 11,
+      "Q": 10
+    },
+    "strict_failure_events": 3,
+    "strict_failure_prefix": [
+      {
+        "X": 362,
+        "rank": 2,
+        "excess": 1
+      },
+      {
+        "X": 1002,
+        "rank": 2,
+        "excess": 1
+      },
+      {
+        "X": 1014,
+        "rank": 2,
+        "excess": 1
+      }
+    ],
+    "plus_one_failure_events": 0
+  },
+  "all_hard_vs_healed_rank_le2": {
+    "maximum_deficit": 1549,
+    "maximum_event": {
+      "X": 344180,
+      "H": 16695,
+      "Q_le2": 15146
+    },
+    "last_positive_event": {
+      "X": 999954,
+      "deficit": 305
+    },
+    "terminal_deficit": 302
+  },
+  "online_rank_greedy": {
+    "matched": 45582,
+    "unmatched": 1,
+    "unmatched_prefix": [
+      {
+        "value": 362,
+        "rank": 2
+      }
+    ],
+    "sample_matches": [
+      {
+        "source": 54,
+        "source_rank": 2,
+        "child": 41,
+        "parent": 21,
+        "rank": 2
+      },
+      {
+        "source": 74,
+        "source_rank": 2,
+        "child": 69,
+        "parent": 35,
+        "rank": 1
+      },
+      {
+        "source": 114,
+        "source_rank": 2,
+        "child": 77,
+        "parent": 39,
+        "rank": 1
+      },
+      {
+        "source": 144,
+        "source_rank": 3,
+        "child": 125,
+        "parent": 63,
+        "rank": 3
+      },
+      {
+        "source": 174,
+        "source_rank": 2,
+        "child": 149,
+        "parent": 75,
+        "rank": 1
+      },
+      {
+        "source": 186,
+        "source_rank": 2,
+        "child": 131,
+        "parent": 66,
+        "rank": 0
+      },
+      {
+        "source": 234,
+        "source_rank": 2,
+        "child": 233,
+        "parent": 117,
+        "rank": 2
+      },
+      {
+        "source": 252,
+        "source_rank": 2,
+        "child": 237,
+        "parent": 119,
+        "rank": 1
+      },
+      {
+        "source": 294,
+        "source_rank": 2,
+        "child": 251,
+        "parent": 126,
+        "rank": 0
+      },
+      {
+        "source": 318,
+        "source_rank": 2,
+        "child": 239,
+        "parent": 120,
+        "rank": 0
+      },
+      {
+        "source": 354,
+        "source_rank": 2,
+        "child": 219,
+        "parent": 110,
+        "rank": 0
+      },
+      {
+        "source": 390,
+        "source_rank": 2,
+        "child": 365,
+        "parent": 183,
+        "rank": 1
+      },
+      {
+        "source": 414,
+        "source_rank": 2,
+        "child": 399,
+        "parent": 200,
+        "rank": 0
+      },
+      {
+        "source": 444,
+        "source_rank": 4,
+        "child": 377,
+        "parent": 189,
+        "rank": 4
+      },
+      {
+        "source": 450,
+        "source_rank": 2,
+        "child": 419,
+        "parent": 210,
+        "rank": 0
+      },
+      {
+        "source": 474,
+        "source_rank": 4,
+        "child": 461,
+        "parent": 231,
+        "rank": 3
+      },
+      {
+        "source": 492,
+        "source_rank": 3,
+        "child": 441,
+        "parent": 221,
+        "rank": 3
+      },
+      {
+        "source": 516,
+        "source_rank": 2,
+        "child": 491,
+        "parent": 246,
+        "rank": 0
+      },
+      {
+        "source": 534,
+        "source_rank": 4,
+        "child": 293,
+        "parent": 147,
+        "rank": 3
+      },
+      {
+        "source": 564,
+        "source_rank": 5,
+        "child": 489,
+        "parent": 245,
+        "rank": 5
+      },
+      {
+        "source": 582,
+        "source_rank": 2,
+        "child": 581,
+        "parent": 291,
+        "rank": 1
+      },
+      {
+        "source": 594,
+        "source_rank": 2,
+        "child": 455,
+        "parent": 228,
+        "rank": 0
+      },
+      {
+        "source": 614,
+        "source_rank": 5,
+        "child": 449,
+        "parent": 225,
+        "rank": 5
+      },
+      {
+        "source": 648,
+        "source_rank": 2,
+        "child": 615,
+        "parent": 308,
+        "rank": 0
+      },
+      {
+        "source": 666,
+        "source_rank": 2,
+        "child": 611,
+        "parent": 306,
+        "rank": 0
+      },
+      {
+        "source": 704,
+        "source_rank": 3,
+        "child": 701,
+        "parent": 351,
+        "rank": 3
+      },
+      {
+        "source": 714,
+        "source_rank": 2,
+        "child": 713,
+        "parent": 357,
+        "rank": 2
+      },
+      {
+        "source": 758,
+        "source_rank": 2,
+        "child": 669,
+        "parent": 335,
+        "rank": 1
+      },
+      {
+        "source": 774,
+        "source_rank": 2,
+        "child": 761,
+        "parent": 381,
+        "rank": 2
+      },
+      {
+        "source": 780,
+        "source_rank": 2,
+        "child": 779,
+        "parent": 390,
+        "rank": 2
+      }
+    ]
+  },
+  "critical_two_step_matching": {
+    "matched": 4333,
+    "unmatched": 41250,
+    "unmatched_prefix": [
+      {
+        "value": 74,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 114,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 144,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 186,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 234,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 252,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 318,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 354,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 362,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 390,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 414,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 444,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 450,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 492,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 516,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 534,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 582,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 648,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 666,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 704,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 714,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 758,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 774,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 780,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 798,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 846,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 884,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 912,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 924,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 942,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 956,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 978,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1002,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1014,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1074,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1080,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1110,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1176,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1188,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1206,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1218,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1224,
+        "rank": 6,
+        "degree": 1
+      },
+      {
+        "value": 1242,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1314,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1344,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 1356,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1362,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1410,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1424,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1440,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1494,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1506,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1512,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1536,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1550,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1554,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 1572,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1586,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1614,
+        "rank": 4,
+        "degree": 1
+      },
+      {
+        "value": 1632,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1638,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1644,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1694,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1704,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1710,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1764,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1770,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1794,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1818,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1836,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1874,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1902,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1908,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1914,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1920,
+        "rank": 5,
+        "degree": 1
+      },
+      {
+        "value": 1926,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1946,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 1968,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 2000,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2022,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2046,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2058,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2100,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 2154,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 2166,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2232,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2234,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 2298,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2322,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2334,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 2342,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2394,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2396,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2406,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2418,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2430,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2460,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2490,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2496,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2514,
+        "rank": 4,
+        "degree": 0
+      }
+    ],
+    "zero_degree": 21332,
+    "edge_count": 25976
+  },
+  "all_endpoint_two_step_matching": {
+    "matched": 4965,
+    "unmatched": 40618,
+    "unmatched_prefix": [
+      {
+        "value": 74,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 114,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 144,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 186,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 234,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 252,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 318,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 354,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 362,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 390,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 414,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 444,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 450,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 492,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 516,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 534,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 582,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 648,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 666,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 704,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 714,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 758,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 774,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 780,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 798,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 846,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 884,
+        "rank": 5,
+        "degree": 1
+      },
+      {
+        "value": 912,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 924,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 942,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 956,
+        "rank": 3,
+        "degree": 1
+      },
+      {
+        "value": 978,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1002,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1014,
+        "rank": 4,
+        "degree": 1
+      },
+      {
+        "value": 1074,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1080,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1110,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1176,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1188,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1206,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1218,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1224,
+        "rank": 6,
+        "degree": 1
+      },
+      {
+        "value": 1242,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1314,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1344,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 1356,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1362,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1410,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1424,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1440,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1494,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1506,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1512,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1536,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 1550,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1554,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 1572,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1586,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1614,
+        "rank": 4,
+        "degree": 1
+      },
+      {
+        "value": 1632,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1638,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1644,
+        "rank": 4,
+        "degree": 1
+      },
+      {
+        "value": 1694,
+        "rank": 6,
+        "degree": 1
+      },
+      {
+        "value": 1710,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1764,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1770,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1794,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1818,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 1836,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1874,
+        "rank": 6,
+        "degree": 0
+      },
+      {
+        "value": 1902,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 1908,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1914,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1920,
+        "rank": 5,
+        "degree": 1
+      },
+      {
+        "value": 1926,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 1946,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 1968,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 2000,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2022,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2046,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2058,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2100,
+        "rank": 2,
+        "degree": 2
+      },
+      {
+        "value": 2154,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 2166,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2232,
+        "rank": 3,
+        "degree": 1
+      },
+      {
+        "value": 2234,
+        "rank": 5,
+        "degree": 0
+      },
+      {
+        "value": 2298,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2322,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2334,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 2342,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2394,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2396,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2406,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2418,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2460,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2490,
+        "rank": 2,
+        "degree": 0
+      },
+      {
+        "value": 2496,
+        "rank": 2,
+        "degree": 1
+      },
+      {
+        "value": 2514,
+        "rank": 4,
+        "degree": 0
+      },
+      {
+        "value": 2522,
+        "rank": 3,
+        "degree": 0
+      },
+      {
+        "value": 2544,
+        "rank": 6,
+        "degree": 0
+      }
+    ],
+    "zero_degree": 16451,
+    "edge_count": 39426
+  },
+  "first_sources": [
+    {
+      "value": 54,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          11
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 74,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          15
+        ]
+      ],
+      "missing_endpoints": [
+        15
+      ],
+      "critical_endpoints": [
+        15
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 114,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          23
+        ]
+      ],
+      "missing_endpoints": [
+        23
+      ],
+      "critical_endpoints": [
+        23
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 144,
+      "rank": 3,
+      "pairs": [
+        [
+          5,
+          29
+        ]
+      ],
+      "missing_endpoints": [
+        29
+      ],
+      "critical_endpoints": [
+        29
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 174,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          35
+        ]
+      ],
+      "missing_endpoints": [
+        35
+      ],
+      "critical_endpoints": [
+        35
+      ],
+      "all_chain_targets": [
+        69
+      ],
+      "critical_chain_targets": [
+        69
+      ]
+    },
+    {
+      "value": 186,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          17
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 234,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          47
+        ]
+      ],
+      "missing_endpoints": [
+        47
+      ],
+      "critical_endpoints": [
+        47
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 252,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          23
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        23
+      ],
+      "critical_endpoints": [
+        11,
+        23
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 294,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          59
+        ]
+      ],
+      "missing_endpoints": [
+        59
+      ],
+      "critical_endpoints": [
+        59
+      ],
+      "all_chain_targets": [
+        233
+      ],
+      "critical_chain_targets": [
+        233
+      ]
+    },
+    {
+      "value": 318,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          29
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        29
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 354,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          71
+        ]
+      ],
+      "missing_endpoints": [
+        71
+      ],
+      "critical_endpoints": [
+        71
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 362,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          33
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 390,
+      "rank": 2,
+      "pairs": [
+        [
+          17,
+          23
+        ]
+      ],
+      "missing_endpoints": [
+        23
+      ],
+      "critical_endpoints": [
+        23
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 414,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          83
+        ]
+      ],
+      "missing_endpoints": [
+        83
+      ],
+      "critical_endpoints": [
+        83
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 444,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          89
+        ]
+      ],
+      "missing_endpoints": [
+        89
+      ],
+      "critical_endpoints": [
+        89
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 450,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          41
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 474,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          95
+        ]
+      ],
+      "missing_endpoints": [
+        95
+      ],
+      "critical_endpoints": [
+        95
+      ],
+      "all_chain_targets": [
+        377
+      ],
+      "critical_chain_targets": [
+        377
+      ]
+    },
+    {
+      "value": 492,
+      "rank": 3,
+      "pairs": [
+        [
+          17,
+          29
+        ]
+      ],
+      "missing_endpoints": [
+        29
+      ],
+      "critical_endpoints": [
+        29
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 516,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          47
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        47
+      ],
+      "critical_endpoints": [
+        11,
+        47
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 534,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          107
+        ]
+      ],
+      "missing_endpoints": [
+        107
+      ],
+      "critical_endpoints": [
+        107
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 564,
+      "rank": 5,
+      "pairs": [
+        [
+          5,
+          113
+        ]
+      ],
+      "missing_endpoints": [
+        113
+      ],
+      "critical_endpoints": [
+        113
+      ],
+      "all_chain_targets": [
+        449
+      ],
+      "critical_chain_targets": [
+        449
+      ]
+    },
+    {
+      "value": 582,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          53
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 594,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          119
+        ],
+        [
+          17,
+          35
+        ]
+      ],
+      "missing_endpoints": [
+        35,
+        119
+      ],
+      "critical_endpoints": [
+        35,
+        119
+      ],
+      "all_chain_targets": [
+        69,
+        237
+      ],
+      "critical_chain_targets": [
+        69,
+        237
+      ]
+    },
+    {
+      "value": 614,
+      "rank": 5,
+      "pairs": [
+        [
+          5,
+          123
+        ],
+        [
+          15,
+          41
+        ]
+      ],
+      "missing_endpoints": [
+        15,
+        123
+      ],
+      "critical_endpoints": [
+        123
+      ],
+      "all_chain_targets": [
+        489
+      ],
+      "critical_chain_targets": [
+        489
+      ]
+    },
+    {
+      "value": 648,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          59
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        59
+      ],
+      "critical_endpoints": [
+        11,
+        59
+      ],
+      "all_chain_targets": [
+        41,
+        233
+      ],
+      "critical_chain_targets": [
+        41,
+        233
+      ]
+    },
+    {
+      "value": 666,
+      "rank": 2,
+      "pairs": [
+        [
+          23,
+          29
+        ]
+      ],
+      "missing_endpoints": [
+        23,
+        29
+      ],
+      "critical_endpoints": [
+        23
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 704,
+      "rank": 3,
+      "pairs": [
+        [
+          5,
+          141
+        ],
+        [
+          15,
+          47
+        ]
+      ],
+      "missing_endpoints": [
+        15,
+        47,
+        141
+      ],
+      "critical_endpoints": [
+        141
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 714,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          143
+        ],
+        [
+          11,
+          65
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        143
+      ],
+      "critical_endpoints": [
+        11,
+        143
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 758,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          69
+        ],
+        [
+          23,
+          33
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        23
+      ],
+      "critical_endpoints": [
+        11,
+        23
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 774,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          155
+        ]
+      ],
+      "missing_endpoints": [
+        155
+      ],
+      "critical_endpoints": [
+        155
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 780,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          71
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        71
+      ],
+      "critical_endpoints": [
+        11,
+        71
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 798,
+      "rank": 2,
+      "pairs": [
+        [
+          17,
+          47
+        ]
+      ],
+      "missing_endpoints": [
+        47
+      ],
+      "critical_endpoints": [
+        47
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 846,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          77
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 884,
+      "rank": 5,
+      "pairs": [
+        [
+          5,
+          177
+        ],
+        [
+          15,
+          59
+        ]
+      ],
+      "missing_endpoints": [
+        15,
+        59,
+        177
+      ],
+      "critical_endpoints": [
+        177
+      ],
+      "all_chain_targets": [
+        233
+      ],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 894,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          179
+        ]
+      ],
+      "missing_endpoints": [
+        179
+      ],
+      "critical_endpoints": [
+        179
+      ],
+      "all_chain_targets": [
+        713
+      ],
+      "critical_chain_targets": [
+        713
+      ]
+    },
+    {
+      "value": 912,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          83
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        83
+      ],
+      "critical_endpoints": [
+        11,
+        83
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 924,
+      "rank": 5,
+      "pairs": [
+        [
+          5,
+          185
+        ]
+      ],
+      "missing_endpoints": [
+        185
+      ],
+      "critical_endpoints": [
+        185
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 942,
+      "rank": 2,
+      "pairs": [
+        [
+          23,
+          41
+        ]
+      ],
+      "missing_endpoints": [
+        23
+      ],
+      "critical_endpoints": [
+        23
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 954,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          191
+        ]
+      ],
+      "missing_endpoints": [
+        191
+      ],
+      "critical_endpoints": [
+        191
+      ],
+      "all_chain_targets": [
+        761
+      ],
+      "critical_chain_targets": [
+        761
+      ]
+    },
+    {
+      "value": 956,
+      "rank": 3,
+      "pairs": [
+        [
+          11,
+          87
+        ],
+        [
+          29,
+          33
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        29
+      ],
+      "critical_endpoints": [
+        29
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 978,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          89
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        89
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 1002,
+      "rank": 2,
+      "pairs": [
+        [
+          17,
+          59
+        ]
+      ],
+      "missing_endpoints": [
+        59
+      ],
+      "critical_endpoints": [
+        59
+      ],
+      "all_chain_targets": [
+        233
+      ],
+      "critical_chain_targets": [
+        233
+      ]
+    },
+    {
+      "value": 1014,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          203
+        ],
+        [
+          29,
+          35
+        ]
+      ],
+      "missing_endpoints": [
+        29,
+        35,
+        203
+      ],
+      "critical_endpoints": [
+        203
+      ],
+      "all_chain_targets": [
+        69
+      ],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 1064,
+      "rank": 5,
+      "pairs": [
+        [
+          5,
+          213
+        ],
+        [
+          15,
+          71
+        ]
+      ],
+      "missing_endpoints": [
+        15,
+        71,
+        213
+      ],
+      "critical_endpoints": [
+        213
+      ],
+      "all_chain_targets": [
+        849
+      ],
+      "critical_chain_targets": [
+        849
+      ]
+    },
+    {
+      "value": 1074,
+      "rank": 2,
+      "pairs": [
+        [
+          5,
+          215
+        ]
+      ],
+      "missing_endpoints": [
+        215
+      ],
+      "critical_endpoints": [
+        215
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 1080,
+      "rank": 2,
+      "pairs": [
+        [
+          23,
+          47
+        ]
+      ],
+      "missing_endpoints": [
+        23,
+        47
+      ],
+      "critical_endpoints": [
+        23,
+        47
+      ],
+      "all_chain_targets": [],
+      "critical_chain_targets": []
+    },
+    {
+      "value": 1110,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          101
+        ]
+      ],
+      "missing_endpoints": [
+        11
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    },
+    {
+      "value": 1134,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          227
+        ]
+      ],
+      "missing_endpoints": [
+        227
+      ],
+      "critical_endpoints": [
+        227
+      ],
+      "all_chain_targets": [
+        905
+      ],
+      "critical_chain_targets": [
+        905
+      ]
+    },
+    {
+      "value": 1154,
+      "rank": 4,
+      "pairs": [
+        [
+          5,
+          231
+        ],
+        [
+          15,
+          77
+        ],
+        [
+          11,
+          105
+        ],
+        [
+          33,
+          35
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        15,
+        35,
+        231
+      ],
+      "critical_endpoints": [
+        231
+      ],
+      "all_chain_targets": [
+        41,
+        69,
+        461
+      ],
+      "critical_chain_targets": [
+        461
+      ]
+    },
+    {
+      "value": 1176,
+      "rank": 2,
+      "pairs": [
+        [
+          11,
+          107
+        ]
+      ],
+      "missing_endpoints": [
+        11,
+        107
+      ],
+      "critical_endpoints": [
+        11
+      ],
+      "all_chain_targets": [
+        41
+      ],
+      "critical_chain_targets": [
+        41
+      ]
+    }
+  ],
+  "rank_histogram_hard": {
+    "2": 18500,
+    "3": 4141,
+    "4": 8696,
+    "5": 4243,
+    "6": 4114,
+    "7": 2373,
+    "8": 1606,
+    "9": 997,
+    "10": 527,
+    "11": 264,
+    "12": 99,
+    "13": 22,
+    "14": 1
+  },
+  "rank_histogram_healed": {
+    "0": 34760,
+    "1": 3225,
+    "2": 7296,
+    "3": 3561,
+    "4": 5007,
+    "5": 3448,
+    "6": 3185,
+    "7": 2326,
+    "8": 1819,
+    "9": 1310,
+    "10": 811,
+    "11": 504,
+    "12": 239,
+    "13": 45,
+    "14": 1
+  }
+}

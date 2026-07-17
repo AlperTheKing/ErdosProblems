@@ -1,0 +1,292 @@
+{
+  "E0": [],
+  "E1": [
+    557,
+    1671,
+    5087,
+    15261,
+    21723,
+    23951,
+    71853,
+    311363,
+    656223
+  ],
+  "canonical_power": {
+    "lhs_2t": 0,
+    "passes": true,
+    "rhs_d_minus_8": 0
+  },
+  "claim_replay": {
+    "actual": {
+      "E0": 0,
+      "E1": 9,
+      "d": 8,
+      "s": 0
+    },
+    "expected": {
+      "E0": 0,
+      "E1": 9,
+      "d": 8,
+      "s": 0
+    },
+    "status": "PASS"
+  },
+  "d": 8,
+  "endpoint_imbalance": {
+    "failure_margin": 1,
+    "lhs_E1": 9,
+    "rhs_E0_plus_8": 8
+  },
+  "exactness": {
+    "arithmetic": "integers only",
+    "claim_sha256": "6D0BD3A45503418136604B2408AC054846A5FFCF3C86E6004444983EE85C7A5E",
+    "closure": "recursive least-closure membership over all admissible divisors",
+    "engine": "C109_fixed_root_search.py",
+    "engine_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with exact product recheck",
+    "floating_point_acceptance": false,
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "factorization": [
+    [
+      3,
+      1
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      43,
+      1
+    ],
+    [
+      557,
+      1
+    ],
+    [
+      5087,
+      1
+    ]
+  ],
+  "h": 4751710742,
+  "pairs": [
+    {
+      "canonical_blocker": 557,
+      "canonical_root": 140,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 140,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 557
+        },
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 8530899
+        }
+      ],
+      "pair": [
+        557,
+        8530899
+      ]
+    },
+    {
+      "canonical_blocker": 1671,
+      "canonical_root": 836,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 836,
+          "root_pair_count": 2,
+          "root_structural_splitless": false,
+          "value": 1671
+        },
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 2843633
+        }
+      ],
+      "pair": [
+        1671,
+        2843633
+      ]
+    },
+    {
+      "canonical_blocker": 5087,
+      "canonical_root": 2544,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 2544,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 5087
+        },
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 934089
+        }
+      ],
+      "pair": [
+        5087,
+        934089
+      ]
+    },
+    {
+      "canonical_blocker": 656223,
+      "canonical_root": 328112,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 7241
+        },
+        {
+          "generated": false,
+          "root": 328112,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 656223
+        }
+      ],
+      "pair": [
+        7241,
+        656223
+      ]
+    },
+    {
+      "canonical_blocker": 15261,
+      "canonical_root": 3816,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 3816,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 15261
+        },
+        {
+          "generated": false,
+          "root": 155682,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 311363
+        }
+      ],
+      "pair": [
+        15261,
+        311363
+      ]
+    },
+    {
+      "canonical_blocker": 21723,
+      "canonical_root": 10862,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 10862,
+          "root_pair_count": 4,
+          "root_structural_splitless": false,
+          "value": 21723
+        },
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 218741
+        }
+      ],
+      "pair": [
+        21723,
+        218741
+      ]
+    },
+    {
+      "canonical_blocker": 23951,
+      "canonical_root": 11976,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": false,
+          "root": 11976,
+          "root_pair_count": 2,
+          "root_structural_splitless": false,
+          "value": 23951
+        },
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 198393
+        }
+      ],
+      "pair": [
+        23951,
+        198393
+      ]
+    },
+    {
+      "canonical_blocker": 71853,
+      "canonical_root": 17964,
+      "counted_in_s": false,
+      "counted_in_t": false,
+      "endpoints": [
+        {
+          "generated": true,
+          "root": null,
+          "root_pair_count": null,
+          "root_structural_splitless": false,
+          "value": 66131
+        },
+        {
+          "generated": false,
+          "root": 17964,
+          "root_pair_count": 1,
+          "root_structural_splitless": false,
+          "value": 71853
+        }
+      ],
+      "pair": [
+        66131,
+        71853
+      ]
+    }
+  ],
+  "power_bridge": {
+    "lhs_3s": 0,
+    "passes": true,
+    "rhs_d_minus_8": 0
+  },
+  "product": 4751710743,
+  "s": 0,
+  "schema": "C116-sparse-endpoint-replay-v1",
+  "t": 0
+}

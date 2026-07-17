@@ -1,0 +1,49 @@
+{
+  "base": {
+    "N": 2067138957,
+    "d": 8,
+    "h": 2067138956,
+    "q": 2213,
+    "s": 0,
+    "unique_blockers": [
+      557,
+      1671,
+      2213,
+      21723,
+      23951,
+      71853,
+      285477,
+      311363
+    ]
+  },
+  "cache": {
+    "factor_pair_entries": 357261,
+    "state_entries": 357263
+  },
+  "candidate_digest": {
+    "algorithm": "SHA-256 of little-endian uint64 (ell,first_generated_blocker)",
+    "sha256": "f80dda8b46e7fe5968ebb85cd585f5114d1b96a99927d905537f5b453910eda0"
+  },
+  "exact_integer_acceptance": true,
+  "extremal": null,
+  "falsifier": null,
+  "family": "h=ell*(2067138957)-1 for prime ell=1 mod 3",
+  "first_generated_blocker_counts": {
+    "1671": 1573,
+    "21723": 0,
+    "2213": 7,
+    "23951": 0,
+    "285477": 0,
+    "311363": 0,
+    "557": 37649,
+    "71853": 0
+  },
+  "hard_lifts": 0,
+  "largest_ell_tested": 999979,
+  "largest_source_tested": 2067095547081902,
+  "maximum_deficit": -1,
+  "plus_primes_tested": 39229,
+  "prime_limit": 1000000,
+  "schema": "C112-lifted-family-search-v1",
+  "stop_on_falsifier": true
+}

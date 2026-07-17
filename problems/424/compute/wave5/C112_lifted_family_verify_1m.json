@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "base_h": true,
+    "base_pair_count": true,
+    "base_unique_blockers": true,
+    "candidate_digest": true,
+    "first_generated_blocker_counts": true,
+    "largest_ell_tested": true,
+    "largest_source_tested": true,
+    "no_falsifier": true,
+    "no_hard_lift": true,
+    "no_unblocked_prime": true,
+    "plus_primes_tested": true
+  },
+  "replay": {
+    "base_generated_complements": [
+      6639,
+      7241,
+      28769,
+      86307,
+      95159,
+      934089,
+      1237067,
+      3711201
+    ],
+    "base_h": 2067138956,
+    "base_pair_count": 8,
+    "base_unique_blockers": [
+      557,
+      1671,
+      2213,
+      21723,
+      23951,
+      71853,
+      285477,
+      311363
+    ],
+    "cache": {
+      "pair_entries": 357261,
+      "state_entries": 357263
+    },
+    "candidate_digest_sha256": "f80dda8b46e7fe5968ebb85cd585f5114d1b96a99927d905537f5b453910eda0",
+    "first_generated_blocker_counts": {
+      "1671": 1573,
+      "21723": 0,
+      "2213": 7,
+      "23951": 0,
+      "285477": 0,
+      "311363": 0,
+      "557": 37649,
+      "71853": 0
+    },
+    "largest_ell_tested": 999979,
+    "largest_source_tested": 2067095547081902,
+    "plus_primes_tested": 39229,
+    "prime_limit": 1000000,
+    "unblocked_ell": []
+  },
+  "schema": "C112-lifted-family-independent-replay-v1",
+  "status": "PASS"
+}

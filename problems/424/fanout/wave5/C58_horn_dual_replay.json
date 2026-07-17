@@ -1,0 +1,234 @@
+{
+  "raw_generic_counterexample": {
+    "node_names": [
+      "s0",
+      "s1",
+      "r",
+      "c",
+      "h"
+    ],
+    "clauses": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        2,
+        3,
+        4
+      ]
+    ],
+    "distinguished_chain": [
+      [
+        1,
+        3
+      ]
+    ],
+    "splitless": [
+      2
+    ],
+    "hard": [
+      4
+    ],
+    "closed_set": [
+      0,
+      1,
+      3
+    ],
+    "H": 1,
+    "Q": 0,
+    "minimality_reason": "two seeds + splitless parent + chain child + hard output require five distinct vertices"
+  },
+  "raw_smallest_exhaustion": {
+    "by_n": {
+      "3": {
+        "models_checked": 0,
+        "closed_sets_checked": 0,
+        "counterexample": false
+      },
+      "4": {
+        "models_checked": 5,
+        "closed_sets_checked": 7,
+        "counterexample": false
+      },
+      "5": {
+        "models_checked": 6,
+        "closed_sets_checked": 8,
+        "counterexample": true
+      }
+    },
+    "first_counterexample": {
+      "n": 5,
+      "path": [
+        1,
+        2
+      ],
+      "clauses": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "closed_set": [
+        0,
+        1,
+        2
+      ],
+      "H": 1,
+      "Q": 0
+    }
+  },
+  "strengthened_generic_counterexample": {
+    "node_names": [
+      "s0",
+      "s1",
+      "r",
+      "x",
+      "y",
+      "h"
+    ],
+    "clauses": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        3,
+        4,
+        5
+      ]
+    ],
+    "distinguished_chain": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "splitless": [
+      2
+    ],
+    "hard": [
+      5
+    ],
+    "closed_set": [
+      0,
+      1
+    ],
+    "H": 1,
+    "Q": 0,
+    "fractional_membership": {
+      "0": "1",
+      "1": "1",
+      "2": "0",
+      "3": "1/2",
+      "4": "1/2",
+      "5": "0"
+    },
+    "fractional_boundary": {
+      "2->3": "1/2",
+      "3->4": "0"
+    },
+    "active_matrix_determinant": -2
+  },
+  "strengthened_smallest_core_exhaustion": {
+    "schema": "two seeds; splitless chain root; one full seed-0 chain; hard parents are positive chain vertices",
+    "by_n": {
+      "3": {
+        "models_checked": 0,
+        "closed_sets_checked": 0,
+        "counterexample": false
+      },
+      "4": {
+        "models_checked": 2,
+        "closed_sets_checked": 4,
+        "counterexample": false
+      },
+      "5": {
+        "models_checked": 54,
+        "closed_sets_checked": 152,
+        "counterexample": false
+      },
+      "6": {
+        "models_checked": 4103,
+        "closed_sets_checked": 16829,
+        "counterexample": true
+      }
+    },
+    "total_models_checked": 4159,
+    "total_closed_sets_checked": 16985,
+    "first_counterexample": {
+      "n": 6,
+      "path": [
+        2,
+        3,
+        4
+      ],
+      "clauses": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "closed_set": [
+        0,
+        1
+      ],
+      "H": 1,
+      "Q": 0
+    }
+  },
+  "arithmetic_audit": {
+    "limit": 10010,
+    "odd_splitless_nonseeds": [],
+    "hard_factorizations_checked": 1373,
+    "local_falsifier": {
+      "hard_hole": 74,
+      "factorization": [
+        5,
+        15
+      ],
+      "absent_endpoint_chain": [
+        15,
+        29,
+        57
+      ],
+      "hard_holes_through_74": [
+        54,
+        74
+      ],
+      "all_seed2_boundaries_through_74": [
+        41,
+        69
+      ],
+      "endpoint_component_boundaries_through_74": []
+    }
+  }
+}

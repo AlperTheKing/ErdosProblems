@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "limit": 1000,
+  "critical_relation": "follow every missing endpoint of rank r-1 in a factor pair attaining the death-rank maximum",
+  "all_lower_relation": "follow every missing endpoint of lower rank in every factor pair",
+  "shared_leaf_edge": "a hard source and E/Q target are adjacent when their obstruction shadows share a splitless leaf",
+  "counts": {
+    "generated_nonseeds": 248,
+    "holes": 416,
+    "splitless": 156,
+    "hard": 41,
+    "healed": 46,
+    "maximum_rank": 5,
+    "maximum_critical_root_count": 7,
+    "maximum_all_lower_root_count": 7
+  },
+  "gates": [
+    {
+      "root_relation": "critical_roots",
+      "targets": "E",
+      "rank_offset": null,
+      "matched_before_failure": 3,
+      "passed": false,
+      "first_failure": {
+        "X": 144,
+        "source_rank": 3,
+        "left_size": 2,
+        "neighbor_size": 1,
+        "deficit": 1,
+        "left": [
+          74,
+          144
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 8,
+            "value": 8,
+            "rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": null,
+      "matched_before_failure": 16,
+      "passed": false,
+      "first_failure": {
+        "X": 474,
+        "source_rank": 4,
+        "left_size": 6,
+        "neighbor_size": 5,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450,
+          474
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 377,
+            "value": 189,
+            "rank": 4
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": 0,
+      "matched_before_failure": 11,
+      "passed": false,
+      "first_failure": {
+        "X": 362,
+        "source_rank": 2,
+        "left_size": 4,
+        "neighbor_size": 3,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": 1,
+      "matched_before_failure": 15,
+      "passed": false,
+      "first_failure": {
+        "X": 450,
+        "source_rank": 2,
+        "left_size": 5,
+        "neighbor_size": 4,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E",
+      "rank_offset": null,
+      "matched_before_failure": 3,
+      "passed": false,
+      "first_failure": {
+        "X": 144,
+        "source_rank": 3,
+        "left_size": 3,
+        "neighbor_size": 2,
+        "deficit": 1,
+        "left": [
+          54,
+          74,
+          144
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 8,
+            "value": 8,
+            "rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": null,
+      "matched_before_failure": 41,
+      "passed": true,
+      "first_failure": null
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": 0,
+      "matched_before_failure": 11,
+      "passed": false,
+      "first_failure": {
+        "X": 362,
+        "source_rank": 2,
+        "left_size": 4,
+        "neighbor_size": 3,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": 1,
+      "matched_before_failure": 15,
+      "passed": false,
+      "first_failure": {
+        "X": 450,
+        "source_rank": 2,
+        "left_size": 5,
+        "neighbor_size": 4,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    }
+  ]
+}

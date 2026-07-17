@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "spectral": {
+    "a": "4480997/14222285",
+    "b": "34/759",
+    "gate": "59225568637646/4652287984288175",
+    "gate_with_87": "-2934746493796441/134916351544357075",
+    "rho": 0.999214644481744
+  },
+  "counts": {
+    "M0": 16823,
+    "M2": 10000,
+    "E": 11928,
+    "O0": 3589,
+    "O2": 4152,
+    "S": 2046,
+    "H0": 4388,
+    "H2": 720
+  },
+  "sieve": {
+    "residual0": 2746,
+    "residual2": 272,
+    "forced11": 350,
+    "forced11_residual": 346,
+    "assigned0": {
+      "5": 1006,
+      "17": 312,
+      "41": 138,
+      "53": 107,
+      "77": 79
+    },
+    "assigned2": {
+      "5": 165,
+      "17": 31,
+      "33": 145,
+      "41": 28,
+      "53": 12,
+      "69": 67,
+      "77": 0
+    }
+  },
+  "recurrences": {
+    "H0_le_D2O2": {
+      "source_events": 4388,
+      "failure_events": 4382,
+      "first_failure": 252,
+      "source_at_first_failure": 7,
+      "capacity_at_first_failure": 6,
+      "maximum_excess": 2383,
+      "maximum_excess_X": 99978,
+      "source_at_max": 4388,
+      "capacity_at_max": 2005
+    },
+    "H2_le_D2O0_plus_D0O2": {
+      "source_events": 720,
+      "failure_events": 0,
+      "first_failure": 0,
+      "source_at_first_failure": 0,
+      "capacity_at_first_failure": 0,
+      "maximum_excess": 0,
+      "maximum_excess_X": 74,
+      "source_at_max": 1,
+      "capacity_at_max": 1
+    },
+    "combined": {
+      "source_events": 5108,
+      "failure_events": 4084,
+      "first_failure": 18938,
+      "source_at_first_failure": 1006,
+      "capacity_at_first_failure": 1005,
+      "maximum_excess": 901,
+      "maximum_excess_X": 99912,
+      "source_at_max": 5106,
+      "capacity_at_max": 4205
+    }
+  }
+}

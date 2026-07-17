@@ -1,0 +1,110 @@
+[
+  {
+    "limit": 54,
+    "hard_count": 1,
+    "exact_dual_objective": 1,
+    "exact_margin": 0,
+    "nonzero_row": 9,
+    "nonzero_lower": 18,
+    "nonzero_upper": 3
+  },
+  {
+    "limit": 55,
+    "hard_count": 1,
+    "exact_dual_objective": 1,
+    "exact_margin": 0,
+    "nonzero_row": 9,
+    "nonzero_lower": 18,
+    "nonzero_upper": 3
+  },
+  {
+    "limit": 68,
+    "hard_count": 1,
+    "exact_dual_objective": 1,
+    "exact_margin": 0,
+    "nonzero_row": 9,
+    "nonzero_lower": 22,
+    "nonzero_upper": 3
+  },
+  {
+    "limit": 69,
+    "hard_count": 1,
+    "exact_dual_objective": 2,
+    "exact_margin": 1,
+    "nonzero_row": 12,
+    "nonzero_lower": 21,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 70,
+    "hard_count": 1,
+    "exact_dual_objective": 2,
+    "exact_margin": 1,
+    "nonzero_row": 12,
+    "nonzero_lower": 21,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 73,
+    "hard_count": 1,
+    "exact_dual_objective": 2,
+    "exact_margin": 1,
+    "nonzero_row": 12,
+    "nonzero_lower": 22,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 74,
+    "hard_count": 2,
+    "exact_dual_objective": 2,
+    "exact_margin": 0,
+    "nonzero_row": 13,
+    "nonzero_lower": 22,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 75,
+    "hard_count": 2,
+    "exact_dual_objective": 2,
+    "exact_margin": 0,
+    "nonzero_row": 13,
+    "nonzero_lower": 23,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 76,
+    "hard_count": 2,
+    "exact_dual_objective": 2,
+    "exact_margin": 0,
+    "nonzero_row": 13,
+    "nonzero_lower": 23,
+    "nonzero_upper": 4
+  },
+  {
+    "limit": 77,
+    "hard_count": 2,
+    "exact_dual_objective": 3,
+    "exact_margin": 1,
+    "nonzero_row": 18,
+    "nonzero_lower": 22,
+    "nonzero_upper": 5
+  },
+  {
+    "limit": 78,
+    "hard_count": 2,
+    "exact_dual_objective": 3,
+    "exact_margin": 1,
+    "nonzero_row": 18,
+    "nonzero_lower": 22,
+    "nonzero_upper": 5
+  },
+  {
+    "limit": 100,
+    "hard_count": 3,
+    "exact_dual_objective": 4,
+    "exact_margin": 1,
+    "nonzero_row": 23,
+    "nonzero_lower": 29,
+    "nonzero_upper": 7
+  }
+]

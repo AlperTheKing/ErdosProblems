@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "limit": 10000,
+  "critical_relation": "follow every missing endpoint of rank r-1 in a factor pair attaining the death-rank maximum",
+  "all_lower_relation": "follow every missing endpoint of lower rank in every factor pair",
+  "shared_leaf_edge": "a hard source and E/Q target are adjacent when their obstruction shadows share a splitless leaf",
+  "counts": {
+    "generated_nonseeds": 3205,
+    "holes": 3459,
+    "splitless": 1344,
+    "hard": 518,
+    "healed": 593,
+    "maximum_rank": 8,
+    "maximum_critical_root_count": 17,
+    "maximum_all_lower_root_count": 17
+  },
+  "gates": [
+    {
+      "root_relation": "critical_roots",
+      "targets": "E",
+      "rank_offset": null,
+      "matched_before_failure": 3,
+      "passed": false,
+      "first_failure": {
+        "X": 144,
+        "source_rank": 3,
+        "left_size": 2,
+        "neighbor_size": 1,
+        "deficit": 1,
+        "left": [
+          74,
+          144
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 8,
+            "value": 8,
+            "rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": null,
+      "matched_before_failure": 16,
+      "passed": false,
+      "first_failure": {
+        "X": 474,
+        "source_rank": 4,
+        "left_size": 6,
+        "neighbor_size": 5,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450,
+          474
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 377,
+            "value": 189,
+            "rank": 4
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": 0,
+      "matched_before_failure": 11,
+      "passed": false,
+      "first_failure": {
+        "X": 362,
+        "source_rank": 2,
+        "left_size": 4,
+        "neighbor_size": 3,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "critical_roots",
+      "targets": "E+Q",
+      "rank_offset": 1,
+      "matched_before_failure": 15,
+      "passed": false,
+      "first_failure": {
+        "X": 450,
+        "source_rank": 2,
+        "left_size": 5,
+        "neighbor_size": 4,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E",
+      "rank_offset": null,
+      "matched_before_failure": 3,
+      "passed": false,
+      "first_failure": {
+        "X": 144,
+        "source_rank": 3,
+        "left_size": 3,
+        "neighbor_size": 2,
+        "deficit": 1,
+        "left": [
+          54,
+          74,
+          144
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 8,
+            "value": 8,
+            "rank": 0
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": null,
+      "matched_before_failure": 68,
+      "passed": false,
+      "first_failure": {
+        "X": 1536,
+        "source_rank": 3,
+        "left_size": 61,
+        "neighbor_size": 60,
+        "deficit": 1,
+        "left": [
+          54,
+          74,
+          114,
+          144,
+          174,
+          186,
+          234,
+          252,
+          294,
+          318,
+          354,
+          362,
+          390,
+          414,
+          444,
+          450,
+          474,
+          492,
+          516,
+          534,
+          582,
+          594,
+          614,
+          648,
+          666,
+          704,
+          714,
+          758,
+          780,
+          798,
+          846,
+          884,
+          894,
+          912,
+          924,
+          942,
+          954,
+          956,
+          978,
+          1002,
+          1064,
+          1080,
+          1110,
+          1154,
+          1176,
+          1188,
+          1206,
+          1218,
+          1224,
+          1242,
+          1344,
+          1356,
+          1362,
+          1404,
+          1410,
+          1424,
+          1434,
+          1440,
+          1506,
+          1512,
+          1536
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 8,
+            "value": 8,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 12,
+            "value": 12,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 18,
+            "value": 18,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 20,
+            "value": 20,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 24,
+            "value": 24,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 30,
+            "value": 30,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 36,
+            "value": 36,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "E",
+            "coordinate": 42,
+            "value": 42,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 48,
+            "value": 48,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 60,
+            "value": 60,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 69,
+            "value": 35,
+            "rank": 1
+          },
+          {
+            "kind": "E",
+            "coordinate": 72,
+            "value": 72,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 77,
+            "value": 39,
+            "rank": 1
+          },
+          {
+            "kind": "E",
+            "coordinate": 90,
+            "value": 90,
+            "rank": 0
+          },
+          {
+            "kind": "E",
+            "coordinate": 96,
+            "value": 96,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 233,
+            "value": 117,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 293,
+            "value": 147,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 365,
+            "value": 183,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 377,
+            "value": 189,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 441,
+            "value": 221,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 449,
+            "value": 225,
+            "rank": 5
+          },
+          {
+            "kind": "Q",
+            "coordinate": 461,
+            "value": 231,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 489,
+            "value": 245,
+            "rank": 5
+          },
+          {
+            "kind": "Q",
+            "coordinate": 573,
+            "value": 287,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 617,
+            "value": 309,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 669,
+            "value": 335,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 699,
+            "value": 350,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 701,
+            "value": 351,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 713,
+            "value": 357,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 741,
+            "value": 371,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 761,
+            "value": 381,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 779,
+            "value": 390,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 849,
+            "value": 425,
+            "rank": 5
+          },
+          {
+            "kind": "Q",
+            "coordinate": 857,
+            "value": 429,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 887,
+            "value": 444,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 905,
+            "value": 453,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 941,
+            "value": 471,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1029,
+            "value": 515,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1031,
+            "value": 516,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1077,
+            "value": 539,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1097,
+            "value": 549,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1121,
+            "value": 561,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1133,
+            "value": 567,
+            "rank": 5
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1143,
+            "value": 572,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1149,
+            "value": 575,
+            "rank": 1
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1157,
+            "value": 579,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1187,
+            "value": 594,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1269,
+            "value": 635,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1325,
+            "value": 663,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1349,
+            "value": 675,
+            "rank": 6
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1359,
+            "value": 680,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1385,
+            "value": 693,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1413,
+            "value": 707,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1421,
+            "value": 711,
+            "rank": 4
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1427,
+            "value": 714,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 1445,
+            "value": 723,
+            "rank": 3
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": 0,
+      "matched_before_failure": 11,
+      "passed": false,
+      "first_failure": {
+        "X": 362,
+        "source_rank": 2,
+        "left_size": 4,
+        "neighbor_size": 3,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "root_relation": "all_lower_roots",
+      "targets": "E+Q",
+      "rank_offset": 1,
+      "matched_before_failure": 15,
+      "passed": false,
+      "first_failure": {
+        "X": 450,
+        "source_rank": 2,
+        "left_size": 5,
+        "neighbor_size": 4,
+        "deficit": 1,
+        "left": [
+          54,
+          186,
+          318,
+          362,
+          450
+        ],
+        "neighbors": [
+          {
+            "kind": "E",
+            "coordinate": 6,
+            "value": 6,
+            "rank": 0
+          },
+          {
+            "kind": "Q",
+            "coordinate": 41,
+            "value": 21,
+            "rank": 2
+          },
+          {
+            "kind": "Q",
+            "coordinate": 125,
+            "value": 63,
+            "rank": 3
+          },
+          {
+            "kind": "Q",
+            "coordinate": 237,
+            "value": 119,
+            "rank": 1
+          }
+        ]
+      }
+    }
+  ]
+}

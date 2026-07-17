@@ -1,0 +1,13 @@
+{
+  "schema": "C32-streaming-verification-v1",
+  "reference": "..\\C26_rd_aggregated_energy\\result_321_g0.json",
+  "reference_sha256": "2a8332e7761edfd87291e3d76fed3f80aa878e48bc794d1be1969ce2eb51a366",
+  "checks": [
+    {
+      "K": 4,
+      "path": "result_321_K4_s34_parallel.json",
+      "sha256": "6f8e7c6ff7bab761807dbf0422273e7cd694d6d53b050c731f50537451e97f02"
+    }
+  ],
+  "status": "PASS"
+}

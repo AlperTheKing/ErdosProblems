@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "limit": 500,
+  "status": "OPTIMAL",
+  "hard_count": 27,
+  "ground_size": 119,
+  "wall_time_seconds": 0.43597450000000004,
+  "branches": 23635,
+  "conflicts": 49,
+  "score": 27,
+  "complexity": 82,
+  "boundary_count": 28,
+  "lower_gate_count": 27,
+  "upper_gate_count": 0,
+  "selected_boundary": [
+    11,
+    21,
+    35,
+    39,
+    41,
+    59,
+    69,
+    75,
+    77,
+    117,
+    119,
+    131,
+    147,
+    149,
+    183,
+    219,
+    233,
+    237,
+    239,
+    251,
+    293,
+    363,
+    365,
+    395,
+    399,
+    419,
+    455,
+    491
+  ],
+  "selected_lower": [
+    {
+      "node": 41,
+      "pair_index": 1,
+      "parents": [
+        3,
+        14
+      ]
+    },
+    {
+      "node": 69,
+      "pair_index": 1,
+      "parents": [
+        5,
+        14
+      ]
+    },
+    {
+      "node": 77,
+      "pair_index": 1,
+      "parents": [
+        3,
+        26
+      ]
+    },
+    {
+      "node": 84,
+      "pair_index": 0,
+      "parents": [
+        5,
+        17
+      ]
+    },
+    {
+      "node": 131,
+      "pair_index": 1,
+      "parents": [
+        3,
+        44
+      ]
+    },
+    {
+      "node": 149,
+      "pair_index": 1,
+      "parents": [
+        3,
+        50
+      ]
+    },
+    {
+      "node": 164,
+      "pair_index": 0,
+      "parents": [
+        5,
+        33
+      ]
+    },
+    {
+      "node": 204,
+      "pair_index": 0,
+      "parents": [
+        5,
+        41
+      ]
+    },
+    {
+      "node": 219,
+      "pair_index": 1,
+      "parents": [
+        5,
+        44
+      ]
+    },
+    {
+      "node": 233,
+      "pair_index": 3,
+      "parents": [
+        9,
+        26
+      ]
+    },
+    {
+      "node": 237,
+      "pair_index": 1,
+      "parents": [
+        14,
+        17
+      ]
+    },
+    {
+      "node": 239,
+      "pair_index": 1,
+      "parents": [
+        3,
+        80
+      ]
+    },
+    {
+      "node": 251,
+      "pair_index": 1,
+      "parents": [
+        3,
+        84
+      ]
+    },
+    {
+      "node": 254,
+      "pair_index": 0,
+      "parents": [
+        5,
+        51
+      ]
+    },
+    {
+      "node": 264,
+      "pair_index": 0,
+      "parents": [
+        5,
+        53
+      ]
+    },
+    {
+      "node": 293,
+      "pair_index": 1,
+      "parents": [
+        3,
+        98
+      ]
+    },
+    {
+      "node": 324,
+      "pair_index": 0,
+      "parents": [
+        5,
+        65
+      ]
+    },
+    {
+      "node": 344,
+      "pair_index": 0,
+      "parents": [
+        5,
+        69
+      ]
+    },
+    {
+      "node": 363,
+      "pair_index": 1,
+      "parents": [
+        14,
+        26
+      ]
+    },
+    {
+      "node": 365,
+      "pair_index": 1,
+      "parents": [
+        3,
+        122
+      ]
+    },
+    {
+      "node": 384,
+      "pair_index": 0,
+      "parents": [
+        5,
+        77
+      ]
+    },
+    {
+      "node": 395,
+      "pair_index": 3,
+      "parents": [
+        9,
+        44
+      ]
+    },
+    {
+      "node": 399,
+      "pair_index": 1,
+      "parents": [
+        5,
+        80
+      ]
+    },
+    {
+      "node": 419,
+      "pair_index": 2,
+      "parents": [
+        5,
+        84
+      ]
+    },
+    {
+      "node": 434,
+      "pair_index": 0,
+      "parents": [
+        5,
+        87
+      ]
+    },
+    {
+      "node": 455,
+      "pair_index": 1,
+      "parents": [
+        3,
+        152
+      ]
+    },
+    {
+      "node": 491,
+      "pair_index": 1,
+      "parents": [
+        3,
+        164
+      ]
+    }
+  ],
+  "selected_upper": [],
+  "source_penalties": {},
+  "f_penalties": {},
+  "f_residuals": {
+    "6": -1,
+    "18": -1,
+    "20": -1,
+    "30": -1,
+    "38": -1,
+    "54": 1,
+    "60": -1,
+    "66": -1,
+    "92": -1,
+    "110": -1,
+    "114": 1,
+    "120": -1,
+    "126": -1,
+    "144": 1,
+    "174": 1,
+    "182": -1,
+    "186": 1,
+    "198": -1,
+    "200": -1,
+    "210": -1,
+    "228": -1,
+    "234": 1,
+    "246": -1,
+    "252": 1,
+    "294": 1,
+    "318": 1,
+    "354": 1,
+    "362": 1,
+    "390": 1,
+    "414": 1,
+    "444": 1,
+    "450": 1,
+    "474": 1,
+    "492": 1
+  }
+}

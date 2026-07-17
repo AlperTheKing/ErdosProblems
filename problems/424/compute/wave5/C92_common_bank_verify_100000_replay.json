@@ -1,0 +1,91 @@
+{
+  "schema": "C92-common-bank-independent-v1",
+  "limit": 100000,
+  "exact_integer_acceptance": true,
+  "failure_count_6D_lt_5A_H": 0,
+  "first_failure": null,
+  "minimum_ratio": {
+    "D": 5,
+    "A_H": 6,
+    "X": 186
+  },
+  "minimum_margin": {
+    "value": 0,
+    "X": 186
+  },
+  "scale_quarter_upper": {
+    "failure_count": 0,
+    "minimum_margin": 0,
+    "minimum_margin_X": 186
+  },
+  "scale_quarter_lower": {
+    "failure_count": 0,
+    "minimum_margin": 0,
+    "minimum_margin_X": 2
+  },
+  "endpoint": {
+    "A_H": 3386,
+    "D": 4279,
+    "hard_births": 5108,
+    "hard_deaths": 1722,
+    "splitless_births": 11928,
+    "splitless_deaths": 4279
+  },
+  "checkpoints": [
+    {
+      "X": 54,
+      "A_H": 1,
+      "D": 1,
+      "margin_6D_minus_5A_H": 1
+    },
+    {
+      "X": 74,
+      "A_H": 2,
+      "D": 2,
+      "margin_6D_minus_5A_H": 2
+    },
+    {
+      "X": 114,
+      "A_H": 3,
+      "D": 3,
+      "margin_6D_minus_5A_H": 3
+    },
+    {
+      "X": 186,
+      "A_H": 6,
+      "D": 5,
+      "margin_6D_minus_5A_H": 0
+    },
+    {
+      "X": 204,
+      "A_H": 6,
+      "D": 5,
+      "margin_6D_minus_5A_H": 0
+    },
+    {
+      "X": 362,
+      "A_H": 11,
+      "D": 10,
+      "margin_6D_minus_5A_H": 5
+    },
+    {
+      "X": 1000,
+      "A_H": 34,
+      "D": 34,
+      "margin_6D_minus_5A_H": 34
+    },
+    {
+      "X": 10000,
+      "A_H": 391,
+      "D": 374,
+      "margin_6D_minus_5A_H": 289
+    },
+    {
+      "X": 100000,
+      "A_H": 3386,
+      "D": 4279,
+      "margin_6D_minus_5A_H": 8744
+    }
+  ],
+  "trajectory_sha256": "B56FBA51BA9666A777F7EB1BF334E81A7BFF810978B34B5A76DC5764A81CF3F4"
+}

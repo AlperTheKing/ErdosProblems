@@ -1,0 +1,65 @@
+{
+  "limit": 54,
+  "hard_checks": 1,
+  "minimum_reserve": 0,
+  "first_failure": null,
+  "tight_count": 1,
+  "tight_sample": [
+    {
+      "root_cutoff": 54,
+      "demand": 1,
+      "flow": 1
+    }
+  ],
+  "final_demand": 1,
+  "final_flow": 1,
+  "final_reserve": 0,
+  "reverse_augmentations": 0,
+  "first_reverse": null,
+  "maximum_path_length": 4,
+  "maximum_path": {
+    "vertices": [
+      55,
+      6,
+      11,
+      21,
+      56
+    ],
+    "reverse_edges": 0,
+    "root_cutoff": 54
+  },
+  "splitless_source_paths": 1,
+  "hard_source_paths": 0,
+  "unary_paths": 0,
+  "maximum_unary_edges": 0,
+  "first_hard_source": null,
+  "first_unary_path": null,
+  "diagnostic_paths": [
+    {
+      "vertices": [
+        55,
+        6,
+        11,
+        21,
+        56
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    }
+  ],
+  "path_certificate": [
+    {
+      "vertices": [
+        55,
+        6,
+        11,
+        21,
+        56
+      ],
+      "reverse_edges": 0,
+      "root_cutoff": 54
+    }
+  ],
+  "directly_healed_sources": 1,
+  "first_direct_bank_failure": null
+}

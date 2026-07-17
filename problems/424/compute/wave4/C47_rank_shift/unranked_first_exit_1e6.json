@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "statement": "H(X) <= first_seed2_exit_components(X) + 1",
+  "hard_total": 45583,
+  "selected_exit_total": 62972,
+  "maximum_excess": 18,
+  "maximum_record": {
+    "X": 6192,
+    "H": 326,
+    "Q_first": 308,
+    "excess": 18
+  },
+  "first_strict_failure": {
+    "X": 186,
+    "H": 6,
+    "Q_first": 5,
+    "excess": 1
+  },
+  "first_additive_one_failure": {
+    "X": 1014,
+    "H": 43,
+    "Q_first": 41,
+    "excess": 2
+  }
+}

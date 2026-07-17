@@ -1,0 +1,121 @@
+{
+  "cache": {
+    "factorizations": {
+      "currsize": 8503,
+      "hits": 1,
+      "maxsize": null,
+      "misses": 8503
+    },
+    "generated": {
+      "currsize": 8503,
+      "hits": 15224,
+      "maxsize": null,
+      "misses": 8503
+    },
+    "primality": {
+      "currsize": 24473,
+      "hits": 60252,
+      "maxsize": null,
+      "misses": 24473
+    }
+  },
+  "counts": {
+    "arithmetic_eligible": 698,
+    "hard_fixed_root_hits": 0,
+    "high_pair_candidates": 698,
+    "supports_tested": 924
+  },
+  "exactness": {
+    "closure": "memoized full admissible-divisor recursion to seeds 2,3",
+    "factorization": "deterministic-seeded Pollard-Brent; prime factors and product rechecked",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin bases valid below 2^64"
+  },
+  "hits": [],
+  "known_validation": [
+    {
+      "d": 1,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "h": 534
+    },
+    {
+      "d": 12,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          71,
+          1
+        ]
+      ],
+      "h": 7634274
+    },
+    {
+      "d": 16,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          197,
+          1
+        ],
+        [
+          223,
+          1
+        ]
+      ],
+      "h": 2796867114
+    }
+  ],
+  "parameters": {
+    "base": 2796867115,
+    "channel": 425,
+    "extra_count": 6,
+    "family": "N divisible by fixed missing endpoint 425, with 6 additional distinct odd primes",
+    "lift": "support",
+    "max_hits": 5,
+    "minimum_d": 34,
+    "prime_limit": 50,
+    "root": 54
+  },
+  "schema": "C109-fixed-root-square-lift-search-v1",
+  "timing_seconds": 0.2899383000039961
+}

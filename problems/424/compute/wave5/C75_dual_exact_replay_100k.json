@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 5000,
+      "hard_shapes": 410,
+      "exact_dual_objective": [
+        444,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -34,
+        1
+      ],
+      "nonzero_inequality_multipliers": 2267,
+      "nonzero_lower_multipliers": 1323,
+      "nonzero_upper_multipliers": 369,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 10000,
+      "hard_shapes": 878,
+      "exact_dual_objective": [
+        946,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -68,
+        1
+      ],
+      "nonzero_inequality_multipliers": 4537,
+      "nonzero_lower_multipliers": 2664,
+      "nonzero_upper_multipliers": 708,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 20000,
+      "hard_shapes": 1864,
+      "exact_dual_objective": [
+        2070,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -206,
+        1
+      ],
+      "nonzero_inequality_multipliers": 9395,
+      "nonzero_lower_multipliers": 5163,
+      "nonzero_upper_multipliers": 1362,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 50000,
+      "hard_shapes": 4955,
+      "exact_dual_objective": [
+        5581,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -626,
+        1
+      ],
+      "nonzero_inequality_multipliers": 23645,
+      "nonzero_lower_multipliers": 12894,
+      "nonzero_upper_multipliers": 3256,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    },
+    {
+      "limit": 100000,
+      "hard_shapes": 10294,
+      "exact_dual_objective": [
+        11849,
+        1
+      ],
+      "exact_maximum_relaxed_H_minus_Q": [
+        -1555,
+        1
+      ],
+      "nonzero_inequality_multipliers": 48084,
+      "nonzero_lower_multipliers": 25504,
+      "nonzero_upper_multipliers": 6276,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true
+    }
+  ]
+}

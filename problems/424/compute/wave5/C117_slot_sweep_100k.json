@@ -1,0 +1,2369 @@
+{
+  "acceptance": {
+    "alpha_gate": 0.7213475204444817,
+    "exact_recursive_closure": true,
+    "finite_nonfalsification_is_theorem": false,
+    "floating_point_used_for_acceptance": false,
+    "source_divisors_from_explicit_prime_powers": true,
+    "target_3_4_falsifier_iff": "(s+8)^4 < d^3"
+  },
+  "classifier_cache": {
+    "factor_pair_entries": 2095559,
+    "factorint_calls": 2095559,
+    "state_entries": 2095561
+  },
+  "digests": {
+    "evaluated_stream_sha256": "d009817b6c0c8d96d66d721f717d818452e2596832a6570eca3ac6d89c7533e8",
+    "verification_records_sha256": "792681b07cbf1dafa6e4579be6c31ab7c8086b957926927828abd16af551220b"
+  },
+  "evaluation": {
+    "hard_slot_sweep": {
+      "evaluated": 100000,
+      "generated": 99992,
+      "hard": 8,
+      "max_d": 18,
+      "max_hard_d": 16,
+      "max_hard_deficit": 8,
+      "min_d": 8,
+      "target_falsifiers": 0
+    }
+  },
+  "extremal_by_d": [
+    {
+      "best_N": 4751710743,
+      "best_family": "hard_slot_sweep",
+      "best_h": 4751710742,
+      "best_ratio_B8": 1.0,
+      "best_template": "base=2067138956:slot=2213^1->5087^1",
+      "d": 8,
+      "hard_count": 5,
+      "max_deficit": 8,
+      "min_s": 0,
+      "target_falsifier_count": 0
+    },
+    {
+      "best_N": 158020616215,
+      "best_family": "hard_slot_sweep",
+      "best_h": 158020616214,
+      "best_ratio_B8": 1.021865710312585,
+      "best_template": "base=908368614:slot=179^1->31139^1",
+      "d": 16,
+      "hard_count": 3,
+      "max_deficit": 7,
+      "min_s": 9,
+      "target_falsifier_count": 0
+    }
+  ],
+  "falsifiers": [],
+  "generation": {
+    "base_multi_plus": {},
+    "base_prime_power": {},
+    "composite_q": {},
+    "cross_seed_fiber": {},
+    "extremal_base_lift": {},
+    "hard_shape_expansion": {},
+    "hard_shape_substitution": {},
+    "hard_slot_sweep": {
+      "accepted": 100000,
+      "offered": 101636,
+      "too_small": 1636
+    },
+    "prime_power": {},
+    "squarefree": {}
+  },
+  "parameters": {
+    "base_multi_budget": 0,
+    "base_power_budget": 0,
+    "composite_q_budget": 0,
+    "extremal_lift_budget": 0,
+    "extremal_limit": 64,
+    "fiber_sweep_budget": 0,
+    "max_bits": 80,
+    "max_pairs": 512,
+    "min_d": 8,
+    "min_source": 4000000000,
+    "mutation_budget": 0,
+    "prime_limit": 1000000,
+    "prime_power_budget": 0,
+    "progress_every": 5000,
+    "seed": 424117,
+    "shape_expansion_budget": 0,
+    "shape_substitution_budget": 0,
+    "slot_sweep_budget": 100000,
+    "squarefree_budget": 0
+  },
+  "prime_pools": {
+    "minus": 39265,
+    "plus": 39231
+  },
+  "schema": "C117-structural-power-falsifier-v1",
+  "self_test": {
+    "known_hard": [
+      {
+        "d": 12,
+        "h": 38624780,
+        "s": 4
+      },
+      {
+        "d": 16,
+        "h": 908368614,
+        "s": 9
+      },
+      {
+        "d": 8,
+        "h": 2067138956,
+        "s": 0
+      },
+      {
+        "d": 16,
+        "h": 2796867114,
+        "s": 8
+      },
+      {
+        "d": 18,
+        "h": 2934744174,
+        "s": 14
+      }
+    ],
+    "recursive_state_entries": 1046,
+    "status": "PASS"
+  },
+  "summary": {
+    "evaluated_candidates": 100000,
+    "hard_candidates": 8,
+    "initial_candidates": 100000,
+    "largest_hard_source": 158020616214,
+    "largest_source_tested": 1782870115185196331634,
+    "maximum_hard_d": 16,
+    "maximum_hard_deficit": 8,
+    "minimum_ratio_B8": 1.0,
+    "mutation_candidates": 0,
+    "target_3_4_falsifiers": 0
+  },
+  "verification_records": [
+    {
+      "N": 4751710743,
+      "d": 8,
+      "deficit": 8,
+      "factors": {
+        "13": 1,
+        "3": 1,
+        "43": 1,
+        "5087": 1,
+        "557": 1
+      },
+      "family": "hard_slot_sweep",
+      "h": 4751710742,
+      "pairs": [
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 140,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 557
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 8530899
+            }
+          ],
+          "pair": [
+            557,
+            8530899
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 836,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1671
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 2843633
+            }
+          ],
+          "pair": [
+            1671,
+            2843633
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 2544,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 5087
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 934089
+            }
+          ],
+          "pair": [
+            5087,
+            934089
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 7241
+            },
+            {
+              "root": 328112,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 656223
+            }
+          ],
+          "pair": [
+            7241,
+            656223
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 3816,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 15261
+            },
+            {
+              "root": 155682,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 311363
+            }
+          ],
+          "pair": [
+            15261,
+            311363
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 10862,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 21723
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 218741
+            }
+          ],
+          "pair": [
+            21723,
+            218741
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 11976,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 23951
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 198393
+            }
+          ],
+          "pair": [
+            23951,
+            198393
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 66131
+            },
+            {
+              "root": 17964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 71853
+            }
+          ],
+          "pair": [
+            66131,
+            71853
+          ]
+        }
+      ],
+      "parent_N": 2067138957,
+      "ratios": {
+        "B0": 0.0,
+        "B8": 1.0,
+        "B8_minus_alpha_gate": 0.2786524795555183
+      },
+      "s": 0,
+      "shape": "3R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 4096,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 7,
+          "other_hole": 9
+        },
+        "missing_root_states": {
+          "hard": 5,
+          "other_hole": 4
+        },
+        "nonstructural_pairs": 8,
+        "pair_types": {
+          "generated+other_hole": 7,
+          "other_hole+other_hole": 1
+        },
+        "structural_pairs": 0
+      },
+      "template": "base=2067138956:slot=2213^1->5087^1"
+    },
+    {
+      "N": 9963927363,
+      "d": 8,
+      "deficit": 8,
+      "factors": {
+        "10667": 1,
+        "13": 1,
+        "3": 1,
+        "43": 1,
+        "557": 1
+      },
+      "family": "hard_slot_sweep",
+      "h": 9963927362,
+      "pairs": [
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 140,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 557
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 17888559
+            }
+          ],
+          "pair": [
+            557,
+            17888559
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 836,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1671
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5962853
+            }
+          ],
+          "pair": [
+            1671,
+            5962853
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 7241
+            },
+            {
+              "root": 688022,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1376043
+            }
+          ],
+          "pair": [
+            7241,
+            1376043
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 5334,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 10667
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 934089
+            }
+          ],
+          "pair": [
+            10667,
+            934089
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 10862,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 21723
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 458681
+            }
+          ],
+          "pair": [
+            21723,
+            458681
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 11976,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 23951
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 416013
+            }
+          ],
+          "pair": [
+            23951,
+            416013
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 32001
+            },
+            {
+              "root": 155682,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 311363
+            }
+          ],
+          "pair": [
+            32001,
+            311363
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 17964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 71853
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 138671
+            }
+          ],
+          "pair": [
+            71853,
+            138671
+          ]
+        }
+      ],
+      "parent_N": 2067138957,
+      "ratios": {
+        "B0": 0.0,
+        "B8": 1.0,
+        "B8_minus_alpha_gate": 0.2786524795555183
+      },
+      "s": 0,
+      "shape": "3R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 4096,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 8,
+          "other_hole": 8
+        },
+        "missing_root_states": {
+          "hard": 4,
+          "other_hole": 4
+        },
+        "nonstructural_pairs": 8,
+        "pair_types": {
+          "generated+other_hole": 8
+        },
+        "structural_pairs": 0
+      },
+      "template": "base=2067138956:slot=2213^1->10667^1"
+    },
+    {
+      "N": 11140879503,
+      "d": 8,
+      "deficit": 8,
+      "factors": {
+        "11927": 1,
+        "13": 1,
+        "3": 1,
+        "43": 1,
+        "557": 1
+      },
+      "family": "hard_slot_sweep",
+      "h": 11140879502,
+      "pairs": [
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 140,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 557
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 20001579
+            }
+          ],
+          "pair": [
+            557,
+            20001579
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 836,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1671
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 6667193
+            }
+          ],
+          "pair": [
+            1671,
+            6667193
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 7241
+            },
+            {
+              "root": 769292,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1538583
+            }
+          ],
+          "pair": [
+            7241,
+            1538583
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 5964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 11927
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 934089
+            }
+          ],
+          "pair": [
+            11927,
+            934089
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 10862,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 21723
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 512861
+            }
+          ],
+          "pair": [
+            21723,
+            512861
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 11976,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 23951
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 465153
+            }
+          ],
+          "pair": [
+            23951,
+            465153
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 8946,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 35781
+            },
+            {
+              "root": 155682,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 311363
+            }
+          ],
+          "pair": [
+            35781,
+            311363
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 17964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 71853
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 155051
+            }
+          ],
+          "pair": [
+            71853,
+            155051
+          ]
+        }
+      ],
+      "parent_N": 2067138957,
+      "ratios": {
+        "B0": 0.0,
+        "B8": 1.0,
+        "B8_minus_alpha_gate": 0.2786524795555183
+      },
+      "s": 0,
+      "shape": "3R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 4096,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 7,
+          "other_hole": 9
+        },
+        "missing_root_states": {
+          "hard": 5,
+          "other_hole": 4
+        },
+        "nonstructural_pairs": 8,
+        "pair_types": {
+          "generated+other_hole": 7,
+          "other_hole+other_hole": 1
+        },
+        "structural_pairs": 0
+      },
+      "template": "base=2067138956:slot=2213^1->11927^1"
+    },
+    {
+      "N": 36193146483,
+      "d": 8,
+      "deficit": 8,
+      "factors": {
+        "13": 1,
+        "3": 1,
+        "38747": 1,
+        "43": 1,
+        "557": 1
+      },
+      "family": "hard_slot_sweep",
+      "h": 36193146482,
+      "pairs": [
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 140,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 557
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 64978719
+            }
+          ],
+          "pair": [
+            557,
+            64978719
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 836,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1671
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 21659573
+            }
+          ],
+          "pair": [
+            1671,
+            21659573
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 7241
+            },
+            {
+              "root": 2499182,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 4998363
+            }
+          ],
+          "pair": [
+            7241,
+            4998363
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 10862,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 21723
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1666121
+            }
+          ],
+          "pair": [
+            21723,
+            1666121
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 11976,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 23951
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1511133
+            }
+          ],
+          "pair": [
+            23951,
+            1511133
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 19374,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 38747
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 934089
+            }
+          ],
+          "pair": [
+            38747,
+            934089
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 17964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 71853
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 503711
+            }
+          ],
+          "pair": [
+            71853,
+            503711
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 116241
+            },
+            {
+              "root": 155682,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 311363
+            }
+          ],
+          "pair": [
+            116241,
+            311363
+          ]
+        }
+      ],
+      "parent_N": 2067138957,
+      "ratios": {
+        "B0": 0.0,
+        "B8": 1.0,
+        "B8_minus_alpha_gate": 0.2786524795555183
+      },
+      "s": 0,
+      "shape": "3R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 4096,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 8,
+          "other_hole": 8
+        },
+        "missing_root_states": {
+          "hard": 4,
+          "other_hole": 4
+        },
+        "nonstructural_pairs": 8,
+        "pair_types": {
+          "generated+other_hole": 8
+        },
+        "structural_pairs": 0
+      },
+      "template": "base=2067138956:slot=2213^1->38747^1"
+    },
+    {
+      "N": 158020616215,
+      "d": 16,
+      "deficit": 7,
+      "factors": {
+        "11": 1,
+        "269": 1,
+        "31139": 1,
+        "5": 1,
+        "7": 3
+      },
+      "family": "hard_slot_sweep",
+      "h": 158020616214,
+      "pairs": [
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5
+            },
+            {
+              "root": 15802061622,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 31604123243
+            }
+          ],
+          "pair": [
+            5,
+            31604123243
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 6,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 11
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 14365510565
+            }
+          ],
+          "pair": [
+            11,
+            14365510565
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 18,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 35
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 4514874749
+            }
+          ],
+          "pair": [
+            35,
+            4514874749
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 77
+            },
+            {
+              "root": 1026107898,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 2052215795
+            }
+          ],
+          "pair": [
+            77,
+            2052215795
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 62,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 245
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 644982107
+            }
+          ],
+          "pair": [
+            245,
+            644982107
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 68,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 269
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 587437235
+            }
+          ],
+          "pair": [
+            269,
+            587437235
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 270,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 539
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 293173685
+            }
+          ],
+          "pair": [
+            539,
+            293173685
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 858,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 1715
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 92140301
+            }
+          ],
+          "pair": [
+            1715,
+            92140301
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 942,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 1883
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 83919605
+            }
+          ],
+          "pair": [
+            1883,
+            83919605
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 3773
+            },
+            {
+              "root": 20940978,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 41881955
+            }
+          ],
+          "pair": [
+            3773,
+            41881955
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 13181
+            },
+            {
+              "root": 5994258,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 11988515
+            }
+          ],
+          "pair": [
+            13181,
+            11988515
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 7398,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 14795
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 10680677
+            }
+          ],
+          "pair": [
+            14795,
+            10680677
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 15570,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 31139
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5074685
+            }
+          ],
+          "pair": [
+            31139,
+            5074685
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 46134,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 92267
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1712645
+            }
+          ],
+          "pair": [
+            92267,
+            1712645
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 25892,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 103565
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1525811
+            }
+          ],
+          "pair": [
+            103565,
+            1525811
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 217973
+            },
+            {
+              "root": 362478,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 724955
+            }
+          ],
+          "pair": [
+            217973,
+            724955
+          ]
+        }
+      ],
+      "parent_N": 908368615,
+      "ratios": {
+        "B0": 0.7924812503605781,
+        "B8": 1.021865710312585,
+        "B8_minus_alpha_gate": 0.3005181898681033
+      },
+      "s": 9,
+      "shape": "R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 83521,
+        "rhs": 4096
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 16,
+          "other_hole": 16
+        },
+        "missing_root_states": {
+          "hard": 4,
+          "other_hole": 3,
+          "structural_splitless": 9
+        },
+        "nonstructural_pairs": 7,
+        "pair_types": {
+          "generated+other_hole": 16
+        },
+        "structural_pairs": 9
+      },
+      "template": "base=908368614:slot=179^1->31139^1"
+    },
+    {
+      "N": 64666710955,
+      "d": 16,
+      "deficit": 5,
+      "factors": {
+        "11": 1,
+        "12743": 1,
+        "269": 1,
+        "5": 1,
+        "7": 3
+      },
+      "family": "hard_slot_sweep",
+      "h": 64666710954,
+      "pairs": [
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5
+            },
+            {
+              "root": 6466671096,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 12933342191
+            }
+          ],
+          "pair": [
+            5,
+            12933342191
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 6,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 11
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5878791905
+            }
+          ],
+          "pair": [
+            11,
+            5878791905
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 18,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 35
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1847620313
+            }
+          ],
+          "pair": [
+            35,
+            1847620313
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 77
+            },
+            {
+              "root": 419913708,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 839827415
+            }
+          ],
+          "pair": [
+            77,
+            839827415
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 62,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 245
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 263945759
+            }
+          ],
+          "pair": [
+            245,
+            263945759
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 68,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 269
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 240396695
+            }
+          ],
+          "pair": [
+            269,
+            240396695
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 270,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 539
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 119975345
+            }
+          ],
+          "pair": [
+            539,
+            119975345
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 858,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 1715
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 37706537
+            }
+          ],
+          "pair": [
+            1715,
+            37706537
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 942,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 1883
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 34342385
+            }
+          ],
+          "pair": [
+            1883,
+            34342385
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 3773
+            },
+            {
+              "root": 8569668,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 17139335
+            }
+          ],
+          "pair": [
+            3773,
+            17139335
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 6372,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 12743
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5074685
+            }
+          ],
+          "pair": [
+            12743,
+            5074685
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 13181
+            },
+            {
+              "root": 2453028,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 4906055
+            }
+          ],
+          "pair": [
+            13181,
+            4906055
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 7398,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 14795
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 4370849
+            }
+          ],
+          "pair": [
+            14795,
+            4370849
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 89201
+            },
+            {
+              "root": 362478,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 724955
+            }
+          ],
+          "pair": [
+            89201,
+            724955
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 46134,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 92267
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 700865
+            }
+          ],
+          "pair": [
+            92267,
+            700865
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 25892,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 103565
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 624407
+            }
+          ],
+          "pair": [
+            103565,
+            624407
+          ]
+        }
+      ],
+      "parent_N": 908368615,
+      "ratios": {
+        "B0": 0.8648579046593244,
+        "B8": 1.0619818783608963,
+        "B8_minus_alpha_gate": 0.3406343579164146
+      },
+      "s": 11,
+      "shape": "R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 130321,
+        "rhs": 4096
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 16,
+          "other_hole": 16
+        },
+        "missing_root_states": {
+          "hard": 2,
+          "other_hole": 3,
+          "structural_splitless": 11
+        },
+        "nonstructural_pairs": 5,
+        "pair_types": {
+          "generated+other_hole": 16
+        },
+        "structural_pairs": 11
+      },
+      "template": "base=908368614:slot=179^1->12743^1"
+    },
+    {
+      "N": 23561762455,
+      "d": 16,
+      "deficit": 4,
+      "factors": {
+        "11": 1,
+        "269": 1,
+        "4643": 1,
+        "5": 1,
+        "7": 3
+      },
+      "family": "hard_slot_sweep",
+      "h": 23561762454,
+      "pairs": [
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5
+            },
+            {
+              "root": 2356176246,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 4712352491
+            }
+          ],
+          "pair": [
+            5,
+            4712352491
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 6,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 11
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 2141978405
+            }
+          ],
+          "pair": [
+            11,
+            2141978405
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 18,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 35
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 673193213
+            }
+          ],
+          "pair": [
+            35,
+            673193213
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 77
+            },
+            {
+              "root": 152998458,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 305996915
+            }
+          ],
+          "pair": [
+            77,
+            305996915
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 62,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 245
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 96170459
+            }
+          ],
+          "pair": [
+            245,
+            96170459
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 68,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 269
+            },
+            {
+              "root": 43795098,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 87590195
+            }
+          ],
+          "pair": [
+            269,
+            87590195
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 270,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 539
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 43713845
+            }
+          ],
+          "pair": [
+            539,
+            43713845
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 858,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 1715
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 13738637
+            }
+          ],
+          "pair": [
+            1715,
+            13738637
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 942,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 1883
+            },
+            {
+              "root": 3128222,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 12512885
+            }
+          ],
+          "pair": [
+            1883,
+            12512885
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 3773
+            },
+            {
+              "root": 3122418,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 6244835
+            }
+          ],
+          "pair": [
+            3773,
+            6244835
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 2322,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 4643
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 5074685
+            }
+          ],
+          "pair": [
+            4643,
+            5074685
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 13181
+            },
+            {
+              "root": 893778,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 1787555
+            }
+          ],
+          "pair": [
+            13181,
+            1787555
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 7398,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 14795
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 1592549
+            }
+          ],
+          "pair": [
+            14795,
+            1592549
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 8126,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 32501
+            },
+            {
+              "root": 362478,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 724955
+            }
+          ],
+          "pair": [
+            32501,
+            724955
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 46134,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 92267
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 255365
+            }
+          ],
+          "pair": [
+            92267,
+            255365
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 25892,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 103565
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 227507
+            }
+          ],
+          "pair": [
+            103565,
+            227507
+          ]
+        }
+      ],
+      "parent_N": 908368615,
+      "ratios": {
+        "B0": 0.8962406251802891,
+        "B8": 1.0804820237218407,
+        "B8_minus_alpha_gate": 0.35913450327735896
+      },
+      "s": 12,
+      "shape": "R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 160000,
+        "rhs": 4096
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 13,
+          "other_hole": 19
+        },
+        "missing_root_states": {
+          "hard": 3,
+          "other_hole": 4,
+          "structural_splitless": 12
+        },
+        "nonstructural_pairs": 4,
+        "pair_types": {
+          "generated+other_hole": 13,
+          "other_hole+other_hole": 3
+        },
+        "structural_pairs": 12
+      },
+      "template": "base=908368614:slot=179^1->4643^1"
+    },
+    {
+      "N": 4762919811,
+      "d": 8,
+      "deficit": 6,
+      "factors": {
+        "13": 1,
+        "3": 1,
+        "43": 1,
+        "5099": 1,
+        "557": 1
+      },
+      "family": "hard_slot_sweep",
+      "h": 4762919810,
+      "pairs": [
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 140,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 557
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 8551023
+            }
+          ],
+          "pair": [
+            557,
+            8551023
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 836,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 1671
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 2850341
+            }
+          ],
+          "pair": [
+            1671,
+            2850341
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 2550,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 5099
+            },
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 934089
+            }
+          ],
+          "pair": [
+            5099,
+            934089
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 7241
+            },
+            {
+              "root": 328886,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 657771
+            }
+          ],
+          "pair": [
+            7241,
+            657771
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": null,
+              "root_state": null,
+              "state": "generated",
+              "value": 15297
+            },
+            {
+              "root": 155682,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 311363
+            }
+          ],
+          "pair": [
+            15297,
+            311363
+          ]
+        },
+        {
+          "counted_in_s": true,
+          "endpoints": [
+            {
+              "root": 10862,
+              "root_state": "other_hole",
+              "state": "other_hole",
+              "value": 21723
+            },
+            {
+              "root": 27408,
+              "root_state": "structural_splitless",
+              "state": "other_hole",
+              "value": 219257
+            }
+          ],
+          "pair": [
+            21723,
+            219257
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 11976,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 23951
+            },
+            {
+              "root": 49716,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 198861
+            }
+          ],
+          "pair": [
+            23951,
+            198861
+          ]
+        },
+        {
+          "counted_in_s": false,
+          "endpoints": [
+            {
+              "root": 33144,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 66287
+            },
+            {
+              "root": 17964,
+              "root_state": "hard",
+              "state": "other_hole",
+              "value": 71853
+            }
+          ],
+          "pair": [
+            66287,
+            71853
+          ]
+        }
+      ],
+      "parent_N": 2067138957,
+      "ratios": {
+        "B0": 0.33333333333333337,
+        "B8": 1.1073093649624544,
+        "B8_minus_alpha_gate": 0.38596184451797266
+      },
+      "s": 2,
+      "shape": "3R",
+      "state": "hard",
+      "target_3_4": {
+        "falsifier": false,
+        "lhs": 10000,
+        "rhs": 512
+      },
+      "taxonomy": {
+        "endpoint_states": {
+          "generated": 5,
+          "other_hole": 11
+        },
+        "missing_root_states": {
+          "hard": 5,
+          "other_hole": 4,
+          "structural_splitless": 2
+        },
+        "nonstructural_pairs": 6,
+        "pair_types": {
+          "generated+other_hole": 5,
+          "other_hole+other_hole": 3
+        },
+        "structural_pairs": 2
+      },
+      "template": "base=2067138956:slot=2213^1->5099^1"
+    }
+  ]
+}

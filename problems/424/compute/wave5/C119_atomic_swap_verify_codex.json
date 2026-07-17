@@ -1,0 +1,156 @@
+{
+  "audit_sha256": "40D4893C6A79CC3BBB267360693A30F86D9AA9C1424D2A10240E879BFEA6D534",
+  "first_bilateral_replay": {
+    "K": 3,
+    "multiplicity": 2,
+    "normal_form": {
+      "a": 8771,
+      "b": 8825,
+      "c": 1,
+      "g": 243
+    },
+    "omega_a": 2,
+    "omega_b": 2,
+    "product": 18809190225,
+    "word_witnesses": [
+      {
+        "left": [
+          2,
+          3,
+          2,
+          5,
+          3,
+          2,
+          2,
+          3,
+          2,
+          3,
+          5,
+          2
+        ],
+        "right": [
+          2,
+          2,
+          5,
+          3,
+          2,
+          3
+        ]
+      },
+      {
+        "left": [
+          2,
+          3,
+          5,
+          2,
+          3,
+          2,
+          3,
+          2,
+          5,
+          2,
+          2,
+          3
+        ],
+        "right": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          5
+        ]
+      }
+    ]
+  },
+  "first_non_atomic_replay": {
+    "K": 3,
+    "multiplicity": 2,
+    "normal_form": {
+      "a": 179,
+      "b": 63701,
+      "c": 49,
+      "g": 33
+    },
+    "omega_a": 1,
+    "omega_b": 2,
+    "product": 18437808543,
+    "word_witnesses": [
+      {
+        "left": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          5
+        ],
+        "right": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          5,
+          3,
+          3,
+          5,
+          2,
+          3
+        ]
+      },
+      {
+        "left": [
+          2,
+          2,
+          3,
+          2,
+          5,
+          2,
+          3,
+          2,
+          3,
+          3,
+          5,
+          2
+        ],
+        "right": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          5
+        ]
+      }
+    ]
+  },
+  "independent_full_small_census": {
+    "2": {
+      "edges": 1296,
+      "histogram": {
+        "1": 1296
+      },
+      "support": 1296
+    },
+    "3": {
+      "edges": 560088,
+      "histogram": {
+        "1": 559066,
+        "2": 511
+      },
+      "support": 559577
+    }
+  },
+  "layers": {
+    "1": {
+      "selected_residue": 2,
+      "selected_size": 36
+    },
+    "2": {
+      "selected_residue": 2,
+      "selected_size": 7779
+    }
+  }
+}

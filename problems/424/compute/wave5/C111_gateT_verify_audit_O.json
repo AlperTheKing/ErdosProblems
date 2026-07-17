@@ -1,0 +1,536 @@
+{
+  "Q": 360,
+  "collision_source_sha256": "D3A443E80138C95DCB6618762307A4E5CD4B7875D945C8476AE0C89BDDAED0DC",
+  "exact_tail_gate": "tail(K,T)/N_K <= 3888*6^K*J_K^(2*(2^q-1))/T^q, J_K=1+ceil(log2(36*360^K))",
+  "finite_tail_checks": [
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "70328",
+      "cutoff": 1,
+      "edges": 1296,
+      "integer_envelope": "80621568",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "70328",
+      "cutoff": 2,
+      "edges": 1296,
+      "integer_envelope": "80621568",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "70328",
+      "cutoff": 3,
+      "edges": 1296,
+      "integer_envelope": "80621568",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "7224160",
+      "cutoff": 1,
+      "edges": 1296,
+      "integer_envelope": "26748301344768",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "7224160",
+      "cutoff": 2,
+      "edges": 1296,
+      "integer_envelope": "26748301344768",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "7224160",
+      "cutoff": 3,
+      "edges": 1296,
+      "integer_envelope": "26748301344768",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "1226184320",
+      "cutoff": 1,
+      "edges": 1296,
+      "integer_envelope": "2944327674199660893831168",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "1226184320",
+      "cutoff": 2,
+      "edges": 1296,
+      "integer_envelope": "2944327674199660893831168",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "1226184320",
+      "cutoff": 3,
+      "edges": 1296,
+      "integer_envelope": "2944327674199660893831168",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "293654464000",
+      "cutoff": 1,
+      "edges": 1296,
+      "integer_envelope": "35675166473489648009404247427209567653978963968",
+      "q": 4,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "293654464000",
+      "cutoff": 2,
+      "edges": 1296,
+      "integer_envelope": "35675166473489648009404247427209567653978963968",
+      "q": 4,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 2,
+      "actual_divisor_moment_sum": "293654464000",
+      "cutoff": 3,
+      "edges": 1296,
+      "integer_envelope": "35675166473489648009404247427209567653978963968",
+      "q": 4,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "50721756",
+      "cutoff": 1,
+      "edges": 560088,
+      "integer_envelope": "859963392",
+      "q": 1,
+      "tail_edge_mass": 1022
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "50721756",
+      "cutoff": 2,
+      "edges": 560088,
+      "integer_envelope": "859963392",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "50721756",
+      "cutoff": 3,
+      "edges": 560088,
+      "integer_envelope": "859963392",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "11394499496",
+      "cutoff": 1,
+      "edges": 560088,
+      "integer_envelope": "901736973729792",
+      "q": 2,
+      "tail_edge_mass": 1022
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "11394499496",
+      "cutoff": 2,
+      "edges": 560088,
+      "integer_envelope": "901736973729792",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "11394499496",
+      "cutoff": 3,
+      "edges": 560088,
+      "integer_envelope": "901736973729792",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "5558064296592",
+      "cutoff": 1,
+      "edges": 560088,
+      "integer_envelope": "991470287811447751905902592",
+      "q": 3,
+      "tail_edge_mass": 1022
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "5558064296592",
+      "cutoff": 2,
+      "edges": 560088,
+      "integer_envelope": "991470287811447751905902592",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "5558064296592",
+      "cutoff": 3,
+      "edges": 560088,
+      "integer_envelope": "991470287811447751905902592",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "4796722952441120",
+      "cutoff": 1,
+      "edges": 560088,
+      "integer_envelope": "1198614030316006755791797023431441611495321676808192",
+      "q": 4,
+      "tail_edge_mass": 1022
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "4796722952441120",
+      "cutoff": 2,
+      "edges": 560088,
+      "integer_envelope": "1198614030316006755791797023431441611495321676808192",
+      "q": 4,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 3,
+      "actual_divisor_moment_sum": "4796722952441120",
+      "cutoff": 3,
+      "edges": 560088,
+      "integer_envelope": "1198614030316006755791797023431441611495321676808192",
+      "q": 4,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "9141612136",
+      "cutoff": 1,
+      "edges": 60512841,
+      "integer_envelope": "8470303488",
+      "q": 1,
+      "tail_edge_mass": 31866
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "9141612136",
+      "cutoff": 2,
+      "edges": 60512841,
+      "integer_envelope": "8470303488",
+      "q": 1,
+      "tail_edge_mass": 12
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "9141612136",
+      "cutoff": 3,
+      "edges": 60512841,
+      "integer_envelope": "8470303488",
+      "q": 1,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "4412901283624",
+      "cutoff": 1,
+      "edges": 60512841,
+      "integer_envelope": "23935053254554368",
+      "q": 2,
+      "tail_edge_mass": 31866
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "4412901283624",
+      "cutoff": 2,
+      "edges": 60512841,
+      "integer_envelope": "23935053254554368",
+      "q": 2,
+      "tail_edge_mass": 12
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "4412901283624",
+      "cutoff": 3,
+      "edges": 60512841,
+      "integer_envelope": "23935053254554368",
+      "q": 2,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "5670707670729472",
+      "cutoff": 1,
+      "edges": 60512841,
+      "integer_envelope": "191119610592645873639151350528",
+      "q": 3,
+      "tail_edge_mass": 31866
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "5670707670729472",
+      "cutoff": 2,
+      "edges": 60512841,
+      "integer_envelope": "191119610592645873639151350528",
+      "q": 3,
+      "tail_edge_mass": 12
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "5670707670729472",
+      "cutoff": 3,
+      "edges": 60512841,
+      "integer_envelope": "191119610592645873639151350528",
+      "q": 3,
+      "tail_edge_mass": 0
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "14476018229726359072",
+      "cutoff": 1,
+      "edges": 60512841,
+      "integer_envelope": "12185601160172961610799229841905029751223195874131784448",
+      "q": 4,
+      "tail_edge_mass": 31866
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "14476018229726359072",
+      "cutoff": 2,
+      "edges": 60512841,
+      "integer_envelope": "12185601160172961610799229841905029751223195874131784448",
+      "q": 4,
+      "tail_edge_mass": 12
+    },
+    {
+      "K": 4,
+      "actual_divisor_moment_sum": "14476018229726359072",
+      "cutoff": 3,
+      "edges": 60512841,
+      "integer_envelope": "12185601160172961610799229841905029751223195874131784448",
+      "q": 4,
+      "tail_edge_mass": 0
+    }
+  ],
+  "moment_kernel_checks": [
+    {
+      "checked_exponent_max": 256,
+      "m": 2,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 1
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 4,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 2
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 8,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 3
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 16,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 4
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 32,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 5
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 64,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 6
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 128,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 7
+    },
+    {
+      "checked_exponent_max": 256,
+      "m": 256,
+      "minimum_at_e": 0,
+      "minimum_margin": 0,
+      "q": 8
+    }
+  ],
+  "ray": [
+    3,
+    2,
+    1
+  ],
+  "small_fibre_rows": [
+    {
+      "K": 2,
+      "edges": 1296,
+      "max_multiplicity": 1,
+      "support": 1296
+    },
+    {
+      "K": 3,
+      "edges": 560088,
+      "max_multiplicity": 2,
+      "support": 559577
+    }
+  ],
+  "source_sha256": "349A868755A5223C3FB1CE9919D268B63BE3659BDCC049361CCA6FF06468BCFB",
+  "status": "PASS",
+  "suffix_audit": {
+    "depth_rows": [
+      {
+        "ambiguous_collision_pairs": 5475,
+        "ambiguous_fibres": 5473,
+        "suffix_depth": 1
+      },
+      {
+        "ambiguous_collision_pairs": 2244,
+        "ambiguous_fibres": 2244,
+        "suffix_depth": 2
+      },
+      {
+        "ambiguous_collision_pairs": 726,
+        "ambiguous_fibres": 726,
+        "suffix_depth": 3
+      },
+      {
+        "ambiguous_collision_pairs": 227,
+        "ambiguous_fibres": 227,
+        "suffix_depth": 4
+      },
+      {
+        "ambiguous_collision_pairs": 82,
+        "ambiguous_fibres": 82,
+        "suffix_depth": 5
+      },
+      {
+        "ambiguous_collision_pairs": 30,
+        "ambiguous_fibres": 30,
+        "suffix_depth": 6
+      }
+    ],
+    "meaning": "Both representations admit the same exact suffix word on each factor.",
+    "six_letter_witness": {
+      "common_left_suffix": [
+        2,
+        3,
+        5,
+        2,
+        2,
+        3
+      ],
+      "common_right_suffix": [
+        5,
+        3,
+        2,
+        2,
+        2,
+        5
+      ],
+      "first": {
+        "left_index": 499,
+        "left_offset": 8377,
+        "right_index": 5399,
+        "right_offset": 59203,
+        "u": 2090355,
+        "v": 3288011
+      },
+      "first_left_word": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        5,
+        2,
+        3,
+        5,
+        2,
+        2,
+        3
+      ],
+      "first_right_word": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        2,
+        5,
+        3,
+        2,
+        2,
+        2,
+        5
+      ],
+      "product": 6873110233905,
+      "second": {
+        "left_index": 3055,
+        "left_offset": 35377,
+        "right_index": 2803,
+        "right_offset": 31603,
+        "u": 2144355,
+        "v": 3205211
+      },
+      "second_left_word": [
+        2,
+        3,
+        5,
+        2,
+        3,
+        2,
+        2,
+        3,
+        5,
+        2,
+        2,
+        3
+      ],
+      "second_right_word": [
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        5,
+        3,
+        2,
+        2,
+        2,
+        5
+      ]
+    }
+  }
+}

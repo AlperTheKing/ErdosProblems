@@ -1,0 +1,247 @@
+{
+  "schema": "C107-seed-sensitive-independent-v1",
+  "acceptance": "exact integer trial divisors",
+  "claim": "problems\\424\\compute\\wave5\\C107_single_seed_sweep_10000_final.json",
+  "limit": 10000,
+  "seed_systems": 6665,
+  "failures": 0,
+  "minimum_slack": 0,
+  "tight": [
+    {
+      "seeds": [
+        2,
+        3
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        5
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        9
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        17
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        33
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        65
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        66
+      ],
+      "roots": [
+        2,
+        66
+      ],
+      "required": 2,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        129
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        257
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        513
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        1025
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        2049
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        4097
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    },
+    {
+      "seeds": [
+        2,
+        3,
+        8193
+      ],
+      "roots": [
+        2
+      ],
+      "required": 1,
+      "required_at": 186
+    }
+  ],
+  "checks": {
+    "seed_system_count": true,
+    "failure_count": true,
+    "minimum_slack": true,
+    "tight_rows": true,
+    "base_is_sharp": true,
+    "minimum_perturbation": true,
+    "first_minimum_perturbation": true,
+    "seed66_is_sharp": true,
+    "seed66_cutoff": true,
+    "seed66_labels": true
+  },
+  "perturbation_witness": {
+    "X": 8012,
+    "seed": 668,
+    "root": 668,
+    "base": {
+      "A_H": 309,
+      "D": 301,
+      "A_H_quarter": 83,
+      "margin": 75
+    },
+    "seeded": {
+      "A_H": 309,
+      "D": 300,
+      "A_H_quarter": 82,
+      "margin": 73
+    },
+    "delta": -2,
+    "lost_D_roots": [
+      668
+    ],
+    "gained_D_roots": [],
+    "lost_quarter_hard_roots": [
+      1002
+    ],
+    "gained_quarter_hard_roots": [],
+    "lost_full_hard_roots": [],
+    "gained_full_hard_roots": []
+  },
+  "false_corrections": {
+    "k_minus_one": {
+      "falsifier_seeds": [
+        2,
+        3
+      ],
+      "X": 186,
+      "margin": -1
+    },
+    "count_seed_values_as_components": {
+      "status": "valid but nonsharp on {2,3}",
+      "value": 2,
+      "required": 1
+    },
+    "drop_base_seed_hypothesis": {
+      "falsifier_seeds": [
+        2
+      ],
+      "first_failure": {
+        "X": 74,
+        "A_H": 2,
+        "D": 0,
+        "A_H_quarter": 0,
+        "k": 1,
+        "margin": -1
+      }
+    }
+  }
+}

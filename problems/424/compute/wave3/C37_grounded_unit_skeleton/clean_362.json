@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "limit": 362,
+  "status": "OPTIMAL",
+  "hard_count": 19,
+  "ground_size": 78,
+  "wall_time_seconds": 0.092974,
+  "branches": 7952,
+  "conflicts": 5,
+  "score": 19,
+  "complexity": 64,
+  "boundary_count": 22,
+  "lower_gate_count": 20,
+  "upper_gate_count": 1,
+  "selected_boundary": [
+    11,
+    21,
+    35,
+    39,
+    41,
+    59,
+    69,
+    75,
+    77,
+    95,
+    117,
+    119,
+    125,
+    131,
+    147,
+    149,
+    219,
+    233,
+    237,
+    239,
+    251,
+    293
+  ],
+  "selected_lower": [
+    {
+      "node": 41,
+      "pair_index": 1,
+      "parents": [
+        3,
+        14
+      ]
+    },
+    {
+      "node": 69,
+      "pair_index": 1,
+      "parents": [
+        5,
+        14
+      ]
+    },
+    {
+      "node": 77,
+      "pair_index": 1,
+      "parents": [
+        3,
+        26
+      ]
+    },
+    {
+      "node": 84,
+      "pair_index": 0,
+      "parents": [
+        5,
+        17
+      ]
+    },
+    {
+      "node": 95,
+      "pair_index": 1,
+      "parents": [
+        3,
+        32
+      ]
+    },
+    {
+      "node": 125,
+      "pair_index": 3,
+      "parents": [
+        9,
+        14
+      ]
+    },
+    {
+      "node": 131,
+      "pair_index": 1,
+      "parents": [
+        3,
+        44
+      ]
+    },
+    {
+      "node": 149,
+      "pair_index": 1,
+      "parents": [
+        3,
+        50
+      ]
+    },
+    {
+      "node": 164,
+      "pair_index": 0,
+      "parents": [
+        5,
+        33
+      ]
+    },
+    {
+      "node": 204,
+      "pair_index": 0,
+      "parents": [
+        5,
+        41
+      ]
+    },
+    {
+      "node": 219,
+      "pair_index": 1,
+      "parents": [
+        5,
+        44
+      ]
+    },
+    {
+      "node": 233,
+      "pair_index": 3,
+      "parents": [
+        9,
+        26
+      ]
+    },
+    {
+      "node": 237,
+      "pair_index": 1,
+      "parents": [
+        14,
+        17
+      ]
+    },
+    {
+      "node": 239,
+      "pair_index": 1,
+      "parents": [
+        3,
+        80
+      ]
+    },
+    {
+      "node": 251,
+      "pair_index": 1,
+      "parents": [
+        3,
+        84
+      ]
+    },
+    {
+      "node": 254,
+      "pair_index": 0,
+      "parents": [
+        5,
+        51
+      ]
+    },
+    {
+      "node": 264,
+      "pair_index": 0,
+      "parents": [
+        5,
+        53
+      ]
+    },
+    {
+      "node": 293,
+      "pair_index": 1,
+      "parents": [
+        3,
+        98
+      ]
+    },
+    {
+      "node": 324,
+      "pair_index": 0,
+      "parents": [
+        5,
+        65
+      ]
+    },
+    {
+      "node": 344,
+      "pair_index": 0,
+      "parents": [
+        5,
+        69
+      ]
+    }
+  ],
+  "selected_upper": [
+    {
+      "node": 63,
+      "choices": [
+        {
+          "pair_index": 0,
+          "pair": [
+            2,
+            32
+          ],
+          "selected_parent": 32
+        }
+      ]
+    }
+  ],
+  "source_penalties": {},
+  "f_penalties": {},
+  "f_residuals": {
+    "6": -1,
+    "18": -1,
+    "20": -1,
+    "30": -1,
+    "38": -1,
+    "48": -1,
+    "54": 1,
+    "60": -1,
+    "66": -1,
+    "110": -1,
+    "114": 1,
+    "120": -1,
+    "126": -1,
+    "144": 1,
+    "174": 1,
+    "186": 1,
+    "234": 1,
+    "252": 1,
+    "294": 1,
+    "318": 1,
+    "354": 1,
+    "362": 1
+  }
+}

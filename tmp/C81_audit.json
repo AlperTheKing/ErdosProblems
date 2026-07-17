@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "solver_free": true,
+  "exhaustive": {
+    "limit": 54,
+    "source_variable_limit": 27,
+    "subset_count": 65536,
+    "closed_source_count": 256,
+    "identity_checks": 13568,
+    "hard_cutoffs": [
+      54
+    ],
+    "maxima": {
+      "54": 0
+    },
+    "maximizers": {
+      "54": [
+        2,
+        3,
+        5,
+        9,
+        14,
+        17,
+        26,
+        27,
+        29,
+        30,
+        32,
+        33,
+        35,
+        36,
+        38,
+        39,
+        41,
+        42,
+        44,
+        45,
+        47,
+        48,
+        50,
+        51,
+        53,
+        54
+      ]
+    }
+  },
+  "gate_replay": {
+    "file": "problems\\424\\compute\\wave5\\C81_gate_10000.json",
+    "groups_replayed": 878,
+    "hard_cutoffs_covered": 878,
+    "first_cutoff": 54,
+    "last_cutoff": 9984,
+    "global_optimum": 0,
+    "individual_cutoff_optima": true,
+    "all_objective_bounds_nonpositive": true,
+    "status_counts": {
+      "OPTIMAL": 878
+    },
+    "structural_statistics": {
+      "zero_excess_cutoffs": [
+        54,
+        74,
+        114,
+        186,
+        204,
+        362
+      ],
+      "last_zero_excess_cutoff": 362,
+      "minimum_objective_excess": -72,
+      "minimum_cutoffs": [
+        8664
+      ],
+      "objective_histogram": {
+        "-72": 1,
+        "-71": 5,
+        "-70": 15,
+        "-69": 22,
+        "-68": 28,
+        "-67": 10,
+        "-66": 10,
+        "-65": 24,
+        "-64": 30,
+        "-63": 19,
+        "-62": 26,
+        "-61": 33,
+        "-60": 34,
+        "-59": 17,
+        "-58": 7,
+        "-57": 2,
+        "-56": 3,
+        "-54": 3,
+        "-53": 2,
+        "-51": 2,
+        "-50": 2,
+        "-49": 1,
+        "-48": 2,
+        "-46": 1,
+        "-44": 2,
+        "-43": 6,
+        "-42": 8,
+        "-41": 4,
+        "-40": 6,
+        "-39": 10,
+        "-38": 23,
+        "-37": 25,
+        "-36": 39,
+        "-35": 40,
+        "-34": 29,
+        "-33": 20,
+        "-32": 28,
+        "-31": 14,
+        "-30": 20,
+        "-29": 12,
+        "-28": 8,
+        "-27": 4,
+        "-26": 4,
+        "-23": 2,
+        "-22": 2,
+        "-21": 1,
+        "-20": 5,
+        "-19": 10,
+        "-18": 22,
+        "-17": 27,
+        "-16": 19,
+        "-15": 7,
+        "-14": 7,
+        "-13": 5,
+        "-12": 1,
+        "-11": 9,
+        "-10": 7,
+        "-9": 17,
+        "-8": 17,
+        "-7": 20,
+        "-6": 19,
+        "-5": 24,
+        "-4": 27,
+        "-3": 12,
+        "-2": 6,
+        "-1": 5,
+        "0": 6
+      },
+      "tail_maxima": {
+        "1001": {
+          "objective_excess": -2,
+          "cutoffs": [
+            1014
+          ]
+        },
+        "2001": {
+          "objective_excess": -3,
+          "cutoffs": [
+            2064
+          ]
+        },
+        "5001": {
+          "objective_excess": -31,
+          "cutoffs": [
+            6192,
+            6194,
+            6204
+          ]
+        },
+        "7501": {
+          "objective_excess": -56,
+          "cutoffs": [
+            9564,
+            9570
+          ]
+        },
+        "9001": {
+          "objective_excess": -56,
+          "cutoffs": [
+            9564,
+            9570
+          ]
+        }
+      },
+      "last_hard_cutoff": {
+        "cutoff": 9984,
+        "objective_excess": -67,
+        "hard_hole_count": 512,
+        "boundary_count": 579,
+        "unhealed_hard_count": 388,
+        "healed_nonhard_count": 455,
+        "blocker": {
+          "source_value_count": 6656,
+          "source_missing_count": 1369,
+          "source_member_count": 5287,
+          "image_member_count": 3400,
+          "image_hole_count": 3256,
+          "factorable_image_hole_count": 1915,
+          "unsupported_source_count": 1887,
+          "blocked_pair_count": 5866,
+          "single_hit_pair_count": 3909,
+          "double_hit_pair_count": 1957,
+          "distinct_source_blockers_used": 1369
+        },
+        "model": {
+          "source_limit": 4992,
+          "source_variables": 3328,
+          "image_target_count": 3386,
+          "support_pair_gates": 9298,
+          "support_selectors": 9298,
+          "self_blocking_clauses": 7981,
+          "model_proto_bytes": 997897
+        }
+      }
+    }
+  }
+}

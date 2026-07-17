@@ -1,0 +1,1316 @@
+{
+  "schema_version": 1,
+  "limit": 100000,
+  "algorithm": "SPF divisors plus increasing least-grounded recursion",
+  "hard": 5108,
+  "targets": 6783,
+  "r3_exits": 1231,
+  "splitless": 11928,
+  "maximum_rank": 11,
+  "maximum_target_ordinal_in_component": 26,
+  "rank_histogram_hard": {
+    "2": 2323,
+    "3": 491,
+    "4": 899,
+    "5": 447,
+    "6": 424,
+    "7": 243,
+    "8": 156,
+    "9": 94,
+    "10": 28,
+    "11": 3
+  },
+  "rank_histogram_target": {
+    "0": 3037,
+    "1": 407,
+    "2": 749,
+    "3": 469,
+    "4": 585,
+    "5": 409,
+    "6": 386,
+    "7": 314,
+    "8": 216,
+    "9": 141,
+    "10": 64,
+    "11": 6
+  },
+  "candidate_audits": [
+    {
+      "name": "rank_abel_t=1/2",
+      "cleared_denominator": 2048,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -5783063,
+      "terminal_deficit": "-5783063/2048"
+    },
+    {
+      "name": "rank_abel_t=2/3",
+      "cleared_denominator": 177147,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -450001653,
+      "terminal_deficit": "-150000551/59049"
+    },
+    {
+      "name": "rank_abel_t=3/4",
+      "cleared_denominator": 4194304,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -9871833553,
+      "terminal_deficit": "-9871833553/4194304"
+    },
+    {
+      "name": "rank_abel_t=9/10",
+      "cleared_denominator": 100000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -195516295311487,
+      "terminal_deficit": "-195516295311487/100000000000"
+    },
+    {
+      "name": "rank_abel_t=99/100",
+      "cleared_denominator": 10000000000000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -17020854087484577292286897,
+      "terminal_deficit": "-17020854087484577292286897/10000000000000000000000"
+    },
+    {
+      "name": "rank_abel_t=999/1000",
+      "cleared_denominator": 1000000000000000000000000000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -1677690161830062050025449597428068997,
+      "terminal_deficit": "-1677690161830062050025449597428068997/1000000000000000000000000000000000"
+    },
+    {
+      "name": "first_two_component_exits_alpha=0/1",
+      "cleared_denominator": 1,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 10514,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 1,
+        "deficit": "1"
+      },
+      "maximum_positive": {
+        "X": 6192,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 18,
+        "deficit": "18"
+      },
+      "terminal_deficit_numerator": -947,
+      "terminal_deficit": "-947"
+    },
+    {
+      "name": "first_two_component_exits_alpha=1/2",
+      "cleared_denominator": 2,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1/2",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 6213,
+        "kind": "target",
+        "event_rank": 6,
+        "deficit_numerator": 1,
+        "deficit": "1/2"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 11,
+        "deficit": "11/2"
+      },
+      "terminal_deficit_numerator": -2354,
+      "terminal_deficit": "-1177"
+    },
+    {
+      "name": "first_two_component_exits_alpha=3/4",
+      "cleared_denominator": 4,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1,
+        "deficit": "1/4",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2100,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 2,
+        "deficit": "1/2"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 9,
+        "deficit": "9/4"
+      },
+      "terminal_deficit_numerator": -5168,
+      "terminal_deficit": "-1292"
+    },
+    {
+      "name": "first_two_component_exits_alpha=1/1",
+      "cleared_denominator": 1,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -1407,
+      "terminal_deficit": "-1407"
+    },
+    {
+      "name": "canonical_component_exit_weight=2^(1-ordinal)",
+      "cleared_denominator": 33554432,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 16777216,
+        "deficit": "1/2",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2169,
+        "kind": "target",
+        "event_rank": 4,
+        "deficit_numerator": 33554432,
+        "deficit": "1"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 167772160,
+        "deficit": "5"
+      },
+      "terminal_deficit_numerator": -40805136319,
+      "terminal_deficit": "-40805136319/33554432"
+    },
+    {
+      "name": "combined_rank_1/2_and_geometric_component",
+      "cleared_denominator": 68719476736,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -193100493727607,
+      "terminal_deficit": "-193100493727607/68719476736"
+    },
+    {
+      "name": "combined_rank_9/10_and_geometric_component",
+      "cleared_denominator": 3355443200000000000,
+      "first_positive": null,
+      "last_positive": null,
+      "maximum_positive": null,
+      "terminal_deficit_numerator": -5767702173620653902047,
+      "terminal_deficit": "-5767702173620653902047/3355443200000000000"
+    },
+    {
+      "name": "combined_rank_19/20_and_geometric_component",
+      "cleared_denominator": 6871947673600000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1296650626662400000000,
+        "deficit": "3019/16000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1296650626662400000000,
+        "deficit": "3019/16000"
+      },
+      "maximum_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 1296650626662400000000,
+        "deficit": "3019/16000"
+      },
+      "terminal_deficit_numerator": -10193520234546800731494797,
+      "terminal_deficit": "-10193520234546800731494797/6871947673600000000000"
+    },
+    {
+      "name": "combined_rank_99/100_and_geometric_component",
+      "cleared_denominator": 335544320000000000000000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 146146160803840000000000000000,
+        "deficit": "871099/2000000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2166,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 218320284159678873600000000000,
+        "deficit": "65064514923/100000000000"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 1203393348872280473600000000000,
+        "deficit": "358639165423/100000000000"
+      },
+      "terminal_deficit_numerator": -426902826664763184028933673213597,
+      "terminal_deficit": "-426902826664763184028933673213597/335544320000000000000000000000"
+    },
+    {
+      "name": "combined_rank_999/1000_and_geometric_component",
+      "cleared_denominator": 33554432000000000000000000000000000000000,
+      "first_positive": {
+        "X": 186,
+        "kind": "hard",
+        "event_rank": 2,
+        "deficit_numerator": 16559296724598784000000000000000000000000,
+        "deficit": "987010999/2000000000",
+        "exact_layer_polynomial_H_minus_Q": [
+          -1,
+          -3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hard_events": [
+          {
+            "source": 54,
+            "rank": 2
+          },
+          {
+            "source": 74,
+            "rank": 2
+          },
+          {
+            "source": 114,
+            "rank": 2
+          },
+          {
+            "source": 144,
+            "rank": 3
+          },
+          {
+            "source": 174,
+            "rank": 2
+          },
+          {
+            "source": 186,
+            "rank": 2
+          }
+        ],
+        "target_events": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6,
+            "ordinal": 1
+          },
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18,
+            "ordinal": 1
+          },
+          {
+            "child": 77,
+            "parent": 39,
+            "rank": 1,
+            "root": 20,
+            "ordinal": 1
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6,
+            "ordinal": 2
+          },
+          {
+            "child": 131,
+            "parent": 66,
+            "rank": 0,
+            "root": 66,
+            "ordinal": 1
+          },
+          {
+            "child": 149,
+            "parent": 75,
+            "rank": 1,
+            "root": 38,
+            "ordinal": 1
+          }
+        ],
+        "event_lists_truncated": false
+      },
+      "last_positive": {
+        "X": 2169,
+        "kind": "target",
+        "event_rank": 4,
+        "deficit_numerator": 29113557395025378316124160000000000000000,
+        "deficit": "173530324667843451/200000000000000000"
+      },
+      "maximum_positive": {
+        "X": 2064,
+        "kind": "hard",
+        "event_rank": 6,
+        "deficit_numerator": 162979416592249469964124160000000000000000,
+        "deficit": "971433023168143451/200000000000000000"
+      },
+      "terminal_deficit_numerator": -40995795766207645512618024175053728511628097,
+      "terminal_deficit": "-40995795766207645512618024175053728511628097/33554432000000000000000000000000000000000"
+    }
+  ],
+  "r3_global_transport": {
+    "definition": "odd generated x maps to 3x-1; even generated x maps to 3x/2 when that value is generated, otherwise 3x-1 is a Q terminal",
+    "r3_roots": 1231,
+    "terminated_within_limit": 346,
+    "active_at_limit": 885,
+    "root_partition_identity": true,
+    "state_collision": null,
+    "terminal_children_distinct": true,
+    "first_terminals": [
+      {
+        "start": 44,
+        "child": 131,
+        "parent": 66,
+        "path": [
+          44
+        ]
+      },
+      {
+        "start": 134,
+        "child": 1805,
+        "parent": 903,
+        "path": [
+          134,
+          201,
+          602
+        ]
+      },
+      {
+        "start": 368,
+        "child": 1103,
+        "parent": 552,
+        "path": [
+          368
+        ]
+      },
+      {
+        "start": 404,
+        "child": 1211,
+        "parent": 606,
+        "path": [
+          404
+        ]
+      },
+      {
+        "start": 494,
+        "child": 29993,
+        "parent": 14997,
+        "path": [
+          494,
+          741,
+          2222,
+          3333,
+          9998
+        ]
+      },
+      {
+        "start": 620,
+        "child": 1859,
+        "parent": 930,
+        "path": [
+          620
+        ]
+      },
+      {
+        "start": 644,
+        "child": 1931,
+        "parent": 966,
+        "path": [
+          644
+        ]
+      },
+      {
+        "start": 692,
+        "child": 2075,
+        "parent": 1038,
+        "path": [
+          692
+        ]
+      },
+      {
+        "start": 764,
+        "child": 2291,
+        "parent": 1146,
+        "path": [
+          764
+        ]
+      },
+      {
+        "start": 1004,
+        "child": 3011,
+        "parent": 1506,
+        "path": [
+          1004
+        ]
+      },
+      {
+        "start": 1106,
+        "child": 3317,
+        "parent": 1659,
+        "path": [
+          1106
+        ]
+      },
+      {
+        "start": 1124,
+        "child": 3371,
+        "parent": 1686,
+        "path": [
+          1124
+        ]
+      },
+      {
+        "start": 1214,
+        "child": 3641,
+        "parent": 1821,
+        "path": [
+          1214
+        ]
+      },
+      {
+        "start": 1304,
+        "child": 3911,
+        "parent": 1956,
+        "path": [
+          1304
+        ]
+      },
+      {
+        "start": 1340,
+        "child": 4019,
+        "parent": 2010,
+        "path": [
+          1340
+        ]
+      },
+      {
+        "start": 1484,
+        "child": 6677,
+        "parent": 3339,
+        "path": [
+          1484,
+          2226
+        ]
+      },
+      {
+        "start": 1574,
+        "child": 95603,
+        "parent": 47802,
+        "path": [
+          1574,
+          2361,
+          7082,
+          10623,
+          31868
+        ]
+      },
+      {
+        "start": 1664,
+        "child": 4991,
+        "parent": 2496,
+        "path": [
+          1664
+        ]
+      },
+      {
+        "start": 1682,
+        "child": 5045,
+        "parent": 2523,
+        "path": [
+          1682
+        ]
+      },
+      {
+        "start": 1724,
+        "child": 5171,
+        "parent": 2586,
+        "path": [
+          1724
+        ]
+      }
+    ],
+    "first_active": [
+      {
+        "start": 1862,
+        "state": 37700,
+        "next": 56550,
+        "prospective_terminal_child": 113099,
+        "path": [
+          1862,
+          2793,
+          8378,
+          12567,
+          37700
+        ]
+      },
+      {
+        "start": 1934,
+        "state": 58737,
+        "next": 176210,
+        "path": [
+          1934,
+          2901,
+          8702,
+          13053,
+          39158,
+          58737
+        ]
+      },
+      {
+        "start": 4022,
+        "state": 81440,
+        "next": 122160,
+        "prospective_terminal_child": 244319,
+        "path": [
+          4022,
+          6033,
+          18098,
+          27147,
+          81440
+        ]
+      },
+      {
+        "start": 5534,
+        "state": 37353,
+        "next": 112058,
+        "path": [
+          5534,
+          8301,
+          24902,
+          37353
+        ]
+      },
+      {
+        "start": 6470,
+        "state": 43671,
+        "next": 131012,
+        "path": [
+          6470,
+          9705,
+          29114,
+          43671
+        ]
+      },
+      {
+        "start": 6836,
+        "state": 69213,
+        "next": 207638,
+        "path": [
+          6836,
+          10254,
+          15381,
+          46142,
+          69213
+        ]
+      },
+      {
+        "start": 7622,
+        "state": 51447,
+        "next": 154340,
+        "path": [
+          7622,
+          11433,
+          34298,
+          51447
+        ]
+      },
+      {
+        "start": 8594,
+        "state": 38672,
+        "next": 58008,
+        "prospective_terminal_child": 116015,
+        "path": [
+          8594,
+          12891,
+          38672
+        ]
+      },
+      {
+        "start": 9134,
+        "state": 41102,
+        "next": 61653,
+        "prospective_terminal_child": 123305,
+        "path": [
+          9134,
+          13701,
+          41102
+        ]
+      },
+      {
+        "start": 9278,
+        "state": 62625,
+        "next": 187874,
+        "path": [
+          9278,
+          13917,
+          41750,
+          62625
+        ]
+      },
+      {
+        "start": 9494,
+        "state": 64083,
+        "next": 192248,
+        "path": [
+          9494,
+          14241,
+          42722,
+          64083
+        ]
+      },
+      {
+        "start": 9716,
+        "state": 98373,
+        "next": 295118,
+        "path": [
+          9716,
+          14574,
+          21861,
+          65582,
+          98373
+        ]
+      },
+      {
+        "start": 9734,
+        "state": 43802,
+        "next": 65703,
+        "prospective_terminal_child": 131405,
+        "path": [
+          9734,
+          14601,
+          43802
+        ]
+      },
+      {
+        "start": 9926,
+        "state": 66999,
+        "next": 200996,
+        "path": [
+          9926,
+          14889,
+          44666,
+          66999
+        ]
+      },
+      {
+        "start": 10250,
+        "state": 46124,
+        "next": 69186,
+        "prospective_terminal_child": 138371,
+        "path": [
+          10250,
+          15375,
+          46124
+        ]
+      },
+      {
+        "start": 10286,
+        "state": 69429,
+        "next": 208286,
+        "path": [
+          10286,
+          15429,
+          46286,
+          69429
+        ]
+      },
+      {
+        "start": 10574,
+        "state": 47582,
+        "next": 71373,
+        "prospective_terminal_child": 142745,
+        "path": [
+          10574,
+          15861,
+          47582
+        ]
+      },
+      {
+        "start": 10934,
+        "state": 49202,
+        "next": 73803,
+        "prospective_terminal_child": 147605,
+        "path": [
+          10934,
+          16401,
+          49202
+        ]
+      },
+      {
+        "start": 11606,
+        "state": 78339,
+        "next": 235016,
+        "path": [
+          11606,
+          17409,
+          52226,
+          78339
+        ]
+      },
+      {
+        "start": 11654,
+        "state": 52442,
+        "next": 78663,
+        "prospective_terminal_child": 157325,
+        "path": [
+          11654,
+          17481,
+          52442
+        ]
+      }
+    ]
+  }
+}

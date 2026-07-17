@@ -1,0 +1,200 @@
+{
+  "arithmetic": "exact integers only",
+  "first_failures": {
+    "all_roots_squared_ge_d": {
+      "all_root_count": 1,
+      "all_roots": [
+        12
+      ],
+      "d": 2,
+      "h": 6140,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 23,
+              "root": 12,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            23,
+            267
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 89,
+              "root": 12,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            69,
+            89
+          ]
+        }
+      ],
+      "reducible_root_count": 0,
+      "reducible_roots": []
+    },
+    "all_times_reducible_ge_d_minus_1": null,
+    "nonempty_reducible_roots_squared_ge_d_minus_1": {
+      "all_root_count": 4,
+      "all_roots": [
+        6,
+        8,
+        18,
+        116
+      ],
+      "d": 4,
+      "h": 1154,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 231,
+              "root": 116,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            5,
+            231
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 11,
+              "root": 6,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            11,
+            105
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 15,
+              "root": 8,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            15,
+            77
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 35,
+              "root": 18,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            33,
+            35
+          ]
+        }
+      ],
+      "reducible_root_count": 1,
+      "reducible_roots": [
+        116
+      ]
+    },
+    "upgrade_source_reducible_roots_squared_ge_new_q": {
+      "all_root_count": 4,
+      "all_roots": [
+        6,
+        8,
+        18,
+        116
+      ],
+      "d": 4,
+      "h": 1154,
+      "old_d": 0,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 231,
+              "root": 116,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            5,
+            231
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 11,
+              "root": 6,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            11,
+            105
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 15,
+              "root": 8,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            15,
+            77
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 35,
+              "root": 18,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            33,
+            35
+          ]
+        }
+      ],
+      "reducible_root_count": 1,
+      "reducible_roots": [
+        116
+      ],
+      "upgraded_root": 116
+    }
+  },
+  "limit": 300000,
+  "reference": {
+    "path": "problems/424/compute/wave5/C104_reducible_root_census_300000.raw.json",
+    "sha256": "70709adc98edbc32990cc3c3c52c76b5f2d0617f54c2501f4e6fb23742630e8d",
+    "totals_exact_match": true
+  },
+  "schema": "C110-source-hypergraph-probe-v1",
+  "source_claim_tests": 14623,
+  "totals": {
+    "generated": 128835,
+    "hard": 14623,
+    "hard_with_reducible_root": 5405,
+    "maximum_pair_count": 8,
+    "structural_splitless": 34139
+  },
+  "upgrade_claim_tests": 1235
+}

@@ -94,12 +94,12 @@ def prefix_gate(
     changes: list[tuple[int, int, str, int]] = []
     for value, death in hard_events:
         include = death <= stage
-        if mode == "terminal_layer":
+        if mode in {"stage_layer", "terminal_layer"}:
             include = death == stage
         if include:
             changes.append((value, -1, "H", death))
     for child, parent_death, child_death in q_events:
-        if mode == "stage":
+        if mode in {"stage", "stage_layer"}:
             include = parent_death <= stage < child_death
         elif mode == "terminal_filtered":
             include = parent_death <= stage and child_death == INFINITY
@@ -143,6 +143,123 @@ def prefix_gate(
         "minimum_surplus": minimum,
         "minimum_X": minimum_x,
         "first_failure": first_failure,
+    }
+
+
+def transition_gate(
+    hard_events: list[tuple[int, int]],
+    q_events: list[tuple[int, int, int]],
+    death: array,
+    limit: int,
+    stage: int,
+) -> dict:
+    """Replay one seed-2-chain threshold shift S_stage -> S_(stage+1)."""
+    predicted_changes = array("i", [0]) * (limit + 1)
+    no_helper_changes = array("i", [0]) * (limit + 1)
+    following_changes = array("i", [0]) * (limit + 1)
+    hard_lookup = bytearray(limit + 1)
+    for value, value_death in hard_events:
+        hard_lookup[value] = 1
+        if value_death <= stage:
+            predicted_changes[value] -= 1
+            no_helper_changes[value] -= 1
+        if value_death <= stage + 1:
+            following_changes[value] -= 1
+    for child, parent_death, child_death in q_events:
+        if parent_death <= stage < child_death:
+            predicted_changes[child] += 1
+            no_helper_changes[child] += 1
+        if parent_death <= stage + 1 < child_death:
+            following_changes[child] += 1
+
+    removed_odd_thresholds = 0
+    removed_hard_roots = 0
+    removed_nonhard_roots = 0
+    removal_rank = stage + 1
+    for value in range(2, limit + 1):
+        if death[value] != removal_rank:
+            continue
+        child = 2 * value - 1
+        if value % 2:
+            removed_odd_thresholds += 1
+            predicted_changes[value] -= 1
+            no_helper_changes[value] -= 1
+            if child <= limit:
+                predicted_changes[child] += 1
+                no_helper_changes[child] += 1
+        elif hard_lookup[value]:
+            removed_hard_roots += 1
+            predicted_changes[value] -= 1
+            no_helper_changes[value] -= 1
+            if child <= limit:
+                predicted_changes[child] += 1
+                no_helper_changes[child] += 1
+        else:
+            removed_nonhard_roots += 1
+            if child <= limit:
+                predicted_changes[child] += 1
+
+    predicted = 0
+    following = 0
+    no_helper = 0
+    minimum = 0
+    minimum_x = 2
+    no_helper_minimum = 0
+    no_helper_minimum_x = 2
+    first_failure = None
+    no_helper_first_failure = None
+    no_helper_first_tight_event_x = None
+    no_helper_last_tight_event_x = None
+    for value in range(2, limit + 1):
+        predicted += predicted_changes[value]
+        following += following_changes[value]
+        no_helper += no_helper_changes[value]
+        if predicted != following:
+            raise AssertionError(
+                f"threshold identity failed at stage={stage}, X={value}: "
+                f"{predicted} != {following}"
+            )
+        if predicted < minimum:
+            minimum = predicted
+            minimum_x = value
+        if predicted < 0 and first_failure is None:
+            first_failure = {"X": value, "slack": predicted}
+        if no_helper < no_helper_minimum:
+            no_helper_minimum = no_helper
+            no_helper_minimum_x = value
+        if no_helper < 0 and no_helper_first_failure is None:
+            no_helper_first_failure = {"X": value, "slack": no_helper}
+        if (
+            no_helper_changes[value] != 0
+            and no_helper == 0
+            and value > 2
+        ):
+            if no_helper_first_tight_event_x is None:
+                no_helper_first_tight_event_x = value
+            no_helper_last_tight_event_x = value
+
+    return {
+        "from_stage": stage,
+        "to_stage": stage + 1,
+        "removed_odd_thresholds": removed_odd_thresholds,
+        "removed_hard_roots": removed_hard_roots,
+        "removed_nonhard_roots": removed_nonhard_roots,
+        "terminal_slack": predicted,
+        "minimum_slack": minimum,
+        "minimum_X": minimum_x,
+        "first_failure": first_failure,
+        "no_nonhard_helper": {
+            "inequality": (
+                "H_stage(X)+next exposed odd/hard thresholds "
+                "in (floor((X+1)/2),X] <= Q_stage(X)"
+            ),
+            "terminal_slack": no_helper,
+            "minimum_slack": no_helper_minimum,
+            "minimum_X": no_helper_minimum_x,
+            "first_failure": no_helper_first_failure,
+            "first_tight_event_X": no_helper_first_tight_event_x,
+            "last_tight_event_X": no_helper_last_tight_event_x,
+        },
     }
 
 
@@ -236,9 +353,23 @@ def audit(limit: int) -> dict:
         prefix_gate(hard_events, q_events, stage, "terminal_filtered")
         for stage in range(1, maximum_death + 1)
     ]
+    stage_layer_gates = [
+        prefix_gate(hard_events, q_events, stage, "stage_layer")
+        for stage in range(1, maximum_death + 1)
+    ]
     terminal_layer_gates = [
         prefix_gate(hard_events, q_events, stage, "terminal_layer")
         for stage in range(1, maximum_death + 1)
+    ]
+    transition_gates = [
+        transition_gate(
+            hard_events,
+            q_events,
+            death,
+            limit,
+            stage,
+        )
+        for stage in range(0, maximum_death)
     ]
 
     final_q = [
@@ -305,10 +436,25 @@ def audit(limit: int) -> dict:
             "first_failed_stage": first_failed(terminal_filtered_gates),
             "rows": terminal_filtered_gates,
         },
+        "stage_exact_layer_gate": {
+            "passed": first_failed(stage_layer_gates) is None,
+            "first_failed_stage": first_failed(stage_layer_gates),
+            "rows": stage_layer_gates,
+        },
         "terminal_exact_layer_gate": {
             "passed": first_failed(terminal_layer_gates) is None,
             "first_failed_stage": first_failed(terminal_layer_gates),
             "rows": terminal_layer_gates,
+        },
+        "chain_threshold_transition_gate": {
+            "identity": (
+                "boundary c stays or moves to 2c-1; removed even roots "
+                "create boundary 2r-1"
+            ),
+            "passed": all(
+                row["first_failure"] is None for row in transition_gates
+            ),
+            "rows": transition_gates,
         },
         "death_histogram": dict(sorted(death_histogram.items())),
         "hard_death_histogram": dict(sorted(hard_death_histogram.items())),
@@ -330,6 +476,16 @@ def audit(limit: int) -> dict:
                 "child_generation_rank": generation_rank[child],
             }
             for child, parent_rank in final_q[:64]
+        ],
+        "transient_q_sample": [
+            {
+                "parent": (child + 1) // 2,
+                "child": child,
+                "parent_death_rank": parent_rank,
+                "child_death_rank": child_rank,
+            }
+            for child, parent_rank, child_rank in q_events[:64]
+            if child_rank != INFINITY
         ],
         "elapsed_seconds": time.perf_counter() - started,
     }

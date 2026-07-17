@@ -1,0 +1,41 @@
+{
+  "schema":"C110-c104-tail-gate-v1",
+  "limit":100000000,
+  "arithmetic":"exact integers only",
+  "hard_sources":3368726,
+  "maximum_pair_count":12,
+  "classification_fnv1a64":"94633c57cc653c6e",
+  "first_C104_BIN_failure":null,
+  "first_integrated_load_failure":null,
+  "first_occupied_bin_Carleson_failure":null,
+  "first_full_Carleson_failure":null,
+  "thresholds":[
+    {"D":1,"root_count":46643,"occupied_bins":19,"scaled_dyadic_load":2830333440,"scale":4294967296},
+    {"D":2,"root_count":19608,"occupied_bins":19,"scaled_dyadic_load":2704915456,"scale":4294967296},
+    {"D":3,"root_count":16587,"occupied_bins":19,"scaled_dyadic_load":2680632832,"scale":4294967296},
+    {"D":4,"root_count":3288,"occupied_bins":19,"scaled_dyadic_load":2325059584,"scale":4294967296},
+    {"D":5,"root_count":3255,"occupied_bins":19,"scaled_dyadic_load":2323808256,"scale":4294967296},
+    {"D":6,"root_count":1457,"occupied_bins":19,"scaled_dyadic_load":2038138368,"scale":4294967296},
+    {"D":7,"root_count":1456,"occupied_bins":19,"scaled_dyadic_load":2038007296,"scale":4294967296},
+    {"D":8,"root_count":211,"occupied_bins":19,"scaled_dyadic_load":1188265472,"scale":4294967296},
+    {"D":9,"root_count":128,"occupied_bins":19,"scaled_dyadic_load":1013979648,"scale":4294967296},
+    {"D":10,"root_count":114,"occupied_bins":19,"scaled_dyadic_load":908717568,"scale":4294967296},
+    {"D":11,"root_count":114,"occupied_bins":19,"scaled_dyadic_load":908717568,"scale":4294967296}
+  ],
+  "target_root_upgrade_events":[
+    {"root":54,"source_h":534,"endpoint":107,"d":1,"one_hole_pairs":1,"two_hole_pairs":0},
+    {"root":62,"source_h":614,"endpoint":123,"d":2,"one_hole_pairs":2,"two_hole_pairs":0},
+    {"root":54,"source_h":1064,"endpoint":213,"d":2,"one_hole_pairs":1,"two_hole_pairs":1},
+    {"root":62,"source_h":2694,"endpoint":245,"d":3,"one_hole_pairs":2,"two_hole_pairs":1},
+    {"root":54,"source_h":4674,"endpoint":425,"d":3,"one_hole_pairs":2,"two_hole_pairs":1},
+    {"root":62,"source_h":9470,"endpoint":123,"d":4,"one_hole_pairs":3,"two_hole_pairs":1},
+    {"root":54,"source_h":14024,"endpoint":425,"d":6,"one_hole_pairs":4,"two_hole_pairs":2},
+    {"root":62,"source_h":65414,"endpoint":245,"d":6,"one_hole_pairs":6,"two_hole_pairs":0},
+    {"root":62,"source_h":241814,"endpoint":245,"d":8,"one_hole_pairs":6,"two_hole_pairs":2},
+    {"root":54,"source_h":512264,"endpoint":213,"d":8,"one_hole_pairs":7,"two_hole_pairs":1},
+    {"root":62,"source_h":552474,"endpoint":245,"d":9,"one_hole_pairs":8,"two_hole_pairs":1},
+    {"root":54,"source_h":1182774,"endpoint":425,"d":9,"one_hole_pairs":7,"two_hole_pairs":2},
+    {"root":62,"source_h":2778054,"endpoint":245,"d":12,"one_hole_pairs":11,"two_hole_pairs":1},
+    {"root":54,"source_h":7634274,"endpoint":425,"d":12,"one_hole_pairs":9,"two_hole_pairs":3}
+  ]
+}

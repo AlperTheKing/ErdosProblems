@@ -1,0 +1,17 @@
+{
+  "schema":"C114-source-incidence-scan-v1",
+  "limit":1000000,
+  "arithmetic":"exact integers only",
+  "hard_sources":45583,
+  "upgrade_sources":2825,
+  "root_upgrade_events":3015,
+  "maximum_pair_count":9,
+  "classification_fnv1a64":"87339232cc226911",
+  "minimum_A_minus_q":0,
+  "minimum_A_minus_q_source":28496,
+  "first_A_ge_q_failure":null,
+  "first_A_times_M_ge_q_failure":null,
+  "first_upgrade_source_A_ge_q_failure":null,
+  "first_A_ge_each_increment_failure":null,
+  "first_A_times_M_ge_total_increment_failure":null
+}

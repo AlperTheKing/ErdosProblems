@@ -1,0 +1,81 @@
+{
+  "brute_length": 10,
+  "kmax": 12,
+  "ray": [
+    3,
+    2,
+    1
+  ],
+  "ray_slope": 360,
+  "results": [
+    {
+      "exact_endpoint_checks": 87490,
+      "exact_equalities": 57597,
+      "max_small_bound_to_exact_ratio": 5.0,
+      "modulus": 900,
+      "target_rows": [
+        {
+          "k": 1,
+          "multiplicity_upper": "1",
+          "normalization_U_M_over_W_sqrt_k": 6.000000000000003
+        },
+        {
+          "k": 2,
+          "multiplicity_upper": "6",
+          "normalization_U_M_over_W_sqrt_k": 39.671445386050436
+        },
+        {
+          "k": 3,
+          "multiplicity_upper": "30",
+          "normalization_U_M_over_W_sqrt_k": 197.86723687570642
+        },
+        {
+          "k": 4,
+          "multiplicity_upper": "167",
+          "normalization_U_M_over_W_sqrt_k": 1047.7545069010976
+        },
+        {
+          "k": 5,
+          "multiplicity_upper": "952",
+          "normalization_U_M_over_W_sqrt_k": 5526.475705240919
+        },
+        {
+          "k": 6,
+          "multiplicity_upper": "5682",
+          "normalization_U_M_over_W_sqrt_k": 29972.014943403923
+        },
+        {
+          "k": 7,
+          "multiplicity_upper": "34886",
+          "normalization_U_M_over_W_sqrt_k": 165091.3225438515
+        },
+        {
+          "k": 8,
+          "multiplicity_upper": "215495",
+          "normalization_U_M_over_W_sqrt_k": 906252.4837762938
+        },
+        {
+          "k": 9,
+          "multiplicity_upper": "1350376",
+          "normalization_U_M_over_W_sqrt_k": 5009850.721267861
+        },
+        {
+          "k": 10,
+          "multiplicity_upper": "8540484",
+          "normalization_U_M_over_W_sqrt_k": 27789476.549858317
+        },
+        {
+          "k": 11,
+          "multiplicity_upper": "54471615",
+          "normalization_U_M_over_W_sqrt_k": 154715998.81913126
+        },
+        {
+          "k": 12,
+          "multiplicity_upper": "349386364",
+          "normalization_U_M_over_W_sqrt_k": 862833979.5545294
+        }
+      ]
+    }
+  ],
+  "script_sha256": "c442abaa473a3ffd469d115d3ff1c021b521ac42fc47e076aaf6ca2bcbe05772"
+}

@@ -115,3 +115,7 @@ problems/23/lean/Erdos23Delta0/O14/Generated/ChartPayloads/Chart*.lean
 
 # Multi-agent workflow fan-out transcripts (ephemeral scratch)
 tmp/fanout/
+
+# Oversized #424 wave5 compute dumps (>100MB, GitHub hard-reject; regeneratable)
+problems/424/compute/wave5/C113_cluster_closure_check_all.json
+problems/424/compute/wave5/C113_cluster_endpoint_sieve.json

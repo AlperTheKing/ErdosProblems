@@ -1,0 +1,28 @@
+{
+  "schema": "C32-partition-equivalence-v1",
+  "left": {
+    "path": "result_321_K5_s37.json",
+    "sha256": "1528631ee409c920e1d0dcee4592b88d857e37d04a72fb06f4ad75b04d7161aa",
+    "bucket_shift": 37
+  },
+  "right": {
+    "path": "result_321_K5_s38.json",
+    "sha256": "1c7b3663a31ae893375d0ae731070d200cace3647b60c04edaf665899ca84b5e",
+    "bucket_shift": 38
+  },
+  "checked_energy_fields": [
+    "K",
+    "source_k",
+    "source_pairs",
+    "N",
+    "distinct_products",
+    "E",
+    "E_over_N",
+    "within_collision_pairs",
+    "cross_collision_pairs",
+    "max_r",
+    "matrix",
+    "multiplicity_histogram"
+  ],
+  "status": "PASS"
+}

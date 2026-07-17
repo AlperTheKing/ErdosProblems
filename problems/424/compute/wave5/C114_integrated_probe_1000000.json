@@ -1,0 +1,487 @@
+{
+  "arithmetic": "exact integers and Fraction only",
+  "endpoint": {
+    "L_X": 20,
+    "capped_upgrade_energy": {
+      "denominator": 16384,
+      "numerator": 42873
+    },
+    "square_layer_cake_identity": true,
+    "sum_of_threshold_tails": {
+      "denominator": 16384,
+      "numerator": 42873
+    },
+    "threshold_tails": [
+      {
+        "D": 1,
+        "J": 1,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 37053
+        }
+      },
+      {
+        "D": 2,
+        "J": 2,
+        "tail": {
+          "denominator": 32768,
+          "numerator": 16239
+        }
+      },
+      {
+        "D": 3,
+        "J": 2,
+        "tail": {
+          "denominator": 4096,
+          "numerator": 1989
+        }
+      },
+      {
+        "D": 4,
+        "J": 2,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 19901
+        }
+      },
+      {
+        "D": 5,
+        "J": 3,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 19885
+        }
+      },
+      {
+        "D": 6,
+        "J": 3,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 13037
+        }
+      },
+      {
+        "D": 7,
+        "J": 3,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 13037
+        }
+      },
+      {
+        "D": 8,
+        "J": 3,
+        "tail": {
+          "denominator": 65536,
+          "numerator": 4277
+        }
+      }
+    ]
+  },
+  "first_failures": {
+    "integrated_C_equals_1": null,
+    "new_co_roots_pay_q_increment": {
+      "all_roots": [
+        6,
+        8,
+        78,
+        86,
+        512
+      ],
+      "d": 4,
+      "h": 5114,
+      "lhs": 1,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 1023,
+              "root": 512,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            5,
+            1023
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 15,
+              "root": 8,
+              "root_state": 2
+            },
+            {
+              "endpoint": 341,
+              "root": 86,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            15,
+            341
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 11,
+              "root": 6,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            11,
+            465
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 155,
+              "root": 78,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            33,
+            155
+          ]
+        }
+      ],
+      "reducible_roots": [
+        86,
+        512
+      ],
+      "rhs": 2,
+      "upgrades": [
+        {
+          "j": 6,
+          "new_q": 3,
+          "old_q": 1,
+          "q_increment": 2,
+          "root": 86,
+          "sqrt_increment": 1
+        }
+      ]
+    },
+    "root_distinct_co_roots_ge_q": {
+      "all_roots": [
+        8,
+        170,
+        67292
+      ],
+      "d": 4,
+      "h": 672914,
+      "lhs": 2,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 134583,
+              "root": 67292,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            5,
+            134583
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 15,
+              "root": 8,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            15,
+            44861
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 113,
+              "root": 8,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            113,
+            5955
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 339,
+              "root": 170,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            339,
+            1985
+          ]
+        }
+      ],
+      "reducible_roots": [
+        170,
+        67292
+      ],
+      "rhs": 3,
+      "upgrades": [
+        {
+          "j": 16,
+          "new_q": 3,
+          "old_q": 0,
+          "q_increment": 3,
+          "root": 67292,
+          "sqrt_increment": 2
+        }
+      ]
+    },
+    "source_A_pays_total_sqrt_increment": {
+      "all_roots": [
+        18,
+        56,
+        60,
+        212,
+        774,
+        2958,
+        10056
+      ],
+      "d": 6,
+      "h": 100554,
+      "lhs": 7,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 20111,
+              "root": 10056,
+              "root_state": 3
+            }
+          ],
+          "pair": [
+            5,
+            20111
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 35,
+              "root": 18,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            35,
+            2873
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 1547,
+              "root": 774,
+              "root_state": 3
+            }
+          ],
+          "pair": [
+            65,
+            1547
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 5915,
+              "root": 2958,
+              "root_state": 3
+            }
+          ],
+          "pair": [
+            17,
+            5915
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 119,
+              "root": 60,
+              "root_state": 2
+            },
+            {
+              "endpoint": 845,
+              "root": 212,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            119,
+            845
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 221,
+              "root": 56,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            221,
+            455
+          ]
+        }
+      ],
+      "reducible_roots": [
+        212,
+        774,
+        2958,
+        10056
+      ],
+      "rhs": 8,
+      "upgrades": [
+        {
+          "j": 7,
+          "new_q": 5,
+          "old_q": 2,
+          "q_increment": 3,
+          "root": 212,
+          "sqrt_increment": 1
+        },
+        {
+          "j": 9,
+          "new_q": 5,
+          "old_q": 3,
+          "q_increment": 2,
+          "root": 774,
+          "sqrt_increment": 1
+        },
+        {
+          "j": 11,
+          "new_q": 5,
+          "old_q": 0,
+          "q_increment": 5,
+          "root": 2958,
+          "sqrt_increment": 3
+        },
+        {
+          "j": 13,
+          "new_q": 5,
+          "old_q": 0,
+          "q_increment": 5,
+          "root": 10056,
+          "sqrt_increment": 3
+        }
+      ]
+    },
+    "source_A_times_M_pays_total_q_increment": null,
+    "source_incidence_mass_pays_weighted_sqrt_increment": null,
+    "source_mixed_A_times_M_ge_q": null,
+    "source_root_mass_pays_weighted_sqrt_increment": null,
+    "source_with_reducible_has_A_ge_d": {
+      "all_roots": [
+        12,
+        30,
+        104
+      ],
+      "d": 4,
+      "h": 28496,
+      "lhs": 3,
+      "pairs": [
+        {
+          "missing": [
+            {
+              "endpoint": 23,
+              "root": 12,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            23,
+            1239
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 413,
+              "root": 104,
+              "root_state": 0
+            }
+          ],
+          "pair": [
+            69,
+            413
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 177,
+              "root": 12,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            161,
+            177
+          ]
+        },
+        {
+          "missing": [
+            {
+              "endpoint": 59,
+              "root": 30,
+              "root_state": 2
+            }
+          ],
+          "pair": [
+            59,
+            483
+          ]
+        }
+      ],
+      "reducible_roots": [
+        104
+      ],
+      "rhs": 4,
+      "upgrades": []
+    },
+    "source_with_reducible_has_A_ge_q": null
+  },
+  "limit": 1000000,
+  "maximum_eventwise_integrated_ratio": {
+    "C_squared": {
+      "denominator": 6710886400,
+      "numerator": 11868363
+    },
+    "D": 3,
+    "J": 2,
+    "L_X": 20,
+    "X": 999774,
+    "tail": {
+      "denominator": 4096,
+      "numerator": 1989
+    }
+  },
+  "schema": "C114-integrated-carleson-probe-v1",
+  "totals": {
+    "distinct_reducible_roots_with_positive_q": 2293,
+    "eventwise_gate_tests": 19773,
+    "hard_sources": 45583,
+    "maximum_d": 9,
+    "root_upgrade_events": 3015,
+    "upgrade_sources": 2825
+  }
+}

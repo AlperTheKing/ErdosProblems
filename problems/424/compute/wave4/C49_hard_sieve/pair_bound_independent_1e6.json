@@ -1,0 +1,15 @@
+{
+  "equality_examples": [
+    {
+      "omega2": 6,
+      "pairs": 1,
+      "successor": 15625
+    }
+  ],
+  "exponential_failures": [],
+  "exponential_minimum_slack": 1,
+  "failures": [],
+  "limit": 1000000,
+  "minimum_slack": 0,
+  "tested_reducible_successors": 113571
+}

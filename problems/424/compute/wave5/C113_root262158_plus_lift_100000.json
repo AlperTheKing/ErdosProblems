@@ -1,0 +1,160 @@
+{
+  "C104_BIN_falsifier": null,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with factor primality and product rechecks",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "prime_limit": 100000,
+  "rows": [
+    {
+      "base_d": 6,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 2905865409095,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 83171,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 2079275,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 3964345715,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 60964343,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 1524108575,
+              "missing": true
+            }
+          ],
+          "q": 7561
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 8135731364255,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 232859,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 5821475,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 11099224235,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 170685647,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 4267141175,
+              "missing": true
+            }
+          ],
+          "q": 21169
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 384322895,
+              "lifted_value": 27436427151155,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 785279,
+              "missing": true
+            },
+            {
+              "base_blocker": 275,
+              "lifted_value": 19631975,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 37430323535,
+              "missing": true
+            },
+            {
+              "base_blocker": 8063,
+              "lifted_value": 575609507,
+              "missing": false
+            },
+            {
+              "base_blocker": 201575,
+              "lifted_value": 14390237675,
+              "missing": true
+            }
+          ],
+          "q": 71389
+        }
+      ],
+      "eligible_plus_primes_tested": 4783,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          733,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 6,
+      "forced_one_hole_blockers": [
+        384322895,
+        11,
+        275,
+        524315,
+        8063,
+        201575
+      ],
+      "h": 1921614474,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 4,
+      "product": 1921614475,
+      "root": 262158,
+      "two_hole_pairs": []
+    }
+  ],
+  "schema": "C110-plus-prime-lift-gate-v1"
+}

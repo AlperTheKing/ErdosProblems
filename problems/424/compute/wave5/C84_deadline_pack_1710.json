@@ -1,0 +1,1812 @@
+{
+  "schema_version": 1,
+  "limit": 1710,
+  "hard_count": 81,
+  "status": "OPTIMAL",
+  "conflicts": 0,
+  "branches": 12092,
+  "wall_time_seconds": 9.809086500000001,
+  "paths": [
+    {
+      "commodity": 0,
+      "deadline": 54,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 6
+        },
+        {
+          "kind": "seed",
+          "from": 6,
+          "to": 11
+        },
+        {
+          "kind": "seed",
+          "from": 11,
+          "to": 21
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 21,
+          "to": -2,
+          "witness": 41
+        }
+      ]
+    },
+    {
+      "commodity": 1,
+      "deadline": 74,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 18
+        },
+        {
+          "kind": "seed",
+          "from": 18,
+          "to": 35
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 35,
+          "to": -2,
+          "witness": 69
+        }
+      ]
+    },
+    {
+      "commodity": 2,
+      "deadline": 114,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 20
+        },
+        {
+          "kind": "seed",
+          "from": 20,
+          "to": 39
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 39,
+          "to": -2,
+          "witness": 77
+        }
+      ]
+    },
+    {
+      "commodity": 3,
+      "deadline": 144,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 48
+        },
+        {
+          "kind": "seed",
+          "from": 48,
+          "to": 95
+        },
+        {
+          "kind": "unary",
+          "from": 95,
+          "to": 32,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 32,
+          "to": 63
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 63,
+          "to": -2,
+          "witness": 125
+        }
+      ]
+    },
+    {
+      "commodity": 4,
+      "deadline": 174,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 66
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 66,
+          "to": -2,
+          "witness": 131
+        }
+      ]
+    },
+    {
+      "commodity": 5,
+      "deadline": 186,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 38
+        },
+        {
+          "kind": "seed",
+          "from": 38,
+          "to": 75
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 75,
+          "to": -2,
+          "witness": 149
+        }
+      ]
+    },
+    {
+      "commodity": 6,
+      "deadline": 234,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 110
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 110,
+          "to": -2,
+          "witness": 219
+        }
+      ]
+    },
+    {
+      "commodity": 7,
+      "deadline": 252,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 60
+        },
+        {
+          "kind": "seed",
+          "from": 60,
+          "to": 119
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 119,
+          "to": -2,
+          "witness": 237
+        }
+      ]
+    },
+    {
+      "commodity": 8,
+      "deadline": 294,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 74
+        },
+        {
+          "kind": "seed",
+          "from": 74,
+          "to": 147
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 147,
+          "to": -2,
+          "witness": 293
+        }
+      ]
+    },
+    {
+      "commodity": 9,
+      "deadline": 318,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 30
+        },
+        {
+          "kind": "seed",
+          "from": 30,
+          "to": 59
+        },
+        {
+          "kind": "seed",
+          "from": 59,
+          "to": 117
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 117,
+          "to": -2,
+          "witness": 233
+        }
+      ]
+    },
+    {
+      "commodity": 10,
+      "deadline": 354,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 120
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 120,
+          "to": -2,
+          "witness": 239
+        }
+      ]
+    },
+    {
+      "commodity": 11,
+      "deadline": 362,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 126
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 126,
+          "to": -2,
+          "witness": 251
+        }
+      ]
+    },
+    {
+      "commodity": 12,
+      "deadline": 390,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 182
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 182,
+          "to": -2,
+          "witness": 363
+        }
+      ]
+    },
+    {
+      "commodity": 13,
+      "deadline": 414,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 198
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 198,
+          "to": -2,
+          "witness": 395
+        }
+      ]
+    },
+    {
+      "commodity": 14,
+      "deadline": 444,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 210
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 210,
+          "to": -2,
+          "witness": 419
+        }
+      ]
+    },
+    {
+      "commodity": 15,
+      "deadline": 450,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 200
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 200,
+          "to": -2,
+          "witness": 399
+        }
+      ]
+    },
+    {
+      "commodity": 16,
+      "deadline": 474,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 228
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 228,
+          "to": -2,
+          "witness": 455
+        }
+      ]
+    },
+    {
+      "commodity": 17,
+      "deadline": 492,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 56
+        },
+        {
+          "kind": "seed",
+          "from": 56,
+          "to": 111
+        },
+        {
+          "kind": "seed",
+          "from": 111,
+          "to": 221
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 221,
+          "to": -2,
+          "witness": 441
+        }
+      ]
+    },
+    {
+      "commodity": 18,
+      "deadline": 516,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 474
+        },
+        {
+          "kind": "unary",
+          "from": 474,
+          "to": 95,
+          "witness": 5
+        },
+        {
+          "kind": "seed",
+          "from": 95,
+          "to": 189
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 189,
+          "to": -2,
+          "witness": 377
+        }
+      ]
+    },
+    {
+      "commodity": 19,
+      "deadline": 534,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 92
+        },
+        {
+          "kind": "seed",
+          "from": 92,
+          "to": 183
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 183,
+          "to": -2,
+          "witness": 365
+        }
+      ]
+    },
+    {
+      "commodity": 20,
+      "deadline": 564,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 246
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 246,
+          "to": -2,
+          "witness": 491
+        }
+      ]
+    },
+    {
+      "commodity": 21,
+      "deadline": 582,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 146
+        },
+        {
+          "kind": "seed",
+          "from": 146,
+          "to": 291
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 291,
+          "to": -2,
+          "witness": 581
+        }
+      ]
+    },
+    {
+      "commodity": 22,
+      "deadline": 594,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 144
+        },
+        {
+          "kind": "seed",
+          "from": 144,
+          "to": 287
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 287,
+          "to": -2,
+          "witness": 573
+        }
+      ]
+    },
+    {
+      "commodity": 23,
+      "deadline": 614,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 306
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 306,
+          "to": -2,
+          "witness": 611
+        }
+      ]
+    },
+    {
+      "commodity": 24,
+      "deadline": 648,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 308
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 308,
+          "to": -2,
+          "witness": 615
+        }
+      ]
+    },
+    {
+      "commodity": 25,
+      "deadline": 666,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 78
+        },
+        {
+          "kind": "seed",
+          "from": 78,
+          "to": 155
+        },
+        {
+          "kind": "seed",
+          "from": 155,
+          "to": 309
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 309,
+          "to": -2,
+          "witness": 617
+        }
+      ]
+    },
+    {
+      "commodity": 26,
+      "deadline": 704,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 168
+        },
+        {
+          "kind": "seed",
+          "from": 168,
+          "to": 335
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 335,
+          "to": -2,
+          "witness": 669
+        }
+      ]
+    },
+    {
+      "commodity": 27,
+      "deadline": 714,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 90
+        },
+        {
+          "kind": "seed",
+          "from": 90,
+          "to": 179
+        },
+        {
+          "kind": "seed",
+          "from": 179,
+          "to": 357
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 357,
+          "to": -2,
+          "witness": 713
+        }
+      ]
+    },
+    {
+      "commodity": 28,
+      "deadline": 758,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 614
+        },
+        {
+          "kind": "unary",
+          "from": 614,
+          "to": 123,
+          "witness": 5
+        },
+        {
+          "kind": "seed",
+          "from": 123,
+          "to": 245
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 245,
+          "to": -2,
+          "witness": 489
+        }
+      ]
+    },
+    {
+      "commodity": 29,
+      "deadline": 774,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 360
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 360,
+          "to": -2,
+          "witness": 719
+        }
+      ]
+    },
+    {
+      "commodity": 30,
+      "deadline": 780,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 96
+        },
+        {
+          "kind": "seed",
+          "from": 96,
+          "to": 191
+        },
+        {
+          "kind": "seed",
+          "from": 191,
+          "to": 381
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 381,
+          "to": -2,
+          "witness": 761
+        }
+      ]
+    },
+    {
+      "commodity": 31,
+      "deadline": 798,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 564
+        },
+        {
+          "kind": "unary",
+          "from": 564,
+          "to": 113,
+          "witness": 5
+        },
+        {
+          "kind": "seed",
+          "from": 113,
+          "to": 225
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 225,
+          "to": -2,
+          "witness": 449
+        }
+      ]
+    },
+    {
+      "commodity": 32,
+      "deadline": 846,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 380
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 380,
+          "to": -2,
+          "witness": 759
+        }
+      ]
+    },
+    {
+      "commodity": 33,
+      "deadline": 884,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 186
+        },
+        {
+          "kind": "seed",
+          "from": 186,
+          "to": 371
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 371,
+          "to": -2,
+          "witness": 741
+        }
+      ]
+    },
+    {
+      "commodity": 34,
+      "deadline": 894,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 108
+        },
+        {
+          "kind": "seed",
+          "from": 108,
+          "to": 215
+        },
+        {
+          "kind": "seed",
+          "from": 215,
+          "to": 429
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 429,
+          "to": -2,
+          "witness": 857
+        }
+      ]
+    },
+    {
+      "commodity": 35,
+      "deadline": 912,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 390
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 390,
+          "to": -2,
+          "witness": 779
+        }
+      ]
+    },
+    {
+      "commodity": 36,
+      "deadline": 924,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 54
+        },
+        {
+          "kind": "seed",
+          "from": 54,
+          "to": 107
+        },
+        {
+          "kind": "seed",
+          "from": 107,
+          "to": 213
+        },
+        {
+          "kind": "seed",
+          "from": 213,
+          "to": 425
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 425,
+          "to": -2,
+          "witness": 849
+        }
+      ]
+    },
+    {
+      "commodity": 37,
+      "deadline": 942,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 236
+        },
+        {
+          "kind": "seed",
+          "from": 236,
+          "to": 471
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 471,
+          "to": -2,
+          "witness": 941
+        }
+      ]
+    },
+    {
+      "commodity": 38,
+      "deadline": 954,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 378
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 378,
+          "to": -2,
+          "witness": 755
+        }
+      ]
+    },
+    {
+      "commodity": 39,
+      "deadline": 956,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 396
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 396,
+          "to": -2,
+          "witness": 791
+        }
+      ]
+    },
+    {
+      "commodity": 40,
+      "deadline": 978,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 486
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 486,
+          "to": -2,
+          "witness": 971
+        }
+      ]
+    },
+    {
+      "commodity": 41,
+      "deadline": 1002,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 444
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 444,
+          "to": -2,
+          "witness": 887
+        }
+      ]
+    },
+    {
+      "commodity": 42,
+      "deadline": 1014,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 114
+        },
+        {
+          "kind": "seed",
+          "from": 114,
+          "to": 227
+        },
+        {
+          "kind": "seed",
+          "from": 227,
+          "to": 453
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 453,
+          "to": -2,
+          "witness": 905
+        }
+      ]
+    },
+    {
+      "commodity": 43,
+      "deadline": 1064,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 516
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 516,
+          "to": -2,
+          "witness": 1031
+        }
+      ]
+    },
+    {
+      "commodity": 44,
+      "deadline": 1074,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 510
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 510,
+          "to": -2,
+          "witness": 1019
+        }
+      ]
+    },
+    {
+      "commodity": 45,
+      "deadline": 1080,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 270
+        },
+        {
+          "kind": "seed",
+          "from": 270,
+          "to": 539
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 539,
+          "to": -2,
+          "witness": 1077
+        }
+      ]
+    },
+    {
+      "commodity": 46,
+      "deadline": 1110,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 552
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 552,
+          "to": -2,
+          "witness": 1103
+        }
+      ]
+    },
+    {
+      "commodity": 47,
+      "deadline": 1134,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 258
+        },
+        {
+          "kind": "seed",
+          "from": 258,
+          "to": 515
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 515,
+          "to": -2,
+          "witness": 1029
+        }
+      ]
+    },
+    {
+      "commodity": 48,
+      "deadline": 1154,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 288
+        },
+        {
+          "kind": "seed",
+          "from": 288,
+          "to": 575
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 575,
+          "to": -2,
+          "witness": 1149
+        }
+      ]
+    },
+    {
+      "commodity": 49,
+      "deadline": 1176,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 426
+        },
+        {
+          "kind": "seed",
+          "from": 426,
+          "to": 851
+        },
+        {
+          "kind": "unary",
+          "from": 851,
+          "to": 284,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 284,
+          "to": 567
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 567,
+          "to": -2,
+          "witness": 1133
+        }
+      ]
+    },
+    {
+      "commodity": 50,
+      "deadline": 1188,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 576
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 576,
+          "to": -2,
+          "witness": 1151
+        }
+      ]
+    },
+    {
+      "commodity": 51,
+      "deadline": 1206,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 290
+        },
+        {
+          "kind": "seed",
+          "from": 290,
+          "to": 579
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 579,
+          "to": -2,
+          "witness": 1157
+        }
+      ]
+    },
+    {
+      "commodity": 52,
+      "deadline": 1218,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 594
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 594,
+          "to": -2,
+          "witness": 1187
+        }
+      ]
+    },
+    {
+      "commodity": 53,
+      "deadline": 1224,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 1154
+        },
+        {
+          "kind": "unary",
+          "from": 1154,
+          "to": 231,
+          "witness": 5
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 231,
+          "to": -2,
+          "witness": 461
+        }
+      ]
+    },
+    {
+      "commodity": 54,
+      "deadline": 1242,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 588
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 588,
+          "to": -2,
+          "witness": 1175
+        }
+      ]
+    },
+    {
+      "commodity": 55,
+      "deadline": 1314,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 650
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 650,
+          "to": -2,
+          "witness": 1299
+        }
+      ]
+    },
+    {
+      "commodity": 56,
+      "deadline": 1344,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 132
+        },
+        {
+          "kind": "seed",
+          "from": 132,
+          "to": 263
+        },
+        {
+          "kind": "seed",
+          "from": 263,
+          "to": 525
+        },
+        {
+          "kind": "seed",
+          "from": 525,
+          "to": 1049
+        },
+        {
+          "kind": "unary",
+          "from": 1049,
+          "to": 350,
+          "witness": 3
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 350,
+          "to": -2,
+          "witness": 699
+        }
+      ]
+    },
+    {
+      "commodity": 57,
+      "deadline": 1356,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 326
+        },
+        {
+          "kind": "seed",
+          "from": 326,
+          "to": 651
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 651,
+          "to": -2,
+          "witness": 1301
+        }
+      ]
+    },
+    {
+      "commodity": 58,
+      "deadline": 1362,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 606
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 606,
+          "to": -2,
+          "witness": 1211
+        }
+      ]
+    },
+    {
+      "commodity": 59,
+      "deadline": 1374,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 318
+        },
+        {
+          "kind": "seed",
+          "from": 318,
+          "to": 635
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 635,
+          "to": -2,
+          "witness": 1269
+        }
+      ]
+    },
+    {
+      "commodity": 60,
+      "deadline": 1404,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 686
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 686,
+          "to": -2,
+          "witness": 1371
+        }
+      ]
+    },
+    {
+      "commodity": 61,
+      "deadline": 1410,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 1404
+        },
+        {
+          "kind": "unary",
+          "from": 1404,
+          "to": 281,
+          "witness": 5
+        },
+        {
+          "kind": "seed",
+          "from": 281,
+          "to": 561
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 561,
+          "to": -2,
+          "witness": 1121
+        }
+      ]
+    },
+    {
+      "commodity": 62,
+      "deadline": 1424,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 354
+        },
+        {
+          "kind": "seed",
+          "from": 354,
+          "to": 707
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 707,
+          "to": -2,
+          "witness": 1413
+        }
+      ]
+    },
+    {
+      "commodity": 63,
+      "deadline": 1434,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 660
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 660,
+          "to": -2,
+          "witness": 1319
+        }
+      ]
+    },
+    {
+      "commodity": 64,
+      "deadline": 1440,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 174
+        },
+        {
+          "kind": "seed",
+          "from": 174,
+          "to": 347
+        },
+        {
+          "kind": "seed",
+          "from": 347,
+          "to": 693
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 693,
+          "to": -2,
+          "witness": 1385
+        }
+      ]
+    },
+    {
+      "commodity": 65,
+      "deadline": 1494,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 534
+        },
+        {
+          "kind": "seed",
+          "from": 534,
+          "to": 1067
+        },
+        {
+          "kind": "unary",
+          "from": 1067,
+          "to": 356,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 356,
+          "to": 711
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 711,
+          "to": -2,
+          "witness": 1421
+        }
+      ]
+    },
+    {
+      "commodity": 66,
+      "deadline": 1506,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 714
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 714,
+          "to": -2,
+          "witness": 1427
+        }
+      ]
+    },
+    {
+      "commodity": 67,
+      "deadline": 1512,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 726
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 726,
+          "to": -2,
+          "witness": 1451
+        }
+      ]
+    },
+    {
+      "commodity": 68,
+      "deadline": 1536,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 756
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 756,
+          "to": -2,
+          "witness": 1511
+        }
+      ]
+    },
+    {
+      "commodity": 69,
+      "deadline": 1550,
+      "steps": [
+        {
+          "kind": "hard_source",
+          "from": -1,
+          "to": 362
+        },
+        {
+          "kind": "seed",
+          "from": 362,
+          "to": 723
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 723,
+          "to": -2,
+          "witness": 1445
+        }
+      ]
+    },
+    {
+      "commodity": 70,
+      "deadline": 1554,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 498
+        },
+        {
+          "kind": "seed",
+          "from": 498,
+          "to": 995
+        },
+        {
+          "kind": "unary",
+          "from": 995,
+          "to": 332,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 332,
+          "to": 663
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 663,
+          "to": -2,
+          "witness": 1325
+        }
+      ]
+    },
+    {
+      "commodity": 71,
+      "deadline": 1572,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 750
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 750,
+          "to": -2,
+          "witness": 1499
+        }
+      ]
+    },
+    {
+      "commodity": 72,
+      "deadline": 1586,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 738
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 738,
+          "to": -2,
+          "witness": 1475
+        }
+      ]
+    },
+    {
+      "commodity": 73,
+      "deadline": 1614,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 138
+        },
+        {
+          "kind": "seed",
+          "from": 138,
+          "to": 275
+        },
+        {
+          "kind": "seed",
+          "from": 275,
+          "to": 549
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 549,
+          "to": -2,
+          "witness": 1097
+        }
+      ]
+    },
+    {
+      "commodity": 74,
+      "deadline": 1632,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 792
+        },
+        {
+          "kind": "seed",
+          "from": 792,
+          "to": 1583
+        },
+        {
+          "kind": "unary",
+          "from": 1583,
+          "to": 176,
+          "witness": 9
+        },
+        {
+          "kind": "seed",
+          "from": 176,
+          "to": 351
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 351,
+          "to": -2,
+          "witness": 701
+        }
+      ]
+    },
+    {
+      "commodity": 75,
+      "deadline": 1638,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 810
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 810,
+          "to": -2,
+          "witness": 1619
+        }
+      ]
+    },
+    {
+      "commodity": 76,
+      "deadline": 1644,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 786
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 786,
+          "to": -2,
+          "witness": 1571
+        }
+      ]
+    },
+    {
+      "commodity": 77,
+      "deadline": 1674,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 740
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 740,
+          "to": -2,
+          "witness": 1479
+        }
+      ]
+    },
+    {
+      "commodity": 78,
+      "deadline": 1694,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 840
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 840,
+          "to": -2,
+          "witness": 1679
+        }
+      ]
+    },
+    {
+      "commodity": 79,
+      "deadline": 1704,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 398
+        },
+        {
+          "kind": "seed",
+          "from": 398,
+          "to": 795
+        },
+        {
+          "kind": "seed",
+          "from": 795,
+          "to": 1589
+        },
+        {
+          "kind": "unary",
+          "from": 1589,
+          "to": 530,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 530,
+          "to": 1059
+        },
+        {
+          "kind": "unary",
+          "from": 1059,
+          "to": 212,
+          "witness": 5
+        },
+        {
+          "kind": "seed",
+          "from": 212,
+          "to": 423
+        },
+        {
+          "kind": "seed",
+          "from": 423,
+          "to": 845
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 845,
+          "to": -2,
+          "witness": 1689
+        }
+      ]
+    },
+    {
+      "commodity": 80,
+      "deadline": 1710,
+      "steps": [
+        {
+          "kind": "splitless_source",
+          "from": -1,
+          "to": 156
+        },
+        {
+          "kind": "seed",
+          "from": 156,
+          "to": 311
+        },
+        {
+          "kind": "unary",
+          "from": 311,
+          "to": 104,
+          "witness": 3
+        },
+        {
+          "kind": "seed",
+          "from": 104,
+          "to": 207
+        },
+        {
+          "kind": "seed",
+          "from": 207,
+          "to": 413
+        },
+        {
+          "kind": "seed",
+          "from": 413,
+          "to": 825
+        },
+        {
+          "kind": "seed_to_ground",
+          "from": 825,
+          "to": -2,
+          "witness": 1649
+        }
+      ]
+    }
+  ]
+}

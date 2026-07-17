@@ -1,0 +1,86 @@
+{
+  "counts": {
+    "A_H": 27056,
+    "D": 44271,
+    "hard_shapes_generated_or_holes": 113571,
+    "splitless_roots": 108651
+  },
+  "exact_integer_acceptance": true,
+  "exact_obstructions": {
+    "prime_square_shadow": {
+      "first_generated_chain_member": 5889,
+      "four_times_hard_cutoff": 216,
+      "hard_root": 54,
+      "least_minus_prime": 5,
+      "shadow_root": 24,
+      "visible_shadow_chain": [
+        24,
+        47,
+        93,
+        185
+      ]
+    },
+    "same_plus_semigroup_class": {
+      "healed_at": 41,
+      "healed_root": 6,
+      "persistent_chain_through_limit": [
+        2340,
+        4679,
+        9357,
+        18713,
+        37425,
+        74849,
+        149697,
+        299393,
+        598785
+      ],
+      "persistent_root": 2340
+    },
+    "same_three_times_plus_semigroup_class": {
+      "healed_at": 77,
+      "healed_root": 20,
+      "persistent_chain_through_limit": [
+        16148,
+        32295,
+        64589,
+        129177,
+        258353,
+        516705
+      ],
+      "persistent_root": 16148
+    }
+  },
+  "healed_classes": {
+    "minus_prime_square": 61,
+    "plus_semigroup": 33214,
+    "square_3": 1,
+    "three_times_plus_semigroup": 10995
+  },
+  "limit": 1000000,
+  "minimum_D_over_A_H": {
+    "A_H": 6,
+    "D": 5,
+    "X": 186
+  },
+  "quarter_scale_gates": {
+    "A_H_X_le_D_X_plus_A_H_floor_X_over_4_plus_1": {
+      "failure_count": 0,
+      "first_failure": null,
+      "minimum_margin": 0,
+      "minimum_margin_X": 186
+    },
+    "two_D_X_ge_seven_A_H_floor_X_over_4": {
+      "failure_count": 0,
+      "first_failure": null,
+      "minimum_margin": 0,
+      "minimum_margin_X": 2
+    }
+  },
+  "schema": "C96-ratio-obstruction-v1",
+  "structural_classes": {
+    "minus_prime_square": 86,
+    "plus_semigroup": 80586,
+    "square_3": 1,
+    "three_times_plus_semigroup": 27978
+  }
+}

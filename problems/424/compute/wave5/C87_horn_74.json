@@ -1,0 +1,107 @@
+{
+  "schema": "C87-horn-implication-v1",
+  "cutoff": 74,
+  "grounded_size": 16,
+  "hard_roots": [
+    54,
+    74
+  ],
+  "target_roots": [
+    6,
+    8,
+    12,
+    18,
+    20,
+    24,
+    30,
+    32,
+    36
+  ],
+  "edge_count": 4,
+  "common_neighbor_count": 2,
+  "common_neighbors": [
+    6,
+    18
+  ],
+  "adjacency": {
+    "54": [
+      6,
+      18
+    ],
+    "74": [
+      6,
+      18
+    ]
+  },
+  "target_data": {
+    "6": {
+      "top": 41,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        54,
+        74
+      ]
+    },
+    "8": {
+      "top": 57,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "12": {
+      "top": 45,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "18": {
+      "top": 69,
+      "grounded_top": true,
+      "supported_hard_tops": [
+        54,
+        74
+      ]
+    },
+    "20": {
+      "top": 39,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "24": {
+      "top": 47,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "30": {
+      "top": 59,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "32": {
+      "top": 63,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    },
+    "36": {
+      "top": 71,
+      "grounded_top": false,
+      "supported_hard_tops": []
+    }
+  },
+  "matching": [
+    [
+      54,
+      18
+    ],
+    [
+      74,
+      6
+    ]
+  ],
+  "matching_size": 2,
+  "hall": {
+    "hard_set": [],
+    "neighbor_set": [],
+    "deficit": 0
+  },
+  "nested_hard_pairs": 1,
+  "incomparable_hard_pairs": []
+}

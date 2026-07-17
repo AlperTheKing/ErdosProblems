@@ -1,0 +1,17 @@
+[
+  {
+    "limit": 377,
+    "hard_count": 19,
+    "hard_holes": 12,
+    "generated_hard": 7,
+    "splitless": 64,
+    "unary_arcs": 172,
+    "seed_arcs": 86,
+    "network_edges": 334,
+    "exact_max_flow": 15,
+    "reserve": 3,
+    "predicted_c56_objective": 22,
+    "saved_c56_objective": null,
+    "objective_match": true
+  }
+]

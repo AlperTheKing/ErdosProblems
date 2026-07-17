@@ -1,0 +1,19 @@
+{
+  "schema_version":1,
+  "limit":10000000,
+  "bank_capacity":1000000,
+  "relation":"source/target shadows intersect in a splitless leaf; shadows follow every lower-rank missing endpoint",
+  "passed":true,
+  "processed_X":10000000,
+  "generated":4952270,
+  "holes":1714396,
+  "splitless":1004961,
+  "hard":392961,
+  "healed":637270,
+  "matched":392961,
+  "maximum_rank":17,
+  "maximum_shadow_size":144,
+  "network_nodes":2035194,
+  "network_directed_edges":16863214,
+  "failure":null
+}

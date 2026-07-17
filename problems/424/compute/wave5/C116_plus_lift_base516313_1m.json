@@ -1,0 +1,120 @@
+{
+  "base": {
+    "d": 3,
+    "factorization": [
+      [
+        7,
+        2
+      ],
+      [
+        41,
+        1
+      ],
+      [
+        257,
+        1
+      ]
+    ],
+    "forced_one_hole_blockers": [
+      12593,
+      2009,
+      287
+    ],
+    "h": 516312,
+    "pairs": [
+      {
+        "a": 41,
+        "b": 12593,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 41
+          },
+          {
+            "generated": false,
+            "root": 788,
+            "root_structural_splitless": false,
+            "value": 12593
+          }
+        ]
+      },
+      {
+        "a": 257,
+        "b": 2009,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 257
+          },
+          {
+            "generated": false,
+            "root": 252,
+            "root_structural_splitless": false,
+            "value": 2009
+          }
+        ]
+      },
+      {
+        "a": 287,
+        "b": 1799,
+        "counted_in_s": false,
+        "endpoints": [
+          {
+            "generated": false,
+            "root": 144,
+            "root_structural_splitless": false,
+            "value": 287
+          },
+          {
+            "generated": true,
+            "root": null,
+            "root_structural_splitless": false,
+            "value": 1799
+          }
+        ]
+      }
+    ],
+    "product": 516313,
+    "s": 0,
+    "two_hole_pairs": []
+  },
+  "best_primes": [
+    19,
+    67,
+    811,
+    1753,
+    2287,
+    3187,
+    4603,
+    4987,
+    5101,
+    6247,
+    7507,
+    8731,
+    9811,
+    11071,
+    11149,
+    13267
+  ],
+  "deficit_nine_falsifier": null,
+  "eligible_plus_primes_tested": 39230,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with exact product recheck",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "hits": [],
+  "maximum_forced_blockers_remaining_missing": 2,
+  "prime_limit": 1000000,
+  "schema": "C115-c105-plus-lift-v1"
+}

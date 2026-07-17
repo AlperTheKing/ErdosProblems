@@ -1,0 +1,150 @@
+{
+  "acceptance": {
+    "alpha_gate": 0.7213475204444817,
+    "exact_recursive_closure": true,
+    "finite_nonfalsification_is_theorem": false,
+    "floating_point_used_for_acceptance": false,
+    "source_divisors_from_explicit_prime_powers": true,
+    "target_3_4_falsifier_iff": "(s+8)^4 < d^3"
+  },
+  "classifier_cache": {
+    "factor_pair_entries": 859406,
+    "factorint_calls": 859406,
+    "state_entries": 859408
+  },
+  "digests": {
+    "evaluated_stream_sha256": "63670b50d607353782a505a6e24fb849d8bff478055dca25fe1a9cf86b3d969e",
+    "verification_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "evaluation": {
+    "base_multi_plus": {
+      "evaluated": 5000,
+      "generated": 5000,
+      "max_d": 128,
+      "min_d": 32
+    },
+    "composite_q": {
+      "evaluated": 5000,
+      "generated": 5000,
+      "max_d": 64,
+      "min_d": 16
+    },
+    "prime_power": {
+      "below_min_d": 5681,
+      "evaluated": 8000,
+      "generated": 2319,
+      "max_d": 96,
+      "min_d": 1
+    },
+    "squarefree": {
+      "evaluated": 8000,
+      "generated": 8000,
+      "max_d": 32,
+      "min_d": 16
+    }
+  },
+  "extremal_by_d": [],
+  "falsifiers": [],
+  "generation": {
+    "base_multi_plus": {
+      "accepted": 5000,
+      "duplicate": 32,
+      "offered": 6171,
+      "too_large": 1139
+    },
+    "base_prime_power": {},
+    "composite_q": {
+      "accepted": 5000,
+      "duplicate": 808,
+      "offered": 5819,
+      "too_small": 11
+    },
+    "cross_seed_fiber": {},
+    "extremal_base_lift": {},
+    "hard_shape_expansion": {},
+    "hard_shape_substitution": {},
+    "hard_slot_sweep": {},
+    "prime_power": {
+      "accepted": 8000,
+      "duplicate": 2,
+      "offered": 16282,
+      "too_large": 8248,
+      "too_small": 32
+    },
+    "squarefree": {
+      "accepted": 8000,
+      "offered": 10365,
+      "too_large": 2365
+    }
+  },
+  "parameters": {
+    "base_multi_budget": 5000,
+    "base_power_budget": 0,
+    "composite_q_budget": 5000,
+    "extremal_lift_budget": 0,
+    "extremal_limit": 24,
+    "fiber_sweep_budget": 0,
+    "max_bits": 72,
+    "max_pairs": 512,
+    "min_d": 12,
+    "min_source": 4000000000,
+    "mutation_budget": 0,
+    "prime_limit": 5000,
+    "prime_power_budget": 8000,
+    "progress_every": 1000,
+    "seed": 424117,
+    "shape_expansion_budget": 0,
+    "shape_substitution_budget": 0,
+    "slot_sweep_budget": 0,
+    "squarefree_budget": 8000
+  },
+  "prime_pools": {
+    "minus": 337,
+    "plus": 330
+  },
+  "schema": "C117-structural-power-falsifier-v1",
+  "self_test": {
+    "known_hard": [
+      {
+        "d": 12,
+        "h": 38624780,
+        "s": 4
+      },
+      {
+        "d": 16,
+        "h": 908368614,
+        "s": 9
+      },
+      {
+        "d": 8,
+        "h": 2067138956,
+        "s": 0
+      },
+      {
+        "d": 16,
+        "h": 2796867114,
+        "s": 8
+      },
+      {
+        "d": 18,
+        "h": 2934744174,
+        "s": 14
+      }
+    ],
+    "recursive_state_entries": 1046,
+    "status": "PASS"
+  },
+  "summary": {
+    "evaluated_candidates": 26000,
+    "hard_candidates": 0,
+    "initial_candidates": 26000,
+    "largest_hard_source": null,
+    "largest_source_tested": 4721584507441840041852,
+    "maximum_hard_d": null,
+    "maximum_hard_deficit": null,
+    "minimum_ratio_B8": null,
+    "mutation_candidates": 0,
+    "target_3_4_falsifiers": 0
+  },
+  "verification_records": []
+}

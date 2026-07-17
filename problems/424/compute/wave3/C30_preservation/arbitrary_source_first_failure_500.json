@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "stop": 500,
+  "tested": 1,
+  "first_failure": {
+    "schema_version": 1,
+    "limit": 54,
+    "workers": 64,
+    "time_limit_seconds": 30.0,
+    "assumption": "none",
+    "source_closed": false,
+    "status": "OPTIMAL",
+    "wall_time_seconds": 0.0287793,
+    "branches": 24,
+    "conflicts": 0,
+    "objective_excess": 1,
+    "selected_cutoff": 54,
+    "previous_members": [
+      2,
+      3
+    ],
+    "previous_hard_holes": [
+      54
+    ],
+    "previous_boundary_children": [],
+    "following_members": [
+      2,
+      3,
+      5
+    ],
+    "following_hard_holes": [
+      54
+    ],
+    "following_boundary_children": [],
+    "following_first_failure": 54,
+    "unsupported_previous_members": [],
+    "threshold_shift_identity": {
+      "half": 27,
+      "old_slack_Q_minus_H": -1,
+      "dangerous_moved_boundaries": [],
+      "dangerous_removed_hard_roots": [],
+      "helpful_removed_nonhard_roots": [],
+      "new_slack_Q_minus_H": -1
+    }
+  }
+}

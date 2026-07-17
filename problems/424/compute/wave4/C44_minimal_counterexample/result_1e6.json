@@ -1,0 +1,1562 @@
+{
+  "schema_version": 1,
+  "limit": 1000000,
+  "hard_count": 45583,
+  "target_count": 67537,
+  "maximum_rank": 14,
+  "rank_histogram_hard": {
+    "2": 18500,
+    "3": 4141,
+    "4": 8696,
+    "5": 4243,
+    "6": 4114,
+    "7": 2373,
+    "8": 1606,
+    "9": 997,
+    "10": 527,
+    "11": 264,
+    "12": 99,
+    "13": 22,
+    "14": 1
+  },
+  "rank_histogram_target": {
+    "0": 34760,
+    "1": 3225,
+    "2": 7296,
+    "3": 3561,
+    "4": 5007,
+    "5": 3448,
+    "6": 3185,
+    "7": 2326,
+    "8": 1819,
+    "9": 1310,
+    "10": 811,
+    "11": 504,
+    "12": 239,
+    "13": 45,
+    "14": 1
+  },
+  "recurrence_failures": {
+    "finite_missing_ranks": null,
+    "critical_pair_exists": null,
+    "hard_rank_at_least_two": null
+  },
+  "minimal_counterexample_normalization": {
+    "first_strict_violation": {
+      "X": 362,
+      "d": 2,
+      "kind": "hard",
+      "event_rank": 2,
+      "before_excess": 0,
+      "after_excess": 1,
+      "H": 11,
+      "Q": 10
+    },
+    "first_additive_one_violation": null,
+    "normalization_if_present": null,
+    "tight_hard_event_prefix": [
+      {
+        "X": 362,
+        "d": 2,
+        "kind": "hard",
+        "event_rank": 2,
+        "before_excess": 0,
+        "after_excess": 1,
+        "H": 11,
+        "Q": 10
+      },
+      {
+        "X": 1002,
+        "d": 2,
+        "kind": "hard",
+        "event_rank": 2,
+        "before_excess": 0,
+        "after_excess": 1,
+        "H": 31,
+        "Q": 30
+      },
+      {
+        "X": 1014,
+        "d": 2,
+        "kind": "hard",
+        "event_rank": 4,
+        "before_excess": 1,
+        "after_excess": 1,
+        "H": 31,
+        "Q": 30
+      }
+    ],
+    "event_residue_first_failure": null,
+    "maximum_excess_by_rank": [
+      {
+        "d": 0,
+        "maximum_excess": 0,
+        "event": {
+          "X": 41,
+          "d": 0,
+          "kind": "target",
+          "event_rank": 2,
+          "before_excess": 0,
+          "after_excess": 0,
+          "H": 0,
+          "Q": 0
+        }
+      },
+      {
+        "d": 1,
+        "maximum_excess": 0,
+        "event": {
+          "X": 41,
+          "d": 1,
+          "kind": "target",
+          "event_rank": 2,
+          "before_excess": 0,
+          "after_excess": 0,
+          "H": 0,
+          "Q": 0
+        }
+      },
+      {
+        "d": 2,
+        "maximum_excess": 1,
+        "event": {
+          "X": 362,
+          "d": 2,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": 0,
+          "after_excess": 1,
+          "H": 11,
+          "Q": 10
+        }
+      },
+      {
+        "d": 3,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 3,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 4,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 4,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 5,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 5,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 6,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 6,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 7,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 7,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 8,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 8,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 9,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 9,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 10,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 10,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 11,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 11,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 12,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 12,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 13,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 13,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      },
+      {
+        "d": 14,
+        "maximum_excess": 0,
+        "event": {
+          "X": 54,
+          "d": 14,
+          "kind": "hard",
+          "event_rank": 2,
+          "before_excess": -1,
+          "after_excess": 0,
+          "H": 1,
+          "Q": 1
+        }
+      }
+    ],
+    "positive_excess_descends_one_rank_first_failure": null,
+    "additive_one_failure_descends_two_ranks_first_failure": null
+  },
+  "critical_pullback": {
+    "claim": "a critical missing endpoint q of a rank-r hard source has missing predecessor (q+1)/2 of rank at most r-2",
+    "first_failure": null,
+    "root_class_first_failure": null,
+    "T3_child_below_source_first_failure": null,
+    "T3_generated_or_exact_source_rank_first_failure": {
+      "source": 174,
+      "source_rank": 2,
+      "endpoint": 35,
+      "endpoint_rank": 1,
+      "predecessor": 18,
+      "predecessor_rank": 0,
+      "root": 18,
+      "root_rank": 0,
+      "root_kind": "splitless",
+      "T2": {
+        "child": 69,
+        "member": true,
+        "rank": null
+      },
+      "T3": {
+        "child": 104,
+        "member": false,
+        "rank": 3
+      }
+    },
+    "T2_or_T3_generated_or_exact_source_rank_first_failure": {
+      "source": 774,
+      "source_rank": 2,
+      "endpoint": 155,
+      "endpoint_rank": 1,
+      "predecessor": 78,
+      "predecessor_rank": 0,
+      "root": 78,
+      "root_rank": 0,
+      "root_kind": "splitless",
+      "T2": {
+        "child": 309,
+        "member": false,
+        "rank": 4
+      },
+      "T3": {
+        "child": 464,
+        "member": false,
+        "rank": 3
+      }
+    },
+    "maximum_critical_child_rank_jump": {
+      "source": 586674,
+      "source_rank": 2,
+      "endpoint": 117335,
+      "child_kind": "T3",
+      "child": 352004,
+      "child_rank": 13,
+      "jump": 11
+    },
+    "examples": [
+      {
+        "source": 54,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 74,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 15,
+            "endpoint_rank": 1,
+            "predecessor": 8,
+            "predecessor_rank": 0,
+            "root": 8,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 29,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 44,
+              "member": true,
+              "rank": null
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 114,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 23,
+            "endpoint_rank": 1,
+            "predecessor": 12,
+            "predecessor_rank": 0,
+            "root": 12,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 45,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 68,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 144,
+        "source_rank": 3,
+        "pullbacks": [
+          {
+            "endpoint": 29,
+            "endpoint_rank": 2,
+            "predecessor": 15,
+            "predecessor_rank": 1,
+            "root": 8,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 57,
+              "member": false,
+              "rank": 3
+            },
+            "T3": {
+              "child": 86,
+              "member": false,
+              "rank": 3
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 174,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 35,
+            "endpoint_rank": 1,
+            "predecessor": 18,
+            "predecessor_rank": 0,
+            "root": 18,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 69,
+              "member": true,
+              "rank": null
+            },
+            "T3": {
+              "child": 104,
+              "member": false,
+              "rank": 3
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 69,
+            "parent": 35,
+            "rank": 1,
+            "root": 18
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 186,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 234,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 47,
+            "endpoint_rank": 1,
+            "predecessor": 24,
+            "predecessor_rank": 0,
+            "root": 24,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 93,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 140,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 252,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          },
+          {
+            "endpoint": 23,
+            "endpoint_rank": 1,
+            "predecessor": 12,
+            "predecessor_rank": 0,
+            "root": 12,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 45,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 68,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 294,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 59,
+            "endpoint_rank": 1,
+            "predecessor": 30,
+            "predecessor_rank": 0,
+            "root": 30,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 117,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 176,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 233,
+            "parent": 117,
+            "rank": 2,
+            "root": 30
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 233,
+            "parent": 117,
+            "rank": 2,
+            "root": 30
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 318,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 354,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 71,
+            "endpoint_rank": 1,
+            "predecessor": 36,
+            "predecessor_rank": 0,
+            "root": 36,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 141,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 212,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 362,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 390,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 23,
+            "endpoint_rank": 1,
+            "predecessor": 12,
+            "predecessor_rank": 0,
+            "root": 12,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 45,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 68,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 414,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 83,
+            "endpoint_rank": 1,
+            "predecessor": 42,
+            "predecessor_rank": 0,
+            "root": 42,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 165,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 248,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 444,
+        "source_rank": 4,
+        "pullbacks": [
+          {
+            "endpoint": 89,
+            "endpoint_rank": 3,
+            "predecessor": 45,
+            "predecessor_rank": 2,
+            "root": 12,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 177,
+              "member": false,
+              "rank": 4
+            },
+            "T3": {
+              "child": 266,
+              "member": false,
+              "rank": 4
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 450,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 474,
+        "source_rank": 4,
+        "pullbacks": [
+          {
+            "endpoint": 95,
+            "endpoint_rank": 3,
+            "predecessor": 48,
+            "predecessor_rank": 0,
+            "root": 48,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 189,
+              "member": false,
+              "rank": 4
+            },
+            "T3": {
+              "child": 284,
+              "member": false,
+              "rank": 4
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 377,
+            "parent": 189,
+            "rank": 4,
+            "root": 48
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 377,
+            "parent": 189,
+            "rank": 4,
+            "root": 48
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 492,
+        "source_rank": 3,
+        "pullbacks": [
+          {
+            "endpoint": 29,
+            "endpoint_rank": 2,
+            "predecessor": 15,
+            "predecessor_rank": 1,
+            "root": 8,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 57,
+              "member": false,
+              "rank": 3
+            },
+            "T3": {
+              "child": 86,
+              "member": false,
+              "rank": 3
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 449,
+            "parent": 225,
+            "rank": 5,
+            "root": 8
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 516,
+        "source_rank": 2,
+        "pullbacks": [
+          {
+            "endpoint": 11,
+            "endpoint_rank": 1,
+            "predecessor": 6,
+            "predecessor_rank": 0,
+            "root": 6,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 21,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 32,
+              "member": false,
+              "rank": 2
+            }
+          },
+          {
+            "endpoint": 47,
+            "endpoint_rank": 1,
+            "predecessor": 24,
+            "predecessor_rank": 0,
+            "root": 24,
+            "root_rank": 0,
+            "root_kind": "splitless",
+            "T2": {
+              "child": 93,
+              "member": false,
+              "rank": 2
+            },
+            "T3": {
+              "child": 140,
+              "member": false,
+              "rank": 2
+            }
+          }
+        ],
+        "arrived_component_boundaries": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          }
+        ],
+        "arrived_component_boundaries_ignoring_rank": [
+          {
+            "child": 41,
+            "parent": 21,
+            "rank": 2,
+            "root": 6
+          },
+          {
+            "child": 125,
+            "parent": 63,
+            "rank": 3,
+            "root": 6
+          },
+          {
+            "child": 489,
+            "parent": 245,
+            "rank": 5,
+            "root": 6
+          }
+        ],
+        "lower_hard_roots": []
+      },
+      {
+        "source": 534,
+        "source_rank": 4,
+        "pullbacks": [
+          {
+            "endpoint": 107,
+            "endpoint_rank": 3,
+            "predecessor": 54,
+            "predecessor_rank": 2,
+            "root": 54,
+            "root_rank": 2,
+            "root_kind": "hard",
+            "T2": {
+              "child": 213,
+              "member": false,
+              "rank": 4
+            },
+            "T3": {
+              "child": 320,
+              "member": false,
+              "rank": 4
+            }
+          }
+        ],
+        "arrived_component_boundaries": [],
+        "arrived_component_boundaries_ignoring_rank": [],
+        "lower_hard_roots": [
+          54
+        ]
+      }
+    ],
+    "largest_root_loads": [
+      {
+        "root": 6,
+        "critical_endpoint_occurrences": 7230
+      },
+      {
+        "root": 12,
+        "critical_endpoint_occurrences": 6208
+      },
+      {
+        "root": 8,
+        "critical_endpoint_occurrences": 4375
+      },
+      {
+        "root": 24,
+        "critical_endpoint_occurrences": 2192
+      },
+      {
+        "root": 36,
+        "critical_endpoint_occurrences": 2137
+      },
+      {
+        "root": 42,
+        "critical_endpoint_occurrences": 1581
+      },
+      {
+        "root": 30,
+        "critical_endpoint_occurrences": 1419
+      },
+      {
+        "root": 54,
+        "critical_endpoint_occurrences": 1307
+      },
+      {
+        "root": 72,
+        "critical_endpoint_occurrences": 871
+      },
+      {
+        "root": 90,
+        "critical_endpoint_occurrences": 552
+      },
+      {
+        "root": 102,
+        "critical_endpoint_occurrences": 542
+      },
+      {
+        "root": 132,
+        "critical_endpoint_occurrences": 532
+      },
+      {
+        "root": 96,
+        "critical_endpoint_occurrences": 515
+      },
+      {
+        "root": 114,
+        "critical_endpoint_occurrences": 468
+      },
+      {
+        "root": 156,
+        "critical_endpoint_occurrences": 413
+      },
+      {
+        "root": 150,
+        "critical_endpoint_occurrences": 398
+      },
+      {
+        "root": 180,
+        "critical_endpoint_occurrences": 387
+      },
+      {
+        "root": 192,
+        "critical_endpoint_occurrences": 341
+      },
+      {
+        "root": 174,
+        "critical_endpoint_occurrences": 318
+      },
+      {
+        "root": 18,
+        "critical_endpoint_occurrences": 306
+      }
+    ]
+  },
+  "candidate_descent_falsifiers": {
+    "critical_component_has_arrived_boundary": {
+      "source": 74,
+      "source_rank": 2,
+      "critical_roots": [
+        8
+      ],
+      "pullbacks": [
+        {
+          "endpoint": 15,
+          "endpoint_rank": 1,
+          "predecessor": 8,
+          "predecessor_rank": 0,
+          "root": 8,
+          "root_rank": 0,
+          "root_kind": "splitless",
+          "T2": {
+            "child": 29,
+            "member": false,
+            "rank": 2
+          },
+          "T3": {
+            "child": 44,
+            "member": true,
+            "rank": null
+          }
+        }
+      ]
+    },
+    "critical_component_has_any_arrived_boundary": {
+      "source": 74,
+      "source_rank": 2,
+      "critical_roots": [
+        8
+      ],
+      "pullbacks": [
+        {
+          "endpoint": 15,
+          "endpoint_rank": 1,
+          "predecessor": 8,
+          "predecessor_rank": 0,
+          "root": 8,
+          "root_rank": 0,
+          "root_kind": "splitless",
+          "T2": {
+            "child": 29,
+            "member": false,
+            "rank": 2
+          },
+          "T3": {
+            "child": 44,
+            "member": true,
+            "rank": null
+          }
+        }
+      ]
+    },
+    "first_arrived_component_boundary_blocked_only_by_rank": {
+      "source": 492,
+      "source_rank": 3,
+      "critical_roots": [
+        8
+      ],
+      "arrived_boundaries": [
+        {
+          "child": 449,
+          "parent": 225,
+          "rank": 5,
+          "root": 8
+        }
+      ],
+      "pullbacks": [
+        {
+          "endpoint": 29,
+          "endpoint_rank": 2,
+          "predecessor": 15,
+          "predecessor_rank": 1,
+          "root": 8,
+          "root_rank": 0,
+          "root_kind": "splitless",
+          "T2": {
+            "child": 57,
+            "member": false,
+            "rank": 3
+          },
+          "T3": {
+            "child": 86,
+            "member": false,
+            "rank": 3
+          }
+        }
+      ]
+    },
+    "critical_component_has_arrived_boundary_or_lower_hard_root": {
+      "source": 74,
+      "source_rank": 2,
+      "critical_roots": [
+        8
+      ],
+      "pullbacks": [
+        {
+          "endpoint": 15,
+          "endpoint_rank": 1,
+          "predecessor": 8,
+          "predecessor_rank": 0,
+          "root": 8,
+          "root_rank": 0,
+          "root_kind": "splitless",
+          "T2": {
+            "child": 29,
+            "member": false,
+            "rank": 2
+          },
+          "T3": {
+            "child": 44,
+            "member": true,
+            "rank": null
+          }
+        }
+      ]
+    },
+    "allowed_adjacent_odd_is_compatible_target": {
+      "source": 54,
+      "source_rank": 2,
+      "adjacent": 53,
+      "side": "left",
+      "adjacent_member": true,
+      "parent": 27,
+      "parent_member": true,
+      "parent_rank": null
+    },
+    "adjacent_hole_parent_drops_two_ranks": {
+      "source": 114,
+      "source_rank": 2,
+      "adjacent_hole": 113,
+      "adjacent_rank": 4,
+      "parent": 57,
+      "parent_rank": 3
+    }
+  },
+  "order_statistic_form": [
+    {
+      "d": 0,
+      "hard_count": 0,
+      "target_count": 34760,
+      "minimum_margin": null,
+      "minimum_pair": null,
+      "first_failure": null
+    },
+    {
+      "d": 1,
+      "hard_count": 0,
+      "target_count": 37985,
+      "minimum_margin": null,
+      "minimum_pair": null,
+      "first_failure": null
+    },
+    {
+      "d": 2,
+      "hard_count": 18500,
+      "target_count": 45281,
+      "minimum_margin": 27,
+      "minimum_pair": {
+        "hard_index": 12,
+        "hard": 390,
+        "target_index": 11,
+        "target": 363
+      },
+      "first_failure": null
+    },
+    {
+      "d": 3,
+      "hard_count": 22641,
+      "target_count": 48842,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 4,
+      "hard_count": 31337,
+      "target_count": 53849,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 5,
+      "hard_count": 35580,
+      "target_count": 57297,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 6,
+      "hard_count": 39694,
+      "target_count": 60482,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 7,
+      "hard_count": 42067,
+      "target_count": 62808,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 8,
+      "hard_count": 43673,
+      "target_count": 64627,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 9,
+      "hard_count": 44670,
+      "target_count": 65937,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 10,
+      "hard_count": 45197,
+      "target_count": 66748,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 11,
+      "hard_count": 45461,
+      "target_count": 67252,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 12,
+      "hard_count": 45560,
+      "target_count": 67491,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 13,
+      "hard_count": 45582,
+      "target_count": 67536,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    },
+    {
+      "d": 14,
+      "hard_count": 45583,
+      "target_count": 67537,
+      "minimum_margin": 33,
+      "minimum_pair": {
+        "hard_index": 2,
+        "hard": 74,
+        "target_index": 1,
+        "target": 41
+      },
+      "first_failure": null
+    }
+  ]
+}

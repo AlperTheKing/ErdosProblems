@@ -1,0 +1,117 @@
+{
+  "cache": {
+    "factorizations": {
+      "currsize": 807,
+      "hits": 1,
+      "maxsize": null,
+      "misses": 807
+    },
+    "generated": {
+      "currsize": 806,
+      "hits": 1451,
+      "maxsize": null,
+      "misses": 806
+    },
+    "primality": {
+      "currsize": 2268,
+      "hits": 5099,
+      "maxsize": null,
+      "misses": 2268
+    }
+  },
+  "counts": {
+    "arithmetic_eligible": 20,
+    "high_pair_candidates": 20,
+    "primes_tested": 20
+  },
+  "exactness": {
+    "closure": "memoized full admissible-divisor recursion to seeds 2,3",
+    "factorization": "deterministic-seeded Pollard-Brent; prime factors and product rechecked",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin bases valid below 2^64"
+  },
+  "hits": [],
+  "known_validation": [
+    {
+      "d": 1,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "h": 534
+    },
+    {
+      "d": 12,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          71,
+          1
+        ]
+      ],
+      "h": 7634274
+    },
+    {
+      "d": 16,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          197,
+          1
+        ],
+        [
+          223,
+          1
+        ]
+      ],
+      "h": 2796867114
+    }
+  ],
+  "parameters": {
+    "base": 2796867115,
+    "family": "N=base*q^2 for prime q not dividing 6*base",
+    "max_hits": 1,
+    "minimum_d": 34,
+    "prime_limit": 100,
+    "root": 54
+  },
+  "schema": "C109-fixed-root-square-lift-search-v1",
+  "timing_seconds": 0.01884279999649152
+}

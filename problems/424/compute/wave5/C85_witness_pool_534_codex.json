@@ -1,0 +1,40 @@
+{
+  "distinct_witness_root_histogram": {
+    "1": 17,
+    "2": 3
+  },
+  "first_many_pair_single_root": null,
+  "first_root_collision": null,
+  "first_root_count_below_pair_count": null,
+  "hard_count": 20,
+  "healed_root_count": 24,
+  "limit": 534,
+  "max_missing_endpoints_on_one_root_for_one_hard_hole": {
+    "endpoints": [
+      11
+    ],
+    "h": 54,
+    "pairs": [
+      [
+        5,
+        11
+      ]
+    ],
+    "root": 6,
+    "value": 1
+  },
+  "minimum_distinct_root_to_pair_ratio": {
+    "h": 54,
+    "pairs": 1,
+    "roots": 1
+  },
+  "pair_count_histogram": {
+    "1": 20
+  },
+  "root_type_profile_histogram": {
+    "(('hard', 1),)": 1,
+    "(('splitless', 1),)": 16,
+    "(('splitless', 2),)": 3
+  },
+  "unhealed_root_count": 111
+}

@@ -1,0 +1,27 @@
+{
+  "schema":"C93-common-bank-census-v1",
+  "limit":1000000000,
+  "threads_used":1,
+  "exact_integer_acceptance":true,
+  "definitions":{"A_H":"hard even roots whose seed-2 top at X is not generated","D":"structural splitless even roots whose seed-2 top at X is generated","event":"a hard birth, hard-chain death, or splitless-chain healing"},
+  "counts":{"allowed":666666666,"generated":535276618,"hard_roots":29010146,"A_H":15106735,"hard_chain_deaths":13903411,"splitless_values":88550127,"splitless_roots":88550127,"D":40909363,"unhealed_splitless_roots":47640764},
+  "event_audit":{"event_count":83822920,"positive_demand_events":83822919,"six_D_lt_five_A_H_count":0,"first_six_D_lt_five_A_H":null,"four_D_le_three_A_H_count":0,"first_four_D_le_three_A_H":null,"minimum_D_over_A_H":{"D":5,"A_H":6,"X":186,"reduced_numerator":5,"reduced_denominator":6}},
+  "c87_regression_checkpoints":[
+    {"X":2,"A_H":0,"D":0,"hard_roots":0,"splitless_roots":0},
+    {"X":54,"A_H":1,"D":1,"hard_roots":1,"splitless_roots":11},
+    {"X":74,"A_H":2,"D":2,"hard_roots":2,"splitless_roots":15},
+    {"X":186,"A_H":6,"D":5,"hard_roots":6,"splitless_roots":34},
+    {"X":362,"A_H":11,"D":10,"hard_roots":12,"splitless_roots":62},
+    {"X":1000,"A_H":34,"D":34,"hard_roots":41,"splitless_roots":156},
+    {"X":2000,"A_H":83,"D":72,"hard_roots":97,"splitless_roots":298},
+    {"X":5000,"A_H":196,"D":186,"hard_roots":253,"splitless_roots":701},
+    {"X":10000,"A_H":391,"D":374,"hard_roots":518,"splitless_roots":1344},
+    {"X":16620,"A_H":656,"D":657,"hard_roots":888,"splitless_roots":2161},
+    {"X":100000,"A_H":3386,"D":4279,"hard_roots":5108,"splitless_roots":11928},
+    {"X":1000000,"A_H":27056,"D":44271,"hard_roots":45583,"splitless_roots":108651},
+    {"X":100000000,"A_H":1794586,"D":4243002,"hard_roots":3368726,"splitless_roots":9395726},
+    {"X":1000000000,"A_H":15106735,"D":40909363,"hard_roots":29010146,"splitless_roots":88550127}
+  ],
+  "digests":{"algorithm":"FNV-1a-64 little-endian","classification_2_through_limit":"ecefb1de7848e5d3","event_X_A_H_D":"5179ddea62743c74"},
+  "resources":{"allocated_core_bytes":2000000003,"odd_spf_bytes":1000000002,"state_bytes":1000000001}
+}

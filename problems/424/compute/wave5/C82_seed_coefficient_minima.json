@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 54,
+      "hard_shapes": 1,
+      "target_row": "subadd_5_2_3",
+      "exact_minimum_multiplier": [
+        1,
+        1
+      ],
+      "certificate_dual_objective": [
+        0,
+        1
+      ],
+      "maximum_denominator": 1,
+      "secondary_primal_exact": true,
+      "secondary_dual_exact": true
+    },
+    {
+      "limit": 74,
+      "hard_shapes": 2,
+      "target_row": "subadd_5_2_3",
+      "exact_minimum_multiplier": [
+        3,
+        1
+      ],
+      "certificate_dual_objective": [
+        0,
+        1
+      ],
+      "maximum_denominator": 1,
+      "secondary_primal_exact": true,
+      "secondary_dual_exact": true
+    },
+    {
+      "limit": 186,
+      "hard_shapes": 8,
+      "target_row": "subadd_5_2_3",
+      "exact_minimum_multiplier": [
+        13,
+        1
+      ],
+      "certificate_dual_objective": [
+        0,
+        1
+      ],
+      "maximum_denominator": 1,
+      "secondary_primal_exact": true,
+      "secondary_dual_exact": true
+    },
+    {
+      "limit": 362,
+      "hard_shapes": 19,
+      "target_row": "subadd_5_2_3",
+      "exact_minimum_multiplier": [
+        35,
+        1
+      ],
+      "certificate_dual_objective": [
+        0,
+        1
+      ],
+      "maximum_denominator": 1,
+      "secondary_primal_exact": true,
+      "secondary_dual_exact": true
+    },
+    {
+      "limit": 2000,
+      "hard_shapes": 147,
+      "target_row": "subadd_5_2_3",
+      "exact_minimum_multiplier": [
+        310,
+        1
+      ],
+      "certificate_dual_objective": [
+        0,
+        1
+      ],
+      "maximum_denominator": 1,
+      "secondary_primal_exact": true,
+      "secondary_dual_exact": true
+    }
+  ]
+}

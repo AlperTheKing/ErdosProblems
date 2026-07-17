@@ -1,0 +1,62 @@
+[
+  {
+    "limit": 54,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 123,
+    "constraints": 242,
+    "hard_count": 1,
+    "objective": 1.0,
+    "fractional_excess": 0.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 100,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 237,
+    "constraints": 504,
+    "hard_count": 3,
+    "objective": 4.0,
+    "fractional_excess": -1.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 200,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 506,
+    "constraints": 1162,
+    "hard_count": 8,
+    "objective": 8.0,
+    "fractional_excess": 0.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 500,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 1372,
+    "constraints": 3445,
+    "hard_count": 27,
+    "objective": 33.0,
+    "fractional_excess": -6.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  },
+  {
+    "limit": 1000,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "variables": 2902,
+    "constraints": 7692,
+    "hard_count": 66,
+    "objective": 70.0,
+    "fractional_excess": -4.0,
+    "fractional_variables": 0,
+    "fractional_sample": []
+  }
+]

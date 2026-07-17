@@ -1,0 +1,117 @@
+{
+  "cache": {
+    "factorizations": {
+      "currsize": 32094,
+      "hits": 2,
+      "maxsize": null,
+      "misses": 32094
+    },
+    "generated": {
+      "currsize": 32094,
+      "hits": 52843,
+      "maxsize": null,
+      "misses": 32094
+    },
+    "primality": {
+      "currsize": 112025,
+      "hits": 242962,
+      "maxsize": null,
+      "misses": 112025
+    }
+  },
+  "counts": {
+    "arithmetic_eligible": 1221,
+    "high_pair_candidates": 1221,
+    "primes_tested": 1221
+  },
+  "exactness": {
+    "closure": "memoized full admissible-divisor recursion to seeds 2,3",
+    "factorization": "deterministic-seeded Pollard-Brent; prime factors and product rechecked",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin bases valid below 2^64"
+  },
+  "hits": [],
+  "known_validation": [
+    {
+      "d": 1,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          107,
+          1
+        ]
+      ],
+      "h": 534
+    },
+    {
+      "d": 12,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          71,
+          1
+        ]
+      ],
+      "h": 7634274
+    },
+    {
+      "d": 16,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          107,
+          1
+        ],
+        [
+          197,
+          1
+        ],
+        [
+          223,
+          1
+        ]
+      ],
+      "h": 2796867114
+    }
+  ],
+  "parameters": {
+    "base": 2796867115,
+    "family": "N=base*q^2 for prime q not dividing 6*base",
+    "max_hits": 5,
+    "minimum_d": 34,
+    "prime_limit": 10000,
+    "root": 54
+  },
+  "schema": "C109-fixed-root-square-lift-search-v1",
+  "timing_seconds": 1.7589349000045331
+}

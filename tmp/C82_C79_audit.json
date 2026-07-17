@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 54,
+      "hard_shapes": 1,
+      "splitless_values": 11,
+      "exact_minimum_boundary_minus_hard": [
+        0,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 12,
+      "nonzero_lower_multipliers": 16,
+      "nonzero_upper_multipliers": 8,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    },
+    {
+      "limit": 74,
+      "hard_shapes": 2,
+      "splitless_values": 15,
+      "exact_minimum_boundary_minus_hard": [
+        0,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 17,
+      "nonzero_lower_multipliers": 21,
+      "nonzero_upper_multipliers": 9,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    },
+    {
+      "limit": 186,
+      "hard_shapes": 8,
+      "splitless_values": 34,
+      "exact_minimum_boundary_minus_hard": [
+        0,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 46,
+      "nonzero_lower_multipliers": 55,
+      "nonzero_upper_multipliers": 19,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    },
+    {
+      "limit": 362,
+      "hard_shapes": 19,
+      "splitless_values": 62,
+      "exact_minimum_boundary_minus_hard": [
+        0,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 75,
+      "nonzero_lower_multipliers": 108,
+      "nonzero_upper_multipliers": 22,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    },
+    {
+      "limit": 2000,
+      "hard_shapes": 147,
+      "splitless_values": 298,
+      "exact_minimum_boundary_minus_hard": [
+        0,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        0,
+        1
+      ],
+      "nonzero_inequality_multipliers": 479,
+      "nonzero_lower_multipliers": 579,
+      "nonzero_upper_multipliers": 120,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    }
+  ]
+}

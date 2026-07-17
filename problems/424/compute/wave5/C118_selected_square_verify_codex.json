@@ -1,0 +1,17 @@
+{
+  "arithmetic": "exact integers and Fraction only",
+  "checks": {
+    "all_upgrades_match_C108": true,
+    "claim_sha256": true,
+    "cofactor_failure_replayed": true,
+    "endpoint_failure_replayed": true,
+    "hard_sources_match_C108": true,
+    "maximum_d_matches_C108": true,
+    "positive_roots_match_C108": true,
+    "schema": true,
+    "square_blocks_match_C108": true,
+    "synthetic_bank_replayed": true
+  },
+  "schema": "C118-selected-square-verify-v1",
+  "status": "PASS"
+}

@@ -1,0 +1,11 @@
+{
+  "limit": 5000,
+  "hard_checks": 253,
+  "minimum_reserve": 9,
+  "first_failure": null,
+  "tight_count": 0,
+  "tight_sample": [],
+  "final_demand": 253,
+  "final_flow": 274,
+  "final_reserve": 21
+}

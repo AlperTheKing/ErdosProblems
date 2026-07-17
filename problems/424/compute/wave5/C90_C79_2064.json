@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "limit": 2064,
+      "hard_shapes": 154,
+      "splitless_values": 305,
+      "exact_minimum_boundary_minus_hard": [
+        -1,
+        1
+      ],
+      "exact_maximum_fractional_hard_minus_boundary": [
+        1,
+        1
+      ],
+      "nonzero_inequality_multipliers": 497,
+      "nonzero_lower_multipliers": 600,
+      "nonzero_upper_multipliers": 125,
+      "maximum_denominator": 1,
+      "stationarity_exact": true,
+      "dual_signs_exact": true,
+      "objective_exact": true
+    }
+  ]
+}

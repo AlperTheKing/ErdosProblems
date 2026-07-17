@@ -2,6 +2,32 @@
 (The registered /goal defines mission, novelty gate, dead-end protocol,
 compute policy, and success. This file defines execution.)
 
+## DIRECT-PROOF GUARD (mandatory before every proof or search)
+Before SELECT, PLAN, or ATTACK, read this section and the target problem's
+`APPROACH_REGISTRY.md`. The registry must contain a `DIRECT ROUTE` giving:
+
+1. the exact final deliverable;
+2. the current frontier lemma or finite certificate;
+3. the explicit logical bridge from that frontier to the final deliverable;
+4. the next falsifiable action; and
+5. the exit condition for the approach.
+
+Do not start the proof/search until all five fields are concrete. A
+reformulation is allowed only when its bridge to the final theorem is stated
+and it immediately creates a load-bearing lemma or finite certificate.
+
+Exit the approach immediately if it becomes a reformulation maze: an
+asymptotic surrogate for a finite/exact target; repeated equivalent models;
+an unbounded hierarchy of auxiliary parameters; or a cascade of bounded-family
+exclusions without a stated theorem that closes the global problem. Density
+bounds, reciprocal-sum tests, solver failures, and additional restricted
+period obstructions do not by themselves justify another branch.
+
+On this trigger: stop all active work on the branch, preserve its files, and
+log `DEAD: reformulation maze — <the specific missing bridge>`. Return only
+to a direct construction/proof route recorded in `APPROACH_REGISTRY.md`; if no
+such route exists, stop instead of manufacturing more reformulations.
+
 ## LOOP (repeat until the GOAL success condition is met; never idle, never simulate activity)
 1. SELECT: most tractable open erdosproblems.com candidate with a concrete
    attack surface, excluding the Known statuses listed in the goal.

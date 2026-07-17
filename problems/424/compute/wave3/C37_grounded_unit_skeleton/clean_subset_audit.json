@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "results": [
+    {
+      "limit": 54,
+      "required": 1,
+      "clean_subset_score": 1,
+      "passes": true,
+      "boundary_count": 7,
+      "lower_gate_count": 4,
+      "upper_gate_count": 1,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 74,
+      "required": 2,
+      "clean_subset_score": 2,
+      "passes": true,
+      "boundary_count": 10,
+      "lower_gate_count": 6,
+      "upper_gate_count": 1,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 186,
+      "required": 8,
+      "clean_subset_score": 8,
+      "passes": true,
+      "boundary_count": 24,
+      "lower_gate_count": 16,
+      "upper_gate_count": 3,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 362,
+      "required": 19,
+      "clean_subset_score": 19,
+      "passes": true,
+      "boundary_count": 43,
+      "lower_gate_count": 30,
+      "upper_gate_count": 5,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": []
+    },
+    {
+      "limit": 500,
+      "required": 27,
+      "clean_subset_score": 33,
+      "passes": true,
+      "boundary_count": 68,
+      "lower_gate_count": 51,
+      "upper_gate_count": 10,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": [
+        {
+          "kind": "s",
+          "node": 11,
+          "coefficient": 2
+        },
+        {
+          "kind": "s",
+          "node": 23,
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "limit": 1000,
+      "required": 66,
+      "clean_subset_score": 70,
+      "passes": true,
+      "boundary_count": 125,
+      "lower_gate_count": 97,
+      "upper_gate_count": 11,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": [
+        {
+          "kind": "s",
+          "node": 11,
+          "coefficient": 4
+        },
+        {
+          "kind": "s",
+          "node": 47,
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "limit": 2000,
+      "required": 147,
+      "clean_subset_score": 151,
+      "passes": true,
+      "boundary_count": 245,
+      "lower_gate_count": 215,
+      "upper_gate_count": 30,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": [
+        {
+          "kind": "s",
+          "node": 11,
+          "coefficient": 8
+        },
+        {
+          "kind": "s",
+          "node": 23,
+          "coefficient": 3
+        },
+        {
+          "kind": "s",
+          "node": 29,
+          "coefficient": 2
+        },
+        {
+          "kind": "s",
+          "node": 47,
+          "coefficient": 2
+        },
+        {
+          "kind": "s",
+          "node": 83,
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "limit": 5000,
+      "required": 410,
+      "clean_subset_score": 442,
+      "passes": true,
+      "boundary_count": 627,
+      "lower_gate_count": 592,
+      "upper_gate_count": 69,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": [
+        {
+          "kind": "s",
+          "node": 11,
+          "coefficient": 16
+        },
+        {
+          "kind": "s",
+          "node": 23,
+          "coefficient": 8
+        },
+        {
+          "kind": "s",
+          "node": 29,
+          "coefficient": 6
+        },
+        {
+          "kind": "s",
+          "node": 47,
+          "coefficient": 2
+        },
+        {
+          "kind": "s",
+          "node": 83,
+          "coefficient": 3
+        },
+        {
+          "kind": "s",
+          "node": 263,
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "limit": 10000,
+      "required": 878,
+      "clean_subset_score": 943,
+      "passes": true,
+      "boundary_count": 1227,
+      "lower_gate_count": 1235,
+      "upper_gate_count": 134,
+      "dropped_or_hi_count": 0,
+      "nonunit_nonground_bounds": [
+        {
+          "kind": "s",
+          "node": 11,
+          "coefficient": 22
+        },
+        {
+          "kind": "s",
+          "node": 23,
+          "coefficient": 15
+        },
+        {
+          "kind": "s",
+          "node": 29,
+          "coefficient": 11
+        },
+        {
+          "kind": "s",
+          "node": 47,
+          "coefficient": 6
+        },
+        {
+          "kind": "s",
+          "node": 59,
+          "coefficient": 2
+        },
+        {
+          "kind": "s",
+          "node": 83,
+          "coefficient": 3
+        },
+        {
+          "kind": "s",
+          "node": 89,
+          "coefficient": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1864 @@
+{
+  "definitions": {
+    "basin_ratio_bounds": "sum floor(2^64/(q-1))/2^64 and ceil(2^64/(q-1))/2^64",
+    "canonical_blocker": "left endpoint if missing, otherwise right endpoint",
+    "deterministic_descent": "at each nonstructural root use the admissible pair with smallest lower endpoint and its canonical blocker",
+    "seed_root": "1+(p-1)/2^v2(p-1)",
+    "source_leaf_incidence": "one incidence per distinct terminal leaf per source"
+  },
+  "exactness": {
+    "arithmetic": "integers only",
+    "closure": "ascending least-fixed-point reconstruction",
+    "factor_pairs": "full SPF divisor enumeration",
+    "floating_point_acceptance": false
+  },
+  "extremes": {
+    "maximum_d_minus_distinct_leaves": {
+      "d": 8,
+      "distinct_seed_roots": 8,
+      "distinct_structural_leaves": 5,
+      "h": 962480,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 28561,
+        "rhs": 512
+      },
+      "maximum_descent_depth": 2,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 23,
+          "descent_depth": 0,
+          "pair": [
+            23,
+            41847
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 12,
+          "structural_leaf": 12
+        },
+        {
+          "canonical_blocker": 29,
+          "descent_depth": 0,
+          "pair": [
+            29,
+            33189
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 13949,
+          "descent_depth": 2,
+          "pair": [
+            69,
+            13949
+          ],
+          "root_state": "other_hole",
+          "seed_root": 3488,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 11063,
+          "descent_depth": 1,
+          "pair": [
+            87,
+            11063
+          ],
+          "root_state": "hard",
+          "seed_root": 5532,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 299,
+          "descent_depth": 0,
+          "pair": [
+            299,
+            3219
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 150,
+          "structural_leaf": 150
+        },
+        {
+          "canonical_blocker": 2553,
+          "descent_depth": 2,
+          "pair": [
+            377,
+            2553
+          ],
+          "root_state": "other_hole",
+          "seed_root": 320,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 851,
+          "descent_depth": 0,
+          "pair": [
+            851,
+            1131
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 426,
+          "structural_leaf": 426
+        },
+        {
+          "canonical_blocker": 1073,
+          "descent_depth": 1,
+          "pair": [
+            897,
+            1073
+          ],
+          "root_state": "other_hole",
+          "seed_root": 68,
+          "structural_leaf": 12
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          68,
+          1
+        ],
+        [
+          150,
+          1
+        ],
+        [
+          320,
+          1
+        ],
+        [
+          426,
+          1
+        ],
+        [
+          3488,
+          1
+        ],
+        [
+          5532,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          150,
+          1
+        ],
+        [
+          426,
+          1
+        ]
+      ]
+    },
+    "maximum_descent_depth": {
+      "d": 6,
+      "distinct_seed_roots": 6,
+      "distinct_structural_leaves": 4,
+      "h": 365474,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 20736,
+        "rhs": 216
+      },
+      "maximum_descent_depth": 4,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 73095,
+          "descent_depth": 4,
+          "pair": [
+            5,
+            73095
+          ],
+          "root_state": "other_hole",
+          "seed_root": 36548,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 11,
+          "descent_depth": 0,
+          "pair": [
+            11,
+            33225
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 6,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            24365
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 11075,
+          "descent_depth": 1,
+          "pair": [
+            33,
+            11075
+          ],
+          "root_state": "hard",
+          "seed_root": 5538,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 275,
+          "descent_depth": 0,
+          "pair": [
+            275,
+            1329
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 138,
+          "structural_leaf": 138
+        },
+        {
+          "canonical_blocker": 443,
+          "descent_depth": 0,
+          "pair": [
+            443,
+            825
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 222,
+          "structural_leaf": 222
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          138,
+          1
+        ],
+        [
+          222,
+          1
+        ],
+        [
+          5538,
+          1
+        ],
+        [
+          36548,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          138,
+          1
+        ],
+        [
+          222,
+          1
+        ]
+      ]
+    },
+    "maximum_same_seed_root": {
+      "d": 8,
+      "distinct_seed_roots": 7,
+      "distinct_structural_leaves": 6,
+      "h": 112664,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 38416,
+        "rhs": 512
+      },
+      "maximum_descent_depth": 2,
+      "maximum_same_seed_root": 2,
+      "maximum_same_structural_leaf": 3,
+      "pairs": [
+        {
+          "canonical_blocker": 22533,
+          "descent_depth": 2,
+          "pair": [
+            5,
+            22533
+          ],
+          "root_state": "hard",
+          "seed_root": 5634,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            7511
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 29,
+          "descent_depth": 0,
+          "pair": [
+            29,
+            3885
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 35,
+          "descent_depth": 0,
+          "pair": [
+            35,
+            3219
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 18,
+          "structural_leaf": 18
+        },
+        {
+          "canonical_blocker": 1295,
+          "descent_depth": 1,
+          "pair": [
+            87,
+            1295
+          ],
+          "root_state": "hard",
+          "seed_root": 648,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1073,
+          "descent_depth": 1,
+          "pair": [
+            105,
+            1073
+          ],
+          "root_state": "other_hole",
+          "seed_root": 68,
+          "structural_leaf": 12
+        },
+        {
+          "canonical_blocker": 185,
+          "descent_depth": 0,
+          "pair": [
+            185,
+            609
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 24,
+          "structural_leaf": 24
+        },
+        {
+          "canonical_blocker": 203,
+          "descent_depth": 0,
+          "pair": [
+            203,
+            555
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 102,
+          "structural_leaf": 102
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          2
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          68,
+          1
+        ],
+        [
+          102,
+          1
+        ],
+        [
+          648,
+          1
+        ],
+        [
+          5634,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          102,
+          1
+        ]
+      ]
+    },
+    "maximum_same_structural_leaf": {
+      "d": 6,
+      "distinct_seed_roots": 6,
+      "distinct_structural_leaves": 3,
+      "h": 756074,
+      "leaf_power_3_4_B8": {
+        "falsifier": false,
+        "lhs": 14641,
+        "rhs": 216
+      },
+      "maximum_descent_depth": 3,
+      "maximum_same_seed_root": 1,
+      "maximum_same_structural_leaf": 4,
+      "pairs": [
+        {
+          "canonical_blocker": 151215,
+          "descent_depth": 1,
+          "pair": [
+            5,
+            151215
+          ],
+          "root_state": "other_hole",
+          "seed_root": 75608,
+          "structural_leaf": 12602
+        },
+        {
+          "canonical_blocker": 15,
+          "descent_depth": 0,
+          "pair": [
+            15,
+            50405
+          ],
+          "root_state": "structural_splitless",
+          "seed_root": 8,
+          "structural_leaf": 8
+        },
+        {
+          "canonical_blocker": 44475,
+          "descent_depth": 3,
+          "pair": [
+            17,
+            44475
+          ],
+          "root_state": "other_hole",
+          "seed_root": 22238,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 14825,
+          "descent_depth": 2,
+          "pair": [
+            51,
+            14825
+          ],
+          "root_state": "hard",
+          "seed_root": 1854,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 425,
+          "descent_depth": 1,
+          "pair": [
+            425,
+            1779
+          ],
+          "root_state": "hard",
+          "seed_root": 54,
+          "structural_leaf": 6
+        },
+        {
+          "canonical_blocker": 1275,
+          "descent_depth": 2,
+          "pair": [
+            593,
+            1275
+          ],
+          "root_state": "other_hole",
+          "seed_root": 638,
+          "structural_leaf": 6
+        }
+      ],
+      "seed_root_multiplicities": [
+        [
+          8,
+          1
+        ],
+        [
+          54,
+          1
+        ],
+        [
+          638,
+          1
+        ],
+        [
+          1854,
+          1
+        ],
+        [
+          22238,
+          1
+        ],
+        [
+          75608,
+          1
+        ]
+      ],
+      "structural_leaf_multiplicities": [
+        [
+          6,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          12602,
+          1
+        ]
+      ]
+    }
+  },
+  "largest_all_root_leaf_basin_ratios": [
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 39724540960991219025,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 39724540960991302163,
+      "leaf": 12,
+      "root_count": 7558
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 39446091832261494995,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 9861522958065390425,
+      "leaf": 6,
+      "root_count": 13341
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 4851542986219207795,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 9703085972438435163,
+      "leaf": 24,
+      "root_count": 3404
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 18903852261776291005,
+      "fixed64_upper_ratio_denominator": 576460752303423488,
+      "fixed64_upper_ratio_numerator": 1181490766361020535,
+      "leaf": 36,
+      "root_count": 2146
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 33709830612485012171,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 4213728826560634009,
+      "leaf": 42,
+      "root_count": 1461
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 4207928037400913653,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 33663424299207375315,
+      "leaf": 30,
+      "root_count": 2279
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 32231643774264370925,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 32231643774264424245,
+      "leaf": 216,
+      "root_count": 248
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 15777229641269558427,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 15777229641269577761,
+      "leaf": 8,
+      "root_count": 5524
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 31521308912454797811,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 31521308912454852279,
+      "leaf": 90,
+      "root_count": 612
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 7835943997223413911,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 31343775988893704077,
+      "leaf": 630,
+      "root_count": 77
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 31163951269262655795,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 31163951269262732445,
+      "leaf": 2556,
+      "root_count": 30
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 31133544870864513953,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 31133544870864570545,
+      "leaf": 132,
+      "root_count": 432
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 7748435338912275033,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 7748435338912286031,
+      "leaf": 612,
+      "root_count": 72
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 30906551312395610113,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30906551312395663097,
+      "leaf": 180,
+      "root_count": 296
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 30733208037745045995,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30733208037745097675,
+      "leaf": 96,
+      "root_count": 544
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 7647334450819051513,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30589337803276262073,
+      "leaf": 372,
+      "root_count": 151
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 15098733160966282291,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30197466321932637455,
+      "leaf": 2700,
+      "root_count": 27
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 30067365937795826801,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 30067365937795883683,
+      "leaf": 240,
+      "root_count": 238
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 14987839449020006279,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 7493919724510013083,
+      "leaf": 948,
+      "root_count": 42
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29749289109282902815,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29749289109282955203,
+      "leaf": 1872,
+      "root_count": 28
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 14847481971468311997,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29694963942936675721,
+      "leaf": 300,
+      "root_count": 173
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29687794475419414985,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29687794475419430183,
+      "leaf": 150,
+      "root_count": 102
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 7418186296562590341,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29672745186250375209,
+      "leaf": 72,
+      "root_count": 195
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29612098791266446465,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 3701512348908312791,
+      "leaf": 2070,
+      "root_count": 27
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 3695175931490431375,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29561407451923564815,
+      "leaf": 6696,
+      "root_count": 17
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29299300805025262925,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 7324825201256333475,
+      "leaf": 4176,
+      "root_count": 17
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 7322517932198604575,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 14645035864397217125,
+      "leaf": 276,
+      "root_count": 58
+    },
+    {
+      "fixed64_lower_ratio_denominator": 144115188075855872,
+      "fixed64_lower_ratio_numerator": 228692773421313045,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 14636337498964053015,
+      "leaf": 2016,
+      "root_count": 18
+    },
+    {
+      "fixed64_lower_ratio_denominator": 576460752303423488,
+      "fixed64_lower_ratio_numerator": 914268022838091695,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 29256576730818996589,
+      "leaf": 2970,
+      "root_count": 21
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 14572542670254296171,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 14572542670254334323,
+      "leaf": 4770,
+      "root_count": 16
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29144703518224478473,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 7286175879556123649,
+      "leaf": 702,
+      "root_count": 23
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 28979267844718519595,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 14489633922359288145,
+      "leaf": 2466,
+      "root_count": 23
+    }
+  ],
+  "largest_all_root_one_step_incoming_ratios": [
+    {
+      "child_root": 12,
+      "fixed64_lower_ratio_denominator": 144115188075855872,
+      "fixed64_lower_ratio_numerator": 133670876948591389,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 8554936124709880367,
+      "parent_count": 5722
+    },
+    {
+      "child_root": 6,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 8192286425784991305,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 16384572851570032965,
+      "parent_count": 10071
+    },
+    {
+      "child_root": 36,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 16059949830339590735,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 16059949830339655625,
+      "parent_count": 1854
+    },
+    {
+      "child_root": 24,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 15626741150699632763,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 15626741150699691965,
+      "parent_count": 2574
+    },
+    {
+      "child_root": 54,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 3362098798033429879,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 6724197596066882919,
+      "parent_count": 874
+    },
+    {
+      "child_root": 30,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 3293976424082403681,
+      "fixed64_upper_ratio_denominator": 1152921504606846976,
+      "fixed64_upper_ratio_numerator": 823494106020604393,
+      "parent_count": 1916
+    },
+    {
+      "child_root": 42,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 11843838266870481299,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5921919133435263343,
+      "parent_count": 1107
+    },
+    {
+      "child_root": 216,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5876693704809509395,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5876693704809530465,
+      "parent_count": 196
+    },
+    {
+      "child_root": 630,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5793249142178041849,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 1448312285544515337,
+      "parent_count": 62
+    },
+    {
+      "child_root": 234,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 11392670020252032891,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5696335010126036367,
+      "parent_count": 171
+    },
+    {
+      "child_root": 612,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 700987780127606335,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5607902241020865955,
+      "parent_count": 50
+    },
+    {
+      "child_root": 180,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 11093559896385029109,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5546779948192536661,
+      "parent_count": 247
+    },
+    {
+      "child_root": 90,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 11035492607877945593,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5517746303938996515,
+      "parent_count": 533
+    },
+    {
+      "child_root": 414,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5506578731874514063,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5506578731874528105,
+      "parent_count": 68
+    },
+    {
+      "child_root": 2556,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10995623113718730515,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5497811556859392085,
+      "parent_count": 21
+    },
+    {
+      "child_root": 450,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10866346277749894559,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10866346277749917009,
+      "parent_count": 50
+    },
+    {
+      "child_root": 1836,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10720446077882836025,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5360223038941442785,
+      "parent_count": 27
+    },
+    {
+      "child_root": 132,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5357526517722579045,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 2678763258861301509,
+      "parent_count": 366
+    },
+    {
+      "child_root": 3816,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 2675481328401357735,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 2675481328401372995,
+      "parent_count": 16
+    },
+    {
+      "child_root": 422,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5317161892971012613,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5317161892971018507,
+      "parent_count": 28
+    },
+    {
+      "child_root": 4770,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10544623503029546717,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10544623503029613483,
+      "parent_count": 14
+    },
+    {
+      "child_root": 2070,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10508344255250178763,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5254172127625113175,
+      "parent_count": 23
+    },
+    {
+      "child_root": 114,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 653899490628511325,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 2615597962514057391,
+      "parent_count": 428
+    },
+    {
+      "child_root": 2394,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5217502528158624729,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 1304375632039662763,
+      "parent_count": 22
+    },
+    {
+      "child_root": 2700,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10419494190160802499,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10419494190160851081,
+      "parent_count": 18
+    },
+    {
+      "child_root": 96,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10378763907154865275,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5189381953577453585,
+      "parent_count": 441
+    },
+    {
+      "child_root": 6696,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10340953144963567035,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10340953144963647375,
+      "parent_count": 12
+    },
+    {
+      "child_root": 8,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10274313394611499793,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10274313394611531727,
+      "parent_count": 4562
+    },
+    {
+      "child_root": 170,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10170527855327174335,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 2542631963831797513,
+      "parent_count": 93
+    },
+    {
+      "child_root": 4176,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10160829286048776375,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10160829286048826475,
+      "parent_count": 12
+    },
+    {
+      "child_root": 1016,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 10107102836621766465,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 10107102836621796915,
+      "parent_count": 30
+    },
+    {
+      "child_root": 2970,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5043699358342918875,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 5043699358342942627,
+      "parent_count": 16
+    }
+  ],
+  "largest_normalized_leaf_capacities": [
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 120820,
+      "leaf": 36,
+      "source_count": 3452
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 105545,
+      "leaf": 12,
+      "source_count": 9595
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 102396,
+      "leaf": 24,
+      "source_count": 4452
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99995,
+      "leaf": 99996,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99905,
+      "leaf": 99906,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99899,
+      "leaf": 99900,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99869,
+      "leaf": 99870,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99791,
+      "leaf": 99792,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99761,
+      "leaf": 99762,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99617,
+      "leaf": 99618,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99605,
+      "leaf": 99606,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99569,
+      "leaf": 99570,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99557,
+      "leaf": 99558,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99545,
+      "leaf": 99546,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99437,
+      "leaf": 99438,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99419,
+      "leaf": 99420,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99365,
+      "leaf": 99366,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99311,
+      "leaf": 99312,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99275,
+      "leaf": 99276,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99257,
+      "leaf": 99258,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99239,
+      "leaf": 99240,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99221,
+      "leaf": 99222,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99167,
+      "leaf": 99168,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99131,
+      "leaf": 99132,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99071,
+      "leaf": 99072,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 99070,
+      "leaf": 49536,
+      "source_count": 2
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98969,
+      "leaf": 98970,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98957,
+      "leaf": 98958,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98951,
+      "leaf": 98952,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98915,
+      "leaf": 98916,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98879,
+      "leaf": 98880,
+      "source_count": 1
+    },
+    {
+      "capacity_denominator": 1000001,
+      "capacity_numerator": 98861,
+      "leaf": 98862,
+      "source_count": 1
+    }
+  ],
+  "largest_observed_leaf_basin_ratios": [
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 4034754548255151595,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 32278036386041215645,
+      "leaf": 6,
+      "root_count": 577
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 15080362215529531925,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 3770090553882383355,
+      "leaf": 24,
+      "root_count": 130
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 29607482338010293607,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 14803741169005148393,
+      "leaf": 12,
+      "root_count": 289
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 27999527446586672085,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 27999527446586674873,
+      "leaf": 42,
+      "root_count": 68
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 13962415516508070745,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13962415516508072075,
+      "leaf": 36,
+      "root_count": 76
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 27158700332150918783,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 27158700332150920225,
+      "leaf": 8,
+      "root_count": 206
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 27023196309509866759,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 27023196309509868539,
+      "leaf": 90,
+      "root_count": 20
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 13315545217384836957,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13315545217384838149,
+      "leaf": 150,
+      "root_count": 16
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26192214650963829069,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 26192214650963833521,
+      "leaf": 372,
+      "root_count": 12
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26076932875299176205,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 26076932875299178235,
+      "leaf": 30,
+      "root_count": 70
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 26001884451518326705,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 13000942225759163611,
+      "leaf": 48,
+      "root_count": 11
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25957385646656210285,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25957385646656223815,
+      "leaf": 2256,
+      "root_count": 6
+    },
+    {
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 6417606144626521195,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25670424578506089515,
+      "leaf": 948,
+      "root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25414644278896942091,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12707322139448474763,
+      "leaf": 1488,
+      "root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25414537953662518575,
+      "fixed64_upper_ratio_denominator": 1152921504606846976,
+      "fixed64_upper_ratio_numerator": 1588408622103907825,
+      "leaf": 1326,
+      "root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25386855819342450567,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25386855819342453913,
+      "leaf": 240,
+      "root_count": 14
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12661181304173234665,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6330590652086617735,
+      "leaf": 162,
+      "root_count": 10
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25105829630944946037,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 25105829630944950349,
+      "leaf": 540,
+      "root_count": 8
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 25040539060580300025,
+      "fixed64_upper_ratio_denominator": 288230376151711744,
+      "fixed64_upper_ratio_numerator": 391258422821567235,
+      "leaf": 336,
+      "root_count": 9
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 3113165344121616143,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 3113165344121616405,
+      "leaf": 132,
+      "root_count": 16
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24902621371943969437,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24902621371943979321,
+      "leaf": 2472,
+      "root_count": 4
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12381187463704851991,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24762374927409708385,
+      "leaf": 630,
+      "root_count": 7
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 12284701817531557385,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24569403635063115881,
+      "leaf": 102,
+      "root_count": 11
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24420316240240718005,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6105079060060182875,
+      "leaf": 2700,
+      "root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24359731161900375175,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24359731161900377925,
+      "leaf": 276,
+      "root_count": 10
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 3022617987557805913,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12090471950231224945,
+      "leaf": 432,
+      "root_count": 6
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24133923458402499391,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 24133923458402507139,
+      "leaf": 1938,
+      "root_count": 4
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24093650871146044205,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 12046825435573022955,
+      "leaf": 156,
+      "root_count": 11
+    },
+    {
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 24050478796066651033,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 6012619699016663747,
+      "leaf": 792,
+      "root_count": 5
+    },
+    {
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 1498767928596007495,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 5995071714384031601,
+      "leaf": 1622,
+      "root_count": 4
+    },
+    {
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 2988487212486265095,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 5976974424972532655,
+      "leaf": 2466,
+      "root_count": 4
+    },
+    {
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 11913095448367363565,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 11913095448367366143,
+      "leaf": 1290,
+      "root_count": 4
+    }
+  ],
+  "largest_observed_one_step_incoming_ratios": [
+    {
+      "child_root": 6,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 5731647448299424395,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 11463294896598850925,
+      "parent_count": 427
+    },
+    {
+      "child_root": 24,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 9945510272388058053,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 4972755136194030027,
+      "parent_count": 87
+    },
+    {
+      "child_root": 12,
+      "fixed64_lower_ratio_denominator": 2305843009213693952,
+      "fixed64_lower_ratio_numerator": 1225900320694511253,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 9807202565556092433,
+      "parent_count": 219
+    },
+    {
+      "child_root": 36,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 2121660663677156385,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 8486642654708627535,
+      "parent_count": 57
+    },
+    {
+      "child_root": 42,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 495216055708895841,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3961728445671167671,
+      "parent_count": 46
+    },
+    {
+      "child_root": 90,
+      "fixed64_lower_ratio_denominator": 72057594037927936,
+      "fixed64_lower_ratio_numerator": 29488602312122997,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3774541095951744239,
+      "parent_count": 14
+    },
+    {
+      "child_root": 54,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7324174987799090549,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 1831043746949772995,
+      "parent_count": 27
+    },
+    {
+      "child_root": 948,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7223680504796533585,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7223680504796537373,
+      "parent_count": 4
+    },
+    {
+      "child_root": 8,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 7219515990084138293,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3609757995042069703,
+      "parent_count": 159
+    },
+    {
+      "child_root": 372,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3578278970238166719,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3578278970238168203,
+      "parent_count": 8
+    },
+    {
+      "child_root": 414,
+      "fixed64_lower_ratio_denominator": 576460752303423488,
+      "fixed64_lower_ratio_numerator": 221457992242758201,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 7086655751768264497,
+      "parent_count": 5
+    },
+    {
+      "child_root": 2256,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6998276195654543195,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6998276195654552215,
+      "parent_count": 4
+    },
+    {
+      "child_root": 150,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6931123029301554683,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 866390378662694503,
+      "parent_count": 9
+    },
+    {
+      "child_root": 30,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6774173822748892617,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6774173822748894357,
+      "parent_count": 60
+    },
+    {
+      "child_root": 162,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6473973003183172949,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6473973003183173915,
+      "parent_count": 6
+    },
+    {
+      "child_root": 2472,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3227938649117210063,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6455877298234427539,
+      "parent_count": 3
+    },
+    {
+      "child_root": 1494,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6455560868700255611,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3227780434350130045,
+      "parent_count": 3
+    },
+    {
+      "child_root": 1488,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3227778821493879561,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6455557642987763583,
+      "parent_count": 3
+    },
+    {
+      "child_root": 1326,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 403466219230473375,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6455459507687577975,
+      "parent_count": 3
+    },
+    {
+      "child_root": 48,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3215538011265772373,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6431076022531544887,
+      "parent_count": 3
+    },
+    {
+      "child_root": 86,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6382626819126246915,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6382626819126247425,
+      "parent_count": 6
+    },
+    {
+      "child_root": 530,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6335114424546828167,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 1583778606136707703,
+      "parent_count": 5
+    },
+    {
+      "child_root": 240,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6322822713335442021,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 1580705678333861043,
+      "parent_count": 9
+    },
+    {
+      "child_root": 132,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 3129968945132745035,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6259937890265491773,
+      "parent_count": 13
+    },
+    {
+      "child_root": 336,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6184040181016294895,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 3092020090508148285,
+      "parent_count": 5
+    },
+    {
+      "child_root": 540,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 6146814595514089497,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 6146814595514091653,
+      "parent_count": 4
+    },
+    {
+      "child_root": 1440,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 2960960394517389917,
+      "fixed64_upper_ratio_denominator": 9223372036854775808,
+      "fixed64_upper_ratio_numerator": 2960960394517392795,
+      "parent_count": 4
+    },
+    {
+      "child_root": 1938,
+      "fixed64_lower_ratio_denominator": 4611686018427387904,
+      "fixed64_lower_ratio_numerator": 1421794846173237081,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 5687179384692954135,
+      "parent_count": 3
+    },
+    {
+      "child_root": 630,
+      "fixed64_lower_ratio_denominator": 1152921504606846976,
+      "fixed64_lower_ratio_numerator": 353108256238809197,
+      "fixed64_upper_ratio_denominator": 4611686018427387904,
+      "fixed64_upper_ratio_numerator": 1412433024955237417,
+      "parent_count": 4
+    },
+    {
+      "child_root": 252,
+      "fixed64_lower_ratio_denominator": 9223372036854775808,
+      "fixed64_lower_ratio_numerator": 2823783949810752419,
+      "fixed64_upper_ratio_denominator": 2305843009213693952,
+      "fixed64_upper_ratio_numerator": 705945987452688293,
+      "parent_count": 6
+    },
+    {
+      "child_root": 780,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 5633926661571575857,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 5633926661571578973,
+      "parent_count": 4
+    },
+    {
+      "child_root": 2490,
+      "fixed64_lower_ratio_denominator": 18446744073709551616,
+      "fixed64_lower_ratio_numerator": 5615038548778059569,
+      "fixed64_upper_ratio_denominator": 18446744073709551616,
+      "fixed64_upper_ratio_numerator": 5615038548778069525,
+      "parent_count": 4
+    }
+  ],
+  "limit": 1000000,
+  "minimum_distinct_leaves_by_d": [
+    {
+      "d": 1,
+      "first_h": 54,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 2,
+      "first_h": 1694,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 3,
+      "first_h": 57672,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 4,
+      "first_h": 754242,
+      "minimum_leaves": 1
+    },
+    {
+      "d": 5,
+      "first_h": 244374,
+      "minimum_leaves": 4
+    },
+    {
+      "d": 6,
+      "first_h": 756074,
+      "minimum_leaves": 3
+    },
+    {
+      "d": 8,
+      "first_h": 962480,
+      "minimum_leaves": 5
+    },
+    {
+      "d": 9,
+      "first_h": 795024,
+      "minimum_leaves": 7
+    }
+  ],
+  "mode": "prefix",
+  "schema": "C120-same-root-capacity-v1",
+  "totals": {
+    "all_nongenerated_even_root_starts": 164321,
+    "descent_memo_entries": 164321,
+    "distinct_terminal_leaves": 3491,
+    "hard_sources": 45583,
+    "leaf_power_3_4_B8_falsifiers": 0,
+    "maximum_d": 9
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "limit": 12000,
+  "constructor": "independent trial division",
+  "hard": 629,
+  "splitless": 1592,
+  "fixed3_distinct_images": 104,
+  "fresh_shell_first_failure": null,
+  "first_union_collision": {
+    "cutoff": 2819,
+    "image": 564,
+    "roots": [
+      846,
+      1410
+    ],
+    "divisors": [
+      3,
+      5
+    ]
+  },
+  "checkpoint_5000": {
+    "hard": 253,
+    "persistent_hard": 196,
+    "factor3_mature_persistent": 36,
+    "splitless_upper_shell": 335
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "limit": 2000,
+  "max_rank": 7,
+  "checked_X_d_pairs": 15976,
+  "maximum_H_minus_Q": 1,
+  "maximum_event": {
+    "X": 362,
+    "d": 2,
+    "H": 11,
+    "Q": 10,
+    "R": 19,
+    "C": 52,
+    "E": 62,
+    "J": 8
+  },
+  "identity_verified": true
+}

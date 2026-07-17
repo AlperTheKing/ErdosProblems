@@ -1,0 +1,325 @@
+{
+  "C104_BIN_falsifier": null,
+  "exactness": {
+    "closure": "full recursive admissible-divisor membership to seeds 2,3",
+    "dependency": "C109_fixed_root_search.py",
+    "dependency_sha256": "1C6806E286741DAA6303542BBB55D6C0D66675E7CB02DAF2F7F7A7084667C7CF",
+    "factorization": "Pollard-Brent with factor primality and product rechecks",
+    "floating_point_acceptance": false,
+    "integer_domain": "unsigned 64-bit",
+    "primality": "deterministic Miller-Rabin below 2^64"
+  },
+  "prime_limit": 100000,
+  "rows": [
+    {
+      "base_d": 8,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 156537494003,
+              "lifted_value": 5534070025488059,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 388883,
+              "missing": true
+            },
+            {
+              "base_blocker": 982041995,
+              "lifted_value": 34718130649235,
+              "missing": true
+            },
+            {
+              "base_blocker": 83575811,
+              "lifted_value": 2954655646283,
+              "missing": true
+            },
+            {
+              "base_blocker": 82102955,
+              "lifted_value": 2902585768115,
+              "missing": false
+            },
+            {
+              "base_blocker": 37989005,
+              "lifted_value": 1343025293765,
+              "missing": false
+            },
+            {
+              "base_blocker": 43835,
+              "lifted_value": 1549698755,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 18536108195,
+              "missing": true
+            }
+          ],
+          "q": 35353
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 156537494003,
+              "lifted_value": 13102344785545103,
+              "missing": true
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 920711,
+              "missing": true
+            },
+            {
+              "base_blocker": 982041995,
+              "lifted_value": 82197897023495,
+              "missing": true
+            },
+            {
+              "base_blocker": 83575811,
+              "lifted_value": 6995378956511,
+              "missing": false
+            },
+            {
+              "base_blocker": 82102955,
+              "lifted_value": 6872099436455,
+              "missing": false
+            },
+            {
+              "base_blocker": 37989005,
+              "lifted_value": 3179717707505,
+              "missing": false
+            },
+            {
+              "base_blocker": 43835,
+              "lifted_value": 3669033335,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 43885689815,
+              "missing": true
+            }
+          ],
+          "q": 83701
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 156537494003,
+              "lifted_value": 13254499229716019,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 931403,
+              "missing": true
+            },
+            {
+              "base_blocker": 982041995,
+              "lifted_value": 83152441842635,
+              "missing": true
+            },
+            {
+              "base_blocker": 83575811,
+              "lifted_value": 7076614644803,
+              "missing": true
+            },
+            {
+              "base_blocker": 82102955,
+              "lifted_value": 6951903508715,
+              "missing": false
+            },
+            {
+              "base_blocker": 37989005,
+              "lifted_value": 3216643020365,
+              "missing": false
+            },
+            {
+              "base_blocker": 43835,
+              "lifted_value": 3711640955,
+              "missing": false
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 44395323995,
+              "missing": true
+            }
+          ],
+          "q": 84673
+        }
+      ],
+      "eligible_plus_primes_tested": 4783,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          797,
+          1
+        ],
+        [
+          1873,
+          1
+        ],
+        [
+          9533,
+          1
+        ]
+      ],
+      "forced_blocker_count": 8,
+      "forced_one_hole_blockers": [
+        156537494003,
+        11,
+        982041995,
+        83575811,
+        82102955,
+        37989005,
+        43835,
+        524315
+      ],
+      "h": 782687470014,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 4,
+      "product": 782687470015,
+      "root": 262158,
+      "two_hole_pairs": []
+    },
+    {
+      "base_d": 8,
+      "best_prime_rows": [
+        {
+          "blockers": [
+            {
+              "base_blocker": 526179569003,
+              "lifted_value": 852937081353863,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 17831,
+              "missing": true
+            },
+            {
+              "base_blocker": 26048493515,
+              "lifted_value": 42224607987815,
+              "missing": false
+            },
+            {
+              "base_blocker": 5555,
+              "lifted_value": 9004655,
+              "missing": true
+            },
+            {
+              "base_blocker": 275977955,
+              "lifted_value": 447360265055,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 849914615,
+              "missing": true
+            },
+            {
+              "base_blocker": 546491,
+              "lifted_value": 885861911,
+              "missing": true
+            }
+          ],
+          "q": 1621
+        },
+        {
+          "blockers": [
+            {
+              "base_blocker": 526179569003,
+              "lifted_value": 1667463054170507,
+              "missing": false
+            },
+            {
+              "base_blocker": 11,
+              "lifted_value": 34859,
+              "missing": true
+            },
+            {
+              "base_blocker": 26048493515,
+              "lifted_value": 82547675949035,
+              "missing": true
+            },
+            {
+              "base_blocker": 5555,
+              "lifted_value": 17603795,
+              "missing": true
+            },
+            {
+              "base_blocker": 275977955,
+              "lifted_value": 874574139395,
+              "missing": true
+            },
+            {
+              "base_blocker": 524315,
+              "lifted_value": 1661554235,
+              "missing": false
+            },
+            {
+              "base_blocker": 546491,
+              "lifted_value": 1731829979,
+              "missing": true
+            }
+          ],
+          "q": 3169
+        }
+      ],
+      "eligible_plus_primes_tested": 4783,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          101,
+          1
+        ],
+        [
+          9533,
+          1
+        ],
+        [
+          49681,
+          1
+        ]
+      ],
+      "forced_blocker_count": 7,
+      "forced_one_hole_blockers": [
+        526179569003,
+        11,
+        26048493515,
+        5555,
+        275977955,
+        524315,
+        546491
+      ],
+      "h": 2630897845014,
+      "lift_hits": [],
+      "maximum_forced_blockers_remaining_missing": 5,
+      "product": 2630897845015,
+      "root": 262158,
+      "two_hole_pairs": [
+        [
+          248405,
+          10591163
+        ]
+      ]
+    }
+  ],
+  "schema": "C110-plus-prime-lift-gate-v1"
+}
