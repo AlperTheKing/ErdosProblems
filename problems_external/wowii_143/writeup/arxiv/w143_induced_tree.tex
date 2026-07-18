@@ -1,6 +1,6 @@
 % A proof of Graffiti.pc Conjecture 143 (WOWII): t(G)*delta'(G) >= girth(G)+1.
 \documentclass[11pt]{article}
-\pdfoutput=1
+\ifdefined\XeTeXversion\else\pdfoutput=1\fi
 \usepackage[margin=1.1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
@@ -36,7 +36,9 @@ elementary global argument showing that a connected graph containing a cycle
 and at least two vertices of degree one has an induced tree on at least
 $\gr(G)+1$ vertices.  The bound is sharp for every girth.  The proof has been
 formalized and machine-checked in Lean~4 against the statement of the
-conjecture in the Google DeepMind \emph{Formal Conjectures} repository.
+conjecture in the Google DeepMind \emph{Formal Conjectures} repository.  An
+independent machine-assisted resolution was announced one day earlier; we make
+no claim of priority.
 \end{abstract}
 
 \section{Introduction}
@@ -59,10 +61,10 @@ $\delta(G)$ whenever at least two vertices attain the minimum degree.  A
 
 Conjecture~143 of Written on the Wall II, dated 2005, reads as
 follows~\cite{WestReg}: \emph{if $G$ is connected and not a tree, then
-$\tr(G)\ge(\gr(G)+1)/\dd(G)$.}  At the time of writing, the conjecture is
-listed as open in West's register~\cite{WestReg} and is stated as a
-research-open item in the Google DeepMind \emph{Formal Conjectures}
-repository~\cite{FC,FC143}.  We prove it in the following equivalent,
+$\tr(G)\ge(\gr(G)+1)/\dd(G)$.}  At the time of writing, West's current
+entry contains no solution note~\cite{WestReg}, and the conjecture is stated
+as a research-open item in the upstream Google DeepMind \emph{Formal
+Conjectures} repository~\cite{FC,FC143}.  We prove it in the equivalent,
 denominator-free form.
 
 \begin{theorem}\label{thm:main}
@@ -98,28 +100,26 @@ an induced forest and $f_1(G)$ the number of leaves of a connected graph $G$
 with a cycle, then $f(G)\ge\gr(G)+f_1(G)-1$.  With two leaves this produces an
 induced forest on $\gr(G)+1$ vertices, but the forest need not be connected,
 and the general forest-to-tree transfer of~\cite[Theorem~2.3]{HMS14} is too
-lossy to recover Lemma~\ref{lem:twoleaf-intro} from it.  The foundational
-paper~\cite{ESS86} bounds $\tr(G)$ in terms of order, size, radius,
-independence and clique numbers, but contains no bound involving girth or the
-second-smallest degree.
+lossy to recover Lemma~\ref{lem:twoleaf-intro} from it.  A targeted search of
+the foundational paper~\cite{ESS86} found bounds for $\tr(G)$ in terms of
+order, size, radius, independence and clique numbers, but no bound involving
+girth or the second-smallest degree.
 
-\paragraph{A remark on priority.}
-Conjecture~143 has, to our knowledge, no published proof: it is carried as
-open by the current registers~\cite{WestReg,FC143}, it does not appear on the
-resolved-conjecture lists accompanying~\cite{WOWII}, and formula and citation
-searches around~\cite{ESS86,DW04,HMS14} located no proof of the theorem or of
-Lemma~\ref{lem:twoleaf-intro}.  While this work was being completed, a pull
-request against the Formal Conjectures repository (\#4442, filed July~16,
-2026, one day before the present proof was found) appeared, announcing a
-machine-assisted resolution of the same conjecture via an externally hosted
-Lean development.  That claim is unreviewed and unmerged at the time of
-writing; we have, however, compiled the linked development against the
-repository's pinned toolchain and confirmed that it does prove the
-repository statement, so it constitutes an earlier concurrent resolution.
-The present proof and formalization were obtained independently of it, and
-this note appears to be the first human-readable exposition of a proof.
-Because the argument is short and close in spirit to the 2004 forest bound,
-we also do not claim that it could not have been observed before.
+\paragraph{Concurrent formal resolution and priority.}
+The current registers carry no solution note for Conjecture~143
+\cite{WestReg,FC143}, and targeted formula and citation searches around
+\cite{ESS86,DW04,HMS14} located no published proof of the theorem or of
+Lemma~\ref{lem:twoleaf-intro}.  These negative searches are not proof of
+absence.  Moreover, on July~16, 2026, one day before the present proof was
+found, pull request \#4442 against the Formal Conjectures repository
+announced a machine-assisted resolution via an externally hosted Lean
+development~\cite{FC4442}.  The pull request remains unmerged at the time of
+writing, but we compiled the linked development against the repository's
+pinned toolchain and confirmed that it proves the repository statement.
+Accordingly, we make no claim of priority for resolving the conjecture.  The
+elementary proof and formalization presented here were obtained independently;
+because the argument is short and close in spirit to the 2004 forest bound,
+we also do not claim that it was never observed before.
 
 \paragraph{Verification.}
 Beyond the human-readable proof below, Theorem~\ref{thm:main} has been
@@ -127,10 +127,12 @@ formalized and machine-checked in Lean~4~\cite{Lean4} on top of
 Mathlib~\cite{mathlib}, against the pre-existing formal statement of
 Conjecture~143 in the Formal Conjectures repository~\cite{FC143}; see
 Section~\ref{sec:formal}.  As an independent falsification test, the theorem,
-the lemma, and the constrained form of the maximality argument were verified
-exhaustively (by two independent exact programs) on all $1252$ unlabeled
-graphs on one to seven vertices, with no violation; the computation plays no
-role in the proof.
+the lemma, and the constrained form of the maximality argument were checked by
+two separately written exact checkers over the same atlas of all $1252$ nonempty unlabeled graphs of
+order at most seven.  This includes all $971$ connected cyclic graphs in the
+atlas, and the constrained check covered all $199$ unordered leaf pairs in
+the relevant graphs.  No violation was found; the computation plays no role
+in the proof.
 
 \section{Notation}
 
@@ -261,7 +263,7 @@ $\tr(H)\,\dd(H)=2\cdot2=4=\gr(H)+1$.
 
 \section{Formalization}\label{sec:formal}
 
-The Google DeepMind \emph{Formal Conjectures} project~\cite{FC} maintains
+The Google DeepMind \emph{Formal Conjectures} project~\cite{FC,FCPaper} maintains
 Lean~4 formalizations of open conjectures; Conjecture~143 was added in June
 2026 as the statement \texttt{conjecture143} in the file
 \texttt{FormalConjectures/WrittenOnTheWallII/GraphConjecture143.lean},
@@ -275,35 +277,34 @@ Mathlib's $\mathbb{N}$-valued girth (which is $0$ on acyclic graphs).
 
 \begin{sloppypar}
 We have produced a complete, \texttt{sorry}-free Lean~4 proof of exactly this
-statement, machine-checked with Lean toolchain v4.27.0 against current
-Mathlib~\cite{mathlib}.  The development follows the paper proof, with the
+statement, machine-checked with Lean toolchain v4.27.0 against the Mathlib
+revision pinned by Formal Conjectures commit \texttt{c252a41}~\cite{mathlib}.
+The development follows the paper proof, with the
 supporting results proved as reusable graph-theoretic API
 (\texttt{SimpleGraph} namespace): the one-vertex extension of an induced tree
-along a unique neighbour (\texttt{IsTree.induce\_insert\_of\_unique\_adj});
+along a unique neighbour (\path{IsTree.induce_insert_of_unique_adj});
 induced trees from geodesics
-(\texttt{Walk.induce\_support\_isTree\_of\_length\_eq\_dist}) and the induced
+(\path{Walk.induce_support_isTree_of_length_eq_dist}) and the induced
 path obtained from a shortest cycle
-(\texttt{girth\_sub\_one\_le\_largestInducedTreeSize}); the existence of a
+(\path{girth_sub_one_le_largestInducedTreeSize}); the existence of a
 maximum-order induced tree containing two prescribed vertices
-(\texttt{exists\_maximum\_induced\_tree\_containing}); the boundary-vertex and
+(\path{exists_maximum_induced_tree_containing}); the boundary-vertex and
 two-neighbour maximality arguments
-(\texttt{Connected.exists\_adj\_finset\_compl},
-\texttt{exists\_two\_adj\_of\_maximum\_induced\_tree\_containing}); the
+(\path{Connected.exists_adj_finset_compl},
+\path{exists_two_adj_of_maximum_induced_tree_containing}); the
 cycle-closing certificate with the counting steps of Lemma~\ref{lem:twoleaf}
-(\texttt{IsTree.girth\_add\_one\_le\_card\_of\_two\_leaves\_of\_two\_adj},
-\texttt{girth\_add\_one\_le\_largestInducedTreeSize\_of\_two\_leaves}); and the
+(\path{IsTree.girth_add_one_le_card_of_two_leaves_of_two_adj},
+\path{girth_add_one_le_largestInducedTreeSize_of_two_leaves}); and the
 extraction of two leaves from $\dd(G)=1$
-(\texttt{exists\_distinct\_degree\_one\_of\_secondSmallestDegree\_eq\_one}).
+(\path{exists_distinct_degree_one_of_secondSmallestDegree_eq_one}).
 The main theorem is then assembled by the case split of
 Theorem~\ref{thm:main} in under thirty lines.  The proof uses no
-\texttt{native\_decide} and no additional axioms: auditing
-\texttt{\#print axioms conjecture143} reports only \texttt{propext},
-\texttt{Classical.choice}, and \texttt{Quot.sound}.  The full proof was
-additionally re-derived and compiled in a second, independently written
-assembly as a cross-check.  The source is available in the author's fork of
-the repository and is included as ancillary files with this submission; a
-pull request updating the status of Conjecture~143 is being coordinated with
-the repository maintainers.
+\texttt{native\_decide} and no project-specific axioms.  Auditing
+\texttt{\#print axioms conjecture143} reports exactly \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}.  The proof source is
+publicly archived in the author's fork~\cite{OurLean}.  The ancillary files
+reproduce the branch after the metadata-only follow-up commit
+\texttt{eb6445545bf839436642b895ad178cb397164dea}.
 \end{sloppypar}
 
 \paragraph{Acknowledgements.}
@@ -311,7 +312,14 @@ The author thanks the maintainers of the Formal Conjectures repository for
 the formal statement, and Ermelinda DeLaVi\~na and Douglas B.\ West for
 maintaining the Graffiti.pc conjecture lists.
 
-\begin{thebibliography}{10}
+\paragraph{Use of generative AI.}
+OpenAI Codex was used extensively for proof exploration, literature-search
+assistance, computational checks, Lean development, and manuscript
+preparation.  It is not an author.  Responsibility for verifying the work and
+for the final submitted version rests entirely with the named human author.
+
+
+\begin{thebibliography}{15}
 
 \bibitem{DeL01}
 E.~DeLaVi\~na,
@@ -362,16 +370,37 @@ Yugosl.\ J.\ Oper.\ Res.\ 24 (2014), no.~2, 199--215.
 \href{https://doi.org/10.2298/YJOR130402037H}{doi:10.2298/YJOR130402037H}.
 
 \bibitem{FC}
-Google DeepMind,
-\emph{Formal Conjectures},
-GitHub repository,
+The Formal Conjectures Authors,
+\emph{The Formal Conjectures Repository},
+GitHub repository, 2025,
 \url{https://github.com/google-deepmind/formal-conjectures}.
+
+\bibitem{FCPaper}
+M.~Firsching, P.~Lezeau, S.~Mercuri, M.~Z.~Horv\'ath, Y.~Dillies,
+C.~S\"onne, E.~Wieser, F.~Zhang, T.~Hubert, B.~Ag\"uera y Arcas,
+and P.~Kohli,
+\emph{Formal Conjectures: An Open and Evolving Benchmark for Verified
+Discovery in Mathematics}, arXiv:2605.13171 (2026),
+\url{https://arxiv.org/abs/2605.13171}.
 
 \bibitem{FC143}
 Formal Conjectures,
 \emph{GraphConjecture143.lean},
 \url{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/WrittenOnTheWallII/GraphConjecture143.lean}
 (retrieved July 2026).
+
+\bibitem{FC4442}
+GitHub user \texttt{DomTheDeveloper},
+\emph{Mark WOWII Graph Conjecture 143 solved},
+Formal Conjectures pull request \#4442, July 16, 2026,
+\url{https://github.com/google-deepmind/formal-conjectures/pull/4442}.
+
+\bibitem{OurLean}
+A.~Ferudun,
+\emph{Lean 4 proof of WOWII Graph Conjecture 143},
+commit \texttt{6aab64fe70c1309463435260d104863dcef93807}, 2026,
+\url{https://github.com/AlperTheKing/formal-conjectures/commit/6aab64fe70c1309463435260d104863dcef93807}.
+
 
 \bibitem{Lean4}
 L.~de~Moura and S.~Ullrich,

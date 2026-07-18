@@ -1,0 +1,238 @@
+{
+  "atlas_total": 1253,
+  "c141_equality_cases": [
+    {
+      "girth": 4,
+      "graph6": "Cl",
+      "lhs": 3,
+      "m": 4,
+      "max_l": 2,
+      "n": 4,
+      "rhs": 3,
+      "tree": 3
+    },
+    {
+      "girth": 4,
+      "graph6": "DbW",
+      "lhs": 4,
+      "m": 5,
+      "max_l": 3,
+      "n": 5,
+      "rhs": 4,
+      "tree": 4
+    },
+    {
+      "girth": 4,
+      "graph6": "D]o",
+      "lhs": 4,
+      "m": 6,
+      "max_l": 3,
+      "n": 5,
+      "rhs": 4,
+      "tree": 4
+    },
+    {
+      "girth": 4,
+      "graph6": "E]a?",
+      "lhs": 5,
+      "m": 6,
+      "max_l": 4,
+      "n": 6,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "EXSg",
+      "lhs": 5,
+      "m": 7,
+      "max_l": 4,
+      "n": 6,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "E?~o",
+      "lhs": 5,
+      "m": 8,
+      "max_l": 4,
+      "n": 6,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "EhUg",
+      "lhs": 4,
+      "m": 8,
+      "max_l": 3,
+      "n": 6,
+      "rhs": 4,
+      "tree": 4
+    },
+    {
+      "girth": 4,
+      "graph6": "ElUg",
+      "lhs": 4,
+      "m": 9,
+      "max_l": 3,
+      "n": 6,
+      "rhs": 4,
+      "tree": 4
+    },
+    {
+      "girth": 4,
+      "graph6": "FMpA?",
+      "lhs": 6,
+      "m": 7,
+      "max_l": 5,
+      "n": 7,
+      "rhs": 6,
+      "tree": 6
+    },
+    {
+      "girth": 4,
+      "graph6": "Flg`?",
+      "lhs": 6,
+      "m": 8,
+      "max_l": 5,
+      "n": 7,
+      "rhs": 6,
+      "tree": 6
+    },
+    {
+      "girth": 4,
+      "graph6": "FFwG_",
+      "lhs": 5,
+      "m": 8,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "F`EBW",
+      "lhs": 5,
+      "m": 8,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "F?~oO",
+      "lhs": 6,
+      "m": 9,
+      "max_l": 5,
+      "n": 7,
+      "rhs": 6,
+      "tree": 6
+    },
+    {
+      "girth": 4,
+      "graph6": "FhUgG",
+      "lhs": 5,
+      "m": 9,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "FlUk?",
+      "lhs": 5,
+      "m": 10,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "F]rE?",
+      "lhs": 6,
+      "m": 10,
+      "max_l": 5,
+      "n": 7,
+      "rhs": 6,
+      "tree": 6
+    },
+    {
+      "girth": 4,
+      "graph6": "FMowo",
+      "lhs": 5,
+      "m": 10,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "F]MIO",
+      "lhs": 5,
+      "m": 10,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "FlhWo",
+      "lhs": 5,
+      "m": 11,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    },
+    {
+      "girth": 4,
+      "graph6": "FreRW",
+      "lhs": 5,
+      "m": 12,
+      "max_l": 4,
+      "n": 7,
+      "rhs": 5,
+      "tree": 5
+    }
+  ],
+  "c141_equality_count": 20,
+  "c145_hypothesis_failed_count": 208,
+  "connected_n_ge_2_checked": 995,
+  "min_slack": {
+    "c141": "0",
+    "c142": "0",
+    "c144": "0",
+    "c145": "0",
+    "c146": "0"
+  },
+  "min_slack_graph6": {
+    "c141": "Cl",
+    "c142": "Bw",
+    "c144": "Bw",
+    "c145": "Dx_",
+    "c146": "Dx_"
+  },
+  "skipped": 258,
+  "test": "WOWII_FC_conjectures_141_142_144_145_146_atlas_n2_7",
+  "violation_counts": {
+    "c141": 0,
+    "c142": 0,
+    "c144": 0,
+    "c145": 0,
+    "c146": 0
+  },
+  "violations": {
+    "c141": [],
+    "c142": [],
+    "c144": [],
+    "c145": [],
+    "c146": []
+  }
+}

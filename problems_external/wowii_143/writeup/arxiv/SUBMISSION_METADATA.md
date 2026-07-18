@@ -17,13 +17,19 @@ step is an elementary global argument showing that a connected graph
 containing a cycle and at least two vertices of degree one has an induced tree
 on at least g(G)+1 vertices. The bound is sharp for every girth. The proof has
 been formalized and machine-checked in Lean 4 against the statement of the
-conjecture in the Google DeepMind Formal Conjectures repository. A concurrent
-machine-assisted resolution by another author, one day earlier, is discussed
-in the introduction.
+conjecture in the Google DeepMind Formal Conjectures repository. An independent
+machine-assisted resolution was announced one day earlier; we make no claim of priority.
 
-- **Ancillary files (anc/):** the three Lean files of the PR branch
-  (GraphConjecture143.lean, LargestInducedTree.lean, Degrees.lean) + README
-  with toolchain pin (Lean v4.27.0, formal-conjectures @ c252a41) and the
-  axiom-audit transcript.
-- **Comments field:** "8 pages. Lean 4 formalization included as ancillary
-  files; see also google-deepmind/formal-conjectures."
+- **Ancillary files (anc/):** the three Lean files from the proof branch
+  (GraphConjecture143.lean, LargestInducedTree.lean, Degrees.lean), a README
+  with the toolchain pin and axiom audit, and two separately written Graph Atlas
+  checkers with their complete JSON outputs. The Apache-2.0 license text
+  governing the redistributed Lean files is included.
+- **Comments field:** "6 pages. Lean 4 formalization and reproducible Graph
+  Atlas checks included as ancillary files; see also
+  google-deepmind/formal-conjectures."
+
+- **Before submission:** the named author must personally confirm the author
+  name and email in the TeX source, review every claim and ancillary file,
+  retain the generative-AI disclosure, and verify the priority note for PR
+  #4442 against its status on the submission date.

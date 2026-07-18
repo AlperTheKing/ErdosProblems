@@ -1,0 +1,2 @@
+import FormalConjectures.WrittenOnTheWallII.GraphConjecture141
+#print axioms WrittenOnTheWallII.GraphConjecture141.conjecture141

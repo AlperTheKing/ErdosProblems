@@ -1,0 +1,96 @@
+{
+  "artifacts": {
+    "detailed_results": "atlas_check_results.jsonl",
+    "detailed_results_sha256": "e86f0d92c68352ef87d0f99b39bc3d3e356282aed38f208ca3eb829457684aeb",
+    "failures": "atlas_check_failures.json",
+    "failures_sha256": "b6e210d59c0a4f54415da384bf96fae8709b92b7c12f16aaa8fbe8c5de2a80bb",
+    "summary": "atlas_check_summary.json"
+  },
+  "by_order": {
+    "1": {
+      "connected": 1,
+      "cyclic": 0,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 0
+    },
+    "2": {
+      "connected": 1,
+      "cyclic": 0,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 1
+    },
+    "3": {
+      "connected": 2,
+      "cyclic": 1,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 2
+    },
+    "4": {
+      "connected": 6,
+      "cyclic": 4,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 6
+    },
+    "5": {
+      "connected": 21,
+      "cyclic": 18,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 21
+    },
+    "6": {
+      "connected": 112,
+      "cyclic": 106,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 112
+    },
+    "7": {
+      "connected": 853,
+      "cyclic": 842,
+      "cyclic_construction_failures": 0,
+      "inequality_failures": 0,
+      "theorem_domain": 853
+    }
+  },
+  "checks": {
+    "cyclic_r1_construction_failures": 0,
+    "inequality_failures": 0,
+    "total_failure_certificates": 0
+  },
+  "extrema": {
+    "maximum_girth": 7,
+    "maximum_largest_induced_tree_size": 7,
+    "maximum_local_independence": 6,
+    "maximum_theorem_slack": 6,
+    "minimum_theorem_slack": 0
+  },
+  "generated_at_utc": "2026-07-18T05:24:09.575620+00:00",
+  "method": {
+    "fail_fast": true,
+    "failure_order": "(order, size, atlas_index)",
+    "girth": "minimum edge-deleted endpoint distance plus one",
+    "largest_induced_tree": "enumerate vertex subsets in decreasing order",
+    "local_independence": "enumerate every neighbourhood subset",
+    "r1": "maximum local independent star plus deterministic BFS geodesic"
+  },
+  "networkx_version": "3.6.1",
+  "python_version": "3.12.4",
+  "schema_version": 1,
+  "scope": {
+    "atlas_entries": 1253,
+    "connected_entries_including_singleton": 996,
+    "fully_enumerated": true,
+    "maximum_order": 7,
+    "processed_connected_entries": 996,
+    "processed_cyclic_theorem_domain_entries": 971,
+    "processed_forest_theorem_domain_entries": 24,
+    "processed_theorem_domain_entries": 995
+  },
+  "smallest_failure": null,
+  "status": "PASS"
+}

@@ -1,0 +1,118 @@
+{
+  "c141_equality_cases": [
+    {
+      "family": "tadpole(4,1)",
+      "girth": 4,
+      "graph6": "Dl_",
+      "max_l": 3,
+      "n": 5,
+      "tree": 4
+    },
+    {
+      "family": "cycle_star(4,2)",
+      "girth": 4,
+      "graph6": "Ela?",
+      "max_l": 4,
+      "n": 6,
+      "tree": 5
+    },
+    {
+      "family": "cycle_star(4,3)",
+      "girth": 4,
+      "graph6": "FlaC?",
+      "max_l": 5,
+      "n": 7,
+      "tree": 6
+    },
+    {
+      "family": "cycle_star(4,4)",
+      "girth": 4,
+      "graph6": "GlaCC?",
+      "max_l": 6,
+      "n": 8,
+      "tree": 7
+    },
+    {
+      "family": "cycle_star(4,5)",
+      "girth": 4,
+      "graph6": "HlaCCA?",
+      "max_l": 7,
+      "n": 9,
+      "tree": 8
+    },
+    {
+      "family": "theta(2,2,2)",
+      "girth": 4,
+      "graph6": "Dlg",
+      "max_l": 3,
+      "n": 5,
+      "tree": 4
+    },
+    {
+      "family": "dumbbell(4,4,0)",
+      "girth": 4,
+      "graph6": "Fl_KG",
+      "max_l": 4,
+      "n": 7,
+      "tree": 5
+    },
+    {
+      "family": "moebius_ladder(3)",
+      "girth": 4,
+      "graph6": "ElUg",
+      "max_l": 3,
+      "n": 6,
+      "tree": 4
+    },
+    {
+      "family": "K33",
+      "girth": 4,
+      "graph6": "EFz_",
+      "max_l": 3,
+      "n": 6,
+      "tree": 4
+    },
+    {
+      "family": "K44",
+      "girth": 4,
+      "graph6": "G?~vf_",
+      "max_l": 4,
+      "n": 8,
+      "tree": 5
+    }
+  ],
+  "c141_equality_count": 10,
+  "c145_hypothesis_failed_count": 79,
+  "duplicates_skipped": 25,
+  "graphs_checked": 3288,
+  "min_slack": {
+    "c141": "0",
+    "c142": "0",
+    "c144": "0",
+    "c145": "0",
+    "c146": "0"
+  },
+  "min_slack_witness": {
+    "c141": "tadpole(4,1) [Dl_]",
+    "c142": "tadpole(3,1) [C{]",
+    "c144": "tadpole(3,1) [C{]",
+    "c145": "cycle_spider(3,(2, 2)) [F{E?G]",
+    "c146": "cycle_spider(3,(2, 2)) [F{E?G]"
+  },
+  "seed": 20260718,
+  "test": "WOWII_FC_141_142_144_145_146_families_and_random",
+  "violation_counts": {
+    "c141": 0,
+    "c142": 0,
+    "c144": 0,
+    "c145": 0,
+    "c146": 0
+  },
+  "violations": {
+    "c141": [],
+    "c142": [],
+    "c144": [],
+    "c145": [],
+    "c146": []
+  }
+}

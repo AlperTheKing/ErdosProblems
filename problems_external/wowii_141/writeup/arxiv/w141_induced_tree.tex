@@ -1,0 +1,344 @@
+% A proof of Graffiti.pc Conjecture 141 (WOWII): t(G) >= floor(g/2) - 1 + max_v l(v),
+% via the stronger bound t >= Delta + g - 3 for triangle-free cyclic graphs.
+\documentclass[11pt]{article}
+\pdfoutput=1
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\tr}{\operatorname{t}}
+\newcommand{\gr}{\operatorname{g}}
+\newcommand{\lv}{\ell}
+
+\title{Largest induced trees in graphs of given girth and maximum degree,\\
+with a proof of Graffiti.pc's Conjecture 141}
+\author{Alper Ferudun\\\texttt{alper@mercurycodelab.com}}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a finite simple graph $G$, let $\tr(G)$ denote the largest number of
+vertices inducing a tree, $\gr(G)$ the girth, $\Delta(G)$ the maximum degree,
+and for a vertex $v$ let $\lv(v)$ denote the independence number of the
+subgraph induced by the neighbourhood of $v$.  We prove that every finite
+connected triangle-free graph containing a cycle satisfies
+$\tr(G)\ge\Delta(G)+\gr(G)-3$, with equality for all cycles and all complete
+bipartite graphs.  As a corollary we prove Conjecture~141 of the
+conjecture-making program Graffiti.pc (DeLaVi\~na, \emph{Written on the Wall
+II}, 2005): every finite connected graph satisfies
+$\tr(G)\ge\lfloor\gr(G)/2\rfloor-1+\max_v\lv(v)$.  The proofs are elementary
+maximality arguments.  Both results have been formalized and machine-checked
+in Lean~4 against the statement of the conjecture in the Google DeepMind
+\emph{Formal Conjectures} repository.
+\end{abstract}
+
+\section{Introduction}
+
+Graffiti.pc, developed by DeLaVi\~na~\cite{DeL01,DeLhistory} as a successor of
+Fajtlowicz's program Graffiti~\cite{Faj88}, generates conjectural inequalities
+between graph invariants; its conjectures are collected in the lists
+\emph{Written on the Wall II}~\cite{WOWII}, with a curated register maintained
+by West~\cite{WestReg}.  A run of these conjectures bounds from below the
+invariant $\tr(G)$, the largest order of an induced subtree, whose systematic
+study goes back to Erd\H{o}s, Saks, and S\'os~\cite{ESS86}.
+
+Throughout, $G$ is a finite simple graph, $\gr(G)$ its girth, $\Delta(G)$ its
+maximum degree, and for a vertex $v$ we write
+$\lv(v)$ for the independence number of the subgraph induced by the
+neighbourhood $N(v)$.  Conjecture~141 of Written on the Wall II, dated 2005,
+asserts~\cite{WestReg,WOWII}:
+
+\begin{quote}
+\emph{If $G$ is a simple connected graph, then
+$\tr(G)\ \ge\ \lfloor \gr(G)/2\rfloor - 1 + \max_v \lv(v)$.}
+\end{quote}
+
+At the time of writing the conjecture is listed as open on DeLaVi\~na's
+register (status ``O'')~\cite{WOWII}, is carried without a solution note by
+West~\cite{WestReg}, and is stated as a research-open item in the Google
+DeepMind \emph{Formal Conjectures} repository~\cite{FC,FC141}.  We prove it.
+The main step is the following sharper bound, which does not involve
+$\lv$ at all and may be of independent interest.
+
+\begin{theorem}\label{thm:main}
+Let $G$ be a finite simple connected triangle-free graph that contains a
+cycle.  Then
+\[
+  \tr(G)\;\ge\;\Delta(G)+\gr(G)-3 .
+\]
+Equality holds for every cycle $C_g$ ($g\ge4$) and every complete bipartite
+graph $K_{a,b}$ with $a,b\ge2$.
+\end{theorem}
+
+\begin{corollary}[Conjecture 141]\label{cor:141}
+Every finite simple connected graph $G$ on at least two vertices satisfies
+$\tr(G)\ \ge\ \lfloor \gr(G)/2\rfloor - 1 + \max_v \lv(v)$, where
+$\gr(G):=0$ if $G$ is acyclic.
+\end{corollary}
+
+The deduction of the corollary is short: for girth $\le5$ (and for acyclic
+graphs) an induced star at a vertex maximizing $\lv$ already beats the bound,
+while for girth $\ge6$ the graph is triangle-free, so $\lv(v)=\deg(v)$ for
+every $v$, and Theorem~\ref{thm:main} applies with
+$\gr-3\ge\lfloor\gr/2\rfloor-1$.
+
+The proof of Theorem~\ref{thm:main} is a maximality argument in the spirit of
+our proof of Graffiti.pc's Conjecture~143~\cite{W143}: a maximum-order induced
+tree containing the closed neighbourhood of a maximum-degree vertex either
+spans (impossible in a cyclic graph) or admits an outside vertex with two
+neighbours on the tree; the tree path joining those two neighbours closes a
+cycle, hence has length at least $\gr(G)-2$, and it can share at most three
+vertices with the closed neighbourhood.
+
+\paragraph{Related work.}
+The foundational paper~\cite{ESS86} bounds $\tr(G)$ in terms of order, size,
+radius, and independence and clique numbers; we are not aware of a published
+lower bound for $\tr$ combining girth with the maximum degree or with
+neighbourhood independence, and the closest Graffiti.pc antecedents (the
+induced-forest bounds of DeLaVi\~na--Waller~\cite{DW04}; see also
+Hertz--Marcotte--Schindl~\cite{HMS14}) concern induced forests rather than
+trees.  DeLaVi\~na's resolved-conjecture lists do not contain
+Conjecture~141~\cite{WOWII}.  As with any short elementary argument, we do
+not claim it could not have been observed before.
+
+\paragraph{Verification.}
+Theorem~\ref{thm:main} and Corollary~\ref{cor:141} have been formalized and
+machine-checked in Lean~4~\cite{Lean4} on top of Mathlib~\cite{mathlib},
+against the pre-existing formal statement \texttt{conjecture141} of the
+Formal Conjectures repository~\cite{FC141}; see Section~\ref{sec:formal}.
+Independently, the conjecture and all intermediate claims were verified
+exhaustively by exact computation on all $995$ connected graphs on $2$--$7$
+vertices and on structured families (cages, prisms, generalized theta graphs,
+cycles with pendant trees, complete bipartite graphs, and seeded random
+graphs); no violation was found, and every equality case located has girth
+exactly~$4$.  The computations play no role in the proofs.
+
+\section{Notation}
+
+All graphs are finite and simple.  For $S\subseteq V(G)$, $G[S]$ is the
+induced subgraph; $S$ \emph{induces a tree} if $G[S]$ is connected and
+acyclic, and $\tr(G)=\max\{|S|:G[S]\text{ is a tree}\}$.  The girth of a
+graph containing a cycle is the minimum length of a cycle; following the
+Mathlib convention used by the formal statement, an acyclic graph has girth
+$0$.  $N(v)$ and $N[v]=N(v)\cup\{v\}$ are the open and closed
+neighbourhoods; $\lv(v)$ is the independence number of $G[N(v)]$.  Note
+$\lv(v)\le\deg(v)$ always, with equality when $N(v)$ is independent, i.e.\
+for all $v$ when $G$ is triangle-free.
+
+\section{The star lemma}
+
+\begin{lemma}\label{lem:star}
+For every vertex $v$ of any graph $G$: $\tr(G)\ \ge\ \lv(v)+1$.
+\end{lemma}
+
+\begin{proof}
+Let $S\subseteq N(v)$ be independent with $|S|=\lv(v)$.  Then
+$G[\{v\}\cup S]$ is a star: all edges $vs$ ($s\in S$) are present and there
+are no edges inside $S$.  A star is a tree.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Write $g=\gr(G)\ge4$ and $\Delta=\Delta(G)$.  Fix a vertex $v$ of degree
+$\Delta$.  Since $G$ is triangle-free, $N(v)$ is independent, so by the proof
+of Lemma~\ref{lem:star} the closed neighbourhood $N[v]$ induces a star, hence
+a tree.  Among all sets $S\supseteq N[v]$ inducing a tree choose one, say
+$S^*$, of maximum cardinality, and let $T=G[S^*]$.
+
+$S^*$ is a proper subset of $V(G)$: an induced spanning tree would make $G$
+itself a tree, contradicting the existence of a cycle.  Since $G$ is
+connected, some vertex $z\notin S^*$ has a neighbour in $S^*$; and $z$ must
+have two distinct neighbours $a,b\in S^*$, for otherwise $G[S^*\cup\{z\}]$
+would be the tree $T$ with a pendant vertex attached, an induced tree
+containing $N[v]$ and larger than $T$ --- contradicting maximality.
+
+Let $P$ be the unique $a$--$b$ path in $T$.  The edges of $P$ together with
+$za$ and $zb$ form a cycle of length $|E(P)|+2$, so
+\begin{equation}\label{eq:girthbound}
+  |E(P)|\;\ge\;g-2 .
+\end{equation}
+
+Next, $|V(P)\cap N[v]|\le 3$.  Every edge of $G$ between two vertices of
+$S^*$ is an edge of the tree $T$ (as $T$ is induced), and paths between fixed
+endpoints in a tree are unique.  If $v\notin V(P)$ and $P$ contained two
+distinct vertices $u_1,u_2\in N(v)$, then the segment of $P$ between $u_1$
+and $u_2$ would be the unique $u_1$--$u_2$ path in $T$; but $u_1vu_2$ is also
+a $u_1$--$u_2$ path in $T$, so the segment would pass through $v$,
+contradicting $v\notin V(P)$; hence $|V(P)\cap N[v]|\le1$ in this case.  If
+$v\in V(P)$, then for any $u\in V(P)\cap N(v)$ the segment of $P$ between $v$
+and $u$ is the unique $v$--$u$ path of $T$, which is the single edge $vu$;
+so $u$ is adjacent to $v$ \emph{along} $P$, and a path has at most two edges
+at any vertex: $|V(P)\cap N(v)|\le2$, so $|V(P)\cap N[v]|\le3$.
+
+Finally, count.  $V(P)$ and $N[v]$ are subsets of $S^*$, so by
+inclusion--exclusion and~\eqref{eq:girthbound},
+\[
+  |S^*|\;\ge\;|V(P)\cup N[v]|\;=\;|V(P)|+|N[v]|-|V(P)\cap N[v]|
+  \;\ge\;(g-1)+(\Delta+1)-3\;=\;\Delta+g-3 .
+\]
+Since $T$ is an induced tree, $\tr(G)\ge|S^*|\ge\Delta+g-3$.
+
+For sharpness: in $C_g$ ($\Delta=2$) the largest induced trees are the paths
+obtained by deleting one vertex, so $\tr=g-1=\Delta+g-3$; in $K_{a,b}$ with
+$a\le b$ ($g=4$, $\Delta=b$) every induced tree is a star (two vertices on
+each side already induce $C_4$), so $\tr=b+1=\Delta+g-3$.
+\end{proof}
+
+\begin{remark}\label{rem:ball}
+An alternative proof of the slightly weaker bound
+$\tr\ge\Delta+\lfloor g/2\rfloor-1$ (still sufficient for
+Corollary~\ref{cor:141}) is worth recording: for
+$r=\lfloor g/2\rfloor-1$, the ball $B(v,r)$ induces a tree in any graph of
+girth $g$ --- every $G$-edge inside the ball is an edge of a breadth-first
+search tree rooted at $v$, since a non-tree edge would close a cycle of
+length at most $2r+1<g$ through the last common ancestor of its endpoints ---
+and if $G$ contains a cycle the ball is proper, so all $r$ distance layers
+are nonempty and $|B(v,r)|\ge1+\Delta+(r-1)$.
+\end{remark}
+
+\section{Proof of Corollary~\ref{cor:141}}
+
+\begin{proof}[Proof of Corollary~\ref{cor:141}]
+Let $L=\max_v\lv(v)$; note $L\ge1$ since $G$ is connected on $\ge2$
+vertices.  If $G$ is acyclic then $\gr=0$ and the claimed bound is
+$L-1\le\tr$, which follows from Lemma~\ref{lem:star}.  If
+$3\le\gr\le5$ then $\lfloor \gr/2\rfloor-1\le1$ and Lemma~\ref{lem:star}
+again gives $\tr\ge L+1\ge\lfloor \gr/2\rfloor-1+L$.  If $\gr\ge6$ then $G$
+is triangle-free, so $\lv(v)=\deg(v)$ for every $v$ and $L=\Delta$; by
+Theorem~\ref{thm:main},
+$\tr\ge\Delta+\gr-3\ge\Delta+\lfloor \gr/2\rfloor-1=L+\lfloor
+\gr/2\rfloor-1$, using $\gr-3\ge\lfloor \gr/2\rfloor-1$ for $\gr\ge4$.
+\end{proof}
+
+\begin{remark}
+The corollary is sharp precisely in girth~$4$: equality holds for $C_4$, for
+every $K_{a,b}$ ($a,b\ge2$), and for the infinite family obtained from $C_4$
+by attaching $k\ge0$ pendant vertices to one vertex ($\lv_{\max}=k+2$,
+$\tr=k+3$).  In an exhaustive check of all connected graphs on at most seven
+vertices, every equality case has girth exactly~$4$.
+\end{remark}
+
+\section{Formalization}\label{sec:formal}
+
+The Formal Conjectures project~\cite{FC} maintains Lean~4 formalizations of
+open conjectures; Conjecture~141 appears as the statement
+\texttt{conjecture141} in
+\texttt{FormalConjectures/WrittenOnTheWallII/GraphConjecture141.lean},
+marked \texttt{research open}~\cite{FC141}, in the denominator-explicit
+integer form
+$\lfloor\gr(G)/2\rfloor-1+\max_v\lv(v)\le\tr(G)$
+with $\tr$ and $\lv$ given by the repository definitions
+\texttt{largestInducedTreeSize} and \texttt{indepNeighborsCard}, and with
+Mathlib's $\mathbb{N}$-valued girth ($0$ on acyclic graphs).
+
+We have produced a complete, \texttt{sorry}-free Lean~4 proof of exactly this
+statement, machine-checked with Lean toolchain v4.27.0 against current
+Mathlib, together with the supporting API: the star construction, the
+maximum-induced-tree selection with prescribed vertices, the two-neighbour
+maximality obstruction, the tree-path girth certificate, and the
+three-vertex overlap bound of Theorem~\ref{thm:main}.  The development
+builds on the reusable induced-tree API we contributed alongside
+Conjecture~143~\cite{W143}.  The proof uses no \texttt{native\_decide} and no
+additional axioms (\texttt{\#print axioms} reports \texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound}).  The source is available in
+the author's fork of the repository and as ancillary files with this
+submission.
+
+\paragraph{Acknowledgements.}
+The author thanks the maintainers of the Formal Conjectures repository for
+the formal statements, and Ermelinda DeLaVi\~na and Douglas B.\ West for
+maintaining the Graffiti.pc conjecture lists.
+
+\begin{thebibliography}{10}
+
+\bibitem{DeL01}
+E.~DeLaVi\~na,
+\emph{Graffiti.pc},
+Graph Theory Notes of New York XLII:3 (2002), 26--30.
+
+\bibitem{DeLhistory}
+E.~DeLaVi\~na,
+\emph{Some history of the development of Graffiti},
+in: Graphs and Discovery, DIMACS Ser.\ Discrete Math.\ Theoret.\ Comput.\
+Sci.\ 69, AMS, 2005, 81--118.
+
+\bibitem{WOWII}
+E.~DeLaVi\~na,
+\emph{Written on the Wall II: Conjectures of Graffiti.pc},
+web list, University of Houston--Downtown,
+\url{http://cms.dt.uh.edu/faculty/delavinae/research/wowII/} (retrieved July
+2026).
+
+\bibitem{WestReg}
+D.~B. West,
+\emph{Some conjectures of Graffiti.pc},
+web register,
+\url{https://dwest.web.illinois.edu/regs/graffiti.html} (retrieved July
+2026).
+
+\bibitem{Faj88}
+S.~Fajtlowicz,
+\emph{On conjectures of Graffiti},
+Discrete Math.\ 72 (1988), 113--118.
+
+\bibitem{ESS86}
+P.~Erd\H{o}s, M.~Saks, and V.~T. S\'os,
+\emph{Maximum induced trees in graphs},
+J.~Combin.\ Theory Ser.\ B 41 (1986), 61--79.
+
+\bibitem{DW04}
+E.~DeLaVi\~na and B.~Waller,
+\emph{On some conjectures of Graffiti.pc on the maximum order of induced
+subgraphs},
+Congr.\ Numer.\ 166 (2004), 11--32.
+
+\bibitem{HMS14}
+A.~Hertz, O.~Marcotte, and D.~Schindl,
+\emph{On the maximum orders of an induced forest, an induced tree, and a
+stable set},
+Yugosl.\ J.\ Oper.\ Res.\ 24 (2014), no.~2, 199--215.
+\href{https://doi.org/10.2298/YJOR130402037H}{doi:10.2298/YJOR130402037H}.
+
+\bibitem{W143}
+A.~Ferudun,
+\emph{Largest induced trees, girth, and the second-smallest degree: a proof
+of Graffiti.pc's Conjecture 143},
+manuscript (2026).
+
+\bibitem{FC}
+Google DeepMind,
+\emph{Formal Conjectures},
+GitHub repository,
+\url{https://github.com/google-deepmind/formal-conjectures}.
+
+\bibitem{FC141}
+Formal Conjectures,
+\emph{GraphConjecture141.lean},
+\url{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/WrittenOnTheWallII/GraphConjecture141.lean}
+(retrieved July 2026).
+
+\bibitem{Lean4}
+L.~de~Moura and S.~Ullrich,
+\emph{The Lean 4 theorem prover and programming language},
+in: Automated Deduction -- CADE 28, LNCS 12699, Springer, 2021, 625--635.
+
+\bibitem{mathlib}
+The mathlib Community,
+\emph{The Lean mathematical library},
+in: Proc.\ 9th ACM SIGPLAN Int.\ Conf.\ Certified Programs and Proofs
+(CPP 2020), ACM, 2020, 367--381.
+
+\end{thebibliography}
+
+\end{document}

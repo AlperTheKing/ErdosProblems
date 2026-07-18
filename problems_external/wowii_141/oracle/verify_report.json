@@ -1,0 +1,158 @@
+{
+  "checked": [
+    {
+      "graph6": "Cl",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "DbW",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "D]o",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "E]a?",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "EXSg",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "E?~o",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "EhUg",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "ElUg",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FMpA?",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "Flg`?",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FFwG_",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "F`EBW",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "F?~oO",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FhUgG",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FlUk?",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "F]rE?",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FMowo",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "F]MIO",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FlhWo",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FreRW",
+      "label": "atlas_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "Dl_",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "Ela?",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "FlaC?",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "GlaCC?",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "HlaCCA?",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "Dlg",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "Fl_KG",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "ElUg",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "EFz_",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    },
+    {
+      "graph6": "G?~vf_",
+      "label": "families_results.json:c141:equality",
+      "ok": true
+    }
+  ],
+  "eq141_reverified": 30,
+  "mismatches": [],
+  "sample_reverified": 86,
+  "violations_reverified": 0
+}
