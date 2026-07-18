@@ -1,0 +1,127 @@
+{
+  "max_n": 9,
+  "method": "hereditary vertex extension + exact isomorphism quotient",
+  "orders": [
+    {
+      "c5_blowups": 0,
+      "chain_graphs": 0,
+      "connected_nontrivial": 0,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 1,
+      "n": 1,
+      "seconds": 0.001,
+      "tds_size_profiles": {},
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 0,
+      "chain_graphs": 1,
+      "connected_nontrivial": 1,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 2,
+      "n": 2,
+      "seconds": 0.001,
+      "tds_size_profiles": {
+        "(2,)": 1
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 0,
+      "chain_graphs": 1,
+      "connected_nontrivial": 1,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 3,
+      "n": 3,
+      "seconds": 0.0,
+      "tds_size_profiles": {
+        "(2,)": 1
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 0,
+      "chain_graphs": 3,
+      "connected_nontrivial": 3,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 7,
+      "n": 4,
+      "seconds": 0.002,
+      "tds_size_profiles": {
+        "(2,)": 3
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 1,
+      "chain_graphs": 4,
+      "connected_nontrivial": 5,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 13,
+      "n": 5,
+      "seconds": 0.007,
+      "tds_size_profiles": {
+        "(2,)": 4,
+        "(3,)": 1
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 1,
+      "chain_graphs": 10,
+      "connected_nontrivial": 11,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 29,
+      "n": 6,
+      "seconds": 0.024,
+      "tds_size_profiles": {
+        "(2,)": 10,
+        "(3,)": 1
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 3,
+      "chain_graphs": 16,
+      "connected_nontrivial": 19,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 57,
+      "n": 7,
+      "seconds": 0.102,
+      "tds_size_profiles": {
+        "(2,)": 16,
+        "(3,)": 3
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 5,
+      "chain_graphs": 36,
+      "connected_nontrivial": 41,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 125,
+      "n": 8,
+      "seconds": 0.336185,
+      "tds_size_profiles": {
+        "(2,)": 36,
+        "(3,)": 5
+      },
+      "wtd_failures": []
+    },
+    {
+      "c5_blowups": 10,
+      "chain_graphs": 64,
+      "connected_nontrivial": 74,
+      "dichotomy_failures": [],
+      "hereditary_class_unlabeled": 254,
+      "n": 9,
+      "seconds": 1.356999,
+      "tds_size_profiles": {
+        "(2,)": 64,
+        "(3,)": 10
+      },
+      "wtd_failures": []
+    }
+  ],
+  "seconds": 1.830185
+}

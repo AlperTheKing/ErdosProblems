@@ -10,6 +10,8 @@ apn-gpt55-workbench/
 erdos_db/
 erdosproblems-db/
 formal-conjectures/
+formal-conjectures-*/
+problems_external/sorting_network_13/engine/SorterHunter/
 teorth_claude_944/
 teorth_erdosproblems/
 teorth_erdosproblems_944/

@@ -32,8 +32,8 @@ vertices inducing a tree, $\gr(G)$ the girth, $\Delta(G)$ the maximum degree,
 and for a vertex $v$ let $\lv(v)$ denote the independence number of the
 subgraph induced by the neighbourhood of $v$.  We prove that every finite
 connected triangle-free graph containing a cycle satisfies
-$\tr(G)\ge\Delta(G)+\gr(G)-3$, with equality for all cycles and all complete
-bipartite graphs.  As a corollary we prove Conjecture~141 of the
+$\tr(G)\ge\Delta(G)+\gr(G)-3$, with equality for all cycles $C_g$ with
+$g\ge4$ and all complete bipartite graphs $K_{a,b}$ with $a,b\ge2$.  As a corollary we prove Conjecture~141 of the
 conjecture-making program Graffiti.pc (DeLaVi\~na, \emph{Written on the Wall
 II}, 2005): every finite connected graph satisfies
 $\tr(G)\ge\lfloor\gr(G)/2\rfloor-1+\max_v\lv(v)$.  The proofs are elementary
@@ -147,7 +147,7 @@ $G[\{v\}\cup S]$ is a star: all edges $vs$ ($s\in S$) are present and there
 are no edges inside $S$.  A star is a tree.
 \end{proof}
 
-\section{Proof of Theorem~\ref{thm:main}}
+\section{Proof of Theorem~\texorpdfstring{\ref{thm:main}}{1.1}}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
 Write $g=\gr(G)\ge4$ and $\Delta=\Delta(G)$.  Fix a vertex $v$ of degree
@@ -195,19 +195,20 @@ $a\le b$ ($g=4$, $\Delta=b$) every induced tree is a star (two vertices on
 each side already induce $C_4$), so $\tr=b+1=\Delta+g-3$.
 \end{proof}
 
-\begin{remark}\label{rem:ball}
-An alternative proof of the slightly weaker bound
-$\tr\ge\Delta+\lfloor g/2\rfloor-1$ (still sufficient for
-Corollary~\ref{cor:141}) is worth recording: for
+\begin{remark}
+Under the hypotheses of Theorem~\ref{thm:main}, an alternative proof of the
+slightly weaker bound $\tr\ge\Delta+\lfloor g/2\rfloor-1$ (still sufficient
+for Corollary~\ref{cor:141}) is worth recording.  For
 $r=\lfloor g/2\rfloor-1$, the ball $B(v,r)$ induces a tree in any graph of
-girth $g$ --- every $G$-edge inside the ball is an edge of a breadth-first
+girth $g$: every $G$-edge inside the ball is an edge of a breadth-first
 search tree rooted at $v$, since a non-tree edge would close a cycle of
-length at most $2r+1<g$ through the last common ancestor of its endpoints ---
-and if $G$ contains a cycle the ball is proper, so all $r$ distance layers
-are nonempty and $|B(v,r)|\ge1+\Delta+(r-1)$.
+length at most $2r+1<g$ through the last common ancestor of its endpoints.
+Now take $v$ of maximum degree; triangle-freeness gives $g\ge4$, so
+$r\ge1$.  If $G$ contains a cycle the ball is proper, so all $r$ distance
+layers are nonempty and $|B(v,r)|\ge1+\Delta+(r-1)$.
 \end{remark}
 
-\section{Proof of Corollary~\ref{cor:141}}
+\section{Proof of Corollary~\texorpdfstring{\ref{cor:141}}{1.2}}
 
 \begin{proof}[Proof of Corollary~\ref{cor:141}]
 Let $L=\max_v\lv(v)$; note $L\ge1$ since $G$ is connected on $\ge2$
@@ -222,11 +223,17 @@ $\tr\ge\Delta+\gr-3\ge\Delta+\lfloor \gr/2\rfloor-1=L+\lfloor
 \end{proof}
 
 \begin{remark}
-The corollary is sharp precisely in girth~$4$: equality holds for $C_4$, for
+The corollary is sharp precisely in girth~$4$.  Equality holds for $C_4$, for
 every $K_{a,b}$ ($a,b\ge2$), and for the infinite family obtained from $C_4$
 by attaching $k\ge0$ pendant vertices to one vertex ($\lv_{\max}=k+2$,
-$\tr=k+3$).  In an exhaustive check of all connected graphs on at most seven
-vertices, every equality case has girth exactly~$4$.
+$\tr=k+3$); an exhaustive check of all connected graphs on at most seven
+vertices finds no equality case of any other girth.  That equality
+\emph{requires} girth~$4$ follows from the results above: for acyclic $G$
+and for $g=3$ the star bound $\tr\ge L+1$ beats the right-hand side by at
+least $2$ resp.\ $1$; for $g=5$ triangle-freeness gives $L=\Delta$ and
+Theorem~\ref{thm:main} yields $\tr\ge\Delta+2=L+\lfloor5/2\rfloor$, one more
+than required; and for $g\ge6$ the inequality $g-3>\lfloor g/2\rfloor-1$ is
+strict.
 \end{remark}
 
 \section{Formalization}\label{sec:formal}
@@ -234,7 +241,8 @@ vertices, every equality case has girth exactly~$4$.
 The Formal Conjectures project~\cite{FC} maintains Lean~4 formalizations of
 open conjectures; Conjecture~141 appears as the statement
 \texttt{conjecture141} in
-\texttt{FormalConjectures/WrittenOnTheWallII/GraphConjecture141.lean},
+\texttt{FormalConjectures/\allowbreak WrittenOnTheWallII/\allowbreak
+GraphConjecture141.lean},
 marked \texttt{research open}~\cite{FC141}, in the denominator-explicit
 integer form
 $\lfloor\gr(G)/2\rfloor-1+\max_v\lv(v)\le\tr(G)$
@@ -251,8 +259,9 @@ three-vertex overlap bound of Theorem~\ref{thm:main}.  The development
 builds on the reusable induced-tree API we contributed alongside
 Conjecture~143~\cite{W143}.  The proof uses no \texttt{native\_decide} and no
 additional axioms (\texttt{\#print axioms} reports \texttt{propext},
-\texttt{Classical.choice}, \texttt{Quot.sound}).  The source is available in
-the author's fork of the repository and as ancillary files with this
+\texttt{Classical.choice}, \texttt{Quot.sound}).  The source is available as
+pull request \#4454 to the Formal Conjectures repository (which also contains
+our formalization of Conjecture~143) and as ancillary files with this
 submission.
 
 \paragraph{Acknowledgements.}
@@ -314,7 +323,10 @@ Yugosl.\ J.\ Oper.\ Res.\ 24 (2014), no.~2, 199--215.
 A.~Ferudun,
 \emph{Largest induced trees, girth, and the second-smallest degree: a proof
 of Graffiti.pc's Conjecture 143},
-manuscript (2026).
+Lean~4 formalization, pull request \#4454 to the Google DeepMind
+\emph{Formal Conjectures} repository,
+\url{https://github.com/google-deepmind/formal-conjectures/pull/4454}
+(2026).
 
 \bibitem{FC}
 Google DeepMind,

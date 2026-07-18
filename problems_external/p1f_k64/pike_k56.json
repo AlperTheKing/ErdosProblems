@@ -1,0 +1,40 @@
+{
+  "schema": "p1f-even-starter-v1",
+  "name": "David A. Pike's published even starter yielding a P1F of K_56",
+  "source": {
+    "citation": "David A. Pike, A Perfect One-Factorisation of K_56, Journal of Combinatorial Designs 27 (2019), 386-390",
+    "doi": "10.1002/jcd.21653",
+    "url": "https://arxiv.org/abs/1810.08734"
+  },
+  "modulus": 54,
+  "order": 56,
+  "omitted": [9, 47],
+  "pairs": [
+    [36, 17],
+    [44, 12],
+    [39, 45],
+    [18, 35],
+    [8, 50],
+    [23, 15],
+    [42, 32],
+    [5, 46],
+    [19, 49],
+    [22, 37],
+    [10, 6],
+    [33, 30],
+    [3, 41],
+    [14, 21],
+    [48, 43],
+    [16, 52],
+    [25, 34],
+    [7, 38],
+    [11, 31],
+    [4, 2],
+    [29, 28],
+    [1, 27],
+    [0, 40],
+    [13, 24],
+    [51, 26],
+    [53, 20]
+  ]
+}

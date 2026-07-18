@@ -1,0 +1,2823 @@
+{
+  "equality_cases": [
+    {
+      "g6": "Bw",
+      "first_seen_as": "atlas:atlas_7",
+      "n": 3,
+      "m": 3,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2
+      ],
+      "center": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "g6": "CN",
+      "first_seen_as": "atlas:atlas_15",
+      "n": 4,
+      "m": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2
+      ],
+      "center": [
+        3
+      ]
+    },
+    {
+      "g6": "Cx",
+      "first_seen_as": "adversarial:lollipop(3,1)",
+      "n": 4,
+      "m": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        3
+      ],
+      "center": [
+        2
+      ]
+    },
+    {
+      "g6": "C{",
+      "first_seen_as": "family:tadpole(3,1)",
+      "n": 4,
+      "m": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        1,
+        2,
+        3
+      ],
+      "center": [
+        0
+      ]
+    },
+    {
+      "g6": "C|",
+      "first_seen_as": "atlas:atlas_17",
+      "n": 4,
+      "m": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        1,
+        3
+      ],
+      "center": [
+        0,
+        2
+      ]
+    },
+    {
+      "g6": "C}",
+      "first_seen_as": "family:theta(1,2,2)",
+      "n": 4,
+      "m": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        2,
+        3
+      ],
+      "center": [
+        0,
+        1
+      ]
+    },
+    {
+      "g6": "C~",
+      "first_seen_as": "atlas:atlas_18",
+      "n": 4,
+      "m": 6,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "DJ{",
+      "first_seen_as": "atlas:atlas_45",
+      "n": 5,
+      "m": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "center": [
+        4
+      ]
+    },
+    {
+      "g6": "D`{",
+      "first_seen_as": "atlas:atlas_42",
+      "n": 5,
+      "m": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "center": [
+        4
+      ]
+    },
+    {
+      "g6": "Df{",
+      "first_seen_as": "atlas:atlas_49",
+      "n": 5,
+      "m": 8,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2
+      ],
+      "center": [
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "Dl{",
+      "first_seen_as": "atlas:atlas_50",
+      "n": 5,
+      "m": 8,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "center": [
+        4
+      ]
+    },
+    {
+      "g6": "Dn{",
+      "first_seen_as": "atlas:atlas_51",
+      "n": 5,
+      "m": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2
+      ],
+      "center": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "Dx_",
+      "first_seen_as": "atlas:atlas_35",
+      "n": 5,
+      "m": 5,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        3,
+        4
+      ],
+      "center": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "g6": "DyS",
+      "first_seen_as": "extremal:triangle_chain(2)",
+      "n": 5,
+      "m": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "D{c",
+      "first_seen_as": "family:dumbbell(3,3,0)",
+      "n": 5,
+      "m": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "center": [
+        0
+      ]
+    },
+    {
+      "g6": "D~C",
+      "first_seen_as": "adversarial:lollipop(4,1)",
+      "n": 5,
+      "m": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "center": [
+        3
+      ]
+    },
+    {
+      "g6": "D~{",
+      "first_seen_as": "atlas:atlas_52",
+      "n": 5,
+      "m": 10,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "EhX_",
+      "first_seen_as": "atlas:atlas_112",
+      "n": 6,
+      "m": 7,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        3
+      ],
+      "center": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "EtoO",
+      "first_seen_as": "atlas:atlas_119",
+      "n": 6,
+      "m": 7,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        1,
+        4,
+        5
+      ],
+      "center": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "Ev`_",
+      "first_seen_as": "atlas:atlas_140",
+      "n": 6,
+      "m": 8,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "EyVw",
+      "first_seen_as": "atlas:atlas_195",
+      "n": 6,
+      "m": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "center": [
+        1,
+        5
+      ]
+    },
+    {
+      "g6": "Ez~w",
+      "first_seen_as": "atlas:atlas_207",
+      "n": 6,
+      "m": 14,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        3
+      ],
+      "center": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "E~^G",
+      "first_seen_as": "atlas:atlas_203",
+      "n": 6,
+      "m": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "E~_O",
+      "first_seen_as": "atlas:atlas_134",
+      "n": 6,
+      "m": 8,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "E~`?",
+      "first_seen_as": "adversarial:clique_two_tails(4,1,1)",
+      "n": 6,
+      "m": 8,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "E~`_",
+      "first_seen_as": "atlas:atlas_157",
+      "n": 6,
+      "m": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "E~aG",
+      "first_seen_as": "atlas:atlas_165",
+      "n": 6,
+      "m": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        0
+      ]
+    },
+    {
+      "g6": "E~nW",
+      "first_seen_as": "atlas:atlas_206",
+      "n": 6,
+      "m": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "center": [
+        0,
+        3
+      ]
+    },
+    {
+      "g6": "E~{G",
+      "first_seen_as": "adversarial:lollipop(5,1)",
+      "n": 6,
+      "m": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "center": [
+        4
+      ]
+    },
+    {
+      "g6": "E~{W",
+      "first_seen_as": "atlas:atlas_200",
+      "n": 6,
+      "m": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "center": [
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "E~|?",
+      "first_seen_as": "atlas:atlas_191",
+      "n": 6,
+      "m": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "E~~G",
+      "first_seen_as": "atlas:atlas_205",
+      "n": 6,
+      "m": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        2,
+        3,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "g6": "E~~w",
+      "first_seen_as": "atlas:atlas_208",
+      "n": 6,
+      "m": 15,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "F@\\|w",
+      "first_seen_as": "atlas:atlas_1012",
+      "n": 7,
+      "m": 13,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FBX|w",
+      "first_seen_as": "atlas:atlas_1020",
+      "n": 7,
+      "m": 13,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FBY|o",
+      "first_seen_as": "atlas:atlas_948",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FBY|w",
+      "first_seen_as": "atlas:atlas_1035",
+      "n": 7,
+      "m": 13,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FB\\|w",
+      "first_seen_as": "atlas:atlas_1109",
+      "n": 7,
+      "m": 14,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FB}G_",
+      "first_seen_as": "atlas:atlas_505",
+      "n": 7,
+      "m": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        5,
+        6
+      ],
+      "center": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "FK|ko",
+      "first_seen_as": "atlas:atlas_1009",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "center": [
+        4
+      ]
+    },
+    {
+      "g6": "FN{`G",
+      "first_seen_as": "atlas:atlas_809",
+      "n": 7,
+      "m": 11,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        5,
+        6
+      ],
+      "center": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F]mCG",
+      "first_seen_as": "atlas:atlas_686",
+      "n": 7,
+      "m": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        1,
+        5,
+        6
+      ],
+      "center": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F`~vw",
+      "first_seen_as": "atlas:atlas_1230",
+      "n": 7,
+      "m": 16,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        6
+      ]
+    },
+    {
+      "g6": "Fe~vw",
+      "first_seen_as": "atlas:atlas_1237",
+      "n": 7,
+      "m": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        6
+      ]
+    },
+    {
+      "g6": "Ffznw",
+      "first_seen_as": "atlas:atlas_1242",
+      "n": 7,
+      "m": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        6
+      ]
+    },
+    {
+      "g6": "Ff~xw",
+      "first_seen_as": "atlas:atlas_1238",
+      "n": 7,
+      "m": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "center": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "Fl^gG",
+      "first_seen_as": "atlas:atlas_906",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        3,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "Fn{OO",
+      "first_seen_as": "atlas:atlas_741",
+      "n": 7,
+      "m": 11,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "FrXwG",
+      "first_seen_as": "atlas:atlas_767",
+      "n": 7,
+      "m": 11,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        6
+      ],
+      "center": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "Fvx~w",
+      "first_seen_as": "atlas:atlas_1248",
+      "n": 7,
+      "m": 18,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        6
+      ]
+    },
+    {
+      "g6": "FxCX_",
+      "first_seen_as": "atlas:atlas_557",
+      "n": 7,
+      "m": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "center": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "g6": "FySOg",
+      "first_seen_as": "extremal:triangle_chain(3)",
+      "n": 7,
+      "m": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "center": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "FyUx?",
+      "first_seen_as": "atlas:atlas_787",
+      "n": 7,
+      "m": 11,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        3,
+        4,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "g6": "FyVx?",
+      "first_seen_as": "atlas:atlas_901",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        3,
+        4,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "g6": "F~Ha?",
+      "first_seen_as": "atlas:atlas_599",
+      "n": 7,
+      "m": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "g6": "F~PIW",
+      "first_seen_as": "extremal:clique_chain(4,2)",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "F~Xo_",
+      "first_seen_as": "atlas:atlas_887",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "g6": "F~^]w",
+      "first_seen_as": "atlas:atlas_1247",
+      "n": 7,
+      "m": 18,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        1,
+        3
+      ]
+    },
+    {
+      "g6": "F~^nw",
+      "first_seen_as": "atlas:atlas_1250",
+      "n": 7,
+      "m": 19,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "center": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "g6": "F~^~w",
+      "first_seen_as": "atlas:atlas_1251",
+      "n": 7,
+      "m": 20,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        4
+      ],
+      "center": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "F~_Q?",
+      "first_seen_as": "atlas:atlas_475",
+      "n": 7,
+      "m": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "F~aGG",
+      "first_seen_as": "atlas:atlas_644",
+      "n": 7,
+      "m": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "center": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "F~aH?",
+      "first_seen_as": "atlas:atlas_630",
+      "n": 7,
+      "m": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        4,
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "F~wY?",
+      "first_seen_as": "atlas:atlas_893",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~{OO",
+      "first_seen_as": "atlas:atlas_885",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~{Ww",
+      "first_seen_as": "atlas:atlas_1188",
+      "n": 7,
+      "m": 15,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "center": [
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~{sO",
+      "first_seen_as": "atlas:atlas_1115",
+      "n": 7,
+      "m": 14,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~|AG",
+      "first_seen_as": "atlas:atlas_1032",
+      "n": 7,
+      "m": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "F~}A?",
+      "first_seen_as": "adversarial:clique_two_tails(5,1,1)",
+      "n": 7,
+      "m": 12,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~~]w",
+      "first_seen_as": "atlas:atlas_1249",
+      "n": 7,
+      "m": 19,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        2,
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "g6": "F~~wG",
+      "first_seen_as": "adversarial:lollipop(6,1)",
+      "n": 7,
+      "m": 16,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "center": [
+        5
+      ]
+    },
+    {
+      "g6": "F~~x?",
+      "first_seen_as": "atlas:atlas_1213",
+      "n": 7,
+      "m": 16,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        2
+      ]
+    },
+    {
+      "g6": "F~~z?",
+      "first_seen_as": "atlas:atlas_1234",
+      "n": 7,
+      "m": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        1,
+        2
+      ]
+    },
+    {
+      "g6": "F~~}G",
+      "first_seen_as": "atlas:atlas_1244",
+      "n": 7,
+      "m": 18,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "g6": "F~~~w",
+      "first_seen_as": "atlas:atlas_1252",
+      "n": 7,
+      "m": 21,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "GDA@R_",
+      "first_seen_as": "random:rand(n=8,p=0.15,i=208)",
+      "n": 8,
+      "m": 8,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "g6": "GjC_S?",
+      "first_seen_as": "random:rand(n=8,p=0.25,i=49)",
+      "n": 8,
+      "m": 8,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        6,
+        7
+      ],
+      "center": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "g6": "G~~{A?",
+      "first_seen_as": "adversarial:clique_two_tails(6,1,1)",
+      "n": 8,
+      "m": 17,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        6,
+        7
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "g6": "G~~~wC",
+      "first_seen_as": "adversarial:lollipop(7,1)",
+      "n": 8,
+      "m": 22,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "center": [
+        6
+      ]
+    },
+    {
+      "g6": "G~~~~{",
+      "first_seen_as": "adversarial:lollipop(8,0)",
+      "n": 8,
+      "m": 28,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "g6": "H?B@`Ra",
+      "first_seen_as": "random:rand(n=9,p=0.25,i=9)",
+      "n": 9,
+      "m": 10,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        4,
+        5
+      ],
+      "center": [
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "g6": "HCjPO_@",
+      "first_seen_as": "random:rand(n=9,p=0.25,i=129)",
+      "n": 9,
+      "m": 10,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        2,
+        6,
+        8
+      ],
+      "center": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "g6": "HGcwC?M",
+      "first_seen_as": "random:rand(n=9,p=0.15,i=432)",
+      "n": 9,
+      "m": 10,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        1,
+        7
+      ],
+      "center": [
+        3,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "g6": "HW_CoOL",
+      "first_seen_as": "random:rand(n=9,p=0.15,i=256)",
+      "n": 9,
+      "m": 10,
+      "girth": 3,
+      "f": 4,
+      "tree": 6,
+      "diam": 5,
+      "radius": 3,
+      "B": [
+        1,
+        5
+      ],
+      "center": [
+        0,
+        4,
+        6
+      ]
+    },
+    {
+      "g6": "H~|AILF",
+      "first_seen_as": "extremal:clique_chain(5,2)",
+      "n": 9,
+      "m": 20,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "center": [
+        1
+      ]
+    },
+    {
+      "g6": "H~~~~{@",
+      "first_seen_as": "adversarial:lollipop(8,1)",
+      "n": 9,
+      "m": 29,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "center": [
+        7
+      ]
+    },
+    {
+      "g6": "H~~~~~~",
+      "first_seen_as": "extremal:K(9)",
+      "n": 9,
+      "m": 36,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "g6": "I~PIWOHAW",
+      "first_seen_as": "extremal:clique_chain(4,3)",
+      "n": 10,
+      "m": 18,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "center": [
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "I~~~~~~?G",
+      "first_seen_as": "extremal:lollipop(9,1)",
+      "n": 10,
+      "m": 37,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "center": [
+        8
+      ]
+    },
+    {
+      "g6": "I~~~~~~~w",
+      "first_seen_as": "extremal:K(10)",
+      "n": 10,
+      "m": 45,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "g6": "J~~~~~~~w?_",
+      "first_seen_as": "extremal:lollipop(10,1)",
+      "n": 11,
+      "m": 46,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "center": [
+        9
+      ]
+    },
+    {
+      "g6": "J~~~~~~~~~_",
+      "first_seen_as": "extremal:K(11)",
+      "n": 11,
+      "m": 55,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "g6": "K~~~~~~~~~_@",
+      "first_seen_as": "extremal:lollipop(11,1)",
+      "n": 12,
+      "m": 56,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      "center": [
+        10
+      ]
+    },
+    {
+      "g6": "K~~~~~~~~~~~",
+      "first_seen_as": "extremal:K(12)",
+      "n": 12,
+      "m": 66,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "g6": "L~|AILF@?G_b@F",
+      "first_seen_as": "extremal:clique_chain(5,3)",
+      "n": 13,
+      "m": 30,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "diam": 3,
+      "radius": 2,
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12
+      ],
+      "center": [
+        1,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "g6": "L~~~~~~~~~~~?@",
+      "first_seen_as": "extremal:lollipop(12,1)",
+      "n": 13,
+      "m": 67,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "center": [
+        11
+      ]
+    },
+    {
+      "g6": "L~~~~~~~~~~~~~",
+      "first_seen_as": "extremal:K(13)",
+      "n": 13,
+      "m": 78,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "g6": "M~~~~~~~~~~~~~??_",
+      "first_seen_as": "extremal:lollipop(13,1)",
+      "n": 14,
+      "m": 79,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "center": [
+        12
+      ]
+    },
+    {
+      "g6": "M~~~~~~~~~~~~~~~_",
+      "first_seen_as": "extremal:K(14)",
+      "n": 14,
+      "m": 91,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "g6": "N~~~~~~~~~~~~~~~_?G",
+      "first_seen_as": "extremal:lollipop(14,1)",
+      "n": 15,
+      "m": 92,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      "center": [
+        13
+      ]
+    },
+    {
+      "g6": "N~~~~~~~~~~~~~~~~~w",
+      "first_seen_as": "extremal:K(15)",
+      "n": 15,
+      "m": 105,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "g6": "O~~~~~~~~~~~~~~~~~w?@",
+      "first_seen_as": "extremal:lollipop(15,1)",
+      "n": 16,
+      "m": 106,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "center": [
+        14
+      ]
+    },
+    {
+      "g6": "O~~~~~~~~~~~~~~~~~~~~",
+      "first_seen_as": "extremal:K(16)",
+      "n": 16,
+      "m": 120,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "g6": "P~~~~~~~~~~~~~~~~~~~~??C",
+      "first_seen_as": "extremal:lollipop(16,1)",
+      "n": 17,
+      "m": 121,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "center": [
+        15
+      ]
+    },
+    {
+      "g6": "P~~~~~~~~~~~~~~~~~~~~~~{",
+      "first_seen_as": "extremal:K(17)",
+      "n": 17,
+      "m": 136,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "g6": "Q~~~~~~~~~~~~~~~~~~~~~~{??G",
+      "first_seen_as": "extremal:lollipop(17,1)",
+      "n": 18,
+      "m": 137,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17
+      ],
+      "center": [
+        16
+      ]
+    },
+    {
+      "g6": "Q~~~~~~~~~~~~~~~~~~~~~~~~~w",
+      "first_seen_as": "extremal:K(18)",
+      "n": 18,
+      "m": 153,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "g6": "R~~~~~~~~~~~~~~~~~~~~~~~~~w??G",
+      "first_seen_as": "extremal:lollipop(18,1)",
+      "n": 19,
+      "m": 154,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18
+      ],
+      "center": [
+        17
+      ]
+    },
+    {
+      "g6": "R~~~~~~~~~~~~~~~~~~~~~~~~~~~~w",
+      "first_seen_as": "extremal:K(19)",
+      "n": 19,
+      "m": 171,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "g6": "S~~~~~~~~~~~~~~~~~~~~~~~~~~~~w??C",
+      "first_seen_as": "extremal:lollipop(19,1)",
+      "n": 20,
+      "m": 172,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "diam": 2,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
+      ],
+      "center": [
+        18
+      ]
+    },
+    {
+      "g6": "S~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{",
+      "first_seen_as": "extremal:K(20)",
+      "n": 20,
+      "m": 190,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "diam": 1,
+      "radius": 1,
+      "B": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "g6": "FK_h_",
+      "first_seen_as": "atlas:atlas_348",
+      "n": 7,
+      "m": 7,
+      "girth": 6,
+      "f": 2,
+      "tree": 6,
+      "diam": 4,
+      "radius": 3,
+      "B": [
+        0,
+        1
+      ],
+      "center": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "g6": "FhEK?",
+      "first_seen_as": "family:tadpole(6,1)",
+      "n": 7,
+      "m": 7,
+      "girth": 6,
+      "f": 2,
+      "tree": 6,
+      "diam": 4,
+      "radius": 3,
+      "B": [
+        3,
+        6
+      ],
+      "center": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    }
+  ]
+}

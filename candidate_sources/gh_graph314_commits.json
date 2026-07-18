@@ -1,0 +1,166 @@
+[
+  {
+    "sha": "c252a41054125b5fd9c8356e2137cd9b55337657",
+    "node_id": "C_kwDOOogmB9oAKGMyNTJhNDEwNTQxMjViNWZkOWM4MzU2ZTIxMzdjZDliNTUzMzc2NTc",
+    "commit": {
+      "author": {
+        "name": "Yaël Dillies",
+        "email": "yael.dillies@gmail.com",
+        "date": "2026-07-16T23:28:26Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-07-16T23:28:26Z"
+      },
+      "message": "refactor: split out FormalConjectures.Util to a new library (#4433)\n\n... named FormalConjecturesUtil.\n\nThe goal here is to make all files in FormalConjectures be valid\nchallenge files for Comparator.",
+      "tree": {
+        "sha": "a3eb8cb29f72a7ec1e7534955a5af0f6f72775c3",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/trees/a3eb8cb29f72a7ec1e7534955a5af0f6f72775c3"
+      },
+      "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/commits/c252a41054125b5fd9c8356e2137cd9b55337657",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqWWkaCRC1aQ7uu5UhlAAAPFQQAJ568Ysw9h+F5R7e5DKVwzUR\nzM51Cs352XpX0elES70wa0bwV3pHMs4E5CSkGC2jC+F+haIarfGS7r0Bxz665KI0\ndTFVlpf7Dj6Y16Oum4aUVwrNUKkG54uoQ6xZ0msgwAR1uPdv4PPSF4KdXiPG0BxT\nnc0woygXB9bHVkUMiloh4+tYetETZfS5XdRgJDqNiy+SGfXVXqwR+fPojnGJwenR\n1xICpuyhDXfrXpjlZ7JiHstk33Mghsa+iYvpR6qv5dU+AoIro72yudQcddialNvA\nIEtPTIqxlvwg+sywiFlI3O+WsE6o3tJQQZU21wO+wGv1b3lT2Y+wfkM8BtF+8mqq\n1A1EJYqMgA3MJ3n9sNWy1oY0rVKUm/uOpXM+nZi8yt8w4b9G4gvfz7TtIB9SrU+X\naU9YrMuV/3BZ/qRshwCnU4y9qU9qn45d1o0pHAHCz4gyrQTcTpAkxgesh1VbLaeF\nnvLu1UdZQWIMjpkz+/Zp8H4BOH7SVG66hLiBg+1Hj06WSS30tTB6SvDez18oO2SP\nmIm1R4SAy/QcK3QmPk2D68oyAREu406Ft0ePK6PvOu36rCkroILUivK1IzkflXo2\nMehumQgN1ZdN9nv4ZZmYV6OM0R62Jz3F5jo+/YROacsPe+AdRfDe90lCVaWQ/8qU\nr2EsJgBnYfmHkRsjsEzU\n=evv3\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree a3eb8cb29f72a7ec1e7534955a5af0f6f72775c3\nparent da6f05e576c18b8e27b58b39fbc8d4688d143239\nauthor Yaël Dillies <yael.dillies@gmail.com> 1784244506 +0200\ncommitter GitHub <noreply@github.com> 1784244506 +0000\n\nrefactor: split out FormalConjectures.Util to a new library (#4433)\n\n... named FormalConjecturesUtil.\n\nThe goal here is to make all files in FormalConjectures be valid\nchallenge files for Comparator.",
+        "verified_at": "2026-07-16T23:28:27Z"
+      }
+    },
+    "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/c252a41054125b5fd9c8356e2137cd9b55337657",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/c252a41054125b5fd9c8356e2137cd9b55337657",
+    "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/c252a41054125b5fd9c8356e2137cd9b55337657/comments",
+    "author": {
+      "login": "YaelDillies",
+      "id": 14090593,
+      "node_id": "MDQ6VXNlcjE0MDkwNTkz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14090593?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/YaelDillies",
+      "html_url": "https://github.com/YaelDillies",
+      "followers_url": "https://api.github.com/users/YaelDillies/followers",
+      "following_url": "https://api.github.com/users/YaelDillies/following{/other_user}",
+      "gists_url": "https://api.github.com/users/YaelDillies/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/YaelDillies/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/YaelDillies/subscriptions",
+      "organizations_url": "https://api.github.com/users/YaelDillies/orgs",
+      "repos_url": "https://api.github.com/users/YaelDillies/repos",
+      "events_url": "https://api.github.com/users/YaelDillies/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/YaelDillies/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "da6f05e576c18b8e27b58b39fbc8d4688d143239",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/da6f05e576c18b8e27b58b39fbc8d4688d143239",
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/da6f05e576c18b8e27b58b39fbc8d4688d143239"
+      }
+    ]
+  },
+  {
+    "sha": "c270a99760869e9736d01be7871d7b8fd248e887",
+    "node_id": "C_kwDOOogmB9oAKGMyNzBhOTk3NjA4NjllOTczNmQwMWJlNzg3MWQ3YjhmZDI0OGU4ODc",
+    "commit": {
+      "author": {
+        "name": "henrykmichalewski",
+        "email": "henrykmichalewski@users.noreply.github.com",
+        "date": "2026-06-08T13:14:19Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-06-08T13:14:19Z"
+      },
+      "message": "Add 22 WOWII numbered conjectures (batches 3-9, part 1/2) (#3820)\n\nThis PR adds **22 WOWII numbered-conjecture formalizations** from our\ninternal batches 3-9.\n\nPart **1 of 2** of splitting our internal batch `wowii-batches-3-9` (49\nfiles total after excluding one held back) into two reviewer-manageable\nPRs grouped semantically: this PR covers the `GraphConjecture<N>.lean`\nfiles indexed by individual WOWII conjecture numbers; the companion PR\n(#3821) covers the `Graph<InvariantName>.lean` files organized by graph\ninvariant topic.\n\n### Conjecture numbers in this PR\n7, 18, 31, 36, 59, 61, 65, 100, 101, 103, 109, 133, 142, 143, 144, 145,\n146, 160, 217, 291, 314, 315\n\n**Status distribution (per WOWII website):** T = 3, R = 1, F = 1, O =\n17.\n\n### Guarantees\n- Every file includes the **verbatim conjecture statement** from\nDeLaViña's WOWII page in the module docstring, along with the canonical\nsource URL. Reviewers can verify the formalization matches the source\nwithout navigating away from the diff.\n- Statements match the current authoritative website (re-audited against\nthe canonical source JSON we maintain in our private repo).\n\n### Notes\n- `GraphConjecture315.lean` already exists on `main`; this PR extends it\nwith the verbatim-statement docstring, additional definitions (total\ndominating sets, pendant vertices, well-totally-dominated), and the\nconjecture statement.\n- The file `GraphConjecture199.lean` is intentionally omitted here\nbecause an earlier version is already under review in #3796\n(`wowii-batch-2`). Additional test lemmas for Conjecture 199 will be\nsubmitted as a follow-up after #3796 merges.\n\n### Related\n- #3795 (batch 1, merged)\n- #3796 (batch 2, open)\n- Companion PR: #3821 (this batch, part 2/2 — named\n`Graph<InvariantName>` files)\n\n---------\n\nCo-authored-by: Moritz Firsching <firsching@google.com>",
+      "tree": {
+        "sha": "284be2834985de57194f9f9b59813f02c0a2c70a",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/trees/284be2834985de57194f9f9b59813f02c0a2c70a"
+      },
+      "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/git/commits/c270a99760869e9736d01be7871d7b8fd248e887",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqJsArCRC1aQ7uu5UhlAAAAPYQAE3uVDWpIpxrhI20rBZMAuNJ\nj1W4sMXfWdaX/92L0iXeQ8MqvgbKYfGmFKgrU4kRR/4qtDzLaarFYUs2+09LrqOI\npowZyIjbbFXnggFQ68PJ231qhaPuuIRVbKAabp04TfiN6tRp8HnostRdpIj3k8is\nYr13x7wbWYwNblf5T4geZQsH6ViiAovwZnlWJMHfKIVZVrbHXFRyWGUgetSd8HZb\ny+9UGaTMUsLUrW8zTvOpNmZ/Ug6CkXosukwMWXKTDFcihRwx0gBj+iOD4OWH2xGi\nJ/ncq1WR1Ws7RiCJnmDmudzxLFi1JOhIW1CzmBny1GWfub+LY4wCCKtsGkVkPhi5\n08HZ7oWlr7m2vOAm94WMRehgzzQ3QuDIrrRLziEWopU6RjNcx+fhNPNEi1bZyJtt\nEN/Rk6cktXQAxK9Tnci/KqtczXx+KhfRrAHfHwDfvj19yOHErusfjsyu/yvPy+rF\nT0sg0z8OGjWNUAXjjRPX+r32qLPzL5lHMHjuQyQBaKWuZjlZnsU7290UIpUhzH4E\nCly7fqWDTkDcoD3qOrpt929BOvKVUuNptbq3eVcm3Iroy0JSq8XcL6gRtqap8OtX\nQ5p21AoycAgKShBdrtX6hz/sDc/m1o9ueZciQeL7wITQe2OquhyDbibfg72tVLm9\nGz5qNWhfXFWOWzNZ8cw7\n=PXf/\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 284be2834985de57194f9f9b59813f02c0a2c70a\nparent 2f9e809e0c84c3ed6f5527fe5785e508ac7512d8\nauthor henrykmichalewski <henrykmichalewski@users.noreply.github.com> 1780924459 +0100\ncommitter GitHub <noreply@github.com> 1780924459 +0000\n\nAdd 22 WOWII numbered conjectures (batches 3-9, part 1/2) (#3820)\n\nThis PR adds **22 WOWII numbered-conjecture formalizations** from our\ninternal batches 3-9.\n\nPart **1 of 2** of splitting our internal batch `wowii-batches-3-9` (49\nfiles total after excluding one held back) into two reviewer-manageable\nPRs grouped semantically: this PR covers the `GraphConjecture<N>.lean`\nfiles indexed by individual WOWII conjecture numbers; the companion PR\n(#3821) covers the `Graph<InvariantName>.lean` files organized by graph\ninvariant topic.\n\n### Conjecture numbers in this PR\n7, 18, 31, 36, 59, 61, 65, 100, 101, 103, 109, 133, 142, 143, 144, 145,\n146, 160, 217, 291, 314, 315\n\n**Status distribution (per WOWII website):** T = 3, R = 1, F = 1, O =\n17.\n\n### Guarantees\n- Every file includes the **verbatim conjecture statement** from\nDeLaViña's WOWII page in the module docstring, along with the canonical\nsource URL. Reviewers can verify the formalization matches the source\nwithout navigating away from the diff.\n- Statements match the current authoritative website (re-audited against\nthe canonical source JSON we maintain in our private repo).\n\n### Notes\n- `GraphConjecture315.lean` already exists on `main`; this PR extends it\nwith the verbatim-statement docstring, additional definitions (total\ndominating sets, pendant vertices, well-totally-dominated), and the\nconjecture statement.\n- The file `GraphConjecture199.lean` is intentionally omitted here\nbecause an earlier version is already under review in #3796\n(`wowii-batch-2`). Additional test lemmas for Conjecture 199 will be\nsubmitted as a follow-up after #3796 merges.\n\n### Related\n- #3795 (batch 1, merged)\n- #3796 (batch 2, open)\n- Companion PR: #3821 (this batch, part 2/2 — named\n`Graph<InvariantName>` files)\n\n---------\n\nCo-authored-by: Moritz Firsching <firsching@google.com>",
+        "verified_at": "2026-06-08T13:14:20Z"
+      }
+    },
+    "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/c270a99760869e9736d01be7871d7b8fd248e887",
+    "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/c270a99760869e9736d01be7871d7b8fd248e887",
+    "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/c270a99760869e9736d01be7871d7b8fd248e887/comments",
+    "author": {
+      "login": "henrykmichalewski",
+      "id": 3290366,
+      "node_id": "MDQ6VXNlcjMyOTAzNjY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3290366?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/henrykmichalewski",
+      "html_url": "https://github.com/henrykmichalewski",
+      "followers_url": "https://api.github.com/users/henrykmichalewski/followers",
+      "following_url": "https://api.github.com/users/henrykmichalewski/following{/other_user}",
+      "gists_url": "https://api.github.com/users/henrykmichalewski/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/henrykmichalewski/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/henrykmichalewski/subscriptions",
+      "organizations_url": "https://api.github.com/users/henrykmichalewski/orgs",
+      "repos_url": "https://api.github.com/users/henrykmichalewski/repos",
+      "events_url": "https://api.github.com/users/henrykmichalewski/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/henrykmichalewski/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2f9e809e0c84c3ed6f5527fe5785e508ac7512d8",
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/commits/2f9e809e0c84c3ed6f5527fe5785e508ac7512d8",
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/commit/2f9e809e0c84c3ed6f5527fe5785e508ac7512d8"
+      }
+    ]
+  }
+]

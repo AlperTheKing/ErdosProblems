@@ -1,0 +1,380 @@
+{
+ "tested_e_ge_1": 11766,
+ "E": {
+  "viol": 1,
+  "min_slack": -1,
+  "examples": [
+   {
+    "name": "atlas",
+    "g6": "FhELO",
+    "n": 7,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "bestSum": 1,
+    "bestSumM": 1,
+    "slack": -1
+   }
+  ]
+ },
+ "Eminus": {
+  "viol": 1,
+  "min_slack": -1,
+  "examples": [
+   {
+    "name": "atlas",
+    "g6": "FhELO",
+    "n": 7,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "bestSum": 1,
+    "bestSumM": 1,
+    "slack": -1
+   }
+  ]
+ },
+ "Aprime_g5": {
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ },
+ "Aprime_all": {
+  "viol": 63,
+  "min_slack": -2,
+  "examples": [
+   {
+    "name": "atlas",
+    "g6": "EhX_",
+    "n": 6,
+    "girth": 3,
+    "t": 4,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "EhX_",
+    "n": 6,
+    "girth": 3,
+    "t": 4,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FupA?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FupA?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F\\CoG",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FhDb?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FhDb?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FFwG_",
+    "n": 7,
+    "girth": 4,
+    "t": 5,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FFwG_",
+    "n": 7,
+    "girth": 4,
+    "t": 5,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FFwG_",
+    "n": 7,
+    "girth": 4,
+    "t": 5,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~_Q?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~_Q?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~_Q?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~_Q?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FzWa?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FzWa?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FzWa?",
+    "n": 7,
+    "girth": 3,
+    "t": 5,
+    "sumh": 4,
+    "sumh_m": 4,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FB}G_",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FB}G_",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~Ha?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~Ha?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~Ha?",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 3,
+    "sumh_m": 3,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~`__",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~`__",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "Fn{OO",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "F~Xo_",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "atlas",
+    "g6": "FD^Ww",
+    "n": 7,
+    "girth": 3,
+    "t": 4,
+    "sumh": 4,
+    "sumh_m": 3,
+    "covered": true,
+    "slack": -1
+   },
+   {
+    "name": "rand(8,0.18,107)",
+    "g6": "G[OCCk",
+    "n": 8,
+    "girth": 3,
+    "t": 6,
+    "sumh": 5,
+    "sumh_m": 5,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "rand(8,0.18,107)",
+    "g6": "G[OCCk",
+    "n": 8,
+    "girth": 3,
+    "t": 6,
+    "sumh": 5,
+    "sumh_m": 5,
+    "covered": false,
+    "slack": -1
+   },
+   {
+    "name": "rand(8,0.25,29)",
+    "g6": "Gy@BP?",
+    "n": 8,
+    "girth": 3,
+    "t": 6,
+    "sumh": 5,
+    "sumh_m": 5,
+    "covered": false,
+    "slack": -1
+   }
+  ]
+ }
+}

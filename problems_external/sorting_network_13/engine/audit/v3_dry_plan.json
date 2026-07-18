@@ -1,0 +1,33 @@
+{
+  "schema": "sn13-target44-dry-plan-v3",
+  "canonical_script": "../run_target44_offset100.ps1",
+  "canonical_script_sha256": "a025a57b86d53772ddd801e936231b1ede6dffadd711d545b37f63707107b224",
+  "parse_errors": 0,
+  "dry_exit_code": 0,
+  "sorterhunter_processes_before": 0,
+  "sorterhunter_processes_after": 0,
+  "workers_total": 100,
+  "seeds_unique": true,
+  "family_workers": {
+    "dobbelaere": 16,
+    "end13": 16,
+    "senso13": 16,
+    "cal131016": 16,
+    "lowavg": 18,
+    "max32": 18
+  },
+  "profile_workers": {
+    "baseline": 25,
+    "gentle": 25,
+    "explore": 25,
+    "topology": 25
+  },
+  "extra_cells": [
+    {"family": "lowavg", "profile": "baseline", "replicate": 4, "seed": 44004005},
+    {"family": "lowavg", "profile": "explore", "replicate": 4, "seed": 44004205},
+    {"family": "max32", "profile": "gentle", "replicate": 4, "seed": 44005105},
+    {"family": "max32", "profile": "topology", "replicate": 4, "seed": 44005305}
+  ],
+  "hard_deadline": "2026-07-18T21:57:27+03:00",
+  "target_search_started": false
+}

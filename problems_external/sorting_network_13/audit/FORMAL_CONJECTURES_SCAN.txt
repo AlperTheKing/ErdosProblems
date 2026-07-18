@@ -1,0 +1,22 @@
+audit date: 2026-07-18
+remote: https://github.com/google-deepmind/formal-conjectures.git
+branch: main
+commit: c252a41054125b5fd9c8356e2137cd9b55337657
+
+exact content patterns (case-insensitive):
+sorting[ _-]?network|comparator[ _-]?network|Bose.?Nelson|Van Voorhis|compare.?exchange|zero.?one principle
+
+roots scanned:
+FormalConjectures
+FormalConjecturesForMathlib
+
+exact content rg exit: 1 (no matches)
+
+broad Lean patterns:
+sort|comparator|compare.?exchange|compare.?swap|sorting number|sorter|size.?optimal
+
+broad result: 23 matches, all unrelated uses of list/degree-sequence sorting or `Sort*`.
+The only filename match for sort/network/comparator/bose/nelson was the unrelated
+FormalConjectures/Wikipedia/HadwigerNelson.lean.
+
+conclusion: upstream main contains no sorting-network statement and no S(13)=44 statement.

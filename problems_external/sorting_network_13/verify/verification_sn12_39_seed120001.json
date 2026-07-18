@@ -1,0 +1,27 @@
+{
+  "schema": "sorting-network-hit-audit-v1",
+  "verified_at": "2026-07-18T14:07:29+03:00",
+  "source_path": "../engine/results/n12_seed120001_39.net",
+  "source_file_sha256": "7c5e478f1d0a82b79970c21a74aa03bbb80c8230703354c02fb573a1d4934e08",
+  "fixture_path": "fixtures/sn12_39_seed120001.json",
+  "fixture_file_sha256": "f8b0817927946caa2011bc7561dc458f8ef64f1d6cbee873b74e18848d03d439",
+  "network_sha256": "573d33f9daa5461ce9c06eca89773b3ce6581e4f4937dd6bcdf4a5e915c353fd",
+  "source_comparators": 39,
+  "fixture_comparators": 39,
+  "source_fixture_sequence_equal": true,
+  "runs": [
+    {
+      "verifier": "python-scalar-v1",
+      "binary_inputs_tested": 4096,
+      "failures": 0,
+      "accepted": true
+    },
+    {
+      "verifier": "cpp-bitsliced-v1",
+      "binary_inputs_tested": 4096,
+      "failures": 0,
+      "accepted": true
+    }
+  ],
+  "all_accepted": true
+}

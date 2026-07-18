@@ -1,0 +1,1192 @@
+{
+  "algorithm_trace": [
+    {
+      "a": 36,
+      "b": 17,
+      "designation": "high",
+      "difference": 8,
+      "iteration": 1,
+      "lifts_of_y": [
+        17,
+        44
+      ],
+      "next_a": 44,
+      "output_pair": [
+        36,
+        17
+      ],
+      "source_pair": [
+        9,
+        17
+      ],
+      "starter": "S2",
+      "x": 9,
+      "y": 17,
+      "y_hat": 44
+    },
+    {
+      "a": 44,
+      "b": 12,
+      "designation": "high",
+      "difference": 5,
+      "iteration": 2,
+      "lifts_of_y": [
+        12,
+        39
+      ],
+      "next_a": 39,
+      "output_pair": [
+        44,
+        12
+      ],
+      "source_pair": [
+        12,
+        17
+      ],
+      "starter": "S1",
+      "x": 17,
+      "y": 12,
+      "y_hat": 39
+    },
+    {
+      "a": 39,
+      "b": 45,
+      "designation": "low",
+      "difference": 6,
+      "iteration": 3,
+      "lifts_of_y": [
+        18,
+        45
+      ],
+      "next_a": 18,
+      "output_pair": [
+        39,
+        45
+      ],
+      "source_pair": [
+        12,
+        18
+      ],
+      "starter": "S2",
+      "x": 12,
+      "y": 18,
+      "y_hat": 45
+    },
+    {
+      "a": 18,
+      "b": 35,
+      "designation": "high",
+      "difference": 10,
+      "iteration": 4,
+      "lifts_of_y": [
+        8,
+        35
+      ],
+      "next_a": 8,
+      "output_pair": [
+        18,
+        35
+      ],
+      "source_pair": [
+        8,
+        18
+      ],
+      "starter": "S1",
+      "x": 18,
+      "y": 8,
+      "y_hat": 8
+    },
+    {
+      "a": 8,
+      "b": 50,
+      "designation": "low",
+      "difference": 12,
+      "iteration": 5,
+      "lifts_of_y": [
+        23,
+        50
+      ],
+      "next_a": 23,
+      "output_pair": [
+        8,
+        50
+      ],
+      "source_pair": [
+        8,
+        23
+      ],
+      "starter": "S2",
+      "x": 8,
+      "y": 23,
+      "y_hat": 50
+    },
+    {
+      "a": 23,
+      "b": 15,
+      "designation": "low",
+      "difference": 8,
+      "iteration": 6,
+      "lifts_of_y": [
+        15,
+        42
+      ],
+      "next_a": 42,
+      "output_pair": [
+        23,
+        15
+      ],
+      "source_pair": [
+        15,
+        23
+      ],
+      "starter": "S1",
+      "x": 23,
+      "y": 15,
+      "y_hat": 15
+    },
+    {
+      "a": 42,
+      "b": 32,
+      "designation": "low",
+      "difference": 10,
+      "iteration": 7,
+      "lifts_of_y": [
+        5,
+        32
+      ],
+      "next_a": 5,
+      "output_pair": [
+        42,
+        32
+      ],
+      "source_pair": [
+        5,
+        15
+      ],
+      "starter": "S2",
+      "x": 15,
+      "y": 5,
+      "y_hat": 32
+    },
+    {
+      "a": 5,
+      "b": 46,
+      "designation": "low",
+      "difference": 13,
+      "iteration": 8,
+      "lifts_of_y": [
+        19,
+        46
+      ],
+      "next_a": 19,
+      "output_pair": [
+        5,
+        46
+      ],
+      "source_pair": [
+        5,
+        19
+      ],
+      "starter": "S1",
+      "x": 5,
+      "y": 19,
+      "y_hat": 46
+    },
+    {
+      "a": 19,
+      "b": 49,
+      "designation": "high",
+      "difference": 3,
+      "iteration": 9,
+      "lifts_of_y": [
+        22,
+        49
+      ],
+      "next_a": 22,
+      "output_pair": [
+        19,
+        49
+      ],
+      "source_pair": [
+        19,
+        22
+      ],
+      "starter": "S2",
+      "x": 19,
+      "y": 22,
+      "y_hat": 22
+    },
+    {
+      "a": 22,
+      "b": 37,
+      "designation": "high",
+      "difference": 12,
+      "iteration": 10,
+      "lifts_of_y": [
+        10,
+        37
+      ],
+      "next_a": 10,
+      "output_pair": [
+        22,
+        37
+      ],
+      "source_pair": [
+        10,
+        22
+      ],
+      "starter": "S1",
+      "x": 22,
+      "y": 10,
+      "y_hat": 10
+    },
+    {
+      "a": 10,
+      "b": 6,
+      "designation": "low",
+      "difference": 4,
+      "iteration": 11,
+      "lifts_of_y": [
+        6,
+        33
+      ],
+      "next_a": 33,
+      "output_pair": [
+        10,
+        6
+      ],
+      "source_pair": [
+        6,
+        10
+      ],
+      "starter": "S2",
+      "x": 10,
+      "y": 6,
+      "y_hat": 6
+    },
+    {
+      "a": 33,
+      "b": 30,
+      "designation": "low",
+      "difference": 3,
+      "iteration": 12,
+      "lifts_of_y": [
+        3,
+        30
+      ],
+      "next_a": 3,
+      "output_pair": [
+        33,
+        30
+      ],
+      "source_pair": [
+        3,
+        6
+      ],
+      "starter": "S1",
+      "x": 6,
+      "y": 3,
+      "y_hat": 30
+    },
+    {
+      "a": 3,
+      "b": 41,
+      "designation": "high",
+      "difference": 11,
+      "iteration": 13,
+      "lifts_of_y": [
+        14,
+        41
+      ],
+      "next_a": 14,
+      "output_pair": [
+        3,
+        41
+      ],
+      "source_pair": [
+        3,
+        14
+      ],
+      "starter": "S2",
+      "x": 3,
+      "y": 14,
+      "y_hat": 14
+    },
+    {
+      "a": 14,
+      "b": 21,
+      "designation": "low",
+      "difference": 7,
+      "iteration": 14,
+      "lifts_of_y": [
+        21,
+        48
+      ],
+      "next_a": 48,
+      "output_pair": [
+        14,
+        21
+      ],
+      "source_pair": [
+        14,
+        21
+      ],
+      "starter": "S1",
+      "x": 14,
+      "y": 21,
+      "y_hat": 21
+    },
+    {
+      "a": 48,
+      "b": 43,
+      "designation": "low",
+      "difference": 5,
+      "iteration": 15,
+      "lifts_of_y": [
+        16,
+        43
+      ],
+      "next_a": 16,
+      "output_pair": [
+        48,
+        43
+      ],
+      "source_pair": [
+        16,
+        21
+      ],
+      "starter": "S2",
+      "x": 21,
+      "y": 16,
+      "y_hat": 43
+    },
+    {
+      "a": 16,
+      "b": 52,
+      "designation": "high",
+      "difference": 9,
+      "iteration": 16,
+      "lifts_of_y": [
+        25,
+        52
+      ],
+      "next_a": 25,
+      "output_pair": [
+        16,
+        52
+      ],
+      "source_pair": [
+        16,
+        25
+      ],
+      "starter": "S1",
+      "x": 16,
+      "y": 25,
+      "y_hat": 25
+    },
+    {
+      "a": 25,
+      "b": 34,
+      "designation": "low",
+      "difference": 9,
+      "iteration": 17,
+      "lifts_of_y": [
+        7,
+        34
+      ],
+      "next_a": 7,
+      "output_pair": [
+        25,
+        34
+      ],
+      "source_pair": [
+        7,
+        25
+      ],
+      "starter": "S2",
+      "x": 25,
+      "y": 7,
+      "y_hat": 34
+    },
+    {
+      "a": 7,
+      "b": 38,
+      "designation": "high",
+      "difference": 4,
+      "iteration": 18,
+      "lifts_of_y": [
+        11,
+        38
+      ],
+      "next_a": 11,
+      "output_pair": [
+        7,
+        38
+      ],
+      "source_pair": [
+        7,
+        11
+      ],
+      "starter": "S1",
+      "x": 7,
+      "y": 11,
+      "y_hat": 11
+    },
+    {
+      "a": 11,
+      "b": 31,
+      "designation": "high",
+      "difference": 7,
+      "iteration": 19,
+      "lifts_of_y": [
+        4,
+        31
+      ],
+      "next_a": 4,
+      "output_pair": [
+        11,
+        31
+      ],
+      "source_pair": [
+        4,
+        11
+      ],
+      "starter": "S2",
+      "x": 11,
+      "y": 4,
+      "y_hat": 4
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "designation": "low",
+      "difference": 2,
+      "iteration": 20,
+      "lifts_of_y": [
+        2,
+        29
+      ],
+      "next_a": 29,
+      "output_pair": [
+        4,
+        2
+      ],
+      "source_pair": [
+        2,
+        4
+      ],
+      "starter": "S1",
+      "x": 4,
+      "y": 2,
+      "y_hat": 2
+    },
+    {
+      "a": 29,
+      "b": 28,
+      "designation": "low",
+      "difference": 1,
+      "iteration": 21,
+      "lifts_of_y": [
+        1,
+        28
+      ],
+      "next_a": 1,
+      "output_pair": [
+        29,
+        28
+      ],
+      "source_pair": [
+        1,
+        2
+      ],
+      "starter": "S2",
+      "x": 2,
+      "y": 1,
+      "y_hat": 28
+    },
+    {
+      "a": 1,
+      "b": 27,
+      "designation": "high",
+      "difference": 1,
+      "iteration": 22,
+      "lifts_of_y": [
+        0,
+        27
+      ],
+      "next_a": 0,
+      "output_pair": [
+        1,
+        27
+      ],
+      "source_pair": [
+        0,
+        1
+      ],
+      "starter": "S1",
+      "x": 1,
+      "y": 0,
+      "y_hat": 0
+    },
+    {
+      "a": 0,
+      "b": 40,
+      "designation": "high",
+      "difference": 13,
+      "iteration": 23,
+      "lifts_of_y": [
+        13,
+        40
+      ],
+      "next_a": 13,
+      "output_pair": [
+        0,
+        40
+      ],
+      "source_pair": [
+        0,
+        13
+      ],
+      "starter": "S2",
+      "x": 0,
+      "y": 13,
+      "y_hat": 13
+    },
+    {
+      "a": 13,
+      "b": 24,
+      "designation": "low",
+      "difference": 11,
+      "iteration": 24,
+      "lifts_of_y": [
+        24,
+        51
+      ],
+      "next_a": 51,
+      "output_pair": [
+        13,
+        24
+      ],
+      "source_pair": [
+        13,
+        24
+      ],
+      "starter": "S1",
+      "x": 13,
+      "y": 24,
+      "y_hat": 24
+    },
+    {
+      "a": 51,
+      "b": 26,
+      "designation": "high",
+      "difference": 2,
+      "iteration": 25,
+      "lifts_of_y": [
+        26,
+        53
+      ],
+      "next_a": 53,
+      "output_pair": [
+        51,
+        26
+      ],
+      "source_pair": [
+        24,
+        26
+      ],
+      "starter": "S2",
+      "x": 24,
+      "y": 26,
+      "y_hat": 53
+    },
+    {
+      "a": 53,
+      "b": 20,
+      "designation": "high",
+      "difference": 6,
+      "iteration": 26,
+      "lifts_of_y": [
+        20,
+        47
+      ],
+      "next_a": 47,
+      "output_pair": [
+        53,
+        20
+      ],
+      "source_pair": [
+        20,
+        26
+      ],
+      "starter": "S1",
+      "x": 26,
+      "y": 20,
+      "y_hat": 47
+    }
+  ],
+  "canonical_generated_pairs": [
+    [
+      0,
+      40
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      41
+    ],
+    [
+      5,
+      46
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      38
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      11,
+      31
+    ],
+    [
+      12,
+      44
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      15,
+      23
+    ],
+    [
+      16,
+      52
+    ],
+    [
+      17,
+      36
+    ],
+    [
+      18,
+      35
+    ],
+    [
+      19,
+      49
+    ],
+    [
+      20,
+      53
+    ],
+    [
+      22,
+      37
+    ],
+    [
+      25,
+      34
+    ],
+    [
+      26,
+      51
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      30,
+      33
+    ],
+    [
+      32,
+      42
+    ],
+    [
+      39,
+      45
+    ],
+    [
+      43,
+      48
+    ]
+  ],
+  "directed_difference_exception": 27,
+  "generated_pairs_in_algorithm_order": [
+    [
+      36,
+      17
+    ],
+    [
+      44,
+      12
+    ],
+    [
+      39,
+      45
+    ],
+    [
+      18,
+      35
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      23,
+      15
+    ],
+    [
+      42,
+      32
+    ],
+    [
+      5,
+      46
+    ],
+    [
+      19,
+      49
+    ],
+    [
+      22,
+      37
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      33,
+      30
+    ],
+    [
+      3,
+      41
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      48,
+      43
+    ],
+    [
+      16,
+      52
+    ],
+    [
+      25,
+      34
+    ],
+    [
+      7,
+      38
+    ],
+    [
+      11,
+      31
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      29,
+      28
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      0,
+      40
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      51,
+      26
+    ],
+    [
+      53,
+      20
+    ]
+  ],
+  "interpretation": {
+    "initial_lift_a": 36,
+    "pair_semantics": "unordered",
+    "table_layout": "S1 rows are high then low; complementary S2 rows are low then high",
+    "terminal_lift_a": 47
+  },
+  "matches_published_up_to_pair_and_list_order": true,
+  "missing_vertices": [
+    9,
+    47
+  ],
+  "modulus": 54,
+  "name": "Pike K_56 even starter reproduced from Table 1 by Algorithm 1",
+  "normalized_pairs_sha256": "2d5b0f843c9e7988c0b001d0700e241ea125a48c00383b2f8fe2b1cb825ca96d",
+  "omitted": [
+    9,
+    47
+  ],
+  "order": 56,
+  "pairs": [
+    [
+      36,
+      17
+    ],
+    [
+      44,
+      12
+    ],
+    [
+      39,
+      45
+    ],
+    [
+      18,
+      35
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      23,
+      15
+    ],
+    [
+      42,
+      32
+    ],
+    [
+      5,
+      46
+    ],
+    [
+      19,
+      49
+    ],
+    [
+      22,
+      37
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      33,
+      30
+    ],
+    [
+      3,
+      41
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      48,
+      43
+    ],
+    [
+      16,
+      52
+    ],
+    [
+      25,
+      34
+    ],
+    [
+      7,
+      38
+    ],
+    [
+      11,
+      31
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      29,
+      28
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      0,
+      40
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      51,
+      26
+    ],
+    [
+      53,
+      20
+    ]
+  ],
+  "published_pairs_in_printed_order": [
+    [
+      36,
+      17
+    ],
+    [
+      44,
+      12
+    ],
+    [
+      39,
+      45
+    ],
+    [
+      18,
+      35
+    ],
+    [
+      8,
+      50
+    ],
+    [
+      23,
+      15
+    ],
+    [
+      42,
+      32
+    ],
+    [
+      5,
+      46
+    ],
+    [
+      19,
+      49
+    ],
+    [
+      22,
+      37
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      33,
+      30
+    ],
+    [
+      3,
+      41
+    ],
+    [
+      14,
+      21
+    ],
+    [
+      48,
+      43
+    ],
+    [
+      16,
+      52
+    ],
+    [
+      25,
+      34
+    ],
+    [
+      7,
+      38
+    ],
+    [
+      11,
+      31
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      29,
+      28
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      0,
+      40
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      51,
+      26
+    ],
+    [
+      53,
+      20
+    ]
+  ],
+  "schema": "p1f-even-starter-v1",
+  "source": {
+    "S1_high": [
+      [
+        0,
+        1
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        12,
+        17
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        16,
+        25
+      ],
+      [
+        8,
+        18
+      ],
+      [
+        10,
+        22
+      ]
+    ],
+    "S1_low": [
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        14,
+        21
+      ],
+      [
+        15,
+        23
+      ],
+      [
+        13,
+        24
+      ],
+      [
+        5,
+        19
+      ]
+    ],
+    "S2_high": [
+      [
+        24,
+        26
+      ],
+      [
+        19,
+        22
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        9,
+        17
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        0,
+        13
+      ]
+    ],
+    "S2_low": [
+      [
+        1,
+        2
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        16,
+        21
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        7,
+        25
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        8,
+        23
+      ]
+    ],
+    "citation": "David A. Pike, A Perfect One-Factorisation of K_56, arXiv:1810.08734v2, Table 1 and Algorithm 1",
+    "even_starter_modulus": 54,
+    "missing_S1": 9,
+    "missing_S2": 20,
+    "starter_modulus": 27
+  }
+}

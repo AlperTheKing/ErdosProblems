@@ -1,0 +1,11 @@
+{
+  "description": "The cyclic (7; 3,3,3,1; 3) SDS from three copies of the (7,3,1) difference set {0,1,3} and one singleton.",
+  "modulus": 7,
+  "cardinalities": [3, 3, 3, 1],
+  "subsets": [
+    [0, 1, 3],
+    [0, 1, 3],
+    [0, 1, 3],
+    [0]
+  ]
+}

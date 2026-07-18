@@ -1,0 +1,3004 @@
+{
+  "extremal_rows": [
+    {
+      "name": "K(3)",
+      "g6": "Bw",
+      "n": 3,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(3)",
+      "g6": "Bw",
+      "n": 3,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "K(4)",
+      "g6": "C~",
+      "n": 4,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(4)",
+      "g6": "Cl",
+      "n": 4,
+      "girth": 4,
+      "f": 0,
+      "tree": 3,
+      "slack": "1/3",
+      "tight": false
+    },
+    {
+      "name": "K(5)",
+      "g6": "D~{",
+      "n": 5,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(5)",
+      "g6": "Dhc",
+      "n": 5,
+      "girth": 5,
+      "f": 0,
+      "tree": 4,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "K(6)",
+      "g6": "E~~w",
+      "n": 6,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(6)",
+      "g6": "EhEG",
+      "n": 6,
+      "girth": 6,
+      "f": 0,
+      "tree": 5,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "K(7)",
+      "g6": "F~~~w",
+      "n": 7,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(7)",
+      "g6": "FhCKG",
+      "n": 7,
+      "girth": 7,
+      "f": 0,
+      "tree": 6,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "K(8)",
+      "g6": "G~~~~{",
+      "n": 8,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(8)",
+      "g6": "GhCGKC",
+      "n": 8,
+      "girth": 8,
+      "f": 0,
+      "tree": 7,
+      "slack": "5/3",
+      "tight": false
+    },
+    {
+      "name": "K(9)",
+      "g6": "H~~~~~~",
+      "n": 9,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(9)",
+      "g6": "HhCGGE@",
+      "n": 9,
+      "girth": 9,
+      "f": 0,
+      "tree": 8,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "K(10)",
+      "g6": "I~~~~~~~w",
+      "n": 10,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(10)",
+      "g6": "IhCGGC@_G",
+      "n": 10,
+      "girth": 10,
+      "f": 0,
+      "tree": 9,
+      "slack": "7/3",
+      "tight": false
+    },
+    {
+      "name": "K(11)",
+      "g6": "J~~~~~~~~~_",
+      "n": 11,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(11)",
+      "g6": "JhCGGC@?K?_",
+      "n": 11,
+      "girth": 11,
+      "f": 0,
+      "tree": 10,
+      "slack": "8/3",
+      "tight": false
+    },
+    {
+      "name": "K(12)",
+      "g6": "K~~~~~~~~~~~",
+      "n": 12,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(12)",
+      "g6": "KhCGGC@?G?o@",
+      "n": 12,
+      "girth": 12,
+      "f": 0,
+      "tree": 11,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "K(13)",
+      "g6": "L~~~~~~~~~~~~~",
+      "n": 13,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(13)",
+      "g6": "LhCGGC@?G?_@_@",
+      "n": 13,
+      "girth": 13,
+      "f": 0,
+      "tree": 12,
+      "slack": "10/3",
+      "tight": false
+    },
+    {
+      "name": "K(14)",
+      "g6": "M~~~~~~~~~~~~~~~_",
+      "n": 14,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(14)",
+      "g6": "MhCGGC@?G?_@?@_?_",
+      "n": 14,
+      "girth": 14,
+      "f": 0,
+      "tree": 13,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "K(15)",
+      "g6": "N~~~~~~~~~~~~~~~~~w",
+      "n": 15,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(15)",
+      "g6": "NhCGGC@?G?_@?@??o?G",
+      "n": 15,
+      "girth": 15,
+      "f": 0,
+      "tree": 14,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "K(16)",
+      "g6": "O~~~~~~~~~~~~~~~~~~~~",
+      "n": 16,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(16)",
+      "g6": "OhCGGC@?G?_@?@??_?K?@",
+      "n": 16,
+      "girth": 16,
+      "f": 0,
+      "tree": 15,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "K(17)",
+      "g6": "P~~~~~~~~~~~~~~~~~~~~~~{",
+      "n": 17,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(17)",
+      "g6": "PhCGGC@?G?_@?@??_?G?@_?C",
+      "n": 17,
+      "girth": 17,
+      "f": 0,
+      "tree": 16,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "K(18)",
+      "g6": "Q~~~~~~~~~~~~~~~~~~~~~~~~~w",
+      "n": 18,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(18)",
+      "g6": "QhCGGC@?G?_@?@??_?G?@??E??G",
+      "n": 18,
+      "girth": 18,
+      "f": 0,
+      "tree": 17,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "K(19)",
+      "g6": "R~~~~~~~~~~~~~~~~~~~~~~~~~~~~w",
+      "n": 19,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(19)",
+      "g6": "RhCGGC@?G?_@?@??_?G?@??C??K??G",
+      "n": 19,
+      "girth": 19,
+      "f": 0,
+      "tree": 18,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "K(20)",
+      "g6": "S~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{",
+      "n": 20,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "C(20)",
+      "g6": "ShCGGC@?G?_@?@??_?G?@??C??G??K??C",
+      "n": 20,
+      "girth": 20,
+      "f": 0,
+      "tree": 19,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "lollipop(3,1)",
+      "g6": "Cx",
+      "n": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(4,1)",
+      "g6": "D~C",
+      "n": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(5,1)",
+      "g6": "E~{G",
+      "n": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(6,1)",
+      "g6": "F~~wG",
+      "n": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(7,1)",
+      "g6": "G~~~wC",
+      "n": 8,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(8,1)",
+      "g6": "H~~~~{@",
+      "n": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(9,1)",
+      "g6": "I~~~~~~?G",
+      "n": 10,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(10,1)",
+      "g6": "J~~~~~~~w?_",
+      "n": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(11,1)",
+      "g6": "K~~~~~~~~~_@",
+      "n": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(12,1)",
+      "g6": "L~~~~~~~~~~~?@",
+      "n": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(13,1)",
+      "g6": "M~~~~~~~~~~~~~??_",
+      "n": 14,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(14,1)",
+      "g6": "N~~~~~~~~~~~~~~~_?G",
+      "n": 15,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(15,1)",
+      "g6": "O~~~~~~~~~~~~~~~~~w?@",
+      "n": 16,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(16,1)",
+      "g6": "P~~~~~~~~~~~~~~~~~~~~??C",
+      "n": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(17,1)",
+      "g6": "Q~~~~~~~~~~~~~~~~~~~~~~{??G",
+      "n": 18,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(18,1)",
+      "g6": "R~~~~~~~~~~~~~~~~~~~~~~~~~w??G",
+      "n": 19,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(19,1)",
+      "g6": "S~~~~~~~~~~~~~~~~~~~~~~~~~~~~w??C",
+      "n": 20,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "lollipop(3,2)",
+      "g6": "DxC",
+      "n": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(4,2)",
+      "g6": "E~CG",
+      "n": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(5,2)",
+      "g6": "F~{GG",
+      "n": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(6,2)",
+      "g6": "G~~wGC",
+      "n": 8,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(7,2)",
+      "g6": "H~~~wC@",
+      "n": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(8,2)",
+      "g6": "I~~~~{@?G",
+      "n": 10,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(9,2)",
+      "g6": "J~~~~~~?G?_",
+      "n": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(10,2)",
+      "g6": "K~~~~~~~w?_@",
+      "n": 12,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(11,2)",
+      "g6": "L~~~~~~~~~_@?@",
+      "n": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "lollipop(12,2)",
+      "g6": "M~~~~~~~~~~~?@??_",
+      "n": 14,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "friendship(1)",
+      "g6": "Bw",
+      "n": 3,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "triangle_chain(1)",
+      "g6": "Bw",
+      "n": 3,
+      "girth": 3,
+      "f": 0,
+      "tree": 2,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "friendship(2)",
+      "g6": "D{c",
+      "n": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "triangle_chain(2)",
+      "g6": "DyS",
+      "n": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "friendship(3)",
+      "g6": "F{eCG",
+      "n": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(3)",
+      "g6": "FySOg",
+      "n": 7,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "friendship(4)",
+      "g6": "H{eCKA@",
+      "n": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 5,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(4)",
+      "g6": "HySOgGD",
+      "n": 9,
+      "girth": 3,
+      "f": 2,
+      "tree": 5,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "friendship(5)",
+      "g6": "J{eCKA@_C?_",
+      "n": 11,
+      "girth": 3,
+      "f": 1,
+      "tree": 6,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(5)",
+      "g6": "JySOgGD?OA_",
+      "n": 11,
+      "girth": 3,
+      "f": 3,
+      "tree": 6,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "friendship(6)",
+      "g6": "L{eCKA@_C?o?_@",
+      "n": 13,
+      "girth": 3,
+      "f": 1,
+      "tree": 7,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(6)",
+      "g6": "LySOgGD?OA_A?D",
+      "n": 13,
+      "girth": 3,
+      "f": 3,
+      "tree": 7,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "friendship(7)",
+      "g6": "N{eCKA@_C?o?_@_?O?G",
+      "n": 15,
+      "girth": 3,
+      "f": 1,
+      "tree": 8,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(7)",
+      "g6": "NySOgGD?OA_A?D?@??g",
+      "n": 15,
+      "girth": 3,
+      "f": 4,
+      "tree": 8,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "friendship(8)",
+      "g6": "P{eCKA@_C?o?_@_?O?K??_?C",
+      "n": 17,
+      "girth": 3,
+      "f": 1,
+      "tree": 9,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(8)",
+      "g6": "PySOgGD?OA_A?D?@??g?A??S",
+      "n": 17,
+      "girth": 3,
+      "f": 4,
+      "tree": 9,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "friendship(9)",
+      "g6": "R{eCKA@_C?o?_@_?O?K??_?E??C??G",
+      "n": 19,
+      "girth": 3,
+      "f": 1,
+      "tree": 10,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "triangle_chain(9)",
+      "g6": "RySOgGD?OA_A?D?@??g?A??S??O??g",
+      "n": 19,
+      "girth": 3,
+      "f": 5,
+      "tree": 10,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "clique_chain(4,2)",
+      "g6": "F~PIW",
+      "n": 7,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "clique_chain(4,3)",
+      "g6": "I~PIWOHAW",
+      "n": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "clique_chain(4,4)",
+      "g6": "L~PIWOHAWA?H?R",
+      "n": 13,
+      "girth": 3,
+      "f": 2,
+      "tree": 5,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "clique_chain(4,5)",
+      "g6": "O~PIWOHAWA?H?R?A?@G?R",
+      "n": 16,
+      "girth": 3,
+      "f": 3,
+      "tree": 6,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "clique_chain(4,6)",
+      "g6": "R~PIWOHAWA?H?R?A?@G?R??O?@G?AW",
+      "n": 19,
+      "girth": 3,
+      "f": 3,
+      "tree": 7,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "clique_chain(5,2)",
+      "g6": "H~|AILF",
+      "n": 9,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "clique_chain(5,3)",
+      "g6": "L~|AILF@?G_b@F",
+      "n": 13,
+      "girth": 3,
+      "f": 2,
+      "tree": 4,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "clique_chain(5,4)",
+      "g6": "P~|AILF@?G_b@F?C?AG?b?C[",
+      "n": 17,
+      "girth": 3,
+      "f": 2,
+      "tree": 5,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,1)",
+      "g6": "C{",
+      "n": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "tadpole(3,2)",
+      "g6": "D{C",
+      "n": 5,
+      "girth": 3,
+      "f": 1,
+      "tree": 4,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,3)",
+      "g6": "E{CG",
+      "n": 6,
+      "girth": 3,
+      "f": 2,
+      "tree": 5,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,4)",
+      "g6": "F{CGG",
+      "n": 7,
+      "girth": 3,
+      "f": 2,
+      "tree": 6,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,5)",
+      "g6": "G{CGGC",
+      "n": 8,
+      "girth": 3,
+      "f": 3,
+      "tree": 7,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,6)",
+      "g6": "H{CGGC@",
+      "n": 9,
+      "girth": 3,
+      "f": 3,
+      "tree": 8,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,7)",
+      "g6": "I{CGGC@?G",
+      "n": 10,
+      "girth": 3,
+      "f": 4,
+      "tree": 9,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,8)",
+      "g6": "J{CGGC@?G?_",
+      "n": 11,
+      "girth": 3,
+      "f": 4,
+      "tree": 10,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,9)",
+      "g6": "K{CGGC@?G?_@",
+      "n": 12,
+      "girth": 3,
+      "f": 5,
+      "tree": 11,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,10)",
+      "g6": "L{CGGC@?G?_@?@",
+      "n": 13,
+      "girth": 3,
+      "f": 5,
+      "tree": 12,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,11)",
+      "g6": "M{CGGC@?G?_@?@??_",
+      "n": 14,
+      "girth": 3,
+      "f": 6,
+      "tree": 13,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,12)",
+      "g6": "N{CGGC@?G?_@?@??_?G",
+      "n": 15,
+      "girth": 3,
+      "f": 6,
+      "tree": 14,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,13)",
+      "g6": "O{CGGC@?G?_@?@??_?G?@",
+      "n": 16,
+      "girth": 3,
+      "f": 7,
+      "tree": 15,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,14)",
+      "g6": "P{CGGC@?G?_@?@??_?G?@??C",
+      "n": 17,
+      "girth": 3,
+      "f": 7,
+      "tree": 16,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,15)",
+      "g6": "Q{CGGC@?G?_@?@??_?G?@??C??G",
+      "n": 18,
+      "girth": 3,
+      "f": 8,
+      "tree": 17,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,16)",
+      "g6": "R{CGGC@?G?_@?@??_?G?@??C??G??G",
+      "n": 19,
+      "girth": 3,
+      "f": 8,
+      "tree": 18,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,17)",
+      "g6": "S{CGGC@?G?_@?@??_?G?@??C??G??G??C",
+      "n": 20,
+      "girth": 3,
+      "f": 9,
+      "tree": 19,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,1)",
+      "g6": "FhEK?",
+      "n": 7,
+      "girth": 6,
+      "f": 2,
+      "tree": 6,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "tadpole(6,2)",
+      "g6": "GhEK?C",
+      "n": 8,
+      "girth": 6,
+      "f": 2,
+      "tree": 7,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,3)",
+      "g6": "HhEK?C@",
+      "n": 9,
+      "girth": 6,
+      "f": 3,
+      "tree": 8,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,4)",
+      "g6": "IhEK?C@?G",
+      "n": 10,
+      "girth": 6,
+      "f": 3,
+      "tree": 9,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,5)",
+      "g6": "JhEK?C@?G?_",
+      "n": 11,
+      "girth": 6,
+      "f": 4,
+      "tree": 10,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,6)",
+      "g6": "KhEK?C@?G?_@",
+      "n": 12,
+      "girth": 6,
+      "f": 4,
+      "tree": 11,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,7)",
+      "g6": "LhEK?C@?G?_@?@",
+      "n": 13,
+      "girth": 6,
+      "f": 5,
+      "tree": 12,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,8)",
+      "g6": "MhEK?C@?G?_@?@??_",
+      "n": 14,
+      "girth": 6,
+      "f": 5,
+      "tree": 13,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,9)",
+      "g6": "NhEK?C@?G?_@?@??_?G",
+      "n": 15,
+      "girth": 6,
+      "f": 6,
+      "tree": 14,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,10)",
+      "g6": "OhEK?C@?G?_@?@??_?G?@",
+      "n": 16,
+      "girth": 6,
+      "f": 6,
+      "tree": 15,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,11)",
+      "g6": "PhEK?C@?G?_@?@??_?G?@??C",
+      "n": 17,
+      "girth": 6,
+      "f": 7,
+      "tree": 16,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,12)",
+      "g6": "QhEK?C@?G?_@?@??_?G?@??C??G",
+      "n": 18,
+      "girth": 6,
+      "f": 7,
+      "tree": 17,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,13)",
+      "g6": "RhEK?C@?G?_@?@??_?G?@??C??G??G",
+      "n": 19,
+      "girth": 6,
+      "f": 8,
+      "tree": 18,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,14)",
+      "g6": "ShEK?C@?G?_@?@??_?G?@??C??G??G??C",
+      "n": 20,
+      "girth": 6,
+      "f": 8,
+      "tree": 19,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,1)",
+      "g6": "IhCGGE@_?",
+      "n": 10,
+      "girth": 9,
+      "f": 2,
+      "tree": 9,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,2)",
+      "g6": "JhCGGE@_??_",
+      "n": 11,
+      "girth": 9,
+      "f": 3,
+      "tree": 10,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,3)",
+      "g6": "KhCGGE@_??_@",
+      "n": 12,
+      "girth": 9,
+      "f": 3,
+      "tree": 11,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,4)",
+      "g6": "LhCGGE@_??_@?@",
+      "n": 13,
+      "girth": 9,
+      "f": 4,
+      "tree": 12,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,5)",
+      "g6": "MhCGGE@_??_@?@??_",
+      "n": 14,
+      "girth": 9,
+      "f": 4,
+      "tree": 13,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,6)",
+      "g6": "NhCGGE@_??_@?@??_?G",
+      "n": 15,
+      "girth": 9,
+      "f": 5,
+      "tree": 14,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,7)",
+      "g6": "OhCGGE@_??_@?@??_?G?@",
+      "n": 16,
+      "girth": 9,
+      "f": 5,
+      "tree": 15,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,8)",
+      "g6": "PhCGGE@_??_@?@??_?G?@??C",
+      "n": 17,
+      "girth": 9,
+      "f": 6,
+      "tree": 16,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,9)",
+      "g6": "QhCGGE@_??_@?@??_?G?@??C??G",
+      "n": 18,
+      "girth": 9,
+      "f": 6,
+      "tree": 17,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,10)",
+      "g6": "RhCGGE@_??_@?@??_?G?@??C??G??G",
+      "n": 19,
+      "girth": 9,
+      "f": 7,
+      "tree": 18,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,11)",
+      "g6": "ShCGGE@_??_@?@??_?G?@??C??G??G??C",
+      "n": 20,
+      "girth": 9,
+      "f": 7,
+      "tree": 19,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,1)",
+      "g6": "LhCGGC@?G?o@_?",
+      "n": 13,
+      "girth": 12,
+      "f": 3,
+      "tree": 12,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,2)",
+      "g6": "MhCGGC@?G?o@_???_",
+      "n": 14,
+      "girth": 12,
+      "f": 4,
+      "tree": 13,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,3)",
+      "g6": "NhCGGC@?G?o@_???_?G",
+      "n": 15,
+      "girth": 12,
+      "f": 4,
+      "tree": 14,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,4)",
+      "g6": "OhCGGC@?G?o@_???_?G?@",
+      "n": 16,
+      "girth": 12,
+      "f": 5,
+      "tree": 15,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,5)",
+      "g6": "PhCGGC@?G?o@_???_?G?@??C",
+      "n": 17,
+      "girth": 12,
+      "f": 5,
+      "tree": 16,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,6)",
+      "g6": "QhCGGC@?G?o@_???_?G?@??C??G",
+      "n": 18,
+      "girth": 12,
+      "f": 6,
+      "tree": 17,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,7)",
+      "g6": "RhCGGC@?G?o@_???_?G?@??C??G??G",
+      "n": 19,
+      "girth": 12,
+      "f": 6,
+      "tree": 18,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,8)",
+      "g6": "ShCGGC@?G?o@_???_?G?@??C??G??G??C",
+      "n": 20,
+      "girth": 12,
+      "f": 7,
+      "tree": 19,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "tadpole(3,1)",
+      "g6": "C{",
+      "n": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "tadpole(4,1)",
+      "g6": "Dl_",
+      "n": 5,
+      "girth": 4,
+      "f": 1,
+      "tree": 4,
+      "slack": "1/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(5,1)",
+      "g6": "Ehe?",
+      "n": 6,
+      "girth": 5,
+      "f": 1,
+      "tree": 5,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(6,1)",
+      "g6": "FhEK?",
+      "n": 7,
+      "girth": 6,
+      "f": 2,
+      "tree": 6,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "tadpole(7,1)",
+      "g6": "GhCKK?",
+      "n": 8,
+      "girth": 7,
+      "f": 2,
+      "tree": 7,
+      "slack": "1/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(8,1)",
+      "g6": "HhCGKE?",
+      "n": 9,
+      "girth": 8,
+      "f": 2,
+      "tree": 8,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(9,1)",
+      "g6": "IhCGGE@_?",
+      "n": 10,
+      "girth": 9,
+      "f": 2,
+      "tree": 9,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(10,1)",
+      "g6": "JhCGGC@_K??",
+      "n": 11,
+      "girth": 10,
+      "f": 3,
+      "tree": 10,
+      "slack": "1/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(11,1)",
+      "g6": "KhCGGC@?K?o?",
+      "n": 12,
+      "girth": 11,
+      "f": 3,
+      "tree": 11,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(12,1)",
+      "g6": "LhCGGC@?G?o@_?",
+      "n": 13,
+      "girth": 12,
+      "f": 3,
+      "tree": 12,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(13,1)",
+      "g6": "MhCGGC@?G?_@_@_??",
+      "n": 14,
+      "girth": 13,
+      "f": 3,
+      "tree": 13,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(14,1)",
+      "g6": "NhCGGC@?G?_@?@_?o??",
+      "n": 15,
+      "girth": 14,
+      "f": 4,
+      "tree": 14,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(15,1)",
+      "g6": "OhCGGC@?G?_@?@??o?K??",
+      "n": 16,
+      "girth": 15,
+      "f": 4,
+      "tree": 15,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(16,1)",
+      "g6": "PhCGGC@?G?_@?@??_?K?@_??",
+      "n": 17,
+      "girth": 16,
+      "f": 4,
+      "tree": 16,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(17,1)",
+      "g6": "QhCGGC@?G?_@?@??_?G?@_?E???",
+      "n": 18,
+      "girth": 17,
+      "f": 4,
+      "tree": 17,
+      "slack": "5/3",
+      "tight": false
+    },
+    {
+      "name": "tadpole(18,1)",
+      "g6": "RhCGGC@?G?_@?@??_?G?@??E??K???",
+      "n": 19,
+      "girth": 18,
+      "f": 5,
+      "tree": 18,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "tadpole(19,1)",
+      "g6": "ShCGGC@?G?_@?@??_?G?@??C??K??K???",
+      "n": 20,
+      "girth": 19,
+      "f": 5,
+      "tree": 19,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,2)",
+      "g6": "C}",
+      "n": 4,
+      "girth": 3,
+      "f": 1,
+      "tree": 3,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "theta(1,2,3)",
+      "g6": "D{S",
+      "n": 5,
+      "girth": 3,
+      "f": 0,
+      "tree": 4,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,4)",
+      "g6": "E{DG",
+      "n": 6,
+      "girth": 3,
+      "f": 1,
+      "tree": 5,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,5)",
+      "g6": "F{CIG",
+      "n": 7,
+      "girth": 3,
+      "f": 0,
+      "tree": 6,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,6)",
+      "g6": "G{CGIC",
+      "n": 8,
+      "girth": 3,
+      "f": 2,
+      "tree": 7,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,7)",
+      "g6": "H{CGGD@",
+      "n": 9,
+      "girth": 3,
+      "f": 0,
+      "tree": 8,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,8)",
+      "g6": "I{CGGC@OG",
+      "n": 10,
+      "girth": 3,
+      "f": 2,
+      "tree": 9,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,9)",
+      "g6": "J{CGGC@?I?_",
+      "n": 11,
+      "girth": 3,
+      "f": 0,
+      "tree": 10,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,10)",
+      "g6": "K{CGGC@?G?g@",
+      "n": 12,
+      "girth": 3,
+      "f": 3,
+      "tree": 11,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,11)",
+      "g6": "L{CGGC@?G?_@O@",
+      "n": 13,
+      "girth": 3,
+      "f": 0,
+      "tree": 12,
+      "slack": "10",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,12)",
+      "g6": "M{CGGC@?G?_@?@O?_",
+      "n": 14,
+      "girth": 3,
+      "f": 3,
+      "tree": 13,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,13)",
+      "g6": "N{CGGC@?G?_@?@??g?G",
+      "n": 15,
+      "girth": 3,
+      "f": 0,
+      "tree": 14,
+      "slack": "12",
+      "tight": false
+    },
+    {
+      "name": "theta(1,2,14)",
+      "g6": "O{CGGC@?G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 3,
+      "f": 4,
+      "tree": 15,
+      "slack": "9",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,3)",
+      "g6": "Er`G",
+      "n": 6,
+      "girth": 4,
+      "f": 1,
+      "tree": 5,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,4)",
+      "g6": "Fr_IG",
+      "n": 7,
+      "girth": 4,
+      "f": 1,
+      "tree": 6,
+      "slack": "7/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,5)",
+      "g6": "Gr_GIC",
+      "n": 8,
+      "girth": 4,
+      "f": 1,
+      "tree": 7,
+      "slack": "10/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,6)",
+      "g6": "Hr_GGD@",
+      "n": 9,
+      "girth": 4,
+      "f": 1,
+      "tree": 8,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,7)",
+      "g6": "Ir_GGC@OG",
+      "n": 10,
+      "girth": 4,
+      "f": 2,
+      "tree": 9,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,8)",
+      "g6": "Jr_GGC@?I?_",
+      "n": 11,
+      "girth": 4,
+      "f": 2,
+      "tree": 10,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,9)",
+      "g6": "Kr_GGC@?G?g@",
+      "n": 12,
+      "girth": 4,
+      "f": 2,
+      "tree": 11,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,10)",
+      "g6": "Lr_GGC@?G?_@O@",
+      "n": 13,
+      "girth": 4,
+      "f": 2,
+      "tree": 12,
+      "slack": "22/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,11)",
+      "g6": "Mr_GGC@?G?_@?@O?_",
+      "n": 14,
+      "girth": 4,
+      "f": 3,
+      "tree": 13,
+      "slack": "22/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,12)",
+      "g6": "Nr_GGC@?G?_@?@??g?G",
+      "n": 15,
+      "girth": 4,
+      "f": 3,
+      "tree": 14,
+      "slack": "25/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,3,13)",
+      "g6": "Or_GGC@?G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 4,
+      "f": 3,
+      "tree": 15,
+      "slack": "28/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,4)",
+      "g6": "GpU?IC",
+      "n": 8,
+      "girth": 5,
+      "f": 2,
+      "tree": 7,
+      "slack": "5/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,5)",
+      "g6": "HpU?GD@",
+      "n": 9,
+      "girth": 5,
+      "f": 1,
+      "tree": 8,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,6)",
+      "g6": "IpU?GC@OG",
+      "n": 10,
+      "girth": 5,
+      "f": 2,
+      "tree": 9,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,7)",
+      "g6": "JpU?GC@?I?_",
+      "n": 11,
+      "girth": 5,
+      "f": 2,
+      "tree": 10,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,8)",
+      "g6": "KpU?GC@?G?g@",
+      "n": 12,
+      "girth": 5,
+      "f": 3,
+      "tree": 11,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,9)",
+      "g6": "LpU?GC@?G?_@O@",
+      "n": 13,
+      "girth": 5,
+      "f": 2,
+      "tree": 12,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,10)",
+      "g6": "MpU?GC@?G?_@?@O?_",
+      "n": 14,
+      "girth": 5,
+      "f": 3,
+      "tree": 13,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,11)",
+      "g6": "NpU?GC@?G?_@?@??g?G",
+      "n": 15,
+      "girth": 5,
+      "f": 3,
+      "tree": 14,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,4,12)",
+      "g6": "OpU?GC@?G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 5,
+      "f": 4,
+      "tree": 15,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,5)",
+      "g6": "IpDK?C@OG",
+      "n": 10,
+      "girth": 6,
+      "f": 2,
+      "tree": 9,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,6)",
+      "g6": "JpDK?C@?I?_",
+      "n": 11,
+      "girth": 6,
+      "f": 2,
+      "tree": 10,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,7)",
+      "g6": "KpDK?C@?G?g@",
+      "n": 12,
+      "girth": 6,
+      "f": 2,
+      "tree": 11,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,8)",
+      "g6": "LpDK?C@?G?_@O@",
+      "n": 13,
+      "girth": 6,
+      "f": 2,
+      "tree": 12,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,9)",
+      "g6": "MpDK?C@?G?_@?@O?_",
+      "n": 14,
+      "girth": 6,
+      "f": 3,
+      "tree": 13,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,10)",
+      "g6": "NpDK?C@?G?_@?@??g?G",
+      "n": 15,
+      "girth": 6,
+      "f": 3,
+      "tree": 14,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "theta(1,5,11)",
+      "g6": "OpDK?C@?G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 6,
+      "f": 3,
+      "tree": 15,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "theta(1,6,6)",
+      "g6": "KpCIK?@?G?g@",
+      "n": 12,
+      "girth": 7,
+      "f": 3,
+      "tree": 11,
+      "slack": "10/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,6,7)",
+      "g6": "LpCIK?@?G?_@O@",
+      "n": 13,
+      "girth": 7,
+      "f": 2,
+      "tree": 12,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,6,8)",
+      "g6": "MpCIK?@?G?_@?@O?_",
+      "n": 14,
+      "girth": 7,
+      "f": 3,
+      "tree": 13,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,6,9)",
+      "g6": "NpCIK?@?G?_@?@??g?G",
+      "n": 15,
+      "girth": 7,
+      "f": 3,
+      "tree": 14,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,6,10)",
+      "g6": "OpCIK?@?G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 7,
+      "f": 4,
+      "tree": 15,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,7,7)",
+      "g6": "MpCGIE??G?_@?@O?_",
+      "n": 14,
+      "girth": 8,
+      "f": 3,
+      "tree": 13,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,7,8)",
+      "g6": "NpCGIE??G?_@?@??g?G",
+      "n": 15,
+      "girth": 8,
+      "f": 3,
+      "tree": 14,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,7,9)",
+      "g6": "OpCGIE??G?_@?@??_?I?@",
+      "n": 16,
+      "girth": 8,
+      "f": 3,
+      "tree": 15,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(1,8,8)",
+      "g6": "OpCGGD@_??_@?@??_?I?@",
+      "n": 16,
+      "girth": 9,
+      "f": 4,
+      "tree": 15,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,2)",
+      "g6": "Dlg",
+      "n": 5,
+      "girth": 4,
+      "f": 0,
+      "tree": 4,
+      "slack": "4/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,3)",
+      "g6": "El_g",
+      "n": 6,
+      "girth": 4,
+      "f": 0,
+      "tree": 5,
+      "slack": "7/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,4)",
+      "g6": "Fl_HG",
+      "n": 7,
+      "girth": 4,
+      "f": 0,
+      "tree": 6,
+      "slack": "10/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,5)",
+      "g6": "Gl_GHC",
+      "n": 8,
+      "girth": 4,
+      "f": 0,
+      "tree": 7,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,6)",
+      "g6": "Hl_GGC`",
+      "n": 9,
+      "girth": 4,
+      "f": 0,
+      "tree": 8,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,7)",
+      "g6": "Il_GGC@GG",
+      "n": 10,
+      "girth": 4,
+      "f": 0,
+      "tree": 9,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,8)",
+      "g6": "Jl_GGC@?H?_",
+      "n": 11,
+      "girth": 4,
+      "f": 0,
+      "tree": 10,
+      "slack": "22/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,9)",
+      "g6": "Kl_GGC@?G?c@",
+      "n": 12,
+      "girth": 4,
+      "f": 0,
+      "tree": 11,
+      "slack": "25/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,10)",
+      "g6": "Ll_GGC@?G?_@G@",
+      "n": 13,
+      "girth": 4,
+      "f": 0,
+      "tree": 12,
+      "slack": "28/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,11)",
+      "g6": "Ml_GGC@?G?_@?@G?_",
+      "n": 14,
+      "girth": 4,
+      "f": 0,
+      "tree": 13,
+      "slack": "31/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,12)",
+      "g6": "Nl_GGC@?G?_@?@??c?G",
+      "n": 15,
+      "girth": 4,
+      "f": 0,
+      "tree": 14,
+      "slack": "34/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,2,13)",
+      "g6": "Ol_GGC@?G?_@?@??_?H?@",
+      "n": 16,
+      "girth": 4,
+      "f": 0,
+      "tree": 15,
+      "slack": "37/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,3)",
+      "g6": "FkM@G",
+      "n": 7,
+      "girth": 5,
+      "f": 2,
+      "tree": 6,
+      "slack": "2/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,4)",
+      "g6": "GkM?HC",
+      "n": 8,
+      "girth": 5,
+      "f": 0,
+      "tree": 7,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,5)",
+      "g6": "HkM?GC`",
+      "n": 9,
+      "girth": 5,
+      "f": 2,
+      "tree": 8,
+      "slack": "8/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,6)",
+      "g6": "IkM?GC@GG",
+      "n": 10,
+      "girth": 5,
+      "f": 0,
+      "tree": 9,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,7)",
+      "g6": "JkM?GC@?H?_",
+      "n": 11,
+      "girth": 5,
+      "f": 2,
+      "tree": 10,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,8)",
+      "g6": "KkM?GC@?G?c@",
+      "n": 12,
+      "girth": 5,
+      "f": 0,
+      "tree": 11,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,9)",
+      "g6": "LkM?GC@?G?_@G@",
+      "n": 13,
+      "girth": 5,
+      "f": 2,
+      "tree": 12,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,10)",
+      "g6": "MkM?GC@?G?_@?@G?_",
+      "n": 14,
+      "girth": 5,
+      "f": 0,
+      "tree": 13,
+      "slack": "29/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,11)",
+      "g6": "NkM?GC@?G?_@?@??c?G",
+      "n": 15,
+      "girth": 5,
+      "f": 3,
+      "tree": 14,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,3,12)",
+      "g6": "OkM?GC@?G?_@?@??_?H?@",
+      "n": 16,
+      "girth": 5,
+      "f": 0,
+      "tree": 15,
+      "slack": "35/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,4)",
+      "g6": "HkCk?C`",
+      "n": 9,
+      "girth": 6,
+      "f": 2,
+      "tree": 8,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,5)",
+      "g6": "IkCk?C@GG",
+      "n": 10,
+      "girth": 6,
+      "f": 2,
+      "tree": 9,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,6)",
+      "g6": "JkCk?C@?H?_",
+      "n": 11,
+      "girth": 6,
+      "f": 2,
+      "tree": 10,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,7)",
+      "g6": "KkCk?C@?G?c@",
+      "n": 12,
+      "girth": 6,
+      "f": 2,
+      "tree": 11,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,8)",
+      "g6": "LkCk?C@?G?_@G@",
+      "n": 13,
+      "girth": 6,
+      "f": 2,
+      "tree": 12,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,9)",
+      "g6": "MkCk?C@?G?_@?@G?_",
+      "n": 14,
+      "girth": 6,
+      "f": 2,
+      "tree": 13,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,10)",
+      "g6": "NkCk?C@?G?_@?@??c?G",
+      "n": 15,
+      "girth": 6,
+      "f": 2,
+      "tree": 14,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "theta(2,4,11)",
+      "g6": "OkCk?C@?G?_@?@??_?H?@",
+      "n": 16,
+      "girth": 6,
+      "f": 2,
+      "tree": 15,
+      "slack": "9",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,5)",
+      "g6": "JkCHK?@?H?_",
+      "n": 11,
+      "girth": 7,
+      "f": 3,
+      "tree": 10,
+      "slack": "7/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,6)",
+      "g6": "KkCHK?@?G?c@",
+      "n": 12,
+      "girth": 7,
+      "f": 2,
+      "tree": 11,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,7)",
+      "g6": "LkCHK?@?G?_@G@",
+      "n": 13,
+      "girth": 7,
+      "f": 3,
+      "tree": 12,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,8)",
+      "g6": "MkCHK?@?G?_@?@G?_",
+      "n": 14,
+      "girth": 7,
+      "f": 2,
+      "tree": 13,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,9)",
+      "g6": "NkCHK?@?G?_@?@??c?G",
+      "n": 15,
+      "girth": 7,
+      "f": 3,
+      "tree": 14,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,5,10)",
+      "g6": "OkCHK?@?G?_@?@??_?H?@",
+      "n": 16,
+      "girth": 7,
+      "f": 2,
+      "tree": 15,
+      "slack": "25/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,6,6)",
+      "g6": "LkCGHE??G?_@G@",
+      "n": 13,
+      "girth": 8,
+      "f": 3,
+      "tree": 12,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,6,7)",
+      "g6": "MkCGHE??G?_@?@G?_",
+      "n": 14,
+      "girth": 8,
+      "f": 3,
+      "tree": 13,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,6,8)",
+      "g6": "NkCGHE??G?_@?@??c?G",
+      "n": 15,
+      "girth": 8,
+      "f": 3,
+      "tree": 14,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,6,9)",
+      "g6": "OkCGHE??G?_@?@??_?H?@",
+      "n": 16,
+      "girth": 8,
+      "f": 3,
+      "tree": 15,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(2,7,7)",
+      "g6": "NkCGGC`_??_@?@??c?G",
+      "n": 15,
+      "girth": 9,
+      "f": 4,
+      "tree": 14,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(2,7,8)",
+      "g6": "OkCGGC`_??_@?@??_?H?@",
+      "n": 16,
+      "girth": 9,
+      "f": 3,
+      "tree": 15,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,3)",
+      "g6": "Gh_[?c",
+      "n": 8,
+      "girth": 6,
+      "f": 0,
+      "tree": 7,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,4)",
+      "g6": "Hh_[?CP",
+      "n": 9,
+      "girth": 6,
+      "f": 0,
+      "tree": 8,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,5)",
+      "g6": "Ih_[?C@CG",
+      "n": 10,
+      "girth": 6,
+      "f": 0,
+      "tree": 9,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,6)",
+      "g6": "Jh_[?C@?G__",
+      "n": 11,
+      "girth": 6,
+      "f": 0,
+      "tree": 10,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,7)",
+      "g6": "Kh_[?C@?G?a@",
+      "n": 12,
+      "girth": 6,
+      "f": 0,
+      "tree": 11,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,8)",
+      "g6": "Lh_[?C@?G?_@C@",
+      "n": 13,
+      "girth": 6,
+      "f": 0,
+      "tree": 12,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,9)",
+      "g6": "Mh_[?C@?G?_@?@C?_",
+      "n": 14,
+      "girth": 6,
+      "f": 0,
+      "tree": 13,
+      "slack": "9",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,10)",
+      "g6": "Nh_[?C@?G?_@?@??a?G",
+      "n": 15,
+      "girth": 6,
+      "f": 0,
+      "tree": 14,
+      "slack": "10",
+      "tight": false
+    },
+    {
+      "name": "theta(3,3,11)",
+      "g6": "Oh_[?C@?G?_@?@??_?G_@",
+      "n": 16,
+      "girth": 6,
+      "f": 0,
+      "tree": 15,
+      "slack": "11",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,4)",
+      "g6": "Ih_Gk?@CG",
+      "n": 10,
+      "girth": 7,
+      "f": 2,
+      "tree": 9,
+      "slack": "7/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,5)",
+      "g6": "Jh_Gk?@?G__",
+      "n": 11,
+      "girth": 7,
+      "f": 0,
+      "tree": 10,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,6)",
+      "g6": "Kh_Gk?@?G?a@",
+      "n": 12,
+      "girth": 7,
+      "f": 2,
+      "tree": 11,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,7)",
+      "g6": "Lh_Gk?@?G?_@C@",
+      "n": 13,
+      "girth": 7,
+      "f": 0,
+      "tree": 12,
+      "slack": "22/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,8)",
+      "g6": "Mh_Gk?@?G?_@?@C?_",
+      "n": 14,
+      "girth": 7,
+      "f": 2,
+      "tree": 13,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,9)",
+      "g6": "Nh_Gk?@?G?_@?@??a?G",
+      "n": 15,
+      "girth": 7,
+      "f": 0,
+      "tree": 14,
+      "slack": "28/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,4,10)",
+      "g6": "Oh_Gk?@?G?_@?@??_?G_@",
+      "n": 16,
+      "girth": 7,
+      "f": 2,
+      "tree": 15,
+      "slack": "25/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,5,5)",
+      "g6": "Kh_GGe??G?a@",
+      "n": 12,
+      "girth": 8,
+      "f": 2,
+      "tree": 11,
+      "slack": "11/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,5,6)",
+      "g6": "Lh_GGe??G?_@C@",
+      "n": 13,
+      "girth": 8,
+      "f": 2,
+      "tree": 12,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,5,7)",
+      "g6": "Mh_GGe??G?_@?@C?_",
+      "n": 14,
+      "girth": 8,
+      "f": 2,
+      "tree": 13,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,5,8)",
+      "g6": "Nh_GGe??G?_@?@??a?G",
+      "n": 15,
+      "girth": 8,
+      "f": 2,
+      "tree": 14,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,5,9)",
+      "g6": "Oh_GGe??G?_@?@??_?G_@",
+      "n": 16,
+      "girth": 8,
+      "f": 2,
+      "tree": 15,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(3,6,6)",
+      "g6": "Mh_GGCP_??_@?@C?_",
+      "n": 14,
+      "girth": 9,
+      "f": 3,
+      "tree": 13,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "theta(3,6,7)",
+      "g6": "Nh_GGCP_??_@?@??a?G",
+      "n": 15,
+      "girth": 9,
+      "f": 2,
+      "tree": 14,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(3,6,8)",
+      "g6": "Oh_GGCP_??_@?@??_?G_@",
+      "n": 16,
+      "girth": 9,
+      "f": 3,
+      "tree": 15,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "theta(3,7,7)",
+      "g6": "Oh_GGC@CK??@?@??_?G_@",
+      "n": 16,
+      "girth": 10,
+      "f": 3,
+      "tree": 15,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,4)",
+      "g6": "JhE?GU??GO_",
+      "n": 11,
+      "girth": 8,
+      "f": 0,
+      "tree": 10,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,5)",
+      "g6": "KhE?GU??G?`@",
+      "n": 12,
+      "girth": 8,
+      "f": 0,
+      "tree": 11,
+      "slack": "17/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,6)",
+      "g6": "LhE?GU??G?_@A@",
+      "n": 13,
+      "girth": 8,
+      "f": 0,
+      "tree": 12,
+      "slack": "20/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,7)",
+      "g6": "MhE?GU??G?_@?@A?_",
+      "n": 14,
+      "girth": 8,
+      "f": 0,
+      "tree": 13,
+      "slack": "23/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,8)",
+      "g6": "NhE?GU??G?_@?@??`?G",
+      "n": 15,
+      "girth": 8,
+      "f": 0,
+      "tree": 14,
+      "slack": "26/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,4,9)",
+      "g6": "OhE?GU??G?_@?@??_?GO@",
+      "n": 16,
+      "girth": 8,
+      "f": 0,
+      "tree": 15,
+      "slack": "29/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,5,5)",
+      "g6": "LhE?GCH_??_@A@",
+      "n": 13,
+      "girth": 9,
+      "f": 3,
+      "tree": 12,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,5,6)",
+      "g6": "MhE?GCH_??_@?@A?_",
+      "n": 14,
+      "girth": 9,
+      "f": 0,
+      "tree": 13,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "theta(4,5,7)",
+      "g6": "NhE?GCH_??_@?@??`?G",
+      "n": 15,
+      "girth": 9,
+      "f": 3,
+      "tree": 14,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "theta(4,5,8)",
+      "g6": "OhE?GCH_??_@?@??_?GO@",
+      "n": 16,
+      "girth": 9,
+      "f": 0,
+      "tree": 15,
+      "slack": "9",
+      "tight": false
+    },
+    {
+      "name": "theta(4,6,6)",
+      "g6": "NhE?GC@AK??@?@??`?G",
+      "n": 15,
+      "girth": 10,
+      "f": 3,
+      "tree": 14,
+      "slack": "13/3",
+      "tight": false
+    },
+    {
+      "name": "theta(4,6,7)",
+      "g6": "OhE?GC@AK??@?@??_?GO@",
+      "n": 16,
+      "girth": 10,
+      "f": 3,
+      "tree": 15,
+      "slack": "16/3",
+      "tight": false
+    },
+    {
+      "name": "theta(5,5,5)",
+      "g6": "MhCK?C@@K??@?@@?_",
+      "n": 14,
+      "girth": 10,
+      "f": 0,
+      "tree": 13,
+      "slack": "19/3",
+      "tight": false
+    },
+    {
+      "name": "theta(5,5,6)",
+      "g6": "NhCK?C@@K??@?@??__G",
+      "n": 15,
+      "girth": 10,
+      "f": 0,
+      "tree": 14,
+      "slack": "22/3",
+      "tight": false
+    },
+    {
+      "name": "theta(5,5,7)",
+      "g6": "OhCK?C@@K??@?@??_?GG@",
+      "n": 16,
+      "girth": 10,
+      "f": 0,
+      "tree": 15,
+      "slack": "25/3",
+      "tight": false
+    },
+    {
+      "name": "theta(5,6,6)",
+      "g6": "OhCK?C@?GGo??@??_?GG@",
+      "n": 16,
+      "girth": 11,
+      "f": 3,
+      "tree": 15,
+      "slack": "14/3",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,1)",
+      "g6": "FhEK?",
+      "n": 7,
+      "girth": 6,
+      "f": 2,
+      "tree": 6,
+      "slack": "0",
+      "tight": true
+    },
+    {
+      "name": "cycle_star(6,2)",
+      "g6": "GhEKC?",
+      "n": 8,
+      "girth": 6,
+      "f": 2,
+      "tree": 7,
+      "slack": "1",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,3)",
+      "g6": "HhEKCA?",
+      "n": 9,
+      "girth": 6,
+      "f": 2,
+      "tree": 8,
+      "slack": "2",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,4)",
+      "g6": "IhEKCA?_?",
+      "n": 10,
+      "girth": 6,
+      "f": 2,
+      "tree": 9,
+      "slack": "3",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,5)",
+      "g6": "JhEKCA?_C??",
+      "n": 11,
+      "girth": 6,
+      "f": 2,
+      "tree": 10,
+      "slack": "4",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,6)",
+      "g6": "KhEKCA?_C?O?",
+      "n": 12,
+      "girth": 6,
+      "f": 2,
+      "tree": 11,
+      "slack": "5",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,7)",
+      "g6": "LhEKCA?_C?O?_?",
+      "n": 13,
+      "girth": 6,
+      "f": 2,
+      "tree": 12,
+      "slack": "6",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,8)",
+      "g6": "MhEKCA?_C?O?_?_??",
+      "n": 14,
+      "girth": 6,
+      "f": 2,
+      "tree": 13,
+      "slack": "7",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,9)",
+      "g6": "NhEKCA?_C?O?_?_?O??",
+      "n": 15,
+      "girth": 6,
+      "f": 2,
+      "tree": 14,
+      "slack": "8",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,10)",
+      "g6": "OhEKCA?_C?O?_?_?O?C??",
+      "n": 16,
+      "girth": 6,
+      "f": 2,
+      "tree": 15,
+      "slack": "9",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,11)",
+      "g6": "PhEKCA?_C?O?_?_?O?C??_??",
+      "n": 17,
+      "girth": 6,
+      "f": 2,
+      "tree": 16,
+      "slack": "10",
+      "tight": false
+    },
+    {
+      "name": "cycle_star(6,12)",
+      "g6": "QhEKCA?_C?O?_?_?O?C??_?A???",
+      "n": 18,
+      "girth": 6,
+      "f": 2,
+      "tree": 17,
+      "slack": "11",
+      "tight": false
+    }
+  ]
+}

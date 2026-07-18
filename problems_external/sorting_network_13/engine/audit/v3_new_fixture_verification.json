@@ -1,0 +1,29 @@
+{
+  "schema": "sn13-l45-fixture-verification-v3",
+  "fixtures": [
+    {
+      "family": "lowavg",
+      "file": "../fixtures/n13_45_low_avg_swaps.net",
+      "source_json": "../SorterHunter/Networks/Sorters_Low_Avg_Swaps/Sort_LS_13_45_10.json",
+      "source_json_sha256": "f425b44a3dcb8fdf9ca6a3806cfc7278e05c73c40c573511afe2376d26246608",
+      "canonical_sha256": "a133374d57e2b056b3574bffc734ff2306c8aa44f326bc32a779d851e63e9397",
+      "channels": 13,
+      "comparators": 45,
+      "source_depth": 10,
+      "python_scalar": {"inputs": 8192, "failures": 0, "elapsed_s": 0.023474},
+      "cpp_bitstate": {"inputs": 8192, "failures": 0, "elapsed_s": 0.0004442}
+    },
+    {
+      "family": "max32",
+      "file": "../fixtures/n13_45_max32.net",
+      "source_json": "../SorterHunter/Networks/Sorters_Low_Max_Swaps/Sort_LS_13_45_10_MAX32.json",
+      "source_json_sha256": "af9da40a070847d849695fa8299652c6203cb1db1a90fd0049429a93c3ef57f8",
+      "canonical_sha256": "46ec4e448dbde975e94a7bc95a8e90d75a222399fda249b7e8eabadafde56aa6",
+      "channels": 13,
+      "comparators": 45,
+      "source_depth": 10,
+      "python_scalar": {"inputs": 8192, "failures": 0, "elapsed_s": 0.021988},
+      "cpp_bitstate": {"inputs": 8192, "failures": 0, "elapsed_s": 0.0004261}
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "sorting-network-hit-audit-v1",
+  "verified_at": "2026-07-18T14:12:02+03:00",
+  "source_path": "../engine/logs/calibration-20260718T141004051/n13-w15-seed131016.out.log",
+  "source_line": 70,
+  "source_file_sha256": "256f25ec643fb2a6aec6a3c844c4178ea2ef727078bd5ed021a6b0edab352d4b",
+  "source_line_utf8_sha256": "dcc3851d476abce38a632f8b322a96611b40e8d8d8b35a402d0959afd17ca2fe",
+  "fixture_path": "fixtures/sn13_45_seed131016.json",
+  "fixture_file_sha256": "76952996dcb094c550bbab076a21950a13809d715c1c86264995ffd9a77b6890",
+  "network_sha256": "4f7cc2ce2f2b0662becd2c4b8dc9cfc4157afccd916f100f0645f9579349532e",
+  "source_channels": 13,
+  "source_comparators": 45,
+  "source_claimed_depth": 11,
+  "fixture_comparators": 45,
+  "source_fixture_sequence_equal": true,
+  "runs": [
+    {
+      "verifier": "python-scalar-v1",
+      "binary_inputs_tested": 8192,
+      "failures": 0,
+      "accepted": true
+    },
+    {
+      "verifier": "cpp-bitsliced-v1",
+      "binary_inputs_tested": 8192,
+      "failures": 0,
+      "accepted": true
+    }
+  ],
+  "all_accepted": true
+}

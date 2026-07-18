@@ -220,6 +220,8 @@
 [2026-06-12T12:23:30+03:00] OK ATTACK | DID: Widened n1=5 n3=3 cut and compiled | RESULT: search23\sat_q15_ru_scalar_lazy.exe | D: smoke32
 [2026-06-12T12:24:45+03:00] OK VERIFY | DID: Audited same-type shape cuts | RESULT: q15_shape_cut_audit: 333,474,573 cut; 672 eR>=31 | D: add-cuts
 [2026-06-12T12:24:45+03:00] OK ATTACK | DID: Added same-type q15 cuts and compiled | RESULT: search23\sat_q15_ru_scalar_lazy.exe | D: smoke32
+[2026-07-18T12:04:41+03:00] > VERIFY K64 gate reference | NEXT: Derive independent Z31 Wolfe merger, 32-orbit CPU score, and deterministic CUDA sample protocol.
+[2026-07-18T12:08:34+03:00] > VERIFY K64 CPU oracle | NEXT: Run Pike K56 regression and four patterned K64 mask vectors.
 [2026-06-12T12:33:20+03:00] OK VERIFY | DID: Checked p18/e30/U26 hard witness | RESULT: AB_STATUS=20; F 67950 sat=0; profile=672 same-type | D: exact-type-cut
 [2026-06-12T12:33:20+03:00] OK ATTACK | DID: Added exact same-type 672/762 CNF cuts and compiled | RESULT: search23\sat_q15_ru_scalar_lazy.exe | D: mixed-672
 [2026-06-12T12:36:40+03:00] FAIL ATTACK | DID: Ran p18/e30/U26 after same-type cut | RESULT: timeout 180s; process stopped before first model | D: mixed-profile-lemma
@@ -254,6 +256,7 @@
 [2026-06-12T12:58:59+03:00] OK ATTACK | DID: Added exact shape forbids for pair-cut-killed shapes | RESULT: sat_q15_ru_scalar_lazy.exe compiled | D: verify-hard
 [2026-06-12T13:01:20+03:00] FAIL ATTACK | DID: Ran targeted shape-forbid job with wrong index | RESULT: stopped index9=p17/e36/U21 | D: compute-index
 [2026-06-12T13:03:17+03:00] FAIL ATTACK | DID: Ran p16/e35/U23 with exact shape forbids | RESULT: stopped at 90s; no model blocked | D: shape-family-sweep
+[2026-07-18T12:04:00+03:00] > ATTACK K64 Z31 supplier | NEXT: Build exact starter DFS, canonical pair dedup, 65536-record warm-up, and short host rate test.
 [2026-06-12T13:03:30+03:00] > VERIFY | NEXT: Sweep 15 surviving (8,6,1) orbit/job shape-family SAT cases.
 [2026-06-12T13:03:44+03:00] OK VERIFY | DID: Swept surviving (8,6,1) shape-family SAT cases | RESULT: 15/15 UNSAT for cap<=50 eR>=50-p | D: add-861-cut
 [2026-06-12T13:04:24+03:00] OK ATTACK | DID: Added (8,6,1) low-cap shape-family cut and compiled | RESULT: sat_q15_ru_scalar_lazy.exe | D: audit
@@ -650,6 +653,7 @@
 [2026-06-12T15:42:23+03:00] > VERIFY | NEXT: Run 78 static exact cases for cap55 (9,6,0)/(10,4,1), max32 workers.
 [2026-06-12T15:42:44+03:00] OK VERIFY | DID: Checked cap55 (9,6,0)/(10,4,1) static batch | RESULT: 78/78 code20, errBytes=0 | D: record-V52
 [2026-06-12T15:42:44+03:00] > ATTACK | NEXT: Add V52 cap55 (9,6,0)/(10,4,1) scalar cuts to q15 runner and audit.
+[2026-07-18T12:53:25+03:00] > VERIFY K64 affine quotient | NEXT: Count exact AGL/swap duplicates in the 65,536-record warm-up and prove merger equivariance.
 [2026-06-12T15:43:25+03:00] OK ATTACK | DID: Added V52 cuts and compiled q15 tools | RESULT: sat_q15_ru_scalar_lazy.exe,q15_profile_audit.exe | D: frontier
 [2026-06-12T15:43:25+03:00] > VERIFY | NEXT: Generate post-V52 q15 frontier jobs and audit first open profiles.
 [2026-06-12T15:43:43+03:00] OK VERIFY | DID: Audited post-V52 q15 frontier | RESULT: 528 jobs; first=cap55,p20,eR28,(10,5,0) | D: next-shapes
@@ -36494,3 +36498,313 @@
 [2026-07-18T09:37:15+03:00] OK PACKAGE DeepMind PR | DID: opened ready PR #4454 | RESULT: one file, +2/-1; https://github.com/google-deepmind/formal-conjectures/pull/4454 | D: STOP
 [2026-07-18T09:37:15+03:00] OK DECIDE WOWII141 | DID: completed final gate, proof certificate, and PR | RESULT: PR #4454 open against main | D: STOP
 [2026-07-18T09:43:07+03:00] > SELECT substantial successor | NEXT: Rank current open candidates by novelty, depth, and a one-day direct attack surface.
+[2026-07-18T09:54:41+03:00] OK SELECT substantial successor | DID: audited 15 candidates in three tracks | RESULT: WOWII 314 has the strongest direct structural route | D: GATE
+[2026-07-18T09:54:41+03:00] > GATE WOWII314 | NEXT: Finish official-status, PR/issue/fork, and literature-priority checks before registering the route.
+[2026-07-18T09:56:02+03:00] OK GATE WOWII314 | DID: checked main c252a410, exact PR/issues, 348 forks, and literature | RESULT: no proof collision found | D: PLAN
+[2026-07-18T09:56:02+03:00] > PLAN WOWII314 | NEXT: Record the chain-graph/C5-blow-up classification bridge and exact falsification test.
+[2026-07-18T09:57:35+03:00] OK PLAN WOWII314 | DID: registered L0-L6 and direct closure bridge | RESULT: problems_external/wowii_314/APPROACH_REGISTRY.md | D: ATTACK
+[2026-07-18T09:57:35+03:00] > ATTACK computation WOWII314 | NEXT: Exhaust all connected unlabeled graphs n<=9 for counterexamples, TDS sizes, and dichotomy failures.
+[2026-07-18T09:59:59+03:00] OK ATTACK computation WOWII314 | DID: enumerated n<=9 and Atlas-checked n<=7 | RESULT: 74=64 chain+10 C5 blow-ups; 0 failures | D: proof
+[2026-07-18T09:59:59+03:00] > ATTACK proof WOWII314 | NEXT: Prove the structural dichotomy and both minimal-TDS classifications, then map them to Lean.
+[2026-07-18T10:08:06+03:00] > VERIFY Lean WOWII314 base | NEXT: Compile pathGraph-5 tree/degree certificates and inspect the supremum APIs for L0.
+[2026-07-18T10:08:54+03:00] FAIL VERIFY Lean WOWII314 base | DID: invoked the scratch module | RESULT: unknown module prefix; worktree project oleans absent | D: bootstrap
+[2026-07-18T10:08:54+03:00] > VERIFY Lean WOWII314 bootstrap | NEXT: Build GraphConjecture314 in the isolated worktree, then retry the scratch module.
+[2026-07-18T10:11:38+03:00] OK VERIFY Lean WOWII314 bootstrap | DID: built the isolated target | RESULT: 8038/8038 success line; wrapper timed out afterward | D: scratch
+[2026-07-18T10:11:38+03:00] > VERIFY Lean WOWII314 scratch retry | NEXT: Compile the concrete pathGraph-5 certificates and L0 API checks.
+[2026-07-18T10:13:20+03:00] FAIL VERIFY Lean WOWII314 scratch retry | DID: compiled pathGraph certificates | RESULT: classical decidability blocked both `by decide` goals | D: explicit lemmas
+[2026-07-18T10:13:20+03:00] > VERIFY Lean WOWII314 L0 certificates | NEXT: Prove pathGraph-5 tree and degree bounds from connected/cardinality lemmas, without native_decide.
+[2026-07-18T10:16:09+03:00] FAIL VERIFY Lean WOWII314 L0 certificates | DID: tried norm_num on concrete pathGraph 5 | RESULT: edge/filter cardinality goals remained | D: explicit finsets
+[2026-07-18T10:16:09+03:00] OK VERIFY Lean WOWII314 L0 certificates | DID: compiled explicit edge/neighbor finsets | RESULT: 3 lemmas passed in FormalCandidatesL0.lean, 22.1s | D: sSup bridge
+[2026-07-18T10:16:09+03:00] > VERIFY Lean WOWII314 L0 bridge | NEXT: Compile embedding-range and sSup membership to derive absence of induced P5 from hPath.
+[2026-07-18T10:19:40+03:00] OK VERIFY Lean WOWII314 L0 bridge | DID: compiled sSup membership and embedding contradiction | RESULT: L0 passed in 22.7s | D: TDS/structure
+[2026-07-18T10:19:40+03:00] OK VERIFY Lean WOWII314 TDS core | DID: compiled erasure, private-neighbor, false-twin lemmas | RESULT: 3 lemmas in FormalCandidatesL0.lean | D: L4/L5
+[2026-07-18T10:19:56+03:00] > VERIFY Lean WOWII314 L1-L3 prototype | NEXT: Compile odd-loop minimum and induced-2K2 neighborhood certificates in StructureCandidates.lean.
+[2026-07-18T10:20:15+03:00] > VERIFY Lean WOWII314 L4-L5 prototype | NEXT: Compile minimal-TDS core and exact C5 cardinality in TDSCandidates.lean.
+[2026-07-18T10:21:25+03:00] FAIL VERIFY Lean WOWII314 L4-L5 prototype | DID: ran 2 builds | RESULT: core compiled; C5 `decide` lacks quantified Decidable | D: explicit proof
+[2026-07-18T10:25:30+03:00] FAIL VERIFY Lean WOWII314 L1-L3 prototype | DID: compiled first draft | RESULT: 4 elaboration errors in bipartite/odd/minimum/namespace APIs | D: retry
+[2026-07-18T10:25:30+03:00] > VERIFY Lean WOWII314 L1-L3 retry | NEXT: Compile corrected parity/minimum-odd-walk and induced-2K2 lemmas.
+[2026-07-18T10:26:20+03:00] OK VERIFY Lean WOWII314 L4 | DID: compiled nested-bipartition branch | RESULT: L4 minimal TDS card=2 passed in 21.6s | D: L5
+[2026-07-18T10:26:20+03:00] OK VERIFY Lean WOWII314 C5 core | DID: unfolded finite C5 TDS predicates for kernel decide | RESULT: card=3 lemma passed in 18.9s | D: lift
+[2026-07-18T10:26:48+03:00] > VERIFY Lean WOWII314 L1c split | NEXT: Compile index-split proof that a shortest odd closed walk is a cycle.
+[2026-07-18T10:26:48+03:00] > VERIFY Lean WOWII314 L4-L5 retry | NEXT: Compile corrected max-neighborhood chain proof and C5 support lift.
+[2026-07-18T10:30:10+03:00] FAIL VERIFY Lean WOWII314 L1c split | DID: compiled index-split draft | RESULT: split/injectivity passed; final IsCycle case had 4 goals | D: generic trail lemma
+[2026-07-18T10:30:10+03:00] > VERIFY Lean WOWII314 L1c split retry | NEXT: Compile generic tail-nodup plus length>=3 to IsTrail, then close IsCycle.
+[2026-07-18T10:30:20+03:00] FAIL VERIFY Lean WOWII314 L1c split retry | DID: compiled generic trail closure | RESULT: only concrete `Odd 2` simplification remained | D: norm_num
+[2026-07-18T10:30:20+03:00] > VERIFY Lean WOWII314 L1c final retry | NEXT: Discharge the length-two parity case and recompile the complete shortest-odd-cycle lemma.
+[2026-07-18T10:30:58+03:00] OK VERIFY Lean WOWII314 L1c final retry | DID: compiled index-split minimum-odd-walk proof | RESULT: IsCycle passed in 22.3s | D: L1d
+[2026-07-18T10:30:58+03:00] OK VERIFY Lean WOWII314 L1-L3 foundations | DID: compiled corrected structural lemmas | RESULT: StructureCandidates.lean passed in 22.7s | D: L1d
+[2026-07-18T10:30:58+03:00] > VERIFY Lean WOWII314 L1d-L1e | NEXT: Compile chordlessness of the minimum odd cycle and derive exact length five.
+[2026-07-18T10:31:05+03:00] OK VERIFY Lean WOWII314 L4-L5 prototype | DID: compiled chain and C5-blowup transfers | RESULT: TDS cards 2 and 3 passed in 23.1s | D: structure
+[2026-07-18T10:31:05+03:00] > VERIFY Lean WOWII314 integration | NEXT: Join L0, L1-L5, and the structural branch into the exact conjecture theorem.
+[2026-07-18T10:33:02+03:00] > VERIFY Lean WOWII314 P5 certificate | NEXT: Compile the first-five-vertices embedding for any chordless walk of length at least four.
+[2026-07-18T10:33:30+03:00] FAIL VERIFY Lean WOWII314 P5 certificate | DID: prepared the certificate source | RESULT: build not launched before user redirect | D: frozen
+[2026-07-18T10:33:30+03:00] OK ATTACK freeze WOWII314 | DID: stopped 3 active agents and preserved files | RESULT: registry status FROZEN by user scope change | D: SELECT external
+[2026-07-18T10:33:30+03:00] > SELECT famous external | NEXT: Screen long-open named problems outside WOWII/Erdos for novelty and a one-day direct proof surface.
+[2026-07-18T10:33:30+03:00] > GATE famous external | NEXT: Exclude solved, actively claimed, computationally infeasible, and merely obscure candidates before selection.
+[2026-07-18T10:43:37+03:00] OK GATE famous external | DID: screened 3 candidate classes | RESULT: H668 passed; Conway99 hit arXiv:2604.23037 | D: SELECT H668
+[2026-07-18T10:43:37+03:00] OK SELECT H668 | DID: chose smallest unknown Hadamard order | RESULT: problems_external/hadamard_668/APPROACH_REGISTRY.md | D: PLAN
+[2026-07-18T10:43:37+03:00] > PLAN H668 | NEXT: Enumerate SDS parameter sets and build an exact verifier plus fixed-cardinality annealing search.
+[2026-07-18T10:45:51+03:00] > GATE H668 cyclic SDS | NEXT: Derive all normalized n=167 parameter sets and audit direct GS-family prior art.
+[2026-07-18T10:46:27+03:00] OK PLAN H668 engine | DID: fixed SDS pair-count energy and swap neighborhood | RESULT: frontier H668-SDS | D: ATTACK
+[2026-07-18T10:46:27+03:00] > ATTACK H668 engine | NEXT: Implement deterministic fixed-cardinality annealing and exact verification, then test v=7 and v=11.
+[2026-07-18T10:46:36+03:00] OK PLAN H668 | DID: fixed SDS certificate and 64x250k benchmark | RESULT: registry read; RTX5090, 128 logical CPUs, g++/nvcc found | D: ATTACK
+[2026-07-18T10:46:36+03:00] > ATTACK H668 parameters | NEXT: Enumerate every normalized n=167 SDS cardinality quadruple exactly.
+[2026-07-18T10:47:18+03:00] OK ATTACK H668 parameters | DID: exhaustively solved four-odd-squares equation | RESULT: search/parameter_sets.json lists exactly 10 sets | D: engine
+[2026-07-18T10:51:03+03:00] > VERIFY H668 verifier | NEXT: Audit code and rerun the n=7 SDS, corruption rejection, and exact Gram self-test independently.
+[2026-07-18T10:51:57+03:00] OK VERIFY H668 verifier | DID: reran exact n=7 self-test and corruption test | RESULT: PASS; 406 Gram pairs; SHA256 ef444790...bec4 | D: engine
+[2026-07-18T10:53:22+03:00] > VERIFY H668 engine build | NEXT: Compile sds_search.cpp and enumerate all v=167 normalized parameter sets.
+[2026-07-18T10:54:31+03:00] OK VERIFY H668 engine build | DID: compiled and listed v=167 sets | RESULT: 10 sets match parameter_sets.json | D: ATTACK
+[2026-07-18T10:54:31+03:00] > ATTACK H668 engine small cases | NEXT: Run v=7 8x20k and v=11 16x100k restarts, then verify saved zero certificates.
+[2026-07-18T10:55:19+03:00] OK ATTACK H668 engine small cases | DID: searched and reverified v=7,11 | RESULT: v7.cert zero at 55; v11.cert zero at 1755 | D: none
+[2026-07-18T10:55:19+03:00] > ATTACK H668 short benchmark | NEXT: Run all 10 v=167 sets with 8 restarts x 25,000 swaps, 8 threads, seed 167.
+[2026-07-18T10:56:24+03:00] OK GATE H668 cyclic SDS | DID: derived 10 sets and audited GS prior art | RESULT: MATH_ROUTE.md; Paley pair (167;76,73;66) | D: ATTACK family
+[2026-07-18T10:57:28+03:00] OK ATTACK H668 short benchmark | DID: ran all 10 sets at 8x25k | RESULT: min pair_energy 100 at param 7; no zero | D: none
+[2026-07-18T10:57:28+03:00] > ATTACK H668 Paley lane | NEXT: Fix the last two param-6 blocks to the Paley (167,83,41) difference set and search the 73,76 blocks.
+[2026-07-18T10:57:45+03:00] > ATTACK H668 Paley pair | NEXT: Build symmetric (167;76,73;66) search and run 64 seeded restarts after a small-case self-test.
+[2026-07-18T10:57:33+03:00] OK PLAN H668 Paley | DID: fixed Q,Q and reduced to (167;76,73;66) | RESULT: registry bridge Q41+Q41+pair66=148 | D: ATTACK
+[2026-07-18T10:57:33+03:00] > ATTACK H668 Paley symmetric | NEXT: Build and self-test the 38/36 sign-pair search, then run 64x500k exact swaps.
+[2026-07-18T10:58:57+03:00] > VERIFY H668 Paley engine build | NEXT: Compile the Q,Q lane and test its exact difference counts on v=7 before v=167 benchmarking.
+[2026-07-18T11:01:28+03:00] FAIL ATTACK H668 Paley ss | DID: proved parity obstruction | RESULT: even target forces 38=36 pair orbits, contradiction | D: ATTACK mixed
+[2026-07-18T11:01:34+03:00] FAIL VERIFY H668 Paley engine build | DID: compiled audit patch | RESULT: audit block placement caused C++ scope errors | D: none
+[2026-07-18T11:01:34+03:00] OK VERIFY H668 Paley engine build | DID: relocated raw audit and recompiled | RESULT: search/sds_search.exe | D: ATTACK
+[2026-07-18T11:01:34+03:00] > ATTACK H668 Paley small case | NEXT: Search v=7 param 1 with Q,Q fixed and independently verify the zero certificate.
+[2026-07-18T11:02:06+03:00] OK ATTACK H668 Paley small case | DID: searched v=7 fixed Q,Q | RESULT: v7_paley.cert zero at 5 swaps; external verify OK | D: none
+[2026-07-18T11:02:06+03:00] > ATTACK H668 Paley benchmark | NEXT: Run v=167 param 6 fixed Q,Q with 8 restarts x 25,000 swaps, 8 threads, seed 167.
+[2026-07-18T11:01:46+03:00] > ATTACK H668 Paley mixed | NEXT: Self-test one-symmetric-block engine, then run both orientations at 64x500k exact swaps.
+[2026-07-18T11:02:54+03:00] > ATTACK H668 Paley unrestricted | NEXT: Run fixed Q,Q pair at 64 restarts x 500,000 swaps, 64 threads, seed 668167.
+[2026-07-18T11:03:00+03:00] OK ATTACK H668 Paley benchmark | DID: ran param 6 Q,Q at 8x25k | RESULT: pair_energy 112; max defect 3; audit OK | D: none
+[2026-07-18T11:03:00+03:00] > ATTACK H668 proposal benchmark | NEXT: Compare 4-candidate swaps on param 6 Q,Q at 8x6,250 steps and equal 200,000-proposal budget.
+[2026-07-18T11:03:11+03:00] > PLAN H668 parity correction | NEXT: Record the symmetric/symmetric obstruction and promote the one-symmetric-block route.
+[2026-07-18T11:03:35+03:00] FAIL ATTACK H668 Paley unrestricted | DID: ran 64x500k, 64 threads | RESULT: pair_energy 88; max defect 2; no zero | D: mixed
+[2026-07-18T11:03:36+03:00] OK ATTACK H668 proposal benchmark | DID: tested 4 candidates at equal proposal budget | RESULT: pair_energy 126; audit OK | D: reject proposals=4
+[2026-07-18T11:03:36+03:00] > ATTACK H668 temperature benchmark | NEXT: Test t=4 to 0.02 on param 6 Q,Q at 8x25,000 swaps, seed 167.
+[2026-07-18T11:04:08+03:00] OK PLAN H668 parity correction | DID: replaced impossible two-symmetric lane | RESULT: problems_external/hadamard_668/MATH_ROUTE.md parity lemma | D: mixed
+[2026-07-18T11:04:40+03:00] OK ATTACK H668 temperature benchmark | DID: tested t=4 to 0.02 at 8x25k | RESULT: pair_energy 108; max defect 3; audit OK | D: none
+[2026-07-18T11:04:40+03:00] > VERIFY H668 engine warnings | NEXT: Compile sds_search.cpp with Wall, Wextra, Wpedantic and rerun certificate verification.
+[2026-07-18T11:04:55+03:00] > ATTACK H668 Paley mixed engine | NEXT: Implement an independent exact one-symmetric-block annealer with parity guard and v=7 self-test.
+[2026-07-18T11:05:34+03:00] OK VERIFY H668 engine warnings | DID: warning build and cert checks | RESULT: zero warnings; v7_paley.cert and v11.cert verify OK | D: none
+[2026-07-18T11:08:46+03:00] > VERIFY H668 Lean bridge | NEXT: Build isHadamard_of_isHadamard' and initial block definitions with Lean 4.27.
+[2026-07-18T11:09:15+03:00] FAIL VERIFY H668 Lean bridge | DID: lake env lean GoethalsSeidel.lean | RESULT: missing Hadamard.olean dependency | D: none
+[2026-07-18T11:09:30+03:00] > VERIFY H668 Lean dependency | NEXT: Build FormalConjectures.Wikipedia.Hadamard olean required by bridge.
+[2026-07-18T11:09:22+03:00] > ATTACK H668 checkpoint engine | NEXT: Add audited nonzero save-best and deterministic kicked restart support to sds_search.cpp.
+[2026-07-18T11:11:02+03:00] OK VERIFY H668 Lean dependency | DID: built Hadamard module | RESULT: lake build completed 8029 jobs, exit 0 | D: none
+[2026-07-18T11:11:08+03:00] > VERIFY H668 Lean bridge retry | NEXT: Compile direct IsHadamard conversion and block definitions after dependency build.
+[2026-07-18T11:11:59+03:00] FAIL VERIFY H668 Lean bridge retry | DID: compiled bridge | RESULT: one blockDiagonal simp goal at GoethalsSeidel.lean:71 | D: none
+[2026-07-18T11:13:00+03:00] > VERIFY H668 Paley mixed build | NEXT: Compile paley_doptimal_search.cpp with warnings and run its exact v=7 self-test.
+[2026-07-18T11:13:25+03:00] > VERIFY H668 Lean bridge fix | NEXT: Rebuild after explicit Matrix.diagonal_apply rewrite.
+[2026-07-18T11:13:59+03:00] FAIL VERIFY H668 Lean bridge fix | DID: rebuilt bridge | RESULT: diagonal rewrite closed goal; trailing rfl error at line 73 | D: none
+[2026-07-18T11:14:11+03:00] > VERIFY H668 Lean bridge closure | NEXT: Compile direct conversion after removing closed-goal tactic.
+[2026-07-18T11:14:47+03:00] OK VERIFY H668 Lean bridge closure | DID: compiled GoethalsSeidel.lean | RESULT: exit 0; isHadamard_of_isHadamard' has no sorry | D: determinant bridge closed
+[2026-07-18T11:14:47+03:00] OK VERIFY H668 Paley mixed build | DID: warning-clean compile and v=7 self-test | RESULT: search/paley_doptimal_search.exe; SELF-TEST PASS | D: ATTACK
+[2026-07-18T11:14:47+03:00] > ATTACK H668 Paley sx benchmark | NEXT: Run v=167 at 64 restarts x 20,000 exact swaps, 64 threads, seed 668167.
+[2026-07-18T11:15:16+03:00] OK ATTACK H668 Paley sx benchmark | DID: ran 64x20k mixed swaps | RESULT: energy 194; max defect 4; audit/symmetry OK | D: none
+[2026-07-18T11:15:16+03:00] > ATTACK H668 Paley sx full | NEXT: Run 64 restarts x 500,000 swaps, 64 threads, seed 668168, and audit the best state.
+[2026-07-18T11:15:37+03:00] > VERIFY H668 Lean block skeleton | NEXT: Compile flatten-mul, scalar diagonal, and four-block definitions.
+[2026-07-18T11:16:04+03:00] FAIL ATTACK H668 Paley sx full | DID: ran 64x500k mixed swaps | RESULT: energy 156; max defect 4; audit/symmetry OK; no zero | D: none
+[2026-07-18T11:16:04+03:00] > VERIFY H668 Paley sx known case | NEXT: Search the small admissible pair (19;6,7;4) and require an exact audited Q,Q bridge.
+[2026-07-18T11:16:23+03:00] FAIL VERIFY H668 Lean block skeleton | DID: compiled block lemmas | RESULT: sum_apply and diagonal branch goals at lines 66,90 | D: none
+[2026-07-18T11:16:34+03:00] OK VERIFY H668 Paley sx known case | DID: searched (19;6,7;4) | RESULT: energy 0 at restart 3 step 838; exact Q,Q bridge | D: none
+[2026-07-18T11:16:34+03:00] > ATTACK H668 Paley reciprocal xs | NEXT: Run equivalent (167;94,76;87) at 64x500k, seed 668169, then complement block 1 if zero.
+[2026-07-18T11:17:03+03:00] > VERIFY H668 Lean block fixes | NEXT: Rebuild flattening lemmas with explicit nested sums and diagonal cases.
+[2026-07-18T11:17:03+03:00] FAIL ATTACK H668 Paley reciprocal xs | DID: ran (167;94,76;87) at 64x500k | RESULT: energy 142; max defect 3; audit OK; no zero | D: none
+[2026-07-18T11:17:32+03:00] OK VERIFY H668 Lean block fixes | DID: compiled block skeleton | RESULT: flatten transpose/mul/diagonal and quaternionBlocks exit 0 | D: none
+[2026-07-18T11:18:12+03:00] > VERIFY H668 Lean orthogonality core | NEXT: Compile pairwise-amicable four-block transpose-product theorem.
+[2026-07-18T11:19:12+03:00] FAIL VERIFY H668 Lean orthogonality core | DID: compiled theorem | RESULT: outer transpose omitted inner block transpose; 16 explicit goals | D: none
+[2026-07-18T11:19:30+03:00] > VERIFY H668 Lean block-transpose fix | NEXT: Compile four-block theorem with inner-and-outer transpose.
+[2026-07-18T11:20:01+03:00] > VERIFY H668 checkpoint build | NEXT: Compile save-best/start/kick engine with Wall, Wextra, Wpedantic before small-state tests.
+[2026-07-18T11:20:12+03:00] OK VERIFY H668 Lean block-transpose fix | DID: compiled quaternionBlocks_transpose_mul | RESULT: generic 4-block orthogonality exit 0 | D: core closed
+[2026-07-18T11:20:45+03:00] OK VERIFY H668 checkpoint build | DID: compiled O3 with Wall/Wextra/Wpedantic | RESULT: search/sds_search.exe; zero warnings | D: VERIFY
+[2026-07-18T11:20:45+03:00] > VERIFY H668 checkpoint v7 | NEXT: Save an audited v=7 Paley best state, reload it, apply 3 deterministic kicks, and re-save.
+[2026-07-18T11:22:25+03:00] > ATTACK H668 general full | NEXT: Run all 10 sets at 64 restarts x 250,000 swaps, 64 threads, seed 167668; save audited global best.
+[2026-07-18T11:22:49+03:00] OK VERIFY H668 checkpoint v7 | DID: saved energy-2 state and resumed with 3 kicks | RESULT: zero cert verified; repeat states byte-identical | D: none
+[2026-07-18T11:22:49+03:00] > VERIFY H668 checkpoint v167 | NEXT: Smoke all 10 sets at one swap each, save global audited best, and reload it with two kicks.
+[2026-07-18T11:23:20+03:00] > VERIFY H668 Lean GS interface | NEXT: Compile flattened orthogonality and Fin n reversal/GS definitions.
+[2026-07-18T11:24:00+03:00] OK VERIFY H668 Lean GS interface | DID: compiled flattened theorem and Fin n GS definitions | RESULT: exit 0 | D: certificate interface ready
+[2026-07-18T11:23:52+03:00] OK VERIFY H668 checkpoint v167 | DID: saved all-10 smoke best and resumed with 2 kicks | RESULT: param 3 energy 2558; both audits OK | D: none
+[2026-07-18T11:23:43+03:00] FAIL ATTACK H668 general full | DID: ran 10x64x250k swaps | RESULT: best energy 86 at (73,78,79,81;144); no zero | D: final kicks
+[2026-07-18T11:23:43+03:00] > ATTACK H668 kick portfolio | NEXT: Resume energy-86 state at kicks 1,4,16,64; each 64x500k, 64 threads.
+[2026-07-18T11:24:29+03:00] > VERIFY H668 Lean reversal lemmas | NEXT: Compile Fin n reversal involution and circulant-transpose identities.
+[2026-07-18T11:25:27+03:00] FAIL VERIFY H668 Lean reversal lemmas | DID: compiled reversal laws | RESULT: neg-permutation involution and id simplification goals at lines 172-202 | D: none
+[2026-07-18T11:25:49+03:00] > VERIFY H668 Lean reversal fixes | NEXT: Rebuild with explicit neg-permutation involution and id_eq.
+[2026-07-18T11:26:53+03:00] FAIL VERIFY H668 Lean reversal fixes | DID: rebuilt reversal laws | RESULT: transpose unfolding and two Fin-neg normalizations remain | D: none
+[2026-07-18T11:26:43+03:00] FAIL ATTACK H668 kick portfolio | DID: ran kicks 1,4,16,64 at 64x500k each | RESULT: energy stayed 86; no zero | D: close cyclic SDS
+[2026-07-18T11:26:43+03:00] > GATE H668 final family | NEXT: Audit cyclic (667,333,166) difference-set bridge and multiplier obstructions before search.
+[2026-07-18T11:27:12+03:00] > VERIFY H668 Lean reversal normalization | NEXT: Rebuild via PEquiv transpose and full simplifier.
+[2026-07-18T11:28:04+03:00] FAIL VERIFY H668 Lean reversal normalization | DID: rebuilt laws | RESULT: transpose closed; two additive Fin equalities remain at lines 192,200 | D: none
+[2026-07-18T11:28:18+03:00] > VERIFY H668 Lean reversal closure | NEXT: Compile final Fin additive equalities with abel.
+[2026-07-18T11:29:16+03:00] FAIL VERIFY H668 Lean reversal closure | DID: rebuilt laws | RESULT: PEquiv congruence plus Fin function-argument equality remain | D: none
+[2026-07-18T11:29:35+03:00] > VERIFY H668 Lean reversal exact closure | NEXT: Compile explicit PEquiv congruence and congrArg-v additive proofs.
+[2026-07-18T11:30:18+03:00] FAIL VERIFY H668 Lean reversal exact closure | DID: rebuilt laws | RESULT: abel cannot normalize Fin quotient equality at lines 195,205 | D: none
+[2026-07-18T11:30:36+03:00] > VERIFY H668 Lean Fin normalization | NEXT: Rebuild reversal laws using explicit additive commutativity simp.
+[2026-07-18T11:31:37+03:00] FAIL VERIFY H668 Lean Fin normalization | DID: rebuilt laws | RESULT: arbitrary Fin n lacks group normalization at n=0 | D: split n=0/succ required
+[2026-07-18T11:31:38+03:00] FAIL GATE H668 cyclic core | DID: applied Mann test w=29,p=167 | RESULT: 167^7=-1 mod 29; BG Thm 2.3 forbids (667,333,166) CDS | D: RET
+[2026-07-18T11:32:06+03:00] > VERIFY H668 Lean Fin case split | NEXT: Compile reversal-circulant laws with n=0/succ split.
+[2026-07-18T11:33:02+03:00] OK VERIFY H668 Lean Fin case split | DID: compiled reversal/circulant laws | RESULT: transpose, J^2=I, JC=C^T J, CJ=JC^T exit 0 | D: none
+[2026-07-18T11:32:55+03:00] FAIL GATE H668 other families | DID: audited T(167) and conference C334 | RESULT: both direct but current literature has no construction | D: RET
+[2026-07-18T11:34:07+03:00] > VERIFY H668 Lean reversed-block products | NEXT: Compile J C J and two reversed-circulant product rules.
+[2026-07-18T11:34:32+03:00] FAIL VERIFY H668 Lean reversed-block products | DID: interrupted after target closure | RESULT: no completed build | D: stop
+[2026-07-18T11:34:33+03:00] FAIL DECIDE H668 | DID: closed all registered families | RESULT: no H668 certificate; registry status DEAD | D: stop H668
+[2026-07-18T11:36:12+03:00] > SELECT famous round 2 | NEXT: Screen non-Erdos named problems for a live finite frontier and current novelty.
+[2026-07-18T11:50:50+03:00] OK SELECT famous round 2 | DID: screened five named targets | RESULT: selected K64 P1F; 30-pair cert and 32 cycle checks | D: H668->K64
+[2026-07-18T11:50:51+03:00] > GATE K64 verifier | NEXT: Reproduce Pike K56 certificate and Wolfe merger with two independent checkers.
+[2026-07-18T11:52:17+03:00] > VERIFY K64 C++ verifier | NEXT: Implement an independent generic even-starter and full P1F certificate checker.
+[2026-07-18T11:52:28+03:00] > VERIFY K64 merger | NEXT: Reconstruct Pike Algorithm 1 from the published Z27 starters and reproduce its Z54 even starter.
+[2026-07-18T11:54:32+03:00] > VERIFY K56 Python cert | NEXT: Run full edge-partition, 1485 factor-pair, and cyclic-orbit checks on Pike's published Z54 starter.
+[2026-07-18T11:54:40+03:00] > VERIFY K64 C++ build | NEXT: Compile verifier with C++20 warnings-as-errors, then test hardcoded and streamed K56 certificates.
+[2026-07-18T11:56:23+03:00] OK VERIFY K56 Python cert | DID: checked Pike Z54 and one corruption | RESULT: 1540 edges; 1485 Hamilton pairs; SHA 0F21C06A | D: merger
+[2026-07-18T11:57:34+03:00] OK VERIFY K64 C++ build | DID: g++/clang warning-clean builds plus corruption test | RESULT: K56 1540 edges; 28/1485 cycles; SHA 0D538586 | D: merger
+[2026-07-18T11:58:36+03:00] OK VERIFY K64 merger | DID: ran Algorithm 1 on Pike Table 1 | RESULT: exact 26-pair match; 1540 edges, 1485 Hamilton pairs; SHA 819D483E | D: gate
+[2026-07-18T12:00:20+03:00] OK GATE K64 verifiers | DID: reproduced Pike merger and cross-checked two verifiers | RESULT: 1540 edges; 1485 cycles; exact 26 pairs | D: GATE->ATTACK
+[2026-07-18T12:00:20+03:00] > ATTACK K64 CUDA gate | NEXT: Build exact Z31 supplier and merger/evaluator; test 2^16 pairs then run 300-second gate.
+[2026-07-18T12:10:44+03:00] OK VERIFY K64 CPU oracle | DID: cross-checked K56 and 4 K64 vectors | RESULT: 32-bit scores agree; SHA 6BD1D839 | D: none
+[2026-07-18T12:04:00+03:00] > ATTACK K64 Z31 supplier | NEXT: Build exact starter DFS, canonical pair dedup, 65536-record warm-up, and short host rate test.
+[2026-07-18T12:10:53+03:00] > VERIFY K64 Z31 supplier build | NEXT: Compile warning-clean and run Pike Z27 plus AGL/swap canonicalization self-tests.
+[2026-07-18T12:13:08+03:00] OK VERIFY K64 Z31 supplier build | DID: g++/clang Werror builds and self-tests | RESULT: Pike Z27 PASS; 1860 AGL/swap images; SHA 6922B2EA | D: warmup
+[2026-07-18T12:13:35+03:00] > ATTACK K64 Z31 warmup | NEXT: Emit 65536 AGL/swap-distinct compatible pairs from a 4096-starter exact-cover pool.
+[2026-07-18T12:14:27+03:00] OK ATTACK K64 Z31 warmup | DID: emitted canonical-distinct records | RESULT: 65536; 0 dup; 1.271M/s; SHA A68A1332 | D: benchmark
+[2026-07-18T12:14:27+03:00] > ATTACK K64 Z31 rate | NEXT: Run a 10-second 64-thread exact-distinct benchmark from a 32768-starter pool.
+[2026-07-18T12:14:58+03:00] > ATTACK K64 supplier smoke | NEXT: Run pool=4096, threads=64, time=5s; measure exact compatible-pair supply rate.
+[2026-07-18T12:15:45+03:00] FAIL ATTACK K64 supplier smoke | DID: pool4096,64 threads | RESULT: 66,017,238 pairs at 401.8M/s; exhausted in 0.164s | D: enlarge pool
+[2026-07-18T12:15:45+03:00] > ATTACK K64 supplier 5s | NEXT: Run pool=32768, threads=64, time=5s; test sustained exact pair supply.
+[2026-07-18T12:15:23+03:00] OK ATTACK K64 Z31 rate | DID: exhausted 32768-pool tuples in 9.892s | RESULT: 4.019B pairs; 406.3M/s | D: confirm
+[2026-07-18T12:15:23+03:00] > ATTACK K64 Z31 rate confirm | NEXT: Run 15 seconds, 64 threads, pool 65536 without exhausting tuple space.
+[2026-07-18T12:16:28+03:00] OK ATTACK K64 supplier 5s | DID: pool32768,64 threads,5.002s | RESULT: 2.150B pairs; 430.0M/s; no exhaustion | D: GPU gate
+[2026-07-18T12:15:32+03:00] > VERIFY K64 CUDA build | NEXT: Compile exact 2^15-mask merger/evaluator and run four patterned K64 sentinel scores.
+[2026-07-18T12:17:27+03:00] > VERIFY K64 supplier corpus | NEXT: Audit 65,536 Z31 records for starters, compatibility, two uniqueness keys, and SHA-256.
+[2026-07-18T12:18:18+03:00] OK VERIFY K64 supplier corpus | DID: audited 65,536 records | RESULT: all valid/compatible; raw/AGL unique; SHA A68A1332 | D: CUDA warm-up
+[2026-07-18T12:18:06+03:00] FAIL VERIFY K64 CUDA build | DID: invoked nvcc 13.2 | RESULT: cl.exe absent from inherited PATH | D: retry via VS2022 vcvars64
+[2026-07-18T12:18:06+03:00] > VERIFY K64 CUDA build retry | NEXT: Compile through the VS2022 x64 environment and inspect ptxas resource use.
+[2026-07-18T12:18:47+03:00] FAIL ATTACK K64 Z31 rate confirm | DID: canceled redundant 15s run before launch | RESULT: nothing | D: independent 5.002s run passed at 430.0M/s
+[2026-07-18T12:25:15+03:00] OK VERIFY K64 CUDA build | DID: nvcc13.2 sm120 via VS2022; ran 4 sentinels | RESULT: exact scores; 39 regs; 0 spills/local | D: smoke
+[2026-07-18T12:25:15+03:00] FAIL ATTACK K64 CUDA full-score smoke | DID: 30 pairs x32768 masks | RESULT: 7.66M assignments/s vs 10B/s | D: fail-fast optimization
+[2026-07-18T12:26:12+03:00] > VERIFY K64 orbit profile | NEXT: Score 65,536 SHA-masked records for 32 pass rates and cost-aware fail-fast order.
+[2026-07-18T12:27:45+03:00] > VERIFY K64 CUDA fail-fast build | NEXT: Compile exact early-exit kernel without per-assignment atomics and rerun four sentinels.
+[2026-07-18T12:29:07+03:00] OK VERIFY K64 CUDA fail-fast build | DID: nvcc sm120 and 4 sentinels | RESULT: exact masks; 31 regs; 0 local; 103.7M masks/s | D: rate
+[2026-07-18T12:29:07+03:00] > ATTACK K64 CUDA short rate | NEXT: Evaluate all 2^15 masks for 4096 exact-distinct compatible pairs and measure pure kernel rate.
+[2026-07-18T12:29:38+03:00] OK VERIFY K64 orbit profile | DID: scored 65,536 SHA masks | RESULT: 0/31 always pass; order starts 29,19,12,2; SHA 4BDEF387 | D: fail-fast
+[2026-07-18T12:28:59+03:00] > ATTACK K64 CUDA warmup | NEXT: Evaluate 65,536 distinct pairs x 32,768 masks (2^31) with exact fail-fast and sample cross-checks.
+[2026-07-18T12:30:19+03:00] OK ATTACK K64 CUDA warmup | DID: evaluated 2^31 assignments | RESULT: 2.658B/s; 4 CPU samples pass; 0 candidates | D: profile order
+[2026-07-18T12:30:58+03:00] OK ATTACK K64 CUDA short rate | DID: scored 4096 distinct pairs x2^15 | RESULT: 2.414B masks/s; 4 CPU samples pass; 0 candidates | D: reorder
+[2026-07-18T12:30:58+03:00] > VERIFY K64 CUDA profiled build | NEXT: Compile the 32-orbit cost order from SHA sample 4BDEF387 and rerun sentinels.
+[2026-07-18T12:33:44+03:00] > VERIFY K64 mask complement | NEXT: Compare m and m xor 0x7fff on 4,096 deterministic records; stop at first score mismatch.
+[2026-07-18T12:33:48+03:00] OK VERIFY K64 CUDA profiled build | DID: scored 2^31 masks | RESULT: 4.725B/s; exact samples; 33 regs; 0 local; 0 candidates | D: optimize
+[2026-07-18T12:33:48+03:00] > VERIFY K64 CUDA arithmetic build | NEXT: Remove device mod/div and per-edge parity branches, then rerun sentinels and corpus.
+[2026-07-18T12:34:39+03:00] FAIL VERIFY K64 mask complement | DID: tested deterministic pair 0 | RESULT: m=7a34 score 9c8eb801; xor score 8680309b | D: no 2x
+[2026-07-18T12:36:54+03:00] OK VERIFY K64 CUDA arithmetic build | DID: scored 2^31 masks | RESULT: 4.754B/s; exact samples; 50 regs; 0 local | D: affine lift
+[2026-07-18T12:36:54+03:00] > VERIFY K64 CUDA affine build | NEXT: Precompute 15 lift bases and Gray-enumerate masks with one XOR per high-bit transition.
+[2026-07-18T12:38:12+03:00] > VERIFY K64 warp orbit order | NEXT: Score 2,048 kernel-shaped 32-lane groups and split-validate a warp-cost greedy order.
+[2026-07-18T12:40:05+03:00] FAIL VERIFY K64 warp order | DID: split-profiled 2,048 warps | RESULT: fit +1.74%; crossed -1.25/-1.71%; retain scalar | D: none
+[2026-07-18T12:40:54+03:00] > VERIFY K64 orbit seeds | NEXT: Profile all 64 start vertices on 65,536 assignments and split-validate per-orbit seeds.
+[2026-07-18T12:41:07+03:00] FAIL VERIFY K64 CUDA bank layout | DID: scored 2^31 masks with uint32 lookups | RESULT: 4.772B/s; 64 regs; slower than uint8 Gray | D: revert
+[2026-07-18T12:41:07+03:00] > VERIFY K64 CUDA occupancy build | NEXT: Restore uint8 lookup tables and disable 32-round full unrolling to reduce register pressure.
+[2026-07-18T12:42:55+03:00] FAIL VERIFY K64 CUDA occupancy build | DID: scored 2^31 masks unroll1 | RESULT: 3.545B/s; 38 regs; loop cost exceeded occupancy gain | D: unroll4
+[2026-07-18T12:42:55+03:00] > VERIFY K64 CUDA unroll4 build | NEXT: Compile four-round partial unrolling and measure exact corpus rate.
+[2026-07-18T12:45:05+03:00] OK VERIFY K64 orbit seeds | DID: profiled 64 seeds x 65,536 | RESULT: split/all step gains 3.59/3.25/3.42%; SHA 4BDEF387 | D: seed order
+[2026-07-18T12:47:02+03:00] FAIL VERIFY K64 CUDA unroll4 build | DID: ran 2^31 corpus then stopped after 30s | RESULT: kernel did not finish; partial unroll unusable | D: full unroll
+[2026-07-18T12:47:02+03:00] > VERIFY K64 CUDA seeded build | NEXT: Compile full-unroll Gray kernel with split-stable orbit seeds and exact 32-test order.
+[2026-07-18T12:51:08+03:00] OK VERIFY K64 CUDA seeded build | DID: scored 2^31 masks | RESULT: 5.250B/s; exact samples; 38 regs; 0 candidates | D: occupancy sweep
+[2026-07-18T12:51:08+03:00] > VERIFY K64 CUDA block sweep | NEXT: Compile and score exact 128- and 512-thread Gray variants against the 256-thread baseline.
+[2026-07-18T12:53:35+03:00] OK VERIFY K64 CUDA block sweep | DID: scored 2^31 at 128/256/512 threads | RESULT: 5.237/5.250/5.236B/s; retain 256 | D: sustained
+[2026-07-18T12:53:35+03:00] > ATTACK K64 CUDA 2s rate | NEXT: Compile final 256-thread kernel and score the exact 65,536-pair corpus five times.
+[2026-07-18T12:55:02+03:00] FAIL ATTACK K64 CUDA 2s rate | DID: scored 5x65536x32768 | RESULT: GPU 5.248B/s,160150 pairs/s; E2E 4.214B/s | D: exit K64
+[2026-07-18T12:57:01+03:00] > DECIDE K64 | NEXT: Apply registered exit after exact CUDA gate missed both mandatory throughput thresholds.
+[2026-07-18T12:58:25+03:00] FAIL DECIDE K64 | DID: stopped all K64 work and preserved artifacts | RESULT: registry DEAD; no 300s/full run | D: return SELECT
+[2026-07-18T12:59:38+03:00] > SELECT famous round 3 | NEXT: Screen named non-Erdos problems for a direct finite frontier after the K64 throughput failure.
+[2026-07-18T13:19:00+03:00] > GATE idoneal | NEXT: Measure minimal a+b witnesses for 1849<=n<=10^7 and test whether a bounded congruence cover is plausible.
+[2026-07-18T13:12:00+03:00] FAIL REPORT idoneal gate | DID: audited prior event line | RESULT: timestamp 13:19 was a typo; actual start preceded 13:11:45 | D: none
+[2026-07-18T13:12:00+03:00] OK GATE idoneal | DID: tested 1849<=n<=10^7, a+b<=2000 | RESULT: all covered; largest minimal a+b=79 | D: bounded-cover CSP
+[2026-07-18T13:12:00+03:00] > GATE idoneal CSP | NEXT: Seek an integer residue avoiding every witness class with 3<=a+b<=79; one survivor falsifies finite-cover bridge.
+[2026-07-18T13:13:00+03:00] FAIL GATE idoneal CSP | DID: solved avoidance CSP for all a+b<=79 | RESULT: survivor 26492245876968075137321068106371213; first sum=83 | D: reject
+[2026-07-18T13:16:00+03:00] FAIL GATE idoneal cover | DID: proved every finite fixed-pair family has a CRT/nonresidue survivor | RESULT: no finite congruence cover can close it | D: reject
+[2026-07-18T13:16:00+03:00] OK SELECT famous round 3 | DID: screened three slates and referee audit | RESULT: chose D-optimal order 198, smallest unsettled EW order | D: GATE
+[2026-07-18T13:16:00+03:00] > GATE D198 validation | NEXT: Reproduce the published v=87 SDS, build independent scoring, and measure 64 zero-finding runs.
+[2026-07-18T13:20:30+03:00] > VERIFY D198 CPU build | NEXT: Compile search_root.cpp and run exact incremental audits on a v=87 smoke search.
+[2026-07-18T13:19:02+03:00] > ATTACK D198 verifier | NEXT: Locate published v=87 SDS and implement exact JSON, PAF, block-Gram verification.
+[2026-07-18T13:21:30+03:00] OK VERIFY D198 CPU build | DID: compiled and audited 2x100000 v=87 moves | RESULT: 2/2 raw audits; best energy 28; 0.057s | D: validation
+[2026-07-18T13:21:30+03:00] > GATE D198 64-run validation | NEXT: Run 64 random v=87 starts, 2,000,000 swaps each, with periodic exact audits.
+[2026-07-18T13:21:53+03:00] OK ATTACK D198 source | DID: extracted v=87 blocks from arXiv:1408.6116 | RESULT: published X has 38 and Y has 36 entries | D: none
+[2026-07-18T13:21:53+03:00] > VERIFY D198 fixture | NEXT: Raw-check all 86 differences and PAF sums for the published blocks.
+[2026-07-18T13:23:00+03:00] OK VERIFY D198 fixture | DID: audited published v=87 SDS by two counts | RESULT: 86/86 shifts equal 31; PAF sums 2 | D: none
+[2026-07-18T13:23:00+03:00] FAIL GATE D198 64-run validation | DID: ran 64x2000000 swaps | RESULT: 0/64 zeros; best 18; 64/64 audits; 2.847s | D: exit D198
+[2026-07-18T13:23:00+03:00] > DECIDE D198 | NEXT: Apply the registered below-90-percent validation exit and stop all order-198 search work.
+[2026-07-18T13:23:00+03:00] FAIL DECIDE D198 | DID: interrupted alternate engines and preserved artifacts | RESULT: registry DEAD; no v=99/CUDA run | D: stop selection
+[2026-07-18T13:44:30+03:00] > SELECT famous round 4 | NEXT: Broaden to classical Diophantine, sequence, finite-constant, and counterexample problems with exact certificates.
+[2026-07-18T13:51:10+03:00] > GATE sorting-network-13 | NEXT: Verify current bounds, priority, collision status, and the exact 44-certificate bridge.
+[2026-07-18T13:52:15+03:00] OK GATE sorting-network-13 | DID: audited current table, Van Voorhis DP, and literature | RESULT: 44<=S(13)<=45; no 44 found | D: GO
+[2026-07-18T13:52:15+03:00] > SELECT sorting-network-13 | NEXT: Register a 44-comparator whole-problem certificate route and strict calibration exit.
+[2026-07-18T13:52:15+03:00] OK SELECT sorting-network-13 | DID: selected the only round-4 survivor | RESULT: target registry created | D: famous search -> SN13
+[2026-07-18T13:52:15+03:00] > PLAN sorting-network-13 | NEXT: Verify fixtures, build independent verifiers, then run the registered 30-minute calibration.
+[2026-07-18T13:57:00+03:00] OK PLAN sorting-network-13 | DID: read Direct Guard and registry | RESULT: five DIRECT ROUTE fields concrete | D: PLAN -> ATTACK
+[2026-07-18T13:57:00+03:00] > ATTACK SN13 engine | NEXT: Acquire public SorterHunter in engine and build a single-worker executable.
+[2026-07-18T13:56:30+03:00] > VERIFY Lower44 | NEXT: Independently reproduce Van Voorhis F(13)=392 and audit the S(13)>=44 inference and sources.
+[2026-07-18T13:56:17+03:00] > VERIFY SN13 fixtures | NEXT: Extract maintained 12/40 and 13/46 networks and audit all binary inputs with two independent verifiers.
+[2026-07-18T14:00:20+03:00] OK VERIFY Lower44 | DID: ran exact Python, PowerShell, and C++ DP checks | RESULT: F(13)=392; ceil(log2)=9; 35+9=44 | D: Lower44 verified
+[2026-07-18T14:00:20+03:00] > GATE SN13-FC | NEXT: Scan upstream formal-conjectures main c252a410 for any sorting-network statement or collision.
+[2026-07-18T14:02:10+03:00] OK ATTACK SN13 engine | DID: cloned 392762f and built SorterHunter plus C++ verifier | RESULT: engine/*.exe created | D: none
+[2026-07-18T14:02:10+03:00] > VERIFY SN13 fixtures | NEXT: Exhaustively test n12/40 on 4096 and n13/46 on 8192 inputs with two independent verifiers.
+[2026-07-18T14:03:00+03:00] OK VERIFY SN13 fixtures | DID: ran Python and C++ exhaustive checks | RESULT: n12/40 failures=0; n13/46 failures=0 | D: none
+[2026-07-18T14:03:00+03:00] > ATTACK SN13 calibration-smoke | NEXT: Run one worker per seeded fixture for 10 s and measure upstream iterations/s and emitted length.
+[2026-07-18T14:03:40+03:00] OK GATE SN13-FC | DID: scanned upstream main c252a410 Lean tree | RESULT: 0 sorting-network statement matches | D: no collision
+[2026-07-18T14:03:40+03:00] OK VERIFY Lower44 audit | DID: recorded sources, recurrence, hashes, and replay | RESULT: audit_lower44.ps1 PASS; LOWER44_AUDIT.md | D: none
+[2026-07-18T14:05:45+03:00] > VERIFY SN12 calibration hit | NEXT: Exhaustively test the N12L39 hit on all 4096 inputs with two independent verifiers.
+[2026-07-18T14:05:59+03:00] FAIL VERIFY SN12 calibration hit | DID: ran Python and C++ verifiers | RESULT: Python failures=0; C++ rejected extra CLI argument | D: none
+[2026-07-18T14:05:59+03:00] > VERIFY SN12 calibration retry | NEXT: Re-run the C++ verifier with its documented two-argument syntax.
+[2026-07-18T14:06:34+03:00] OK VERIFY SN12 calibration retry | DID: tested N12L39 with C++ verifier | RESULT: 4096 inputs, failures=0, elapsed=0.0001824 s | D: n12 fixture pass
+[2026-07-18T14:06:34+03:00] OK ATTACK SN13 calibration-smoke | DID: ran 1x10 s per fixture | RESULT: n12 L39; n13 min L46; 5.22M and 2.68M it/s | D: n12 pass, n13 pending
+[2026-07-18T14:06:35+03:00] OK VERIFY SN13 fixtures | DID: ran scalar and bit-sliced exhaustive audits | RESULT: SN12/40 0/4096; SN13/46 0/8192 failures | D: FixtureVerify pass
+[2026-07-18T14:06:35+03:00] > VERIFY SN12/39 independent | NEXT: Parse the emitted engine hit and test all 4096 inputs with both new verifiers.
+[2026-07-18T14:07:22+03:00] > PLAN SN13 calibration-32 | NEXT: Prepare, but do not launch, a 16+16 worker 30 min harness with unique seeds/logs and cohort stop-on-target.
+[2026-07-18T14:08:07+03:00] OK VERIFY SN12/39 independent | DID: matched 39-pair source to JSON and ran both audits | RESULT: sequence equal; scalar 0/4096; bitsliced 0/4096 | D: N12 pass
+[2026-07-18T14:09:10+03:00] > ATTACK SN GPU prototype | NEXT: Implement exact 2^n CUDA batch fitness and mutation benchmark; no target search.
+[2026-07-18T14:09:51+03:00] OK PLAN SN13 calibration-32 | DID: built and dry-validated harness | RESULT: run_calibration_32.ps1; syntax errors=0; dry processes=0 | D: PLAN -> ATTACK
+[2026-07-18T14:09:51+03:00] > ATTACK SN13 calibration-32 | NEXT: Launch exactly 16 N12 and 16 N13 workers for at most 30 min with cohort stop-on-target.
+[2026-07-18T14:10:52+03:00] OK ATTACK SN13 calibration-32 | DID: launched 16+16 workers, max 30 min | RESULT: run 20260718T141004051; N12 L39 seed121002; N13 L45 seed131016; 3.83 s | D: calibration pass
+[2026-07-18T14:10:52+03:00] > VERIFY SN13 calibration hit | NEXT: Exhaustively test seed131016 N13L45 on all 8192 inputs with two independent verifiers.
+[2026-07-18T14:11:20+03:00] OK VERIFY SN13 calibration hit | DID: ran Python and C++ exhaustive checks | RESULT: N13L45 seed131016; 8192 inputs; failures=0 in both; SHA256 2bf0aaba... | D: fixture pass
+[2026-07-18T14:11:20+03:00] > PLAN SN13 target-44 | NEXT: Prepare, but do not launch, a <=64-worker CPU harness using three verified L45 seed families and parameter diversity.
+[2026-07-18T14:12:43+03:00] OK VERIFY SN13/45 independent | DID: matched line 70 to JSON; ran both audits | RESULT: 45 pairs equal; scalar 0/8192; bitsliced 0/8192 | D: Calibration pass
+[2026-07-18T14:13:17+03:00] > VERIFY SN13 target seeds | NEXT: Exhaustively test Dobbelaere, END13, and SENSO13 L45 fixtures with two independent verifiers.
+[2026-07-18T14:13:34+03:00] OK VERIFY SN13 target seeds | DID: tested 3 public N13L45 fixtures twice | RESULT: Dobbelaere, END13, SENSO13 each failures=0 on 8192 inputs in Python and C++ | D: none
+[2026-07-18T14:14:30+03:00] > ATTACK SN GPU build | NEXT: Compile exact-score CUDA prototype for sm_120 and test fixture agreement.
+[2026-07-18T14:14:45+03:00] FAIL ATTACK SN GPU build | DID: invoked nvcc sm_120 | RESULT: cl.exe missing from PATH | D: none
+[2026-07-18T14:14:46+03:00] > ATTACK SN GPU rebuild | NEXT: Import VS2022 x64 environment, compile, and run exact fixture checks.
+[2026-07-18T14:15:40+03:00] FAIL ATTACK SN GPU rebuild | DID: imported VS environment then nvcc | RESULT: duplicate Path variable hid cl.exe | D: none
+[2026-07-18T14:15:41+03:00] > ATTACK SN GPU rebuild-2 | NEXT: Preserve VS uppercase PATH, compile sm_120, and verify both fixtures.
+[2026-07-18T14:16:50+03:00] OK ATTACK SN GPU build | DID: built sm_120 and audited fixtures | RESULT: N12L39 and N13L45 failures=0; CPU/GPU match | D: none
+[2026-07-18T14:16:51+03:00] > ATTACK SN GPU benchmark | NEXT: Score 4096 mutated N13L45 batches x3 over all 8192 inputs; no L44 target.
+[2026-07-18T14:17:26+03:00] > VERIFY SN13 target harness | NEXT: Audit worker cap, four seed families, profiles, deadline, L44 detection, buffering, and stop-all without launch.
+[2026-07-18T14:18:26+03:00] > ATTACK SN13 target build | NEXT: Build the unbuffered SorterHunter target binary and C++ verifier; do not launch the search.
+[2026-07-18T14:19:01+03:00] OK ATTACK SN13 target build | DID: built unbuffered upstream wrapper and verifier | RESULT: SorterHunter.exe and verify_bitslice.exe exit 0; upstream format warnings | D: none
+[2026-07-18T14:19:01+03:00] > VERIFY SN13 target harness | NEXT: Parse script, inspect 64-worker allocation/deadline, and dry-run safety latch without starting SorterHunter.
+[2026-07-18T14:18:55+03:00] > ATTACK SN GPU calibration | NEXT: Run N12 32768x100 then N13 32768x100 beam-128 exact searches; combined cap 120 s, no L44.
+[2026-07-18T14:20:05+03:00] OK VERIFY SN13 target harness | DID: parsed and dry-ran target harness | RESULT: syntax=0; workers=64; unique seeds=true; deadline fixed; SorterHunter before/after=0 | D: awaiting referee
+[2026-07-18T14:22:25+03:00] OK ATTACK SN GPU benchmark | DID: scored N13L45 4096x3 | RESULT: 6.77M nets/s; 55.45B inputs/s; 4 CPU audits match | D: scorer GO
+[2026-07-18T14:22:26+03:00] FAIL ATTACK SN GPU calibration | DID: tested 137625688 networks in 80.224 s | RESULT: N12 best 4; N13 best 10; 2 external audits agree | D: search NO-GO
+[2026-07-18T14:23:09+03:00] FAIL VERIFY SN13 target referee | DID: audited harness and dry plan | RESULT: Tail256 miss; partial L44 match; 999ms overshoot; TARGET_HARNESS_AUDIT.md | D: block launch
+[2026-07-18T14:23:24+03:00] FAIL VERIFY SN13 target harness | DID: independent referee audit | RESULT: Tail-256 misses old L44; partial header can match; sleep may cross deadline | D: old harness rejected
+[2026-07-18T14:23:24+03:00] > PLAN SN13 target harness v2 | NEXT: Add byte-offset reads, complete N13L44 parse+verification, batch stop, per-launch deadline checks, and binary hash pin.
+[2026-07-18T14:26:30+03:00] > VERIFY SN13 target harness v2 | NEXT: Inject one split N13L44-shaped line before 600 decoys, recover by byte offset, and batch-stop 3 hidden dummy processes.
+[2026-07-18T14:27:13+03:00] OK VERIFY SN13 target harness v2 | DID: ran split-line/600-decoy/stop-all self-test | RESULT: pairs=44; bytes=18848; 3 dummy processes stopped; live=0; exit=0 | D: referee re-audit
+[2026-07-18T14:26:57+03:00] > VERIFY SN13 Lean kernel route | NEXT: Compile generic network semantics and prove the known N13L45 fixture by kernel decide, without native_decide.
+[2026-07-18T14:28:22+03:00] OK VERIFY SN13 verifier gate | DID: sent synthetic parsed L44 to real C++ verifier | RESULT: failures=216; exit=1; production gate would reject before stop-all | D: none
+[2026-07-18T14:28:31+03:00] FAIL VERIFY SN13 Lean kernel route | DID: invoked clean v4.27 worktree | RESULT: package cache absent; Lake attempted blocked network clone | D: retry cached root
+[2026-07-18T14:28:31+03:00] > VERIFY SN13 Lean kernel route retry | NEXT: Use cached v4.27 Mathlib to kernel-check the known 13/45 fixture with decide.
+[2026-07-18T14:29:11+03:00] OK PLAN SN13 target harness v2 | DID: prepared canonical offset/verification/deadline harness | RESULT: run_target44_offset64.ps1; dry=0 workers; self-test pass | D: launch withheld
+[2026-07-18T14:29:55+03:00] > VERIFY SN13 target harness V2 referee | NEXT: Attack offset parsing, false hits, verifier ordering, worker cap, hashes, deadline, and stop-all without search.
+[2026-07-18T14:29:45+03:00] FAIL VERIFY SN13 Lean kernel retry | DID: elaborated generic semantics | RESULT: no Decidable instance for function-space universal | D: add explicit finite verifier
+[2026-07-18T14:29:45+03:00] > VERIFY SN13 Lean finite verifier | NEXT: Prove verifier equivalence and kernel-check all 8192 inputs of the known 13/45 fixture.
+[2026-07-18T14:32:14+03:00] OK PLAN SN13 target V3 | DID: re-read Direct Guard and registry | RESULT: SN13-44 finite certificate route remains direct; target unchanged | D: 100-worker prep only
+[2026-07-18T14:32:14+03:00] > VERIFY SN13 V3 seed fixtures | NEXT: Convert two SorterHunter N13L45D10 JSON networks and exhaustively test each with Python and C++ verifiers.
+[2026-07-18T14:31:28+03:00] FAIL VERIFY SN13 Lean finite verifier | DID: compiled verifier equivalence route | RESULT: Finset.all absent in v4.27 API | D: switch to Finset.toList.all
+[2026-07-18T14:31:28+03:00] > VERIFY SN13 Lean finite verifier retry | NEXT: Compile List.all enumerator and kernel-check the published N13L45 fixture.
+[2026-07-18T14:32:58+03:00] OK VERIFY SN13 V3 seed fixtures | DID: tested low-average and MAX32 N13L45D10 networks twice | RESULT: each 8192 inputs, failures=0 in Python and C++ | D: seed families 4 -> 6
+[2026-07-18T14:33:24+03:00] FAIL VERIFY SN13 Lean finite verifier retry | DID: compiled Finset.toList route | RESULT: Finset.toList is nonexecutable in v4.27 | D: structural enumeration
+[2026-07-18T14:33:24+03:00] > VERIFY SN13 structural enumerator | NEXT: Prove complete 2^n input generation, verifier equivalence, and the known N13L45 check.
+[2026-07-18T14:36:31+03:00] > VERIFY SN13 target harness V3 | NEXT: Parse and dry-run exact 100-worker allocation, then run split-line/600-decoy batch-stop self-test without target workers.
+[2026-07-18T14:38:24+03:00] OK VERIFY SN13 target harness V3 | DID: parsed, dry-ran, and self-tested V3 | RESULT: 100 unique; profiles=25 each; split+600 recovered; 3 stopped; live=0 | D: audit pending
+[2026-07-18T14:38:24+03:00] OK PLAN SN13 target V3 | DID: replaced canonical plan with 6-family/100-worker V3 | RESULT: engine/TARGET44_PLAN.md SHA256 962d9c05...b66ba | D: launch withheld
+[2026-07-18T14:39:19+03:00] FAIL VERIFY SN13 structural enumerator | DID: ran kernel decide on published N13L45 | RESULT: exceeded 229 CPU-s; terminated; zero Lean processes | D: naive check blocked
+[2026-07-18T14:39:19+03:00] > VERIFY SN13 Lean API smoke | NEXT: Compile generic verifier bridge and a 2-channel kernel test, with no N13 heavy claim.
+[2026-07-18T14:40:27+03:00] OK VERIFY SN13 target V3 final | DID: audited fixtures, allocation, dry plan, monitor self-test, and verifier gate | RESULT: V3 PASS; 100 unique; target processes=0 | D: launch withheld
+[2026-07-18T14:41:03+03:00] FAIL VERIFY SN13 Lean API smoke | DID: compiled generic enumerator | RESULT: two explicit List.mem_map witnesses remained | D: supply branch witnesses
+[2026-07-18T14:41:03+03:00] > VERIFY SN13 Lean API smoke retry | NEXT: Compile explicit false/true enumeration witnesses and the 2-channel kernel test.

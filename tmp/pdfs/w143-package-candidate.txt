@@ -1,0 +1,12 @@
+CANDIDATE=E:\Projects\ErdosProblems\tmp\pdfs\w143-arxiv-c4f4515e3198423b85ddf1c4c8dffea2.zip
+STAGE=E:\Projects\ErdosProblems\tmp\pdfs\w143-stage-b25eff25e204476db70af5de1f210b5c
+EXTRACT=E:\Projects\ErdosProblems\tmp\pdfs\w143-extract-79d5b44babe34b0194401732fb0d0798
+anc/computation/atlas_check_independent.py	12301
+anc/computation/atlas_check.py	5559
+anc/computation/atlas_independent_results.json	635815
+anc/computation/atlas_results.json	372060
+anc/Degrees.lean	6595
+anc/GraphConjecture143.lean	3538
+anc/LargestInducedTree.lean	18967
+anc/README.txt	2074
+w143_induced_tree.tex	18791

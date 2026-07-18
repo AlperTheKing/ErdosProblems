@@ -1,0 +1,122 @@
+{
+ "T1": {
+  "applicable": 8083,
+  "viol": 1,
+  "min_slack": -1,
+  "examples": [
+   {
+    "name": "tree+4(14,53)",
+    "g6": "MA?OQO@@@CocOC?`?",
+    "n": 14,
+    "girth": 5,
+    "diam": 5,
+    "rad": 3,
+    "e": 3,
+    "sumM": 2,
+    "slack": -1
+   }
+  ]
+ },
+ "T2": {
+  "applicable": 8083,
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ },
+ "T3": {
+  "applicable": 70,
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ },
+ "T4": {
+  "applicable": 1761,
+  "viol": 7,
+  "min_slack": -1,
+  "examples": [
+   {
+    "name": "atlas",
+    "g6": "FhELO",
+    "n": 7,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 1,
+    "slack": -1
+   },
+   {
+    "name": "hub(3,2)",
+    "g6": "FhELO",
+    "n": 7,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 1,
+    "slack": -1
+   },
+   {
+    "name": "bip(4,3,28)",
+    "g6": "F?^d_",
+    "n": 7,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 1,
+    "slack": -1
+   },
+   {
+    "name": "bip(4,4,5)",
+    "g6": "G?tfd_",
+    "n": 8,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 1,
+    "slack": -1
+   },
+   {
+    "name": "bip(5,5,58)",
+    "g6": "I?@|VrOi?",
+    "n": 10,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 0,
+    "slack": -1
+   },
+   {
+    "name": "bip(6,4,22)",
+    "g6": "I??Durkf?",
+    "n": 10,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 1,
+    "slack": -1
+   },
+   {
+    "name": "bip(6,5,58)",
+    "g6": "J??Fcz[]Dg?",
+    "n": 11,
+    "girth": 4,
+    "diam": 3,
+    "rad": 2,
+    "e": 2,
+    "sumM": 0,
+    "slack": -1
+   }
+  ]
+ },
+ "T5": {
+  "applicable": 4083,
+  "viol": 0,
+  "min_slack": 0,
+  "examples": []
+ }
+}

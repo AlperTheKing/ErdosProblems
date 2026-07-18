@@ -1,0 +1,73 @@
+{
+  "date": "2026-07-18",
+  "device": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "compute_capability": "12.0"
+  },
+  "build": {
+    "architecture": "sm_120",
+    "source_sha256": "e0d12c935656e8634d149100f60cb8dfda2810063334766a0d8c9090d149f661",
+    "executable_sha256": "b5d9d53c3b9b2d7cd2f155b3442057d98788e30b7fc980e3411172545056ecf3"
+  },
+  "fixture_verification": [
+    {
+      "channels": 12,
+      "comparators": 39,
+      "binary_inputs": 4096,
+      "failures": 0,
+      "cpu_gpu_match": true
+    },
+    {
+      "channels": 13,
+      "comparators": 45,
+      "binary_inputs": 8192,
+      "failures": 0,
+      "cpu_gpu_match": true
+    }
+  ],
+  "benchmark": {
+    "target_length_44_evaluated": false,
+    "channels": 13,
+    "comparators": 45,
+    "batch": 4096,
+    "rounds": 3,
+    "candidate_evaluations": 12288,
+    "gpu_seconds": 0.001815,
+    "wall_seconds": 0.003520,
+    "candidates_per_gpu_second": 6768666.842473,
+    "binary_cases_per_gpu_second": 55448918773.538704,
+    "cpu_audited_candidates": 4,
+    "cpu_gpu_match": true
+  },
+  "calibration": {
+    "target_length_44_evaluated": false,
+    "total_wall_seconds": 80.2240695,
+    "total_candidate_evaluations": 137625688,
+    "cohorts": [
+      {
+        "task": "N12L40_to_N12L39",
+        "runs": [
+          {"batch": 32768, "rounds": 100, "beam": 128, "seed": 120039, "evaluated": 3276840, "wall_seconds": 1.5932968, "best_failures": 6},
+          {"batch": 65536, "rounds": 1000, "beam": 256, "seed": 120139, "evaluated": 65536001, "wall_seconds": 38.7186593, "best_failures": 4}
+        ],
+        "final_failures": 4,
+        "independent_python_failures": 4,
+        "independent_cpp_failures": 4,
+        "certificate": null
+      },
+      {
+        "task": "N13L46_to_N13L45",
+        "runs": [
+          {"batch": 32768, "rounds": 100, "beam": 128, "seed": 130045, "evaluated": 3276846, "wall_seconds": 1.7048683, "best_failures": 10},
+          {"batch": 65536, "rounds": 1000, "beam": 256, "seed": 130145, "evaluated": 65536001, "wall_seconds": 38.2072451, "best_failures": 10}
+        ],
+        "final_failures": 10,
+        "independent_python_failures": 10,
+        "independent_cpp_failures": 10,
+        "certificate": null
+      }
+    ],
+    "exact_scorer_backend_decision": "GO",
+    "standalone_local_search_decision": "NO-GO"
+  }
+}

@@ -1,0 +1,3427 @@
+{
+  "adversarial": {
+    "cyclic": 894,
+    "graphs": 894,
+    "q1_min_slack": -3,
+    "q1_min_witness": "cycleLegs(g=10,spec=((0, 5), (3, 5), (6, 5))) [XhCGGC@_K??@?@??_?G_???C??G??G??CA?????G???_??@???@] girth=10 ecc_center=8 best_far=5",
+    "q1_slack_hist": {
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "0": 59,
+      "1": 92,
+      "2": 130,
+      "3": 137,
+      "4": 113,
+      "5": 101,
+      "6": 90,
+      "7": 85,
+      "8": 54,
+      "9": 26
+    },
+    "q1_violation_count": 7,
+    "q1_violations": [
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 11,
+        "center": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "ecc_center": 7,
+        "family": "cycleLegs(g=6,spec=((0, 6), (3, 6)))",
+        "girth": 6,
+        "graph6": "QhEK?C@?G?_@C???_?G?@??C??G",
+        "max_K_max_x_dist": 6,
+        "n": 18,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 13,
+        "center": [
+          2,
+          6
+        ],
+        "ecc_center": 8,
+        "family": "cycleLegs(g=8,spec=((0, 6), (4, 6)))",
+        "girth": 8,
+        "graph6": "ShCGKE??G?_@?@??`???@??C??G??G??C",
+        "max_K_max_x_dist": 6,
+        "n": 20,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 16,
+        "center": [
+          4,
+          6
+        ],
+        "ecc_center": 6,
+        "family": "cycleLegs(g=10,spec=((0, 2), (5, 5)))",
+        "girth": 10,
+        "graph6": "PhCGGC@_K??@@???_?G?@??C",
+        "max_K_max_x_dist": 5,
+        "n": 17,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 15,
+        "center": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "ecc_center": 8,
+        "family": "cycleLegs(g=10,spec=((0, 6), (5, 6)))",
+        "girth": 10,
+        "graph6": "UhCGGC@_K??@?@??_?G?@@????G??G??C??@???G",
+        "max_K_max_x_dist": 6,
+        "n": 22,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 14,
+        "center": [
+          3
+        ],
+        "ecc_center": 8,
+        "family": "cycleLegs(g=10,spec=((0, 5), (3, 5), (6, 5)))",
+        "girth": 10,
+        "graph6": "XhCGGC@_K??@?@??_?G_???C??G??G??CA?????G???_??@???@",
+        "max_K_max_x_dist": 5,
+        "n": 25,
+        "slack": -3
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "best_x": 18,
+        "center": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "ecc_center": 6,
+        "family": "cycleLegs(g=12,spec=((0, 2), (6, 5)))",
+        "girth": 12,
+        "graph6": "RhCGGC@?G?o@_???_O??@??C??G??G",
+        "max_K_max_x_dist": 5,
+        "n": 19,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "best_x": 17,
+        "center": [
+          3,
+          9
+        ],
+        "ecc_center": 9,
+        "family": "cycleLegs(g=12,spec=((0, 6), (6, 6)))",
+        "girth": 12,
+        "graph6": "WhCGGC@?G?o@_???_?G?@??C??GC????C??@???G???_??@",
+        "max_K_max_x_dist": 6,
+        "n": 24,
+        "slack": -3
+      }
+    ],
+    "q2_min_slack": -3,
+    "q2_min_witness": "cycleLegs(g=10,spec=((0, 5), (3, 5), (6, 5))) [XhCGGC@_K??@?@??_?G_???C??G??G??CA?????G???_??@???@] v=7",
+    "q2_slack_hist": {
+      "-3": 1,
+      "0": 893
+    },
+    "q2_violation_count": 1,
+    "q2_violations": [
+      {
+        "center": [
+          3
+        ],
+        "dist_v_center": 4,
+        "eccent_v": 9,
+        "family": "cycleLegs(g=10,spec=((0, 5), (3, 5), (6, 5)))",
+        "graph6": "XhCGGC@_K??@?@??_?G_???C??G??G??CA?????G???_??@???@",
+        "n": 25,
+        "radius": 8,
+        "slack": -3,
+        "vertex": 7
+      }
+    ]
+  },
+  "atlas": {
+    "cyclic": 971,
+    "graphs": 995,
+    "q1_min_slack": -1,
+    "q1_min_witness": "atlas [EQKo] girth=4 ecc_center=2 best_far=1",
+    "q1_slack_hist": {
+      "-1": 7,
+      "0": 227,
+      "1": 568,
+      "2": 169
+    },
+    "q1_violation_count": 7,
+    "q1_violations": [
+      {
+        "best_cycle": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 0,
+        "center": [
+          4,
+          5
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 4,
+        "graph6": "EQKo",
+        "max_K_max_x_dist": 1,
+        "n": 6,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "best_x": 0,
+        "center": [
+          3,
+          4
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 4,
+        "graph6": "FbW`?",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "best_x": 2,
+        "center": [
+          1
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 4,
+        "graph6": "FMoG_",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "best_x": 3,
+        "center": [
+          2,
+          5
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 5,
+        "graph6": "Fh_gG",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          2,
+          3,
+          5,
+          6
+        ],
+        "best_x": 1,
+        "center": [
+          0
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 5,
+        "graph6": "FXAGg",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "best_x": 2,
+        "center": [
+          0,
+          1,
+          2
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 4,
+        "graph6": "FFwG_",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "best_x": 3,
+        "center": [
+          6
+        ],
+        "ecc_center": 2,
+        "family": "atlas",
+        "girth": 4,
+        "graph6": "FhELO",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      }
+    ],
+    "q2_min_slack": -1,
+    "q2_min_witness": "atlas [FMoG_] v=0",
+    "q2_slack_hist": {
+      "-1": 10,
+      "0": 985
+    },
+    "q2_violation_count": 10,
+    "q2_violations": [
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FMoG_",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          2,
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "Fh_gG",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          0
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FXAGg",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          3
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FjCHO",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 6
+      },
+      {
+        "center": [
+          2,
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FhogG",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          1,
+          4
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FxOWO",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FHt@G",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          2,
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "Fh_gg",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          2,
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "Fhogg",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          6
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "atlas",
+        "graph6": "FhELO",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 1
+      }
+    ]
+  },
+  "families_random": {
+    "cyclic": 3134,
+    "graphs": 3288,
+    "q1_min_slack": -2,
+    "q1_min_witness": "cycle_two_tails(8,2,2) [KhCGKE??GO?@] girth=8 ecc_center=4 best_far=2",
+    "q1_slack_hist": {
+      "-1": 50,
+      "-2": 6,
+      "0": 628,
+      "1": 1451,
+      "2": 922,
+      "3": 56,
+      "4": 14,
+      "5": 7
+    },
+    "q1_violation_count": 50,
+    "q1_violations": [
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "best_x": 4,
+        "center": [
+          1,
+          3
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(4,1,1)",
+        "girth": 4,
+        "graph6": "El__",
+        "max_K_max_x_dist": 1,
+        "n": 6,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "best_x": 5,
+        "center": [
+          1,
+          3
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(4,2,2)",
+        "girth": 4,
+        "graph6": "Gl_H?C",
+        "max_K_max_x_dist": 2,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "best_x": 6,
+        "center": [
+          1,
+          3
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(4,3,3)",
+        "girth": 4,
+        "graph6": "Il_GH?@?G",
+        "max_K_max_x_dist": 3,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "best_x": 5,
+        "center": [
+          1
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(5,1,1)",
+        "girth": 5,
+        "graph6": "Fhe@?",
+        "max_K_max_x_dist": 1,
+        "n": 7,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "best_x": 6,
+        "center": [
+          1
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(5,2,2)",
+        "girth": 5,
+        "graph6": "Hhe?H?@",
+        "max_K_max_x_dist": 2,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "best_x": 7,
+        "center": [
+          1
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(5,3,3)",
+        "girth": 5,
+        "graph6": "Jhe?GC_?G?_",
+        "max_K_max_x_dist": 3,
+        "n": 11,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 6,
+        "center": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(6,1,1)",
+        "girth": 6,
+        "graph6": "GhEK?_",
+        "max_K_max_x_dist": 1,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 8,
+        "center": [
+          2,
+          4
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(6,1,2)",
+        "girth": 6,
+        "graph6": "HhEK?_@",
+        "max_K_max_x_dist": 2,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 7,
+        "center": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(6,2,2)",
+        "girth": 6,
+        "graph6": "IhEK?CO?G",
+        "max_K_max_x_dist": 2,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 10,
+        "center": [
+          2,
+          4
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(6,2,3)",
+        "girth": 6,
+        "graph6": "JhEK?CO?G?_",
+        "max_K_max_x_dist": 3,
+        "n": 11,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "best_x": 8,
+        "center": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(6,3,3)",
+        "girth": 6,
+        "graph6": "KhEK?C@C??_@",
+        "max_K_max_x_dist": 3,
+        "n": 12,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_x": 7,
+        "center": [
+          1,
+          2,
+          5
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(7,1,1)",
+        "girth": 7,
+        "graph6": "HhCKK?O",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_x": 9,
+        "center": [
+          2
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(7,1,2)",
+        "girth": 7,
+        "graph6": "IhCKK?O?G",
+        "max_K_max_x_dist": 2,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_x": 8,
+        "center": [
+          1,
+          2,
+          5
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(7,2,2)",
+        "girth": 7,
+        "graph6": "JhCKK?@C??_",
+        "max_K_max_x_dist": 2,
+        "n": 11,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_x": 11,
+        "center": [
+          2
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(7,2,3)",
+        "girth": 7,
+        "graph6": "KhCKK?@C??_@",
+        "max_K_max_x_dist": 3,
+        "n": 12,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "best_x": 9,
+        "center": [
+          1,
+          2,
+          5
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(7,3,3)",
+        "girth": 7,
+        "graph6": "LhCKK?@?G_?@?@",
+        "max_K_max_x_dist": 3,
+        "n": 13,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 8,
+        "center": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(8,1,1)",
+        "girth": 8,
+        "graph6": "IhCGKE?A?",
+        "max_K_max_x_dist": 1,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 10,
+        "center": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(8,1,2)",
+        "girth": 8,
+        "graph6": "JhCGKE?A??_",
+        "max_K_max_x_dist": 2,
+        "n": 11,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 11,
+        "center": [
+          3,
+          5
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(8,1,3)",
+        "girth": 8,
+        "graph6": "KhCGKE?A??_@",
+        "max_K_max_x_dist": 3,
+        "n": 12,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 9,
+        "center": [
+          2,
+          6
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(8,2,2)",
+        "girth": 8,
+        "graph6": "KhCGKE??GO?@",
+        "max_K_max_x_dist": 2,
+        "n": 12,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 12,
+        "center": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(8,2,3)",
+        "girth": 8,
+        "graph6": "LhCGKE??GO?@?@",
+        "max_K_max_x_dist": 3,
+        "n": 13,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 10,
+        "center": [
+          2,
+          6
+        ],
+        "ecc_center": 5,
+        "family": "cycle_two_tails(8,3,3)",
+        "girth": 8,
+        "graph6": "MhCGKE??G?`??@??_",
+        "max_K_max_x_dist": 3,
+        "n": 14,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "best_x": 9,
+        "center": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(9,1,1)",
+        "girth": 9,
+        "graph6": "JhCGGE@_?O?",
+        "max_K_max_x_dist": 1,
+        "n": 11,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "best_x": 11,
+        "center": [
+          2,
+          3,
+          6
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(9,1,2)",
+        "girth": 9,
+        "graph6": "KhCGGE@_?O?@",
+        "max_K_max_x_dist": 2,
+        "n": 12,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "best_x": 12,
+        "center": [
+          3
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(9,1,3)",
+        "girth": 9,
+        "graph6": "LhCGGE@_?O?@?@",
+        "max_K_max_x_dist": 3,
+        "n": 13,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "best_x": 10,
+        "center": [
+          2
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(9,2,2)",
+        "girth": 9,
+        "graph6": "LhCGGE@_??`??@",
+        "max_K_max_x_dist": 2,
+        "n": 13,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "best_x": 13,
+        "center": [
+          2,
+          3,
+          6
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(9,2,3)",
+        "girth": 9,
+        "graph6": "MhCGGE@_??`??@??_",
+        "max_K_max_x_dist": 3,
+        "n": 14,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 10,
+        "center": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(10,1,1)",
+        "girth": 10,
+        "graph6": "KhCGGC@_K??_",
+        "max_K_max_x_dist": 1,
+        "n": 12,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 12,
+        "center": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(10,1,2)",
+        "girth": 10,
+        "graph6": "LhCGGC@_K??_?@",
+        "max_K_max_x_dist": 2,
+        "n": 13,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 13,
+        "center": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(10,1,3)",
+        "girth": 10,
+        "graph6": "MhCGGC@_K??_?@??_",
+        "max_K_max_x_dist": 3,
+        "n": 14,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "best_x": 11,
+        "center": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "ecc_center": 4,
+        "family": "cycle_two_tails(10,2,2)",
+        "girth": 10,
+        "graph6": "MhCGGC@_K??@@???_",
+        "max_K_max_x_dist": 2,
+        "n": 14,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "best_x": 11,
+        "center": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        "ecc_center": 2,
+        "family": "cycle_two_tails(11,1,1)",
+        "girth": 11,
+        "graph6": "LhCGGC@?K?o?@?",
+        "max_K_max_x_dist": 1,
+        "n": 13,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "best_x": 13,
+        "center": [
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "ecc_center": 3,
+        "family": "cycle_two_tails(11,1,2)",
+        "girth": 11,
+        "graph6": "MhCGGC@?K?o?@???_",
+        "max_K_max_x_dist": 2,
+        "n": 14,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          2,
+          6,
+          7
+        ],
+        "best_x": 0,
+        "center": [
+          1,
+          2
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=8,p=0.15,i=52)",
+        "girth": 4,
+        "graph6": "GC?JJ_",
+        "max_K_max_x_dist": 2,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          3,
+          6,
+          7
+        ],
+        "best_x": 1,
+        "center": [
+          0
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=8,p=0.15,i=232)",
+        "girth": 4,
+        "graph6": "GE_OdC",
+        "max_K_max_x_dist": 1,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          3,
+          4,
+          5,
+          7
+        ],
+        "best_x": 0,
+        "center": [
+          1,
+          3
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=8,p=0.15,i=256)",
+        "girth": 5,
+        "graph6": "GM?WaO",
+        "max_K_max_x_dist": 1,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          4,
+          5,
+          7
+        ],
+        "best_x": 2,
+        "center": [
+          5
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=8,p=0.15,i=284)",
+        "girth": 5,
+        "graph6": "GcQC@W",
+        "max_K_max_x_dist": 1,
+        "n": 8,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          2,
+          3,
+          8
+        ],
+        "best_x": 0,
+        "center": [
+          1
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=9,p=0.15,i=20)",
+        "girth": 4,
+        "graph6": "HYCPA?o",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          3,
+          4,
+          8
+        ],
+        "best_x": 2,
+        "center": [
+          4
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=9,p=0.15,i=32)",
+        "girth": 5,
+        "graph6": "HCwKA@O",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "best_x": 0,
+        "center": [
+          5,
+          7
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=9,p=0.15,i=100)",
+        "girth": 4,
+        "graph6": "HKP?iCG",
+        "max_K_max_x_dist": 2,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 0,
+        "center": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=9,p=0.15,i=208)",
+        "girth": 6,
+        "graph6": "HGB@oWA",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "best_x": 1,
+        "center": [
+          0,
+          3,
+          5,
+          6
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=9,p=0.15,i=244)",
+        "girth": 6,
+        "graph6": "H[?@H?[",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "best_x": 0,
+        "center": [
+          2,
+          5
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=9,p=0.15,i=360)",
+        "girth": 4,
+        "graph6": "Hb?PG?J",
+        "max_K_max_x_dist": 2,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          3,
+          4,
+          6,
+          8
+        ],
+        "best_x": 1,
+        "center": [
+          3
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=9,p=0.15,i=456)",
+        "girth": 5,
+        "graph6": "H?{C?_U",
+        "max_K_max_x_dist": 1,
+        "n": 9,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "best_x": 0,
+        "center": [
+          1,
+          5,
+          9
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=10,p=0.15,i=68)",
+        "girth": 7,
+        "graph6": "IAKA?QEB?",
+        "max_K_max_x_dist": 1,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          4,
+          6,
+          7,
+          9
+        ],
+        "best_x": 0,
+        "center": [
+          6,
+          9
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=10,p=0.25,i=77)",
+        "girth": 4,
+        "graph6": "IOGOoDDAO",
+        "max_K_max_x_dist": 2,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          2,
+          5,
+          6
+        ],
+        "best_x": 1,
+        "center": [
+          0
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=10,p=0.15,i=92)",
+        "girth": 4,
+        "graph6": "IOEPK?@W?",
+        "max_K_max_x_dist": 2,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "best_x": 4,
+        "center": [
+          3,
+          8
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=10,p=0.15,i=180)",
+        "girth": 7,
+        "graph6": "Iq?Gk?c?_",
+        "max_K_max_x_dist": 1,
+        "n": 10,
+        "slack": -2
+      },
+      {
+        "best_cycle": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "best_x": 9,
+        "center": [
+          0,
+          6
+        ],
+        "ecc_center": 3,
+        "family": "rand(n=10,p=0.25,i=369)",
+        "girth": 7,
+        "graph6": "IGsCHGA?G",
+        "max_K_max_x_dist": 2,
+        "n": 10,
+        "slack": -1
+      },
+      {
+        "best_cycle": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        "best_x": 0,
+        "center": [
+          2,
+          6,
+          7
+        ],
+        "ecc_center": 2,
+        "family": "rand(n=10,p=0.15,i=444)",
+        "girth": 6,
+        "graph6": "IGc@WP@O?",
+        "max_K_max_x_dist": 1,
+        "n": 10,
+        "slack": -1
+      }
+    ],
+    "q2_min_slack": -3,
+    "q2_min_witness": "cycle_two_tails(9,2,2) [LhCGGE@_??`??@] v=6",
+    "q2_slack_hist": {
+      "-1": 460,
+      "-2": 13,
+      "-3": 1,
+      "0": 2814
+    },
+    "q2_violation_count": 50,
+    "q2_violations": [
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "cycle_two_tails(5,1,1)",
+        "graph6": "Fhe@?",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "cycle_two_tails(5,2,2)",
+        "graph6": "Hhe?H?@",
+        "n": 9,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "cycle_two_tails(5,3,3)",
+        "graph6": "Jhe?GC_?G?_",
+        "n": 11,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          2
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 4,
+        "family": "cycle_two_tails(7,1,2)",
+        "graph6": "IhCKK?O?G",
+        "n": 10,
+        "radius": 3,
+        "slack": -2,
+        "vertex": 5
+      },
+      {
+        "center": [
+          2
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 5,
+        "family": "cycle_two_tails(7,2,3)",
+        "graph6": "KhCKK?@C??_@",
+        "n": 12,
+        "radius": 4,
+        "slack": -2,
+        "vertex": 5
+      },
+      {
+        "center": [
+          3
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 5,
+        "family": "cycle_two_tails(9,1,3)",
+        "graph6": "LhCGGE@_?O?@?@",
+        "n": 13,
+        "radius": 4,
+        "slack": -2,
+        "vertex": 6
+      },
+      {
+        "center": [
+          2
+        ],
+        "dist_v_center": 4,
+        "eccent_v": 5,
+        "family": "cycle_two_tails(9,2,2)",
+        "graph6": "LhCGGE@_??`??@",
+        "n": 13,
+        "radius": 4,
+        "slack": -3,
+        "vertex": 6
+      },
+      {
+        "center": [
+          0,
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "theta(1,3,4)",
+        "graph6": "Fr_IG",
+        "n": 7,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          4,
+          8
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "theta(1,3,6)",
+        "graph6": "Hr_GGD@",
+        "n": 9,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 6
+      },
+      {
+        "center": [
+          0,
+          1,
+          4,
+          5,
+          9,
+          10
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(1,3,8)",
+        "graph6": "Jr_GGC@?I?_",
+        "n": 11,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 7
+      },
+      {
+        "center": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          10,
+          11,
+          12
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(1,3,10)",
+        "graph6": "Lr_GGC@?G?_@O@",
+        "n": 13,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 8
+      },
+      {
+        "center": [
+          0,
+          1,
+          5,
+          8
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "theta(1,4,5)",
+        "graph6": "HpU?GD@",
+        "n": 9,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          0,
+          1,
+          5,
+          6,
+          9,
+          10
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(1,4,7)",
+        "graph6": "JpU?GC@?I?_",
+        "n": 11,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          0,
+          1,
+          5,
+          6,
+          7,
+          10,
+          11,
+          12
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(1,4,9)",
+        "graph6": "LpU?GC@?G?_@O@",
+        "n": 13,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          0,
+          1
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 5,
+        "family": "theta(1,5,6)",
+        "graph6": "JpDK?C@?I?_",
+        "n": 11,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 8
+      },
+      {
+        "center": [
+          0,
+          1,
+          6,
+          12
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 6,
+        "family": "theta(1,5,8)",
+        "graph6": "LpDK?C@?G?_@O@",
+        "n": 13,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 9
+      },
+      {
+        "center": [
+          0,
+          1,
+          7,
+          12
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 6,
+        "family": "theta(1,6,7)",
+        "graph6": "LpCIK?@?G?_@O@",
+        "n": 13,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "theta(2,4,4)",
+        "graph6": "HkCk?C`",
+        "n": 9,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "theta(2,4,5)",
+        "graph6": "IkCk?C@GG",
+        "n": 10,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          6,
+          10
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(2,4,6)",
+        "graph6": "JkCk?C@?H?_",
+        "n": 11,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          6,
+          11
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(2,4,7)",
+        "graph6": "KkCk?C@?G?c@",
+        "n": 12,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          11,
+          12
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(2,4,8)",
+        "graph6": "LkCk?C@?G?_@G@",
+        "n": 13,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          12,
+          13
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(2,4,9)",
+        "graph6": "MkCk?C@?G?_@?@G?_",
+        "n": 14,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          7,
+          11
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(2,5,6)",
+        "graph6": "KkCHK?@?G?c@",
+        "n": 12,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          12,
+          13
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(2,5,8)",
+        "graph6": "MkCHK?@?G?_@?@G?_",
+        "n": 14,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          0,
+          1,
+          2
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 6,
+        "family": "theta(2,6,6)",
+        "graph6": "LkCGHE??G?_@G@",
+        "n": 13,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 6,
+        "family": "theta(2,6,7)",
+        "graph6": "MkCGHE??G?_@?@G?_",
+        "n": 14,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 4,
+        "family": "theta(3,4,4)",
+        "graph6": "Ih_Gk?@CG",
+        "n": 10,
+        "radius": 3,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          11
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(3,4,6)",
+        "graph6": "Kh_Gk?@?G?a@",
+        "n": 12,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          8,
+          12,
+          13
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(3,4,8)",
+        "graph6": "Mh_Gk?@?G?_@?@C?_",
+        "n": 14,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(3,5,5)",
+        "graph6": "Kh_GGe??G?a@",
+        "n": 12,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 5,
+        "family": "theta(3,5,6)",
+        "graph6": "Lh_GGe??G?_@C@",
+        "n": 13,
+        "radius": 4,
+        "slack": -2,
+        "vertex": 10
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          13
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 6,
+        "family": "theta(3,5,7)",
+        "graph6": "Mh_GGe??G?_@?@C?_",
+        "n": 14,
+        "radius": 5,
+        "slack": -1,
+        "vertex": 5
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "dist_v_center": 3,
+        "eccent_v": 6,
+        "family": "theta(3,6,6)",
+        "graph6": "Mh_GGCP_??_@?@C?_",
+        "n": 14,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 6
+      },
+      {
+        "center": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 5,
+        "family": "theta(4,5,5)",
+        "graph6": "LhE?GCH_??_@A@",
+        "n": 13,
+        "radius": 4,
+        "slack": -1,
+        "vertex": 6
+      },
+      {
+        "center": [
+          3
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=6)",
+        "graph6": "GSEApc",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 2
+      },
+      {
+        "center": [
+          1,
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=14)",
+        "graph6": "GDoABg",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          2
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=26)",
+        "graph6": "G`KVCO",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 7
+      },
+      {
+        "center": [
+          0
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.15,i=40)",
+        "graph6": "GAoKdC",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          2
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.25,i=41)",
+        "graph6": "G[_o@K",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.15,i=56)",
+        "graph6": "G@fcB?",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=58)",
+        "graph6": "GaMp?g",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 4
+      },
+      {
+        "center": [
+          1,
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.25,i=65)",
+        "graph6": "GG_QeW",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          1
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=74)",
+        "graph6": "GJHE@C",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 7
+      },
+      {
+        "center": [
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.25,i=77)",
+        "graph6": "GaJG_w",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 0
+      },
+      {
+        "center": [
+          1,
+          3
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=78)",
+        "graph6": "G_Lke_",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 2
+      },
+      {
+        "center": [
+          4,
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.15,i=84)",
+        "graph6": "GCqo@[",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          5
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.4,i=114)",
+        "graph6": "G@XcgG",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      },
+      {
+        "center": [
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.15,i=120)",
+        "graph6": "G_QOTo",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 1
+      },
+      {
+        "center": [
+          7
+        ],
+        "dist_v_center": 2,
+        "eccent_v": 3,
+        "family": "rand(n=8,p=0.25,i=141)",
+        "graph6": "GSOqeG",
+        "n": 8,
+        "radius": 2,
+        "slack": -1,
+        "vertex": 3
+      }
+    ]
+  },
+  "q4_atlas": {
+    "exists_min": -2,
+    "exists_slack_hist": {
+      "-1": 178,
+      "-2": 6,
+      "0": 535,
+      "1": 254,
+      "2": 21,
+      "3": 1
+    },
+    "exists_violation_count": 50,
+    "exists_violations": [
+      {
+        "diam": 1,
+        "graph6": "Bw",
+        "max_x_dist": 1,
+        "n": 3,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 2,
+        "graph6": "CN",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Cl",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "C|",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 1,
+        "graph6": "C~",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 3,
+        "graph6": "Dx_",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "DJc",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "DbW",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Db[",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "D`{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "DJ{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "D]w",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Df{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Dl{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Dn{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 1,
+        "graph6": "D~{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 3,
+        "graph6": "E@dW",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 4,
+        "slack": -2,
+        "tree": 4
+      },
+      {
+        "diam": 4,
+        "graph6": "EYWO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EQKo",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EJe?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EBy?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "EhX_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 4,
+        "graph6": "E`Xg",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "EtoO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 4,
+        "graph6": "EJy?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "ERUO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E{CW",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~_O",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Ev`_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EXSw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~AG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Er`o",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EJyG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EhNG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EhUg",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~`_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EZSw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~@g",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "E~aG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 3,
+        "graph6": "E^eG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E^MG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "En}?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E^mG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "EyUw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "E~|?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "E~wW",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "EyVw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "El^g",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "E~{W",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "E~^G",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      }
+    ],
+    "exists_wit": "[E@dW] tree=4 diam=3 maxd=2",
+    "forall_min": -2,
+    "forall_slack_hist": {
+      "-1": 331,
+      "-2": 6,
+      "0": 572,
+      "1": 79,
+      "2": 6,
+      "3": 1
+    },
+    "forall_violation_count": 50,
+    "forall_violations": [
+      {
+        "diam": 1,
+        "graph6": "Bw",
+        "max_x_dist": 1,
+        "n": 3,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 2,
+        "graph6": "CN",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Cl",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "C|",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 1,
+        "graph6": "C~",
+        "max_x_dist": 1,
+        "n": 4,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 3,
+        "graph6": "Dx_",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "DJc",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "DbW",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "DjW",
+        "max_x_dist": 2,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Db[",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "D`{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "DJ{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "D]w",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Df{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Dl{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "Dn{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 1,
+        "graph6": "D~{",
+        "max_x_dist": 1,
+        "n": 5,
+        "path_order": 2,
+        "slack": -1,
+        "tree": 2
+      },
+      {
+        "diam": 3,
+        "graph6": "E@dW",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 4,
+        "slack": -2,
+        "tree": 4
+      },
+      {
+        "diam": 4,
+        "graph6": "EYWO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "E]_O",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EQKo",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EJe?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "EBy?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "EhX_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E^_O",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 4,
+        "graph6": "E`Xg",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "EtoO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 4,
+        "graph6": "EJy?",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 5,
+        "slack": -1,
+        "tree": 5
+      },
+      {
+        "diam": 3,
+        "graph6": "ERUO",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E{CW",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~_O",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "Ejt?",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Ev`_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EXSw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~AG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "Er`o",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "EB}G",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EJyG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "EhdW",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EhNG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EhUg",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "E~H_",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~`_",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "El{G",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "EZSw",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E~@g",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "EyuG",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 2,
+        "graph6": "E~aG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 3
+      },
+      {
+        "diam": 2,
+        "graph6": "ElfO",
+        "max_x_dist": 2,
+        "n": 6,
+        "path_order": 3,
+        "slack": -1,
+        "tree": 4
+      },
+      {
+        "diam": 3,
+        "graph6": "E^eG",
+        "max_x_dist": 1,
+        "n": 6,
+        "path_order": 4,
+        "slack": -1,
+        "tree": 4
+      }
+    ],
+    "forall_wit": "[E@dW] tree=4 diam=3 maxd=2",
+    "graphs": 995
+  },
+  "seed": 20260718,
+  "test": "WOWII_144_bridge_claims_Q1_Q2_Q4"
+}

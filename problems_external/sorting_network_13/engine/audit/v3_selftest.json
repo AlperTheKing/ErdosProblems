@@ -1,0 +1,21 @@
+{
+  "schema": "sn13-target44-monitor-selftest-v3",
+  "canonical_script": "../run_target44_offset100.ps1",
+  "self_test_exit_code": 0,
+  "self_test_pass": true,
+  "first_partial_read_complete_chars": 0,
+  "recovered_after_decoy_lines": 600,
+  "recovered_pair_count": 44,
+  "byte_offset": 18848,
+  "stopped_processes": 3,
+  "live_processes_after_stop": 0,
+  "synthetic_candidate_real_verifier": {
+    "inputs": 8192,
+    "failures": 216,
+    "first_failure": 254,
+    "exit_code": 1,
+    "production_gate_rejects": true
+  },
+  "test_dir": "../logs/selftest-offset100-20260718T143705776",
+  "target_search_started": false
+}

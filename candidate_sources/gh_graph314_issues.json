@@ -1,0 +1,93 @@
+{
+  "total_count": 1,
+  "incomplete_results": false,
+  "items": [
+    {
+      "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820",
+      "repository_url": "https://api.github.com/repos/google-deepmind/formal-conjectures",
+      "labels_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820/labels{/name}",
+      "comments_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820/comments",
+      "events_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820/events",
+      "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/3820",
+      "id": 4309469296,
+      "node_id": "PR_kwDOOogmB87UpRbi",
+      "number": 3820,
+      "title": "Add 22 WOWII numbered conjectures (batches 3-9, part 1/2)",
+      "user": {
+        "login": "henrykmichalewski",
+        "id": 3290366,
+        "node_id": "MDQ6VXNlcjMyOTAzNjY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/3290366?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/henrykmichalewski",
+        "html_url": "https://github.com/henrykmichalewski",
+        "followers_url": "https://api.github.com/users/henrykmichalewski/followers",
+        "following_url": "https://api.github.com/users/henrykmichalewski/following{/other_user}",
+        "gists_url": "https://api.github.com/users/henrykmichalewski/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/henrykmichalewski/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/henrykmichalewski/subscriptions",
+        "organizations_url": "https://api.github.com/users/henrykmichalewski/orgs",
+        "repos_url": "https://api.github.com/users/henrykmichalewski/repos",
+        "events_url": "https://api.github.com/users/henrykmichalewski/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/henrykmichalewski/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [
+        {
+          "id": 8733797982,
+          "node_id": "LA_kwDOOogmB88AAAACCJMuXg",
+          "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/labels/awaiting-author",
+          "name": "awaiting-author",
+          "color": "f9d0c4",
+          "default": false,
+          "description": "The author should answer a question or perform changes. Reply when done."
+        }
+      ],
+      "state": "closed",
+      "locked": false,
+      "assignees": [
+
+      ],
+      "milestone": null,
+      "comments": 12,
+      "created_at": "2026-04-22T13:51:19Z",
+      "updated_at": "2026-06-08T13:14:20Z",
+      "closed_at": "2026-06-08T13:14:20Z",
+      "assignee": null,
+      "author_association": "MEMBER",
+      "issue_field_values": [
+
+      ],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/pulls/3820",
+        "html_url": "https://github.com/google-deepmind/formal-conjectures/pull/3820",
+        "diff_url": "https://github.com/google-deepmind/formal-conjectures/pull/3820.diff",
+        "patch_url": "https://github.com/google-deepmind/formal-conjectures/pull/3820.patch",
+        "merged_at": "2026-06-08T13:14:20Z"
+      },
+      "body": "This PR adds **22 WOWII numbered-conjecture formalizations** from our internal batches 3-9.\n\nPart **1 of 2** of splitting our internal batch `wowii-batches-3-9` (49 files total after excluding one held back) into two reviewer-manageable PRs grouped semantically: this PR covers the `GraphConjecture<N>.lean` files indexed by individual WOWII conjecture numbers; the companion PR (#3821) covers the `Graph<InvariantName>.lean` files organized by graph invariant topic.\n\n### Conjecture numbers in this PR\n7, 18, 31, 36, 59, 61, 65, 100, 101, 103, 109, 133, 142, 143, 144, 145, 146, 160, 217, 291, 314, 315\n\n**Status distribution (per WOWII website):** T = 3, R = 1, F = 1, O = 17.\n\n### Guarantees\n- Every file includes the **verbatim conjecture statement** from DeLaViña's WOWII page in the module docstring, along with the canonical source URL. Reviewers can verify the formalization matches the source without navigating away from the diff.\n- Statements match the current authoritative website (re-audited against the canonical source JSON we maintain in our private repo).\n\n### Notes\n- `GraphConjecture315.lean` already exists on `main`; this PR extends it with the verbatim-statement docstring, additional definitions (total dominating sets, pendant vertices, well-totally-dominated), and the conjecture statement.\n- The file `GraphConjecture199.lean` is intentionally omitted here because an earlier version is already under review in #3796 (`wowii-batch-2`). Additional test lemmas for Conjecture 199 will be submitted as a follow-up after #3796 merges.\n\n### Related\n- #3795 (batch 1, merged)\n- #3796 (batch 2, open)\n- Companion PR: #3821 (this batch, part 2/2 — named `Graph<InvariantName>` files)",
+      "reactions": {
+        "url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/google-deepmind/formal-conjectures/issues/3820/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null,
+      "score": 1.0
+    }
+  ],
+  "search_type": "lexical"
+}

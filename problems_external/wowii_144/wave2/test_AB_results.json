@@ -1,0 +1,413 @@
+{
+ "tested_cyclic": 13455,
+ "violA": 0,
+ "violB": 1299,
+ "violC144": 0,
+ "min_slackA": 0,
+ "min_slackB": -3,
+ "min_slackC144": 0,
+ "examplesA": [],
+ "examplesB": [
+  {
+   "name": "atlas",
+   "g6": "Fh_gG",
+   "n": 7,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "atlas",
+   "g6": "Fh_gg",
+   "n": 7,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "atlas",
+   "g6": "FhELO",
+   "n": 7,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "rand(9,0.18,73)",
+   "g6": "HDSCGDC",
+   "n": 9,
+   "girth": 7,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "rand(9,0.25,157)",
+   "g6": "H[OsYA@",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "rand(9,0.25,214)",
+   "g6": "HYCg_JB",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "rand(10,0.25,147)",
+   "g6": "IoAJ_?peO",
+   "n": 10,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "rand(13,0.25,138)",
+   "g6": "L?_?Ha?DCGHWH?",
+   "n": 13,
+   "girth": 6,
+   "diam": 5,
+   "rad": 3,
+   "e": 3,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(8,49)",
+   "g6": "GAoggG",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(8,63)",
+   "g6": "Gk?@w_",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(8,85)",
+   "g6": "GI`GEC",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(8,95)",
+   "g6": "GR?WKG",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(8,137)",
+   "g6": "GU_O[?",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,20)",
+   "g6": "G?QwSc",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,38)",
+   "g6": "G?A\\RG",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,42)",
+   "g6": "GOrCaC",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,58)",
+   "g6": "G?`y@S",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,64)",
+   "g6": "GL`O_W",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,77)",
+   "g6": "Gcgs@C",
+   "n": 8,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,79)",
+   "g6": "GIHD?k",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,82)",
+   "g6": "GWcOA[",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,88)",
+   "g6": "GUpa?_",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,104)",
+   "g6": "GUL_H?",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(8,123)",
+   "g6": "G_H[SO",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(8,22)",
+   "g6": "G?QTu_",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(8,34)",
+   "g6": "GQFHOK",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(8,116)",
+   "g6": "G?LMDg",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(8,123)",
+   "g6": "GLGKAk",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(8,138)",
+   "g6": "GHOLLG",
+   "n": 8,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(9,11)",
+   "g6": "HGM_GCH",
+   "n": 9,
+   "girth": 6,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(9,103)",
+   "g6": "H?C_k``",
+   "n": 9,
+   "girth": 6,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(9,116)",
+   "g6": "H@EGHB@",
+   "n": 9,
+   "girth": 7,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(9,123)",
+   "g6": "H?LSGQ@",
+   "n": 9,
+   "girth": 7,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+1(9,145)",
+   "g6": "H??KQio",
+   "n": 9,
+   "girth": 7,
+   "diam": 4,
+   "rad": 3,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(9,48)",
+   "g6": "Hk?PooA",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(9,83)",
+   "g6": "HgLA`?o",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(9,86)",
+   "g6": "HXC@@YG",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+2(9,128)",
+   "g6": "HHdHD?_",
+   "n": 9,
+   "girth": 5,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(9,12)",
+   "g6": "HSp_R?K",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  },
+  {
+   "name": "tree+3(9,50)",
+   "g6": "HGaoKbA",
+   "n": 9,
+   "girth": 4,
+   "diam": 3,
+   "rad": 2,
+   "e": 2,
+   "slackB": -1
+  }
+ ],
+ "examplesC": []
+}

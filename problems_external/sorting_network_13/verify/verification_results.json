@@ -1,0 +1,70 @@
+{
+  "schema": "sorting-network-fixture-audit-v1",
+  "verified_at": "2026-07-18T14:05:36+03:00",
+  "source": "https://bertdobbelaere.github.io/sorting_networks.html",
+  "fixtures": [
+    {
+      "id": "sn12_40_depth8",
+      "path": "fixtures/sn12_40_depth8.json",
+      "file_sha256": "b489e4e14b1dba4c773d7acda2c9ae93a06eb396337474bacd2c5cc2673c343e",
+      "network_sha256": "2e8919064e3546e22508baa56064656a72905a187af850bb2162b34ec74e665c",
+      "channels": 12,
+      "comparators": 40,
+      "depth": 8,
+      "binary_inputs": 4096
+    },
+    {
+      "id": "sn13_46_depth9",
+      "path": "fixtures/sn13_46_depth9.json",
+      "file_sha256": "073de13935209fb103617fdf0508de0e96db9e07dcdb09102ba35327008defc8",
+      "network_sha256": "855104735af4d1bba3451b16877ea5a7b3f9e05f1debfc02d8e24d36581db85b",
+      "channels": 13,
+      "comparators": 46,
+      "depth": 9,
+      "binary_inputs": 8192
+    }
+  ],
+  "runs": [
+    {
+      "verifier": "python-scalar-v1",
+      "source_sha256": "6ad184f02e518dfca128e65acf4adcd74eff56ae80f0a2e889a4a78c66839a82",
+      "representation": "one binary input as a mutable list of channel bits",
+      "results": [
+        {
+          "fixture": "sn12_40_depth8",
+          "binary_inputs_tested": 4096,
+          "failures": 0,
+          "accepted": true
+        },
+        {
+          "fixture": "sn13_46_depth9",
+          "binary_inputs_tested": 8192,
+          "failures": 0,
+          "accepted": true
+        }
+      ],
+      "accepted": true
+    },
+    {
+      "verifier": "cpp-bitsliced-v1",
+      "source_sha256": "4529ea9ef5ca77129b37f9f2ea9e6ea0f387f41e89e75d1633484d47a58e483e",
+      "representation": "one bit position per binary input",
+      "results": [
+        {
+          "fixture": "sn12_40_depth8",
+          "binary_inputs_tested": 4096,
+          "failures": 0,
+          "accepted": true
+        },
+        {
+          "fixture": "sn13_46_depth9",
+          "binary_inputs_tested": 8192,
+          "failures": 0,
+          "accepted": true
+        }
+      ],
+      "accepted": true
+    }
+  ],
+  "all_accepted": true
+}
