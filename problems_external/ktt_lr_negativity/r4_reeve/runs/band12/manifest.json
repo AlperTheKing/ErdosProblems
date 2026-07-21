@@ -1,0 +1,119 @@
+{
+ "band": "band 12 of 12 -- skew/degenerate shapes: lam or mu (or nu) with a repeated part, hooks, single rows, single columns, rectangles, and all near-degenerate boundary data, at W = |nu| <= 60",
+ "date_utc": "2026-07-21T16:27:23Z",
+ "target": "King-Tollu-Toumazet (2004) positivity conjecture: a strictly negative coefficient of the stretched LR polynomial P(n) = c(n*nu; n*lam, n*mu)",
+ "result": "NO counterexample. Band 12 is provably free of negative coefficients at EVERY weight, not merely in the enumerated window: every band-12 triple has dim Q <= 2. Absence of a counterexample proves nothing about the KTT conjecture and is NOT evidence for it.",
+ "band_definition": {
+  "ambient": "r = 4 hive polytopes Q(lam,mu,nu) in R^3 (Knutson-Tao), lam,mu,nu partitions with at most 4 parts, |lam|+|mu|=|nu| = W",
+  "degeneracy_predicate_deg_p": "p empty, OR p has a repeated positive part (covers every rectangle a^k with k>=2 and every column 1^k with k>=2), OR p is a hook (a,1^k) with k>=0 (covers every single row (a) and the column (1))",
+  "band12": "deg(lam) OR deg(mu) OR deg(nu)",
+  "band12_core": "deg(lam) OR deg(mu)",
+  "weight_range": "1 <= W <= 60",
+  "enumeration_filters": [
+   "lam contained in nu and mu contained in nu componentwise -- a NECESSARY condition for Q nonempty (LR cone), so nothing with P not identically zero is discarded",
+   "lam <= mu lexicographically -- c(nu;lam,mu) = c(nu;mu,lam), so L(n) and hence P, V, h* are identical for the two orderings"
+  ],
+  "exhaustive": true
+ },
+ "counts": {
+  "triples_enumerated_total_r4_W_le_60": 5386289297,
+  "triples_in_band12": 3782115638,
+  "triples_in_band12_core_lam_or_mu": 3328767545,
+  "dim_histogram_all": {
+   "-1": 3213941341,
+   "0": 703136286,
+   "1": 603046736,
+   "2": 467218157,
+   "3": 398946777
+  },
+  "dim_histogram_band12": {
+   "-1": 2511688423,
+   "0": 538633278,
+   "1": 381940122,
+   "2": 349853815,
+   "3": 0
+  },
+  "note": "the census is the FULL exhaustive r=4 census for W<=60; band-12 membership is tracked as a flag, so both the band numbers and the full-space numbers are exact"
+ },
+ "extremes": {
+  "min_a1_band12": "1",
+  "min_a1_band12_at": [
+   "[2,1]",
+   "[2,1]",
+   "[3,2,1]"
+  ],
+  "min_a1_full_census": "1",
+  "min_a1_full_census_at": [
+   "[2,1]",
+   "[2,1]",
+   "[3,2,1]"
+  ],
+  "min_coefficient_band12_over_a1_a2_a3": "1/2",
+  "max_normalized_volume_band12": "none -- band 12 contains NO dim-3 hive polytope, so V = 0 for every band-12 triple",
+  "max_normalized_volume_full_census": 312,
+  "max_normalized_volume_full_census_at": [
+   "[16,10,4]",
+   "[16,10,4]",
+   "[24,18,12,6]"
+  ],
+  "max_normalized_volume_at_hstar1_zero_band12": "none -- see above",
+  "max_normalized_volume_at_hstar1_zero_full_census": 1,
+  "max_normalized_volume_at_hstar1_zero_full_census_at": [
+   "[3,2,1]",
+   "[3,2,1]",
+   "[5,4,2,1]"
+  ],
+  "record_hstar2_band12": "none (no dim-3 polytope in band)",
+  "record_hstar2_full_census": 193,
+  "record_hstar2_full_census_at": [
+   "[16,10,4]",
+   "[16,10,4]",
+   "[24,18,12,6]"
+  ]
+ },
+ "hits": [],
+ "n_hits": 0,
+ "structural_theorem_width_lemma": {
+  "statement": "For r = 4 the constraint matrix A is the same 18x3 matrix for every triple and only b moves. Among the 18 rows both +d and -d occur for each of the six directions d in {e1, e2, e3, e2-e1, e3-e1, e3-e2}, and the resulting slab widths are EXACTLY: width(e1) = min(lam1-lam2, nu1-nu2); width(e2) = min(mu1-mu2, lam3-lam4); width(e3) = min(mu3-mu4, nu3-nu4); width(e2-e1) = lam2-lam3; width(e3-e1) = nu2-nu3; width(e3-e2) = mu2-mu3.",
+  "corollary": "dim Q = 3 FORCES lam1>lam2>lam3>lam4>=0, mu1>mu2>mu3>mu4>=0, nu1>nu2>nu3>nu4>=0, i.e. lam, mu, nu must all be STRICT as length-4 vectors. Every band-12 partition (empty / repeated part / hook) fails strictness, so every band-12 triple has dim Q <= 2, whence P(n) = A n^2 + B n + 1 (or lower degree) with A, B > 0: a negative coefficient is IMPOSSIBLE in band 12, at every weight.",
+  "verification": {
+   "algebraic": "the six width identities were re-derived from hive4.build_hive4 and checked on 167 independent valid triples; b is a fixed linear function of the 12-dimensional boundary data, so 12 independent points already force the identity -- 0 mismatches",
+   "census": "0 of the 398946777 dim-3 triples in the exhaustive W<=60 census violates strictness of lam, mu or nu",
+   "band_census": "the dim-3 count inside band 12 is exactly 0 at every weight 1..60",
+   "high_weight_spot_check": "300000 random band-12 triples with 61 <= W <= 400: dim histogram {-1:147556, 0:124877, 1:11908, 2:15659}, dim-3 count 0, negative-coefficient count 0"
+  }
+ },
+ "reeve_indicator": {
+  "criterion": "for a 3-dim lattice polytope a_1 < 0 iff V > 3*(c + i), where c = #(Q cap Z^3) and i = #(int Q cap Z^3); equivalently 6*a_1 = 11 + 2*h*_1 - h*_2 + 2*h*_3, so negativity needs h*_2 > 11 + 2*h*_1 + 2*h*_3 (Reeve T_q has h* = (1,0,q-1,0) and a_1 = 2 - q/6 < 0 iff q >= 13)",
+  "finding": "over the whole exhaustive W<=60 census, every hive polytope with h*_1 = 0 (exactly c = 4 = dim+1 lattice points) has normalized volume V = 1, i.e. it is a UNIMODULAR simplex. No Reeve tetrahedron T_q with q >= 2 occurs as an r=4 hive polytope for W <= 60. The largest normalized volume seen anywhere is 312 (lam = mu = [16,10,4], nu = [24,18,12,6]) with record h*_2 = 193 -- far from the negativity threshold."
+ },
+ "engine_and_validation": {
+  "census_engine": "r4_reeve/band12_scan.cpp -> band12_scan.exe (exact 64-bit integer, no floating point; mirrors hive4.py row for row: same boundary convention, same 18 rhombus rows, same integer lattice counting; all row entries lie in {0,+-1} so no division is ever performed)",
+  "reference_engine": "r4_reeve/hive4.py (exact Python Fraction/int)",
+  "cross_check_engine_A": "engine/lr_hive.exe",
+  "cross_check_engine_B": "engine/engineB_lrrule.py",
+  "gate_1_enumeration": "the triple enumerator was checked against an independent pure-Python enumerator: identical counts at every W <= 26 (W=26: 773882 triples; W<=12 cumulative: 8414 total, 8204 band-12-core)",
+  "gate_2_vs_hive4_broad": "8500 triples (random over 4<=W<=60, exhaustively sampled W=13,14, plus a degenerate-shape-heavy band-12 sample): dim, c, normalized volume, the FULL exact polynomial P and (for dim 3) the h*-vector all agree with hive4.py -- 0 mismatches",
+  "gate_3_vs_hive4_dim3": "5000 further triples selected to be dim 3 (4000) or dim 2 (1000) out of a 400000 random pool: dim, c, V, P, h* all agree with hive4.py and hive4's internal audits (verified / deg_eq_dim / vol_crosscheck) passed -- 0 mismatches",
+  "gate_4_cross_engine_LR": "200 BAND-12 triples with dim >= 1, stretched to n = 1,2,3,4 (800 checks): the exact LR counts c(n*nu; n*lam, n*mu) from engine A AND engine B both equal P(n) from the census engine -- 0 disagreements",
+  "internal_verification": "every nonempty triple in the census had its degree-3 fit through L(0..3) re-checked against an independently counted L(4), and every dim-3 triple additionally against L(5): 0 verification failures over the whole census",
+  "emptiness_convention": "L(1) = 0 is treated as Q empty (P identically 0). By the Knutson-Tao saturation theorem Q nonempty implies c(nu;lam,mu) > 0, so L(1) = 0 iff Q is empty. hive4.py agreed on every sampled instance."
+ },
+ "artifacts": {
+  "band12_scan.cpp": "9fdf83176f9eecd07035707a6d5e9fffd42b5bf9102d6da3b32688f93ba39140",
+  "band12_scan.exe": "bc55baa986b429d600608fbfee910071967e86cb6069f0c608a834ccdd6839be",
+  "hive4.py": "be35d6a792aaaaeddef093f369f381190bc6f5b59278e281bfd8c7095e577efd",
+  "engine_lr_hive.exe": "95d1fea3716756ffc48e662cfca117f04cc354ed598a638134163e50585b8cfc",
+  "engine_engineB_lrrule.py": "c7677d041ed184910a4290116b320000e529d70192c7f0cc91ccbfcc924b706c",
+  "census_log": "runs/band12/census_W60.log",
+  "census_json": "runs/band12/census_W60.json",
+  "validators": [
+   "_band12_val.py",
+   "_band12_val3.py",
+   "_band12_engine_gate.py",
+   "_hw2.py"
+  ]
+ },
+ "reproduce": "clang++ -O3 -march=native -std=c++17 -pthread band12_scan.cpp -o band12_scan.exe ; ./band12_scan.exe --wlo 1 --whi 60 --threads 56 --json runs/band12/census_W60.json",
+ "honesty_note": "An exhaustive negative census closes a window; it is NOT evidence for the King-Tollu-Toumazet conjecture. Nothing was tuned away: 0 anomalies and 0 verification failures were recorded, and had any appeared they would be listed in census_W60.json under 'anomalies'."
+}

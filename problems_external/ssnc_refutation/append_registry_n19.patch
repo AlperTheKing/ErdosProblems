@@ -1,0 +1,46 @@
+diff --git a/problems_external/ssnc_refutation/APPROACH_REGISTRY.md b/problems_external/ssnc_refutation/APPROACH_REGISTRY.md
+--- a/problems_external/ssnc_refutation/APPROACH_REGISTRY.md
++++ b/problems_external/ssnc_refutation/APPROACH_REGISTRY.md
+@@
++## DIRECT ROUTE - FIXED CONNECTED MISSING CYCLE AT ORDER 19
++
++### 1. Exact final deliverable
++
++One canonical adjacency list for an orientation of `K_19-C_19` with
++outdegree 8 at every vertex and exactly three unreachable targets at every
++vertex, accepted by both independent exhaustive SSNC verifiers and accompanied
++by the complete 19-row neighborhood ledger.
++
++### 2. Current frontier finite certificate
++
++The exact fixed-cycle Boolean instance described in `N19_MECHANISM.md`: every
++present edge has exactly one orientation; all outdegrees are 8; every
++two-step and unreachable variable is defined biconditionally; and every row
++and column of the unreachable relation sums to 3.
++
++### 3. Explicit logical bridge
++
++For every source, the 18 other vertices split into eight direct
++out-neighbors, seven new second out-neighbors, and three unreachable targets.
++Thus a satisfying assignment has `|N2+(v)|=7<8=|N+(v)|` for all 19 vertices
++and, after independent replay, is a counterexample to the full conjecture.
++An independently checked UNSAT certificate excludes only the fixed
++`K_19-C_19` family.
++
++### 4. Next falsifiable action
++
++After the generator, frozen independent CNF specification, pinned-orientation
++calibrations, parser audit, and proof-tool calibration all agree, run one
++bounded proof-producing CaDiCaL instance for this exact fixed formula. Replay
++SAT from raw adjacency data in both verifiers; check UNSAT with an independent
++DRAT checker.
++
++### 5. Exit condition
++
++- Verified SAT: stop every search and repeat the live status/novelty gate.
++- Independently checked UNSAT: close only this connected missing-cycle lane.
++- Timeout, `UNKNOWN`, unchecked UNSAT, or no hit: mark this mechanism
++  `BLOCKED` and stop; do not cascade to another 2-factor, value of `q`, order,
++  or degree without a separately audited direct mechanism.
++
+ ## STATUS UPDATE - 2026-07-21 17:40 +03:00

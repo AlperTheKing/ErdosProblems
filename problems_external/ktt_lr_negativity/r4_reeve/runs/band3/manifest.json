@@ -1,0 +1,386 @@
+{
+ "band": "W=|nu| in [21,26]",
+ "exhaustive": true,
+ "enumeration": "all (lam,mu,nu): nu partition of N with exactly 4 parts; lam,mu partitions with at most 4 parts, |lam|+|mu|=N; unordered {lam,mu} counted once (c symmetric)",
+ "engine": "hive4.py exact (Fraction/int only), Ehrhart interpolated from L(0..3), verified at n=4 and n=5, volume cross-checked as 6*a_3",
+ "triples_tested": 5181862,
+ "dim_histogram": {
+  "-1": 4225275,
+  "0": 618042,
+  "1": 216116,
+  "2": 93313,
+  "3": 29116
+ },
+ "audit_failures": 0,
+ "audit_failure_detail": [],
+ "non_lattice_polytopes": 0,
+ "non_lattice_detail": [],
+ "min_coefficient_over_band": [
+  "1/6",
+  [
+   [
+    4,
+    3,
+    2,
+    1
+   ],
+   [
+    5,
+    3,
+    2,
+    1
+   ],
+   [
+    8,
+    6,
+    4,
+    3
+   ]
+  ],
+  [
+   "1",
+   "11/6",
+   "1",
+   "1/6"
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ]
+ ],
+ "min_a1": [
+  "1",
+  [
+   [
+    4,
+    3,
+    2,
+    1
+   ],
+   [
+    7,
+    2,
+    1,
+    1
+   ],
+   [
+    10,
+    5,
+    4,
+    2
+   ]
+  ],
+  [
+   1,
+   0
+  ]
+ ],
+ "max_volume": [
+  "22",
+  [
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    11,
+    7,
+    5,
+    3
+   ]
+  ],
+  [
+   1,
+   10,
+   10,
+   1
+  ],
+  14
+ ],
+ "max_volume_at_hstar1_zero": [
+  "1",
+  [
+   [
+    4,
+    3,
+    2,
+    1
+   ],
+   [
+    5,
+    3,
+    2,
+    1
+   ],
+   [
+    8,
+    6,
+    4,
+    3
+   ]
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ],
+  4
+ ],
+ "max_hstar2": [
+  10,
+  [
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    11,
+    7,
+    5,
+    3
+   ]
+  ],
+  [
+   1,
+   10,
+   10,
+   1
+  ]
+ ],
+ "max_c": [
+  14,
+  [
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    7,
+    4,
+    2
+   ],
+   [
+    11,
+    8,
+    5,
+    2
+   ]
+  ],
+  [
+   1,
+   10,
+   7,
+   0
+  ]
+ ],
+ "negatives": [],
+ "n_negatives": 0,
+ "per_N": [
+  {
+   "N": 21,
+   "triples": 304776,
+   "seconds": 101.4,
+   "dim": {
+    "-1": 245034,
+    "0": 42109,
+    "1": 12176,
+    "2": 4416,
+    "3": 1041
+   },
+   "min_a1": "1",
+   "max_V": "9",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  },
+  {
+   "N": 22,
+   "triples": 448812,
+   "seconds": 130.2,
+   "dim": {
+    "-1": 363499,
+    "0": 58790,
+    "1": 17784,
+    "2": 6898,
+    "3": 1841
+   },
+   "min_a1": "1",
+   "max_V": "10",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  },
+  {
+   "N": 23,
+   "triples": 624818,
+   "seconds": 170.6,
+   "dim": {
+    "-1": 506490,
+    "0": 79069,
+    "1": 25909,
+    "2": 10462,
+    "3": 2888
+   },
+   "min_a1": "1",
+   "max_V": "12",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  },
+  {
+   "N": 24,
+   "triples": 892512,
+   "seconds": 199.2,
+   "dim": {
+    "-1": 727807,
+    "0": 107582,
+    "1": 36739,
+    "2": 15607,
+    "3": 4777
+   },
+   "min_a1": "1",
+   "max_V": "18",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  },
+  {
+   "N": 25,
+   "triples": 1217880,
+   "seconds": 243.4,
+   "dim": {
+    "-1": 994109,
+    "0": 141753,
+    "1": 51879,
+    "2": 22913,
+    "3": 7226
+   },
+   "min_a1": "1",
+   "max_V": "20",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  },
+  {
+   "N": 26,
+   "triples": 1693064,
+   "seconds": 392.1,
+   "dim": {
+    "-1": 1388336,
+    "0": 188739,
+    "1": 71629,
+    "2": 33017,
+    "3": 11343
+   },
+   "min_a1": "1",
+   "max_V": "22",
+   "max_V_hstar1_zero": "1",
+   "negatives": 0
+  }
+ ],
+ "elapsed_s": 1240.3,
+ "caveat": "An empty census proves nothing about the KTT conjecture and is not evidence for it; it only closes this enumerated window.",
+ "cross_validation": {
+  "engineA": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/lr_hive.exe",
+  "engineB": "python E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/engineB_lrrule.py",
+  "random_band_triples_vs_A": {
+   "sampled": 180,
+   "mismatches": 0,
+   "dim_distribution": {
+    "-1": 55,
+    "0": 82,
+    "1": 31,
+    "2": 11,
+    "3": 1
+   }
+  },
+  "random_dim3_band_triples_vs_A_and_B": {
+   "sampled": 60,
+   "A_mismatches": 0,
+   "B_mismatches": 0
+  },
+  "stretched_n2_vs_A": {
+   "sampled": 8,
+   "mismatches": 0
+  },
+  "max_volume_triple_full_stretch": {
+   "triple": [
+    [
+     7,
+     4,
+     2
+    ],
+    [
+     7,
+     4,
+     2
+    ],
+    [
+     11,
+     7,
+     5,
+     3
+    ]
+   ],
+   "L_n_0_to_5_hive4": [
+    1,
+    14,
+    60,
+    161,
+    339,
+    616
+   ],
+   "engineA_n_1_to_5": [
+    14,
+    60,
+    161,
+    339,
+    616
+   ],
+   "engineB_n_1_to_5": [
+    14,
+    60,
+    161,
+    339,
+    616
+   ],
+   "poly": [
+    "1",
+    "23/6",
+    "11/2",
+    "11/3"
+   ],
+   "hstar": [
+    1,
+    10,
+    10,
+    1
+   ],
+   "V": 22
+  },
+  "engine_selftest": "hive4.py --selftest PASS (Reeve T_q q=1..20 incl. a_1=2-q/6<0 iff q>=13; c=1 => P==1; c=2 => P=n+1)"
+ },
+ "triple_count_independent_check": {
+  "method": "pairs=(sum_a p<=4(a)p<=4(N-a) + [N even] p<=4(N/2))/2 times #partitions of N into exactly 4 parts",
+  "per_N": {
+   "21": 304776,
+   "22": 448812,
+   "23": 624818,
+   "24": 892512,
+   "25": 1217880,
+   "26": 1693064
+  },
+  "agrees_with_engine_counts": true
+ }
+}

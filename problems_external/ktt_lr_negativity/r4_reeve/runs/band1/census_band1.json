@@ -1,0 +1,143 @@
+{
+ "band": "|nu| in [4,14]",
+ "degdim_fail": [],
+ "dimhist": {
+  "0": 24136,
+  "1": 2417,
+  "2": 285,
+  "3": 19
+ },
+ "elapsed_sec": 106.26,
+ "engine": "hive4.py analyze() (unmodified)",
+ "exhaustive": true,
+ "hits": [],
+ "hstar_neg": [],
+ "interp_fail": [],
+ "max_V": "2",
+ "max_V_at": "4,2,1;4,2,1;6,4,3,1",
+ "max_V_hstar1_zero": "1",
+ "max_V_hstar1_zero_at": "4,2,1;4,2,1;7,4,2,1",
+ "max_denominator": 1,
+ "min_a1": "0",
+ "min_a1_at": "7;7;14",
+ "min_coeff": "1/6",
+ "min_coeff_at": "4,2,1;4,2,1;7,4,2,1",
+ "n_dim3": 19,
+ "n_empty": 123690,
+ "n_hstar1_zero": 26836,
+ "n_nonempty": 26857,
+ "per_W": {
+  "10": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1/2",
+   "n": 7682,
+   "n_dim3": 0,
+   "n_nonempty": 1511
+  },
+  "11": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1/2",
+   "n": 12960,
+   "n_dim3": 0,
+   "n_nonempty": 2504
+  },
+  "12": {
+   "hits": 0,
+   "max_V": "1",
+   "max_V_h1z": "1",
+   "min_a1": "0",
+   "min_coeff": "1/6",
+   "n": 23290,
+   "n_dim3": 1,
+   "n_nonempty": 4129
+  },
+  "13": {
+   "hits": 0,
+   "max_V": "1",
+   "max_V_h1z": "1",
+   "min_a1": "0",
+   "min_coeff": "1/6",
+   "n": 37050,
+   "n_dim3": 4,
+   "n_nonempty": 6542
+  },
+  "14": {
+   "hits": 0,
+   "max_V": "2",
+   "max_V_h1z": "1",
+   "min_a1": "0",
+   "min_coeff": "1/6",
+   "n": 61429,
+   "n_dim3": 14,
+   "n_nonempty": 10303
+  },
+  "4": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 100,
+   "n_dim3": 0,
+   "n_nonempty": 34
+  },
+  "5": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 204,
+   "n_dim3": 0,
+   "n_nonempty": 68
+  },
+  "6": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 531,
+   "n_dim3": 0,
+   "n_nonempty": 141
+  },
+  "7": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 1034,
+   "n_dim3": 0,
+   "n_nonempty": 264
+  },
+  "8": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 2235,
+   "n_dim3": 0,
+   "n_nonempty": 495
+  },
+  "9": {
+   "hits": 0,
+   "max_V": "0",
+   "max_V_h1z": "0",
+   "min_a1": "0",
+   "min_coeff": "1",
+   "n": 4032,
+   "n_dim3": 0,
+   "n_nonempty": 866
+  }
+ },
+ "triplesTested": 150547,
+ "volxcheck_fail": []
+}

@@ -1,0 +1,114 @@
+diff --git a/problems_external/ssnc_refutation/engine/search_local.cpp b/problems_external/ssnc_refutation/engine/search_local.cpp
+--- a/problems_external/ssnc_refutation/engine/search_local.cpp
++++ b/problems_external/ssnc_refutation/engine/search_local.cpp
+@@ -349,6 +349,32 @@ Options parse_options(int argc, char** argv) {
+ double random_unit(std::mt19937_64& rng) {
+     return static_cast<double>(rng() >> 11) * (1.0 / 9007199254740992.0);
+ }
++
++std::string json_escape(const std::string& value) {
++    static constexpr char hex[] = "0123456789abcdef";
++    std::string escaped;
++    escaped.reserve(value.size());
++    for (const unsigned char ch : value) {
++        switch (ch) {
++            case '"': escaped += "\\\""; break;
++            case '\\': escaped += "\\\\"; break;
++            case '\b': escaped += "\\b"; break;
++            case '\f': escaped += "\\f"; break;
++            case '\n': escaped += "\\n"; break;
++            case '\r': escaped += "\\r"; break;
++            case '\t': escaped += "\\t"; break;
++            default:
++                if (ch < 0x20) {
++                    escaped += "\\u00";
++                    escaped += hex[ch >> 4];
++                    escaped += hex[ch & 0x0f];
++                } else {
++                    escaped += static_cast<char>(ch);
++                }
++        }
++    }
++    return escaped;
++}
+ 
+ }  // namespace
+ 
+@@ -383,6 +409,28 @@ int main(int argc, char** argv) {
+                 int local_best = current_energy;
+                 std::uint64_t local_iterations = 0;
+                 std::uint64_t since_restart = 0;
++
++                auto record_best = [&](int value) {
++                    int observed = global_best.load(std::memory_order_relaxed);
++                    while (value < observed &&
++                           !global_best.compare_exchange_weak(observed, value,
++                                                              std::memory_order_relaxed)) {}
++                };
++                auto publish_if_hit = [&]() {
++                    if (current_energy != 0 || !is_counterexample(state)) return false;
++                    bool expected = false;
++                    if (found.compare_exchange_strong(expected, true)) {
++                        std::lock_guard<std::mutex> lock(result_mutex);
++                        result = state;
++                    }
++                    return true;
++                };
++                record_best(current_energy);
++                if (publish_if_hit()) {
++                    iterations.fetch_add(local_iterations, std::memory_order_relaxed);
++                    return;
++                }
+ 
+                 while (!found.load(std::memory_order_relaxed) &&
+                        std::chrono::steady_clock::now() < deadline) {
+@@ -426,18 +474,9 @@ int main(int argc, char** argv) {
+ 
+                     if (current_energy < local_best) {
+                         local_best = current_energy;
+-                        int observed = global_best.load(std::memory_order_relaxed);
+-                        while (local_best < observed &&
+-                               !global_best.compare_exchange_weak(observed, local_best,
+-                                                                  std::memory_order_relaxed)) {}
+-                    }
+-                    if (current_energy == 0 && is_counterexample(state)) {
+-                        bool expected = false;
+-                        if (found.compare_exchange_strong(expected, true)) {
+-                            std::lock_guard<std::mutex> lock(result_mutex);
+-                            result = state;
+-                        }
+-                        break;
++                        record_best(local_best);
+                     }
++                    if (publish_if_hit()) break;
+                     if (since_restart >= 600000) {
+                         state = near_regular_tournament();
+                         randomize_valid(state, rng, 5000);
+@@ -445,6 +484,8 @@ int main(int argc, char** argv) {
+                         current_energy = energy_18(state);
+                         local_best = current_energy;
+                         since_restart = 0;
++                        record_best(current_energy);
++                        if (publish_if_hit()) break;
+                     }
+                 }
+                 iterations.fetch_add(local_iterations, std::memory_order_relaxed);
+@@ -461,7 +502,7 @@ int main(int argc, char** argv) {
+                       << options.threads << ",\"seed\":" << options.seed
+                       << ",\"iterations\":" << iterations.load()
+                       << ",\"elapsed_seconds\":" << elapsed
+-                      << ",\"candidate\":\"" << options.output.string() << "\"}\n";
++                      << ",\"candidate\":\"" << json_escape(options.output.string()) << "\"}\n";
+             return 0;
+         }
+ 
+@@ -472,7 +513,8 @@ int main(int argc, char** argv) {
+                   << ",\"elapsed_seconds\":" << elapsed << "}\n";
+         return 1;
+     } catch (const std::exception& error) {
+-        std::cerr << "{\"status\":\"ERROR\",\"message\":\"" << error.what() << "\"}\n";
++        std::cerr << "{\"status\":\"ERROR\",\"message\":\""
++                  << json_escape(error.what()) << "\"}\n";
+         return 2;
+     }
+ }

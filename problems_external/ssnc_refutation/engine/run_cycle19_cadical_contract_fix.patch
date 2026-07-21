@@ -1,0 +1,39 @@
+diff --git a/problems_external/ssnc_refutation/engine/run_cycle19_cadical.ps1 b/problems_external/ssnc_refutation/engine/run_cycle19_cadical.ps1
+--- a/problems_external/ssnc_refutation/engine/run_cycle19_cadical.ps1
++++ b/problems_external/ssnc_refutation/engine/run_cycle19_cadical.ps1
+@@ -31,20 +31,20 @@
+ $cnfPath = (Resolve-Path -LiteralPath $Cnf).Path
+ $cadicalPath = (Resolve-Path -LiteralPath $Cadical).Path
++$actualHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $cnfPath).Hash.ToUpperInvariant()
++if ($ExpectedCnfSha256 -and $actualHash -ne $ExpectedCnfSha256.ToUpperInvariant()) {
++    throw "CNF SHA-256 mismatch: expected $ExpectedCnfSha256, found $actualHash"
++}
++
+ $logsRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'logs'))
+ $runPath = [IO.Path]::GetFullPath($RunDir)
+ $logsPrefix = $logsRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
+ if (-not $runPath.StartsWith($logsPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+     throw "RunDir must be a child of $logsRoot"
+ }
+ if (Test-Path -LiteralPath $runPath) {
+     if ((Get-ChildItem -LiteralPath $runPath -Force | Measure-Object).Count -ne 0) {
+         throw "RunDir already exists and is not empty: $runPath"
+     }
+ } else {
+     New-Item -ItemType Directory -Path $runPath | Out-Null
+ }
+-
+-$actualHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $cnfPath).Hash.ToUpperInvariant()
+-if ($ExpectedCnfSha256 -and $actualHash -ne $ExpectedCnfSha256.ToUpperInvariant()) {
+-    throw "CNF SHA-256 mismatch: expected $ExpectedCnfSha256, found $actualHash"
+-}
+ 
+ $stdoutPath = Join-Path $runPath 'solver.stdout.txt'
+@@ -137,4 +137,7 @@
+ if ($status -eq 'FAILED') {
+     exit 1
+ }
++if ($status -eq 'TIMEOUT') {
++    exit 124
++}
+ exit 0

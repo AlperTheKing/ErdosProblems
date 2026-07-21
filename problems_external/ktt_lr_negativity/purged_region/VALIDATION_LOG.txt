@@ -1,0 +1,58 @@
+== LP-FREE SCREEN VALIDATION ==
+engine A: E:\Projects\ErdosProblems\problems_external\ktt_lr_negativity\engine\lr_hive.exe
+engine B: E:\Projects\ErdosProblems\problems_external\ktt_lr_negativity\engine\engineB_lrrule.py
+-- V1: reproduce the known refuter exactly --
+V1 refuter record: {"lam": [2, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V1 status_OK                                     PASS
+V1 profile                                       PASS
+V1 d_is_4                                        PASS
+V1 c_is_5                                        PASS
+V1 hstar                                         PASS
+V1 hstar_sum_2                                   PASS
+V1 hstar_1_zero                                  PASS
+V1 heldout_ok                                    PASS
+V1 roundtrip                                     PASS
+V1 tail_zero                                     PASS
+V1 coeffs_match_(n+1)(n+2)(n^2+3n+6)/12          PASS
+V1 c_equals_d_plus_1                             PASS
+V1 not_neg                                       PASS
+-- V2: infinite family k=4..9 --
+V2 k=4  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=4 record: {"lam": [2, 2, 1], "mu": [4, 3, 2, 1], "nu": [5, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V2 k=5  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=5 record: {"lam": [2, 2, 1], "mu": [5, 3, 2, 1], "nu": [6, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V2 k=6  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=6 record: {"lam": [2, 2, 1], "mu": [6, 3, 2, 1], "nu": [7, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V2 k=7  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=7 record: {"lam": [2, 2, 1], "mu": [7, 3, 2, 1], "nu": [8, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V2 k=8  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=8 record: {"lam": [2, 2, 1], "mu": [8, 3, 2, 1], "nu": [9, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+V2 k=9  d=4 c=5 h*=[1, 0, 1, 0, 0] sum=2  PASS
+V2 k=9 record: {"lam": [2, 2, 1], "mu": [9, 3, 2, 1], "nu": [10, 4, 3, 2, 1], "r": 5, "degree_bound": 6, "degree_bound_source": "ambient_(r-1)(r-2)/2", "cap": 1000000000000, "engine": "A:lr_hive.exe", "profile": [1, 5, 16, 40, 85, 161, 280, 456, 705], "heldout": [{"n": 7, "engine": 456, "poly": "456", "match": true}, {"n": 8, "engine": 705, "poly": "705", "match": true}], "heldout_ok": true, "c": 5, "d": 4, "coeffs_low_to_high": ["1", "2", "17/12", "1/2", "1/12"], "poly": "1 + 2*n + 17/12*n^2 + 1/2*n^3 + 1/12*n^4", "hstar": [1, 0, 1, 0, 0], "hstar_tail_must_be_zero": [0, 0], "hstar_sum": 2, "hstar_1": 0, "hstar_0_is_1": true, "hstar_nonneg": true, "hstar_tail_zero": true, "hstar_roundtrip_ok": true, "neg_indices": [], "neg": false, "status": "OK"}
+-- V3: Reeve tetrahedron T_q, q=1..20 (raw polytope, no hives) --
+V3 q= 1  h*=[1, 0, 0, 0]  vol=1  lin=11/6  neg=False  PASS
+V3 q= 2  h*=[1, 0, 1, 0]  vol=2  lin=5/3  neg=False  PASS
+V3 q= 3  h*=[1, 0, 2, 0]  vol=3  lin=3/2  neg=False  PASS
+V3 q= 4  h*=[1, 0, 3, 0]  vol=4  lin=4/3  neg=False  PASS
+V3 q= 5  h*=[1, 0, 4, 0]  vol=5  lin=7/6  neg=False  PASS
+V3 q= 6  h*=[1, 0, 5, 0]  vol=6  lin=1  neg=False  PASS
+V3 q= 7  h*=[1, 0, 6, 0]  vol=7  lin=5/6  neg=False  PASS
+V3 q= 8  h*=[1, 0, 7, 0]  vol=8  lin=2/3  neg=False  PASS
+V3 q= 9  h*=[1, 0, 8, 0]  vol=9  lin=1/2  neg=False  PASS
+V3 q=10  h*=[1, 0, 9, 0]  vol=10  lin=1/3  neg=False  PASS
+V3 q=11  h*=[1, 0, 10, 0]  vol=11  lin=1/6  neg=False  PASS
+V3 q=12  h*=[1, 0, 11, 0]  vol=12  lin=0  neg=False  PASS
+V3 q=13  h*=[1, 0, 12, 0]  vol=13  lin=-1/6  neg=True  PASS
+V3 q=14  h*=[1, 0, 13, 0]  vol=14  lin=-1/3  neg=True  PASS
+V3 q=15  h*=[1, 0, 14, 0]  vol=15  lin=-1/2  neg=True  PASS
+V3 q=16  h*=[1, 0, 15, 0]  vol=16  lin=-2/3  neg=True  PASS
+V3 q=17  h*=[1, 0, 16, 0]  vol=17  lin=-5/6  neg=True  PASS
+V3 q=18  h*=[1, 0, 17, 0]  vol=18  lin=-1  neg=True  PASS
+V3 q=19  h*=[1, 0, 18, 0]  vol=19  lin=-7/6  neg=True  PASS
+V3 q=20  h*=[1, 0, 19, 0]  vol=20  lin=-4/3  neg=True  PASS
+V3 negative-linear-coefficient q values: [13, 14, 15, 16, 17, 18, 19, 20]
+-- V4: engine A vs engine B on 200 random triples, n=1,2,3 --
+V4 sampled 200 nonzero random triples (pool 238)
+V4 compared 600 (triple,n) evaluations at n=1,2,3; mismatches=0
+RESULT V1=True V2=True V3=True V4=True -> ALL PASS
+Reeve negativity at q>=13: SEEN (strictly negative linear coefficient for every q in 13..20, and for no q < 13)

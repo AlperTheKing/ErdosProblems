@@ -1,0 +1,13 @@
+{
+ "seed": 1,
+ "gap_kmax": 12,
+ "gap_vectors_tested": 15000,
+ "n_row_triples_with_|det|>1": 49,
+ "feasible_points_from_|det|>1_triples": 5070,
+ "per_det_feasible_counts": {
+  "2": 5059,
+  "4": 11
+ },
+ "of_those_NON_INTEGRAL": 0,
+ "reading": "feasible_points_from_|det|>1_triples = 0 would mean the singular-index triples are never tight at a feasible point, so every vertex comes from a |det|=1 triple and Q is ALWAYS a lattice polytope.  A positive count with 0 non-integral means they are feasible but the numerators always happen to be divisible."
+}

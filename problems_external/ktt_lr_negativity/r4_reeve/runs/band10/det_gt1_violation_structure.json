@@ -1,0 +1,62 @@
+{
+ "gap_vectors": 6000,
+ "nonintegral_cramer_points": 147614,
+ "triples_with_nonintegral_seen": 49,
+ "triples_where_intersection_of_violated_rows_is_EMPTY": 49,
+ "sample": [
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "n_cases": 3012,
+   "always_violated_rows": []
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "n_cases": 2928,
+   "always_violated_rows": []
+  },
+  {
+   "triple": [
+    1,
+    8,
+    10
+   ],
+   "n_cases": 2928,
+   "always_violated_rows": []
+  },
+  {
+   "triple": [
+    1,
+    10,
+    15
+   ],
+   "n_cases": 3039,
+   "always_violated_rows": []
+  },
+  {
+   "triple": [
+    1,
+    10,
+    17
+   ],
+   "n_cases": 2978,
+   "always_violated_rows": []
+  },
+  {
+   "triple": [
+    2,
+    8,
+    9
+   ],
+   "n_cases": 3012,
+   "always_violated_rows": []
+  }
+ ]
+}

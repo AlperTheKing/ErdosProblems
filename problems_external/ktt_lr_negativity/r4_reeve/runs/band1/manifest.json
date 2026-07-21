@@ -1,0 +1,207 @@
+{
+ "artifacts_sha256": {
+  "engine/engineB_lrrule.py": "c7677d041ed184910a4290116b320000e529d70192c7f0cc91ccbfcc924b706c",
+  "engine/lr_hive.exe": "95d1fea3716756ffc48e662cfca117f04cc354ed598a638134163e50585b8cfc",
+  "r4_reeve/census_band1.py": "c9dbb169f1bf93cd8191cb85e0e6c06a6098f8b4270073faa7ec0cd672436437",
+  "r4_reeve/collect_dim3_band1.py": "0f567ed5fd861922bd6e61bc49919a109bd56ac452a1ce65762923691c31173b",
+  "r4_reeve/hive4.py": "be35d6a792aaaaeddef093f369f381190bc6f5b59278e281bfd8c7095e577efd",
+  "r4_reeve/runs/band1/census_band1.json": "c14dbaa8359f455a48f95b12c610044d146b42cfaa7535a6a4c8dc832d4f6cad",
+  "r4_reeve/runs/band1/dim3_band1.json": "1bbedf26b046c5a5198994a6bd30d5600d33902e12868356ad45beaa84542e1f",
+  "r4_reeve/runs/band1/dim3_verify.json": "b5bb452b63213e39907c412a15f2b4b86f1ba8ff7809ee6aa8d6786e8b437c0a",
+  "r4_reeve/runs/band1/sample_verify.json": "1fe2f0e6c9c8f54e2b316f590e2ccecd15e055d8360eaed6d6fca0560b013937",
+  "r4_reeve/verify_dim3_band1.py": "a618d3bc2d3679b4a9c77dc6680694a5f5493fc4261ca03b9b7d5a57dbab64f3",
+  "r4_reeve/verify_sample_band1.py": "43ef8470d5f9be3a1a7d9779a5a17a776e2b5f3c997133605c1d8eab6eb41387"
+ },
+ "band": "W = |nu| in [4,14], ALL valid r<=4 triples",
+ "band_definition": "lam, mu, nu each a partition with at most 4 parts, |lam|+|mu|=|nu|=W. Triples with ell(nu)>4 belong to r>=5 and are OUT of this cell; triples with ell(lam)>4 or ell(mu)>4 have c=0 whenever ell(nu)<=4. r<=3 triples are included as the 0-padded special case, so the enumeration is exactly the r<=4 cell.",
+ "cell": "r = 4  (D = (r-1)(r-2)/2 = 3, the Reeve dimension)",
+ "counts": {
+  "dim3": 19,
+  "dim_histogram": {
+   "0": 24136,
+   "1": 2417,
+   "2": 285,
+   "3": 19
+  },
+  "empty_c0": 123690,
+  "hstar1_zero": 26836,
+  "nonempty": 26857,
+  "per_W": {
+   "10": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1/2",
+    "n": 7682,
+    "n_dim3": 0,
+    "n_nonempty": 1511
+   },
+   "11": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1/2",
+    "n": 12960,
+    "n_dim3": 0,
+    "n_nonempty": 2504
+   },
+   "12": {
+    "hits": 0,
+    "max_V": "1",
+    "max_V_h1z": "1",
+    "min_a1": "0",
+    "min_coeff": "1/6",
+    "n": 23290,
+    "n_dim3": 1,
+    "n_nonempty": 4129
+   },
+   "13": {
+    "hits": 0,
+    "max_V": "1",
+    "max_V_h1z": "1",
+    "min_a1": "0",
+    "min_coeff": "1/6",
+    "n": 37050,
+    "n_dim3": 4,
+    "n_nonempty": 6542
+   },
+   "14": {
+    "hits": 0,
+    "max_V": "2",
+    "max_V_h1z": "1",
+    "min_a1": "0",
+    "min_coeff": "1/6",
+    "n": 61429,
+    "n_dim3": 14,
+    "n_nonempty": 10303
+   },
+   "4": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 100,
+    "n_dim3": 0,
+    "n_nonempty": 34
+   },
+   "5": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 204,
+    "n_dim3": 0,
+    "n_nonempty": 68
+   },
+   "6": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 531,
+    "n_dim3": 0,
+    "n_nonempty": 141
+   },
+   "7": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 1034,
+    "n_dim3": 0,
+    "n_nonempty": 264
+   },
+   "8": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 2235,
+    "n_dim3": 0,
+    "n_nonempty": 495
+   },
+   "9": {
+    "hits": 0,
+    "max_V": "0",
+    "max_V_h1z": "0",
+    "min_a1": "0",
+    "min_coeff": "1",
+    "n": 4032,
+    "n_dim3": 0,
+    "n_nonempty": 866
+   }
+  }
+ },
+ "cross_engine_verification": {
+  "dim3_stratum": {
+   "all_agree": true,
+   "checks": 190,
+   "mismatches": 0,
+   "n_range": "1..5",
+   "note": "P re-interpolated from engine-A stretched counts equals the polytope engine's P for all 19 dim-3 triples, with n=4,5 held out as an independent check.",
+   "poly_rebuild_failures": 0,
+   "triples": 19
+  },
+  "random_full_band_sample": {
+   "all_agree": true,
+   "checks": 9000,
+   "mismatches": 0,
+   "n_range": "1..3",
+   "of": 150547,
+   "sampled": 1500,
+   "sampled_c_zero": 1256,
+   "seed": 20260721
+  }
+ },
+ "date_utc": "2026-07-21T16:12:06.573229+00:00",
+ "exhaustive": true,
+ "honesty": "This is an EXHAUSTIVE negative census of the stated band. It closes the band and nothing else. Absence of a counterexample here is not, and must not be reported as, evidence for the King-Tollu-Toumazet conjecture.",
+ "internal_audits": {
+  "deg_P_eq_dim_Q_failures": 0,
+  "hstar_negative": 0,
+  "interpolation_held_out_n4_n5_failures": 0,
+  "volume_crosscheck_failures": 0
+ },
+ "reeve_distance": "A Reeve-type negative a1 needs an empty (h*_1 = 0) dim-3 simplex of normalized volume q >= 13 (a1 = 2 - q/6). Across the whole band the maximum normalized volume at h*_1 = 0 is 1 and the maximum normalized volume of ANY dim-3 hive polytope is 2. All 19 dim-3 polytopes have h*_3 = 0 and h* in {(1,0,0,0),(1,1,0,0)}.",
+ "reproduce": [
+  "python census_band1.py --wmin 4 --wmax 14 --procs 12",
+  "python collect_dim3_band1.py --wmin 4 --wmax 14 --procs 12",
+  "python verify_dim3_band1.py",
+  "python verify_sample_band1.py --n 1500",
+  "python hive4.py --selftest    (includes Reeve q=1..20: a1<0 exactly for q>=13)"
+ ],
+ "results": {
+  "dim3_hstar_histogram": {
+   "[1, 0, 0, 0]": 18,
+   "[1, 1, 0, 0]": 1
+  },
+  "dim3_volume_histogram": {
+   "1": 18,
+   "2": 1
+  },
+  "max_normalized_volume": "2",
+  "max_normalized_volume_at": "4,2,1;4,2,1;6,4,3,1",
+  "max_normalized_volume_at_hstar1_zero": "1",
+  "max_normalized_volume_at_hstar1_zero_at": "4,2,1;4,2,1;7,4,2,1",
+  "max_vertex_denominator": 1,
+  "min_a1_at": "7;7;14",
+  "min_a1_note": "0 is attained by every c=1 triple, where P == 1 identically (dim Q = 0, so a1 is structurally 0, not a near-miss). Over the dim-3 stratum -- the ONLY stratum in which an Ehrhart coefficient can be negative -- min a1 = 11/6.",
+  "min_a1_over_all_nonempty": "0",
+  "min_a1_over_dim3": "11/6",
+  "min_coefficient_at": "4,2,1;4,2,1;7,4,2,1",
+  "min_coefficient_over_all_P": "1/6",
+  "min_coefficient_over_dim3": "1/6",
+  "negative_coefficient_hits": 0
+ },
+ "run": "ktt-r4-reeve / band1, census hunter 1 of 12",
+ "sampling": "none",
+ "target": "counterexample to the King-Tollu-Toumazet (2004) positivity conjecture: a stretched LR polynomial P(n)=c(n*nu; n*lam, n*mu) with a strictly NEGATIVE coefficient",
+ "triplesTested": 150547
+}

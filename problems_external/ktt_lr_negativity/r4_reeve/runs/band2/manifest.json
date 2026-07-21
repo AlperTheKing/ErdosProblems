@@ -1,0 +1,274 @@
+{
+ "band": "W = |nu| in [15,20]",
+ "exhaustive": true,
+ "shards_merged": 24,
+ "cells": 111,
+ "enumeration": "EVERY triple (lam,mu,nu) of partitions with at most 4 parts and |lam|+|mu|=|nu|=W, for W=15..20. Partitions with >4 parts cannot occur in the r=4 cell (c(nu;lam,mu)=0 unless l(lam),l(mu) <= l(nu) <= 4). The lam<->mu symmetry c(nu;lam,mu)=c(nu;mu,lam) is applied, so each unordered pair {lam,mu} is analysed once.",
+ "triples_tested_unordered": 1013506,
+ "per_W": {
+  "15": 47574,
+  "16": 75904,
+  "17": 111600,
+  "18": 170856,
+  "19": 245340,
+  "20": 362232
+ },
+ "dim_histogram": {
+  "-1": 859416,
+  "0": 120098,
+  "1": 26115,
+  "2": 6569,
+  "3": 1308
+ },
+ "audit_failures": 0,
+ "audit_failure_list": [],
+ "non_lattice_count": 0,
+ "non_lattice_list": [],
+ "min_a1": [
+  "1",
+  [
+   [
+    7,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    13,
+    2,
+    1
+   ]
+  ],
+  [
+   1,
+   0
+  ],
+  1
+ ],
+ "min_coeff_any": [
+  "1/6",
+  [
+   [
+    5,
+    2,
+    1
+   ],
+   [
+    5,
+    2,
+    1
+   ],
+   [
+    9,
+    4,
+    2,
+    1
+   ]
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ],
+  3
+ ],
+ "max_volume": [
+  "7",
+  [
+   [
+    5,
+    3,
+    1
+   ],
+   [
+    6,
+    4,
+    1
+   ],
+   [
+    8,
+    6,
+    4,
+    2
+   ],
+   [
+    1,
+    4,
+    2,
+    0
+   ],
+   3
+  ]
+ ],
+ "max_volume_hstar1_zero": [
+  "1",
+  [
+   [
+    5,
+    2,
+    1
+   ],
+   [
+    5,
+    2,
+    1
+   ],
+   [
+    9,
+    4,
+    2,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    0
+   ],
+   3
+  ]
+ ],
+ "record_hstar2": [
+  2,
+  [
+   [
+    4,
+    3,
+    1
+   ],
+   [
+    6,
+    4,
+    2
+   ],
+   [
+    8,
+    6,
+    4,
+    2
+   ],
+   [
+    1,
+    3,
+    2,
+    0
+   ]
+  ]
+ ],
+ "n_negatives": 0,
+ "negatives": [],
+ "engine": "hive4.py (exact: Python int / fractions.Fraction only, no float)",
+ "caveat": "An empty negative census closes this window only. It proves nothing about the KTT conjecture and is NOT evidence for it.",
+ "triples_tested_ordered": 2022056,
+ "per_W_ordered": {
+  "15": 95148,
+  "16": 150848,
+  "17": 223200,
+  "18": 340200,
+  "19": 490680,
+  "20": 721980
+ },
+ "second_independent_pass": {
+  "script": "band2_dim3_shard.py",
+  "triples": 1013506,
+  "dim3": 1308,
+  "agrees_with_first_pass": true
+ },
+ "dim3_stratum": {
+  "count": 1308,
+  "why_only_stratum": "deg P = dim Q; Ehrhart polynomials of polytopes of dim <= 2 have no negative coefficient, so only dim-3 hive polytopes can give a KTT counterexample",
+  "exhaustive_cross_engine_verification": {
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "comparisons": 7848,
+   "disagreements": 0,
+   "engines": [
+    "lr_hive.exe",
+    "engineB_lrrule.py"
+   ]
+  },
+  "hstar2_histogram": {
+   "0": 1257,
+   "1": 47,
+   "2": 4
+  },
+  "volume_histogram": {
+   "1": 804,
+   "2": 319,
+   "3": 127,
+   "4": 31,
+   "5": 18,
+   "6": 6,
+   "7": 3
+  },
+  "min_a1_dim3": "11/6",
+  "hstar_negative_entries": 0,
+  "non_lattice_polytopes": 0,
+  "negativity_requirement": "a_1 < 0 needs h*_2 >= 13 + 2h*_1 + 2h*_3 (>= 13) and normalized volume >= 14; band maxima are h*_2 = 2 and V = 7"
+ },
+ "random_sample_xcheck": {
+  "dim3_triples": 45,
+  "checks": 135,
+  "failures": 0
+ },
+ "extremal_cross_check_all_agree": true,
+ "reeve_positive_control": {
+  "12": {
+   "hstar": [
+    1,
+    0,
+    11,
+    0
+   ],
+   "poly": [
+    "1",
+    "0",
+    "1",
+    "2"
+   ],
+   "a1": "0",
+   "neg": false,
+   "V": "12"
+  },
+  "13": {
+   "hstar": [
+    1,
+    0,
+    12,
+    0
+   ],
+   "poly": [
+    "1",
+    "-1/6",
+    "1",
+    "13/6"
+   ],
+   "a1": "-1/6",
+   "neg": true,
+   "V": "13"
+  },
+  "20": {
+   "hstar": [
+    1,
+    0,
+    19,
+    0
+   ],
+   "poly": [
+    "1",
+    "-4/3",
+    "1",
+    "10/3"
+   ],
+   "a1": "-4/3",
+   "neg": true,
+   "V": "20"
+  }
+ }
+}

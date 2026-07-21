@@ -1,0 +1,23 @@
+{
+ "band": [30,30],
+ "unordered_triples_tested": 2366032,
+ "nonzero": 1046083,
+ "identically_zero": 1319949,
+ "dim_histogram": {"-1": 1319949, "0": 600922, "1": 268143, "2": 124853, "3": 52165},
+ "min_six_a1": 0,
+ "min_a1_triple": "0;19,10,1;19,10,1",
+ "min_a1_L": [1,1,1],
+ "max_volume": 39,
+ "max_volume_triple": "8,5,2;8,5,2;12,9,6,3",
+ "max_volume_L": [20,94,262],
+ "max_volume_hstar1_zero": 1,
+ "max_volume_hstar1_zero_triple": "3,2,1;13,7,4;15,9,5,1",
+ "max_volume_hstar1_zero_L": [4,10,20],
+ "max_volume_hstar1_zero_anydim": 1,
+ "max_volume_hstar1_zero_anydim_dim": 0,
+ "max_volume_hstar1_zero_anydim_triple": "0;19,10,1;19,10,1",
+ "max_hstar2": 20,
+ "max_hstar2_triple": "8,5,2;8,5,2;12,9,6,3",
+ "n_negative": 0,
+ "negatives": []
+}

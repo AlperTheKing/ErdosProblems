@@ -38112,3 +38112,32 @@
 [2026-07-21T16:11:39+03:00] > VERIFY | NEXT: run only 5 s/2-worker CEGIS and local v5 smokes; do not launch production.
 [2026-07-21T16:13:24+03:00] OK VERIFY | DID: ran v5 5 s/2-worker smokes | RESULT: local NO_HIT 1821; CEGIS UNKNOWN; row min4, col min5; both verifiers rejected | D: none
 [2026-07-21T16:13:25+03:00] FAIL ATTACK | DID: closed AJT F5,n8 counterexample lane | RESULT: DEAD: resource exit; final 64-worker budget yielded no certificate | D: select
+[2026-07-21T16:47:37+03:00] > SELECT | NEXT: select a current non-Erdos conjecture refutable by one directly checkable finite witness.
+[2026-07-21T16:47:38+03:00] OK SELECT | DID: compared 3 independent candidate audits | RESULT: SSNC admits a literal adjacency-list counterexample certificate | D: GATE
+[2026-07-21T16:47:39+03:00] > GATE | NEXT: verify current SSNC status and the exact first unresolved counterexample layer.
+[2026-07-21T16:47:40+03:00] OK GATE | DID: checked 2026 journal/preprint and Seacrest | RESULT: general SSNC open; delta=8 gives finite 18..36 window | D: PLAN
+[2026-07-21T16:47:41+03:00] > PLAN | NEXT: register the literal counterexample bridge, two verifiers, first n=18 action, and hard exit.
+[2026-07-21T16:47:42+03:00] OK PLAN | DID: registered SSNC refutation route | RESULT: problems_external/ssnc_refutation/APPROACH_REGISTRY.md | D: ATTACK
+[2026-07-21T16:59:55+03:00] > ATTACK | NEXT: implement and calibrate two independent SSNC certificate verifiers before any production search.
+[2026-07-21T17:28:24+03:00] OK ATTACK | DID: built exact model plus 2 verifiers | RESULT: CP-SAT 756/756; scalar 480/480; bitset 114/114; cross 1000/1000 | D: VERIFY
+[2026-07-21T17:28:25+03:00] FAIL VERIFY | DID: adversarially audited local engine | RESULT: 2 correctness/contract defects and 1 telemetry defect found | D: repair
+[2026-07-21T17:28:26+03:00] > VERIFY | NEXT: repair local engine and independently referee the claimed n=18 counting obstruction.
+[2026-07-21T17:40:48+03:00] OK VERIFY | DID: refereed n18 counting proof twice | RESULT: n=18, delta+>=8 has no SSNC counterexample; CONSTRUCTION_N18.md | D: exit n18
+[2026-07-21T17:40:49+03:00] FAIL ATTACK | DID: closed registered n18 refutation lane | RESULT: exact counting contradiction excludes every target certificate | D: PLAN
+[2026-07-21T17:40:50+03:00] > PLAN | NEXT: require a new theorem-closing proof bridge or a separately justified direct counterexample mechanism; no order cascade.
+[2026-07-21T18:12:00+03:00] OK VERIFY | DID: audited primary bridge and K19-C19 coverage | RESULT: no theorem covers class; MINIMAL_COUNTEREXAMPLE_BRIDGE.md | D: blocked
+[2026-07-21T18:13:19+03:00] OK PLAN | DID: registered fixed K19-C19 route | RESULT: APPROACH_REGISTRY.md and N19_MECHANISM.md | D: GATE
+[2026-07-21T18:13:20+03:00] OK GATE | DID: audited current special-class theorems | RESULT: none covers all K19-C19 orientations; MINIMAL_COUNTEREXAMPLE_BRIDGE.md | D: ATTACK
+[2026-07-21T18:13:21+03:00] > ATTACK | NEXT: freeze and cross-audit the exact cycle19 CNF before one proof-producing run.
+[2026-07-21T18:20:00+03:00] > VERIFY | NEXT: run frozen cycle19 generator tests and a pinned raw-DIMACS/model semantic replay; no production solve.
+[2026-07-21T18:26:00+03:00] OK VERIFY | DID: audited frozen cycle19 CNF generator, map, counters, pins, and raw replay | RESULT: PASS; CYCLE19_IMPLEMENTATION_AUDIT.md | D: none
+[2026-07-21T18:44:52+03:00] > VERIFY | NEXT: record final launcher, decoder, SAT-model, timeout, and nontrivial DRAT calibration audit.
+[2026-07-21T18:47:54+03:00] OK VERIFY | DID: audited final cycle19 launcher and decoder | RESULT: PASS; CYCLE19_PRELAUNCH_HARNESS_AUDIT.md D0BDE36D | D: none
+[2026-07-21T18:51:10+03:00] OK VERIFY | DID: audited cycle19 CNF, raw artifact, algebra, and harness | RESULT: CNF A0303301; all gates PASS | D: ATTACK
+[2026-07-21T18:51:11+03:00] > ATTACK | NEXT: run 1 CaDiCaL 3.0.0 process on CNF A0303301 for 21409 s with DRAT; deadline 2026-07-22T00:47:37+03:00.
+[2026-07-21T18:52:35+03:00] OK ATTACK | DID: started CaDiCaL PID 102784, 1 process, 21409 s, DRAT on CNF A0303301 | RESULT: cycle19-fixed-v1-cadical-20260721T185048 RUNNING | D: monitor
+[2026-07-21T19:05:33+03:00] > ATTACK | NEXT: stop solver PID 102784 after the audited two-block digon proof closed the fixed cycle19 cell; preserve all artifacts.
+[2026-07-21T19:07:02+03:00] OK ATTACK | DID: CaDiCaL self-finished before stop request | RESULT: exit20; UNSAT_PROOF_UNCHECKED; proof 380880296 B; stderr 0 | D: VERIFY
+[2026-07-21T19:07:03+03:00] > VERIFY | NEXT: check proof.drat against frozen CNF A0303301 with independent drat-trim; require exit0 and exact s VERIFIED.
+[2026-07-21T19:12:23+03:00] FAIL VERIFY | DID: ran canonical drat-trim on 380880296 B proof | RESULT: exit1; s NOT VERIFIED after 651 B; proof hash unchanged | D: diagnose
+[2026-07-21T19:12:24+03:00] > VERIFY | NEXT: audit Windows binary-I/O truncation and rerun the frozen proof with an independently built binary-safe checker.

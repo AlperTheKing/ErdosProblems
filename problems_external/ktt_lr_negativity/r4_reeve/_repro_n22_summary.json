@@ -1,0 +1,23 @@
+{
+ "wmin": 4, "wmax": 22,
+ "triples_tested": 1363713,
+ "empty": 1093750,
+ "dim_histogram": {"-1": 1093750, "0": 195995, "1": 51736, "2": 18030, "3": 4202},
+ "min_a1_times6": 0,
+ "min_a1": "0/6",
+ "min_a1_witness": ["0","1,1,1,1","1,1,1,1"],
+ "max_volume": 10,
+ "max_volume_witness": ["6,3,1","6,4,2","9,7,4,2"],
+ "max_volume_hstar": [1,6,3,0],
+ "max_volume_hstar1_zero": 1,
+ "max_volume_hstar1_zero_witness": ["3,2,1","3,2,1","5,4,2,1"],
+ "max_volume_hstar1_zero_hstar": [1,0,0,0],
+ "record_hstar2": 3,
+ "record_hstar2_witness": ["5,3,1","6,4,2","9,6,4,2"],
+ "max_vertex_denominator_audited": 1,
+ "verify_failures": 0,
+ "anomalies": 0,
+ "negatives": [
+ ],
+ "per_W": "W=4 triples=11 empty=8 dim0=3 dim1=0 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.4s|W=5 triples=17 empty=11 dim0=6 dim1=0 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=6 triples=62 empty=42 dim0=20 dim1=0 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=7 triples=141 empty=99 dim0=41 dim1=1 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=8 triples=385 empty=283 dim0=98 dim1=4 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=9 triples=672 empty=483 dim0=178 dim1=11 dim2=0 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=10 triples=1530 empty=1144 dim0=358 dim1=26 dim2=2 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=11 triples=2640 empty=1970 dim0=606 dim1=59 dim2=5 dim3=0 min6a1=0 maxV=-1 maxV(h1=0)=-1 maxh2=-1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=12 triples=5205 empty=3982 dim0=1085 dim1=119 dim2=18 dim3=1 min6a1=0 maxV=1 maxV(h1=0)=1 maxh2=0 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=13 triples=8550 empty=6541 dim0=1737 dim1=234 dim2=36 dim3=2 min6a1=0 maxV=1 maxV(h1=0)=1 maxh2=0 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=14 triples=15157 empty=11759 dim0=2880 dim1=423 dim2=86 dim3=9 min6a1=0 maxV=2 maxV(h1=0)=1 maxh2=0 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=15 triples=23787 empty=18463 dim0=4386 dim1=758 dim2=163 dim3=17 min6a1=0 maxV=2 maxV(h1=0)=1 maxh2=0 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=16 triples=40324 empty=31821 dim0=6856 dim1=1274 dim2=325 dim3=48 min6a1=0 maxV=3 maxV(h1=0)=1 maxh2=1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=17 triples=60450 empty=47628 dim0=10041 dim1=2123 dim2=572 dim3=86 min6a1=0 maxV=4 maxV(h1=0)=1 maxh2=1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=18 triples=95598 empty=76025 dim0=14994 dim1=3367 dim2=1021 dim3=191 min6a1=0 maxV=5 maxV(h1=0)=1 maxh2=1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=19 triples=140940 empty=112362 dim0=21242 dim1=5314 dim2=1694 dim3=328 min6a1=0 maxV=5 maxV(h1=0)=1 maxh2=1 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=20 triples=214656 empty=172596 dim0=30565 dim1=8063 dim2=2794 dim3=638 min6a1=0 maxV=7 maxV(h1=0)=1 maxh2=2 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=21 triples=304776 empty=245034 dim0=42109 dim1=12176 dim2=4416 dim3=1041 min6a1=0 maxV=9 maxV(h1=0)=1 maxh2=3 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|W=22 triples=448812 empty=363499 dim0=58790 dim1=17784 dim2=6898 dim3=1841 min6a1=0 maxV=10 maxV(h1=0)=1 maxh2=3 negs=0 verifyfail=0 anomaly=0 maxden=1 0.0s|"
+}

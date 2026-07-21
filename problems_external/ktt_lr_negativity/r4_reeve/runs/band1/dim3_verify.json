@@ -1,0 +1,9 @@
+{
+ "n_dim3": 19,
+ "nmax": 5,
+ "checks": 190,
+ "mismatches": [],
+ "poly_rebuild_failures": [],
+ "engine_confirmed_negative": [],
+ "all_agree": true
+}

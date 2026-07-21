@@ -1,0 +1,45 @@
+{
+ "nmax": 16,
+ "seconds": 3.5439987182617188,
+ "triples": 98481,
+ "dimhist": {
+  "-1": 76606,
+  "0": 18254,
+  "1": 2909,
+  "2": 635,
+  "3": 77
+ },
+ "audit_failures": 0,
+ "dim3_count": 77,
+ "negatives": 0,
+ "c4_count": 62,
+ "c4_volume_distribution": {
+  "1": 62
+ },
+ "c4_with_V_ge_2": [],
+ "cv_pairs": [
+  [
+   4,
+   1,
+   62
+  ],
+  [
+   5,
+   2,
+   13
+  ],
+  [
+   5,
+   3,
+   1
+  ],
+  [
+   6,
+   3,
+   1
+  ]
+ ],
+ "min_6a1": 11,
+ "max_V_over_c": "3/5",
+ "screen_survivors": 0
+}

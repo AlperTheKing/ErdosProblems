@@ -93,3 +93,56 @@ Only after all five checks pass may a bounded multi-worker search start.
   Vertices*, arXiv:1808.06293v3 (2019).
 - D. C. Fisher, *Squaring a tournament: a proof of Dean's conjecture*,
   Journal of Graph Theory 23 (1996), 43-48.
+
+## DIRECT ROUTE - FIXED CONNECTED MISSING CYCLE AT ORDER 19
+
+### 1. Exact final deliverable
+
+One canonical adjacency list for an orientation of `K_19-C_19` with
+outdegree 8 at every vertex and exactly three unreachable targets at every
+vertex, accepted by both independent exhaustive SSNC verifiers and accompanied
+by the complete 19-row neighborhood ledger.
+
+### 2. Current frontier finite certificate
+
+The exact fixed-cycle Boolean instance described in `N19_MECHANISM.md`: every
+present edge has exactly one orientation; all outdegrees are 8; every
+two-step and unreachable variable is defined biconditionally; and every row
+and column of the unreachable relation sums to 3.
+
+### 3. Explicit logical bridge
+
+For every source, the 18 other vertices split into eight direct
+out-neighbors, seven new second out-neighbors, and three unreachable targets.
+Thus a satisfying assignment has `|N2+(v)|=7<8=|N+(v)|` for all 19 vertices
+and, after independent replay, is a counterexample to the full conjecture.
+An independently checked UNSAT certificate excludes only the fixed
+`K_19-C_19` family.
+
+### 4. Next falsifiable action
+
+After the generator, frozen independent CNF specification, pinned-orientation
+calibrations, parser audit, and proof-tool calibration all agree, run one
+bounded proof-producing CaDiCaL instance for this exact fixed formula. Replay
+SAT from raw adjacency data in both verifiers; check UNSAT with an independent
+DRAT checker.
+
+### 5. Exit condition
+
+- Verified SAT: stop every search and repeat the live status/novelty gate.
+- Independently checked UNSAT: close only this connected missing-cycle lane.
+- Timeout, `UNKNOWN`, unchecked UNSAT, or no hit: mark this mechanism
+  `BLOCKED` and stop; do not cascade to another 2-factor, value of `q`, order,
+  or degree without a separately audited direct mechanism.
+
+## STATUS UPDATE - 2026-07-21 17:40 +03:00
+
+The registered `n=18`, minimum-outdegree-8 certificate class is closed by
+the elementary double-counting theorem in `CONSTRUCTION_N18.md`. Two independent
+referee passes accepted the proof; `REFEREE_COUNTING_OBSTRUCTION.md` records the
+adversarial audit. No production search was launched at this layer.
+
+This exact finite theorem is not a resolution of SSNC. The `n=18` attack is
+exited. A larger order may not be opened automatically. The next active PLAN
+must provide either a theorem-closing global proof bridge or a separately
+justified construction mechanism whose explicit graph would refute SSNC.

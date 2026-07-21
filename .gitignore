@@ -130,3 +130,9 @@ tmp/fanout/
 problems/424/compute/wave5/C113_cluster_closure_check_all.json
 problems/424/compute/wave5/C113_cluster_endpoint_sieve.json
 _apply_patch_probe.tmp
+
+# External-problem bulk search dumps (regeneratable; registries/engines/reports stay tracked)
+problems_external/*/purged_region/*.jsonl
+problems_external/**/_*.batch
+problems_external/**/_*pool*.txt
+problems_external/ktt_lr_negativity/r4_reeve/types_G6.txt

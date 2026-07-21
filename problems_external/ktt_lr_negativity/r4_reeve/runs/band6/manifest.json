@@ -1,0 +1,307 @@
+{
+ "run": "band6",
+ "hunter": "r=4 census hunter 6 of 12 (Reeve-dimension sweep)",
+ "date_utc": "2026-07-21T16:17:58.680391Z",
+ "band_weight_W": [
+  39,
+  45
+ ],
+ "target": "counterexample to King-Tollu-Toumazet (2004) positivity: a triple (lam,mu,nu) with |lam|+|mu|=|nu| whose stretched LR polynomial P(n)=c(n*nu; n*lam, n*mu) has a strictly negative coefficient",
+ "exhaustive": true,
+ "exhaustiveness_statement": "EXHAUSTIVE over the band. Every triple of partitions (lam,mu,nu) with at most 4 parts each and |lam|+|mu|=|nu|=W for W=39..45 is accounted for. The ordered band contains 1837187424 triples. Of these, the census evaluates the 278174626 unordered {lam,mu} triples with lam subset nu AND mu subset nu by exact lattice-point counting; ALL remaining triples have P == 0 identically, by two theorems: (S1) c(nu;lam,mu)=c(nu;mu,lam), so the lam<->mu swap maps the census bijectively onto the rest of the ordered band; (S2) c^nu_(lam,mu) != 0 forces lam subset nu and mu subset nu, and n*lam subset n*nu iff lam subset nu, hence P(n)=0 for every n. (S2) was additionally FALSIFICATION-TESTED in-engine: --nofilter runs at W=20,24,28 enumerated 6,322,520 unordered triples with NO containment filter, found noncontained_nonzero = 0, and reproduced every summary statistic of the filtered runs exactly.",
+ "counts": {
+  "ordered_triples_in_band": 1837187424,
+  "ordered_triples_per_weight": {
+   "39": 131420352,
+   "40": 163026928,
+   "41": 199420032,
+   "42": 245191680,
+   "43": 297688016,
+   "44": 362945376,
+   "45": 437495040
+  },
+  "unordered_triples_evaluated_by_lattice_counting": 278174626,
+  "with_c_nonzero": 115839959,
+  "identically_zero_P": 162334667,
+  "dim_histogram": {
+   "-1": 162334667,
+   "0": 48333130,
+   "1": 32747482,
+   "2": 21159730,
+   "3": 13599617
+  }
+ },
+ "audit": {
+  "per_triple_L4_L5_polynomiality_audit": true,
+  "audited": 115839959,
+  "audit_failures": 0,
+  "audit_description": "for EVERY one of the 115839959 triples with c != 0, L(4) and L(5) were counted directly and compared with the P interpolated from L(0..3): P(4) = -1+4L1-6L2+4L3, P(5) = -4+15L1-20L2+10L3. Zero mismatches.",
+  "cross_engine_validation": [
+   {
+    "script": "validate_band6.py",
+    "seed": 20260721,
+    "samples": 200,
+    "lr_samples": 40,
+    "verdict": "PASS"
+   },
+   {
+    "script": "validate_band6.py",
+    "seed": 987654321,
+    "samples": 250,
+    "lr_samples": 50,
+    "verdict": "PASS"
+   }
+  ],
+  "cross_engine_description": "random band triples: bandscan.exe vs hive4.py (exact Fraction polytope engine) on L(1..5), dim and all coefficients; and L(1)=c(nu;lam,mu) vs LR engine A (engine/lr_hive.exe) and LR engine B (engine/engineB_lrrule.py). All PASS.",
+  "extremal_reverification": "runs/band6/extremal_verification.json -- every record triple recomputed for n=0..5 with BOTH LR engines and re-interpolated against hive4.py; 0 failures."
+ },
+ "results": {
+  "hits_negative_coefficient": 0,
+  "min_coefficient_a_min_over_all_P": "0",
+  "min_a_min_explanation": "the global minimum over all coefficients of all P in the band is 0, attained by every triple with c(nu;lam,mu)=1 (Q a point, P == 1, so a1=a2=a3=0) and by every triple with P == 0. NO coefficient anywhere in the band is negative.",
+  "min_a1_restricted_to_dim_Q_eq_3": "11/6",
+  "min_a1_dim3_witness_class": "attained exactly at the unimodular tetrahedra h* = (1,0,0,0), P(n) = binom(n+3,3), V = 1; e.g. 3,2,1;22,12,3,2;24,14,4,3",
+  "derived_inequality": "a1 = (11 + 2h*_1 - h*_2 + 2h*_3)/6 >= 11/6 for every dim-3 r=4 hive polytope in the band, i.e. h*_2 <= 2(h*_1 + h*_3) held with no exception over 13,599,617 dim-3 polytopes. A negative a1 would need h*_2 >= 12 + 2h*_1 + 2h*_3.",
+  "max_normalized_volume_dim3": 125,
+  "max_normalized_volume_triple": "12,7,3;12,7,4;18,13,9,5",
+  "max_normalized_volume_hstar": "(1,42,73,9)",
+  "max_normalized_volume_at_hstar1_zero": 1,
+  "empty_simplices_dim3_count": 2861396,
+  "empty_simplices_with_volume_gt_1": 0,
+  "reeve_verdict": "The Reeve mechanism is structurally absent in this band. All 2861396 dim-3 hive polytopes with c = dim+1 = 4 (h*_1 = 0 -- the empty-simplex stratum that contains the Reeve tetrahedra T_q) have normalized volume EXACTLY 1, i.e. q = 1 in White's T(p,q) classification; not one has V > 1, whereas a negative a_1 needs q >= 13.",
+  "max_hstar2": 73,
+  "hits": []
+ },
+ "per_weight": {
+  "39": {
+   "unordered_triples_tested": 19871329,
+   "nonzero": 8400250,
+   "dim_histogram": {
+    "-1": 11471079,
+    "0": 3824185,
+    "1": 2355513,
+    "2": 1411826,
+    "3": 808726
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;18,10,3,2;20,12,4,3",
+   "max_volume": 79,
+   "max_volume_triple": "10,6,3;11,6,3;16,11,8,4",
+   "max_volume_L": [
+    33,
+    170,
+    491
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;18,10,3,2;20,12,4,3",
+   "n_dim3_hstar1_zero": 191542,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 44,
+   "max_hstar2_triple": "10,6,3;11,6,3;16,11,8,4",
+   "audited_L4_L5": 8400250,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "40": {
+   "unordered_triples_tested": 24652018,
+   "nonzero": 10354758,
+   "dim_histogram": {
+    "-1": 14297260,
+    "0": 4616181,
+    "1": 2906914,
+    "2": 1773456,
+    "3": 1058207
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;16,11,6,1;18,13,7,2",
+   "max_volume": 90,
+   "max_volume_triple": "10,6,3;11,7,3;16,12,8,4",
+   "max_volume_L": [
+    36,
+    189,
+    550
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;16,11,6,1;18,13,7,2",
+   "n_dim3_hstar1_zero": 243859,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 51,
+   "max_hstar2_triple": "10,6,3;11,7,3;16,12,8,4",
+   "audited_L4_L5": 10354758,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "41": {
+   "unordered_triples_tested": 30186028,
+   "nonzero": 12658663,
+   "dim_histogram": {
+    "-1": 17527365,
+    "0": 5490867,
+    "1": 3573315,
+    "2": 2235228,
+    "3": 1359253
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;22,10,3;24,12,4,1",
+   "max_volume": 95,
+   "max_volume_triple": "11,6,3;11,7,3;17,12,8,4",
+   "max_volume_L": [
+    38,
+    200,
+    582
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;22,10,3;24,12,4,1",
+   "n_dim3_hstar1_zero": 301884,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 54,
+   "max_hstar2_triple": "11,6,3;11,7,3;17,12,8,4",
+   "audited_L4_L5": 12658663,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "42": {
+   "unordered_triples_tested": 37106176,
+   "nonzero": 15472675,
+   "dim_histogram": {
+    "-1": 21633501,
+    "0": 6575394,
+    "1": 4367872,
+    "2": 2775955,
+    "3": 1753454
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;17,16,2,1;19,18,3,2",
+   "max_volume": 103,
+   "max_volume_triple": "11,7,3;11,7,3;17,13,8,4",
+   "max_volume_L": [
+    40,
+    213,
+    623
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;17,16,2,1;19,18,3,2",
+   "n_dim3_hstar1_zero": 379539,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 59,
+   "max_hstar2_triple": "11,7,3;11,7,3;17,13,8,4",
+   "audited_L4_L5": 15472675,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "43": {
+   "unordered_triples_tested": 45085952,
+   "nonzero": 18770005,
+   "dim_histogram": {
+    "-1": 26315947,
+    "0": 7765303,
+    "1": 5318612,
+    "2": 3460430,
+    "3": 2225660
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;21,14,2;23,16,3,1",
+   "max_volume": 108,
+   "max_volume_triple": "11,7,3;12,7,3;18,13,8,4",
+   "max_volume_L": [
+    42,
+    224,
+    655
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;21,14,2;23,16,3,1",
+   "n_dim3_hstar1_zero": 465042,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 62,
+   "max_hstar2_triple": "11,7,3;12,7,3;18,13,8,4",
+   "audited_L4_L5": 18770005,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "44": {
+   "unordered_triples_tested": 54971699,
+   "nonzero": 22764491,
+   "dim_histogram": {
+    "-1": 32207208,
+    "0": 9231238,
+    "1": 6445115,
+    "2": 4253297,
+    "3": 2834841
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;16,14,5,3;18,16,6,4",
+   "max_volume": 119,
+   "max_volume_triple": "12,7,3;12,7,3;18,13,9,4",
+   "max_volume_L": [
+    45,
+    243,
+    714
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;16,14,5,3;18,16,6,4",
+   "n_dim3_hstar1_zero": 577741,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 69,
+   "max_hstar2_triple": "12,7,3;12,7,3;18,13,9,4",
+   "audited_L4_L5": 22764491,
+   "audit_failures": 0,
+   "n_negative": 0
+  },
+  "45": {
+   "unordered_triples_tested": 66301424,
+   "nonzero": 27419117,
+   "dim_histogram": {
+    "-1": 38882307,
+    "0": 10829962,
+    "1": 7780141,
+    "2": 5249538,
+    "3": 3559476
+   },
+   "min_six_a1": 0,
+   "min_six_a1_dim3": 11,
+   "min_a1_dim3_triple": "3,2,1;22,12,3,2;24,14,4,3",
+   "max_volume": 125,
+   "max_volume_triple": "12,7,3;12,7,4;18,13,9,5",
+   "max_volume_L": [
+    46,
+    251,
+    741
+   ],
+   "max_volume_hstar1_zero": 1,
+   "max_volume_hstar1_zero_triple": "3,2,1;22,12,3,2;24,14,4,3",
+   "n_dim3_hstar1_zero": 701789,
+   "n_dim3_hstar1_zero_volume_gt_1": 0,
+   "max_hstar2": 73,
+   "max_hstar2_triple": "12,7,3;12,7,4;18,13,9,5",
+   "audited_L4_L5": 27419117,
+   "audit_failures": 0,
+   "n_negative": 0
+  }
+ },
+ "honesty_note": "Absence of a counterexample proves nothing about the King-Tollu-Toumazet conjecture and is NOT evidence for it. This run closes exactly one window: r <= 4 (dim Q <= 3), 39 <= |nu| <= 45. No anomaly was observed and therefore none was tuned away; there was not even a near-miss -- the minimum dim-3 a1 sits at the absolute floor 11/6 of the unimodular simplex, not near 0.",
+ "sha256": {
+  "bandscan.cpp": "742ab365c4f5f54cc24ebc114969cd373a97e0b34df168c018ddc1baf0bce933",
+  "bandscan.exe": "f88e497897cf2b1af00049e6f354fa96cd9f0002945c28bb769d8e689ee4ce62",
+  "hive4.py": "be35d6a792aaaaeddef093f369f381190bc6f5b59278e281bfd8c7095e577efd",
+  "validate_band6.py": "a7955d0413100e0bb42f561258374661d33f7a6af50bd269f1fcaf7cd64b07d7",
+  "verify_extremals_band6.py": "c17b7de2169530ed8e990ef8bf4bb69a912cb50452761a7a00e0f987c1299765",
+  "make_manifest_band6.py": "024db3256b8e442f7c1700ddf82a300448c306d7b7ccc4fbe561535871949442",
+  "runs/band6/W39.json": "47aeb69f1b54bb2880c04781ee0d25e078ce0c50052cf58f2f5c459f443dc222",
+  "runs/band6/W40.json": "7346f94297a26a1848f47ff923d0a57832792bf1967629640f51eb7e498cac8a",
+  "runs/band6/W41.json": "13109f486e77d3515d19d8b4d2e3ae12bc19936767a13448d68b14997abd410e",
+  "runs/band6/W42.json": "8d4682fbc1a68203605e9d724d5872e550a2e7bb5ae872e9af7bde7a936921fc",
+  "runs/band6/W43.json": "d7421c975abb9b4d8ee026213a653d9334f1a570fe310b8d9d813cf1c14d918d",
+  "runs/band6/W44.json": "581078b90e771220dde0f8a134f81fc3e1e37ff4b05be44d859c028c137692e5",
+  "runs/band6/W45.json": "8656152a8ea728bfef2ea1627078aa8a45bbc16d783c42a4f4b5c9241a11abc1",
+  "runs/band6/extremal_verification.json": "2802b64bd509d3feace1a79b74204656533204f223fbd66134efdf8d57268e24",
+  "runs/band6/_nofilter_W20.json": "05b8b77ef763653503d398edf86b619287719c60379aaca9d8c79f78513902eb",
+  "runs/band6/_nofilter_W24.json": "ab7c450c53f6f6c32cc6527ece0fbe78b02929af7376e17390f0df44315af42d",
+  "runs/band6/_nofilter_W28.json": "f26b0ee0763e2b2ab2812e7bfd95368bc5f5881829d71be80a674a170e623f22"
+ }
+}

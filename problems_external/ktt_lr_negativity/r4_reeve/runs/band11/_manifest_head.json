@@ -1,0 +1,25 @@
+{
+ "band": "band11 -- r=4 Reeve-dimension census, hunter 11/12: UNBOUNDED WEIGHT, TARGETED (maximise V/c over all shapes)",
+ "date_utc": "2026-07-21",
+ "target": "counterexample to the King-Tollu-Toumazet (2004) positivity conjecture: a triple (lam,mu,nu), |lam|+|mu|=|nu|, whose stretched LR polynomial P(n)=c(n nu; n lam, n mu) has a strictly negative coefficient",
+ "cell": "r = 4  (hive polytope Q lives in R^3 = the Reeve dimension; deg P = dim Q <= 3)",
+ "moduli_reduction": {
+  "claim": "Q(lam,mu,nu) for r=4 depends on (lam,mu,nu) only through the 9 gaps a=(l1-l2,l2-l3,l3-l4), b=(m1-m2,m2-m3,m3-m4), c=(n1-n2,n2-n3,n3-n4), up to an INTEGER translation of R^3; hence L(n)=#(nQ cap Z^3), V, h*, P are functions of the gap vector alone. A gap vector is realisable by partitions iff D = Cw-Aw-Bw == 0 (mod 4), Aw=3a3+2a2+a1 etc.",
+  "consequence": "scanning gap vectors is a census at UNBOUNDED WEIGHT: one gap vector = infinitely many triples (lam,mu,nu) of arbitrarily large |nu|, all with the same P",
+  "verified_this_run": "band11_xcheck.py: 250 random gap vectors, each lifted to two different partition triples; hive4.py gives identical L(1..3), V, h*, P for both lifts (250/250), and identical values to band11_vcscan.exe (250/250, 0 failures)"
+ },
+ "exact_identities_used": {
+  "dim3": "P(n) = a3 n^3 + a2 n^2 + a1 n + 1, h* = (1,h1,h2,h3), c = L(1) = 4 + h1, V = 1+h1+h2+h3",
+  "a1": "6 a1 = 11 + 2 h1 - h2 + 2 h3 = 3*c + 3*h3 - V   (h3 = # interior lattice points)",
+  "negativity_criterion": "a1 < 0  <==>  V > 3*(c + h3).  Hence V/c > 3 is NECESSARY, and when c = 4 (h*_1 = 0, an empty lattice 3-polytope such as a Reeve simplex T(p,q)) it is exactly V >= 13",
+  "scaling": "for integer t, Q(t*g) = t*Q(g), so a1(t*g) = t*a1(g): the SIGN of a1 is constant along each integer ray in gap space, and V/c -> 6, V/(c+h3) -> 3 from below along every ray. A large V/c record is therefore a scale artifact; the scale-free discriminants are the sign of a1, the ratio V/(c+h3) (must exceed 3) and max V at c = 4 (must reach 13)"
+ },
+ "engines": {
+  "polytope_engine_scanner": "r4_reeve/band11_vcscan.cpp -> band11_vcscan.exe (exhaustive cube), band11_vcscan2.exe (-DCBMAX=513, adds --simplex L1-ball mode); pure integer arithmetic, records compared by cross-multiplication",
+  "independent_polytope_engine": "r4_reeve/hive4.py (exact Fractions; vertices, volume by two routes, held-out interpolation checks)",
+  "LR_engine_A": "engine/lr_hive.exe (exact hive counter)",
+  "LR_engine_B": "engine/engineB_lrrule.py (exact Littlewood-Richardson rule)",
+  "anchor_this_run": "band11_lranchor.py: record triples checked against BOTH LR engines at n=1..4 (e.g. gaps (4,...,4) -> lam=mu=(12,8,4), nu=(18,14,10,6): P(1..4) = 50,279,832,1853 confirmed by A and B); ANCHOR PASS"
+ },
+ "honesty": "Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and is never evidence for it. Every window below is reported as a closed window, nothing more."
+}

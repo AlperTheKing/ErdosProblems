@@ -1,0 +1,1154 @@
+{
+ "records": [
+  {
+   "triple": "0;19,19,3,2;19,19,3,2",
+   "tags": [
+    [
+     43,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;21,16,3,2;21,16,3,2",
+   "tags": [
+    [
+     42,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;21,17,1;21,17,1",
+   "tags": [
+    [
+     39,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;22,17,1;22,17,1",
+   "tags": [
+    [
+     40,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;25,15,1;25,15,1",
+   "tags": [
+    [
+     41,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;29,14,1;29,14,1",
+   "tags": [
+    [
+     44,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "0;29,16;29,16",
+   "tags": [
+    [
+     45,
+     "min_a1_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "L_engineA": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "L_engineB": [
+    "1",
+    "1",
+    "1",
+    "1",
+    "1",
+    "1"
+   ],
+   "poly": [
+    "1"
+   ],
+   "hstar": [
+    1
+   ],
+   "dim": 0,
+   "c": 1,
+   "volume_normalized": "0",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "10,6,3;11,6,3;16,11,8,4",
+   "tags": [
+    [
+     39,
+     "max_volume_triple"
+    ],
+    [
+     39,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    33,
+    170,
+    491,
+    1075,
+    2001
+   ],
+   "L_engineA": [
+    "1",
+    "33",
+    "170",
+    "491",
+    "1075",
+    "2001"
+   ],
+   "L_engineB": [
+    "1",
+    "33",
+    "170",
+    "491",
+    "1075",
+    "2001"
+   ],
+   "poly": [
+    "1",
+    "35/6",
+    "13",
+    "79/6"
+   ],
+   "hstar": [
+    1,
+    29,
+    44,
+    5
+   ],
+   "dim": 3,
+   "c": 33,
+   "volume_normalized": "79",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "10,6,3;11,7,3;16,12,8,4",
+   "tags": [
+    [
+     40,
+     "max_volume_triple"
+    ],
+    [
+     40,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    36,
+    189,
+    550,
+    1209,
+    2256
+   ],
+   "L_engineA": [
+    "1",
+    "36",
+    "189",
+    "550",
+    "1209",
+    "2256"
+   ],
+   "L_engineB": [
+    "1",
+    "36",
+    "189",
+    "550",
+    "1209",
+    "2256"
+   ],
+   "poly": [
+    "1",
+    "6",
+    "14",
+    "15"
+   ],
+   "hstar": [
+    1,
+    32,
+    51,
+    6
+   ],
+   "dim": 3,
+   "c": 36,
+   "volume_normalized": "90",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "11,6,3;11,7,3;17,12,8,4",
+   "tags": [
+    [
+     41,
+     "max_volume_triple"
+    ],
+    [
+     41,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    38,
+    200,
+    582,
+    1279,
+    2386
+   ],
+   "L_engineA": [
+    "1",
+    "38",
+    "200",
+    "582",
+    "1279",
+    "2386"
+   ],
+   "L_engineB": [
+    "1",
+    "38",
+    "200",
+    "582",
+    "1279",
+    "2386"
+   ],
+   "poly": [
+    "1",
+    "37/6",
+    "15",
+    "95/6"
+   ],
+   "hstar": [
+    1,
+    34,
+    54,
+    6
+   ],
+   "dim": 3,
+   "c": 38,
+   "volume_normalized": "95",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "11,7,3;11,7,3;17,13,8,4",
+   "tags": [
+    [
+     42,
+     "max_volume_triple"
+    ],
+    [
+     42,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    40,
+    213,
+    623,
+    1373,
+    2566
+   ],
+   "L_engineA": [
+    "1",
+    "40",
+    "213",
+    "623",
+    "1373",
+    "2566"
+   ],
+   "L_engineB": [
+    "1",
+    "40",
+    "213",
+    "623",
+    "1373",
+    "2566"
+   ],
+   "poly": [
+    "1",
+    "19/3",
+    "31/2",
+    "103/6"
+   ],
+   "hstar": [
+    1,
+    36,
+    59,
+    7
+   ],
+   "dim": 3,
+   "c": 40,
+   "volume_normalized": "103",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "11,7,3;12,7,3;18,13,8,4",
+   "tags": [
+    [
+     43,
+     "max_volume_triple"
+    ],
+    [
+     43,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    42,
+    224,
+    655,
+    1443,
+    2696
+   ],
+   "L_engineA": [
+    "1",
+    "42",
+    "224",
+    "655",
+    "1443",
+    "2696"
+   ],
+   "L_engineB": [
+    "1",
+    "42",
+    "224",
+    "655",
+    "1443",
+    "2696"
+   ],
+   "poly": [
+    "1",
+    "13/2",
+    "33/2",
+    "18"
+   ],
+   "hstar": [
+    1,
+    38,
+    62,
+    7
+   ],
+   "dim": 3,
+   "c": 42,
+   "volume_normalized": "108",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "12,7,3;12,7,3;18,13,9,4",
+   "tags": [
+    [
+     44,
+     "max_volume_triple"
+    ],
+    [
+     44,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    45,
+    243,
+    714,
+    1577,
+    2951
+   ],
+   "L_engineA": [
+    "1",
+    "45",
+    "243",
+    "714",
+    "1577",
+    "2951"
+   ],
+   "L_engineB": [
+    "1",
+    "45",
+    "243",
+    "714",
+    "1577",
+    "2951"
+   ],
+   "poly": [
+    "1",
+    "20/3",
+    "35/2",
+    "119/6"
+   ],
+   "hstar": [
+    1,
+    41,
+    69,
+    8
+   ],
+   "dim": 3,
+   "c": 45,
+   "volume_normalized": "119",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "12,7,3;12,7,4;18,13,9,5",
+   "tags": [
+    [
+     45,
+     "max_volume_triple"
+    ],
+    [
+     45,
+     "max_hstar2_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    46,
+    251,
+    741,
+    1641,
+    3076
+   ],
+   "L_engineA": [
+    "1",
+    "46",
+    "251",
+    "741",
+    "1641",
+    "3076"
+   ],
+   "L_engineB": [
+    "1",
+    "46",
+    "251",
+    "741",
+    "1641",
+    "3076"
+   ],
+   "poly": [
+    "1",
+    "20/3",
+    "35/2",
+    "125/6"
+   ],
+   "hstar": [
+    1,
+    42,
+    73,
+    9
+   ],
+   "dim": 3,
+   "c": 46,
+   "volume_normalized": "125",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;15,13,5,2;17,15,6,3",
+   "tags": [
+    [
+     41,
+     "min_a1_dim3_triple"
+    ],
+    [
+     41,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;16,13,4;18,15,5,1",
+   "tags": [
+    [
+     39,
+     "min_a1_dim3_triple"
+    ],
+    [
+     39,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;17,15,4,1;19,17,5,2",
+   "tags": [
+    [
+     43,
+     "min_a1_dim3_triple"
+    ],
+    [
+     43,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;17,9,5,3;19,11,6,4",
+   "tags": [
+    [
+     40,
+     "min_a1_dim3_triple"
+    ],
+    [
+     40,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;19,14,2,1;21,16,3,2",
+   "tags": [
+    [
+     42,
+     "min_a1_dim3_triple"
+    ],
+    [
+     42,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;19,16,3,1;21,18,4,2",
+   "tags": [
+    [
+     45,
+     "min_a1_dim3_triple"
+    ],
+    [
+     45,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  },
+  {
+   "triple": "3,2,1;21,13,4;23,15,5,1",
+   "tags": [
+    [
+     44,
+     "min_a1_dim3_triple"
+    ],
+    [
+     44,
+     "max_volume_hstar1_zero_triple"
+    ]
+   ],
+   "L_hive4": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "L_engineA": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "L_engineB": [
+    "1",
+    "4",
+    "10",
+    "20",
+    "35",
+    "56"
+   ],
+   "poly": [
+    "1",
+    "11/6",
+    "1",
+    "1/6"
+   ],
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "dim": 3,
+   "c": 4,
+   "volume_normalized": "1",
+   "max_vertex_denominator": 1,
+   "negative_coefficient": false,
+   "agreeA": true,
+   "agreeB": true,
+   "interp_ok": true,
+   "OK": true
+  }
+ ],
+ "failures": 0,
+ "VERDICT": "PASS"
+}

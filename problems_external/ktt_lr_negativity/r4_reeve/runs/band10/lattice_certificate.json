@@ -1,0 +1,234 @@
+{
+ "n_rows": 18,
+ "n_nonsingular_row_triples": 517,
+ "det_histogram": {
+  "1": 468,
+  "2": 48,
+  "4": 1
+ },
+ "n_violations": 510,
+ "violations": [
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 4,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 4,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 5,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 5,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 7,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 7,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 8,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    9
+   ],
+   "det": 2,
+   "basis_index": 8,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 1,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 1,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 2,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 2,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 4,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 4,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 5,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 5,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 10,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    10
+   ],
+   "det": -2,
+   "basis_index": 10,
+   "coord": 2,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    11
+   ],
+   "det": -2,
+   "basis_index": 0,
+   "coord": 1,
+   "residue": 1
+  },
+  {
+   "triple": [
+    0,
+    8,
+    11
+   ],
+   "det": -2,
+   "basis_index": 0,
+   "coord": 2,
+   "residue": 1
+  }
+ ],
+ "CERTIFIED": false,
+ "VERDICT": "NOT certified: a non-integral vertex is possible; see violations."
+}

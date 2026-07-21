@@ -1,0 +1,121 @@
+{
+ "n_directions": 15,
+ "directions": [
+  [
+   -1,
+   -1,
+   1
+  ],
+  [
+   -1,
+   0,
+   0
+  ],
+  [
+   -1,
+   0,
+   1
+  ],
+  [
+   -1,
+   1,
+   -1
+  ],
+  [
+   -1,
+   1,
+   0
+  ],
+  [
+   0,
+   -1,
+   0
+  ],
+  [
+   0,
+   -1,
+   1
+  ],
+  [
+   0,
+   0,
+   -1
+  ],
+  [
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   1,
+   -1
+  ],
+  [
+   0,
+   1,
+   0
+  ],
+  [
+   1,
+   -1,
+   -1
+  ],
+  [
+   1,
+   -1,
+   0
+  ],
+  [
+   1,
+   0,
+   -1
+  ],
+  [
+   1,
+   0,
+   0
+  ]
+ ],
+ "n_triples_simplicial": 309,
+ "triple_multiplicity_histogram": {
+  "1": 272,
+  "2": 25,
+  "4": 12
+ },
+ "m_max_over_triples": 4,
+ "n_4subsets_positively_spanning": 36,
+ "multiplicity_profile_histogram_over_bounded_4subsets": {
+  "(1, 1, 2, 2)": 6,
+  "(1, 1, 1, 4)": 12,
+  "(1, 1, 1, 1)": 18
+ },
+ "n_4subsets_with_all_four_multiplicities_equal": 18,
+ "max_common_multiplicity": 1,
+ "argmax_normals": [
+  [
+   -1,
+   -1,
+   1
+  ],
+  [
+   -1,
+   1,
+   0
+  ],
+  [
+   1,
+   0,
+   -1
+  ],
+  [
+   1,
+   0,
+   0
+  ]
+ ],
+ "equal_multiplicity_values": [
+  1
+ ],
+ "VERDICT": "Every r=4 hive polytope that is a 3-dim LATTICE polytope with c=4 (h*_1=0) is an empty lattice 3-simplex whose normalized volume equals the common multiplicity of its four vertex cones; that common value is at most 1 over all positively-spanning 4-subsets of the 15 fixed rhombus directions, INDEPENDENTLY OF (lam,mu,nu) and of the weight."
+}

@@ -1,0 +1,89 @@
+{
+  "run": "band5",
+  "hunter": "r=4 census hunter 5 of 12 (Reeve-dimension sweep)",
+  "date_utc": "2026-07-21",
+  "target": "King-Tollu-Toumazet (2004) positivity conjecture: a triple (lam,mu,nu), |lam|+|mu|=|nu|, whose stretched Littlewood-Richardson polynomial P(n) = c(n*nu; n*lam, n*mu) has a strictly negative coefficient",
+  "cell": "r = 4  (hive polytope Q(lam,mu,nu) lives in R^3 = the Reeve dimension; deg P = dim Q <= 3)",
+
+  "band": "W = |nu| = |lam|+|mu| in [33,38]",
+  "exhaustive": true,
+  "scope_of_exhaustiveness": "ALL triples (lam,mu,nu) of partitions with at most 4 parts each and |lam|+|mu|=|nu|=W, for every W in {33,...,38}, modulo the exact symmetry c(nu;lam,mu)=c(nu;mu,lam) (which preserves P, hence every quantity tracked here). Triples whose nu has 5 or more parts are outside the r=4 cell by definition and are not part of this band.",
+  "triples_tested_symmetry_reduced": 194911126,
+  "triples_tested_unordered_pairs_expanded": 389822002,
+  "triples_per_W": {"33": 16703820, "34": 21409812, "35": 26926578, "36": 34145930, "37": 42490672, "38": 53234314},
+  "band_size_independently_recomputed": "yes -- Python recount of (#unordered (lam,mu) pairs) x (#nu) per W reproduces 194911126 exactly",
+
+  "result": {
+    "negative_coefficients_found": 0,
+    "hits": [],
+    "min_a1": "1",
+    "min_a1_convention": "minimum of the linear coefficient a_1 of the trimmed P over all triples whose polytope has dim >= 1 (so that P actually has a linear term). Attained at dim 1, e.g. lam=11,1 mu=20,1 nu=30,2,1 where P = 1 + n.",
+    "min_a1_over_dim3_only": "11/6",
+    "min_a1_over_dim3_witness": ["7,3,2,1", "17,2,1", "23,5,3,2"],
+    "min_a1_over_dim3_note": "11/6 is exactly the value forced by h* = (1,0,0,0) (unimodular tetrahedron, P = 1 + 11n/6 + n^2 + n^3/6); no 3-dimensional r=4 hive polytope in the band does better.",
+    "min_a1_over_all_including_dim0": "0 (trivially, from the 12344666 zero-dimensional polytopes where P == 1, and the 169727587 empty ones where P == 0)",
+    "min_a2_over_dim_ge_2": "1/2",
+    "max_volume": "77",
+    "max_volume_witness": ["10,6,3", "10,6,3", "15,11,8,4"],
+    "max_volume_hstar": [1, 28, 43, 5],
+    "max_volume_c": 32,
+    "max_volume_P": "1 + (17/3) n + (25/2) n^2 + (77/6) n^3",
+    "max_volume_at_hstar1_zero": "1",
+    "max_volume_at_hstar1_zero_witness": ["7,3,2,1", "17,2,1", "23,5,3,2"],
+    "dim3_with_hstar1_zero_count": 533432,
+    "dim3_with_hstar1_zero_and_volume_1_count": 533432,
+    "record_hstar2": 43,
+    "record_hstar2_witness": ["10,6,3", "10,6,3", "15,11,8,4"]
+  },
+
+  "dim_histogram": {"-1_empty": 169727587, "0": 12344666, "1": 6928414, "2": 3870767, "3": 2039692},
+
+  "reeve_relevant_findings": [
+    "Negativity criterion used: for a 3-dimensional lattice polytope, 6*a_1 = 11 + 2 h*_1 - h*_2 + 2 h*_3, so a_1 < 0 iff h*_2 > 11 + 2 h*_1 + 2 h*_3. Over the whole band min(6*a_1) on dim 3 is 11, i.e. max(h*_2 - 2 h*_1 - 2 h*_3) = 0: the Reeve excess never becomes positive anywhere in the band, let alone exceeds 11.",
+    "All 533432 three-dimensional hive polytopes in the band with exactly 4 lattice points (h*_1 = 0) have normalized volume EXACTLY 1, i.e. every one of them is a unimodular tetrahedron. Not a single empty lattice 3-simplex T(p,q) with q >= 2 occurs -- so the Reeve tetrahedron route (which needs an empty simplex of normalized volume q >= 13) is empirically absent from this band, consistent with the run's theory verdict that q <= 4 is forced and only q = 1 occurs.",
+    "All 2039692 three-dimensional hive polytopes in the band were vertex-enumerated exactly; every vertex is a LATTICE point (maximum vertex denominator = 1), so every Q here is a lattice polytope and its Ehrhart counting function is a genuine polynomial.",
+    "Largest normalized volume in the band is only 77, attained at c = 32 lattice points -- volume and lattice-point count stay locked together (V < 3c is never violated in the h*_1=0 stratum), which is precisely the opposite of the Reeve regime V >> c."
+  ],
+
+  "engine": {
+    "primary": "r4_reeve/census_band5.cpp -> census_band5.exe (exact long-long integer arithmetic only; NO floating point anywhere in the counting path)",
+    "method": "The 18 rhombus rows are built by build_rows_xyz, copied verbatim from the already validated vcheck.cpp/typescan.cpp. L(n) = #(nQ cap Z^3) is obtained by direct enumeration with exact integer interval propagation. P is recovered from exact finite differences of L(0..3) (legitimate: deg P = dim Q <= 3 and P is a genuine polynomial), and is RE-VERIFIED against independently enumerated L(4) and L(5) for every 3-dimensional polytope.",
+    "formulas": "Delta1=L1-1, Delta2=L2-2L1+1, Delta3=L3-3L2+3L1-1; 6a1 = 18L1-9L2+2L3-11; 2a2 = -L3+4L2-5L1+2; V = 6a3 = Delta3; h* = (1, L1-4, L2-4L1+6, L3-4L2+6L1-4).",
+    "prefilter": "lam <= nu and mu <= nu componentwise (a THEOREM: c^nu_{lam mu} = 0 otherwise; combined with Knutson-Tao saturation this means Q is empty, so P == 0 and no coefficient exists). Verified to change nothing: a control run with the prefilter DISABLED over W in [4,22] reproduces the identical dim histogram and identical extremal witnesses.",
+    "sha256": {
+      "census_band5.cpp": "BAC48E0625F9016906F27209EC69E78C64382538D4A0ACCA2C340BCF2D3B28AB",
+      "census_band5.exe": "4348FA8192CBBEFC2FAFBD8C8A340F21BD1E6D35E91F0BB18F2DC58E74D01BD0",
+      "hive4.py": "BE35D6A792AAAAEDDEF093F369F381190BC6F5B59278E281BFD8C7095E577EFD",
+      "engine/lr_hive.exe": "95D1FEA3716756FFC48E662CFCA117F04CC354ED598A638134163E50585B8CFC",
+      "engine/engineB_lrrule.py": "C7677D041ED184910A4290116B320000E529D70192C7F0CC91CCBFCC924B706C"
+    }
+  },
+
+  "validation": [
+    {"test": "regression against the pre-existing exhaustive census census_r4.json (W in [4,22], nu with exactly 4 parts)",
+     "result": "EXACT reproduction: 1363713 triples, dim histogram {-1:1093750, 0:195995, 1:51736, 2:18030, 3:4202}, min a_1 = 1 at (2,1;2,1,1;3,2,1,1), record h*_2 = 3 at (5,3,1;6,4,2;9,6,4,2). 0 mismatches."},
+    {"test": "containment-prefilter control (same range, prefilter OFF)",
+     "result": "identical totals and identical extremal witnesses -- the prefilter discards only empty polytopes"},
+    {"test": "xval_band5.py: 1500 random band triples (W in [33,38]) vs the reference exact engine hive4.py",
+     "result": "0 mismatches on dim, L(0..3), a_1", "file": "xval_report.json"},
+    {"test": "xval_dim3_band5.py: 600 random band dim-3 triples vs hive4.py",
+     "result": "0 mismatches on dim, L(0..5), normalized volume, h*, full P, vertex count, vertex denominator", "file": "xval_dim3_report.json"},
+    {"test": "xval_engines_band5.py: 40 band dim-3 triples, stretched counts c(n nu; n lam, n mu) for n = 1,2,3 (120 exact LR counts) vs BOTH independent LR engines A (engine/lr_hive.exe) and B (engine/engineB_lrrule.py)",
+     "result": "0 mismatches", "file": "xval_engines_report.json"},
+    {"test": "headline-witness spot check",
+     "result": "hive4.py confirms (10,6,3;10,6,3;15,11,8,4): dim 3, L=[1,32,165,477,1045,1946], V=77 by independent boundary triangulation (vol_crosscheck true), h*=(1,28,43,5), P = 1 + 17n/3 + 25n^2/2 + 77n^3/6; engines A and B both return c = 32 and c(2*) = 165"},
+    {"test": "band-size audit",
+     "result": "independent Python recount of the symmetry-reduced band size reproduces 194911126 exactly, per W"},
+    {"test": "internal audit counters over the full band",
+     "result": "interpolation verify failures 0; empty-with-L(4)>0 anomalies 0; max vertex denominator 1 over all 2039692 dim-3 polytopes"}
+  ],
+
+  "honesty_statement": "This is an exhaustive NEGATIVE census. It establishes that no counterexample to the King-Tollu-Toumazet conjecture exists among r <= 4 triples of weight 33 <= W <= 38. Absence of a counterexample in this window proves nothing about the conjecture and is NOT evidence for it; it only closes the enumerated window. No anomaly was observed and none was tuned away.",
+
+  "files": {
+    "source": "../../census_band5.cpp",
+    "log": "census_band5.log",
+    "summary": "band5_summary.json",
+    "xval": ["xval_report.json", "xval_dim3_report.json", "xval_engines_report.json"]
+  }
+}

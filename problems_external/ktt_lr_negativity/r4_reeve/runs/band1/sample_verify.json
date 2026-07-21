@@ -1,0 +1,10 @@
+{
+ "sampled": 1500,
+ "of_band": 150547,
+ "seed": 20260721,
+ "nmax": 3,
+ "checks": 9000,
+ "sampled_c_zero": 1256,
+ "mismatches": [],
+ "all_agree": true
+}

@@ -1,0 +1,97 @@
+{
+ "lam": [
+  9,
+  7,
+  6,
+  0
+ ],
+ "mu": [
+  9,
+  2,
+  1,
+  0
+ ],
+ "nu": [
+  10,
+  9,
+  8,
+  7
+ ],
+ "weight": 34,
+ "dim": 3,
+ "n_vertices": 4,
+ "c": 4,
+ "V": "1",
+ "hstar": [
+  1,
+  0,
+  0,
+  0
+ ],
+ "L": [
+  1,
+  4,
+  10,
+  20,
+  35,
+  56
+ ],
+ "poly_ascending": [
+  "1",
+  "11/6",
+  "1",
+  "1/6"
+ ],
+ "min_coeff": "1/6",
+ "NEG": false,
+ "interp_verified_at_n=4,5": true,
+ "vol_crosscheck": true,
+ "vertices": [
+  [
+   "18",
+   "25",
+   "26"
+  ],
+  [
+   "18",
+   "25",
+   "27"
+  ],
+  [
+   "19",
+   "25",
+   "27"
+  ],
+  [
+   "19",
+   "26",
+   "27"
+  ]
+ ],
+ "engineA_stretched": [
+  "1",
+  "4",
+  "10",
+  "20",
+  "35",
+  "56"
+ ],
+ "engineB_stretched": [
+  "1",
+  "4",
+  "10",
+  "20",
+  "35",
+  "56"
+ ],
+ "hive4_stretched": [
+  "1",
+  "4",
+  "10",
+  "20",
+  "35",
+  "56"
+ ],
+ "engineA_agrees_where_computed": true,
+ "engineB_agrees_where_computed": true
+}
