@@ -1,0 +1,101 @@
+{
+ "n_rows": 18,
+ "n_distinct_directions": 15,
+ "directions": [
+  [
+   -1,
+   -1,
+   1
+  ],
+  [
+   -1,
+   0,
+   0
+  ],
+  [
+   -1,
+   0,
+   1
+  ],
+  [
+   -1,
+   1,
+   -1
+  ],
+  [
+   -1,
+   1,
+   0
+  ],
+  [
+   0,
+   -1,
+   0
+  ],
+  [
+   0,
+   -1,
+   1
+  ],
+  [
+   0,
+   0,
+   -1
+  ],
+  [
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   1,
+   -1
+  ],
+  [
+   0,
+   1,
+   0
+  ],
+  [
+   1,
+   -1,
+   -1
+  ],
+  [
+   1,
+   -1,
+   0
+  ],
+  [
+   1,
+   0,
+   -1
+  ],
+  [
+   1,
+   0,
+   0
+  ]
+ ],
+ "all_primitive": true,
+ "A_weight_independent_on_200_random_triples": true,
+ "cone_index_histogram_over_3subsets": {
+  "1": 272,
+  "None": 146,
+  "2": 25,
+  "4": 12
+ },
+ "n_4subsets_positively_spanning_and_simple": 36,
+ "index_profiles": {
+  "(1, 1, 2, 2)": 6,
+  "(1, 1, 1, 4)": 12,
+  "(1, 1, 1, 1)": 18
+ },
+ "n_with_constant_index": 18,
+ "constant_index_values": [
+  1
+ ],
+ "max_constant_index": 1,
+ "verdict": "Under hypothesis (1) (integral vertices), an r=4 hive polytope with dim 3 and c = 4 is an empty lattice 3-simplex, all four of whose vertex-cone indices equal its normalized volume V.  Over ALL positively-spanning simple 4-subsets of the 15 fixed rhombus directions, the only constant index profile is (1,1,1,1).  Hence V = 1, at EVERY weight: the Reeve mechanism (which needs V = q >= 13) cannot fire in the r = 4 cell.  This is a bound on the mechanism, NOT evidence for the King-Tollu-Toumazet conjecture."
+}

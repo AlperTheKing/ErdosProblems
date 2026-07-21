@@ -1,0 +1,10 @@
+{
+ "n_checked": 60,
+ "n_fail": 0,
+ "fails": [],
+ "max_weight_checked": 128046,
+ "max_L1_checked": 242,
+ "max_V_checked": 702,
+ "min_6a1_checked": 11,
+ "verdict": "PASS"
+}

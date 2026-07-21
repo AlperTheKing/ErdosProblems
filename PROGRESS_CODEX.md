@@ -38141,3 +38141,34 @@
 [2026-07-21T19:07:03+03:00] > VERIFY | NEXT: check proof.drat against frozen CNF A0303301 with independent drat-trim; require exit0 and exact s VERIFIED.
 [2026-07-21T19:12:23+03:00] FAIL VERIFY | DID: ran canonical drat-trim on 380880296 B proof | RESULT: exit1; s NOT VERIFIED after 651 B; proof hash unchanged | D: diagnose
 [2026-07-21T19:12:24+03:00] > VERIFY | NEXT: audit Windows binary-I/O truncation and rerun the frozen proof with an independently built binary-safe checker.
+[2026-07-21T19:39:10+03:00] OK VERIFY | DID: replayed cycle19 DRAT with 2 binary-safe checkers | RESULT: exit0; s VERIFIED; 380880296 B; SHA 2BF6C909 | D: finite UNSAT
+[2026-07-21T19:39:11+03:00] OK VERIFY | DID: refereed overlap proof and 59049 local states | RESULT: all missing-2-factor sharp regular cases excluded | D: DECIDE
+[2026-07-21T19:39:12+03:00] FAIL ATTACK | DID: closed cycle19 route | RESULT: DEAD: no bridge from finite theorem/counting constraints to full SSNC; no cascade | D: stop
+[2026-07-21T19:44:00+03:00] > SELECT | NEXT: audit the exact irregular n19 incidence lift as a separately justified direct counterexample mechanism.
+[2026-07-21T19:44:01+03:00] OK SELECT | DID: selected exact irregular n19 incidence lift | RESULT: explicit mu/root model plus claimed compatible orientation | D: PLAN
+[2026-07-21T19:44:02+03:00] > PLAN | NEXT: freeze and independently replay the raw irregular seed before any encoding or solve.
+[2026-07-21T19:46:00+03:00] OK PLAN | DID: registered irregular n19 lift route with five guard fields | RESULT: APPROACH_REGISTRY.md direct bridge and exit fixed | D: VERIFY
+[2026-07-21T19:46:01+03:00] > VERIFY | NEXT: reproduce the canonical missing graph/root incidence and test every coarse invariant independently.
+[2026-07-21T19:51:00+03:00] FAIL VERIFY | DID: compared barrier fibres with frozen JSON | RESULT: identities differ; overlap proof closes barrier only | D: redirect
+[2026-07-21T19:51:01+03:00] OK VERIFY | DID: replayed frozen JSON literally | RESULT: d+=8, N2+=10, W empty and 0/19 strict rows | D: PLAN
+[2026-07-21T19:51:02+03:00] > PLAN | NEXT: audit the distinct linear JSON seed and build two exact full-W lift encodings without pinning its orientation.
+[2026-07-21T19:51:03+03:00] OK PLAN | DID: registered distinct linear-seed lift with five guard fields | RESULT: JSON B4BFB300 fixed; bridge and exit explicit | D: VERIFY
+[2026-07-21T20:01:02+03:00] OK VERIFY | DID: audited barrier and JSON seed obstructions | RESULT: overlap UNSAT_LOCAL; singleton UNSAT; 3 independent referees | D: DECIDE
+[2026-07-21T20:01:03+03:00] FAIL ATTACK | DID: closed both fixed irregular seed lifts | RESULT: no orientation completion; exact scopes only | D: SELECT
+[2026-07-21T20:01:04+03:00] > SELECT | NEXT: register unrestricted n19 literal stochastic refutation without construction or incidence pins.
+[2026-07-21T20:01:05+03:00] OK SELECT | DID: selected unrestricted n19 direct refutation | RESULT: first feasible delta8 order; no restricted-family assumptions | D: PLAN
+[2026-07-21T20:01:06+03:00] > PLAN | NEXT: build and adversarially calibrate exact n19 score/mutations before any 64-worker run.
+[2026-07-21T20:01:07+03:00] OK PLAN | DID: registered unrestricted n19 route with five guard fields | RESULT: direct witness bridge and 8 h NO_HIT exit fixed | D: ATTACK
+[2026-07-21T20:03:00+03:00] OK GATE | DID: checked live primary SSNC status before unrestricted n19 route | RESULT: arXiv:2607.18047 states general case open | D: ATTACK
+[2026-07-21T20:07:30+03:00] > ATTACK | NEXT: implement independent unrestricted n19 objective, engine, and adversarial oracle; calibration only, no production.
+[2026-07-21T20:18:00+03:00] > VERIFY | NEXT: freeze one raw n19 result contract and adversarially cross-check scalar, bitset, and oracle parsers.
+[2026-07-21T20:24:00+03:00] OK PLAN | DID: fixed production to native C++ 64-thread engine | RESULT: Python limited to independent oracle/calibration | D: ATTACK
+[2026-07-21T20:58:52+03:00] > VERIFY | NEXT: compile independent raw-adjacency C++ auditor with GCC and Clang and run calibration only.
+[2026-07-21T21:03:31+03:00] OK VERIFY | DID: dual-compiled independent raw auditor and ran 779-case cross-calibration | RESULT: 14/14 tests; source SHA EBAD8272 | D: gate ready
+[2026-07-21T21:10:32+03:00] > VERIFY | NEXT: independently compile current native engine with strict warnings and run self-test only; no search.
+[2026-07-21T21:11:02+03:00] FAIL VERIFY | DID: strict GCC -Werror build of native engine | RESULT: line480 range-loop copy warning; no executable produced | D: fix
+[2026-07-21T21:21:38+03:00] > VERIFY | NEXT: rerun frozen standalone C++ full self-test on 59809 graphs and 200000 mutation/revert trials; no search.
+[2026-07-21T21:35:22+03:00] OK VERIFY | DID: ran exact D0171F7E C++ full self-test | RESULT: exit0; 922 B JSON; stderr0 | D: launcher canary gate
+[2026-07-21T21:35:23+03:00] FAIL VERIFY | DID: ran 1-thread 2 s canary under load | RESULT: wrapper 4 s wall deadline expired; CANARY_TIMEOUT; no search | D: fix grace
+[2026-07-21T21:35:24+03:00] > VERIFY | NEXT: raise launcher scheduling grace only, rerun 7 adversarial tests and exact AuditOnly gate; no production.
+[2026-07-21T21:51:20.1163330+03:00] > VERIFY | NEXT: rebuild independent raw auditors and run their 14-test cross-calibration plus adapter 8-test suite.

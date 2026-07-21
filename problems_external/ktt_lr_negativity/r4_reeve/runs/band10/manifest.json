@@ -1,0 +1,301 @@
+{
+ "band": "band10 -- r=4 (Reeve dimension), TARGETED c = 4 (h*_1 = 0) with V >= 2, unbounded weight",
+ "date_utc": "2026-07-21T16:45:06Z",
+ "engines": {
+  "polytope": "r4_reeve/hive4.py (exact Fraction/int Ehrhart)",
+  "scanner": "r4_reeve/band10.cpp -> band10.exe / band10b.exe (exact integer / __int128)",
+  "ehrhart_census": "r4_reeve/gapscan.cpp -> gapscan4.exe",
+  "LR_A": "engine/lr_hive.exe",
+  "LR_B": "engine/engineB_lrrule.py"
+ },
+ "moduli_framing": "Q depends on (lam,mu,nu) only through the 9 gaps, up to a lattice translation (verified: 386/386 random pairs agree on dim,c,L(0..5),h*,V,P). One gap class contains triples of arbitrarily large weight, so a gap-box census is an all-weights census.",
+ "exhaustive_ehrhart_census_G12": {
+  "log": "scan_G12_perc.log",
+  "gap_vectors": 10604499373,
+  "realisable_gap_classes": 1654867200,
+  "negative_a1_count": 0,
+  "min_6a1": 11,
+  "max_V": 3888,
+  "max_V_at_fixed_c": {
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 1,
+   "5": 3,
+   "6": 4,
+   "7": 6,
+   "8": 7,
+   "9": 9,
+   "10": 11,
+   "11": 13,
+   "12": 18,
+   "13": 20,
+   "14": 22,
+   "15": 25,
+   "16": 27
+  }
+ },
+ "exhaustive_structural_census_G12": {
+  "log": "b10_exh12.log",
+  "realisable_gap_classes": 2651125393,
+  "nonempty": 1654867200,
+  "max_vertex_denominator": 1,
+  "max_simple_vertex_multiplicity": 1,
+  "max_V_simplex": "216",
+  "max_V_primitive_edge_simplex": "1",
+  "n_c4_candidates_V_ge_2": 0,
+  "n_c4_exact": null
+ },
+ "exhaustive_structural_census_G6": {
+  "log": "b10_exh6.log",
+  "realisable_gap_classes": 10088488,
+  "max_vertex_denominator": 1,
+  "n_c4_candidates_V_ge_2": 0
+ },
+ "c4_stratum_census_G8": {
+  "log": "b10_exh8_c4count.log",
+  "realisable_gap_classes": 96855305,
+  "n_c4_exact": 1394088,
+  "n_c4_with_V_ge_2": 0,
+  "max_V_at_c4": "1"
+ },
+ "det_gt1_diagnostic": {
+  "files": [
+   "det_gt1_probe.json",
+   "det_gt1_violation_structure.json"
+  ],
+  "feasible_points_from_singular_index_triples": 5070,
+  "of_those_non_integral": 0,
+  "non_integral_cramer_points_seen_overall": 147614,
+  "all_of_them_infeasible": true,
+  "no_uniform_violated_row": true
+ },
+ "random_unbounded_weight": [
+  {
+   "K": 100000,
+   "N": 40000000,
+   "realisable": 40000000,
+   "nonempty": 26011439,
+   "max_vertex_denominator": 1,
+   "max_simple_vertex_multiplicity": 1,
+   "max_V_simplex": "91143226215027",
+   "max_V_primitive_edge_simplex": "1",
+   "n_c4_candidates_V_ge_2": 0
+  },
+  {
+   "K": 10000000,
+   "N": 40000000,
+   "realisable": 40000000,
+   "nonempty": 26008377,
+   "max_vertex_denominator": 1,
+   "max_simple_vertex_multiplicity": 1,
+   "max_V_simplex": "85902368680080475704",
+   "max_V_primitive_edge_simplex": "1",
+   "n_c4_candidates_V_ge_2": 0
+  },
+  {
+   "K": 1000000000,
+   "N": 40000000,
+   "realisable": 40000000,
+   "nonempty": 26011395,
+   "max_vertex_denominator": 1,
+   "max_simple_vertex_multiplicity": 1,
+   "max_V_simplex": "78022540821928031883774648",
+   "max_V_primitive_edge_simplex": "-1",
+   "n_c4_candidates_V_ge_2": 0
+  },
+  {
+   "K": 1000000000,
+   "N": 400000000,
+   "realisable": 400000000,
+   "nonempty": 260065447,
+   "max_vertex_denominator": 1,
+   "max_simple_vertex_multiplicity": 1,
+   "max_V_simplex": "104394032649939708529610301",
+   "max_V_primitive_edge_simplex": "-1",
+   "n_c4_candidates_V_ge_2": 0
+  }
+ ],
+ "normal_fan_atlas": {
+  "file": "subset_atlas.json",
+  "n_directions": 15,
+  "triple_multiplicity_histogram": {
+   "1": 272,
+   "2": 25,
+   "4": 12
+  },
+  "n_4subsets_positively_spanning": 36,
+  "multiplicity_profiles": {
+   "(1, 1, 2, 2)": 6,
+   "(1, 1, 1, 4)": 12,
+   "(1, 1, 1, 1)": 18
+  },
+  "max_common_multiplicity": 1,
+  "verdict": "Every r=4 hive polytope that is a 3-dim LATTICE polytope with c=4 (h*_1=0) is an empty lattice 3-simplex whose normalized volume equals the common multiplicity of its four vertex cones; that common value is at most 1 over all positively-spanning 4-subsets of the 15 fixed rhombus directions, INDEPENDENTLY OF (lam,mu,nu) and of the weight."
+ },
+ "vertex_integrality": {
+  "file": "lattice_certificate.json",
+  "identical_congruence_certificate": false,
+  "det_histogram_over_row_triples": {
+   "1": 468,
+   "2": 48,
+   "4": 1
+  },
+  "n_violations": 510,
+  "status": "NOT PROVED. Non-integral Cramer solutions exist for 49 of the 517 non-singular row triples (|det| = 2 or 4), so integrality is not an identity in b. It is VERIFIED empirically: max vertex denominator = 1 over every scan performed here (1.65e9 exhaustive gap classes + 6.4e8 random classes with gaps up to 1e9)."
+ },
+ "hits": [],
+ "verified_records": [
+  {
+   "file": "verify_g12_minA1.json",
+   "lam": [
+    9,
+    7,
+    6,
+    0
+   ],
+   "mu": [
+    9,
+    2,
+    1,
+    0
+   ],
+   "nu": [
+    10,
+    9,
+    8,
+    7
+   ],
+   "weight": 34,
+   "c": 4,
+   "V": 1,
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "L": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "P": "1 + (11/6) n + n^2 + (1/6) n^3",
+   "engines_agree": [
+    "hive4.py",
+    "lr_hive.exe (A)",
+    "engineB_lrrule.py (B)"
+   ],
+   "note": "global a_1-minimiser of the exhaustive G=12 census"
+  },
+  {
+   "lam": [
+    1570,
+    1506,
+    459,
+    0
+   ],
+   "mu": [
+    2677,
+    1648,
+    198,
+    0
+   ],
+   "nu": [
+    3042,
+    1743,
+    1730,
+    1543
+   ],
+   "weight": 8058,
+   "c": 4,
+   "V": 1,
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "L": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "engines_agree": [
+    "hive4.py",
+    "lr_hive.exe (A) for n=1,2,3"
+   ],
+   "note": "large-weight c=4 record found by the K=2000 random scan"
+  },
+  {
+   "lam": [
+    10774277,
+    4163047,
+    2874548,
+    0
+   ],
+   "mu": [
+    14293959,
+    13601889,
+    3628836,
+    0
+   ],
+   "nu": [
+    23359359,
+    13729572,
+    6375702,
+    5871923
+   ],
+   "weight": 49336556,
+   "c": 4,
+   "V": 1,
+   "hstar": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "L": [
+    1,
+    4,
+    10,
+    20,
+    35,
+    56
+   ],
+   "engines_agree": [
+    "hive4.py"
+   ],
+   "note": "engine A returns CAP_EXCEEDED at this size (node cap), not a disagreement"
+  },
+  {
+   "file": "unbounded_weight_c4.json",
+   "family": "lam=(9,7,6,0)+t, mu=(9,2,1,0), nu=(10,9,8,7)+t",
+   "t_tested": [
+    0,
+    1000,
+    1000000,
+    1000000000,
+    1000000000000
+   ],
+   "weights": [
+    34,
+    4034,
+    4000034,
+    4000000034,
+    4000000000034
+   ],
+   "c": 4,
+   "V": 1,
+   "P": "1 + (11/6) n + n^2 + (1/6) n^3",
+   "note": "same c=4 class exhibited at unbounded weight"
+  }
+ ],
+ "honesty": "No negative coefficient was found. This is an exhaustive negative census of the r=4 cell over gaps <= 12 (all weights) plus a large random census at gaps up to 1e9. Absence of a counterexample is NOT evidence for the King-Tollu-Toumazet conjecture."
+}

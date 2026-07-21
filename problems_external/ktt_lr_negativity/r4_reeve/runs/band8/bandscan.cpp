@@ -95,6 +95,7 @@ struct Res {
     bool valid;      // Q nonempty (so P is a genuine Ehrhart polynomial with P(0)=1)
     ll L1, L2, L3;
     ll six_a1, V;
+    ll two_a2;      // 2*a2 = 2 - 5L1 + 4L2 - L3  (= 2 + h*_1 - h*_3)
     ll h1, h2, h3;
 };
 
@@ -117,6 +118,7 @@ static Res eval_triple(const ll lam[4], const ll mu[4], const ll nu[4]) {
     r.L2 = lattice_count(R, nr, 2, ulo, uhi, vlo, vhi);
     r.L3 = lattice_count(R, nr, 3, ulo, uhi, vlo, vhi);
     r.six_a1 = -11 + 18 * r.L1 - 9 * r.L2 + 2 * r.L3;
+    r.two_a2 = 2 - 5 * r.L1 + 4 * r.L2 - r.L3;
     r.V = r.L3 - 3 * r.L2 + 3 * r.L1 - 1;
     r.h1 = r.L1 - 4;
     r.h2 = r.L2 - 4 * r.L1 + 6;
@@ -171,13 +173,21 @@ struct Acc {
     ll maxVc[CB]; ll argVc[CB][12];
     ll hist[64];                       // histogram of 6a1 for 0 <= 6a1 < 64
     ll minBig; ll minBigV; ll argminBig[12];   // min 6a1 restricted to V >= 100
+    // EXACT IDENTITY (dim 3, lattice polytope):
+    //     6 a1 = 3*L(1) + 3*h*_3 - V = 3*(#lattice pts) + 3*(#interior pts) - V
+    // so a1 < 0  <=>  V > 3*(L1 + h3).  Track the record of the exact rational
+    // V / (L1 + h3); reaching 3 IS the counterexample.
+    ll ratN, ratD; ll argRat[12];
+    ll min2a2; ll argmin2a2[12]; ll neg_a2;   // 2*a2 ; a2<0 would also break KTT
     std::vector<ll> hits;              // flattened negative records
     Acc() { tested = pruned = nonempty = dim3 = neg = 0; min6a1 = (1LL<<60); min6a1_V = 0;
             maxV = -1; maxV_h1z = -1; maxh2 = -1;
             memset(argmin,0,sizeof(argmin)); memset(argmaxV,0,sizeof(argmaxV));
             memset(argmaxV_h1z,0,sizeof(argmaxV_h1z)); memset(argmaxh2,0,sizeof(argmaxh2));
             for (int i=0;i<CB;i++){ maxVc[i] = -1; memset(argVc[i],0,sizeof(argVc[i])); }
-            memset(hist,0,sizeof(hist)); minBig=(1LL<<60); minBigV=0; memset(argminBig,0,sizeof(argminBig)); }
+            memset(hist,0,sizeof(hist)); minBig=(1LL<<60); minBigV=0; memset(argminBig,0,sizeof(argminBig));
+            ratN=0; ratD=1; memset(argRat,0,sizeof(argRat));
+            min2a2=(1LL<<60); neg_a2=0; memset(argmin2a2,0,sizeof(argmin2a2)); }
 };
 
 static void setarg(ll *dst, const ll lam[4], const ll mu[4], const ll nu[4]) {
@@ -196,6 +206,10 @@ static void feed(Acc &A, const ll lam[4], const ll mu[4], const ll nu[4], const 
     if (r.h2 > A.maxh2) { A.maxh2 = r.h2; setarg(A.argmaxh2, lam, mu, nu); }
     if (r.L1 < Acc::CB && r.V > A.maxVc[r.L1]) { A.maxVc[r.L1] = r.V; setarg(A.argVc[r.L1], lam, mu, nu); }
     if (r.six_a1 >= 0 && r.six_a1 < 64) A.hist[r.six_a1]++;
+    if (r.two_a2 < A.min2a2) { A.min2a2 = r.two_a2; setarg(A.argmin2a2, lam, mu, nu); }
+    if (r.two_a2 < 0) A.neg_a2++;
+    { ll den = r.L1 + r.h3;
+      if (den > 0 && r.V * A.ratD > A.ratN * den) { A.ratN = r.V; A.ratD = den; setarg(A.argRat, lam, mu, nu); } }
     if (r.V >= 100 && r.six_a1 < A.minBig) { A.minBig = r.six_a1; A.minBigV = r.V; setarg(A.argminBig, lam, mu, nu); }
     if (r.six_a1 < 0) {
         A.neg++;
@@ -216,6 +230,9 @@ static void merge(Acc &G, const Acc &L) {
     if (L.maxh2 > G.maxh2) { G.maxh2 = L.maxh2; memcpy(G.argmaxh2, L.argmaxh2, sizeof(G.argmaxh2)); }
     for (int k = 0; k < Acc::CB; k++) if (L.maxVc[k] > G.maxVc[k]) { G.maxVc[k] = L.maxVc[k]; memcpy(G.argVc[k], L.argVc[k], sizeof(G.argVc[k])); }
     for (int k = 0; k < 64; k++) G.hist[k] += L.hist[k];
+    G.neg_a2 += L.neg_a2;
+    if (L.min2a2 < G.min2a2) { G.min2a2 = L.min2a2; memcpy(G.argmin2a2, L.argmin2a2, sizeof(G.argmin2a2)); }
+    if (L.ratN * G.ratD > G.ratN * L.ratD) { G.ratN = L.ratN; G.ratD = L.ratD; memcpy(G.argRat, L.argRat, sizeof(G.argRat)); }
     if (L.minBig < G.minBig) { G.minBig = L.minBig; G.minBigV = L.minBigV; memcpy(G.argminBig, L.argminBig, sizeof(G.argminBig)); }
     for (size_t i = 0; i < L.hits.size(); i++) G.hits.push_back(L.hits[i]);
 }
@@ -240,6 +257,15 @@ static void report(const char *tag, const Acc &G) {
                    G.argVc[k][8],G.argVc[k][9],G.argVc[k][10],G.argVc[k][11]);
         }
         for (int k = 0; k < 64; k++) if (G.hist[k]) printf("[%s] hist6a1 %d %lld\n", tag, k, G.hist[k]);
+        // 6a1 = 3(L1 + h*_3) - V  exactly, so a1 < 0  <=>  V/(L1+h*_3) > 3.
+        printf("[%s] min_2a2=%lld  NEG_a2=%lld\n", tag, G.min2a2, G.neg_a2);
+        pr_arg("      argmin2a2:", G.argmin2a2);
+        printf("[%s] max_V_over_L1plus_hstar3 = %lld/%lld  (a1<0 iff > 3)\n", tag, G.ratN, G.ratD);
+        pr_arg("      argmaxrat:", G.argRat);
+        if (G.minBigV > 0) {
+            printf("[%s] min6a1_at_V_ge_100=%lld (V=%lld)\n", tag, G.minBig, G.minBigV);
+            pr_arg("      argminBig:", G.argminBig);
+        }
     }
     for (size_t i = 0; i + 16 <= G.hits.size(); i += 17) {
         const ll *h = &G.hits[i];
@@ -322,6 +348,69 @@ static Acc wexh(ll W) {
 }
 
 // randomized hill-climb maximizing V within the band
+// Hill-climb maximizing the EXACT rational V / (L1 + h*_3).  By the identity
+// 6 a1 = 3(L1 + h*_3) - V this is precisely the negativity-facing objective:
+// the KTT conjecture fails in this cell iff the ratio can exceed 3.
+static void climbR(ll Wlo, ll Whi, ll restarts, unsigned long long seed0) {
+    Acc G;
+#pragma omp parallel
+    {
+        int tid = 0;
+#ifdef _OPENMP
+        tid = omp_get_thread_num();
+#endif
+        unsigned long long st = seed0 * 0x2545F4914F6CDD1DULL + (unsigned long long)tid * 0x9E3779B97F4A7C15ULL + 5ULL;
+        auto rnd = [&](ll m) { st ^= st << 13; st ^= st >> 7; st ^= st << 17; return (ll)(st % (unsigned long long)m); };
+        Acc L;
+#pragma omp for schedule(dynamic, 1)
+        for (ll rs = 0; rs < restarts; rs++) {
+            ll W = Wlo + rnd(Whi - Wlo + 1);
+            ll lam[4], mu[4], nu[4];
+            auto randparts = [&](ll S, ll out[4]) {
+                ll x[3]; for (int i = 0; i < 3; i++) x[i] = rnd(S + 1);
+                std::sort(x, x + 3);
+                ll q[4] = {x[0], x[1]-x[0], x[2]-x[1], S-x[2]};
+                std::sort(q, q + 4);
+                out[0]=q[3]; out[1]=q[2]; out[2]=q[1]; out[3]=q[0];
+            };
+            randparts(W, nu);
+            for (int i = 0; i < 4; i++) { ll t = rnd(nu[i] + 1); lam[i] = t; mu[i] = nu[i] - t; }
+            std::sort(lam, lam+4); std::reverse(lam, lam+4);
+            std::sort(mu, mu+4); std::reverse(mu, mu+4);
+            ll cN = 0, cD = 1;
+            for (int iter = 0; iter < 2000; iter++) {
+                bool improved = false; ll nl[4], nm[4], nn[4], tl[4], tm[4], tn[4];
+                ll bN = cN, bD = cD;
+                for (int which = 0; which < 4; which++)
+                for (int i = 0; i < 4; i++) for (int j = 0; j < 4; j++) {
+                    if (i == j && which < 3) continue;
+                    memcpy(tl, lam, sizeof(tl)); memcpy(tm, mu, sizeof(tm)); memcpy(tn, nu, sizeof(tn));
+                    if (which == 0) { if (tl[i] == 0) continue; tl[i]--; tl[j]++; }
+                    else if (which == 1) { if (tm[i] == 0) continue; tm[i]--; tm[j]++; }
+                    else if (which == 2) { if (tn[i] == 0) continue; tn[i]--; tn[j]++; }
+                    else { if (tl[i] == 0) continue; tl[i]--; tm[j]++; }
+                    std::sort(tl, tl+4); std::reverse(tl, tl+4);
+                    std::sort(tm, tm+4); std::reverse(tm, tm+4);
+                    std::sort(tn, tn+4); std::reverse(tn, tn+4);
+                    if (!contained(tl, tn) || !contained(tm, tn)) continue;
+                    Res r = eval_triple(tl, tm, tn);
+                    feed(L, tl, tm, tn, r);
+                    if (!r.valid || r.V <= 0) continue;
+                    ll den = r.L1 + r.h3; if (den <= 0) continue;
+                    if (r.V * bD > bN * den) { bN = r.V; bD = den;
+                        memcpy(nl,tl,sizeof(tl)); memcpy(nm,tm,sizeof(tm)); memcpy(nn,tn,sizeof(tn)); improved = true; }
+                }
+                if (!improved) break;
+                memcpy(lam,nl,sizeof(lam)); memcpy(mu,nm,sizeof(mu)); memcpy(nu,nn,sizeof(nu));
+                cN = bN; cD = bD;
+            }
+        }
+#pragma omp critical
+        merge(G, L);
+    }
+    report("CLIMB-RATIO", G);
+}
+
 static void climbV(ll Wlo, ll Whi, ll restarts, unsigned long long seed0) {
     Acc G;
 #pragma omp parallel
@@ -518,6 +607,7 @@ int main(int argc, char **argv) {
         return 0;
     }
     if (!strcmp(argv[1], "--wexh")) { wexh(atoll(argv[2])); return 0; }
+    if (!strcmp(argv[1], "--climbr")) { climbR(atoll(argv[2]), atoll(argv[3]), atoll(argv[4]), argc>5?strtoull(argv[5],0,10):20260721ULL); return 0; }
     if (!strcmp(argv[1], "--rand")) { randband(atoll(argv[2]), atoll(argv[3]), atoll(argv[4]), argc>5?strtoull(argv[5],0,10):20260721ULL); return 0; }
     if (!strcmp(argv[1], "--nutop")) {
         nutop(atoll(argv[2]), argc > 3 ? atoll(argv[3]) : 3, argc > 4 ? strtoull(argv[4],0,10) : 20260721ULL);

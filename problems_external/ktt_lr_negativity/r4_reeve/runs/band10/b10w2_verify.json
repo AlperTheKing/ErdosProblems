@@ -1,0 +1,16 @@
+{
+ "homogeneity": {
+  "tested": 224,
+  "fail": []
+ },
+ "gapscan_vs_hive4": {
+  "tested": 250,
+  "fail": []
+ },
+ "lr_engines": {
+  "tested": 120,
+  "fail": [],
+  "capped": 0
+ },
+ "verdict": "PASS"
+}

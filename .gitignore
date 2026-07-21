@@ -136,3 +136,7 @@ problems_external/*/purged_region/*.jsonl
 problems_external/**/_*.batch
 problems_external/**/_*pool*.txt
 problems_external/ktt_lr_negativity/r4_reeve/types_G6.txt
+
+# Bulk purged-region run output (800MB+, regeneratable). Narrow on purpose: the r4_reeve/runs
+# band lane is already tracked and stays versioned.
+problems_external/*/purged_region/runs/

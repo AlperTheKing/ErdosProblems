@@ -1,0 +1,200 @@
+{
+ "n_rows": 18,
+ "rows_xuv": [
+  [
+   1,
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   0
+  ],
+  [
+   -1,
+   0,
+   0
+  ],
+  [
+   -1,
+   -1,
+   0
+  ],
+  [
+   0,
+   -1,
+   0
+  ],
+  [
+   1,
+   1,
+   0
+  ],
+  [
+   0,
+   0,
+   1
+  ],
+  [
+   -1,
+   0,
+   0
+  ],
+  [
+   -1,
+   -1,
+   -1
+  ],
+  [
+   -1,
+   1,
+   -1
+  ],
+  [
+   -1,
+   -1,
+   1
+  ],
+  [
+   0,
+   -1,
+   1
+  ],
+  [
+   -1,
+   -1,
+   0
+  ],
+  [
+   -1,
+   0,
+   -1
+  ],
+  [
+   0,
+   0,
+   -1
+  ],
+  [
+   -1,
+   0,
+   -1
+  ],
+  [
+   0,
+   1,
+   -1
+  ],
+  [
+   1,
+   0,
+   1
+  ]
+ ],
+ "odd_row_indices": [
+  8,
+  9,
+  10
+ ],
+ "s_split": {
+  "1": [
+   [
+    1,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    1
+   ],
+   [
+    1,
+    1,
+    0
+   ]
+  ],
+  "0": [
+   [
+    0,
+    -1,
+    0
+   ],
+   [
+    0,
+    -1,
+    1
+   ],
+   [
+    0,
+    0,
+    -1
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    -1
+   ],
+   [
+    0,
+    1,
+    0
+   ]
+  ],
+  "-1": [
+   [
+    -1,
+    -1,
+    -1
+   ],
+   [
+    -1,
+    -1,
+    0
+   ],
+   [
+    -1,
+    -1,
+    1
+   ],
+   [
+    -1,
+    0,
+    -1
+   ],
+   [
+    -1,
+    0,
+    0
+   ],
+   [
+    -1,
+    1,
+    -1
+   ]
+  ]
+ },
+ "n_nonsingular_triples": 517,
+ "n_triples_det_gt_1": 49,
+ "det_histogram": {
+  "2": 48,
+  "4": 1
+ },
+ "min_odd_rows_among_det_gt_1": 1,
+ "claim_every_det_gt_1_triple_has_>=2_odd_rows": false,
+ "odd_row_count_histogram_among_det_gt_1": {
+  "2": 30,
+  "1": 18,
+  "3": 1
+ },
+ "n_nonsingular_triples_with_>=2_odd_rows": 31,
+ "A3_only_triples_with_det_gt_1": 0,
+ "refuted_hypothesis": "FALSE: '|det|>1 implies >=2 odd rows'.  18 counterexample triples have exactly one odd row.",
+ "conclusion": "TRUE and certified here: every 3-subset of the 18 rhombus rows with |det| > 1 contains at least one of the three ODD rows R_A, R_B, R_C (rhombi A(1,1), B(1,1), C(1,1)); the 12 A3/alcoved rows are unimodular in triples (0 triples among them with |det|>1).  Hence a non-integral vertex of an r=4 hive polytope REQUIRES an odd rhombus row to be tight. This narrows, but does NOT close, the one open hypothesis of the c = 4 ==> V = 1 theorem."
+}

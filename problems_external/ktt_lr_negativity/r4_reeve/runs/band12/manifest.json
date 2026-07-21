@@ -114,6 +114,46 @@
    "_hw2.py"
   ]
  },
+ "independent_reverification_pass2": {
+  "date_utc": "2026-07-21T17:35:00Z",
+  "scope": "a second, from-scratch audit of every load-bearing claim above; nothing was taken on trust from the first pass",
+  "artifact_hashes_rechecked": "sha256 of hive4.py, band12_scan.cpp, band12_scan.exe, engine/lr_hive.exe, engine/engineB_lrrule.py all match the values recorded in 'artifacts' -- the engines audited here are the engines that produced the census",
+  "check_1_width_lemma_symbolic": {
+   "script": "runs/band12/symbolic_rows.py -> runs/band12/symbolic_rows.txt",
+   "method": "the 18 rhombus rows were rebuilt with the boundary values kept as FORMAL linear combinations of (l1..l4,m1..m4,n1..n4), so the width identities become symbolic identities rather than sampled ones",
+   "result": "18 rows, 15 distinct normals, all entries in {0,+-1}. Opposite-normal rhs pairs give w(e1) in {l1-l2, n1-n2}; w(e2) in {l3-l4, m1-m2}; w(e3) in {n3-n4, l1+l2+l3+l4+m1+m2+2*m3-n1-n2-n3-n4}; w(e2-e1)=l2-l3; w(e3-e1)=n2-n3; w(e3-e2)=m2-m3. The one non-obvious form reduces to m3-m4 EXACTLY, using |lam|+|mu|=|nu|. Hence w(d)=min(...) is the claimed identity, PROVED, not sampled.",
+   "corollary": "dim Q = 3 requires every slab width > 0, hence l1>l2>l3>l4, m1>m2>m3>m4, n1>n2>n3>n4 (all three partitions STRICT as length-4 vectors)."
+  },
+  "check_1b_width_lemma_numeric": {
+   "script": "runs/band12/verify_width.py",
+   "result": "the six identities re-derived from hive4.build_hive4 on 136773 triples (exhaustive W<=14 plus random W up to 400): 0 mismatches; and 0 of the dim-3 triples found there had a non-strict lam/mu/nu"
+  },
+  "check_2_deg_implies_nonstrict": {
+   "result": "over all 31841 partitions with at most 4 parts and weight <= 60, deg(p) => p is NOT strict as a length-4 vector: 0 violations. (Elementary: empty, a repeated positive part, and every hook (a,1^k) padded to length 4 all repeat an entry.)"
+  },
+  "check_3_independent_python_census": {
+   "script": "runs/band12/indep_census.py -> runs/band12/indep_census_W22.log",
+   "method": "a from-scratch Python enumerator with the same conventions (nu with <=4 parts; lam, mu sub-partitions of nu; mu >= lam as length-4 arrays), every triple analysed by hive4.py in exact Fraction arithmetic -- no C++ code involved",
+   "result": "EXACT agreement with band12_scan.exe at every W = 1..22: triple counts, band-12 counts, dim-3 counts (all and band), min a_1 and max V. Cumulative W<=22: 705492 triples, 649831 in band 12, dim histogram (all) {-1:359153, 0:260700, 1:63407, 2:18030, 3:4202}, dim histogram (band) {-1:344838, 0:243669, 1:49937, 2:11387, 3:0}, min a_1 (band and all) = 1 at ([2,1],[2,1],[3,2,1]), min coefficient in band = 1/2, max V (all) = 10, max V with h*_1=0 = 1, 0 verification failures, 0 negative coefficients, 0 dim-3 triples with a non-strict partition"
+  },
+  "check_4_cross_engine_LR": {
+   "script": "runs/band12/xengine.py",
+   "result": "250 band-12 triples with dim Q >= 1 (dim histogram {1:180, 2:70}), stretched to n = 1,2,3,4 = 1000 checks: the exact LR counts c(n*nu;n*lam,n*mu) from engine A (lr_hive.exe) AND engine B (engineB_lrrule.py) both equal P(n) from hive4.py -- 0 disagreements"
+  },
+  "check_5_high_weight": {
+   "script": "runs/band12/highw.py",
+   "result": "20000 fresh random band-12 triples with 61 <= W <= 900 (drawn independently of the first pass's sample): dim histogram {-1:15643, 0:855, 1:878, 2:2624, 3:0}; dim-3 count 0, negative-coefficient count 0, 0 verification failures"
+  },
+  "check_6_records": {
+   "result": "hive4.py reconfirms exactly: ([16,10,4],[16,10,4],[24,18,12,6]) has dim 3, c = 94, V = 312, h* = (1,90,193,28), P = 52n^3+32n^2+9n+1; ([3,2,1],[3,2,1],[5,4,2,1]) has h* = (1,0,0,0), V = 1 (unimodular), P = n^3/6+n^2+11n/6+1; ([2,1],[2,1],[3,2,1]) has dim 1, P = n+1. All three pass hive4's internal verified/vol_crosscheck audits."
+  },
+  "check_7_positivity_for_dim_le_2": {
+   "statement": "the step 'dim Q <= 2 => no negative coefficient' is proved, not assumed, and does NOT need Q to be a lattice polytope",
+   "proof": "P(n) = L_Q(n) is a genuine polynomial (the stretched LR function is polynomial), so P(0) = 1. dim 0 gives P = 1; dim 1 gives P = An+1 with A = normalized length > 0. For dim 2 write P = An^2+Bn+1; Ehrhart-Macdonald reciprocity gives L_{int Q}(n) = P(-n) = An^2-Bn+1, so 2Bn = #(boundary lattice points of nQ) >= 0 for all n >= 1, whence B >= 0, and A = area > 0. No coefficient is ever strictly negative.",
+   "consequence": "band 12 is negativity-free at EVERY weight, not merely W <= 60, and in fact the conclusion extends to the strictly larger set of ALL triples in which lam, mu or nu fails to be strictly decreasing as a length-4 vector."
+  },
+  "verdict": "every load-bearing claim in this manifest reproduced. No counterexample. This closes a window; it is not evidence for the King-Tollu-Toumazet conjecture."
+ },
  "reproduce": "clang++ -O3 -march=native -std=c++17 -pthread band12_scan.cpp -o band12_scan.exe ; ./band12_scan.exe --wlo 1 --whi 60 --threads 56 --json runs/band12/census_W60.json",
  "honesty_note": "An exhaustive negative census closes a window; it is NOT evidence for the King-Tollu-Toumazet conjecture. Nothing was tuned away: 0 anomalies and 0 verification failures were recorded, and had any appeared they would be listed in census_W60.json under 'anomalies'."
 }

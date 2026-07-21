@@ -3,26 +3,5161 @@
  "date_utc": "2026-07-21",
  "target": "counterexample to the King-Tollu-Toumazet (2004) positivity conjecture: a triple (lam,mu,nu), |lam|+|mu|=|nu|, whose stretched LR polynomial P(n)=c(n nu; n lam, n mu) has a strictly negative coefficient",
  "cell": "r = 4  (hive polytope Q lives in R^3 = the Reeve dimension; deg P = dim Q <= 3)",
+ "result_headline": {
+  "negative_coefficients_found": 0,
+  "min_a1_over_everything": "11/6",
+  "min_a1_attained_at": "every unimodular hive simplex (h* = (1,0,0,0), V = 1, c = 4, P = C(n+3,3)); occurs at arbitrarily large weight, e.g. lam=(579,283,69), mu=(519,299,26), nu=(584,515,420,256), |nu| = 1775",
+  "max_V_over_c_record": "37817055/6380750 = 5.9267... at gaps a=(234,294,290) b=(270,286,275) c=(299,297,182), i.e. lam=(818,584,290), mu=(831,561,275), nu=(1258,959,662,480), |nu| = 3359; there a1 = 869/2 > 0",
+  "max_V": 37817055,
+  "max_V_at_hstar1_zero": 1,
+  "max_V_over_c_plus_h3": "37817055/12606554 = 2.99978... < 3 (a1 < 0 would require > 3)",
+  "interpretation": "V/c is NOT a discriminant: it rises monotonically to 6 along every ray in gap space while a1 grows linearly and stays positive. The scale-free discriminants are (i) the ratio V/(c+h3), which must exceed 3 and never did, and (ii) max V at c = 4 (empty lattice 3-polytope = the Reeve mechanism), which must reach 13 and was equal to 1 in EVERY region scanned -- every empty r=4 hive 3-polytope seen was unimodular, so no Reeve simplex T(p,q) with q >= 2 ever occurred."
+ },
+ "exhaustive_regions": {
+  "cube": "all gap vectors in [0,12]^9  (13^9 = 10604499373 vectors; 1654867200 with Q nonempty)",
+  "L1_ball": "all gap vectors with g1+...+g9 <= 52  (C(61,9) = 17341763505 vectors; 801481767 with Q nonempty) -- reaches single gaps up to 52, i.e. shapes far outside any cube scanned before",
+  "union_distinct_gap_vectors": 23198373727,
+  "intersection_size": 4747889151,
+  "subregions_also_run": "[0,6]^9, [0,8]^9 (binary-consistency check), sum(g) <= 40",
+  "non_exhaustive_probes": "uniform random gap vectors: 10^7 in [0,100]^9 and 10^6 in [0,300]^9 (thin chambers at very large weight)"
+ },
  "moduli_reduction": {
-  "claim": "Q(lam,mu,nu) for r=4 depends on (lam,mu,nu) only through the 9 gaps a=(l1-l2,l2-l3,l3-l4), b=(m1-m2,m2-m3,m3-m4), c=(n1-n2,n2-n3,n3-n4), up to an INTEGER translation of R^3; hence L(n)=#(nQ cap Z^3), V, h*, P are functions of the gap vector alone. A gap vector is realisable by partitions iff D = Cw-Aw-Bw == 0 (mod 4), Aw=3a3+2a2+a1 etc.",
-  "consequence": "scanning gap vectors is a census at UNBOUNDED WEIGHT: one gap vector = infinitely many triples (lam,mu,nu) of arbitrarily large |nu|, all with the same P",
-  "verified_this_run": "band11_xcheck.py: 250 random gap vectors, each lifted to two different partition triples; hive4.py gives identical L(1..3), V, h*, P for both lifts (250/250), and identical values to band11_vcscan.exe (250/250, 0 failures)"
+  "claim": "Q(lam,mu,nu) for r=4 depends on (lam,mu,nu) only through the 9 gaps a=(l1-l2,l2-l3,l3-l4), b=(m1-m2,m2-m3,m3-m4), c=(n1-n2,n2-n3,n3-n4), up to an INTEGER translation of R^3; hence L(n)=#(nQ cap Z^3), V, h*, P are functions of the gap vector alone. A gap vector is realisable by partitions iff D = Cw-Aw-Bw == 0 (mod 4), Aw = 3a3+2a2+a1 etc.",
+  "consequence": "a gap-space census is a census at UNBOUNDED WEIGHT: one gap vector = infinitely many triples (lam,mu,nu) of arbitrarily large |nu|, all with the same P. The census is therefore exhaustive over ALL r=4 triples of EVERY weight whose consecutive-part gaps lie in the stated region.",
+  "verified_this_run": "band11_xcheck.py: 1070 random gap vectors (gaps <= 9, 14, 20, 30), each lifted to two different partition triples: hive4.py gives identical L(1..3), V, h*, P for both lifts and identical values to band11_vcscan.exe -- 1070/1070 agreements, 0 failures"
  },
  "exact_identities_used": {
   "dim3": "P(n) = a3 n^3 + a2 n^2 + a1 n + 1, h* = (1,h1,h2,h3), c = L(1) = 4 + h1, V = 1+h1+h2+h3",
   "a1": "6 a1 = 11 + 2 h1 - h2 + 2 h3 = 3*c + 3*h3 - V   (h3 = # interior lattice points)",
-  "negativity_criterion": "a1 < 0  <==>  V > 3*(c + h3).  Hence V/c > 3 is NECESSARY, and when c = 4 (h*_1 = 0, an empty lattice 3-polytope such as a Reeve simplex T(p,q)) it is exactly V >= 13",
-  "scaling": "for integer t, Q(t*g) = t*Q(g), so a1(t*g) = t*a1(g): the SIGN of a1 is constant along each integer ray in gap space, and V/c -> 6, V/(c+h3) -> 3 from below along every ray. A large V/c record is therefore a scale artifact; the scale-free discriminants are the sign of a1, the ratio V/(c+h3) (must exceed 3) and max V at c = 4 (must reach 13)"
+  "negativity_criterion": "a1 < 0  <==>  V > 3*(c + h3). Hence V/c > 3 is NECESSARY, and when c = 4 (h*_1 = 0, an empty lattice 3-polytope such as a Reeve simplex T(p,q), V = q) it is exactly V >= 13",
+  "scaling": "for integer t, Q(t*g) = t*Q(g), so a1(t*g) = t*a1(g) and V(t*g) = t^3 V(g): the SIGN of a1 is constant along each integer ray in gap space. Verified independently with hive4.py on 40 dim-3 directions at t = 2,3 (80/80 exact). Consequently V/c -> 6 and V/(c+h3) -> 3 from below along every ray, so both maxima are attained at the largest polytope of whatever region is scanned -- they are scale artifacts and are reported as such."
  },
  "engines": {
-  "polytope_engine_scanner": "r4_reeve/band11_vcscan.cpp -> band11_vcscan.exe (exhaustive cube), band11_vcscan2.exe (-DCBMAX=513, adds --simplex L1-ball mode); pure integer arithmetic, records compared by cross-multiplication",
-  "independent_polytope_engine": "r4_reeve/hive4.py (exact Fractions; vertices, volume by two routes, held-out interpolation checks)",
+  "polytope_engine_scanner": "r4_reeve/band11_vcscan.cpp -> band11_vcscan.exe (cube scan; compiled before the --ray/--simplex modes were appended, eval kernel byte-identical) and band11_vcscan2.exe (current source, -DCBMAX=513, adds the --simplex L1-ball mode). Consistency: both binaries run on [0,8]^9 return identical record VALUES (only tie-breaking witnesses differ). Pure integer arithmetic; ratio records compared by cross-multiplication.",
+  "independent_polytope_engine": "r4_reeve/hive4.py (exact Fractions; vertices, volume by two independent routes, held-out interpolation checks at n=4,5)",
   "LR_engine_A": "engine/lr_hive.exe (exact hive counter)",
-  "LR_engine_B": "engine/engineB_lrrule.py (exact Littlewood-Richardson rule)",
-  "anchor_this_run": "band11_lranchor.py: record triples checked against BOTH LR engines at n=1..4 (e.g. gaps (4,...,4) -> lam=mu=(12,8,4), nu=(18,14,10,6): P(1..4) = 50,279,832,1853 confirmed by A and B); ANCHOR PASS"
+  "LR_engine_B": "engine/engineB_lrrule.py (exact Littlewood-Richardson rule; DP-state budget 2*10^7)",
+  "anchor_this_run": "band11_lranchor.py (log anchor_records.txt): every record witness re-verified against BOTH LR engines on the stretched counts c(n nu; n lam, n mu). PASS at n=1..5 for the c=4 records and the V/c record of the S=40 ball (lam=(14,9,5), mu=(13,9,4), nu=(20,16,11,7): P(1..5) = 60,343,1031,2305,4346) and at n=1,2 for the V=3888 cube record (lam=mu=(36,24,12), nu=(54,42,30,18): 832, 5875). On the |nu|=1775 unimodular witness engine A agreed at n=1,2 while engine B returned CAP_EXCEEDED at n=2 (its DP-state budget, not a disagreement)."
  },
- "honesty": "Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and is never evidence for it. Every window below is reported as a closed window, nothing more.",
+ "honesty": "Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and is never evidence for it. The two regions above are closed windows, nothing more; outside them the r=4 cell remains open.",
  "runs": [
+  {
+   "log": "r4_reeve/runs/band11/rand_K100.log",
+   "valid_polytopes": 1615113,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "min_6a1_V": 1,
+   "min_6a1_c": 4,
+   "min_6a1_gaps": "a=(39,20,30) b=(22,67,86) c=(21,25,64)",
+   "max_V": 1610716,
+   "max_V_c": 277868,
+   "max_V_6a1": 896,
+   "max_V_gaps": "a=(95,95,99) b=(72,99,85) c=(96,95,95)",
+   "max_V_over_c": "1587566/273823",
+   "max_V_over_c_6a1": 913,
+   "max_V_over_c_h3": 255670,
+   "max_V_over_c_gaps": "a=(99,88,96) b=(92,91,86) c=(100,89,75)",
+   "max_V_over_c_plus_h3": "1610716/537204",
+   "max_V_over_c_plus_h3_data": {
+    "V": 1610716,
+    "c": 277868,
+    "h3": 259336,
+    "six_a1": 896,
+    "gaps": "a=(95,95,99) b=(72,99,85) c=(96,95,95)"
+   },
+   "max_V_at_c4": 1,
+   "max_V_at_c4_gaps": "a=(39,20,30) b=(22,67,86) c=(21,25,64)",
+   "max_V_at_fixed_c": {
+    "1": {
+     "Vmax": 0,
+     "six_a1": 0,
+     "gaps": "a=(8,51,42) b=(27,58,63) c=(92,0,24)"
+    },
+    "2": {
+     "Vmax": 0,
+     "six_a1": 6,
+     "gaps": "a=(3,51,8) b=(61,1,4) c=(31,20,27)"
+    },
+    "3": {
+     "Vmax": 0,
+     "six_a1": 12,
+     "gaps": "a=(36,57,6) b=(26,31,100) c=(60,94,92)"
+    },
+    "4": {
+     "Vmax": 1,
+     "six_a1": 11,
+     "gaps": "a=(39,20,30) b=(22,67,86) c=(21,25,64)"
+    },
+    "5": {
+     "Vmax": 2,
+     "six_a1": 13,
+     "gaps": "a=(46,22,29) b=(36,32,79) c=(86,77,46)"
+    },
+    "6": {
+     "Vmax": 3,
+     "six_a1": 15,
+     "gaps": "a=(1,17,67) b=(29,86,94) c=(7,87,78)"
+    },
+    "7": {
+     "Vmax": 4,
+     "six_a1": 17,
+     "gaps": "a=(7,51,64) b=(4,48,90) c=(10,75,9)"
+    },
+    "8": {
+     "Vmax": 6,
+     "six_a1": 18,
+     "gaps": "a=(1,63,1) b=(68,50,38) c=(100,1,94)"
+    },
+    "9": {
+     "Vmax": 8,
+     "six_a1": 19,
+     "gaps": "a=(88,8,36) b=(28,85,96) c=(1,87,1)"
+    },
+    "10": {
+     "Vmax": 10,
+     "six_a1": 20,
+     "gaps": "a=(5,32,80) b=(62,17,1) c=(5,17,19)"
+    },
+    "11": {
+     "Vmax": 12,
+     "six_a1": 21,
+     "gaps": "a=(16,7,3) b=(17,1,2) c=(11,8,7)"
+    },
+    "12": {
+     "Vmax": 14,
+     "six_a1": 22,
+     "gaps": "a=(1,79,5) b=(54,2,37) c=(87,49,2)"
+    },
+    "13": {
+     "Vmax": 15,
+     "six_a1": 24,
+     "gaps": "a=(57,95,58) b=(26,98,86) c=(1,2,68)"
+    },
+    "14": {
+     "Vmax": 18,
+     "six_a1": 24,
+     "gaps": "a=(19,59,7) b=(44,2,18) c=(2,50,50)"
+    },
+    "15": {
+     "Vmax": 19,
+     "six_a1": 26,
+     "gaps": "a=(2,99,97) b=(23,62,40) c=(23,99,15)"
+    },
+    "16": {
+     "Vmax": 22,
+     "six_a1": 26,
+     "gaps": "a=(29,60,35) b=(77,3,2) c=(29,18,42)"
+    },
+    "17": {
+     "Vmax": 23,
+     "six_a1": 28,
+     "gaps": "a=(76,22,11) b=(2,44,46) c=(73,74,32)"
+    },
+    "18": {
+     "Vmax": 26,
+     "six_a1": 28,
+     "gaps": "a=(63,86,56) b=(98,12,95) c=(34,3,42)"
+    },
+    "19": {
+     "Vmax": 27,
+     "six_a1": 30,
+     "gaps": "a=(97,30,93) b=(3,27,14) c=(96,69,79)"
+    },
+    "20": {
+     "Vmax": 34,
+     "six_a1": 29,
+     "gaps": "a=(2,14,58) b=(39,2,9) c=(10,2,60)"
+    },
+    "21": {
+     "Vmax": 31,
+     "six_a1": 32,
+     "gaps": "a=(89,21,19) b=(19,3,72) c=(92,28,91)"
+    },
+    "22": {
+     "Vmax": 38,
+     "six_a1": 31,
+     "gaps": "a=(29,58,65) b=(95,2,2) c=(36,85,33)"
+    },
+    "23": {
+     "Vmax": 40,
+     "six_a1": 32,
+     "gaps": "a=(30,39,11) b=(2,88,61) c=(42,73,2)"
+    },
+    "24": {
+     "Vmax": 43,
+     "six_a1": 32,
+     "gaps": "a=(5,86,9) b=(50,83,8) c=(44,3,2)"
+    },
+    "25": {
+     "Vmax": 45,
+     "six_a1": 33,
+     "gaps": "a=(100,56,40) b=(75,31,99) c=(11,3,27)"
+    },
+    "26": {
+     "Vmax": 47,
+     "six_a1": 34,
+     "gaps": "a=(77,37,50) b=(2,11,97) c=(62,2,42)"
+    },
+    "27": {
+     "Vmax": 49,
+     "six_a1": 35,
+     "gaps": "a=(43,60,25) b=(3,75,2) c=(91,6,94)"
+    },
+    "28": {
+     "Vmax": 55,
+     "six_a1": 35,
+     "gaps": "a=(2,21,34) b=(93,3,14) c=(62,2,51)"
+    },
+    "29": {
+     "Vmax": 54,
+     "six_a1": 36,
+     "gaps": "a=(3,41,93) b=(3,68,37) c=(2,82,56)"
+    },
+    "30": {
+     "Vmax": 59,
+     "six_a1": 37,
+     "gaps": "a=(99,2,21) b=(74,2,7) c=(68,53,25)"
+    },
+    "31": {
+     "Vmax": 62,
+     "six_a1": 37,
+     "gaps": "a=(43,7,74) b=(48,8,91) c=(2,28,26)"
+    },
+    "32": {
+     "Vmax": 65,
+     "six_a1": 37,
+     "gaps": "a=(19,3,28) b=(3,70,64) c=(24,53,42)"
+    },
+    "33": {
+     "Vmax": 67,
+     "six_a1": 38,
+     "gaps": "a=(93,93,63) b=(19,81,92) c=(2,4,69)"
+    },
+    "34": {
+     "Vmax": 68,
+     "six_a1": 40,
+     "gaps": "a=(29,32,36) b=(28,23,41) c=(2,83,66)"
+    },
+    "35": {
+     "Vmax": 74,
+     "six_a1": 40,
+     "gaps": "a=(36,44,29) b=(75,5,12) c=(2,34,82)"
+    },
+    "36": {
+     "Vmax": 77,
+     "six_a1": 40,
+     "gaps": "a=(71,79,3) b=(19,2,91) c=(21,95,57)"
+    },
+    "37": {
+     "Vmax": 80,
+     "six_a1": 40,
+     "gaps": "a=(2,60,92) b=(82,78,26) c=(12,12,26)"
+    },
+    "38": {
+     "Vmax": 82,
+     "six_a1": 41,
+     "gaps": "a=(3,71,23) b=(71,79,3) c=(50,70,2)"
+    },
+    "39": {
+     "Vmax": 84,
+     "six_a1": 42,
+     "gaps": "a=(3,2,89) b=(26,64,39) c=(17,52,84)"
+    },
+    "40": {
+     "Vmax": 91,
+     "six_a1": 41,
+     "gaps": "a=(3,3,26) b=(15,57,47) c=(15,61,64)"
+    },
+    "41": {
+     "Vmax": 97,
+     "six_a1": 41,
+     "gaps": "a=(38,3,4) b=(3,61,32) c=(2,56,9)"
+    },
+    "42": {
+     "Vmax": 96,
+     "six_a1": 42,
+     "gaps": "a=(88,92,3) b=(39,44,29) c=(24,89,3)"
+    },
+    "43": {
+     "Vmax": 98,
+     "six_a1": 43,
+     "gaps": "a=(98,75,59) b=(84,75,69) c=(8,28,2)"
+    },
+    "44": {
+     "Vmax": 100,
+     "six_a1": 44,
+     "gaps": "a=(17,79,2) b=(77,3,14) c=(3,18,73)"
+    },
+    "45": {
+     "Vmax": 106,
+     "six_a1": 44,
+     "gaps": "a=(52,33,48) b=(87,3,3) c=(41,15,31)"
+    },
+    "46": {
+     "Vmax": 109,
+     "six_a1": 44,
+     "gaps": "a=(6,9,75) b=(15,77,3) c=(19,82,76)"
+    },
+    "47": {
+     "Vmax": 111,
+     "six_a1": 45,
+     "gaps": "a=(68,47,16) b=(73,48,3) c=(10,62,2)"
+    },
+    "48": {
+     "Vmax": 117,
+     "six_a1": 45,
+     "gaps": "a=(41,18,27) b=(54,11,19) c=(100,3,3)"
+    },
+    "49": {
+     "Vmax": 116,
+     "six_a1": 46,
+     "gaps": "a=(6,48,81) b=(43,14,3) c=(8,38,39)"
+    },
+    "50": {
+     "Vmax": 126,
+     "six_a1": 45,
+     "gaps": "a=(22,73,32) b=(36,68,27) c=(3,7,4)"
+    },
+    "51": {
+     "Vmax": 124,
+     "six_a1": 47,
+     "gaps": "a=(64,52,28) b=(3,94,21) c=(3,9,59)"
+    },
+    "52": {
+     "Vmax": 127,
+     "six_a1": 47,
+     "gaps": "a=(3,31,22) b=(13,3,38) c=(27,36,7)"
+    },
+    "53": {
+     "Vmax": 137,
+     "six_a1": 46,
+     "gaps": "a=(14,47,57) b=(67,3,14) c=(4,3,80)"
+    },
+    "54": {
+     "Vmax": 140,
+     "six_a1": 46,
+     "gaps": "a=(3,51,34) b=(93,3,45) c=(14,5,91)"
+    },
+    "55": {
+     "Vmax": 138,
+     "six_a1": 48,
+     "gaps": "a=(24,74,21) b=(45,42,56) c=(10,27,4)"
+    },
+    "56": {
+     "Vmax": 142,
+     "six_a1": 47,
+     "gaps": "a=(58,2,27) b=(38,41,4) c=(4,20,45)"
+    },
+    "57": {
+     "Vmax": 146,
+     "six_a1": 49,
+     "gaps": "a=(59,48,14) b=(3,88,83) c=(3,55,16)"
+    },
+    "58": {
+     "Vmax": 145,
+     "six_a1": 50,
+     "gaps": "a=(19,77,10) b=(12,52,36) c=(3,34,4)"
+    },
+    "59": {
+     "Vmax": 151,
+     "six_a1": 50,
+     "gaps": "a=(39,4,3) b=(12,64,33) c=(13,74,14)"
+    },
+    "60": {
+     "Vmax": 154,
+     "six_a1": 50,
+     "gaps": "a=(7,93,81) b=(64,49,66) c=(47,20,3)"
+    },
+    "61": {
+     "Vmax": 160,
+     "six_a1": 50,
+     "gaps": "a=(10,54,4) b=(36,3,10) c=(3,38,33)"
+    },
+    "62": {
+     "Vmax": 162,
+     "six_a1": 51,
+     "gaps": "a=(3,16,3) b=(28,74,79) c=(22,68,85)"
+    },
+    "63": {
+     "Vmax": 168,
+     "six_a1": 51,
+     "gaps": "a=(100,3,4) b=(3,81,38) c=(18,27,63)"
+    },
+    "64": {
+     "Vmax": 171,
+     "six_a1": 51,
+     "gaps": "a=(3,48,81) b=(73,89,40) c=(11,37,40)"
+    },
+    "65": {
+     "Vmax": 173,
+     "six_a1": 52,
+     "gaps": "a=(3,78,97) b=(3,90,60) c=(41,84,4)"
+    },
+    "66": {
+     "Vmax": 180,
+     "six_a1": 51,
+     "gaps": "a=(4,56,9) b=(4,61,3) c=(38,47,42)"
+    },
+    "67": {
+     "Vmax": 178,
+     "six_a1": 53,
+     "gaps": "a=(49,66,36) b=(78,85,32) c=(46,4,21)"
+    },
+    "68": {
+     "Vmax": 184,
+     "six_a1": 53,
+     "gaps": "a=(3,21,97) b=(4,65,26) c=(19,90,59)"
+    },
+    "69": {
+     "Vmax": 180,
+     "six_a1": 54,
+     "gaps": "a=(35,5,2) b=(23,64,12) c=(22,40,32)"
+    },
+    "70": {
+     "Vmax": 190,
+     "six_a1": 53,
+     "gaps": "a=(94,3,97) b=(11,79,100) c=(78,12,6)"
+    },
+    "71": {
+     "Vmax": 190,
+     "six_a1": 53,
+     "gaps": "a=(51,5,64) b=(96,35,5) c=(2,52,20)"
+    },
+    "72": {
+     "Vmax": 199,
+     "six_a1": 53,
+     "gaps": "a=(4,22,89) b=(79,54,3) c=(3,38,16)"
+    },
+    "73": {
+     "Vmax": 201,
+     "six_a1": 54,
+     "gaps": "a=(3,30,17) b=(81,11,21) c=(80,6,4)"
+    },
+    "74": {
+     "Vmax": 203,
+     "six_a1": 55,
+     "gaps": "a=(91,58,5) b=(47,14,100) c=(5,3,54)"
+    },
+    "75": {
+     "Vmax": 209,
+     "six_a1": 55,
+     "gaps": "a=(78,41,50) b=(4,45,5) c=(35,82,8)"
+    },
+    "76": {
+     "Vmax": 208,
+     "six_a1": 56,
+     "gaps": "a=(14,74,4) b=(58,77,3) c=(3,99,50)"
+    },
+    "77": {
+     "Vmax": 215,
+     "six_a1": 55,
+     "gaps": "a=(13,57,5) b=(10,41,68) c=(14,9,42)"
+    },
+    "78": {
+     "Vmax": 219,
+     "six_a1": 57,
+     "gaps": "a=(3,5,73) b=(98,69,3) c=(78,52,21)"
+    },
+    "79": {
+     "Vmax": 222,
+     "six_a1": 57,
+     "gaps": "a=(65,4,33) b=(42,8,81) c=(23,4,18)"
+    },
+    "80": {
+     "Vmax": 228,
+     "six_a1": 57,
+     "gaps": "a=(30,30,28) b=(4,4,99) c=(47,3,86)"
+    },
+    "81": {
+     "Vmax": 228,
+     "six_a1": 57,
+     "gaps": "a=(22,77,29) b=(59,11,24) c=(4,40,32)"
+    },
+    "82": {
+     "Vmax": 234,
+     "six_a1": 57,
+     "gaps": "a=(51,79,78) b=(3,34,17) c=(93,66,48)"
+    },
+    "83": {
+     "Vmax": 236,
+     "six_a1": 58,
+     "gaps": "a=(52,24,4) b=(8,83,54) c=(48,82,4)"
+    },
+    "84": {
+     "Vmax": 240,
+     "six_a1": 57,
+     "gaps": "a=(46,61,4) b=(6,16,32) c=(4,62,14)"
+    },
+    "85": {
+     "Vmax": 246,
+     "six_a1": 57,
+     "gaps": "a=(44,45,59) b=(59,65,74) c=(4,25,32)"
+    },
+    "86": {
+     "Vmax": 248,
+     "six_a1": 58,
+     "gaps": "a=(18,37,39) b=(71,6,82) c=(4,5,96)"
+    },
+    "87": {
+     "Vmax": 247,
+     "six_a1": 59,
+     "gaps": "a=(84,25,28) b=(21,4,86) c=(6,7,51)"
+    },
+    "88": {
+     "Vmax": 258,
+     "six_a1": 57,
+     "gaps": "a=(76,66,49) b=(48,6,30) c=(47,67,4)"
+    },
+    "89": {
+     "Vmax": 253,
+     "six_a1": 62,
+     "gaps": "a=(41,22,46) b=(35,74,31) c=(76,3,15)"
+    },
+    "90": {
+     "Vmax": 264,
+     "six_a1": 60,
+     "gaps": "a=(90,4,52) b=(44,46,59) c=(5,3,64)"
+    },
+    "91": {
+     "Vmax": 275,
+     "six_a1": 58,
+     "gaps": "a=(5,35,34) b=(81,4,58) c=(22,3,88)"
+    },
+    "92": {
+     "Vmax": 272,
+     "six_a1": 58,
+     "gaps": "a=(15,43,43) b=(3,92,4) c=(43,7,12)"
+    },
+    "93": {
+     "Vmax": 269,
+     "six_a1": 61,
+     "gaps": "a=(79,40,43) b=(23,61,39) c=(59,7,3)"
+    },
+    "94": {
+     "Vmax": 278,
+     "six_a1": 61,
+     "gaps": "a=(68,57,53) b=(5,4,40) c=(71,36,53)"
+    },
+    "95": {
+     "Vmax": 292,
+     "six_a1": 59,
+     "gaps": "a=(21,4,96) b=(5,38,42) c=(56,42,24)"
+    },
+    "96": {
+     "Vmax": 288,
+     "six_a1": 60,
+     "gaps": "a=(79,5,3) b=(22,80,20) c=(13,24,85)"
+    },
+    "97": {
+     "Vmax": 287,
+     "six_a1": 61,
+     "gaps": "a=(50,67,78) b=(74,11,3) c=(52,64,5)"
+    },
+    "98": {
+     "Vmax": 293,
+     "six_a1": 61,
+     "gaps": "a=(36,13,14) b=(3,7,32) c=(14,24,5)"
+    },
+    "99": {
+     "Vmax": 296,
+     "six_a1": 61,
+     "gaps": "a=(4,38,3) b=(18,83,31) c=(15,56,29)"
+    },
+    "100": {
+     "Vmax": 304,
+     "six_a1": 62,
+     "gaps": "a=(61,83,48) b=(35,99,58) c=(17,4,7)"
+    },
+    "101": {
+     "Vmax": 302,
+     "six_a1": 64,
+     "gaps": "a=(73,54,87) b=(3,41,99) c=(19,4,99)"
+    },
+    "102": {
+     "Vmax": 324,
+     "six_a1": 60,
+     "gaps": "a=(75,4,5) b=(27,5,21) c=(48,21,4)"
+    },
+    "103": {
+     "Vmax": 309,
+     "six_a1": 63,
+     "gaps": "a=(12,5,28) b=(35,57,16) c=(68,35,15)"
+    },
+    "104": {
+     "Vmax": 317,
+     "six_a1": 64,
+     "gaps": "a=(4,41,63) b=(51,41,35) c=(6,3,51)"
+    },
+    "105": {
+     "Vmax": 324,
+     "six_a1": 63,
+     "gaps": "a=(16,44,46) b=(66,28,11) c=(4,4,31)"
+    },
+    "106": {
+     "Vmax": 324,
+     "six_a1": 63,
+     "gaps": "a=(5,68,3) b=(5,22,41) c=(15,60,53)"
+    },
+    "107": {
+     "Vmax": 325,
+     "six_a1": 65,
+     "gaps": "a=(96,5,22) b=(47,57,34) c=(3,99,6)"
+    },
+    "108": {
+     "Vmax": 331,
+     "six_a1": 65,
+     "gaps": "a=(33,24,11) b=(24,16,23) c=(5,3,40)"
+    },
+    "109": {
+     "Vmax": 329,
+     "six_a1": 67,
+     "gaps": "a=(3,74,35) b=(45,20,5) c=(51,73,9)"
+    },
+    "110": {
+     "Vmax": 341,
+     "six_a1": 64,
+     "gaps": "a=(77,24,66) b=(77,4,22) c=(59,5,31)"
+    },
+    "111": {
+     "Vmax": 351,
+     "six_a1": 63,
+     "gaps": "a=(9,5,37) b=(6,6,73) c=(3,6,100)"
+    },
+    "112": {
+     "Vmax": 356,
+     "six_a1": 64,
+     "gaps": "a=(4,10,51) b=(50,5,20) c=(29,4,56)"
+    },
+    "113": {
+     "Vmax": 351,
+     "six_a1": 66,
+     "gaps": "a=(67,30,100) b=(52,31,41) c=(29,4,53)"
+    },
+    "114": {
+     "Vmax": 358,
+     "six_a1": 65,
+     "gaps": "a=(5,6,69) b=(28,49,27) c=(52,3,27)"
+    },
+    "115": {
+     "Vmax": 357,
+     "six_a1": 66,
+     "gaps": "a=(4,75,25) b=(45,90,88) c=(69,4,83)"
+    },
+    "116": {
+     "Vmax": 363,
+     "six_a1": 66,
+     "gaps": "a=(6,41,5) b=(19,51,57) c=(3,89,42)"
+    },
+    "117": {
+     "Vmax": 380,
+     "six_a1": 64,
+     "gaps": "a=(52,4,61) b=(25,36,5) c=(83,6,8)"
+    },
+    "118": {
+     "Vmax": 369,
+     "six_a1": 66,
+     "gaps": "a=(99,8,6) b=(11,26,3) c=(89,4,24)"
+    },
+    "119": {
+     "Vmax": 367,
+     "six_a1": 68,
+     "gaps": "a=(16,29,90) b=(94,4,8) c=(12,7,44)"
+    },
+    "120": {
+     "Vmax": 391,
+     "six_a1": 65,
+     "gaps": "a=(10,46,4) b=(17,50,5) c=(12,95,4)"
+    },
+    "121": {
+     "Vmax": 381,
+     "six_a1": 69,
+     "gaps": "a=(6,3,38) b=(57,10,67) c=(61,33,39)"
+    },
+    "122": {
+     "Vmax": 389,
+     "six_a1": 67,
+     "gaps": "a=(63,4,5) b=(29,29,39) c=(33,5,29)"
+    },
+    "123": {
+     "Vmax": 388,
+     "six_a1": 68,
+     "gaps": "a=(64,33,54) b=(5,16,22) c=(45,23,52)"
+    },
+    "124": {
+     "Vmax": 397,
+     "six_a1": 68,
+     "gaps": "a=(73,6,81) b=(6,80,4) c=(12,75,4)"
+    },
+    "125": {
+     "Vmax": 407,
+     "six_a1": 67,
+     "gaps": "a=(4,95,8) b=(6,4,43) c=(11,89,40)"
+    },
+    "126": {
+     "Vmax": 399,
+     "six_a1": 69,
+     "gaps": "a=(81,72,5) b=(71,4,10) c=(62,33,59)"
+    },
+    "127": {
+     "Vmax": 401,
+     "six_a1": 70,
+     "gaps": "a=(96,27,64) b=(81,26,75) c=(5,4,49)"
+    },
+    "128": {
+     "Vmax": 412,
+     "six_a1": 68,
+     "gaps": "a=(8,5,14) b=(43,26,22) c=(29,29,22)"
+    },
+    "129": {
+     "Vmax": 420,
+     "six_a1": 69,
+     "gaps": "a=(41,86,23) b=(71,66,13) c=(5,4,81)"
+    },
+    "130": {
+     "Vmax": 421,
+     "six_a1": 68,
+     "gaps": "a=(96,45,43) b=(38,6,4) c=(83,59,20)"
+    },
+    "131": {
+     "Vmax": 413,
+     "six_a1": 70,
+     "gaps": "a=(46,47,29) b=(18,86,5) c=(4,97,6)"
+    },
+    "132": {
+     "Vmax": 428,
+     "six_a1": 70,
+     "gaps": "a=(5,51,67) b=(55,50,100) c=(4,16,89)"
+    },
+    "133": {
+     "Vmax": 415,
+     "six_a1": 74,
+     "gaps": "a=(76,21,89) b=(28,4,11) c=(51,48,89)"
+    },
+    "134": {
+     "Vmax": 436,
+     "six_a1": 71,
+     "gaps": "a=(19,29,10) b=(29,62,14) c=(4,48,58)"
+    },
+    "135": {
+     "Vmax": 437,
+     "six_a1": 70,
+     "gaps": "a=(14,65,62) b=(60,96,31) c=(4,26,41)"
+    },
+    "136": {
+     "Vmax": 445,
+     "six_a1": 68,
+     "gaps": "a=(5,35,4) b=(53,12,89) c=(28,41,59)"
+    },
+    "137": {
+     "Vmax": 448,
+     "six_a1": 71,
+     "gaps": "a=(54,25,17) b=(5,4,55) c=(52,37,41)"
+    },
+    "138": {
+     "Vmax": 451,
+     "six_a1": 71,
+     "gaps": "a=(32,5,24) b=(79,26,52) c=(80,47,5)"
+    },
+    "139": {
+     "Vmax": 464,
+     "six_a1": 70,
+     "gaps": "a=(5,18,55) b=(74,5,20) c=(52,4,74)"
+    },
+    "140": {
+     "Vmax": 460,
+     "six_a1": 71,
+     "gaps": "a=(96,14,29) b=(65,4,90) c=(24,12,14)"
+    },
+    "141": {
+     "Vmax": 465,
+     "six_a1": 72,
+     "gaps": "a=(91,4,5) b=(72,22,35) c=(29,86,34)"
+    },
+    "142": {
+     "Vmax": 468,
+     "six_a1": 69,
+     "gaps": "a=(77,91,3) b=(6,34,6) c=(76,77,6)"
+    },
+    "143": {
+     "Vmax": 463,
+     "six_a1": 74,
+     "gaps": "a=(4,12,67) b=(56,45,9) c=(63,5,7)"
+    },
+    "144": {
+     "Vmax": 481,
+     "six_a1": 71,
+     "gaps": "a=(5,100,5) b=(29,33,24) c=(34,47,77)"
+    },
+    "145": {
+     "Vmax": 480,
+     "six_a1": 72,
+     "gaps": "a=(43,82,97) b=(54,5,4) c=(38,88,56)"
+    },
+    "146": {
+     "Vmax": 477,
+     "six_a1": 72,
+     "gaps": "a=(94,72,76) b=(3,17,7) c=(91,84,75)"
+    },
+    "147": {
+     "Vmax": 487,
+     "six_a1": 74,
+     "gaps": "a=(70,4,6) b=(80,68,64) c=(81,39,55)"
+    },
+    "148": {
+     "Vmax": 494,
+     "six_a1": 73,
+     "gaps": "a=(15,4,97) b=(17,21,6) c=(4,14,93)"
+    },
+    "149": {
+     "Vmax": 479,
+     "six_a1": 76,
+     "gaps": "a=(4,91,34) b=(89,4,93) c=(83,8,63)"
+    },
+    "150": {
+     "Vmax": 509,
+     "six_a1": 70,
+     "gaps": "a=(63,27,89) b=(66,25,89) c=(4,32,5)"
+    },
+    "151": {
+     "Vmax": 509,
+     "six_a1": 70,
+     "gaps": "a=(67,4,76) b=(91,8,43) c=(5,27,8)"
+    },
+    "152": {
+     "Vmax": 514,
+     "six_a1": 71,
+     "gaps": "a=(35,40,7) b=(35,4,44) c=(99,7,10)"
+    },
+    "153": {
+     "Vmax": 488,
+     "six_a1": 79,
+     "gaps": "a=(21,58,50) b=(4,40,99) c=(77,81,7)"
+    },
+    "154": {
+     "Vmax": 516,
+     "six_a1": 75,
+     "gaps": "a=(4,26,57) b=(7,70,59) c=(5,97,100)"
+    },
+    "155": {
+     "Vmax": 517,
+     "six_a1": 74,
+     "gaps": "a=(26,14,100) b=(56,56,13) c=(59,7,4)"
+    },
+    "156": {
+     "Vmax": 520,
+     "six_a1": 74,
+     "gaps": "a=(40,6,55) b=(6,94,58) c=(43,69,8)"
+    },
+    "157": {
+     "Vmax": 534,
+     "six_a1": 72,
+     "gaps": "a=(40,81,74) b=(73,78,93) c=(5,7,55)"
+    },
+    "158": {
+     "Vmax": 533,
+     "six_a1": 76,
+     "gaps": "a=(7,4,65) b=(65,4,92) c=(63,44,72)"
+    },
+    "159": {
+     "Vmax": 540,
+     "six_a1": 75,
+     "gaps": "a=(4,91,74) b=(58,30,6) c=(6,42,66)"
+    },
+    "160": {
+     "Vmax": 543,
+     "six_a1": 72,
+     "gaps": "a=(6,67,95) b=(88,98,9) c=(5,37,7)"
+    },
+    "161": {
+     "Vmax": 551,
+     "six_a1": 73,
+     "gaps": "a=(49,36,75) b=(7,63,92) c=(96,16,5)"
+    },
+    "162": {
+     "Vmax": 562,
+     "six_a1": 71,
+     "gaps": "a=(57,10,5) b=(48,9,76) c=(48,6,22)"
+    },
+    "163": {
+     "Vmax": 550,
+     "six_a1": 77,
+     "gaps": "a=(98,5,14) b=(20,66,21) c=(76,91,5)"
+    },
+    "164": {
+     "Vmax": 568,
+     "six_a1": 74,
+     "gaps": "a=(70,6,67) b=(87,27,6) c=(6,70,4)"
+    },
+    "165": {
+     "Vmax": 566,
+     "six_a1": 76,
+     "gaps": "a=(8,40,17) b=(95,95,5) c=(85,59,4)"
+    },
+    "166": {
+     "Vmax": 558,
+     "six_a1": 78,
+     "gaps": "a=(5,87,79) b=(12,88,37) c=(6,21,69)"
+    },
+    "167": {
+     "Vmax": 567,
+     "six_a1": 78,
+     "gaps": "a=(92,6,5) b=(56,41,83) c=(4,81,72)"
+    },
+    "168": {
+     "Vmax": 576,
+     "six_a1": 78,
+     "gaps": "a=(6,4,61) b=(77,28,38) c=(77,41,67)"
+    },
+    "169": {
+     "Vmax": 576,
+     "six_a1": 75,
+     "gaps": "a=(5,12,6) b=(75,55,69) c=(67,63,66)"
+    },
+    "170": {
+     "Vmax": 584,
+     "six_a1": 76,
+     "gaps": "a=(7,78,31) b=(22,9,4) c=(5,68,45)"
+    },
+    "171": {
+     "Vmax": 588,
+     "six_a1": 78,
+     "gaps": "a=(5,6,91) b=(76,4,68) c=(63,61,31)"
+    },
+    "172": {
+     "Vmax": 587,
+     "six_a1": 79,
+     "gaps": "a=(6,37,85) b=(74,6,21) c=(20,19,18)"
+    },
+    "173": {
+     "Vmax": 595,
+     "six_a1": 77,
+     "gaps": "a=(96,5,18) b=(13,30,31) c=(79,6,69)"
+    },
+    "174": {
+     "Vmax": 603,
+     "six_a1": 78,
+     "gaps": "a=(7,4,83) b=(84,6,53) c=(41,37,20)"
+    },
+    "175": {
+     "Vmax": 617,
+     "six_a1": 73,
+     "gaps": "a=(33,8,17) b=(7,80,24) c=(6,52,67)"
+    },
+    "176": {
+     "Vmax": 607,
+     "six_a1": 77,
+     "gaps": "a=(83,16,5) b=(12,95,56) c=(12,59,30)"
+    },
+    "177": {
+     "Vmax": 635,
+     "six_a1": 73,
+     "gaps": "a=(68,6,27) b=(66,8,5) c=(5,67,25)"
+    },
+    "178": {
+     "Vmax": 611,
+     "six_a1": 79,
+     "gaps": "a=(25,25,48) b=(10,85,5) c=(58,5,22)"
+    },
+    "179": {
+     "Vmax": 620,
+     "six_a1": 79,
+     "gaps": "a=(100,36,9) b=(8,14,76) c=(30,27,5)"
+    },
+    "180": {
+     "Vmax": 617,
+     "six_a1": 79,
+     "gaps": "a=(93,17,56) b=(54,97,89) c=(4,83,8)"
+    },
+    "181": {
+     "Vmax": 633,
+     "six_a1": 78,
+     "gaps": "a=(28,62,39) b=(45,62,5) c=(33,8,4)"
+    },
+    "182": {
+     "Vmax": 648,
+     "six_a1": 78,
+     "gaps": "a=(42,6,98) b=(49,17,80) c=(17,42,6)"
+    },
+    "183": {
+     "Vmax": 628,
+     "six_a1": 80,
+     "gaps": "a=(92,33,23) b=(4,49,73) c=(7,73,5)"
+    },
+    "184": {
+     "Vmax": 642,
+     "six_a1": 78,
+     "gaps": "a=(27,4,46) b=(8,52,17) c=(48,5,14)"
+    },
+    "185": {
+     "Vmax": 642,
+     "six_a1": 78,
+     "gaps": "a=(22,5,44) b=(8,32,18) c=(52,13,8)"
+    },
+    "186": {
+     "Vmax": 656,
+     "six_a1": 76,
+     "gaps": "a=(91,17,76) b=(9,9,4) c=(90,13,76)"
+    },
+    "187": {
+     "Vmax": 656,
+     "six_a1": 79,
+     "gaps": "a=(34,5,83) b=(77,7,12) c=(4,40,32)"
+    },
+    "188": {
+     "Vmax": 657,
+     "six_a1": 81,
+     "gaps": "a=(16,71,11) b=(30,50,5) c=(5,27,15)"
+    },
+    "189": {
+     "Vmax": 683,
+     "six_a1": 76,
+     "gaps": "a=(90,9,7) b=(5,77,37) c=(6,21,57)"
+    },
+    "190": {
+     "Vmax": 676,
+     "six_a1": 77,
+     "gaps": "a=(79,39,18) b=(40,19,4) c=(67,6,62)"
+    },
+    "191": {
+     "Vmax": 664,
+     "six_a1": 80,
+     "gaps": "a=(35,77,45) b=(78,64,6) c=(8,50,4)"
+    },
+    "192": {
+     "Vmax": 693,
+     "six_a1": 78,
+     "gaps": "a=(59,8,12) b=(8,4,82) c=(7,6,34)"
+    },
+    "193": {
+     "Vmax": 680,
+     "six_a1": 82,
+     "gaps": "a=(7,54,46) b=(52,16,5) c=(4,34,24)"
+    },
+    "194": {
+     "Vmax": 695,
+     "six_a1": 79,
+     "gaps": "a=(32,40,7) b=(5,20,20) c=(32,54,22)"
+    },
+    "195": {
+     "Vmax": 692,
+     "six_a1": 79,
+     "gaps": "a=(92,6,34) b=(4,52,69) c=(58,23,7)"
+    },
+    "196": {
+     "Vmax": 685,
+     "six_a1": 80,
+     "gaps": "a=(4,25,10) b=(47,5,52) c=(46,6,53)"
+    },
+    "197": {
+     "Vmax": 692,
+     "six_a1": 82,
+     "gaps": "a=(49,11,97) b=(6,6,26) c=(33,17,89)"
+    },
+    "198": {
+     "Vmax": 693,
+     "six_a1": 81,
+     "gaps": "a=(84,45,74) b=(7,62,39) c=(32,6,88)"
+    },
+    "199": {
+     "Vmax": 700,
+     "six_a1": 83,
+     "gaps": "a=(72,14,80) b=(5,24,56) c=(4,15,97)"
+    },
+    "200": {
+     "Vmax": 710,
+     "six_a1": 82,
+     "gaps": "a=(70,29,5) b=(49,30,51) c=(26,97,51)"
+    },
+    "201": {
+     "Vmax": 700,
+     "six_a1": 83,
+     "gaps": "a=(15,57,15) b=(16,8,66) c=(12,47,90)"
+    },
+    "202": {
+     "Vmax": 711,
+     "six_a1": 84,
+     "gaps": "a=(51,6,57) b=(37,29,71) c=(7,4,97)"
+    },
+    "203": {
+     "Vmax": 720,
+     "six_a1": 84,
+     "gaps": "a=(56,89,41) b=(80,85,21) c=(6,39,10)"
+    },
+    "204": {
+     "Vmax": 728,
+     "six_a1": 82,
+     "gaps": "a=(20,62,26) b=(86,6,6) c=(63,21,67)"
+    },
+    "205": {
+     "Vmax": 726,
+     "six_a1": 81,
+     "gaps": "a=(100,56,33) b=(33,35,97) c=(5,34,4)"
+    },
+    "206": {
+     "Vmax": 732,
+     "six_a1": 84,
+     "gaps": "a=(98,6,100) b=(63,26,90) c=(5,6,70)"
+    },
+    "207": {
+     "Vmax": 736,
+     "six_a1": 83,
+     "gaps": "a=(5,71,94) b=(91,44,86) c=(35,6,57)"
+    },
+    "208": {
+     "Vmax": 741,
+     "six_a1": 81,
+     "gaps": "a=(23,10,38) b=(7,13,29) c=(24,6,71)"
+    },
+    "209": {
+     "Vmax": 747,
+     "six_a1": 84,
+     "gaps": "a=(12,60,6) b=(99,33,5) c=(44,46,54)"
+    },
+    "210": {
+     "Vmax": 794,
+     "six_a1": 76,
+     "gaps": "a=(31,94,78) b=(6,7,7) c=(29,97,77)"
+    },
+    "211": {
+     "Vmax": 748,
+     "six_a1": 86,
+     "gaps": "a=(96,4,39) b=(12,52,21) c=(34,6,78)"
+    },
+    "212": {
+     "Vmax": 756,
+     "six_a1": 87,
+     "gaps": "a=(98,57,31) b=(31,100,99) c=(7,4,94)"
+    },
+    "213": {
+     "Vmax": 768,
+     "six_a1": 84,
+     "gaps": "a=(32,40,88) b=(84,63,6) c=(72,5,6)"
+    },
+    "214": {
+     "Vmax": 784,
+     "six_a1": 80,
+     "gaps": "a=(83,86,21) b=(24,84,96) c=(6,8,16)"
+    },
+    "215": {
+     "Vmax": 773,
+     "six_a1": 82,
+     "gaps": "a=(7,53,31) b=(6,56,8) c=(4,22,28)"
+    },
+    "216": {
+     "Vmax": 783,
+     "six_a1": 84,
+     "gaps": "a=(6,46,73) b=(43,5,47) c=(52,6,41)"
+    },
+    "217": {
+     "Vmax": 781,
+     "six_a1": 86,
+     "gaps": "a=(29,10,4) b=(5,54,61) c=(8,47,45)"
+    },
+    "218": {
+     "Vmax": 784,
+     "six_a1": 86,
+     "gaps": "a=(41,9,79) b=(16,5,18) c=(30,31,68)"
+    },
+    "219": {
+     "Vmax": 811,
+     "six_a1": 80,
+     "gaps": "a=(5,8,31) b=(94,24,91) c=(69,22,92)"
+    },
+    "220": {
+     "Vmax": 789,
+     "six_a1": 84,
+     "gaps": "a=(89,7,66) b=(32,47,4) c=(50,8,75)"
+    },
+    "221": {
+     "Vmax": 796,
+     "six_a1": 86,
+     "gaps": "a=(55,69,33) b=(24,90,16) c=(5,6,93)"
+    },
+    "222": {
+     "Vmax": 808,
+     "six_a1": 83,
+     "gaps": "a=(31,8,15) b=(65,7,6) c=(43,32,18)"
+    },
+    "223": {
+     "Vmax": 801,
+     "six_a1": 87,
+     "gaps": "a=(85,6,85) b=(46,45,36) c=(47,29,5)"
+    },
+    "224": {
+     "Vmax": 810,
+     "six_a1": 87,
+     "gaps": "a=(11,22,38) b=(32,49,13) c=(58,5,6)"
+    },
+    "225": {
+     "Vmax": 810,
+     "six_a1": 84,
+     "gaps": "a=(22,14,44) b=(16,38,6) c=(6,57,44)"
+    },
+    "226": {
+     "Vmax": 820,
+     "six_a1": 86,
+     "gaps": "a=(87,38,64) b=(65,29,91) c=(12,7,7)"
+    },
+    "227": {
+     "Vmax": 816,
+     "six_a1": 87,
+     "gaps": "a=(87,42,21) b=(24,97,91) c=(5,63,10)"
+    },
+    "228": {
+     "Vmax": 818,
+     "six_a1": 88,
+     "gaps": "a=(55,4,46) b=(87,42,7) c=(34,23,39)"
+    },
+    "229": {
+     "Vmax": 829,
+     "six_a1": 86,
+     "gaps": "a=(5,10,48) b=(38,54,12) c=(83,9,18)"
+    },
+    "230": {
+     "Vmax": 845,
+     "six_a1": 82,
+     "gaps": "a=(76,10,73) b=(95,8,96) c=(25,8,23)"
+    },
+    "231": {
+     "Vmax": 848,
+     "six_a1": 85,
+     "gaps": "a=(11,28,45) b=(45,7,6) c=(48,32,41)"
+    },
+    "232": {
+     "Vmax": 841,
+     "six_a1": 89,
+     "gaps": "a=(7,5,63) b=(42,67,68) c=(70,41,98)"
+    },
+    "233": {
+     "Vmax": 851,
+     "six_a1": 88,
+     "gaps": "a=(71,21,6) b=(5,7,92) c=(31,17,51)"
+    },
+    "234": {
+     "Vmax": 858,
+     "six_a1": 87,
+     "gaps": "a=(15,97,7) b=(31,76,27) c=(5,6,51)"
+    },
+    "235": {
+     "Vmax": 858,
+     "six_a1": 87,
+     "gaps": "a=(7,8,45) b=(13,5,70) c=(16,21,79)"
+    },
+    "236": {
+     "Vmax": 852,
+     "six_a1": 87,
+     "gaps": "a=(28,8,47) b=(83,40,79) c=(83,85,12)"
+    },
+    "237": {
+     "Vmax": 870,
+     "six_a1": 87,
+     "gaps": "a=(64,59,18) b=(31,6,5) c=(52,76,18)"
+    },
+    "238": {
+     "Vmax": 882,
+     "six_a1": 87,
+     "gaps": "a=(59,15,6) b=(92,37,5) c=(95,70,7)"
+    },
+    "239": {
+     "Vmax": 892,
+     "six_a1": 83,
+     "gaps": "a=(6,76,7) b=(72,79,6) c=(69,42,6)"
+    },
+    "240": {
+     "Vmax": 890,
+     "six_a1": 85,
+     "gaps": "a=(49,4,92) b=(78,6,58) c=(8,19,9)"
+    },
+    "241": {
+     "Vmax": 876,
+     "six_a1": 90,
+     "gaps": "a=(90,53,19) b=(21,42,44) c=(51,15,7)"
+    },
+    "242": {
+     "Vmax": 886,
+     "six_a1": 89,
+     "gaps": "a=(72,5,34) b=(94,6,70) c=(63,64,7)"
+    },
+    "243": {
+     "Vmax": 880,
+     "six_a1": 92,
+     "gaps": "a=(100,29,62) b=(70,4,58) c=(44,35,6)"
+    },
+    "244": {
+     "Vmax": 892,
+     "six_a1": 89,
+     "gaps": "a=(85,21,83) b=(37,8,4) c=(97,9,98)"
+    },
+    "245": {
+     "Vmax": 918,
+     "six_a1": 87,
+     "gaps": "a=(24,6,6) b=(91,15,32) c=(90,18,15)"
+    },
+    "246": {
+     "Vmax": 912,
+     "six_a1": 87,
+     "gaps": "a=(72,55,5) b=(30,55,46) c=(50,8,7)"
+    },
+    "247": {
+     "Vmax": 902,
+     "six_a1": 91,
+     "gaps": "a=(43,66,12) b=(30,70,6) c=(61,9,4)"
+    },
+    "248": {
+     "Vmax": 903,
+     "six_a1": 93,
+     "gaps": "a=(5,80,100) b=(61,99,5) c=(43,20,12)"
+    },
+    "249": {
+     "Vmax": 923,
+     "six_a1": 88,
+     "gaps": "a=(5,8,56) b=(20,45,41) c=(59,16,29)"
+    },
+    "250": {
+     "Vmax": 916,
+     "six_a1": 92,
+     "gaps": "a=(64,6,86) b=(17,5,86) c=(9,19,68)"
+    },
+    "251": {
+     "Vmax": 965,
+     "six_a1": 82,
+     "gaps": "a=(23,7,67) b=(5,53,8) c=(68,9,21)"
+    },
+    "252": {
+     "Vmax": 936,
+     "six_a1": 90,
+     "gaps": "a=(46,64,6) b=(80,5,7) c=(60,24,53)"
+    },
+    "253": {
+     "Vmax": 936,
+     "six_a1": 90,
+     "gaps": "a=(79,19,9) b=(44,7,89) c=(57,4,8)"
+    },
+    "254": {
+     "Vmax": 936,
+     "six_a1": 90,
+     "gaps": "a=(60,18,76) b=(14,20,11) c=(82,7,93)"
+    },
+    "255": {
+     "Vmax": 936,
+     "six_a1": 90,
+     "gaps": "a=(23,87,22) b=(6,45,78) c=(41,28,8)"
+    },
+    "256": {
+     "Vmax": 949,
+     "six_a1": 89,
+     "gaps": "a=(5,11,63) b=(37,95,46) c=(98,40,41)"
+    },
+    "257": {
+     "Vmax": 971,
+     "six_a1": 88,
+     "gaps": "a=(93,7,6) b=(6,54,97) c=(69,52,71)"
+    },
+    "258": {
+     "Vmax": 961,
+     "six_a1": 89,
+     "gaps": "a=(11,33,8) b=(99,5,49) c=(78,5,75)"
+    },
+    "259": {
+     "Vmax": 972,
+     "six_a1": 90,
+     "gaps": "a=(67,26,97) b=(78,6,6) c=(43,50,49)"
+    },
+    "260": {
+     "Vmax": 976,
+     "six_a1": 89,
+     "gaps": "a=(7,6,33) b=(8,57,66) c=(13,49,89)"
+    },
+    "261": {
+     "Vmax": 997,
+     "six_a1": 86,
+     "gaps": "a=(7,65,46) b=(70,40,33) c=(5,33,7)"
+    },
+    "262": {
+     "Vmax": 964,
+     "six_a1": 92,
+     "gaps": "a=(53,9,6) b=(51,72,26) c=(73,38,59)"
+    },
+    "263": {
+     "Vmax": 982,
+     "six_a1": 89,
+     "gaps": "a=(83,97,51) b=(7,50,6) c=(42,92,95)"
+    },
+    "264": {
+     "Vmax": 990,
+     "six_a1": 90,
+     "gaps": "a=(75,40,22) b=(82,5,7) c=(86,14,40)"
+    },
+    "265": {
+     "Vmax": 1019,
+     "six_a1": 85,
+     "gaps": "a=(13,12,74) b=(8,79,12) c=(72,9,5)"
+    },
+    "266": {
+     "Vmax": 993,
+     "six_a1": 90,
+     "gaps": "a=(31,6,67) b=(6,88,31) c=(62,37,5)"
+    },
+    "267": {
+     "Vmax": 1012,
+     "six_a1": 89,
+     "gaps": "a=(93,5,89) b=(54,7,10) c=(42,57,88)"
+    },
+    "268": {
+     "Vmax": 1001,
+     "six_a1": 91,
+     "gaps": "a=(25,20,91) b=(90,9,5) c=(19,22,10)"
+    },
+    "269": {
+     "Vmax": 1003,
+     "six_a1": 92,
+     "gaps": "a=(93,38,89) b=(7,34,23) c=(46,66,62)"
+    },
+    "270": {
+     "Vmax": 1024,
+     "six_a1": 92,
+     "gaps": "a=(47,5,14) b=(95,50,7) c=(51,87,6)"
+    },
+    "271": {
+     "Vmax": 1024,
+     "six_a1": 92,
+     "gaps": "a=(91,9,5) b=(33,58,13) c=(61,6,57)"
+    },
+    "272": {
+     "Vmax": 1021,
+     "six_a1": 92,
+     "gaps": "a=(76,7,6) b=(66,6,100) c=(92,25,100)"
+    },
+    "273": {
+     "Vmax": 1027,
+     "six_a1": 92,
+     "gaps": "a=(60,7,6) b=(91,62,51) c=(64,58,80)"
+    },
+    "274": {
+     "Vmax": 1017,
+     "six_a1": 93,
+     "gaps": "a=(5,11,31) b=(76,35,71) c=(79,28,100)"
+    },
+    "275": {
+     "Vmax": 1042,
+     "six_a1": 89,
+     "gaps": "a=(43,38,22) b=(6,38,25) c=(43,84,5)"
+    },
+    "276": {
+     "Vmax": 1043,
+     "six_a1": 91,
+     "gaps": "a=(16,62,58) b=(60,17,12) c=(7,52,7)"
+    },
+    "277": {
+     "Vmax": 1043,
+     "six_a1": 94,
+     "gaps": "a=(50,52,23) b=(67,25,5) c=(6,75,9)"
+    },
+    "278": {
+     "Vmax": 1043,
+     "six_a1": 91,
+     "gaps": "a=(80,75,47) b=(6,52,7) c=(40,74,94)"
+    },
+    "279": {
+     "Vmax": 1035,
+     "six_a1": 96,
+     "gaps": "a=(6,16,89) b=(13,51,46) c=(69,36,15)"
+    },
+    "280": {
+     "Vmax": 1067,
+     "six_a1": 88,
+     "gaps": "a=(70,79,16) b=(49,10,7) c=(68,33,64)"
+    },
+    "281": {
+     "Vmax": 1072,
+     "six_a1": 92,
+     "gaps": "a=(6,37,40) b=(7,17,83) c=(48,31,28)"
+    },
+    "282": {
+     "Vmax": 1065,
+     "six_a1": 93,
+     "gaps": "a=(94,17,81) b=(80,96,28) c=(5,7,100)"
+    },
+    "283": {
+     "Vmax": 1088,
+     "six_a1": 88,
+     "gaps": "a=(30,12,4) b=(30,75,8) c=(8,97,8)"
+    },
+    "284": {
+     "Vmax": 1086,
+     "six_a1": 93,
+     "gaps": "a=(7,6,12) b=(10,60,70) c=(10,56,71)"
+    },
+    "285": {
+     "Vmax": 1080,
+     "six_a1": 93,
+     "gaps": "a=(47,82,79) b=(15,8,5) c=(52,77,84)"
+    },
+    "286": {
+     "Vmax": 1083,
+     "six_a1": 93,
+     "gaps": "a=(51,86,85) b=(83,46,47) c=(89,9,5)"
+    },
+    "287": {
+     "Vmax": 1098,
+     "six_a1": 93,
+     "gaps": "a=(76,7,74) b=(9,7,96) c=(81,73,28)"
+    },
+    "288": {
+     "Vmax": 1107,
+     "six_a1": 93,
+     "gaps": "a=(34,6,69) b=(10,86,6) c=(37,86,68)"
+    },
+    "289": {
+     "Vmax": 1075,
+     "six_a1": 98,
+     "gaps": "a=(73,45,5) b=(22,24,90) c=(8,9,36)"
+    },
+    "290": {
+     "Vmax": 1101,
+     "six_a1": 93,
+     "gaps": "a=(7,7,34) b=(26,92,20) c=(46,86,9)"
+    },
+    "291": {
+     "Vmax": 1108,
+     "six_a1": 92,
+     "gaps": "a=(73,53,7) b=(5,97,7) c=(9,46,69)"
+    },
+    "292": {
+     "Vmax": 1114,
+     "six_a1": 95,
+     "gaps": "a=(51,29,96) b=(7,6,61) c=(52,61,87)"
+    },
+    "293": {
+     "Vmax": 1117,
+     "six_a1": 92,
+     "gaps": "a=(22,8,34) b=(12,39,52) c=(12,70,6)"
+    },
+    "294": {
+     "Vmax": 1136,
+     "six_a1": 91,
+     "gaps": "a=(16,63,71) b=(7,23,6) c=(13,80,71)"
+    },
+    "295": {
+     "Vmax": 1143,
+     "six_a1": 93,
+     "gaps": "a=(21,49,6) b=(16,55,22) c=(6,8,45)"
+    },
+    "296": {
+     "Vmax": 1115,
+     "six_a1": 97,
+     "gaps": "a=(48,35,26) b=(26,95,46) c=(43,48,5)"
+    },
+    "297": {
+     "Vmax": 1126,
+     "six_a1": 95,
+     "gaps": "a=(6,21,46) b=(67,63,10) c=(23,78,6)"
+    },
+    "298": {
+     "Vmax": 1125,
+     "six_a1": 96,
+     "gaps": "a=(49,80,23) b=(9,6,91) c=(19,82,15)"
+    },
+    "299": {
+     "Vmax": 1132,
+     "six_a1": 98,
+     "gaps": "a=(52,20,16) b=(23,28,37) c=(47,5,7)"
+    },
+    "300": {
+     "Vmax": 1142,
+     "six_a1": 97,
+     "gaps": "a=(60,7,9) b=(6,54,62) c=(53,58,52)"
+    },
+    "301": {
+     "Vmax": 1152,
+     "six_a1": 96,
+     "gaps": "a=(53,32,15) b=(84,32,33) c=(99,6,6)"
+    },
+    "302": {
+     "Vmax": 1161,
+     "six_a1": 93,
+     "gaps": "a=(5,19,8) b=(70,32,29) c=(73,19,31)"
+    },
+    "303": {
+     "Vmax": 1143,
+     "six_a1": 96,
+     "gaps": "a=(11,23,97) b=(61,19,46) c=(38,27,7)"
+    },
+    "304": {
+     "Vmax": 1166,
+     "six_a1": 94,
+     "gaps": "a=(9,11,26) b=(8,62,94) c=(5,86,70)"
+    },
+    "305": {
+     "Vmax": 1178,
+     "six_a1": 97,
+     "gaps": "a=(78,6,89) b=(13,8,72) c=(13,5,85)"
+    },
+    "306": {
+     "Vmax": 1187,
+     "six_a1": 94,
+     "gaps": "a=(36,70,41) b=(6,62,79) c=(80,7,8)"
+    },
+    "307": {
+     "Vmax": 1182,
+     "six_a1": 96,
+     "gaps": "a=(9,5,43) b=(6,37,25) c=(35,11,30)"
+    },
+    "308": {
+     "Vmax": 1190,
+     "six_a1": 94,
+     "gaps": "a=(5,27,11) b=(77,10,14) c=(77,33,8)"
+    },
+    "309": {
+     "Vmax": 1190,
+     "six_a1": 97,
+     "gaps": "a=(96,6,9) b=(99,6,95) c=(22,84,79)"
+    },
+    "310": {
+     "Vmax": 1188,
+     "six_a1": 99,
+     "gaps": "a=(55,6,36) b=(9,22,47) c=(18,5,71)"
+    },
+    "311": {
+     "Vmax": 1175,
+     "six_a1": 100,
+     "gaps": "a=(6,89,78) b=(96,45,35) c=(6,53,7)"
+    },
+    "312": {
+     "Vmax": 1198,
+     "six_a1": 95,
+     "gaps": "a=(17,30,23) b=(20,20,25) c=(5,69,6)"
+    },
+    "313": {
+     "Vmax": 1205,
+     "six_a1": 97,
+     "gaps": "a=(39,77,61) b=(14,78,66) c=(7,7,77)"
+    },
+    "314": {
+     "Vmax": 1214,
+     "six_a1": 97,
+     "gaps": "a=(41,42,16) b=(58,40,8) c=(12,7,79)"
+    },
+    "315": {
+     "Vmax": 1222,
+     "six_a1": 92,
+     "gaps": "a=(8,10,38) b=(91,49,98) c=(54,50,97)"
+    },
+    "316": {
+     "Vmax": 1225,
+     "six_a1": 98,
+     "gaps": "a=(34,97,87) b=(7,53,9) c=(84,96,39)"
+    },
+    "317": {
+     "Vmax": 1211,
+     "six_a1": 100,
+     "gaps": "a=(43,79,60) b=(45,67,36) c=(86,6,6)"
+    },
+    "318": {
+     "Vmax": 1238,
+     "six_a1": 97,
+     "gaps": "a=(36,31,8) b=(5,60,55) c=(7,32,31)"
+    },
+    "319": {
+     "Vmax": 1229,
+     "six_a1": 94,
+     "gaps": "a=(8,11,13) b=(40,41,37) c=(51,29,35)"
+    },
+    "320": {
+     "Vmax": 1260,
+     "six_a1": 93,
+     "gaps": "a=(69,9,96) b=(100,8,42) c=(28,12,7)"
+    },
+    "321": {
+     "Vmax": 1233,
+     "six_a1": 99,
+     "gaps": "a=(23,7,13) b=(37,26,91) c=(44,17,76)"
+    },
+    "322": {
+     "Vmax": 1249,
+     "six_a1": 98,
+     "gaps": "a=(8,6,37) b=(9,43,81) c=(36,16,87)"
+    },
+    "323": {
+     "Vmax": 1242,
+     "six_a1": 96,
+     "gaps": "a=(6,46,30) b=(36,50,95) c=(6,19,95)"
+    },
+    "324": {
+     "Vmax": 1246,
+     "six_a1": 101,
+     "gaps": "a=(19,92,39) b=(40,28,17) c=(28,59,7)"
+    },
+    "325": {
+     "Vmax": 1256,
+     "six_a1": 100,
+     "gaps": "a=(56,6,8) b=(20,89,78) c=(20,69,66)"
+    },
+    "326": {
+     "Vmax": 1261,
+     "six_a1": 95,
+     "gaps": "a=(91,10,26) b=(54,7,36) c=(29,42,8)"
+    },
+    "327": {
+     "Vmax": 1285,
+     "six_a1": 95,
+     "gaps": "a=(5,11,48) b=(9,32,66) c=(8,75,28)"
+    },
+    "328": {
+     "Vmax": 1269,
+     "six_a1": 99,
+     "gaps": "a=(7,57,18) b=(29,86,7) c=(71,23,36)"
+    },
+    "329": {
+     "Vmax": 1296,
+     "six_a1": 96,
+     "gaps": "a=(37,71,76) b=(6,57,35) c=(8,22,76)"
+    },
+    "330": {
+     "Vmax": 1286,
+     "six_a1": 97,
+     "gaps": "a=(85,6,57) b=(9,75,91) c=(52,39,6)"
+    },
+    "331": {
+     "Vmax": 1317,
+     "six_a1": 96,
+     "gaps": "a=(83,6,8) b=(9,51,57) c=(8,24,35)"
+    },
+    "332": {
+     "Vmax": 1281,
+     "six_a1": 102,
+     "gaps": "a=(50,80,96) b=(81,6,7) c=(47,77,33)"
+    },
+    "333": {
+     "Vmax": 1305,
+     "six_a1": 99,
+     "gaps": "a=(82,16,9) b=(8,58,72) c=(8,5,85)"
+    },
+    "334": {
+     "Vmax": 1277,
+     "six_a1": 103,
+     "gaps": "a=(26,77,14) b=(34,7,60) c=(42,13,42)"
+    },
+    "335": {
+     "Vmax": 1307,
+     "six_a1": 100,
+     "gaps": "a=(8,7,91) b=(53,11,87) c=(6,41,57)"
+    },
+    "336": {
+     "Vmax": 1314,
+     "six_a1": 99,
+     "gaps": "a=(28,66,50) b=(6,7,56) c=(33,61,93)"
+    },
+    "337": {
+     "Vmax": 1296,
+     "six_a1": 99,
+     "gaps": "a=(9,81,18) b=(79,42,9) c=(61,48,6)"
+    },
+    "338": {
+     "Vmax": 1314,
+     "six_a1": 102,
+     "gaps": "a=(66,49,58) b=(19,6,25) c=(78,49,76)"
+    },
+    "339": {
+     "Vmax": 1332,
+     "six_a1": 99,
+     "gaps": "a=(8,41,79) b=(76,39,96) c=(7,7,96)"
+    },
+    "340": {
+     "Vmax": 1337,
+     "six_a1": 100,
+     "gaps": "a=(73,7,22) b=(40,41,43) c=(6,39,92)"
+    },
+    "341": {
+     "Vmax": 1338,
+     "six_a1": 99,
+     "gaps": "a=(7,82,35) b=(40,49,16) c=(10,5,78)"
+    },
+    "342": {
+     "Vmax": 1329,
+     "six_a1": 102,
+     "gaps": "a=(5,8,70) b=(94,49,8) c=(79,34,24)"
+    },
+    "343": {
+     "Vmax": 1352,
+     "six_a1": 100,
+     "gaps": "a=(25,6,7) b=(31,9,64) c=(22,19,57)"
+    },
+    "344": {
+     "Vmax": 1355,
+     "six_a1": 97,
+     "gaps": "a=(7,19,5) b=(93,56,60) c=(85,64,52)"
+    },
+    "345": {
+     "Vmax": 1350,
+     "six_a1": 102,
+     "gaps": "a=(75,32,6) b=(25,43,57) c=(6,8,63)"
+    },
+    "346": {
+     "Vmax": 1367,
+     "six_a1": 97,
+     "gaps": "a=(7,59,7) b=(54,84,44) c=(54,31,48)"
+    },
+    "347": {
+     "Vmax": 1341,
+     "six_a1": 102,
+     "gaps": "a=(24,16,82) b=(73,77,7) c=(6,68,8)"
+    },
+    "348": {
+     "Vmax": 1385,
+     "six_a1": 97,
+     "gaps": "a=(58,18,74) b=(7,11,9) c=(65,11,79)"
+    },
+    "349": {
+     "Vmax": 1394,
+     "six_a1": 97,
+     "gaps": "a=(7,8,38) b=(64,98,76) c=(96,66,79)"
+    },
+    "350": {
+     "Vmax": 1387,
+     "six_a1": 98,
+     "gaps": "a=(8,59,6) b=(64,77,74) c=(67,25,73)"
+    },
+    "351": {
+     "Vmax": 1395,
+     "six_a1": 96,
+     "gaps": "a=(6,11,30) b=(49,53,44) c=(74,27,43)"
+    },
+    "352": {
+     "Vmax": 1404,
+     "six_a1": 99,
+     "gaps": "a=(44,55,7) b=(6,8,68) c=(22,54,45)"
+    },
+    "353": {
+     "Vmax": 1412,
+     "six_a1": 97,
+     "gaps": "a=(29,9,6) b=(58,69,31) c=(56,73,8)"
+    },
+    "354": {
+     "Vmax": 1407,
+     "six_a1": 99,
+     "gaps": "a=(66,8,72) b=(62,9,5) c=(86,9,39)"
+    },
+    "355": {
+     "Vmax": 1385,
+     "six_a1": 97,
+     "gaps": "a=(35,19,10) b=(4,57,8) c=(39,57,12)"
+    },
+    "356": {
+     "Vmax": 1401,
+     "six_a1": 99,
+     "gaps": "a=(5,74,8) b=(10,90,90) c=(7,61,88)"
+    },
+    "357": {
+     "Vmax": 1423,
+     "six_a1": 98,
+     "gaps": "a=(6,30,7) b=(41,7,63) c=(53,9,48)"
+    },
+    "358": {
+     "Vmax": 1395,
+     "six_a1": 105,
+     "gaps": "a=(7,60,98) b=(58,6,11) c=(11,35,89)"
+    },
+    "359": {
+     "Vmax": 1405,
+     "six_a1": 104,
+     "gaps": "a=(17,6,91) b=(92,8,33) c=(82,44,65)"
+    },
+    "360": {
+     "Vmax": 1439,
+     "six_a1": 100,
+     "gaps": "a=(14,6,83) b=(26,34,8) c=(41,6,40)"
+    },
+    "361": {
+     "Vmax": 1416,
+     "six_a1": 102,
+     "gaps": "a=(12,58,29) b=(31,42,22) c=(25,10,5)"
+    },
+    "362": {
+     "Vmax": 1421,
+     "six_a1": 100,
+     "gaps": "a=(6,22,6) b=(58,47,89) c=(52,58,77)"
+    },
+    "363": {
+     "Vmax": 1412,
+     "six_a1": 106,
+     "gaps": "a=(6,62,30) b=(17,22,75) c=(81,28,7)"
+    },
+    "364": {
+     "Vmax": 1441,
+     "six_a1": 101,
+     "gaps": "a=(70,8,96) b=(6,65,7) c=(66,40,39)"
+    },
+    "365": {
+     "Vmax": 1436,
+     "six_a1": 103,
+     "gaps": "a=(41,78,21) b=(83,50,67) c=(91,8,7)"
+    },
+    "366": {
+     "Vmax": 1458,
+     "six_a1": 102,
+     "gaps": "a=(18,83,37) b=(6,99,8) c=(7,12,48)"
+    },
+    "367": {
+     "Vmax": 1450,
+     "six_a1": 101,
+     "gaps": "a=(5,88,19) b=(27,9,65) c=(74,28,8)"
+    },
+    "368": {
+     "Vmax": 1451,
+     "six_a1": 103,
+     "gaps": "a=(73,8,93) b=(5,10,69) c=(71,47,81)"
+    },
+    "369": {
+     "Vmax": 1450,
+     "six_a1": 107,
+     "gaps": "a=(80,93,6) b=(11,50,25) c=(93,35,5)"
+    },
+    "370": {
+     "Vmax": 1460,
+     "six_a1": 103,
+     "gaps": "a=(56,43,16) b=(68,26,9) c=(7,69,8)"
+    },
+    "371": {
+     "Vmax": 1463,
+     "six_a1": 103,
+     "gaps": "a=(36,8,21) b=(35,93,8) c=(49,48,41)"
+    },
+    "372": {
+     "Vmax": 1485,
+     "six_a1": 99,
+     "gaps": "a=(80,11,6) b=(88,28,87) c=(84,29,13)"
+    },
+    "373": {
+     "Vmax": 1481,
+     "six_a1": 103,
+     "gaps": "a=(42,36,61) b=(68,74,6) c=(15,9,42)"
+    },
+    "374": {
+     "Vmax": 1483,
+     "six_a1": 101,
+     "gaps": "a=(48,10,8) b=(46,73,90) c=(93,69,89)"
+    },
+    "375": {
+     "Vmax": 1486,
+     "six_a1": 101,
+     "gaps": "a=(8,31,10) b=(7,71,39) c=(6,74,44)"
+    },
+    "376": {
+     "Vmax": 1489,
+     "six_a1": 101,
+     "gaps": "a=(5,77,7) b=(44,65,11) c=(8,41,43)"
+    },
+    "377": {
+     "Vmax": 1507,
+     "six_a1": 104,
+     "gaps": "a=(6,17,93) b=(86,6,11) c=(51,8,77)"
+    },
+    "378": {
+     "Vmax": 1512,
+     "six_a1": 102,
+     "gaps": "a=(18,74,12) b=(58,7,8) c=(9,39,57)"
+    },
+    "379": {
+     "Vmax": 1520,
+     "six_a1": 103,
+     "gaps": "a=(19,7,8) b=(19,50,76) c=(31,46,79)"
+    },
+    "380": {
+     "Vmax": 1498,
+     "six_a1": 107,
+     "gaps": "a=(87,6,97) b=(23,66,7) c=(99,29,23)"
+    },
+    "381": {
+     "Vmax": 1529,
+     "six_a1": 100,
+     "gaps": "a=(43,68,61) b=(9,68,96) c=(8,64,5)"
+    },
+    "382": {
+     "Vmax": 1538,
+     "six_a1": 103,
+     "gaps": "a=(43,28,7) b=(69,10,77) c=(92,6,24)"
+    },
+    "383": {
+     "Vmax": 1543,
+     "six_a1": 101,
+     "gaps": "a=(65,50,83) b=(7,63,51) c=(7,9,93)"
+    },
+    "384": {
+     "Vmax": 1509,
+     "six_a1": 105,
+     "gaps": "a=(95,53,7) b=(13,78,7) c=(31,41,85)"
+    },
+    "385": {
+     "Vmax": 1551,
+     "six_a1": 102,
+     "gaps": "a=(98,59,22) b=(18,8,9) c=(84,70,25)"
+    },
+    "386": {
+     "Vmax": 1521,
+     "six_a1": 108,
+     "gaps": "a=(83,7,28) b=(6,97,86) c=(28,72,17)"
+    },
+    "387": {
+     "Vmax": 1546,
+     "six_a1": 101,
+     "gaps": "a=(66,22,20) b=(10,24,22) c=(98,6,12)"
+    },
+    "388": {
+     "Vmax": 1544,
+     "six_a1": 106,
+     "gaps": "a=(46,99,13) b=(8,7,93) c=(32,98,88)"
+    },
+    "389": {
+     "Vmax": 1520,
+     "six_a1": 112,
+     "gaps": "a=(23,61,16) b=(6,19,32) c=(6,82,13)"
+    },
+    "390": {
+     "Vmax": 1552,
+     "six_a1": 104,
+     "gaps": "a=(78,11,77) b=(78,48,83) c=(5,51,9)"
+    },
+    "391": {
+     "Vmax": 1542,
+     "six_a1": 105,
+     "gaps": "a=(9,66,54) b=(9,58,25) c=(81,42,10)"
+    },
+    "392": {
+     "Vmax": 1567,
+     "six_a1": 104,
+     "gaps": "a=(12,15,8) b=(21,61,8) c=(29,63,6)"
+    },
+    "393": {
+     "Vmax": 1572,
+     "six_a1": 105,
+     "gaps": "a=(33,70,11) b=(9,70,5) c=(8,33,36)"
+    },
+    "394": {
+     "Vmax": 1569,
+     "six_a1": 105,
+     "gaps": "a=(8,50,42) b=(39,6,57) c=(57,64,9)"
+    },
+    "395": {
+     "Vmax": 1558,
+     "six_a1": 107,
+     "gaps": "a=(24,27,33) b=(7,18,55) c=(11,63,8)"
+    },
+    "396": {
+     "Vmax": 1599,
+     "six_a1": 105,
+     "gaps": "a=(95,13,7) b=(43,59,7) c=(87,86,7)"
+    },
+    "397": {
+     "Vmax": 1628,
+     "six_a1": 97,
+     "gaps": "a=(10,79,52) b=(9,14,6) c=(10,81,45)"
+    },
+    "398": {
+     "Vmax": 1611,
+     "six_a1": 102,
+     "gaps": "a=(33,75,8) b=(12,78,8) c=(29,7,12)"
+    },
+    "399": {
+     "Vmax": 1602,
+     "six_a1": 105,
+     "gaps": "a=(6,33,28) b=(10,82,23) c=(25,40,22)"
+    },
+    "400": {
+     "Vmax": 1609,
+     "six_a1": 104,
+     "gaps": "a=(8,49,13) b=(42,10,68) c=(85,7,24)"
+    },
+    "401": {
+     "Vmax": 1589,
+     "six_a1": 109,
+     "gaps": "a=(24,54,21) b=(26,6,55) c=(8,65,72)"
+    },
+    "402": {
+     "Vmax": 1611,
+     "six_a1": 108,
+     "gaps": "a=(38,81,28) b=(80,8,7) c=(6,83,43)"
+    },
+    "403": {
+     "Vmax": 1603,
+     "six_a1": 110,
+     "gaps": "a=(11,6,51) b=(96,68,8) c=(56,63,14)"
+    },
+    "404": {
+     "Vmax": 1633,
+     "six_a1": 104,
+     "gaps": "a=(22,8,90) b=(46,58,19) c=(54,10,7)"
+    },
+    "405": {
+     "Vmax": 1613,
+     "six_a1": 106,
+     "gaps": "a=(7,49,8) b=(10,58,59) c=(22,86,38)"
+    },
+    "406": {
+     "Vmax": 1652,
+     "six_a1": 103,
+     "gaps": "a=(37,66,7) b=(58,12,6) c=(8,70,34)"
+    },
+    "407": {
+     "Vmax": 1647,
+     "six_a1": 102,
+     "gaps": "a=(43,51,28) b=(18,58,44) c=(13,12,6)"
+    },
+    "408": {
+     "Vmax": 1625,
+     "six_a1": 109,
+     "gaps": "a=(77,51,7) b=(89,15,61) c=(7,47,91)"
+    },
+    "409": {
+     "Vmax": 1663,
+     "six_a1": 104,
+     "gaps": "a=(6,24,73) b=(65,10,89) c=(82,72,9)"
+    },
+    "410": {
+     "Vmax": 1641,
+     "six_a1": 108,
+     "gaps": "a=(43,8,31) b=(7,51,45) c=(35,42,79)"
+    },
+    "411": {
+     "Vmax": 1659,
+     "six_a1": 108,
+     "gaps": "a=(45,95,7) b=(10,46,47) c=(15,51,6)"
+    },
+    "412": {
+     "Vmax": 1660,
+     "six_a1": 107,
+     "gaps": "a=(45,74,20) b=(61,75,24) c=(67,8,7)"
+    },
+    "413": {
+     "Vmax": 1674,
+     "six_a1": 105,
+     "gaps": "a=(40,29,68) b=(6,25,26) c=(75,9,53)"
+    },
+    "414": {
+     "Vmax": 1664,
+     "six_a1": 106,
+     "gaps": "a=(74,25,10) b=(15,56,85) c=(8,57,6)"
+    },
+    "415": {
+     "Vmax": 1663,
+     "six_a1": 107,
+     "gaps": "a=(72,9,66) b=(97,10,34) c=(33,72,98)"
+    },
+    "416": {
+     "Vmax": 1680,
+     "six_a1": 108,
+     "gaps": "a=(32,86,92) b=(53,7,7) c=(32,80,60)"
+    },
+    "417": {
+     "Vmax": 1664,
+     "six_a1": 112,
+     "gaps": "a=(47,86,40) b=(8,23,41) c=(65,67,91)"
+    },
+    "418": {
+     "Vmax": 1699,
+     "six_a1": 107,
+     "gaps": "a=(42,13,11) b=(14,42,7) c=(37,55,7)"
+    },
+    "419": {
+     "Vmax": 1685,
+     "six_a1": 106,
+     "gaps": "a=(12,23,9) b=(75,5,30) c=(54,13,40)"
+    },
+    "420": {
+     "Vmax": 1709,
+     "six_a1": 106,
+     "gaps": "a=(63,83,29) b=(26,92,58) c=(9,8,13)"
+    },
+    "421": {
+     "Vmax": 1680,
+     "six_a1": 111,
+     "gaps": "a=(75,43,8) b=(51,8,49) c=(26,16,39)"
+    },
+    "422": {
+     "Vmax": 1692,
+     "six_a1": 111,
+     "gaps": "a=(14,70,6) b=(84,8,84) c=(99,61,77)"
+    },
+    "423": {
+     "Vmax": 1705,
+     "six_a1": 110,
+     "gaps": "a=(30,65,65) b=(8,7,100) c=(83,55,24)"
+    },
+    "424": {
+     "Vmax": 1719,
+     "six_a1": 105,
+     "gaps": "a=(9,18,6) b=(61,78,15) c=(65,71,10)"
+    },
+    "425": {
+     "Vmax": 1724,
+     "six_a1": 109,
+     "gaps": "a=(8,95,89) b=(43,62,7) c=(9,26,80)"
+    },
+    "426": {
+     "Vmax": 1714,
+     "six_a1": 110,
+     "gaps": "a=(82,60,27) b=(8,12,81) c=(82,86,60)"
+    },
+    "427": {
+     "Vmax": 1728,
+     "six_a1": 111,
+     "gaps": "a=(28,27,11) b=(66,6,9) c=(48,46,12)"
+    },
+    "428": {
+     "Vmax": 1724,
+     "six_a1": 112,
+     "gaps": "a=(9,12,94) b=(6,19,93) c=(6,98,28)"
+    },
+    "429": {
+     "Vmax": 1745,
+     "six_a1": 109,
+     "gaps": "a=(7,94,70) b=(96,47,8) c=(35,52,8)"
+    },
+    "430": {
+     "Vmax": 1771,
+     "six_a1": 104,
+     "gaps": "a=(33,65,10) b=(6,9,25) c=(35,63,25)"
+    },
+    "431": {
+     "Vmax": 1741,
+     "six_a1": 110,
+     "gaps": "a=(10,8,50) b=(13,75,29) c=(5,76,67)"
+    },
+    "432": {
+     "Vmax": 1746,
+     "six_a1": 108,
+     "gaps": "a=(47,83,23) b=(38,11,22) c=(81,99,7)"
+    },
+    "433": {
+     "Vmax": 1760,
+     "six_a1": 109,
+     "gaps": "a=(50,23,10) b=(58,12,7) c=(98,26,5)"
+    },
+    "434": {
+     "Vmax": 1782,
+     "six_a1": 105,
+     "gaps": "a=(40,10,6) b=(46,53,95) c=(79,50,96)"
+    },
+    "435": {
+     "Vmax": 1800,
+     "six_a1": 105,
+     "gaps": "a=(7,8,56) b=(71,47,9) c=(73,47,52)"
+    },
+    "436": {
+     "Vmax": 1793,
+     "six_a1": 106,
+     "gaps": "a=(43,85,29) b=(31,59,42) c=(7,34,8)"
+    },
+    "437": {
+     "Vmax": 1760,
+     "six_a1": 112,
+     "gaps": "a=(86,23,39) b=(78,7,8) c=(83,37,56)"
+    },
+    "438": {
+     "Vmax": 1781,
+     "six_a1": 109,
+     "gaps": "a=(39,34,41) b=(48,6,41) c=(7,11,48)"
+    },
+    "439": {
+     "Vmax": 1793,
+     "six_a1": 106,
+     "gaps": "a=(19,9,40) b=(5,12,19) c=(16,20,29)"
+    },
+    "440": {
+     "Vmax": 1785,
+     "six_a1": 111,
+     "gaps": "a=(58,41,37) b=(41,19,79) c=(36,7,7)"
+    },
+    "441": {
+     "Vmax": 1782,
+     "six_a1": 111,
+     "gaps": "a=(56,36,6) b=(36,57,88) c=(10,87,12)"
+    },
+    "442": {
+     "Vmax": 1816,
+     "six_a1": 107,
+     "gaps": "a=(8,10,34) b=(53,70,44) c=(49,70,74)"
+    },
+    "443": {
+     "Vmax": 1820,
+     "six_a1": 106,
+     "gaps": "a=(89,14,8) b=(11,87,28) c=(9,23,65)"
+    },
+    "444": {
+     "Vmax": 1826,
+     "six_a1": 106,
+     "gaps": "a=(86,42,7) b=(54,7,13) c=(98,7,42)"
+    },
+    "445": {
+     "Vmax": 1790,
+     "six_a1": 112,
+     "gaps": "a=(8,72,96) b=(43,69,24) c=(6,12,69)"
+    },
+    "446": {
+     "Vmax": 1810,
+     "six_a1": 113,
+     "gaps": "a=(23,91,47) b=(83,5,10) c=(56,91,9)"
+    },
+    "447": {
+     "Vmax": 1799,
+     "six_a1": 112,
+     "gaps": "a=(6,21,74) b=(95,88,7) c=(89,94,79)"
+    },
+    "448": {
+     "Vmax": 1819,
+     "six_a1": 107,
+     "gaps": "a=(6,46,13) b=(64,42,12) c=(56,80,7)"
+    },
+    "449": {
+     "Vmax": 1818,
+     "six_a1": 111,
+     "gaps": "a=(46,12,7) b=(56,7,23) c=(38,37,26)"
+    },
+    "450": {
+     "Vmax": 1834,
+     "six_a1": 107,
+     "gaps": "a=(52,49,68) b=(17,100,54) c=(55,14,6)"
+    },
+    "451": {
+     "Vmax": 1832,
+     "six_a1": 112,
+     "gaps": "a=(60,8,18) b=(6,82,28) c=(54,90,10)"
+    },
+    "452": {
+     "Vmax": 1838,
+     "six_a1": 115,
+     "gaps": "a=(22,6,10) b=(36,36,71) c=(48,34,75)"
+    },
+    "453": {
+     "Vmax": 1833,
+     "six_a1": 114,
+     "gaps": "a=(58,11,44) b=(22,49,60) c=(30,23,8)"
+    },
+    "454": {
+     "Vmax": 1913,
+     "six_a1": 103,
+     "gaps": "a=(68,76,11) b=(8,32,8) c=(67,55,8)"
+    },
+    "455": {
+     "Vmax": 1856,
+     "six_a1": 109,
+     "gaps": "a=(92,85,29) b=(29,90,72) c=(24,12,6)"
+    },
+    "456": {
+     "Vmax": 1845,
+     "six_a1": 114,
+     "gaps": "a=(13,62,70) b=(69,92,69) c=(9,36,62)"
+    },
+    "457": {
+     "Vmax": 1856,
+     "six_a1": 112,
+     "gaps": "a=(7,34,98) b=(88,6,66) c=(49,87,8)"
+    },
+    "458": {
+     "Vmax": 1863,
+     "six_a1": 114,
+     "gaps": "a=(70,66,19) b=(6,58,22) c=(7,68,68)"
+    },
+    "459": {
+     "Vmax": 1853,
+     "six_a1": 115,
+     "gaps": "a=(39,41,34) b=(54,43,5) c=(20,29,8)"
+    },
+    "460": {
+     "Vmax": 1868,
+     "six_a1": 112,
+     "gaps": "a=(91,28,95) b=(80,9,78) c=(18,28,22)"
+    },
+    "461": {
+     "Vmax": 1864,
+     "six_a1": 116,
+     "gaps": "a=(93,7,12) b=(62,19,57) c=(27,54,5)"
+    },
+    "462": {
+     "Vmax": 1894,
+     "six_a1": 113,
+     "gaps": "a=(46,37,34) b=(11,6,48) c=(65,7,34)"
+    },
+    "463": {
+     "Vmax": 1859,
+     "six_a1": 118,
+     "gaps": "a=(8,98,11) b=(66,34,9) c=(54,57,18)"
+    },
+    "464": {
+     "Vmax": 1908,
+     "six_a1": 111,
+     "gaps": "a=(74,56,10) b=(6,9,34) c=(57,58,15)"
+    },
+    "465": {
+     "Vmax": 1919,
+     "six_a1": 109,
+     "gaps": "a=(63,7,54) b=(9,26,8) c=(43,14,59)"
+    },
+    "466": {
+     "Vmax": 1911,
+     "six_a1": 108,
+     "gaps": "a=(93,25,47) b=(42,24,88) c=(9,16,7)"
+    },
+    "467": {
+     "Vmax": 1931,
+     "six_a1": 109,
+     "gaps": "a=(8,31,76) b=(92,15,66) c=(7,10,77)"
+    },
+    "468": {
+     "Vmax": 1920,
+     "six_a1": 114,
+     "gaps": "a=(8,7,66) b=(66,94,41) c=(84,77,81)"
+    },
+    "469": {
+     "Vmax": 1925,
+     "six_a1": 115,
+     "gaps": "a=(9,50,76) b=(87,63,6) c=(41,7,11)"
+    },
+    "470": {
+     "Vmax": 1932,
+     "six_a1": 114,
+     "gaps": "a=(6,11,26) b=(88,7,13) c=(81,14,18)"
+    },
+    "471": {
+     "Vmax": 1925,
+     "six_a1": 115,
+     "gaps": "a=(9,7,64) b=(72,45,90) c=(88,73,47)"
+    },
+    "472": {
+     "Vmax": 1947,
+     "six_a1": 111,
+     "gaps": "a=(45,70,28) b=(9,70,95) c=(7,30,36)"
+    },
+    "473": {
+     "Vmax": 1917,
+     "six_a1": 114,
+     "gaps": "a=(55,71,55) b=(6,13,80) c=(90,85,10)"
+    },
+    "474": {
+     "Vmax": 1947,
+     "six_a1": 114,
+     "gaps": "a=(82,7,8) b=(94,46,8) c=(74,58,32)"
+    },
+    "475": {
+     "Vmax": 1944,
+     "six_a1": 117,
+     "gaps": "a=(24,41,67) b=(64,6,9) c=(50,12,96)"
+    },
+    "476": {
+     "Vmax": 1947,
+     "six_a1": 111,
+     "gaps": "a=(7,66,13) b=(11,92,65) c=(5,43,67)"
+    },
+    "477": {
+     "Vmax": 1963,
+     "six_a1": 113,
+     "gaps": "a=(26,68,35) b=(8,65,81) c=(10,35,32)"
+    },
+    "478": {
+     "Vmax": 1950,
+     "six_a1": 117,
+     "gaps": "a=(17,89,49) b=(60,6,10) c=(7,90,23)"
+    },
+    "479": {
+     "Vmax": 1953,
+     "six_a1": 117,
+     "gaps": "a=(33,6,68) b=(8,69,29) c=(37,16,83)"
+    },
+    "480": {
+     "Vmax": 1962,
+     "six_a1": 117,
+     "gaps": "a=(36,44,7) b=(56,31,42) c=(71,10,6)"
+    },
+    "481": {
+     "Vmax": 1938,
+     "six_a1": 123,
+     "gaps": "a=(42,8,83) b=(48,8,88) c=(14,5,89)"
+    },
+    "482": {
+     "Vmax": 1968,
+     "six_a1": 114,
+     "gaps": "a=(56,71,98) b=(41,90,94) c=(23,48,8)"
+    },
+    "483": {
+     "Vmax": 1995,
+     "six_a1": 108,
+     "gaps": "a=(81,13,8) b=(12,93,94) c=(13,91,16)"
+    },
+    "484": {
+     "Vmax": 1995,
+     "six_a1": 114,
+     "gaps": "a=(96,52,15) b=(14,48,89) c=(25,8,7)"
+    },
+    "485": {
+     "Vmax": 2012,
+     "six_a1": 112,
+     "gaps": "a=(97,12,25) b=(23,7,57) c=(56,10,8)"
+    },
+    "486": {
+     "Vmax": 2007,
+     "six_a1": 114,
+     "gaps": "a=(56,9,36) b=(38,26,11) c=(90,6,9)"
+    },
+    "487": {
+     "Vmax": 1984,
+     "six_a1": 116,
+     "gaps": "a=(96,25,48) b=(8,10,71) c=(60,62,13)"
+    },
+    "488": {
+     "Vmax": 2036,
+     "six_a1": 112,
+     "gaps": "a=(46,89,7) b=(11,39,86) c=(49,17,7)"
+    },
+    "489": {
+     "Vmax": 1993,
+     "six_a1": 113,
+     "gaps": "a=(8,38,12) b=(10,14,63) c=(45,9,44)"
+    },
+    "490": {
+     "Vmax": 2016,
+     "six_a1": 114,
+     "gaps": "a=(12,96,29) b=(43,6,88) c=(82,9,22)"
+    },
+    "491": {
+     "Vmax": 2024,
+     "six_a1": 112,
+     "gaps": "a=(91,9,38) b=(38,34,6) c=(36,42,57)"
+    },
+    "492": {
+     "Vmax": 2100,
+     "six_a1": 105,
+     "gaps": "a=(32,26,76) b=(7,10,11) c=(29,26,77)"
+    },
+    "493": {
+     "Vmax": 2025,
+     "six_a1": 117,
+     "gaps": "a=(6,88,9) b=(68,29,42) c=(9,16,84)"
+    },
+    "494": {
+     "Vmax": 2065,
+     "six_a1": 113,
+     "gaps": "a=(7,98,30) b=(12,7,42) c=(39,64,30)"
+    },
+    "495": {
+     "Vmax": 2088,
+     "six_a1": 111,
+     "gaps": "a=(26,8,8) b=(25,82,73) c=(42,81,74)"
+    },
+    "496": {
+     "Vmax": 2052,
+     "six_a1": 114,
+     "gaps": "a=(86,44,7) b=(9,82,75) c=(18,51,7)"
+    },
+    "497": {
+     "Vmax": 2035,
+     "six_a1": 116,
+     "gaps": "a=(90,16,98) b=(100,75,46) c=(6,11,80)"
+    },
+    "498": {
+     "Vmax": 2094,
+     "six_a1": 111,
+     "gaps": "a=(95,58,91) b=(15,8,10) c=(95,58,82)"
+    },
+    "499": {
+     "Vmax": 2037,
+     "six_a1": 120,
+     "gaps": "a=(61,7,10) b=(72,57,79) c=(81,80,81)"
+    },
+    "500": {
+     "Vmax": 2072,
+     "six_a1": 112,
+     "gaps": "a=(8,63,7) b=(96,60,7) c=(94,35,12)"
+    },
+    "501": {
+     "Vmax": 2071,
+     "six_a1": 116,
+     "gaps": "a=(29,8,7) b=(10,28,79) c=(16,23,85)"
+    },
+    "502": {
+     "Vmax": 2094,
+     "six_a1": 111,
+     "gaps": "a=(7,14,53) b=(34,65,7) c=(31,63,58)"
+    },
+    "503": {
+     "Vmax": 2093,
+     "six_a1": 115,
+     "gaps": "a=(53,25,7) b=(16,52,16) c=(9,8,57)"
+    },
+    "504": {
+     "Vmax": 2142,
+     "six_a1": 108,
+     "gaps": "a=(49,85,70) b=(67,85,50) c=(13,9,7)"
+    },
+    "505": {
+     "Vmax": 2102,
+     "six_a1": 115,
+     "gaps": "a=(10,8,97) b=(42,22,76) c=(47,77,6)"
+    },
+    "506": {
+     "Vmax": 2072,
+     "six_a1": 118,
+     "gaps": "a=(86,12,15) b=(34,7,21) c=(56,34,6)"
+    },
+    "507": {
+     "Vmax": 2080,
+     "six_a1": 119,
+     "gaps": "a=(17,8,43) b=(81,90,15) c=(36,99,18)"
+    },
+    "508": {
+     "Vmax": 2093,
+     "six_a1": 118,
+     "gaps": "a=(49,73,7) b=(52,62,9) c=(10,48,15)"
+    },
+    "509": {
+     "Vmax": 2096,
+     "six_a1": 115,
+     "gaps": "a=(8,86,24) b=(9,39,26) c=(24,36,31)"
+    },
+    "510": {
+     "Vmax": 2136,
+     "six_a1": 114,
+     "gaps": "a=(7,8,61) b=(10,84,65) c=(10,91,97)"
+    },
+    "511": {
+     "Vmax": 2125,
+     "six_a1": 116,
+     "gaps": "a=(60,24,80) b=(62,9,8) c=(55,10,59)"
+    },
+    "512": {
+     "Vmax": 2114,
+     "six_a1": 115,
+     "gaps": "a=(15,12,10) b=(10,20,25) c=(6,26,28)"
+    }
+   },
+   "mode": "RAND",
+   "mode_args": "K=100 N=10000000"
+  },
+  {
+   "log": "r4_reeve/runs/band11/rand_K300.log",
+   "valid_polytopes": 162505,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "min_6a1_V": 1,
+   "min_6a1_c": 4,
+   "min_6a1_gaps": "a=(296,214,69) b=(220,273,26) c=(69,95,164)",
+   "max_V": 37817055,
+   "max_V_c": 6380750,
+   "max_V_6a1": 2607,
+   "max_V_gaps": "a=(234,294,290) b=(270,286,275) c=(299,297,182)",
+   "max_V_over_c": "37817055/6380750",
+   "max_V_over_c_6a1": 2607,
+   "max_V_over_c_h3": 6225804,
+   "max_V_over_c_gaps": "a=(234,294,290) b=(270,286,275) c=(299,297,182)",
+   "max_V_over_c_plus_h3": "37817055/12606554",
+   "max_V_over_c_plus_h3_data": {
+    "V": 37817055,
+    "c": 6380750,
+    "h3": 6225804,
+    "six_a1": 2607,
+    "gaps": "a=(234,294,290) b=(270,286,275) c=(299,297,182)"
+   },
+   "max_V_at_c4": 1,
+   "max_V_at_c4_gaps": "a=(296,214,69) b=(220,273,26) c=(69,95,164)",
+   "max_V_at_fixed_c": {
+    "1": {
+     "Vmax": 0,
+     "six_a1": 0,
+     "gaps": "a=(156,53,182) b=(104,22,113) c=(281,134,46)"
+    },
+    "2": {
+     "Vmax": 0,
+     "six_a1": 6,
+     "gaps": "a=(142,215,155) b=(208,66,87) c=(54,23,202)"
+    },
+    "3": {
+     "Vmax": 0,
+     "six_a1": 12,
+     "gaps": "a=(197,11,6) b=(277,20,212) c=(209,116,247)"
+    },
+    "4": {
+     "Vmax": 1,
+     "six_a1": 11,
+     "gaps": "a=(296,214,69) b=(220,273,26) c=(69,95,164)"
+    },
+    "5": {
+     "Vmax": 2,
+     "six_a1": 13,
+     "gaps": "a=(77,64,98) b=(68,287,195) c=(173,134,111)"
+    },
+    "6": {
+     "Vmax": 3,
+     "six_a1": 15,
+     "gaps": "a=(12,198,100) b=(202,50,196) c=(38,1,266)"
+    },
+    "7": {
+     "Vmax": 4,
+     "six_a1": 17,
+     "gaps": "a=(219,204,128) b=(176,81,174) c=(163,18,48)"
+    },
+    "8": {
+     "Vmax": 5,
+     "six_a1": 19,
+     "gaps": "a=(22,113,220) b=(188,46,5) c=(15,76,28)"
+    },
+    "9": {
+     "Vmax": 7,
+     "six_a1": 20,
+     "gaps": "a=(59,1,167) b=(73,298,275) c=(146,137,300)"
+    },
+    "10": {
+     "Vmax": 8,
+     "six_a1": 22,
+     "gaps": "a=(197,296,258) b=(184,92,175) c=(256,82,88)"
+    },
+    "11": {
+     "Vmax": 11,
+     "six_a1": 22,
+     "gaps": "a=(78,50,136) b=(1,132,181) c=(34,153,2)"
+    },
+    "12": {
+     "Vmax": 12,
+     "six_a1": 24,
+     "gaps": "a=(6,1,167) b=(216,202,153) c=(84,219,126)"
+    },
+    "13": {
+     "Vmax": 10,
+     "six_a1": 29,
+     "gaps": "a=(74,116,190) b=(70,107,18) c=(2,294,200)"
+    },
+    "14": {
+     "Vmax": 16,
+     "six_a1": 26,
+     "gaps": "a=(184,148,37) b=(69,72,47) c=(99,49,144)"
+    },
+    "15": {
+     "Vmax": 18,
+     "six_a1": 27,
+     "gaps": "a=(176,211,127) b=(121,234,166) c=(126,1,2)"
+    },
+    "16": {
+     "Vmax": 20,
+     "six_a1": 28,
+     "gaps": "a=(205,101,4) b=(113,21,285) c=(20,213,253)"
+    },
+    "17": {
+     "Vmax": 23,
+     "six_a1": 28,
+     "gaps": "a=(203,25,151) b=(17,17,263) c=(124,120,2)"
+    },
+    "18": {
+     "Vmax": 24,
+     "six_a1": 30,
+     "gaps": "a=(291,87,176) b=(193,268,215) c=(14,2,299)"
+    },
+    "19": {
+     "Vmax": 27,
+     "six_a1": 30,
+     "gaps": "a=(162,181,275) b=(289,104,152) c=(12,66,14)"
+    },
+    "20": {
+     "Vmax": 28,
+     "six_a1": 32,
+     "gaps": "a=(247,186,179) b=(248,214,81) c=(52,106,13)"
+    },
+    "21": {
+     "Vmax": 31,
+     "six_a1": 32,
+     "gaps": "a=(102,152,294) b=(23,252,3) c=(17,95,171)"
+    },
+    "22": {
+     "Vmax": 32,
+     "six_a1": 34,
+     "gaps": "a=(108,48,100) b=(51,160,221) c=(57,273,285)"
+    },
+    "23": {
+     "Vmax": 20,
+     "six_a1": 49,
+     "gaps": "a=(32,30,21) b=(201,206,113) c=(126,246,107)"
+    },
+    "24": {
+     "Vmax": 36,
+     "six_a1": 36,
+     "gaps": "a=(3,196,160) b=(299,220,1) c=(2,235,159)"
+    },
+    "25": {
+     "Vmax": 39,
+     "six_a1": 36,
+     "gaps": "a=(48,136,47) b=(29,107,185) c=(7,72,64)"
+    },
+    "26": {
+     "Vmax": 40,
+     "six_a1": 38,
+     "gaps": "a=(291,44,23) b=(201,157,82) c=(44,182,71)"
+    },
+    "27": {
+     "Vmax": 40,
+     "six_a1": 41,
+     "gaps": "a=(59,1,219) b=(225,11,69) c=(277,72,133)"
+    },
+    "28": {
+     "Vmax": 50,
+     "six_a1": 37,
+     "gaps": "a=(178,298,56) b=(266,260,2) c=(6,49,290)"
+    },
+    "29": {
+     "Vmax": 26,
+     "six_a1": 61,
+     "gaps": "a=(250,56,50) b=(45,104,136) c=(119,245,16)"
+    },
+    "30": {
+     "Vmax": 54,
+     "six_a1": 39,
+     "gaps": "a=(124,158,94) b=(74,5,169) c=(240,114,223)"
+    },
+    "31": {
+     "Vmax": 56,
+     "six_a1": 40,
+     "gaps": "a=(206,20,297) b=(150,154,84) c=(122,2,151)"
+    },
+    "32": {
+     "Vmax": 52,
+     "six_a1": 44,
+     "gaps": "a=(31,152,289) b=(112,48,102) c=(142,12,174)"
+    },
+    "33": {
+     "Vmax": 56,
+     "six_a1": 43,
+     "gaps": "a=(239,1,27) b=(140,144,95) c=(207,24,100)"
+    },
+    "34": {
+     "Vmax": 63,
+     "six_a1": 42,
+     "gaps": "a=(106,3,73) b=(198,70,142) c=(234,143,137)"
+    },
+    "35": {
+     "Vmax": 64,
+     "six_a1": 44,
+     "gaps": "a=(71,151,173) b=(48,129,295) c=(104,16,221)"
+    },
+    "36": {
+     "Vmax": 61,
+     "six_a1": 47,
+     "gaps": "a=(144,54,210) b=(260,71,216) c=(1,223,23)"
+    },
+    "37": {
+     "Vmax": 34,
+     "six_a1": 77,
+     "gaps": "a=(177,107,94) b=(97,183,261) c=(61,64,74)"
+    },
+    "38": {
+     "Vmax": 64,
+     "six_a1": 50,
+     "gaps": "a=(42,96,300) b=(295,146,257) c=(9,53,211)"
+    },
+    "39": {
+     "Vmax": 53,
+     "six_a1": 64,
+     "gaps": "a=(73,127,1) b=(1,207,78) c=(9,22,142)"
+    },
+    "40": {
+     "Vmax": 81,
+     "six_a1": 45,
+     "gaps": "a=(228,82,295) b=(262,164,250) c=(3,3,216)"
+    },
+    "41": {
+     "Vmax": 38,
+     "six_a1": 85,
+     "gaps": "a=(284,222,246) b=(18,172,83) c=(147,196,150)"
+    },
+    "42": {
+     "Vmax": 90,
+     "six_a1": 45,
+     "gaps": "a=(166,139,260) b=(236,244,64) c=(2,3,244)"
+    },
+    "43": {
+     "Vmax": 79,
+     "six_a1": 50,
+     "gaps": "a=(282,234,1) b=(240,124,277) c=(126,6,118)"
+    },
+    "44": {
+     "Vmax": 81,
+     "six_a1": 51,
+     "gaps": "a=(296,3,130) b=(1,29,237) c=(226,34,188)"
+    },
+    "45": {
+     "Vmax": 96,
+     "six_a1": 48,
+     "gaps": "a=(114,215,129) b=(87,275,249) c=(28,2,225)"
+    },
+    "46": {
+     "Vmax": 98,
+     "six_a1": 49,
+     "gaps": "a=(104,107,43) b=(23,2,93) c=(184,5,57)"
+    },
+    "47": {
+     "Vmax": 44,
+     "six_a1": 97,
+     "gaps": "a=(42,35,56) b=(62,270,32) c=(179,193,27)"
+    },
+    "48": {
+     "Vmax": 84,
+     "six_a1": 60,
+     "gaps": "a=(273,202,120) b=(255,143,90) c=(81,7,283)"
+    },
+    "49": {
+     "Vmax": 111,
+     "six_a1": 48,
+     "gaps": "a=(6,198,216) b=(174,4,76) c=(79,9,273)"
+    },
+    "50": {
+     "Vmax": 112,
+     "six_a1": 50,
+     "gaps": "a=(251,63,276) b=(146,17,191) c=(63,23,183)"
+    },
+    "51": {
+     "Vmax": 48,
+     "six_a1": 105,
+     "gaps": "a=(11,240,170) b=(67,197,16) c=(202,245,194)"
+    },
+    "52": {
+     "Vmax": 117,
+     "six_a1": 51,
+     "gaps": "a=(32,125,14) b=(297,121,3) c=(263,16,27)"
+    },
+    "53": {
+     "Vmax": 118,
+     "six_a1": 53,
+     "gaps": "a=(66,135,2) b=(21,263,277) c=(215,226,215)"
+    },
+    "54": {
+     "Vmax": 127,
+     "six_a1": 50,
+     "gaps": "a=(43,112,175) b=(59,28,31) c=(123,90,227)"
+    },
+    "55": {
+     "Vmax": 128,
+     "six_a1": 52,
+     "gaps": "a=(144,250,113) b=(247,176,212) c=(58,80,4)"
+    },
+    "56": {
+     "Vmax": 135,
+     "six_a1": 51,
+     "gaps": "a=(26,3,246) b=(230,14,208) c=(3,57,209)"
+    },
+    "57": {
+     "Vmax": 54,
+     "six_a1": 117,
+     "gaps": "a=(141,259,247) b=(155,18,48) c=(229,156,210)"
+    },
+    "58": {
+     "Vmax": 104,
+     "six_a1": 70,
+     "gaps": "a=(186,95,149) b=(268,38,15) c=(223,18,51)"
+    },
+    "59": {
+     "Vmax": 134,
+     "six_a1": 55,
+     "gaps": "a=(270,134,145) b=(142,196,101) c=(45,129,5)"
+    },
+    "60": {
+     "Vmax": 144,
+     "six_a1": 54,
+     "gaps": "a=(264,126,136) b=(128,295,143) c=(191,3,90)"
+    },
+    "61": {
+     "Vmax": 152,
+     "six_a1": 52,
+     "gaps": "a=(44,4,186) b=(24,248,275) c=(208,148,233)"
+    },
+    "62": {
+     "Vmax": 112,
+     "six_a1": 74,
+     "gaps": "a=(168,129,192) b=(57,56,77) c=(172,234,14)"
+    },
+    "63": {
+     "Vmax": 150,
+     "six_a1": 57,
+     "gaps": "a=(8,286,121) b=(127,216,91) c=(193,32,2)"
+    },
+    "64": {
+     "Vmax": 162,
+     "six_a1": 54,
+     "gaps": "a=(259,3,3) b=(159,180,222) c=(168,130,273)"
+    },
+    "65": {
+     "Vmax": 160,
+     "six_a1": 56,
+     "gaps": "a=(125,94,38) b=(142,258,108) c=(178,104,41)"
+    },
+    "66": {
+     "Vmax": 162,
+     "six_a1": 57,
+     "gaps": "a=(147,123,3) b=(142,31,69) c=(2,284,57)"
+    },
+    "67": {
+     "Vmax": 64,
+     "six_a1": 137,
+     "gaps": "a=(117,56,254) b=(249,72,58) c=(9,209,257)"
+    },
+    "68": {
+     "Vmax": 124,
+     "six_a1": 80,
+     "gaps": "a=(84,42,273) b=(291,36,23) c=(16,172,77)"
+    },
+    "69": {
+     "Vmax": 161,
+     "six_a1": 61,
+     "gaps": "a=(99,49,288) b=(29,111,38) c=(266,6,208)"
+    },
+    "70": {
+     "Vmax": 176,
+     "six_a1": 58,
+     "gaps": "a=(210,233,229) b=(5,33,36) c=(170,219,218)"
+    },
+    "71": {
+     "Vmax": 186,
+     "six_a1": 57,
+     "gaps": "a=(92,236,99) b=(173,168,246) c=(10,70,90)"
+    },
+    "72": {
+     "Vmax": 186,
+     "six_a1": 57,
+     "gaps": "a=(150,141,103) b=(83,5,2) c=(148,93,162)"
+    },
+    "73": {
+     "Vmax": 192,
+     "six_a1": 57,
+     "gaps": "a=(97,77,194) b=(236,23,126) c=(16,4,59)"
+    },
+    "74": {
+     "Vmax": 191,
+     "six_a1": 58,
+     "gaps": "a=(203,75,4) b=(11,104,143) c=(40,7,29)"
+    },
+    "75": {
+     "Vmax": 197,
+     "six_a1": 58,
+     "gaps": "a=(15,47,88) b=(173,219,185) c=(47,262,128)"
+    },
+    "76": {
+     "Vmax": 157,
+     "six_a1": 71,
+     "gaps": "a=(89,188,5) b=(1,25,220) c=(113,160,230)"
+    },
+    "77": {
+     "Vmax": 200,
+     "six_a1": 61,
+     "gaps": "a=(211,14,33) b=(265,257,38) c=(134,230,167)"
+    },
+    "78": {
+     "Vmax": 144,
+     "six_a1": 90,
+     "gaps": "a=(189,173,270) b=(196,12,120) c=(59,101,232)"
+    },
+    "79": {
+     "Vmax": 147,
+     "six_a1": 90,
+     "gaps": "a=(173,243,250) b=(270,296,81) c=(31,33,43)"
+    },
+    "80": {
+     "Vmax": 208,
+     "six_a1": 62,
+     "gaps": "a=(201,23,74) b=(87,112,259) c=(4,151,33)"
+    },
+    "81": {
+     "Vmax": 210,
+     "six_a1": 63,
+     "gaps": "a=(257,2,5) b=(151,227,161) c=(274,275,168)"
+    },
+    "82": {
+     "Vmax": 194,
+     "six_a1": 73,
+     "gaps": "a=(261,112,109) b=(262,142,2) c=(224,91,26)"
+    },
+    "83": {
+     "Vmax": 215,
+     "six_a1": 64,
+     "gaps": "a=(107,88,141) b=(197,53,244) c=(5,274,24)"
+    },
+    "84": {
+     "Vmax": 225,
+     "six_a1": 63,
+     "gaps": "a=(211,272,37) b=(23,297,3) c=(153,98,277)"
+    },
+    "85": {
+     "Vmax": 224,
+     "six_a1": 64,
+     "gaps": "a=(77,200,141) b=(71,297,147) c=(18,145,14)"
+    },
+    "86": {
+     "Vmax": 160,
+     "six_a1": 98,
+     "gaps": "a=(112,66,97) b=(35,118,86) c=(34,136,250)"
+    },
+    "87": {
+     "Vmax": 84,
+     "six_a1": 177,
+     "gaps": "a=(28,93,69) b=(250,256,13) c=(253,259,149)"
+    },
+    "88": {
+     "Vmax": 184,
+     "six_a1": 80,
+     "gaps": "a=(38,90,191) b=(1,236,31) c=(29,145,114)"
+    },
+    "89": {
+     "Vmax": 215,
+     "six_a1": 73,
+     "gaps": "a=(141,113,287) b=(197,161,253) c=(44,9,160)"
+    },
+    "90": {
+     "Vmax": 240,
+     "six_a1": 66,
+     "gaps": "a=(153,262,75) b=(5,19,291) c=(217,217,13)"
+    },
+    "91": {
+     "Vmax": 250,
+     "six_a1": 65,
+     "gaps": "a=(25,227,297) b=(89,158,122) c=(285,95,70)"
+    },
+    "92": {
+     "Vmax": 252,
+     "six_a1": 66,
+     "gaps": "a=(243,116,195) b=(3,147,73) c=(31,247,81)"
+    },
+    "93": {
+     "Vmax": 90,
+     "six_a1": 189,
+     "gaps": "a=(206,45,186) b=(13,225,168) c=(53,155,30)"
+    },
+    "94": {
+     "Vmax": 176,
+     "six_a1": 106,
+     "gaps": "a=(21,93,220) b=(193,98,200) c=(49,22,145)"
+    },
+    "95": {
+     "Vmax": 256,
+     "six_a1": 68,
+     "gaps": "a=(68,55,100) b=(139,267,8) c=(56,199,187)"
+    },
+    "96": {
+     "Vmax": 270,
+     "six_a1": 66,
+     "gaps": "a=(14,174,3) b=(97,97,280) c=(104,269,276)"
+    },
+    "97": {
+     "Vmax": 205,
+     "six_a1": 86,
+     "gaps": "a=(228,137,131) b=(134,105,19) c=(1,229,243)"
+    },
+    "98": {
+     "Vmax": 275,
+     "six_a1": 67,
+     "gaps": "a=(64,66,288) b=(8,176,202) c=(239,40,113)"
+    },
+    "99": {
+     "Vmax": 278,
+     "six_a1": 67,
+     "gaps": "a=(13,287,6) b=(114,126,247) c=(125,223,3)"
+    },
+    "100": {
+     "Vmax": 288,
+     "six_a1": 66,
+     "gaps": "a=(3,125,115) b=(4,292,233) c=(8,212,251)"
+    },
+    "101": {
+     "Vmax": 215,
+     "six_a1": 88,
+     "gaps": "a=(146,280,256) b=(268,29,36) c=(115,261,1)"
+    },
+    "102": {
+     "Vmax": 192,
+     "six_a1": 114,
+     "gaps": "a=(14,117,42) b=(9,159,16) c=(117,122,76)"
+    },
+    "103": {
+     "Vmax": 195,
+     "six_a1": 114,
+     "gaps": "a=(50,226,32) b=(50,66,25) c=(108,104,145)"
+    },
+    "104": {
+     "Vmax": 280,
+     "six_a1": 74,
+     "gaps": "a=(74,133,19) b=(3,64,101) c=(155,119,2)"
+    },
+    "105": {
+     "Vmax": 300,
+     "six_a1": 69,
+     "gaps": "a=(246,35,4) b=(213,89,127) c=(113,109,231)"
+    },
+    "106": {
+     "Vmax": 311,
+     "six_a1": 67,
+     "gaps": "a=(90,157,5) b=(23,282,125) c=(58,41,247)"
+    },
+    "107": {
+     "Vmax": 214,
+     "six_a1": 107,
+     "gaps": "a=(1,273,199) b=(77,48,180) c=(238,83,115)"
+    },
+    "108": {
+     "Vmax": 295,
+     "six_a1": 74,
+     "gaps": "a=(70,172,165) b=(2,278,53) c=(7,164,49)"
+    },
+    "109": {
+     "Vmax": 296,
+     "six_a1": 76,
+     "gaps": "a=(235,138,128) b=(159,2,208) c=(34,195,282)"
+    },
+    "110": {
+     "Vmax": 316,
+     "six_a1": 71,
+     "gaps": "a=(290,78,78) b=(139,4,158) c=(134,150,213)"
+    },
+    "111": {
+     "Vmax": 323,
+     "six_a1": 70,
+     "gaps": "a=(272,101,245) b=(138,10,167) c=(284,6,112)"
+    },
+    "112": {
+     "Vmax": 325,
+     "six_a1": 71,
+     "gaps": "a=(144,165,149) b=(277,41,25) c=(234,49,61)"
+    },
+    "113": {
+     "Vmax": 110,
+     "six_a1": 229,
+     "gaps": "a=(131,76,129) b=(186,272,216) c=(82,256,38)"
+    },
+    "114": {
+     "Vmax": 345,
+     "six_a1": 69,
+     "gaps": "a=(189,275,117) b=(234,159,167) c=(5,3,188)"
+    },
+    "115": {
+     "Vmax": 320,
+     "six_a1": 76,
+     "gaps": "a=(174,46,38) b=(56,173,93) c=(7,72,78)"
+    },
+    "116": {
+     "Vmax": 348,
+     "six_a1": 69,
+     "gaps": "a=(179,136,57) b=(256,5,19) c=(85,82,144)"
+    },
+    "117": {
+     "Vmax": 330,
+     "six_a1": 75,
+     "gaps": "a=(2,8,262) b=(51,110,279) c=(62,286,70)"
+    },
+    "118": {
+     "Vmax": 224,
+     "six_a1": 130,
+     "gaps": "a=(109,87,293) b=(58,112,262) c=(215,26,161)"
+    },
+    "119": {
+     "Vmax": 350,
+     "six_a1": 73,
+     "gaps": "a=(221,21,118) b=(120,17,299) c=(249,103,63)"
+    },
+    "120": {
+     "Vmax": 368,
+     "six_a1": 70,
+     "gaps": "a=(109,23,158) b=(87,80,4) c=(247,44,103)"
+    },
+    "121": {
+     "Vmax": 271,
+     "six_a1": 92,
+     "gaps": "a=(175,1,129) b=(57,238,88) c=(295,89,136)"
+    },
+    "122": {
+     "Vmax": 232,
+     "six_a1": 134,
+     "gaps": "a=(228,205,181) b=(294,25,156) c=(38,31,295)"
+    },
+    "123": {
+     "Vmax": 336,
+     "six_a1": 84,
+     "gaps": "a=(50,114,288) b=(2,10,228) c=(70,221,252)"
+    },
+    "124": {
+     "Vmax": 378,
+     "six_a1": 72,
+     "gaps": "a=(79,252,72) b=(241,212,3) c=(21,42,232)"
+    },
+    "125": {
+     "Vmax": 352,
+     "six_a1": 80,
+     "gaps": "a=(77,290,205) b=(192,14,36) c=(257,272,261)"
+    },
+    "126": {
+     "Vmax": 378,
+     "six_a1": 75,
+     "gaps": "a=(294,135,197) b=(285,45,241) c=(6,163,3)"
+    },
+    "127": {
+     "Vmax": 293,
+     "six_a1": 88,
+     "gaps": "a=(7,33,187) b=(124,133,67) c=(10,206,1)"
+    },
+    "128": {
+     "Vmax": 369,
+     "six_a1": 81,
+     "gaps": "a=(57,170,61) b=(280,185,63) c=(246,14,3)"
+    },
+    "129": {
+     "Vmax": 386,
+     "six_a1": 76,
+     "gaps": "a=(50,269,7) b=(174,225,3) c=(111,235,19)"
+    },
+    "130": {
+     "Vmax": 387,
+     "six_a1": 78,
+     "gaps": "a=(151,3,48) b=(125,35,153) c=(284,39,123)"
+    },
+    "131": {
+     "Vmax": 128,
+     "six_a1": 265,
+     "gaps": "a=(60,131,14) b=(288,243,186) c=(156,214,280)"
+    },
+    "132": {
+     "Vmax": 378,
+     "six_a1": 81,
+     "gaps": "a=(252,2,7) b=(259,293,81) c=(206,265,111)"
+    },
+    "133": {
+     "Vmax": 415,
+     "six_a1": 74,
+     "gaps": "a=(231,248,4) b=(66,278,14) c=(115,79,50)"
+    },
+    "134": {
+     "Vmax": 383,
+     "six_a1": 82,
+     "gaps": "a=(55,151,62) b=(247,11,14) c=(153,8,223)"
+    },
+    "135": {
+     "Vmax": 384,
+     "six_a1": 84,
+     "gaps": "a=(233,74,213) b=(77,2,146) c=(92,198,173)"
+    },
+    "136": {
+     "Vmax": 424,
+     "six_a1": 74,
+     "gaps": "a=(63,102,228) b=(196,6,48) c=(142,146,67)"
+    },
+    "137": {
+     "Vmax": 423,
+     "six_a1": 75,
+     "gaps": "a=(87,272,258) b=(115,298,198) c=(20,130,6)"
+    },
+    "138": {
+     "Vmax": 264,
+     "six_a1": 150,
+     "gaps": "a=(147,246,220) b=(88,22,170) c=(102,293,47)"
+    },
+    "139": {
+     "Vmax": 350,
+     "six_a1": 103,
+     "gaps": "a=(142,214,182) b=(11,17,73) c=(205,153,159)"
+    },
+    "140": {
+     "Vmax": 432,
+     "six_a1": 78,
+     "gaps": "a=(181,256,143) b=(143,11,73) c=(28,271,212)"
+    },
+    "141": {
+     "Vmax": 270,
+     "six_a1": 153,
+     "gaps": "a=(1,183,99) b=(170,52,192) c=(281,2,63)"
+    },
+    "142": {
+     "Vmax": 272,
+     "six_a1": 154,
+     "gaps": "a=(8,91,174) b=(74,267,174) c=(284,29,280)"
+    },
+    "143": {
+     "Vmax": 442,
+     "six_a1": 77,
+     "gaps": "a=(261,254,117) b=(155,294,193) c=(6,58,28)"
+    },
+    "144": {
+     "Vmax": 441,
+     "six_a1": 81,
+     "gaps": "a=(203,109,136) b=(207,98,68) c=(3,269,289)"
+    },
+    "145": {
+     "Vmax": 452,
+     "six_a1": 79,
+     "gaps": "a=(115,69,131) b=(9,137,4) c=(50,140,197)"
+    },
+    "146": {
+     "Vmax": 450,
+     "six_a1": 81,
+     "gaps": "a=(171,132,212) b=(3,132,16) c=(104,197,284)"
+    },
+    "147": {
+     "Vmax": 480,
+     "six_a1": 75,
+     "gaps": "a=(200,30,280) b=(5,4,210) c=(108,101,195)"
+    },
+    "148": {
+     "Vmax": 461,
+     "six_a1": 79,
+     "gaps": "a=(110,79,254) b=(14,62,7) c=(146,113,231)"
+    },
+    "149": {
+     "Vmax": 430,
+     "six_a1": 89,
+     "gaps": "a=(113,251,36) b=(118,128,181) c=(2,19,208)"
+    },
+    "150": {
+     "Vmax": 468,
+     "six_a1": 81,
+     "gaps": "a=(7,129,288) b=(289,8,3) c=(25,47,176)"
+    },
+    "151": {
+     "Vmax": 291,
+     "six_a1": 162,
+     "gaps": "a=(47,213,244) b=(116,36,70) c=(242,156,255)"
+    },
+    "152": {
+     "Vmax": 477,
+     "six_a1": 81,
+     "gaps": "a=(3,169,243) b=(186,53,225) c=(121,31,114)"
+    },
+    "153": {
+     "Vmax": 456,
+     "six_a1": 84,
+     "gaps": "a=(277,8,2) b=(207,294,158) c=(161,170,277)"
+    },
+    "154": {
+     "Vmax": 486,
+     "six_a1": 81,
+     "gaps": "a=(296,3,6) b=(92,134,206) c=(146,123,90)"
+    },
+    "155": {
+     "Vmax": 489,
+     "six_a1": 81,
+     "gaps": "a=(189,271,23) b=(58,7,100) c=(216,236,152)"
+    },
+    "156": {
+     "Vmax": 497,
+     "six_a1": 79,
+     "gaps": "a=(221,3,148) b=(7,234,7) c=(263,128,108)"
+    },
+    "157": {
+     "Vmax": 370,
+     "six_a1": 101,
+     "gaps": "a=(1,288,224) b=(98,46,16) c=(13,213,188)"
+    },
+    "158": {
+     "Vmax": 304,
+     "six_a1": 170,
+     "gaps": "a=(49,104,45) b=(103,197,188) c=(137,287,18)"
+    },
+    "159": {
+     "Vmax": 156,
+     "six_a1": 321,
+     "gaps": "a=(255,234,86) b=(269,52,154) c=(37,73,231)"
+    },
+    "160": {
+     "Vmax": 520,
+     "six_a1": 80,
+     "gaps": "a=(220,5,69) b=(98,109,297) c=(63,268,171)"
+    },
+    "161": {
+     "Vmax": 504,
+     "six_a1": 84,
+     "gaps": "a=(70,120,204) b=(66,6,22) c=(72,63,232)"
+    },
+    "162": {
+     "Vmax": 525,
+     "six_a1": 81,
+     "gaps": "a=(87,118,298) b=(163,5,89) c=(211,5,232)"
+    },
+    "164": {
+     "Vmax": 532,
+     "six_a1": 80,
+     "gaps": "a=(285,60,140) b=(116,7,218) c=(38,92,57)"
+    },
+    "165": {
+     "Vmax": 540,
+     "six_a1": 81,
+     "gaps": "a=(244,4,5) b=(164,207,122) c=(230,238,71)"
+    },
+    "166": {
+     "Vmax": 488,
+     "six_a1": 94,
+     "gaps": "a=(162,154,203) b=(154,2,54) c=(172,97,115)"
+    },
+    "167": {
+     "Vmax": 502,
+     "six_a1": 89,
+     "gaps": "a=(2,268,28) b=(14,155,194) c=(70,46,158)"
+    },
+    "168": {
+     "Vmax": 540,
+     "six_a1": 84,
+     "gaps": "a=(138,247,185) b=(33,275,137) c=(178,5,79)"
+    },
+    "169": {
+     "Vmax": 397,
+     "six_a1": 110,
+     "gaps": "a=(77,1,206) b=(63,174,144) c=(124,252,188)"
+    },
+    "170": {
+     "Vmax": 496,
+     "six_a1": 98,
+     "gaps": "a=(55,30,202) b=(37,229,81) c=(41,269,288)"
+    },
+    "171": {
+     "Vmax": 542,
+     "six_a1": 85,
+     "gaps": "a=(23,15,141) b=(292,201,7) c=(157,171,32)"
+    },
+    "172": {
+     "Vmax": 332,
+     "six_a1": 184,
+     "gaps": "a=(60,197,266) b=(143,42,97) c=(78,139,98)"
+    },
+    "173": {
+     "Vmax": 484,
+     "six_a1": 110,
+     "gaps": "a=(232,55,110) b=(2,100,235) c=(147,248,64)"
+    },
+    "174": {
+     "Vmax": 336,
+     "six_a1": 186,
+     "gaps": "a=(64,294,261) b=(22,261,28) c=(274,294,239)"
+    },
+    "175": {
+     "Vmax": 576,
+     "six_a1": 84,
+     "gaps": "a=(28,222,70) b=(38,260,4) c=(4,172,16)"
+    },
+    "176": {
+     "Vmax": 584,
+     "six_a1": 82,
+     "gaps": "a=(158,59,67) b=(172,6,257) c=(97,98,9)"
+    },
+    "177": {
+     "Vmax": 540,
+     "six_a1": 90,
+     "gaps": "a=(149,9,2) b=(107,238,132) c=(140,241,166)"
+    },
+    "178": {
+     "Vmax": 567,
+     "six_a1": 87,
+     "gaps": "a=(12,9,199) b=(291,31,216) c=(150,44,282)"
+    },
+    "179": {
+     "Vmax": 458,
+     "six_a1": 127,
+     "gaps": "a=(232,210,130) b=(236,8,195) c=(17,190,54)"
+    },
+    "180": {
+     "Vmax": 600,
+     "six_a1": 84,
+     "gaps": "a=(91,5,87) b=(69,190,4) c=(101,69,136)"
+    },
+    "181": {
+     "Vmax": 574,
+     "six_a1": 89,
+     "gaps": "a=(115,10,171) b=(226,139,158) c=(54,32,260)"
+    },
+    "182": {
+     "Vmax": 575,
+     "six_a1": 91,
+     "gaps": "a=(144,167,159) b=(27,78,46) c=(116,286,156)"
+    },
+    "183": {
+     "Vmax": 425,
+     "six_a1": 124,
+     "gaps": "a=(113,74,1) b=(72,242,37) c=(161,175,16)"
+    },
+    "184": {
+     "Vmax": 442,
+     "six_a1": 110,
+     "gaps": "a=(53,200,255) b=(137,86,58) c=(140,237,1)"
+    },
+    "185": {
+     "Vmax": 639,
+     "six_a1": 81,
+     "gaps": "a=(30,5,167) b=(247,99,246) c=(61,126,245)"
+    },
+    "186": {
+     "Vmax": 621,
+     "six_a1": 84,
+     "gaps": "a=(282,7,62) b=(152,248,253) c=(92,190,91)"
+    },
+    "187": {
+     "Vmax": 450,
+     "six_a1": 111,
+     "gaps": "a=(50,126,95) b=(24,112,36) c=(1,216,10)"
+    },
+    "188": {
+     "Vmax": 365,
+     "six_a1": 199,
+     "gaps": "a=(31,192,214) b=(2,198,167) c=(1,286,77)"
+    },
+    "189": {
+     "Vmax": 600,
+     "six_a1": 93,
+     "gaps": "a=(228,66,38) b=(106,255,8) c=(5,88,191)"
+    },
+    "190": {
+     "Vmax": 656,
+     "six_a1": 82,
+     "gaps": "a=(115,59,50) b=(123,4,75) c=(6,46,79)"
+    },
+    "191": {
+     "Vmax": 636,
+     "six_a1": 87,
+     "gaps": "a=(212,28,297) b=(127,282,91) c=(138,8,155)"
+    },
+    "192": {
+     "Vmax": 637,
+     "six_a1": 89,
+     "gaps": "a=(270,201,89) b=(186,44,118) c=(81,92,274)"
+    },
+    "193": {
+     "Vmax": 659,
+     "six_a1": 85,
+     "gaps": "a=(14,77,204) b=(132,5,116) c=(190,91,142)"
+    },
+    "194": {
+     "Vmax": 474,
+     "six_a1": 108,
+     "gaps": "a=(250,124,1) b=(170,63,9) c=(249,59,71)"
+    },
+    "195": {
+     "Vmax": 647,
+     "six_a1": 88,
+     "gaps": "a=(194,58,18) b=(94,226,111) c=(79,97,82)"
+    },
+    "196": {
+     "Vmax": 666,
+     "six_a1": 87,
+     "gaps": "a=(61,73,106) b=(6,274,163) c=(144,48,256)"
+    },
+    "197": {
+     "Vmax": 556,
+     "six_a1": 122,
+     "gaps": "a=(33,284,281) b=(229,79,2) c=(62,225,51)"
+    },
+    "198": {
+     "Vmax": 601,
+     "six_a1": 101,
+     "gaps": "a=(15,176,118) b=(10,193,2) c=(24,155,147)"
+    },
+    "199": {
+     "Vmax": 602,
+     "six_a1": 103,
+     "gaps": "a=(139,261,61) b=(193,66,289) c=(98,2,202)"
+    },
+    "200": {
+     "Vmax": 676,
+     "six_a1": 89,
+     "gaps": "a=(289,248,197) b=(8,47,268) c=(4,252,262)"
+    },
+    "201": {
+     "Vmax": 0,
+     "six_a1": 225,
+     "gaps": "a=(115,250,81) b=(5,162,266) c=(0,230,135)"
+    },
+    "202": {
+     "Vmax": 657,
+     "six_a1": 96,
+     "gaps": "a=(117,251,77) b=(118,98,93) c=(186,3,117)"
+    },
+    "203": {
+     "Vmax": 650,
+     "six_a1": 97,
+     "gaps": "a=(156,93,128) b=(230,268,133) c=(100,142,69)"
+    },
+    "204": {
+     "Vmax": 686,
+     "six_a1": 91,
+     "gaps": "a=(147,67,249) b=(34,72,145) c=(191,260,94)"
+    },
+    "205": {
+     "Vmax": 608,
+     "six_a1": 112,
+     "gaps": "a=(51,179,219) b=(64,59,50) c=(146,178,280)"
+    },
+    "206": {
+     "Vmax": 667,
+     "six_a1": 95,
+     "gaps": "a=(194,271,154) b=(9,197,292) c=(54,67,115)"
+    },
+    "207": {
+     "Vmax": 588,
+     "six_a1": 126,
+     "gaps": "a=(2,17,115) b=(53,284,142) c=(115,263,137)"
+    },
+    "208": {
+     "Vmax": 715,
+     "six_a1": 89,
+     "gaps": "a=(287,189,281) b=(285,5,112) c=(178,47,289)"
+    },
+    "209": {
+     "Vmax": 674,
+     "six_a1": 97,
+     "gaps": "a=(43,199,20) b=(9,193,281) c=(42,21,209)"
+    },
+    "210": {
+     "Vmax": 720,
+     "six_a1": 90,
+     "gaps": "a=(76,213,131) b=(245,107,105) c=(6,4,185)"
+    },
+    "211": {
+     "Vmax": 208,
+     "six_a1": 425,
+     "gaps": "a=(106,111,146) b=(283,157,262) c=(25,201,186)"
+    },
+    "212": {
+     "Vmax": 727,
+     "six_a1": 89,
+     "gaps": "a=(5,68,138) b=(47,57,174) c=(57,241,25)"
+    },
+    "213": {
+     "Vmax": 692,
+     "six_a1": 97,
+     "gaps": "a=(222,33,6) b=(239,47,287) c=(249,16,73)"
+    },
+    "214": {
+     "Vmax": 729,
+     "six_a1": 90,
+     "gaps": "a=(190,13,221) b=(34,83,227) c=(90,39,80)"
+    },
+    "215": {
+     "Vmax": 753,
+     "six_a1": 87,
+     "gaps": "a=(8,212,5) b=(251,4,149) c=(63,32,282)"
+    },
+    "216": {
+     "Vmax": 750,
+     "six_a1": 90,
+     "gaps": "a=(141,272,142) b=(91,5,5) c=(174,279,141)"
+    },
+    "217": {
+     "Vmax": 739,
+     "six_a1": 92,
+     "gaps": "a=(41,170,31) b=(246,76,7) c=(147,243,44)"
+    },
+    "218": {
+     "Vmax": 757,
+     "six_a1": 89,
+     "gaps": "a=(241,7,64) b=(52,126,146) c=(277,133,206)"
+    },
+    "219": {
+     "Vmax": 776,
+     "six_a1": 88,
+     "gaps": "a=(218,38,4) b=(98,86,185) c=(292,6,265)"
+    },
+    "220": {
+     "Vmax": 771,
+     "six_a1": 90,
+     "gaps": "a=(143,96,224) b=(121,119,295) c=(187,5,78)"
+    },
+    "221": {
+     "Vmax": 542,
+     "six_a1": 121,
+     "gaps": "a=(297,236,1) b=(232,117,257) c=(57,90,104)"
+    },
+    "222": {
+     "Vmax": 684,
+     "six_a1": 108,
+     "gaps": "a=(229,163,59) b=(131,187,237) c=(2,13,264)"
+    },
+    "223": {
+     "Vmax": 755,
+     "six_a1": 94,
+     "gaps": "a=(274,62,241) b=(49,226,109) c=(7,182,22)"
+    },
+    "224": {
+     "Vmax": 774,
+     "six_a1": 93,
+     "gaps": "a=(11,275,94) b=(117,52,159) c=(166,6,117)"
+    },
+    "225": {
+     "Vmax": 768,
+     "six_a1": 96,
+     "gaps": "a=(200,180,152) b=(107,259,104) c=(158,4,25)"
+    },
+    "226": {
+     "Vmax": 680,
+     "six_a1": 118,
+     "gaps": "a=(107,106,132) b=(103,15,12) c=(86,101,52)"
+    },
+    "227": {
+     "Vmax": 224,
+     "six_a1": 457,
+     "gaps": "a=(105,82,83) b=(236,212,286) c=(242,221,92)"
+    },
+    "228": {
+     "Vmax": 784,
+     "six_a1": 95,
+     "gaps": "a=(272,264,121) b=(82,125,173) c=(255,69,43)"
+    },
+    "230": {
+     "Vmax": 784,
+     "six_a1": 98,
+     "gaps": "a=(122,177,220) b=(175,4,67) c=(79,294,259)"
+    },
+    "231": {
+     "Vmax": 811,
+     "six_a1": 92,
+     "gaps": "a=(72,264,5) b=(71,230,113) c=(6,159,247)"
+    },
+    "232": {
+     "Vmax": 813,
+     "six_a1": 93,
+     "gaps": "a=(88,276,7) b=(146,88,155) c=(298,292,86)"
+    },
+    "233": {
+     "Vmax": 736,
+     "six_a1": 104,
+     "gaps": "a=(94,265,11) b=(127,155,2) c=(6,148,210)"
+    },
+    "234": {
+     "Vmax": 792,
+     "six_a1": 99,
+     "gaps": "a=(150,122,94) b=(3,8,232) c=(146,161,157)"
+    },
+    "235": {
+     "Vmax": 728,
+     "six_a1": 112,
+     "gaps": "a=(220,248,19) b=(77,2,261) c=(291,218,266)"
+    },
+    "236": {
+     "Vmax": 581,
+     "six_a1": 127,
+     "gaps": "a=(184,1,40) b=(36,109,53) c=(159,132,80)"
+    },
+    "237": {
+     "Vmax": 855,
+     "six_a1": 90,
+     "gaps": "a=(5,6,195) b=(165,93,178) c=(232,85,183)"
+    },
+    "238": {
+     "Vmax": 775,
+     "six_a1": 107,
+     "gaps": "a=(38,212,34) b=(201,148,249) c=(51,171,109)"
+    },
+    "239": {
+     "Vmax": 786,
+     "six_a1": 105,
+     "gaps": "a=(239,250,252) b=(280,197,139) c=(96,35,40)"
+    },
+    "240": {
+     "Vmax": 854,
+     "six_a1": 91,
+     "gaps": "a=(14,35,233) b=(276,215,10) c=(10,226,39)"
+    },
+    "241": {
+     "Vmax": 855,
+     "six_a1": 93,
+     "gaps": "a=(291,251,125) b=(46,103,72) c=(125,212,261)"
+    },
+    "242": {
+     "Vmax": 855,
+     "six_a1": 93,
+     "gaps": "a=(6,71,91) b=(86,116,59) c=(78,90,210)"
+    },
+    "243": {
+     "Vmax": 818,
+     "six_a1": 103,
+     "gaps": "a=(57,220,10) b=(250,20,211) c=(147,3,263)"
+    },
+    "244": {
+     "Vmax": 819,
+     "six_a1": 105,
+     "gaps": "a=(291,96,46) b=(128,245,28) c=(3,292,108)"
+    },
+    "245": {
+     "Vmax": 869,
+     "six_a1": 94,
+     "gaps": "a=(240,235,31) b=(122,7,209) c=(298,171,298)"
+    },
+    "246": {
+     "Vmax": 702,
+     "six_a1": 147,
+     "gaps": "a=(3,280,103) b=(168,2,21) c=(65,268,38)"
+    },
+    "247": {
+     "Vmax": 0,
+     "six_a1": 180,
+     "gaps": "a=(0,217,93) b=(103,254,166) c=(42,54,160)"
+    },
+    "248": {
+     "Vmax": 856,
+     "six_a1": 98,
+     "gaps": "a=(8,161,197) b=(25,170,23) c=(57,253,256)"
+    },
+    "249": {
+     "Vmax": 751,
+     "six_a1": 128,
+     "gaps": "a=(36,33,239) b=(21,9,170) c=(71,125,105)"
+    },
+    "250": {
+     "Vmax": 884,
+     "six_a1": 97,
+     "gaps": "a=(43,103,142) b=(51,4,276) c=(111,215,111)"
+    },
+    "251": {
+     "Vmax": 875,
+     "six_a1": 100,
+     "gaps": "a=(199,268,55) b=(120,5,78) c=(245,166,197)"
+    },
+    "252": {
+     "Vmax": 882,
+     "six_a1": 99,
+     "gaps": "a=(68,177,111) b=(6,185,260) c=(79,95,82)"
+    },
+    "253": {
+     "Vmax": 871,
+     "six_a1": 104,
+     "gaps": "a=(148,132,127) b=(49,120,43) c=(3,91,290)"
+    },
+    "254": {
+     "Vmax": 808,
+     "six_a1": 110,
+     "gaps": "a=(257,59,83) b=(2,110,53) c=(210,108,177)"
+    },
+    "255": {
+     "Vmax": 896,
+     "six_a1": 100,
+     "gaps": "a=(108,12,116) b=(104,228,88) c=(90,294,198)"
+    },
+    "256": {
+     "Vmax": 837,
+     "six_a1": 117,
+     "gaps": "a=(173,30,108) b=(77,118,280) c=(248,3,144)"
+    },
+    "257": {
+     "Vmax": 503,
+     "six_a1": 268,
+     "gaps": "a=(20,136,42) b=(36,295,276) c=(189,239,295)"
+    },
+    "258": {
+     "Vmax": 738,
+     "six_a1": 153,
+     "gaps": "a=(255,24,140) b=(2,298,93) c=(3,252,63)"
+    },
+    "259": {
+     "Vmax": 936,
+     "six_a1": 96,
+     "gaps": "a=(120,42,183) b=(242,78,154) c=(31,108,6)"
+    },
+    "260": {
+     "Vmax": 924,
+     "six_a1": 99,
+     "gaps": "a=(141,123,261) b=(229,157,203) c=(7,4,265)"
+    },
+    "261": {
+     "Vmax": 614,
+     "six_a1": 169,
+     "gaps": "a=(158,291,251) b=(136,226,74) c=(252,1,135)"
+    },
+    "262": {
+     "Vmax": 512,
+     "six_a1": 274,
+     "gaps": "a=(244,177,218) b=(72,270,105) c=(196,82,13)"
+    },
+    "263": {
+     "Vmax": 950,
+     "six_a1": 97,
+     "gaps": "a=(113,5,263) b=(89,10,216) c=(13,78,132)"
+    },
+    "264": {
+     "Vmax": 945,
+     "six_a1": 99,
+     "gaps": "a=(271,7,221) b=(140,137,273) c=(242,32,5)"
+    },
+    "265": {
+     "Vmax": 945,
+     "six_a1": 99,
+     "gaps": "a=(91,7,130) b=(61,161,79) c=(187,118,168)"
+    },
+    "266": {
+     "Vmax": 953,
+     "six_a1": 97,
+     "gaps": "a=(199,31,88) b=(94,27,160) c=(119,68,290)"
+    },
+    "267": {
+     "Vmax": 858,
+     "six_a1": 111,
+     "gaps": "a=(92,127,2) b=(143,107,12) c=(55,8,206)"
+    },
+    "268": {
+     "Vmax": 960,
+     "six_a1": 99,
+     "gaps": "a=(71,294,70) b=(172,246,218) c=(8,160,49)"
+    },
+    "269": {
+     "Vmax": 701,
+     "six_a1": 181,
+     "gaps": "a=(34,253,258) b=(61,27,100) c=(177,193,274)"
+    },
+    "270": {
+     "Vmax": 960,
+     "six_a1": 102,
+     "gaps": "a=(251,144,134) b=(50,107,272) c=(5,151,10)"
+    },
+    "271": {
+     "Vmax": 964,
+     "six_a1": 101,
+     "gaps": "a=(51,296,33) b=(79,231,278) c=(4,100,143)"
+    },
+    "272": {
+     "Vmax": 965,
+     "six_a1": 100,
+     "gaps": "a=(8,264,167) b=(106,150,267) c=(184,7,142)"
+    },
+    "273": {
+     "Vmax": 990,
+     "six_a1": 99,
+     "gaps": "a=(192,80,6) b=(205,5,227) c=(153,39,205)"
+    },
+    "274": {
+     "Vmax": 866,
+     "six_a1": 121,
+     "gaps": "a=(37,63,95) b=(2,251,37) c=(109,166,162)"
+    },
+    "275": {
+     "Vmax": 972,
+     "six_a1": 105,
+     "gaps": "a=(29,258,50) b=(125,29,52) c=(215,214,21)"
+    },
+    "276": {
+     "Vmax": 980,
+     "six_a1": 103,
+     "gaps": "a=(220,8,85) b=(268,300,174) c=(176,280,35)"
+    },
+    "277": {
+     "Vmax": 682,
+     "six_a1": 149,
+     "gaps": "a=(132,25,1) b=(197,172,168) c=(299,150,201)"
+    },
+    "278": {
+     "Vmax": 718,
+     "six_a1": 203,
+     "gaps": "a=(86,235,234) b=(2,67,60) c=(147,199,175)"
+    },
+    "279": {
+     "Vmax": 971,
+     "six_a1": 106,
+     "gaps": "a=(133,92,152) b=(126,39,22) c=(277,118,102)"
+    },
+    "280": {
+     "Vmax": 1008,
+     "six_a1": 102,
+     "gaps": "a=(205,6,209) b=(207,73,151) c=(7,84,13)"
+    },
+    "281": {
+     "Vmax": 856,
+     "six_a1": 140,
+     "gaps": "a=(118,79,118) b=(18,75,265) c=(266,8,205)"
+    },
+    "282": {
+     "Vmax": 992,
+     "six_a1": 106,
+     "gaps": "a=(235,55,45) b=(25,8,95) c=(211,46,137)"
+    },
+    "283": {
+     "Vmax": 280,
+     "six_a1": 569,
+     "gaps": "a=(298,16,136) b=(256,215,2) c=(233,132,107)"
+    },
+    "284": {
+     "Vmax": 948,
+     "six_a1": 117,
+     "gaps": "a=(129,122,13) b=(220,211,249) c=(298,226,5)"
+    },
+    "285": {
+     "Vmax": 1024,
+     "six_a1": 104,
+     "gaps": "a=(285,184,56) b=(274,98,252) c=(45,157,32)"
+    },
+    "286": {
+     "Vmax": 1000,
+     "six_a1": 110,
+     "gaps": "a=(187,127,129) b=(187,214,35) c=(73,15,127)"
+    },
+    "287": {
+     "Vmax": 1057,
+     "six_a1": 98,
+     "gaps": "a=(41,184,295) b=(60,296,9) c=(80,46,127)"
+    },
+    "288": {
+     "Vmax": 1029,
+     "six_a1": 105,
+     "gaps": "a=(234,7,62) b=(293,254,103) c=(240,272,244)"
+    },
+    "289": {
+     "Vmax": 755,
+     "six_a1": 193,
+     "gaps": "a=(217,161,240) b=(255,28,156) c=(35,31,279)"
+    },
+    "290": {
+     "Vmax": 1051,
+     "six_a1": 101,
+     "gaps": "a=(181,48,257) b=(165,27,159) c=(24,9,138)"
+    },
+    "291": {
+     "Vmax": 571,
+     "six_a1": 302,
+     "gaps": "a=(155,260,148) b=(203,48,46) c=(64,156,200)"
+    },
+    "292": {
+     "Vmax": 999,
+     "six_a1": 117,
+     "gaps": "a=(11,227,151) b=(237,133,222) c=(3,72,184)"
+    },
+    "293": {
+     "Vmax": 740,
+     "six_a1": 139,
+     "gaps": "a=(67,101,290) b=(132,291,141) c=(150,1,228)"
+    },
+    "294": {
+     "Vmax": 975,
+     "six_a1": 123,
+     "gaps": "a=(284,110,299) b=(294,42,110) c=(146,116,13)"
+    },
+    "295": {
+     "Vmax": 986,
+     "six_a1": 121,
+     "gaps": "a=(278,115,5) b=(14,76,62) c=(232,133,119)"
+    },
+    "296": {
+     "Vmax": 1027,
+     "six_a1": 113,
+     "gaps": "a=(5,236,97) b=(46,214,67) c=(122,32,3)"
+    },
+    "297": {
+     "Vmax": 294,
+     "six_a1": 597,
+     "gaps": "a=(262,143,112) b=(98,268,29) c=(232,275,273)"
+    },
+    "298": {
+     "Vmax": 1088,
+     "six_a1": 106,
+     "gaps": "a=(119,158,69) b=(4,297,23) c=(14,32,205)"
+    },
+    "299": {
+     "Vmax": 1055,
+     "six_a1": 112,
+     "gaps": "a=(264,230,5) b=(48,18,67) c=(235,234,99)"
+    },
+    "300": {
+     "Vmax": 1088,
+     "six_a1": 106,
+     "gaps": "a=(200,34,33) b=(280,198,257) c=(244,246,14)"
+    },
+    "301": {
+     "Vmax": 1115,
+     "six_a1": 103,
+     "gaps": "a=(146,145,32) b=(10,140,141) c=(290,5,295)"
+    },
+    "302": {
+     "Vmax": 592,
+     "six_a1": 314,
+     "gaps": "a=(229,4,180) b=(89,118,277) c=(17,127,70)"
+    },
+    "304": {
+     "Vmax": 1107,
+     "six_a1": 105,
+     "gaps": "a=(171,232,69) b=(207,279,298) c=(284,9,113)"
+    },
+    "305": {
+     "Vmax": 1072,
+     "six_a1": 116,
+     "gaps": "a=(135,4,185) b=(134,156,269) c=(48,90,189)"
+    },
+    "306": {
+     "Vmax": 776,
+     "six_a1": 142,
+     "gaps": "a=(218,88,202) b=(283,176,36) c=(1,124,86)"
+    },
+    "307": {
+     "Vmax": 1079,
+     "six_a1": 112,
+     "gaps": "a=(298,31,46) b=(74,227,136) c=(23,50,169)"
+    },
+    "308": {
+     "Vmax": 1115,
+     "six_a1": 109,
+     "gaps": "a=(271,160,211) b=(100,5,83) c=(211,61,298)"
+    },
+    "309": {
+     "Vmax": 648,
+     "six_a1": 279,
+     "gaps": "a=(276,295,161) b=(1,44,170) c=(273,289,83)"
+    },
+    "310": {
+     "Vmax": 944,
+     "six_a1": 154,
+     "gaps": "a=(96,168,252) b=(142,95,115) c=(245,51,42)"
+    },
+    "311": {
+     "Vmax": 1166,
+     "six_a1": 100,
+     "gaps": "a=(134,71,190) b=(141,39,8) c=(166,67,23)"
+    },
+    "312": {
+     "Vmax": 1176,
+     "six_a1": 102,
+     "gaps": "a=(116,225,155) b=(221,215,94) c=(7,5,165)"
+    },
+    "313": {
+     "Vmax": 790,
+     "six_a1": 149,
+     "gaps": "a=(1,67,289) b=(233,168,167) c=(120,40,160)"
+    },
+    "314": {
+     "Vmax": 988,
+     "six_a1": 140,
+     "gaps": "a=(2,65,49) b=(159,228,84) c=(131,270,133)"
+    },
+    "315": {
+     "Vmax": 1152,
+     "six_a1": 108,
+     "gaps": "a=(279,147,121) b=(73,201,211) c=(192,4,8)"
+    },
+    "316": {
+     "Vmax": 1156,
+     "six_a1": 107,
+     "gaps": "a=(247,48,103) b=(259,282,42) c=(226,8,205)"
+    },
+    "317": {
+     "Vmax": 806,
+     "six_a1": 145,
+     "gaps": "a=(258,44,59) b=(263,209,264) c=(207,197,1)"
+    },
+    "318": {
+     "Vmax": 798,
+     "six_a1": 156,
+     "gaps": "a=(265,166,213) b=(285,21,1) c=(67,278,285)"
+    },
+    "319": {
+     "Vmax": 1073,
+     "six_a1": 127,
+     "gaps": "a=(135,15,17) b=(131,197,40) c=(220,213,65)"
+    },
+    "320": {
+     "Vmax": 1189,
+     "six_a1": 107,
+     "gaps": "a=(22,66,63) b=(158,259,110) c=(234,196,229)"
+    },
+    "321": {
+     "Vmax": 1193,
+     "six_a1": 106,
+     "gaps": "a=(122,97,8) b=(36,102,283) c=(18,226,209)"
+    },
+    "322": {
+     "Vmax": 1188,
+     "six_a1": 108,
+     "gaps": "a=(205,16,31) b=(6,235,187) c=(26,103,189)"
+    },
+    "323": {
+     "Vmax": 1175,
+     "six_a1": 109,
+     "gaps": "a=(43,58,8) b=(112,177,217) c=(109,92,269)"
+    },
+    "324": {
+     "Vmax": 1176,
+     "six_a1": 111,
+     "gaps": "a=(48,128,198) b=(219,138,214) c=(8,167,75)"
+    },
+    "325": {
+     "Vmax": 1212,
+     "six_a1": 105,
+     "gaps": "a=(40,245,211) b=(290,9,4) c=(113,250,10)"
+    },
+    "326": {
+     "Vmax": 1161,
+     "six_a1": 114,
+     "gaps": "a=(33,90,97) b=(207,11,139) c=(7,107,67)"
+    },
+    "327": {
+     "Vmax": 1208,
+     "six_a1": 109,
+     "gaps": "a=(235,240,8) b=(91,77,155) c=(106,268,257)"
+    },
+    "328": {
+     "Vmax": 720,
+     "six_a1": 264,
+     "gaps": "a=(1,259,171) b=(297,126,265) c=(261,3,207)"
+    },
+    "329": {
+     "Vmax": 1242,
+     "six_a1": 105,
+     "gaps": "a=(256,282,150) b=(88,6,129) c=(235,231,68)"
+    },
+    "330": {
+     "Vmax": 1216,
+     "six_a1": 110,
+     "gaps": "a=(26,199,282) b=(80,81,226) c=(90,157,90)"
+    },
+    "331": {
+     "Vmax": 832,
+     "six_a1": 161,
+     "gaps": "a=(186,248,130) b=(105,151,197) c=(1,62,135)"
+    },
+    "332": {
+     "Vmax": 1236,
+     "six_a1": 108,
+     "gaps": "a=(90,146,10) b=(279,157,280) c=(278,7,211)"
+    },
+    "333": {
+     "Vmax": 864,
+     "six_a1": 240,
+     "gaps": "a=(2,218,36) b=(38,122,172) c=(196,102,204)"
+    },
+    "334": {
+     "Vmax": 656,
+     "six_a1": 346,
+     "gaps": "a=(86,63,110) b=(11,154,142) c=(149,163,196)"
+    },
+    "335": {
+     "Vmax": 1244,
+     "six_a1": 109,
+     "gaps": "a=(121,211,17) b=(298,4,120) c=(11,154,299)"
+    },
+    "336": {
+     "Vmax": 1260,
+     "six_a1": 108,
+     "gaps": "a=(189,5,144) b=(113,254,175) c=(264,230,7)"
+    },
+    "337": {
+     "Vmax": 854,
+     "six_a1": 157,
+     "gaps": "a=(36,1,114) b=(45,177,270) c=(62,108,289)"
+    },
+    "338": {
+     "Vmax": 1084,
+     "six_a1": 140,
+     "gaps": "a=(2,296,176) b=(126,145,299) c=(82,229,9)"
+    },
+    "339": {
+     "Vmax": 866,
+     "six_a1": 151,
+     "gaps": "a=(284,96,107) b=(49,146,1) c=(216,262,71)"
+    },
+    "340": {
+     "Vmax": 1254,
+     "six_a1": 111,
+     "gaps": "a=(246,98,10) b=(119,90,210) c=(110,280,229)"
+    },
+    "341": {
+     "Vmax": 0,
+     "six_a1": 213,
+     "gaps": "a=(168,65,29) b=(33,228,0) c=(201,171,21)"
+    },
+    "342": {
+     "Vmax": 1224,
+     "six_a1": 117,
+     "gaps": "a=(194,8,112) b=(197,92,3) c=(164,90,184)"
+    },
+    "343": {
+     "Vmax": 1224,
+     "six_a1": 120,
+     "gaps": "a=(212,12,202) b=(253,3,180) c=(6,179,259)"
+    },
+    "344": {
+     "Vmax": 1267,
+     "six_a1": 113,
+     "gaps": "a=(284,109,118) b=(7,241,178) c=(89,40,70)"
+    },
+    "345": {
+     "Vmax": 1280,
+     "six_a1": 112,
+     "gaps": "a=(196,99,120) b=(56,104,45) c=(178,271,79)"
+    },
+    "346": {
+     "Vmax": 1285,
+     "six_a1": 113,
+     "gaps": "a=(109,268,153) b=(297,185,113) c=(5,125,33)"
+    },
+    "347": {
+     "Vmax": 1144,
+     "six_a1": 128,
+     "gaps": "a=(122,53,152) b=(2,254,12) c=(154,8,200)"
+    },
+    "348": {
+     "Vmax": 1274,
+     "six_a1": 115,
+     "gaps": "a=(92,62,106) b=(47,229,273) c=(151,85,175)"
+    },
+    "349": {
+     "Vmax": 917,
+     "six_a1": 229,
+     "gaps": "a=(105,122,140) b=(118,190,34) c=(271,243,156)"
+    },
+    "350": {
+     "Vmax": 1333,
+     "six_a1": 107,
+     "gaps": "a=(199,240,127) b=(158,101,128) c=(65,6,289)"
+    },
+    "351": {
+     "Vmax": 1299,
+     "six_a1": 114,
+     "gaps": "a=(38,10,189) b=(68,278,241) c=(189,232,137)"
+    },
+    "352": {
+     "Vmax": 1300,
+     "six_a1": 116,
+     "gaps": "a=(86,69,274) b=(52,37,219) c=(192,159,57)"
+    },
+    "354": {
+     "Vmax": 1304,
+     "six_a1": 115,
+     "gaps": "a=(86,185,177) b=(131,8,132) c=(223,60,297)"
+    },
+    "355": {
+     "Vmax": 1088,
+     "six_a1": 172,
+     "gaps": "a=(297,100,37) b=(73,138,151) c=(192,291,180)"
+    },
+    "356": {
+     "Vmax": 1358,
+     "six_a1": 109,
+     "gaps": "a=(25,200,258) b=(221,188,71) c=(18,39,11)"
+    },
+    "357": {
+     "Vmax": 1332,
+     "six_a1": 114,
+     "gaps": "a=(250,65,284) b=(6,25,205) c=(244,230,193)"
+    },
+    "358": {
+     "Vmax": 1172,
+     "six_a1": 136,
+     "gaps": "a=(73,284,215) b=(29,264,272) c=(161,132,2)"
+    },
+    "359": {
+     "Vmax": 356,
+     "six_a1": 721,
+     "gaps": "a=(132,69,298) b=(110,278,174) c=(54,143,204)"
+    },
+    "360": {
+     "Vmax": 1344,
+     "six_a1": 114,
+     "gaps": "a=(7,109,93) b=(282,30,289) c=(292,178,123)"
+    },
+    "361": {
+     "Vmax": 1178,
+     "six_a1": 139,
+     "gaps": "a=(292,174,194) b=(148,28,177) c=(133,269,2)"
+    },
+    "362": {
+     "Vmax": 1384,
+     "six_a1": 110,
+     "gaps": "a=(289,91,80) b=(10,205,6) c=(166,247,51)"
+    },
+    "363": {
+     "Vmax": 1330,
+     "six_a1": 119,
+     "gaps": "a=(192,10,98) b=(23,178,136) c=(215,121,232)"
+    },
+    "364": {
+     "Vmax": 1331,
+     "six_a1": 121,
+     "gaps": "a=(269,78,205) b=(143,29,155) c=(88,203,52)"
+    },
+    "365": {
+     "Vmax": 1370,
+     "six_a1": 115,
+     "gaps": "a=(170,56,32) b=(109,116,5) c=(282,21,122)"
+    },
+    "366": {
+     "Vmax": 1224,
+     "six_a1": 153,
+     "gaps": "a=(239,217,135) b=(168,260,33) c=(296,20,3)"
+    },
+    "368": {
+     "Vmax": 1323,
+     "six_a1": 123,
+     "gaps": "a=(3,130,7) b=(126,263,292) c=(201,289,243)"
+    },
+    "369": {
+     "Vmax": 960,
+     "six_a1": 264,
+     "gaps": "a=(242,96,2) b=(2,172,146) c=(99,123,77)"
+    },
+    "370": {
+     "Vmax": 1332,
+     "six_a1": 123,
+     "gaps": "a=(281,290,240) b=(245,179,223) c=(120,94,3)"
+    },
+    "371": {
+     "Vmax": 1385,
+     "six_a1": 118,
+     "gaps": "a=(282,217,224) b=(131,5,99) c=(169,285,121)"
+    },
+    "372": {
+     "Vmax": 1372,
+     "six_a1": 119,
+     "gaps": "a=(51,46,69) b=(194,122,80) c=(63,131,133)"
+    },
+    "374": {
+     "Vmax": 1430,
+     "six_a1": 109,
+     "gaps": "a=(18,180,66) b=(48,16,6) c=(28,197,68)"
+    },
+    "375": {
+     "Vmax": 1408,
+     "six_a1": 116,
+     "gaps": "a=(44,298,123) b=(24,118,60) c=(228,184,135)"
+    },
+    "376": {
+     "Vmax": 1436,
+     "six_a1": 112,
+     "gaps": "a=(92,75,247) b=(33,225,5) c=(225,184,144)"
+    },
+    "377": {
+     "Vmax": 0,
+     "six_a1": 240,
+     "gaps": "a=(186,146,207) b=(0,96,215) c=(270,12,170)"
+    },
+    "378": {
+     "Vmax": 1440,
+     "six_a1": 114,
+     "gaps": "a=(113,5,135) b=(110,208,196) c=(84,286,6)"
+    },
+    "379": {
+     "Vmax": 376,
+     "six_a1": 761,
+     "gaps": "a=(159,10,262) b=(252,29,299) c=(290,109,148)"
+    },
+    "380": {
+     "Vmax": 1449,
+     "six_a1": 111,
+     "gaps": "a=(61,99,74) b=(93,79,268) c=(6,39,184)"
+    },
+    "381": {
+     "Vmax": 1450,
+     "six_a1": 113,
+     "gaps": "a=(154,218,290) b=(98,10,61) c=(209,113,290)"
+    },
+    "382": {
+     "Vmax": 1377,
+     "six_a1": 126,
+     "gaps": "a=(110,291,207) b=(206,14,13) c=(92,211,172)"
+    },
+    "384": {
+     "Vmax": 1421,
+     "six_a1": 121,
+     "gaps": "a=(251,290,247) b=(215,45,272) c=(12,251,33)"
+    },
+    "385": {
+     "Vmax": 1458,
+     "six_a1": 117,
+     "gaps": "a=(51,247,59) b=(6,89,12) c=(106,177,70)"
+    },
+    "386": {
+     "Vmax": 1404,
+     "six_a1": 123,
+     "gaps": "a=(75,110,286) b=(3,154,182) c=(263,24,129)"
+    },
+    "387": {
+     "Vmax": 1290,
+     "six_a1": 135,
+     "gaps": "a=(135,180,73) b=(217,125,75) c=(2,14,280)"
+    },
+    "388": {
+     "Vmax": 385,
+     "six_a1": 779,
+     "gaps": "a=(250,37,278) b=(60,269,192) c=(47,130,227)"
+    },
+    "389": {
+     "Vmax": 1471,
+     "six_a1": 116,
+     "gaps": "a=(185,153,240) b=(252,57,178) c=(174,12,15)"
+    },
+    "390": {
+     "Vmax": 1472,
+     "six_a1": 118,
+     "gaps": "a=(19,16,183) b=(90,283,148) c=(194,195,252)"
+    },
+    "391": {
+     "Vmax": 1495,
+     "six_a1": 116,
+     "gaps": "a=(240,255,5) b=(265,23,113) c=(45,164,170)"
+    },
+    "392": {
+     "Vmax": 1494,
+     "six_a1": 117,
+     "gaps": "a=(278,280,47) b=(188,263,6) c=(158,28,223)"
+    },
+    "393": {
+     "Vmax": 938,
+     "six_a1": 241,
+     "gaps": "a=(74,106,270) b=(119,255,213) c=(77,252,1)"
+    },
+    "394": {
+     "Vmax": 1467,
+     "six_a1": 123,
+     "gaps": "a=(116,172,12) b=(120,4,228) c=(238,55,220)"
+    },
+    "395": {
+     "Vmax": 1468,
+     "six_a1": 125,
+     "gaps": "a=(232,242,61) b=(154,4,208) c=(161,51,170)"
+    },
+    "396": {
+     "Vmax": 1513,
+     "six_a1": 116,
+     "gaps": "a=(159,61,38) b=(105,225,13) c=(8,245,25)"
+    },
+    "397": {
+     "Vmax": 1492,
+     "six_a1": 119,
+     "gaps": "a=(11,77,188) b=(28,186,159) c=(61,57,257)"
+    },
+    "398": {
+     "Vmax": 1511,
+     "six_a1": 118,
+     "gaps": "a=(88,122,170) b=(54,6,159) c=(46,295,11)"
+    },
+    "399": {
+     "Vmax": 1530,
+     "six_a1": 117,
+     "gaps": "a=(6,53,291) b=(5,258,272) c=(116,237,184)"
+    },
+    "400": {
+     "Vmax": 1561,
+     "six_a1": 113,
+     "gaps": "a=(30,199,276) b=(177,7,255) c=(197,36,81)"
+    },
+    "401": {
+     "Vmax": 1300,
+     "six_a1": 158,
+     "gaps": "a=(299,53,46) b=(85,176,2) c=(144,71,108)"
+    },
+    "402": {
+     "Vmax": 1473,
+     "six_a1": 138,
+     "gaps": "a=(76,4,294) b=(177,16,5) c=(204,27,268)"
+    },
+    "403": {
+     "Vmax": 1596,
+     "six_a1": 108,
+     "gaps": "a=(6,113,78) b=(182,61,57) c=(8,59,157)"
+    },
+    "404": {
+     "Vmax": 1342,
+     "six_a1": 143,
+     "gaps": "a=(2,200,57) b=(292,228,35) c=(125,256,239)"
+    },
+    "405": {
+     "Vmax": 1560,
+     "six_a1": 117,
+     "gaps": "a=(75,244,228) b=(193,210,213) c=(5,8,286)"
+    },
+    "406": {
+     "Vmax": 1375,
+     "six_a1": 155,
+     "gaps": "a=(273,203,47) b=(234,102,69) c=(18,281,31)"
+    },
+    "407": {
+     "Vmax": 0,
+     "six_a1": 276,
+     "gaps": "a=(36,240,111) b=(0,293,128) c=(277,27,128)"
+    },
+    "408": {
+     "Vmax": 1519,
+     "six_a1": 125,
+     "gaps": "a=(237,95,235) b=(84,237,63) c=(117,115,8)"
+    },
+    "409": {
+     "Vmax": 1392,
+     "six_a1": 153,
+     "gaps": "a=(289,223,258) b=(187,20,45) c=(282,287,37)"
+    },
+    "410": {
+     "Vmax": 1488,
+     "six_a1": 138,
+     "gaps": "a=(4,16,146) b=(183,249,74) c=(180,247,21)"
+    },
+    "411": {
+     "Vmax": 1560,
+     "six_a1": 123,
+     "gaps": "a=(100,119,255) b=(186,107,187) c=(290,5,12)"
+    },
+    "412": {
+     "Vmax": 1548,
+     "six_a1": 123,
+     "gaps": "a=(233,175,143) b=(106,254,167) c=(12,58,29)"
+    },
+    "413": {
+     "Vmax": 1620,
+     "six_a1": 114,
+     "gaps": "a=(119,242,24) b=(147,84,279) c=(259,23,6)"
+    },
+    "414": {
+     "Vmax": 1073,
+     "six_a1": 169,
+     "gaps": "a=(10,73,126) b=(127,257,1) c=(185,187,177)"
+    },
+    "415": {
+     "Vmax": 1568,
+     "six_a1": 124,
+     "gaps": "a=(199,94,180) b=(57,229,4) c=(50,254,288)"
+    },
+    "416": {
+     "Vmax": 1595,
+     "six_a1": 118,
+     "gaps": "a=(29,142,181) b=(42,279,10) c=(7,164,245)"
+    },
+    "417": {
+     "Vmax": 1599,
+     "six_a1": 120,
+     "gaps": "a=(127,212,274) b=(262,11,20) c=(254,224,121)"
+    },
+    "418": {
+     "Vmax": 1600,
+     "six_a1": 122,
+     "gaps": "a=(255,124,205) b=(131,217,203) c=(49,15,71)"
+    },
+    "419": {
+     "Vmax": 1602,
+     "six_a1": 120,
+     "gaps": "a=(270,87,116) b=(121,11,203) c=(57,221,7)"
+    },
+    "420": {
+     "Vmax": 1638,
+     "six_a1": 117,
+     "gaps": "a=(79,257,252) b=(137,263,100) c=(6,7,300)"
+    },
+    "421": {
+     "Vmax": 1590,
+     "six_a1": 123,
+     "gaps": "a=(90,215,180) b=(189,92,9) c=(79,125,21)"
+    },
+    "422": {
+     "Vmax": 1590,
+     "six_a1": 123,
+     "gaps": "a=(11,119,144) b=(228,33,246) c=(158,285,27)"
+    },
+    "423": {
+     "Vmax": 0,
+     "six_a1": 324,
+     "gaps": "a=(88,204,205) b=(245,50,0) c=(151,140,83)"
+    },
+    "424": {
+     "Vmax": 1602,
+     "six_a1": 123,
+     "gaps": "a=(12,283,49) b=(33,38,167) c=(78,294,27)"
+    },
+    "425": {
+     "Vmax": 1632,
+     "six_a1": 120,
+     "gaps": "a=(108,212,218) b=(4,10,162) c=(72,208,184)"
+    },
+    "426": {
+     "Vmax": 1126,
+     "six_a1": 275,
+     "gaps": "a=(42,69,104) b=(160,76,200) c=(155,245,53)"
+    },
+    "427": {
+     "Vmax": 1450,
+     "six_a1": 161,
+     "gaps": "a=(10,257,42) b=(27,105,276) c=(198,217,105)"
+    },
+    "428": {
+     "Vmax": 1645,
+     "six_a1": 122,
+     "gaps": "a=(198,7,85) b=(130,67,207) c=(296,20,104)"
+    },
+    "429": {
+     "Vmax": 1440,
+     "six_a1": 144,
+     "gaps": "a=(139,229,2) b=(256,28,170) c=(12,280,235)"
+    },
+    "430": {
+     "Vmax": 1570,
+     "six_a1": 140,
+     "gaps": "a=(57,223,210) b=(79,5,241) c=(163,77,132)"
+    },
+    "432": {
+     "Vmax": 1617,
+     "six_a1": 129,
+     "gaps": "a=(158,11,68) b=(58,136,175) c=(238,34,203)"
+    },
+    "434": {
+     "Vmax": 1566,
+     "six_a1": 141,
+     "gaps": "a=(36,192,294) b=(47,269,6) c=(250,211,3)"
+    },
+    "435": {
+     "Vmax": 1664,
+     "six_a1": 124,
+     "gaps": "a=(18,129,16) b=(8,150,132) c=(89,85,239)"
+    },
+    "436": {
+     "Vmax": 1677,
+     "six_a1": 123,
+     "gaps": "a=(295,55,33) b=(90,250,5) c=(75,11,276)"
+    },
+    "437": {
+     "Vmax": 1139,
+     "six_a1": 172,
+     "gaps": "a=(154,88,290) b=(195,82,1) c=(180,103,48)"
+    },
+    "438": {
+     "Vmax": 1476,
+     "six_a1": 144,
+     "gaps": "a=(255,2,15) b=(157,40,224) c=(75,104,138)"
+    },
+    "439": {
+     "Vmax": 1700,
+     "six_a1": 121,
+     "gaps": "a=(36,96,71) b=(217,95,130) c=(67,174,17)"
+    },
+    "440": {
+     "Vmax": 1709,
+     "six_a1": 121,
+     "gaps": "a=(128,241,222) b=(5,233,130) c=(6,37,211)"
+    },
+    "441": {
+     "Vmax": 1728,
+     "six_a1": 120,
+     "gaps": "a=(259,19,8) b=(78,6,243) c=(201,32,193)"
+    },
+    "442": {
+     "Vmax": 1694,
+     "six_a1": 127,
+     "gaps": "a=(159,135,108) b=(34,104,284) c=(41,27,128)"
+    },
+    "443": {
+     "Vmax": 875,
+     "six_a1": 454,
+     "gaps": "a=(216,77,73) b=(1,286,195) c=(95,287,2)"
+    },
+    "444": {
+     "Vmax": 1757,
+     "six_a1": 118,
+     "gaps": "a=(7,78,124) b=(86,264,126) c=(212,75,135)"
+    },
+    "445": {
+     "Vmax": 1701,
+     "six_a1": 126,
+     "gaps": "a=(210,136,87) b=(34,186,288) c=(300,169,9)"
+    },
+    "446": {
+     "Vmax": 1566,
+     "six_a1": 159,
+     "gaps": "a=(113,57,3) b=(122,119,209) c=(244,44,269)"
+    },
+    "447": {
+     "Vmax": 0,
+     "six_a1": 900,
+     "gaps": "a=(159,135,244) b=(232,176,2) c=(157,273,0)"
+    },
+    "448": {
+     "Vmax": 1751,
+     "six_a1": 121,
+     "gaps": "a=(5,171,41) b=(290,184,14) c=(162,212,180)"
+    },
+    "449": {
+     "Vmax": 1510,
+     "six_a1": 149,
+     "gaps": "a=(2,186,94) b=(292,261,189) c=(155,194,142)"
+    },
+    "450": {
+     "Vmax": 1728,
+     "six_a1": 126,
+     "gaps": "a=(65,97,152) b=(116,112,193) c=(206,9,62)"
+    },
+    "451": {
+     "Vmax": 1771,
+     "six_a1": 122,
+     "gaps": "a=(43,6,35) b=(149,120,274) c=(100,158,285)"
+    },
+    "452": {
+     "Vmax": 1647,
+     "six_a1": 141,
+     "gaps": "a=(24,288,38) b=(230,173,3) c=(162,175,33)"
+    },
+    "453": {
+     "Vmax": 1143,
+     "six_a1": 216,
+     "gaps": "a=(46,158,1) b=(149,26,44) c=(30,62,96)"
+    },
+    "454": {
+     "Vmax": 1549,
+     "six_a1": 167,
+     "gaps": "a=(178,23,74) b=(182,248,193) c=(300,270,281)"
+    },
+    "455": {
+     "Vmax": 1772,
+     "six_a1": 121,
+     "gaps": "a=(4,33,87) b=(104,207,112) c=(11,214,98)"
+    },
+    "456": {
+     "Vmax": 1715,
+     "six_a1": 133,
+     "gaps": "a=(34,145,240) b=(105,132,27) c=(191,231,175)"
+    },
+    "458": {
+     "Vmax": 1193,
+     "six_a1": 181,
+     "gaps": "a=(187,116,1) b=(252,93,94) c=(142,32,200)"
+    },
+    "459": {
+     "Vmax": 1536,
+     "six_a1": 156,
+     "gaps": "a=(2,189,25) b=(106,68,46) c=(33,129,160)"
+    },
+    "460": {
+     "Vmax": 1819,
+     "six_a1": 119,
+     "gaps": "a=(21,288,72) b=(217,9,74) c=(154,70,220)"
+    },
+    "461": {
+     "Vmax": 1799,
+     "six_a1": 124,
+     "gaps": "a=(230,184,81) b=(11,227,262) c=(34,60,6)"
+    },
+    "462": {
+     "Vmax": 1800,
+     "six_a1": 126,
+     "gaps": "a=(6,263,293) b=(64,293,130) c=(140,128,49)"
+    },
+    "463": {
+     "Vmax": 1352,
+     "six_a1": 256,
+     "gaps": "a=(128,117,42) b=(63,2,255) c=(115,175,181)"
+    },
+    "464": {
+     "Vmax": 1807,
+     "six_a1": 125,
+     "gaps": "a=(5,78,284) b=(37,172,141) c=(267,17,160)"
+    },
+    "465": {
+     "Vmax": 1792,
+     "six_a1": 128,
+     "gaps": "a=(174,264,81) b=(50,152,13) c=(98,182,276)"
+    },
+    "466": {
+     "Vmax": 1701,
+     "six_a1": 144,
+     "gaps": "a=(294,261,35) b=(79,248,197) c=(43,76,16)"
+    },
+    "467": {
+     "Vmax": 1814,
+     "six_a1": 127,
+     "gaps": "a=(88,209,61) b=(156,100,98) c=(284,32,5)"
+    },
+    "468": {
+     "Vmax": 1815,
+     "six_a1": 129,
+     "gaps": "a=(202,132,5) b=(140,144,289) c=(101,135,31)"
+    },
+    "469": {
+     "Vmax": 1600,
+     "six_a1": 173,
+     "gaps": "a=(226,248,31) b=(265,99,204) c=(69,74,119)"
+    },
+    "470": {
+     "Vmax": 1786,
+     "six_a1": 131,
+     "gaps": "a=(236,221,223) b=(89,14,223) c=(47,246,106)"
+    },
+    "471": {
+     "Vmax": 931,
+     "six_a1": 482,
+     "gaps": "a=(137,87,239) b=(205,264,55) c=(233,78,7)"
+    },
+    "472": {
+     "Vmax": 1793,
+     "six_a1": 133,
+     "gaps": "a=(107,136,277) b=(32,36,109) c=(132,248,123)"
+    },
+    "473": {
+     "Vmax": 1911,
+     "six_a1": 114,
+     "gaps": "a=(71,62,157) b=(7,62,57) c=(23,61,261)"
+    },
+    "474": {
+     "Vmax": 1888,
+     "six_a1": 122,
+     "gaps": "a=(8,151,134) b=(21,289,247) c=(160,29,234)"
+    },
+    "475": {
+     "Vmax": 1870,
+     "six_a1": 125,
+     "gaps": "a=(113,66,281) b=(75,60,36) c=(170,5,193)"
+    },
+    "476": {
+     "Vmax": 1854,
+     "six_a1": 129,
+     "gaps": "a=(218,156,45) b=(6,164,46) c=(72,184,75)"
+    },
+    "477": {
+     "Vmax": 1933,
+     "six_a1": 116,
+     "gaps": "a=(24,76,128) b=(109,89,9) c=(7,43,7)"
+    },
+    "479": {
+     "Vmax": 1642,
+     "six_a1": 173,
+     "gaps": "a=(146,261,194) b=(84,205,24) c=(298,150,22)"
+    },
+    "480": {
+     "Vmax": 1911,
+     "six_a1": 123,
+     "gaps": "a=(300,263,7) b=(286,15,237) c=(255,7,203)"
+    },
+    "482": {
+     "Vmax": 1701,
+     "six_a1": 168,
+     "gaps": "a=(155,22,3) b=(275,154,75) c=(174,278,38)"
+    },
+    "483": {
+     "Vmax": 1650,
+     "six_a1": 177,
+     "gaps": "a=(225,282,23) b=(22,272,98) c=(288,285,280)"
+    },
+    "484": {
+     "Vmax": 1900,
+     "six_a1": 128,
+     "gaps": "a=(18,200,85) b=(38,114,27) c=(164,85,206)"
+    },
+    "485": {
+     "Vmax": 1893,
+     "six_a1": 126,
+     "gaps": "a=(52,84,153) b=(197,26,10) c=(118,126,176)"
+    },
+    "486": {
+     "Vmax": 1632,
+     "six_a1": 162,
+     "gaps": "a=(141,115,293) b=(2,237,8) c=(158,251,166)"
+    },
+    "487": {
+     "Vmax": 0,
+     "six_a1": 276,
+     "gaps": "a=(166,226,90) b=(34,132,110) c=(298,0,98)"
+    },
+    "488": {
+     "Vmax": 1925,
+     "six_a1": 127,
+     "gaps": "a=(48,118,79) b=(184,105,158) c=(12,204,7)"
+    },
+    "489": {
+     "Vmax": 1295,
+     "six_a1": 313,
+     "gaps": "a=(216,55,281) b=(28,154,172) c=(10,94,201)"
+    },
+    "490": {
+     "Vmax": 1872,
+     "six_a1": 138,
+     "gaps": "a=(280,13,209) b=(94,165,57) c=(4,135,230)"
+    },
+    "491": {
+     "Vmax": 1912,
+     "six_a1": 128,
+     "gaps": "a=(10,153,87) b=(209,91,201) c=(52,22,265)"
+    },
+    "492": {
+     "Vmax": 1862,
+     "six_a1": 139,
+     "gaps": "a=(276,55,93) b=(268,118,66) c=(11,187,62)"
+    },
+    "493": {
+     "Vmax": 1975,
+     "six_a1": 122,
+     "gaps": "a=(131,23,15) b=(7,294,15) c=(112,256,22)"
+    },
+    "494": {
+     "Vmax": 1943,
+     "six_a1": 127,
+     "gaps": "a=(87,87,194) b=(142,13,139) c=(291,21,269)"
+    },
+    "495": {
+     "Vmax": 1944,
+     "six_a1": 129,
+     "gaps": "a=(8,29,282) b=(187,95,28) c=(84,107,89)"
+    },
+    "496": {
+     "Vmax": 1891,
+     "six_a1": 137,
+     "gaps": "a=(151,263,136) b=(227,163,73) c=(73,13,126)"
+    },
+    "497": {
+     "Vmax": 1955,
+     "six_a1": 130,
+     "gaps": "a=(238,181,42) b=(235,22,107) c=(149,5,193)"
+    },
+    "498": {
+     "Vmax": 1872,
+     "six_a1": 135,
+     "gaps": "a=(41,64,3) b=(36,170,23) c=(48,118,13)"
+    },
+    "499": {
+     "Vmax": 1310,
+     "six_a1": 187,
+     "gaps": "a=(1,92,254) b=(121,178,19) c=(151,218,242)"
+    },
+    "500": {
+     "Vmax": 1936,
+     "six_a1": 134,
+     "gaps": "a=(108,151,121) b=(118,95,19) c=(288,161,4)"
+    },
+    "501": {
+     "Vmax": 1961,
+     "six_a1": 130,
+     "gaps": "a=(17,99,126) b=(21,115,78) c=(84,225,12)"
+    },
+    "502": {
+     "Vmax": 1863,
+     "six_a1": 144,
+     "gaps": "a=(100,3,94) b=(160,177,77) c=(126,131,35)"
+    },
+    "503": {
+     "Vmax": 1724,
+     "six_a1": 181,
+     "gaps": "a=(279,161,221) b=(31,142,264) c=(23,12,288)"
+    },
+    "504": {
+     "Vmax": 2030,
+     "six_a1": 124,
+     "gaps": "a=(71,97,204) b=(122,235,7) c=(297,214,91)"
+    },
+    "505": {
+     "Vmax": 1964,
+     "six_a1": 133,
+     "gaps": "a=(4,74,284) b=(162,120,25) c=(181,178,244)"
+    },
+    "506": {
+     "Vmax": 2020,
+     "six_a1": 128,
+     "gaps": "a=(210,77,213) b=(279,296,209) c=(169,175,10)"
+    },
+    "507": {
+     "Vmax": 0,
+     "six_a1": 300,
+     "gaps": "a=(129,53,252) b=(145,248,176) c=(124,174,0)"
+    },
+    "508": {
+     "Vmax": 1313,
+     "six_a1": 211,
+     "gaps": "a=(299,153,1) b=(62,185,156) c=(218,300,218)"
+    },
+    "510": {
+     "Vmax": 1984,
+     "six_a1": 134,
+     "gaps": "a=(232,14,151) b=(8,151,86) c=(196,238,47)"
+    },
+    "511": {
+     "Vmax": 1750,
+     "six_a1": 185,
+     "gaps": "a=(179,278,286) b=(197,266,84) c=(93,86,47)"
+    },
+    "512": {
+     "Vmax": 2058,
+     "six_a1": 126,
+     "gaps": "a=(145,108,291) b=(257,7,7) c=(92,202,286)"
+    }
+   },
+   "mode": "RAND",
+   "mode_args": "K=300 N=1000000"
+  },
   {
    "log": "r4_reeve/runs/band11/scan_G12.log",
    "valid_polytopes": 1654867200,
@@ -807,7 +5942,600 @@
    "mode_args": "S=40 vectors=2054455634"
   },
   {
-   "log": "r4_reeve/runs/band11/scan_simplex52.log"
+   "log": "r4_reeve/runs/band11/scan_simplex52.log",
+   "valid_polytopes": 801481767,
+   "negative_a1": 0,
+   "min_6a1": 11,
+   "min_6a1_V": 1,
+   "min_6a1_c": 4,
+   "min_6a1_gaps": "a=(2,12,1) b=(1,1,1) c=(1,12,2)",
+   "max_V": 415,
+   "max_V_c": 117,
+   "max_V_6a1": 59,
+   "max_V_gaps": "a=(6,6,5) b=(5,6,6) c=(6,6,6)",
+   "max_V_over_c": "415/117",
+   "max_V_over_c_6a1": 59,
+   "max_V_over_c_h3": 41,
+   "max_V_over_c_gaps": "a=(6,6,5) b=(5,6,6) c=(6,6,6)",
+   "max_V_over_c_plus_h3": "402/153",
+   "max_V_over_c_plus_h3_data": {
+    "V": 402,
+    "c": 114,
+    "h3": 39,
+    "six_a1": 57,
+    "gaps": "a=(6,6,6) b=(5,6,5) c=(6,6,6)"
+   },
+   "max_V_at_c4": 1,
+   "max_V_at_c4_gaps": "a=(2,12,1) b=(1,1,1) c=(1,12,2)",
+   "max_V_at_fixed_c": {
+    "1": {
+     "Vmax": 0,
+     "six_a1": 0,
+     "gaps": "a=(2,12,0) b=(0,0,0) c=(2,12,0)"
+    },
+    "2": {
+     "Vmax": 0,
+     "six_a1": 6,
+     "gaps": "a=(2,12,0) b=(0,1,1) c=(2,11,1)"
+    },
+    "3": {
+     "Vmax": 0,
+     "six_a1": 12,
+     "gaps": "a=(2,12,0) b=(0,2,2) c=(2,10,2)"
+    },
+    "4": {
+     "Vmax": 1,
+     "six_a1": 11,
+     "gaps": "a=(2,12,1) b=(1,1,1) c=(1,12,2)"
+    },
+    "5": {
+     "Vmax": 3,
+     "six_a1": 12,
+     "gaps": "a=(1,22,1) b=(1,2,1) c=(1,22,1)"
+    },
+    "6": {
+     "Vmax": 4,
+     "six_a1": 14,
+     "gaps": "a=(2,12,1) b=(1,2,1) c=(2,12,1)"
+    },
+    "7": {
+     "Vmax": 6,
+     "six_a1": 15,
+     "gaps": "a=(2,12,2) b=(1,2,1) c=(2,12,2)"
+    },
+    "8": {
+     "Vmax": 7,
+     "six_a1": 17,
+     "gaps": "a=(2,12,1) b=(1,2,2) c=(2,12,2)"
+    },
+    "9": {
+     "Vmax": 9,
+     "six_a1": 18,
+     "gaps": "a=(2,12,1) b=(1,3,2) c=(2,11,2)"
+    },
+    "10": {
+     "Vmax": 11,
+     "six_a1": 19,
+     "gaps": "a=(2,12,1) b=(2,2,2) c=(2,11,3)"
+    },
+    "11": {
+     "Vmax": 13,
+     "six_a1": 20,
+     "gaps": "a=(2,12,1) b=(2,2,3) c=(2,12,2)"
+    },
+    "12": {
+     "Vmax": 18,
+     "six_a1": 21,
+     "gaps": "a=(2,2,2) b=(2,2,2) c=(2,2,2)"
+    },
+    "13": {
+     "Vmax": 20,
+     "six_a1": 22,
+     "gaps": "a=(2,12,2) b=(2,2,2) c=(2,12,2)"
+    },
+    "14": {
+     "Vmax": 22,
+     "six_a1": 23,
+     "gaps": "a=(2,12,2) b=(2,2,12) c=(12,2,2)"
+    },
+    "15": {
+     "Vmax": 25,
+     "six_a1": 23,
+     "gaps": "a=(2,3,2) b=(2,3,2) c=(3,2,3)"
+    },
+    "16": {
+     "Vmax": 27,
+     "six_a1": 24,
+     "gaps": "a=(2,12,2) b=(2,3,2) c=(3,11,3)"
+    },
+    "17": {
+     "Vmax": 29,
+     "six_a1": 25,
+     "gaps": "a=(2,12,2) b=(2,3,3) c=(2,11,3)"
+    },
+    "18": {
+     "Vmax": 31,
+     "six_a1": 26,
+     "gaps": "a=(2,12,2) b=(2,3,3) c=(3,11,4)"
+    },
+    "19": {
+     "Vmax": 36,
+     "six_a1": 27,
+     "gaps": "a=(3,3,2) b=(2,3,3) c=(3,2,3)"
+    },
+    "20": {
+     "Vmax": 39,
+     "six_a1": 27,
+     "gaps": "a=(3,3,2) b=(3,3,2) c=(3,3,3)"
+    },
+    "21": {
+     "Vmax": 42,
+     "six_a1": 27,
+     "gaps": "a=(3,3,3) b=(2,4,2) c=(3,3,3)"
+    },
+    "22": {
+     "Vmax": 44,
+     "six_a1": 28,
+     "gaps": "a=(2,12,2) b=(3,3,3) c=(3,11,3)"
+    },
+    "23": {
+     "Vmax": 48,
+     "six_a1": 30,
+     "gaps": "a=(3,3,3) b=(3,2,3) c=(3,3,3)"
+    },
+    "24": {
+     "Vmax": 51,
+     "six_a1": 30,
+     "gaps": "a=(4,3,2) b=(3,3,3) c=(3,3,3)"
+    },
+    "25": {
+     "Vmax": 54,
+     "six_a1": 30,
+     "gaps": "a=(4,2,4) b=(3,3,3) c=(3,3,3)"
+    },
+    "26": {
+     "Vmax": 57,
+     "six_a1": 30,
+     "gaps": "a=(4,3,3) b=(3,4,2) c=(3,4,3)"
+    },
+    "27": {
+     "Vmax": 61,
+     "six_a1": 32,
+     "gaps": "a=(3,3,3) b=(3,3,3) c=(3,4,3)"
+    },
+    "28": {
+     "Vmax": 64,
+     "six_a1": 32,
+     "gaps": "a=(4,3,3) b=(3,3,3) c=(3,3,4)"
+    },
+    "29": {
+     "Vmax": 67,
+     "six_a1": 32,
+     "gaps": "a=(4,3,4) b=(3,3,3) c=(3,4,3)"
+    },
+    "30": {
+     "Vmax": 70,
+     "six_a1": 32,
+     "gaps": "a=(5,3,3) b=(3,4,3) c=(3,4,3)"
+    },
+    "31": {
+     "Vmax": 75,
+     "six_a1": 33,
+     "gaps": "a=(3,4,3) b=(3,4,3) c=(3,4,3)"
+    },
+    "32": {
+     "Vmax": 77,
+     "six_a1": 34,
+     "gaps": "a=(3,5,3) b=(3,4,3) c=(3,5,3)"
+    },
+    "33": {
+     "Vmax": 80,
+     "six_a1": 34,
+     "gaps": "a=(3,5,3) b=(3,4,3) c=(4,3,4)"
+    },
+    "34": {
+     "Vmax": 83,
+     "six_a1": 34,
+     "gaps": "a=(4,4,3) b=(3,4,3) c=(4,3,5)"
+    },
+    "35": {
+     "Vmax": 88,
+     "six_a1": 35,
+     "gaps": "a=(4,4,3) b=(3,4,3) c=(4,4,3)"
+    },
+    "36": {
+     "Vmax": 91,
+     "six_a1": 35,
+     "gaps": "a=(3,5,3) b=(3,4,4) c=(4,4,3)"
+    },
+    "37": {
+     "Vmax": 94,
+     "six_a1": 35,
+     "gaps": "a=(3,5,3) b=(3,5,3) c=(4,4,4)"
+    },
+    "38": {
+     "Vmax": 98,
+     "six_a1": 37,
+     "gaps": "a=(4,4,3) b=(4,3,4) c=(3,4,4)"
+    },
+    "39": {
+     "Vmax": 102,
+     "six_a1": 36,
+     "gaps": "a=(4,4,4) b=(3,4,3) c=(4,4,4)"
+    },
+    "40": {
+     "Vmax": 104,
+     "six_a1": 37,
+     "gaps": "a=(3,5,3) b=(3,4,5) c=(4,4,4)"
+    },
+    "41": {
+     "Vmax": 109,
+     "six_a1": 38,
+     "gaps": "a=(4,4,3) b=(3,4,4) c=(4,4,4)"
+    },
+    "42": {
+     "Vmax": 112,
+     "six_a1": 38,
+     "gaps": "a=(3,5,4) b=(3,4,4) c=(4,4,4)"
+    },
+    "43": {
+     "Vmax": 115,
+     "six_a1": 38,
+     "gaps": "a=(3,5,3) b=(4,4,4) c=(4,5,4)"
+    },
+    "44": {
+     "Vmax": 118,
+     "six_a1": 38,
+     "gaps": "a=(3,5,3) b=(4,4,5) c=(5,4,4)"
+    },
+    "45": {
+     "Vmax": 123,
+     "six_a1": 39,
+     "gaps": "a=(3,5,4) b=(4,4,4) c=(3,5,4)"
+    },
+    "46": {
+     "Vmax": 126,
+     "six_a1": 39,
+     "gaps": "a=(3,5,4) b=(3,5,4) c=(4,5,4)"
+    },
+    "47": {
+     "Vmax": 129,
+     "six_a1": 39,
+     "gaps": "a=(3,6,3) b=(4,5,4) c=(4,5,4)"
+    },
+    "48": {
+     "Vmax": 134,
+     "six_a1": 40,
+     "gaps": "a=(3,5,4) b=(4,4,4) c=(5,4,4)"
+    },
+    "49": {
+     "Vmax": 136,
+     "six_a1": 41,
+     "gaps": "a=(3,5,4) b=(4,4,4) c=(4,5,5)"
+    },
+    "50": {
+     "Vmax": 144,
+     "six_a1": 42,
+     "gaps": "a=(4,4,4) b=(4,4,4) c=(4,4,4)"
+    },
+    "51": {
+     "Vmax": 145,
+     "six_a1": 41,
+     "gaps": "a=(3,5,4) b=(4,5,4) c=(4,4,5)"
+    },
+    "52": {
+     "Vmax": 148,
+     "six_a1": 41,
+     "gaps": "a=(3,5,4) b=(4,4,5) c=(5,4,5)"
+    },
+    "53": {
+     "Vmax": 150,
+     "six_a1": 42,
+     "gaps": "a=(3,5,4) b=(4,4,6) c=(5,4,6)"
+    },
+    "54": {
+     "Vmax": 158,
+     "six_a1": 43,
+     "gaps": "a=(4,4,4) b=(4,4,5) c=(4,4,5)"
+    },
+    "55": {
+     "Vmax": 160,
+     "six_a1": 44,
+     "gaps": "a=(4,12,4) b=(4,4,4) c=(4,12,4)"
+    },
+    "56": {
+     "Vmax": 162,
+     "six_a1": 42,
+     "gaps": "a=(3,5,4) b=(4,5,5) c=(5,5,5)"
+    },
+    "57": {
+     "Vmax": 169,
+     "six_a1": 44,
+     "gaps": "a=(4,4,5) b=(4,4,5) c=(4,5,4)"
+    },
+    "58": {
+     "Vmax": 172,
+     "six_a1": 44,
+     "gaps": "a=(5,5,4) b=(4,4,4) c=(5,5,4)"
+    },
+    "59": {
+     "Vmax": 174,
+     "six_a1": 45,
+     "gaps": "a=(5,10,4) b=(4,4,4) c=(5,10,4)"
+    },
+    "60": {
+     "Vmax": 181,
+     "six_a1": 44,
+     "gaps": "a=(5,4,5) b=(4,5,4) c=(4,5,4)"
+    },
+    "61": {
+     "Vmax": 183,
+     "six_a1": 45,
+     "gaps": "a=(5,5,4) b=(4,4,5) c=(6,4,4)"
+    },
+    "62": {
+     "Vmax": 186,
+     "six_a1": 45,
+     "gaps": "a=(5,5,5) b=(4,4,4) c=(5,5,5)"
+    },
+    "63": {
+     "Vmax": 192,
+     "six_a1": 45,
+     "gaps": "a=(5,5,4) b=(4,5,4) c=(4,5,5)"
+    },
+    "64": {
+     "Vmax": 195,
+     "six_a1": 45,
+     "gaps": "a=(5,5,4) b=(4,5,4) c=(6,4,5)"
+    },
+    "65": {
+     "Vmax": 197,
+     "six_a1": 46,
+     "gaps": "a=(5,10,4) b=(4,5,4) c=(4,10,5)"
+    },
+    "66": {
+     "Vmax": 203,
+     "six_a1": 46,
+     "gaps": "a=(5,5,4) b=(4,5,5) c=(4,6,4)"
+    },
+    "67": {
+     "Vmax": 206,
+     "six_a1": 46,
+     "gaps": "a=(5,5,4) b=(4,6,4) c=(4,6,5)"
+    },
+    "68": {
+     "Vmax": 209,
+     "six_a1": 46,
+     "gaps": "a=(5,5,4) b=(5,4,7) c=(4,5,5)"
+    },
+    "69": {
+     "Vmax": 216,
+     "six_a1": 48,
+     "gaps": "a=(5,5,4) b=(4,5,5) c=(5,4,5)"
+    },
+    "70": {
+     "Vmax": 217,
+     "six_a1": 47,
+     "gaps": "a=(5,5,4) b=(4,5,5) c=(6,4,6)"
+    },
+    "71": {
+     "Vmax": 220,
+     "six_a1": 47,
+     "gaps": "a=(5,5,4) b=(4,6,5) c=(5,4,7)"
+    },
+    "72": {
+     "Vmax": 228,
+     "six_a1": 48,
+     "gaps": "a=(5,5,4) b=(5,5,4) c=(5,5,5)"
+    },
+    "73": {
+     "Vmax": 230,
+     "six_a1": 49,
+     "gaps": "a=(5,5,4) b=(4,5,6) c=(5,4,6)"
+    },
+    "74": {
+     "Vmax": 232,
+     "six_a1": 50,
+     "gaps": "a=(5,10,4) b=(4,10,5) c=(5,4,5)"
+    },
+    "75": {
+     "Vmax": 240,
+     "six_a1": 48,
+     "gaps": "a=(5,5,5) b=(4,6,4) c=(5,5,5)"
+    },
+    "76": {
+     "Vmax": 242,
+     "six_a1": 49,
+     "gaps": "a=(5,5,4) b=(5,5,6) c=(4,5,6)"
+    },
+    "77": {
+     "Vmax": 244,
+     "six_a1": 50,
+     "gaps": "a=(6,6,4) b=(4,6,6) c=(5,4,5)"
+    },
+    "78": {
+     "Vmax": 252,
+     "six_a1": 51,
+     "gaps": "a=(5,5,5) b=(5,4,5) c=(5,5,5)"
+    },
+    "79": {
+     "Vmax": 254,
+     "six_a1": 49,
+     "gaps": "a=(5,5,5) b=(4,7,4) c=(5,6,5)"
+    },
+    "80": {
+     "Vmax": 256,
+     "six_a1": 50,
+     "gaps": "a=(6,6,4) b=(5,5,4) c=(6,6,5)"
+    },
+    "81": {
+     "Vmax": 264,
+     "six_a1": 51,
+     "gaps": "a=(5,5,5) b=(4,5,6) c=(5,5,5)"
+    },
+    "82": {
+     "Vmax": 266,
+     "six_a1": 52,
+     "gaps": "a=(5,5,6) b=(5,4,5) c=(5,5,6)"
+    },
+    "83": {
+     "Vmax": 268,
+     "six_a1": 50,
+     "gaps": "a=(6,6,5) b=(4,6,4) c=(6,6,5)"
+    },
+    "84": {
+     "Vmax": 276,
+     "six_a1": 51,
+     "gaps": "a=(5,5,5) b=(4,6,5) c=(5,5,6)"
+    },
+    "85": {
+     "Vmax": 278,
+     "six_a1": 52,
+     "gaps": "a=(5,5,5) b=(4,5,7) c=(5,5,6)"
+    },
+    "86": {
+     "Vmax": 280,
+     "six_a1": 53,
+     "gaps": "a=(6,6,5) b=(5,4,5) c=(6,6,5)"
+    },
+    "87": {
+     "Vmax": 289,
+     "six_a1": 53,
+     "gaps": "a=(5,5,5) b=(5,5,5) c=(5,6,5)"
+    },
+    "88": {
+     "Vmax": 290,
+     "six_a1": 52,
+     "gaps": "a=(6,6,4) b=(5,5,5) c=(7,5,5)"
+    },
+    "89": {
+     "Vmax": 293,
+     "six_a1": 52,
+     "gaps": "a=(6,6,4) b=(4,6,6) c=(5,6,5)"
+    },
+    "90": {
+     "Vmax": 301,
+     "six_a1": 53,
+     "gaps": "a=(5,5,5) b=(5,5,6) c=(6,5,5)"
+    },
+    "91": {
+     "Vmax": 303,
+     "six_a1": 54,
+     "gaps": "a=(5,5,5) b=(5,6,5) c=(5,7,5)"
+    },
+    "92": {
+     "Vmax": 305,
+     "six_a1": 55,
+     "gaps": "a=(5,5,5) b=(5,7,5) c=(5,8,5)"
+    },
+    "93": {
+     "Vmax": 313,
+     "six_a1": 53,
+     "gaps": "a=(5,5,5) b=(5,6,5) c=(6,5,6)"
+    },
+    "94": {
+     "Vmax": 315,
+     "six_a1": 54,
+     "gaps": "a=(5,5,5) b=(5,5,7) c=(6,5,6)"
+    },
+    "95": {
+     "Vmax": 318,
+     "six_a1": 54,
+     "gaps": "a=(6,6,4) b=(5,5,6) c=(5,6,6)"
+    },
+    "96": {
+     "Vmax": 327,
+     "six_a1": 54,
+     "gaps": "a=(5,6,5) b=(5,6,5) c=(5,6,5)"
+    },
+    "97": {
+     "Vmax": 327,
+     "six_a1": 54,
+     "gaps": "a=(6,6,5) b=(5,5,5) c=(7,5,6)"
+    },
+    "98": {
+     "Vmax": 329,
+     "six_a1": 55,
+     "gaps": "a=(6,6,6) b=(5,6,5) c=(6,4,6)"
+    },
+    "99": {
+     "Vmax": 338,
+     "six_a1": 55,
+     "gaps": "a=(6,6,5) b=(5,6,5) c=(5,5,6)"
+    },
+    "100": {
+     "Vmax": 341,
+     "six_a1": 55,
+     "gaps": "a=(5,6,5) b=(5,7,5) c=(5,7,5)"
+    },
+    "101": {
+     "Vmax": 344,
+     "six_a1": 55,
+     "gaps": "a=(6,6,4) b=(5,6,6) c=(6,6,5)"
+    },
+    "102": {
+     "Vmax": 350,
+     "six_a1": 55,
+     "gaps": "a=(6,6,6) b=(5,6,5) c=(5,6,5)"
+    },
+    "103": {
+     "Vmax": 352,
+     "six_a1": 56,
+     "gaps": "a=(5,5,6) b=(5,5,7) c=(6,5,7)"
+    },
+    "104": {
+     "Vmax": 356,
+     "six_a1": 55,
+     "gaps": "a=(6,6,4) b=(6,5,6) c=(6,6,6)"
+    },
+    "105": {
+     "Vmax": 364,
+     "six_a1": 56,
+     "gaps": "a=(6,6,5) b=(5,6,5) c=(6,6,5)"
+    },
+    "106": {
+     "Vmax": 364,
+     "six_a1": 56,
+     "gaps": "a=(6,6,6) b=(5,6,5) c=(5,8,5)"
+    },
+    "107": {
+     "Vmax": 367,
+     "six_a1": 56,
+     "gaps": "a=(6,6,4) b=(5,6,7) c=(6,6,6)"
+    },
+    "108": {
+     "Vmax": 376,
+     "six_a1": 56,
+     "gaps": "a=(6,6,5) b=(5,7,5) c=(5,6,6)"
+    },
+    "109": {
+     "Vmax": 378,
+     "six_a1": 57,
+     "gaps": "a=(5,6,5) b=(5,6,7) c=(5,6,7)"
+    },
+    "110": {
+     "Vmax": 380,
+     "six_a1": 58,
+     "gaps": "a=(6,6,5) b=(5,5,7) c=(5,7,6)"
+    },
+    "111": {
+     "Vmax": 389,
+     "six_a1": 58,
+     "gaps": "a=(6,6,5) b=(6,5,6) c=(5,6,6)"
+    },
+    "114": {
+     "Vmax": 402,
+     "six_a1": 57,
+     "gaps": "a=(6,6,6) b=(5,6,5) c=(6,6,6)"
+    },
+    "117": {
+     "Vmax": 415,
+     "six_a1": 59,
+     "gaps": "a=(6,6,5) b=(5,6,6) c=(6,6,6)"
+    }
+   },
+   "mode": "SIMPLEX",
+   "mode_args": "S=52 vectors=17341763505"
   }
  ],
  "artifact_sha256": {

@@ -25,3 +25,8 @@ gaps=[12, 12, 12, 12, 12, 12, 12, 12, 12] lam=[36, 24, 12, 0] mu=[36, 24, 12, 0]
    n=2  P(n)=5875  engineA=5875  engineB=5875  OK
 
 ANCHOR: PASS
+gaps=[296, 214, 69, 220, 273, 26, 69, 95, 164] lam=[579, 283, 69, 0] mu=[519, 299, 26, 0] nu=[584, 515, 420, 256]  dim=3 c=4 V=1 h*=[1, 0, 0, 0] P=[1,11/6,1,1/6]
+   n=1  P(n)=4  engineA=4  engineB=4  OK
+   n=2  P(n)=10  engineA=10  engineB=CAP_EXCEEDED  *** MISMATCH ***
+
+ANCHOR: FAIL

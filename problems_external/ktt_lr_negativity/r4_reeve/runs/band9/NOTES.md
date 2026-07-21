@@ -41,7 +41,7 @@ Aw = a1+2a2+3a3, Bw, Cw likewise; D = Cw-Aw-Bw.
   |R| = 7 820 553 811 824 gap classes.
 
 Every gap class is therefore a *band* object, and an exhaustive scan of a sub-region of R
-is an exhaustive statement about a well-defined infinite-in-nothing, finite sub-family of
+is an exhaustive statement about a well-defined finite sub-family of
 the band (the exact number of band triples covered is reported for each scan).
 
 ## 2. Negativity criterion used (all integer arithmetic)
@@ -67,6 +67,7 @@ coefficient is a1**, and KTT fails in this cell iff 6a1 < 0, i.e. iff
 | Aw <= 140, Bw <= 8, Cw <= 8 | 30 808 696 | 1 883 620 354 | 17 646 | 61 | **0** |
 | Aw <= 8, Bw <= 140, Cw <= 8 | 30 808 696 | 1 883 620 354 | 17 646 | 61 | **0** |
 | Aw <= 8, Bw <= 8, Cw <= 140 | 34 530 120 | 7 546 854 100 | 17 646 | 61 | **0** |
+| Aw <= 44, Bw <= 44, Cw <= 44 | 6 563 857 152 | 1 115 329 664 832 | 2 081 546 042 | 745 185 809 | **0** |
 
 plus non-exhaustive probes of the whole band (uniform random, and the assigned
 volume-steered single-box hill climb at fixed small c) — see manifest.json.
@@ -74,11 +75,11 @@ volume-steered single-box hill climb at fixed small c) — see manifest.json.
 Union of the exhaustive regions (computed independently in Python from the partition
 generating function, and matching the scanner's own counters exactly on the S=64 cone):
 
-    12 503 038 649 gap classes   =   2 467 198 155 474 band triples
+    16 204 103 249 gap classes   =   2 986 675 964 834 band triples
     out of   7 820 553 811 824 gap classes  =  171 496 406 264 085 band triples
-    i.e. 0.16 % of the gap classes and 1.44 % of the triples of the band.
+    i.e. 0.21 % of the gap classes and 1.74 % of the triples of the band.
 
-**The band as a whole is NOT exhausted.** What is exhausted is the union of the five gap
+**The band as a whole is NOT exhausted.** What is exhausted is the union of the six gap
 regions above, and that statement is exact.
 
 Detector unit test (`reeve_detector_check.log`): on the Reeve family T_q, whose Ehrhart
@@ -96,8 +97,31 @@ detector demonstrably detects the textbook negative case.
 * max V (exhaustive S=64) = **375** at lam=(24,18,12,7) mu=(16,10,5) nu=(32,26,20,14),
   c = 108, h* = (1,104,234,36), P = 1 + (19/2)n + 35n^2 + (125/2)n^3, a1 = 19/2 > 0.
   (Engines A and B: 108, 660, 2032 at n = 1,2,3.)
-* max V over the whole band probes (uniform random) = 600, h*2 = 377, 6a1 = 78 > 0.
+* max V over the whole band (volume-steered climb, W = 130) = **2817** at
+  lam=(34,21,9) mu=(37,22,7) nu=(54,38,24,14), c = 636, h* = (1,632,1843,341),
+  P = 1 + 19n + (293/2)n^2 + (939/2)n^3, a1 = 19 > 0.  (Engines A and B: 636, 4381 at n=1,2.)
+  max V over the 60M uniform-random band census = 600 (h*2 = 377, 6a1 = 78 > 0).
 * **max V among h*1 = 0 (c = dim+1 = 4, the Reeve shape) = 1 in EVERY scan.**
   i.e. every dim-3 r=4 hive polytope with exactly 4 lattice points that was seen in the
   band is UNIMODULAR (q = 1), against the q >= 13 needed for the Reeve mechanism.
   Also max V at c = 5 is 3 and at c = 6 is 4.
+
+## 5. Non-exhaustive probes of the whole band
+
+| probe | evaluations | Q nonempty | dim 3 | NEGATIVE | min 6a1 (dim3) | max V | max V at c=4 |
+|---|---|---|---|---|---|---|---|
+| uniform random band triples | 60 000 000 | 534 | 233 | **0** | 11 | 600 | 1 |
+| volume-steered single-box climb (c <= 6) | 540 129 489 | 480 358 374 | 379 252 198 | **0** | 11 | 2817 | 1 |
+
+The uniform-random line is worth recording on its own: a uniformly random triple of
+4-part partitions with |lam|+|mu|=|nu| in [91,140] has c(nu;lam,mu) > 0 only about
+534/60 000 000 ~ 9e-6 of the time, which is why the census had to be run in gap-moduli
+coordinates and why the climb had to be seeded there too.
+
+The assigned method (volume-steered hill climb: repeatedly single-box perturb toward
+larger V at fixed small c) was run for 780 s over 32 threads from gap-seeded starts.
+It raised V to 2817 when c was free, but at c = 4 (h*_1 = 0, the Reeve shape) it never
+moved V off 1: **every c = 4 dim-3 r=4 hive polytope it reached was unimodular.**
+Against the Reeve requirement q >= 13 this is a margin of a factor 13 in V, and the
+exact criterion 6a1 = 11 + 2h*1 - h*2 + 2h*3 was never below 11 in any of the
+~2.0e10 evaluations of this run.

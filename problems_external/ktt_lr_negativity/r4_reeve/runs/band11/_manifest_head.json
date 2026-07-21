@@ -3,23 +3,41 @@
  "date_utc": "2026-07-21",
  "target": "counterexample to the King-Tollu-Toumazet (2004) positivity conjecture: a triple (lam,mu,nu), |lam|+|mu|=|nu|, whose stretched LR polynomial P(n)=c(n nu; n lam, n mu) has a strictly negative coefficient",
  "cell": "r = 4  (hive polytope Q lives in R^3 = the Reeve dimension; deg P = dim Q <= 3)",
+ "result_headline": {
+  "negative_coefficients_found": 0,
+  "min_a1_over_everything": "11/6",
+  "min_a1_attained_at": "every unimodular hive simplex (h* = (1,0,0,0), V = 1, c = 4, P = C(n+3,3)); occurs at arbitrarily large weight, e.g. lam=(579,283,69), mu=(519,299,26), nu=(584,515,420,256), |nu| = 1775",
+  "max_V_over_c_record": "37817055/6380750 = 5.9267... at gaps a=(234,294,290) b=(270,286,275) c=(299,297,182), i.e. lam=(818,584,290), mu=(831,561,275), nu=(1258,959,662,480), |nu| = 3359; there a1 = 869/2 > 0",
+  "max_V": 37817055,
+  "max_V_at_hstar1_zero": 1,
+  "max_V_over_c_plus_h3": "37817055/12606554 = 2.99978... < 3 (a1 < 0 would require > 3)",
+  "interpretation": "V/c is NOT a discriminant: it rises monotonically to 6 along every ray in gap space while a1 grows linearly and stays positive. The scale-free discriminants are (i) the ratio V/(c+h3), which must exceed 3 and never did, and (ii) max V at c = 4 (empty lattice 3-polytope = the Reeve mechanism), which must reach 13 and was equal to 1 in EVERY region scanned -- every empty r=4 hive 3-polytope seen was unimodular, so no Reeve simplex T(p,q) with q >= 2 ever occurred."
+ },
+ "exhaustive_regions": {
+  "cube": "all gap vectors in [0,12]^9  (13^9 = 10604499373 vectors; 1654867200 with Q nonempty)",
+  "L1_ball": "all gap vectors with g1+...+g9 <= 52  (C(61,9) = 17341763505 vectors; 801481767 with Q nonempty) -- reaches single gaps up to 52, i.e. shapes far outside any cube scanned before",
+  "union_distinct_gap_vectors": 23198373727,
+  "intersection_size": 4747889151,
+  "subregions_also_run": "[0,6]^9, [0,8]^9 (binary-consistency check), sum(g) <= 40",
+  "non_exhaustive_probes": "uniform random gap vectors: 10^7 in [0,100]^9 and 10^6 in [0,300]^9 (thin chambers at very large weight)"
+ },
  "moduli_reduction": {
-  "claim": "Q(lam,mu,nu) for r=4 depends on (lam,mu,nu) only through the 9 gaps a=(l1-l2,l2-l3,l3-l4), b=(m1-m2,m2-m3,m3-m4), c=(n1-n2,n2-n3,n3-n4), up to an INTEGER translation of R^3; hence L(n)=#(nQ cap Z^3), V, h*, P are functions of the gap vector alone. A gap vector is realisable by partitions iff D = Cw-Aw-Bw == 0 (mod 4), Aw=3a3+2a2+a1 etc.",
-  "consequence": "scanning gap vectors is a census at UNBOUNDED WEIGHT: one gap vector = infinitely many triples (lam,mu,nu) of arbitrarily large |nu|, all with the same P",
-  "verified_this_run": "band11_xcheck.py: 250 random gap vectors, each lifted to two different partition triples; hive4.py gives identical L(1..3), V, h*, P for both lifts (250/250), and identical values to band11_vcscan.exe (250/250, 0 failures)"
+  "claim": "Q(lam,mu,nu) for r=4 depends on (lam,mu,nu) only through the 9 gaps a=(l1-l2,l2-l3,l3-l4), b=(m1-m2,m2-m3,m3-m4), c=(n1-n2,n2-n3,n3-n4), up to an INTEGER translation of R^3; hence L(n)=#(nQ cap Z^3), V, h*, P are functions of the gap vector alone. A gap vector is realisable by partitions iff D = Cw-Aw-Bw == 0 (mod 4), Aw = 3a3+2a2+a1 etc.",
+  "consequence": "a gap-space census is a census at UNBOUNDED WEIGHT: one gap vector = infinitely many triples (lam,mu,nu) of arbitrarily large |nu|, all with the same P. The census is therefore exhaustive over ALL r=4 triples of EVERY weight whose consecutive-part gaps lie in the stated region.",
+  "verified_this_run": "band11_xcheck.py: 1070 random gap vectors (gaps <= 9, 14, 20, 30), each lifted to two different partition triples: hive4.py gives identical L(1..3), V, h*, P for both lifts and identical values to band11_vcscan.exe -- 1070/1070 agreements, 0 failures"
  },
  "exact_identities_used": {
   "dim3": "P(n) = a3 n^3 + a2 n^2 + a1 n + 1, h* = (1,h1,h2,h3), c = L(1) = 4 + h1, V = 1+h1+h2+h3",
   "a1": "6 a1 = 11 + 2 h1 - h2 + 2 h3 = 3*c + 3*h3 - V   (h3 = # interior lattice points)",
-  "negativity_criterion": "a1 < 0  <==>  V > 3*(c + h3).  Hence V/c > 3 is NECESSARY, and when c = 4 (h*_1 = 0, an empty lattice 3-polytope such as a Reeve simplex T(p,q)) it is exactly V >= 13",
-  "scaling": "for integer t, Q(t*g) = t*Q(g), so a1(t*g) = t*a1(g): the SIGN of a1 is constant along each integer ray in gap space, and V/c -> 6, V/(c+h3) -> 3 from below along every ray. A large V/c record is therefore a scale artifact; the scale-free discriminants are the sign of a1, the ratio V/(c+h3) (must exceed 3) and max V at c = 4 (must reach 13)"
+  "negativity_criterion": "a1 < 0  <==>  V > 3*(c + h3). Hence V/c > 3 is NECESSARY, and when c = 4 (h*_1 = 0, an empty lattice 3-polytope such as a Reeve simplex T(p,q), V = q) it is exactly V >= 13",
+  "scaling": "for integer t, Q(t*g) = t*Q(g), so a1(t*g) = t*a1(g) and V(t*g) = t^3 V(g): the SIGN of a1 is constant along each integer ray in gap space. Verified independently with hive4.py on 40 dim-3 directions at t = 2,3 (80/80 exact). Consequently V/c -> 6 and V/(c+h3) -> 3 from below along every ray, so both maxima are attained at the largest polytope of whatever region is scanned -- they are scale artifacts and are reported as such."
  },
  "engines": {
-  "polytope_engine_scanner": "r4_reeve/band11_vcscan.cpp -> band11_vcscan.exe (exhaustive cube), band11_vcscan2.exe (-DCBMAX=513, adds --simplex L1-ball mode); pure integer arithmetic, records compared by cross-multiplication",
-  "independent_polytope_engine": "r4_reeve/hive4.py (exact Fractions; vertices, volume by two routes, held-out interpolation checks)",
+  "polytope_engine_scanner": "r4_reeve/band11_vcscan.cpp -> band11_vcscan.exe (cube scan; compiled before the --ray/--simplex modes were appended, eval kernel byte-identical) and band11_vcscan2.exe (current source, -DCBMAX=513, adds the --simplex L1-ball mode). Consistency: both binaries run on [0,8]^9 return identical record VALUES (only tie-breaking witnesses differ). Pure integer arithmetic; ratio records compared by cross-multiplication.",
+  "independent_polytope_engine": "r4_reeve/hive4.py (exact Fractions; vertices, volume by two independent routes, held-out interpolation checks at n=4,5)",
   "LR_engine_A": "engine/lr_hive.exe (exact hive counter)",
-  "LR_engine_B": "engine/engineB_lrrule.py (exact Littlewood-Richardson rule)",
-  "anchor_this_run": "band11_lranchor.py: record triples checked against BOTH LR engines at n=1..4 (e.g. gaps (4,...,4) -> lam=mu=(12,8,4), nu=(18,14,10,6): P(1..4) = 50,279,832,1853 confirmed by A and B); ANCHOR PASS"
+  "LR_engine_B": "engine/engineB_lrrule.py (exact Littlewood-Richardson rule; DP-state budget 2*10^7)",
+  "anchor_this_run": "band11_lranchor.py (log anchor_records.txt): every record witness re-verified against BOTH LR engines on the stretched counts c(n nu; n lam, n mu). PASS at n=1..5 for the c=4 records and the V/c record of the S=40 ball (lam=(14,9,5), mu=(13,9,4), nu=(20,16,11,7): P(1..5) = 60,343,1031,2305,4346) and at n=1,2 for the V=3888 cube record (lam=mu=(36,24,12), nu=(54,42,30,18): 832, 5875). On the |nu|=1775 unimodular witness engine A agreed at n=1,2 while engine B returned CAP_EXCEEDED at n=2 (its DP-state budget, not a disagreement)."
  },
- "honesty": "Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and is never evidence for it. Every window below is reported as a closed window, nothing more."
+ "honesty": "Absence of a counterexample proves nothing whatsoever about the King-Tollu-Toumazet conjecture and is never evidence for it. The two regions above are closed windows, nothing more; outside them the r=4 cell remains open."
 }

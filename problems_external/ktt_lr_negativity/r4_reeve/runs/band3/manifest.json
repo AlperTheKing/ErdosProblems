@@ -189,13 +189,72 @@
    0
   ]
  ],
+ "min_a1_dim3": [
+  "11/6",
+  [
+   [
+    4,
+    3,
+    2,
+    1
+   ],
+   [
+    5,
+    3,
+    2,
+    1
+   ],
+   [
+    8,
+    6,
+    4,
+    3
+   ]
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ]
+ ],
+ "max_negativity_margin_dim3": [
+  0,
+  [
+   [
+    4,
+    3,
+    2,
+    1
+   ],
+   [
+    5,
+    3,
+    2,
+    1
+   ],
+   [
+    8,
+    6,
+    4,
+    3
+   ]
+  ],
+  [
+   1,
+   0,
+   0,
+   0
+  ]
+ ],
+ "margin_identity": "for dim Q = 3: 6*a_1 = 11 + 2h*_1 - h*_2 + 2h*_3; a_1 < 0 iff h*_2 - 2h*_1 - 2h*_3 > 11",
  "negatives": [],
  "n_negatives": 0,
  "per_N": [
   {
    "N": 21,
    "triples": 304776,
-   "seconds": 101.4,
+   "seconds": 44.7,
    "dim": {
     "-1": 245034,
     "0": 42109,
@@ -211,7 +270,7 @@
   {
    "N": 22,
    "triples": 448812,
-   "seconds": 130.2,
+   "seconds": 27.4,
    "dim": {
     "-1": 363499,
     "0": 58790,
@@ -227,7 +286,7 @@
   {
    "N": 23,
    "triples": 624818,
-   "seconds": 170.6,
+   "seconds": 53.3,
    "dim": {
     "-1": 506490,
     "0": 79069,
@@ -243,7 +302,7 @@
   {
    "N": 24,
    "triples": 892512,
-   "seconds": 199.2,
+   "seconds": 51.5,
    "dim": {
     "-1": 727807,
     "0": 107582,
@@ -259,7 +318,7 @@
   {
    "N": 25,
    "triples": 1217880,
-   "seconds": 243.4,
+   "seconds": 78.7,
    "dim": {
     "-1": 994109,
     "0": 141753,
@@ -275,7 +334,7 @@
   {
    "N": 26,
    "triples": 1693064,
-   "seconds": 392.1,
+   "seconds": 92.3,
    "dim": {
     "-1": 1388336,
     "0": 188739,
@@ -289,7 +348,7 @@
    "negatives": 0
   }
  ],
- "elapsed_s": 1240.3,
+ "elapsed_s": 352.7,
  "caveat": "An empty census proves nothing about the KTT conjecture and is not evidence for it; it only closes this enumerated window.",
  "cross_validation": {
   "engineA": "E:/Projects/ErdosProblems/problems_external/ktt_lr_negativity/engine/lr_hive.exe",
@@ -382,5 +441,22 @@
    "26": 1693064
   },
   "agrees_with_engine_counts": true
+ },
+ "reproducibility": {
+  "passes": 2,
+  "pass1_log": "band3_run.log",
+  "pass2_log": "band3_run2.log",
+  "identical_on": [
+   "triples_tested",
+   "dim_histogram",
+   "min_coefficient_over_band",
+   "min_a1",
+   "max_volume",
+   "max_volume_at_hstar1_zero",
+   "max_hstar2",
+   "n_negatives"
+  ],
+  "pass1_elapsed_s": 1240.3,
+  "pass2_elapsed_s": 352.7
  }
 }
